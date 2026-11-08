@@ -22,7 +22,7 @@ abstract class FunOrbClient extends GameApplet {
     String field_t;
     static String field_y;
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int processAccountUiActions(boolean param0, boolean param1, int param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -37,12 +37,12 @@ abstract class FunOrbClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SteelSentinels.obfuscationControl;
-          var4 = hh.a(SceneWidgetNode.field_D, param1, (byte) -66, jj.field_d);
+          var4 = LoginActionHelpers.pollLoginScreenAction(SceneWidgetNode.field_D, param1, (byte) -66, jj.field_d);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = GameApplet.a(ln.a((byte) -89), CachedTextLayout.b(64), -121);
+            var5_int = GameApplet.submitCredentialLogin(NameValidationHelpers.createLoginNameValue((byte) -89), CachedTextLayout.b(64), -121);
             if (var5_int != -1) {
               MouseWheelInput.a(di.field_e, (byte) 118, var5_int, vh.field_d);
               vh.field_d = null;
@@ -50,11 +50,11 @@ abstract class FunOrbClient extends GameApplet {
             }
             var11 = RasterSnapshot.a(true);
             if (var11 != null) {
-              TeamColourTinter.a((byte) 97, var11.booleanValue());
+              TeamColourTinter.resolvePendingCheck((byte) 97, var11.booleanValue());
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = IconLabelControl.a(TextHotspotWidget.a(false), 0, jj.a(true), this.field_q, hl.d(91), TextHotspotRegion.e(37), DiskCacheRequest.h(82));
+            var5_intLifetime1 = IconLabelControl.submitAccountCreation(TextHotspotWidget.a(false), 0, jj.a(true), this.field_q, PendingIntArrayRequest.getCurrentAccountName(91), TextHotspotRegion.e(37), DiskCacheRequest.h(82));
             if (var5_intLifetime1 != -1) {
               FullscreenFocusCanvas.a(vh.field_d, var5_intLifetime1, di.field_e, (byte) -128);
               di.field_e = null;
@@ -65,7 +65,7 @@ abstract class FunOrbClient extends GameApplet {
             if (TeamColourTinter.field_d != -1 &&
               TeamColourTinter.field_d != 0) {
               TeamColourTinter.field_d = -1;
-              bi.b(param2 ^ 7004);
+              TextAndBitHelpers.resetTransferCounters(param2 ^ 7004);
             }
             if (!param0) {
               var5_intLifetime2 = jj.a(-108, this.field_q, jj.a(true), this.field_A, false, TextHotspotWidget.a(false));
@@ -109,39 +109,39 @@ abstract class FunOrbClient extends GameApplet {
             NameAvailabilityValidator.a(0, Projectile.d((byte) -21));
           }
           if (9 == var4) {
-            TabbedPanel.a((byte) 49, Projectile.d((byte) -21));
+            TabbedPanel.openSupportPage((byte) 49, Projectile.d((byte) -21));
           }
           if (var4 == 10) {
-            mm.field_g.writeCipheredOpcode(17, (byte) -117);
+            ClockAndCookieHelpers.field_g.writeCipheredOpcode(17, (byte) -117);
           }
           if (var4 == 11) {
             CheckboxPainter.a(Projectile.d((byte) -21), 63);
           }
           if (12 == var4) {
-            BufferedRandomAccessFile.a(SocketConnector.b(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
+            BufferedRandomAccessFile.a(SocketConnector.getPendingUrlPath(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
           }
           if (var4 == 13) {
             try {
               if (DelayedServerPacket.field_s == null) {
                 DelayedServerPacket.field_s = new BoundedUrlRequest(IterableDualNodeDeque.field_i, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (DelayedServerPacket.field_s.c(-2)) {
-                var12 = DelayedServerPacket.field_s.b(param2 + 7017);
+              if (DelayedServerPacket.field_s.poll(-2)) {
+                var12 = DelayedServerPacket.field_s.getResponseBuffer(param2 + 7017);
                 if (var12 == null) {
                   var9 = (String) null;
-                  na.a((String) null, (byte) -126);
+                  ChatMessage.discardText((String) null, (byte) -126);
                 } else {
                   var7 = SoundCache.a((byte) 37, 0, var12.payload, var12.position);
-                  na.a(var7, (byte) -105);
+                  ChatMessage.discardText(var7, (byte) -105);
                 }
                 DelayedServerPacket.field_s = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              MusicCrossfadeStream.a("S1", -100, (Throwable) ((Object) var5));
+              MusicCrossfadeStream.reportClientError("S1", -100, (Throwable) ((Object) var5));
               var10 = (String) null;
-              na.a((String) null, (byte) -104);
+              ChatMessage.discardText((String) null, (byte) -104);
               DelayedServerPacket.field_s = null;
             }
           }
@@ -162,12 +162,12 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void d(byte param0) {
+    private final void enablePacketFive(byte param0) {
         int var2 = -57 / ((param0 - 47) / 53);
         dg.field_h[5] = true;
     }
 
-    private final void a(int param0, String param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(int param0, String param1, int param2, int param3, int param4) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -182,7 +182,7 @@ abstract class FunOrbClient extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.b((byte) 110)) {
+            if (!this.isHostAllowed((byte) 110)) {
               return;
             }
             this.field_t = this.getCodeBase().getHost();
@@ -210,13 +210,13 @@ abstract class FunOrbClient extends GameApplet {
               this.field_q = Integer.parseInt(var9);
             }
             ud.field_q = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param3, param0, 32, (byte) 103, param1, this.field_F, param4);
+            this.startApplet(param3, param0, 32, (byte) 103, param1, this.field_F, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            MusicCrossfadeStream.a((String) null, -41, (Throwable) ((Object) var6_ref));
-            this.a("crash", param2 ^ 16948);
+            MusicCrossfadeStream.reportClientError((String) null, -41, (Throwable) ((Object) var6_ref));
+            this.showErrorPage("crash", param2 ^ 16948);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -229,17 +229,17 @@ abstract class FunOrbClient extends GameApplet {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final int i(byte param0) {
+    final int pollGameConnection(byte param0) {
         int var2;
         int var3;
         if (this.field_m) {
           return -1;
         }
-        if (!ri.a(16731221)) {
+        if (!LoginStateQueries.isLoginFormActive(16731221)) {
           return -1;
         }
         if (tf.field_b) {
@@ -252,13 +252,13 @@ abstract class FunOrbClient extends GameApplet {
         if (var2 != 0 &&
           var2 != 1) {
           if (!am.field_b) {
-            this.a("reconnect", -16946);
+            this.showErrorPage("reconnect", -16946);
           }
           of.a(10);
           var3 = 102 / ((param0 + 32) / 54);
           cl.a(di.field_e, var2, 1);
           tf.field_b = true;
-          ProxySocketConnector.field_l = 15000L + mm.a(42);
+          ProxySocketConnector.field_l = 15000L + ClockAndCookieHelpers.monotonicMillis(42);
           return var2;
         }
         if (uj.field_d == 11 &&
@@ -268,7 +268,7 @@ abstract class FunOrbClient extends GameApplet {
         return var2;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void initializeFramework(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -284,16 +284,16 @@ abstract class FunOrbClient extends GameApplet {
         ArchiveIndex.field_r = param7;
         ed.field_h = param4;
         DualNode.field_p = param6;
-        rf.field_c = param0;
-        this.c(true);
+        LoginConnectionStage.field_c = param0;
+        this.initializePacketLengths(true);
         di.a((byte) -128);
     }
 
-    final int a(boolean param0, int param1) {
+    final int pollAccountUiActions(boolean param0, int param1) {
         if (param1 != -3836) {
           field_o = (String) null;
         }
-        return this.a(true, param0, param1 ^ 5534);
+        return this.processAccountUiActions(true, param0, param1 ^ 5534);
     }
 
     public static void releaseStatics(byte param0) {
@@ -309,14 +309,14 @@ abstract class FunOrbClient extends GameApplet {
         field_y = null;
     }
 
-    private final void e(byte param0) {
+    private final void enablePacketFour(byte param0) {
         if (param0 >= -86) {
           return;
         }
         dg.field_h[4] = true;
     }
 
-    private final void b(boolean param0) {
+    private final void enablePacketsElevenToThirteen(boolean param0) {
         dg.field_h[12] = true;
         dg.field_h[11] = true;
         if (param0) {
@@ -325,64 +325,64 @@ abstract class FunOrbClient extends GameApplet {
         dg.field_h[13] = true;
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void startWithDefaultSize(int param0, int param1, String param2) {
         try {
           if (param1 != -28233) {
-            this.b(true);
+            this.enablePacketsElevenToThirteen(true);
           }
-          this.a(480, param2, -6, 640, param0);
+          this.readAppletParameters(480, param2, -6, 640, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "n.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "n.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
-        this.a(true, true);
+    final void configureOptionalPacketHandlers(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
+        this.configureCommonPacketHandlers(true, true);
         if (param3) {
-          this.f((byte) -17);
+          this.enablePacketOne((byte) -17);
         }
         if (param1) {
-          this.j(-17573);
+          this.enablePacketTwo(-17573);
         }
         if (param0 != 1) {
           return;
         }
         if (param6) {
-          this.e((byte) -91);
+          this.enablePacketFour((byte) -91);
         }
         if (param2) {
-          this.d((byte) -107);
+          this.enablePacketFive((byte) -107);
         }
         if (param4) {
-          this.i(118);
+          this.enablePacketSix(118);
         }
         if (param5) {
-          this.b(false);
+          this.enablePacketsElevenToThirteen(false);
         }
     }
 
-    private final void j(int param0) {
+    private final void enablePacketTwo(int param0) {
         if (param0 != -17573) {
           this.field_q = 102;
         }
         dg.field_h[2] = true;
     }
 
-    final void k(int param0) {
+    final void updateLoginFlow(int param0) {
         int discarded$1 = 0;
         int discarded$3 = 0;
         int var3 = SteelSentinels.obfuscationControl;
-        if (ri.c(6995)) {
-          discarded$1 = this.a(false, wb.field_c != null ? true : false, -7014);
+        if (LoginStateQueries.isLoginComplete(6995)) {
+          discarded$1 = this.processAccountUiActions(false, wb.field_c != null ? true : false, -7014);
         } else {
           if (AccountTermsPanel.field_Q >= 10) {
-            if (!km.a(-104)) {
+            if (!ClientGlobals.isIntroFinished(-104)) {
               uj.b(29);
             } else {
               if (uj.field_d == 0) {
-                discarded$3 = this.a(false, false, -7014);
+                discarded$3 = this.processAccountUiActions(false, false, -7014);
               } else {
-                ProxySocketConnector.a(jj.field_d, (byte) 104);
+                ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
               }
             }
           }
@@ -390,26 +390,26 @@ abstract class FunOrbClient extends GameApplet {
         int var2 = -84 % ((30 - param0) / 55);
     }
 
-    private final void f(byte param0) {
+    private final void enablePacketOne(byte param0) {
         if (param0 != -17) {
           this.field_E = false;
         }
         dg.field_h[1] = true;
     }
 
-    private final void l(int param0) {
-        int var2 = rf.field_d.readUnsignedByte((byte) -86);
+    private final void handleOpenUrlPacket(int param0) {
+        int var2 = LoginConnectionStage.field_d.readUnsignedByte((byte) -86);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + ViewportController.field_f;
         byte[] var5 = new byte[var4];
-        rf.field_d.readCipheredBytes(0, var4, var5, 103);
-        be.a(var3 != 0, (byte) 99, IntKeyLookup.a(13, var5), Projectile.d((byte) -21));
+        LoginConnectionStage.field_d.readCipheredBytes(0, var4, var5, 103);
+        UrlAndReplyHelpers.openUrl(var3 != 0, (byte) 99, IntKeyLookup.a(13, var5), Projectile.d((byte) -21));
         if (param0 != 3894) {
-          this.f((byte) -96);
+          this.enablePacketOne((byte) -96);
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void serviceFramework(int param0, boolean param1) {
         int stackIn_24_0 = 0;
         String stackIn_113_0 = null;
         boolean stackIn_114_1 = false;
@@ -422,25 +422,25 @@ abstract class FunOrbClient extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = SteelSentinels.obfuscationControl;
-        if (null != ve.field_a) {
+        if (null != AssetDecoders.field_a) {
           if (null == wb.field_c) {
-            var6 = pl.g(param0 - 45);
+            var6 = BirthDateEntryPanel.g(param0 - 45);
             var4 = var6.getSize();
-            ve.field_a.setDesiredSize(var4.height, (byte) -114, var4.width);
+            AssetDecoders.field_a.setDesiredSize(var4.height, (byte) -114, var4.width);
           }
-          ve.field_a.b(false);
+          AssetDecoders.field_a.updateViewport(false);
         }
-        GameApplet.g(-27983);
-        rl.b(param0 ^ param0);
-        if (!QuickChatHelpDialog.j(0) &&
+        GameApplet.snapshotKeyboardInput(-27983);
+        PacketLoopHelpers.pollMouseInput(param0 ^ param0);
+        if (!QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0) &&
           uj.field_d != 11) {
-          BoundedRandomAccessFile.c(-51);
+          BoundedRandomAccessFile.showPendingAccountNotice(-51);
         }
         if (WeightedLruCache.field_j != null) {
           jj.field_d = WeightedLruCache.field_j.b(-1);
         }
         if (ud.e(-116)) {
-          var3 = MusicCrossfadeStream.a((byte) -123) * 1200;
+          var3 = MusicCrossfadeStream.getTargetFrameRate((byte) -123) * 1200;
           if (this.field_E ||
             !(var3 >= SoundCache.b(-102)) &&
             !(DateInputWidget.a((byte) -64) <= var3)) {
@@ -448,9 +448,9 @@ abstract class FunOrbClient extends GameApplet {
             LoginForm.m(127);
             of.a(10);
             cl.a(un.field_g, 2, param0 ^ 4);
-            MatchingTextValidator.e((byte) 82);
+            MatchingTextValidator.clearSpriteArray((byte) 82);
             tf.field_b = true;
-            ProxySocketConnector.field_l = mm.a(-94) + 15000L;
+            ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(-94) + 15000L;
           }
         }
         if (-1 == TeamColourTinter.field_d ||
@@ -461,34 +461,34 @@ abstract class FunOrbClient extends GameApplet {
           if (var3Lifetime1 != 0) {
             if (TeamColourTinter.field_d == 0) {
               if (11 == uj.field_d) {
-                if (!ri.a(param0 ^ 16731216)) {
+                if (!LoginStateQueries.isLoginFormActive(param0 ^ 16731216)) {
                   CombatWorld.c(11828);
                   if (TeamColourTinter.field_d != -1 &&
                     TeamColourTinter.field_d != 0) {
-                    ProxySocketConnector.field_l = mm.a(127) + 15000L;
+                    ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
                   }
                 } else {
                   if (TeamColourTinter.field_d != -1 &&
                     TeamColourTinter.field_d != 0) {
-                    ProxySocketConnector.field_l = mm.a(127) + 15000L;
+                    ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
                   }
                 }
               } else {
                 if (TeamColourTinter.field_d != -1 &&
                   TeamColourTinter.field_d != 0) {
-                  ProxySocketConnector.field_l = mm.a(127) + 15000L;
+                  ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
                 }
               }
             } else {
               if (TeamColourTinter.field_d != -1 &&
                 TeamColourTinter.field_d != 0) {
-                ProxySocketConnector.field_l = mm.a(127) + 15000L;
+                ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
               }
             }
           } else {
             if (TeamColourTinter.field_d != -1 &&
               TeamColourTinter.field_d != 0) {
-              ProxySocketConnector.field_l = mm.a(127) + 15000L;
+              ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
             }
           }
         }
@@ -518,19 +518,19 @@ abstract class FunOrbClient extends GameApplet {
             }
           } else {
             if (TeamColourTinter.field_d == 3) {
-              this.a("js5crc", -16946);
+              this.showErrorPage("js5crc", -16946);
             } else {
               if (TeamColourTinter.field_d == 4) {
-                this.a("js5io", -16946);
+                this.showErrorPage("js5io", -16946);
               } else {
                 if (TeamColourTinter.field_d != 2) {
                   if (TeamColourTinter.field_d == 5) {
-                    this.a("outofdate", -16946);
+                    this.showErrorPage("outofdate", -16946);
                   } else {
-                    this.a("js5connect", param0 ^ -16949);
+                    this.showErrorPage("js5connect", param0 ^ -16949);
                   }
                 } else {
-                  this.a("js5connect_full", -16946);
+                  this.showErrorPage("js5connect_full", -16946);
                 }
               }
             }
@@ -538,18 +538,18 @@ abstract class FunOrbClient extends GameApplet {
         }
         if ((TeamColourTinter.field_d != -1 &&
           TeamColourTinter.field_d != 0 ||
-          ri.a(16731221)) &&
-          ProxySocketConnector.field_l <= mm.a(-111)) {
+          LoginStateQueries.isLoginFormActive(16731221)) &&
+          ProxySocketConnector.field_l <= ClockAndCookieHelpers.monotonicMillis(-111)) {
           tf.field_b = false;
           if (TeamColourTinter.field_d != -1 &&
             TeamColourTinter.field_d != 0) {
             TeamColourTinter.field_d = -1;
-            bi.b(-102);
+            TextAndBitHelpers.resetTransferCounters(-102);
           }
         }
         if (TeamColourTinter.field_d == 0 &&
-          !ri.a(param0 ^ 16731216)) {
-          rg.field_h = false;
+          !LoginStateQueries.isLoginFormActive(param0 ^ 16731216)) {
+          PopupMenuHelpers.field_h = false;
         }
         if (AccountTermsPanel.field_Q == 0 &&
           jj.a(-1)) {
@@ -557,38 +557,38 @@ abstract class FunOrbClient extends GameApplet {
         }
         if (AccountTermsPanel.field_Q == 1) {
           if (SceneWidgetNode.field_D != 0) {
-            ok.field_f = SceneWidgetNode.a(73, Sprite.field_h);
+            ChecksumAndFrameHelpers.field_f = SceneWidgetNode.openResourceArchive(73, Sprite.field_h);
           }
           WidgetStyleLayer.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
           QuickChatPhraseCache.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
-          IconLabelControl.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
+          IconLabelControl.field_bc = GameplayController.a(true, LoginConnectionStage.field_c, 256, 1, false);
           AccountTermsPanel.field_Q = 2;
           tm.field_d = WidgetStyleLayer.field_k;
           MusicPatchPcmStream.field_t = QuickChatPhraseCache.field_d;
         }
         if (AccountTermsPanel.field_Q == 2) {
-          if (null != ok.field_f &&
-            ok.field_f.ensureIndex(true)) {
-            if (!ok.field_f.ensureGroupAvailableByName(12145, "")) {
-              ok.field_f = null;
+          if (null != ChecksumAndFrameHelpers.field_f &&
+            ChecksumAndFrameHelpers.field_f.ensureIndex(true)) {
+            if (!ChecksumAndFrameHelpers.field_f.ensureGroupAvailableByName(12145, "")) {
+              ChecksumAndFrameHelpers.field_f = null;
             } else {
-              if (ok.field_f.a("", (byte) 90)) {
-                dn.a(ok.field_f, -128);
-                ok.field_f = null;
-                cc.j(0);
+              if (ChecksumAndFrameHelpers.field_f.a("", (byte) 90)) {
+                ContextMenu.loadInterfaceText(ChecksumAndFrameHelpers.field_f, -128);
+                ChecksumAndFrameHelpers.field_f = null;
+                LobbyPlayer.resetFrameTimingHistory(0);
               }
             }
           }
-          if (ok.field_f == null) {
+          if (ChecksumAndFrameHelpers.field_f == null) {
             AccountTermsPanel.field_Q = 3;
           }
         }
         if (AccountTermsPanel.field_Q == 3 &&
           TextLayout.a(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, QuickChatPhraseCache.field_d) &&
-          fc.a(IconLabelControl.field_bc, param0 - 58)) {
-          km.a(false);
+          SoundAndUrlHelpers.areAllGroupsAvailable(IconLabelControl.field_bc, param0 - 58)) {
+          ClientGlobals.releaseInputReferences(false);
           RegistrationRequestDialog.n(-6);
-          ClientException.field_i = eb.field_q;
+          ClientException.field_i = AgeValidator.field_q;
           IntrusiveNode.field_a = false;
           AccountRegistrationPanel.a((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, QuickChatPhraseCache.field_d);
           if (SoundCache.field_j ||
@@ -603,27 +603,27 @@ abstract class FunOrbClient extends GameApplet {
           }
           if (null == ValidationIndicator.field_cb) {
             ValidationIndicator.field_cb = DateOfBirthValidator.c((byte) 83);
-            SentinelDesigner.field_e = ue.a((byte) 62);
+            SentinelDesigner.field_e = LoginHandshakeHelpers.getSoundBufferMillis((byte) 62);
           }
           TextLayout.a(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
           QuickChatPhraseCache.field_d = null;
           WidgetStyleLayer.field_k = null;
           IconLabelControl.field_bc = null;
-          e.a((java.applet.Applet) (this), false);
-          cc.j(param0 - 5);
+          AccountRequestResult.readUsernameParameter((java.applet.Applet) (this), false);
+          LobbyPlayer.resetFrameTimingHistory(param0 - 5);
           AccountTermsPanel.field_Q = 10;
         }
         if (AccountTermsPanel.field_Q == 10) {
           if (SceneWidgetNode.field_D != 0) {
-            pl.field_S = SceneWidgetNode.a(param0 - 99, DualNode.field_p);
+            BirthDateEntryPanel.field_S = SceneWidgetNode.openResourceArchive(param0 - 99, DualNode.field_p);
           }
           AccountTermsPanel.field_Q = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (AccountTermsPanel.field_Q == 11) {
-          if (pl.field_S != null && (!pl.field_S.ensureIndex(true) ||
-            !pl.field_S.ensureAllGroupsAvailable(25))) {
-            mc.a(ModalStack.a((byte) -119, EmailAvailabilityValidator.field_t, IntKeyLookup.field_g, pl.field_S), 0.0f, -21801);
+          if (BirthDateEntryPanel.field_S != null && (!BirthDateEntryPanel.field_S.ensureIndex(true) ||
+            !BirthDateEntryPanel.field_S.ensureAllGroupsAvailable(25))) {
+            mc.a(ModalStack.a((byte) -119, EmailAvailabilityValidator.field_t, IntKeyLookup.field_g, BirthDateEntryPanel.field_S), 0.0f, -21801);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -638,7 +638,7 @@ abstract class FunOrbClient extends GameApplet {
         if (AccountTermsPanel.field_Q == 13) {
           var3Lifetime2 = 1;
           if (rh.field_q != null) {
-            stackIn_147_0 = (!rh.field_q.b(-2)) ? 0 : 1;
+            stackIn_147_0 = (!rh.field_q.pollLoading(-2)) ? 0 : 1;
             var3Lifetime2 = stackIn_147_0;
             mc.a(rh.field_q.field_i, rh.field_q.field_g, -21801);
           }
@@ -649,7 +649,7 @@ abstract class FunOrbClient extends GameApplet {
         if (!param1 &&
           ImageProducerRasterBuffer.field_x) {
           pa.a(sl.field_n, 9174);
-          this.a(false);
+          this.recreateCanvas(false);
           hg.a((byte) -93, sl.field_n);
         }
         if (dg.field_h[8]) {
@@ -657,25 +657,25 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void g(byte param0) {
+    private final void handleSessionCookiePacket(byte param0) {
         if (param0 != -112) {
-          this.i(67);
+          this.enablePacketSix(67);
         }
-        String var2 = IconTextComponent.k(8347);
-        MidiPcmStream.a(param0 - 14, var2, Projectile.d((byte) -21));
+        String var2 = IconTextComponent.readIncomingString(8347);
+        MidiPcmStream.setSessionCookie(param0 - 14, var2, Projectile.d((byte) -21));
     }
 
-    final void h(int param0) {
+    final void dispatchCommonPacket(int param0) {
         int stackIn_31_0 = 0;
         boolean stackIn_32_1 = false;
         int var2;
-        na var3;
+        ChatMessage var3;
         int var4;
         var4 = SteelSentinels.obfuscationControl;
         if (param0 <= 40) {
-          this.l(8);
+          this.handleOpenUrlPacket(8);
         }
-        var2 = ch.field_N;
+        var2 = ArrayWidgetContainer.field_N;
         if (var2 < 64 &&
           dg.field_h[var2]) {
           if (0 == var2) {
@@ -687,17 +687,17 @@ abstract class FunOrbClient extends GameApplet {
             } else {
               if (var2 != 3) {
                 if (var2 == 4) {
-                  na.a(true);
+                  ChatMessage.readQueuedListResponse(true);
                 } else {
                   if (var2 == 5) {
-                    be.a(-16786);
+                    UrlAndReplyHelpers.readPendingDataReply(-16786);
                   } else {
                     if (var2 == 6) {
                       LoginForm.k(113);
                     } else {
                       if (var2 != 7) {
                         if (var2 == 8) {
-                          TickClock.a(IterableDualNodeDeque.field_i, false, rf.field_d, ViewportController.field_f);
+                          TickClock.a(IterableDualNodeDeque.field_i, false, LoginConnectionStage.field_d, ViewportController.field_f);
                         } else {
                           if (var2 == 16) {
                             StatefulTextPainter.b(-76);
@@ -709,25 +709,25 @@ abstract class FunOrbClient extends GameApplet {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.l(3894);
+                                this.handleOpenUrlPacket(3894);
                                 return;
                               }
                               if (var2 == 18) {
-                                oc.a(false);
+                                MessageMenuHelpers.readChatAvailability(false);
                                 return;
                               }
-                              MusicCrossfadeStream.a("MGS1: " + ci.a((byte) 94), -27, (Throwable) null);
+                              MusicCrossfadeStream.reportClientError("MGS1: " + ClientErrorSupport.describePacketHistory((byte) 94), -27, (Throwable) null);
                               LoginForm.m(-93);
                               return;
                             }
                             stackIn_31_0 = -98;
                             stackIn_32_1 = (12 == var2);
-                            var3 = eb.$cfr$intArgs$a$9d0e4b5217c4(stackIn_31_0, stackIn_32_1);
+                            var3 = AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(stackIn_31_0, stackIn_32_1);
                             WeightedCacheEntry.a(var3, -69);
                           }
                         }
                       } else {
-                        this.g((byte) -112);
+                        this.handleSessionCookiePacket((byte) -112);
                       }
                     }
                   }
@@ -737,23 +737,23 @@ abstract class FunOrbClient extends GameApplet {
               }
             }
           } else {
-            bi.a(2158);
+            TextAndBitHelpers.consumeIntReply(2158);
           }
           return;
         }
-        MusicCrossfadeStream.a("MGS2: " + ci.a((byte) 94), -85, (Throwable) null);
+        MusicCrossfadeStream.reportClientError("MGS2: " + ClientErrorSupport.describePacketHistory((byte) 94), -85, (Throwable) null);
         LoginForm.m(-94);
     }
 
-    private final void i(int param0) {
+    private final void enablePacketSix(int param0) {
         dg.field_h[6] = true;
         if (param0 <= 11) {
           String var3 = (String) null;
-          this.a(12, (String) null, -17, -112, 117);
+          this.readAppletParameters(12, (String) null, -17, -112, 117);
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void configureCommonPacketHandlers(boolean param0, boolean param1) {
         dg.field_h[3] = true;
         dg.field_h[8] = param1;
         dg.field_h[7] = true;
@@ -766,7 +766,7 @@ abstract class FunOrbClient extends GameApplet {
     protected FunOrbClient() {
     }
 
-    private final void c(boolean param0) {
+    private final void initializePacketLengths(boolean param0) {
         SocketJs5Transport.field_B[18] = 1;
         SocketJs5Transport.field_B[3] = -1;
         SocketJs5Transport.field_B[2] = -2;

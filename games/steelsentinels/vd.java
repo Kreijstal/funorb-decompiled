@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static ak field_f;
+    static SpriteFrame field_f;
     static boolean field_b;
     static boolean[] field_g;
     static SceneWidget field_d;
@@ -32,7 +32,7 @@ final class vd {
             vd.a((byte) 19);
           }
           var6 = param2.getFileId(var5_int, -32759, param4);
-          stackIn_3_0 = SceneWidgetNode.a(var5_int, var6, param2, (byte) 126, param0);
+          stackIn_3_0 = SceneWidgetNode.loadBinaryFontById(var5_int, var6, param2, (byte) 126, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class vd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

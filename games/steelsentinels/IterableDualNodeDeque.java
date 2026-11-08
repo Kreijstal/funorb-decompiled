@@ -22,7 +22,7 @@ final class IterableDualNodeDeque implements Iterable {
           param1.removeFocusListener(SoundCache.field_e);
           wn.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class IterableDualNodeDeque implements Iterable {
           param1.dualPrevious.dualNext = param1;
           param1.dualNext.dualPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -273,7 +273,7 @@ final class IterableDualNodeDeque implements Iterable {
           } else {
             stackIn_92_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -300,9 +300,9 @@ final class IterableDualNodeDeque implements Iterable {
           !(param1 <= AccountChoicePanel.field_S.length)) {
           AccountChoicePanel.field_S = new int[param1 * 2];
         }
-        if (ok.field_d == null ||
-          !(ok.field_d.length >= param1)) {
-          ok.field_d = new int[2 * param1];
+        if (ChecksumAndFrameHelpers.field_d == null ||
+          !(ChecksumAndFrameHelpers.field_d.length >= param1)) {
+          ChecksumAndFrameHelpers.field_d = new int[2 * param1];
         }
         if (null == jm.field_r ||
           !(param1 <= jm.field_r.length)) {
@@ -319,9 +319,9 @@ final class IterableDualNodeDeque implements Iterable {
           !(Sentinel.field_T.length >= param1)) {
           Sentinel.field_T = new int[2 * param1];
         }
-        if (null == eb.field_u ||
-          !(param1 <= eb.field_u.length)) {
-          eb.field_u = new int[2 * param1];
+        if (null == AgeValidator.field_u ||
+          !(param1 <= AgeValidator.field_u.length)) {
+          AgeValidator.field_u = new int[2 * param1];
         }
         if (un.field_j == null ||
           !(param2 + param1 <= un.field_j.length)) {
@@ -499,7 +499,7 @@ final class IterableDualNodeDeque implements Iterable {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

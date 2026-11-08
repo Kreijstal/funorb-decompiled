@@ -25,7 +25,7 @@ final class TextLayoutLine {
           if (param1 != 20178) {
             field_d = (String) null;
           }
-          stackIn_6_0 = Explosion.g(param1 ^ 20181);
+          stackIn_6_0 = Explosion.buildRgbSprites(param1 ^ 20181);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,7 +37,7 @@ final class TextLayoutLine {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -97,28 +97,28 @@ final class TextLayoutLine {
         if (param0 != 0) {
           TextLayoutLine.a(-7, 91, 38, 66);
         }
-        if (ch.field_O != null) {
-          ch.field_O.closeDialog(106);
+        if (ArrayWidgetContainer.field_O != null) {
+          ArrayWidgetContainer.field_O.closeDialog(106);
         }
         String var1 = CachedArchiveProvider.e(35);
         AccountNoticeDialog.field_kb = new LoginForm(var1, (String) null, true, false, false);
-        GradientOutlineTextPainter.field_p.pushPanel(ci.field_a, -114);
-        ci.field_a.transitionToContent(AccountNoticeDialog.field_kb, param0 - 22908735);
-        ci.field_a.i((byte) -14);
+        GradientOutlineTextPainter.field_p.pushPanel(ClientErrorSupport.field_a, -114);
+        ClientErrorSupport.field_a.transitionToContent(AccountNoticeDialog.field_kb, param0 - 22908735);
+        ClientErrorSupport.field_a.finishTransition((byte) -14);
     }
 
     final static void a(boolean param0, byte param1) {
-        DisplayNameForm.field_V.a(param0, (byte) 126);
-        pl var2 = ve.field_b;
+        DisplayNameForm.field_V.drawFullScreen(param0, (byte) 126);
+        BirthDateEntryPanel var2 = AssetDecoders.field_b;
         if (param1 > -108) {
           return;
         }
         if (var2 != null) {
-          var2.a(DisplayNameForm.field_V.field_Rb, DisplayNameForm.field_V.field_cb, (byte) -128);
+          var2.render(DisplayNameForm.field_V.field_Rb, DisplayNameForm.field_V.field_cb, (byte) -128);
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int characterIndexAt(byte param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = SteelSentinels.obfuscationControl;

@@ -16,7 +16,7 @@ final class JavaScriptBridge {
         return netscape.javascript.JSObject.getWindow(param0).call(param2, (Object[]) null);
     }
 
-    final static void a(java.applet.Applet param0, int param1, String param2) throws Throwable {
+    final static void evaluateScript(java.applet.Applet param0, int param1, String param2) throws Throwable {
         netscape.javascript.JSObject.getWindow(param0).eval(param2);
         if (param1 != 27781) {
           return;

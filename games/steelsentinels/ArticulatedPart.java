@@ -70,7 +70,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(worldY).append(',').append(usesSurfaceProfile).append(',').append(durationTicks).append(',').append(velocityY).append(',').append(worldX).append(',').append(inheritedEffectValue).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(worldY).append(',').append(usesSurfaceProfile).append(',').append(durationTicks).append(',').append(velocityY).append(',').append(worldX).append(',').append(inheritedEffectValue).append(')').toString());
         }
     }
 
@@ -142,8 +142,8 @@ final class ArticulatedPart extends DualNode {
         if (UiComponent.field_t < var8Lifetime1 + param3) {
           UiComponent.field_t = var8Lifetime1 + param3;
         }
-        if (en.field_d < var8Lifetime1 + param2) {
-          en.field_d = var8Lifetime1 + param2;
+        if (LoadingScreenHelpers.field_d < var8Lifetime1 + param2) {
+          LoadingScreenHelpers.field_d = var8Lifetime1 + param2;
         }
         var15 = 0;
         var9Lifetime1 = var15;
@@ -165,8 +165,8 @@ final class ArticulatedPart extends DualNode {
                   if (AccountTermsPanel.field_V > -var8Lifetime1 + this.instructions[var15].field_k) {
                     AccountTermsPanel.field_V = this.instructions[var15].field_k - var8Lifetime1;
                   }
-                  if (this.instructions[var15].field_k + var8Lifetime1 > en.field_d) {
-                    en.field_d = this.instructions[var15].field_k + var8Lifetime1;
+                  if (this.instructions[var15].field_k + var8Lifetime1 > LoadingScreenHelpers.field_d) {
+                    LoadingScreenHelpers.field_d = this.instructions[var15].field_k + var8Lifetime1;
                   }
                   if (-var8Lifetime1 + this.instructions[var15].field_l < ImageProducerRasterBuffer.field_y) {
                     ImageProducerRasterBuffer.field_y = this.instructions[var15].field_l - var8Lifetime1;
@@ -239,7 +239,7 @@ final class ArticulatedPart extends DualNode {
             var6_intLifetime1 = stackIn_21_0;
             if (var6_intLifetime1 != 0 &&
               param1.field_Lb &&
-              bi.b(105, this.componentId) &&
+              TextAndBitHelpers.isSymbolKeyCode(105, this.componentId) &&
               !param1.hasModuleType(31, param0 - 27)) {
               var6_intLifetime1 = 0;
             }
@@ -279,7 +279,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -293,8 +293,8 @@ final class ArticulatedPart extends DualNode {
         ArticulatedPart stackOut_6_0;
         var4 = SteelSentinels.obfuscationControl;
         if (this.componentId >= 0 &&
-          this.componentId < tc.field_B.length) {
-          stackIn_4_0 = tc.field_B[this.componentId];
+          this.componentId < HighscoreSubmission.field_B.length) {
+          stackIn_4_0 = HighscoreSubmission.field_B[this.componentId];
         } else {
           stackIn_4_0 = 0;
         }
@@ -384,7 +384,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -588,12 +588,12 @@ final class ArticulatedPart extends DualNode {
                 if (var6 != -1) {
                   var7 = NodeDeque.a(var6, (byte) 67);
                   if (var7 == null) {
-                    SceneWidgetNode.a(SocketConnector.a("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
+                    SceneWidgetNode.logDebugMessage(SocketConnector.formatTemplate("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
                     stackIn_10_0 = param0;
                     return stackIn_10_0;
                   }
                   if ((var7.field_Q & this.instructions[var5_int].field_q) == 0) {
-                    SceneWidgetNode.a(SocketConnector.a("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.instructions[var5_int].field_q)}), (byte) 124);
+                    SceneWidgetNode.logDebugMessage(SocketConnector.formatTemplate("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.instructions[var5_int].field_q)}), (byte) 124);
                     stackIn_13_0 = param0;
                     return stackIn_13_0;
                   }
@@ -625,7 +625,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -735,9 +735,9 @@ final class ArticulatedPart extends DualNode {
                 if (stackIn_24_0 == 0) {
                   param2.field_U.field_p[var6] = (byte) 0;
                 } else if ((65535 & var7) == var7 >> 8) {
-                  param2.field_U.field_p[var6] = (byte)(1 + 63 * ec.a(var7, 255) / 255);
+                  param2.field_U.field_p[var6] = (byte)(1 + 63 * ClientUiHelpers.bitAnd(var7, 255) / 255);
                 } else {
-                  param2.field_U.field_p[var6] = (byte)(65 + 63 * ec.a(255, var7) / 255);
+                  param2.field_U.field_p[var6] = (byte)(65 + 63 * ClientUiHelpers.bitAnd(255, var7) / 255);
                 }
                 var6--;
               }
@@ -788,7 +788,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -1004,7 +1004,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1152,7 +1152,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1218,7 +1218,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -1296,11 +1296,11 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, na param1) {
+    final static String a(int param0, ChatMessage param1) {
         String stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -1329,11 +1329,11 @@ final class ArticulatedPart extends DualNode {
             (decompiledFrameRemainder0 = !(param1.field_g))) {
             if (0 != param1.field_w ||
               param1.field_n != 0) {
-              var4 = SocketConnector.a(ak.field_e, -99, new String[]{(String) (var2)});
+              var4 = SocketConnector.formatTemplate(SpriteFrame.field_e, -99, new String[]{(String) (var2)});
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var4 = SocketConnector.a(hh.field_d, -93, new String[]{(String) (var2)});
+              var4 = SocketConnector.formatTemplate(LoginActionHelpers.field_d, -93, new String[]{(String) (var2)});
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }
@@ -1343,7 +1343,7 @@ final class ArticulatedPart extends DualNode {
               var4 = "[" + ThreeSliceButtonPainter.field_p + "] ";
             }
             if (param1.field_k == 1) {
-              var4 = "[" + SocketConnector.a(AccountChoicePanel.field_ab, -102, new String[]{param1.field_s}) + "] ";
+              var4 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -102, new String[]{param1.field_s}) + "] ";
             }
             if (4 == param1.field_k &&
               PartInstruction.field_a != null) {
@@ -1368,7 +1368,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -1437,7 +1437,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1620,7 +1620,7 @@ final class ArticulatedPart extends DualNode {
 
     final static int b(int param0, int param1, int param2) {
         if (param1 == 1 &&
-          ef.b(-15020, param2)) {
+          EmailFormatError.isLeapYear(-15020, param2)) {
           return 29;
         }
         if (param0 != -14487) {
@@ -1692,7 +1692,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1755,7 +1755,7 @@ final class ArticulatedPart extends DualNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1763,7 +1763,7 @@ final class ArticulatedPart extends DualNode {
         try {
           this.a(-353384856, true, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1771,7 +1771,7 @@ final class ArticulatedPart extends DualNode {
         try {
           this.a(-353384856, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1790,7 +1790,7 @@ final class ArticulatedPart extends DualNode {
           this.sprite = param0;
           this.rotation = 0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1809,7 +1809,7 @@ final class ArticulatedPart extends DualNode {
           this.field_W = 0;
           this.field_G = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

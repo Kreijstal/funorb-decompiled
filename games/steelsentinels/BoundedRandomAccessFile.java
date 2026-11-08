@@ -24,7 +24,7 @@ final class BoundedRandomAccessFile {
     static uf field_f;
     static int field_q;
 
-    final static void a(int param0) {
+    final static void compactBuckets(int param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -43,11 +43,11 @@ final class BoundedRandomAccessFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "sn.I(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "sn.I(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0) throws IOException {
+    final void close(boolean param0) throws IOException {
         if (!param0) {
           this.field_e = (RandomAccessFile) null;
           if (null != this.field_e) {
@@ -62,7 +62,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static BinaryBitmapFont a(byte[] param0, int param1) {
+    final static BinaryBitmapFont decodeBinaryFont(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         BinaryBitmapFont var3 = null;
@@ -78,7 +78,7 @@ final class BoundedRandomAccessFile {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var3 = new BinaryBitmapFont(param0, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, UiContainer.field_L);
+          var3 = new BinaryBitmapFont(param0, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, UiContainer.field_L);
           NodeHashTable.a(9324);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -92,11 +92,11 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -124,15 +124,15 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         this.field_e.seek(param0);
         this.field_c = param0;
         if (param1 != -1) {
-          BoundedRandomAccessFile.a(-104);
+          BoundedRandomAccessFile.compactBuckets(-104);
           return;
         }
     }
@@ -140,7 +140,7 @@ final class BoundedRandomAccessFile {
     protected final void finalize() throws Throwable {
         if (null != this.field_e) {
           System.out.println("");
-          this.a(true);
+          this.close(true);
         }
     }
 
@@ -163,13 +163,13 @@ final class BoundedRandomAccessFile {
 
     final long length(int param0) throws IOException {
         if (param0 != 0) {
-          BoundedRandomAccessFile.a(-66);
+          BoundedRandomAccessFile.compactBuckets(-66);
           return this.field_e.length();
         }
         return this.field_e.length();
     }
 
-    final int a(byte[] param0, int param1, int param2, boolean param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, boolean param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -180,7 +180,7 @@ final class BoundedRandomAccessFile {
         try {
           var5_int = this.field_e.read(param0, param1, param2);
           if (param3) {
-            BoundedRandomAccessFile.a(-122);
+            BoundedRandomAccessFile.compactBuckets(-122);
           }
           if (var5_int > 0) {
             this.field_c = this.field_c + (long)var5_int;
@@ -197,7 +197,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -221,17 +221,17 @@ final class BoundedRandomAccessFile {
           }
           this.field_e.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void c(int param0) {
+    final static void showPendingAccountNotice(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          if (!oc.a((byte) 84)) {
+          if (!MessageMenuHelpers.hasOpenDialog((byte) 84)) {
             if (wb.field_c != null &&
               wb.field_c.field_b) {
               SoundCache.c(0);
@@ -239,19 +239,19 @@ final class BoundedRandomAccessFile {
             }
             return;
           }
-          UiContainer.field_J.a((byte) 40, true, km.field_l, ml.field_e);
+          UiContainer.field_J.handlePointerFrame((byte) 40, true, ClientGlobals.field_l, ml.field_e);
           if (param0 >= -13) {
             return;
           }
-          UiContainer.field_J.h((byte) -4);
+          UiContainer.field_J.updatePanels((byte) -4);
           while (UiContainer.f(22759)) {
-            UiContainer.field_J.a(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
+            UiContainer.field_J.handleKey(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "sn.H(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "sn.H(" + param0 + ')');
         }
     }
 

@@ -64,18 +64,18 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, boolean param1) {
-        NodeDeque.field_g = hh.field_i;
+        NodeDeque.field_g = LoginActionHelpers.field_i;
         GradientOutlineTextPainter.field_u = 0;
-        ik.field_e = 0;
+        ConditionalTextValue.field_e = 0;
         UiComponent.field_r = 0;
         jh.field_i = new MenuInputState(2);
         int var2 = 116 / ((param0 - 57) / 61);
-        jh.field_i.a(param1, -1, 0, NameAvailabilityValidator.a(DelegatingCanvas.field_c, oh.field_f, true));
+        jh.field_i.initializeSelection(param1, -1, 0, NameAvailabilityValidator.a(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true));
     }
 
     StrongCacheEntry(Object param0, int param1) {
@@ -83,7 +83,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "le.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "le.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

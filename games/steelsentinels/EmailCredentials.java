@@ -34,7 +34,7 @@ final class EmailCredentials extends LoginCredentials {
           Projectile.field_lb = false;
           LoginDialog.field_Gb = false;
           var8 = new PartInstruction[]{};
-          var7 = hl.field_v.a(var8, -21636, 4095);
+          var7 = PendingIntArrayRequest.field_v.a(var8, -21636, 4095);
           var2 = var7;
           for (var3 = 0; var3 < var2.length; var3++) {
             var4 = var2[var3];
@@ -108,16 +108,16 @@ final class EmailCredentials extends LoginCredentials {
             !GameplayController.field_I) {
             SectorCacheStore.a(false);
           }
-          ef.field_b = true;
+          EmailFormatError.field_b = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "on.E(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "on.E(" + param0 + ')');
         }
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void writeTo(PacketBuffer param0, boolean param1) {
         try {
           param0.writePrefixedString(13588, this.field_m);
           param0.a(this.field_l, (byte) -83);
@@ -125,26 +125,26 @@ final class EmailCredentials extends LoginCredentials {
             EmailCredentials.b(114);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "on.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "on.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static pc a(PcmSampleStream param0, int param1) {
-        pc var2 = null;
+    final static PlayingSound a(PcmSampleStream param0, int param1) {
+        PlayingSound var2 = null;
         RuntimeException var2_ref = null;
-        pc stackIn_2_0 = null;
-        pc stackIn_4_0 = null;
+        PlayingSound stackIn_2_0 = null;
+        PlayingSound stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -48) {
-            stackIn_2_0 = (pc) null;
+            stackIn_2_0 = (PlayingSound) null;
             return stackIn_2_0;
           }
-          var2 = new pc(param0, param0);
-          mm.field_b.addLast(3, var2);
+          var2 = new PlayingSound(param0, param0);
+          ClockAndCookieHelpers.field_b.addLast(3, var2);
           UiTheme.field_e.addSubstream(param0);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -158,14 +158,14 @@ final class EmailCredentials extends LoginCredentials {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final dj a(byte param0) {
+    final dj type(byte param0) {
         if (param0 < 47) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((PacketBuffer) null, true);
+          this.writeTo((PacketBuffer) null, true);
         }
         return ArticulatedPart.field_F;
     }
@@ -182,7 +182,7 @@ final class EmailCredentials extends LoginCredentials {
           this.field_m = param0;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

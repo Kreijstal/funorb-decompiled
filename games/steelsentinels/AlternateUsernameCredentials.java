@@ -20,9 +20,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         super(param0, param1);
     }
 
-    final dj a(byte param0) {
+    final dj type(byte param0) {
         if (param0 <= 47) {
-          this.a((byte) 26);
+          this.type((byte) 26);
           return PartInstruction.field_h;
         }
         return PartInstruction.field_h;
@@ -31,12 +31,12 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
     final static void d(int param0) {
         if (param0 > 40) {
           tf.field_g.setLength(0);
-          ib.field_b = 0;
+          ChatPanelHelpers.field_b = 0;
           return;
         }
         AlternateUsernameCredentials.a(-52, 18, 84, 62, 58, -55, -37);
         tf.field_g.setLength(0);
-        ib.field_b = 0;
+        ChatPanelHelpers.field_b = 0;
     }
 
     public static void releaseStatics(int param0) {

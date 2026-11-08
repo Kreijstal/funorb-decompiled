@@ -23,7 +23,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "wn.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "wn.B(" + param0 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class wn {
         var21 = SteelSentinels.obfuscationControl;
         try {
           GradientOutlineTextPainter.field_r[0] = 16764000;
-          pl.field_X = param6;
+          BirthDateEntryPanel.field_X = param6;
           GradientOutlineTextPainter.field_r[2] = 9474303;
           GradientOutlineTextPainter.field_r[3] = 16736511;
           GradientOutlineTextPainter.field_r[1] = 6356832;
@@ -91,22 +91,22 @@ final class wn {
           var16[4] = var12;
           DisplayNameForm.field_V = new SceneWidget(0L, param8);
           ProxyAuthenticationException.field_g = new SceneWidget(0L, param9);
-          DisplayNameForm.field_V.a(ProxyAuthenticationException.field_g, 118);
+          DisplayNameForm.field_V.addChild(ProxyAuthenticationException.field_g, 118);
           var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.field_M = new NodeDeque();
           BoundedRandomAccessFile.field_j = new ScrollContainer(0L, var17, param7, param3);
-          ProxyAuthenticationException.field_g.a(BoundedRandomAccessFile.field_j, 123);
+          ProxyAuthenticationException.field_g.addChild(BoundedRandomAccessFile.field_j, 123);
           CombatWorld.field_H = new SceneWidget(0L, param10);
-          ProxyAuthenticationException.field_g.a(CombatWorld.field_H, 125);
+          ProxyAuthenticationException.field_g.addChild(CombatWorld.field_H, 125);
           vd.field_d = new SceneWidget(0L, param11);
-          vd.field_d.field_L = pl.field_X;
-          CombatWorld.field_H.a(vd.field_d, 121);
+          vd.field_d.field_L = BirthDateEntryPanel.field_X;
+          CombatWorld.field_H.addChild(vd.field_d, 121);
           var18 = -112 / ((71 - param5) / 40);
-          CombatWorld.field_H.h(-87);
+          CombatWorld.field_H.markTreeDirty(-87);
           DualNodeDequeIterator.field_e = new SceneWidget(0L, (SceneWidget) null);
           DualNodeDequeIterator.field_e.field_I = var16;
-          CombatWorld.field_H.a(DualNodeDequeIterator.field_e, 118);
-          en.field_b = new SceneWidget[5];
+          CombatWorld.field_H.addChild(DualNodeDequeIterator.field_e, 118);
+          LoadingScreenHelpers.field_b = new SceneWidget[5];
           IntKeyLookup.field_a = new SceneWidget[5];
           ByteStorage.field_f = new SceneWidget[5];
           SocialListEntry.field_Yb = new SceneWidget[5];
@@ -134,16 +134,16 @@ final class wn {
               }
               if (decompiledFrameRemainder0) {
                 SocialListEntry.field_Yb[var19] = new SceneWidget(0L, param0);
-                en.field_b[var19] = new SceneWidget(0L, ReportAbuseDialog.field_ic, var20);
+                LoadingScreenHelpers.field_b[var19] = new SceneWidget(0L, ReportAbuseDialog.field_ic, var20);
                 IntKeyLookup.field_a[var19] = new SceneWidget(0L, (SceneWidget) null);
                 IntKeyLookup.field_a[var19].field_Fb = 1;
                 ByteStorage.field_f[var19] = new SceneWidget(0L, ReportAbuseDialog.field_ic);
                 ByteStorage.field_f[var19].field_Fb = 1;
-                SocialListEntry.field_Yb[var19].a(en.field_b[var19], 126);
-                SocialListEntry.field_Yb[var19].a(IntKeyLookup.field_a[var19], 125);
-                SocialListEntry.field_Yb[var19].a(ByteStorage.field_f[var19], 123);
-                SocialListEntry.field_Yb[var19].h(-94);
-                DisplayNameForm.field_V.a(SocialListEntry.field_Yb[var19], 119);
+                SocialListEntry.field_Yb[var19].addChild(LoadingScreenHelpers.field_b[var19], 126);
+                SocialListEntry.field_Yb[var19].addChild(IntKeyLookup.field_a[var19], 125);
+                SocialListEntry.field_Yb[var19].addChild(ByteStorage.field_f[var19], 123);
+                SocialListEntry.field_Yb[var19].markTreeDirty(-94);
+                DisplayNameForm.field_V.addChild(SocialListEntry.field_Yb[var19], 119);
                 c.field_u = c.field_u + 1;
               }
               var19++;
@@ -153,15 +153,15 @@ final class wn {
           }
           if (decompiledNaturalLoopExit0) {
             fm.field_b = new SceneWidget(0L, param1);
-            fm.field_b.field_S = ok.field_b;
-            DisplayNameForm.field_V.a(fm.field_b, 118);
+            fm.field_b.field_S = ChecksumAndFrameHelpers.field_b;
+            DisplayNameForm.field_V.addChild(fm.field_b, 118);
             stackIn_28_0 = ud.e(-107) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
             !fj.field_e) {
             return;
           }
-          ve.field_b = new pl(0, 0, 0, 0);
+          AssetDecoders.field_b = new BirthDateEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class wn {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -246,15 +246,15 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "wn.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "wn.D(" + param0 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
         try {
-          GradientOutlineTextPainter.field_p.a(param0, 0, (byte) -128);
+          GradientOutlineTextPainter.field_p.render(param0, 0, (byte) -128);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wn.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wn.A(" + param0 + ',' + param1 + ')');
         }
     }
 

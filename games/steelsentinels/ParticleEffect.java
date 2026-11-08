@@ -34,7 +34,7 @@ final class ParticleEffect extends DualNode {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void drawAnimatedHighlightBox(int param0, int param1, byte param2, int param3, int param4, int param5) {
         RgbSprite[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -56,7 +56,7 @@ final class ParticleEffect extends DualNode {
           SoftwareRaster.blurRectangle(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           if (param2 < 26) {
             var12 = (String) null;
-            ParticleEffect.a(112, -62, (String) null, 84, (String) null);
+            ParticleEffect.showSavedLayout(112, -62, (String) null, 84, (String) null);
           }
           var6[var7].drawSilhouette(param4, param3, 17561);
           SoftwareRaster.blurRectangle(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
@@ -76,7 +76,7 @@ final class ParticleEffect extends DualNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var6_ref), "qb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var6_ref), "qb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class ParticleEffect extends DualNode {
                   }
                   var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 2;
-                  cc.field_pc[var8].drawScaled(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
+                  LobbyPlayer.field_pc[var8].drawScaled(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
@@ -205,7 +205,7 @@ final class ParticleEffect extends DualNode {
                   }
                   var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 4;
-                  cc.field_pc[var8].drawScaled(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
+                  LobbyPlayer.field_pc[var8].drawScaled(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
@@ -240,7 +240,7 @@ final class ParticleEffect extends DualNode {
           if (alternateRenderPass) {
             var8Lifetime1 = Math.max(0, Math.min(15, this.ageTicks * 16 / this.durationTicks));
             var9Lifetime1 = 17;
-            stackIn_56_0 = cc.field_pc[var8Lifetime1];
+            stackIn_56_0 = LobbyPlayer.field_pc[var8Lifetime1];
             stackIn_56_1 = -var9Lifetime1 + var5;
             stackIn_56_2 = -var9Lifetime1 + var7;
             stackIn_56_3 = 2 * var9Lifetime1;
@@ -263,9 +263,9 @@ final class ParticleEffect extends DualNode {
         this.world = null;
     }
 
-    final static boolean g(int param0) {
+    final static boolean hasInputFocus(int param0) {
         if (param0 != 2) {
-          ParticleEffect.a(-13, 21, (byte) 84, -39, 29, 95);
+          ParticleEffect.drawAnimatedHighlightBox(-13, 21, (byte) 84, -39, 29, 95);
         }
         return wb.field_c == null ? DelayedServerPacket.field_q : true;
     }
@@ -282,7 +282,7 @@ final class ParticleEffect extends DualNode {
         this.worldY = this.worldY + this.velocityY;
         if (obfuscationGuard < 1) {
           unusedString = (String) null;
-          ParticleEffect.a(-116, -34, (String) null, -4, (String) null);
+          ParticleEffect.showSavedLayout(-116, -34, (String) null, -4, (String) null);
         }
         if (200 > this.ageTicks) {
           this.ageTicks = this.ageTicks + (int)(Math.random() * 4.0);
@@ -359,7 +359,7 @@ final class ParticleEffect extends DualNode {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, String param4) {
+    final static void showSavedLayout(int param0, int param1, String param2, int param3, String param4) {
         try {
           vd.field_d.field_zb = vd.field_d.field_zb + DualNodeDequeIterator.field_e.field_zb;
           vd.field_d.field_Db = param4;
@@ -371,14 +371,14 @@ final class ParticleEffect extends DualNode {
           vd.field_d.field_zb = vd.field_d.field_zb - DualNodeDequeIterator.field_e.field_zb;
           DualNodeDequeIterator.field_e.field_Y = DualNodeDequeIterator.field_e.field_Y - DualNodeDequeIterator.field_e.field_zb;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     ParticleEffect() {
     }
 
-    final static void a(ArticulatedPart param0, SceneWidget param1, byte param2, boolean param3, int param4, int param5) {
+    final static void renderPartIcon(ArticulatedPart param0, SceneWidget param1, byte param2, boolean param3, int param4, int param5) {
         Object stackIn_304_0 = null;
         StringBuilder stackIn_304_1 = null;
         String stackIn_305_2 = null;
@@ -400,7 +400,7 @@ final class ParticleEffect extends DualNode {
           if (param3 &&
             param0.componentId >= 0 &&
             param0.field_Q != 1) {
-            var13 = hl.field_p;
+            var13 = PendingIntArrayRequest.field_p;
             var6 = var13;
             if (var13.length <= param0.componentId) {
               var6 = null;
@@ -1310,7 +1310,7 @@ final class ParticleEffect extends DualNode {
           } else {
             stackIn_308_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_304_0), ((StringBuilder) (Object) stackIn_307_1).append(stackIn_308_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_304_0), ((StringBuilder) (Object) stackIn_307_1).append(stackIn_308_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

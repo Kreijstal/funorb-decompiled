@@ -9,12 +9,12 @@ final class ModalStack extends SingleChildContainer {
     static boolean field_V;
     static SceneWidget field_U;
 
-    final void h(byte param0) {
+    final void updatePanels(byte param0) {
         int var4 = SteelSentinels.obfuscationControl;
         NodeIterator var2 = new NodeIterator(this.field_T);
         ModalPanel var3 = (ModalPanel) (var2.b(2));
         while (var3 != null) {
-          if (var3.i(-8350)) {
+          if (var3.updateAnimationsAndCheckClosed(-8350)) {
             var3.unlink(4);
           }
           var3 = (ModalPanel) (var2.next(2));
@@ -22,7 +22,7 @@ final class ModalStack extends SingleChildContainer {
         if (param0 != -4) {
           return;
         }
-        this.field_J = (UiComponent) ((Object) this.i(-1850));
+        this.field_J = (UiComponent) ((Object) this.topOpenPanel(-1850));
     }
 
     final void refreshPanelVisibility(int param0) {
@@ -39,7 +39,7 @@ final class ModalStack extends SingleChildContainer {
         this.field_J = null;
     }
 
-    final static int a(String param0, boolean param1, int param2, byte param3, int param4, ik param5, ik param6) {
+    final static int a(String param0, boolean param1, int param2, byte param3, int param4, ConditionalTextValue param5, ConditionalTextValue param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_16_0 = null;
@@ -80,15 +80,15 @@ final class ModalStack extends SingleChildContainer {
         var16 = null;
         var13 = SteelSentinels.obfuscationControl;
         try {
-          var15 = param5.a(2134230754);
-          var8 = param6.a(2134230754);
+          var15 = param5.getText(2134230754);
+          var8 = param6.getText(2134230754);
           if (rb.field_h == null &&
             !SectorCacheStore.a(119, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (lj.field_d == rn.field_v) {
-            mm.field_g.position = 0;
+          if (SocialRequestHelpers.field_d == rn.field_v) {
+            ClockAndCookieHelpers.field_g.position = 0;
             TextHotspotWidget.field_bb = null;
             if (param0 == null) {
               FallingPickup.field_y.position = 0;
@@ -96,7 +96,7 @@ final class ModalStack extends SingleChildContainer {
               FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
               stackIn_16_0 = FallingPickup.field_y;
               stackIn_16_1 = 13588;
-              if (!param5.a((byte) 51)) {
+              if (!param5.isFlagged((byte) 51)) {
                 stackIn_17_2 = "";
               } else {
                 stackIn_17_2 = var15;
@@ -104,17 +104,17 @@ final class ModalStack extends SingleChildContainer {
               ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_16_1, stackIn_17_2);
               stackIn_19_0 = FallingPickup.field_y;
               stackIn_19_1 = 13588;
-              if (!param6.a((byte) 51)) {
+              if (!param6.isFlagged((byte) 51)) {
                 stackIn_20_2 = "";
               } else {
                 stackIn_20_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_19_0).writePrefixedString(stackIn_19_1, stackIn_20_2);
-              mm.field_g.writeByte((byte) 127, 16);
-              mm.field_g.position = mm.field_g.position + 1;
-              var9 = mm.field_g.position;
-              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
-              mm.field_g.backpatchByteLength((byte) -32, -var9 + mm.field_g.position);
+              ClockAndCookieHelpers.field_g.writeByte((byte) 127, 16);
+              ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
+              var9 = ClockAndCookieHelpers.field_g.position;
+              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+              ClockAndCookieHelpers.field_g.backpatchByteLength((byte) -32, -var9 + ClockAndCookieHelpers.field_g.position);
             } else {
               var9 = 0;
               FallingPickup.field_y.position = 0;
@@ -130,31 +130,31 @@ final class ModalStack extends SingleChildContainer {
               FallingPickup.field_y.writeShort(param4, 104);
               FallingPickup.field_y.writeByte((byte) 124, param2);
               FallingPickup.field_y.writeByte((byte) 117, var9);
-              mm.field_g.writeByte((byte) 117, 18);
-              mm.field_g.position = mm.field_g.position + 2;
-              var10 = mm.field_g.position;
-              var11_ref_String = SceneWidget.a(-58, Projectile.d((byte) -21));
+              ClockAndCookieHelpers.field_g.writeByte((byte) 117, 18);
+              ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 2;
+              var10 = ClockAndCookieHelpers.field_g.position;
+              var11_ref_String = SceneWidget.readSettingsCookie(-58, Projectile.d((byte) -21));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              mm.field_g.writeString(var11_ref_String, -63);
-              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
-              mm.field_g.writeShortLengthPrefix(30, -var10 + mm.field_g.position);
+              ClockAndCookieHelpers.field_g.writeString(var11_ref_String, -63);
+              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+              ClockAndCookieHelpers.field_g.writeShortLengthPrefix(30, -var10 + ClockAndCookieHelpers.field_g.position);
             }
             gj.a(0, -1);
             rn.field_v = mc.field_c;
           }
           if (mc.field_c == rn.field_v &&
-            ve.a((byte) -96, 1)) {
-            var9Lifetime1 = rf.field_d.readUnsignedByte((byte) -62);
-            rf.field_d.position = 0;
+            AssetDecoders.fillIncomingBuffer((byte) -96, 1)) {
+            var9Lifetime1 = LoginConnectionStage.field_d.readUnsignedByte((byte) -62);
+            LoginConnectionStage.field_d.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               vh.field_d = new String[var9Lifetime1 - 100];
               rn.field_v = LinkButtonPainter.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                MusicPatchEnvelope.a(-117, Projectile.d((byte) -21));
+                MusicPatchEnvelope.setTuhstatbutMarker(-117, Projectile.d((byte) -21));
                 di.field_e = MembershipPromotionScreen.field_o;
                 LoginForm.m(83);
                 AlphaContainer.field_T = false;
@@ -162,13 +162,13 @@ final class ModalStack extends SingleChildContainer {
                 return stackIn_32_0;
               }
               if (var9Lifetime1 == 99) {
-                ve.a((byte) -85, rf.a(-58));
-                TextHotspotWidget.field_bb = new Boolean(ai.a(rf.field_d, -32599));
-                rf.field_d.position = 0;
+                AssetDecoders.fillIncomingBuffer((byte) -85, LoginConnectionStage.getOne(-58));
+                TextHotspotWidget.field_bb = new Boolean(ai.a(LoginConnectionStage.field_d, -32599));
+                LoginConnectionStage.field_d.position = 0;
               } else {
                 rn.field_v = RegistrationRequestDialog.field_Yb;
                 ViewportController.field_f = -1;
-                ch.field_N = var9Lifetime1;
+                ArrayWidgetContainer.field_N = var9Lifetime1;
               }
             }
           }
@@ -178,13 +178,13 @@ final class ModalStack extends SingleChildContainer {
           }
           if (rn.field_v == LinkButtonPainter.field_k) {
             var9Lifetime2 = 2;
-            if (ve.a((byte) -128, var9Lifetime2)) {
-              var10Lifetime1 = rf.field_d.readUnsignedShort((byte) -60);
-              rf.field_d.position = 0;
-              if (ve.a((byte) -97, var10Lifetime1)) {
+            if (AssetDecoders.fillIncomingBuffer((byte) -128, var9Lifetime2)) {
+              var10Lifetime1 = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
+              LoginConnectionStage.field_d.position = 0;
+              if (AssetDecoders.fillIncomingBuffer((byte) -97, var10Lifetime1)) {
                 var11 = vh.field_d.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  vh.field_d[var12] = rf.field_d.readPrefixedString((byte) -97);
+                  vh.field_d[var12] = LoginConnectionStage.field_d.readPrefixedString((byte) -97);
                 }
                 LoginForm.m(-46);
                 AlphaContainer.field_T = false;
@@ -195,17 +195,17 @@ final class ModalStack extends SingleChildContainer {
           }
           if (RegistrationRequestDialog.field_Yb == rn.field_v &&
             LoginForm.n(37)) {
-            if (ch.field_N == 255) {
-              var9_ref_String = rf.field_d.readNullableString(-77);
+            if (ArrayWidgetContainer.field_N == 255) {
+              var9_ref_String = LoginConnectionStage.field_d.readNullableString(-77);
               if (var9_ref_String != null) {
-                ri.a(var9_ref_String, Projectile.d((byte) -21), 124);
+                LoginStateQueries.writeSettingsCookie(var9_ref_String, Projectile.d((byte) -21), 124);
               }
             } else {
-              di.field_e = rf.field_d.readString(1);
+              di.field_e = LoginConnectionStage.field_d.readString(1);
             }
             LoginForm.m(-98);
             AlphaContainer.field_T = false;
-            stackIn_54_0 = ch.field_N;
+            stackIn_54_0 = ArrayWidgetContainer.field_N;
             return stackIn_54_0;
           }
           if (null == rb.field_h) {
@@ -248,11 +248,11 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
-    final ModalPanel i(int param0) {
+    final ModalPanel topOpenPanel(int param0) {
         NodeIterator var2;
         ModalPanel var3;
         int var4;
@@ -292,11 +292,11 @@ final class ModalStack extends SingleChildContainer {
           var3.focusNext(1, (UiComponent) (this));
           int var4 = 82 % ((-51 - param1) / 61);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ka.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ka.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final UiComponent a(byte param0) {
+    final UiComponent focusedChild(byte param0) {
         NodeIterator var2;
         ModalPanel var3;
         int var4;
@@ -308,7 +308,7 @@ final class ModalStack extends SingleChildContainer {
         var3 = (ModalPanel) (var2.b(2));
         while (var3 != null) {
           if (var3.field_Q) {
-            return var3.h(-1);
+            return var3.findFocusedChild(-1);
           }
           var3 = (ModalPanel) (var2.next(param0 ^ -4));
         }
@@ -327,11 +327,11 @@ final class ModalStack extends SingleChildContainer {
           var6 = (UiComponent) (var5.a(true));
         }
         if (param1 > -99) {
-          this.i(117);
+          this.topOpenPanel(117);
         }
     }
 
-    final void g(byte param0) {
+    final void removeHiddenPanels(byte param0) {
         int var4 = SteelSentinels.obfuscationControl;
         if (param0 != 103) {
           return;
@@ -339,7 +339,7 @@ final class ModalStack extends SingleChildContainer {
         NodeIterator var2 = new NodeIterator(this.field_T);
         ModalPanel var3 = (ModalPanel) (var2.b(2));
         while (var3 != null) {
-          if (var3.j(-102)) {
+          if (var3.refreshVisibilityAndCheckClosed(-102)) {
             var3.unlink(param0 - 99);
           }
           var3 = (ModalPanel) (var2.next(2));
@@ -390,7 +390,7 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class ModalStack extends SingleChildContainer {
           }
           if (jn.field_g) {
             ResizableModalPanel.a(param1, param7, param1, param4, 20, param5, param2, param3, -126);
-            hh.field_a.a((byte) 121, param0);
+            LoginActionHelpers.field_a.updateInputFullScreen((byte) 121, param0);
             if (param0) {
               if (vc.field_f.field_Eb != 0) {
                 jn.field_g = false;
@@ -436,7 +436,7 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -492,7 +492,7 @@ final class ModalStack extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

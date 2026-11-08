@@ -31,62 +31,62 @@ abstract class ArchiveRequest extends DualNode {
 
     final static void c(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        cc var1 = null;
-        hk var1_ref = null;
+        LobbyPlayer var1 = null;
+        LobbyGame var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
-        cc var1Lifetime1;
+        LobbyPlayer var1Lifetime1;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          var1 = (cc) (IterableNodeHashTable.field_m.first(13058));
+          var1 = (LobbyPlayer) (IterableNodeHashTable.field_m.first(13058));
           while (var1 != null) {
             if (var1.field_Ub > 0) {
               var1.field_Ub = var1.field_Ub - 1;
               if (var1.field_Ub == 0) {
                 var1.field_Wb = 0;
-                if (var1.d((byte) -36)) {
+                if (var1.isUnlisted((byte) -36)) {
                   var1.unlink(4);
                 }
               }
             }
-            var1 = (cc) (IterableNodeHashTable.field_m.next((byte) -36));
+            var1 = (LobbyPlayer) (IterableNodeHashTable.field_m.next((byte) -36));
           }
           if (param0 <= 102) {
             ArchiveRequest.releaseStatics((byte) 19);
           }
-          var1_ref = (hk) (ci.field_e.first(13058));
+          var1_ref = (LobbyGame) (ClientErrorSupport.field_e.first(13058));
           while (var1_ref != null) {
             if (var1_ref.field_mc > 0) {
               var1_ref.field_mc = var1_ref.field_mc - 1;
               if (var1_ref.field_mc == 0) {
                 var1_ref.field_Ac = 0;
-                if (var1_ref.k(4219)) {
+                if (var1_ref.isUnlisted(4219)) {
                   var1_ref.unlink(4);
                 }
               }
             }
-            var1_ref = (hk) (ci.field_e.next((byte) -33));
+            var1_ref = (LobbyGame) (ClientErrorSupport.field_e.next((byte) -33));
           }
-          var1Lifetime1 = (cc) (o.field_d.first(13058));
+          var1Lifetime1 = (LobbyPlayer) (o.field_d.first(13058));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Ub > 0) {
               var1Lifetime1.field_Ub = var1Lifetime1.field_Ub - 1;
               if (var1Lifetime1.field_Ub != 0) {
-                var1Lifetime1 = (cc) (o.field_d.next((byte) -34));
+                var1Lifetime1 = (LobbyPlayer) (o.field_d.next((byte) -34));
                 continue;
               }
               var1Lifetime1.field_Wb = 0;
-              if (var1Lifetime1.d((byte) -36)) {
+              if (var1Lifetime1.isUnlisted((byte) -36)) {
                 var1Lifetime1.unlink(4);
               }
             }
-            var1Lifetime1 = (cc) (o.field_d.next((byte) -34));
+            var1Lifetime1 = (LobbyPlayer) (o.field_d.next((byte) -34));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref2), "fe.J(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref2), "fe.J(" + param0 + ')');
         }
     }
 

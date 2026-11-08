@@ -31,7 +31,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           this.field_n.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,9 +54,9 @@ final class DirectByteStorage extends ByteStorage {
             stackIn_2_0 = (java.net.URL) null;
             return stackIn_2_0;
           }
-          if (dn.field_Ub != null &&
-            !dn.field_Ub.equals(param2.getParameter("settings"))) {
-            var3 = dn.field_Ub;
+          if (ContextMenu.field_Ub != null &&
+            !ContextMenu.field_Ub.equals(param2.getParameter("settings"))) {
+            var3 = ContextMenu.field_Ub;
             var4 = var3;
             var4Lifetime2 = var3;
           }
@@ -65,7 +65,7 @@ final class DirectByteStorage extends ByteStorage {
             !ja.field_h.equals(param2.getParameter("session"))) {
             var4Lifetime1 = ja.field_h;
           }
-          stackIn_10_0 = fc.a(-19571, param1, (String) (var3), (String) (var4Lifetime1), -1);
+          stackIn_10_0 = SoundAndUrlHelpers.rewriteUrlPathParameters(-19571, param1, (String) (var3), (String) (var4Lifetime1), -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

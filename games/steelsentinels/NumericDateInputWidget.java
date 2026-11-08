@@ -16,39 +16,39 @@ final class NumericDateInputWidget extends DateInputWidget {
     static int field_Z;
     static String field_cb;
 
-    private final void a(int param0, UiComponent param1, int param2, String param3, int param4) {
+    private final void drawCenteredLabel(int param0, UiComponent param1, int param2, String param3, int param4) {
         try {
           if (param0 != 15853) {
-            this.h((byte) 24);
+            this.getYear((byte) 24);
           }
           SectorCacheStore.field_m.drawCentered(param3, param2 + param1.field_o + (param1.field_x >> 1), param4 - (-param1.field_z + 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "re.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "re.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) -106, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) -106, param2, param3, param4);
         int var6 = param3 - 130 >> 1;
         if (!this.field_Y) {
-          this.field_fb.a(var6, (byte) -107, 0, 25, param4);
-          this.field_gb.a(var6 + 45, (byte) -90, 0, 25, param4);
+          this.field_fb.setBounds(var6, (byte) -107, 0, 25, param4);
+          this.field_gb.setBounds(var6 + 45, (byte) -90, 0, 25, param4);
           if (param1 >= -71) {
             this.field_Y = true;
-            this.field_db.a(90 + var6, (byte) -110, 0, 40, param4);
+            this.field_db.setBounds(90 + var6, (byte) -110, 0, 40, param4);
             return;
           }
-          this.field_db.a(90 + var6, (byte) -110, 0, 40, param4);
+          this.field_db.setBounds(90 + var6, (byte) -110, 0, 40, param4);
           return;
         }
-        this.field_gb.a(var6, (byte) -79, 0, 25, param4);
-        this.field_fb.a(45 + var6, (byte) -78, 0, 25, param4);
+        this.field_gb.setBounds(var6, (byte) -79, 0, 25, param4);
+        this.field_fb.setBounds(45 + var6, (byte) -78, 0, 25, param4);
         if (param1 >= -71) {
           this.field_Y = true;
-          this.field_db.a(90 + var6, (byte) -110, 0, 40, param4);
+          this.field_db.setBounds(90 + var6, (byte) -110, 0, 40, param4);
           return;
         }
-        this.field_db.a(90 + var6, (byte) -110, 0, 40, param4);
+        this.field_db.setBounds(90 + var6, (byte) -110, 0, 40, param4);
     }
 
     final String getTooltip(int param0) {
@@ -81,9 +81,9 @@ final class NumericDateInputWidget extends DateInputWidget {
     NumericDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param2, (byte) -101, param3, param4, param5);
+          this.setBounds(param2, (byte) -101, param3, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -97,19 +97,19 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
         param2 = param2 + this.field_o;
         param0 = param0 + this.field_z;
-        this.a(15853, this.field_fb, param2, UsernameCredentials.field_n, param0);
-        this.a(15853, this.field_gb, param2, qi.field_b, param0);
-        this.a(15853, this.field_db, param2, fj.field_g, param0);
+        this.drawCenteredLabel(15853, this.field_fb, param2, UsernameCredentials.field_n, param0);
+        this.drawCenteredLabel(15853, this.field_gb, param2, qi.field_b, param0);
+        this.drawCenteredLabel(15853, this.field_db, param2, fj.field_g, param0);
     }
 
-    final int k(int param0) {
+    final int getMonthIndex(int param0) {
         NumberFormatException var2 = null;
         String var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != 14879) {
           var3 = (String) null;
-          this.a(-54, (UiComponent) null, -29, (String) null, -63);
+          this.drawCenteredLabel(-54, (UiComponent) null, -29, (String) null, -63);
         }
         try {
           stackIn_3_0 = -1 + Integer.parseInt(this.field_gb.field_y);
@@ -121,7 +121,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final int j(int param0) {
+    final int getDay(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -171,7 +171,7 @@ final class NumericDateInputWidget extends DateInputWidget {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -180,7 +180,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean isIncomplete(int param0) {
         if (this.field_fb.field_y == null) {
           return true;
         }
@@ -206,13 +206,13 @@ final class NumericDateInputWidget extends DateInputWidget {
         return false;
     }
 
-    final int h(byte param0) {
+    final int getYear(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
           if (param0 < 16) {
-            this.k(13);
+            this.getMonthIndex(13);
           }
           stackIn_3_0 = Integer.parseInt(this.field_db.field_y);
           return stackIn_3_0;
@@ -242,12 +242,12 @@ final class NumericDateInputWidget extends DateInputWidget {
           }
           this.addChild(this.field_db, -114);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, DateOfBirthValidator param1) {
-        super.a((byte) -84, param1);
+    final void setDateValidator(byte param0, DateOfBirthValidator param1) {
+        super.setDateValidator((byte) -84, param1);
         if (param0 > -17) {
           return;
         }
@@ -256,7 +256,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           this.field_gb.field_A = (UiListener) ((Object) param1);
           this.field_db.field_A = (UiListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

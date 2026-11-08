@@ -12,7 +12,7 @@ final class nd {
     }
 
     final static void a(boolean param0, int param1) {
-        hf.a(param0, 1);
+        FrameStyleHelpers.updateMainPanelWidget(param0, 1);
         if (param1 != 230827172) {
           field_a = (SceneWidget) null;
           if (null != UiTheme.field_i) {

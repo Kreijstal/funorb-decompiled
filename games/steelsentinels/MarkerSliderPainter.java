@@ -21,7 +21,7 @@ final class MarkerSliderPainter implements WidgetPainter {
 
     final static void a(byte param0) {
         int var1 = 45 / ((param0 - 70) / 41);
-        tc.a((byte) -113);
+        HighscoreSubmission.showLoadingProgressDialog((byte) -113);
         LabeledField.a(4, 0);
     }
 
@@ -113,8 +113,8 @@ final class MarkerSliderPainter implements WidgetPainter {
           var8 = var12.field_Y + (param1.field_o + param0);
           var9 = var12.field_ab + (param1.field_z + param4);
           SoftwareRaster.drawLine(var8, var9, var7 + var8, var9, this.field_k);
-          for (var10 = -1 + var12.h(24129); var10 >= 0; var10--) {
-            SoftwareRaster.fillCircle(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
+          for (var10 = -1 + var12.markerCount(24129); var10 >= 0; var10--) {
+            SoftwareRaster.fillCircle(var8 + var7 * var12.getMarker(var10, -128) / var12.getRange((byte) 64), var9, this.field_c, this.field_h);
           }
           if (null != this.field_b) {
             this.field_b.drawCentered(var12.field_y, var8 + var7 / 2, var12.field_ab + this.field_b.field_W + var9, this.field_e, this.field_d);
@@ -134,7 +134,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           this.field_b = param0;
           this.field_c = param5;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

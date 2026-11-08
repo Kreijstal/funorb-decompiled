@@ -39,8 +39,8 @@ final class fj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = hk.a('_', "", true, param0);
-          var3 = ri.a(param1 ^ 7035, param2);
+          param0 = LobbyGame.replaceCharacter('_', "", true, param0);
+          var3 = LoginStateQueries.reverseString(param1 ^ 7035, param2);
           if (param1 != -7036) {
             return true;
           }
@@ -62,7 +62,7 @@ final class fj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class fj {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!IconTextComponent.a((byte) -30, param0)) {
+          if (!IconTextComponent.isAllowedChar((byte) -30, param0)) {
             return false;
           }
           if (param2 > -93) {
@@ -101,7 +101,7 @@ final class fj {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 

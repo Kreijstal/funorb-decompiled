@@ -67,7 +67,7 @@ class SceneWidget extends SceneWidgetNode {
     NodeDeque field_M;
     private boolean field_tb;
 
-    final void b(SceneWidget param0, int param1) {
+    final void applyStyle(SceneWidget param0, int param1) {
         boolean stackIn_95_1 = false;
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
@@ -191,7 +191,7 @@ class SceneWidget extends SceneWidgetNode {
             }
           }
           if (param1 != 6402) {
-            this.a(true, -21, false, false, false, true, -17, -32, (byte) -30, 93, false);
+            this.drawTree(true, -21, false, false, false, true, -17, -32, (byte) -30, 93, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,11 +204,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_jb = null;
         field_N = null;
         if (param0) {
@@ -218,15 +218,15 @@ class SceneWidget extends SceneWidgetNode {
         field_ib = null;
     }
 
-    final int g(int param0) {
+    final int getContentWidth(int param0) {
         if (param0 != -2147483648) {
           SceneWidget var3 = (SceneWidget) null;
-          this.a((SceneWidget) null, 37);
+          this.addChild((SceneWidget) null, 37);
         }
-        return this.b(param0 + 2147483550, 2147483647);
+        return this.measureContentWidth(param0 + 2147483550, 2147483647);
     }
 
-    private final SceneWidget a(long param0, int param1) {
+    private final SceneWidget findById(long param0, int param1) {
         SceneWidget var7 = null;
         SceneWidget var5 = null;
         int var6 = SteelSentinels.obfuscationControl;
@@ -236,7 +236,7 @@ class SceneWidget extends SceneWidgetNode {
         if (this.field_M != null) {
           var7 = (SceneWidget) (this.field_M.first(13058));
           while (var7 != null) {
-            var5 = var7.a(param0, 3318);
+            var5 = var7.findById(param0, 3318);
             if (var5 != null) {
               return var5;
             }
@@ -250,14 +250,14 @@ class SceneWidget extends SceneWidgetNode {
         return null;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void updateInputFullScreen(byte param0, boolean param1) {
         SocketConnector.field_d = !param1 ? true : false;
         int var3 = -36 % ((65 - param0) / 41);
         SentinelCommandSimulator.field_f = !param1 ? true : false;
-        this.a(true, SoftwareRaster.field_c, 0, SoftwareRaster.field_j, (byte) -123, 0);
+        this.updateInputTree(true, SoftwareRaster.field_c, 0, SoftwareRaster.field_j, (byte) -123, 0);
     }
 
-    final static int i(int param0) {
+    final static int pollAccountDialogAction(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -270,10 +270,10 @@ class SceneWidget extends SceneWidgetNode {
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          GradientOutlineTextPainter.field_p.a((byte) 86, true, FunOrbClient.field_u, bd.field_d);
-          GradientOutlineTextPainter.field_p.h((byte) -4);
+          GradientOutlineTextPainter.field_p.handlePointerFrame((byte) 86, true, FunOrbClient.field_u, bd.field_d);
+          GradientOutlineTextPainter.field_p.updatePanels((byte) -4);
           while (UiContainer.f(22759)) {
-            GradientOutlineTextPainter.field_p.a(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
+            GradientOutlineTextPainter.field_p.handleKey(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
           }
           if (-1 != TextHotspotWidget.field_V) {
             var1_int = TextHotspotWidget.field_V;
@@ -290,9 +290,9 @@ class SceneWidget extends SceneWidgetNode {
             return stackIn_14_0;
           }
           if (param0 <= 96) {
-            SceneWidget.a(true);
+            SceneWidget.releaseStatics(true);
           }
-          if (!gf.field_a.a((byte) -72)) {
+          if (!gf.field_a.isComplete((byte) -72)) {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
@@ -305,11 +305,11 @@ class SceneWidget extends SceneWidgetNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "gh.N(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "gh.N(" + param0 + ')');
         }
     }
 
-    final void a(int param0, byte param1, SceneWidget param2, SceneWidget param3) {
+    final void positionAfter(int param0, byte param1, SceneWidget param2, SceneWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -345,11 +345,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final void a(SceneWidget param0, int param1) {
+    final void addChild(SceneWidget param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -361,7 +361,7 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_M.addLast(3, param0);
           if (param1 < 117) {
-            this.a(46, 9, 12, -84, 107);
+            this.setBounds(46, 9, 12, -84, 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -374,11 +374,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, byte param8, int param9, boolean param10) {
+    private final void drawTree(boolean param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, byte param8, int param9, boolean param10) {
         boolean stackIn_6_0 = false;
         int var12;
         int var13;
@@ -554,14 +554,14 @@ class SceneWidget extends SceneWidgetNode {
         if (null != this.field_M) {
           var23_ref = (SceneWidget) (this.field_M.first(13058));
           while (var23_ref != null) {
-            var23_ref.a(param0, this.field_Rb + var19, param2, this.field_tb, param4, param5, this.field_zb, this.field_Lb, (byte) 81, this.field_cb + var20, param10);
+            var23_ref.drawTree(param0, this.field_Rb + var19, param2, this.field_tb, param4, param5, this.field_zb, this.field_Lb, (byte) 81, this.field_cb + var20, param10);
             var23_ref = (SceneWidget) (this.field_M.next((byte) -78));
           }
         }
         SoftwareRaster.setClip(var12, var13, var14, var15);
     }
 
-    final SceneWidget a(String param0, boolean param1) {
+    final SceneWidget findByName(String param0, boolean param1) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         CharSequence var5 = null;
@@ -573,10 +573,10 @@ class SceneWidget extends SceneWidgetNode {
         try {
           if (param1) {
             var4 = (java.applet.Applet) null;
-            SceneWidget.a(25, (java.applet.Applet) null);
+            SceneWidget.readSettingsCookie(25, (java.applet.Applet) null);
           }
           var5 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = this.a(WidgetStyleLayer.a(var5, (byte) -48), 3318);
+          stackIn_3_0 = this.findById(WidgetStyleLayer.a(var5, (byte) -48), 3318);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -588,7 +588,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ class SceneWidget extends SceneWidgetNode {
         this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, byte param4, int param5) {
+    private final void updateInputTree(boolean param0, int param1, int param2, int param3, byte param4, int param5) {
         boolean stackIn_33_1 = false;
         boolean stackIn_38_1 = false;
         int var7;
@@ -671,14 +671,14 @@ class SceneWidget extends SceneWidgetNode {
         if (0 == WeightedLruCache.field_d) {
           this.field_W = 0;
         }
-        stackIn_33_1 = (!SentinelCommandSimulator.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= DelegatingCanvas.field_c) && (DelegatingCanvas.field_c < SoftwareRaster.field_d);
+        stackIn_33_1 = (!SentinelCommandSimulator.field_f) && (SoftwareRaster.field_i <= LobbySetupHelpers.field_f) && (LobbySetupHelpers.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= DelegatingCanvas.field_c) && (DelegatingCanvas.field_c < SoftwareRaster.field_d);
         this.field_K = stackIn_33_1;
         stackIn_38_1 = (this.field_K) && (this.field_W == WeightedLruCache.field_d) && (param0);
         this.field_kb = stackIn_38_1;
         if (this.field_M != null) {
           var14 = (SceneWidget) (this.field_M.last(1063677678));
           while (var14 != null) {
-            var14.a(param0, this.field_zb, this.field_cb, this.field_Lb, (byte) 1, this.field_Rb);
+            var14.updateInputTree(param0, this.field_zb, this.field_cb, this.field_Lb, (byte) 1, this.field_Rb);
             var14 = (SceneWidget) (this.field_M.previous(-2137));
           }
         }
@@ -691,7 +691,7 @@ class SceneWidget extends SceneWidgetNode {
         SoftwareRaster.setClip(var9, var10, var11, var12);
         if (this.field_W != 0 &&
           this.field_U) {
-          this.field_Y = -this.field_Cb + oh.field_f - param5;
+          this.field_Y = -this.field_Cb + LobbySetupHelpers.field_f - param5;
           this.field_eb = -param2 - this.field_Nb + DelegatingCanvas.field_c;
           if (this.field_Y < 0) {
             this.field_Y = 0;
@@ -716,7 +716,7 @@ class SceneWidget extends SceneWidgetNode {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    final static String a(int param0, java.applet.Applet param1) {
+    final static String readSettingsCookie(int param0, java.applet.Applet param1) {
         try {
           RuntimeException var2 = null;
           String var3 = null;
@@ -754,10 +754,10 @@ class SceneWidget extends SceneWidgetNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = decompiledCaughtException;
             }
-            if (dn.field_Ub == null) {
+            if (ContextMenu.field_Ub == null) {
               return param1.getParameter("settings");
             }
-            stackIn_14_0 = dn.field_Ub;
+            stackIn_14_0 = ContextMenu.field_Ub;
             return stackIn_14_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -769,7 +769,7 @@ class SceneWidget extends SceneWidgetNode {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -778,28 +778,28 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        this.a(true, 0, false, false, false, false, SoftwareRaster.field_c, SoftwareRaster.field_j, (byte) 126, 0, param0);
+    final void drawFullScreen(boolean param0, byte param1) {
+        this.drawTree(true, 0, false, false, false, false, SoftwareRaster.field_c, SoftwareRaster.field_j, (byte) 126, 0, param0);
         if (param1 < 125) {
           this.field_Lb = -23;
         }
     }
 
-    final void h(int param0) {
+    final void markTreeDirty(int param0) {
         SceneWidget var4 = null;
         int var3 = SteelSentinels.obfuscationControl;
         if (null != this.field_M) {
           var4 = (SceneWidget) (this.field_M.last(1063677678));
           while (var4 != null) {
             var4.field_R = true;
-            var4.h(42);
+            var4.markTreeDirty(42);
             var4 = (SceneWidget) (this.field_M.previous(-2137));
           }
         }
         int var2 = 126 % ((param0 + 23) / 57);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_Gb = 0;
         this.field_gb = 0;
         this.field_lb = param0;
@@ -810,7 +810,7 @@ class SceneWidget extends SceneWidgetNode {
         this.field_Y = param3;
     }
 
-    final int b(int param0, int param1) {
+    final int measureContentWidth(int param0, int param1) {
         SceneWidget var4 = null;
         int var5 = 0;
         int var4_int = 0;
@@ -846,7 +846,7 @@ class SceneWidget extends SceneWidgetNode {
         return var3;
     }
 
-    final void a(int param0, byte param1, int param2, boolean param3) {
+    final void layoutVerticalContent(int param0, byte param1, int param2, boolean param3) {
         int var5;
         int var6;
         int var7;
@@ -888,7 +888,7 @@ class SceneWidget extends SceneWidgetNode {
         this.field_gb = var5 - var6;
         this.field_lb = -var7 + var8;
         if (param1 != -108) {
-          this.a(false, -80, true, false, true, true, -109, -101, (byte) 10, 55, false);
+          this.drawTree(false, -80, true, false, true, true, -109, -101, (byte) 10, 55, false);
         }
         this.field_eb = -var5;
         this.field_Lb = var7;
@@ -938,12 +938,12 @@ class SceneWidget extends SceneWidgetNode {
           this.field_eb = param3;
           this.field_Lb = param5;
           this.field_Y = param2;
-          this.b(param1, 6402);
+          this.applyStyle(param1, 6402);
           if (param6 != null) {
             this.field_S = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "gh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "gh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

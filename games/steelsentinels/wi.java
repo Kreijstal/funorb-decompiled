@@ -20,11 +20,11 @@ abstract class wi extends DualNode {
         try {
           field_G = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, pe param1, int param2, boolean param3, int param4) {
+    final static void a(int param0, TriangleMesh param1, int param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_12_0 = false;
         int stackIn_25_0 = 0;
@@ -63,9 +63,9 @@ abstract class wi extends DualNode {
         int var13Lifetime1;
         var19 = SteelSentinels.obfuscationControl;
         try {
-          var5_int = ve.a(-122, (param0 - param2) * 3);
+          var5_int = AssetDecoders.bitLength(-122, (param0 - param2) * 3);
           var6 = param2 * 3;
-          kk.b((byte) 34);
+          TextAndMenuHelpers.clearFaceDepthBuckets((byte) 34);
           var7 = var5_int - 10;
           if (param1.field_K > 0 &&
             null != param1.field_P) {
@@ -86,20 +86,20 @@ abstract class wi extends DualNode {
             stackIn_12_0 = stackOut_11_0;
             if (var19 == 0) {
               if (stackIn_12_0) {
-                var12 = eh.field_d[var9];
+                var12 = SocialListUiHelpers.field_d[var9];
                 var13 = FunOrbClient.field_p[var9];
-                var14 = eh.field_d[var10] - var12;
-                var15 = eh.field_d[var11] - var12;
+                var14 = SocialListUiHelpers.field_d[var10] - var12;
+                var15 = SocialListUiHelpers.field_d[var11] - var12;
                 var16 = -var13 + FunOrbClient.field_p[var10];
                 var17 = FunOrbClient.field_p[var11] - var13;
               }
               if (!stackIn_12_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
-                var12Lifetime1 = km.field_h[var9];
+                var12Lifetime1 = ClientGlobals.field_h[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = km.field_h[var10];
+                  var13Lifetime1 = ClientGlobals.field_h[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = km.field_h[var11];
+                    var14 = ClientGlobals.field_h[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + (var13Lifetime1 + var12Lifetime1) + var14;
                       stackIn_25_0 = -1;
@@ -173,7 +173,7 @@ abstract class wi extends DualNode {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -206,14 +206,14 @@ abstract class wi extends DualNode {
               stackIn_15_0 = (SocialListEntry) null;
               return stackIn_15_0;
             }
-            var3 = (SocialListEntry) (DelegatingCanvas.field_a.a((long)var2.hashCode(), (byte) 93));
+            var3 = (SocialListEntry) (DelegatingCanvas.field_a.get((long)var2.hashCode(), (byte) 93));
             while (null != var3) {
               var4 = AlphaContainer.a(1, (CharSequence) ((Object) var3.field_dc));
               if (var4.equals(var2)) {
                 stackIn_20_0 = var3;
                 return stackIn_20_0;
               }
-              var3 = (SocialListEntry) (DelegatingCanvas.field_a.c((byte) 121));
+              var3 = (SocialListEntry) (DelegatingCanvas.field_a.nextWithSameKey((byte) 121));
               if (var5 == 0) {
                 continue;
               }
@@ -234,19 +234,19 @@ abstract class wi extends DualNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void c(byte param0) {
         try {
-          sl.field_m = mm.a(95);
+          sl.field_m = ClockAndCookieHelpers.monotonicMillis(95);
           Checkbox.field_Z = 0;
           if (param0 > -104) {
             field_y = -62;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wi.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wi.A(" + param0 + ')');
         }
     }
 

@@ -10,11 +10,11 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
     static SystemTask field_T;
     static String field_P;
 
-    abstract int h(byte param0);
+    abstract int getYear(byte param0);
 
-    public final ValidationSource a(boolean param0) {
+    public final ValidationSource validator(boolean param0) {
         if (param0) {
-          this.h((byte) 56);
+          this.getYear((byte) 56);
         }
         return (ValidationSource) ((Object) this.field_U);
     }
@@ -128,11 +128,11 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "ha.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "ha.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    abstract int k(int param0);
+    abstract int getMonthIndex(int param0);
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
@@ -194,7 +194,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -203,19 +203,19 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         }
     }
 
-    abstract int j(int param0);
+    abstract int getDay(int param0);
 
-    abstract boolean i(int param0);
+    abstract boolean isIncomplete(int param0);
 
-    void a(byte param0, DateOfBirthValidator param1) {
+    void setDateValidator(byte param0, DateOfBirthValidator param1) {
         try {
           this.field_U = param1;
           this.field_U.field_n = this;
           if (param0 >= -17) {
-            this.a(true);
+            this.validator(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -235,15 +235,15 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         try {
           pa.field_b = param6;
           NameSuggestionsPanel.field_W = param10;
-          be.field_e = param4;
+          UrlAndReplyHelpers.field_e = param4;
           TextHotspotRegion.field_t = param8;
           BufferedSocket.field_e = param7;
           int var11_int = 51 / ((param2 - 42) / 49);
           MusicPatchPcmStream.field_y = param1;
-          ci.field_g = param9;
-          hl.field_r = param5;
+          ClientErrorSupport.field_g = param9;
+          PendingIntArrayRequest.field_r = param5;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 

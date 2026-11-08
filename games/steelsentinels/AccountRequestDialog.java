@@ -17,19 +17,19 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     static String field_Kb;
     static String field_Eb;
 
-    final void m(byte param0) {
+    final void showConnectionRestored(byte param0) {
         AccountMessagePanel var2 = null;
         AccountMessagePanel var2Lifetime1;
         this.field_Hb.setColors(4210752, 2121792, 16711422);
         if (param0 > 90) {
-          var2 = new AccountMessagePanel(this, this.field_Bb, rg.field_a);
-          var2.a(15, UsernameCredentials.field_q, 120);
+          var2 = new AccountMessagePanel(this, this.field_Bb, PopupMenuHelpers.field_a);
+          var2.addActionButton(15, UsernameCredentials.field_q, 120);
           this.transitionToContent(var2, -22908735);
           return;
         }
         this.field_Bb = (BitmapFont) null;
-        var2Lifetime1 = new AccountMessagePanel(this, this.field_Bb, rg.field_a);
-        var2Lifetime1.a(15, UsernameCredentials.field_q, 120);
+        var2Lifetime1 = new AccountMessagePanel(this, this.field_Bb, PopupMenuHelpers.field_a);
+        var2Lifetime1.addActionButton(15, UsernameCredentials.field_q, 120);
         this.transitionToContent(var2Lifetime1, -22908735);
     }
 
@@ -60,11 +60,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             particleReuseBuffer = (ParticleEffect[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "k.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "k.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(String param0, byte param1, int param2) {
+    final void showResultMessage(String param0, byte param1, int param2) {
         boolean stackIn_6_1 = false;
         AccountMessagePanel stackIn_14_0 = null;
         int stackIn_14_1 = 0;
@@ -100,28 +100,28 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               } else {
                 stackIn_15_2 = sl.field_c;
               }
-              ((AccountMessagePanel) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, 88);
+              ((AccountMessagePanel) (Object) stackIn_14_0).addActionButton(stackIn_14_1, stackIn_15_2, 88);
             } else {
-              var6.a(-122, (UiListener) (this), sl.field_c);
+              var6.appendButton(-122, (UiListener) (this), sl.field_c);
             }
           } else {
-            var6.a(11, cl.field_c, 94);
-            var6.a(17, qe.field_b, 118);
+            var6.addActionButton(11, cl.field_c, 94);
+            var6.addActionButton(17, qe.field_b, 118);
           }
           if (param2 == 3) {
-            var6.a(7, ProxyAuthenticationException.field_d, 125);
+            var6.addActionButton(7, ProxyAuthenticationException.field_d, 125);
           } else {
             if (param2 == 4) {
-              var6.a(8, StripedProgressBar.field_X, 69);
+              var6.addActionButton(8, StripedProgressBar.field_X, 69);
             } else {
               if (param2 == 6) {
-                var6.a(9, rn.field_s, 102);
+                var6.addActionButton(9, rn.field_s, 102);
               } else {
                 if (param2 != 9) {
                   this.transitionToContent(var6, -22908735);
                   return;
                 }
-                var6.a(-111, (UiListener) (this), LoginForm.field_Y);
+                var6.appendButton(-111, (UiListener) (this), LoginForm.field_Y);
               }
             }
           }
@@ -137,7 +137,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,14 +153,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_Hb.field_N = true;
           this.addChild(this.field_Hb, -121);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
-        hh.field_j = (param1 << 16) / 150;
-        hh.field_i = 100 * param1 / 150;
-        hh.field_f = 400 * param1 / 150;
+        LoginActionHelpers.field_j = (param1 << 16) / 150;
+        LoginActionHelpers.field_i = 100 * param1 / 150;
+        LoginActionHelpers.field_f = 400 * param1 / 150;
         if (param0 != 24) {
           field_Fb = (String) null;
           return;
@@ -177,11 +177,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           }
           int var6_int = 31 / ((param1 + 85) / 36);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "k.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "k.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Kb = null;
         field_Fb = null;
         particleReuseBuffer = null;
@@ -218,7 +218,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             var5 = var9;
             var6 = param3;
             var7 = param4;
-            var9[var6] = ec.a(var9[var6] >> 1, 8355711) + var7;
+            var9[var6] = ClientUiHelpers.bitAnd(var9[var6] >> 1, 8355711) + var7;
             param3++;
             param2--;
           }
@@ -259,7 +259,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

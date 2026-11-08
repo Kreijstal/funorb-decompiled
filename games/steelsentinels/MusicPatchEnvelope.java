@@ -20,7 +20,7 @@ final class MusicPatchEnvelope {
     int field_k;
     static int field_j;
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void setTuhstatbutMarker(int param0, java.applet.Applet param1) {
         String var3 = null;
         long var4 = 0L;
         BoundedRandomAccessFile.field_d = true;
@@ -31,9 +31,9 @@ final class MusicPatchEnvelope {
         try {
           var3 = "rvnadlm";
           var4 = -1L;
-          mm.a(var2, (byte) 97, var3, param1, var4);
+          ClockAndCookieHelpers.setCookie(var2, (byte) 97, var3, param1, var4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class MusicPatchEnvelope {
         field_f = null;
     }
 
-    final static boolean a(int[] param0, int param1, boolean param2, byte param3) {
+    final static boolean isItemUnlockable(int[] param0, int param1, boolean param2, byte param3) {
         boolean stackIn_27_0 = false;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -70,7 +70,7 @@ final class MusicPatchEnvelope {
         try {
           if (param3 < 81) {
             var9 = (int[]) null;
-            MusicPatchEnvelope.a((int[]) null, 21, true, (byte) -121);
+            MusicPatchEnvelope.isItemUnlockable((int[]) null, 21, true, (byte) -121);
           }
           var4_int = NodeDeque.a((byte) 71, param1);
           if (var4_int < 0) {
@@ -114,7 +114,7 @@ final class MusicPatchEnvelope {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

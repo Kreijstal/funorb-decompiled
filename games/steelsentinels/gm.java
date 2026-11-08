@@ -10,22 +10,22 @@ final class gm {
     final static void a(byte param0) {
         if (param0 > -87) {
           field_d = (String) null;
-          rg.field_d = new NodeDeque();
+          PopupMenuHelpers.field_d = new NodeDeque();
           return;
         }
-        rg.field_d = new NodeDeque();
+        PopupMenuHelpers.field_d = new NodeDeque();
     }
 
-    final static ef a(boolean param0, String param1) {
+    final static EmailFormatError a(boolean param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        ef var5 = null;
-        ef stackIn_6_0 = null;
-        ef stackIn_9_0 = null;
-        ef stackIn_12_0 = null;
-        ef stackIn_14_0 = null;
+        EmailFormatError var5 = null;
+        EmailFormatError stackIn_6_0 = null;
+        EmailFormatError stackIn_9_0 = null;
+        EmailFormatError stackIn_12_0 = null;
+        EmailFormatError stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -63,7 +63,7 @@ final class gm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

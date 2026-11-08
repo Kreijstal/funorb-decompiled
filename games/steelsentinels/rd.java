@@ -34,7 +34,7 @@ final class rd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class rd {
         if (param0 > -68) {
           return -121;
         }
-        return IterableDualNodeDeque.field_b - hl.field_q;
+        return IterableDualNodeDeque.field_b - PendingIntArrayRequest.field_q;
     }
 
     static {

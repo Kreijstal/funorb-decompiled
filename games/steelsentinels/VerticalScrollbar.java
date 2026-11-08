@@ -37,43 +37,43 @@ final class VerticalScrollbar extends SceneWidget {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadDisplayNameSprites(byte param0, ResourceArchive param1) {
         SceneWidget var5 = null;
         SceneWidget var6 = null;
         SceneWidget var3 = null;
         try {
-          ce.field_p = rl.a(param1, "basic", "display_name_changed", false);
-          km.field_j = new SocialListPanel(0L, NodeHashTableIterator.field_e, MarkerSliderPainter.field_i, DiskCacheWorker.field_d);
+          ce.field_p = PacketLoopHelpers.loadRgbSpriteByName(param1, "basic", "display_name_changed", false);
+          ClientGlobals.field_j = new SocialListPanel(0L, NodeHashTableIterator.field_e, MarkerSliderPainter.field_i, DiskCacheWorker.field_d);
           AccountRegistrationPanel.field_W = new SocialListPanel(0L, NodeHashTableIterator.field_e, DirectByteStorage.field_k, sa.field_a);
           WhirlpoolHasher.field_m = new SceneWidget(0L, (SceneWidget) null);
           vc.field_h = new SceneWidget(0L, bd.field_f);
           vc.field_h.field_Kb = 1;
-          mm.field_a = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
+          ClockAndCookieHelpers.field_a = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
           SceneWidgetNode.field_E = new SceneWidget(0L, kb.field_b, MenuInputState.field_i);
           CachedTextLayout.field_v = new SceneWidget(0L, ParticleEffect.field_K);
-          WhirlpoolHasher.field_m.a(vc.field_h, 121);
-          WhirlpoolHasher.field_m.a(mm.field_a, 123);
-          WhirlpoolHasher.field_m.a(SceneWidgetNode.field_E, 121);
+          WhirlpoolHasher.field_m.addChild(vc.field_h, 121);
+          WhirlpoolHasher.field_m.addChild(ClockAndCookieHelpers.field_a, 123);
+          WhirlpoolHasher.field_m.addChild(SceneWidgetNode.field_E, 121);
           if (param0 != 109) {
             VerticalScrollbar.releaseStatics(-84);
           }
-          WhirlpoolHasher.field_m.a(km.field_j, 118);
-          WhirlpoolHasher.field_m.a(CachedTextLayout.field_v, 120);
-          km.field_j.field_Xb.field_Tb.b(bd.field_f, 6402);
-          var5 = km.field_j.field_Xb.field_Tb;
+          WhirlpoolHasher.field_m.addChild(ClientGlobals.field_j, 118);
+          WhirlpoolHasher.field_m.addChild(CachedTextLayout.field_v, 120);
+          ClientGlobals.field_j.field_Xb.field_Tb.applyStyle(bd.field_f, 6402);
+          var5 = ClientGlobals.field_j.field_Xb.field_Tb;
           var6 = var5;
-          km.field_j.field_Xb.field_Tb.field_Fb = 1;
+          ClientGlobals.field_j.field_Xb.field_Tb.field_Fb = 1;
           var6.field_Kb = 1;
-          AccountRegistrationPanel.field_W.field_Xb.field_Tb.b(bd.field_f, 6402);
+          AccountRegistrationPanel.field_W.field_Xb.field_Tb.applyStyle(bd.field_f, 6402);
           var3 = AccountRegistrationPanel.field_W.field_Xb.field_Tb;
           AccountRegistrationPanel.field_W.field_Xb.field_Tb.field_Fb = 1;
           var3.field_Kb = 1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "lb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "lb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean pollLineUp(boolean param0) {
         if (param0) {
           this.field_jc = (SceneWidget) null;
         }
@@ -94,7 +94,7 @@ final class VerticalScrollbar extends SceneWidget {
         return true;
     }
 
-    final int a(int param0, boolean param1, int param2, byte param3) {
+    final int getThumbScrollOffset(int param0, boolean param1, int param2, byte param3) {
         int var8 = 0;
         int var9 = 0;
         int var7 = 69 % ((param3 + 9) / 34);
@@ -128,18 +128,18 @@ final class VerticalScrollbar extends SceneWidget {
         this(param0, param1.field_bc, param1.field_jc, param1.field_dc, param1.field_ec);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_zb = param5;
         this.field_eb = param4;
         this.field_Lb = param6;
         if (param7 == 4454) {
           this.field_Y = param3;
-          this.a(param0, param1, param2, -1);
+          this.layoutScrollbar(param0, param1, param2, -1);
           return;
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isThumbHeld(int param0) {
         if (param0 >= -87) {
           return false;
         }
@@ -164,21 +164,21 @@ final class VerticalScrollbar extends SceneWidget {
         try {
           this.field_bc = new SceneWidget(0L, param1);
           this.field_jc = new SceneWidget(0L, param2);
-          this.a(this.field_bc, 121);
-          this.a(this.field_jc, 121);
+          this.addChild(this.field_bc, 121);
+          this.addChild(this.field_jc, 121);
           this.field_Sb = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_Sb, 126);
+          this.addChild(this.field_Sb, 126);
           this.field_dc = new SceneWidget(0L, param3);
           this.field_Xb = new SceneWidget(0L, param3);
           var9 = this.field_dc;
           var10 = var9;
           this.field_Xb.field_P = true;
           var10.field_P = true;
-          this.field_Sb.a(this.field_dc, 122);
-          this.field_Sb.a(this.field_Xb, 123);
+          this.field_Sb.addChild(this.field_dc, 122);
+          this.field_Sb.addChild(this.field_Xb, 123);
           this.field_ec = new SceneWidget(0L, param4);
           this.field_ec.field_U = true;
-          this.field_Sb.a(this.field_ec, 124);
+          this.field_Sb.addChild(this.field_ec, 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,11 +208,11 @@ final class VerticalScrollbar extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean pollPageUp(byte param0) {
         if (param0 != 29) {
           return false;
         }
@@ -244,7 +244,7 @@ final class VerticalScrollbar extends SceneWidget {
         return false;
     }
 
-    final boolean f(byte param0) {
+    final boolean pollPageDown(byte param0) {
         int var2 = -114 / ((-39 - param0) / 39);
         if (this.field_Xb.field_Eb != 0) {
           this.field_ic = 20;
@@ -266,7 +266,7 @@ final class VerticalScrollbar extends SceneWidget {
         return false;
     }
 
-    final boolean e(byte param0) {
+    final boolean pollLineDown(byte param0) {
         if (this.field_jc.field_Eb != 0) {
           this.field_ic = 20;
           return true;
@@ -302,7 +302,7 @@ final class VerticalScrollbar extends SceneWidget {
         this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3, param4);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutScrollbar(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;

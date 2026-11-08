@@ -13,7 +13,7 @@ abstract class DebouncedValidator implements ValidationSource {
     final static void a(int param0, boolean param1, int param2, MidiPcmStream param3, SystemTaskService param4, java.awt.Component param5, int param6, int param7) {
         try {
           AudioOutput.configure(param2, param1, 10);
-          fc.field_a = AudioOutput.createOutput(param4, param5, 0, param0);
+          SoundAndUrlHelpers.field_a = AudioOutput.createOutput(param4, param5, 0, param0);
           ResourceArchive.field_j = AudioOutput.createOutput(param4, param5, 1, param6);
           UiTheme.field_e = new PcmStreamMixer();
           MusicPatchPcmStream.field_B = param6 * 1000 / param2;
@@ -22,44 +22,44 @@ abstract class DebouncedValidator implements ValidationSource {
             field_g = 'ﾓ';
           }
           IterableNodeHashTable.field_f = param3;
-          IterableNodeHashTable.field_f.a(UiTheme.field_q, 1000000);
-          fc.field_a.setStream(IterableNodeHashTable.field_f);
+          IterableNodeHashTable.field_f.setMasterVolume(UiTheme.field_q, 1000000);
+          SoundAndUrlHelpers.field_a.setStream(IterableNodeHashTable.field_f);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "v.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "v.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    public final void a(int param0) {
-        this.field_a = mm.a(param0 ^ 17297);
+    public final void markChanged(int param0) {
+        this.field_a = ClockAndCookieHelpers.monotonicMillis(param0 ^ 17297);
         if (param0 != -17382) {
           field_c = (String) null;
         }
     }
 
-    public final vd a(byte param0) {
-        if (this.b(true)) {
+    public final vd validationState(byte param0) {
+        if (this.isEmpty(true)) {
           return ModalStack.field_S;
         }
-        if (!(mm.a(114) >= (this.field_a + 350L))) {
+        if (!(ClockAndCookieHelpers.monotonicMillis(114) >= (this.field_a + 350L))) {
           return Bzip2State.field_J;
         }
         if (param0 == 21) {
-          return this.b(param0 - 32013);
+          return this.evaluateState(param0 - 32013);
         }
         return (vd) null;
     }
 
-    public final String a(boolean param0) {
-        if (this.b(param0)) {
+    public final String validationMessage(boolean param0) {
+        if (this.isEmpty(param0)) {
           return null;
         }
-        if (mm.a(85) >= this.field_a + 350L) {
-          return this.b((byte) -42);
+        if (ClockAndCookieHelpers.monotonicMillis(85) >= this.field_a + 350L) {
+          return this.evaluateMessage((byte) -42);
         }
         return null;
     }
 
-    abstract vd b(int param0);
+    abstract vd evaluateState(int param0);
 
     public static void releaseStatics(boolean param0) {
         field_b = null;
@@ -76,7 +76,7 @@ abstract class DebouncedValidator implements ValidationSource {
         field_c = null;
     }
 
-    abstract String b(byte param0);
+    abstract String evaluateMessage(byte param0);
 
     final static void a(int param0, String param1, int param2) {
         try {
@@ -86,7 +86,7 @@ abstract class DebouncedValidator implements ValidationSource {
             field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

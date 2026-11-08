@@ -41,19 +41,19 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             var9 = (RgbSprite) null;
             ValidatedTextWidget.a(32, 18, 86, -6, (RgbSprite) null, -101, -54);
           }
-          var3_int = BoundedRandomAccessFile.field_j.field_zb - 20 - pl.field_X.textWidth("[" + SocketConnector.a(AccountChoicePanel.field_ab, -49, new String[]{param1.playerNames[0], "] "}));
-          if (var3_int < pl.field_X.textWidth(param0)) {
-            var4 = QuickChatPhraseDefinition.a(pl.field_X, new int[]{var3_int}, 18985, param0);
+          var3_int = BoundedRandomAccessFile.field_j.field_zb - 20 - BirthDateEntryPanel.field_X.textWidth("[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -49, new String[]{param1.playerNames[0], "] "}));
+          if (var3_int < BirthDateEntryPanel.field_X.textWidth(param0)) {
+            var4 = QuickChatPhraseDefinition.wrapTextLines(BirthDateEntryPanel.field_X, new int[]{var3_int}, 18985, param0);
             var5 = var4;
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
-              MusicCrossfadeStream.a(param1.playerNames[0], var7, 0, (byte) 21, (String) null, 1);
-              ln.field_e = ln.field_e - 1;
+              MusicCrossfadeStream.appendChatMessage(param1.playerNames[0], var7, 0, (byte) 21, (String) null, 1);
+              NameValidationHelpers.field_e = NameValidationHelpers.field_e - 1;
             }
             return;
           }
-          MusicCrossfadeStream.a(param1.playerNames[0], param0, 0, (byte) 21, (String) null, 1);
-          ln.field_e = ln.field_e - 1;
+          MusicCrossfadeStream.appendChatMessage(param1.playerNames[0], param0, 0, (byte) 21, (String) null, 1);
+          NameValidationHelpers.field_e = NameValidationHelpers.field_e - 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,17 +96,17 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           FallingPickup.field_y.writeInt(true, dj.field_k[3]);
           IntKeyLookup.a(125, FallingPickup.field_y);
           FallingPickup.field_y.writeShort(param4, 18);
-          param3.a(FallingPickup.field_y, false);
-          mm.field_g.position = 0;
+          param3.writeTo(FallingPickup.field_y, false);
+          ClockAndCookieHelpers.field_g.position = 0;
           if (!param0) {
-            mm.field_g.writeByte((byte) 126, 16);
+            ClockAndCookieHelpers.field_g.writeByte((byte) 126, 16);
           } else {
-            mm.field_g.writeByte((byte) 120, 18);
+            ClockAndCookieHelpers.field_g.writeByte((byte) 120, 18);
           }
-          mm.field_g.position = mm.field_g.position + 2;
-          var5_int = mm.field_g.position;
-          mm.field_g.writeInt(true, kk.field_d);
-          mm.field_g.writeLong(-28875, og.field_b);
+          ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 2;
+          var5_int = ClockAndCookieHelpers.field_g.position;
+          ClockAndCookieHelpers.field_g.writeInt(true, TextAndMenuHelpers.field_d);
+          ClockAndCookieHelpers.field_g.writeLong(-28875, og.field_b);
           var6 = 0;
           if (LoadingProgressDialog.field_ib) {
             var6 = var6 | 1;
@@ -120,17 +120,17 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           if (EmailCredentials.field_k != null) {
             var6 = var6 | 16;
           }
-          mm.field_g.writeByte((byte) 124, var6);
-          var7 = SceneWidget.a(param1 ^ -82, Projectile.d((byte) -21));
+          ClockAndCookieHelpers.field_g.writeByte((byte) 124, var6);
+          var7 = SceneWidget.readSettingsCookie(param1 ^ -82, Projectile.d((byte) -21));
           if (var7 == null) {
             var7 = "";
           }
-          mm.field_g.writeString(var7, -67);
+          ClockAndCookieHelpers.field_g.writeString(var7, -67);
           if (null != EmailCredentials.field_k) {
-            mm.field_g.writePrefixedString(13588, EmailCredentials.field_k);
+            ClockAndCookieHelpers.field_g.writePrefixedString(13588, EmailCredentials.field_k);
           }
-          qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, mm.field_g, qe.field_d, 5);
-          mm.field_g.writeShortLengthPrefix(param1 ^ 28, -var5_int + mm.field_g.position);
+          qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+          ClockAndCookieHelpers.field_g.writeShortLengthPrefix(param1 ^ 28, -var5_int + ClockAndCookieHelpers.field_g.position);
           gj.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,7 +143,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -154,14 +154,14 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         RuntimeException var2 = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          cj.a(param0, AccountRequestDialog.field_Lb, (byte) 125, DelayedServerPacket.field_z, 0, true, AccountTermsPanel.field_S);
+          ArchiveLoadSequence.sortRankingRange(param0, AccountRequestDialog.field_Lb, (byte) 125, DelayedServerPacket.field_z, 0, true, AccountTermsPanel.field_S);
           if (param1 <= 94) {
             return;
           }
           for (var2_int = 0; var2_int < DelayedServerPacket.field_z; var2_int++) {
             un.field_j[param0 + var2_int] = var2_int;
           }
-          cj.a(param0 + param0, TabbedPanel.field_cc, (byte) 125, DelayedServerPacket.field_z + param0, param0, false, ImageProducerRasterBuffer.field_w);
+          ArchiveLoadSequence.sortRankingRange(param0 + param0, TabbedPanel.field_cc, (byte) 125, DelayedServerPacket.field_z + param0, param0, false, ImageProducerRasterBuffer.field_w);
           if (param0 < DelayedServerPacket.field_z) {
             DelayedServerPacket.field_z = param0;
           }
@@ -169,21 +169,21 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "bc.C(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "bc.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
-          ib.field_b = param2;
-          en.field_e = param1;
+          ChatPanelHelpers.field_b = param2;
+          LoadingScreenHelpers.field_e = param1;
           var5 = (CharSequence) ((Object) param1);
           StripedProgressBar.field_U = AlphaContainer.a(param2 ^ 3, var5);
           jn.field_g = true;
           ImageProducerRasterBuffer.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -226,30 +226,30 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(boolean param0, ValidationSource param1) {
+    final void setValidator(boolean param0, ValidationSource param1) {
         if (!param0) {
           return;
         }
         try {
           this.field_zb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void k(int param0) {
-        super.k(-118);
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(-118);
         int var2 = -88 / ((param0 + 37) / 43);
         if (this.field_zb != null) {
-          this.field_zb.a(-17382);
+          this.field_zb.markChanged(-17382);
         }
     }
 
-    public final ValidationSource a(boolean param0) {
+    public final ValidationSource validator(boolean param0) {
         if (param0) {
           return (ValidationSource) null;
         }
@@ -284,9 +284,9 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           if (param1 < 56) {
             field_wb = (RgbSprite) null;
           }
-          this.field_tb = oh.field_f - (this.field_o + param0);
+          this.field_tb = LobbySetupHelpers.field_f - (this.field_o + param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (param0 != 0) {
           return (String) null;
         }
-        hk.a(DelegatingCanvas.field_c, oh.field_f + this.field_x - this.field_tb, 17237);
+        LobbyGame.setTooltipAnchor(DelegatingCanvas.field_c, LobbySetupHelpers.field_f + this.field_x - this.field_tb, 17237);
         return this.field_v;
     }
 

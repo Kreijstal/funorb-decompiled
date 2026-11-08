@@ -69,14 +69,14 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static int j(int param0) {
         ByteStorage.field_c.a(false);
         if (!FallingPickup.field_N.d((byte) 125)) {
-          return IconTextComponent.d((byte) -107);
+          return IconTextComponent.pollServerConnection((byte) -107);
         }
         if (param0 <= 9) {
           CipherPacketBuffer.j(-98);
@@ -101,7 +101,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           this.opcodeCipher = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "kj.WA(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

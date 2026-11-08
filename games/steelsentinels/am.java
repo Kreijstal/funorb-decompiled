@@ -27,69 +27,69 @@ final class am {
         int var1 = 0;
         int var2 = SteelSentinels.obfuscationControl;
         int var1Lifetime1;
-        QuickChatMenu.a(IntKeyLookup.field_j, 7411, 5);
-        QuickChatMenu.a(MusicPatchEnvelope.field_b, 7411, 6);
-        QuickChatMenu.a(SentinelDesigner.field_d, 7411, 8);
-        QuickChatMenu.a(MouseWheelInput.field_h, 7411, 13);
-        QuickChatMenu.a(IconLabelControl.field_cc, 7411, 14);
-        QuickChatMenu.a(SocialListPanel.field_ac, 7411, 20);
+        QuickChatMenu.initDesignerSlot(IntKeyLookup.field_j, 7411, 5);
+        QuickChatMenu.initDesignerSlot(MusicPatchEnvelope.field_b, 7411, 6);
+        QuickChatMenu.initDesignerSlot(SentinelDesigner.field_d, 7411, 8);
+        QuickChatMenu.initDesignerSlot(MouseWheelInput.field_h, 7411, 13);
+        QuickChatMenu.initDesignerSlot(IconLabelControl.field_cc, 7411, 14);
+        QuickChatMenu.initDesignerSlot(SocialListPanel.field_ac, 7411, 20);
         ContentTransitionDialog.field_sb = null;
         if (rd.field_b <= 0) {
-          QuickChatMenu.a(ClientException.field_k, 7411, 6);
-          QuickChatMenu.a(SingleChildContainer.field_H, 7411, 8);
+          QuickChatMenu.initDesignerSlot(ClientException.field_k, 7411, 6);
+          QuickChatMenu.initDesignerSlot(SingleChildContainer.field_H, 7411, 8);
           var1 = 111 / ((param0 + 35) / 35);
           if (rd.field_b <= 0) {
-            QuickChatMenu.a(WeightedLruCache.field_h, 7411, 19);
+            QuickChatMenu.initDesignerSlot(WeightedLruCache.field_h, 7411, 19);
             if (ArticulatedPart.f((byte) -128)) {
               ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
             }
             if (!AccountRegistrationPanel.l(13539)) {
-              QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
-              QuickChatMenu.a(qi.field_f, 7411, 2);
-              QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
-              QuickChatMenu.a(ri.field_a, 7411, 4);
+              QuickChatMenu.initDesignerSlot(NodeDeque.field_c, 7411, 1);
+              QuickChatMenu.initDesignerSlot(qi.field_f, 7411, 2);
+              QuickChatMenu.initDesignerSlot(GzipDecoder.field_b, 7411, 3);
+              QuickChatMenu.initDesignerSlot(LoginStateQueries.field_a, 7411, 4);
             }
             return;
           }
-          QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
-          QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
+          QuickChatMenu.initDesignerSlot(DualNodeDeque.field_c, 7411, 0);
+          QuickChatMenu.initDesignerSlot(ArchiveProvider.field_c, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
             ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
           }
           if (!AccountRegistrationPanel.l(13539)) {
-            QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
-            QuickChatMenu.a(qi.field_f, 7411, 2);
-            QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
-            QuickChatMenu.a(ri.field_a, 7411, 4);
+            QuickChatMenu.initDesignerSlot(NodeDeque.field_c, 7411, 1);
+            QuickChatMenu.initDesignerSlot(qi.field_f, 7411, 2);
+            QuickChatMenu.initDesignerSlot(GzipDecoder.field_b, 7411, 3);
+            QuickChatMenu.initDesignerSlot(LoginStateQueries.field_a, 7411, 4);
           }
           return;
         }
-        QuickChatMenu.a(MusicPatchEnvelope.field_b, 7411, 6);
-        QuickChatMenu.a(SentinelDesigner.field_d, 7411, 8);
+        QuickChatMenu.initDesignerSlot(MusicPatchEnvelope.field_b, 7411, 6);
+        QuickChatMenu.initDesignerSlot(SentinelDesigner.field_d, 7411, 8);
         var1Lifetime1 = 111 / ((param0 + 35) / 35);
         if (rd.field_b <= 0) {
-          QuickChatMenu.a(WeightedLruCache.field_h, 7411, 19);
+          QuickChatMenu.initDesignerSlot(WeightedLruCache.field_h, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
             ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
           }
           if (!AccountRegistrationPanel.l(13539)) {
-            QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
-            QuickChatMenu.a(qi.field_f, 7411, 2);
-            QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
-            QuickChatMenu.a(ri.field_a, 7411, 4);
+            QuickChatMenu.initDesignerSlot(NodeDeque.field_c, 7411, 1);
+            QuickChatMenu.initDesignerSlot(qi.field_f, 7411, 2);
+            QuickChatMenu.initDesignerSlot(GzipDecoder.field_b, 7411, 3);
+            QuickChatMenu.initDesignerSlot(LoginStateQueries.field_a, 7411, 4);
           }
           return;
         }
-        QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
-        QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
+        QuickChatMenu.initDesignerSlot(DualNodeDeque.field_c, 7411, 0);
+        QuickChatMenu.initDesignerSlot(ArchiveProvider.field_c, 7411, 19);
         if (ArticulatedPart.f((byte) -128)) {
           ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
         }
         if (!AccountRegistrationPanel.l(13539)) {
-          QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
-          QuickChatMenu.a(qi.field_f, 7411, 2);
-          QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
-          QuickChatMenu.a(ri.field_a, 7411, 4);
+          QuickChatMenu.initDesignerSlot(NodeDeque.field_c, 7411, 1);
+          QuickChatMenu.initDesignerSlot(qi.field_f, 7411, 2);
+          QuickChatMenu.initDesignerSlot(GzipDecoder.field_b, 7411, 3);
+          QuickChatMenu.initDesignerSlot(LoginStateQueries.field_a, 7411, 4);
         }
     }
 

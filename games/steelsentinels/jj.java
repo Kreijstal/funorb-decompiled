@@ -28,13 +28,13 @@ final class jj {
         if (AccountTermsPanel.field_ab == jn.field_b) {
           return ThreeSliceButtonPainter.field_z;
         }
-        if (!gf.field_a.a((byte) -72)) {
+        if (!gf.field_a.isComplete((byte) -72)) {
           return ThreeSliceButtonPainter.field_z;
         }
         if (!param0) {
           field_e = (RgbSprite) null;
         }
-        return cc.field_Xb;
+        return LobbyPlayer.field_Xb;
     }
 
     final static int a(int param0, int param1, String param2, boolean param3, boolean param4, String param5) {
@@ -78,45 +78,45 @@ final class jj {
               stackIn_7_0 = -1;
               return stackIn_7_0;
             }
-            if (lj.field_d == rn.field_v) {
+            if (SocialRequestHelpers.field_d == rn.field_v) {
               if (param4) {
                 var10 = (String) null;
                 MidiPcmStream.field_T = qi.a(false, PasswordFieldPainter.field_w, param5, 0, (String) null);
               } else {
-                MidiPcmStream.field_T = ak.a(param2, param5, -20407, false);
+                MidiPcmStream.field_T = SpriteFrame.createLoginCredentials(param2, param5, -20407, false);
               }
-              mm.field_g.position = 0;
-              mm.field_g.writeByte((byte) 115, 14);
-              mm.field_g.writeByte((byte) 109, MidiPcmStream.field_T.a((byte) 121).field_e);
+              ClockAndCookieHelpers.field_g.position = 0;
+              ClockAndCookieHelpers.field_g.writeByte((byte) 115, 14);
+              ClockAndCookieHelpers.field_g.writeByte((byte) 109, MidiPcmStream.field_T.type((byte) 121).field_e);
               gj.a(0, -1);
               rn.field_v = SocketJs5Transport.field_D;
             }
             if (rn.field_v == SocketJs5Transport.field_D &&
-              ve.a((byte) -127, 1)) {
-              var6_int = rf.field_d.readUnsignedByte((byte) -55);
-              rf.field_d.position = 0;
+              AssetDecoders.fillIncomingBuffer((byte) -127, 1)) {
+              var6_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -55);
+              LoginConnectionStage.field_d.position = 0;
               if (var6_int == 0) {
                 rn.field_v = ClientException.field_d;
               } else {
                 ViewportController.field_f = -1;
                 rn.field_v = QuickChatCategory.field_G;
-                ch.field_N = var6_int;
+                ArrayWidgetContainer.field_N = var6_int;
               }
             }
             if (rn.field_v == ClientException.field_d &&
-              ve.a((byte) -108, 8)) {
-              TextButton.field_G = rf.field_d.readLong((byte) -115);
-              rf.field_d.position = 0;
+              AssetDecoders.fillIncomingBuffer((byte) -108, 8)) {
+              TextButton.field_G = LoginConnectionStage.field_d.readLong((byte) -115);
+              LoginConnectionStage.field_d.position = 0;
               ValidatedTextWidget.a(param4, 2, param3, MidiPcmStream.field_T, param1);
               rn.field_v = uf.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rn.field_v == uf.field_g &&
-              ve.a((byte) -86, 1)) {
-              var6_intLifetime1 = rf.field_d.readUnsignedByte((byte) -68);
-              rf.field_d.position = 0;
+              AssetDecoders.fillIncomingBuffer((byte) -86, 1)) {
+              var6_intLifetime1 = LoginConnectionStage.field_d.readUnsignedByte((byte) -68);
+              LoginConnectionStage.field_d.position = 0;
               EmailCredentials.field_k = null;
-              ch.field_N = var6_intLifetime1;
+              ArrayWidgetContainer.field_N = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -138,13 +138,13 @@ final class jj {
             }
             if (Projectile.field_N == rn.field_v &&
               LoginForm.n(121)) {
-              PasswordFieldPainter.field_w = rf.field_d.readLong((byte) -101);
+              PasswordFieldPainter.field_w = LoginConnectionStage.field_d.readLong((byte) -101);
               gj.field_b = param5;
-              NodeDeque.field_d = rf.field_d.readUnsignedByte((byte) -65);
-              di.field_h = rf.field_d.readUnsignedByte((byte) -54);
-              rd.field_b = rf.field_d.readUnsignedShort((byte) -60);
-              var6 = rf.field_d.readNullableString(-122);
-              var7 = rf.field_d.readUnsignedByte((byte) -128);
+              NodeDeque.field_d = LoginConnectionStage.field_d.readUnsignedByte((byte) -65);
+              di.field_h = LoginConnectionStage.field_d.readUnsignedByte((byte) -54);
+              rd.field_b = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
+              var6 = LoginConnectionStage.field_d.readNullableString(-122);
+              var7 = LoginConnectionStage.field_d.readUnsignedByte((byte) -128);
               if (0 != (1 & var7)) {
                 ed.b((byte) -105);
               }
@@ -156,39 +156,39 @@ final class jj {
                 stackIn_52_0 = (0 != (2 & var7));
                 uc.field_g = stackIn_52_0;
                 stackIn_55_0 = (0 != (4 & var7));
-                ok.field_g = stackIn_55_0;
+                ChecksumAndFrameHelpers.field_g = stackIn_55_0;
                 if (fj.field_e) {
                   uc.field_g = true;
                 }
               }
               if (cd.field_a) {
-                rf.field_d.readUnsignedByte((byte) -118);
-                rf.field_d.readUnsignedByte((byte) -83);
-                rf.field_d.readInt(0);
-                GradientOutlineTextPainter.field_q = rf.field_d.readUnsignedShort((byte) -60);
+                LoginConnectionStage.field_d.readUnsignedByte((byte) -118);
+                LoginConnectionStage.field_d.readUnsignedByte((byte) -83);
+                LoginConnectionStage.field_d.readInt(0);
+                GradientOutlineTextPainter.field_q = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
                 AccountTermsPanel.field_Y = new byte[GradientOutlineTextPainter.field_q];
                 for (var8 = 0; var8 < GradientOutlineTextPainter.field_q; var8++) {
-                  AccountTermsPanel.field_Y[var8] = rf.field_d.readByte((byte) -2);
+                  AccountTermsPanel.field_Y[var8] = LoginConnectionStage.field_d.readByte((byte) -2);
                 }
               }
-              GrowableIntList.field_l = rf.field_d.readString(1);
+              GrowableIntList.field_l = LoginConnectionStage.field_d.readString(1);
               var11 = (CharSequence) ((Object) GrowableIntList.field_l);
               MembershipPromotionScreen.field_r = AlphaContainer.a(1, var11);
-              ReflectionCheck.field_o = rf.field_d.readUnsignedByte((byte) -106);
+              ReflectionCheck.field_o = LoginConnectionStage.field_d.readUnsignedByte((byte) -106);
               rn.field_v = AccountNoticeDialog.field_sb;
-              if (MidiPcmStream.field_T.a((byte) 69) == ArticulatedPart.field_F) {
+              if (MidiPcmStream.field_T.type((byte) 69) == ArticulatedPart.field_F) {
                 PartInstruction.field_o.rememberLoginMethod(-48, Projectile.d((byte) -21));
               } else {
-                if (MidiPcmStream.field_T.a((byte) 108) == QuickChatHelpDialog.field_Sb) {
+                if (MidiPcmStream.field_T.type((byte) 108) == QuickChatHelpDialog.field_Sb) {
                   TabbedPanel.field_Vb.rememberLoginMethod(-70, Projectile.d((byte) -21));
                 }
               }
               AlphaContainer.field_T = false;
               if (var6 != null) {
-                ri.a(var6, Projectile.d((byte) -21), 124);
+                LoginStateQueries.writeSettingsCookie(var6, Projectile.d((byte) -21), 124);
               }
               if (0 >= rd.field_b &&
-                !ok.field_g) {
+                !ChecksumAndFrameHelpers.field_g) {
                 try {
                   JavaScriptBridge.callWindowFunction(Projectile.d((byte) -21), (byte) -96, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class jj {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWindowFunctionWithArguments("zap", (byte) -41, Projectile.d((byte) -21), new Object[]{hh.a(PasswordFieldPainter.field_w, (byte) 65)});
+                  JavaScriptBridge.callWindowFunctionWithArguments("zap", (byte) -41, Projectile.d((byte) -21), new Object[]{LoginActionHelpers.decodeBase37DisplayName(PasswordFieldPainter.field_w, (byte) 65)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -206,29 +206,29 @@ final class jj {
               if (0 < rd.field_b) {
                 LoadingProgressDialog.field_ib = true;
               }
-              mm.field_g.initializeOpcodeCipher(-1833430685, dj.field_k);
+              ClockAndCookieHelpers.field_g.initializeOpcodeCipher(-1833430685, dj.field_k);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 dj.field_k[var8Lifetime1] = dj.field_k[var8Lifetime1] + 50;
               }
-              rf.field_d.initializeOpcodeCipher(-1833430685, dj.field_k);
-              stackIn_86_0 = ch.field_N;
+              LoginConnectionStage.field_d.initializeOpcodeCipher(-1833430685, dj.field_k);
+              stackIn_86_0 = ArrayWidgetContainer.field_N;
               return stackIn_86_0;
             }
             if (QuickChatCategory.field_G == rn.field_v &&
               LoginForm.n(110)) {
               LoginForm.m(100);
-              if (ch.field_N == 7 &&
+              if (ArrayWidgetContainer.field_N == 7 &&
                 !AlphaContainer.field_T) {
                 AlphaContainer.field_T = true;
                 stackIn_98_0 = -1;
                 return stackIn_98_0;
               }
-              if (ch.field_N == 7) {
-                ch.field_N = 3;
+              if (ArrayWidgetContainer.field_N == 7) {
+                ArrayWidgetContainer.field_N = 3;
               }
-              di.field_e = rf.field_d.readString(1);
+              di.field_e = LoginConnectionStage.field_d.readString(1);
               AlphaContainer.field_T = false;
-              stackIn_96_0 = ch.field_N;
+              stackIn_96_0 = ArrayWidgetContainer.field_N;
               return stackIn_96_0;
             }
             if (null == rb.field_h) {
@@ -265,7 +265,7 @@ final class jj {
             } else {
               stackIn_115_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_111_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_111_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

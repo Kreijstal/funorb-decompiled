@@ -39,15 +39,15 @@ final class NodeHashTable {
           node.key = key;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "uh.C(" + key + ',' + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "uh.C(" + key + ',' + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
     final static void a(int param0) {
         MusicPatch.field_r = null;
         UiContainer.field_L = (byte[][]) null;
-        rl.field_a = null;
-        ba.field_d = null;
+        PacketLoopHelpers.field_a = null;
+        QuickChatInputHelpers.field_d = null;
         TextButton.field_M = null;
         StrongCacheEntry.field_L = null;
         if (param0 != 9324) {
@@ -166,7 +166,7 @@ final class NodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class NodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

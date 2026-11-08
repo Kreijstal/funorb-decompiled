@@ -5,7 +5,7 @@ abstract class TickClock {
     static String[] field_a;
     static int field_g;
     static String field_c;
-    static hl field_i;
+    static PendingIntArrayRequest field_i;
     static int field_d;
     static String field_e;
     static String[] field_f;
@@ -23,7 +23,7 @@ abstract class TickClock {
         try {
           param1.addFocusListener(SoundCache.field_e);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ abstract class TickClock {
         if (param1 <= 72) {
           TickClock.a(-2);
         }
-        return SteelSentinels.a(param0, param3, (byte) -62, 1, param2);
+        return SteelSentinels.createPanelFrameSprites(param0, param3, (byte) -62, 1, param2);
     }
 
     final int a(byte param0, long param1) {
@@ -133,7 +133,7 @@ abstract class TickClock {
                       var12[var17] = Sprite.loadClassOrPrimitive(10126, var10[var17]);
                       var17++;
                     }
-                    var18.field_K[var5] = param0.a(var8, (byte) 52, Sprite.loadClassOrPrimitive(10126, var20), var12);
+                    var18.field_K[var5] = param0.requestDeclaredMethod(var8, (byte) 52, Sprite.loadClassOrPrimitive(10126, var20), var12);
                     var18.field_F[var5] = var21;
                   }
                 } else {
@@ -147,7 +147,7 @@ abstract class TickClock {
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_w[var5] = var9;
-                  var18.field_y[var5] = param0.a(9, Sprite.loadClassOrPrimitive(10126, var15), var16);
+                  var18.field_y[var5] = param0.requestDeclaredField(9, Sprite.loadClassOrPrimitive(10126, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,7 +171,7 @@ abstract class TickClock {
                 var18.field_A[var5] = -5;
               }
             }
-            rg.field_d.addLast(3, var18);
+            PopupMenuHelpers.field_d.addLast(3, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -189,7 +189,7 @@ abstract class TickClock {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -215,23 +215,23 @@ abstract class TickClock {
           ReflectionCheck.field_I[ReflectionCheck.field_p] = param3;
           ReflectionCheck.field_p = ReflectionCheck.field_p + 1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "al.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "al.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     abstract void c(byte param0);
 
-    final static e b(byte param0) {
+    final static AccountRequestResult b(byte param0) {
         if (param0 != 73) {
           TickClock.a(105, (int[]) null, -49, (int[][]) null, 72, 102, -29);
         }
-        if (DiskCacheWorker.field_j == mm.field_e) {
+        if (DiskCacheWorker.field_j == ClockAndCookieHelpers.field_e) {
           throw new IllegalStateException();
         }
         if (DiskCacheWorker.field_j != BoundedRandomAccessFile.field_p) {
           return null;
         }
-        DiskCacheWorker.field_j = mm.field_e;
+        DiskCacheWorker.field_j = ClockAndCookieHelpers.field_e;
         return qf.field_d;
     }
 

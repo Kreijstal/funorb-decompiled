@@ -25,8 +25,8 @@ final class sa {
         if (AccountTermsPanel.field_Q < 2) {
           return ud.field_w;
         }
-        if (null != ok.field_f) {
-          if (ok.field_f.ensureIndex(true)) {
+        if (null != ChecksumAndFrameHelpers.field_f) {
+          if (ChecksumAndFrameHelpers.field_f.ensureIndex(true)) {
             return EmailAvailabilityValidator.field_t;
           }
           return IntKeyLookup.field_g;
@@ -36,7 +36,7 @@ final class sa {
           return ai.field_t;
         }
         if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
-          return en.field_f + " - " + WidgetStyleLayer.field_k.getGroupProgressByName((byte) 78, "commonui") + "%";
+          return LoadingScreenHelpers.field_f + " - " + WidgetStyleLayer.field_k.getGroupProgressByName((byte) 78, "commonui") + "%";
         }
         if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
           return og.field_c;
@@ -73,47 +73,47 @@ final class sa {
         RuntimeException var3 = null;
         try {
           if (param0 == 1) {
-            stackIn_2_0 = SocketConnector.a(ai.field_w, -73, new String[]{param1});
+            stackIn_2_0 = SocketConnector.formatTemplate(ai.field_w, -73, new String[]{param1});
             return stackIn_2_0;
           }
           if (2 == param0) {
-            stackIn_5_0 = SocketConnector.a(kb.field_d, -43, new String[]{param1});
+            stackIn_5_0 = SocketConnector.formatTemplate(kb.field_d, -43, new String[]{param1});
             return stackIn_5_0;
           }
           if (param0 == 3) {
-            stackIn_8_0 = SocketConnector.a(jj.field_j, -75, new String[]{param1});
+            stackIn_8_0 = SocketConnector.formatTemplate(jj.field_j, -75, new String[]{param1});
             return stackIn_8_0;
           }
           if (param0 == 4) {
-            stackIn_11_0 = SocketConnector.a(BoundedUrlRequest.field_p, -93, new String[]{param1});
+            stackIn_11_0 = SocketConnector.formatTemplate(BoundedUrlRequest.field_p, -93, new String[]{param1});
             return stackIn_11_0;
           }
           if (5 == param0) {
-            stackIn_14_0 = SocketConnector.a(SpriteCheckboxPainter.field_b, -67, new String[]{param1});
+            stackIn_14_0 = SocketConnector.formatTemplate(SpriteCheckboxPainter.field_b, -67, new String[]{param1});
             return stackIn_14_0;
           }
           if (param0 == 6) {
-            stackIn_17_0 = SocketConnector.a(qf.field_i, -65, new String[]{param1});
+            stackIn_17_0 = SocketConnector.formatTemplate(qf.field_i, -65, new String[]{param1});
             return stackIn_17_0;
           }
           if (7 == param0) {
-            stackIn_20_0 = SocketConnector.a(MarkerSlider.field_db, -32, new String[]{param1});
+            stackIn_20_0 = SocketConnector.formatTemplate(MarkerSlider.field_db, -32, new String[]{param1});
             return stackIn_20_0;
           }
           if (8 == param0) {
-            stackIn_23_0 = SocketConnector.a(VerticalScrollbar.field_Ub, -63, new String[]{param1});
+            stackIn_23_0 = SocketConnector.formatTemplate(VerticalScrollbar.field_Ub, -63, new String[]{param1});
             return stackIn_23_0;
           }
           if (11 == param0) {
-            stackIn_26_0 = SocketConnector.a(FunOrbClient.field_y, -107, new String[]{param1});
+            stackIn_26_0 = SocketConnector.formatTemplate(FunOrbClient.field_y, -107, new String[]{param1});
             return stackIn_26_0;
           }
           if (param0 == 12) {
-            stackIn_29_0 = SocketConnector.a(uf.field_e, -117, new String[]{param1});
+            stackIn_29_0 = SocketConnector.formatTemplate(uf.field_e, -117, new String[]{param1});
             return stackIn_29_0;
           }
           if (13 == param0) {
-            stackIn_33_0 = SocketConnector.a(AccountRegistrationPanel.field_ab, -17, new String[]{param1});
+            stackIn_33_0 = SocketConnector.formatTemplate(AccountRegistrationPanel.field_ab, -17, new String[]{param1});
             return stackIn_33_0;
           }
           if (param2 < -103) {
@@ -132,7 +132,7 @@ final class sa {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -145,23 +145,23 @@ final class sa {
         int var3 = 0;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var1 = mm.field_g;
+          var1 = ClockAndCookieHelpers.field_g;
           if (param0 != -110) {
             return;
           }
-          while (PartInstruction.a(true)) {
+          while (PartInstruction.isFirstReflectionCheckReady(true)) {
             var1.writeCipheredOpcode(8, (byte) -117);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             uj.a(true, var1);
-            mm.field_g.backpatchByteLength((byte) -93, -var2 + var1.position);
+            ClockAndCookieHelpers.field_g.backpatchByteLength((byte) -93, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "sa.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "sa.A(" + param0 + ')');
         }
     }
 

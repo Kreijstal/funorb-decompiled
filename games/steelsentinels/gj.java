@@ -92,7 +92,7 @@ final class gj {
                     } else {
                       var18 = SoftwareRaster.field_g[var8];
                       var19 = var16 * (16711935 & var18) + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      SoftwareRaster.field_g[var8] = var19 + ec.a(65280, var16 * ec.a(var18, 65280) + ec.a(65280, var17) * var15 >> 8);
+                      SoftwareRaster.field_g[var8] = var19 + ClientUiHelpers.bitAnd(65280, var16 * ClientUiHelpers.bitAnd(var18, 65280) + ClientUiHelpers.bitAnd(65280, var17) * var15 >> 8);
                     }
                   }
                   var8++;
@@ -117,7 +117,7 @@ final class gj {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -139,17 +139,17 @@ final class gj {
         byte[] var21;
         int[] var22;
         var8 = SteelSentinels.obfuscationControl;
-        var1 = new RgbSprite[rl.field_d];
-        for (var2 = param0; var2 < rl.field_d; var2++) {
+        var1 = new RgbSprite[PacketLoopHelpers.field_d];
+        for (var2 = param0; var2 < PacketLoopHelpers.field_d; var2++) {
           var3 = StrongCacheEntry.field_L[var2] * MusicPatch.field_r[var2];
           var21 = UiContainer.field_L[var2];
           if (!AccountChoicePanel.field_U[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = ba.field_d[ec.a(255, (int) var21[var6])];
+              var10[var6] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd(255, (int) var21[var6])];
             }
-            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var22);
+            var1[var2] = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var22);
           } else {
             var16 = BoundedRandomAccessFile.field_g[var2];
             var12 = var16;
@@ -159,9 +159,9 @@ final class gj {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = DateOfBirthValidator.a(ba.field_d[ec.a(255, (int) var21[var7])], ec.a(var16[var7] << 24, -16777216));
+              var6_ref_int__[var7] = DateOfBirthValidator.a(QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd(255, (int) var21[var7])], ClientUiHelpers.bitAnd(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var17));
           }
         }
         NodeHashTable.a(9324);
@@ -176,35 +176,35 @@ final class gj {
           if (null != rb.field_h) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (rn.field_v == AccountNoticeDialog.field_sb);
-              if ((decompiledFrameRemainder0) && (mm.field_g.position == 0 &&
-                10000L + vf.field_d < mm.a(param0 + 49))) {
-                mm.field_g.writeCipheredOpcode(param1, (byte) -117);
+              if ((decompiledFrameRemainder0) && (ClockAndCookieHelpers.field_g.position == 0 &&
+                10000L + vf.field_d < ClockAndCookieHelpers.monotonicMillis(param0 + 49))) {
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(param1, (byte) -117);
               }
             } else {
-              if (mm.field_g.position == 0 &&
-                10000L + vf.field_d < mm.a(param0 + 49)) {
-                mm.field_g.writeCipheredOpcode(param1, (byte) -117);
+              if (ClockAndCookieHelpers.field_g.position == 0 &&
+                10000L + vf.field_d < ClockAndCookieHelpers.monotonicMillis(param0 + 49)) {
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(param1, (byte) -117);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 != 0) {
                 field_b = (String) null;
               }
-              if (mm.field_g.position > 0) {
+              if (ClockAndCookieHelpers.field_g.position > 0) {
                 try {
-                  rb.field_h.a(mm.field_g.position, mm.field_g.payload, -100, 0);
-                  vf.field_d = mm.a(param0 + 58);
+                  rb.field_h.a(ClockAndCookieHelpers.field_g.position, ClockAndCookieHelpers.field_g.payload, -100, 0);
+                  vf.field_d = ClockAndCookieHelpers.monotonicMillis(param0 + 58);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   LoginForm.m(-41);
                 }
-                mm.field_g.position = 0;
+                ClockAndCookieHelpers.field_g.position = 0;
               }
               return;
             }
           }
-          mm.field_g.position = 0;
+          ClockAndCookieHelpers.field_g.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

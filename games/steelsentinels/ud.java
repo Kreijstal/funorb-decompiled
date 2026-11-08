@@ -10,7 +10,7 @@ final class ud extends IntrusiveNode {
     boolean field_r;
     int[][] field_x;
     int field_t;
-    static ef field_A;
+    static EmailFormatError field_A;
     static int field_D;
     int field_u;
     String[][] field_z;
@@ -22,10 +22,10 @@ final class ud extends IntrusiveNode {
     final static void a(boolean param0) {
         if (!param0) {
           field_C = -27;
-          MusicPatchEnvelope.a(-128, Projectile.d((byte) -21));
+          MusicPatchEnvelope.setTuhstatbutMarker(-128, Projectile.d((byte) -21));
           return;
         }
-        MusicPatchEnvelope.a(-128, Projectile.d((byte) -21));
+        MusicPatchEnvelope.setTuhstatbutMarker(-128, Projectile.d((byte) -21));
     }
 
     final static boolean e(int param0) {
@@ -55,6 +55,6 @@ final class ud extends IntrusiveNode {
 
     static {
         field_v = 20000000L;
-        field_A = new ef();
+        field_A = new EmailFormatError();
     }
 }

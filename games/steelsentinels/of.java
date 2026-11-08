@@ -26,18 +26,18 @@ final class of {
 
     final static void a(int param0) {
         if (param0 == uj.field_d) {
-          va.a(29);
+          LoginDialogHelpers.showConnectionLostLogin(29);
           uj.field_d = 11;
-          rg.field_h = true;
+          PopupMenuHelpers.field_h = true;
           return;
         }
         if (!MouseWheelInput.a(105)) {
-          va.a(29);
+          LoginDialogHelpers.showConnectionLostLogin(29);
           uj.field_d = 11;
-          rg.field_h = true;
+          PopupMenuHelpers.field_h = true;
           return;
         }
-        rg.field_h = true;
+        PopupMenuHelpers.field_h = true;
     }
 
     static {

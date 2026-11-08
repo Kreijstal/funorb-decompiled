@@ -13,7 +13,7 @@ final class Sentinel extends IntrusiveNode {
     boolean field_Cb;
     int field_Db;
     private int field_Bc;
-    private pc field_qb;
+    private PlayingSound field_qb;
     NodeDeque pendingCommands;
     private int field_cc;
     ArticulatedPart[] weaponParts;
@@ -119,7 +119,7 @@ final class Sentinel extends IntrusiveNode {
     static int[] field_T;
     int velocityY;
     int field_qc;
-    private pc field_Kb;
+    private PlayingSound field_Kb;
     int field_hb;
     int playerId;
     int[] field_Xb;
@@ -156,10 +156,10 @@ final class Sentinel extends IntrusiveNode {
         int var8_intLifetime1;
         var10 = SteelSentinels.obfuscationControl;
         if (null != this.field_Kb) {
-          la.a(false, this.field_Kb);
+          BenefitsScreenHelpers.removeSoundStream(false, this.field_Kb);
         }
         if (null != this.field_qb) {
-          la.a(false, this.field_qb);
+          BenefitsScreenHelpers.removeSoundStream(false, this.field_qb);
         }
         this.field_qb = null;
         this.field_pb = 0;
@@ -180,7 +180,7 @@ final class Sentinel extends IntrusiveNode {
         if (this.hasModuleType(20, param1 ^ -2736)) {
           var13 = new Projectile(this.worldX, this.worldY, 0, 0, 0, 0, 0, this.world, this, 1000, 0, -2);
           var13.field_O = 1000;
-          fc.a((byte) -82, 104, this.worldX);
+          SoundAndUrlHelpers.playSoundEffect((byte) -82, 104, this.worldX);
           var13.a(250, 1500, 0, -110, 50);
           var13.a(5000, 5000, 2, param1 - 2839, 500);
           var13.a(5000, 2500, 3, param1 - 2840, 500);
@@ -225,7 +225,7 @@ final class Sentinel extends IntrusiveNode {
         if (param1 != 2741) {
           return;
         }
-        fc.a((byte) -85, 9, this.worldX);
+        SoundAndUrlHelpers.playSoundEffect((byte) -85, 9, this.worldX);
         if (!this.world.field_lb) {
           if (di.field_g == 10) {
             if (QuickChatHelpDialog.field_Ub == 3) {
@@ -283,7 +283,7 @@ final class Sentinel extends IntrusiveNode {
               this.field_Dc = 0;
               this.field_oc = 0;
               this.j(-5);
-              fc.a((byte) -123, 8, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) -123, 8, this.worldX);
               this.worldY = -320000;
               this.field_fc = this.worldY;
               this.velocityX = 0;
@@ -323,10 +323,10 @@ final class Sentinel extends IntrusiveNode {
               if (!this.field_sc) {
                 if (this.field_L != this) {
                   if (this.field_yc > -1 &&
-                    pe.field_D.length > this.field_yc) {
-                    var8 = pe.field_D[this.field_yc];
+                    TriangleMesh.field_D.length > this.field_yc) {
+                    var8 = TriangleMesh.field_D[this.field_yc];
                     if (this.field_Cc) {
-                      var8 = ch.field_I;
+                      var8 = ArrayWidgetContainer.field_I;
                     }
                     if ((this.field_zb)) {
                       if (this.field_yc != 6 &&
@@ -361,7 +361,7 @@ final class Sentinel extends IntrusiveNode {
                                 if (this.field_Ib == this.field_L) {
                                   var8 = NodeDeque.field_f;
                                 } else {
-                                  var8 = cc.field_Tb;
+                                  var8 = LobbyPlayer.field_Tb;
                                 }
                               } else {
                                 var8 = ob.field_s;
@@ -433,7 +433,7 @@ final class Sentinel extends IntrusiveNode {
             }
             stackIn_153_3[stackIn_153_4] = stackIn_154_5;
             stackIn_153_2[1] = this.world.d(-1661904765, this.playerId);
-            var14 = SocketConnector.a(stackIn_153_0, stackIn_153_1, stackIn_153_2);
+            var14 = SocketConnector.formatTemplate(stackIn_153_0, stackIn_153_1, stackIn_153_2);
             LinkButtonPainter.a(35020, var14, (byte) 121);
             ValidatedTextWidget.a(var14, this.world, (byte) 100);
           }
@@ -484,7 +484,7 @@ final class Sentinel extends IntrusiveNode {
                       this.field_ac < t.field_d.length) {
                       var8_intLifetime1 = t.field_d[this.field_ac];
                       if (var8_intLifetime1 >= 0) {
-                        var8_intLifetime1 = hk.a(false, var8_intLifetime1);
+                        var8_intLifetime1 = LobbyGame.getKillStatisticId(false, var8_intLifetime1);
                         this.field_Ib.field_jb[var8_intLifetime1 - 12] = this.field_Ib.field_jb[var8_intLifetime1 - 12] + 1;
                       }
                     }
@@ -533,7 +533,7 @@ final class Sentinel extends IntrusiveNode {
             10 == di.field_g &&
             0 == DirectByteStorage.field_j &&
             this.world.field_M == 0) {
-            TabbedPanel.a(0, 0, 1200, QuickChatHelpDialog.field_Ub, 0, 0, 0, (byte) -65);
+            TabbedPanel.recordMissionCompletion(0, 0, 1200, QuickChatHelpDialog.field_Ub, 0, 0, 0, (byte) -65);
           }
         }
         if (this.world.terrain.getTerrainType(param1 ^ 2763) == 2) {
@@ -631,7 +631,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -679,7 +679,7 @@ final class Sentinel extends IntrusiveNode {
         if (param0 != -65) {
           this.g(-111, 33);
         }
-        fc.a((byte) -118, 44, -1);
+        SoundAndUrlHelpers.playSoundEffect((byte) -118, 44, -1);
         NodeIterator var8 = new NodeIterator(this.world.sentinels);
         int var3 = this.world.terrain.getProfileLength(-128) << 4;
         for (var4 = 8192; var4 < var3; var4 += 16384) {
@@ -745,7 +745,7 @@ final class Sentinel extends IntrusiveNode {
           if (param1 == null) {
             return;
           }
-          fc.a((byte) 43, 17, this.worldX);
+          SoundAndUrlHelpers.playSoundEffect((byte) 43, 17, this.worldX);
           if (param1.activated) {
             var7 = this.charge;
             if (var7 > 0) {
@@ -768,7 +768,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -1033,16 +1033,16 @@ final class Sentinel extends IntrusiveNode {
                     this.field_ec = 1000;
                     if (!this.field_Vb.hasModuleType(18, -27)) {
                       if (ed.field_j == this.playerId) {
-                        fc.a((byte) 122, 79, -1);
+                        SoundAndUrlHelpers.playSoundEffect((byte) 122, 79, -1);
                       } else {
-                        fc.a((byte) 64, 26, -1);
+                        SoundAndUrlHelpers.playSoundEffect((byte) 64, 26, -1);
                       }
                     } else {
                       this.field_ec = 250;
                       if (this.playerId == ed.field_j) {
-                        fc.a((byte) -101, 80, -1);
+                        SoundAndUrlHelpers.playSoundEffect((byte) -101, 80, -1);
                       } else {
-                        fc.a((byte) -126, 26, -1);
+                        SoundAndUrlHelpers.playSoundEffect((byte) -126, 26, -1);
                       }
                     }
                   }
@@ -1069,7 +1069,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_170_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_169_0), ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',').append(simulationTick).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_169_0), ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',').append(simulationTick).append(')').toString());
         }
     }
 
@@ -1230,14 +1230,14 @@ final class Sentinel extends IntrusiveNode {
             if (30 == var7Lifetime1) {
               if (-50 + param1.endTick > param1.startTick &&
                 -99 + param1.endTick == param1.startTick) {
-                this.field_Kb = fc.a((byte) 120, 64, this.worldX);
+                this.field_Kb = SoundAndUrlHelpers.playSoundEffect((byte) 120, 64, this.worldX);
               }
               param1.startTick = param1.startTick + 1;
             }
             if (35 == var7Lifetime1) {
               param1.startTick = param1.startTick + 1;
             }
-            if (bi.b(-72, var7Lifetime1 + 17) &&
+            if (TextAndBitHelpers.isSymbolKeyCode(-72, var7Lifetime1 + 17) &&
               this.field_Lb &&
               param1.activated &&
               !this.hasModuleType(31, -27)) {
@@ -1308,7 +1308,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_164_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_163_1).append(stackIn_164_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_163_0), ((StringBuilder) (Object) stackIn_163_1).append(stackIn_164_2).append(')').toString());
         }
     }
 
@@ -1589,25 +1589,25 @@ final class Sentinel extends IntrusiveNode {
               var4Lifetime3 = -1;
             }
             if (1 == this.field_Qb) {
-              fc.a((byte) -86, 71, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) -86, 71, var4Lifetime3);
             }
             if (this.field_Qb == 50) {
-              fc.a((byte) -109, 72, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) -109, 72, var4Lifetime3);
             }
             if (this.field_Qb == 100) {
-              fc.a((byte) -125, 73, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) -125, 73, var4Lifetime3);
             }
             if (this.field_Qb == 150) {
-              fc.a((byte) -116, 74, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) -116, 74, var4Lifetime3);
             }
             if (this.field_Qb == 200) {
-              fc.a((byte) -74, 75, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) -74, 75, var4Lifetime3);
             }
             if (250 == this.field_Qb) {
-              fc.a((byte) 69, 76, var4Lifetime3);
+              SoundAndUrlHelpers.playSoundEffect((byte) 69, 76, var4Lifetime3);
             }
             if (this.field_Qb == 300) {
-              fc.a((byte) 121, 4, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) 121, 4, this.worldX);
             }
           }
           if (Math.abs(this.field_Qb) < 250 &&
@@ -1655,7 +1655,7 @@ final class Sentinel extends IntrusiveNode {
           var5Lifetime3 = 3000 * this.charge / (this.field_wb + 20);
           this.field_ub = this.field_ub + (2 + this.field_wb) * var5Lifetime3;
           this.consumeCharge(true, this.charge);
-          this.field_qb = fc.a((byte) 39, 90, this.worldX);
+          this.field_qb = SoundAndUrlHelpers.playSoundEffect((byte) 39, 90, this.worldX);
           if (!this.world.field_h) {
             for (var6Lifetime3 = 0; var6Lifetime3 < 4; var6Lifetime3++) {
               var7_ref_qbLifetime1 = ArticulatedPart.createParticle(0, (int)(-256.0 + Math.random() * 512.0), this.world, 110, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
@@ -1863,7 +1863,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_uc = design;
           this.teamId = teamId;
           ArraySupport.copy(this.field_uc, this.field_uc.length - 8, this.moduleTypes, 0, 8);
-          this.chassis = MusicPatchNode.a(-24809, alternateConfiguration, this.moduleTypes, this.field_uc);
+          this.chassis = MusicPatchNode.decodeChassisDesign(-24809, alternateConfiguration, this.moduleTypes, this.field_uc);
           DelayedServerPacket.a(this.field_uc, this.moduleTypes, 2);
           if (null == this.chassis) {
             this.weaponParts = new ArticulatedPart[]{};
@@ -1874,7 +1874,7 @@ final class Sentinel extends IntrusiveNode {
             this.maximumArmour = 500;
           } else {
             this.maximumCharge = sl.a(this.chassis, this.moduleTypes, -7);
-            this.field_wb = ef.a(this.chassis, 12258, this.moduleTypes);
+            this.field_wb = EmailFormatError.computeModuleWeight(this.chassis, 12258, this.moduleTypes);
             this.field_Q = SentinelCommandSimulator.a(this.moduleTypes, 10, this.chassis);
             this.maximumArmour = this.chassis.getTotalArmour(8192);
             this.moduleCount = this.chassis.i(-128);
@@ -1927,12 +1927,12 @@ final class Sentinel extends IntrusiveNode {
             MusicPatchNode.field_w = 4096;
             AccountTermsPanel.field_V = 0;
             ImageProducerRasterBuffer.field_y = 0;
-            en.field_d = 0;
+            LoadingScreenHelpers.field_d = 0;
             UiComponent.field_t = 0;
             this.chassis.a(0, false, 0, 0, (byte) 49, 0);
             this.field_fb = 0;
             this.field_Db = (-ImageProducerRasterBuffer.field_y + UiComponent.field_t) * 2;
-            this.field_Ub = (en.field_d - AccountTermsPanel.field_V) * 2;
+            this.field_Ub = (LoadingScreenHelpers.field_d - AccountTermsPanel.field_V) * 2;
             if (null != this.chassis.a(66, (byte) -47)) {
               this.field_fb = 1;
             }
@@ -2110,7 +2110,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(obfuscationGuard).append(',').append(alternateConfiguration).append(',').append(playerId).append(',').append(teamId).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(obfuscationGuard).append(',').append(alternateConfiguration).append(',').append(playerId).append(',').append(teamId).append(')').toString());
         }
     }
 
@@ -2426,9 +2426,9 @@ final class Sentinel extends IntrusiveNode {
           if (4 == var5) {
           }
           if (-1 != var12) {
-            fc.a((byte) 119, var12, this.worldX);
+            SoundAndUrlHelpers.playSoundEffect((byte) 119, var12, this.worldX);
           }
-          var9Lifetime1 = eh.field_b[param2.componentId - 17];
+          var9Lifetime1 = SocialListUiHelpers.field_b[param2.componentId - 17];
           if (0 == var10) {
           }
           if (var9Lifetime1 > 0) {
@@ -2692,7 +2692,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_256_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_252_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_252_0), ((StringBuilder) (Object) stackIn_255_1).append(stackIn_256_2).append(')').toString());
         }
     }
 
@@ -2889,7 +2889,7 @@ final class Sentinel extends IntrusiveNode {
           }
           if (this.field_Lb &&
             !this.world.field_h) {
-            fc.a((byte) 66, 11, this.worldX);
+            SoundAndUrlHelpers.playSoundEffect((byte) 66, 11, this.worldX);
             var14 = ArticulatedPart.createParticle(0, -100, this.world, 104, this.worldY, this.field_u, 100, -50, -50 + this.worldX, this.worldX);
             this.world.particles.addLast(3, var14);
             var14Lifetime1 = ArticulatedPart.createParticle(0, 100, this.world, 113, this.worldY, this.field_u, 100, -50, this.worldX + 50, this.worldX);
@@ -3477,7 +3477,7 @@ final class Sentinel extends IntrusiveNode {
               return;
             }
             if (param1.startTick == -55 + param1.endTick) {
-              fc.a((byte) 42, 103, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) 42, 103, this.worldX);
             }
             if (this.field_oc == 0) {
               if (param1.actionVariant == 3) {
@@ -3542,13 +3542,13 @@ final class Sentinel extends IntrusiveNode {
           if (var7 != 1) {
             if (var7 != 2) {
               if (3 == var7) {
-                fc.a((byte) -81, 23, this.worldX);
+                SoundAndUrlHelpers.playSoundEffect((byte) -81, 23, this.worldX);
               }
             } else {
-              fc.a((byte) -90, 24, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) -90, 24, this.worldX);
             }
           } else {
-            fc.a((byte) -87, 22, this.worldX);
+            SoundAndUrlHelpers.playSoundEffect((byte) -87, 22, this.worldX);
           }
           this.world.explosions.addLast(3, var6);
           if (param1.activated) {
@@ -3582,7 +3582,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
         }
     }
 
@@ -3676,7 +3676,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -4167,7 +4167,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -4311,9 +4311,9 @@ final class Sentinel extends IntrusiveNode {
                   var21 = "^";
                   stackIn_63_0 = (var12Lifetime1 != 0) ? 10085888 : 16711680;
                   var14Lifetime1 = stackIn_63_0;
-                  dk.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1 + 1, 0, -1, var7 * 3);
-                  dk.field_h.drawCenteredAlpha(var21, var9 + 1, var11Lifetime1, 0, -1, 3 * var7);
-                  dk.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+                  DualNodeHashTable.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1 + 1, 0, -1, var7 * 3);
+                  DualNodeHashTable.field_h.drawCenteredAlpha(var21, var9 + 1, var11Lifetime1, 0, -1, 3 * var7);
+                  DualNodeHashTable.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
                 }
               }
             }
@@ -4329,15 +4329,15 @@ final class Sentinel extends IntrusiveNode {
               if (this.field_ub >= 0) {
                 if (this.field_mc > 0) {
                   var13 = this.field_mc / 50;
-                  var19 = SocketConnector.a(SocketJs5Transport.field_E, -47, new String[]{Integer.toString(var13)});
-                  var15 = SocketConnector.a("<%0> - <%1>", -82, new String[]{ProxySocketConnector.field_i, var19});
+                  var19 = SocketConnector.formatTemplate(SocketJs5Transport.field_E, -47, new String[]{Integer.toString(var13)});
+                  var15 = SocketConnector.formatTemplate("<%0> - <%1>", -82, new String[]{ProxySocketConnector.field_i, var19});
                   BoundedUrlRequest.field_d.drawCenteredAlpha(var15, var9, var11Lifetime1, 16777215, 0, 128);
                   var11Lifetime1 -= 10;
                 }
               } else {
                 var13 = -this.field_ub / (50 * (this.field_wb + 2));
-                var18 = SocketConnector.a(SocketJs5Transport.field_E, -56, new String[]{Integer.toString(var13)});
-                var15 = SocketConnector.a("<%0> - <%1>", -73, new String[]{hk.field_pc, var18});
+                var18 = SocketConnector.formatTemplate(SocketJs5Transport.field_E, -56, new String[]{Integer.toString(var13)});
+                var15 = SocketConnector.formatTemplate("<%0> - <%1>", -73, new String[]{LobbyGame.field_pc, var18});
                 BoundedUrlRequest.field_d.drawCenteredAlpha(var15, var9, var11Lifetime1, 16777215, 0, 128);
                 var11Lifetime1 -= 10;
               }
@@ -4361,7 +4361,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -4398,7 +4398,7 @@ final class Sentinel extends IntrusiveNode {
           }
           var3_int = -this.worldX + param0.targetWorldX >> 4;
           var4 = param0.targetWorldY - this.worldY >> 4;
-          var5 = ik.a(var3_int * var3_int + var4 * var4, 50);
+          var5 = ConditionalTextValue.integerSquareRoot(var3_int * var3_int + var4 * var4, 50);
           if (param1 > -72) {
             this.field_S = 104;
           }
@@ -4413,7 +4413,7 @@ final class Sentinel extends IntrusiveNode {
               var6 = 640;
             }
             if (!this.field_Lb) {
-              fc.a((byte) 69, 1, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) 69, 1, this.worldX);
             } else {
               if (this.field_cb >= 15) {
                 stackIn_15_0 = 15;
@@ -4421,7 +4421,7 @@ final class Sentinel extends IntrusiveNode {
                 stackIn_15_0 = this.field_cb;
               }
               var6 = stackIn_15_0 * 32;
-              fc.a((byte) -72, 2, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) -72, 2, this.worldX);
               this.field_bb = 25 + this.field_cb;
             }
             if (this.field_pc) {
@@ -4461,7 +4461,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4475,11 +4475,11 @@ final class Sentinel extends IntrusiveNode {
     final void a(int param0, int param1, int[] param2, int param3) {
         try {
           if (param1 != 3) {
-            this.field_qb = (pc) null;
+            this.field_qb = (PlayingSound) null;
           }
           this.configureDesign(param2, true, true, param0, param3);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mb.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mb.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -4633,7 +4633,7 @@ final class Sentinel extends IntrusiveNode {
               var16 = 16711935 & fj.field_a[this.teamId];
               var17 = 255 & fj.field_a[this.teamId] >> 8;
               var18 = 255 * var15 / 64;
-              MenuInputState.field_h[var15 + 1] = ec.a(16711935, var16 * var18 >> 8) + ec.a(65280, var18 * var17);
+              MenuInputState.field_h[var15 + 1] = ClientUiHelpers.bitAnd(16711935, var16 * var18 >> 8) + ClientUiHelpers.bitAnd(65280, var18 * var17);
               MenuInputState.field_h[64 + var15] = this.field_ic * (var18 >> 1);
             }
           } else {
@@ -4642,7 +4642,7 @@ final class Sentinel extends IntrusiveNode {
                 var16 = fj.field_a[0] & 16711935;
                 var17 = fj.field_a[0] >> 8 & 255;
                 var18 = 255 * var15 / 64;
-                MenuInputState.field_h[1 + var15] = ec.a(16711935, var18 * var16 >> 8) + ec.a(var18 * var17, 65280);
+                MenuInputState.field_h[1 + var15] = ClientUiHelpers.bitAnd(16711935, var18 * var16 >> 8) + ClientUiHelpers.bitAnd(var18 * var17, 65280);
                 MenuInputState.field_h[var15 + 64] = 65793 * (var18 >> 1);
               }
             }
@@ -4670,19 +4670,19 @@ final class Sentinel extends IntrusiveNode {
           this.field_Qb >= 225) && null != this.chassis) {
           MusicPatchNode.field_w = 2 * param1;
           if (var17Lifetime1 >= 250) {
-            IconTextComponent.b(1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+            IconTextComponent.drawBubbleDistortion(1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
           } else {
             if (var17Lifetime1 <= 100) {
               if (var17Lifetime1 > 50) {
                 this.chassis.a((byte) 112, var15Lifetime1, var16Lifetime1, this.field_E);
-                IconTextComponent.b(var17Lifetime1 * 400 - 20000, -var11Lifetime2 + var16Lifetime1 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+                IconTextComponent.drawBubbleDistortion(var17Lifetime1 * 400 - 20000, -var11Lifetime2 + var16Lifetime1 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
               } else {
                 this.chassis.a((byte) 125, var15Lifetime1, var16Lifetime1, this.field_E);
               }
             } else {
               MusicPatchNode.field_w = MusicPatchNode.field_w * (-var17Lifetime1 + 250) / 150;
               this.chassis.a((byte) 118, var15Lifetime1, var16Lifetime1 - var11Lifetime2 * (var17Lifetime1 - 100) / 150, this.field_E);
-              IconTextComponent.b(19000 * (-var17Lifetime1 + 250) / 150 + 1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
+              IconTextComponent.drawBubbleDistortion(19000 * (-var17Lifetime1 + 250) / 150 + 1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
             }
           }
         }
@@ -4919,7 +4919,7 @@ final class Sentinel extends IntrusiveNode {
           this.velocityX = 0;
           this.field_ac = -1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

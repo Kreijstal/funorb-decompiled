@@ -11,8 +11,8 @@ final class t {
     static String field_j;
     static RgbSprite[] field_i;
     static String field_g;
-    static dk field_c;
-    private km[] field_f;
+    static DualNodeHashTable field_c;
+    private ClientGlobals[] field_f;
     static int field_l;
 
     final static boolean a(int[] param0, int param1, int param2) {
@@ -38,7 +38,7 @@ final class t {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -58,12 +58,12 @@ final class t {
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
         if (param0 > 121) {
-          ad.a(param2, (byte) -76);
+          LoadoutHelpers.updateQuickChatHelpDialog(param2, (byte) -76);
           rh.a(param3, param2, param1, 635);
           return;
         }
         field_i = (RgbSprite[]) null;
-        ad.a(param2, (byte) -76);
+        LoadoutHelpers.updateQuickChatHelpDialog(param2, (byte) -76);
         rh.a(param3, param2, param1, 635);
     }
 
@@ -102,7 +102,7 @@ final class t {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -141,7 +141,7 @@ final class t {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

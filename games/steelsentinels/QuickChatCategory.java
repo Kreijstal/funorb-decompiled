@@ -4,7 +4,7 @@
 final class QuickChatCategory extends DualNode {
     char[] field_F;
     String field_D;
-    static rf field_G;
+    static LoginConnectionStage field_G;
     int[] field_C;
     char[] field_z;
     int[] field_A;
@@ -12,7 +12,7 @@ final class QuickChatCategory extends DualNode {
     static int field_y;
     boolean field_B;
 
-    final void a(int param0, PacketBuffer param1) {
+    final void decode(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = SteelSentinels.obfuscationControl;
         int var3_intLifetime1;
@@ -22,15 +22,15 @@ final class QuickChatCategory extends DualNode {
             if (0 == var3_int) {
               break;
             }
-            this.a(param1, var3_int, (byte) -123);
+            this.decodeOpcode(param1, var3_int, (byte) -123);
           }
           var3_intLifetime1 = -10 % ((-28 - param0) / 36);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isLengthOutOfRange(int param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -38,8 +38,8 @@ final class QuickChatCategory extends DualNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= hl.field_o) {
-            if (param1.length() > hf.field_e) {
+            param1.length() >= PendingIntArrayRequest.field_o) {
+            if (param1.length() > FrameStyleHelpers.field_e) {
               return true;
             }
             if (param0 != -30157) {
@@ -58,11 +58,11 @@ final class QuickChatCategory extends DualNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final void c(byte param0) {
+    final void applyGlobalIds(byte param0) {
         int var4 = 0;
         int var2 = 0;
         int var3 = SteelSentinels.obfuscationControl;
@@ -85,7 +85,7 @@ final class QuickChatCategory extends DualNode {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, byte param2) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, byte param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -117,7 +117,7 @@ final class QuickChatCategory extends DualNode {
                 stackIn_16_0 = this.field_z;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
-                  stackIn_17_2 = eh.a((byte) -71, (byte) var6);
+                  stackIn_17_2 = SocialListUiHelpers.decodeExtendedByteChar((byte) -71, (byte) var6);
                 } else {
                   stackIn_17_2 = 0;
                 }
@@ -134,7 +134,7 @@ final class QuickChatCategory extends DualNode {
                   stackIn_8_0 = this.field_F;
                   stackIn_8_1 = var5;
                   if (0 != var6) {
-                    stackIn_9_2 = eh.a((byte) -71, (byte) var6);
+                    stackIn_9_2 = SocialListUiHelpers.decodeExtendedByteChar((byte) -71, (byte) var6);
                   } else {
                     stackIn_9_2 = 0;
                   }
@@ -159,7 +159,7 @@ final class QuickChatCategory extends DualNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class QuickChatCategory extends DualNode {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(int param0, int param1, SystemTaskService param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_28_0 = null;
@@ -191,7 +191,7 @@ final class QuickChatCategory extends DualNode {
         SystemTask var11 = null;
         var9 = SteelSentinels.obfuscationControl;
         try {
-          if (!param2.b(-98)) {
+          if (!param2.supportsFullscreen(-98)) {
             return null;
           }
           if (0 == param4) {
@@ -217,7 +217,7 @@ final class QuickChatCategory extends DualNode {
               return (java.awt.Frame) (stackIn_28_0);
             }
           }
-          var11 = param2.a(param1, param5, param4, param3, 6);
+          var11 = param2.requestEnterFullscreen(param1, param5, param4, param3, 6);
           while (0 == var11.field_a) {
             MouseWheelInput.a((byte) 127, 10L);
           }
@@ -233,7 +233,7 @@ final class QuickChatCategory extends DualNode {
             stackIn_42_0 = var7;
             return stackIn_42_0;
           }
-          ok.a(-1, param2, var7);
+          ChecksumAndFrameHelpers.exitFullscreenFrame(-1, param2, var7);
           stackIn_40_0 = null;
           return (java.awt.Frame) (stackIn_40_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class QuickChatCategory extends DualNode {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class QuickChatCategory extends DualNode {
     }
 
     static {
-        field_G = new rf();
+        field_G = new LoginConnectionStage();
         field_y = 0;
     }
 }

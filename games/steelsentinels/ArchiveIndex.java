@@ -95,7 +95,7 @@ final class ArchiveIndex {
         int namedFileOrdinal;
         var16 = SteelSentinels.obfuscationControl;
         try {
-          packet = new PacketBuffer(ln.decompressContainer(encodedIndex, (byte) 127));
+          packet = new PacketBuffer(NameValidationHelpers.decompressContainer(encodedIndex, (byte) 127));
           formatVersion = packet.readUnsignedByte((byte) -66);
           if (5 <= formatVersion &&
             formatVersion <= 7) {
@@ -260,14 +260,14 @@ final class ArchiveIndex {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     ArchiveIndex(byte[] encodedIndex, int expectedCrc, byte[] expectedDigest) {
         int var4_int = 0;
         try {
-          this.indexCrc = ba.a((byte) -107, encodedIndex, encodedIndex.length);
+          this.indexCrc = QuickChatInputHelpers.computeCrc32((byte) -107, encodedIndex, encodedIndex.length);
           if (this.indexCrc != expectedCrc) {
             throw new RuntimeException();
           }
@@ -275,7 +275,7 @@ final class ArchiveIndex {
             if (64 != expectedDigest.length) {
               throw new RuntimeException();
             }
-            this.indexDigest = QuickChatCategoryCache.a((byte) -37, encodedIndex.length, 0, encodedIndex);
+            this.indexDigest = QuickChatCategoryCache.computeWhirlpoolDigest((byte) -37, encodedIndex.length, 0, encodedIndex);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (expectedDigest[var4_int] != this.indexDigest[var4_int]) {
                 throw new RuntimeException();
@@ -284,7 +284,7 @@ final class ArchiveIndex {
           }
           this.decode(encodedIndex, 70);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (encodedIndex != null ? "{...}" : "null") + ',' + expectedCrc + ',' + (expectedDigest != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "jl.<init>(" + (encodedIndex != null ? "{...}" : "null") + ',' + expectedCrc + ',' + (expectedDigest != null ? "{...}" : "null") + ')');
         }
     }
 

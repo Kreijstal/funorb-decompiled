@@ -22,12 +22,12 @@ abstract class MouseWheelInput {
         RgbSprite[] var5 = null;
         RgbSprite[] var5Lifetime1;
         if (param3 >= 6) {
-          var5 = eb.field_s;
+          var5 = AgeValidator.field_s;
           jm.a(param0, param2, var5, 1, param1, param4);
           return;
         }
         MouseWheelInput.a(false);
-        var5Lifetime1 = eb.field_s;
+        var5Lifetime1 = AgeValidator.field_s;
         jm.a(param0, param2, var5Lifetime1, 1, param1, param4);
     }
 
@@ -52,15 +52,15 @@ abstract class MouseWheelInput {
           return;
         }
         if (param1 % 10L == 0L) {
-          tc.a(-1L + param1, (byte) 118);
-          tc.a(1L, (byte) 119);
+          HighscoreSubmission.sleepMillis(-1L + param1, (byte) 118);
+          HighscoreSubmission.sleepMillis(1L, (byte) 119);
           if (param0 <= 116) {
             field_b = (String) null;
             return;
           }
           return;
         }
-        tc.a(param1, (byte) 121);
+        HighscoreSubmission.sleepMillis(param1, (byte) 121);
         if (param0 <= 116) {
           field_b = (String) null;
           return;
@@ -103,7 +103,7 @@ abstract class MouseWheelInput {
           }
           var5 = param3;
           LoadingProgressDialog.a((byte) -101, var5);
-          TextHotspotRegion.field_x = fc.a((byte) -76, param3);
+          TextHotspotRegion.field_x = SoundAndUrlHelpers.createSuggestionResult((byte) -76, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

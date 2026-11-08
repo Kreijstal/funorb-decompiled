@@ -21,13 +21,13 @@ final class DropTargetWidget extends SingleChildContainer {
           var9 = WeightedLruCache.field_e;
           var8 = -55 % ((param0 - 36) / 32);
           if (var9 != null &&
-            this.a(param5, param2, (byte) 81, param1, param3)) {
+            this.hitTest(param5, param2, (byte) 81, param1, param3)) {
             if (this.field_A instanceof WidgetDropListener) {
-              ((WidgetDropListener) (this.field_A)).a(var9, this, 127);
+              ((WidgetDropListener) (this.field_A)).onDropped(var9, this, 127);
               WeightedLruCache.field_e = null;
             } else {
               if (var9.field_A instanceof WidgetDropListener) {
-                ((WidgetDropListener) (var9.field_A)).a(var9, this, -108);
+                ((WidgetDropListener) (var9.field_A)).onDropped(var9, this, -108);
                 WeightedLruCache.field_e = null;
               }
             }
@@ -43,7 +43,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class DropTargetWidget extends SingleChildContainer {
           var6 = var9;
           for (var7 = 0; var7 < var10.length; var7 += 2) {
             if (!param3) {
-              BoundedUrlRequest.field_d.drawRight(bi.field_b[var10[var7]], 74 + param1, var5_int + (param0 + 8), 16777215, -1);
+              BoundedUrlRequest.field_d.drawRight(TextAndBitHelpers.field_b[var10[var7]], 74 + param1, var5_int + (param0 + 8), 16777215, -1);
               vc.field_e[var6[var7 + 1]].drawOpaque(76 + param1, var5_int + param0);
             }
             var5_int += 12;
@@ -92,7 +92,7 @@ final class DropTargetWidget extends SingleChildContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "d.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "d.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -101,8 +101,8 @@ final class DropTargetWidget extends SingleChildContainer {
         var11 = SteelSentinels.obfuscationControl;
         if (param5) {
           if (param5) {
-            LoginCredentials.field_e = ln.field_f;
-            cc.a(param5, 0);
+            LoginCredentials.field_e = NameValidationHelpers.field_f;
+            LobbyPlayer.advanceLobbyTransitions(param5, 0);
             if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
             }
@@ -112,7 +112,7 @@ final class DropTargetWidget extends SingleChildContainer {
             }
             rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
             if (bd.field_c > 0) {
-              pl.a(param0, param5, param1, (byte) 66);
+              BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
             }
             if (fj.field_f > 0) {
               TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -120,8 +120,8 @@ final class DropTargetWidget extends SingleChildContainer {
             if (GzipDecoder.field_c &&
               nf.field_b.field_wc >= nf.field_b.field_Ub) {
               TeamColourTinter.field_c.field_T = false;
-              TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-              ue.a(0, TabbedPanel.field_Sb.field_Ub);
+              TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+              LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
             } else {
               TabbedPanel.field_Sb.field_Tb.field_S = null;
               TeamColourTinter.field_c.field_T = true;
@@ -129,7 +129,7 @@ final class DropTargetWidget extends SingleChildContainer {
             }
           } else {
             LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
-            cc.a(param5, 0);
+            LobbyPlayer.advanceLobbyTransitions(param5, 0);
             if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
             }
@@ -139,7 +139,7 @@ final class DropTargetWidget extends SingleChildContainer {
             }
             rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
             if (bd.field_c > 0) {
-              pl.a(param0, param5, param1, (byte) 66);
+              BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
             }
             if (fj.field_f > 0) {
               TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -147,8 +147,8 @@ final class DropTargetWidget extends SingleChildContainer {
             if (GzipDecoder.field_c &&
               nf.field_b.field_wc >= nf.field_b.field_Ub) {
               TeamColourTinter.field_c.field_T = false;
-              TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-              ue.a(0, TabbedPanel.field_Sb.field_Ub);
+              TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+              LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
             } else {
               TabbedPanel.field_Sb.field_Tb.field_S = null;
               TeamColourTinter.field_c.field_T = true;
@@ -161,17 +161,17 @@ final class DropTargetWidget extends SingleChildContainer {
               SoftwareRaster.field_c == Checkbox.field_bb.field_c) {
               if (null == nf.field_b) {
                 if (ni.field_a != null) {
-                  ef.a(1, true);
+                  EmailFormatError.layoutLobbyComponents(1, true);
                 } else {
                   TextHotspotRegion.d(0);
                 }
               } else {
-                ef.a(param7 + 7, false);
+                EmailFormatError.layoutLobbyComponents(param7 + 7, false);
               }
             }
             if (param5) {
-              LoginCredentials.field_e = ln.field_f;
-              cc.a(param5, 0);
+              LoginCredentials.field_e = NameValidationHelpers.field_f;
+              LobbyPlayer.advanceLobbyTransitions(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
@@ -181,7 +181,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
-                pl.a(param0, param5, param1, (byte) 66);
+                BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
               }
               if (fj.field_f > 0) {
                 TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -189,8 +189,8 @@ final class DropTargetWidget extends SingleChildContainer {
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
                 TeamColourTinter.field_c.field_T = false;
-                TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-                ue.a(0, TabbedPanel.field_Sb.field_Ub);
+                TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+                LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
                 TeamColourTinter.field_c.field_T = true;
@@ -198,7 +198,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
             } else {
               LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
-              cc.a(param5, 0);
+              LobbyPlayer.advanceLobbyTransitions(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
@@ -208,7 +208,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
-                pl.a(param0, param5, param1, (byte) 66);
+                BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
               }
               if (fj.field_f > 0) {
                 TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -216,8 +216,8 @@ final class DropTargetWidget extends SingleChildContainer {
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
                 TeamColourTinter.field_c.field_T = false;
-                TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-                ue.a(0, TabbedPanel.field_Sb.field_Ub);
+                TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+                LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
                 TeamColourTinter.field_c.field_T = true;
@@ -225,22 +225,22 @@ final class DropTargetWidget extends SingleChildContainer {
               }
             }
           } else {
-            if (SoftwareRaster.field_j != sf.field_t &&
+            if (SoftwareRaster.field_j != TutorialStep.field_t &&
               Checkbox.field_bb.field_i == SoftwareRaster.field_j &&
               SoftwareRaster.field_c == Checkbox.field_bb.field_c) {
               if (null == nf.field_b) {
                 if (ni.field_a != null) {
-                  ef.a(1, true);
+                  EmailFormatError.layoutLobbyComponents(1, true);
                 } else {
                   TextHotspotRegion.d(0);
                 }
               } else {
-                ef.a(param7 + 7, false);
+                EmailFormatError.layoutLobbyComponents(param7 + 7, false);
               }
             }
             if (!param5) {
               LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
-              cc.a(param5, 0);
+              LobbyPlayer.advanceLobbyTransitions(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
@@ -250,7 +250,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
-                pl.a(param0, param5, param1, (byte) 66);
+                BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
               }
               if (fj.field_f > 0) {
                 TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -258,16 +258,16 @@ final class DropTargetWidget extends SingleChildContainer {
               if (GzipDecoder.field_c &&
                 nf.field_b.field_wc >= nf.field_b.field_Ub) {
                 TeamColourTinter.field_c.field_T = false;
-                TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-                ue.a(0, TabbedPanel.field_Sb.field_Ub);
+                TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+                LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
               } else {
                 TabbedPanel.field_Sb.field_Tb.field_S = null;
                 TeamColourTinter.field_c.field_T = true;
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             } else {
-              LoginCredentials.field_e = ln.field_f;
-              cc.a(param5, 0);
+              LoginCredentials.field_e = NameValidationHelpers.field_f;
+              LobbyPlayer.advanceLobbyTransitions(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
@@ -277,7 +277,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
               rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
-                pl.a(param0, param5, param1, (byte) 66);
+                BirthDateEntryPanel.a(param0, param5, param1, (byte) 66);
               }
               if (fj.field_f > 0) {
                 TextWidgetPainter.a(0, param0, param5, param9, param1);
@@ -293,32 +293,32 @@ final class DropTargetWidget extends SingleChildContainer {
                   WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
                 } else {
                   TeamColourTinter.field_c.field_T = false;
-                  TabbedPanel.field_Sb.field_Tb.field_S = pe.field_U;
-                  ue.a(0, TabbedPanel.field_Sb.field_Ub);
+                  TabbedPanel.field_Sb.field_Tb.field_S = TriangleMesh.field_U;
+                  LoginHandshakeHelpers.resetChildLayouts(0, TabbedPanel.field_Sb.field_Ub);
                 }
               }
             }
           }
         }
-        MusicPatch.a(param4, 1, param8, param2, param3, param6, param1);
+        MusicPatch.updateLobbyGameList(param4, 1, param8, param2, param3, param6, param1);
         WidgetStyleLayer.a(param8, param1, NanoTickClock.field_t, param2, 0);
         Js5NetworkRequest.field_H = Js5NetworkRequest.field_H + 1;
     }
 
-    final static ef a(String param0, boolean param1) {
+    final static EmailFormatError a(String param0, boolean param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
         String[] var4 = null;
         String var6 = null;
-        ef var7 = null;
+        EmailFormatError var7 = null;
         int var8 = 0;
-        ef stackIn_3_0 = null;
-        ef stackIn_6_0 = null;
-        ef stackIn_9_0 = null;
-        ef stackIn_15_0 = null;
-        ef stackIn_18_0 = null;
+        EmailFormatError stackIn_3_0 = null;
+        EmailFormatError stackIn_6_0 = null;
+        EmailFormatError stackIn_9_0 = null;
+        EmailFormatError stackIn_15_0 = null;
+        EmailFormatError stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -348,7 +348,7 @@ final class DropTargetWidget extends SingleChildContainer {
               return stackIn_15_0;
             }
           }
-          stackIn_18_0 = rf.a((byte) 16, var3[var3.length - 1]);
+          stackIn_18_0 = LoginConnectionStage.checkNotAllDigits((byte) 16, var3[var3.length - 1]);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -360,7 +360,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class DropTargetWidget extends SingleChildContainer {
         try {
           this.field_J = param6;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "d.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "d.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -391,15 +391,15 @@ final class DropTargetWidget extends SingleChildContainer {
           var11 = var13;
           var5_ref_int__ = var11;
           for (var6 = 0; var1 > var6; var6++) {
-            var5_ref_int__[var6] = DateOfBirthValidator.a(ba.field_d[ec.a((int) var16[var6], 255)], ec.a(255, (int) var17[var6]) << 24);
+            var5_ref_int__[var6] = DateOfBirthValidator.a(QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd((int) var16[var6], 255)], ClientUiHelpers.bitAnd(255, (int) var17[var6]) << 24);
           }
-          var3 = new ArgbSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var13);
+          var3 = new ArgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var13);
         } else {
           var9 = new int[var1];
           for (var5 = 0; var1 > var5; var5++) {
-            var9[var5] = ba.field_d[ec.a(255, (int) var16[var5])];
+            var9[var5] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd(255, (int) var16[var5])];
           }
-          var3 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var9);
+          var3 = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var9);
         }
         NodeHashTable.a(9324);
         if (param0) {
@@ -409,7 +409,7 @@ final class DropTargetWidget extends SingleChildContainer {
         return (RgbSprite) (var3);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_T = (int[][]) null;
         if (param0 == 12) {

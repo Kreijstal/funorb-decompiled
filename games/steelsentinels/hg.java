@@ -24,10 +24,10 @@ final class hg {
         var3 = SteelSentinels.obfuscationControl;
         try {
           CachedTextLayout.field_m = CachedTextLayout.field_m + 1;
-          if (pe.field_d == -1 &&
+          if (TriangleMesh.field_d == -1 &&
             jj.field_c == -1) {
             jj.field_c = DelegatingCanvas.field_c;
-            pe.field_d = oh.field_f;
+            TriangleMesh.field_d = LobbySetupHelpers.field_f;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
@@ -37,8 +37,8 @@ final class hg {
           }
           if (decompiledFrameRemainder0) {
             if (!AlternateUsernameCredentials.field_A) {
-              if (ik.field_c <= CachedTextLayout.field_m) {
-                stackIn_17_0 = (CachedTextLayout.field_m < ni.field_c + ik.field_c) ? 1 : 0;
+              if (ConditionalTextValue.field_c <= CachedTextLayout.field_m) {
+                stackIn_17_0 = (CachedTextLayout.field_m < ni.field_c + ConditionalTextValue.field_c) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -50,10 +50,10 @@ final class hg {
               CachedTextLayout.field_m = 0;
             } else {
               if (AlternateUsernameCredentials.field_A) {
-                CachedTextLayout.field_m = ik.field_c;
+                CachedTextLayout.field_m = ConditionalTextValue.field_c;
               } else {
                 if (var2_int != 0) {
-                  CachedTextLayout.field_m = ik.field_c;
+                  CachedTextLayout.field_m = ConditionalTextValue.field_c;
                 } else {
                   CachedTextLayout.field_m = 0;
                 }
@@ -67,14 +67,14 @@ final class hg {
               }
             }
             t.field_l = jj.field_c;
-            eh.field_a = pe.field_d;
+            SocialListUiHelpers.field_a = TriangleMesh.field_d;
           }
           if (!AlternateUsernameCredentials.field_A &&
-            CachedTextLayout.field_m < ik.field_c &&
-            ik.field_a) {
+            CachedTextLayout.field_m < ConditionalTextValue.field_c &&
+            ConditionalTextValue.field_a) {
             t.field_l = jj.field_c;
             CachedTextLayout.field_m = 0;
-            eh.field_a = pe.field_d;
+            SocialListUiHelpers.field_a = TriangleMesh.field_d;
           }
           if (param0 > -125) {
             return;
@@ -85,7 +85,7 @@ final class hg {
             CachedTextLayout.field_m = 0;
             AlternateUsernameCredentials.field_A = false;
           }
-          pe.field_d = -1;
+          TriangleMesh.field_d = -1;
           jj.field_c = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class hg {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class hg {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SocketConnector.a(-1, (java.awt.Component) ((Object) param1));
+          SocketConnector.attachKeyboardInput(-1, (java.awt.Component) ((Object) param1));
           TickClock.a(true, (java.awt.Component) ((Object) param1));
           if (null != WeightedLruCache.field_j) {
             WeightedLruCache.field_j.attach((java.awt.Component) ((Object) param1), false);
@@ -129,7 +129,7 @@ final class hg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

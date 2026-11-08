@@ -15,7 +15,7 @@ public class CacheFileLocator {
         return net.alterorb.launcher.Hook.cacheRedirect(param0, param3);
     }
 
-    public static void a(String param0, boolean param1, int param2) {
+    public static void initialize(String param0, boolean param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         field_a = param0;
@@ -35,7 +35,7 @@ public class CacheFileLocator {
         field_c = param1;
     }
 
-    public static File a(int param0, String param1) {
+    public static File getCacheFile(int param0, String param1) {
         if (param0 != 8244) {
           field_b = (Hashtable) null;
           return CacheFileLocator.resolveFile(field_a, field_d, (byte) 26, param1);

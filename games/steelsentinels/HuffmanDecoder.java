@@ -113,11 +113,11 @@ final class HuffmanDecoder {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawBalanceMeter(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -168,12 +168,12 @@ final class HuffmanDecoder {
             var12 = CachedArchiveProvider.field_z;
             var13 = var13 + param1 / 2;
           }
-          if (oh.field_f >= param3 &&
-            oh.field_f < param1 + param3 &&
+          if (LobbySetupHelpers.field_f >= param3 &&
+            LobbySetupHelpers.field_f < param1 + param3 &&
             param5 <= DelegatingCanvas.field_c &&
             DelegatingCanvas.field_c < param0 + param5) {
             var15 = 6100 < param4 ? CachedArchiveProvider.field_z : MusicPatchPcmStream.field_C;
-            var16 = SocketConnector.a(LoginDialog.field_zb, param2 - 7846, new String[]{Integer.toString(param4), var15});
+            var16 = SocketConnector.formatTemplate(LoginDialog.field_zb, param2 - 7846, new String[]{Integer.toString(param4), var15});
             var17 = param3 + param1 / 2;
             var18 = param5 - 18;
             var19 = 8 + BoundedUrlRequest.field_d.textWidth(var16);
@@ -184,11 +184,11 @@ final class HuffmanDecoder {
             BoundedUrlRequest.field_d.drawLeft(var16, var17, var18 + 10, 41727, -1);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "m.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "m.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3, byte[] param4, int param5) {
+    final int decompress(byte[] param0, int param1, int param2, int param3, byte[] param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -392,7 +392,7 @@ final class HuffmanDecoder {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class HuffmanDecoder {
         field_g = null;
     }
 
-    final int a(int param0, byte[] param1, int param2, byte[] param3, int param4, int param5) {
+    final int compress(int param0, byte[] param1, int param2, byte[] param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -437,7 +437,7 @@ final class HuffmanDecoder {
             if (param5 <= param4) {
               if (param2 <= 114) {
                 var16 = (byte[]) null;
-                this.a(-84, (byte[]) null, -104, (byte[]) null, 31, 47);
+                this.compress(-84, (byte[]) null, -104, (byte[]) null, 31, 47);
               }
               stackIn_16_0 = (7 + var8 >> 3) - param0;
               return stackIn_16_0;
@@ -499,11 +499,11 @@ final class HuffmanDecoder {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidNameText(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -514,7 +514,7 @@ final class HuffmanDecoder {
           if (param1 < 126) {
             field_j = (String[]) null;
           }
-          stackIn_3_0 = FallingPickup.a((byte) -118, param0, false);
+          stackIn_3_0 = FallingPickup.isValidPlayerName((byte) -118, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -526,7 +526,7 @@ final class HuffmanDecoder {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

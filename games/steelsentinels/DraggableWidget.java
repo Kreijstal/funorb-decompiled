@@ -27,7 +27,7 @@ final class DraggableWidget extends SingleChildContainer {
             ImageProducerRasterBuffer.field_A[12] = WhirlpoolHasher.field_d;
           } else {
             if (0 != BoundedUrlRequest.field_i.world.field_X) {
-              ImageProducerRasterBuffer.field_A[12] = ih.field_p;
+              ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
             } else {
               if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << ed.field_j | BoundedUrlRequest.field_i.field_N)) {
                 ImageProducerRasterBuffer.field_A[12] = dg.field_a;
@@ -39,7 +39,7 @@ final class DraggableWidget extends SingleChildContainer {
         } else {
           if (BoundedUrlRequest.field_i.field_J) {
             if (0 != (BoundedUrlRequest.field_i.world.field_X & 1 << ed.field_j)) {
-              ImageProducerRasterBuffer.field_A[12] = ch.field_H;
+              ImageProducerRasterBuffer.field_A[12] = ArrayWidgetContainer.field_H;
             } else {
               if (0 != BoundedUrlRequest.field_i.world.field_X) {
                 ImageProducerRasterBuffer.field_A[12] = DialWidget.field_Z;
@@ -56,7 +56,7 @@ final class DraggableWidget extends SingleChildContainer {
               ImageProducerRasterBuffer.field_A[12] = WhirlpoolHasher.field_d;
             } else {
               if (0 != BoundedUrlRequest.field_i.world.field_X) {
-                ImageProducerRasterBuffer.field_A[12] = ih.field_p;
+                ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
               } else {
                 if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << ed.field_j | BoundedUrlRequest.field_i.field_N)) {
                   ImageProducerRasterBuffer.field_A[12] = dg.field_a;
@@ -78,7 +78,7 @@ final class DraggableWidget extends SingleChildContainer {
           this.field_W = param8 ? true : false;
           this.field_S = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "h.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class DraggableWidget extends SingleChildContainer {
             this.field_W) {
             return true;
           }
-          if (!this.a(param0, param4, (byte) 81, param3, param2)) {
+          if (!this.hitTest(param0, param4, (byte) 81, param3, param2)) {
             stackIn_5_0 = var8_int;
             return stackIn_5_0 != 0;
           }
@@ -117,13 +117,13 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final void layoutChild(int param0) {
         super.layoutChild(-128);
-        this.field_J.a(0, (byte) -95, 0, this.field_x, this.field_E);
+        this.field_J.setBounds(0, (byte) -95, 0, this.field_x, this.field_E);
         this.field_V = this.field_z;
         if (param0 < -120) {
           this.field_ab = this.field_o;
@@ -133,7 +133,7 @@ final class DraggableWidget extends SingleChildContainer {
         this.field_ab = this.field_o;
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, byte param2, int param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -146,9 +146,9 @@ final class DraggableWidget extends SingleChildContainer {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, (byte) -91, param3, param0)) {
-            this.a(param3, param0, false, param1);
-            this.a(param0, (byte) 75, param3, param1);
+          if (this.beginDebugDescription(param1, (byte) -91, param3, param0)) {
+            this.appendDebugBody(param3, param0, false, param1);
+            this.appendChildDebugTree(param0, (byte) 75, param3, param1);
             discarded$64 = param1.append(" revert=").append(this.field_S);
             if (this.field_ab != 2147483647 &&
               this.field_V != 2147483647) {
@@ -177,7 +177,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -197,14 +197,14 @@ final class DraggableWidget extends SingleChildContainer {
           if ((!(this.field_J instanceof TextButton) ||
             ((TextButton) (this.field_J)).field_K) &&
             1 == this.field_w) {
-            var5_int = -this.field_Z + oh.field_f - param0;
+            var5_int = -this.field_Z + LobbySetupHelpers.field_f - param0;
             var6 = -param3 + (DelegatingCanvas.field_c - this.field_R);
             if (var5_int != this.field_o ||
               var6 != this.field_z) {
               this.field_z = var6;
               this.field_o = var5_int;
               if (this.field_A instanceof WidgetDragListener) {
-                ((WidgetDragListener) (this.field_A)).a(-107, param0, this, param3);
+                ((WidgetDragListener) (this.field_A)).onDragged(-107, param0, this, param3);
               }
             }
           } else {
@@ -255,7 +255,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class DraggableWidget extends SingleChildContainer {
           int var7_int = -101 / ((param0 - 36) / 32);
           this.field_w = 0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "h.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "h.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

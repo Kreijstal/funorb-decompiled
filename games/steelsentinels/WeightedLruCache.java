@@ -42,7 +42,7 @@ final class WeightedLruCache {
           this.field_k.a((byte) 47, var6_ref);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_w = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class WeightedLruCache {
             var3 = (java.applet.Applet) null;
             WeightedLruCache.a((byte) 100, (java.applet.Applet) null);
           }
-          var2 = new PaletteBitmapFont(param0, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, ba.field_d, UiContainer.field_L);
+          var2 = new PaletteBitmapFont(param0, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, QuickChatInputHelpers.field_d, UiContainer.field_L);
           NodeHashTable.a(param1 + 2279);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -191,7 +191,7 @@ final class WeightedLruCache {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -205,11 +205,11 @@ final class WeightedLruCache {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ch.field_O != null) {
-            ch.field_O.closeDialog(105);
+          if (ArrayWidgetContainer.field_O != null) {
+            ArrayWidgetContainer.field_O.closeDialog(105);
           }
           AccountNoticeDialog.field_kb = new LoginForm(param0, param1, false, true, true);
-          ci.field_a.transitionToContent(AccountNoticeDialog.field_kb, -22908735);
+          ClientErrorSupport.field_a.transitionToContent(AccountNoticeDialog.field_kb, -22908735);
           if (param2 < -37) {
             return;
           }
@@ -232,7 +232,7 @@ final class WeightedLruCache {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class WeightedLruCache {
         try {
           this.a((byte) -109, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -268,11 +268,11 @@ final class WeightedLruCache {
         int[] var10 = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          if (!param1.b(-35)) {
+          if (!param1.supportsFullscreen(-35)) {
             stackIn_4_0 = new vc[]{};
             return stackIn_4_0;
           }
-          var8 = param1.a(param0 ^ -30726);
+          var8 = param1.requestDisplayModes(param0 ^ -30726);
           while (var8.field_a == 0) {
             MouseWheelInput.a((byte) 121, 10L);
           }
@@ -308,7 +308,7 @@ final class WeightedLruCache {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class WeightedLruCache {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

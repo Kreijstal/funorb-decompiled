@@ -6,7 +6,7 @@ final class jn {
     static String field_a;
     static String field_e;
     static RgbSprite[] field_d;
-    static dn field_h;
+    static ContextMenu field_h;
     static boolean field_g;
     static int field_c;
     static ml field_b;
@@ -42,17 +42,17 @@ final class jn {
             fn.a(-26907, 1048576, param0, param2, param3);
           }
           if (null != IterableNodeHashTable.field_f) {
-            var4_ref2 = fc.field_a;
+            var4_ref2 = SoundAndUrlHelpers.field_a;
             synchronized (var4_ref2) {
-              IterableNodeHashTable.field_f.a(-1, (byte) 20, param2);
+              IterableNodeHashTable.field_f.setChannelVolume(-1, (byte) 20, param2);
               if (ml.field_g == param3) {
                 return;
               }
-              IterableNodeHashTable.field_f.c((byte) -98);
-              fc.field_a.flush();
+              IterableNodeHashTable.field_f.stop((byte) -98);
+              SoundAndUrlHelpers.field_a.flush();
               ml.field_g = param3;
               if (null != ml.field_g) {
-                IterableNodeHashTable.field_f.a(true, param0, ml.field_g);
+                IterableNodeHashTable.field_f.playTrack(true, param0, ml.field_g);
               }
             }
           }
@@ -72,7 +72,7 @@ final class jn {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

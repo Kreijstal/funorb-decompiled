@@ -1,0 +1,324 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HighscoreSubmission extends IntrusiveNode {
+    static String field_s;
+    static int[] field_B;
+    int field_t;
+    int field_w;
+    static int[] field_A;
+    int field_u;
+    static String field_v;
+    int[] field_q;
+    int field_o;
+    static String field_r;
+    int field_p;
+    int field_C;
+    static int field_x;
+    long field_D;
+    int field_y;
+    static int field_z;
+
+    public static void releaseStatics(boolean param0) {
+        field_A = null;
+        field_r = null;
+        if (!param0) {
+          field_s = null;
+          field_B = null;
+          field_v = null;
+          return;
+        }
+        HighscoreSubmission.sendFlagRequest(59, -75);
+        field_s = null;
+        field_B = null;
+        field_v = null;
+    }
+
+    final static SceneWidget getFriendListContent(int param0) {
+        if (param0 != 800) {
+          return (SceneWidget) null;
+        }
+        return SocialListUiHelpers.getFriendListContent(false);
+    }
+
+    final static SocketConnector createProxyConnector(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
+        RuntimeException var3_ref = null;
+        ProxySocketConnector stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 22137) {
+            field_v = (String) null;
+          }
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
+          stackIn_3_0 = var3;
+          return (SocketConnector) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("tc.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static void sendFlagRequest(int param0, int param1) {
+        CipherPacketBuffer var2 = null;
+        CipherPacketBuffer var2Lifetime1;
+        if (param0 == 87) {
+          var2 = ClockAndCookieHelpers.field_g;
+          var2.writeCipheredOpcode(param1, (byte) -117);
+          var2.writeByte((byte) 124, 1);
+          var2.writeByte((byte) 112, 0);
+          return;
+        }
+        field_r = (String) null;
+        var2Lifetime1 = ClockAndCookieHelpers.field_g;
+        var2Lifetime1.writeCipheredOpcode(param1, (byte) -117);
+        var2Lifetime1.writeByte((byte) 124, 1);
+        var2Lifetime1.writeByte((byte) 112, 0);
+    }
+
+    final static int wrapBalancedText(int param0, BitmapFont param1, int param2, String param3, String[] param4) {
+        int var9 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_33_2 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_36_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var10 = 0;
+        String var11 = null;
+        int var12 = 0;
+        int var13 = 0;
+        int var6Lifetime1;
+        var13 = SteelSentinels.obfuscationControl;
+        try {
+          var5_int = param1.textWidth(param3);
+          if (param0 >= var5_int &&
+            param3.indexOf("<br>") == -1) {
+            param4[0] = param3;
+            stackIn_4_0 = 1;
+            return stackIn_4_0;
+          }
+          if (param2 != 75) {
+            field_s = (String) null;
+          }
+          var6 = (var5_int + param0 - 1) / param0;
+          param0 = var5_int / var6;
+          var6Lifetime1 = 0;
+          var7 = 0;
+          var8 = param3.length();
+          for (var9 = 0; var8 > var9; var9++) {
+            var10 = param3.charAt(var9);
+            if (var10 == 32 ||
+              var10 == 45) {
+              var11 = param3.substring(var7, var9 + 1).trim();
+              var12 = param1.textWidth(var11);
+              if (param0 <= var12) {
+                var7 = var9 + 1;
+                incrementValue$1 = var6Lifetime1;
+                var6Lifetime1++;
+                param4[incrementValue$1] = var11;
+              }
+            }
+            if (62 == var10 &&
+              param3.regionMatches(-3 + var9, "<br>", 0, 4)) {
+              incrementValue$2 = var6Lifetime1;
+              var6Lifetime1++;
+              param4[incrementValue$2] = param3.substring(var7, var9 - 3).trim();
+              var7 = var9 + 1;
+            }
+          }
+          if (var8 > var7) {
+            incrementValue$0 = var6Lifetime1;
+            var6Lifetime1++;
+            param4[incrementValue$0] = param3.substring(var7, var8).trim();
+          }
+          stackIn_26_0 = var6Lifetime1;
+          return stackIn_26_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_29_0 = var5;
+          stackIn_29_1 = new StringBuilder().append("tc.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
+          }
+          stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_33_2 = "{...}";
+          }
+          stackIn_35_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',');
+          if (param4 == null) {
+            stackIn_36_2 = "null";
+          } else {
+            stackIn_36_2 = "{...}";
+          }
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+        }
+    }
+
+    final static void showLoadingProgressDialog(byte param0) {
+        int var1 = 0;
+        int var1Lifetime1;
+        GradientOutlineTextPainter.field_p.refreshPanelVisibility(126);
+        if (null != ProxySocketConnector.field_r) {
+          GradientOutlineTextPainter.field_p.pushPanel(ProxySocketConnector.field_r, 62);
+          var1 = -37 % ((param0 - 8) / 39);
+          return;
+        }
+        ProxySocketConnector.field_r = new LoadingProgressDialog(GradientOutlineTextPainter.field_p, QuickChatInputHelpers.field_f);
+        GradientOutlineTextPainter.field_p.pushPanel(ProxySocketConnector.field_r, 62);
+        var1Lifetime1 = -37 % ((param0 - 8) / 39);
+    }
+
+    final static void sleepMillis(long param0, byte param1) {
+        try {
+          try {
+            Thread.sleep(param0);
+          } catch (InterruptedException interruptedException) {
+          }
+          if (param1 <= 114) {
+            String var4 = (String) null;
+            HighscoreSubmission.createProxyConnector((String) null, -125, -121);
+            return;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    HighscoreSubmission(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = 0;
+        try {
+          this.field_u = param3;
+          this.field_y = param0;
+          this.field_w = param5;
+          this.field_q = param6;
+          this.field_t = param4;
+          fieldTemp$0 = ClientException.field_h;
+          ClientException.field_h = ClientException.field_h + 1;
+          this.field_p = fieldTemp$0 & 65535;
+          this.field_o = param1;
+          this.field_C = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_B = new int[110];
+        field_s = " seconds";
+        field_A = new int[8192];
+        field_B[59] = 200;
+        field_B[25] = 25;
+        field_B[20] = 75;
+        field_B[76] = 600;
+        field_B[70] = 500;
+        field_B[60] = 400;
+        field_B[68] = 500;
+        field_B[28] = 75;
+        field_B[0] = 500;
+        field_B[82] = 600;
+        field_B[62] = 750;
+        field_B[57] = 400;
+        field_B[51] = 200;
+        field_B[53] = 300;
+        field_B[92] = 5000;
+        field_B[43] = 500;
+        field_B[45] = 750;
+        field_B[49] = 1000;
+        field_B[31] = 150;
+        field_B[89] = 1000;
+        field_B[54] = 400;
+        field_B[58] = 250;
+        field_B[71] = 500;
+        field_B[69] = 1000;
+        field_B[32] = 100;
+        field_B[35] = 250;
+        field_B[46] = 750;
+        field_B[44] = 750;
+        field_B[48] = 1000;
+        field_B[88] = 3000;
+        field_B[52] = 1337;
+        field_B[24] = 25;
+        field_B[1] = 200;
+        field_B[85] = 800;
+        field_B[81] = 800;
+        field_B[18] = 25;
+        field_B[83] = 600;
+        field_B[33] = 200;
+        field_B[73] = 600;
+        field_B[47] = 750;
+        field_B[3] = 300;
+        field_B[86] = 800;
+        field_B[23] = 25;
+        field_B[91] = 800;
+        field_B[34] = 200;
+        field_B[26] = 25;
+        field_B[21] = 75;
+        field_B[63] = 200;
+        field_B[87] = 1000;
+        field_B[74] = 500;
+        field_B[30] = 100;
+        field_B[37] = 100;
+        field_B[38] = 200;
+        field_B[56] = 400;
+        field_B[50] = 1000;
+        field_B[80] = 800;
+        field_B[64] = 500;
+        field_B[27] = 75;
+        field_B[78] = 500;
+        field_B[90] = 1000;
+        field_B[66] = 500;
+        field_B[55] = 750;
+        field_B[72] = 1000;
+        field_B[93] = 2000;
+        field_B[17] = 25;
+        field_B[75] = 2000;
+        field_B[77] = 600;
+        field_B[67] = 400;
+        field_B[95] = 1000;
+        field_B[65] = 750;
+        field_B[84] = 2000;
+        field_B[79] = 2000;
+        field_B[22] = 100;
+        field_B[2] = 400;
+        field_B[29] = 100;
+        field_B[61] = 200;
+        field_B[36] = 200;
+        field_B[19] = 75;
+        field_v = "Disruptive behaviour";
+        field_x = 20;
+        field_r = "Arm slot";
+    }
+}

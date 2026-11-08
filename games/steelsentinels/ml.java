@@ -22,14 +22,14 @@ final class ml {
           }
           var4 = (ud) (uf.field_f.first(13058));
           while (var4 != null) {
-            ProxySocketConnector.a(27153, var4, param1);
+            ProxySocketConnector.sendListRequest(27153, var4, param1);
             var4 = (ud) (uf.field_f.next((byte) -36));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ml.D(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ml.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class ml {
         CipherPacketBuffer var3 = null;
         int var4 = 0;
         try {
-          var3 = mm.field_g;
+          var3 = ClockAndCookieHelpers.field_g;
           var3.writeCipheredOpcode(param2, (byte) -117);
           var3.position = var3.position + 1;
           var4 = var3.position;
@@ -51,7 +51,7 @@ final class ml {
           var3.appendCrc32(-72, var4);
           var3.backpatchByteLength((byte) -115, var3.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class ml {
     }
 
     final static void a(byte param0, int param1) {
-        CipherPacketBuffer var2 = mm.field_g;
+        CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         if (param0 == 12) {
           var2.writeCipheredOpcode(param1, (byte) -117);
           var2.writeByte((byte) 118, 1);

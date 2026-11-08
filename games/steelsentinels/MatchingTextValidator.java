@@ -7,10 +7,10 @@ final class MatchingTextValidator extends TextFieldValidator {
     static String field_r;
     static String field_s;
     static RgbSprite[] field_t;
-    static ak field_p;
+    static SpriteFrame field_p;
     static String field_n;
 
-    final String a(int param0, String param1) {
+    final String messageForText(int param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -24,24 +24,24 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           if (param0 != 100) {
             var4 = (String) null;
-            this.a((String) null, -43);
+            this.validateText((String) null, -43);
           }
           if (this.field_o instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.field_o)).a(false);
+            var3 = ((ValidationProvider) ((Object) this.field_o)).validator(false);
             if (var3 != null) {
-              if (var3.a((byte) 21) == vf.field_b &&
+              if (var3.validationState((byte) 21) == vf.field_b &&
                 !param1.equals(this.field_o.field_y)) {
-                stackIn_9_0 = hh.field_h;
+                stackIn_9_0 = LoginActionHelpers.field_h;
                 return stackIn_9_0;
               }
-              stackIn_11_0 = var3.a(true);
+              stackIn_11_0 = var3.validationMessage(true);
               return stackIn_11_0;
             }
           }
           if (param1.equals(this.field_o.field_y)) {
             return null;
           }
-          stackIn_15_0 = hh.field_h;
+          stackIn_15_0 = LoginActionHelpers.field_h;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,11 +53,11 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, int param8) {
+    final static void drawGlowOutline(int param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -76,7 +76,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           param6.drawAdditive(param7 + 1, 1 + param0, param1);
           SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           if (param5 != -30456) {
-            MatchingTextValidator.$cfr$intArgs$f$20d51497949f(-117);
+            MatchingTextValidator.popRasterStateWithIntGuard(-117);
           }
           var9_intLifetime1 = param6.field_A + param6.field_D + (param7 + (-param8 - param2));
           var10Lifetime1 = param6.field_A + param6.field_D + param7 - (param8 + param3);
@@ -89,7 +89,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           param6.drawAdditive(param7 + 1, param0 + 1, param1);
           SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -98,11 +98,11 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void f(byte param0) {
+    final static void popRasterState(byte param0) {
         RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.removeLast(-6533));
         if (var1 == null) {
           throw new IllegalStateException();
@@ -132,7 +132,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final vd a(String param0, int param1) {
+    final vd validateText(String param0, int param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         vd stackIn_7_0 = null;
@@ -143,12 +143,12 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            MatchingTextValidator.e((byte) 84);
+            MatchingTextValidator.clearSpriteArray((byte) 84);
           }
           if (this.field_o instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.field_o)).a(false);
+            var3 = ((ValidationProvider) ((Object) this.field_o)).validator(false);
             if (var3 != null &&
-              var3.a((byte) 21) != vf.field_b) {
+              var3.validationState((byte) 21) != vf.field_b) {
               stackIn_7_0 = ArchiveProvider.field_d;
               return stackIn_7_0;
             }
@@ -169,11 +169,11 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void e(byte param0) {
+    final static void clearSpriteArray(byte param0) {
         if (param0 < 22) {
           field_t = (RgbSprite[]) null;
         }
@@ -187,7 +187,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$f$20d51497949f(int param0) {
+    final static void popRasterStateWithIntGuard(int param0) {
         RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.removeLast(-6533));
         if (var1 == null) {
           throw new IllegalStateException();

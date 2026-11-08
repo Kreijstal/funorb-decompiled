@@ -66,7 +66,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -88,10 +88,10 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           if (!param8) {
             return;
           }
-          var13.a(0, param4, 20, -7 + param7, 2 + param5 - param7);
-          param0.a(var13, 122);
+          var13.setBounds(0, param4, 20, -7 + param7, 2 + param5 - param7);
+          param0.addChild(var13, 122);
           var10 = new SceneWidget((long)param3, (SceneWidget) null);
-          var10.a(0, 1, 12, 22, -20 + (param5 - param7));
+          var10.setBounds(0, 1, 12, 22, -20 + (param5 - param7));
           var10.field_Pb = new RgbSprite(var10.field_zb, var10.field_Lb);
           var10.field_Pb.bindRasterTarget();
           SoftwareRaster.drawRectangleOutline(0, 0, var10.field_zb, var10.field_Lb, 1995681);
@@ -110,7 +110,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             SoftwareRaster.drawRectangleOutline(0, 0, var10.field_zb, var10.field_Lb, 10367841);
           }
-          var13.a(var10, 121);
+          var13.addChild(var10, 121);
           Checkbox.field_bb.b((byte) 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -151,11 +151,11 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this(2188450, 2591221, 9543);
     }
 
-    final static cc a(boolean param0, long param1) {
+    final static LobbyPlayer a(boolean param0, long param1) {
         if (param0) {
-          return (cc) null;
+          return (LobbyPlayer) null;
         }
-        return (cc) (LoginCredentials.field_b.a(param1, (byte) -72));
+        return (LobbyPlayer) (LoginCredentials.field_b.get(param1, (byte) -72));
     }
 
     private ThreeSliceButtonPainter(int param0, int param1, int param2) {

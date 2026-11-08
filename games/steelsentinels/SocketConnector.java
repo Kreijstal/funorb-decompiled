@@ -8,17 +8,17 @@ abstract class SocketConnector {
     static int field_b;
     String field_e;
     static String[] field_g;
-    static dk field_h;
+    static DualNodeHashTable field_h;
     static String field_f;
     static MusicTrack field_a;
     int field_c;
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket connectDirect(byte param0) throws IOException {
         int var2 = -128 / ((param0 - 3) / 40);
         return new java.net.Socket(this.field_e, this.field_c);
     }
 
-    final static LoginMethod a(byte param0, java.applet.Applet param1) {
+    final static LoginMethod readLastLoginMethodCookie(byte param0, java.applet.Applet param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -45,7 +45,7 @@ abstract class SocketConnector {
           var3 = sh.b(-26);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.a(var2, 8)) {
+            if (var5.matchesName(var2, 8)) {
               stackIn_12_0 = var5;
               return stackIn_12_0;
             }
@@ -62,11 +62,11 @@ abstract class SocketConnector {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static String a(String param0, int param1, String[] param2) {
+    final static String formatTemplate(String param0, int param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -101,7 +101,7 @@ abstract class SocketConnector {
             var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (TextButton.a(-4278, param0.charAt(var5))) {
+                if (TextButton.isAsciiDigit(-4278, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -132,13 +132,13 @@ abstract class SocketConnector {
               discarded$2 = var6.append(param0.substring(var7));
               if (param1 > -11) {
                 var12 = (java.awt.Component) null;
-                SocketConnector.a(-107, (java.awt.Component) null);
+                SocketConnector.attachKeyboardInput(-107, (java.awt.Component) null);
               }
               stackIn_28_0 = var6.toString();
               return stackIn_28_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (TextButton.a(-4278, param0.charAt(var5Lifetime1))) {
+              if (TextButton.isAsciiDigit(-4278, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -175,11 +175,11 @@ abstract class SocketConnector {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -189,14 +189,14 @@ abstract class SocketConnector {
         }
     }
 
-    final static String b(int param0) {
+    final static String getPendingUrlPath(int param0) {
         if (param0 != 0) {
           field_b = 40;
         }
         return DropTargetWidget.field_U;
     }
 
-    final static void c(int param0) {
+    final static void detachAllParticles(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -213,13 +213,13 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "db.H(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "db.H(" + param0 + ')');
         }
     }
 
     abstract java.net.Socket connect(int param0) throws IOException;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardInput(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(MouseInputHandler.field_i);
@@ -228,7 +228,7 @@ abstract class SocketConnector {
             field_a = (MusicTrack) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "db.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "db.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

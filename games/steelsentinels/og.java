@@ -31,7 +31,7 @@ final class og {
     }
 
     final static void a(int param0) {
-        if (!QuickChatMenu.b(true)) {
+        if (!QuickChatMenu.isLegacyMenuOpen(true)) {
           return;
         }
         cl.a(118, false, 4);
@@ -49,13 +49,13 @@ final class og {
         PartInstruction[] var1Lifetime3;
         if (param0) {
           var1 = new PartInstruction[]{};
-          var2 = hl.field_v.a(var1, -21636, RegistrationRequestDialog.field_Ob);
+          var2 = PendingIntArrayRequest.field_v.a(var1, -21636, RegistrationRequestDialog.field_Ob);
           var1Lifetime3 = var2;
           return var2.length * 36;
         }
         og.b(124);
         var1Lifetime1 = new PartInstruction[]{};
-        var2Lifetime1 = hl.field_v.a(var1Lifetime1, -21636, RegistrationRequestDialog.field_Ob);
+        var2Lifetime1 = PendingIntArrayRequest.field_v.a(var1Lifetime1, -21636, RegistrationRequestDialog.field_Ob);
         var1Lifetime2 = var2Lifetime1;
         return var2Lifetime1.length * 36;
     }

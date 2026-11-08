@@ -36,22 +36,22 @@ final class DiskCacheRequest extends ArchiveRequest {
         try {
           if (AccountTermsPanel.field_Q < 10) {
             var3_int = 0;
-            if (dd.field_e) {
-              dd.field_e = false;
+            if (PlayerContextMenu.field_e) {
+              PlayerContextMenu.field_e = false;
               var3_int = 1;
             }
             DelayedServerPacket.a(sa.b((byte) 118), CachedArchiveProvider.a(true), var3_int != 0, 300, DropTargetWidget.field_S);
           } else {
-            if (!km.a(-124)) {
+            if (!ClientGlobals.isIntroFinished(-124)) {
               SoftwareRaster.clear();
               ValidationHelpWidget.a((byte) 17, 240, 320);
-              ScrollContainer.a(0, 0, 28594, param1);
+              ScrollContainer.paintCanvasNow(0, 0, 28594, param1);
             } else {
               if (0 != uj.field_d) {
-                en.a(param1, -28003);
+                LoadingScreenHelpers.drawLoadingScreen(param1, -28003);
               } else {
                 ArchiveProvider.a(false, (byte) 88, param2);
-                ScrollContainer.a(0, 0, 28594, param1);
+                ScrollContainer.paintCanvasNow(0, 0, 28594, param1);
               }
             }
           }
@@ -67,7 +67,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

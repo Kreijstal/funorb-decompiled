@@ -68,18 +68,18 @@ final class BoundedUrlRequest implements Runnable {
         }
     }
 
-    final PacketBuffer b(int param0) {
+    final PacketBuffer getResponseBuffer(int param0) {
         if (this.field_j == param0) {
           return this.field_b;
         }
         return null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountNamePromptOpen(int param0) {
         if (param0 == 0) {
           return null != DelayedServerPacket.field_y ? true : false;
         }
-        BoundedUrlRequest.a(-111);
+        BoundedUrlRequest.isAccountNamePromptOpen(-111);
         return null != DelayedServerPacket.field_y ? true : false;
     }
 
@@ -103,18 +103,18 @@ final class BoundedUrlRequest implements Runnable {
           this.field_k = param1;
           this.field_b = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static SceneWidget b(byte param0) {
+    final static SceneWidget getListPanelContent(byte param0) {
         if (param0 < 13) {
           return (SceneWidget) null;
         }
         return TabbedPanel.field_Sb.field_Ub;
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean poll(int param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -125,7 +125,7 @@ final class BoundedUrlRequest implements Runnable {
         }
         if (0 == this.field_j) {
           if (null == this.field_o) {
-            this.field_o = this.field_m.a(this.field_k, 112);
+            this.field_o = this.field_m.requestUrlStream(this.field_k, 112);
           }
           if (0 == this.field_o.field_a) {
             return false;
@@ -138,7 +138,7 @@ final class BoundedUrlRequest implements Runnable {
         }
         if (1 == this.field_j) {
           if (null == this.field_g) {
-            this.field_g = this.field_m.a(this.field_k.getHost(), 443, param0 + 376255346);
+            this.field_g = this.field_m.requestSocket(this.field_k.getHost(), 443, param0 + 376255346);
           }
           if (this.field_g.field_a == 0) {
             return false;
@@ -151,7 +151,7 @@ final class BoundedUrlRequest implements Runnable {
         }
         if (this.field_r != null) {
           if (null == this.field_s) {
-            this.field_s = this.field_m.a(param0 ^ -4, 5, (Runnable) (this));
+            this.field_s = this.field_m.requestThread(param0 ^ -4, 5, (Runnable) (this));
           }
           if (0 == this.field_s.field_a) {
             return false;
@@ -173,7 +173,7 @@ final class BoundedUrlRequest implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_k.getFile() + "\n\n"));
-            var3.write(km.a(param0 - 88, var5));
+            var3.write(ClientGlobals.encodeExtendedBytes(param0 - 88, var5));
             this.field_r = new DataInputStream(var4.getInputStream());
           }
           this.field_b.position = 0;
@@ -183,7 +183,7 @@ final class BoundedUrlRequest implements Runnable {
           this.finalize();
           this.field_j = this.field_j + 1;
           if (null == this.field_s) {
-            this.field_s = this.field_m.a(param0 ^ -4, 5, (Runnable) (this));
+            this.field_s = this.field_m.requestThread(param0 ^ -4, 5, (Runnable) (this));
           }
           if (0 == this.field_s.field_a) {
             return false;
@@ -196,7 +196,7 @@ final class BoundedUrlRequest implements Runnable {
           return false;
         }
         if (null == this.field_s) {
-          this.field_s = this.field_m.a(param0 ^ -4, 5, (Runnable) (this));
+          this.field_s = this.field_m.requestThread(param0 ^ -4, 5, (Runnable) (this));
         }
         if (0 == this.field_s.field_a) {
           return false;

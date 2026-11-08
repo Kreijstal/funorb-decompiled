@@ -23,7 +23,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             SentinelAnimationEditor.field_h = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "i.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "i.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,10 +35,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              ak.a(-2036, (char) var2_int)) {
+              SpriteFrame.isTypeableCharacter(-2036, (char) var2_int)) {
               var3 = 127 & 1 + BoundedUrlRequest.field_e;
-              if (ad.field_b != var3) {
-                kk.field_b[BoundedUrlRequest.field_e] = -1;
+              if (LoadoutHelpers.field_b != var3) {
+                TextAndMenuHelpers.field_b[BoundedUrlRequest.field_e] = -1;
                 DelegatingCanvas.field_b[BoundedUrlRequest.field_e] = (char)var2_int;
                 BoundedUrlRequest.field_e = var3;
               }
@@ -46,7 +46,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "i.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "i.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (MouseInputHandler.field_i != null) {
-            km.field_f = 0;
+            ClientGlobals.field_f = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               SentinelAnimationEditor.field_a.length > var2_int) {
@@ -79,14 +79,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               ni.field_b[SentinelAnimationEditor.field_h] = var2_int;
               SentinelAnimationEditor.field_h = 1 + SentinelAnimationEditor.field_h & 127;
-              if (SentinelAnimationEditor.field_h == hh.field_b) {
+              if (SentinelAnimationEditor.field_h == LoginActionHelpers.field_b) {
                 SentinelAnimationEditor.field_h = -1;
               }
             }
             if (var2_int >= 0) {
               var3 = BoundedUrlRequest.field_e + 1 & 127;
-              if (ad.field_b != var3) {
-                kk.field_b[BoundedUrlRequest.field_e] = var2_int;
+              if (LoadoutHelpers.field_b != var3) {
+                TextAndMenuHelpers.field_b[BoundedUrlRequest.field_e] = var2_int;
                 DelegatingCanvas.field_b[BoundedUrlRequest.field_e] = (char)0;
                 BoundedUrlRequest.field_e = var3;
               }
@@ -110,7 +110,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (MouseInputHandler.field_i != null) {
-            km.field_f = 0;
+            ClientGlobals.field_f = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < SentinelAnimationEditor.field_a.length) {
@@ -135,7 +135,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               ni.field_b[SentinelAnimationEditor.field_h] = ~var2_int;
               SentinelAnimationEditor.field_h = 127 & 1 + SentinelAnimationEditor.field_h;
-              if (hh.field_b == SentinelAnimationEditor.field_h) {
+              if (LoginActionHelpers.field_b == SentinelAnimationEditor.field_h) {
                 SentinelAnimationEditor.field_h = -1;
               }
             }
@@ -152,7 +152,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

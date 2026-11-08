@@ -25,7 +25,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         return AccountRegistrationPanel.field_W.field_Wb;
     }
 
-    boolean i(int param0) {
+    boolean updateAnimationsAndCheckClosed(int param0) {
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
         int var3;
@@ -52,13 +52,13 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               this.field_nb.field_R = -((this.field_vb << 8) / this.field_yb) + 256;
             } else {
               this.field_xb = PacketBuffer.field_q;
-              this.a((byte) 103, 12 - (-this.field_rb - this.field_pb.field_E), this.field_pb.field_x + 12, this.field_ib);
+              this.animateResize((byte) 103, 12 - (-this.field_rb - this.field_pb.field_E), this.field_pb.field_x + 12, this.field_ib);
               this.field_vb = 0;
               this.field_nb.field_R = 0;
             }
           }
         }
-        return super.i(-8350);
+        return super.updateAnimationsAndCheckClosed(-8350);
     }
 
     void transitionToContent(UiComponent param0, int param1) {
@@ -73,7 +73,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           }
           this.field_pb = param0;
           if (PacketBuffer.field_q == this.field_xb) {
-            this.a((byte) 103, this.field_pb.field_E + this.field_rb + 12, this.field_pb.field_x + 12, this.field_ib);
+            this.animateResize((byte) 103, this.field_pb.field_E + this.field_rb + 12, this.field_pb.field_x + 12, this.field_ib);
             this.field_vb = 0;
           } else {
             if (TabbedPanel.field_Yb != this.field_xb) {
@@ -92,7 +92,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,16 +108,16 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         field_sb = null;
     }
 
-    final void j(byte param0) {
+    final void onResizeComplete(byte param0) {
         if (this.field_xb == TabbedPanel.field_Yb) {
           return;
         }
         this.field_vb = 0;
         this.field_xb = ob.field_t;
-        this.c(-12243, this.field_pb);
+        this.installContent(-12243, this.field_pb);
         if (param0 < 6) {
           UiComponent var3 = (UiComponent) null;
-          this.c(90, (UiComponent) null);
+          this.installContent(90, (UiComponent) null);
         }
         this.field_nb.field_R = 0;
         this.field_pb = null;
@@ -145,7 +145,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         return var3;
     }
 
-    private final void c(int param0, UiComponent param1) {
+    private final void installContent(int param0, UiComponent param1) {
         try {
           if (this.field_nb != null) {
             this.field_nb.unlink(4);
@@ -156,22 +156,22 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param1 == null) {
             this.field_nb = new AlphaContainer();
           } else {
-            param1.a(6, (byte) -86, 6 + this.field_rb, param1.field_x, param1.field_E);
+            param1.setBounds(6, (byte) -86, 6 + this.field_rb, param1.field_x, param1.field_E);
             this.field_nb = new AlphaContainer(param1);
           }
           this.addChild(this.field_nb, -88);
           this.field_pb = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "gd.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "gd.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean j(int param0) {
-        this.i((byte) -79);
+    final boolean refreshVisibilityAndCheckClosed(int param0) {
+        this.finishTransition((byte) -79);
         if (param0 > -50) {
           return false;
         }
-        return super.j(-56);
+        return super.refreshVisibilityAndCheckClosed(-56);
     }
 
     ContentTransitionDialog(ModalStack param0, UiComponent param1, int param2, int param3, int param4) {
@@ -181,9 +181,9 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_ib = param4;
           this.field_tb = param3;
           this.field_yb = param3;
-          this.c(-12243, param1);
+          this.installContent(-12243, param1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -221,21 +221,21 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final void i(byte param0) {
+    final void finishTransition(byte param0) {
         if (this.field_xb != null) {
           if (this.field_xb != ob.field_t) {
-            this.a((byte) -114, 12 + this.field_pb.field_x, this.field_rb + (12 + this.field_pb.field_E));
-            this.c(-12243, this.field_pb);
+            this.resizeAndCenter((byte) -114, 12 + this.field_pb.field_x, this.field_rb + (12 + this.field_pb.field_E));
+            this.installContent(-12243, this.field_pb);
           }
           this.field_nb.field_R = 256;
           this.field_xb = null;
         }
         int var2 = 29 / ((55 - param0) / 39);
-        super.i((byte) 101);
+        super.finishTransition((byte) 101);
     }
 
     static {

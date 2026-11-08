@@ -28,7 +28,7 @@ final class dc {
             if (var3.length() > 0) {
               discarded$0 = var3.append('/');
             }
-            discarded$1 = var3.append(kk.field_h[var4]);
+            discarded$1 = var3.append(TextAndMenuHelpers.field_h[var4]);
           }
         }
         return var3.toString();

@@ -32,7 +32,7 @@ final class uc {
 
     final static void a(boolean param0, int param1) {
         int var3 = 0;
-        tc var4 = null;
+        HighscoreSubmission var4 = null;
         kf var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -41,10 +41,10 @@ final class uc {
           if (!param0) {
             uc.a(-115, 79);
           }
-          var4 = (tc) (MidiPcmStream.field_B.first(13058));
+          var4 = (HighscoreSubmission) (MidiPcmStream.field_B.first(13058));
           while (var4 != null) {
             vh.a(param1, var4, (byte) 107);
-            var4 = (tc) (MidiPcmStream.field_B.next((byte) -53));
+            var4 = (HighscoreSubmission) (MidiPcmStream.field_B.next((byte) -53));
           }
           var5 = (kf) (SentinelCommand.field_w.first(13058));
           while (var5 != null) {
@@ -55,7 +55,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "uc.B(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "uc.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class uc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,13 +122,13 @@ final class uc {
         var5 = SteelSentinels.obfuscationControl;
         try {
           if (!ArticulatedPart.f((byte) -125) &&
-            oc.a(param0, -105, true)) {
+            MessageMenuHelpers.isComponentUnused(param0, -105, true)) {
             return false;
           }
           if (t.a(ArchiveRequest.field_D, param0, -20370)) {
             return true;
           }
-          var7 = dn.field_bc;
+          var7 = ContextMenu.field_bc;
           var2 = var7;
           if (param1 != -3958) {
             var6 = (RgbSprite[]) null;
@@ -144,7 +144,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "uc.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "uc.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -154,29 +154,29 @@ final class uc {
         field_k = new int[23];
         field_d = new int[23];
         field_f = new int[23];
-        km.a((byte) -44, 460, new int[]{0, 1, 28, 5, 35, 4, 22, 19, 34}, 180, 30, 160, 0);
-        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 9}, 180, 30, 200, 1);
-        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 11, 13}, 180, 30, 200, 2);
-        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 12, 13}, 180, 30, 200, 3);
-        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 13}, 180, 30, 200, 4);
-        km.a((byte) -44, 460, new int[]{22, 4, 23, 8}, 180, 30, 406, 5);
-        km.a((byte) -44, 460, new int[]{22, -1, 23, 8}, 180, 30, 406, 6);
-        km.a((byte) -44, 0, new int[]{-1, -1, -1, 8}, 0, 0, 0, 7);
-        km.a((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 8);
-        km.a((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 9);
-        km.a((byte) -44, 460, new int[]{23, 24}, 180, 30, 400, 10);
-        km.a((byte) -44, 460, new int[]{7}, 290, 30, 400, 11);
-        km.a((byte) -44, 460, new int[]{}, 180, 30, 200, 12);
-        km.a((byte) -44, 0, new int[]{23, 28, -1, 7}, 0, 0, 0, 13);
-        km.a((byte) -44, 0, new int[]{23, 33, 46, 7}, 0, 0, 0, 14);
-        km.a((byte) -44, 460, new int[]{29, 30, 31, 32, 33, 7}, 180, 30, 400, 15);
-        km.a((byte) -44, 460, new int[]{7}, 180, 30, 400, 16);
-        km.a((byte) -44, 460, new int[]{20, 21, 6, 37, 41, 42, 43, 44, 47, -1, -1, -1, 8}, 180, 30, 140, 17);
-        km.a((byte) -44, 0, new int[]{}, 0, 0, 0, 18);
-        km.a((byte) -44, 0, new int[]{38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, -1, -1, 23, 7}, 0, 30, 0, 19);
-        km.a((byte) -44, 0, new int[]{25, 26, 39, -1, -1, 23, 7}, 0, 30, 0, 20);
-        km.a((byte) -44, 460, new int[]{7}, 180, 30, 200, 21);
-        km.a((byte) -44, 460, new int[]{41, 42, 43, 44, 47, 8}, 180, 30, 200, 22);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{0, 1, 28, 5, 35, 4, 22, 19, 34}, 180, 30, 160, 0);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 9}, 180, 30, 200, 1);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 11, 13}, 180, 30, 200, 2);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 12, 13}, 180, 30, 200, 3);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 13}, 180, 30, 200, 4);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{22, 4, 23, 8}, 180, 30, 406, 5);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{22, -1, 23, 8}, 180, 30, 406, 6);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{-1, -1, -1, 8}, 0, 0, 0, 7);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 8);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 9);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{23, 24}, 180, 30, 400, 10);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{7}, 290, 30, 400, 11);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{}, 180, 30, 200, 12);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{23, 28, -1, 7}, 0, 0, 0, 13);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{23, 33, 46, 7}, 0, 0, 0, 14);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{29, 30, 31, 32, 33, 7}, 180, 30, 400, 15);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{7}, 180, 30, 400, 16);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{20, 21, 6, 37, 41, 42, 43, 44, 47, -1, -1, -1, 8}, 180, 30, 140, 17);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{}, 0, 0, 0, 18);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, -1, -1, 23, 7}, 0, 30, 0, 19);
+        ClientGlobals.defineComponentPage((byte) -44, 0, new int[]{25, 26, 39, -1, -1, 23, 7}, 0, 30, 0, 20);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{7}, 180, 30, 200, 21);
+        ClientGlobals.defineComponentPage((byte) -44, 460, new int[]{41, 42, 43, 44, 47, 8}, 180, 30, 200, 22);
         field_h = new String[][]{new String[]{"Your sentinel must be a default Slave, Aquila or Golem to play in basic mode", "You need a default Slave, Aquila or Golem to play in basic mode", "<%0> needs a default Slave, Aquila or Golem to play in basic mode"}, new String[]{"Your sentinel has too high a tech value to compete in standard mode", "Your sentinel has too high a tech value to compete in standard mode", "<%0>'s sentinel has too high a tech value to compete in standard mode"}};
     }
 }

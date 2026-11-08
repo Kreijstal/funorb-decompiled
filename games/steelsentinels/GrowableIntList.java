@@ -89,7 +89,7 @@ final class GrowableIntList {
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
-        tc var6_ref_tc = null;
+        HighscoreSubmission var6_ref_tc = null;
         int var7 = 0;
         String[][] var8 = null;
         String[][] var9 = null;
@@ -117,7 +117,7 @@ final class GrowableIntList {
           if (param0 >= -115) {
             return;
           }
-          var28 = rf.field_d;
+          var28 = LoginConnectionStage.field_d;
           var2 = var28.readUnsignedByte((byte) -61);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) -60);
@@ -220,10 +220,10 @@ final class GrowableIntList {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) -60);
             var4_long = var28.readLong((byte) -122);
-            var6_ref_tc = (tc) (MidiPcmStream.field_B.first(13058));
+            var6_ref_tc = (HighscoreSubmission) (MidiPcmStream.field_B.first(13058));
             while (var6_ref_tc != null) {
               if (var6_ref_tc.field_p != var3Lifetime1) {
-                var6_ref_tc = (tc) (MidiPcmStream.field_B.next((byte) -20));
+                var6_ref_tc = (HighscoreSubmission) (MidiPcmStream.field_B.next((byte) -20));
                 continue;
               }
               break;
@@ -236,13 +236,13 @@ final class GrowableIntList {
             var6_ref_tc.unlink(4);
             return;
           }
-          MusicCrossfadeStream.a("HS1: " + ci.a((byte) 94), -37, (Throwable) null);
+          MusicCrossfadeStream.reportClientError("HS1: " + ClientErrorSupport.describePacketHistory((byte) 94), -37, (Throwable) null);
           LoginForm.m(86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "g.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "g.A(" + param0 + ')');
         }
     }
 
@@ -262,20 +262,20 @@ final class GrowableIntList {
 
     final static void a(int param0, int param1, int param2, int param3, SystemTaskService param4, byte param5, int param6, int param7, String param8) {
         try {
-          rl.field_f = param8;
+          PacketLoopHelpers.field_f = param8;
           rb.field_f = param2;
           UiComponent.field_B = param3;
           wn.field_g = param0;
-          km.field_k = param4;
+          ClientGlobals.field_k = param4;
           int var9_int = 48 / ((22 - param5) / 61);
-          ih.field_n = param1;
+          EmailSyntaxValidator.field_n = param1;
           sh.field_a = param6;
           EditableTextWidget.field_ib = param7;
           FallingPickup.field_N = (Js5Transport) ((Object) new SocketJs5Transport());
-          hk.field_oc = new DiskCacheWorker(param4);
-          ByteStorage.field_c = new Js5ArchiveManager(FallingPickup.field_N, hk.field_oc);
+          LobbyGame.field_oc = new DiskCacheWorker(param4);
+          ByteStorage.field_c = new Js5ArchiveManager(FallingPickup.field_N, LobbyGame.field_oc);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "g.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "g.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

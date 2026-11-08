@@ -95,7 +95,7 @@ final class DualNodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "ra.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "ra.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class DualNodeDeque {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = pl.field_T;
+          var8 = BirthDateEntryPanel.field_T;
           jm.a(param1, param7, var8, 1, param3, param4);
           if (param6 != null) {
             param2.drawCentered(param6, param4 / 2 + param3, param2.field_U / 2 + param7 / 2 + param1, param0, -1);
@@ -153,7 +153,7 @@ final class DualNodeDeque {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class DualNodeDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

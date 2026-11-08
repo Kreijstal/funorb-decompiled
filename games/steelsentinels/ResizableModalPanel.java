@@ -13,7 +13,7 @@ abstract class ResizableModalPanel extends ModalPanel {
     private int field_cb;
     static RgbSprite field_bb;
 
-    void j(byte param0) {
+    void onResizeComplete(byte param0) {
         if (param0 < 6) {
           field_gb = (String) null;
           return;
@@ -26,13 +26,13 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_db = 0;
     }
 
-    void i(byte param0) {
+    void finishTransition(byte param0) {
         if (this.field_db <= 0) {
           return;
         }
-        this.a((byte) -90, this.field_cb, this.field_Y);
+        this.resizeAndCenter((byte) -90, this.field_cb, this.field_Y);
         this.field_db = 0;
-        this.j((byte) 12);
+        this.onResizeComplete((byte) 12);
         int var2 = 73 % ((55 - param0) / 39);
     }
 
@@ -43,7 +43,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return rn.field_y.field_Ub;
     }
 
-    void a(int param0, int param1, boolean param2) {
+    void drawPanelBackground(int param0, int param1, boolean param2) {
         int var4;
         int var5;
         int var6;
@@ -176,9 +176,9 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void animateResize(byte param0, int param1, int param2, int param3) {
         if (param3 <= 0) {
-          this.a((byte) 99, param2, param1);
+          this.resizeAndCenter((byte) 99, param2, param1);
           return;
         }
         this.field_Y = param1;
@@ -190,20 +190,20 @@ abstract class ResizableModalPanel extends ModalPanel {
           this.field_db = param3;
           return;
         }
-        this.j(63);
+        this.refreshVisibilityAndCheckClosed(63);
         this.field_hb = this.field_E;
         this.field_fb = this.field_x;
         this.field_cb = param2;
         this.field_db = param3;
     }
 
-    boolean j(int param0) {
-        this.i((byte) 2);
+    boolean refreshVisibilityAndCheckClosed(int param0) {
+        this.finishTransition((byte) 2);
         if (param0 > -50) {
           this.field_cb = -21;
-          return super.j(-55);
+          return super.refreshVisibilityAndCheckClosed(-55);
         }
-        return super.j(-55);
+        return super.refreshVisibilityAndCheckClosed(-55);
     }
 
     public static void releaseStatics(byte param0) {
@@ -219,7 +219,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         field_bb = null;
     }
 
-    boolean i(int param0) {
+    boolean updateAnimationsAndCheckClosed(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -235,27 +235,27 @@ abstract class ResizableModalPanel extends ModalPanel {
             var5 = this.field_db * this.field_db;
             var3 = this.field_hb + (-this.field_hb + this.field_Y) * var4 / var5;
             var2 = (-this.field_fb + this.field_cb) * var4 / var5 + this.field_fb;
-            this.a((byte) -70, var2, var3);
+            this.resizeAndCenter((byte) -70, var2, var3);
             if (param0 != -8350) {
-              this.i(-53);
-              return super.i(-8350);
+              this.updateAnimationsAndCheckClosed(-53);
+              return super.updateAnimationsAndCheckClosed(-8350);
             }
-            return super.i(-8350);
+            return super.updateAnimationsAndCheckClosed(-8350);
           }
           this.field_db = 0;
-          this.j((byte) 59);
-          this.a((byte) -70, var2, var3);
+          this.onResizeComplete((byte) 59);
+          this.resizeAndCenter((byte) -70, var2, var3);
           if (param0 != -8350) {
-            this.i(-53);
-            return super.i(-8350);
+            this.updateAnimationsAndCheckClosed(-53);
+            return super.updateAnimationsAndCheckClosed(-8350);
           }
-          return super.i(-8350);
+          return super.updateAnimationsAndCheckClosed(-8350);
         }
         if (param0 == -8350) {
-          return super.i(-8350);
+          return super.updateAnimationsAndCheckClosed(-8350);
         }
-        this.i(-53);
-        return super.i(-8350);
+        this.updateAnimationsAndCheckClosed(-53);
+        return super.updateAnimationsAndCheckClosed(-8350);
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
@@ -264,30 +264,30 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var11 = 0;
         int var13 = 0;
         try {
-          cc.field_bc.field_S = param3;
-          if (2 != ib.field_b) {
+          LobbyPlayer.field_bc.field_S = param3;
+          if (2 != ChatPanelHelpers.field_b) {
             Js5NetworkRequest.field_N.field_S = SocialListPanel.field_Yb;
           } else {
             Js5NetworkRequest.field_N.field_S = IconTextComponent.field_Ub;
           }
           var9_int = 495;
           var10 = 5;
-          te.field_f.a(0, var10, param0, 5, -10 + var9_int);
-          vd.field_d.a(0, 0, param0, 0, te.field_f.field_zb - DualNodeDequeIterator.field_e.field_zb);
-          DualNodeDequeIterator.field_e.a(0, 0, param0, vd.field_d.field_zb, DualNodeDequeIterator.field_e.field_zb);
+          te.field_f.setBounds(0, var10, param0, 5, -10 + var9_int);
+          vd.field_d.setBounds(0, 0, param0, 0, te.field_f.field_zb - DualNodeDequeIterator.field_e.field_zb);
+          DualNodeDequeIterator.field_e.setBounds(0, 0, param0, vd.field_d.field_zb, DualNodeDequeIterator.field_e.field_zb);
           var10 = var10 + (param0 + param6);
           int var12 = 105 % ((-62 - param8) / 61);
-          vc.field_f.a(0, var10, param2, 5, vc.field_f.g(-2147483648));
-          var11 = Js5NetworkRequest.field_N.g(-2147483648);
-          Js5NetworkRequest.field_N.a(0, var10, param2, var9_int + (-5 - var11), var11);
-          cc.field_bc.a(0, 0, param4, 0, var9_int);
+          vc.field_f.setBounds(0, var10, param2, 5, vc.field_f.getContentWidth(-2147483648));
+          var11 = Js5NetworkRequest.field_N.getContentWidth(-2147483648);
+          Js5NetworkRequest.field_N.setBounds(0, var10, param2, var9_int + (-5 - var11), var11);
+          LobbyPlayer.field_bc.setBounds(0, 0, param4, 0, var9_int);
           var13 = 5 + var10 + param2;
-          in.field_d.a(0, param4, var13, 0, var9_int);
+          in.field_d.setBounds(0, param4, var13, 0, var9_int);
           var13 = var13 + param4;
-          in.field_d.field_I = se.a(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
-          hh.field_a.a(0, param7 - var13 / 2, var13, param1 - var9_int / 2, var9_int);
+          in.field_d.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
+          LoginActionHelpers.field_a.setBounds(0, param7 - var13 / 2, var13, param1 - var9_int / 2, var9_int);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ac.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ac.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

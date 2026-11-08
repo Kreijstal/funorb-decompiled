@@ -26,7 +26,7 @@ final class DualNodeDequeIterator implements Iterator {
           if (256 < var1) {
             var1 = 256;
           }
-          ef.a(1, var1);
+          EmailFormatError.setMusicVolume(1, var1);
         }
         if (!param0) {
           return;
@@ -45,10 +45,10 @@ final class DualNodeDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (jm) (ri.field_c.first(13058));
+          var4 = (jm) (LoginStateQueries.field_c.first(13058));
           while (var4 != null) {
             rh.a(param0, 0, var4);
-            var4 = (jm) (ri.field_c.next((byte) -45));
+            var4 = (jm) (LoginStateQueries.field_c.next((byte) -45));
           }
           if (param1 == -26077) {
             return;
@@ -58,7 +58,7 @@ final class DualNodeDequeIterator implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "wh.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "wh.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -106,49 +106,49 @@ final class DualNodeDequeIterator implements Iterator {
         if (param12 > 14) {
           if (param15 <= param13) {
             if (param9 > param13) {
-              PartInstruction.a(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, SoftwareRaster.field_g, param7);
+              PartInstruction.rasterHalfBlendGouraudTriangle(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, SoftwareRaster.field_g, param7);
               return;
             }
             if (param15 < param9) {
-              PartInstruction.a(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, SoftwareRaster.field_g, param7);
+              PartInstruction.rasterHalfBlendGouraudTriangle(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, SoftwareRaster.field_g, param7);
               return;
             }
-            PartInstruction.a(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, SoftwareRaster.field_g, param10);
+            PartInstruction.rasterHalfBlendGouraudTriangle(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, SoftwareRaster.field_g, param10);
             return;
           }
           if (param9 > param15) {
-            PartInstruction.a(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, SoftwareRaster.field_g, param8);
+            PartInstruction.rasterHalfBlendGouraudTriangle(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, SoftwareRaster.field_g, param8);
             return;
           }
           if (param13 < param9) {
-            PartInstruction.a(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, SoftwareRaster.field_g, param8);
+            PartInstruction.rasterHalfBlendGouraudTriangle(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, SoftwareRaster.field_g, param8);
             return;
           }
-          PartInstruction.a(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, SoftwareRaster.field_g, param10);
+          PartInstruction.rasterHalfBlendGouraudTriangle(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, SoftwareRaster.field_g, param10);
           return;
         }
         field_a = (String) null;
         if (param15 <= param13) {
           if (param9 > param13) {
-            PartInstruction.a(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, SoftwareRaster.field_g, param7);
+            PartInstruction.rasterHalfBlendGouraudTriangle(param14, param15, param2, param4, param11, param3, param1, param6, param13, param8, param5, param0, 115, param9, param10, SoftwareRaster.field_g, param7);
             return;
           }
           if (param15 < param9) {
-            PartInstruction.a(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, SoftwareRaster.field_g, param7);
+            PartInstruction.rasterHalfBlendGouraudTriangle(param14, param15, param0, param5, param11, param6, param1, param3, param9, param10, param4, param2, 113, param13, param8, SoftwareRaster.field_g, param7);
             return;
           }
-          PartInstruction.a(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, SoftwareRaster.field_g, param10);
+          PartInstruction.rasterHalfBlendGouraudTriangle(param2, param9, param0, param5, param4, param6, param3, param1, param15, param7, param11, param14, 120, param13, param8, SoftwareRaster.field_g, param10);
           return;
         }
         if (param9 > param15) {
-          PartInstruction.a(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, SoftwareRaster.field_g, param8);
+          PartInstruction.rasterHalfBlendGouraudTriangle(param0, param13, param2, param4, param5, param3, param6, param1, param15, param7, param11, param14, -11, param9, param10, SoftwareRaster.field_g, param8);
           return;
         }
         if (param13 < param9) {
-          PartInstruction.a(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, SoftwareRaster.field_g, param8);
+          PartInstruction.rasterHalfBlendGouraudTriangle(param0, param13, param14, param11, param5, param1, param6, param3, param9, param10, param4, param2, 114, param15, param7, SoftwareRaster.field_g, param8);
           return;
         }
-        PartInstruction.a(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, SoftwareRaster.field_g, param10);
+        PartInstruction.rasterHalfBlendGouraudTriangle(param2, param9, param14, param11, param4, param1, param3, param6, param13, param8, param5, param0, -88, param15, param7, SoftwareRaster.field_g, param10);
     }
 
     DualNodeDequeIterator(IterableDualNodeDeque param0) {
@@ -158,7 +158,7 @@ final class DualNodeDequeIterator implements Iterator {
           this.field_f = null;
           this.field_g = this.field_c.field_a.dualNext;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class DualNodeDequeIterator implements Iterator {
           var2_int = param1.field_G;
           var3 = param1.field_E;
           param1.field_E = param1.field_E - 64;
-          var4 = new ArticulatedPart(na.field_a, 1, var2_int, var3, 0, param0, new PartInstruction[]{new PartInstruction(var2_int, -64 + var3, 0, 0, param1, false)});
+          var4 = new ArticulatedPart(ChatMessage.field_a, 1, var2_int, var3, 0, param0, new PartInstruction[]{new PartInstruction(var2_int, -64 + var3, 0, 0, param1, false)});
           var4.componentId = param1.componentId;
           param1.componentId = -1;
           stackIn_1_0 = var4;
@@ -191,7 +191,7 @@ final class DualNodeDequeIterator implements Iterator {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

@@ -25,7 +25,7 @@ abstract class WeightedCacheEntry extends DualNode {
         stackIn_7_0 = ImageProducerRasterBuffer.field_A;
         stackIn_7_1 = 41;
         if (CachedTextLayout.field_p) {
-          stackIn_8_2 = hf.field_b;
+          stackIn_8_2 = FrameStyleHelpers.field_b;
         } else {
           stackIn_8_2 = fm.field_h;
         }
@@ -117,15 +117,15 @@ abstract class WeightedCacheEntry extends DualNode {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
     abstract boolean h(int param0);
 
-    final static void a(na param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         int var2_int = 0;
-        na var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -151,7 +151,7 @@ abstract class WeightedCacheEntry extends DualNode {
           if (null != param0.field_l) {
             SceneWidgetNode.field_B = param0.field_k;
             SocketJs5Transport.field_x = param0.field_p;
-            se.field_b = param0.field_j;
+            PopupMenuSupport.field_b = param0.field_j;
             pa.field_h = param0.field_l;
           }
           tf.a(param0, (byte) -115);
@@ -169,7 +169,7 @@ abstract class WeightedCacheEntry extends DualNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ abstract class WeightedCacheEntry extends DualNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ abstract class WeightedCacheEntry extends DualNode {
                 var7 = param1.getTeamColour((byte) -102);
                 var8 = var6 & 255;
                 if (var8 > 64) {
-                  param0.field_E[var5 + var3_int] = (ec.a(16711720, var8 * ec.a(var7, 65280)) >> 8) + ec.a(ec.a(16711935, var7) * var8 >> 8, 16711935);
+                  param0.field_E[var5 + var3_int] = (ClientUiHelpers.bitAnd(16711720, var8 * ClientUiHelpers.bitAnd(var7, 65280)) >> 8) + ClientUiHelpers.bitAnd(ClientUiHelpers.bitAnd(16711935, var7) * var8 >> 8, 16711935);
                 }
               } else {
                 var7 = var6 & 255;
@@ -304,7 +304,7 @@ abstract class WeightedCacheEntry extends DualNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 

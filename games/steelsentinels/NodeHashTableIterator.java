@@ -19,7 +19,7 @@ final class NodeHashTableIterator implements Iterator {
           int var2_int = -112 % ((-14 - param1) / 32);
           UiTheme.field_e.removeSubstream(param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,15 +59,15 @@ final class NodeHashTableIterator implements Iterator {
         RuntimeException var20 = null;
         byte[] var21 = null;
         try {
-          oh.a(param3, false, param8, param0, param12);
-          VerticalScrollbar.a((byte) 109, param8);
+          LobbySetupHelpers.loadLobbyTheme(param3, false, param8, param0, param12);
+          VerticalScrollbar.loadDisplayNameSprites((byte) 109, param8);
           if (param9 != 94) {
             var21 = (byte[]) null;
             NodeHashTableIterator.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (ResourceArchive) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
           }
-          oh.a(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
+          LobbySetupHelpers.initializeGameOptions(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
           TextHotspotRegion.a(param8, param1, param15, -119);
-          MenuInputState.b((byte) -115);
+          MenuInputState.initializeReportReasonLabels((byte) -115);
           LoginDialog.m(854);
           Checkbox.a(false);
           return;
@@ -165,7 +165,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_d = param0;
           this.a(29329);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

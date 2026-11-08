@@ -10,7 +10,7 @@ final class qf {
     static SceneWidget field_c;
     static String field_i;
     static String field_g;
-    static e field_d;
+    static AccountRequestResult field_d;
     static int[] field_h;
 
     public static void releaseStatics(boolean param0) {
@@ -34,8 +34,8 @@ final class qf {
         if (param0 == 100) {
           var1 = sh.c(115);
           var2 = AlphaContainer.a(false);
-          MatchingTextValidator.field_p.a((SingleChildContainer.field_I << 1) + var1, -15203, MusicPatchPcmStream.field_D - SingleChildContainer.field_I, var2 + (EmailCredentials.field_n << 1), SingleChildContainer.field_Q - EmailCredentials.field_n);
-          dk.b(param0 - 6661);
+          MatchingTextValidator.field_p.drawFrame((SingleChildContainer.field_I << 1) + var1, -15203, MusicPatchPcmStream.field_D - SingleChildContainer.field_I, var2 + (EmailCredentials.field_n << 1), SingleChildContainer.field_Q - EmailCredentials.field_n);
+          DualNodeHashTable.drawPopupMenuItems(param0 - 6661);
           return;
         }
     }
@@ -66,7 +66,7 @@ final class qf {
         if (param1 >= -116) {
           return;
         }
-        if (!pc.field_w) {
+        if (!PlayingSound.field_w) {
           return;
         }
         if (!Sprite.field_k) {
@@ -134,7 +134,7 @@ final class qf {
         int var7Lifetime1;
         AccountChoicePanel.field_S[DelayedServerPacket.field_z] = param1;
         un.field_j[DelayedServerPacket.field_z] = DelayedServerPacket.field_z;
-        ok.field_d[DelayedServerPacket.field_z] = param5;
+        ChecksumAndFrameHelpers.field_d[DelayedServerPacket.field_z] = param5;
         if (AccountTermsPanel.field_S > param5) {
           ImageProducerRasterBuffer.field_w = param5;
         }
@@ -152,7 +152,7 @@ final class qf {
             stackIn_23_0 = 0;
           }
           var7 = stackIn_23_0;
-          eb.field_u[DelayedServerPacket.field_z] = var7;
+          AgeValidator.field_u[DelayedServerPacket.field_z] = var7;
           if (var7 < ImageProducerRasterBuffer.field_w) {
             ImageProducerRasterBuffer.field_w = var7;
           }
@@ -170,7 +170,7 @@ final class qf {
           stackIn_10_0 = 0;
         }
         var7Lifetime1 = stackIn_10_0;
-        eb.field_u[DelayedServerPacket.field_z] = var7Lifetime1;
+        AgeValidator.field_u[DelayedServerPacket.field_z] = var7Lifetime1;
         if (var7Lifetime1 < ImageProducerRasterBuffer.field_w) {
           ImageProducerRasterBuffer.field_w = var7Lifetime1;
         }
@@ -221,7 +221,7 @@ final class qf {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

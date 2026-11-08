@@ -16,7 +16,7 @@ final class SocialListPanel extends SceneWidget {
     static PaletteBitmapFont field_Tb;
     SceneWidget field_Wb;
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean isAllZero(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -51,17 +51,17 @@ final class SocialListPanel extends SceneWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_zb = param0;
         int var9 = -88 % ((64 - param5) / 58);
         this.field_Lb = param1;
         this.field_eb = param7;
         this.field_Y = param3;
-        this.a(param2, param4, 102, param6);
+        this.layoutControls(param2, param4, 102, param6);
     }
 
     SocialListPanel(long param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3, SceneWidget param4, String param5, String param6) {
@@ -73,11 +73,11 @@ final class SocialListPanel extends SceneWidget {
           this.field_Sb = new SceneWidget(0L, param4);
           this.field_bc.field_S = param5;
           this.field_Sb.field_S = param6;
-          this.a(this.field_Xb, 127);
-          this.a(this.field_bc, 121);
-          this.a(this.field_Sb, 127);
+          this.addChild(this.field_Xb, 127);
+          this.addChild(this.field_bc, 121);
+          this.addChild(this.field_Sb, 127);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ql.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ql.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,15 +85,15 @@ final class SocialListPanel extends SceneWidget {
         this(param0, param1, param1.field_Xb.field_Tb, param1.field_Xb.field_Sb, param1.field_bc, param2, param3);
     }
 
-    final static void j(int param0) {
+    final static void resetLoginRequestState(int param0) {
         DelayedServerPacket.field_A = false;
         if (param0 != -29713) {
           return;
         }
         LoginMethod.field_d = false;
         LabeledField.a(-1, 0);
-        jn.field_b = mm.field_e;
-        DiskCacheWorker.field_j = mm.field_e;
+        jn.field_b = ClockAndCookieHelpers.field_e;
+        DiskCacheWorker.field_j = ClockAndCookieHelpers.field_e;
     }
 
     public static void releaseStatics(byte param0) {
@@ -107,10 +107,10 @@ final class SocialListPanel extends SceneWidget {
         field_Tb = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutControls(int param0, int param1, int param2, int param3) {
         int var5 = (param0 + this.field_zb) / 2;
         int var6 = -param1 + this.field_Lb;
-        this.field_Xb.a(this.field_zb, -2048, param3, var6 - param0, param0, 0, 0);
+        this.field_Xb.setBoundsAndLayout(this.field_zb, -2048, param3, var6 - param0, param0, 0, 0);
         this.field_bc.field_eb = var6;
         this.field_bc.field_zb = -param0 + var5;
         this.field_bc.field_Lb = param1;
@@ -122,16 +122,16 @@ final class SocialListPanel extends SceneWidget {
         this.field_Sb.field_Lb = param1;
     }
 
-    final static void b(boolean param0) {
-        PacketBuffer.field_o.a(0, 0, 18, 0, TeamColourTinter.field_c.field_zb - (MenuInputState.field_p ? 2 + ReflectionCheck.field_G + 42 : 0));
+    final static void layoutLobbySocialPanels(boolean param0) {
+        PacketBuffer.field_o.setBounds(0, 0, 18, 0, TeamColourTinter.field_c.field_zb - (MenuInputState.field_p ? 2 + ReflectionCheck.field_G + 42 : 0));
         if (!param0) {
           field_ec = (SceneWidget) null;
-          uj.field_j.a(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
-          TabbedPanel.field_Sb.a(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
+          uj.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+          TabbedPanel.field_Sb.setBoundsAndLayout(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
           return;
         }
-        uj.field_j.a(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
-        TabbedPanel.field_Sb.a(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
+        uj.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+        TabbedPanel.field_Sb.setBoundsAndLayout(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
     }
 
     static {

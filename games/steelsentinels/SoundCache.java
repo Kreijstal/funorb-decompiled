@@ -46,7 +46,7 @@ final class SoundCache {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -57,25 +57,25 @@ final class SoundCache {
         try {
           FullscreenFocusCanvas.field_f = null;
           vd.field_h = 0;
-          cc.field_gc = 0;
+          LobbyPlayer.field_gc = 0;
           Sprite.field_c.clear(6);
           am.field_c.clear(6);
-          var1 = DelegatingCanvas.field_a.a(114);
+          var1 = DelegatingCanvas.field_a.first(114);
           while (var1 != null) {
             var1.unlinkDual(480);
-            var1 = DelegatingCanvas.field_a.a((byte) -55);
+            var1 = DelegatingCanvas.field_a.next((byte) -55);
           }
-          var1Lifetime1 = SocketConnector.field_h.a(97);
+          var1Lifetime1 = SocketConnector.field_h.first(97);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkDual(480);
-            var1Lifetime1 = SocketConnector.field_h.a((byte) -117);
+            var1Lifetime1 = SocketConnector.field_h.next((byte) -117);
           }
           if (!param0) {
             SoundCache.c(-100);
           }
           DisplayNameForm.field_P = 0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class SoundCache {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class SoundCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,8 +197,8 @@ final class SoundCache {
         if (param0 == 0) {
           wb.field_c.a(IterableDualNodeDeque.field_i, param0 ^ -101);
           wb.field_c = null;
-          if (null != ve.field_a) {
-            ve.field_a.a(15481);
+          if (null != AssetDecoders.field_a) {
+            AssetDecoders.field_a.restoreWindowedSize(15481);
           }
           sl.field_n.requestFocus();
           return;
@@ -206,8 +206,8 @@ final class SoundCache {
         field_k = (String) null;
         wb.field_c.a(IterableDualNodeDeque.field_i, param0 ^ -101);
         wb.field_c = null;
-        if (null != ve.field_a) {
-          ve.field_a.a(15481);
+        if (null != AssetDecoders.field_a) {
+          AssetDecoders.field_a.restoreWindowedSize(15481);
         }
         sl.field_n.requestFocus();
     }
@@ -267,7 +267,7 @@ final class SoundCache {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class SoundCache {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class SoundCache {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -415,7 +415,7 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -499,12 +499,12 @@ final class SoundCache {
         }
         if (GrowableIntList.field_c != null) {
           NodeHashTableIterator.a(GrowableIntList.field_c, (byte) -128);
-          ef.a(1, UiTheme.field_q * 2);
+          EmailFormatError.setMusicVolume(1, UiTheme.field_q * 2);
         }
         if (param1 != -1) {
           if (SentinelAnimationEditor.field_q[param1] != null) {
             GrowableIntList.field_c = PcmSampleStream.createAtRatePercent(SentinelAnimationEditor.field_q[param1], 100, UiTheme.field_q);
-            ef.a(1, UiTheme.field_q / 2);
+            EmailFormatError.setMusicVolume(1, UiTheme.field_q / 2);
             EmailCredentials.a(GrowableIntList.field_c, -48);
           }
           return;
@@ -514,9 +514,9 @@ final class SoundCache {
     final static int b(int param0) {
         if (param0 >= -62) {
           field_k = (String) null;
-          return km.field_f;
+          return ClientGlobals.field_f;
         }
-        return km.field_f;
+        return ClientGlobals.field_f;
     }
 
     SoundCache(ResourceArchive param0, ResourceArchive param1) {
@@ -526,7 +526,7 @@ final class SoundCache {
           this.field_c = param0;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

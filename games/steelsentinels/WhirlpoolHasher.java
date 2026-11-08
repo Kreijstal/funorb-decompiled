@@ -18,7 +18,7 @@ final class WhirlpoolHasher {
     static String field_d;
     static String[] field_g;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void drawRippleDistortionRow(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int incrementValue$1 = 0;
         int var15_int = 0;
         int var16 = 0;
@@ -123,17 +123,17 @@ final class WhirlpoolHasher {
             break;
           }
           if (param0 != -88) {
-            WhirlpoolHasher.a((byte) 48, -77, 97, -52, -41, 76, -64, -64, -109, 22, -123, 42, 66, -96, -39);
+            WhirlpoolHasher.drawRippleDistortionRow((byte) 48, -77, 97, -52, -41, 76, -64, -64, -109, 22, -123, 42, 66, -96, -39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var15 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var15), "ig.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var15), "ig.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
-    private final void a(boolean param0) {
+    private final void processBlock(boolean param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -155,7 +155,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = AccountNamePrompt.a(AccountNamePrompt.a(AccountNamePrompt.a(AccountNamePrompt.a(ReportAbuseDialog.a(255L, (long)this.field_b[var3 + 4]) << 24, AccountNamePrompt.a(ReportAbuseDialog.a((long)this.field_b[var3 + 3] << 32, 1095216660480L), AccountNamePrompt.a(AccountNamePrompt.a(ReportAbuseDialog.a(255L, (long)this.field_b[var3 + 1]) << 48, (long)this.field_b[var3] << 56), ReportAbuseDialog.a((long)this.field_b[2 + var3], 255L) << 40))), ReportAbuseDialog.a((long)this.field_b[var3 + 5], 255L) << 16), ReportAbuseDialog.a((long)this.field_b[var3 + 6] << 8, 65280L)), ReportAbuseDialog.a((long)this.field_b[var3 + 7], 255L));
+          this.field_k[var2] = AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(255L, (long)this.field_b[var3 + 4]) << 24, AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd((long)this.field_b[var3 + 3] << 32, 1095216660480L), AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(255L, (long)this.field_b[var3 + 1]) << 48, (long)this.field_b[var3] << 56), ReportAbuseDialog.bitAnd((long)this.field_b[2 + var3], 255L) << 40))), ReportAbuseDialog.bitAnd((long)this.field_b[var3 + 5], 255L) << 16), ReportAbuseDialog.bitAnd((long)this.field_b[var3 + 6] << 8, 65280L)), ReportAbuseDialog.bitAnd((long)this.field_b[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -163,7 +163,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_f[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_h[var2Lifetime1] = dupTemp$0;
-          this.field_c[var2Lifetime1] = AccountNamePrompt.a(arrayValue$1, dupTemp$0);
+          this.field_c[var2Lifetime1] = AccountNamePrompt.bitXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -171,7 +171,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime1] = AccountNamePrompt.a(this.field_j[var3Lifetime1], tm.field_i[var4][ec.a((int)(this.field_h[ec.a(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
+              this.field_j[var3Lifetime1] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1], tm.field_i[var4][ClientUiHelpers.bitAnd((int)(this.field_h[ClientUiHelpers.bitAnd(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -179,14 +179,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_h[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_h[0] = AccountNamePrompt.a(this.field_h[0], tm.field_e[var2Lifetime2]);
+          this.field_h[0] = AccountNamePrompt.bitXor(this.field_h[0], tm.field_e[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_h[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = AccountNamePrompt.a(this.field_j[var3Lifetime1Lifetime2], tm.field_i[var7][ec.a((int)(this.field_c[ec.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime1Lifetime2] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1Lifetime2], tm.field_i[var7][ClientUiHelpers.bitAnd((int)(this.field_c[ClientUiHelpers.bitAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -199,7 +199,7 @@ final class WhirlpoolHasher {
           field_e = -28;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_f[var2Lifetime3] = AccountNamePrompt.a(this.field_f[var2Lifetime3], AccountNamePrompt.a(this.field_c[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_f[var2Lifetime3] = AccountNamePrompt.bitXor(this.field_f[var2Lifetime3], AccountNamePrompt.bitXor(this.field_c[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 
@@ -214,7 +214,7 @@ final class WhirlpoolHasher {
         field_n = null;
     }
 
-    final void a(byte param0, long param1, byte[] param2) {
+    final void updateBits(byte param0, long param1, byte[] param2) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -256,11 +256,11 @@ final class WhirlpoolHasher {
               this.field_i = this.field_i + (8 - var7);
               this.field_l = this.field_l + 1;
               if (this.field_i == 512) {
-                this.a(false);
+                this.processBlock(false);
                 this.field_l = 0;
                 this.field_i = 0;
               }
-              this.field_b[this.field_l] = (byte)ec.a(var8 << -var7 + 8, 255);
+              this.field_b[this.field_l] = (byte)ClientUiHelpers.bitAnd(var8 << -var7 + 8, 255);
               this.field_i = this.field_i + var7;
               param1 = param1 - 8L;
               var5_int++;
@@ -281,11 +281,11 @@ final class WhirlpoolHasher {
             param1 = param1 - (long)(8 - var7);
             this.field_i = this.field_i + (8 - var7);
             if (512 == this.field_i) {
-              this.a(false);
+              this.processBlock(false);
               this.field_i = 0;
               this.field_l = 0;
             }
-            this.field_b[this.field_l] = (byte)ec.a(255, var8Lifetime1 << 8 - var7);
+            this.field_b[this.field_l] = (byte)ClientUiHelpers.bitAnd(255, var8Lifetime1 << 8 - var7);
             this.field_i = this.field_i + (int)param1;
           } else {
             this.field_i = (int)((long)this.field_i + param1);
@@ -301,11 +301,11 @@ final class WhirlpoolHasher {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void reset(int param0) {
         int var3 = SteelSentinels.obfuscationControl;
         int var2 = 0;
         int var2Lifetime1;
@@ -341,7 +341,7 @@ final class WhirlpoolHasher {
           if (!param1) {
             this.field_k = (long[]) null;
           }
-          this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], 128 >>> ec.a(this.field_i, 7));
+          this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], 128 >>> ClientUiHelpers.bitAnd(this.field_i, 7));
           this.field_l = this.field_l + 1;
           if (this.field_l > 32) {
             while (this.field_l < 64) {
@@ -349,7 +349,7 @@ final class WhirlpoolHasher {
               this.field_l = this.field_l + 1;
               this.field_b[fieldTemp$0] = (byte) 0;
             }
-            this.a(false);
+            this.processBlock(false);
             this.field_l = 0;
           }
           while (32 > this.field_l) {
@@ -358,7 +358,7 @@ final class WhirlpoolHasher {
             this.field_b[fieldTemp$1] = (byte) 0;
           }
           ArraySupport.copy(this.field_a, 0, this.field_b, 32, 32);
-          this.a(false);
+          this.processBlock(false);
           var4_int = 0;
           var5 = param2;
           while (var4_int < 8) {
@@ -385,7 +385,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

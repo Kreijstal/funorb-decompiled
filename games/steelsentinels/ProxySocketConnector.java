@@ -16,18 +16,18 @@ final class ProxySocketConnector extends SocketConnector {
     static String field_k;
     static long field_l;
 
-    final static void a(int param0, ud param1, int param2) {
+    final static void sendListRequest(int param0, ud param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != 27153) {
-            ProxySocketConnector.a(true, false);
+            ProxySocketConnector.drawOverlayDialogs(true, false);
           }
-          var3 = mm.field_g;
+          var3 = ClockAndCookieHelpers.field_g;
           var3.writeCipheredOpcode(param2, (byte) -117);
           var3.writeByte((byte) 126, param1.field_t);
           var3.writeByte((byte) 111, param1.field_u);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "r.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "r.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a((byte) 82);
+          return this.connectDirect((byte) 82);
         }
         var3.addAll((Collection) ((Object) var4));
         var7 = -4 % ((-25 - param0) / 46);
@@ -131,7 +131,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var8 != null) {
           throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var8);
         }
-        return this.a((byte) 59);
+        return this.connectDirect((byte) 59);
     }
 
     public static void releaseStatics(byte param0) {
@@ -151,26 +151,26 @@ final class ProxySocketConnector extends SocketConnector {
         field_r = null;
     }
 
-    final static void a(int param0, byte param1, cf param2) {
+    final static void submitScoreRecord(int param0, byte param1, cf param2) {
         try {
           Explosion.field_A.addLast(3, param2);
           if (param1 != 123) {
-            ProxySocketConnector.b((byte) 48);
+            ProxySocketConnector.scrollToNextPage((byte) 48);
           }
           ml.a(1, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "r.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "r.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, byte param1) {
-        SceneWidget.i(107);
+    final static void serviceAccountInput(int param0, byte param1) {
+        SceneWidget.pollAccountDialogAction(107);
         if (param1 != 104) {
           field_r = (LoadingProgressDialog) null;
         }
     }
 
-    final static void b(byte param0) {
+    final static void scrollToNextPage(byte param0) {
         if (param0 != 46) {
           return;
         }
@@ -182,7 +182,7 @@ final class ProxySocketConnector extends SocketConnector {
         ModalPanel.a(-var1 + VerticalScrollbar.field_ac + 32, (byte) 64);
     }
 
-    private final java.net.Socket a(int param0, String param1, String param2, int param3) throws IOException {
+    private final java.net.Socket connectThroughHttpProxy(int param0, String param1, String param2, int param3) throws IOException {
         java.net.Socket stackIn_6_0 = null;
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
@@ -277,7 +277,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var14 = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_3_0 = this.a((byte) -112);
+            stackIn_3_0 = this.connectDirect((byte) -112);
             return stackIn_3_0;
           }
           if (param0 != 25382) {
@@ -351,7 +351,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_24_0 = this.a(var4.getPort(), (String) (var5), var4.getHostName(), param0 ^ -25436);
+          stackIn_24_0 = this.connectThroughHttpProxy(var4.getPort(), (String) (var5), var4.getHostName(), param0 ^ -25436);
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -363,7 +363,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -371,18 +371,18 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_n = java.net.ProxySelector.getDefault();
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawOverlayDialogs(boolean param0, boolean param1) {
         if (NodeIterator.a(2)) {
           param1 = false;
         }
-        SocialListEntry.a(param1, -127);
+        SocialListEntry.drawAccountOverlays(param1, -127);
         if (param0) {
           return;
         }
         PasswordFieldPainter.e(0);
     }
 
-    final static int a(PacketBuffer param0, String param1, int param2) {
+    final static int writeCompressedString(PacketBuffer param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -397,9 +397,9 @@ final class ProxySocketConnector extends SocketConnector {
         try {
           var3_int = param0.position;
           var5 = (CharSequence) ((Object) param1);
-          var4 = km.a(-38, var5);
+          var4 = ClientGlobals.encodeExtendedBytes(-38, var5);
           param0.writeUnsignedSmart(var4.length, 32768);
-          param0.position = param0.position + ob.field_r.a(param0.position, param0.payload, param2 ^ 115, var4, param2, var4.length);
+          param0.position = param0.position + ob.field_r.compress(param0.position, param0.payload, param2 ^ 115, var4, param2, var4.length);
           stackIn_1_0 = -var3_int + param0.position;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -418,7 +418,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

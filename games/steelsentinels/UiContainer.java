@@ -14,7 +14,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
     static byte[][] field_L;
     static int field_G;
 
-    UiComponent h(int param0) {
+    UiComponent findFocusedChild(int param0) {
         NodeIterator var2;
         UiComponent var3;
         int var4;
@@ -66,10 +66,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (var6 != 80) {
             return false;
           }
-          if (fc.field_e[81]) {
-            stackIn_15_0 = this.b(param3, 79);
+          if (SoundAndUrlHelpers.field_e[81]) {
+            stackIn_15_0 = this.focusPreviousChild(param3, 79);
           } else {
-            stackIn_15_0 = this.b(-11963, param3);
+            stackIn_15_0 = this.focusNextChild(-11963, param3);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           this.field_K.addLast(3, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "dl.IC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "dl.IC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
         if (param1 > -99) {
           StringBuilder var8 = (StringBuilder) null;
-          this.a((byte) -85, (Hashtable) null, (StringBuilder) null, 76);
+          this.appendChildDebugTrees((byte) -85, (Hashtable) null, (StringBuilder) null, 76);
         }
     }
 
@@ -170,7 +170,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           if (param0 != 1) {
             var6 = (StringBuilder) null;
-            this.a((Hashtable) null, (StringBuilder) null, (byte) -47, 62);
+            this.appendDebugTree((Hashtable) null, (StringBuilder) null, (byte) -47, 62);
           }
           var3 = new NodeIterator(this.field_K);
           var4 = (UiComponent) (var3.b(2));
@@ -209,11 +209,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final boolean b(int param0, UiComponent param1) {
+    final boolean focusNextChild(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         UiComponent var4 = null;
         NodeIterator var5 = null;
@@ -260,11 +260,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         field_O = null;
         field_L = (byte[][]) null;
@@ -276,7 +276,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, byte param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_6_0 = null;
@@ -291,9 +291,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param1, (byte) -91, param3, param0)) {
-            this.a(param3, param0, false, param1);
-            this.a((byte) 77, param0, param1, param3);
+          if (this.beginDebugDescription(param1, (byte) -91, param3, param0)) {
+            this.appendDebugBody(param3, param0, false, param1);
+            this.appendChildDebugTrees((byte) 77, param0, param1, param3);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -313,19 +313,19 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) -116, param2, param3, param4);
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) -116, param2, param3, param4);
         if (param1 > -71) {
           field_N = (String[][]) null;
         }
-        this.f((byte) 45);
+        this.relayoutChildren((byte) 45);
     }
 
-    final boolean b(UiComponent param0, int param1) {
+    final boolean focusPreviousChild(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         UiComponent var4 = null;
         NodeIterator var5 = null;
@@ -371,7 +371,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -416,7 +416,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -486,13 +486,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             }
           }
           if (!param3) {
-            UiContainer.g(64);
+            UiContainer.releaseStatics(64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var8), "dl.EC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var8), "dl.EC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -533,11 +533,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
+    final boolean onMouseWheel(byte param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
         NodeIterator var8 = null;
         RuntimeException var8_ref = null;
         UiComponent var9 = null;
@@ -556,7 +556,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           while (var9 != null) {
             if (var9.isLinked((byte) -12)) {
               if (var9.isFocused(0) &&
-                var9.a((byte) -83, param1, param2, param3, param4, param5, param6)) {
+                var9.onMouseWheel((byte) -83, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiComponent) (var8.next(2));
@@ -575,7 +575,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -587,15 +587,15 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         Throwable decompiledCaughtException = null;
         var1_ref = MouseInputHandler.field_i;
         synchronized (var1_ref) {
-          if (ad.field_b == QuickChatCategory.field_y) {
+          if (LoadoutHelpers.field_b == QuickChatCategory.field_y) {
             return false;
           }
           if (param0 != 22759) {
             field_G = -52;
           }
-          NameAvailabilityValidator.field_q = kk.field_b[ad.field_b];
-          LoginMethod.field_c = DelegatingCanvas.field_b[ad.field_b];
-          ad.field_b = 127 & 1 + ad.field_b;
+          NameAvailabilityValidator.field_q = TextAndMenuHelpers.field_b[LoadoutHelpers.field_b];
+          LoginMethod.field_c = DelegatingCanvas.field_b[LoadoutHelpers.field_b];
+          LoadoutHelpers.field_b = 127 & 1 + LoadoutHelpers.field_b;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;
@@ -605,7 +605,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         if (param0 != 0) {
           field_J = (ModalStack) null;
         }
-        return this.h(-1) != null ? true : false;
+        return this.findFocusedChild(-1) != null ? true : false;
     }
 
     final void refreshChildLayouts(byte param0) {
@@ -638,8 +638,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param3 == 1) {
             param3 = 0;
           }
-          ib.field_b = param3;
-          en.field_e = param4;
+          ChatPanelHelpers.field_b = param3;
+          LoadingScreenHelpers.field_e = param4;
           var7 = (CharSequence) ((Object) param4);
           StripedProgressBar.field_U = AlphaContainer.a(1, var7);
           ImageProducerRasterBuffer.field_p = param0;
@@ -665,11 +665,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    private final void a(byte param0, Hashtable param1, StringBuilder param2, int param3) {
+    private final void appendChildDebugTrees(byte param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
@@ -694,7 +694,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             for (var8 = 0; param3 >= var8; var8++) {
               discarded$4 = param2.append(' ');
             }
-            var6.a(param1, param2, (byte) -114, 1 + param3);
+            var6.appendDebugTree(param1, param2, (byte) -114, 1 + param3);
             var6 = (UiComponent) (var5.next(2));
           }
           return;
@@ -714,11 +714,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final int b(boolean param0) {
+    final int maximumRenderLayer(boolean param0) {
         int var5 = 0;
         int var6 = SteelSentinels.obfuscationControl;
         int var2 = 0;
@@ -728,7 +728,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         NodeIterator var3 = new NodeIterator(this.field_K);
         UiComponent var4 = (UiComponent) (var3.b(2));
         while (var4 != null) {
-          var5 = var4.b(true);
+          var5 = var4.maximumRenderLayer(true);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -758,7 +758,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return null;
     }
 
-    private final void f(byte param0) {
+    private final void relayoutChildren(byte param0) {
         int var4 = SteelSentinels.obfuscationControl;
         if (param0 != 45) {
           return;
@@ -766,7 +766,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         NodeIterator var2 = new NodeIterator(this.field_K);
         UiComponent var3 = (UiComponent) (var2.b(2));
         while (var3 != null) {
-          var3.e((byte) 102);
+          var3.refreshLayout((byte) 102);
           var3 = (UiComponent) (var2.next(2));
         }
     }

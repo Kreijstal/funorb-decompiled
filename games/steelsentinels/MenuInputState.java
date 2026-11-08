@@ -19,7 +19,7 @@ final class MenuInputState {
     static int[] field_h;
     private boolean field_l;
 
-    final void a(int param0, int param1) {
+    final void selectIfButtonHeld(int param0, int param1) {
         if (this.field_d == param0) {
           this.field_e = param1;
           this.field_l = false;
@@ -27,15 +27,15 @@ final class MenuInputState {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isPointerHeld(int param0) {
         if (param0 == 0) {
           return 0 != this.field_d ? true : false;
         }
-        this.a(false, -82);
+        this.handleHorizontalKey(false, -82);
         return 0 != this.field_d ? true : false;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void initializeSelection(boolean param0, int param1, int param2, int param3) {
         this.field_l = param0 ? true : false;
         this.field_d = param2;
         if (this.field_l) {
@@ -45,7 +45,7 @@ final class MenuInputState {
         this.field_e = param1;
     }
 
-    final void a(boolean param0, int param1) {
+    final void handleHorizontalKey(boolean param0, int param1) {
         this.field_c = false;
         if (!param0) {
           this.isForwardAction(-28);
@@ -112,32 +112,32 @@ final class MenuInputState {
         if (param0 == -97) {
           return this.field_b == 96 ? true : false;
         }
-        this.a(2);
+        this.isPointerHeld(2);
         return this.field_b == 96 ? true : false;
     }
 
-    final static void b(byte param0) {
+    final static void initializeReportReasonLabels(byte param0) {
         if (param0 <= -79) {
-          hh.field_g = new String[fc.field_d];
-          hh.field_g[21] = am.field_a;
-          hh.field_g[6] = oh.field_d;
-          hh.field_g[4] = dj.field_a;
-          hh.field_g[19] = ImageProducerRasterBuffer.field_q;
-          hh.field_g[15] = MusicPatchNode.field_u;
-          hh.field_g[20] = en.field_c;
-          hh.field_g[11] = sf.field_b;
-          hh.field_g[18] = tc.field_v;
-          hh.field_g[7] = rb.field_e;
-          hh.field_g[5] = MusicPatchEnvelope.field_f;
-          hh.field_g[16] = SentinelCommandSimulator.field_i;
-          hh.field_g[17] = nf.field_d;
-          hh.field_g[9] = hh.field_e;
-          hh.field_g[13] = GameKeyHandler.field_c;
+          LoginActionHelpers.field_g = new String[SoundAndUrlHelpers.field_d];
+          LoginActionHelpers.field_g[21] = am.field_a;
+          LoginActionHelpers.field_g[6] = LobbySetupHelpers.field_d;
+          LoginActionHelpers.field_g[4] = dj.field_a;
+          LoginActionHelpers.field_g[19] = ImageProducerRasterBuffer.field_q;
+          LoginActionHelpers.field_g[15] = MusicPatchNode.field_u;
+          LoginActionHelpers.field_g[20] = LoadingScreenHelpers.field_c;
+          LoginActionHelpers.field_g[11] = TutorialStep.field_b;
+          LoginActionHelpers.field_g[18] = HighscoreSubmission.field_v;
+          LoginActionHelpers.field_g[7] = rb.field_e;
+          LoginActionHelpers.field_g[5] = MusicPatchEnvelope.field_f;
+          LoginActionHelpers.field_g[16] = SentinelCommandSimulator.field_i;
+          LoginActionHelpers.field_g[17] = nf.field_d;
+          LoginActionHelpers.field_g[9] = LoginActionHelpers.field_e;
+          LoginActionHelpers.field_g[13] = GameKeyHandler.field_c;
           return;
         }
     }
 
-    final void a(boolean param0) {
+    final void handleVerticalKey(boolean param0) {
         this.field_b = 0;
         if (param0) {
           this.field_c = false;
@@ -168,7 +168,7 @@ final class MenuInputState {
           this.field_c = true;
           return;
         }
-        this.a(104, 84);
+        this.selectIfButtonHeld(104, 84);
         this.field_c = false;
         this.field_k = 0;
         if (this.field_d == 0) {
@@ -210,11 +210,11 @@ final class MenuInputState {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isRightPressed(byte param0) {
         if (param0 == 51) {
           return this.field_b == 97 ? true : false;
         }
-        MenuInputState.b((byte) 74);
+        MenuInputState.initializeReportReasonLabels((byte) 74);
         return this.field_b == 97 ? true : false;
     }
 
@@ -232,7 +232,7 @@ final class MenuInputState {
           this.field_d = VerticalScrollbar.field_gc;
           this.field_e = param2;
           this.field_k = VerticalScrollbar.field_gc;
-          this.field_a = tc.field_x;
+          this.field_a = HighscoreSubmission.field_x;
           this.field_l = true;
         }
         if (this.field_d == 0) {
@@ -243,7 +243,7 @@ final class MenuInputState {
               }
               if (0 == this.field_d) {
                 if (!this.field_l &&
-                  !ik.field_a) {
+                  !ConditionalTextValue.field_a) {
                   return;
                 }
                 if (0 > param1) {
@@ -269,7 +269,7 @@ final class MenuInputState {
             this.isHomePressed(-13);
             if (0 == this.field_d) {
               if (!this.field_l &&
-                !ik.field_a) {
+                !ConditionalTextValue.field_a) {
                 return;
               }
               if (0 > param1) {
@@ -307,7 +307,7 @@ final class MenuInputState {
             this.field_l = true;
             return;
           }
-          if (!ik.field_a) {
+          if (!ConditionalTextValue.field_a) {
             return;
           }
           if (0 > param1) {
@@ -334,7 +334,7 @@ final class MenuInputState {
             if (param0 > 123) {
               if (0 == this.field_d) {
                 if (!this.field_l &&
-                  !ik.field_a) {
+                  !ConditionalTextValue.field_a) {
                   return;
                 }
                 if (0 > param1) {
@@ -357,7 +357,7 @@ final class MenuInputState {
             this.isHomePressed(-13);
             if (0 == this.field_d) {
               if (!this.field_l &&
-                !ik.field_a) {
+                !ConditionalTextValue.field_a) {
                 return;
               }
               if (0 > param1) {
@@ -385,7 +385,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_l &&
-            !ik.field_a) {
+            !ConditionalTextValue.field_a) {
             return;
           }
         } else {
@@ -393,7 +393,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_l &&
-            !ik.field_a) {
+            !ConditionalTextValue.field_a) {
             return;
           }
         }
@@ -411,7 +411,7 @@ final class MenuInputState {
         this.field_l = true;
     }
 
-    final void e(byte param0) {
+    final void handleKeyWithoutNavigation(byte param0) {
         this.field_k = 0;
         if (param0 != 22) {
           this.isHomePressed(51);
@@ -431,7 +431,7 @@ final class MenuInputState {
         this.field_b = NameAvailabilityValidator.field_q;
     }
 
-    final boolean a(byte param0) {
+    final boolean isEndPressed(byte param0) {
         int var2 = 22 % ((param0 + 5) / 55);
         return 103 == this.field_b ? true : false;
     }

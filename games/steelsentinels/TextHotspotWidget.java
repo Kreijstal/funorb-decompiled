@@ -4,7 +4,7 @@
 class TextHotspotWidget extends TextButton {
     private TextHotspotRegion field_db;
     static vd field_Y;
-    static ef field_cb;
+    static EmailFormatError field_cb;
     static int field_W;
     private NodeDeque field_ab;
     static ArgbSprite field_eb;
@@ -19,7 +19,7 @@ class TextHotspotWidget extends TextButton {
         try {
           this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,10 +29,10 @@ class TextHotspotWidget extends TextButton {
         }
         try {
           DateOfBirthValidator.field_i = param3;
-          cc.field_Xb = param2;
+          LobbyPlayer.field_Xb = param2;
           LoginDialog.a((byte) -102, param0, rh.field_p);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,12 +62,12 @@ class TextHotspotWidget extends TextButton {
         return DateOfBirthValidator.field_i;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= -71) {
           return;
         }
-        super.a(param0, (byte) -122, param2, param3, param4);
-        this.f((byte) -109);
+        super.setBounds(param0, (byte) -122, param2, param3, param4);
+        this.rebuildHotspots((byte) -109);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -85,7 +85,7 @@ class TextHotspotWidget extends TextButton {
         field_bb = null;
     }
 
-    final void f(byte param0) {
+    final void rebuildHotspots(byte param0) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
@@ -120,19 +120,19 @@ class TextHotspotWidget extends TextButton {
           var7 = this.field_y.substring(var6 + 9, var8);
           var8Lifetime1 = Integer.parseInt(var7);
           var3 = this.field_y.indexOf("</hotspot>", var6);
-          var9 = var5.b(-1, var6);
-          var10 = var5.b(-1, var3);
+          var9 = var5.lineForCharacter(-1, var6);
+          var10 = var5.lineForCharacter(-1, var3);
           var11 = null;
           for (var12 = var9; var10 >= var12; var12++) {
             var13 = var5.field_h[var12];
             if (~var9 == ~var12) {
-              stackIn_8_0 = var5.a(1, var6);
+              stackIn_8_0 = var5.characterX(1, var6);
             } else {
               stackIn_8_0 = var13.field_f[0];
             }
             var14 = stackIn_8_0;
             if (var12 == var10) {
-              stackIn_13_0 = var5.a(1, var3);
+              stackIn_13_0 = var5.characterX(1, var3);
             } else {
               if (var13 != null) {
                 stackIn_13_0 = var13.field_f[-1 + var13.field_f.length];
@@ -154,20 +154,20 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void b(int param0, byte param1, int param2, int param3) {
+    final void notifyAction(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         TextHotspotRegion var7 = null;
         TextHotspotRegion var7Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
-        super.b(param0, (byte) -124, param2, param3);
+        super.notifyAction(param0, (byte) -124, param2, param3);
         if (param1 >= -122) {
           String var8 = (String) null;
           TextHotspotWidget.a(true, (byte) -7, (String) null, (String) null);
           var5 = -this.field_o + param2;
           var6 = -this.field_z + param3;
-          var7 = this.a(-1, var5, var6);
+          var7 = this.hotspotAt(-1, var5, var6);
           if (var7 == null) {
             return;
           }
@@ -179,7 +179,7 @@ class TextHotspotWidget extends TextButton {
         }
         var5Lifetime1 = -this.field_o + param2;
         var6Lifetime1 = -this.field_z + param3;
-        var7Lifetime1 = this.a(-1, var5Lifetime1, var6Lifetime1);
+        var7Lifetime1 = this.hotspotAt(-1, var5Lifetime1, var6Lifetime1);
         if (var7Lifetime1 == null) {
           return;
         }
@@ -192,7 +192,7 @@ class TextHotspotWidget extends TextButton {
     final static void a(int param0, kf param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = mm.field_g;
+          var3 = ClockAndCookieHelpers.field_g;
           var3.writeCipheredOpcode(param0, (byte) -117);
           var3.writeByte((byte) 115, 5);
           var3.writeByte((byte) 110, 0);
@@ -203,7 +203,7 @@ class TextHotspotWidget extends TextButton {
           var3.writeByte((byte) 125, param1.field_u);
           var3.writeByte((byte) 113, param1.field_w);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ma.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ma.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         int var5 = 0;
         String[] var4 = null;
         RuntimeException var4_ref = null;
@@ -268,7 +268,7 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -293,17 +293,17 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setBoundsToTextHeight(int param0, int param1, int param2, int param3) {
         if (param3 == -1) {
-          this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
+          this.setBounds(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
           return;
         }
-        field_cb = (ef) null;
-        this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
+        field_cb = (EmailFormatError) null;
+        this.setBounds(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
     }
 
     void updateHover(int param0, int param1, UiComponent param2, int param3) {
@@ -323,9 +323,9 @@ class TextHotspotWidget extends TextButton {
           if (!this.field_C) {
             return;
           }
-          var5_int = -this.field_o + (oh.field_f - param0);
+          var5_int = -this.field_o + (LobbySetupHelpers.field_f - param0);
           var6 = -param3 + (DelegatingCanvas.field_c - this.field_z);
-          this.field_db = this.a(-1, var5_int, var6);
+          this.field_db = this.hotspotAt(-1, var5_int, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -337,11 +337,11 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final TextHotspotRegion a(int param0, int param1, int param2) {
+    private final TextHotspotRegion hotspotAt(int param0, int param1, int param2) {
         TextHotspotRegion var4;
         TextHotspotRegion var5;
         int var6;
@@ -412,6 +412,6 @@ class TextHotspotWidget extends TextButton {
         field_W = -1;
         field_V = -1;
         field_Z = "Ignore";
-        field_cb = new ef();
+        field_cb = new EmailFormatError();
     }
 }

@@ -8,11 +8,11 @@ final class IconTextComponent extends SceneWidget {
     static String field_Vb;
     SceneWidget field_Tb;
     static int field_Yb;
-    static ak field_Xb;
+    static SpriteFrame field_Xb;
     private SceneWidget field_Sb;
     static String field_Ub;
 
-    final static int d(byte param0) {
+    final static int pollServerConnection(byte param0) {
         try {
           int stackIn_12_0 = 0;
           int stackIn_26_0 = 0;
@@ -33,7 +33,7 @@ final class IconTextComponent extends SceneWidget {
           }
           try {
             if (DualNodeDequeIterator.field_d == 0) {
-              DateInputWidget.field_T = km.field_k.a(rl.field_f, ih.field_n, 376255344);
+              DateInputWidget.field_T = ClientGlobals.field_k.requestSocket(PacketLoopHelpers.field_f, EmailSyntaxValidator.field_n, 376255344);
               DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
             }
             if (1 == DualNodeDequeIterator.field_d) {
@@ -46,14 +46,14 @@ final class IconTextComponent extends SceneWidget {
               }
             }
             if (2 == DualNodeDequeIterator.field_d) {
-              nf.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), km.field_k);
+              nf.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), ClientGlobals.field_k);
               var2 = new PacketBuffer(13);
               SpriteCheckboxPainter.a(var2, 12, EditableTextWidget.field_ib, rb.field_f, sh.field_a);
               var2.writeByte((byte) 120, 15);
               var2.writeInt(true, wn.field_g);
               nf.field_c.a(13, var2.payload, -100, 0);
               DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
-              na.field_f = 30000L + mm.a(-57);
+              ChatMessage.field_f = 30000L + ClockAndCookieHelpers.monotonicMillis(-57);
             }
             if (param0 > -65) {
               field_Wb = false;
@@ -67,7 +67,7 @@ final class IconTextComponent extends SceneWidget {
                 }
                 DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
               } else {
-                if (na.field_f < mm.a(40)) {
+                if (ChatMessage.field_f < ClockAndCookieHelpers.monotonicMillis(40)) {
                   stackIn_26_0 = gf.a(-2, 16777215);
                   return stackIn_26_0;
                 }
@@ -94,7 +94,7 @@ final class IconTextComponent extends SceneWidget {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAllowedChar(byte param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -109,13 +109,13 @@ final class IconTextComponent extends SceneWidget {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (dn.a(param1, -91)) {
+          if (ContextMenu.isAsciiLetterOrDigit(param1, -91)) {
             return true;
           }
           var2 = cd.field_b;
           var3 = 0;
           if (param0 != -30) {
-            IconTextComponent.a((byte) -42, 'A');
+            IconTextComponent.isAllowedChar((byte) -42, 'A');
           }
           while (var3 < var2.length) {
             var4 = var2[var3];
@@ -135,11 +135,11 @@ final class IconTextComponent extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "qh.F(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "qh.F(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutContent(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -147,10 +147,10 @@ final class IconTextComponent extends SceneWidget {
         var4 = -param0;
         var5 = -param0;
         if (null != this.field_Sb) {
-          var4 = this.field_Sb.g(-2147483648);
+          var4 = this.field_Sb.getContentWidth(-2147483648);
         }
         if (null != this.field_Tb) {
-          var5 = this.field_Tb.b(-113, -param1 - param0 + (-var4 - param1 + this.field_zb));
+          var5 = this.field_Tb.measureContentWidth(-113, -param1 - param0 + (-var4 - param1 + this.field_zb));
         }
         var6 = param1 + (param1 + var4 - (-param0 - var5));
         if (this.field_zb < var6) {
@@ -164,11 +164,11 @@ final class IconTextComponent extends SceneWidget {
           param1 = param1 + (this.field_zb - var6);
         }
         if (this.field_Sb != null) {
-          this.field_Sb.a(0, 0, this.field_Lb, param1, var4);
+          this.field_Sb.setBounds(0, 0, this.field_Lb, param1, var4);
           this.field_Sb.field_Fb = this.field_Fb;
         }
         if (null != this.field_Tb) {
-          this.field_Tb.a(0, 0, this.field_Lb, param1 + var4 + param0, var5);
+          this.field_Tb.setBounds(0, 0, this.field_Lb, param1 + var4 + param0, var5);
           if (this.field_Sb == null) {
             this.field_Tb.field_Kb = this.field_Kb;
           } else {
@@ -179,22 +179,22 @@ final class IconTextComponent extends SceneWidget {
         var7 = -115 % ((param2 + 45) / 46);
     }
 
-    final int a(byte param0, int param1, int param2) {
+    final int measureRowWidth(byte param0, int param1, int param2) {
         int var4 = -param1;
         if (param0 < 126) {
           return 116;
         }
         int var5 = -param1;
         if (this.field_Sb != null) {
-          var4 = this.field_Sb.g(-2147483648);
+          var4 = this.field_Sb.getContentWidth(-2147483648);
         }
         if (this.field_Tb != null) {
-          var5 = this.field_Tb.g(-2147483648);
+          var5 = this.field_Tb.getContentWidth(-2147483648);
         }
         return var5 + param2 + var4 - (-param1 - param2);
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawBubbleDistortion(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -298,7 +298,7 @@ final class IconTextComponent extends SceneWidget {
           var29 = var14 + var20;
           var30 = var23;
           for (var31 = var12; var31 < var13; var31++) {
-            WhirlpoolHasher.a((byte) -88, var26, var31, var27, var9, param0, var8, var17, var6, var7, var10, var5_int, var19, var29, var28);
+            WhirlpoolHasher.drawRippleDistortionRow((byte) -88, var26, var31, var27, var9, param0, var8, var17, var6, var7, var10, var5_int, var19, var29, var28);
             var29 = var29 + var30;
             var28 += 640;
             var30 = var30 + var25;
@@ -316,13 +316,13 @@ final class IconTextComponent extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "qh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "qh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        this.a(0, param5, param0, param3, param1);
-        this.a(param4, param2, -96);
+    final void setLayout(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+        this.setBounds(0, param5, param0, param3, param1);
+        this.layoutContent(param4, param2, -96);
         if (param6 < 120) {
           field_Yb = 4;
         }
@@ -347,14 +347,14 @@ final class IconTextComponent extends SceneWidget {
           if (param4 != null) {
             this.field_Sb = new SceneWidget(0L, param2);
             this.field_Sb.field_Pb = param4;
-            this.a(this.field_Sb, 119);
+            this.addChild(this.field_Sb, 119);
           }
           if (param5 != null) {
             this.field_Tb = new SceneWidget(0L, param3, param5);
-            this.a(this.field_Tb, 119);
-            this.h(99);
+            this.addChild(this.field_Tb, 119);
+            this.markTreeDirty(99);
           } else {
-            this.h(99);
+            this.markTreeDirty(99);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -391,22 +391,22 @@ final class IconTextComponent extends SceneWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final static String k(int param0) {
+    final static String readIncomingString(int param0) {
         if (param0 != 8347) {
           IconTextComponent.releaseStatics(-70);
         }
-        return rf.field_d.readString(param0 ^ 8346);
+        return LoginConnectionStage.field_d.readString(param0 ^ 8346);
     }
 
     public static void releaseStatics(int param0) {
         field_Ub = null;
         field_Vb = null;
         if (param0 != 15) {
-          IconTextComponent.a((byte) -26, 'ﾳ');
+          IconTextComponent.isAllowedChar((byte) -26, 'ﾳ');
         }
         field_Xb = null;
     }

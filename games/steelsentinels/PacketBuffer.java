@@ -50,7 +50,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyTrailingChecksum(byte param0) {
         this.position = this.position - 4;
-        int var2 = ok.a(0, this.payload, this.position, (byte) 109);
+        int var2 = ChecksumAndFrameHelpers.crc32(0, this.payload, this.position, (byte) 109);
         if (param0 >= -27) {
           return false;
         }
@@ -224,7 +224,7 @@ class PacketBuffer extends IntrusiveNode {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -25 / ((param0 + 3) / 35);
-        stackIn_4_0 = (GzipDecoder.b(-99)) && ((8 & dm.field_a) == 0);
+        stackIn_4_0 = (GzipDecoder.b(-99)) && ((8 & NameCheckResult.field_a) == 0);
         return stackIn_4_0;
     }
 
@@ -260,7 +260,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -532,7 +532,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -655,7 +655,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -795,7 +795,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendCrc32(int param0, int param1) {
-        int var3 = ok.a(param1, this.payload, this.position, (byte) 109);
+        int var3 = ChecksumAndFrameHelpers.crc32(param1, this.payload, this.position, (byte) 109);
         if (param0 > -46) {
           field_s = (int[]) null;
         }

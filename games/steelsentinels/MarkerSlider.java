@@ -51,8 +51,8 @@ final class MarkerSlider extends TextButton {
               field_db = (String) null;
             }
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = ArchiveIndex.field_w.a(param3[var10_int], -76);
-              var6[var10_int] = var11.i(1);
+              var11 = ArchiveIndex.field_w.getPhrase(param3[var10_int], -76);
+              var6[var10_int] = var11.getPreview(1);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
@@ -93,7 +93,7 @@ final class MarkerSlider extends TextButton {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class MarkerSlider extends TextButton {
         var8 = SteelSentinels.obfuscationControl;
         try {
           var1_int = uc.field_b.length + 7;
-          var17 = ue.field_c;
+          var17 = LoginHandshakeHelpers.field_c;
           var13 = var17;
           var2 = var13;
           var15 = var2;
@@ -160,13 +160,13 @@ final class MarkerSlider extends TextButton {
           if (ModalStack.field_V) {
             var5 = (byte)(var5 | 2);
           }
-          if (dm.field_c) {
+          if (NameCheckResult.field_c) {
             var5 = (byte)(var5 | 4);
           }
           if (AlphaContainer.field_G) {
             var5 = (byte)(var5 | 8);
           }
-          if (ik.field_h) {
+          if (ConditionalTextValue.field_h) {
             var5 = (byte)(var5 | 16);
           }
           if (tj.field_a) {
@@ -180,7 +180,7 @@ final class MarkerSlider extends TextButton {
           var10[incrementValue$1] = (byte)var5;
           incrementValue$2 = var4Lifetime1;
           var4Lifetime1++;
-          var10[incrementValue$2] = (byte)dm.field_a;
+          var10[incrementValue$2] = (byte)NameCheckResult.field_a;
           incrementValue$3 = var4Lifetime1;
           var4Lifetime1++;
           var10[incrementValue$3] = (byte)uc.field_b.length;
@@ -212,11 +212,11 @@ final class MarkerSlider extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "um.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "um.B(" + param0 + ')');
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getMarker(int param0, int param1) {
         if (param1 > -30) {
           return 107;
         }
@@ -227,14 +227,14 @@ final class MarkerSlider extends TextButton {
         return this.field_V.c(46, param0);
     }
 
-    final int h(int param0) {
+    final int markerCount(int param0) {
         if (param0 != 24129) {
           return 98;
         }
         return this.field_V.size(false);
     }
 
-    final int g(byte param0) {
+    final int getRange(byte param0) {
         int var2 = 84 % ((-44 - param0) / 49);
         return this.field_Z;
     }
@@ -297,7 +297,7 @@ final class MarkerSlider extends TextButton {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

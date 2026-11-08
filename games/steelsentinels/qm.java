@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qm {
-    static ef field_f;
+    static EmailFormatError field_f;
     static String field_c;
     static String field_e;
     static SceneWidget field_b;
@@ -31,7 +31,7 @@ final class qm {
           int var6_int = 23 / ((-76 - param0) / 40);
           DebouncedValidator.a(param2, param4, param2, param3, param1, param5, 1024, -98);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,25 +64,25 @@ final class qm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 == 20272) {
-          if (null != ch.field_O) {
-            ch.field_O.closeDialog(param0 ^ 20312);
+          if (null != ArrayWidgetContainer.field_O) {
+            ArrayWidgetContainer.field_O.closeDialog(param0 ^ 20312);
           }
           EmailAvailabilityValidator.field_o = new DisplayNameForm();
-          ci.field_a.transitionToContent(EmailAvailabilityValidator.field_o, param0 - 22929007);
+          ClientErrorSupport.field_a.transitionToContent(EmailAvailabilityValidator.field_o, param0 - 22929007);
           return;
         }
         field_e = (String) null;
-        if (null != ch.field_O) {
-          ch.field_O.closeDialog(param0 ^ 20312);
+        if (null != ArrayWidgetContainer.field_O) {
+          ArrayWidgetContainer.field_O.closeDialog(param0 ^ 20312);
         }
         EmailAvailabilityValidator.field_o = new DisplayNameForm();
-        ci.field_a.transitionToContent(EmailAvailabilityValidator.field_o, param0 - 22929007);
+        ClientErrorSupport.field_a.transitionToContent(EmailAvailabilityValidator.field_o, param0 - 22929007);
     }
 
     public static void releaseStatics(byte param0) {
@@ -97,7 +97,7 @@ final class qm {
     }
 
     static {
-        field_f = new ef();
+        field_f = new EmailFormatError();
         field_e = "<br><br><col=ffffff>This sentinel uses the following ";
         field_h = -1;
         field_c = "RMB <img=26>: Scroll view";

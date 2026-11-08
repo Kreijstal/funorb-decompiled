@@ -43,7 +43,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(hk param0, byte param1, int param2, boolean param3) {
+    final static void a(LobbyGame param0, byte param1, int param2, boolean param3) {
         IconTextComponent dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -230,10 +230,10 @@ final class DiskCacheWorker implements Runnable {
         var26 = SteelSentinels.obfuscationControl;
         try {
           if (param3) {
-            stackIn_12_0 = (ad.field_f) ? 0 : 1;
+            stackIn_12_0 = (LoadoutHelpers.field_f) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (kk.a(-28548)) {
+            if (TextAndMenuHelpers.isGameOwner(-28548)) {
               stackIn_8_0 = (!param0.field_rc) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -280,10 +280,10 @@ final class DiskCacheWorker implements Runnable {
               stackIn_42_0.field_G = stackIn_43_1;
             }
             if (un.field_h[0][2].field_K) {
-              if (kk.a(-28548)) {
+              if (TextAndMenuHelpers.isGameOwner(-28548)) {
                 UiTheme.field_i = TextLayout.field_c;
               } else {
-                UiTheme.field_i = SocketConnector.a(BoundedUrlRequest.field_a, -75, new String[]{nf.field_b.field_Xb});
+                UiTheme.field_i = SocketConnector.formatTemplate(BoundedUrlRequest.field_a, -75, new String[]{nf.field_b.field_Xb});
               }
             }
             decompiledFrameRemainder1 = !(ViewportController.field_l.length < 2);
@@ -331,7 +331,7 @@ final class DiskCacheWorker implements Runnable {
                         rb.field_i[var9] = (byte) 0;
                       }
                     } else {
-                      rb.field_i[var7 / 8] = (byte)bi.a((int) rb.field_i[var7 / 8], 1 << ec.a(7, var7));
+                      rb.field_i[var7 / 8] = (byte)TextAndBitHelpers.bitXor((int) rb.field_i[var7 / 8], 1 << ClientUiHelpers.bitAnd(7, var7));
                     }
                   }
                 }
@@ -403,8 +403,8 @@ final class DiskCacheWorker implements Runnable {
             stackIn_137_0.field_T = stackIn_138_1;
           }
           if (param3 &&
-            1 < tc.field_z) {
-            for (var6Lifetime2 = 0; tc.field_z + 1 > var6Lifetime2; var6Lifetime2++) {
+            1 < HighscoreSubmission.field_z) {
+            for (var6Lifetime2 = 0; HighscoreSubmission.field_z + 1 > var6Lifetime2; var6Lifetime2++) {
               var29 = un.field_h[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_Eb) {
@@ -412,8 +412,8 @@ final class DiskCacheWorker implements Runnable {
               }
               if (var29.field_K &&
                 var6Lifetime2 > 0) {
-                if (e.field_g != null) {
-                  stackIn_152_0 = e.field_g[-1 + var6Lifetime2];
+                if (AccountRequestResult.field_g != null) {
+                  stackIn_152_0 = AccountRequestResult.field_g[-1 + var6Lifetime2];
                 } else {
                   stackIn_152_0 = null;
                 }
@@ -434,7 +434,7 @@ final class DiskCacheWorker implements Runnable {
             return;
           }
           var6Lifetime3 = 0;
-          for (var7 = 0; var7 < be.field_a; var7++) {
+          for (var7 = 0; var7 < UrlAndReplyHelpers.field_a; var7++) {
             var30 = un.field_h[4 + var7];
             var8_array = var30;
             stackIn_168_0 = (param3) ? -1 : 0;
@@ -447,23 +447,23 @@ final class DiskCacheWorker implements Runnable {
               var15 = 0;
               if (var4_int != 0 &&
                 0 <= var9) {
-                if (fc.field_b != null &&
-                  null != fc.field_b[var7] &&
-                  (~jj.field_i & fc.field_b[var7][var9]) > 0) {
+                if (SoundAndUrlHelpers.field_b != null &&
+                  null != SoundAndUrlHelpers.field_b[var7] &&
+                  (~jj.field_i & SoundAndUrlHelpers.field_b[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = ok.a(~jj.field_i & fc.field_b[var7][var9], (byte) 51);
+                  var15 = ChecksumAndFrameHelpers.highestOneBit(~jj.field_i & SoundAndUrlHelpers.field_b[var7][var9], (byte) 51);
                 }
-                if (null != ad.field_d &&
-                  ad.field_d[var7] != null &&
+                if (null != LoadoutHelpers.field_d &&
+                  LoadoutHelpers.field_d[var7] != null &&
                   rd.field_b <= 0 &&
-                  ad.field_d[var7][var9]) {
+                  LoadoutHelpers.field_d[var7][var9]) {
                   var10 = 1;
                 }
                 if (null != ja.field_b &&
                   null != ja.field_b[var7]) {
                   var16 = ja.field_b[var7][var9];
                   if (0 < var16 &&
-                    ba.field_b < var16) {
+                    QuickChatInputHelpers.field_b < var16) {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
@@ -501,7 +501,7 @@ final class DiskCacheWorker implements Runnable {
                 }
               }
               if (NodeDeque.field_d >= 2 &&
-                fc.field_e[12]) {
+                SoundAndUrlHelpers.field_e[12]) {
                 var11 = 0;
                 var14 = 0;
                 var10 = 0;
@@ -522,19 +522,19 @@ final class DiskCacheWorker implements Runnable {
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 null != HuffmanDecoder.field_b && (!param3 ||
-                !ad.field_f)) {
+                !LoadoutHelpers.field_f)) {
                 PacketBuffer.field_u = false;
                 MembershipPromotionScreen.field_k = false;
                 if (null == UiContainer.field_O) {
-                  HuffmanDecoder.field_h = new boolean[be.field_a];
-                  UiContainer.field_O = new byte[be.field_a];
+                  HuffmanDecoder.field_h = new boolean[UrlAndReplyHelpers.field_a];
+                  UiContainer.field_O = new byte[UrlAndReplyHelpers.field_a];
                 }
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   HuffmanDecoder.field_h[var17_int] = false;
                 }
                 lc.a(var9, -1, param0, var7, -1, -89, 0, param3);
                 if (NodeDeque.field_d >= 2 &&
-                  fc.field_e[12]) {
+                  SoundAndUrlHelpers.field_e[12]) {
                   MembershipPromotionScreen.field_k = true;
                 }
                 if (!MembershipPromotionScreen.field_k) {
@@ -553,16 +553,16 @@ final class DiskCacheWorker implements Runnable {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var18 < var6Lifetime3 + var30.length - 1; var18++) {
-                      ImageProducerRasterBuffer.field_s[var18 / 8] = (byte)ec.a((int) ImageProducerRasterBuffer.field_s[var18 / 8], ~(1 << ec.a(var18, 7)));
+                      ImageProducerRasterBuffer.field_s[var18 / 8] = (byte)ClientUiHelpers.bitAnd((int) ImageProducerRasterBuffer.field_s[var18 / 8], ~(1 << ClientUiHelpers.bitAnd(var18, 7)));
                     }
                   } else {
-                    ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8] = (byte)bi.a((int) ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8], 1 << ec.a(7, var9 + var6Lifetime3));
+                    ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8] = (byte)TextAndBitHelpers.bitXor((int) ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8], 1 << ClientUiHelpers.bitAnd(7, var9 + var6Lifetime3));
                   }
                 }
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8] = (byte)ec.a((int) ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8], ~(1 << ec.a(var6Lifetime3 + var9, 7)));
+                ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8] = (byte)ClientUiHelpers.bitAnd((int) ImageProducerRasterBuffer.field_s[(var9 + var6Lifetime3) / 8], ~(1 << ClientUiHelpers.bitAnd(var6Lifetime3 + var9, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_K) {
@@ -609,13 +609,13 @@ final class DiskCacheWorker implements Runnable {
                     if (var11 != 0) {
                       var22_int = QuickChatHelpDialog.field_cc[var7][var9] - ud.field_D;
                       if (var22_int != 1) {
-                        var21 = SocketConnector.a(BattleTerrain.field_d, -34, new String[]{Integer.toString(var22_int)});
+                        var21 = SocketConnector.formatTemplate(BattleTerrain.field_d, -34, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = wb.field_e;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = SocketConnector.a(MusicPatchEnvelope.field_c, -74, new String[]{Integer.toString(ba.field_b), Integer.toString(ja.field_b[var7][var9])});
+                      var31 = SocketConnector.formatTemplate(MusicPatchEnvelope.field_c, -74, new String[]{Integer.toString(QuickChatInputHelpers.field_b), Integer.toString(ja.field_b[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -675,12 +675,12 @@ final class DiskCacheWorker implements Runnable {
                   if (var23 != 0) {
                     var21 = Sentinel.field_Ob + (String) (var22);
                   } else {
-                    var21 = SocketConnector.a(be.field_g, -84, new String[]{(String) (var22)});
+                    var21 = SocketConnector.formatTemplate(UrlAndReplyHelpers.field_g, -84, new String[]{(String) (var22)});
                   }
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = ln.a("<br>", (byte) 11, "<br><col=A00000>", var32);
+                  var33 = NameValidationHelpers.replaceAllOccurrences("<br>", (byte) 11, "<br><col=A00000>", var32);
                   if (var20 == null) {
                     var20 = var33;
                   } else {
@@ -726,7 +726,7 @@ final class DiskCacheWorker implements Runnable {
             if (param3) {
               return;
             }
-            ad.a(0, param2);
+            LoadoutHelpers.sendGameSettings(0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -739,7 +739,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_353_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -786,7 +786,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              MusicCrossfadeStream.a((String) null, -36, (Throwable) ((Object) var2_ref));
+              MusicCrossfadeStream.reportClientError((String) null, -36, (Throwable) ((Object) var2_ref));
             }
             var7.field_z = false;
           }
@@ -838,7 +838,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -882,7 +882,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -892,7 +892,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_b = false;
         this.field_f = 0;
         try {
-          var2 = param0.a(2, 5, (Runnable) (this));
+          var2 = param0.requestThread(2, 5, (Runnable) (this));
           while (var2.field_a == 0) {
             MouseWheelInput.a((byte) 121, 10L);
           }
@@ -901,7 +901,7 @@ final class DiskCacheWorker implements Runnable {
           }
           this.field_k = (Thread) (var2.field_c);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

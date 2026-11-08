@@ -9,11 +9,11 @@ final class QuickChatCategoryCache {
     static long field_f;
     private WeightedLruCache field_a;
 
-    final static boolean a(boolean param0) {
+    final static boolean isPlayerDataReady(boolean param0) {
         if (param0) {
           return false;
         }
-        if (ln.field_h) {
+        if (NameValidationHelpers.field_h) {
           if (DiskCacheRequest.field_I) {
             return true;
           }
@@ -25,7 +25,7 @@ final class QuickChatCategoryCache {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 != -13) {
@@ -33,7 +33,7 @@ final class QuickChatCategoryCache {
         }
     }
 
-    final QuickChatCategory a(byte param0, int param1) {
+    final QuickChatCategory getCategory(byte param0, int param1) {
         QuickChatCategory var3;
         byte[] var4;
         QuickChatCategory var3Lifetime1;
@@ -51,16 +51,16 @@ final class QuickChatCategoryCache {
         }
         var3Lifetime1 = new QuickChatCategory();
         if (var4 != null) {
-          var3Lifetime1.a(106, new PacketBuffer(var4));
+          var3Lifetime1.decode(106, new PacketBuffer(var4));
         }
         if (param1 >= 32768) {
-          var3Lifetime1.c((byte) -3);
+          var3Lifetime1.applyGlobalIds((byte) -3);
         }
         this.field_a.put((long)param1, var3Lifetime1, 1);
         return var3Lifetime1;
     }
 
-    final static byte[] a(byte param0, int param1, int param2, byte[] param3) {
+    final static byte[] computeWhirlpoolDigest(byte param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -76,7 +76,7 @@ final class QuickChatCategoryCache {
         var7 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -37) {
-            QuickChatCategoryCache.a((byte) -53);
+            QuickChatCategoryCache.releaseStatics((byte) -53);
           }
           if (param2 > 0) {
             var8 = new byte[param1];
@@ -88,8 +88,8 @@ final class QuickChatCategoryCache {
             var4 = param3;
           }
           var5 = new WhirlpoolHasher();
-          var5.a(-635160440);
-          var5.a((byte) 90, (long)(8 * param1), var4);
+          var5.reset(-635160440);
+          var5.updateBits((byte) 90, (long)(8 * param1), var4);
           var6 = new byte[64];
           var5.finishDigest(var6, true, 0);
           stackIn_9_0 = var6;
@@ -104,7 +104,7 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -6,7 +6,7 @@ final class LinkButtonPainter implements WidgetPainter {
     private int field_i;
     static String field_o;
     static SceneWidget field_c;
-    static rf field_k;
+    static LoginConnectionStage field_k;
     private int field_n;
     static String[][] field_h;
     private BitmapFont field_l;
@@ -21,7 +21,7 @@ final class LinkButtonPainter implements WidgetPainter {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         int var12 = 58 / ((1 - param5) / 35);
-        oh.a(16777215, param7, param2, param0, param3, (byte) -125, param4, param1, param11, param6, param10, param8, param9, 16777215);
+        LobbySetupHelpers.initializeLobbyUi(16777215, param7, param2, param0, param3, (byte) -125, param4, param1, param11, param6, param10, param8, param9, 16777215);
     }
 
     public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
@@ -85,38 +85,38 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, SceneWidget param2) {
-        dd var9 = null;
+        PlayerContextMenu var9 = null;
         RgbSprite var10 = null;
         String var11 = null;
-        dd var12 = null;
+        PlayerContextMenu var12 = null;
         RgbSprite var13 = null;
         String var14 = null;
-        dd var15 = null;
+        PlayerContextMenu var15 = null;
         RgbSprite var16 = null;
         String var17 = null;
-        dd var18 = null;
+        PlayerContextMenu var18 = null;
         String var20 = null;
-        dd var21 = null;
+        PlayerContextMenu var21 = null;
         RgbSprite var22 = null;
         String var23 = null;
-        dd var24 = null;
+        PlayerContextMenu var24 = null;
         RgbSprite var25 = null;
         String var26 = null;
-        dd var27 = null;
+        PlayerContextMenu var27 = null;
         RgbSprite var28 = null;
         String var29 = null;
-        dd var30 = null;
+        PlayerContextMenu var30 = null;
         RgbSprite var31 = null;
         String var32 = null;
-        dd var33 = null;
+        PlayerContextMenu var33 = null;
         RgbSprite var34 = null;
         String var35 = null;
-        dd var36 = null;
+        PlayerContextMenu var36 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -128,7 +128,7 @@ final class LinkButtonPainter implements WidgetPainter {
         RgbSprite var19Lifetime4;
         RgbSprite var19Lifetime5;
         RgbSprite var19Lifetime6;
-        kk.a(param2, -1, param1, (int[]) null, (String) null, (String) null, 1073741824, 0L, (ScrollContainer) null);
+        TextAndMenuHelpers.openPlayerContextMenu(param2, -1, param1, (int[]) null, (String) null, (String) null, 1073741824, 0L, (ScrollContainer) null);
         if (param0 != 12) {
           return;
         }
@@ -139,56 +139,56 @@ final class LinkButtonPainter implements WidgetPainter {
             var19 = var10;
             var19Lifetime2 = var10;
             var11 = ResizableModalPanel.field_ab;
-            var9.field_j.a(11, var10, var11, -47);
+            var9.field_j.addItemWithIcon(11, var10, var11, -47);
             var12 = AudioService.field_i;
             var13 = SceneWidgetNode.field_y[1];
             var19Lifetime3 = var13;
             var19Lifetime4 = var13;
-            var14 = bi.field_a;
-            var12.field_j.a(12, var13, var14, param0 - 117);
+            var14 = TextAndBitHelpers.field_a;
+            var12.field_j.addItemWithIcon(12, var13, var14, param0 - 117);
             var15 = AudioService.field_i;
             var16 = SceneWidgetNode.field_y[2];
             var19Lifetime5 = var16;
             var19Lifetime6 = var16;
             var17 = ValidationIndicator.field_V;
-            var15.field_j.a(13, var16, var17, -45);
+            var15.field_j.addItemWithIcon(13, var16, var17, -45);
           }
           if (1 == param1) {
             var18 = AudioService.field_i;
             var19Lifetime1 = SceneWidgetNode.field_y[0];
             var20 = DelayedServerPacket.field_t;
-            var18.field_j.a(11, var19Lifetime1, var20, param0 - 114);
+            var18.field_j.addItemWithIcon(11, var19Lifetime1, var20, param0 - 114);
             var21 = AudioService.field_i;
             var22 = SceneWidgetNode.field_y[1];
-            var23 = cj.field_f;
-            var21.field_j.a(12, var22, var23, -91);
+            var23 = ArchiveLoadSequence.field_f;
+            var21.field_j.addItemWithIcon(12, var22, var23, -91);
             var24 = AudioService.field_i;
             var25 = SceneWidgetNode.field_y[2];
             var26 = og.field_a;
-            var24.field_j.a(13, var25, var26, -64);
+            var24.field_j.addItemWithIcon(13, var25, var26, -64);
           }
           if (param1 == 2) {
             var27 = AudioService.field_i;
             var28 = SceneWidgetNode.field_y[0];
             var29 = QuickChatMenu.field_gc;
-            var27.field_j.a(11, var28, var29, -125);
+            var27.field_j.addItemWithIcon(11, var28, var29, -125);
             var30 = AudioService.field_i;
             var31 = SceneWidgetNode.field_y[1];
             var32 = qm.field_g;
-            var30.field_j.a(12, var31, var32, -87);
+            var30.field_j.addItemWithIcon(12, var31, var32, -87);
             var33 = AudioService.field_i;
             var34 = SceneWidgetNode.field_y[2];
             var35 = RasterBuffer.field_f;
-            var33.field_j.a(13, var34, var35, -62);
+            var33.field_j.addItemWithIcon(13, var34, var35, -62);
           }
           var36 = AudioService.field_i;
           var4 = param2.field_Rb;
           var5 = param2.field_cb;
           var6 = param2.field_zb;
           var7 = param2.field_Lb;
-          var36.field_j.a(var7, var6, var5, (byte) -91, var4);
+          var36.field_j.layoutItems(var7, var6, var5, (byte) -91, var4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bl.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bl.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -225,15 +225,15 @@ final class LinkButtonPainter implements WidgetPainter {
         try {
           for (var3_int = 5; var3_int > 0; var3_int--) {
             WidgetStyleLayer.field_b[var3_int] = WidgetStyleLayer.field_b[-1 + var3_int];
-            hh.field_c[var3_int] = hh.field_c[-1 + var3_int];
+            LoginActionHelpers.field_c[var3_int] = LoginActionHelpers.field_c[-1 + var3_int];
             CachedArchiveProvider.field_g[var3_int] = CachedArchiveProvider.field_g[var3_int - 1];
           }
           WidgetStyleLayer.field_b[0] = WidgetStyleLayer.a(42, param1);
-          hh.field_c[0] = 750;
+          LoginActionHelpers.field_c[0] = 750;
           CachedArchiveProvider.field_g[0] = param0;
           var3_intLifetime1 = 18 % ((param2 - 86) / 34);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class LinkButtonPainter implements WidgetPainter {
           this.field_n = param1;
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class LinkButtonPainter implements WidgetPainter {
         field_o = "EDD";
         field_g = "Quick Chat game";
         field_c = null;
-        field_k = new rf();
+        field_k = new LoginConnectionStage();
         field_b = "Player Name: ";
         field_j = "You need a rating of <%1> to play with the current options.";
     }

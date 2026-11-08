@@ -182,7 +182,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(e.a((char) var7, 732) & 255);
+              var7 = (char)(AccountRequestResult.encodeExtendedChar((char) var7, 732) & 255);
               var4 = var4 + this.field_B[var7];
               if (this.field_J != null &&
                 var3 != 0) {
@@ -198,7 +198,7 @@ abstract class BitmapFont extends DualNode {
     }
 
     final int measureCharacterAdvance(char param0) {
-        return this.field_B[e.a(param0, 732) & 255];
+        return this.field_B[AccountRequestResult.encodeExtendedChar(param0, 732) & 255];
     }
 
     public static void releaseStatics() {
@@ -357,7 +357,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(e.a((char) var8, 732) & 255);
+              var8 = (char)(AccountRequestResult.encodeExtendedChar((char) var8, 732) & 255);
               if (this.field_J != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_J[(var5 << 8) + var8];
@@ -667,7 +667,7 @@ abstract class BitmapFont extends DualNode {
         if (param0 == null) {
           return 0;
         }
-        dm.a(' ', 200, field_I, 0);
+        NameCheckResult.padWithChar(' ', 200, field_I, 0);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -784,7 +784,7 @@ abstract class BitmapFont extends DualNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_I.append((char) var14);
-                var14 = (char)(e.a((char) var14, 732) & 255);
+                var14 = (char)(AccountRequestResult.encodeExtendedChar((char) var14, 732) & 255);
                 var4 = var4 + this.field_B[var14];
                 if (this.field_J != null &&
                   var10 != 0) {

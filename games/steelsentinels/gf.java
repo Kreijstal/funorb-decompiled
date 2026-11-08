@@ -4,7 +4,7 @@
 final class gf {
     static fm field_b;
     static BitmapFont field_d;
-    static dm field_a;
+    static NameCheckResult field_a;
     static RgbSprite[] field_c;
     static String field_e;
 
@@ -15,8 +15,8 @@ final class gf {
         DateInputWidget.field_T = null;
         nf.field_c = null;
         DualNodeDequeIterator.field_d = 0;
-        var2 = ih.field_n;
-        ih.field_n = UiComponent.field_B;
+        var2 = EmailSyntaxValidator.field_n;
+        EmailSyntaxValidator.field_n = UiComponent.field_B;
         FallingPickup.field_N.field_f = FallingPickup.field_N.field_f + 1;
         if (param0 == 51) {
           FallingPickup.field_N.field_t = 2;
@@ -65,18 +65,18 @@ final class gf {
           ValidatedTextWidget.a(49, 9, 56, 0, ArchiveProvider.field_b, 16711680, 255);
           ValidatedTextWidget.a(83, 1, 63, 56, ArchiveProvider.field_b, 16711680, 255);
           Js5ArchiveManager.field_e = CheckboxPainter.field_b;
-          rf.a(Sprite.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, MouseInputHandler.field_d);
-          im.a(hk.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, MouseInputHandler.field_d, 320, 8);
-          eb.field_s = new RgbSprite[9];
+          LoginConnectionStage.initUiThemeSprites(Sprite.field_m, 320, 8, 8, 8, 8, LobbyGame.field_Tb, 16777215, 0, BirthDateEntryPanel.field_U, 1146810, 240, 2, param0 - 94, MouseInputHandler.field_d);
+          LobbyStateHelpers.configureDialogTheme(LobbyGame.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, BirthDateEntryPanel.field_U, 1146810, MouseInputHandler.field_d, 320, 8);
+          AgeValidator.field_s = new RgbSprite[9];
           for (var1_int = 0; var1_int < 9; var1_int++) {
-            eb.field_s[var1_int] = pl.field_T[var1_int].copySprite();
+            AgeValidator.field_s[var1_int] = BirthDateEntryPanel.field_T[var1_int].copySprite();
             if (var1_int < 3) {
-              sf.a(10, 43, 50, eb.field_s[var1_int], 0, 122);
+              TutorialStep.applyVerticalGreyGradient(10, 43, 50, AgeValidator.field_s[var1_int], 0, 122);
             } else {
               if (var1_int >= 6) {
-                sf.a(10, 27, 34, eb.field_s[var1_int], 0, -68);
+                TutorialStep.applyVerticalGreyGradient(10, 27, 34, AgeValidator.field_s[var1_int], 0, -68);
               } else {
-                sf.a(10, 35, 42, eb.field_s[var1_int], 0, param0 ^ 81);
+                TutorialStep.applyVerticalGreyGradient(10, 35, 42, AgeValidator.field_s[var1_int], 0, param0 ^ 81);
               }
             }
           }
@@ -137,12 +137,12 @@ final class gf {
             IterableDualNodeDeque.field_j[var4Lifetime3].drawHalfSize(0, 0);
           }
           Checkbox.field_bb.b((byte) 125);
-          ve.a((byte) 122);
+          AssetDecoders.createTutorialSteps((byte) 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "gf.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "gf.A(" + param0 + ')');
         }
     }
 

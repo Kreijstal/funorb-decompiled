@@ -86,13 +86,13 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
-    final static void d(int param0) {
+    final static void resetTooltipState(int param0) {
         t.field_l = -1;
-        eh.field_a = -1;
+        SocialListUiHelpers.field_a = -1;
         SectorCacheStore.field_b = null;
         AlternateUsernameCredentials.field_A = false;
         if (param0 != -30603) {
@@ -103,20 +103,20 @@ final class MusicPatch extends IntrusiveNode {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -73) {
-          MusicPatch.d(-109);
+          MusicPatch.resetTooltipState(-109);
         }
         field_w = null;
         field_r = null;
     }
 
-    final void a(byte param0) {
+    final void clearSampleIds(byte param0) {
         this.field_s = null;
         if (param0 < 100) {
           this.field_x = (PcmSample[]) null;
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
+    final static void updateLobbyGameList(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
         SceneWidget dupTemp$0 = null;
@@ -129,14 +129,14 @@ final class MusicPatch extends IntrusiveNode {
         int stackIn_3_2;
         int stackIn_3_3;
         boolean stackIn_4_4 = false;
-        hk stackIn_12_0;
+        LobbyGame stackIn_12_0;
         SceneWidget stackIn_12_1;
         SceneWidget stackIn_12_2;
         long stackIn_12_3;
         SceneWidget stackIn_13_1 = null;
         SceneWidget stackIn_13_2 = null;
         SceneWidget stackIn_13_4 = null;
-        hk stackIn_30_0;
+        LobbyGame stackIn_30_0;
         SceneWidget stackIn_30_1;
         SceneWidget stackIn_30_2;
         long stackIn_30_3;
@@ -159,7 +159,7 @@ final class MusicPatch extends IntrusiveNode {
         NodeDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        hk var12 = null;
+        LobbyGame var12 = null;
         int var13 = 0;
         int var14 = 0;
         SceneWidget var18 = null;
@@ -226,32 +226,32 @@ final class MusicPatch extends IntrusiveNode {
           stackIn_3_1 = 2;
           stackIn_3_2 = 2 * (2 + SocketConnector.field_b);
           stackIn_3_3 = param3 * (4 * (SocketConnector.field_b + 2));
-          stackIn_4_4 = (la.field_c == rn.field_y);
-          var7_int = ((ScrollContainer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, (byte) -41) ? 1 : 0;
+          stackIn_4_4 = (BenefitsScreenHelpers.field_c == rn.field_y);
+          var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateScrolling(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, (byte) -41) ? 1 : 0;
           if (param1 != 1) {
             return;
           }
           var8 = rn.field_y.field_Ub.field_M;
-          var9 = mm.a(param1 - 114);
+          var9 = ClockAndCookieHelpers.monotonicMillis(param1 - 114);
           var11 = null;
-          var12 = (hk) (var8.first(13058));
+          var12 = (LobbyGame) (var8.first(13058));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param0 | param4;
               var12.field_kc = new SceneWidget(0L, SteelSentinels.field_J);
-              var12.a(var12.field_kc, 125);
+              var12.addChild(var12.field_kc, 125);
               var12.field_kc.field_Kb = 1;
               var12.field_Cc = new SceneWidget(0L, ModalPanel.field_W);
-              var12.a(var12.field_Cc, 127);
+              var12.addChild(var12.field_Cc, 127);
               var12.field_qc = new SceneWidget(0L, SteelSentinels.field_J);
-              var12.a(var12.field_qc, 123);
+              var12.addChild(var12.field_qc, 123);
               var12.field_qc.field_ub = 0;
               var12.field_zc = new SceneWidget(0L, SteelSentinels.field_J);
-              var12.a(var12.field_zc, 123);
+              var12.addChild(var12.field_zc, 123);
               var12.field_zc.field_ub = 0;
               var12.field_Ic = new SceneWidget(0L, ModalPanel.field_W);
-              var12.a(var12.field_Ic, 118);
+              var12.addChild(var12.field_Ic, 118);
               var12.field_Ic.field_Kb = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -267,23 +267,23 @@ final class MusicPatch extends IntrusiveNode {
                 stackIn_13_4 = ModalPanel.field_W;
               }
               stackIn_12_0.field_uc = new SceneWidget(stackIn_12_3, stackIn_13_4);
-              var12.a(var12.field_uc, 118);
-              var12.field_Gc = new SceneWidget[be.field_a];
+              var12.addChild(var12.field_uc, 118);
+              var12.field_Gc = new SceneWidget[UrlAndReplyHelpers.field_a];
               var12.field_Fc = new SceneWidget(0L, (SceneWidget) null);
               if ((1 << QuickChatHelpDialog.field_dc & var14) != 0) {
-                var12.field_uc.a(var12.field_Fc, 125);
+                var12.field_uc.addChild(var12.field_Fc, 125);
               }
               var12.field_Wb = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << BoundedRandomAccessFile.field_b) != 0) {
-                var12.field_uc.a(var12.field_Wb, 124);
+                var12.field_uc.addChild(var12.field_Wb, 124);
               }
               var12.field_ac = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << EditableTextWidget.field_Z) != 0) {
-                var12.field_uc.a(var12.field_ac, 126);
+                var12.field_uc.addChild(var12.field_ac, 126);
               }
               var12.field_tc = new SceneWidget(0L, (SceneWidget) null);
               if ((1 << ja.field_f & var14) != 0) {
-                var12.field_uc.a(var12.field_tc, 122);
+                var12.field_uc.addChild(var12.field_tc, 122);
               }
               var45 = var12.field_Fc;
               var44 = var12.field_tc;
@@ -292,10 +292,10 @@ final class MusicPatch extends IntrusiveNode {
               var43.field_Fb = 1;
               var44.field_Fb = 1;
               var45.field_Fb = 1;
-              for (var18_int = 0; var18_int < be.field_a; var18_int++) {
+              for (var18_int = 0; var18_int < UrlAndReplyHelpers.field_a; var18_int++) {
                 var12.field_Gc[var18_int] = new SceneWidget(0L, (SceneWidget) null);
-                if ((1 << var18_int + ch.field_L & var14) != 0) {
-                  var12.field_uc.a(var12.field_Gc[var18_int], param1 ^ 127);
+                if ((1 << var18_int + ArrayWidgetContainer.field_L & var14) != 0) {
+                  var12.field_uc.addChild(var12.field_Gc[var18_int], param1 ^ 127);
                 }
                 var12.field_Gc[var18_int].field_Fb = 1;
               }
@@ -313,20 +313,20 @@ final class MusicPatch extends IntrusiveNode {
                 stackIn_31_4 = ModalPanel.field_W;
               }
               stackIn_30_0.field_Lc = new SceneWidget(stackIn_30_3, stackIn_31_4);
-              var12.a(var12.field_Lc, 119);
+              var12.addChild(var12.field_Lc, 119);
               var12.field_Lc.field_Kb = 2;
               var12.field_Bc = new SceneWidget(0L, ModalPanel.field_W);
-              var12.a(var12.field_Bc, 119);
+              var12.addChild(var12.field_Bc, 119);
               var12.field_Dc = new SceneWidget(0L, ParticleEffect.field_K);
-              var12.a(var12.field_Dc, 121);
+              var12.addChild(var12.field_Dc, 121);
               var12.field_lc = new SceneWidget(0L, ParticleEffect.field_K);
-              var12.a(var12.field_lc, 124);
+              var12.addChild(var12.field_lc, 124);
               var12.field_xc = new SceneWidget(0L, bd.field_f);
-              var12.a(var12.field_xc, 121);
-              var12.h(param1 ^ -104);
+              var12.addChild(var12.field_xc, 121);
+              var12.markTreeDirty(param1 ^ -104);
               var12.field_gc = new SceneWidget(0L, ArchiveProvider.field_f);
               var13 = 1;
-              var12.a(var12.field_gc, 120);
+              var12.addChild(var12.field_gc, 120);
             }
             var12.field_kc.field_S = null;
             stackIn_35_0 = (var12.field_rc) ? param4 : param0;
@@ -358,7 +358,7 @@ final class MusicPatch extends IntrusiveNode {
             var12.field_uc.field_Lb = 0;
             var21 = var12.field_uc;
             var21.field_zb = 0;
-            for (var22_int = 0; be.field_a > var22_int; var22_int++) {
+            for (var22_int = 0; UrlAndReplyHelpers.field_a > var22_int; var22_int++) {
               var12.field_Gc[var22_int].field_Pb = null;
               var23 = var12.field_Gc[var22_int];
               var12.field_Gc[var22_int].field_Lb = 0;
@@ -403,7 +403,7 @@ final class MusicPatch extends IntrusiveNode {
             var12.field_zb = rn.field_y.field_Ub.field_zb;
             var31 = 0;
             var32 = var12.field_Xb;
-            if (!var12.k(4219)) {
+            if (!var12.isUnlisted(4219)) {
               boolean decompiledFrameRemainder1 = true;
               if (!var12.field_rc) {
                 if (!var12.field_cc &&
@@ -437,12 +437,12 @@ final class MusicPatch extends IntrusiveNode {
                 }
               }
               if (var12.field_gc.field_S == null) {
-                var12.field_kc.a(0, var31, SocketConnector.field_b, 0, 68);
+                var12.field_kc.setBounds(0, var31, SocketConnector.field_b, 0, 68);
               } else {
-                var12.field_gc.a(0, var31, SocketConnector.field_b, 0, 68);
+                var12.field_gc.setBounds(0, var31, SocketConnector.field_b, 0, 68);
               }
               var12.field_Cc.field_S = BitmapFont.truncateWithEllipsis(var12.field_Cc.field_L, var32, 78);
-              var12.field_Cc.a(param1 ^ 1, var31, SocketConnector.field_b, 70, 78);
+              var12.field_Cc.setBounds(param1 ^ 1, var31, SocketConnector.field_b, 70, 78);
               if (var12.field_Cc.field_kb &&
                 !var12.field_Cc.field_S.equals(var32)) {
                 UiTheme.field_i = var32;
@@ -450,25 +450,25 @@ final class MusicPatch extends IntrusiveNode {
               var12.field_qc.field_S = Integer.toString(var12.field_wc);
               if (!var12.field_dc) {
                 var12.field_qc.field_Kb = 1;
-                var12.field_qc.a(0, var31, SocketConnector.field_b, 150, 48);
+                var12.field_qc.setBounds(0, var31, SocketConnector.field_b, 150, 48);
               } else {
                 var12.field_qc.field_Kb = 2;
                 var12.field_zc.field_S = "/" + var12.field_Ub;
                 var33_int = (-var12.field_zc.field_L.textWidth("/") + 348) / 2;
-                var12.field_qc.a(param1 ^ 1, var31, SocketConnector.field_b, 150, var33_int - 150);
-                var12.field_zc.a(0, var31, SocketConnector.field_b, var33_int, -var33_int + 198);
+                var12.field_qc.setBounds(param1 ^ 1, var31, SocketConnector.field_b, 150, var33_int - 150);
+                var12.field_zc.setBounds(0, var31, SocketConnector.field_b, var33_int, -var33_int + 198);
               }
               var12.field_Ic.field_S = Integer.toString(var12.field_yc);
-              var12.field_Ic.a(0, var31, SocketConnector.field_b, 200, 48);
+              var12.field_Ic.setBounds(0, var31, SocketConnector.field_b, 200, 48);
               stackIn_70_0 = (MenuInputState.field_p) ? 250 : 200;
               var33_intLifetime1 = stackIn_70_0;
-              var12.field_uc.a(0, var31, SocketConnector.field_b, var33_intLifetime1, 365 + (-var33_intLifetime1 - 2));
-              var34_int = va.field_e;
+              var12.field_uc.setBounds(0, var31, SocketConnector.field_b, var33_intLifetime1, 365 + (-var33_intLifetime1 - 2));
+              var34_int = LoginDialogHelpers.field_e;
               if ((1 << QuickChatHelpDialog.field_dc & var14Lifetime1) != 0) {
                 var50_ref = hg.field_i[var12.field_Nc];
                 var12.field_Fc.field_Pb = var50_ref;
-                var12.field_Fc.a(0, 0, var12.field_uc.field_Lb, var34_int, var50_ref.field_z);
-                var34_int = var34_int + (va.field_e + var50_ref.field_z);
+                var12.field_Fc.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var50_ref.field_z);
+                var34_int = var34_int + (LoginDialogHelpers.field_e + var50_ref.field_z);
               }
               if ((1 << BoundedRandomAccessFile.field_b & var14Lifetime1) != 0) {
                 if (!var12.field_cc) {
@@ -485,14 +485,14 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_Wb.field_Pb = var51_ref;
-                var12.field_Wb.a(0, 0, var12.field_uc.field_Lb, var34_int, var51_ref.field_z);
-                var34_int = var34_int + (va.field_e + var51_ref.field_z);
+                var12.field_Wb.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var51_ref.field_z);
+                var34_int = var34_int + (LoginDialogHelpers.field_e + var51_ref.field_z);
               }
               if ((1 << EditableTextWidget.field_Z & var14Lifetime1) != 0) {
                 var52_ref = AccountMessagePanel.field_Z[-1 + var12.field_sc];
                 var12.field_ac.field_Pb = var52_ref;
-                var12.field_ac.a(0, 0, var12.field_uc.field_Lb, var34_int, var52_ref.field_z);
-                var34_int = var34_int + (va.field_e + var52_ref.field_z);
+                var12.field_ac.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var52_ref.field_z);
+                var34_int = var34_int + (LoginDialogHelpers.field_e + var52_ref.field_z);
               }
               if ((1 << ja.field_f & var14Lifetime1) != 0) {
                 stackIn_90_0 = DateInputWidget.field_Q;
@@ -503,18 +503,18 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var53_ref = stackIn_90_0[stackIn_91_1];
                 var12.field_tc.field_Pb = var53_ref;
-                var12.field_tc.a(0, 0, var12.field_uc.field_Lb, var34_int, var53_ref.field_z);
-                var34_int = var34_int + (var53_ref.field_z + va.field_e);
+                var12.field_tc.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var53_ref.field_z);
+                var34_int = var34_int + (var53_ref.field_z + LoginDialogHelpers.field_e);
               }
               if (PasswordFieldPainter.field_D != null) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < be.field_a; var36Lifetime1++) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < UrlAndReplyHelpers.field_a; var36Lifetime1++) {
                   if (null != PasswordFieldPainter.field_D[var36Lifetime1] &&
-                    (1 << var36Lifetime1 + ch.field_L & var14Lifetime1) != 0) {
+                    (1 << var36Lifetime1 + ArrayWidgetContainer.field_L & var14Lifetime1) != 0) {
                     var42 = PasswordFieldPainter.field_D[var36Lifetime1][var12.field_Sb[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Gc[var36Lifetime1].field_Pb = var42;
-                    var12.field_Gc[var36Lifetime1].a(param1 ^ 1, 0, var12.field_uc.field_Lb, var34_int, var54.field_z);
-                    var34_int = var34_int + (var54.field_z + va.field_e);
+                    var12.field_Gc[var36Lifetime1].setBounds(param1 ^ 1, 0, var12.field_uc.field_Lb, var34_int, var54.field_z);
+                    var34_int = var34_int + (var54.field_z + LoginDialogHelpers.field_e);
                   }
                 }
               }
@@ -524,7 +524,7 @@ final class MusicPatch extends IntrusiveNode {
                 var12.field_Wb.field_Y = var12.field_Wb.field_Y + var36Lifetime2;
                 var12.field_ac.field_Y = var12.field_ac.field_Y + var36Lifetime2;
                 var12.field_tc.field_Y = var12.field_tc.field_Y + var36Lifetime2;
-                for (var37_int = 0; be.field_a > var37_int; var37_int++) {
+                for (var37_int = 0; UrlAndReplyHelpers.field_a > var37_int; var37_int++) {
                   dupTemp$0 = var12.field_Gc[var37_int];
                   dupTemp$0.field_Y = dupTemp$0.field_Y + var36Lifetime2;
                 }
@@ -545,7 +545,7 @@ final class MusicPatch extends IntrusiveNode {
                   var12.field_Lc.field_S = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Lc.a(param1 ^ 1, var31, SocketConnector.field_b, 365, -365 + var12.field_zb);
+              var12.field_Lc.setBounds(param1 ^ 1, var31, SocketConnector.field_b, 365, -365 + var12.field_zb);
               var31 = var31 + SocketConnector.field_b;
               if (null != var12.field_hc) {
                 var31 += 2;
@@ -559,35 +559,35 @@ final class MusicPatch extends IntrusiveNode {
                 var38 = var37.toString();
                 var12.field_Bc.field_S = var38;
                 var39Lifetime1 = var12.field_Bc.field_L.wrappedLineCount(var38, -(2 * var12.field_Bc.field_ub) + var12.field_zb);
-                var12.field_Bc.a(param1 ^ 1, var31, SocketConnector.field_b * var39Lifetime1, 0, var12.field_zb);
+                var12.field_Bc.setBounds(param1 ^ 1, var31, SocketConnector.field_b * var39Lifetime1, 0, var12.field_zb);
                 var31 = var31 + SocketConnector.field_b * var39Lifetime1;
               }
               if (var12.field_vc) {
-                var12.field_Dc.field_S = SocketConnector.a(LoginMethod.field_a, -121, new String[]{var32});
-                var12.field_Dc.a(0, var31, SocketConnector.field_b, TextLayout.field_g, var12.field_zb - TextLayout.field_g * 2);
+                var12.field_Dc.field_S = SocketConnector.formatTemplate(LoginMethod.field_a, -121, new String[]{var32});
+                var12.field_Dc.setBounds(0, var31, SocketConnector.field_b, TextLayout.field_g, var12.field_zb - TextLayout.field_g * 2);
                 var31 = var31 + SocketConnector.field_b;
               }
               if (var12.field_bc) {
-                var12.field_lc.field_S = SocketConnector.a(MusicPatchPcmStream.field_x, -33, new String[]{var32});
-                var12.field_lc.a(param1 ^ 1, var31, SocketConnector.field_b, TextLayout.field_g, -(TextLayout.field_g * 2) + var12.field_zb);
+                var12.field_lc.field_S = SocketConnector.formatTemplate(MusicPatchPcmStream.field_x, -33, new String[]{var32});
+                var12.field_lc.setBounds(param1 ^ 1, var31, SocketConnector.field_b, TextLayout.field_g, -(TextLayout.field_g * 2) + var12.field_zb);
                 var31 = var31 + SocketConnector.field_b;
               }
             }
-            var33 = SceneWidgetNode.a(var32, (byte) 112, var12.field_Ac);
+            var33 = SceneWidgetNode.formatChatPrefix(var32, (byte) 112, var12.field_Ac);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_xc.field_L.wrappedLineCount(var33, -TextLayout.field_g - TextLayout.field_g + var12.field_zb);
               var12.field_xc.field_S = var33;
               var12.field_xc.field_V = var12.field_mc * 256 / Js5ArchiveManager.field_l;
-              var12.field_xc.a(0, var31, SocketConnector.field_b * var34_intLifetime1, TextLayout.field_g, -(2 * TextLayout.field_g) + var12.field_zb);
+              var12.field_xc.setBounds(0, var31, SocketConnector.field_b * var34_intLifetime1, TextLayout.field_g, -(2 * TextLayout.field_g) + var12.field_zb);
               var31 = var31 + var34_intLifetime1 * SocketConnector.field_b;
             }
             if (var7_int == 0) {
               var12.field_lb = var31 - var12.field_Lb;
             }
             if (var13 != 0) {
-              rn.field_y.field_Ub.a(2, (byte) 111, (SceneWidget) (var11), var12);
+              rn.field_y.field_Ub.positionAfter(2, (byte) 111, (SceneWidget) (var11), var12);
             }
-            for (var34_intLifetime2 = 0; var34_intLifetime2 < be.field_a; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; var34_intLifetime2 < UrlAndReplyHelpers.field_a; var34_intLifetime2++) {
               if (var12.field_Gc[var34_intLifetime2].field_kb) {
                 if (fj.field_b == null) {
                   var35 = null;
@@ -607,7 +607,7 @@ final class MusicPatch extends IntrusiveNode {
             }
             if (var12.field_Fc.field_kb) {
               if (1 == var12.field_Nc) {
-                var34 = na.field_r;
+                var34 = ChatMessage.field_r;
               } else {
                 var34 = HuffmanDecoder.field_j[var12.field_Nc];
               }
@@ -638,37 +638,37 @@ final class MusicPatch extends IntrusiveNode {
               if (2 == var12.field_sc) {
                 stackIn_170_0 = EditableTextWidget.field_db;
               } else {
-                stackIn_170_0 = hk.field_Yb;
+                stackIn_170_0 = LobbyGame.field_Yb;
               }
               UiTheme.field_i = stackIn_170_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_Eb != 0) {
-              if (var12.k(4219)) {
-                var12 = (hk) (var8.next((byte) -123));
+              if (var12.isUnlisted(4219)) {
+                var12 = (LobbyGame) (var8.next((byte) -123));
                 continue;
               }
               if (0 != var12.field_gc.field_Eb) {
                 if (var12.field_rc && (!var12.field_dc ||
                   !var12.field_cc &&
                   !var12.field_vc)) {
-                  NameAvailabilityValidator.a(var12.j(param1 - 34), (byte) -23, param6);
+                  NameAvailabilityValidator.a(var12.getGameId(param1 - 34), (byte) -23, param6);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ViewportController.a(var12.j(param1 - 41), (byte) -74, param6);
+                  ViewportController.a(var12.getGameId(param1 - 41), (byte) -74, param6);
                 }
               } else {
                 Js5NetworkRequest.a(var32, param5, var12, 88);
               }
             }
-            var12 = (hk) (var8.next((byte) -123));
+            var12 = (LobbyGame) (var8.next((byte) -123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var7), "ca.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var7), "ca.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -931,7 +931,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(82);
             }
-            this.field_p[var23] = (short)(this.field_p[var23] + ec.a(32768, -1 + var22 << 14));
+            this.field_p[var23] = (short)(this.field_p[var23] + ClientUiHelpers.bitAnd(32768, -1 + var22 << 14));
             this.field_s[var23] = var22;
             var20Lifetime2--;
           }
@@ -1069,7 +1069,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = (-var27Lifetime6Lifetime1 + var30) / 2 + (-var27Lifetime6Lifetime1 + var30) * var28;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = ad.a(110, var32, -var27Lifetime6Lifetime1 + var30);
+                var34 = LoadoutHelpers.floorDivide(110, var32, -var27Lifetime6Lifetime1 + var30);
                 this.field_q[var33] = (byte)(32 + var34 * this.field_q[var33] >> 6);
                 var32 = var32 + (var31 - var28);
               }
@@ -1113,7 +1113,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = ad.a(121, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7);
+                var34Lifetime1 = LoadoutHelpers.floorDivide(121, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7);
                 var35 = (255 & this.field_o[var37]) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;
@@ -1182,7 +1182,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_209_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
         }
     }
 

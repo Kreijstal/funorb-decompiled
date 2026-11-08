@@ -73,7 +73,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         return var5;
     }
 
-    final void m(int param0) {
+    final void markFinished(int param0) {
         this.field_mb.field_N = false;
         if (param0 != -13521) {
           String var3 = (String) null;
@@ -86,7 +86,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         if (param0 != 150) {
           LoadingProgressDialog.b(-91, (byte) -45);
         }
-        return -QuickChatPhraseCache.field_b + mm.a(115);
+        return -QuickChatPhraseCache.field_b + ClockAndCookieHelpers.monotonicMillis(115);
     }
 
     final void setProgress(int param0, boolean param1, String param2, float param3) {
@@ -107,7 +107,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_qb = param2;
           int var5_int = 68 / ((param0 - 52) / 57);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_jb = param1;
           if (this.field_jb != null) {
             var3_int = gf.field_d.paragraphHeight(this.field_jb, 260, gf.field_d.field_G);
-            this.a((byte) 67, 300, 150 + var3_int);
+            this.resizeAndCenter((byte) 67, 300, 150 + var3_int);
           }
           this.field_mb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_lb = false;
@@ -133,26 +133,26 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_nb = false;
           this.addChild(this.field_mb, -110);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, String[] param1) {
         try {
           if (null != TextLayout.field_b) {
-            TextLayout.field_b.field_S.a(true, param1);
+            TextLayout.field_b.field_S.setSuggestions(true, param1);
           }
           if (null != EmailAvailabilityValidator.field_o) {
-            EmailAvailabilityValidator.field_o.field_R.a(true, param1);
+            EmailAvailabilityValidator.field_o.field_R.setSuggestions(true, param1);
           }
           int var2_int = -30 / ((15 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ki.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ki.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
-        super.a(param0, param1, param2);
+    final void drawPanelBackground(int param0, int param1, boolean param2) {
+        super.drawPanelBackground(param0, param1, param2);
         gf.field_d.drawCentered(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
         if (null != this.field_jb) {
           SoftwareRaster.drawHorizontalLine(20 + param0, -7 + param1 + 120, 260, 8421504);

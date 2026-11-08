@@ -23,12 +23,12 @@ final class cd {
         int[] var10 = null;
         int[] var11 = null;
         cf var12 = null;
-        hl var13 = null;
+        PendingIntArrayRequest var13 = null;
         CipherPacketBuffer var14 = null;
-        hl var15 = null;
+        PendingIntArrayRequest var15 = null;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          var14 = rf.field_d;
+          var14 = LoginConnectionStage.field_d;
           var2 = var14.readUnsignedByte((byte) -117);
           if (var2 == 0) {
             var11 = ViewportController.a(true);
@@ -40,7 +40,7 @@ final class cd {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
-            var13 = (hl) (MidiPcmStream.field_D.first(param0 ^ 13058));
+            var13 = (PendingIntArrayRequest) (MidiPcmStream.field_D.first(param0 ^ 13058));
             if (var13 == null) {
               LoginForm.m(-116);
               return;
@@ -51,10 +51,10 @@ final class cd {
           } else {
             if (1 != var2) {
               if (var2 != 2) {
-                MusicCrossfadeStream.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
+                MusicCrossfadeStream.reportClientError("A1: " + ClientErrorSupport.describePacketHistory((byte) 94), -50, (Throwable) null);
                 LoginForm.m(121);
               } else {
-                var15 = (hl) (MidiPcmStream.field_D.first(13058));
+                var15 = (PendingIntArrayRequest) (MidiPcmStream.field_D.first(13058));
                 if (var15 == null) {
                   LoginForm.m(param0 ^ 117);
                   return;
@@ -79,7 +79,7 @@ final class cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "cd.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "cd.A(" + param0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class cd {
               var4_int = param1;
             }
             var5 = new byte[var4_int];
-            param0.position = param0.position + ob.field_r.a(var5, var4_int, 4408131, 0, param0.payload, param0.position);
+            param0.position = param0.position + ob.field_r.decompress(var5, var4_int, 4408131, 0, param0.payload, param0.position);
             var6 = SoundCache.a((byte) 37, 0, var5, var4_int);
             stackIn_5_0 = var6;
             return stackIn_5_0;
@@ -124,7 +124,7 @@ final class cd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

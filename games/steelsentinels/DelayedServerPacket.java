@@ -55,7 +55,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, na.field_i, PasswordFieldPainter.field_A);
+              var9.fillRect(0, 0, ChatMessage.field_i, PasswordFieldPainter.field_A);
             }
             if (param4 == null) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -74,11 +74,11 @@ final class DelayedServerPacket extends IntrusiveNode {
               var10.setFont(MouseInputHandler.field_f);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-              var9.drawImage(UiTheme.field_j, -152 + na.field_i / 2, -18 + PasswordFieldPainter.field_A / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(UiTheme.field_j, -152 + ChatMessage.field_i / 2, -18 + PasswordFieldPainter.field_A / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = na.field_i / 2 - 152;
+              var7 = ChatMessage.field_i / 2 - 152;
               var8 = -18 + PasswordFieldPainter.field_A / 2;
               var9.setColor(param4);
               var9.drawRect(var7, var8, 303, 33);
@@ -93,7 +93,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             if (IconLabelControl.field_Wb != null) {
               var9.setFont(MouseInputHandler.field_f);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(IconLabelControl.field_Wb, na.field_i / 2 - 6 * IconLabelControl.field_Wb.length() / 2, -26 + PasswordFieldPainter.field_A / 2);
+              var9.drawString(IconLabelControl.field_Wb, ChatMessage.field_i / 2 - 6 * IconLabelControl.field_Wb.length() / 2, -26 + PasswordFieldPainter.field_A / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -117,7 +117,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           } else {
             stackIn_144_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_140_0), ((StringBuilder) (Object) stackIn_143_1).append(stackIn_144_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_140_0), ((StringBuilder) (Object) stackIn_143_1).append(stackIn_144_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           this.field_v = param0;
           this.field_B = param2;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

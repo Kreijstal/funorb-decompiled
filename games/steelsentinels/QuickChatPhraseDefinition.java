@@ -13,7 +13,7 @@ final class QuickChatPhraseDefinition extends DualNode {
     private int[] field_D;
     static RgbSprite field_y;
 
-    final void c(byte param0) {
+    final void markResponsesAsPhrases(byte param0) {
         int var3 = 0;
         int var4 = SteelSentinels.obfuscationControl;
         int var2 = -79 % ((param0 + 50) / 55);
@@ -24,7 +24,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         }
     }
 
-    final static String[] a(BitmapFont param0, int[] param1, int param2, String param3) {
+    final static String[] wrapTextLines(BitmapFont param0, int[] param1, int param2, String param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -93,11 +93,11 @@ final class QuickChatPhraseDefinition extends DualNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    final String i(int param0) {
+    final String getPreview(int param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -126,7 +126,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         field_y = null;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void decode(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -144,7 +144,7 @@ final class QuickChatPhraseDefinition extends DualNode {
             if (var3_int == 0) {
               return;
             }
-            this.a(var3_int, param0, 100);
+            this.decodeOpcode(var3_int, param0, 100);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,20 +156,20 @@ final class QuickChatPhraseDefinition extends DualNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void h(int param0) {
+    final static void shutdownConnectionAndInput(int param0) {
         SoundCache.c(param0);
         if (null != sl.field_n) {
           pa.a(sl.field_n, 9174);
         }
         TextHotspotWidget.g(0);
         og.b(-115);
-        ln.a(param0 ^ -8601);
+        NameValidationHelpers.closeArchiveConnections(param0 ^ -8601);
         if (rn.a((byte) -14)) {
-          mm.field_g.writeCipheredOpcode(1, (byte) -117);
+          ClockAndCookieHelpers.field_g.writeCipheredOpcode(1, (byte) -117);
           gj.a(0, 0);
         }
         LoginForm.m(param0 - 47);
@@ -178,7 +178,7 @@ final class QuickChatPhraseDefinition extends DualNode {
     QuickChatPhraseDefinition() {
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -238,7 +238,7 @@ final class QuickChatPhraseDefinition extends DualNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         for (var0 = 32; var0 <= 36; var0++) {
           var1 = field_B;
           var2 = var0;
-          var1[var2 >> 5] = DateOfBirthValidator.a(var1[var2 >> 5], 1 << ec.a(31, var2));
+          var1[var2 >> 5] = DateOfBirthValidator.a(var1[var2 >> 5], 1 << ClientUiHelpers.bitAnd(31, var2));
         }
         int[] var6 = field_A;
         var6[1] = DateOfBirthValidator.a(var6[1], 64);

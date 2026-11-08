@@ -46,16 +46,16 @@ final class IterableNodeHashTable implements Iterable {
         int var5Lifetime1;
         int var6Lifetime1;
         if (!param3) {
-          if (eb.field_u[param1] < eb.field_u[param2]) {
+          if (AgeValidator.field_u[param1] < AgeValidator.field_u[param2]) {
             return true;
           }
-          if (eb.field_u[param1] > eb.field_u[param2]) {
+          if (AgeValidator.field_u[param1] > AgeValidator.field_u[param2]) {
             return false;
           }
-          if (ok.field_d[param2] > ok.field_d[param1]) {
+          if (ChecksumAndFrameHelpers.field_d[param2] > ChecksumAndFrameHelpers.field_d[param1]) {
             return true;
           }
-          if (ok.field_d[param1] > ok.field_d[param2]) {
+          if (ChecksumAndFrameHelpers.field_d[param1] > ChecksumAndFrameHelpers.field_d[param2]) {
             return false;
           }
           var4 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
@@ -69,16 +69,16 @@ final class IterableNodeHashTable implements Iterable {
           }
           return !(param2 <= param1);
         }
-        if (ok.field_d[param2] > ok.field_d[param1]) {
+        if (ChecksumAndFrameHelpers.field_d[param2] > ChecksumAndFrameHelpers.field_d[param1]) {
           return true;
         }
-        if (ok.field_d[param1] > ok.field_d[param2]) {
+        if (ChecksumAndFrameHelpers.field_d[param1] > ChecksumAndFrameHelpers.field_d[param2]) {
           return false;
         }
-        if (eb.field_u[param1] < eb.field_u[param2]) {
+        if (AgeValidator.field_u[param1] < AgeValidator.field_u[param2]) {
           return true;
         }
-        if (eb.field_u[param1] > eb.field_u[param2]) {
+        if (AgeValidator.field_u[param1] > AgeValidator.field_u[param2]) {
           return false;
         }
         var4Lifetime1 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
@@ -116,7 +116,7 @@ final class IterableNodeHashTable implements Iterable {
           param0.next.previous = param0;
           param0.key = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class IterableNodeHashTable implements Iterable {
           }
           SoftwareRaster.setTarget(param0.field_E, param0.field_z, param0.field_B);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

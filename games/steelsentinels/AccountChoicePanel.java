@@ -72,13 +72,13 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void j(int param0) {
-        ib.field_b = 0;
-        ba.b(false);
+        ChatPanelHelpers.field_b = 0;
+        QuickChatInputHelpers.openQuickChatMenu(false);
         if (param0 != 13171) {
           AccountChoicePanel.j(39);
         }
@@ -88,7 +88,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_P = new TextButton(MatchingTextValidator.field_n, (UiListener) null);
         this.field_Y = new TextButton(hg.field_f, (UiListener) null);
-        this.field_W = new TextButton(lj.field_c, (UiListener) null);
+        this.field_W = new TextButton(SocialRequestHelpers.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.field_P.field_p = (WidgetPainter) ((Object) var1);
         this.field_Y.field_p = (WidgetPainter) ((Object) var1);
@@ -96,14 +96,14 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_Y.a(this.field_x - var3 >> 1, (byte) -108, -var2 + (this.field_E - 48), var4, 30);
-        this.field_W.a((-var3 + this.field_x >> 1) + var4 + var2, (byte) -78, -48 + this.field_E - var2, var4, 30);
-        this.field_P.a(this.field_x - var3 >> 1, (byte) -100, -(var2 * 2) + (this.field_E - 78), var3, 30);
+        this.field_Y.setBounds(this.field_x - var3 >> 1, (byte) -108, -var2 + (this.field_E - 48), var4, 30);
+        this.field_W.setBounds((-var3 + this.field_x >> 1) + var4 + var2, (byte) -78, -48 + this.field_E - var2, var4, 30);
+        this.field_P.setBounds(this.field_x - var3 >> 1, (byte) -100, -(var2 * 2) + (this.field_E - 78), var3, 30);
         this.field_Y.field_A = (UiListener) (this);
         this.field_P.field_A = (UiListener) (this);
         this.field_P.field_v = ProxySocketConnector.field_m;
         this.field_W.field_A = (UiListener) (this);
-        this.field_W.field_v = rg.field_g;
+        this.field_W.field_v = PopupMenuHelpers.field_g;
         this.addChild(this.field_Y, -120);
         this.addChild(this.field_P, -89);
         this.addChild(this.field_W, -100);
@@ -161,7 +161,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -217,13 +217,13 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b(param3, 121);
+            stackIn_6_0 = this.focusPreviousChild(param3, 121);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(-11963, param3);
+          stackIn_10_0 = this.focusNextChild(-11963, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

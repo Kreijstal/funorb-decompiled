@@ -33,26 +33,26 @@ final class SentinelDesigner {
           var2_int = stackIn_8_0;
           stackIn_12_0 = (this.e(2, 20)) ? 2 : 1;
           var3 = stackIn_12_0;
-          if (!this.field_g.a(0)) {
+          if (!this.field_g.isPointerHeld(0)) {
             if (NameAvailabilityValidator.field_q == 96) {
               if (this.field_g.field_e > var2_int) {
-                this.field_g.a(0, this.field_g.field_e - 1);
+                this.field_g.selectIfButtonHeld(0, this.field_g.field_e - 1);
                 if (var5 != 0) {
-                  this.field_g.a(0, var3);
+                  this.field_g.selectIfButtonHeld(0, var3);
                 }
               } else {
-                this.field_g.a(0, var3);
+                this.field_g.selectIfButtonHeld(0, var3);
               }
             }
             if (97 == NameAvailabilityValidator.field_q) {
               if (!(this.field_g.field_e >= 0) ||
                 !(var3 > this.field_g.field_e)) {
-                this.field_g.a(0, var2_int);
+                this.field_g.selectIfButtonHeld(0, var2_int);
                 if (var5 != 0) {
-                  this.field_g.a(0, this.field_g.field_e + 1);
+                  this.field_g.selectIfButtonHeld(0, this.field_g.field_e + 1);
                 }
               } else {
-                this.field_g.a(0, this.field_g.field_e + 1);
+                this.field_g.selectIfButtonHeld(0, this.field_g.field_e + 1);
               }
             }
           }
@@ -65,15 +65,15 @@ final class SentinelDesigner {
               var5 == 0 ||
               (var4 == 98 ||
               var4 == 99)) {
-              ef.field_c = NameAvailabilityValidator.field_q;
+              EmailFormatError.field_c = NameAvailabilityValidator.field_q;
             }
           }
-          this.field_g.e((byte) 22);
+          this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.V(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.V(" + param0 + ')');
         }
     }
 
@@ -104,21 +104,21 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.DB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void i(int param0) {
-        if (va.field_c == null) {
+        if (LoginDialogHelpers.field_c == null) {
           return;
         }
         try {
-          va.field_c.a(60);
+          LoginDialogHelpers.field_c.updateAnimationPreview(60);
           if (param0 != 21003) {
             this.a((byte) -45, -31, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.RA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.RA(" + param0 + ')');
         }
     }
 
@@ -154,14 +154,14 @@ final class SentinelDesigner {
           if (SceneWidget.field_J &&
             !ni.b(11)) {
             SceneWidget.field_J = false;
-            km.field_a = null;
+            ClientGlobals.field_a = null;
           }
           if (this.field_c == 21) {
-            var2 = eh.field_c;
+            var2 = SocialListUiHelpers.field_c;
             stackIn_18_0 = var2;
             stackIn_18_1 = 4540749;
-            stackIn_19_2 = (!mm.a(false)) && (~this.field_c == ~GzipDecoder.field_g);
-            var3_int = ((MembershipPromotionScreen) stackIn_18_0).a(stackIn_18_1, stackIn_19_2);
+            stackIn_19_2 = (!ClockAndCookieHelpers.isReconnectStage(false)) && (~this.field_c == ~GzipDecoder.field_g);
+            var3_int = ((MembershipPromotionScreen) stackIn_18_0).update(stackIn_18_1, stackIn_19_2);
             if (var3_int != 3 && (var3_int == 1 ||
               2 == var3_int)) {
               stackIn_32_0 = (var3_int != 2) ? 0 : 1;
@@ -184,13 +184,13 @@ final class SentinelDesigner {
               if (ArchiveIndex.field_p == 0 &&
                 !ni.b(47)) {
                 if (128 > BoundedRandomAccessFile.field_q) {
-                  mm.field_g.writeCipheredOpcode(66, (byte) -117);
-                  mm.field_g.writeByte((byte) 111, 1);
-                  mm.field_g.writeByte((byte) 124, BoundedRandomAccessFile.field_q);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(66, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 111, 1);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 124, BoundedRandomAccessFile.field_q);
                   var2_int = 0;
                   while (true) {
-                    if (var2_int < va.field_k.length) {
-                      va.field_k[var2_int] = 0;
+                    if (var2_int < LoginDialogHelpers.field_k.length) {
+                      LoginDialogHelpers.field_k[var2_int] = 0;
                       var2_int++;
                       if (var6 == 0) {
                         continue;
@@ -203,12 +203,12 @@ final class SentinelDesigner {
                   decompiledFrameRemainder1 = (var6 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  mm.field_g.writeCipheredOpcode(66, (byte) -117);
-                  mm.field_g.writeByte((byte) 108, 0);
-                  mm.field_g.writeByte((byte) 119, BoundedRandomAccessFile.field_q - 128);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(66, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 108, 0);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 119, BoundedRandomAccessFile.field_q - 128);
                   var2_int = 0;
-                  while (va.field_k.length > var2_int) {
-                    va.field_k[var2_int] = 0;
+                  while (LoginDialogHelpers.field_k.length > var2_int) {
+                    LoginDialogHelpers.field_k[var2_int] = 0;
                     var2_int++;
                     if (var6 != 0) {
                       decompiledFrameCompleted2 = false;
@@ -227,8 +227,8 @@ final class SentinelDesigner {
                 BoundedRandomAccessFile.field_q = -1;
                 VerticalScrollbar.field_gc = 0;
                 ArchiveIndex.field_p = -1;
-                ln.field_c = null;
-                km.field_a = null;
+                NameValidationHelpers.field_c = null;
+                ClientGlobals.field_a = null;
               }
             }
             boolean decompiledFrameRemainder4 = true;
@@ -237,7 +237,7 @@ final class SentinelDesigner {
               VerticalScrollbar.field_gc == 1) {
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
-              var2_int = ln.field_g;
+              var2_int = NameValidationHelpers.field_g;
               if ((0 != var2_int ||
                 var6 != 0) &&
                 (decompiledFrameRemainder2 = (var2_int != 1 ||
@@ -256,7 +256,7 @@ final class SentinelDesigner {
                   var2_int = SceneWidget.field_Jb;
                 }
                 IterableNodeHashTable.a(0, true, -1, var2_int);
-                km.field_a = null;
+                ClientGlobals.field_a = null;
                 SceneWidget.field_J = false;
                 GameApplet.field_l = true;
                 kf.field_s = true;
@@ -303,47 +303,47 @@ final class SentinelDesigner {
                 CombatWorld.c(-2483, 95);
                 SceneWidget.field_J = false;
                 kf.field_s = true;
-                km.field_a = null;
+                ClientGlobals.field_a = null;
                 GameApplet.field_l = true;
               }
             }
             if (ContentTransitionDialog.field_ub &&
-              null == km.field_a) {
+              null == ClientGlobals.field_a) {
               ContentTransitionDialog.field_ub = false;
             }
             if (ContentTransitionDialog.field_ub &&
               VerticalScrollbar.field_gc == 1) {
               VerticalScrollbar.field_gc = 0;
-              km.field_a = null;
+              ClientGlobals.field_a = null;
               kf.field_s = true;
-              ln.field_c = null;
+              NameValidationHelpers.field_c = null;
               GameApplet.field_l = true;
               ContentTransitionDialog.field_ub = false;
             }
-            if ((km.field_a == ReportAbuseDialog.field_ac ||
-              km.field_a == DualNodeDeque.field_b) &&
+            if ((ClientGlobals.field_a == ReportAbuseDialog.field_ac ||
+              ClientGlobals.field_a == DualNodeDeque.field_b) &&
               !ni.b(11)) {
-              km.field_a = null;
+              ClientGlobals.field_a = null;
               GameApplet.field_l = true;
               kf.field_s = true;
             }
-            if ((km.field_a == ReportAbuseDialog.field_ac ||
-              DualNodeDeque.field_b == km.field_a) &&
+            if ((ClientGlobals.field_a == ReportAbuseDialog.field_ac ||
+              DualNodeDeque.field_b == ClientGlobals.field_a) &&
               (VerticalScrollbar.field_gc == 1 &&
-              ln.field_g == 0)) {
+              NameValidationHelpers.field_g == 0)) {
               CombatWorld.c(-2483, 95);
               DebouncedValidator.a(20, (String) null, 10);
             }
-            if (null != km.field_a) {
+            if (null != ClientGlobals.field_a) {
               while (UiContainer.f(22759)) {
                 if (NameAvailabilityValidator.field_q != 13 &&
                   NameAvailabilityValidator.field_q != 84 &&
                   NameAvailabilityValidator.field_q != 83) {
                   continue;
                 }
-                km.field_a = null;
+                ClientGlobals.field_a = null;
                 GameApplet.field_l = true;
-                ln.field_c = null;
+                NameValidationHelpers.field_c = null;
                 kf.field_s = true;
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -352,7 +352,7 @@ final class SentinelDesigner {
                 break;
               }
               if ((decompiledFrameCompleted0) &&
-                (null != km.field_a)) {
+                (null != ClientGlobals.field_a)) {
                 return;
               }
             }
@@ -379,7 +379,7 @@ final class SentinelDesigner {
                 }
                 if (decompiledFrameRemainder0) {
                   dc.field_g = -1;
-                  ((sf) (var2)).a((byte) 92);
+                  ((TutorialStep) (var2)).restoreHighlightedWidget((byte) 92);
                   var3_intLifetime1 = GzipDecoder.field_g;
                   if (var3_intLifetime1 == 5 ||
                     var3_intLifetime1 == 6 ||
@@ -394,13 +394,13 @@ final class SentinelDesigner {
                 stackIn_219_1 = -3;
               }
               if (stackIn_219_0 == stackIn_219_1 &&
-                !((sf) (var2)).c(21)) {
+                !((TutorialStep) (var2)).isAutoAdvance(21)) {
                 VerticalScrollbar.field_gc = 0;
               }
               if (VerticalScrollbar.field_gc != 1) {
                 break;
               }
-              if (((sf) (var2)).a(this.field_g, 23123)) {
+              if (((TutorialStep) (var2)).handleInput(this.field_g, 23123)) {
                 break;
               }
               VerticalScrollbar.field_gc = 0;
@@ -419,7 +419,7 @@ final class SentinelDesigner {
             field_a = -33;
           }
           if (12 == this.field_c) {
-            stackIn_248_0 = !(mm.a(false));
+            stackIn_248_0 = !(ClockAndCookieHelpers.isReconnectStage(false));
             var3_intLifetime2 = c.a(stackIn_248_0, 269);
             if (var3_intLifetime2 == 3) {
               if (null != wb.field_c) {
@@ -504,8 +504,8 @@ final class SentinelDesigner {
                     continue;
                   }
                   var3_intLifetime3 = 0;
-                  while (var3_intLifetime3 < va.field_k.length) {
-                    va.field_k[var3_intLifetime3] = 0;
+                  while (var3_intLifetime3 < LoginDialogHelpers.field_k.length) {
+                    LoginDialogHelpers.field_k[var3_intLifetime3] = 0;
                     var3_intLifetime3++;
                   }
                   DateOfBirthValidator.d(-66);
@@ -519,13 +519,13 @@ final class SentinelDesigner {
                   continue;
                 }
                 SceneWidget.field_J = true;
-                ln.field_g = -1;
+                NameValidationHelpers.field_g = -1;
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              this.field_g.updatePointer(124, this.a(oh.field_f, DelegatingCanvas.field_c, 70), this.a(TextButton.field_S, BufferedRandomAccessFile.field_j, 125));
+              this.field_g.updatePointer(124, this.a(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 70), this.a(TextButton.field_S, BufferedRandomAccessFile.field_j, 125));
               stackIn_387_0 = this.field_g.field_e;
               stackIn_387_1 = -1;
             }
@@ -574,15 +574,15 @@ final class SentinelDesigner {
                 DateOfBirthValidator.d(-58);
                 var4 = 0;
                 while (true) {
-                  if (va.field_k.length > var4) {
-                    va.field_k[var4] = 0;
+                  if (LoginDialogHelpers.field_k.length > var4) {
+                    LoginDialogHelpers.field_k[var4] = 0;
                     var4++;
                     if (var6 == 0) {
                       continue;
                     }
                   } else {
-                    hl.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 108, di.field_c);
-                    uc.field_b = cj.a(-94, di.field_c, hl.field_v);
+                    PendingIntArrayRequest.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 108, di.field_c);
+                    uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-94, di.field_c, PendingIntArrayRequest.field_v);
                   }
                   if (var6 == 0) {
                     decompiledRegionSelector0 = 0;
@@ -618,7 +618,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (var2), "ji.IB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) (var2), "ji.IB(" + param0 + ')');
         }
     }
 
@@ -772,7 +772,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.JB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.JB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -843,7 +843,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.D(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -859,7 +859,7 @@ final class SentinelDesigner {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 54 % ((49 - param1) / 47);
-          stackIn_1_0 = MusicPatchNode.a(-24809, true, param2, param0);
+          stackIn_1_0 = MusicPatchNode.decodeChassisDesign(-24809, true, param2, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -877,7 +877,7 @@ final class SentinelDesigner {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -971,8 +971,8 @@ final class SentinelDesigner {
           var4 = IterableNodeHashTable.field_i;
           IterableNodeHashTable.field_i = 0;
           if (BattleTerrain.field_i > 0) {
-            if (oh.field_f >= 98 &&
-              oh.field_f < 159 &&
+            if (LobbySetupHelpers.field_f >= 98 &&
+              LobbySetupHelpers.field_f < 159 &&
               74 <= DelegatingCanvas.field_c &&
               DelegatingCanvas.field_c < 97) {
               var3_int = 0;
@@ -987,8 +987,8 @@ final class SentinelDesigner {
           }
           var5 = 930889;
           if (BattleTerrain.field_i < -1 + SceneWidgetNode.field_C.length) {
-            if (oh.field_f >= 481 &&
-              542 > oh.field_f &&
+            if (LobbySetupHelpers.field_f >= 481 &&
+              542 > LobbySetupHelpers.field_f &&
               74 <= DelegatingCanvas.field_c &&
               97 > DelegatingCanvas.field_c) {
               var5 = 0;
@@ -1011,7 +1011,7 @@ final class SentinelDesigner {
             return;
           }
           SoftwareRaster.drawRectangleOutline(163, 74, 314, 23, 930889);
-          pl.field_U.drawCentered(SocketConnector.a(am.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(SceneWidgetNode.field_C.length)}), 320, 74 + (pl.field_U.field_U + 23) / 2, 1021128, -1);
+          BirthDateEntryPanel.field_U.drawCentered(SocketConnector.formatTemplate(am.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(SceneWidgetNode.field_C.length)}), 320, 74 + (BirthDateEntryPanel.field_U.field_U + 23) / 2, 1021128, -1);
           SoftwareRaster.drawRectangleOutline(98, 101, 444, 154, 5789784);
           SoftwareRaster.drawVerticalLine(262, 259, 157, 930889);
           SoftwareRaster.drawRectangleOutline(98, 259, 444, 157, 1130327);
@@ -1106,22 +1106,22 @@ final class SentinelDesigner {
                 while (true) {
                   if (var17_ref_int__.length > var18Lifetime3) {
                     var19_int = var17_ref_int__[var18Lifetime3];
-                    stackIn_135_0 = ~oh.field_f;
+                    stackIn_135_0 = ~LobbySetupHelpers.field_f;
                     stackIn_135_1 = ~var7;
                     if (stackIn_135_0 <= stackIn_135_1 &&
-                      (30 + var7) > oh.field_f &&
+                      (30 + var7) > LobbySetupHelpers.field_f &&
                       DelegatingCanvas.field_c >= var8Lifetime1 &&
                       DelegatingCanvas.field_c < (30 + var8Lifetime1)) {
                       QuickChatPhraseDefinition.field_C = var19_int;
                     }
                     var20_ref = ValidationHelpWidget.field_tb;
-                    if (ve.a(var9, 1, var19_int)) {
+                    if (AssetDecoders.isBitSet(var9, 1, var19_int)) {
                       var20_ref = ClientException.field_c[var19_int];
                     } else {
-                      if (ve.a(QuickChatPhraseDefinition.field_A, 1, var19_int)) {
+                      if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_A, 1, var19_int)) {
                         var20_ref = null;
                       } else {
-                        if (ve.a(QuickChatPhraseDefinition.field_E, param0 ^ 49, var19_int) && (ni.b(72) ||
+                        if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, param0 ^ 49, var19_int) && (ni.b(72) ||
                           !(rd.field_b > 0))) {
                           var20_ref = null;
                         }
@@ -1169,13 +1169,13 @@ final class SentinelDesigner {
             var14_intLifetime1 = (23 + AlphaContainer.field_U.field_U) / 2 + 263;
             AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, ViewportController.field_t[var12Lifetime1]), var13_intLifetime1, var14_intLifetime1, 1021128, -1);
             var14_intLifetime1Lifetime1 = 306;
-            var15Lifetime1 = ve.a(var9, param0 - 47, var12Lifetime1) ? 1 : 0;
+            var15Lifetime1 = AssetDecoders.isBitSet(var9, param0 - 47, var12Lifetime1) ? 1 : 0;
             if (var15Lifetime1 == 0) {
-              pl.field_U.drawCentered(QuickChatHelpDialog.field_Zb, var13_intLifetime1, var14_intLifetime1Lifetime1, 8421504, -1);
+              BirthDateEntryPanel.field_U.drawCentered(QuickChatHelpDialog.field_Zb, var13_intLifetime1, var14_intLifetime1Lifetime1, 8421504, -1);
             }
             if (var15Lifetime1 != 0 ||
               var24 != 0) {
-              pl.field_U.drawCentered(sf.field_p, var13_intLifetime1, var14_intLifetime1Lifetime1, 16777215, -1);
+              BirthDateEntryPanel.field_U.drawCentered(TutorialStep.field_p, var13_intLifetime1, var14_intLifetime1Lifetime1, 16777215, -1);
             }
             if (var15Lifetime1 != 0) {
               ClientException.field_c[var12Lifetime1].drawTransparent(120, 277);
@@ -1185,7 +1185,7 @@ final class SentinelDesigner {
               ValidationHelpWidget.field_tb.drawTransparent(120, 277);
             }
             if (var15Lifetime1 != 0 ||
-              !ve.a(QuickChatPhraseDefinition.field_B, param0 - 47, var12Lifetime1)) {
+              !AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_B, param0 - 47, var12Lifetime1)) {
               var16_ref_String = QuickChatPhraseCache.field_a[var12Lifetime1].toUpperCase();
               var17Lifetime2 = 330;
               var18Lifetime1 = var17Lifetime2 + BoundedUrlRequest.field_d.paragraphHeight(var16_ref_String, 252, 0);
@@ -1247,15 +1247,15 @@ final class SentinelDesigner {
                 BoundedUrlRequest.field_d.drawRight(WidgetStyleLayer.a(42, DebouncedValidator.field_d), ValidatedTextWidget.field_sb.field_A / 3 + var19_intLifetime1, var14_intLifetime1Lifetime2, 1021128, -1);
               }
               if (var24 != 0) {
-                pl.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
+                BirthDateEntryPanel.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
               }
             } else {
-              pl.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
+              BirthDateEntryPanel.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
             }
           }
           if (var12Lifetime1 == -1 ||
             var24 != 0) {
-            pl.field_U.drawParagraph(na.field_q, 276, 300, 252, 102, 1021128, -1, 1, 1, 0);
+            BirthDateEntryPanel.field_U.drawParagraph(ChatMessage.field_q, 276, 300, 252, 102, 1021128, -1, 1, 1, 0);
           }
           if (CombatWorld.field_S != null) {
             var13_ref = NodeHashTable.field_k;
@@ -1275,8 +1275,8 @@ final class SentinelDesigner {
                   var13_ref.drawTransparent(var15Lifetime2, var6 - 1);
                 }
                 AccountChoicePanel.field_Z[var16Lifetime2].drawTransparent(var15Lifetime2, var6 - 1);
-                if (var15Lifetime2 <= oh.field_f &&
-                  (28 + var15Lifetime2) > oh.field_f &&
+                if (var15Lifetime2 <= LobbySetupHelpers.field_f &&
+                  (28 + var15Lifetime2) > LobbySetupHelpers.field_f &&
                   DelegatingCanvas.field_c >= var6 &&
                   18 + var6 > DelegatingCanvas.field_c) {
                   stackIn_226_0 = 1;
@@ -1331,7 +1331,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.L(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1380,7 +1380,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1535,7 +1535,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.EA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.EA(" + param0 + ')');
         }
     }
 
@@ -1585,8 +1585,8 @@ final class SentinelDesigner {
         int var9_intLifetime2;
         var12 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = va.field_d;
-          va.field_d = -1;
+          var2_int = LoginDialogHelpers.field_d;
+          LoginDialogHelpers.field_d = -1;
           SoftwareRaster.fillRectangle(0, 50, 640, 430, 0);
           if (param0 <= 112) {
             return;
@@ -1627,11 +1627,11 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var7)).drawCentered(var8, 320, var4, 16777215, -1);
           var4 += 5;
           if (EmailAvailabilityValidator.a(var4, var3, 126, "Lock mechs 1,2,3", var6, var5)) {
-            va.field_d = 0;
+            LoginDialogHelpers.field_d = 0;
           }
           var3 = var3 + (var5 + 20);
           if (EmailAvailabilityValidator.a(var4, var3, 124, "Unlock mechs 1,2,3", var6, var5)) {
-            va.field_d = 1;
+            LoginDialogHelpers.field_d = 1;
           }
           var3 = var3 - (20 + var5);
           var8Lifetime1 = "";
@@ -1667,11 +1667,11 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var7)).drawCentered(var8Lifetime1, 320, var4, 16777215, -1);
           var4 += 5;
           if (EmailAvailabilityValidator.a(var4, var3, 116, "Lock mechs 4,5,6", var6, var5)) {
-            va.field_d = 2;
+            LoginDialogHelpers.field_d = 2;
           }
           var3 = var3 + (var5 + 20);
           if (EmailAvailabilityValidator.a(var4, var3, 118, "Unlock mechs 4,5,6", var6, var5)) {
-            va.field_d = 3;
+            LoginDialogHelpers.field_d = 3;
           }
           var4 = var4 + (5 + var6);
           var8Lifetime2 = "";
@@ -1707,11 +1707,11 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var7)).drawCentered(var8Lifetime2, 320, var4, 16777215, -1);
           var4 += 5;
           if (EmailAvailabilityValidator.a(var4, var3, 116, "Lock mechs 7-12", var6, var5)) {
-            va.field_d = 4;
+            LoginDialogHelpers.field_d = 4;
           }
           var3 = var3 + (20 + var5);
           if (EmailAvailabilityValidator.a(var4, var3, 123, "Unlock mechs 7-12", var6, var5)) {
-            va.field_d = 5;
+            LoginDialogHelpers.field_d = 5;
           }
           var4 = var4 + (var6 + 5);
           var3 = var3 - (20 + var5);
@@ -1719,23 +1719,23 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var7)).drawCentered("Solarite: " + PasswordFieldPainter.field_v, 320, var4, 16777215, -1);
           var4 += 5;
           if (EmailAvailabilityValidator.a(var4, var3, 127, "Revoke 100 Solarite", var6, var5)) {
-            va.field_d = 6;
+            LoginDialogHelpers.field_d = 6;
           }
           var3 = var3 + (var5 + 20);
           if (EmailAvailabilityValidator.a(var4, var3, 119, "Get 100 Solarite", var6, var5)) {
-            va.field_d = 7;
+            LoginDialogHelpers.field_d = 7;
           }
           var4 = var4 + (10 + var6);
           var3 = var3 - (var5 + 20);
           var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
-          ((BitmapFont) ((Object) var7)).drawCentered("Total items engineered: " + pc.e(126), 320, var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).drawCentered("Total items engineered: " + PlayingSound.countUnlockedComponents(126), 320, var4, 16777215, -1);
           var4 += 5;
           if (EmailAvailabilityValidator.a(var4, var3, 127, "Unengineer all", var6, var5)) {
-            va.field_d = 8;
+            LoginDialogHelpers.field_d = 8;
           }
           var3 = var3 + (20 + var5);
           if (EmailAvailabilityValidator.a(var4, var3, 127, "Engineer all", var6, var5)) {
-            va.field_d = 9;
+            LoginDialogHelpers.field_d = 9;
           }
           var4 = var4 + (10 + var6);
           var3Lifetime1 = 200;
@@ -1744,17 +1744,17 @@ final class SentinelDesigner {
           var6Lifetime1 = 30;
           ((BitmapFont) ((Object) var7)).drawLeft("COMPLETE CAMPAIGN:", 50, 20 + var4, 1021128, -1);
           if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 124, "Training", var6Lifetime1, var5Lifetime1)) {
-            va.field_d = 24;
+            LoginDialogHelpers.field_d = 24;
           }
           ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[0]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
           if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 124, "Free", var6Lifetime1, var5Lifetime1)) {
-            va.field_d = 25;
+            LoginDialogHelpers.field_d = 25;
           }
           ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[1]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
           if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 117, "Member", var6Lifetime1, var5Lifetime1)) {
-            va.field_d = 26;
+            LoginDialogHelpers.field_d = 26;
           }
           ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[2]), var5Lifetime1 / 2 + var3Lifetime1, -2 + var4, 16777215, -1);
           var3Lifetime2 = 170;
@@ -1766,39 +1766,39 @@ final class SentinelDesigner {
           var5Lifetime2 = 60;
           var3Lifetime3 += 70;
           if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 120, "Noob", var6Lifetime2, var5Lifetime2)) {
-            va.field_d = 10;
+            LoginDialogHelpers.field_d = 10;
           }
           var3Lifetime3 = var3Lifetime3 + (10 + var5Lifetime2);
           if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 124, "Basic", var6Lifetime2, var5Lifetime2)) {
-            va.field_d = 11;
+            LoginDialogHelpers.field_d = 11;
           }
           var3Lifetime3 = var3Lifetime3 + (var5Lifetime2 + 10);
           var5Lifetime3 = 90;
           if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 118, "Advanced", var6Lifetime2, var5Lifetime3)) {
-            va.field_d = 12;
+            LoginDialogHelpers.field_d = 12;
           }
           var3Lifetime3 = var3Lifetime3 + (var5Lifetime3 + 10);
           var5Lifetime4 = 90;
           if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 122, "Mighty God", var6Lifetime2, var5Lifetime4)) {
-            va.field_d = 13;
+            LoginDialogHelpers.field_d = 13;
           }
           var3Lifetime3 = var3Lifetime3 + (40 + var5Lifetime4);
           var5Lifetime5 = 100;
-          if ((8 & dm.field_a) == 0) {
+          if ((8 & NameCheckResult.field_a) == 0) {
             stackIn_106_0 = "Config tutorial <col=00ff00>pending</col>";
           } else {
             stackIn_106_0 = "Config tutorial viewed";
           }
           var9 = stackIn_106_0;
           ((BitmapFont) ((Object) var7)).drawLeft(var9, -10 + var3Lifetime3, -3 + var4, 16777215, -1);
-          if ((dm.field_a & 8) == 0) {
+          if ((NameCheckResult.field_a & 8) == 0) {
             stackIn_110_0 = "Skip";
           } else {
             stackIn_110_0 = "Reset";
           }
           var10 = stackIn_110_0;
           if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 125, var10, var6Lifetime2, var5Lifetime5)) {
-            va.field_d = 16;
+            LoginDialogHelpers.field_d = 16;
           }
           var4 += 46;
           ((BitmapFont) ((Object) var7)).drawCentered("MUSIC", 122, -3 + var4, 1021128, -1);
@@ -1816,7 +1816,7 @@ final class SentinelDesigner {
             stackIn_124_0 = EmailAvailabilityValidator.a(var4, var3Lifetime4, 127, "" + var11, var6Lifetime2, var5Lifetime6);
             if (var12 == 0) {
               if (stackIn_124_0) {
-                va.field_d = var11 + 17;
+                LoginDialogHelpers.field_d = var11 + 17;
               }
               var3Lifetime4 = var3Lifetime4 + (5 + var5Lifetime6);
               var11++;
@@ -1825,12 +1825,12 @@ final class SentinelDesigner {
             break;
           }
           if (stackIn_124_0) {
-            va.field_d = 14;
+            LoginDialogHelpers.field_d = 14;
           }
           var3Lifetime4 = var3Lifetime4 + (var5Lifetime6 + 40);
           var5Lifetime7 = 140;
           if (EmailAvailabilityValidator.a(var4, var3Lifetime4, 116, "Update server", var6Lifetime2, var5Lifetime7)) {
-            va.field_d = 15;
+            LoginDialogHelpers.field_d = 15;
             if ((var12 != 0) && (ViewportController.field_j &&
               0 == (MouseWheelInput.field_c & 16))) {
               SoftwareRaster.drawRectangleOutline(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
@@ -1841,15 +1841,15 @@ final class SentinelDesigner {
               SoftwareRaster.drawRectangleOutline(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
             }
           }
-          if (va.field_d != -1 &&
-            ~var2_int != ~va.field_d) {
+          if (LoginDialogHelpers.field_d != -1 &&
+            ~var2_int != ~LoginDialogHelpers.field_d) {
             CombatWorld.c(-2483, 97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.FA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.FA(" + param0 + ')');
         }
     }
 
@@ -1883,7 +1883,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2299,8 +2299,8 @@ final class SentinelDesigner {
                                                                       break regionExit1;
                                                                     }
                                                                     dc.field_g = -1;
-                                                                    if (!ib.a(-99)) {
-                                                                      km.field_a = dg.field_e;
+                                                                    if (!ChatPanelHelpers.areBaseAssetsLoaded(-99)) {
+                                                                      ClientGlobals.field_a = dg.field_e;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -2308,8 +2308,8 @@ final class SentinelDesigner {
                                                                     IconTextComponent.field_Yb = 0;
                                                                     di.field_g = 4;
                                                                     if (this.field_c == 14) {
-                                                                      uc.field_b = cj.a(-107, di.field_c, hl.field_v);
-                                                                      hl.field_v = SentinelDesigner.a(uc.field_b, (byte) -25, di.field_c);
+                                                                      uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-107, di.field_c, PendingIntArrayRequest.field_v);
+                                                                      PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) -25, di.field_c);
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     IterableNodeHashTable.a(-3, var6 != 0, -1, 0);
@@ -2331,13 +2331,13 @@ final class SentinelDesigner {
                                                                     if (ni.b(111)) {
                                                                       CachedTextLayout.field_y = false;
                                                                       var6 = 0;
-                                                                      oc.a(99, var6, SocialListPanel.field_dc, param2, true);
+                                                                      MessageMenuHelpers.showMessageMenu(99, var6, SocialListPanel.field_dc, param2, true);
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
                                                                     if (this.a(127, param1)) {
-                                                                      if (ib.a(-47)) {
+                                                                      if (ChatPanelHelpers.areBaseAssetsLoaded(-47)) {
                                                                         var6 = param2 ? 1 : 0;
                                                                         var7 = GzipDecoder.field_g;
                                                                         if (var7 == 5 ||
@@ -2350,13 +2350,13 @@ final class SentinelDesigner {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      km.field_a = dg.field_e;
+                                                                      ClientGlobals.field_a = dg.field_e;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
                                                                     var4_int = 0;
-                                                                    km.field_a = DialWidgetPainter.field_l;
+                                                                    ClientGlobals.field_a = DialWidgetPainter.field_l;
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2388,12 +2388,12 @@ final class SentinelDesigner {
                                                                       break regionExit1;
                                                                     }
                                                                     if (14 == LoginForm.field_T) {
-                                                                      uc.field_b = cj.a(-109, di.field_c, hl.field_v);
+                                                                      uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-109, di.field_c, PendingIntArrayRequest.field_v);
                                                                     }
                                                                     if (LoginForm.field_T == 20 &&
                                                                       ni.b(28) &&
                                                                       0 < fm.field_f[0]) {
-                                                                      ln.field_g = -1;
+                                                                      NameValidationHelpers.field_g = -1;
                                                                       SceneWidget.field_J = true;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
@@ -2468,7 +2468,7 @@ final class SentinelDesigner {
                                                                     if (LoginForm.field_T != 14) {
                                                                       break regionExit1;
                                                                     }
-                                                                    uc.field_b = cj.a(-100, di.field_c, hl.field_v);
+                                                                    uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-100, di.field_c, PendingIntArrayRequest.field_v);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2480,7 +2480,7 @@ final class SentinelDesigner {
                                                                     }
                                                                     if (!this.a(124, param1)) {
                                                                       var4_int = 0;
-                                                                      km.field_a = MusicCrossfadeStream.field_C + "<br>" + DialWidgetPainter.field_l;
+                                                                      ClientGlobals.field_a = MusicCrossfadeStream.field_C + "<br>" + DialWidgetPainter.field_l;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -2493,8 +2493,8 @@ final class SentinelDesigner {
                                                                       DateOfBirthValidator.d(-52);
                                                                       var6 = 0;
                                                                       while (true) {
-                                                                        if (var6 < va.field_k.length) {
-                                                                          va.field_k[var6] = 0;
+                                                                        if (var6 < LoginDialogHelpers.field_k.length) {
+                                                                          LoginDialogHelpers.field_k[var6] = 0;
                                                                           var6++;
                                                                           if (var10 == 0) {
                                                                             continue;
@@ -2515,8 +2515,8 @@ final class SentinelDesigner {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     IterableNodeHashTable.a(14, var6 != 0, -1, var7);
-                                                                    hl.field_v = SentinelDesigner.a(uc.field_b, (byte) -67, di.field_c);
-                                                                    hl.field_v.b(6993661, -110);
+                                                                    PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) -67, di.field_c);
+                                                                    PendingIntArrayRequest.field_v.b(6993661, -110);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2605,14 +2605,14 @@ final class SentinelDesigner {
                                                               ModalPanel.a(0, (byte) 64);
                                                               var6 = 1;
                                                             }
-                                                            if (this.field_g.a((byte) 105) &&
+                                                            if (this.field_g.isEndPressed((byte) 105) &&
                                                               VerticalScrollbar.field_ac < 256) {
                                                               var6 = 1;
                                                               ModalPanel.a(256, (byte) 64);
                                                             }
-                                                            if (this.field_g.a(0)) {
+                                                            if (this.field_g.isPointerHeld(0)) {
                                                               var7 = this.g(125, param1) + this.a(param1, (byte) 118) + StrongCacheEntry.field_K - 170 >> 1;
-                                                              var8Lifetime2 = oh.field_f - var7 + 2;
+                                                              var8Lifetime2 = LobbySetupHelpers.field_f - var7 + 2;
                                                               var9 = 256 * var8Lifetime2 / 170;
                                                               if (0 >= var9) {
                                                                 ModalPanel.a(0, (byte) 64);
@@ -2641,12 +2641,12 @@ final class SentinelDesigner {
                                                               var6 = 1;
                                                               NameSuggestionsPanel.k(-44);
                                                             }
-                                                            if (this.field_g.c((byte) 51) &&
+                                                            if (this.field_g.isRightPressed((byte) 51) &&
                                                               VerticalScrollbar.field_ac < 256) {
-                                                              ProxySocketConnector.b((byte) 46);
+                                                              ProxySocketConnector.scrollToNextPage((byte) 46);
                                                               var6 = 1;
                                                             }
-                                                            if (var6 != 0 && (!this.field_g.a(0) ||
+                                                            if (var6 != 0 && (!this.field_g.isPointerHeld(0) ||
                                                               !(MouseWheelInput.field_c <= ByteStorage.field_a))) {
                                                               CombatWorld.c(-2483, 0);
                                                               ByteStorage.field_a = MouseWheelInput.field_c + 20;
@@ -2656,41 +2656,41 @@ final class SentinelDesigner {
                                                             }
                                                           }
                                                           if (this.field_g.isLeftPressed(126)) {
-                                                            ef.a(1, 0);
+                                                            EmailFormatError.setMusicVolume(1, 0);
                                                           }
                                                           var4_int = 0;
-                                                          if (this.field_g.a((byte) -120)) {
-                                                            ef.a(1, 256);
+                                                          if (this.field_g.isEndPressed((byte) -120)) {
+                                                            EmailFormatError.setMusicVolume(1, 256);
                                                           }
-                                                          if (this.field_g.a(0)) {
+                                                          if (this.field_g.isPointerHeld(0)) {
                                                             var6 = -170 + (this.g(125, param1) + this.a(param1, (byte) 110)) + StrongCacheEntry.field_K >> 1;
-                                                            var7 = -var6 + oh.field_f + 2;
+                                                            var7 = -var6 + LobbySetupHelpers.field_f + 2;
                                                             var8Lifetime1 = var7 * 256 / 170;
                                                             if (var8Lifetime1 <= 0) {
-                                                              ef.a(1, 0);
+                                                              EmailFormatError.setMusicVolume(1, 0);
                                                               if (var10 != 0) {
                                                                 if (var8Lifetime1 < 256) {
-                                                                  ef.a(1, var8Lifetime1);
-                                                                  ef.a(1, 256);
+                                                                  EmailFormatError.setMusicVolume(1, var8Lifetime1);
+                                                                  EmailFormatError.setMusicVolume(1, 256);
                                                                 } else {
-                                                                  ef.a(1, 256);
+                                                                  EmailFormatError.setMusicVolume(1, 256);
                                                                 }
                                                               }
                                                             } else {
                                                               if (var8Lifetime1 < 256) {
-                                                                ef.a(1, var8Lifetime1);
+                                                                EmailFormatError.setMusicVolume(1, var8Lifetime1);
                                                                 if (var10 != 0) {
-                                                                  ef.a(1, 256);
+                                                                  EmailFormatError.setMusicVolume(1, 256);
                                                                 }
                                                               } else {
-                                                                ef.a(1, 256);
+                                                                EmailFormatError.setMusicVolume(1, 256);
                                                               }
                                                             }
                                                           }
                                                           if (this.field_g.isHomePressed(-97)) {
                                                             SpriteCheckboxPainter.b(125);
                                                           }
-                                                          if (!this.field_g.c((byte) 51)) {
+                                                          if (!this.field_g.isRightPressed((byte) 51)) {
                                                             break regionExit1;
                                                           }
                                                           un.a((byte) 125);
@@ -2733,7 +2733,7 @@ final class SentinelDesigner {
                                                         var10 != 0) {
                                                         boolean decompiledSharedTail0 = (di.field_g != 4);
                                                         if (!decompiledSharedTail0) {
-                                                          hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
+                                                          PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
                                                           lc.field_e = true;
                                                           Sprite.field_k = false;
                                                           var7 = GzipDecoder.field_g;
@@ -2870,7 +2870,7 @@ final class SentinelDesigner {
                                     14 != LoginForm.field_T) {
                                     break regionExit1;
                                   }
-                                  DebouncedValidator.a(this.field_c, pl.field_Q, 10);
+                                  DebouncedValidator.a(this.field_c, BirthDateEntryPanel.field_Q, 10);
                                   if (var10 == 0) {
                                     break regionExit1;
                                   }
@@ -2930,7 +2930,7 @@ final class SentinelDesigner {
                         if (!this.field_g.isForwardAction(0)) {
                           break regionExit1;
                         }
-                        ve.a((byte) 122);
+                        AssetDecoders.createTutorialSteps((byte) 122);
                         NameSuggestionsPanel.field_Y = -1;
                         SocketJs5Transport.field_A = null;
                         ImageProducerRasterBuffer.field_B = null;
@@ -2938,8 +2938,8 @@ final class SentinelDesigner {
                         DateOfBirthValidator.d(-68);
                         var6 = 0;
                         while (true) {
-                          if (var6 < va.field_k.length) {
-                            va.field_k[var6] = 0;
+                          if (var6 < LoginDialogHelpers.field_k.length) {
+                            LoginDialogHelpers.field_k[var6] = 0;
                             var6++;
                             if (var10 == 0) {
                               continue;
@@ -2986,12 +2986,12 @@ final class SentinelDesigner {
                   if (!this.field_g.isForwardAction(0)) {
                     break regionExit1;
                   }
-                  stackIn_856_0 = !(dm.field_c);
-                  dm.field_c = stackIn_856_0;
+                  stackIn_856_0 = !(NameCheckResult.field_c);
+                  NameCheckResult.field_c = stackIn_856_0;
                   ContentTransitionDialog.field_sb = null;
                   stackIn_859_0 = ImageProducerRasterBuffer.field_A;
                   stackIn_859_1 = 42;
-                  if (!dm.field_c) {
+                  if (!NameCheckResult.field_c) {
                     stackIn_860_2 = ClientException.field_j;
                   } else {
                     stackIn_860_2 = qm.field_c;
@@ -3032,11 +3032,11 @@ final class SentinelDesigner {
               }
               if (this.a(125, param1) &&
                 this.field_g.isForwardAction(0)) {
-                stackIn_897_0 = !(ik.field_h);
-                ik.field_h = stackIn_897_0;
+                stackIn_897_0 = !(ConditionalTextValue.field_h);
+                ConditionalTextValue.field_h = stackIn_897_0;
                 stackIn_900_0 = ImageProducerRasterBuffer.field_A;
                 stackIn_900_1 = 44;
-                if (!ik.field_h) {
+                if (!ConditionalTextValue.field_h) {
                   stackIn_901_2 = sa.field_b;
                 } else {
                   stackIn_901_2 = o.field_a;
@@ -3084,7 +3084,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3127,7 +3127,7 @@ final class SentinelDesigner {
               break;
           }
           if (var2_int != -1) {
-            this.field_g.a(param0 ^ -120, var2_int);
+            this.field_g.selectIfButtonHeld(param0 ^ -120, var2_int);
             return;
           }
           if (7 != LoginForm.field_T) {
@@ -3186,12 +3186,12 @@ final class SentinelDesigner {
                         return;
                       }
                     }
-                    this.field_g.a(true);
+                    this.field_g.handleVerticalKey(true);
                     if (var4 == 0) {
                       return;
                     }
                   }
-                  this.field_g.a(true);
+                  this.field_g.handleVerticalKey(true);
                   if (var4 == 0) {
                     return;
                   }
@@ -3216,7 +3216,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.I(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.I(" + param0 + ')');
         }
     }
 
@@ -3240,7 +3240,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.E(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.E(" + param0 + ')');
         }
     }
 
@@ -3249,25 +3249,25 @@ final class SentinelDesigner {
         String var4 = null;
         try {
           int var2_int = 73 % ((param0 + 34) / 34);
-          var3 = pl.field_U;
+          var3 = BirthDateEntryPanel.field_U;
           var4 = VerticalScrollbar.field_hc;
           ((BitmapFont) ((Object) var3)).drawCentered(var4, 320, 240, 1021128, -1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.OA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.OA(" + param0 + ')');
         }
     }
 
     private final void h(int param0) {
-        if (null == va.field_c) {
+        if (null == LoginDialogHelpers.field_c) {
           return;
         }
         try {
-          va.field_c.d(-1);
+          LoginDialogHelpers.field_c.drawEditor(-1);
           if (param0 != 7165) {
             this.h(-118);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.B(" + param0 + ')');
         }
     }
 
@@ -3291,7 +3291,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.HA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.HA(" + param0 + ')');
         }
     }
 
@@ -3303,7 +3303,7 @@ final class SentinelDesigner {
         var3 = SteelSentinels.obfuscationControl;
         try {
           if (ContentTransitionDialog.field_sb != null) {
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               ValidationHelpWidget.field_lb.setInlineSprites(lc.field_a, AlternateUsernameCredentials.field_w);
               if (var3 != 0) {
                 ValidationHelpWidget.field_lb.setInlineSprites(SoundCache.field_a, AlternateUsernameCredentials.field_w);
@@ -3315,11 +3315,11 @@ final class SentinelDesigner {
               LoginForm.field_U != 0);
             if (!decompiledSharedTail0) {
               SoftwareRaster.fillRectangle(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
-              jj.field_a.a(true, (byte) 127);
+              jj.field_a.drawFullScreen(true, (byte) 127);
               decompiledSharedTail0 = (var3 != 0);
             }
             if (decompiledSharedTail0) {
-              ContentTransitionDialog.field_sb.a(true, (byte) 126);
+              ContentTransitionDialog.field_sb.drawFullScreen(true, (byte) 126);
               ValidationHelpWidget.field_lb.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
             }
           }
@@ -3328,7 +3328,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.BB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.BB(" + param0 + ')');
         }
     }
 
@@ -3367,8 +3367,8 @@ final class SentinelDesigner {
           }
           var3 = stackIn_30_0;
           if (0 <= QuickChatPhraseDefinition.field_C &&
-            QuickChatHelpDialog.a(var3, QuickChatPhraseDefinition.field_C, 31) &&
-            ve.a(QuickChatPhraseDefinition.field_A, 1, QuickChatPhraseDefinition.field_C)) {
+            QuickChatHelpDialog.isBitClear(var3, QuickChatPhraseDefinition.field_C, 31) &&
+            AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_A, 1, QuickChatPhraseDefinition.field_C)) {
             QuickChatPhraseDefinition.field_C = -1;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -3400,7 +3400,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "ji.T(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "ji.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3465,7 +3465,7 @@ final class SentinelDesigner {
           if (1 == var4_int ||
             var4_int == 33 ||
             39 == var4_int) {
-            stackIn_14_0 = (ib.a(param2 ^ -30230)) ? 0 : 1;
+            stackIn_14_0 = (ChatPanelHelpers.areBaseAssetsLoaded(param2 ^ -30230)) ? 0 : 1;
             var6 = stackIn_14_0;
           }
           if (var4_int == 28 &&
@@ -3504,7 +3504,7 @@ final class SentinelDesigner {
           }
           if (var4_int == 9 &&
             var8 != 0) {
-            var7 = ec.field_f;
+            var7 = ClientUiHelpers.field_f;
           }
           if ((var4_int != 9 ||
             var8 == 0 || var24 != 0) && (var4_int == 9 &&
@@ -3586,7 +3586,7 @@ final class SentinelDesigner {
               var13_ref_String = "000000";
               var14_ref_String = var13_ref_String;
             }
-            var7 = SocketConnector.a(var7, -27, new String[]{Integer.toString(var11 + 1), (String) (var12_ref), var13_ref_String, var14_ref_String});
+            var7 = SocketConnector.formatTemplate(var7, -27, new String[]{Integer.toString(var11 + 1), (String) (var12_ref), var13_ref_String, var14_ref_String});
             if (-1 != var16) {
               if (var15 <= var16) {
                 var9Lifetime1 = 8;
@@ -3607,7 +3607,7 @@ final class SentinelDesigner {
             }
           }
           var7 = WidgetStyleLayer.a(42, var7);
-          var10 = pl.field_U;
+          var10 = BirthDateEntryPanel.field_U;
           var11 = 0;
           if (this.field_c == 0) {
             var10 = AlphaContainer.field_U;
@@ -3617,7 +3617,7 @@ final class SentinelDesigner {
             if (var6 == 0) {
               stackIn_179_0 = AlphaContainer.field_U;
             } else {
-              stackIn_179_0 = pl.field_U;
+              stackIn_179_0 = BirthDateEntryPanel.field_U;
             }
             var10 = stackIn_179_0;
           }
@@ -3649,7 +3649,7 @@ final class SentinelDesigner {
             EmailCredentials.field_j == 1) {
             var20Lifetime2 = ja.field_e;
           }
-          var20Lifetime3 = pl.field_T;
+          var20Lifetime3 = BirthDateEntryPanel.field_T;
           if (var4_int == 38 ||
             var4_int == 25 ||
             var4_int == 26 ||
@@ -3673,7 +3673,7 @@ final class SentinelDesigner {
               if (param1) {
                 stackIn_275_0 = MouseInputHandler.field_d;
               } else {
-                stackIn_275_0 = hk.field_Tb;
+                stackIn_275_0 = LobbyGame.field_Tb;
               }
               var20Lifetime3 = stackIn_275_0;
               stackIn_279_0 = (param1) ? 0 : 1146810;
@@ -3683,7 +3683,7 @@ final class SentinelDesigner {
             if (param1) {
               stackIn_275_0 = MouseInputHandler.field_d;
             } else {
-              stackIn_275_0 = hk.field_Tb;
+              stackIn_275_0 = LobbyGame.field_Tb;
             }
             var20Lifetime3 = stackIn_275_0;
             stackIn_279_0 = (param1) ? 0 : 1146810;
@@ -3797,21 +3797,21 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void q(int param0) {
-        if (va.field_c == null) {
+        if (LoginDialogHelpers.field_c == null) {
           return;
         }
         if (param0 != -30748) {
           return;
         }
         try {
-          va.field_c.b(-12986);
+          LoginDialogHelpers.field_c.handleEditorKey(-12986);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.FB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.FB(" + param0 + ')');
         }
     }
 
@@ -3838,7 +3838,7 @@ final class SentinelDesigner {
         String var13Lifetime5;
         var18 = SteelSentinels.obfuscationControl;
         try {
-          var10 = pl.field_U;
+          var10 = BirthDateEntryPanel.field_U;
           var11 = 1021128;
           var12 = param7 + (param4 + param6);
           if (var12 != 0) {
@@ -3887,7 +3887,7 @@ final class SentinelDesigner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -3899,20 +3899,20 @@ final class SentinelDesigner {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = SocialListPanel.a(ce.field_t, 18286) ? 1 : 0;
+          var2_int = SocialListPanel.isAllZero(ce.field_t, 18286) ? 1 : 0;
           if (param0 <= 63) {
             this.field_k = -30;
           }
           stackIn_7_0 = (lc.field_c == null) ? 0 : 1;
           var3 = stackIn_7_0;
-          var4 = na.field_v;
-          var4 = var4 + " " + hk.a('#', "<br><br>", true, SocketConnector.a(GradientOutlineTextPainter.a(var2_int != 0, true, var3 != 0, false), -48, new String[]{BoundedRandomAccessFile.field_h}));
-          va.field_j.drawParagraph(var4, 10, 70, 620, 180, 1021128, -1, 1, 0, 18);
+          var4 = ChatMessage.field_v;
+          var4 = var4 + " " + LobbyGame.replaceCharacter('#', "<br><br>", true, SocketConnector.formatTemplate(GradientOutlineTextPainter.a(var2_int != 0, true, var3 != 0, false), -48, new String[]{BoundedRandomAccessFile.field_h}));
+          LoginDialogHelpers.field_j.drawParagraph(var4, 10, 70, 620, 180, 1021128, -1, 1, 0, 18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.IA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.IA(" + param0 + ')');
         }
     }
 
@@ -3952,14 +3952,14 @@ final class SentinelDesigner {
           if (param0 < 49) {
             return;
           }
-          var2 = pl.field_U;
+          var2 = BirthDateEntryPanel.field_U;
           var3 = 1;
           if (qi.field_d == null ||
             ~qi.field_d.field_C != ~var3) {
             qi.field_d = LoginDialog.a((byte) 122, 1, var3, 3, 10);
           }
           var4 = DropTargetWidget.field_R;
-          var5 = ib.a(lc.field_c, 7047, var4, qi.field_d);
+          var5 = ChatPanelHelpers.findSubmittedScoreRow(lc.field_c, 7047, var4, qi.field_d);
           if (null != lc.field_c &&
             ~lc.field_c.field_y != ~var3) {
             var5 = 100;
@@ -4003,7 +4003,7 @@ final class SentinelDesigner {
               SoftwareRaster.drawHorizontalLine(48, 109, 544, 1130327);
               SoftwareRaster.drawHorizontalLine(48, 353, 544, 1130327);
               var7Lifetime2 = 126;
-              var6 = im.field_d;
+              var6 = LobbyStateHelpers.field_d;
               var11_intLifetime1 = 0;
               while (true) {
                 if (var11_intLifetime1 >= 10) {
@@ -4014,8 +4014,8 @@ final class SentinelDesigner {
                     var11 = GrowableIntList.field_l;
                     var12 = 0;
                     var13 = NodeHashTable.nonnegativeRemainder(false, var10[var12], 12);
-                    var14 = NodeHashTable.nonnegativeRemainder(false, ad.a(126, var10[var12], 12), 43);
-                    var15 = ad.a(113, var10[var12], 516);
+                    var14 = NodeHashTable.nonnegativeRemainder(false, LoadoutHelpers.floorDivide(126, var10[var12], 12), 43);
+                    var15 = LoadoutHelpers.floorDivide(113, var10[var12], 516);
                     this.a(true, false, var7Lifetime2, var14, var11, var13, var15, 0);
                   }
                   break;
@@ -4028,8 +4028,8 @@ final class SentinelDesigner {
                       var8Lifetime1Lifetime1 = 1044724;
                     }
                     var13Lifetime1 = NodeHashTable.nonnegativeRemainder(false, var10[var11_intLifetime1], 12);
-                    var14Lifetime1 = NodeHashTable.nonnegativeRemainder(false, ad.a(119, var10[var11_intLifetime1], 12), 43);
-                    var15Lifetime1 = ad.a(122, var10[var11_intLifetime1], 516);
+                    var14Lifetime1 = NodeHashTable.nonnegativeRemainder(false, LoadoutHelpers.floorDivide(119, var10[var11_intLifetime1], 12), 43);
+                    var15Lifetime1 = LoadoutHelpers.floorDivide(122, var10[var11_intLifetime1], 516);
                     stackIn_48_1 = (~var5 == ~var11_intLifetime1);
                     this.a(stackIn_48_1, false, var7Lifetime2, var14Lifetime1, var12_ref_String, var13Lifetime1, var15Lifetime1, 1 + var11_intLifetime1);
                     var6 = AccountRequestDialog.field_Fb;
@@ -4048,12 +4048,12 @@ final class SentinelDesigner {
             }
           }
           var7Lifetime1 = 368;
-          pl.field_U.drawLeft(var6, 5 + EmailAvailabilityValidator.field_v[0], var7Lifetime1, 1130327, -1);
+          BirthDateEntryPanel.field_U.drawLeft(var6, 5 + EmailAvailabilityValidator.field_v[0], var7Lifetime1, 1130327, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ji.MA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ji.MA(" + param0 + ')');
         }
     }
 
@@ -4085,11 +4085,11 @@ final class SentinelDesigner {
           if (var4_int == 1 ||
             var4_int == 33 ||
             var4_int == 39) {
-            stackIn_18_0 = (ib.a(-107)) ? 0 : 1;
+            stackIn_18_0 = (ChatPanelHelpers.areBaseAssetsLoaded(-107)) ? 0 : 1;
             var5 = stackIn_18_0;
           }
           var6 = -107 % ((-50 - param0) / 53);
-          var7 = pl.field_T;
+          var7 = BirthDateEntryPanel.field_T;
           var8 = this.g(127, param1);
           var9 = this.b(param1, (byte) 95);
           var10 = this.a(param1, (byte) 108) - var8;
@@ -4148,7 +4148,7 @@ final class SentinelDesigner {
             }
             var13 = stackIn_93_0;
           }
-          var14 = pl.field_U.textWidth(var12);
+          var14 = BirthDateEntryPanel.field_U.textWidth(var12);
           if (var5 != 0) {
             var13 = 11417637;
           }
@@ -4164,17 +4164,17 @@ final class SentinelDesigner {
             var13 = 13696896;
           }
           if (var14 <= var10) {
-            pl.field_U.drawCentered(var12, var8 + var10 / 2, var9 + var11 / 2 + 4, var13, -1);
+            BirthDateEntryPanel.field_U.drawCentered(var12, var8 + var10 / 2, var9 + var11 / 2 + 4, var13, -1);
             if (var15 == 0) {
               return;
             }
           }
-          pl.field_U.drawParagraph(var12, var8, -pl.field_U.field_G + var11 / 2 + var9, var10, var11, var13, -1, 1, 0, 10);
+          BirthDateEntryPanel.field_U.drawParagraph(var12, var8, -BirthDateEntryPanel.field_U.field_G + var11 / 2 + var9, var10, var11, var13, -1, 1, 0, 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4280,11 +4280,11 @@ final class SentinelDesigner {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              var11 = SocketConnector.a(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[QuickChatHelpDialog.field_Ub])});
               decompiledFrameRemainder1 = (var29 != 0);
             }
             if (decompiledFrameRemainder1) {
-              var11 = SocketConnector.a(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[10 + QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[10 + QuickChatHelpDialog.field_Ub])});
             }
           }
           if (DirectByteStorage.field_j != 0) {
@@ -4292,15 +4292,15 @@ final class SentinelDesigner {
           } else {
             stackIn_24_0 = NodeDeque.field_h;
           }
-          var12 = SocketConnector.a(stackIn_24_0, -88, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1), var11});
-          pl.field_U.drawCentered(var12, var7 / 2 + var6, var8 + 16, 1021128, -1);
+          var12 = SocketConnector.formatTemplate(stackIn_24_0, -88, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1), var11});
+          BirthDateEntryPanel.field_U.drawCentered(var12, var7 / 2 + var6, var8 + 16, 1021128, -1);
           if (0 < DirectByteStorage.field_j &&
             QuickChatHelpDialog.field_Ub < fm.field_f[DirectByteStorage.field_j]) {
             var13 = ed.field_c[DirectByteStorage.field_j][QuickChatHelpDialog.field_Ub];
             var14 = 3 * var13 / 2;
             var15 = jh.field_a[(-1 + DirectByteStorage.field_j) * 10 + QuickChatHelpDialog.field_Ub];
             if (var14 >= var15) {
-              var16 = 20 + pl.field_U.textWidth(var12) / 2;
+              var16 = 20 + BirthDateEntryPanel.field_U.textWidth(var12) / 2;
               stackIn_34_0 = AccountChoicePanel.field_Z;
               if (var13 >= var15) {
                 stackIn_35_1 = 8;
@@ -4360,24 +4360,24 @@ final class SentinelDesigner {
           if (stackIn_55_0 == stackIn_55_1) {
             var21++;
           }
-          if (ba.a((byte) -57)) {
+          if (QuickChatInputHelpers.readPendingByte((byte) -57)) {
             var21++;
           }
-          var22_ref = SocketConnector.a(c.field_s[10 * DirectByteStorage.field_j + QuickChatHelpDialog.field_Ub], param0 ^ -21265, new String[]{qf.field_a[var21], IconLabelControl.a(qf.field_a[var21], 0)});
+          var22_ref = SocketConnector.formatTemplate(c.field_s[10 * DirectByteStorage.field_j + QuickChatHelpDialog.field_Ub], param0 ^ -21265, new String[]{qf.field_a[var21], IconLabelControl.capitalizeFirstVisibleLetter(qf.field_a[var21], 0)});
           var23 = this.a((byte) -128, QuickChatHelpDialog.field_Ub, DirectByteStorage.field_j);
           if ((15 & fm.field_f[0]) < var23 &&
             fm.field_f[DirectByteStorage.field_j] <= QuickChatHelpDialog.field_Ub) {
             if (var23 == 10) {
               stackIn_70_0 = uj.field_l;
             } else {
-              stackIn_70_0 = SocketConnector.a(GameApplet.field_b, -26, new String[]{Integer.toString(var23), MarkerSlider.field_cb[var23 - 1]});
+              stackIn_70_0 = SocketConnector.formatTemplate(GameApplet.field_b, -26, new String[]{Integer.toString(var23), MarkerSlider.field_cb[var23 - 1]});
             }
             var24_ref_String = stackIn_70_0;
             var22_ref = var22_ref + "<br><br><col=ff0000>" + var24_ref_String + "</col>";
           }
           stackIn_75_0 = ((30 + var18Lifetime1 + ValidationHelpWidget.field_lb.paragraphHeight(var22_ref, var19Lifetime1, 16)) < var5Lifetime1) ? 0 : 1;
           var24Lifetime1 = stackIn_75_0;
-          pl.field_U.drawLeft(MarkerSlider.field_cb[QuickChatHelpDialog.field_Ub + DirectByteStorage.field_j * 10].toUpperCase(), var17, var18Lifetime1 + 20, 16777215, -1);
+          BirthDateEntryPanel.field_U.drawLeft(MarkerSlider.field_cb[QuickChatHelpDialog.field_Ub + DirectByteStorage.field_j * 10].toUpperCase(), var17, var18Lifetime1 + 20, 16777215, -1);
           stackIn_78_0 = ValidationHelpWidget.field_lb;
           stackIn_78_1 = var22_ref;
           stackIn_78_2 = var17;
@@ -4407,7 +4407,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.GB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.GB(" + param0 + ')');
         }
     }
 
@@ -4563,7 +4563,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.F(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4712,7 +4712,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.R(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.R(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           stackIn_65_0 = stackIn_62_0;
@@ -4743,7 +4743,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.TA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.TA(" + param0 + ')');
         }
     }
 
@@ -4891,7 +4891,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.AB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.AB(" + param0 + ')');
         }
     }
 
@@ -4916,7 +4916,7 @@ final class SentinelDesigner {
         int var7_intLifetime1;
         var12 = SteelSentinels.obfuscationControl;
         try {
-          var2 = pl.field_U;
+          var2 = BirthDateEntryPanel.field_U;
           SoftwareRaster.drawRectangleOutline(40, 80, 560, 330, 3487029);
           SoftwareRaster.drawRectangleOutline(41, 81, 558, 328, 3487029);
           if (ni.b(25)) {
@@ -4924,7 +4924,7 @@ final class SentinelDesigner {
             return;
           }
           if (qi.field_j == null) {
-            qi.field_j = QuickChatHelpDialog.a(7, true, 0, 10);
+            qi.field_j = QuickChatHelpDialog.getRankingQuery(7, true, 0, 10);
           }
           if (param0 > -87) {
             return;
@@ -4935,7 +4935,7 @@ final class SentinelDesigner {
             var5_int = ((BitmapFont) ((Object) var2)).textWidth("10000%");
             var6_int = 5;
             while (var6_int > 0) {
-              var7_int = ((BitmapFont) ((Object) var2)).textWidth(pe.field_h[var6_int]) + 8;
+              var7_int = ((BitmapFont) ((Object) var2)).textWidth(TriangleMesh.field_h[var6_int]) + 8;
               stackIn_19_0 = Math.max(var7_int, var5_int);
               if (var12 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4965,12 +4965,12 @@ final class SentinelDesigner {
               var8 = 1;
               do {
                 if (!(QuickChatPhraseCache.field_h.length - 1 > var8)) {
-                  ((BitmapFont) ((Object) var2)).drawLeft(pe.field_h[0], 2 + QuickChatPhraseCache.field_h[0], var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).drawRight(pe.field_h[1], -2 + (QuickChatPhraseCache.field_h[2] - 1), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).drawRight(pe.field_h[2], -1 + QuickChatPhraseCache.field_h[3] - 2, var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).drawRight(pe.field_h[3], -1 + (-2 + QuickChatPhraseCache.field_h[4]), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).drawRight(pe.field_h[4], -2 + (QuickChatPhraseCache.field_h[5] - 1), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).drawRight(pe.field_h[5], -1 + (-2 + QuickChatPhraseCache.field_h[6]), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawLeft(TriangleMesh.field_h[0], 2 + QuickChatPhraseCache.field_h[0], var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawRight(TriangleMesh.field_h[1], -2 + (QuickChatPhraseCache.field_h[2] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawRight(TriangleMesh.field_h[2], -1 + QuickChatPhraseCache.field_h[3] - 2, var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawRight(TriangleMesh.field_h[3], -1 + (-2 + QuickChatPhraseCache.field_h[4]), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawRight(TriangleMesh.field_h[4], -2 + (QuickChatPhraseCache.field_h[5] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).drawRight(TriangleMesh.field_h[5], -1 + (-2 + QuickChatPhraseCache.field_h[6]), var4, var3, -1);
                   var4 = 126;
                   var8 = 0;
                   break;
@@ -5020,7 +5020,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ji.QA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ji.QA(" + param0 + ')');
         }
     }
 
@@ -5139,7 +5139,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.KA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5166,7 +5166,7 @@ final class SentinelDesigner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -5177,13 +5177,13 @@ final class SentinelDesigner {
           if (param1 != 111) {
             this.a(18, false);
           }
-          if (ve.a(DirectByteStorage.field_m, 1, param0)) {
+          if (AssetDecoders.isBitSet(DirectByteStorage.field_m, 1, param0)) {
             return true;
           }
-          if (ve.a(QuickChatPhraseDefinition.field_A, param1 - 110, param0)) {
+          if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_A, param1 - 110, param0)) {
             return false;
           }
-          if (ve.a(QuickChatPhraseDefinition.field_E, 1, param0) && (ni.b(param1 ^ 54) ||
+          if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, 1, param0) && (ni.b(param1 ^ 54) ||
             !(0 < rd.field_b))) {
             return false;
           }
@@ -5191,7 +5191,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.W(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5199,11 +5199,11 @@ final class SentinelDesigner {
         CoverageBitmapFont var2 = null;
         String var3 = null;
         try {
-          var2 = pl.field_U;
+          var2 = BirthDateEntryPanel.field_U;
           var3 = VerticalScrollbar.field_hc;
           ((BitmapFont) ((Object) var2)).drawCentered(var3, 320, 240, param0, -1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.CA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.CA(" + param0 + ')');
         }
     }
 
@@ -5234,10 +5234,10 @@ final class SentinelDesigner {
             field_f = (String[]) null;
           }
           if (VerticalScrollbar.field_gc == 1) {
-            var2_int = -17 + va.field_d;
+            var2_int = -17 + LoginDialogHelpers.field_d;
             if (var2_int < 0 ||
               5 < var2_int) {
-              var2_int = va.field_d - 24;
+              var2_int = LoginDialogHelpers.field_d - 24;
               if (var2_int < 0 ||
                 var2_int >= 3) {
                 var2_int = 0;
@@ -5252,7 +5252,7 @@ final class SentinelDesigner {
                       boolean decompiledFrameRemainder12 = true;
                       var3 = 0;
                       var4 = 0;
-                      var5 = va.field_d;
+                      var5 = LoginDialogHelpers.field_d;
                       if ((0 != var5 ||
                         var12 != 0) &&
                         (decompiledFrameRemainder12 = (2 != var5 ||
@@ -5323,7 +5323,7 @@ final class SentinelDesigner {
                 }
               }
               var4 = 12;
-              var2_int = -1 + va.field_d;
+              var2_int = -1 + LoginDialogHelpers.field_d;
               ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 67108864);
               var3 = 0;
               ArchiveRequest.field_D[1] = DateOfBirthValidator.a(ArchiveRequest.field_D[1], 1);
@@ -5331,11 +5331,11 @@ final class SentinelDesigner {
               rn.field_D[1] = DateOfBirthValidator.a(rn.field_D[1], 131072);
               ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 16777216);
             }
-            if (va.field_d == 13) {
+            if (LoginDialogHelpers.field_d == 13) {
               NodeIterator.field_f = 2;
               PasswordFieldPainter.field_v = 1000;
               fm.field_f[0] = 10;
-              dm.field_a = 8;
+              NameCheckResult.field_a = 8;
               DraggableWidget.field_G = 1000;
               fm.field_f[1] = 10;
               fm.field_f[2] = 10;
@@ -5353,7 +5353,7 @@ final class SentinelDesigner {
                   boolean decompiledFrameRemainder7 = true;
                   boolean decompiledFrameRemainder6 = true;
                   boolean decompiledFrameRemainder5 = true;
-                  var5 = va.field_d - var2_int;
+                  var5 = LoginDialogHelpers.field_d - var2_int;
                   if (var5 == 0 &&
                     var12 == 0) {
                     ViewportController.field_j = true;
@@ -5363,8 +5363,8 @@ final class SentinelDesigner {
                       stackIn_121_1 = ~var5;
                       if (stackIn_121_0 < stackIn_121_1) {
                         var6 = FunOrbClient.field_z[var5];
-                        rn.field_D[var6 >> 5] = ec.a(rn.field_D[var6 >> 5], ~(1 << ec.a(var6, 31)));
-                        var7 = FallingPickup.a(var6, (byte) 28);
+                        rn.field_D[var6 >> 5] = ClientUiHelpers.bitAnd(rn.field_D[var6 >> 5], ~(1 << ClientUiHelpers.bitAnd(var6, 31)));
+                        var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                         var8 = var7;
                         stackIn_385_0 = 0;
                         var9_int = stackIn_385_0;
@@ -5374,7 +5374,7 @@ final class SentinelDesigner {
                           stackIn_121_0 = -1;
                           stackIn_121_1 = ~(var11_ref_nk.field_Q & 2055);
                           if (stackIn_121_0 != stackIn_121_1) {
-                            rn.field_D[var10 >> 5] = ec.a(rn.field_D[var10 >> 5], ~(1 << ec.a(var10, 31)));
+                            rn.field_D[var10 >> 5] = ClientUiHelpers.bitAnd(rn.field_D[var10 >> 5], ~(1 << ClientUiHelpers.bitAnd(var10, 31)));
                           }
                           var9_int++;
                         }
@@ -5439,8 +5439,8 @@ final class SentinelDesigner {
                     var5 = var3;
                     while (var5 < var4) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(var6, 31));
-                      var7 = FallingPickup.a(var6, (byte) 28);
+                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(var6, 31));
+                      var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
                       if (var12 != 0) {
@@ -5450,7 +5450,7 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
                         var9_int++;
                       }
                       var8 = LoadingProgressDialog.b(var6, (byte) -110);
@@ -5458,7 +5458,7 @@ final class SentinelDesigner {
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(var11, 31));
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(var11, 31));
                         var10++;
                       }
                       var5++;
@@ -5551,7 +5551,7 @@ final class SentinelDesigner {
                     } while (var12 == 0);
                     do {
                       if (!(var5 < ArchiveRequest.field_D.length)) {
-                        dm.field_a = 0;
+                        NameCheckResult.field_a = 0;
                         fm.field_f[0] = 0;
                         PasswordFieldPainter.field_v = 0;
                         DraggableWidget.field_G = 0;
@@ -5571,7 +5571,7 @@ final class SentinelDesigner {
                     (decompiledFrameRemainder9) &&
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1)) {
-                    dm.field_a = 0;
+                    NameCheckResult.field_a = 0;
                     ViewportController.field_j = true;
                     NodeIterator.field_f = 1;
                     var5 = 0;
@@ -5588,13 +5588,13 @@ final class SentinelDesigner {
                         DraggableWidget.field_G = 0;
                         PasswordFieldPainter.field_v = 0;
                         var5 = 55;
-                        rn.field_D[var5 >> 5] = DateOfBirthValidator.a(rn.field_D[var5 >> 5], 1 << ec.a(var5, 31));
+                        rn.field_D[var5 >> 5] = DateOfBirthValidator.a(rn.field_D[var5 >> 5], 1 << ClientUiHelpers.bitAnd(var5, 31));
                         break;
                       }
                       ArchiveRequest.field_D[var5] = 0;
                       var5++;
                     } while (var12 == 0);
-                    var6_ref_int__ = FallingPickup.a(var5, (byte) 28);
+                    var6_ref_int__ = FallingPickup.getUniqueChildComponentIds(var5, (byte) 28);
                     var7 = var6_ref_int__;
                     var8_int = 0;
                     do {
@@ -5603,7 +5603,7 @@ final class SentinelDesigner {
                         break;
                       }
                       var9_int = var7[var8_int];
-                      rn.field_D[var9_int >> 5] = DateOfBirthValidator.a(rn.field_D[var9_int >> 5], 1 << ec.a(31, var9_int));
+                      rn.field_D[var9_int >> 5] = DateOfBirthValidator.a(rn.field_D[var9_int >> 5], 1 << ClientUiHelpers.bitAnd(31, var9_int));
                       DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var9_int];
                       var8_int++;
                     } while (var12 == 0);
@@ -5617,7 +5617,7 @@ final class SentinelDesigner {
                         break;
                       }
                       var10 = var8[var9_int];
-                      ArchiveRequest.field_D[var10 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                      ArchiveRequest.field_D[var10 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
                       DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var10];
                       var9_int++;
                     } while (var12 == 0);
@@ -5630,7 +5630,7 @@ final class SentinelDesigner {
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1)) {
                     NodeIterator.field_f = 2;
-                    dm.field_a = 8;
+                    NameCheckResult.field_a = 8;
                     ViewportController.field_j = true;
                     var5 = 0;
                     do {
@@ -5653,8 +5653,8 @@ final class SentinelDesigner {
                     var5 = 0;
                     while (var5 < 3) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(31, var6));
-                      var7 = FallingPickup.a(var6, (byte) 28);
+                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(31, var6));
+                      var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
                       if (var12 != 0) {
@@ -5664,7 +5664,7 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
                         DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var10];
                         var9_int++;
                       }
@@ -5673,7 +5673,7 @@ final class SentinelDesigner {
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(31, var11));
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(31, var11));
                         DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var11];
                         var10++;
                       }
@@ -5692,13 +5692,13 @@ final class SentinelDesigner {
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0)) {
-                    if ((8 & dm.field_a) != 0) {
-                      dm.field_a = dm.field_a & -9;
+                    if ((8 & NameCheckResult.field_a) != 0) {
+                      NameCheckResult.field_a = NameCheckResult.field_a & -9;
                       if (var12 == 0) {
                         break regionExit6;
                       }
                     }
-                    dm.field_a = dm.field_a | 8;
+                    NameCheckResult.field_a = NameCheckResult.field_a | 8;
                     if (var12 == 0) {
                       break regionExit6;
                     }
@@ -5707,22 +5707,22 @@ final class SentinelDesigner {
                     (decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0)) {
                     if (ni.b(46)) {
-                      km.field_a = "Not logged in.";
+                      ClientGlobals.field_a = "Not logged in.";
                       if (var12 == 0) {
                         break regionExit6;
                       }
                     }
                     ViewportController.field_j = false;
-                    mm.field_g.writeCipheredOpcode(69, (byte) -117);
-                    mm.field_g.writeInt(true, PasswordFieldPainter.field_v);
-                    mm.field_g.writeInt(true, DraggableWidget.field_G);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(69, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeInt(true, PasswordFieldPainter.field_v);
+                    ClockAndCookieHelpers.field_g.writeInt(true, DraggableWidget.field_G);
                     var5 = 0;
                     do {
                       if (var5 >= 4) {
                         var5 = 0;
                         break;
                       }
-                      mm.field_g.writeInt(true, rn.field_D[var5]);
+                      ClockAndCookieHelpers.field_g.writeInt(true, rn.field_D[var5]);
                       var5++;
                     } while (var12 == 0);
                     do {
@@ -5730,22 +5730,22 @@ final class SentinelDesigner {
                         var5 = 0;
                         break;
                       }
-                      mm.field_g.writeInt(true, ArchiveRequest.field_D[var5]);
+                      ClockAndCookieHelpers.field_g.writeInt(true, ArchiveRequest.field_D[var5]);
                       var5++;
                     } while (var12 == 0);
                     do {
                       if (var5 >= 3) {
-                        mm.field_g.writeByte((byte) 126, NodeIterator.field_f);
-                        km.field_a = "Data sent.";
+                        ClockAndCookieHelpers.field_g.writeByte((byte) 126, NodeIterator.field_f);
+                        ClientGlobals.field_a = "Data sent.";
                         break;
                       }
-                      mm.field_g.writeByte((byte) 115, fm.field_f[var5]);
+                      ClockAndCookieHelpers.field_g.writeByte((byte) 115, fm.field_f[var5]);
                       var5++;
                     } while (var12 == 0);
                     if (NodeDeque.field_d >= 2) {
                       break regionExit6;
                     }
-                    km.field_a = km.field_a + " (Expect it to be ignored.)";
+                    ClientGlobals.field_a = ClientGlobals.field_a + " (Expect it to be ignored.)";
                     if (var12 == 0) {
                       break regionExit6;
                     }
@@ -5757,8 +5757,8 @@ final class SentinelDesigner {
                   DateOfBirthValidator.d(-57);
                   var5 = 0;
                   while (true) {
-                    if (va.field_k.length > var5) {
-                      va.field_k[var5] = 0;
+                    if (LoginDialogHelpers.field_k.length > var5) {
+                      LoginDialogHelpers.field_k[var5] = 0;
                       var5++;
                       if (var12 == 0) {
                         continue;
@@ -5838,7 +5838,7 @@ final class SentinelDesigner {
                   }
                 }
                 if (decompiledFrameRemainder4) {
-                  jn.a(true, (byte) 96, 200, ue.field_e);
+                  jn.a(true, (byte) 96, 200, LoginHandshakeHelpers.field_e);
                   if (var12 == 0) {
                     return;
                   }
@@ -5857,7 +5857,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.BA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.BA(" + param0 + ')');
         }
     }
 
@@ -5870,57 +5870,57 @@ final class SentinelDesigner {
           if (NameAvailabilityValidator.field_q == 96) {
             if (this.field_g.field_e > 0) {
               if (this.field_g.field_e != 3) {
-                this.field_g.a(0, -1 + this.field_g.field_e);
+                this.field_g.selectIfButtonHeld(0, -1 + this.field_g.field_e);
                 if (var3 != 0) {
-                  this.field_g.a(0, 2);
+                  this.field_g.selectIfButtonHeld(0, 2);
                 }
               }
             } else {
-              this.field_g.a(0, 2);
+              this.field_g.selectIfButtonHeld(0, 2);
             }
           }
           if (97 == NameAvailabilityValidator.field_q) {
             if (2 <= this.field_g.field_e) {
               if (2 == this.field_g.field_e) {
-                this.field_g.a(0, 0);
+                this.field_g.selectIfButtonHeld(0, 0);
                 if (var3 != 0) {
-                  this.field_g.a(0, 1 + this.field_g.field_e);
+                  this.field_g.selectIfButtonHeld(0, 1 + this.field_g.field_e);
                 }
               }
             } else {
-              this.field_g.a(0, 1 + this.field_g.field_e);
+              this.field_g.selectIfButtonHeld(0, 1 + this.field_g.field_e);
             }
           }
           if (99 == NameAvailabilityValidator.field_q) {
             if (!(this.field_g.field_e >= 0) ||
               !(this.field_g.field_e <= 2)) {
-              this.field_g.a(0, DropTargetWidget.field_R);
+              this.field_g.selectIfButtonHeld(0, DropTargetWidget.field_R);
               if (var3 != 0) {
-                this.field_g.a(param0 + 1, 3);
+                this.field_g.selectIfButtonHeld(param0 + 1, 3);
               }
             } else {
-              this.field_g.a(param0 + 1, 3);
+              this.field_g.selectIfButtonHeld(param0 + 1, 3);
             }
           }
           if (98 == NameAvailabilityValidator.field_q) {
             if (this.field_g.field_e != 3) {
-              this.field_g.a(0, 3);
+              this.field_g.selectIfButtonHeld(0, 3);
               if (var3 != 0) {
-                this.field_g.a(0, DropTargetWidget.field_R);
+                this.field_g.selectIfButtonHeld(0, DropTargetWidget.field_R);
               }
             } else {
-              this.field_g.a(0, DropTargetWidget.field_R);
+              this.field_g.selectIfButtonHeld(0, DropTargetWidget.field_R);
             }
           }
           if (param0 != -1) {
             SentinelDesigner.a(12, (String) null);
           }
-          this.field_g.e((byte) 22);
+          this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.P(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.P(" + param0 + ')');
         }
     }
 
@@ -5986,8 +5986,8 @@ final class SentinelDesigner {
           }
           this.a(false);
           if (12 == this.field_c) {
-            if (MusicPatchPcmStream.f(-127)) {
-              la.a(35);
+            if (MusicPatchPcmStream.loadMembersBenefitsAssets(-127)) {
+              BenefitsScreenHelpers.drawBenefitsScreen(35);
             }
             return;
           }
@@ -6005,7 +6005,7 @@ final class SentinelDesigner {
               tm.field_h = true;
             }
             if (tm.field_h) {
-              eh.field_c.a(true);
+              SocialListUiHelpers.field_c.draw(true);
             }
             return;
           }
@@ -6013,11 +6013,11 @@ final class SentinelDesigner {
             TextHotspotWidget.field_eb.drawTransparent(0, -this.field_h + 0);
             ob.field_z.drawTransparent(0, 60 + this.field_k);
             var2_int = 0;
-            var2_int = var2_int + pc.e(param0 + 127);
+            var2_int = var2_int + PlayingSound.countUnlockedComponents(param0 + 127);
             var2_int = var2_int + 10 * (fm.field_f[2] + fm.field_f[0] + fm.field_f[1]);
             var2_int = var2_int + uf.a(param0 ^ 118, DirectByteStorage.field_m) * 10;
             stackIn_59_0 = var2_int;
-            if (ve.a(DirectByteStorage.field_m, param0 + 1, 25)) {
+            if (AssetDecoders.isBitSet(DirectByteStorage.field_m, param0 + 1, 25)) {
               stackIn_60_1 = 10;
             } else {
               stackIn_60_1 = 0;
@@ -6050,8 +6050,8 @@ final class SentinelDesigner {
               var10 = this.field_k + 100;
               var11_int = 100;
               var12 = 34;
-              if (var9 <= oh.field_f &&
-                oh.field_f < (var9 + var11_int) &&
+              if (var9 <= LobbySetupHelpers.field_f &&
+                LobbySetupHelpers.field_f < (var9 + var11_int) &&
                 var10 <= DelegatingCanvas.field_c &&
                 var12 + var10 > DelegatingCanvas.field_c) {
                 stackIn_93_0 = 1;
@@ -6111,7 +6111,7 @@ final class SentinelDesigner {
                         }
                         else {
                           if (20 == var5_int) {
-                            var2 = cc.field_ic[DirectByteStorage.field_j];
+                            var2 = LobbyPlayer.field_ic[DirectByteStorage.field_j];
                             decompiledFrameRemainder2 = false;
                           }
                           else {
@@ -6166,7 +6166,7 @@ final class SentinelDesigner {
             var6_int = -30 + this.b(0, (byte) 126);
             var7 = -25 + this.g(param0 + 125, 0);
             var8 = 640 - var7 * 2;
-            jm.a(var6_int, var5_int, eb.field_p, 1, var7, var8);
+            jm.a(var6_int, var5_int, AgeValidator.field_p, 1, var7, var8);
           }
           if (this.field_c != 0) {
             var5_int = this.d((byte) 114);
@@ -6183,7 +6183,7 @@ final class SentinelDesigner {
               !GameApplet.field_l)) {
               if (14 == this.field_c) {
                 var6 = LinkButtonPainter.field_c;
-                var7_ref = kk.field_a;
+                var7_ref = TextAndMenuHelpers.field_a;
                 if (RegistrationRequestDialog.field_Ob == 1) {
                   var7_ref = null;
                 }
@@ -6236,7 +6236,7 @@ final class SentinelDesigner {
           if (this.field_c == 17) {
             var5_int = this.b(0, (byte) 87) - 30;
             var6_int = 30 + this.b(uc.field_e[this.field_c].length - 5, (byte) -113) + this.c(25, -5 + uc.field_e[this.field_c].length);
-            jm.a(var5_int, var6_int - var5_int, eb.field_p, 1, 170, 300);
+            jm.a(var5_int, var6_int - var5_int, AgeValidator.field_p, 1, 170, 300);
           }
           if (null != var2) {
             SocialListPanel.field_Tb.drawCentered(WidgetStyleLayer.a(42, (String) (var2)), 320, 18 + (SocialListPanel.field_Tb.field_G / 2 - this.field_h), 0, -1);
@@ -6307,7 +6307,7 @@ final class SentinelDesigner {
                             || var5_int == 20
                             ) ? var5_int : -1) {
                             case 11:
-                              va.field_j.drawParagraph(UiTheme.field_s, 40, 150, 600, 1000, 1021128, -1, 0, 0, 0);
+                              LoginDialogHelpers.field_j.drawParagraph(UiTheme.field_s, 40, 150, 600, 1000, 1021128, -1, 0, 0, 0);
                               if (var19 == 0) {
                                 break regionExit1;
                               }
@@ -6323,8 +6323,8 @@ final class SentinelDesigner {
                               }
                             case 19:
                               if (uc.field_e[this.field_c] != ArchiveProvider.field_c) {
-                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, cc.field_ic[0]), 180, 98, 1021128, -1);
-                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, cc.field_ic[1]), 460, 98, 1021128, -1);
+                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[0]), 180, 98, 1021128, -1);
+                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[1]), 460, 98, 1021128, -1);
                                 var5_int = 0;
                                 boolean decompiledNaturalLoopExit1 = false;
                                 while (!(decompiledNaturalLoopExit1 = (var5_int >= 20))) {
@@ -6358,7 +6358,7 @@ final class SentinelDesigner {
                                 var7 = 0;
                                 do {
                                   if (!(fm.field_f[1] > var7)) {
-                                    pl.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(param0 - 1, var6_int), (this.g(127, 19) + this.a(19, (byte) 120)) / 2, this.b(19, (byte) 76) - (-this.c(25, 19) - 17), var5_int, -1);
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(param0 - 1, var6_int), (this.g(127, 19) + this.a(19, (byte) 120)) / 2, this.b(19, (byte) 76) - (-this.c(25, 19) - 17), var5_int, -1);
                                     break;
                                   }
                                   var6_int = var6_int + jh.field_a[var7];
@@ -6378,7 +6378,7 @@ final class SentinelDesigner {
                                     break;
                                   }
                                   var5[var6_int] = (this.g(127, var6_int * 10) + this.a(10 * var6_int, (byte) 110)) / 2;
-                                  AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, cc.field_ic[var6_int]), var5[var6_int], 98, 1021128, -1);
+                                  AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[var6_int]), var5[var6_int], 98, 1021128, -1);
                                   var6_int++;
                                 } while (var19 == 0);
                                 boolean decompiledNaturalLoopExit0 = false;
@@ -6419,7 +6419,7 @@ final class SentinelDesigner {
                                     }
                                   }
                                   if (decompiledFrameCompleted1) {
-                                    pl.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(-1, var7), var5[1], this.b(19, (byte) -125) + (this.c(param0 + 25, 19) + 17), var6_int, -1);
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(-1, var7), var5[1], this.b(19, (byte) -125) + (this.c(param0 + 25, 19) + 17), var6_int, -1);
                                   }
                                 }
                                 boolean decompiledFrameCompleted0 = true;
@@ -6437,7 +6437,7 @@ final class SentinelDesigner {
                                     }
                                   }
                                   if (decompiledFrameCompleted0) {
-                                    pl.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(~param0, var7), var5[2], 17 + (this.b(29, (byte) 108) + this.c(25, 29)), var6_int, -1);
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(~param0, var7), var5[2], 17 + (this.b(29, (byte) 108) + this.c(25, 29)), var6_int, -1);
                                   }
                                 }
                                 break regionExit1;
@@ -6480,8 +6480,8 @@ final class SentinelDesigner {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              hl.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 118, di.field_c);
-              uc.field_b = cj.a(param0 ^ 95, di.field_c, hl.field_v);
+              PendingIntArrayRequest.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 118, di.field_c);
+              uc.field_b = ArchiveLoadSequence.buildComponentLoadout(param0 ^ 95, di.field_c, PendingIntArrayRequest.field_v);
               DateOfBirthValidator.d(param0 - 119);
               System.err.println("Draw config: " + var5_ref);
               var5_ref.printStackTrace();
@@ -6494,74 +6494,74 @@ final class SentinelDesigner {
             var4 != 0) {
             if (SceneWidget.field_J &&
               var4 == 0) {
-              km.field_a = CombatWorld.field_I;
+              ClientGlobals.field_a = CombatWorld.field_I;
               SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
               var5_ref2 = ValidationHelpWidget.field_lb;
               var6_int = ((BitmapFont) ((Object) var5_ref2)).paragraphHeight(CombatWorld.field_I, 424, 0);
               var6_int += 54;
               var7 = (480 - var6_int) / 2;
-              ak.a((RgbSprite) null, var7, km.field_a, 440, 100, -2, var6_int, 1071146, (String[]) null, true);
+              SpriteFrame.drawInfoBox((RgbSprite) null, var7, ClientGlobals.field_a, 440, 100, -2, var6_int, 1071146, (String[]) null, true);
               var8 = 30;
               var9 = 100;
               var10 = 110;
               var11_int = -var8 - 8 + (var7 + var6_int);
-              var12 = ln.field_g;
-              ln.field_g = -1;
+              var12 = NameValidationHelpers.field_g;
+              NameValidationHelpers.field_g = -1;
               if (EmailAvailabilityValidator.a(var11_int, var10, 123, BoundedRandomAccessFile.field_h, var8, var9)) {
-                ln.field_g = 0;
+                NameValidationHelpers.field_g = 0;
               }
               var10 = var10 + (var9 + 10);
               var9 = 200;
               if (EmailAvailabilityValidator.a(var11_int, var10, 126, cf.field_v, var8, var9)) {
-                ln.field_g = 1;
+                NameValidationHelpers.field_g = 1;
               }
               var10 = var10 + (var9 + 10);
               var9 = 100;
               if (EmailAvailabilityValidator.a(var11_int, var10, 116, tj.field_b, var8, var9)) {
-                ln.field_g = 2;
+                NameValidationHelpers.field_g = 2;
               }
-              if (ln.field_g != var12 &&
-                ln.field_g != -1) {
+              if (NameValidationHelpers.field_g != var12 &&
+                NameValidationHelpers.field_g != -1) {
                 CombatWorld.c(-2483, 97);
               }
               if (var19 == 0) {
                 return;
               }
             }
-            if (null == km.field_a) {
+            if (null == ClientGlobals.field_a) {
               return;
             }
             if (var4 != 0) {
               return;
             }
             var5_int = 300;
-            if (km.field_a == ReportAbuseDialog.field_ac ||
-              DualNodeDeque.field_b == km.field_a) {
+            if (ClientGlobals.field_a == ReportAbuseDialog.field_ac ||
+              DualNodeDeque.field_b == ClientGlobals.field_a) {
               var5_int = 330;
             }
             var6_int = (-var5_int + 640) / 2;
             SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
             var7_ref = ValidationHelpWidget.field_lb;
-            var8 = ((BitmapFont) (var7_ref)).paragraphHeight(km.field_a, var5_int - 16, 0);
+            var8 = ((BitmapFont) (var7_ref)).paragraphHeight(ClientGlobals.field_a, var5_int - 16, 0);
             var9 = 0;
-            if (null != ln.field_c) {
-              var9 = ln.field_c.field_F + 4;
+            if (null != NameValidationHelpers.field_c) {
+              var9 = NameValidationHelpers.field_c.field_F + 4;
             }
             var8 = var8 + (var9 + 52);
             var10 = (-var8 + 480) / 2;
             var11 = TickClock.field_f;
-            if (ReportAbuseDialog.field_ac == km.field_a ||
-              km.field_a == DualNodeDeque.field_b) {
+            if (ReportAbuseDialog.field_ac == ClientGlobals.field_a ||
+              ClientGlobals.field_a == DualNodeDeque.field_b) {
               var11 = null;
             }
             boolean decompiledFrameRemainder0 = true;
-            var12 = ak.a(ln.field_c, var10, km.field_a, var5_int, var6_int, param0 - 2, var8, 1071146, var11, true);
+            var12 = SpriteFrame.drawInfoBox(NameValidationHelpers.field_c, var10, ClientGlobals.field_a, var5_int, var6_int, param0 - 2, var8, 1071146, var11, true);
             var13 = 30;
             var14 = 100;
             var15 = (-var14 + 640) / 2;
             var16 = -8 + (var8 + var10) - var13;
-            if (ReportAbuseDialog.field_ac != km.field_a &&
-              DualNodeDeque.field_b != km.field_a) {
+            if (ReportAbuseDialog.field_ac != ClientGlobals.field_a &&
+              DualNodeDeque.field_b != ClientGlobals.field_a) {
               if (var12 >= 0 &&
                 !ContentTransitionDialog.field_ub) {
                 CombatWorld.c(-2483, 97);
@@ -6570,9 +6570,9 @@ final class SentinelDesigner {
               decompiledFrameRemainder0 = (var19 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var17 = ln.field_g;
+              var17 = NameValidationHelpers.field_g;
               var14 = 100;
-              ln.field_g = -1;
+              NameValidationHelpers.field_g = -1;
               var15 = 165;
               var18 = EmailAvailabilityValidator.a(var16, var15, 124, TextHotspotWidget.field_Z, var13, var14) ? 1 : 0;
               if (var18 != 0 &&
@@ -6584,7 +6584,7 @@ final class SentinelDesigner {
               var14 = 200;
               var18 = EmailAvailabilityValidator.a(var16, var15, 121, cf.field_v, var13, var14) ? 1 : 0;
               if (var18 != 0) {
-                ln.field_g = 0;
+                NameValidationHelpers.field_g = 0;
                 if (var17 != 0) {
                   CombatWorld.c(param0 - 2483, 97);
                 }
@@ -6594,8 +6594,8 @@ final class SentinelDesigner {
               return;
             }
           }
-          ln.field_c = DialWidgetPainter.field_q[1];
-          km.field_a = AlternateUsernameCredentials.field_y;
+          NameValidationHelpers.field_c = DialWidgetPainter.field_q[1];
+          ClientGlobals.field_a = AlternateUsernameCredentials.field_y;
           var5 = null;
           if ((BoundedRandomAccessFile.field_q & 128) != 0) {
             var5_ref3 = t.field_e[-128 + BoundedRandomAccessFile.field_q];
@@ -6605,14 +6605,14 @@ final class SentinelDesigner {
             }
             var5_ref3 = BufferedRandomAccessFile.field_m[BoundedRandomAccessFile.field_q];
           }
-          km.field_a = SocketConnector.a(km.field_a, -22, new String[]{var5_ref3, Integer.toString(SocketJs5Transport.field_v), Integer.toString(PasswordFieldPainter.field_v)});
+          ClientGlobals.field_a = SocketConnector.formatTemplate(ClientGlobals.field_a, -22, new String[]{var5_ref3, Integer.toString(SocketJs5Transport.field_v), Integer.toString(PasswordFieldPainter.field_v)});
           SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
           var6_ref = ValidationHelpWidget.field_lb;
-          var7 = ln.field_c.field_F;
-          var8 = ((BitmapFont) ((Object) var6_ref)).paragraphHeight(km.field_a, 284, 16);
+          var7 = NameValidationHelpers.field_c.field_F;
+          var8 = ((BitmapFont) ((Object) var6_ref)).paragraphHeight(ClientGlobals.field_a, 284, 16);
           var8 = var8 + (50 + var7);
           var9 = (-var8 + 480) / 2;
-          var10 = ak.a(ln.field_c, var9, km.field_a, 300, 170, -2, var8, 1071146, AccountNamePrompt.field_Vb, true);
+          var10 = SpriteFrame.drawInfoBox(NameValidationHelpers.field_c, var9, ClientGlobals.field_a, 300, 170, -2, var8, 1071146, AccountNamePrompt.field_Vb, true);
           if (0 <= var10 &&
             ArchiveIndex.field_p != var10) {
             CombatWorld.c(-2483, 97);
@@ -6622,7 +6622,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (var2), "ji.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) (var2), "ji.A(" + param0 + ')');
         }
     }
 
@@ -6630,7 +6630,7 @@ final class SentinelDesigner {
         if (-1 != this.field_g.field_e) {
           param1 = this.field_g.field_e;
         }
-        this.field_g.a(param0, param1, 0, this.a(oh.field_f, DelegatingCanvas.field_c, 77));
+        this.field_g.initializeSelection(param0, param1, 0, this.a(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 77));
         ByteStorage.field_a = MouseWheelInput.field_c;
         if (param2 >= -56) {
           return;
@@ -6639,7 +6639,7 @@ final class SentinelDesigner {
           in.field_k = -1;
           QuickChatPhraseDefinition.field_C = -1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -6791,7 +6791,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ji.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ji.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -6802,12 +6802,12 @@ final class SentinelDesigner {
           if (param0 != 16383) {
             this.a(53, false);
           }
-          this.field_g.e((byte) 22);
+          this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.Q(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.Q(" + param0 + ')');
         }
     }
 
@@ -6907,7 +6907,7 @@ final class SentinelDesigner {
             boolean decompiledFrameRemainder1 = true;
             var3 = nf.field_a;
             var4_int = var3.field_Ub.field_eb;
-            var5_int = ef.field_c;
+            var5_int = EmailFormatError.field_c;
             if (var5_int == 104 &&
               var31 == 0) {
               var3.field_Ub.field_gb = var3.field_Ub.field_gb + Math.min(-20 + var3.field_Lb, -var3.field_Ub.field_eb);
@@ -6918,10 +6918,10 @@ final class SentinelDesigner {
             if (decompiledFrameRemainder1) {
               var3.field_Ub.field_gb = var3.field_Ub.field_gb - Math.min(var3.field_Lb - 20, var3.field_Ub.field_Lb - var3.field_Lb + var3.field_Ub.field_eb);
             }
-            ContentTransitionDialog.field_sb.a((byte) -44, true);
+            ContentTransitionDialog.field_sb.updateInputFullScreen((byte) -44, true);
             var5_intLifetime1 = -1;
             if (null != var3) {
-              var3.a((byte) 96, jj.field_d * 32, 128, false, 32);
+              var3.applyScrollInput((byte) 96, jj.field_d * 32, 128, false, 32);
               var6_int = var3.field_Ub.field_eb;
               var7 = null;
               var8_int = 0;
@@ -6931,7 +6931,7 @@ final class SentinelDesigner {
                   var9_int = LabeledField.field_R[var8_int] + (10 + ValidationHelpWidget.field_lb.field_W / 2);
                   if (var9_int < -var6_int) {
                     var7 = IntrusiveNode.field_f[var8_int];
-                    if (98 == ef.field_c) {
+                    if (98 == EmailFormatError.field_c) {
                       var5_intLifetime1 = var8_int;
                     }
                     IntrusiveNode.field_f[var8_int].field_nb = 2061990;
@@ -6957,7 +6957,7 @@ final class SentinelDesigner {
                       IntrusiveNode.field_f[var8_int].field_nb = 10526880;
                     }
                   }
-                  if (ef.field_c == 99 &&
+                  if (EmailFormatError.field_c == 99 &&
                     var5_intLifetime1 < 0 &&
                     var9_int > -var6_int + 20) {
                     var5_intLifetime1 = var8_int;
@@ -6973,7 +6973,7 @@ final class SentinelDesigner {
                 ((SceneWidget) (var7)).field_nb = 10526880;
               }
             }
-            ef.field_c = 0;
+            EmailFormatError.field_c = 0;
             if (0 <= var5_intLifetime1) {
               var3.field_Ub.field_gb = -4 + (-var3.field_Ub.field_eb - LabeledField.field_R[var5_intLifetime1]);
               if (-var3.field_Ub.field_eb < var3.field_Ub.field_gb) {
@@ -6983,7 +6983,7 @@ final class SentinelDesigner {
                 var3.field_Ub.field_gb = -var3.field_Ub.field_eb + (-var3.field_Ub.field_lb - var3.field_Ub.field_Lb + var3.field_Tb.field_Lb);
               }
             }
-            var6 = ContentTransitionDialog.field_sb.a("HeadingsPane", false);
+            var6 = ContentTransitionDialog.field_sb.findByName("HeadingsPane", false);
             if (null != var6 &&
               null != var3 &&
               var6.field_kb) {
@@ -7032,11 +7032,11 @@ final class SentinelDesigner {
           }
           ClientException.field_e = true;
           ContentTransitionDialog.field_sb = new SceneWidget();
-          ContentTransitionDialog.field_sb.a(0, 0, 480, 0, 640);
+          ContentTransitionDialog.field_sb.setBounds(0, 0, 480, 0, 640);
           var3_ref = new SceneWidget("DataView", (SceneWidget) null);
           CheckboxPainter.field_n = 4;
           WeightedCacheEntry.field_y = 4;
-          bi.field_d = 15;
+          TextAndBitHelpers.field_d = 15;
           var4 = new SceneWidget();
           var4.field_nb = 10526880;
           var4.field_L = (BitmapFont) ((Object) ValidationHelpWidget.field_lb);
@@ -7057,13 +7057,13 @@ final class SentinelDesigner {
           ((SceneWidget) (var7Lifetime1)).field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
           ((SceneWidget) (var7Lifetime1)).field_sb = 0;
           var5.field_Kb = 1;
-          var5.field_L = (BitmapFont) ((Object) pl.field_U);
+          var5.field_L = (BitmapFont) ((Object) BirthDateEntryPanel.field_U);
           var8 = new SceneWidget();
           var8.field_I = MatchingTextValidator.field_t;
           var4.field_Fb = 1;
           var9 = new SceneWidget("HeadingsPane", (SceneWidget) null);
           jj.field_a = var9;
-          var9.a(0, 60, 370, 16, 106);
+          var9.setBounds(0, 60, 370, 16, 106);
           var10 = 4;
           var11 = 0;
           var12 = -5;
@@ -7130,21 +7130,21 @@ final class SentinelDesigner {
                             var27 = new SceneWidget((long)var11, (SceneWidget) (var7Lifetime1));
                             var27.field_S = WidgetStyleLayer.a(42, var18[var23].field_S);
                             var28 = var27.field_L.paragraphHeight(var27.field_S, -(var27.field_ub * 2) + 106, var27.field_Ib) + 3;
-                            var27.a(0, var10, var28, 0, 106);
+                            var27.setBounds(0, var10, var28, 0, 106);
                             var10 = var10 + (var28 + 4);
-                            var9.a(var27, 125);
+                            var9.addChild(var27, 125);
                             IntrusiveNode.field_f[var11] = var27;
                             LabeledField.field_R[var11] = -10 + var12;
                             var11++;
                             var21++;
                           } else {
-                            if (dm.field_c) {
-                              var25_ref_String = ln.a(" <img=13> <img=14> <img=15>", (byte) 11, "", var25_ref_String);
+                            if (NameCheckResult.field_c) {
+                              var25_ref_String = NameValidationHelpers.replaceAllOccurrences(" <img=13> <img=14> <img=15>", (byte) 11, "", var25_ref_String);
                             }
                             if (tj.field_a) {
-                              var25_ref_String = ln.a("<rmbcancelonoff>", (byte) 11, ValidatedTextWidget.field_yb, var25_ref_String);
+                              var25_ref_String = NameValidationHelpers.replaceAllOccurrences("<rmbcancelonoff>", (byte) 11, ValidatedTextWidget.field_yb, var25_ref_String);
                             } else {
-                              var25_ref_String = ln.a("<rmbcancelonoff>", (byte) 11, GameKeyHandler.field_a, var25_ref_String);
+                              var25_ref_String = NameValidationHelpers.replaceAllOccurrences("<rmbcancelonoff>", (byte) 11, GameKeyHandler.field_a, var25_ref_String);
                             }
                             var18[var23] = new SceneWidget(-1L, var4);
                             var18[var23].field_S = var25_ref_String;
@@ -7271,8 +7271,8 @@ final class SentinelDesigner {
                           var29Lifetime1 = 48;
                         }
                       }
-                      var27Lifetime1.a(0, (-var29Lifetime1 + var24Lifetime1) / 2 + var12, var29Lifetime1, var25Lifetime1, var28Lifetime2);
-                      var3_ref.a(var27Lifetime1, 124);
+                      var27Lifetime1.setBounds(0, (-var29Lifetime1 + var24Lifetime1) / 2 + var12, var29Lifetime1, var25Lifetime1, var28Lifetime2);
+                      var3_ref.addChild(var27Lifetime1, 124);
                       var25Lifetime1 = var25Lifetime1 + (8 + var28Lifetime2);
                     }
                     var26Lifetime1++;
@@ -7287,7 +7287,7 @@ final class SentinelDesigner {
           }
           if (decompiledNaturalLoopExit1) {
             stackIn_304_0 = var3_ref;
-            ((SceneWidget) (Object) stackIn_304_0).a(0, 0, var12, 0, 480);
+            ((SceneWidget) (Object) stackIn_304_0).setBounds(0, 0, var12, 0, 480);
             stackIn_305_0 = 0;
           }
           var13_intLifetime1 = stackIn_305_0;
@@ -7303,8 +7303,8 @@ final class SentinelDesigner {
                 stackIn_312_0 = LabeledField.field_R[1 + var13_intLifetime1];
               }
               var16_intLifetime1 = stackIn_312_0;
-              var14_ref.a(0, var15_intLifetime1, -var15_intLifetime1 + var16_intLifetime1, 4, 472);
-              var3_ref.a(var14_ref, 121);
+              var14_ref.setBounds(0, var15_intLifetime1, -var15_intLifetime1 + var16_intLifetime1, 4, 472);
+              var3_ref.addChild(var14_ref, 121);
               var13_intLifetime1++;
               continue;
             }
@@ -7326,21 +7326,21 @@ final class SentinelDesigner {
           var17 = new VerticalScrollbar("", var13, var14_refLifetime1, var15, var16);
           var18_ref = new ScrollContainer("Scrollingview", var3_ref, (SceneWidget) null, var17);
           nf.field_a = var18_ref;
-          var18_ref.a(bi.field_d + 480, -2048, bi.field_d, 358, WeightedCacheEntry.field_y, 0, 4);
+          var18_ref.setBoundsAndLayout(TextAndBitHelpers.field_d + 480, -2048, TextAndBitHelpers.field_d, 358, WeightedCacheEntry.field_y, 0, 4);
           var18_ref.field_I = null;
           var19 = new SceneWidget(-1L, (SceneWidget) null);
           var19.field_I = AccountChoicePanel.field_T;
-          var19.a(var18_ref, 119);
-          var19.a(0, 64, 366, 126, 4 + bi.field_d + 480);
-          ContentTransitionDialog.field_sb.a(var19, 125);
-          ContentTransitionDialog.field_sb.a(var9, 119);
+          var19.addChild(var18_ref, 119);
+          var19.setBounds(0, 64, 366, 126, 4 + TextAndBitHelpers.field_d + 480);
+          ContentTransitionDialog.field_sb.addChild(var19, 125);
+          ContentTransitionDialog.field_sb.addChild(var9, 119);
           var20Lifetime1 = -2 + var11 + (var9.field_Lb - var10);
           if (var11 > 1) {
             var20Lifetime1 = var20Lifetime1 / (-1 + var11);
             var21Lifetime1 = 0;
             var22 = (SceneWidget) (var9.field_M.first(13058));
             while (null != var22) {
-              var22.a(0, var21Lifetime1 + var22.field_eb, var22.field_Lb, var22.field_Y, var22.field_zb);
+              var22.setBounds(0, var21Lifetime1 + var22.field_eb, var22.field_Lb, var22.field_Y, var22.field_zb);
               var21Lifetime1 = var21Lifetime1 + var20Lifetime1;
               var22 = (SceneWidget) (var9.field_M.next((byte) -55));
               if (var31 != 0) {
@@ -7352,7 +7352,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.K(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.K(" + param0 + ')');
         }
     }
 
@@ -7463,7 +7463,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.U(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.U(" + param0 + ')');
         }
     }
 
@@ -7484,7 +7484,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.LA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.LA(" + param0 + ')');
         }
     }
 
@@ -7496,12 +7496,12 @@ final class SentinelDesigner {
             SentinelDesigner.d(-110, -20);
           }
           TextLayout.a(param0, 25104);
-          ProxySocketConnector.a(false, param0);
+          ProxySocketConnector.drawOverlayDialogs(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.EB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.EB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7516,7 +7516,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.PA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7527,7 +7527,7 @@ final class SentinelDesigner {
           this.field_c = param0;
           this.field_g = new MenuInputState(uc.field_e[this.field_c].length);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ')');
         }
     }
 
@@ -7554,7 +7554,7 @@ final class SentinelDesigner {
           }
           boolean decompiledFrameCompleted0 = true;
           var9_int = 1021128;
-          var10 = pl.field_U;
+          var10 = BirthDateEntryPanel.field_U;
           if (param0) {
             var11_int = -11 + param2;
             var12 = 13;
@@ -7602,7 +7602,7 @@ final class SentinelDesigner {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -7616,7 +7616,7 @@ final class SentinelDesigner {
             field_f = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.S(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.S(" + param0 + ')');
         }
     }
 
@@ -7627,7 +7627,7 @@ final class SentinelDesigner {
             SentinelDesigner.a(true, (byte) 17);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ji.O(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7763,7 +7763,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.GA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.GA(" + param0 + ')');
         }
     }
 
@@ -7844,7 +7844,7 @@ final class SentinelDesigner {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -7861,7 +7861,7 @@ final class SentinelDesigner {
           }
           var3_int = uc.field_e[this.field_c][param1];
           if ((43 == var3_int ||
-            var3_int == 44) && !dm.field_c) {
+            var3_int == 44) && !NameCheckResult.field_c) {
             return false;
           }
           if (var3_int == 40 &&
@@ -7903,7 +7903,7 @@ final class SentinelDesigner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ji.HB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ji.HB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7914,12 +7914,12 @@ final class SentinelDesigner {
           if (param0 > -90) {
             this.a((String) null, -9, 98, true, 4, -58, 114, -36, 75);
           }
-          this.field_g.e((byte) 22);
+          this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.G(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.G(" + param0 + ')');
         }
     }
 
@@ -7933,56 +7933,56 @@ final class SentinelDesigner {
           if (96 == NameAvailabilityValidator.field_q) {
             if (0 < this.field_g.field_e) {
               if (2 != this.field_g.field_e) {
-                this.field_g.a(0, 0);
+                this.field_g.selectIfButtonHeld(0, 0);
                 if (var3 != 0) {
-                  this.field_g.a(0, 1);
+                  this.field_g.selectIfButtonHeld(0, 1);
                 }
               }
             } else {
-              this.field_g.a(0, 1);
+              this.field_g.selectIfButtonHeld(0, 1);
             }
           }
           if (NameAvailabilityValidator.field_q == 97) {
             if (this.field_g.field_e == 1) {
-              this.field_g.a(0, 0);
+              this.field_g.selectIfButtonHeld(0, 0);
               if ((var3 != 0) &&
                 (this.field_g.field_e != 2)) {
-                this.field_g.a(0, 1);
+                this.field_g.selectIfButtonHeld(0, 1);
               }
             } else {
               if (this.field_g.field_e != 2) {
-                this.field_g.a(0, 1);
+                this.field_g.selectIfButtonHeld(0, 1);
               }
             }
           }
           if (NameAvailabilityValidator.field_q == 99) {
             if (!(this.field_g.field_e >= 0) ||
               !(this.field_g.field_e <= 1)) {
-              this.field_g.a(0, EmailCredentials.field_j);
+              this.field_g.selectIfButtonHeld(0, EmailCredentials.field_j);
               if (var3 != 0) {
-                this.field_g.a(0, 2);
+                this.field_g.selectIfButtonHeld(0, 2);
               }
             } else {
-              this.field_g.a(0, 2);
+              this.field_g.selectIfButtonHeld(0, 2);
             }
           }
           if (NameAvailabilityValidator.field_q == 98) {
             if (this.field_g.field_e != 2) {
-              this.field_g.a(0, 2);
+              this.field_g.selectIfButtonHeld(0, 2);
               if (var3 != 0) {
-                this.field_g.a(0, EmailCredentials.field_j);
+                this.field_g.selectIfButtonHeld(0, EmailCredentials.field_j);
               }
             } else {
-              this.field_g.a(0, EmailCredentials.field_j);
+              this.field_g.selectIfButtonHeld(0, EmailCredentials.field_j);
             }
           }
           var2_int = -16 / ((44 - param0) / 62);
-          this.field_g.e((byte) 22);
+          this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ji.H(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ji.H(" + param0 + ')');
         }
     }
 

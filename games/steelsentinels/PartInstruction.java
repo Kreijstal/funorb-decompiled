@@ -26,7 +26,7 @@ final class PartInstruction {
     static String field_a;
     static String field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int[] param15, int param16) {
+    final static void rasterHalfBlendGouraudTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int[] param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -355,7 +355,7 @@ final class PartInstruction {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ final class PartInstruction {
         this(param0, param1, param2, param3, param4, false);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isFirstReflectionCheckReady(boolean param0) {
         int var2 = 0;
         ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
@@ -372,7 +372,7 @@ final class PartInstruction {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (ReflectionCheck) (rg.field_d.first(13058));
+          var4 = (ReflectionCheck) (PopupMenuHelpers.field_d.first(13058));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -394,7 +394,7 @@ final class PartInstruction {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "qd.C(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "qd.C(" + param0 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class PartInstruction {
         field_t = null;
     }
 
-    private final void a(byte param0, boolean param1, PartInstruction param2) {
+    private final void copyFrom(byte param0, boolean param1, PartInstruction param2) {
         try {
           this.field_w = param2.field_w;
           this.field_p = param2.field_p;
@@ -435,37 +435,37 @@ final class PartInstruction {
           }
           this.field_u = param2.field_u;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     PartInstruction(PartInstruction param0, boolean param1) {
         try {
-          this.a((byte) 121, param1, param0);
+          this.copyFrom((byte) 121, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2) {
-        dd var5 = null;
+    final static void openFriendContextMenu(int param0, byte param1, boolean param2) {
+        PlayerContextMenu var5 = null;
         String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var4 = 59 / ((param1 - 1) / 57);
-        SocialListEntry var3 = MidiPcmStream.a(param0, 18, param2);
-        dd var5Lifetime1;
+        SocialListEntry var3 = MidiPcmStream.updateFriendListControls(param0, 18, param2);
+        PlayerContextMenu var5Lifetime1;
         if (var3 != null) {
-          AudioService.field_i.a(false, (byte) -87);
+          AudioService.field_i.addGameInviteActions(false, (byte) -87);
           var5 = AudioService.field_i;
           var6_ref_String = DiskCacheWorker.field_d;
-          var5.field_j.a(2, 5, var6_ref_String);
+          var5.field_j.addItem(2, 5, var6_ref_String);
           var5Lifetime1 = AudioService.field_i;
           var6 = TextButton.field_S;
           var7 = BufferedRandomAccessFile.field_j;
-          var5Lifetime1.field_j.a(0, 0, var7, (byte) -101, var6);
+          var5Lifetime1.field_j.layoutItems(0, 0, var7, (byte) -101, var6);
         }
-        eh.a(param2, -1, param0);
+        SocialListUiHelpers.updateNameListPanel(param2, -1, param0);
     }
 
     PartInstruction(int param0, int param1, int param2, int param3, ArticulatedPart param4, boolean param5) {
@@ -478,7 +478,7 @@ final class PartInstruction {
           this.field_n = param2;
           this.field_q = -1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -498,7 +498,7 @@ final class PartInstruction {
           this.partName = param0;
           this.attachedPart = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

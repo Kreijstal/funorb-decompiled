@@ -37,7 +37,7 @@ final class RasterSnapshot extends IntrusiveNode {
         var10 = SteelSentinels.obfuscationControl;
         try {
           if (49 == param3) {
-            stackIn_7_0 = (param4) && (ve.a(param0, 1, 25));
+            stackIn_7_0 = (param4) && (AssetDecoders.isBitSet(param0, 1, 25));
             return stackIn_7_0;
           }
           var14 = FunOrbClient.field_z;
@@ -47,7 +47,7 @@ final class RasterSnapshot extends IntrusiveNode {
           for (var6 = 0; var6 < var14.length; var6++) {
             var7 = var14[var6];
             if (t.a(param2, var7, -20370) ||
-              MusicPatchEnvelope.a(param2, var7, param4, (byte) 86)) {
+              MusicPatchEnvelope.isItemUnlockable(param2, var7, param4, (byte) 86)) {
               var17 = DialWidget.a(var7, (byte) 124);
               var9 = 0;
               while (var9 < -8 + var17.length) {
@@ -77,7 +77,7 @@ final class RasterSnapshot extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class RasterSnapshot extends IntrusiveNode {
           this.field_t = param5;
           this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

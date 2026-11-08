@@ -19,11 +19,11 @@ final class qe {
           param0.removeFocusListener(MouseInputHandler.field_i);
           SentinelAnimationEditor.field_h = -1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(ak param0, int param1, int param2, int param3) {
+    final static void a(SpriteFrame param0, int param1, int param2, int param3) {
         try {
           if (param3 != 3) {
             qe.a(16, 30, -14);
@@ -32,7 +32,7 @@ final class qe {
           EmailCredentials.field_n = param2;
           SingleChildContainer.field_I = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qe.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qe.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class qe {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 

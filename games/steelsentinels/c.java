@@ -27,9 +27,9 @@ final class c extends IntrusiveNode {
         var5 = SteelSentinels.obfuscationControl;
         try {
           GradientOutlineTextPainter.field_u = GradientOutlineTextPainter.field_u + 65536;
-          while (StatefulTextPainter.a(GradientOutlineTextPainter.field_u, hh.field_j, (byte) -27) >= 65536) {
-            GradientOutlineTextPainter.field_u = GradientOutlineTextPainter.field_u - hh.field_j;
-            ik.field_e = ik.field_e + 1;
+          while (StatefulTextPainter.a(GradientOutlineTextPainter.field_u, LoginActionHelpers.field_j, (byte) -27) >= 65536) {
+            GradientOutlineTextPainter.field_u = GradientOutlineTextPainter.field_u - LoginActionHelpers.field_j;
+            ConditionalTextValue.field_e = ConditionalTextValue.field_e + 1;
           }
           var2_int = -1;
           if (null == Explosion.field_S) {
@@ -41,24 +41,24 @@ final class c extends IntrusiveNode {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (NodeDeque.field_g < hh.field_f) {
+            if (NodeDeque.field_g < LoginActionHelpers.field_f) {
               NodeDeque.field_g = NodeDeque.field_g + 1;
-              if (NodeDeque.field_g > hh.field_i && (Explosion.field_S == null ||
+              if (NodeDeque.field_g > LoginActionHelpers.field_i && (Explosion.field_S == null ||
                 null == Explosion.field_S[UiComponent.field_r])) {
                 NodeDeque.field_g = NodeDeque.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (NodeDeque.field_g >= hh.field_f &&
+                if (NodeDeque.field_g >= LoginActionHelpers.field_f &&
                   null == Explosion.field_S[(1 + UiComponent.field_r) % var2_int]) {
                   NodeDeque.field_g = NodeDeque.field_g - 1;
                 }
               }
             }
-            if (hh.field_f <= NodeDeque.field_g) {
+            if (LoginActionHelpers.field_f <= NodeDeque.field_g) {
               QuickChatPhraseCache.field_e = UiComponent.field_r;
-              NodeDeque.field_g = NodeDeque.field_g - hh.field_f;
-              if (!rf.field_b) {
+              NodeDeque.field_g = NodeDeque.field_g - LoginActionHelpers.field_f;
+              if (!LoginConnectionStage.field_b) {
                 UiComponent.field_r = UiComponent.field_r - 1;
                 if (UiComponent.field_r < 0) {
                   UiComponent.field_r = UiComponent.field_r + var2_int;
@@ -70,8 +70,8 @@ final class c extends IntrusiveNode {
                 }
               }
             }
-            if (NodeDeque.field_g > hh.field_i) {
-              rf.field_b = true;
+            if (NodeDeque.field_g > LoginActionHelpers.field_i) {
+              LoginConnectionStage.field_b = true;
             }
           }
           if (param1 != 269) {
@@ -86,33 +86,33 @@ final class c extends IntrusiveNode {
               NodeIterator.field_b.field_F + var3 > BufferedRandomAccessFile.field_j) {
               if (269 - NodeIterator.field_b.field_A < TextButton.field_S &&
                 TextButton.field_S < 269) {
-                rf.field_b = false;
-                NodeDeque.field_g = hh.field_f;
+                LoginConnectionStage.field_b = false;
+                NodeDeque.field_g = LoginActionHelpers.field_f;
                 var4 = 1;
               }
               if (TextButton.field_S > 586 &&
                 TextButton.field_S < NodeIterator.field_b.field_A + 586) {
                 var4 = 1;
-                rf.field_b = true;
-                NodeDeque.field_g = hh.field_f;
+                LoginConnectionStage.field_b = true;
+                NodeDeque.field_g = LoginActionHelpers.field_f;
               }
             }
             if (var4 == 0 &&
-              hh.field_i < NodeDeque.field_g &&
+              LoginActionHelpers.field_i < NodeDeque.field_g &&
               var3 < DelegatingCanvas.field_c &&
               NodeIterator.field_b.field_F + var3 > DelegatingCanvas.field_c) {
-              if (oh.field_f > -NodeIterator.field_b.field_A + 269 &&
-                269 > oh.field_f) {
-                NodeDeque.field_g = hh.field_i;
+              if (LobbySetupHelpers.field_f > -NodeIterator.field_b.field_A + 269 &&
+                269 > LobbySetupHelpers.field_f) {
+                NodeDeque.field_g = LoginActionHelpers.field_i;
               }
-              if (oh.field_f > 586 &&
-                586 + NodeIterator.field_b.field_A > oh.field_f) {
-                NodeDeque.field_g = hh.field_i;
+              if (LobbySetupHelpers.field_f > 586 &&
+                586 + NodeIterator.field_b.field_A > LobbySetupHelpers.field_f) {
+                NodeDeque.field_g = LoginActionHelpers.field_i;
               }
             }
           }
           if (param0) {
-            jh.field_i.updatePointer(param1 - 145, NameAvailabilityValidator.a(DelegatingCanvas.field_c, oh.field_f, true), NameAvailabilityValidator.a(BufferedRandomAccessFile.field_j, TextButton.field_S, true));
+            jh.field_i.updatePointer(param1 - 145, NameAvailabilityValidator.a(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true), NameAvailabilityValidator.a(BufferedRandomAccessFile.field_j, TextButton.field_S, true));
             if (jh.field_i.isForwardAction(param1 ^ 269)) {
               if (0 == jh.field_i.field_e) {
                 stackIn_59_0 = 3;
@@ -124,7 +124,7 @@ final class c extends IntrusiveNode {
               }
             }
             while (UiContainer.f(22759)) {
-              jh.field_i.a(true, 0);
+              jh.field_i.handleHorizontalKey(true, 0);
               if (jh.field_i.isForwardAction(0)) {
                 if (0 == jh.field_i.field_e) {
                   stackIn_68_0 = 3;
@@ -147,7 +147,7 @@ final class c extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "c.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "c.A(" + param0 + ',' + param1 + ')');
         }
     }
 

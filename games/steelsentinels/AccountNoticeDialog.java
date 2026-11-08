@@ -5,7 +5,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
     static String[] field_nb;
     private TextButton field_ob;
     static LoginForm field_kb;
-    static rf field_sb;
+    static LoginConnectionStage field_sb;
     static java.lang.reflect.Method field_rb;
     static String field_jb;
     static IndexedSprite[] field_qb;
@@ -21,7 +21,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    private final void c(boolean param0) {
+    private final void close(boolean param0) {
         if (!param0) {
           field_lb = (int[]) null;
           if (!this.field_Q) {
@@ -59,7 +59,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 var3 = tm.field_a;
               }
             } else {
-              if (im.field_a == param1) {
+              if (LobbyStateHelpers.field_a == param1) {
                 this.field_E = this.field_E + 30;
                 var3 = sl.field_q;
               }
@@ -72,7 +72,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_x = this.field_x;
           var4.field_p = (WidgetPainter) ((Object) new TextWidgetPainter(SectorCacheStore.field_m, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, -107);
-          this.field_ob = this.a((UiListener) (this), EditableTextWidget.field_cb, 104);
+          this.field_ob = this.appendButton((UiListener) (this), EditableTextWidget.field_cb, 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,11 +90,11 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    private final TextButton a(UiListener param0, String param1, int param2) {
+    private final TextButton appendButton(UiListener param0, String param1, int param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -110,12 +110,12 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.field_E - 6;
           this.field_E = this.field_E + 38;
-          var4.a(15, (byte) -127, var5, -14 + (this.field_x - 16), 30);
+          var4.setBounds(15, (byte) -127, var5, -14 + (this.field_x - 16), 30);
           this.addChild(var4, -113);
           if (param2 < 86) {
-            this.c(true);
+            this.close(true);
           }
-          this.e((byte) 82);
+          this.refreshLayout((byte) 82);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           if (param3 != this.field_ob) {
             return;
           }
-          this.c(true);
+          this.close(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -239,10 +239,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_37_0 = ad.field_g;
+                stackIn_37_0 = LoadoutHelpers.field_g;
                 return stackIn_37_0;
               }
-              stackIn_19_0 = ad.field_g;
+              stackIn_19_0 = LoadoutHelpers.field_g;
               return stackIn_19_0;
             }
             stackIn_14_0 = ValidationIndicator.field_Y;
@@ -260,7 +260,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
 
     static {
         field_nb = new String[]{"Fusion<nbsp>reaver", "EMP<nbsp>laceration", "Hammer<nbsp>strike"};
-        field_sb = new rf();
+        field_sb = new LoginConnectionStage();
         field_pb = "Options";
         field_lb = new int[8192];
         field_jb = "Save favourite";

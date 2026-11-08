@@ -11,7 +11,7 @@ final class SocketJs5Transport extends Js5Transport {
     private BufferedSocket field_F;
     static String field_u;
     static int[] field_B;
-    static rf field_D;
+    static LoginConnectionStage field_D;
     static String field_E;
     static java.util.zip.CRC32 field_G;
     static ArticulatedPart field_A;
@@ -159,7 +159,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_i = 0;
-            this.field_e = mm.a(-108);
+            this.field_e = ClockAndCookieHelpers.monotonicMillis(-108);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -171,7 +171,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -203,7 +203,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class SocketJs5Transport extends Js5Transport {
           Js5NetworkRequest var3Lifetime1;
           var17 = SteelSentinels.obfuscationControl;
           if (null != this.field_F) {
-            var2_long = mm.a(52);
+            var2_long = ClockAndCookieHelpers.monotonicMillis(52);
             var4 = (int)(-this.field_e + var2_long);
             this.field_e = var2_long;
             if (var4 > 200) {
@@ -429,7 +429,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_F.readFully(this.field_c.position, var6, this.field_c.payload, -256);
                   if (0 != this.field_n) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_c.payload[this.field_c.position + var7] = (byte)bi.a((int) this.field_c.payload[this.field_c.position + var7], (int) this.field_n);
+                      this.field_c.payload[this.field_c.position + var7] = (byte)TextAndBitHelpers.bitXor((int) this.field_c.payload[this.field_c.position + var7], (int) this.field_n);
                     }
                   }
                   this.field_c.position = this.field_c.position + var6;
@@ -503,7 +503,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_F.readFully(this.field_d.field_G.position, var7, this.field_d.field_G.payload, -256);
                   if (this.field_n != 0) {
                     for (var8 = 0; var7 > var8; var8++) {
-                      this.field_d.field_G.payload[this.field_d.field_G.position + var8] = (byte)bi.a((int) this.field_d.field_G.payload[this.field_d.field_G.position + var8], (int) this.field_n);
+                      this.field_d.field_G.payload[this.field_d.field_G.position + var8] = (byte)TextAndBitHelpers.bitXor((int) this.field_d.field_G.payload[this.field_d.field_G.position + var8], (int) this.field_n);
                     }
                   }
                   this.field_d.field_G.position = this.field_d.field_G.position + var7;
@@ -554,7 +554,7 @@ final class SocketJs5Transport extends Js5Transport {
     static {
         field_B = new int[256];
         field_u = "<%0> is already on your friend list.";
-        field_D = new rf();
+        field_D = new LoginConnectionStage();
         field_E = "<%0> sec";
         field_G = new java.util.zip.CRC32();
         field_v = 0;

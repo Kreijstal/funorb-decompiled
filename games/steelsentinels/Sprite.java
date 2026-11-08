@@ -94,22 +94,22 @@ abstract class Sprite {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
     abstract void draw(int param0, int param1);
 
-    final static na a(int param0, int param1, int param2, int param3) {
+    final static ChatMessage rebuildChatHistoryRows(int param0, int param1, int param2, int param3) {
         boolean stackIn_47_0 = false;
         Object var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        na var8_ref_na;
+        ChatMessage var8_ref_na;
         int var9;
-        na var9_ref_na;
+        ChatMessage var9_ref_na;
         int var10_int;
         String var10;
         String var11;
@@ -127,9 +127,9 @@ abstract class Sprite {
           var8_ref_na = ph.field_e[var7];
           var9 = 0;
           if (!fj.field_e &&
-            var5 < cj.field_h) {
+            var5 < ArchiveLoadSequence.field_h) {
             var10_int = NameAvailabilityValidator.a(var8_ref_na.field_k, 1);
-            if (var8_ref_na.a((byte) 58) >= var10_int && (var8_ref_na.field_g ||
+            if (var8_ref_na.getVisibilityClass((byte) 58) >= var10_int && (var8_ref_na.field_g ||
               !o.a(-99, var8_ref_na.field_p))) {
               var9 = 1;
             }
@@ -141,14 +141,14 @@ abstract class Sprite {
             if (var8_ref_na.field_m == null ||
               TextWidgetPainter.field_l) {
               if (var8_ref_na.field_m == null) {
-                ln.field_e = ln.field_e + 1;
+                NameValidationHelpers.field_e = NameValidationHelpers.field_e + 1;
               }
               var10 = ArticulatedPart.a(-118, var8_ref_na);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_na.field_o);
-              var12 = rf.a(-102, var8_ref_na);
+              var12 = LoginConnectionStage.getChatLineColour(-102, var8_ref_na);
               var8_ref_na.field_m = new SceneWidget(0L, ReportAbuseDialog.field_ic, var11);
               var8_ref_na.field_m.field_xb = (8355711 & ReportAbuseDialog.field_ic.field_xb >> 1) - (8355711 & var12 >> 1) + var12;
-              var8_ref_na.field_m.field_L = pl.field_X;
+              var8_ref_na.field_m.field_L = BirthDateEntryPanel.field_X;
               var8_ref_na.field_m.field_nb = var12;
               var8_ref_na.field_m.field_rb = ((ReportAbuseDialog.field_ic.field_rb & 16711422) >> 1) + (-((16711422 & var12) >> 1) + var12);
               var6 = var6 + param3;
@@ -159,8 +159,8 @@ abstract class Sprite {
         for (var8 = 0; var8 < uc.field_a; var8++) {
           var9_ref_na = ph.field_e[var8];
           if (null != var9_ref_na.field_m) {
-            BoundedRandomAccessFile.field_j.field_Ub.a(var9_ref_na.field_m, 127);
-            var9_ref_na.field_m.a(0, var7Lifetime1, param3, param1, var9_ref_na.field_m.g(-2147483648));
+            BoundedRandomAccessFile.field_j.field_Ub.addChild(var9_ref_na.field_m, 127);
+            var9_ref_na.field_m.setBounds(0, var7Lifetime1, param3, param1, var9_ref_na.field_m.getContentWidth(-2147483648));
             var7Lifetime1 = var7Lifetime1 + param3;
             if (var9_ref_na.field_m.field_Eb != 0) {
               var4 = var9_ref_na;
@@ -174,27 +174,27 @@ abstract class Sprite {
           BoundedRandomAccessFile.field_j.field_Ub.field_Lb = var7Lifetime1;
         }
         if (TextWidgetPainter.field_l) {
-          rg.field_f = true;
+          PopupMenuHelpers.field_f = true;
           BoundedRandomAccessFile.field_j.field_Ub.field_eb = -BoundedRandomAccessFile.field_j.field_Ub.field_Lb + BoundedRandomAccessFile.field_j.field_Tb.field_Lb;
           BoundedRandomAccessFile.field_j.field_Ub.field_gb = 0;
           TextWidgetPainter.field_l = false;
         }
         BoundedRandomAccessFile.field_j.field_Ub.field_lb = -BoundedRandomAccessFile.field_j.field_Ub.field_Lb + var7Lifetime1;
         if (param2 <= 0) {
-          return (na) null;
+          return (ChatMessage) null;
         }
         if (jn.field_g &&
-          hh.field_a != null) {
-          rg.field_f = true;
+          LoginActionHelpers.field_a != null) {
+          PopupMenuHelpers.field_f = true;
         }
         var9Lifetime1 = BoundedRandomAccessFile.field_j.field_Tb.field_Lb - (BoundedRandomAccessFile.field_j.field_Ub.field_Lb + BoundedRandomAccessFile.field_j.field_Ub.field_lb);
-        if (rg.field_f) {
+        if (PopupMenuHelpers.field_f) {
           BoundedRandomAccessFile.field_j.field_Ub.field_gb = -BoundedRandomAccessFile.field_j.field_Ub.field_eb + var9Lifetime1;
         }
-        BoundedRandomAccessFile.field_j.a(true, 8113, param3, param0 * 2 * param3);
+        BoundedRandomAccessFile.field_j.applyScrollInputForViewport(true, 8113, param3, param0 * 2 * param3);
         stackIn_47_0 = (var9Lifetime1 == BoundedRandomAccessFile.field_j.field_Ub.field_eb + BoundedRandomAccessFile.field_j.field_Ub.field_gb);
-        rg.field_f = stackIn_47_0;
-        return (na) (var4);
+        PopupMenuHelpers.field_f = stackIn_47_0;
+        return (ChatMessage) (var4);
     }
 
     final static void loadLogoJingle(ResourceArchive param0, int param1) {
@@ -207,7 +207,7 @@ abstract class Sprite {
           var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

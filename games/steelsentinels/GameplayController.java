@@ -67,14 +67,14 @@ final class GameplayController {
         var13 = SteelSentinels.obfuscationControl;
         try {
           if (!this.world.field_j) {
-            if (oh.field_f < 0 &&
+            if (LobbySetupHelpers.field_f < 0 &&
               0 > DelegatingCanvas.field_c) {
               return;
             }
             var8_int = 0;
             var9 = 0;
             var10 = param2;
-            while (var10 < hf.field_c) {
+            while (var10 < FrameStyleHelpers.field_c) {
               var11 = param1 + (param5 * this.field_D[var10] / param4 >> 4);
               var12 = this.field_K[var10] / (param3 * 16) + param0;
               if (var13 != 0) {
@@ -93,7 +93,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "nb.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nb.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.EA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.EA(" + param0 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class GameplayController {
                 stackIn_8_0 = wb.field_c;
               }
               var5 = stackIn_8_0;
-              if (!BattleTerrain.c(-104)) {
+              if (!BattleTerrain.isCustomCursorSupported(-104)) {
                 return;
               }
               var6 = new int[ProxyAuthenticationException.field_h[this.field_q].field_E.length];
@@ -275,7 +275,7 @@ final class GameplayController {
               if (decompiledFrameCompleted0) {
                 var7 = null;
                 try {
-                  var8 = hl.field_u.newInstance(new Object[]{new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_F), new Integer(lc.field_h)});
+                  var8 = PendingIntArrayRequest.field_u.newInstance(new Object[]{new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_F), new Integer(lc.field_h)});
                   Bzip2State.field_u.invoke(var8, new Object[]{new Integer(0), new Integer(0), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_F), var6, new Integer(0), new Integer(ProxyAuthenticationException.field_h[this.field_q].field_A)});
                   var7_ref = (java.awt.Cursor) (AccountNoticeDialog.field_rb.invoke((Object) (((java.awt.Canvas) (var5)).getToolkit()), new Object[]{var8, new java.awt.Point(param0, param3), "FunOrb Custom Cursor"}));
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ final class GameplayController {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw ci.a((Throwable) ((Object) var5_ref), "nb.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5_ref), "nb.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -512,7 +512,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.JA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.JA(" + param0 + ')');
         }
     }
 
@@ -587,12 +587,12 @@ final class GameplayController {
             decompiledSharedTail0 = (SteelSentinels.obfuscationControl != 0);
           }
           if (decompiledSharedTail0) {
-            pl.field_U.drawLeft(var18.toUpperCase(), var12 + 4, var13, param2, -1);
+            BirthDateEntryPanel.field_U.drawLeft(var18.toUpperCase(), var12 + 4, var13, param2, -1);
             var12 += 150;
           }
           if (var18 == null &&
             var16 != null) {
-            pl.field_U.drawLeft(((String) (var16)).toUpperCase(), var12, var13, param2, -1);
+            BirthDateEntryPanel.field_U.drawLeft(((String) (var16)).toUpperCase(), var12, var13, param2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -605,7 +605,7 @@ final class GameplayController {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class GameplayController {
         try {
           var3_int = 0;
           if (MarkerSliderPainter.field_n == null) {
-            km.field_c = this.controlledSentinel.worldX;
+            ClientGlobals.field_c = this.controlledSentinel.worldX;
             UiContainer.field_G = this.controlledSentinel.worldY;
             var5_ref_bh = new SentinelCommandSimulator(this.controlledSentinel);
             var6 = -this.field_P >> 4;
@@ -719,7 +719,7 @@ final class GameplayController {
             return;
           }
           var4 = 0;
-          var5 = (km.field_c >> 8) - (this.field_P >> 4);
+          var5 = (ClientGlobals.field_c >> 8) - (this.field_P >> 4);
           var6 = 400 + (-(this.field_E >> 4) + (-(this.controlledSentinel.field_Db * 8) + UiContainer.field_G >> 8));
           if (Math.abs(320 - var5) <= 320 &&
             190 >= Math.abs(-var6 + 190)) {
@@ -787,7 +787,7 @@ final class GameplayController {
             var8 = 48;
             if (this.controlledSentinel.field_Xb.length > 0 &&
               var3_int != 0 &&
-              ((-var6 + DelegatingCanvas.field_c) * (DelegatingCanvas.field_c - var6) + (oh.field_f - var5) * (oh.field_f - var5)) < (var8 * var8)) {
+              ((-var6 + DelegatingCanvas.field_c) * (DelegatingCanvas.field_c - var6) + (LobbySetupHelpers.field_f - var5) * (LobbySetupHelpers.field_f - var5)) < (var8 * var8)) {
               stackIn_88_0 = 1;
             } else {
               stackIn_88_0 = 0;
@@ -880,13 +880,13 @@ final class GameplayController {
             }
             var13 = new int[stackIn_170_0];
             SoftwareRaster.getClip(var13);
-            var14Lifetime1 = this.d(true, km.field_c + NodeHashTableIterator.field_g);
+            var14Lifetime1 = this.d(true, ClientGlobals.field_c + NodeHashTableIterator.field_g);
             var15Lifetime1 = this.b(1, cf.field_q + UiContainer.field_G);
             if (!WeightedLruCache.field_b &&
               var7 == 0 &&
-              0 <= oh.field_f &&
+              0 <= LobbySetupHelpers.field_f &&
               this.field_n == -1) {
-              stackIn_186_0 = (var14Lifetime1 >= oh.field_f) ? 0 : 1;
+              stackIn_186_0 = (var14Lifetime1 >= LobbySetupHelpers.field_f) ? 0 : 1;
               var16 = stackIn_186_0;
               if (MarkerSliderPainter.field_n != null) {
                 stackIn_193_0 = (0 >= MarkerSliderPainter.field_n.aimAngle) ? 0 : 1;
@@ -903,9 +903,9 @@ final class GameplayController {
             }
             SoftwareRaster.setClip(var13);
             if (!WeightedLruCache.field_b &&
-              oh.field_f >= 0 &&
+              LobbySetupHelpers.field_f >= 0 &&
               this.field_n == -1) {
-              var16Lifetime1 = -var14Lifetime1 + oh.field_f;
+              var16Lifetime1 = -var14Lifetime1 + LobbySetupHelpers.field_f;
               var17 = -var15Lifetime1 + DelegatingCanvas.field_c;
               var18_double = Math.sqrt((double)(var17 * var17 + var16Lifetime1 * var16Lifetime1));
               if (var18_double != 0.0) {
@@ -921,7 +921,7 @@ final class GameplayController {
               }
             }
             if (var4 != 0 &&
-              oh.field_f >= 0 &&
+              LobbySetupHelpers.field_f >= 0 &&
               -1 == this.field_n) {
               var16Lifetime2 = var14Lifetime1;
               var14Lifetime1 = var5 + (NodeHashTableIterator.field_g >> 8);
@@ -929,7 +929,7 @@ final class GameplayController {
               if (WeightedLruCache.field_b) {
                 var16Lifetime2 = var14Lifetime1;
               }
-              stackIn_223_0 = (var16Lifetime2 >= oh.field_f) ? 0 : 1;
+              stackIn_223_0 = (var16Lifetime2 >= LobbySetupHelpers.field_f) ? 0 : 1;
               var17Lifetime1 = stackIn_223_0;
               if (MarkerSliderPainter.field_n != null) {
                 stackIn_230_0 = (MarkerSliderPainter.field_n.aimAngle <= 0) ? 0 : 1;
@@ -948,7 +948,7 @@ final class GameplayController {
               SoftwareRaster.setClip(var13);
               if (WeightedLruCache.field_b &&
                 var7 == 0) {
-                var17Lifetime1Lifetime1 = oh.field_f - var14Lifetime1;
+                var17Lifetime1Lifetime1 = LobbySetupHelpers.field_f - var14Lifetime1;
                 var18 = DelegatingCanvas.field_c - var15Lifetime2;
                 var19_double = Math.sqrt((double)(var18 * var18 + var17Lifetime1Lifetime1 * var17Lifetime1Lifetime1));
                 if (0.0 != var19_double) {
@@ -969,7 +969,7 @@ final class GameplayController {
             }
             regionExit2: {
               if (var4 != 0) {
-                rl.field_b.bindRasterTarget();
+                PacketLoopHelpers.field_b.bindRasterTarget();
                 SoftwareRaster.clear();
                 var16Lifetime3 = this.controlledSentinel.field_S;
                 var17Lifetime2 = this.controlledSentinel.field_Cb ? 1 : 0;
@@ -979,35 +979,35 @@ final class GameplayController {
                 this.controlledSentinel.field_Cb = var17Lifetime2 != 0;
                 this.controlledSentinel.field_S = var16Lifetime3;
                 var10 = 0;
-                rl.field_b.drawSilhouette(0, 0, 1);
+                PacketLoopHelpers.field_b.drawSilhouette(0, 0, 1);
                 var18Lifetime1 = this.controlledSentinel.getTeamColour((byte) -128);
                 var19 = 0;
                 while (true) {
                   stackIn_258_0 = var19;
-                  stackIn_258_1 = rl.field_b.field_A;
+                  stackIn_258_1 = PacketLoopHelpers.field_b.field_A;
                   if (stackIn_258_0 < stackIn_258_1) {
                     stackIn_294_0 = 0;
                     if (var29 == 0) {
                       var20_intLifetime1 = stackIn_294_0;
-                      while (rl.field_b.field_F > var20_intLifetime1) {
+                      while (PacketLoopHelpers.field_b.field_F > var20_intLifetime1) {
                         stackIn_258_0 = 1;
-                        stackIn_258_1 = rl.field_b.field_E[var10];
+                        stackIn_258_1 = PacketLoopHelpers.field_b.field_E[var10];
                         if (stackIn_258_0 == stackIn_258_1) {
                           if (0 < var19 &&
-                            0 == rl.field_b.field_E[var10 - 1]) {
-                            rl.field_b.field_E[-1 + var10] = var18Lifetime1;
+                            0 == PacketLoopHelpers.field_b.field_E[var10 - 1]) {
+                            PacketLoopHelpers.field_b.field_E[-1 + var10] = var18Lifetime1;
                           }
                           if (0 < var19 &&
-                            rl.field_b.field_E[var10 - rl.field_b.field_A] == 0) {
-                            rl.field_b.field_E[var10 - rl.field_b.field_A] = var18Lifetime1;
+                            PacketLoopHelpers.field_b.field_E[var10 - PacketLoopHelpers.field_b.field_A] == 0) {
+                            PacketLoopHelpers.field_b.field_E[var10 - PacketLoopHelpers.field_b.field_A] = var18Lifetime1;
                           }
                           if (var19 > 0 &&
-                            rl.field_b.field_E[1 + var10] == 0) {
-                            rl.field_b.field_E[var10 + 1] = var18Lifetime1;
+                            PacketLoopHelpers.field_b.field_E[1 + var10] == 0) {
+                            PacketLoopHelpers.field_b.field_E[var10 + 1] = var18Lifetime1;
                           }
                           if (0 < var19 &&
-                            rl.field_b.field_E[var10 + rl.field_b.field_A] == 0) {
-                            rl.field_b.field_E[var10 + rl.field_b.field_A] = var18Lifetime1;
+                            PacketLoopHelpers.field_b.field_E[var10 + PacketLoopHelpers.field_b.field_A] == 0) {
+                            PacketLoopHelpers.field_b.field_E[var10 + PacketLoopHelpers.field_b.field_A] = var18Lifetime1;
                           }
                         }
                         var10++;
@@ -1020,7 +1020,7 @@ final class GameplayController {
                     Checkbox.field_bb.b((byte) 125);
                     SoftwareRaster.setClip(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
                     var19 = -80 + (this.controlledSentinel.field_Db >>> 5);
-                    rl.field_b.drawWithVerticalAlphaGradient(-40 + var5, var19 + var6, 128, 128);
+                    PacketLoopHelpers.field_b.drawWithVerticalAlphaGradient(-40 + var5, var19 + var6, 128, 128);
                     stackIn_294_0 = this.d(true, this.controlledSentinel.worldX);
                   }
                   var20_intLifetime1Lifetime1 = stackIn_294_0;
@@ -1040,7 +1040,7 @@ final class GameplayController {
                         if (stackIn_310_0 > stackIn_310_1) {
                           var23Lifetime2 = -var20_intLifetime1Lifetime1 + SocketJs5Transport.field_w[var22Lifetime2] + var5;
                           var24Lifetime2 = 80 + (var6 + (AccountTermsPanel.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
-                          var25 = pe.field_o;
+                          var25 = TriangleMesh.field_o;
                           var26Lifetime2 = var5 - var23Lifetime2;
                           var27Lifetime2 = -var24Lifetime2 + var6;
                           stackIn_320_0 = 2304;
@@ -1075,7 +1075,7 @@ final class GameplayController {
                       }
                       var23Lifetime2Lifetime1 = -var20_intLifetime1Lifetime1 + SocketJs5Transport.field_w[var22Lifetime2] + var5;
                       var24Lifetime2Lifetime1 = 80 + (var6 + (AccountTermsPanel.field_U[var22Lifetime2] + var19)) - var21Lifetime2;
-                      var25Lifetime1 = pe.field_o;
+                      var25Lifetime1 = TriangleMesh.field_o;
                       var26Lifetime2Lifetime1 = var5 - var23Lifetime2Lifetime1;
                       var27Lifetime2Lifetime1 = -var24Lifetime2Lifetime1 + var6;
                       stackIn_320_0 = 2304;
@@ -1122,7 +1122,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.RA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1132,13 +1132,13 @@ final class GameplayController {
           return;
         }
         try {
-          if (im.field_g != null) {
-            var1 = im.field_g;
-            vf.a(320, SocketConnector.a(jj.field_b, -94, new String[]{var1}));
-            im.field_g = null;
+          if (LobbyStateHelpers.field_g != null) {
+            var1 = LobbyStateHelpers.field_g;
+            vf.a(320, SocketConnector.formatTemplate(jj.field_b, -94, new String[]{var1}));
+            LobbyStateHelpers.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nb.DA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nb.DA(" + param0 + ')');
         }
     }
 
@@ -1182,7 +1182,7 @@ final class GameplayController {
         var21 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
-          hf.field_c = 0;
+          FrameStyleHelpers.field_c = 0;
           if (this.controlledSentinel != null &&
             this.field_F >= 0 &&
             this.field_F < this.controlledSentinel.field_Xb.length &&
@@ -1203,7 +1203,7 @@ final class GameplayController {
             }
           }
           if (!this.world.field_j) {
-            if (oh.field_f < 0 &&
+            if (LobbySetupHelpers.field_f < 0 &&
               0 > DelegatingCanvas.field_c) {
               return;
             }
@@ -1268,7 +1268,7 @@ final class GameplayController {
                 if ((var10 + 1) < this.field_S) {
                   this.field_D[var10 + 1] = var2.worldX;
                   this.field_K[1 + var10] = var2.worldY;
-                  hf.field_c = var10 + 1;
+                  FrameStyleHelpers.field_c = var10 + 1;
                 }
                 if (var8 != 0) {
                   var13 = Math.abs(-this.controlledSentinel.worldX + var2.worldX) >> 4;
@@ -1331,7 +1331,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.BB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.BB(" + param0 + ')');
         }
     }
 
@@ -1405,7 +1405,7 @@ final class GameplayController {
                   }
                   else {
                     if (null != var12) {
-                      hf.field_c = 0;
+                      FrameStyleHelpers.field_c = 0;
                     }
                   }
                   boolean decompiledFrameRemainder2 = true;
@@ -1448,7 +1448,7 @@ final class GameplayController {
                   if (var12 == MarkerSliderPainter.field_n &&
                     null != MarkerSliderPainter.field_n) {
                     MusicPatchEnvelope.field_h = var7_ref_bh.field_b;
-                    km.field_c = var7_ref_bh.field_g;
+                    ClientGlobals.field_c = var7_ref_bh.field_g;
                     PacketBuffer.field_r = var7_ref_bh.field_r;
                     UiContainer.field_G = var7_ref_bh.field_q;
                   }
@@ -1460,7 +1460,7 @@ final class GameplayController {
                   break scanLoop1;
                 }
               }
-              hf.field_c = 0;
+              FrameStyleHelpers.field_c = 0;
               break;
             }
             decompiledSharedTail0 = (var16 != 0);
@@ -1470,7 +1470,7 @@ final class GameplayController {
             UiContainer.field_G = this.controlledSentinel.worldY;
             PacketBuffer.field_r = this.controlledSentinel.field_pc;
             MusicPatchEnvelope.field_h = this.controlledSentinel.field_E;
-            km.field_c = this.controlledSentinel.worldX;
+            ClientGlobals.field_c = this.controlledSentinel.worldX;
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
@@ -1482,7 +1482,7 @@ final class GameplayController {
             if (param1) {
               var8_ref = (Sentinel) (this.world.sentinels.first(13058));
               while (var8_ref != null) {
-                stackOut_117_0 = var8_ref.a((byte) -22, var6, oh.field_f, DelegatingCanvas.field_c, var7);
+                stackOut_117_0 = var8_ref.a((byte) -22, var6, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, var7);
                 stackIn_190_0 = stackOut_117_0 ? 1 : 0;
                 stackIn_118_0 = stackOut_117_0;
                 if (var16 != 0) {
@@ -1533,7 +1533,7 @@ final class GameplayController {
               if (decompiledFrameCompleted3) {
                 var8_ref2 = (FallingPickup) (this.world.field_e.first(13058));
                 while (null != var8_ref2) {
-                  var8_ref2.a(256, var7, -1, var6);
+                  var8_ref2.drawPickup(256, var7, -1, var6);
                   var8_ref2 = (FallingPickup) (this.world.field_e.next((byte) -72));
                   if (var16 != 0) {
                     decompiledFrameCompleted2 = false;
@@ -1561,7 +1561,7 @@ final class GameplayController {
               } else {
                 var8_ref4 = (Explosion) (this.world.field_C.first(13058));
                 while (var8_ref4 != null) {
-                  var8_ref4.a(var7, var6, 116);
+                  var8_ref4.drawShockwave(var7, var6, 116);
                   var8_ref4 = (Explosion) (this.world.field_C.next((byte) -82));
                   if (var16 != 0) {
                     break regionExit2;
@@ -1604,7 +1604,7 @@ final class GameplayController {
             var8_refLifetime1 = this.controlledSentinel;
             this.field_P = Math.min(this.field_P, this.world.terrain.getProfileLength(99) - 10240);
             this.field_P = Math.max(this.field_P, 0);
-            if (!fc.field_e[81] &&
+            if (!SoundAndUrlHelpers.field_e[81] &&
               null != MarkerSliderPainter.field_n &&
               this.controlledSentinel.field_Xb.length > 0) {
               var8_refLifetime1.chassis.a(MarkerSliderPainter.field_n.aimAngle * MusicPatchEnvelope.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
@@ -1635,7 +1635,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "nb.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "nb.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1672,7 +1672,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "nb.OA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nb.OA(" + param0 + ')');
         }
     }
 
@@ -1713,7 +1713,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.U(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1727,13 +1727,13 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.writeCipheredOpcode(60, (byte) -117);
+          ClockAndCookieHelpers.field_g.writeCipheredOpcode(60, (byte) -117);
           this.controlledSentinel = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.KA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.KA(" + param0 + ')');
         }
     }
 
@@ -1799,9 +1799,9 @@ final class GameplayController {
             stackIn_23_0 = 0;
           }
           var5 = stackIn_23_0;
-          var6 = SocialListPanel.a(ce.field_t, 18286) ? 1 : 0;
-          if (null != ad.field_i) {
-            stackIn_27_0 = ad.field_i.length;
+          var6 = SocialListPanel.isAllZero(ce.field_t, 18286) ? 1 : 0;
+          if (null != LoadoutHelpers.field_i) {
+            stackIn_27_0 = LoadoutHelpers.field_i.length;
           } else {
             stackIn_27_0 = 0;
           }
@@ -1815,18 +1815,18 @@ final class GameplayController {
           var9 = 3;
           var10 = 26;
           var11 = 200;
-          var12 = 3 + pl.field_U.field_U;
+          var12 = 3 + BirthDateEntryPanel.field_U.field_U;
           var13 = 0;
           var14 = 1;
           if (var5 != 0) {
-            var13 = pl.field_U.paragraphHeight(QuickChatMenu.field_Zb, 560, var12);
+            var13 = BirthDateEntryPanel.field_U.paragraphHeight(QuickChatMenu.field_Zb, 560, var12);
             var14 += 2;
             var8 = var8 + (var10 + var13);
           }
           if ((var5 == 0 ||
             var24 != 0) &&
             var4 == 0) {
-            var13 = pl.field_U.paragraphHeight(IconLabelControl.field_Tb, 560, var12);
+            var13 = BirthDateEntryPanel.field_U.paragraphHeight(IconLabelControl.field_Tb, 560, var12);
             var14 += 2;
             var8 = var8 + (var13 + var10);
           }
@@ -1848,7 +1848,7 @@ final class GameplayController {
           }
           var8 = var8 + var14 * var9;
           var15 = 480 - var8;
-          ch.a(var15, 640, 32308, 0, var8);
+          ArrayWidgetContainer.a(var15, 640, 32308, 0, var8);
           SoftwareRaster.fillRoundedRectangle(3, 3 + var15, 634, var8 - 3 - 3, 8, 0);
           var16 = 473;
           var17 = 0;
@@ -1864,7 +1864,7 @@ final class GameplayController {
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.drawParagraph(QuickChatMenu.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            BirthDateEntryPanel.field_U.drawParagraph(QuickChatMenu.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           if ((var5 == 0 ||
@@ -1877,7 +1877,7 @@ final class GameplayController {
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.drawParagraph(IconLabelControl.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            BirthDateEntryPanel.field_U.drawParagraph(IconLabelControl.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           var18 = -1;
@@ -1889,9 +1889,9 @@ final class GameplayController {
           boolean decompiledFrameCompleted0 = true;
           if (var7 > 0) {
             var16 = var16 - (var9 + (var12 + var9 + var7 * var12));
-            stackIn_80_0 = pl.field_U;
+            stackIn_80_0 = BirthDateEntryPanel.field_U;
             if (DirectByteStorage.field_j == 0) {
-              stackIn_81_1 = na.field_c;
+              stackIn_81_1 = ChatMessage.field_c;
             } else {
               stackIn_81_1 = MusicPatchPcmStream.field_s;
             }
@@ -1899,17 +1899,17 @@ final class GameplayController {
             ((CoverageBitmapFont) (Object) stackIn_80_0).drawLeft(stackIn_81_1, 20, var16, 16777215, -1);
             var19 = var9 + (var12 + var16);
             var17Lifetime3 = 20;
-            if (ad.field_i.length > 0) {
+            if (LoadoutHelpers.field_i.length > 0) {
               var20 = var19;
-              pl.field_U.drawLeft(MarkerSliderPainter.field_l, var17Lifetime3, var20, 10526880, 0);
+              BirthDateEntryPanel.field_U.drawLeft(MarkerSliderPainter.field_l, var17Lifetime3, var20, 10526880, 0);
               var20 += 4;
               var17Lifetime3 += 8;
-              var21 = ad.field_i;
+              var21 = LoadoutHelpers.field_i;
               var22 = 0;
               while (var21.length > var22) {
                 var23 = var21[var22];
                 var20 = var20 + var12;
-                pl.field_U.drawLeft(t.field_e[var23], var17Lifetime3, var20, 1021128, 0);
+                BirthDateEntryPanel.field_U.drawLeft(t.field_e[var23], var17Lifetime3, var20, 1021128, 0);
                 var22++;
                 if (var24 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -1922,7 +1922,7 @@ final class GameplayController {
             }
             if (0 < Js5Transport.field_g.length) {
               var20Lifetime1 = var19;
-              pl.field_U.drawLeft(StatefulTextPainter.field_o, var17Lifetime3, var20Lifetime1, 10526880, 0);
+              BirthDateEntryPanel.field_U.drawLeft(StatefulTextPainter.field_o, var17Lifetime3, var20Lifetime1, 10526880, 0);
               var20Lifetime1 += 4;
               var17Lifetime3 += 8;
               var21Lifetime1 = Js5Transport.field_g;
@@ -1934,7 +1934,7 @@ final class GameplayController {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
-                stackIn_100_0 = pl.field_U;
+                stackIn_100_0 = BirthDateEntryPanel.field_U;
                 if (var23Lifetime1 != 34) {
                   stackIn_101_1 = BufferedRandomAccessFile.field_m[var23Lifetime1];
                 } else {
@@ -2005,7 +2005,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.WA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.WA(" + param0 + ')');
         }
     }
 
@@ -2207,7 +2207,7 @@ final class GameplayController {
             this.field_r != this.field_n) {
             CombatWorld.c(-2483, 97);
           }
-          if (ue.field_b) {
+          if (LoginHandshakeHelpers.field_b) {
             if (this.field_U > this.field_Y) {
               this.field_Y = this.field_Y + 10;
               if (this.field_U < this.field_Y) {
@@ -2258,11 +2258,11 @@ final class GameplayController {
             if (var18 == 0) {
               if (WidgetStyleLayer.field_b[var3_int] != null) {
                 if (var3_int > 2 &&
-                  hh.field_c[var3_int] > 0) {
-                  hh.field_c[var3_int] = 0;
+                  LoginActionHelpers.field_c[var3_int] > 0) {
+                  LoginActionHelpers.field_c[var3_int] = 0;
                 }
-                dupTemp$0 = hh.field_c[var3_int] - 1;
-                hh.field_c[var3_int] = dupTemp$0;
+                dupTemp$0 = LoginActionHelpers.field_c[var3_int] - 1;
+                LoginActionHelpers.field_c[var3_int] = dupTemp$0;
                 if (dupTemp$0 < -50) {
                   WidgetStyleLayer.field_b[var3_int] = null;
                 }
@@ -2286,7 +2286,7 @@ final class GameplayController {
             var3_int = 0;
           }
           if (var3_int == 0) {
-            hf.field_c = 0;
+            FrameStyleHelpers.field_c = 0;
           }
           if (di.field_g != -1 &&
             4 != di.field_g &&
@@ -2296,7 +2296,7 @@ final class GameplayController {
           }
           if (null != this.controlledSentinel &&
             this.controlledSentinel.field_pc) {
-            hf.field_c = 0;
+            FrameStyleHelpers.field_c = 0;
           }
           if (this.controlledSentinel != null) {
             if (!this.controlledSentinel.field_pc) {
@@ -2304,12 +2304,12 @@ final class GameplayController {
                 if (!this.field_A &&
                   0 >= this.controlledSentinel.field_S) {
                   this.field_A = true;
-                  fc.a((byte) 78, 83, -1);
+                  SoundAndUrlHelpers.playSoundEffect((byte) 78, 83, -1);
                 }
                 if (this.field_A &&
                   this.controlledSentinel.field_S > (this.controlledSentinel.field_Q / 10)) {
                   this.field_A = false;
-                  fc.a((byte) -94, 29, -1);
+                  SoundAndUrlHelpers.playSoundEffect((byte) -94, 29, -1);
                 }
               }
               if (this.controlledSentinel.field_ub >= 0) {
@@ -2317,7 +2317,7 @@ final class GameplayController {
                   this.controlledSentinel.charge < 3 &&
                   (this.controlledSentinel.maximumCharge / 2) > this.controlledSentinel.charge) {
                   this.field_f = true;
-                  fc.a((byte) 55, 82, -1);
+                  SoundAndUrlHelpers.playSoundEffect((byte) 55, 82, -1);
                 }
                 if (this.field_f && (!(this.controlledSentinel.charge <= 3) ||
                   !(this.controlledSentinel.charge <= this.controlledSentinel.maximumCharge / 2))) {
@@ -2332,7 +2332,7 @@ final class GameplayController {
               if (!this.field_y &&
                 this.controlledSentinel.armour <= (this.controlledSentinel.maximumArmour / 4)) {
                 this.field_y = true;
-                fc.a((byte) 108, 78, -1);
+                SoundAndUrlHelpers.playSoundEffect((byte) 108, 78, -1);
               }
               if ((this.field_y) &&
                 (!(this.controlledSentinel.armour < this.controlledSentinel.maximumArmour / 2))) {
@@ -2352,7 +2352,7 @@ final class GameplayController {
             }
           }
           boolean decompiledFrameCompleted1 = true;
-          var4 = this.field_P + (oh.field_f << 4) << 4;
+          var4 = this.field_P + (LobbySetupHelpers.field_f << 4) << 4;
           var6 = -32 % ((param0 - 1) / 59);
           var5 = DelegatingCanvas.field_c - 400 + (this.field_E >> 4) << 8;
           if (di.field_g != -1 &&
@@ -3201,20 +3201,20 @@ final class GameplayController {
           }
           if (di.field_g == 1 &&
             IconTextComponent.field_Yb == 6) {
-            if (fc.field_e[97] ||
-              fc.field_e[EmailCredentials.field_h]) {
+            if (SoundAndUrlHelpers.field_e[97] ||
+              SoundAndUrlHelpers.field_e[EmailCredentials.field_h]) {
               tj.field_c = tj.field_c | 1;
             }
-            if (fc.field_e[98] ||
-              fc.field_e[fm.field_d]) {
+            if (SoundAndUrlHelpers.field_e[98] ||
+              SoundAndUrlHelpers.field_e[fm.field_d]) {
               tj.field_c = tj.field_c | 2;
             }
-            if (fc.field_e[99] ||
-              fc.field_e[AccountChoicePanel.field_V]) {
+            if (SoundAndUrlHelpers.field_e[99] ||
+              SoundAndUrlHelpers.field_e[AccountChoicePanel.field_V]) {
               tj.field_c = tj.field_c | 4;
             }
           }
-          if (!fc.field_e[DialWidgetPainter.field_b] ||
+          if (!SoundAndUrlHelpers.field_e[DialWidgetPainter.field_b] ||
             this.controlledSentinel == null) {
             if (!(0 >= ValidationIndicator.field_eb)) {
               ValidationIndicator.field_eb = ValidationIndicator.field_eb - 1;
@@ -3245,10 +3245,10 @@ final class GameplayController {
             this.field_p = 5120 - (this.controlledSentinel.worldX >> 4) + this.field_P;
           }
           boolean decompiledFrameRemainder3 = true;
-          if (ri.field_b != null &&
+          if (LoginStateQueries.field_b != null &&
             !this.world.field_j) {
-            var9 = Math.max(0, Math.min(this.world.terrain.getProfileLength(-127) - 10240, (ri.field_b.worldX >> 4) - 5120));
-            var10 = 3200 + (ri.field_b.worldY >> 4);
+            var9 = Math.max(0, Math.min(this.world.terrain.getProfileLength(-127) - 10240, (LoginStateQueries.field_b.worldX >> 4) - 5120));
+            var10 = 3200 + (LoginStateQueries.field_b.worldY >> 4);
             if (var9 < this.field_P) {
               this.field_P = Math.max(var9, -500 + this.field_P);
               if (var18 != 0) {
@@ -3268,7 +3268,7 @@ final class GameplayController {
             decompiledFrameRemainder3 = (var18 != 0);
           }
           if (decompiledFrameRemainder3) {
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               boolean decompiledFrameRemainder2 = true;
               var9 = 0;
               var10 = this.world.terrain.getProfileLength(-126) - 10240;
@@ -3276,7 +3276,7 @@ final class GameplayController {
               var12_int = 1024;
               var13 = 0;
               if (VerticalScrollbar.field_gc != 2) {
-                if ((0 == (4 & sf.field_d)) &&
+                if ((0 == (4 & TutorialStep.field_d)) &&
                   (decompiledFrameRemainder2 = (this.controlledSentinel != null)) &&
                   (decompiledFrameRemainder2 = (var8 == 0)) &&
                   (decompiledFrameRemainder2 = !(!CachedTextLayout.field_p))) {
@@ -3298,28 +3298,28 @@ final class GameplayController {
                 }
                 if (decompiledFrameRemainder2) {
                   var13 = 1;
-                  var14 = pa.field_c - oh.field_f;
-                  var15 = -DelegatingCanvas.field_c + la.field_a;
+                  var14 = pa.field_c - LobbySetupHelpers.field_f;
+                  var15 = -DelegatingCanvas.field_c + BenefitsScreenHelpers.field_a;
                   if (AlphaContainer.field_G) {
                     var14 = -var14;
                   }
-                  pa.field_c = oh.field_f;
-                  if (ik.field_h) {
+                  pa.field_c = LobbySetupHelpers.field_f;
+                  if (ConditionalTextValue.field_h) {
                     var15 = -var15;
                   }
-                  la.field_a = DelegatingCanvas.field_c;
+                  BenefitsScreenHelpers.field_a = DelegatingCanvas.field_c;
                   this.field_P = this.field_P - 16 * var14;
                   this.field_E = this.field_E - var15 * 16;
                   var8 = 0;
                   if (var18 != 0) {
-                    la.field_a = DelegatingCanvas.field_c;
-                    pa.field_c = oh.field_f;
+                    BenefitsScreenHelpers.field_a = DelegatingCanvas.field_c;
+                    pa.field_c = LobbySetupHelpers.field_f;
                     var8 = 0;
                   }
                 }
               } else {
-                la.field_a = DelegatingCanvas.field_c;
-                pa.field_c = oh.field_f;
+                BenefitsScreenHelpers.field_a = DelegatingCanvas.field_c;
+                pa.field_c = LobbySetupHelpers.field_f;
                 var8 = 0;
               }
               if (var9 > this.field_P) {
@@ -3347,23 +3347,23 @@ final class GameplayController {
                 !CachedTextLayout.field_p ||
                 this.world.field_j) &&
                 (decompiledFrameRemainder3 = !(jn.field_g))) {
-                if (fc.field_e[96] ||
-                  fc.field_e[sa.field_c]) {
+                if (SoundAndUrlHelpers.field_e[96] ||
+                  SoundAndUrlHelpers.field_e[sa.field_c]) {
                   var8 = 0;
                   this.field_P = Math.max(0, this.field_P - var7);
                 }
-                if (fc.field_e[97] ||
-                  fc.field_e[EmailCredentials.field_h]) {
+                if (SoundAndUrlHelpers.field_e[97] ||
+                  SoundAndUrlHelpers.field_e[EmailCredentials.field_h]) {
                   var8 = 0;
                   this.field_P = Math.min(-10240 + this.world.terrain.getProfileLength(-117), var7 + this.field_P);
                 }
-                if (fc.field_e[99] ||
-                  fc.field_e[AccountChoicePanel.field_V]) {
+                if (SoundAndUrlHelpers.field_e[99] ||
+                  SoundAndUrlHelpers.field_e[AccountChoicePanel.field_V]) {
                   var8 = 0;
                   this.field_E = this.field_E + var7;
                 }
-                decompiledFrameRemainder3 = (fc.field_e[98] ||
-                  fc.field_e[fm.field_d]);
+                decompiledFrameRemainder3 = (SoundAndUrlHelpers.field_e[98] ||
+                  SoundAndUrlHelpers.field_e[fm.field_d]);
                 if (decompiledFrameRemainder3) {
                   this.field_E = Math.max(-var7 + this.field_E, -3000);
                   var8 = 0;
@@ -3373,23 +3373,23 @@ final class GameplayController {
               if ((decompiledFrameRemainder3) && (null != this.controlledSentinel &&
                 CachedTextLayout.field_p)) {
                 if (!jn.field_g) {
-                  if (fc.field_e[96] ||
-                    fc.field_e[sa.field_c]) {
+                  if (SoundAndUrlHelpers.field_e[96] ||
+                    SoundAndUrlHelpers.field_e[sa.field_c]) {
                     this.field_p = this.field_p - var7;
                     var8 = 0;
                   }
-                  if (fc.field_e[97] ||
-                    fc.field_e[EmailCredentials.field_h]) {
+                  if (SoundAndUrlHelpers.field_e[97] ||
+                    SoundAndUrlHelpers.field_e[EmailCredentials.field_h]) {
                     this.field_p = this.field_p + var7;
                     var8 = 0;
                   }
-                  if (fc.field_e[98] ||
-                    fc.field_e[fm.field_d]) {
+                  if (SoundAndUrlHelpers.field_e[98] ||
+                    SoundAndUrlHelpers.field_e[fm.field_d]) {
                     var8 = 0;
                     this.field_V = this.field_V - var7;
                   }
-                  if (fc.field_e[99] ||
-                    fc.field_e[AccountChoicePanel.field_V]) {
+                  if (SoundAndUrlHelpers.field_e[99] ||
+                    SoundAndUrlHelpers.field_e[AccountChoicePanel.field_V]) {
                     var8 = 0;
                     this.field_V = this.field_V + var7;
                   }
@@ -3398,8 +3398,8 @@ final class GameplayController {
                 this.field_P = -5120 + this.field_p + (this.controlledSentinel.worldX >> 4);
                 if (this.field_P < 0) {
                   if (jn.field_g ||
-                    !fc.field_e[97] &&
-                    !fc.field_e[EmailCredentials.field_h]) {
+                    !SoundAndUrlHelpers.field_e[97] &&
+                    !SoundAndUrlHelpers.field_e[EmailCredentials.field_h]) {
                     if (this.field_P < -2000) {
                       this.field_p = this.field_p - (2000 + this.field_P);
                       if (var18 != 0) {
@@ -3414,8 +3414,8 @@ final class GameplayController {
                 var9 = -10240 + this.world.terrain.getProfileLength(-127);
                 if (var9 < this.field_P) {
                   if (jn.field_g ||
-                    !fc.field_e[96] &&
-                    !fc.field_e[sa.field_c]) {
+                    !SoundAndUrlHelpers.field_e[96] &&
+                    !SoundAndUrlHelpers.field_e[sa.field_c]) {
                     if (this.field_P > var9 + 2000) {
                       this.field_p = this.field_p - (-2000 - var9 + this.field_P);
                       if (var18 != 0) {
@@ -3430,8 +3430,8 @@ final class GameplayController {
                 var10 = -3000;
                 if (this.field_E < var10 &&
                   var8 == 0) {
-                  boolean decompiledSharedTail2 = (jn.field_g || (!(fc.field_e[99]) &&
-                    !(fc.field_e[AccountChoicePanel.field_V])));
+                  boolean decompiledSharedTail2 = (jn.field_g || (!(SoundAndUrlHelpers.field_e[99]) &&
+                    !(SoundAndUrlHelpers.field_e[AccountChoicePanel.field_V])));
                   if (!decompiledSharedTail2) {
                     this.field_V = this.field_V - (this.field_E - var10);
                     decompiledSharedTail2 = (var18 != 0);
@@ -3444,8 +3444,8 @@ final class GameplayController {
                 }
                 if (this.field_E > 1024) {
                   if (jn.field_g ||
-                    !fc.field_e[98] &&
-                    !fc.field_e[fm.field_d]) {
+                    !SoundAndUrlHelpers.field_e[98] &&
+                    !SoundAndUrlHelpers.field_e[fm.field_d]) {
                     if (this.field_E > 3024) {
                       this.field_V = this.field_V - (-3024 + this.field_E);
                       if (var18 != 0) {
@@ -3524,19 +3524,19 @@ final class GameplayController {
             if (this.field_d) {
               MusicPatchNode.field_s = BufferedSocket.field_b;
               if (!TextHotspotRegion.field_v) {
-                if (ln.field_e > 1) {
-                  MusicPatchNode.field_s = SocketConnector.a(cj.field_b, -61, new String[]{Integer.toString(ln.field_e)});
+                if (NameValidationHelpers.field_e > 1) {
+                  MusicPatchNode.field_s = SocketConnector.formatTemplate(ArchiveLoadSequence.field_b, -61, new String[]{Integer.toString(NameValidationHelpers.field_e)});
                   if (var18 != 0) {
-                    if (ln.field_e != 1) {
-                      MusicPatchNode.field_s = ci.field_d;
+                    if (NameValidationHelpers.field_e != 1) {
+                      MusicPatchNode.field_s = ClientErrorSupport.field_d;
                       MusicPatchNode.field_s = ByteStorage.field_b;
                     } else {
                       MusicPatchNode.field_s = ByteStorage.field_b;
                     }
                   }
                 } else {
-                  if (ln.field_e != 1) {
-                    MusicPatchNode.field_s = ci.field_d;
+                  if (NameValidationHelpers.field_e != 1) {
+                    MusicPatchNode.field_s = ClientErrorSupport.field_d;
                     if (var18 != 0) {
                       MusicPatchNode.field_s = ByteStorage.field_b;
                     }
@@ -3563,7 +3563,7 @@ final class GameplayController {
               }
               if ((!ModalPanel.field_T ||
                 !param1) &&
-                (!(ln.field_e > 0) ||
+                (!(NameValidationHelpers.field_e > 0) ||
                 !(MouseWheelInput.field_c % 40 < 20))) {
                 stackIn_1508_0 = 0;
               } else {
@@ -3571,14 +3571,14 @@ final class GameplayController {
               }
               var11 = stackIn_1508_0;
               if (var11 != 0) {
-                stackIn_1512_0 = be.field_f;
+                stackIn_1512_0 = UrlAndReplyHelpers.field_f;
               } else {
                 stackIn_1512_0 = QuickChatCategoryCache.field_d;
               }
               var12 = stackIn_1512_0;
               var13 = var12[2].field_A + var12[0].field_A + (int)ArchiveIndex.field_c;
-              if (oh.field_f >= 0 &&
-                oh.field_f < var13 &&
+              if (LobbySetupHelpers.field_f >= 0 &&
+                LobbySetupHelpers.field_f < var13 &&
                 var10 <= DelegatingCanvas.field_c &&
                 DelegatingCanvas.field_c < var10 + var9) {
                 this.field_r = 0;
@@ -3589,7 +3589,7 @@ final class GameplayController {
                 stackIn_1535_0 = !(TextHotspotRegion.field_v);
                 TextHotspotRegion.field_v = stackIn_1535_0;
                 if (TextHotspotRegion.field_v) {
-                  ln.field_e = 0;
+                  NameValidationHelpers.field_e = 0;
                 }
               }
             }
@@ -3633,10 +3633,10 @@ final class GameplayController {
               }
             }
             if (!this.field_d &&
-              fc.field_e[35] &&
+              SoundAndUrlHelpers.field_e[35] &&
               !this.field_d &&
               NodeDeque.field_d >= 2) {
-              this.world.terrain.a(1200, this.world.playerCount, this.world.mapSeed);
+              this.world.terrain.generateTerrain(1200, this.world.playerCount, this.world.mapSeed);
             }
             if (1 == VerticalScrollbar.field_gc) {
             }
@@ -3652,13 +3652,13 @@ final class GameplayController {
                 var9 = var11_ref_je.endTick;
               }
               if (this.field_d) {
-                mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                mm.field_g.writeByte((byte) 127, 12);
-                mm.field_g.writeByte((byte) 120, 0);
-                mm.field_g.writeInt(true, var9);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 127, 12);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 120, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, var9);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var10_ref_je.scheduled = true;
                 }
@@ -3673,27 +3673,27 @@ final class GameplayController {
             if (var3_int != 0 &&
               null != this.controlledSentinel && (!this.controlledSentinel.field_pc ||
               !(this.controlledSentinel.field_Qb >= 0))) {
-              stackIn_1638_0 = (!fc.field_e[81]) ? 0 : 1;
+              stackIn_1638_0 = (!SoundAndUrlHelpers.field_e[81]) ? 0 : 1;
               var9 = stackIn_1638_0;
-              if (dm.field_c) {
-                stackIn_1645_0 = (fc.field_e[81]) ? 1 : 0;
+              if (NameCheckResult.field_c) {
+                stackIn_1645_0 = (SoundAndUrlHelpers.field_e[81]) ? 1 : 0;
                 var9 = stackIn_1645_0;
               }
               boolean decompiledFrameRemainder0 = true;
-              if (!fc.field_e[86] ||
+              if (!SoundAndUrlHelpers.field_e[86] ||
                 !this.controlledSentinel.hasModuleType(16, -27)) {
-                if (!dm.field_c &&
-                  (4 & sf.field_d) != 0) {
+                if (!NameCheckResult.field_c &&
+                  (4 & TutorialStep.field_d) != 0) {
                   IsaacRandom.field_c = true;
                   var9 = 1;
                   decompiledFrameRemainder0 = (var18 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (!dm.field_c ||
-                    !fc.field_e[fm.field_d] &&
-                    !fc.field_e[83]) {
-                    if ((!dm.field_c) &&
-                      (fc.field_e[83])) {
+                  if (!NameCheckResult.field_c ||
+                    !SoundAndUrlHelpers.field_e[fm.field_d] &&
+                    !SoundAndUrlHelpers.field_e[83]) {
+                    if ((!NameCheckResult.field_c) &&
+                      (SoundAndUrlHelpers.field_e[83])) {
                       IsaacRandom.field_c = true;
                       var9 = 1;
                       if (var18 != 0) {
@@ -3754,7 +3754,7 @@ final class GameplayController {
               if (decompiledSharedTail0) {
                 this.b(0, 0, 0, 0);
                 UiContainer.field_G = this.controlledSentinel.worldY;
-                km.field_c = this.controlledSentinel.worldX;
+                ClientGlobals.field_c = this.controlledSentinel.worldX;
               }
               if (var18 != 0) {
                 this.b(0, 0, 0, 0);
@@ -3763,7 +3763,7 @@ final class GameplayController {
               this.b(0, 0, 0, 0);
             }
           }
-          if ((1 & sf.field_d) == 0) {
+          if ((1 & TutorialStep.field_d) == 0) {
             vd.field_b = false;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -3793,13 +3793,13 @@ final class GameplayController {
           }
           if (36 == this.field_r &&
             VerticalScrollbar.field_gc == 1) {
-            stackIn_1761_0 = !(dm.field_c);
-            dm.field_c = stackIn_1761_0;
+            stackIn_1761_0 = !(NameCheckResult.field_c);
+            NameCheckResult.field_c = stackIn_1761_0;
             vd.field_b = true;
             ContentTransitionDialog.field_sb = null;
             stackIn_1764_0 = ImageProducerRasterBuffer.field_A;
             stackIn_1764_1 = 42;
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               stackIn_1765_2 = qm.field_c;
             } else {
               stackIn_1765_2 = ClientException.field_j;
@@ -3829,11 +3829,11 @@ final class GameplayController {
           if (this.field_r == 38 &&
             VerticalScrollbar.field_gc == 1) {
             vd.field_b = true;
-            stackIn_1796_0 = !(ik.field_h);
-            ik.field_h = stackIn_1796_0;
+            stackIn_1796_0 = !(ConditionalTextValue.field_h);
+            ConditionalTextValue.field_h = stackIn_1796_0;
             stackIn_1799_0 = ImageProducerRasterBuffer.field_A;
             stackIn_1799_1 = 44;
-            if (!ik.field_h) {
+            if (!ConditionalTextValue.field_h) {
               stackIn_1800_2 = sa.field_b;
             } else {
               stackIn_1800_2 = o.field_a;
@@ -3854,13 +3854,13 @@ final class GameplayController {
             if (var9 < 500 + this.world.simulationTick) {
               var11_ref_je = new SentinelCommand(6, -1, var9);
               if (this.field_d) {
-                mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                mm.field_g.writeByte((byte) 115, 6);
-                mm.field_g.writeByte((byte) 122, -1);
-                mm.field_g.writeInt(true, var9);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 115, 6);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 122, -1);
+                ClockAndCookieHelpers.field_g.writeInt(true, var9);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -3884,13 +3884,13 @@ final class GameplayController {
             if (var9 < 500 + this.world.simulationTick) {
               var11_ref_je = new SentinelCommand(6, 1, var9);
               if (this.field_d) {
-                mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                mm.field_g.writeByte((byte) 122, 6);
-                mm.field_g.writeByte((byte) 115, -1);
-                mm.field_g.writeInt(true, var9);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 122, 6);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 115, -1);
+                ClockAndCookieHelpers.field_g.writeInt(true, var9);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -3914,13 +3914,13 @@ final class GameplayController {
             if (this.world.simulationTick + 500 > var9) {
               var11_ref_je = new SentinelCommand(6, 0, var9);
               if (this.field_d) {
-                mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                mm.field_g.writeByte((byte) 122, 6);
-                mm.field_g.writeByte((byte) 110, -1);
-                mm.field_g.writeInt(true, var9);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 122, 6);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 110, -1);
+                ClockAndCookieHelpers.field_g.writeInt(true, var9);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -3970,7 +3970,7 @@ final class GameplayController {
             if (256 < var9) {
               var9 = 256;
             }
-            ef.a(1, var9);
+            EmailFormatError.setMusicVolume(1, var9);
           }
           if (di.field_g == 4 &&
             VerticalScrollbar.field_gc == 1) {
@@ -4050,24 +4050,24 @@ final class GameplayController {
           if (this.field_d) {
             MusicPatchNode.field_s = BufferedSocket.field_b;
             if (!TextHotspotRegion.field_v) {
-              if (ln.field_e > 1) {
-                MusicPatchNode.field_s = SocketConnector.a(cj.field_b, -80, new String[]{Integer.toString(ln.field_e)});
+              if (NameValidationHelpers.field_e > 1) {
+                MusicPatchNode.field_s = SocketConnector.formatTemplate(ArchiveLoadSequence.field_b, -80, new String[]{Integer.toString(NameValidationHelpers.field_e)});
                 if (var18 != 0) {
-                  if (1 == ln.field_e) {
+                  if (1 == NameValidationHelpers.field_e) {
                     MusicPatchNode.field_s = ByteStorage.field_b;
-                    MusicPatchNode.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ClientErrorSupport.field_d;
                   } else {
-                    MusicPatchNode.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ClientErrorSupport.field_d;
                   }
                 }
               } else {
-                if (1 == ln.field_e) {
+                if (1 == NameValidationHelpers.field_e) {
                   MusicPatchNode.field_s = ByteStorage.field_b;
                   if (var18 != 0) {
-                    MusicPatchNode.field_s = ci.field_d;
+                    MusicPatchNode.field_s = ClientErrorSupport.field_d;
                   }
                 } else {
-                  MusicPatchNode.field_s = ci.field_d;
+                  MusicPatchNode.field_s = ClientErrorSupport.field_d;
                 }
               }
             }
@@ -4090,7 +4090,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder13 = true;
           ModalPanel.field_T = false;
           if ((!ModalPanel.field_T ||
-            !param1) && (!(ln.field_e > 0) ||
+            !param1) && (!(NameValidationHelpers.field_e > 0) ||
             !(MouseWheelInput.field_c % 40 < 20))) {
             stackIn_2059_0 = 0;
             decompiledFrameRemainder13 = false;
@@ -4102,12 +4102,12 @@ final class GameplayController {
           if (var11 == 0) {
             stackIn_2063_0 = QuickChatCategoryCache.field_d;
           } else {
-            stackIn_2063_0 = be.field_f;
+            stackIn_2063_0 = UrlAndReplyHelpers.field_f;
           }
           var12 = stackIn_2063_0;
           var13 = var12[0].field_A + ((int)ArchiveIndex.field_c + var12[2].field_A);
-          if (oh.field_f >= 0 &&
-            var13 > oh.field_f &&
+          if (LobbySetupHelpers.field_f >= 0 &&
+            var13 > LobbySetupHelpers.field_f &&
             DelegatingCanvas.field_c >= var10 &&
             DelegatingCanvas.field_c < (var9 + var10)) {
             ModalPanel.field_T = true;
@@ -4118,14 +4118,14 @@ final class GameplayController {
             stackIn_2086_0 = !(TextHotspotRegion.field_v);
             TextHotspotRegion.field_v = stackIn_2086_0;
             if (TextHotspotRegion.field_v) {
-              ln.field_e = 0;
+              NameValidationHelpers.field_e = 0;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "nb.CA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "nb.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4311,7 +4311,7 @@ final class GameplayController {
               var4 = 0;
             }
           }
-          if (!MusicCrossfadeStream.a(true) &&
+          if (!MusicCrossfadeStream.drawCurvedGroundEdge(true) &&
             CipherPacketBuffer.field_w <= 0) {
             stackIn_36_0 = 0;
           } else {
@@ -4350,16 +4350,16 @@ final class GameplayController {
           var13 = var11 + 385;
           if (null == this.controlledSentinel &&
             !this.world.field_j) {
-            var16_ref_String = ri.field_d;
+            var16_ref_String = LoginStateQueries.field_d;
             if (0 < this.world.playerNames.length &&
               null != this.world.playerNames[0]) {
-              var16_ref_String = SocketConnector.a(FunOrbClient.field_o, -30, new String[]{this.world.playerNames[0]});
+              var16_ref_String = SocketConnector.formatTemplate(FunOrbClient.field_o, -30, new String[]{this.world.playerNames[0]});
             }
             var17 = this.field_M[0];
             if (var17 == 7196927) {
               var17 = 26248;
             }
-            pl.field_U.drawCentered(var16_ref_String, 320, 405, var17, -1);
+            BirthDateEntryPanel.field_U.drawCentered(var16_ref_String, 320, 405, var17, -1);
           }
           var15 = var10 - var9 - var11;
           if (this.controlledSentinel != null) {
@@ -4377,7 +4377,7 @@ final class GameplayController {
             }
             BoundedUrlRequest.field_d.drawLeft(NodeHashTableIterator.field_f, var16, 9 + var17, var18, -1);
             var17 += 13;
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               MarkerSliderPainter.field_f[5].drawTransparent(var16, var17);
               var16 += 14;
               if (var40 != 0) {
@@ -4461,10 +4461,10 @@ final class GameplayController {
                       var26 = 1;
                     } else {
                       if (var27 == 0) {
-                        if (eh.field_b[ed.field_f] > 0) {
+                        if (SocialListUiHelpers.field_b[ed.field_f] > 0) {
                           IterableDualNodeDeque.field_j[this.field_M[3] + var29].drawRotatedAboutCenter(var16, var17, 0, 4096);
                           if (NanoTickClock.field_p > 0) {
-                            var30 = 40 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
+                            var30 = 40 * NanoTickClock.field_p / (50 * SocialListUiHelpers.field_b[ed.field_f]);
                             SoftwareRaster.fillRectangleBlended(var16 - 20, -20 + var17, 40, var30, 0, 192);
                             if (CachedTextLayout.field_t == 0) {
                               SoftwareRaster.fillRectangleBlended(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
@@ -4483,19 +4483,19 @@ final class GameplayController {
                         }
                       } else {
                         if (CipherPacketBuffer.field_w == 0 &&
-                          var18 < oh.field_f &&
-                          var19 > oh.field_f &&
-                          oh.field_f >= -15 + var16 &&
+                          var18 < LobbySetupHelpers.field_f &&
+                          var19 > LobbySetupHelpers.field_f &&
+                          LobbySetupHelpers.field_f >= -15 + var16 &&
                           (var17 - 15) <= DelegatingCanvas.field_c &&
-                          oh.field_f <= (var16 + 15) &&
+                          LobbySetupHelpers.field_f <= (var16 + 15) &&
                           var17 + 15 >= DelegatingCanvas.field_c) {
                           this.field_t = var28;
-                          SoftwareRaster.fillRadialPaletteCircle(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
+                          SoftwareRaster.fillRadialPaletteCircle(var16 << 4, var17 << 4, 320, TriangleMesh.field_o.length - 1, TriangleMesh.field_o);
                         }
-                        if (eh.field_b[ed.field_f] > 0) {
+                        if (SocialListUiHelpers.field_b[ed.field_f] > 0) {
                           IterableDualNodeDeque.field_j[var29 + this.field_M[3]].drawRotatedAboutCenter(var16, var17, 0, var22 * 4096 / 40);
                           if (NanoTickClock.field_p > 0) {
-                            var30 = var22 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
+                            var30 = var22 * NanoTickClock.field_p / (50 * SocialListUiHelpers.field_b[ed.field_f]);
                             SoftwareRaster.fillRectangleBlended(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
                             if (0 == CachedTextLayout.field_t) {
                               SoftwareRaster.fillRectangleBlended(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
@@ -4650,7 +4650,7 @@ final class GameplayController {
                   }
                   var29 = stackIn_303_0;
                   stackIn_306_0 = BoundedUrlRequest.field_d;
-                  stackIn_306_1 = sf.field_v;
+                  stackIn_306_1 = TutorialStep.field_v;
                   stackIn_306_2 = var16;
                   stackIn_306_3 = -15 + var17;
                   if (var29 == 0) {
@@ -4675,7 +4675,7 @@ final class GameplayController {
                   var16 = var16 - var28;
                 }
                 if (this.controlledSentinel.hasModuleType(16, -27)) {
-                  if (Math.abs(oh.field_f - var16) < 16 &&
+                  if (Math.abs(LobbySetupHelpers.field_f - var16) < 16 &&
                     Math.abs(-var17 + DelegatingCanvas.field_c + 1) < 17 &&
                     this.controlledSentinel.field_Vb != null) {
                     NodeIterator.field_k = true;
@@ -4698,7 +4698,7 @@ final class GameplayController {
                     var30_ref_String = IconLabelControl.field_Zb;
                   }
                   stackIn_347_0 = BoundedUrlRequest.field_d;
-                  stackIn_347_1 = se.field_d;
+                  stackIn_347_1 = PopupMenuSupport.field_d;
                   stackIn_347_2 = var16;
                   stackIn_347_3 = -15 + var17;
                   if (var29 != 0) {
@@ -5013,7 +5013,7 @@ final class GameplayController {
                   var36 = -(var28 * this.controlledSentinel.maximumCharge / 2) + var24;
                   var37 = -this.controlledSentinel.field_ub / (100 + 50 * this.controlledSentinel.field_wb);
                   stackIn_500_0 = BoundedUrlRequest.field_d;
-                  stackIn_500_1 = hk.field_pc;
+                  stackIn_500_1 = LobbyGame.field_pc;
                   stackIn_500_2 = var36;
                   stackIn_500_3 = var30 + 6;
                   if (MouseWheelInput.field_c % 50 < 25) {
@@ -5022,7 +5022,7 @@ final class GameplayController {
                     stackIn_501_4 = 6316128;
                   }
                   ((BinaryBitmapFont) (Object) stackIn_500_0).drawCentered(stackIn_500_1, stackIn_500_2, stackIn_500_3, stackIn_501_4, 0);
-                  BoundedUrlRequest.field_d.drawCentered(SocketConnector.a(SocketJs5Transport.field_E, -62, new String[]{Integer.toString(var37)}), var36, 10 + var30 + 6, 16777215, 0);
+                  BoundedUrlRequest.field_d.drawCentered(SocketConnector.formatTemplate(SocketJs5Transport.field_E, -62, new String[]{Integer.toString(var37)}), var36, 10 + var30 + 6, 16777215, 0);
                   if (var40 == 0) {
                     break;
                   }
@@ -5038,7 +5038,7 @@ final class GameplayController {
                   stackIn_506_4 = 6316128;
                 }
                 ((BinaryBitmapFont) (Object) stackIn_505_0).drawCentered(stackIn_505_1, stackIn_505_2, stackIn_505_3, stackIn_506_4, 0);
-                BoundedUrlRequest.field_d.drawCentered(SocketConnector.a(SocketJs5Transport.field_E, -61, new String[]{Integer.toString(this.controlledSentinel.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
+                BoundedUrlRequest.field_d.drawCentered(SocketConnector.formatTemplate(SocketJs5Transport.field_E, -61, new String[]{Integer.toString(this.controlledSentinel.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
                 break;
               }
             }
@@ -5063,8 +5063,8 @@ final class GameplayController {
             var23 = 64;
             var24 = 455;
             this.controlledSentinel.a(var24, false, var23, (byte) 45);
-            if ((-10 + var23) <= oh.field_f &&
-              10 + var23 > oh.field_f &&
+            if ((-10 + var23) <= LobbySetupHelpers.field_f &&
+              10 + var23 > LobbySetupHelpers.field_f &&
               DelegatingCanvas.field_c >= -30 + var24 &&
               DelegatingCanvas.field_c < var24) {
               if (this.controlledSentinel.activeModuleType < 35) {
@@ -5340,7 +5340,7 @@ final class GameplayController {
           SoftwareRaster.drawVerticalLine(-4 + var16 + var17, -2 + var22, 1, 0);
           SoftwareRaster.drawVerticalLine(var16 + var17 - 5, -2 + var22, 1, 0);
           var30 = Math.max(var21 + 12, var28 + 10);
-          boolean decompiledSharedTail0 = !(!dm.field_c);
+          boolean decompiledSharedTail0 = !(!NameCheckResult.field_c);
           if (!decompiledSharedTail0) {
             BoundedUrlRequest.field_d.drawCentered(qe.field_f, var26 + 10 - 1, var30, 0, 0);
             BoundedUrlRequest.field_d.drawCentered(ai.field_r, 9 + var26, 6 + var30, 0, 0);
@@ -5359,10 +5359,10 @@ final class GameplayController {
           if (this.world.simulationTick > 50 &&
             NodeDeque.field_d >= 2) {
             if (this.field_ab) {
-              dk.field_h.drawRight("S/C checksums broken", 636, 80, 16711680, -1);
+              DualNodeHashTable.field_h.drawRight("S/C checksums broken", 636, 80, 16711680, -1);
             }
             if (this.field_k) {
-              dk.field_h.drawRight("S/C score checksums broken", 636, 100, 16711680, -1);
+              DualNodeHashTable.field_h.drawRight("S/C score checksums broken", 636, 100, 16711680, -1);
             }
           }
           if (this.field_E > 1024) {
@@ -5464,8 +5464,8 @@ final class GameplayController {
                 var40 == 0) {
                 break;
               }
-              if (hh.field_c[var27] < 0) {
-                var28 = 255 + 255 * hh.field_c[var27] / 50;
+              if (LoginActionHelpers.field_c[var27] < 0) {
+                var28 = 255 + 255 * LoginActionHelpers.field_c[var27] / 50;
               } else {
                 var28 = 255;
               }
@@ -5487,7 +5487,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.J(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5501,12 +5501,12 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.writeCipheredOpcode(61, (byte) -117);
+          ClockAndCookieHelpers.field_g.writeCipheredOpcode(61, (byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.E(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.E(" + param0 + ')');
         }
     }
 
@@ -5714,7 +5714,7 @@ final class GameplayController {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -5762,7 +5762,7 @@ final class GameplayController {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -5946,7 +5946,7 @@ final class GameplayController {
           this.field_r = 28;
           if (var2_int == 0) {
             if (!(ed.field_j < 0)) {
-              ch.a(var7, 640, 32308, 0, 480 - var7);
+              ArrayWidgetContainer.a(var7, 640, 32308, 0, 480 - var7);
               SoftwareRaster.fillRoundedRectangle(3, 3 + var7, 634, -var7 + 480 - 6, 8, 0);
               if (var51 != 0) {
                 this.g((byte) -118);
@@ -5964,7 +5964,7 @@ final class GameplayController {
             DraggableWidget.i(-1);
             var8Lifetime1 = 330;
             var9_ref_String = ImageProducerRasterBuffer.field_A[12];
-            var10_int = 10 + pl.field_U.textWidth(var9_ref_String);
+            var10_int = 10 + BirthDateEntryPanel.field_U.textWidth(var9_ref_String);
             if (var10_int < 140) {
               var10_int = 140;
             }
@@ -5979,7 +5979,7 @@ final class GameplayController {
             } else {
               stackIn_85_1 = 150;
             }
-            if (EmailAvailabilityValidator.a(stackIn_81_0, stackIn_85_1, 120, bi.field_c, 28, 160)) {
+            if (EmailAvailabilityValidator.a(stackIn_81_0, stackIn_85_1, 120, TextAndBitHelpers.field_c, 28, 160)) {
               this.field_r = 30;
             }
           }
@@ -5987,7 +5987,7 @@ final class GameplayController {
           if (var4 > 0) {
             var9 = var4;
           }
-          var10 = pl.field_U;
+          var10 = BirthDateEntryPanel.field_U;
           var11 = 0;
           var12_ref_mb__ = this.field_W;
           var13 = 0;
@@ -6109,7 +6109,7 @@ final class GameplayController {
             var26 = 0;
             while (2 > var26) {
               var27 = 3;
-              var28_ref_String = SocketConnector.a(kk.field_f, -85, new String[]{mm.field_d[var26], Integer.toString(this.field_O[var26])});
+              var28_ref_String = SocketConnector.formatTemplate(TextAndMenuHelpers.field_f, -85, new String[]{ClockAndCookieHelpers.field_d[var26], Integer.toString(this.field_O[var26])});
               var28_ref_String = WidgetStyleLayer.a(42, var28_ref_String);
               var29 = AlphaContainer.field_U.textWidth(var28_ref_String) + 2 * var27;
               var30 = -(var29 / 2) + (640 + var26 * 1280) / 4;
@@ -6222,7 +6222,7 @@ final class GameplayController {
               var33_intLifetime1 = stackIn_253_0;
               if (var2_int != 0) {
                 if (0 != DirectByteStorage.field_j) {
-                  var32_ref_String = SocketConnector.a(ak.field_a, -37, new String[]{Js5NetworkRequest.a(-1, this.field_c[0])});
+                  var32_ref_String = SocketConnector.formatTemplate(SpriteFrame.field_a, -37, new String[]{Js5NetworkRequest.a(-1, this.field_c[0])});
                 } else {
                   var32_ref_String = "";
                 }
@@ -6245,7 +6245,7 @@ final class GameplayController {
                   } else {
                     var39_ref_String = "40+";
                   }
-                  var39_ref_String = SocketConnector.a(EditableTextWidget.field_W, -100, new String[]{var39_ref_String});
+                  var39_ref_String = SocketConnector.formatTemplate(EditableTextWidget.field_W, -100, new String[]{var39_ref_String});
                   ((BitmapFont) ((Object) var10)).drawCentered(var39_ref_String, var36Lifetime1 / 2 + var35Lifetime1, (var37 + ((BitmapFont) ((Object) var10)).field_U) / 2 + var34Lifetime1, 16777215, 0);
                 } else {
                   var39 = var35Lifetime1;
@@ -6262,7 +6262,7 @@ final class GameplayController {
                     if (0 < var4) {
                       stackIn_283_0 = (var28 + 1) % 2 * 32;
                     } else {
-                      stackIn_283_0 = mm.a((byte) 106, this.field_e[var28]);
+                      stackIn_283_0 = ClockAndCookieHelpers.countSetBits((byte) 106, this.field_e[var28]);
                     }
                     var45 = stackIn_283_0;
                     var46 = var36Lifetime1 / var41;
@@ -6289,8 +6289,8 @@ final class GameplayController {
                         var4 == 0 &&
                         (var44 & this.field_e[var28]) != 0) {
                         AccountChoicePanel.field_Z[var47].drawTransparent(var43, var40);
-                        if (var43 <= oh.field_f &&
-                          oh.field_f < (var43 + AccountChoicePanel.field_Z[var47].field_z) &&
+                        if (var43 <= LobbySetupHelpers.field_f &&
+                          LobbySetupHelpers.field_f < (var43 + AccountChoicePanel.field_Z[var47].field_z) &&
                           var40 <= DelegatingCanvas.field_c &&
                           DelegatingCanvas.field_c < AccountChoicePanel.field_Z[var47].field_B + var40) {
                           var48 = Integer.toString(this.field_c[var47]);
@@ -6301,7 +6301,7 @@ final class GameplayController {
                             if (var47 == 4 ||
                               var47 == 5) {
                               var50 = Math.min(this.field_a[var47], -1 + UiContainer.field_I.length);
-                              var49 = SocketConnector.a(UiContainer.field_I[var50], -55, new String[]{Integer.toString(this.field_a[var47])});
+                              var49 = SocketConnector.formatTemplate(UiContainer.field_I[var50], -55, new String[]{Integer.toString(this.field_a[var47])});
                             } else if (27 == var47) {
                               var49 = var49 + '%';
                               var48 = var48 + '%';
@@ -6310,15 +6310,15 @@ final class GameplayController {
                             if (this.field_c[var47] == 1) {
                               var48 = var48 + IntrusiveNode.field_d;
                             } else {
-                              var48 = var48 + tc.field_s;
+                              var48 = var48 + HighscoreSubmission.field_s;
                             }
                             if (1 == this.field_a[var47]) {
                               var49 = var49 + IntrusiveNode.field_d;
                             } else {
-                              var49 = var49 + tc.field_s;
+                              var49 = var49 + HighscoreSubmission.field_s;
                             }
                           }
-                          var14Lifetime1 = SocketConnector.a(MusicPatchEnvelope.field_l[var47 * 2], -78, new String[]{": " + var48});
+                          var14Lifetime1 = SocketConnector.formatTemplate(MusicPatchEnvelope.field_l[var47 * 2], -78, new String[]{": " + var48});
                           var50Lifetime1 = 1;
                           if (ed.field_j <= -1) {
                             var50Lifetime1 = 0;
@@ -6333,7 +6333,7 @@ final class GameplayController {
                           var16 = var40 - 25;
                           var15 = var43 + 8;
                           if (var50Lifetime1 != 0) {
-                            var14Lifetime1 = (String) (var14Lifetime1) + SocketConnector.a(MusicPatchEnvelope.field_l[1 + 2 * var47], -127, new String[]{var49});
+                            var14Lifetime1 = (String) (var14Lifetime1) + SocketConnector.formatTemplate(MusicPatchEnvelope.field_l[1 + 2 * var47], -127, new String[]{var49});
                           }
                         }
                         var45Lifetime1++;
@@ -6367,17 +6367,17 @@ final class GameplayController {
             !this.field_J &&
             var25Lifetime1 != 0 &&
             !this.world.field_lb) {
-            pl.field_U.drawCentered(TextButton.field_O, 320, 436, 1021128, -1);
+            BirthDateEntryPanel.field_U.drawCentered(TextButton.field_O, 320, 436, 1021128, -1);
           }
           if (ed.field_j >= 0 &&
             var2_int == 0 && (!(MusicPatchNode.field_F <= 0) ||
             !(PasswordFieldPainter.field_v <= 0))) {
             var28Lifetime1 = 32 + var7;
-            if (SocialListPanel.a(ce.field_t, 18286)) {
+            if (SocialListPanel.isAllZero(ce.field_t, 18286)) {
               var28Lifetime1 -= 15;
             }
             var29_ref_String = "00a2ff";
-            var30_ref_String = SocketConnector.a(LoginMethod.field_g, -128, new String[]{Integer.toString(MusicPatchNode.field_F), var29_ref_String});
+            var30_ref_String = SocketConnector.formatTemplate(LoginMethod.field_g, -128, new String[]{Integer.toString(MusicPatchNode.field_F), var29_ref_String});
             array$0 = new String[2];
             stackIn_401_0 = ph.field_d;
             stackIn_401_1 = -123;
@@ -6391,13 +6391,13 @@ final class GameplayController {
             }
             stackIn_401_3[stackIn_401_4] = stackIn_402_5;
             stackIn_401_2[1] = var29_ref_String;
-            var31_ref_String = SocketConnector.a(stackIn_401_0, stackIn_401_1, stackIn_401_2);
-            pl.field_U.drawLeft(var30_ref_String, 100, var28Lifetime1, 16777215, -1);
-            pl.field_U.drawLeft(var31_ref_String, 400, var28Lifetime1, 16777215, -1);
+            var31_ref_String = SocketConnector.formatTemplate(stackIn_401_0, stackIn_401_1, stackIn_401_2);
+            BirthDateEntryPanel.field_U.drawLeft(var30_ref_String, 100, var28Lifetime1, 16777215, -1);
+            BirthDateEntryPanel.field_U.drawLeft(var31_ref_String, 400, var28Lifetime1, 16777215, -1);
           }
           if (ed.field_j >= 0 &&
             var2_int == 0 &&
-            SocialListPanel.a(ce.field_t, 18286)) {
+            SocialListPanel.isAllZero(ce.field_t, 18286)) {
             var28Lifetime2 = uf.a(120, ce.field_t);
             var29Lifetime2 = -10 + var28Lifetime2 * 40;
             var30Lifetime2 = (640 - var29Lifetime2) / 2;
@@ -6406,15 +6406,15 @@ final class GameplayController {
             var33_intLifetime2 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (256 <= var33_intLifetime2))) {
-              stackOut_414_0 = ve.a(ce.field_t, 1, var33_intLifetime2);
+              stackOut_414_0 = AssetDecoders.isBitSet(ce.field_t, 1, var33_intLifetime2);
               stackIn_433_0 = stackOut_414_0 ? 1 : 0;
               stackIn_415_0 = stackOut_414_0;
               if (var51 == 0) {
                 if (stackIn_415_0) {
                   var34_ref_wk = ClientException.field_c[var33_intLifetime2];
                   var34_ref_wk.drawQuarterSize(var30Lifetime2, 400);
-                  if (var30Lifetime2 <= oh.field_f &&
-                    oh.field_f < (30 + var30Lifetime2) &&
+                  if (var30Lifetime2 <= LobbySetupHelpers.field_f &&
+                    LobbySetupHelpers.field_f < (30 + var30Lifetime2) &&
                     400 <= DelegatingCanvas.field_c &&
                     DelegatingCanvas.field_c < 430) {
                     var31Lifetime2 = 15 + var30Lifetime2;
@@ -6452,7 +6452,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.W(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.W(" + param0 + ')');
         }
     }
 
@@ -6466,7 +6466,7 @@ final class GameplayController {
             return true;
           }
           if (param2 > UiContainer.field_G &&
-            this.world.a(4 + (UiContainer.field_G >> 4), 4, 0, UiContainer.field_G >> 4, km.field_c >> 4, (byte) 98, km.field_c >> 4)) {
+            this.world.a(4 + (UiContainer.field_G >> 4), 4, 0, UiContainer.field_G >> 4, ClientGlobals.field_c >> 4, (byte) 98, ClientGlobals.field_c >> 4)) {
             return true;
           }
           if (param0 != -5821) {
@@ -6476,7 +6476,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "nb.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "nb.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -6554,7 +6554,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.BA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.BA(" + param0 + ')');
         }
     }
 
@@ -6585,7 +6585,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ')');
         }
     }
 
@@ -6603,7 +6603,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.S(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6724,7 +6724,7 @@ final class GameplayController {
             this.f(var3_int != 0, 8209);
           }
           if (GrowableIntList.field_h >= 0) {
-            var5_ref_u = dm.field_f;
+            var5_ref_u = NameCheckResult.field_f;
             if (35 > GrowableIntList.field_h) {
               stackIn_66_0 = BufferedRandomAccessFile.field_m[GrowableIntList.field_h];
             } else {
@@ -6762,7 +6762,7 @@ final class GameplayController {
             SoftwareRaster.setClip(0, 0, 640, var10Lifetime1);
             ((BitmapFont) ((Object) var5_ref_u)).drawCentered(WidgetStyleLayer.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
             SoftwareRaster.setClip(0, 10 + var11_intLifetime1, 640, 480);
-            pl.field_U.drawParagraph(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, pl.field_U.field_G);
+            BirthDateEntryPanel.field_U.drawParagraph(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, BirthDateEntryPanel.field_U.field_G);
             SoftwareRaster.resetClip();
           }
           if (this.world.field_j) {
@@ -6779,12 +6779,12 @@ final class GameplayController {
               (decompiledFrameRemainder1 = !(this.world.field_R <= 0)) &&
               (decompiledFrameRemainder1 = (this.world.terrain.getTerrainType(62) != 4))) {
               if (1 == this.world.terrain.getTerrainType(81)) {
-                stackIn_112_0 = hk.field_jc;
+                stackIn_112_0 = LobbyGame.field_jc;
               } else {
                 stackIn_112_0 = wb.field_f;
               }
               var5_ref_String = stackIn_112_0;
-              AlphaContainer.field_U.drawCentered(SocketConnector.a(var5_ref_String, -126, new String[]{Integer.toString((-this.world.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
+              AlphaContainer.field_U.drawCentered(SocketConnector.formatTemplate(var5_ref_String, -126, new String[]{Integer.toString((-this.world.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
               decompiledFrameRemainder1 = (var12 != 0);
             }
             if ((decompiledFrameRemainder1) &&
@@ -6850,8 +6850,8 @@ final class GameplayController {
             }
             SoftwareRaster.fillRectangleBlended(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
             IterableDualNodeDeque.a((byte) 44, var7_ref_wk__, var8, var10Lifetime2, 0, var9Lifetime2);
-            if (0 <= oh.field_f &&
-              var8 + 0 > oh.field_f &&
+            if (0 <= LobbySetupHelpers.field_f &&
+              var8 + 0 > LobbySetupHelpers.field_f &&
               DelegatingCanvas.field_c >= var10Lifetime2 &&
               var9Lifetime2 + var10Lifetime2 > DelegatingCanvas.field_c) {
               this.field_r = 0;
@@ -6866,7 +6866,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder0 = true;
           var6Lifetime2 = 0;
-          if (fc.field_e[28] &&
+          if (SoundAndUrlHelpers.field_e[28] &&
             di.field_g == -1) {
             var6Lifetime2 = 1;
             decompiledFrameRemainder0 = (var12 != 0);
@@ -6905,16 +6905,16 @@ final class GameplayController {
               break;
             }
             var8 = var7;
-            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = LoginStateQueries.raiseColourChannelsToMinimum(48, Checkbox.field_bb.field_a[var8], 16913);
             var8 = var8 + 306560;
-            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = LoginStateQueries.raiseColourChannelsToMinimum(48, Checkbox.field_bb.field_a[var8], 16913);
             var7++;
           } while (var12 == 0);
           while (var7 < 480) {
             var8 = Checkbox.field_bb.field_c * var7;
-            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], bi.a(param1, 5662));
+            Checkbox.field_bb.field_a[var8] = LoginStateQueries.raiseColourChannelsToMinimum(48, Checkbox.field_bb.field_a[var8], TextAndBitHelpers.bitXor(param1, 5662));
             var8 += 639;
-            Checkbox.field_bb.field_a[var8] = ri.a(48, Checkbox.field_bb.field_a[var8], 16913);
+            Checkbox.field_bb.field_a[var8] = LoginStateQueries.raiseColourChannelsToMinimum(48, Checkbox.field_bb.field_a[var8], 16913);
             var7++;
             if (var12 != 0) {
               return;
@@ -6924,7 +6924,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7011,7 +7011,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.L(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.L(" + param0 + ')');
         }
     }
 
@@ -7086,7 +7086,7 @@ final class GameplayController {
             var6 = null;
             var7 = 0;
             var8_ref_String__ = dj.field_g[var2_int];
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               var8_ref_String__ = null;
             }
             var9 = UiContainer.field_H[var2_int];
@@ -7163,14 +7163,14 @@ final class GameplayController {
             }
             var7 = stackIn_70_0 / stackIn_70_1;
             var8Lifetime1 = 13;
-            var9_ref = SocketConnector.a(dc.field_f, -77, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1)});
-            var10_ref = SocketConnector.a(FallingPickup.field_J, -112, new String[]{Integer.toString(var7)});
+            var9_ref = SocketConnector.formatTemplate(dc.field_f, -77, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1)});
+            var10_ref = SocketConnector.formatTemplate(FallingPickup.field_J, -112, new String[]{Integer.toString(var7)});
             var11 = this.world.simulationTick / 50;
             if (DialWidgetPainter.field_f) {
               var11 += 600;
             }
             var12 = LabeledField.field_V + var11;
-            var13 = SocketConnector.a(TextLayoutLine.field_g, -44, new String[]{Js5NetworkRequest.a(-1, var11)});
+            var13 = SocketConnector.formatTemplate(TextLayoutLine.field_g, -44, new String[]{Js5NetworkRequest.a(-1, var11)});
             array$0 = new String[1];
             stackIn_77_0 = BoundedRandomAccessFile.field_k;
             stackIn_77_1 = -13;
@@ -7183,9 +7183,9 @@ final class GameplayController {
               stackIn_78_5 = Integer.toString(this.world.field_M);
             }
             stackIn_77_3[stackIn_77_4] = stackIn_78_5;
-            var14 = SocketConnector.a(stackIn_77_0, stackIn_77_1, stackIn_77_2);
-            var15 = SocketConnector.a(SoundCache.field_k, -82, new String[]{Js5NetworkRequest.a(-1, var12)});
-            ((BitmapFont) (var6Lifetime1)).drawLeft(cc.field_ic[DirectByteStorage.field_j], 6, var8Lifetime1, var5, 0);
+            var14 = SocketConnector.formatTemplate(stackIn_77_0, stackIn_77_1, stackIn_77_2);
+            var15 = SocketConnector.formatTemplate(SoundCache.field_k, -82, new String[]{Js5NetworkRequest.a(-1, var12)});
+            ((BitmapFont) (var6Lifetime1)).drawLeft(LobbyPlayer.field_ic[DirectByteStorage.field_j], 6, var8Lifetime1, var5, 0);
             ((BitmapFont) (var6Lifetime1)).drawLeft(var9_ref, 99, var8Lifetime1, 1021128, 0);
             var8Lifetime1 += 17;
             var5Lifetime1 = 1021128;
@@ -7207,7 +7207,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.V(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.V(" + param0 + ')');
         }
     }
 
@@ -7219,12 +7219,12 @@ final class GameplayController {
           if (param2 != 256) {
             GameplayController.b((byte) 125);
           }
-          stackIn_4_0 = rf.a(param0, param3, (byte) -118, false, param4, param1);
+          stackIn_4_0 = LoginConnectionStage.createResourceArchive(param0, param3, (byte) -118, false, param4, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "nb.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "nb.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -7245,7 +7245,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.T(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7313,7 +7313,7 @@ final class GameplayController {
           var11 = 96;
           var12 = var10 * 2;
           var13 = var10 * 2;
-          ParticleEffect.a(var11, var10, (byte) 50, var13, var12, var11);
+          ParticleEffect.drawAnimatedHighlightBox(var11, var10, (byte) 50, var13, var12, var11);
           var8Lifetime1 = var12 - (-var11 - 8);
           var14 = 0;
           var15 = ValidationHelpWidget.field_lb.field_U + 3;
@@ -7338,14 +7338,14 @@ final class GameplayController {
           SoftwareRaster.drawHorizontalLineAlpha(var8Lifetime1, var13 + var20, -var8Lifetime1 + var9, param0, 64);
           var13Lifetime1 = 20;
           if (param1 != null) {
-            pl.field_U.drawLeft(param1, var8Lifetime1 + 5, var13Lifetime1, 16777215, 0);
+            BirthDateEntryPanel.field_U.drawLeft(param1, var8Lifetime1 + 5, var13Lifetime1, 16777215, 0);
           }
           var13Lifetime1 += 5;
           if (param5 != null) {
             var21 = 1021128;
             if (this.e(-100) &&
-              (5 + var8Lifetime1) <= oh.field_f &&
-              oh.field_f < (ValidationHelpWidget.field_lb.getWrappedWidth(param5, var17) + (5 + var8Lifetime1)) &&
+              (5 + var8Lifetime1) <= LobbySetupHelpers.field_f &&
+              LobbySetupHelpers.field_f < (ValidationHelpWidget.field_lb.getWrappedWidth(param5, var17) + (5 + var8Lifetime1)) &&
               DelegatingCanvas.field_c >= var13Lifetime1 &&
               DelegatingCanvas.field_c < (var13Lifetime1 + ValidationHelpWidget.field_lb.paragraphHeight(param5, var17, var15))) {
               var21 = 1044724;
@@ -7424,15 +7424,15 @@ final class GameplayController {
             var22_intLifetime1 = 1021128;
             if (UiContainer.field_M <= 0) {
               var22_intLifetime1 = 8421504;
-              if (var29 != 0 && (oh.field_f >= var12 &&
-                (var21_ref_wk.field_z + var12) > oh.field_f &&
+              if (var29 != 0 && (LobbySetupHelpers.field_f >= var12 &&
+                (var21_ref_wk.field_z + var12) > LobbySetupHelpers.field_f &&
                 DelegatingCanvas.field_c >= var13Lifetime1 &&
                 DelegatingCanvas.field_c < (var13Lifetime1 + var21_ref_wk.field_B))) {
                 this.field_r = 1;
               }
             } else {
-              if (oh.field_f >= var12 &&
-                (var21_ref_wk.field_z + var12) > oh.field_f &&
+              if (LobbySetupHelpers.field_f >= var12 &&
+                (var21_ref_wk.field_z + var12) > LobbySetupHelpers.field_f &&
                 DelegatingCanvas.field_c >= var13Lifetime1 &&
                 DelegatingCanvas.field_c < (var13Lifetime1 + var21_ref_wk.field_B)) {
                 this.field_r = 1;
@@ -7464,8 +7464,8 @@ final class GameplayController {
               }
             }
             if (var23Lifetime1 != 0) {
-              if (!(-1 + var12Lifetime1 <= oh.field_f) ||
-                !((15 + var12Lifetime1) > oh.field_f) ||
+              if (!(-1 + var12Lifetime1 <= LobbySetupHelpers.field_f) ||
+                !((15 + var12Lifetime1) > LobbySetupHelpers.field_f) ||
                 !(DelegatingCanvas.field_c >= var13Lifetime1 - 1) ||
                 !(var13Lifetime1 + 15 > DelegatingCanvas.field_c)) {
                 var24 = (Math.sin((double)(MouseWheelInput.field_c / 8)) + 1.0) * 0.5;
@@ -7520,7 +7520,7 @@ final class GameplayController {
           } else {
             stackIn_150_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_141_0), ((StringBuilder) (Object) stackIn_149_1).append(stackIn_150_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_141_0), ((StringBuilder) (Object) stackIn_149_1).append(stackIn_150_2).append(')').toString());
         }
     }
 
@@ -7789,8 +7789,8 @@ final class GameplayController {
             var15 = 9;
             var14 = var14 - var15 / 2;
             SoftwareRaster.fillRectangle(var12, var14, var13, var15, 0);
-            if (oh.field_f >= var12 &&
-              var12 + var13 > oh.field_f &&
+            if (LobbySetupHelpers.field_f >= var12 &&
+              var12 + var13 > LobbySetupHelpers.field_f &&
               DelegatingCanvas.field_c >= var14 &&
               DelegatingCanvas.field_c < (var14 + var15)) {
               stackIn_168_0 = 1;
@@ -7937,7 +7937,7 @@ final class GameplayController {
               var16 = 0;
               while (var16 < 2) {
                 var17 = var16;
-                var18_ref_String = mm.field_d[var17].toUpperCase();
+                var18_ref_String = ClockAndCookieHelpers.field_d[var17].toUpperCase();
                 var19Lifetime1 = fj.field_h[var17];
                 var20Lifetime1 = 13421772;
                 stackIn_389_0 = var19Lifetime1;
@@ -8114,7 +8114,7 @@ final class GameplayController {
           if (decompiledFrameCompleted0) {
             var12 = stackIn_388_0 + stackIn_388_1;
             var12 += 9;
-            BoundedUrlRequest.field_d.drawLeft(ci.field_f, 6, var12, var4, -1);
+            BoundedUrlRequest.field_d.drawLeft(ClientErrorSupport.field_f, 6, var12, var4, -1);
             BoundedUrlRequest.field_d.drawRight(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
             var12 += 9;
             BoundedUrlRequest.field_d.drawLeft(mc.field_e, 6, var12, var4, -1);
@@ -8134,7 +8134,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.FA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8158,7 +8158,7 @@ final class GameplayController {
           this.field_Y = 0;
           fn.field_a = false;
           this.field_v = 0;
-          ue.field_b = false;
+          LoginHandshakeHelpers.field_b = false;
           this.controlledSentinel.field_U = 0;
           var3 = FunOrbClient.field_z;
           if (this.field_o == null) {
@@ -8231,7 +8231,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "nb.AB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "nb.AB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8270,7 +8270,7 @@ final class GameplayController {
           }
           var2 = UiContainer.field_H[di.field_g];
           var3 = dj.field_g[di.field_g];
-          if (dm.field_c) {
+          if (NameCheckResult.field_c) {
             var3 = null;
           }
           var5 = 126 % ((-10 - param0) / 38);
@@ -8295,7 +8295,7 @@ final class GameplayController {
                 var8_ref = var2[var4 + 1];
               }
             } else {
-              var8_ref = ue.field_d;
+              var8_ref = LoginHandshakeHelpers.field_d;
             }
             if (null == var7_ref) {
               var7_ref = var2[var4];
@@ -8315,7 +8315,7 @@ final class GameplayController {
             stackIn_54_0 = var7;
             stackIn_54_1 = var6;
             stackIn_54_2 = 127;
-            if (!dm.field_c) {
+            if (!NameCheckResult.field_c) {
               stackIn_55_3 = ClientException.field_j;
             } else {
               stackIn_55_3 = qm.field_c;
@@ -8323,7 +8323,7 @@ final class GameplayController {
             if (EmailAvailabilityValidator.a(stackIn_54_0, stackIn_54_1, stackIn_54_2, stackIn_55_3, var8, var9)) {
               this.field_r = 36;
             }
-            if (dm.field_c) {
+            if (NameCheckResult.field_c) {
               var7 += 35;
               stackIn_63_0 = var7;
               stackIn_63_1 = var6;
@@ -8340,7 +8340,7 @@ final class GameplayController {
               stackIn_70_0 = var7;
               stackIn_70_1 = var6;
               stackIn_70_2 = 121;
-              if (!ik.field_h) {
+              if (!ConditionalTextValue.field_h) {
                 stackIn_71_3 = sa.field_b;
               } else {
                 stackIn_71_3 = o.field_a;
@@ -8365,7 +8365,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.TA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.TA(" + param0 + ')');
         }
     }
 
@@ -8426,7 +8426,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.O(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.O(" + param0 + ')');
         }
     }
 
@@ -8557,7 +8557,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.G(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.G(" + param0 + ')');
         }
     }
 
@@ -8670,9 +8670,9 @@ final class GameplayController {
               var13 = -180 + ((var13 * 3 - 720) / 10 + 240);
               if (null == un.field_o ||
                 DraggableWidget.field_T == null) {
-                im.field_h.fileRetentionMode = 0;
-                un.field_o = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
-                DraggableWidget.field_T = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+                LobbyStateHelpers.field_h.fileRetentionMode = 0;
+                un.field_o = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+                DraggableWidget.field_T = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               }
               if (null != un.field_o &&
                 DraggableWidget.field_T != null) {
@@ -8700,18 +8700,18 @@ final class GameplayController {
                   var11Lifetime2 -= 4;
                 }
                 if (null == jh.field_h) {
-                  im.field_h.fileRetentionMode = 0;
+                  LobbyStateHelpers.field_h.fileRetentionMode = 0;
                   if (this.world.terrain.getTerrainType(55) == 0) {
-                    jh.field_h = new RgbSprite(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
+                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (1 == this.world.terrain.getTerrainType(79)) {
-                    jh.field_h = new RgbSprite(im.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
+                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (this.world.terrain.getTerrainType(63) == 2) {
-                    jh.field_h = new RgbSprite(im.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
+                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                   if (this.world.terrain.getTerrainType(90) == 3) {
-                    jh.field_h = new RgbSprite(im.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
+                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) NanoTickClock.a(false)));
                   }
                 }
                 if (jh.field_h != null) {
@@ -9038,7 +9038,7 @@ final class GameplayController {
           } else {
             stackIn_210_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_209_0), ((StringBuilder) (Object) stackIn_209_1).append(stackIn_210_2).append(')').toString());
         }
     }
 
@@ -9064,7 +9064,7 @@ final class GameplayController {
         var16 = SteelSentinels.obfuscationControl;
         try {
           if (!this.world.field_j) {
-            if (oh.field_f < 0 &&
+            if (LobbySetupHelpers.field_f < 0 &&
               DelegatingCanvas.field_c < 0) {
               return;
             }
@@ -9074,7 +9074,7 @@ final class GameplayController {
             var7_int = 0;
             var8 = 0;
             var9 = 0;
-            while (hf.field_c > var9) {
+            while (FrameStyleHelpers.field_c > var9) {
               var10 = this.d(true, this.field_D[var9]);
               var10 = var10 + (-param0 + param3);
               var11 = this.b(1, this.field_K[var9]);
@@ -9189,7 +9189,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var7), "nb.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var7), "nb.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -9204,12 +9204,12 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.writeCipheredOpcode(59, (byte) -117);
+          ClockAndCookieHelpers.field_g.writeCipheredOpcode(59, (byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.D(" + param0 + ')');
         }
     }
 
@@ -9248,29 +9248,29 @@ final class GameplayController {
           var3 = 1021128;
           MidiPcmStream.field_db.drawOpaque(0, -MidiPcmStream.field_db.field_B + var2_int);
           if (this.field_r == -1 &&
-            oh.field_f >= 479 &&
-            635 > oh.field_f &&
+            LobbySetupHelpers.field_f >= 479 &&
+            635 > LobbySetupHelpers.field_f &&
             DelegatingCanvas.field_c >= 2 &&
             DelegatingCanvas.field_c < 30) {
             var3 = 1044724;
             this.field_r = 6;
           }
-          DualNodeDeque.a(var3, 2, pl.field_U, 479, 156, (byte) 68, DateInputWidget.field_S, 28);
+          DualNodeDeque.a(var3, 2, BirthDateEntryPanel.field_U, 479, 156, (byte) 68, DateInputWidget.field_S, 28);
           var3 = 1021128;
           if (this.field_r == -1 &&
-            oh.field_f >= 173 &&
-            oh.field_f < 321 &&
+            LobbySetupHelpers.field_f >= 173 &&
+            LobbySetupHelpers.field_f < 321 &&
             DelegatingCanvas.field_c >= 2 &&
             DelegatingCanvas.field_c < 30) {
             this.field_r = 12;
             var3 = 1044724;
           }
-          DualNodeDeque.a(var3, 2, pl.field_U, 173, 148, (byte) 68, sl.field_f, 28);
+          DualNodeDeque.a(var3, 2, BirthDateEntryPanel.field_U, 173, 148, (byte) 68, sl.field_f, 28);
           var3 = 1021128;
           var3 = 1021128;
           if (this.field_r == -1 &&
-            oh.field_f >= 5 &&
-            oh.field_f < 171 &&
+            LobbySetupHelpers.field_f >= 5 &&
+            LobbySetupHelpers.field_f < 171 &&
             DelegatingCanvas.field_c >= 2 &&
             DelegatingCanvas.field_c < 30) {
             var3 = 1044724;
@@ -9280,7 +9280,7 @@ final class GameplayController {
             return;
           }
           boolean decompiledFrameCompleted0 = true;
-          DualNodeDeque.a(var3, 2, pl.field_U, 5, 166, (byte) 68, SteelSentinels.field_I, 28);
+          DualNodeDeque.a(var3, 2, BirthDateEntryPanel.field_U, 5, 166, (byte) 68, SteelSentinels.field_I, 28);
           if (this.field_v > 0) {
             var4 = new int[4];
             SoftwareRaster.getClip(var4);
@@ -9324,8 +9324,8 @@ final class GameplayController {
               var10++;
             } while (var20 == 0);
             if (-1 == this.field_r &&
-              oh.field_f >= 5 &&
-              oh.field_f < 171 &&
+              LobbySetupHelpers.field_f >= 5 &&
+              LobbySetupHelpers.field_f < 171 &&
               DelegatingCanvas.field_c >= var2_int &&
               DelegatingCanvas.field_c < var7) {
               this.field_r = 26;
@@ -9349,8 +9349,8 @@ final class GameplayController {
                 if (this.field_r == 26 &&
                   fn.field_a &&
                   ~this.field_s == ~this.field_v &&
-                  var11 <= oh.field_f &&
-                  oh.field_f < var11 + 80 &&
+                  var11 <= LobbySetupHelpers.field_f &&
+                  LobbySetupHelpers.field_f < var11 + 80 &&
                   DelegatingCanvas.field_c >= var12 &&
                   30 + var12 > DelegatingCanvas.field_c) {
                   var3 = 1044724;
@@ -9401,7 +9401,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.HA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.HA(" + param0 + ')');
         }
     }
 
@@ -9495,7 +9495,7 @@ final class GameplayController {
             if (di.field_g != 4) {
               var4 = DateOfBirthValidator.field_k;
             } else {
-              var4 = na.field_u;
+              var4 = ChatMessage.field_u;
             }
           }
           boolean decompiledFrameRemainder2 = true;
@@ -9699,7 +9699,7 @@ final class GameplayController {
               stackIn_152_1 = var3;
               if (var21 == 0) {
                 if (stackIn_152_0 < stackIn_152_1) {
-                  var10[var13Lifetime2] = this.world.findSentinelForPlayer(var13Lifetime2 * 2 / var3, bi.a(param0, 4283));
+                  var10[var13Lifetime2] = this.world.findSentinelForPlayer(var13Lifetime2 * 2 / var3, TextAndBitHelpers.bitXor(param0, 4283));
                 }
                 if (null != var10[var13Lifetime2]) {
                   dupTemp$0 = var10[var13Lifetime2].teamId;
@@ -9825,7 +9825,7 @@ final class GameplayController {
           }
           SoftwareRaster.drawHorizontalLineAlpha(stackIn_219_0, stackIn_219_1, 640, 0, 128);
           if (var5 != null) {
-            pl.field_U.drawParagraph((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
+            BirthDateEntryPanel.field_U.drawParagraph((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, BirthDateEntryPanel.field_U.field_U + 6);
           }
           if (this.field_h &&
             EmailAvailabilityValidator.a(-CipherPacketBuffer.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
@@ -9835,7 +9835,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.GB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.GB(" + param0 + ')');
         }
     }
 
@@ -9884,7 +9884,7 @@ final class GameplayController {
                   return;
                 }
               case 6:
-                hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 0, di.field_c);
+                PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) 0, di.field_c);
                 lc.field_e = true;
                 Sprite.field_k = false;
                 var5 = GzipDecoder.field_g;
@@ -9958,7 +9958,7 @@ final class GameplayController {
                 if (!fn.field_a) {
                   return;
                 }
-                ue.field_b = false;
+                LoginHandshakeHelpers.field_b = false;
                 if (var9 == 0) {
                   return;
                 }
@@ -9972,7 +9972,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.Q(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.Q(" + param0 + ')');
         }
     }
 
@@ -9991,7 +9991,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.UA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.UA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -10000,11 +10000,11 @@ final class GameplayController {
         RuntimeException var2 = null;
         try {
           LoginForm.field_db.clear(6);
-          ri.field_b = null;
-          hf.field_c = 0;
+          LoginStateQueries.field_b = null;
+          FrameStyleHelpers.field_c = 0;
           this.world.pendingParticles.clear(6);
           this.world.particles.clear(6);
-          SocketConnector.c(10000);
+          SocketConnector.detachAllParticles(10000);
           jh.field_h = null;
           if (param0 >= -60) {
             this.g(109);
@@ -10015,7 +10015,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.SA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.SA(" + param0 + ')');
         }
     }
 
@@ -10049,14 +10049,14 @@ final class GameplayController {
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3_int <= var4))) {
-            stackOut_6_0 = ve.a(ce.field_t, 1, var5);
+            stackOut_6_0 = AssetDecoders.isBitSet(ce.field_t, 1, var5);
             stackIn_28_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var11 == 0) {
               if (stackIn_7_0) {
                 ClientException.field_c[var5].drawQuarterSize(var6, param1);
-                if (var6 <= oh.field_f &&
-                  (var6 + 32) > oh.field_f &&
+                if (var6 <= LobbySetupHelpers.field_f &&
+                  (var6 + 32) > LobbySetupHelpers.field_f &&
                   DelegatingCanvas.field_c >= param1 &&
                   DelegatingCanvas.field_c < (param1 + 32)) {
                   var7 = var5;
@@ -10092,7 +10092,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.N(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -10138,25 +10138,25 @@ final class GameplayController {
           if (DelegatingCanvas.field_c >= (-2 + param0) &&
             DelegatingCanvas.field_c < (12 + param0) &&
             this.controlledSentinel.field_ub >= 0 &&
-            oh.field_f >= (-40 + param1)) {
-            if ((param1 - 13) <= oh.field_f) {
-              if ((param1 + 12) > oh.field_f) {
+            LobbySetupHelpers.field_f >= (-40 + param1)) {
+            if ((param1 - 13) <= LobbySetupHelpers.field_f) {
+              if ((param1 + 12) > LobbySetupHelpers.field_f) {
                 this.field_r = 35;
-                SoftwareRaster.fillRadialPaletteCircle(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + pe.field_o.length, pe.field_o);
+                SoftwareRaster.fillRadialPaletteCircle(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + TriangleMesh.field_o.length, TriangleMesh.field_o);
                 decompiledFrameRemainder0 = (var18 != 0);
               }
               if ((decompiledFrameRemainder0) &&
-                (!(oh.field_f >= (param1 + 40)))) {
+                (!(LobbySetupHelpers.field_f >= (param1 + 40)))) {
                 this.field_r = 34;
-                SoftwareRaster.fillRadialPaletteCircle(16 + param1 << 4, 6 + param0 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                SoftwareRaster.fillRadialPaletteCircle(16 + param1 << 4, 6 + param0 << 4, 144, TriangleMesh.field_o.length - 1, TriangleMesh.field_o);
                 if (var18 != 0) {
                   this.field_r = 33;
-                  SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                  SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, TriangleMesh.field_o.length - 1, TriangleMesh.field_o);
                 }
               }
             } else {
               this.field_r = 33;
-              SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+              SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, TriangleMesh.field_o.length - 1, TriangleMesh.field_o);
             }
           }
           if (~this.controlledSentinel.field_ub > param2) {
@@ -10212,8 +10212,8 @@ final class GameplayController {
           regionExit1: {
             boolean decompiledFrameCompleted0 = true;
             if (!BoundedRandomAccessFile.field_o.equals("X") ||
-              dm.field_c) {
-              if (dm.field_c) {
+              NameCheckResult.field_c) {
+              if (NameCheckResult.field_c) {
                 stackIn_52_0 = DialWidgetPainter.field_p;
               } else {
                 stackIn_52_0 = BoundedRandomAccessFile.field_o;
@@ -10302,14 +10302,14 @@ final class GameplayController {
           }
           SpriteCheckboxPainter.a(var4_intLifetime3, true, false, 6 + param0, param1 + 17, var5Lifetime3);
           stackIn_88_0 = BoundedUrlRequest.field_d;
-          if (!dm.field_c) {
+          if (!NameCheckResult.field_c) {
             stackIn_89_1 = gm.field_a;
           } else {
             stackIn_89_1 = ValidationIndicator.field_X;
           }
           ((BinaryBitmapFont) (Object) stackIn_88_0).drawLeft(stackIn_89_1, param1 + 29, 10 + param0, 1021128, -1);
           stackIn_92_0 = BoundedUrlRequest.field_d;
-          if (!dm.field_c) {
+          if (!NameCheckResult.field_c) {
             stackIn_93_1 = fm.field_i;
           } else {
             stackIn_93_1 = cl.field_g;
@@ -10330,7 +10330,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "nb.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "nb.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -10353,7 +10353,7 @@ final class GameplayController {
             UiContainer.field_M = UiContainer.field_M + 1;
           }
           tj.field_c = 0;
-          var2_int = ec.field_c[di.field_g + 0];
+          var2_int = ClientUiHelpers.field_c[di.field_g + 0];
           if (UiContainer.field_M >= var2_int) {
             return;
           }
@@ -10406,7 +10406,7 @@ final class GameplayController {
                       var3 = 52000;
                       var4 = -23000;
                       var5 = new Sentinel(var3, var4, this.world);
-                      var5.configureDesign(va.field_f, true, false, -1, 1);
+                      var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                       var5.field_Nb = 6;
                       var5.field_pc = false;
                       this.world.sentinels.addLast(param0 + 1592, var5);
@@ -10417,21 +10417,21 @@ final class GameplayController {
                     var3 = 126000;
                     var4 = -25000;
                     var5 = new Sentinel(var3, var4, this.world);
-                    var5.configureDesign(va.field_f, true, false, -1, 1);
+                    var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
                     var3 = 166000;
                     var4 = -30000;
                     this.world.sentinels.addLast(param0 + 1592, var5);
                     var5 = new Sentinel(var3, var4, this.world);
-                    var5.configureDesign(va.field_f, true, false, -1, 1);
+                    var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
                     var4 = -40000;
                     var3 = 221000;
                     this.world.sentinels.addLast(3, var5);
                     var5 = new Sentinel(var3, var4, this.world);
-                    var5.configureDesign(va.field_f, true, false, -1, 1);
+                    var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
                     this.world.sentinels.addLast(3, var5);
@@ -10442,7 +10442,7 @@ final class GameplayController {
                   var3 = 180000;
                   var4 = -30000;
                   var5 = new Sentinel(var3, var4, this.world);
-                  var5.configureDesign(va.field_f, true, false, -1, 1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                   var5.field_Nb = 1;
                   var5.field_pc = false;
                   this.world.sentinels.addLast(3, var5);
@@ -10454,26 +10454,26 @@ final class GameplayController {
                 var4 = -100000;
                 var5 = new Sentinel(var3, var4, this.world);
                 var5.velocityY = -100;
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 this.world.sentinels.addLast(3, var5);
                 var3 = 96000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 this.world.sentinels.addLast(3, var5);
                 var3 = 166000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 this.world.sentinels.addLast(3, var5);
                 var3 = 228000;
                 var4 = -4000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 var5.field_u = true;
@@ -10482,7 +10482,7 @@ final class GameplayController {
                   return;
                 }
               }
-              TabbedPanel.a(0, 0, 1200, 0, 0, 0, 0, (byte) -65);
+              TabbedPanel.recordMissionCompletion(0, 0, 1200, 0, 0, 0, 0, (byte) -65);
               if (0 != DateOfBirthValidator.field_o) {
                 return;
               }
@@ -10520,14 +10520,14 @@ final class GameplayController {
                             var3 = 102000;
                             var4 = -100000;
                             var5 = new Sentinel(var3, var4, this.world);
-                            var5.configureDesign(va.field_f, true, false, -1, 1);
+                            var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                             var5.field_Nb = 1;
                             var5.field_o = 7;
                             var5.field_pc = false;
                             var3 = 67000;
                             this.world.sentinels.addLast(3, var5);
                             var5 = new Sentinel(var3, var4, this.world);
-                            var5.configureDesign(va.field_f, true, false, -1, 1);
+                            var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                             var5.field_o = 7;
                             var5.field_pc = false;
                             var5.field_Nb = 1;
@@ -10555,7 +10555,7 @@ final class GameplayController {
                                   if (var6 != 0) {
                                     break regionExit5;
                                   }
-                                  TabbedPanel.a(0, 0, 1200, 1, 0, 0, 0, (byte) -65);
+                                  TabbedPanel.recordMissionCompletion(0, 0, 1200, 1, 0, 0, 0, (byte) -65);
                                   return;
                               }
                             }
@@ -10564,7 +10564,7 @@ final class GameplayController {
                             var4 = -100000;
                             var3 = 17000;
                             var5 = new Sentinel(var3, var4, this.world);
-                            var5.configureDesign(va.field_f, true, false, -1, 1);
+                            var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                             var5.field_Nb = 1;
                             var5.field_o = 7;
                             var5.field_pc = false;
@@ -10577,7 +10577,7 @@ final class GameplayController {
                           var4 = -100000;
                           var3 = 17000;
                           var5 = new Sentinel(var3, var4, this.world);
-                          var5.configureDesign(va.field_f, true, false, -1, 1);
+                          var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                           var5.field_Nb = 1;
                           var5.field_pc = false;
                           var5.field_o = 7;
@@ -10590,21 +10590,21 @@ final class GameplayController {
                         var3 = 25000;
                         var5 = new Sentinel(var3, var4, this.world);
                         var5.velocityY = -100;
-                        var5.configureDesign(va.field_f, true, false, -1, 1);
+                        var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                         var5.field_Nb = 9;
                         var5.field_pc = false;
                         var5.field_o = 7;
                         var3 = 96000;
                         this.world.sentinels.addLast(param0 + 1592, var5);
                         var5 = new Sentinel(var3, var4, this.world);
-                        var5.configureDesign(va.field_f, true, false, -1, 1);
+                        var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
                         this.world.sentinels.addLast(3, var5);
                         var3 = 166000;
                         var5 = new Sentinel(var3, var4, this.world);
-                        var5.configureDesign(va.field_f, true, false, -1, 1);
+                        var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
@@ -10612,7 +10612,7 @@ final class GameplayController {
                         var4 = -4000;
                         var3 = 228000;
                         var5 = new Sentinel(var3, var4, this.world);
-                        var5.configureDesign(va.field_f, true, false, -1, 1);
+                        var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
@@ -10662,7 +10662,7 @@ final class GameplayController {
                 var3 = 122000;
                 var4 = -25000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 1;
                 var5.field_pc = false;
                 var5.field_o = 7;
@@ -10699,7 +10699,7 @@ final class GameplayController {
                     var3 = 20000;
                     var5 = new Sentinel(var3, var4, this.world);
                     var5.velocityY = -100;
-                    var5.configureDesign(va.field_f, true, false, -1, 1);
+                    var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                     var5.armour = 1;
                     var5.field_o = 20;
                     var5.maximumArmour = 1;
@@ -10724,28 +10724,28 @@ final class GameplayController {
                   var3 = 142000;
                   var4 = -100000;
                   var5 = new Sentinel(var3, var4, this.world);
-                  var5.configureDesign(va.field_f, true, false, -1, 1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                   var5.field_pc = false;
                   var5.field_Nb = 1;
                   var5.field_o = 13;
                   var3 = 102000;
                   this.world.sentinels.addLast(param0 ^ -1592, var5);
                   var5 = new Sentinel(var3, var4, this.world);
-                  var5.configureDesign(va.field_f, true, false, -1, 1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                   var5.field_pc = false;
                   var5.field_o = 13;
                   var5.field_Nb = 1;
                   this.world.sentinels.addLast(3, var5);
                   var3 = 67000;
                   var5 = new Sentinel(var3, var4, this.world);
-                  var5.configureDesign(va.field_f, true, false, -1, 1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                   var5.field_Nb = 1;
                   var5.field_pc = false;
                   var5.field_o = 13;
                   var3 = 49000;
                   this.world.sentinels.addLast(3, var5);
                   var5 = new Sentinel(var3, var4, this.world);
-                  var5.configureDesign(va.field_f, true, false, -1, 1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                   var5.field_o = 13;
                   var5.field_pc = false;
                   var5.field_Nb = 1;
@@ -10760,25 +10760,25 @@ final class GameplayController {
                 var4 = -100000;
                 var3 = 142000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 var3 = 102000;
                 this.world.sentinels.addLast(param0 + 1592, var5);
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 9;
                 this.world.sentinels.addLast(3, var5);
                 var3 = 67000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 this.world.sentinels.addLast(3, var5);
                 var3 = 49000;
                 var5 = new Sentinel(var3, var4, this.world);
-                var5.configureDesign(va.field_f, true, false, -1, 1);
+                var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 9;
                 this.world.sentinels.addLast(3, var5);
@@ -10786,7 +10786,7 @@ final class GameplayController {
                   return;
                 }
               }
-              TabbedPanel.a(0, 0, 1200, 7, 0, 0, 0, (byte) -65);
+              TabbedPanel.recordMissionCompletion(0, 0, 1200, 7, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
@@ -10892,7 +10892,7 @@ final class GameplayController {
                   return;
                 }
               }
-              TabbedPanel.a(0, 0, 1200, 3, 0, 0, 0, (byte) -65);
+              TabbedPanel.recordMissionCompletion(0, 0, 1200, 3, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
@@ -10948,7 +10948,7 @@ final class GameplayController {
                   return;
                 }
               }
-              TabbedPanel.a(0, 0, 1200, 5, 0, 0, 0, (byte) -65);
+              TabbedPanel.recordMissionCompletion(0, 0, 1200, 5, 0, 0, 0, (byte) -65);
               if (var6 == 0) {
                 return;
               }
@@ -10976,7 +10976,7 @@ final class GameplayController {
                   var3 = 20000;
                   var5 = new Sentinel(var3, var4, this.world);
                   var5.velocityY = -100;
-                  var5.configureDesign(va.field_f, true, false, -1, -1);
+                  var5.configureDesign(LoginDialogHelpers.field_f, true, false, -1, -1);
                   var5.field_Nb = 9;
                   var5.field_pc = false;
                   var5.field_o = 0;
@@ -10989,7 +10989,7 @@ final class GameplayController {
                 var3 = 20000;
                 var5 = new Sentinel(var3, var4, this.world);
                 var5.velocityY = -100;
-                var5.configureDesign(eb.field_o, true, false, -1, -1);
+                var5.configureDesign(AgeValidator.field_o, true, false, -1, -1);
                 var5.field_Nb = 7;
                 var5.field_o = 7;
                 var5.field_pc = false;
@@ -11024,13 +11024,13 @@ final class GameplayController {
                 return;
               }
             }
-            TabbedPanel.a(0, 0, 1200, 9, 0, 0, 0, (byte) -65);
+            TabbedPanel.recordMissionCompletion(0, 0, 1200, 9, 0, 0, 0, (byte) -65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.P(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.P(" + param0 + ')');
         }
     }
 
@@ -11184,7 +11184,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.EB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.EB(" + param0 + ')');
         }
     }
 
@@ -11222,9 +11222,9 @@ final class GameplayController {
           if (param4 == PartInstruction.field_t[0]) {
             param4 = uj.a(param4, 93);
           }
-          var13 = var9_int + param6 + (4 + (20 + pl.field_U.field_U) / 2);
+          var13 = var9_int + param6 + (4 + (20 + BirthDateEntryPanel.field_U.field_U) / 2);
           if (var10 != null) {
-            var14 = pl.field_U;
+            var14 = BirthDateEntryPanel.field_U;
             var15 = ((BitmapFont) (var14)).textWidth(var10);
             if (var15 > param1) {
               var14 = ValidationHelpWidget.field_lb;
@@ -11250,7 +11250,7 @@ final class GameplayController {
             var14Lifetime1 = cd.field_c[var15Lifetime1];
           }
           if (null != var14Lifetime1) {
-            pl.field_U.drawCentered((String) (var14Lifetime1), param5 + param1 / 2, var13, param4, 0);
+            BirthDateEntryPanel.field_U.drawCentered((String) (var14Lifetime1), param5 + param1 / 2, var13, param4, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11263,7 +11263,7 @@ final class GameplayController {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -11286,7 +11286,7 @@ final class GameplayController {
           this.controlledSentinel.field_U = 0;
           if (di.field_g == 1 &&
             IconTextComponent.field_Yb == 11) {
-            this.world.terrain.a(param0 + 1323, this.world.playerCount, 16);
+            this.world.terrain.generateTerrain(param0 + 1323, this.world.playerCount, 16);
             this.controlledSentinel.configureDesign(ReflectionCheck.field_x, true, false, 0, 0);
             this.controlledSentinel.worldY = -100000;
             this.controlledSentinel.worldX = 31000;
@@ -11387,7 +11387,7 @@ final class GameplayController {
             var3 = 109000;
             var4 = -16000;
             var2 = new Sentinel(0, 0, this.world);
-            var2.configureDesign(va.field_f, true, false, -1, 1);
+            var2.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
             var2.field_o = -2;
             var2.field_Nb = 1;
             var2.worldX = var3;
@@ -11397,7 +11397,7 @@ final class GameplayController {
             this.world.sentinels.addLast(3, var2);
             var4 = -4000;
             var2 = new Sentinel(0, 0, this.world);
-            var2.configureDesign(va.field_f, true, false, -1, 1);
+            var2.configureDesign(LoginDialogHelpers.field_f, true, false, -1, 1);
             var2.worldX = var3;
             var2.field_pc = false;
             var2.worldY = var4;
@@ -11412,7 +11412,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "nb.LA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "nb.LA(" + param0 + ')');
         }
     }
 
@@ -11425,7 +11425,7 @@ final class GameplayController {
             GameplayController.b(4, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nb.F(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nb.F(" + param0 + ')');
         }
     }
 
@@ -11464,8 +11464,8 @@ final class GameplayController {
           SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
           SoftwareRaster.drawRectangleOutline(218, 198, 204, 44, 16777215);
           SoftwareRaster.fillRectangleBlended(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
-          pl.field_U.drawCentered(eb.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
-          pl.field_U.drawCentered(rb.field_b, 320, 220 + pl.field_U.field_U / 2 + 40, 16777215, 0);
+          BirthDateEntryPanel.field_U.drawCentered(AgeValidator.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, BirthDateEntryPanel.field_U.field_U / 2 + 220, 16777215, 0);
+          BirthDateEntryPanel.field_U.drawCentered(rb.field_b, 320, 220 + BirthDateEntryPanel.field_U.field_U / 2 + 40, 16777215, 0);
           this.b(true, 1956917985);
           if (this.field_d) {
             if (ModalPanel.field_T &&
@@ -11503,8 +11503,8 @@ final class GameplayController {
             }
             SoftwareRaster.fillRectangleBlended(0, var9, var7, var8, 0, 192);
             IterableDualNodeDeque.a((byte) 115, var6, var7, var9, 0, var8);
-            if (oh.field_f >= 0 &&
-              var7 + 0 > oh.field_f &&
+            if (LobbySetupHelpers.field_f >= 0 &&
+              var7 + 0 > LobbySetupHelpers.field_f &&
               DelegatingCanvas.field_c >= var9 &&
               DelegatingCanvas.field_c < (var8 + var9)) {
               vd.field_b = true;
@@ -11521,7 +11521,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "nb.FB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "nb.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11531,7 +11531,7 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          va.field_b = param0;
+          LoginDialogHelpers.field_b = param0;
           if (param1) {
             GameplayController.b((byte) -121);
           }
@@ -11540,13 +11540,13 @@ final class GameplayController {
             var3 = var2_int - StatefulTextPainter.field_p * StatefulTextPainter.field_p;
             param0 = param0 + var3 * (-param0 + jn.field_c) / var2_int;
           }
-          DisplayNameForm.field_V.a(0, param0, 120, LoginCredentials.field_e, 640);
-          EmailAvailabilityValidator.a(TextLayout.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 115);
+          DisplayNameForm.field_V.setBounds(0, param0, 120, LoginCredentials.field_e, 640);
+          EmailAvailabilityValidator.a(TextLayout.field_g, 0, LoginDialogHelpers.field_e, 5, jn.field_c - 24, 640, 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.I(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11624,19 +11624,19 @@ final class GameplayController {
               var5_int = var6_ref_je.endTick;
             }
             if (var5_int < 500 + this.world.simulationTick) {
-              fc.a((byte) 101, 69, -1);
+              SoundAndUrlHelpers.playSoundEffect((byte) 101, 69, -1);
               if (this.controlledSentinel.hasModuleType(16, -27)) {
                 var7 = new SentinelCommand(5, this.field_u.playerId, var5_int);
                 var7.targetWorldY = param1;
                 var7.targetWorldX = param3;
                 if (this.field_d) {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 126, 5);
-                  mm.field_g.writeByte((byte) 112, this.field_u.playerId);
-                  mm.field_g.writeInt(true, var5_int);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 126, 5);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 112, this.field_u.playerId);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var5_int);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   if (var20 != 0) {
                     var7.scheduled = true;
                   }
@@ -11647,7 +11647,7 @@ final class GameplayController {
                   1 != this.world.field_c) {
                   this.controlledSentinel.pendingCommands.addLast(3, var7);
                 }
-                fc.a((byte) 59, 26, -1);
+                SoundAndUrlHelpers.playSoundEffect((byte) 59, 26, -1);
               }
             }
             decompiledFrameRemainder6 = (var20 != 0);
@@ -11666,22 +11666,22 @@ final class GameplayController {
               if (!this.field_d) {
                 var7Lifetime3.scheduled = true;
                 if (var20 != 0) {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 111, 12);
-                  mm.field_g.writeByte((byte) 123, 0);
-                  mm.field_g.writeInt(true, var5_intLifetime3);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 111, 12);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 123, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var5_intLifetime3);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 }
               } else {
-                mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                mm.field_g.writeByte((byte) 111, 12);
-                mm.field_g.writeByte((byte) 123, 0);
-                mm.field_g.writeInt(true, var5_intLifetime3);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
-                mm.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 111, 12);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 123, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, var5_intLifetime3);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                ClockAndCookieHelpers.field_g.writeInt(true, 0);
               }
               if (di.field_g != -1 ||
                 this.world.field_c != 1) {
@@ -11719,12 +11719,12 @@ final class GameplayController {
           boolean decompiledFrameRemainder4 = true;
           if (null != this.controlledSentinel) {
             if ((1 != VerticalScrollbar.field_gc) &&
-              (decompiledFrameRemainder4 = (0 != (1 & sf.field_d))) &&
+              (decompiledFrameRemainder4 = (0 != (1 & TutorialStep.field_d))) &&
               (decompiledFrameRemainder4 = !(vd.field_b))) {
               decompiledFrameRemainder4 = !(0 < MarkerSlider.field_X);
             }
             if ((decompiledFrameRemainder4) && (this.field_F >= 0 &&
-              this.controlledSentinel.field_Xb.length > this.field_F && (ad.field_e ||
+              this.controlledSentinel.field_Xb.length > this.field_F && (LoadoutHelpers.field_e ||
               !(this.controlledSentinel.field_Mb[this.field_F] > 0)) && 0 == param2 && (di.field_g != 0 ||
               !(IconTextComponent.field_Yb < 8)) && (3 != di.field_g ||
               !(5 > IconTextComponent.field_Yb)))) {
@@ -11744,7 +11744,7 @@ final class GameplayController {
                 var7Lifetime1 = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1);
                 var7Lifetime1.targetWorldX = param3;
                 var7Lifetime1.targetWorldY = param1;
-                var8_int = (km.field_c >> 8) - (this.field_P >> 4);
+                var8_int = (ClientGlobals.field_c >> 8) - (this.field_P >> 4);
                 var9 = 400 + (-(this.field_E >> 4) + (UiContainer.field_G - this.controlledSentinel.field_Db * 8 >> 8));
                 if (var8_int < 0) {
                   var8_int = 48;
@@ -11760,9 +11760,9 @@ final class GameplayController {
                 }
                 if (WeightedLruCache.field_b) {
                   var7Lifetime1.targetWorldY = UiContainer.field_G + 10000 * (DelegatingCanvas.field_c - var9);
-                  var7Lifetime1.targetWorldX = (oh.field_f - var8_int) * 10000 + km.field_c;
+                  var7Lifetime1.targetWorldX = (LobbySetupHelpers.field_f - var8_int) * 10000 + ClientGlobals.field_c;
                 }
-                var10 = -km.field_c + var7Lifetime1.targetWorldX;
+                var10 = -ClientGlobals.field_c + var7Lifetime1.targetWorldX;
                 var11 = var7Lifetime1.targetWorldY - UiContainer.field_G;
                 if (var10 < 0) {
                   MusicPatchEnvelope.field_h = -1;
@@ -11787,7 +11787,7 @@ final class GameplayController {
                     stackIn_214_1 = this.controlledSentinel.field_Xb[this.field_F];
                     if (var20 == 0) {
                       if (stackIn_214_0 == stackIn_214_1 && (var14 != 0 ||
-                        !bi.b(-69, var16_ref_nk.componentId))) {
+                        !TextAndBitHelpers.isSymbolKeyCode(-69, var16_ref_nk.componentId))) {
                         var12 = var12 | 1L << var15;
                       }
                       var15++;
@@ -11878,20 +11878,20 @@ final class GameplayController {
                     break;
                   }
                   if (this.field_d) {
-                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                    mm.field_g.writeByte((byte) 123, 0);
-                    mm.field_g.writeByte((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
-                    mm.field_g.writeInt(true, var5_intLifetime1);
-                    mm.field_g.writeInt(true, var7Lifetime1.targetWorldX);
-                    mm.field_g.writeInt(true, var7Lifetime1.targetWorldY);
-                    mm.field_g.writeInt(true, var7Lifetime1.aimAngle);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 123, 0);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var5_intLifetime1);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var7Lifetime1.targetWorldX);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var7Lifetime1.targetWorldY);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var7Lifetime1.aimAngle);
                     if (var20 != 0) {
                       var7Lifetime1.scheduled = true;
                     }
                   } else {
                     var7Lifetime1.scheduled = true;
                   }
-                  fc.a((byte) -83, 69, -1);
+                  SoundAndUrlHelpers.playSoundEffect((byte) -83, 69, -1);
                   if (-1 != di.field_g ||
                     this.world.field_c != 1) {
                     this.controlledSentinel.pendingCommands.addLast(3, var7Lifetime1);
@@ -11967,7 +11967,7 @@ final class GameplayController {
               }
               MarkerSliderPainter.field_n.targetWorldX = param3;
               MarkerSliderPainter.field_n.targetWorldY = param1;
-              var8_intLifetime1Lifetime1 = (km.field_c >> 8) - (this.field_P >> 4);
+              var8_intLifetime1Lifetime1 = (ClientGlobals.field_c >> 8) - (this.field_P >> 4);
               var9Lifetime1 = -(this.field_E >> 4) + (400 + (UiContainer.field_G - this.controlledSentinel.field_Db * 8 >> 8));
               if (var8_intLifetime1Lifetime1 < 0) {
                 var8_intLifetime1Lifetime1 = 48;
@@ -11983,9 +11983,9 @@ final class GameplayController {
               }
               if (WeightedLruCache.field_b) {
                 MarkerSliderPainter.field_n.targetWorldY = UiContainer.field_G + (-var9Lifetime1 + DelegatingCanvas.field_c) * 10000;
-                MarkerSliderPainter.field_n.targetWorldX = km.field_c + 10000 * (oh.field_f - var8_intLifetime1Lifetime1);
+                MarkerSliderPainter.field_n.targetWorldX = ClientGlobals.field_c + 10000 * (LobbySetupHelpers.field_f - var8_intLifetime1Lifetime1);
               }
-              var10Lifetime1 = MarkerSliderPainter.field_n.targetWorldX - km.field_c;
+              var10Lifetime1 = MarkerSliderPainter.field_n.targetWorldX - ClientGlobals.field_c;
               var11Lifetime1 = -UiContainer.field_G + MarkerSliderPainter.field_n.targetWorldY;
               if (0 > var10Lifetime1) {
                 MusicPatchEnvelope.field_h = -1;
@@ -12013,7 +12013,7 @@ final class GameplayController {
                 }
                 if (stackIn_471_0 == stackIn_471_1 &&
                   0 >= var16_ref_nkLifetime1.field_C && (var14Lifetime1 != 0 ||
-                  !bi.b(110, var16_ref_nkLifetime1.componentId))) {
+                  !TextAndBitHelpers.isSymbolKeyCode(110, var16_ref_nkLifetime1.componentId))) {
                   var12Lifetime1 = var12Lifetime1 | 1L << var15Lifetime1;
                 }
                 var15Lifetime1++;
@@ -12098,7 +12098,7 @@ final class GameplayController {
                     if (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
                       !(this.controlledSentinel.charge < 1)) {
                       if ((ml.field_f[Math.max(0, MarkerSliderPainter.field_n.aimAngle * MusicPatchEnvelope.field_h >> 8)] == 0) &&
-                        (0 == hf.field_c)) {
+                        (0 == FrameStyleHelpers.field_c)) {
                         var18 = 1;
                         if (var20 != 0) {
                           var18 = 1;
@@ -12149,16 +12149,16 @@ final class GameplayController {
           }
           if (decompiledFrameCompleted0) {
             stackIn_471_0 = 4;
-            stackIn_471_1 = sf.field_d;
+            stackIn_471_1 = TutorialStep.field_d;
           }
           stackIn_475_0 = ((stackIn_471_0 & stackIn_471_1) == 0) ? 0 : 1;
           var5_intLifetime2 = stackIn_475_0;
-          if (!dm.field_c) {
-            if (fc.field_e[83]) {
+          if (!NameCheckResult.field_c) {
+            if (SoundAndUrlHelpers.field_e[83]) {
               var5_intLifetime2 = 1;
               if (var20 != 0) {
-                if (!fc.field_e[fm.field_d] &&
-                  !fc.field_e[83]) {
+                if (!SoundAndUrlHelpers.field_e[fm.field_d] &&
+                  !SoundAndUrlHelpers.field_e[83]) {
                   stackIn_489_0 = 0;
                 } else {
                   stackIn_489_0 = 1;
@@ -12167,8 +12167,8 @@ final class GameplayController {
               }
             }
           } else {
-            if (!fc.field_e[fm.field_d] &&
-              !fc.field_e[83]) {
+            if (!SoundAndUrlHelpers.field_e[fm.field_d] &&
+              !SoundAndUrlHelpers.field_e[83]) {
               stackIn_489_0 = 0;
             } else {
               stackIn_489_0 = 1;
@@ -12198,15 +12198,15 @@ final class GameplayController {
                   decompiledSharedTail0 = (var20 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 112, 3);
-                  mm.field_g.writeByte((byte) 113, 0);
-                  mm.field_g.writeInt(true, var6);
-                  mm.field_g.writeInt(true, var8.targetWorldX);
-                  mm.field_g.writeInt(true, var8.targetWorldY);
-                  mm.field_g.writeInt(true, var8.aimAngle);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 112, 3);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 113, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var6);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var8.targetWorldX);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var8.targetWorldY);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var8.aimAngle);
                 }
-                fc.a((byte) 67, 69, -1);
+                SoundAndUrlHelpers.playSoundEffect((byte) 67, 69, -1);
                 if (di.field_g != -1 ||
                   1 != this.world.field_c) {
                   this.controlledSentinel.secondaryCommands.addLast(3, var8);
@@ -12247,11 +12247,11 @@ final class GameplayController {
           if (param0 != -7289) {
             field_x = (String) null;
           }
-          if (!dm.field_c) {
-            if ((sf.field_d & 4) != 0) {
+          if (!NameCheckResult.field_c) {
+            if ((TutorialStep.field_d & 4) != 0) {
               return;
             }
-            if (fc.field_e[83]) {
+            if (SoundAndUrlHelpers.field_e[83]) {
               return;
             }
             IsaacRandom.field_c = false;
@@ -12259,15 +12259,15 @@ final class GameplayController {
               return;
             }
           }
-          if (!fc.field_e[fm.field_d] &&
-            !fc.field_e[83]) {
+          if (!SoundAndUrlHelpers.field_e[fm.field_d] &&
+            !SoundAndUrlHelpers.field_e[83]) {
             IsaacRandom.field_c = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "nb.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "nb.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -12345,7 +12345,7 @@ final class GameplayController {
             Sprite.field_k = true;
             return;
           }
-          if (fc.field_e[86] &&
+          if (SoundAndUrlHelpers.field_e[86] &&
             NameAvailabilityValidator.field_q == 84 &&
             ArticulatedPart.f((byte) -76)) {
             if (wb.field_c != null) {
@@ -12366,7 +12366,7 @@ final class GameplayController {
           if (this.controlledSentinel != null &&
             !this.world.field_j) {
             var3Lifetime1 = 0;
-            if (ln.field_d == NameAvailabilityValidator.field_q &&
+            if (NameValidationHelpers.field_d == NameAvailabilityValidator.field_q &&
               0 != di.field_g) {
               this.field_F = this.field_F - 1;
               var3Lifetime1 = 1;
@@ -12399,7 +12399,7 @@ final class GameplayController {
               NameAvailabilityValidator.field_q == 40 ||
               NameAvailabilityValidator.field_q == 56 ||
               NameAvailabilityValidator.field_q == 55) && di.field_g == 4) {
-              var4 = this.field_P + (oh.field_f << 4) << 4;
+              var4 = this.field_P + (LobbySetupHelpers.field_f << 4) << 4;
               var5_int = DelegatingCanvas.field_c - 400 + (this.field_E >> 4) << 8;
               var6 = 0;
               if (NameAvailabilityValidator.field_q == 41) {
@@ -12414,31 +12414,31 @@ final class GameplayController {
               if (NameAvailabilityValidator.field_q == 55) {
                 var6 = 30;
               }
-              if (fc.field_e[16]) {
+              if (SoundAndUrlHelpers.field_e[16]) {
                 var6++;
               }
-              if (fc.field_e[17]) {
+              if (SoundAndUrlHelpers.field_e[17]) {
                 var6 += 2;
               }
-              if (fc.field_e[18]) {
+              if (SoundAndUrlHelpers.field_e[18]) {
                 var6 += 3;
               }
-              if (fc.field_e[19]) {
+              if (SoundAndUrlHelpers.field_e[19]) {
                 var6 += 4;
               }
-              if (fc.field_e[20]) {
+              if (SoundAndUrlHelpers.field_e[20]) {
                 var6 += 5;
               }
-              if (fc.field_e[21]) {
+              if (SoundAndUrlHelpers.field_e[21]) {
                 var6 += 6;
               }
-              if (fc.field_e[22]) {
+              if (SoundAndUrlHelpers.field_e[22]) {
                 var6 += 7;
               }
-              if (fc.field_e[23]) {
+              if (SoundAndUrlHelpers.field_e[23]) {
                 var6 += 8;
               }
-              if (fc.field_e[24]) {
+              if (SoundAndUrlHelpers.field_e[24]) {
                 var6 += 9;
               }
               if (var6 <= RegistrationRequestDialog.field_Xb.length) {
@@ -12452,7 +12452,7 @@ final class GameplayController {
             boolean decompiledFrameRemainder2 = true;
             if ((71 != NameAvailabilityValidator.field_q &&
               NameAvailabilityValidator.field_q != EditableTextWidget.field_hb) &&
-              (decompiledFrameRemainder2 = !(!dm.field_c))) {
+              (decompiledFrameRemainder2 = !(!NameCheckResult.field_c))) {
               decompiledFrameRemainder2 = (NameAvailabilityValidator.field_q == sa.field_c);
             }
             if (decompiledFrameRemainder2) {
@@ -12478,22 +12478,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var7Lifetime4.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                    mm.field_g.writeByte((byte) 108, 6);
-                    mm.field_g.writeByte((byte) 113, -1);
-                    mm.field_g.writeInt(true, var4Lifetime1);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 108, 6);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 113, -1);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime1);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 108, 6);
-                  mm.field_g.writeByte((byte) 113, -1);
-                  mm.field_g.writeInt(true, var4Lifetime1);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 108, 6);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 113, -1);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime1);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 }
                 if (di.field_g != -1 ||
                   1 != this.world.field_c) {
@@ -12504,7 +12504,7 @@ final class GameplayController {
             boolean decompiledFrameRemainder1 = true;
             if ((NameAvailabilityValidator.field_q != 72 &&
               ~NameAvailabilityValidator.field_q != ~BufferedRandomAccessFile.field_b) &&
-              (decompiledFrameRemainder1 = !(!dm.field_c))) {
+              (decompiledFrameRemainder1 = !(!NameCheckResult.field_c))) {
               decompiledFrameRemainder1 = (~EmailCredentials.field_h == ~NameAvailabilityValidator.field_q);
             }
             if (decompiledFrameRemainder1) {
@@ -12528,13 +12528,13 @@ final class GameplayController {
                 var6Lifetime2 == 0) {
                 var7Lifetime1Lifetime1 = new SentinelCommand(6, 1, var4Lifetime2);
                 if (this.field_d) {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 110, 6);
-                  mm.field_g.writeByte((byte) 112, 1);
-                  mm.field_g.writeInt(true, var4Lifetime2);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 110, 6);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 112, 1);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime2);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   if (var9 != 0) {
                     var7Lifetime1Lifetime1.scheduled = true;
                   }
@@ -12549,7 +12549,7 @@ final class GameplayController {
             }
             boolean decompiledFrameRemainder0 = true;
             if ((ArchiveRequest.field_y != NameAvailabilityValidator.field_q) &&
-              (decompiledFrameRemainder0 = !(!dm.field_c))) {
+              (decompiledFrameRemainder0 = !(!NameCheckResult.field_c))) {
               decompiledFrameRemainder0 = (~AccountChoicePanel.field_V == ~NameAvailabilityValidator.field_q);
             }
             if (decompiledFrameRemainder0) {
@@ -12569,13 +12569,13 @@ final class GameplayController {
                 var6Lifetime3 == 0) {
                 var7Lifetime2 = new SentinelCommand(6, 0, var4Lifetime3);
                 if (this.field_d) {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 115, 6);
-                  mm.field_g.writeByte((byte) 110, 0);
-                  mm.field_g.writeInt(true, var4Lifetime3);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 115, 6);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 110, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime3);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   if (var9 != 0) {
                     var7Lifetime2.scheduled = true;
                   }
@@ -12588,7 +12588,7 @@ final class GameplayController {
                 }
               }
             }
-            if (na.field_b == NameAvailabilityValidator.field_q &&
+            if (ChatMessage.field_b == NameAvailabilityValidator.field_q &&
               this.controlledSentinel.field_fb != 0) {
               var4Lifetime4 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
               var5Lifetime3 = (SentinelCommand) (this.controlledSentinel.pendingCommands.last(1063677678));
@@ -12601,22 +12601,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var6_ref_je.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                    mm.field_g.writeByte((byte) 112, 7);
-                    mm.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
-                    mm.field_g.writeInt(true, var4Lifetime4);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 112, 7);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime4);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 112, 7);
-                  mm.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
-                  mm.field_g.writeInt(true, var4Lifetime4);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 112, 7);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime4);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 }
                 if (-1 != di.field_g ||
                   1 != this.world.field_c) {
@@ -12637,22 +12637,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var6_ref_jeLifetime1.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                    mm.field_g.writeByte((byte) 112, 8);
-                    mm.field_g.writeByte((byte) 116, 0);
-                    mm.field_g.writeInt(true, var4Lifetime5);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 112, 8);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 116, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime5);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 112, 8);
-                  mm.field_g.writeByte((byte) 116, 0);
-                  mm.field_g.writeInt(true, var4Lifetime5);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 112, 8);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 116, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime5);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 }
                 if (di.field_g != -1 ||
                   this.world.field_c != 1) {
@@ -12675,22 +12675,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var7Lifetime3.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                    mm.field_g.writeByte((byte) 116, var6Lifetime4);
-                    mm.field_g.writeByte((byte) 123, 0);
-                    mm.field_g.writeInt(true, var4Lifetime6);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
-                    mm.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 116, var6Lifetime4);
+                    ClockAndCookieHelpers.field_g.writeByte((byte) 123, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime6);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                    ClockAndCookieHelpers.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
-                  mm.field_g.writeByte((byte) 116, var6Lifetime4);
-                  mm.field_g.writeByte((byte) 123, 0);
-                  mm.field_g.writeInt(true, var4Lifetime6);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
-                  mm.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeCipheredOpcode(64, (byte) -117);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 116, var6Lifetime4);
+                  ClockAndCookieHelpers.field_g.writeByte((byte) 123, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, var4Lifetime6);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
+                  ClockAndCookieHelpers.field_g.writeInt(true, 0);
                 }
                 if (-1 == di.field_g &&
                   1 == this.world.field_c) {
@@ -12704,7 +12704,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "nb.R(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "nb.R(" + param0 + ')');
         }
     }
 
@@ -12749,11 +12749,11 @@ final class GameplayController {
           stackIn_4_0 = (1 != param2) ? 500 : 100;
           ThreeSliceButtonPainter.field_x = stackIn_4_0;
           GrowableIntList.field_h = -1;
-          ri.field_b = null;
+          LoginStateQueries.field_b = null;
           WeightedLruCache.field_a = -1;
           SectorCacheStore.field_l = 0;
           LoginForm.field_db = new NodeDeque();
-          hh.field_c = new int[6];
+          LoginActionHelpers.field_c = new int[6];
           this.field_D = new int[this.field_S];
           CachedArchiveProvider.field_g = new int[6];
           this.field_K = new int[this.field_S];
@@ -12837,7 +12837,7 @@ final class GameplayController {
             jn.a(true, (byte) 82, 200, CipherPacketBuffer.field_z);
           }
           if (this.world.terrain.getTerrainType(107) == 3) {
-            jn.a(true, (byte) 111, 200, ue.field_e);
+            jn.a(true, (byte) 111, 200, LoginHandshakeHelpers.field_e);
           }
           if (this.world.terrain.getTerrainType(61) == 4) {
             jn.a(true, (byte) 70, 200, SocketConnector.field_a);
@@ -12914,7 +12914,7 @@ final class GameplayController {
           stackIn_123_1 = !(1 >= this.world.playerCount);
           this.field_h = stackIn_123_1;
           Js5Transport.field_g = null;
-          ad.field_i = null;
+          LoadoutHelpers.field_i = null;
           if (this.world.terrain.getTerrainType(118) == 4 &&
             null != this.controlledSentinel &&
             this.controlledSentinel.teamId == 1) {
@@ -12937,7 +12937,7 @@ final class GameplayController {
           } else {
             stackIn_142_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_141_1).append(stackIn_142_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_141_1).append(stackIn_142_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 

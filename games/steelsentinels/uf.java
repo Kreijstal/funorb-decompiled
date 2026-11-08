@@ -9,7 +9,7 @@ final class uf {
     static int field_h;
     static String field_e;
     static int field_c;
-    static rf field_g;
+    static LoginConnectionStage field_g;
 
     public static void releaseStatics(int param0) {
         field_e = null;
@@ -39,7 +39,7 @@ final class uf {
             field_b = (int[]) null;
           }
           for (var3 = 0; var3 < param1.length; var3++) {
-            var2_int = var2_int + mm.a((byte) 124, param1[var3]);
+            var2_int = var2_int + ClockAndCookieHelpers.countSetBits((byte) 124, param1[var3]);
           }
           stackIn_7_0 = var2_int;
           return stackIn_7_0;
@@ -53,7 +53,7 @@ final class uf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -61,23 +61,23 @@ final class uf {
         String[] var3 = null;
         SceneWidget[] var4 = null;
         try {
-          var3 = new String[]{param0, ad.field_a, cf.field_A};
+          var3 = new String[]{param0, LoadoutHelpers.field_a, cf.field_A};
           var4 = new SceneWidget[]{param1, WhirlpoolHasher.field_m, (SceneWidget) ((Object) AccountRegistrationPanel.field_W)};
-          this.field_d = new TabbedPanel(0L, ModalStack.field_U, var3, be.field_c, var4, 0);
+          this.field_d = new TabbedPanel(0L, ModalStack.field_U, var3, UrlAndReplyHelpers.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = 5;
-        this.field_d.a(10, param0, var7, param2, param4, var6, param1);
-        vc.field_h.a(0, 0, SocketConnector.field_b, 0, WhirlpoolHasher.field_m.field_zb);
-        mm.field_a.a(0, 2 + SocketConnector.field_b, 18, 0, -2 + (-80 + WhirlpoolHasher.field_m.field_zb + (-ReflectionCheck.field_G - 2)));
-        SceneWidgetNode.field_E.a(0, SocketConnector.field_b + 2, 18, -ReflectionCheck.field_G + (WhirlpoolHasher.field_m.field_zb - 82), 82 + ReflectionCheck.field_G);
-        km.field_j.a(WhirlpoolHasher.field_m.field_zb, -20 + WhirlpoolHasher.field_m.field_Lb + (-SocketConnector.field_b - 2), 2, 0, 20, 122, ReflectionCheck.field_G, param3 + (SocketConnector.field_b + 20));
-        AccountRegistrationPanel.field_W.a(2, 20, param3 ^ 46, ReflectionCheck.field_G);
+        this.field_d.setBoundsAndLayout(10, param0, var7, param2, param4, var6, param1);
+        vc.field_h.setBounds(0, 0, SocketConnector.field_b, 0, WhirlpoolHasher.field_m.field_zb);
+        ClockAndCookieHelpers.field_a.setBounds(0, 2 + SocketConnector.field_b, 18, 0, -2 + (-80 + WhirlpoolHasher.field_m.field_zb + (-ReflectionCheck.field_G - 2)));
+        SceneWidgetNode.field_E.setBounds(0, SocketConnector.field_b + 2, 18, -ReflectionCheck.field_G + (WhirlpoolHasher.field_m.field_zb - 82), 82 + ReflectionCheck.field_G);
+        ClientGlobals.field_j.setLayout(WhirlpoolHasher.field_m.field_zb, -20 + WhirlpoolHasher.field_m.field_Lb + (-SocketConnector.field_b - 2), 2, 0, 20, 122, ReflectionCheck.field_G, param3 + (SocketConnector.field_b + 20));
+        AccountRegistrationPanel.field_W.layoutControls(2, 20, param3 ^ 46, ReflectionCheck.field_G);
     }
 
     static {
@@ -85,6 +85,6 @@ final class uf {
         field_e = "<%0> has been removed.";
         field_f = new NodeDeque();
         field_c = 0;
-        field_g = new rf();
+        field_g = new LoginConnectionStage();
     }
 }

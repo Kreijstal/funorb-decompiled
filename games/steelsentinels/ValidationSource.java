@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface ValidationSource {
-    public abstract void a(int param0);
+    public abstract void markChanged(int param0);
 
-    public abstract boolean b(boolean param0);
+    public abstract boolean isEmpty(boolean param0);
 
-    public abstract String a(boolean param0);
+    public abstract String validationMessage(boolean param0);
 
-    public abstract vd a(byte param0);
+    public abstract vd validationState(byte param0);
 }

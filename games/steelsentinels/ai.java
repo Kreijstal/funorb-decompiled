@@ -41,7 +41,7 @@ final class ai extends IntrusiveNode {
         var5 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 60 % ((3 - param0) / 43);
-          if (!ln.field_h) {
+          if (!NameValidationHelpers.field_h) {
             if (null == TickClock.field_i) {
               TickClock.field_i = RegistrationRequestDialog.a(4, 19999);
             }
@@ -56,15 +56,15 @@ final class ai extends IntrusiveNode {
               var10 = 0;
               var4Lifetime1 = var10;
               while (8 > var10) {
-                var8[var10] = ec.a(var8[var10], ~var14[var10]);
+                var8[var10] = ClientUiHelpers.bitAnd(var8[var10], ~var14[var10]);
                 var10++;
               }
-              ln.field_h = true;
+              NameValidationHelpers.field_h = true;
               TickClock.field_i = null;
               Projectile.c((byte) 8);
             }
-            if (ln.field_h) {
-              en.a(79);
+            if (NameValidationHelpers.field_h) {
+              LoadingScreenHelpers.dismissLoadingUi(79);
               am.b(-104);
             }
           }
@@ -73,19 +73,19 @@ final class ai extends IntrusiveNode {
               QuickChatHelpDialog.field_ac = ClientException.a(6, true);
             }
             if (QuickChatHelpDialog.field_ac.field_q) {
-              se.a(-1, QuickChatHelpDialog.field_ac.field_t);
+              PopupMenuSupport.applySavedPreferences(-1, QuickChatHelpDialog.field_ac.field_t);
               QuickChatHelpDialog.field_ac = null;
               DiskCacheRequest.field_I = true;
-              mm.field_g.writeCipheredOpcode(65, (byte) -117);
-              mm.field_g.writeCipheredOpcode(68, (byte) -117);
-              mm.field_g.writeCipheredOpcode(70, (byte) -117);
+              ClockAndCookieHelpers.field_g.writeCipheredOpcode(65, (byte) -117);
+              ClockAndCookieHelpers.field_g.writeCipheredOpcode(68, (byte) -117);
+              ClockAndCookieHelpers.field_g.writeCipheredOpcode(70, (byte) -117);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "ai.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "ai.A(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class ai extends IntrusiveNode {
           this.field_u = param1;
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class ai extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

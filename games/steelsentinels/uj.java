@@ -119,7 +119,7 @@ final class uj {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class uj {
           var22 = null;
           var12 = SteelSentinels.obfuscationControl;
           try {
-            var13 = (ReflectionCheck) (rg.field_d.first(13058));
+            var13 = (ReflectionCheck) (PopupMenuHelpers.field_d.first(13058));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -335,7 +335,7 @@ final class uj {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

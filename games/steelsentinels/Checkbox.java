@@ -33,26 +33,26 @@ final class Checkbox extends TextButton {
         try {
           this.field_T = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private Checkbox(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = ad.field_j.field_x;
+          this.field_p = LoadoutHelpers.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, byte param1, int param2, int param3) {
+    final void notifyAction(int param0, byte param1, int param2, int param3) {
         this.field_T = !this.field_T ? true : false;
-        super.b(param0, (byte) -127, param2, param3);
+        super.notifyAction(param0, (byte) -127, param2, param3);
         if (param1 < -122) {
           return;
         }
-        this.b(-25, (byte) 43, -53, 29);
+        this.notifyAction(-25, (byte) 43, -53, 29);
     }
 
     final static void a(boolean param0) {
@@ -61,11 +61,11 @@ final class Checkbox extends TextButton {
     }
 
     private Checkbox(String param0, UiListener param1) {
-        this(param0, ad.field_j.field_f, param1);
+        this(param0, LoadoutHelpers.field_j.field_f, param1);
         try {
-          this.field_p = ad.field_j.field_x;
+          this.field_p = LoadoutHelpers.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

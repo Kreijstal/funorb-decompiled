@@ -58,7 +58,7 @@ final class SectorCacheStore {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class SectorCacheStore {
         var5 = SteelSentinels.obfuscationControl;
         try {
           if (0 <= dc.field_g) {
-            pa.field_d[dc.field_g].a((byte) 106);
+            pa.field_d[dc.field_g].restoreHighlightedWidget((byte) 106);
           }
           if (16 == dc.field_g) {
             dc.field_g = -1;
@@ -103,7 +103,7 @@ final class SectorCacheStore {
                 decompiledFrameRemainder0 = (var5 == 0);
                 if (decompiledFrameRemainder0) {
                   if (!stackIn_14_0 &&
-                    ad.a(var2_int, ArticulatedPart.f((byte) -60), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D)) {
+                    LoadoutHelpers.isComponentCompatible(var2_int, ArticulatedPart.f((byte) -60), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D)) {
                     var1_int = 1;
                   } else {
                     var2_int++;
@@ -157,19 +157,19 @@ final class SectorCacheStore {
             }
           }
           if (dc.field_g == 12 &&
-            null != bi.field_f &&
+            null != TextAndBitHelpers.field_f &&
             IterableDualNodeDeque.field_d >= 0) {
-            bi.field_f.field_Ub.field_gb = -bi.field_f.field_Ub.field_eb - IterableDualNodeDeque.field_d;
-            if (-bi.field_f.field_Ub.field_eb < bi.field_f.field_Ub.field_gb) {
-              bi.field_f.field_Ub.field_gb = -bi.field_f.field_Ub.field_eb;
+            TextAndBitHelpers.field_f.field_Ub.field_gb = -TextAndBitHelpers.field_f.field_Ub.field_eb - IterableDualNodeDeque.field_d;
+            if (-TextAndBitHelpers.field_f.field_Ub.field_eb < TextAndBitHelpers.field_f.field_Ub.field_gb) {
+              TextAndBitHelpers.field_f.field_Ub.field_gb = -TextAndBitHelpers.field_f.field_Ub.field_eb;
             }
-            if (bi.field_f.field_Ub.field_gb < (-bi.field_f.field_Ub.field_Lb - bi.field_f.field_Ub.field_lb + bi.field_f.field_Tb.field_Lb - bi.field_f.field_Ub.field_eb)) {
-              bi.field_f.field_Ub.field_gb = -bi.field_f.field_Ub.field_eb + (bi.field_f.field_Tb.field_Lb - bi.field_f.field_Ub.field_Lb) - bi.field_f.field_Ub.field_lb;
+            if (TextAndBitHelpers.field_f.field_Ub.field_gb < (-TextAndBitHelpers.field_f.field_Ub.field_Lb - TextAndBitHelpers.field_f.field_Ub.field_lb + TextAndBitHelpers.field_f.field_Tb.field_Lb - TextAndBitHelpers.field_f.field_Ub.field_eb)) {
+              TextAndBitHelpers.field_f.field_Ub.field_gb = -TextAndBitHelpers.field_f.field_Ub.field_eb + (TextAndBitHelpers.field_f.field_Tb.field_Lb - TextAndBitHelpers.field_f.field_Ub.field_Lb) - TextAndBitHelpers.field_f.field_Ub.field_lb;
             }
           }
           if (dc.field_g == 16 &&
-            0 == (8 & dm.field_a)) {
-            dm.field_a = dm.field_a | 8;
+            0 == (8 & NameCheckResult.field_a)) {
+            NameCheckResult.field_a = NameCheckResult.field_a | 8;
             if (!ni.b(111)) {
               MarkerSlider.f((byte) 3);
             }
@@ -178,7 +178,7 @@ final class SectorCacheStore {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "rc.F(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "rc.F(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class SectorCacheStore {
         try {
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "rc.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "rc.D(" + param0 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(106, "expansion_1_title");
                 if (null != var2) {
-                  dm.field_e = IntKeyLookup.a(13, var2);
+                  NameCheckResult.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(88, "expansion_1_installed");
                 if (null != var2) {
@@ -272,7 +272,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(81, "baal_invocation,0");
                 if (var2 != null) {
-                  rh.field_t[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  rh.field_t[0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 80, "baal_invocation,1");
                 if (null != var2) {
@@ -288,7 +288,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(87, "baal_gloating,1");
                 if (var2 != null) {
-                  CachedTextLayout.field_H[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  CachedTextLayout.field_H[1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 73, "baal_gloating,2");
                 if (null != var2) {
@@ -308,7 +308,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 82, "baal_vanquished,2");
                 if (var2 != null) {
-                  AccountNoticeDialog.field_mb[2] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  AccountNoticeDialog.field_mb[2] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(116, "baal_vanquished,3");
                 if (var2 != null) {
@@ -316,11 +316,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 53, "baal_vanquished,4");
                 if (null != var2) {
-                  AccountNoticeDialog.field_mb[4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  AccountNoticeDialog.field_mb[4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(72, "baal_vanquished,5");
                 if (null != var2) {
-                  AccountNoticeDialog.field_mb[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  AccountNoticeDialog.field_mb[5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(56, "baal_vanquished,6");
                 if (var2 != null) {
@@ -356,7 +356,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 72, "spectatingtxt");
                 if (null != var2) {
-                  ri.field_d = IntKeyLookup.a(param0 + 13, var2);
+                  LoginStateQueries.field_d = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(109, "gameopt_restriction_text,0,0");
                 if (null != var2) {
@@ -392,7 +392,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(53, "yesnooption,0");
                 if (null != var2) {
-                  AccountNamePrompt.field_Vb[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  AccountNamePrompt.field_Vb[0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(55, "yesnooption,1");
                 if (null != var2) {
@@ -420,7 +420,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(55, "achievement_names,5");
                 if (var2 != null) {
-                  ViewportController.field_t[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(74, "achievement_names,6");
                 if (null != var2) {
@@ -456,11 +456,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(75, "achievement_names,14");
                 if (var2 != null) {
-                  ViewportController.field_t[14] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[14] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(60, "achievement_names,15");
                 if (var2 != null) {
-                  ViewportController.field_t[15] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[15] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(112, "achievement_names,16");
                 if (var2 != null) {
@@ -472,7 +472,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 94, "achievement_names,18");
                 if (var2 != null) {
-                  ViewportController.field_t[18] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[18] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(67, "achievement_names,19");
                 if (null != var2) {
@@ -496,7 +496,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(117, "achievement_names,24");
                 if (null != var2) {
-                  ViewportController.field_t[24] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[24] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(125, "achievement_names,25");
                 if (var2 != null) {
@@ -516,7 +516,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(56, "achievement_names,29");
                 if (null != var2) {
-                  ViewportController.field_t[29] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[29] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 122, "achievement_names,30");
                 if (var2 != null) {
@@ -532,11 +532,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 104, "achievement_names,33");
                 if (var2 != null) {
-                  ViewportController.field_t[33] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[33] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(67, "achievement_names,34");
                 if (var2 != null) {
-                  ViewportController.field_t[34] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ViewportController.field_t[34] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(95, "achievement_names,35");
                 if (var2 != null) {
@@ -572,7 +572,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(87, "MissionBriefings,4");
                 if (var2 != null) {
-                  c.field_s[4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  c.field_s[4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(67, "MissionBriefings,5");
                 if (var2 != null) {
@@ -592,7 +592,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(51, "MissionBriefings,9");
                 if (null != var2) {
-                  c.field_s[9] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  c.field_s[9] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(118, "MissionBriefings,10");
                 if (var2 != null) {
@@ -704,7 +704,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(63, "achievement_criteria,7");
                 if (null != var2) {
-                  QuickChatPhraseCache.field_a[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[7] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(93, "achievement_criteria,8");
                 if (null != var2) {
@@ -736,7 +736,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(124, "achievement_criteria,15");
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_a[15] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[15] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(125, "achievement_criteria,16");
                 if (var2 != null) {
@@ -752,7 +752,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 56, "achievement_criteria,19");
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_a[19] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[19] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(114, "achievement_criteria,20");
                 if (null != var2) {
@@ -808,7 +808,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(112, "achievement_criteria,33");
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_a[33] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[33] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(100, "achievement_criteria,34");
                 if (var2 != null) {
@@ -824,7 +824,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 127, "achievement_criteria,37");
                 if (null != var2) {
-                  QuickChatPhraseCache.field_a[37] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[37] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 119, "achievement_criteria,38");
                 if (var2 != null) {
@@ -864,7 +864,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(118, "modulenames,4");
                 if (null != var2) {
-                  BufferedRandomAccessFile.field_m[4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  BufferedRandomAccessFile.field_m[4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(114, "modulenames,5");
                 if (null != var2) {
@@ -884,7 +884,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 91, "modulenames,9");
                 if (null != var2) {
-                  BufferedRandomAccessFile.field_m[9] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  BufferedRandomAccessFile.field_m[9] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(96, "modulenames,10");
                 if (null != var2) {
@@ -1012,7 +1012,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(82, "powerupnames,5");
                 if (var2 != null) {
-                  SentinelAnimationEditor.field_v[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(111, "powerupnames,6");
                 if (null != var2) {
@@ -1024,7 +1024,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(86, "powerupnames,8");
                 if (null != var2) {
-                  SentinelAnimationEditor.field_v[8] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[8] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(70, "powerupnames,9");
                 if (var2 != null) {
@@ -1032,7 +1032,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(71, "powerupnames,10");
                 if (null != var2) {
-                  SentinelAnimationEditor.field_v[10] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[10] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 99, "meleeattackdesc,0");
                 if (null != var2) {
@@ -1040,7 +1040,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(82, "meleeattackdesc,1");
                 if (null != var2) {
-                  AccountNoticeDialog.field_nb[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  AccountNoticeDialog.field_nb[1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(127, "meleeattackdesc,2");
                 if (null != var2) {
@@ -1076,7 +1076,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 119, "poweruptips,7");
                 if (null != var2) {
-                  UiTheme.field_p[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[7] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(67, "poweruptips,8");
                 if (null != var2) {
@@ -1146,7 +1146,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 64, "poweruptips,24");
                 if (var2 != null) {
-                  UiTheme.field_p[24] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[24] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(114, "poweruptips,25");
                 if (null != var2) {
@@ -1162,7 +1162,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(98, "poweruptips,28");
                 if (var2 != null) {
-                  UiTheme.field_p[28] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[28] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(90, "poweruptips,29");
                 if (null != var2) {
@@ -1174,11 +1174,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(96, "poweruptips,31");
                 if (var2 != null) {
-                  UiTheme.field_p[31] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[31] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(85, "poweruptips,32");
                 if (var2 != null) {
-                  UiTheme.field_p[32] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[32] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "poweruptips,33");
                 if (var2 != null) {
@@ -1206,7 +1206,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(85, "poweruptips,39");
                 if (null != var2) {
-                  UiTheme.field_p[39] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiTheme.field_p[39] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 125, "poweruptips,40");
                 if (null != var2) {
@@ -1238,143 +1238,143 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(63, "moduledescriptions,0");
                 if (null != var2) {
-                  se.field_a[0] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(60, "moduledescriptions,1");
                 if (var2 != null) {
-                  se.field_a[1] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(122, "moduledescriptions,2");
                 if (null != var2) {
-                  se.field_a[2] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 77, "moduledescriptions,3");
                 if (null != var2) {
-                  se.field_a[3] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(125, "moduledescriptions,4");
                 if (var2 != null) {
-                  se.field_a[4] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(80, "moduledescriptions,5");
                 if (var2 != null) {
-                  se.field_a[5] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(72, "moduledescriptions,6");
                 if (null != var2) {
-                  se.field_a[6] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(124, "moduledescriptions,7");
                 if (var2 != null) {
-                  se.field_a[7] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(76, "moduledescriptions,8");
                 if (var2 != null) {
-                  se.field_a[8] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[8] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(120, "moduledescriptions,9");
                 if (null != var2) {
-                  se.field_a[9] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[9] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(64, "moduledescriptions,10");
                 if (var2 != null) {
-                  se.field_a[10] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[10] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "moduledescriptions,11");
                 if (var2 != null) {
-                  se.field_a[11] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[11] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(107, "moduledescriptions,12");
                 if (var2 != null) {
-                  se.field_a[12] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[12] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(75, "moduledescriptions,13");
                 if (null != var2) {
-                  se.field_a[13] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[13] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(83, "moduledescriptions,14");
                 if (var2 != null) {
-                  se.field_a[14] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[14] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(110, "moduledescriptions,15");
                 if (null != var2) {
-                  se.field_a[15] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[15] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(73, "moduledescriptions,16");
                 if (var2 != null) {
-                  se.field_a[16] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[16] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(115, "moduledescriptions,17");
                 if (null != var2) {
-                  se.field_a[17] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[17] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 55, "moduledescriptions,18");
                 if (null != var2) {
-                  se.field_a[18] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[18] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(82, "moduledescriptions,19");
                 if (var2 != null) {
-                  se.field_a[19] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[19] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(80, "moduledescriptions,20");
                 if (null != var2) {
-                  se.field_a[20] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[20] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(81, "moduledescriptions,21");
                 if (var2 != null) {
-                  se.field_a[21] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[21] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(111, "moduledescriptions,22");
                 if (var2 != null) {
-                  se.field_a[22] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[22] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(111, "moduledescriptions,23");
                 if (var2 != null) {
-                  se.field_a[23] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PopupMenuSupport.field_a[23] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(95, "moduledescriptions,24");
                 if (var2 != null) {
-                  se.field_a[24] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[24] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(78, "moduledescriptions,25");
                 if (var2 != null) {
-                  se.field_a[25] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[25] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(52, "moduledescriptions,26");
                 if (null != var2) {
-                  se.field_a[26] = IntKeyLookup.a(param0 + 13, var2);
+                  PopupMenuSupport.field_a[26] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 79, "moduledescriptions,27");
                 if (var2 != null) {
-                  se.field_a[27] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[27] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(74, "moduledescriptions,28");
                 if (var2 != null) {
-                  se.field_a[28] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[28] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 80, "moduledescriptions,29");
                 if (var2 != null) {
-                  se.field_a[29] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[29] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(57, "moduledescriptions,30");
                 if (var2 != null) {
-                  se.field_a[30] = IntKeyLookup.a(param0 + 13, var2);
+                  PopupMenuSupport.field_a[30] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 122, "moduledescriptions,31");
                 if (var2 != null) {
-                  se.field_a[31] = IntKeyLookup.a(param0 + 13, var2);
+                  PopupMenuSupport.field_a[31] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(67, "moduledescriptions,32");
                 if (var2 != null) {
-                  se.field_a[32] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[32] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 63, "moduledescriptions,33");
                 if (null != var2) {
-                  se.field_a[33] = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_a[33] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(81, "comtypenames,0");
                 if (null != var2) {
-                  BoundedRandomAccessFile.field_i[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  BoundedRandomAccessFile.field_i[0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(101, "comtypenames,1");
                 if (null != var2) {
@@ -1422,7 +1422,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(60, "mod_category_names,0");
                 if (var2 != null) {
-                  CachedTextLayout.field_D[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  CachedTextLayout.field_D[0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(104, "mod_category_names,1");
                 if (var2 != null) {
@@ -1458,7 +1458,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 79, "weaponnames,1");
                 if (null != var2) {
-                  NodeHashTable.field_i[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 72, "weaponnames,2");
                 if (null != var2) {
@@ -1482,11 +1482,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 103, "weaponnames,7");
                 if (var2 != null) {
-                  NodeHashTable.field_i[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[7] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 117, "weaponnames,8");
                 if (var2 != null) {
-                  NodeHashTable.field_i[8] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[8] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(110, "weaponnames,9");
                 if (null != var2) {
@@ -1510,7 +1510,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(104, "weaponnames,14");
                 if (var2 != null) {
-                  NodeHashTable.field_i[14] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[14] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 93, "weaponnames,15");
                 if (null != var2) {
@@ -1550,7 +1550,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(125, "weaponnames,24");
                 if (null != var2) {
-                  NodeHashTable.field_i[24] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[24] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(118, "weaponnames,25");
                 if (null != var2) {
@@ -1558,7 +1558,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(120, "weaponnames,26");
                 if (var2 != null) {
-                  NodeHashTable.field_i[26] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[26] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(107, "weaponnames,27");
                 if (null != var2) {
@@ -1594,151 +1594,151 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(95, "weaponnames,35");
                 if (null != var2) {
-                  NodeHashTable.field_i[35] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[35] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(58, "weaponkillstrings,0");
                 if (var2 != null) {
-                  pe.field_D[0] = IntKeyLookup.a(param0 + 13, var2);
+                  TriangleMesh.field_D[0] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(87, "weaponkillstrings,1");
                 if (var2 != null) {
-                  pe.field_D[1] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(112, "weaponkillstrings,2");
                 if (var2 != null) {
-                  pe.field_D[2] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(73, "weaponkillstrings,3");
                 if (var2 != null) {
-                  pe.field_D[3] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 118, "weaponkillstrings,4");
                 if (null != var2) {
-                  pe.field_D[4] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(77, "weaponkillstrings,5");
                 if (null != var2) {
-                  pe.field_D[5] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(123, "weaponkillstrings,6");
                 if (var2 != null) {
-                  pe.field_D[6] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_D[6] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 65, "weaponkillstrings,7");
                 if (var2 != null) {
-                  pe.field_D[7] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(93, "weaponkillstrings,8");
                 if (null != var2) {
-                  pe.field_D[8] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[8] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(101, "weaponkillstrings,9");
                 if (null != var2) {
-                  pe.field_D[9] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[9] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 71, "weaponkillstrings,10");
                 if (null != var2) {
-                  pe.field_D[10] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[10] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 91, "weaponkillstrings,11");
                 if (var2 != null) {
-                  pe.field_D[11] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[11] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(87, "weaponkillstrings,12");
                 if (null != var2) {
-                  pe.field_D[12] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[12] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(65, "weaponkillstrings,13");
                 if (var2 != null) {
-                  pe.field_D[13] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[13] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(94, "weaponkillstrings,14");
                 if (null != var2) {
-                  pe.field_D[14] = IntKeyLookup.a(param0 + 13, var2);
+                  TriangleMesh.field_D[14] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(79, "weaponkillstrings,15");
                 if (var2 != null) {
-                  pe.field_D[15] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[15] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(92, "weaponkillstrings,16");
                 if (null != var2) {
-                  pe.field_D[16] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[16] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(97, "weaponkillstrings,17");
                 if (var2 != null) {
-                  pe.field_D[17] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_D[17] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(78, "weaponkillstrings,18");
                 if (null != var2) {
-                  pe.field_D[18] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[18] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(95, "weaponkillstrings,19");
                 if (var2 != null) {
-                  pe.field_D[19] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[19] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(71, "weaponkillstrings,20");
                 if (null != var2) {
-                  pe.field_D[20] = IntKeyLookup.a(param0 + 13, var2);
+                  TriangleMesh.field_D[20] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(122, "weaponkillstrings,21");
                 if (null != var2) {
-                  pe.field_D[21] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_D[21] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(126, "weaponkillstrings,22");
                 if (null != var2) {
-                  pe.field_D[22] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[22] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(106, "weaponkillstrings,23");
                 if (null != var2) {
-                  pe.field_D[23] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[23] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(51, "weaponkillstrings,24");
                 if (null != var2) {
-                  pe.field_D[24] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[24] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(77, "weaponkillstrings,25");
                 if (null != var2) {
-                  pe.field_D[25] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[25] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(109, "weaponkillstrings,26");
                 if (null != var2) {
-                  pe.field_D[26] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_D[26] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(119, "weaponkillstrings,27");
                 if (var2 != null) {
-                  pe.field_D[27] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[27] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(121, "weaponkillstrings,28");
                 if (var2 != null) {
-                  pe.field_D[28] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[28] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(73, "weaponkillstrings,29");
                 if (null != var2) {
-                  pe.field_D[29] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[29] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 96, "weaponkillstrings,30");
                 if (var2 != null) {
-                  pe.field_D[30] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[30] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 92, "weaponkillstrings,31");
                 if (null != var2) {
-                  pe.field_D[31] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[31] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(125, "weaponkillstrings,32");
                 if (var2 != null) {
-                  pe.field_D[32] = IntKeyLookup.a(param0 + 13, var2);
+                  TriangleMesh.field_D[32] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 69, "weaponkillstrings,33");
                 if (var2 != null) {
-                  pe.field_D[33] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[33] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 125, "weaponkillstrings,34");
                 if (var2 != null) {
-                  pe.field_D[34] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[34] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 76, "weaponkillstrings,35");
                 if (null != var2) {
-                  pe.field_D[35] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_D[35] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(96, "hitbyshipmsg");
                 if (null != var2) {
@@ -1774,7 +1774,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(124, "expertlysniped");
                 if (var2 != null) {
-                  ch.field_I = IntKeyLookup.a(13, var2);
+                  ArrayWidgetContainer.field_I = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(104, "closecombatmsg,0");
                 if (var2 != null) {
@@ -1786,7 +1786,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(53, "closecombatmsg,2");
                 if (null != var2) {
-                  un.field_k[2] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  un.field_k[2] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(53, "closecombatmsg,3");
                 if (var2 != null) {
@@ -1802,7 +1802,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 76, "damagedmsg");
                 if (null != var2) {
-                  cc.field_Tb = IntKeyLookup.a(13, var2);
+                  LobbyPlayer.field_Tb = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(89, "andfinishedbydronemsg");
                 if (null != var2) {
@@ -1838,43 +1838,43 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 78, "weaponstatlabels,0");
                 if (var2 != null) {
-                  bi.field_b[0] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 113, "weaponstatlabels,1");
                 if (var2 != null) {
-                  bi.field_b[1] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(70, "weaponstatlabels,2");
                 if (var2 != null) {
-                  bi.field_b[2] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(110, "weaponstatlabels,3");
                 if (var2 != null) {
-                  bi.field_b[3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TextAndBitHelpers.field_b[3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(127, "weaponstatlabels,4");
                 if (null != var2) {
-                  bi.field_b[4] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(105, "weaponstatlabels,5");
                 if (null != var2) {
-                  bi.field_b[5] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(70, "weaponstatlabels,6");
                 if (var2 != null) {
-                  bi.field_b[6] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(78, "weaponstatlabels,7");
                 if (var2 != null) {
-                  bi.field_b[7] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(68, "weaponstatlabels,8");
                 if (var2 != null) {
-                  bi.field_b[8] = IntKeyLookup.a(13, var2);
+                  TextAndBitHelpers.field_b[8] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 120, "weaponclasstxt");
                 if (var2 != null) {
-                  im.field_c = IntKeyLookup.a(13, var2);
+                  LobbyStateHelpers.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(101, "Weapon_class_names,0");
                 if (null != var2) {
@@ -1898,7 +1898,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(121, "Weapon_class_names,5");
                 if (var2 != null) {
-                  PasswordFieldPainter.field_B[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PasswordFieldPainter.field_B[5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(51, "Weapon_class_names,6");
                 if (null != var2) {
@@ -1942,7 +1942,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(62, "Weapon_class_names,16");
                 if (null != var2) {
-                  PasswordFieldPainter.field_B[16] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PasswordFieldPainter.field_B[16] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(69, "Weapon_class_names,17");
                 if (var2 != null) {
@@ -1950,7 +1950,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(122, "Weapon_class_names,18");
                 if (var2 != null) {
-                  PasswordFieldPainter.field_B[18] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  PasswordFieldPainter.field_B[18] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(109, "Weapon_class_names,19");
                 if (var2 != null) {
@@ -1982,7 +1982,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(76, "sentinel_descriptions,6");
                 if (var2 != null) {
-                  WhirlpoolHasher.field_g[6] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  WhirlpoolHasher.field_g[6] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "sentinel_descriptions,7");
                 if (var2 != null) {
@@ -2020,7 +2020,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 97, "weapondescriptions,3");
                 if (null != var2) {
-                  SocketConnector.field_g[3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SocketConnector.field_g[3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(121, "weapondescriptions,4");
                 if (null != var2) {
@@ -2060,7 +2060,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(95, "weapondescriptions,13");
                 if (null != var2) {
-                  SocketConnector.field_g[13] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SocketConnector.field_g[13] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(69, "weapondescriptions,14");
                 if (var2 != null) {
@@ -2072,7 +2072,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(96, "weapondescriptions,16");
                 if (null != var2) {
-                  SocketConnector.field_g[16] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SocketConnector.field_g[16] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(70, "weapondescriptions,17");
                 if (var2 != null) {
@@ -2092,7 +2092,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(95, "weapondescriptions,21");
                 if (null != var2) {
-                  SocketConnector.field_g[21] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SocketConnector.field_g[21] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(90, "weapondescriptions,22");
                 if (null != var2) {
@@ -2192,7 +2192,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(121, "gameoptnames,1,3");
                 if (null != var2) {
-                  te.field_c[1][3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  te.field_c[1][3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(56, "gameoptnames,1,4");
                 if (null != var2) {
@@ -2220,11 +2220,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 75, "gameoptnames,2,5");
                 if (var2 != null) {
-                  te.field_c[2][5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  te.field_c[2][5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(58, "gameopttooltips,0,0");
                 if (var2 != null) {
-                  ParticleEffect.field_y[0][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ParticleEffect.field_y[0][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(116, "gameopttooltips,0,1");
                 if (var2 != null) {
@@ -2260,7 +2260,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(112, "gameopttooltips,2,2");
                 if (var2 != null) {
-                  ParticleEffect.field_y[2][2] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ParticleEffect.field_y[2][2] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(51, "gameopttooltips,2,3");
                 if (null != var2) {
@@ -2268,7 +2268,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(95, "gameopttooltips,2,4");
                 if (null != var2) {
-                  ParticleEffect.field_y[2][4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  ParticleEffect.field_y[2][4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(106, "gameopttooltips,2,5");
                 if (null != var2) {
@@ -2292,7 +2292,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(87, "instruction_set,3,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[3][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[3][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(104, "instruction_set,3,1");
                 if (null != var2) {
@@ -2328,7 +2328,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 117, "instruction_set,11,0");
                 if (null != var2) {
-                  MouseInputHandler.field_g[11][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[11][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 115, "instruction_set,12,0");
                 if (var2 != null) {
@@ -2344,7 +2344,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(77, "instruction_set,13,1");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[13][1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[13][1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(52, "instruction_set,14,0");
                 if (null != var2) {
@@ -2356,7 +2356,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(124, "instruction_set,16,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[16][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[16][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 88, "instruction_set,17,0");
                 if (var2 != null) {
@@ -2368,7 +2368,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(85, "instruction_set,19,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[19][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[19][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 72, "instruction_set,20,0");
                 if (null != var2) {
@@ -2400,7 +2400,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(103, "instruction_set,25,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[25][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[25][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 74, "instruction_set,26,0");
                 if (var2 != null) {
@@ -2408,11 +2408,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(108, "instruction_set,27,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[27][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[27][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 106, "instruction_set,28,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[28][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[28][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(70, "instruction_set,29,0");
                 if (var2 != null) {
@@ -2428,7 +2428,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 118, "instruction_set,32,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[32][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[32][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(52, "instruction_set,32,1");
                 if (var2 != null) {
@@ -2476,7 +2476,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 51, "instruction_set,39,0");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[39][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[39][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(109, "instruction_set,40,0");
                 if (var2 != null) {
@@ -2656,7 +2656,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 101, "instruction_set,75,2");
                 if (null != var2) {
-                  MouseInputHandler.field_g[75][2] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[75][2] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(115, "instruction_set,75,3");
                 if (var2 != null) {
@@ -2668,7 +2668,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(55, "instruction_set,76,1");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[76][1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[76][1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(62, "instruction_set,76,2");
                 if (null != var2) {
@@ -2748,11 +2748,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(73, "instruction_set,81,1");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[81][1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[81][1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 84, "instruction_set,81,2");
                 if (var2 != null) {
-                  MouseInputHandler.field_g[81][2] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[81][2] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(97, "instruction_set,81,3");
                 if (null != var2) {
@@ -2780,7 +2780,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(116, "instruction_set,86,0");
                 if (null != var2) {
-                  MouseInputHandler.field_g[86][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[86][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 86, "instruction_set,87,0");
                 if (null != var2) {
@@ -2832,7 +2832,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(110, "instruction_set,90,3");
                 if (null != var2) {
-                  MouseInputHandler.field_g[90][3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MouseInputHandler.field_g[90][3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "instruction_set,91,0");
                 if (null != var2) {
@@ -2926,7 +2926,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 98, "ITEMS_UNLOCKED_1_MSG");
                 if (null != var2) {
-                  na.field_c = IntKeyLookup.a(13, var2);
+                  ChatMessage.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(122, "ITEMS_UNLOCKED_2_MSG");
                 if (null != var2) {
@@ -2934,19 +2934,19 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(98, "CAMPAIGN_NAMES,0");
                 if (null != var2) {
-                  cc.field_ic[0] = IntKeyLookup.a(13, var2);
+                  LobbyPlayer.field_ic[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(88, "CAMPAIGN_NAMES,1");
                 if (var2 != null) {
-                  cc.field_ic[1] = IntKeyLookup.a(param0 + 13, var2);
+                  LobbyPlayer.field_ic[1] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(57, "CAMPAIGN_NAMES,2");
                 if (var2 != null) {
-                  cc.field_ic[2] = IntKeyLookup.a(param0 + 13, var2);
+                  LobbyPlayer.field_ic[2] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(67, "tutorialpaused");
                 if (var2 != null) {
-                  ue.field_d = IntKeyLookup.a(13, var2);
+                  LoginHandshakeHelpers.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(85, "mission_titles,0");
                 if (var2 != null) {
@@ -3066,7 +3066,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(81, "mission_titles,29");
                 if (var2 != null) {
-                  MarkerSlider.field_cb[29] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MarkerSlider.field_cb[29] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 95, "tutorialpagenames,0,0");
                 if (null != var2) {
@@ -3114,7 +3114,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(127, "tutorialpagenames,0,11");
                 if (null != var2) {
-                  UiContainer.field_N[0][11] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_N[0][11] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(98, "tutorialpagenames,1,0");
                 if (null != var2) {
@@ -3178,7 +3178,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 126, "tutorialpagenames,3,0");
                 if (null != var2) {
-                  UiContainer.field_N[3][0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_N[3][0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(113, "tutorialpagenames,3,1");
                 if (var2 != null) {
@@ -3202,7 +3202,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 111, "tutorialpagenames,3,6");
                 if (null != var2) {
-                  UiContainer.field_N[3][6] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_N[3][6] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 52, "tutorialpagenames,5,0");
                 if (var2 != null) {
@@ -3210,7 +3210,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(107, "tutorialpagenames,5,1");
                 if (null != var2) {
-                  UiContainer.field_N[5][1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_N[5][1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 110, "tutorialpagenames,5,2");
                 if (null != var2) {
@@ -3342,7 +3342,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(110, "tutorial_alt_controls,1,12");
                 if (null != var2) {
-                  dj.field_g[1][12] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  dj.field_g[1][12] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(86, "tutorial_alt_controls,1,13");
                 if (null != var2) {
@@ -3382,7 +3382,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(87, "tutorial_b,0,4");
                 if (var2 != null) {
-                  UiContainer.field_H[0][4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[0][4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(73, "tutorial_b,0,5");
                 if (var2 != null) {
@@ -3442,7 +3442,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(126, "tutorial_b,0,19");
                 if (var2 != null) {
-                  UiContainer.field_H[0][19] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[0][19] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 98, "tutorial_b,0,20");
                 if (var2 != null) {
@@ -3450,7 +3450,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(60, "tutorial_b,0,21");
                 if (var2 != null) {
-                  UiContainer.field_H[0][21] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[0][21] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(123, "tutorial_b,0,22");
                 if (var2 != null) {
@@ -3474,11 +3474,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 75, "tutorial_b,1,3");
                 if (var2 != null) {
-                  UiContainer.field_H[1][3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[1][3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 106, "tutorial_b,1,4");
                 if (null != var2) {
-                  UiContainer.field_H[1][4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[1][4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(121, "tutorial_b,1,5");
                 if (null != var2) {
@@ -3494,7 +3494,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(78, "tutorial_b,1,8");
                 if (null != var2) {
-                  UiContainer.field_H[1][8] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[1][8] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(62, "tutorial_b,1,9");
                 if (null != var2) {
@@ -3542,7 +3542,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(67, "tutorial_b,1,20");
                 if (null != var2) {
-                  UiContainer.field_H[1][20] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[1][20] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(67, "tutorial_b,1,21");
                 if (var2 != null) {
@@ -3598,7 +3598,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(115, "tutorial_b,3,4");
                 if (var2 != null) {
-                  UiContainer.field_H[3][4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[3][4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(122, "tutorial_b,3,5");
                 if (var2 != null) {
@@ -3622,7 +3622,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(71, "tutorial_b,3,10");
                 if (var2 != null) {
-                  UiContainer.field_H[3][10] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[3][10] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(108, "tutorial_b,3,11");
                 if (var2 != null) {
@@ -3630,7 +3630,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(70, "tutorial_b,3,12");
                 if (null != var2) {
-                  UiContainer.field_H[3][12] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  UiContainer.field_H[3][12] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(109, "tutorial_b,3,13");
                 if (null != var2) {
@@ -3836,7 +3836,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(51, "CONFIG_TUTORIAL,11");
                 if (var2 != null) {
-                  jm.field_u[11] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  jm.field_u[11] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 105, "CONFIG_TUTORIAL,12");
                 if (null != var2) {
@@ -3848,7 +3848,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(88, "CONFIG_TUTORIAL,14");
                 if (var2 != null) {
-                  jm.field_u[14] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  jm.field_u[14] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 108, "CONFIG_TUTORIAL,15");
                 if (null != var2) {
@@ -3888,7 +3888,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 81, "camerafollowontxt");
                 if (null != var2) {
-                  hf.field_b = IntKeyLookup.a(param0 ^ 13, var2);
+                  FrameStyleHelpers.field_b = IntKeyLookup.a(param0 ^ 13, var2);
                 }
                 var2 = SentinelDesigner.a(114, "camerafollowofftxt");
                 if (var2 != null) {
@@ -3944,7 +3944,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(123, "testfieldtxt");
                 if (var2 != null) {
-                  na.field_u = IntKeyLookup.a(13, var2);
+                  ChatMessage.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 76, "freeforalltxt");
                 if (var2 != null) {
@@ -4048,7 +4048,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 90, "missiontimetxt");
                 if (null != var2) {
-                  ak.field_a = IntKeyLookup.a(13, var2);
+                  SpriteFrame.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(121, "wavetxt");
                 if (var2 != null) {
@@ -4100,7 +4100,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(84, "helptext");
                 if (var2 != null) {
-                  pe.field_R = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_R = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 59, "weaponleftkey");
                 if (null != var2) {
@@ -4124,11 +4124,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 54, "fireempbombdesc");
                 if (var2 != null) {
-                  sf.field_v = IntKeyLookup.a(13, var2);
+                  TutorialStep.field_v = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(82, "targetlockdesc");
                 if (var2 != null) {
-                  se.field_d = IntKeyLookup.a(13, var2);
+                  PopupMenuSupport.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(53, "droptargetlock");
                 if (var2 != null) {
@@ -4184,7 +4184,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 104, "spacekey");
                 if (var2 != null) {
-                  fc.field_c = IntKeyLookup.a(13, var2);
+                  SoundAndUrlHelpers.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 60, "shiftkey");
                 if (var2 != null) {
@@ -4192,7 +4192,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(126, "centrecamerakey");
                 if (var2 != null) {
-                  pl.field_V = IntKeyLookup.a(param0 + 13, var2);
+                  BirthDateEntryPanel.field_V = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 62, "keycode_scrollup");
                 if (null != var2) {
@@ -4224,7 +4224,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(96, "keycode_prevweapon");
                 if (var2 != null) {
-                  ln.field_d = var2[0] & 255;
+                  NameValidationHelpers.field_d = var2[0] & 255;
                 }
                 var2 = SentinelDesigner.a(70, "keycode_nextweapon");
                 if (var2 != null) {
@@ -4232,7 +4232,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(124, "keycode_firemelee");
                 if (var2 != null) {
-                  na.field_b = 255 & var2[0];
+                  ChatMessage.field_b = 255 & var2[0];
                 }
                 var2 = SentinelDesigner.a(param0 ^ 112, "keycode_empbomb");
                 if (null != var2) {
@@ -4264,7 +4264,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(100, "teamscoretxt");
                 if (null != var2) {
-                  kk.field_f = IntKeyLookup.a(13, var2);
+                  TextAndMenuHelpers.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "empstatus");
                 if (null != var2) {
@@ -4272,7 +4272,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(73, "noenergystatus");
                 if (var2 != null) {
-                  hk.field_pc = IntKeyLookup.a(13, var2);
+                  LobbyGame.field_pc = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(122, "n_sec");
                 if (var2 != null) {
@@ -4292,11 +4292,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(91, "componentnames,3");
                 if (var2 != null) {
-                  t.field_e[3] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[3] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 90, "componentnames,17");
                 if (null != var2) {
-                  t.field_e[17] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[17] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(85, "componentnames,18");
                 if (var2 != null) {
@@ -4356,11 +4356,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 72, "componentnames,32");
                 if (var2 != null) {
-                  t.field_e[32] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[32] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(90, "componentnames,33");
                 if (var2 != null) {
-                  t.field_e[33] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[33] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(52, "componentnames,34");
                 if (var2 != null) {
@@ -4432,7 +4432,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(89, "componentnames,54");
                 if (null != var2) {
-                  t.field_e[54] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[54] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(119, "componentnames,55");
                 if (null != var2) {
@@ -4452,7 +4452,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(120, "componentnames,59");
                 if (var2 != null) {
-                  t.field_e[59] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[59] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(87, "componentnames,60");
                 if (null != var2) {
@@ -4464,7 +4464,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(91, "componentnames,62");
                 if (var2 != null) {
-                  t.field_e[62] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[62] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(90, "componentnames,64");
                 if (null != var2) {
@@ -4520,7 +4520,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 57, "componentnames,77");
                 if (var2 != null) {
-                  t.field_e[77] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[77] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(81, "componentnames,78");
                 if (null != var2) {
@@ -4548,7 +4548,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(67, "componentnames,84");
                 if (null != var2) {
-                  t.field_e[84] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[84] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(91, "componentnames,85");
                 if (null != var2) {
@@ -4580,7 +4580,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(85, "componentnames,92");
                 if (null != var2) {
-                  t.field_e[92] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  t.field_e[92] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 105, "componentnames,93");
                 if (var2 != null) {
@@ -4592,27 +4592,27 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(98, "slotnames,0");
                 if (var2 != null) {
-                  kk.field_h[0] = IntKeyLookup.a(13, var2);
+                  TextAndMenuHelpers.field_h[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 83, "slotnames,1");
                 if (var2 != null) {
-                  kk.field_h[1] = IntKeyLookup.a(param0 + 13, var2);
+                  TextAndMenuHelpers.field_h[1] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 61, "slotnames,2");
                 if (var2 != null) {
-                  kk.field_h[2] = IntKeyLookup.a(13, var2);
+                  TextAndMenuHelpers.field_h[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 97, "slotnames,3");
                 if (null != var2) {
-                  kk.field_h[3] = IntKeyLookup.a(param0 + 13, var2);
+                  TextAndMenuHelpers.field_h[3] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(79, "slotnames,4");
                 if (var2 != null) {
-                  kk.field_h[4] = IntKeyLookup.a(param0 + 13, var2);
+                  TextAndMenuHelpers.field_h[4] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 62, "slotnames,5");
                 if (null != var2) {
-                  kk.field_h[5] = IntKeyLookup.a(13, var2);
+                  TextAndMenuHelpers.field_h[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(99, "healthtxt");
                 if (var2 != null) {
@@ -4634,7 +4634,7 @@ final class SectorCacheStore {
             }
             void runChunk5() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  hk.field_jc = IntKeyLookup.a(param0 + 13, var2);
+                  LobbyGame.field_jc = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(59, "previousmessagetip");
                 if (null != var2) {
@@ -4678,7 +4678,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(92, "coop_wave");
                 if (var2 != null) {
-                  ci.field_f = IntKeyLookup.a(13, var2);
+                  ClientErrorSupport.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(98, "coop_respawns");
                 if (var2 != null) {
@@ -4694,15 +4694,15 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(88, "TEAM_NAMES,0");
                 if (var2 != null) {
-                  mm.field_d[0] = IntKeyLookup.a(13, var2);
+                  ClockAndCookieHelpers.field_d[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(108, "TEAM_NAMES,1");
                 if (null != var2) {
-                  mm.field_d[1] = IntKeyLookup.a(13, var2);
+                  ClockAndCookieHelpers.field_d[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(57, "TEAM_NAMES,2");
                 if (null != var2) {
-                  mm.field_d[2] = IntKeyLookup.a(13, var2);
+                  ClockAndCookieHelpers.field_d[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(71, "SENTINEL_NAMES,0");
                 if (var2 != null) {
@@ -4742,7 +4742,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 83, "SENTINEL_NAMES,9");
                 if (var2 != null) {
-                  cd.field_c[9] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  cd.field_c[9] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 86, "SENTINEL_NAMES,10");
                 if (null != var2) {
@@ -4869,7 +4869,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(109, "GAMEBEST_TIP,31");
                 if (var2 != null) {
-                  MusicPatchEnvelope.field_l[31] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[31] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(54, "GAMEBEST_TIP,32");
                 if (null != var2) {
@@ -4889,11 +4889,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(61, "GAMEBEST_TIP,36");
                 if (null != var2) {
-                  MusicPatchEnvelope.field_l[36] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[36] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(64, "GAMEBEST_TIP,37");
                 if (var2 != null) {
-                  MusicPatchEnvelope.field_l[37] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[37] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(95, "GAMEBEST_TIP,38");
                 if (null != var2) {
@@ -4909,7 +4909,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 104, "GAMEBEST_TIP,42");
                 if (null != var2) {
-                  MusicPatchEnvelope.field_l[42] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[42] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 120, "GAMEBEST_TIP,43");
                 if (var2 != null) {
@@ -4929,7 +4929,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(120, "GAMEBEST_TIP,48");
                 if (null != var2) {
-                  MusicPatchEnvelope.field_l[48] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[48] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(97, "GAMEBEST_TIP,49");
                 if (null != var2) {
@@ -4941,7 +4941,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(74, "GAMEBEST_TIP,51");
                 if (var2 != null) {
-                  MusicPatchEnvelope.field_l[51] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  MusicPatchEnvelope.field_l[51] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(123, "GAMEBEST_TIP,52");
                 if (var2 != null) {
@@ -4993,7 +4993,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(58, "seconds_tx");
                 if (var2 != null) {
-                  tc.field_s = IntKeyLookup.a(13, var2);
+                  HighscoreSubmission.field_s = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 87, "numberoftimes_tx,0");
                 if (null != var2) {
@@ -5013,7 +5013,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(93, "ALREADY_ENG_MOD_TXT");
                 if (null != var2) {
-                  va.field_i = IntKeyLookup.a(13, var2);
+                  LoginDialogHelpers.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 104, "CANNOT_ENG_MOD_TXT");
                 if (null != var2) {
@@ -5021,7 +5021,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(112, "FIRST_ENG_THIS_TXT");
                 if (var2 != null) {
-                  oc.field_e = IntKeyLookup.a(13, var2);
+                  MessageMenuHelpers.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(52, "FIRST_ENG_SHIELDS_TXT");
                 if (null != var2) {
@@ -5089,11 +5089,11 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(64, "HEADSLOT_TXT");
                 if (var2 != null) {
-                  im.field_e = IntKeyLookup.a(13, var2);
+                  LobbyStateHelpers.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(66, "ARMSLOT_TXT");
                 if (var2 != null) {
-                  tc.field_r = IntKeyLookup.a(13, var2);
+                  HighscoreSubmission.field_r = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(92, "WINGSLOT_TXT");
                 if (null != var2) {
@@ -5169,7 +5169,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 51, "percentengineered");
                 if (var2 != null) {
-                  mm.field_c = IntKeyLookup.a(13, var2);
+                  ClockAndCookieHelpers.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(111, "sentineluses");
                 if (null != var2) {
@@ -5185,7 +5185,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(94, "usesmodules");
                 if (var2 != null) {
-                  dk.field_i = IntKeyLookup.a(13, var2);
+                  DualNodeHashTable.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(60, "usesmodule");
                 if (var2 != null) {
@@ -5193,7 +5193,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(127, "cubesneeded");
                 if (var2 != null) {
-                  mm.field_f = IntKeyLookup.a(param0 + 13, var2);
+                  ClockAndCookieHelpers.field_f = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(73, "holdsonetimes");
                 if (var2 != null) {
@@ -5201,7 +5201,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(78, "slotsntimesx");
                 if (null != var2) {
-                  hf.field_a = IntKeyLookup.a(param0 ^ 13, var2);
+                  FrameStyleHelpers.field_a = IntKeyLookup.a(param0 ^ 13, var2);
                 }
                 var2 = SentinelDesigner.a(115, "alsontimesx");
                 if (var2 != null) {
@@ -5265,7 +5265,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(109, "oddmechwarnings,7");
                 if (null != var2) {
-                  SentinelDesigner.field_b[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelDesigner.field_b[7] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(109, "oddmechwarnings,8");
                 if (var2 != null) {
@@ -5273,7 +5273,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(63, "oddmechwarnings,9");
                 if (var2 != null) {
-                  SentinelDesigner.field_b[9] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelDesigner.field_b[9] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(89, "oddmechwarnings,10");
                 if (var2 != null) {
@@ -5309,27 +5309,27 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(99, "ratings_headings,0");
                 if (null != var2) {
-                  pe.field_h[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_h[0] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(71, "ratings_headings,1");
                 if (null != var2) {
-                  pe.field_h[1] = IntKeyLookup.a(param0 + 13, var2);
+                  TriangleMesh.field_h[1] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(99, "ratings_headings,2");
                 if (var2 != null) {
-                  pe.field_h[2] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_h[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(64, "ratings_headings,3");
                 if (var2 != null) {
-                  pe.field_h[3] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_h[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 80, "ratings_headings,4");
                 if (null != var2) {
-                  pe.field_h[4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  TriangleMesh.field_h[4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(123, "ratings_headings,5");
                 if (var2 != null) {
-                  pe.field_h[5] = IntKeyLookup.a(13, var2);
+                  TriangleMesh.field_h[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(61, "achievements_hidden_text");
                 if (var2 != null) {
@@ -5365,7 +5365,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(57, "stathints,4");
                 if (var2 != null) {
-                  jj.field_h[4] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  jj.field_h[4] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(72, "stathints,5");
                 if (var2 != null) {
@@ -5389,7 +5389,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(108, "stathints,10");
                 if (var2 != null) {
-                  jj.field_h[10] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  jj.field_h[10] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(51, "stathints,11");
                 if (var2 != null) {
@@ -5401,7 +5401,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(105, "itemstathints,1");
                 if (null != var2) {
-                  sl.field_j[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  sl.field_j[1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 107, "itemstathints,2");
                 if (null != var2) {
@@ -5425,7 +5425,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(65, "itemstathints,7");
                 if (null != var2) {
-                  sl.field_j[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  sl.field_j[7] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 80, "itemstathints,8");
                 if (var2 != null) {
@@ -5461,23 +5461,23 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(94, "defaultwingformany,0");
                 if (var2 != null) {
-                  lj.field_g[0] = IntKeyLookup.a(13, var2);
+                  SocialRequestHelpers.field_g[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 65, "defaultwingformany,1");
                 if (var2 != null) {
-                  lj.field_g[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SocialRequestHelpers.field_g[1] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(94, "defaultwingformany,2");
                 if (var2 != null) {
-                  lj.field_g[2] = IntKeyLookup.a(13, var2);
+                  SocialRequestHelpers.field_g[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(66, "defaultwingformany,3");
                 if (var2 != null) {
-                  lj.field_g[3] = IntKeyLookup.a(13, var2);
+                  SocialRequestHelpers.field_g[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(116, "defaultwingformany,4");
                 if (var2 != null) {
-                  lj.field_g[4] = IntKeyLookup.a(13, var2);
+                  SocialRequestHelpers.field_g[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(122, "ignoretxt");
                 if (var2 != null) {
@@ -5513,7 +5513,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(120, "missionstatustxt,5");
                 if (var2 != null) {
-                  SceneWidget.field_jb[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SceneWidget.field_jb[5] = IntKeyLookup.a(TextAndBitHelpers.bitXor(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(113, "missionstatustxt,6");
                 if (null != var2) {
@@ -5579,7 +5579,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(115, "endmissiontxt");
                 if (var2 != null) {
-                  ec.field_f = IntKeyLookup.a(13, var2);
+                  ClientUiHelpers.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(102, "endtestfieldtxt");
                 if (null != var2) {
@@ -5622,7 +5622,7 @@ final class SectorCacheStore {
                   } else {
                     stackIn_4688_2 = "{...}";
                   }
-                  throw ci.a((Throwable) ((Object) stackIn_4687_0), ((StringBuilder) (Object) stackIn_4687_1).append(stackIn_4688_2).append(')').toString());
+                  throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4687_0), ((StringBuilder) (Object) stackIn_4687_1).append(stackIn_4688_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_4696_0 = (!GameApplet.field_i);
@@ -5645,12 +5645,12 @@ final class SectorCacheStore {
           Throwable decompiledCaughtException = null;
           try {
             if (DelayedServerPacket.field_o == null) {
-              DelayedServerPacket.field_o = ArticulatedPart.field_A.a(e.field_b, UiTheme.field_l, 376255344);
+              DelayedServerPacket.field_o = ArticulatedPart.field_A.requestSocket(AccountRequestResult.field_b, UiTheme.field_l, 376255344);
             }
             if (DelayedServerPacket.field_o.field_a == 0) {
               return false;
             }
-            dupTemp$1 = mm.a(40);
+            dupTemp$1 = ClockAndCookieHelpers.monotonicMillis(40);
             vf.field_d = dupTemp$1;
             QuickChatPhraseCache.field_b = dupTemp$1;
             if (param0 < 115) {
@@ -5659,15 +5659,15 @@ final class SectorCacheStore {
             if (DelayedServerPacket.field_o.field_a == 1) {
               try {
                 rb.field_h = new BufferedSocket((java.net.Socket) (DelayedServerPacket.field_o.field_c), ArticulatedPart.field_A);
-                mm.field_g.position = 0;
-                var2 = rf.field_d;
+                ClockAndCookieHelpers.field_g.position = 0;
+                var2 = LoginConnectionStage.field_d;
                 var2.position = 0;
                 stackIn_17_0 = (!param1) ? -1 : -2;
                 di.field_d = stackIn_17_0;
                 TextHotspotWidget.field_W = stackIn_17_0;
                 RasterSnapshot.field_u = stackIn_17_0;
-                rn.field_v = lj.field_d;
-                SpriteCheckboxPainter.a(mm.field_g, 12, ScrollContainer.field_Wb, StripedProgressBar.field_Z, AccountRegistrationPanel.field_T);
+                rn.field_v = SocialRequestHelpers.field_d;
+                SpriteCheckboxPainter.a(ClockAndCookieHelpers.field_g, 12, ScrollContainer.field_Wb, StripedProgressBar.field_Z, AccountRegistrationPanel.field_T);
                 gj.a(0, -1);
                 decompiledRegionSelector0 = 0;
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -5691,7 +5691,7 @@ final class SectorCacheStore {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw ci.a((Throwable) ((Object) var2_ref), "rc.E(" + param0 + ',' + param1 + ')');
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "rc.E(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -5916,7 +5916,7 @@ final class SectorCacheStore {
             } else {
               stackIn_89_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param4).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -5935,7 +5935,7 @@ final class SectorCacheStore {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "rc.toString()");
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "rc.toString()");
         }
     }
 
@@ -5972,7 +5972,7 @@ final class SectorCacheStore {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -6123,7 +6123,7 @@ final class SectorCacheStore {
           } else {
             stackIn_197_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_192_0), ((StringBuilder) (Object) stackIn_196_1).append(stackIn_197_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_192_0), ((StringBuilder) (Object) stackIn_196_1).append(stackIn_197_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -6265,7 +6265,7 @@ final class SectorCacheStore {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw ci.a((Throwable) ((Object) var3_ref), "rc.B(" + param0 + ',' + param1 + ')');
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "rc.B(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

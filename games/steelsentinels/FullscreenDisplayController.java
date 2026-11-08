@@ -5,7 +5,7 @@ final class FullscreenDisplayController {
     private java.awt.DisplayMode field_b;
     private java.awt.GraphicsDevice field_a;
 
-    private final void a(java.awt.Frame param0, byte param1) {
+    private final void setFullscreenWindow(java.awt.Frame param0, byte param1) {
         int var3;
         this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param0));
         var3 = -64 % ((param1 - 70) / 45);
@@ -33,7 +33,7 @@ final class FullscreenDisplayController {
           }
           this.field_b = null;
         }
-        this.a((java.awt.Frame) null, (byte) 126);
+        this.setFullscreenWindow((java.awt.Frame) null, (byte) 126);
     }
 
     public FullscreenDisplayController() throws Exception {
@@ -72,7 +72,7 @@ final class FullscreenDisplayController {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(param0, (byte) 119);
+        this.setFullscreenWindow(param0, (byte) 119);
         if (param4 != 0) {
           this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;

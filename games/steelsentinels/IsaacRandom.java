@@ -26,7 +26,7 @@ final class IsaacRandom {
           }
           uc.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ie.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ie.A(" + param0 + ')');
         }
     }
 
@@ -186,10 +186,10 @@ final class IsaacRandom {
             }
           }
           this.accumulator = this.accumulator + this.memory[var2 + 128 & 255];
-          dupTemp$1 = this.lastResult + (this.memory[ec.a(var3, 1020) >> 2] + this.accumulator);
+          dupTemp$1 = this.lastResult + (this.memory[ClientUiHelpers.bitAnd(var3, 1020) >> 2] + this.accumulator);
           var4 = dupTemp$1;
           this.memory[var2] = dupTemp$1;
-          dupTemp$2 = this.memory[ec.a(261147, var4) >> 8 >> 2] + var3;
+          dupTemp$2 = this.memory[ClientUiHelpers.bitAnd(261147, var4) >> 8 >> 2] + var3;
           this.lastResult = dupTemp$2;
           this.results[var2] = dupTemp$2;
         }
@@ -246,7 +246,7 @@ final class IsaacRandom {
         try {
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ie.G(" + (existingNode != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ie.G(" + (existingNode != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class IsaacRandom {
           }
           this.initializeState(55);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (seed != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ie.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

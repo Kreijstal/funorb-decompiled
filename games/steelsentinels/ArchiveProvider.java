@@ -29,7 +29,7 @@ abstract class ArchiveProvider {
             if (param1.length() <= var2_int) {
               return true;
             }
-            if (IconTextComponent.a((byte) -30, param1.charAt(var2_int))) {
+            if (IconTextComponent.isAllowedChar((byte) -30, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -46,7 +46,7 @@ abstract class ArchiveProvider {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

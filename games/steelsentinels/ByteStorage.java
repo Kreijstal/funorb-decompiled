@@ -15,7 +15,7 @@ abstract class ByteStorage {
 
     final static fm[] b(boolean param0) {
         if (!param0) {
-          return new fm[]{StripedProgressBar.field_M, IntrusiveNode.field_g, WhirlpoolHasher.field_n, gf.field_b, Explosion.field_D, MouseInputHandler.field_c, pc.field_p, ArticulatedPart.field_O, ParticleEffect.field_H, PasswordFieldPainter.field_x, wn.field_b, ml.field_b, sh.field_b, pe.field_A};
+          return new fm[]{StripedProgressBar.field_M, IntrusiveNode.field_g, WhirlpoolHasher.field_n, gf.field_b, Explosion.field_D, MouseInputHandler.field_c, PlayingSound.field_p, ArticulatedPart.field_O, ParticleEffect.field_H, PasswordFieldPainter.field_x, wn.field_b, ml.field_b, sh.field_b, TriangleMesh.field_A};
         }
         return (fm[]) null;
     }

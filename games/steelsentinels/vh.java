@@ -7,14 +7,14 @@ final class vh {
     static int field_a;
     static RgbSprite[] field_b;
 
-    final static void a(int param0, tc param1, byte param2) {
+    final static void a(int param0, HighscoreSubmission param1, byte param2) {
         CipherPacketBuffer var8 = null;
         CipherPacketBuffer var9 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = SteelSentinels.obfuscationControl;
         try {
-          var8 = mm.field_g;
+          var8 = ClockAndCookieHelpers.field_g;
           var9 = var8;
           var9.writeCipheredOpcode(param0, (byte) -117);
           var9.position = var9.position + 1;
@@ -35,7 +35,7 @@ final class vh {
           var9.appendCrc32(-103, var4);
           var9.backpatchByteLength((byte) 99, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "vh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class vh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,12 +81,12 @@ final class vh {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (fj.field_e) {
-          return ve.field_b.a(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
+          return AssetDecoders.field_b.handleKey(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
         }
         if (GzipDecoder.field_e) {
-          return ba.a(112, param3, param0);
+          return QuickChatInputHelpers.handleQuickChatKey(112, param3, param0);
         }
-        if (BattleTerrain.b(-3, param3, param0)) {
+        if (BattleTerrain.handleLobbyKey(-3, param3, param0)) {
           return true;
         }
         if (uc.field_g) {

@@ -97,7 +97,7 @@ abstract class Js5Transport {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -108,41 +108,41 @@ abstract class Js5Transport {
     abstract void b(int param0);
 
     final static void a(boolean param0) {
-        pc var1 = null;
+        PlayingSound var1 = null;
         int var2 = 0;
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        pc var1Lifetime1;
+        PlayingSound var1Lifetime1;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          fc.field_a.serviceOutput();
+          SoundAndUrlHelpers.field_a.serviceOutput();
           ResourceArchive.field_j.serviceOutput();
-          la.field_b = la.field_b - 1;
+          BenefitsScreenHelpers.field_b = BenefitsScreenHelpers.field_b - 1;
           if (param0) {
             field_s = (int[]) null;
           }
-          if (la.field_b == 0) {
-            la.field_b = 200;
-            var1 = (pc) (mm.field_b.first(13058));
+          if (BenefitsScreenHelpers.field_b == 0) {
+            BenefitsScreenHelpers.field_b = 200;
+            var1 = (PlayingSound) (ClockAndCookieHelpers.field_b.first(13058));
             while (var1 != null) {
               if (!var1.field_u.isLinked((byte) -12)) {
                 var1.unlink(4);
               }
-              var1 = (pc) (mm.field_b.next((byte) -101));
+              var1 = (PlayingSound) (ClockAndCookieHelpers.field_b.next((byte) -101));
             }
-            if (null != rl.field_c) {
-              var1Lifetime1 = (pc) (rl.field_c.first(13058));
+            if (null != PacketLoopHelpers.field_c) {
+              var1Lifetime1 = (PlayingSound) (PacketLoopHelpers.field_c.first(13058));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_u.isLinked((byte) -12)) {
                   var1Lifetime1.unlink(4);
                 }
-                var1Lifetime1 = (pc) (rl.field_c.next((byte) -6));
+                var1Lifetime1 = (PlayingSound) (PacketLoopHelpers.field_c.next((byte) -6));
               }
             }
           }
           if (null != IterableNodeHashTable.field_f) {
-            stackIn_19_0 = IterableNodeHashTable.field_f.d((byte) 90);
+            stackIn_19_0 = IterableNodeHashTable.field_f.isReady((byte) 90);
             if (stackIn_19_0) {
               return;
             }
@@ -152,7 +152,7 @@ abstract class Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "vk.N(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "vk.N(" + param0 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ abstract class Js5Transport {
         return 20 <= this.a((byte) 16) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, BitmapFont param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, ak param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, SpriteFrame param6, byte param7, BitmapFont param8, int param9, SpriteFrame param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, SpriteFrame param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -180,10 +180,10 @@ abstract class Js5Transport {
         RuntimeException var21 = null;
         try {
           var21_int = 87 % ((-55 - param7) / 51);
-          ScrollContainer.a(2048, param8, param18, param11);
+          ScrollContainer.configureFullscreenDialogFonts(2048, param8, param18, param11);
           RasterBuffer.a(false, param14, param0, param17, param9);
-          sf.a(52, param13, param1);
-          hf.a(param10, param2, param3, param6, -125, param16);
+          TutorialStep.setDialogCentre(52, param13, param1);
+          FrameStyleHelpers.setMenuButtonStyle(param10, param2, param3, param6, -125, param16);
           qe.a(param19, param12, param20, 3);
           ph.a(param4, param5, param15, -97);
           return;
@@ -221,7 +221,7 @@ abstract class Js5Transport {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param20).append(')').toString());
         }
     }
 

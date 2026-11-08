@@ -20,7 +20,7 @@ final class IntKeyLookup {
         if (param0 <= 77) {
           IntKeyLookup.d((byte) 44);
         }
-        return !gf.field_a.a((byte) -72) ? true : false;
+        return !gf.field_a.isComplete((byte) -72) ? true : false;
     }
 
     final int get(int key, byte obfuscationGuard) {
@@ -66,7 +66,7 @@ final class IntKeyLookup {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class IntKeyLookup {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -140,10 +140,10 @@ final class IntKeyLookup {
             var10 = var6;
             var8 = var10;
             var2 = var8;
-            if (null != va.field_h) {
+            if (null != LoginDialogHelpers.field_h) {
               try {
-                va.field_h.a(-121, 0L);
-                va.field_h.a(-121, var9);
+                LoginDialogHelpers.field_h.a(-121, 0L);
+                LoginDialogHelpers.field_h.a(-121, var9);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;
@@ -175,7 +175,7 @@ final class IntKeyLookup {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -185,7 +185,7 @@ final class IntKeyLookup {
     }
 
     final static void d(byte param0) {
-        pc.d(param0 - 14);
+        PlayingSound.trackCanvasHeightChange(param0 - 14);
         vd.a((byte) 63);
         if (param0 != -66) {
           field_b = (String) null;
@@ -216,14 +216,14 @@ final class IntKeyLookup {
         SoundCache.field_a[3] = qe.a(var4, (byte) -93, fm.field_i);
         SoundCache.field_a[4] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_o);
         SoundCache.field_a[5] = qe.a(var4, (byte) -93, gm.field_a);
-        SoundCache.field_a[9] = qe.a(var4, (byte) -93, fc.field_c);
+        SoundCache.field_a[9] = qe.a(var4, (byte) -93, SoundAndUrlHelpers.field_c);
         SoundCache.field_a[10] = qe.a(var4, (byte) -93, hm.field_e);
         SoundCache.field_a[11] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_a);
         SoundCache.field_a[12] = qe.a(var4, (byte) -93, jm.field_t);
         SoundCache.field_a[13] = qe.a(var4, (byte) -93, cl.field_g);
         SoundCache.field_a[14] = qe.a(var4, (byte) -93, DialWidgetPainter.field_p);
         SoundCache.field_a[15] = qe.a(var4, (byte) -93, ValidationIndicator.field_X);
-        SoundCache.field_a[16] = qe.a(var4, (byte) -93, pl.field_V);
+        SoundCache.field_a[16] = qe.a(var4, (byte) -93, BirthDateEntryPanel.field_V);
         lc.field_a = new IndexedSprite[SoundCache.field_a.length];
         ArraySupport.copy(SoundCache.field_a, 0, lc.field_a, 0, SoundCache.field_a.length);
         lc.field_a[5] = SoundCache.field_a[15];

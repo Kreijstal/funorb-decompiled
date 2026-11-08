@@ -8,7 +8,7 @@ final class fm {
     static int field_d;
     int field_c;
     static String field_g;
-    static dk field_a;
+    static DualNodeHashTable field_a;
     static int[] field_l;
     static String field_i;
     static int[] field_f;
@@ -63,7 +63,7 @@ final class fm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param12).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param12).append(')').toString());
         }
     }
 

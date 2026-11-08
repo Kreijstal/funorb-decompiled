@@ -150,7 +150,7 @@ final class ResourceArchive {
               0 != param3[1] ||
               param3[2] != 0 ||
               param3[3] != 0) {
-              var35 = dk.a(true, this.packedGroups[param1], 0);
+              var35 = DualNodeHashTable.unwrapArchiveBytes(true, this.packedGroups[param1], 0);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -159,10 +159,10 @@ final class ResourceArchive {
             }
           }
           if (decompiledFrameRemainder0) {
-            var9 = dk.a(false, this.packedGroups[param1], 0);
+            var9 = DualNodeHashTable.unwrapArchiveBytes(false, this.packedGroups[param1], 0);
           }
           try {
-            var36 = ln.decompressContainer(var9, (byte) 127);
+            var36 = NameValidationHelpers.decompressContainer(var9, (byte) 127);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -172,7 +172,7 @@ final class ResourceArchive {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param3 != null);
-            throw ci.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(ba.a((byte) -107, var9, var9.length)).append(" ").append(ba.a((byte) -107, var9, var9.length - 2)).append(" ").append(this.index.groupCrcs[param1]).append(" ").append(this.index.indexCrc).toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(QuickChatInputHelpers.computeCrc32((byte) -107, var9, var9.length)).append(" ").append(QuickChatInputHelpers.computeCrc32((byte) -107, var9, var9.length - 2)).append(" ").append(this.index.groupCrcs[param1]).append(" ").append(this.index.indexCrc).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[param1] = null;
@@ -271,7 +271,7 @@ final class ResourceArchive {
                 if (0 != this.fileRetentionMode) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = SocialListEntry.a(false, var39[var17], 0);
+                  var7[var18] = SocialListEntry.wrapBytes(false, var39[var17], 0);
                 }
               }
             }
@@ -285,7 +285,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = SocialListEntry.a(false, var43, 0);
+            var7[var11] = SocialListEntry.wrapBytes(false, var43, 0);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -298,7 +298,7 @@ final class ResourceArchive {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -368,7 +368,7 @@ final class ResourceArchive {
         if (this.discardPackedGroups) {
           this.packedGroups[groupId] = this.provider.getEncodedGroup(groupId, 82);
         } else {
-          this.packedGroups[groupId] = SocialListEntry.a(false, this.provider.getEncodedGroup(groupId, 2), 0);
+          this.packedGroups[groupId] = SocialListEntry.wrapBytes(false, this.provider.getEncodedGroup(groupId, 2), 0);
         }
         if (obfuscationGuard > -12) {
           ResourceArchive.releaseStatics(true);
@@ -472,7 +472,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -522,7 +522,7 @@ final class ResourceArchive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -594,7 +594,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -718,7 +718,7 @@ final class ResourceArchive {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -809,7 +809,7 @@ final class ResourceArchive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -908,7 +908,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.unpackedFiles[param2][param0]) {
-            var7 = dk.a(false, this.unpackedFiles[param2][param0], 0);
+            var7 = DualNodeHashTable.unwrapArchiveBytes(false, this.unpackedFiles[param2][param0], 0);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -938,7 +938,7 @@ final class ResourceArchive {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -995,7 +995,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1010,7 +1010,7 @@ final class ResourceArchive {
           this.fileRetentionMode = fileRetentionMode;
           this.provider = provider;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (provider != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionMode + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (provider != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionMode + ')');
         }
     }
 

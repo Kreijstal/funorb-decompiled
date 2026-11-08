@@ -15,10 +15,10 @@ final class in {
     static int field_i;
 
     final static void a(int param0) {
-        cc stackIn_48_0 = null;
+        LobbyPlayer stackIn_48_0 = null;
         boolean stackIn_49_1 = false;
         int stackIn_106_0 = 0;
-        cc stackIn_112_0 = null;
+        LobbyPlayer stackIn_112_0 = null;
         boolean stackIn_113_1 = false;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -26,41 +26,41 @@ final class in {
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
-        cc var3_ref_cc = null;
-        hk var4 = null;
+        LobbyPlayer var3_ref_cc = null;
+        LobbyGame var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        hk var6 = null;
-        cc var7 = null;
-        cc var8 = null;
+        LobbyGame var6 = null;
+        LobbyPlayer var7 = null;
+        LobbyPlayer var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        hk var13 = null;
-        hk var15 = null;
-        cc var16 = null;
+        LobbyGame var13 = null;
+        LobbyGame var15 = null;
+        LobbyPlayer var16 = null;
         Object var17 = null;
         Object var18 = null;
-        hk var18_ref = null;
+        LobbyGame var18_ref = null;
         Object var19 = null;
         Object var20 = null;
-        hk var20_ref = null;
-        hk var21 = null;
-        hk var22 = null;
+        LobbyGame var20_ref = null;
+        LobbyGame var21 = null;
+        LobbyGame var22 = null;
         String var23 = null;
         String var24 = null;
-        cc var25 = null;
-        cc var26 = null;
-        cc var27 = null;
-        cc var28 = null;
+        LobbyPlayer var25 = null;
+        LobbyPlayer var26 = null;
+        LobbyPlayer var27 = null;
+        LobbyPlayer var28 = null;
         String var29 = null;
         String var30 = null;
         String var31 = null;
-        cc var32 = null;
-        hk var33 = null;
-        cc var34 = null;
-        cc var3_ref_ccLifetime1;
+        LobbyPlayer var32 = null;
+        LobbyGame var33 = null;
+        LobbyPlayer var34 = null;
+        LobbyPlayer var3_ref_ccLifetime1;
         long var3_longLifetime1;
         long var3_longLifetime2;
         int var3Lifetime1;
@@ -79,7 +79,7 @@ final class in {
         var19 = null;
         var11 = SteelSentinels.obfuscationControl;
         try {
-          var1 = rf.field_d;
+          var1 = LoginConnectionStage.field_d;
           if (param0 != 11247) {
             field_k = 50;
           }
@@ -94,19 +94,19 @@ final class in {
               var30 = ((PacketBuffer) ((Object) var1)).readString(param0 - 11246);
               var29 = ((PacketBuffer) ((Object) var1)).readString(1);
               var31 = ((PacketBuffer) ((Object) var1)).readString(param0 - 11246);
-              var32 = ri.a(var3_long, false);
+              var32 = LoginStateQueries.findGamePlayer(var3_long, false);
               var8 = var32;
               stackIn_106_0 = (var29.equals("")) ? 0 : 1;
               var9 = stackIn_106_0;
               if (var32 != null) {
                 if (var9 != 0) {
-                  var32.a(15, var30, var31);
+                  var32.setNames(15, var30, var31);
                 }
               } else {
-                var8 = new cc(var30, var31, var3_long);
-                t.field_c.a(var8, param0 - 11246, var3_long);
+                var8 = new LobbyPlayer(var30, var31, var3_long);
+                t.field_c.put(var8, param0 - 11246, var3_long);
               }
-              var8.field_fc = mm.a(param0 - 11210) - (long)((PacketBuffer) ((Object) var1)).readInt(param0 - 11247);
+              var8.field_fc = ClockAndCookieHelpers.monotonicMillis(param0 - 11210) - (long)((PacketBuffer) ((Object) var1)).readInt(param0 - 11247);
               var8.field_ac = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(61);
               var8.field_dc = var10 >> 1;
@@ -115,13 +115,13 @@ final class in {
               stackIn_112_0.field_nc = stackIn_113_1;
               var8.field_jc = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -78);
               var8.field_qc = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -107);
-              la.a(124, var8);
+              BenefitsScreenHelpers.insertLobbyPlayerSorted(124, var8);
               return;
             }
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong((byte) -71);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -78);
-              var28 = ri.a(var3_longLifetime1, false);
+              var28 = LoginStateQueries.findGamePlayer(var3_longLifetime1, false);
               if (var28 != null) {
                 if (var28.field_kc) {
                   var28.field_kc = false;
@@ -138,30 +138,30 @@ final class in {
               return;
             }
             if (var2 == 7) {
-              var34 = (cc) (IterableNodeHashTable.field_m.first(13058));
+              var34 = (LobbyPlayer) (IterableNodeHashTable.field_m.first(13058));
               while (var34 != null) {
                 var34.unlink(4);
                 var34.unlinkDual(480);
-                var34 = (cc) (IterableNodeHashTable.field_m.next((byte) -16));
+                var34 = (LobbyPlayer) (IterableNodeHashTable.field_m.next((byte) -16));
               }
               ja.field_a = 0;
               return;
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
-              var4 = (hk) (fm.field_a.a((long)var3, (byte) -57));
+              var4 = (LobbyGame) (fm.field_a.get((long)var3, (byte) -57));
               if (var4 == null) {
-                var4 = new hk(be.field_a);
-                fm.field_a.a(var4, param0 - 11246, (long)var3);
+                var4 = new LobbyGame(UrlAndReplyHelpers.field_a);
+                fm.field_a.put(var4, param0 - 11246, (long)var3);
               }
-              wd.a(var1, true, var4, (byte) -113);
+              LobbyGameDecoding.readGameEntry(var1, true, var4, (byte) -113);
               EmailAvailabilityValidator.a(true, var4);
               return;
             }
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -61);
-              var13 = (hk) (fm.field_a.a((long)var3Lifetime4, (byte) -39));
+              var13 = (LobbyGame) (fm.field_a.get((long)var3Lifetime4, (byte) -39));
               var21 = var13;
               if (var13 == null) {
                 return;
@@ -176,11 +176,11 @@ final class in {
               return;
             }
             if (var2 == 10) {
-              var33 = (hk) (ci.field_e.first(param0 ^ 6381));
+              var33 = (LobbyGame) (ClientErrorSupport.field_e.first(param0 ^ 6381));
               while (var33 != null) {
                 var33.unlink(4);
                 var33.unlinkDual(480);
-                var33 = (hk) (ci.field_e.next((byte) -104));
+                var33 = (LobbyGame) (ClientErrorSupport.field_e.next((byte) -104));
               }
               return;
             }
@@ -189,7 +189,7 @@ final class in {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -68);
-                var18_ref = (hk) (fm.field_a.a((long)var3Lifetime5, (byte) -50));
+                var18_ref = (LobbyGame) (fm.field_a.get((long)var3Lifetime5, (byte) -50));
                 if (var18_ref == null) {
                   return;
                 }
@@ -214,8 +214,8 @@ final class in {
                     var24 = ((PacketBuffer) ((Object) var1)).readString(1);
                     var7 = ThreeSliceButtonPainter.a(false, var3_longLifetime2);
                     if (var7 == null) {
-                      var7 = new cc(var23, var24, var3_longLifetime2);
-                      LoginCredentials.field_b.a(var7, 1, var3_longLifetime2);
+                      var7 = new LobbyPlayer(var23, var24, var3_longLifetime2);
+                      LoginCredentials.field_b.put(var7, 1, var3_longLifetime2);
                       nf.field_b.field_wc = nf.field_b.field_wc + 1;
                     }
                     var7.field_ac = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
@@ -247,7 +247,7 @@ final class in {
                     return;
                   }
                   if (20 == var2) {
-                    wd.a(var1, false, nf.field_b, (byte) 98);
+                    LobbyGameDecoding.readGameEntry(var1, false, nf.field_b, (byte) 98);
                     return;
                   }
                   if (var2 == 21) {
@@ -256,11 +256,11 @@ final class in {
                       ModalStack.field_R = 0L;
                       return;
                     }
-                    ModalStack.field_R = (long)var3Lifetime5 + mm.a(-124);
+                    ModalStack.field_R = (long)var3Lifetime5 + ClockAndCookieHelpers.monotonicMillis(-124);
                     return;
                   }
                   if (22 == var2) {
-                    ba.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
+                    QuickChatInputHelpers.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
                     ud.field_D = ((PacketBuffer) ((Object) var1)).readVarInt(param0 - 11173);
                     return;
                   }
@@ -268,13 +268,13 @@ final class in {
                     GameplayController.field_G = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     return;
                   }
-                  MusicCrossfadeStream.a("L1: " + ci.a((byte) 94), -106, (Throwable) null);
+                  MusicCrossfadeStream.reportClientError("L1: " + ClientErrorSupport.describePacketHistory((byte) 94), -106, (Throwable) null);
                   LoginForm.m(-82);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -119);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -66);
-                var26 = ri.a(var3_longLifetime2, false);
+                var26 = LoginStateQueries.findGamePlayer(var3_longLifetime2, false);
                 if (var26 == null) {
                   return;
                 }
@@ -290,11 +290,11 @@ final class in {
                   var26.field_Wb = var5Lifetime1Lifetime1;
                   var26.field_Ub = Js5ArchiveManager.field_l;
                 }
-                la.a(param0 ^ 11154, var26);
+                BenefitsScreenHelpers.insertLobbyPlayerSorted(param0 ^ 11154, var26);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong((byte) -91);
-              var27 = ri.a(var3_longLifetime2Lifetime1, false);
+              var27 = LoginStateQueries.findGamePlayer(var3_longLifetime2Lifetime1, false);
               if (var27 != null) {
                 if (var2 != 14) {
                   if (!var27.field_kc) {
@@ -304,12 +304,12 @@ final class in {
                 } else {
                   var27.field_Zb = true;
                 }
-                la.a(124, var27);
+                BenefitsScreenHelpers.insertLobbyPlayerSorted(124, var27);
               }
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
-            var20_ref = (hk) (fm.field_a.a((long)var3Lifetime6, (byte) -101));
+            var20_ref = (LobbyGame) (fm.field_a.get((long)var3Lifetime6, (byte) -101));
             var22 = var20_ref;
             if (var22 == null) {
               return;
@@ -322,13 +322,13 @@ final class in {
             EmailAvailabilityValidator.a(true, var22);
             return;
           }
-          var3_ref_cc = (cc) (o.field_d.first(param0 ^ 6381));
+          var3_ref_cc = (LobbyPlayer) (o.field_d.first(param0 ^ 6381));
           while (var3_ref_cc != null) {
             var3_ref_cc.unlink(param0 ^ 11243);
             var3_ref_cc.unlinkDual(480);
-            var3_ref_cc = (cc) (o.field_d.next((byte) -25));
+            var3_ref_cc = (LobbyPlayer) (o.field_d.next((byte) -25));
           }
-          var3_ref_ccLifetime1 = (cc) (t.field_c.a(120));
+          var3_ref_ccLifetime1 = (LobbyPlayer) (t.field_c.first(120));
           while (var3_ref_ccLifetime1 != null) {
             if (var3_ref_ccLifetime1.field_Zb ||
               var3_ref_ccLifetime1.field_kc) {
@@ -337,19 +337,19 @@ final class in {
                 ja.field_a = ja.field_a - 1;
               }
               var3_ref_ccLifetime1.field_Zb = false;
-              la.a(127, var3_ref_ccLifetime1);
+              BenefitsScreenHelpers.insertLobbyPlayerSorted(127, var3_ref_ccLifetime1);
             }
-            var3_ref_ccLifetime1 = (cc) (t.field_c.a((byte) -76));
+            var3_ref_ccLifetime1 = (LobbyPlayer) (t.field_c.next((byte) -76));
           }
           if (var2 == 1 &&
             null != nf.field_b) {
-            im.field_g = nf.field_b.field_Xb;
+            LobbyStateHelpers.field_g = nf.field_b.field_Xb;
           }
           if (4 == var2) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
-            nf.field_b = new hk(be.field_a);
+            nf.field_b = new LobbyGame(UrlAndReplyHelpers.field_a);
             nf.field_b.a((byte) 73, (long)var3Lifetime1);
-            wd.a(var1, false, nf.field_b, (byte) 114);
+            LobbyGameDecoding.readGameEntry(var1, false, nf.field_b, (byte) 114);
             ModalStack.field_R = 0L;
           } else {
             nf.field_b = null;
@@ -359,14 +359,14 @@ final class in {
             ni.field_a = null;
           } else {
             if (null == ni.field_a) {
-              ni.field_a = new hk(be.field_a);
+              ni.field_a = new LobbyGame(UrlAndReplyHelpers.field_a);
             }
           }
           if (3 != var2) {
-            ad.field_f = false;
+            LoadoutHelpers.field_f = false;
             return;
           }
-          ad.field_f = true;
+          LoadoutHelpers.field_f = true;
           for (var3Lifetime2 = 0; var3Lifetime2 < rb.field_i.length; var3Lifetime2++) {
             rb.field_i[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
           }
@@ -379,7 +379,7 @@ final class in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "in.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "in.D(" + param0 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class in {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

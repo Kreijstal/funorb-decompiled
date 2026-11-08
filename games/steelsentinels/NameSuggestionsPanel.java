@@ -25,7 +25,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         field_Q = null;
     }
 
-    final void a(boolean param0, String[] param1) {
+    final void setSuggestions(boolean param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -55,12 +55,12 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.field_U[var5] = new TextButton(this.field_Z[var5], (UiListener) (this));
               this.field_U[var5].field_p = (WidgetPainter) ((Object) var4);
               this.field_U[var5].field_v = un.field_f;
-              this.field_U[var5].a(0, (byte) -120, var5 * 16 + 20, 80, 15);
+              this.field_U[var5].setBounds(0, (byte) -120, var5 * 16 + 20, 80, 15);
               this.addChild(this.field_U[var5], -95);
             }
             this.field_U[var3_int] = new TextButton(SectorCacheStore.field_f, (UiListener) (this));
             this.field_U[var3_int].field_p = (WidgetPainter) ((Object) var4);
-            this.field_U[var3_int].a(0, (byte) -126, 16 + (var3_int * 16 + 20), 100, 15);
+            this.field_U[var3_int].setBounds(0, (byte) -126, 16 + (var3_int * 16 + 20), 100, 15);
             this.addChild(this.field_U[var3_int], -114);
             return;
           }
@@ -76,7 +76,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -93,12 +93,12 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           for (var6_int = 0; var6_int < this.field_Z.length; var6_int++) {
             if (param3 == this.field_U[var6_int]) {
-              this.field_R.a(20522, this.field_Z[var6_int]);
+              this.field_R.onNameSelected(20522, this.field_Z[var6_int]);
             }
           }
           var6_intLifetime1 = -108 % ((-85 - param1) / 36);
           if (this.field_U[this.field_Z.length] == param3) {
-            this.field_R.a((byte) 86);
+            this.field_R.onMoreSuggestions((byte) 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -128,13 +128,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b(param3, 92);
+            stackIn_6_0 = this.focusPreviousChild(param3, 92);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(param0 ^ -22560, param3);
+          stackIn_9_0 = this.focusNextChild(param0 ^ -22560, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           this.field_R = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             return stackIn_3_0;
           }
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = -var3 + ((var3 << 5) + e.a(param0.charAt(var4), 732));
+            var3 = -var3 + ((var3 << 5) + AccountRequestResult.encodeExtendedChar(param0.charAt(var4), 732));
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;
@@ -194,7 +194,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
         if (param1 >= -99) {
           String[] var6 = (String[]) null;
-          this.a(false, (String[]) null);
+          this.setSuggestions(false, (String[]) null);
         }
         BitmapFont var5 = tj.field_e;
         if (null != this.field_Z) {
@@ -239,9 +239,9 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         byte[] var2 = UiContainer.field_L[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = ba.field_d[ec.a(255, (int) var2[var4_int])];
+          var3[var4_int] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var3);
+        RgbSprite var4 = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var3);
         NodeHashTable.a(9324);
         return var4;
     }
@@ -249,9 +249,9 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     final static IndexedSprite[] i(int param0) {
         int var2 = 0;
         int var3 = SteelSentinels.obfuscationControl;
-        IndexedSprite[] var1 = new IndexedSprite[rl.field_d];
-        for (var2 = 0; rl.field_d > var2; var2++) {
-          var1[var2] = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], UiContainer.field_L[var2], ba.field_d);
+        IndexedSprite[] var1 = new IndexedSprite[PacketLoopHelpers.field_d];
+        for (var2 = 0; PacketLoopHelpers.field_d > var2; var2++) {
+          var1[var2] = new IndexedSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], UiContainer.field_L[var2], QuickChatInputHelpers.field_d);
         }
         if (param0 >= -66) {
           field_W = 104;

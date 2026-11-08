@@ -31,7 +31,7 @@ final class Explosion extends DualNode {
     static SceneWidget field_C;
     static fm field_D;
 
-    final void a(int param0, int param1, int param2) {
+    final void drawShockwave(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -60,12 +60,12 @@ final class Explosion extends DualNode {
           if (this.projectile != null &&
             300 < this.projectile.field_O) {
             if (this.ageTicks < var9) {
-              IconTextComponent.b(var10 * this.ageTicks * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+              IconTextComponent.drawBubbleDistortion(var10 * this.ageTicks * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               decompiledFrameRemainder0 = (SteelSentinels.obfuscationControl != 0);
             }
             if ((decompiledFrameRemainder0) &&
               (this.ageTicks < (2 * var9))) {
-              IconTextComponent.b(10 * (2 * var9 - this.ageTicks) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+              IconTextComponent.drawBubbleDistortion(10 * (2 * var9 - this.ageTicks) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               return;
             }
           }
@@ -73,7 +73,7 @@ final class Explosion extends DualNode {
         return;
     }
 
-    final static RgbSprite[] g(int param0) {
+    final static RgbSprite[] buildRgbSprites(int param0) {
         RgbSprite[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -88,10 +88,10 @@ final class Explosion extends DualNode {
         if (param0 != 7) {
           return (RgbSprite[]) null;
         }
-        var1 = new RgbSprite[rl.field_d];
+        var1 = new RgbSprite[PacketLoopHelpers.field_d];
         var2 = 0;
         scanLoop1: while (true) {
-          if (rl.field_d > var2) {
+          if (PacketLoopHelpers.field_d > var2) {
             var3 = StrongCacheEntry.field_L[var2] * MusicPatch.field_r[var2];
             var10 = UiContainer.field_L[var2];
             var11 = new int[var3];
@@ -103,10 +103,10 @@ final class Explosion extends DualNode {
             }
             var6 = stackIn_13_0;
             while (var3 > var6) {
-              var5[var6] = ba.field_d[ec.a((int) var10[var6], 255)];
+              var5[var6] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd((int) var10[var6], 255)];
               var6++;
             }
-            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var11);
+            var1[var2] = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var11);
             var2++;
             continue scanLoop1;
           }
@@ -244,7 +244,7 @@ final class Explosion extends DualNode {
                         }
                         if (this.projectile.sourceWeaponType != 32 &&
                           this.projectile.sourceWeaponType != -2) {
-                          fc.a((byte) -69, 91, this.worldX);
+                          SoundAndUrlHelpers.playSoundEffect((byte) -69, 91, this.worldX);
                         }
                         this.world.pendingParticles.addLast(3, var7_ref_qb);
                       } else {
@@ -426,7 +426,7 @@ final class Explosion extends DualNode {
                             }
                           }
                           this.affectedSentinels[var2] = null;
-                          var6 = ik.a(var5 * var5 + var4 * var4, -117);
+                          var6 = ConditionalTextValue.integerSquareRoot(var5 * var5 + var4 * var4, -117);
                           if (var6 > this.field_U / 2 &&
                             this.projectile.effectType != 9) {
                             var7Lifetime1 = this.projectile.field_O * (this.field_U - var6) / (this.field_U / 2);
@@ -498,7 +498,7 @@ final class Explosion extends DualNode {
                             var17.field_S = 0;
                           }
                           if (0 < var17.field_S) {
-                            fc.a((byte) 114, 27, this.worldX);
+                            SoundAndUrlHelpers.playSoundEffect((byte) 114, 27, this.worldX);
                           }
                           var17.field_S = var17.field_S - var7Lifetime1;
                           var17.field_P = 100;
@@ -507,9 +507,9 @@ final class Explosion extends DualNode {
                               this.projectile.effectType != 2 &&
                               this.projectile.effectType != 3 &&
                               this.projectile.effectType != 20) {
-                              fc.a((byte) 91, 55, this.worldX);
+                              SoundAndUrlHelpers.playSoundEffect((byte) 91, 55, this.worldX);
                             } else {
-                              fc.a((byte) -100, 51, this.worldX);
+                              SoundAndUrlHelpers.playSoundEffect((byte) -100, 51, this.worldX);
                               var8_intLifetime1 = var17.addModuleBonuses(0, 33);
                               var17.field_S = var17.field_S >> var8_intLifetime1;
                             }
@@ -609,7 +609,7 @@ final class Explosion extends DualNode {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         field_L = null;
         field_Q = null;
@@ -625,7 +625,7 @@ final class Explosion extends DualNode {
         field_A = null;
     }
 
-    final static void c(byte param0) {
+    final static void clearAccountNamePrompt(byte param0) {
         DelayedServerPacket.field_y = null;
         int var1 = -122 / ((-17 - param0) / 41);
     }
@@ -685,7 +685,7 @@ final class Explosion extends DualNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

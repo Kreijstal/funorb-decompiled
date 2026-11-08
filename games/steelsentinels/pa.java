@@ -4,7 +4,7 @@
 final class pa {
     static int[] field_h;
     static volatile boolean field_f;
-    static sf[] field_d;
+    static TutorialStep[] field_d;
     static String field_j;
     static int field_e;
     static String field_i;
@@ -41,7 +41,7 @@ final class pa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,18 +72,18 @@ final class pa {
         }
         IntKeyLookup.field_i = param1;
         qf.field_c.field_M.clear(6);
-        qf.field_c.a(IntKeyLookup.field_i, 127);
+        qf.field_c.addChild(IntKeyLookup.field_i, 127);
         if (param0 != 12105) {
           return;
         }
         try {
           GzipDecoder.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, byte param1, tc param2) {
+    final static void a(int param0, byte param1, HighscoreSubmission param2) {
         try {
           MidiPcmStream.field_B.addLast(3, param2);
           vh.a(param0, param2, (byte) 109);
@@ -92,7 +92,7 @@ final class pa {
             pa.a(45, (QuickChatMenu) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class pa {
           BufferedRandomAccessFile.field_d = param2;
           field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

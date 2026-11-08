@@ -72,7 +72,7 @@ final class AlphaContainer extends SingleChildContainer {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (IconTextComponent.a((byte) -30, (char) var7)) {
+            if (IconTextComponent.isAllowedChar((byte) -30, (char) var7)) {
               var8 = BufferedSocket.a((byte) 115, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
@@ -93,18 +93,18 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
     AlphaContainer(UiComponent param0) {
         super(param0.field_o, param0.field_z, param0.field_x, param0.field_E, (WidgetPainter) null, (UiListener) null);
         try {
-          param0.a(0, (byte) -101, 0, this.field_x, this.field_E);
+          param0.setBounds(0, (byte) -101, 0, this.field_x, this.field_E);
           this.field_J = param0;
           this.field_R = 256;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class AlphaContainer extends SingleChildContainer {
         if (param1 <= -99) {
           IterableNodeHashTable.a(var6, (byte) -90);
           this.field_J.drawLayer(0, (byte) -128, 0, param3);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(114);
+          MatchingTextValidator.popRasterStateWithIntGuard(114);
           var6.drawShadedGrayscale(this.field_o + param2, this.field_z + param0, this.field_R);
           return;
         }
@@ -140,7 +140,7 @@ final class AlphaContainer extends SingleChildContainer {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = mm.field_g;
+        CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param0, (byte) -117);
         var2.writeByte((byte) 111, 1);
         var2.writeByte((byte) 119, param1);

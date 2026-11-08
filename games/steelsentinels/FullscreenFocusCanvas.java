@@ -8,11 +8,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static String field_f;
     static String field_e;
     static int[] field_c;
-    static pe[] field_h;
+    static TriangleMesh[] field_h;
     static RgbSprite[] field_a;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        ib.a(param2, SocketConnector.field_b, param1, param3, 127, TextLayout.field_g, te.field_b);
+        ChatPanelHelpers.drawChatPanel(param2, SocketConnector.field_b, param1, param3, 127, TextLayout.field_g, te.field_b);
         if (param0 != -1604006872) {
           field_g = (BitmapFont) null;
         }
@@ -23,10 +23,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void a(SystemTaskService param0, int param1) {
         try {
-          ok.a(-1, param0, this.field_d);
+          ChecksumAndFrameHelpers.exitFullscreenFrame(-1, param0, this.field_d);
           int var3_int = 121 / ((param1 + 15) / 60);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              qf.field_d = fc.a((byte) -76, args);
+              qf.field_d = SoundAndUrlHelpers.createSuggestionResult((byte) -76, args);
             } else {
               qf.field_d = CachedArchiveProvider.a(18, param2, param1);
             }
@@ -74,7 +74,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -84,9 +84,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           return;
         }
         int var2 = var1 - StatefulTextPainter.field_p * StatefulTextPainter.field_p;
-        int var3 = var2 * (jn.field_c - va.field_b) / var1 + va.field_b;
-        DisplayNameForm.field_V.a(0, var3, 120, LoginCredentials.field_e, 640);
-        EmailAvailabilityValidator.a(TextLayout.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 110);
+        int var3 = var2 * (jn.field_c - LoginDialogHelpers.field_b) / var1 + LoginDialogHelpers.field_b;
+        DisplayNameForm.field_V.setBounds(0, var3, 120, LoginCredentials.field_e, 640);
+        EmailAvailabilityValidator.a(TextLayout.field_g, 0, LoginDialogHelpers.field_e, 5, jn.field_c - 24, 640, 110);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
@@ -114,7 +114,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nn.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nn.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,8 +155,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           for (var4 = 0; var3 - 8 > var4; var4++) {
             if (param0[var4] >= 0 &&
-              param0[var4] < tc.field_B.length) {
-              var2_int = var2_int + tc.field_B[param0[var4]];
+              param0[var4] < HighscoreSubmission.field_B.length) {
+              var2_int = var2_int + HighscoreSubmission.field_B[param0[var4]];
             }
           }
           var6 = var3 - 8;
@@ -167,8 +167,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               return stackIn_27_0;
             }
             if (param0[var6] >= 0 &&
-              param0[var6] < dn.field_Sb.length) {
-              var2_int = var2_int + dn.field_Sb[param0[var6]];
+              param0[var6] < ContextMenu.field_Sb.length) {
+              var2_int = var2_int + ContextMenu.field_Sb[param0[var6]];
             }
             if (param0[var6] != 34) {
               var6++;
@@ -188,7 +188,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                     } else {
                       var18 = SoftwareRaster.field_g[var8];
                       var19 = var16 * (var18 & 16711935) + var15 * (16711935 & var17) >> 8 & 16711935;
-                      SoftwareRaster.field_g[var8] = ec.a(ec.a(65280, var17) * var15 + ec.a(var18, 65280) * var16 >> 8, 65280) + var19;
+                      SoftwareRaster.field_g[var8] = ClientUiHelpers.bitAnd(ClientUiHelpers.bitAnd(65280, var17) * var15 + ClientUiHelpers.bitAnd(var18, 65280) * var16 >> 8, 65280) + var19;
                     }
                   }
                   var8++;
@@ -301,7 +301,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param5).append(')').toString());
         }
     }
 

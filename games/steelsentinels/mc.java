@@ -5,7 +5,7 @@ final class mc {
     static int field_a;
     static String field_b;
     static String field_e;
-    static rf field_c;
+    static LoginConnectionStage field_c;
     static String field_d;
 
     static long a(long param0, long param1) {
@@ -20,7 +20,7 @@ final class mc {
           ClientException.field_i = param0;
           IterableNodeHashTable.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class mc {
     static {
         field_b = "COMPONENTS";
         field_e = "Respawns - ";
-        field_c = new rf();
+        field_c = new LoginConnectionStage();
         field_d = "NO SLOT";
     }
 }

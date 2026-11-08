@@ -9,7 +9,7 @@ final class AudioService implements Runnable {
     static SceneWidget field_a;
     static int field_h;
     SystemTaskService field_j;
-    static dd field_i;
+    static PlayerContextMenu field_i;
     static String[] field_g;
     volatile boolean field_f;
 
@@ -58,7 +58,7 @@ final class AudioService implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            MusicCrossfadeStream.a((String) null, -72, (Throwable) ((Object) var1));
+            MusicCrossfadeStream.reportClientError((String) null, -72, (Throwable) ((Object) var1));
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

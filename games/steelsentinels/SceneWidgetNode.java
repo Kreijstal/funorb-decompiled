@@ -11,7 +11,7 @@ class SceneWidgetNode extends DualNode {
     static int[][][] field_C;
     static ResourceArchive field_z;
 
-    final static String a(String param0, byte param1, int param2) {
+    final static String formatChatPrefix(String param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
@@ -45,7 +45,7 @@ class SceneWidgetNode extends DualNode {
             return stackIn_15_0;
           }
           if (param2 == 9) {
-            stackIn_19_0 = ik.field_i;
+            stackIn_19_0 = ConditionalTextValue.field_i;
             return stackIn_19_0;
           }
           if (param2 == 10) {
@@ -53,13 +53,13 @@ class SceneWidgetNode extends DualNode {
             return stackIn_23_0;
           }
           if (param2 == 11) {
-            stackIn_27_0 = ef.field_a;
+            stackIn_27_0 = EmailFormatError.field_a;
             return stackIn_27_0;
           }
           if (param2 != 14) {
             return null;
           }
-          stackIn_31_0 = SocketConnector.a(AccountRequestDialog.field_Kb, -107, new String[]{param0});
+          stackIn_31_0 = SocketConnector.formatTemplate(AccountRequestDialog.field_Kb, -107, new String[]{param0});
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,11 +71,11 @@ class SceneWidgetNode extends DualNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String prefixWithCrown(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ResourceArchive var3 = null;
@@ -91,7 +91,7 @@ class SceneWidgetNode extends DualNode {
           }
           if (param0 != -27905) {
             var3 = (ResourceArchive) null;
-            SceneWidgetNode.a(78, -81, (ResourceArchive) null, (byte) 87, (ResourceArchive) null);
+            SceneWidgetNode.loadBinaryFontById(78, -81, (ResourceArchive) null, (byte) 87, (ResourceArchive) null);
           }
           if (var2_int == 2) {
             param1 = "<img=1>" + param1;
@@ -108,24 +108,24 @@ class SceneWidgetNode extends DualNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void logDebugMessage(String param0, byte param1) {
         try {
           if (param1 < 116) {
             String var3 = (String) null;
-            SceneWidgetNode.a((String) null, (byte) -27);
+            SceneWidgetNode.logDebugMessage((String) null, (byte) -27);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "dh.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "dh.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive openResourceArchive(int param0, int param1) {
         int var2 = 88 % ((4 - param0) / 44);
-        return rf.a(true, 1, (byte) -127, false, false, param1);
+        return LoginConnectionStage.createResourceArchive(true, 1, (byte) -127, false, false, param1);
     }
 
     public static void releaseStatics(byte param0) {
@@ -140,7 +140,7 @@ class SceneWidgetNode extends DualNode {
     SceneWidgetNode() {
     }
 
-    final static BinaryBitmapFont a(int param0, int param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFontById(int param0, int param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         BinaryBitmapFont stackIn_4_0 = null;
@@ -155,7 +155,7 @@ class SceneWidgetNode extends DualNode {
             return null;
           }
           var5_int = -18 % ((param3 - 56) / 45);
-          stackIn_4_0 = BoundedRandomAccessFile.a(param4.getFile(param0, (byte) 79, param1), 103);
+          stackIn_4_0 = BoundedRandomAccessFile.decodeBinaryFont(param4.getFile(param0, (byte) 79, param1), 103);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ class SceneWidgetNode extends DualNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

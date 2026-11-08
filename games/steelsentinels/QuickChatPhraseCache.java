@@ -15,7 +15,7 @@ final class QuickChatPhraseCache {
     static String[] field_a;
     static ResourceArchive field_d;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, String param5) {
+    final static void sendReport(int param0, String param1, int param2, int param3, int param4, String param5) {
         CipherPacketBuffer var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -27,7 +27,7 @@ final class QuickChatPhraseCache {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = mm.field_g;
+          var8 = ClockAndCookieHelpers.field_g;
           var6 = var8;
           var8.writeCipheredOpcode(param0, (byte) -117);
           var8.position = var8.position + 1;
@@ -39,7 +39,7 @@ final class QuickChatPhraseCache {
           if (param5 == null) {
             var8.writeShort(param4, 117);
           } else {
-            ProxySocketConnector.a(var8, param5, 0);
+            ProxySocketConnector.writeCompressedString(var8, param5, 0);
           }
           var8.backpatchByteLength((byte) 100, -var7 + var8.position);
           if (param2 == -6988) {
@@ -63,11 +63,11 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final QuickChatPhraseDefinition a(int param0, int param1) {
+    final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
         byte[] var4 = null;
         QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_g.a((long)param0, -55));
         if (param1 >= -73) {
@@ -83,9 +83,9 @@ final class QuickChatPhraseCache {
         }
         QuickChatPhraseDefinition var5 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var5.a(new PacketBuffer(var4), (byte) -116);
+          var5.decode(new PacketBuffer(var4), (byte) -116);
           if (param0 >= 32768) {
-            var5.c((byte) -109);
+            var5.markResponsesAsPhrases((byte) -109);
             this.field_g.put((long)param0, var5, 1);
             return var5;
           }
@@ -96,7 +96,7 @@ final class QuickChatPhraseCache {
           this.field_g.put((long)param0, var5, 1);
           return var5;
         }
-        var5.c((byte) -109);
+        var5.markResponsesAsPhrases((byte) -109);
         this.field_g.put((long)param0, var5, 1);
         return var5;
     }
@@ -119,7 +119,7 @@ final class QuickChatPhraseCache {
         field_d = null;
     }
 
-    final static RgbSprite a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RgbSprite loadRgbSprite(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -143,7 +143,7 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_c;
     private boolean field_a;
 
-    final void a(java.awt.Component param0, int param1, boolean param2) {
+    final void setCursorVisible(java.awt.Component param0, int param1, boolean param2) {
         boolean stackIn_5_0 = false;
         int stackIn_6_1 = 0;
         boolean stackIn_15_1 = false;
@@ -18,7 +18,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         Object var6 = null;
         com.ms.awt.WComponentPeer var9 = null;
         if (param1 != 32512) {
-          this.a(-24, -44, true);
+          this.setCursorPosition(-24, -44, true);
         }
         var9 = (com.ms.awt.WComponentPeer) null;
         var5 = var9.getTopHwnd();
@@ -57,7 +57,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void setCursorPosition(int param0, int param1, boolean param2) {
         com.ms.win32.User32.SetCursorPos(param1, param0);
         if (param2) {
           this.callback(101, 84, -67, 91);

@@ -14,19 +14,19 @@ final class IconLabelControl extends SceneWidget {
     static String field_Xb;
     static ResourceArchive field_bc;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(0, param0, param5, param4, param1);
+    final void setLayout(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.setBounds(0, param0, param5, param4, param1);
         int var7 = 36 / ((param3 + 7) / 47);
-        this.a(false, param2);
+        this.layoutContent(false, param2);
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void layoutContent(boolean param0, int param1) {
         if (param0) {
           return;
         }
-        this.field_Yb.a(0, 0, this.field_Lb, 0, this.field_Yb.g(-2147483648));
+        this.field_Yb.setBounds(0, 0, this.field_Lb, 0, this.field_Yb.getContentWidth(-2147483648));
         int var3 = this.field_Yb.field_zb + param1;
-        this.field_Vb.a(0, 0, this.field_Lb, var3, this.field_zb - var3);
+        this.field_Vb.setBounds(0, 0, this.field_Lb, var3, this.field_zb - var3);
     }
 
     public static void releaseStatics(int param0) {
@@ -43,19 +43,19 @@ final class IconLabelControl extends SceneWidget {
         field_Tb = null;
     }
 
-    final int c(int param0, int param1) {
+    final int measureRowWidth(int param0, int param1) {
         if (param0 > -46) {
           return 30;
         }
-        return param1 + this.field_Yb.g(-2147483648) + this.field_Vb.g(-2147483648);
+        return param1 + this.field_Yb.getContentWidth(-2147483648) + this.field_Vb.getContentWidth(-2147483648);
     }
 
     IconLabelControl(long param0, IconLabelControl param1, String param2) {
         this(param0, param1.field_Yb, param1.field_Vb, param2);
     }
 
-    final static void d(byte param0) {
-        ci.field_a.transitionToContent(new AccountChoicePanel(), -22908735);
+    final static void showAccountChoicePanel(byte param0) {
+        ClientErrorSupport.field_a.transitionToContent(new AccountChoicePanel(), -22908735);
         int var1 = -48 % ((param0 + 48) / 47);
     }
 
@@ -66,14 +66,14 @@ final class IconLabelControl extends SceneWidget {
           this.field_Yb.field_Pb = param2;
           this.field_Yb.field_Hb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(String param0, int param1, String param2, int param3, String param4, boolean param5, int param6) {
-        ik var7 = null;
+    final static int submitAccountCreation(String param0, int param1, String param2, int param3, String param4, boolean param5, int param6) {
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
-        ik var8 = null;
+        ConditionalTextValue var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -89,8 +89,8 @@ final class IconLabelControl extends SceneWidget {
             stackIn_2_0 = -108;
             return stackIn_2_0;
           }
-          var7 = new ik(param2);
-          var8 = new ik(param4);
+          var7 = new ConditionalTextValue(param2);
+          var8 = new ConditionalTextValue(param4);
           stackIn_4_0 = ModalStack.a(param0, param5, param6, (byte) -124, param3, var7, var8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -115,7 +115,7 @@ final class IconLabelControl extends SceneWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -125,15 +125,15 @@ final class IconLabelControl extends SceneWidget {
           this.field_Yb = new SceneWidget(0L, param1);
           this.field_Vb = new SceneWidget(0L, param2);
           this.field_Vb.field_S = param3;
-          this.a(this.field_Yb, 127);
-          this.a(this.field_Vb, 127);
-          this.h(46);
+          this.addChild(this.field_Yb, 127);
+          this.addChild(this.field_Vb, 127);
+          this.markTreeDirty(46);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String capitalizeFirstVisibleLetter(String param0, int param1) {
         int var6 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -197,7 +197,7 @@ final class IconLabelControl extends SceneWidget {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

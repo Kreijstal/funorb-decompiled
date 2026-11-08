@@ -55,20 +55,20 @@ final class StripedProgressBar extends UiComponent {
         if (param1 > -99) {
           this.setColors(49, -19, 99);
         }
-        this.a(var5, (byte) -8, var6, this.field_R[0]);
+        this.drawStripedBar(var5, (byte) -8, var6, this.field_R[0]);
         if (this.field_I < 65536) {
           ArchiveRequest.a((this.field_I * this.field_x >> 16) + var5, var6, 115, this.field_x + var5, this.field_E + var6);
-          this.a(var5, (byte) -87, var6, this.field_R[1]);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(97);
+          this.drawStripedBar(var5, (byte) -87, var6, this.field_R[1]);
+          MatchingTextValidator.popRasterStateWithIntGuard(97);
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, (byte) -108, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, (byte) -108, param2, param3, param4);
         this.rebuildSprites(-85);
         if (param1 > -71) {
           RgbSprite var7 = (RgbSprite) null;
-          this.a(13, (byte) 41, 96, (RgbSprite) null);
+          this.drawStripedBar(13, (byte) 41, 96, (RgbSprite) null);
         }
     }
 
@@ -99,11 +99,11 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final RgbSprite a(int param0, int param1, int param2) {
+    private final RgbSprite createStripeSprite(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -136,11 +136,11 @@ final class StripedProgressBar extends UiComponent {
           SoftwareRaster.drawHorizontalLine(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
           SoftwareRaster.drawHorizontalLine(-this.field_T + var7, var6, this.field_T, var12Lifetime1);
         }
-        MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
+        MatchingTextValidator.popRasterStateWithIntGuard(107);
         return var14;
     }
 
-    private final void a(int param0, byte param1, int param2, RgbSprite param3) {
+    private final void drawStripedBar(int param0, byte param1, int param2, RgbSprite param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -162,13 +162,13 @@ final class StripedProgressBar extends UiComponent {
             param3.drawTransparent(var6, param2);
             var6 = var6 + param3.field_A;
           }
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(113);
+          MatchingTextValidator.popRasterStateWithIntGuard(113);
           if (this.field_L.field_A + param0 >= SoftwareRaster.field_i) {
             IterableNodeHashTable.a(this.field_Y, (byte) -75);
             param3.drawTransparent(-this.field_G, 0);
             param3.drawTransparent(2 * this.field_T - this.field_G, 0);
             this.field_K.drawMultiply(0, 0);
-            MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
+            MatchingTextValidator.popRasterStateWithIntGuard(107);
             this.field_Y.drawTransparent(param0, param2);
           }
           if (SoftwareRaster.field_b >= var5_int - this.field_L.field_A) {
@@ -178,7 +178,7 @@ final class StripedProgressBar extends UiComponent {
             param3.drawTransparent(-var7, 0);
             param3.drawTransparent(this.field_T * 2 - var7, 0);
             this.field_L.drawMultiply(0, 0);
-            MatchingTextValidator.$cfr$intArgs$f$20d51497949f(109);
+            MatchingTextValidator.popRasterStateWithIntGuard(109);
             this.field_Y.drawTransparent(var5_int - this.field_L.field_A, param2);
             return;
           }
@@ -193,19 +193,19 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static ef a(int param0, String param1) {
-        ef stackIn_3_0 = null;
-        ef stackIn_6_0 = null;
-        ef stackIn_9_0 = null;
-        ef stackIn_15_0 = null;
+    final static EmailFormatError a(int param0, String param1) {
+        EmailFormatError stackIn_3_0 = null;
+        EmailFormatError stackIn_6_0 = null;
+        EmailFormatError stackIn_9_0 = null;
+        EmailFormatError stackIn_15_0 = null;
         int stackIn_24_0 = 0;
-        ef stackIn_28_0 = null;
-        ef stackIn_42_0 = null;
-        ef stackIn_47_0 = null;
+        EmailFormatError stackIn_28_0 = null;
+        EmailFormatError stackIn_42_0 = null;
+        EmailFormatError stackIn_47_0 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -231,12 +231,12 @@ final class StripedProgressBar extends UiComponent {
             return stackIn_6_0;
           }
           if (param0 < 86) {
-            stackIn_9_0 = (ef) null;
+            stackIn_9_0 = (EmailFormatError) null;
             return stackIn_9_0;
           }
           if (param1.charAt(0) == 34) {
             if (34 != param1.charAt(-1 + var2_int)) {
-              stackIn_15_0 = ec.field_b;
+              stackIn_15_0 = ClientUiHelpers.field_b;
               return stackIn_15_0;
             }
             var3 = 0;
@@ -248,7 +248,7 @@ final class StripedProgressBar extends UiComponent {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_28_0 = ec.field_b;
+                  stackIn_28_0 = ClientUiHelpers.field_b;
                   return stackIn_28_0;
                 }
                 var3 = 0;
@@ -268,13 +268,13 @@ final class StripedProgressBar extends UiComponent {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = ec.field_b;
+                stackIn_42_0 = ClientUiHelpers.field_b;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (WeightedLruCache.field_g.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = ec.field_b;
+                stackIn_47_0 = ClientUiHelpers.field_b;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;
@@ -291,16 +291,16 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
     private final void rebuildSprites(int param0) {
-        this.field_R = new RgbSprite[]{this.a(this.field_J, 18634, this.field_V), this.a(this.field_Q, 18634, this.field_S)};
+        this.field_R = new RgbSprite[]{this.createStripeSprite(this.field_J, 18634, this.field_V), this.createStripeSprite(this.field_Q, 18634, this.field_S)};
         if (param0 > -66) {
           return;
         }
-        this.field_L = this.a((byte) -127);
+        this.field_L = this.createCapMask((byte) -127);
         this.field_K = this.field_L.copyFlippedHorizontal();
         this.field_Y = new RgbSprite(this.field_E >> 1, this.field_E);
     }
@@ -315,7 +315,7 @@ final class StripedProgressBar extends UiComponent {
         qf.field_c = new SceneWidget(0L, (SceneWidget) null);
         int var4 = -124 / ((param1 + 78) / 32);
         if (param0 == null) {
-          MusicCrossfadeStream.a("QC1", -29, (Throwable) null);
+          MusicCrossfadeStream.reportClientError("QC1", -29, (Throwable) null);
           return;
         }
         param0.fileRetentionMode = 0;
@@ -324,19 +324,19 @@ final class StripedProgressBar extends UiComponent {
         ArchiveIndex.field_w = new QuickChatPhraseCache(var3_int, param0, param0, new kb());
         QuickChatCategory var5 = NodeDeque.d(0);
         if (var5 == null) {
-          MusicCrossfadeStream.a("QC2", -49, (Throwable) null);
+          MusicCrossfadeStream.reportClientError("QC2", -49, (Throwable) null);
           return;
         }
         try {
-          fc.a(var5, 101);
+          SoundAndUrlHelpers.initFallbackShortcut(var5, 101);
           AlternateUsernameCredentials.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
           Sprite.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
           UsernameCredentials.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
           var6 = SoftwareRaster.field_c;
           var7 = SoftwareRaster.field_j;
           var16 = SoftwareRaster.field_g;
-          ik.field_g = new RgbSprite(10, 14);
-          ik.field_g.bindRasterTarget();
+          ConditionalTextValue.field_g = new RgbSprite(10, 14);
+          ConditionalTextValue.field_g.bindRasterTarget();
           for (var9 = 2; var9 < 7; var9++) {
             SoftwareRaster.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
@@ -344,7 +344,7 @@ final class StripedProgressBar extends UiComponent {
           ImageProducerRasterBuffer.field_m = BufferedSocket.a(UsernameCredentials.field_l, var5, false, Sprite.field_f, AlternateUsernameCredentials.field_u);
           qf.field_c.field_M = new NodeDeque();
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class StripedProgressBar extends UiComponent {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final RgbSprite a(byte param0) {
+    private final RgbSprite createCapMask(byte param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -373,7 +373,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRaster.plotPixel(var6, var5, var9 | var9 << 8 | var9 << 16);
           }
         }
-        MatchingTextValidator.$cfr$intArgs$f$20d51497949f(108);
+        MatchingTextValidator.popRasterStateWithIntGuard(108);
         return var3;
     }
 
@@ -383,7 +383,7 @@ final class StripedProgressBar extends UiComponent {
         this.field_V = param5;
         this.field_Q = param8;
         this.field_T = param4;
-        this.a(param0, (byte) -73, param1, param2, param3);
+        this.setBounds(param0, (byte) -73, param1, param2, param3);
     }
 
     static {

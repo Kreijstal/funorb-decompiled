@@ -23,42 +23,42 @@ final class tm {
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         SentinelCommandSimulator.a(param0 + 2);
-        if (ba.field_b >= 0) {
-          Explosion.field_C.field_S = SocketConnector.a(MarkerSliderPainter.field_g, -34, new String[]{Integer.toString(ba.field_b)});
+        if (QuickChatInputHelpers.field_b >= 0) {
+          Explosion.field_C.field_S = SocketConnector.formatTemplate(MarkerSliderPainter.field_g, -34, new String[]{Integer.toString(QuickChatInputHelpers.field_b)});
         } else {
           Explosion.field_C.field_S = null;
         }
         stackIn_9_0 = QuickChatMenu.field_Ub;
         stackIn_9_1 = 125;
-        stackIn_10_2 = (param2) && (!param1) && (!im.field_b) && (nf.field_b == null) && (ni.field_a == null);
-        ((SceneWidget) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
-        stackIn_16_0 = pc.field_q;
+        stackIn_10_2 = (param2) && (!param1) && (!LobbyStateHelpers.field_b) && (nf.field_b == null) && (ni.field_a == null);
+        ((SceneWidget) (Object) stackIn_9_0).updateInputFullScreen((byte) stackIn_9_1, stackIn_10_2);
+        stackIn_16_0 = PlayingSound.field_q;
         stackIn_16_1 = 12;
-        stackIn_17_2 = (param2) && (!param1) && (!im.field_b) && (null == nf.field_b) && (null == ni.field_a);
-        ((SceneWidget) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
+        stackIn_17_2 = (param2) && (!param1) && (!LobbyStateHelpers.field_b) && (null == nf.field_b) && (null == ni.field_a);
+        ((SceneWidget) (Object) stackIn_16_0).updateInputFullScreen((byte) stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = TeamColourTinter.field_b;
         stackIn_21_1 = 22;
-        stackIn_22_2 = (param2) && (!param1) && (im.field_b);
-        ((SceneWidget) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
-        BoundedRandomAccessFile.field_f.field_d.j(10000);
+        stackIn_22_2 = (param2) && (!param1) && (LobbyStateHelpers.field_b);
+        ((SceneWidget) (Object) stackIn_21_0).updateInputFullScreen((byte) stackIn_21_1, stackIn_22_2);
+        BoundedRandomAccessFile.field_f.field_d.processTabPresses(10000);
         if (BufferedSocket.field_i.field_Eb != 0) {
           of.field_c = true;
         }
         if (0 != qm.field_b.field_Eb && (ProxyAuthenticationException.field_a ||
           !(rd.field_b <= 0) ||
           !(NodeDeque.field_d < 2) &&
-          fc.field_e[12])) {
+          SoundAndUrlHelpers.field_e[12])) {
           AlphaContainer.a(param3, param0 + 2);
         }
         if (0 != uc.field_j.field_Eb) {
           if (ViewportController.field_l.length == 1 &&
-            ok.field_a != ViewportController.field_l[0]) {
-            ok.field_a = ViewportController.field_l[0];
+            ChecksumAndFrameHelpers.field_a != ViewportController.field_l[0]) {
+            ChecksumAndFrameHelpers.field_a = ViewportController.field_l[0];
           }
-          DialWidget.a(ok.field_a, eh.field_e, true, 0, param3, (byte) 81);
+          DialWidget.a(ChecksumAndFrameHelpers.field_a, SocialListUiHelpers.field_e, true, 0, param3, (byte) 81);
         }
         if (LoginForm.field_gb.field_Eb != 0) {
-          im.field_b = false;
+          LobbyStateHelpers.field_b = false;
         }
         if (param0 != -2) {
           field_c = (String) null;
@@ -67,7 +67,7 @@ final class tm {
 
     final static SceneWidget a(byte param0) {
         int var1 = -54 % ((-38 - param0) / 57);
-        return pl.d(true);
+        return BirthDateEntryPanel.d(true);
     }
 
     public static void releaseStatics(int param0) {
@@ -134,7 +134,7 @@ final class tm {
         field_e[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = -8 + 8 * var0;
-          field_e[var0] = AccountNamePrompt.a(ReportAbuseDialog.a(255L, field_i[7][7 + var1]), AccountNamePrompt.a(AccountNamePrompt.a(ReportAbuseDialog.a(16711680L, field_i[5][var1 + 5]), AccountNamePrompt.a(AccountNamePrompt.a(ReportAbuseDialog.a(1095216660480L, field_i[3][var1 + 3]), AccountNamePrompt.a(ReportAbuseDialog.a(280375465082880L, field_i[2][2 + var1]), AccountNamePrompt.a(ReportAbuseDialog.a(71776119061217280L, field_i[1][1 + var1]), ReportAbuseDialog.a(-72057594037927936L, field_i[0][var1])))), ReportAbuseDialog.a(field_i[4][var1 + 4], 4278190080L))), ReportAbuseDialog.a(field_i[6][var1 + 6], 65280L)));
+          field_e[var0] = AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(255L, field_i[7][7 + var1]), AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(16711680L, field_i[5][var1 + 5]), AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(1095216660480L, field_i[3][var1 + 3]), AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(280375465082880L, field_i[2][2 + var1]), AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(71776119061217280L, field_i[1][1 + var1]), ReportAbuseDialog.bitAnd(-72057594037927936L, field_i[0][var1])))), ReportAbuseDialog.bitAnd(field_i[4][var1 + 4], 4278190080L))), ReportAbuseDialog.bitAnd(field_i[6][var1 + 6], 65280L)));
         }
         field_f = "Camera left/right: Inverted";
     }

@@ -41,19 +41,19 @@ final class fn {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static ef a(int param0, String param1) {
+    final static EmailFormatError a(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ef stackIn_3_0 = null;
-        ef stackIn_7_0 = null;
-        ef stackIn_17_0 = null;
-        ef stackIn_20_0 = null;
+        EmailFormatError stackIn_3_0 = null;
+        EmailFormatError stackIn_7_0 = null;
+        EmailFormatError stackIn_17_0 = null;
+        EmailFormatError stackIn_20_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -77,12 +77,12 @@ final class fn {
             if (var4 == 45) {
               if (var3 == 0 ||
                 -1 + var2_int == var3) {
-                stackIn_17_0 = ec.field_b;
+                stackIn_17_0 = ClientUiHelpers.field_b;
                 return stackIn_17_0;
               }
             } else {
               if (sa.field_d.indexOf(var4) == -1) {
-                stackIn_20_0 = ec.field_b;
+                stackIn_20_0 = ClientUiHelpers.field_b;
                 return stackIn_20_0;
               }
             }
@@ -93,7 +93,7 @@ final class fn {
           var6 = (MusicTrack) null;
           fn.a(50, -4, true, -63, (MusicTrack) null);
           stackIn_27_0 = null;
-          return (ef) (stackIn_27_0);
+          return (EmailFormatError) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -104,21 +104,21 @@ final class fn {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    final static e a(boolean param0, byte param1) {
-        e var2 = null;
-        e var2Lifetime1;
+    final static AccountRequestResult a(boolean param0, byte param1) {
+        AccountRequestResult var2 = null;
+        AccountRequestResult var2Lifetime1;
         if (param1 == 69) {
-          var2 = new e(true);
+          var2 = new AccountRequestResult(true);
           var2.field_f = param0 ? true : false;
           return var2;
         }
         MusicTrack var3 = (MusicTrack) null;
         fn.a(21, -123, false, -68, (MusicTrack) null);
-        var2Lifetime1 = new e(true);
+        var2Lifetime1 = new AccountRequestResult(true);
         var2Lifetime1.field_f = param0 ? true : false;
         return var2Lifetime1;
     }

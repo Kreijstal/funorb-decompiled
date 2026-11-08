@@ -28,7 +28,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "ul.L(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "ul.L(" + param0 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class NodeDeque {
           try {
             var1_int = param0;
             while (true) {
-              var2 = cd.field_e.a((byte) -13, var1_int);
+              var2 = cd.field_e.getCategory((byte) -13, var1_int);
               if (var2.field_B) {
                 stackIn_5_0 = var2;
                 return stackIn_5_0;
@@ -60,7 +60,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "ul.E(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "ul.E(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "ul.Q(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ul.Q(" + obfuscationGuard + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class NodeDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.U(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class NodeDeque {
         RuntimeException var1_ref = null;
         int var2 = 0;
         try {
-          var1 = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], UiContainer.field_L[0], ba.field_d);
+          var1 = new IndexedSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], UiContainer.field_L[0], QuickChatInputHelpers.field_d);
           var2 = -124 % ((param0 + 33) / 62);
           NodeHashTable.a(9324);
           stackIn_1_0 = var1;
@@ -177,7 +177,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "ul.M(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "ul.M(" + param0 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ul.I(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ul.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.S(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.S(" + obfuscationGuard + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.B(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.N(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.N(" + obfuscationGuard + ')');
         }
     }
 
@@ -334,7 +334,7 @@ final class NodeDeque {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.P(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.P(" + param0 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class NodeDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ final class NodeDeque {
         RuntimeException decompiledCaughtException = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          var1_long = mm.a(77);
+          var1_long = ClockAndCookieHelpers.monotonicMillis(77);
           var3 = -sl.field_m + var1_long;
           if (var3 <= 30000L) {
             var5 = 3000;
@@ -446,7 +446,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "ul.F(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "ul.F(" + param0 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ul.T(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ul.T(" + param0 + ')');
         }
     }
 
@@ -499,11 +499,11 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ul.K(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ul.K(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(boolean param0, byte param1, boolean param2, int[] param3, pe param4, boolean param5, int[] param6) {
+    final static void a(boolean param0, byte param1, boolean param2, int[] param3, TriangleMesh param4, boolean param5, int[] param6) {
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         int stackIn_68_0 = 0;
@@ -583,9 +583,9 @@ final class NodeDeque {
           var21Lifetime1 = param3[0] - param6[0];
           var22Lifetime1 = param3[1] - param6[1];
           var23Lifetime1 = -param6[2] + param3[2];
-          var9 = var23Lifetime1 * param6[5] + param6[4] * var22Lifetime1 + var21Lifetime1 * param6[3] >> 16 - cj.field_j;
+          var9 = var23Lifetime1 * param6[5] + param6[4] * var22Lifetime1 + var21Lifetime1 * param6[3] >> 16 - ArchiveLoadSequence.field_j;
           var11 = var21Lifetime1 * param6[9] - (-(param6[10] * var22Lifetime1) - param6[11] * var23Lifetime1) >> 16;
-          var10 = var21Lifetime1 * param6[6] - (-(param6[7] * var22Lifetime1) - param6[8] * var23Lifetime1) >> 16 - cj.field_j;
+          var10 = var21Lifetime1 * param6[6] - (-(param6[7] * var22Lifetime1) - param6[8] * var23Lifetime1) >> 16 - ArchiveLoadSequence.field_j;
           var21Lifetime2 = lf.field_d;
           var22Lifetime2 = 22 / ((param1 - 51) / 45);
           var23Lifetime2 = lf.field_b;
@@ -596,21 +596,21 @@ final class NodeDeque {
               var25Lifetime1 = param4.field_z[var24Lifetime1];
               var26Lifetime1 = param4.field_m[var24Lifetime1];
               var27Lifetime1 = param4.field_C[var24Lifetime1];
-              var28Lifetime1 = (var18 * var27Lifetime1 + var26Lifetime1 * var15 + var25Lifetime1 * var12 >> -cj.field_j + 16) + var9;
-              var29Lifetime1 = var10 + (var27Lifetime1 * var19 + var26Lifetime1 * var16 + var25Lifetime1 * var13 >> 16 - cj.field_j);
+              var28Lifetime1 = (var18 * var27Lifetime1 + var26Lifetime1 * var15 + var25Lifetime1 * var12 >> -ArchiveLoadSequence.field_j + 16) + var9;
+              var29Lifetime1 = var10 + (var27Lifetime1 * var19 + var26Lifetime1 * var16 + var25Lifetime1 * var13 >> 16 - ArchiveLoadSequence.field_j);
               var30 = (var26Lifetime1 * var17 + (var25Lifetime1 * var14 + var27Lifetime1 * var20) >> 16) + var11;
               stackIn_59_0 = 50;
               stackIn_59_1 = var30;
               if (var31 != 0) {
                 if (stackIn_59_0 < stackIn_59_1) {
-                  stackIn_68_0 = ~tc.field_A.length;
+                  stackIn_68_0 = ~HighscoreSubmission.field_A.length;
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_59_0 <= stackIn_59_1) {
-                  eh.field_d[var24Lifetime1] = var21Lifetime2 + var28Lifetime1 / var30;
+                  SocialListUiHelpers.field_d[var24Lifetime1] = var21Lifetime2 + var28Lifetime1 / var30;
                   FunOrbClient.field_p[var24Lifetime1] = var23Lifetime2 + var29Lifetime1 / var30;
                   if (var30 < var7_int) {
                     var7_int = var30;
@@ -618,13 +618,13 @@ final class NodeDeque {
                   if (var8 < var30) {
                     var8 = var30;
                   }
-                  km.field_h[var24Lifetime1] = var30;
+                  ClientGlobals.field_h[var24Lifetime1] = var30;
                 } else {
-                  km.field_h[var24Lifetime1] = -2147483648;
+                  ClientGlobals.field_h[var24Lifetime1] = -2147483648;
                 }
                 if (param5) {
-                  ResourceArchive.field_l[var24Lifetime1] = var28Lifetime1 >> cj.field_j;
-                  Checkbox.field_V[var24Lifetime1] = var29Lifetime1 >> cj.field_j;
+                  ResourceArchive.field_l[var24Lifetime1] = var28Lifetime1 >> ArchiveLoadSequence.field_j;
+                  Checkbox.field_V[var24Lifetime1] = var29Lifetime1 >> ArchiveLoadSequence.field_j;
                   AccountNoticeDialog.field_lb[var24Lifetime1] = var30;
                 }
                 var24Lifetime1++;
@@ -660,7 +660,7 @@ final class NodeDeque {
                   var26Lifetime1Lifetime1 = param4.field_X[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_B[var24Lifetime1];
                   rd.field_a[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var15 >> 16) + var9;
-                  ci.field_c[var24Lifetime1] = var10 + (var27Lifetime1Lifetime1 * var19 + (var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1) >> 16);
+                  ClientErrorSupport.field_c[var24Lifetime1] = var10 + (var27Lifetime1Lifetime1 * var19 + (var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1) >> 16);
                   fm.field_e[var24Lifetime1] = var11 + (var14 * var25Lifetime1Lifetime1 - (-(var26Lifetime1Lifetime1 * var17) - var27Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1++;
                   if (var31 != 0) {
@@ -689,7 +689,7 @@ final class NodeDeque {
                   if (stackIn_59_0Lifetime1 >= stackIn_59_1Lifetime1) {
                     break;
                   }
-                  stackIn_68_0 = ~tc.field_A.length;
+                  stackIn_68_0 = ~HighscoreSubmission.field_A.length;
                   if (var31 != 0) {
                     break scanLoop1;
                   }
@@ -699,7 +699,7 @@ final class NodeDeque {
                   var19 = param4.field_g[var18];
                   var20 = param4.field_H[var18];
                   var21Lifetime2 = param4.field_F[var18];
-                  tc.field_A[var18] = var15 * var21Lifetime2 + var20 * var12 + var19 * var9 >> 16;
+                  HighscoreSubmission.field_A[var18] = var15 * var21Lifetime2 + var20 * var12 + var19 * var9 >> 16;
                   hm.field_c[var18] = var10 * var19 + var20 * var13 + var16 * var21Lifetime2 >> 16;
                   DelegatingCanvas.field_e[var18] = var14 * var20 + (var19 * var11 + var17 * var21Lifetime2) >> 16;
                   var18++;
@@ -733,7 +733,7 @@ final class NodeDeque {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ul.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ul.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -765,12 +765,12 @@ final class NodeDeque {
           if (NodeIterator.a(2)) {
             t.a((byte) 125, param5, param4, param6);
             if (null != AudioService.field_i &&
-              AudioService.field_i.a(param4, param0 ^ 125, param3, param6, param1)) {
+              AudioService.field_i.handleMenuSelection(param4, param0 ^ 125, param3, param6, param1)) {
               rh.a(false);
               param4 = false;
             }
             SentinelCommandSimulator.a(param6, param4, (byte) -49);
-            cc.a(param2, (byte) 119, param4);
+            LobbyPlayer.updateReportAbuseDialog(param2, (byte) 119, param4);
             param4 = false;
           }
           stackIn_13_0 = param4;
@@ -778,7 +778,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var7), "ul.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var7), "ul.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -823,7 +823,7 @@ final class NodeDeque {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -849,7 +849,7 @@ final class NodeDeque {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -875,7 +875,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.R(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.R(" + param0 + ')');
         }
     }
 
@@ -885,7 +885,7 @@ final class NodeDeque {
           this.sentinel.previous = this.sentinel;
           this.sentinel.next = this.sentinel;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ul.<init>()");
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ul.<init>()");
         }
     }
 
@@ -913,7 +913,7 @@ final class NodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.G(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ul.G(" + param0 + ')');
         }
     }
 

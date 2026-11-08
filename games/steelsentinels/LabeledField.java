@@ -28,7 +28,7 @@ final class LabeledField extends SingleChildContainer {
 
     final static void a(int param0, int param1) {
         if (param1 != 0) {
-          LabeledField.f((byte) -69);
+          LabeledField.releaseStatics((byte) -69);
         }
         TextHotspotWidget.field_V = param0;
     }
@@ -45,7 +45,7 @@ final class LabeledField extends SingleChildContainer {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = QuickChatCategory.a(22230, param3, param1, param5, param2, param4);
+          var8 = QuickChatCategory.openFullscreenFrame(22230, param3, param1, param5, param2, param4);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
@@ -69,7 +69,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class LabeledField extends SingleChildContainer {
           var12_int = this.field_T - this.field_ab;
           var13 = this.field_Z.paragraphHeight(param10, var12_int, this.field_Z.field_G) + this.field_ab * 2;
           if (param3 < var13) {
-            this.a(param0, (byte) -110, param1, param2, var13);
+            this.setBounds(param0, (byte) -110, param1, param2, var13);
           } else {
             var13 = param3;
           }
@@ -125,7 +125,7 @@ final class LabeledField extends SingleChildContainer {
             stackIn_10_0 = 2 * this.field_ab + this.field_T;
           }
           var14 = stackIn_10_0;
-          this.field_J.a(var14, (byte) -84, this.field_ab + (var13 - param3 >> 1), -(3 * this.field_ab) + (-this.field_T + param2), param3 - 2 * this.field_ab);
+          this.field_J.setBounds(var14, (byte) -84, this.field_ab + (var13 - param3 >> 1), -(3 * this.field_ab) + (-this.field_T + param2), param3 - 2 * this.field_ab);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,11 +149,11 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_eb = null;
         if (param0 < 1) {
           field_V = 37;

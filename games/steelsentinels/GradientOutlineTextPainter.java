@@ -31,7 +31,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ag.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ag.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
             var2 = 1;
           }
         } else {
-          if (null == ve.field_a) {
+          if (null == AssetDecoders.field_a) {
             wb.field_c = LabeledField.a(0, IterableDualNodeDeque.field_i, 0, 480, 0, 640);
             if (null == wb.field_c) {
               var2 = 3;
@@ -74,8 +74,8 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
               hg.a((byte) -93, wb.field_c);
             }
           } else {
-            wb.field_c = ve.field_a.b(param0 ^ -32476);
-            wd.a(2, (byte) -31);
+            wb.field_c = AssetDecoders.field_a.enterFullscreen(param0 ^ -32476);
+            LobbyGameDecoding.notifyBrowserResize(2, (byte) -31);
             if (null == wb.field_c) {
               var2 = 3;
             } else {
@@ -87,7 +87,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         if (param0 != -4) {
           field_t = (String) null;
         }
-        if (null != ve.field_a) {
+        if (null != AssetDecoders.field_a) {
           return;
         }
         if (!ValidationHelpWidget.field_fb) {

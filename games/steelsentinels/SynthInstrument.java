@@ -30,7 +30,7 @@ final class SynthInstrument {
     private static int[] field_r;
     private static int[] field_v;
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;
@@ -239,7 +239,7 @@ final class SynthInstrument {
         return field_u;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_e = new SoundEnvelope();

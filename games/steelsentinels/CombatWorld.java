@@ -79,7 +79,7 @@ final class CombatWorld {
           var6 = new Projectile(var3_int, var5, -1 + 2 * param1, 0, 50, 1, 17, this, (Sentinel) null, 1000 + this.field_R, var4, 30);
           this.projectiles.addLast(param0 ^ 2, var6);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ee.D(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ee.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.E(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class CombatWorld {
         int var15 = 0;
         var15 = SteelSentinels.obfuscationControl;
         try {
-          this.field_N = this.field_N + 2 * oh.field_f;
+          this.field_N = this.field_N + 2 * LobbySetupHelpers.field_f;
           if ((this.field_v & 32) != 0) {
             if (this.terrain.field_h[1] != 6000) {
             }
@@ -197,7 +197,7 @@ final class CombatWorld {
             }
           }
           this.field_q = this.field_q + DelegatingCanvas.field_c;
-          this.field_f = this.field_f - oh.field_f;
+          this.field_f = this.field_f - LobbySetupHelpers.field_f;
           this.field_a = this.field_a - DelegatingCanvas.field_c;
           if (this.field_j &&
             this.field_h) {
@@ -239,7 +239,7 @@ final class CombatWorld {
                     var8 = FullscreenFocusCanvas.field_c;
                   }
                   if (var5_ref_int__[var7] == 1) {
-                    var8 = va.field_f;
+                    var8 = LoginDialogHelpers.field_f;
                   }
                   if (var5_ref_int__[var7] == 2) {
                     var8 = qm.field_d;
@@ -251,10 +251,10 @@ final class CombatWorld {
                     var8 = rn.field_o;
                   }
                   if (var5_ref_int__[var7] == 5) {
-                    var8 = oc.field_f;
+                    var8 = MessageMenuHelpers.field_f;
                   }
                   if (var5_ref_int__[var7] == 6) {
-                    var8 = hk.field_Vb;
+                    var8 = LobbyGame.field_Vb;
                   }
                   if (var5_ref_int__[var7] == 7) {
                     var8 = ReflectionCheck.field_v;
@@ -293,7 +293,7 @@ final class CombatWorld {
                     var8 = CachedTextLayout.field_k;
                   }
                   if (var5_ref_int__[var7] == 20) {
-                    var8 = eb.field_o;
+                    var8 = AgeValidator.field_o;
                   }
                   if (21 == var5_ref_int__[var7]) {
                     var8 = ModalPanel.field_S;
@@ -571,7 +571,7 @@ final class CombatWorld {
                   var6_int = var10_ref_mb.armour;
                   var9_int = var10_ref_mb.maximumCharge - GradientOutlineTextPainter.a(91, var10_ref_mb.activeModuleType);
                 }
-                TabbedPanel.a(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), WeightedLruCache.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
+                TabbedPanel.recordMissionCompletion(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), WeightedLruCache.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
               }
             }
           }
@@ -589,9 +589,9 @@ final class CombatWorld {
               this.field_ib <= 0)) {
               boolean decompiledFrameCompleted2 = true;
               this.field_ib = 3000;
-              if (ef.field_d.length > this.field_cb &&
+              if (EmailFormatError.field_d.length > this.field_cb &&
                 this.field_cb >= 0) {
-                var4_ref_int__ = ef.field_d[this.field_cb];
+                var4_ref_int__ = EmailFormatError.field_d[this.field_cb];
                 var5 = var4_ref_int__.length;
                 var6_int = 0;
                 while (var6_int < var5) {
@@ -608,7 +608,7 @@ final class CombatWorld {
                     var9 = FullscreenFocusCanvas.field_c;
                   }
                   if (var4_ref_int__[var6_int] == 1) {
-                    var9 = va.field_f;
+                    var9 = LoginDialogHelpers.field_f;
                   }
                   if (2 == var4_ref_int__[var6_int]) {
                     var9 = qm.field_d;
@@ -620,10 +620,10 @@ final class CombatWorld {
                     var9 = rn.field_o;
                   }
                   if (var4_ref_int__[var6_int] == 5) {
-                    var9 = oc.field_f;
+                    var9 = MessageMenuHelpers.field_f;
                   }
                   if (var4_ref_int__[var6_int] == 6) {
-                    var9 = hk.field_Vb;
+                    var9 = LobbyGame.field_Vb;
                   }
                   if (var4_ref_int__[var6_int] == 7) {
                     var9 = ReflectionCheck.field_v;
@@ -967,7 +967,7 @@ final class CombatWorld {
               }
               this.field_R = 1;
               var5_ref_wl = new Projectile(0, 0, -var3, 0, 0, 1, 16, this, (Sentinel) null, 0, 0, 0);
-              ri.field_b = var5_ref_wl;
+              LoginStateQueries.field_b = var5_ref_wl;
               this.projectiles.addLast(obfuscationGuard ^ 24, var5_ref_wl);
               break;
             }
@@ -1047,7 +1047,7 @@ final class CombatWorld {
             var9_int = -500000;
             var10_ref_mb = new Sentinel(var8_int, var9_int, this);
             var10_ref_mb.field_ib = true;
-            var10_ref_mb.configureDesign(oh.field_h, true, false, -1, this.playerCount + this.computerPlayerCount);
+            var10_ref_mb.configureDesign(LobbySetupHelpers.field_h, true, false, -1, this.playerCount + this.computerPlayerCount);
             var10_ref_mb.field_Nb = 11;
             this.field_A = var10_ref_mb.playerId;
             this.spawnedSpecialSentinel = var10_ref_mb;
@@ -1123,19 +1123,19 @@ final class CombatWorld {
                       var8 = rn.field_o;
                       break regionExit7;
                     case 4:
-                      var8 = oc.field_f;
+                      var8 = MessageMenuHelpers.field_f;
                       break regionExit7;
                     default:
                       break regionExit7;
                     case 5:
                       if (var15 == 0) {
-                        var8 = hk.field_Vb;
+                        var8 = LobbyGame.field_Vb;
                         break regionExit7;
                       }
                       break;
                   }
                 }
-                var8 = va.field_f;
+                var8 = LoginDialogHelpers.field_f;
               }
               var10 = 0;
               while (var10 < 2) {
@@ -1177,7 +1177,7 @@ final class CombatWorld {
                   var8 = rn.field_o;
                 } else {
                   if (2 == var10) {
-                    var8 = hk.field_Vb;
+                    var8 = LobbyGame.field_Vb;
                   }
                 }
               }
@@ -1229,7 +1229,7 @@ final class CombatWorld {
           var8 = (FallingPickup) (this.field_e.first(13058));
           scanLoop8: while (true) {
             if (var8 != null) {
-              ((FallingPickup) (var8)).c((byte) 87);
+              ((FallingPickup) (var8)).advancePickup((byte) 87);
               stackIn_1133_0 = null;
               stackIn_1133_1 = var8;
               if (var15 != 0) {
@@ -1303,7 +1303,7 @@ final class CombatWorld {
               }
               if (1650 != this.field_R ||
                 4 == this.terrain.getTerrainType(57)) {
-                if (!(1 < mm.a((byte) 119, var7))) {
+                if (!(1 < ClockAndCookieHelpers.countSetBits((byte) 119, var7))) {
                   this.a(var6_array, (byte) -114);
                   if (var15 != 0) {
                     this.a(var6_array, (byte) -128);
@@ -1366,7 +1366,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.MA(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.MA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1385,7 +1385,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.SA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.SA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1416,12 +1416,12 @@ final class CombatWorld {
           }
           ByteStorage.field_d.bindRasterTarget();
           var1.drawHalfSize(0, 0);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(122);
+          MatchingTextValidator.popRasterStateWithIntGuard(122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "ee.N(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ee.N(" + param0 + ')');
         }
     }
 
@@ -1864,7 +1864,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ee.IA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ee.IA(" + param0 + ')');
         }
     }
 
@@ -1875,13 +1875,13 @@ final class CombatWorld {
         RuntimeException var1 = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          ba.field_f = null;
+          QuickChatInputHelpers.field_f = null;
           if (param0 != 11828) {
             field_k = (String) null;
           }
           DelayedServerPacket.field_A = false;
           if (LoginMethod.field_d) {
-            ch.field_O.m((byte) 127);
+            ArrayWidgetContainer.field_O.showConnectionRestored((byte) 127);
             if (var2 == 0) {
               return;
             }
@@ -1889,21 +1889,21 @@ final class CombatWorld {
           var1_int = ReflectionCheck.field_o;
           if (var1_int > 0) {
             if (var1_int != 1) {
-              ba.field_f = SocketConnector.a(DiskCacheRequest.field_J, -120, new String[]{Integer.toString(var1_int)});
+              QuickChatInputHelpers.field_f = SocketConnector.formatTemplate(DiskCacheRequest.field_J, -120, new String[]{Integer.toString(var1_int)});
             }
             if (var1_int == 1 ||
               var2 != 0) {
-              ba.field_f = Js5Transport.field_k;
+              QuickChatInputHelpers.field_f = Js5Transport.field_k;
             }
-            ba.field_f = ue.a(new CharSequence[]{(CharSequence) ((Object) ba.field_f), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) in.field_f)}, param0 - 11828);
+            QuickChatInputHelpers.field_f = LoginHandshakeHelpers.joinCharSequences(new CharSequence[]{(CharSequence) ((Object) QuickChatInputHelpers.field_f), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) in.field_f)}, param0 - 11828);
           }
-          ch.field_O.closeDialog(105);
-          tc.a((byte) 54);
+          ArrayWidgetContainer.field_O.closeDialog(105);
+          HighscoreSubmission.showLoadingProgressDialog((byte) 54);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "ee.J(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "ee.J(" + param0 + ')');
         }
     }
 
@@ -1984,7 +1984,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.F(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2132,7 +2132,7 @@ final class CombatWorld {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -2417,7 +2417,7 @@ final class CombatWorld {
                     }
                     if (-1 != param4[var10] &&
                       (param4[var10] & 32) != 0) {
-                      param4[var10] = ec.a(param4[var10], -33);
+                      param4[var10] = ClientUiHelpers.bitAnd(param4[var10], -33);
                       param4[var10] = DateOfBirthValidator.a(param4[var10], 16);
                     }
                     var10++;
@@ -2464,7 +2464,7 @@ final class CombatWorld {
           } else {
             stackIn_221_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_220_1).append(stackIn_221_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_220_1).append(stackIn_221_2).append(')').toString());
         }
     }
 
@@ -2600,7 +2600,7 @@ final class CombatWorld {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2691,7 +2691,7 @@ final class CombatWorld {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2757,7 +2757,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ee.NA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ee.NA(" + param0 + ')');
         }
     }
 
@@ -2867,7 +2867,7 @@ final class CombatWorld {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -3234,7 +3234,7 @@ final class CombatWorld {
           } else {
             stackIn_167_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_166_1).append(stackIn_167_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_162_0), ((StringBuilder) (Object) stackIn_166_1).append(stackIn_167_2).append(')').toString());
         }
     }
 
@@ -3244,7 +3244,7 @@ final class CombatWorld {
         try {
           if (SentinelAnimationEditor.field_q != null &&
             SentinelAnimationEditor.field_q[param1] != null) {
-            TeamColourTinter.a((byte) 28, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
+            TeamColourTinter.playSampleAtVolume((byte) 28, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
           }
           if (param0 != -2483) {
             CombatWorld.replaceAll((String) null, (String) null, (String) null, -92);
@@ -3253,7 +3253,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.FA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3265,12 +3265,12 @@ final class CombatWorld {
           if (param0 <= 74) {
             field_x = (String) null;
           }
-          stackIn_4_0 = na.a(Projectile.d((byte) -21), 0);
+          stackIn_4_0 = ChatMessage.hasTuhstatbutCookie(Projectile.d((byte) -21), 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "ee.KA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "ee.KA(" + param0 + ')');
         }
     }
 
@@ -3379,7 +3379,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var7), "ee.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var7), "ee.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -3517,7 +3517,7 @@ final class CombatWorld {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3534,7 +3534,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.VA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.VA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3630,12 +3630,12 @@ final class CombatWorld {
                 var15.field_C <= 0) {
                 if (Math.abs(var11[0]) >= var15.field_K &&
                   Math.abs(var11[0]) <= var15.field_W && (var16 != 0 ||
-                  !bi.b(105, var15.componentId))) {
+                  !TextAndBitHelpers.isSymbolKeyCode(105, var15.componentId))) {
                   var12[0] = mc.a(var12[0], 1L << var17);
                 }
                 if (Math.abs(var11[1]) >= var15.field_K &&
                   Math.abs(var11[1]) <= var15.field_W && (var16 != 0 ||
-                  !bi.b(-75, var15.componentId))) {
+                  !TextAndBitHelpers.isSymbolKeyCode(-75, var15.componentId))) {
                   var12[1] = mc.a(var12[1], 1L << var17);
                 }
                 var13 = var15.componentId;
@@ -3747,7 +3747,7 @@ final class CombatWorld {
           } else {
             stackIn_172_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_167_0), ((StringBuilder) (Object) stackIn_171_1).append(stackIn_172_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_167_0), ((StringBuilder) (Object) stackIn_171_1).append(stackIn_172_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -3780,7 +3780,7 @@ final class CombatWorld {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3814,7 +3814,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.B(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3941,7 +3941,7 @@ final class CombatWorld {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3977,7 +3977,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "ee.HA(" + playerId + ',' + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "ee.HA(" + playerId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -4127,7 +4127,7 @@ final class CombatWorld {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -4460,7 +4460,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.RA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.RA(" + param0 + ')');
         }
     }
 
@@ -4519,7 +4519,7 @@ final class CombatWorld {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -4643,7 +4643,7 @@ final class CombatWorld {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -4692,7 +4692,7 @@ final class CombatWorld {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -4807,7 +4807,7 @@ final class CombatWorld {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -4855,7 +4855,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ee.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ee.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4872,7 +4872,7 @@ final class CombatWorld {
             CombatWorld.c(-128);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ee.L(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ee.L(" + param0 + ')');
         }
     }
 
@@ -4909,7 +4909,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.V(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.V(" + obfuscationGuard + ')');
         }
     }
 
@@ -5038,7 +5038,7 @@ final class CombatWorld {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -5083,7 +5083,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5100,7 +5100,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.I(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.I(" + param0 + ')');
         }
     }
 
@@ -5170,7 +5170,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "ee.Q(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "ee.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5281,7 +5281,7 @@ final class CombatWorld {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
         }
     }
 
@@ -5335,7 +5335,7 @@ final class CombatWorld {
           }
           if (stackIn_29_0 != 0 ||
             var2_int != 0) {
-            if (0 < mm.a((byte) 123, var4)) {
+            if (0 < ClockAndCookieHelpers.countSetBits((byte) 123, var4)) {
               return;
             }
             this.a(var6, (byte) -109);
@@ -5343,7 +5343,7 @@ final class CombatWorld {
               return;
             }
           }
-          if (mm.a((byte) 127, var3) > 1 &&
+          if (ClockAndCookieHelpers.countSetBits((byte) 127, var3) > 1 &&
             var5 != 0) {
             return;
           }
@@ -5352,7 +5352,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.K(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.K(" + obfuscationGuard + ')');
         }
     }
 
@@ -5479,7 +5479,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var8), "ee.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var8), "ee.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -5518,7 +5518,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.AB(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.AB(" + param0 + ')');
         }
     }
 
@@ -5554,7 +5554,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.CA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ee.CA(" + param0 + ')');
         }
     }
 
@@ -5580,7 +5580,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "ee.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "ee.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5646,7 +5646,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4_ref), "ee.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4_ref), "ee.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5854,7 +5854,7 @@ final class CombatWorld {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -5876,7 +5876,7 @@ final class CombatWorld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "ee.GA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "ee.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6100,7 +6100,7 @@ final class CombatWorld {
           } else {
             stackIn_135_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_130_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_130_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -6222,7 +6222,7 @@ final class CombatWorld {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -6458,7 +6458,7 @@ final class CombatWorld {
           } else {
             stackIn_133_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_132_1).append(stackIn_133_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_132_1).append(stackIn_133_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

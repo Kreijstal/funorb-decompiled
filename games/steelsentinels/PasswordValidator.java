@@ -8,7 +8,7 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_o;
     private EditableTextWidget field_p;
 
-    final vd a(String param0, int param1) {
+    final vd validateText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -52,7 +52,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -101,11 +101,11 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int param0, String param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -131,7 +131,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           var5 = var4;
-          if (QuickChatCategory.a(-30157, var5)) {
+          if (QuickChatCategory.isLengthOutOfRange(-30157, var5)) {
             stackIn_6_0 = AccountNamePrompt.field_Zb;
             return stackIn_6_0;
           }
@@ -139,8 +139,8 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_10_0 = ReflectionCheck.field_u;
             return stackIn_10_0;
           }
-          if (eb.b(var5, 29974)) {
-            stackIn_14_0 = pc.field_s;
+          if (AgeValidator.b(var5, 29974)) {
+            stackIn_14_0 = PlayingSound.field_s;
             return stackIn_14_0;
           }
           if (param0 != 100) {
@@ -179,7 +179,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_p = param1;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class PasswordValidator extends TextFieldValidator {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = mm.field_g;
+          var6 = ClockAndCookieHelpers.field_g;
           var6.writeCipheredOpcode(param0, (byte) -117);
           var6.position = var6.position + 1;
           var4 = var6.position;
@@ -241,7 +241,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class PasswordValidator extends TextFieldValidator {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!kf.a((char) var3, (byte) -59) &&
-              !TextButton.a(-4278, (char) var3)) {
+              !TextButton.isAsciiDigit(-4278, (char) var3)) {
               return true;
             }
           }
@@ -276,7 +276,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

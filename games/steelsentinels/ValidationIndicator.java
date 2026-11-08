@@ -26,8 +26,8 @@ final class ValidationIndicator extends TextButton {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            rf.field_d = new CipherPacketBuffer(param8);
-            mm.field_g = new CipherPacketBuffer(param11);
+            LoginConnectionStage.field_d = new CipherPacketBuffer(param8);
+            ClockAndCookieHelpers.field_g = new CipherPacketBuffer(param11);
             StripedProgressBar.field_Z = param4;
             ScrollContainer.field_Wb = param3;
             UiTheme.field_l = param13;
@@ -38,13 +38,13 @@ final class ValidationIndicator extends TextButton {
               ValidationIndicator.g(-71);
             }
             ArchiveRequest.field_F = param6;
-            e.field_b = param1;
+            AccountRequestResult.field_b = param1;
             AccountRegistrationPanel.field_T = param7;
             ArticulatedPart.field_A = param0;
-            kk.field_d = param12;
+            TextAndMenuHelpers.field_d = param12;
             if (null != ArticulatedPart.field_A.field_m) {
               try {
-                va.field_h = new BufferedRandomAccessFile(ArticulatedPart.field_A.field_m, 64, 0);
+                LoginDialogHelpers.field_h = new BufferedRandomAccessFile(ArticulatedPart.field_A.field_m, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -68,7 +68,7 @@ final class ValidationIndicator extends TextButton {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -90,10 +90,10 @@ final class ValidationIndicator extends TextButton {
           if (PasswordValidator.b(param0, 75)) {
             return false;
           }
-          if (eb.b(param0, 29974)) {
+          if (AgeValidator.b(param0, 29974)) {
             return false;
           }
-          if (QuickChatCategory.a(-30157, param0)) {
+          if (QuickChatCategory.isLengthOutOfRange(-30157, param0)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -126,7 +126,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -147,19 +147,19 @@ final class ValidationIndicator extends TextButton {
         if (param0 > -58) {
           return;
         }
-        ci.a(param1, (byte) 122);
+        ClientErrorSupport.updateOverlays(param1, (byte) 122);
     }
 
     final static void g(int param0) {
         jn.field_g = true;
-        ib.field_b = param0;
+        ChatPanelHelpers.field_b = param0;
     }
 
     ValidationIndicator(ValidationSource param0) {
         try {
           this.field_db = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class ValidationIndicator extends TextButton {
         try {
           lf.a();
           kf.field_t = new int[260];
-          cj.field_j = 11;
+          ArchiveLoadSequence.field_j = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
             kf.field_t[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
@@ -193,7 +193,7 @@ final class ValidationIndicator extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "lk.Q(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "lk.Q(" + param0 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class ValidationIndicator extends TextButton {
           }
           super.updateHover(param0, 123, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "lk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "lk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class ValidationIndicator extends TextButton {
         }
         var5 = param2 - (-this.field_o - (this.field_x >> 1));
         var6 = param0 + (this.field_z + (this.field_E >> 1));
-        var8 = this.field_db.a((byte) 21);
+        var8 = this.field_db.validationState((byte) 21);
         if (Bzip2State.field_J != var8 &&
           TextHotspotWidget.field_Y != var8) {
           if (var8 == ArchiveProvider.field_d) {
@@ -253,14 +253,14 @@ final class ValidationIndicator extends TextButton {
             IterableNodeHashTable.a(qf.field_f, (byte) -108);
           }
           var12.drawRotatedAboutPivot(112, 144, var12.field_z << 4, var12.field_B << 4, -this.field_ab << 10, 4096);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(106);
+          MatchingTextValidator.popRasterStateWithIntGuard(106);
           qf.field_f.drawAdditive(-var12.field_z + var5, -var12.field_B + var6, 256);
         }
     }
 
     final String getTooltip(int param0) {
         if (this.field_C) {
-          return this.field_db.a(true);
+          return this.field_db.validationMessage(true);
         }
         if (param0 == 0) {
           return null;
@@ -291,7 +291,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -310,6 +310,6 @@ final class ValidationIndicator extends TextButton {
         if (param0 > -58) {
           return;
         }
-        ci.a(param1, (byte) 122);
+        ClientErrorSupport.updateOverlays(param1, (byte) 122);
     }
 }

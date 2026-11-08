@@ -27,8 +27,8 @@ class UsernameCredentials extends LoginCredentials {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 <= oh.field_f) {
-            if (param3 + param4 > oh.field_f) {
+          if (param4 <= LobbySetupHelpers.field_f) {
+            if (param3 + param4 > LobbySetupHelpers.field_f) {
               if (param1 <= DelegatingCanvas.field_c) {
                 stackIn_10_0 = (DelegatingCanvas.field_c <= param1 + param0) ? 1 : 0;
               } else {
@@ -46,7 +46,7 @@ class UsernameCredentials extends LoginCredentials {
           if (param5 != 12490) {
             return false;
           }
-          var8 = pl.field_T;
+          var8 = BirthDateEntryPanel.field_T;
           jm.a(param1, param0, var8, 1, param4, param3);
           if (param2 != null) {
             AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(param5 - 12448, param2), param4 + param3 / 2, param1 + (AlphaContainer.field_U.field_U + (param0 + 1)) / 2, var7, -1);
@@ -63,11 +63,11 @@ class UsernameCredentials extends LoginCredentials {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void writeTo(PacketBuffer param0, boolean param1) {
         try {
           param0.writeLong(-28875, this.field_i);
           if (param1) {
@@ -75,11 +75,11 @@ class UsernameCredentials extends LoginCredentials {
           }
           param0.a(this.field_m, (byte) -66);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "fb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "fb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    dj a(byte param0) {
+    dj type(byte param0) {
         if (param0 <= 47) {
           return (dj) null;
         }
@@ -91,7 +91,7 @@ class UsernameCredentials extends LoginCredentials {
           this.field_m = param1;
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ class UsernameCredentials extends LoginCredentials {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "fb.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "fb.B(" + param0 + ')');
         }
     }
 

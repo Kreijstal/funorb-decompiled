@@ -9,12 +9,12 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
     static String field_h;
     static int field_l;
 
-    final vd b(int param0) {
+    final vd evaluateState(int param0) {
         if (param0 == -31992) {
-          return this.a(this.field_k.field_y, -1);
+          return this.validateText(this.field_k.field_y, -1);
         }
-        this.b(-105);
-        return this.a(this.field_k.field_y, -1);
+        this.evaluateState(-105);
+        return this.validateText(this.field_k.field_y, -1);
     }
 
     public static void releaseStatics(byte param0) {
@@ -31,7 +31,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         field_i = null;
     }
 
-    public final boolean b(boolean param0) {
+    public final boolean isEmpty(boolean param0) {
         if (!param0) {
           return false;
         }
@@ -50,11 +50,11 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(ak param0, ak param1, ak param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19) {
+    final static void a(SpriteFrame param0, SpriteFrame param1, SpriteFrame param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -75,10 +75,10 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           NumericDateInputWidget.field_ib = param3;
           MouseWheelInput.field_a = param18;
           BufferedRandomAccessFile.a(param14, param19, param7, param12, (byte) -89);
-          TabbedPanel.a(param1, param10, param16, -89);
-          en.a((byte) -55, param2, param15, param4, param0, param5);
+          TabbedPanel.setDialogFrame(param1, param10, param16, -89);
+          LoadingScreenHelpers.configurePopupStyle((byte) -55, param2, param15, param4, param0, param5);
           of.a(param9, param6, 11);
-          dk.a(-92, param17, param13, param8);
+          DualNodeHashTable.setPopupMenuColours(-92, param17, param13, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,23 +114,23 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
         }
     }
 
-    abstract String a(int param0, String param1);
+    abstract String messageForText(int param0, String param1);
 
     TextFieldValidator(EditableTextWidget param0) {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static pc a(int param0, PcmSample param1) {
+    final static PlayingSound a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
-        pc stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -151,17 +151,17 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    abstract vd a(String param0, int param1);
+    abstract vd validateText(String param0, int param1);
 
-    final String b(byte param0) {
+    final String evaluateMessage(byte param0) {
         if (param0 != -42) {
           return (String) null;
         }
-        return this.a(100, this.field_k.field_y);
+        return this.messageForText(100, this.field_k.field_y);
     }
 
     public final void onTextChanged(EditableTextWidget param0, byte param1) {
@@ -169,9 +169,9 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           return;
         }
         try {
-          this.a(-17382);
+          this.markChanged(-17382);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ia.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ia.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

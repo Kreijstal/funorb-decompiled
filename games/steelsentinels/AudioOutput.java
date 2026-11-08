@@ -85,7 +85,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_u = mm.a(-58) + 2000L;
+            this.field_u = ClockAndCookieHelpers.monotonicMillis(-58) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -126,7 +126,7 @@ class AudioOutput {
           if (this.field_h) {
             return;
           }
-          var1 = mm.a(87);
+          var1 = ClockAndCookieHelpers.monotonicMillis(87);
           try {
             if (var1 > this.field_q + 6000L) {
               this.field_q = var1 - 6000L;
@@ -134,7 +134,7 @@ class AudioOutput {
             while (var1 > this.field_q + 5000L) {
               this.skipSamples(256);
               this.field_q = this.field_q + (long)(256000 / field_g);
-              var1 = mm.a(-99);
+              var1 = ClockAndCookieHelpers.monotonicMillis(-99);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -251,7 +251,7 @@ class AudioOutput {
                 field_e == null) {
                 field_e = new AudioService();
                 field_e.field_j = param0;
-                param0.a(2, field_k, (Runnable) ((Object) field_e));
+                param0.requestThread(2, field_k, (Runnable) ((Object) field_e));
               }
               if (field_e != null) {
                 if (field_e.field_e[param2] != null) {
@@ -417,13 +417,13 @@ class AudioOutput {
         if (this.field_c != null) {
           this.field_c.mixInto(param0, 0, param1);
         }
-        this.field_q = mm.a(115);
+        this.field_q = ClockAndCookieHelpers.monotonicMillis(115);
     }
 
     AudioOutput() {
         this.field_i = 32;
         this.field_h = false;
-        this.field_q = mm.a(-110);
+        this.field_q = ClockAndCookieHelpers.monotonicMillis(-110);
         this.field_n = 0;
         this.field_u = 0L;
         this.field_d = 0;

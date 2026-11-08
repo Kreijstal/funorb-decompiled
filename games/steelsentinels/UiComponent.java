@@ -23,7 +23,7 @@ class UiComponent extends IntrusiveNode {
     WidgetPainter field_p;
     int field_o;
 
-    final boolean a(byte param0, boolean param1, int param2, int param3) {
+    final boolean handlePointerFrame(byte param0, boolean param1, int param2, int param3) {
         int var5;
         DraggableWidget var6;
         int var7;
@@ -43,13 +43,13 @@ class UiComponent extends IntrusiveNode {
         int var5Lifetime1;
         var7 = SteelSentinels.obfuscationControl;
         if (param0 < 13) {
-          this.a(-27, (byte) 80, -80, 119, 8);
+          this.setBounds(-27, (byte) 80, -80, 119, 8);
           this.updateHover(param3, 71, this, param2);
           var5 = this.isFocused(0) ? 1 : 0;
           if (param1) {
             if (jj.field_d != 0 &&
               var5 != 0) {
-              this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
+              this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
             }
             if (VerticalScrollbar.field_gc != 0) {
               if (this.handlePointerPress(BufferedRandomAccessFile.field_j, this, param3, TextButton.field_S, param2, true, VerticalScrollbar.field_gc)) {
@@ -65,12 +65,12 @@ class UiComponent extends IntrusiveNode {
               }
             }
             if (0 == WeightedLruCache.field_d &&
-              ba.field_c != 0) {
-              this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+              QuickChatInputHelpers.field_c != 0) {
+              this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
               var8 = WeightedLruCache.field_e;
               if (var8 != null) {
                 if (var8.field_A instanceof WidgetDropListener) {
-                  ((WidgetDropListener) (var8.field_A)).a(var8, (DropTargetWidget) null, 103);
+                  ((WidgetDropListener) (var8.field_A)).onDropped(var8, (DropTargetWidget) null, 103);
                 }
                 WeightedLruCache.field_e = null;
               }
@@ -82,16 +82,16 @@ class UiComponent extends IntrusiveNode {
               if (var7 != 0) {
                 if (jj.field_d != 0 &&
                   var5 != 0) {
-                  this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
+                  this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
                 }
                 if (VerticalScrollbar.field_gc == 0) {
                   if (0 == WeightedLruCache.field_d &&
-                    ba.field_c != 0) {
-                    this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                    QuickChatInputHelpers.field_c != 0) {
+                    this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                     var22 = WeightedLruCache.field_e;
                     if (var22 != null) {
                       if (var22.field_A instanceof WidgetDropListener) {
-                        ((WidgetDropListener) (var22.field_A)).a(var22, (DropTargetWidget) null, 103);
+                        ((WidgetDropListener) (var22.field_A)).onDropped(var22, (DropTargetWidget) null, 103);
                       }
                       WeightedLruCache.field_e = null;
                     }
@@ -102,12 +102,12 @@ class UiComponent extends IntrusiveNode {
                   }
                   if (var5 == 0) {
                     if (0 == WeightedLruCache.field_d &&
-                      ba.field_c != 0) {
-                      this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                      QuickChatInputHelpers.field_c != 0) {
+                      this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                       var22 = WeightedLruCache.field_e;
                       if (var22 != null) {
                         if (var22.field_A instanceof WidgetDropListener) {
-                          ((WidgetDropListener) (var22.field_A)).a(var22, (DropTargetWidget) null, 103);
+                          ((WidgetDropListener) (var22.field_A)).onDropped(var22, (DropTargetWidget) null, 103);
                         }
                         WeightedLruCache.field_e = null;
                       }
@@ -115,12 +115,12 @@ class UiComponent extends IntrusiveNode {
                   } else {
                     this.refreshChildLayouts((byte) -45);
                     if (0 == WeightedLruCache.field_d &&
-                      ba.field_c != 0) {
-                      this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                      QuickChatInputHelpers.field_c != 0) {
+                      this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                       var17 = WeightedLruCache.field_e;
                       if (var17 != null) {
                         if (var17.field_A instanceof WidgetDropListener) {
-                          ((WidgetDropListener) (var17.field_A)).a(var17, (DropTargetWidget) null, 103);
+                          ((WidgetDropListener) (var17.field_A)).onDropped(var17, (DropTargetWidget) null, 103);
                         }
                         WeightedLruCache.field_e = null;
                       }
@@ -130,7 +130,7 @@ class UiComponent extends IntrusiveNode {
               }
             }
           }
-          ba.field_c = WeightedLruCache.field_d;
+          QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
           hg.a(-127, this.getTooltip(0));
           return param1;
         }
@@ -142,16 +142,16 @@ class UiComponent extends IntrusiveNode {
             this.refreshChildLayouts((byte) -45);
             if (var7 != 0) {
               if (jj.field_d != 0) {
-                this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
+                this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
               }
               if (VerticalScrollbar.field_gc == 0) {
                 if (0 == WeightedLruCache.field_d &&
-                  ba.field_c != 0) {
-                  this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                  QuickChatInputHelpers.field_c != 0) {
+                  this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                   var27 = WeightedLruCache.field_e;
                   if (var27 != null) {
                     if (var27.field_A instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var27.field_A)).a(var27, (DropTargetWidget) null, 103);
+                      ((WidgetDropListener) (var27.field_A)).onDropped(var27, (DropTargetWidget) null, 103);
                     }
                     WeightedLruCache.field_e = null;
                   }
@@ -162,12 +162,12 @@ class UiComponent extends IntrusiveNode {
                 }
                 this.refreshChildLayouts((byte) -45);
                 if (0 == WeightedLruCache.field_d &&
-                  ba.field_c != 0) {
-                  this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                  QuickChatInputHelpers.field_c != 0) {
+                  this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                   var31 = WeightedLruCache.field_e;
                   if (var31 != null) {
                     if (var31.field_A instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var31.field_A)).a(var31, (DropTargetWidget) null, 103);
+                      ((WidgetDropListener) (var31.field_A)).onDropped(var31, (DropTargetWidget) null, 103);
                     }
                     WeightedLruCache.field_e = null;
                   }
@@ -180,13 +180,13 @@ class UiComponent extends IntrusiveNode {
             if (var5Lifetime1 == 0) {
               if (VerticalScrollbar.field_gc == 0) {
                 if (0 == WeightedLruCache.field_d &&
-                  ba.field_c != 0) {
-                  this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                  QuickChatInputHelpers.field_c != 0) {
+                  this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                   var36 = WeightedLruCache.field_e;
                   var6 = var36;
                   if (var36 != null) {
                     if (var36.field_A instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var36.field_A)).a(var36, (DropTargetWidget) null, 103);
+                      ((WidgetDropListener) (var36.field_A)).onDropped(var36, (DropTargetWidget) null, 103);
                     }
                     WeightedLruCache.field_e = null;
                   }
@@ -197,12 +197,12 @@ class UiComponent extends IntrusiveNode {
                     param1 = false;
                     if (var7 == 0) {
                       if (0 == WeightedLruCache.field_d &&
-                        ba.field_c != 0) {
-                        this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                        QuickChatInputHelpers.field_c != 0) {
+                        this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                         var38 = WeightedLruCache.field_e;
                         if (var38 != null) {
                           if (var38.field_A instanceof WidgetDropListener) {
-                            ((WidgetDropListener) (var38.field_A)).a(var38, (DropTargetWidget) null, 103);
+                            ((WidgetDropListener) (var38.field_A)).onDropped(var38, (DropTargetWidget) null, 103);
                           }
                           WeightedLruCache.field_e = null;
                         }
@@ -211,32 +211,32 @@ class UiComponent extends IntrusiveNode {
                     }
                   }
                   if (0 == WeightedLruCache.field_d &&
-                    ba.field_c != 0) {
-                    this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                    QuickChatInputHelpers.field_c != 0) {
+                    this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                     var38 = WeightedLruCache.field_e;
                     if (var38 != null) {
                       if (var38.field_A instanceof WidgetDropListener) {
-                        ((WidgetDropListener) (var38.field_A)).a(var38, (DropTargetWidget) null, 103);
+                        ((WidgetDropListener) (var38.field_A)).onDropped(var38, (DropTargetWidget) null, 103);
                       }
                       WeightedLruCache.field_e = null;
                     }
                   }
                 }
               }
-              ba.field_c = WeightedLruCache.field_d;
+              QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
               hg.a(-127, this.getTooltip(0));
               return param1;
             }
-            this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
+            this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
           }
           if (VerticalScrollbar.field_gc == 0) {
             if (0 == WeightedLruCache.field_d &&
-              ba.field_c != 0) {
-              this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+              QuickChatInputHelpers.field_c != 0) {
+              this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
               var39 = WeightedLruCache.field_e;
               if (var39 != null) {
                 if (var39.field_A instanceof WidgetDropListener) {
-                  ((WidgetDropListener) (var39.field_A)).a(var39, (DropTargetWidget) null, 103);
+                  ((WidgetDropListener) (var39.field_A)).onDropped(var39, (DropTargetWidget) null, 103);
                 }
                 WeightedLruCache.field_e = null;
               }
@@ -246,29 +246,29 @@ class UiComponent extends IntrusiveNode {
               param1 = false;
               if (var7 == 0) {
                 if (0 == WeightedLruCache.field_d &&
-                  ba.field_c != 0) {
-                  this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                  QuickChatInputHelpers.field_c != 0) {
+                  this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                   var41 = WeightedLruCache.field_e;
                   if (var41 != null) {
                     if (var41.field_A instanceof WidgetDropListener) {
-                      ((WidgetDropListener) (var41.field_A)).a(var41, (DropTargetWidget) null, 103);
+                      ((WidgetDropListener) (var41.field_A)).onDropped(var41, (DropTargetWidget) null, 103);
                     }
                     WeightedLruCache.field_e = null;
                   }
                 }
-                ba.field_c = WeightedLruCache.field_d;
+                QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
                 hg.a(-127, this.getTooltip(0));
                 return param1;
               }
             }
             if (var5Lifetime1 == 0) {
               if (0 == WeightedLruCache.field_d &&
-                ba.field_c != 0) {
-                this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                QuickChatInputHelpers.field_c != 0) {
+                this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                 var41 = WeightedLruCache.field_e;
                 if (var41 != null) {
                   if (var41.field_A instanceof WidgetDropListener) {
-                    ((WidgetDropListener) (var41.field_A)).a(var41, (DropTargetWidget) null, 103);
+                    ((WidgetDropListener) (var41.field_A)).onDropped(var41, (DropTargetWidget) null, 103);
                   }
                   WeightedLruCache.field_e = null;
                 }
@@ -276,12 +276,12 @@ class UiComponent extends IntrusiveNode {
             } else {
               this.refreshChildLayouts((byte) -45);
               if (0 == WeightedLruCache.field_d &&
-                ba.field_c != 0) {
-                this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
+                QuickChatInputHelpers.field_c != 0) {
+                this.onPointerReleased((byte) 87, LobbySetupHelpers.field_f, param2, param3, this, DelegatingCanvas.field_c);
                 var40 = WeightedLruCache.field_e;
                 if (var40 != null) {
                   if (var40.field_A instanceof WidgetDropListener) {
-                    ((WidgetDropListener) (var40.field_A)).a(var40, (DropTargetWidget) null, 103);
+                    ((WidgetDropListener) (var40.field_A)).onDropped(var40, (DropTargetWidget) null, 103);
                   }
                   WeightedLruCache.field_e = null;
                 }
@@ -289,7 +289,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
         }
-        ba.field_c = WeightedLruCache.field_d;
+        QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
         hg.a(-127, this.getTooltip(0));
         return param1;
     }
@@ -299,7 +299,7 @@ class UiComponent extends IntrusiveNode {
           this.field_w = 0;
           int var7_int = 10 % ((36 - param0) / 32);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "lh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "lh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -429,7 +429,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param17).append(',').append(param18).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param17).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -463,7 +463,7 @@ class UiComponent extends IntrusiveNode {
         if (param0 == 0) {
           return !this.field_C ? null : this.field_v;
         }
-        this.a(true, -90, 'ﾝ');
+        this.handleKey(true, -90, 'ﾝ');
         return !this.field_C ? null : this.field_v;
     }
 
@@ -477,7 +477,7 @@ class UiComponent extends IntrusiveNode {
           if (!param5) {
             this.field_C = false;
           }
-          if (!this.a(param0, param4, (byte) 81, param3, param2)) {
+          if (!this.hitTest(param0, param4, (byte) 81, param3, param2)) {
             return false;
           }
           this.field_w = param6;
@@ -492,18 +492,18 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    int b(boolean param0) {
+    int maximumRenderLayer(boolean param0) {
         if (!param0) {
           return 39;
         }
         return 0;
     }
 
-    final boolean a(StringBuilder param0, byte param1, int param2, Hashtable param3) {
+    final boolean beginDebugDescription(StringBuilder param0, byte param1, int param2, Hashtable param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -538,7 +538,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 < -71) {
           this.field_x = param3;
           this.field_o = param0;
@@ -564,7 +564,7 @@ class UiComponent extends IntrusiveNode {
           this.field_z = param2;
           return;
         }
-        this.a(-34, (Hashtable) null, true, (StringBuilder) null);
+        this.appendDebugBody(-34, (Hashtable) null, true, (StringBuilder) null);
         this.field_x = param3;
         this.field_o = param0;
         this.field_E = param4;
@@ -584,7 +584,7 @@ class UiComponent extends IntrusiveNode {
         this.field_p.drawWidget(param2, this, (byte) -30, true, param0);
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4) {
+    final boolean hitTest(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 != 81) {
           return false;
         }
@@ -603,7 +603,7 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    final void a(int param0, Hashtable param1, boolean param2, StringBuilder param3) {
+    final void appendDebugBody(int param0, Hashtable param1, boolean param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -640,16 +640,16 @@ class UiComponent extends IntrusiveNode {
             if (!(this.field_p instanceof UiComponent)) {
               discarded$5 = param3.append(this.field_p);
               if (var6 != 0) {
-                param3 = this.a(param1, param3, (byte) -127, param0 + 1);
+                param3 = this.appendDebugTree(param1, param3, (byte) -127, param0 + 1);
               }
             } else {
-              param3 = this.a(param1, param3, (byte) -127, param0 + 1);
+              param3 = this.appendDebugTree(param1, param3, (byte) -127, param0 + 1);
             }
           }
           if (this.field_A != null) {
             discarded$6 = param3.append(" listener=");
             if (this.field_A instanceof UiComponent) {
-              param3 = this.a(param1, param3, (byte) -125, 1 + param0);
+              param3 = this.appendDebugTree(param1, param3, (byte) -125, 1 + param0);
               if (var6 == 0) {
                 return;
               }
@@ -674,7 +674,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -699,23 +699,23 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final void e(byte param0) {
-        this.a(this.field_o, (byte) -87, this.field_z, this.field_x, this.field_E);
+    final void refreshLayout(byte param0) {
+        this.setBounds(this.field_o, (byte) -87, this.field_z, this.field_x, this.field_E);
         if (param0 <= 31) {
-          this.b(false);
+          this.maximumRenderLayer(false);
           return;
         }
     }
 
     UiComponent(String param0, UiListener param1) {
-        this(param0, ad.field_j.field_h, param1);
+        this(param0, LoadoutHelpers.field_j.field_h, param1);
     }
 
-    boolean a(byte param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
+    boolean onMouseWheel(byte param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -736,7 +736,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -748,7 +748,7 @@ class UiComponent extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(new Hashtable(), new StringBuilder(), (byte) -122, 0).toString();
+        return this.appendDebugTree(new Hashtable(), new StringBuilder(), (byte) -122, 0).toString();
     }
 
     void updateHover(int param0, int param1, UiComponent param2, int param3) {
@@ -764,16 +764,16 @@ class UiComponent extends IntrusiveNode {
           if (param1 <= 56) {
             field_B = 69;
           }
-          var5_int = this.a(DelegatingCanvas.field_c, param3, (byte) 81, oh.field_f, param0) ? 1 : 0;
+          var5_int = this.hitTest(DelegatingCanvas.field_c, param3, (byte) 81, LobbySetupHelpers.field_f, param0) ? 1 : 0;
           stackIn_5_0 = (this.field_C) ? 0 : 1;
           if (stackIn_5_0 == var5_int) {
             stackIn_9_1 = (var5_int != 0);
             this.field_C = stackIn_9_1;
             if (null != this.field_A) {
-              if (!(this.field_A instanceof af)) {
+              if (!(this.field_A instanceof WidgetHoverListener)) {
                 return;
               }
-              ((af) (this.field_A)).a(var5_int != 0, (byte) -14, this);
+              ((WidgetHoverListener) (this.field_A)).onHoverChanged(var5_int != 0, (byte) -14, this);
             }
           }
           return;
@@ -787,11 +787,11 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
+    StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, byte param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -806,8 +806,8 @@ class UiComponent extends IntrusiveNode {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param1, (byte) -91, param3, param0)) {
-            this.a(param3, param0, false, param1);
+          if (this.beginDebugDescription(param1, (byte) -91, param3, param0)) {
+            this.appendDebugBody(param3, param0, false, param1);
           }
           stackIn_7_0 = (StringBuilder) (param1);
           return stackIn_7_0;
@@ -827,17 +827,17 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void render(int param0, int param1, byte param2) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         var6 = SteelSentinels.obfuscationControl;
-        var4 = this.b(true);
+        var4 = this.maximumRenderLayer(true);
         var5_int = 0;
         if (param2 == -128) {
           while (var5_int <= var4) {
@@ -861,18 +861,18 @@ class UiComponent extends IntrusiveNode {
         }
         var5 = NodeIterator.b((byte) -122);
         if (var5 != null) {
-          ad.field_j.a(eh.field_a, var5, t.field_l, 15658734);
+          LoadoutHelpers.field_j.drawTooltip(SocialListUiHelpers.field_a, var5, t.field_l, 15658734);
         }
     }
 
-    final boolean a(boolean param0, int param1, char param2) {
+    final boolean handleKey(boolean param0, int param1, char param2) {
         int var4 = 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         if (!this.isFocused(0)) {
           if (!param0) {
-            this.a((Hashtable) null, (StringBuilder) null, (byte) -79, 35);
+            this.appendDebugTree((Hashtable) null, (StringBuilder) null, (byte) -79, 35);
             var4 = param1;
             if (80 == var4) {
               return this.focusNext(1, this);
@@ -889,7 +889,7 @@ class UiComponent extends IntrusiveNode {
           return true;
         }
         if (!param0) {
-          this.a((Hashtable) null, (StringBuilder) null, (byte) -79, 35);
+          this.appendDebugTree((Hashtable) null, (StringBuilder) null, (byte) -79, 35);
           var4Lifetime1 = param1;
           if (80 == var4Lifetime1) {
             return this.focusNext(1, this);
@@ -953,7 +953,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -968,7 +968,7 @@ class UiComponent extends IntrusiveNode {
           this.field_x = param2;
           this.field_p = param4;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "lh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "lh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

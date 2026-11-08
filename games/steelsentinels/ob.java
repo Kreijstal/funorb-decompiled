@@ -29,7 +29,7 @@ final class ob extends IntrusiveNode {
           if (!jn.field_g) {
             return false;
           }
-          if (ib.field_b == 2 &&
+          if (ChatPanelHelpers.field_b == 2 &&
             StripedProgressBar.field_U != null) {
             var3 = (CharSequence) ((Object) param1);
             if (StripedProgressBar.field_U.equals(AlphaContainer.a(1, var3))) {
@@ -47,7 +47,7 @@ final class ob extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

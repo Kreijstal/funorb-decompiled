@@ -40,12 +40,12 @@ final class cl {
         RuntimeException var3 = null;
         try {
           DelayedServerPacket.field_A = false;
-          rg.field_e = false;
+          PopupMenuHelpers.field_e = false;
           if (param2 != 1) {
             return;
           }
-          if (ch.field_O != null) {
-            if (!ch.field_O.field_Q) {
+          if (ArrayWidgetContainer.field_O != null) {
+            if (!ArrayWidgetContainer.field_O.field_Q) {
               return;
             }
             if (param1 == 8) {
@@ -55,7 +55,7 @@ final class cl {
               } else {
                 param0 = SectorCacheStore.field_k;
               }
-              AccountNoticeDialog.field_kb.a(cc.field_Xb, -45);
+              AccountNoticeDialog.field_kb.setUsername(LobbyPlayer.field_Xb, -45);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -63,20 +63,20 @@ final class cl {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (rg.field_e) {
-                param0 = SocketConnector.a(GameplayController.field_T, -58, new String[]{param0});
+              if (PopupMenuHelpers.field_e) {
+                param0 = SocketConnector.formatTemplate(GameplayController.field_T, -58, new String[]{param0});
               }
               if (EmailAvailabilityValidator.field_p) {
                 param0 = ph.field_c;
               }
-              ch.field_O.a(param0, (byte) -97, param1);
+              ArrayWidgetContainer.field_O.showResultMessage(param0, (byte) -97, param1);
             }
             if (256 != param1) {
               if (param1 == 10) {
                 return;
               }
               if (!LoginMethod.field_d) {
-                AccountNoticeDialog.field_kb.j(param2 + 62);
+                AccountNoticeDialog.field_kb.clearFields(param2 + 62);
                 return;
               }
             }
@@ -92,7 +92,7 @@ final class cl {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -145,46 +145,46 @@ final class cl {
           in.field_a = param2;
           TextHotspotRegion.field_r = true;
           if (in.field_a == 0) {
-            var3_int = tc.a(ud.field_C, pa.field_k, 75, uj.field_c, TextButton.field_J);
+            var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, uj.field_c, TextButton.field_J);
             var4 = var3_int + 3;
             LinkButtonPainter.field_m = new int[var4];
             ProxySocketConnector.field_j = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               LinkButtonPainter.field_m[var5] = -1;
             }
-            oc.field_b = new int[2];
+            MessageMenuHelpers.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
             }
             ProxySocketConnector.field_j[-3 + var4] = "";
             ProxySocketConnector.field_j[-2 + var4] = dg.field_f;
             LinkButtonPainter.field_m[var4 - 2] = 0;
-            oc.field_b[0] = 4;
+            MessageMenuHelpers.field_b[0] = 4;
             ProxySocketConnector.field_j[-1 + var4] = EditableTextWidget.field_cb;
             LinkButtonPainter.field_m[-1 + var4] = 1;
-            oc.field_b[1] = 5;
+            MessageMenuHelpers.field_b[1] = 5;
           } else if (in.field_a == 1) {
-            var3_int = tc.a(ud.field_C, pa.field_k, 75, uj.field_c, TextButton.field_J);
+            var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, uj.field_c, TextButton.field_J);
             var4 = var3_int + 2;
             ProxySocketConnector.field_j = new String[var4];
             LinkButtonPainter.field_m = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               LinkButtonPainter.field_m[var5] = -1;
             }
-            oc.field_b = new int[1];
+            MessageMenuHelpers.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
             }
             ProxySocketConnector.field_j[var4 - 2] = "";
             ProxySocketConnector.field_j[-1 + var4] = EditableTextWidget.field_cb;
             LinkButtonPainter.field_m[-1 + var4] = 0;
-            oc.field_b[0] = 5;
+            MessageMenuHelpers.field_b[0] = 5;
           } else if (2 != in.field_a) {
             if (in.field_a == 3) {
               if (!IterableDualNodeDeque.field_i.field_x) {
-                var3_int = tc.a(ud.field_C, pa.field_k, 75, ProxySocketConnector.field_p, TextButton.field_J);
+                var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, ProxySocketConnector.field_p, TextButton.field_J);
               } else {
-                var3_int = tc.a(ud.field_C, pa.field_k, 75, kk.field_e, TextButton.field_J);
+                var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, TextAndMenuHelpers.field_e, TextButton.field_J);
               }
               var4 = 2 + var3_int;
               ProxySocketConnector.field_j = new String[var4];
@@ -192,55 +192,55 @@ final class cl {
               for (var5 = 0; var4 > var5; var5++) {
                 LinkButtonPainter.field_m[var5] = -1;
               }
-              oc.field_b = new int[1];
+              MessageMenuHelpers.field_b = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
               }
               ProxySocketConnector.field_j[-2 + var4] = "";
               ProxySocketConnector.field_j[var4 - 1] = EditableTextWidget.field_cb;
               LinkButtonPainter.field_m[-1 + var4] = 0;
-              oc.field_b[0] = 5;
+              MessageMenuHelpers.field_b[0] = 5;
             } else if (in.field_a == 4) {
-              var3_int = tc.a(ud.field_C, pa.field_k, 75, ValidationHelpWidget.field_gb, TextButton.field_J);
+              var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, ValidationHelpWidget.field_gb, TextButton.field_J);
               var4 = 2 + var3_int;
               ProxySocketConnector.field_j = new String[var4];
               LinkButtonPainter.field_m = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 LinkButtonPainter.field_m[var5] = -1;
               }
-              oc.field_b = new int[1];
+              MessageMenuHelpers.field_b = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
               }
               ProxySocketConnector.field_j[-2 + var4] = "";
               ProxySocketConnector.field_j[-1 + var4] = EditableTextWidget.field_cb;
               LinkButtonPainter.field_m[-1 + var4] = 0;
-              oc.field_b[0] = 5;
+              MessageMenuHelpers.field_b[0] = 5;
             } else {
               if (in.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = tc.a(ud.field_C, pa.field_k, 75, sl.field_q, TextButton.field_J);
+              var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, sl.field_q, TextButton.field_J);
               var4 = 3 + var3_int;
               ProxySocketConnector.field_j = new String[var4];
               LinkButtonPainter.field_m = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 LinkButtonPainter.field_m[var5] = -1;
               }
-              oc.field_b = new int[2];
+              MessageMenuHelpers.field_b = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
               }
               ProxySocketConnector.field_j[-3 + var4] = "";
-              ProxySocketConnector.field_j[var4 - 2] = ec.field_d;
+              ProxySocketConnector.field_j[var4 - 2] = ClientUiHelpers.field_d;
               LinkButtonPainter.field_m[var4 - 2] = 0;
-              oc.field_b[0] = 3;
+              MessageMenuHelpers.field_b[0] = 3;
               ProxySocketConnector.field_j[var4 - 1] = EditableTextWidget.field_cb;
               LinkButtonPainter.field_m[-1 + var4] = 1;
-              oc.field_b[1] = 5;
+              MessageMenuHelpers.field_b[1] = 5;
             }
           } else {
-            var3_int = tc.a(ud.field_C, pa.field_k, 75, SocketConnector.a(AlternateUsernameCredentials.field_t, -25, new String[]{"<br><%0><br>"}), TextButton.field_J);
+            var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, SocketConnector.formatTemplate(AlternateUsernameCredentials.field_t, -25, new String[]{"<br><%0><br>"}), TextButton.field_J);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextButton.field_J[var5])) {
@@ -256,7 +256,7 @@ final class cl {
             ArraySupport.copy(TextButton.field_J, 0, EmailAvailabilityValidator.field_n, 0, var4);
             dj.field_j = new String[-1 + (var3_int - var4)];
             ArraySupport.copy(TextButton.field_J, 1 + var4, dj.field_j, 0, -1 + (-var4 + var3_int));
-            var3_int = tc.a(ud.field_C, pa.field_k, 75, SocketConnector.a(IterableNodeHashTable.field_k, -89, new String[]{"<br><%0><br>"}), TextButton.field_J);
+            var3_int = HighscoreSubmission.wrapBalancedText(ud.field_C, pa.field_k, 75, SocketConnector.formatTemplate(IterableNodeHashTable.field_k, -89, new String[]{"<br><%0><br>"}), TextButton.field_J);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextButton.field_J[var5])) {
@@ -268,14 +268,14 @@ final class cl {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            oc.field_d = new String[var4];
-            ArraySupport.copy(TextButton.field_J, 0, oc.field_d, 0, var4);
+            MessageMenuHelpers.field_d = new String[var4];
+            ArraySupport.copy(TextButton.field_J, 0, MessageMenuHelpers.field_d, 0, var4);
             MouseWheelInput.field_g = new String[var3_int - var4 - 1];
             ArraySupport.copy(TextButton.field_J, 1 + var4, MouseWheelInput.field_g, 0, -1 + (var3_int - var4));
-            if (EmailAvailabilityValidator.field_n.length >= oc.field_d.length) {
+            if (EmailAvailabilityValidator.field_n.length >= MessageMenuHelpers.field_d.length) {
               stackIn_28_0 = EmailAvailabilityValidator.field_n.length;
             } else {
-              stackIn_28_0 = oc.field_d.length;
+              stackIn_28_0 = MessageMenuHelpers.field_d.length;
             }
             var5 = stackIn_28_0;
             if (dj.field_j.length >= MouseWheelInput.field_g.length) {
@@ -292,22 +292,22 @@ final class cl {
             }
             ProxySocketConnector.field_j[1] = CachedArchiveProvider.field_s;
             LinkButtonPainter.field_m[1] = 0;
-            oc.field_b = new int[2];
+            MessageMenuHelpers.field_b = new int[2];
             ProxySocketConnector.field_j[0] = LoadingProgressDialog.field_kb;
             ProxySocketConnector.field_j[4] = cd.field_d;
-            oc.field_b[0] = 5;
-            oc.field_b[1] = 2;
+            MessageMenuHelpers.field_b[0] = 5;
+            MessageMenuHelpers.field_b[1] = 2;
             LinkButtonPainter.field_m[3] = 1;
             ProxySocketConnector.field_j[5] = "";
             ProxySocketConnector.field_j[3] = qf.field_g;
-            ProxySocketConnector.field_j[2] = sf.field_i;
+            ProxySocketConnector.field_j[2] = TutorialStep.field_i;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_38_0 = ProxySocketConnector.field_j;
               stackIn_38_1 = 6 + var8Lifetime2;
-              if (oc.field_d.length + var8Lifetime2 - var5 < 0) {
+              if (MessageMenuHelpers.field_d.length + var8Lifetime2 - var5 < 0) {
                 stackIn_39_2 = "";
               } else {
-                stackIn_39_2 = oc.field_d[-var5 + var8Lifetime2 + oc.field_d.length];
+                stackIn_39_2 = MessageMenuHelpers.field_d[-var5 + var8Lifetime2 + MessageMenuHelpers.field_d.length];
               }
               stackIn_38_0[stackIn_38_1] = stackIn_39_2;
             }
@@ -323,15 +323,15 @@ final class cl {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_45_2;
             }
-            rb.field_c = mm.a(76);
+            rb.field_c = ClockAndCookieHelpers.monotonicMillis(76);
           }
-          DualNodeDeque.field_f.field_m = oc.field_b.length;
+          DualNodeDeque.field_f.field_m = MessageMenuHelpers.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; ProxySocketConnector.field_j.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_86_0 = ProxySocketConnector.field_j[var4Lifetime1];
             stackIn_86_1 = 52;
             stackIn_87_2 = !(0 > LinkButtonPainter.field_m[var4Lifetime1]);
-            var5Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(stackIn_86_0, stackIn_86_1, stackIn_87_2);
+            var5Lifetime1 = LobbyGameDecoding.measureMenuText(stackIn_86_0, stackIn_86_1, stackIn_87_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -341,7 +341,7 @@ final class cl {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var5Lifetime2 < var11.length; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(var12, 52, false);
+              var7Lifetime1 = LobbyGameDecoding.measureMenuText(var12, 52, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -349,7 +349,7 @@ final class cl {
             var4_ref_String__Lifetime1 = dj.field_j;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(var13, 52, false);
+              var7Lifetime1Lifetime1 = LobbyGameDecoding.measureMenuText(var13, 52, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -363,7 +363,7 @@ final class cl {
             if (LinkButtonPainter.field_m[var4Lifetime2] >= 0) {
               stackIn_111_1 = rn.field_q;
             } else {
-              stackIn_111_1 = ih.field_r;
+              stackIn_111_1 = EmailSyntaxValidator.field_r;
             }
             TickClock.field_d = stackIn_110_0 + stackIn_111_1;
           }
@@ -375,9 +375,9 @@ final class cl {
           while (ProxySocketConnector.field_j.length > var5Lifetime3) {
             var7Lifetime2 = LinkButtonPainter.field_m[var5Lifetime3];
             if (0 > var7Lifetime2) {
-              var6Lifetime1 = var6Lifetime1 + ih.field_r;
+              var6Lifetime1 = var6Lifetime1 + EmailSyntaxValidator.field_r;
             } else {
-              var8Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(ProxySocketConnector.field_j[var5Lifetime3], 52, true);
+              var8Lifetime1 = LobbyGameDecoding.measureMenuText(ProxySocketConnector.field_j[var5Lifetime3], 52, true);
               var9 = QuickChatMenu.field_kc - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + MembershipPromotionScreen.field_m;
               TextLayoutLine.field_c[var5Lifetime3] = new int[4];
@@ -390,15 +390,15 @@ final class cl {
             var5Lifetime3++;
           }
           if (in.field_a == 2) {
-            DualNodeDeque.field_f.a(param1, -1, 0, -1);
+            DualNodeDeque.field_f.initializeSelection(param1, -1, 0, -1);
           } else {
-            DualNodeDeque.field_f.a(param1, 0, 0, GameApplet.a(5, DelegatingCanvas.field_c, oh.field_f));
+            DualNodeDeque.field_f.initializeSelection(param1, 0, 0, GameApplet.findMenuOptionAt(5, DelegatingCanvas.field_c, LobbySetupHelpers.field_f));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "cl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "cl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

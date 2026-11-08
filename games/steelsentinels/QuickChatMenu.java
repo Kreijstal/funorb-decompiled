@@ -27,7 +27,7 @@ final class QuickChatMenu extends SceneWidget {
     static int field_kc;
     private char[] field_cc;
 
-    private final void c(int param0, int param1) {
+    private final void setCollapseTicks(int param0, int param1) {
         int var4 = 0;
         int var3 = 0;
         int var7 = SteelSentinels.obfuscationControl;
@@ -42,7 +42,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateItem(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -52,23 +52,23 @@ final class QuickChatMenu extends SceneWidget {
           return;
         }
         if (param0 == this.field_Sb) {
-          this.l(-124);
-          this.c(87, 0);
+          this.resetSelection(-124);
+          this.setCollapseTicks(87, 0);
         } else {
           if (this.field_Vb[param0] != null) {
-            this.l(77);
-            this.c(-89, 0);
+            this.resetSelection(77);
+            this.setCollapseTicks(-89, 0);
             this.field_Sb = param0;
             this.field_mc = this.field_Vb[this.field_Sb];
             MouseInputHandler.a(this.field_mc, -116);
-            this.field_mc.c(43, 12);
+            this.field_mc.setCollapseTicks(43, 12);
           } else {
             if (this.field_bc[param0] == -1) {
               AccountNoticeDialog.m(-6);
               WidgetStyleLayer.a(2);
             } else {
               var5 = this.field_bc[param0] | 32768;
-              var6 = ib.field_b;
+              var6 = ChatPanelHelpers.field_b;
               if (var6 == 0 &&
                 null != nf.field_b) {
                 var6 = 1;
@@ -77,8 +77,8 @@ final class QuickChatMenu extends SceneWidget {
                 TextLayoutLine.a(1, var6, param1, -18853);
               }
               var8 = (String) null;
-              QuickChatPhraseCache.a(param2, en.field_e, -6988, ib.field_b, var5, (String) null);
-              SentinelAnimationEditor.a(ImageProducerRasterBuffer.field_p, en.field_e, ib.field_b, -29368, var5);
+              QuickChatPhraseCache.sendReport(param2, LoadingScreenHelpers.field_e, -6988, ChatPanelHelpers.field_b, var5, (String) null);
+              SentinelAnimationEditor.storeInviteRequest(ImageProducerRasterBuffer.field_p, LoadingScreenHelpers.field_e, ChatPanelHelpers.field_b, -29368, var5);
               WidgetStyleLayer.a(2);
               wi.c((byte) -119);
             }
@@ -100,7 +100,7 @@ final class QuickChatMenu extends SceneWidget {
         field_nc = null;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void initDesignerSlot(int[] param0, int param1, int param2) {
         try {
           if (param1 != 7411) {
             field_Tb = (String) null;
@@ -108,7 +108,7 @@ final class QuickChatMenu extends SceneWidget {
           uc.field_e[param2] = param0;
           GameKeyHandler.field_e[param2] = new SentinelDesigner(param2);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -159,17 +159,17 @@ final class QuickChatMenu extends SceneWidget {
             var14 = null;
             if (null != this.field_Vb[var13] ||
               this.field_bc[var13] == -1) {
-              var14 = ik.field_g;
+              var14 = ConditionalTextValue.field_g;
             }
             this.field_Yb[var13] = new IconTextComponent(0L, param2, (SceneWidget) null, param3, (RgbSprite) (var14), param6[var13]);
-            this.a(this.field_Yb[var13], 121);
+            this.addChild(this.field_Yb[var13], 121);
             var15 = var17.textWidth(param6[var13]);
             if (this.field_Wb < var15) {
               this.field_Wb = var15;
             }
           }
-          this.field_Wb = this.field_Wb + (10 + ik.field_g.field_z);
-          this.c(117, 12);
+          this.field_Wb = this.field_Wb + (10 + ConditionalTextValue.field_g.field_z);
+          this.setCollapseTicks(117, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,11 +217,11 @@ final class QuickChatMenu extends SceneWidget {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final void layoutMenu(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -231,24 +231,24 @@ final class QuickChatMenu extends SceneWidget {
           field_lc = (String) null;
         }
         this.field_oc = this.field_Wb + 2 * param2;
-        this.a(0, -this.field_pc + param5, this.field_pc, param4, this.field_oc);
+        this.setBounds(0, -this.field_pc + param5, this.field_pc, param4, this.field_oc);
         if (this.field_Xb != param1) {
           this.field_Xb = param1;
-          this.c(-97, this.field_fc);
+          this.setCollapseTicks(-97, this.field_fc);
         }
         for (var7 = 0; this.field_dc > var7; var7++) {
-          this.field_Yb[var7].a(this.field_jc, this.field_oc, param2, 0, param0, this.field_Yb[var7].field_eb, (byte) 121);
+          this.field_Yb[var7].setLayout(this.field_jc, this.field_oc, param2, 0, param0, this.field_Yb[var7].field_eb, (byte) 121);
         }
         if (-1 != this.field_Sb &&
           this.field_Vb[this.field_Sb] != null) {
           var7Lifetime1 = this.field_Vb[this.field_Sb].field_dc;
           for (var8 = this.field_eb + (this.field_Sb + var7Lifetime1) * this.field_jc; var8 > param5; var8 = var8 - this.field_jc) {
           }
-          this.field_Vb[this.field_Sb].a(param0, this.field_Yb[this.field_Sb].field_cb, param2, (byte) 27, param4 + this.field_oc, var8);
+          this.field_Vb[this.field_Sb].layoutMenu(param0, this.field_Yb[this.field_Sb].field_cb, param2, (byte) 27, param4 + this.field_oc, var8);
         }
     }
 
-    final boolean m(int param0) {
+    final boolean hasPressedItem(int param0) {
         int var4 = 0;
         IconTextComponent var5_ref_qh = null;
         int var6 = SteelSentinels.obfuscationControl;
@@ -262,12 +262,12 @@ final class QuickChatMenu extends SceneWidget {
         if (var2 == 0 &&
           this.field_Sb != -1 &&
           this.field_Vb[this.field_Sb] != null) {
-          var2 = this.field_Vb[this.field_Sb].m(75) ? 1 : 0;
+          var2 = this.field_Vb[this.field_Sb].hasPressedItem(75) ? 1 : 0;
         }
         return var2 != 0;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void processClicks(byte param0, int param1, int param2) {
         int var4_int = 0;
         IconTextComponent var5;
         int var6;
@@ -279,7 +279,7 @@ final class QuickChatMenu extends SceneWidget {
         for (var4_int = 0; var4_int < this.field_Yb.length; var4_int++) {
           var5 = this.field_Yb[var4_int];
           if (1 == var5.field_Eb) {
-            this.a(var4_int, param2, param1, 119);
+            this.activateItem(var4_int, param2, param1, 119);
             stackIn_7_0 = var5;
             stackIn_8_1 = (var4_int == this.field_Sb);
             stackIn_7_0.field_G = stackIn_8_1;
@@ -289,25 +289,25 @@ final class QuickChatMenu extends SceneWidget {
           var7 = this.field_Vb[this.field_Sb];
           var4 = var7;
           if (var4 != null) {
-            var7.a((byte) 111, param1, param2);
+            var7.processClicks((byte) 111, param1, param2);
           }
         }
         if (0 < this.field_fc) {
-          this.c(127, -1 + this.field_fc);
+          this.setCollapseTicks(127, -1 + this.field_fc);
         }
         if (param0 < 28) {
           QuickChatMenu.releaseStatics(119);
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isLegacyMenuOpen(boolean param0) {
         if (!param0) {
-          QuickChatMenu.b(false);
+          QuickChatMenu.isLegacyMenuOpen(false);
         }
         return TextHotspotRegion.field_r;
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean processShortcutKey(int param0, int param1, int param2) {
         int var6 = 0;
         int var4;
         int var5;
@@ -319,11 +319,11 @@ final class QuickChatMenu extends SceneWidget {
         if (this.field_mc != null) {
           if (var4 != 0 &&
             this.field_mc.field_Sb == -1) {
-            this.l(18);
-            this.c(param0 ^ -25528, 0);
+            this.resetSelection(18);
+            this.setCollapseTicks(param0 ^ -25528, 0);
             return true;
           }
-          return this.field_mc.a(25542, param1, param2);
+          return this.field_mc.processShortcutKey(25542, param1, param2);
         }
         if (this.field_mc == null &&
           this == IntKeyLookup.field_i &&
@@ -343,14 +343,14 @@ final class QuickChatMenu extends SceneWidget {
         }
         for (var6 = 0; this.field_cc.length > var6; var6++) {
           if (this.field_cc[var6] == var5) {
-            this.a(var6, param2, param1, 119);
+            this.activateItem(var6, param2, param1, 119);
             return true;
           }
         }
         return false;
     }
 
-    final void l(int param0) {
+    final void resetSelection(int param0) {
         IconTextComponent var4 = null;
         int var3 = 0;
         int var5 = SteelSentinels.obfuscationControl;
@@ -364,19 +364,19 @@ final class QuickChatMenu extends SceneWidget {
         }
         var3Lifetime1 = -17 / ((-59 - param0) / 58);
         if (this.field_mc != null) {
-          this.field_mc.l(45);
+          this.field_mc.resetSelection(45);
           this.field_mc.unlink(4);
         }
         this.field_mc = null;
         this.field_Sb = -1;
-        this.c(37, 12);
+        this.setCollapseTicks(37, 12);
     }
 
-    final int j(int param0) {
+    final int getCascadeWidth(int param0) {
         if (param0 != 0) {
-          this.c(38, 77);
+          this.setCollapseTicks(38, 77);
         }
-        return this.field_oc + (null != this.field_mc ? this.field_mc.j(param0 + 0) : 0);
+        return this.field_oc + (null != this.field_mc ? this.field_mc.getCascadeWidth(param0 + 0) : 0);
     }
 
     static {

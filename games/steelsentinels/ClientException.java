@@ -9,7 +9,7 @@ final class ClientException extends RuntimeException {
     String field_a;
     static int[] field_k;
     static SceneWidget field_g;
-    static rf field_d;
+    static LoginConnectionStage field_d;
     static String field_i;
     static String field_j;
     static String field_b;
@@ -37,13 +37,13 @@ final class ClientException extends RuntimeException {
         if (param1) {
           var2 = new c();
           RegistrationRequestDialog.field_Ub.addLast(3, var2);
-          tc.a(87, param0);
+          HighscoreSubmission.sendFlagRequest(87, param0);
           return var2;
         }
         field_m = 46;
         var2Lifetime1 = new c();
         RegistrationRequestDialog.field_Ub.addLast(3, var2Lifetime1);
-        tc.a(87, param0);
+        HighscoreSubmission.sendFlagRequest(87, param0);
         return var2Lifetime1;
     }
 
@@ -56,7 +56,7 @@ final class ClientException extends RuntimeException {
         field_z = "od.A(";
         field_f = "Shortcut Reference";
         field_k = new int[]{17, 18, 22, -1, -1, 8};
-        field_d = new rf();
+        field_d = new LoginConnectionStage();
         field_j = "WASD: Scroll / RMB <img=26>: jump";
         field_b = "Quick Chat Help";
     }

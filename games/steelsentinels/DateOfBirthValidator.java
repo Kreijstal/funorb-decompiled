@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DateOfBirthValidator extends DebouncedValidator implements TextInputListener, aa {
+final class DateOfBirthValidator extends DebouncedValidator implements TextInputListener, DateValidatorMarker {
     static String field_j;
     DateInputWidget field_n;
     static String field_k;
@@ -17,11 +17,11 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             DateOfBirthValidator.d(116);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String b(byte param0) {
+    final String evaluateMessage(byte param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -31,21 +31,21 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         String stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_n.j(-88);
-          var3 = this.field_n.k(14879);
-          var4 = this.field_n.h((byte) 17);
-          var5 = rg.d(-1900);
+          var2_int = this.field_n.getDay(-88);
+          var3 = this.field_n.getMonthIndex(14879);
+          var4 = this.field_n.getYear((byte) 17);
+          var5 = PopupMenuHelpers.getCurrentYear(-1900);
           if (var4 >= 1890 &&
             var4 <= -3 + var5) {
             if (param0 != -42) {
               stackIn_7_0 = (String) null;
               return stackIn_7_0;
             }
-            if (oh.a(var4, true, var2_int, var3)) {
+            if (LobbySetupHelpers.meetsSlotRequirement(var4, true, var2_int, var3)) {
               return null;
             }
           } else {
-            stackIn_4_0 = SocketConnector.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = SocketConnector.formatTemplate(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -66,16 +66,16 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           hm.field_a = null;
           ContentTransitionDialog.field_jb = null;
           vd.field_a = null;
-          bi.field_f = null;
+          TextAndBitHelpers.field_f = null;
           kf.field_s = true;
           GameApplet.field_l = true;
           rh.field_u = null;
-          kk.field_a = null;
+          TextAndMenuHelpers.field_a = null;
           for (var1_int = 0; MouseInputHandler.field_h.length > var1_int; var1_int++) {
             MouseInputHandler.field_h[var1_int] = null;
           }
-          for (var1_intLifetime1 = 0; cj.field_a.length > var1_intLifetime1; var1_intLifetime1++) {
-            cj.field_a[var1_intLifetime1] = null;
+          for (var1_intLifetime1 = 0; ArchiveLoadSequence.field_a.length > var1_intLifetime1; var1_intLifetime1++) {
+            ArchiveLoadSequence.field_a[var1_intLifetime1] = null;
           }
           if (param0 <= -25) {
             return;
@@ -85,7 +85,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "vn.E(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "vn.E(" + param0 + ')');
         }
     }
 
@@ -94,21 +94,21 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           return;
         }
         try {
-          this.a(param1 - 17471);
+          this.markChanged(param1 - 17471);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "vn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public DateOfBirthValidator() {
     }
 
-    public final boolean b(boolean param0) {
+    public final boolean isEmpty(boolean param0) {
         if (!param0) {
           DateOfBirthValidator.releaseStatics(false);
-          return this.field_n.i(-7034);
+          return this.field_n.isIncomplete(-7034);
         }
-        return this.field_n.i(-7034);
+        return this.field_n.isIncomplete(-7034);
     }
 
     static int a(int param0, int param1) {
@@ -138,7 +138,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         vc.a(-1);
     }
 
-    final vd b(int param0) {
+    final vd evaluateState(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -149,10 +149,10 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         vd stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_n.j(-127);
-          var3 = this.field_n.k(14879);
-          var4 = this.field_n.h((byte) 79);
-          var5 = rg.d(param0 ^ 31644);
+          var2_int = this.field_n.getDay(-127);
+          var3 = this.field_n.getMonthIndex(14879);
+          var4 = this.field_n.getYear((byte) 79);
+          var5 = PopupMenuHelpers.getCurrentYear(param0 ^ 31644);
           if (var4 < 1890) {
             stackIn_2_0 = ArchiveProvider.field_d;
             return stackIn_2_0;
@@ -161,7 +161,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             stackIn_6_0 = ArchiveProvider.field_d;
             return stackIn_6_0;
           }
-          if (!oh.a(var4, true, var2_int, var3)) {
+          if (!LobbySetupHelpers.meetsSlotRequirement(var4, true, var2_int, var3)) {
             stackIn_10_0 = ArchiveProvider.field_d;
             return stackIn_10_0;
           }

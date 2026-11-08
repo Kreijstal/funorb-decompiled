@@ -38,7 +38,7 @@ final class MusicPatchNode extends IntrusiveNode {
         field_H = null;
     }
 
-    final static RgbSprite[] a(byte param0, RgbSprite param1) {
+    final static RgbSprite[] createCentreOnlyFrame(byte param0, RgbSprite param1) {
         RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int[] var3 = null;
@@ -53,7 +53,7 @@ final class MusicPatchNode extends IntrusiveNode {
           var2 = var4;
           if (param0 != 26) {
             var3 = (int[]) null;
-            MusicPatchNode.a(87, false, (int[]) null, (int[]) null);
+            MusicPatchNode.decodeChassisDesign(87, false, (int[]) null, (int[]) null);
           }
           var4[4] = param1;
           stackIn_3_0 = var2;
@@ -68,22 +68,22 @@ final class MusicPatchNode extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, HuffmanDecoder param1) {
+    final static void setHuffmanCodec(byte param0, HuffmanDecoder param1) {
         if (param0 <= 26) {
           return;
         }
         try {
           ob.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "hj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void d(int param0) {
+    final void releaseReferences(int param0) {
         this.field_A = null;
         this.field_N = null;
         if (param0 != 4096) {
@@ -93,7 +93,7 @@ final class MusicPatchNode extends IntrusiveNode {
         this.field_E = null;
     }
 
-    final static ArticulatedPart a(int param0, boolean param1, int[] param2, int[] param3) {
+    final static ArticulatedPart decodeChassisDesign(int param0, boolean param1, int[] param2, int[] param3) {
         int var9 = 0;
         ArticulatedPart stackIn_8_0 = null;
         Object stackIn_13_0 = null;
@@ -148,11 +148,11 @@ final class MusicPatchNode extends IntrusiveNode {
               }
               break;
             }
-            SceneWidgetNode.a("Too much data", (byte) 121);
+            SceneWidgetNode.logDebugMessage("Too much data", (byte) 121);
             stackIn_21_0 = null;
             return (ArticulatedPart) (stackIn_21_0);
           }
-          SceneWidgetNode.a(SocketConnector.a("Chassis not correct id: ID=<%0>", -43, new String[]{Integer.toString(var5)}), (byte) 120);
+          SceneWidgetNode.logDebugMessage(SocketConnector.formatTemplate("Chassis not correct id: ID=<%0>", -43, new String[]{Integer.toString(var5)}), (byte) 120);
           stackIn_13_0 = null;
           return (ArticulatedPart) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,11 +171,11 @@ final class MusicPatchNode extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean openUrlWithShell(int param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -227,7 +227,7 @@ final class MusicPatchNode extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

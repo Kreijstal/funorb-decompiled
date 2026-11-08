@@ -13,7 +13,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static SceneWidget field_N;
     PacketBuffer field_G;
 
-    final static void a(String param0, boolean param1, hk param2, int param3) {
+    final static void a(String param0, boolean param1, LobbyGame param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -23,31 +23,31 @@ final class Js5NetworkRequest extends ArchiveRequest {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        dd var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        dd var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        dd var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        dd var13 = null;
+        PlayerContextMenu var13 = null;
         try {
-          kk.a(param2, param2.j(-13), -1, (int[]) null, (String) null, (String) null, 1073741824, 0L, rn.field_y);
+          TextAndMenuHelpers.openPlayerContextMenu(param2, param2.getGameId(-13), -1, (int[]) null, (String) null, (String) null, 1073741824, 0L, rn.field_y);
           if (param2.field_rc && (param2.field_sc == 2 ||
             !(NodeDeque.field_d < 2))) {
             var7 = AudioService.field_i;
-            var8 = SocketConnector.a(sl.field_o, -71, new String[]{param0});
-            var7.field_j.a(2, 10, var8);
+            var8 = SocketConnector.formatTemplate(sl.field_o, -71, new String[]{param0});
+            var7.field_j.addItem(2, 10, var8);
           }
-          AudioService.field_i.a((byte) 64);
+          AudioService.field_i.addLobbyGameActions((byte) 64);
           if (param1) {
             if (MusicPatchEnvelope.field_j != AudioService.field_i.field_g) {
               var11 = AudioService.field_i;
-              var12 = SocketConnector.a(MusicPatchPcmStream.field_u, -39, new String[]{param0});
-              var11.field_j.a(2, 15, var12);
+              var12 = SocketConnector.formatTemplate(MusicPatchPcmStream.field_u, -39, new String[]{param0});
+              var11.field_j.addItem(2, 15, var12);
             } else {
               var9 = AudioService.field_i;
-              var10 = SocketConnector.a(TextFieldValidator.field_m, -88, new String[]{param0});
-              var9.field_j.a(2, 16, var10);
+              var10 = SocketConnector.formatTemplate(TextFieldValidator.field_m, -88, new String[]{param0});
+              var9.field_j.addItem(2, 16, var10);
             }
           }
           var13 = AudioService.field_i;
@@ -56,7 +56,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
             field_J = (RgbSprite[]) null;
           }
           var6 = BufferedRandomAccessFile.field_j;
-          var13.field_j.a(0, 0, var6, (byte) -119, var5);
+          var13.field_j.layoutItems(0, 0, var6, (byte) -119, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         if (param0 == -1) {
           var2 = param1 / 60;
           param1 = param1 % 60;
-          return SocketConnector.a(AlphaContainer.field_S, -36, new String[]{Integer.toString(var2), Integer.toString(param1 / 10), Integer.toString(param1 % 10)});
+          return SocketConnector.formatTemplate(AlphaContainer.field_S, -36, new String[]{Integer.toString(var2), Integer.toString(param1 / 10), Integer.toString(param1 % 10)});
         }
         return (String) null;
     }
@@ -120,8 +120,8 @@ final class Js5NetworkRequest extends ArchiveRequest {
 
     final int g(int param0) {
         if (param0 != 16) {
-          hk var3 = (hk) null;
-          Js5NetworkRequest.a((String) null, false, (hk) null, 114);
+          LobbyGame var3 = (LobbyGame) null;
+          Js5NetworkRequest.a((String) null, false, (LobbyGame) null, 114);
           if (this.field_G != null) {
             return this.field_G.position * 100 / (-this.field_K + this.field_G.payload.length);
           }
@@ -150,7 +150,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
             Js5NetworkRequest.a((RgbSprite) null, (byte) -94);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

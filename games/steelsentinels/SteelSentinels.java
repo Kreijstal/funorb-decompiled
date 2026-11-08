@@ -7,7 +7,7 @@ public final class SteelSentinels extends FunOrbClient {
     static SceneWidget field_J;
     public static int obfuscationControl;
 
-    final void a(byte param0) {
+    final void renderClient(byte param0) {
         int stackIn_134_0 = 0;
         boolean stackIn_135_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -39,78 +39,78 @@ public final class SteelSentinels extends FunOrbClient {
         var13 = obfuscationControl;
         try {
           var2 = NanoTickClock.a(false);
-          if (QuickChatHelpDialog.j(0)) {
-            DiskCacheRequest.a(-111, var2, ParticleEffect.g(2));
+          if (QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0)) {
+            DiskCacheRequest.a(-111, var2, ParticleEffect.hasInputFocus(2));
             return;
           }
           if (!SceneWidget.field_pb) {
-            en.a(var2, -28003);
+            LoadingScreenHelpers.drawLoadingScreen(var2, -28003);
             return;
           }
-          if (!QuickChatCategoryCache.a(false)) {
+          if (!QuickChatCategoryCache.isPlayerDataReady(false)) {
             mc.a(SentinelAnimationEditor.field_i, 100.0f, -21801);
-            en.a(var2, -28003);
+            LoadingScreenHelpers.drawLoadingScreen(var2, -28003);
             return;
           }
           boolean decompiledFrameRemainder1 = true;
-          this.n(53);
+          this.loadGameGraphics(53);
           if (LoginForm.field_T != GzipDecoder.field_g) {
             if (LoginForm.field_T != 0) {
               if (GzipDecoder.field_g == 0) {
-                AudioService.a(LoginForm.field_T, pc.field_w, false, 125);
-                AudioService.a(GzipDecoder.field_g, pc.field_w, false, -40);
+                AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, 125);
+                AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -40);
                 decompiledFrameRemainder1 = (var13 != 0);
               }
               if (decompiledFrameRemainder1) {
                 if (LoginForm.field_U >= 10) {
                   AudioService.a(GzipDecoder.field_g, Sprite.field_k, false, 86);
                   if (var13 != 0) {
-                    AudioService.a(LoginForm.field_T, pc.field_w, false, -110);
-                    AudioService.a(GzipDecoder.field_g, pc.field_w, false, -62);
-                    AudioService.a(LoginForm.field_T, pc.field_w, false, -34);
-                    AudioService.a(LoginForm.field_T, pc.field_w, true, -15);
+                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -110);
+                    AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
+                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
                   }
                 } else {
-                  AudioService.a(LoginForm.field_T, pc.field_w, false, -110);
+                  AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -110);
                   if (var13 != 0) {
-                    AudioService.a(GzipDecoder.field_g, pc.field_w, false, -62);
-                    AudioService.a(LoginForm.field_T, pc.field_w, false, -34);
-                    AudioService.a(LoginForm.field_T, pc.field_w, true, -15);
+                    AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
+                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
                   }
                 }
               }
             } else {
-              AudioService.a(GzipDecoder.field_g, pc.field_w, false, -62);
-              AudioService.a(LoginForm.field_T, pc.field_w, false, -34);
+              AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+              AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
               if (var13 != 0) {
-                AudioService.a(LoginForm.field_T, pc.field_w, true, -15);
+                AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
               }
             }
           } else {
-            AudioService.a(LoginForm.field_T, pc.field_w, true, -15);
+            AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
           }
-          if (!pc.field_w ||
+          if (!PlayingSound.field_w ||
             !Sprite.field_k) {
             boolean decompiledFrameCompleted0 = true;
             TextLayout.a(PasswordFieldPainter.c(8), 25104);
             if (LoginForm.field_T == -2) {
-              var3 = hl.a((byte) -66);
+              var3 = PendingIntArrayRequest.getActiveOverlayWidget((byte) -66);
               if (var3 != null) {
                 regionExit1: {
                   boolean decompiledFrameCompleted1 = true;
                   var4 = var3.field_Rb;
                   var5_int = var3.field_cb;
                   SoftwareRaster.setClip(var4 + 4, 4 + var5_int + 42, var3.field_Rb - 4 + var3.field_zb, var3.field_cb + (-4 + var3.field_Lb));
-                  if (null == ih.field_s ||
-                    fc.field_e[101]) {
+                  if (null == EmailSyntaxValidator.field_s ||
+                    SoundAndUrlHelpers.field_e[101]) {
                     di.field_g = -1;
-                    ih.field_s = new CombatWorld(-1, 1, new String[]{}, new int[][]{null}, false, 0, 0, 2, false, false);
-                    ih.field_s.computerPlayerCount = 2;
+                    EmailSyntaxValidator.field_s = new CombatWorld(-1, 1, new String[]{}, new int[][]{null}, false, 0, 0, 2, false, false);
+                    EmailSyntaxValidator.field_s.computerPlayerCount = 2;
                     if (var13 == 0) {
                       break regionExit1;
                     }
                   }
-                  var6_ref_ee = ih.field_s;
+                  var6_ref_ee = EmailSyntaxValidator.field_s;
                   var7 = var4 - 2;
                   if (var6_ref_ee.sentinels.size((byte) -128) < 2) {
                     var9_int = -100000;
@@ -143,7 +143,7 @@ public final class SteelSentinels extends FunOrbClient {
                   var8 = 310;
                   var9 = (Sentinel) (var6_ref_ee.sentinels.first(13058));
                   while (null != var9) {
-                    var9.a((byte) -22, var7, oh.field_f, DelegatingCanvas.field_c, var8);
+                    var9.a((byte) -22, var7, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, var8);
                     var9 = (Sentinel) (var6_ref_ee.sentinels.next((byte) -119));
                     if (var13 != 0) {
                       decompiledFrameCompleted1 = false;
@@ -188,9 +188,9 @@ public final class SteelSentinels extends FunOrbClient {
               }
             }
             if (decompiledFrameCompleted0) {
-              ProxySocketConnector.a(false, PasswordFieldPainter.c(8));
+              ProxySocketConnector.drawOverlayDialogs(false, PasswordFieldPainter.c(8));
             }
-            ci.a(PasswordFieldPainter.c(8), (byte) -62);
+            ClientErrorSupport.updateOverlays(PasswordFieldPainter.c(8), (byte) -62);
           }
           var3_ref = (ai) (bd.field_b.first(13058));
           if (var3_ref != null) {
@@ -220,17 +220,17 @@ public final class SteelSentinels extends FunOrbClient {
           }
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 27 / ((param0 - 56) / 48);
-          if (QuickChatMenu.b(true)) {
+          if (QuickChatMenu.isLegacyMenuOpen(true)) {
             SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
             qf.a(100);
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (!cf.c((byte) 92)) {
-              if ((ri.b(-113)) &&
-                (!QuickChatMenu.b(true))) {
+              if ((LoginStateQueries.isMessageOverlayShown(-113)) &&
+                (!QuickChatMenu.isLegacyMenuOpen(true))) {
                 SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
-                ec.a((byte) -95);
+                ClientUiHelpers.drawPopupMenu((byte) -95);
                 if (var13 != 0) {
                   stackIn_134_0 = -64;
                   if (wb.field_c != null) {
@@ -262,23 +262,23 @@ public final class SteelSentinels extends FunOrbClient {
             SoftwareRaster.fillRectangle(3, 3, 100, 13, 0);
             SoftwareRaster.fillRectangle(4, 4, DiskCacheWorker.field_l * 33 + 33 * TickClock.field_g / ReflectionCheck.field_r, 11, 39398);
             if (BoundedUrlRequest.field_d != null) {
-              var5 = SocketConnector.a(ValidationHelpWidget.field_sb, -98, new String[]{Integer.toString(DiskCacheWorker.field_l * 33 + TickClock.field_g * 33 / ReflectionCheck.field_r)});
+              var5 = SocketConnector.formatTemplate(ValidationHelpWidget.field_sb, -98, new String[]{Integer.toString(DiskCacheWorker.field_l * 33 + TickClock.field_g * 33 / ReflectionCheck.field_r)});
               BoundedUrlRequest.field_d.drawCentered(var5, 54, 12, 39398, 0);
               SoftwareRaster.setClip(3, 3, 33 * DiskCacheWorker.field_l + TickClock.field_g * 33 / ReflectionCheck.field_r, 17);
               BoundedUrlRequest.field_d.drawCentered(var5, 54, 12, 0, 39398);
               SoftwareRaster.resetClip();
             }
           }
-          ScrollContainer.a(0, 0, 28594, var2);
+          ScrollContainer.paintCanvasNow(0, 0, 28594, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "SteelSentinels.EA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "SteelSentinels.EA(" + param0 + ')');
         }
     }
 
-    private final boolean k(byte param0) {
+    private final boolean loadClientResources(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var6 = 0;
@@ -295,7 +295,7 @@ public final class SteelSentinels extends FunOrbClient {
         int var5 = 0;
         var6 = obfuscationControl;
         try {
-          ec.a(35);
+          ClientUiHelpers.initializeMenuLabels(35);
           if (null != RasterSnapshot.field_x) {
             if (tm.field_d.ensureIndex(true) &&
               tm.field_d.a("basic", (byte) 90)) {
@@ -324,76 +324,76 @@ public final class SteelSentinels extends FunOrbClient {
                                     GrowableIntList.field_i.ensureAllGroupsAvailable(25)) {
                                     if (DualNode.field_x.ensureIndex(true) &&
                                       DualNode.field_x.a("basic", (byte) 90)) {
-                                      if (im.field_h.ensureIndex(true) &&
-                                        im.field_h.ensureAllGroupsAvailable(25)) {
-                                        if (oh.field_a.ensureIndex(true) &&
-                                          oh.field_a.a("basic", (byte) 90)) {
+                                      if (LobbyStateHelpers.field_h.ensureIndex(true) &&
+                                        LobbyStateHelpers.field_h.ensureAllGroupsAvailable(25)) {
+                                        if (LobbySetupHelpers.field_a.ensureIndex(true) &&
+                                          LobbySetupHelpers.field_a.a("basic", (byte) 90)) {
                                           if (IsaacRandom.field_k.ensureIndex(true) &&
                                             IsaacRandom.field_k.ensureAllGroupsAvailable(25)) {
                                             if (BufferedRandomAccessFile.field_k.ensureIndex(true) &&
                                               BufferedRandomAccessFile.field_k.ensureAllGroupsAvailable(param0 + 77)) {
-                                              en.a(-59);
+                                              LoadingScreenHelpers.dismissLoadingUi(-59);
                                               mc.a(ResourceArchive.field_n, 82.0f, param0 ^ 21787);
-                                              this.a((byte) 111);
+                                              this.renderClient((byte) 111);
                                               RasterBuffer.field_e = new SoundCache(RasterSnapshot.field_x, SceneWidgetNode.field_z);
                                               RasterSnapshot.field_x = null;
-                                              cc.j(0);
+                                              LobbyPlayer.resetFrameTimingHistory(0);
                                               return false;
                                             }
                                             mc.a(ModalStack.a((byte) -128, SentinelAnimationEditor.field_i, sl.field_l, BufferedRandomAccessFile.field_k), 90.0f, -21801);
                                             return false;
                                           }
-                                          mc.a(ci.a(IsaacRandom.field_k, (byte) 94, "", SentinelAnimationEditor.field_i, sl.field_l), 85.0f, -21801);
+                                          mc.a(ClientErrorSupport.formatArchiveGroupProgress(IsaacRandom.field_k, (byte) 94, "", SentinelAnimationEditor.field_i, sl.field_l), 85.0f, -21801);
                                           return false;
                                         }
-                                        mc.a(ci.a(oh.field_a, (byte) 108, "basic", kb.field_c, og.field_c), 80.0f, -21801);
+                                        mc.a(ClientErrorSupport.formatArchiveGroupProgress(LobbySetupHelpers.field_a, (byte) 108, "basic", kb.field_c, og.field_c), 80.0f, -21801);
                                         return false;
                                       }
-                                      mc.a(ModalStack.a((byte) -78, en.field_f, ai.field_t, im.field_h), 75.0f, -21801);
+                                      mc.a(ModalStack.a((byte) -78, LoadingScreenHelpers.field_f, ai.field_t, LobbyStateHelpers.field_h), 75.0f, -21801);
                                       return false;
                                     }
-                                    mc.a(ci.a(DualNode.field_x, (byte) 94, "basic", en.field_f, ai.field_t), 70.0f, -21801);
+                                    mc.a(ClientErrorSupport.formatArchiveGroupProgress(DualNode.field_x, (byte) 94, "basic", LoadingScreenHelpers.field_f, ai.field_t), 70.0f, -21801);
                                     return false;
                                   }
-                                  mc.a(ci.a(GrowableIntList.field_i, (byte) 101, "", tf.field_f, AccountTermsPanel.field_P), 60.0f, -21801);
+                                  mc.a(ClientErrorSupport.formatArchiveGroupProgress(GrowableIntList.field_i, (byte) 101, "", tf.field_f, AccountTermsPanel.field_P), 60.0f, -21801);
                                   return false;
                                 }
                                 mc.a(ModalStack.a((byte) -103, tf.field_f, AccountTermsPanel.field_P, SectorCacheStore.field_i), 45.0f, -21801);
                                 return false;
                               }
-                              mc.a(ci.a(ImageProducerRasterBuffer.field_t, (byte) 99, "", rn.field_t, ue.field_a), 42.0f, -21801);
+                              mc.a(ClientErrorSupport.formatArchiveGroupProgress(ImageProducerRasterBuffer.field_t, (byte) 99, "", rn.field_t, LoginHandshakeHelpers.field_a), 42.0f, -21801);
                               return false;
                             }
-                            mc.a(ci.a(SceneWidgetNode.field_z, (byte) 127, "", rn.field_t, ue.field_a), 40.0f, -21801);
+                            mc.a(ClientErrorSupport.formatArchiveGroupProgress(SceneWidgetNode.field_z, (byte) 127, "", rn.field_t, LoginHandshakeHelpers.field_a), 40.0f, -21801);
                             return false;
                           }
-                          mc.a(ci.a(RasterSnapshot.field_x, (byte) 122, "", rn.field_t, ue.field_a), 20.0f, param0 - 21749);
+                          mc.a(ClientErrorSupport.formatArchiveGroupProgress(RasterSnapshot.field_x, (byte) 122, "", rn.field_t, LoginHandshakeHelpers.field_a), 20.0f, param0 - 21749);
                           return false;
                         }
-                        mc.a(ci.a(MusicPatchPcmStream.field_t, (byte) 116, "lobby", kb.field_c, og.field_c), 17.0f, param0 - 21749);
+                        mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 116, "lobby", kb.field_c, og.field_c), 17.0f, param0 - 21749);
                         return false;
                       }
-                      mc.a(ci.a(MusicPatchPcmStream.field_t, (byte) 97, "basicfont12", kb.field_c, og.field_c), 15.0f, param0 - 21749);
+                      mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 97, "basicfont12", kb.field_c, og.field_c), 15.0f, param0 - 21749);
                       return false;
                     }
-                    mc.a(ci.a(tm.field_d, (byte) 120, "basicfont12", en.field_f, ai.field_t), 14.0f, -21801);
+                    mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 120, "basicfont12", LoadingScreenHelpers.field_f, ai.field_t), 14.0f, -21801);
                     return false;
                   }
-                  mc.a(ci.a(tm.field_d, (byte) 104, "lobby", en.field_f, ai.field_t), 13.0f, param0 - 21749);
+                  mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 104, "lobby", LoadingScreenHelpers.field_f, ai.field_t), 13.0f, param0 - 21749);
                   return false;
                 }
-                mc.a(ci.a(MusicPatchPcmStream.field_t, (byte) 111, "roman20", kb.field_c, og.field_c), 12.0f, -21801);
+                mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 111, "roman20", kb.field_c, og.field_c), 12.0f, -21801);
                 return false;
               }
-              mc.a(ci.a(tm.field_d, (byte) 116, "roman20", en.field_f, ai.field_t), 11.0f, param0 ^ 21787);
+              mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 116, "roman20", LoadingScreenHelpers.field_f, ai.field_t), 11.0f, param0 ^ 21787);
               return false;
             }
-            mc.a(ci.a(tm.field_d, (byte) 116, "basic", en.field_f, ai.field_t), 10.0f, -21801);
+            mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 116, "basic", LoadingScreenHelpers.field_f, ai.field_t), 10.0f, -21801);
             return false;
           }
           if (ImageProducerRasterBuffer.field_t != null) {
             mc.a(ResourceArchive.field_n, 85.0f, -21801);
-            this.a((byte) -116);
+            this.renderClient((byte) -116);
             SentinelAnimationEditor.field_q[71] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "deploying_in").decodeAllToPcm();
             SentinelAnimationEditor.field_q[72] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "five").decodeAllToPcm();
             SentinelAnimationEditor.field_q[73] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "four").decodeAllToPcm();
@@ -408,45 +408,45 @@ public final class SteelSentinels extends FunOrbClient {
             SentinelAnimationEditor.field_q[82] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "energy_low").decodeAllToPcm();
             SentinelAnimationEditor.field_q[83] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "shield_depleted").decodeAllToPcm();
             ImageProducerRasterBuffer.field_t = null;
-            cc.j(0);
+            LobbyPlayer.resetFrameTimingHistory(0);
             return false;
           }
           if (GrowableIntList.field_i != null) {
-            mc.a(ba.field_a, 88.0f, -21801);
-            this.a((byte) 104);
+            mc.a(QuickChatInputHelpers.field_a, 88.0f, -21801);
+            this.renderClient((byte) 104);
             LoginCredentials.field_f = MusicTrack.load(GrowableIntList.field_i, "", "md_title_music");
             NodeHashTableIterator.field_i = MusicTrack.load(GrowableIntList.field_i, "", "war_zone");
             ByteStorage.field_e = MusicTrack.load(GrowableIntList.field_i, "", "lost_world");
             CipherPacketBuffer.field_z = MusicTrack.load(GrowableIntList.field_i, "", "cityscape");
-            ue.field_e = MusicTrack.load(GrowableIntList.field_i, "", "thats_no_moon");
+            LoginHandshakeHelpers.field_e = MusicTrack.load(GrowableIntList.field_i, "", "thats_no_moon");
             SocketConnector.field_a = MusicTrack.load(GrowableIntList.field_i, "", "star_fleet");
-            IterableNodeHashTable.field_f.a(0, LoginCredentials.field_f, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a(0, NodeHashTableIterator.field_i, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a(0, ByteStorage.field_e, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a(0, CipherPacketBuffer.field_z, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a(0, ue.field_e, param0 + 21739, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a(0, SocketConnector.field_a, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
-            IterableNodeHashTable.field_f.a((byte) 25);
+            IterableNodeHashTable.field_f.prepareTrack(0, LoginCredentials.field_f, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.prepareTrack(0, NodeHashTableIterator.field_i, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.prepareTrack(0, ByteStorage.field_e, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.prepareTrack(0, CipherPacketBuffer.field_z, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.prepareTrack(0, LoginHandshakeHelpers.field_e, param0 + 21739, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.prepareTrack(0, SocketConnector.field_a, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.releasePatchSamples((byte) 25);
             GrowableIntList.field_i = null;
             SectorCacheStore.field_i = null;
-            cc.j(0);
+            LobbyPlayer.resetFrameTimingHistory(0);
             return false;
           }
-          if (oh.field_a == null) {
+          if (LobbySetupHelpers.field_a == null) {
             if (null != IsaacRandom.field_k) {
-              MusicPatchNode.a((byte) 106, new HuffmanDecoder(IsaacRandom.field_k.a("huffman", -742, "")));
+              MusicPatchNode.setHuffmanCodec((byte) 106, new HuffmanDecoder(IsaacRandom.field_k.a("huffman", -742, "")));
               IsaacRandom.field_k = null;
-              cc.j(0);
+              LobbyPlayer.resetFrameTimingHistory(0);
               return false;
             }
-            BattleTerrain.a(false);
+            BattleTerrain.buildPartCatalogue(false);
             gf.a(0);
             var2_int = 0;
             do {
               if (23 <= var2_int) {
                 LoginForm.field_T = 0;
                 GzipDecoder.field_g = 0;
-                ProxyAuthenticationException.a(50, (byte) -127);
+                ProxyAuthenticationException.setTargetFrameRate(50, (byte) -127);
                 jn.a(true, (byte) 92, 200, LoginCredentials.field_f);
                 break;
               }
@@ -456,42 +456,42 @@ public final class SteelSentinels extends FunOrbClient {
             if (!ni.b(118)) {
               TickClock.field_i = RegistrationRequestDialog.a(4, param0 + 20051);
             }
-            cc.j(0);
+            LobbyPlayer.resetFrameTimingHistory(0);
             if (param0 != -52) {
-              this.b(-1, true);
+              this.processGameTick(-1, true);
             }
             return true;
           }
           mc.a(ArchiveIndex.field_i, 90.0f, param0 - 21749);
-          this.a((byte) 109);
-          var2_array = cj.a(-126, "basic", DualNode.field_x, "ranks");
-          va.field_j = vd.a(MusicPatchPcmStream.field_t, "roman20", tm.field_d, param0 + 51, "");
-          dm.field_f = be.a(DualNode.field_x, oh.field_a, (byte) -102, "biting30", "basic");
-          dk.field_h = vd.a(oh.field_a, "basic", DualNode.field_x, param0 ^ 51, "smallfont");
-          BoundedUrlRequest.field_d = vd.a(oh.field_a, "basic", DualNode.field_x, -1, "tinyfont");
+          this.renderClient((byte) 109);
+          var2_array = ArchiveLoadSequence.loadIndexedSpritesByName(-126, "basic", DualNode.field_x, "ranks");
+          LoginDialogHelpers.field_j = vd.a(MusicPatchPcmStream.field_t, "roman20", tm.field_d, param0 + 51, "");
+          NameCheckResult.field_f = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -102, "biting30", "basic");
+          DualNodeHashTable.field_h = vd.a(LobbySetupHelpers.field_a, "basic", DualNode.field_x, param0 ^ 51, "smallfont");
+          BoundedUrlRequest.field_d = vd.a(LobbySetupHelpers.field_a, "basic", DualNode.field_x, -1, "tinyfont");
           ValidationHelpWidget.field_lb = vd.a(MusicPatchPcmStream.field_t, "basicfont12", tm.field_d, param0 + 51, "");
-          pl.field_U = be.a(DualNode.field_x, oh.field_a, (byte) -93, "bitingfont", "basic");
-          AlphaContainer.field_U = be.a(DualNode.field_x, oh.field_a, (byte) -84, "bitinghalf", "basic");
-          SocialListPanel.field_Tb = dd.a(DualNode.field_x, oh.field_a, true, "basic", "menutitlefont");
+          BirthDateEntryPanel.field_U = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -93, "bitingfont", "basic");
+          AlphaContainer.field_U = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -84, "bitinghalf", "basic");
+          SocialListPanel.field_Tb = PlayerContextMenu.loadPaletteFont(DualNode.field_x, LobbySetupHelpers.field_a, true, "basic", "menutitlefont");
           cf.a("menu_overlays", "basic", (byte) -87, DualNode.field_x);
-          wd.field_a = GameplayController.a(DualNode.field_x, (byte) 42, "frame", "basic");
-          km.field_e = GameplayController.a(DualNode.field_x, (byte) -119, "frame_filled", "basic");
+          LobbyGameDecoding.field_a = GameplayController.a(DualNode.field_x, (byte) 42, "frame", "basic");
+          ClientGlobals.field_e = GameplayController.a(DualNode.field_x, (byte) -119, "frame_filled", "basic");
           GradientOutlineTextPainter.field_o = GameplayController.a(DualNode.field_x, (byte) -60, "button_frame", "basic");
           Js5Transport.field_l = GameplayController.a(DualNode.field_x, (byte) -122, "button_raised", "basic");
           ja.field_e = GameplayController.a(DualNode.field_x, (byte) 36, "button_depressed", "basic");
           if (ni.b(param0 ^ -44) ||
             !(rd.field_b > 0)) {
-            var3 = cj.a(121, "basic", DualNode.field_x, "expansion");
-            eh.field_c = new MembershipPromotionScreen((java.applet.Applet) (this), dm.field_e, var3, SentinelDesigner.field_f);
+            var3 = ArchiveLoadSequence.loadIndexedSpritesByName(121, "basic", DualNode.field_x, "expansion");
+            SocialListUiHelpers.field_c = new MembershipPromotionScreen((java.applet.Applet) (this), NameCheckResult.field_e, var3, SentinelDesigner.field_f);
           }
           ClientException.field_c = cf.a("achievements_large", "basic", (byte) -79, DualNode.field_x);
           ProxyAuthenticationException.field_h = cf.a("cursors", "basic", (byte) -54, DualNode.field_x);
           var3_int = 0;
           do {
             if (!(var3_int < ProxyAuthenticationException.field_h.length)) {
-              ValidationHelpWidget.field_tb = rl.a(tm.field_d, "basic", "unachieved", false);
-              SingleChildContainer.field_P = rl.a(tm.field_d, "basic", "locked", false);
-              DropTargetWidget.field_G = rl.a(tm.field_d, "basic", "orbcoin", false);
+              ValidationHelpWidget.field_tb = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "unachieved", false);
+              SingleChildContainer.field_P = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "locked", false);
+              DropTargetWidget.field_G = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "orbcoin", false);
               GrowableIntList.field_d = new RgbSprite(40, 40);
               GrowableIntList.field_d.bindRasterTarget();
               ValidationHelpWidget.field_tb.drawScaled(0, 0, 40, 40);
@@ -499,17 +499,17 @@ public final class SteelSentinels extends FunOrbClient {
               MusicCrossfadeStream.field_F.bindRasterTarget();
               SingleChildContainer.field_P.drawScaled(0, 0, 40, 40);
               Checkbox.field_bb.b((byte) 126);
-              rg.a(false, ValidationHelpWidget.field_tb);
-              rg.a(false, SingleChildContainer.field_P);
-              rg.a(false, DropTargetWidget.field_G);
+              PopupMenuHelpers.padToFourPixelAlignment(false, ValidationHelpWidget.field_tb);
+              PopupMenuHelpers.padToFourPixelAlignment(false, SingleChildContainer.field_P);
+              PopupMenuHelpers.padToFourPixelAlignment(false, DropTargetWidget.field_G);
               WhirlpoolHasher.field_o = new RgbSprite[5][];
               StatefulTextPainter.a((ResourceArchive) null, 2, DualNode.field_x);
               Sprite.field_m = cf.a("darkblueboxfilled", "basic", (byte) -52, DualNode.field_x);
-              be.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
+              UrlAndReplyHelpers.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
               MatchingTextValidator.field_t = cf.a("darkbluebox", "basic", (byte) -54, DualNode.field_x);
               sa.field_e = cf.a("darkerbluebox", "basic", (byte) -30, DualNode.field_x);
               FullscreenFocusCanvas.field_a = cf.a("lightbluetabbox", "basic", (byte) -108, DualNode.field_x);
-              lj.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
+              SocialRequestHelpers.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
               QuickChatCategoryCache.field_d = cf.a("darkgraybox", "basic", (byte) -67, DualNode.field_x);
               pa.field_g = cf.a("sectiontab", "basic", (byte) -99, DualNode.field_x);
               AccountMessagePanel.field_Y = cf.a("tabselected", "basic", (byte) -40, DualNode.field_x);
@@ -517,11 +517,11 @@ public final class SteelSentinels extends FunOrbClient {
               QuickChatPhraseCache.field_f = cf.a("tabmouseover", "basic", (byte) -71, DualNode.field_x);
               CachedTextLayout.field_E = cf.a("sentinelimages", "basic", (byte) -111, DualNode.field_x);
               MatchingTextValidator.field_t[4] = null;
-              be.field_f[4] = null;
+              UrlAndReplyHelpers.field_f[4] = null;
               AccountChoicePanel.field_T = cf.a("greybox", "basic", (byte) -90, DualNode.field_x);
               AccountChoicePanel.field_T[4] = null;
-              QuickChatPhraseDefinition.field_y = rl.a(DualNode.field_x, "basic", "dropdown_mark", false);
-              ResizableModalPanel.field_bb = rl.a(DualNode.field_x, "basic", "button_cover", false);
+              QuickChatPhraseDefinition.field_y = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "dropdown_mark", false);
+              ResizableModalPanel.field_bb = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "button_cover", false);
               break;
             }
             ProxyAuthenticationException.field_h[var3_int].normalizeCanvas();
@@ -542,21 +542,21 @@ public final class SteelSentinels extends FunOrbClient {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            TextButton.field_N = rl.a(DualNode.field_x, "basic", "goldstar", false);
-            ReportAbuseDialog.field_ec = rl.a(DualNode.field_x, "basic", "silverstar", false);
-            rl.a(DualNode.field_x, "basic", "starfrigate", false);
-            Checkbox.field_W = rl.a(DualNode.field_x, "basic", "starcruiser", false);
+            TextButton.field_N = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "goldstar", false);
+            ReportAbuseDialog.field_ec = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "silverstar", false);
+            PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "starfrigate", false);
+            Checkbox.field_W = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "starcruiser", false);
             IterableDualNodeDeque.field_e = Checkbox.field_W.copyFlippedHorizontal();
-            NodeIterator.field_c = cj.a(27, "basic", DualNode.field_x, "texticons");
+            NodeIterator.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(27, "basic", DualNode.field_x, "texticons");
             ModalPanel.field_X = new int[]{13, 13, 13, 13, 14, 14, 14, 13, 13, 15, 13, 13, 12, 13, 15, 13, 13, 13, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15};
-            dk.field_h.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
+            DualNodeHashTable.field_h.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
             BoundedUrlRequest.field_d.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
-            pl.field_U.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
+            BirthDateEntryPanel.field_U.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
             ValidationHelpWidget.field_lb.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
             stackIn_149_0 = param0;
             stackIn_149_1 = -5;
           }
-          var3 = cj.a(stackIn_149_0 ^ stackIn_149_1, "basic", DualNode.field_x, "instr_texticons");
+          var3 = ArchiveLoadSequence.loadIndexedSpritesByName(stackIn_149_0 ^ stackIn_149_1, "basic", DualNode.field_x, "instr_texticons");
           SoundCache.field_a = new IndexedSprite[18];
           AlternateUsernameCredentials.field_w = new int[SoundCache.field_a.length];
           var4_int = 0;
@@ -579,94 +579,94 @@ public final class SteelSentinels extends FunOrbClient {
               LinkButtonPainter.field_d[4] = null;
               TextButton.field_Q = cf.a("popup_frame", "basic", (byte) -94, DualNode.field_x);
               TextButton.field_Q[4] = null;
-              CachedTextLayout.field_l = cj.a(125, "basic", DualNode.field_x, "mechbits");
+              CachedTextLayout.field_l = ArchiveLoadSequence.loadIndexedSpritesByName(125, "basic", DualNode.field_x, "mechbits");
               IterableDualNodeDeque.field_j = cf.a("weaponclasses", "basic", (byte) -107, DualNode.field_x);
-              ja.field_d = cj.a(-123, "basic", DualNode.field_x, "batdrone");
-              VerticalScrollbar.field_Zb = cj.a(param0 ^ 69, "basic", DualNode.field_x, "drones");
-              AccountNoticeDialog.field_qb = cj.a(param0 + 163, "basic", DualNode.field_x, "bits_golem");
-              Sentinel.field_nc = cj.a(42, "basic", DualNode.field_x, "bits_bird");
-              PasswordFieldPainter.field_z = cj.a(-115, "basic", DualNode.field_x, "bits_slave");
-              wi.field_C = cj.a(125, "basic", DualNode.field_x, "bits_babel");
-              FallingPickup.field_R = cj.a(-128, "basic", DualNode.field_x, "bits_valhalla");
-              hk.field_Ec = cj.a(-128, "basic", DualNode.field_x, "bits_orbital");
-              AlphaContainer.field_V = cj.a(61, "basic", DualNode.field_x, "bits_bertha");
-              vc.field_b = cj.a(67, "basic", DualNode.field_x, "bits_smasher");
-              MembershipPromotionScreen.field_c = cj.a(76, "basic", DualNode.field_x, "bits_scorpion");
-              ParticleEffect.field_L = cj.a(-116, "basic", DualNode.field_x, "bits_hurricane");
-              cf.field_u = cj.a(param0 - 65, "basic", DualNode.field_x, "bits_commando");
-              Sprite.field_b = cj.a(param0 ^ -112, "basic", DualNode.field_x, "bits_turtle");
-              ml.field_c = cj.a(param0 + 19, "basic", DualNode.field_x, "droppod");
-              ArchiveProvider.field_a = cj.a(param0 ^ -128, "basic", DualNode.field_x, "infantary");
-              IsaacRandom.field_d = cj.a(-123, "basic", DualNode.field_x, "modules");
+              ja.field_d = ArchiveLoadSequence.loadIndexedSpritesByName(-123, "basic", DualNode.field_x, "batdrone");
+              VerticalScrollbar.field_Zb = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ 69, "basic", DualNode.field_x, "drones");
+              AccountNoticeDialog.field_qb = ArchiveLoadSequence.loadIndexedSpritesByName(param0 + 163, "basic", DualNode.field_x, "bits_golem");
+              Sentinel.field_nc = ArchiveLoadSequence.loadIndexedSpritesByName(42, "basic", DualNode.field_x, "bits_bird");
+              PasswordFieldPainter.field_z = ArchiveLoadSequence.loadIndexedSpritesByName(-115, "basic", DualNode.field_x, "bits_slave");
+              wi.field_C = ArchiveLoadSequence.loadIndexedSpritesByName(125, "basic", DualNode.field_x, "bits_babel");
+              FallingPickup.field_R = ArchiveLoadSequence.loadIndexedSpritesByName(-128, "basic", DualNode.field_x, "bits_valhalla");
+              LobbyGame.field_Ec = ArchiveLoadSequence.loadIndexedSpritesByName(-128, "basic", DualNode.field_x, "bits_orbital");
+              AlphaContainer.field_V = ArchiveLoadSequence.loadIndexedSpritesByName(61, "basic", DualNode.field_x, "bits_bertha");
+              vc.field_b = ArchiveLoadSequence.loadIndexedSpritesByName(67, "basic", DualNode.field_x, "bits_smasher");
+              MembershipPromotionScreen.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(76, "basic", DualNode.field_x, "bits_scorpion");
+              ParticleEffect.field_L = ArchiveLoadSequence.loadIndexedSpritesByName(-116, "basic", DualNode.field_x, "bits_hurricane");
+              cf.field_u = ArchiveLoadSequence.loadIndexedSpritesByName(param0 - 65, "basic", DualNode.field_x, "bits_commando");
+              Sprite.field_b = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ -112, "basic", DualNode.field_x, "bits_turtle");
+              ml.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(param0 + 19, "basic", DualNode.field_x, "droppod");
+              ArchiveProvider.field_a = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ -128, "basic", DualNode.field_x, "infantary");
+              IsaacRandom.field_d = ArchiveLoadSequence.loadIndexedSpritesByName(-123, "basic", DualNode.field_x, "modules");
               break;
             }
             AlternateUsernameCredentials.field_w[var4_int] = 14;
             var4_int++;
           } while (var6 == 0);
           var3_array = rh.field_v;
-          var3_array[0] = rl.a(DualNode.field_x, "basic", "instr_giantrobot", false);
-          var3_array[1] = rl.a(DualNode.field_x, "basic", "instr_queue", false);
-          var3_array[2] = rl.a(DualNode.field_x, "Basic", "instr_walk", false);
-          var3_array[3] = rl.a(DualNode.field_x, "basic", "instr_jump", false);
-          var3_array[4] = rl.a(DualNode.field_x, "basic", "instr_thrust", false);
+          var3_array[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_giantrobot", false);
+          var3_array[1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_queue", false);
+          var3_array[2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "Basic", "instr_walk", false);
+          var3_array[3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_jump", false);
+          var3_array[4] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_thrust", false);
           var3_array[5] = IsaacRandom.field_d[16].toRgbSprite();
-          var3_array[6] = rl.a(DualNode.field_x, "basic", "instr_selweapon", false);
-          var3_array[7] = rl.a(DualNode.field_x, "basic", "instr_target", false);
-          var3_array[8] = rl.a(DualNode.field_x, "basic", "instr_noenergy", false);
+          var3_array[6] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_selweapon", false);
+          var3_array[7] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_target", false);
+          var3_array[8] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_noenergy", false);
           var3_array[9] = IsaacRandom.field_d[32].toRgbSprite();
           var3_array[10] = IsaacRandom.field_d[33].toRgbSprite();
-          var3_array[11] = rl.a(DualNode.field_x, "basic", "instr_bigshieldicon", false);
+          var3_array[11] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_bigshieldicon", false);
           var3_array[12] = IsaacRandom.field_d[27].toRgbSprite();
-          var3_array[13] = rl.a(DualNode.field_x, "basic", "instr_stats", false);
-          var3_array[14] = rl.a(DualNode.field_x, "basic", "instr_chassis", false);
-          var3_array[15] = rl.a(DualNode.field_x, "basic", "instr_components", false);
-          var3_array[16] = rl.a(DualNode.field_x, "basic", "instr_weapons", false);
-          var3_array[17] = rl.a(DualNode.field_x, "basic", "instr_modules", false);
-          var3_array[18] = rl.a(DualNode.field_x, "basic", "instr_engineer", false);
-          var3_array[19] = rl.a(DualNode.field_x, "basic", "instr_coop", false);
-          var3_array[20] = rl.a(DualNode.field_x, "basic", "instr_team", false);
-          var3_array[25] = rl.a(DualNode.field_x, "basic", "instr_techvalue", false);
-          ArchiveProvider.field_b = rl.a(DualNode.field_x, "basic", "logo_menu_chromakey", false);
-          ob.field_z = (ArgbSprite) (dn.a("basic", -63, "main_lower_panel", DualNode.field_x));
-          TextHotspotWidget.field_eb = (ArgbSprite) (dn.a("basic", param0 ^ 75, "main_title_panel", DualNode.field_x));
-          CachedArchiveProvider.field_j = rl.a(DualNode.field_x, "basic", "menu_mesh", false);
-          MidiPcmStream.field_db = rl.a(DualNode.field_x, "basic", "menu_titlebar", false);
-          pl.field_T = GameplayController.a(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
+          var3_array[13] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_stats", false);
+          var3_array[14] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_chassis", false);
+          var3_array[15] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_components", false);
+          var3_array[16] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_weapons", false);
+          var3_array[17] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_modules", false);
+          var3_array[18] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_engineer", false);
+          var3_array[19] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_coop", false);
+          var3_array[20] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_team", false);
+          var3_array[25] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_techvalue", false);
+          ArchiveProvider.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "logo_menu_chromakey", false);
+          ob.field_z = (ArgbSprite) (ContextMenu.loadSprite("basic", -63, "main_lower_panel", DualNode.field_x));
+          TextHotspotWidget.field_eb = (ArgbSprite) (ContextMenu.loadSprite("basic", param0 ^ 75, "main_title_panel", DualNode.field_x));
+          CachedArchiveProvider.field_j = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "menu_mesh", false);
+          MidiPcmStream.field_db = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "menu_titlebar", false);
+          BirthDateEntryPanel.field_T = GameplayController.a(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
           GameplayController.a(DualNode.field_x, (byte) 107, "empty_button", "basic");
-          AccountNamePrompt.field_Ub = rl.a(DualNode.field_x, "basic", "prevbtn", false);
-          gm.field_b = rl.a(DualNode.field_x, "basic", "nextbtn", false);
-          CheckboxPainter.field_b = rl.a(DualNode.field_x, "basic", "lobby_icon", false);
+          AccountNamePrompt.field_Ub = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "prevbtn", false);
+          gm.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "nextbtn", false);
+          CheckboxPainter.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lobby_icon", false);
           vc.field_e = cf.a("statbars", "basic", (byte) -13, DualNode.field_x);
           AccountChoicePanel.field_Z = cf.a("tags", "basic", (byte) -50, DualNode.field_x);
-          NodeHashTable.field_k = rl.a(DualNode.field_x, "basic", "tagborder", false);
+          NodeHashTable.field_k = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "tagborder", false);
           MarkerSliderPainter.field_f = cf.a("movekeys", "basic", (byte) -38, DualNode.field_x);
-          ValidatedTextWidget.field_wb = rl.a(DualNode.field_x, "basic", "shiftkey", false);
+          ValidatedTextWidget.field_wb = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "shiftkey", false);
           TextLayout.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
-          RasterSnapshot.field_r[0] = rl.a(DualNode.field_x, "basic", "research_ring", false);
-          DialWidgetPainter.field_q[0] = rl.a(DualNode.field_x, "basic", "research_icon", false);
-          LinkButtonPainter.field_p = cj.a(param0 - 75, "basic", DualNode.field_x, "powerups");
+          RasterSnapshot.field_r[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "research_ring", false);
+          DialWidgetPainter.field_q[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "research_icon", false);
+          LinkButtonPainter.field_p = ArchiveLoadSequence.loadIndexedSpritesByName(param0 - 75, "basic", DualNode.field_x, "powerups");
           gf.field_c = cf.a("headings_bar", "basic", (byte) -26, DualNode.field_x);
-          rl.a(DualNode.field_x, "basic", "solarite", false);
-          Js5Transport.field_q = rl.a(DualNode.field_x, "basic", "mansize", false);
-          gj.field_a = rl.a(DualNode.field_x, "basic", "stripeybar", false);
-          Js5Transport.field_r = rl.a(DualNode.field_x, "basic", "hackbit", false);
+          PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "solarite", false);
+          Js5Transport.field_q = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "mansize", false);
+          gj.field_a = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "stripeybar", false);
+          Js5Transport.field_r = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "hackbit", false);
           MouseInputHandler.field_d = cf.a("pretty_button_lit", "basic", (byte) -111, DualNode.field_x);
-          hk.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, DualNode.field_x);
-          eb.field_p = cf.a("menu_border", "basic", (byte) -31, DualNode.field_x);
-          lj.field_e = cf.a("bin_icon", "basic", (byte) -14, DualNode.field_x);
+          LobbyGame.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, DualNode.field_x);
+          AgeValidator.field_p = cf.a("menu_border", "basic", (byte) -31, DualNode.field_x);
+          SocialRequestHelpers.field_e = cf.a("bin_icon", "basic", (byte) -14, DualNode.field_x);
           AccountChoicePanel.field_Q = cf.a("faces_idle", "basic", (byte) -87, DualNode.field_x);
           WeightedCacheEntry.field_C = cf.a("faces_talk", "basic", (byte) -97, DualNode.field_x);
           am.field_f = cf.a("tutor_buttons", "basic", (byte) -125, DualNode.field_x);
           DialWidgetPainter.field_n = cf.a("shields", "basic", (byte) -58, DualNode.field_x);
           AccountRegistrationPanel.field_gb = cf.a("explosion", "basic", (byte) -34, DualNode.field_x);
-          var3_array = ec.a((byte) -115, "smoke", DualNode.field_x, "basic");
-          cc.field_pc = new ArgbSprite[var3_array.length];
+          var3_array = ClientUiHelpers.loadRgbSpritesByName((byte) -115, "smoke", DualNode.field_x, "basic");
+          LobbyPlayer.field_pc = new ArgbSprite[var3_array.length];
           var4_int = 0;
           do {
             if (var4_int >= var3_array.length) {
               AccountMessagePanel.field_S = cf.a("plasma", "basic", (byte) -98, DualNode.field_x);
               cf.a("dust", "basic", (byte) -81, DualNode.field_x);
-              LoginDialog.field_Cb = cj.a(-120, "basic", DualNode.field_x, "crowns");
+              LoginDialog.field_Cb = ArchiveLoadSequence.loadIndexedSpritesByName(-120, "basic", DualNode.field_x, "crowns");
               ValidatedTextWidget.field_sb = new RgbSprite(32, 32);
               ValidatedTextWidget.field_sb.bindRasterTarget();
               DropTargetWidget.field_G.drawScaledAveraged(0, 0, 32, 32);
@@ -674,7 +674,7 @@ public final class SteelSentinels extends FunOrbClient {
               DropTargetWidget.field_G = null;
               break;
             }
-            cc.field_pc[var4_int] = (ArgbSprite) (var3_array[var4_int]);
+            LobbyPlayer.field_pc[var4_int] = (ArgbSprite) (var3_array[var4_int]);
             var4_int++;
           } while (var6 == 0);
           var3_array2 = new RgbSprite[WeightedLruCache.field_m.length][];
@@ -685,8 +685,8 @@ public final class SteelSentinels extends FunOrbClient {
               ResourceArchive.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, BufferedRandomAccessFile.field_k, var4, true, 4, 3, ModalPanel.field_R, var2_array, DebouncedValidator.field_b, var3_array2, MusicPatchPcmStream.field_t, DelayedServerPacket.field_w, ParticleEffect.field_y, ImageProducerRasterBuffer.field_u);
               pa.a(tm.field_d, 111, MusicPatchPcmStream.field_t);
               un.a(200, 126);
-              oh.field_a = null;
-              cc.j(param0 ^ -52);
+              LobbySetupHelpers.field_a = null;
+              LobbyPlayer.resetFrameTimingHistory(param0 ^ -52);
               break;
             }
             var3_array2[var5] = cf.a(WeightedLruCache.field_m[var5], "basic", (byte) -63, DualNode.field_x);
@@ -697,11 +697,11 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "SteelSentinels.OA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "SteelSentinels.OA(" + param0 + ')');
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] createPanelFrameSprites(int param0, int param1, byte param2, int param3, int param4) {
         RgbSprite dupTemp$2 = null;
         RgbSprite dupTemp$3 = null;
         RgbSprite[] var5 = null;
@@ -733,11 +733,11 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5_ref), "SteelSentinels.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5_ref), "SteelSentinels.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final void n(int param0) {
+    private final void loadGameGraphics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -758,14 +758,14 @@ public final class SteelSentinels extends FunOrbClient {
               DualNode.field_x.a((byte) -38, "lw_midground_01", "basic")) {
               TickClock.field_g = TickClock.field_g + 1;
               WhirlpoolHasher.field_o[1] = new RgbSprite[4];
-              WhirlpoolHasher.field_o[1][0] = rl.a(DualNode.field_x, "basic", "lw_midground_01", false);
+              WhirlpoolHasher.field_o[1][0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_01", false);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (1 == TickClock.field_g &&
                 DualNode.field_x.a((byte) 113, "lw_midground_02", "basic")) {
                 TickClock.field_g = TickClock.field_g + 1;
-                WhirlpoolHasher.field_o[1][1] = rl.a(DualNode.field_x, "basic", "lw_midground_02", false);
+                WhirlpoolHasher.field_o[1][1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_02", false);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -774,7 +774,7 @@ public final class SteelSentinels extends FunOrbClient {
                   if (TickClock.field_g == 3 &&
                     DualNode.field_x.a((byte) 101, "lw_midground_04", "basic")) {
                     TickClock.field_g = TickClock.field_g + 1;
-                    WhirlpoolHasher.field_o[1][3] = rl.a(DualNode.field_x, "basic", "lw_midground_04", false);
+                    WhirlpoolHasher.field_o[1][3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_04", false);
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -787,14 +787,14 @@ public final class SteelSentinels extends FunOrbClient {
                           if (7 == TickClock.field_g &&
                             DualNode.field_x.a((byte) -57, "ct_midground_04", "basic")) {
                             TickClock.field_g = TickClock.field_g + 1;
-                            WhirlpoolHasher.field_o[2][3] = rl.a(DualNode.field_x, "basic", "ct_midground_04", false);
+                            WhirlpoolHasher.field_o[2][3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_04", false);
                             decompiledFrameRemainder0 = (var3 != 0);
                           }
                           if (decompiledFrameRemainder0) {
                             if (TickClock.field_g == 8 &&
                               DualNode.field_x.a((byte) 107, "testsurface", "basic")) {
                               TickClock.field_g = TickClock.field_g + 1;
-                              AccountRegistrationPanel.field_R = rl.a(DualNode.field_x, "basic", "testsurface", false);
+                              AccountRegistrationPanel.field_R = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "testsurface", false);
                               decompiledFrameRemainder0 = (var3 != 0);
                             }
                             if (decompiledFrameRemainder0) {
@@ -803,21 +803,21 @@ public final class SteelSentinels extends FunOrbClient {
                                 if (TickClock.field_g == 10 &&
                                   DualNode.field_x.a((byte) -81, "lw_texture", "basic")) {
                                   TickClock.field_g = TickClock.field_g + 1;
-                                  ValidatedTextWidget.field_rb[1] = rl.a(DualNode.field_x, "basic", "lw_texture", false);
+                                  ValidatedTextWidget.field_rb[1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_texture", false);
                                   decompiledFrameRemainder0 = (var3 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
                                   if (11 == TickClock.field_g &&
                                     DualNode.field_x.a((byte) -113, "ct_texture", "basic")) {
                                     TickClock.field_g = TickClock.field_g + 1;
-                                    ValidatedTextWidget.field_rb[2] = rl.a(DualNode.field_x, "basic", "ct_texture", false);
+                                    ValidatedTextWidget.field_rb[2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
                                   }
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (TickClock.field_g == 12)) &&
                                     (decompiledFrameRemainder0 = !(!DualNode.field_x.a((byte) 127, "mn_texture", "basic")))) {
                                     TickClock.field_g = TickClock.field_g + 1;
-                                    ValidatedTextWidget.field_rb[3] = rl.a(DualNode.field_x, "basic", "mn_texture", false);
+                                    ValidatedTextWidget.field_rb[3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "mn_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
                                   }
                                 }
@@ -825,7 +825,7 @@ public final class SteelSentinels extends FunOrbClient {
                               if (decompiledFrameRemainder0) {
                                 TickClock.field_g = TickClock.field_g + 1;
                                 ValidatedTextWidget.field_rb = new RgbSprite[5];
-                                ValidatedTextWidget.field_rb[0] = rl.a(DualNode.field_x, "basic", "wz_texture", false);
+                                ValidatedTextWidget.field_rb[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "wz_texture", false);
                                 ValidatedTextWidget.field_rb[4] = ValidatedTextWidget.field_rb[0];
                                 decompiledFrameRemainder0 = (var3 != 0);
                               }
@@ -834,41 +834,41 @@ public final class SteelSentinels extends FunOrbClient {
                         }
                         if (decompiledFrameRemainder0) {
                           TickClock.field_g = TickClock.field_g + 1;
-                          WhirlpoolHasher.field_o[2][2] = rl.a(DualNode.field_x, "basic", "ct_midground_03", false);
+                          WhirlpoolHasher.field_o[2][2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_03", false);
                           if (var3 != 0) {
                             TickClock.field_g = TickClock.field_g + 1;
-                            WhirlpoolHasher.field_o[2][1] = rl.a(DualNode.field_x, "basic", "ct_midground_02", false);
+                            WhirlpoolHasher.field_o[2][1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_02", false);
                             TickClock.field_g = TickClock.field_g + 1;
                             WhirlpoolHasher.field_o[2] = new RgbSprite[4];
-                            WhirlpoolHasher.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
+                            WhirlpoolHasher.field_o[2][0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_01", false);
                             TickClock.field_g = TickClock.field_g + 1;
-                            WhirlpoolHasher.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
+                            WhirlpoolHasher.field_o[1][2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_03", false);
                           }
                         }
                       } else {
                         TickClock.field_g = TickClock.field_g + 1;
-                        WhirlpoolHasher.field_o[2][1] = rl.a(DualNode.field_x, "basic", "ct_midground_02", false);
+                        WhirlpoolHasher.field_o[2][1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_02", false);
                         if (var3 != 0) {
                           TickClock.field_g = TickClock.field_g + 1;
                           WhirlpoolHasher.field_o[2] = new RgbSprite[4];
-                          WhirlpoolHasher.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
+                          WhirlpoolHasher.field_o[2][0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_01", false);
                           TickClock.field_g = TickClock.field_g + 1;
-                          WhirlpoolHasher.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
+                          WhirlpoolHasher.field_o[1][2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_03", false);
                         }
                       }
                     } else {
                       TickClock.field_g = TickClock.field_g + 1;
                       WhirlpoolHasher.field_o[2] = new RgbSprite[4];
-                      WhirlpoolHasher.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
+                      WhirlpoolHasher.field_o[2][0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_01", false);
                       if (var3 != 0) {
                         TickClock.field_g = TickClock.field_g + 1;
-                        WhirlpoolHasher.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
+                        WhirlpoolHasher.field_o[1][2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_03", false);
                       }
                     }
                   }
                 } else {
                   TickClock.field_g = TickClock.field_g + 1;
-                  WhirlpoolHasher.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
+                  WhirlpoolHasher.field_o[1][2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_03", false);
                 }
               }
             }
@@ -880,144 +880,144 @@ public final class SteelSentinels extends FunOrbClient {
             return;
           }
           if (DiskCacheWorker.field_l == 1 &&
-            im.field_h != null) {
+            LobbyStateHelpers.field_h != null) {
             ReflectionCheck.field_r = 23;
             DiskCacheWorker.field_l = 1;
-            if (!im.field_h.ensureIndex(true)) {
+            if (!LobbyStateHelpers.field_h.ensureIndex(true)) {
               return;
             }
             if (TickClock.field_g == 0 &&
-              im.field_h.a((byte) -91, "wz_background.jpg", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) -91, "wz_background.jpg", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 1 &&
-              im.field_h.a((byte) -40, "lw_background.jpg", "lostworld/")) {
+              LobbyStateHelpers.field_h.a((byte) -40, "lw_background.jpg", "lostworld/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 2 &&
-              im.field_h.a((byte) 126, "ct_background.jpg", "city/")) {
+              LobbyStateHelpers.field_h.a((byte) 126, "ct_background.jpg", "city/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (3 == TickClock.field_g &&
-              im.field_h.a((byte) -48, "mn_background.jpg", "moon/")) {
+              LobbyStateHelpers.field_h.a((byte) -48, "mn_background.jpg", "moon/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 4 &&
-              im.field_h.a((byte) 94, "wz_midground_01.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 94, "wz_midground_01.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               WhirlpoolHasher.field_o[0] = new RgbSprite[4];
-              WhirlpoolHasher.field_o[0][0] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 5 &&
-              im.field_h.a((byte) 109, "wz_midground_02.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 109, "wz_midground_02.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][1] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 6 &&
-              im.field_h.a((byte) 83, "wz_midground_03.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 83, "wz_midground_03.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][2] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (7 == TickClock.field_g &&
-              im.field_h.a((byte) 118, "wz_midground_04.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 118, "wz_midground_04.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][3] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_midground_04.png", bi.a(param0, -721), "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_04.png", TextAndBitHelpers.bitXor(param0, -721), "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 8 &&
-              im.field_h.a((byte) 88, "wz_foreground_01.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 88, "wz_foreground_01.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               DelayedServerPacket.field_x[0] = new RgbSprite[7];
-              DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (9 == TickClock.field_g &&
-              im.field_h.a((byte) 122, "wz_foreground_02.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 122, "wz_foreground_02.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 10 &&
-              im.field_h.a((byte) 84, "wz_foreground_03.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 84, "wz_foreground_03.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 11 &&
-              im.field_h.a((byte) 122, "wz_foreground_04.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 122, "wz_foreground_04.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 12 &&
-              im.field_h.a((byte) -76, "wz_foreground_05.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) -76, "wz_foreground_05.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 13 &&
-              im.field_h.a((byte) 102, "wz_foreground_06.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 102, "wz_foreground_06.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 14 &&
-              im.field_h.a((byte) 93, "wz_foreground_07.png", "warzone/")) {
+              LobbyStateHelpers.field_h.a((byte) 93, "wz_foreground_07.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 15 &&
-              im.field_h.a((byte) -54, "sb_foreground_01.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -54, "sb_foreground_01.png", "fleetbattle/")) {
               DelayedServerPacket.field_x[1] = new RgbSprite[6];
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (16 == TickClock.field_g &&
-              im.field_h.a((byte) -68, "sb_foreground_02.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -68, "sb_foreground_02.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (17 == TickClock.field_g &&
-              im.field_h.a((byte) -121, "sb_foreground_03.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -121, "sb_foreground_03.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_03.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_03.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (18 == TickClock.field_g &&
-              im.field_h.a((byte) -127, "sb_foreground_04.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -127, "sb_foreground_04.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_04.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_04.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 19 &&
-              im.field_h.a((byte) -70, "sb_foreground_05.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -70, "sb_foreground_05.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_05.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_05.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (20 == TickClock.field_g &&
-              im.field_h.a((byte) 126, "sb_foreground_06.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) 126, "sb_foreground_06.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(im.field_h.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
               return;
             }
             if (TickClock.field_g == 21 &&
-              im.field_h.a((byte) -87, "planet.jpg", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) -87, "planet.jpg", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 22 &&
-              im.field_h.a((byte) 123, "moon.jpg", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.a((byte) 123, "moon.jpg", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
@@ -1039,7 +1039,7 @@ public final class SteelSentinels extends FunOrbClient {
                 }
               }
               if (TickClock.field_g == 1) {
-                SentinelAnimationEditor.field_q[1] = RasterBuffer.field_e.getSoundEffectByName("jumping", "", bi.a(param0, 90));
+                SentinelAnimationEditor.field_q[1] = RasterBuffer.field_e.getSoundEffectByName("jumping", "", TextAndBitHelpers.bitXor(param0, 90));
                 TickClock.field_g = TickClock.field_g + 1;
                 if (var3 == 0) {
                   break regionExit1;
@@ -1233,7 +1233,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                     }
                                                                   }
                                                                   if (TickClock.field_g == 51) {
-                                                                    SentinelAnimationEditor.field_q[49] = RasterBuffer.field_e.getSoundEffectByName("damage_richochet", "", bi.a(param0, -15));
+                                                                    SentinelAnimationEditor.field_q[49] = RasterBuffer.field_e.getSoundEffectByName("damage_richochet", "", TextAndBitHelpers.bitXor(param0, -15));
                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                     if (var3 == 0) {
                                                                       break regionExit1;
@@ -1405,7 +1405,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                                       break regionExit1;
                                                                                                     }
                                                                                                   }
-                                                                                                  SentinelAnimationEditor.field_q[93] = RasterBuffer.field_e.getSoundEffectByName("trackloop", "", bi.a(param0, 68));
+                                                                                                  SentinelAnimationEditor.field_q[93] = RasterBuffer.field_e.getSoundEffectByName("trackloop", "", TextAndBitHelpers.bitXor(param0, 68));
                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                   if (var3 == 0) {
                                                                                                     break regionExit1;
@@ -1423,7 +1423,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                                 break regionExit1;
                                                                                               }
                                                                                             }
-                                                                                            SentinelAnimationEditor.field_q[88] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_3", "", bi.a(param0, -90));
+                                                                                            SentinelAnimationEditor.field_q[88] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_3", "", TextAndBitHelpers.bitXor(param0, -90));
                                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                                             if (var3 == 0) {
                                                                                               break regionExit1;
@@ -1435,7 +1435,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                             break regionExit1;
                                                                                           }
                                                                                         }
-                                                                                        SentinelAnimationEditor.field_q[84] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_open", "", bi.a(param0, -110));
+                                                                                        SentinelAnimationEditor.field_q[84] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_open", "", TextAndBitHelpers.bitXor(param0, -110));
                                                                                         TickClock.field_g = TickClock.field_g + 1;
                                                                                         if (var3 == 0) {
                                                                                           break regionExit1;
@@ -1465,7 +1465,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                   break regionExit1;
                                                                                 }
                                                                               }
-                                                                              SentinelAnimationEditor.field_q[61] = RasterBuffer.field_e.getSoundEffectByName("air_death_missile", "", bi.a(param0, 85));
+                                                                              SentinelAnimationEditor.field_q[61] = RasterBuffer.field_e.getSoundEffectByName("air_death_missile", "", TextAndBitHelpers.bitXor(param0, 85));
                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                               if (var3 == 0) {
                                                                                 break regionExit1;
@@ -1507,13 +1507,13 @@ public final class SteelSentinels extends FunOrbClient {
                                                                     break regionExit1;
                                                                   }
                                                                 }
-                                                                SentinelAnimationEditor.field_q[47] = RasterBuffer.field_e.getSoundEffectByName("explosion_2", "", bi.a(param0, -87));
+                                                                SentinelAnimationEditor.field_q[47] = RasterBuffer.field_e.getSoundEffectByName("explosion_2", "", TextAndBitHelpers.bitXor(param0, -87));
                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                 if (var3 == 0) {
                                                                   break regionExit1;
                                                                 }
                                                               }
-                                                              SentinelAnimationEditor.field_q[68] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_2", "", bi.a(param0, -27));
+                                                              SentinelAnimationEditor.field_q[68] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_2", "", TextAndBitHelpers.bitXor(param0, -27));
                                                               TickClock.field_g = TickClock.field_g + 1;
                                                               if (var3 == 0) {
                                                                 break regionExit1;
@@ -1567,7 +1567,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                 break regionExit1;
                                               }
                                             }
-                                            SentinelAnimationEditor.field_q[27] = RasterBuffer.field_e.getSoundEffectByName("shield_hit", "", bi.a(param0, -109));
+                                            SentinelAnimationEditor.field_q[27] = RasterBuffer.field_e.getSoundEffectByName("shield_hit", "", TextAndBitHelpers.bitXor(param0, -109));
                                             TickClock.field_g = TickClock.field_g + 1;
                                             if (var3 == 0) {
                                               break regionExit1;
@@ -1651,13 +1651,13 @@ public final class SteelSentinels extends FunOrbClient {
                     break regionExit1;
                   }
                 }
-                SentinelAnimationEditor.field_q[3] = RasterBuffer.field_e.getSoundEffectByName("footstep_1", "", bi.a(param0, 75));
+                SentinelAnimationEditor.field_q[3] = RasterBuffer.field_e.getSoundEffectByName("footstep_1", "", TextAndBitHelpers.bitXor(param0, 75));
                 TickClock.field_g = TickClock.field_g + 1;
                 if (var3 == 0) {
                   break regionExit1;
                 }
               }
-              SentinelAnimationEditor.field_q[2] = RasterBuffer.field_e.getSoundEffectByName("thrusting", "", bi.a(param0, 92));
+              SentinelAnimationEditor.field_q[2] = RasterBuffer.field_e.getSoundEffectByName("thrusting", "", TextAndBitHelpers.bitXor(param0, 92));
               TickClock.field_g = TickClock.field_g + 1;
             }
             if (TickClock.field_g == 90) {
@@ -1671,11 +1671,11 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "SteelSentinels.PA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "SteelSentinels.PA(" + param0 + ')');
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_J = null;
         if (param0 != -10) {
@@ -1684,40 +1684,40 @@ public final class SteelSentinels extends FunOrbClient {
         try {
           field_I = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "SteelSentinels.TA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "SteelSentinels.TA(" + param0 + ')');
         }
     }
 
-    private final void m(int param0) {
+    private final void openArchives(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (pl.field_S != null) {
-            SectorCacheStore.a(0, pl.field_S);
-            pl.field_S = null;
-            cc.j(0);
+          if (BirthDateEntryPanel.field_S != null) {
+            SectorCacheStore.a(0, BirthDateEntryPanel.field_S);
+            BirthDateEntryPanel.field_S = null;
+            LobbyPlayer.resetFrameTimingHistory(0);
           }
-          IsaacRandom.field_k = SceneWidgetNode.a(-124, 3);
-          DualNode.field_x = SceneWidgetNode.a(60, 5);
-          oh.field_a = SceneWidgetNode.a(-90, 6);
-          RasterSnapshot.field_x = SceneWidgetNode.a(55, 7);
-          SceneWidgetNode.field_z = SceneWidgetNode.a(120, 8);
+          IsaacRandom.field_k = SceneWidgetNode.openResourceArchive(-124, 3);
+          DualNode.field_x = SceneWidgetNode.openResourceArchive(60, 5);
+          LobbySetupHelpers.field_a = SceneWidgetNode.openResourceArchive(-90, 6);
+          RasterSnapshot.field_x = SceneWidgetNode.openResourceArchive(55, 7);
+          SceneWidgetNode.field_z = SceneWidgetNode.openResourceArchive(120, 8);
           var2_int = -77 % ((47 - param0) / 35);
-          SectorCacheStore.field_i = SceneWidgetNode.a(-92, 9);
-          GrowableIntList.field_i = SceneWidgetNode.a(-106, 10);
-          BufferedRandomAccessFile.field_k = SceneWidgetNode.a(104, 11);
-          ImageProducerRasterBuffer.field_t = SceneWidgetNode.a(125, 12);
-          im.field_h = SceneWidgetNode.a(70, 13);
+          SectorCacheStore.field_i = SceneWidgetNode.openResourceArchive(-92, 9);
+          GrowableIntList.field_i = SceneWidgetNode.openResourceArchive(-106, 10);
+          BufferedRandomAccessFile.field_k = SceneWidgetNode.openResourceArchive(104, 11);
+          ImageProducerRasterBuffer.field_t = SceneWidgetNode.openResourceArchive(125, 12);
+          LobbyStateHelpers.field_h = SceneWidgetNode.openResourceArchive(70, 13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "SteelSentinels.RA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "SteelSentinels.RA(" + param0 + ')');
         }
     }
 
-    final void c(byte param0) {
+    final void shutdownClientServices(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1727,24 +1727,24 @@ public final class SteelSentinels extends FunOrbClient {
             SoundCache.c(0);
           }
           var2_int = 21 % ((param0 - 34) / 48);
-          QuickChatPhraseDefinition.h(0);
+          QuickChatPhraseDefinition.shutdownConnectionAndInput(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "SteelSentinels.LA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "SteelSentinels.LA(" + param0 + ')');
         }
     }
 
     public final void init() {
         try {
-          this.a(15, -28233, "steelsentinels");
+          this.startWithDefaultSize(15, -28233, "steelsentinels");
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "SteelSentinels.init()");
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "SteelSentinels.init()");
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void processGameTick(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_179_0 = false;
         GameplayController stackIn_251_0;
@@ -1799,10 +1799,10 @@ public final class SteelSentinels extends FunOrbClient {
                     IterableNodeHashTable.a(-4, false, -1, var3_int);
                   }
                   if (DropTargetWidget.a(GzipDecoder.field_g, 0)) {
-                    QuickChatHelpDialog.b(true);
+                    QuickChatHelpDialog.switchToRequestedScreen(true);
                   }
                 }
-                in.field_i = ik.field_b;
+                in.field_i = ConditionalTextValue.field_b;
                 decompiledFrameRemainder2 = (var8 != 0);
               }
               if (decompiledFrameRemainder2) {
@@ -1821,10 +1821,10 @@ public final class SteelSentinels extends FunOrbClient {
                 if (!CachedTextLayout.field_y) {
                   ModalPanel.a((byte) 113);
                   if (var8 != 0) {
-                    ef.a(param0 ^ 116);
+                    EmailFormatError.returnToLoginDialog(param0 ^ 116);
                   }
                 } else {
-                  ef.a(param0 ^ 116);
+                  EmailFormatError.returnToLoginDialog(param0 ^ 116);
                 }
                 in.field_i = LoginMethod.field_f;
                 decompiledFrameRemainder2 = (var8 != 0);
@@ -1863,13 +1863,13 @@ public final class SteelSentinels extends FunOrbClient {
                   (decompiledFrameCompleted2)) {
                   if (LoginForm.field_T == -2) {
                     boolean decompiledFrameCompleted1 = true;
-                    if (null != ih.field_s &&
-                      null != hl.a((byte) -66)) {
-                      ih.field_s.advanceSimulation((byte) 27);
-                      var5 = (Sentinel) (ih.field_s.sentinels.first(13058));
+                    if (null != EmailSyntaxValidator.field_s &&
+                      null != PendingIntArrayRequest.getActiveOverlayWidget((byte) -66)) {
+                      EmailSyntaxValidator.field_s.advanceSimulation((byte) 27);
+                      var5 = (Sentinel) (EmailSyntaxValidator.field_s.sentinels.first(13058));
                       while (null != var5) {
                         var5.field_vb = 0;
-                        var5 = (Sentinel) (ih.field_s.sentinels.next((byte) -80));
+                        var5 = (Sentinel) (EmailSyntaxValidator.field_s.sentinels.next((byte) -80));
                         if (var8 != 0) {
                           decompiledFrameCompleted1 = false;
                           break;
@@ -1887,7 +1887,7 @@ public final class SteelSentinels extends FunOrbClient {
                     if (var8 != 0) {
                       LoginForm.field_U = LoginForm.field_U + 1;
                       if (LoginForm.field_U == 20) {
-                        QuickChatHelpDialog.b(true);
+                        QuickChatHelpDialog.switchToRequestedScreen(true);
                       }
                     }
                   }
@@ -1895,7 +1895,7 @@ public final class SteelSentinels extends FunOrbClient {
               } else {
                 LoginForm.field_U = LoginForm.field_U + 1;
                 if (LoginForm.field_U == 20) {
-                  QuickChatHelpDialog.b(true);
+                  QuickChatHelpDialog.switchToRequestedScreen(true);
                 }
               }
             }
@@ -1906,10 +1906,10 @@ public final class SteelSentinels extends FunOrbClient {
                 jn.field_g) {
                 var3_int = 0;
               }
-              la.a(13, var3_int != 0);
+              BenefitsScreenHelpers.updateLobbyAndFlushRequests(13, var3_int != 0);
               if (CombatWorld.field_G ||
                 ob.field_y) {
-                ue.a((byte) 38, var4 != 0, 320, 180);
+                LoginHandshakeHelpers.drawChatPanelAt((byte) 38, var4 != 0, 320, 180);
               }
               if (CombatWorld.field_G &&
                 null != CachedTextLayout.field_A) {
@@ -1930,7 +1930,7 @@ public final class SteelSentinels extends FunOrbClient {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    cj.a(13, (byte) 99, 12, 15);
+                    ArchiveLoadSequence.dispatchKeyInput(13, (byte) 99, 12, 15);
                     decompiledFrameRemainder0 = (var8 != 0);
                   }
                 }
@@ -1990,7 +1990,7 @@ public final class SteelSentinels extends FunOrbClient {
             }
           }
           if (param0 != 120) {
-            this.m(-19);
+            this.openArchives(-19);
           }
           if (GzipDecoder.field_g == -3) {
             lc.field_c = null;
@@ -2087,21 +2087,21 @@ public final class SteelSentinels extends FunOrbClient {
             Sprite.field_k = true;
           }
           if (-4 == GzipDecoder.field_g) {
-            mm.field_g.writeCipheredOpcode(63, (byte) -117);
-            mm.field_g.position = mm.field_g.position + 1;
-            var3_int = mm.field_g.position;
-            mm.field_g.writeByte((byte) 124, uc.field_b.length);
+            ClockAndCookieHelpers.field_g.writeCipheredOpcode(63, (byte) -117);
+            ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
+            var3_int = ClockAndCookieHelpers.field_g.position;
+            ClockAndCookieHelpers.field_g.writeByte((byte) 124, uc.field_b.length);
             var4 = 0;
             while (true) {
               if (var4 < uc.field_b.length) {
-                mm.field_g.writeByte((byte) 127, uc.field_b[var4]);
+                ClockAndCookieHelpers.field_g.writeByte((byte) 127, uc.field_b[var4]);
                 var4++;
                 if (var8 == 0) {
                   continue;
                 }
               } else {
-                mm.field_g.backpatchByteLength((byte) 111, mm.field_g.position - var3_int);
-                mm.field_g.writeCipheredOpcode(9, (byte) -117);
+                ClockAndCookieHelpers.field_g.backpatchByteLength((byte) 111, ClockAndCookieHelpers.field_g.position - var3_int);
+                ClockAndCookieHelpers.field_g.writeCipheredOpcode(9, (byte) -117);
                 SectorCacheStore.field_n = true;
                 GzipDecoder.field_g = LoginForm.field_T;
               }
@@ -2110,7 +2110,7 @@ public final class SteelSentinels extends FunOrbClient {
             EmailCredentials.field_i = AudioService.field_h;
           }
           if (GzipDecoder.field_g == -5) {
-            na.a((byte) -43, 11, nf.field_b.j(-26));
+            ChatMessage.sendShortSetting((byte) -43, 11, nf.field_b.getGameId(-26));
             TextLayout.field_d = true;
             GzipDecoder.field_g = LoginForm.field_T;
           }
@@ -2118,35 +2118,35 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "SteelSentinels.SA(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3_ref), "SteelSentinels.SA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void b(int param0) {
+    final void initializeClient(int param0) {
         RuntimeException runtimeException = null;
         MidiPcmStream var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(14, false, 5000, 71, 1, 0, 4, 2);
+          this.initializeFramework(14, false, 5000, 71, 1, 0, 4, 2);
           var2 = new MidiPcmStream();
-          var2.b(128, (byte) -123, 9);
+          var2.setChannelDefaultProgram(128, (byte) -123, 9);
           qm.a(-31, IterableDualNodeDeque.field_i, 22050, var2, true, (java.awt.Component) ((Object) sl.field_n));
-          this.a(1, true, true, false, true, true, false);
-          ad.field_d = FunOrbClient.field_s;
-          HuffmanDecoder.field_b = pl.field_ab;
+          this.configureOptionalPacketHandlers(1, true, true, false, true, true, false);
+          LoadoutHelpers.field_d = FunOrbClient.field_s;
+          HuffmanDecoder.field_b = BirthDateEntryPanel.field_ab;
           SocketJs5Transport.field_B[66] = 1;
           SocketJs5Transport.field_B[61] = 1;
           SocketJs5Transport.field_B[67] = 32;
           NanoTickClock.field_x = MarkerSliderPainter.field_j;
           if (param0 != 26689) {
-            this.c(-47);
+            this.updateClient(-47);
           }
           SocketJs5Transport.field_B[57] = -2;
           SocketJs5Transport.field_B[71] = 12;
           SocketJs5Transport.field_B[72] = 2;
           SocketJs5Transport.field_B[78] = -1;
           uc.field_b = ReflectionCheck.field_x;
-          fc.field_b = SectorCacheStore.field_o;
+          SoundAndUrlHelpers.field_b = SectorCacheStore.field_o;
           SocketJs5Transport.field_B[80] = 2;
           SocketJs5Transport.field_B[70] = 1;
           SocketJs5Transport.field_B[76] = 5;
@@ -2168,14 +2168,14 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "SteelSentinels.W(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "SteelSentinels.W(" + param0 + ')');
         }
     }
 
     public SteelSentinels() {
     }
 
-    final void c(int param0) {
+    final void updateClient(int param0) {
         int[] array$0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
@@ -2226,24 +2226,24 @@ public final class SteelSentinels extends FunOrbClient {
           }
           stackIn_13_1 = 5;
           stackIn_14_2 = (wb.field_c != null);
-          this.a(stackIn_13_1, stackIn_14_2);
+          this.serviceFramework(stackIn_13_1, stackIn_14_2);
           if (MenuInputState.field_f) {
-            this.m(105);
+            this.openArchives(105);
             MenuInputState.field_f = false;
           }
           MouseWheelInput.field_c = MouseWheelInput.field_c + 1;
-          if (QuickChatHelpDialog.j(0)) {
-            this.k(113);
-            if (QuickChatHelpDialog.j(0)) {
+          if (QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0)) {
+            this.updateLoginFlow(113);
+            if (QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0)) {
               return;
             }
           }
           boolean decompiledFrameRemainder0 = true;
           if (SceneWidget.field_pb) {
-            if (QuickChatCategoryCache.a(false)) {
-              if (QuickChatMenu.b(true)) {
+            if (QuickChatCategoryCache.isPlayerDataReady(false)) {
+              if (QuickChatMenu.isLegacyMenuOpen(true)) {
                 if (in.field_i == in.field_h) {
-                  var2_int = eh.a(0);
+                  var2_int = SocialListUiHelpers.pollMessageMenuSelection(0);
                   switch (var2_int) {
                     case 2:
                       SoundCache.c(0);
@@ -2260,18 +2260,18 @@ public final class SteelSentinels extends FunOrbClient {
                       GradientOutlineTextPainter.a(-4, true);
                       break;
                   }
-                  this.b(param0 + 118, true);
+                  this.processGameTick(param0 + 118, true);
                   decompiledFrameRemainder0 = (var15 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.b(param0 + 118, false);
+                  this.processGameTick(param0 + 118, false);
                   decompiledFrameRemainder0 = (var15 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (!cf.c((byte) 100)) {
-                  if (!ri.b(-121)) {
-                    this.b(120, false);
+                  if (!LoginStateQueries.isMessageOverlayShown(-121)) {
+                    this.processGameTick(120, false);
                     decompiledFrameRemainder0 = (var15 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -2279,20 +2279,20 @@ public final class SteelSentinels extends FunOrbClient {
                       var2_int = rn.c((byte) 90);
                       if (var2_int == 1) {
                         ArchiveRequest.field_E = true;
-                        DebouncedValidator.a(0, pl.field_Q, param0 + 8);
+                        DebouncedValidator.a(0, BirthDateEntryPanel.field_Q, param0 + 8);
                       }
-                      this.b(param0 + 118, true);
+                      this.processGameTick(param0 + 118, true);
                       decompiledFrameRemainder0 = (var15 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      this.b(param0 + 118, false);
+                      this.processGameTick(param0 + 118, false);
                       decompiledFrameRemainder0 = (var15 != 0);
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
                   stackIn_77_1 = (null != wb.field_c);
-                  var2_int = this.a(stackIn_77_1, -3836);
+                  var2_int = this.pollAccountUiActions(stackIn_77_1, -3836);
                   if (var2_int == 1 ||
                     var2_int == 2) {
                     if (wb.field_c != null) {
@@ -2302,11 +2302,11 @@ public final class SteelSentinels extends FunOrbClient {
                       t.a(true, Projectile.d((byte) -21));
                     }
                   }
-                  this.b(120, true);
+                  this.processGameTick(120, true);
                   if (var15 != 0) {
                     ai.d(param0 + 103);
-                    ProxySocketConnector.a(jj.field_d, (byte) 104);
-                    if (this.k((byte) -52)) {
+                    ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+                    if (this.loadClientResources((byte) -52)) {
                       SceneWidget.field_pb = true;
                     }
                   }
@@ -2315,15 +2315,15 @@ public final class SteelSentinels extends FunOrbClient {
             } else {
               ai.d(param0 + 103);
               if (var15 != 0) {
-                ProxySocketConnector.a(jj.field_d, (byte) 104);
-                if (this.k((byte) -52)) {
+                ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+                if (this.loadClientResources((byte) -52)) {
                   SceneWidget.field_pb = true;
                 }
               }
             }
           } else {
-            ProxySocketConnector.a(jj.field_d, (byte) 104);
-            if (this.k((byte) -52)) {
+            ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+            if (this.loadClientResources((byte) -52)) {
               SceneWidget.field_pb = true;
             }
           }
@@ -2335,28 +2335,28 @@ public final class SteelSentinels extends FunOrbClient {
                   break;
                 }
               } else {
-                ProxySocketConnector.a(4, (byte) 123, (cf) (var2));
+                ProxySocketConnector.submitScoreRecord(4, (byte) 123, (cf) (var2));
               }
             } while (var15 == 0);
           }
           if (!ni.b(74) &&
             Explosion.field_P != 0) {
-            ef.a((byte) -109);
+            EmailFormatError.sendPendingStatUpdates((byte) -109);
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!rl.a((byte) 54, SocketJs5Transport.field_B)))) {
-            stackIn_440_0 = ch.field_N;
+          while (!(decompiledNaturalLoopExit0 = (!PacketLoopHelpers.processIncomingPackets((byte) 54, SocketJs5Transport.field_B)))) {
+            stackIn_440_0 = ArrayWidgetContainer.field_N;
             stackIn_440_1 = 9;
             if (var15 == 0) {
               if (stackIn_440_0 == stackIn_440_1) {
-                QuickChatHelpDialog.b(true);
+                QuickChatHelpDialog.switchToRequestedScreen(true);
                 GzipDecoder.field_g = 11;
                 SectorCacheStore.field_n = false;
-                UiTheme.field_s = rf.field_d.readString(1);
+                UiTheme.field_s = LoginConnectionStage.field_d.readString(1);
                 continue;
               }
-              if (ch.field_N == 14) {
-                QuickChatHelpDialog.b(true);
+              if (ArrayWidgetContainer.field_N == 14) {
+                QuickChatHelpDialog.switchToRequestedScreen(true);
                 jj.field_i = nf.a(uc.field_b, DraggableWidget.field_G, (byte) 44);
                 DelayedServerPacket.field_w[1] = (byte) 0;
                 if ((jj.field_i & SectorCacheStore.field_o[1][DelayedServerPacket.field_w[1]]) == 0) {
@@ -2374,16 +2374,16 @@ public final class SteelSentinels extends FunOrbClient {
                 if (DelayedServerPacket.field_w[1] == 2) {
                   DebouncedValidator.field_b[0] = 12;
                 }
-                BufferedSocket.a(DirectByteStorage.a(2000, (byte) -32), DialWidget.field_db.length, tm.a((byte) 50), 1024, DirectByteStorage.a(12, (byte) -32), AccountTermsPanel.a((byte) -127), ImageProducerRasterBuffer.field_u, (byte) -22, MidiPcmStream.f(3443), 150);
-                Bzip2State.a((byte) -98, tc.d(800), wn.b((byte) 121));
+                BufferedSocket.a(DirectByteStorage.a(2000, (byte) -32), DialWidget.field_db.length, tm.a((byte) 50), 1024, DirectByteStorage.a(12, (byte) -32), AccountTermsPanel.a((byte) -127), ImageProducerRasterBuffer.field_u, (byte) -22, MidiPcmStream.getScrollContentWidget(3443), 150);
+                Bzip2State.a((byte) -98, HighscoreSubmission.getFriendListContent(800), wn.b((byte) 121));
                 SectorCacheStore.field_n = false;
                 GzipDecoder.field_g = -2;
                 WeightedCacheEntry.field_H = true;
                 continue;
               }
-              if (ch.field_N == 15) {
+              if (ArrayWidgetContainer.field_N == 15) {
                 if (WeightedCacheEntry.field_H) {
-                  QuickChatHelpDialog.b(true);
+                  QuickChatHelpDialog.switchToRequestedScreen(true);
                   TextButton.f(param0 ^ -12163);
                   IsaacRandom.b((byte) 124);
                   Sprite.field_k = false;
@@ -2399,14 +2399,14 @@ public final class SteelSentinels extends FunOrbClient {
                 SectorCacheStore.field_n = false;
                 continue;
               }
-              if (ch.field_N == 10 &&
+              if (ArrayWidgetContainer.field_N == 10 &&
                 WeightedCacheEntry.field_H) {
                 in.a(11247);
                 continue;
               }
-              if (ch.field_N == 80) {
-                var2_int = rf.field_d.readUnsignedByte((byte) -123);
-                var3 = (byte)(255 & rf.field_d.readUnsignedByte((byte) -123));
+              if (ArrayWidgetContainer.field_N == 80) {
+                var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -123);
+                var3 = (byte)(255 & LoginConnectionStage.field_d.readUnsignedByte((byte) -123));
                 if (null == nf.field_b) {
                   continue;
                 }
@@ -2418,9 +2418,9 @@ public final class SteelSentinels extends FunOrbClient {
                 DebouncedValidator.field_b[0] = var3;
                 continue;
               }
-              if (ch.field_N == 11) {
-                var2 = eb.$cfr$intArgs$a$9d0e4b5217c4(-62, false);
-                WeightedCacheEntry.a((na) (var2), -92);
+              if (ArrayWidgetContainer.field_N == 11) {
+                var2 = AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(-62, false);
+                WeightedCacheEntry.a((ChatMessage) (var2), -92);
                 if (HuffmanDecoder.field_a != 1) {
                   continue;
                 }
@@ -2433,42 +2433,42 @@ public final class SteelSentinels extends FunOrbClient {
                 var3_ref = "";
                 if (null != DialWidgetPainter.field_g) {
                   var4_ref = DialWidgetPainter.field_g;
-                  if (be.field_b == 1) {
+                  if (UrlAndReplyHelpers.field_b == 1) {
                     var4_ref = "<img=0>" + (String) (var4_ref);
                   }
-                  if (2 == be.field_b) {
+                  if (2 == UrlAndReplyHelpers.field_b) {
                     var4_ref = "<img=1>" + (String) (var4_ref);
                   }
                   var3_ref = (String) (var4_ref) + ": ";
                 }
                 var4_ref = (String) (var3_ref) + BitmapFont.escapeMarkup(WeightedCacheEntry.field_F);
-                if (((na) (var2)).field_g ||
-                  !o.a(-122, ((na) (var2)).field_p)) {
+                if (((ChatMessage) (var2)).field_g ||
+                  !o.a(-122, ((ChatMessage) (var2)).field_p)) {
                   LinkButtonPainter.a(48127, (String) (var4_ref), (byte) 124);
-                  ln.field_e = ln.field_e - 1;
+                  NameValidationHelpers.field_e = NameValidationHelpers.field_e - 1;
                 }
                 continue;
               }
-              if (ch.field_N == 12) {
-                eb.$cfr$intArgs$a$9d0e4b5217c4(-127, true);
-                WeightedCacheEntry.a(new na(true), -93);
+              if (ArrayWidgetContainer.field_N == 12) {
+                AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(-127, true);
+                WeightedCacheEntry.a(new ChatMessage(true), -93);
                 continue;
               }
-              if (ch.field_N == 67) {
+              if (ArrayWidgetContainer.field_N == 67) {
                 var2 = ViewportController.a(true);
                 var3 = 0;
                 while (var3 < java.lang.reflect.Array.getLength(var2)) {
-                  ((int[]) (var2))[var3] = rf.field_d.readInt(0);
+                  ((int[]) (var2))[var3] = LoginConnectionStage.field_d.readInt(0);
                   var3++;
                 }
                 var3_ref = var2;
                 var4_ref = DirectByteStorage.field_m;
                 var5 = 0;
                 while (var5 < 8) {
-                  ((int[]) (var3_ref))[var5] = ec.a(((int[]) (var3_ref))[var5], ~((int[]) (var4_ref))[var5]);
+                  ((int[]) (var3_ref))[var5] = ClientUiHelpers.bitAnd(((int[]) (var3_ref))[var5], ~((int[]) (var4_ref))[var5]);
                   var5++;
                 }
-                if (ln.field_h) {
+                if (NameValidationHelpers.field_h) {
                   var3_ref = ce.field_t;
                   var4_ref = var2;
                   var5 = 0;
@@ -2487,47 +2487,47 @@ public final class SteelSentinels extends FunOrbClient {
                 Projectile.c((byte) 10);
                 continue;
               }
-              if (ch.field_N == 60) {
-                PasswordFieldPainter.field_v = rf.field_d.readInt(0);
-                DraggableWidget.field_G = rf.field_d.readInt(0);
+              if (ArrayWidgetContainer.field_N == 60) {
+                PasswordFieldPainter.field_v = LoginConnectionStage.field_d.readInt(0);
+                DraggableWidget.field_G = LoginConnectionStage.field_d.readInt(0);
                 var2_int = 0;
                 while (var2_int < 4) {
-                  rn.field_D[var2_int] = rf.field_d.readInt(0);
+                  rn.field_D[var2_int] = LoginConnectionStage.field_d.readInt(0);
                   var2_int++;
                 }
                 var2_int = 0;
                 while (2 > var2_int) {
-                  ArchiveRequest.field_D[var2_int] = rf.field_d.readInt(0);
+                  ArchiveRequest.field_D[var2_int] = LoginConnectionStage.field_d.readInt(0);
                   var2_int++;
                 }
                 var2_int = 0;
-                while (var2_int < va.field_k.length) {
-                  va.field_k[var2_int] = 0;
+                while (var2_int < LoginDialogHelpers.field_k.length) {
+                  LoginDialogHelpers.field_k[var2_int] = 0;
                   var2_int++;
                 }
                 DateOfBirthValidator.d(-30);
                 continue;
               }
-              if (ch.field_N == 77) {
-                var2_int = rf.field_d.readUnsignedByte((byte) -123);
+              if (ArrayWidgetContainer.field_N == 77) {
+                var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -123);
                 CombatWorld.field_S = new int[var2_int];
                 var3 = 0;
                 while (var2_int > var3) {
-                  CombatWorld.field_S[var3] = rf.field_d.readUnsignedByte((byte) -123);
+                  CombatWorld.field_S[var3] = LoginConnectionStage.field_d.readUnsignedByte((byte) -123);
                   var3++;
                 }
                 continue;
               }
-              if (ch.field_N == 78) {
+              if (ArrayWidgetContainer.field_N == 78) {
                 var2_int = 0;
                 while (var2_int < 3) {
-                  fm.field_f[var2_int] = rf.field_d.readUnsignedByte((byte) -65);
+                  fm.field_f[var2_int] = LoginConnectionStage.field_d.readUnsignedByte((byte) -65);
                   var2_int++;
                 }
                 var2_int = 0;
                 while (true) {
                   if (jh.field_a.length > var2_int) {
-                    jh.field_a[var2_int] = rf.field_d.readUnsignedShort((byte) -60);
+                    jh.field_a[var2_int] = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
                     var2_int++;
                     continue;
                   }
@@ -2539,7 +2539,7 @@ public final class SteelSentinels extends FunOrbClient {
                   stackIn_278_0 = 0;
                 }
                 var2_int = stackIn_278_0;
-                fm.field_f[0] = ec.a(fm.field_f[0], 15);
+                fm.field_f[0] = ClientUiHelpers.bitAnd(fm.field_f[0], 15);
                 if (fj.field_d <= fm.field_f[0]) {
                   if (var2_int == 0) {
                     NodeIterator.field_f = 1;
@@ -2552,26 +2552,26 @@ public final class SteelSentinels extends FunOrbClient {
                 if (!PacketBuffer.h((byte) -79)) {
                   continue;
                 }
-                km.field_a = CombatWorld.field_k;
+                ClientGlobals.field_a = CombatWorld.field_k;
                 continue;
               }
-              if (ch.field_N == 73) {
-                var2_int = rf.field_d.readUnsignedByte((byte) -63) - 1;
-                var3 = rf.field_d.readInt(0);
-                var4 = rf.field_d.readInt(0);
-                var5 = rf.field_d.readInt(0);
-                var6 = rf.field_d.readInt(0);
-                var7 = rf.field_d.readInt(0);
+              if (ArrayWidgetContainer.field_N == 73) {
+                var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -63) - 1;
+                var3 = LoginConnectionStage.field_d.readInt(0);
+                var4 = LoginConnectionStage.field_d.readInt(0);
+                var5 = LoginConnectionStage.field_d.readInt(0);
+                var6 = LoginConnectionStage.field_d.readInt(0);
+                var7 = LoginConnectionStage.field_d.readInt(0);
                 if (var2_int < 2) {
                   lc.field_c = tj.a(var6, var4, var5, -var2_int + 65535, var7, param0 ^ 19, var2_int + 0, new int[]{var3}, 3);
                 }
                 qi.field_d = null;
                 qm.a(true);
-                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.a(PasswordValidator.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
+                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.formatTemplate(PasswordValidator.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
                 continue;
               }
-              if (ch.field_N == 72) {
-                var2_int = rf.field_d.readUnsignedShort((byte) -60);
+              if (ArrayWidgetContainer.field_N == 72) {
+                var2_int = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
                 PasswordFieldPainter.field_v = PasswordFieldPainter.field_v + var2_int;
                 if (var2_int <= 0) {
                   continue;
@@ -2580,35 +2580,35 @@ public final class SteelSentinels extends FunOrbClient {
                 MusicPatchNode.field_F = var2_int;
                 continue;
               }
-              if (ch.field_N == 74 ||
-                79 == ch.field_N) {
-                var2_int = rf.field_d.readUnsignedByte((byte) -113);
+              if (ArrayWidgetContainer.field_N == 74 ||
+                79 == ArrayWidgetContainer.field_N) {
+                var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -113);
                 var3_ref = MarkerSliderPainter.field_o;
-                if (79 == ch.field_N) {
+                if (79 == ArrayWidgetContainer.field_N) {
                   var3_ref = c.field_r;
                 }
-                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.a((String) (var3_ref), -105, new String[]{t.field_e[var2_int]})));
+                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.formatTemplate((String) (var3_ref), -105, new String[]{t.field_e[var2_int]})));
                 continue;
               }
-              if (ch.field_N == 70) {
-                rf.field_d.readUnsignedByte((byte) -67);
+              if (ArrayWidgetContainer.field_N == 70) {
+                LoginConnectionStage.field_d.readUnsignedByte((byte) -67);
                 continue;
               }
-              if (ch.field_N == 57 ||
-                ch.field_N == 58) {
-                QuickChatHelpDialog.b(true);
-                var2_int = rf.field_d.readInt(param0 - 2);
-                var3 = rf.field_d.readUnsignedByte((byte) -110);
-                var4 = rf.field_d.readUnsignedByte((byte) -74);
-                var5 = rf.field_d.readUnsignedByte((byte) -90);
-                var6 = rf.field_d.readUnsignedByte((byte) -102);
+              if (ArrayWidgetContainer.field_N == 57 ||
+                ArrayWidgetContainer.field_N == 58) {
+                QuickChatHelpDialog.switchToRequestedScreen(true);
+                var2_int = LoginConnectionStage.field_d.readInt(param0 - 2);
+                var3 = LoginConnectionStage.field_d.readUnsignedByte((byte) -110);
+                var4 = LoginConnectionStage.field_d.readUnsignedByte((byte) -74);
+                var5 = LoginConnectionStage.field_d.readUnsignedByte((byte) -90);
+                var6 = LoginConnectionStage.field_d.readUnsignedByte((byte) -102);
                 stackIn_330_0 = ((var6 & 1) == 0) ? 0 : 1;
                 var7 = stackIn_330_0;
                 stackIn_334_0 = ((2 & var6) == 0) ? 0 : 1;
                 var8 = stackIn_334_0;
-                stackIn_338_0 = (0 == rf.field_d.readUnsignedByte((byte) -81)) ? 0 : 1;
+                stackIn_338_0 = (0 == LoginConnectionStage.field_d.readUnsignedByte((byte) -81)) ? 0 : 1;
                 var9 = stackIn_338_0;
-                var10 = new String[rf.field_d.readUnsignedByte((byte) -90)];
+                var10 = new String[LoginConnectionStage.field_d.readUnsignedByte((byte) -90)];
                 var11_int = -2;
                 var12 = new int[var10.length][];
                 var13_int = 0;
@@ -2616,13 +2616,13 @@ public final class SteelSentinels extends FunOrbClient {
                   stackIn_340_0 = ~var13_int;
                   stackIn_340_1 = ~var10.length;
                   if (stackIn_340_0 > stackIn_340_1) {
-                    var10[var13_int] = rf.field_d.readPrefixedString((byte) 126);
-                    array$0 = new int[rf.field_d.readUnsignedByte((byte) -63)];
+                    var10[var13_int] = LoginConnectionStage.field_d.readPrefixedString((byte) 126);
+                    array$0 = new int[LoginConnectionStage.field_d.readUnsignedByte((byte) -63)];
                     var12[var13_int] = array$0;
                     stackIn_351_0 = 0;
                     var14 = stackIn_351_0;
                     while (var14 < var12[var13_int].length) {
-                      var12[var13_int][var14] = rf.field_d.readUnsignedByte((byte) -123);
+                      var12[var13_int][var14] = LoginConnectionStage.field_d.readUnsignedByte((byte) -123);
                       stackIn_340_0 = ~var12[var13_int][var14];
                       stackIn_340_1 = -256;
                       if (stackIn_340_0 == stackIn_340_1) {
@@ -2635,7 +2635,7 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                   break;
                 }
-                var11_int = rf.field_d.readByte((byte) -2);
+                var11_int = LoginConnectionStage.field_d.readByte((byte) -2);
                 di.field_g = -1;
                 IconTextComponent.field_Yb = -2;
                 jn.field_g = false;
@@ -2646,27 +2646,27 @@ public final class SteelSentinels extends FunOrbClient {
                   var11_int = -2;
                 }
                 var13 = new GameplayController(true, var2_int, var3, var10, var11_int, var9 != 0, var12, var4, var5, var7 != 0, var8 != 0);
-                var13.field_w = rf.field_d.readInt(0);
-                if (57 != ch.field_N) {
+                var13.field_w = LoginConnectionStage.field_d.readInt(0);
+                if (57 != ArrayWidgetContainer.field_N) {
                   CachedTextLayout.field_A = var13;
                   CombatWorld.field_G = true;
-                  QuickChatHelpDialog.l(0);
+                  QuickChatHelpDialog.showAccountScene(0);
                 } else {
                   BoundedUrlRequest.field_i = var13;
                   ob.field_y = true;
                   in.c(2);
                   DraggableWidget.i(-1);
-                  QuickChatHelpDialog.l(0);
+                  QuickChatHelpDialog.showAccountScene(0);
                 }
                 GzipDecoder.field_g = -1;
                 TextLayout.field_d = false;
                 Sprite.field_k = true;
                 continue;
               }
-              if (ch.field_N == 59) {
+              if (ArrayWidgetContainer.field_N == 59) {
                 if (ob.field_y ||
                   CombatWorld.field_G) {
-                  QuickChatHelpDialog.b(true);
+                  QuickChatHelpDialog.switchToRequestedScreen(true);
                   if (ob.field_y) {
                     BoundedUrlRequest.field_i.a((byte) -128, false);
                   }
@@ -2676,7 +2676,7 @@ public final class SteelSentinels extends FunOrbClient {
                   ob.field_y = false;
                   Sprite.field_k = false;
                   TextHotspotRegion.field_v = true;
-                  ln.field_e = 0;
+                  NameValidationHelpers.field_e = 0;
                   DateOfBirthValidator.c(104);
                 }
                 TextLayout.field_d = false;
@@ -2691,8 +2691,8 @@ public final class SteelSentinels extends FunOrbClient {
                 var2 = BoundedUrlRequest.field_i;
               }
               if (null != var2) {
-                if (ch.field_N == 61) {
-                  var3 = rf.field_d.readUnsignedByte((byte) -117);
+                if (ArrayWidgetContainer.field_N == 61) {
+                  var3 = LoginConnectionStage.field_d.readUnsignedByte((byte) -117);
                   var4_ref = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
                   var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).secondaryCommands.last(1063677678));
                   if (var5_ref_je != null) {
@@ -2705,14 +2705,14 @@ public final class SteelSentinels extends FunOrbClient {
                   var5_ref_je.unlink(4);
                   continue;
                 }
-                if (ch.field_N == 69) {
-                  var3 = rf.field_d.readUnsignedByte((byte) -85);
-                  var4 = rf.field_d.readUnsignedByte((byte) -80);
-                  var5 = rf.field_d.readUnsignedByte((byte) -120);
-                  var6 = rf.field_d.readInt(0);
-                  var7 = rf.field_d.readInt(0);
-                  var8 = rf.field_d.readInt(param0 ^ 2);
-                  var9 = rf.field_d.readInt(param0 ^ 2);
+                if (ArrayWidgetContainer.field_N == 69) {
+                  var3 = LoginConnectionStage.field_d.readUnsignedByte((byte) -85);
+                  var4 = LoginConnectionStage.field_d.readUnsignedByte((byte) -80);
+                  var5 = LoginConnectionStage.field_d.readUnsignedByte((byte) -120);
+                  var6 = LoginConnectionStage.field_d.readInt(0);
+                  var7 = LoginConnectionStage.field_d.readInt(0);
+                  var8 = LoginConnectionStage.field_d.readInt(param0 ^ 2);
+                  var9 = LoginConnectionStage.field_d.readInt(param0 ^ 2);
                   if (var5 == 255) {
                     var5 = -1;
                   }
@@ -2729,20 +2729,20 @@ public final class SteelSentinels extends FunOrbClient {
                   var11.scheduleCommand((byte) 79, var10_ref);
                   continue;
                 }
-                if (ch.field_N == 76) {
-                  var3 = rf.field_d.readUnsignedByte((byte) -120);
-                  var4 = rf.field_d.readInt(0);
+                if (ArrayWidgetContainer.field_N == 76) {
+                  var3 = LoginConnectionStage.field_d.readUnsignedByte((byte) -120);
+                  var4 = LoginConnectionStage.field_d.readInt(0);
                   ((GameplayController) (var2)).world.a(var4, 28669, var3);
                   continue;
                 }
-                if (ch.field_N == 71) {
+                if (ArrayWidgetContainer.field_N == 71) {
                   if (((GameplayController) (var2)).field_i - 100 > ((GameplayController) (var2)).field_w &&
                     ((GameplayController) (var2)).world.simulationTick < ((GameplayController) (var2)).field_w) {
                     ((GameplayController) (var2)).field_w = -100 + ((GameplayController) (var2)).field_i;
                   }
-                  ((GameplayController) (var2)).field_i = rf.field_d.readInt(param0 ^ 2);
-                  var3 = rf.field_d.readInt(0);
-                  var4 = rf.field_d.readInt(param0 - 2);
+                  ((GameplayController) (var2)).field_i = LoginConnectionStage.field_d.readInt(param0 ^ 2);
+                  var3 = LoginConnectionStage.field_d.readInt(0);
+                  var4 = LoginConnectionStage.field_d.readInt(param0 - 2);
                   if (((GameplayController) (var2)).field_l >= ((GameplayController) (var2)).world.simulationTick) {
                     continue;
                   }
@@ -2750,33 +2750,33 @@ public final class SteelSentinels extends FunOrbClient {
                   ((GameplayController) (var2)).field_l = var4;
                   continue;
                 }
-                if (62 == ch.field_N) {
-                  ((GameplayController) (var2)).field_i = rf.field_d.readInt(0);
+                if (62 == ArrayWidgetContainer.field_N) {
+                  ((GameplayController) (var2)).field_i = LoginConnectionStage.field_d.readInt(0);
                   ((GameplayController) (var2)).field_z = true;
                   continue;
                 }
-                if (ch.field_N == 63) {
-                  ((GameplayController) (var2)).world.field_V = rf.field_d.readUnsignedByte((byte) -92);
+                if (ArrayWidgetContainer.field_N == 63) {
+                  ((GameplayController) (var2)).world.field_V = LoginConnectionStage.field_d.readUnsignedByte((byte) -92);
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
                   in.c(2);
                   continue;
                 }
-                if (ch.field_N == 64) {
-                  ((GameplayController) (var2)).world.field_hb = rf.field_d.readUnsignedByte((byte) -111);
+                if (ArrayWidgetContainer.field_N == 64) {
+                  ((GameplayController) (var2)).world.field_hb = LoginConnectionStage.field_d.readUnsignedByte((byte) -111);
                   continue;
                 }
-                if (ch.field_N == 65) {
-                  ((GameplayController) (var2)).world.field_X = rf.field_d.readUnsignedByte((byte) -91);
+                if (ArrayWidgetContainer.field_N == 65) {
+                  ((GameplayController) (var2)).world.field_X = LoginConnectionStage.field_d.readUnsignedByte((byte) -91);
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
                   DraggableWidget.i(-1);
                   continue;
                 }
-                if (66 == ch.field_N) {
-                  ((GameplayController) (var2)).field_N = rf.field_d.readUnsignedByte((byte) -85);
+                if (66 == ArrayWidgetContainer.field_N) {
+                  ((GameplayController) (var2)).field_N = LoginConnectionStage.field_d.readUnsignedByte((byte) -85);
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
@@ -2784,7 +2784,7 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
               }
-              this.h(param0 + 50);
+              this.dispatchCommonPacket(param0 + 50);
               continue;
             }
             break;
@@ -2799,15 +2799,15 @@ public final class SteelSentinels extends FunOrbClient {
             TextHotspotRegion.field_v = true;
           }
           if (TextHotspotRegion.field_v) {
-            ln.field_e = 0;
+            NameValidationHelpers.field_e = 0;
           }
-          if (ri.a(16731221)) {
-            var2_int = this.i((byte) -112);
+          if (LoginStateQueries.isLoginFormActive(16731221)) {
+            var2_int = this.pollGameConnection((byte) -112);
             if (0 == var2_int ||
               var2_int == 1) {
               DualNodeDequeIterator.a(2, -26077);
               uc.a(true, 3);
-              hk.a((byte) 86, 4);
+              LobbyGame.resendAchievementMessages((byte) 86, 4);
               vf.a(false, 6);
               ml.a(param0 - 74, 7);
               gm.a((byte) -92);
@@ -2821,14 +2821,14 @@ public final class SteelSentinels extends FunOrbClient {
                   if (!ob.field_y) {
                     IterableNodeHashTable.a(0, false, param0 - 3, 0);
                     if (var15 != 0) {
-                      UiTheme.field_s = rl.field_e;
+                      UiTheme.field_s = PacketLoopHelpers.field_e;
                       IterableNodeHashTable.a(11, false, -1, 0);
                     }
                   } else {
-                    UiTheme.field_s = rl.field_e;
+                    UiTheme.field_s = PacketLoopHelpers.field_e;
                     IterableNodeHashTable.a(11, false, -1, 0);
                   }
-                  QuickChatHelpDialog.b(true);
+                  QuickChatHelpDialog.switchToRequestedScreen(true);
                   GameKeyHandler.field_e[LoginForm.field_T].a(false, 0, -102);
                   WeightedCacheEntry.field_H = false;
                   DateOfBirthValidator.c(12);
@@ -2853,7 +2853,7 @@ public final class SteelSentinels extends FunOrbClient {
               TextLayout.field_d) {
               var3 = 1;
             }
-            if (!ri.a(16731221)) {
+            if (!LoginStateQueries.isLoginFormActive(16731221)) {
               var3 = 0;
             }
             if (var3 != 0) {
@@ -2864,28 +2864,28 @@ public final class SteelSentinels extends FunOrbClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (var2), "SteelSentinels.DA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) (var2), "SteelSentinels.DA(" + param0 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void releaseClientStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          SteelSentinels.j((byte) -10);
+          SteelSentinels.releaseStatics((byte) -10);
           NodeDeque.c((byte) -29);
-          wd.a(0);
-          hf.releaseStatics(true);
+          LobbyGameDecoding.releaseStatics(0);
+          FrameStyleHelpers.releaseStatics(true);
           fj.releaseStatics((byte) -120);
-          rg.c(125);
-          SceneWidget.a(false);
+          PopupMenuHelpers.releaseStatics(125);
+          SceneWidget.releaseStatics(false);
           GameKeyHandler.releaseStatics((byte) 100);
           uc.releaseStatics(false);
-          ci.releaseStatics(false);
+          ClientErrorSupport.releaseStatics(false);
           am.releaseStatics(2);
           FunOrbClient.releaseStatics((byte) -111);
           ClientException.releaseStatics(false);
-          GameApplet.e(48);
+          GameApplet.releaseStatics(48);
           BoundedUrlRequest.releaseStatics((byte) -64);
           MouseInputHandler.releaseStatics(true);
           MouseWheelInput.releaseStatics(72);
@@ -2893,24 +2893,24 @@ public final class SteelSentinels extends FunOrbClient {
           ResourceArchive.releaseStatics(false);
           un.releaseStatics(false);
           if (param0 < 22) {
-            this.a(48);
+            this.releaseClientStatics(48);
           }
           PacketBuffer.releaseStatics(-125);
-          mm.releaseStatics(122);
+          ClockAndCookieHelpers.releaseStatics(122);
           TeamColourTinter.releaseStatics(124);
           of.releaseStatics((byte) 84);
           in.releaseStatics(127);
           ph.releaseStatics(80);
           vh.releaseStatics(-67);
-          be.a((byte) -34);
+          UrlAndReplyHelpers.releaseStatics((byte) -34);
           pa.releaseStatics((byte) 56);
-          ib.releaseStatics((byte) -119);
-          na.releaseStatics(2);
-          im.releaseStatics((byte) -88);
+          ChatPanelHelpers.releaseStatics((byte) -119);
+          ChatMessage.releaseStatics(2);
+          LobbyStateHelpers.releaseStatics((byte) -88);
           wn.a((byte) -126);
           TickClock.releaseStatics(30);
           RasterBuffer.releaseStatics(690);
-          cj.releaseStatics(-1);
+          ArchiveLoadSequence.releaseStatics(-1);
           FullscreenFocusCanvas.releaseStatics((byte) 30);
           ViewportController.releaseStatics((byte) -109);
           MembershipPromotionScreen.releaseStatics((byte) -82);
@@ -2918,7 +2918,7 @@ public final class SteelSentinels extends FunOrbClient {
           SentinelDesigner.h((byte) -104);
           GameplayController.b(750);
           nd.releaseStatics(-107);
-          hh.releaseStatics(false);
+          LoginActionHelpers.releaseStatics(false);
           Js5Transport.releaseStatics((byte) -91);
           DiskCacheWorker.b(-1);
           Js5ArchiveManager.releaseStatics((byte) -35);
@@ -2928,8 +2928,8 @@ public final class SteelSentinels extends FunOrbClient {
           IntrusiveNode.releaseStatics(4433);
           cd.releaseStatics(false);
           di.releaseStatics(-1);
-          bi.releaseStatics((byte) 80);
-          ik.releaseStatics(79);
+          TextAndBitHelpers.releaseStatics((byte) 80);
+          ConditionalTextValue.releaseStatics(79);
           lc.releaseStatics(1);
           o.releaseStatics(-98);
           dj.releaseStatics((byte) 94);
@@ -2940,7 +2940,7 @@ public final class SteelSentinels extends FunOrbClient {
           tf.releaseStatics((byte) 26);
           VerticalScrollbar.releaseStatics(0);
           SceneWidgetNode.releaseStatics((byte) 93);
-          ve.releaseStatics((byte) -60);
+          AssetDecoders.releaseStatics((byte) -60);
           CombatWorld.g(0);
           ArticulatedPart.releaseStatics((byte) 20);
           MenuInputState.releaseStatics((byte) -18);
@@ -2949,34 +2949,34 @@ public final class SteelSentinels extends FunOrbClient {
           BitmapFont.releaseStatics();
           vf.releaseStatics(-119);
           jh.releaseStatics(30706);
-          ba.releaseStatics(false);
+          QuickChatInputHelpers.releaseStatics(false);
           SentinelCommand.releaseStatics((byte) -110);
           Projectile.releaseStatics(31554);
           Sentinel.releaseStatics((byte) 58);
-          BattleTerrain.b(false);
-          MidiPcmStream.a(false);
+          BattleTerrain.releaseStatics(false);
+          MidiPcmStream.releaseStatics(false);
           NodeHashTable.releaseStatics(96);
           MusicPatchNode.releaseStatics(0);
           MidiFileReader.releaseMessageTable();
           MusicPatchPcmStream.releaseStatics(-93);
           AudioOutput.releaseStatics();
           MusicCrossfadeStream.releaseStatics(false);
-          hk.d((byte) -65);
-          dk.releaseStatics((byte) -91);
-          cc.releaseStatics(102);
-          lj.a((byte) 109);
+          LobbyGame.releaseStatics((byte) -65);
+          DualNodeHashTable.releaseStatics((byte) -91);
+          LobbyPlayer.releaseStatics(102);
+          SocialRequestHelpers.releaseStatics((byte) 109);
           ArchiveIndex.releaseStatics(0);
           GzipDecoder.releaseStatics(-1);
           ArchiveProvider.releaseStatics(38);
           wi.g(573);
           DualNode.f(8191);
           rd.releaseStatics(8192);
-          eh.releaseStatics(0);
+          SocialListUiHelpers.releaseStatics(0);
           ModalStack.releaseStatics((byte) 127);
           RegistrationRequestDialog.releaseStatics((byte) -29);
           LoadingProgressDialog.releaseStatics((byte) -47);
           LoginDialog.releaseStatics((byte) -111);
-          AccountRequestDialog.n((byte) 107);
+          AccountRequestDialog.releaseStatics((byte) 107);
           AccountRegistrationPanel.releaseStatics(false);
           AccountChoicePanel.releaseStatics(-48);
           LoginForm.releaseStatics(320);
@@ -2986,30 +2986,30 @@ public final class SteelSentinels extends FunOrbClient {
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
           dg.releaseStatics((byte) -84);
-          ri.releaseStatics(0);
+          LoginStateQueries.releaseStatics(0);
           tj.releaseStatics(true);
           Sprite.releaseStatics((byte) 66);
           PartInstruction.releaseStatics((byte) 17);
-          FallingPickup.g(-23261);
-          oc.releaseStatics(-1);
+          FallingPickup.releaseStatics(-23261);
+          MessageMenuHelpers.releaseStatics(-1);
           qi.releaseStatics(-104);
-          ad.releaseStatics(0);
+          LoadoutHelpers.releaseStatics(0);
           IconLabelControl.releaseStatics(127);
-          dn.b(false);
+          ContextMenu.releaseStatics(false);
           SocialListPanel.releaseStatics((byte) 91);
-          dd.releaseStatics(0);
+          PlayerContextMenu.releaseStatics(0);
           ReportAbuseDialog.releaseStatics(-114);
-          oh.releaseStatics(1);
+          LobbySetupHelpers.releaseStatics(1);
           HuffmanDecoder.releaseStatics(64);
           qm.releaseStatics((byte) 37);
           te.a((byte) -83);
-          ak.releaseStatics(124);
+          SpriteFrame.releaseStatics(124);
           gm.releaseStatics(-1);
           gf.releaseStatics(-111);
           rb.releaseStatics((byte) -82);
-          en.releaseStatics(true);
-          kk.releaseStatics((byte) -105);
-          pl.releaseStatics(true);
+          LoadingScreenHelpers.releaseStatics(true);
+          TextAndMenuHelpers.releaseStatics((byte) -105);
+          BirthDateEntryPanel.releaseStatics(true);
           ai.releaseStatics(0);
           dc.releaseStatics(-38);
           DualNodeDeque.releaseStatics((byte) 26);
@@ -3022,23 +3022,23 @@ public final class SteelSentinels extends FunOrbClient {
           BoundedRandomAccessFile.releaseStatics(0);
           bd.releaseStatics(-23333);
           og.releaseStatics((byte) -88);
-          la.releaseStatics((byte) -112);
+          BenefitsScreenHelpers.releaseStatics((byte) -112);
           AudioService.a((byte) -63);
           SocketJs5Transport.releaseStatics(-2);
           Js5NetworkRequest.h(10);
           SectorCacheStore.a(15598);
           DiskCacheRequest.i(-58);
           CachedArchiveProvider.releaseStatics(2);
-          ok.releaseStatics(true);
+          ChecksumAndFrameHelpers.releaseStatics(true);
           ArchiveRequest.releaseStatics((byte) 21);
-          se.a((byte) -114);
+          PopupMenuSupport.releaseStatics((byte) -114);
           AccountNoticeDialog.releaseStatics(0);
           lf.releaseStatics();
           jj.releaseStatics(-123);
-          pe.releaseStatics((byte) -117);
+          TriangleMesh.releaseStatics((byte) -117);
           tm.releaseStatics(5);
-          ec.releaseStatics((byte) 24);
-          fc.releaseStatics(true);
+          ClientUiHelpers.releaseStatics((byte) 24);
+          SoundAndUrlHelpers.releaseStatics(true);
           sa.releaseStatics(false);
           DelegatingCanvas.releaseStatics((byte) 61);
           mc.releaseStatics(23225);
@@ -3047,7 +3047,7 @@ public final class SteelSentinels extends FunOrbClient {
           Bzip2Decoder.releaseStatics();
           Bzip2State.releaseStatics(-120);
           ni.releaseStatics(42);
-          rl.a(0);
+          PacketLoopHelpers.releaseStatics(0);
           CheckboxPainter.releaseStatics(true);
           StatefulTextPainter.releaseStatics(-21121);
           DialWidgetPainter.releaseStatics(0);
@@ -3058,35 +3058,35 @@ public final class SteelSentinels extends FunOrbClient {
           SingleChildContainer.releaseStatics(475);
           ResizableModalPanel.releaseStatics((byte) 38);
           ModalPanel.releaseStatics((byte) 127);
-          UiContainer.g(-19969);
+          UiContainer.releaseStatics(-19969);
           qe.releaseStatics(-31914);
           sh.releaseStatics(-3274);
           kb.releaseStatics(5);
-          ln.b(0);
+          NameValidationHelpers.releaseStatics(0);
           QuickChatMenu.releaseStatics(-31097);
-          QuickChatCategoryCache.a((byte) -13);
+          QuickChatCategoryCache.releaseStatics((byte) -13);
           QuickChatPhraseCache.releaseStatics(272);
           QuickChatCategory.releaseStatics(1);
           QuickChatPhraseDefinition.releaseStatics(0);
           WeightedLruCache.releaseStatics((byte) 127);
-          SocketConnector.a(true);
+          SocketConnector.releaseStatics(true);
           ProxyAuthenticationException.releaseStatics(-61);
           NanoTickClock.releaseStatics(0);
           ImageProducerRasterBuffer.releaseStatics(65280);
           ed.releaseStatics((byte) 99);
           vc.releaseStatics(-13);
-          ue.releaseStatics((byte) -96);
+          LoginHandshakeHelpers.releaseStatics((byte) -96);
           SynthInstrument.releaseStatics();
           ce.releaseStatics((byte) 77);
           SentinelCommandSimulator.releaseStatics((byte) -98);
-          Explosion.h(-2107133436);
+          Explosion.releaseStatics(-2107133436);
           WhirlpoolHasher.releaseStatics((byte) 121);
           qf.releaseStatics(false);
           TabbedPanel.releaseStatics((byte) -72);
           AccountNamePrompt.releaseStatics(true);
           MusicPatch.releaseStatics((byte) -73);
           MusicPatchEnvelope.releaseStatics(7);
-          LabeledField.f((byte) 67);
+          LabeledField.releaseStatics((byte) 67);
           ValidatedTextWidget.releaseStatics((byte) -108);
           EditableTextWidget.releaseStatics(true);
           ContentTransitionDialog.releaseStatics(-12930);
@@ -3104,13 +3104,13 @@ public final class SteelSentinels extends FunOrbClient {
           cl.releaseStatics(5);
           DateOfBirthValidator.releaseStatics(false);
           NumericDateInputWidget.releaseStatics(0);
-          ch.releaseStatics((byte) -68);
+          ArrayWidgetContainer.releaseStatics((byte) -68);
           DateInputWidget.releaseStatics(true);
           CachedTextLayout.releaseStatics(24);
           DirectByteStorage.releaseStatics(26);
           GrowableIntList.releaseStatics(122);
           DraggableWidget.releaseStatics(0);
-          DropTargetWidget.h(12);
+          DropTargetWidget.releaseStatics(12);
           IterableNodeHashTable.releaseStatics((byte) -127);
           IterableDualNodeDeque.releaseStatics(true);
           WeightedCacheEntry.releaseStatics(-1008);
@@ -3118,14 +3118,14 @@ public final class SteelSentinels extends FunOrbClient {
           StrongCacheEntry.releaseStatics(124);
           ProxySocketConnector.releaseStatics((byte) -117);
           AudioFilter.releaseStatics();
-          va.a(false);
+          LoginDialogHelpers.releaseStatics(false);
           NodeHashTableIterator.releaseStatics((byte) 22);
           DualNodeDequeIterator.a((byte) 46);
           kf.releaseStatics(90);
-          tc.releaseStatics(false);
+          HighscoreSubmission.releaseStatics(false);
           hg.releaseStatics(108);
           ud.releaseStatics(20000000);
-          pc.releaseStatics(100);
+          PlayingSound.releaseStatics(100);
           jm.releaseStatics(-89);
           ThreeSliceButtonPainter.releaseStatics(100);
           LinkButtonPainter.releaseStatics(false);
@@ -3135,23 +3135,23 @@ public final class SteelSentinels extends FunOrbClient {
           AlphaContainer.releaseStatics(-13);
           SocialListEntry.releaseStatics(false);
           sl.releaseStatics(-104);
-          hl.e(0);
+          PendingIntArrayRequest.releaseStatics(0);
           cf.releaseStatics((byte) 9);
           c.releaseStatics((byte) 127);
           rh.releaseStatics(false);
-          dm.releaseStatics(-127);
-          rf.c(126);
+          NameCheckResult.releaseStatics(-127);
+          LoginConnectionStage.releaseStatics(126);
           DelayedServerPacket.releaseStatics(-1341);
           LoginMethod.releaseStatics(7);
           UsernameCredentials.releaseStatics((byte) -119);
           AlternateUsernameCredentials.releaseStatics(28873);
           EmailCredentials.releaseStatics((byte) -116);
-          sf.a(false);
+          TutorialStep.a(false);
           ml.releaseStatics(107);
-          e.releaseStatics((byte) -89);
+          AccountRequestResult.releaseStatics((byte) -89);
           AccountMessagePanel.releaseStatics((byte) -90);
           RasterSnapshot.d(-1);
-          km.releaseStatics((byte) -27);
+          ClientGlobals.releaseStatics((byte) -27);
           t.releaseStatics(-13375);
           hm.releaseStatics((byte) 105);
           ob.releaseStatics(18601);
@@ -3160,21 +3160,21 @@ public final class SteelSentinels extends FunOrbClient {
           TextLayoutLine.releaseStatics(-58);
           NameAvailabilityValidator.releaseStatics(1);
           PasswordValidator.releaseStatics((byte) -128);
-          ih.releaseStatics(18384);
+          EmailSyntaxValidator.releaseStatics(18384);
           EmailAvailabilityValidator.releaseStatics((byte) 116);
-          eb.releaseStatics(81);
+          AgeValidator.releaseStatics(81);
           MatchingTextValidator.releaseStatics((byte) -113);
           ja.releaseStatics(true);
           TextHotspotRegion.releaseStatics((byte) 29);
           vd.releaseStatics((byte) 56);
           DebouncedValidator.releaseStatics(true);
-          ef.releaseStatics(8421504);
+          EmailFormatError.releaseStatics(8421504);
           this.field_t = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "SteelSentinels.V(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "SteelSentinels.V(" + param0 + ')');
         }
     }
 

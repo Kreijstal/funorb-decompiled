@@ -15,9 +15,9 @@ final class jh {
     final static int sine16(int angle, int halfTurnBoundary) {
         angle = angle & 8191;
         if (halfTurnBoundary > angle) {
-          return angle >= 2048 ? hk.quarterSine16[4096 - angle] : hk.quarterSine16[angle];
+          return angle >= 2048 ? LobbyGame.quarterSine16[4096 - angle] : LobbyGame.quarterSine16[angle];
         }
-        return angle >= 6144 ? -hk.quarterSine16[-angle + 8192] : -hk.quarterSine16[angle - 4096];
+        return angle >= 6144 ? -LobbyGame.quarterSine16[-angle + 8192] : -LobbyGame.quarterSine16[angle - 4096];
     }
 
     public static void releaseStatics(int param0) {

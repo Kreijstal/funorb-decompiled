@@ -15,7 +15,7 @@ final class LoginMethod {
         throw new IllegalStateException();
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean matchesName(String param0, int param1) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         boolean stackIn_3_0 = false;
@@ -40,7 +40,7 @@ final class LoginMethod {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class LoginMethod {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class LoginMethod {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,9 +233,9 @@ final class LoginMethod {
           return;
         }
         try {
-          mm.a("jagex-last-login-method", (byte) 122, this.field_h, param1, 31536000L);
+          ClockAndCookieHelpers.setCookie("jagex-last-login-method", (byte) 122, this.field_h, param1, 31536000L);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "de.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "de.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

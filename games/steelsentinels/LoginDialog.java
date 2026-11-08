@@ -64,11 +64,11 @@ final class LoginDialog extends ContentTransitionDialog {
             Js5ArchiveManager.field_e.drawOpaque(QuickChatMenu.field_Ub.field_Y, 0);
           }
           stackIn_9_0 = QuickChatMenu.field_Ub;
-          stackIn_10_1 = (param1) && (!im.field_b);
-          ((SceneWidget) (Object) stackIn_9_0).a(stackIn_10_1, (byte) 126);
-          stackIn_13_0 = pc.field_q;
-          stackIn_14_1 = (param1) && (!im.field_b);
-          ((SceneWidget) (Object) stackIn_13_0).a(stackIn_14_1, (byte) 127);
+          stackIn_10_1 = (param1) && (!LobbyStateHelpers.field_b);
+          ((SceneWidget) (Object) stackIn_9_0).drawFullScreen(stackIn_10_1, (byte) 126);
+          stackIn_13_0 = PlayingSound.field_q;
+          stackIn_14_1 = (param1) && (!LobbyStateHelpers.field_b);
+          ((SceneWidget) (Object) stackIn_13_0).drawFullScreen(stackIn_14_1, (byte) 127);
         }
         if (!(bd.field_c <= 0) ||
           !(fj.field_f <= 0)) {
@@ -77,20 +77,20 @@ final class LoginDialog extends ContentTransitionDialog {
           }
           stackIn_23_0 = SocialListPanel.field_ec;
           stackIn_24_1 = (param1) && (!GzipDecoder.field_c);
-          ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, (byte) 127);
+          ((SceneWidget) (Object) stackIn_23_0).drawFullScreen(stackIn_24_1, (byte) 127);
           stackIn_27_0 = NanoTickClock.field_y;
           stackIn_28_1 = (param1) && (!GzipDecoder.field_c);
-          ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, (byte) 126);
+          ((SceneWidget) (Object) stackIn_27_0).drawFullScreen(stackIn_28_1, (byte) 126);
         }
-        MatchingTextValidator.$cfr$intArgs$f$20d51497949f(98);
+        MatchingTextValidator.popRasterStateWithIntGuard(98);
     }
 
-    final static void a(int param0, int param1, int param2, cc param3, ScrollContainer param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, LobbyPlayer param3, ScrollContainer param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        dd var12 = null;
+        PlayerContextMenu var12 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -99,16 +99,16 @@ final class LoginDialog extends ContentTransitionDialog {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          kk.a(param3, -1, -1, (int[]) null, param3.field_mc, param3.field_Vb, 1073741824, param3.field_ec, param4);
-          AudioService.field_i.a(true, (byte) -126);
-          AudioService.field_i.a((int[]) null, -2, 0);
-          AudioService.field_i.c(-121);
+          TextAndMenuHelpers.openPlayerContextMenu(param3, -1, -1, (int[]) null, param3.field_mc, param3.field_Vb, 1073741824, param3.field_ec, param4);
+          AudioService.field_i.addGameInviteActions(true, (byte) -126);
+          AudioService.field_i.addSocialActions((int[]) null, -2, 0);
+          AudioService.field_i.addReportAction(-121);
           var12 = AudioService.field_i;
           var8 = param1;
           var9 = param6;
           var10 = param0;
           var11 = param5;
-          var12.field_j.a(var11, var10, var9, (byte) -101, var8);
+          var12.field_j.layoutItems(var11, var10, var9, (byte) -101, var8);
           if (param2 != 4) {
             LoginDialog.a((byte) -65, -107, 25, 12, -73);
           }
@@ -129,7 +129,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -137,13 +137,13 @@ final class LoginDialog extends ContentTransitionDialog {
         try {
           EmailAvailabilityValidator.field_p = param1;
           DelayedServerPacket.field_A = true;
-          ch.field_O = new AccountRequestDialog(GradientOutlineTextPainter.field_p, gf.field_d, param2, LoginMethod.field_d, EmailAvailabilityValidator.field_p);
-          GradientOutlineTextPainter.field_p.pushPanel(ch.field_O, -118);
+          ArrayWidgetContainer.field_O = new AccountRequestDialog(GradientOutlineTextPainter.field_p, gf.field_d, param2, LoginMethod.field_d, EmailAvailabilityValidator.field_p);
+          GradientOutlineTextPainter.field_p.pushPanel(ArrayWidgetContainer.field_O, -118);
           if (param0 > -63) {
             LoginDialog.m(57);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bf.MB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bf.MB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,13 +153,13 @@ final class LoginDialog extends ContentTransitionDialog {
           field_zb = (String) null;
         }
         if (MenuInputState.field_p) {
-          Sprite.field_l.a(Explosion.field_C, 126);
+          Sprite.field_l.addChild(Explosion.field_C, 126);
         }
-        Sprite.field_l.a(TeamColourTinter.field_c, 122);
+        Sprite.field_l.addChild(TeamColourTinter.field_c, 122);
         BoundedRandomAccessFile.field_f = new uf(ThreeSliceButtonPainter.field_p, Sprite.field_l);
         QuickChatMenu.field_Ub = new SceneWidget(0L, (SceneWidget) null);
-        QuickChatMenu.field_Ub.a(BoundedRandomAccessFile.field_f.field_d, param0 - 734);
-        QuickChatMenu.field_Ub.a(BufferedSocket.field_i, 120);
+        QuickChatMenu.field_Ub.addChild(BoundedRandomAccessFile.field_f.field_d, param0 - 734);
+        QuickChatMenu.field_Ub.addChild(BufferedSocket.field_i, 120);
         TextHotspotRegion.d(0);
     }
 
@@ -170,7 +170,7 @@ final class LoginDialog extends ContentTransitionDialog {
             field_Bb = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bf.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bf.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 

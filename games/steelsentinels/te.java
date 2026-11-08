@@ -64,7 +64,7 @@ final class te {
               if (stackIn_83_0 != ~(RegistrationRequestDialog.field_Ob & var8)) {
                 var10 = 1;
                 if (var8 != 1) {
-                  var10 = hl.field_v.f(var8, -1) ? 1 : 0;
+                  var10 = PendingIntArrayRequest.field_v.f(var8, -1) ? 1 : 0;
                 }
                 var11 = 0;
                 if (var8 == 1) {
@@ -87,7 +87,7 @@ final class te {
                       decompiledFrameRemainder1 = (var6 != 0);
                       if (decompiledFrameRemainder1) {
                         if (var12.field_Q == 1) {
-                          decompiledFrameRemainder0 = !(MusicPatchEnvelope.a(rn.field_D, var12.componentId, ArticulatedPart.f((byte) -50), (byte) 86));
+                          decompiledFrameRemainder0 = !(MusicPatchEnvelope.isItemUnlockable(rn.field_D, var12.componentId, ArticulatedPart.f((byte) -50), (byte) 86));
                           decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
                         }
                         if ((decompiledFrameRemainder1) &&
@@ -106,8 +106,8 @@ final class te {
                         var13 = new SceneWidget(-1L, (SceneWidget) null);
                         var13.field_Kb = 2;
                         var13.field_Pb = gj.field_a;
-                        var13.a(0, param1, 18, 0, var5);
-                        param0.a(var13, 125);
+                        var13.setBounds(0, param1, 18, 0, var5);
+                        param0.addChild(var13, 125);
                         if (param2) {
                           stackIn_71_0 = SentinelAnimationEditor.field_c;
                         } else {
@@ -116,13 +116,13 @@ final class te {
                         var14 = stackIn_71_0;
                         var15 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var14);
                         var15.field_nb = 0;
-                        var15.field_L = (BitmapFont) ((Object) pl.field_U);
-                        var15.a(~param3, param1, 18, 0, var5);
+                        var15.field_L = (BitmapFont) ((Object) BirthDateEntryPanel.field_U);
+                        var15.setBounds(~param3, param1, 18, 0, var5);
                         var15.field_Fb = 1;
                         var15.field_sb = 1;
                         var15.field_Kb = 1;
                         var15.field_I = null;
-                        param0.a(var15, 121);
+                        param0.addChild(var15, 121);
                         param1 = param1 + var15.field_Lb;
                       }
                       if (var11 == 0) {
@@ -132,17 +132,17 @@ final class te {
                         var14_ref.field_Kb = 1;
                         var14_ref.field_nb = 11119017;
                         param1 += 2;
-                        var14_ref.field_I = lj.field_b;
-                        var14_ref.a(0, param1, 15, 0, var5);
+                        var14_ref.field_I = SocialRequestHelpers.field_b;
+                        var14_ref.setBounds(0, param1, 15, 0, var5);
                         param1 += 15;
-                        param0.a(var14_ref, 118);
+                        param0.addChild(var14_ref, 118);
                       }
                       stackIn_77_0 = param2;
                       stackIn_78_1 = (var10 == 0);
-                      var13Lifetime1 = se.a(stackIn_77_0, stackIn_78_1, var6, var12, 14);
+                      var13Lifetime1 = PopupMenuSupport.createComponentButton(stackIn_77_0, stackIn_78_1, var6, var12, 14);
                       param1 += 2;
-                      var13Lifetime1.a(0, param1, var4_int, 0, var5);
-                      param0.a(var13Lifetime1, 127);
+                      var13Lifetime1.setBounds(0, param1, var4_int, 0, var5);
+                      param0.addChild(var13Lifetime1, 127);
                       param1 = param1 + var4_int;
                     }
                   }
@@ -171,7 +171,7 @@ final class te {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -205,12 +205,12 @@ final class te {
           if (param0 != 2) {
             te.a((byte) -82);
           }
-          var1 = rf.field_d;
+          var1 = LoginConnectionStage.field_d;
           var2 = var1.readUnsignedByte((byte) -109);
           if (var2 == 0) {
             if (SocketConnector.field_h == null) {
-              SocketConnector.field_h = new dk(128);
-              cc.field_gc = 0;
+              SocketConnector.field_h = new DualNodeHashTable(128);
+              LobbyPlayer.field_gc = 0;
             }
             stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -111)) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -231,14 +231,14 @@ final class te {
             if (null == var6) {
               var6 = TextLayout.a(var7, (byte) -41);
               if (null != var6) {
-                SocketConnector.field_h.a(var6, 1, (long)var8.hashCode());
+                SocketConnector.field_h.put(var6, 1, (long)var8.hashCode());
               }
             }
             if (null == var6) {
               var6 = new SocialListEntry();
-              SocketConnector.field_h.a(var6, param0 ^ 3, (long)var8.hashCode());
-              fieldTemp$0 = cc.field_gc;
-              cc.field_gc = cc.field_gc + 1;
+              SocketConnector.field_h.put(var6, param0 ^ 3, (long)var8.hashCode());
+              fieldTemp$0 = LobbyPlayer.field_gc;
+              LobbyPlayer.field_gc = LobbyPlayer.field_gc + 1;
               var6.field_bc = fieldTemp$0;
               am.field_c.addLast(3, var6);
             }
@@ -261,7 +261,7 @@ final class te {
               return;
             }
             if (4 != var2) {
-              MusicCrossfadeStream.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
+              MusicCrossfadeStream.reportClientError("F1: " + ClientErrorSupport.describePacketHistory((byte) 94), param0 ^ -93, (Throwable) null);
               LoginForm.m(75);
               return;
             }
@@ -273,7 +273,7 @@ final class te {
             return;
           }
           if (DelegatingCanvas.field_a == null) {
-            DelegatingCanvas.field_a = new dk(128);
+            DelegatingCanvas.field_a = new DualNodeHashTable(128);
             vd.field_h = 0;
           }
           var3Lifetime1 = var1.readString(1);
@@ -286,12 +286,12 @@ final class te {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = wi.a(var5Lifetime1, (byte) 114);
             if (null != var6Lifetime1) {
-              DelegatingCanvas.field_a.a(var6Lifetime1, 1, (long)AlphaContainer.a(param0 ^ 3, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              DelegatingCanvas.field_a.put(var6Lifetime1, 1, (long)AlphaContainer.a(param0 ^ 3, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialListEntry();
-            DelegatingCanvas.field_a.a(var6Lifetime1, 1, (long)AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            DelegatingCanvas.field_a.put(var6Lifetime1, 1, (long)AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = vd.field_h;
             vd.field_h = vd.field_h + 1;
             var6Lifetime1.field_bc = fieldTemp$1;
@@ -313,7 +313,7 @@ final class te {
               if (var9 != 0) {
                 break scanLoop1;
               }
-              if (dm.a(stackIn_65_0, stackIn_65_1, stackIn_65_2)) {
+              if (NameCheckResult.socialEntrySortsAfter(stackIn_65_0, stackIn_65_1, stackIn_65_2)) {
                 var7_ref = (SocialListEntry) (Sprite.field_c.next((byte) -17));
                 continue;
               }
@@ -334,7 +334,7 @@ final class te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "te.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "te.B(" + param0 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class te {
         try {
           field_a = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "te.A(" + param0 + ')');
         }
     }
 

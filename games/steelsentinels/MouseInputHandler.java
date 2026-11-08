@@ -42,7 +42,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ce.field_w = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wc.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ce.field_w = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wc.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -174,9 +174,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param1 > -22) {
             field_f = (java.awt.Font) null;
           }
-          qf.field_c.a(param0, 126);
+          qf.field_c.addChild(param0, 126);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -192,12 +192,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ob.field_q = 0;
             RegistrationRequestDialog.field_Rb = param0.getX();
             LoginCredentials.field_d = param0.getY();
-            mm.a(-73);
+            ClockAndCookieHelpers.monotonicMillis(-73);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              ad.field_c = 2;
+              LoadoutHelpers.field_c = 2;
               wn.field_d = 2;
             } else {
-              ad.field_c = 1;
+              LoadoutHelpers.field_c = 1;
               wn.field_d = 1;
             }
             var2_int = param0.getModifiers();
@@ -227,7 +227,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -253,34 +253,34 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, long param2, int param3, String param4, int param5) {
         int var7_int = 0;
-        mm.field_g.writeCipheredOpcode(param5, (byte) -117);
+        ClockAndCookieHelpers.field_g.writeCipheredOpcode(param5, (byte) -117);
         if (param0 != 0) {
           return;
         }
         try {
-          mm.field_g.position = mm.field_g.position + 1;
-          var7_int = mm.field_g.position;
-          mm.field_g.writeLong(-28875, param2);
-          mm.field_g.writeString(param4, -88);
-          mm.field_g.writeByte((byte) 115, param3);
-          mm.field_g.writeByte((byte) 115, !param1 ? 0 : 1);
-          mm.field_g.backpatchByteLength((byte) 83, -var7_int + mm.field_g.position);
+          ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
+          var7_int = ClockAndCookieHelpers.field_g.position;
+          ClockAndCookieHelpers.field_g.writeLong(-28875, param2);
+          ClockAndCookieHelpers.field_g.writeString(param4, -88);
+          ClockAndCookieHelpers.field_g.writeByte((byte) 115, param3);
+          ClockAndCookieHelpers.field_g.writeByte((byte) 115, !param1 ? 0 : 1);
+          ClockAndCookieHelpers.field_g.backpatchByteLength((byte) 83, -var7_int + ClockAndCookieHelpers.field_g.position);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     final static void a(int param0) {
-        hh.field_a = null;
+        LoginActionHelpers.field_a = null;
         vc.field_f = null;
         te.field_f = null;
-        cc.field_bc = null;
+        LobbyPlayer.field_bc = null;
         jn.field_g = true;
         if (param0 == 23825) {
           if (tj.field_f != null) {
@@ -335,7 +335,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

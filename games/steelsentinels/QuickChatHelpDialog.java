@@ -25,20 +25,20 @@ final class QuickChatHelpDialog extends SceneWidget {
         return AccountRequestDialog.particleReuseBuffer[QuickChatMenu.particleReuseCursor];
     }
 
-    final static void l(int param0) {
+    final static void showAccountScene(int param0) {
         EditableTextWidget.c(true);
         if (param0 != 0) {
           field_bc = 91;
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean shouldShowBootstrapLoadingScreen(int param0) {
         if (param0 != 0) {
-          QuickChatHelpDialog.l(15);
+          QuickChatHelpDialog.showAccountScene(15);
           if (AccountTermsPanel.field_Q < 20) {
             return true;
           }
-          if (!ri.c(6995)) {
+          if (!LoginStateQueries.isLoginComplete(6995)) {
             return true;
           }
           if (ReflectionCheck.field_o <= 0) {
@@ -52,7 +52,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         if (AccountTermsPanel.field_Q < 20) {
           return true;
         }
-        if (!ri.c(6995)) {
+        if (!LoginStateQueries.isLoginComplete(6995)) {
           return true;
         }
         if (ReflectionCheck.field_o <= 0) {
@@ -64,7 +64,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         return false;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int placePopupVertically(int param0, int param1, int param2, int param3) {
         if (param3 + (param0 + param2) <= SoftwareRaster.field_j) {
           return param0 + param2;
         }
@@ -74,7 +74,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         return SoftwareRaster.field_j - param3;
     }
 
-    final static boolean a(int[] param0, int param1, int param2) {
+    final static boolean isBitClear(int[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -97,11 +97,11 @@ final class QuickChatHelpDialog extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static ud a(int param0, boolean param1, int param2, int param3) {
+    final static ud getRankingQuery(int param0, boolean param1, int param2, int param3) {
         ud var4;
         int var5;
         ud var4Lifetime1;
@@ -120,7 +120,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         var4Lifetime1.field_u = param3;
         var4Lifetime1.field_t = param2;
         uf.field_f.addLast(3, var4Lifetime1);
-        ProxySocketConnector.a(27153, var4Lifetime1, param0);
+        ProxySocketConnector.sendListRequest(27153, var4Lifetime1, param0);
         return var4Lifetime1;
     }
 
@@ -138,10 +138,10 @@ final class QuickChatHelpDialog extends SceneWidget {
         }
     }
 
-    final boolean b(boolean param0, byte param1) {
+    final boolean pollClose(boolean param0, byte param1) {
         if (param1 > -125) {
           field_ac = (c) null;
-          this.a((byte) 11, true);
+          this.updateInputFullScreen((byte) 11, true);
           if (0 == VerticalScrollbar.field_gc) {
             return 0 != this.field_Yb.field_Eb ? true : false;
           }
@@ -150,7 +150,7 @@ final class QuickChatHelpDialog extends SceneWidget {
           }
           return true;
         }
-        this.a((byte) 11, true);
+        this.updateInputFullScreen((byte) 11, true);
         if (0 != VerticalScrollbar.field_gc) {
           if (this.field_Eb == 0) {
             return true;
@@ -199,29 +199,29 @@ final class QuickChatHelpDialog extends SceneWidget {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; DraggableWidget.field_X.length > var12; var12++) {
-            var13 = new SceneWidget(0L, param3, ci.field_b[var12]);
+            var13 = new SceneWidget(0L, param3, ClientErrorSupport.field_b[var12]);
             var14 = new SceneWidget(0L, param3, DraggableWidget.field_X[var12]);
             var15 = param3.field_L.textWidth(DraggableWidget.field_X[var12]);
-            var13.a(0, var10, 15, 20, 65);
+            var13.setBounds(0, var10, 15, 20, 65);
             if (var11 < var15) {
               var11 = var15;
             }
-            var14.a(0, var10, 15, 90, 640);
-            var8.a(var13, 127);
-            var8.a(var14, 120);
+            var14.setBounds(0, var10, 15, 90, 640);
+            var8.addChild(var13, 127);
+            var8.addChild(var14, 120);
             var10 += 30;
           }
-          var17.a(0, 0, 24, 0, 90 + (var11 + 20));
+          var17.setBounds(0, 0, 24, 0, 90 + (var11 + 20));
           var10 += 15;
-          this.a(0, 100, var10 + var17.field_Lb, 100, var17.field_zb);
-          this.field_Yb.a(0, 5, 15, var17.field_zb - 20, 15);
-          var8.a(0, var17.field_Lb, this.field_Lb - var17.field_Lb, 0, this.field_zb);
-          var9.a(0, 20, 15, 0, this.field_zb);
-          var8.field_I = se.a(3, 2105376, 11579568, var8.field_Lb, 8421504, 13574);
-          var17.a(this.field_Yb, 127);
-          var8.a(var9, 119);
-          this.a(var17, 123);
-          this.a(var8, 119);
+          this.setBounds(0, 100, var10 + var17.field_Lb, 100, var17.field_zb);
+          this.field_Yb.setBounds(0, 5, 15, var17.field_zb - 20, 15);
+          var8.setBounds(0, var17.field_Lb, this.field_Lb - var17.field_Lb, 0, this.field_zb);
+          var9.setBounds(0, 20, 15, 0, this.field_zb);
+          var8.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, var8.field_Lb, 8421504, 13574);
+          var17.addChild(this.field_Yb, 127);
+          var8.addChild(var9, 119);
+          this.addChild(var17, 123);
+          this.addChild(var8, 119);
           this.field_Y = 320 - (this.field_zb >> 1);
           var10Lifetime1 = -(this.field_Lb >> 1) + 240;
           return;
@@ -265,11 +265,11 @@ final class QuickChatHelpDialog extends SceneWidget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    final static void b(boolean param0) {
+    final static void switchToRequestedScreen(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int[] var1 = null;
         RuntimeException var1_ref = null;
@@ -296,7 +296,7 @@ final class QuickChatHelpDialog extends SceneWidget {
             MarkerSlider.f((byte) 3);
           }
           LoginForm.field_T = GzipDecoder.field_g;
-          pc.field_w = Sprite.field_k;
+          PlayingSound.field_w = Sprite.field_k;
           if (LoginForm.field_T == -3) {
             TextHotspotRegion.field_v = false;
           }
@@ -342,7 +342,7 @@ final class QuickChatHelpDialog extends SceneWidget {
           }
           if (NodeIterator.field_d) {
             TextButton.f(-12161);
-            im.a(true);
+            LobbyStateHelpers.disconnectLobby(true);
             SoundCache.a(true);
             NodeIterator.field_d = false;
           }
@@ -350,7 +350,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1_ref), "ol.G(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "ol.G(" + param0 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface NameSuggestionListener {
-    public abstract void a(int param0, String param1);
+    public abstract void onNameSelected(int param0, String param1);
 
-    public abstract void a(byte param0);
+    public abstract void onMoreSuggestions(byte param0);
 }

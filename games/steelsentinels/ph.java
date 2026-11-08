@@ -7,7 +7,7 @@ final class ph {
     static String field_b;
     static String field_a;
     static String field_f;
-    static na[] field_e;
+    static ChatMessage[] field_e;
 
     public static void releaseStatics(int param0) {
         if (param0 < 33) {
@@ -21,7 +21,7 @@ final class ph {
         field_c = null;
     }
 
-    final static void a(na param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         SceneWidget stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -31,15 +31,15 @@ final class ph {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        dd var6 = null;
+        PlayerContextMenu var6 = null;
         String var7 = null;
-        dd var8 = null;
+        PlayerContextMenu var8 = null;
         String var9 = null;
-        dd var10 = null;
+        PlayerContextMenu var10 = null;
         String var11 = null;
-        dd var12 = null;
+        PlayerContextMenu var12 = null;
         String var13 = null;
-        dd var14 = null;
+        PlayerContextMenu var14 = null;
         try {
           stackIn_2_0 = param0.field_m;
           if (param0.field_k != 1) {
@@ -47,42 +47,42 @@ final class ph {
           } else {
             stackIn_3_1 = param0.field_e;
           }
-          kk.a(stackIn_2_0, stackIn_3_1, param0.field_k, (int[]) null, param0.field_p, param0.field_d, 1073741824, param0.field_j, (ScrollContainer) null);
+          TextAndMenuHelpers.openPlayerContextMenu(stackIn_2_0, stackIn_3_1, param0.field_k, (int[]) null, param0.field_p, param0.field_d, 1073741824, param0.field_j, (ScrollContainer) null);
           if (~param0.field_k == param1 &&
-            !ScrollContainer.d((byte) 120) &&
+            !ScrollContainer.isLoginPromptIdle((byte) 120) &&
             nf.field_b == null &&
             null == ni.field_a) {
             if (!uc.field_g) {
               var6 = AudioService.field_i;
               var7 = ml.field_d;
-              var6.field_j.a(2, 14, var7);
+              var6.field_j.addItem(2, 14, var7);
             }
             var8 = AudioService.field_i;
             var9 = NameAvailabilityValidator.field_u;
-            var8.field_j.a(2, 20, var9);
+            var8.field_j.addItem(2, 20, var9);
           }
           if (param0.field_k == 1 &&
-            !ScrollContainer.d((byte) 37) &&
+            !ScrollContainer.isLoginPromptIdle((byte) 37) &&
             nf.field_b != null &&
-            param0.field_e == nf.field_b.j(-120)) {
+            param0.field_e == nf.field_b.getGameId(-120)) {
             if (!uc.field_g) {
               var10 = AudioService.field_i;
               var11 = qi.field_g;
-              var10.field_j.a(param1 + 3, 14, var11);
+              var10.field_j.addItem(param1 + 3, 14, var11);
             }
             var12 = AudioService.field_i;
             var13 = LinkButtonPainter.field_g;
-            var12.field_j.a(2, 20, var13);
+            var12.field_j.addItem(2, 20, var13);
           }
-          AudioService.field_i.a((byte) 64);
-          AudioService.field_i.a(false, (byte) -79);
-          AudioService.field_i.a(param0.field_l, -2, param0.field_k);
-          AudioService.field_i.c(-99);
-          AudioService.field_i.a(0, param0);
+          AudioService.field_i.addLobbyGameActions((byte) 64);
+          AudioService.field_i.addGameInviteActions(false, (byte) -79);
+          AudioService.field_i.addSocialActions(param0.field_l, -2, param0.field_k);
+          AudioService.field_i.addReportAction(-99);
+          AudioService.field_i.addChatFilterActions(0, param0);
           var14 = AudioService.field_i;
           var3 = TextButton.field_S;
           var4 = BufferedRandomAccessFile.field_j;
-          var14.field_j.a(0, 0, var4, (byte) -97, var3);
+          var14.field_j.layoutItems(0, 0, var4, (byte) -97, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,36 +94,36 @@ final class ph {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != 12412) {
           field_f = (String) null;
-          if (ve.field_a == null) {
+          if (AssetDecoders.field_a == null) {
             return false;
           }
-          if (ve.field_a.a((byte) -60)) {
+          if (AssetDecoders.field_a.canResizeViewport((byte) -60)) {
             return true;
           }
           return false;
         }
-        if (ve.field_a == null) {
+        if (AssetDecoders.field_a == null) {
           return false;
         }
-        if (ve.field_a.a((byte) -60)) {
+        if (AssetDecoders.field_a.canResizeViewport((byte) -60)) {
           return true;
         }
         return false;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        km.field_i = param0;
+        ClientGlobals.field_i = param0;
         if (param3 >= -62) {
           return;
         }
-        se.field_e = param1;
+        PopupMenuSupport.field_e = param1;
         CipherPacketBuffer.field_I = param2;
     }
 

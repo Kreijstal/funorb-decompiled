@@ -35,9 +35,9 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           this.field_ab = param1;
           this.field_X = param0;
           var4_int = null != this.field_P ? this.field_ab.paragraphHeight(this.field_P, 260, this.field_ab.field_G) : 0;
-          this.a(0, (byte) -93, 0, 288, var4_int + 22);
+          this.setBounds(0, (byte) -93, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,11 +84,11 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           }
           var6_intLifetime1 = -76 / ((-85 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bm.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bm.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void ensureButtonCapacity(int param0, byte param1) {
         int var5 = 0;
         int var6 = SteelSentinels.obfuscationControl;
         if (this.field_V >= param0) {
@@ -109,7 +109,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         this.field_V = param0;
     }
 
-    final TextButton a(int param0, UiListener param1, String param2) {
+    final TextButton appendButton(int param0, UiListener param1, String param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -123,12 +123,12 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         try {
           var4 = new TextButton(param2, param1);
           if (param0 > -101) {
-            this.a(3, (byte) -77);
+            this.ensureButtonCapacity(3, (byte) -77);
           }
           var4.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = -2 + this.field_E;
-          this.a(0, (byte) -85, 0, this.field_x, 34 + this.field_E);
-          var4.a(7, (byte) -123, var5, this.field_x - 14, 30);
+          this.setBounds(0, (byte) -85, 0, this.field_x, 34 + this.field_E);
+          var4.setBounds(7, (byte) -123, var5, this.field_x - 14, 30);
           this.addChild(var4, -83);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -148,22 +148,22 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void addActionButton(int param0, String param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = this.field_V;
-          this.a(var4_int + 1, (byte) 108);
-          this.field_bb[var4_int] = this.a(-102, (UiListener) (this), param1);
+          this.ensureButtonCapacity(var4_int + 1, (byte) 108);
+          this.field_bb[var4_int] = this.appendButton(-102, (UiListener) (this), param1);
           if (param2 < 67) {
             this.field_bb = (TextButton[]) null;
           }
           this.field_U[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

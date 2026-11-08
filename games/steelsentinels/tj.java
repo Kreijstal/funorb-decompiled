@@ -16,16 +16,16 @@ final class tj {
         }
     }
 
-    final static tc a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
-        tc var9 = null;
+    final static HighscoreSubmission a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
+        HighscoreSubmission var9 = null;
         RuntimeException var9_ref = null;
-        tc stackIn_3_0 = null;
+        HighscoreSubmission stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new tc(param6, param3, param1, param2, param0, param4, param7);
+          var9 = new HighscoreSubmission(param6, param3, param1, param2, param0, param4, param7);
           MidiPcmStream.field_B.addLast(param5 ^ 18, var9);
           if (param5 != 17) {
             field_d = (String) null;
@@ -43,7 +43,7 @@ final class tj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -37,7 +37,7 @@ final class Js5ArchiveManager {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var9), "ta.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var9), "ta.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class Js5ArchiveManager {
         if (param0 >= -44) {
           Js5ArchiveManager.releaseStatics((byte) 65);
         }
-        stackIn_6_0 = (null != DelayedServerPacket.field_y) && (DelayedServerPacket.field_y.d((byte) 76));
+        stackIn_6_0 = (null != DelayedServerPacket.field_y) && (DelayedServerPacket.field_y.handleNormalizedNameKey((byte) 76));
         return stackIn_6_0;
     }
 
@@ -97,7 +97,7 @@ final class Js5ArchiveManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = QuickChatCategoryCache.a((byte) -37, -5 + var10.position - var13.length, 5, var10.payload);
+        var15 = QuickChatCategoryCache.computeWhirlpoolDigest((byte) -37, -5 + var10.position - var13.length, 5, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();
@@ -164,7 +164,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class Js5ArchiveManager {
             this.field_h = this.field_g.a((byte) 0, 255, 255, true, (byte) 72);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

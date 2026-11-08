@@ -16,7 +16,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     final static boolean c(int param0) {
         if (param0 != 8) {
           PasswordFieldPainter.releaseStatics(28);
-          if (!ParticleEffect.g(2)) {
+          if (!ParticleEffect.hasInputFocus(2)) {
             return false;
           }
           if ((8 & MouseWheelInput.field_c) == 0) {
@@ -24,7 +24,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           }
           return false;
         }
-        if (!ParticleEffect.g(2)) {
+        if (!ParticleEffect.hasInputFocus(2)) {
           return false;
         }
         if ((8 & MouseWheelInput.field_c) == 0) {
@@ -36,7 +36,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     final static void e(int param0) {
         if (GzipDecoder.field_e) {
           SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b - SoftwareRaster.field_i, -SoftwareRaster.field_l + SoftwareRaster.field_d);
-          qf.field_c.a(false, (byte) 127);
+          qf.field_c.drawFullScreen(false, (byte) 127);
         }
         if (param0 == 0) {
           return;
@@ -71,7 +71,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

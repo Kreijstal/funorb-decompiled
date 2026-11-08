@@ -21,7 +21,7 @@ final class ReportAbuseDialog extends SceneWidget {
     static String field_Vb;
     static SceneWidget field_bc;
 
-    final boolean k(int param0) {
+    final boolean handleEscapeKey(int param0) {
         int var2 = -21 % ((param0 - 14) / 53);
         if (-2 != this.field_Yb) {
           return false;
@@ -33,7 +33,7 @@ final class ReportAbuseDialog extends SceneWidget {
         return true;
     }
 
-    private final int a(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
+    private final int appendReasonButton(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -46,9 +46,9 @@ final class ReportAbuseDialog extends SceneWidget {
         try {
           param0 += 8;
           var6_int = param4.field_L.paragraphHeight(param4.field_S, -(param4.field_ub * 2) + param3, param4.field_Ib);
-          param4.a(param1, param0, var6_int, 0, param3);
+          param4.setBounds(param1, param0, var6_int, 0, param3);
           param0 = param0 + (var6_int + 0);
-          param2.a(param4, 125);
+          param2.addChild(param4, 125);
           stackIn_1_0 = param0;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,11 +67,11 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    private final int a(int param0, boolean param1, SceneWidget param2, SceneWidget param3, int param4, String param5) {
+    private final int appendReasonHeading(int param0, boolean param1, SceneWidget param2, SceneWidget param3, int param4, String param5) {
         SceneWidget var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_2_0 = 0;
@@ -91,7 +91,7 @@ final class ReportAbuseDialog extends SceneWidget {
             stackIn_2_0 = -92;
             return stackIn_2_0;
           }
-          param3.a(var7, 124);
+          param3.addChild(var7, 124);
           stackIn_4_0 = param0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -191,25 +191,25 @@ final class ReportAbuseDialog extends SceneWidget {
         this.field_Yb = -2;
         try {
           this.field_hc = param12;
-          this.field_Wb = new SceneWidget(0L, param6, oc.field_a.toUpperCase());
+          this.field_Wb = new SceneWidget(0L, param6, MessageMenuHelpers.field_a.toUpperCase());
           this.field_Wb.field_Kb = 1;
-          this.a(this.field_Wb, 119);
+          this.addChild(this.field_Wb, 119);
           this.field_Zb = new SceneWidget(0L, param7);
-          this.field_Wb.a(this.field_Zb, 121);
+          this.field_Wb.addChild(this.field_Zb, 121);
           this.field_jc = new SceneWidget(0L, (SceneWidget) null);
-          this.a(this.field_jc, 119);
+          this.addChild(this.field_jc, 119);
           if (param11 != null) {
             this.field_cc = new SceneWidget(0L, param8, cl.field_h);
             this.field_cc.field_nb = 11184810;
             this.field_cc.field_Kb = 1;
-            this.field_jc.a(this.field_cc, 120);
+            this.field_jc.addChild(this.field_cc, 120);
             this.field_gc = new SceneWidget(0L, param8, AccountTermsPanel.field_X);
             this.field_gc.field_nb = 11184810;
             this.field_gc.field_Kb = 1;
-            this.field_jc.a(this.field_gc, 121);
+            this.field_jc.addChild(this.field_gc, 121);
             this.field_Tb = new SceneWidget(0L, param8);
             this.field_Tb.field_nb = 16764006;
-            this.field_jc.a(this.field_Tb, 119);
+            this.field_jc.addChild(this.field_Tb, 119);
             this.field_Tb.field_Db = "|";
             if (!(di.field_h < 5) ||
               !(NodeDeque.field_d < 2)) {
@@ -237,25 +237,25 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_8_5 = IconLabelControl.field_Xb;
               }
               this.field_dc = new IconLabelControl(stackIn_7_3, stackIn_7_4, stackIn_8_5);
-              this.field_jc.a(this.field_dc, 119);
+              this.field_jc.addChild(this.field_dc, 119);
             }
             var28 = new SceneWidget[3];
             var15 = var28;
             var28[0] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_jc.a(var28[0], 127);
+            this.field_jc.addChild(var28[0], 127);
             var28[1] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_jc.a(var28[1], 124);
+            this.field_jc.addChild(var28[1], 124);
             var28[2] = new SceneWidget(0L, (SceneWidget) null);
-            this.field_jc.a(var28[2], 124);
-            this.field_Ub = new SceneWidget[fc.field_d];
-            for (var16 = 0; fc.field_d > var16; var16++) {
-              if (null != hh.field_g[var16]) {
-                this.field_Ub[var16] = new SceneWidget(0L, param10, hh.field_g[var16]);
+            this.field_jc.addChild(var28[2], 124);
+            this.field_Ub = new SceneWidget[SoundAndUrlHelpers.field_d];
+            for (var16 = 0; SoundAndUrlHelpers.field_d > var16; var16++) {
+              if (null != LoginActionHelpers.field_g[var16]) {
+                this.field_Ub[var16] = new SceneWidget(0L, param10, LoginActionHelpers.field_g[var16]);
                 this.field_Ub[var16].field_Kb = 0;
                 stackIn_14_0 = this.field_Ub[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_T = stackIn_15_1;
-                this.field_jc.a(this.field_Ub[var16], 120);
+                this.field_jc.addChild(this.field_Ub[var16], 120);
               }
             }
             this.field_fc = new StringBuilder(12);
@@ -267,7 +267,7 @@ final class ReportAbuseDialog extends SceneWidget {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_L.textWidth(ch.field_M);
+            var17Lifetime2 = param6.field_L.textWidth(ArrayWidgetContainer.field_M);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -275,9 +275,9 @@ final class ReportAbuseDialog extends SceneWidget {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; fc.field_d > var17Lifetime4; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; SoundAndUrlHelpers.field_d > var17Lifetime4; var17Lifetime4++) {
               if (this.field_Ub[var17Lifetime4] != null) {
-                var18 = this.field_Ub[var17Lifetime4].g(-2147483648);
+                var18 = this.field_Ub[var17Lifetime4].getContentWidth(-2147483648);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -289,88 +289,88 @@ final class ReportAbuseDialog extends SceneWidget {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(var18Lifetime3, true, param6, var28[0], var16Lifetime2, TickClock.field_c);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[6]);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[9]);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[5]);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[7]);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[15]);
-            var18Lifetime3 = this.a(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[4]);
+            var18Lifetime3 = this.appendReasonHeading(var18Lifetime3, true, param6, var28[0], var16Lifetime2, TickClock.field_c);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[6]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[9]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[5]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[7]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[15]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 0, var28[0], var16Lifetime2, this.field_Ub[4]);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var18Lifetime4, true, param6, var28[1], var16Lifetime2, ch.field_M);
-            var18Lifetime4 = this.a(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[16]);
-            var18Lifetime4 = this.a(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[17]);
-            var18Lifetime4 = this.a(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[18]);
-            var18Lifetime4 = this.a(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[19]);
-            var18Lifetime4 = this.a(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[20]);
+            var18Lifetime4 = this.appendReasonHeading(var18Lifetime4, true, param6, var28[1], var16Lifetime2, ArrayWidgetContainer.field_M);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[16]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[17]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[18]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[19]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 0, var28[1], var16Lifetime2, this.field_Ub[20]);
             if (var17Lifetime5 < var18Lifetime4) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(var18Lifetime5, true, param6, var28[2], var16Lifetime2, IconLabelControl.field_Ub);
-            var18Lifetime5 = this.a(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[13]);
-            var18Lifetime5 = this.a(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[21]);
-            var18Lifetime5 = this.a(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[11]);
+            var18Lifetime5 = this.appendReasonHeading(var18Lifetime5, true, param6, var28[2], var16Lifetime2, IconLabelControl.field_Ub);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[13]);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[21]);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 0, var28[2], var16Lifetime2, this.field_Ub[11]);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + var16Lifetime2 * 3;
-            var20 = this.field_Wb.g(-2147483648);
+            var20 = this.field_Wb.getContentWidth(-2147483648);
             if (var20 > var19) {
               var19 = var20;
             }
             if (this.field_dc != null) {
-              var20Lifetime2 = this.field_dc.c(-52, 4);
+              var20Lifetime2 = this.field_dc.measureRowWidth(-52, 4);
               if (var19 < var20Lifetime2) {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Wb.a(0, 0, 24, 0, 13 + (var19 + 13));
-            this.field_Zb.a(0, 5, 15, this.field_Wb.field_zb - 20, 15);
+            this.field_Wb.setBounds(0, 0, 24, 0, 13 + (var19 + 13));
+            this.field_Zb.setBounds(0, 5, 15, this.field_Wb.field_zb - 20, 15);
             var21 = 10;
-            this.field_cc.a(0, var21, SocketConnector.field_b * 2, 13, var19);
+            this.field_cc.setBounds(0, var21, SocketConnector.field_b * 2, 13, var19);
             var21 = var21 + SocketConnector.field_b * 2;
-            this.field_gc.a(0, var21, 2 * SocketConnector.field_b, 13, var19);
+            this.field_gc.setBounds(0, var21, 2 * SocketConnector.field_b, 13, var19);
             var21 = var21 + (10 + SocketConnector.field_b * 2);
-            this.field_Tb.a(0, var21, SocketConnector.field_b, 0, 0);
+            this.field_Tb.setBounds(0, var21, SocketConnector.field_b, 0, 0);
             var21 = var21 + (SocketConnector.field_b + 10);
             if (null != this.field_dc) {
-              var20Lifetime3 = this.field_dc.c(-116, 4);
-              this.field_dc.a(var21, var20Lifetime3, 4, 43, (var19 - var20Lifetime3) / 2 + 13, SocketConnector.field_b);
+              var20Lifetime3 = this.field_dc.measureRowWidth(-116, 4);
+              this.field_dc.setLayout(var21, var20Lifetime3, 4, 43, (var19 - var20Lifetime3) / 2 + 13, SocketConnector.field_b);
               var21 = var21 + (SocketConnector.field_b + 10);
             }
-            var28[0].a(0, var21, var17Lifetime5, 13, var16Lifetime2);
-            var28[1].a(0, var21, var17Lifetime5, 13 + (var16Lifetime2 + 13), var16Lifetime2);
-            var28[2].a(0, var21, var17Lifetime5, 13 - (-(var16Lifetime2 * 2) - 26), var16Lifetime2);
+            var28[0].setBounds(0, var21, var17Lifetime5, 13, var16Lifetime2);
+            var28[1].setBounds(0, var21, var17Lifetime5, 13 + (var16Lifetime2 + 13), var16Lifetime2);
+            var28[2].setBounds(0, var21, var17Lifetime5, 13 - (-(var16Lifetime2 * 2) - 26), var16Lifetime2);
             var22 = var21;
-            this.field_jc.a(0, 24, var22 - (-var17Lifetime5 - 10), 0, 13 + (var19 + 13));
-            this.field_jc.field_I = se.a(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
+            this.field_jc.setBounds(0, 24, var22 - (-var17Lifetime5 - 10), 0, 13 + (var19 + 13));
+            this.field_jc.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
             var23 = 26 + var19;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = UiContainer.a(param2, 127, param0, var23);
-            var26 = QuickChatHelpDialog.a(param1, 0, param3, var24);
-            this.a(0, var26, var24, var25, var23);
+            var26 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var24);
+            this.setBounds(0, var26, var24, var25, var23);
             return;
           }
           this.field_cc = new SceneWidget(0L, param8, ed.field_b);
           this.field_cc.field_Kb = 1;
           this.field_cc.field_nb = 11184810;
-          this.field_jc.a(this.field_cc, 119);
+          this.field_jc.addChild(this.field_cc, 119);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_cc.field_L.wrappedLineCount(this.field_cc.field_S, var15_int);
-          this.field_cc.a(0, var16Lifetime1, SocketConnector.field_b * var17Lifetime1, 13, var15_int);
+          this.field_cc.setBounds(0, var16Lifetime1, SocketConnector.field_b * var17Lifetime1, 13, var15_int);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * SocketConnector.field_b;
-          this.field_jc.a(0, 24, 10 + var16Lifetime1, 0, 13 + (var15_int + 13));
-          this.field_jc.field_I = se.a(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
+          this.field_jc.setBounds(0, 24, 10 + var16Lifetime1, 0, 13 + (var15_int + 13));
+          this.field_jc.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = UiContainer.a(param2, 127, param0, var18Lifetime1);
-          var21Lifetime1 = QuickChatHelpDialog.a(param1, 0, param3, var19Lifetime1);
-          this.a(0, var21Lifetime1, var19Lifetime1, var20Lifetime1, var18Lifetime1);
+          var21Lifetime1 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var19Lifetime1);
+          this.setBounds(0, var21Lifetime1, var19Lifetime1, var20Lifetime1, var18Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -418,17 +418,17 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean isMuteSelected(byte param0) {
         int discarded$1 = 0;
         String var3;
         boolean stackIn_6_0 = false;
         if (param0 < 55) {
           var3 = (String) null;
-          discarded$1 = this.a(-52, false, (SceneWidget) null, (SceneWidget) null, 10, (String) null);
+          discarded$1 = this.appendReasonHeading(-52, false, (SceneWidget) null, (SceneWidget) null, 10, (String) null);
         }
         stackIn_6_0 = (this.field_dc != null) && (this.field_dc.field_G);
         return stackIn_6_0;
@@ -446,7 +446,7 @@ final class ReportAbuseDialog extends SceneWidget {
         field_ic = null;
     }
 
-    final int a(boolean param0, int param1) {
+    final int pollOffence(boolean param0, int param1) {
         int var3 = 0;
         IconLabelControl stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -454,7 +454,7 @@ final class ReportAbuseDialog extends SceneWidget {
         boolean stackIn_17_1 = false;
         int var4;
         var4 = SteelSentinels.obfuscationControl;
-        this.a((byte) 119, param0);
+        this.updateInputFullScreen((byte) 119, param0);
         if (this.field_Tb != null) {
           this.field_Tb.field_S = this.field_fc.toString();
           this.field_Tb.field_Y = (this.field_zb - this.field_Tb.field_L.textWidth(this.field_Tb.field_S)) / 2;
@@ -465,7 +465,7 @@ final class ReportAbuseDialog extends SceneWidget {
             stackIn_7_0.field_G = stackIn_8_1;
           }
           this.field_Tb.field_zb = this.field_zb - this.field_Tb.field_Y;
-          for (var3 = 0; fc.field_d > var3; var3++) {
+          for (var3 = 0; SoundAndUrlHelpers.field_d > var3; var3++) {
             if (null != this.field_Ub[var3]) {
               stackIn_16_0 = this.field_Ub[var3];
               stackIn_17_1 = !(0 >= this.field_fc.length());
@@ -491,16 +491,16 @@ final class ReportAbuseDialog extends SceneWidget {
         return this.field_Yb;
     }
 
-    final String b(boolean param0) {
+    final String getEnteredText(boolean param0) {
         int discarded$0 = 0;
         if (!param0) {
           String var3 = (String) null;
-          discarded$0 = this.a(32, true, (SceneWidget) null, (SceneWidget) null, -121, (String) null);
+          discarded$0 = this.appendReasonHeading(32, true, (SceneWidget) null, (SceneWidget) null, -121, (String) null);
         }
         return this.field_fc.toString();
     }
 
-    static long a(long param0, long param1) {
+    static long bitAnd(long param0, long param1) {
         return param0 & param1;
     }
 

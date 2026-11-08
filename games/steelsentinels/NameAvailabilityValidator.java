@@ -60,14 +60,14 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "ei.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "ei.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        e var4 = null;
+        AccountRequestResult var4 = null;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
         Object stackIn_9_0 = null;
@@ -79,7 +79,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = va.a(var5, -1);
+          var3 = LoginDialogHelpers.getDisplayNameError(var5, -1);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -101,7 +101,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_13_0;
           }
           if (this.field_s) {
-            return hf.field_d;
+            return FrameStyleHelpers.field_d;
           }
           stackIn_17_0 = RegistrationRequestDialog.field_Qb;
           return stackIn_17_0;
@@ -115,12 +115,12 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final vd a(String param0, int param1) {
-        e var3 = null;
+    final vd validateText(String param0, int param1) {
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         vd stackIn_3_0 = null;
@@ -133,7 +133,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!HuffmanDecoder.a(var4, (byte) 127)) {
+          if (!HuffmanDecoder.isValidNameText(var4, (byte) 127)) {
             stackIn_3_0 = ArchiveProvider.field_d;
             return stackIn_3_0;
           }
@@ -168,23 +168,23 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          MidiPcmStream.a(-128, "", param1);
+          MidiPcmStream.setSessionCookie(-128, "", param1);
           if (param0 != 0) {
             field_r = (String) null;
           }
           CheckboxPainter.a(param1, 63);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ei.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ei.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void d(int param0) {
+    final void resetCachedName(int param0) {
         if (param0 < 63) {
           return;
         }
@@ -236,12 +236,12 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1, int param2) {
-        CipherPacketBuffer var3 = mm.field_g;
+        CipherPacketBuffer var3 = ClockAndCookieHelpers.field_g;
         var3.writeCipheredOpcode(param2, (byte) -117);
         var3.writeByte((byte) 127, 3);
         if (param1 != -23) {

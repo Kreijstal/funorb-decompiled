@@ -38,10 +38,10 @@ final class un {
     }
 
     final static void a(int param0, int param1) {
-        cj.field_h = param0;
+        ArchiveLoadSequence.field_h = param0;
         uc.field_a = 0;
         uf.field_a = new int[3];
-        ph.field_e = new na[15 * param0];
+        ph.field_e = new ChatMessage[15 * param0];
         int var2 = -4 % ((param1 - 79) / 34);
     }
 
@@ -51,19 +51,19 @@ final class un {
         if (param0 < 34) {
           field_g = (String) null;
           if (224 <= UiTheme.field_q) {
-            ef.a(1, 256);
+            EmailFormatError.setMusicVolume(1, 256);
             return;
           }
           var1 = UiTheme.field_q % 32;
-          ef.a(1, -var1 + (UiTheme.field_q + 32));
+          EmailFormatError.setMusicVolume(1, -var1 + (UiTheme.field_q + 32));
           return;
         }
         if (224 <= UiTheme.field_q) {
-          ef.a(1, 256);
+          EmailFormatError.setMusicVolume(1, 256);
           return;
         }
         var1Lifetime1 = UiTheme.field_q % 32;
-        ef.a(1, -var1Lifetime1 + (UiTheme.field_q + 32));
+        EmailFormatError.setMusicVolume(1, -var1Lifetime1 + (UiTheme.field_q + 32));
     }
 
     static {

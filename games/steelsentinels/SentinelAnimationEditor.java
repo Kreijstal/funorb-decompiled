@@ -41,7 +41,7 @@ final class SentinelAnimationEditor {
         field_q = null;
     }
 
-    final void b(int param0) {
+    final void handleEditorKey(int param0) {
         int var3 = 0;
         int var4 = 0;
         int[] dupTemp$0 = null;
@@ -93,7 +93,7 @@ final class SentinelAnimationEditor {
           this.field_s = this.field_b;
         }
         if (NameAvailabilityValidator.field_q == 41 &&
-          fc.field_e[82] &&
+          SoundAndUrlHelpers.field_e[82] &&
           this.field_s != -1) {
           for (var2 = 0; var2 < ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b].length; var2++) {
             ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][var2] = ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_s][var2];
@@ -104,7 +104,7 @@ final class SentinelAnimationEditor {
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, param0 ^ -27248);
-          this.field_l.a(128, 64, (byte) -116, rf.field_a);
+          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
           Checkbox.field_bb.b((byte) 127);
         }
         if (NameAvailabilityValidator.field_q == 65 &&
@@ -115,7 +115,7 @@ final class SentinelAnimationEditor {
           this.field_l.field_J = this.field_b;
           this.field_l.field_r = this.field_b;
           this.field_l.f(this.field_n, 22742);
-          this.field_l.a(128, 64, (byte) -116, rf.field_a);
+          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
           Checkbox.field_bb.b((byte) 127);
         }
         if (NameAvailabilityValidator.field_q == 49) {
@@ -231,11 +231,11 @@ final class SentinelAnimationEditor {
           }
         }
         if (param0 != -12986) {
-          this.b(47);
+          this.handleEditorKey(47);
         }
         if (NameAvailabilityValidator.field_q == 71) {
           if (wb.field_g == this.field_t) {
-            if (fc.field_e[81]) {
+            if (SoundAndUrlHelpers.field_e[81]) {
               if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] > 1) {
                 dupTemp$6 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
                 dupTemp$6[1] = dupTemp$6[1] - 1;
@@ -249,7 +249,7 @@ final class SentinelAnimationEditor {
           } else {
             if (this.field_t != lc.field_g) {
               if (jh.field_d == this.field_t) {
-                if (!fc.field_e[81]) {
+                if (!SoundAndUrlHelpers.field_e[81]) {
                   if (1 < ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5]) {
                     dupTemp$8 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
                     dupTemp$8[5] = dupTemp$8[5] - 1;
@@ -278,7 +278,7 @@ final class SentinelAnimationEditor {
               }
             } else {
               if (jh.field_d == this.field_t) {
-                if (!fc.field_e[81]) {
+                if (!SoundAndUrlHelpers.field_e[81]) {
                   if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5] < 256) {
                     dupTemp$12 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
                     dupTemp$12[5] = dupTemp$12[5] + 1;
@@ -292,7 +292,7 @@ final class SentinelAnimationEditor {
               }
             }
           } else {
-            if (fc.field_e[81]) {
+            if (SoundAndUrlHelpers.field_e[81]) {
               if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] < 25) {
                 dupTemp$14 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
                 dupTemp$14[1] = dupTemp$14[1] + 1;
@@ -307,22 +307,22 @@ final class SentinelAnimationEditor {
         }
     }
 
-    final static void a(long param0, String param1, int param2, int param3, int param4) {
+    final static void storeInviteRequest(long param0, String param1, int param2, int param3, int param4) {
         ThreeSliceButtonPainter.field_q = param0;
         if (param3 != -29368) {
           return;
         }
         try {
           wn.field_f = param4;
-          hk.field_ic = param2;
+          LobbyGame.field_ic = param2;
           CachedArchiveProvider.field_t = param1;
           ob.field_v = true;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void updateAnimationPreview(int param0) {
         int fieldTemp$0 = 0;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
@@ -406,7 +406,7 @@ final class SentinelAnimationEditor {
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, 22742);
-          this.field_l.a(128, 64, (byte) -116, rf.field_a);
+          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
           Checkbox.field_bb.b((byte) 127);
         }
         if (param0 <= 43) {
@@ -414,7 +414,7 @@ final class SentinelAnimationEditor {
         }
     }
 
-    final void d(int param0) {
+    final void drawEditor(int param0) {
         int[][] dupTemp$0 = null;
         int[] array$1 = null;
         int var2;
@@ -522,13 +522,13 @@ final class SentinelAnimationEditor {
                 }
                 SoftwareRaster.drawCircleOutline(var2, var9, 5, var10);
                 if ((WeightedLruCache.field_d == 0 ||
-                  var8Lifetime3 == var4) && (-5 + var2 <= oh.field_f &&
-                  5 + var2 >= oh.field_f &&
+                  var8Lifetime3 == var4) && (-5 + var2 <= LobbySetupHelpers.field_f &&
+                  5 + var2 >= LobbySetupHelpers.field_f &&
                   var3 <= DelegatingCanvas.field_c &&
                   DelegatingCanvas.field_c <= var7_int * 2 + var3)) {
                   this.field_r = (DelegatingCanvas.field_c - var3 - var7_int) * 17763 / var7_int;
                   this.field_w = var8Lifetime3;
-                  if (fc.field_e[81]) {
+                  if (SoundAndUrlHelpers.field_e[81]) {
                     this.field_r = 35526 * (DelegatingCanvas.field_c - var3 - var7_int) / var7_int;
                   }
                   if (Math.abs(-var7_int + (-var3 + DelegatingCanvas.field_c)) <= 1) {
@@ -547,13 +547,13 @@ final class SentinelAnimationEditor {
                     var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var7_int + var2;
                     SoftwareRaster.drawCircleOutline(var9, var3, 5, 16746496);
                     if ((WeightedLruCache.field_d == 0 ||
-                      var8Lifetime3 == var4) && (oh.field_f >= var2 &&
-                      var7_int * 2 + var2 >= oh.field_f &&
+                      var8Lifetime3 == var4) && (LobbySetupHelpers.field_f >= var2 &&
+                      var7_int * 2 + var2 >= LobbySetupHelpers.field_f &&
                       -5 + var3 <= DelegatingCanvas.field_c &&
                       5 + var3 >= DelegatingCanvas.field_c)) {
-                      this.field_r = 2500 * (-var7_int + oh.field_f - var2) / var7_int;
+                      this.field_r = 2500 * (-var7_int + LobbySetupHelpers.field_f - var2) / var7_int;
                       this.field_w = var8Lifetime3;
-                      if (Math.abs(-var2 + oh.field_f - var7_int) <= 1) {
+                      if (Math.abs(-var2 + LobbySetupHelpers.field_f - var7_int) <= 1) {
                         this.field_r = 0;
                       }
                       SoftwareRaster.drawCircleOutline(var9, var3, 6, 16746496);
@@ -565,8 +565,8 @@ final class SentinelAnimationEditor {
                   var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var3 + var7_int;
                   SoftwareRaster.drawCircleOutline(var2, var9, 5, 16746496);
                   if ((WeightedLruCache.field_d == 0 ||
-                    var4 == var8Lifetime3) && (oh.field_f >= -5 + var2 &&
-                    5 + var2 >= oh.field_f &&
+                    var4 == var8Lifetime3) && (LobbySetupHelpers.field_f >= -5 + var2 &&
+                    5 + var2 >= LobbySetupHelpers.field_f &&
                     DelegatingCanvas.field_c >= var3 &&
                     var3 + 2 * var7_int >= DelegatingCanvas.field_c)) {
                     this.field_r = (DelegatingCanvas.field_c - var3 - var7_int) * 2500 / var7_int;
@@ -741,7 +741,7 @@ final class SentinelAnimationEditor {
             var29 = var28 + "Frame = " + (1 + (this.field_b - 17)) + " of " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] + " (arrow keys to change, + and - to change max frame no)<br>";
             var7Lifetime15 = var29 + "FPS = " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6] + " (SHIFT + <lt> and <gt> to change)<br>";
           }
-          dk.field_h.drawParagraph(var7Lifetime15, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
+          DualNodeHashTable.field_h.drawParagraph(var7Lifetime15, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
           return;
         }
     }

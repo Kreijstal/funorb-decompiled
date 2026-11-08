@@ -28,7 +28,7 @@ final class PcmStreamMixer extends PcmStream {
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_t = this.field_t + var4;
-          this.e();
+          this.commitElapsed();
           var5 = (w) (this.field_s.first(13058));
           var6 = var5;
           synchronized (var6) {
@@ -38,7 +38,7 @@ final class PcmStreamMixer extends PcmStream {
               this.insertListener(var5.next, var5);
             } else {
               var5.field_o = 0;
-              this.a(var5);
+              this.removeListener(var5);
             }
           }
         } while (param2 != 0);
@@ -53,7 +53,7 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_u.first(13058));
     }
 
-    private final void a(w param0) {
+    private final void removeListener(w param0) {
         param0.unlink(4);
         param0.a();
         IntrusiveNode var2 = this.field_s.sentinel.next;
@@ -106,7 +106,7 @@ final class PcmStreamMixer extends PcmStream {
           this.skipSubstreams(var2);
           param0 = param0 - var2;
           this.field_t = this.field_t + var2;
-          this.e();
+          this.commitElapsed();
           var3 = (w) (this.field_s.first(13058));
           var4 = var3;
           synchronized (var4) {
@@ -116,14 +116,14 @@ final class PcmStreamMixer extends PcmStream {
               this.insertListener(var3.next, var3);
             } else {
               var3.field_o = 0;
-              this.a(var3);
+              this.removeListener(var3);
             }
           }
         } while (param0 != 0);
         return;
     }
 
-    private final void e() {
+    private final void commitElapsed() {
         w var1 = null;
         if (this.field_t > 0) {
           var1 = (w) (this.field_s.first(13058));

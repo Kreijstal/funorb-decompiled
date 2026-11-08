@@ -61,22 +61,22 @@ final class GzipDecoder {
           }
           var5 = new SceneWidget("", var14);
           var5.field_S = vf.field_c;
-          var5.a(0, 0, 18, 0, 110);
-          param0.a(var5, 120);
-          var6 = hl.field_v.i(param1 ^ -97);
+          var5.setBounds(0, 0, 18, 0, 110);
+          param0.addChild(var5, 120);
+          var6 = PendingIntArrayRequest.field_v.i(param1 ^ -97);
           var7 = new SceneWidget(-1L, (SceneWidget) null);
           var7.field_I = MatchingTextValidator.field_t;
           var8 = (var6 + 1) / 2 * 51 + 32;
           if (param1 != 19) {
             field_a = (SceneWidget[]) null;
           }
-          var7.a(0, var4, var8, 0, 110);
-          param0.a(var7, 121);
+          var7.setBounds(0, var4, var8, 0, 110);
+          param0.addChild(var7, 121);
           var4 += 3;
           var9_ref_gh = new SceneWidget("", NameAvailabilityValidator.field_n);
           var10 = 0;
           for (var11 = 0; var6 > var11; var11++) {
-            if (dn.field_bc[var11] == di.field_c[var11]) {
+            if (ContextMenu.field_bc[var11] == di.field_c[var11]) {
               continue;
             }
             var10 = 1;
@@ -97,16 +97,16 @@ final class GzipDecoder {
           }
           stackIn_16_0.field_S = stackIn_17_1;
           if (var10 == 0) {
-            var9_ref_gh.field_I = lj.field_b;
+            var9_ref_gh.field_I = SocialRequestHelpers.field_b;
           }
-          var9_ref_gh.a(0, var4, 18, 3, 104);
+          var9_ref_gh.setBounds(0, var4, 18, 3, 104);
           var9_ref_gh.field_Kb = 1;
-          param0.a(var9_ref_gh, 118);
+          param0.addChild(var9_ref_gh, 118);
           if (var10 != 0) {
             stackIn_21_0 = param0.field_Rb;
-            stackIn_21_1 = oh.field_f;
+            stackIn_21_1 = LobbySetupHelpers.field_f;
             if (stackIn_21_0 <= stackIn_21_1 &&
-              oh.field_f < param0.field_Rb + 110 &&
+              LobbySetupHelpers.field_f < param0.field_Rb + 110 &&
               DelegatingCanvas.field_c >= param0.field_cb + var4 &&
               18 + (var4 + param0.field_cb) > DelegatingCanvas.field_c) {
               pa.field_e = -2;
@@ -120,17 +120,17 @@ final class GzipDecoder {
             if (var9 != 1) {
             }
             var15 = new SceneWidget("", NameAvailabilityValidator.field_n);
-            var15.a(0, var4, 47, var3Lifetime1, 47);
-            param0.a(var15, param1 ^ 101);
-            if (oh.field_f >= var3Lifetime1 + param0.field_Rb &&
-              oh.field_f < 47 + param0.field_Rb + var3Lifetime1 &&
+            var15.setBounds(0, var4, 47, var3Lifetime1, 47);
+            param0.addChild(var15, param1 ^ 101);
+            if (LobbySetupHelpers.field_f >= var3Lifetime1 + param0.field_Rb &&
+              LobbySetupHelpers.field_f < 47 + param0.field_Rb + var3Lifetime1 &&
               DelegatingCanvas.field_c >= param0.field_cb + var4 &&
               param0.field_cb - (-var4 - 47) > DelegatingCanvas.field_c) {
               pa.field_e = var9;
-              var15.field_I = be.field_f;
+              var15.field_I = UrlAndReplyHelpers.field_f;
             } else if (!(NameSuggestionsPanel.field_Y < 0) ||
               !(t.field_h < 0)) {
-              var15.field_I = be.field_f;
+              var15.field_I = UrlAndReplyHelpers.field_f;
             }
             if (di.field_c[var9] != -1) {
               var13 = new SceneWidget();
@@ -143,8 +143,8 @@ final class GzipDecoder {
                 stackIn_43_2 = di.field_c[var9] + 64;
               }
               stackIn_42_0.field_Pb = ((IndexedSprite) (Object) stackIn_42_1[stackIn_43_2]).toRgbSprite();
-              var16.a(0, var4 + 3, 40, var3Lifetime1 + 3, 40);
-              param0.a(var16, 118);
+              var16.setBounds(0, var4 + 3, 40, var3Lifetime1 + 3, 40);
+              param0.addChild(var16, 118);
             }
             var3Lifetime1 = 63 - var3Lifetime1;
             if (var3Lifetime1 == 6) {
@@ -162,7 +162,7 @@ final class GzipDecoder {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class GzipDecoder {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -227,8 +227,8 @@ final class GzipDecoder {
         int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
-        SocialListPanel.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
-        NanoTickClock.field_y.a(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
+        SocialListPanel.field_ec.setBounds(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
+        NanoTickClock.field_y.setBounds(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
         if (param0 > 8) {
           return;
         }
@@ -284,7 +284,7 @@ final class GzipDecoder {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -303,8 +303,8 @@ final class GzipDecoder {
         int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
-        SocialListPanel.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
-        NanoTickClock.field_y.a(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
+        SocialListPanel.field_ec.setBounds(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
+        NanoTickClock.field_y.setBounds(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
         if (param0 > 8) {
           return;
         }

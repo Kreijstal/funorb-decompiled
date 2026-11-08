@@ -53,8 +53,8 @@ final class hm {
               return stackIn_8_0;
             }
             if (param1[var5] >= 0 &&
-              param1[var5] < dn.field_Sb.length) {
-              var3_int = var3_int + dn.field_Sb[param1[var5]];
+              param1[var5] < ContextMenu.field_Sb.length) {
+              var3_int = var3_int + ContextMenu.field_Sb[param1[var5]];
             }
           }
           stackIn_18_0 = var3_int;
@@ -75,7 +75,7 @@ final class hm {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

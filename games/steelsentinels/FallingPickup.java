@@ -26,7 +26,7 @@ final class FallingPickup extends DualNode {
     static int[] field_G;
     private int field_M;
 
-    final static int[] a(int param0, byte param1) {
+    final static int[] getUniqueChildComponentIds(int param0, byte param1) {
         int incrementValue$0 = 0;
         Object stackIn_6_0 = null;
         int stackIn_9_0 = 0;
@@ -83,7 +83,7 @@ final class FallingPickup extends DualNode {
                 stackIn_28_1 = 28;
               }
               if (stackIn_28_0 != stackIn_28_1) {
-                FallingPickup.g(61);
+                FallingPickup.releaseStatics(61);
               }
               var5 = new int[var4];
               var4 = 0;
@@ -113,7 +113,7 @@ final class FallingPickup extends DualNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ne.A(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "ne.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -478,11 +478,11 @@ final class FallingPickup extends DualNode {
           } else {
             stackIn_187_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_186_0), ((StringBuilder) (Object) stackIn_186_1).append(stackIn_187_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_186_0), ((StringBuilder) (Object) stackIn_186_1).append(stackIn_187_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void c(byte param0) {
+    final void advancePickup(byte param0) {
         boolean stackIn_11_0 = false;
         int stackIn_58_0 = 0;
         int stackIn_72_0 = 0;
@@ -566,7 +566,7 @@ final class FallingPickup extends DualNode {
                 this.field_P.field_E[var6] = var5 + ((var4 << 8) + (var3 << 16));
                 if (this.field_L &&
                   0 != this.field_P.field_E[var6]) {
-                  this.field_P.field_E[var6] = ec.a(~this.field_P.field_E[var6], 16777215);
+                  this.field_P.field_E[var6] = ClientUiHelpers.bitAnd(~this.field_P.field_E[var6], 16777215);
                 }
                 var6++;
                 continue;
@@ -683,7 +683,7 @@ final class FallingPickup extends DualNode {
                 (this.field_I - this.field_D) <= var10.worldY &&
                 (var10.worldY - var12) < this.field_I) {
                 this.applyToSentinel(var10, (byte) -86);
-                fc.a((byte) -73, 102, this.field_z);
+                SoundAndUrlHelpers.playSoundEffect((byte) -73, 102, this.field_z);
                 return;
               }
             }
@@ -693,11 +693,11 @@ final class FallingPickup extends DualNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ne.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "ne.D(" + param0 + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_R = null;
         field_J = null;
@@ -709,11 +709,11 @@ final class FallingPickup extends DualNode {
           field_H = null;
           field_N = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ne.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ne.B(" + param0 + ')');
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1, boolean param2) {
+    final static boolean isValidPlayerName(byte param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -734,7 +734,7 @@ final class FallingPickup extends DualNode {
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var4 < param1.length())))) {
-            stackOut_8_0 = im.a(param1.charAt(var4), false);
+            stackOut_8_0 = LobbyStateHelpers.isValidNameCharacter(param1.charAt(var4), false);
             stackIn_17_0 = stackOut_8_0;
             stackIn_9_0 = stackOut_8_0;
             if (var5 == 0) {
@@ -760,11 +760,11 @@ final class FallingPickup extends DualNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawPickup(int param0, int param1, int param2, int param3) {
         int stackIn_16_0;
         int stackIn_16_1;
         int stackIn_16_2;
@@ -855,7 +855,7 @@ final class FallingPickup extends DualNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "ne.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "ne.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -956,7 +956,7 @@ final class FallingPickup extends DualNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 

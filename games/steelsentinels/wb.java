@@ -22,8 +22,8 @@ final class wb {
           if (param1 < 0) {
             return 0;
           }
-          if (dn.field_Sb.length > param1) {
-            return dn.field_Sb[param1] / 4;
+          if (ContextMenu.field_Sb.length > param1) {
+            return ContextMenu.field_Sb[param1] / 4;
           }
           var2 = param1;
           if (42 == var2) {
@@ -50,8 +50,8 @@ final class wb {
         if (param1 < 0) {
           return 0;
         }
-        if (dn.field_Sb.length > param1) {
-          return dn.field_Sb[param1] / 4;
+        if (ContextMenu.field_Sb.length > param1) {
+          return ContextMenu.field_Sb[param1] / 4;
         }
         var2Lifetime1 = param1;
         if (42 == var2Lifetime1) {

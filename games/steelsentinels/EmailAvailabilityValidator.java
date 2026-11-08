@@ -14,10 +14,10 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     private MatchingTextValidator field_x;
     static DisplayNameForm field_o;
 
-    final static void a(boolean param0, hk param1) {
-        hk var2 = null;
+    final static void a(boolean param0, LobbyGame param1) {
+        LobbyGame var2 = null;
         int var3 = 0;
-        hk var4 = null;
+        LobbyGame var4 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -26,14 +26,14 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         var3 = SteelSentinels.obfuscationControl;
         try {
           param1.unlink(4);
-          var2 = (hk) (ci.field_e.first(13058));
+          var2 = (LobbyGame) (ClientErrorSupport.field_e.first(13058));
           if (!param0) {
-            var4 = (hk) null;
-            EmailAvailabilityValidator.a(true, (hk) null);
+            var4 = (LobbyGame) null;
+            EmailAvailabilityValidator.a(true, (LobbyGame) null);
           }
           while (var2 != null) {
-            if (var2.a(param1, (byte) -63)) {
-              var2 = (hk) (ci.field_e.next((byte) -101));
+            if (var2.comesBeforeGame(param1, (byte) -63)) {
+              var2 = (LobbyGame) (ClientErrorSupport.field_e.next((byte) -101));
               continue;
             }
             break;
@@ -41,7 +41,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           if (var2 != null) {
             IsaacRandom.insertNodeBefore(var2, 30, param1);
           } else {
-            ci.field_e.addLast(3, param1);
+            ClientErrorSupport.field_e.addLast(3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,26 +54,26 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
-        SocialListPanel.j(-29713);
+        SocialListPanel.resetLoginRequestState(-29713);
         if (param3 != 12) {
           return;
         }
         try {
           GradientOutlineTextPainter.field_p.refreshPanelVisibility(param3 + 109);
-          AccountNoticeDialog.field_kb = new LoginForm(cc.field_Xb, (String) null, LoginMethod.field_d, param1, param2);
-          ci.field_a = new LoginDialog(GradientOutlineTextPainter.field_p, AccountNoticeDialog.field_kb);
-          GradientOutlineTextPainter.field_p.pushPanel(ci.field_a, 93);
+          AccountNoticeDialog.field_kb = new LoginForm(LobbyPlayer.field_Xb, (String) null, LoginMethod.field_d, param1, param2);
+          ClientErrorSupport.field_a = new LoginDialog(GradientOutlineTextPainter.field_p, AccountNoticeDialog.field_kb);
+          GradientOutlineTextPainter.field_p.pushPanel(ClientErrorSupport.field_a, 93);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int param0, String param1) {
         RuntimeException var3 = null;
         CipherPacketBuffer var4 = null;
         String stackIn_4_0 = null;
@@ -88,15 +88,15 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             var4 = (CipherPacketBuffer) null;
             EmailAvailabilityValidator.a((CipherPacketBuffer) null, (byte) 97);
           }
-          if (this.field_x.a(param1, -1) == ArchiveProvider.field_d) {
-            stackIn_4_0 = this.field_x.a(100, param1);
+          if (this.field_x.validateText(param1, -1) == ArchiveProvider.field_d) {
+            stackIn_4_0 = this.field_x.messageForText(100, param1);
             return stackIn_4_0;
           }
-          if (this.a(param1, param0 ^ -101) != ArchiveProvider.field_d) {
+          if (this.validateText(param1, param0 ^ -101) != ArchiveProvider.field_d) {
             stackIn_9_0 = QuickChatMenu.field_lc;
             return stackIn_9_0;
           }
-          stackIn_7_0 = pl.field_W;
+          stackIn_7_0 = BirthDateEntryPanel.field_W;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,20 +108,20 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1) {
-        CipherPacketBuffer var2 = mm.field_g;
+        CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param0, (byte) -117);
         var2.writeByte((byte) 109, 1);
         var2.writeByte((byte) 108, 1);
         int var3 = 30 / ((11 - param1) / 51);
     }
 
-    final vd a(String param0, int param1) {
-        dm var3 = null;
+    final vd validateText(String param0, int param1) {
+        NameCheckResult var3 = null;
         RuntimeException var3_ref = null;
         vd stackIn_2_0 = null;
         vd stackIn_8_0 = null;
@@ -131,18 +131,18 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_x.a(param0, param1) == ArchiveProvider.field_d) {
+          if (this.field_x.validateText(param0, param1) == ArchiveProvider.field_d) {
             stackIn_2_0 = ArchiveProvider.field_d;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_u)) {
-            var3 = ri.a(param0, -98);
-            if (!var3.a((byte) -72)) {
+            var3 = LoginStateQueries.getNameCheckResult(param0, -98);
+            if (!var3.isComplete((byte) -72)) {
               stackIn_8_0 = TextHotspotWidget.field_Y;
               return stackIn_8_0;
             }
             this.field_u = param0;
-            this.field_r = var3.b(200);
+            this.field_r = var3.isAvailable(200);
           }
           if (this.field_r) {
             stackIn_13_0 = vf.field_b;
@@ -160,7 +160,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -181,17 +181,17 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         try {
           this.field_x = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        qf.field_c.a(0, param1, param4, param3, param5);
+        qf.field_c.setBounds(0, param1, param4, param3, param5);
         if (param6 <= 81) {
           field_n = (String[]) null;
         }
         if (IntKeyLookup.field_i != null) {
-          IntKeyLookup.field_i.a(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
+          IntKeyLookup.field_i.layoutMenu(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
         }
     }
 
@@ -252,7 +252,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -270,8 +270,8 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 <= oh.field_f) {
-            if (param5 + param1 > oh.field_f) {
+          if (param1 <= LobbySetupHelpers.field_f) {
+            if (param5 + param1 > LobbySetupHelpers.field_f) {
               if (param0 <= DelegatingCanvas.field_c) {
                 stackIn_10_0 = (param0 + param4 > DelegatingCanvas.field_c) ? 1 : 0;
               } else {
@@ -287,7 +287,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           stackIn_13_0 = (var6_int == 0) ? 1146810 : 0;
           var7 = stackIn_13_0;
           if (var6_int == 0) {
-            stackIn_16_0 = hk.field_Tb;
+            stackIn_16_0 = LobbyGame.field_Tb;
           } else {
             stackIn_16_0 = MouseInputHandler.field_d;
           }
@@ -297,7 +297,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           }
           jm.a(param0, param4, var8, 1, param1, param5);
           if (param3 != null) {
-            pl.field_U.drawCentered(param3, param5 / 2 + param1, (1 + (param4 + pl.field_U.field_U)) / 2 + param0, var7, -1);
+            BirthDateEntryPanel.field_U.drawCentered(param3, param5 / 2 + param1, (1 + (param4 + BirthDateEntryPanel.field_U.field_U)) / 2 + param0, var7, -1);
           }
           stackIn_23_0 = var6_int;
           return stackIn_23_0 != 0;
@@ -311,7 +311,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

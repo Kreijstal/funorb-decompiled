@@ -8,7 +8,7 @@ final class lc {
     static RgbSprite field_b;
     static String field_d;
     static String field_i;
-    static tc field_c;
+    static HighscoreSubmission field_c;
     static boolean field_e;
     static int field_g;
 
@@ -40,7 +40,7 @@ final class lc {
             var14 = param8;
             var15 = param2;
             var16 = var11[var12] >> 1 & 8355711;
-            var11[var12] = ec.a(255, var15 >> 17) + ec.a(16711680, var13 >> 1) - (-(ec.a(33423850, var14) >> 9) - var16);
+            var11[var12] = ClientUiHelpers.bitAnd(255, var15 >> 17) + ClientUiHelpers.bitAnd(16711680, var13 >> 1) - (-(ClientUiHelpers.bitAnd(33423850, var14) >> 9) - var16);
             param8 = param8 + param0;
             param5++;
             param2 = param2 + param4;
@@ -56,7 +56,7 @@ final class lc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class lc {
         field_i = null;
     }
 
-    final static void a(int param0, int param1, hk param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final static void a(int param0, int param1, LobbyGame param2, int param3, int param4, int param5, int param6, boolean param7) {
         IconTextComponent[][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
         int stackIn_57_0 = 0;
@@ -101,7 +101,7 @@ final class lc {
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
-        hk var16 = null;
+        LobbyGame var16 = null;
         IconTextComponent[] var17 = null;
         int[] var18 = null;
         IconTextComponent[] var19 = null;
@@ -133,7 +133,7 @@ final class lc {
               scanLoop1: while (true) {
                 if (var20.length <= var12) {
                   if (var11 == 0 &&
-                    param4 != be.field_a) {
+                    param4 != UrlAndReplyHelpers.field_a) {
                     break scanLoop1;
                   }
                   for (var12 = 0; var20.length > var12; var12 += 2) {
@@ -275,8 +275,8 @@ final class lc {
             }
           }
           if (param5 >= -83) {
-            var16 = (hk) null;
-            lc.a(112, 77, (hk) null, 38, -87, 68, 43, false);
+            var16 = (LobbyGame) null;
+            lc.a(112, 77, (LobbyGame) null, 38, -87, 68, 43, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ final class lc {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

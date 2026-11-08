@@ -77,8 +77,8 @@ final class sh {
             }
           }
           if (param2) {
-            if (!ib.a(-78)) {
-              km.field_a = dg.field_e;
+            if (!ChatPanelHelpers.areBaseAssetsLoaded(-78)) {
+              ClientGlobals.field_a = dg.field_e;
             } else {
               var4Lifetime1 = param1 ? 1 : 0;
               IterableNodeHashTable.a(-3, var4Lifetime1 != 0, -1, 0);
@@ -88,7 +88,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "sh.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "sh.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

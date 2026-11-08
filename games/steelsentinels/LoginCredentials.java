@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class LoginCredentials {
-    static dk field_b;
+    static DualNodeHashTable field_b;
     static volatile int field_d;
     static int[] field_g;
     static String field_c;
@@ -10,7 +10,7 @@ abstract class LoginCredentials {
     static MusicTrack field_f;
     static int field_e;
 
-    abstract dj a(byte param0);
+    abstract dj type(byte param0);
 
     public static void releaseStatics(int param0) {
         field_b = null;
@@ -21,7 +21,7 @@ abstract class LoginCredentials {
         field_g = null;
     }
 
-    abstract void a(PacketBuffer param0, boolean param1);
+    abstract void writeTo(PacketBuffer param0, boolean param1);
 
     final static int a(int param0, int param1) {
         int var2 = 0;

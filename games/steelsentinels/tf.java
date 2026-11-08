@@ -10,7 +10,7 @@ final class tf {
     static RgbSprite field_e;
     static String[] field_d;
 
-    final static void a(na param0, byte param1) {
+    final static void a(ChatMessage param0, byte param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -33,11 +33,11 @@ final class tf {
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < uc.field_a; var2_intLifetime1++) {
             if (param0.field_k == ph.field_e[var2_intLifetime1].field_k) {
-              dupTemp$3 = ph.field_e[var2_intLifetime1].a((byte) 58);
+              dupTemp$3 = ph.field_e[var2_intLifetime1].getVisibilityClass((byte) 58);
               uf.field_a[dupTemp$3] = uf.field_a[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param0.a((byte) 58);
+          dupTemp$0 = param0.getVisibilityClass((byte) 58);
           uf.field_a[dupTemp$0] = uf.field_a[dupTemp$0] + 1;
           if (param1 >= -103) {
             return;
@@ -46,8 +46,8 @@ final class tf {
           for (var3 = 0; uc.field_a > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (ph.field_e[var3].field_k == param0.field_k) {
-              var4 = ph.field_e[var3].a((byte) 58);
-              if (cj.field_h < uf.field_a[var4]) {
+              var4 = ph.field_e[var3].getVisibilityClass((byte) 58);
+              if (ArchiveLoadSequence.field_h < uf.field_a[var4]) {
                 uf.field_a[var4] = uf.field_a[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -73,14 +73,14 @@ final class tf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (null != qf.field_e) {
           SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, -SoftwareRaster.field_i + SoftwareRaster.field_b, SoftwareRaster.field_d - SoftwareRaster.field_l);
-          qf.field_e.a(param1, (byte) 127);
+          qf.field_e.drawFullScreen(param1, (byte) 127);
         }
         if (param0 != 0) {
           field_a = (SceneWidget) null;

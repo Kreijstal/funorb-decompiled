@@ -48,7 +48,7 @@ final class CachedTextLayout extends TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "si.S(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "si.S(" + param0 + ')');
         }
     }
 
@@ -80,30 +80,30 @@ final class CachedTextLayout extends TextLayout {
           var5 = new SceneWidget(-1L, (SceneWidget) null);
           var5.field_Pb = gj.field_a;
           var5.field_Kb = 2;
-          var5.a(0, param2, 18, 0, var4);
-          param0.a(var5, 118);
+          var5.setBounds(0, param2, 18, 0, var4);
+          param0.addChild(var5, 118);
           var6 = ResourceArchive.field_p;
           var7 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var6);
           var7.field_nb = 0;
-          var7.field_L = (BitmapFont) ((Object) pl.field_U);
+          var7.field_L = (BitmapFont) ((Object) BirthDateEntryPanel.field_U);
           if (!param1) {
             var11 = (SceneWidget) null;
             CachedTextLayout.a((SceneWidget) null, true, -1);
           }
-          var7.a(0, param2, 18, 0, var4);
+          var7.setBounds(0, param2, 18, 0, var4);
           var7.field_Fb = 1;
           var7.field_sb = 1;
           var7.field_I = null;
           var7.field_Kb = 1;
-          param0.a(var7, 119);
+          param0.addChild(var7, 119);
           param2 = param2 + var7.field_Lb;
-          for (var8 = 0; var8 < ue.field_c.length; var8++) {
-            if (ue.field_c[var8] != null) {
-              var9 = ValidationHelpWidget.a(false, 1 + var8, ue.field_c[var8]);
+          for (var8 = 0; var8 < LoginHandshakeHelpers.field_c.length; var8++) {
+            if (LoginHandshakeHelpers.field_c[var8] != null) {
+              var9 = ValidationHelpWidget.a(false, 1 + var8, LoginHandshakeHelpers.field_c[var8]);
               param2 += 2;
-              var9.a(0, param2, var3_int, 0, var4);
+              var9.setBounds(0, param2, var3_int, 0, var4);
               param2 = param2 + var3_int;
-              param0.a(var9, 126);
+              param0.addChild(var9, 126);
             }
           }
           stackIn_17_0 = param2;
@@ -118,11 +118,11 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static ik b(int param0) {
+    final static ConditionalTextValue b(int param0) {
         String var1 = jj.a(true);
         if (param0 != 64) {
           CachedTextLayout.c(-82);
@@ -131,7 +131,7 @@ final class CachedTextLayout extends TextLayout {
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new ik(jj.a(true), Projectile.j(param0 ^ 16777151));
+        return new ConditionalTextValue(jj.a(true), Projectile.j(param0 ^ 16777151));
     }
 
     public static void releaseStatics(int param0) {
@@ -153,7 +153,7 @@ final class CachedTextLayout extends TextLayout {
         field_l = null;
     }
 
-    final void a(String param0, boolean param1, int param2, int param3, BitmapFont param4) {
+    final void layoutRightAlignedLine(String param0, boolean param1, int param2, int param3, BitmapFont param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param0 == null) {
@@ -179,13 +179,13 @@ final class CachedTextLayout extends TextLayout {
           var9 = var8;
           var9.field_f[0] = param2 - param4.textWidth(param0);
           var9.field_f[param0.length()] = param2;
-          kk.a(var9, 110, 0, param0, param4);
+          TextAndMenuHelpers.populateCaretPositions(var9, 110, 0, param0, param4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "si.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "si.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void layoutLeftAlignedLine(int param0, String param1, int param2, int param3, BitmapFont param4) {
         TextLayoutLine var7 = null;
         TextLayoutLine var8 = null;
         if (param1 == null) {
@@ -211,13 +211,13 @@ final class CachedTextLayout extends TextLayout {
           var8 = var7;
           var7.field_f[0] = param0;
           var8.field_f[param1.length()] = param4.textWidth(param1) + param0;
-          kk.a(var8, 95, 0, param1, param4);
+          TextAndMenuHelpers.populateCaretPositions(var8, 95, 0, param1, param4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "si.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "si.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void layoutCenteredLine(int param0, String param1, int param2, int param3, BitmapFont param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -242,13 +242,13 @@ final class CachedTextLayout extends TextLayout {
           var7 = param4.textWidth(param1);
           var8.field_f[0] = param0 - (var7 >> 1);
           var8.field_f[param1.length()] = (var7 >> 1) + param0;
-          kk.a(var8, param3 ^ -1385548469, 0, param1, param4);
+          TextAndMenuHelpers.populateCaretPositions(var8, param3 ^ -1385548469, 0, param1, param4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "si.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "si.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, int param4, BitmapFont param5, int param6, int param7) {
+    final void layoutParagraph(int param0, int param1, int param2, String param3, int param4, BitmapFont param5, int param6, int param7) {
         TextLayoutLine stackIn_34_0;
         TextLayoutLine stackIn_34_1;
         int stackIn_34_2;
@@ -351,11 +351,11 @@ final class CachedTextLayout extends TextLayout {
               stackIn_38_0 = var14;
               stackIn_38_1 = param7 - 63;
               if (3 == param1) {
-                stackIn_39_2 = this.a(var13, param0, param5.textWidth(var13), (byte) 116);
+                stackIn_39_2 = this.justificationSpacingQ8(var13, param0, param5.textWidth(var13), (byte) 116);
               } else {
                 stackIn_39_2 = 0;
               }
-              kk.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, var13, param5);
+              TextAndMenuHelpers.populateCaretPositions(stackIn_38_0, stackIn_38_1, stackIn_39_2, var13, param5);
             }
             this.field_h[var12Lifetime1] = var14;
             var11 = var11 + param2;
@@ -377,7 +377,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

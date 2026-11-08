@@ -26,7 +26,7 @@ abstract class RasterBuffer {
     abstract void drawImage(byte param0, java.awt.Graphics param1, int param2, int param3);
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
-        ih.field_r = param3;
+        EmailSyntaxValidator.field_r = param3;
         rn.field_q = param4;
         TextFieldValidator.field_l = param2;
         if (param0) {
@@ -58,7 +58,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -96,39 +96,39 @@ abstract class RasterBuffer {
         var22 = null;
         var11 = SteelSentinels.obfuscationControl;
         var3 = 1;
-        if (!rg.field_f &&
-          hh.field_a == null) {
+        if (!PopupMenuHelpers.field_f &&
+          LoginActionHelpers.field_a == null) {
           var3 = 0;
         }
-        if (ib.field_b == 0 &&
+        if (ChatPanelHelpers.field_b == 0 &&
           null != ni.field_a) {
           var3 = 0;
         }
         if (param0 > -119) {
           field_j = (String) null;
         }
-        if (ib.field_b == 2 &&
+        if (ChatPanelHelpers.field_b == 2 &&
           !StatefulTextPainter.b((byte) -62)) {
           var3 = 0;
         }
         if (NameAvailabilityValidator.field_q == 84) {
           if (var3 == 0) {
-            if (ib.field_b != 0) {
+            if (ChatPanelHelpers.field_b != 0) {
               AlternateUsernameCredentials.d(97);
             }
           } else {
             if (tf.field_g.length() > 0) {
               var4_ref_String = tf.field_g.toString();
-              if (bi.a(var4_ref_String, true)) {
+              if (TextAndBitHelpers.containsFilterText(var4_ref_String, true)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                MusicCrossfadeStream.a((String) null, TextLayoutLine.field_e, 0, (byte) 21, (String) null, 2);
+                MusicCrossfadeStream.appendChatMessage((String) null, TextLayoutLine.field_e, 0, (byte) 21, (String) null, 2);
                 var15 = (String) null;
                 var14 = (String) null;
-                MusicCrossfadeStream.a((String) null, MouseWheelInput.field_e, 0, (byte) 21, (String) null, 2);
+                MusicCrossfadeStream.appendChatMessage((String) null, MouseWheelInput.field_e, 0, (byte) 21, (String) null, 2);
                 AlternateUsernameCredentials.d(81);
               } else {
-                var5 = ib.field_b;
+                var5 = ChatPanelHelpers.field_b;
                 if (0 == var5 &&
                   nf.field_b != null) {
                   var5 = 1;
@@ -136,7 +136,7 @@ abstract class RasterBuffer {
                 if (NameAvailabilityValidator.a(var5, 1) == 2) {
                   TextLayoutLine.a(1, var5, param2, -18853);
                 }
-                QuickChatPhraseCache.a(param1, en.field_e, -6988, ib.field_b, -1, var4_ref_String);
+                QuickChatPhraseCache.sendReport(param1, LoadingScreenHelpers.field_e, -6988, ChatPanelHelpers.field_b, -1, var4_ref_String);
                 AlternateUsernameCredentials.d(81);
               }
             } else {
@@ -152,7 +152,7 @@ abstract class RasterBuffer {
           if (0 >= tf.field_g.length()) {
             return true;
           }
-          dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+          NameCheckResult.padWithChar(' ', 200, tf.field_g, -1 + tf.field_g.length());
           return true;
         }
         var4 = LoginMethod.field_c;
@@ -170,56 +170,56 @@ abstract class RasterBuffer {
         var17 = GrowableIntList.field_l;
         var7 = var17;
         var7Lifetime1 = var17;
-        var16 = SceneWidgetNode.a(-27905, var17);
+        var16 = SceneWidgetNode.prefixWithCrown(-27905, var17);
         var7Lifetime2 = var16;
         var7Lifetime3 = var16;
         var19 = var16;
         var7Lifetime4 = var19;
         var7Lifetime5 = var19;
-        if (ib.field_b != 2) {
+        if (ChatPanelHelpers.field_b != 2) {
           var7Lifetime6 = "";
-          if (ib.field_b == 0) {
+          if (ChatPanelHelpers.field_b == 0) {
             if (nf.field_b == null &&
               cd.field_g) {
               var7Lifetime6 = "[" + ThreeSliceButtonPainter.field_p + "] ";
             }
             if (null != nf.field_b) {
-              if (!cc.field_lc) {
-                var7Lifetime6 = "[" + SocketConnector.a(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
+              if (!LobbyPlayer.field_lc) {
+                var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
               } else {
                 if (null == PartInstruction.field_a) {
-                  var7Lifetime6 = "[" + SocketConnector.a(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
+                  var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
                 } else {
                   var7Lifetime6 = "[" + PartInstruction.field_a + "] ";
                 }
               }
             }
             var20 = var7Lifetime6 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - pl.field_X.textWidth(var20);
+            var5Lifetime1 = var5Lifetime1 - BirthDateEntryPanel.field_X.textWidth(var20);
           } else {
             var20 = var7Lifetime6 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - pl.field_X.textWidth(var20);
+            var5Lifetime1 = var5Lifetime1 - BirthDateEntryPanel.field_X.textWidth(var20);
           }
         } else {
-          var23 = (CharSequence) ((Object) en.field_e);
-          var18 = SocketConnector.a(hh.field_d, -19, new String[]{TextWidgetPainter.normalizeName((byte) 116, var23)});
+          var23 = (CharSequence) ((Object) LoadingScreenHelpers.field_e);
+          var18 = SocketConnector.formatTemplate(LoginActionHelpers.field_d, -19, new String[]{TextWidgetPainter.normalizeName((byte) 116, var23)});
           var7Lifetime6 = var18;
           var7Lifetime6 = var18;
-          var8 = SocketConnector.a(ak.field_e, -87, new String[]{var16});
+          var8 = SocketConnector.formatTemplate(SpriteFrame.field_e, -87, new String[]{var16});
           var7Lifetime6 = var8;
           var7Lifetime6 = var8;
-          var9 = pl.field_X.textWidth(var18);
-          var10 = pl.field_X.textWidth(var8);
+          var9 = BirthDateEntryPanel.field_X.textWidth(var18);
+          var10 = BirthDateEntryPanel.field_X.textWidth(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (var5Lifetime1 >= pl.field_X.textWidth(tf.field_g.toString())) {
+        if (var5Lifetime1 >= BirthDateEntryPanel.field_X.textWidth(tf.field_g.toString())) {
           return true;
         }
-        dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+        NameCheckResult.padWithChar(' ', 200, tf.field_g, -1 + tf.field_g.length());
         return true;
     }
 

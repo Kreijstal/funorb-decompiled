@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn extends IntrusiveNode {
-    static rf field_v;
+    static LoginConnectionStage field_v;
     static String field_s;
     static String field_t;
     static int field_u;
@@ -38,7 +38,7 @@ final class rn extends IntrusiveNode {
         try {
           var8 = (CharSequence) ((Object) param2);
           if (!ArchiveProvider.a(param3, var8)) {
-            stackIn_3_0 = en.field_a;
+            stackIn_3_0 = LoadingScreenHelpers.field_a;
             return stackIn_3_0;
           }
           if (2 != DisplayNameForm.field_P) {
@@ -47,13 +47,13 @@ final class rn extends IntrusiveNode {
           }
           var7 = TextLayout.a(param0, (byte) -41);
           if (var7 == null) {
-            stackIn_10_0 = SocketConnector.a(AlphaContainer.field_W, -42, new String[]{param0});
+            stackIn_10_0 = SocketConnector.formatTemplate(AlphaContainer.field_W, -42, new String[]{param0});
             return stackIn_10_0;
           }
           var7.unlink(4);
           var7.unlinkDual(480);
-          cc.field_gc = cc.field_gc - 1;
-          var5 = mm.field_g;
+          LobbyPlayer.field_gc = LobbyPlayer.field_gc - 1;
+          var5 = ClockAndCookieHelpers.field_g;
           var5.writeCipheredOpcode(param1, (byte) -117);
           var5.position = var5.position + 1;
           var6 = var5.position;
@@ -78,7 +78,7 @@ final class rn extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class rn extends IntrusiveNode {
           if (rb.field_h == null) {
             return false;
           }
-          if (field_v.b(122)) {
+          if (field_v.isResponseStage(122)) {
             return true;
           }
           return false;
@@ -116,7 +116,7 @@ final class rn extends IntrusiveNode {
         if (rb.field_h == null) {
           return false;
         }
-        if (field_v.b(122)) {
+        if (field_v.isResponseStage(122)) {
           return true;
         }
         return false;
@@ -134,24 +134,24 @@ final class rn extends IntrusiveNode {
         try {
           var1_int = 0;
           while (UiContainer.f(22759)) {
-            se.field_c.a(true);
-            if (!se.field_c.isForwardAction(0)) {
+            PopupMenuSupport.field_c.handleVerticalKey(true);
+            if (!PopupMenuSupport.field_c.isForwardAction(0)) {
               continue;
             }
             var1_int = 1;
           }
-          se.field_c.updatePointer(127, se.a((byte) 32, oh.field_f, DelegatingCanvas.field_c), se.a((byte) 32, TextButton.field_S, BufferedRandomAccessFile.field_j));
+          PopupMenuSupport.field_c.updatePointer(127, PopupMenuSupport.hitTestPopupMenuItem((byte) 32, LobbySetupHelpers.field_f, DelegatingCanvas.field_c), PopupMenuSupport.hitTestPopupMenuItem((byte) 32, TextButton.field_S, BufferedRandomAccessFile.field_j));
           if (param0 != 90) {
             stackIn_8_0 = -55;
             return stackIn_8_0;
           }
-          if (se.field_c.isForwardAction(0)) {
+          if (PopupMenuSupport.field_c.isForwardAction(0)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            se.field_c.field_e >= 0) {
-            var2 = DiskCacheWorker.field_c[se.field_c.field_e];
+            PopupMenuSupport.field_c.field_e >= 0) {
+            var2 = DiskCacheWorker.field_c[PopupMenuSupport.field_c.field_e];
             if (2 == var2) {
               gf.c(-95);
             }
@@ -161,7 +161,7 @@ final class rn extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "rn.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "rn.B(" + param0 + ')');
         }
     }
 

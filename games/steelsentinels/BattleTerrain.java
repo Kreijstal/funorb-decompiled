@@ -20,7 +20,7 @@ final class BattleTerrain {
     static String field_d;
     int[] surfaceProfile;
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean handleLobbyKey(int param0, int param1, int param2) {
         int stackIn_7_0 = 0;
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -28,17 +28,17 @@ final class BattleTerrain {
         RuntimeException var3 = null;
         try {
           if (param0 != -3) {
-            BattleTerrain.c(-107);
+            BattleTerrain.isCustomCursorSupported(-107);
           }
           stackIn_7_0 = (null == ni.field_a) ? 0 : 1;
           var3_int = stackIn_7_0;
           if (NameAvailabilityValidator.field_q == 9 &&
-            Js5Transport.a(se.field_b, pa.field_h, SocketJs5Transport.field_x, SceneWidgetNode.field_B, -21)) {
+            Js5Transport.a(PopupMenuSupport.field_b, pa.field_h, SocketJs5Transport.field_x, SceneWidgetNode.field_B, -21)) {
             if (SceneWidgetNode.field_B != 2 &&
               var3_int != 0) {
               return false;
             }
-            stackIn_20_0 = UiContainer.a(se.field_b, pa.field_h, param0 - 119, SceneWidgetNode.field_B, SocketJs5Transport.field_x);
+            stackIn_20_0 = UiContainer.a(PopupMenuSupport.field_b, pa.field_h, param0 - 119, SceneWidgetNode.field_B, SocketJs5Transport.field_x);
             return stackIn_20_0;
           }
           if (NameAvailabilityValidator.field_q == 10) {
@@ -50,16 +50,16 @@ final class BattleTerrain {
           }
           if (NameAvailabilityValidator.field_q == 11 &&
             ob.field_v) {
-            if (hk.field_ic == 2 &&
+            if (LobbyGame.field_ic == 2 &&
               !qm.a((byte) -31, CachedArchiveProvider.field_t, ThreeSliceButtonPainter.field_q)) {
               return false;
             }
-            if (hk.field_ic != 2 &&
+            if (LobbyGame.field_ic != 2 &&
               var3_int != 0) {
               return false;
             }
             if (NodeDeque.e((byte) 17)) {
-              QuickChatPhraseCache.a(param2, CachedArchiveProvider.field_t, -6988, hk.field_ic, wn.field_f, (String) null);
+              QuickChatPhraseCache.sendReport(param2, CachedArchiveProvider.field_t, -6988, LobbyGame.field_ic, wn.field_f, (String) null);
             }
             return true;
           }
@@ -67,7 +67,7 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "hd.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "hd.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -86,11 +86,11 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "hd.I(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "hd.I(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void generateTerrain(int param0, int param1, int param2) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int stackIn_104_3 = 0;
@@ -1099,7 +1099,7 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var4), "hd.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var4), "hd.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1115,7 +1115,7 @@ final class BattleTerrain {
             return stackIn_4_0;
           }
           if (obfuscationGuard < 117) {
-            BattleTerrain.b(-45, 66, -70);
+            BattleTerrain.handleLobbyKey(-45, 66, -70);
           }
           if (profileIndex < this.profileLength) {
             stackIn_12_0 = this.surfaceProfile[profileIndex];
@@ -1126,11 +1126,11 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "hd.G(" + obfuscationGuard + ',' + profileIndex + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "hd.G(" + obfuscationGuard + ',' + profileIndex + ')');
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean isCustomCursorSupported(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
@@ -1143,7 +1143,7 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "hd.B(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "hd.B(" + param0 + ')');
         }
     }
 
@@ -1159,7 +1159,7 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "hd.F(" + obfuscationGuard + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2), "hd.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -1186,11 +1186,11 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "hd.C(" + obfuscationGuard + ',' + profileIndex + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "hd.C(" + obfuscationGuard + ',' + profileIndex + ')');
         }
     }
 
-    final static void a(boolean param0) {
+    final static void buildPartCatalogue(boolean param0) {
         class $CfrPartitionedState {
             ArticulatedPart var1;
             Object var1_ref;
@@ -1579,13 +1579,13 @@ final class BattleTerrain {
                         }
                         case 34: {
                             try {
-                                if (null != hk.field_Ec) {
+                                if (null != LobbyGame.field_Ec) {
                                     statePc = 37;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 35. */
                                     {
-                                        hk.field_Ec = new IndexedSprite[15];
+                                        LobbyGame.field_Ec = new IndexedSprite[15];
                                         statePc = 37;
                                         continue scanLoop1;
                                     }
@@ -1658,7 +1658,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 46. */
                                     {
-                                        ParticleEffect.field_L[var2_int] = na.field_a;
+                                        ParticleEffect.field_L[var2_int] = ChatMessage.field_a;
                                         var2_int++;
                                         if (var4 != 0) {
                                             statePc = 53;
@@ -1886,19 +1886,19 @@ final class BattleTerrain {
                                 var1.componentId = 79;
                                 var1 = DualNodeDequeIterator.a(0, var1);
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[8], 2, 154, 97, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Head"), new PartInstruction(150, 3, 825)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[8], 2, 154, 97, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Head"), new PartInstruction(150, 3, 825)});
                                 var1.componentId = 87;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[11], 4, 125, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Arm"), new PartInstruction(150, 0, 575), new PartInstruction(116, 140, 24576, 4096, 64)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[11], 4, 125, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Arm"), new PartInstruction(150, 0, 575), new PartInstruction(116, 140, 24576, 4096, 64)});
                                 var1.componentId = 85;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[1], 1024, 150, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Back arm"), new PartInstruction(116, 140, -4096, 2048, new ArticulatedPart(hk.field_Ec[0], 116, 140, new PartInstruction[]{new PartInstruction(171, 160, 20480, 0, 32, true)}), true)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[1], 1024, 150, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Back arm"), new PartInstruction(116, 140, -4096, 2048, new ArticulatedPart(LobbyGame.field_Ec[0], 116, 140, new PartInstruction[]{new PartInstruction(171, 160, 20480, 0, 32, true)}), true)});
                                 var1.componentId = 104;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[10], 8, 125, 91, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Wing"), new PartInstruction(50, 0, 625), new PartInstruction(600, 0)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[10], 8, 125, 91, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Wing"), new PartInstruction(50, 0, 625), new PartInstruction(600, 0)});
                                 var1.componentId = 86;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[9], 1, 146, 257, 0, 4096, new PartInstruction[]{new PartInstruction("Orbital Chassis"), new PartInstruction(300, 4, 2150), new PartInstruction(16), new PartInstruction(250, 0), new PartInstruction(150, 100, 16384, 0, 1024, true), new PartInstruction(156, 94, 0, 0, new ArticulatedPart(hk.field_Ec[7], 156, 94, new PartInstruction[]{new PartInstruction(154, 97, 16384, 0, 2)}), true), new PartInstruction(186, 121, 16384, 4096, 32, true), new PartInstruction(170, 105, 16384, 0, 128), new PartInstruction(168, 112, 16384, 0, 128), new PartInstruction(166, 119, 16384, 0, 128), new PartInstruction(128, 128, 0, 0, new ArticulatedPart(hk.field_Ec[13], 128, 128, new PartInstruction[]{})), new PartInstruction(125, 90, 16384, 0, 8), new PartInstruction(125, 100, 16384, 0, 4), new PartInstruction(105, 106, 6553, 0, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("A"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("B"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(hk.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("C")}))}), true)}), true), new PartInstruction(120, 116, 4096, 0, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("D"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("E"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(hk.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("F")}))}), true)}), true), new PartInstruction(135, 126, 3276, 2048, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction(113, 155, -5461, 2048, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction(131, 200, 10923, 2048, new ArticulatedPart(hk.field_Ec[6], 131, 203, new PartInstruction[]{new PartInstruction(138, 202, 16384, 0, 16)}))}), true)}), true)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[9], 1, 146, 257, 0, 4096, new PartInstruction[]{new PartInstruction("Orbital Chassis"), new PartInstruction(300, 4, 2150), new PartInstruction(16), new PartInstruction(250, 0), new PartInstruction(150, 100, 16384, 0, 1024, true), new PartInstruction(156, 94, 0, 0, new ArticulatedPart(LobbyGame.field_Ec[7], 156, 94, new PartInstruction[]{new PartInstruction(154, 97, 16384, 0, 2)}), true), new PartInstruction(186, 121, 16384, 4096, 32, true), new PartInstruction(170, 105, 16384, 0, 128), new PartInstruction(168, 112, 16384, 0, 128), new PartInstruction(166, 119, 16384, 0, 128), new PartInstruction(128, 128, 0, 0, new ArticulatedPart(LobbyGame.field_Ec[13], 128, 128, new PartInstruction[]{})), new PartInstruction(125, 90, 16384, 0, 8), new PartInstruction(125, 100, 16384, 0, 4), new PartInstruction(105, 106, 6553, 0, new ArticulatedPart(LobbyGame.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("A"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(LobbyGame.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("B"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(LobbyGame.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("C")}))}), true)}), true), new PartInstruction(120, 116, 4096, 0, new ArticulatedPart(LobbyGame.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("D"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(LobbyGame.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("E"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(LobbyGame.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("F")}))}), true)}), true), new PartInstruction(135, 126, 3276, 2048, new ArticulatedPart(LobbyGame.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction(113, 155, -5461, 2048, new ArticulatedPart(LobbyGame.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction(131, 200, 10923, 2048, new ArticulatedPart(LobbyGame.field_Ec[6], 131, 203, new PartInstruction[]{new PartInstruction(138, 202, 16384, 0, 16)}))}), true)}), true)});
                                 var1.componentId = 84;
                                 var1 = DualNodeDequeIterator.a(0, var1);
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
@@ -2420,7 +2420,7 @@ final class BattleTerrain {
                                 var1 = new ArticulatedPart(AlphaContainer.field_V[4], 64, 114, 145, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[27]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 44;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[12], 64, 117, 140, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[30]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(LobbyGame.field_Ec[12], 64, 117, 140, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[30]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 47;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 LabeledField.field_bb = new ArticulatedPart[110];
@@ -2490,7 +2490,7 @@ final class BattleTerrain {
                         }
                         case 97: {
                             var1_ref2 = (RuntimeException) ((Object) caughtException);
-                            throw ci.a((Throwable) ((Object) var1_ref2), "hd.A(" + param0 + ')');
+                            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref2), "hd.A(" + param0 + ')');
                         }
                         case 98: {
                             if (!GameApplet.field_i) {
@@ -2559,11 +2559,11 @@ final class BattleTerrain {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3), "hd.H(" + obfuscationGuard + ',' + profileIndex + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var3), "hd.H(" + obfuscationGuard + ',' + profileIndex + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -2573,15 +2573,15 @@ final class BattleTerrain {
           field_q = null;
           field_k = null;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "hd.D(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hd.D(" + param0 + ')');
         }
     }
 
     BattleTerrain(int param0, int param1) {
         try {
-          this.a(1200, param1, param0);
+          this.generateTerrain(1200, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "hd.<init>(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hd.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

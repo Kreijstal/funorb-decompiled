@@ -7,7 +7,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static String field_o;
     private WidgetStyleLayer[] field_r;
 
-    final void a(RgbSprite param0, byte param1) {
+    final void setIconForAllStates(RgbSprite param0, byte param1) {
         int var4 = 0;
         WidgetStyleLayer[] var3 = null;
         WidgetStyleLayer var5 = null;
@@ -42,7 +42,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -62,27 +62,27 @@ final class StatefulTextPainter extends TextWidgetPainter {
             DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_05.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_07.png", bi.a(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_07.png", TextAndBitHelpers.bitXor(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1] = new RgbSprite[6];
             DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_01.png", param1 - 744, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_03.png", bi.a(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_03.png", TextAndBitHelpers.bitXor(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_04.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_05.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
           }
           DelayedServerPacket.field_x[2] = new RgbSprite[6];
-          DelayedServerPacket.field_x[2][0] = rl.a(param2, "basic", "ct_foreground_01", false);
-          DelayedServerPacket.field_x[2][1] = rl.a(param2, "basic", "ct_foreground_02", false);
-          DelayedServerPacket.field_x[2][2] = rl.a(param2, "basic", "ct_foreground_03", false);
-          DelayedServerPacket.field_x[2][3] = rl.a(param2, "basic", "ct_foreground_04", false);
-          DelayedServerPacket.field_x[param1][4] = rl.a(param2, "basic", "ct_foreground_05", false);
-          DelayedServerPacket.field_x[2][5] = rl.a(param2, "basic", "ct_foreground_06", false);
+          DelayedServerPacket.field_x[2][0] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_01", false);
+          DelayedServerPacket.field_x[2][1] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_02", false);
+          DelayedServerPacket.field_x[2][2] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_03", false);
+          DelayedServerPacket.field_x[2][3] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_04", false);
+          DelayedServerPacket.field_x[param1][4] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_05", false);
+          DelayedServerPacket.field_x[2][5] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_06", false);
           DelayedServerPacket.field_x[4] = new RgbSprite[2];
-          DelayedServerPacket.field_x[4][0] = rl.a(param2, "basic", "starcruiser_base", false);
-          DelayedServerPacket.field_x[4][1] = rl.a(param2, "basic", "starcruiser_top", false);
+          DelayedServerPacket.field_x[4][0] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "starcruiser_base", false);
+          DelayedServerPacket.field_x[4][1] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "starcruiser_top", false);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wa.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wa.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             param3 = param3 & var10.field_K;
           }
           var7 = this.field_r[0];
-          this.field_q.a((byte) -107);
+          this.field_q.reset((byte) -107);
           var7.applyTo(this.field_q, this, (byte) -91, param4, param1, param0);
           if (var10 != null) {
             if (var10.field_T) {
@@ -156,8 +156,8 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param2 != -30) {
             return;
           }
-          this.field_q.a(param0, param1, param4, this, false);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(127);
+          this.field_q.paint(param0, param1, param4, this, false);
+          MatchingTextValidator.popRasterStateWithIntGuard(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_r[0] = dupTemp$0;
         WidgetStyleLayer var1 = dupTemp$0;
-        var1.a((byte) -107);
+        var1.reset((byte) -107);
     }
 
     final static boolean b(byte param0) {
@@ -216,7 +216,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (var5 == null) {
             return false;
           }
-          ve.a(16, var5);
+          AssetDecoders.decodeSpriteSheet(16, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,11 +228,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(RgbSprite[] param0, boolean param1, int param2) {
+    final void setStateFrameSprites(RgbSprite[] param0, boolean param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param2;
@@ -244,20 +244,20 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           this.field_r[param2].field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wa.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wa.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     StatefulTextPainter(StatefulTextPainter param0, boolean param1) {
         this();
         try {
-          param0.a(this, 65535, param1);
+          param0.copyStatesTo(this, 65535, param1);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final WidgetStyleLayer a(int param0, int param1) {
+    final WidgetStyleLayer createStateLayer(int param0, int param1) {
         if (param0 != -25088) {
           this.field_q = (WidgetStyleLayer) null;
         }
@@ -267,7 +267,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     }
 
     final static void b(int param0) {
-        GrowableIntList.field_l = rf.field_d.readString(1);
+        GrowableIntList.field_l = LoginConnectionStage.field_d.readString(1);
         CharSequence var2 = (CharSequence) ((Object) GrowableIntList.field_l);
         MembershipPromotionScreen.field_r = AlphaContainer.a(1, var2);
         if (param0 > -47) {
@@ -286,7 +286,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         return param1 * var3 + (var4 * var5 + (var4 * var6 >> 16));
     }
 
-    private final void a(StatefulTextPainter param0, int param1, boolean param2) {
+    private final void copyStatesTo(StatefulTextPainter param0, int param1, boolean param2) {
         int var4_int = 0;
         WidgetStyleLayer dupTemp$0 = null;
         WidgetStyleLayer stackIn_10_0 = null;
@@ -339,11 +339,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(boolean param0, RgbSprite[] param1) {
+    final void setFrameSpritesForAllStates(boolean param0, RgbSprite[] param1) {
         WidgetStyleLayer[] var3 = null;
         int var4 = 0;
         WidgetStyleLayer var5 = null;
@@ -378,7 +378,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

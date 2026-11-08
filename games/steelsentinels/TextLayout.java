@@ -61,11 +61,11 @@ abstract class TextLayout {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int characterIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         TextLayoutLine var6;
@@ -79,14 +79,14 @@ abstract class TextLayout {
             return -1;
           }
           if (1 == this.field_h.length) {
-            return this.field_h[0].a((byte) 105, param1);
+            return this.field_h[0].characterIndexAt((byte) 105, param1);
           }
           var4 = param0;
           for (var5 = 0; var5 < this.field_h.length; var5++) {
             var6 = this.field_h[var5];
             if (var6.field_h <= param2 &&
               var6.field_a >= param2) {
-              var7 = var6.a((byte) 125, param1);
+              var7 = var6.characterIndexAt((byte) 125, param1);
               if (var7 == -1) {
                 return -1;
               }
@@ -104,19 +104,19 @@ abstract class TextLayout {
           if (param1 <= 67) {
             TextLayout.a(true, -102);
           }
-          vc.field_c = param2 * MusicCrossfadeStream.a((byte) -108) / 1000;
+          vc.field_c = param2 * MusicCrossfadeStream.getTargetFrameRate((byte) -108) / 1000;
           Sprite.loadLogoJingle(param0, 1728986241);
           DialWidget.a((byte) 90, param0);
-          SocialListEntry.a(77, param0);
+          SocialListEntry.loadFinalFrameImage(77, param0);
           ValidationIndicator.a(true);
           CombatWorld.a(true);
           DateOfBirthValidator.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "da.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int b(byte param0) {
+    final int maximumLineWidth(byte param0) {
         int var4 = 0;
         int var2;
         TextLayoutLine[] var3;
@@ -173,7 +173,7 @@ abstract class TextLayout {
             stackIn_9_0 = (SocialListEntry) null;
             return stackIn_9_0;
           }
-          var3 = (SocialListEntry) (SocketConnector.field_h.a((long)var2.hashCode(), (byte) -81));
+          var3 = (SocialListEntry) (SocketConnector.field_h.get((long)var2.hashCode(), (byte) -81));
           while (true) {
             if (var3 == null) {
               return null;
@@ -184,7 +184,7 @@ abstract class TextLayout {
               var4 = var3.field_dc;
             }
             if (!var4.equals(var2)) {
-              var3 = (SocialListEntry) (SocketConnector.field_h.c((byte) 116));
+              var3 = (SocialListEntry) (SocketConnector.field_h.nextWithSameKey((byte) 116));
               continue;
             }
             break;
@@ -201,11 +201,11 @@ abstract class TextLayout {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final int b(int param0, int param1) {
+    final int lineForCharacter(int param0, int param1) {
         int var3 = 0;
         TextLayoutLine var4 = null;
         int var5 = SteelSentinels.obfuscationControl;
@@ -223,10 +223,10 @@ abstract class TextLayout {
         return this.field_h.length;
     }
 
-    final int a(byte param0) {
+    final int height(byte param0) {
         int stackIn_7_0 = 0;
         if (param0 != 24) {
-          this.a(114, 23, 65);
+          this.characterIndexAt(114, 23, 65);
         }
         if (this.field_h != null &&
           this.field_h.length > 0) {
@@ -237,7 +237,7 @@ abstract class TextLayout {
         return stackIn_7_0;
     }
 
-    final int a(String param0, int param1, int param2, byte param3) {
+    final int justificationSpacingQ8(String param0, int param1, int param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -290,11 +290,11 @@ abstract class TextLayout {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final int a(int param0, int param1) {
+    final int characterX(int param0, int param1) {
         int var4 = 0;
         TextLayoutLine var5 = null;
         int var6 = SteelSentinels.obfuscationControl;
@@ -323,7 +323,7 @@ abstract class TextLayout {
         LoginDialog.a((byte) -112, param0);
         if (di.field_b) {
           SoftwareRaster.halveBrightnessRectangle(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
-          RegistrationRequestDialog.field_Tb.field_d.a(param0, (byte) 127);
+          RegistrationRequestDialog.field_Tb.field_d.drawFullScreen(param0, (byte) 127);
         }
         TextLayoutLine.a(param0, (byte) -125);
     }

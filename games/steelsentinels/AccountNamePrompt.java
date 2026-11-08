@@ -12,11 +12,11 @@ final class AccountNamePrompt extends SceneWidget {
     private SceneWidget field_Tb;
     private StringBuilder field_Wb;
 
-    static long a(long param0, long param1) {
+    static long bitXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
-    final boolean d(byte param0) {
+    final boolean handleNormalizedNameKey(byte param0) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$4 = null;
@@ -70,7 +70,7 @@ final class AccountNamePrompt extends SceneWidget {
               }
               return true;
             }
-            if (TextButton.a(-4278, (char) var2)) {
+            if (TextButton.isAsciiDigit(-4278, (char) var2)) {
               discarded$4 = this.field_Wb.append((char) var2);
               if (NameAvailabilityValidator.field_q == 84) {
                 if (0 < this.field_Wb.length()) {
@@ -100,7 +100,7 @@ final class AccountNamePrompt extends SceneWidget {
           return true;
         }
         if (0 < this.field_Wb.length()) {
-          dm.a(' ', 200, this.field_Wb, this.field_Wb.length() - 1);
+          NameCheckResult.padWithChar(' ', 200, this.field_Wb, this.field_Wb.length() - 1);
         }
         if (this.field_Wb.length() >= 12) {
           if (NameAvailabilityValidator.field_q == 84) {
@@ -139,7 +139,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           return true;
         }
-        if (!TextButton.a(-4278, (char) var2Lifetime1)) {
+        if (!TextButton.isAsciiDigit(-4278, (char) var2Lifetime1)) {
           if (NameAvailabilityValidator.field_q == 84) {
             if (0 >= this.field_Wb.length()) {
               this.field_Yb = 1;
@@ -173,14 +173,14 @@ final class AccountNamePrompt extends SceneWidget {
         return true;
     }
 
-    final int a(int param0, boolean param1) {
+    final int updateAndPollNameInput(int param0, boolean param1) {
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         int var4;
         var4 = SteelSentinels.obfuscationControl;
-        this.a((byte) 108, param1);
+        this.updateInputFullScreen((byte) 108, param1);
         if (!param1) {
           if (param0 == -2) {
             this.field_Tb.field_S = this.field_Wb.toString();
@@ -233,7 +233,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           if (85 == NameAvailabilityValidator.field_q &&
             this.field_Wb.length() > 0) {
-            dm.a(' ', 200, this.field_Wb, -1 + this.field_Wb.length());
+            NameCheckResult.padWithChar(' ', 200, this.field_Wb, -1 + this.field_Wb.length());
           }
           if (fj.a(LoginMethod.field_c, (CharSequence) ((Object) this.field_Wb), -99)) {
             discarded$1 = this.field_Wb.append(LoginMethod.field_c);
@@ -288,20 +288,20 @@ final class AccountNamePrompt extends SceneWidget {
         this.field_Yb = 0;
         try {
           this.field_Xb = new SceneWidget(0L, param6, param4);
-          this.a(this.field_Xb, 124);
+          this.addChild(this.field_Xb, 124);
           this.field_Tb = new SceneWidget(0L, param7);
           this.field_Tb.field_nb = 16764006;
-          this.a(this.field_Tb, 123);
+          this.addChild(this.field_Tb, 123);
           this.field_Tb.field_Db = "|";
           this.field_Wb = new StringBuilder(12);
-          var9_int = this.field_Xb.g(-2147483648);
-          this.field_Xb.a(0, 3, SocketConnector.field_b, 5, var9_int);
-          this.field_Tb.a(0, 3 + SocketConnector.field_b, SocketConnector.field_b, 5, var9_int);
+          var9_int = this.field_Xb.getContentWidth(-2147483648);
+          this.field_Xb.setBounds(0, 3, SocketConnector.field_b, 5, var9_int);
+          this.field_Tb.setBounds(0, 3 + SocketConnector.field_b, SocketConnector.field_b, 5, var9_int);
           var10 = var9_int + 10;
           var11 = 3 + (2 * SocketConnector.field_b + 3);
           var12 = UiContainer.a(param2, 127, param0, var10);
-          var13 = QuickChatHelpDialog.a(param1, 0, param3, var11);
-          this.a(0, var13, var11, var12, var10);
+          var13 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var11);
+          this.setBounds(0, var13, var11, var12, var10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -331,7 +331,7 @@ final class AccountNamePrompt extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -63,14 +63,14 @@ final class cf extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static boolean c(byte param0) {
         am.field_b = true;
         if (param0 >= 85) {
-          ProxySocketConnector.field_l = mm.a(-101) + 15000L;
+          ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(-101) + 15000L;
           return uj.field_d == 11 ? true : false;
         }
         return true;

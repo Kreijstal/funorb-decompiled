@@ -117,7 +117,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param1]) {
                 var30 = this.index.groupDigests[param1];
-                var29 = QuickChatCategoryCache.a((byte) -37, -2 + var18.length, 0, var18);
+                var29 = QuickChatCategoryCache.computeWhirlpoolDigest((byte) -37, -2 + var18.length, 0, var18);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -170,7 +170,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (null != this.index.groupDigests &&
               null != this.index.groupDigests[param1]) {
               var27 = this.index.groupDigests[param1];
-              var28 = QuickChatCategoryCache.a((byte) -37, var18.length - 2, 0, var18);
+              var28 = QuickChatCategoryCache.computeWhirlpoolDigest((byte) -37, var18.length - 2, 0, var18);
               for (var9 = 0; var9 < 64; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();
@@ -263,17 +263,17 @@ final class CachedArchiveProvider extends ArchiveProvider {
         field_z = null;
     }
 
-    final static e a(int param0, String param1, int param2) {
-        e var3 = null;
+    final static AccountRequestResult a(int param0, String param1, int param2) {
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        e stackIn_3_0 = null;
+        AccountRequestResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new e(false);
+          var3 = new AccountRequestResult(false);
           var3.field_e = param1;
           if (param0 < 4) {
             var4 = (String) null;
@@ -292,7 +292,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -494,7 +494,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (this.field_u &&
-          mm.a(-109) >= this.field_n) {
+          ClockAndCookieHelpers.monotonicMillis(-109) >= this.field_n) {
           var2 = (ArchiveRequest) (this.field_m.first(0));
           while (var2 != null) {
             if (!var2.field_z) {
@@ -509,7 +509,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             var2 = (ArchiveRequest) (this.field_m.next((byte) 127));
           }
-          this.field_n = 1000L + mm.a(-89);
+          this.field_n = 1000L + ClockAndCookieHelpers.monotonicMillis(-89);
         }
     }
 
@@ -553,7 +553,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         int var1 = -29 % ((-61 - param0) / 57);
         String var2 = "";
         if (AccountNoticeDialog.field_kb != null) {
-          var2 = AccountNoticeDialog.field_kb.h((byte) -70);
+          var2 = AccountNoticeDialog.field_kb.getUsername((byte) -70);
         }
         if (0 == var2.length()) {
           var2 = StatefulTextPainter.a((byte) -43);
@@ -569,14 +569,14 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return 0;
         }
         if (SceneWidgetNode.field_D != 0) {
-          if (ok.field_f != null) {
-            if (!ok.field_f.ensureIndex(param0)) {
+          if (ChecksumAndFrameHelpers.field_f != null) {
+            if (!ChecksumAndFrameHelpers.field_f.ensureIndex(param0)) {
               return 14;
             }
-            if (!ok.field_f.ensureGroupAvailableByName(12145, "")) {
+            if (!ChecksumAndFrameHelpers.field_f.ensureGroupAvailableByName(12145, "")) {
               return 29;
             }
-            if (!ok.field_f.a("", (byte) 90)) {
+            if (!ChecksumAndFrameHelpers.field_f.a("", (byte) 90)) {
               return 29;
             }
           }
@@ -698,7 +698,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

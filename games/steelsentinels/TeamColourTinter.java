@@ -36,7 +36,7 @@ final class TeamColourTinter {
                 var10 = param1.getTeamColour((byte) 25);
                 var11 = 255 & var9;
                 if (var11 > 64) {
-                  Checkbox.field_bb.field_a[var8 + var6_int] = ec.a(16711935, var11 * ec.a(16711935, var10) >> 8) + ec.a(65280, var11 * ec.a(var10, 65280) >> 8);
+                  Checkbox.field_bb.field_a[var8 + var6_int] = ClientUiHelpers.bitAnd(16711935, var11 * ClientUiHelpers.bitAnd(16711935, var10) >> 8) + ClientUiHelpers.bitAnd(65280, var11 * ClientUiHelpers.bitAnd(var10, 65280) >> 8);
                 }
               } else {
                 var10 = 255 & var9;
@@ -59,27 +59,27 @@ final class TeamColourTinter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void resolvePendingCheck(byte param0, boolean param1) {
         if (param0 < 75) {
           return;
         }
-        gf.field_a.a(200, param1);
+        gf.field_a.complete(200, param1);
     }
 
-    final static pc a(byte param0, PcmSample param1, int param2) {
+    final static PlayingSound playSampleAtVolume(byte param0, PcmSample param1, int param2) {
         RuntimeException var3 = null;
-        pc stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 27) {
-            TeamColourTinter.a((byte) -76, true);
+            TeamColourTinter.resolvePendingCheck((byte) -76, true);
           }
           stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercent(param1, 100, param2), -48);
           return stackIn_3_0;
@@ -93,7 +93,7 @@ final class TeamColourTinter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

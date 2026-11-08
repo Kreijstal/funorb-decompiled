@@ -56,14 +56,14 @@ class TextButton extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_K &&
-            this.a(param0, param4, (byte) 81, param3, param2)) {
+            this.hitTest(param0, param4, (byte) 81, param3, param2)) {
             this.focusNext(1, param1);
             this.field_w = param6;
             if (null != this.field_A) {
               if (!(this.field_A instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ButtonPointerListener) (this.field_A)).a(param6, param0, param2, 13030, param4, param3, this);
+              ((ButtonPointerListener) (this.field_A)).onPointerPressed(param6, param0, param2, 13030, param4, param3, this);
             }
             return true;
           }
@@ -81,7 +81,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -93,15 +93,15 @@ class TextButton extends UiComponent {
             TextButton.a((String) null, (byte) 82);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "oa.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "oa.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     TextButton(String param0, UiListener param1) {
-        this(param0, ad.field_j.field_f, param1);
+        this(param0, LoadoutHelpers.field_j.field_f, param1);
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, byte param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -116,10 +116,10 @@ class TextButton extends UiComponent {
         try {
           if (param2 >= -104) {
             var6 = (StringBuilder) null;
-            this.a((Hashtable) null, (StringBuilder) null, (byte) -122, 29);
+            this.appendDebugTree((Hashtable) null, (StringBuilder) null, (byte) -122, 29);
           }
-          if (this.a(param1, (byte) -91, param3, param0)) {
-            this.a(param3, param0, false, param1);
+          if (this.beginDebugDescription(param1, (byte) -91, param3, param0)) {
+            this.appendDebugBody(param3, param0, false, param1);
             if (this.field_T) {
               discarded$2 = param1.append(" active");
             }
@@ -145,11 +145,11 @@ class TextButton extends UiComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void b(int param0, byte param1, int param2, int param3) {
+    void notifyAction(int param0, byte param1, int param2, int param3) {
         if (param1 > -122) {
           return;
         }
@@ -172,8 +172,8 @@ class TextButton extends UiComponent {
           if (this.field_A == null) {
             return;
           }
-          if (this.field_A instanceof j) {
-            ((j) (this.field_A)).a(this.field_I, (byte) 7, (UiComponent) (this));
+          if (this.field_A instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.field_A)).onFocusChanged(this.field_I, (byte) 7, (UiComponent) (this));
             return;
           }
           return;
@@ -185,8 +185,8 @@ class TextButton extends UiComponent {
         if (this.field_A == null) {
           return;
         }
-        if (this.field_A instanceof j) {
-          ((j) (this.field_A)).a(this.field_I, (byte) 7, (UiComponent) (this));
+        if (this.field_A instanceof WidgetFocusListener) {
+          ((WidgetFocusListener) (this.field_A)).onFocusChanged(this.field_I, (byte) 7, (UiComponent) (this));
           return;
         }
     }
@@ -212,7 +212,7 @@ class TextButton extends UiComponent {
             param1 != 83) {
             return false;
           }
-          this.b(1, (byte) -125, -1, -1);
+          this.notifyAction(1, (byte) -125, -1, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,11 +224,11 @@ class TextButton extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 != -4278) {
           field_M = (int[]) null;
           if (48 > param1) {
@@ -252,12 +252,12 @@ class TextButton extends UiComponent {
         try {
           if (null != this.field_A &&
             this.field_A instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.field_A)).a(param3, param2, param1, this, param5, 19870);
+            ((ButtonPointerListener) (this.field_A)).onPointerReleased(param3, param2, param1, this, param5, 19870);
           }
           this.field_w = 0;
           int var7_int = 88 % ((36 - param0) / 32);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -266,14 +266,14 @@ class TextButton extends UiComponent {
           return true;
         }
         if (param1) {
-          return (1 << param0 & ln.field_a) != 0 ? true : false;
+          return (1 << param0 & NameValidationHelpers.field_a) != 0 ? true : false;
         }
         return false;
     }
 
     final static void f(int param0) {
         rh.a(false);
-        Explosion.c((byte) -70);
+        Explosion.clearAccountNamePrompt((byte) -70);
         FunOrbClient.field_x = null;
         WidgetStyleLayer.a(2);
         if (param0 != -12161) {
@@ -291,14 +291,14 @@ class TextButton extends UiComponent {
             if (WeightedLruCache.field_d == this.field_w) {
               return;
             }
-            if (this.a(DelegatingCanvas.field_c, param3, (byte) 81, oh.field_f, param0) &&
+            if (this.hitTest(DelegatingCanvas.field_c, param3, (byte) 81, LobbySetupHelpers.field_f, param0) &&
               WeightedLruCache.field_d == 0) {
-              this.b(this.field_w, (byte) -123, oh.field_f - param0, -param3 + DelegatingCanvas.field_c);
+              this.notifyAction(this.field_w, (byte) -123, LobbySetupHelpers.field_f - param0, -param3 + DelegatingCanvas.field_c);
             }
-            this.onPointerReleased((byte) -14, oh.field_f, param3, param0, param2, DelegatingCanvas.field_c);
+            this.onPointerReleased((byte) -14, LobbySetupHelpers.field_f, param3, param0, param2, DelegatingCanvas.field_c);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "oa.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "oa.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -317,10 +317,10 @@ class TextButton extends UiComponent {
             }
             this.field_I = true;
             if (null != this.field_A) {
-              if (!(this.field_A instanceof j)) {
+              if (!(this.field_A instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((j) (this.field_A)).a(this.field_I, (byte) 7, (UiComponent) (this));
+              ((WidgetFocusListener) (this.field_A)).onFocusChanged(this.field_I, (byte) 7, (UiComponent) (this));
             }
             return true;
           }
@@ -335,7 +335,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ class TextButton extends UiComponent {
         this.field_K = true;
         this.field_I = false;
         this.field_L = true;
-        this.field_p = ad.field_j.field_u;
+        this.field_p = LoadoutHelpers.field_j.field_u;
     }
 
     static {

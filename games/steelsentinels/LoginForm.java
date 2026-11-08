@@ -21,7 +21,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
     private boolean field_cb;
     private TextButton field_bb;
 
-    final void a(String param0, int param1) {
+    final void setUsername(String param0, int param1) {
         EditableTextWidget var4 = null;
         String var5 = null;
         try {
@@ -29,9 +29,9 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var4 = this.field_V;
           var5 = param0;
           var4.setText(var5, 29597, false);
-          this.field_Q.i(-8521);
+          this.field_Q.clearText(-8521);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.field_Q.focusNext(1, (UiComponent) (this));
           }
           if (param1 == this.field_Q) {
-            this.i(0);
+            this.submitLogin(0);
           }
           if (!param0) {
             field_W = (jj[]) null;
@@ -62,7 +62,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -71,20 +71,20 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           field_S = 121;
         }
         if (ViewportController.field_f == -1) {
-          if (!ve.a((byte) -116, 1)) {
+          if (!AssetDecoders.fillIncomingBuffer((byte) -116, 1)) {
             return false;
           }
-          ViewportController.field_f = rf.field_d.readUnsignedByte((byte) -118);
-          rf.field_d.position = 0;
+          ViewportController.field_f = LoginConnectionStage.field_d.readUnsignedByte((byte) -118);
+          LoginConnectionStage.field_d.position = 0;
         }
         if (-2 == ViewportController.field_f) {
-          if (!ve.a((byte) -103, 2)) {
+          if (!AssetDecoders.fillIncomingBuffer((byte) -103, 2)) {
             return false;
           }
-          ViewportController.field_f = rf.field_d.readUnsignedShort((byte) -60);
-          rf.field_d.position = 0;
+          ViewportController.field_f = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
+          LoginConnectionStage.field_d.position = 0;
         }
-        return ve.a((byte) -112, ViewportController.field_f);
+        return AssetDecoders.fillIncomingBuffer((byte) -112, ViewportController.field_f);
     }
 
     final boolean onFocusedKey(int param0, int param1, char param2, UiComponent param3) {
@@ -100,13 +100,13 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b(param3, 74);
+            stackIn_6_0 = this.focusPreviousChild(param3, 74);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(-11963, param3);
+          stackIn_9_0 = this.focusNextChild(-11963, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         try {
           var6_int = -6 / ((-85 - param1) / 36);
           if (this.field_bb == param3) {
-            this.i(0);
+            this.submitLogin(0);
           } else {
             if (param3 == this.field_X) {
               AccountTermsPanel.h((byte) 45);
@@ -142,9 +142,9 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               if (param3 == this.field_R) {
                 if (!this.field_eb) {
                   if (!this.field_cb) {
-                    se.a(110);
+                    PopupMenuSupport.selectCreateAccountOption(110);
                   } else {
-                    IconLabelControl.d((byte) 112);
+                    IconLabelControl.showAccountChoicePanel((byte) 112);
                   }
                 } else {
                   tj.a(121);
@@ -163,7 +163,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = lj.field_c;
+              stackIn_18_3 = SocialRequestHelpers.field_c;
             }
             this.field_R = new TextButton(stackIn_18_3, (UiListener) null);
             if (this.field_ab) {
@@ -257,7 +257,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             if (!this.field_cb) {
               this.field_R.field_p = (WidgetPainter) ((Object) new LinkButtonPainter());
             } else {
-              this.field_R.field_v = rg.field_g;
+              this.field_R.field_v = PopupMenuHelpers.field_g;
               this.field_R.field_p = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           } else {
@@ -269,13 +269,13 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.field_z = this.field_z + (5 + var7.paragraphHeight(this.field_fb, -40 + this.field_x, var7.field_G));
           }
           var8 = qe.field_c;
-          var9 = SocketConnector.a((byte) -60, Projectile.d((byte) -21));
+          var9 = SocketConnector.readLastLoginMethodCookie((byte) -60, Projectile.d((byte) -21));
           if (var9 != PartInstruction.field_o) {
             if (var9 == TabbedPanel.field_Vb) {
               var8 = SentinelDesigner.field_l;
             }
           } else {
-            var8 = ln.field_b;
+            var8 = NameValidationHelpers.field_b;
           }
           dupTemp$0 = new LabeledField(10, this.field_z, this.field_x - 20, 25, this.field_V, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
@@ -293,27 +293,27 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.field_R.field_A = (UiListener) (this);
           }
           if (null != this.field_X) {
-            this.field_bb.a(85, (byte) -94, this.field_z, -95 + this.field_x, 30);
+            this.field_bb.setBounds(85, (byte) -94, this.field_z, -95 + this.field_x, 30);
             this.field_z = this.field_z + 60;
           } else {
-            this.field_bb.a(8, (byte) -95, this.field_z, this.field_x - 6 - 10, 30);
+            this.field_bb.setBounds(8, (byte) -95, this.field_z, this.field_x - 6 - 10, 30);
             this.field_z = this.field_z + 35;
           }
           if (this.field_X != null) {
-            this.field_X.a(8, (byte) -85, this.field_z, -6 + (this.field_x - 10), 30);
+            this.field_X.setBounds(8, (byte) -85, this.field_z, -6 + (this.field_x - 10), 30);
             this.field_z = this.field_z + 35;
           }
           if (this.field_R != null) {
             if (!this.field_eb &&
               !this.field_cb) {
-              this.field_R.a(8, (byte) -127, this.field_z, 40, 20);
+              this.field_R.setBounds(8, (byte) -127, this.field_z, 40, 20);
               this.field_z = this.field_z + 25;
             } else {
-              this.field_R.a(8, (byte) -106, this.field_z, this.field_x - 16, 30);
+              this.field_R.setBounds(8, (byte) -106, this.field_z, this.field_x - 16, 30);
               this.field_z = this.field_z + 35;
             }
           }
-          this.a(0, (byte) -117, 0, this.field_x, this.field_z + 3);
+          this.setBounds(0, (byte) -117, 0, this.field_x, this.field_z + 3);
           this.addChild(this.field_bb, -123);
           if (this.field_X != null) {
             this.addChild(this.field_X, -123);
@@ -338,7 +338,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -349,13 +349,13 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         }
     }
 
-    final void j(int param0) {
-        this.field_V.i(-8521);
-        this.field_Q.i(-8521);
+    final void clearFields(int param0) {
+        this.field_V.clearText(-8521);
+        this.field_Q.clearText(-8521);
         int var2 = -123 % ((11 - param0) / 41);
     }
 
-    private final void i(int param0) {
+    private final void submitLogin(int param0) {
         TextButton var3;
         if (param0 != 0) {
           var3 = (TextButton) null;
@@ -364,7 +364,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         if (FullscreenFocusCanvas.a((byte) 42) ||
           !(this.field_V.field_y.length() <= 0) &&
           !(this.field_Q.field_y.length() <= 0)) {
-          hh.a(this.field_V.field_y, this.field_Q.field_y, 50);
+          LoginActionHelpers.beginCredentialLogin(this.field_V.field_y, this.field_Q.field_y, 50);
         }
     }
 
@@ -381,7 +381,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         }
     }
 
-    final String h(byte param0) {
+    final String getUsername(byte param0) {
         if (null == this.field_V.field_y) {
           return "";
         }
@@ -397,7 +397,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             this.field_Q = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         int var11Lifetime1;
         var12 = SteelSentinels.obfuscationControl;
         try {
-          var13 = rf.field_d;
+          var13 = LoginConnectionStage.field_d;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) -67);
           var4 = 121 / ((40 - param0) / 53);
@@ -477,7 +477,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             while (var8 > var9) {
               var11 = un.field_j[var9];
               var6[0][var10] = ReflectionCheck.field_M[var11];
-              var7[0][4 * var10] = ok.field_d[var11];
+              var7[0][4 * var10] = ChecksumAndFrameHelpers.field_d[var11];
               var7[0][1 + 4 * var10] = jm.field_r[var11];
               var7[0][var10 * 4 + 2] = FallingPickup.field_G[var11];
               var7[0][3 + var10 * 4] = Sentinel.field_T[var11];
@@ -495,7 +495,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = un.field_j[var9Lifetime1 + var5];
               var6[1][var14] = ReflectionCheck.field_M[var11Lifetime1];
-              var7[1][4 * var14] = ok.field_d[var11Lifetime1];
+              var7[1][4 * var14] = ChecksumAndFrameHelpers.field_d[var11Lifetime1];
               var7[1][1 + 4 * var14] = jm.field_r[var11Lifetime1];
               var7[1][2 + 4 * var14] = FallingPickup.field_G[var11Lifetime1];
               var7[1][var14 * 4 + 3] = Sentinel.field_T[var11Lifetime1];
@@ -514,7 +514,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "pm.FA(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "pm.FA(" + param0 + ')');
         }
     }
 
@@ -525,7 +525,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        pe var4_ref_pe = null;
+        TriangleMesh var4_ref_pe = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -539,7 +539,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        pe var17 = null;
+        TriangleMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -563,8 +563,8 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_pe = FullscreenFocusCanvas.field_h[var3];
-            var4_ref_pe.b(32767);
-            pe.a(var3, -106);
+            var4_ref_pe.computeBounds(32767);
+            TriangleMesh.animateIntroMesh(var3, -106);
             var5 = var4_ref_pe.field_J + var4_ref_pe.field_c >> 1;
             var6 = var4_ref_pe.field_p + var4_ref_pe.field_W >> 1;
             var7 = var4_ref_pe.field_n + var4_ref_pe.field_s >> 1;
@@ -583,11 +583,11 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var7Lifetime1 = 0;
           var8Lifetime1 = jh.sine16(var6Lifetime1, 4096) >> 8;
           var9Lifetime1 = ScrollContainer.cosine16(var6Lifetime1, (byte) -84) >> 8;
-          if (-1 != oh.field_f &&
+          if (-1 != LobbySetupHelpers.field_f &&
             DelegatingCanvas.field_c != -1) {
             var8Lifetime1 = -DelegatingCanvas.field_c + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = oh.field_f - 320;
+            var7Lifetime1 = LobbySetupHelpers.field_f - 320;
           }
           if (!param0) {
             field_gb = (SceneWidget) null;
@@ -612,18 +612,18 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             }
             var2[var16] = -2147483648;
             var17 = FullscreenFocusCanvas.field_h[var16];
-            pe.a(var16, -124);
+            TriangleMesh.animateIntroMesh(var16, -124);
             for (var18 = 0; 3 > var18; var18++) {
               LinkButtonPainter.field_e[var18] = LinkButtonPainter.field_e[var18] + cl.field_f[var15][var18];
             }
             NodeDeque.a(true, (byte) -128, false, LinkButtonPainter.field_e, var17, false, EmailAvailabilityValidator.field_s);
-            ch.a(var9Lifetime1, var8Lifetime1, var14, -125, var12Lifetime1, var17, var7Lifetime1, var13Lifetime1);
+            ArrayWidgetContainer.a(var9Lifetime1, var8Lifetime1, var14, -125, var12Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "pm.M(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "pm.M(" + param0 + ')');
         }
     }
 

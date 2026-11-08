@@ -21,11 +21,11 @@ final class SentinelCommand extends IntrusiveNode {
         field_w = null;
         if (param0 >= -102) {
           byte[] var2 = (byte[]) null;
-          SentinelCommand.a(-111, (byte[]) null);
+          SentinelCommand.createCoverageFont(-111, (byte[]) null);
         }
     }
 
-    final static CoverageBitmapFont a(int param0, byte[] param1) {
+    final static CoverageBitmapFont createCoverageFont(int param0, byte[] param1) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         CoverageBitmapFont stackIn_5_0 = null;
@@ -42,7 +42,7 @@ final class SentinelCommand extends IntrusiveNode {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new CoverageBitmapFont(param1, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, ba.field_d, UiContainer.field_L);
+          var2 = new CoverageBitmapFont(param1, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, QuickChatInputHelpers.field_d, UiContainer.field_L);
           NodeHashTable.a(9324);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -56,7 +56,7 @@ final class SentinelCommand extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

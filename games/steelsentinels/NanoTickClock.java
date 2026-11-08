@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NanoTickClock extends TickClock {
-    static rf field_j;
+    static LoginConnectionStage field_j;
     private long field_n;
     private long field_m;
-    static ak field_l;
+    static SpriteFrame field_l;
     private long[] field_q;
     private int field_s;
     static boolean[][] field_x;
@@ -51,7 +51,7 @@ final class NanoTickClock extends TickClock {
             return stackIn_2_0;
           }
           var5 = param0.getFileId(var4_int, -32759, param3);
-          stackIn_4_0 = va.a(var4_int, param0, true, var5);
+          stackIn_4_0 = LoginDialogHelpers.loadIndexedSprite(var4_int, param0, true, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class NanoTickClock extends TickClock {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class NanoTickClock extends TickClock {
     }
 
     static {
-        field_j = new rf();
+        field_j = new LoginConnectionStage();
         field_r = "<%1> was too close to a bomb intercepted by <%0>";
         field_w = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
     }

@@ -27,7 +27,7 @@ final class UiTheme {
     static NodeDeque field_r;
     WidgetPainter field_f;
 
-    final void a(int param0, String param1, int param2, int param3) {
+    final void drawTooltip(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -35,9 +35,9 @@ final class UiTheme {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_o) {
-            this.a(param1, param0, (byte) -22, param2);
+            this.drawSingleLineTooltip(param1, param0, (byte) -22, param2);
           } else {
-            this.a((byte) 102, param2, param0, param1);
+            this.drawWrappedTooltip((byte) 102, param2, param0, param1);
           }
           if (param3 == 15658734) {
             return;
@@ -54,18 +54,18 @@ final class UiTheme {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SoftwareRaster.fillRectangleBlended(param2, param6, param0, param3, param5, param4);
         if (param1 != 5939) {
           field_i = (String) null;
         }
     }
 
-    private final void a(byte param0, int param1, int param2, String param3) {
+    private final void drawWrappedTooltip(byte param0, int param1, int param2, String param3) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -144,11 +144,11 @@ final class UiTheme {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    private final void a(String param0, int param1, byte param2, int param3) {
+    private final void drawSingleLineTooltip(String param0, int param1, byte param2, int param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -186,7 +186,7 @@ final class UiTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -210,9 +210,9 @@ final class UiTheme {
         this.field_a = 3;
         this.field_g = 3;
         var4.field_c = 11711154;
-        var4.a(-25088, 0).a((byte) -107, 15658734).a(1, TickClock.a(8947848, (byte) 112, 7829367, 10066329));
-        var4.a(-25088, 1).a(1, TickClock.a(11184810, (byte) 123, 13421772, 10066329));
-        var4.a(-25088, 3).a(1, TickClock.a(8947848, (byte) 116, 10066329, 7829367)).a(true, 1).setTextColor(1, 120);
+        var4.createStateLayer(-25088, 0).setFontColor((byte) -107, 15658734).setFrameSprites(1, TickClock.a(8947848, (byte) 112, 7829367, 10066329));
+        var4.createStateLayer(-25088, 1).setFrameSprites(1, TickClock.a(11184810, (byte) 123, 13421772, 10066329));
+        var4.createStateLayer(-25088, 3).setFrameSprites(1, TickClock.a(8947848, (byte) 116, 10066329, 7829367)).setOffsetX(true, 1).setTextColor(1, 120);
         RgbSprite[] var5 = new RgbSprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -220,22 +220,22 @@ final class UiTheme {
           var16.field_E[var7_int] = 1077952576;
         }
         var5[4] = (RgbSprite) ((Object) var18);
-        var4.a(-25088, 4).a(true, (byte) 125).a(1, var5);
-        var4.a(-25088, 5).a(1, hf.a(0, 65793, 0, 0, true)).a(true, (byte) 126).a((byte) -118, -1);
+        var4.createStateLayer(-25088, 4).setFlushBeforeApply(true, (byte) 125).setFrameSprites(1, var5);
+        var4.createStateLayer(-25088, 5).setFrameSprites(1, FrameStyleHelpers.buildBevelFrame(0, 65793, 0, 0, true)).setFlushBeforeApply(true, (byte) 126).setFontColor((byte) -118, -1);
         this.field_f = (WidgetPainter) ((Object) var4);
         StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
         var6.field_a = 0;
         StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
         var7.field_a = 0;
-        var7.a(false, sl.a(8947848, 2));
-        var7.a(-25088, 1).a(1, sl.a(11184810, 2)).a((byte) -120, 2236962);
+        var7.setFrameSpritesForAllStates(false, sl.a(8947848, 2));
+        var7.createStateLayer(-25088, 1).setFrameSprites(1, sl.a(11184810, 2)).setFontColor((byte) -120, 2236962);
         this.field_x = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         DialWidgetPainter discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
         var17.copyStyleTo(var8, -3);
-        var8.a(-25088, 0).a(1, TickClock.a(15658734, (byte) 118, 10066329, 7829367)).a((byte) -96, 1118481).setShadowColor(1, -1);
-        var8.a(-25088, 4).a(true, (byte) 125).a(1, var5);
+        var8.createStateLayer(-25088, 0).setFrameSprites(1, TickClock.a(15658734, (byte) 118, 10066329, 7829367)).setFontColor((byte) -96, 1118481).setShadowColor(1, -1);
+        var8.createStateLayer(-25088, 4).setFlushBeforeApply(true, (byte) 125).setFrameSprites(1, var5);
         this.field_c = (WidgetPainter) ((Object) var8);
         RgbSprite[] var9 = new RgbSprite[9];
         RgbSprite[] var10 = new RgbSprite[9];
@@ -246,8 +246,8 @@ final class UiTheme {
         var10[4].field_E = new int[]{6710886, 7829367};
         StatefulTextPainter var11 = new StatefulTextPainter();
         StatefulTextPainter var12 = new StatefulTextPainter();
-        var11.a(var9, false, 0);
-        var12.a(var10, false, 0);
+        var11.setStateFrameSprites(var9, false, 0);
+        var12.setStateFrameSprites(var10, false, 0);
         RgbSprite var13 = new RgbSprite(7, 4);
         var13.field_E = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
         StatefulTextPainter var14 = new StatefulTextPainter(var4, true);
@@ -255,18 +255,18 @@ final class UiTheme {
           return;
         }
         try {
-          var14.a(var13.copySprite(), (byte) 88);
+          var14.setIconForAllStates(var13.copySprite(), (byte) 88);
           var13.rotateCounterClockwise();
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(var13.copySprite(), (byte) 88);
+          var14.setIconForAllStates(var13.copySprite(), (byte) 88);
           var13.rotateCounterClockwise();
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(var13.copySprite(), (byte) 88);
+          var14.setIconForAllStates(var13.copySprite(), (byte) 88);
           var13.rotateCounterClockwise();
           var19 = new StatefulTextPainter(var4, true);
-          var19.a(var13, (byte) 88);
+          var19.setIconForAllStates(var13, (byte) 88);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ll.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ll.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -283,10 +283,10 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, byte param3, int param4, int param5) {
         SoftwareRaster.drawLine(param4, param0, param5, param1, param2);
         if (param3 > -53) {
-          this.a(14, -110, -118, (byte) 18, -35, -121);
+          this.drawLine(14, -110, -118, (byte) 18, -35, -121);
         }
     }
 

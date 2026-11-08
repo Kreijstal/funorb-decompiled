@@ -147,7 +147,7 @@ final class Bzip2State {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -160,10 +160,10 @@ final class Bzip2State {
             param2.field_M = new NodeDeque();
           }
           if (null == DelegatingCanvas.field_a) {
-            DelegatingCanvas.field_a = new dk(64);
+            DelegatingCanvas.field_a = new DualNodeHashTable(64);
           }
           if (null == SocketConnector.field_h) {
-            SocketConnector.field_h = new dk(64);
+            SocketConnector.field_h = new DualNodeHashTable(64);
           }
           Sprite.field_c = param1.field_M;
           if (param0 > -97) {
@@ -172,7 +172,7 @@ final class Bzip2State {
           am.field_c = param2.field_M;
           SoundCache.a(true);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

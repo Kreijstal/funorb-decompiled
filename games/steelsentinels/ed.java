@@ -20,16 +20,16 @@ final class ed {
           if (param0 != -105) {
             field_b = (String) null;
           }
-          if (null != va.field_h) {
+          if (null != LoginDialogHelpers.field_h) {
             try {
-              va.field_h.a(-94, 0L);
-              va.field_h.a(rf.field_d.position, 24, param0 ^ -67, rf.field_d.payload);
+              LoginDialogHelpers.field_h.a(-94, 0L);
+              LoginDialogHelpers.field_h.a(LoginConnectionStage.field_d.position, 24, param0 ^ -67, LoginConnectionStage.field_d.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          rf.field_d.position = rf.field_d.position + 24;
+          LoginConnectionStage.field_d.position = LoginConnectionStage.field_d.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

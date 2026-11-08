@@ -30,12 +30,12 @@ abstract class ModalPanel extends UiContainer {
           this.field_Q = false;
           this.field_V = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final UiComponent h(int param0) {
-        UiComponent var2 = super.h(param0 ^ 0);
+    final UiComponent findFocusedChild(int param0) {
+        UiComponent var2 = super.findFocusedChild(param0 ^ 0);
         if (param0 != -1) {
           this.drawLayer(96, (byte) -104, -78, -99);
           if (var2 != null) {
@@ -49,10 +49,10 @@ abstract class ModalPanel extends UiContainer {
         return (UiComponent) (this);
     }
 
-    boolean j(int param0) {
+    boolean refreshVisibilityAndCheckClosed(int param0) {
         if (param0 > -50) {
-          this.h(-124);
-          this.field_U = this.a(false);
+          this.findFocusedChild(-124);
+          this.field_U = this.targetAlpha(false);
           if (this.field_U != 0) {
             return false;
           }
@@ -61,7 +61,7 @@ abstract class ModalPanel extends UiContainer {
           }
           return false;
         }
-        this.field_U = this.a(false);
+        this.field_U = this.targetAlpha(false);
         if (this.field_U != 0) {
           return false;
         }
@@ -86,35 +86,35 @@ abstract class ModalPanel extends UiContainer {
         uj.field_d = 0;
     }
 
-    final void a(byte param0, int param1, int param2) {
-        this.a(-param1 + IntrusiveNode.field_l >> 1, (byte) -103, -param2 + DualNode.field_u >> 1, param1, param2);
+    final void resizeAndCenter(byte param0, int param1, int param2) {
+        this.setBounds(-param1 + IntrusiveNode.field_l >> 1, (byte) -103, -param2 + DualNode.field_u >> 1, param1, param2);
         int var4 = 103 / ((param0 - 0) / 45);
     }
 
     final static void a(int param0, byte param1) {
-        pc var2 = null;
+        PlayingSound var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        pc var2Lifetime1;
+        PlayingSound var2Lifetime1;
         var3 = SteelSentinels.obfuscationControl;
         try {
           VerticalScrollbar.field_ac = param0;
           if (param1 != 64) {
             ModalPanel.a((byte) 37);
           }
-          var2 = (pc) (mm.field_b.first(13058));
+          var2 = (PlayingSound) (ClockAndCookieHelpers.field_b.first(13058));
           while (var2 != null) {
             if (var2.field_u.isLinked((byte) -12)) {
               var2.field_v.setVolumeQ6(128 + VerticalScrollbar.field_ac * var2.field_t >> 8);
             } else {
               var2.unlink(param1 - 60);
             }
-            var2 = (pc) (mm.field_b.next((byte) -84));
+            var2 = (PlayingSound) (ClockAndCookieHelpers.field_b.next((byte) -84));
           }
-          if (null != rl.field_c) {
-            var2Lifetime1 = (pc) (rl.field_c.first(13058));
+          if (null != PacketLoopHelpers.field_c) {
+            var2Lifetime1 = (PlayingSound) (PacketLoopHelpers.field_c.first(13058));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_u.isLinked((byte) -12);
               if (stackIn_14_0) {
@@ -122,7 +122,7 @@ abstract class ModalPanel extends UiContainer {
               } else {
                 var2Lifetime1.unlink(4);
               }
-              var2Lifetime1 = (pc) (rl.field_c.next((byte) -75));
+              var2Lifetime1 = (PlayingSound) (PacketLoopHelpers.field_c.next((byte) -75));
             }
             return;
           }
@@ -130,19 +130,19 @@ abstract class ModalPanel extends UiContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "bb.SB(" + param0 + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var2_ref), "bb.SB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final int a(boolean param0) {
+    private final int targetAlpha(boolean param0) {
         if (!param0) {
-          return !this.field_Q ? 0 : this.field_V.i(-1850) == this ? 256 : 0;
+          return !this.field_Q ? 0 : this.field_V.topOpenPanel(-1850) == this ? 256 : 0;
         }
         return -118;
     }
 
-    boolean i(int param0) {
-        int var2 = this.a(false);
+    boolean updateAnimationsAndCheckClosed(int param0) {
+        int var2 = this.targetAlpha(false);
         int var3 = var2 - this.field_U;
         if (param0 != -8350) {
           return false;
@@ -180,7 +180,7 @@ abstract class ModalPanel extends UiContainer {
           if (param3 != 0) {
             return;
           }
-          this.a(param2 + this.field_o, param0 + this.field_z, true);
+          this.drawPanelBackground(param2 + this.field_o, param0 + this.field_z, true);
           super.drawLayer(param0, (byte) -121, param2, param3);
           return;
         }
@@ -188,9 +188,9 @@ abstract class ModalPanel extends UiContainer {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
           SoftwareRaster.clear();
-          this.a(0, 0, true);
+          this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
+          MatchingTextValidator.popRasterStateWithIntGuard(111);
           lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
@@ -198,9 +198,9 @@ abstract class ModalPanel extends UiContainer {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
           SoftwareRaster.clear();
-          this.a(0, 0, true);
+          this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
+          MatchingTextValidator.popRasterStateWithIntGuard(111);
           lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
@@ -208,21 +208,21 @@ abstract class ModalPanel extends UiContainer {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
           SoftwareRaster.clear();
-          this.a(0, 0, true);
+          this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
+          MatchingTextValidator.popRasterStateWithIntGuard(111);
           lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
         IterableNodeHashTable.a(lc.field_b, (byte) -103);
         SoftwareRaster.clear();
-        this.a(0, 0, true);
+        this.drawPanelBackground(0, 0, true);
         super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
-        MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
+        MatchingTextValidator.popRasterStateWithIntGuard(111);
         lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
     }
 
-    abstract void a(int param0, int param1, boolean param2);
+    abstract void drawPanelBackground(int param0, int param1, boolean param2);
 
     static {
         field_R = new String[]{"Game-time mode", "Technology level", "Game map"};

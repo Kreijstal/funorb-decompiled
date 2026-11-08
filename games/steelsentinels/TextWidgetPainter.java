@@ -27,7 +27,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           this.drawText(param4, param0, param1, 118);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        cc var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         SceneWidget var22 = null;
@@ -138,38 +138,38 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var7 = rh.field_w;
             rh.field_w.field_Lb = 0;
             var7.field_zb = 0;
-            if (!kk.a(-28548)) {
+            if (!TextAndMenuHelpers.isGameOwner(-28548)) {
               var9_ref_String = nf.field_b.field_Xb;
-              EmailAvailabilityValidator.field_q.field_S = SocketConnector.a(AccountChoicePanel.field_ab, -40, new String[]{var9_ref_String}).toUpperCase();
-              rh.field_w.a(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, NanoTickClock.field_y.field_zb);
-              rh.field_w.field_S = SocketConnector.a(jj.field_f, -108, new String[]{var9_ref_String});
+              EmailAvailabilityValidator.field_q.field_S = SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -40, new String[]{var9_ref_String}).toUpperCase();
+              rh.field_w.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, NanoTickClock.field_y.field_zb);
+              rh.field_w.field_S = SocketConnector.formatTemplate(jj.field_f, -108, new String[]{var9_ref_String});
               var8 = rh.field_w;
               decompiledFrameRemainder2 = (var19 != 0);
             }
             if (decompiledFrameRemainder2) {
               EmailAvailabilityValidator.field_q.field_S = MouseWheelInput.field_f.toUpperCase();
               var9 = (2 + NanoTickClock.field_y.field_zb) / 2;
-              rn.field_C.a(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, -2 + var9);
+              rn.field_C.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, -2 + var9);
               if (nf.field_b.field_wc < nf.field_b.field_Ub) {
                 rn.field_C.field_S = RasterBuffer.field_j.toUpperCase();
                 rn.field_C.field_T = true;
                 if (var19 != 0) {
-                  rn.field_C.field_S = pe.field_U.toUpperCase();
+                  rn.field_C.field_S = TriangleMesh.field_U.toUpperCase();
                   rn.field_C.field_T = false;
                 }
               } else {
-                rn.field_C.field_S = pe.field_U.toUpperCase();
+                rn.field_C.field_S = TriangleMesh.field_U.toUpperCase();
                 rn.field_C.field_T = false;
               }
               rn.field_C.field_I = MenuInputState.field_j.field_I;
               if (ja.field_a > 0) {
                 if (1 != ja.field_a) {
-                  var10_ref_String = SocketConnector.a(MusicCrossfadeStream.field_B, param0 - 83, new String[]{Integer.toString(ja.field_a)});
+                  var10_ref_String = SocketConnector.formatTemplate(MusicCrossfadeStream.field_B, param0 - 83, new String[]{Integer.toString(ja.field_a)});
                   if (var19 != 0) {
-                    var10_ref_String = ih.field_o;
+                    var10_ref_String = EmailSyntaxValidator.field_o;
                   }
                 } else {
-                  var10_ref_String = ih.field_o;
+                  var10_ref_String = EmailSyntaxValidator.field_o;
                 }
                 rn.field_C.field_S = rn.field_C.field_S + "<br>" + var10_ref_String;
                 if ((16 & Js5NetworkRequest.field_H) == 0 &&
@@ -177,7 +177,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   rn.field_C.field_I = MenuInputState.field_j.field_Ab;
                 }
               }
-              BoundedUrlRequest.field_q.a(0, -40 + NanoTickClock.field_y.field_Lb, 40, var9, -var9 + NanoTickClock.field_y.field_zb);
+              BoundedUrlRequest.field_q.setBounds(0, -40 + NanoTickClock.field_y.field_Lb, 40, var9, -var9 + NanoTickClock.field_y.field_zb);
               BoundedUrlRequest.field_q.field_S = IntKeyLookup.field_b.toUpperCase();
               stackIn_19_0 = BoundedUrlRequest.field_q;
               stackIn_20_1 = (param3) && (ModalStack.field_R == 0L);
@@ -186,12 +186,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var10 = 2;
               if (null != HuffmanDecoder.field_b) {
                 if (null == UiContainer.field_O) {
-                  UiContainer.field_O = new byte[be.field_a];
-                  HuffmanDecoder.field_h = new boolean[be.field_a];
+                  UiContainer.field_O = new byte[UrlAndReplyHelpers.field_a];
+                  HuffmanDecoder.field_h = new boolean[UrlAndReplyHelpers.field_a];
                 }
                 var11 = 0;
                 do {
-                  if (!(be.field_a > var11)) {
+                  if (!(UrlAndReplyHelpers.field_a > var11)) {
                     var10 = 0;
                     break;
                   }
@@ -277,7 +277,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   break;
                 }
                 if (stackIn_67_0 <= -3 &&
-                  fc.field_e[12]) {
+                  SoundAndUrlHelpers.field_e[12]) {
                   var10 = 2;
                 }
               }
@@ -289,7 +289,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   var12 = 0;
                   var13 = 0;
                   while (true) {
-                    if (var13 < be.field_a) {
+                    if (var13 < UrlAndReplyHelpers.field_a) {
                       stackOut_75_0 = HuffmanDecoder.field_h[var13];
                       stackIn_83_0 = stackOut_75_0 ? 1 : 0;
                       stackIn_76_0 = stackOut_75_0;
@@ -319,42 +319,42 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       decompiledSharedTail1 = (var19 != 0);
                     }
                     if (decompiledSharedTail1) {
-                      var14_ref_String = SocketConnector.a(TextLayoutLine.field_b, -61, new String[]{(String) (var11_ref)});
+                      var14_ref_String = SocketConnector.formatTemplate(TextLayoutLine.field_b, -61, new String[]{(String) (var11_ref)});
                     }
                   } else {
-                    var13_ref_String = ib.field_a;
+                    var13_ref_String = ChatPanelHelpers.field_a;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
-                      var14_ref_String = pc.field_r + (String) (var11_ref);
+                      var14_ref_String = PlayingSound.field_r + (String) (var11_ref);
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      var14_ref_String = SocketConnector.a(hf.field_f, -113, new String[]{(String) (var11_ref)});
+                      var14_ref_String = SocketConnector.formatTemplate(FrameStyleHelpers.field_f, -113, new String[]{(String) (var11_ref)});
                     }
                   }
                   UiTheme.field_i = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder2) && (!(var10 < 2) || var19 != 0) && (null != ad.field_d ||
+              if ((decompiledFrameRemainder2) && (!(var10 < 2) || var19 != 0) && (null != LoadoutHelpers.field_d ||
                 ja.field_b != null ||
                 null != QuickChatHelpDialog.field_cc ||
-                null != fc.field_b)) {
+                null != SoundAndUrlHelpers.field_b)) {
                 var11 = 0;
                 var12 = 0;
                 var13Lifetime1 = 0;
                 var14 = 0;
                 var15 = 0;
                 var16 = 0;
-                while (be.field_a > var16) {
+                while (UrlAndReplyHelpers.field_a > var16) {
                   var17_int = 255 & nf.field_b.field_Sb[var16];
                   stackIn_178_0 = null;
                   if (var19 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  if (stackIn_178_0 != ad.field_d &&
-                    null != ad.field_d[var16] &&
-                    ad.field_d[var16][var17_int]) {
+                  if (stackIn_178_0 != LoadoutHelpers.field_d &&
+                    null != LoadoutHelpers.field_d[var16] &&
+                    LoadoutHelpers.field_d[var16][var17_int]) {
                     var11 = 1;
                   }
                   if (ja.field_b != null &&
@@ -379,21 +379,21 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       var14 = var18_intLifetime1;
                     }
                   }
-                  if (fc.field_b != null &&
-                    fc.field_b[var16] != null) {
-                    var15 = var15 | fc.field_b[var16][var17_int];
+                  if (SoundAndUrlHelpers.field_b != null &&
+                    SoundAndUrlHelpers.field_b[var16] != null) {
+                    var15 = var15 | SoundAndUrlHelpers.field_b[var16][var17_int];
                   }
                   var16++;
                 }
                 if (decompiledFrameCompleted0) {
                   var16 = 0;
                   var17 = NanoTickClock.field_t.field_Ub.field_M;
-                  var18_ref = (cc) (var17.first(13058));
+                  var18_ref = (LobbyPlayer) (var17.first(13058));
                   while (true) {
                     boolean decompiledFrameRemainder0 = true;
                     boolean decompiledFrameRemainder1 = true;
                     if (var18_ref != null) {
-                      stackOut_124_0 = var18_ref.d((byte) -36);
+                      stackOut_124_0 = var18_ref.isUnlisted((byte) -36);
                       stackIn_141_0 = stackOut_124_0 ? 1 : 0;
                       stackIn_125_0 = stackOut_124_0;
                       decompiledFrameRemainder0 = (var19 == 0);
@@ -430,7 +430,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                           }
                         }
                         if (decompiledFrameRemainder1) {
-                          var18_ref = (cc) (var17.next((byte) -12));
+                          var18_ref = (LobbyPlayer) (var17.next((byte) -12));
                           continue;
                         }
                       }
@@ -439,7 +439,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       stackIn_141_0 = 2;
                     }
                     if (stackIn_141_0 <= NodeDeque.field_d &&
-                      fc.field_e[12]) {
+                      SoundAndUrlHelpers.field_e[12]) {
                       var16 = 0;
                     }
                     if (var16 == 0) {
@@ -450,12 +450,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       break;
                     }
                     if (RegistrationRequestDialog.field_Tb.field_d.field_bc == 0) {
-                      UiTheme.field_i = sf.field_f;
+                      UiTheme.field_i = TutorialStep.field_f;
                       if (var19 == 0) {
                         break;
                       }
                     }
-                    UiTheme.field_i = SocketConnector.a(kf.field_r, -74, new String[]{StripedProgressBar.field_P});
+                    UiTheme.field_i = SocketConnector.formatTemplate(kf.field_r, -74, new String[]{StripedProgressBar.field_P});
                     break;
                   }
                 }
@@ -463,38 +463,38 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             if (decompiledFrameCompleted0) {
               if (ModalStack.field_R != 0L) {
-                var9 = (int)(-mm.a(param0 - 86) + ModalStack.field_R);
+                var9 = (int)(-ClockAndCookieHelpers.monotonicMillis(param0 - 86) + ModalStack.field_R);
                 var9 = (var9 + 999) / 1000;
                 if (var9 < 1) {
                   var9 = 1;
                 }
-                var8.field_S = SocketConnector.a(ch.field_P, -68, new String[]{Integer.toString(var9)});
+                var8.field_S = SocketConnector.formatTemplate(ArrayWidgetContainer.field_P, -68, new String[]{Integer.toString(var9)});
               }
-              uj.field_e.field_S = SocketConnector.a(ci.field_h, -32, new String[]{Integer.toString(nf.field_b.field_wc), Integer.toString(nf.field_b.field_Ub)});
+              uj.field_e.field_S = SocketConnector.formatTemplate(ClientErrorSupport.field_h, -32, new String[]{Integer.toString(nf.field_b.field_wc), Integer.toString(nf.field_b.field_Ub)});
             }
           }
           if (decompiledFrameCompleted0) {
             stackIn_164_0 = SocialListPanel.field_ec;
             stackIn_164_1 = -99;
             stackIn_165_2 = (param1) && (!param2) && (!GzipDecoder.field_c);
-            ((SceneWidget) (Object) stackIn_164_0).a((byte) stackIn_164_1, stackIn_165_2);
+            ((SceneWidget) (Object) stackIn_164_0).updateInputFullScreen((byte) stackIn_164_1, stackIn_165_2);
             stackIn_169_0 = NanoTickClock.field_y;
             stackIn_169_1 = -88;
             stackIn_170_2 = (param1) && (!param2) && (!GzipDecoder.field_c);
-            ((SceneWidget) (Object) stackIn_169_0).a((byte) stackIn_169_1, stackIn_170_2);
+            ((SceneWidget) (Object) stackIn_169_0).updateInputFullScreen((byte) stackIn_169_1, stackIn_170_2);
             if (param0 != 0) {
               TextWidgetPainter.a(126, false, true, true, 60);
             }
             stackIn_176_0 = UsernameCredentials.field_r;
             stackIn_176_1 = -5;
             stackIn_177_2 = (param1) && (!param2) && (GzipDecoder.field_c);
-            ((SceneWidget) (Object) stackIn_176_0).a((byte) stackIn_176_1, stackIn_177_2);
-            RegistrationRequestDialog.field_Tb.field_d.j(param0 + 10000);
+            ((SceneWidget) (Object) stackIn_176_0).updateInputFullScreen((byte) stackIn_176_1, stackIn_177_2);
+            RegistrationRequestDialog.field_Tb.field_d.processTabPresses(param0 + 10000);
             stackIn_178_0 = null;
           }
           if (stackIn_178_0 != nf.field_b) {
             if (QuickChatCategory.field_E.field_Eb != 0) {
-              na.a((byte) -119, param4, nf.field_b.j(param0 ^ -33));
+              ChatMessage.sendShortSetting((byte) -119, param4, nf.field_b.getGameId(param0 ^ -33));
             }
             if (rn.field_C.field_Eb != 0) {
               GzipDecoder.field_c = true;
@@ -511,7 +511,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var5), "cn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var5), "cn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -538,7 +538,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -565,7 +565,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -583,7 +583,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             NameAvailabilityValidator.field_q == 9 ||
             10 == NameAvailabilityValidator.field_q ||
             NameAvailabilityValidator.field_q == 11) {
-            return ba.a(123, param0, param1);
+            return QuickChatInputHelpers.handleQuickChatKey(123, param0, param1);
           }
           if (NameAvailabilityValidator.field_q == 80 &&
             ArchiveProvider.a(38)) {
@@ -621,7 +621,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param3 != 115) {
             this.field_h = -14;
           }
-          stackIn_3_0 = param2.field_s.a(0, -this.textOriginX(param0, 3, param2) + param1, param5 - this.textOriginY((byte) -123, param2, param4));
+          stackIn_3_0 = param2.field_s.characterIndexAt(0, -this.textOriginX(param0, 3, param2) + param1, param5 - this.textOriginY((byte) -123, param2, param4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -633,7 +633,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -731,7 +731,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param0.field_s)).a(0, this.getDisplayText(-1, param0), 97, var5, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).layoutLeftAlignedLine(0, this.getDisplayText(-1, param0), 97, var5, this.field_f);
             if (var7 == 0) {
               return;
             }
@@ -740,7 +740,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param0.field_s)).b(var3_int >> 1, this.getDisplayText(-1, param0), var5, -1385548511, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).layoutCenteredLine(var3_int >> 1, this.getDisplayText(-1, param0), var5, -1385548511, this.field_f);
             if (var7 == 0) {
               return;
             }
@@ -748,7 +748,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (!(param0.field_s instanceof CachedTextLayout)) {
             return;
           }
-          ((CachedTextLayout) (param0.field_s)).a(this.getDisplayText(-1, param0), true, var3_int, var5, this.field_f);
+          ((CachedTextLayout) (param0.field_s)).layoutRightAlignedLine(this.getDisplayText(-1, param0), true, var3_int, var5, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -760,7 +760,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -792,7 +792,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -805,7 +805,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = hh.a(SentinelDesigner.a(-87, param1), (byte) -114);
+          var2 = LoginActionHelpers.decodeBase37DisplayName(SentinelDesigner.a(-87, param1), (byte) -114);
           if (param0 < 89) {
             field_l = false;
           }
@@ -824,7 +824,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -910,7 +910,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param1 != -11867) {
             return;
           }
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(117);
+          MatchingTextValidator.popRasterStateWithIntGuard(117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -922,7 +922,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param7).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -941,7 +941,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             param1.field_s = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_i) {
-            ((CachedTextLayout) (param1.field_s)).a(this.contentWidth(param0 + 5547, param1), this.field_a, this.field_m, this.getDisplayText(-1, param1), this.field_j, this.field_f, this.contentHeight(param0 - 2, param1), param0 + 2);
+            ((CachedTextLayout) (param1.field_s)).layoutParagraph(this.contentWidth(param0 + 5547, param1), this.field_a, this.field_m, this.getDisplayText(-1, param1), this.field_j, this.field_f, this.contentHeight(param0 - 2, param1), param0 + 2);
             if (SteelSentinels.obfuscationControl != 0) {
               this.layoutSingleLine(param1, (byte) 125);
             }
@@ -960,7 +960,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -988,7 +988,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1032,8 +1032,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var8 = param5;
               var9 = param3;
             }
-            var10 = var18.b(-1, var8);
-            var11 = var18.b(-1, var9);
+            var10 = var18.lineForCharacter(-1, var8);
+            var11 = var18.lineForCharacter(-1, var9);
             ArchiveRequest.a(param4.field_o + param1, param4.field_z + param0, -78, param4.field_o + param1 + param4.field_x, param4.field_z + param0 + param4.field_E);
             var12 = var10;
             boolean decompiledNaturalLoopExit0 = false;
@@ -1044,7 +1044,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 if (stackIn_23_0 != var12) {
                   stackIn_16_0 = var13.field_f[0];
                 } else {
-                  stackIn_16_0 = var18.a(1, var8);
+                  stackIn_16_0 = var18.characterX(1, var8);
                 }
                 var14 = stackIn_16_0;
                 if (var12 != var11) {
@@ -1054,10 +1054,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                     stackIn_21_0 = var13.field_f[var13.field_f.length - 1];
                   }
                 } else {
-                  stackIn_21_0 = var18.a(1, var9);
+                  stackIn_21_0 = var18.characterX(1, var9);
                 }
                 var15 = stackIn_21_0;
-                ad.field_j.a(-var14 + var15, 5939, this.textXForOffset((byte) 114, param4, var14, param1), var13.field_a, this.field_c >>> 24, this.field_c, param0 + param4.field_z - (-this.field_h - param4.field_F - var13.field_h));
+                LoadoutHelpers.field_j.fillRectangleAlpha(-var14 + var15, 5939, this.textXForOffset((byte) 114, param4, var14, param1), var13.field_a, this.field_c >>> 24, this.field_c, param0 + param4.field_z - (-this.field_h - param4.field_F - var13.field_h));
                 var12++;
                 continue;
               }
@@ -1066,7 +1066,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (decompiledNaturalLoopExit0) {
               stackIn_23_0 = 113;
             }
-            MatchingTextValidator.$cfr$intArgs$f$20d51497949f(stackIn_23_0);
+            MatchingTextValidator.popRasterStateWithIntGuard(stackIn_23_0);
             return;
           }
           return;
@@ -1080,7 +1080,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1103,7 +1103,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           param0.field_f = this.field_f;
           param0.field_n = this.field_n;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1114,7 +1114,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           this.paintTextRun(param1, -11867, param0, 0, this.field_g, 0, param2, this.field_k);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cn.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cn.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -1129,7 +1129,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           var3_int = -120 / ((param0 + 67) / 59);
           this.ensureTextLayout(-1, param1);
-          stackIn_1_0 = param1.field_s.a((byte) 24) + this.field_h + this.field_d;
+          stackIn_1_0 = param1.field_s.height((byte) 24) + this.field_h + this.field_d;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1141,7 +1141,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -1157,7 +1157,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param0 <= 40) {
             TextWidgetPainter.a(-9, true, false, false, 56);
           }
-          stackIn_3_0 = param1.field_s.b((byte) -100) + this.field_b + this.field_n;
+          stackIn_3_0 = param1.field_s.maximumLineWidth((byte) -100) + this.field_b + this.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1169,7 +1169,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1196,7 +1196,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1225,9 +1225,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param0.isFocused(0)) {
             var13 = this.ensureTextLayout(-1, param0);
             var14 = var13;
-            var7 = var14.b(-1, param1);
+            var7 = var14.lineForCharacter(-1, param1);
             var8 = var13.field_h[var7];
-            var9 = var14.a(1, param1);
+            var9 = var14.characterX(1, param1);
             var10 = this.textXForOffset((byte) 114, param0, var9, param3);
             var11 = this.textOriginY((byte) -120, param0, param2) + Math.max(0, var8.field_h);
             stackIn_6_0 = this.textOriginY((byte) -116, param0, param2);
@@ -1240,8 +1240,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
             ArchiveRequest.a(param0.field_o + param3, param2 + param0.field_z, 113, param0.field_x + (param0.field_o + param3), param0.field_E + (param0.field_z + param2));
-            ad.field_j.a(var11, var12, this.field_e, (byte) -121, var10, var10);
-            MatchingTextValidator.$cfr$intArgs$f$20d51497949f(120);
+            LoadoutHelpers.field_j.drawLine(var11, var12, this.field_e, (byte) -121, var10, var10);
+            MatchingTextValidator.popRasterStateWithIntGuard(120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1254,7 +1254,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1277,7 +1277,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           this.field_b = param1;
           this.field_j = param8;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

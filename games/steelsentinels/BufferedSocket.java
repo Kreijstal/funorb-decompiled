@@ -104,7 +104,7 @@ final class BufferedSocket implements Runnable {
           var11 = new QuickChatMenu[var7];
           if (param1.field_C != null) {
             for (var12 = 0; param1.field_C.length > var12; var12++) {
-              var13_ref_mn = cd.field_e.a((byte) -13, param1.field_C[var12]);
+              var13_ref_mn = cd.field_e.getCategory((byte) -13, param1.field_C[var12]);
               var8[var12] = var13_ref_mn.field_D;
               var9[var12] = param1.field_z[var12];
               var11[var12] = BufferedSocket.a(param0, var13_ref_mn, false, param3, param4);
@@ -120,8 +120,8 @@ final class BufferedSocket implements Runnable {
                 var9[var12Lifetime1 + var14] = param1.field_F[var14];
                 var10[var12Lifetime1 + var14] = param1.field_A[var14];
               } else {
-                var16 = ArchiveIndex.field_w.a(var15, -118);
-                var8[var14 + var12Lifetime1] = var16.i(1);
+                var16 = ArchiveIndex.field_w.getPhrase(var15, -118);
+                var8[var14 + var12Lifetime1] = var16.getPreview(1);
                 var9[var14 + var12Lifetime1] = param1.field_F[var14];
                 if (var9[var14 + var12Lifetime1] <= 0) {
                   var13 = (char)(var13 + 1);
@@ -161,7 +161,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            MusicCrossfadeStream.a((String) null, -59, (Throwable) ((Object) var1_ref));
+            MusicCrossfadeStream.reportClientError((String) null, -59, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -349,7 +349,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -373,8 +373,8 @@ final class BufferedSocket implements Runnable {
           GameplayController.field_G = -1L;
           wb.field_j = param6;
           NanoTickClock.field_v = param1;
-          be.field_a = param6.length;
-          ad.field_f = false;
+          UrlAndReplyHelpers.field_a = param6.length;
+          LoadoutHelpers.field_f = false;
           rb.field_i = new byte[(NanoTickClock.field_v + 7) / 8];
           nf.field_b = null;
           ni.field_a = null;
@@ -389,26 +389,26 @@ final class BufferedSocket implements Runnable {
           }
           IterableNodeHashTable.field_m = param5.field_M;
           IterableNodeHashTable.field_m.clear(6);
-          t.field_c = new dk(param0);
+          t.field_c = new DualNodeHashTable(param0);
           if (param7 >= -10) {
             return;
           }
-          ba.field_b = -1;
+          QuickChatInputHelpers.field_b = -1;
           ja.field_a = 0;
           MusicPatchEnvelope.field_j = 0;
           ud.field_D = -1;
           if (null == param8.field_M) {
             param8.field_M = new NodeDeque();
           }
-          ci.field_e = param8.field_M;
-          ci.field_e.clear(6);
-          fm.field_a = new dk(param3);
+          ClientErrorSupport.field_e = param8.field_M;
+          ClientErrorSupport.field_e.clear(6);
+          fm.field_a = new DualNodeHashTable(param3);
           if (param2.field_M == null) {
             param2.field_M = new NodeDeque();
           }
           o.field_d = param2.field_M;
           o.field_d.clear(6);
-          LoginCredentials.field_b = new dk(param4);
+          LoginCredentials.field_b = new DualNodeHashTable(param4);
           ModalStack.field_R = 0L;
           Js5ArchiveManager.field_l = param9;
           return;
@@ -440,7 +440,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param9).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -691,7 +691,7 @@ final class BufferedSocket implements Runnable {
               var6++;
             }
             if (null == this.field_o) {
-              this.field_o = this.field_a.a(2, 3, (Runnable) (this));
+              this.field_o = this.field_a.requestThread(2, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -706,7 +706,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -724,7 +724,7 @@ final class BufferedSocket implements Runnable {
           this.field_l = this.field_d.getOutputStream();
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

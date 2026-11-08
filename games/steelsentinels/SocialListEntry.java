@@ -27,12 +27,12 @@ final class SocialListEntry extends SceneWidget {
           return;
         }
         byte[] var2 = (byte[]) null;
-        SocialListEntry.a(false, (byte[]) null, 18);
+        SocialListEntry.wrapBytes(false, (byte[]) null, 18);
         field_fc = null;
         field_Sb = null;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadFinalFrameImage(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -51,9 +51,9 @@ final class SocialListEntry extends SceneWidget {
           BattleTerrain.field_k.bindRasterTarget();
           var2.drawOpaque(0, -dj.field_c.field_F);
           BattleTerrain.field_k.field_H = dj.field_c.field_F;
-          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
+          MatchingTextValidator.popRasterStateWithIntGuard(107);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class SocialListEntry extends SceneWidget {
         super(0L, (SceneWidget) null);
     }
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
+    final static Object wrapBytes(boolean param0, byte[] param1, int param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_5_0 = null;
@@ -100,49 +100,49 @@ final class SocialListEntry extends SceneWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawAccountOverlays(boolean param0, int param1) {
         ResourceArchive var3;
         ResourceArchive var3Lifetime1;
         if (SentinelCommand.field_t <= 0) {
           if (bd.field_c > 0) {
             if (GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              UsernameCredentials.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
             }
           } else {
             if (fj.field_f > 0 &&
               GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              UsernameCredentials.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
             }
           }
         } else {
-          if (!im.field_b) {
+          if (!LobbyStateHelpers.field_b) {
             if ((!(bd.field_c <= 0) ||
               !(fj.field_f <= 0)) &&
               GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              UsernameCredentials.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
             }
           } else {
             SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-            TeamColourTinter.field_b.a(param0, (byte) 127);
+            TeamColourTinter.field_b.drawFullScreen(param0, (byte) 127);
             if (bd.field_c <= 0 &&
               fj.field_f <= 0) {
               if (param1 <= -25) {
                 return;
               }
               var3 = (ResourceArchive) null;
-              SocialListEntry.a(87, (ResourceArchive) null);
+              SocialListEntry.loadFinalFrameImage(87, (ResourceArchive) null);
               return;
             }
             if (GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              UsernameCredentials.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
             }
           }
         }
@@ -150,7 +150,7 @@ final class SocialListEntry extends SceneWidget {
           return;
         }
         var3Lifetime1 = (ResourceArchive) null;
-        SocialListEntry.a(87, (ResourceArchive) null);
+        SocialListEntry.loadFinalFrameImage(87, (ResourceArchive) null);
     }
 
     static {

@@ -52,7 +52,7 @@ final class NodeIterator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -87,14 +87,14 @@ final class NodeIterator {
           }
           return null;
         }
-        if (CachedTextLayout.field_m < ik.field_c) {
+        if (CachedTextLayout.field_m < ConditionalTextValue.field_c) {
           if (param0 != -122) {
             field_j = (String) null;
             return null;
           }
           return null;
         }
-        if (ik.field_c + ni.field_c > CachedTextLayout.field_m) {
+        if (ConditionalTextValue.field_c + ni.field_c > CachedTextLayout.field_m) {
           return SectorCacheStore.field_b;
         }
         if (param0 != -122) {
@@ -110,7 +110,7 @@ final class NodeIterator {
           if (AudioService.field_i != null) {
             return true;
           }
-          if (BoundedUrlRequest.a(0)) {
+          if (BoundedUrlRequest.isAccountNamePromptOpen(0)) {
             return true;
           }
           if (FunOrbClient.field_x != null) {
@@ -124,7 +124,7 @@ final class NodeIterator {
         if (AudioService.field_i != null) {
           return true;
         }
-        if (BoundedUrlRequest.a(0)) {
+        if (BoundedUrlRequest.isAccountNamePromptOpen(0)) {
           return true;
         }
         if (FunOrbClient.field_x != null) {
@@ -140,7 +140,7 @@ final class NodeIterator {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class NodeIterator {
         EmailAvailabilityValidator.field_n = null;
         dj.field_j = null;
         TextHotspotRegion.field_r = false;
-        oc.field_d = null;
+        MessageMenuHelpers.field_d = null;
         MouseWheelInput.field_g = null;
         if (param0 != -2) {
           NodeIterator.b((byte) 42);
@@ -250,7 +250,7 @@ final class NodeIterator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

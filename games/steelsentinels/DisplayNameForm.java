@@ -10,7 +10,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     NameSuggestionsPanel field_R;
     private TextButton field_U;
 
-    private final boolean a(int param0, ValidationProvider param1) {
+    private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         vd var4 = null;
@@ -21,7 +21,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(false);
+          var3 = param1.validator(false);
           if (var3 == null) {
             return true;
           }
@@ -29,7 +29,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             var5 = (UiComponent) null;
             this.onFocusedKey(-76, 19, 'ￂ', (UiComponent) null);
           }
-          var4 = var3.a((byte) 21);
+          var4 = var3.validationState((byte) 21);
           stackIn_8_0 = (var4 == vf.field_b);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,7 +42,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -50,11 +50,11 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_Q = new ValidatedTextWidget("", (UiListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(SectorCacheStore.field_m, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
-        UiComponent var2 = new UiComponent(na.field_h, var1, (UiListener) null);
+        UiComponent var2 = new UiComponent(ChatMessage.field_h, var1, (UiListener) null);
         this.field_U = new TextButton(Sentinel.field_D, (UiListener) null);
         this.field_T = new TextButton(tj.field_b, (UiListener) null);
         this.field_Q.field_v = lc.field_i;
-        this.field_Q.a(true, new NameAvailabilityValidator(this.field_Q));
+        this.field_Q.setValidator(true, new NameAvailabilityValidator(this.field_Q));
         this.field_U.field_K = false;
         this.field_U.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.field_T.field_p = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -62,23 +62,23 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(20, (byte) -117, var3, 270, 50);
+        var2.setBounds(20, (byte) -117, var3, 270, 50);
         this.addChild(var2, -100);
         var3 += 50;
-        var3 = var3 + (this.a(170, var3, -95, this.field_Q, LinkButtonPainter.field_b, cf.field_s) + 5);
-        this.field_U.a(496 - var5 >> 1, (byte) -82, var3, var5, 40);
-        this.field_T.a(3 + var4, (byte) -86, 15 + var3, 60, 40);
+        var3 = var3 + (this.addFieldWithHelpDefaultWidth(170, var3, -95, this.field_Q, LinkButtonPainter.field_b, cf.field_s) + 5);
+        this.field_U.setBounds(496 - var5 >> 1, (byte) -82, var3, var5, 40);
+        this.field_T.setBounds(3 + var4, (byte) -86, 15 + var3, 60, 40);
         this.field_T.field_A = (UiListener) (this);
         this.field_U.field_A = (UiListener) (this);
         this.addChild(this.field_U, -89);
         this.addChild(this.field_T, -116);
         this.field_R = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_R.a(this.field_Q.field_x + (this.field_Q.field_o + 60), (byte) -126, 20, -this.field_Q.field_x + (-this.field_Q.field_o + this.field_x - 60), 150);
+        this.field_R.setBounds(this.field_Q.field_x + (this.field_Q.field_o + 60), (byte) -126, 20, -this.field_Q.field_x + (-this.field_Q.field_o + this.field_x - 60), 150);
         this.addChild(this.field_R, -103);
-        this.a(0, (byte) -123, 0, 496, var4 + 55 + var3);
+        this.setBounds(0, (byte) -123, 0, 496, var4 + 55 + var3);
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSelected(int param0, String param1) {
         ValidatedTextWidget var3 = null;
         String var4 = null;
         if (param0 != 20522) {
@@ -89,41 +89,41 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           var4 = param1;
           ((EditableTextWidget) ((Object) var3)).setText(var4, 29597, false);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void i(int param0) {
-        if (!this.h((byte) -100)) {
+    private final void submitDisplayName(int param0) {
+        if (!this.isFormValid((byte) -100)) {
           return;
         }
         AccountRequestDialog.a((byte) 120, this.field_Q.field_y);
         if (param0 != 55) {
-          this.a((byte) 61);
+          this.onMoreSuggestions((byte) 61);
         }
     }
 
-    public final void a(byte param0) {
+    public final void onMoreSuggestions(byte param0) {
         if (param0 == 86) {
-          ((NameAvailabilityValidator) (this.field_Q.a(false))).d(78);
+          ((NameAvailabilityValidator) (this.field_Q.validator(false))).resetCachedName(78);
           return;
         }
         ValidationProvider var3 = (ValidationProvider) null;
-        boolean discarded$0 = this.a(45, (ValidationProvider) null);
-        ((NameAvailabilityValidator) (this.field_Q.a(false))).d(78);
+        boolean discarded$0 = this.isFieldValid(45, (ValidationProvider) null);
+        ((NameAvailabilityValidator) (this.field_Q.validator(false))).resetCachedName(78);
     }
 
-    private final boolean h(byte param0) {
+    private final boolean isFormValid(byte param0) {
         int discarded$0 = 0;
         if (param0 > -50) {
           String var3 = (String) null;
-          discarded$0 = this.a((String) null, -50, (UiComponent) null, 71, (String) null, 5, -8);
-          if (this.a(127, (ValidationProvider) (this.field_Q))) {
+          discarded$0 = this.addFieldWithHelp((String) null, -50, (UiComponent) null, 71, (String) null, 5, -8);
+          if (this.isFieldValid(127, (ValidationProvider) (this.field_Q))) {
             return true;
           }
           return false;
         }
-        if (this.a(127, (ValidationProvider) (this.field_Q))) {
+        if (this.isFieldValid(127, (ValidationProvider) (this.field_Q))) {
           return true;
         }
         return false;
@@ -142,13 +142,13 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             return true;
           }
           if (98 == param1) {
-            stackIn_6_0 = this.b(param3, 114);
+            stackIn_6_0 = this.focusPreviousChild(param3, 114);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(-11963, param3);
+          stackIn_9_0 = this.focusNextChild(-11963, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,11 +160,11 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    private final int a(int param0, int param1, int param2, UiComponent param3, String param4, String param5) {
+    private final int addFieldWithHelpDefaultWidth(int param0, int param1, int param2, UiComponent param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -179,7 +179,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (param2 > -68) {
             field_V = (SceneWidget) null;
           }
-          stackIn_3_0 = this.a(param4, param1, param3, 35, param5, 3, param0);
+          stackIn_3_0 = this.addFieldWithHelp(param4, param1, param3, 35, param5, 3, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,11 +203,11 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    private final int a(String param0, int param1, UiComponent param2, int param3, String param4, int param5, int param6) {
+    private final int addFieldWithHelp(String param0, int param1, UiComponent param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         LabeledField var10 = null;
@@ -223,7 +223,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         try {
           var10 = new LabeledField(20, param1, 120 + param6, 25, param2, false, 120, param5, tj.field_e, 16777215, param0);
           this.addChild(var10, param5 ^ -106);
-          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param2)).a(false), param4, 126, var10.field_E + param1, 25 + param6, param3);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param2)).validator(false), param4, 126, var10.field_E + param1, 25 + param6, param3);
           var9.field_A = (UiListener) (this);
           this.addChild(var9, -108);
           stackIn_1_0 = var9.field_E + var10.field_E;
@@ -250,7 +250,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -268,12 +268,12 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         boolean discarded$0 = false;
         try {
           super.updateHover(param0, 122, param2, param3);
-          this.field_U.field_K = this.h((byte) -103);
+          this.field_U.field_K = this.isFormValid((byte) -103);
           if (param1 <= 56) {
-            discarded$0 = this.h((byte) 6);
+            discarded$0 = this.isFormValid((byte) 6);
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -283,12 +283,12 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             TextLayoutLine.a(103);
           } else {
             if (param3 == this.field_U) {
-              this.i(55);
+              this.submitDisplayName(55);
             }
           }
           int var6_int = -2 % ((-85 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "qc.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qc.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

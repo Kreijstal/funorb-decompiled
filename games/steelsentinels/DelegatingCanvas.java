@@ -3,7 +3,7 @@
  */
 final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component field_d;
-    static dk field_a;
+    static DualNodeHashTable field_a;
     static char[] field_b;
     static int[] field_e;
     static int field_c;
@@ -24,7 +24,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             return stackIn_4_0;
           }
           if (param0 > -17) {
-            field_a = (dk) null;
+            field_a = (DualNodeHashTable) null;
           }
           var4_int = Js5NetworkRequest.field_O;
           var6 = 1;
@@ -64,7 +64,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var8 = 0;
             for (var9 = 0; 35 > var9; var9++) {
               boolean decompiledFrameRemainder0 = true;
-              if (var7 == pe.field_O[var9]) {
+              if (var7 == TriangleMesh.field_O[var9]) {
                 var5 = 2;
                 if (t.a(ArchiveRequest.field_D, var9, -20370)) {
                   var5 = 0;
@@ -72,7 +72,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 if (!param3) {
                   decompiledFrameRemainder0 = (var5 != 0);
                   if (decompiledFrameRemainder0) {
-                    decompiledFrameRemainder0 = !(!ad.a(var9, ArticulatedPart.f((byte) -28), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D));
+                    decompiledFrameRemainder0 = !(!LoadoutHelpers.isComponentCompatible(var9, ArticulatedPart.f((byte) -28), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D));
                   }
                 } else {
                   decompiledFrameRemainder0 = (var5 == 0);
@@ -87,8 +87,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     var14 = new SceneWidget(-1L, (SceneWidget) null);
                     var14.field_Pb = gj.field_a;
                     var14.field_Kb = 2;
-                    var14.a(0, param2, 18, 0, var4_int);
-                    param1.a(var14, 126);
+                    var14.setBounds(0, param2, 18, 0, var4_int);
+                    param1.addChild(var14, 126);
                     if (!param3) {
                       stackIn_35_0 = RasterBuffer.field_h;
                     } else {
@@ -97,13 +97,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     var11 = stackIn_35_0;
                     var12 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var11);
                     var12.field_nb = 0;
-                    var12.field_L = (BitmapFont) ((Object) pl.field_U);
-                    var12.a(0, param2, 18, 0, var4_int);
+                    var12.field_L = (BitmapFont) ((Object) BirthDateEntryPanel.field_U);
+                    var12.setBounds(0, param2, 18, 0, var4_int);
                     var12.field_Fb = 1;
                     var12.field_sb = 1;
                     var12.field_I = null;
                     var12.field_Kb = 1;
-                    param1.a(var12, 125);
+                    param1.addChild(var12, 125);
                     param2 = param2 + var12.field_Lb;
                   }
                   if (var8 == 0) {
@@ -112,16 +112,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     var15.field_Kb = 1;
                     var15.field_nb = 11119017;
                     param2 += 2;
-                    var15.field_I = lj.field_b;
-                    var15.a(0, param2, 15, 0, var4_int);
+                    var15.field_I = SocialRequestHelpers.field_b;
+                    var15.setBounds(0, param2, 15, 0, var4_int);
                     param2 += 15;
-                    param1.a(var15, 121);
+                    param1.addChild(var15, 121);
                   }
                   param2 += 2;
-                  var16 = lj.a(var4_int, var9, true, param3, var5, 49);
-                  var16.a(0, param2, 49, 0, var4_int);
+                  var16 = SocialRequestHelpers.createComponentCard(var4_int, var9, true, param3, var5, 49);
+                  var16.setBounds(0, param2, 49, 0, var4_int);
                   param2 += 49;
-                  param1.a(var16, 126);
+                  param1.addChild(var16, 126);
                 }
               }
             }
@@ -138,7 +138,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pi.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "pi.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

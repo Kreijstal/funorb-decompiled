@@ -12,9 +12,9 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           if (var1 == 0) {
             var1 = 32;
           }
-          ef.a(1, -var1 + UiTheme.field_q);
+          EmailFormatError.setMusicVolume(1, -var1 + UiTheme.field_q);
         } else {
-          ef.a(1, 0);
+          EmailFormatError.setMusicVolume(1, 0);
         }
         if (param0 < 124) {
           field_b = (String) null;
@@ -29,7 +29,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           param0.writeShort(param2, param1 + 108);
           param0.writeByte((byte) 109, param4);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "s.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "s.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var6), "s.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var6), "s.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -183,12 +183,12 @@ final class SpriteCheckboxPainter implements WidgetPainter {
 
     final static void a(int param0) {
         if (GradientOutlineTextPainter.field_p != null) {
-          GradientOutlineTextPainter.field_p.g((byte) 103);
+          GradientOutlineTextPainter.field_p.removeHiddenPanels((byte) 103);
         }
         if (ProxySocketConnector.field_r != null) {
-          ProxySocketConnector.field_r.m(-13521);
+          ProxySocketConnector.field_r.markFinished(-13521);
         }
-        MusicPatch.d(-30603);
+        MusicPatch.resetTooltipState(-30603);
         if (param0 != 10) {
           field_b = (String) null;
         }
@@ -234,7 +234,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 

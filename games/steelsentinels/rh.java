@@ -7,7 +7,7 @@ final class rh extends IntrusiveNode {
     static SceneWidget field_u;
     int field_x;
     static BufferedRandomAccessFile[] field_o;
-    static cj field_q;
+    static ArchiveLoadSequence field_q;
     static String[] field_t;
     static RgbSprite[] field_v;
     static int field_s;
@@ -23,18 +23,18 @@ final class rh extends IntrusiveNode {
         if (param3 != 635) {
           return;
         }
-        qf.field_c.a((byte) -80, param1);
-        var4 = IntKeyLookup.field_i.m(109) ? 1 : 0;
+        qf.field_c.updateInputFullScreen((byte) -80, param1);
+        var4 = IntKeyLookup.field_i.hasPressedItem(109) ? 1 : 0;
         if (VerticalScrollbar.field_gc != 0 &&
           var4 == 0) {
           LoginForm.a((byte) 48);
           param1 = false;
         }
         if (param1) {
-          IntKeyLookup.field_i.a((byte) 68, param2, param0);
+          IntKeyLookup.field_i.processClicks((byte) 68, param2, param0);
         }
         if (var4 == 0) {
-          var5 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
+          var5 = IntKeyLookup.field_i.getCascadeWidth(0) + IntKeyLookup.field_i.field_Rb;
           if (var5 > 640) {
             ed.field_i = ed.field_i + 5;
             return;
@@ -48,8 +48,8 @@ final class rh extends IntrusiveNode {
           ed.field_i = ed.field_i - 5;
           return;
         }
-        qf.field_c.a((byte) -37, param1);
-        var5Lifetime1 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
+        qf.field_c.updateInputFullScreen((byte) -37, param1);
+        var5Lifetime1 = IntKeyLookup.field_i.getCascadeWidth(0) + IntKeyLookup.field_i.field_Rb;
         if (var5Lifetime1 > 640) {
           ed.field_i = ed.field_i + 5;
           return;
@@ -68,7 +68,7 @@ final class rh extends IntrusiveNode {
         if (AudioService.field_i == null) {
           if (!param0) {
             AudioService.field_i = null;
-            la.field_c = null;
+            BenefitsScreenHelpers.field_c = null;
             return;
           }
           return;
@@ -76,7 +76,7 @@ final class rh extends IntrusiveNode {
         if (null == AudioService.field_i.field_c) {
           if (!param0) {
             AudioService.field_i = null;
-            la.field_c = null;
+            BenefitsScreenHelpers.field_c = null;
             return;
           }
           return;
@@ -84,7 +84,7 @@ final class rh extends IntrusiveNode {
         AudioService.field_i.field_c.field_G = false;
         if (!param0) {
           AudioService.field_i = null;
-          la.field_c = null;
+          BenefitsScreenHelpers.field_c = null;
           return;
         }
     }
@@ -113,12 +113,12 @@ final class rh extends IntrusiveNode {
           return;
         }
         try {
-          var3 = mm.field_g;
+          var3 = ClockAndCookieHelpers.field_g;
           var3.writeCipheredOpcode(param0, (byte) -117);
           var3.writeByte((byte) 123, param2.field_q);
           var3.writeShort(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class rh extends IntrusiveNode {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

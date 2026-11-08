@@ -5,7 +5,7 @@ final class ni {
     static int field_c;
     static long field_d;
     static int[] field_b;
-    static hk field_a;
+    static LobbyGame field_a;
 
     final static boolean b(int param0) {
         if (param0 < 8) {
@@ -102,11 +102,11 @@ final class ni {
             }
             return new byte[param0];
           }
-          if (0 < ak.field_c) {
-            fieldTemp$13 = ak.field_c - 1;
-            ak.field_c = ak.field_c - 1;
+          if (0 < SpriteFrame.field_c) {
+            fieldTemp$13 = SpriteFrame.field_c - 1;
+            SpriteFrame.field_c = SpriteFrame.field_c - 1;
             var2_ref_byte__Lifetime5 = WeightedCacheEntry.field_A[fieldTemp$13];
-            WeightedCacheEntry.field_A[ak.field_c] = null;
+            WeightedCacheEntry.field_A[SpriteFrame.field_c] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (param0 != 30000) {
@@ -193,11 +193,11 @@ final class ni {
           }
           return new byte[param0];
         }
-        if (0 < ak.field_c) {
-          fieldTemp$7 = ak.field_c - 1;
-          ak.field_c = ak.field_c - 1;
+        if (0 < SpriteFrame.field_c) {
+          fieldTemp$7 = SpriteFrame.field_c - 1;
+          SpriteFrame.field_c = SpriteFrame.field_c - 1;
           var2_ref_byte__Lifetime2 = WeightedCacheEntry.field_A[fieldTemp$7];
-          WeightedCacheEntry.field_A[ak.field_c] = null;
+          WeightedCacheEntry.field_A[SpriteFrame.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param0 != 30000) {

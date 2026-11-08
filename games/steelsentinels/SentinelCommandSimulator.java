@@ -40,11 +40,11 @@ final class SentinelCommandSimulator {
         this.field_k = this.field_k + 1;
         if (this.field_k >= 16) {
           this.field_k = this.field_k - 16;
-          var9 = pe.field_o;
+          var9 = TriangleMesh.field_o;
           if ((255 & this.field_n >> 16) > (this.field_n & 255)) {
-            var9 = pe.field_b;
+            var9 = TriangleMesh.field_b;
             if (this.field_n >> 8 == this.field_n >> 16) {
-              var9 = pe.field_q;
+              var9 = TriangleMesh.field_q;
             }
           }
           SoftwareRaster.fillRadialPaletteCircle(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
@@ -69,7 +69,7 @@ final class SentinelCommandSimulator {
           return;
         }
         if (null != DelayedServerPacket.field_y) {
-          var3 = DelayedServerPacket.field_y.a(-2, param1);
+          var3 = DelayedServerPacket.field_y.updateAndPollNameInput(-2, param1);
           if (0 != var3) {
             if (2 == var3 &&
               DelayedServerPacket.field_y.field_S != null &&
@@ -84,20 +84,20 @@ final class SentinelCommandSimulator {
               }
               var5Lifetime1 = null;
               if (QuickChatHelpDialog.field_bc == 0) {
-                var5Lifetime1 = lj.a(var4, (byte) -79, param0);
+                var5Lifetime1 = SocialRequestHelpers.requestAddFriend(var4, (byte) -79, param0);
               }
               if (QuickChatHelpDialog.field_bc == 1) {
                 var5Lifetime1 = DialWidget.a(var4, param0, true);
               }
               if (QuickChatHelpDialog.field_bc == 2) {
-                var5Lifetime1 = dd.a(param0, (byte) 55, var4);
+                var5Lifetime1 = PlayerContextMenu.requestAddIgnore(param0, (byte) 55, var4);
               }
               if (3 == QuickChatHelpDialog.field_bc) {
                 var5Lifetime1 = rn.a(var4, param0, var4, true);
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;
-                MusicCrossfadeStream.a((String) null, (String) (var5Lifetime1), 0, (byte) 21, var4, 2);
+                MusicCrossfadeStream.appendChatMessage((String) null, (String) (var5Lifetime1), 0, (byte) 21, var4, 2);
               }
               QuickChatHelpDialog.field_bc = -1;
               DelayedServerPacket.field_y = null;
@@ -126,7 +126,7 @@ final class SentinelCommandSimulator {
           if (!param0) {
             return;
           }
-          var5 = ik.a(var4 * var4 + var3_int * var3_int, -1);
+          var5 = ConditionalTextValue.integerSquareRoot(var4 * var4 + var3_int * var3_int, -1);
           if (var5 > 0) {
             var6 = 32 * this.field_c.field_Fb;
             if (5 > this.field_c.field_Fb) {
@@ -166,7 +166,7 @@ final class SentinelCommandSimulator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -604,7 +604,7 @@ final class SentinelCommandSimulator {
           } else {
             stackIn_233_2 = "{...}";
           }
-          throw ci.a((Throwable) (stackIn_232_0), ((StringBuilder) (Object) stackIn_232_1).append(stackIn_233_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) (stackIn_232_0), ((StringBuilder) (Object) stackIn_232_1).append(stackIn_233_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -651,13 +651,13 @@ final class SentinelCommandSimulator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0, boolean param1) {
         if (DelayedServerPacket.field_y != null) {
-          DelayedServerPacket.field_y.a(param1, (byte) 127);
+          DelayedServerPacket.field_y.drawFullScreen(param1, (byte) 127);
         }
         if (param0 != -115) {
           field_o = (String) null;
@@ -1249,7 +1249,7 @@ final class SentinelCommandSimulator {
           } else {
             stackIn_165_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_161_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_161_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(')').toString());
         }
     }
 
@@ -1270,7 +1270,7 @@ final class SentinelCommandSimulator {
           this.field_m = this.field_c.velocityY;
           this.field_e = ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][0];
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1278,8 +1278,8 @@ final class SentinelCommandSimulator {
         int var1 = (NumericDateInputWidget.field_Z - 640) / 2;
         int var2 = AudioService.field_h * AudioService.field_h;
         int var3 = -(SentinelCommand.field_t * SentinelCommand.field_t) + var2;
-        QuickChatMenu.field_Ub.a(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);
-        pc.field_q.a(param0 ^ param0, 0, -4 + (-120 + SoftwareRaster.field_j), 438 * var3 / var2 + (202 + var1), 438);
+        QuickChatMenu.field_Ub.setBounds(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);
+        PlayingSound.field_q.setBounds(param0 ^ param0, 0, -4 + (-120 + SoftwareRaster.field_j), 438 * var3 / var2 + (202 + var1), 438);
     }
 
     final static int a(int[] param0, int param1, ArticulatedPart param2) {
@@ -1347,7 +1347,7 @@ final class SentinelCommandSimulator {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -1357,7 +1357,7 @@ final class SentinelCommandSimulator {
             this.field_d = 31;
           }
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "bh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

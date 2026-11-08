@@ -59,7 +59,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -71,44 +71,44 @@ final class DialWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          for (var1_int = 0; var1_int < ue.field_c.length; var1_int++) {
-            if (ue.field_c[var1_int] != null) {
+          for (var1_int = 0; var1_int < LoginHandshakeHelpers.field_c.length; var1_int++) {
+            if (LoginHandshakeHelpers.field_c[var1_int] != null) {
               continue;
             }
             break;
           }
-          bi.field_f.field_Ub.field_eb = -100 + bi.field_f.field_Lb - bi.field_f.field_Ub.field_Lb;
+          TextAndBitHelpers.field_f.field_Ub.field_eb = -100 + TextAndBitHelpers.field_f.field_Lb - TextAndBitHelpers.field_f.field_Ub.field_Lb;
           RegistrationRequestDialog.field_Ob = 1;
-          va.field_k[0] = bi.field_f.field_Ub.field_eb;
+          LoginDialogHelpers.field_k[0] = TextAndBitHelpers.field_f.field_Ub.field_eb;
           if (param0 <= 122) {
             return true;
           }
           DateOfBirthValidator.d(-31);
-          if (var1_int >= ue.field_c.length) {
-            km.field_a = DualNodeDequeIterator.field_i;
-            ln.field_c = lj.field_e[0];
+          if (var1_int >= LoginHandshakeHelpers.field_c.length) {
+            ClientGlobals.field_a = DualNodeDequeIterator.field_i;
+            NameValidationHelpers.field_c = SocialRequestHelpers.field_e[0];
             return false;
           }
-          uc.field_b = cj.a(73, di.field_c, hl.field_v);
-          if (null == ue.field_c[var1_int] ||
-            ue.field_c[var1_int].length != uc.field_b.length) {
+          uc.field_b = ArchiveLoadSequence.buildComponentLoadout(73, di.field_c, PendingIntArrayRequest.field_v);
+          if (null == LoginHandshakeHelpers.field_c[var1_int] ||
+            LoginHandshakeHelpers.field_c[var1_int].length != uc.field_b.length) {
             array$1 = new int[uc.field_b.length];
-            ue.field_c[var1_int] = array$1;
+            LoginHandshakeHelpers.field_c[var1_int] = array$1;
           }
-          ArraySupport.copy(uc.field_b, 0, ue.field_c[var1_int], 0, uc.field_b.length);
-          ad.a(var1_int, hl.field_v, 55);
+          ArraySupport.copy(uc.field_b, 0, LoginHandshakeHelpers.field_c[var1_int], 0, uc.field_b.length);
+          LoadoutHelpers.updateSavedLoadout(var1_int, PendingIntArrayRequest.field_v, 55);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "nl.Q(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "nl.Q(" + param0 + ')');
         }
     }
 
     final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
         int var7 = 0;
         int var8 = 0;
-        CipherPacketBuffer var6 = mm.field_g;
+        CipherPacketBuffer var6 = ClockAndCookieHelpers.field_g;
         var6.writeCipheredOpcode(param4, (byte) -117);
         if (param5 <= 30) {
           return;
@@ -126,7 +126,7 @@ final class DialWidget extends TextButton {
           var6.writeBytes(param1.length, (byte) -122, 0, param1);
           var6.backpatchByteLength((byte) -116, var6.position - var7);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class DialWidget extends TextButton {
         CipherPacketBuffer var10 = null;
         int var3 = 0;
         int var9 = 0;
-        pe var5_ref_pe = null;
+        TriangleMesh var5_ref_pe = null;
         int[] var6 = null;
         int var4 = 0;
         int var7 = SteelSentinels.obfuscationControl;
@@ -196,26 +196,26 @@ final class DialWidget extends TextButton {
           var3 = var10.readUnsignedByte((byte) -119);
           var10.beginBitReading(false);
           LoginForm.field_W = EmailAvailabilityValidator.a(var10, (byte) 87);
-          FullscreenFocusCanvas.field_h = new pe[var3];
+          FullscreenFocusCanvas.field_h = new TriangleMesh[var3];
           cl.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            FullscreenFocusCanvas.field_h[var4] = ve.a(-100, var8);
+            FullscreenFocusCanvas.field_h[var4] = AssetDecoders.decodeMesh(-100, var8);
           }
           var10.endBitReading((byte) -3);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
             var5_ref_pe = FullscreenFocusCanvas.field_h[var9];
-            var5_ref_pe.a(6, 6, 1, 6, 14866);
-            var5_ref_pe.b(32767);
+            var5_ref_pe.scale(6, 6, 1, 6, 14866);
+            var5_ref_pe.computeBounds(32767);
             var6 = new int[]{var5_ref_pe.field_J + var5_ref_pe.field_c >> 1, var5_ref_pe.field_p + var5_ref_pe.field_W >> 1, var5_ref_pe.field_n + var5_ref_pe.field_s >> 1};
             cl.field_f[var9] = var6;
-            var5_ref_pe.a(0, -var6[1], -var6[2], -var6[0]);
+            var5_ref_pe.translate(0, -var6[1], -var6[2], -var6[0]);
             var9++;
           }
           int var5 = -123 % ((49 - param0) / 35);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "nl.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nl.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class DialWidget extends TextButton {
         try {
           var10 = (CharSequence) ((Object) param0);
           if (!ArchiveProvider.a(param2, var10)) {
-            stackIn_4_0 = en.field_a;
+            stackIn_4_0 = LoadingScreenHelpers.field_a;
             return stackIn_4_0;
           }
           if (2 != DisplayNameForm.field_P) {
@@ -333,7 +333,7 @@ final class DialWidget extends TextButton {
           }
           var8 = wi.a(param0, (byte) 113);
           if (var8 == null) {
-            stackIn_12_0 = SocketConnector.a(bd.field_a, -75, new String[]{param0});
+            stackIn_12_0 = SocketConnector.formatTemplate(bd.field_a, -75, new String[]{param0});
             return stackIn_12_0;
           }
           Sprite.field_c.traverseFrom((byte) 125, (IntrusiveNode) (var8));
@@ -348,7 +348,7 @@ final class DialWidget extends TextButton {
           var8.unlink(4);
           var8.unlinkDual(480);
           vd.field_h = vd.field_h - 1;
-          var9 = mm.field_g;
+          var9 = ClockAndCookieHelpers.field_g;
           var9.writeCipheredOpcode(param1, (byte) -117);
           var9.position = var9.position + 1;
           var5 = var9.position;
@@ -367,7 +367,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -376,20 +376,20 @@ final class DialWidget extends TextButton {
     }
 
     final static void a(int param0, int param1, int param2) {
-        hk var6 = null;
-        hk var7 = null;
+        LobbyGame var6 = null;
+        LobbyGame var7 = null;
         CipherPacketBuffer var4 = null;
         if (param2 != 5) {
           field_V = (String) null;
         }
         if (MusicPatchEnvelope.field_j != param0) {
-          var6 = (hk) (fm.field_a.a((long)MusicPatchEnvelope.field_j, (byte) 92));
+          var6 = (LobbyGame) (fm.field_a.get((long)MusicPatchEnvelope.field_j, (byte) 92));
           var7 = var6;
           if (var7 != null) {
             var7.field_hc = null;
           }
           MusicPatchEnvelope.field_j = param0;
-          var4 = mm.field_g;
+          var4 = ClockAndCookieHelpers.field_g;
           var4.writeCipheredOpcode(param1, (byte) -117);
           var4.writeByte((byte) 108, 3);
           var4.writeByte((byte) 113, 11);

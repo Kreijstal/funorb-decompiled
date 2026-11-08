@@ -29,36 +29,36 @@ final class SystemTaskService implements Runnable {
     java.awt.EventQueue field_b;
     static java.lang.reflect.Method field_c;
 
-    final SystemTask a(java.awt.Frame param0, int param1) {
+    final SystemTask requestExitFullscreen(java.awt.Frame param0, int param1) {
         if (param1 != -1463474960) {
           String var4 = (String) null;
-          this.a((String) null, 76, -2);
+          this.requestSocket((String) null, 76, -2);
         }
-        return this.a(0, 0, 94, param0, 7);
+        return this.enqueueTask(0, 0, 94, param0, 7);
     }
 
-    final SystemTask a(String param0, int param1, int param2) {
+    final SystemTask requestSocket(String param0, int param1, int param2) {
         if (param2 != 376255344) {
           field_w = (String) null;
         }
-        return this.a(param1, false, false, param0);
+        return this.requestSocketInternal(param1, false, false, param0);
     }
 
-    final SystemTask a(int param0, Class param1, String param2) {
+    final SystemTask requestDeclaredField(int param0, Class param1, String param2) {
         if (param0 != 9) {
           this.field_s = false;
         }
-        return this.a(0, 0, -93, new Object[]{param1, param2}, 9);
+        return this.enqueueTask(0, 0, -93, new Object[]{param1, param2}, 9);
     }
 
-    final SystemTask a(java.net.URL param0, int param1) {
+    final SystemTask requestUrlStream(java.net.URL param0, int param1) {
         if (param1 <= 28) {
           field_k = (String) null;
         }
-        return this.a(0, 0, -111, param0, 4);
+        return this.enqueueTask(0, 0, -111, param0, 4);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, int param1, int param2, String param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, int param1, int param2, String param3) {
         try {
           BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
@@ -198,14 +198,14 @@ final class SystemTaskService implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (mm.a(75) < field_d) {
+                        if (ClockAndCookieHelpers.monotonicMillis(75) < field_d) {
                           throw new IOException();
                         }
                         var17 = (255 & var8.field_e >> 24) + "." + (255 & var8.field_e >> 16) + "." + ((65309 & var8.field_e) >> 8) + "." + (255 & var8.field_e);
                         var8.field_c = java.net.InetAddress.getByName(var17).getHostName();
                         break;
                       case 21:
-                        if (mm.a(-120) < field_d) {
+                        if (ClockAndCookieHelpers.monotonicMillis(-120) < field_d) {
                           throw new IOException();
                         }
                         var8.field_c = java.net.InetAddress.getByName((String) (var8.field_b)).getAddress();
@@ -214,7 +214,7 @@ final class SystemTaskService implements Runnable {
                         if (!this.field_e) {
                           var8.field_c = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_n, new Object[]{});
                         } else {
-                          var8.field_c = this.field_v.a(0);
+                          var8.field_c = this.field_v.enumerateDisplayModes(0);
                         }
                         break;
                       case 6:
@@ -234,7 +234,7 @@ final class SystemTaskService implements Runnable {
                           var3 = var8.field_e;
                           var4 = var8.field_g;
                           if (this.field_e) {
-                            this.field_o.a(var4, var3, false);
+                            this.field_o.setCursorPosition(var4, var3, false);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_q, new Object[]{new Integer(var3), new Integer(var4)});
                           }
@@ -248,7 +248,7 @@ final class SystemTaskService implements Runnable {
                           if (!this.field_e) {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_q, new Object[]{var15, new Boolean(var3 != 0)});
                           } else {
-                            this.field_o.a(var15, 32512, var3 != 0);
+                            this.field_o.setCursorVisible(var15, 32512, var3 != 0);
                           }
                           break;
                         }
@@ -286,16 +286,16 @@ final class SystemTaskService implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref_sn = SystemTaskService.a("", 11677, field_t, (String) (var8.field_b));
+                        var3_ref_sn = SystemTaskService.openPreferencesFile("", 11677, field_t, (String) (var8.field_b));
                         var8.field_c = var3_ref_sn;
                         break;
                       case 12:
-                        var3_ref_sn = SystemTaskService.a(field_k, 11677, field_t, (String) (var8.field_b));
+                        var3_ref_sn = SystemTaskService.openPreferencesFile(field_k, 11677, field_t, (String) (var8.field_b));
                         var8.field_c = var3_ref_sn;
                         break;
                       case 7:
                         if (this.field_e) {
-                          this.field_v.a((java.awt.Frame) (var8.field_b), (byte) 107);
+                          this.field_v.exitFullscreen((java.awt.Frame) (var8.field_b), (byte) 107);
                         } else {
                           Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_n, new Object[]{});
                         }
@@ -328,18 +328,18 @@ final class SystemTaskService implements Runnable {
                     var8.field_c = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (mm.a(109) < field_d) {
+                    if (ClockAndCookieHelpers.monotonicMillis(109) < field_d) {
                       throw new IOException();
                     }
                     var8.field_c = new DataInputStream(((java.net.URL) (var8.field_b)).openStream());
                     break;
                   case 22:
-                    if (field_d > mm.a(80)) {
+                    if (field_d > ClockAndCookieHelpers.monotonicMillis(80)) {
                       throw new IOException();
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_c = tc.a((String) (var8.field_b), var8.field_e, 22137).connect(-90);
+                      var8.field_c = HighscoreSubmission.createProxyConnector((String) (var8.field_b), var8.field_e, 22137).connect(-90);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_vg = (ProxyAuthenticationException) (Object) decompiledCaughtException;
@@ -348,7 +348,7 @@ final class SystemTaskService implements Runnable {
                     }
                     break;
                   case 1:
-                    if (mm.a(105) < field_d) {
+                    if (ClockAndCookieHelpers.monotonicMillis(105) < field_d) {
                       throw new IOException();
                     }
                     var8.field_c = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_b)), var8.field_e);
@@ -377,7 +377,7 @@ final class SystemTaskService implements Runnable {
         }
     }
 
-    private final SystemTask a(int param0, int param1, int param2, Object param3, int param4) {
+    private final SystemTask enqueueTask(int param0, int param1, int param2, Object param3, int param4) {
         SystemTask var6 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
@@ -402,7 +402,7 @@ final class SystemTaskService implements Runnable {
         return var6;
     }
 
-    final boolean b(int param0) {
+    final boolean supportsFullscreen(int param0) {
         if (!this.field_x) {
           return false;
         }
@@ -415,21 +415,21 @@ final class SystemTaskService implements Runnable {
         return this.field_v != null ? true : false;
     }
 
-    final SystemTask a(int param0) {
+    final SystemTask requestDisplayModes(int param0) {
         if (param0 != -30756) {
           return (SystemTask) null;
         }
-        return this.a(0, 0, 17, (Object) null, 5);
+        return this.enqueueTask(0, 0, 17, (Object) null, 5);
     }
 
-    final SystemTask a(int param0, int param1, int param2, int param3, int param4) {
+    final SystemTask requestEnterFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 6) {
           return (SystemTask) null;
         }
-        return this.a(param1 + (param2 << 16), param0 + (param3 << 16), 127, (Object) null, 6);
+        return this.enqueueTask(param1 + (param2 << 16), param0 + (param3 << 16), 127, (Object) null, 6);
     }
 
-    final void c(int param0) {
+    final void shutdown(int param0) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -453,7 +453,7 @@ final class SystemTaskService implements Runnable {
           }
           if (this.field_f != null) {
             try {
-              this.field_f.a(true);
+              this.field_f.close(true);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -461,7 +461,7 @@ final class SystemTaskService implements Runnable {
           }
           if (null != this.field_g) {
             try {
-              this.field_g.a(true);
+              this.field_g.close(true);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -471,7 +471,7 @@ final class SystemTaskService implements Runnable {
             for (var2_int = 0; this.field_a.length > var2_int; var2_int++) {
               if (null != this.field_a[var2_int]) {
                 try {
-                  this.field_a[var2_int].a(true);
+                  this.field_a[var2_int].close(true);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -481,7 +481,7 @@ final class SystemTaskService implements Runnable {
           }
           if (null != this.field_m) {
             try {
-              this.field_m.a(true);
+              this.field_m.close(true);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -494,26 +494,26 @@ final class SystemTaskService implements Runnable {
         }
     }
 
-    final SystemTask a(String param0, byte param1, Class param2, Class[] param3) {
+    final SystemTask requestDeclaredMethod(String param0, byte param1, Class param2, Class[] param3) {
         if (param1 != 52) {
           field_k = (String) null;
         }
-        return this.a(0, 0, -122, new Object[]{param2, param0, param3}, 8);
+        return this.enqueueTask(0, 0, -122, new Object[]{param2, param0, param3}, 8);
     }
 
-    final SystemTask a(int param0, int param1, Runnable param2) {
+    final SystemTask requestThread(int param0, int param1, Runnable param2) {
         if (param0 != 2) {
-          this.a(-125, -51, 63, 104, 101);
+          this.requestEnterFullscreen(-125, -51, 63, 104, 101);
         }
-        return this.a(0, param1, 112, param2, 2);
+        return this.enqueueTask(0, param1, 112, param2, 2);
     }
 
-    private final SystemTask a(int param0, boolean param1, boolean param2, String param3) {
+    private final SystemTask requestSocketInternal(int param0, boolean param1, boolean param2, String param3) {
         if (param1) {
           String var6 = (String) null;
-          this.a((String) null, -15, 36);
+          this.requestSocket((String) null, -15, 36);
         }
-        return this.a(0, param0, 108, param3, param2 ? 22 : 1);
+        return this.enqueueTask(0, param0, 108, param3, param2 ? 22 : 1);
     }
 
     SystemTaskService(int param0, String param1, int param2, boolean param3) throws Exception {
@@ -599,14 +599,14 @@ final class SystemTaskService implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        CacheFileLocator.a(field_k, true, field_t);
+        CacheFileLocator.initialize(field_k, true, field_t);
         if (this.field_x) {
           this.field_m = new BoundedRandomAccessFile(CacheFileLocator.resolveFile((String) null, field_t, (byte) 35, "random.dat"), "rw", 25L);
-          this.field_f = new BoundedRandomAccessFile(CacheFileLocator.a(8244, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_g = new BoundedRandomAccessFile(CacheFileLocator.a(8244, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_f = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile(8244, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_g = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile(8244, "main_file_cache.idx255"), "rw", 1048576L);
           this.field_a = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_a[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a(8244, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_a[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile(8244, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_e) {
             try {

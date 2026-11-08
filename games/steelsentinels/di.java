@@ -12,7 +12,7 @@ final class di {
     static int[] field_c;
 
     final static void a(byte param0) {
-        ln.field_a = 0;
+        NameValidationHelpers.field_a = 0;
         if (param0 != -128) {
           di.releaseStatics(112);
         }

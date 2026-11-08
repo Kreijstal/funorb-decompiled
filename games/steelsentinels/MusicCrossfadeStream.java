@@ -42,7 +42,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_v = null;
         if (param0) {
           Throwable var2 = (Throwable) null;
-          MusicCrossfadeStream.a((String) null, -123, (Throwable) null);
+          MusicCrossfadeStream.reportClientError((String) null, -123, (Throwable) null);
         }
         field_J = null;
         field_C = null;
@@ -77,13 +77,13 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (this.field_N) {
             if (this.field_K > 0 &&
-              !this.field_O.d((byte) 90)) {
+              !this.field_O.isReady((byte) 90)) {
               this.field_N = false;
               this.field_s = null;
               this.field_K = -this.field_K;
             } else {
               if (this.field_K < 0 &&
-                !this.field_M.d((byte) 90)) {
+                !this.field_M.isReady((byte) 90)) {
                 this.field_K = -this.field_K;
                 this.field_N = false;
                 this.field_w = null;
@@ -101,7 +101,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_K = 0;
                   if (!this.field_H) {
                     if (this.field_s != null) {
-                      this.field_O.c((byte) -109);
+                      this.field_O.stop((byte) -109);
                     }
                     this.field_s = null;
                   }
@@ -113,7 +113,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_K = 0;
                 if (!this.field_H) {
                   if (this.field_w != null) {
-                    this.field_M.c((byte) -40);
+                    this.field_M.stop((byte) -40);
                   }
                   this.field_w = null;
                 }
@@ -195,20 +195,20 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(String param0, String param1, int param2, byte param3, String param4, int param5) {
-        na var6 = null;
+    final static void appendChatMessage(String param0, String param1, int param2, byte param3, String param4, int param5) {
+        ChatMessage var6 = null;
         try {
           if (param3 != 21) {
             field_x = (RgbSprite[]) null;
           }
-          var6 = new na(param5, param4, param2, param0, param1);
+          var6 = new ChatMessage(param5, param4, param2, param0, param1);
           tf.a(var6, (byte) -107);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -229,13 +229,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         if (this.field_N) {
           if (this.field_K > 0 &&
-            !this.field_O.d((byte) 90)) {
+            !this.field_O.isReady((byte) 90)) {
             this.field_K = -this.field_K;
             this.field_s = null;
             this.field_N = false;
           } else {
             if (this.field_K < 0 &&
-              !this.field_M.d((byte) 90)) {
+              !this.field_M.isReady((byte) 90)) {
               this.field_N = false;
               this.field_K = -this.field_K;
               this.field_w = null;
@@ -250,7 +250,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_K = 0;
               if (!this.field_H) {
                 if (this.field_w != null) {
-                  this.field_M.c((byte) -72);
+                  this.field_M.stop((byte) -72);
                 }
                 this.field_w = null;
               }
@@ -262,7 +262,7 @@ final class MusicCrossfadeStream extends PcmStream {
                 this.field_K = 0;
                 if (!this.field_H) {
                   if (this.field_s != null) {
-                    this.field_O.c((byte) -49);
+                    this.field_O.stop((byte) -49);
                   }
                   this.field_s = null;
                 }
@@ -272,19 +272,19 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, MidiPcmStream param1, int param2, int param3) {
+    private final void configureMidiStream(int param0, MidiPcmStream param1, int param2, int param3) {
         try {
           if (param2 != 17396) {
-            this.a(-97, 18);
+            this.setVolume(-97, 18);
           }
-          param1.a(-1, (byte) 37, param3);
-          param1.a((byte) 61, param0);
+          param1.setChannelVolume(-1, (byte) 37, param3);
+          param1.setTempoScale((byte) 61, param0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(String param0, int param1, Throwable param2) {
+    final static void reportClientError(String param0, int param1, Throwable param2) {
         try {
           SystemTaskService stackIn_15_0;
           java.net.URL stackIn_15_1;
@@ -331,17 +331,17 @@ final class MusicCrossfadeStream extends PcmStream {
             stackIn_15_1 = null;
             stackIn_15_2 = null;
             stackIn_15_3 = SingleChildContainer.field_O.getCodeBase();
-            stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(dd.field_d).append("&u=");
-            if (ih.field_q == null) {
+            stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(PlayerContextMenu.field_d).append("&u=");
+            if (EmailSyntaxValidator.field_q == null) {
               stackIn_16_1 = null;
               stackIn_16_2 = null;
               stackIn_16_5 = "" + TextButton.field_P;
             } else {
               stackIn_16_1 = null;
               stackIn_16_2 = null;
-              stackIn_16_5 = ih.field_q;
+              stackIn_16_5 = EmailSyntaxValidator.field_q;
             }
-            var4 = ((SystemTaskService) (Object) stackIn_15_0).a(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(SystemTaskService.field_p).append("&v2=").append(SystemTaskService.field_r).append("&e=").append(var10).toString()), 38);
+            var4 = ((SystemTaskService) (Object) stackIn_15_0).requestUrlStream(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(SystemTaskService.field_p).append("&v2=").append(SystemTaskService.field_r).append("&e=").append(var10).toString()), 38);
             while (var4.field_a == 0) {
               MouseWheelInput.a((byte) 126, 1L);
             }
@@ -365,7 +365,7 @@ final class MusicCrossfadeStream extends PcmStream {
         return null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean drawCurvedGroundEdge(boolean param0) {
         int var2 = 0;
         int var1_int = 0;
         double var3 = 0.0;
@@ -397,12 +397,12 @@ final class MusicCrossfadeStream extends PcmStream {
         try {
           var1_int = 0;
           if (!param0) {
-            MusicCrossfadeStream.a(false);
+            MusicCrossfadeStream.drawCurvedGroundEdge(false);
           }
           for (var2 = 0; var2 < 640; var2++) {
             var3 = 374.0 + (double)(var2 - 320) * (0.000234375 * (double)(var2 - 320));
             var5 = (int)Math.ceil(var3);
-            if (var2 == oh.field_f &&
+            if (var2 == LobbySetupHelpers.field_f &&
               var5 <= DelegatingCanvas.field_c) {
               var1_int = 1;
             }
@@ -449,11 +449,11 @@ final class MusicCrossfadeStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "sj.H(" + param0 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1), "sj.H(" + param0 + ')');
         }
     }
 
-    final synchronized void a(int param0, int param1) {
+    final synchronized void setVolume(int param0, int param1) {
         if (param1 != -1) {
           return;
         }
@@ -482,21 +482,21 @@ final class MusicCrossfadeStream extends PcmStream {
             param4) {
             if (this.field_K > 0) {
               if (null != this.field_s) {
-                this.field_O.c((byte) -98);
+                this.field_O.stop((byte) -98);
               }
               this.field_s = param1;
               if (param1 != null) {
-                this.field_O.a(true, false, param1);
-                this.a(param3, this.field_O, 17396, param0);
+                this.field_O.playTrack(true, false, param1);
+                this.configureMidiStream(param3, this.field_O, 17396, param0);
               }
             } else {
               if (this.field_w != null) {
-                this.field_M.c((byte) -69);
+                this.field_M.stop((byte) -69);
               }
               this.field_w = param1;
               if (param1 != null) {
-                this.field_M.a(true, false, param1);
-                this.a(param3, this.field_M, 17396, param0);
+                this.field_M.playTrack(true, false, param1);
+                this.configureMidiStream(param3, this.field_M, 17396, param0);
               }
             }
             return;
@@ -508,12 +508,12 @@ final class MusicCrossfadeStream extends PcmStream {
           this.field_N = stackIn_20_1;
           if (param1 == this.field_s) {
             this.field_K = param2;
-            this.a(param3, this.field_O, 17396, param0);
+            this.configureMidiStream(param3, this.field_O, 17396, param0);
             return;
           }
           if (this.field_w == param1) {
             this.field_K = -param2;
-            this.a(param3, this.field_M, 17396, param0);
+            this.configureMidiStream(param3, this.field_M, 17396, param0);
             return;
           }
           if (null == this.field_s) {
@@ -528,28 +528,28 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (var7_int == 0) {
             if (null != this.field_w) {
-              this.field_M.c((byte) -51);
+              this.field_M.stop((byte) -51);
             }
             this.field_w = param1;
             if (param1 != null) {
               stackIn_53_0 = this.field_M;
               stackIn_53_1 = true;
               stackIn_54_2 = !(param4);
-              ((MidiPcmStream) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2, param1);
-              this.a(param3, this.field_M, 17396, param0);
+              ((MidiPcmStream) (Object) stackIn_53_0).playTrack(stackIn_53_1, stackIn_54_2, param1);
+              this.configureMidiStream(param3, this.field_M, 17396, param0);
             }
             this.field_K = -param2;
           } else {
             if (null != this.field_s) {
-              this.field_O.c((byte) -77);
+              this.field_O.stop((byte) -77);
             }
             this.field_s = param1;
             if (param1 != null) {
               stackIn_43_0 = this.field_O;
               stackIn_43_1 = true;
               stackIn_44_2 = !(param4);
-              ((MidiPcmStream) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, param1);
-              this.a(param3, this.field_O, 17396, param0);
+              ((MidiPcmStream) (Object) stackIn_43_0).playTrack(stackIn_43_1, stackIn_44_2, param1);
+              this.configureMidiStream(param3, this.field_O, 17396, param0);
             }
             this.field_K = param2;
           }
@@ -564,11 +564,11 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static int a(byte param0) {
+    final static int getTargetFrameRate(byte param0) {
         int var1 = -51 % ((-72 - param0) / 33);
         return (int)(1000000000L / ud.field_v);
     }

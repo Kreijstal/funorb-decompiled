@@ -16,7 +16,7 @@ final class TabbedPanel extends SceneWidget {
     static SceneWidget field_Zb;
     static ja field_Yb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_zb = param3;
         this.field_Lb = param1;
         this.field_eb = param6;
@@ -24,21 +24,21 @@ final class TabbedPanel extends SceneWidget {
         if (param0 != 10) {
           return;
         }
-        this.a(param2, param5, 0);
+        this.layoutTabs(param2, param5, 0);
     }
 
-    final static void a(ak param0, int param1, int param2, int param3) {
+    final static void setDialogFrame(SpriteFrame param0, int param1, int param2, int param3) {
         try {
           cl.field_b = param1;
           int var4_int = 50 % ((param3 - 53) / 62);
-          ok.field_c = param2;
+          ChecksumAndFrameHelpers.field_c = param2;
           NanoTickClock.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static String b(long param0, int param1) {
+    final static String formatGmtDate(long param0, int param1) {
         AlternateUsernameCredentials.field_x.setTime(new Date(param0));
         int var3 = AlternateUsernameCredentials.field_x.get(7);
         int var4 = AlternateUsernameCredentials.field_x.get(5);
@@ -78,13 +78,13 @@ final class TabbedPanel extends SceneWidget {
             var9 = new SceneWidget(0L, param1);
             var9.field_S = param2[var8_int];
             this.field_Ub[var8_int] = var9;
-            this.a(var9, 124);
+            this.addChild(var9, 124);
           }
-          this.a(this.field_Wb, 120);
+          this.addChild(this.field_Wb, 120);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Wb.a(param4[var11], 126);
+            this.field_Wb.addChild(param4[var11], 126);
             var11++;
           }
           this.field_bc = param5;
@@ -118,11 +118,11 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         SceneWidget dupTemp$0 = null;
         int var4;
         int var5;
@@ -139,11 +139,11 @@ final class TabbedPanel extends SceneWidget {
           this.field_Ub[var4].field_zb = var6 - var5;
           this.field_Ub[var4].field_Lb = param1;
         }
-        this.field_Wb.a(param2 + param2, param1, this.field_Lb - param1, 0, this.field_zb);
+        this.field_Wb.setBounds(param2 + param2, param1, this.field_Lb - param1, 0, this.field_zb);
         var8 = 0;
         var4Lifetime1 = var8;
         while (this.field_Tb.length > var8) {
-          this.field_Tb[var8].a(0, param0, -(2 * param0) + this.field_Wb.field_Lb, param0, -(param0 * 2) + this.field_Wb.field_zb);
+          this.field_Tb[var8].setBounds(0, param0, -(2 * param0) + this.field_Wb.field_Lb, param0, -(param0 * 2) + this.field_Wb.field_zb);
           if (this.field_bc != var8) {
             dupTemp$0 = this.field_Tb[var8];
             dupTemp$0.field_Y = dupTemp$0.field_Y + 10000;
@@ -152,7 +152,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSupportPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -184,7 +184,7 @@ final class TabbedPanel extends SceneWidget {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -204,17 +204,17 @@ final class TabbedPanel extends SceneWidget {
         field_ac = null;
     }
 
-    final static void b(String param0, byte param1) {
+    final static void requestOpenLinkNotice(String param0, byte param1) {
         try {
           int var2_int = 46 % ((6 - param1) / 37);
           DropTargetWidget.field_U = param0;
           LabeledField.a(12, 0);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void j(int param0) {
+    final void processTabPresses(int param0) {
         SceneWidget dupTemp$0 = null;
         SceneWidget dupTemp$1 = null;
         int var2;
@@ -239,7 +239,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static void recordMissionCompletion(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         String stackIn_11_0 = null;
@@ -293,16 +293,16 @@ final class TabbedPanel extends SceneWidget {
               } else {
                 stackIn_11_0 = CombatWorld.field_k;
               }
-              km.field_a = stackIn_11_0;
+              ClientGlobals.field_a = stackIn_11_0;
               if (NodeIterator.field_f < 1) {
                 NodeIterator.field_f = 1;
               }
-              ln.field_g = -1;
+              NameValidationHelpers.field_g = -1;
             }
             if (param0 == 0 &&
               10 == fm.field_f[param0] &&
               ni.b(param7 + 103)) {
-              km.field_a = DualNodeDeque.field_b;
+              ClientGlobals.field_a = DualNodeDeque.field_b;
             }
             if (1 == param0) {
               jh.field_a[param3] = param2;
@@ -312,18 +312,18 @@ final class TabbedPanel extends SceneWidget {
             }
           }
           if (!ni.b(85)) {
-            mm.field_g.writeCipheredOpcode(71, (byte) -117);
-            mm.field_g.writeByte((byte) 114, 10 * param0 + param3);
-            mm.field_g.writeShort(param2, 54);
-            mm.field_g.writeInt(true, param5);
-            mm.field_g.writeInt(true, param1);
-            mm.field_g.writeInt(true, param6);
-            mm.field_g.writeInt(true, param4);
+            ClockAndCookieHelpers.field_g.writeCipheredOpcode(71, (byte) -117);
+            ClockAndCookieHelpers.field_g.writeByte((byte) 114, 10 * param0 + param3);
+            ClockAndCookieHelpers.field_g.writeShort(param2, 54);
+            ClockAndCookieHelpers.field_g.writeInt(true, param5);
+            ClockAndCookieHelpers.field_g.writeInt(true, param1);
+            ClockAndCookieHelpers.field_g.writeInt(true, param6);
+            ClockAndCookieHelpers.field_g.writeInt(true, param4);
           } else {
             Explosion.field_P = Explosion.field_P | 1 << 10 * param0 + param3;
           }
           var8 = DropTargetWidget.field_T[10 * param0 + param3];
-          var9 = bi.field_e[param3 + param0 * 10];
+          var9 = TextAndBitHelpers.field_e[param3 + param0 * 10];
           var10 = 0;
           var11 = 0;
           var17 = var8;
@@ -344,7 +344,7 @@ final class TabbedPanel extends SceneWidget {
             }
             var19++;
           }
-          ad.field_i = new int[var10];
+          LoadoutHelpers.field_i = new int[var10];
           Js5Transport.field_g = new int[var11];
           var12 = 0;
           var18 = var8;
@@ -354,7 +354,7 @@ final class TabbedPanel extends SceneWidget {
             if (!t.a(rn.field_D, var15, -20370)) {
               incrementValue$1 = var12;
               var12++;
-              ad.field_i[incrementValue$1] = var15;
+              LoadoutHelpers.field_i[incrementValue$1] = var15;
             }
           }
           var12Lifetime1 = 0;
@@ -368,21 +368,21 @@ final class TabbedPanel extends SceneWidget {
             }
           }
           if (param7 != -65) {
-            TabbedPanel.b(70L, 70);
+            TabbedPanel.formatGmtDate(70L, 70);
           }
           if (var10 <= 0 &&
             var11 <= 0) {
             return;
           }
           DateOfBirthValidator.d(-106);
-          for (var12Lifetime2 = 0; va.field_k.length > var12Lifetime2; var12Lifetime2++) {
-            va.field_k[var12Lifetime2] = 0;
+          for (var12Lifetime2 = 0; LoginDialogHelpers.field_k.length > var12Lifetime2; var12Lifetime2++) {
+            LoginDialogHelpers.field_k[var12Lifetime2] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var8_ref), "mj.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var8_ref), "mj.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -19,7 +19,7 @@ final class Projectile extends DualNode {
     boolean field_ob;
     Sentinel targetSentinel;
     boolean field_I;
-    static rf field_N;
+    static LoginConnectionStage field_N;
     int worldX;
     private int initialDirectionY;
     boolean field_E;
@@ -188,7 +188,7 @@ final class Projectile extends DualNode {
                     var11++;
                     continue;
                   }
-                  IconTextComponent.b(10000, var5 << 4, 15, var4 << 4, var9 << 4);
+                  IconTextComponent.drawBubbleDistortion(10000, var5 << 4, 15, var4 << 4, var9 << 4);
                   SoftwareRaster.fillRadialPaletteCircle(var4 << 4, var5 << 4, var9 << 4, 500, var26);
                   stackIn_94_0Lifetime1 = ~this.sourceWeaponType;
                   stackIn_94_1Lifetime1 = -19;
@@ -218,7 +218,7 @@ final class Projectile extends DualNode {
                 var8 = 120;
                 var9 = 49;
                 var10_int = 1114111;
-                var11_ref_int__ = pe.field_o;
+                var11_ref_int__ = TriangleMesh.field_o;
                 if (this.sourceWeaponType == 17) {
                   var8 = 120;
                   var10_int = 8978431;
@@ -229,16 +229,16 @@ final class Projectile extends DualNode {
                 }
                 if (this.sourceWeaponType == 35) {
                   var8 = 180;
-                  var11_ref_int__ = pe.field_N;
+                  var11_ref_int__ = TriangleMesh.field_N;
                   var9 = 99;
                 }
                 if (this.sourceWeaponType == 21) {
-                  var11_ref_int__ = pe.field_N;
+                  var11_ref_int__ = TriangleMesh.field_N;
                   var8 = 96;
                 }
                 if (this.sourceWeaponType == 10) {
                   var8 = 64;
-                  var11_ref_int__ = pe.field_N;
+                  var11_ref_int__ = TriangleMesh.field_N;
                 }
                 if (this.sourceWeaponType != 21 &&
                   this.sourceWeaponType != 10) {
@@ -470,14 +470,14 @@ final class Projectile extends DualNode {
                         this.effectType != 2 &&
                         this.effectType != 3 &&
                         this.effectType != 20) {
-                        fc.a((byte) -128, 55, this.worldX);
+                        SoundAndUrlHelpers.playSoundEffect((byte) -128, 55, this.worldX);
                       } else {
-                        fc.a((byte) -74, 51, this.worldX);
+                        SoundAndUrlHelpers.playSoundEffect((byte) -74, 51, this.worldX);
                         var9 = var4.addModuleBonuses(0, 33);
                         this.field_O = this.field_O >> var9;
                       }
                     } else {
-                      fc.a((byte) 41, 49, this.worldX);
+                      SoundAndUrlHelpers.playSoundEffect((byte) 41, 49, this.worldX);
                       var9 = var4.addModuleBonuses(0, 32);
                       this.field_O = this.field_O >> var9;
                     }
@@ -580,11 +580,11 @@ final class Projectile extends DualNode {
                 }
                 else {
                   if (0 < var4.field_S) {
-                    fc.a((byte) -99, 27, this.worldX);
+                    SoundAndUrlHelpers.playSoundEffect((byte) -99, 27, this.worldX);
                   }
                   var4.field_S = var4.field_S - this.field_O;
                   if (var4.field_S < 0) {
-                    fc.a((byte) 41, 50, this.worldX);
+                    SoundAndUrlHelpers.playSoundEffect((byte) 41, 50, this.worldX);
                     if (var4.armour > 0 &&
                       var4.field_z <= 0) {
                       var4.a((byte) 125, this);
@@ -686,7 +686,7 @@ final class Projectile extends DualNode {
               -1 != var7[var5].field_q) {
               incrementValue$1 = param1;
               param1++;
-              param0[incrementValue$1] = ec.a(var7[var5].field_q, 1008);
+              param0[incrementValue$1] = ClientUiHelpers.bitAnd(var7[var5].field_q, 1008);
             }
           }
           if (!param2) {
@@ -710,7 +710,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -748,28 +748,28 @@ final class Projectile extends DualNode {
           this.sourceWeaponType != -2) {
           if (this.sourceWeaponType != 8) {
             if (50 > param4) {
-              fc.a((byte) 92, 86, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) 92, 86, this.worldX);
             } else {
               if (100 <= param4) {
                 if (param4 >= 150) {
                   if (param4 >= 200) {
                     if (param4 >= 250) {
-                      fc.a((byte) -102, 54, this.worldX);
+                      SoundAndUrlHelpers.playSoundEffect((byte) -102, 54, this.worldX);
                     } else {
-                      fc.a((byte) -120, 53, this.worldX);
+                      SoundAndUrlHelpers.playSoundEffect((byte) -120, 53, this.worldX);
                     }
                   } else {
-                    fc.a((byte) -103, 89, this.worldX);
+                    SoundAndUrlHelpers.playSoundEffect((byte) -103, 89, this.worldX);
                   }
                 } else {
-                  fc.a((byte) -89, 88, this.worldX);
+                  SoundAndUrlHelpers.playSoundEffect((byte) -89, 88, this.worldX);
                 }
               } else {
-                fc.a((byte) 69, 87, this.worldX);
+                SoundAndUrlHelpers.playSoundEffect((byte) 69, 87, this.worldX);
               }
             }
           } else {
-            fc.a((byte) 27, 17, this.worldX);
+            SoundAndUrlHelpers.playSoundEffect((byte) 27, 17, this.worldX);
           }
         }
         stackIn_27_0 = null;
@@ -808,7 +808,7 @@ final class Projectile extends DualNode {
         if (param0 != -21) {
           field_J = (SceneWidget) null;
         }
-        return (java.applet.Applet) ((Object) km.field_m);
+        return (java.applet.Applet) ((Object) ClientGlobals.field_m);
     }
 
     final static boolean a(int param0, String param1) {
@@ -835,7 +835,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -1107,8 +1107,8 @@ final class Projectile extends DualNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = hk.a('_', "", param1, param2);
-          var3 = ri.a(-1, param2);
+          param2 = LobbyGame.replaceCharacter('_', "", param1, param2);
+          var3 = LoginStateQueries.reverseString(-1, param2);
           stackIn_5_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1127,7 +1127,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1306,17 +1306,17 @@ final class Projectile extends DualNode {
           var2[1] = DateOfBirthValidator.a(var2[1], 64);
           var3 = QuickChatPhraseDefinition.field_A;
           var1 = var3;
-          var3[1] = ec.a(var3[1], -65);
+          var3[1] = ClientUiHelpers.bitAnd(var3[1], -65);
         } else {
           var4 = QuickChatPhraseDefinition.field_B;
           var1 = var4;
-          var4[1] = ec.a(var4[1], -65);
+          var4[1] = ClientUiHelpers.bitAnd(var4[1], -65);
           var5 = QuickChatPhraseDefinition.field_A;
           var1 = var5;
           var5[1] = DateOfBirthValidator.a(var5[1], 64);
         }
         if (param0 < 7) {
-          field_N = (rf) null;
+          field_N = (LoginConnectionStage) null;
         }
     }
 
@@ -1552,7 +1552,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -1615,7 +1615,7 @@ final class Projectile extends DualNode {
             speedOrTargetAngle = ResourceArchive.atan2Angle8192(velocityOrTargetDeltaY, 200, velocityOrTargetDeltaX);
             heading = ResourceArchive.atan2Angle8192(this.velocityY, 200, this.velocityX);
             headingDelta = -4096 + (8191 & -heading + (speedOrTargetAngle + 4096));
-            speed = kk.approximateVectorLength(this.velocityY, this.velocityX, -22967);
+            speed = TextAndMenuHelpers.approximateVectorLength(this.velocityY, this.velocityX, -22967);
             if (headingDelta >= -1024 &&
               1024 >= headingDelta) {
               if (300 > speed) {
@@ -1801,10 +1801,10 @@ final class Projectile extends DualNode {
         if (this.effectType >= 12 &&
           this.effectType <= 16) {
           if (this.ageTicks == 0) {
-            fc.a((byte) -110, 81, -1);
+            SoundAndUrlHelpers.playSoundEffect((byte) -110, 81, -1);
           }
           if (0 == (61 & this.ageTicks)) {
-            fc.a((byte) 37, 2, this.worldX);
+            SoundAndUrlHelpers.playSoundEffect((byte) 37, 2, this.worldX);
           }
           this.ageTicks = this.ageTicks + 1;
           var2Lifetime1 = 5100;
@@ -1824,7 +1824,7 @@ final class Projectile extends DualNode {
             if (this.ageTicks == 180) {
               this.world.field_b = 1;
               this.world.field_R = 1550;
-              fc.a((byte) 104, 60, -1);
+              SoundAndUrlHelpers.playSoundEffect((byte) 104, 60, -1);
             }
             if (this.ageTicks > 250) {
               this.world.pendingRemovals.addLast((byte) 82, (DualNode) (this));
@@ -1865,7 +1865,7 @@ final class Projectile extends DualNode {
                 }
                 this.worldY = var4;
                 this.worldX = var3_intLifetime1;
-                fc.a((byte) 80, 104, -1);
+                SoundAndUrlHelpers.playSoundEffect((byte) 80, 104, -1);
               }
             }
           }
@@ -1908,7 +1908,7 @@ final class Projectile extends DualNode {
                 var10 = new Projectile(-(this.velocityX * 48000) + this.worldX, this.worldY + 8000, this.velocityX * -50, 25, 1, 1, 3, this.world, (Sentinel) null, 50, 0, 6);
                 var10.field_ab = true;
                 this.world.projectiles.addLast(3, var10);
-                fc.a((byte) 27, 14, this.worldX);
+                SoundAndUrlHelpers.playSoundEffect((byte) 27, 14, this.worldX);
                 var10.targetSentinel = null;
                 var4_ref_mb = (Sentinel) (this.world.sentinels.first(obfuscationGuard ^ -13059));
                 while (var4_ref_mb != null) {
@@ -1938,7 +1938,7 @@ final class Projectile extends DualNode {
               var3_ref3.field_ab = true;
               this.world.projectiles.addLast(3, var3_ref3);
               if (this.ageTicks % 50 == 0) {
-                fc.a((byte) 110, 67, this.worldX);
+                SoundAndUrlHelpers.playSoundEffect((byte) 110, 67, this.worldX);
               }
             }
           } else {
@@ -1947,7 +1947,7 @@ final class Projectile extends DualNode {
               var3_ref3 = new Projectile(-(this.velocityX * 24000) + this.worldX, 23000 + this.worldY, this.velocityX * -50, 50, 1, 1, 6, this.world, (Sentinel) null, 500, 0, 31);
               var3_ref3.field_ab = true;
               this.world.projectiles.addLast(3, var3_ref3);
-              fc.a((byte) -117, 62, this.worldX);
+              SoundAndUrlHelpers.playSoundEffect((byte) -117, 62, this.worldX);
             }
           }
           stackIn_100_0Lifetime1 = ~this.ageTicks;
@@ -2306,7 +2306,7 @@ final class Projectile extends DualNode {
                                     if (this.sourceWeaponType == 32) {
                                       if (!this.field_I &&
                                         !this.field_V) {
-                                        fc.a((byte) 45, 104, this.worldX);
+                                        SoundAndUrlHelpers.playSoundEffect((byte) 45, 104, this.worldX);
                                       }
                                       this.a(250, 1500, 0, -96, 50);
                                       this.a(5000, 5000, 2, -95, 500);
@@ -2912,12 +2912,12 @@ final class Projectile extends DualNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
     static {
-        field_N = new rf();
+        field_N = new LoginConnectionStage();
         field_Y = "This private message is prefixed with \"<col=9090FF>To <%1>:</col>\" on your screen.<br>On <%1>'s screen, it will be prefixed with \"<col=FF6060>From <%0>:</col>\", which is<br>a different length and may leave less room for the message itself.<br><br>This shading covers the area which is not available on <%1>'s screen.<br>Provided your message fits to the left of the shaded area,<br><%1> should be able to see it in full.<br><br>(Note: this may be inaccurate if <%1> is playing in a different<br>language from you.)";
         field_db = new byte[520];
         field_lb = false;
