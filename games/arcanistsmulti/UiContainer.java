@@ -407,17 +407,17 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               return;
             }
             var6 = var4_ref.field_m;
-            lc.field_q[0].field_e = ah.field_b;
+            MenuScreen.field_q[0].field_e = ah.field_b;
             var7 = var4_ref.field_h;
-            lc.field_q[0].field_j = false;
-            lc.field_q[0].field_f = null;
+            MenuScreen.field_q[0].field_j = false;
+            MenuScreen.field_q[0].field_f = null;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
-              lc.field_q[var8_int].field_e = var27.readString(-1);
-              lc.field_q[var8_int].field_j = false;
+              MenuScreen.field_q[var8_int].field_e = var27.readString(-1);
+              MenuScreen.field_q[var8_int].field_j = false;
               if (var27.readUnsignedByte((byte) 35) == 1) {
-                lc.field_q[var8_int].field_f = var27.readString(-1);
+                MenuScreen.field_q[var8_int].field_f = var27.readString(-1);
               } else {
-                lc.field_q[var8_int].field_f = null;
+                MenuScreen.field_q[var8_int].field_f = null;
               }
             }
             var8 = new String[3][var6];
@@ -437,12 +437,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             }
             for (var19 = 0; var19 < var18; var19++) {
               var20 = var27.readUnsignedByte((byte) 107);
-              var21 = lc.field_q[var20].field_e;
+              var21 = MenuScreen.field_q[var20].field_e;
               var22 = var27.readLong(-943038560);
               var24 = var27.position;
               if (var6 > var19) {
                 var8[0][var12] = var21;
-                var9[0][var12] = lc.field_q[var20].field_f;
+                var9[0][var12] = MenuScreen.field_q[var20].field_f;
                 var34[0][var12] = var22;
                 for (var25 = 0; var7 > var25; var25++) {
                   incrementValue$0 = var15;
@@ -465,10 +465,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
                 }
               }
               if (var6 > var14 &&
-                !lc.field_q[var20].field_j) {
-                lc.field_q[var20].field_j = true;
+                !MenuScreen.field_q[var20].field_j) {
+                MenuScreen.field_q[var20].field_j = true;
                 var8[2][var14] = var21;
-                var9[2][var14] = lc.field_q[var20].field_f;
+                var9[2][var14] = MenuScreen.field_q[var20].field_f;
                 var34[2][var14] = var22;
                 var27.position = var24;
                 var14++;

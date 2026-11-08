@@ -3,7 +3,7 @@
  */
 abstract class SpriteState extends DualLinkNode {
     int field_w;
-    static le field_z;
+    static BattleScreen field_z;
     static int field_t;
     static boolean field_p;
     static String field_r;

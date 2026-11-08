@@ -529,8 +529,8 @@ class TextHotspotWidget extends TextButton {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    if (le.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0) > 0) {
-                      var22 = Integer.toString(le.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0));
+                    if (BattleScreen.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0) > 0) {
+                      var22 = Integer.toString(BattleScreen.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0));
                       SpellProjectile.field_B.drawRightAlignedText(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
                       SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
                       SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
@@ -645,7 +645,7 @@ class TextHotspotWidget extends TextButton {
                     } else {
                       if (var12Lifetime1 > 0) {
                         if ((MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0)) {
-                          var14_intLifetime1 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
+                          var14_intLifetime1 = BattleScreen.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                           if (var14_intLifetime1 > 0) {
                             stackIn_166_0 = new StringBuilder().append(var14_intLifetime1);
                             if (var14_intLifetime1 > 1) {
@@ -739,7 +739,7 @@ class TextHotspotWidget extends TextButton {
                               SpellProjectile.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             }
                           } else {
-                            var14_intLifetime1Lifetime2 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
+                            var14_intLifetime1Lifetime2 = BattleScreen.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                             stackIn_111_0 = new StringBuilder().append(var14_intLifetime1Lifetime2);
                             if (var14_intLifetime1Lifetime2 > 1) {
                               stackIn_112_1 = ki.field_x;

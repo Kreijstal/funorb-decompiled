@@ -30,7 +30,7 @@ final class ue {
         field_a = null;
     }
 
-    final static void a(byte param0, le param1) {
+    final static void a(byte param0, BattleScreen param1) {
         try {
           ArrayWidgetContainer.field_A = 320;
           if (param0 > -26) {

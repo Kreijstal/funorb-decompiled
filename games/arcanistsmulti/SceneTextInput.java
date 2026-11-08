@@ -101,7 +101,7 @@ final class SceneTextInput extends SceneWidget {
     final static void defineScreen(int[] param0, int param1, int param2) {
         try {
           NumericDateInputWidget.field_L[param2] = param0;
-          ArchiveProvider.field_f[param2] = new lc(param2);
+          ArchiveProvider.field_f[param2] = new MenuScreen(param2);
           if (param1 != 9) {
             SceneTextInput.releaseStatics((byte) 121);
           }

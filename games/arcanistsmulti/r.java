@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class r {
-    static le field_b;
+    static BattleScreen field_b;
     private static long[] field_d;
     static String field_a;
     static String field_c;

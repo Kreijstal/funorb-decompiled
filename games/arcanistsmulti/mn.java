@@ -101,7 +101,7 @@ final class mn extends TextFieldValidator {
             }
             var6 = pm.field_f[var3];
             stackIn_13_0 = !(0 > var4);
-            var7 = lc.a(stackIn_13_0, var6, (byte) -83);
+            var7 = MenuScreen.measureText(stackIn_13_0, var6, (byte) -83);
             var8 = af.field_Eb - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + ic.field_a;

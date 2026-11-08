@@ -14,7 +14,7 @@ public final class ArcanistsMulti extends GameApplet {
           if (param0 >= -45) {
             field_H = (String) null;
           }
-          stackIn_10_0 = (lc.a((byte) 112)) || !(ah.field_c > 0);
+          stackIn_10_0 = (MenuScreen.getSessionFlag((byte) 112)) || !(ah.field_c > 0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ public final class ArcanistsMulti extends GameApplet {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        le var17 = null;
+        BattleScreen var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -273,7 +273,7 @@ public final class ArcanistsMulti extends GameApplet {
               ue.field_e = true;
             }
           }
-          if (!lc.a((byte) 112)) {
+          if (!MenuScreen.getSessionFlag((byte) 112)) {
             do {
               var2 = (cm) (wh.field_h.removeFirst(true));
               if (null == var2) {
@@ -484,9 +484,9 @@ public final class ArcanistsMulti extends GameApplet {
                   var15Lifetime1 = var15Lifetime1 & 127;
                   SpriteState.field_z = null;
                   System.gc();
-                  var17 = new le(true, var2_intLifetime1, var3, var4Lifetime2 != 0, var7, var8Lifetime1, var9, var10, var11, var14Lifetime1, var15Lifetime1, var5Lifetime1 != 0, var6Lifetime1, var12);
+                  var17 = new BattleScreen(true, var2_intLifetime1, var3, var4Lifetime2 != 0, var7, var8Lifetime1, var9, var10, var11, var14Lifetime1, var15Lifetime1, var5Lifetime1 != 0, var6Lifetime1, var12);
                   SpellProjectile.playMusic(DelegatingCanvas.field_c[var17.field_V.getArenaTheme(-31497) + 1], 3);
-                  var17.m(413355681);
+                  var17.renderBackgroundImage(413355681);
                   if (var13 != 0) {
                     var18 = SceneTabbedPanel.field_Tb.field_A.length;
                     var19 = 0;
@@ -524,7 +524,7 @@ public final class ArcanistsMulti extends GameApplet {
                     lf.switchToRequestedScreen((byte) 80);
                     if (hi.field_a &&
                       SpriteState.field_z != null) {
-                      SpriteState.field_z.a(-112, false);
+                      SpriteState.field_z.returnToLobby(-112, false);
                     }
                     fi.field_h = true;
                     hi.field_a = false;
@@ -547,7 +547,7 @@ public final class ArcanistsMulti extends GameApplet {
                   var2 = SpriteState.field_z;
                 }
                 if (null != var2 &&
-                  ((le) (var2)).e((byte) -78)) {
+                  ((BattleScreen) (var2)).handleCurrentMessage((byte) -78)) {
                   continue;
                 }
                 this.dispatchServerMessage(-24);
@@ -597,7 +597,7 @@ public final class ArcanistsMulti extends GameApplet {
                       gj.a(false, true, 0, mn.field_r);
                     }
                     lf.switchToRequestedScreen((byte) 80);
-                    ArchiveProvider.field_f[CheckboxPainter.field_g].a(false, 0, (byte) -123);
+                    ArchiveProvider.field_f[CheckboxPainter.field_g].activateItem(false, 0, (byte) -123);
                     StatefulTextPainter.field_w = false;
                     wa.field_Ob = false;
                     hi.field_a = false;
@@ -1003,7 +1003,7 @@ public final class ArcanistsMulti extends GameApplet {
               qn.a(-24539, LoadingTracker.field_a, GameApplet.field_D);
               GameApplet.field_D = null;
               so.field_k = null;
-              if (lc.a((byte) 112) ||
+              if (MenuScreen.getSessionFlag((byte) 112) ||
                 !(0 < ah.field_c)) {
                 var8 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "expansion_screens", ue.field_d);
                 SceneWidgetNode.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, SceneTextInput.field_Kb);
@@ -1172,8 +1172,8 @@ public final class ArcanistsMulti extends GameApplet {
           FullscreenFocusCanvas.releaseStatics(115);
           ViewportController.releaseStatics(-18033);
           SoundCache.releaseStatics((byte) 59);
-          lc.c(true);
-          le.f((byte) 95);
+          MenuScreen.releaseStatics(true);
+          BattleScreen.f((byte) 95);
           pm.a(0);
           kf.releaseStatics((byte) -121);
           MembershipOfferScreen.releaseStatics(false);
@@ -1469,7 +1469,7 @@ public final class ArcanistsMulti extends GameApplet {
         RuntimeException var3_ref = null;
         int var4 = 0;
         String[] var4_ref_String__ = null;
-        le var5 = null;
+        BattleScreen var5 = null;
         int var5_int = 0;
         int[][] var5_array = null;
         int var6_int = 0;
@@ -1511,7 +1511,7 @@ public final class ArcanistsMulti extends GameApplet {
                 }
               }
               if (decompiledFrameRemainder2) {
-                if (!lc.a((byte) 112)) {
+                if (!MenuScreen.getSessionFlag((byte) 112)) {
                   mn.field_r = cj.field_b;
                   Js5NetworkRequest.c(false);
                   if (ChatInputWidget.field_Cb) {
@@ -1572,7 +1572,7 @@ public final class ArcanistsMulti extends GameApplet {
                     CheckboxPainter.field_g != 4) {
                     if ((CheckboxPainter.field_g != -2) &&
                       (decompiledFrameRemainder1 = !(!SceneTabbedPanel.isNonNegative(CheckboxPainter.field_g, param0 ^ -83)))) {
-                      ArchiveProvider.field_f[CheckboxPainter.field_g].b(91);
+                      ArchiveProvider.field_f[CheckboxPainter.field_g].update(91);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
                     if (decompiledFrameRemainder1) {
@@ -1582,9 +1582,9 @@ public final class ArcanistsMulti extends GameApplet {
                   }
                   if (decompiledFrameRemainder1) {
                     if (!var5.field_ab) {
-                      var5.a(true, false);
+                      var5.updateCamera(true, false);
                     }
-                    ArchiveProvider.field_f[CheckboxPainter.field_g].b(param0 ^ -2);
+                    ArchiveProvider.field_f[CheckboxPainter.field_g].update(param0 ^ -2);
                     decompiledFrameRemainder1 = (var13 != 0);
                   }
                 }
@@ -1596,10 +1596,10 @@ public final class ArcanistsMulti extends GameApplet {
                   }
                   if (decompiledFrameRemainder1) {
                     if (!var5.field_ab) {
-                      var5.a(true, true);
+                      var5.updateCamera(true, true);
                     }
                     while (BevelTextPainter.pollKeyEvent(false)) {
-                      var5.k(1);
+                      var5.handleKeyboardShortcuts(1);
                       if (var13 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -1620,12 +1620,12 @@ public final class ArcanistsMulti extends GameApplet {
               }
               ae.a(var3_int != 0, 13);
               if (StatefulTextPainter.field_w) {
-                r.field_b.a(true, var4 != 0);
+                r.field_b.updateCamera(true, var4 != 0);
               }
               if (hi.field_a &&
                 null != SpriteState.field_z) {
                 StrongCacheEntry.a((byte) -66, 320, 180, var5_int != 0);
-                SpriteState.field_z.a(true, var4 != 0);
+                SpriteState.field_z.updateCamera(true, var4 != 0);
               }
               while (true) {
                 if (BevelTextPainter.pollKeyEvent(false)) {
@@ -1643,12 +1643,12 @@ public final class ArcanistsMulti extends GameApplet {
                       }
                     }
                     if (StatefulTextPainter.field_w) {
-                      r.field_b.k(1);
+                      r.field_b.handleKeyboardShortcuts(1);
                     }
                     if (!hi.field_a) {
                       continue;
                     }
-                    SpriteState.field_z.k(param0 ^ -90);
+                    SpriteState.field_z.handleKeyboardShortcuts(param0 ^ -90);
                     continue;
                   }
                 } else {
@@ -1739,7 +1739,7 @@ public final class ArcanistsMulti extends GameApplet {
                 var9++;
                 continue;
               }
-              SpriteState.field_z = new le(false, 0, 3, false, var4_ref_String__, 0, var5_array, var6, var7, 0, 0, false, 0, var8);
+              SpriteState.field_z = new BattleScreen(false, 0, 3, false, var4_ref_String__, 0, var5_array, var6, var7, 0, 0, false, 0, var8);
               gj.a(ta.field_d, true, 14, -1);
               stackIn_212_0 = 1;
               break;
@@ -2122,7 +2122,7 @@ public final class ArcanistsMulti extends GameApplet {
               SoftwareRasterizer.resetClip();
             }
             ClipState.a(gj.a(29372), 115);
-            le.c(1, gj.a(29372));
+            BattleScreen.drawOverlays(1, gj.a(29372));
           }
           var3 = (qa) (b.field_a.first(12623));
           if (var3 != null) {

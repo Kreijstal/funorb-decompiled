@@ -199,7 +199,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_D.field_q = SceneScrollPane.field_Fb;
         this.field_P.field_q = ao.field_c;
         this.field_E.field_q = nk.field_j;
-        this.field_H.field_q = lc.field_k;
+        this.field_H.field_q = MenuScreen.field_k;
         this.field_F.field_q = ce.field_l;
         this.field_K.a(new NameValidator(this.field_K), (byte) 18);
         this.field_N.a(new ki(this.field_N), (byte) -127);
@@ -224,7 +224,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + this.addLabeledField(this.field_N, Checkbox.field_K, var3, 170, 109);
         var3 = var3 + (5 + this.addFieldWithHelp("", this.field_D, 25, 20, 170, SceneScrollPane.field_Gb, var3));
         var3 = var3 + this.addLabeledField(this.field_P, ValidationState.field_a, var3, 170, 126);
-        var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_E, WhirlpoolHasher.field_p, 99, 170, le.field_A));
+        var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_E, WhirlpoolHasher.field_p, 99, 170, BattleScreen.field_A));
         var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));
         var3 = var3 + this.addFieldWithStatusIcon(ProxySocketConnector.field_n, this.field_H, (byte) -71, 170, var3);
         LabeledField var4 = new LabeledField(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, WidgetStyleLayer.field_e, 11579568, AudioService.field_c);

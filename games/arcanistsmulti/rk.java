@@ -219,7 +219,7 @@ final class rk extends TextButton {
             var4 != 0) {
             return false;
           }
-          if (!le.a((byte) 82)) {
+          if (!BattleScreen.checkIdleTimeout((byte) 82)) {
             return true;
           }
           String var5 = (String) null;

@@ -32,7 +32,7 @@ final class GzipDecoder {
             var2 = 2;
           }
         } else {
-          var2 = (lc.a((byte) 112)) ? 0 : 1;
+          var2 = (MenuScreen.getSessionFlag((byte) 112)) ? 0 : 1;
         }
         if (null == ResizableModalPanel.field_Y &&
           ri.field_f) {

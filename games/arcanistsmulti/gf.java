@@ -150,7 +150,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
           var2.field_n = 0;
           var2.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-107, var2);
-          if (lc.a((byte) 112)) {
+          if (MenuScreen.getSessionFlag((byte) 112)) {
             this.field_lb = this.addButton((byte) 103, la.field_e, (UiListener) (this));
           }
           this.field_kb = this.addButton((byte) 103, dd.field_e, (UiListener) (this));

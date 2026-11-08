@@ -47,7 +47,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
         ModalPanelStack.field_K[18] = ModalPanelStack.field_E;
         ModalPanelStack.field_K[19] = ArchiveRequest.field_r;
         ModalPanelStack.field_K[15] = gg.field_d;
-        ModalPanelStack.field_K[17] = lc.field_e;
+        ModalPanelStack.field_K[17] = MenuScreen.field_e;
         ModalPanelStack.field_K[5] = aa.field_i;
         ModalPanelStack.field_K[param0] = lf.field_h;
         ModalPanelStack.field_K[13] = DirectByteStorage.field_g;

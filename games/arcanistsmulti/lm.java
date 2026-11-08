@@ -299,8 +299,8 @@ final class lm {
             stackIn_136_0.field_ub = stackIn_137_1;
           }
           if (param0 &&
-            le.field_q > 1) {
-            for (var6Lifetime2 = 0; var6Lifetime2 < 1 + le.field_q; var6Lifetime2++) {
+            BattleScreen.field_q > 1) {
+            for (var6Lifetime2 = 0; var6Lifetime2 < 1 + BattleScreen.field_q; var6Lifetime2++) {
               var29 = IndexedSpriteState.field_e[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_U) {

@@ -320,7 +320,7 @@ final class fn {
             if (var12.field_G == null) {
               var12.field_Fb = new SceneWidget(0L, qa.field_j);
               var12.addChild(var12.field_Fb, 114);
-              var12.field_Gb = new SceneWidget(0L, le.field_E);
+              var12.field_Gb = new SceneWidget(0L, BattleScreen.field_E);
               if (fc.field_a) {
                 var12.addChild(var12.field_Gb, 17);
               }

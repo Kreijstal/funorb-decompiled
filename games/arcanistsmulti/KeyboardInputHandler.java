@@ -164,7 +164,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
                 ed.a(false, (byte) 81);
                 SoftwareRasterizer.darkenRectangle(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
               }
-              ArchiveProvider.field_f[param2].e((byte) -45);
+              ArchiveProvider.field_f[param2].draw((byte) -45);
             }
           }
         }

@@ -87,7 +87,7 @@ final class vl extends IntrusiveNode {
             var2++;
             var1[incrementValue$1] = (byte)b.field_f[var3Lifetime2];
           }
-          if (!lc.a((byte) 112)) {
+          if (!MenuScreen.getSessionFlag((byte) 112)) {
             DualLinkNode.a(6, -25866, var10);
           }
           return;

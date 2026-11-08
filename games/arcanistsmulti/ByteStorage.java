@@ -95,7 +95,7 @@ abstract class ByteStorage {
     final static void a(int param0, int param1) {
         if (nm.field_h == -1) {
           nm.field_h = param1;
-          lc.a((byte) 112);
+          MenuScreen.getSessionFlag((byte) 112);
           he.field_e.writeOpcode((byte) -76, 66);
           he.field_e.writeByte(param1, (byte) -78);
           if (param0 > qf.field_d) {
@@ -116,7 +116,7 @@ abstract class ByteStorage {
           return;
         }
         nm.field_h = param1;
-        lc.a((byte) 112);
+        MenuScreen.getSessionFlag((byte) 112);
         he.field_e.writeOpcode((byte) -76, 66);
         he.field_e.writeByte(param1, (byte) -78);
         if (param0 > qf.field_d) {

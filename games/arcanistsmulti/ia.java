@@ -18,10 +18,10 @@ final class ia {
     final static void a(int param0, int param1) {
         if (param0 != -14296) {
           field_b = (SceneWidget[]) null;
-          le.h(param0 + 12303);
+          BattleScreen.updateRootInput(param0 + 12303);
           return;
         }
-        le.h(param0 + 12303);
+        BattleScreen.updateRootInput(param0 + 12303);
     }
 
     static {

@@ -70,7 +70,7 @@ abstract class Js5Transport {
     abstract void setConnection(boolean param0, boolean param1, Object param2);
 
     final static String a(String param0, int param1, int param2, String param3) {
-        le var4 = null;
+        BattleScreen var4 = null;
         RuntimeException var4_ref = null;
         Battle var5 = null;
         int var6 = 0;

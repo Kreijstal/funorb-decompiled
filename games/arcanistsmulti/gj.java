@@ -27,7 +27,7 @@ final class gj {
             if (mn.field_r == 10) {
               var4 = -1;
             }
-            ArchiveProvider.field_f[mn.field_r].a(param0, var4, (byte) -115);
+            ArchiveProvider.field_f[mn.field_r].activateItem(param0, var4, (byte) -115);
           }
         } else {
           field_b = (String) null;
@@ -44,7 +44,7 @@ final class gj {
             if (mn.field_r == 10) {
               var4 = -1;
             }
-            ArchiveProvider.field_f[mn.field_r].a(param0, var4, (byte) -115);
+            ArchiveProvider.field_f[mn.field_r].activateItem(param0, var4, (byte) -115);
           }
         }
     }

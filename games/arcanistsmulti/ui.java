@@ -86,7 +86,7 @@ final class ui extends TextFieldValidator {
 
     final static void a(int param0, boolean param1) {
         mn.a(param1, param0 - 95);
-        le.c(param0 ^ 1, param1);
+        BattleScreen.drawOverlays(param0 ^ 1, param1);
         if (param0 != 0) {
           ui.a(115, false);
         }

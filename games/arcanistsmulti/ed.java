@@ -136,7 +136,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
             }
             return;
           }
-          r.field_b.a(param0, -26449);
+          r.field_b.drawBattleView(param0, -26449);
           var2Lifetime2 = 25 % ((38 - param1) / 34);
           if (!cb.field_b) {
             return;
@@ -168,7 +168,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           }
           return;
         }
-        SpriteState.field_z.a(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
+        SpriteState.field_z.drawBattleViewport(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
         if (null == r.field_b) {
           var2Lifetime1 = 25 % ((38 - param1) / 34);
           if (!cb.field_b) {
@@ -188,7 +188,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           stackIn_17_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
           ui.a(stackIn_16_0, stackIn_17_1);
         } else {
-          r.field_b.a(param0, -26449);
+          r.field_b.drawBattleView(param0, -26449);
           var2Lifetime1 = 25 % ((38 - param1) / 34);
           if (!cb.field_b) {
             return;

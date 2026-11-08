@@ -458,7 +458,7 @@ final class MusicCrossfadeStream extends PcmStream {
           for (var7 = 0; var7 < 4 + vf.field_l; var7++) {
             if ((var7 != 1 ||
               !(ao.field_h.length < 2)) && (var7 != 3 ||
-              !(le.field_q <= 1))) {
+              !(BattleScreen.field_q <= 1))) {
               if (!param1 &&
                 3 == var7) {
                 var16 = ResizableViewResizeListener.field_g[var7];

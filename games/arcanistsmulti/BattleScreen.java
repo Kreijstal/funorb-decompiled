@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le {
+final class BattleScreen {
     boolean field_g;
     boolean field_ab;
     private int field_n;
@@ -59,7 +59,7 @@ final class le {
     private int field_h;
     int field_s;
 
-    final static int h(int param0) {
+    final static int updateRootInput(int param0) {
         int var2 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -113,7 +113,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void scrollCameraToSide(int param0, int param1, boolean param2) {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -149,7 +149,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2, boolean param3) {
+    private final void bufferIncomingMessage(int param0, int param1, PacketBuffer param2, boolean param3) {
         RuntimeException runtimeException = null;
         hl var5 = null;
         byte[] var6 = null;
@@ -183,7 +183,7 @@ final class le {
         }
     }
 
-    private final void e(int param0) {
+    private final void updateCameraFollow(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -210,7 +210,7 @@ final class le {
         }
     }
 
-    private final void b(int param0) {
+    private final void startTurnView(int param0) {
         BattleUnit var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -243,7 +243,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawWater(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -301,7 +301,7 @@ final class le {
         }
     }
 
-    private final boolean j(int param0) {
+    private final boolean isAwaitingResolutionForMenu(int param0) {
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -310,7 +310,7 @@ final class le {
             this.field_Z = 96;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(-74) ||
+          if (!this.field_o && (this.isBattleBusy(-74) ||
             this.field_k)) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
@@ -326,7 +326,7 @@ final class le {
         }
     }
 
-    private final boolean f(int param0) {
+    private final boolean isAwaitingResolutionForSpells(int param0) {
         int var2_int = 0;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -334,7 +334,7 @@ final class le {
         try {
           boolean decompiledFrameRemainder0 = true;
           var2_int = 53 / ((param0 + 81) / 45);
-          if (!this.field_o && (this.r(-35) ||
+          if (!this.field_o && (this.isBattleBusy(-35) ||
             this.field_k)) {
             stackIn_7_0 = true;
             decompiledFrameRemainder0 = false;
@@ -350,7 +350,7 @@ final class le {
         }
     }
 
-    private final int b(int param0, int param1, int param2, int param3) {
+    private final int drawPlayerSummary(int param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var15 = 0;
         BattleUnit var16 = null;
@@ -529,7 +529,7 @@ final class le {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final void drawBattleViewport(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         StringBuilder stackIn_73_0 = null;
         String stackIn_74_1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -591,7 +591,7 @@ final class le {
           }
           if (param5 != 96) {
             var14 = (BattleUnit) null;
-            this.a(106, (byte) -85, (BattleUnit) null, -35);
+            this.drawUnitArrow(106, (byte) -85, (BattleUnit) null, -35);
           }
           if (this.field_V.getArenaTheme(-31497) == 6) {
             var8_int = 15658734;
@@ -603,10 +603,10 @@ final class le {
             var8_int = 15597806;
           }
           if (null != this.field_V.getTerrainMask((byte) 69)) {
-            this.a(IntrusiveDeque.field_c, (byte) -121, var8_int, CameraFollowTarget.field_g);
-            this.b(IntrusiveDeque.field_c, -98, CameraFollowTarget.field_g);
-            this.c(CameraFollowTarget.field_g, 0, IntrusiveDeque.field_c);
-            this.a(-8, IntrusiveDeque.field_c, CameraFollowTarget.field_g);
+            this.drawScene(IntrusiveDeque.field_c, (byte) -121, var8_int, CameraFollowTarget.field_g);
+            this.drawUnitHighlights(IntrusiveDeque.field_c, -98, CameraFollowTarget.field_g);
+            this.drawUnits(CameraFollowTarget.field_g, 0, IntrusiveDeque.field_c);
+            this.drawTargetingOverlay(-8, IntrusiveDeque.field_c, CameraFollowTarget.field_g);
             var9_int = IntKeyLookup.field_g.field_nb;
             var16 = this.field_V.getCameraTargets(param5 - 184);
             if (var16 != null) {
@@ -625,8 +625,8 @@ final class le {
                 var11_refLifetime3 = (SpellProjectile) (var17.next(0));
               }
             }
-            this.a(CameraFollowTarget.field_g, var8_int, 12224, IntrusiveDeque.field_c);
-            this.b(-113, param0);
+            this.drawWater(CameraFollowTarget.field_g, var8_int, 12224, IntrusiveDeque.field_c);
+            this.initializeBattleView(-113, param0);
           }
           if (param3 &&
             !this.field_V.isTurnActive(param5 ^ 100) &&
@@ -782,7 +782,7 @@ final class le {
         }
     }
 
-    final void k(int param0) {
+    final void handleKeyboardShortcuts(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_26_0 = 0;
@@ -890,7 +890,7 @@ final class le {
               !this.field_O) {
               this.field_Z = 25;
               if (this.field_h > 0) {
-                this.i(param0 + 1999);
+                this.advanceReplay(param0 + 1999);
               }
               if (this.field_ab) {
                 stackIn_71_0 = this.field_V.getRound((byte) -75);
@@ -912,7 +912,7 @@ final class le {
               var8 != 0) {
               this.field_Z = 25;
               if (this.field_h > 0) {
-                this.i(param0 ^ 2001);
+                this.advanceReplay(param0 ^ 2001);
               }
               if (this.field_ab) {
                 stackIn_84_0 = this.field_V.getRound((byte) -75);
@@ -933,9 +933,9 @@ final class le {
             if (IntrusiveDeque.field_d == ByteStorage.field_c &&
               !this.field_O) {
               if (!this.field_ab) {
-                this.d(false);
+                this.resetSelection(false);
               } else {
-                this.a(-113);
+                this.sendSelectedSpell(-113);
               }
             }
           }
@@ -967,7 +967,7 @@ final class le {
         }
     }
 
-    private final void d(byte param0) {
+    private final void processIncomingMessages(byte param0) {
         boolean dupTemp$0 = false;
         boolean dupTemp$1 = false;
         boolean dupTemp$2 = false;
@@ -995,59 +995,59 @@ final class le {
             var3 = 0;
             var4 = var2_ref.field_k;
             if (var4 == 61) {
-              dupTemp$0 = this.b((byte) -116);
+              dupTemp$0 = this.isAwaitingResolution((byte) -116);
               var3Lifetime1 = dupTemp$0 ? 1 : 0;
               if (dupTemp$0) {
-                this.a(5158, var2_ref.field_j);
+                this.applyServerState(5158, var2_ref.field_j);
               }
             } else {
               if (var4 != 65) {
                 if (var4 != 66) {
                   if (var4 == 63) {
-                    dupTemp$1 = this.l(-8712);
+                    dupTemp$1 = this.isAwaitingResolutionForHud(-8712);
                     var3Lifetime1 = dupTemp$1 ? 1 : 0;
                     if (dupTemp$1) {
-                      this.b(50, var2_ref.field_j);
+                      this.readUnitUpdate(50, var2_ref.field_j);
                     }
                   } else {
                     if (var4 != 64) {
                       if (var4 == 62) {
-                        dupTemp$2 = this.j(-27726);
+                        dupTemp$2 = this.isAwaitingResolutionForMenu(-27726);
                         var3Lifetime1 = dupTemp$2 ? 1 : 0;
                         if (dupTemp$2) {
-                          this.a(var2_ref.field_j, SpriteState.field_v - var2_ref.field_g, 8888);
+                          this.readTurnTimer(var2_ref.field_j, SpriteState.field_v - var2_ref.field_g, 8888);
                         }
                       } else {
                         if (var4 != 67) {
                           var6 = (String) null;
                           throw new RuntimeException((String) null);
                         }
-                        dupTemp$3 = this.b(false);
+                        dupTemp$3 = this.isAwaitingResolutionForInput(false);
                         var3Lifetime1 = dupTemp$3 ? 1 : 0;
                         if (dupTemp$3) {
-                          this.b(var2_ref.field_j, -1);
+                          this.readActionPacket(var2_ref.field_j, -1);
                         }
                       }
                     } else {
-                      dupTemp$4 = this.f(-126);
+                      dupTemp$4 = this.isAwaitingResolutionForSpells(-126);
                       var3Lifetime1 = dupTemp$4 ? 1 : 0;
                       if (dupTemp$4) {
-                        this.a((byte) 95, var2_ref.field_j);
+                        this.beginResync((byte) 95, var2_ref.field_j);
                       }
                     }
                   }
                 } else {
-                  dupTemp$5 = this.f(false);
+                  dupTemp$5 = this.isAwaitingResolutionForChat(false);
                   var3Lifetime1 = dupTemp$5 ? 1 : 0;
                   if (dupTemp$5) {
-                    this.c(var2_ref.field_j, 55);
+                    this.verifyStateChecksum(var2_ref.field_j, 55);
                   }
                 }
               } else {
-                dupTemp$6 = this.e(true);
+                dupTemp$6 = this.isAwaitingResolutionForCamera(true);
                 var3Lifetime1 = dupTemp$6 ? 1 : 0;
                 if (dupTemp$6) {
-                  this.a(var2_ref.field_j, -114);
+                  this.readTurnStart(var2_ref.field_j, -114);
                 }
               }
             }
@@ -1078,7 +1078,7 @@ final class le {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void initializeBattleView(int param0, boolean param1) {
         int stackIn_110_0 = 0;
         int stackIn_110_1 = 0;
         int stackIn_110_2 = 0;
@@ -1157,9 +1157,9 @@ final class le {
                 IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var6), Integer.toString(var8)}, IntrusiveNodeHashTable.field_f);
                 if (var8 >= var5_ref_ml.getDisplayedHealth(-20357)) {
                   if (!this.field_ab) {
-                    this.d(false);
+                    this.resetSelection(false);
                   } else {
-                    this.a(33);
+                    this.sendSelectedSpell(33);
                   }
                   IntrusiveNodeHashTable.field_f = null;
                 }
@@ -1177,28 +1177,28 @@ final class le {
             DelegatingCanvas.a(-3, var4 != 0);
           }
           if (this.field_H) {
-            this.o(8);
+            this.drawSpellbookPanel(8);
           }
           ce.field_m.a(true);
           var5 = 0;
           var5 += 6;
           if (this.field_g) {
-            var5 = this.a(var5, 0);
+            var5 = this.computeHealthBarLength(var5, 0);
           }
           if (!this.field_V.field_d) {
             for (var6 = 0; var6 < this.field_V.getPlayerCount(0); var6++) {
-              var5 = this.a(var5, (byte) -3, var6);
+              var5 = this.getPlayerStatusCode(var5, (byte) -3, var6);
             }
           } else {
             for (var6 = 0; this.field_V.getPlayerCount(0) > var6; var6 += 2) {
-              var5 = this.a(var5, (byte) -3, var6);
+              var5 = this.getPlayerStatusCode(var5, (byte) -3, var6);
             }
             for (var6 = 1; this.field_V.getPlayerCount(0) > var6; var6 += 2) {
-              var5 = this.a(var5, (byte) -3, var6);
+              var5 = this.getPlayerStatusCode(var5, (byte) -3, var6);
             }
           }
           if (param0 > -112) {
-            this.b(-71, -18, -117);
+            this.drawUnitHighlights(-71, -18, -117);
           }
           if (mf.field_g == -4) {
             mf.field_g = -1;
@@ -1303,7 +1303,7 @@ final class le {
           }
           sb.a(param1, -58);
           if (null == IntrusiveNodeHashTable.field_f) {
-            this.d(-25343);
+            this.drawTurnBar(-25343);
           }
           if (this.field_ab) {
             var6 = 22;
@@ -1394,7 +1394,7 @@ final class le {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int computeHealthBarLength(int param0, int param1) {
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -1423,11 +1423,11 @@ final class le {
           }
           if (!this.field_V.field_d) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_V.getPlayerCount(0); var5Lifetime1++) {
-              param0 = this.b(param0, var4, var5Lifetime1, param1 - 4);
+              param0 = this.drawPlayerSummary(param0, var4, var5Lifetime1, param1 - 4);
             }
           } else {
             for (var5Lifetime1 = 0; this.field_V.getPlayerCount(0) > var5Lifetime1; var5Lifetime1 += 2) {
-              param0 = this.b(param0, var4, var5Lifetime1, -4);
+              param0 = this.drawPlayerSummary(param0, var4, var5Lifetime1, -4);
             }
             var5_ref_String = sb.field_c;
             var6 = 16777215;
@@ -1436,7 +1436,7 @@ final class le {
             SpellProjectile.field_B.drawCentered(var5_ref_String, 36 + var4 / 2, SpellProjectile.field_B.field_C / 2 + (param0 + 8), var6, -1);
             param0 += 20;
             for (var5Lifetime1 = 1; this.field_V.getPlayerCount(0) > var5Lifetime1; var5Lifetime1 += 2) {
-              param0 = this.b(param0, var4, var5Lifetime1, -4);
+              param0 = this.drawPlayerSummary(param0, var4, var5Lifetime1, -4);
             }
           }
           stackIn_26_0 = param0;
@@ -1448,7 +1448,7 @@ final class le {
         }
     }
 
-    private final void o(int param0) {
+    private final void drawSpellbookPanel(int param0) {
         int var17 = 0;
         int[] stackIn_7_0 = null;
         int stackIn_8_1 = 0;
@@ -1631,7 +1631,7 @@ final class le {
         }
     }
 
-    final static void c(int param0, boolean param1) {
+    final static void drawOverlays(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1657,7 +1657,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawTargetingOverlay(int param0, int param1, int param2) {
         int stackIn_25_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_66_0 = 0;
@@ -1984,7 +1984,7 @@ final class le {
         }
     }
 
-    private final boolean f(boolean param0) {
+    private final boolean isAwaitingResolutionForChat(boolean param0) {
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1993,7 +1993,7 @@ final class le {
             this.field_n = -11;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(-87) ||
+          if (!this.field_o && (this.isBattleBusy(-87) ||
             this.field_k)) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
@@ -2009,15 +2009,15 @@ final class le {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean handleCurrentMessage(byte param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -75) {
-            this.g(66);
+            this.drawTimerBar(66);
           }
-          stackIn_3_0 = this.a(UiContainer.field_z, on.field_g, 0, fj.field_h);
+          stackIn_3_0 = this.handleServerMessage(UiContainer.field_z, on.field_g, 0, fj.field_h);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2026,7 +2026,7 @@ final class le {
         }
     }
 
-    private final boolean b(boolean param0) {
+    private final boolean isAwaitingResolutionForInput(boolean param0) {
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2035,7 +2035,7 @@ final class le {
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(-40) ||
+          if (!this.field_o && (this.isBattleBusy(-40) ||
             this.field_k)) {
             stackIn_10_0 = true;
             decompiledFrameRemainder0 = false;
@@ -2051,7 +2051,7 @@ final class le {
         }
     }
 
-    final void m(int param0) {
+    final void renderBackgroundImage(int param0) {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -2090,7 +2090,7 @@ final class le {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void drawUnitHighlights(int param0, int param1, int param2) {
         int var4_int = 0;
         IntrusiveDeque var5 = null;
         int var7 = 0;
@@ -2120,7 +2120,7 @@ final class le {
         }
     }
 
-    private final void a(byte param0, BattleUnit param1) {
+    private final void drawOffscreenIndicator(byte param0, BattleUnit param1) {
         int var15 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -2224,7 +2224,7 @@ final class le {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createPanelFrame(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2241,7 +2241,7 @@ final class le {
         }
     }
 
-    private final void a(int param0) {
+    private final void sendSelectedSpell(int param0) {
         try {
           int var2_int = -52 / ((-45 - param0) / 63);
           he.field_e.writeOpcode((byte) -78, 63);
@@ -2253,7 +2253,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
+    private final void submitAction(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
         try {
           this.field_f = new ge(this.field_I, param3, param1, param4, param6, param7, param0, param8);
           this.field_W = param2;
@@ -2267,7 +2267,7 @@ final class le {
         }
     }
 
-    private final void g(int param0) {
+    private final void drawTimerBar(int param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2305,7 +2305,7 @@ final class le {
         }
     }
 
-    private final boolean b(byte param0) {
+    private final boolean isAwaitingResolution(byte param0) {
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2314,7 +2314,7 @@ final class le {
             this.field_O = true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(param0 ^ 45) ||
+          if (!this.field_o && (this.isBattleBusy(param0 ^ 45) ||
             this.field_k)) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
@@ -2330,7 +2330,7 @@ final class le {
         }
     }
 
-    private final void i(int param0) {
+    private final void advanceReplay(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2355,7 +2355,7 @@ final class le {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, int param2) {
+    private final void readTurnTimer(PacketBuffer param0, int param1, int param2) {
         BattleUnit var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -2364,7 +2364,7 @@ final class le {
         RuntimeException var4 = null;
         try {
           if (param2 != 8888) {
-            this.b(111, -81, -109);
+            this.drawUnitHighlights(111, -81, -109);
           }
           this.field_z = -param1 + param0.readUnsignedShort(param2 ^ -8922);
           if (this.field_z < 1) {
@@ -2402,7 +2402,7 @@ final class le {
         }
     }
 
-    private final boolean l(int param0) {
+    private final boolean isAwaitingResolutionForHud(int param0) {
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2411,7 +2411,7 @@ final class le {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(-95) ||
+          if (!this.field_o && (this.isBattleBusy(-95) ||
             this.field_k)) {
             stackIn_10_0 = true;
             decompiledFrameRemainder0 = false;
@@ -2427,7 +2427,7 @@ final class le {
         }
     }
 
-    final void p(int param0) {
+    final void sendTurnCommand60(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2446,7 +2446,7 @@ final class le {
         }
     }
 
-    final void a(boolean param0) {
+    final void sendTurnCommand59(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2465,19 +2465,19 @@ final class le {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void drawBattleView(boolean param0, int param1) {
         BattleUnit discarded$0 = null;
         try {
           if (param1 != -26449) {
-            discarded$0 = this.q(-86);
+            discarded$0 = this.getSelectedUnit(-86);
           }
-          this.a(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
+          this.drawBattleViewport(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "le.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void drawScene(int param0, byte param1, int param2, int param3) {
         int var14 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -2648,7 +2648,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1) {
+    private final void applyServerState(int param0, PacketBuffer param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -2656,7 +2656,7 @@ final class le {
         RuntimeException var3 = null;
         try {
           if (param0 != 5158) {
-            this.d((byte) 118);
+            this.processIncomingMessages((byte) 118);
           }
           if (!this.field_k) {
             this.field_V.copyFrom((byte) 88, this.field_w);
@@ -2667,7 +2667,7 @@ final class le {
           if (this.field_k) {
             Checkbox.a(2);
           } else {
-            this.b(0);
+            this.startTurnView(0);
           }
           this.field_o = true;
           return;
@@ -2685,7 +2685,7 @@ final class le {
         }
     }
 
-    private final void a(byte param0, PacketBuffer param1) {
+    private final void beginResync(byte param0, PacketBuffer param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -2716,7 +2716,7 @@ final class le {
         }
     }
 
-    private final void c(int param0) {
+    private final void followDamagedUnits(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         BattleUnit var3 = null;
@@ -2776,7 +2776,7 @@ final class le {
         }
     }
 
-    private final void n(int param0) {
+    private final void handleBattleInput(int param0) {
         boolean stackIn_9_0 = false;
         int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2909,7 +2909,7 @@ final class le {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
           var6Lifetime1 = 64 - var2_int / 2 + this.field_V.field_H;
-          this.a(var6Lifetime1, var5Lifetime1, true);
+          this.scrollCameraToSide(var6Lifetime1, var5Lifetime1, true);
           if ((this.field_V.getCurrentPlayer(false) == this.field_I &&
             !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.isAnimating(true))) {
             if ((this.field_ab) &&
@@ -2918,7 +2918,7 @@ final class le {
             }
             if ((decompiledFrameRemainder0) &&
               (!this.field_V.isTurnActive(param0 + 4))) {
-              this.a(var4 != 0, (byte) 10);
+              this.drawPlayerPanels(var4 != 0, (byte) 10);
               decompiledFrameRemainder1 = false;
             }
           }
@@ -2937,7 +2937,7 @@ final class le {
         }
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int getPlayerStatusCode(int param0, byte param1, int param2) {
         boolean discarded$0 = false;
         int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2951,7 +2951,7 @@ final class le {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != -3) {
-            discarded$0 = this.r(122);
+            discarded$0 = this.isBattleBusy(122);
           }
           var9 = this.field_V.getUnitByOwner(param2, true);
           if ((var9 == null ||
@@ -2965,7 +2965,7 @@ final class le {
               if ((1 << param2 & this.field_a) > 0) {
                 var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 ^ -124, new String[]{var8}, qc.field_g);
               } else {
-                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 + 116, new String[]{var8}, lc.field_a);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 + 116, new String[]{var8}, MenuScreen.field_a);
               }
             } else {
               if (0 >= (1 << param2 & this.field_a)) {
@@ -2988,7 +2988,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, byte param1, BattleUnit param2, int param3) {
+    private final void drawUnitArrow(int param0, byte param1, BattleUnit param2, int param3) {
         boolean discarded$0 = false;
         int var15 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -3012,7 +3012,7 @@ final class le {
         var18 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != -82) {
-            discarded$0 = this.j(-127);
+            discarded$0 = this.isAwaitingResolutionForMenu(-127);
           }
           var5_int = IntKeyLookup.field_g.field_nb;
           var6 = param2.getX(-99);
@@ -3090,7 +3090,7 @@ final class le {
         }
     }
 
-    private final boolean r(int param0) {
+    private final boolean isBattleBusy(int param0) {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -3107,7 +3107,7 @@ final class le {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void updateCamera(boolean param0, boolean param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_50_0 = 0;
@@ -3166,7 +3166,7 @@ final class le {
           var3_int = 0;
           LoginPanel.tickMessageTimer((byte) -49);
           if (dm.h((byte) 97)) {
-            this.c((byte) -106);
+            this.stepBattle((byte) -106);
             if (!this.field_V.isTurnFinished((byte) 89) &&
               this.field_V.isTurnActive(4) &&
               mn.field_r != 3 &&
@@ -3199,7 +3199,7 @@ final class le {
                   var6 = 0;
                 }
                 if (var6 != 0) {
-                  this.a((byte) 79, 56, 199);
+                  this.setSeenBit((byte) 79, 56, 199);
                 }
               }
               gj.a(true, true, 3, mn.field_r);
@@ -3207,9 +3207,9 @@ final class le {
           } else {
             var3_int = 1;
           }
-          this.c(-7775);
+          this.followDamagedUnits(-7775);
           if (!this.field_t) {
-            this.e(17608);
+            this.updateCameraFollow(17608);
           }
           if (this.field_I > 0 && (ri.field_b[69] ||
             ri.field_b[ao.field_f] ||
@@ -3278,7 +3278,7 @@ final class le {
             !this.field_ab) {
             if (this.field_y) {
               this.field_t = false;
-              this.c(false);
+              this.beginNextTurn(false);
               if (StatefulTextPainter.field_p == 6 &&
                 this.field_V.getCurrentPlayer(false) != 0) {
                 hj.a(-20602);
@@ -3288,20 +3288,20 @@ final class le {
             } else {
               if (qg.a(-96)) {
                 ik.b(0);
-                this.c(false);
+                this.beginNextTurn(false);
               } else {
-                this.c(false);
+                this.beginNextTurn(false);
               }
             }
           }
           var4Lifetime1 = IntKeyLookup.field_g.field_nb;
           var5Lifetime1 = -var4Lifetime1 / 2;
           var6Lifetime1 = this.field_V.field_H - var4Lifetime1 / 2 + 64;
-          this.a(var6Lifetime1, var5Lifetime1, param0);
+          this.scrollCameraToSide(var6Lifetime1, var5Lifetime1, param0);
           if (param1) {
-            this.n(0);
+            this.handleBattleInput(0);
           }
-          this.d((byte) 83);
+          this.processIncomingMessages((byte) 83);
           fieldTemp$0 = this.field_x - 1;
           this.field_x = this.field_x - 1;
           if (fieldTemp$0 <= 0) {
@@ -3315,11 +3315,11 @@ final class le {
               this.field_z = this.field_z - 1;
               if (this.field_z == 1) {
                 if (this.field_h > 0) {
-                  this.i(2000);
+                  this.advanceReplay(2000);
                 }
                 if (!this.field_V.isAnimating(true) &&
                   this.field_V.getCurrentPlayer(false) == this.field_I) {
-                  this.a(-113);
+                  this.sendSelectedSpell(-113);
                 }
               }
             }
@@ -3328,7 +3328,7 @@ final class le {
               this.field_z = this.field_z - 1;
             }
             if (0 == this.field_z) {
-              this.d(false);
+              this.resetSelection(false);
             }
           }
           if (null != b.field_a.first(12623)) {
@@ -3348,7 +3348,7 @@ final class le {
         }
     }
 
-    private final void c(byte param0) {
+    private final void stepBattle(byte param0) {
         Battle stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         CameraFollowTarget stackIn_4_2 = null;
@@ -3366,7 +3366,7 @@ final class le {
           ((Battle) (Object) stackIn_3_0).update(stackIn_3_1, stackIn_4_2, param0 ^ -17);
           if (param0 != -106) {
             var3 = (PacketBuffer) null;
-            this.a(19, (PacketBuffer) null);
+            this.applyServerState(19, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3376,7 +3376,7 @@ final class le {
         }
     }
 
-    private final boolean a(PacketBuffer param0, int param1, int param2, int param3) {
+    private final boolean handleServerMessage(PacketBuffer param0, int param1, int param2, int param3) {
         RuntimeException stackIn_89_0 = null;
         StringBuilder stackIn_89_1 = null;
         String stackIn_90_2 = null;
@@ -3409,56 +3409,56 @@ final class le {
             return true;
           }
           if (param1 == 61) {
-            if (this.b((byte) -116) &&
+            if (this.isAwaitingResolution((byte) -116) &&
               this.field_cb.isEmpty(true)) {
-              this.a(5158, param0);
+              this.applyServerState(5158, param0);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
           if (param1 == 65) {
-            if (this.e(true) &&
+            if (this.isAwaitingResolutionForCamera(true) &&
               this.field_cb.isEmpty(true)) {
-              this.a(param0, -122);
+              this.readTurnStart(param0, -122);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
           if (param1 == 66) {
-            if (this.f(false) &&
+            if (this.isAwaitingResolutionForChat(false) &&
               this.field_cb.isEmpty(true)) {
-              this.c(param0, 105);
+              this.verifyStateChecksum(param0, 105);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
           if (param1 == 63) {
-            if (this.l(-8712) &&
+            if (this.isAwaitingResolutionForHud(-8712) &&
               this.field_cb.isEmpty(true)) {
-              this.b(33, param0);
+              this.readUnitUpdate(33, param0);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
           if (param1 == 64) {
-            if (this.f(-128) &&
+            if (this.isAwaitingResolutionForSpells(-128) &&
               this.field_cb.isEmpty(true)) {
-              this.a((byte) 59, param0);
+              this.beginResync((byte) 59, param0);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
           if (param1 == 62) {
-            if (this.j(param2 - 27726) &&
+            if (this.isAwaitingResolutionForMenu(param2 - 27726) &&
               this.field_cb.isEmpty(true)) {
-              this.a(param0, 0, 8888);
+              this.readTurnTimer(param0, 0, 8888);
             } else {
-              this.a(param3, param1, param0, false);
+              this.bufferIncomingMessage(param3, param1, param0, false);
             }
             return true;
           }
@@ -3469,11 +3469,11 @@ final class le {
             this.field_O = true;
             return false;
           }
-          if (this.b(false) &&
+          if (this.isAwaitingResolutionForInput(false) &&
             this.field_cb.isEmpty(true)) {
-            this.b(param0, -1);
+            this.readActionPacket(param0, -1);
           } else {
-            this.a(param3, param1, param0, false);
+            this.bufferIncomingMessage(param3, param1, param0, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3490,7 +3490,7 @@ final class le {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean checkIdleTimeout(byte param0) {
         long var1_long = 0L;
         long var3 = 0L;
         int var5 = 0;
@@ -3534,9 +3534,9 @@ final class le {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void resetSelection(boolean param0) {
         try {
-          this.a(0, 0, 0, 0, 0, 0, -1, -118);
+          this.trySelectSpell(0, 0, 0, 0, 0, 0, -1, -118);
           this.field_V.setAnimating(true);
           if (param0) {
             this.field_Z = 120;
@@ -3546,7 +3546,7 @@ final class le {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void setSeenBit(byte param0, int param1, int param2) {
         int[] var4 = null;
         int var5 = 0;
         int[] var6 = null;
@@ -3575,7 +3575,7 @@ final class le {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1) {
+    private final void readTurnStart(PacketBuffer param0, int param1) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -3613,7 +3613,7 @@ final class le {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void drawPlayerPanels(boolean param0, byte param1) {
         int fieldTemp$0 = 0;
         int stackIn_60_0 = 0;
         int stackIn_79_0 = 0;
@@ -3648,7 +3648,7 @@ final class le {
         try {
           var3_int = IntKeyLookup.field_g.field_nb;
           if (param1 != 10) {
-            this.a(41, 48, 1, -100);
+            this.drawWater(41, 48, 1, -100);
           }
           var4 = EmailLoginCredentials.field_g - (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
           var5 = -(var3_int >> 1) + MenuButtonPanel.field_I + CameraFollowTarget.field_g;
@@ -3672,12 +3672,12 @@ final class le {
           if (var6 == null &&
             this.field_ab &&
             !this.field_V.isAnimating(true)) {
-            this.a(36);
+            this.sendSelectedSpell(36);
           }
           if (var6 != null &&
             var6.getLinkedUnit(param1 ^ 24511) == null &&
             var6.getOwnerId(17571) != this.field_V.getCurrentPlayer(false)) {
-            var6 = this.q(param1 + 10771);
+            var6 = this.getSelectedUnit(param1 + 10771);
           }
           if (var6 != null &&
             var6.getLinkedUnit(24501) != null &&
@@ -3685,19 +3685,19 @@ final class le {
             var7_ref_ml = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
             if (var7_ref_ml != null &&
               var7_ref_ml.getY((byte) -32) > this.field_V.field_H) {
-              var6 = this.q(10781);
+              var6 = this.getSelectedUnit(10781);
             }
           }
           if (var6 != null &&
             null != var6.getLinkedUnit(24501)) {
             if (!this.field_V.field_d) {
               if (var6.getTeam(false) != this.field_V.getCurrentPlayer(false)) {
-                var6 = this.q(10781);
+                var6 = this.getSelectedUnit(10781);
               }
             } else {
               if (var6.getOwnerId(17571) != this.field_V.getCurrentPlayer(false) && (var6.getLinkedUnit(24501) == null ||
                 var6.getSide(param1 - 132) != this.field_V.getCurrentSide((byte) -122))) {
-                var6 = this.q(10781);
+                var6 = this.getSelectedUnit(10781);
               }
             }
           }
@@ -3761,7 +3761,7 @@ final class le {
             if (var8 == 0 &&
               var9 == 0 &&
               0 < this.field_h) {
-              this.i(2000);
+              this.advanceReplay(2000);
             }
             if (var7 != 0) {
               if (!ri.field_b[69] &&
@@ -3776,7 +3776,7 @@ final class le {
                     DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[224], cf.field_h[224]);
                   }
                   this.field_Y = 25;
-                  var6 = this.q(10781);
+                  var6 = this.getSelectedUnit(10781);
                   if (var6 == null) {
                     var6 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
                   }
@@ -3791,7 +3791,7 @@ final class le {
                 if (0 < this.field_h &&
                   this.field_R != 0 ||
                   this.field_h > 50) {
-                  this.i(param1 + 1990);
+                  this.advanceReplay(param1 + 1990);
                 }
                 this.field_h = this.field_h + 1;
                 this.field_R = 0;
@@ -3808,10 +3808,10 @@ final class le {
                 this.field_Z = 5;
                 if (this.field_h > 0 &&
                   this.field_R != 1) {
-                  this.i(2000);
+                  this.advanceReplay(2000);
                 } else {
                   if (this.field_h > 50) {
-                    this.i(2000);
+                    this.advanceReplay(2000);
                   }
                 }
                 this.field_R = 1;
@@ -4001,18 +4001,18 @@ final class le {
                         this.field_Q = 255 & 1 + this.field_Q;
                       }
                       if (this.field_h > 0) {
-                        this.i(2000);
+                        this.advanceReplay(2000);
                       }
                       if (FixedViewResizeListener.field_e[DropdownList.field_N] == 3) {
-                        this.a(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, var6.getX(-80), var6.getY((byte) 113), this.field_u);
+                        this.submitAction(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, var6.getX(-80), var6.getY((byte) 113), this.field_u);
                       } else {
-                        this.a(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
+                        this.submitAction(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
                       }
                       if (DropdownList.field_N != 87) {
                         DropdownList.field_N = -1;
                       }
                     } else {
-                      this.a(var5, DropdownList.field_N, this.field_r, var4, this.field_u, this.field_s, var6.getOwnerId(17571), param1 ^ -65);
+                      this.trySelectSpell(var5, DropdownList.field_N, this.field_r, var4, this.field_u, this.field_s, var6.getOwnerId(17571), param1 ^ -65);
                       if (DropdownList.field_N != 87) {
                         DropdownList.field_N = -1;
                       }
@@ -4036,7 +4036,7 @@ final class le {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void returnToLobby(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -4056,7 +4056,7 @@ final class le {
         }
     }
 
-    private final void a(BattleUnit param0, int param1) {
+    private final void previewSpellOnUnit(BattleUnit param0, int param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -4078,14 +4078,14 @@ final class le {
               DropdownList.field_N == 155) &&
               (!this.field_ab ||
               this.field_V.getCurrentPlayer(false) == this.field_I))) {
-              this.a((byte) -7, param0);
+              this.drawOffscreenIndicator((byte) -7, param0);
             }
             if ((0 == var3_int ||
               var3_int == 1 &&
               this.field_s != -1000) &&
               (!this.field_ab ||
               this.field_V.getCurrentPlayer(false) == this.field_I)) {
-              this.a(-110, param0);
+              this.drawUnitPointer(-110, param0);
             }
           }
           if (this.field_u > 0 && (!this.field_ab ||
@@ -4095,7 +4095,7 @@ final class le {
             if (DropdownList.field_N == 78) {
               var4 += 64;
             }
-            this.a(var4, (byte) -82, param0, var3_intLifetime1);
+            this.drawUnitArrow(var4, (byte) -82, param0, var3_intLifetime1);
           }
           if (param1 <= 42) {
             this.field_s = -110;
@@ -4115,7 +4115,7 @@ final class le {
         }
     }
 
-    private final void b(int param0, PacketBuffer param1) {
+    private final void readUnitUpdate(int param0, PacketBuffer param1) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -4202,7 +4202,7 @@ final class le {
         }
     }
 
-    private final boolean e(boolean param0) {
+    private final boolean isAwaitingResolutionForCamera(boolean param0) {
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -4211,7 +4211,7 @@ final class le {
             this.field_r = 70;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_o && (this.r(-33) ||
+          if (!this.field_o && (this.isBattleBusy(-33) ||
             this.field_k)) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
@@ -4227,7 +4227,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, BattleUnit param1) {
+    private final void drawUnitPointer(int param0, BattleUnit param1) {
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         String stackIn_109_2 = null;
@@ -4410,7 +4410,7 @@ final class le {
         }
     }
 
-    private final void c(PacketBuffer param0, int param1) {
+    private final void verifyStateChecksum(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -4453,7 +4453,7 @@ final class le {
         }
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void drawUnits(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -4500,8 +4500,8 @@ final class le {
               DropdownList.field_N == -1 &&
               null == EmptyPainter.field_b) {
               if (this.field_V.getCurrentPlayer(false) < 0) {
-                this.g(0);
-                this.a(var6Lifetime1, 98);
+                this.drawTimerBar(0);
+                this.previewSpellOnUnit(var6Lifetime1, 98);
                 return;
               }
               var7Lifetime1 = -param2 + ((EmailLoginCredentials.field_f >> 1) + var6Lifetime1.getX(param1 ^ -82));
@@ -4511,8 +4511,8 @@ final class le {
                 DualLinkDeque.field_b[3].drawTinted(var7Lifetime1 - 16, -(int)(Math.sin(3.14 * (double)this.field_P / 32.0) * 32.0) - 16 + var8Lifetime1, var9);
               }
             }
-            this.g(0);
-            this.a(var6Lifetime1, 98);
+            this.drawTimerBar(0);
+            this.previewSpellOnUnit(var6Lifetime1, 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4522,7 +4522,7 @@ final class le {
         }
     }
 
-    private final BattleUnit q(int param0) {
+    private final BattleUnit getSelectedUnit(int param0) {
         BattleUnit stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         IntrusiveNode stackIn_13_0 = null;
@@ -4616,11 +4616,11 @@ final class le {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void beginNextTurn(boolean param0) {
         try {
           this.field_V.updateTurnTimer((byte) 88, this.field_J);
           this.field_V.advanceToNextPlayer(-1);
-          this.b(0);
+          this.startTurnView(0);
           this.field_F = param0 ? true : false;
           this.field_z = this.field_V.getThemeParameter(12955);
         } catch (RuntimeException runtimeException) {
@@ -4628,7 +4628,7 @@ final class le {
         }
     }
 
-    private final void d(int param0) {
+    private final void drawTurnBar(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -4646,7 +4646,7 @@ final class le {
           }
           if (param0 != -25343) {
             var7 = (BattleUnit) null;
-            this.a(-125, (BattleUnit) null);
+            this.drawUnitPointer(-125, (BattleUnit) null);
           }
           if (this.field_V.getArenaTheme(param0 ^ 6646) == 1) {
             var4 = 17;
@@ -4693,7 +4693,7 @@ final class le {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void trySelectSpell(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -4733,7 +4733,7 @@ final class le {
         }
     }
 
-    final void g(byte param0) {
+    final void sendTurnCommand61(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -4752,7 +4752,7 @@ final class le {
         }
     }
 
-    private final void b(PacketBuffer param0, int param1) {
+    private final void readActionPacket(PacketBuffer param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -4786,7 +4786,7 @@ final class le {
         }
     }
 
-    le(boolean param0, int param1, int param2, boolean param3, String[] param4, int param5, int[][] param6, int[][] param7, int[] param8, int param9, int param10, boolean param11, int param12, boolean[] param13) {
+    BattleScreen(boolean param0, int param1, int param2, boolean param3, String[] param4, int param5, int[][] param6, int[][] param7, int[] param8, int param9, int param10, boolean param11, int param12, boolean[] param13) {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_15_0 = null;

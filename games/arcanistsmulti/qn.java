@@ -4,7 +4,7 @@
 final class qn extends ResizableModalPanel implements ButtonListener {
     private TextButton field_V;
     static String field_kb;
-    static le field_ob;
+    static BattleScreen field_ob;
     static String field_lb;
     static String field_pb;
     static IntrusiveDeque field_mb;
@@ -128,7 +128,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
             var1 = ie.field_Qb.nextInTraversal(-1);
           }
           if (param0 < 30) {
-            field_ob = (le) null;
+            field_ob = (BattleScreen) null;
           }
           var1Lifetime1 = uc.field_c.firstInTraversal(-63);
           while (var1Lifetime1 != null) {

@@ -379,7 +379,7 @@ final class WhirlpoolHasher {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          qn.field_ob.a(0, 4, 0, rk.field_O.field_y / 2, 0, rk.field_O.field_y / 2, 0, -60);
+          qn.field_ob.trySelectSpell(0, 4, 0, rk.field_O.field_y / 2, 0, rk.field_O.field_y / 2, 0, -60);
           if (StatefulTextPainter.field_p != 6) {
             param0.setHealth((byte) -92, 250);
           } else {

@@ -272,7 +272,7 @@ final class UiTheme {
         }
         var5[4] = (Sprite) ((Object) var18);
         var4.createStyleLayer((byte) -62, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
-        var4.createStyleLayer((byte) -113, 5).withFrameSprites((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
+        var4.createStyleLayer((byte) -113, 5).withFrameSprites((byte) -71, BattleScreen.createPanelFrame(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
         this.field_u = (WidgetPainter) ((Object) var4);
         StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
         var6.field_i = 0;

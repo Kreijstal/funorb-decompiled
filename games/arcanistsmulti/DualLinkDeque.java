@@ -142,7 +142,7 @@ final class DualLinkDeque {
         if (param3 != 17) {
           return -27;
         }
-        return le.h(-1993);
+        return BattleScreen.updateRootInput(-1993);
     }
 
     static {

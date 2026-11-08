@@ -189,7 +189,7 @@ final class ao {
             if (var5 < 0) {
               var4 = var4 + u.field_l;
             } else {
-              var6 = lc.a(true, pm.field_f[var3_int], (byte) -97);
+              var6 = MenuScreen.measureText(true, pm.field_f[var3_int], (byte) -97);
               var4 = var4 + ic.field_a;
               var7 = -(var6 >> 1) + af.field_Eb;
               if (bj.containsPoint(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1), param1, var7 - f.field_h)) {

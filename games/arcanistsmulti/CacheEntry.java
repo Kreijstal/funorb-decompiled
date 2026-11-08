@@ -118,7 +118,7 @@ abstract class CacheEntry extends DualLinkNode {
         int var17_intLifetime4;
         var21 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          le.field_q = param12;
+          BattleScreen.field_q = param12;
           fl.field_b = param7;
           pn.field_b = param13;
           NanoFrameClock.field_o = param6;
@@ -160,7 +160,7 @@ abstract class CacheEntry extends DualLinkNode {
           sm.field_c = new SceneWidget(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
           ad.field_c = new SceneWidget(0L, ia.field_a);
           CachedArchiveProvider.field_o = new SceneWidget(0L, vf.field_u, of.field_k);
-          FrameClock.field_e = new SceneWidget(0L, EditableTextWidget.field_S, lc.field_c);
+          FrameClock.field_e = new SceneWidget(0L, EditableTextWidget.field_S, MenuScreen.field_c);
           ci.field_a = new SceneWidget(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
           lo.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
           WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, g.field_b);
@@ -244,12 +244,12 @@ abstract class CacheEntry extends DualLinkNode {
           }
           ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, SpellProjectile.field_A, SecondaryNodeDeque.field_b);
           IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
-          if (le.field_q > 1) {
+          if (BattleScreen.field_q > 1) {
             ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, SpellProjectile.field_A, fm.field_e);
-            array$1 = new IconTextSceneWidget[le.field_q + 1];
+            array$1 = new IconTextSceneWidget[BattleScreen.field_q + 1];
             IndexedSpriteState.field_e[3] = array$1;
             IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < le.field_q; var17_intLifetime2++) {
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < BattleScreen.field_q; var17_intLifetime2++) {
               IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
             }
           }
@@ -307,7 +307,7 @@ abstract class CacheEntry extends DualLinkNode {
           for (var18Lifetime2 = 0; var18Lifetime2 < param2 + 4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(2 > ao.field_h.length)) && (3 != var18Lifetime2 ||
-              !(1 >= le.field_q))) {
+              !(1 >= BattleScreen.field_q))) {
               SpellProjectile.field_m.addChild(ResizableViewResizeListener.field_g[var18Lifetime2], param14 + 5);
               for (var19 = 0; IndexedSpriteState.field_e[var18Lifetime2].length > var19; var19++) {
                 if (IndexedSpriteState.field_e[var18Lifetime2][var19] != null) {

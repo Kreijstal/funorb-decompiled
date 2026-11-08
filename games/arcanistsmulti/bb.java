@@ -356,7 +356,7 @@ final class bb {
             ad.field_d >= 10) {
             return;
           }
-          lc.a((byte) 112);
+          MenuScreen.getSessionFlag((byte) 112);
           he.field_e.writeOpcode((byte) -76, 68);
           if (param0 >= -116) {
             return;

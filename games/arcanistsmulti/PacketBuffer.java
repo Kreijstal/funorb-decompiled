@@ -709,13 +709,13 @@ class PacketBuffer extends IntrusiveNode {
           da.measureCaptionWidths((byte) -101);
           int var2 = 122 % ((param0 + 21) / 48);
           for (var1_int = 0; var1_int < 17; var1_int++) {
-            ArchiveProvider.field_f[var1_int] = new lc(var1_int);
+            ArchiveProvider.field_f[var1_int] = new MenuScreen(var1_int);
           }
           mn.field_r = 13;
           CheckboxPainter.field_g = 13;
           qn.setTargetFrameRate(16, 50);
           sm.a(-107, 50);
-          if (!lc.a((byte) 112)) {
+          if (!MenuScreen.getSessionFlag((byte) 112)) {
             ce.field_i = CachedArchiveProvider.a(4, -21402);
             ci.field_d = AlternateUsernameCredentials.a(6, false);
           }

@@ -24,7 +24,7 @@ final class lf {
             return;
           }
           if (SceneTabbedPanel.isNonNegative(CheckboxPainter.field_g, 10)) {
-            ArchiveProvider.field_f[CheckboxPainter.field_g].d((byte) 103);
+            ArchiveProvider.field_f[CheckboxPainter.field_g].leaveScreen((byte) 103);
           }
           var1_int = CheckboxPainter.field_g;
           CheckboxPainter.field_g = mn.field_r;

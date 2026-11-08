@@ -581,7 +581,7 @@ abstract class GameApplet extends GameAppletShell {
               fk.d(-11);
               if (u.field_b != 3) {
                 if (u.field_b == 4) {
-                  oa.a(true, 256, le.field_N);
+                  oa.a(true, 256, BattleScreen.field_N);
                 } else {
                   if (u.field_b == 2) {
                     oa.a(true, 256, BevelTextPainter.field_p);

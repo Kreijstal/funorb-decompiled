@@ -176,8 +176,8 @@ abstract class ArchiveRequest extends DualLinkNode {
           SpellProjectile.field_A = new SceneWidget(0L, IntrusiveNode.field_c);
           SpellProjectile.field_A.field_v = rb.a(false, false, 652, 1513239, 1513239, 16);
           SpellProjectile.field_A.field_t = 2;
-          le.field_E = new SceneWidget(0L, BevelBoxPainter.field_f);
-          le.field_E.applyStyle(nj.field_d, (byte) 118);
+          BattleScreen.field_E = new SceneWidget(0L, BevelBoxPainter.field_f);
+          BattleScreen.field_E.applyStyle(nj.field_d, (byte) 118);
           qa.field_j = new SceneWidget(0L, SpellProjectile.field_A);
           qa.field_j.applyStyle(nj.field_d, (byte) 119);
           var16 = qe.loadSpriteSheet(param1, "button_mouseover", "lobby", param0 + 91);

@@ -182,16 +182,16 @@ final class ContextActionMenu extends SceneWidget {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
-              var12.field_Gb = new SceneWidget(0L, le.field_E);
+              var12.field_Gb = new SceneWidget(0L, BattleScreen.field_E);
               var14 = param4 | param2;
               var12.addChild(var12.field_Gb, param3 ^ 47);
               var12.field_Gb.field_X = 1;
               var12.field_jc = new SceneWidget(0L, qa.field_j);
               var12.addChild(var12.field_jc, 80);
-              var12.field_Mb = new SceneWidget(0L, le.field_E);
+              var12.field_Mb = new SceneWidget(0L, BattleScreen.field_E);
               var12.addChild(var12.field_Mb, 65);
               var12.field_Mb.field_t = 0;
-              var12.field_Eb = new SceneWidget(0L, le.field_E);
+              var12.field_Eb = new SceneWidget(0L, BattleScreen.field_E);
               var12.addChild(var12.field_Eb, 35);
               var12.field_Eb.field_t = 0;
               var12.field_cc = new SceneWidget(0L, qa.field_j);
@@ -204,7 +204,7 @@ final class ContextActionMenu extends SceneWidget {
               if (fc.field_a) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = le.field_E;
+                stackIn_13_4 = BattleScreen.field_E;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
@@ -254,7 +254,7 @@ final class ContextActionMenu extends SceneWidget {
               } else {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
-                stackIn_31_4 = le.field_E;
+                stackIn_31_4 = BattleScreen.field_E;
               }
               stackIn_30_0.field_hc = new SceneWidget(stackIn_30_3, stackIn_31_4);
               var12.addChild(var12.field_hc, 7);

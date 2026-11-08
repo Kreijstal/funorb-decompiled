@@ -83,11 +83,11 @@ final class om extends UiComponent {
           }
           if (1 == var2) {
             var4_int = var9.readSignedSmart(-1);
-            var5_ref_ko = (ko) (lc.field_j.first(param0 + 12594));
+            var5_ref_ko = (ko) (MenuScreen.field_j.first(param0 + 12594));
             while (var5_ref_ko != null) {
               if (var5_ref_ko.field_i != var3 ||
                 var5_ref_ko.field_l != var4_int) {
-                var5_ref_ko = (ko) (lc.field_j.next(param0 - 29));
+                var5_ref_ko = (ko) (MenuScreen.field_j.next(param0 - 29));
                 continue;
               }
               break;

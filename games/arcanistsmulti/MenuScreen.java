@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc {
+final class MenuScreen {
     private int field_i;
     private so field_g;
     private int field_h;
@@ -21,7 +21,7 @@ final class lc {
     static String field_e;
     static String field_p;
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawHintText(int param0, int param1, int param2, int param3) {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -80,7 +80,7 @@ final class lc {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int getItemX(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_10_1 = 0;
@@ -103,11 +103,11 @@ final class lc {
         RuntimeException var3 = null;
         try {
           if (6 == this.field_l) {
-            if (lc.a((byte) 112)) {
-              stackIn_5_0 = this.b(param1, 200) + 320;
+            if (MenuScreen.getSessionFlag((byte) 112)) {
+              stackIn_5_0 = this.getColumnX(param1, 200) + 320;
               return stackIn_5_0;
             }
-            stackIn_9_0 = this.b(param1, 200);
+            stackIn_9_0 = this.getColumnX(param1, 200);
             if (param1 >= 2) {
               stackIn_10_1 = 300;
             } else {
@@ -117,7 +117,7 @@ final class lc {
             return stackIn_11_0;
           }
           if (7 == this.field_l) {
-            stackIn_16_0 = 200 + this.b(param1, 200);
+            stackIn_16_0 = 200 + this.getColumnX(param1, 200);
             return stackIn_16_0;
           }
           if (this.field_l == 11) {
@@ -126,7 +126,7 @@ final class lc {
               return stackIn_23_0;
             }
             if (param1 != 1) {
-              stackIn_28_0 = 200 + this.b(param1, 200);
+              stackIn_28_0 = 200 + this.getColumnX(param1, 200);
               return stackIn_28_0;
             }
             stackIn_26_0 = 611;
@@ -138,14 +138,14 @@ final class lc {
               return stackIn_35_0;
             }
             if (param1 != 1) {
-              stackIn_40_0 = 200 + this.b(param1, 200);
+              stackIn_40_0 = 200 + this.getColumnX(param1, 200);
               return stackIn_40_0;
             }
             stackIn_38_0 = 619;
             return stackIn_38_0;
           }
           if (this.field_l == 14) {
-            stackIn_43_0 = this.b(param1, param0 ^ -193) + 200;
+            stackIn_43_0 = this.getColumnX(param1, param0 ^ -193) + 200;
             return stackIn_43_0;
           }
           if (3 == this.field_l) {
@@ -179,7 +179,7 @@ final class lc {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean getSessionFlag(byte param0) {
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -196,7 +196,7 @@ final class lc {
         }
     }
 
-    private final void f(int param0) {
+    private final void updateHoverSelection(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -222,7 +222,7 @@ final class lc {
         }
     }
 
-    final static int a(boolean param0, String param1, byte param2) {
+    final static int measureText(boolean param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -256,7 +256,7 @@ final class lc {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawContent(byte param0) {
         boolean discarded$0 = false;
         String var2 = null;
         int var3 = 0;
@@ -763,13 +763,13 @@ final class lc {
                           if (var12_int == 8) {
                             var2 = EmailLoginCredentials.field_m;
                             var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                            this.a(var3, var4, (byte) -102, 3);
+                            this.drawPlayerTile(var3, var4, (byte) -102, 3);
                             var2 = ne.field_j;
                             SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                             var2 = LobbyGameEntry.field_Tb;
                             var3 += 128;
                             var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
-                            this.a(var3, var4, (byte) -77, 0);
+                            this.drawPlayerTile(var3, var4, (byte) -77, 0);
                             var2 = OptionsDialog.field_pb;
                             SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                             bb.field_g[5].drawTransparent(var4, var3 + 80);
@@ -778,14 +778,14 @@ final class lc {
                               if (var12_int == 10) {
                                 var2 = oo.field_q;
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
-                                this.a(var3, var4, (byte) -47, 4);
+                                this.drawPlayerTile(var3, var4, (byte) -47, 4);
                                 var2 = ValidationHelpWidget.field_S;
                                 SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                 bb.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
                                 var2 = SingleChildContainer.field_A;
                                 var3 += 128;
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
-                                this.a(var3, var4, (byte) -86, 5);
+                                this.drawPlayerTile(var3, var4, (byte) -86, 5);
                                 var2 = lm.field_d;
                                 SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                 bb.field_g[55].drawTransparent(var4, 80 + var3);
@@ -793,14 +793,14 @@ final class lc {
                                 if (var12_int == 11) {
                                   var2 = ck.field_c;
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                                  this.a(var3, var4, (byte) -36, 6);
+                                  this.drawPlayerTile(var3, var4, (byte) -36, 6);
                                   var2 = qj.field_f;
                                   SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                                   bb.field_g[67].drawTransparent(var4, var3 + 80);
                                   var3 += 128;
                                   var2 = b.field_c;
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                                  this.a(var3, var4, (byte) -42, 7);
+                                  this.drawPlayerTile(var3, var4, (byte) -42, 7);
                                   var2 = ClipState.field_l;
                                   SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                   bb.field_g[85].drawTransparent(var4, 120 + (-40 + var3));
@@ -832,14 +832,14 @@ final class lc {
                             } else {
                               var2 = rk.field_J;
                               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                              this.a(var3, var4, (byte) -49, 1);
+                              this.drawPlayerTile(var3, var4, (byte) -49, 1);
                               var2 = ah.field_e;
                               SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                               bb.field_g[17].drawTransparent(var4, var3 + 80);
                               var2 = hn.field_o;
                               var3 += 128;
                               var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
-                              this.a(var3, var4, (byte) -71, 2);
+                              this.drawPlayerTile(var3, var4, (byte) -71, 2);
                               var2 = SceneScrollPane.field_Bb;
                               SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                               bb.field_g[42].drawTransparent(var4, 80 + var3);
@@ -925,7 +925,7 @@ final class lc {
           stackIn_94_0Lifetime1 = param0;
           stackIn_94_1Lifetime1 = 71;
           if (stackIn_94_0Lifetime1 < stackIn_94_1Lifetime1) {
-            discarded$0 = this.g(-45, -88);
+            discarded$0 = this.isItemUnlocked(-45, -88);
           }
           CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.a(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
           return;
@@ -936,12 +936,12 @@ final class lc {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void setScreenSize(int param0, int param1, boolean param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param2) {
-            lc.c(true);
+            MenuScreen.releaseStatics(true);
           }
           SoundCache.field_c = param1;
           mf.field_c = param0;
@@ -956,7 +956,7 @@ final class lc {
         }
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void activateItem(boolean param0, int param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -966,7 +966,7 @@ final class lc {
           if (this.field_l == 10) {
             param1 = 1;
           }
-          this.field_g.a(param0, param1, false, this.a((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
+          this.field_g.a(param0, param1, false, this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
           LabeledField.field_K = -1;
           if (param2 >= -113) {
             field_r = (String) null;
@@ -981,7 +981,7 @@ final class lc {
         }
     }
 
-    private final void i(int param0) {
+    private final void drawAnimatedScreen(int param0) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
@@ -1072,7 +1072,7 @@ final class lc {
                 }
                 case 1: {
                     try {
-                        this.c(-26733);
+                        this.drawBottomPanel(-26733);
                         this.field_m = -1;
                         var3 = 142;
                         var4_int = 0;
@@ -1081,7 +1081,7 @@ final class lc {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_1);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -1127,7 +1127,7 @@ final class lc {
                     } catch (Throwable stateCaught_2) {
                         statePc = ((Object) stateCaught_2 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_2);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_2);
                         }
                         caughtException = stateCaught_2;
                         continue scanLoop1;
@@ -1135,7 +1135,7 @@ final class lc {
                 }
                 case 7: {
                     try {
-                        if (!this.a(stackIn_7_1 != 0, 65, (byte) -127, true, 32 + (ValidatedTextWidget.field_I + 86 * var4_int), 65, uc.field_a + 104)) {
+                        if (!this.drawButtonBox(stackIn_7_1 != 0, 65, (byte) -127, true, 32 + (ValidatedTextWidget.field_I + 86 * var4_int), 65, uc.field_a + 104)) {
                             /* Inlined CFG state: 9. */
                             {
                                 stackIn_10_0 = 0;
@@ -1153,7 +1153,7 @@ final class lc {
                     } catch (Throwable stateCaught_7) {
                         statePc = ((Object) stateCaught_7 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_7);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_7);
                         }
                         caughtException = stateCaught_7;
                         continue scanLoop1;
@@ -1172,7 +1172,7 @@ final class lc {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_10);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -1211,7 +1211,7 @@ final class lc {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_11);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -1225,7 +1225,7 @@ final class lc {
                     } catch (Throwable stateCaught_17) {
                         statePc = ((Object) stateCaught_17 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_17);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_17);
                         }
                         caughtException = stateCaught_17;
                         continue scanLoop1;
@@ -1239,7 +1239,7 @@ final class lc {
                     } catch (Throwable stateCaught_19) {
                         statePc = ((Object) stateCaught_19 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_19);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_19);
                         }
                         caughtException = stateCaught_19;
                         continue scanLoop1;
@@ -1261,7 +1261,7 @@ final class lc {
                     } catch (Throwable stateCaught_20) {
                         statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_20);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_20);
                         }
                         caughtException = stateCaught_20;
                         continue scanLoop1;
@@ -1286,7 +1286,7 @@ final class lc {
                     } catch (Throwable stateCaught_22) {
                         statePc = ((Object) stateCaught_22 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_22);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_22);
                         }
                         caughtException = stateCaught_22;
                         continue scanLoop1;
@@ -1311,7 +1311,7 @@ final class lc {
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_26);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
                         continue scanLoop1;
@@ -1333,7 +1333,7 @@ final class lc {
                     } catch (Throwable stateCaught_30) {
                         statePc = ((Object) stateCaught_30 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_30);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_30);
                         }
                         caughtException = stateCaught_30;
                         continue scanLoop1;
@@ -1358,7 +1358,7 @@ final class lc {
                     } catch (Throwable stateCaught_32) {
                         statePc = ((Object) stateCaught_32 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_32);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_32);
                         }
                         caughtException = stateCaught_32;
                         continue scanLoop1;
@@ -1366,7 +1366,7 @@ final class lc {
                 }
                 case 36: {
                     try {
-                        discarded$0 = this.a(true, 180, (byte) -106, false, ValidatedTextWidget.field_I + 32, 114, 182 + uc.field_a);
+                        discarded$0 = this.drawButtonBox(true, 180, (byte) -106, false, ValidatedTextWidget.field_I + 32, 114, 182 + uc.field_a);
                         var3 = 210 + uc.field_a;
                         var2_int = ValidatedTextWidget.field_I + 90;
                         var13 = -1;
@@ -1376,7 +1376,7 @@ final class lc {
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_36);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
                         continue scanLoop1;
@@ -1444,7 +1444,7 @@ final class lc {
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_37);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
                         continue scanLoop1;
@@ -1463,7 +1463,7 @@ final class lc {
                     } catch (Throwable stateCaught_46) {
                         statePc = ((Object) stateCaught_46 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_46);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_46);
                         }
                         caughtException = stateCaught_46;
                         continue scanLoop1;
@@ -1477,7 +1477,7 @@ final class lc {
                     } catch (Throwable stateCaught_49) {
                         statePc = ((Object) stateCaught_49 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_49);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
                         continue scanLoop1;
@@ -1506,7 +1506,7 @@ final class lc {
                     } catch (Throwable stateCaught_51) {
                         statePc = ((Object) stateCaught_51 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_51);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_51);
                         }
                         caughtException = stateCaught_51;
                         continue scanLoop1;
@@ -1519,7 +1519,7 @@ final class lc {
                     } catch (Throwable stateCaught_53) {
                         statePc = ((Object) stateCaught_53 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_53);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_53);
                         }
                         caughtException = stateCaught_53;
                         continue scanLoop1;
@@ -1535,7 +1535,7 @@ final class lc {
                     } catch (Throwable stateCaught_55) {
                         statePc = ((Object) stateCaught_55 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_55);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_55);
                         }
                         caughtException = stateCaught_55;
                         continue scanLoop1;
@@ -1560,7 +1560,7 @@ final class lc {
                     } catch (Throwable stateCaught_56) {
                         statePc = ((Object) stateCaught_56 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_56);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_56);
                         }
                         caughtException = stateCaught_56;
                         continue scanLoop1;
@@ -1584,7 +1584,7 @@ final class lc {
                     } catch (Throwable stateCaught_60) {
                         statePc = ((Object) stateCaught_60 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_60);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_60);
                         }
                         caughtException = stateCaught_60;
                         continue scanLoop1;
@@ -1606,7 +1606,7 @@ final class lc {
                     } catch (Throwable stateCaught_62) {
                         statePc = ((Object) stateCaught_62 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_62);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_62);
                         }
                         caughtException = stateCaught_62;
                         continue scanLoop1;
@@ -1632,7 +1632,7 @@ final class lc {
                     } catch (Throwable stateCaught_64) {
                         statePc = ((Object) stateCaught_64 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_64);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_64);
                         }
                         caughtException = stateCaught_64;
                         continue scanLoop1;
@@ -1656,7 +1656,7 @@ final class lc {
                     } catch (Throwable stateCaught_68) {
                         statePc = ((Object) stateCaught_68 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_68);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_68);
                         }
                         caughtException = stateCaught_68;
                         continue scanLoop1;
@@ -1682,7 +1682,7 @@ final class lc {
                     } catch (Throwable stateCaught_70) {
                         statePc = ((Object) stateCaught_70 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_70);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_70);
                         }
                         caughtException = stateCaught_70;
                         continue scanLoop1;
@@ -1707,7 +1707,7 @@ final class lc {
                     } catch (Throwable stateCaught_74) {
                         statePc = ((Object) stateCaught_74 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_74);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_74);
                         }
                         caughtException = stateCaught_74;
                         continue scanLoop1;
@@ -1731,7 +1731,7 @@ final class lc {
                     } catch (Throwable stateCaught_78) {
                         statePc = ((Object) stateCaught_78 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_78);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_78);
                         }
                         caughtException = stateCaught_78;
                         continue scanLoop1;
@@ -1789,7 +1789,7 @@ final class lc {
                     } catch (Throwable stateCaught_80) {
                         statePc = ((Object) stateCaught_80 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_80);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_80);
                         }
                         caughtException = stateCaught_80;
                         continue scanLoop1;
@@ -1803,7 +1803,7 @@ final class lc {
                     } catch (Throwable stateCaught_82) {
                         statePc = ((Object) stateCaught_82 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_82);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_82);
                         }
                         caughtException = stateCaught_82;
                         continue scanLoop1;
@@ -1817,7 +1817,7 @@ final class lc {
                     } catch (Throwable stateCaught_83) {
                         statePc = ((Object) stateCaught_83 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_83);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_83);
                         }
                         caughtException = stateCaught_83;
                         continue scanLoop1;
@@ -1844,7 +1844,7 @@ final class lc {
                     } catch (Throwable stateCaught_84) {
                         statePc = ((Object) stateCaught_84 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_84);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_84);
                         }
                         caughtException = stateCaught_84;
                         continue scanLoop1;
@@ -1869,7 +1869,7 @@ final class lc {
                     } catch (Throwable stateCaught_87) {
                         statePc = ((Object) stateCaught_87 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_87);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_87);
                         }
                         caughtException = stateCaught_87;
                         continue scanLoop1;
@@ -1883,7 +1883,7 @@ final class lc {
                     } catch (Throwable stateCaught_88) {
                         statePc = ((Object) stateCaught_88 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_88);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_88);
                         }
                         caughtException = stateCaught_88;
                         continue scanLoop1;
@@ -1911,7 +1911,7 @@ final class lc {
                     } catch (Throwable stateCaught_89) {
                         statePc = ((Object) stateCaught_89 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_89);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_89);
                         }
                         caughtException = stateCaught_89;
                         continue scanLoop1;
@@ -1925,7 +1925,7 @@ final class lc {
                     } catch (Throwable stateCaught_93) {
                         statePc = ((Object) stateCaught_93 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_93);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_93);
                         }
                         caughtException = stateCaught_93;
                         continue scanLoop1;
@@ -1949,7 +1949,7 @@ final class lc {
                     } catch (Throwable stateCaught_94) {
                         statePc = ((Object) stateCaught_94 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_94);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_94);
                         }
                         caughtException = stateCaught_94;
                         continue scanLoop1;
@@ -1979,7 +1979,7 @@ final class lc {
                     } catch (Throwable stateCaught_97) {
                         statePc = ((Object) stateCaught_97 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_97);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_97);
                         }
                         caughtException = stateCaught_97;
                         continue scanLoop1;
@@ -2008,7 +2008,7 @@ final class lc {
                     } catch (Throwable stateCaught_102) {
                         statePc = ((Object) stateCaught_102 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_102);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_102);
                         }
                         caughtException = stateCaught_102;
                         continue scanLoop1;
@@ -2037,7 +2037,7 @@ final class lc {
                     } catch (Throwable stateCaught_107) {
                         statePc = ((Object) stateCaught_107 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_107);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_107);
                         }
                         caughtException = stateCaught_107;
                         continue scanLoop1;
@@ -2051,7 +2051,7 @@ final class lc {
                     } catch (Throwable stateCaught_111) {
                         statePc = ((Object) stateCaught_111 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_111);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_111);
                         }
                         caughtException = stateCaught_111;
                         continue scanLoop1;
@@ -2065,7 +2065,7 @@ final class lc {
                     } catch (Throwable stateCaught_112) {
                         statePc = ((Object) stateCaught_112 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_112);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_112);
                         }
                         caughtException = stateCaught_112;
                         continue scanLoop1;
@@ -2101,7 +2101,7 @@ final class lc {
                     } catch (Throwable stateCaught_113) {
                         statePc = ((Object) stateCaught_113 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_113);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_113);
                         }
                         caughtException = stateCaught_113;
                         continue scanLoop1;
@@ -2123,7 +2123,7 @@ final class lc {
                     } catch (Throwable stateCaught_119) {
                         statePc = ((Object) stateCaught_119 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_119);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_119);
                         }
                         caughtException = stateCaught_119;
                         continue scanLoop1;
@@ -2153,7 +2153,7 @@ final class lc {
                     } catch (Throwable stateCaught_122) {
                         statePc = ((Object) stateCaught_122 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_122);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_122);
                         }
                         caughtException = stateCaught_122;
                         continue scanLoop1;
@@ -2179,7 +2179,7 @@ final class lc {
                     } catch (Throwable stateCaught_125) {
                         statePc = ((Object) stateCaught_125 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_125);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_125);
                         }
                         caughtException = stateCaught_125;
                         continue scanLoop1;
@@ -2203,7 +2203,7 @@ final class lc {
                     } catch (Throwable stateCaught_128) {
                         statePc = ((Object) stateCaught_128 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_128);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_128);
                         }
                         caughtException = stateCaught_128;
                         continue scanLoop1;
@@ -2216,7 +2216,7 @@ final class lc {
                     } catch (Throwable stateCaught_129) {
                         statePc = ((Object) stateCaught_129 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_129);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_129);
                         }
                         caughtException = stateCaught_129;
                         continue scanLoop1;
@@ -2230,7 +2230,7 @@ final class lc {
                     } catch (Throwable stateCaught_131) {
                         statePc = ((Object) stateCaught_131 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_131);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_131);
                         }
                         caughtException = stateCaught_131;
                         continue scanLoop1;
@@ -2256,7 +2256,7 @@ final class lc {
                     } catch (Throwable stateCaught_132) {
                         statePc = ((Object) stateCaught_132 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_132);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_132);
                         }
                         caughtException = stateCaught_132;
                         continue scanLoop1;
@@ -2273,7 +2273,7 @@ final class lc {
                     } catch (Throwable stateCaught_136) {
                         statePc = ((Object) stateCaught_136 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_136);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_136);
                         }
                         caughtException = stateCaught_136;
                         continue scanLoop1;
@@ -2312,7 +2312,7 @@ final class lc {
                     } catch (Throwable stateCaught_137) {
                         statePc = ((Object) stateCaught_137 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_137);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_137);
                         }
                         caughtException = stateCaught_137;
                         continue scanLoop1;
@@ -2351,7 +2351,7 @@ final class lc {
                     } catch (Throwable stateCaught_144) {
                         statePc = ((Object) stateCaught_144 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_144);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_144);
                         }
                         caughtException = stateCaught_144;
                         continue scanLoop1;
@@ -2377,7 +2377,7 @@ final class lc {
                     } catch (Throwable stateCaught_150) {
                         statePc = ((Object) stateCaught_150 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_150);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_150);
                         }
                         caughtException = stateCaught_150;
                         continue scanLoop1;
@@ -2392,7 +2392,7 @@ final class lc {
                     } catch (Throwable stateCaught_153) {
                         statePc = ((Object) stateCaught_153 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_153);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_153);
                         }
                         caughtException = stateCaught_153;
                         continue scanLoop1;
@@ -2466,7 +2466,7 @@ final class lc {
                     } catch (Throwable stateCaught_154) {
                         statePc = ((Object) stateCaught_154 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_154);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_154);
                         }
                         caughtException = stateCaught_154;
                         continue scanLoop1;
@@ -2501,7 +2501,7 @@ final class lc {
                     } catch (Throwable stateCaught_165) {
                         statePc = ((Object) stateCaught_165 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_165);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_165);
                         }
                         caughtException = stateCaught_165;
                         continue scanLoop1;
@@ -2515,7 +2515,7 @@ final class lc {
                     } catch (Throwable stateCaught_172) {
                         statePc = ((Object) stateCaught_172 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_172);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_172);
                         }
                         caughtException = stateCaught_172;
                         continue scanLoop1;
@@ -2570,7 +2570,7 @@ final class lc {
                     } catch (Throwable stateCaught_177) {
                         statePc = ((Object) stateCaught_177 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_177);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_177);
                         }
                         caughtException = stateCaught_177;
                         continue scanLoop1;
@@ -2587,7 +2587,7 @@ final class lc {
                     } catch (Throwable stateCaught_188) {
                         statePc = ((Object) stateCaught_188 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_188);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_188);
                         }
                         caughtException = stateCaught_188;
                         continue scanLoop1;
@@ -2595,7 +2595,7 @@ final class lc {
                 }
                 case 191: {
                     try {
-                        discarded$1 = this.a(false, 330, (byte) -24, false, ValidatedTextWidget.field_I + 254, 114, 182 + uc.field_a);
+                        discarded$1 = this.drawButtonBox(false, 330, (byte) -24, false, ValidatedTextWidget.field_I + 254, 114, 182 + uc.field_a);
                         if (var4 != null) {
                             statePc = 194;
                         } else {
@@ -2605,7 +2605,7 @@ final class lc {
                     } catch (Throwable stateCaught_191) {
                         statePc = ((Object) stateCaught_191 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_191);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_191);
                         }
                         caughtException = stateCaught_191;
                         continue scanLoop1;
@@ -2618,7 +2618,7 @@ final class lc {
                     } catch (Throwable stateCaught_192) {
                         statePc = ((Object) stateCaught_192 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_192);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_192);
                         }
                         caughtException = stateCaught_192;
                         continue scanLoop1;
@@ -2632,7 +2632,7 @@ final class lc {
                     } catch (Throwable stateCaught_194) {
                         statePc = ((Object) stateCaught_194 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_194);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_194);
                         }
                         caughtException = stateCaught_194;
                         continue scanLoop1;
@@ -2654,7 +2654,7 @@ final class lc {
                     } catch (Throwable stateCaught_195) {
                         statePc = ((Object) stateCaught_195 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_195);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_195);
                         }
                         caughtException = stateCaught_195;
                         continue scanLoop1;
@@ -2676,7 +2676,7 @@ final class lc {
                     } catch (Throwable stateCaught_198) {
                         statePc = ((Object) stateCaught_198 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_198);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_198);
                         }
                         caughtException = stateCaught_198;
                         continue scanLoop1;
@@ -2698,7 +2698,7 @@ final class lc {
                     } catch (Throwable stateCaught_200) {
                         statePc = ((Object) stateCaught_200 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_200);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_200);
                         }
                         caughtException = stateCaught_200;
                         continue scanLoop1;
@@ -2706,13 +2706,13 @@ final class lc {
                 }
                 case 201: {
                     try {
-                        discarded$2 = this.a((byte) 5, -89);
+                        discarded$2 = this.canMoveToPage((byte) 5, -89);
                         statePc = 203;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_201) {
                         statePc = ((Object) stateCaught_201 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_201);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_201);
                         }
                         caughtException = stateCaught_201;
                         continue scanLoop1;
@@ -2728,7 +2728,7 @@ final class lc {
                     } catch (Throwable stateCaught_203) {
                         statePc = ((Object) stateCaught_203 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_203);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_203);
                         }
                         caughtException = stateCaught_203;
                         continue scanLoop1;
@@ -2743,7 +2743,7 @@ final class lc {
                     } catch (Throwable stateCaught_204) {
                         statePc = ((Object) stateCaught_204 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_204);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_204);
                         }
                         caughtException = stateCaught_204;
                         continue scanLoop1;
@@ -2784,7 +2784,7 @@ final class lc {
                     } catch (Throwable stateCaught_205) {
                         statePc = ((Object) stateCaught_205 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_205);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_205);
                         }
                         caughtException = stateCaught_205;
                         continue scanLoop1;
@@ -2849,7 +2849,7 @@ final class lc {
                     } catch (Throwable stateCaught_207) {
                         statePc = ((Object) stateCaught_207 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_207);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_207);
                         }
                         caughtException = stateCaught_207;
                         continue scanLoop1;
@@ -2875,7 +2875,7 @@ final class lc {
                     } catch (Throwable stateCaught_212) {
                         statePc = ((Object) stateCaught_212 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_212);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_212);
                         }
                         caughtException = stateCaught_212;
                         continue scanLoop1;
@@ -2910,7 +2910,7 @@ final class lc {
                     } catch (Throwable stateCaught_217) {
                         statePc = ((Object) stateCaught_217 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_217);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_217);
                         }
                         caughtException = stateCaught_217;
                         continue scanLoop1;
@@ -2944,7 +2944,7 @@ final class lc {
                     } catch (Throwable stateCaught_222) {
                         statePc = ((Object) stateCaught_222 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_222);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_222);
                         }
                         caughtException = stateCaught_222;
                         continue scanLoop1;
@@ -2977,7 +2977,7 @@ final class lc {
                     } catch (Throwable stateCaught_228) {
                         statePc = ((Object) stateCaught_228 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_228);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_228);
                         }
                         caughtException = stateCaught_228;
                         continue scanLoop1;
@@ -3011,7 +3011,7 @@ final class lc {
                     } catch (Throwable stateCaught_234) {
                         statePc = ((Object) stateCaught_234 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_234);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_234);
                         }
                         caughtException = stateCaught_234;
                         continue scanLoop1;
@@ -3044,7 +3044,7 @@ final class lc {
                     } catch (Throwable stateCaught_240) {
                         statePc = ((Object) stateCaught_240 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_240);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_240);
                         }
                         caughtException = stateCaught_240;
                         continue scanLoop1;
@@ -3073,7 +3073,7 @@ final class lc {
                     } catch (Throwable stateCaught_246) {
                         statePc = ((Object) stateCaught_246 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_246);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_246);
                         }
                         caughtException = stateCaught_246;
                         continue scanLoop1;
@@ -3088,7 +3088,7 @@ final class lc {
                     } catch (Throwable stateCaught_251) {
                         statePc = ((Object) stateCaught_251 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_251);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_251);
                         }
                         caughtException = stateCaught_251;
                         continue scanLoop1;
@@ -3117,7 +3117,7 @@ final class lc {
                     } catch (Throwable stateCaught_252) {
                         statePc = ((Object) stateCaught_252 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_252);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_252);
                         }
                         caughtException = stateCaught_252;
                         continue scanLoop1;
@@ -3131,7 +3131,7 @@ final class lc {
                     } catch (Throwable stateCaught_257) {
                         statePc = ((Object) stateCaught_257 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_257);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_257);
                         }
                         caughtException = stateCaught_257;
                         continue scanLoop1;
@@ -3160,7 +3160,7 @@ final class lc {
                     } catch (Throwable stateCaught_258) {
                         statePc = ((Object) stateCaught_258 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_258);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_258);
                         }
                         caughtException = stateCaught_258;
                         continue scanLoop1;
@@ -3175,7 +3175,7 @@ final class lc {
                     } catch (Throwable stateCaught_262) {
                         statePc = ((Object) stateCaught_262 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_262);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_262);
                         }
                         caughtException = stateCaught_262;
                         continue scanLoop1;
@@ -3204,7 +3204,7 @@ final class lc {
                     } catch (Throwable stateCaught_263) {
                         statePc = ((Object) stateCaught_263 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_263);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_263);
                         }
                         caughtException = stateCaught_263;
                         continue scanLoop1;
@@ -3218,7 +3218,7 @@ final class lc {
                     } catch (Throwable stateCaught_268) {
                         statePc = ((Object) stateCaught_268 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_268);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_268);
                         }
                         caughtException = stateCaught_268;
                         continue scanLoop1;
@@ -3247,7 +3247,7 @@ final class lc {
                     } catch (Throwable stateCaught_269) {
                         statePc = ((Object) stateCaught_269 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_269);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_269);
                         }
                         caughtException = stateCaught_269;
                         continue scanLoop1;
@@ -3262,7 +3262,7 @@ final class lc {
                     } catch (Throwable stateCaught_274) {
                         statePc = ((Object) stateCaught_274 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_274);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_274);
                         }
                         caughtException = stateCaught_274;
                         continue scanLoop1;
@@ -3291,7 +3291,7 @@ final class lc {
                     } catch (Throwable stateCaught_275) {
                         statePc = ((Object) stateCaught_275 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_275);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_275);
                         }
                         caughtException = stateCaught_275;
                         continue scanLoop1;
@@ -3305,7 +3305,7 @@ final class lc {
                     } catch (Throwable stateCaught_280) {
                         statePc = ((Object) stateCaught_280 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_280);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_280);
                         }
                         caughtException = stateCaught_280;
                         continue scanLoop1;
@@ -3334,7 +3334,7 @@ final class lc {
                     } catch (Throwable stateCaught_281) {
                         statePc = ((Object) stateCaught_281 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_281);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_281);
                         }
                         caughtException = stateCaught_281;
                         continue scanLoop1;
@@ -3349,7 +3349,7 @@ final class lc {
                     } catch (Throwable stateCaught_285) {
                         statePc = ((Object) stateCaught_285 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_285);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_285);
                         }
                         caughtException = stateCaught_285;
                         continue scanLoop1;
@@ -3378,7 +3378,7 @@ final class lc {
                     } catch (Throwable stateCaught_286) {
                         statePc = ((Object) stateCaught_286 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_286);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_286);
                         }
                         caughtException = stateCaught_286;
                         continue scanLoop1;
@@ -3392,7 +3392,7 @@ final class lc {
                     } catch (Throwable stateCaught_291) {
                         statePc = ((Object) stateCaught_291 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_291);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_291);
                         }
                         caughtException = stateCaught_291;
                         continue scanLoop1;
@@ -3415,7 +3415,7 @@ final class lc {
                     } catch (Throwable stateCaught_292) {
                         statePc = ((Object) stateCaught_292 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_292);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_292);
                         }
                         caughtException = stateCaught_292;
                         continue scanLoop1;
@@ -3438,7 +3438,7 @@ final class lc {
                     } catch (Throwable stateCaught_294) {
                         statePc = ((Object) stateCaught_294 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_294);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_294);
                         }
                         caughtException = stateCaught_294;
                         continue scanLoop1;
@@ -3461,7 +3461,7 @@ final class lc {
                     } catch (Throwable stateCaught_296) {
                         statePc = ((Object) stateCaught_296 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_296);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_296);
                         }
                         caughtException = stateCaught_296;
                         continue scanLoop1;
@@ -3487,7 +3487,7 @@ final class lc {
                     } catch (Throwable stateCaught_298) {
                         statePc = ((Object) stateCaught_298 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_298);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_298);
                         }
                         caughtException = stateCaught_298;
                         continue scanLoop1;
@@ -3513,7 +3513,7 @@ final class lc {
                     } catch (Throwable stateCaught_302) {
                         statePc = ((Object) stateCaught_302 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_302);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_302);
                         }
                         caughtException = stateCaught_302;
                         continue scanLoop1;
@@ -3535,7 +3535,7 @@ final class lc {
                     } catch (Throwable stateCaught_306) {
                         statePc = ((Object) stateCaught_306 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_306);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_306);
                         }
                         caughtException = stateCaught_306;
                         continue scanLoop1;
@@ -3557,7 +3557,7 @@ final class lc {
                     } catch (Throwable stateCaught_308) {
                         statePc = ((Object) stateCaught_308 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_308);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_308);
                         }
                         caughtException = stateCaught_308;
                         continue scanLoop1;
@@ -3582,7 +3582,7 @@ final class lc {
                     } catch (Throwable stateCaught_310) {
                         statePc = ((Object) stateCaught_310 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_310);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_310);
                         }
                         caughtException = stateCaught_310;
                         continue scanLoop1;
@@ -3605,7 +3605,7 @@ final class lc {
                     } catch (Throwable stateCaught_314) {
                         statePc = ((Object) stateCaught_314 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_314);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_314);
                         }
                         caughtException = stateCaught_314;
                         continue scanLoop1;
@@ -3628,7 +3628,7 @@ final class lc {
                     } catch (Throwable stateCaught_316) {
                         statePc = ((Object) stateCaught_316 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_316);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_316);
                         }
                         caughtException = stateCaught_316;
                         continue scanLoop1;
@@ -3654,7 +3654,7 @@ final class lc {
                     } catch (Throwable stateCaught_318) {
                         statePc = ((Object) stateCaught_318 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_318);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_318);
                         }
                         caughtException = stateCaught_318;
                         continue scanLoop1;
@@ -3699,7 +3699,7 @@ final class lc {
                     } catch (Throwable stateCaught_322) {
                         statePc = ((Object) stateCaught_322 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_322);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_322);
                         }
                         caughtException = stateCaught_322;
                         continue scanLoop1;
@@ -3734,7 +3734,7 @@ final class lc {
                     } catch (Throwable stateCaught_328) {
                         statePc = ((Object) stateCaught_328 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_328);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_328);
                         }
                         caughtException = stateCaught_328;
                         continue scanLoop1;
@@ -3768,7 +3768,7 @@ final class lc {
                     } catch (Throwable stateCaught_333) {
                         statePc = ((Object) stateCaught_333 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_333);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_333);
                         }
                         caughtException = stateCaught_333;
                         continue scanLoop1;
@@ -3803,7 +3803,7 @@ final class lc {
                     } catch (Throwable stateCaught_339) {
                         statePc = ((Object) stateCaught_339 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_339);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_339);
                         }
                         caughtException = stateCaught_339;
                         continue scanLoop1;
@@ -3837,7 +3837,7 @@ final class lc {
                     } catch (Throwable stateCaught_344) {
                         statePc = ((Object) stateCaught_344 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_344);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_344);
                         }
                         caughtException = stateCaught_344;
                         continue scanLoop1;
@@ -3870,7 +3870,7 @@ final class lc {
                     } catch (Throwable stateCaught_350) {
                         statePc = ((Object) stateCaught_350 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_350);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_350);
                         }
                         caughtException = stateCaught_350;
                         continue scanLoop1;
@@ -3899,7 +3899,7 @@ final class lc {
                     } catch (Throwable stateCaught_356) {
                         statePc = ((Object) stateCaught_356 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_356);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_356);
                         }
                         caughtException = stateCaught_356;
                         continue scanLoop1;
@@ -3914,7 +3914,7 @@ final class lc {
                     } catch (Throwable stateCaught_360) {
                         statePc = ((Object) stateCaught_360 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_360);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_360);
                         }
                         caughtException = stateCaught_360;
                         continue scanLoop1;
@@ -3943,7 +3943,7 @@ final class lc {
                     } catch (Throwable stateCaught_361) {
                         statePc = ((Object) stateCaught_361 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_361);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_361);
                         }
                         caughtException = stateCaught_361;
                         continue scanLoop1;
@@ -3957,7 +3957,7 @@ final class lc {
                     } catch (Throwable stateCaught_365) {
                         statePc = ((Object) stateCaught_365 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_365);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_365);
                         }
                         caughtException = stateCaught_365;
                         continue scanLoop1;
@@ -3986,7 +3986,7 @@ final class lc {
                     } catch (Throwable stateCaught_366) {
                         statePc = ((Object) stateCaught_366 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_366);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_366);
                         }
                         caughtException = stateCaught_366;
                         continue scanLoop1;
@@ -4001,7 +4001,7 @@ final class lc {
                     } catch (Throwable stateCaught_371) {
                         statePc = ((Object) stateCaught_371 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_371);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_371);
                         }
                         caughtException = stateCaught_371;
                         continue scanLoop1;
@@ -4030,7 +4030,7 @@ final class lc {
                     } catch (Throwable stateCaught_372) {
                         statePc = ((Object) stateCaught_372 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_372);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_372);
                         }
                         caughtException = stateCaught_372;
                         continue scanLoop1;
@@ -4044,7 +4044,7 @@ final class lc {
                     } catch (Throwable stateCaught_377) {
                         statePc = ((Object) stateCaught_377 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_377);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_377);
                         }
                         caughtException = stateCaught_377;
                         continue scanLoop1;
@@ -4067,7 +4067,7 @@ final class lc {
                     } catch (Throwable stateCaught_378) {
                         statePc = ((Object) stateCaught_378 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_378);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_378);
                         }
                         caughtException = stateCaught_378;
                         continue scanLoop1;
@@ -4081,7 +4081,7 @@ final class lc {
                     } catch (Throwable stateCaught_381) {
                         statePc = ((Object) stateCaught_381 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_381);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_381);
                         }
                         caughtException = stateCaught_381;
                         continue scanLoop1;
@@ -4107,7 +4107,7 @@ final class lc {
                     } catch (Throwable stateCaught_382) {
                         statePc = ((Object) stateCaught_382 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_382);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_382);
                         }
                         caughtException = stateCaught_382;
                         continue scanLoop1;
@@ -4130,7 +4130,7 @@ final class lc {
                     } catch (Throwable stateCaught_386) {
                         statePc = ((Object) stateCaught_386 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_386);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_386);
                         }
                         caughtException = stateCaught_386;
                         continue scanLoop1;
@@ -4153,7 +4153,7 @@ final class lc {
                     } catch (Throwable stateCaught_388) {
                         statePc = ((Object) stateCaught_388 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_388);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_388);
                         }
                         caughtException = stateCaught_388;
                         continue scanLoop1;
@@ -4176,7 +4176,7 @@ final class lc {
                     } catch (Throwable stateCaught_390) {
                         statePc = ((Object) stateCaught_390 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_390);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_390);
                         }
                         caughtException = stateCaught_390;
                         continue scanLoop1;
@@ -4199,7 +4199,7 @@ final class lc {
                     } catch (Throwable stateCaught_392) {
                         statePc = ((Object) stateCaught_392 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_392);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_392);
                         }
                         caughtException = stateCaught_392;
                         continue scanLoop1;
@@ -4221,7 +4221,7 @@ final class lc {
                     } catch (Throwable stateCaught_394) {
                         statePc = ((Object) stateCaught_394 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_394);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_394);
                         }
                         caughtException = stateCaught_394;
                         continue scanLoop1;
@@ -4246,7 +4246,7 @@ final class lc {
                     } catch (Throwable stateCaught_396) {
                         statePc = ((Object) stateCaught_396 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_396);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_396);
                         }
                         caughtException = stateCaught_396;
                         continue scanLoop1;
@@ -4268,7 +4268,7 @@ final class lc {
                     } catch (Throwable stateCaught_400) {
                         statePc = ((Object) stateCaught_400 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_400);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_400);
                         }
                         caughtException = stateCaught_400;
                         continue scanLoop1;
@@ -4313,7 +4313,7 @@ final class lc {
                     } catch (Throwable stateCaught_402) {
                         statePc = ((Object) stateCaught_402 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_402);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_402);
                         }
                         caughtException = stateCaught_402;
                         continue scanLoop1;
@@ -4349,7 +4349,7 @@ final class lc {
                     } catch (Throwable stateCaught_411) {
                         statePc = ((Object) stateCaught_411 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_411);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_411);
                         }
                         caughtException = stateCaught_411;
                         continue scanLoop1;
@@ -4383,7 +4383,7 @@ final class lc {
                     } catch (Throwable stateCaught_416) {
                         statePc = ((Object) stateCaught_416 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_416);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_416);
                         }
                         caughtException = stateCaught_416;
                         continue scanLoop1;
@@ -4416,7 +4416,7 @@ final class lc {
                     } catch (Throwable stateCaught_422) {
                         statePc = ((Object) stateCaught_422 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_422);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_422);
                         }
                         caughtException = stateCaught_422;
                         continue scanLoop1;
@@ -4450,7 +4450,7 @@ final class lc {
                     } catch (Throwable stateCaught_428) {
                         statePc = ((Object) stateCaught_428 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_428);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_428);
                         }
                         caughtException = stateCaught_428;
                         continue scanLoop1;
@@ -4485,7 +4485,7 @@ final class lc {
                     } catch (Throwable stateCaught_434) {
                         statePc = ((Object) stateCaught_434 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_434);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_434);
                         }
                         caughtException = stateCaught_434;
                         continue scanLoop1;
@@ -4514,7 +4514,7 @@ final class lc {
                     } catch (Throwable stateCaught_439) {
                         statePc = ((Object) stateCaught_439 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_439);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_439);
                         }
                         caughtException = stateCaught_439;
                         continue scanLoop1;
@@ -4529,7 +4529,7 @@ final class lc {
                     } catch (Throwable stateCaught_444) {
                         statePc = ((Object) stateCaught_444 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_444);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_444);
                         }
                         caughtException = stateCaught_444;
                         continue scanLoop1;
@@ -4558,7 +4558,7 @@ final class lc {
                     } catch (Throwable stateCaught_445) {
                         statePc = ((Object) stateCaught_445 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_445);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_445);
                         }
                         caughtException = stateCaught_445;
                         continue scanLoop1;
@@ -4572,7 +4572,7 @@ final class lc {
                     } catch (Throwable stateCaught_450) {
                         statePc = ((Object) stateCaught_450 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_450);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_450);
                         }
                         caughtException = stateCaught_450;
                         continue scanLoop1;
@@ -4601,7 +4601,7 @@ final class lc {
                     } catch (Throwable stateCaught_451) {
                         statePc = ((Object) stateCaught_451 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_451);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_451);
                         }
                         caughtException = stateCaught_451;
                         continue scanLoop1;
@@ -4616,7 +4616,7 @@ final class lc {
                     } catch (Throwable stateCaught_456) {
                         statePc = ((Object) stateCaught_456 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_456);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_456);
                         }
                         caughtException = stateCaught_456;
                         continue scanLoop1;
@@ -4639,7 +4639,7 @@ final class lc {
                     } catch (Throwable stateCaught_457) {
                         statePc = ((Object) stateCaught_457 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_457);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_457);
                         }
                         caughtException = stateCaught_457;
                         continue scanLoop1;
@@ -4654,7 +4654,7 @@ final class lc {
                     } catch (Throwable stateCaught_460) {
                         statePc = ((Object) stateCaught_460 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_460);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_460);
                         }
                         caughtException = stateCaught_460;
                         continue scanLoop1;
@@ -4683,7 +4683,7 @@ final class lc {
                     } catch (Throwable stateCaught_461) {
                         statePc = ((Object) stateCaught_461 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_461);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_461);
                         }
                         caughtException = stateCaught_461;
                         continue scanLoop1;
@@ -4697,7 +4697,7 @@ final class lc {
                     } catch (Throwable stateCaught_466) {
                         statePc = ((Object) stateCaught_466 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_466);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_466);
                         }
                         caughtException = stateCaught_466;
                         continue scanLoop1;
@@ -4723,7 +4723,7 @@ final class lc {
                     } catch (Throwable stateCaught_467) {
                         statePc = ((Object) stateCaught_467 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_467);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_467);
                         }
                         caughtException = stateCaught_467;
                         continue scanLoop1;
@@ -4749,7 +4749,7 @@ final class lc {
                     } catch (Throwable stateCaught_471) {
                         statePc = ((Object) stateCaught_471 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_471);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_471);
                         }
                         caughtException = stateCaught_471;
                         continue scanLoop1;
@@ -4775,7 +4775,7 @@ final class lc {
                     } catch (Throwable stateCaught_475) {
                         statePc = ((Object) stateCaught_475 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_475);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_475);
                         }
                         caughtException = stateCaught_475;
                         continue scanLoop1;
@@ -4798,7 +4798,7 @@ final class lc {
                     } catch (Throwable stateCaught_479) {
                         statePc = ((Object) stateCaught_479 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_479);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_479);
                         }
                         caughtException = stateCaught_479;
                         continue scanLoop1;
@@ -4821,7 +4821,7 @@ final class lc {
                     } catch (Throwable stateCaught_481) {
                         statePc = ((Object) stateCaught_481 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_481);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_481);
                         }
                         caughtException = stateCaught_481;
                         continue scanLoop1;
@@ -4843,7 +4843,7 @@ final class lc {
                     } catch (Throwable stateCaught_483) {
                         statePc = ((Object) stateCaught_483 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_483);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_483);
                         }
                         caughtException = stateCaught_483;
                         continue scanLoop1;
@@ -4865,7 +4865,7 @@ final class lc {
                     } catch (Throwable stateCaught_485) {
                         statePc = ((Object) stateCaught_485 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_485);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_485);
                         }
                         caughtException = stateCaught_485;
                         continue scanLoop1;
@@ -4887,7 +4887,7 @@ final class lc {
                     } catch (Throwable stateCaught_487) {
                         statePc = ((Object) stateCaught_487 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_487);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_487);
                         }
                         caughtException = stateCaught_487;
                         continue scanLoop1;
@@ -4912,7 +4912,7 @@ final class lc {
                     } catch (Throwable stateCaught_489) {
                         statePc = ((Object) stateCaught_489 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_489);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_489);
                         }
                         caughtException = stateCaught_489;
                         continue scanLoop1;
@@ -4949,7 +4949,7 @@ final class lc {
                     } catch (Throwable stateCaught_493) {
                         statePc = ((Object) stateCaught_493 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_493);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_493);
                         }
                         caughtException = stateCaught_493;
                         continue scanLoop1;
@@ -4975,7 +4975,7 @@ final class lc {
                     } catch (Throwable stateCaught_500) {
                         statePc = ((Object) stateCaught_500 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_500);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_500);
                         }
                         caughtException = stateCaught_500;
                         continue scanLoop1;
@@ -4998,7 +4998,7 @@ final class lc {
                     } catch (Throwable stateCaught_504) {
                         statePc = ((Object) stateCaught_504 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_504);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_504);
                         }
                         caughtException = stateCaught_504;
                         continue scanLoop1;
@@ -5020,7 +5020,7 @@ final class lc {
                     } catch (Throwable stateCaught_506) {
                         statePc = ((Object) stateCaught_506 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_506);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_506);
                         }
                         caughtException = stateCaught_506;
                         continue scanLoop1;
@@ -5046,7 +5046,7 @@ final class lc {
                     } catch (Throwable stateCaught_508) {
                         statePc = ((Object) stateCaught_508 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_508);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_508);
                         }
                         caughtException = stateCaught_508;
                         continue scanLoop1;
@@ -5071,7 +5071,7 @@ final class lc {
                     } catch (Throwable stateCaught_512) {
                         statePc = ((Object) stateCaught_512 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_512);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_512);
                         }
                         caughtException = stateCaught_512;
                         continue scanLoop1;
@@ -5100,7 +5100,7 @@ final class lc {
                     } catch (Throwable stateCaught_516) {
                         statePc = ((Object) stateCaught_516 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_516);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_516);
                         }
                         caughtException = stateCaught_516;
                         continue scanLoop1;
@@ -5115,7 +5115,7 @@ final class lc {
                     } catch (Throwable stateCaught_521) {
                         statePc = ((Object) stateCaught_521 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_521);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_521);
                         }
                         caughtException = stateCaught_521;
                         continue scanLoop1;
@@ -5144,7 +5144,7 @@ final class lc {
                     } catch (Throwable stateCaught_522) {
                         statePc = ((Object) stateCaught_522 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_522);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_522);
                         }
                         caughtException = stateCaught_522;
                         continue scanLoop1;
@@ -5158,7 +5158,7 @@ final class lc {
                     } catch (Throwable stateCaught_527) {
                         statePc = ((Object) stateCaught_527 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_527);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_527);
                         }
                         caughtException = stateCaught_527;
                         continue scanLoop1;
@@ -5187,7 +5187,7 @@ final class lc {
                     } catch (Throwable stateCaught_528) {
                         statePc = ((Object) stateCaught_528 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_528);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_528);
                         }
                         caughtException = stateCaught_528;
                         continue scanLoop1;
@@ -5202,7 +5202,7 @@ final class lc {
                     } catch (Throwable stateCaught_532) {
                         statePc = ((Object) stateCaught_532 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_532);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_532);
                         }
                         caughtException = stateCaught_532;
                         continue scanLoop1;
@@ -5231,7 +5231,7 @@ final class lc {
                     } catch (Throwable stateCaught_533) {
                         statePc = ((Object) stateCaught_533 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_533);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_533);
                         }
                         caughtException = stateCaught_533;
                         continue scanLoop1;
@@ -5245,7 +5245,7 @@ final class lc {
                     } catch (Throwable stateCaught_538) {
                         statePc = ((Object) stateCaught_538 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_538);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_538);
                         }
                         caughtException = stateCaught_538;
                         continue scanLoop1;
@@ -5274,7 +5274,7 @@ final class lc {
                     } catch (Throwable stateCaught_539) {
                         statePc = ((Object) stateCaught_539 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_539);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_539);
                         }
                         caughtException = stateCaught_539;
                         continue scanLoop1;
@@ -5289,7 +5289,7 @@ final class lc {
                     } catch (Throwable stateCaught_543) {
                         statePc = ((Object) stateCaught_543 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_543);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_543);
                         }
                         caughtException = stateCaught_543;
                         continue scanLoop1;
@@ -5318,7 +5318,7 @@ final class lc {
                     } catch (Throwable stateCaught_544) {
                         statePc = ((Object) stateCaught_544 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_544);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_544);
                         }
                         caughtException = stateCaught_544;
                         continue scanLoop1;
@@ -5332,7 +5332,7 @@ final class lc {
                     } catch (Throwable stateCaught_548) {
                         statePc = ((Object) stateCaught_548 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_548);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_548);
                         }
                         caughtException = stateCaught_548;
                         continue scanLoop1;
@@ -5361,7 +5361,7 @@ final class lc {
                     } catch (Throwable stateCaught_549) {
                         statePc = ((Object) stateCaught_549 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_549);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_549);
                         }
                         caughtException = stateCaught_549;
                         continue scanLoop1;
@@ -5376,7 +5376,7 @@ final class lc {
                     } catch (Throwable stateCaught_554) {
                         statePc = ((Object) stateCaught_554 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_554);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_554);
                         }
                         caughtException = stateCaught_554;
                         continue scanLoop1;
@@ -5405,7 +5405,7 @@ final class lc {
                     } catch (Throwable stateCaught_555) {
                         statePc = ((Object) stateCaught_555 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_555);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_555);
                         }
                         caughtException = stateCaught_555;
                         continue scanLoop1;
@@ -5419,7 +5419,7 @@ final class lc {
                     } catch (Throwable stateCaught_560) {
                         statePc = ((Object) stateCaught_560 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_560);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_560);
                         }
                         caughtException = stateCaught_560;
                         continue scanLoop1;
@@ -5442,7 +5442,7 @@ final class lc {
                     } catch (Throwable stateCaught_561) {
                         statePc = ((Object) stateCaught_561 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_561);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_561);
                         }
                         caughtException = stateCaught_561;
                         continue scanLoop1;
@@ -5465,7 +5465,7 @@ final class lc {
                     } catch (Throwable stateCaught_563) {
                         statePc = ((Object) stateCaught_563 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_563);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_563);
                         }
                         caughtException = stateCaught_563;
                         continue scanLoop1;
@@ -5488,7 +5488,7 @@ final class lc {
                     } catch (Throwable stateCaught_565) {
                         statePc = ((Object) stateCaught_565 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_565);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_565);
                         }
                         caughtException = stateCaught_565;
                         continue scanLoop1;
@@ -5511,7 +5511,7 @@ final class lc {
                     } catch (Throwable stateCaught_567) {
                         statePc = ((Object) stateCaught_567 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_567);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_567);
                         }
                         caughtException = stateCaught_567;
                         continue scanLoop1;
@@ -5534,7 +5534,7 @@ final class lc {
                     } catch (Throwable stateCaught_569) {
                         statePc = ((Object) stateCaught_569 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_569);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_569);
                         }
                         caughtException = stateCaught_569;
                         continue scanLoop1;
@@ -5559,7 +5559,7 @@ final class lc {
                     } catch (Throwable stateCaught_571) {
                         statePc = ((Object) stateCaught_571 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_571);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_571);
                         }
                         caughtException = stateCaught_571;
                         continue scanLoop1;
@@ -5584,7 +5584,7 @@ final class lc {
                     } catch (Throwable stateCaught_575) {
                         statePc = ((Object) stateCaught_575 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_575);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_575);
                         }
                         caughtException = stateCaught_575;
                         continue scanLoop1;
@@ -5609,7 +5609,7 @@ final class lc {
                     } catch (Throwable stateCaught_579) {
                         statePc = ((Object) stateCaught_579 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_579);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_579);
                         }
                         caughtException = stateCaught_579;
                         continue scanLoop1;
@@ -5644,7 +5644,7 @@ final class lc {
                     } catch (Throwable stateCaught_583) {
                         statePc = ((Object) stateCaught_583 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_583);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_583);
                         }
                         caughtException = stateCaught_583;
                         continue scanLoop1;
@@ -5667,7 +5667,7 @@ final class lc {
                     } catch (Throwable stateCaught_588) {
                         statePc = ((Object) stateCaught_588 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_588);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_588);
                         }
                         caughtException = stateCaught_588;
                         continue scanLoop1;
@@ -5690,7 +5690,7 @@ final class lc {
                     } catch (Throwable stateCaught_590) {
                         statePc = ((Object) stateCaught_590 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_590);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_590);
                         }
                         caughtException = stateCaught_590;
                         continue scanLoop1;
@@ -5716,7 +5716,7 @@ final class lc {
                     } catch (Throwable stateCaught_592) {
                         statePc = ((Object) stateCaught_592 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_592);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_592);
                         }
                         caughtException = stateCaught_592;
                         continue scanLoop1;
@@ -5742,7 +5742,7 @@ final class lc {
                     } catch (Throwable stateCaught_596) {
                         statePc = ((Object) stateCaught_596 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_596);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_596);
                         }
                         caughtException = stateCaught_596;
                         continue scanLoop1;
@@ -5765,7 +5765,7 @@ final class lc {
                     } catch (Throwable stateCaught_600) {
                         statePc = ((Object) stateCaught_600 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_600);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_600);
                         }
                         caughtException = stateCaught_600;
                         continue scanLoop1;
@@ -5790,7 +5790,7 @@ final class lc {
                     } catch (Throwable stateCaught_602) {
                         statePc = ((Object) stateCaught_602 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_602);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_602);
                         }
                         caughtException = stateCaught_602;
                         continue scanLoop1;
@@ -5815,7 +5815,7 @@ final class lc {
                     } catch (Throwable stateCaught_606) {
                         statePc = ((Object) stateCaught_606 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_606);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_606);
                         }
                         caughtException = stateCaught_606;
                         continue scanLoop1;
@@ -5840,7 +5840,7 @@ final class lc {
                     } catch (Throwable stateCaught_610) {
                         statePc = ((Object) stateCaught_610 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_610);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_610);
                         }
                         caughtException = stateCaught_610;
                         continue scanLoop1;
@@ -5879,7 +5879,7 @@ final class lc {
                     } catch (Throwable stateCaught_614) {
                         statePc = ((Object) stateCaught_614 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_614);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_614);
                         }
                         caughtException = stateCaught_614;
                         continue scanLoop1;
@@ -5893,7 +5893,7 @@ final class lc {
                     } catch (Throwable stateCaught_621) {
                         statePc = ((Object) stateCaught_621 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_621);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_621);
                         }
                         caughtException = stateCaught_621;
                         continue scanLoop1;
@@ -5907,7 +5907,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 623. */
                             {
-                                if (!this.g(var29, 0)) {
+                                if (!this.isItemUnlocked(var29, 0)) {
                                     /* Inlined CFG state: 627. */
                                     {
                                         var26 = 1;
@@ -5926,7 +5926,7 @@ final class lc {
                     } catch (Throwable stateCaught_622) {
                         statePc = ((Object) stateCaught_622 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_622);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_622);
                         }
                         caughtException = stateCaught_622;
                         continue scanLoop1;
@@ -5952,7 +5952,7 @@ final class lc {
                     } catch (Throwable stateCaught_628) {
                         statePc = ((Object) stateCaught_628 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_628);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_628);
                         }
                         caughtException = stateCaught_628;
                         continue scanLoop1;
@@ -6001,7 +6001,7 @@ final class lc {
                     } catch (Throwable stateCaught_632) {
                         statePc = ((Object) stateCaught_632 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_632);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_632);
                         }
                         caughtException = stateCaught_632;
                         continue scanLoop1;
@@ -6035,7 +6035,7 @@ final class lc {
                     } catch (Throwable stateCaught_639) {
                         statePc = ((Object) stateCaught_639 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_639);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_639);
                         }
                         caughtException = stateCaught_639;
                         continue scanLoop1;
@@ -6057,7 +6057,7 @@ final class lc {
                     } catch (Throwable stateCaught_648) {
                         statePc = ((Object) stateCaught_648 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_648);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_648);
                         }
                         caughtException = stateCaught_648;
                         continue scanLoop1;
@@ -6124,7 +6124,7 @@ final class lc {
                     } catch (Throwable stateCaught_650) {
                         statePc = ((Object) stateCaught_650 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_650);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_650);
                         }
                         caughtException = stateCaught_650;
                         continue scanLoop1;
@@ -6143,7 +6143,7 @@ final class lc {
                     } catch (Throwable stateCaught_661) {
                         statePc = ((Object) stateCaught_661 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_661);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_661);
                         }
                         caughtException = stateCaught_661;
                         continue scanLoop1;
@@ -6181,7 +6181,7 @@ final class lc {
                     } catch (Throwable stateCaught_665) {
                         statePc = ((Object) stateCaught_665 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_665);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_665);
                         }
                         caughtException = stateCaught_665;
                         continue scanLoop1;
@@ -6195,7 +6195,7 @@ final class lc {
                     } catch (Throwable stateCaught_671) {
                         statePc = ((Object) stateCaught_671 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_671);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_671);
                         }
                         caughtException = stateCaught_671;
                         continue scanLoop1;
@@ -6210,7 +6210,7 @@ final class lc {
                     } catch (Throwable stateCaught_672) {
                         statePc = ((Object) stateCaught_672 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_672);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_672);
                         }
                         caughtException = stateCaught_672;
                         continue scanLoop1;
@@ -6218,8 +6218,8 @@ final class lc {
                 }
                 case 678: {
                     try {
-                        discarded$3 = this.a(false, 180, (byte) 111, false, ValidatedTextWidget.field_I + 32, 98, 309 + uc.field_a);
-                        discarded$4 = this.a(false, 166, (byte) 79, false, 39 + ValidatedTextWidget.field_I, 29, 390 + uc.field_a);
+                        discarded$3 = this.drawButtonBox(false, 180, (byte) 111, false, ValidatedTextWidget.field_I + 32, 98, 309 + uc.field_a);
+                        discarded$4 = this.drawButtonBox(false, 166, (byte) 79, false, 39 + ValidatedTextWidget.field_I, 29, 390 + uc.field_a);
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + uc.field_a, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -6232,7 +6232,7 @@ final class lc {
                     } catch (Throwable stateCaught_678) {
                         statePc = ((Object) stateCaught_678 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_678);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_678);
                         }
                         caughtException = stateCaught_678;
                         continue scanLoop1;
@@ -6259,7 +6259,7 @@ final class lc {
                     } catch (Throwable stateCaught_679) {
                         statePc = ((Object) stateCaught_679 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_679);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_679);
                         }
                         caughtException = stateCaught_679;
                         continue scanLoop1;
@@ -6292,7 +6292,7 @@ final class lc {
                     } catch (Throwable stateCaught_684) {
                         statePc = ((Object) stateCaught_684 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_684);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_684);
                         }
                         caughtException = stateCaught_684;
                         continue scanLoop1;
@@ -6325,7 +6325,7 @@ final class lc {
                     } catch (Throwable stateCaught_690) {
                         statePc = ((Object) stateCaught_690 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_690);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_690);
                         }
                         caughtException = stateCaught_690;
                         continue scanLoop1;
@@ -6358,7 +6358,7 @@ final class lc {
                     } catch (Throwable stateCaught_696) {
                         statePc = ((Object) stateCaught_696 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_696);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_696);
                         }
                         caughtException = stateCaught_696;
                         continue scanLoop1;
@@ -6393,7 +6393,7 @@ final class lc {
                     } catch (Throwable stateCaught_702) {
                         statePc = ((Object) stateCaught_702 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_702);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_702);
                         }
                         caughtException = stateCaught_702;
                         continue scanLoop1;
@@ -6428,7 +6428,7 @@ final class lc {
                     } catch (Throwable stateCaught_708) {
                         statePc = ((Object) stateCaught_708 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_708);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_708);
                         }
                         caughtException = stateCaught_708;
                         continue scanLoop1;
@@ -6461,7 +6461,7 @@ final class lc {
                     } catch (Throwable stateCaught_714) {
                         statePc = ((Object) stateCaught_714 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_714);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_714);
                         }
                         caughtException = stateCaught_714;
                         continue scanLoop1;
@@ -6494,7 +6494,7 @@ final class lc {
                     } catch (Throwable stateCaught_720) {
                         statePc = ((Object) stateCaught_720 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_720);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_720);
                         }
                         caughtException = stateCaught_720;
                         continue scanLoop1;
@@ -6510,7 +6510,7 @@ final class lc {
                     } catch (Throwable stateCaught_726) {
                         statePc = ((Object) stateCaught_726 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_726);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_726);
                         }
                         caughtException = stateCaught_726;
                         continue scanLoop1;
@@ -6525,7 +6525,7 @@ final class lc {
                     } catch (Throwable stateCaught_727) {
                         statePc = ((Object) stateCaught_727 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_727);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_727);
                         }
                         caughtException = stateCaught_727;
                         continue scanLoop1;
@@ -6536,8 +6536,8 @@ final class lc {
                         if (stackIn_728_0 <= stackIn_728_1) {
                             /* Inlined CFG state: 779. */
                             {
-                                discarded$5 = this.a(false, 180, (byte) 106, false, ValidatedTextWidget.field_I + 225, 98, 309 + uc.field_a);
-                                discarded$6 = this.a(false, 166, (byte) -98, false, 232 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
+                                discarded$5 = this.drawButtonBox(false, 180, (byte) 106, false, ValidatedTextWidget.field_I + 225, 98, 309 + uc.field_a);
+                                discarded$6 = this.drawButtonBox(false, 166, (byte) -98, false, 232 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
                                 CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 6 + (ValidatedTextWidget.field_I + 225), -1 + (uc.field_a + 390), 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 7 + (225 + ValidatedTextWidget.field_I), -2 + uc.field_a + 390, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 CachedArchiveProvider.field_t.drawParagraph(ce.field_j, ValidatedTextWidget.field_I + 225 + 7, -1 + (uc.field_a + 390), 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -6558,7 +6558,7 @@ final class lc {
                     } catch (Throwable stateCaught_728) {
                         statePc = ((Object) stateCaught_728 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_728);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_728);
                         }
                         caughtException = stateCaught_728;
                         continue scanLoop1;
@@ -6620,7 +6620,7 @@ final class lc {
                     } catch (Throwable stateCaught_730) {
                         statePc = ((Object) stateCaught_730 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_730);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_730);
                         }
                         caughtException = stateCaught_730;
                         continue scanLoop1;
@@ -6655,7 +6655,7 @@ final class lc {
                     } catch (Throwable stateCaught_738) {
                         statePc = ((Object) stateCaught_738 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_738);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_738);
                         }
                         caughtException = stateCaught_738;
                         continue scanLoop1;
@@ -6690,7 +6690,7 @@ final class lc {
                     } catch (Throwable stateCaught_743) {
                         statePc = ((Object) stateCaught_743 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_743);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_743);
                         }
                         caughtException = stateCaught_743;
                         continue scanLoop1;
@@ -6723,7 +6723,7 @@ final class lc {
                     } catch (Throwable stateCaught_748) {
                         statePc = ((Object) stateCaught_748 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_748);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_748);
                         }
                         caughtException = stateCaught_748;
                         continue scanLoop1;
@@ -6753,7 +6753,7 @@ final class lc {
                     } catch (Throwable stateCaught_754) {
                         statePc = ((Object) stateCaught_754 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_754);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_754);
                         }
                         caughtException = stateCaught_754;
                         continue scanLoop1;
@@ -6817,7 +6817,7 @@ final class lc {
                     } catch (Throwable stateCaught_758) {
                         statePc = ((Object) stateCaught_758 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_758);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_758);
                         }
                         caughtException = stateCaught_758;
                         continue scanLoop1;
@@ -6830,7 +6830,7 @@ final class lc {
                     } catch (Throwable stateCaught_769) {
                         statePc = ((Object) stateCaught_769 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_769);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_769);
                         }
                         caughtException = stateCaught_769;
                         continue scanLoop1;
@@ -6846,7 +6846,7 @@ final class lc {
                     } catch (Throwable stateCaught_772) {
                         statePc = ((Object) stateCaught_772 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_772);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_772);
                         }
                         caughtException = stateCaught_772;
                         continue scanLoop1;
@@ -6871,7 +6871,7 @@ final class lc {
                     } catch (Throwable stateCaught_773) {
                         statePc = ((Object) stateCaught_773 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_773);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_773);
                         }
                         caughtException = stateCaught_773;
                         continue scanLoop1;
@@ -6885,7 +6885,7 @@ final class lc {
                     } catch (Throwable stateCaught_777) {
                         statePc = ((Object) stateCaught_777 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_777);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_777);
                         }
                         caughtException = stateCaught_777;
                         continue scanLoop1;
@@ -6900,7 +6900,7 @@ final class lc {
                     } catch (Throwable stateCaught_780) {
                         statePc = ((Object) stateCaught_780 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_780);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_780);
                         }
                         caughtException = stateCaught_780;
                         continue scanLoop1;
@@ -6940,7 +6940,7 @@ final class lc {
                     } catch (Throwable stateCaught_781) {
                         statePc = ((Object) stateCaught_781 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_781);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_781);
                         }
                         caughtException = stateCaught_781;
                         continue scanLoop1;
@@ -7002,7 +7002,7 @@ final class lc {
                     } catch (Throwable stateCaught_783) {
                         statePc = ((Object) stateCaught_783 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_783);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_783);
                         }
                         caughtException = stateCaught_783;
                         continue scanLoop1;
@@ -7035,7 +7035,7 @@ final class lc {
                     } catch (Throwable stateCaught_791) {
                         statePc = ((Object) stateCaught_791 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_791);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_791);
                         }
                         caughtException = stateCaught_791;
                         continue scanLoop1;
@@ -7068,7 +7068,7 @@ final class lc {
                     } catch (Throwable stateCaught_797) {
                         statePc = ((Object) stateCaught_797 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_797);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_797);
                         }
                         caughtException = stateCaught_797;
                         continue scanLoop1;
@@ -7101,7 +7101,7 @@ final class lc {
                     } catch (Throwable stateCaught_803) {
                         statePc = ((Object) stateCaught_803 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_803);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_803);
                         }
                         caughtException = stateCaught_803;
                         continue scanLoop1;
@@ -7128,7 +7128,7 @@ final class lc {
                     } catch (Throwable stateCaught_809) {
                         statePc = ((Object) stateCaught_809 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_809);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_809);
                         }
                         caughtException = stateCaught_809;
                         continue scanLoop1;
@@ -7192,7 +7192,7 @@ final class lc {
                     } catch (Throwable stateCaught_812) {
                         statePc = ((Object) stateCaught_812 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_812);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_812);
                         }
                         caughtException = stateCaught_812;
                         continue scanLoop1;
@@ -7213,7 +7213,7 @@ final class lc {
                     } catch (Throwable stateCaught_823) {
                         statePc = ((Object) stateCaught_823 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_823);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_823);
                         }
                         caughtException = stateCaught_823;
                         continue scanLoop1;
@@ -7238,7 +7238,7 @@ final class lc {
                     } catch (Throwable stateCaught_827) {
                         statePc = ((Object) stateCaught_827 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_827);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_827);
                         }
                         caughtException = stateCaught_827;
                         continue scanLoop1;
@@ -7252,7 +7252,7 @@ final class lc {
                     } catch (Throwable stateCaught_831) {
                         statePc = ((Object) stateCaught_831 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_831);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_831);
                         }
                         caughtException = stateCaught_831;
                         continue scanLoop1;
@@ -7260,8 +7260,8 @@ final class lc {
                 }
                 case 837: {
                     try {
-                        discarded$7 = this.a(false, 93, (byte) -106, false, ValidatedTextWidget.field_I + 417, 98, uc.field_a + 309);
-                        discarded$8 = this.a(false, var23, (byte) -96, false, var24 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
+                        discarded$7 = this.drawButtonBox(false, 93, (byte) -106, false, ValidatedTextWidget.field_I + 417, 98, uc.field_a + 309);
+                        discarded$8 = this.drawButtonBox(false, var23, (byte) -96, false, var24 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
                         CachedArchiveProvider.field_t.drawParagraph(th.field_j, -1 + ValidatedTextWidget.field_I + var24, uc.field_a + 390 - 1, var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, 390 + (uc.field_a - 2), var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, -1 + (uc.field_a + 390), var23, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -7273,7 +7273,7 @@ final class lc {
                     } catch (Throwable stateCaught_837) {
                         statePc = ((Object) stateCaught_837 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_837);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_837);
                         }
                         caughtException = stateCaught_837;
                         continue scanLoop1;
@@ -7288,7 +7288,7 @@ final class lc {
                     } catch (Throwable stateCaught_838) {
                         statePc = ((Object) stateCaught_838 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_838);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_838);
                         }
                         caughtException = stateCaught_838;
                         continue scanLoop1;
@@ -7299,8 +7299,8 @@ final class lc {
                         if (stackIn_839_0 >= stackIn_839_1) {
                             /* Inlined CFG state: 860. */
                             {
-                                discarded$9 = this.a(false, 93, (byte) 93, false, 520 + ValidatedTextWidget.field_I, 98, 309 + uc.field_a);
-                                discarded$10 = this.a(false, 79, (byte) 121, false, 7 + ValidatedTextWidget.field_I + 520, 29, 390 + uc.field_a);
+                                discarded$9 = this.drawButtonBox(false, 93, (byte) 93, false, 520 + ValidatedTextWidget.field_I, 98, 309 + uc.field_a);
+                                discarded$10 = this.drawButtonBox(false, 79, (byte) 121, false, 7 + ValidatedTextWidget.field_I + 520, 29, 390 + uc.field_a);
                                 CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, 7 + ValidatedTextWidget.field_I + 520 - 1, 389 + uc.field_a, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 527, 390 + uc.field_a - 2, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 520 + 7, -1 + uc.field_a + 390, 79, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -7321,7 +7321,7 @@ final class lc {
                     } catch (Throwable stateCaught_839) {
                         statePc = ((Object) stateCaught_839 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_839);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_839);
                         }
                         caughtException = stateCaught_839;
                         continue scanLoop1;
@@ -7388,7 +7388,7 @@ final class lc {
                     } catch (Throwable stateCaught_841) {
                         statePc = ((Object) stateCaught_841 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_841);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_841);
                         }
                         caughtException = stateCaught_841;
                         continue scanLoop1;
@@ -7422,7 +7422,7 @@ final class lc {
                     } catch (Throwable stateCaught_848) {
                         statePc = ((Object) stateCaught_848 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_848);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_848);
                         }
                         caughtException = stateCaught_848;
                         continue scanLoop1;
@@ -7444,7 +7444,7 @@ final class lc {
                     } catch (Throwable stateCaught_855) {
                         statePc = ((Object) stateCaught_855 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_855);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_855);
                         }
                         caughtException = stateCaught_855;
                         continue scanLoop1;
@@ -7458,7 +7458,7 @@ final class lc {
                     } catch (Throwable stateCaught_858) {
                         statePc = ((Object) stateCaught_858 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_858);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_858);
                         }
                         caughtException = stateCaught_858;
                         continue scanLoop1;
@@ -7473,7 +7473,7 @@ final class lc {
                     } catch (Throwable stateCaught_861) {
                         statePc = ((Object) stateCaught_861 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_861);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_861);
                         }
                         caughtException = stateCaught_861;
                         continue scanLoop1;
@@ -7495,7 +7495,7 @@ final class lc {
                     } catch (Throwable stateCaught_862) {
                         statePc = ((Object) stateCaught_862 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_862);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_862);
                         }
                         caughtException = stateCaught_862;
                         continue scanLoop1;
@@ -7562,7 +7562,7 @@ final class lc {
                     } catch (Throwable stateCaught_864) {
                         statePc = ((Object) stateCaught_864 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_864);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_864);
                         }
                         caughtException = stateCaught_864;
                         continue scanLoop1;
@@ -7594,7 +7594,7 @@ final class lc {
                     } catch (Throwable stateCaught_871) {
                         statePc = ((Object) stateCaught_871 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_871);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_871);
                         }
                         caughtException = stateCaught_871;
                         continue scanLoop1;
@@ -7616,7 +7616,7 @@ final class lc {
                     } catch (Throwable stateCaught_878) {
                         statePc = ((Object) stateCaught_878 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_878);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_878);
                         }
                         caughtException = stateCaught_878;
                         continue scanLoop1;
@@ -7630,7 +7630,7 @@ final class lc {
                     } catch (Throwable stateCaught_881) {
                         statePc = ((Object) stateCaught_881 instanceof RuntimeException ? 884 : -1);
                         if (statePc == -1) {
-                            throw lc.<RuntimeException>sneakyThrow(stateCaught_881);
+                            throw MenuScreen.<RuntimeException>sneakyThrow(stateCaught_881);
                         }
                         caughtException = stateCaught_881;
                         continue scanLoop1;
@@ -7648,7 +7648,7 @@ final class lc {
         }
     }
 
-    private final void a(boolean param0, int param1, boolean param2) {
+    private final void performItemAction(boolean param0, int param1, boolean param2) {
         int stackIn_125_0 = 0;
         boolean stackIn_126_1 = false;
         int stackIn_134_0 = 0;
@@ -7679,7 +7679,7 @@ final class lc {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
-            this.a(false, 127, (byte) 126);
+            this.activateItem(false, 127, (byte) 126);
           }
           var4_int = NumericDateInputWidget.field_L[this.field_l][param1];
           var6 = var4_int;
@@ -7721,7 +7721,7 @@ final class lc {
                   }
                   if (15 == var6) {
                     if (this.field_g.b(true)) {
-                      if (!lc.a((byte) 112) &&
+                      if (!MenuScreen.getSessionFlag((byte) 112) &&
                         ah.field_c > 0) {
                         return;
                       }
@@ -7771,7 +7771,7 @@ final class lc {
                             mf.setSoundEffectVolume(256, 21298);
                           }
                           if (this.field_g.c((byte) -26)) {
-                            var6 = this.d(41, param1) + (this.a(param1, (byte) 103) + (ff.field_c - 120)) >> 1;
+                            var6 = this.getItemTop(41, param1) + (this.getItemY(param1, (byte) 103) + (ff.field_c - 120)) >> 1;
                             var7Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                             var8 = var7Lifetime1 * 256 / 120;
                             var5 = 1;
@@ -7817,7 +7817,7 @@ final class lc {
                               EmptyPainter.setMusicVolume(256, false);
                             }
                             if (this.field_g.c((byte) 85)) {
-                              var6 = -120 + this.d(41, param1) - (-this.a(param1, (byte) 103) - ff.field_c) >> 1;
+                              var6 = -120 + this.getItemTop(41, param1) - (-this.getItemY(param1, (byte) 103) - ff.field_c) >> 1;
                               var7Lifetime1Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                               var8Lifetime1 = 256 * var7Lifetime1Lifetime1 / 120;
                               if (var8Lifetime1 > 0) {
@@ -7850,7 +7850,7 @@ final class lc {
                                 if (!this.field_g.b(true)) {
                                   return;
                                 }
-                                SpriteState.field_z.a(true);
+                                SpriteState.field_z.sendTurnCommand59(true);
                                 var6 = param0 ? 1 : 0;
                                 gj.a(var6 != 0, true, -1, mn.field_r);
                                 return;
@@ -7862,7 +7862,7 @@ final class lc {
                                   if (!((so) (Object) stackIn_299_0).b(stackIn_300_1)) {
                                     return;
                                   }
-                                  SpriteState.field_z.g((byte) -61);
+                                  SpriteState.field_z.sendTurnCommand61((byte) -61);
                                   var6 = param0 ? 1 : 0;
                                   gj.a(var6 != 0, true, -1, mn.field_r);
                                   return;
@@ -7888,7 +7888,7 @@ final class lc {
                                         stackIn_355_0 = this.field_g;
                                         stackIn_356_1 = !(param2);
                                         if (((so) (Object) stackIn_355_0).b(stackIn_356_1)) {
-                                          if (!this.a((byte) -46, param1)) {
+                                          if (!this.canMoveToPage((byte) -46, param1)) {
                                             return;
                                           }
                                           if (CheckboxPainter.field_g == 8) {
@@ -7915,7 +7915,7 @@ final class lc {
                                       } else {
                                         if (26 == var6) {
                                           if (this.field_g.b(true) &&
-                                            this.a((byte) -46, param1)) {
+                                            this.canMoveToPage((byte) -46, param1)) {
                                             if (CheckboxPainter.field_g == 8) {
                                               IntrusiveDeque.field_g = IntrusiveDeque.field_g + 1;
                                               if (IntrusiveDeque.field_g > 3) {
@@ -7994,7 +7994,7 @@ final class lc {
                                 }
                               } else {
                                 if (this.field_g.b(true)) {
-                                  SpriteState.field_z.p(26873);
+                                  SpriteState.field_z.sendTurnCommand60(26873);
                                   var6 = param0 ? 1 : 0;
                                   gj.a(var6 != 0, true, -1, mn.field_r);
                                   return;
@@ -8002,7 +8002,7 @@ final class lc {
                               }
                             } else {
                               if (this.field_g.b(true)) {
-                                SpriteState.field_z.a(-111, param0);
+                                SpriteState.field_z.returnToLobby(-111, param0);
                                 fi.field_h = true;
                                 MusicCrossfadeStream.field_A = false;
                                 return;
@@ -8049,7 +8049,7 @@ final class lc {
               }
             } else {
               if (this.field_g.b(true)) {
-                if (lc.a((byte) 112)) {
+                if (MenuScreen.getSessionFlag((byte) 112)) {
                   LabeledField.a(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
@@ -8071,7 +8071,7 @@ final class lc {
         }
     }
 
-    private final void a(int param0) {
+    private final void drawTitleScreen(int param0) {
         int var8 = 0;
         Object var2 = null;
         Object var3 = null;
@@ -8175,7 +8175,7 @@ final class lc {
         }
     }
 
-    private final void e(boolean param0) {
+    private final void drawIconBar(boolean param0) {
         int var23 = 0;
         int[][][] var3 = null;
         int[] var4 = null;
@@ -8376,7 +8376,7 @@ final class lc {
             }
           } else {
             SpellProjectile.field_B.drawParagraph(qo.field_c, -16 + (ValidatedTextWidget.field_I + 320) + 50, 134 + uc.field_a, 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
-            if (!lc.a((byte) 112)) {
+            if (!MenuScreen.getSessionFlag((byte) 112)) {
               SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
               return;
             }
@@ -8391,7 +8391,7 @@ final class lc {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3) {
+    private final void drawPlayerTile(int param0, int param1, byte param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -8419,7 +8419,7 @@ final class lc {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawBottomPanel(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -8504,15 +8504,15 @@ final class lc {
         }
     }
 
-    private final int d(int param0, int param1) {
+    private final int getItemTop(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 41) {
-            this.g(-83);
+            this.drawCaption(-83);
           }
-          stackIn_4_0 = this.b(param1, param0 + 159) + ValidatedTextWidget.field_I;
+          stackIn_4_0 = this.getColumnX(param1, param0 + 159) + ValidatedTextWidget.field_I;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8521,7 +8521,7 @@ final class lc {
         }
     }
 
-    private final int c(int param0, int param1) {
+    private final int getItemSpacing(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -8540,9 +8540,9 @@ final class lc {
         }
     }
 
-    private final void h(int param0) {
+    private final void drawLobbyCircle(int param0) {
         int var25 = 0;
-        le var2 = null;
+        BattleScreen var2 = null;
         int var3 = 0;
         double var4 = 0.0;
         int var6 = 0;
@@ -8772,7 +8772,7 @@ final class lc {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void drawPlayerCircle(boolean param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -8795,7 +8795,7 @@ final class lc {
         int incrementValue$19 = 0;
         int incrementValue$20 = 0;
         int incrementValue$21 = 0;
-        le var2 = null;
+        BattleScreen var2 = null;
         int var3 = 0;
         int var4 = 0;
         double var5 = 0.0;
@@ -9185,7 +9185,7 @@ final class lc {
         }
     }
 
-    private final boolean a(boolean param0, int param1, byte param2, boolean param3, int param4, int param5, int param6) {
+    private final boolean drawButtonBox(boolean param0, int param1, byte param2, boolean param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
@@ -9277,7 +9277,7 @@ final class lc {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void drawOptionsPanel(boolean param0) {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -9297,8 +9297,8 @@ final class lc {
         int var3Lifetime1Lifetime1;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (lc.a((byte) 112)) {
-            this.g(12);
+          if (MenuScreen.getSessionFlag((byte) 112)) {
+            this.drawCaption(12);
             return;
           }
           if (null == nj.field_e) {
@@ -9313,7 +9313,7 @@ final class lc {
           SpellProjectile.field_B.drawCentered(fc.field_d, no.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           SpellProjectile.field_B.drawCentered(ScrollContainer.field_N, no.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           if (!param0) {
-            this.f(-123);
+            this.updateHoverSelection(-123);
           }
           boolean decompiledFrameRemainder0 = true;
           var2_int = var2_int + (8 + CachedArchiveProvider.field_t.field_C);
@@ -9336,14 +9336,14 @@ final class lc {
                     var3Lifetime1 = 16776960;
                     var7 = 1;
                   }
-                  this.a(var3Lifetime1, var6[4 * var8 + 1], var9, var6[3 + var8 * 4], var6[4 * var8], var8, (byte) -114, var6[2 + var8 * 4], var2_int);
+                  this.drawStatRow(var3Lifetime1, var6[4 * var8 + 1], var9, var6[3 + var8 * 4], var6[4 * var8], var8, (byte) -114, var6[2 + var8 * 4], var2_int);
                   var4 = "";
                 }
                 var2_int += 25;
               }
               if ((var7 == 0)) {
                 var3Lifetime1Lifetime1 = 16776960;
-                this.a(var3Lifetime1Lifetime1, nj.field_e.field_k, ah.field_b, nj.field_e.field_s, nj.field_e.field_i, -1, (byte) -126, nj.field_e.field_h, var2_int);
+                this.drawStatRow(var3Lifetime1Lifetime1, nj.field_e.field_k, ah.field_b, nj.field_e.field_s, nj.field_e.field_i, -1, (byte) -126, nj.field_e.field_h, var2_int);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -9377,7 +9377,7 @@ final class lc {
         }
     }
 
-    final void d(byte param0) {
+    final void leaveScreen(byte param0) {
         if (param0 != 103) {
           return;
         }
@@ -9390,7 +9390,7 @@ final class lc {
         }
     }
 
-    private final void a(byte param0, boolean param1, int param2) {
+    private final void drawMenuItem(byte param0, boolean param1, int param2) {
         int stackIn_63_0;
         int stackIn_63_1;
         int stackIn_63_2;
@@ -9458,17 +9458,17 @@ final class lc {
             }
           }
           var6 = CachedArchiveProvider.field_t.textWidth(var5);
-          var7 = this.d(41, param2);
-          var8 = this.a(param2, (byte) 103);
-          var9 = this.f(param2, -7661);
+          var7 = this.getItemTop(41, param2);
+          var8 = this.getItemY(param2, (byte) 103);
+          var9 = this.getItemColumnLeft(param2, -7661);
           if (var4_int == 20 ||
             var4_int == 21) {
             var6 = ff.field_c + 120;
           }
           var10 = -var6 + (var7 + var8) >> 1;
-          var11 = this.c(param2, 110);
+          var11 = this.getItemSpacing(param2, 110);
           var12 = -var7 + var8;
-          var13 = this.c(param2, 100);
+          var13 = this.getItemSpacing(param2, 100);
           var14 = 0;
           if (this.field_l != 0 &&
             15 != this.field_l) {
@@ -9502,7 +9502,7 @@ final class lc {
           var15Lifetime1 = stackIn_77_0;
           stackIn_81_0 = (param1) ? 16598235 : 16738820;
           var16 = stackIn_81_0;
-          if (!lc.a((byte) 112) &&
+          if (!MenuScreen.getSessionFlag((byte) 112) &&
             0 < ah.field_c &&
             var4_int == 15) {
             stackIn_93_0 = (!param1) ? 0 : 7097239;
@@ -9514,7 +9514,7 @@ final class lc {
           stackIn_102_0 = (param1) ? 7536857 : 10027008;
           var18 = stackIn_102_0;
           if (param0 != 98) {
-            this.d(false);
+            this.drawOptionsPanel(false);
           }
           if (var14 != 0) {
             var17 = var16;
@@ -9548,7 +9548,7 @@ final class lc {
         }
     }
 
-    private final int f(int param0, int param1) {
+    private final int getItemColumnLeft(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -9559,13 +9559,13 @@ final class lc {
             this.field_l != 8 &&
             this.field_l != 7) {
             if (param1 == -7661) {
-              stackIn_14_0 = this.e(param0, param1 + 7736) + uc.field_a;
+              stackIn_14_0 = this.getItemLeft(param0, param1 + 7736) + uc.field_a;
               return stackIn_14_0;
             }
             stackIn_12_0 = 94;
             return stackIn_12_0;
           }
-          stackIn_9_0 = this.e(param0, 75) + uc.field_a + uc.field_a / 8;
+          stackIn_9_0 = this.getItemLeft(param0, 75) + uc.field_a + uc.field_a / 8;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9574,7 +9574,7 @@ final class lc {
         }
     }
 
-    private final void e(int param0) {
+    private final void drawBody(int param0) {
         boolean discarded$0 = false;
         boolean discarded$3 = false;
         boolean discarded$1 = false;
@@ -9720,9 +9720,9 @@ final class lc {
         try {
           var32 = DualLinkDeque.field_b[7].toRgbSprite();
           var3 = -GridContainer.field_P + NodeHashTableIterator.field_j;
-          this.c(-26733);
+          this.drawBottomPanel(-26733);
           this.field_m = -1;
-          discarded$0 = this.a(false, 245, (byte) -43, false, ValidatedTextWidget.field_I + 26, 245, uc.field_a + 178);
+          discarded$0 = this.drawButtonBox(false, 245, (byte) -43, false, ValidatedTextWidget.field_I + 26, 245, uc.field_a + 178);
           if (this.field_d < 0) {
             this.field_d = 0;
           }
@@ -9825,7 +9825,7 @@ final class lc {
             var13_int = stackIn_87_0;
             SoftwareRasterizer.fillRectangle(var10, var11, 65, 65, var12);
             stackIn_91_1 = (var9 == this.field_h);
-            discarded$3 = this.a(stackIn_91_1, 65, (byte) 74, true, var10, 65, var11);
+            discarded$3 = this.drawButtonBox(stackIn_91_1, 65, (byte) 74, true, var10, 65, var11);
             if (var13_int != 0) {
               if (var9 == 9 &&
                 !ArcanistsMulti.i((byte) -77) &&
@@ -9910,8 +9910,8 @@ final class lc {
             }
             var9++;
           }
-          discarded$1 = this.a(false, 332, (byte) -71, false, 287 + ValidatedTextWidget.field_I, 245, 178 + uc.field_a);
-          discarded$2 = this.a(true, 284, (byte) 108, false, 21 + ValidatedTextWidget.field_I + 287, 29, -4 + (178 + uc.field_a));
+          discarded$1 = this.drawButtonBox(false, 332, (byte) -71, false, 287 + ValidatedTextWidget.field_I, 245, 178 + uc.field_a);
+          discarded$2 = this.drawButtonBox(true, 284, (byte) 108, false, 21 + ValidatedTextWidget.field_I + 287, 29, -4 + (178 + uc.field_a));
           CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 21 + (290 + ValidatedTextWidget.field_I) - 1, -4 + (uc.field_a + 178 - 1), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
           CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 311 + ValidatedTextWidget.field_I, -2 + (178 + uc.field_a) - 4, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
           CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 290 + (ValidatedTextWidget.field_I + 21), -5 + uc.field_a + 178, 281, 29, 12569299, -1, param0, 1, CachedArchiveProvider.field_t.field_C);
@@ -9926,7 +9926,7 @@ final class lc {
               for (var13_intLifetime1 = 0; var13_intLifetime1 < 2; var13_intLifetime1++) {
                 var14 = 290 + ValidatedTextWidget.field_I + 41 * var12Lifetime1;
                 var15Lifetime1 = 209 + (uc.field_a + var13_intLifetime1 * 41);
-                discarded$5 = this.a(true, 39, (byte) -104, true, var14, 39, var15Lifetime1);
+                discarded$5 = this.drawButtonBox(true, 39, (byte) -104, true, var14, 39, var15Lifetime1);
                 var16 = b.field_f[var13_intLifetime1 + 2 * var12Lifetime1];
                 stackIn_154_0 = ~var16;
                 if (stackIn_154_0 != 0) {
@@ -10407,7 +10407,7 @@ final class lc {
               var13 = "";
               var14 = ValidatedTextWidget.field_I + 300;
               var15Lifetime3 = 340 + uc.field_a;
-              this.a(var15Lifetime3, var3, var14, 113);
+              this.drawHintText(var15Lifetime3, var3, var14, 113);
             } else {
               if (this.field_m == 0) {
                 var14_ref_String = DebouncedValidator.field_c;
@@ -10707,7 +10707,7 @@ final class lc {
         }
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean canMoveToPage(byte param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_41_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -10747,7 +10747,7 @@ final class lc {
         }
     }
 
-    private final void d(int param0) {
+    private final void handleShortcutKeys(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -10816,8 +10816,8 @@ final class lc {
           } else {
             if (CheckboxPainter.field_g != 7) {
               if (CheckboxPainter.field_g == 6 &&
-                !lc.a((byte) 112)) {
-                this.c((byte) -92);
+                !MenuScreen.getSessionFlag((byte) 112)) {
+                this.resetSelection((byte) -92);
                 return;
               }
               if (CheckboxPainter.field_g != 14) {
@@ -10828,13 +10828,13 @@ final class lc {
                 }
               } else {
                 if (IntrusiveDeque.field_d == 96) {
-                  if (this.a((byte) -46, 0)) {
+                  if (this.canMoveToPage((byte) -46, 0)) {
                     this.field_g.a(0, false);
                   }
                   return;
                 }
                 if (IntrusiveDeque.field_d == 97) {
-                  if (this.a((byte) -46, 1)) {
+                  if (this.canMoveToPage((byte) -46, 1)) {
                     this.field_g.a(1, false);
                   }
                   return;
@@ -10846,11 +10846,11 @@ final class lc {
                       var2_int = 0;
                     }
                     if (var2_int == 0 &&
-                      !this.a((byte) -46, 0)) {
+                      !this.canMoveToPage((byte) -46, 0)) {
                       var2_int++;
                     }
                     if (var2_int == 1 &&
-                      !this.a((byte) -46, 1)) {
+                      !this.canMoveToPage((byte) -46, 1)) {
                       var2_int++;
                     }
                     this.field_g.a(var2_int, false);
@@ -10860,11 +10860,11 @@ final class lc {
                 } else {
                   var2_int = -1 + this.field_g.field_h;
                   if (var2_int == 1 &&
-                    !this.a((byte) -46, 1)) {
+                    !this.canMoveToPage((byte) -46, 1)) {
                     var2_int--;
                   }
                   if (var2_int == 0 &&
-                    !this.a((byte) -46, 0)) {
+                    !this.canMoveToPage((byte) -46, 0)) {
                     var2_int--;
                   }
                   if (var2_int < 0) {
@@ -10874,7 +10874,7 @@ final class lc {
                 }
               }
             } else {
-              this.b(false);
+              this.updatePageButtons(false);
             }
           }
           return;
@@ -10885,7 +10885,7 @@ final class lc {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int getColumnX(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -10908,7 +10908,7 @@ final class lc {
         RuntimeException var3 = null;
         try {
           if (this.field_l == 6) {
-            if (lc.a((byte) 112)) {
+            if (MenuScreen.getSessionFlag((byte) 112)) {
               stackIn_5_0 = 160;
               return stackIn_5_0;
             }
@@ -10947,11 +10947,11 @@ final class lc {
           }
           if (this.field_l == 14) {
             if (NumericDateInputWidget.field_L[this.field_l][param0] == 25) {
-              stackIn_48_0 = (!this.a((byte) -46, 1)) ? 220 : 120;
+              stackIn_48_0 = (!this.canMoveToPage((byte) -46, 1)) ? 220 : 120;
               return stackIn_48_0;
             }
             if (NumericDateInputWidget.field_L[this.field_l][param0] == 26) {
-              stackIn_56_0 = (this.a((byte) -46, 0)) ? 320 : 220;
+              stackIn_56_0 = (this.canMoveToPage((byte) -46, 0)) ? 320 : 220;
               return stackIn_56_0;
             }
             if (29 == NumericDateInputWidget.field_L[this.field_l][param0]) {
@@ -10997,7 +10997,7 @@ final class lc {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
+    private final void drawStatRow(int param0, int param1, String param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
         int stackIn_9_0;
         int stackIn_9_1;
         int stackIn_9_2;
@@ -11087,7 +11087,7 @@ final class lc {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void updatePageButtons(boolean param0) {
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_38_0 = 0;
@@ -11104,9 +11104,9 @@ final class lc {
           if (param0) {
             this.field_g = (so) null;
           }
-          stackIn_8_0 = (!this.a((byte) -46, 0)) ? 1 : 0;
+          stackIn_8_0 = (!this.canMoveToPage((byte) -46, 0)) ? 1 : 0;
           var2_int = stackIn_8_0;
-          stackIn_12_0 = (this.a((byte) -46, 2)) ? 2 : 1;
+          stackIn_12_0 = (this.canMoveToPage((byte) -46, 2)) ? 2 : 1;
           var3 = stackIn_12_0;
           if (!this.field_g.c((byte) 84)) {
             if (96 == IntrusiveDeque.field_d) {
@@ -11126,9 +11126,9 @@ final class lc {
             }
           }
           this.field_g.d(51);
-          stackIn_38_0 = (this.a((byte) -46, 0)) ? 0 : 1;
+          stackIn_38_0 = (this.canMoveToPage((byte) -46, 0)) ? 0 : 1;
           var2_intLifetime1 = stackIn_38_0;
-          stackIn_42_0 = (!this.a((byte) -46, 2)) ? 1 : 2;
+          stackIn_42_0 = (!this.canMoveToPage((byte) -46, 2)) ? 1 : 2;
           var3Lifetime1 = stackIn_42_0;
           if (var2_intLifetime1 > this.field_g.field_h) {
             this.field_g.field_h = var2_intLifetime1;
@@ -11144,7 +11144,7 @@ final class lc {
         }
     }
 
-    final void e(byte param0) {
+    final void draw(byte param0) {
         int[] stackIn_35_0 = null;
         int stackIn_36_1 = 0;
         int[] stackIn_42_0 = null;
@@ -11155,7 +11155,7 @@ final class lc {
         int stackIn_165_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_152_0;
-        le var2 = null;
+        BattleScreen var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -11178,7 +11178,7 @@ final class lc {
         Object var20 = null;
         String var20_ref = null;
         int var21 = 0;
-        le var2Lifetime1;
+        BattleScreen var2Lifetime1;
         int stackIn_165_0Lifetime1;
         int var2_intLifetime1;
         int var3Lifetime1;
@@ -11207,7 +11207,7 @@ final class lc {
           if (param0 != -45) {
             return;
           }
-          if (!lc.a((byte) 112) &&
+          if (!MenuScreen.getSessionFlag((byte) 112) &&
             0 < ah.field_c) {
             ce.field_g[15] = wj.field_e;
           }
@@ -11314,7 +11314,7 @@ final class lc {
           if (this.field_l == 1 ||
             2 == this.field_l ||
             4 == this.field_l) {
-            gl.drawNineSliceFrame(ValidationHelpWidget.field_U[this.field_l] * NumericDateInputWidget.field_L[this.field_l].length + 48, -24 + this.d(41, 0), -27327, 48 - (-this.a(0, (byte) 103) + this.d(41, 0)), kf.field_b, this.f(0, -7661) - 24);
+            gl.drawNineSliceFrame(ValidationHelpWidget.field_U[this.field_l] * NumericDateInputWidget.field_L[this.field_l].length + 48, -24 + this.getItemTop(41, 0), -27327, 48 - (-this.getItemY(0, (byte) 103) + this.getItemTop(41, 0)), kf.field_b, this.getItemColumnLeft(0, -7661) - 24);
           }
           var2Lifetime1 = SpriteState.field_z;
           if (var2Lifetime1 == null) {
@@ -11397,42 +11397,42 @@ final class lc {
           }
           if (13 != this.field_l) {
             for (var3Lifetime3 = 0; var3Lifetime3 < this.field_g.field_f; var3Lifetime3++) {
-              stackOut_152_0 = this.a((byte) -46, var3Lifetime3);
+              stackOut_152_0 = this.canMoveToPage((byte) -46, var3Lifetime3);
               stackIn_165_0 = stackOut_152_0 ? 1 : 0;
               stackIn_153_0 = stackOut_152_0;
               if (stackIn_153_0) {
                 stackIn_161_1 = 98;
                 stackIn_162_2 = (this.field_g.field_h == var3Lifetime3);
-                this.a((byte) stackIn_161_1, stackIn_162_2, var3Lifetime3);
+                this.drawMenuItem((byte) stackIn_161_1, stackIn_162_2, var3Lifetime3);
               }
             }
           }
           stackIn_165_0Lifetime1 = ~this.field_l;
           if (stackIn_165_0Lifetime1 == -1) {
-            this.c(-26733);
+            this.drawBottomPanel(-26733);
           }
           if (this.field_l != 6) {
             if (this.field_l == 7) {
-              this.b((byte) 89);
+              this.drawContent((byte) 89);
             } else {
               if (this.field_l != 8) {
                 if (this.field_l != 9) {
                   if (11 == this.field_l) {
-                    this.i(12);
+                    this.drawAnimatedScreen(12);
                   } else {
                     if (12 == this.field_l) {
-                      this.e(1);
+                      this.drawBody(1);
                     } else {
                       if (this.field_l != 14) {
                         if (this.field_l == 5) {
-                          this.h(32);
+                          this.drawLobbyCircle(32);
                         } else {
                           if (3 == this.field_l) {
-                            this.a(true);
+                            this.drawPlayerCircle(true);
                           }
                         }
                       } else {
-                        this.a(1);
+                        this.drawTitleScreen(1);
                       }
                     }
                   }
@@ -11440,11 +11440,11 @@ final class lc {
                   SpellProjectile.field_B.drawParagraph(TextWidgetPainter.field_b, ValidatedTextWidget.field_I + 80, uc.field_a + 140, 480, 180, 0, -1, 0, 1, 30);
                 }
               } else {
-                this.e(true);
+                this.drawIconBar(true);
               }
             }
           } else {
-            this.d(true);
+            this.drawOptionsPanel(true);
           }
           if (this.field_l != 0 &&
             this.field_l != 15 &&
@@ -11474,7 +11474,7 @@ final class lc {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         try {
           field_q = null;
           field_a = null;
@@ -11486,21 +11486,21 @@ final class lc {
           field_j = null;
           field_p = null;
           if (!param0) {
-            lc.a((byte) -10);
+            MenuScreen.getSessionFlag((byte) -10);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.BA(" + param0 + ')');
         }
     }
 
-    private final int a(int param0, byte param1) {
+    private final int getItemY(int param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 103) {
-            stackIn_4_0 = this.a(-9, param0) + ValidatedTextWidget.field_I;
+            stackIn_4_0 = this.getItemX(-9, param0) + ValidatedTextWidget.field_I;
             return stackIn_4_0;
           }
           stackIn_2_0 = -6;
@@ -11512,18 +11512,18 @@ final class lc {
         }
     }
 
-    private final void g(int param0) {
+    private final void drawCaption(int param0) {
         try {
           SpellProjectile.field_B.drawParagraph(FrameClock.field_c, 64 + ValidatedTextWidget.field_I, 128 + uc.field_a, 512, 224, 0, -1, 1, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
           if (param0 != 12) {
-            lc.a((byte) -6);
+            MenuScreen.getSessionFlag((byte) -6);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.W(" + param0 + ')');
         }
     }
 
-    private final boolean g(int param0, int param1) {
+    private final boolean isItemUnlocked(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -11548,7 +11548,7 @@ final class lc {
         }
     }
 
-    private final void c(byte param0) {
+    private final void resetSelection(byte param0) {
         try {
           int var2_int = -61 % ((-38 - param0) / 46);
           this.field_g.a(82, 2);
@@ -11557,7 +11557,7 @@ final class lc {
         }
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int hitTestItem(byte param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -11582,15 +11582,15 @@ final class lc {
           }
           var4_int = 0;
           while (NumericDateInputWidget.field_L[this.field_l].length > var4_int) {
-            var5 = this.f(var4_int, param0 ^ -7605);
-            stackOut_11_0 = this.a((byte) -46, var4_int);
+            var5 = this.getItemColumnLeft(var4_int, param0 ^ -7605);
+            stackOut_11_0 = this.canMoveToPage((byte) -46, var4_int);
             stackIn_32_0 = stackOut_11_0 ? 1 : 0;
             stackIn_12_0 = stackOut_11_0;
             if (stackIn_12_0 &&
-              param1 >= this.d(41, var4_int) &&
-              this.a(var4_int, (byte) 103) > param1 &&
+              param1 >= this.getItemTop(41, var4_int) &&
+              this.getItemY(var4_int, (byte) 103) > param1 &&
               var5 <= param2 &&
-              param2 < var5 + this.c(var4_int, 113)) {
+              param2 < var5 + this.getItemSpacing(var4_int, 113)) {
               stackIn_29_0 = var4_int;
               return stackIn_29_0;
             }
@@ -11605,7 +11605,7 @@ final class lc {
         }
     }
 
-    private final int e(int param0, int param1) {
+    private final int getItemLeft(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
@@ -11634,7 +11634,7 @@ final class lc {
             this.field_l != 4 &&
             this.field_l != 1) {
             if (this.field_l == 6) {
-              if (lc.a((byte) 112)) {
+              if (MenuScreen.getSessionFlag((byte) 112)) {
                 stackIn_21_0 = ValidationHelpWidget.field_U[this.field_l] * param0 + DualLinkDeque.field_f[this.field_l];
                 return stackIn_21_0;
               }
@@ -11654,7 +11654,7 @@ final class lc {
               return stackIn_30_0;
             }
             if (param1 != 75) {
-              this.g(-100);
+              this.drawCaption(-100);
             }
             if (this.field_l == 14) {
               if (NumericDateInputWidget.field_L[this.field_l][param0] == 25) {
@@ -11707,7 +11707,7 @@ final class lc {
         }
     }
 
-    lc(int param0) {
+    MenuScreen(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         this.field_d = 0;
@@ -11726,7 +11726,7 @@ final class lc {
         }
     }
 
-    final void b(int param0) {
+    final void update(int param0) {
         int stackIn_46_0 = 0;
         int stackIn_46_1 = 0;
         MembershipOfferScreen stackIn_71_0 = null;
@@ -11794,20 +11794,20 @@ final class lc {
                   gj.a(false, true, -1, mn.field_r);
                   continue;
                 }
-                this.d(111);
+                this.handleShortcutKeys(111);
                 if (this.field_g.field_h == -1) {
                   continue;
                 }
-                this.a(false, this.field_g.field_h, false);
+                this.performItemAction(false, this.field_g.field_h, false);
                 continue;
               }
-              this.field_g.a(this.a((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.a((byte) 88, pb.field_h, ja.field_s), -97);
+              this.field_g.a(this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.hitTestItem((byte) 88, pb.field_h, ja.field_s), -97);
               stackIn_46_0Lifetime1 = this.field_g.field_h;
               stackIn_46_1Lifetime1 = -1;
               if (stackIn_46_0Lifetime1 == stackIn_46_1Lifetime1) {
                 break;
               }
-              this.a(true, this.field_g.field_h, false);
+              this.performItemAction(true, this.field_g.field_h, false);
               break;
             }
           }
@@ -11820,7 +11820,7 @@ final class lc {
             }
           }
           if (this.field_l == 8) {
-            this.f(-1);
+            this.updateHoverSelection(-1);
           }
           if (16 == this.field_l) {
             var2 = SceneWidgetNode.field_s;

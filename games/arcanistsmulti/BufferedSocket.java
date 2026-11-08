@@ -37,11 +37,11 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void setActiveBattleScreen(le param0, boolean param1) {
+    final static void setActiveBattleScreen(BattleScreen param0, boolean param1) {
         try {
           if (!param1) {
-            le var3 = (le) null;
-            BufferedSocket.setActiveBattleScreen((le) null, false);
+            BattleScreen var3 = (BattleScreen) null;
+            BufferedSocket.setActiveBattleScreen((BattleScreen) null, false);
           }
           rk.field_O = param0.field_V;
           qn.field_ob = param0;

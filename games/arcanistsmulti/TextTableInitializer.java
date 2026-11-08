@@ -2314,7 +2314,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("text_waiting", -72);
                 if (null != var2) {
-                  lc.field_r = ValidationHelpWidget.a((byte) 95, var2);
+                  MenuScreen.field_r = ValidationHelpWidget.a((byte) 95, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("text_declined", -104);
                 if (var2 != null) {
@@ -3055,7 +3055,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins15", -91);
                 if (null != var2) {
-                  lc.field_o = ValidationHelpWidget.a((byte) 124, var2);
+                  MenuScreen.field_o = ValidationHelpWidget.a((byte) 124, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins14", -123);
                 if (var2 != null) {
@@ -3535,7 +3535,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("speedsrecharges", -128);
                 if (var2 != null) {
-                  lc.field_p = ValidationHelpWidget.a((byte) 103, var2);
+                  MenuScreen.field_p = ValidationHelpWidget.a((byte) 103, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("damageresist", -82);
                 if (null != var2) {

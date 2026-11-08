@@ -9171,7 +9171,7 @@ final class Battle {
               if (0 == this.field_vb[this.field_J][var4_intLifetime1]) {
                 return false;
               }
-              if ((this.field_jb / this.field_q) >= le.field_d[param0]) {
+              if ((this.field_jb / this.field_q) >= BattleScreen.field_d[param0]) {
                 return true;
               }
               return false;

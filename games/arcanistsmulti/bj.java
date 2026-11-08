@@ -252,7 +252,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                   if (null == var7.field_G) {
                     var7.field_Jb = new SceneWidget(0L, qa.field_j);
                     var7.addChild(var7.field_Jb, 117);
-                    var7.field_Fb = new SceneWidget(0L, le.field_E);
+                    var7.field_Fb = new SceneWidget(0L, BattleScreen.field_E);
                     var7.addChild(var7.field_Fb, 26);
                     var7.field_Mb = new SceneWidget(0L, qa.field_j);
                     var7.addChild(var7.field_Mb, 71);
@@ -369,7 +369,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
             NanoFrameClock.field_j.field_rb = PatchEnvelopeSet.field_f;
             ec.field_d.field_ub = false;
             if (SpriteState.field_t == 1) {
-              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = le.field_db;
+              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = BattleScreen.field_db;
               if (var19 != 0) {
                 IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
               }

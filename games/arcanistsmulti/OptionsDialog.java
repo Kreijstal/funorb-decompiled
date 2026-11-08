@@ -49,7 +49,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             }
           }
           if (!this.field_wb &&
-            !lc.a((byte) 112)) {
+            !MenuScreen.getSessionFlag((byte) 112)) {
             this.close(param2 - 171);
             this.field_H.pushPanel(new OptionsDialog(this.field_H), 15637);
           }
@@ -209,7 +209,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
-          stackIn_40_1 = !(lc.a((byte) 112));
+          stackIn_40_1 = !(MenuScreen.getSessionFlag((byte) 112));
           this.field_wb = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (null != ResizableModalPanel.field_Y) {

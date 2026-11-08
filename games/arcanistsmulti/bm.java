@@ -6,7 +6,7 @@ final class bm {
     static String field_a;
     static BufferedRandomAccessFile field_e;
     static String field_c;
-    static le field_g;
+    static BattleScreen field_g;
     static int[] field_d;
     static String field_b;
     static String field_i;

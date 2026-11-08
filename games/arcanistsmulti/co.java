@@ -118,7 +118,7 @@ final class co {
           if (DelegatingCanvas.field_c[rk.field_O.getArenaTheme(-31497) + 1] != null) {
             SpellProjectile.playMusic(DelegatingCanvas.field_c[rk.field_O.getArenaTheme(-31497) + 1], 3);
           }
-          qn.field_ob.m(413355681);
+          qn.field_ob.renderBackgroundImage(413355681);
           rk.field_O.clearUnits((byte) -96);
           var2 = StatefulTextPainter.field_p;
           if (var2 == 0) {

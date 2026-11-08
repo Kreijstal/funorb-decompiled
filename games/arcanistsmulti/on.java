@@ -180,7 +180,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("error_js5io", (byte) -45);
                 if (null != var2) {
-                  le.field_N = ValidationHelpWidget.a((byte) 89, var2);
+                  BattleScreen.field_N = ValidationHelpWidget.a((byte) 89, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("error_js5connect_full", (byte) -45);
                 if (var2 != null) {
@@ -388,7 +388,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("mu_gamelist_owner", (byte) -45);
                 if (null != var2) {
-                  lc.field_c = ValidationHelpWidget.a((byte) 87, var2);
+                  MenuScreen.field_c = ValidationHelpWidget.a((byte) 87, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("mu_gamelist_players", (byte) -45);
                 if (var2 != null) {
@@ -784,7 +784,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("connecting_to_friend_server_twoline", (byte) -45);
                 if (var2 != null) {
-                  le.field_db = ValidationHelpWidget.a((byte) 87, var2);
+                  BattleScreen.field_db = ValidationHelpWidget.a((byte) 87, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("loading", (byte) -45);
                 if (null != var2) {
@@ -1090,7 +1090,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("rule_1_1", (byte) -45);
                 if (var2 != null) {
-                  lc.field_e = ValidationHelpWidget.a((byte) 107, var2);
+                  MenuScreen.field_e = ValidationHelpWidget.a((byte) 107, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("rule_1_2", (byte) -45);
                 if (var2 != null) {
@@ -1526,7 +1526,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("create_password_confirm", (byte) -45);
                 if (var2 != null) {
-                  le.field_A = ValidationHelpWidget.a((byte) 113, var2);
+                  BattleScreen.field_A = ValidationHelpWidget.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("create_email", (byte) -45);
                 if (var2 != null) {
@@ -1666,7 +1666,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("create_age_tooltip", (byte) -45);
                 if (null != var2) {
-                  lc.field_k = ValidationHelpWidget.a((byte) 99, var2);
+                  MenuScreen.field_k = ValidationHelpWidget.a((byte) 99, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("create_optin_news_tooltip", (byte) -45);
                 if (null != var2) {
@@ -2524,7 +2524,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("mp_x_hasresigned", (byte) -45);
                 if (var2 != null) {
-                  lc.field_a = ValidationHelpWidget.a((byte) 114, var2);
+                  MenuScreen.field_a = ValidationHelpWidget.a((byte) 114, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("mp_x_hasleft", (byte) -45);
                 if (var2 != null) {

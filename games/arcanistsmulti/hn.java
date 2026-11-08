@@ -256,13 +256,13 @@ final class hn implements Runnable {
     final static boolean a(byte param0) {
         int var1 = 85 % ((param0 - 10) / 60);
         if (!NodeHashTableIterator.field_e) {
-          if (!lc.a((byte) 112)) {
+          if (!MenuScreen.getSessionFlag((byte) 112)) {
             return false;
           }
           return true;
         }
         if (!ContextActionMenu.field_Jb) {
-          if (!lc.a((byte) 112)) {
+          if (!MenuScreen.getSessionFlag((byte) 112)) {
             return false;
           }
           return true;
@@ -271,9 +271,9 @@ final class hn implements Runnable {
           if (kg.field_a) {
             return true;
           }
-          return lc.a((byte) 112) ? true : false;
+          return MenuScreen.getSessionFlag((byte) 112) ? true : false;
         }
-        if (!lc.a((byte) 112)) {
+        if (!MenuScreen.getSessionFlag((byte) 112)) {
           return false;
         }
         return true;

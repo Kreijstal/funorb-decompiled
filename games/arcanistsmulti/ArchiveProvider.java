@@ -7,7 +7,7 @@ abstract class ArchiveProvider {
     static Sprite[] field_a;
     static boolean field_d;
     static String field_g;
-    static lc[] field_f;
+    static MenuScreen[] field_f;
     static String field_b;
 
     public static void releaseStatics(byte param0) {
@@ -160,6 +160,6 @@ abstract class ArchiveProvider {
         field_g = "Reading Book of Nature";
         field_d = false;
         field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
-        field_f = new lc[17];
+        field_f = new MenuScreen[17];
     }
 }

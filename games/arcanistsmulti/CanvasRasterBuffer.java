@@ -124,7 +124,7 @@ abstract class CanvasRasterBuffer {
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; pm.field_f.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_28_0 = !(AccountRegistrationPanel.field_M[var8Lifetime1] < 0);
-            var9Lifetime1 = lc.a(stackIn_28_0, pm.field_f[var8Lifetime1], (byte) -94);
+            var9Lifetime1 = MenuScreen.measureText(stackIn_28_0, pm.field_f[var8Lifetime1], (byte) -94);
             if (-1 != AccountRegistrationPanel.field_M[var8Lifetime1]) {
               var9Lifetime1 = var9Lifetime1 + 2 * f.field_h;
             }
