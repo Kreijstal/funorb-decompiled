@@ -197,7 +197,7 @@ final class tk extends DualLinkNode {
               }
               var5 = null;
               if (TextLine.field_h == 0) {
-                var5 = bo.a(var4, (byte) -26, param2);
+                var5 = bo.getNameErrorMessage(var4, (byte) -26, param2);
               }
               if (1 == TextLine.field_h) {
                 var5 = oe.a(var4, 29140, param2);
@@ -243,7 +243,7 @@ final class tk extends DualLinkNode {
           }
           var7 = new ConditionalTextValue(param2);
           var8 = new ConditionalTextValue(param5);
-          stackIn_4_0 = cj.a(param0, (byte) -91, param1, var8, param4, var7, param3);
+          stackIn_4_0 = cj.submitAccountCreationRequest(param0, (byte) -91, param1, var8, param4, var7, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

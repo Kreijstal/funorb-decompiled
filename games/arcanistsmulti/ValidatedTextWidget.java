@@ -8,7 +8,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
     static SceneWidget field_U;
     static String field_W;
 
-    final static void a(byte param0, int param1) {
+    final static void rebuildIndexTable(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -35,7 +35,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final static Object a(boolean param0, int param1, byte[] param2) {
+    final static Object wrapBytes(boolean param0, int param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_8_0 = null;
@@ -54,7 +54,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           }
           if (136 < param2.length) {
             var3 = new DirectByteStorage();
-            ((ByteStorage) ((Object) var3)).a(110, param2);
+            ((ByteStorage) ((Object) var3)).set(110, param2);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }
@@ -123,7 +123,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final void a(ValidationProvider param0, byte param1) {
+    final void setValidator(ValidationProvider param0, byte param1) {
         try {
           this.field_T = param0;
           int var3_int = -16 / ((-87 - param1) / 37);
@@ -138,7 +138,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ValidatedTextWidget.a((byte) 84, -108);
+          ValidatedTextWidget.rebuildIndexTable((byte) 84, -108);
           field_W = null;
           field_U = null;
           return;

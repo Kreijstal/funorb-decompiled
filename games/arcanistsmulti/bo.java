@@ -8,7 +8,7 @@ final class bo {
     static boolean field_c;
     static String field_b;
 
-    final static String a(String param0, byte param1, int param2) {
+    final static String getNameErrorMessage(String param0, byte param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;

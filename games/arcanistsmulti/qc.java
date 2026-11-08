@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc {
-    static am field_c;
+    static ConnectionState field_c;
     static String field_b;
     static int field_e;
     static String field_g;
@@ -63,7 +63,7 @@ final class qc {
             return false;
           }
           if (param0 != 640) {
-            field_c = (am) null;
+            field_c = (ConnectionState) null;
           }
           var4 = Js5ArchiveManager.a(param2, param0 - 653);
           if (var4 != null &&
@@ -115,7 +115,7 @@ final class qc {
     }
 
     static {
-        field_c = new am();
+        field_c = new ConnectionState();
         field_e = 250;
         field_g = "<%0> has resigned and left.";
         field_b = "You cannot chat to <%0> because <%0> is not in your friend list.";

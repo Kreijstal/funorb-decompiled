@@ -10,7 +10,7 @@ abstract class ResizableModalPanel extends FadingModalPanel {
     static String field_ib;
     private int field_gb;
     static String field_X;
-    static am field_eb;
+    static ConnectionState field_eb;
     static BitmapFont field_T;
     static ViewportController field_Y;
     static int field_ab;

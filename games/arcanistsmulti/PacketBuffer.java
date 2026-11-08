@@ -719,7 +719,7 @@ class PacketBuffer extends IntrusiveNode {
             ce.field_i = CachedArchiveProvider.a(4, -21402);
             ci.field_d = AlternateUsernameCredentials.a(6, false);
           }
-          Checkbox.a(2);
+          Checkbox.resetTimers(2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.FB(" + param0 + ')');
         }
@@ -747,7 +747,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = bb.a(param0, 56);
+        this.payload = bb.buildRequestBytes(param0, 56);
     }
 
     final void writeByte(int value, byte obfuscationGuard) {

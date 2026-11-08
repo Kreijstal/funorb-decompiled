@@ -211,7 +211,7 @@ final class oo extends DualLinkNode {
     }
 
     final static void g(int param0) {
-        PatchEnvelopeSet.c(0);
+        PatchEnvelopeSet.showLoadingDialog(0);
         DebouncedValidator.a(param0, (byte) 30);
     }
 

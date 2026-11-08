@@ -630,7 +630,7 @@ final class SpellProjectile extends DualLinkNode {
                                                     }
                                                     var15 = -ce.field_k + this.field_G;
                                                     var14 = this.field_v - NodeHashTable.field_m;
-                                                    var16 = am.a(var15 << 4, var14 << 4, false);
+                                                    var16 = ConnectionState.greatestCommonDivisor(var15 << 4, var14 << 4, false);
                                                     if (16 > var16) {
                                                       var15 = -1;
                                                       var16 = 16;
@@ -1152,7 +1152,7 @@ final class SpellProjectile extends DualLinkNode {
                                                           }
                                                           var12 = -NodeHashTable.field_m + this.field_v;
                                                           var13 = this.field_G - ce.field_k;
-                                                          var14 = am.a(var13 << 4, var12 << 4, false);
+                                                          var14 = ConnectionState.greatestCommonDivisor(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
                                                             var14 = 16;
                                                             var13 = -1;
@@ -1446,7 +1446,7 @@ final class SpellProjectile extends DualLinkNode {
                                                           }
                                                           var12 = -NodeHashTable.field_m + this.field_v;
                                                           var13 = this.field_G - ce.field_k;
-                                                          var14 = am.a(var13 << 4, var12 << 4, false);
+                                                          var14 = ConnectionState.greatestCommonDivisor(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
                                                             var14 = 16;
                                                             var13 = -1;
@@ -2569,7 +2569,7 @@ final class SpellProjectile extends DualLinkNode {
                         var8 = on.a(var6, var7, (byte) -110);
                         var9 = on.a(this.field_u, this.field_F, (byte) -89);
                         var10 = -4096 + (8191 & -var9 + var8 + 4096);
-                        var11 = am.a(this.field_F, this.field_u, false);
+                        var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
                         if (var10 < -1024 ||
                           var10 > 1024) {
                           if (var11 < 100) {
@@ -2642,7 +2642,7 @@ final class SpellProjectile extends DualLinkNode {
                           var8 = on.a(var6, var7, (byte) -90);
                           var9 = on.a(this.field_u, this.field_F, (byte) 57);
                           var10 = -4096 + (var8 - (var9 - 4096) & 8191);
-                          var11 = am.a(this.field_F, this.field_u, false);
+                          var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
                           if (0 == this.field_I) {
                             if (-1024 > var10 ||
                               var10 > 1024) {
@@ -4129,7 +4129,7 @@ final class SpellProjectile extends DualLinkNode {
                     if (stackIn_431_0 != this.field_t) {
                       var12 = -var11_ref_ml.field_lb + this.field_v;
                       var13 = this.field_G - var11_ref_ml.field_db;
-                      var14 = am.a(var13, var12, false);
+                      var14 = ConnectionState.greatestCommonDivisor(var13, var12, false);
                       if (256 > var14 ||
                         var11_ref_ml.field_z) {
                         if (var11_ref_ml.field_db >= 0 &&
@@ -4146,7 +4146,7 @@ final class SpellProjectile extends DualLinkNode {
                         } else {
                           var13 = 32;
                         }
-                        var14 = am.a(var13, var12, false);
+                        var14 = ConnectionState.greatestCommonDivisor(var13, var12, false);
                         var15 = 64;
                         if (var14 > 128) {
                           var15 = 8192 / var14;
@@ -4179,7 +4179,7 @@ final class SpellProjectile extends DualLinkNode {
                       var11_ref_mi.field_I != 149) {
                       var12Lifetime3 = this.field_v - var11_ref_mi.field_v;
                       var13Lifetime3 = this.field_G - var11_ref_mi.field_G;
-                      var14Lifetime3 = am.a(var13Lifetime3, var12Lifetime3, false);
+                      var14Lifetime3 = ConnectionState.greatestCommonDivisor(var13Lifetime3, var12Lifetime3, false);
                       if (var14Lifetime3 < 256 ||
                         var11_ref_mi.isAlive(-139)) {
                         if (0 <= var11_ref_mi.field_G &&
@@ -4196,7 +4196,7 @@ final class SpellProjectile extends DualLinkNode {
                         } else {
                           var13Lifetime3 = 32;
                         }
-                        var14Lifetime3 = am.a(var13Lifetime3, var12Lifetime3, false);
+                        var14Lifetime3 = ConnectionState.greatestCommonDivisor(var13Lifetime3, var12Lifetime3, false);
                         var15Lifetime2 = 128;
                         if (var14Lifetime3 > 128) {
                           var15Lifetime2 = 8192 / var14Lifetime3;
@@ -6257,7 +6257,7 @@ final class SpellProjectile extends DualLinkNode {
                                                 }
                                                 var9 = param3 - this.field_t.field_lb;
                                                 var10Lifetime1 = (this.field_t.field_Y >> 1) + (-this.field_t.field_db + param2);
-                                                var11Lifetime1 = am.a(var10Lifetime1, var9, false);
+                                                var11Lifetime1 = ConnectionState.greatestCommonDivisor(var10Lifetime1, var9, false);
                                                 if (0 < var11Lifetime1 &&
                                                   this.field_t.field_x <= 0) {
                                                   if (this.field_I != 79) {
@@ -7203,7 +7203,7 @@ final class SpellProjectile extends DualLinkNode {
                 }
                 var9 = var7.field_lb - this.field_v;
                 var10 = -this.field_G + (var7.field_db - (var7.field_Y >> 1));
-                var11 = am.a(var10, var9, false);
+                var11 = ConnectionState.greatestCommonDivisor(var10, var9, false);
                 if (var11 == 0) {
                   var9 = 0;
                   var10 = -1;
@@ -8845,7 +8845,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                         return;
                                                                                                                                       }
                                                                                                                                     }
-                                                                                                                                    var5 = bj.a((int)Math.sqrt((double)(this.field_u * this.field_u + this.field_F * this.field_F)) / 15, (byte) 124);
+                                                                                                                                    var5 = bj.highestOneBit((int)Math.sqrt((double)(this.field_u * this.field_u + this.field_F * this.field_F)) / 15, (byte) 124);
                                                                                                                                     var5++;
                                                                                                                                     var6 = new int[var5];
                                                                                                                                     var6[0] = this.field_v + param2;

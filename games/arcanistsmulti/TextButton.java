@@ -82,7 +82,7 @@ class TextButton extends UiComponent {
             this.field_t = param1;
             if (null != this.field_o &&
               this.field_o instanceof ButtonPointerListener) {
-              ((ButtonPointerListener) (this.field_o)).a(31017, this, param0, param3, param6, param5, param1);
+              ((ButtonPointerListener) (this.field_o)).onButtonPressed(31017, this, param0, param3, param6, param5, param1);
             }
             return true;
           }
@@ -108,7 +108,7 @@ class TextButton extends UiComponent {
           }
           if (this.field_o != null &&
             this.field_o instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.field_o)).a(param0, false, param4, param2, this, param3);
+            ((ButtonPointerListener) (this.field_o)).onButtonReleased(param0, false, param4, param2, this, param3);
           }
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
@@ -163,7 +163,7 @@ class TextButton extends UiComponent {
             }
             if (this.field_o != null &&
               this.field_o instanceof ButtonFocusListener) {
-              ((ButtonFocusListener) (this.field_o)).a(false, this.field_y, (UiComponent) (this));
+              ((ButtonFocusListener) (this.field_o)).onFocusChanged(false, this.field_y, (UiComponent) (this));
             }
             return true;
           }
@@ -262,12 +262,12 @@ class TextButton extends UiComponent {
           return;
         }
         if (this.field_o instanceof ButtonFocusListener) {
-          ((ButtonFocusListener) (this.field_o)).a(false, this.field_y, (UiComponent) (this));
+          ((ButtonFocusListener) (this.field_o)).onFocusChanged(false, this.field_y, (UiComponent) (this));
           return;
         }
     }
 
-    final static void a(SceneTabbedPanel param0, byte param1) {
+    final static void openQuickChatMenu(SceneTabbedPanel param0, byte param1) {
         if (param0 == null) {
           return;
         }

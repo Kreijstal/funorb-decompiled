@@ -26,7 +26,7 @@ final class uc {
         if (param0 != 3) {
           return;
         }
-        TextButton.a(TextButton.field_C, (byte) -104);
+        TextButton.openQuickChatMenu(TextButton.field_C, (byte) -104);
     }
 
     final static void c(int param0) {

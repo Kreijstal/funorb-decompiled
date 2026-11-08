@@ -19,7 +19,7 @@ final class cb {
         field_c = null;
     }
 
-    final static void a(LobbyGameEntry param0, int param1) {
+    final static void insertSortedGame(LobbyGameEntry param0, int param1) {
         LobbyGameEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

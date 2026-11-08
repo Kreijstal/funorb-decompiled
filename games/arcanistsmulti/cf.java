@@ -25,7 +25,7 @@ final class cf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -75) {
-            cf.a(-43);
+            cf.resetIdleTimer(-43);
           }
           var4_long = 0L;
           var6 = null;
@@ -68,7 +68,7 @@ final class cf {
         field_g = (byte[][]) null;
     }
 
-    final static void a(int param0) {
+    final static void resetIdleTimer(int param0) {
         mh.field_K = qj.monotonicTimeMillis(-26572);
         int var1 = 27 % ((-47 - param0) / 44);
         ik.field_b = 0;

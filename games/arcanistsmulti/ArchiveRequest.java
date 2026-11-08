@@ -283,7 +283,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           db.field_b.field_vb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseheld");
           db.field_b.field_R = fj.loadSprite("lobby", -22612, param1, "downbutton_disabled");
           IntrusiveDeque.field_i = new SceneScrollbar(0L, pi.field_d, db.field_b, qe.field_m, SectorCacheStore.field_b);
-          ReflectionCheckRequest.field_r = new hb(0L, (SceneWidget) null, am.field_c, IntrusiveDeque.field_i, FrameClock.field_d, (String) null, (String) null);
+          ReflectionCheckRequest.field_r = new hb(0L, (SceneWidget) null, ConnectionState.field_c, IntrusiveDeque.field_i, FrameClock.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

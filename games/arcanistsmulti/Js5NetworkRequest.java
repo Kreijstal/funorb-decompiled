@@ -63,7 +63,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         RuntimeException var3_ref = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3 = PatchEnvelopeSet.a(param0, param1, true);
+          var3 = PatchEnvelopeSet.formatDisplayName(param0, param1, true);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

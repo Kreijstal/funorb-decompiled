@@ -239,7 +239,7 @@ final class ResourceArchive {
               if (0 != this.field_f) {
                 var7[var18Lifetime2] = var41[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = ValidatedTextWidget.a(false, 0, var41[var17Lifetime3]);
+                var7[var18Lifetime2] = ValidatedTextWidget.wrapBytes(false, 0, var41[var17Lifetime3]);
               }
             }
           } else {
@@ -249,7 +249,7 @@ final class ResourceArchive {
               var11 = 0;
             }
             if (this.field_f == 0) {
-              var7[var11] = ValidatedTextWidget.a(false, 0, var44);
+              var7[var11] = ValidatedTextWidget.wrapBytes(false, 0, var44);
             } else {
               var7[var11] = var37;
             }
@@ -710,7 +710,7 @@ final class ResourceArchive {
         if (this.field_h) {
           this.field_c[param0] = this.field_e.getGroupData(param0, true);
         } else {
-          this.field_c[param0] = ValidatedTextWidget.a(false, 0, this.field_e.getGroupData(param0, true));
+          this.field_c[param0] = ValidatedTextWidget.wrapBytes(false, 0, this.field_e.getGroupData(param0, true));
         }
     }
 

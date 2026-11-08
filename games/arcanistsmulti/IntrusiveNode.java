@@ -104,7 +104,7 @@ class IntrusiveNode {
                 PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               }
             }
-            ValidatedTextWidget.a((byte) -113, var5);
+            ValidatedTextWidget.rebuildIndexTable((byte) -113, var5);
             dupTemp$0 = new String[2][var5];
             var3.field_r = dupTemp$0;
             var6 = dupTemp$0;

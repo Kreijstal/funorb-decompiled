@@ -8,7 +8,7 @@ abstract class MouseWheelHandler {
     static int[] field_b;
     static String field_a;
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void detach(java.awt.Component param0, byte param1);
 
     public static void releaseStatics(int param0) {
         field_a = null;
@@ -25,9 +25,9 @@ abstract class MouseWheelHandler {
         field_d = null;
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     static int a(int param0, int param1) {
         return param0 ^ param1;

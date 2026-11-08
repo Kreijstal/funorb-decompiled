@@ -11,7 +11,7 @@ abstract class SocketConnector {
     static BitmapFont field_k;
     int field_b;
     static SceneWidget field_d;
-    static am field_c;
+    static ConnectionState field_c;
     static int field_i;
     static int field_g;
     static String field_a;
@@ -171,7 +171,7 @@ abstract class SocketConnector {
     static {
         field_f = "<shad><col=<%0>>OVERLIGHT</col></shad>";
         field_h = "Reading Arcane Book";
-        field_c = new am();
+        field_c = new ConnectionState();
         field_g = 0;
         field_a = "Only show game chat from my friends";
     }

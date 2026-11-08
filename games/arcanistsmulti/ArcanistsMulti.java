@@ -49,7 +49,7 @@ public final class ArcanistsMulti extends GameApplet {
           if (null != va.field_c) {
             TextTableInitializer.initializeTextTable(va.field_c, (byte) 22);
             va.field_c = null;
-            Checkbox.a(2);
+            Checkbox.resetTimers(2);
           }
           hb.field_Fb = BufferedRandomAccessFile.openArchive(6, (byte) 62);
           ue.field_d = BufferedRandomAccessFile.openArchive(1, (byte) 23);
@@ -174,8 +174,8 @@ public final class ArcanistsMulti extends GameApplet {
         int var4Lifetime2;
         var27 = field_G ? 1 : 0;
         try {
-          SectorCacheStore.a(1497225488);
-          MusicPatchPcmStream.field_o = ao.a(true);
+          SectorCacheStore.getTickCount(1497225488);
+          MusicPatchPcmStream.field_o = ao.getFrameCounter(true);
           IntrusiveNodeHashTable.serviceAudio(200);
           if (null != ProxySocketConnector.field_m &&
             ProxySocketConnector.field_m.field_e) {
@@ -240,12 +240,12 @@ public final class ArcanistsMulti extends GameApplet {
                     if (2 == var2_intLifetime2) {
                       UsernameCredentials.openQuitPage((byte) 75, IconButtonPainter.getApplet(123));
                       if (var27 != 0) {
-                        ao.a(5623);
+                        ao.noOperation(5623);
                       }
                     }
                   }
                 } else {
-                  ao.a(5623);
+                  ao.noOperation(5623);
                 }
                 this.processGameTick((byte) -89, true);
                 if (var27 != 0) {
@@ -286,7 +286,7 @@ public final class ArcanistsMulti extends GameApplet {
             } while (var27 == 0);
           }
           while (true) {
-            stackIn_99_0 = am.a((byte) 26, NodeHashTable.field_n);
+            stackIn_99_0 = ConnectionState.processLoginPackets((byte) 26, NodeHashTable.field_n);
             if (stackIn_99_0) {
               stackIn_263_0 = ~on.field_g;
               stackIn_263_1 = -78;
@@ -320,7 +320,7 @@ public final class ArcanistsMulti extends GameApplet {
                   if (wa.field_Ob) {
                     lf.switchToRequestedScreen((byte) 80);
                     ho.a(0);
-                    BirthDateEntryPanel.c(true);
+                    BirthDateEntryPanel.clearChatHistory(true);
                     hi.field_a = false;
                     wa.field_Ob = false;
                     StatefulTextPainter.field_w = false;
@@ -328,7 +328,7 @@ public final class ArcanistsMulti extends GameApplet {
                     wa.field_Kb = true;
                     MusicCrossfadeStream.field_A = false;
                     mn.field_r = 0;
-                    bc.a((byte) -50);
+                    bc.resetChatFilter((byte) -50);
                   }
                   TextLayout.field_b = false;
                   IntrusiveDequeCursor.field_g = false;
@@ -533,7 +533,7 @@ public final class ArcanistsMulti extends GameApplet {
                     mn.field_r = -2;
                     ao.field_d = true;
                     UiTheme.field_t = 0;
-                    bc.a((byte) -50);
+                    bc.resetChatFilter((byte) -50);
                   }
                   IntrusiveDequeCursor.field_g = false;
                   continue;
@@ -601,7 +601,7 @@ public final class ArcanistsMulti extends GameApplet {
                     StatefulTextPainter.field_w = false;
                     wa.field_Ob = false;
                     hi.field_a = false;
-                    bc.a((byte) -50);
+                    bc.resetChatFilter((byte) -50);
                   }
                   IntrusiveDequeCursor.field_g = false;
                   TextLayout.field_b = false;
@@ -620,7 +620,7 @@ public final class ArcanistsMulti extends GameApplet {
               }
               if (var4Lifetime1 != 0 &&
                 null != CachedArchiveProvider.field_t) {
-                ah.a(ArchiveRequest.field_t, CachedArchiveProvider.field_t.field_o, 8, 8, ResizableViewResizeListener.field_h, CachedArchiveProvider.field_t, EmailLoginCredentials.field_f / 2, EmailLoginCredentials.field_j / 2, 2, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_o, -97);
+                ah.beginAccountFlow(ArchiveRequest.field_t, CachedArchiveProvider.field_t.field_o, 8, 8, ResizableViewResizeListener.field_h, CachedArchiveProvider.field_t, EmailLoginCredentials.field_f / 2, EmailLoginCredentials.field_j / 2, 2, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_o, -97);
               }
             }
             return;
@@ -764,7 +764,7 @@ public final class ArcanistsMulti extends GameApplet {
                                       lo.field_w = new SoundCache(MeshModel.field_l, DateInputWidget.field_E);
                                       MeshModel.field_l = null;
                                       DateInputWidget.field_E = null;
-                                      Checkbox.a(2);
+                                      Checkbox.resetTimers(2);
                                       return false;
                                     }
                                     rb.a(qe.formatLoadingProgress(MenuButtonPainter.field_t, 74, GridContainer.field_K, NodeHashTable.field_c), false, 55.0f);
@@ -811,7 +811,7 @@ public final class ArcanistsMulti extends GameApplet {
             rb.a(FadingModalPanel.field_J, false, 85.0f);
             this.updateClient((byte) -89);
             DelegatingCanvas.field_c = new MusicTrack[10];
-            Checkbox.a(2);
+            Checkbox.resetTimers(2);
             return false;
           }
           var3_intLifetime1 = -84 / ((14 - param0) / 56);
@@ -830,7 +830,7 @@ public final class ArcanistsMulti extends GameApplet {
               MusicPatchPcmStream.field_k = fj.loadSprite("", -22612, ue.field_d, "border_bar_v");
               mc.field_a = qe.loadSpriteSheet(ue.field_d, "charactericons", "", 55);
               rb.field_o = qe.loadSpriteSheet(ue.field_d, "bonushats", "", 63);
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
             if (LoginPanel.field_M == null) {
@@ -853,7 +853,7 @@ public final class ArcanistsMulti extends GameApplet {
               BevelBoxPainter.field_a = fj.loadSprite("", -22612, ue.field_d, "cldbr");
               LoadingProgressDialog.field_mb = fj.loadSprite("", -22612, ue.field_d, "cldflat");
               fe.field_o = fj.loadSprite("", -22612, ue.field_d, "spell_book");
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
             if (null == DiskCacheRequest.field_E) {
@@ -890,7 +890,7 @@ public final class ArcanistsMulti extends GameApplet {
                 SceneTextInput.loadSceneSprites(ue.field_d, (byte) -66);
                 CachedArchiveProvider.field_t = LoadingTracker.loadBinaryFont(MenuInputState.field_k, -24755, "", "font", ue.field_d);
                 SpellProjectile.field_B = LoadingTracker.loadBinaryFont(MenuInputState.field_k, -24755, "", "smallfont", ue.field_d);
-                Checkbox.a(2);
+                Checkbox.resetTimers(2);
                 stackIn_188_0 = 0;
               }
               return stackIn_188_0 != 0;
@@ -911,7 +911,7 @@ public final class ArcanistsMulti extends GameApplet {
               bo.field_a = qe.loadSpriteSheet(ue.field_d, "mouths", "", 42);
               ModalPanelStack.field_I = qe.loadSpriteSheet(ue.field_d, "pfeet", "", 58);
               fn.field_b = qe.loadSpriteSheet(ue.field_d, "mfeet", "", 113);
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
             if (null == SceneTabbedPanel.field_Pb) {
@@ -930,7 +930,7 @@ public final class ArcanistsMulti extends GameApplet {
               ArrayWidgetContainer.field_E = qe.loadSpriteSheet(ue.field_d, "clockworkaura", "", 75);
               jg.field_c = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "runes", ue.field_d);
               WhirlpoolHasher.field_o = qe.loadSpriteSheet(ue.field_d, "spellbooks", "", 93);
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
             if (null == nm.field_i) {
@@ -944,7 +944,7 @@ public final class ArcanistsMulti extends GameApplet {
               nm.field_i[7].field_n = nm.field_i[7].field_q;
               nm.field_i[5].field_w = nm.field_i[5].field_y;
               ResizableViewResizeListener.field_h = qe.loadSpriteSheet(ue.field_d, "button_frame", "", 69);
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
             if (null == ArchiveRequest.field_t) {
@@ -960,7 +960,7 @@ public final class ArcanistsMulti extends GameApplet {
                   ih.field_e.makeRasterTarget();
                   NodeHashTable.field_d.drawScaledAveraged(0, 0, 32, 32);
                   ce.field_m.makeRasterTarget(true);
-                  Checkbox.a(2);
+                  Checkbox.resetTimers(2);
                   break;
                 }
                 IntrusiveNodeHashTable.field_a[var4_int] = null;
@@ -1008,7 +1008,7 @@ public final class ArcanistsMulti extends GameApplet {
                 var8 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "expansion_screens", ue.field_d);
                 SceneWidgetNode.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, SceneTextInput.field_Kb);
               }
-              Checkbox.a(2);
+              Checkbox.resetTimers(2);
               return false;
             }
           }
@@ -1018,7 +1018,7 @@ public final class ArcanistsMulti extends GameApplet {
           }
           MidiPcmStream.setHuffmanCodec(-92, new HuffmanCodec(hb.field_Fb.getNamedFile("huffman", "", -1)));
           hb.field_Fb = null;
-          Checkbox.a(2);
+          Checkbox.resetTimers(2);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1052,7 +1052,7 @@ public final class ArcanistsMulti extends GameApplet {
               MusicPatch.field_o = GridContainer.joinText(new CharSequence[]{(CharSequence) ((Object) MusicPatch.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IconTextSceneWidget.field_Hb)}, -93);
             }
             vf.field_k.dismiss(77);
-            PatchEnvelopeSet.c(0);
+            PatchEnvelopeSet.showLoadingDialog(0);
             if (var2 == 0) {
               return;
             }
@@ -1410,7 +1410,7 @@ public final class ArcanistsMulti extends GameApplet {
           co.releaseStatics(-62);
           ho.releaseStatics(0);
           km.releaseStatics(400);
-          am.releaseStatics(false);
+          ConnectionState.releaseStatics(false);
           qe.releaseStatics(-100);
           MenuButtonPanel.releaseStatics((byte) 115);
           ClipState.a(-69);
@@ -1537,10 +1537,10 @@ public final class ArcanistsMulti extends GameApplet {
                 if (!ChatInputWidget.field_Cb) {
                   IntrusiveDeque.a((byte) 4);
                   if (var13 != 0) {
-                    am.a(3020);
+                    ConnectionState.startReconnect(3020);
                   }
                 } else {
-                  am.a(3020);
+                  ConnectionState.startReconnect(3020);
                 }
                 ii.field_a = ScrollContainer.field_I;
                 decompiledFrameRemainder2 = (var13 != 0);
@@ -1618,7 +1618,7 @@ public final class ArcanistsMulti extends GameApplet {
                 var3_int = 0;
                 var4 = 0;
               }
-              ae.a(var3_int != 0, 13);
+              ae.updateLobbyRequests(var3_int != 0, 13);
               if (StatefulTextPainter.field_w) {
                 r.field_b.updateCamera(true, var4 != 0);
               }

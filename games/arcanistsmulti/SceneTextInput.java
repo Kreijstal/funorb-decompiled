@@ -237,7 +237,7 @@ final class SceneTextInput extends SceneWidget {
               this.field_Ib.length() > 0) {
               qj.padToLength(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
             }
-            if (bj.a(ed.field_Bb, (CharSequence) ((Object) this.field_Ib), (byte) -71) ||
+            if (bj.canAppendNameCharacter(ed.field_Bb, (CharSequence) ((Object) this.field_Ib), (byte) -71) ||
               (this.field_Ib.length() == 0 &&
               91 == ed.field_Bb ||
               this.field_Ib.length() == 1 &&

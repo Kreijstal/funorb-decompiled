@@ -110,7 +110,7 @@ final class ao {
         ng.sleep(true, 1L);
     }
 
-    final static int a(boolean param0) {
+    final static int getFrameCounter(boolean param0) {
         if (!param0) {
           ao.computeColumnX(-63, -91, 35);
           return rf.field_o;
@@ -118,7 +118,7 @@ final class ao {
         return rf.field_o;
     }
 
-    final static void a(int param0) {
+    final static void noOperation(int param0) {
         if (param0 != 5623) {
           ao.releaseStatics(-55);
         }

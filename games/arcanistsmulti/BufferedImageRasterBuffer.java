@@ -6,7 +6,7 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends CanvasRasterBuffer {
     private java.awt.Component field_n;
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         this.field_e = param3;
         this.field_m = param0;
         this.field_l = new int[1 + param3 * param0];
@@ -20,7 +20,7 @@ final class BufferedImageRasterBuffer extends CanvasRasterBuffer {
           return;
         }
         java.awt.Graphics var8 = (java.awt.Graphics) null;
-        this.a(117, (java.awt.Graphics) null, 45, -66);
+        this.draw(117, (java.awt.Graphics) null, 45, -66);
         this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_n = param1;
         this.makeRasterTarget(true);
@@ -29,7 +29,7 @@ final class BufferedImageRasterBuffer extends CanvasRasterBuffer {
     public BufferedImageRasterBuffer() {
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void draw(int param0, java.awt.Graphics param1, int param2, int param3) {
         if (param2 == 0) {
           param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;

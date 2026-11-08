@@ -239,7 +239,7 @@ final class cj {
         }
     }
 
-    final static int a(boolean param0, byte param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, String param6) {
+    final static int submitAccountCreationRequest(boolean param0, byte param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, String param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_18_0 = null;

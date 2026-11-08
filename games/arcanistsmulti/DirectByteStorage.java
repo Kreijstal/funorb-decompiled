@@ -46,7 +46,7 @@ final class DirectByteStorage extends ByteStorage {
         field_f = null;
     }
 
-    final void a(int param0, byte[] param1) {
+    final void set(int param0, byte[] param1) {
         try {
           this.field_k = java.nio.ByteBuffer.allocateDirect(param1.length);
           int var3_int = -111 / ((param0 - 25) / 44);
@@ -57,7 +57,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final byte[] b(byte param0) {
+    final byte[] get(byte param0) {
         byte[] var4 = new byte[this.field_k.capacity()];
         byte[] var2 = var4;
         if (param0 < 0) {

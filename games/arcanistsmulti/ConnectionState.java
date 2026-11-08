@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am {
+final class ConnectionState {
     static String field_a;
     static String field_b;
     static SceneWidget field_c;
@@ -19,7 +19,7 @@ final class am {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0, int[] param1) {
+    final static boolean processLoginPackets(byte param0, int[] param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_40_0 = null;
@@ -108,7 +108,7 @@ final class am {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isConnectedState(byte param0) {
         int var2;
         boolean stackIn_6_0 = false;
         var2 = -128 % ((param0 - 17) / 52);
@@ -116,7 +116,7 @@ final class am {
         return stackIn_6_0;
     }
 
-    final static void a(int param0) {
+    final static void startReconnect(int param0) {
         if (!qe.field_p) {
           throw new IllegalStateException();
         }
@@ -128,7 +128,7 @@ final class am {
         fj.field_j = 0;
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int greatestCommonDivisor(int param0, int param1, boolean param2) {
         int stackIn_40_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_49_0 = 0;

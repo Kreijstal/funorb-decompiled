@@ -2568,7 +2568,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("mp_showchat_unread1", (byte) -45);
                 if (null != var2) {
-                  am.field_a = ValidationHelpWidget.decodeString((byte) 127, var2);
+                  ConnectionState.field_a = ValidationHelpWidget.decodeString((byte) 127, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("mp_showchat_unread2", (byte) -45);
                 if (var2 != null) {

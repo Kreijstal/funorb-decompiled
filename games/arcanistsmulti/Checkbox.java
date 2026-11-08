@@ -13,7 +13,7 @@ final class Checkbox extends TextButton {
         this.field_z = !this.field_z ? true : false;
         super.activate(-121, param1, param2, param3);
         if (param0 > -99) {
-          Checkbox.a(-47);
+          Checkbox.resetTimers(-47);
           return;
         }
     }
@@ -33,14 +33,14 @@ final class Checkbox extends TextButton {
         field_K = null;
         field_L = null;
         if (param0 != 0) {
-          Checkbox.a(126);
+          Checkbox.resetTimers(126);
           field_M = null;
           return;
         }
         field_M = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int classifyCount(int param0, int param1, int param2) {
         if (param1 != 1021) {
           Checkbox.releaseStatics(44);
           if (2 <= param0) {
@@ -69,7 +69,7 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetTimers(int param0) {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         DualLinkDeque.field_e.reset(-12619);

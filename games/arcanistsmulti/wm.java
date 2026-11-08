@@ -89,7 +89,7 @@ final class wm extends SingleChildContainer {
     }
 
     final static void g(int param0) {
-        PatchEnvelopeSet.d(-123);
+        PatchEnvelopeSet.finishLoadingDialog(-123);
         if (param0 != 0) {
           field_I = -56;
         }

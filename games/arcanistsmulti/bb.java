@@ -5,14 +5,14 @@ final class bb {
     static BufferedRandomAccessFile[] field_b;
     static String field_e;
     static ResourceArchive field_a;
-    static am field_c;
+    static ConnectionState field_c;
     static String field_f;
     static boolean field_h;
     static String field_d;
     static Sprite[] field_g;
     static String[] field_i;
 
-    final static boolean a(String param0, String param1, int param2, AccountRegistrationPanel param3, int param4, String param5, boolean param6) {
+    final static boolean showAccountDialog(String param0, String param1, int param2, AccountRegistrationPanel param3, int param4, String param5, boolean param6) {
         RuntimeException var7 = null;
         String var8 = null;
         ie var9 = null;
@@ -32,7 +32,7 @@ final class bb {
           }
           if (param4 != -30001) {
             var8 = (String) null;
-            bb.a((String) null, (String) null, 89, (AccountRegistrationPanel) null, 120, (String) null, false);
+            bb.showAccountDialog((String) null, (String) null, 89, (AccountRegistrationPanel) null, 120, (String) null, false);
           }
           var9 = new ie(ClientException.field_b, param3);
           ClientException.field_b.pushPanel(var9, 15637);
@@ -80,7 +80,7 @@ final class bb {
         }
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] buildRequestBytes(int param0, int param1) {
         int fieldTemp$23 = 0;
         int fieldTemp$24 = 0;
         int dupTemp$25 = 0;
@@ -132,7 +132,7 @@ final class bb {
         byte[] var3Lifetime1Lifetime1;
         if (param0 != 100) {
           if (param1 < 41) {
-            bb.c((byte) -67);
+            bb.sendSettingsUpdate((byte) -67);
             if (param0 == 5000 &&
               SceneWidget.field_D > 0) {
               fieldTemp$23 = SceneWidget.field_D - 1;
@@ -229,7 +229,7 @@ final class bb {
           return var2_ref_byte__Lifetime1;
         }
         if (param1 < 41) {
-          bb.c((byte) -67);
+          bb.sendSettingsUpdate((byte) -67);
           if (param0 == 5000 &&
             SceneWidget.field_D > 0) {
             fieldTemp$9 = SceneWidget.field_D - 1;
@@ -343,11 +343,11 @@ final class bb {
         field_a = null;
         field_g = null;
         if (param0 > -70) {
-          bb.c((byte) -8);
+          bb.sendSettingsUpdate((byte) -8);
         }
     }
 
-    final static void c(byte param0) {
+    final static void sendSettingsUpdate(byte param0) {
         int var1_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -426,7 +426,7 @@ final class bb {
 
     static {
         field_f = "Searching for opponents";
-        field_c = new am();
+        field_c = new ConnectionState();
         field_d = "Good luck against the cyclopes. The battle will commence after you press 'Enter'. Try to knock enemies into the water to defeat them quickly.";
         field_i = new String[255];
     }

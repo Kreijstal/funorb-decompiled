@@ -38,7 +38,7 @@ final class DraggableWidget extends SingleChildContainer {
             try {
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (CanvasRasterBuffer) (var4.newInstance());
-              var5.a(param2, param1, param3 ^ -123, param0);
+              var5.initialize(param2, param1, param3 ^ -123, param0);
               if (param3 != -123) {
                 field_E = 'ﾣ';
               }
@@ -48,7 +48,7 @@ final class DraggableWidget extends SingleChildContainer {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((CanvasRasterBuffer) ((Object) var5_ref)).a(param2, param1, 0, param0);
+              ((CanvasRasterBuffer) ((Object) var5_ref)).initialize(param2, param1, 0, param0);
               stackIn_5_0 = var5_ref;
               return (CanvasRasterBuffer) ((Object) stackIn_5_0);
             }

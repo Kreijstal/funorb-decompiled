@@ -476,7 +476,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           this.field_J = true;
           if (null != this.field_o &&
             this.field_o instanceof ButtonFocusListener) {
-            ((ButtonFocusListener) (this.field_o)).a(false, this.field_J, (UiComponent) (this));
+            ((ButtonFocusListener) (this.field_o)).onFocusChanged(false, this.field_J, (UiComponent) (this));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

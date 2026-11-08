@@ -835,7 +835,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
         if (param0 < 74) {
           return;
         }
-        CanvasRasterBuffer.a(true, 14067);
+        CanvasRasterBuffer.drawLoadingOverlay(true, 14067);
     }
 
     final static void openDisplayNameForm(int param0) {

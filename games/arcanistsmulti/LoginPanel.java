@@ -674,7 +674,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               }
               if (!this.field_F) {
                 if (this.field_N) {
-                  PatchEnvelopeSet.a(123);
+                  PatchEnvelopeSet.openSimpleDialog(123);
                   if (var7 == 0) {
                     return;
                   }
@@ -808,7 +808,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 54 % ((param1 - 33) / 52);
-          stackIn_1_0 = cj.a(false, (byte) -91, 0, param0, 0, param2, (String) null);
+          stackIn_1_0 = cj.submitAccountCreationRequest(false, (byte) -91, 0, param0, 0, param2, (String) null);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

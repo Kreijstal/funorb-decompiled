@@ -27,9 +27,9 @@ final class cc {
         return tk.a(-4, (param0 << 16) / param1);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean hasPendingValidation(byte param0) {
         if (param0 != 118) {
-          cc.c((byte) 58);
+          cc.hasPendingValidation((byte) 58);
           return ValidationState.field_e != null ? true : false;
         }
         return ValidationState.field_e != null ? true : false;

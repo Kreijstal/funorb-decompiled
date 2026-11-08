@@ -5,7 +5,7 @@ import java.util.*;
 
 final class co {
     static SceneWidget field_f;
-    static am field_h;
+    static ConnectionState field_h;
     static String field_b;
     static String field_d;
     static boolean[][] field_a;
@@ -42,7 +42,7 @@ final class co {
           var2 = 0;
           var3 = (BattleUnit) (var1.first(param0 + 33298));
           if (param0 != -20675) {
-            field_h = (am) null;
+            field_h = (ConnectionState) null;
           }
           while (var3 != null) {
             if (40 == var3.field_jb) {
@@ -285,7 +285,7 @@ final class co {
 
     static {
         field_b = "MOST RESILIENT - ";
-        field_h = new am();
+        field_h = new ConnectionState();
         field_d = "Your account has had its rating reset as we suspect that you have been involved in ratings transfer.<br>If you feel that this is not the case, please post a query by submitting a bug report on the FunOrb main site.<br><br>We will not respond to any other forms of communication on this matter.";
         field_i = "Time left:";
         field_a = new boolean[][]{null, new boolean[]{false, false, false, false, false, false, false, false, true, false}, null};

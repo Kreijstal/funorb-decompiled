@@ -8,7 +8,7 @@ final class ci {
     static Sprite field_e;
     static pb field_d;
 
-    final static void a(byte param0) {
+    final static void initializeModalStack(byte param0) {
         MusicCrossfadeStream.field_n = oo.d(-9685);
         ClientException.field_b = new ModalPanelStack();
         if (param0 > 49) {

@@ -224,7 +224,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         this.field_O = new TextButton(UsernameCredentials.field_f, (UiListener) null);
         this.field_I = new TextButton(sa.field_Eb, (UiListener) null);
         this.field_D.field_q = ValidationState.field_b;
-        this.field_D.a(new NameValidator(this.field_D), (byte) 69);
+        this.field_D.setValidator(new NameValidator(this.field_D), (byte) 69);
         this.field_O.field_B = false;
         this.field_O.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
         this.field_I.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());

@@ -419,7 +419,7 @@ final class MenuScreen {
                 bb.field_g[114].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                var2 = am.field_b;
+                var2 = ConnectionState.field_b;
                 var3 += 30;
                 var4 = var7;
                 SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
@@ -7836,7 +7836,7 @@ final class MenuScreen {
                             if (!this.field_g.isRightPressed(-74)) {
                               return;
                             }
-                            ck.a((byte) 115);
+                            ck.stepMusicVolumeUp((byte) 115);
                             return;
                           }
                           if (var6 == 6) {
@@ -11200,7 +11200,7 @@ final class MenuScreen {
         int var8Lifetime1Lifetime1;
         var21 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (cc.c((byte) 118)) {
+          if (cc.hasPendingValidation((byte) 118)) {
             pb.drawOrbCoinScreen(2341);
             return;
           }
@@ -11768,7 +11768,7 @@ final class MenuScreen {
             this.field_h = -27;
           }
           fo.field_k = fo.field_k + 1;
-          if (cc.c((byte) 118)) {
+          if (cc.hasPendingValidation((byte) 118)) {
             var2_int = ii.a(89);
             if (var2_int != 2) {
               return;
@@ -11912,7 +11912,7 @@ final class MenuScreen {
               }
               if (this.field_m == 9 &&
                 ri.field_b[82]) {
-                bb.c((byte) -120);
+                bb.sendSettingsUpdate((byte) -120);
               }
             }
             var2_intLifetime1Lifetime1 = 0;

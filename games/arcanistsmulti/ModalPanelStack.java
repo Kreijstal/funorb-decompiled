@@ -152,7 +152,7 @@ final class ModalPanelStack extends SingleChildContainer {
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           SoundCache.field_a = param0;
-          SocialListEntry.f(252566882);
+          SocialListEntry.buildLogoModelFrame(252566882);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

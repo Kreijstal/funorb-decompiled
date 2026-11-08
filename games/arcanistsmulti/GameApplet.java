@@ -261,12 +261,12 @@ abstract class GameApplet extends GameAppletShell {
                 if (var11 == null) {
                   stackIn_70_0 = null;
                   stackIn_71_1 = !(param0);
-                  bc.a((String) (stackIn_70_0), stackIn_71_1);
+                  bc.sendDefaultToggle((String) (stackIn_70_0), stackIn_71_1);
                 } else {
                   var7 = PatchEnvelopeSet.decodeCp1252String(0, var11.position, (byte) -123, var11.payload);
                   stackIn_66_0 = var7;
                   stackIn_67_1 = !(param0);
-                  bc.a(stackIn_66_0, stackIn_67_1);
+                  bc.sendDefaultToggle(stackIn_66_0, stackIn_67_1);
                 }
                 Battle.field_P = null;
               }
@@ -275,7 +275,7 @@ abstract class GameApplet extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               DelegatingCanvas.a((Throwable) ((Object) var5), "S1", (byte) 20);
               var9 = (String) null;
-              bc.a((String) null, true);
+              bc.sendDefaultToggle((String) null, true);
               Battle.field_P = null;
             }
           }
@@ -524,13 +524,13 @@ abstract class GameApplet extends GameAppletShell {
           i.a(0);
         }
         if (null != StrongCacheEntry.field_w) {
-          SingleChildContainer.field_y = StrongCacheEntry.field_w.a(-1);
+          SingleChildContainer.field_y = StrongCacheEntry.field_w.pollRotation(-1);
         }
         if (td.a(-97)) {
           var3 = LinkButtonPainter.getFramesPerSecond(-2) * 1200;
           if (this.field_A ||
-            !(SectorCacheStore.a(1497225488) <= var3) &&
-            !(ao.a(true) <= var3)) {
+            !(SectorCacheStore.getTickCount(1497225488) <= var3) &&
+            !(ao.getFrameCounter(true) <= var3)) {
             this.field_A = false;
             ProxySocketConnector.closeActiveConnection(false);
             fk.d(-11);
@@ -642,7 +642,7 @@ abstract class GameApplet extends GameAppletShell {
               if (lh.field_g.isGroupAvailableByName("", -24417)) {
                 on.a((byte) -84, lh.field_g);
                 lh.field_g = null;
-                Checkbox.a(2);
+                Checkbox.resetTimers(2);
               }
             }
           }
@@ -677,7 +677,7 @@ abstract class GameApplet extends GameAppletShell {
           DiskCacheRequest.field_C = null;
           da.field_b = null;
           ArcanistsMulti.readUsernameParameter((java.applet.Applet) (this), -1);
-          Checkbox.a(2);
+          Checkbox.resetTimers(2);
           ih.field_f = 10;
         }
         if (ih.field_f == 10) {

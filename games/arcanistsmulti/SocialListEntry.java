@@ -51,7 +51,7 @@ final class SocialListEntry extends SceneWidget {
             return true;
           }
           if (param0 != -111) {
-            SocialListEntry.f(-126);
+            SocialListEntry.buildLogoModelFrame(-126);
           }
           if (param1.field_g != param2.field_g) {
             return false;
@@ -80,7 +80,7 @@ final class SocialListEntry extends SceneWidget {
         }
     }
 
-    final static void f(int param0) {
+    final static void buildLogoModelFrame(int param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -259,7 +259,7 @@ final class SocialListEntry extends SceneWidget {
         }
     }
 
-    final static Sprite a(String param0, byte param1, ResourceArchive param2, String param3) {
+    final static Sprite loadSpriteByName(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

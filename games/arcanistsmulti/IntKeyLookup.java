@@ -36,7 +36,7 @@ final class IntKeyLookup {
         try {
           no.attachMouseInput((java.awt.Component) ((Object) param0), 0);
           if (null != StrongCacheEntry.field_w) {
-            StrongCacheEntry.field_w.a(-15238, (java.awt.Component) ((Object) param0));
+            StrongCacheEntry.field_w.attach(-15238, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -77,7 +77,7 @@ final class IntKeyLookup {
         fk.setSpriteRasterTarget(LoadingTracker.field_h, -23095);
         MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
-        SocialListEntry.f(252566882);
+        SocialListEntry.buildLogoModelFrame(252566882);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, -var5 + 256);
         }

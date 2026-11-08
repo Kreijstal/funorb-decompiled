@@ -7195,7 +7195,7 @@ final class Battle {
           if (var15 <= 0) {
             return;
           }
-          var15Lifetime1 = am.a(var14, var13, false);
+          var15Lifetime1 = ConnectionState.greatestCommonDivisor(var14, var13, false);
           this.field_mb = var8;
           if (var13 <= 0) {
             var12.field_E = -1;
@@ -7472,7 +7472,7 @@ final class Battle {
             Math.abs(var13) < Math.abs(var14)) {
             var14 = (var14 >= 0) && (var47 == 0) ? (64) : (-64);
             var13 = 64 * var12.field_E;
-            var15Lifetime1 = am.a(var14, var13, false);
+            var15Lifetime1 = ConnectionState.greatestCommonDivisor(var14, var13, false);
           }
           if (var10 == 127) {
             var11 = 48;

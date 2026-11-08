@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface ViewResizeListener {
-    public abstract void a(int param0, int param1, int param2);
+    public abstract void onViewResized(int param0, int param1, int param2);
 }

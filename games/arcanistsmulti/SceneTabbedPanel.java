@@ -77,7 +77,7 @@ final class SceneTabbedPanel extends SceneWidget {
               BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, MenuInputState.field_p);
               SceneTabbedPanel.a(param0 ^ -13, nj.field_c, var5, gg.field_e, MenuInputState.field_p);
               SecondaryNodeDeque.a(14);
-              cf.a(-113);
+              cf.resetIdleTimer(-113);
             }
           }
         } else {

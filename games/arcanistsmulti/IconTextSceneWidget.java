@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IconTextSceneWidget extends SceneWidget {
-    static am field_Ib;
+    static ConnectionState field_Ib;
     static String field_Bb;
     private SceneWidget field_Cb;
     static String field_Hb;
@@ -225,7 +225,7 @@ final class IconTextSceneWidget extends SceneWidget {
     static {
         field_Bb = "Offer unrated rematch";
         field_Hb = "Visit the Account Management section on the main site to view.";
-        field_Ib = new am();
+        field_Ib = new ConnectionState();
         field_Jb = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }
 }

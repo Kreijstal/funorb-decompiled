@@ -217,8 +217,8 @@ final class MembershipOfferScreen {
           SocialListEntry.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
           NameSuggestionsPanel.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
           fd.field_b = WhirlpoolHasher.loadCoverageFont("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
-          fd.field_f = SocialListEntry.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
-          qf.field_b = SocialListEntry.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
+          fd.field_f = SocialListEntry.loadSpriteByName("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
+          qf.field_b = SocialListEntry.loadSpriteByName("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
           KeyboardInputHandler.field_c = IconTextSceneWidget.loadSpritesByName((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
           EmailLoginCredentials.field_o = null;
           bb.field_a = null;

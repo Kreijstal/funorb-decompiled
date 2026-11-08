@@ -343,7 +343,7 @@ final class lm {
                 if (null != ue.field_b &&
                   ue.field_b[var7] != null &&
                   (~IntKeyLookup.field_a & ue.field_b[var7][var9]) > 0) {
-                  var15 = bj.a(ue.field_b[var7][var9] & ~IntKeyLookup.field_a, (byte) 104);
+                  var15 = bj.highestOneBit(ue.field_b[var7][var9] & ~IntKeyLookup.field_a, (byte) 104);
                   var14 = 1;
                 }
                 if (SceneTextInput.field_Hb != null &&

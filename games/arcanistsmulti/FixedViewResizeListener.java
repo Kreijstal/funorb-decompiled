@@ -27,7 +27,7 @@ final class FixedViewResizeListener implements ViewResizeListener {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void onViewResized(int param0, int param1, int param2) {
         ri.a(param0, 2, param1);
         int var4 = 27 / ((59 - param2) / 47);
     }

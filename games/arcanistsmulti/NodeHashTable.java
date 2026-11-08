@@ -8,7 +8,7 @@ final class NodeHashTable {
     static String field_b;
     static int[] field_n;
     private int field_k;
-    static am field_i;
+    static ConnectionState field_i;
     private IntrusiveNode[] field_f;
     static boolean field_h;
     static int[] field_l;
@@ -158,7 +158,7 @@ final class NodeHashTable {
         field_c = "Waiting for extra data";
         field_n = new int[256];
         field_h = false;
-        field_i = new am();
+        field_i = new ConnectionState();
         field_j = true;
     }
 }

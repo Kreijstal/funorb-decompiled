@@ -355,7 +355,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         try {
           try {
             var4 = param0.getGraphics();
-            ce.field_m.a(param3, var4, 0, param2);
+            ce.field_m.draw(param3, var4, 0, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

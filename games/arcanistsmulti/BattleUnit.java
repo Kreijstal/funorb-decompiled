@@ -3434,7 +3434,7 @@ final class BattleUnit extends DualLinkNode {
             var11 = this.field_eb;
             var9_intLifetime1 = this.field_db - ce.field_k + (this.field_Y >> 1);
             var8Lifetime1 = this.field_lb - NodeHashTable.field_m;
-            var12 = am.a(var9_intLifetime1, var8Lifetime1, false);
+            var12 = ConnectionState.greatestCommonDivisor(var9_intLifetime1, var8Lifetime1, false);
             if (var12 < 1) {
               var8Lifetime1 = 0;
               var9_intLifetime1 = -1;

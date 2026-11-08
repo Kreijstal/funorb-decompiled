@@ -53,7 +53,7 @@ final class MidiPcmStream extends PcmStream {
           if (param0 < 0 ||
             param0 == var3.field_H) {
             if (null != var3.field_n) {
-              var3.field_n.d(AudioOutput.field_r / 100);
+              var3.field_n.fadeOut(AudioOutput.field_r / 100);
               if (var3.field_n.hasRemainingRampFrames()) {
                 this.field_G.field_n.addSubStream(var3.field_n);
               }
@@ -959,7 +959,7 @@ final class MidiPcmStream extends PcmStream {
             }
             return false;
           }
-          param4.field_n.d(param4.field_C);
+          param4.field_n.fadeOut(param4.field_C);
           if (param3 == null) {
             param4.field_n.skip(param2);
           } else {

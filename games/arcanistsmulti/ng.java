@@ -228,7 +228,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           tn.field_Ob.field_c.updateTabs((byte) 101);
           if (null != om.field_x) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
-              bc.a(param1, -14431);
+              bc.sendToggleOption(param1, -14431);
             }
             if (CanvasRasterBuffer.field_k.field_U != 0) {
               if (!SceneScrollPane.field_Db) {

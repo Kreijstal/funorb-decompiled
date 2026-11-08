@@ -201,7 +201,7 @@ final class SectorCacheStore {
         field_a = null;
     }
 
-    final static int a(int param0) {
+    final static int getTickCount(int param0) {
         if (param0 != 1497225488) {
           return -32;
         }
@@ -395,7 +395,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(int param0, TextLine param1, String param2, BitmapFont param3, byte param4) {
+    final static void computeTagOffsets(int param0, TextLine param1, String param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -476,7 +476,7 @@ final class SectorCacheStore {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1) {
-            SectorCacheStore.a(-40);
+            SectorCacheStore.getTickCount(-40);
           }
           var2_long = 0L;
           var4 = param0.length();

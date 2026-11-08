@@ -6,7 +6,7 @@ class TextHotspotWidget extends TextButton {
     static String field_Q;
     private IntrusiveDeque field_O;
     private String[] field_I;
-    static am field_R;
+    static ConnectionState field_R;
     static String field_M;
     static String field_H;
     static String field_N;
@@ -850,7 +850,7 @@ class TextHotspotWidget extends TextButton {
 
     static {
         field_Q = "Now the Fire Ball spell is selected, you will see an aiming arc in front of your Arcanist. This arc will fill up as you hold down the mouse button, which sets the spell's initial velocity. Try shooting the target in front of you.";
-        field_R = new am();
+        field_R = new ConnectionState();
         field_N = "MOST MINIONS - ";
         field_H = "Played";
         field_M = "Book of Overlight";

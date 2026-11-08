@@ -35,9 +35,9 @@ abstract class CanvasRasterBuffer {
         SoftwareRasterizer.setTarget(this.field_l, this.field_e, this.field_m);
     }
 
-    abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
+    abstract void draw(int param0, java.awt.Graphics param1, int param2, int param3);
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLoadingOverlay(boolean param0, int param1) {
         if (param1 != 14067) {
           CanvasRasterBuffer.releaseStatics(true);
         }
@@ -50,7 +50,7 @@ abstract class CanvasRasterBuffer {
         pm.field_e.drawLayersAndTooltip(0, true, 0);
     }
 
-    final static void a(String param0, byte param1, boolean param2, int param3, boolean param4) {
+    final static void showNoticeDialog(String param0, byte param1, boolean param2, int param3, boolean param4) {
         String stackIn_4_0 = null;
         boolean stackIn_28_0 = false;
         int stackIn_42_0 = 0;
@@ -179,7 +179,7 @@ abstract class CanvasRasterBuffer {
         field_g = null;
     }
 
-    abstract void a(int param0, java.awt.Component param1, int param2, int param3);
+    abstract void initialize(int param0, java.awt.Component param1, int param2, int param3);
 
     static {
         field_i = "You are invited to <%0>'s game.";

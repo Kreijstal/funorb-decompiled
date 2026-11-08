@@ -28,7 +28,7 @@ final class ResizableViewResizeListener implements ViewResizeListener {
         }
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void onViewResized(int param0, int param1, int param2) {
         no.b(param1, (byte) -61, param0);
         int var4 = -97 / ((param2 - 59) / 47);
     }

@@ -59,7 +59,7 @@ final class ck {
           field_f = null;
           return;
         }
-        ck.a((byte) -85);
+        ck.stepMusicVolumeUp((byte) -85);
         field_a = null;
         field_d = null;
         field_g = null;
@@ -67,7 +67,7 @@ final class ck {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void stepMusicVolumeUp(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;

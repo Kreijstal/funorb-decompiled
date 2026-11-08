@@ -267,7 +267,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (!param0) {
           return;
         }
-        DropTargetWidget.a(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, am.field_c);
+        DropTargetWidget.a(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, ConnectionState.field_c);
     }
 
     final static void showLoginPanelWithOptions(boolean param0, boolean param1, boolean param2) {

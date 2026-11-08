@@ -135,7 +135,7 @@ final class td extends UiContainer implements ButtonListener {
               throw new IllegalArgumentException();
             }
             var5 = (ByteStorage) (param0);
-            stackIn_12_0 = var5.b((byte) -43);
+            stackIn_12_0 = var5.get((byte) -43);
             return stackIn_12_0;
           }
           var4 = (byte[]) (param0);

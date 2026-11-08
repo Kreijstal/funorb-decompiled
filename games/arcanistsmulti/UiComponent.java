@@ -707,10 +707,10 @@ class UiComponent extends IntrusiveNode {
             stackIn_10_1 = (var5_int != 0);
             this.field_w = stackIn_10_1;
             if (null != this.field_o) {
-              if (!(this.field_o instanceof l)) {
+              if (!(this.field_o instanceof HoverListener)) {
                 return;
               }
-              ((l) (this.field_o)).a(53, this, var5_int != 0);
+              ((HoverListener) (this.field_o)).onHoverChanged(53, this, var5_int != 0);
             }
           }
           return;
@@ -733,7 +733,7 @@ class UiComponent extends IntrusiveNode {
           fj.detachKeyboardInput((java.awt.Component) ((Object) param0), 115);
           MenuInputState.detachMouseInput((java.awt.Component) ((Object) param0), 0);
           if (null != StrongCacheEntry.field_w) {
-            StrongCacheEntry.field_w.a((java.awt.Component) ((Object) param0), (byte) -22);
+            StrongCacheEntry.field_w.detach((java.awt.Component) ((Object) param0), (byte) -22);
           }
           int var2_int = 17 / ((-7 - param1) / 49);
         } catch (RuntimeException runtimeException) {

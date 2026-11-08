@@ -1373,7 +1373,7 @@ final class BattleScreen {
                   if (UiTheme.field_t != 1) {
                     var10Lifetime1 = bm.field_b;
                   } else {
-                    var10Lifetime1 = am.field_a;
+                    var10Lifetime1 = ConnectionState.field_a;
                   }
                 } else {
                   var10Lifetime1 = CachedArchiveProvider.formatTemplate(120, new String[]{Integer.toString(UiTheme.field_t)}, WeightedLruCache.field_d);
@@ -2665,7 +2665,7 @@ final class BattleScreen {
           this.field_w.runUntilIdle((byte) 72);
           this.field_w.refreshUnits((byte) -20);
           if (this.field_k) {
-            Checkbox.a(2);
+            Checkbox.resetTimers(2);
           } else {
             this.startTurnView(0);
           }
@@ -3593,7 +3593,7 @@ final class BattleScreen {
           this.field_w.updateTurnTimer((byte) 88, var3_int);
           this.field_w.runUntilIdle((byte) 72);
           if (this.field_k) {
-            Checkbox.a(2);
+            Checkbox.resetTimers(2);
           } else {
             this.field_V.updateTurnTimer((byte) 88, var3_int);
           }
@@ -4184,7 +4184,7 @@ final class BattleScreen {
               }
             }
           } else {
-            Checkbox.a(2);
+            Checkbox.resetTimers(2);
           }
           this.field_o = true;
           return;

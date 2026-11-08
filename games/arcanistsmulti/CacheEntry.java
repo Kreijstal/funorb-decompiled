@@ -143,7 +143,7 @@ abstract class CacheEntry extends DualLinkNode {
           StatefulTextPainter.field_s = new SceneWidget(0L, (SceneWidget) null);
           uc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
           StrongCacheEntry.field_z = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          nj.field_m = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          nj.field_m = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
           StatefulTextPainter.field_s.addChild(uc.field_d, param14 + 87);
           if (fc.field_a) {
             StatefulTextPainter.field_s.addChild(StrongCacheEntry.field_z, 41);
@@ -165,7 +165,7 @@ abstract class CacheEntry extends DualLinkNode {
           lo.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
           WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, g.field_b);
           jo.field_a = new SceneWidget(0L, vf.field_i, TextLayout.field_a);
-          DebouncedValidator.field_g = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          DebouncedValidator.field_g = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
           of.field_a = new SceneWidget(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
           stackIn_5_0 = null;
@@ -205,7 +205,7 @@ abstract class CacheEntry extends DualLinkNode {
           LinkButtonPainter.field_h = new SceneWidget(0L, mf.field_d);
           LinkButtonPainter.field_h.addChild(la.field_c, 110);
           LinkButtonPainter.field_h.addChild(dm.field_E, 121);
-          WidgetStyleLayer.field_c = new SceneWidget(0L, am.field_c);
+          WidgetStyleLayer.field_c = new SceneWidget(0L, ConnectionState.field_c);
           WidgetStyleLayer.field_c.applyStyle(IntrusiveNode.field_c, (byte) 119);
           WidgetStyleLayer.field_c.field_gb = 1;
           var16 = WidgetStyleLayer.field_c;
@@ -215,7 +215,7 @@ abstract class CacheEntry extends DualLinkNode {
           aj.field_d.field_X = 1;
           qc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
           MembershipOfferScreen.field_q = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          lf.field_b = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          lf.field_b = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
           Checkbox.field_M.addChild(aj.field_d, 30);
           Checkbox.field_M.addChild(qc.field_d, 51);
           if (fc.field_a) {

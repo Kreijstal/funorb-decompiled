@@ -28,7 +28,7 @@ final class ViewportController {
     final FullscreenFocusCanvas enterFullscreen(int param0) {
         this.field_j = MusicPatchNode.field_r;
         this.field_r = co.field_c;
-        this.field_a.a(this.field_m, this.field_c, 120);
+        this.field_a.onViewResized(this.field_m, this.field_c, 120);
         TextWidgetPainter.field_j = false;
         FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
@@ -154,10 +154,10 @@ final class ViewportController {
             }
           }
           if (MusicPatchNode.field_r != var2) {
-            this.field_a.a(var2, var3, 121);
+            this.field_a.onViewResized(var2, var3, 121);
           } else {
             if (co.field_c != var3) {
-              this.field_a.a(var2, var3, 121);
+              this.field_a.onViewResized(var2, var3, 121);
             }
           }
           if (this.field_d > 0) {
@@ -249,10 +249,10 @@ final class ViewportController {
           }
         }
         if (MusicPatchNode.field_r != var2) {
-          this.field_a.a(var2, var3Lifetime1, 121);
+          this.field_a.onViewResized(var2, var3Lifetime1, 121);
         } else {
           if (co.field_c != var3Lifetime1) {
-            this.field_a.a(var2, var3Lifetime1, 121);
+            this.field_a.onViewResized(var2, var3Lifetime1, 121);
           }
         }
         if (this.field_d > 0) {
@@ -331,7 +331,7 @@ final class ViewportController {
         if (!param0) {
           return;
         }
-        this.field_a.a(this.field_j, this.field_r, 9);
+        this.field_a.onViewResized(this.field_j, this.field_r, 9);
     }
 
     ViewportController(ViewResizeListener param0) {
@@ -371,7 +371,7 @@ final class ViewportController {
                 this.field_e == co.field_c) {
                 return;
               }
-              this.field_a.a(this.field_o, this.field_e, param0 ^ -4);
+              this.field_a.onViewResized(this.field_o, this.field_e, param0 ^ -4);
               return;
             }
             ta.field_e = 0;
@@ -409,7 +409,7 @@ final class ViewportController {
           this.field_e == co.field_c) {
           return;
         }
-        this.field_a.a(this.field_o, this.field_e, param0 ^ -4);
+        this.field_a.onViewResized(this.field_o, this.field_e, param0 ^ -4);
     }
 
     public static void releaseStatics(int param0) {

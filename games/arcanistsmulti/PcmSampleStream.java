@@ -116,7 +116,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_r != 0) {
             return param1;
           }
-        } while (!this.j());
+        } while (!this.updateRamp());
         return param3;
     }
 
@@ -1155,7 +1155,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_r != 0) {
             return param1;
           }
-        } while (!this.j());
+        } while (!this.updateRamp());
         return param3;
     }
 
@@ -1387,7 +1387,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_r = 0;
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void fadeOut(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1528,7 +1528,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    private final boolean j() {
+    private final boolean updateRamp() {
         int var1;
         int var2;
         int var3;

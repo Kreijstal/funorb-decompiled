@@ -53,7 +53,7 @@ final class ce extends IntrusiveNode {
         return var3Lifetime1;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendGameSelection(int param0, int param1, int param2) {
         LobbyGameEntry var7 = null;
         CipherPacketBuffer var9 = null;
         CipherPacketBuffer var10 = null;

@@ -31,7 +31,7 @@ final class PlayerActionMenu {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param0 == 4) {
-          var4_ref = bo.a(this.field_h, (byte) -26, param2);
+          var4_ref = bo.getNameErrorMessage(this.field_h, (byte) -26, param2);
           var5 = 61 / ((11 - param1) / 63);
           if (var4_ref != null) {
             var6 = (String) null;
@@ -476,11 +476,11 @@ final class PlayerActionMenu {
             return true;
           }
           if (param2 == 15) {
-            ce.a(this.field_e, param0, -123);
+            ce.sendGameSelection(this.field_e, param0, -123);
             return true;
           }
           if (param2 == 16) {
-            ce.a(0, param0, -79);
+            ce.sendGameSelection(0, param0, -79);
             return true;
           }
           return false;

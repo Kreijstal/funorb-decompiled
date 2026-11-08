@@ -31,7 +31,7 @@ final class PatchEnvelopeSet {
         field_b = null;
     }
 
-    final static String a(boolean param0, CharSequence param1, boolean param2) {
+    final static String formatDisplayName(boolean param0, CharSequence param1, boolean param2) {
         String stackIn_3_0 = null;
         String stackIn_8_0 = null;
         String stackIn_13_0 = null;
@@ -112,16 +112,16 @@ final class PatchEnvelopeSet {
         }
     }
 
-    final static void a(int param0) {
+    final static void openSimpleDialog(int param0) {
         if (param0 < 80) {
           PatchEnvelopeSet.releaseStatics((byte) 114);
         }
         g.field_e.setContent((byte) -92, (UiComponent) (new td()));
     }
 
-    final static void c(int param0) {
+    final static void showLoadingDialog(int param0) {
         if (param0 != 0) {
-          PatchEnvelopeSet.a(-120);
+          PatchEnvelopeSet.openSimpleDialog(-120);
         }
         ClientException.field_b.deactivatePanels(-120);
         if (null == ci.field_c) {
@@ -170,7 +170,7 @@ final class PatchEnvelopeSet {
         }
     }
 
-    final static void d(int param0) {
+    final static void finishLoadingDialog(int param0) {
         int var1 = -96 / ((param0 + 52) / 63);
         if (null != ClientException.field_b) {
           ClientException.field_b.removeClosedPanels((byte) 83);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lf {
-    static am field_f;
+    static ConnectionState field_f;
     static IndexedSprite[] field_e;
     static Sprite[] field_c;
     static String field_h;
@@ -114,7 +114,7 @@ final class lf {
     }
 
     static {
-        field_f = new am();
+        field_f = new ConnectionState();
         field_h = "Buying or selling an account";
         field_d = "Spell types 1/2:";
         field_i = "This entry doesn't match";

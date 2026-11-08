@@ -21,7 +21,7 @@ abstract class ByteStorage {
         field_b = null;
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void set(int param0, byte[] param1);
 
     final static boolean isPrintableCharacter(int param0, char param1) {
         if (param1 < 32) {
@@ -150,7 +150,7 @@ abstract class ByteStorage {
         ByteStorage.a(97, -65);
     }
 
-    abstract byte[] b(byte param0);
+    abstract byte[] get(byte param0);
 
     static {
         field_b = "Real-life threats";

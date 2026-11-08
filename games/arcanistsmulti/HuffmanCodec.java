@@ -494,7 +494,7 @@ final class HuffmanCodec {
                 nk.field_q.put(var4, (long)var3, (byte) 116);
               }
               SceneScrollPane.readGameEntry(var1, var4, true, 2);
-              cb.a(var4, 67);
+              cb.insertSortedGame(var4, 67);
               return;
             }
             if (var2 == 9) {
@@ -538,7 +538,7 @@ final class HuffmanCodec {
                     var17_ref.field_bc = TextLine.field_i;
                   }
                   var13.field_Hb = false;
-                  cb.a(var17_ref, 25);
+                  cb.insertSortedGame(var17_ref, 25);
                 }
                 return;
               }
@@ -655,7 +655,7 @@ final class HuffmanCodec {
               } else {
                 var25.field_Hb = true;
               }
-              cb.a(var25, -26);
+              cb.insertSortedGame(var25, -26);
             }
             return;
           }

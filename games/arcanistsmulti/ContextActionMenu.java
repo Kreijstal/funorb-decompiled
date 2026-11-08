@@ -17,7 +17,7 @@ final class ContextActionMenu extends SceneWidget {
     private int field_Kb;
     private int field_Cb;
     static IntrusiveDeque field_Lb;
-    static am field_Db;
+    static ConnectionState field_Db;
     static Sprite field_Ib;
     static int[][] field_Fb;
     static String field_Nb;
@@ -170,7 +170,7 @@ final class ContextActionMenu extends SceneWidget {
         var41 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param3 != 0) {
-            field_Db = (am) null;
+            field_Db = (ConnectionState) null;
           }
           stackIn_5_0 = DebouncedValidator.field_g;
           stackIn_6_1 = (dd.field_h == DebouncedValidator.field_g);
@@ -918,7 +918,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Ob[this.field_Kb].field_gb = 1;
           this.addChild(this.field_Ob[this.field_Kb], param0 + 103);
           if (param0 != -32) {
-            field_Db = (am) null;
+            field_Db = (ConnectionState) null;
           }
           this.field_Pb[this.field_Kb] = param1;
           this.field_Kb = this.field_Kb + 1;
@@ -933,7 +933,7 @@ final class ContextActionMenu extends SceneWidget {
 
     static {
         field_Lb = new IntrusiveDeque();
-        field_Db = new am();
+        field_Db = new ConnectionState();
         field_Nb = "Accept draw";
     }
 }

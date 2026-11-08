@@ -118,7 +118,7 @@ final class th {
           SingleChildContainer.field_z = nj.a("", param3 + 133);
           SingleChildContainer.field_z.a(false, (byte) -59);
           aa.loadCommonUiSprites(param3 ^ -121, param2, param1, param0);
-          ci.a((byte) 50);
+          ci.initializeModalStack((byte) 50);
           hb.field_Gb = ScreenDisplayMode.field_h;
           SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
           if (param3 != -40) {

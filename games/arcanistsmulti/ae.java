@@ -19,7 +19,7 @@ final class ae {
         field_c = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateLobbyRequests(boolean param0, int param1) {
         boolean stackIn_7_0;
         int stackIn_7_1;
         int stackIn_7_2;
@@ -91,7 +91,7 @@ final class ae {
             fe.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, param1, var2 != 0, var3 != 0, true, 14, param0);
           }
         } else {
-          if (aj.a(28139, DirectByteStorage.field_f.field_Rb)) {
+          if (aj.isAtLeastTwo(28139, DirectByteStorage.field_f.field_Rb)) {
             var2 = 1;
             if (!hi.field_a) {
               if (StatefulTextPainter.field_w) {

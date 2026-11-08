@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static am field_g;
+    static ConnectionState field_g;
     static PcmStreamMixer field_e;
     static String field_f;
     static String field_a;
@@ -133,7 +133,7 @@ final class pc {
         field_d = "More suggestions";
         field_f = "Lesson 3 of 7<br><br>Use of a basic guided spell in a safe and secure environment.<br><br>Use the Arcane Arrows spell to destroy all three targets.<br><br><br>* Targeting with the focus point *<br>* Using the focus point to hit targets behind cover *";
         field_c = "You cannot join this game - it is in progress";
-        field_g = new am();
+        field_g = new ConnectionState();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

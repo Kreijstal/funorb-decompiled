@@ -201,12 +201,12 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_E.field_q = nk.field_j;
         this.field_H.field_q = MenuScreen.field_k;
         this.field_F.field_q = ce.field_l;
-        this.field_K.a(new NameValidator(this.field_K), (byte) 18);
-        this.field_N.a(new ki(this.field_N), (byte) -127);
-        this.field_D.a(new ja(this.field_D, this.field_N), (byte) -128);
-        this.field_P.a(new ui(this.field_P, this.field_K, this.field_N), (byte) -127);
-        this.field_E.a(new mn(this.field_E, this.field_P), (byte) -128);
-        this.field_H.a(new lo(this.field_H), (byte) 39);
+        this.field_K.setValidator(new NameValidator(this.field_K), (byte) 18);
+        this.field_N.setValidator(new ki(this.field_N), (byte) -127);
+        this.field_D.setValidator(new ja(this.field_D, this.field_N), (byte) -128);
+        this.field_P.setValidator(new ui(this.field_P, this.field_K, this.field_N), (byte) -127);
+        this.field_E.setValidator(new mn(this.field_E, this.field_P), (byte) -128);
+        this.field_H.setValidator(new lo(this.field_H), (byte) 39);
         this.field_C.field_B = false;
         this.field_C.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
         this.field_O.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -265,7 +265,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             field_M = (int[]) null;
           }
           if (this.field_O == param4) {
-            PatchEnvelopeSet.a(110);
+            PatchEnvelopeSet.openSimpleDialog(110);
             return;
           }
           if (this.field_C != param4) {
@@ -297,7 +297,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           var3 = Integer.parseInt(this.field_H.field_g);
         } catch (NumberFormatException numberFormatException) {
         }
-        return bb.a(this.field_P.field_g, this.field_K.field_g, var3, this, -30001, this.field_N.field_g, this.field_F.field_z);
+        return bb.showAccountDialog(this.field_P.field_g, this.field_K.field_g, var3, this, -30001, this.field_N.field_g, this.field_F.field_z);
     }
 
     final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {

@@ -24,7 +24,7 @@ final class MusicPatch extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = Checkbox.a(qf.field_d, 1021, BevelTextPainter.field_r);
+          var2_int = Checkbox.classifyCount(qf.field_d, 1021, BevelTextPainter.field_r);
           if (param1 == ~var2_int) {
             param0 = "<img=0>" + param0;
           }

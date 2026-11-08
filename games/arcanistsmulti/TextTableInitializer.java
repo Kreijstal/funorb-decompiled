@@ -3039,7 +3039,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins19", param1 - 147);
                 if (var2 != null) {
-                  am.field_b = ValidationHelpWidget.decodeString((byte) 99, var2);
+                  ConnectionState.field_b = ValidationHelpWidget.decodeString((byte) 99, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins18", -111);
                 if (null != var2) {

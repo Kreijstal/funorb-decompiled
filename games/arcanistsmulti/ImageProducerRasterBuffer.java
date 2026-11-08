@@ -34,9 +34,9 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void draw(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
-          this.b((byte) -118);
+          this.sendPixelsToConsumer((byte) -118);
           if (param2 != 0) {
             field_q = (String) null;
           }
@@ -71,7 +71,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, int param3) {
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
@@ -81,11 +81,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           this.field_m = param0;
           this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_j = param1.createImage((java.awt.image.ImageProducer) (this));
-          this.b((byte) 115);
+          this.sendPixelsToConsumer((byte) 115);
           param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
-          this.b((byte) -93);
+          this.sendPixelsToConsumer((byte) -93);
           param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
-          this.b((byte) -97);
+          this.sendPixelsToConsumer((byte) -97);
           param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
           this.makeRasterTarget(true);
         } catch (RuntimeException runtimeException) {
@@ -141,7 +141,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
     ImageProducerRasterBuffer() {
     }
 
-    private final synchronized void b(byte param0) {
+    private final synchronized void sendPixelsToConsumer(byte param0) {
         int var2 = 83 % ((param0 + 44) / 43);
         if (null == this.field_p) {
           return;

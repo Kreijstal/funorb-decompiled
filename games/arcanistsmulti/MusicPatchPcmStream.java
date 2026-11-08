@@ -135,7 +135,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (param0.field_D.field_m[param0.field_t] < 0) {
                 param0.field_n.setLoopCount(-1);
               }
-              var11.d(var9);
+              var11.fadeOut(var9);
               var11.mixInto(param4, param1, -param1 + param3);
               if (!var11.hasRemainingRampFrames()) {
                 continue;

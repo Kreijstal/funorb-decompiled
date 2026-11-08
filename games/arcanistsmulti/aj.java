@@ -50,7 +50,7 @@ final class aj {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isAtLeastTwo(int param0, int param1) {
         if (param0 == 28139) {
           return param1 >= 2 ? true : false;
         }

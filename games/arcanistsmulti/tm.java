@@ -72,7 +72,7 @@ final class tm {
         if (!param0) {
           tm.bitCount(126, (byte) -31);
         }
-        stackIn_6_0 = (null != CredentialKind.field_c) && (ResizableModalPanel.field_eb.a((byte) 74));
+        stackIn_6_0 = (null != CredentialKind.field_c) && (ResizableModalPanel.field_eb.isConnectedState((byte) 74));
         return stackIn_6_0;
     }
 

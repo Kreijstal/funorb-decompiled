@@ -172,7 +172,7 @@ final class fn {
           ng.a(param3, param7, param1, 118);
         }
         if (oo.field_y > 0) {
-          c.a(param7, param3, param0, 2, param1);
+          c.drawChatPanel(param7, param3, param0, 2, param1);
         }
         if (MenuInputState.field_j &&
           DirectByteStorage.field_f.field_Rb >= DirectByteStorage.field_f.field_dc) {
@@ -521,7 +521,7 @@ final class fn {
                       var24Lifetime2 = CachedArchiveProvider.formatTemplate(-24, new String[]{null, Integer.toString(var6)}, SceneWidgetNode.field_n);
                     } else {
                       if ((var8 & ~var12.field_Bb) != 0) {
-                        var25_int = bj.a(~var12.field_Bb & var8, (byte) 108);
+                        var25_int = bj.highestOneBit(~var12.field_Bb & var8, (byte) 108);
                         var24Lifetime2 = SocialListEntry.field_Rb;
                         if (var25_int > 0 &&
                           null != Scrollbar.field_P &&
@@ -549,7 +549,7 @@ final class fn {
                       var24Lifetime2 = CachedArchiveProvider.formatTemplate(126, new String[]{var20, Integer.toString(var6)}, um.field_c);
                     } else {
                       if ((var8 & ~var12.field_Bb) != 0) {
-                        var25_int = bj.a(~var12.field_Bb & var8, (byte) 96);
+                        var25_int = bj.highestOneBit(~var12.field_Bb & var8, (byte) 96);
                         var24Lifetime2 = CachedArchiveProvider.formatTemplate(116, new String[]{var20}, nm.field_a);
                         if (var25_int > 0 &&
                           null != Scrollbar.field_P &&

@@ -51,7 +51,7 @@ final class WrappedTextLayout extends TextLayout {
           var7 = param4.textWidth(param0);
           var9.field_f[0] = -(var7 >> 1) + param1;
           var9.field_f[param0.length()] = param1 + (var7 >> 1);
-          SectorCacheStore.a(0, var9, param0, param4, (byte) 35);
+          SectorCacheStore.computeTagOffsets(0, var9, param0, param4, (byte) 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class WrappedTextLayout extends TextLayout {
           var10 = var9;
           var10.field_f[0] = -param2.textWidth(param4) + param0;
           var10.field_f[param4.length()] = param0;
-          SectorCacheStore.a(0, var10, param4, param2, (byte) 35);
+          SectorCacheStore.computeTagOffsets(0, var10, param4, param2, (byte) 35);
           int var7 = -84 / ((-47 - param1) / 49);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "re.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -309,7 +309,7 @@ final class WrappedTextLayout extends TextLayout {
               } else {
                 stackIn_43_0 = this.countSpacesOutsideTags(var13, false, param7, param1.textWidth(var13));
               }
-              SectorCacheStore.a(stackIn_43_0, var14, var13, param1, (byte) 35);
+              SectorCacheStore.computeTagOffsets(stackIn_43_0, var14, var13, param1, (byte) 35);
             }
             var11 = var11 + param3;
             this.field_f[var12Lifetime1] = var14;
@@ -370,7 +370,7 @@ final class WrappedTextLayout extends TextLayout {
           var9 = var8;
           var8.field_f[0] = param4;
           var9.field_f[param0.length()] = param2.textWidth(param0) + param4;
-          SectorCacheStore.a(0, var9, param0, param2, (byte) 35);
+          SectorCacheStore.computeTagOffsets(0, var9, param0, param2, (byte) 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

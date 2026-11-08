@@ -81,7 +81,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           field_Q = null;
           return;
         }
-        BirthDateEntryPanel.c(true);
+        BirthDateEntryPanel.clearChatHistory(true);
         field_H = null;
         field_I = null;
         field_O = null;
@@ -111,7 +111,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         return true;
     }
 
-    final static void c(boolean param0) {
+    final static void clearChatHistory(boolean param0) {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {

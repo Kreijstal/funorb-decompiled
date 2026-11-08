@@ -59,7 +59,7 @@ final class c {
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
+    final static void drawChatPanel(int param0, boolean param1, boolean param2, int param3, boolean param4) {
         SceneWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_34_0 = 0;

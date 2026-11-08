@@ -111,7 +111,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int highestOneBit(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -429,7 +429,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            bj.a(121, (byte) -115);
+            bj.highestOneBit(121, (byte) -115);
           }
           stackIn_10_0 = (pm.field_e != null) && (pm.field_e.getActivePanel(7213) != null);
           return stackIn_10_0;
@@ -532,7 +532,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1, byte param2) {
+    final static boolean canAppendNameCharacter(char param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_25_0 = null;
