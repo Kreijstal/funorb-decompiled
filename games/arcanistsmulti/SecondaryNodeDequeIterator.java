@@ -12,7 +12,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static int field_g;
     private SecondaryNodeDeque field_h;
     static String field_f;
-    static ho field_i;
+    static ServerMessage field_i;
 
     public final void remove() {
         if (null == this.field_b) {
@@ -62,10 +62,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
           while (true) {
             var3 = param1.queueFrameClose(param2, 6);
             while (var3.field_e == 0) {
-              ao.sleepMillis(10L, 1);
+              LobbyLayoutHelpers.sleepMillis(10L, 1);
             }
             if (var3.field_e != 1) {
-              ao.sleepMillis(100L, 1);
+              LobbyLayoutHelpers.sleepMillis(100L, 1);
               continue;
             }
             break;
@@ -89,7 +89,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_b = null;
           this.field_c = this.field_h.field_g.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

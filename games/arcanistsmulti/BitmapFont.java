@@ -102,7 +102,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(fe.encodeCp1252Char((byte) 124, (char) var7) & 255);
+              var7 = (char)(PendingTask.encodeCp1252Char((byte) 124, (char) var7) & 255);
               var4 = var4 + this.field_v[var7];
               if (this.field_I != null &&
                 var3 != 0) {
@@ -355,7 +355,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        qj.padToLength(0, field_F, ' ', false);
+        TimeAndInputHelpers.padToLength(0, field_F, ' ', false);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -472,7 +472,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_F.append((char) var14);
-                var14 = (char)(fe.encodeCp1252Char((byte) 91, (char) var14) & 255);
+                var14 = (char)(PendingTask.encodeCp1252Char((byte) 91, (char) var14) & 255);
                 var4 = var4 + this.field_v[var14];
                 if (this.field_I != null &&
                   var10 != 0) {
@@ -551,7 +551,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_v[fe.encodeCp1252Char((byte) 74, param0) & 255];
+        return this.field_v[PendingTask.encodeCp1252Char((byte) 74, param0) & 255];
     }
 
     private final void resetOpaqueStyle(int param0, int param1) {
@@ -717,7 +717,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(fe.encodeCp1252Char((byte) 99, (char) var8) & 255);
+              var8 = (char)(PendingTask.encodeCp1252Char((byte) 99, (char) var8) & 255);
               if (this.field_I != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_I[(var5 << 8) + var8];
@@ -990,7 +990,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var5 = 0;
         if (param0 != 32) {
           param2 = param2 - this.field_H;
-          var5 = fe.encodeCp1252Char((byte) 24, param0) & 255;
+          var5 = PendingTask.encodeCp1252Char((byte) 24, param0) & 255;
           this.drawGlyph(var5, param1 + this.field_q[var5], param2 + this.field_r[var5], this.field_y[var5], this.field_w[var5], param3, false);
         }
     }

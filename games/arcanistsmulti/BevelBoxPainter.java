@@ -28,9 +28,9 @@ final class BevelBoxPainter implements WidgetPainter {
         }
         param0 = param0 & 8191;
         if (param0 < 4096) {
-          return param0 >= 2048 ? -ge.field_l[param0 - 2048] : ge.field_l[2048 - param0];
+          return param0 >= 2048 ? -BattleAction.field_l[param0 - 2048] : BattleAction.field_l[2048 - param0];
         }
-        return param0 < 6144 ? -ge.field_l[6144 - param0] : ge.field_l[-6144 + param0];
+        return param0 < 6144 ? -BattleAction.field_l[6144 - param0] : BattleAction.field_l[-6144 + param0];
     }
 
     final static int integerPower(int param0, int param1, int param2) {
@@ -60,7 +60,7 @@ final class BevelBoxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "j.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "j.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class BevelBoxPainter implements WidgetPainter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class BevelBoxPainter implements WidgetPainter {
     }
 
     final static void resetLoginState(boolean param0) {
-        nj.field_c = 0;
+        NameCheckHelpers.field_c = 0;
         if (param0) {
           BevelBoxPainter.integerPower(121, 53, 31);
         }
@@ -144,23 +144,23 @@ final class BevelBoxPainter implements WidgetPainter {
           synchronized (var1) {
             FrameClock.field_b = FrameClock.field_b + 1;
             Js5NetworkRequest.field_u = QuickChatPhraseCache.field_b;
-            if (0 > ub.field_b) {
+            if (0 > StatsSendHelpers.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
-                ri.field_b[var2] = false;
+                RasterSetupHelpers.field_b[var2] = false;
               }
-              ub.field_b = SocketConnector.field_g;
+              StatsSendHelpers.field_b = SocketConnector.field_g;
             } else {
-              while (ub.field_b != SocketConnector.field_g) {
+              while (StatsSendHelpers.field_b != SocketConnector.field_g) {
                 var2 = CanvasRasterBuffer.field_d[SocketConnector.field_g];
                 SocketConnector.field_g = 1 + SocketConnector.field_g & 127;
                 if (var2 >= 0) {
-                  ri.field_b[var2] = true;
+                  RasterSetupHelpers.field_b[var2] = true;
                   continue;
                 }
-                ri.field_b[~var2] = false;
+                RasterSetupHelpers.field_b[~var2] = false;
               }
             }
-            QuickChatPhraseCache.field_b = pi.field_a;
+            QuickChatPhraseCache.field_b = RequestQueueHelpers.field_a;
             if (param0 != 24) {
               field_e = (String) null;
             }
@@ -169,7 +169,7 @@ final class BevelBoxPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "j.B(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "j.B(" + param0 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class BevelBoxPainter implements WidgetPainter {
           var7 = param0.field_j + param3;
           TextLayout.drawBevelBox(param0.field_v, var6_int, var7, param0.field_k, 83);
           if (param0.isFocused(-2116)) {
-            oj.drawLoginMethodPanel(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
+            LoginMethodHelpers.drawLoginMethodPanel(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
           var8 = this.field_d.field_P.getSelectedItem(126);
@@ -219,7 +219,7 @@ final class BevelBoxPainter implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class BevelBoxPainter implements WidgetPainter {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,11 +238,11 @@ final class BevelBoxPainter implements WidgetPainter {
           if (param3) {
             BevelBoxPainter.integerPower(-101, 37, 87);
           }
-          wh.field_f = new LoginPanel(ge.field_g, (String) null, MusicPatchPcmStream.field_s, param0, param2);
-          g.field_e = new no(ClientException.field_b, wh.field_f);
-          ClientException.field_b.pushPanel(g.field_e, 15637);
+          PaletteSpriteHelpers.field_f = new LoginPanel(BattleAction.field_g, (String) null, MusicPatchPcmStream.field_s, param0, param2);
+          SupportPageHelpers.field_e = new SocialDialog(ClientException.field_b, PaletteSpriteHelpers.field_f);
+          ClientException.field_b.pushPanel(SupportPageHelpers.field_e, 15637);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "j.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "j.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

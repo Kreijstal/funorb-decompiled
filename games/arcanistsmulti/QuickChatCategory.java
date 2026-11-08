@@ -3,7 +3,7 @@
  */
 final class QuickChatCategory extends DualLinkNode {
     static int field_y;
-    static ih field_C;
+    static PointerOriginHelpers field_C;
     char[] field_n;
     boolean field_A;
     int[] field_D;
@@ -57,7 +57,7 @@ final class QuickChatCategory extends DualLinkNode {
                 if (var7 == 0) {
                   stackIn_17_2 = (char)0;
                 } else {
-                  stackIn_17_2 = hm.decodeCp1252Char((byte) var7, -112);
+                  stackIn_17_2 = Cp1252Helpers.decodeCp1252Char((byte) var7, -112);
                 }
                 stackIn_16_0[stackIn_16_1] = stackIn_17_2;
               }
@@ -71,7 +71,7 @@ final class QuickChatCategory extends DualLinkNode {
                 stackIn_10_0 = this.field_z;
                 stackIn_10_1 = var6;
                 if (var7 != 0) {
-                  stackIn_11_2 = hm.decodeCp1252Char((byte) var7, -104);
+                  stackIn_11_2 = Cp1252Helpers.decodeCp1252Char((byte) var7, -104);
                 } else {
                   stackIn_11_2 = 0;
                 }
@@ -95,7 +95,7 @@ final class QuickChatCategory extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,22 +131,22 @@ final class QuickChatCategory extends DualLinkNode {
     }
 
     final static UiTheme getDefaultTheme(int param0) {
-        if (null == fm.field_c) {
-          fm.field_c = new UiTheme();
-          fm.field_c.initialize((byte) -105, ia.field_c);
-          fm.field_c.field_d = 14;
-          fm.field_c.field_c = 2763306;
-          fm.field_c.field_q = WidgetStyleLayer.field_e;
-          fm.field_c.field_w = 6;
-          fm.field_c.field_e = 0;
-          fm.field_c.field_C = 7697781;
-          fm.field_c.field_s = 5;
-          fm.field_c.field_k = 4;
+        if (null == NameRecord.field_c) {
+          NameRecord.field_c = new UiTheme();
+          NameRecord.field_c.initialize((byte) -105, RootInputHelpers.field_c);
+          NameRecord.field_c.field_d = 14;
+          NameRecord.field_c.field_c = 2763306;
+          NameRecord.field_c.field_q = WidgetStyleLayer.field_e;
+          NameRecord.field_c.field_w = 6;
+          NameRecord.field_c.field_e = 0;
+          NameRecord.field_c.field_C = 7697781;
+          NameRecord.field_c.field_s = 5;
+          NameRecord.field_c.field_k = 4;
         }
         if (param0 != -9685) {
           field_s = 4L;
         }
-        return fm.field_c;
+        return NameRecord.field_c;
     }
 
     final void markExtended(int param0) {
@@ -159,14 +159,14 @@ final class QuickChatCategory extends DualLinkNode {
         }
         if (null != this.field_D) {
           for (var2 = 0; var2 < this.field_D.length; var2++) {
-            this.field_D[var2] = fj.bitOr(this.field_D[var2], 32768);
+            this.field_D[var2] = BitAndSpriteHelpers.bitOr(this.field_D[var2], 32768);
           }
         }
         if (null != this.field_p) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_p.length > var4) {
-            this.field_p[var4] = fj.bitOr(this.field_p[var4], 32768);
+            this.field_p[var4] = BitAndSpriteHelpers.bitOr(this.field_p[var4], 32768);
             var4++;
           }
         }
@@ -202,7 +202,7 @@ final class QuickChatCategory extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class QuickChatCategory extends DualLinkNode {
     }
 
     static {
-        field_C = new ih();
+        field_C = new PointerOriginHelpers();
         field_E = "Unable to delete friend - system busy";
         field_v = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_o = "Won";

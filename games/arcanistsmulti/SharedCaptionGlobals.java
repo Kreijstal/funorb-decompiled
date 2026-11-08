@@ -1,0 +1,18 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SharedCaptionGlobals {
+    static Sprite[] field_b;
+    static String field_a;
+    private static String field_z;
+
+    public static void releaseStatics(byte param0) {
+        int var1 = 112 / ((param0 + 22) / 63);
+        field_a = null;
+        field_b = null;
+    }
+
+    static {
+        field_z = "kf.A(";
+    }
+}

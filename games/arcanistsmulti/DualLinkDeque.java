@@ -24,7 +24,7 @@ final class DualLinkDeque {
           }
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

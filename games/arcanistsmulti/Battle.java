@@ -11,7 +11,7 @@ final class Battle {
     private int[] field_ib;
     int field_t;
     int field_hb;
-    th field_Ib;
+    NameTable field_Ib;
     int field_q;
     int[] field_pb;
     private boolean field_Gb;
@@ -210,7 +210,7 @@ final class Battle {
           if (param1 != 2) {
             Battle.releaseStatics(-29);
           }
-          stackIn_3_0 = fk.spriteHitsMask(this, param0, this.field_Jb, param2, (byte) -1, param3);
+          stackIn_3_0 = SoundEffectVoice.spriteHitsMask(this, param0, this.field_Jb, param2, (byte) -1, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,7 +222,7 @@ final class Battle {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -274,13 +274,13 @@ final class Battle {
                 continue;
               }
             } else {
-              mn.field_y.field_l[253] = 11184810;
-              mn.field_y.field_l[251] = 16777215;
-              mn.field_y.field_l[252] = 16777215;
+              MatchingFieldValidator.field_y.field_l[253] = 11184810;
+              MatchingFieldValidator.field_y.field_l[251] = 16777215;
+              MatchingFieldValidator.field_y.field_l[252] = 16777215;
             }
             break;
           }
-          mn.field_y.field_l[254] = 7829367;
+          MatchingFieldValidator.field_y.field_l[254] = 7829367;
         }
         var2Lifetime1 = 16384;
         var3 = 18048;
@@ -314,8 +314,8 @@ final class Battle {
                       stackIn_19_0 = this.field_y;
                       stackIn_19_1 = var5;
                       if (stackIn_19_0 <= stackIn_19_1 &&
-                        mn.field_y.field_m[var5] == -5 &&
-                        -5 != mn.field_y.field_m[var5 - this.field_y]) {
+                        MatchingFieldValidator.field_y.field_m[var5] == -5 &&
+                        -5 != MatchingFieldValidator.field_y.field_m[var5 - this.field_y]) {
                         var8 = var6 - 5;
                         var9 = (127 & var7) + var2Lifetime1;
                         while (var9 < var3) {
@@ -328,11 +328,11 @@ final class Battle {
                           var9 += 128;
                         }
                       }
-                      stackIn_37_0Lifetime1 = ~(-this.field_y + mn.field_y.field_m.length);
+                      stackIn_37_0Lifetime1 = ~(-this.field_y + MatchingFieldValidator.field_y.field_m.length);
                       stackIn_37_1Lifetime1 = ~var5;
                       if (stackIn_37_0Lifetime1 < stackIn_37_1Lifetime1 &&
-                        mn.field_y.field_m[var5] == -5 &&
-                        mn.field_y.field_m[this.field_y + var5] != -5) {
+                        MatchingFieldValidator.field_y.field_m[var5] == -5 &&
+                        MatchingFieldValidator.field_y.field_m[this.field_y + var5] != -5) {
                         var8 = var6 - 1;
                         var9Lifetime1 = (var7 & 127) + var3;
                         while (!(var9Lifetime1 >= DropdownList.field_I[this.field_O].field_m.length)) {
@@ -377,13 +377,13 @@ final class Battle {
                   stackIn_51_0Lifetime1 = -1;
                   stackIn_51_1Lifetime1 = ~var5;
                   if (stackIn_51_0Lifetime1 > stackIn_51_1Lifetime1 &&
-                    mn.field_y.field_m[var5] == -5 &&
-                    mn.field_y.field_m[-1 + var5] != -5 &&
-                    0 == mn.field_y.field_m[-1 + var5] ||
-                    !(var5 >= (-1 + mn.field_y.field_m.length)) &&
-                    mn.field_y.field_m[var5] == -5 &&
-                    -5 != mn.field_y.field_m[1 + var5] &&
-                    mn.field_y.field_m[var5 + 1] == 0) {
+                    MatchingFieldValidator.field_y.field_m[var5] == -5 &&
+                    MatchingFieldValidator.field_y.field_m[-1 + var5] != -5 &&
+                    0 == MatchingFieldValidator.field_y.field_m[-1 + var5] ||
+                    !(var5 >= (-1 + MatchingFieldValidator.field_y.field_m.length)) &&
+                    MatchingFieldValidator.field_y.field_m[var5] == -5 &&
+                    -5 != MatchingFieldValidator.field_y.field_m[1 + var5] &&
+                    MatchingFieldValidator.field_y.field_m[var5 + 1] == 0) {
                     var8Lifetime2 = (var7Lifetime2 & 127) + var3 - 128;
                     if (DropdownList.field_I[this.field_O].field_m[var8Lifetime2] != 0) {
                       DisplayNameForm.carveMask(var7Lifetime2, this.field_V, 0, 12, this, false, var6, DropdownList.field_I[this.field_O].field_m[var8Lifetime2]);
@@ -491,7 +491,7 @@ final class Battle {
                 stackIn_7_1 = ~(-8 + this.field_H);
                 if (stackIn_7_0 > stackIn_7_1) {
                   stackIn_12_0 = 0;
-                  stackOut_8_1 = mn.field_y.field_m[var13];
+                  stackOut_8_1 = MatchingFieldValidator.field_y.field_m[var13];
                   stackIn_12_1 = stackOut_8_1;
                   stackIn_9_1 = stackOut_8_1;
                   if (stackIn_12_0 == stackIn_9_1) {
@@ -505,7 +505,7 @@ final class Battle {
                 var13 = stackIn_12_0 + stackIn_12_1;
                 while (var12 < -8 + this.field_H) {
                   stackIn_18_0 = -1;
-                  stackIn_18_1 = ~mn.field_y.field_m[var13];
+                  stackIn_18_1 = ~MatchingFieldValidator.field_y.field_m[var13];
                   if (stackIn_18_0 == stackIn_18_1) {
                     var12++;
                     var13 = var13 + this.field_y;
@@ -539,7 +539,7 @@ final class Battle {
                   var9 = 1;
                   var14 = (var12 + var11) / 2;
                   var15 = 0;
-                  var15 = -on.computeAngle(var5.field_h / 2, (-var11 + var12) / 4, (byte) 98);
+                  var15 = -LoginMessageTable.computeAngle(var5.field_h / 2, (-var11 + var12) / 4, (byte) 98);
                   var15 = var15 & 8191;
                   if (4096 <= var15) {
                     var14 = var12;
@@ -577,13 +577,13 @@ final class Battle {
                           break;
                       }
                     }
-                    DisplayNameForm.carveMask(var8, mn.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
+                    DisplayNameForm.carveMask(var8, MatchingFieldValidator.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
                     DisplayNameForm.carveMask(var8, this.field_V, var5.field_c / 2, 122, this, false, -(var5.field_c / 4) + var14, (byte) 0);
                     var16 = -var5.field_h / 3;
                     while (!(var16 >= (var5.field_h / 3))) {
                       var17 = (var16 * BevelBoxPainter.cosine(var15, -111) >> 16) + var8;
-                      var18 = var14 + var5.field_c * 4 / 10 - (of.sine(127, var15) * var16 >> 16);
-                      DisplayNameForm.carveMask(var17, mn.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
+                      var18 = var14 + var5.field_c * 4 / 10 - (GradientBarPainter.sine(127, var15) * var16 >> 16);
+                      DisplayNameForm.carveMask(var17, MatchingFieldValidator.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
                       DisplayNameForm.carveMask(var17, this.field_V, 2 * var5.field_c / 10, 124, this, false, var18, (byte) -5);
                       var16++;
                     }
@@ -687,7 +687,7 @@ final class Battle {
           } else {
             stackIn_117_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -884,20 +884,20 @@ final class Battle {
                   var11 = stackIn_6_0;
                   while (var11 < this.field_H) {
                     var6 = -(var4 >> 1) + var10 + var34[var9] + var11 * this.field_y;
-                    mn.field_y.field_m[var6] = (byte)-5;
+                    MatchingFieldValidator.field_y.field_m[var6] = (byte)-5;
                     stackIn_16_0 = -1;
                     stackIn_16_1 = ~var10;
                     if (stackIn_16_0 == stackIn_16_1) {
-                      mn.field_y.field_m[var6] = (byte) 1;
+                      MatchingFieldValidator.field_y.field_m[var6] = (byte) 1;
                     }
                     if (var10 == 1) {
-                      mn.field_y.field_m[var6] = (byte)2;
+                      MatchingFieldValidator.field_y.field_m[var6] = (byte)2;
                     }
                     if (var4 - 2 == var10) {
-                      mn.field_y.field_m[var6] = (byte)3;
+                      MatchingFieldValidator.field_y.field_m[var6] = (byte)3;
                     }
                     if (var10 == -1 + var4) {
-                      mn.field_y.field_m[var6] = (byte)4;
+                      MatchingFieldValidator.field_y.field_m[var6] = (byte)4;
                     }
                     var11++;
                   }
@@ -911,12 +911,12 @@ final class Battle {
             }
             if (decompiledFrameRemainder0) {
               System.gc();
-              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
             }
             if (null != DropdownList.field_I) {
               this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
             }
-            this.stampShapeWithMask(0, 120, mn.field_y, 0, this.field_V);
+            this.stampShapeWithMask(0, 120, MatchingFieldValidator.field_y, 0, this.field_V);
             var21 = SocketConnector.field_j[0 + this.field_O * 8];
             this.stampSpriteMask(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.toRgbSprite());
             var22 = SocketConnector.field_j[this.field_O * 8 + 1];
@@ -988,7 +988,7 @@ final class Battle {
               }
               break;
             }
-            this.stampShapeWithMask(0, 121, this.field_V, 0, mn.field_y);
+            this.stampShapeWithMask(0, 121, this.field_V, 0, MatchingFieldValidator.field_y);
             this.drawThemeBackground((byte) 5);
             stackIn_62_0 = null;
             return (int[]) (stackIn_62_0);
@@ -1003,7 +1003,7 @@ final class Battle {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1115,7 +1115,7 @@ final class Battle {
                           var14 = -var6 + var7;
                           var15 = -var8 + var9;
                           var16 = 8192 * (var3_int - var9) / var15;
-                          var17 = of.sine(-122, var16);
+                          var17 = GradientBarPainter.sine(-122, var16);
                           var18 = var14 / 2 * (var17 + (var3_int - var8) * 131072 / var15) >> 16;
                           var13 = var13 + var18;
                           var18 = -var18 + (var7 - var6);
@@ -1133,7 +1133,7 @@ final class Battle {
                             var19 = var13 + var12 * this.field_y;
                             var20 = 0;
                             while (var20 < var18) {
-                              mn.field_y.field_m[var19 + var20] = (byte)-5;
+                              MatchingFieldValidator.field_y.field_m[var19 + var20] = (byte)-5;
                               var20++;
                             }
                           }
@@ -1149,7 +1149,7 @@ final class Battle {
                           var14 = -var6 + var7;
                           var15 = var9 - var8;
                           var16 = (var3_int - var9) * 8192 / var15;
-                          var17 = of.sine(-107, var16);
+                          var17 = GradientBarPainter.sine(-107, var16);
                           var18Lifetime1 = ((-var8 + var3_int) * 131072 / var15 + var17) * (var14 / 2) >> 16;
                           stackIn_63_0Lifetime2 = -1;
                           stackIn_63_1Lifetime2 = ~var12;
@@ -1165,7 +1165,7 @@ final class Battle {
                             var19Lifetime1 = var12 * this.field_y + var13;
                             var20Lifetime1 = 0;
                             while (var18Lifetime1 > var20Lifetime1) {
-                              mn.field_y.field_m[var20Lifetime1 + var19Lifetime1] = (byte)-5;
+                              MatchingFieldValidator.field_y.field_m[var20Lifetime1 + var19Lifetime1] = (byte)-5;
                               var20Lifetime1++;
                             }
                           }
@@ -1199,7 +1199,7 @@ final class Battle {
                           var14 = var3_int + this.field_y * var12;
                           var15 = 0;
                           while (var15 < var13) {
-                            mn.field_y.field_m[var14 + var15 * this.field_y] = (byte)-5;
+                            MatchingFieldValidator.field_y.field_m[var14 + var15 * this.field_y] = (byte)-5;
                             var15++;
                           }
                         }
@@ -1226,7 +1226,7 @@ final class Battle {
                           var16 = var3_int + var14 * this.field_y;
                           var17 = 0;
                           while (var17 < var15) {
-                            mn.field_y.field_m[this.field_y * var17 + var16] = (byte)-5;
+                            MatchingFieldValidator.field_y.field_m[this.field_y * var17 + var16] = (byte)-5;
                             var17++;
                           }
                         }
@@ -1257,7 +1257,7 @@ final class Battle {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1488,7 +1488,7 @@ final class Battle {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
         }
     }
 
@@ -1525,7 +1525,7 @@ final class Battle {
         if (param0 != 12955) {
           this.field_N = (int[][]) null;
         }
-        return gj.field_a[this.field_F];
+        return ScreenSwitchHelpers.field_a[this.field_F];
     }
 
     private final int[] generateTenPointProfile(int param0, IsaacRandom param1) {
@@ -1620,7 +1620,7 @@ final class Battle {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -1711,14 +1711,14 @@ final class Battle {
         this.field_lb[param0][param1] = 0;
     }
 
-    final void a(BattleUnit param0, int param1) {
+    final void eraseUnitMask(BattleUnit param0, int param1) {
         try {
           ContextActionMenu.stampHalfResolution(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
           if (param1 != 0) {
             this.rasterizeTerrainProfile((int[]) null, (byte) 67);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1795,7 +1795,7 @@ final class Battle {
             if (param2 != -75) {
               this.field_i = (IntrusiveDeque) null;
             }
-            stackIn_12_0 = !(jo.field_b);
+            stackIn_12_0 = !(BitHelpers.field_b);
             return stackIn_12_0;
           }
           return false;
@@ -1809,7 +1809,7 @@ final class Battle {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2041,7 +2041,7 @@ final class Battle {
                       }
                     }
                     if (var12 % 2 == 1) {
-                      mn.field_y.field_m[var8] = (byte)-5;
+                      MatchingFieldValidator.field_y.field_m[var8] = (byte)-5;
                     }
                     var8 = var8 + this.field_y;
                     var11++;
@@ -2069,7 +2069,7 @@ final class Battle {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2113,7 +2113,7 @@ final class Battle {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2155,11 +2155,11 @@ final class Battle {
             return false;
           }
           discarded$0 = this.unitSpriteHitsTerrain(param2, var6, 0, param1 - var6.field_w, -(var6.field_n / 2) + param4);
-          if (jo.field_b) {
+          if (BitHelpers.field_b) {
             return false;
           }
           discarded$1 = this.unitSpriteHitsTerrain(param2, var6, 0, 2 + (param1 - var6.field_w), param4 - var6.field_n / 2);
-          if (jo.field_b) {
+          if (BitHelpers.field_b) {
             return false;
           }
           if (param3 > 27) {
@@ -2177,13 +2177,13 @@ final class Battle {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     private final boolean circleHitsTerrain(int param0, int param1, int param2, int param3) {
         int var5 = -106 / ((9 - param3) / 60);
-        return ko.circleHitsMask(this, param2, param0, param1, this.field_Jb, 16777215);
+        return ListEntryMenuHelpers.circleHitsMask(this, param2, param0, param1, this.field_Jb, 16777215);
     }
 
     private final boolean hasFreeSpellSlot(int param0, int param1, int param2) {
@@ -2217,7 +2217,7 @@ final class Battle {
           this.copyMaskRegion(param3, this.field_Jb, param2, param1, -126);
           this.stampShapeWithMask(param3, 117, param2, param1, this.field_V);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -2228,7 +2228,7 @@ final class Battle {
             field_z = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2350,9 +2350,9 @@ final class Battle {
           }
         }
         if (decompiledFrameCompleted2) {
-          ge.field_p.setDeque((byte) 31, this.field_i);
+          BattleAction.field_p.setDeque((byte) 31, this.field_i);
         }
-        var3 = (BattleUnit) (ge.field_p.first(-98));
+        var3 = (BattleUnit) (BattleAction.field_p.first(-98));
         scanLoop1: while (true) {
           boolean decompiledFrameCompleted1 = true;
           if (var3 != null) {
@@ -2365,7 +2365,7 @@ final class Battle {
                 }
                 var3.field_W = 0;
                 var3.field_G = -1;
-                var3 = (BattleUnit) (ge.field_p.next(-18502));
+                var3 = (BattleUnit) (BattleAction.field_p.next(-18502));
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -2530,14 +2530,14 @@ final class Battle {
                   }
                 }
               }
-              var3 = (BattleUnit) (ge.field_p.next(-18502));
+              var3 = (BattleUnit) (BattleAction.field_p.next(-18502));
               if (var31 == 0) {
                 continue;
               }
             }
           }
           if (decompiledFrameCompleted1) {
-            var3 = (BattleUnit) (ge.field_p.first(-102));
+            var3 = (BattleUnit) (BattleAction.field_p.first(-102));
             while (var3 != null) {
               stackOut_105_0 = var3;
               stackIn_111_0 = stackOut_105_0;
@@ -2552,7 +2552,7 @@ final class Battle {
               }
               var3.field_W = 0;
               var3.field_G = -1;
-              var3 = (BattleUnit) (ge.field_p.next(-18502));
+              var3 = (BattleUnit) (BattleAction.field_p.next(-18502));
             }
           }
           stackIn_111_0 = this.field_Kb.first(12623);
@@ -2657,7 +2657,7 @@ final class Battle {
                 while (var6_int < 5) {
                   var39 = BevelBoxPainter.createProjectile((BattleUnit) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
                   var8 = HuffmanCodec.randomBelow(var5_ref_jd, param0 + 2147483579, 8192);
-                  var39.field_u = of.sine(-56, var8) >> 9;
+                  var39.field_u = GradientBarPainter.sine(-56, var8) >> 9;
                   var39.field_F = (BevelBoxPainter.cosine(var8, -109) * 3 >> 11) - 64;
                   this.onProjectileFinished(52, var39);
                   var6_int++;
@@ -2666,12 +2666,12 @@ final class Battle {
                 while (5 > var6_intLifetime1) {
                   var40 = BevelBoxPainter.createProjectile((BattleUnit) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
                   var8Lifetime1 = HuffmanCodec.randomBelow(var5_ref_jd, -2147483648, 8192);
-                  var40.field_u = of.sine(-8, var8Lifetime1) >> 9;
+                  var40.field_u = GradientBarPainter.sine(-8, var8Lifetime1) >> 9;
                   var40.field_F = -64 + (3 * BevelBoxPainter.cosine(var8Lifetime1, -113) >> 11);
                   this.onProjectileFinished(param0 ^ 113, var40);
                   var6_intLifetime1++;
                 }
-                this.a(var38, 0);
+                this.eraseUnitMask(var38, 0);
                 var38.field_ib = 0;
                 var38.updateTurnLogic(this.field_J, param0 + 51);
               }
@@ -2795,7 +2795,7 @@ final class Battle {
             this.field_Gb = true;
             var3_ref.field_H = var3_ref.field_H - 1;
             if (var3_ref.field_H <= 0) {
-              var41 = aj.spawnProjectile((BattleUnit) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
+              var41 = GameOptionType.spawnProjectile((BattleUnit) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
               this.onProjectileFinished(52, var41);
               var3_ref.applyAreaEffect(50, 100, 100, param0 ^ 77);
               var3_ref.remove(0);
@@ -2803,7 +2803,7 @@ final class Battle {
               while (var5 < 5) {
                 var6 = BevelBoxPainter.createProjectile(var3_ref.field_t, var3_ref.field_G, (byte) -109, this, 117, var3_ref.field_v, 159);
                 var7 = var5 * 8192 / 5;
-                var6.field_u = of.sine(-93, var7) >> 10;
+                var6.field_u = GradientBarPainter.sine(-93, var7) >> 10;
                 var6.field_F = (BevelBoxPainter.cosine(var7, -112) >> 11) - 64;
                 this.onProjectileFinished(param0 ^ 113, var6);
                 var5++;
@@ -2960,7 +2960,7 @@ final class Battle {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
             var6 = this.field_H / 2;
-            var7_int = gf.log2Floor((480 + var6) * 32 / 4, -266740663);
+            var7_int = DisplayNameChangedDialog.log2Floor((480 + var6) * 32 / 4, -266740663);
             var8Lifetime2 = -96 + 192 * (1 & var3);
             var9Lifetime1 = 1;
             var10Lifetime1 = 0;
@@ -2990,7 +2990,7 @@ final class Battle {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             var6 = this.field_H / 2;
-            var7_intLifetime1 = gf.log2Floor((15360 + 32 * var6) / 4, param0 ^ 266757658);
+            var7_intLifetime1 = DisplayNameChangedDialog.log2Floor((15360 + 32 * var6) / 4, param0 ^ 266757658);
             var8Lifetime1 = (var3 & 1) * 192 - 96;
             var16 = BevelBoxPainter.createProjectile(var5, -544, (byte) -117, this, 58, var3 - var7_intLifetime1 * var8Lifetime1 / 16, 49);
             var16.field_w = true;
@@ -3097,7 +3097,7 @@ final class Battle {
             if (param1 + var6.field_k >= -5 + this.field_H) {
               return false;
             }
-            stackIn_14_0 = !(this.spriteOverlapsTerrain(param1, param3 + 7, param2, var6.toRgbSprite())) || !(jo.field_b);
+            stackIn_14_0 = !(this.spriteOverlapsTerrain(param1, param3 + 7, param2, var6.toRgbSprite())) || !(BitHelpers.field_b);
             return stackIn_14_0;
           }
           return false;
@@ -3111,7 +3111,7 @@ final class Battle {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3194,7 +3194,7 @@ final class Battle {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -3245,7 +3245,7 @@ final class Battle {
                 continue;
               }
             } else {
-              if (1 < tm.bitCount(var3, (byte) -68)) {
+              if (1 < IntensityTableHelpers.bitCount(var3, (byte) -68)) {
                 if (var7 == 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -3286,7 +3286,7 @@ final class Battle {
     }
 
     final void queueAction(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        this.field_Db.addLast(new ge(param0, param7, param4, param5, param8, param6, param1, param3), -1);
+        this.field_Db.addLast(new BattleAction(param0, param7, param4, param5, param8, param6, param1, param3), -1);
         int var10 = -97 % ((param2 + 41) / 40);
     }
 
@@ -3330,7 +3330,7 @@ final class Battle {
           } while (var3 != 0);
           break;
         }
-        throw new qg();
+        throw new ClientRuntimeException();
     }
 
     final void onProjectileFinished(int param0, SpellProjectile param1) {
@@ -3364,7 +3364,7 @@ final class Battle {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -3505,7 +3505,7 @@ final class Battle {
           } else {
             stackIn_123_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3657,7 +3657,7 @@ final class Battle {
                     boolean decompiledFrameRemainder1 = true;
                     if (stackIn_33_0 == 0) {
                       var14 = this.field_H - 64;
-                      while (kk.spriteOverlapsMask(var7, var13 - 18, var14 - 34, this.field_V, 0, 0)) {
+                      while (SpriteOverlapHelpers.spriteOverlapsMask(var7, var13 - 18, var14 - 34, this.field_V, 0, 0)) {
                         stackIn_16_0 = var14;
                         stackIn_16_1 = 64;
                         if (stackIn_16_0 >= stackIn_16_1) {
@@ -3679,7 +3679,7 @@ final class Battle {
                     else {
                       var14 = 64;
                       while (true) {
-                        if (!kk.spriteOverlapsMask(var7, var13 - 18, var14 - 33, this.field_V, 0, 0)) {
+                        if (!SpriteOverlapHelpers.spriteOverlapsMask(var7, var13 - 18, var14 - 33, this.field_V, 0, 0)) {
                           stackIn_27_0 = ~(this.field_H - 64);
                           stackIn_27_1 = ~var14;
                           if (stackIn_27_0 <= stackIn_27_1) {
@@ -3736,7 +3736,7 @@ final class Battle {
                       boolean decompiledFrameRemainder2 = true;
                       if (stackIn_67_0 == stackIn_67_1) {
                         var14Lifetime2 = -64 + this.field_H;
-                        while (kk.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 34, this.field_V, 0, 0)) {
+                        while (SpriteOverlapHelpers.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 34, this.field_V, 0, 0)) {
                           stackIn_49_0 = -65;
                           stackIn_49_1 = ~var14Lifetime2;
                           if (stackIn_49_0 >= stackIn_49_1) {
@@ -3758,7 +3758,7 @@ final class Battle {
                       else {
                         var14Lifetime2 = 64;
                         while (true) {
-                          if (!kk.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 33, this.field_V, 0, 0)) {
+                          if (!SpriteOverlapHelpers.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 33, this.field_V, 0, 0)) {
                             stackIn_61_0 = ~(this.field_H - 64);
                             stackIn_61_1 = ~var14Lifetime2;
                             if (stackIn_61_0 <= stackIn_61_1) {
@@ -3864,7 +3864,7 @@ final class Battle {
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_115_0 == stackIn_115_1) {
                       var10 = this.field_H - 64;
-                      while (kk.spriteOverlapsMask(var7, -18 + var9, var10 - 34, this.field_V, 0, 0)) {
+                      while (SpriteOverlapHelpers.spriteOverlapsMask(var7, -18 + var9, var10 - 34, this.field_V, 0, 0)) {
                         stackIn_98_0 = 64;
                         stackIn_98_1 = var10;
                         if (stackIn_98_0 <= stackIn_98_1) {
@@ -3886,7 +3886,7 @@ final class Battle {
                     else {
                       var10 = 64;
                       while (true) {
-                        if (!kk.spriteOverlapsMask(var7, -18 + var9, 1 + var10 - 34, this.field_V, 0, 0)) {
+                        if (!SpriteOverlapHelpers.spriteOverlapsMask(var7, -18 + var9, 1 + var10 - 34, this.field_V, 0, 0)) {
                           stackIn_109_0 = ~var10;
                           stackIn_109_1 = ~(-64 + this.field_H);
                           if (stackIn_109_0 >= stackIn_109_1) {
@@ -4063,7 +4063,7 @@ final class Battle {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4267,7 +4267,7 @@ final class Battle {
                     }
                     if (var11 % 2 == 0 &&
                       var4[var9] < var10) {
-                      mn.field_y.field_m[var7] = (byte)-5;
+                      MatchingFieldValidator.field_y.field_m[var7] = (byte)-5;
                     }
                     var7 = var7 + this.field_y;
                     var10++;
@@ -4319,7 +4319,7 @@ final class Battle {
                       }
                       if (1 == var11Lifetime1 % 2 && (var11Lifetime1 > 0 ||
                         var10Lifetime1 > var4[var9Lifetime1])) {
-                        mn.field_y.field_m[var7] = (byte) 0;
+                        MatchingFieldValidator.field_y.field_m[var7] = (byte) 0;
                       }
                       var7 = var7 + this.field_y;
                       var10Lifetime1++;
@@ -4344,7 +4344,7 @@ final class Battle {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 
@@ -4435,7 +4435,7 @@ final class Battle {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -4565,7 +4565,7 @@ final class Battle {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -4588,7 +4588,7 @@ final class Battle {
           this.carveTerrainWithSprite(param2, (byte) -79, param0, this.field_Jb, param3);
           this.stampSpriteMask(false, param2, this.field_V, true, param0, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.LC(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.LC(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -4643,8 +4643,8 @@ final class Battle {
         if (this.field_O == 9) {
           this.field_O = SceneTextInput.floorMod(this.field_Q, true, 8);
         }
-        if (ed.field_Cb != -1) {
-          this.field_O = ed.field_Cb;
+        if (MainMenuDialog.field_Cb != -1) {
+          this.field_O = MainMenuDialog.field_Cb;
         }
         boolean decompiledFrameRemainder2 = true;
         boolean decompiledFrameCompleted1 = true;
@@ -4653,20 +4653,20 @@ final class Battle {
         if (param1) {
           this.field_Hb = this.field_H / 2;
           this.field_hb = this.field_y / 2;
-          if (null == mn.field_y ||
-            this.field_y != mn.field_y.field_g ||
-            mn.field_y.field_k != this.field_H) {
-            mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+          if (null == MatchingFieldValidator.field_y ||
+            this.field_y != MatchingFieldValidator.field_y.field_g ||
+            MatchingFieldValidator.field_y.field_k != this.field_H) {
+            MatchingFieldValidator.field_y = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
             decompiledFrameRemainder2 = (null != SocketConnector.field_j);
             if (decompiledFrameRemainder2) {
-              mn.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
+              MatchingFieldValidator.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
               decompiledFrameRemainder2 = (var15 != 0);
             }
           }
           if (decompiledFrameRemainder2) {
             var4_int = 0;
-            while (!(mn.field_y.field_m.length <= var4_int)) {
-              mn.field_y.field_m[var4_int] = (byte) 0;
+            while (!(MatchingFieldValidator.field_y.field_m.length <= var4_int)) {
+              MatchingFieldValidator.field_y.field_m[var4_int] = (byte) 0;
               var4_int++;
               if (var15 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -4692,20 +4692,20 @@ final class Battle {
           }
           this.field_Hb = this.field_H / 2;
           this.field_hb = this.field_y / 2;
-          if (null == mn.field_y ||
-            this.field_y != mn.field_y.field_g ||
-            mn.field_y.field_k != this.field_H) {
-            mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+          if (null == MatchingFieldValidator.field_y ||
+            this.field_y != MatchingFieldValidator.field_y.field_g ||
+            MatchingFieldValidator.field_y.field_k != this.field_H) {
+            MatchingFieldValidator.field_y = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
             decompiledFrameRemainder2 = (null != SocketConnector.field_j);
             if (decompiledFrameRemainder2) {
-              mn.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
+              MatchingFieldValidator.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
               decompiledFrameRemainder2 = (var15 != 0);
             }
           }
           if (decompiledFrameRemainder2) {
             var4_intLifetime1 = 0;
-            while (!(mn.field_y.field_m.length <= var4_intLifetime1)) {
-              mn.field_y.field_m[var4_intLifetime1] = (byte) 0;
+            while (!(MatchingFieldValidator.field_y.field_m.length <= var4_intLifetime1)) {
+              MatchingFieldValidator.field_y.field_m[var4_intLifetime1] = (byte) 0;
               var4_intLifetime1++;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4720,7 +4720,7 @@ final class Battle {
           decompiledFrameRemainder2 = (SocketConnector.field_j != null);
         }
         if (decompiledFrameRemainder2) {
-          mn.field_y.field_l = SocketConnector.field_j[this.field_O * 8].field_l;
+          MatchingFieldValidator.field_y.field_l = SocketConnector.field_j[this.field_O * 8].field_l;
         }
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder0 = true;
@@ -4785,16 +4785,16 @@ final class Battle {
         }
         if (var4_array != null) {
           System.gc();
-          this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+          this.field_V = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.stampShapeWithMask(0, 117, mn.field_y, 0, this.field_V);
+          this.stampShapeWithMask(0, 117, MatchingFieldValidator.field_y, 0, this.field_V);
           this.placeTerrainDecorations(var4_array, var16, (byte) -121);
-          this.stampShapeWithMask(0, 113, this.field_V, 0, mn.field_y);
+          this.stampShapeWithMask(0, 113, this.field_V, 0, MatchingFieldValidator.field_y);
           this.drawThemeBackground((byte) 5);
         }
-        this.field_Jb = new IndexedSprite(this.field_hb, this.field_Hb, gg.field_c);
+        this.field_Jb = new IndexedSprite(this.field_hb, this.field_Hb, DecodedSpriteHelpers.field_c);
         this.field_Jb.field_l = this.field_V.field_l;
         this.copyMaskRegion(0, this.field_Jb, this.field_V, 0, -126);
         var5Lifetime1 = 0;
@@ -4963,7 +4963,7 @@ final class Battle {
               }
               var7 = stackIn_31_0;
               while (var7 < this.field_H - var4[var5]) {
-                mn.field_y.field_m[var6_int] = (byte)-5;
+                MatchingFieldValidator.field_y.field_m[var6_int] = (byte)-5;
                 var6_int = var6_int + this.field_y;
                 var7++;
               }
@@ -5080,7 +5080,7 @@ final class Battle {
                     }
                     if (0 == var11 % 2 &&
                       var11 > 0) {
-                      mn.field_y.field_m[var7Lifetime1] = (byte)-5;
+                      MatchingFieldValidator.field_y.field_m[var7Lifetime1] = (byte)-5;
                     }
                     var7Lifetime1 = var7Lifetime1 + this.field_y;
                     var10++;
@@ -5131,7 +5131,7 @@ final class Battle {
                         }
                       }
                       if (var11Lifetime1 % 2 == 1) {
-                        mn.field_y.field_m[var7Lifetime1] = (byte) 0;
+                        MatchingFieldValidator.field_y.field_m[var7Lifetime1] = (byte) 0;
                       }
                       var7Lifetime1 = var7Lifetime1 + this.field_y;
                       var10Lifetime1++;
@@ -5156,7 +5156,7 @@ final class Battle {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 
@@ -5201,7 +5201,7 @@ final class Battle {
           }
           this.field_B.put(param1, (long)param1.field_T, (byte) 110);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.KD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.KD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -5334,7 +5334,7 @@ final class Battle {
                     var23 = var23 + (var31[var25] >> 8 & 255);
                     var25++;
                   }
-                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(fj.bitOr(fj.bitOr(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
+                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(BitAndSpriteHelpers.bitOr(BitAndSpriteHelpers.bitOr(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
                   var19 += 2;
                   continue scanLoop2;
                 }
@@ -5362,7 +5362,7 @@ final class Battle {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -5513,7 +5513,7 @@ final class Battle {
             scanLoop3: while (true) {
               var9 = this.field_y * var8 + var7_int;
               while (this.field_H > var8) {
-                if (mn.field_y.field_m[var9] == 0) {
+                if (MatchingFieldValidator.field_y.field_m[var9] == 0) {
                   var7_int = var7_int + (-1 + var5 % 3);
                   var8++;
                   var9 = var9 + this.field_y;
@@ -5542,7 +5542,7 @@ final class Battle {
                 (32 + var10) < var8 &&
                 var10 < var7_int &&
                 var7_int < this.field_y - var10) {
-                MusicPatchNode.carveTerrain(mn.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
+                MusicPatchNode.carveTerrain(MatchingFieldValidator.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
                 var6 = var8;
               }
               if (var8 < 32 + var10) {
@@ -5552,14 +5552,14 @@ final class Battle {
                 continue scanLoop2;
               }
               System.gc();
-              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
             } while (var15 != 0);
             break;
           }
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.stampShapeWithMask(0, 120, mn.field_y, 0, this.field_V);
+          this.stampShapeWithMask(0, 120, MatchingFieldValidator.field_y, 0, this.field_V);
           var25 = new int[1000];
           var26 = new int[1000];
           var10 = param0;
@@ -5593,7 +5593,7 @@ final class Battle {
             }
             break;
           }
-          this.stampShapeWithMask(0, 114, this.field_V, 0, mn.field_y);
+          this.stampShapeWithMask(0, 114, this.field_V, 0, MatchingFieldValidator.field_y);
           stackIn_62_0 = var4;
           return stackIn_62_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5606,7 +5606,7 @@ final class Battle {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 
@@ -5730,7 +5730,7 @@ final class Battle {
                     var21 = var21 + (var27[var24] >> 16);
                     var24++;
                   }
-                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(fj.bitOr(var23 >> 2, fj.bitOr(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
+                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(BitAndSpriteHelpers.bitOr(var23 >> 2, BitAndSpriteHelpers.bitOr(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
                   var18 += 2;
                   continue scanLoop2;
                 }
@@ -5758,7 +5758,7 @@ final class Battle {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -5820,10 +5820,10 @@ final class Battle {
           if (this.field_sb == null) {
             return;
           }
-          if (this.field_sb[ah.field_f[0 + this.field_x[param0]]] == null) {
+          if (this.field_sb[AccountFlowHelpers.field_f[0 + this.field_x[param0]]] == null) {
             return;
           }
-          DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[ah.field_f[0 + this.field_x[param0] + 0]], this.field_sb[ah.field_f[this.field_x[param0] + 0]]);
+          DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[AccountFlowHelpers.field_f[0 + this.field_x[param0] + 0]], this.field_sb[AccountFlowHelpers.field_f[this.field_x[param0] + 0]]);
           if (var6 == 0) {
             return;
           }
@@ -5978,7 +5978,7 @@ final class Battle {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -6005,7 +6005,7 @@ final class Battle {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param0, param2 + param2);
+          this.eraseUnitMask(param0, param2 + param2);
           var6_int = this.spriteOverlapsTerrain(param3, 2, param4, param1) ? 1 : 0;
           this.stampUnitMask(-62, param0);
           stackIn_1_0 = var6_int;
@@ -6026,7 +6026,7 @@ final class Battle {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -6496,7 +6496,7 @@ final class Battle {
             if (var14 >= 1) {
               this.rasterizeTerrainProfile(var4, (byte) -106);
               System.gc();
-              this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
+              this.field_V = new IndexedSprite(this.field_y, this.field_H, DecodedSpriteHelpers.field_c);
               break;
             }
             var4[var14 + var6] = var4[var14 + var6] - 64;
@@ -6508,14 +6508,14 @@ final class Battle {
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.stampShapeWithMask(0, 127, mn.field_y, 0, this.field_V);
+          this.stampShapeWithMask(0, 127, MatchingFieldValidator.field_y, 0, this.field_V);
           var14 = this.field_y * var6 / var4.length;
           var15 = this.field_y * var7 / var4.length;
           var16 = var8 * this.field_y / var4.length;
           var17 = var12 * this.field_y / var4.length;
           var18 = new Sprite(20, 20);
           var18.makeRasterTarget();
-          gj.field_f[5].draw(2, 2);
+          ScreenSwitchHelpers.field_f[5].draw(2, 2);
           var19 = 0;
           do {
             if (!(var19 < var18.field_A.length)) {
@@ -6560,7 +6560,7 @@ final class Battle {
             }
           }
           this.placeTerrainDecorations(var4, param1, (byte) 75);
-          this.stampShapeWithMask(0, 121, this.field_V, 0, mn.field_y);
+          this.stampShapeWithMask(0, 121, this.field_V, 0, MatchingFieldValidator.field_y);
           this.drawThemeBackground((byte) 5);
           stackIn_67_0 = null;
           return (int[]) (stackIn_67_0);
@@ -6574,7 +6574,7 @@ final class Battle {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -6711,7 +6711,7 @@ final class Battle {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6858,7 +6858,7 @@ final class Battle {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -6898,7 +6898,7 @@ final class Battle {
         StringBuilder stackIn_717_1 = null;
         String stackIn_718_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ge var3 = null;
+        BattleAction var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -7089,7 +7089,7 @@ final class Battle {
           if (this.isGameEnded((byte) -82)) {
             throw new IllegalStateException();
           }
-          var3 = (ge) (this.field_Db.removeFirst(true));
+          var3 = (BattleAction) (this.field_Db.removeFirst(true));
           if (var3 == null) {
             return;
           }
@@ -7684,11 +7684,11 @@ final class Battle {
             this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_mlLifetime5 = new BattleUnit(28, -32 + var8, var9, this.nextUnitId(-81), this, var12);
             this.addUnit((byte) -124, var24_ref_mlLifetime5);
-            var25 = aj.spawnProjectile(var24_ref_mlLifetime5, var24_ref_mlLifetime5.field_db, false, 138, this, var24_ref_mlLifetime5.field_lb);
+            var25 = GameOptionType.spawnProjectile(var24_ref_mlLifetime5, var24_ref_mlLifetime5.field_db, false, 138, this, var24_ref_mlLifetime5.field_lb);
             this.onProjectileFinished(52, var25);
             var24_ref_mlLifetime5Lifetime1 = new BattleUnit(28, 32 + var8, var9, this.nextUnitId(-98), this, var12);
             this.addUnit((byte) -124, var24_ref_mlLifetime5Lifetime1);
-            var25Lifetime20 = aj.spawnProjectile(var24_ref_mlLifetime5Lifetime1, var24_ref_mlLifetime5Lifetime1.field_db, false, 138, this, var24_ref_mlLifetime5Lifetime1.field_lb);
+            var25Lifetime20 = GameOptionType.spawnProjectile(var24_ref_mlLifetime5Lifetime1, var24_ref_mlLifetime5Lifetime1.field_db, false, 138, this, var24_ref_mlLifetime5Lifetime1.field_lb);
             this.onProjectileFinished(52, var25Lifetime20);
             var8 = -1000;
             this.field_D = true;
@@ -7906,11 +7906,11 @@ final class Battle {
             var12.field_jb = 23;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + (var12.field_db - 10));
-            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime2 = 0;
             this.field_D = true;
-            var24_ref_miLifetime9 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
+            var24_ref_miLifetime9 = GameOptionType.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
             this.onProjectileFinished(52, var24_ref_miLifetime9);
             var24_ref_miLifetime9Lifetime1 = BevelBoxPainter.createProjectile(var12, -(var12.field_Y / 2) + var12.field_db, (byte) -107, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime9Lifetime1.field_H = 4;
@@ -7921,11 +7921,11 @@ final class Battle {
             var12.field_jb = 24;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -10 + (var12.field_db - (var12.field_Y >> 1)));
-            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime3 = 0;
-            var24_ref_miLifetime10 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 108, this, var12.field_lb);
+            var24_ref_miLifetime10 = GameOptionType.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 108, this, var12.field_lb);
             this.onProjectileFinished(52, var24_ref_miLifetime10);
           }
           if (91 == var10) {
@@ -7933,17 +7933,17 @@ final class Battle {
             var12.field_jb = 35;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
-            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime4 = 0;
-            var24_ref_miLifetime11 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 154, this, var12.field_lb);
+            var24_ref_miLifetime11 = GameOptionType.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 154, this, var12.field_lb);
             this.onProjectileFinished(52, var24_ref_miLifetime11);
           }
           boolean decompiledFrameCompleted10 = true;
           if (var10 == 61) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime1 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime1 = DisplayNameChangedDialog.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime1 = -96 + 192 * (1 & var8);
             var26 = 1;
             var27 = 0;
@@ -7992,7 +7992,7 @@ final class Battle {
                 break;
               }
               if (stackIn_456_0 == stackIn_456_1) {
-                var25Lifetime3 = aj.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
+                var25Lifetime3 = GameOptionType.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
                 this.onProjectileFinished(52, var25Lifetime3);
                 var25Lifetime3Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime22.field_db, (byte) 38, this, var10, var24_ref_mlLifetime22.field_lb, 74);
                 var25Lifetime3Lifetime1.field_y = -(var24_ref_mlLifetime22.field_ib / 2) + 20;
@@ -8196,7 +8196,7 @@ final class Battle {
               if (stackIn_541_0 != null &&
                 !var24_ref_mlLifetime23.field_U &&
                 var24_ref_mlLifetime23.field_jb != 12) {
-                var25Lifetime5 = aj.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
+                var25Lifetime5 = GameOptionType.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
                 this.onProjectileFinished(52, var25Lifetime5);
                 var25Lifetime5Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime23.field_db, (byte) 40, this, var10, var24_ref_mlLifetime23.field_lb, 55);
                 this.onProjectileFinished(52, var25Lifetime5Lifetime1);
@@ -8215,7 +8215,7 @@ final class Battle {
               var12.field_eb = -50;
               var12.field_jb = 18;
               var12.field_z = true;
-              var24_ref_miLifetime17 = aj.spawnProjectile(var12, var12.field_db - (var12.field_Y >> 1), false, 108, this, var12.field_lb);
+              var24_ref_miLifetime17 = GameOptionType.spawnProjectile(var12, var12.field_db - (var12.field_Y >> 1), false, 108, this, var12.field_lb);
               this.onProjectileFinished(52, var24_ref_miLifetime17);
               this.field_D = true;
             }
@@ -8275,7 +8275,7 @@ final class Battle {
                 }
                 var29 = new Sprite(64, 96);
                 var29.makeRasterTarget();
-                pc.drawTexturedSpriteIntGuard(var50, 16, var51, var48, 80, var49, QuickChatPhrase.field_x[2], 0);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var50, 16, var51, var48, 80, var49, QuickChatPhrase.field_x[2], 0);
                 var12.field_I.normalizeCanvas();
                 var12.field_I.makeRasterTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 32, 48, 0);
@@ -8286,7 +8286,7 @@ final class Battle {
             var24_ref_miLifetime17Lifetime1 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime17Lifetime1.field_H = 4;
             this.onProjectileFinished(52, var24_ref_miLifetime17Lifetime1);
-            var24_ref_miLifetime17Lifetime2 = aj.spawnProjectile((BattleUnit) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
+            var24_ref_miLifetime17Lifetime2 = GameOptionType.spawnProjectile((BattleUnit) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
             this.onProjectileFinished(52, var24_ref_miLifetime17Lifetime2);
             this.field_D = true;
           }
@@ -8298,7 +8298,7 @@ final class Battle {
           }
           if (var10 == 58) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime3 = gf.log2Floor((480 + var9) * 32 / 4, -266740663);
+            var24Lifetime3 = DisplayNameChangedDialog.log2Floor((480 + var9) * 32 / 4, -266740663);
             var25_intLifetime2 = -96 + (var8 & 1) * 192;
             var26_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - var24Lifetime3 * var25_intLifetime2 / 16, 49);
             var26_ref_mi.field_u = var25_intLifetime2;
@@ -8314,7 +8314,7 @@ final class Battle {
           }
           if (var10 == 34) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime4 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime4 = DisplayNameChangedDialog.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime3 = (1 & var8) * 192 - 96;
             var26_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -119, this, var10, var8 - var24Lifetime4 * var25_intLifetime3 / 16, 28);
             var26_ref_miLifetime1.field_u = var25_intLifetime3;
@@ -8325,7 +8325,7 @@ final class Battle {
           boolean decompiledFrameCompleted4 = true;
           if (var10 == 20) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime5 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime5 = DisplayNameChangedDialog.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime4 = (1 & var8) * 192 - 96;
             var26Lifetime1 = 5;
             if (0 == this.field_x[var4]) {
@@ -8350,7 +8350,7 @@ final class Battle {
           boolean decompiledFrameCompleted3 = true;
           if (var10 == 105) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime6 = gf.log2Floor((15360 + var9 * 32) / 4, -266740663);
+            var24Lifetime6 = DisplayNameChangedDialog.log2Floor((15360 + var9 * 32) / 4, -266740663);
             var25_intLifetime5 = -96 + 192 * (var8 & 1);
             var26Lifetime2 = 0;
             while (var26Lifetime2 < 5) {
@@ -8371,7 +8371,7 @@ final class Battle {
           boolean decompiledFrameCompleted2 = true;
           if (var10 == 21) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime7 = gf.log2Floor(32 * (var9 + 480) / 4, -266740663);
+            var24Lifetime7 = DisplayNameChangedDialog.log2Floor(32 * (var9 + 480) / 4, -266740663);
             var25_intLifetime6 = -96 + 192 * (1 & var8);
             var26Lifetime3 = 5;
             if (this.field_x[var4] == 0) {
@@ -8459,9 +8459,9 @@ final class Battle {
           boolean decompiledFrameCompleted1 = true;
           if (var10 == 5) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var25Lifetime11 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
+            var25Lifetime11 = GameOptionType.spawnProjectile(var12, var9, false, 101, this, var8);
             this.onProjectileFinished(52, var25Lifetime11);
-            var25Lifetime11Lifetime1 = aj.spawnProjectile(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime11Lifetime1 = GameOptionType.spawnProjectile(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime11Lifetime1);
             var25Lifetime11Lifetime2 = (SpellProjectile) (this.field_Kb.first(12623));
             while (var25Lifetime11Lifetime2 != null) {
@@ -8503,12 +8503,12 @@ final class Battle {
                 }
               }
             }
-            var25Lifetime12 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
+            var25Lifetime12 = GameOptionType.spawnProjectile(var12, var9, false, 101, this, var8);
             this.onProjectileFinished(52, var25Lifetime12);
-            var25Lifetime12Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime12Lifetime1 = GameOptionType.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime12Lifetime1);
             this.consumeSpellCharge((byte) 80, var10, var4);
-            this.a(var12, 0);
+            this.eraseUnitMask(var12, 0);
             if (var12.field_jb != 20) {
               var12.field_q = 0;
               if (var12.isTower((byte) 111)) {
@@ -8536,15 +8536,15 @@ final class Battle {
             var12.field_kb = 0;
           }
           if (var10 == 150) {
-            var25Lifetime13 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var8);
+            var25Lifetime13 = GameOptionType.spawnProjectile(var12, var12.field_db, false, 137, this, var8);
             this.onProjectileFinished(52, var25Lifetime13);
-            var25Lifetime13Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var12.field_lb);
+            var25Lifetime13Lifetime1 = GameOptionType.spawnProjectile(var12, var12.field_db, false, 137, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime13Lifetime1);
             this.consumeSpellCharge((byte) 80, var10, var4);
-            this.a(var12, 0);
+            this.eraseUnitMask(var12, 0);
             if (var12.isAirborneOrHovering(32) &&
               var12.field_s.field_q <= 0) {
-              this.a(var12.field_s, 0);
+              this.eraseUnitMask(var12.field_s, 0);
               var13Lifetime2 = -var12.field_lb + var12.field_s.field_lb;
               var14Lifetime2 = -(var12.field_s.field_Y / 2) + (var12.field_s.field_db - var12.field_db + var12.field_Y / 2);
               if (var13Lifetime2 * var13Lifetime2 + var14Lifetime2 * var14Lifetime2 < (var12.field_Y + var12.field_s.field_Y) * (var12.field_Y + var12.field_s.field_Y) >> 2) {
@@ -8574,7 +8574,7 @@ final class Battle {
           if (var10 == 139) {
             var12.field_ib = 0;
             var12.field_x = 1;
-            var25Lifetime14 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime14 = GameOptionType.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime14);
             var25Lifetime14.applyAreaEffect(0, 0, 32, 8);
           }
@@ -8586,7 +8586,7 @@ final class Battle {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (var10 == 132) {
-            var25Lifetime15 = aj.spawnProjectile(var12, var12.field_db, false, 108, this, var12.field_lb);
+            var25Lifetime15 = GameOptionType.spawnProjectile(var12, var12.field_db, false, 108, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime15);
             var26Lifetime5 = var12.field_lb;
             var27Lifetime3 = var12.field_db;
@@ -8623,7 +8623,7 @@ final class Battle {
                   if (var28_ref.field_jb != 20) {
                     var28_ref.field_q = 0;
                   }
-                  this.a(var28_ref, 0);
+                  this.eraseUnitMask(var28_ref, 0);
                   var28_ref.field_lb = var13Lifetime3 + var26Lifetime5;
                   var28_ref.field_db = var14Lifetime3 + var27Lifetime3;
                   var28_ref.field_z = true;
@@ -8645,9 +8645,9 @@ final class Battle {
             stackIn_689_1 = var12;
           }
           if (decompiledFrameRemainder0) {
-            var25Lifetime15Lifetime1 = aj.spawnProjectile(stackIn_689_0, stackIn_689_1.field_db, false, 86, this, var12.field_lb);
+            var25Lifetime15Lifetime1 = GameOptionType.spawnProjectile(stackIn_689_0, stackIn_689_1.field_db, false, 86, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime15Lifetime1);
-            this.a(var12.field_s, 0);
+            this.eraseUnitMask(var12.field_s, 0);
             if (var12.field_s.getY((byte) -3) > this.field_H) {
               this.field_D = true;
             }
@@ -8665,11 +8665,11 @@ final class Battle {
             var12.field_jb = 20;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
-            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime7 = 0;
             this.field_D = true;
-            var25Lifetime16 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime16 = GameOptionType.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 101, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime16);
           }
           if (var10 == 114) {
@@ -8677,11 +8677,11 @@ final class Battle {
             var12.field_jb = 38;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
-            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime8 = 0;
             this.field_D = true;
-            var25Lifetime17 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 86, this, var12.field_lb);
+            var25Lifetime17 = GameOptionType.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 86, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime17);
           }
           if (55 == var10) {
@@ -8689,11 +8689,11 @@ final class Battle {
             var12.field_jb = 22;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
-            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime9 = 0;
             this.field_D = true;
-            var25Lifetime18 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 94, this, var12.field_lb);
+            var25Lifetime18 = GameOptionType.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 94, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime18);
           }
           if (var10 == 31) {
@@ -8701,11 +8701,11 @@ final class Battle {
             var12.field_jb = 21;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + var12.field_db - 10);
-            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            ChatPanel.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime10 = 0;
-            var25Lifetime19 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 89, this, var12.field_lb);
+            var25Lifetime19 = GameOptionType.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 89, this, var12.field_lb);
             this.onProjectileFinished(52, var25Lifetime19);
           }
           if (30 == var10) {
@@ -8737,7 +8737,7 @@ final class Battle {
           } else {
             stackIn_718_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_717_0), ((StringBuilder) (Object) stackIn_717_1).append(stackIn_718_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_717_0), ((StringBuilder) (Object) stackIn_717_1).append(stackIn_718_2).append(')').toString());
         }
     }
 
@@ -8840,7 +8840,7 @@ final class Battle {
               var10 = var8 + this.field_y * var9;
               scanLoop2: while (true) {
                 if (this.field_H > var9) {
-                  stackIn_36_0 = ~mn.field_y.field_m[var10];
+                  stackIn_36_0 = ~MatchingFieldValidator.field_y.field_m[var10];
                   stackIn_36_1 = -1;
                   if (var12 != 0) {
                     break scanLoop2;
@@ -8872,7 +8872,7 @@ final class Battle {
                   var9 > (var11 + 32) &&
                   var11 < var8 &&
                   -var11 + this.field_y > var8) {
-                  MusicPatchNode.carveTerrain(mn.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
+                  MusicPatchNode.carveTerrain(MatchingFieldValidator.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
                   var6 = var9;
                 }
                 if (var9 < 32 + var11) {
@@ -8897,7 +8897,7 @@ final class Battle {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -8968,7 +8968,7 @@ final class Battle {
             param1.field_D) {
             return false;
           }
-          cf.field_f = false;
+          CredentialParseHelpers.field_f = false;
           if (param0 == 139 &&
             null != param1.field_s) {
             return true;
@@ -8997,7 +8997,7 @@ final class Battle {
             if (this.isImmuneToSpell(param0, param1, 1)) {
               return true;
             }
-            var4 = gj.field_c[param1.field_jb];
+            var4 = ScreenSwitchHelpers.field_c[param1.field_jb];
             if (param1.field_jb == 17 &&
               param1.field_U) {
               var4 = NanoFrameClock.field_u;
@@ -9045,34 +9045,34 @@ final class Battle {
               (decompiledFrameRemainder0 = !(param0 <= -1)) &&
               (decompiledFrameRemainder0 = (FixedViewResizeListener.field_e[param0] == 4))) {
               if (4 < 1 + this.countTeamUnits((byte) -116, param1.field_u)) {
-                cf.field_f = true;
+                CredentialParseHelpers.field_f = true;
                 return false;
               }
               decompiledFrameRemainder0 = !(this.countUnits(12) + 1 <= 4 * this.field_q);
               if (decompiledFrameRemainder0) {
-                cf.field_f = true;
+                CredentialParseHelpers.field_f = true;
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
               if (4 < 2 + this.countTeamUnits((byte) -113, param1.field_u)) {
-                cf.field_f = true;
+                CredentialParseHelpers.field_f = true;
                 return false;
               }
               decompiledFrameRemainder0 = !(2 + this.countUnits(12) <= this.field_q * 4);
               if (decompiledFrameRemainder0) {
-                cf.field_f = true;
+                CredentialParseHelpers.field_f = true;
                 return false;
               }
             }
           }
           if (decompiledFrameRemainder0) {
             if (3 + this.countTeamUnits((byte) -128, param1.field_u) > 4) {
-              cf.field_f = true;
+              CredentialParseHelpers.field_f = true;
               return false;
             }
             if (3 + this.countUnits(12) > 4 * this.field_q) {
-              cf.field_f = true;
+              CredentialParseHelpers.field_f = true;
               return false;
             }
           }
@@ -9191,7 +9191,7 @@ final class Battle {
           } else {
             stackIn_237_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_236_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_236_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -9202,7 +9202,7 @@ final class Battle {
           }
           this.field_I.addLast(param1, 15893);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nf.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -9337,12 +9337,12 @@ final class Battle {
         if (!this.field_eb) {
           return;
         }
-        th.drawMaskShape(this, this.field_V, -1, 4 + param1, param0, param3);
+        NameTable.drawMaskShape(this, this.field_V, -1, 4 + param1, param0, param3);
         if (param2 != 51) {
           this.field_D = false;
         }
         MusicPatchNode.carveTerrain(this.field_V, (byte) -47, param1, (byte) 0, param3, param0, this);
-        hj.carveHalfResolutionMask(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
+        ClientIOException.carveHalfResolutionMask(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
     }
 
     final boolean canStandAt(int param0, BattleUnit param1, int param2, int param3) {
@@ -9380,7 +9380,7 @@ final class Battle {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -9440,7 +9440,7 @@ final class Battle {
           IntKeyLookup.field_d = new IntrusiveDequeCursor();
           HuffmanCodec.field_f = new IntrusiveDequeCursor();
           ValidationStatusIcon.field_J = new IntrusiveDequeCursor();
-          ge.field_p = new IntrusiveDequeCursor();
+          BattleAction.field_p = new IntrusiveDequeCursor();
           this.field_m = param11;
           stackIn_4_1 = (param0);
           this.field_l = stackIn_4_1;
@@ -9459,12 +9459,12 @@ final class Battle {
           this.field_xb = param3;
           this.field_Q = param6;
           if (!this.field_d) {
-            nj.field_n = nj.field_a;
+            NameCheckHelpers.field_n = NameCheckHelpers.field_a;
             if (var19 != 0) {
-              nj.field_n = LabeledField.field_M;
+              NameCheckHelpers.field_n = LabeledField.field_M;
             }
           } else {
-            nj.field_n = LabeledField.field_M;
+            NameCheckHelpers.field_n = LabeledField.field_M;
           }
           this.field_k = param5;
           if (0 > this.field_Cb) {
@@ -9697,18 +9697,18 @@ final class Battle {
                     this.field_x[var15] = this.field_v[var15][var16Lifetime1Lifetime2] / 12 - 1;
                     if (this.field_x[var15] == -1) {
                       this.field_x[var15] = 9;
-                      var17 = new int[nj.field_n.length];
+                      var17 = new int[NameCheckHelpers.field_n.length];
                       var18 = 0;
                       while (true) {
-                        if (nj.field_n.length > var18) {
-                          var17[var18] = nj.field_n[var18];
+                        if (NameCheckHelpers.field_n.length > var18) {
+                          var17[var18] = NameCheckHelpers.field_n[var18];
                           var18++;
                           continue;
                         }
                         break;
                       }
-                      nj.field_n = var17;
-                      nj.field_n[var15] = 13413102;
+                      NameCheckHelpers.field_n = var17;
+                      NameCheckHelpers.field_n[var15] = 13413102;
                     }
                   }
                   var16Lifetime1Lifetime2++;
@@ -9771,7 +9771,7 @@ final class Battle {
           } else {
             stackIn_113_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
         }
     }
 

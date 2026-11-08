@@ -20,7 +20,7 @@ final class EmailLoginCredentials extends LoginCredentials {
           int var3_int = 124 / ((-35 - param1) / 36);
           param0.writeBase38Name((byte) 7, this.field_i);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class EmailLoginCredentials extends LoginCredentials {
           this.field_k = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

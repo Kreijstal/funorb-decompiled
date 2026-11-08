@@ -62,7 +62,7 @@ final class DraggableWidget extends SingleChildContainer {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -141,7 +141,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -183,14 +183,14 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void growRankingArrays(byte param0, int param1, int param2) {
-        if (co.field_e == null ||
-          !(param1 <= co.field_e.length)) {
-          co.field_e = new int[param1 * 2];
+        if (BattleResetHelpers.field_e == null ||
+          !(param1 <= BattleResetHelpers.field_e.length)) {
+          BattleResetHelpers.field_e = new int[param1 * 2];
         }
         if (Battle.field_z == null) {
           Battle.field_z = new int[param1 * 2];
@@ -206,20 +206,20 @@ final class DraggableWidget extends SingleChildContainer {
             !(param1 <= PatchEnvelopeSet.field_o.length)) {
             PatchEnvelopeSet.field_o = new int[2 * param1];
           }
-          if (lm.field_i == null ||
-            !(param1 <= lm.field_i.length)) {
-            lm.field_i = new int[2 * param1];
+          if (GameDetailsRenderer.field_i == null ||
+            !(param1 <= GameDetailsRenderer.field_i.length)) {
+            GameDetailsRenderer.field_i = new int[2 * param1];
           }
           if (param0 > -10) {
             field_E = '_';
           }
-          if (ki.field_r == null ||
-            !(param1 + param2 <= ki.field_r.length)) {
-            ki.field_r = new int[2 * (param1 + param2)];
+          if (EmailValidator.field_r == null ||
+            !(param1 + param2 <= EmailValidator.field_r.length)) {
+            EmailValidator.field_r = new int[2 * (param1 + param2)];
           }
-          if (wh.field_e == null ||
-            !(wh.field_e.length >= param1)) {
-            wh.field_e = new boolean[2 * param1];
+          if (PaletteSpriteHelpers.field_e == null ||
+            !(PaletteSpriteHelpers.field_e.length >= param1)) {
+            PaletteSpriteHelpers.field_e = new boolean[2 * param1];
           }
         } else {
           if (Battle.field_z.length < param1) {
@@ -234,20 +234,20 @@ final class DraggableWidget extends SingleChildContainer {
                 !(param1 <= PatchEnvelopeSet.field_o.length)) {
                 PatchEnvelopeSet.field_o = new int[2 * param1];
               }
-              if (lm.field_i == null ||
-                !(param1 <= lm.field_i.length)) {
-                lm.field_i = new int[2 * param1];
+              if (GameDetailsRenderer.field_i == null ||
+                !(param1 <= GameDetailsRenderer.field_i.length)) {
+                GameDetailsRenderer.field_i = new int[2 * param1];
               }
               if (param0 > -10) {
                 field_E = '_';
               }
-              if (ki.field_r == null ||
-                !(param1 + param2 <= ki.field_r.length)) {
-                ki.field_r = new int[2 * (param1 + param2)];
+              if (EmailValidator.field_r == null ||
+                !(param1 + param2 <= EmailValidator.field_r.length)) {
+                EmailValidator.field_r = new int[2 * (param1 + param2)];
               }
-              if (wh.field_e == null ||
-                !(wh.field_e.length >= param1)) {
-                wh.field_e = new boolean[2 * param1];
+              if (PaletteSpriteHelpers.field_e == null ||
+                !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                PaletteSpriteHelpers.field_e = new boolean[2 * param1];
               }
             } else {
               if (param1 > ConditionalTextValue.field_e.length) {
@@ -261,20 +261,20 @@ final class DraggableWidget extends SingleChildContainer {
                 !(param1 <= PatchEnvelopeSet.field_o.length)) {
                 PatchEnvelopeSet.field_o = new int[2 * param1];
               }
-              if (lm.field_i == null ||
-                !(param1 <= lm.field_i.length)) {
-                lm.field_i = new int[2 * param1];
+              if (GameDetailsRenderer.field_i == null ||
+                !(param1 <= GameDetailsRenderer.field_i.length)) {
+                GameDetailsRenderer.field_i = new int[2 * param1];
               }
               if (param0 > -10) {
                 field_E = '_';
               }
-              if (ki.field_r == null ||
-                !(param1 + param2 <= ki.field_r.length)) {
-                ki.field_r = new int[2 * (param1 + param2)];
+              if (EmailValidator.field_r == null ||
+                !(param1 + param2 <= EmailValidator.field_r.length)) {
+                EmailValidator.field_r = new int[2 * (param1 + param2)];
               }
-              if (wh.field_e == null ||
-                !(wh.field_e.length >= param1)) {
-                wh.field_e = new boolean[2 * param1];
+              if (PaletteSpriteHelpers.field_e == null ||
+                !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                PaletteSpriteHelpers.field_e = new boolean[2 * param1];
               }
             }
           } else {
@@ -288,38 +288,38 @@ final class DraggableWidget extends SingleChildContainer {
             }
             if (PatchEnvelopeSet.field_o == null) {
               PatchEnvelopeSet.field_o = new int[2 * param1];
-              if (lm.field_i == null ||
-                !(param1 <= lm.field_i.length)) {
-                lm.field_i = new int[2 * param1];
+              if (GameDetailsRenderer.field_i == null ||
+                !(param1 <= GameDetailsRenderer.field_i.length)) {
+                GameDetailsRenderer.field_i = new int[2 * param1];
               }
               if (param0 > -10) {
                 field_E = '_';
-                if (ki.field_r == null ||
-                  !(param1 + param2 <= ki.field_r.length)) {
-                  ki.field_r = new int[2 * (param1 + param2)];
+                if (EmailValidator.field_r == null ||
+                  !(param1 + param2 <= EmailValidator.field_r.length)) {
+                  EmailValidator.field_r = new int[2 * (param1 + param2)];
                 }
-                if (wh.field_e == null ||
-                  !(wh.field_e.length >= param1)) {
-                  wh.field_e = new boolean[2 * param1];
+                if (PaletteSpriteHelpers.field_e == null ||
+                  !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                  PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                 }
               } else {
-                if (ki.field_r == null) {
-                  ki.field_r = new int[2 * (param1 + param2)];
-                  if (wh.field_e == null ||
-                    !(wh.field_e.length >= param1)) {
-                    wh.field_e = new boolean[2 * param1];
+                if (EmailValidator.field_r == null) {
+                  EmailValidator.field_r = new int[2 * (param1 + param2)];
+                  if (PaletteSpriteHelpers.field_e == null ||
+                    !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                    PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                   }
                 } else {
-                  if (param1 + param2 <= ki.field_r.length) {
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                  if (param1 + param2 <= EmailValidator.field_r.length) {
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   } else {
-                    ki.field_r = new int[2 * (param1 + param2)];
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                    EmailValidator.field_r = new int[2 * (param1 + param2)];
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   }
                 }
@@ -327,78 +327,78 @@ final class DraggableWidget extends SingleChildContainer {
             } else {
               if (param1 > PatchEnvelopeSet.field_o.length) {
                 PatchEnvelopeSet.field_o = new int[2 * param1];
-                if (lm.field_i == null ||
-                  !(param1 <= lm.field_i.length)) {
-                  lm.field_i = new int[2 * param1];
+                if (GameDetailsRenderer.field_i == null ||
+                  !(param1 <= GameDetailsRenderer.field_i.length)) {
+                  GameDetailsRenderer.field_i = new int[2 * param1];
                 }
                 if (param0 > -10) {
                   field_E = '_';
                 }
-                if (ki.field_r == null) {
-                  ki.field_r = new int[2 * (param1 + param2)];
-                  if (wh.field_e == null ||
-                    !(wh.field_e.length >= param1)) {
-                    wh.field_e = new boolean[2 * param1];
+                if (EmailValidator.field_r == null) {
+                  EmailValidator.field_r = new int[2 * (param1 + param2)];
+                  if (PaletteSpriteHelpers.field_e == null ||
+                    !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                    PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                   }
                 } else {
-                  if (param1 + param2 <= ki.field_r.length) {
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                  if (param1 + param2 <= EmailValidator.field_r.length) {
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   } else {
-                    ki.field_r = new int[2 * (param1 + param2)];
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                    EmailValidator.field_r = new int[2 * (param1 + param2)];
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   }
                 }
               } else {
-                if (lm.field_i == null ||
-                  !(param1 <= lm.field_i.length)) {
-                  lm.field_i = new int[2 * param1];
+                if (GameDetailsRenderer.field_i == null ||
+                  !(param1 <= GameDetailsRenderer.field_i.length)) {
+                  GameDetailsRenderer.field_i = new int[2 * param1];
                 }
                 if (param0 <= -10) {
-                  if (ki.field_r == null) {
-                    ki.field_r = new int[2 * (param1 + param2)];
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                  if (EmailValidator.field_r == null) {
+                    EmailValidator.field_r = new int[2 * (param1 + param2)];
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   } else {
-                    if (param1 + param2 <= ki.field_r.length) {
-                      if (wh.field_e == null ||
-                        !(wh.field_e.length >= param1)) {
-                        wh.field_e = new boolean[2 * param1];
+                    if (param1 + param2 <= EmailValidator.field_r.length) {
+                      if (PaletteSpriteHelpers.field_e == null ||
+                        !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                        PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                       }
                     } else {
-                      ki.field_r = new int[2 * (param1 + param2)];
-                      if (wh.field_e == null ||
-                        !(wh.field_e.length >= param1)) {
-                        wh.field_e = new boolean[2 * param1];
+                      EmailValidator.field_r = new int[2 * (param1 + param2)];
+                      if (PaletteSpriteHelpers.field_e == null ||
+                        !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                        PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                       }
                     }
                   }
                 } else {
                   field_E = '_';
-                  if (ki.field_r == null) {
-                    ki.field_r = new int[2 * (param1 + param2)];
-                    if (wh.field_e == null ||
-                      !(wh.field_e.length >= param1)) {
-                      wh.field_e = new boolean[2 * param1];
+                  if (EmailValidator.field_r == null) {
+                    EmailValidator.field_r = new int[2 * (param1 + param2)];
+                    if (PaletteSpriteHelpers.field_e == null ||
+                      !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                      PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                     }
                   } else {
-                    if (param1 + param2 <= ki.field_r.length) {
-                      if (wh.field_e == null ||
-                        !(wh.field_e.length >= param1)) {
-                        wh.field_e = new boolean[2 * param1];
+                    if (param1 + param2 <= EmailValidator.field_r.length) {
+                      if (PaletteSpriteHelpers.field_e == null ||
+                        !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                        PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                       }
                     } else {
-                      ki.field_r = new int[2 * (param1 + param2)];
-                      if (wh.field_e == null ||
-                        !(wh.field_e.length >= param1)) {
-                        wh.field_e = new boolean[2 * param1];
+                      EmailValidator.field_r = new int[2 * (param1 + param2)];
+                      if (PaletteSpriteHelpers.field_e == null ||
+                        !(PaletteSpriteHelpers.field_e.length >= param1)) {
+                        PaletteSpriteHelpers.field_e = new boolean[2 * param1];
                       }
                     }
                   }
@@ -408,10 +408,10 @@ final class DraggableWidget extends SingleChildContainer {
           }
         }
         MouseInputHandler.field_b = 0;
-        qa.field_m = -2147483648;
-        tm.field_g = -2147483648;
+        NoticeHelpers.field_m = -2147483648;
+        IntensityTableHelpers.field_g = -2147483648;
         AlternateUsernameCredentials.field_m = 2147483647;
-        ao.field_g = 2147483647;
+        LobbyLayoutHelpers.field_g = 2147483647;
     }
 
     public static void releaseStatics(int param0) {
@@ -439,7 +439,7 @@ final class DraggableWidget extends SingleChildContainer {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "se.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "se.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -452,7 +452,7 @@ final class DraggableWidget extends SingleChildContainer {
           this.field_N = param8 ? true : false;
           this.field_B = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "se.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "se.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -497,7 +497,7 @@ final class DraggableWidget extends SingleChildContainer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

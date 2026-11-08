@@ -58,7 +58,7 @@ final class Bzip2State {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ul.C(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ul.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class Bzip2State {
         try {
           field_k = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class Bzip2State {
           Battle.field_A = param2;
           ResizableViewResizeListener.field_c[2] = 9474303;
           ResizableViewResizeListener.field_c[1] = 6356832;
-          hm.field_c = param5;
+          Cp1252Helpers.field_c = param5;
           ResizableViewResizeListener.field_c[0] = 16764000;
           ResizableViewResizeListener.field_c[4] = 16711935;
           EmailLoginCredentials.field_h[0] = 16764000;
@@ -145,21 +145,21 @@ final class Bzip2State {
           IntKeyLookup.field_g.addChild(NanoFrameClock.field_t, param8 ^ 27890);
           var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.field_G = new IntrusiveDeque();
-          qo.field_f = new SceneScrollPane(0L, var17, param1, param11);
-          NanoFrameClock.field_t.addChild(qo.field_f, 96);
+          NameHelpers.field_f = new SceneScrollPane(0L, var17, param1, param11);
+          NanoFrameClock.field_t.addChild(NameHelpers.field_f, 96);
           CredentialKind.field_d = new SceneWidget(0L, param6);
           NanoFrameClock.field_t.addChild(CredentialKind.field_d, 61);
           SingleChildContainer.field_D = new SceneWidget(0L, param10);
           SingleChildContainer.field_D.field_Z = QuickChatCategory.field_x;
           CredentialKind.field_d.addChild(SingleChildContainer.field_D, 24);
           CredentialKind.field_d.markTreeDirty((byte) 20);
-          sa.field_Cb = new SceneWidget(0L, (SceneWidget) null);
-          sa.field_Cb.field_v = var16;
-          CredentialKind.field_d.addChild(sa.field_Cb, 112);
-          ta.field_i = new SceneWidget[5];
+          ConfirmScene.field_Cb = new SceneWidget(0L, (SceneWidget) null);
+          ConfirmScene.field_Cb.field_v = var16;
+          CredentialKind.field_d.addChild(ConfirmScene.field_Cb, 112);
+          LoadingTask.field_i = new SceneWidget[5];
           IntrusiveDequeCursor.field_f = new SceneWidget[5];
-          ia.field_b = new SceneWidget[5];
-          mn.field_s = new SceneWidget[5];
+          RootInputHelpers.field_b = new SceneWidget[5];
+          MatchingFieldValidator.field_s = new SceneWidget[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -168,34 +168,34 @@ final class Bzip2State {
             if (var20 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_35_0 == stackIn_35_1) {
-                if (hm.field_c) {
+                if (Cp1252Helpers.field_c) {
                   stackIn_13_0 = NanoFrameClock.field_p;
                 } else {
                   stackIn_13_0 = UiComponent.field_m;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
-                hm.field_c) {
-                var19 = ec.field_b;
+                Cp1252Helpers.field_c) {
+                var19 = SpriteFrame.field_b;
               } else {
                 decompiledFrameRemainder0 = (var18 == 2);
                 if (decompiledFrameRemainder0) {
-                  var19 = he.field_c;
+                  var19 = StatusMessageHelpers.field_c;
                 }
               }
               if (decompiledFrameRemainder0) {
-                mn.field_s[var18] = new SceneWidget(0L, param9);
-                ta.field_i[var18] = new SceneWidget(0L, Battle.field_A, var19);
-                ia.field_b[var18] = new SceneWidget(0L, (SceneWidget) null);
-                ia.field_b[var18].field_gb = 1;
+                MatchingFieldValidator.field_s[var18] = new SceneWidget(0L, param9);
+                LoadingTask.field_i[var18] = new SceneWidget(0L, Battle.field_A, var19);
+                RootInputHelpers.field_b[var18] = new SceneWidget(0L, (SceneWidget) null);
+                RootInputHelpers.field_b[var18].field_gb = 1;
                 IntrusiveDequeCursor.field_f[var18] = new SceneWidget(0L, Battle.field_A);
                 IntrusiveDequeCursor.field_f[var18].field_gb = 1;
-                mn.field_s[var18].addChild(ta.field_i[var18], param8 - 27777);
-                mn.field_s[var18].addChild(ia.field_b[var18], 81);
-                mn.field_s[var18].addChild(IntrusiveDequeCursor.field_f[var18], 102);
-                mn.field_s[var18].markTreeDirty((byte) 20);
-                IntKeyLookup.field_g.addChild(mn.field_s[var18], 73);
-                lf.field_g = lf.field_g + 1;
+                MatchingFieldValidator.field_s[var18].addChild(LoadingTask.field_i[var18], param8 - 27777);
+                MatchingFieldValidator.field_s[var18].addChild(RootInputHelpers.field_b[var18], 81);
+                MatchingFieldValidator.field_s[var18].addChild(IntrusiveDequeCursor.field_f[var18], 102);
+                MatchingFieldValidator.field_s[var18].markTreeDirty((byte) 20);
+                IntKeyLookup.field_g.addChild(MatchingFieldValidator.field_s[var18], 73);
+                ScreenTransitionHelpers.field_g = ScreenTransitionHelpers.field_g + 1;
               }
               var18++;
               continue;
@@ -203,11 +203,11 @@ final class Bzip2State {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            g.field_g = new SceneWidget(0L, param3);
-            g.field_g.field_rb = qn.field_nb;
-            IntKeyLookup.field_g.addChild(g.field_g, 56);
-            if (!td.isConnectedToLobby(-91) ||
-              wh.field_g) {
+            SupportPageHelpers.field_g = new SceneWidget(0L, param3);
+            SupportPageHelpers.field_g.field_rb = MessageDialog.field_nb;
+            IntKeyLookup.field_g.addChild(SupportPageHelpers.field_g, 56);
+            if (!ThreeButtonPanel.isConnectedToLobby(-91) ||
+              PaletteSpriteHelpers.field_g) {
               AccountRegistrationPanel.field_U = new BirthDateEntryPanel(0, 0, 0, 0);
             }
             stackIn_35_0 = param8;
@@ -281,7 +281,7 @@ final class Bzip2State {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -295,8 +295,8 @@ final class Bzip2State {
         try {
           var3_int = 96 / ((-36 - param1) / 58);
           ChatInputWidget.field_Cb = false;
-          ii.field_a = ie.field_Vb;
-          cj.field_b = param2;
+          IconHighlightPainter.field_a = StatusDialog.field_Vb;
+          AccountCreationHelpers.field_b = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,7 +308,7 @@ final class Bzip2State {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

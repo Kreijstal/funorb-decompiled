@@ -108,8 +108,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_F = 1;
-        if (jn.field_c == null) {
-          jn.field_c = new int[param0.field_F * 100000];
+        if (LobbyStateHelpers.field_c == null) {
+          LobbyStateHelpers.field_c = new int[param0.field_F * 100000];
         }
         var26 = 1;
         while (true) {
@@ -280,14 +280,14 @@ final class Bzip2Decoder {
                 param0.field_t[var4] = param0.field_t[var4] + param0.field_t[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(jn.field_c[var4] & 255);
+                var1 = (byte)(LobbyStateHelpers.field_c[var4] & 255);
                 dupTemp$1 = param0.field_t[var1 & 255];
-                jn.field_c[dupTemp$1] = jn.field_c[dupTemp$1] | var4 << 8;
+                LobbyStateHelpers.field_c[dupTemp$1] = LobbyStateHelpers.field_c[dupTemp$1] | var4 << 8;
                 param0.field_t[var1 & 255] = param0.field_t[var1 & 255] + 1;
               }
-              param0.field_u = jn.field_c[param0.field_p] >> 8;
+              param0.field_u = LobbyStateHelpers.field_c[param0.field_p] >> 8;
               param0.field_e = 0;
-              param0.field_u = jn.field_c[param0.field_u];
+              param0.field_u = LobbyStateHelpers.field_c[param0.field_u];
               param0.field_B = (byte)(param0.field_u & 255);
               param0.field_u = param0.field_u >> 8;
               param0.field_e = param0.field_e + 1;
@@ -351,7 +351,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_o[var1 & 255] & 255;
               param0.field_f[dupTemp$0] = param0.field_f[dupTemp$0] + 1;
-              jn.field_c[var14] = param0.field_o[var1 & 255] & 255;
+              LobbyStateHelpers.field_c[var14] = param0.field_o[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -408,7 +408,7 @@ final class Bzip2Decoder {
             var1 = param0.field_o[param0.field_w[param0.field_c[0]] & 255];
             param0.field_f[var1 & 255] = param0.field_f[var1 & 255] + var15;
             while (var15 > 0) {
-              jn.field_c[var14] = var1 & 255;
+              LobbyStateHelpers.field_c[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -437,7 +437,7 @@ final class Bzip2Decoder {
         var3 = param0.field_q;
         var4 = param0.field_e;
         var5 = param0.field_B;
-        var15 = jn.field_c;
+        var15 = LobbyStateHelpers.field_c;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_u;
@@ -539,7 +539,7 @@ final class Bzip2Decoder {
         param0.field_q = var3;
         param0.field_e = var4;
         param0.field_B = var5;
-        jn.field_c = var6;
+        LobbyStateHelpers.field_c = var6;
         param0.field_u = var7;
         param0.field_E = var8;
         param0.field_x = var9;

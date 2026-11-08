@@ -24,7 +24,7 @@ final class MusicPatch extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = Checkbox.classifyCount(qf.field_d, 1021, BevelTextPainter.field_r);
+          var2_int = Checkbox.classifyCount(MembershipGlobals.field_d, 1021, BevelTextPainter.field_r);
           if (param1 == ~var2_int) {
             param0 = "<img=0>" + param0;
           }
@@ -43,7 +43,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = var28_int * (var30 - var27Lifetime6Lifetime1) + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = jg.floorDivide(var30 - var27Lifetime6Lifetime1, -271087521, var32);
+                var34 = ChatLine.floorDivide(var30 - var27Lifetime6Lifetime1, -271087521, var32);
                 this.field_h[var33] = (byte)(32 + this.field_h[var33] * var34 >> 6);
                 var32 = var32 + (var31 - var28_int);
               }
@@ -610,7 +610,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = jg.floorDivide(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, -271087521, var32Lifetime1);
+                var34Lifetime1 = ChatLine.floorDivide(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, -271087521, var32Lifetime1);
                 var35 = (this.field_j[var37] & 255) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;
@@ -679,7 +679,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

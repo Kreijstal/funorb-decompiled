@@ -29,16 +29,16 @@ final class GrowableIntList {
         int var4Lifetime1;
         try {
           IntrusiveNode.field_d = true;
-          la.field_c.field_rb = param1;
-          var2_int = ce.field_m.field_e;
-          var3 = ce.field_m.field_m;
+          ScreenClearHelpers.field_c.field_rb = param1;
+          var2_int = GameSelectionHelpers.field_m.field_e;
+          var3 = GameSelectionHelpers.field_m.field_m;
           var4 = -22 % ((-64 - param0) / 46);
-          var4Lifetime1 = la.field_c.field_Z.paragraphHeight(param1, 272, la.field_c.field_z);
+          var4Lifetime1 = ScreenClearHelpers.field_c.field_Z.paragraphHeight(param1, 272, ScreenClearHelpers.field_c.field_z);
           var5 = -103 + var3 / 2 - var4Lifetime1 / 2;
           LinkButtonPainter.field_h.setBounds(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
-          LinkButtonPainter.field_h.field_v = of.createGradientFrame(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
-          la.field_c.setBounds(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
-          dm.field_E.setBounds(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
+          LinkButtonPainter.field_h.field_v = GradientBarPainter.createGradientFrame(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
+          ScreenClearHelpers.field_c.setBounds(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
+          AlphaContainer.field_E.setBounds(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ final class GrowableIntList {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "jl.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "jl.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "jl.F(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "jl.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -120,60 +120,60 @@ final class GrowableIntList {
             return stackIn_3_0;
           }
           var2 = null;
-          if (nj.field_c == 0 &&
-            null != om.field_x) {
-            var2 = fn.field_i;
+          if (NameCheckHelpers.field_c == 0 &&
+            null != CapsuleBar.field_x) {
+            var2 = GameListHelpers.field_i;
           }
-          if (2 == nj.field_c &&
-            !wm.isLoginNameValid(false)) {
+          if (2 == NameCheckHelpers.field_c &&
+            !PaddedContainer.isLoginNameValid(false)) {
             boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.hasEntryNamed(GridContainer.field_S, 1));
             if (!decompiledSharedTail1) {
-              var2 = CachedArchiveProvider.formatTemplate(125, new String[]{MenuInputState.field_p}, qc.field_b);
+              var2 = CachedArchiveProvider.formatTemplate(125, new String[]{MenuInputState.field_p}, ViewportSetupHelpers.field_b);
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
               var2 = CachedArchiveProvider.formatTemplate(-41, new String[]{MenuInputState.field_p}, QuickChatCategory.field_m);
             }
-            if (oj.field_i) {
-              ao.addChatMessage(0, (byte) 83, (String) (var2), (String) null, 2, (String) null);
-              uc.closeQuickChatIfOpen(3);
+            if (LoginMethodHelpers.field_i) {
+              LobbyLayoutHelpers.addChatMessage(0, (byte) 83, (String) (var2), (String) null, 2, (String) null);
+              QuickChatHelpers.closeQuickChatIfOpen(3);
             }
           }
           if (var2 == null &&
             !NodeHashTable.field_j &&
-            tm.field_d == null) {
-            var2 = oa.field_a;
+            IntensityTableHelpers.field_d == null) {
+            var2 = LoginResultHelpers.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            rb.showSavedLayout(ArchiveIndex.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
+            TimedMessage.showSavedLayout(ArchiveIndex.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = ah.field_b;
+            var3 = AccountFlowHelpers.field_b;
             var3 = MusicPatch.prefixRankIcon(var3, -2);
             var4 = "";
             var5 = "|";
-            var6 = nj.field_c;
+            var6 = NameCheckHelpers.field_c;
             var7 = 0;
             if (var6 == 2) {
-              var4 = CachedArchiveProvider.formatTemplate(-99, new String[]{MenuInputState.field_p}, ge.field_n);
+              var4 = CachedArchiveProvider.formatTemplate(-99, new String[]{MenuInputState.field_p}, BattleAction.field_n);
               var8 = CachedArchiveProvider.formatTemplate(-51, new String[]{var3}, IterableNodeHashTable.field_f);
-              var7 = -485 + (sa.field_Cb.field_x + SingleChildContainer.field_D.field_x + QuickChatCategory.field_x.textWidth(var8)) - QuickChatCategory.field_x.textWidth(var4);
+              var7 = -485 + (ConfirmScene.field_Cb.field_x + SingleChildContainer.field_D.field_x + QuickChatCategory.field_x.textWidth(var8)) - QuickChatCategory.field_x.textWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
             } else {
               if (0 == var6) {
                 if (DirectByteStorage.field_f == null &&
-                  hm.field_c) {
+                  Cp1252Helpers.field_c) {
                   var4 = "[" + NanoFrameClock.field_p + "] ";
                 }
                 if (null != DirectByteStorage.field_f) {
-                  boolean decompiledSharedTail0 = (!(oe.field_a) ||
-                    he.field_d == null);
+                  boolean decompiledSharedTail0 = (!(CalendarHelpers.field_a) ||
+                    StatusMessageHelpers.field_d == null);
                   if (!decompiledSharedTail0) {
-                    var4 = "[" + he.field_d + "] ";
+                    var4 = "[" + StatusMessageHelpers.field_d + "] ";
                     decompiledSharedTail0 = (var10 != 0);
                   }
                   if (decompiledSharedTail0) {
@@ -189,42 +189,42 @@ final class GrowableIntList {
               }
               var8 = stackIn_63_0;
               var4 = var4 + var3 + var8;
-              if (!wh.field_g) {
+              if (!PaletteSpriteHelpers.field_g) {
                 if (AlternateUsernameCredentials.field_p) {
-                  var4 = "<col=999999>" + var4 + sb.field_b + "</col>";
+                  var4 = "<col=999999>" + var4 + AudioShutdownHelpers.field_b + "</col>";
                   var5 = "";
                   if (var10 != 0) {
-                    var4 = "<col=999999>" + var4 + rk.field_N + "</col>";
+                    var4 = "<col=999999>" + var4 + GradientBarButton.field_N + "</col>";
                     var5 = "";
                   }
                 }
               } else {
-                var4 = "<col=999999>" + var4 + rk.field_N + "</col>";
+                var4 = "<col=999999>" + var4 + GradientBarButton.field_N + "</col>";
                 var5 = "";
               }
               var9 = QuickChatCategory.field_x.textWidth(var4);
               if (!QuickChatPhrase.hasResizableListener((byte) -113)) {
                 if (SingleChildContainer.field_D.field_C &&
                   (-SingleChildContainer.field_D.field_V + EmailLoginCredentials.field_g) < var9) {
-                  if (!wh.field_g) {
-                    var1 = sb.field_b;
+                  if (!PaletteSpriteHelpers.field_g) {
+                    var1 = AudioShutdownHelpers.field_b;
                   } else {
                     var1 = "Broken!";
                   }
                 }
                 if (SingleChildContainer.field_D.field_U != 0 &&
                   SingleChildContainer.field_D.field_cb < var9 &&
-                  !wh.field_g) {
-                  gj.resetLoginMode((byte) 104);
+                  !PaletteSpriteHelpers.field_g) {
+                  ScreenSwitchHelpers.resetLoginMode((byte) 104);
                 }
               }
             }
-            rb.showSavedLayout(ResizableViewResizeListener.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
+            TimedMessage.showSavedLayout(ResizableViewResizeListener.field_c[var6], var4 + BitmapFont.escapeMarkup(ViewControllerHelpers.field_e.toString()), var7, var5, -126);
             if (!SocketJs5Transport.field_r) {
-              sa.field_Cb.field_C = false;
+              ConfirmScene.field_Cb.field_C = false;
             }
-            if (sa.field_Cb.field_C) {
-              var1 = CachedArchiveProvider.formatTemplate(-118, new String[]{var3, MenuInputState.field_p}, tn.field_Db);
+            if (ConfirmScene.field_Cb.field_C) {
+              var1 = CachedArchiveProvider.formatTemplate(-118, new String[]{var3, MenuInputState.field_p}, SceneTabStrip.field_Db);
             }
           }
           stackIn_103_0 = var1;
@@ -232,7 +232,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) (var1), "jl.G(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) (var1), "jl.G(" + param0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class GrowableIntList {
         try {
           this.set(false, param1 + this.field_m, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class GrowableIntList {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "jl.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "jl.A(" + param0 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "jl.I(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "jl.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3_ref), "jl.E(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "jl.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "jl.L(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "jl.L(" + param0 + ')');
         }
     }
 
@@ -432,7 +432,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "jl.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "jl.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "jl.H(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "jl.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "jl.<init>()");
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "jl.<init>()");
         }
     }
 

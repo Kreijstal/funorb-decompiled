@@ -3,7 +3,7 @@
  */
 final class DropdownList extends UiContainer implements ButtonListener {
     private int field_K;
-    mb field_P;
+    DropdownItemList field_P;
     String field_D;
     static String field_F;
     private TextButton field_O;
@@ -21,20 +21,20 @@ final class DropdownList extends UiContainer implements ButtonListener {
     DropdownList(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         this.field_D = "";
-        this.field_Q = ia.field_c;
+        this.field_Q = RootInputHelpers.field_c;
         try {
-          this.field_P = new mb(this, this.field_Q, param0, param1);
+          this.field_P = new DropdownItemList(this, this.field_Q, param0, param1);
           this.field_G = false;
           this.field_P.field_o = (UiListener) (this);
           this.field_R = param2;
           this.field_O = new TextButton("", new BevelBoxPainter(this), (UiListener) (this));
           this.field_E = new TextButton();
-          this.field_E.field_r = (WidgetPainter) ((Object) new va());
+          this.field_E.field_r = (WidgetPainter) ((Object) new GradientPanelPainter());
           this.field_E.field_o = (UiListener) (this);
           this.addChild(-83, this.field_O);
           this.addChild(-74, this.field_E);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
         try {
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -374,46 +374,46 @@ final class DropdownList extends UiContainer implements ButtonListener {
           this.scrollToSelection(11149);
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ti.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void initializeCaptionTable(byte param0) {
-        if (ce.field_g != null) {
+        if (GameSelectionHelpers.field_g != null) {
           return;
         }
-        ce.field_g = new String[31];
-        ce.field_g[14] = ArchiveIndex.field_j;
-        ce.field_g[0] = nj.field_g;
-        ce.field_g[23] = ArcanistsMulti.field_H;
-        ce.field_g[19] = tm.field_f;
-        ce.field_g[21] = th.field_i;
-        ce.field_g[6] = mb.field_Z;
-        ce.field_g[20] = BufferedRandomAccessFile.field_g;
-        ce.field_g[18] = StatefulTextPainter.field_y;
+        GameSelectionHelpers.field_g = new String[31];
+        GameSelectionHelpers.field_g[14] = ArchiveIndex.field_j;
+        GameSelectionHelpers.field_g[0] = NameCheckHelpers.field_g;
+        GameSelectionHelpers.field_g[23] = ArcanistsMulti.field_H;
+        GameSelectionHelpers.field_g[19] = IntensityTableHelpers.field_f;
+        GameSelectionHelpers.field_g[21] = NameTable.field_i;
+        GameSelectionHelpers.field_g[6] = DropdownItemList.field_Z;
+        GameSelectionHelpers.field_g[20] = BufferedRandomAccessFile.field_g;
+        GameSelectionHelpers.field_g[18] = StatefulTextPainter.field_y;
         if (param0 != -90) {
           PcmSample var2 = (PcmSample) null;
           DropdownList.playSampleAtVolume((byte) 106, 40, (PcmSample) null);
         }
-        ce.field_g[2] = r.field_e;
-        ce.field_g[26] = mn.field_w;
-        ce.field_g[17] = ui.field_q;
-        ce.field_g[28] = KeyboardInputHandler.field_l;
-        ce.field_g[9] = ed.field_xb;
-        ce.field_g[7] = DraggableWidget.field_J;
-        ce.field_g[4] = da.field_a;
-        ce.field_g[5] = he.field_b;
-        ce.field_g[11] = ResourceArchive.field_d;
-        ce.field_g[1] = CameraFollowTarget.field_a;
-        ce.field_g[30] = IntrusiveNodeHashTable.field_d;
-        ce.field_g[29] = MenuButtonPanel.field_Q;
-        ce.field_g[8] = null;
-        ce.field_g[27] = ie.field_Lb;
-        ce.field_g[22] = he.field_g;
-        ce.field_g[15] = SectorCacheStore.field_i;
-        ce.field_g[24] = lh.field_a;
-        ce.field_g[13] = SecondaryNodeDeque.field_a;
-        ce.field_g[25] = CipherPacketBuffer.field_q;
+        GameSelectionHelpers.field_g[2] = OverlayHelpers.field_e;
+        GameSelectionHelpers.field_g[26] = MatchingFieldValidator.field_w;
+        GameSelectionHelpers.field_g[17] = PasswordValidator.field_q;
+        GameSelectionHelpers.field_g[28] = KeyboardInputHandler.field_l;
+        GameSelectionHelpers.field_g[9] = MainMenuDialog.field_xb;
+        GameSelectionHelpers.field_g[7] = DraggableWidget.field_J;
+        GameSelectionHelpers.field_g[4] = MusicAndClipHelpers.field_a;
+        GameSelectionHelpers.field_g[5] = StatusMessageHelpers.field_b;
+        GameSelectionHelpers.field_g[11] = ResourceArchive.field_d;
+        GameSelectionHelpers.field_g[1] = CameraFollowTarget.field_a;
+        GameSelectionHelpers.field_g[30] = IntrusiveNodeHashTable.field_d;
+        GameSelectionHelpers.field_g[29] = MenuButtonPanel.field_Q;
+        GameSelectionHelpers.field_g[8] = null;
+        GameSelectionHelpers.field_g[27] = StatusDialog.field_Lb;
+        GameSelectionHelpers.field_g[22] = StatusMessageHelpers.field_g;
+        GameSelectionHelpers.field_g[15] = SectorCacheStore.field_i;
+        GameSelectionHelpers.field_g[24] = ValueListPainter.field_a;
+        GameSelectionHelpers.field_g[13] = SecondaryNodeDeque.field_a;
+        GameSelectionHelpers.field_g[25] = CipherPacketBuffer.field_q;
     }
 
     private final void scrollToSelection(int param0) {
@@ -431,7 +431,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           this.field_P.field_W != null &&
           null != this.field_H.field_O) {
           if (param0 != 11149) {
-            this.field_P = (mb) null;
+            this.field_P = (DropdownItemList) null;
           }
           var2 = this.field_H.field_P.field_k;
           var3 = this.field_P.field_T;
@@ -489,13 +489,13 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void notifySelectionChanged(int param0) {
         if (param0 != 0) {
-          this.field_P = (mb) null;
+          this.field_P = (DropdownItemList) null;
         }
         if (this.field_o instanceof DropdownListener) {
           ((DropdownListener) ((Object) this.field_o)).onSelectionChanged(this, -6509);
@@ -514,9 +514,9 @@ final class DropdownList extends UiContainer implements ButtonListener {
         }
     }
 
-    final static fk playSampleAtVolume(byte param0, int param1, PcmSample param2) {
+    final static SoundEffectVoice playSampleAtVolume(byte param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
-        fk stackIn_3_0 = null;
+        SoundEffectVoice stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -537,7 +537,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -626,7 +626,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -673,7 +673,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

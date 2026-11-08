@@ -21,18 +21,18 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var3_int = 0;
           var4 = MembershipOfferScreen.field_r;
           while (var3_int < BevelTextPainter.field_v.length) {
-            var5 = oe.field_c[var3_int];
+            var5 = CalendarHelpers.field_c[var3_int];
             if (var5 < 0) {
-              var4 = var4 + qj.field_a;
+              var4 = var4 + TimeAndInputHelpers.field_a;
             } else {
               var6 = UiTheme.measureText(true, (byte) 29, BevelTextPainter.field_v[var3_int]);
-              var4 = var4 + da.field_c;
+              var4 = var4 + MusicAndClipHelpers.field_c;
               var7 = TextLine.field_l - (var6 >> 1);
-              if (bj.containsPoint(param0, 30, var4, var6 + (la.field_d << 1), IntrusiveNodeHashTable.field_h + (bm.field_h << 1), param2, -la.field_d + var7)) {
+              if (ButtonMenuDialog.containsPoint(param0, 30, var4, var6 + (ScreenClearHelpers.field_d << 1), IntrusiveNodeHashTable.field_h + (TutorialCaptionGlobals.field_h << 1), param2, -ScreenClearHelpers.field_d + var7)) {
                 stackIn_6_0 = var5;
                 return stackIn_6_0;
               }
-              var4 = var4 + (IntrusiveNodeHashTable.field_h + da.field_c + (bm.field_h << 1));
+              var4 = var4 + (IntrusiveNodeHashTable.field_h + MusicAndClipHelpers.field_c + (TutorialCaptionGlobals.field_h << 1));
             }
             var3_int++;
           }
@@ -44,13 +44,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "bl.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "bl.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void showEmptyLoginPanel(byte param0) {
         String var2 = (String) null;
-        bb.showLoginPanel("", -3, (String) null);
+        LoginLoadingHelpers.showLoginPanel("", -3, (String) null);
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
@@ -139,7 +139,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 var10[var12Lifetime1 + var14] = param3.field_D[var14];
               } else {
-                var16 = th.field_d.getDefinition(var15, (byte) -70);
+                var16 = NameTable.field_d.getDefinition(var15, (byte) -70);
                 var8[var14 + var12Lifetime1] = var16.getText(true);
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
@@ -180,7 +180,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             this.field_h = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             this.computeState((byte) -51);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4 = (ReflectionCheckRequest) (la.field_b.first(12623));
+          var4 = (ReflectionCheckRequest) (ScreenClearHelpers.field_b.first(12623));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -234,7 +234,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
         }
     }
 
@@ -256,19 +256,19 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             this.field_h = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void stopEffectStream(PcmSampleStream param0, int param1) {
         try {
-          pc.field_e.removeSubStream(param0);
+          TexturedSpriteHelpers.field_e.removeSubStream(param0);
           if (param1 < 119) {
             PcmSampleStream var3 = (PcmSampleStream) null;
             DateOfBirthValidator.stopEffectStream((PcmSampleStream) null, 64);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -285,22 +285,22 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_h.getDay(68);
           var3 = this.field_h.getMonth(105);
           var4 = this.field_h.getYear(param0);
-          var5 = ra.currentYear(-109);
+          var5 = DateHelpers.currentYear(-109);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
-            if (tn.isValidDate(var3, (byte) 119, var4, var2_int)) {
+            if (SceneTabStrip.isValidDate(var3, (byte) 119, var4, var2_int)) {
               stackIn_7_0 = null;
               return (String) (stackIn_7_0);
             }
           } else {
-            stackIn_4_0 = CachedArchiveProvider.formatTemplate(125, new String[]{"1890", Integer.toString(-3 + var5)}, af.field_Kb);
+            stackIn_4_0 = CachedArchiveProvider.formatTemplate(125, new String[]{"1890", Integer.toString(-3 + var5)}, PairedSceneWidget.field_Kb);
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return gl.field_d;
+        return NineSliceHelpers.field_d;
     }
 
     final ValidationState computeState(byte param0) {
@@ -318,27 +318,27 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_h.getDay(69);
           var3 = this.field_h.getMonth(param0 + 134);
           var4 = this.field_h.getYear(true);
-          var5 = ra.currentYear(-26);
+          var5 = DateHelpers.currentYear(-26);
           if (1890 > var4) {
-            stackIn_2_0 = ra.field_k;
+            stackIn_2_0 = DateHelpers.field_k;
             return stackIn_2_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_5_0 = ra.field_k;
+            stackIn_5_0 = DateHelpers.field_k;
             return stackIn_5_0;
           }
           if (param0 != -66) {
             var6 = (EditableTextWidget) null;
             this.onTextChanged((EditableTextWidget) null, -112);
           }
-          if (!tn.isValidDate(var3, (byte) 115, var4, var2_int)) {
-            stackIn_11_0 = ra.field_k;
+          if (!SceneTabStrip.isValidDate(var3, (byte) 115, var4, var2_int)) {
+            stackIn_11_0 = DateHelpers.field_k;
             return stackIn_11_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return ra.field_k;
+          return DateHelpers.field_k;
         }
         return CacheEntry.field_s;
     }

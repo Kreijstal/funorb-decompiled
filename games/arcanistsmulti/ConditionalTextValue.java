@@ -5,12 +5,12 @@ final class ConditionalTextValue {
     private String field_b;
     static String field_d;
     private boolean field_c;
-    static db field_i;
+    static Crc32Helpers field_i;
     static String field_g;
     static int[] field_e;
     static String field_a;
     static boolean field_f;
-    static db field_h;
+    static Crc32Helpers field_h;
 
     ConditionalTextValue(String param0) {
         this(param0, false);
@@ -19,15 +19,15 @@ final class ConditionalTextValue {
     final static String getAccountCaption(byte param0) {
         if (param0 >= -105) {
           field_d = (String) null;
-          if (sk.field_a != SceneScrollbar.field_Gb) {
+          if (TooltipHelpers.field_a != SceneScrollbar.field_Gb) {
             return UiTheme.field_o;
           }
-          return kf.field_a;
+          return SharedCaptionGlobals.field_a;
         }
-        if (sk.field_a != SceneScrollbar.field_Gb) {
+        if (TooltipHelpers.field_a != SceneScrollbar.field_Gb) {
           return UiTheme.field_o;
         }
-        return kf.field_a;
+        return SharedCaptionGlobals.field_a;
     }
 
     final static void openServerList(java.applet.Applet param0, int param1) {
@@ -45,7 +45,7 @@ final class ConditionalTextValue {
                 field_f = true;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(nm.appendSessionParameters(param0, var2, -31843), "_top");
+              param0.getAppletContext().showDocument(UrlHelpers.appendSessionParameters(param0, var2, -31843), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class ConditionalTextValue {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -101,16 +101,16 @@ final class ConditionalTextValue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean isAccountMenuOpen(int param0) {
         if (param0 == -1) {
-          return hb.field_Gb == sk.field_a ? true : false;
+          return SceneListPanel.field_Gb == TooltipHelpers.field_a ? true : false;
         }
         field_a = (String) null;
-        return hb.field_Gb == sk.field_a ? true : false;
+        return SceneListPanel.field_Gb == TooltipHelpers.field_a ? true : false;
     }
 
     final String getText(int param0) {
@@ -143,9 +143,9 @@ final class ConditionalTextValue {
 
     static {
         field_d = "Location";
-        field_i = new db();
+        field_i = new Crc32Helpers();
         field_g = "You can only cast this spell once per turn";
         field_a = "Character's Spells";
-        field_h = new db();
+        field_h = new Crc32Helpers();
     }
 }

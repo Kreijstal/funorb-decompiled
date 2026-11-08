@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ModalPanelStack extends SingleChildContainer {
-    static aj field_G;
+    static GameOptionType field_G;
     static String field_E;
     private IntrusiveDeque field_H;
     static String[] field_K;
@@ -53,7 +53,7 @@ final class ModalPanelStack extends SingleChildContainer {
     }
 
     public ModalPanelStack() {
-        super(0, 0, SoundCache.field_c, mf.field_c, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, SoundCache.field_c, EffectVolumeHelpers.field_c, (WidgetPainter) null, (UiListener) null);
         this.field_H = new IntrusiveDeque();
     }
 
@@ -80,13 +80,13 @@ final class ModalPanelStack extends SingleChildContainer {
           return;
         }
         try {
-          nj.field_c = 2;
+          NameCheckHelpers.field_c = 2;
           var5 = (CharSequence) ((Object) param2);
           GridContainer.field_S = Js5ArchiveManager.normalizeNameForLookup(var5, -13);
-          gg.field_e = param0;
-          uc.openQuickChat(3);
+          DecodedSpriteHelpers.field_e = param0;
+          QuickChatHelpers.openQuickChat(3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "h.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "h.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,12 +133,12 @@ final class ModalPanelStack extends SingleChildContainer {
 
     final static ConditionalTextValue createRememberedUsername(byte param0) {
         int var1 = -73 % ((param0 - 82) / 43);
-        String var2 = ed.getStatusMessage(-952);
+        String var2 = MainMenuDialog.getStatusMessage(-952);
         if (var2 != null &&
           !(var2.indexOf('@') < 0)) {
           var2 = "";
         }
-        return new ConditionalTextValue(ed.getStatusMessage(-952), ConditionalTextValue.isAccountMenuOpen(-1));
+        return new ConditionalTextValue(MainMenuDialog.getStatusMessage(-952), ConditionalTextValue.isAccountMenuOpen(-1));
     }
 
     final static void renderLogoBanner(int param0) {
@@ -148,7 +148,7 @@ final class ModalPanelStack extends SingleChildContainer {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          fk.setSpriteRasterTarget(var1, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(var1, -23095);
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           SoundCache.field_a = param0;
@@ -162,7 +162,7 @@ final class ModalPanelStack extends SingleChildContainer {
           var1.drawHalfSize(0, 0);
           QuickChatCategory.popClipState(-15405);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class ModalPanelStack extends SingleChildContainer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class ModalPanelStack extends SingleChildContainer {
     }
 
     static {
-        field_G = new aj(7, 0, 1, 1);
+        field_G = new GameOptionType(7, 0, 1, 1);
         field_E = "Disruptive behaviour";
     }
 }

@@ -43,10 +43,10 @@ final class BufferedSocket implements Runnable {
             BattleScreen var3 = (BattleScreen) null;
             BufferedSocket.setActiveBattleScreen((BattleScreen) null, false);
           }
-          rk.field_O = param0.field_V;
-          qn.field_ob = param0;
+          GradientBarButton.field_O = param0.field_V;
+          MessageDialog.field_ob = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "k.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "k.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_a) {
             while (this.field_a.field_e == 0) {
-              ao.sleepMillis(1L, 1);
+              LobbyLayoutHelpers.sleepMillis(1L, 1);
             }
             if (this.field_a.field_e == 1) {
               try {
@@ -287,8 +287,8 @@ final class BufferedSocket implements Runnable {
     }
 
     final static String getConnectionCaption(int param0) {
-        if (SceneScrollbar.field_Gb == sk.field_a) {
-          return on.field_d;
+        if (SceneScrollbar.field_Gb == TooltipHelpers.field_a) {
+          return LoginMessageTable.field_d;
         }
         if (param0 != 0) {
           field_k = (String[]) null;
@@ -296,10 +296,10 @@ final class BufferedSocket implements Runnable {
         if (!SingleChildContainer.field_z.isComplete((byte) -106)) {
           return SingleChildContainer.field_z.getName(true);
         }
-        if (hb.field_Gb == sk.field_a) {
+        if (SceneListPanel.field_Gb == TooltipHelpers.field_a) {
           return SingleChildContainer.field_z.getName(true);
         }
-        return ge.field_g;
+        return BattleAction.field_g;
     }
 
     protected final void finalize() {
@@ -340,7 +340,7 @@ final class BufferedSocket implements Runnable {
           this.field_r = this.field_e.getOutputStream();
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -2,28 +2,28 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmptyPainter implements WidgetPainter {
-    static mc[] field_b;
+    static QuickChatInputHelpers[] field_b;
     static Sprite field_d;
     static String field_c;
     static int field_a;
 
-    final static nk findOrCreateListRequest(boolean param0, int param1, int param2, int param3) {
-        nk var6 = null;
+    final static ListRequest findOrCreateListRequest(boolean param0, int param1, int param2, int param3) {
+        ListRequest var6 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        nk var4 = (nk) (ContextActionMenu.field_Lb.first(12623));
+        ListRequest var4 = (ListRequest) (ContextActionMenu.field_Lb.first(12623));
         if (param0) {
           while (var4 != null) {
             if (param2 == var4.field_p) {
               return var4;
             }
-            var4 = (nk) (ContextActionMenu.field_Lb.next(0));
+            var4 = (ListRequest) (ContextActionMenu.field_Lb.next(0));
           }
-          var6 = new nk();
+          var6 = new ListRequest();
           var4 = var6;
           var6.field_p = param2;
           var6.field_t = param1;
           ContextActionMenu.field_Lb.addLast(var6, -1);
-          fj.sendListRequest(-26971, var6, param3);
+          BitAndSpriteHelpers.sendListRequest(-26971, var6, param3);
           return var6;
         }
         EmptyPainter.releaseStatics((byte) -57);
@@ -31,14 +31,14 @@ final class EmptyPainter implements WidgetPainter {
           if (param2 == var4.field_p) {
             return var4;
           }
-          var4 = (nk) (ContextActionMenu.field_Lb.next(0));
+          var4 = (ListRequest) (ContextActionMenu.field_Lb.next(0));
         }
-        nk var7 = new nk();
+        ListRequest var7 = new ListRequest();
         var4 = var7;
         var7.field_p = param2;
         var7.field_t = param1;
         ContextActionMenu.field_Lb.addLast(var7, -1);
-        fj.sendListRequest(-26971, var7, param3);
+        BitAndSpriteHelpers.sendListRequest(-26971, var7, param3);
         return var7;
     }
 
@@ -54,11 +54,11 @@ final class EmptyPainter implements WidgetPainter {
     public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param1 != 5592405) {
-            jg var7 = (jg) null;
-            EmptyPainter.openChatLineMenu(-82, (jg) null);
+            ChatLine var7 = (ChatLine) null;
+            EmptyPainter.openChatLineMenu(-82, (ChatLine) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -68,19 +68,19 @@ final class EmptyPainter implements WidgetPainter {
           GrowableIntList.field_h.setMasterVolume(param0, (byte) -66);
         }
         if (!param1) {
-          if (gg.field_h != null) {
-            gg.field_h.setFadeStep(2, param0);
+          if (DecodedSpriteHelpers.field_h != null) {
+            DecodedSpriteHelpers.field_h.setFadeStep(2, param0);
           }
           return;
         }
-        jg var3 = (jg) null;
-        EmptyPainter.openChatLineMenu(84, (jg) null);
-        if (gg.field_h != null) {
-          gg.field_h.setFadeStep(2, param0);
+        ChatLine var3 = (ChatLine) null;
+        EmptyPainter.openChatLineMenu(84, (ChatLine) null);
+        if (DecodedSpriteHelpers.field_h != null) {
+          DecodedSpriteHelpers.field_h.setFadeStep(2, param0);
         }
     }
 
-    final static void openChatLineMenu(int param0, jg param1) {
+    final static void openChatLineMenu(int param0, ChatLine param1) {
         int stackIn_2_0;
         Object stackIn_2_1;
         Object stackIn_2_2;
@@ -120,13 +120,13 @@ final class EmptyPainter implements WidgetPainter {
           if (param1.field_m == param0 &&
             !Js5Transport.isChatMode(-1) &&
             DirectByteStorage.field_f == null &&
-            null == om.field_x) {
+            null == CapsuleBar.field_x) {
             if (!AlternateUsernameCredentials.field_p) {
-              var5 = eo.field_c;
+              var5 = PackedShortHelpers.field_c;
               var6 = IsaacRandom.field_i;
               var5.field_l.addAction(14, var6, (byte) -26);
             }
-            var7 = eo.field_c;
+            var7 = PackedShortHelpers.field_c;
             var8 = Js5Transport.field_h;
             var7.field_l.addAction(20, var8, (byte) -26);
           }
@@ -135,22 +135,22 @@ final class EmptyPainter implements WidgetPainter {
             null != DirectByteStorage.field_f &&
             param1.field_q == DirectByteStorage.field_f.getSortKey((byte) 78)) {
             if (!AlternateUsernameCredentials.field_p) {
-              var9 = eo.field_c;
+              var9 = PackedShortHelpers.field_c;
               var10 = Js5NetworkRequest.field_v;
               var9.field_l.addAction(14, var10, (byte) -26);
             }
-            var11 = eo.field_c;
+            var11 = PackedShortHelpers.field_c;
             var12 = SocketJs5Transport.field_s;
             var11.field_l.addAction(20, var12, (byte) -26);
           }
-          eo.field_c.addSocialActions(3);
-          eo.field_c.populateActions((byte) 72, false);
-          eo.field_c.addGameActions(param1.field_m, param1.field_f, 13);
-          eo.field_c.addPrivateMessageAction(5552);
-          eo.field_c.addChatLineActions(19, param1);
-          var13 = eo.field_c;
-          var3 = pb.field_h;
-          var4 = ja.field_s;
+          PackedShortHelpers.field_c.addSocialActions(3);
+          PackedShortHelpers.field_c.populateActions((byte) 72, false);
+          PackedShortHelpers.field_c.addGameActions(param1.field_m, param1.field_f, 13);
+          PackedShortHelpers.field_c.addPrivateMessageAction(5552);
+          PackedShortHelpers.field_c.addChatLineActions(19, param1);
+          var13 = PackedShortHelpers.field_c;
+          var3 = QueuedResponse.field_h;
+          var4 = ConfirmedNameValidator.field_s;
           var13.field_l.openAt(0, 0, -29466, var4, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ final class EmptyPainter implements WidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -173,19 +173,19 @@ final class EmptyPainter implements WidgetPainter {
         }
         StatefulTextPainter.drawSceneFullScreen(-6578, param0);
         if (null != TextLayout.field_c) {
-          fk.drawTooltipBox(0, TextLayout.field_c);
+          SoundEffectVoice.drawTooltipBox(0, TextLayout.field_c);
         }
     }
 
     final static void setFrameSprites(Sprite[] param0, int param1, int param2, int param3) {
         try {
-          CameraFollowTarget.field_f = new ec(param0);
+          CameraFollowTarget.field_f = new SpriteFrame(param0);
           StatefulTextPainter.field_r = param3;
           int var4_int = -103 / ((param2 - 31) / 55);
           DualLinkDeque.field_d = param1;
           ResourceArchive.drawPointerSprite(403300833);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

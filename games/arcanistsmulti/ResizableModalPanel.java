@@ -48,9 +48,9 @@ abstract class ResizableModalPanel extends FadingModalPanel {
           if (var1 == 0) {
             var1 = 32;
           }
-          mf.setSoundEffectVolume(CheckboxPainter.field_l - var1, 21298);
+          EffectVolumeHelpers.setSoundEffectVolume(CheckboxPainter.field_l - var1, 21298);
         } else {
-          mf.setSoundEffectVolume(0, 21298);
+          EffectVolumeHelpers.setSoundEffectVolume(0, 21298);
         }
     }
 
@@ -151,9 +151,9 @@ abstract class ResizableModalPanel extends FadingModalPanel {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ci.field_e.drawTransparent(-90 + (param0 + this.field_v), 10 + param2);
-        dd.drawThreeSliceBar(2, 35 + param2, fk.field_g, this.field_v - 10, 5 + param0);
-        dd.drawThreeSliceBar(param1 ^ -119, param2 + this.field_k - 22, FadingModalPanel.field_E, this.field_v, param0);
+        ModalStackHelpers.field_e.drawTransparent(-90 + (param0 + this.field_v), 10 + param2);
+        PasswordCheckHelpers.drawThreeSliceBar(2, 35 + param2, SoundEffectVoice.field_g, this.field_v - 10, 5 + param0);
+        PasswordCheckHelpers.drawThreeSliceBar(param1 ^ -119, param2 + this.field_k - 22, FadingModalPanel.field_E, this.field_v, param0);
         var4Lifetime2 = this.field_k - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -238,22 +238,22 @@ abstract class ResizableModalPanel extends FadingModalPanel {
         this.onResizeFinished(false);
     }
 
-    final static void sendGameOption(int param0, ge param1, int param2) {
+    final static void sendGameOption(int param0, BattleAction param1, int param2) {
         if (param0 != 20) {
           return;
         }
         try {
-          he.field_e.writeOpcode((byte) -98, 58);
-          he.field_e.writeByte(param2, (byte) -7);
-          he.field_e.writeShort(param1.field_o, (byte) -109);
-          he.field_e.writeShort(param1.field_j, (byte) -101);
-          he.field_e.writeShort(param1.field_q, (byte) -56);
-          he.field_e.writeShort(param1.field_s, (byte) -79);
-          he.field_e.writeShort(param1.field_k, (byte) -113);
-          he.field_e.writeByte(param1.field_m, (byte) -111);
-          he.field_e.writeByte(param1.field_h, (byte) -124);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -98, 58);
+          StatusMessageHelpers.field_e.writeByte(param2, (byte) -7);
+          StatusMessageHelpers.field_e.writeShort(param1.field_o, (byte) -109);
+          StatusMessageHelpers.field_e.writeShort(param1.field_j, (byte) -101);
+          StatusMessageHelpers.field_e.writeShort(param1.field_q, (byte) -56);
+          StatusMessageHelpers.field_e.writeShort(param1.field_s, (byte) -79);
+          StatusMessageHelpers.field_e.writeShort(param1.field_k, (byte) -113);
+          StatusMessageHelpers.field_e.writeByte(param1.field_m, (byte) -111);
+          StatusMessageHelpers.field_e.writeByte(param1.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ob.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ob.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -9,7 +9,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
     int field_m;
     int[] field_o;
     int field_s;
-    static hb field_r;
+    static SceneListPanel field_r;
     static boolean field_i;
     static AudioOutput field_k;
     int[] field_j;
@@ -24,7 +24,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
           field_r = null;
           return;
         }
-        field_r = (hb) null;
+        field_r = (SceneListPanel) null;
         field_h = null;
         field_r = null;
     }
@@ -33,13 +33,13 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         int var2 = 0;
         if (param0 >= 114) {
           if (param1 == 0) {
-            var2 = on.field_h;
+            var2 = LoginMessageTable.field_h;
           }
           if (param1 == 1) {
-            var2 = ra.field_m;
+            var2 = DateHelpers.field_m;
           }
           if (param1 == 2) {
-            var2 = hd.field_b;
+            var2 = NameTextHelpers.field_b;
           }
           return var2;
         }

@@ -22,7 +22,7 @@ class UsernameCredentials extends LoginCredentials {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               var3 = 13 % ((param0 + 29) / 56);
-              param1.getAppletContext().showDocument(nm.appendSessionParameters(param1, var2, -31843), "_top");
+              param1.getAppletContext().showDocument(UrlHelpers.appendSessionParameters(param1, var2, -31843), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ class UsernameCredentials extends LoginCredentials {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -51,10 +51,10 @@ class UsernameCredentials extends LoginCredentials {
 
     final static LobbyGameEntry getGameEntry(int param0, byte param1) {
         if (param1 < -28) {
-          return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
+          return null == ListRequest.field_q ? null : (LobbyGameEntry) (ListRequest.field_q.get((long)param0, (byte) -102));
         }
         field_i = (String) null;
-        return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
+        return null == ListRequest.field_q ? null : (LobbyGameEntry) (ListRequest.field_q.get((long)param0, (byte) -102));
     }
 
     final static void clearSpriteSlots(int param0) {
@@ -88,7 +88,7 @@ class UsernameCredentials extends LoginCredentials {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "im.P(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "im.P(" + param0 + ')');
         }
     }
 
@@ -103,31 +103,31 @@ class UsernameCredentials extends LoginCredentials {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var1_int = -117 / ((param0 - 89) / 35);
-          var2 = he.field_e;
+          var2 = StatusMessageHelpers.field_e;
           while (DateOfBirthValidator.hasPendingReflectionCheck(0)) {
             var2.writeOpcode((byte) -66, 8);
             fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;
             var3 = fieldTemp$0;
-            ho.answerReflectionCheck(-5534, var2);
-            he.field_e.writeByteLengthAtMark(var2.position - var3, (byte) 43);
+            ServerMessage.answerReflectionCheck(-5534, var2);
+            StatusMessageHelpers.field_e.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "im.O(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "im.O(" + param0 + ')');
         }
     }
 
     final static void setLoginPanelTexts(String param0, int param1, String param2) {
         try {
-          ff.setLoginContext(false, param2, (byte) -97, param0);
+          FrameAndQuickChatHelpers.setLoginContext(false, param2, (byte) -97, param0);
           if (param1 != 0) {
             UsernameCredentials.releaseStatics((byte) -12);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "im.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,16 +139,16 @@ class UsernameCredentials extends LoginCredentials {
         return MusicPatchPcmStream.field_m;
     }
 
-    final static wa findEntryByName(int param0, String param1) {
+    final static PlayerInfoPanel findEntryByName(int param0, String param1) {
         String var2 = null;
-        wa var3 = null;
+        PlayerInfoPanel var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_7_0 = null;
         Object stackIn_12_0 = null;
-        wa stackIn_18_0 = null;
+        PlayerInfoPanel stackIn_18_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -156,7 +156,7 @@ class UsernameCredentials extends LoginCredentials {
         RuntimeException var2_ref = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (null == ie.field_Qb) {
+          if (null == StatusDialog.field_Qb) {
             return null;
           }
           if (param1 == null) {
@@ -164,7 +164,7 @@ class UsernameCredentials extends LoginCredentials {
           }
           if (0 == param1.length()) {
             stackIn_7_0 = null;
-            return (wa) (stackIn_7_0);
+            return (PlayerInfoPanel) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
           var2 = Js5ArchiveManager.normalizeNameForLookup(var6, -13);
@@ -173,9 +173,9 @@ class UsernameCredentials extends LoginCredentials {
           }
           if (var2 == null) {
             stackIn_12_0 = null;
-            return (wa) (stackIn_12_0);
+            return (PlayerInfoPanel) (stackIn_12_0);
           }
-          var3 = (wa) (ie.field_Qb.get((long)var2.hashCode(), (byte) -72));
+          var3 = (PlayerInfoPanel) (StatusDialog.field_Qb.get((long)var2.hashCode(), (byte) -72));
           while (true) {
             if (var3 == null) {
               return null;
@@ -183,7 +183,7 @@ class UsernameCredentials extends LoginCredentials {
             var7 = (CharSequence) ((Object) var3.field_Cb);
             var4 = Js5ArchiveManager.normalizeNameForLookup(var7, -13);
             if (!var4.equals(var2)) {
-              var3 = (wa) (ie.field_Qb.getNextWithSameKey(-107));
+              var3 = (PlayerInfoPanel) (StatusDialog.field_Qb.getNextWithSameKey(-107));
               continue;
             }
             break;
@@ -200,7 +200,7 @@ class UsernameCredentials extends LoginCredentials {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ class UsernameCredentials extends LoginCredentials {
           int var3_int = 116 / ((-35 - param1) / 36);
           param0.writeBase38Name((byte) 7, this.field_e);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -219,9 +219,9 @@ class UsernameCredentials extends LoginCredentials {
           if (param4 != -22836) {
             field_f = (String) null;
           }
-          sm.initializeAudio(param4 ^ 22876, param5, param0, param1, param3, 1024, param2, param0);
+          AudioAndCookieHelpers.initializeAudio(param4 ^ 22876, param5, param0, param1, param3, 1024, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "im.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ class UsernameCredentials extends LoginCredentials {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fc.decodeSpriteSheet(50, param0, param4, param1)) {
+          if (!SpriteDecodeHelpers.decodeSpriteSheet(50, param0, param4, param1)) {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
@@ -261,7 +261,7 @@ class UsernameCredentials extends LoginCredentials {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ class UsernameCredentials extends LoginCredentials {
           this.field_e = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

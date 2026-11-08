@@ -37,7 +37,7 @@ final class NodeHashTableIterator implements Iterator {
             break;
           }
           if (var3 != null) {
-            da.insertBefore(var3, 20, param0);
+            MusicAndClipHelpers.insertBefore(var3, 20, param0);
             return;
           }
           LinkButtonPainter.field_j.addLast(param0, -1);
@@ -52,7 +52,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class NodeHashTableIterator implements Iterator {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            vm.field_b = param0;
+            MouseStateHelpers.field_b = param0;
             try {
               var6 = param1.getParameter("cookieprefix");
               var5 = var6;
@@ -146,7 +146,7 @@ final class NodeHashTableIterator implements Iterator {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param0.length() != param2) {
-                var5Lifetime6 = var7 + "; Expires=" + NodeHashTable.formatGmtDate(-62, 94608000000L + qj.monotonicTimeMillis(-26572)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + NodeHashTable.formatGmtDate(-62, 94608000000L + TimeAndInputHelpers.monotonicTimeMillis(-26572)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -155,7 +155,7 @@ final class NodeHashTableIterator implements Iterator {
             }
             BattleUnit.updateBrowserLinks(-122, param1);
           } catch (RuntimeException runtimeException) {
-            throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -183,7 +183,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_c = param0;
           this.reset(-1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

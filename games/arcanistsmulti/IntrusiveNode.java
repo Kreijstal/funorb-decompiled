@@ -46,7 +46,7 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        nk var3 = null;
+        ListRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -72,10 +72,10 @@ class IntrusiveNode {
             IntrusiveNode.releaseStatics((byte) -12);
           }
           var2 = var15.readUnsignedByte((byte) -118);
-          var3 = (nk) (ContextActionMenu.field_Lb.first(12623));
+          var3 = (ListRequest) (ContextActionMenu.field_Lb.first(12623));
           while (var3 != null) {
             if (var2 != var3.field_p) {
-              var3 = (nk) (ContextActionMenu.field_Lb.next(0));
+              var3 = (ListRequest) (ContextActionMenu.field_Lb.next(0));
               continue;
             }
             break;
@@ -87,21 +87,21 @@ class IntrusiveNode {
           var4 = var15.readUnsignedByte((byte) -97);
           if (var4 != 0) {
             var5 = var3.field_t;
-            bb.field_i[0] = ah.field_b;
+            LoginLoadingHelpers.field_i[0] = AccountFlowHelpers.field_b;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              bb.field_i[var6_int] = var13.readString(-1);
+              LoginLoadingHelpers.field_i[var6_int] = var13.readString(-1);
             }
             DraggableWidget.growRankingArrays((byte) -33, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               MouseInputHandler.readTimestamp(123, var15);
               if (0 == var6_intLifetime1) {
-                var3.field_h = fo.field_a;
-                var3.field_k = kj.field_c;
-                var3.field_i = qj.field_g;
+                var3.field_h = MessageCaptionGlobals.field_a;
+                var3.field_k = PendingMessageHelpers.field_c;
+                var3.field_i = TimeAndInputHelpers.field_g;
                 var3.field_s = IntrusiveDequeCursor.field_j;
-                PacketBuffer.addRankingRow(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
+                PacketBuffer.addRankingRow(-1, PendingMessageHelpers.field_c, var6_intLifetime1, MessageCaptionGlobals.field_a, TimeAndInputHelpers.field_g, IntrusiveDequeCursor.field_j);
               } else {
-                PacketBuffer.addRankingRow(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
+                PacketBuffer.addRankingRow(-1, PendingMessageHelpers.field_c, var6_intLifetime1, MessageCaptionGlobals.field_a, TimeAndInputHelpers.field_g, IntrusiveDequeCursor.field_j);
               }
             }
             ValidatedTextWidget.rebuildIndexTable((byte) -113, var5);
@@ -115,13 +115,13 @@ class IntrusiveNode {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = ki.field_r[var9];
-              var6[0][var10] = bb.field_i[var11];
+              var11 = EmailValidator.field_r[var9];
+              var6[0][var10] = LoginLoadingHelpers.field_i[var11];
               var7[0][4 * var10] = Battle.field_z[var11];
               var7[0][var10 * 4 + 1] = ConditionalTextValue.field_e[var11];
               var7[0][4 * var10 + 2] = CachedArchiveProvider.field_u[var11];
               var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
-              if (MouseInputHandler.isCurrentUser(16, bb.field_i[var11]) &&
+              if (MouseInputHandler.isCurrentUser(16, LoginLoadingHelpers.field_i[var11]) &&
                 CachedArchiveProvider.field_u[var11] + ConditionalTextValue.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -133,13 +133,13 @@ class IntrusiveNode {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = ki.field_r[var9Lifetime1 + var5];
-              var6[1][var14] = bb.field_i[var11Lifetime1];
+              var11Lifetime1 = EmailValidator.field_r[var9Lifetime1 + var5];
+              var6[1][var14] = LoginLoadingHelpers.field_i[var11Lifetime1];
               var7[1][4 * var14] = Battle.field_z[var11Lifetime1];
               var7[1][1 + var14 * 4] = ConditionalTextValue.field_e[var11Lifetime1];
               var7[1][var14 * 4 + 2] = CachedArchiveProvider.field_u[var11Lifetime1];
               var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];
-              if (MouseInputHandler.isCurrentUser(16, bb.field_i[var11Lifetime1]) &&
+              if (MouseInputHandler.isCurrentUser(16, LoginLoadingHelpers.field_i[var11Lifetime1]) &&
                 ConditionalTextValue.field_e[var11Lifetime1] + CachedArchiveProvider.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -154,7 +154,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "pg.OC(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "pg.OC(" + param0 + ')');
         }
     }
 

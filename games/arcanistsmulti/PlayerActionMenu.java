@@ -31,20 +31,20 @@ final class PlayerActionMenu {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param0 == 4) {
-          var4_ref = bo.getNameErrorMessage(this.field_h, (byte) -26, param2);
+          var4_ref = NameErrorHelpers.getNameErrorMessage(this.field_h, (byte) -26, param2);
           var5 = 61 / ((11 - param1) / 63);
           if (var4_ref != null) {
             var6 = (String) null;
-            ao.addChatMessage(0, (byte) 97, var4_ref, this.field_h, 2, (String) null);
+            LobbyLayoutHelpers.addChatMessage(0, (byte) 97, var4_ref, this.field_h, 2, (String) null);
           }
           return true;
         }
         if (param0 == 5) {
-          var4_refLifetime1 = oe.getIgnoreNameError(this.field_h, 29140, param2);
+          var4_refLifetime1 = CalendarHelpers.getIgnoreNameError(this.field_h, 29140, param2);
           var5Lifetime1 = 61 / ((11 - param1) / 63);
           if (var4_refLifetime1 != null) {
             var6Lifetime1 = (String) null;
-            ao.addChatMessage(0, (byte) 97, var4_refLifetime1, this.field_h, 2, (String) null);
+            LobbyLayoutHelpers.addChatMessage(0, (byte) 97, var4_refLifetime1, this.field_h, 2, (String) null);
             return true;
           }
           return true;
@@ -54,7 +54,7 @@ final class PlayerActionMenu {
           var5Lifetime2 = 61 / ((11 - param1) / 63);
           if (var4_refLifetime2 != null) {
             var6Lifetime2 = (String) null;
-            ao.addChatMessage(0, (byte) 97, var4_refLifetime2, this.field_h, 2, (String) null);
+            LobbyLayoutHelpers.addChatMessage(0, (byte) 97, var4_refLifetime2, this.field_h, 2, (String) null);
           }
           return true;
         }
@@ -65,7 +65,7 @@ final class PlayerActionMenu {
         var5Lifetime3 = 61 / ((11 - param1) / 63);
         if (var4_refLifetime3 != null) {
           var6Lifetime3 = (String) null;
-          ao.addChatMessage(0, (byte) 97, var4_refLifetime3, this.field_h, 2, (String) null);
+          LobbyLayoutHelpers.addChatMessage(0, (byte) 97, var4_refLifetime3, this.field_h, 2, (String) null);
         }
         return true;
     }
@@ -102,7 +102,7 @@ final class PlayerActionMenu {
 
     private final boolean openChatInput(int param0, byte param1, int param2) {
         if (param2 == 17) {
-          db.field_a = new ChatInputWidget(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
+          Crc32Helpers.field_a = new ChatInputWidget(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, EffectVolumeHelpers.field_d, SectorCacheStore.field_l, ColourBucketTable.field_b, IntrusiveNode.field_c, SpriteFrame.field_g, NameCheckHelpers.field_d, this.field_h, this.field_d);
           return true;
         }
         if (param1 == -64) {
@@ -115,7 +115,7 @@ final class PlayerActionMenu {
     final void addPrivateMessageAction(int param0) {
         String var3 = null;
         if (this.field_h != null) {
-          if (this.field_d == qf.field_a) {
+          if (this.field_d == MembershipGlobals.field_a) {
             if (param0 != 5552) {
               field_a = (String) null;
               return;
@@ -124,7 +124,7 @@ final class PlayerActionMenu {
           }
           var3 = this.getDisplayName((byte) 32);
           String var2 = var3;
-          this.field_l.addAction(17, CachedArchiveProvider.formatTemplate(-38, new String[]{var3}, ad.field_b), (byte) -26);
+          this.field_l.addAction(17, CachedArchiveProvider.formatTemplate(-38, new String[]{var3}, SpellbookCaptionGlobals.field_b), (byte) -26);
         }
         if (param0 == 5552) {
           return;
@@ -172,7 +172,7 @@ final class PlayerActionMenu {
         return false;
     }
 
-    final void addChatLineActions(int param0, jg param1) {
+    final void addChatLineActions(int param0, ChatLine param1) {
         if (param1.field_i) {
           return;
         }
@@ -182,25 +182,25 @@ final class PlayerActionMenu {
             this.field_m = (int[]) null;
           }
           if (param1.field_m == 0) {
-            if (0 == on.field_h) {
+            if (0 == LoginMessageTable.field_h) {
               this.field_l.addAction(12, MusicPatch.field_g, (byte) -26);
             }
-            this.field_l.addAction(13, jg.field_j, (byte) -26);
+            this.field_l.addAction(13, ChatLine.field_j, (byte) -26);
           }
           if (param1.field_m == 1) {
-            if (ra.field_m == 0) {
+            if (DateHelpers.field_m == 0) {
               this.field_l.addAction(12, SocketConnector.field_a, (byte) -26);
             }
-            this.field_l.addAction(13, dm.field_J, (byte) -26);
+            this.field_l.addAction(13, AlphaContainer.field_J, (byte) -26);
           }
           if (param1.field_m == 2) {
-            if (hd.field_b == 0) {
-              this.field_l.addAction(12, va.field_d, (byte) -26);
+            if (NameTextHelpers.field_b == 0) {
+              this.field_l.addAction(12, GradientPanelPainter.field_d, (byte) -26);
             }
             this.field_l.addAction(13, CameraFollowTarget.field_c, (byte) -26);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ne.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ne.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -217,21 +217,21 @@ final class PlayerActionMenu {
           if (this.field_h == null) {
             return;
           }
-          if (this.field_d != qf.field_a &&
+          if (this.field_d != MembershipGlobals.field_a &&
             null != DirectByteStorage.field_f) {
             if (!ContentTransitionDialog.isOwnGameSelected((byte) 98)) {
               return;
             }
-            var12 = fn.lookupEntry(this.field_d, 110);
-            var4 = vf.lookupSocialEntry(this.field_d, 8192);
+            var12 = GameListHelpers.lookupEntry(this.field_d, 110);
+            var4 = RawDataNode.lookupSocialEntry(this.field_d, 8192);
             var5 = this.getDisplayName((byte) 32);
             if (var4 != null) {
               if (!DirectByteStorage.field_f.field_Lb) {
-                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
+                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, DecodedSpriteHelpers.field_a), (byte) -26);
                 return;
               }
               if (DirectByteStorage.field_f.field_nc >= 0) {
-                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
+                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, DecodedSpriteHelpers.field_a), (byte) -26);
                 return;
               }
             } else {
@@ -260,7 +260,7 @@ final class PlayerActionMenu {
         if (this.field_h == null) {
           return;
         }
-        if (this.field_d == qf.field_a) {
+        if (this.field_d == MembershipGlobals.field_a) {
           return;
         }
         if (null == DirectByteStorage.field_f) {
@@ -269,15 +269,15 @@ final class PlayerActionMenu {
         if (!ContentTransitionDialog.isOwnGameSelected((byte) 98)) {
           return;
         }
-        var11 = fn.lookupEntry(this.field_d, 110);
-        var4Lifetime1 = vf.lookupSocialEntry(this.field_d, 8192);
+        var11 = GameListHelpers.lookupEntry(this.field_d, 110);
+        var4Lifetime1 = RawDataNode.lookupSocialEntry(this.field_d, 8192);
         var5 = this.getDisplayName((byte) 32);
         if (var4Lifetime1 != null) {
           if (DirectByteStorage.field_f.field_Lb &&
             DirectByteStorage.field_f.field_nc < 0) {
             return;
           }
-          this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
+          this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, DecodedSpriteHelpers.field_a), (byte) -26);
           return;
         }
         if (var11 == null) {
@@ -327,13 +327,13 @@ final class PlayerActionMenu {
             return;
           }
           if (var8.field_Ob) {
-            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, ec.field_a), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, SpriteFrame.field_a), (byte) -26);
           } else {
             if (!var8.field_Nb &&
               var8.field_kc &&
               (!var8.field_Lb ||
               var8.field_Ob)) {
-              this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
+              this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, TutorialCaptionGlobals.field_i), (byte) -26);
             }
           }
           if (!var8.field_Nb) {
@@ -355,15 +355,15 @@ final class PlayerActionMenu {
             return;
           }
           if (var7.field_Ob) {
-            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, ec.field_a), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, SpriteFrame.field_a), (byte) -26);
           } else {
             if (!var7.field_Nb &&
               var7.field_kc) {
               if (!var7.field_Lb) {
-                this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
+                this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, TutorialCaptionGlobals.field_i), (byte) -26);
               } else {
                 if (var7.field_Ob) {
-                  this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
+                  this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, TutorialCaptionGlobals.field_i), (byte) -26);
                 }
               }
             }
@@ -372,7 +372,7 @@ final class PlayerActionMenu {
             return;
           }
         }
-        this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-82, new String[]{var3}, hl.field_h), (byte) -26);
+        this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-82, new String[]{var3}, BufferedMessage.field_h), (byte) -26);
     }
 
     final void draw(int param0, boolean param1) {
@@ -391,35 +391,35 @@ final class PlayerActionMenu {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        wa var5 = null;
+        PlayerInfoPanel var5 = null;
         int var6 = 0;
         Sprite[] var7 = null;
         String var8 = null;
         try {
-          if (null != this.field_h && (~qf.field_a != ~this.field_d ||
+          if (null != this.field_h && (~MembershipGlobals.field_a != ~this.field_d ||
             param0 == 2) && SpriteState.field_t == 2) {
             var8 = this.getDisplayName((byte) 32);
             var4 = var8;
             var5 = UsernameCredentials.findEntryByName(param2 ^ 13, this.field_h);
-            var6 = sa.isFriend(this.field_h, param2 ^ 333) ? 1 : 0;
+            var6 = ConfirmScene.isFriend(this.field_h, param2 ^ 333) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_l.addAction(4, CachedArchiveProvider.formatTemplate(param2 - 80, new String[]{var8}, ArcanistsMulti.field_F), (byte) -26);
-              this.field_l.addAction(6, CachedArchiveProvider.formatTemplate(-108, new String[]{var8}, tn.field_Lb), (byte) -26);
+              this.field_l.addAction(6, CachedArchiveProvider.formatTemplate(-108, new String[]{var8}, SceneTabStrip.field_Lb), (byte) -26);
               if (param1 != null &&
                 param0 != 2 &&
-                !wh.field_g) {
+                !PaletteSpriteHelpers.field_g) {
                 this.field_m = param1;
                 this.field_l.addAction(19, CachedArchiveProvider.formatTemplate(-25, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
               }
             }
             if (var5 != null) {
               if (!PasswordFieldPainter.isLoginName(this.field_h, -31046) &&
-                !wh.field_g) {
+                !PaletteSpriteHelpers.field_g) {
                 if (!AlternateUsernameCredentials.field_p) {
-                  this.field_l.addAction(8, CachedArchiveProvider.formatTemplate(-94, new String[]{var8}, mb.field_S), (byte) -26);
+                  this.field_l.addAction(8, CachedArchiveProvider.formatTemplate(-94, new String[]{var8}, DropdownItemList.field_S), (byte) -26);
                 }
-                this.field_l.addAction(18, CachedArchiveProvider.formatTemplate(127, new String[]{var8}, bh.field_b), (byte) -26);
+                this.field_l.addAction(18, CachedArchiveProvider.formatTemplate(127, new String[]{var8}, QuickChatCaptionGlobals.field_b), (byte) -26);
                 if (param1 != null) {
                   this.field_m = param1;
                   this.field_l.addAction(19, CachedArchiveProvider.formatTemplate(-98, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
@@ -428,7 +428,7 @@ final class PlayerActionMenu {
               this.field_l.addAction(5, CachedArchiveProvider.formatTemplate(param2 - 48, new String[]{var8}, LabeledField.field_F), (byte) -26);
             }
             if (var6 != 0) {
-              this.field_l.addAction(7, CachedArchiveProvider.formatTemplate(126, new String[]{var8}, ja.field_t), (byte) -26);
+              this.field_l.addAction(7, CachedArchiveProvider.formatTemplate(126, new String[]{var8}, ConfirmedNameValidator.field_t), (byte) -26);
             }
           }
           if (param2 == 13) {
@@ -447,7 +447,7 @@ final class PlayerActionMenu {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -457,7 +457,7 @@ final class PlayerActionMenu {
           return false;
         }
         if (param2 == 0) {
-          qo.sendLongRequest(param0, (byte) -102, this.field_d);
+          NameHelpers.sendLongRequest(param0, (byte) -102, this.field_d);
           return true;
         }
         if (param2 == 1) {
@@ -468,19 +468,19 @@ final class PlayerActionMenu {
           ScreenDisplayMode.sendScreenRequest(this.field_e, (byte) -123, param0);
         } else {
           if (param2 == 3) {
-            qc.sendShortRequest(false, this.field_e, param0);
+            ViewportSetupHelpers.sendShortRequest(false, this.field_e, param0);
             return true;
           }
           if (10 == param2) {
-            qe.sendShortSettingRequest(this.field_e, (byte) -35, param0);
+            QueuedPacket.sendShortSettingRequest(this.field_e, (byte) -35, param0);
             return true;
           }
           if (param2 == 15) {
-            ce.sendGameSelection(this.field_e, param0, -123);
+            GameSelectionHelpers.sendGameSelection(this.field_e, param0, -123);
             return true;
           }
           if (param2 == 16) {
-            ce.sendGameSelection(0, param0, -79);
+            GameSelectionHelpers.sendGameSelection(0, param0, -79);
             return true;
           }
           return false;
@@ -544,13 +544,13 @@ final class PlayerActionMenu {
           return true;
         }
         if (param0 == 20) {
-          gj.resetLoginMode((byte) -61);
+          ScreenSwitchHelpers.resetLoginMode((byte) -61);
           return true;
         }
         if (19 != param0) {
           return false;
         }
-        va.openQuickChatForName(this.field_d, 1, this.field_m, this.field_h, this.field_i);
+        GradientPanelPainter.openQuickChatForName(this.field_d, 1, this.field_m, this.field_h, this.field_i);
         return true;
     }
 
@@ -592,7 +592,7 @@ final class PlayerActionMenu {
           this.field_e = param4;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -641,7 +641,7 @@ final class PlayerActionMenu {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

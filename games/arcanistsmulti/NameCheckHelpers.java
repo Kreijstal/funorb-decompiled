@@ -1,0 +1,83 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NameCheckHelpers {
+    static String field_i;
+    static String field_f;
+    static SceneWidget field_d;
+    static String field_g;
+    static String field_j;
+    static int field_c;
+    static String field_l;
+    static String field_b;
+    static String field_h;
+    static ListRequest field_e;
+    static IndexedSprite[] field_k;
+    static int[] field_a;
+    static int[] field_n;
+    static SceneScrollPane field_m;
+
+    final static NameCheckRequest createNameCheckRequest(String param0, int param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        NameCheckRequest stackIn_1_0 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = -25 % ((param1 + 12) / 54);
+          stackIn_1_0 = new NameCheckRequest(param0);
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("nj.B(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_h = null;
+        field_e = null;
+        field_a = null;
+        field_i = null;
+        field_j = null;
+        field_l = null;
+        field_n = null;
+        field_g = null;
+        field_f = null;
+        if (param0 == -72) {
+          field_b = null;
+          field_d = null;
+          field_m = null;
+          field_k = null;
+          return;
+        }
+        field_d = (SceneWidget) null;
+        field_b = null;
+        field_d = null;
+        field_m = null;
+        field_k = null;
+    }
+
+    static {
+        field_j = "Wield arcane magics in a shattered world.  Battle cyclopes, dragons and other mighty Arcanists in this test of cunning, skill and determination.  Spend the wands you earn on more world-shattering spells in order to rise to the top of the league and proclaim yourself the greatest Arcanist of all time!";
+        field_f = "Invalid password.";
+        field_g = "Tutorial";
+        field_c = 0;
+        field_i = "MOST HONOURABLE - ";
+        field_a = new int[]{16711680, 65280, 255, 16776960, 16711935, 65535, 7829367};
+        field_n = field_a;
+        field_l = "Use this button to quickly randomise your character. Your previous character will be lost.";
+        field_b = "Waiting for awards";
+        field_e = null;
+        field_h = "You will now see a focus point where your mouse is pointing. This point is where each of the four projectiles this spell fires will aim towards. Click on one of the targets to focus your attack on that location.";
+    }
+}

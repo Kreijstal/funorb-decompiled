@@ -28,24 +28,24 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private boolean field_z;
     private long field_r;
 
-    final static fe createPendingTask(int param0, int param1) {
-        fe var2 = null;
+    final static PendingTask createPendingTask(int param0, int param1) {
+        PendingTask var2 = null;
         RuntimeException var2_ref = null;
-        fe stackIn_3_0 = null;
+        PendingTask stackIn_3_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new fe();
+          var2 = new PendingTask();
           if (param1 != -21402) {
             CachedArchiveProvider.releaseStatics(68);
           }
-          i.field_e.addLast(var2, -1);
+          ChatPanel.field_e.addLast(var2, -1);
           SecondaryNodeDeque.sendTwoByteRequest(param0, true);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.L(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "tj.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "tj.J(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "tj.J(" + param0 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.P(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "tj.P(" + param0 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var13 = param2.substring(var6 + 2, var5);
               var7 = var13;
-              if (!fi.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
+              if (!DecimalCheckHelpers.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -203,7 +203,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               break;
             }
             var10 = param2.substring(2 + var9, var5Lifetime1);
-            if (!fi.isDecimalInteger((CharSequence) ((Object) var10), 10)) {
+            if (!DecimalCheckHelpers.isDecimalInteger((CharSequence) ((Object) var10), 10)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -237,7 +237,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_40_0 = stackIn_35_0;
             stackIn_40_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             field_t = (BinaryBitmapFont) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
           }
           if (this.field_z &&
-            this.field_r <= qj.monotonicTimeMillis(-26572)) {
+            this.field_r <= TimeAndInputHelpers.monotonicTimeMillis(-26572)) {
             var2_ref = (ArchiveRequest) (this.field_n.first(10));
             while (var2_ref != null) {
               if (!var2_ref.field_p) {
@@ -411,7 +411,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var2_ref = (ArchiveRequest) (this.field_n.next(-87));
             }
-            this.field_r = qj.monotonicTimeMillis(-26572) + 1000L;
+            this.field_r = TimeAndInputHelpers.monotonicTimeMillis(-26572) + 1000L;
           }
           if (param0 < 54) {
             this.getGroupProgress(15, (byte) -128);
@@ -420,7 +420,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref2), "tj.O(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref2), "tj.O(" + param0 + ')');
         }
     }
 
@@ -518,20 +518,20 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.D(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "tj.D(" + param0 + ')');
         }
     }
 
     final static void clearBattleReferences(int param0) {
         try {
-          rk.field_O = null;
+          GradientBarButton.field_O = null;
           if (param0 < 62) {
             field_C = -45;
           }
-          qn.field_ob = null;
+          MessageDialog.field_ob = null;
           StatefulTextPainter.field_p = -1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ')');
         }
     }
 
@@ -617,9 +617,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
             try {
               if (var5 != null &&
                 var19.length > 2) {
-                co.field_g.reset();
-                co.field_g.update(var5, 0, var19.length - 2);
-                var7_int = (int)co.field_g.getValue();
+                BattleResetHelpers.field_g.reset();
+                BattleResetHelpers.field_g.update(var5, 0, var19.length - 2);
+                var7_int = (int)BattleResetHelpers.field_g.getValue();
                 if (var7_int != this.field_k.field_h[param2]) {
                   throw new RuntimeException();
                 }
@@ -669,9 +669,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               var19.length > 2) {
-              co.field_g.reset();
-              co.field_g.update(var5, 0, -2 + var19.length);
-              var7_int = (int)co.field_g.getValue();
+              BattleResetHelpers.field_g.reset();
+              BattleResetHelpers.field_g.update(var5, 0, -2 + var19.length);
+              var7_int = (int)BattleResetHelpers.field_g.getValue();
               if (this.field_k.field_h[param2] != var7_int) {
                 throw new RuntimeException();
               }
@@ -721,7 +721,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.wrapException((Throwable) (var4), "tj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) (var4), "tj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -745,7 +745,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3_ref), "tj.F(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "tj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -760,7 +760,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           field_t = null;
           field_y = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.N(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "tj.N(" + param0 + ')');
         }
     }
 
@@ -782,7 +782,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3_ref), "tj.G(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "tj.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -880,7 +880,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_30_0 = stackIn_26_0;
             stackIn_30_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

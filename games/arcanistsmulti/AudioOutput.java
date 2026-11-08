@@ -149,7 +149,7 @@ class AudioOutput {
           if (this.field_t) {
             return;
           }
-          var1 = qj.monotonicTimeMillis(-26572);
+          var1 = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           try {
             if (var1 > this.field_b + 6000L) {
               this.field_b = var1 - 6000L;
@@ -157,7 +157,7 @@ class AudioOutput {
             while (var1 > this.field_b + 5000L) {
               this.skipFrames(256);
               this.field_b = this.field_b + (long)(256000 / field_r);
-              var1 = qj.monotonicTimeMillis(-26572);
+              var1 = TimeAndInputHelpers.monotonicTimeMillis(-26572);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,7 +254,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_o.field_g = true;
             while (field_o.field_a) {
-              ao.sleepMillis(50L, 1);
+              LobbyLayoutHelpers.sleepMillis(50L, 1);
             }
             field_o = null;
           }
@@ -394,7 +394,7 @@ class AudioOutput {
         if (this.field_s != null) {
           this.field_s.mixInto(param0, 0, param1);
         }
-        this.field_b = qj.monotonicTimeMillis(-26572);
+        this.field_b = TimeAndInputHelpers.monotonicTimeMillis(-26572);
     }
 
     final synchronized void setStream(PcmStream param0) {
@@ -411,7 +411,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_k = qj.monotonicTimeMillis(-26572) + 2000L;
+            this.field_k = TimeAndInputHelpers.monotonicTimeMillis(-26572) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_t = false;
         this.field_g = 32;
-        this.field_b = qj.monotonicTimeMillis(-26572);
+        this.field_b = TimeAndInputHelpers.monotonicTimeMillis(-26572);
         this.field_p = 0;
         this.field_k = 0L;
         this.field_h = new PcmStream[8];

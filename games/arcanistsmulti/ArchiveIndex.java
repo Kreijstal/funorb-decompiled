@@ -74,7 +74,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var17 = new PacketBuffer(hb.decompressContainer(false, param0));
+          var17 = new PacketBuffer(SceneListPanel.decompressContainer(false, param0));
           var4 = var17.readUnsignedByte((byte) 31);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -133,7 +133,7 @@ final class ArchiveIndex {
                 this.field_t[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_w; var10Lifetime1Lifetime1++) {
-                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(MouseWheelHandler.a(param1, -10686));
+                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(MouseWheelHandler.bitXor(param1, -10686));
               }
               this.field_l = new IntKeyLookup(this.field_t);
             }
@@ -224,7 +224,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(MouseWheelHandler.a(param1, -10686));
+                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(MouseWheelHandler.bitXor(param1, -10686));
                 }
                 this.field_c[var11Lifetime1] = new IntKeyLookup(this.field_q[var11Lifetime1]);
               }
@@ -243,7 +243,7 @@ final class ArchiveIndex {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class ArchiveIndex {
         field_v = null;
     }
 
-    final static String formatChatLine(int param0, jg param1) {
+    final static String formatChatLine(int param0, ChatLine param1) {
         String stackIn_33_0 = null;
         Object stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -271,13 +271,13 @@ final class ArchiveIndex {
         Object var2 = null;
         String var3 = null;
         int var4 = 0;
-        jg var5 = null;
+        ChatLine var5 = null;
         String var6 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 != 3) {
-            var5 = (jg) null;
-            ArchiveIndex.formatChatLine(-73, (jg) null);
+            var5 = (ChatLine) null;
+            ArchiveIndex.formatChatLine(-73, (ChatLine) null);
           }
           var2 = null;
           if (param1.field_g != null) {
@@ -293,15 +293,15 @@ final class ArchiveIndex {
           var3 = "";
           if (param1.field_m != 2) {
             if (0 == param1.field_m &&
-              hm.field_c) {
+              Cp1252Helpers.field_c) {
               var3 = "[" + NanoFrameClock.field_p + "] ";
             }
             if (param1.field_m == 1) {
               var3 = "[" + CachedArchiveProvider.formatTemplate(-44, new String[]{param1.field_o}, Bzip2State.field_j) + "] ";
             }
             if (param1.field_m == 4 &&
-              null != he.field_d) {
-              var3 = "[" + he.field_d + "] ";
+              null != StatusMessageHelpers.field_d) {
+              var3 = "[" + StatusMessageHelpers.field_d + "] ";
             }
             if (param1.field_m == 3) {
               var3 = "[#" + param1.field_o + "] ";
@@ -313,7 +313,7 @@ final class ArchiveIndex {
             if (!param1.field_i) {
               if (param1.field_d == 0 &&
                 0 == param1.field_k) {
-                var3 = CachedArchiveProvider.formatTemplate(param0 - 130, new String[]{(String) (var2)}, ge.field_n);
+                var3 = CachedArchiveProvider.formatTemplate(param0 - 130, new String[]{(String) (var2)}, BattleAction.field_n);
               } else {
                 var3 = CachedArchiveProvider.formatTemplate(-18, new String[]{(String) (var2)}, IterableNodeHashTable.field_f);
               }
@@ -331,7 +331,7 @@ final class ArchiveIndex {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -365,7 +365,7 @@ final class ArchiveIndex {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -386,29 +386,29 @@ final class ArchiveIndex {
         if (!SpriteState.field_z.field_i) {
           if ((1 << SpriteState.field_z.field_I & SpriteState.field_z.field_b) == 0) {
             if (SpriteState.field_z.field_b != 0) {
-              ce.field_g[12] = IntrusiveNodeHashTable.field_g;
+              GameSelectionHelpers.field_g[12] = IntrusiveNodeHashTable.field_g;
             } else {
               if ((SpriteState.field_z.field_a | 1 << SpriteState.field_z.field_I) == (1 << SpriteState.field_z.field_V.getPlayerCount(0)) - 1) {
-                ce.field_g[12] = rb.field_m;
+                GameSelectionHelpers.field_g[12] = TimedMessage.field_m;
               } else {
-                ce.field_g[12] = ra.field_n;
+                GameSelectionHelpers.field_g[12] = DateHelpers.field_n;
               }
             }
           } else {
-            ce.field_g[12] = ValidationState.field_d;
+            GameSelectionHelpers.field_g[12] = ValidationState.field_d;
           }
         } else {
           if ((1 << SpriteState.field_z.field_I & SpriteState.field_z.field_b) != 0) {
-            ce.field_g[12] = vm.field_e;
+            GameSelectionHelpers.field_g[12] = MouseStateHelpers.field_e;
           } else {
             if (0 == SpriteState.field_z.field_b) {
               if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.getPlayerCount(param0 ^ 121))) {
-                ce.field_g[12] = IconTextSceneWidget.field_Bb;
+                GameSelectionHelpers.field_g[12] = IconTextSceneWidget.field_Bb;
               } else {
-                ce.field_g[12] = MenuInputState.field_b;
+                GameSelectionHelpers.field_g[12] = MenuInputState.field_b;
               }
             } else {
-              ce.field_g[12] = ng.field_H;
+              GameSelectionHelpers.field_g[12] = TermsNoticePanel.field_H;
             }
           }
         }
@@ -434,7 +434,7 @@ final class ArchiveIndex {
           }
           this.decode(param0, 12);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

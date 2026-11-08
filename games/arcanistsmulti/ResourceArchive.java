@@ -114,7 +114,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var36 = td.toByteArray(this.field_c[param3], -128, true);
+            var36 = ThreeButtonPanel.toByteArray(this.field_c[param3], -128, true);
             var26 = var36;
             var9 = var26;
             var27 = new PacketBuffer(var36);
@@ -122,14 +122,14 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = td.toByteArray(this.field_c[param3], -19, false);
+            var9 = ThreeButtonPanel.toByteArray(this.field_c[param3], -19, false);
           }
           try {
             if (param2 < 73) {
               var23 = (String) null;
               this.hasGroupName(false, (String) null);
             }
-            var37 = hb.decompressContainer(false, var9);
+            var37 = SceneListPanel.decompressContainer(false, var9);
             var28 = var37;
             var24 = var28;
             var44 = var24;
@@ -139,7 +139,7 @@ final class ResourceArchive {
             stackIn_37_0 = var11_ref_RuntimeException;
             stackIn_37_1 = new StringBuilder();
             stackIn_38_2 = (param1 != null);
-            throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(StatefulTextPainter.crc32(var9.length, (byte) -112, var9)).append(" ").append(StatefulTextPainter.crc32(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(StatefulTextPainter.crc32(var9.length, (byte) -112, var9)).append(" ").append(StatefulTextPainter.crc32(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
           }
           if (this.field_h) {
             this.field_c[param3] = null;
@@ -265,7 +265,7 @@ final class ResourceArchive {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -399,10 +399,10 @@ final class ResourceArchive {
         if (param0 != 403300833) {
           field_a = (int[]) null;
         }
-        int var1 = mb.getListOffset((byte) 19);
+        int var1 = DropdownItemList.getListOffset((byte) 19);
         int var2 = IntrusiveNodeHashTable.getPointerOriginY(25117);
-        CameraFollowTarget.field_f.draw(-StatefulTextPainter.field_r + Checkbox.field_I, -DualLinkDeque.field_d + qe.field_o, -98, var1 + (StatefulTextPainter.field_r << 1), (DualLinkDeque.field_d << 1) + var2);
-        mn.drawLoginMethodButtons(-1);
+        CameraFollowTarget.field_f.draw(-StatefulTextPainter.field_r + Checkbox.field_I, -DualLinkDeque.field_d + QueuedPacket.field_o, -98, var1 + (StatefulTextPainter.field_r << 1), (DualLinkDeque.field_d << 1) + var2);
+        MatchingFieldValidator.drawLoginMethodButtons(-1);
     }
 
     final int getGroupCount(byte param0) {
@@ -509,7 +509,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -627,7 +627,7 @@ final class ResourceArchive {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -662,7 +662,7 @@ final class ResourceArchive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -743,7 +743,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_b[param1][param0]) {
-            var7 = td.toByteArray(this.field_b[param1][param0], param2 ^ -10399, false);
+            var7 = ThreeButtonPanel.toByteArray(this.field_b[param1][param0], param2 ^ -10399, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -773,7 +773,7 @@ final class ResourceArchive {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -828,7 +828,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -864,7 +864,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -876,10 +876,10 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (11 == fj.field_j) {
+          if (11 == BitAndSpriteHelpers.field_j) {
             ContextActionMenu.noOperation(7807);
           }
-          SoundCache.showLoadingProgress(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
+          SoundCache.showLoadingProgress(IconHighlightPainter.field_f, ArrayWidgetContainer.field_C, PairedSceneWidget.field_Hb, (byte) -100);
           OptionsDialog.paintCanvasNow(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;
@@ -896,7 +896,7 @@ final class ResourceArchive {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -911,7 +911,7 @@ final class ResourceArchive {
           this.field_h = param1 ? true : false;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

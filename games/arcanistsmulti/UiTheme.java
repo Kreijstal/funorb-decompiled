@@ -101,7 +101,7 @@ final class UiTheme {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -114,12 +114,12 @@ final class UiTheme {
           }
           int var5_int = 115 % ((8 - param1) / 44);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void clipToRectangle(int param0, int param1, int param2, int param3, int param4) {
-        da.clipToRectangle(param1, param0, 126, param4, param3);
+        MusicAndClipHelpers.clipToRectangle(param1, param0, 126, param4, param3);
         if (param2 != 3) {
           this.fillRectangleAlpha(35, 119, -25, 90, 75, 85, 23);
         }
@@ -145,7 +145,7 @@ final class UiTheme {
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_c);
           this.field_q.drawText(param2, var7 + 3, 3 + (var8 + this.field_q.field_o), this.field_v, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vh.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -192,14 +192,14 @@ final class UiTheme {
               var13 = var9 / var8;
               var12 = var8 + (-1 + (var13 + var9 % var8)) / var13 * 2;
             }
-            if (oj.field_f == null) {
-              oj.field_f = new String[16];
+            if (LoginMethodHelpers.field_f == null) {
+              LoginMethodHelpers.field_f = new String[16];
             }
-            var11Lifetime1 = this.field_q.wrapText(param2, new int[]{var12}, oj.field_f);
+            var11Lifetime1 = this.field_q.wrapText(param2, new int[]{var12}, LoginMethodHelpers.field_f);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_q.textWidth(oj.field_f[var13Lifetime2]);
+              var14 = this.field_q.textWidth(LoginMethodHelpers.field_f[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -227,7 +227,7 @@ final class UiTheme {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -261,9 +261,9 @@ final class UiTheme {
         this.field_d = -1;
         var4.field_e = 11711154;
         this.field_C = 15658734;
-        var4.createStyleLayer((byte) -37, 0).withTextColour(0, 15658734).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 109, 7829367, 10066329, 8947848));
-        var4.createStyleLayer((byte) -121, 1).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 35, 13421772, 10066329, 11184810));
-        var4.createStyleLayer((byte) -68, 3).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 53, 10066329, 7829367, 8947848)).withVerticalOffset(-1, 1).withAlignment(1, (byte) 120);
+        var4.createStyleLayer((byte) -37, 0).withTextColour(0, 15658734).withFrameSprites((byte) -71, FrameAndQuickChatHelpers.createFrameSprites((byte) 109, 7829367, 10066329, 8947848));
+        var4.createStyleLayer((byte) -121, 1).withFrameSprites((byte) -71, FrameAndQuickChatHelpers.createFrameSprites((byte) 35, 13421772, 10066329, 11184810));
+        var4.createStyleLayer((byte) -68, 3).withFrameSprites((byte) -71, FrameAndQuickChatHelpers.createFrameSprites((byte) 53, 10066329, 7829367, 8947848)).withVerticalOffset(-1, 1).withAlignment(1, (byte) 120);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -281,11 +281,11 @@ final class UiTheme {
         var7.setAllFrameSprites(DropTargetWidget.createCentreFrame(8947848, 0), -23165);
         var7.createStyleLayer((byte) -28, 1).withFrameSprites((byte) -71, DropTargetWidget.createCentreFrame(11184810, 0)).withTextColour(0, 2236962);
         this.field_b = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-        of discarded$0 = new of(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-        lh discarded$1 = new lh(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+        GradientBarPainter discarded$0 = new GradientBarPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+        ValueListPainter discarded$1 = new ValueListPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
         var17.copyStyleTo(var8, 1881);
-        var8.createStyleLayer((byte) -25, 0).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 104, 10066329, 7829367, 15658734)).withTextColour(0, 1118481).withShadowColour(125, -1);
+        var8.createStyleLayer((byte) -25, 0).withFrameSprites((byte) -71, FrameAndQuickChatHelpers.createFrameSprites((byte) 104, 10066329, 7829367, 15658734)).withTextColour(0, 1118481).withShadowColour(125, -1);
         var8.createStyleLayer((byte) -100, 4).withChildStyle(true, -5859).withFrameSprites((byte) -71, var5);
         this.field_l = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
@@ -320,7 +320,7 @@ final class UiTheme {
           var19 = new StatefulTextPainter(var4, true);
           var19.setAllIcons(0, var13);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class UiTheme {
             stackIn_7_0 = DateInputWidget.field_C.textWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ko.field_j.textWidth(param2);
+          stackIn_5_0 = ListEntryMenuHelpers.field_j.textWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ final class UiTheme {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -395,7 +395,7 @@ final class UiTheme {
             return (java.awt.Frame) (stackIn_5_0);
           }
           if (0 == param5) {
-            var10 = aa.queryDisplayModes(param1, (byte) 109);
+            var10 = CommonUiHelpers.queryDisplayModes(param1, (byte) 109);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -418,7 +418,7 @@ final class UiTheme {
           }
           var11 = param1.queueDisplayModeChange(param2, param5, param4 ^ 122, param3, param0);
           while (var11.field_e == 0) {
-            ao.sleepMillis(10L, param4 ^ 11);
+            LobbyLayoutHelpers.sleepMillis(10L, param4 ^ 11);
           }
           var7 = (java.awt.Frame) (var11.field_g);
           if (var7 == null) {
@@ -441,7 +441,7 @@ final class UiTheme {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

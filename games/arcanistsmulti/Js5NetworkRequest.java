@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Js5NetworkRequest extends ArchiveRequest {
-    static aj field_B;
+    static GameOptionType field_B;
     static int field_u;
     PacketBuffer field_A;
     byte field_y;
@@ -12,7 +12,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static String field_z;
 
     final static void setPaused(boolean param0) {
-        sb.field_a = param0 ? true : false;
+        AudioShutdownHelpers.field_a = param0 ? true : false;
     }
 
     final int getProgressPercent(byte param0) {
@@ -74,13 +74,13 @@ final class Js5NetworkRequest extends ArchiveRequest {
             if (var5 >= param1.length()) {
               return null;
             }
-            if (pm.isAllowedEmailCharacter(param1.charAt(var5), 45)) {
+            if (EmailValidationHelpers.isAllowedEmailCharacter(param1.charAt(var5), 45)) {
               var5++;
               continue;
             }
             break;
           }
-          stackIn_9_0 = mb.field_N;
+          stackIn_9_0 = DropdownItemList.field_N;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,13 +92,13 @@ final class Js5NetworkRequest extends ArchiveRequest {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
     static {
         field_u = 0;
-        field_B = new aj(1, 2, 2, 0);
+        field_B = new GameOptionType(1, 2, 2, 0);
         field_v = "Message game";
         field_z = "Remove friend";
     }

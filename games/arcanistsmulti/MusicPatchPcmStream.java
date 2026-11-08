@@ -5,7 +5,7 @@ final class MusicPatchPcmStream extends PcmStream {
     static boolean field_s;
     private MidiPcmStream field_q;
     IntrusiveDeque field_l;
-    static wj[] field_p;
+    static ColourBucketTable[] field_p;
     static int field_o;
     static CredentialKind field_m;
     PcmStreamMixer field_n;
@@ -61,7 +61,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -183,10 +183,10 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final static boolean isMusicAllowed(int param0) {
         if (param0 == 0) {
-          return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
+          return null == ProxySocketConnector.field_m ? StatusDialog.field_Pb : true;
         }
         MusicPatchPcmStream.isMusicAllowed(-43);
-        return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
+        return null == ProxySocketConnector.field_m ? StatusDialog.field_Pb : true;
     }
 
     final PcmStream firstSubStream() {
@@ -248,7 +248,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -290,13 +290,13 @@ final class MusicPatchPcmStream extends PcmStream {
         if (param0 == -24225) {
           DebouncedValidator.setPendingMessageId(-1, (byte) 30);
           SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
-          hb.field_Gb = ScreenDisplayMode.field_h;
+          SceneListPanel.field_Gb = ScreenDisplayMode.field_h;
           return;
         }
         MusicPatchPcmStream.releaseStatics(true);
         DebouncedValidator.setPendingMessageId(-1, (byte) 30);
         SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
-        hb.field_Gb = ScreenDisplayMode.field_h;
+        SceneListPanel.field_Gb = ScreenDisplayMode.field_h;
     }
 
     MusicPatchPcmStream(MidiPcmStream param0) {
@@ -305,7 +305,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

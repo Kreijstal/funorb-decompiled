@@ -62,7 +62,7 @@ final class SceneTextInput extends SceneWidget {
           this.field_Ob.setBounds(var9_int, 5, 3 + ImageProducerRasterBuffer.field_r, ImageProducerRasterBuffer.field_r, (byte) -120);
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (3 + 2 * ImageProducerRasterBuffer.field_r);
-          var12 = ih.clampToScreenX(param0, var10, param2, 246);
+          var12 = PointerOriginHelpers.clampToScreenX(param0, var10, param2, 246);
           var13 = LoginMethod.clampToScreenY(10, param3, var11, param1);
           this.setBounds(var10, var12, var13, var11, (byte) -120);
           return;
@@ -94,7 +94,7 @@ final class SceneTextInput extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class SceneTextInput extends SceneWidget {
             SceneTextInput.releaseStatics((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -168,12 +168,12 @@ final class SceneTextInput extends SceneWidget {
               var3_int++;
             }
           }
-          MusicPatchPcmStream.field_p = new wj[9];
-          var9 = new int[9][gg.field_c];
+          MusicPatchPcmStream.field_p = new ColourBucketTable[9];
+          var9 = new int[9][DecodedSpriteHelpers.field_c];
           var8 = var9;
           var2 = var8;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < 9; var3_intLifetime1++) {
-            MusicPatchPcmStream.field_p[var3_intLifetime1] = new wj(SocketConnector.field_j[8 * var3_intLifetime1].field_l);
+            MusicPatchPcmStream.field_p[var3_intLifetime1] = new ColourBucketTable(SocketConnector.field_j[8 * var3_intLifetime1].field_l);
             var7 = 0;
             var4Lifetime1 = var7;
             while (var7 < SocketConnector.field_j[var3_intLifetime1 * 8].field_l.length) {
@@ -188,27 +188,27 @@ final class SceneTextInput extends SceneWidget {
             SocketConnector.field_j[var3_intLifetime3].field_l = (int[]) (((Object[]) (var2))[var3_intLifetime3 / 8]);
           }
           TextLayout.field_d = DropdownList.field_I[3];
-          ByteStorage.field_e = fj.loadSprite("", -22612, param0, "slab");
+          ByteStorage.field_e = BitAndSpriteHelpers.loadSprite("", -22612, param0, "slab");
           ScreenDisplayMode.field_i = new Sprite[7];
-          ScreenDisplayMode.field_i[0] = fj.loadSprite("", param1 - 22546, param0, "spells_universal_tower_64x32");
+          ScreenDisplayMode.field_i[0] = BitAndSpriteHelpers.loadSprite("", param1 - 22546, param0, "spells_universal_tower_64x32");
           if (param1 != -66) {
             field_Kb = (String[]) null;
           }
-          ScreenDisplayMode.field_i[1] = fj.loadSprite("", -22612, param0, "icecastle");
-          ScreenDisplayMode.field_i[2] = fj.loadSprite("", -22612, param0, "fortress");
-          ScreenDisplayMode.field_i[3] = fj.loadSprite("", -22612, param0, "den");
-          ScreenDisplayMode.field_i[4] = fj.loadSprite("", -22612, param0, "light");
-          var3 = fj.loadSprite("", param1 - 22546, param0, "nature");
+          ScreenDisplayMode.field_i[1] = BitAndSpriteHelpers.loadSprite("", -22612, param0, "icecastle");
+          ScreenDisplayMode.field_i[2] = BitAndSpriteHelpers.loadSprite("", -22612, param0, "fortress");
+          ScreenDisplayMode.field_i[3] = BitAndSpriteHelpers.loadSprite("", -22612, param0, "den");
+          ScreenDisplayMode.field_i[4] = BitAndSpriteHelpers.loadSprite("", -22612, param0, "light");
+          var3 = BitAndSpriteHelpers.loadSprite("", param1 - 22546, param0, "nature");
           ScreenDisplayMode.field_i[5] = new Sprite(80, 95);
           ScreenDisplayMode.field_i[5].makeRasterTarget();
           SoftwareRasterizer.drawCircleOutline(40, 16, 16, 1);
           var3.drawTransparent(0, 16);
-          ScreenDisplayMode.field_i[6] = fj.loadSprite("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
-          gj.field_f = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "16", param0);
+          ScreenDisplayMode.field_i[6] = BitAndSpriteHelpers.loadSprite("", MouseWheelHandler.bitXor((int) param1, 22546), param0, "clocktower");
+          ScreenSwitchHelpers.field_f = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "16", param0);
           DualLinkDeque.field_b = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "32", param0);
-          QuickChatPhrase.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
-          md.field_f = qe.loadSpriteSheet(param0, "128", "", 46);
-          MeshModel.field_M = af.loadIndexedSpriteByName("volcano", "", 19412, param0);
+          QuickChatPhrase.field_x = QueuedPacket.loadSpriteSheet(param0, "64", "", 122);
+          FlagSumHelpers.field_f = QueuedPacket.loadSpriteSheet(param0, "128", "", 46);
+          MeshModel.field_M = PairedSceneWidget.loadIndexedSpriteByName("volcano", "", 19412, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class SceneTextInput extends SceneWidget {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) (stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) (stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -235,15 +235,15 @@ final class SceneTextInput extends SceneWidget {
           while (BevelTextPainter.pollKeyEvent(param0)) {
             if (IntrusiveDeque.field_d == 85 &&
               this.field_Ib.length() > 0) {
-              qj.padToLength(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
+              TimeAndInputHelpers.padToLength(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
             }
-            if (bj.canAppendNameCharacter(ed.field_Bb, (CharSequence) ((Object) this.field_Ib), (byte) -71) ||
+            if (ButtonMenuDialog.canAppendNameCharacter(MainMenuDialog.field_Bb, (CharSequence) ((Object) this.field_Ib), (byte) -71) ||
               (this.field_Ib.length() == 0 &&
-              91 == ed.field_Bb ||
+              91 == MainMenuDialog.field_Bb ||
               this.field_Ib.length() == 1 &&
-              ed.field_Bb == 35) ||
-              ed.field_Bb == 93) {
-              discarded$0 = this.field_Ib.append(ed.field_Bb);
+              MainMenuDialog.field_Bb == 35) ||
+              MainMenuDialog.field_Bb == 93) {
+              discarded$0 = this.field_Ib.append(MainMenuDialog.field_Bb);
             }
             if (IntrusiveDeque.field_d != 84) {
               if (IntrusiveDeque.field_d == 13) {
@@ -470,7 +470,7 @@ final class SceneTextInput extends SceneWidget {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         MeshRasterState.field_d > var37) {
-                        gl.fillMaskedRows(var29, var36Lifetime2 + var37, var38, 0, param7, var25, var21, 0, 0, (byte) 124);
+                        NineSliceHelpers.fillMaskedRows(var29, var36Lifetime2 + var37, var38, 0, param7, var25, var21, 0, 0, (byte) 124);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -480,9 +480,9 @@ final class SceneTextInput extends SceneWidget {
                         var38 = MeshRasterState.field_d + (-var37 - 1);
                       }
                       if (var37 < 0) {
-                        gl.fillMaskedRows(var29 - var41 * var37, var36Lifetime2, var38 + var37, var40, param7, var25 - var37 * var40, -(var39 * var37) + var21, var39, var41, (byte) 124);
+                        NineSliceHelpers.fillMaskedRows(var29 - var41 * var37, var36Lifetime2, var38 + var37, var40, param7, var25 - var37 * var40, -(var39 * var37) + var21, var39, var41, (byte) 124);
                       } else {
-                        gl.fillMaskedRows(var29, var37 + var36Lifetime2, var38, var40, param7, var25, var21, var39, var41, (byte) 120);
+                        NineSliceHelpers.fillMaskedRows(var29, var37 + var36Lifetime2, var38, var40, param7, var25, var21, var39, var41, (byte) 120);
                       }
                     }
                   }
@@ -560,7 +560,7 @@ final class SceneTextInput extends SceneWidget {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < MeshRasterState.field_d) {
-                    gl.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, param7, var25, var21, 0, 0, (byte) 122);
+                    NineSliceHelpers.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, param7, var25, var21, 0, 0, (byte) 122);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -570,9 +570,9 @@ final class SceneTextInput extends SceneWidget {
                     var37Lifetime1 = -var36Lifetime1 + MeshRasterState.field_d - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    gl.fillMaskedRows(-(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var39Lifetime1, param7, var25 - var39Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, var40Lifetime1, (byte) 123);
+                    NineSliceHelpers.fillMaskedRows(-(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var39Lifetime1, param7, var25 - var39Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, var40Lifetime1, (byte) 123);
                   } else {
-                    gl.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var39Lifetime1, param7, var25, var21, var38Lifetime1, var40Lifetime1, (byte) 118);
+                    NineSliceHelpers.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var39Lifetime1, param7, var25, var21, var38Lifetime1, var40Lifetime1, (byte) 118);
                   }
                 }
               }
@@ -603,7 +603,7 @@ final class SceneTextInput extends SceneWidget {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -617,10 +617,10 @@ final class SceneTextInput extends SceneWidget {
         }
         if (IntrusiveDeque.field_d == 85 &&
           0 < this.field_Ib.length()) {
-          qj.padToLength(this.field_Ib.length() - 1, this.field_Ib, ' ', false);
+          TimeAndInputHelpers.padToLength(this.field_Ib.length() - 1, this.field_Ib, ' ', false);
         }
         if (this.field_Ib.length() < 12) {
-          var2 = Character.toLowerCase(ed.field_Bb);
+          var2 = Character.toLowerCase(MainMenuDialog.field_Bb);
           if (var2 == 32) {
             var2 = 95;
           }

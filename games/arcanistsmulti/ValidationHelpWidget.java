@@ -4,7 +4,7 @@
 final class ValidationHelpWidget extends TextHotspotWidget {
     private Sprite field_Y;
     static String field_S;
-    static aj field_W;
+    static GameOptionType field_W;
     private int field_X;
     private ValidationProvider field_J;
     private String field_ab;
@@ -47,7 +47,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int var12Lifetime2;
         int var11Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
-        if (da.field_f == var6) {
+        if (MusicAndClipHelpers.field_f == var6) {
           var17 = DiskCacheRequest.field_D;
           if (!var17.equals(this.field_g)) {
             this.field_g = var17;
@@ -61,9 +61,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var35 = (WidgetTextLayout) ((Object) this.field_r);
           var9 = this.field_n + param1;
           var10 = var35.getTextY(param3, -13372, (UiComponent) (this)) + (var35.getTextLayout((UiComponent) (this), -126).height((byte) -58) >> 1);
-          if (da.field_f != var6 &&
+          if (MusicAndClipHelpers.field_f != var6 &&
             IsaacCipher.field_c != var6) {
-            if (var6 == ra.field_k) {
+            if (var6 == DateHelpers.field_k) {
               var19 = ContentTransitionDialog.field_lb[2];
               var19.drawAdditive(var9, var10 - (var19.field_y >> 1), 256);
               return;
@@ -80,7 +80,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var12 = var21.field_w << 1;
           if (null == this.field_Y) {
             this.field_Y = new Sprite(var11, var12);
-            fk.setSpriteRasterTarget(this.field_Y, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
@@ -88,14 +88,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           if (var11 > this.field_Y.field_q) {
             this.field_Y = new Sprite(var11, var12);
-            fk.setSpriteRasterTarget(this.field_Y, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           if (this.field_Y.field_y >= var12) {
-            fk.setSpriteRasterTarget(this.field_Y, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             QuickChatCategory.popClipState(-15405);
@@ -103,7 +103,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             return;
           }
           this.field_Y = new Sprite(var11, var12);
-          fk.setSpriteRasterTarget(this.field_Y, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
           var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
           QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
@@ -127,13 +127,13 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var36 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1 = this.field_n + param1;
           var10Lifetime1 = var36.getTextY(param3, -13372, (UiComponent) (this)) + (var36.getTextLayout((UiComponent) (this), -126).height((byte) -58) >> 1);
-          if (da.field_f == var6) {
+          if (MusicAndClipHelpers.field_f == var6) {
             var23 = ContentTransitionDialog.field_lb[0];
             var11Lifetime1 = var23.field_n << 1;
             var12Lifetime1 = var23.field_w << 1;
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
@@ -141,14 +141,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             if (var11Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             if (this.field_Y.field_y >= var12Lifetime1) {
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               SoftwareRasterizer.clear();
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
@@ -156,7 +156,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               return;
             }
             this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-            fk.setSpriteRasterTarget(this.field_Y, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
             var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
             QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
@@ -169,7 +169,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var12Lifetime1Lifetime1 = var24.field_w << 1;
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
@@ -177,7 +177,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             if (var11Lifetime1Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
@@ -185,20 +185,20 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             if (this.field_Y.field_y < var12Lifetime1Lifetime1) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.setSpriteRasterTarget(this.field_Y, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
-            fk.setSpriteRasterTarget(this.field_Y, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
             QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
             return;
           }
-          if (var6 == ra.field_k) {
+          if (var6 == DateHelpers.field_k) {
             var29 = ContentTransitionDialog.field_lb[2];
             var29.drawAdditive(var9Lifetime1, var10Lifetime1 - (var29.field_y >> 1), 256);
             return;
@@ -215,9 +215,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         WidgetTextLayout var37 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime2 = this.field_n + param1;
         var10Lifetime2 = var37.getTextY(param3, -13372, (UiComponent) (this)) + (var37.getTextLayout((UiComponent) (this), -126).height((byte) -58) >> 1);
-        if (da.field_f != var6 &&
+        if (MusicAndClipHelpers.field_f != var6 &&
           IsaacCipher.field_c != var6) {
-          if (var6 == ra.field_k) {
+          if (var6 == DateHelpers.field_k) {
             var32 = ContentTransitionDialog.field_lb[2];
             var32.drawAdditive(var9Lifetime2, var10Lifetime2 - (var32.field_y >> 1), 256);
             return;
@@ -234,7 +234,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var12Lifetime2 = var34.field_w << 1;
         if (null == this.field_Y) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-          fk.setSpriteRasterTarget(this.field_Y, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
@@ -242,14 +242,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (var11Lifetime2 > this.field_Y.field_q) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-          fk.setSpriteRasterTarget(this.field_Y, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         if (this.field_Y.field_y >= var12Lifetime2) {
-          fk.setSpriteRasterTarget(this.field_Y, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
           SoftwareRasterizer.clear();
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           QuickChatCategory.popClipState(-15405);
@@ -257,7 +257,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           return;
         }
         this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-        fk.setSpriteRasterTarget(this.field_Y, -23095);
+        SoundEffectVoice.setSpriteRasterTarget(this.field_Y, -23095);
         var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
         QuickChatCategory.popClipState(-15405);
         this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
@@ -267,7 +267,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (!param0) {
           return;
         }
-        DropTargetWidget.buildAccountScene(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, ConnectionState.field_c);
+        DropTargetWidget.buildAccountScene(IntrusiveNode.field_c, false, SectorCacheStore.field_l, EffectVolumeHelpers.field_d, ConnectionState.field_c);
     }
 
     final static void showLoginPanelWithOptions(boolean param0, boolean param1, boolean param2) {
@@ -300,7 +300,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5 = 1;
             var4 = 1;
           }
-          tn.field_Gb = ri.buildRotationMatrix(var2 * var5, (byte) 66, var4 * var2);
+          SceneTabStrip.field_Gb = RasterSetupHelpers.buildRotationMatrix(var2 * var5, (byte) 66, var4 * var2);
           return;
         }
         if (var3 < 105) {
@@ -426,7 +426,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5Lifetime1 = 1;
             var4Lifetime1 = 1;
           }
-          tn.field_Gb = ri.buildRotationMatrix(var2 * var5Lifetime1, (byte) 66, var4Lifetime1 * var2);
+          SceneTabStrip.field_Gb = RasterSetupHelpers.buildRotationMatrix(var2 * var5Lifetime1, (byte) 66, var4Lifetime1 * var2);
           return;
         }
         if (120 <= var3) {
@@ -478,7 +478,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5Lifetime2 = 1;
             var4Lifetime2 = 1;
           }
-          tn.field_Gb = ri.buildRotationMatrix(var2 * var5Lifetime2, (byte) 66, var4Lifetime2 * var2);
+          SceneTabStrip.field_Gb = RasterSetupHelpers.buildRotationMatrix(var2 * var5Lifetime2, (byte) 66, var4Lifetime2 * var2);
           return;
         }
         var3 = -var3 + 120;
@@ -531,7 +531,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var5Lifetime3 = 1;
           var4Lifetime3 = 1;
         }
-        tn.field_Gb = ri.buildRotationMatrix(var2Lifetime1 * var5Lifetime3, (byte) 66, var4Lifetime3 * var2Lifetime1);
+        SceneTabStrip.field_Gb = RasterSetupHelpers.buildRotationMatrix(var2Lifetime1 * var5Lifetime3, (byte) 66, var4Lifetime3 * var2Lifetime1);
         return;
     }
 
@@ -567,7 +567,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             ValidationHelpWidget.releaseStatics(-45);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -575,100 +575,100 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (param0 != 2) {
           return;
         }
-        if (null == pn.field_c) {
-          if (null != pn.field_c) {
-            ClipState.tileSprite(pn.field_c, param0 + 0);
+        if (null == LoginStackHelpers.field_c) {
+          if (null != LoginStackHelpers.field_c) {
+            ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.makeRasterTarget();
+          LoginStackHelpers.field_c = new Sprite(param2 / 2, param1 / 2);
+          LoginStackHelpers.field_c.makeRasterTarget();
           LoginMethod.drawBackgroundGradient(param2, param1, 0);
-          ce.field_m.makeRasterTarget(true);
-          ClipState.tileSprite(pn.field_c, param0 + 0);
+          GameSelectionHelpers.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
           return;
         }
-        if (pn.field_c.field_n == param2 / 2) {
-          if (param1 / 2 == pn.field_c.field_w) {
-            if (null != pn.field_c) {
-              ClipState.tileSprite(pn.field_c, param0 + 0);
+        if (LoginStackHelpers.field_c.field_n == param2 / 2) {
+          if (param1 / 2 == LoginStackHelpers.field_c.field_w) {
+            if (null != LoginStackHelpers.field_c) {
+              ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
               return;
             }
-            pn.field_c = new Sprite(param2 / 2, param1 / 2);
-            pn.field_c.makeRasterTarget();
+            LoginStackHelpers.field_c = new Sprite(param2 / 2, param1 / 2);
+            LoginStackHelpers.field_c.makeRasterTarget();
             LoginMethod.drawBackgroundGradient(param2, param1, 0);
-            ce.field_m.makeRasterTarget(true);
-            ClipState.tileSprite(pn.field_c, param0 + 0);
+            GameSelectionHelpers.field_m.makeRasterTarget(true);
+            ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
             return;
           }
-          if (mn.field_r == CheckboxPainter.field_g) {
-            pn.field_c = null;
+          if (MatchingFieldValidator.field_r == CheckboxPainter.field_g) {
+            LoginStackHelpers.field_c = null;
             System.gc();
           }
-          if (null != pn.field_c) {
-            ClipState.tileSprite(pn.field_c, param0 + 0);
+          if (null != LoginStackHelpers.field_c) {
+            ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.makeRasterTarget();
+          LoginStackHelpers.field_c = new Sprite(param2 / 2, param1 / 2);
+          LoginStackHelpers.field_c.makeRasterTarget();
           LoginMethod.drawBackgroundGradient(param2, param1, 0);
-          ce.field_m.makeRasterTarget(true);
-          ClipState.tileSprite(pn.field_c, param0 + 0);
+          GameSelectionHelpers.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
           return;
         }
-        if (mn.field_r != CheckboxPainter.field_g) {
-          if (null != pn.field_c) {
-            ClipState.tileSprite(pn.field_c, param0 + 0);
+        if (MatchingFieldValidator.field_r != CheckboxPainter.field_g) {
+          if (null != LoginStackHelpers.field_c) {
+            ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
             return;
           }
-          pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.makeRasterTarget();
+          LoginStackHelpers.field_c = new Sprite(param2 / 2, param1 / 2);
+          LoginStackHelpers.field_c.makeRasterTarget();
           LoginMethod.drawBackgroundGradient(param2, param1, 0);
-          ce.field_m.makeRasterTarget(true);
-          ClipState.tileSprite(pn.field_c, param0 + 0);
+          GameSelectionHelpers.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
           return;
         }
-        pn.field_c = null;
+        LoginStackHelpers.field_c = null;
         System.gc();
-        if (null != pn.field_c) {
-          ClipState.tileSprite(pn.field_c, param0 + 0);
+        if (null != LoginStackHelpers.field_c) {
+          ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
           return;
         }
-        pn.field_c = new Sprite(param2 / 2, param1 / 2);
-        pn.field_c.makeRasterTarget();
+        LoginStackHelpers.field_c = new Sprite(param2 / 2, param1 / 2);
+        LoginStackHelpers.field_c.makeRasterTarget();
         LoginMethod.drawBackgroundGradient(param2, param1, 0);
-        ce.field_m.makeRasterTarget(true);
-        ClipState.tileSprite(pn.field_c, param0 + 0);
+        GameSelectionHelpers.field_m.makeRasterTarget(true);
+        ClipState.tileSprite(LoginStackHelpers.field_c, param0 + 0);
     }
 
     ValidationHelpWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, cc.getDefaultTextPainter((byte) -65));
+        super(param1, AngleHelpers.getDefaultTextPainter((byte) -65));
         try {
           this.field_J = param0;
           this.field_ab = param1;
           this.setBounds(param5, param3, param4, param2, -83);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static fk playEffectStream(PcmSampleStream param0, byte param1) {
-        fk var2 = null;
+    final static SoundEffectVoice playEffectStream(PcmSampleStream param0, byte param1) {
+        SoundEffectVoice var2 = null;
         RuntimeException var2_ref = null;
-        fk stackIn_2_0 = null;
-        fk stackIn_4_0 = null;
+        SoundEffectVoice stackIn_2_0 = null;
+        SoundEffectVoice stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new fk(param0, param0);
-          qn.field_mb.addLast(var2, -1);
-          pc.field_e.addSubStream(param0);
+          var2 = new SoundEffectVoice(param0, param0);
+          MessageDialog.field_mb.addLast(var2, -1);
+          TexturedSpriteHelpers.field_e.addSubStream(param0);
           if (param1 == 68) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (fk) null;
+          stackIn_2_0 = (SoundEffectVoice) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -680,7 +680,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -705,7 +705,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -719,14 +719,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     final static int getSelectedIndex(byte param0) {
         if (param0 != -34) {
           ValidationHelpWidget.releaseStatics(-11);
-          return qc.field_a;
+          return ViewportSetupHelpers.field_a;
         }
-        return qc.field_a;
+        return ViewportSetupHelpers.field_a;
     }
 
     static {
         field_S = "Amid the witches' huts and rotten trees, Arcanists battle to control the arcane sources of magic within the swamp. Keep hidden, as the high concentration of power draws storms in from afar.";
-        field_W = new aj(0, 2, 2, 1);
+        field_W = new GameOptionType(0, 2, 2, 1);
         field_U = new int[17];
         field_Z = "Waiting for graphics";
         field_T = "You cannot cast tower spells while flying";

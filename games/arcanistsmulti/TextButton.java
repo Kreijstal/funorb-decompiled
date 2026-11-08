@@ -49,7 +49,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ class TextButton extends UiComponent {
           }
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ag.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ class TextButton extends UiComponent {
             this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param3, param1, param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ag.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -178,31 +178,31 @@ class TextButton extends UiComponent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static void initializeKeyCodeMap(byte param0) {
-        sb.field_h[92] = 74;
-        sb.field_h[46] = 72;
-        sb.field_h[93] = 43;
-        sb.field_h[59] = 57;
-        sb.field_h[91] = 42;
-        sb.field_h[61] = 27;
-        sb.field_h[222] = 58;
-        sb.field_h[192] = 28;
+        AudioShutdownHelpers.field_h[92] = 74;
+        AudioShutdownHelpers.field_h[46] = 72;
+        AudioShutdownHelpers.field_h[93] = 43;
+        AudioShutdownHelpers.field_h[59] = 57;
+        AudioShutdownHelpers.field_h[91] = 42;
+        AudioShutdownHelpers.field_h[61] = 27;
+        AudioShutdownHelpers.field_h[222] = 58;
+        AudioShutdownHelpers.field_h[192] = 28;
         if (param0 == -60) {
-          sb.field_h[520] = 59;
-          sb.field_h[44] = 71;
-          sb.field_h[47] = 73;
-          sb.field_h[45] = 26;
+          AudioShutdownHelpers.field_h[520] = 59;
+          AudioShutdownHelpers.field_h[44] = 71;
+          AudioShutdownHelpers.field_h[47] = 73;
+          AudioShutdownHelpers.field_h[45] = 26;
           return;
         }
         TextButton.initializeKeyCodeMap((byte) -28);
-        sb.field_h[520] = 59;
-        sb.field_h[44] = 71;
-        sb.field_h[47] = 73;
-        sb.field_h[45] = 26;
+        AudioShutdownHelpers.field_h[520] = 59;
+        AudioShutdownHelpers.field_h[44] = 71;
+        AudioShutdownHelpers.field_h[47] = 73;
+        AudioShutdownHelpers.field_h[45] = 26;
     }
 
     final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
@@ -246,7 +246,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -272,15 +272,15 @@ class TextButton extends UiComponent {
           return;
         }
         CacheEntry.field_q = param0;
-        co.field_f.field_G.clear(param1 + 185);
+        BattleResetHelpers.field_f.field_G.clear(param1 + 185);
         if (param1 != -104) {
           return;
         }
         try {
-          co.field_f.addChild(CacheEntry.field_q, 60);
-          oj.field_i = true;
+          BattleResetHelpers.field_f.addChild(CacheEntry.field_q, 60);
+          LoginMethodHelpers.field_i = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ag.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

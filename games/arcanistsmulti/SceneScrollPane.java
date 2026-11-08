@@ -76,7 +76,7 @@ final class SceneScrollPane extends SceneWidget {
           stackIn_28_0 = ((var4_int & param3) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param1.field_Db = param0.readUnsignedShort(param3 ^ -100);
-          param1.field_Yb = qj.monotonicTimeMillis(param3 - 26574) - (long)param0.readInt(-10674);
+          param1.field_Yb = TimeAndInputHelpers.monotonicTimeMillis(param3 - 26574) - (long)param0.readInt(-10674);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
@@ -111,7 +111,7 @@ final class SceneScrollPane extends SceneWidget {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class SceneScrollPane extends SceneWidget {
           this.field_Cb = param1;
           this.field_Hb.addChild(param1, 62);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -320,33 +320,33 @@ final class SceneScrollPane extends SceneWidget {
         int var6 = 0;
         String var7 = null;
         try {
-          hj.field_a[0] = TextButton.field_D.nextInt();
-          hj.field_a[1] = TextButton.field_D.nextInt();
-          hj.field_a[2] = (int)(of.field_j >> 32);
-          hj.field_a[3] = (int)of.field_j;
+          ClientIOException.field_a[0] = TextButton.field_D.nextInt();
+          ClientIOException.field_a[1] = TextButton.field_D.nextInt();
+          ClientIOException.field_a[2] = (int)(GradientBarPainter.field_j >> 32);
+          ClientIOException.field_a[3] = (int)GradientBarPainter.field_j;
           NodeHashTableIterator.field_a.position = 0;
-          NodeHashTableIterator.field_a.writeInt(hj.field_a[0], (byte) -101);
-          NodeHashTableIterator.field_a.writeInt(hj.field_a[1], (byte) -101);
-          NodeHashTableIterator.field_a.writeInt(hj.field_a[2], (byte) -101);
-          NodeHashTableIterator.field_a.writeInt(hj.field_a[3], (byte) -101);
-          i.writeRandomData(NodeHashTableIterator.field_a, 24);
+          NodeHashTableIterator.field_a.writeInt(ClientIOException.field_a[0], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(ClientIOException.field_a[1], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(ClientIOException.field_a[2], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(ClientIOException.field_a[3], (byte) -101);
+          ChatPanel.writeRandomData(NodeHashTableIterator.field_a, 24);
           NodeHashTableIterator.field_a.writeShort(param4, (byte) -62);
           param1.writeTo(NodeHashTableIterator.field_a, param2 - 55);
-          he.field_e.position = 0;
+          StatusMessageHelpers.field_e.position = 0;
           if (!param0) {
-            he.field_e.writeByte(16, (byte) -8);
+            StatusMessageHelpers.field_e.writeByte(16, (byte) -8);
           } else {
-            he.field_e.writeByte(18, (byte) -4);
+            StatusMessageHelpers.field_e.writeByte(18, (byte) -4);
           }
-          he.field_e.position = he.field_e.position + 2;
-          var5_int = he.field_e.position;
-          he.field_e.writeInt(LinkButtonPainter.field_d, (byte) -101);
-          he.field_e.writeLong(ho.field_c, (byte) 36);
+          StatusMessageHelpers.field_e.position = StatusMessageHelpers.field_e.position + 2;
+          var5_int = StatusMessageHelpers.field_e.position;
+          StatusMessageHelpers.field_e.writeInt(LinkButtonPainter.field_d, (byte) -101);
+          StatusMessageHelpers.field_e.writeLong(ServerMessage.field_c, (byte) 36);
           var6 = 0;
           if (Js5Transport.field_d) {
             var6 = var6 | 1;
           }
-          if (fl.field_a) {
+          if (FinalFrameHelpers.field_a) {
             var6 = var6 | 4;
           }
           if (param3) {
@@ -355,21 +355,21 @@ final class SceneScrollPane extends SceneWidget {
           if (null != AudioService.field_i) {
             var6 = var6 | 16;
           }
-          he.field_e.writeByte(var6, (byte) -54);
+          StatusMessageHelpers.field_e.writeByte(var6, (byte) -54);
           var7 = SecondaryNodeDeque.getSettingsCookie(IconButtonPainter.getApplet(param2 ^ 3), -120);
           if (var7 == null) {
             var7 = "";
           }
-          he.field_e.writeString(var7, param2 ^ 23377);
+          StatusMessageHelpers.field_e.writeString(var7, param2 ^ 23377);
           if (AudioService.field_i != null) {
-            he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
+            StatusMessageHelpers.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
-          TextLine.writeSecureBlock(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
+          TextLine.writeSecureBlock(false, StatusMessageHelpers.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
           if (param2 != 116) {
             SceneScrollPane.releaseStatics(-40);
           }
-          he.field_e.writeShortLengthAtMark(he.field_e.position - var5_int, -19571);
-          we.sendKeepAlive(-1, (byte) 104);
+          StatusMessageHelpers.field_e.writeShortLengthAtMark(StatusMessageHelpers.field_e.position - var5_int, -19571);
+          KeepAliveHelpers.sendKeepAlive(-1, (byte) 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -381,7 +381,7 @@ final class SceneScrollPane extends SceneWidget {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class SceneScrollPane extends SceneWidget {
           if (param0 != -13214) {
             field_Db = false;
           }
-          var6 = he.field_e;
+          var6 = StatusMessageHelpers.field_e;
           var6.writeOpcode((byte) -44, param3);
           var6.position = var6.position + 1;
           var7 = var6.position;
@@ -424,7 +424,7 @@ final class SceneScrollPane extends SceneWidget {
           var6.writeBytes(param2, 0, (byte) -86, param2.length);
           var6.writeByteLengthAtMark(var6.position - var7, (byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

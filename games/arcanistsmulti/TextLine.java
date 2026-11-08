@@ -39,21 +39,21 @@ final class TextLine {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
           TextLine.writeSecureBlock(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
-        qn.updateMessage(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, SceneTextInput.field_Gb);
+        MessageDialog.updateMessage(DateHelpers.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, SceneTextInput.field_Gb);
     }
 
     final static void writeSecureBlock(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
-          we.writeSecureLoginBlock(param4, 0, param3.payload, param1, 0, param2, param3.position);
+          KeepAliveHelpers.writeSecureLoginBlock(param4, 0, param3.payload, param1, 0, param2, param3.position);
           if (param0) {
             TextLine.updateChatView(-96, -100, -118, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void appendChatLineToHistory(jg param0, byte param1) {
+    final static void appendChatLineToHistory(ChatLine param0, byte param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -76,37 +76,37 @@ final class TextLine {
             return;
           }
           while (3 > var2_int) {
-            bm.field_d[var2_int] = 0;
+            TutorialCaptionGlobals.field_d[var2_int] = 0;
             var2_int++;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < SecondaryNodeDeque.field_f; var2_intLifetime1++) {
-            if (g.field_d[var2_intLifetime1].field_m == param0.field_m) {
-              dupTemp$3 = g.field_d[var2_intLifetime1].getStatusIcon(-62);
-              bm.field_d[dupTemp$3] = bm.field_d[dupTemp$3] + 1;
+            if (SupportPageHelpers.field_d[var2_intLifetime1].field_m == param0.field_m) {
+              dupTemp$3 = SupportPageHelpers.field_d[var2_intLifetime1].getStatusIcon(-62);
+              TutorialCaptionGlobals.field_d[dupTemp$3] = TutorialCaptionGlobals.field_d[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.getStatusIcon(-21);
-          bm.field_d[dupTemp$0] = bm.field_d[dupTemp$0] + 1;
+          TutorialCaptionGlobals.field_d[dupTemp$0] = TutorialCaptionGlobals.field_d[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < SecondaryNodeDeque.field_f; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_m == g.field_d[var3].field_m) {
-              var4 = g.field_d[var3].getStatusIcon(-109);
-              if (bm.field_d[var4] > hj.field_b) {
-                bm.field_d[var4] = bm.field_d[var4] - 1;
+            if (param0.field_m == SupportPageHelpers.field_d[var3].field_m) {
+              var4 = SupportPageHelpers.field_d[var3].getStatusIcon(-109);
+              if (TutorialCaptionGlobals.field_d[var4] > ClientIOException.field_b) {
+                TutorialCaptionGlobals.field_d[var4] = TutorialCaptionGlobals.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              g.field_d[incrementValue$2] = g.field_d[var3];
+              SupportPageHelpers.field_d[incrementValue$2] = SupportPageHelpers.field_d[var3];
             }
           }
           SecondaryNodeDeque.field_f = var2_intLifetime2;
           fieldTemp$1 = SecondaryNodeDeque.field_f;
           SecondaryNodeDeque.field_f = SecondaryNodeDeque.field_f + 1;
-          g.field_d[fieldTemp$1] = param0;
+          SupportPageHelpers.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class TextLine {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -128,8 +128,8 @@ final class TextLine {
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-          jg var2 = (jg) null;
-          TextLine.appendChatLineToHistory((jg) null, (byte) -101);
+          ChatLine var2 = (ChatLine) null;
+          TextLine.appendChatLineToHistory((ChatLine) null, (byte) -101);
         }
         field_d = null;
     }

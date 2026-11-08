@@ -1,0 +1,207 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LobbyRequestHelpers {
+    static Sprite[] field_a;
+    static String field_d;
+    static String field_b;
+    static byte[] field_c;
+
+    public static void releaseStatics(byte param0) {
+        field_d = null;
+        field_a = null;
+        field_b = null;
+        if (param0 != -125) {
+          field_c = (byte[]) null;
+          field_c = null;
+          return;
+        }
+        field_c = null;
+    }
+
+    final static void updateLobbyRequests(boolean param0, int param1) {
+        boolean stackIn_7_0;
+        int stackIn_7_1;
+        int stackIn_7_2;
+        int stackIn_7_3;
+        int stackIn_7_4;
+        boolean stackIn_8_5 = false;
+        int stackIn_18_0 = 0;
+        boolean stackIn_20_0;
+        int stackIn_20_1;
+        int stackIn_20_2;
+        int stackIn_20_3;
+        int stackIn_20_4;
+        boolean stackIn_21_5 = false;
+        boolean stackIn_38_0;
+        int stackIn_38_1;
+        int stackIn_38_2;
+        int stackIn_38_3;
+        int stackIn_38_4;
+        boolean stackIn_39_5 = false;
+        int stackIn_49_0 = 0;
+        boolean stackIn_51_0;
+        int stackIn_51_1;
+        int stackIn_51_2;
+        int stackIn_51_3;
+        int stackIn_51_4;
+        boolean stackIn_52_5 = false;
+        boolean stackIn_68_0;
+        int stackIn_68_1;
+        int stackIn_68_2;
+        int stackIn_68_3;
+        int stackIn_68_4;
+        boolean stackIn_69_5 = false;
+        int stackIn_79_0 = 0;
+        boolean stackIn_81_0;
+        int stackIn_81_1;
+        int stackIn_81_2;
+        int stackIn_81_3;
+        int stackIn_81_4;
+        boolean stackIn_82_5 = false;
+        int var2;
+        int var3;
+        SocialDialog.tickSocialEntries(-1);
+        if (null == DirectByteStorage.field_f) {
+          var2 = 0;
+          regionExit1: {
+            if (!ViewControllerHelpers.field_a) {
+              if (StatefulTextPainter.field_w) {
+                var3 = 1;
+                stackIn_7_0 = true;
+                stackIn_7_1 = 11;
+                stackIn_7_2 = 15;
+                stackIn_7_3 = 0;
+                stackIn_7_4 = SingleChildContainer.field_y;
+                stackIn_8_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+                PendingTask.drawChatAreaWhite(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+                break regionExit1;
+              }
+              stackIn_18_0 = 0;
+            } else {
+              stackIn_18_0 = 1;
+            }
+            var3 = stackIn_18_0;
+            stackIn_20_0 = true;
+            stackIn_20_1 = 11;
+            stackIn_20_2 = 15;
+            stackIn_20_3 = 0;
+            stackIn_20_4 = SingleChildContainer.field_y;
+            stackIn_21_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+            PendingTask.drawChatAreaWhite(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+          }
+        } else {
+          if (GameOptionType.isAtLeastTwo(28139, DirectByteStorage.field_f.field_Rb)) {
+            var2 = 1;
+            if (!ViewControllerHelpers.field_a) {
+              if (StatefulTextPainter.field_w) {
+                var3 = 1;
+                stackIn_68_0 = true;
+                stackIn_68_1 = 11;
+                stackIn_68_2 = 15;
+                stackIn_68_3 = 0;
+                stackIn_68_4 = SingleChildContainer.field_y;
+                stackIn_69_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+                PendingTask.drawChatAreaWhite(stackIn_68_0, stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_69_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+                if (ButtonMenuDialog.field_ub) {
+                  StatusMessageHelpers.field_e.writeOpcode((byte) -22, 57);
+                  ButtonMenuDialog.field_ub = false;
+                }
+                if (SceneTextInput.field_Mb) {
+                  StatusMessageHelpers.field_e.writeOpcode((byte) -114, 10);
+                  SceneTextInput.field_Mb = false;
+                }
+                if (!MenuButtonPanel.field_C) {
+                  return;
+                }
+                LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
+                MenuButtonPanel.field_C = false;
+                return;
+              }
+              stackIn_79_0 = 0;
+            } else {
+              stackIn_79_0 = 1;
+            }
+            var3 = stackIn_79_0;
+            stackIn_81_0 = true;
+            stackIn_81_1 = 11;
+            stackIn_81_2 = 15;
+            stackIn_81_3 = 0;
+            stackIn_81_4 = SingleChildContainer.field_y;
+            stackIn_82_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+            PendingTask.drawChatAreaWhite(stackIn_81_0, stackIn_81_1, stackIn_81_2, stackIn_81_3, stackIn_81_4, stackIn_82_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+            if (ButtonMenuDialog.field_ub) {
+              StatusMessageHelpers.field_e.writeOpcode((byte) -22, 57);
+              ButtonMenuDialog.field_ub = false;
+            }
+            if (SceneTextInput.field_Mb) {
+              StatusMessageHelpers.field_e.writeOpcode((byte) -114, 10);
+              SceneTextInput.field_Mb = false;
+            }
+            if (!MenuButtonPanel.field_C) {
+              return;
+            }
+            LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
+            MenuButtonPanel.field_C = false;
+            return;
+          }
+          var2 = 0;
+          if (!ViewControllerHelpers.field_a) {
+            if (StatefulTextPainter.field_w) {
+              var3 = 1;
+              stackIn_38_0 = true;
+              stackIn_38_1 = 11;
+              stackIn_38_2 = 15;
+              stackIn_38_3 = 0;
+              stackIn_38_4 = SingleChildContainer.field_y;
+              stackIn_39_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+              PendingTask.drawChatAreaWhite(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_39_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+              if (ButtonMenuDialog.field_ub) {
+                StatusMessageHelpers.field_e.writeOpcode((byte) -22, 57);
+                ButtonMenuDialog.field_ub = false;
+              }
+              if (SceneTextInput.field_Mb) {
+                StatusMessageHelpers.field_e.writeOpcode((byte) -114, 10);
+                SceneTextInput.field_Mb = false;
+              }
+              if (!MenuButtonPanel.field_C) {
+                return;
+              }
+              LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
+              MenuButtonPanel.field_C = false;
+              return;
+            }
+            stackIn_49_0 = 0;
+          } else {
+            stackIn_49_0 = 1;
+          }
+          var3 = stackIn_49_0;
+          stackIn_51_0 = true;
+          stackIn_51_1 = 11;
+          stackIn_51_2 = 15;
+          stackIn_51_3 = 0;
+          stackIn_51_4 = SingleChildContainer.field_y;
+          stackIn_52_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
+          PendingTask.drawChatAreaWhite(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_52_5, param1, var2 != 0, var3 != 0, true, 14, param0);
+        }
+        if (ButtonMenuDialog.field_ub) {
+          StatusMessageHelpers.field_e.writeOpcode((byte) -22, 57);
+          ButtonMenuDialog.field_ub = false;
+        }
+        if (SceneTextInput.field_Mb) {
+          StatusMessageHelpers.field_e.writeOpcode((byte) -114, 10);
+          SceneTextInput.field_Mb = false;
+        }
+        if (!MenuButtonPanel.field_C) {
+          return;
+        }
+        LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
+        MenuButtonPanel.field_C = false;
+    }
+
+    static {
+        field_b = "Back";
+        field_c = new byte[520];
+        field_d = "It is currently your turn!<br>Click 'Start' to enter the game.";
+    }
+}

@@ -51,12 +51,12 @@ final class NameCheckRequest {
 
     final static void drawFramedText(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
         try {
-          wj.drawFramedPanel(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
+          ColourBucketTable.drawFramedPanel(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
           if (param6 != 40) {
             NameCheckRequest.blendColourStep(-75, -88, -28, -51, 45);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,9 +68,9 @@ final class NameCheckRequest {
     }
 
     final static void configureSpeed(int param0, int param1) {
-        vf.field_q = (param1 << 16) / 150;
-        vf.field_m = 400 * param1 / 150;
-        vf.field_o = param0 * param1 / 150;
+        RawDataNode.field_q = (param1 << 16) / 150;
+        RawDataNode.field_m = 400 * param1 / 150;
+        RawDataNode.field_o = param0 * param1 / 150;
     }
 
     final boolean isComplete(byte param0) {
@@ -97,7 +97,7 @@ final class NameCheckRequest {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

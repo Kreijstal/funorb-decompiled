@@ -19,9 +19,9 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           return;
         }
         try {
-          qo.writeLoginHandshake(this.field_P.getDay(32), this.field_P.getMonth(72), this.field_P.getYear(param0), (byte) -126);
+          NameHelpers.writeLoginHandshake(this.field_P.getDay(32), this.field_P.getMonth(72), this.field_P.getYear(param0), (byte) -126);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,13 +30,13 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           super.updatePointer(param0, param1, param2, param3);
           this.field_L.field_B = this.field_P.getValidationProvider(0).getValidationState(param2 - 287) == CacheEntry.field_s ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void drawLayer(byte param0, int param1, int param2, int param3) {
         super.drawLayer((byte) -94, param1, param2, param3);
-        WidgetStyleLayer.field_e.drawText(sm.field_b, 4 + param1 + this.field_n, WidgetStyleLayer.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
+        WidgetStyleLayer.field_e.drawText(AudioAndCookieHelpers.field_b, 4 + param1 + this.field_n, WidgetStyleLayer.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
         if (param0 > -52) {
           field_J = (String) null;
         }
@@ -46,7 +46,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_P = new NumericDateInputWidget(new BevelTextPainter(10000536), TextButton.field_E, 0, 0, 140, 25);
         this.field_P.setValidator(new DateOfBirthValidator(), (byte) -48);
-        this.field_L = new TextButton(qn.field_lb, (UiListener) (this));
+        this.field_L = new TextButton(MessageDialog.field_lb, (UiListener) (this));
         this.field_z = new UiComponent[]{(UiComponent) ((Object) this.field_P), (UiComponent) ((Object) this.field_L)};
         this.field_L.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
         this.refreshLayout((byte) 45);
@@ -119,11 +119,11 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
             field_O = (byte[]) null;
           }
           for (var1_int = 0; SecondaryNodeDeque.field_f > var1_int; var1_int++) {
-            g.field_d[var1_int] = null;
+            SupportPageHelpers.field_d[var1_int] = null;
           }
           SecondaryNodeDeque.field_f = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
         }
     }
 

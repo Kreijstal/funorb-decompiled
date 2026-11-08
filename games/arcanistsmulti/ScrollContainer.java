@@ -11,7 +11,7 @@ final class ScrollContainer extends ArrayWidgetContainer {
     private boolean field_U;
     static int field_I;
     static String field_K;
-    wm field_P;
+    PaddedContainer field_P;
     private Scrollbar field_Q;
     static String field_M;
     static int field_W;
@@ -40,7 +40,7 @@ final class ScrollContainer extends ArrayWidgetContainer {
           this.field_O = param2;
           this.field_z[param1] = (UiComponent) ((Object) param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class ScrollContainer extends ArrayWidgetContainer {
           this.updateScrollbarRange(1);
           this.syncContentToScrollbar(-2023111216);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class ScrollContainer extends ArrayWidgetContainer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ScrollContainer extends ArrayWidgetContainer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -187,15 +187,15 @@ final class ScrollContainer extends ArrayWidgetContainer {
 
     ScrollContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, UiComponent param5, WidgetPainter param6) {
         super(param0, param1, param2, param3, param4);
-        wm dupTemp$0 = null;
+        PaddedContainer dupTemp$0 = null;
         try {
           this.field_z = new UiComponent[3];
-          dupTemp$0 = new wm(param0, param1, param2, param3, param6, param5);
+          dupTemp$0 = new PaddedContainer(param0, param1, param2, param3, param6, param5);
           this.field_P = dupTemp$0;
           this.field_z[2] = (UiComponent) ((Object) dupTemp$0);
           this.layoutChildren(123);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

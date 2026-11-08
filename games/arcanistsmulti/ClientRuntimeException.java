@@ -1,0 +1,122 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClientRuntimeException extends RuntimeException {
+    static int field_c;
+    static PlatformTaskDispatcher field_b;
+    static String[] field_a;
+
+    final static void setPointerTarget(int param0, String param1) {
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var2_intLifetime1;
+        var3 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          if (TextFieldValidator.field_m == -1 &&
+            AccountRegistrationPanel.field_J == -1) {
+            TextFieldValidator.field_m = EmailLoginCredentials.field_g;
+            AccountRegistrationPanel.field_J = MenuButtonPanel.field_I;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          DelegatingCanvas.field_f = DelegatingCanvas.field_f + 1;
+          if (param1 != null) {
+            decompiledFrameRemainder0 = !(param1.equals(GameListSortHelpers.field_c));
+          } else {
+            decompiledFrameRemainder0 = (GameListSortHelpers.field_c == null);
+          }
+          if (decompiledFrameRemainder0) {
+            if (!ReflectionCheckRequest.field_i) {
+              if (DelegatingCanvas.field_f >= LoginResultHelpers.field_e) {
+                stackIn_17_0 = (DelegatingCanvas.field_f < ViewportSetupHelpers.field_e + LoginResultHelpers.field_e) ? 1 : 0;
+              } else {
+                stackIn_17_0 = 0;
+              }
+            } else {
+              stackIn_17_0 = 0;
+            }
+            var2_int = stackIn_17_0;
+            if (param1 == null) {
+              DelegatingCanvas.field_f = 0;
+            } else {
+              if (ReflectionCheckRequest.field_i) {
+                DelegatingCanvas.field_f = LoginResultHelpers.field_e;
+              } else {
+                if (var2_int == 0) {
+                  DelegatingCanvas.field_f = 0;
+                } else {
+                  DelegatingCanvas.field_f = LoginResultHelpers.field_e;
+                }
+              }
+            }
+            if (param1 != null) {
+              ReflectionCheckRequest.field_i = false;
+            } else {
+              if (var2_int != 0) {
+                ReflectionCheckRequest.field_i = true;
+              }
+            }
+            IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
+            ProxySocketConnector.field_p = AccountRegistrationPanel.field_J;
+          }
+          var2_intLifetime1 = -49 / ((param0 + 45) / 60);
+          GameListSortHelpers.field_c = param1;
+          if (!ReflectionCheckRequest.field_i &&
+            LoginResultHelpers.field_e > DelegatingCanvas.field_f &&
+            ArchiveProvider.field_d) {
+            IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
+            ProxySocketConnector.field_p = AccountRegistrationPanel.field_J;
+            DelegatingCanvas.field_f = 0;
+          }
+          TextFieldValidator.field_m = -1;
+          AccountRegistrationPanel.field_J = -1;
+          if (ReflectionCheckRequest.field_i) {
+            if (ValidationStatusIcon.field_Q != DelegatingCanvas.field_f) {
+              return;
+            }
+            DelegatingCanvas.field_f = 0;
+            ReflectionCheckRequest.field_i = false;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_43_0 = var2;
+          stackIn_43_1 = new StringBuilder().append("qg.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_44_2 = "null";
+          } else {
+            stackIn_44_2 = "{...}";
+          }
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 <= 49) {
+          return;
+        }
+        field_b = null;
+        field_a = null;
+    }
+
+    ClientRuntimeException() {
+    }
+
+    final static boolean hasMenuPage(int param0) {
+        if (param0 > -61) {
+          return true;
+        }
+        return StatefulTextPainter.field_p != -1 ? true : false;
+    }
+
+    static {
+        field_c = -1;
+        field_a = new String[16];
+    }
+}

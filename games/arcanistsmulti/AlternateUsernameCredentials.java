@@ -14,19 +14,19 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
     final static PcmStreamMixer getEffectMixer(boolean param0) {
         if (param0) {
           AlternateUsernameCredentials.clearPasswordScene((byte) -35);
-          return pc.field_e;
+          return TexturedSpriteHelpers.field_e;
         }
-        return pc.field_e;
+        return TexturedSpriteHelpers.field_e;
     }
 
     AlternateUsernameCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
-    final static pb queueResponse(int param0, boolean param1) {
-        pb var2 = new pb();
+    final static QueuedResponse queueResponse(int param0, boolean param1) {
+        QueuedResponse var2 = new QueuedResponse();
         JaggrabDownloader.field_q.addLast(var2, -1);
-        ik.sendByteRequest(param0, 0);
+        LobbyBuilderHelpers.sendByteRequest(param0, 0);
         if (!param1) {
           return var2;
         }
@@ -38,7 +38,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         if (param0 != 0) {
           return (CredentialKind) null;
         }
-        return fe.field_n;
+        return PendingTask.field_n;
     }
 
     final static void clearPasswordScene(byte param0) {
@@ -60,15 +60,15 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         int var1 = -71 / ((param0 + 50) / 40);
     }
 
-    final static void queueStatsReport(cm param0, int param1, int param2) {
+    final static void queueStatsReport(StatsRecord param0, int param1, int param2) {
         try {
-          cc.field_e.addLast(param0, -1);
-          hb.sendStatsReport(param0, param2, (byte) 92);
+          AngleHelpers.field_e.addLast(param0, -1);
+          SceneListPanel.sendStatsReport(param0, param2, (byte) 92);
           if (param1 < 89) {
             field_o = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

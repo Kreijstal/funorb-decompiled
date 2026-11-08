@@ -24,7 +24,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
           if (param0) {
             field_D = (boolean[]) null;
           }
-          stackIn_3_0 = jo.repeatCharacter(0, '*', param1.field_g.length());
+          stackIn_3_0 = BitHelpers.repeatCharacter(0, '*', param1.field_g.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,30 +36,30 @@ final class PasswordFieldPainter extends BevelTextPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void initializeCaptionTable(byte param0) {
-        ModalPanelStack.field_K = new String[aj.field_g];
+        ModalPanelStack.field_K = new String[GameOptionType.field_g];
         ModalPanelStack.field_K[9] = DiskCacheWorker.field_c;
         ModalPanelStack.field_K[20] = ByteStorage.field_b;
         ModalPanelStack.field_K[18] = ModalPanelStack.field_E;
         ModalPanelStack.field_K[19] = ArchiveRequest.field_r;
-        ModalPanelStack.field_K[15] = gg.field_d;
+        ModalPanelStack.field_K[15] = DecodedSpriteHelpers.field_d;
         ModalPanelStack.field_K[17] = MenuScreen.field_e;
-        ModalPanelStack.field_K[5] = aa.field_i;
-        ModalPanelStack.field_K[param0] = lf.field_h;
+        ModalPanelStack.field_K[5] = CommonUiHelpers.field_i;
+        ModalPanelStack.field_K[param0] = ScreenTransitionHelpers.field_h;
         ModalPanelStack.field_K[13] = DirectByteStorage.field_g;
         ModalPanelStack.field_K[7] = SpriteState.field_r;
         ModalPanelStack.field_K[16] = OptionsDialog.field_sb;
-        ModalPanelStack.field_K[4] = cc.field_c;
-        ModalPanelStack.field_K[21] = ja.field_w;
-        ModalPanelStack.field_K[11] = sa.field_Gb;
+        ModalPanelStack.field_K[4] = AngleHelpers.field_c;
+        ModalPanelStack.field_K[21] = ConfirmedNameValidator.field_w;
+        ModalPanelStack.field_K[11] = ConfirmScene.field_Gb;
     }
 
     PasswordFieldPainter(int param0) {
-        this(ia.field_c, param0);
+        this(RootInputHelpers.field_c, param0);
     }
 
     public static void releaseStatics(byte param0) {
@@ -95,7 +95,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
           if (!SocketJs5Transport.field_r) {
             return false;
           }
-          if (nj.field_c == 2 &&
+          if (NameCheckHelpers.field_c == 2 &&
             GridContainer.field_S != null) {
             var3 = (CharSequence) ((Object) param0);
             if (!GridContainer.field_S.equals(Js5ArchiveManager.normalizeNameForLookup(var3, -13))) {
@@ -117,14 +117,14 @@ final class PasswordFieldPainter extends BevelTextPainter {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void sendSavedLayout(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        CipherPacketBuffer var2 = he.field_e;
+        CipherPacketBuffer var2 = StatusMessageHelpers.field_e;
         int var3Lifetime1;
         int var4Lifetime1;
         var2.writeOpcode((byte) -126, param1);

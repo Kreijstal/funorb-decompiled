@@ -11,7 +11,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     static int field_rb;
     private boolean field_V;
     static int[] field_pb;
-    private om field_ob;
+    private CapsuleBar field_ob;
     private String field_lb;
     static Sprite field_mb;
 
@@ -56,7 +56,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,13 +69,13 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             var3_int = SocketConnector.field_k.paragraphHeight(this.field_jb, 260, SocketConnector.field_k.field_C);
             this.centerOnScreen(300, 0, var3_int + 150);
           }
-          this.field_ob = new om(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_ob = new CapsuleBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_sb = false;
           this.field_V = false;
           this.field_ob.field_I = true;
           this.addChild(-78, this.field_ob);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,12 +115,12 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         RuntimeException var20 = null;
         try {
           ArchiveRequest.loadLobbySprites(param12 ^ param12, param17, param0, param1, param10);
-          gf.loadDisplayNameSprites((byte) 72, param17);
+          DisplayNameChangedDialog.loadDisplayNameSprites((byte) 72, param17);
           CacheEntry.initializeGameOptions(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 - 17290);
           FrameClock.initializeChatFilter(param7, param14, param17, (byte) -103);
           PasswordFieldPainter.initializeCaptionTable((byte) 6);
-          ik.buildLobbyRoot((byte) -85);
-          r.refreshOverlay(false);
+          LobbyBuilderHelpers.buildLobbyRoot((byte) -85);
+          OverlayHelpers.refreshOverlay(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 

@@ -32,7 +32,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         if (param2 != 0) {
           return;
         }
-        BitmapFont var5 = ia.field_c;
+        BitmapFont var5 = RootInputHelpers.field_c;
         if (param0 >= -52) {
           UiComponent var6 = (UiComponent) null;
           this.handleKeyInput((UiComponent) null, (byte) -28, 'ￒ', -66);
@@ -76,7 +76,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           }
           SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,9 +196,9 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             var3_int = param0.length;
             this.field_K = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_K[var4_int] = qo.normalizeName((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_K[var4_int] = NameHelpers.normalizeName((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new LinkButtonPainter(ia.field_c, 0, 1);
+            var4 = new LinkButtonPainter(RootInputHelpers.field_c, 0, 1);
             this.field_J = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_J[var5] = new TextButton(this.field_K[var5], (UiListener) (this));
@@ -208,7 +208,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.addChild(-82, this.field_J[var5]);
             }
             var6 = 11 / ((6 - param1) / 42);
-            this.field_J[var3_int] = new TextButton(pc.field_d, (UiListener) (this));
+            this.field_J[var3_int] = new TextButton(TexturedSpriteHelpers.field_d, (UiListener) (this));
             this.field_J[var3_int].field_r = (WidgetPainter) ((Object) var4);
             this.field_J[var3_int].setBounds(15, (1 + var3_int) * 16 + 20, 100, 0, -60);
             this.addChild(-87, this.field_J[var3_int]);
@@ -226,7 +226,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

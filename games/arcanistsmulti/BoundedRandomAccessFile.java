@@ -41,54 +41,54 @@ final class BoundedRandomAccessFile {
         int var4;
         int var5;
         int var5Lifetime1;
-        if (!oj.field_i) {
+        if (!LoginMethodHelpers.field_i) {
           return;
         }
         if (param2 != -32507) {
           return;
         }
-        co.field_f.updateInputFullScreen(param0, (byte) 75);
+        BattleResetHelpers.field_f.updateInputFullScreen(param0, (byte) 75);
         var4 = CacheEntry.field_q.isAnyTabActive((byte) 93) ? 1 : 0;
         if (WrappedTextLayout.field_r != 0 &&
           var4 == 0) {
           param0 = false;
-          uc.closeQuickChatIfOpen(3);
+          QuickChatHelpers.closeQuickChatIfOpen(3);
         }
         if (!param0) {
           if (var4 == 0) {
             var5 = CacheEntry.field_q.totalHeight(0) + CacheEntry.field_q.field_V;
             if (var5 > 640) {
-              ng.field_K = ng.field_K + 5;
+              TermsNoticePanel.field_K = TermsNoticePanel.field_K + 5;
               return;
             }
             if (var5 >= 635) {
               return;
             }
-            if (ng.field_K <= 0) {
+            if (TermsNoticePanel.field_K <= 0) {
               return;
             }
-            ng.field_K = ng.field_K - 5;
+            TermsNoticePanel.field_K = TermsNoticePanel.field_K - 5;
             return;
           }
-          co.field_f.updateInputFullScreen(param0, (byte) 66);
+          BattleResetHelpers.field_f.updateInputFullScreen(param0, (byte) 66);
         } else {
           CacheEntry.field_q.updateTabs(param1, -10284, param3);
           if (var4 != 0) {
-            co.field_f.updateInputFullScreen(param0, (byte) 66);
+            BattleResetHelpers.field_f.updateInputFullScreen(param0, (byte) 66);
           }
         }
         var5Lifetime1 = CacheEntry.field_q.totalHeight(0) + CacheEntry.field_q.field_V;
         if (var5Lifetime1 > 640) {
-          ng.field_K = ng.field_K + 5;
+          TermsNoticePanel.field_K = TermsNoticePanel.field_K + 5;
           return;
         }
         if (var5Lifetime1 >= 635) {
           return;
         }
-        if (ng.field_K <= 0) {
+        if (TermsNoticePanel.field_K <= 0) {
           return;
         }
-        ng.field_K = ng.field_K - 5;
+        TermsNoticePanel.field_K = TermsNoticePanel.field_K - 5;
         return;
     }
 
@@ -122,7 +122,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class BoundedRandomAccessFile {
           this.field_d.write(param3, param1, param2);
           this.field_a = this.field_a + (long)param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "kb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "kb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class BoundedRandomAccessFile {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -32,8 +32,8 @@ final class AudioService implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              ao.sleepMillis(10L, 1);
-              mb.flushEventQueue(-75, (Object) null, this.field_f);
+              LobbyLayoutHelpers.sleepMillis(10L, 1);
+              DropdownItemList.flushEventQueue(-75, (Object) null, this.field_f);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

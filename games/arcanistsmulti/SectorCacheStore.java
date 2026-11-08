@@ -54,7 +54,7 @@ final class SectorCacheStore {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -98,9 +98,9 @@ final class SectorCacheStore {
                 var19 = (byte[]) null;
                 this.writeEntry((byte[]) null, true, -34, -67);
               }
-              this.field_e.read(6, ae.field_c, (byte) -39, 0);
-              var4_int = (255 & ae.field_c[2]) + (16711680 & ae.field_c[0] << 16) + ((ae.field_c[1] & 255) << 8);
-              var5 = (255 & ae.field_c[5]) + (((255 & ae.field_c[3]) << 16) + ((ae.field_c[4] & 255) << 8));
+              this.field_e.read(6, LobbyRequestHelpers.field_c, (byte) -39, 0);
+              var4_int = (255 & LobbyRequestHelpers.field_c[2]) + (16711680 & LobbyRequestHelpers.field_c[0] << 16) + ((LobbyRequestHelpers.field_c[1] & 255) << 8);
+              var5 = (255 & LobbyRequestHelpers.field_c[5]) + (((255 & LobbyRequestHelpers.field_c[3]) << 16) + ((LobbyRequestHelpers.field_c[4] & 255) << 8));
               if (var4_int < 0) {
                 return null;
               }
@@ -128,21 +128,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_c.read(var9 + var14, ae.field_c, (byte) -39, 0);
-                  var10 = (ae.field_c[3] & 255) + (((ae.field_c[0] & 255) << 24) - (-(ae.field_c[1] << 16 & 16711680) - (ae.field_c[2] << 8 & 65280)));
-                  var13 = ae.field_c[9] & 255;
-                  var11 = ((ae.field_c[4] & 255) << 8) + (ae.field_c[5] & 255);
-                  var12 = (ae.field_c[7] << 8 & 65280) + ((ae.field_c[6] << 16 & 16711680) + (255 & ae.field_c[8]));
+                  this.field_c.read(var9 + var14, LobbyRequestHelpers.field_c, (byte) -39, 0);
+                  var10 = (LobbyRequestHelpers.field_c[3] & 255) + (((LobbyRequestHelpers.field_c[0] & 255) << 24) - (-(LobbyRequestHelpers.field_c[1] << 16 & 16711680) - (LobbyRequestHelpers.field_c[2] << 8 & 65280)));
+                  var13 = LobbyRequestHelpers.field_c[9] & 255;
+                  var11 = ((LobbyRequestHelpers.field_c[4] & 255) << 8) + (LobbyRequestHelpers.field_c[5] & 255);
+                  var12 = (LobbyRequestHelpers.field_c[7] << 8 & 65280) + ((LobbyRequestHelpers.field_c[6] << 16 & 16711680) + (255 & LobbyRequestHelpers.field_c[8]));
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_c.read(var14 + var9, ae.field_c, (byte) -39, 0);
-                  var12 = (ae.field_c[5] << 8 & 65280) + (((255 & ae.field_c[4]) << 16) + (ae.field_c[6] & 255));
-                  var10 = (ae.field_c[1] & 255) + (65280 & ae.field_c[0] << 8);
-                  var11 = (255 & ae.field_c[3]) + ((ae.field_c[2] & 255) << 8);
-                  var13 = ae.field_c[7] & 255;
+                  this.field_c.read(var14 + var9, LobbyRequestHelpers.field_c, (byte) -39, 0);
+                  var12 = (LobbyRequestHelpers.field_c[5] << 8 & 65280) + (((255 & LobbyRequestHelpers.field_c[4]) << 16) + (LobbyRequestHelpers.field_c[6] & 255));
+                  var10 = (LobbyRequestHelpers.field_c[1] & 255) + (65280 & LobbyRequestHelpers.field_c[0] << 8);
+                  var11 = (255 & LobbyRequestHelpers.field_c[3]) + ((LobbyRequestHelpers.field_c[2] & 255) << 8);
+                  var13 = LobbyRequestHelpers.field_c[7] & 255;
                 }
                 if (param0 != var10) {
                   return null;
@@ -166,7 +166,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ae.field_c[var16];
+                  var6[incrementValue$2] = LobbyRequestHelpers.field_c[var16];
                 }
               }
               stackIn_50_0 = var6;
@@ -241,8 +241,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_e.seek((long)(6 * param0), -111);
-                  this.field_e.read(6, ae.field_c, (byte) -39, 0);
-                  var7_int = (ae.field_c[5] & 255) + (((ae.field_c[3] & 255) << 16) + (65280 & ae.field_c[4] << 8));
+                  this.field_e.read(6, LobbyRequestHelpers.field_c, (byte) -39, 0);
+                  var7_int = (LobbyRequestHelpers.field_c[5] & 255) + (((LobbyRequestHelpers.field_c[3] & 255) << 16) + (65280 & LobbyRequestHelpers.field_c[4] << 8));
                   if (var7_int <= 0 ||
                     !(this.field_c.length((byte) -30) / 520L >= (long)var7_int)) {
                     return false;
@@ -253,14 +253,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                ae.field_c[0] = (byte)(param2 >> 16);
-                ae.field_c[3] = (byte)(var7_int >> 16);
-                ae.field_c[1] = (byte)(param2 >> 8);
-                ae.field_c[4] = (byte)(var7_int >> 8);
-                ae.field_c[5] = (byte)var7_int;
-                ae.field_c[2] = (byte)param2;
+                LobbyRequestHelpers.field_c[0] = (byte)(param2 >> 16);
+                LobbyRequestHelpers.field_c[3] = (byte)(var7_int >> 16);
+                LobbyRequestHelpers.field_c[1] = (byte)(param2 >> 8);
+                LobbyRequestHelpers.field_c[4] = (byte)(var7_int >> 8);
+                LobbyRequestHelpers.field_c[5] = (byte)var7_int;
+                LobbyRequestHelpers.field_c[2] = (byte)param2;
                 this.field_e.seek((long)(param0 * 6), -104);
-                this.field_e.write((byte) -53, 0, ae.field_c, 6);
+                this.field_e.write((byte) -53, 0, LobbyRequestHelpers.field_c, 6);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -271,7 +271,7 @@ final class SectorCacheStore {
                       this.field_c.seek((long)(520 * var7_int), -88);
                       if (param0 > 65535) {
                         try {
-                          this.field_c.read(10, ae.field_c, (byte) -39, 0);
+                          this.field_c.read(10, LobbyRequestHelpers.field_c, (byte) -39, 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -281,13 +281,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (255 & ae.field_c[5]) + (ae.field_c[4] << 8 & 65280);
-                        var10 = (65280 & ae.field_c[7] << 8) + ((255 & ae.field_c[6]) << 16) + (ae.field_c[8] & 255);
-                        var11 = (ae.field_c[3] & 255) + ((-16777216 & ae.field_c[0] << 24) - (-((255 & ae.field_c[1]) << 16) - ((ae.field_c[2] & 255) << 8)));
-                        var13 = 255 & ae.field_c[9];
+                        var12 = (255 & LobbyRequestHelpers.field_c[5]) + (LobbyRequestHelpers.field_c[4] << 8 & 65280);
+                        var10 = (65280 & LobbyRequestHelpers.field_c[7] << 8) + ((255 & LobbyRequestHelpers.field_c[6]) << 16) + (LobbyRequestHelpers.field_c[8] & 255);
+                        var11 = (LobbyRequestHelpers.field_c[3] & 255) + ((-16777216 & LobbyRequestHelpers.field_c[0] << 24) - (-((255 & LobbyRequestHelpers.field_c[1]) << 16) - ((LobbyRequestHelpers.field_c[2] & 255) << 8)));
+                        var13 = 255 & LobbyRequestHelpers.field_c[9];
                       } else {
                         try {
-                          this.field_c.read(8, ae.field_c, (byte) -39, 0);
+                          this.field_c.read(8, LobbyRequestHelpers.field_c, (byte) -39, 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -297,10 +297,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var10 = (65280 & ae.field_c[5] << 8) + (((255 & ae.field_c[4]) << 16) + (255 & ae.field_c[6]));
-                        var11 = (ae.field_c[1] & 255) + ((255 & ae.field_c[0]) << 8);
-                        var13 = 255 & ae.field_c[7];
-                        var12 = (255 & ae.field_c[3]) + ((255 & ae.field_c[2]) << 8);
+                        var10 = (65280 & LobbyRequestHelpers.field_c[5] << 8) + (((255 & LobbyRequestHelpers.field_c[4]) << 16) + (255 & LobbyRequestHelpers.field_c[6]));
+                        var11 = (LobbyRequestHelpers.field_c[1] & 255) + ((255 & LobbyRequestHelpers.field_c[0]) << 8);
+                        var13 = 255 & LobbyRequestHelpers.field_c[7];
+                        var12 = (255 & LobbyRequestHelpers.field_c[3]) + ((255 & LobbyRequestHelpers.field_c[2]) << 8);
                       }
                       if ((var11 == param0 &&
                         var12 == var9 &&
@@ -327,16 +327,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param0 <= 65535) {
-                      ae.field_c[6] = (byte)var10;
-                      ae.field_c[5] = (byte)(var10 >> 8);
-                      ae.field_c[3] = (byte)var9;
-                      ae.field_c[0] = (byte)(param0 >> 8);
-                      ae.field_c[4] = (byte)(var10 >> 16);
-                      ae.field_c[2] = (byte)(var9 >> 8);
-                      ae.field_c[7] = (byte)this.field_k;
-                      ae.field_c[1] = (byte)param0;
+                      LobbyRequestHelpers.field_c[6] = (byte)var10;
+                      LobbyRequestHelpers.field_c[5] = (byte)(var10 >> 8);
+                      LobbyRequestHelpers.field_c[3] = (byte)var9;
+                      LobbyRequestHelpers.field_c[0] = (byte)(param0 >> 8);
+                      LobbyRequestHelpers.field_c[4] = (byte)(var10 >> 16);
+                      LobbyRequestHelpers.field_c[2] = (byte)(var9 >> 8);
+                      LobbyRequestHelpers.field_c[7] = (byte)this.field_k;
+                      LobbyRequestHelpers.field_c[1] = (byte)param0;
                       this.field_c.seek((long)(520 * var7_int), -112);
-                      this.field_c.write((byte) -53, 0, ae.field_c, 8);
+                      this.field_c.write((byte) -53, 0, LobbyRequestHelpers.field_c, 8);
                       var11 = -var8 + param2;
                       if (var11 > 512) {
                         var11 = 512;
@@ -344,18 +344,18 @@ final class SectorCacheStore {
                       this.field_c.write((byte) -53, var8, param4, var11);
                       var8 = var8 + var11;
                     } else {
-                      ae.field_c[7] = (byte)(var10 >> 8);
-                      ae.field_c[6] = (byte)(var10 >> 16);
-                      ae.field_c[0] = (byte)(param0 >> 24);
-                      ae.field_c[4] = (byte)(var9 >> 8);
-                      ae.field_c[3] = (byte)param0;
-                      ae.field_c[2] = (byte)(param0 >> 8);
-                      ae.field_c[9] = (byte)this.field_k;
-                      ae.field_c[5] = (byte)var9;
-                      ae.field_c[1] = (byte)(param0 >> 16);
-                      ae.field_c[8] = (byte)var10;
+                      LobbyRequestHelpers.field_c[7] = (byte)(var10 >> 8);
+                      LobbyRequestHelpers.field_c[6] = (byte)(var10 >> 16);
+                      LobbyRequestHelpers.field_c[0] = (byte)(param0 >> 24);
+                      LobbyRequestHelpers.field_c[4] = (byte)(var9 >> 8);
+                      LobbyRequestHelpers.field_c[3] = (byte)param0;
+                      LobbyRequestHelpers.field_c[2] = (byte)(param0 >> 8);
+                      LobbyRequestHelpers.field_c[9] = (byte)this.field_k;
+                      LobbyRequestHelpers.field_c[5] = (byte)var9;
+                      LobbyRequestHelpers.field_c[1] = (byte)(param0 >> 16);
+                      LobbyRequestHelpers.field_c[8] = (byte)var10;
                       this.field_c.seek((long)(var7_int * 520), -88);
-                      this.field_c.write((byte) -53, 0, ae.field_c, 10);
+                      this.field_c.write((byte) -53, 0, LobbyRequestHelpers.field_c, 10);
                       var11 = -var8 + param2;
                       if (var11 > 510) {
                         var11 = 510;
@@ -386,7 +386,7 @@ final class SectorCacheStore {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -457,7 +457,7 @@ final class SectorCacheStore {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -519,7 +519,7 @@ final class SectorCacheStore {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -533,7 +533,7 @@ final class SectorCacheStore {
           this.field_k = param0;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "be.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "be.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -45,15 +45,15 @@ final class IntrusiveDeque {
     }
 
     final static void startReconnect(byte param0) {
-        if (!qe.field_p) {
+        if (!QueuedPacket.field_p) {
           throw new IllegalStateException();
         }
-        lh.field_n = true;
+        ValueListPainter.field_n = true;
         CachedArchiveProvider.showLoginPanelDefault(true, (byte) -125);
         if (param0 != 4) {
           field_d = 12;
         }
-        fj.field_j = 0;
+        BitAndSpriteHelpers.field_j = 0;
     }
 
     private final void insertAllBefore(IntrusiveDeque param0, int param1, IntrusiveNode param2) {
@@ -97,7 +97,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class IntrusiveDeque {
             IntrusiveDeque.areCommonUiResourcesReady((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -341,11 +341,11 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (!qc.isValidDisplayName(param1 + 640, true, param0)) {
+          if (!ViewportSetupHelpers.isValidDisplayName(param1 + 640, true, param0)) {
             return false;
           }
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
-            if (!qo.isAllowedNameCharacter(param0.charAt(var2_int), 0)) {
+            if (!NameHelpers.isAllowedNameCharacter(param0.charAt(var2_int), 0)) {
               return false;
             }
           }
@@ -360,7 +360,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class IntrusiveDeque {
           node.previous.next = node;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vn.B(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vn.B(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

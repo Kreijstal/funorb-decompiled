@@ -1,0 +1,390 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoundEffectVoice extends IntrusiveNode {
+    static long field_k;
+    static String field_i;
+    PcmSampleStream field_m;
+    static Sprite[] field_g;
+    IntrusiveNode field_n;
+    int field_l;
+    static int[] field_h;
+    static String field_j;
+
+    public static void releaseStatics(int param0) {
+        if (param0 != -1333592895) {
+          field_j = (String) null;
+        }
+        field_i = null;
+        field_j = null;
+        field_g = null;
+        field_h = null;
+    }
+
+    final static Sprite[] createSolidFrame(int param0, int param1, int param2) {
+        if (param1 <= 27) {
+          Sprite var4 = (Sprite) null;
+          SoundEffectVoice.spriteHitsMask((Battle) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
+        }
+        return LoginMethod.createSolidFrame(1, (byte) 127, param2, param0);
+    }
+
+    final static void requestLogout(int param0) {
+        if (param0 != -11) {
+          field_h = (int[]) null;
+        }
+        if (BitAndSpriteHelpers.field_j == 10 ||
+          !LabeledField.alwaysTrue(-115)) {
+          DiskCacheWorker.beginLogout((byte) 108);
+          BitAndSpriteHelpers.field_j = 11;
+        }
+        IconHighlightPainter.field_f = true;
+    }
+
+    final static boolean spriteHitsMask(Battle param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
+        int var19 = 0;
+        int var20 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        String stackIn_68_2 = null;
+        StringBuilder stackIn_70_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_74_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int[] var18 = null;
+        int var21 = 0;
+        int[] var23 = null;
+        int[] var25 = null;
+        byte[] var27 = null;
+        var21 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          param3 = param3 + param5.field_x;
+          param1 = param1 + param5.field_o;
+          GameSelectionHelpers.field_k = 0;
+          var6_int = 0;
+          NodeHashTable.field_m = 0;
+          BitHelpers.field_b = false;
+          if (param4 != -1) {
+            field_k = -23L;
+          }
+          var7 = param5.field_q;
+          var8 = param5.field_y;
+          if (param3 < param0.field_y &&
+            -var7 < param3) {
+            if (param1 >= param0.field_H) {
+              return false;
+            }
+            if (-var8 >= param1) {
+              return false;
+            }
+            stackIn_16_0 = (0 < param3) ? param3 : 0;
+            var9 = stackIn_16_0;
+            var10 = param3 + var7;
+            if (param0.field_y < var10) {
+              var10 = param0.field_y;
+            }
+            stackIn_22_0 = (param1 <= 0) ? 0 : param1;
+            var11 = stackIn_22_0;
+            var12 = param1 + var8;
+            if (param0.field_y < var12) {
+              var12 = param0.field_y;
+            }
+            var10 = var10 - var9;
+            var12 = var12 - var11;
+            if ((var12 & 1) > 0) {
+              var12--;
+            }
+            if ((1 & var10) > 0) {
+              var10--;
+            }
+            var13 = (var9 >> 1) + (var11 >> 1) * param0.field_hb;
+            var14 = param0.field_hb - (var10 >> 1);
+            var15 = (-param1 + var11) * param5.field_q - param3 + var9;
+            var16 = var7 - var10;
+            var16 = var16 + var7;
+            var27 = param2.field_m;
+            var25 = param5.field_A;
+            var23 = var25;
+            var18 = var23;
+            for (var19 = var12; var19 > 0; var19 -= 2) {
+              for (var20 = var10; var20 > 0; var20 -= 2) {
+                if (var27[var13] != 0) {
+                  if (var25[var15] != 0) {
+                    GameSelectionHelpers.field_k = GameSelectionHelpers.field_k + (var12 + (var11 - var19));
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var10 + var9));
+                    var6_int++;
+                    if (-1 == var27[var13]) {
+                      BitHelpers.field_b = true;
+                    }
+                  }
+                  if (var18[var15 + 1] != 0) {
+                    GameSelectionHelpers.field_k = GameSelectionHelpers.field_k + (-var19 + var11 + var12);
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var9 + var10 + 1));
+                    if (var27[var13] == -1) {
+                      BitHelpers.field_b = true;
+                    }
+                    var6_int++;
+                  }
+                  if (0 != var18[var15 + var7]) {
+                    GameSelectionHelpers.field_k = GameSelectionHelpers.field_k + (1 - var19 + (var12 + var11));
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + var10 + var9);
+                    var6_int++;
+                    if (var27[var13] == -1) {
+                      BitHelpers.field_b = true;
+                    }
+                  }
+                  if (var18[1 + (var15 + var7)] != 0) {
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var10 + (var9 + 1)));
+                    GameSelectionHelpers.field_k = GameSelectionHelpers.field_k + (1 + (-var19 + (var12 + var11)));
+                    var6_int++;
+                    if (-1 == var27[var13]) {
+                      BitHelpers.field_b = true;
+                    }
+                  }
+                }
+                var13++;
+                var15 += 2;
+              }
+              var13 = var13 + var14;
+              var15 = var15 + var16;
+              if (var13 >= param2.field_m.length) {
+                return false;
+              }
+            }
+            if (var6_int <= 0) {
+              return false;
+            }
+            NodeHashTable.field_m = NodeHashTable.field_m / var6_int;
+            GameSelectionHelpers.field_k = GameSelectionHelpers.field_k / var6_int;
+            return true;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_67_0 = var6;
+          stackIn_67_1 = new StringBuilder().append("fk.A(");
+          if (param0 == null) {
+            stackIn_68_2 = "null";
+          } else {
+            stackIn_68_2 = "{...}";
+          }
+          stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_71_2 = "null";
+          } else {
+            stackIn_71_2 = "{...}";
+          }
+          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_74_2 = "null";
+          } else {
+            stackIn_74_2 = "{...}";
+          }
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+        }
+    }
+
+    final static IndexedSprite[] createDecodedIndexedSprites(int param0) {
+        int var2 = 0;
+        int var3 = ArcanistsMulti.field_G ? 1 : 0;
+        IndexedSprite[] var1 = new IndexedSprite[ModalPanelStack.field_J];
+        for (var2 = param0; ModalPanelStack.field_J > var2; var2++) {
+          var1[var2] = new IndexedSprite(QueuedResponse.field_g, QuickChatPhraseCache.field_a, BufferedMessage.field_l[var2], SectorCacheStore.field_d[var2], ChatLine.field_p[var2], ServerMessage.field_i[var2], AccountRegistrationPanel.field_I[var2], PriceCaptionGlobals.field_c);
+        }
+        CanvasRasterBuffer.releaseDecodeArrays(-18229);
+        return var1;
+    }
+
+    final static void setSpriteRasterTarget(Sprite param0, int param1) {
+        try {
+          if (param1 != -23095) {
+            Sprite var3 = (Sprite) null;
+            SoundEffectVoice.setSpriteRasterTarget((Sprite) null, -12);
+          }
+          SpriteFrame.pushClipState(65280);
+          SoftwareRasterizer.setTarget(param0.field_A, param0.field_n, param0.field_w);
+        } catch (RuntimeException runtimeException) {
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "fk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static void readAchievementUpdate(byte param0) {
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int[] var3 = null;
+        int[] var4 = null;
+        CipherPacketBuffer var5 = null;
+        int var6 = 0;
+        int var8 = 0;
+        int[] var9 = null;
+        int[] var10 = null;
+        StatsRecord var11 = null;
+        PendingTask var12 = null;
+        CipherPacketBuffer var13 = null;
+        PendingTask var14 = null;
+        var8 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          if (param0 != -20) {
+            return;
+          }
+          var13 = UiContainer.field_z;
+          var2 = var13.readUnsignedByte((byte) 54);
+          if (var2 == 0) {
+            var10 = ScreenClearHelpers.newEightInts((byte) 12);
+            var3 = var10;
+            var9 = var10;
+            var4 = var9;
+            var5 = var13;
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -100);
+            for (var7 = 0; var7 < var6; var7++) {
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(-10674);
+            }
+            var12 = (PendingTask) (ChatPanel.field_e.first(param0 ^ -12637));
+            if (var12 == null) {
+              ProxySocketConnector.closeActiveConnection(false);
+              return;
+            }
+            var12.field_l = true;
+            var12.field_i = var3;
+            var12.unlink(true);
+            return;
+          }
+          if (var2 == 1) {
+            var11 = (StatsRecord) (AngleHelpers.field_e.first(12623));
+            if (var11 == null) {
+              ProxySocketConnector.closeActiveConnection(false);
+              return;
+            }
+            var11.unlink(true);
+          } else {
+            if (var2 != 2) {
+              DelegatingCanvas.reportError((Throwable) null, "A1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
+              ProxySocketConnector.closeActiveConnection(false);
+            } else {
+              var14 = (PendingTask) (ChatPanel.field_e.first(12623));
+              if (var14 == null) {
+                ProxySocketConnector.closeActiveConnection(false);
+                return;
+              }
+              var14.field_i = ScreenClearHelpers.newEightInts((byte) 12);
+              var14.field_l = true;
+              var14.unlink(true);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "fk.G(" + param0 + ')');
+        }
+    }
+
+    final static void openUrl(java.applet.Applet param0, boolean param1, String param2) {
+        try {
+          java.net.URL var3 = null;
+          RuntimeException stackIn_7_0 = null;
+          StringBuilder stackIn_7_1 = null;
+          String stackIn_8_2 = null;
+          StringBuilder stackIn_10_1 = null;
+          String stackIn_11_2 = null;
+          Throwable decompiledCaughtException = null;
+          Exception var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          try {
+            try {
+              var3 = new java.net.URL(param0.getCodeBase(), param2);
+              var3 = UrlHelpers.appendSessionParameters(param0, var3, -31843);
+              DelegatingCanvas.openExternalUrl(var3.toString(), param0, true, (byte) -109);
+              if (param1) {
+                field_i = (String) null;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = (Exception) (Object) decompiledCaughtException;
+              var3_ref.printStackTrace();
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_7_0 = var3_ref2;
+            stackIn_7_1 = new StringBuilder().append("fk.C(");
+            if (param0 == null) {
+              stackIn_8_2 = "null";
+            } else {
+              stackIn_8_2 = "{...}";
+            }
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_11_2 = "null";
+            } else {
+              stackIn_11_2 = "{...}";
+            }
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void drawTooltipBox(int param0, String param1) {
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+          var2_int = EmailLoginCredentials.field_g;
+          var3 = MenuButtonPanel.field_I;
+          var4 = IntrusiveNode.field_c.field_Z.wrappedLineCount(param1, 500);
+          var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
+          var6 = 2 + var4 * ImageProducerRasterBuffer.field_r;
+          var7 = PointerOriginHelpers.clampToScreenX(var2_int, var5, 12, 246);
+          var8 = LoginMethod.clampToScreenY(param0 + 10, 20, var6, var3);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
+          IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + IntrusiveDequeCursor.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);
+        } catch (RuntimeException runtimeException) {
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    SoundEffectVoice(PcmSampleStream param0, IntrusiveNode param1) {
+        try {
+          this.field_m = param0;
+          this.field_l = param0.getTargetVolume();
+          this.field_n = param1;
+          this.field_m.setVolumeQ6(CheckboxPainter.field_l * this.field_l + 128 >> 8);
+        } catch (RuntimeException runtimeException) {
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_i = "Down at the bottom-right of the screen you will see the map. You can use this to scan for your enemies and get a general feel of the arena. Click on it to move the view quickly.";
+        field_h = new int[]{58, 59, 60};
+        field_j = "Change display name";
+    }
+}

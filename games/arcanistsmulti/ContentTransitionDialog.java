@@ -3,14 +3,14 @@
  */
 abstract class ContentTransitionDialog extends ResizableModalPanel {
     private int field_kb;
-    private dm field_sb;
+    private AlphaContainer field_sb;
     static String field_qb;
     private int field_jb;
     private UiComponent field_V;
     private int field_nb;
     private int field_mb;
     private int field_ob;
-    private db field_rb;
+    private Crc32Helpers field_rb;
     static Sprite[] field_lb;
     static String field_pb;
 
@@ -18,7 +18,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (param0 < 57) {
           field_qb = (String) null;
         }
-        return qf.field_a == DirectByteStorage.field_f.field_Bb ? true : false;
+        return MembershipGlobals.field_a == DirectByteStorage.field_f.field_Bb ? true : false;
     }
 
     private final void replaceContent(int param0, UiComponent param1) {
@@ -33,14 +33,14 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           }
           if (param1 != null) {
             param1.setBounds(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
-            this.field_sb = new dm(param1);
+            this.field_sb = new AlphaContainer(param1);
           } else {
-            this.field_sb = new dm();
+            this.field_sb = new AlphaContainer();
           }
           this.addChild(-126, this.field_sb);
           this.field_V = null;
           if (param0 != 12) {
-            this.field_rb = (db) null;
+            this.field_rb = (Crc32Helpers) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_kb = param3;
           this.replaceContent(12, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

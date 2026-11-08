@@ -28,7 +28,7 @@ class SceneWidgetNode extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "to.NA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "to.NA(" + param0 + ')');
         }
     }
 
@@ -37,21 +37,21 @@ class SceneWidgetNode extends DualLinkNode {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pn.hasOpenOverlay((byte) 111)) {
+          if (LoginStackHelpers.hasOpenOverlay((byte) 111)) {
             param0 = false;
           }
           TextHotspotWidget.drawLetterboxedScene(-11837, param0);
           var2_int = 125 / ((25 - param1) / 59);
           if (GridContainer.field_J) {
-            SoftwareRasterizer.darkenRectangle(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
-            tn.field_Ob.field_c.drawFullScreen(param0, true);
+            SoftwareRasterizer.darkenRectangle(SceneTabStrip.field_Ob.field_c.field_T, SceneTabStrip.field_Ob.field_c.field_db, SceneTabStrip.field_Ob.field_c.field_x, SceneTabStrip.field_Ob.field_c.field_I);
+            SceneTabStrip.field_Ob.field_c.drawFullScreen(param0, true);
           }
           ByteStorage.drawRootScenes(param0, (byte) -73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "to.LA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "to.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ class SceneWidgetNode extends DualLinkNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ class SceneWidgetNode extends DualLinkNode {
             }
             try {
               if (0 == ClipState.field_m) {
-                FrameClock.field_a = ri.field_g.queueDirectSocketOpen(ed.field_Hb, true, IsaacRandom.field_g);
+                FrameClock.field_a = RasterSetupHelpers.field_g.queueDirectSocketOpen(MainMenuDialog.field_Hb, true, IsaacRandom.field_g);
                 ClipState.field_m = ClipState.field_m + 1;
               }
               if (ClipState.field_m == 1) {
@@ -177,19 +177,19 @@ class SceneWidgetNode extends DualLinkNode {
                 }
               }
               if (ClipState.field_m == 2) {
-                td.field_E = new BufferedSocket((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
+                ThreeButtonPanel.field_E = new BufferedSocket((java.net.Socket) (FrameClock.field_a.field_g), RasterSetupHelpers.field_g);
                 var1 = new PacketBuffer(13);
-                SpriteState.writeSpriteRequest(var1, PlayerActionMenu.field_b, BevelTextPainter.field_u, ce.field_o, 123);
+                SpriteState.writeSpriteRequest(var1, PlayerActionMenu.field_b, BevelTextPainter.field_u, GameSelectionHelpers.field_o, 123);
                 var1.writeByte(15, (byte) -28);
-                var1.writeInt(hd.field_a, (byte) -101);
-                td.field_E.write(13, 0, (byte) 126, var1.payload);
+                var1.writeInt(NameTextHelpers.field_a, (byte) -101);
+                ThreeButtonPanel.field_E.write(13, 0, (byte) 126, var1.payload);
                 ClipState.field_m = ClipState.field_m + 1;
-                GameApplet.field_E = qj.monotonicTimeMillis(-26572) + 30000L;
+                GameApplet.field_E = TimeAndInputHelpers.monotonicTimeMillis(-26572) + 30000L;
               }
               boolean decompiledFrameRemainder0 = true;
               if (3 == ClipState.field_m) {
-                if (td.field_E.available(0) > 0) {
-                  var1_int = td.field_E.read((byte) 120);
+                if (ThreeButtonPanel.field_E.available(0) > 0) {
+                  var1_int = ThreeButtonPanel.field_E.read((byte) 120);
                   if (var1_int != 0) {
                     stackIn_39_0 = FrameClock.applyLoginResponse((byte) 110, var1_int);
                     return stackIn_39_0;
@@ -198,7 +198,7 @@ class SceneWidgetNode extends DualLinkNode {
                   decompiledFrameRemainder0 = !(!ArcanistsMulti.field_G);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (qj.monotonicTimeMillis(-26572) > GameApplet.field_E)) {
+                  (TimeAndInputHelpers.monotonicTimeMillis(-26572) > GameApplet.field_E)) {
                   stackIn_47_0 = FrameClock.applyLoginResponse((byte) 110, -2);
                   return stackIn_47_0;
                 }
@@ -207,9 +207,9 @@ class SceneWidgetNode extends DualLinkNode {
                 stackIn_52_0 = -1;
                 return stackIn_52_0;
               }
-              GrowableIntList.field_c.setConnection(CipherPacketBuffer.field_n, true, td.field_E);
+              GrowableIntList.field_c.setConnection(CipherPacketBuffer.field_n, true, ThreeButtonPanel.field_E);
               FrameClock.field_a = null;
-              td.field_E = null;
+              ThreeButtonPanel.field_E = null;
               ClipState.field_m = 0;
               stackIn_50_0 = 0;
               return stackIn_50_0;
@@ -222,7 +222,7 @@ class SceneWidgetNode extends DualLinkNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var1_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw aa.wrapException((Throwable) ((Object) var1_ref2), "to.MA(" + param0 + ')');
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref2), "to.MA(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -353,7 +353,7 @@ class SceneWidgetNode extends DualLinkNode {
                 }
                 if (param6) {
                   PatchEnvelopeSet.field_k[var24Lifetime2] = var28Lifetime1 >> CachedArchiveProvider.field_C;
-                  vf.field_v[var24Lifetime2] = var29Lifetime1 >> CachedArchiveProvider.field_C;
+                  RawDataNode.field_v[var24Lifetime2] = var29Lifetime1 >> CachedArchiveProvider.field_C;
                   LinkButtonPainter.field_g[var24Lifetime2] = var30Lifetime1;
                 }
                 var24Lifetime2++;
@@ -387,9 +387,9 @@ class SceneWidgetNode extends DualLinkNode {
                   var25Lifetime1Lifetime1 = param4.field_o[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_E[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_p[var24Lifetime2];
-                  ik.field_d[var24Lifetime2] = (var19 * var27Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var16 >> 16) + var9;
+                  LobbyBuilderHelpers.field_d[var24Lifetime2] = (var19 * var27Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var16 >> 16) + var9;
                   SectorCacheStore.field_m[var24Lifetime2] = (var27Lifetime1Lifetime1 * var20 + (var13 * var25Lifetime1Lifetime1 + var17 * var26Lifetime1Lifetime1) >> 16) + var10;
-                  lm.field_b[var24Lifetime2] = var11 + (var21 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var18 + var25Lifetime1Lifetime1 * var14) >> 16);
+                  GameDetailsRenderer.field_b[var24Lifetime2] = var11 + (var21 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var18 + var25Lifetime1Lifetime1 * var14) >> 16);
                   var24Lifetime2++;
                   if (var31 != 0) {
                     return;
@@ -425,7 +425,7 @@ class SceneWidgetNode extends DualLinkNode {
                   var21 = param4.field_S[var18];
                   GameAppletShell.field_k[var18] = var9 * var19 - (-(var12 * var20) - var21 * var15Lifetime1) >> 16;
                   Battle.field_Lb[var18] = var16 * var21 + var13 * var20 + var10 * var19 >> 16;
-                  mf.field_b[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 16;
+                  EffectVolumeHelpers.field_b[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 16;
                   var18++;
                 }
               }
@@ -457,7 +457,7 @@ class SceneWidgetNode extends DualLinkNode {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

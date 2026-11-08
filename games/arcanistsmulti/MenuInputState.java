@@ -460,9 +460,9 @@ final class MenuInputState {
           param0.removeMouseListener(ResizableModalPanel.field_hb);
           param0.removeMouseMotionListener(ResizableModalPanel.field_hb);
           param0.removeFocusListener(ResizableModalPanel.field_hb);
-          rk.field_K = param1;
+          GradientBarButton.field_K = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -471,12 +471,12 @@ final class MenuInputState {
         return this.field_m != 0 ? true : false;
     }
 
-    final static aj[] getRegisteredEntries(int param0) {
+    final static GameOptionType[] getRegisteredEntries(int param0) {
         if (param0 == 96) {
-          return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
+          return new GameOptionType[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, ThreeButtonPanel.field_G, CapsuleBar.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, NineSliceHelpers.field_b, SessionCookieHelpers.field_b, DecodedSpriteHelpers.field_b, SpriteDecodeHelpers.field_b, DropTargetWidget.field_G, TermsNoticePanel.field_I, GameAppletShell.field_e};
         }
         field_i = (DraggableWidget) null;
-        return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
+        return new GameOptionType[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, ThreeButtonPanel.field_G, CapsuleBar.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, NineSliceHelpers.field_b, SessionCookieHelpers.field_b, DecodedSpriteHelpers.field_b, SpriteDecodeHelpers.field_b, DropTargetWidget.field_G, TermsNoticePanel.field_I, GameAppletShell.field_e};
     }
 
     final void clearInput(int param0) {

@@ -64,22 +64,22 @@ abstract class TextLayout {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final static void setFrameStyles(ec param0, ec param1, int param2, int param3, int param4, int param5) {
+    private final static void setFrameStyles(SpriteFrame param0, SpriteFrame param1, int param2, int param3, int param4, int param5) {
         QuickChatCategoryCache.field_h = param1;
-        vf.field_s = param0;
-        ic.field_a = param5;
+        RawDataNode.field_s = param0;
+        SpriteTrimHelpers.field_a = param5;
         if (param4 != -1) {
           return;
         }
         try {
           FullscreenFocusCanvas.field_d = param2;
-          f.field_h = param3;
+          PendingRequest.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "kh.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "kh.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -126,26 +126,26 @@ abstract class TextLayout {
             var5 = (java.awt.Canvas) null;
             TextLayout.drawLoadingFrame((byte) 126, (java.awt.Canvas) null, true);
           }
-          if (10 <= ih.field_f) {
+          if (10 <= PointerOriginHelpers.field_f) {
             if (!TextFieldValidator.isIntroFinished(true)) {
               SoftwareRasterizer.clear();
               IntKeyLookup.drawLogoIntro(320, 240, param0 - 13);
               OptionsDialog.paintCanvasNow(param1, (byte) -101, 0, 0);
             } else {
-              if (fj.field_j != 0) {
+              if (BitAndSpriteHelpers.field_j != 0) {
                 ResourceArchive.presentFrame(param1, (byte) -39);
               } else {
-                la.clearOrDimScreen(param2, false, (byte) -72);
+                ScreenClearHelpers.clearOrDimScreen(param2, false, (byte) -72);
                 OptionsDialog.paintCanvasNow(param1, (byte) -97, 0, 0);
               }
             }
           } else {
             var3_int = 0;
-            if (hj.field_d) {
+            if (ClientIOException.field_d) {
               var3_int = 1;
-              hj.field_d = false;
+              ClientIOException.field_d = false;
             }
-            MusicCrossfadeStream.drawLoadingMessage(qj.field_h, bb.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.computeLoadingPercent((byte) -77), -6885);
+            MusicCrossfadeStream.drawLoadingMessage(TimeAndInputHelpers.field_h, LoginLoadingHelpers.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.computeLoadingPercent((byte) -77), -6885);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,7 +158,7 @@ abstract class TextLayout {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ abstract class TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "kh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "kh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ abstract class TextLayout {
         }
     }
 
-    final static void configureLobbyStyles(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, ec param9, int param10, int param11, BitmapFont param12, int param13, ec param14, int param15, BitmapFont param16, int param17, ec param18, int param19) {
+    final static void configureLobbyStyles(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, SpriteFrame param9, int param10, int param11, BitmapFont param12, int param13, SpriteFrame param14, int param15, BitmapFont param16, int param17, SpriteFrame param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -262,9 +262,9 @@ abstract class TextLayout {
           TextLine.field_c = param12;
           ResizableModalPanel.field_T = param16;
           BevelTextPainter.storeTimingParameters(param4, param6, param10, param11, 109);
-          sk.setCameraFrame(param14, -28995, param2, param17);
+          TooltipHelpers.setCameraFrame(param14, -28995, param2, param17);
           TextLayout.setFrameStyles(param9, param18, param7, param3, -1, param1);
-          ho.setScrollPosition((byte) 101, param0, param5);
+          ServerMessage.setScrollPosition((byte) 101, param0, param5);
           OptionsDialog.storeLoginMethodLayout(param13, param19, param15, (byte) -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -301,7 +301,7 @@ abstract class TextLayout {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
         }
     }
 

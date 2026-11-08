@@ -63,7 +63,7 @@ final class MenuButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class MenuButtonPainter extends TextWidgetPainter {
     private MenuButtonPainter(int param0, int param1, int param2) {
         this.field_q = param1;
         this.field_g = SocketConnector.field_k;
-        this.field_u = af.field_Jb;
+        this.field_u = PairedSceneWidget.field_Jb;
         this.field_w = param2;
         this.field_x = param0;
     }

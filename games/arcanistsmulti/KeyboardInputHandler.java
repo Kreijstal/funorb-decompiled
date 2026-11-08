@@ -43,17 +43,17 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             FrameClock.field_b = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < sb.field_h.length) {
-              var2_int = sb.field_h[var2_int] & -129;
+              var2_int < AudioShutdownHelpers.field_h.length) {
+              var2_int = AudioShutdownHelpers.field_h[var2_int] & -129;
             } else {
               var2_int = -1;
             }
-            if (0 <= ub.field_b &&
+            if (0 <= StatsSendHelpers.field_b &&
               var2_int >= 0) {
-              CanvasRasterBuffer.field_d[ub.field_b] = ~var2_int;
-              ub.field_b = 127 & ub.field_b + 1;
-              if (ub.field_b == SocketConnector.field_g) {
-                ub.field_b = -1;
+              CanvasRasterBuffer.field_d[StatsSendHelpers.field_b] = ~var2_int;
+              StatsSendHelpers.field_b = 127 & StatsSendHelpers.field_b + 1;
+              if (StatsSendHelpers.field_b == SocketConnector.field_g) {
+                StatsSendHelpers.field_b = -1;
               }
             }
           }
@@ -69,7 +69,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -87,28 +87,28 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             FrameClock.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < sb.field_h.length) {
-              var2_int = sb.field_h[var2_int];
+              var2_int < AudioShutdownHelpers.field_h.length) {
+              var2_int = AudioShutdownHelpers.field_h[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
             } else {
               var2_int = -1;
             }
-            if (ub.field_b >= 0 &&
+            if (StatsSendHelpers.field_b >= 0 &&
               var2_int >= 0) {
-              CanvasRasterBuffer.field_d[ub.field_b] = var2_int;
-              ub.field_b = 127 & ub.field_b + 1;
-              if (ub.field_b == SocketConnector.field_g) {
-                ub.field_b = -1;
+              CanvasRasterBuffer.field_d[StatsSendHelpers.field_b] = var2_int;
+              StatsSendHelpers.field_b = 127 & StatsSendHelpers.field_b + 1;
+              if (StatsSendHelpers.field_b == SocketConnector.field_g) {
+                StatsSendHelpers.field_b = -1;
               }
             }
             if (var2_int >= 0) {
-              var3 = 1 + pi.field_a & 127;
+              var3 = 1 + RequestQueueHelpers.field_a & 127;
               if (var3 != Js5NetworkRequest.field_u) {
-                ViewportController.field_p[pi.field_a] = var2_int;
-                qa.field_i[pi.field_a] = (char)0;
-                pi.field_a = var3;
+                ViewportController.field_p[RequestQueueHelpers.field_a] = var2_int;
+                NoticeHelpers.field_i[RequestQueueHelpers.field_a] = (char)0;
+                RequestQueueHelpers.field_a = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -130,7 +130,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param2 == -1) {
-          ed.drawCurrentScreenView(param1, (byte) 106);
+          MainMenuDialog.drawCurrentScreenView(param1, (byte) 106);
         } else {
           if (-2 == param2 &&
             ValidatedTextWidget.field_I > 3) {
@@ -161,7 +161,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               SoftwareRasterizer.clear();
             } else {
               if (param3) {
-                ed.drawCurrentScreenView(false, (byte) 81);
+                MainMenuDialog.drawCurrentScreenView(false, (byte) 81);
                 SoftwareRasterizer.darkenRectangle(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
               }
               ArchiveProvider.field_f[param2].draw((byte) -45);
@@ -307,17 +307,17 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (CredentialKind.field_a != null) {
-            ub.field_b = -1;
+            StatsSendHelpers.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ji.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ji.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -329,17 +329,17 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               MembershipOfferScreen.isTypeableCharacter((char) var2_int, (byte) 123)) {
-              var3 = 1 + pi.field_a & 127;
+              var3 = 1 + RequestQueueHelpers.field_a & 127;
               if (var3 != Js5NetworkRequest.field_u) {
-                ViewportController.field_p[pi.field_a] = -1;
-                qa.field_i[pi.field_a] = (char)var2_int;
-                pi.field_a = var3;
+                ViewportController.field_p[RequestQueueHelpers.field_a] = -1;
+                NoticeHelpers.field_i[RequestQueueHelpers.field_a] = (char)var2_int;
+                RequestQueueHelpers.field_a = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ji.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ji.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

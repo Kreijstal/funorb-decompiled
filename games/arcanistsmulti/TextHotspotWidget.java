@@ -30,7 +30,7 @@ class TextHotspotWidget extends TextButton {
           var7 = var9.getTextX((UiComponent) (this), (byte) -90, param1);
           var8 = var9.getTextY(param3, -13372, (UiComponent) (this));
           do {
-            oj.drawLoginMethodPanel(-32171, var8 - (-var6.field_m + 2), var7 + (var6.field_o - 2), var6.field_n + 2, var6.field_g + 2);
+            LoginMethodHelpers.drawLoginMethodPanel(-32171, var8 - (-var6.field_m + 2), var7 + (var6.field_o - 2), var6.field_n + 2, var6.field_g + 2);
             var6 = var6.field_h;
           } while (var6 != null);
         }
@@ -57,7 +57,7 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -227,27 +227,27 @@ class TextHotspotWidget extends TextButton {
         boolean stackIn_25_1 = false;
         SceneWidget stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        da.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
-        if (ce.field_h > 0) {
+        MusicAndClipHelpers.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
+        if (GameSelectionHelpers.field_h > 0) {
           if (null != QuickChatCategory.field_t) {
             QuickChatCategory.field_t.drawOpaque(BufferedSocket.field_d.field_T, 0);
           }
           stackIn_7_0 = BufferedSocket.field_d;
           stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
           ((SceneWidget) (Object) stackIn_7_0).drawFullScreen(stackIn_8_1, true);
-          stackIn_11_0 = fn.field_e;
+          stackIn_11_0 = GameListHelpers.field_e;
           stackIn_12_1 = (param1) && (!IntrusiveNode.field_d);
           ((SceneWidget) (Object) stackIn_11_0).drawFullScreen(stackIn_12_1, true);
         }
         if (param0 != -11837) {
           field_Q = (String) null;
         }
-        if (!(sm.field_a <= 0) ||
+        if (!(AudioAndCookieHelpers.field_a <= 0) ||
           !(0 >= QuickChatCategory.field_y)) {
           if (QuickChatCategory.field_t != null) {
-            QuickChatCategory.field_t.drawOpaque(hl.field_m.field_T, 0);
+            QuickChatCategory.field_t.drawOpaque(BufferedMessage.field_m.field_T, 0);
           }
-          stackIn_24_0 = hl.field_m;
+          stackIn_24_0 = BufferedMessage.field_m;
           stackIn_25_1 = (param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_24_0).drawFullScreen(stackIn_25_1, true);
           stackIn_28_0 = ReflectionCheckRequest.field_h;
@@ -259,11 +259,11 @@ class TextHotspotWidget extends TextButton {
 
     final static void postPendingMessage(int param0) {
         String var2 = null;
-        if (null != va.field_e) {
-          var2 = va.field_e;
+        if (null != GradientPanelPainter.field_e) {
+          var2 = GradientPanelPainter.field_e;
           String var1 = var2;
-          GrowableIntList.showTextOverlay(99, CachedArchiveProvider.formatTemplate(-118, new String[]{var2}, i.field_b));
-          va.field_e = null;
+          GrowableIntList.showTextOverlay(99, CachedArchiveProvider.formatTemplate(-118, new String[]{var2}, ChatPanel.field_b));
+          GradientPanelPainter.field_e = null;
         }
         if (param0 < 94) {
           field_P = (String) null;
@@ -285,7 +285,7 @@ class TextHotspotWidget extends TextButton {
           return;
         }
         int var4 = var3 - param1 * param1;
-        hl.field_m.setBounds(199, -(var4 * 199 / var3) + var2, 90, -4 + SoftwareRasterizer.field_j - 120 - 90, (byte) -120);
+        BufferedMessage.field_m.setBounds(199, -(var4 * 199 / var3) + var2, 90, -4 + SoftwareRasterizer.field_j - 120 - 90, (byte) -120);
         ReflectionCheckRequest.field_h.setBounds(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + SoftwareRasterizer.field_j - 120, (byte) -120);
     }
 
@@ -311,7 +311,7 @@ class TextHotspotWidget extends TextButton {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -392,10 +392,10 @@ class TextHotspotWidget extends TextButton {
         try {
           var2_int = IntKeyLookup.field_g.field_nb;
           var3 = 90;
-          var4 = lo.field_q - 30 + var2_int;
+          var4 = AgeValidator.field_q - 30 + var2_int;
           var5 = 13;
           var6 = 18;
-          var7 = lo.field_q + var2_int - 100;
+          var7 = AgeValidator.field_q + var2_int - 100;
           stackIn_3_0 = var6;
           stackIn_3_1 = var7;
           stackIn_3_2 = 9;
@@ -406,13 +406,13 @@ class TextHotspotWidget extends TextButton {
           }
           SoftwareRasterizer.fillCircle(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3);
           SoftwareRasterizer.drawCircleOutline(var6, var7, 9, 0);
-          if (bm.field_g.field_I >= 0) {
-            stackIn_7_0 = bm.field_g.field_I;
+          if (TutorialCaptionGlobals.field_g.field_I >= 0) {
+            stackIn_7_0 = TutorialCaptionGlobals.field_g.field_I;
           } else {
             stackIn_7_0 = 6;
           }
           var8 = stackIn_7_0;
-          var9 = nj.field_n[var8];
+          var9 = NameCheckHelpers.field_n[var8];
           stackIn_9_0 = var6;
           stackIn_9_1 = var7;
           stackIn_9_2 = 7;
@@ -437,7 +437,7 @@ class TextHotspotWidget extends TextButton {
           var11 = var7 - MenuButtonPanel.field_I;
           if (var11 * var11 + var10 * var10 < 81 &&
             param1) {
-            mf.field_g = -2;
+            EffectVolumeHelpers.field_g = -2;
             SoftwareRasterizer.fillCircleAlpha(var6, var7, 9, 16777215, 128);
             var18 = ValidationStatusIcon.field_L;
             SpellProjectile.field_B.drawText(var18, 5 + var6, -1 + var7, 0, 0);
@@ -447,14 +447,14 @@ class TextHotspotWidget extends TextButton {
             SpellProjectile.field_B.drawText(var18, 5 + var6, var7, 16777215, 0);
           }
           if (Checkbox.field_J.getArenaTheme(-31497) == 8 &&
-            12 < lm.field_f.length) {
+            12 < GameDetailsRenderer.field_f.length) {
             var4 -= 6;
             var3 -= 40;
           }
-          for (var12 = param0; var12 < lm.field_f.length; var12++) {
-            if (lm.field_f[var12] > -1) {
+          for (var12 = param0; var12 < GameDetailsRenderer.field_f.length; var12++) {
+            if (GameDetailsRenderer.field_f[var12] > -1) {
               if (Checkbox.field_J.getArenaTheme(param0 - 31497) == 8 &&
-                lm.field_f.length > 12) {
+                GameDetailsRenderer.field_f.length > 12) {
                 if (0 != (var12 & 1)) {
                   var4 -= 16;
                 } else {
@@ -474,11 +474,11 @@ class TextHotspotWidget extends TextButton {
               SoftwareRasterizer.fillCircle(var3, var4, -3 + var5, 16777215);
               SoftwareRasterizer.drawCircleOutline(var3, var4, var5, 0);
               SoftwareRasterizer.drawCircleOutline(var3, var4, var5 - 3, 0);
-              bb.field_g[dd.field_f[lm.field_f[var12]]].drawHalfSize(var3 - 9, -9 + var4);
-              if (Checkbox.field_J.canOwnerCast(lm.field_f[var12], true, bm.field_g.field_bb)) {
-                var13 = Checkbox.field_J.getSpellCharges(lm.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), param0 - 770226943);
+              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[GameDetailsRenderer.field_f[var12]]].drawHalfSize(var3 - 9, -9 + var4);
+              if (Checkbox.field_J.canOwnerCast(GameDetailsRenderer.field_f[var12], true, TutorialCaptionGlobals.field_g.field_bb)) {
+                var13 = Checkbox.field_J.getSpellCharges(GameDetailsRenderer.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), param0 - 770226943);
                 if (var13 > 0 &&
-                  0 < MouseWheelHandler.field_b[lm.field_f[var12]]) {
+                  0 < MouseWheelHandler.field_b[GameDetailsRenderer.field_f[var12]]) {
                   var23 = Integer.toString(var13);
                   SpellProjectile.field_B.drawRightAlignedText(var23, var3 + (var5 / 2 - 1), 10 + var4, 0, 0);
                   SpellProjectile.field_B.drawRightAlignedText(var23, var3 + var5 / 2, -1 + (10 + var4), 0, 0);
@@ -486,16 +486,16 @@ class TextHotspotWidget extends TextButton {
                 }
               } else {
                 SoftwareRasterizer.fillCircleAlpha(var3, var4, var5, 0, 192);
-                var13 = Checkbox.field_J.getSpellCharges(lm.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), -770226943);
+                var13 = Checkbox.field_J.getSpellCharges(GameDetailsRenderer.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), -770226943);
                 if (Checkbox.field_J.field_f) {
-                  if (lm.field_f[var12] != 11) {
-                    bb.field_g[90].drawHalfSize(var3 - 9, var4 - 9);
+                  if (GameDetailsRenderer.field_f[var12] != 11) {
+                    LoginLoadingHelpers.field_g[90].drawHalfSize(var3 - 9, var4 - 9);
                   }
                 } else {
                   if (var13 <= 0 &&
-                    lm.field_f[var12] != 37) {
-                    if (MouseWheelHandler.field_b[lm.field_f[var12]] == -1) {
-                      var14_int = Checkbox.field_J.getSpellRecharge(lm.field_f[var12], param0 - 102, Checkbox.field_J.getCurrentPlayer(false));
+                    GameDetailsRenderer.field_f[var12] != 37) {
+                    if (MouseWheelHandler.field_b[GameDetailsRenderer.field_f[var12]] == -1) {
+                      var14_int = Checkbox.field_J.getSpellRecharge(GameDetailsRenderer.field_f[var12], param0 - 102, Checkbox.field_J.getCurrentPlayer(false));
                       if (!(var14_int <= 0)) {
                         var21 = Integer.toString(var14_int);
                         SpellProjectile.field_B.drawRightAlignedText(var21, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
@@ -503,14 +503,14 @@ class TextHotspotWidget extends TextButton {
                         SpellProjectile.field_B.drawRightAlignedText(var21, var5 / 2 + var3, var4 + 10, 16711680, 0);
                       }
                     } else {
-                      if (MouseWheelHandler.field_b[lm.field_f[var12]] == 0 &&
-                        150 != lm.field_f[var12] &&
-                        104 != lm.field_f[var12] &&
-                        lm.field_f[var12] != 11) {
+                      if (MouseWheelHandler.field_b[GameDetailsRenderer.field_f[var12]] == 0 &&
+                        150 != GameDetailsRenderer.field_f[var12] &&
+                        104 != GameDetailsRenderer.field_f[var12] &&
+                        GameDetailsRenderer.field_f[var12] != 11) {
                         var14 = "";
-                        var19 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
-                        if ((lm.field_f[var12] == 124 ||
-                          lm.field_f[var12] == 130) && var19.getDisplayFlag(false)) {
+                        var19 = Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true);
+                        if ((GameDetailsRenderer.field_f[var12] == 124 ||
+                          GameDetailsRenderer.field_f[var12] == 130) && var19.getDisplayFlag(false)) {
                           var14 = "X";
                         }
                         SpellProjectile.field_B.drawRightAlignedText(var14, var3 + var5 / 2 - 1, 10 + var4, 0, 0);
@@ -529,15 +529,15 @@ class TextHotspotWidget extends TextButton {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    if (BattleScreen.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0) > 0) {
-                      var22 = Integer.toString(BattleScreen.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0));
+                    if (BattleScreen.field_d[GameDetailsRenderer.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0) > 0) {
+                      var22 = Integer.toString(BattleScreen.field_d[GameDetailsRenderer.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0));
                       SpellProjectile.field_B.drawRightAlignedText(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
                       SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
                       SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
                     } else {
                       var14Lifetime2 = "X";
-                      if (lm.field_f[var12] == 87 ||
-                        116 == lm.field_f[var12]) {
+                      if (GameDetailsRenderer.field_f[var12] == 87 ||
+                        116 == GameDetailsRenderer.field_f[var12]) {
                         var14Lifetime2 = Integer.toString(var13);
                       }
                       SpellProjectile.field_B.drawRightAlignedText(var14Lifetime2, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
@@ -552,34 +552,34 @@ class TextHotspotWidget extends TextButton {
                 var4 - 12 <= MenuButtonPanel.field_I &&
                 EmailLoginCredentials.field_g < var3 + 14 &&
                 var4 + 14 > MenuButtonPanel.field_I) {
-                mf.field_g = var12;
+                EffectVolumeHelpers.field_g = var12;
               }
               var3 += 26;
             }
           }
           if (DropdownList.field_N != -1) {
             var3Lifetime1 = 22;
-            var4Lifetime1 = lo.field_q + 387 + (-480 + var2_int);
-            bb.field_g[dd.field_f[DropdownList.field_N]].drawTransparent(var3Lifetime1, var4Lifetime1);
+            var4Lifetime1 = AgeValidator.field_q + 387 + (-480 + var2_int);
+            LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[DropdownList.field_N]].drawTransparent(var3Lifetime1, var4Lifetime1);
             var3Lifetime1Lifetime1 = 75;
             var4Lifetime1Lifetime1 = var2_int - 480 + 430;
             CachedArchiveProvider.field_t.drawText(PasswordFieldPainter.field_w[DropdownList.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
           }
           regionExit1: {
-            if (mf.field_g > -1) {
+            if (EffectVolumeHelpers.field_g > -1) {
               var3Lifetime2 = 75;
               if (ConditionalTextValue.field_f) {
                 ArrayWidgetContainer.field_A = 256;
-                IntrusiveNodeHashTable.field_f = vm.field_d[lm.field_f[mf.field_g]];
+                IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]];
               }
               var4Lifetime2 = -50 + var2_int;
               if (8 == Checkbox.field_J.getArenaTheme(-31497) &&
-                lm.field_f.length > 12) {
-                var4Lifetime2Lifetime1 = -(16 * (1 & mf.field_g)) + 450 - 480 + var2_int;
-                var3Lifetime2Lifetime1 = 50 + mf.field_g * 22;
+                GameDetailsRenderer.field_f.length > 12) {
+                var4Lifetime2Lifetime1 = -(16 * (1 & EffectVolumeHelpers.field_g)) + 450 - 480 + var2_int;
+                var3Lifetime2Lifetime1 = 50 + EffectVolumeHelpers.field_g * 22;
               } else {
-                var4Lifetime2Lifetime1 = -480 + var2_int + (450 - 8 * (mf.field_g & 1));
-                var3Lifetime2Lifetime1 = 90 + 26 * mf.field_g;
+                var4Lifetime2Lifetime1 = -480 + var2_int + (450 - 8 * (EffectVolumeHelpers.field_g & 1));
+                var3Lifetime2Lifetime1 = 90 + 26 * EffectVolumeHelpers.field_g;
               }
               var5Lifetime1 = 24;
               SoftwareRasterizer.fillCircleAlpha(var3Lifetime2Lifetime1 + 2, 2 + var4Lifetime2Lifetime1, var5Lifetime1, 0, 128);
@@ -587,16 +587,16 @@ class TextHotspotWidget extends TextButton {
               SoftwareRasterizer.fillCircle(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 16777215);
               SoftwareRasterizer.drawCircleOutline(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0);
               SoftwareRasterizer.drawCircleOutline(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 0);
-              bb.field_g[dd.field_f[lm.field_f[mf.field_g]]].drawTransparent(-20 + var3Lifetime2Lifetime1, -20 + var4Lifetime2Lifetime1);
-              var24 = PasswordFieldPainter.field_w[lm.field_f[mf.field_g]];
+              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]]].drawTransparent(-20 + var3Lifetime2Lifetime1, -20 + var4Lifetime2Lifetime1);
+              var24 = PasswordFieldPainter.field_w[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]];
               var12_ref_String = var24;
               SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + (-1 - var5Lifetime1), 0, 0);
               SpellProjectile.field_B.drawCentered(var12_ref_String, -1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
               SpellProjectile.field_B.drawCentered(var24, var3Lifetime2Lifetime1 + 1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
               SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + 1 - var5Lifetime1, 0, 0);
               SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, -var5Lifetime1 + var4Lifetime2Lifetime1, 16777215, 0);
-              var12Lifetime1 = Checkbox.field_J.getSpellCharges(lm.field_f[mf.field_g], Checkbox.field_J.getCurrentPlayer(false), -770226943);
-              if (Checkbox.field_J.canOwnerCast(lm.field_f[mf.field_g], true, bm.field_g.field_bb)) {
+              var12Lifetime1 = Checkbox.field_J.getSpellCharges(GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g], Checkbox.field_J.getCurrentPlayer(false), -770226943);
+              if (Checkbox.field_J.canOwnerCast(GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g], true, TutorialCaptionGlobals.field_g.field_bb)) {
                 if (var12Lifetime1 > 0) {
                   stackIn_184_0 = new StringBuilder().append(var12Lifetime1);
                   if (1 >= var12Lifetime1) {
@@ -605,7 +605,7 @@ class TextHotspotWidget extends TextButton {
                     stackIn_185_1 = QuickChatPhrase.field_s;
                   }
                   var14Lifetime1 = ((StringBuilder) (Object) stackIn_184_0).append(stackIn_185_1).toString();
-                  if (-1 == MouseWheelHandler.field_b[lm.field_f[mf.field_g]]) {
+                  if (-1 == MouseWheelHandler.field_b[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]]) {
                     var14Lifetime1 = StatefulTextPainter.field_x;
                   }
                   SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
@@ -616,12 +616,12 @@ class TextHotspotWidget extends TextButton {
                 }
               } else {
                 SoftwareRasterizer.fillCircleAlpha(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0, 192);
-                if (11 != lm.field_f[mf.field_g] && ((93 != lm.field_f[mf.field_g] ||
-                  Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true).getType(-22625) == 33) &&
-                  (lm.field_f[mf.field_g] != 95 ||
-                  Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true).getType(-22625) == 31))) {
+                if (11 != GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] && ((93 != GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] ||
+                  Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true).getType(-22625) == 33) &&
+                  (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] != 95 ||
+                  Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true).getType(-22625) == 31))) {
                   if (Checkbox.field_J.field_f &&
-                    !Checkbox.field_J.isArenaSpell((byte) 66, lm.field_f[mf.field_g])) {
+                    !Checkbox.field_J.isArenaSpell((byte) 66, GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g])) {
                     var31 = IndexedSpriteState.field_a;
                     if (8 + SpellProjectile.field_B.textWidth(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
                       var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - SpellProjectile.field_B.textWidth(var31) - 8);
@@ -632,8 +632,8 @@ class TextHotspotWidget extends TextButton {
                     SpellProjectile.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
                     SpellProjectile.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                   } else {
-                    if (lm.field_f[mf.field_g] == 150) {
-                      var30 = bj.field_jb;
+                    if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 150) {
+                      var30 = ButtonMenuDialog.field_jb;
                       if (var5Lifetime1 + (var3Lifetime2Lifetime1 - (-SpellProjectile.field_B.textWidth(var30) - 8)) > 640) {
                         var3Lifetime2Lifetime1 = -8 - (SpellProjectile.field_B.textWidth(var30) + var5Lifetime1) + 640;
                       }
@@ -644,12 +644,12 @@ class TextHotspotWidget extends TextButton {
                       SpellProjectile.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                     } else {
                       if (var12Lifetime1 > 0) {
-                        if ((MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0)) {
-                          var14_intLifetime1 = BattleScreen.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
+                        if ((MouseWheelHandler.field_b[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]] != 0)) {
+                          var14_intLifetime1 = BattleScreen.field_d[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                           if (var14_intLifetime1 > 0) {
                             stackIn_166_0 = new StringBuilder().append(var14_intLifetime1);
                             if (var14_intLifetime1 > 1) {
-                              stackIn_167_1 = ki.field_x;
+                              stackIn_167_1 = EmailValidator.field_x;
                             } else {
                               stackIn_167_1 = DualLinkDeque.field_g;
                             }
@@ -664,32 +664,32 @@ class TextHotspotWidget extends TextButton {
                             SpellProjectile.field_B.drawText(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             break regionExit1;
                           }
-                          var15 = qa.field_k;
-                          var28 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
+                          var15 = NoticeHelpers.field_k;
+                          var28 = Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true);
                           if (var28.getType(param0 ^ -22625) == 19) {
                             var15 = ValidationHelpWidget.field_T;
                           }
                           if (var28.getType(-22625) == 18) {
-                            var15 = bj.field_sb;
+                            var15 = ButtonMenuDialog.field_sb;
                           }
                           if (16 == var28.getType(-22625)) {
-                            var15 = oi.field_a;
+                            var15 = GuardHelpers.field_a;
                           }
-                          if (cf.field_f) {
+                          if (CredentialParseHelpers.field_f) {
                             var15 = QuickChatPhrase.field_p;
                           }
-                          if (lm.field_f[mf.field_g] == 87 &&
+                          if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 87 &&
                             var28.getType(-22625) != 19) {
                             var15 = ConditionalTextValue.field_g;
                           }
-                          if (lm.field_f[mf.field_g] == 87 &&
+                          if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 87 &&
                             var28.getType(param0 - 22625) == 19) {
                             var15 = LoadingTracker.field_l;
                           }
-                          if (lm.field_f[mf.field_g] == 116) {
+                          if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 116) {
                             var15 = ConditionalTextValue.field_g;
                           }
-                          if (lm.field_f[mf.field_g] == 4) {
+                          if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 4) {
                             var15 = "Being entangled blocks this spell.";
                           }
                           if (SpellProjectile.field_B.textWidth(var15) + var5Lifetime1 + (var3Lifetime2Lifetime1 + 8) > 640) {
@@ -702,12 +702,12 @@ class TextHotspotWidget extends TextButton {
                           SpellProjectile.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                         }
                       } else {
-                        if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] == -1) {
-                          var14_intLifetime1Lifetime1 = Checkbox.field_J.getSpellRecharge(lm.field_f[mf.field_g], -102, Checkbox.field_J.getCurrentPlayer(false));
+                        if (MouseWheelHandler.field_b[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]] == -1) {
+                          var14_intLifetime1Lifetime1 = Checkbox.field_J.getSpellRecharge(GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g], -102, Checkbox.field_J.getCurrentPlayer(false));
                           if (!(var14_intLifetime1Lifetime1 <= 0)) {
                             stackIn_132_0 = new StringBuilder().append(var14_intLifetime1Lifetime1);
                             if (var14_intLifetime1Lifetime1 > 1) {
-                              stackIn_133_1 = ki.field_x;
+                              stackIn_133_1 = EmailValidator.field_x;
                             } else {
                               stackIn_133_1 = DualLinkDeque.field_g;
                             }
@@ -722,15 +722,15 @@ class TextHotspotWidget extends TextButton {
                             SpellProjectile.field_B.drawText(var27, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                           }
                         } else {
-                          if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0) {
+                          if (MouseWheelHandler.field_b[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]] != 0) {
                             if (!(0 <= var12Lifetime1)) {
-                              var14Lifetime1 = qa.field_k;
-                              var25 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
+                              var14Lifetime1 = NoticeHelpers.field_k;
+                              var25 = Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true);
                               if (18 == var25.getType(-22625)) {
-                                var14Lifetime1 = bj.field_sb;
+                                var14Lifetime1 = ButtonMenuDialog.field_sb;
                               }
                               if (16 == var25.getType(-22625)) {
-                                var14Lifetime1 = oi.field_a;
+                                var14Lifetime1 = GuardHelpers.field_a;
                               }
                               SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
                               SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
@@ -739,10 +739,10 @@ class TextHotspotWidget extends TextButton {
                               SpellProjectile.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             }
                           } else {
-                            var14_intLifetime1Lifetime2 = BattleScreen.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
+                            var14_intLifetime1Lifetime2 = BattleScreen.field_d[GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                             stackIn_111_0 = new StringBuilder().append(var14_intLifetime1Lifetime2);
                             if (var14_intLifetime1Lifetime2 > 1) {
-                              stackIn_112_1 = ki.field_x;
+                              stackIn_112_1 = EmailValidator.field_x;
                             } else {
                               stackIn_112_1 = DualLinkDeque.field_g;
                             }
@@ -750,19 +750,19 @@ class TextHotspotWidget extends TextButton {
                             if (0 > var14_intLifetime1Lifetime2) {
                               var15Lifetime1 = "";
                             }
-                            if (lm.field_f[mf.field_g] == 104) {
+                            if (GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 104) {
                               var15Lifetime1 = QuickChatPhrase.field_p;
                             }
-                            var26 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
-                            if ((lm.field_f[mf.field_g] == 124 ||
-                              lm.field_f[mf.field_g] == 130) && var26.getDisplayFlag(false)) {
-                              var15Lifetime1 = qn.field_kb;
+                            var26 = Checkbox.field_J.getUnitByOwner(TutorialCaptionGlobals.field_g.field_bb, true);
+                            if ((GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 124 ||
+                              GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g] == 130) && var26.getDisplayFlag(false)) {
+                              var15Lifetime1 = MessageDialog.field_kb;
                             }
                             if (var26.getType(-22625) == 18) {
-                              var15Lifetime1 = bj.field_sb;
+                              var15Lifetime1 = ButtonMenuDialog.field_sb;
                             }
                             if (var26.getType(-22625) == 16) {
-                              var15Lifetime1 = oi.field_a;
+                              var15Lifetime1 = GuardHelpers.field_a;
                             }
                             SpellProjectile.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
                             SpellProjectile.field_B.drawText(var15Lifetime1, -1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
@@ -796,7 +796,7 @@ class TextHotspotWidget extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ej.L(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ej.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -844,7 +844,7 @@ class TextHotspotWidget extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

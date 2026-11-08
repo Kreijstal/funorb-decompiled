@@ -67,7 +67,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.MB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.MB(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.JA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.JA(" + param0 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class BattleUnit extends DualLinkNode {
           var3 = 0;
           var4 = -72 / ((param1 - 4) / 62);
           for (var5 = 0; var2_int > var5; var5++) {
-            var3 = fe.encodeCp1252Char((byte) 74, param0.charAt(var5)) + ((var3 << 5) - var3);
+            var3 = PendingTask.encodeCp1252Char((byte) 74, param0.charAt(var5)) + ((var3 << 5) - var3);
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;
@@ -121,7 +121,7 @@ final class BattleUnit extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.IB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.IB(" + param0 + ')');
         }
     }
 
@@ -179,9 +179,9 @@ final class BattleUnit extends DualLinkNode {
               var7_int = var5;
               while (true) {
                 if (var7_int > 0) {
-                  jo.field_b = false;
+                  BitHelpers.field_b = false;
                   if (this.field_L.isSolidAt(-(this.field_Y >> 1) + (this.field_db - var4_int * var7_int / var5), -(var7_int * var3_int / var5) + this.field_lb, (byte) -83) &&
-                    !jo.field_b) {
+                    !BitHelpers.field_b) {
                     var6 = 0;
                   } else {
                     var7_int--;
@@ -191,7 +191,7 @@ final class BattleUnit extends DualLinkNode {
                 if (var6 == 0) {
                   break;
                 }
-                var7 = aj.spawnProjectile(this, -480, false, 114, this.field_L, var2_int);
+                var7 = GameOptionType.spawnProjectile(this, -480, false, 114, this.field_L, var2_int);
                 var7.field_F = var4_int;
                 var7.field_u = var3_int;
                 this.field_L.onProjectileFinished(52, var7);
@@ -204,19 +204,19 @@ final class BattleUnit extends DualLinkNode {
             var2_intLifetime1 = (int)(Math.random() * (double)this.field_w.field_q);
             var3_intLifetime1 = (int)(Math.random() * (double)this.field_w.field_y);
             if (this.field_w.field_A[var3_intLifetime1 * this.field_w.field_q + var2_intLifetime1] != 0) {
-              var4 = aj.spawnProjectile((BattleUnit) null, -256 + (var3_intLifetime1 + this.field_db) + this.field_w.field_o, false, 109, this.field_L, -128 + this.field_w.field_x + (var2_intLifetime1 + this.field_lb));
+              var4 = GameOptionType.spawnProjectile((BattleUnit) null, -256 + (var3_intLifetime1 + this.field_db) + this.field_w.field_o, false, 109, this.field_L, -128 + this.field_w.field_x + (var2_intLifetime1 + this.field_lb));
               this.field_L.onProjectileFinished(52, var4);
             }
           }
           if (this.field_jb == 25) {
-            var9 = aj.spawnProjectile((BattleUnit) null, this.field_db - (this.field_Y >> 1), false, 100, this.field_L, this.field_lb);
+            var9 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - (this.field_Y >> 1), false, 100, this.field_L, this.field_lb);
             var3 = Math.random() * 6.28;
             var9.field_u = (int)((double)(12 * -this.field_E) + 16.0 * Math.sin(var3));
             var9.field_F = (int)(Math.cos(var3) * 16.0);
             this.field_L.onProjectileFinished(52, var9);
           }
           if (this.field_jb == 19) {
-            var10 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 100, this.field_L, this.field_lb);
+            var10 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 100, this.field_L, this.field_lb);
             var3Lifetime1 = Math.random() * 6.28;
             var10.field_F = (int)(8.0 + Math.sin(var3Lifetime1) * 12.0);
             var10.field_u = (int)(16.0 * Math.cos(var3Lifetime1));
@@ -226,7 +226,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.HA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.HA(" + param0 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.WA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.WA(" + param0 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.EA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.EA(" + param0 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.AB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.AB(" + param0 + ')');
         }
     }
 
@@ -356,8 +356,8 @@ final class BattleUnit extends DualLinkNode {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var6 = 16384;
-          pi.field_b.setDeque((byte) 95, this.field_L.field_i);
-          var7 = (BattleUnit) (pi.field_b.first(-83));
+          RequestQueueHelpers.field_b.setDeque((byte) 95, this.field_L.field_i);
+          var7 = (BattleUnit) (RequestQueueHelpers.field_b.first(-83));
           while (var7 != null) {
             if (var7.field_jb == 19) {
               var4 = -var7.field_db + (-48 + this.field_db);
@@ -368,10 +368,10 @@ final class BattleUnit extends DualLinkNode {
                 var7.field_jb = 0;
               }
             }
-            var7 = (BattleUnit) (pi.field_b.next(-18502));
+            var7 = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
           }
-          pi.field_b.setDeque((byte) 91, this.field_L.field_Kb);
-          var7_ref = (SpellProjectile) (pi.field_b.first(-58));
+          RequestQueueHelpers.field_b.setDeque((byte) 91, this.field_L.field_Kb);
+          var7_ref = (SpellProjectile) (RequestQueueHelpers.field_b.first(-58));
           if (!param1) {
             this.heal(-6, -62);
           }
@@ -400,9 +400,9 @@ final class BattleUnit extends DualLinkNode {
                   149 != var7_ref.field_I) {
                 }
                 if (param0) {
-                  var10 = aj.spawnProjectile(this, var7_ref.field_G, false, 154, this.field_L, var7_ref.field_v);
+                  var10 = GameOptionType.spawnProjectile(this, var7_ref.field_G, false, 154, this.field_L, var7_ref.field_v);
                   this.field_L.onProjectileFinished(52, var10);
-                  var11 = aj.spawnProjectile(this, -48 + this.field_db, false, 108, this.field_L, this.field_lb);
+                  var11 = GameOptionType.spawnProjectile(this, -48 + this.field_db, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var11);
                 }
                 if (var7_ref.field_I != 157 &&
@@ -422,21 +422,21 @@ final class BattleUnit extends DualLinkNode {
                 if (param0) {
                   stackIn_53_1 = var7_ref.field_G;
                   stackIn_54_2 = !(param1);
-                  var12 = aj.spawnProjectile(this, stackIn_53_1, stackIn_54_2, 154, this.field_L, var7_ref.field_v);
+                  var12 = GameOptionType.spawnProjectile(this, stackIn_53_1, stackIn_54_2, 154, this.field_L, var7_ref.field_v);
                   this.field_L.onProjectileFinished(52, var12);
-                  var13 = aj.spawnProjectile(this, this.field_db - 48, false, 108, this.field_L, this.field_lb);
+                  var13 = GameOptionType.spawnProjectile(this, this.field_db - 48, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var13);
                 }
                 var7_ref.remove(0);
               }
             }
-            var7_ref = (SpellProjectile) (pi.field_b.next(-18502));
+            var7_ref = (SpellProjectile) (RequestQueueHelpers.field_b.next(-18502));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ml.K(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ml.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.DA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.DA(" + param0 + ')');
         }
     }
 
@@ -493,7 +493,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.LB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.LB(" + param0 + ')');
         }
     }
 
@@ -510,7 +510,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.H(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.H(" + param0 + ')');
         }
     }
 
@@ -599,12 +599,12 @@ final class BattleUnit extends DualLinkNode {
             this.field_jb == 29 ||
             this.field_jb == 30 ||
             this.field_jb == 32) && -16 + this.field_L.field_H <= this.field_db) {
-            var35[1] = (int)((double)var35[1] - (8.0 * Math.sin(3.141592653589793 * (double)ge.field_r / 64.0) + 2.0));
+            var35[1] = (int)((double)var35[1] - (8.0 * Math.sin(3.141592653589793 * (double)BattleAction.field_r / 64.0) + 2.0));
           }
-          var5 = nj.field_n[this.field_u];
+          var5 = NameCheckHelpers.field_n[this.field_u];
           if (this.field_jb == 39 &&
             this.field_F > 2.5) {
-            var36 = aj.spawnProjectile((BattleUnit) null, this.field_db + (-(this.getSize(-8323) / 2) + 13), false, 166, this.field_L, -(42 * this.field_E) + this.field_lb);
+            var36 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db + (-(this.getSize(-8323) / 2) + 13), false, 166, this.field_L, -(42 * this.field_E) + this.field_lb);
             var36.field_u = 20 * -this.field_E;
             var36.field_F = (int)(-5.0 + 15.0 * Math.random());
             this.field_L.onProjectileFinished(52, var36);
@@ -614,27 +614,27 @@ final class BattleUnit extends DualLinkNode {
             this.field_F > 0.0) {
             if (!(1.0 > this.field_F)) {
               if (2.0 > this.field_F) {
-                var40 = aj.spawnProjectile((BattleUnit) null, -30 + this.field_db - (this.getSize(-8323) / 2 - 13), false, 166, this.field_L, this.field_lb + this.field_E * 22);
+                var40 = GameOptionType.spawnProjectile((BattleUnit) null, -30 + this.field_db - (this.getSize(-8323) / 2 - 13), false, 166, this.field_L, this.field_lb + this.field_E * 22);
                 var40.field_u = 30 * this.field_E;
                 var40.field_F = (int)(15.0 * Math.random() - 15.0);
                 this.field_L.onProjectileFinished(52, var40);
               } else {
                 if (!(this.field_F < 3.0)) {
                   if (4.0 > this.field_F) {
-                    var39 = aj.spawnProjectile((BattleUnit) null, this.field_db + (-(this.getSize(param2 ^ -1703912164) / 2) + 13 - 5), false, 166, this.field_L, this.field_lb + this.field_E * 22);
+                    var39 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db + (-(this.getSize(param2 ^ -1703912164) / 2) + 13 - 5), false, 166, this.field_L, this.field_lb + this.field_E * 22);
                     var39.field_u = 30 * this.field_E;
                     var39.field_F = (int)(Math.random() * 15.0);
                     this.field_L.onProjectileFinished(52, var39);
                   }
                 } else {
-                  var38 = aj.spawnProjectile((BattleUnit) null, -12 + (this.field_db - this.getSize(-8323) / 2), false, 166, this.field_L, this.field_lb - this.field_E * 22);
+                  var38 = GameOptionType.spawnProjectile((BattleUnit) null, -12 + (this.field_db - this.getSize(-8323) / 2), false, 166, this.field_L, this.field_lb - this.field_E * 22);
                   var38.field_u = 10 * -this.field_E;
                   var38.field_F = (int)(15.0 * Math.random() - 10.0);
                   this.field_L.onProjectileFinished(52, var38);
                 }
               }
             } else {
-              var37 = aj.spawnProjectile((BattleUnit) null, 13 + this.field_db - this.getSize(param2 ^ -1703912164) / 2, false, 166, this.field_L, -(this.field_E * 22) + this.field_lb);
+              var37 = GameOptionType.spawnProjectile((BattleUnit) null, 13 + this.field_db - this.getSize(param2 ^ -1703912164) / 2, false, 166, this.field_L, -(this.field_E * 22) + this.field_lb);
               var37.field_u = -this.field_E * 10;
               var37.field_F = (int)(-5.0 + 15.0 * Math.random());
               this.field_L.onProjectileFinished(52, var37);
@@ -713,7 +713,7 @@ final class BattleUnit extends DualLinkNode {
                             QuickChatPhraseCache.fillCircleMasked(128, (byte) 114, -320 - var7, var41[0], -48 + var41[1]);
                           } else {
                             if (this.field_jb == 26 &&
-                              ff.field_b != null) {
+                              FrameAndQuickChatHelpers.field_b != null) {
                               var7 = 0;
                               if (this.field_F > 1.5) {
                                 var7 = 1;
@@ -734,14 +734,14 @@ final class BattleUnit extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                ff.field_b[var7].draw(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                FrameAndQuickChatHelpers.field_b[var7].draw(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               } else {
-                                ff.field_b[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                FrameAndQuickChatHelpers.field_b[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
                             if (this.field_jb == 39 &&
-                              ub.field_e != null) {
+                              StatsSendHelpers.field_e != null) {
                               var7 = 0;
                               if (this.field_F > 1.5) {
                                 var7 = 1;
@@ -762,9 +762,9 @@ final class BattleUnit extends DualLinkNode {
                                 }
                               }
                               if (-1 == this.field_E) {
-                                ub.field_e[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                StatsSendHelpers.field_e[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                ub.field_e[var7].draw(var41[0] - (this.field_Y >> 1), -this.field_Y + var41[1]);
+                                StatsSendHelpers.field_e[var7].draw(var41[0] - (this.field_Y >> 1), -this.field_Y + var41[1]);
                               }
                               break regionExit1;
                             }
@@ -853,7 +853,7 @@ final class BattleUnit extends DualLinkNode {
                               break regionExit1;
                             }
                             if (17 == this.field_jb &&
-                              null != ra.field_c) {
+                              null != DateHelpers.field_c) {
                               var7 = 0;
                               if (this.field_F > 1.5) {
                                 var7 = 1;
@@ -865,7 +865,7 @@ final class BattleUnit extends DualLinkNode {
                                 var7 = 3;
                               }
                               if (-1 == this.field_E) {
-                                stackIn_148_0 = ra.field_c;
+                                stackIn_148_0 = DateHelpers.field_c;
                                 if (!this.field_U) {
                                   stackIn_149_1 = 0;
                                 } else {
@@ -873,7 +873,7 @@ final class BattleUnit extends DualLinkNode {
                                 }
                                 ((IndexedSprite) (Object) stackIn_148_0[stackIn_149_1 + var7]).drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                stackIn_143_0 = ra.field_c;
+                                stackIn_143_0 = DateHelpers.field_c;
                                 if (!this.field_U) {
                                   stackIn_144_1 = 0;
                                 } else {
@@ -975,7 +975,7 @@ final class BattleUnit extends DualLinkNode {
                                     for (var12 = 0; var12 < 7; var12++) {
                                       var13_int = (int)(9.0 * Math.sin(3.14 * (0.1 * (double)SpriteState.field_v + (double)var12) / 3.5)) + var9;
                                       var14 = var10 + (int)(9.0 * Math.cos(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
-                                      jg.field_c[var12].drawQuarterSize(-2 + var13_int, -2 + var14);
+                                      ChatLine.field_c[var12].drawQuarterSize(-2 + var13_int, -2 + var14);
                                       SoftwareRasterizer.fillCircleAlpha(var13_int, var14, 4, var8, 32);
                                     }
                                   }
@@ -983,7 +983,7 @@ final class BattleUnit extends DualLinkNode {
                                     QuickChatPhraseCache.fillCircleMasked(12, (byte) 73, 128, -4 + (this.field_n - (var7 >> 2)) + var41[0], var6 + this.field_N + var41[1] + (-this.field_Y + 8));
                                     var8 = -4 - (var7 >> 2) + (this.field_n + (int)(-6.0 + 13.0 * Math.random()));
                                     var9 = -this.field_Y + 8 + this.field_N - (-var6 - (int)(-18.0 + 13.0 * Math.random()) - (-6 + Math.abs(-this.field_n + var8 + (var7 >> 2) + 4)));
-                                    var47 = aj.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
+                                    var47 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
                                     var47.field_y = 16;
                                     this.field_L.onProjectileFinished(52, var47);
                                   }
@@ -1037,7 +1037,7 @@ final class BattleUnit extends DualLinkNode {
                                   QuickChatPhraseCache.fillCircleMasked(12, (byte) 117, 128, var41[0] + ((var7 >> 2) - this.field_n + 4), this.field_N + (8 + var41[1] + (-this.field_Y + var6)));
                                   var8 = -this.field_n + (var7 >> 2) - (-4 - (int)(13.0 * Math.random() - 6.0));
                                   var9 = this.field_N - this.field_Y + 8 - (-var6 - (int)(Math.random() * 13.0 - 18.0) - (-6 + Math.abs(-4 + (var8 - (var7 >> 2)) + this.field_n)));
-                                  var46 = aj.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
+                                  var46 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
                                   var46.field_y = 16;
                                   this.field_L.onProjectileFinished(52, var46);
                                 }
@@ -1059,7 +1059,7 @@ final class BattleUnit extends DualLinkNode {
                                   for (var12 = 0; var12 < 7; var12++) {
                                     var13_intLifetime1 = var9 + (int)(9.0 * Math.sin(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
                                     var14Lifetime2 = (int)(9.0 * Math.cos(((double)SpriteState.field_v * 0.1 + (double)var12) * 3.14 / 3.5)) + var10;
-                                    jg.field_c[var12].drawQuarterSize(-2 + var13_intLifetime1, var14Lifetime2 - 2);
+                                    ChatLine.field_c[var12].drawQuarterSize(-2 + var13_intLifetime1, var14Lifetime2 - 2);
                                     SoftwareRasterizer.fillCircleAlpha(var13_intLifetime1, var14Lifetime2, 4, var8, 32);
                                   }
                                 }
@@ -1129,7 +1129,7 @@ final class BattleUnit extends DualLinkNode {
                                           var9 -= 32;
                                           var44.makeRasterTarget();
                                           var12_ref_qb.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * -this.field_gb.field_y * 8000, 4096);
-                                          ce.field_m.makeRasterTarget(true);
+                                          GameSelectionHelpers.field_m.makeRasterTarget(true);
                                         }
                                       } else {
                                         var10 = var10 - this.field_gb.field_y * this.field_gb.field_F / 100;
@@ -1141,7 +1141,7 @@ final class BattleUnit extends DualLinkNode {
                                         var10 = var10 - this.field_Y / 2;
                                         var43.makeRasterTarget();
                                         var12_ref_qbLifetime2.drawRotatedAboutPivot(this.field_Y / 2 << 4, 3 * this.field_Y / 4 << 4, this.field_Y << 4, this.field_Y << 4, this.field_E * 4000 * -this.field_gb.field_y, 4096);
-                                        ce.field_m.makeRasterTarget(true);
+                                        GameSelectionHelpers.field_m.makeRasterTarget(true);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
@@ -1155,7 +1155,7 @@ final class BattleUnit extends DualLinkNode {
                                       var8_ref_qb = var45;
                                       var45.makeRasterTarget();
                                       var12_ref_qbLifetime1.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * 4000 * -this.field_gb.field_y, 4096);
-                                      ce.field_m.makeRasterTarget(true);
+                                      GameSelectionHelpers.field_m.makeRasterTarget(true);
                                     }
                                   }
                                 } else {
@@ -1256,9 +1256,9 @@ final class BattleUnit extends DualLinkNode {
               var9Lifetime1 = -this.field_Y + (var41[1] - 10);
               var10Lifetime1 = (int)(Math.cos(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)SpriteState.field_v) * 8.0);
               if (var10Lifetime1 <= 0) {
-                bb.field_g[(3 * var7Lifetime1 + SpriteState.field_v / 7 & 1) + 86].drawHorizontalFlip(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
+                LoginLoadingHelpers.field_g[(3 * var7Lifetime1 + SpriteState.field_v / 7 & 1) + 86].drawHorizontalFlip(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
               } else {
-                bb.field_g[(1 & SpriteState.field_v / 7 + var7Lifetime1 * 3) + 86].drawTransparent(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
+                LoginLoadingHelpers.field_g[(1 & SpriteState.field_v / 7 + var7Lifetime1 * 3) + 86].drawTransparent(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
               }
             }
           }
@@ -1275,7 +1275,7 @@ final class BattleUnit extends DualLinkNode {
               var14Lifetime1 = 10;
               if (0 == var7Lifetime2) {
                 var12Lifetime1 = 1;
-                var13 = lf.field_c;
+                var13 = ScreenTransitionHelpers.field_c;
               }
               if (var7Lifetime2 == 1) {
                 var13 = DualLinkNode.field_j;
@@ -1285,11 +1285,11 @@ final class BattleUnit extends DualLinkNode {
                 var13 = SceneTabbedPanel.field_Pb;
               }
               if (3 == var7Lifetime2) {
-                var13 = fo.field_g;
+                var13 = MessageCaptionGlobals.field_g;
               }
               if (var7Lifetime2 == 4) {
                 var12Lifetime1 = 1;
-                var13 = fc.field_e;
+                var13 = SpriteDecodeHelpers.field_e;
               }
               if (var7Lifetime2 == 5) {
                 var13 = KeyboardInputHandler.field_h;
@@ -1300,12 +1300,12 @@ final class BattleUnit extends DualLinkNode {
                 var12Lifetime1 = 1;
               }
               if (var7Lifetime2 == 7) {
-                var13 = eo.field_a;
+                var13 = PackedShortHelpers.field_a;
               }
               if (var7Lifetime2 == 8) {
                 var14Lifetime1 = 3;
                 var12Lifetime1 = 1;
-                var13 = ae.field_a;
+                var13 = LobbyRequestHelpers.field_a;
               }
               var15 = new int[]{255, 0, 0};
               var16 = new int[]{0, 255, 0};
@@ -1351,7 +1351,7 @@ final class BattleUnit extends DualLinkNode {
                 var23 = SoftwareRasterizer.field_e;
                 var24 = SoftwareRasterizer.field_j;
                 var21.makeRasterTarget();
-                pc.drawTexturedSpriteIntGuard(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
                 SoftwareRasterizer.field_e = var23;
                 SoftwareRasterizer.field_j = var24;
                 SoftwareRasterizer.field_l = var22;
@@ -1394,18 +1394,18 @@ final class BattleUnit extends DualLinkNode {
                 var31.makeRasterTarget();
                 var32 = 20;
                 var33 = 32;
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var22_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 64, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var22_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 64, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
                 var33 -= 3;
                 var33 -= 6;
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 58, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 58, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
                 var33 += 6;
                 var33 -= 6;
                 var33 += 3;
                 var33 += 6;
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var27, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -91, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
-                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var23, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 18, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var27, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -91, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
+                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var23, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 18, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
                 SoftwareRasterizer.field_l = var28;
                 SoftwareRasterizer.field_j = var30;
                 SoftwareRasterizer.field_e = var29;
@@ -1436,7 +1436,7 @@ final class BattleUnit extends DualLinkNode {
             if (null == this.field_s &&
               this.field_T < this.field_L.field_q &&
               this.field_L.field_S[this.field_T] > 0) {
-              rb.field_o[-1 + this.field_L.field_S[this.field_T]].drawTintedGrayscale(param1 + (this.field_lb - 15), -(var8Lifetime3 * 2) - this.field_Y + (param0 + this.field_db - 13), var5);
+              TimedMessage.field_o[-1 + this.field_L.field_S[this.field_T]].drawTintedGrayscale(param1 + (this.field_lb - 15), -(var8Lifetime3 * 2) - this.field_Y + (param0 + this.field_db - 13), var5);
             }
           }
           if (param2 != 1703903841) {
@@ -1446,7 +1446,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "ml.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "ml.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1462,7 +1462,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.BB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.BB(" + param0 + ')');
         }
     }
 
@@ -1497,7 +1497,7 @@ final class BattleUnit extends DualLinkNode {
             }
             if (this.field_ib <= 0) {
               this.field_M = 0;
-              this.field_L.a(this, 0);
+              this.field_L.eraseUnitMask(this, 0);
               this.updateTurnLogic(this.field_L.getCurrentPlayer(false), 120);
               return true;
             }
@@ -1514,7 +1514,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.SA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.SA(" + param0 + ')');
         }
     }
 
@@ -1531,7 +1531,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.EB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.EB(" + param0 + ')');
         }
     }
 
@@ -1548,7 +1548,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.KB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.KB(" + param0 + ')');
         }
     }
 
@@ -1575,9 +1575,9 @@ final class BattleUnit extends DualLinkNode {
               -32 + this.field_L.field_H < this.field_db && (this.field_ib > 5 ||
               0 < this.field_q))) {
               this.field_db = -32 + this.field_L.field_H;
-              this.field_L.stampShape(-115, this.field_lb - 24, gj.field_f[9], -gj.field_f[9].field_f + this.field_L.field_H - 32);
-              this.field_L.stampShape(param0 ^ 117, -8 + this.field_lb, gj.field_f[9], -gj.field_f[9].field_f - 32 + this.field_L.field_H);
-              this.field_L.stampShape(param0 + 92, 8 + this.field_lb, gj.field_f[9], this.field_L.field_H - 32 - gj.field_f[9].field_f);
+              this.field_L.stampShape(-115, this.field_lb - 24, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f + this.field_L.field_H - 32);
+              this.field_L.stampShape(param0 ^ 117, -8 + this.field_lb, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f - 32 + this.field_L.field_H);
+              this.field_L.stampShape(param0 + 92, 8 + this.field_lb, ScreenSwitchHelpers.field_f[9], this.field_L.field_H - 32 - ScreenSwitchHelpers.field_f[9].field_f);
               if (22 != this.field_jb) {
                 this.field_ib = this.field_ib - 5;
               }
@@ -1588,9 +1588,9 @@ final class BattleUnit extends DualLinkNode {
               -32 + this.field_L.field_H < this.field_db && (this.field_ib > 5 ||
               0 < this.field_q)) {
               this.field_db = -32 + this.field_L.field_H;
-              this.field_L.stampShape(-115, this.field_lb - 24, gj.field_f[9], -gj.field_f[9].field_f + this.field_L.field_H - 32);
-              this.field_L.stampShape(param0 ^ 117, -8 + this.field_lb, gj.field_f[9], -gj.field_f[9].field_f - 32 + this.field_L.field_H);
-              this.field_L.stampShape(param0 + 92, 8 + this.field_lb, gj.field_f[9], this.field_L.field_H - 32 - gj.field_f[9].field_f);
+              this.field_L.stampShape(-115, this.field_lb - 24, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f + this.field_L.field_H - 32);
+              this.field_L.stampShape(param0 ^ 117, -8 + this.field_lb, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f - 32 + this.field_L.field_H);
+              this.field_L.stampShape(param0 + 92, 8 + this.field_lb, ScreenSwitchHelpers.field_f[9], this.field_L.field_H - 32 - ScreenSwitchHelpers.field_f[9].field_f);
               if (22 != this.field_jb) {
                 this.field_ib = this.field_ib - 5;
               }
@@ -1605,7 +1605,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.BA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.BA(" + param0 + ')');
         }
     }
 
@@ -1724,15 +1724,15 @@ final class BattleUnit extends DualLinkNode {
           if (this.field_jb == 17) {
             this.field_s = this.field_L.getUnitByOwner(this.field_u, true);
             var2_intLifetime1 = 65536;
-            pi.field_b.setDeque((byte) 114, this.field_L.field_i);
-            var6_ref_ml = (BattleUnit) (pi.field_b.first(-31));
+            RequestQueueHelpers.field_b.setDeque((byte) 114, this.field_L.field_i);
+            var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.first(-31));
             while (var6_ref_ml != null) {
               if (~var6_ref_ml.field_u == ~this.field_u) {
                 if (var6_ref_ml.field_s != null &&
                   var6_ref_ml.field_jb != 9 &&
                   var6_ref_ml.field_jb != 7 &&
                   var6_ref_ml.field_jb != 37) {
-                  var6_ref_ml = (BattleUnit) (pi.field_b.next(-18502));
+                  var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
                   continue;
                 }
                 var5_intLifetime1 = -var6_ref_ml.field_db + this.field_db - this.field_Y / 2;
@@ -1743,14 +1743,14 @@ final class BattleUnit extends DualLinkNode {
                   this.field_s = var6_ref_ml;
                 }
               }
-              var6_ref_ml = (BattleUnit) (pi.field_b.next(-18502));
+              var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
             }
           } else {
             if (this.isAirborneOrHovering(32)) {
               this.field_s = this.field_L.getUnitByOwner(this.field_u, true);
               var2_intLifetime1 = 65536;
-              pi.field_b.setDeque((byte) 99, this.field_L.field_i);
-              var6_ref_ml = (BattleUnit) (pi.field_b.first(-47));
+              RequestQueueHelpers.field_b.setDeque((byte) 99, this.field_L.field_i);
+              var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.first(-47));
               while (var6_ref_ml != null) {
                 if (~var6_ref_ml.field_u == ~this.field_u && (null == var6_ref_ml.field_s ||
                   var6_ref_ml.field_jb == 37)) {
@@ -1762,7 +1762,7 @@ final class BattleUnit extends DualLinkNode {
                     var2_intLifetime1 = var3Lifetime1;
                   }
                 }
-                var6_ref_ml = (BattleUnit) (pi.field_b.next(-18502));
+                var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
               }
             }
           }
@@ -1782,7 +1782,7 @@ final class BattleUnit extends DualLinkNode {
             this.field_hb ||
             this.field_M != 0) {
             var4Lifetime2 = 1;
-            this.field_L.a(this, 0);
+            this.field_L.eraseUnitMask(this, 0);
           }
           if (null != this.field_s &&
             0 >= this.field_s.field_ib &&
@@ -1795,7 +1795,7 @@ final class BattleUnit extends DualLinkNode {
             !(0 < var5.field_ib))) {
             this.field_ib = 0;
             if (var4Lifetime2 == 0) {
-              this.field_L.a(this, 0);
+              this.field_L.eraseUnitMask(this, 0);
             }
             this.updateTurnLogic(this.field_L.getCurrentPlayer(false), 90);
             return;
@@ -1803,7 +1803,7 @@ final class BattleUnit extends DualLinkNode {
           if (this.field_ib <= 0) {
             this.field_M = 0;
             if (var4Lifetime2 == 0) {
-              this.field_L.a(this, param0 ^ -55);
+              this.field_L.eraseUnitMask(this, param0 ^ -55);
             }
             this.updateTurnLogic(this.field_L.getCurrentPlayer(false), 72);
             return;
@@ -1845,9 +1845,9 @@ final class BattleUnit extends DualLinkNode {
               this.field_eb = 0;
               this.field_db = -33 + this.field_L.field_H;
               this.field_R = this.field_db << 4;
-              this.field_L.stampShape(param0 ^ -57, -24 + this.field_lb, gj.field_f[9], -gj.field_f[9].field_f + (-33 + this.field_L.field_H));
-              this.field_L.stampShape(-25, -8 + this.field_lb, gj.field_f[9], this.field_L.field_H - (33 + gj.field_f[9].field_f));
-              this.field_L.stampShape(89, this.field_lb + 8, gj.field_f[9], -33 + (this.field_L.field_H - gj.field_f[9].field_f));
+              this.field_L.stampShape(param0 ^ -57, -24 + this.field_lb, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f + (-33 + this.field_L.field_H));
+              this.field_L.stampShape(-25, -8 + this.field_lb, ScreenSwitchHelpers.field_f[9], this.field_L.field_H - (33 + ScreenSwitchHelpers.field_f[9].field_f));
+              this.field_L.stampShape(89, this.field_lb + 8, ScreenSwitchHelpers.field_f[9], -33 + (this.field_L.field_H - ScreenSwitchHelpers.field_f[9].field_f));
               if (this.field_jb != 22) {
                 this.field_ib = this.field_ib - 5;
               }
@@ -1861,9 +1861,9 @@ final class BattleUnit extends DualLinkNode {
               this.field_eb = 0;
               this.field_db = -33 + this.field_L.field_H;
               this.field_R = this.field_db << 4;
-              this.field_L.stampShape(param0 ^ -57, -24 + this.field_lb, gj.field_f[9], -gj.field_f[9].field_f + (-33 + this.field_L.field_H));
-              this.field_L.stampShape(-25, -8 + this.field_lb, gj.field_f[9], this.field_L.field_H - (33 + gj.field_f[9].field_f));
-              this.field_L.stampShape(89, this.field_lb + 8, gj.field_f[9], -33 + (this.field_L.field_H - gj.field_f[9].field_f));
+              this.field_L.stampShape(param0 ^ -57, -24 + this.field_lb, ScreenSwitchHelpers.field_f[9], -ScreenSwitchHelpers.field_f[9].field_f + (-33 + this.field_L.field_H));
+              this.field_L.stampShape(-25, -8 + this.field_lb, ScreenSwitchHelpers.field_f[9], this.field_L.field_H - (33 + ScreenSwitchHelpers.field_f[9].field_f));
+              this.field_L.stampShape(89, this.field_lb + 8, ScreenSwitchHelpers.field_f[9], -33 + (this.field_L.field_H - ScreenSwitchHelpers.field_f[9].field_f));
               if (this.field_jb != 22) {
                 this.field_ib = this.field_ib - 5;
               }
@@ -1897,7 +1897,7 @@ final class BattleUnit extends DualLinkNode {
               var6Lifetime1 == 0) {
               if (this.field_jb == 12) {
                 if (var4Lifetime2 == 0) {
-                  this.field_L.a(this, param0 ^ -55);
+                  this.field_L.eraseUnitMask(this, param0 ^ -55);
                 }
                 this.updateTurnLogic(this.field_L.getCurrentPlayer(false), 89);
                 this.field_ib = 0;
@@ -1950,7 +1950,7 @@ final class BattleUnit extends DualLinkNode {
               this.field_db = var3Lifetime2;
               if (var4Lifetime2 == 0 && (this.field_jb != 12 ||
                 this.field_ib > 0)) {
-                this.field_L.a(this, param0 ^ -55);
+                this.field_L.eraseUnitMask(this, param0 ^ -55);
               }
               this.field_lb = var9;
               this.field_db = var10;
@@ -1967,7 +1967,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.MA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.MA(" + param0 + ')');
         }
     }
 
@@ -2118,7 +2118,7 @@ final class BattleUnit extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, QueuedPacket.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, NameErrorHelpers.field_a, ModalPanelStack.field_I, GameListHelpers.field_b};
                               if (SceneWidget.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2130,48 +2130,48 @@ final class BattleUnit extends DualLinkNode {
                                 var4 = var24;
                                 var20 = new Sprite(64, 96);
                                 var20.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
-                                pc.drawTexturedSpriteIntGuard(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
                                 if (53 != var25[5] &&
                                   var25[5] != 55) {
-                                  pc.drawTexturedSpriteIntGuard(var21, 32, var22, var23, 74, var24, var13_ref_qb____[6][var25[6]], 0);
+                                  TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 32, var22, var23, 74, var24, var13_ref_qb____[6][var25[6]], 0);
                                 }
-                                pc.drawTexturedSpriteIntGuard(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
                                 this.field_I = new Sprite(64, 96);
                                 this.field_I.makeRasterTarget();
                                 var20.drawCenteredRotatedScaledBilinear(32, 48, 0, 4096);
                                 this.field_I.trimTransparentBorders();
                                 var26 = new Sprite(64, 64);
                                 var26.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
                                 this.field_bb = new Sprite(64, 64);
                                 this.field_bb.makeRasterTarget();
                                 var26.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_bb.trimTransparentBorders();
                                 var27 = new Sprite(64, 64);
                                 var27.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
                                 this.field_Q = new Sprite(64, 64);
                                 this.field_Q.makeRasterTarget();
                                 var27.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_Q.trimTransparentBorders();
                                 var28 = new Sprite(64, 64);
                                 var28.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
                                 this.field_cb = new Sprite(64, 64);
                                 this.field_cb.makeRasterTarget();
                                 var28.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_cb.trimTransparentBorders();
                                 var29 = new Sprite(64, 64);
                                 var29.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
                                 this.field_fb = new Sprite(64, 64);
                                 this.field_fb.makeRasterTarget();
                                 var29.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_fb.trimTransparentBorders();
                                 var30 = new Sprite(64, 64);
                                 var30.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
                                 this.field_B = new Sprite(64, 64);
                                 this.field_B.makeRasterTarget();
                                 var30.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
@@ -2220,7 +2220,7 @@ final class BattleUnit extends DualLinkNode {
                                       }
                                     }
                                     var10 = this.field_ib;
-                                    var11 = fb.field_a;
+                                    var11 = StringReplaceHelpers.field_a;
                                     this.field_ib = 10;
                                     this.field_Y = 24;
                                     if (11 == this.field_jb &&
@@ -2230,7 +2230,7 @@ final class BattleUnit extends DualLinkNode {
                                     if (4 == this.field_jb) {
                                       this.field_Y = 32;
                                       this.field_ib = 50;
-                                      var11 = bj.field_ob;
+                                      var11 = ButtonMenuDialog.field_ob;
                                     }
                                     if (5 == this.field_jb) {
                                       this.field_Y = 64;
@@ -2264,7 +2264,7 @@ final class BattleUnit extends DualLinkNode {
                                     if (this.field_jb == 2) {
                                       this.field_Y = 64;
                                       this.field_ib = 100;
-                                      var11 = i.field_g;
+                                      var11 = ChatPanel.field_g;
                                     }
                                     if (this.field_jb == 3) {
                                       this.field_Y = 64;
@@ -2274,36 +2274,36 @@ final class BattleUnit extends DualLinkNode {
                                     if (8 == this.field_jb) {
                                       this.field_Y = 48;
                                       this.field_ib = 50;
-                                      var11 = pm.field_d;
+                                      var11 = EmailValidationHelpers.field_d;
                                       this.field_U = true;
                                     }
                                     if (this.field_jb == 7) {
-                                      var11 = ra.field_j;
+                                      var11 = DateHelpers.field_j;
                                       this.field_Y = 64;
                                       this.field_ib = 100;
                                     }
                                     if (this.field_jb == 10) {
                                       this.field_ib = 25;
-                                      var11 = oe.field_d;
+                                      var11 = CalendarHelpers.field_d;
                                       this.field_Y = 16;
                                     }
                                     if (9 == this.field_jb) {
                                       this.field_ib = 100;
-                                      var11 = qj.field_d;
+                                      var11 = TimeAndInputHelpers.field_d;
                                       this.field_Y = 64;
                                     }
                                     if (this.field_jb == 28) {
                                       this.field_Y = 24;
-                                      var11 = g.field_f;
+                                      var11 = SupportPageHelpers.field_f;
                                       this.field_ib = 40;
                                     }
                                     if (this.field_jb == 29) {
-                                      var11 = c.field_a;
+                                      var11 = ChatPanelHelpers.field_a;
                                       this.field_Y = 48;
                                       this.field_ib = 100;
                                     }
                                     if (this.field_jb == 30) {
-                                      var11 = vm.field_g;
+                                      var11 = MouseStateHelpers.field_g;
                                       this.field_ib = 200;
                                       this.field_Y = 100;
                                     }
@@ -2315,11 +2315,11 @@ final class BattleUnit extends DualLinkNode {
                                     if (this.field_jb == 32) {
                                       this.field_ib = 250;
                                       this.field_Y = 128;
-                                      var11 = nj.field_k;
+                                      var11 = NameCheckHelpers.field_k;
                                     }
                                     if (this.field_jb == 37) {
                                       this.field_ib = 50;
-                                      var11 = fe.field_h;
+                                      var11 = PendingTask.field_h;
                                       this.field_Y = 32;
                                     }
                                     if (param1) {
@@ -2344,30 +2344,30 @@ final class BattleUnit extends DualLinkNode {
                                         6 != this.field_jb &&
                                         this.field_jb != 25 &&
                                         this.field_U) {
-                                        pc.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].toRgbSprite(), 0);
+                                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].toRgbSprite(), 0);
                                       } else {
-                                        pc.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].toRgbSprite(), 0);
+                                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].toRgbSprite(), 0);
                                       }
                                       this.field_I = var39.copy();
                                       var40 = new Sprite(this.field_Y, this.field_Y);
                                       var40.makeRasterTarget();
-                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 70, var4, var11[3].toRgbSprite(), 0);
+                                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 70, var4, var11[3].toRgbSprite(), 0);
                                       this.field_bb = var40.copy();
                                       var41 = new Sprite(this.field_Y, this.field_Y);
                                       var41.makeRasterTarget();
-                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 33, var4, var11[1].toRgbSprite(), 0);
+                                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 33, var4, var11[1].toRgbSprite(), 0);
                                       this.field_Q = var41.copy();
                                       var42 = new Sprite(this.field_Y, this.field_Y);
                                       var42.makeRasterTarget();
-                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -127, var4, var11[4].toRgbSprite(), 0);
+                                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -127, var4, var11[4].toRgbSprite(), 0);
                                       this.field_cb = var42.copy();
                                       var43 = new Sprite(this.field_Y, this.field_Y);
                                       var43.makeRasterTarget();
-                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -4, var4, var11[0].toRgbSprite(), 0);
+                                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -4, var4, var11[0].toRgbSprite(), 0);
                                       this.field_fb = var43.copy();
                                       var44 = new Sprite(this.field_Y, this.field_Y);
                                       var44.makeRasterTarget();
-                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -86, var4, var11[5].toRgbSprite(), 0);
+                                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -86, var4, var11[5].toRgbSprite(), 0);
                                       this.field_B = var44.copy();
                                       this.field_J = true;
                                     }
@@ -2406,22 +2406,22 @@ final class BattleUnit extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, QueuedPacket.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, NameErrorHelpers.field_a, ModalPanelStack.field_I, GameListHelpers.field_b};
                               if (SceneWidget.field_kb == null) {
                                 this.field_J = false;
                               } else {
                                 var31 = new Sprite(64, 96);
                                 var31.makeRasterTarget();
                                 if (this.field_jb != 16) {
-                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
-                                  pc.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -91, var18, var9[4][var8[5]], 0);
+                                  TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
+                                  TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -91, var18, var9[4][var8[5]], 0);
                                   if (var8[5] != 53 &&
                                     var8[5] != 55) {
-                                    pc.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -90, var18, var9[6][var8[6]], 0);
+                                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -90, var18, var9[6][var8[6]], 0);
                                   }
-                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 13, var18, var9[5][var8[4]], 0);
+                                  TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 13, var18, var9[5][var8[4]], 0);
                                 } else {
-                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 116, var18, QuickChatPhrase.field_x[2], 0);
+                                  TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 116, var18, QuickChatPhrase.field_x[2], 0);
                                 }
                                 this.field_I = new Sprite(32, 48);
                                 this.field_I.makeRasterTarget();
@@ -2429,14 +2429,14 @@ final class BattleUnit extends DualLinkNode {
                                 this.field_I.trimTransparentBorders();
                                 var33 = new Sprite(64, 64);
                                 var33.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
                                 this.field_bb = new Sprite(32, 32);
                                 this.field_bb.makeRasterTarget();
                                 var33.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 this.field_bb.trimTransparentBorders();
                                 var34 = new Sprite(64, 64);
                                 var34.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
                                 this.field_Q = new Sprite(32, 32);
                                 this.field_Q.makeRasterTarget();
                                 if (var8[0] != 46) {
@@ -2445,7 +2445,7 @@ final class BattleUnit extends DualLinkNode {
                                 this.field_Q.trimTransparentBorders();
                                 var35 = new Sprite(64, 64);
                                 var35.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
                                 this.field_cb = new Sprite(32, 32);
                                 this.field_cb.makeRasterTarget();
                                 if (var8[0] != 46) {
@@ -2454,14 +2454,14 @@ final class BattleUnit extends DualLinkNode {
                                 this.field_cb.trimTransparentBorders();
                                 var36 = new Sprite(64, 64);
                                 var36.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
                                 this.field_fb = new Sprite(32, 32);
                                 this.field_fb.makeRasterTarget();
                                 var36.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 this.field_fb.trimTransparentBorders();
                                 var37 = new Sprite(64, 64);
                                 var37.makeRasterTarget();
-                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
                                 this.field_B = new Sprite(32, 32);
                                 this.field_B.makeRasterTarget();
                                 var37.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
@@ -2554,7 +2554,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3_ref), "ml.W(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "ml.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2576,7 +2576,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.IA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.IA(" + param0 + ')');
         }
     }
 
@@ -2587,7 +2587,7 @@ final class BattleUnit extends DualLinkNode {
             this.hasNoLinkedUnit(8);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.U(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ml.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2617,7 +2617,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.TA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.TA(" + param0 + ')');
         }
     }
 
@@ -2636,7 +2636,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.FB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.FB(" + param0 + ')');
         }
     }
 
@@ -2652,7 +2652,7 @@ final class BattleUnit extends DualLinkNode {
           }
           field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.NA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ml.NA(" + param0 + ')');
         }
     }
 
@@ -2673,7 +2673,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.A(" + param0 + ')');
         }
     }
 
@@ -2690,7 +2690,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.LA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.LA(" + param0 + ')');
         }
     }
 
@@ -2743,14 +2743,14 @@ final class BattleUnit extends DualLinkNode {
             0 < 1 + (-1 + this.field_L.field_X[this.field_u]) % 5 - (this.field_L.field_X[this.field_u] - 1) / 5) {
             this.field_ib = 20 * ((this.field_L.field_X[this.field_u] - 1) % 5 + 1 - (-1 + this.field_L.field_X[this.field_u]) / 5);
             this.field_x = 0;
-            var8 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+            var8 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
             this.field_L.onProjectileFinished(52, var8);
-            this.field_L.a(this, 0);
+            this.field_L.eraseUnitMask(this, 0);
             this.field_lb = this.field_L.field_Ab[this.field_u];
             this.field_db = this.field_L.field_o[this.field_u];
             this.field_X = this.field_lb << 4;
             this.field_R = this.field_db << 4;
-            var9 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+            var9 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
             this.field_L.onProjectileFinished(52, var9);
             while ((this.field_L.field_X[this.field_u] - 1) % 5 + (1 - (-1 + this.field_L.field_X[this.field_u]) / 5) > 0) {
               this.field_L.field_X[this.field_u] = this.field_L.field_X[this.field_u] + 5;
@@ -2787,114 +2787,114 @@ final class BattleUnit extends DualLinkNode {
             this.field_L.field_b[param0] = this.field_L.field_b[param0] + 1;
           }
           this.playTypeSound((byte) 89, 1);
-          this.field_L.a(this, 0);
+          this.field_L.eraseUnitMask(this, 0);
           if (param1 < 4) {
             return;
           }
           regionExit1: {
             var4 = this.field_jb;
             if (var4 == 40) {
-              var10 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
+              var10 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
               this.field_L.onProjectileFinished(52, var10);
             } else {
               if (var4 != 0 &&
                 var4 != 27) {
                 switch (var4) {
                   case 3:
-                    var12 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var12 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var12);
                     break regionExit1;
                   case 7:
-                    var13 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var13 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var13);
                     break regionExit1;
                   case 1:
-                    var14 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
+                    var14 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var14);
                     break regionExit1;
                   case 5:
-                    var15 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var15 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var15);
                     break regionExit1;
                   case 2:
-                    var16 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
+                    var16 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var16);
                     break regionExit1;
                   case 11:
-                    var17 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+                    var17 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var17);
                     break regionExit1;
                   case 9:
-                    var18 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                    var18 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var18);
                     break regionExit1;
                   case 17:
                     if (this.field_U) {
-                      var20 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                      var20 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                       this.field_L.onProjectileFinished(52, var20);
                       break regionExit1;
                     }
-                    var19 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
+                    var19 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var19);
                     break regionExit1;
                   case 10:
-                    var21 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                    var21 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var21);
                     break regionExit1;
                   case 6:
-                    var22 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var22 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var22);
                     break regionExit1;
                   case 25:
-                    var23 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var23 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var23);
                     break regionExit1;
                   case 4:
-                    var24 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var24 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var24);
                     break regionExit1;
                   case 8:
-                    var25 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var25 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var25);
                     break regionExit1;
                   case 13:
-                    var26 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 85, this.field_L, this.field_lb);
+                    var26 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 85, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var26);
                     break regionExit1;
                   case 37:
-                    var27 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                    var27 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var27);
                     break regionExit1;
                   case 39:
-                    var28 = aj.spawnProjectile(this.field_s, -10 + (-(this.field_Y / 2) + this.field_db), false, 159, this.field_L, -10 + this.field_lb);
+                    var28 = GameOptionType.spawnProjectile(this.field_s, -10 + (-(this.field_Y / 2) + this.field_db), false, 159, this.field_L, -10 + this.field_lb);
                     this.field_L.onProjectileFinished(52, var28);
                     var28.field_u = -20;
                     var28.field_F = -20;
-                    var29 = aj.spawnProjectile(this.field_s, -(this.field_Y / 2) + this.field_db - 10, false, 159, this.field_L, this.field_lb + 10);
+                    var29 = GameOptionType.spawnProjectile(this.field_s, -(this.field_Y / 2) + this.field_db - 10, false, 159, this.field_L, this.field_lb + 10);
                     this.field_L.onProjectileFinished(52, var29);
                     var29.field_u = 20;
                     var29.field_F = -20;
-                    var30 = aj.spawnProjectile(this.field_s, this.field_db - this.field_Y / 2 + 10, false, 159, this.field_L, this.field_lb + 10);
+                    var30 = GameOptionType.spawnProjectile(this.field_s, this.field_db - this.field_Y / 2 + 10, false, 159, this.field_L, this.field_lb + 10);
                     this.field_L.onProjectileFinished(52, var30);
                     var30.field_u = 20;
                     var30.field_F = 20;
-                    var31 = aj.spawnProjectile(this.field_s, 10 + (this.field_db - this.field_Y / 2), false, 159, this.field_L, -10 + this.field_lb);
+                    var31 = GameOptionType.spawnProjectile(this.field_s, 10 + (this.field_db - this.field_Y / 2), false, 159, this.field_L, -10 + this.field_lb);
                     this.field_L.onProjectileFinished(52, var31);
                     var31.field_u = -20;
                     var31.field_F = 20;
-                    var32 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                    var32 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var32);
                     break regionExit1;
                   case 15:
-                    var33 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var33 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var33);
                     break regionExit1;
                   case 14:
-                    var34 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var34 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var34);
                     break regionExit1;
                   case 26:
-                    var35 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                    var35 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var35);
                     break regionExit1;
                   case 12:
@@ -2911,35 +2911,35 @@ final class BattleUnit extends DualLinkNode {
                         var4 != 30) {
                         switch (var4) {
                           case 28:
-                            var40 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                            var40 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                             this.field_L.onProjectileFinished(52, var40);
                             break regionExit1;
                           case 34:
-                            var38 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 146, this.field_L, this.field_lb);
+                            var38 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 146, this.field_L, this.field_lb);
                             this.field_L.onProjectileFinished(52, var38);
                             var38.field_y = 250;
                             break regionExit1;
                           default:
                             break regionExit1;
                           case 36:
-                            var39 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 128, this.field_L, this.field_lb);
+                            var39 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 128, this.field_L, this.field_lb);
                             this.field_L.onProjectileFinished(52, var39);
                             break regionExit1;
                           case 32:
                             break;
                         }
                       }
-                      var41 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                      var41 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                       this.field_L.onProjectileFinished(52, var41);
                       break regionExit1;
                     }
-                    var36 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 154, this.field_L, this.field_lb);
+                    var36 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 154, this.field_L, this.field_lb);
                     this.field_L.onProjectileFinished(52, var36);
                     break regionExit1;
                 }
               }
               this.playSound(-30225, 53);
-              var11 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+              var11 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
               this.field_L.onProjectileFinished(52, var11);
             }
           }
@@ -2949,7 +2949,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ml.RA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ml.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2962,13 +2962,13 @@ final class BattleUnit extends DualLinkNode {
           }
           if (null != this.field_L.field_rb &&
             null != this.field_L.field_rb[param2]) {
-            ii.playSample(param1, false, this.field_L.field_rb[param2], 100 * tm.field_a[param2] / param1);
+            IconHighlightPainter.playSample(param1, false, this.field_L.field_rb[param2], 100 * IntensityTableHelpers.field_a[param2] / param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "ml.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "ml.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2985,7 +2985,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.OA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.OA(" + param0 + ')');
         }
     }
 
@@ -3053,160 +3053,160 @@ final class BattleUnit extends DualLinkNode {
               27 != var3) {
               switch (var3) {
                 case 3:
-                  var6 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                  var6 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var6);
                   break;
                 case 7:
-                  var7 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 103, this.field_L, this.field_lb);
+                  var7 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 103, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var7);
-                  var8 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 103, this.field_L, this.field_lb - this.field_Y / 2);
+                  var8 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 103, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var8);
-                  var9 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 103, this.field_L, this.field_lb + this.field_Y / 2);
+                  var9 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 103, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var9);
                   break;
                 case 1:
-                  var10 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 89, this.field_L, this.field_lb);
+                  var10 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 89, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var10);
                   break;
                 case 5:
-                  var11 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
+                  var11 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var11);
-                  var12 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
+                  var12 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var12);
-                  var13 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var13 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.onProjectileFinished(52, var13);
                   break;
                 case 2:
-                  var14 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 89, this.field_L, this.field_lb);
+                  var14 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 89, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var14);
-                  var15 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 89, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var15 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 89, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.onProjectileFinished(52, var15);
-                  var16 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 89, this.field_L, this.field_lb + this.field_Y / 2);
+                  var16 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 89, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var16);
                   break;
                 case 11:
-                  var17 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
+                  var17 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var17);
                   break;
                 case 9:
-                  var18 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 108, this.field_L, this.field_lb);
+                  var18 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var18);
-                  var19 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 108, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var19 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 108, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.onProjectileFinished(52, var19);
-                  var20 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 108, this.field_L, this.field_lb + this.field_Y / 2);
+                  var20 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 108, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var20);
                   break;
                 case 17:
-                  var21 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                  var21 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var21);
                   break;
                 case 10:
-                  var22 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                  var22 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var22);
                   break;
                 case 6:
-                  var23 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                  var23 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var23);
                   break;
                 case 25:
-                  var24 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb);
+                  var24 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var24);
                   break;
                 case 4:
-                  var25 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_lb);
+                  var25 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var25);
                   break;
                 case 8:
-                  var26 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                  var26 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var26);
                   break;
                 case 37:
-                  var27 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                  var27 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var27);
                   break;
                 case 39:
-                  var28 = aj.spawnProjectile((BattleUnit) null, -this.field_Y + this.field_db, false, 163, this.field_L, this.field_lb);
+                  var28 = GameOptionType.spawnProjectile((BattleUnit) null, -this.field_Y + this.field_db, false, 163, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var28);
-                  var29 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb - this.field_Y / 2);
+                  var29 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var29);
-                  var30 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb + this.field_Y / 2);
+                  var30 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var30);
-                  var31 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 163, this.field_L, this.field_lb);
+                  var31 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 163, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var31);
                   break;
                 case 13:
-                  var32 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 85, this.field_L, this.field_lb);
+                  var32 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 85, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var32);
-                  var33 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var33 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.onProjectileFinished(52, var33);
-                  var34 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var34 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.onProjectileFinished(52, var34);
-                  var35 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 85, this.field_L, this.field_lb);
+                  var35 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 85, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var35);
                   break;
                 case 15:
-                  var36 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
+                  var36 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var36);
-                  var37 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
+                  var37 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var37);
-                  var38 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var38 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.onProjectileFinished(52, var38);
-                  var39 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_lb);
+                  var39 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 94, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var39);
                   break;
                 case 14:
-                  var40 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 99, this.field_L, this.field_lb);
+                  var40 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 99, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var40);
-                  var41 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb - this.field_Y / 2);
+                  var41 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var41);
-                  var42 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb + this.field_Y / 2);
+                  var42 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var42);
-                  var43 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 99, this.field_L, this.field_lb);
+                  var43 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 99, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var43);
                   break;
                 case 26:
-                  var44 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                  var44 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var44);
                   break;
                 case 12:
-                  var45 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
+                  var45 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var45);
                   break;
                 case 28:
-                  var46 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                  var46 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var46);
                   break;
                 case 32:
-                  var47 = aj.spawnProjectile((BattleUnit) null, -this.field_Y + this.field_db, false, 130, this.field_L, this.field_lb);
+                  var47 = GameOptionType.spawnProjectile((BattleUnit) null, -this.field_Y + this.field_db, false, 130, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var47);
-                  var48 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb - this.field_Y / 2);
+                  var48 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var48);
-                  var49 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 130, this.field_L, this.field_lb + this.field_Y / 2);
+                  var49 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 130, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.onProjectileFinished(52, var49);
-                  var50 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 130, this.field_L, this.field_lb);
+                  var50 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 130, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var50);
                   break;
                 case 33:
-                  var51 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 128, this.field_L, this.field_lb);
+                  var51 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 128, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var51);
                   break;
                 default:
                   break;
                 case 34:
-                  var55 = aj.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 131, this.field_L, this.field_lb);
+                  var55 = GameOptionType.spawnProjectile((BattleUnit) null, -(this.field_Y / 2) + this.field_db, false, 131, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var55);
                   break;
                 case 31:
-                  var52 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 154, this.field_L, this.field_lb);
+                  var52 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y, false, 154, this.field_L, this.field_lb);
                   this.field_L.onProjectileFinished(52, var52);
-                  var53 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 154, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var53 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 154, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.onProjectileFinished(52, var53);
-                  var54 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 154, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var54 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 154, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.onProjectileFinished(52, var54);
                   break;
               }
             } else {
-              var5 = aj.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+              var5 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
               this.field_L.onProjectileFinished(52, var5);
             }
           }
@@ -3215,7 +3215,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.J(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.J(" + param0 + ')');
         }
     }
 
@@ -3242,7 +3242,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ml.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3255,13 +3255,13 @@ final class BattleUnit extends DualLinkNode {
           }
           if (this.field_L.field_rb != null &&
             null != this.field_L.field_rb[param1]) {
-            DropdownList.playSampleAtVolume((byte) -30, tm.field_a[param1], this.field_L.field_rb[param1]);
+            DropdownList.playSampleAtVolume((byte) -30, IntensityTableHelpers.field_a[param1], this.field_L.field_rb[param1]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ml.S(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ml.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3314,15 +3314,15 @@ final class BattleUnit extends DualLinkNode {
             16 == this.field_jb ||
             this.field_jb == 7 ||
             this.field_jb == 37)) {
-            pi.field_b.setDeque((byte) 113, this.field_L.field_i);
-            var6_ref_ml = (BattleUnit) (pi.field_b.first(-51));
+            RequestQueueHelpers.field_b.setDeque((byte) 113, this.field_L.field_i);
+            var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.first(-51));
             while (var6_ref_ml != null) {
               if (var6_ref_ml.field_s == this &&
                 var6_ref_ml.isAirborneOrHovering(32)) {
                 var4 = 1;
-                this.field_L.a(var6_ref_ml, 0);
+                this.field_L.eraseUnitMask(var6_ref_ml, 0);
               }
-              var6_ref_ml = (BattleUnit) (pi.field_b.next(-18502));
+              var6_ref_ml = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
             }
           }
           this.field_hb = true;
@@ -3377,7 +3377,7 @@ final class BattleUnit extends DualLinkNode {
           }
           if (var2_int != 0 &&
             this.field_s.field_q <= 0) {
-            this.field_L.a(this.field_s, 0);
+            this.field_L.eraseUnitMask(this.field_s, 0);
             var8 = -this.field_lb + this.field_s.field_lb;
             var9_int = this.field_s.field_db - this.field_db - (-(this.field_Y / 2) + this.field_s.field_Y / 2);
             if (var9_int * var9_int + var8 * var8 < (this.field_s.field_Y + this.field_Y) * (this.field_s.field_Y + this.field_Y) >> 2) {
@@ -3432,7 +3432,7 @@ final class BattleUnit extends DualLinkNode {
             this.field_L.spriteOverlapsTerrain(this.field_db - this.field_Y, 2, -(this.field_Y >> 1) + this.field_lb, this.field_w)) {
             var10Lifetime1 = this.field_kb;
             var11 = this.field_eb;
-            var9_intLifetime1 = this.field_db - ce.field_k + (this.field_Y >> 1);
+            var9_intLifetime1 = this.field_db - GameSelectionHelpers.field_k + (this.field_Y >> 1);
             var8Lifetime1 = this.field_lb - NodeHashTable.field_m;
             var12 = ConnectionState.greatestCommonDivisor(var9_intLifetime1, var8Lifetime1, false);
             if (var12 < 1) {
@@ -3492,7 +3492,7 @@ final class BattleUnit extends DualLinkNode {
                 this.field_kb = stackIn_132_1;
               }
               this.field_eb = -5 - Math.abs(var11);
-              var15 = aj.spawnProjectile((BattleUnit) null, this.field_db, false, 101, this.field_L, this.field_lb);
+              var15 = GameOptionType.spawnProjectile((BattleUnit) null, this.field_db, false, 101, this.field_L, this.field_lb);
               this.field_L.onProjectileFinished(52, var15);
               this.field_L.refreshTerrainArea(this.field_lb, this.field_Y * 2, (byte) 51, -(this.field_Y / 2) + this.field_db);
               this.field_z = true;
@@ -3528,19 +3528,19 @@ final class BattleUnit extends DualLinkNode {
             this.field_L.stampUnitMask(-41, this.field_s);
           }
           if (var4 != 0) {
-            pi.field_b.setDeque((byte) 87, this.field_L.field_i);
-            var9 = (BattleUnit) (pi.field_b.first(-109));
+            RequestQueueHelpers.field_b.setDeque((byte) 87, this.field_L.field_i);
+            var9 = (BattleUnit) (RequestQueueHelpers.field_b.first(-109));
             while (var9 != null) {
               if (this == var9.field_s) {
                 if (!var9.isAirborneOrHovering(32)) {
-                  var9 = (BattleUnit) (pi.field_b.next(param0 ^ 18482));
+                  var9 = (BattleUnit) (RequestQueueHelpers.field_b.next(param0 ^ 18482));
                   continue;
                 }
                 if (var9.field_ib > 0) {
                   this.field_L.stampUnitMask(-45, var9);
                 }
               }
-              var9 = (BattleUnit) (pi.field_b.next(param0 ^ 18482));
+              var9 = (BattleUnit) (RequestQueueHelpers.field_b.next(param0 ^ 18482));
             }
             return;
           }
@@ -3548,7 +3548,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.QA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.QA(" + param0 + ')');
         }
     }
 
@@ -3611,7 +3611,7 @@ final class BattleUnit extends DualLinkNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3628,7 +3628,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.AA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.AA(" + param0 + ')');
         }
     }
 
@@ -3644,7 +3644,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.B(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.B(" + param0 + ')');
         }
     }
 
@@ -3661,7 +3661,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.GB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.GB(" + param0 + ')');
         }
     }
 
@@ -3833,7 +3833,7 @@ final class BattleUnit extends DualLinkNode {
             this.field_M = 0;
             if (var4 != 0 &&
               !(this.field_s.field_q > 0)) {
-              this.field_L.a(this.field_s, 0);
+              this.field_L.eraseUnitMask(this.field_s, 0);
               var9Lifetime3 = -this.field_lb + this.field_s.field_lb;
               var10 = this.field_Y / 2 + (-this.field_db + (this.field_s.field_db - this.field_s.field_Y / 2));
               if ((!this.field_s.field_z ||
@@ -3996,7 +3996,7 @@ final class BattleUnit extends DualLinkNode {
               if ((this.field_Y + this.field_s.field_Y) * (this.field_Y + this.field_s.field_Y) >> 2 <= var8Lifetime2 * var8Lifetime2 + var9Lifetime2 * var9Lifetime2) {
                 return;
               }
-              this.field_L.a(this.field_s, 0);
+              this.field_L.eraseUnitMask(this.field_s, 0);
               this.field_s.field_z = false;
               this.field_s.field_R = this.field_R - (this.field_Y << 3);
               this.field_s.field_eb = 0;
@@ -4025,7 +4025,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.VA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.VA(" + param0 + ')');
         }
     }
 
@@ -4089,7 +4089,7 @@ final class BattleUnit extends DualLinkNode {
             if (this.field_s.field_z &&
               this.field_s.field_eb >= 0 &&
               var4 * var4 + var3 * var3 < (this.field_Y + this.field_s.field_Y) * (this.field_s.field_Y + this.field_Y) >> 2) {
-              this.field_L.a(this.field_s, 0);
+              this.field_L.eraseUnitMask(this.field_s, 0);
               this.field_s.field_z = false;
               this.field_s.field_kb = 0;
               this.field_s.field_eb = 0;
@@ -4118,7 +4118,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.UA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.UA(" + param0 + ')');
         }
     }
 
@@ -4145,7 +4145,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.JB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.JB(" + param0 + ')');
         }
     }
 
@@ -4156,7 +4156,7 @@ final class BattleUnit extends DualLinkNode {
           }
           EmptyPainter.drawSceneAndTooltip(param0, -105);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4173,7 +4173,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.T(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.T(" + param0 + ')');
         }
     }
 
@@ -4183,16 +4183,16 @@ final class BattleUnit extends DualLinkNode {
         RuntimeException var3 = null;
         try {
           if (3 == this.field_jb) {
-            this.playSound(-30225, dm.field_G[param1]);
+            this.playSound(-30225, AlphaContainer.field_G[param1]);
           }
           if (this.field_jb == 7) {
-            this.playSound(-30225, hi.field_f[param1]);
+            this.playSound(-30225, ViewControllerHelpers.field_f[param1]);
           }
           if (this.field_jb == 1) {
-            this.playSound(-30225, fb.field_b[param1]);
+            this.playSound(-30225, StringReplaceHelpers.field_b[param1]);
           }
           if (9 == this.field_jb) {
-            this.playSound(-30225, ed.field_Ib[param1]);
+            this.playSound(-30225, MainMenuDialog.field_Ib[param1]);
           }
           if (2 == this.field_jb) {
             this.playSound(-30225, PasswordFieldPainter.field_B[param1]);
@@ -4207,7 +4207,7 @@ final class BattleUnit extends DualLinkNode {
             this.playSound(-30225, NanoFrameClock.field_g[param1]);
           }
           if (this.field_jb == 5) {
-            this.playSound(-30225, mb.field_U[param1]);
+            this.playSound(-30225, DropdownItemList.field_U[param1]);
           }
           if (this.field_jb == 14) {
             this.playSound(-30225, NanoFrameClock.field_n[param1]);
@@ -4216,31 +4216,31 @@ final class BattleUnit extends DualLinkNode {
             this.playSound(-30225, LoadingProgressDialog.field_pb[param1]);
           }
           if (this.field_jb == 17) {
-            this.playSound(-30225, cj.field_a[param1]);
+            this.playSound(-30225, AccountCreationHelpers.field_a[param1]);
           }
           if (this.field_jb == 6) {
             this.playSound(-30225, MeshModel.field_c[param1]);
           }
           if (this.field_jb == 13) {
-            this.playSound(-30225, fi.field_c[param1]);
+            this.playSound(-30225, DecimalCheckHelpers.field_c[param1]);
           }
           if (this.field_jb == 10) {
-            this.playSound(-30225, gg.field_j[param1]);
+            this.playSound(-30225, DecodedSpriteHelpers.field_j[param1]);
           }
           if (this.field_jb == 37) {
-            this.playSound(-30225, om.field_B[param1]);
+            this.playSound(-30225, CapsuleBar.field_B[param1]);
           }
           if (this.field_jb == 39) {
             this.playSound(-30225, HuffmanCodec.field_h[param1]);
           }
           if (this.field_jb == 33) {
-            this.playSound(-30225, fk.field_h[param1]);
+            this.playSound(-30225, SoundEffectVoice.field_h[param1]);
           }
           if (this.field_jb == 31) {
-            this.playSound(-30225, jn.field_a[param1]);
+            this.playSound(-30225, LobbyStateHelpers.field_a[param1]);
           }
           if (this.field_jb == 32) {
-            this.playSound(-30225, fd.field_h[param1]);
+            this.playSound(-30225, CookieHelpers.field_h[param1]);
           }
           if (this.field_jb == 28) {
             this.playSampleAtVolume((byte) -49, 200, IconButtonPainter.field_p[param1]);
@@ -4252,7 +4252,7 @@ final class BattleUnit extends DualLinkNode {
             this.playSampleAtVolume((byte) -91, 50, IconButtonPainter.field_p[param1]);
           }
           if (this.field_jb == 34) {
-            this.playSound(-30225, cf.field_a[param1]);
+            this.playSound(-30225, CredentialParseHelpers.field_a[param1]);
           }
           if (25 == this.field_jb) {
             this.playSound(-30225, ScreenDisplayMode.field_c[param1]);
@@ -4266,7 +4266,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ml.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ml.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4286,7 +4286,7 @@ final class BattleUnit extends DualLinkNode {
               if (param0 >= -59) {
                 return;
               }
-              var3 = nm.appendSessionParameters(param1, var4, -31843).getFile();
+              var3 = UrlHelpers.appendSessionParameters(param1, var4, -31843).getFile();
               JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"home", var3 + "home.ws"});
               JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"gamelist", var3 + "togamelist.ws"});
               JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"serverlist", var3 + "toserverlist.ws"});
@@ -4308,7 +4308,7 @@ final class BattleUnit extends DualLinkNode {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -4394,7 +4394,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.HB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.HB(" + param0 + ')');
         }
     }
 
@@ -4416,9 +4416,9 @@ final class BattleUnit extends DualLinkNode {
           if (param0 != -10265) {
             discarded$0 = this.canBeSelected(87);
           }
-          pi.field_b.setDeque((byte) 125, this.field_L.field_i);
+          RequestQueueHelpers.field_b.setDeque((byte) 125, this.field_L.field_i);
           var2_int = 0;
-          var3 = (BattleUnit) (pi.field_b.first(param0 + 10161));
+          var3 = (BattleUnit) (RequestQueueHelpers.field_b.first(param0 + 10161));
           while (var3 != null) {
             if (this == var3.field_s &&
               var3.isAirborneOrHovering(32)) {
@@ -4445,14 +4445,14 @@ final class BattleUnit extends DualLinkNode {
                 var2_int = 1;
               }
             }
-            var3 = (BattleUnit) (pi.field_b.next(-18502));
+            var3 = (BattleUnit) (RequestQueueHelpers.field_b.next(-18502));
           }
           stackIn_27_0 = var2_int;
           return stackIn_27_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.F(" + param0 + ')');
         }
     }
 
@@ -4471,7 +4471,7 @@ final class BattleUnit extends DualLinkNode {
             if (param0 != 2) {
               this.field_P = -86;
             }
-            var4_int = nj.field_n[this.field_u];
+            var4_int = NameCheckHelpers.field_n[this.field_u];
             var5 = this.field_L.getUnitByOwner(this.field_u, true);
             if (var5 != null &&
               var5.field_jb == 27) {
@@ -4501,7 +4501,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "ml.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "ml.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4512,7 +4512,7 @@ final class BattleUnit extends DualLinkNode {
             this.getOwnerId(111);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.DB(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ml.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4546,7 +4546,7 @@ final class BattleUnit extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -4566,8 +4566,8 @@ final class BattleUnit extends DualLinkNode {
           if (param2 < 76) {
             return;
           }
-          ko.field_j = param0;
-          td.storeLayoutValues(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
+          ListEntryMenuHelpers.field_j = param0;
+          ThreeButtonPanel.storeLayoutValues(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
           LoginPanel.storeLoginLayout(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4589,7 +4589,7 @@ final class BattleUnit extends DualLinkNode {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -4608,7 +4608,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ml.FA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ml.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4654,7 +4654,7 @@ final class BattleUnit extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -4670,7 +4670,7 @@ final class BattleUnit extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ml.E(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ml.E(" + param0 + ')');
         }
     }
 
@@ -4730,7 +4730,7 @@ final class BattleUnit extends DualLinkNode {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

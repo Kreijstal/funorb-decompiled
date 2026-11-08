@@ -36,7 +36,7 @@ final class LinkButtonPainter implements WidgetPainter {
         if (param0 != -2) {
           return -77;
         }
-        return (int)(1000000000L / fd.field_d);
+        return (int)(1000000000L / CookieHelpers.field_d);
     }
 
     final static void enterResizableMode(byte param0) {
@@ -91,7 +91,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               var10 = var10 + (-var8 + param0.field_k);
             }
-            oj.drawLoginMethodPanel(param1 ^ -5581056, var10 + 2, -2 + var9, var8, 4 + var7);
+            LoginMethodHelpers.drawLoginMethodPanel(param1 ^ -5581056, var10 + 2, -2 + var9, var8, 4 + var7);
           }
           if (param1 == 5592405) {
             return;
@@ -108,14 +108,14 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public LinkButtonPainter() {
         this.field_e = 1;
         this.field_k = 1;
-        this.field_m = ia.field_c;
+        this.field_m = RootInputHelpers.field_c;
     }
 
     LinkButtonPainter(BitmapFont param0, int param1, int param2) {
@@ -124,7 +124,7 @@ final class LinkButtonPainter implements WidgetPainter {
           this.field_k = param1;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

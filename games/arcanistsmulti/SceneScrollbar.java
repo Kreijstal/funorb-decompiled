@@ -6,7 +6,7 @@ final class SceneScrollbar extends SceneWidget {
     static SceneWidget field_Jb;
     private SceneWidget field_Cb;
     private SceneWidget field_Mb;
-    static co field_Gb;
+    static BattleResetHelpers field_Gb;
     private int field_Bb;
     static java.awt.Frame field_Eb;
     private SceneWidget field_Lb;
@@ -291,7 +291,7 @@ final class SceneScrollbar extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -378,7 +378,7 @@ final class SceneScrollbar extends SceneWidget {
           if (param0) {
             return false;
           }
-          field_Gb = (co) null;
+          field_Gb = (BattleResetHelpers) null;
           return false;
         }
         if (0 < this.field_Bb) {
@@ -388,7 +388,7 @@ final class SceneScrollbar extends SceneWidget {
           if (param0) {
             return false;
           }
-          field_Gb = (co) null;
+          field_Gb = (BattleResetHelpers) null;
           return false;
         }
         if (MenuButtonPanel.field_I >= this.field_Cb.field_B + this.field_Cb.field_bb + this.field_Cb.field_nb + this.field_Cb.field_I) {
@@ -398,7 +398,7 @@ final class SceneScrollbar extends SceneWidget {
         if (param0) {
           return false;
         }
-        field_Gb = (co) null;
+        field_Gb = (BattleResetHelpers) null;
         return false;
     }
 

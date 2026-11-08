@@ -151,7 +151,7 @@ final class SocketJs5Transport extends Js5Transport {
             if (!param1) {
               field_q = (String) null;
             }
-            this.field_p = qj.monotonicTimeMillis(-26572);
+            this.field_p = TimeAndInputHelpers.monotonicTimeMillis(-26572);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -163,7 +163,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -212,7 +212,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class SocketJs5Transport extends Js5Transport {
           Js5NetworkRequest var2Lifetime1;
           var16 = ArcanistsMulti.field_G ? 1 : 0;
           if (this.field_w != null) {
-            var2_long = qj.monotonicTimeMillis(-26572);
+            var2_long = TimeAndInputHelpers.monotonicTimeMillis(-26572);
             var4 = (int)(-this.field_p + var2_long);
             this.field_p = var2_long;
             if (200 < var4) {
@@ -323,7 +323,7 @@ final class SocketJs5Transport extends Js5Transport {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_n.field_A.payload[this.field_n.field_A.position + var17] = (byte)MouseWheelHandler.a((int) this.field_n.field_A.payload[this.field_n.field_A.position + var17], (int) this.field_a);
+                      this.field_n.field_A.payload[this.field_n.field_A.position + var17] = (byte)MouseWheelHandler.bitXor((int) this.field_n.field_A.payload[this.field_n.field_A.position + var17], (int) this.field_a);
                       var17++;
                     }
                   }
@@ -346,7 +346,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_w.readFully(this.field_e.payload, (byte) -125, this.field_e.position, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_e.payload[this.field_e.position + var6] = (byte)MouseWheelHandler.a((int) this.field_e.payload[this.field_e.position + var6], (int) this.field_a);
+                      this.field_e.payload[this.field_e.position + var6] = (byte)MouseWheelHandler.bitXor((int) this.field_e.payload[this.field_e.position + var6], (int) this.field_a);
                     }
                   }
                   this.field_e.position = this.field_e.position + var5;

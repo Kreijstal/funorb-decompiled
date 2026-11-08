@@ -9,7 +9,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static SceneWidget field_s;
     static String field_v;
     private WidgetStyleLayer field_t;
-    static db field_u;
+    static Crc32Helpers field_u;
     static boolean field_w;
     static String field_y;
     static int field_p;
@@ -19,7 +19,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         try {
           param0.copyStatesTo(param1, this, 126);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -69,12 +69,12 @@ final class StatefulTextPainter extends TextWidgetPainter {
           int var5 = -59 / ((28 - param0) / 32);
           this.field_q[param1].field_b = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mj.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mj.EA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void drawSceneFullScreen(int param0, boolean param1) {
-        tm.field_d.drawFullScreen(param1, true);
+        IntensityTableHelpers.field_d.drawFullScreen(param1, true);
         if (param0 != -6578) {
           StatefulTextPainter.drawSceneFullScreen(-82, true);
         }
@@ -126,7 +126,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -110 % ((54 - param1) / 44);
-          stackIn_1_0 = db.crc32(param0, false, param2, 0);
+          stackIn_1_0 = Crc32Helpers.crc32(param0, false, param2, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -248,10 +248,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           ArcanistsMulti.openInfoPanel(param2 ^ -26334, (int[]) null, param4, param1.field_Tb, param1.field_Nb, -1, -1, param1.field_Qb, param1);
-          eo.field_c.populateActions((byte) 72, true);
-          eo.field_c.addGameActions(0, (int[]) null, 13);
-          eo.field_c.addPrivateMessageAction(param2 + 5549);
-          var12 = eo.field_c;
+          PackedShortHelpers.field_c.populateActions((byte) 72, true);
+          PackedShortHelpers.field_c.addGameActions(0, (int[]) null, 13);
+          PackedShortHelpers.field_c.addPrivateMessageAction(param2 + 5549);
+          var12 = PackedShortHelpers.field_c;
           var8 = param3;
           var9 = param6;
           var10 = param0;
@@ -278,7 +278,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             var10 = (Sprite[]) null;
             this.setStateFrameSprites((byte) 33, 29, (Sprite[]) null);
           }
-          da.clipToRectangle(param0.field_v + param0.field_n + param2, param0.field_j + param3 + param0.field_k, 127, param0.field_n + param2, param3 + param0.field_j);
+          MusicAndClipHelpers.clipToRectangle(param0.field_v + param0.field_n + param2, param0.field_j + param3 + param0.field_k, 127, param0.field_n + param2, param3 + param0.field_j);
           if (var11 != null) {
             param4 = param4 & var11.field_B;
           }
@@ -360,14 +360,14 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
         field_x = "Rechargeable spell";
         field_v = "Loading sound effects";
-        field_u = new db();
+        field_u = new Crc32Helpers();
         field_p = -1;
         field_y = "Win %";
     }

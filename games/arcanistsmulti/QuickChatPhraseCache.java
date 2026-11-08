@@ -107,7 +107,7 @@ final class QuickChatPhraseCache {
                 var21 = var18 & 255;
                 if (0 < var17) {
                   if (var17 >= 256) {
-                    var10[var11] = fj.bitOr(fj.bitOr(var20 << 8, var19 << 16), var21);
+                    var10[var11] = BitAndSpriteHelpers.bitOr(BitAndSpriteHelpers.bitOr(var20 << 8, var19 << 16), var21);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -133,7 +133,7 @@ final class QuickChatPhraseCache {
                   var19 = 255;
                 }
                 if (decompiledFrameRemainder0) {
-                  var10[var11] = fj.bitOr(fj.bitOr(var20 << 8, var19 << 16), var21);
+                  var10[var11] = BitAndSpriteHelpers.bitOr(BitAndSpriteHelpers.bitOr(var20 << 8, var19 << 16), var21);
                 }
               }
             }
@@ -142,7 +142,7 @@ final class QuickChatPhraseCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "gn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "gn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class QuickChatPhraseCache {
         field_g = (int[][]) null;
     }
 
-    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, ok param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, ScreenMarker param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -204,7 +204,7 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

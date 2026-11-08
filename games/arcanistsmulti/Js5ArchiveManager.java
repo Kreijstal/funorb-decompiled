@@ -131,7 +131,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class Js5ArchiveManager {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (rk.isNameSeparator((byte) 120, param0.charAt(var2_int))) {
+            if (GradientBarButton.isNameSeparator((byte) 120, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -261,7 +261,7 @@ final class Js5ArchiveManager {
             field_g = (SceneWidget) null;
           }
           while (var2_int < var3) {
-            if (rk.isNameSeparator((byte) -16, param0.charAt(-1 + var3))) {
+            if (GradientBarButton.isNameSeparator((byte) -16, param0.charAt(-1 + var3))) {
               var3--;
               continue;
             }
@@ -277,8 +277,8 @@ final class Js5ArchiveManager {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
-            if (qo.isAllowedNameCharacter((char) var7, param1 ^ -13)) {
-              var8 = af.normalizeNameCharacter((char) var7, (byte) 22);
+            if (NameHelpers.isAllowedNameCharacter((char) var7, param1 ^ -13)) {
+              var8 = PairedSceneWidget.normalizeNameCharacter((char) var7, (byte) 22);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -300,7 +300,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

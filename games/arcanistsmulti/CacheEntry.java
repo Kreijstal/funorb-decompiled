@@ -26,11 +26,11 @@ abstract class CacheEntry extends DualLinkNode {
         if (param0 != -25) {
           CacheEntry.releaseStatics(-47);
         }
-        var6 = "(" + ArchiveRequest.field_m + " " + Battle.field_W + " " + DraggableWidget.field_I + ") " + on.field_g;
+        var6 = "(" + ArchiveRequest.field_m + " " + Battle.field_W + " " + DraggableWidget.field_I + ") " + LoginMessageTable.field_g;
         var1 = var6;
-        if (fj.field_h > 0) {
+        if (BitAndSpriteHelpers.field_h > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < fj.field_h; var2++) {
+          for (var2 = 0; var2 < BitAndSpriteHelpers.field_h; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & UiContainer.field_z.payload[var2];
             var4 = var3 >> 4;
@@ -119,60 +119,60 @@ abstract class CacheEntry extends DualLinkNode {
         var21 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           BattleScreen.field_q = param12;
-          fl.field_b = param7;
-          pn.field_b = param13;
+          FinalFrameHelpers.field_b = param7;
+          LoginStackHelpers.field_b = param13;
           NanoFrameClock.field_o = param6;
           SocketJs5Transport.field_t = param4;
-          ao.field_h = param1;
-          qa.field_o = param11;
-          rk.field_I = param5;
-          nk.field_m = param3;
+          LobbyLayoutHelpers.field_h = param1;
+          NoticeHelpers.field_o = param11;
+          GradientBarButton.field_I = param5;
+          ListRequest.field_m = param3;
           ResizableModalPanel.field_bb = param10;
           BattleUnit.field_m = param9;
           SecondaryNodeDeque.field_d = param0;
-          IntrusiveNodeHashTable.field_b = qe.loadSpriteSheet(param8, "gameprivacy", "lobby", 92);
-          WrappedTextLayout.field_j = qe.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
-          sk.field_f = qe.loadSpriteSheet(param8, "opentome", "lobby", 71);
-          ec.field_i = qe.loadSpriteSheet(param8, "allowspectators", "lobby", 88);
-          vm.field_c = new String[5];
-          vm.field_c[4] = MusicCrossfadeStream.field_C;
-          vm.field_c[1] = PlayerActionMenu.field_a;
-          vm.field_c[0] = wm.field_F;
-          vm.field_c[2] = um.field_d;
-          vm.field_c[3] = NanoFrameClock.field_m;
+          IntrusiveNodeHashTable.field_b = QueuedPacket.loadSpriteSheet(param8, "gameprivacy", "lobby", 92);
+          WrappedTextLayout.field_j = QueuedPacket.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
+          TooltipHelpers.field_f = QueuedPacket.loadSpriteSheet(param8, "opentome", "lobby", 71);
+          SpriteFrame.field_i = QueuedPacket.loadSpriteSheet(param8, "allowspectators", "lobby", 88);
+          MouseStateHelpers.field_c = new String[5];
+          MouseStateHelpers.field_c[4] = MusicCrossfadeStream.field_C;
+          MouseStateHelpers.field_c[1] = PlayerActionMenu.field_a;
+          MouseStateHelpers.field_c[0] = PaddedContainer.field_F;
+          MouseStateHelpers.field_c[2] = SessionCookieHelpers.field_d;
+          MouseStateHelpers.field_c[3] = NanoFrameClock.field_m;
           StatefulTextPainter.field_s = new SceneWidget(0L, (SceneWidget) null);
-          uc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
-          StrongCacheEntry.field_z = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          nj.field_m = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
-          StatefulTextPainter.field_s.addChild(uc.field_d, param14 + 87);
-          if (fc.field_a) {
+          QuickChatHelpers.field_d = new SceneWidget(0L, RawDataNode.field_u, SceneListPanel.field_Bb);
+          StrongCacheEntry.field_z = new SceneWidget(0L, RawDataNode.field_i, SocketJs5Transport.field_q);
+          NameCheckHelpers.field_m = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
+          StatefulTextPainter.field_s.addChild(QuickChatHelpers.field_d, param14 + 87);
+          if (SpriteDecodeHelpers.field_a) {
             StatefulTextPainter.field_s.addChild(StrongCacheEntry.field_z, 41);
           }
-          StatefulTextPainter.field_s.addChild(nj.field_m, 47);
-          nj.field_m.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 126);
-          var23 = nj.field_m.field_Hb;
+          StatefulTextPainter.field_s.addChild(NameCheckHelpers.field_m, 47);
+          NameCheckHelpers.field_m.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 126);
+          var23 = NameCheckHelpers.field_m.field_Hb;
           var24 = var23;
-          nj.field_m.field_Hb.field_gb = 1;
+          NameCheckHelpers.field_m.field_Hb.field_gb = 1;
           var24.field_X = 1;
           QuickChatCategoryCache.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
           QuickChatCategoryCache.field_c.field_X = 1;
-          ii.field_b = new SceneWidget(0L, th.field_c, DropdownList.field_M.toUpperCase());
-          sm.field_c = new SceneWidget(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
-          ad.field_c = new SceneWidget(0L, ia.field_a);
-          CachedArchiveProvider.field_o = new SceneWidget(0L, vf.field_u, of.field_k);
+          IconHighlightPainter.field_b = new SceneWidget(0L, NameTable.field_c, DropdownList.field_M.toUpperCase());
+          AudioAndCookieHelpers.field_c = new SceneWidget(0L, PlayerInfoPanel.field_Pb, SceneListPanel.field_Ib.toUpperCase());
+          SpellbookCaptionGlobals.field_c = new SceneWidget(0L, RootInputHelpers.field_a);
+          CachedArchiveProvider.field_o = new SceneWidget(0L, RawDataNode.field_u, GradientBarPainter.field_k);
           FrameClock.field_e = new SceneWidget(0L, EditableTextWidget.field_S, MenuScreen.field_c);
-          ci.field_a = new SceneWidget(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
-          lo.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
-          WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, g.field_b);
-          jo.field_a = new SceneWidget(0L, vf.field_i, TextLayout.field_a);
+          ModalStackHelpers.field_a = new SceneWidget(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
+          AgeValidator.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
+          WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, SupportPageHelpers.field_b);
+          BitHelpers.field_a = new SceneWidget(0L, RawDataNode.field_i, TextLayout.field_a);
           DebouncedValidator.field_g = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
-          of.field_a = new SceneWidget(0L, ko.field_h, fi.field_f.toUpperCase());
-          of.field_a.field_ub = fc.field_a;
+          GradientBarPainter.field_a = new SceneWidget(0L, ListEntryMenuHelpers.field_h, DecimalCheckHelpers.field_f.toUpperCase());
+          GradientBarPainter.field_a.field_ub = SpriteDecodeHelpers.field_a;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
-          stackIn_5_3 = ko.field_h;
-          if (fc.field_a) {
+          stackIn_5_3 = ListEntryMenuHelpers.field_h;
+          if (SpriteDecodeHelpers.field_a) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
             stackIn_6_4 = ImageProducerRasterBuffer.field_t;
@@ -182,88 +182,88 @@ abstract class CacheEntry extends DualLinkNode {
             stackIn_6_4 = ScrollContainer.field_K;
           }
           GrowableIntList.field_a = new SceneWidget(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          fn.field_e = new SceneWidget(0L, (SceneWidget) null);
-          fn.field_e.addChild(sm.field_c, 23);
-          fn.field_e.addChild(ad.field_c, 36);
-          ad.field_c.addChild(CachedArchiveProvider.field_o, 106);
-          ad.field_c.addChild(FrameClock.field_e, 50);
-          ad.field_c.addChild(ci.field_a, param14 + 20);
-          if (fc.field_a) {
-            ad.field_c.addChild(lo.field_r, 44);
+          GameListHelpers.field_e = new SceneWidget(0L, (SceneWidget) null);
+          GameListHelpers.field_e.addChild(AudioAndCookieHelpers.field_c, 23);
+          GameListHelpers.field_e.addChild(SpellbookCaptionGlobals.field_c, 36);
+          SpellbookCaptionGlobals.field_c.addChild(CachedArchiveProvider.field_o, 106);
+          SpellbookCaptionGlobals.field_c.addChild(FrameClock.field_e, 50);
+          SpellbookCaptionGlobals.field_c.addChild(ModalStackHelpers.field_a, param14 + 20);
+          if (SpriteDecodeHelpers.field_a) {
+            SpellbookCaptionGlobals.field_c.addChild(AgeValidator.field_r, 44);
           }
-          ad.field_c.addChild(WidgetStyleLayer.field_j, param14 + 47);
-          ad.field_c.addChild(jo.field_a, 29);
-          ad.field_c.addChild(DebouncedValidator.field_g, 124);
-          if (fc.field_a) {
-            fn.field_e.addChild(of.field_a, 20);
+          SpellbookCaptionGlobals.field_c.addChild(WidgetStyleLayer.field_j, param14 + 47);
+          SpellbookCaptionGlobals.field_c.addChild(BitHelpers.field_a, 29);
+          SpellbookCaptionGlobals.field_c.addChild(DebouncedValidator.field_g, 124);
+          if (SpriteDecodeHelpers.field_a) {
+            GameListHelpers.field_e.addChild(GradientBarPainter.field_a, 20);
           }
-          fn.field_e.addChild(GrowableIntList.field_a, 15);
-          la.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
-          la.field_c.field_gb = 0;
-          la.field_c.field_X = 1;
-          dm.field_E = new SceneWidget(0L, QuickChatPhraseCache.field_c, UsernameCredentials.field_f.toUpperCase());
-          LinkButtonPainter.field_h = new SceneWidget(0L, mf.field_d);
-          LinkButtonPainter.field_h.addChild(la.field_c, 110);
-          LinkButtonPainter.field_h.addChild(dm.field_E, 121);
+          GameListHelpers.field_e.addChild(GrowableIntList.field_a, 15);
+          ScreenClearHelpers.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
+          ScreenClearHelpers.field_c.field_gb = 0;
+          ScreenClearHelpers.field_c.field_X = 1;
+          AlphaContainer.field_E = new SceneWidget(0L, QuickChatPhraseCache.field_c, UsernameCredentials.field_f.toUpperCase());
+          LinkButtonPainter.field_h = new SceneWidget(0L, EffectVolumeHelpers.field_d);
+          LinkButtonPainter.field_h.addChild(ScreenClearHelpers.field_c, 110);
+          LinkButtonPainter.field_h.addChild(AlphaContainer.field_E, 121);
           WidgetStyleLayer.field_c = new SceneWidget(0L, ConnectionState.field_c);
           WidgetStyleLayer.field_c.applyStyle(IntrusiveNode.field_c, (byte) 119);
           WidgetStyleLayer.field_c.field_gb = 1;
           var16 = WidgetStyleLayer.field_c;
           var16.field_X = 1;
           Checkbox.field_M = new SceneWidget(0L, (SceneWidget) null);
-          aj.field_d = new SceneWidget(0L, IntrusiveNode.field_c);
-          aj.field_d.field_X = 1;
-          qc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
-          MembershipOfferScreen.field_q = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          lf.field_b = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
-          Checkbox.field_M.addChild(aj.field_d, 30);
-          Checkbox.field_M.addChild(qc.field_d, 51);
-          if (fc.field_a) {
+          GameOptionType.field_d = new SceneWidget(0L, IntrusiveNode.field_c);
+          GameOptionType.field_d.field_X = 1;
+          ViewportSetupHelpers.field_d = new SceneWidget(0L, RawDataNode.field_u, SceneListPanel.field_Bb);
+          MembershipOfferScreen.field_q = new SceneWidget(0L, RawDataNode.field_i, SocketJs5Transport.field_q);
+          ScreenTransitionHelpers.field_b = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), ConnectionState.field_c, IntrusiveDeque.field_i);
+          Checkbox.field_M.addChild(GameOptionType.field_d, 30);
+          Checkbox.field_M.addChild(ViewportSetupHelpers.field_d, 51);
+          if (SpriteDecodeHelpers.field_a) {
             Checkbox.field_M.addChild(MembershipOfferScreen.field_q, param14 + 10);
           }
-          Checkbox.field_M.addChild(lf.field_b, 31);
-          IntrusiveNodeHashTable.field_o = new SceneWidget(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
-          IconTextSceneWidget.field_Db = new SceneWidget(0L, wa.field_Pb);
-          SpellProjectile.field_m = new SceneWidget(0L, ia.field_a);
-          BevelTextPainter.field_s = new SceneWidget(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
+          Checkbox.field_M.addChild(ScreenTransitionHelpers.field_b, 31);
+          IntrusiveNodeHashTable.field_o = new SceneWidget(0L, NameTable.field_c, SecondaryNodeDeque.field_a.toUpperCase());
+          IconTextSceneWidget.field_Db = new SceneWidget(0L, PlayerInfoPanel.field_Pb);
+          SpellProjectile.field_m = new SceneWidget(0L, RootInputHelpers.field_a);
+          BevelTextPainter.field_s = new SceneWidget(0L, PasswordCheckHelpers.field_b, MusicPatchNode.field_o.toUpperCase());
           IndexedSpriteState.field_e = new IconTextSceneWidget[param2 + 4][];
           ResizableViewResizeListener.field_g = new SceneWidget[4 + param2];
-          ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, SpellProjectile.field_A, gg.field_i);
+          ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, SpellProjectile.field_A, DecodedSpriteHelpers.field_i);
           IndexedSpriteState.field_e[0] = new IconTextSceneWidget[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            IndexedSpriteState.field_e[0][var17_int + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
+            IndexedSpriteState.field_e[0][var17_int + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, IntrusiveNodeHashTable.field_b[var17_int], MouseStateHelpers.field_c[var17_int]);
           }
-          if (ao.field_h.length >= 2) {
+          if (LobbyLayoutHelpers.field_h.length >= 2) {
             ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, SpellProjectile.field_A, ChatInputWidget.field_Bb);
-            array$0 = new IconTextSceneWidget[ao.field_h.length + 1];
+            array$0 = new IconTextSceneWidget[LobbyLayoutHelpers.field_h.length + 1];
             IndexedSpriteState.field_e[1] = array$0;
-            IndexedSpriteState.field_e[1][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
-            for (var17_intLifetime1 = 0; ao.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
-              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
+            IndexedSpriteState.field_e[1][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            for (var17_intLifetime1 = 0; LobbyLayoutHelpers.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
+              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, Integer.toString(LobbyLayoutHelpers.field_h[var17_intLifetime1]));
             }
           }
           ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, SpellProjectile.field_A, SecondaryNodeDeque.field_b);
-          IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, SpriteFrame.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, SpriteFrame.field_i[1], CredentialParseHelpers.field_d)};
           if (BattleScreen.field_q > 1) {
-            ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, SpellProjectile.field_A, fm.field_e);
+            ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, SpellProjectile.field_A, NameRecord.field_e);
             array$1 = new IconTextSceneWidget[BattleScreen.field_q + 1];
             IndexedSpriteState.field_e[3] = array$1;
-            IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < BattleScreen.field_q; var17_intLifetime2++) {
-              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
+              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, FinalFrameHelpers.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
             ResizableViewResizeListener.field_g[var17_intLifetime3 + 4] = new SceneWidget(0L, SpellProjectile.field_A, ResizableModalPanel.field_bb[var17_intLifetime3]);
             array$2 = new IconTextSceneWidget[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
-            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var18 = 0; var18 < (SecondaryNodeDeque.field_d[var17_intLifetime3] & 255); var18++) {
-              if (null == pn.field_b) {
+              if (null == LoginStackHelpers.field_b) {
                 var19_ref = null;
               } else {
-                if (null != pn.field_b[var17_intLifetime3]) {
-                  var19_ref = pn.field_b[var17_intLifetime3][var18];
+                if (null != LoginStackHelpers.field_b[var17_intLifetime3]) {
+                  var19_ref = LoginStackHelpers.field_b[var17_intLifetime3][var18];
                 } else {
                   var19_ref = null;
                 }
@@ -277,7 +277,7 @@ abstract class CacheEntry extends DualLinkNode {
                   var20 = null;
                 }
               }
-              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
+              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, NameCheckHelpers.field_d, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -293,8 +293,8 @@ abstract class CacheEntry extends DualLinkNode {
               }
             }
           }
-          SocketConnector.field_d = new SceneWidget(0L, ko.field_h);
-          CanvasRasterBuffer.field_k = new SceneWidget(0L, ko.field_h);
+          SocketConnector.field_d = new SceneWidget(0L, ListEntryMenuHelpers.field_h);
+          CanvasRasterBuffer.field_k = new SceneWidget(0L, ListEntryMenuHelpers.field_h);
           NodeHashTableIterator.field_d = new SceneWidget(0L, BevelBoxPainter.field_f);
           NodeHashTableIterator.field_d.applyStyle(IntrusiveNode.field_c, (byte) 119);
           var17 = NodeHashTableIterator.field_d;
@@ -306,7 +306,7 @@ abstract class CacheEntry extends DualLinkNode {
           SpellProjectile.field_m.addChild(BevelTextPainter.field_s, 98);
           for (var18Lifetime2 = 0; var18Lifetime2 < param2 + 4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
-              !(2 > ao.field_h.length)) && (3 != var18Lifetime2 ||
+              !(2 > LobbyLayoutHelpers.field_h.length)) && (3 != var18Lifetime2 ||
               !(1 >= BattleScreen.field_q))) {
               SpellProjectile.field_m.addChild(ResizableViewResizeListener.field_g[var18Lifetime2], param14 + 5);
               for (var19 = 0; IndexedSpriteState.field_e[var18Lifetime2].length > var19; var19++) {
@@ -319,8 +319,8 @@ abstract class CacheEntry extends DualLinkNode {
           ReflectionCheckRequest.field_h.addChild(SocketConnector.field_d, 13);
           ReflectionCheckRequest.field_h.addChild(CanvasRasterBuffer.field_k, 23);
           ReflectionCheckRequest.field_h.addChild(NodeHashTableIterator.field_d, 110);
-          MembershipOfferScreen.field_t = new SceneWidget(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
-          gj.field_d = new SceneWidget(0L, QuickChatPhraseCache.field_c, f.field_i.toUpperCase());
+          MembershipOfferScreen.field_t = new SceneWidget(0L, SectorCacheStore.field_l, DropdownItemList.field_O.toUpperCase());
+          ScreenSwitchHelpers.field_d = new SceneWidget(0L, QuickChatPhraseCache.field_c, PendingRequest.field_i.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -392,7 +392,7 @@ abstract class CacheEntry extends DualLinkNode {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param14).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -446,7 +446,7 @@ abstract class CacheEntry extends DualLinkNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

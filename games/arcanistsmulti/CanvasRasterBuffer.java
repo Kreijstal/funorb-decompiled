@@ -17,12 +17,12 @@ abstract class CanvasRasterBuffer {
     static SceneWidget field_k;
 
     final static void releaseDecodeArrays(int param0) {
-        ho.field_i = null;
-        ph.field_c = null;
+        ServerMessage.field_i = null;
+        PriceCaptionGlobals.field_c = null;
         SectorCacheStore.field_d = null;
-        jg.field_p = null;
+        ChatLine.field_p = null;
         AccountRegistrationPanel.field_I = (byte[][]) null;
-        hl.field_l = null;
+        BufferedMessage.field_l = null;
         if (param0 != -18229) {
           field_f = (String) null;
         }
@@ -41,13 +41,13 @@ abstract class CanvasRasterBuffer {
         if (param1 != 14067) {
           CanvasRasterBuffer.releaseStatics(true);
         }
-        if (!bj.hasActivePanel(false)) {
+        if (!ButtonMenuDialog.hasActivePanel(false)) {
           return;
         }
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 192);
         }
-        pm.field_e.drawLayersAndTooltip(0, true, 0);
+        EmailValidationHelpers.field_e.drawLayersAndTooltip(0, true, 0);
     }
 
     final static void showNoticeDialog(String param0, byte param1, boolean param2, int param3, boolean param4) {
@@ -72,83 +72,83 @@ abstract class CanvasRasterBuffer {
         int var8Lifetime2;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          sb.field_a = true;
-          i.field_d = param3;
+          AudioShutdownHelpers.field_a = true;
+          ChatPanel.field_d = param3;
           var11 = param0;
           if (!param2) {
-            stackIn_4_0 = la.field_e;
+            stackIn_4_0 = ScreenClearHelpers.field_e;
           } else {
             stackIn_4_0 = ArcanistsMulti.field_H;
           }
           var6 = stackIn_4_0;
-          if (0 == i.field_d) {
-            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
+          if (0 == ChatPanel.field_d) {
+            var7 = MembershipOfferScreen.splitIntoTwoLines(GradientBarPainter.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
             var8 = var7 + 3;
-            pm.field_f = new String[var8];
+            EmailValidationHelpers.field_f = new String[var8];
             AccountRegistrationPanel.field_M = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
               AccountRegistrationPanel.field_M[var9] = -1;
             }
-            cf.field_c = new int[2];
+            CredentialParseHelpers.field_c = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              pm.field_f[var9] = of.field_e[var9];
+              EmailValidationHelpers.field_f[var9] = GradientBarPainter.field_e[var9];
             }
-            pm.field_f[-3 + var8] = "";
-            pm.field_f[var8 - 2] = var6;
+            EmailValidationHelpers.field_f[-3 + var8] = "";
+            EmailValidationHelpers.field_f[var8 - 2] = var6;
             AccountRegistrationPanel.field_M[var8 - 2] = 0;
-            cf.field_c[0] = 1;
-            pm.field_f[var8 - 1] = dd.field_e;
+            CredentialParseHelpers.field_c[0] = 1;
+            EmailValidationHelpers.field_f[var8 - 1] = PasswordCheckHelpers.field_e;
             AccountRegistrationPanel.field_M[var8 - 1] = 1;
-            cf.field_c[1] = 2;
+            CredentialParseHelpers.field_c[1] = 2;
           } else {
-            if (1 != i.field_d) {
+            if (1 != ChatPanel.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
+            var7 = MembershipOfferScreen.splitIntoTwoLines(GradientBarPainter.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
             var8 = var7 + 2;
             AccountRegistrationPanel.field_M = new int[var8];
-            pm.field_f = new String[var8];
+            EmailValidationHelpers.field_f = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
               AccountRegistrationPanel.field_M[var9] = -1;
             }
-            cf.field_c = new int[1];
+            CredentialParseHelpers.field_c = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              pm.field_f[var9] = of.field_e[var9];
+              EmailValidationHelpers.field_f[var9] = GradientBarPainter.field_e[var9];
             }
-            pm.field_f[-2 + var8] = "";
-            pm.field_f[var8 - 1] = dd.field_e;
+            EmailValidationHelpers.field_f[-2 + var8] = "";
+            EmailValidationHelpers.field_f[var8 - 1] = PasswordCheckHelpers.field_e;
             AccountRegistrationPanel.field_M[-1 + var8] = 0;
-            cf.field_c[0] = 2;
+            CredentialParseHelpers.field_c[0] = 2;
           }
-          NumericDateInputWidget.field_S.field_f = cf.field_c.length;
+          NumericDateInputWidget.field_S.field_f = CredentialParseHelpers.field_c.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; pm.field_f.length > var8Lifetime1; var8Lifetime1++) {
+          for (var8Lifetime1 = 0; EmailValidationHelpers.field_f.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_28_0 = !(AccountRegistrationPanel.field_M[var8Lifetime1] < 0);
-            var9Lifetime1 = MenuScreen.measureText(stackIn_28_0, pm.field_f[var8Lifetime1], (byte) -94);
+            var9Lifetime1 = MenuScreen.measureText(stackIn_28_0, EmailValidationHelpers.field_f[var8Lifetime1], (byte) -94);
             if (-1 != AccountRegistrationPanel.field_M[var8Lifetime1]) {
-              var9Lifetime1 = var9Lifetime1 + 2 * f.field_h;
+              var9Lifetime1 = var9Lifetime1 + 2 * PendingRequest.field_h;
             }
             if (var9Lifetime1 > var7Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          Checkbox.field_I = -(var7Lifetime1 >> 1) + af.field_Eb;
-          ih.field_b = (FullscreenFocusCanvas.field_d + ic.field_a << 1) * NumericDateInputWidget.field_S.field_f;
-          bj.field_tb = -(var7Lifetime1 >> 1) + af.field_Eb + var7Lifetime1;
+          Checkbox.field_I = -(var7Lifetime1 >> 1) + PairedSceneWidget.field_Eb;
+          PointerOriginHelpers.field_b = (FullscreenFocusCanvas.field_d + SpriteTrimHelpers.field_a << 1) * NumericDateInputWidget.field_S.field_f;
+          ButtonMenuDialog.field_tb = -(var7Lifetime1 >> 1) + PairedSceneWidget.field_Eb + var7Lifetime1;
           if (param1 >= -37) {
             return;
           }
-          for (var8Lifetime2 = 0; var8Lifetime2 < pm.field_f.length; var8Lifetime2++) {
-            stackIn_42_0 = ih.field_b;
+          for (var8Lifetime2 = 0; var8Lifetime2 < EmailValidationHelpers.field_f.length; var8Lifetime2++) {
+            stackIn_42_0 = PointerOriginHelpers.field_b;
             if (AccountRegistrationPanel.field_M[var8Lifetime2] < 0) {
               stackIn_43_1 = HuffmanCodec.field_l;
             } else {
-              stackIn_43_1 = tm.field_b;
+              stackIn_43_1 = IntensityTableHelpers.field_b;
             }
-            ih.field_b = stackIn_42_0 + stackIn_43_1;
+            PointerOriginHelpers.field_b = stackIn_42_0 + stackIn_43_1;
           }
-          qe.field_o = ub.field_g - (ih.field_b >> 1);
-          NumericDateInputWidget.field_S.reset(param4, 0, false, ao.computeColumnX(31128, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
+          QueuedPacket.field_o = StatsSendHelpers.field_g - (PointerOriginHelpers.field_b >> 1);
+          NumericDateInputWidget.field_S.reset(param4, 0, false, LobbyLayoutHelpers.computeColumnX(31128, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ abstract class CanvasRasterBuffer {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

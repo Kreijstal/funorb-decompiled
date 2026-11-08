@@ -32,7 +32,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
           int var3_int = -119 / ((63 - param1) / 47);
           this.field_D.field_h = this;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

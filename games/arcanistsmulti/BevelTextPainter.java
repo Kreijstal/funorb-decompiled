@@ -4,7 +4,7 @@
 class BevelTextPainter extends TextWidgetPainter {
     static String[] field_v;
     static int field_r;
-    static aj field_q;
+    static GameOptionType field_q;
     static SceneWidget field_s;
     static String field_t;
     static int field_u;
@@ -13,22 +13,22 @@ class BevelTextPainter extends TextWidgetPainter {
     final static void storeTimingParameters(int param0, int param1, int param2, int param3, int param4) {
         NanoFrameClock.field_k = param2;
         HuffmanCodec.field_l = param1;
-        tm.field_b = param3;
+        IntensityTableHelpers.field_b = param3;
         if (param4 < 92) {
           return;
         }
-        mh.field_H = param0;
+        CompoundButton.field_H = param0;
     }
 
     final static void sendByteRequest(int param0, int param1) {
-        CipherPacketBuffer var2 = he.field_e;
+        CipherPacketBuffer var2 = StatusMessageHelpers.field_e;
         var2.writeOpcode((byte) -79, param0);
         var2.writeByte(1, (byte) -92);
         var2.writeByte(param1, (byte) -32);
     }
 
     BevelTextPainter(int param0) {
-        this(ia.field_c, param0);
+        this(RootInputHelpers.field_c, param0);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -60,7 +60,7 @@ class BevelTextPainter extends TextWidgetPainter {
             return false;
           }
           IntrusiveDeque.field_d = ViewportController.field_p[Js5NetworkRequest.field_u];
-          ed.field_Bb = qa.field_i[Js5NetworkRequest.field_u];
+          MainMenuDialog.field_Bb = NoticeHelpers.field_i[Js5NetworkRequest.field_u];
           Js5NetworkRequest.field_u = 1 + Js5NetworkRequest.field_u & 127;
           if (param0) {
             BevelTextPainter.sendToggleState(false, -118);
@@ -83,7 +83,7 @@ class BevelTextPainter extends TextWidgetPainter {
           }
           if (SingleChildContainer.field_z.isComplete((byte) -94) &&
             !param1.equals(SingleChildContainer.field_z.getName(true))) {
-            SingleChildContainer.field_z = nj.createNameCheckRequest(param1, -100);
+            SingleChildContainer.field_z = NameCheckHelpers.createNameCheckRequest(param1, -100);
           }
           stackIn_7_0 = SingleChildContainer.field_z;
           return stackIn_7_0;
@@ -97,26 +97,26 @@ class BevelTextPainter extends TextWidgetPainter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final static void sendToggleState(boolean param0, int param1) {
-        if (pm.field_b == null) {
+        if (EmailValidationHelpers.field_b == null) {
           if (param1 == 2) {
             return;
           }
           BevelTextPainter.sendByteRequest(41, -89);
           return;
         }
-        if (!pm.field_b.processInput(param0, (byte) 48)) {
+        if (!EmailValidationHelpers.field_b.processInput(param0, (byte) 48)) {
           if (param1 == 2) {
             return;
           }
           BevelTextPainter.sendByteRequest(41, -89);
           return;
         }
-        pm.field_b = null;
+        EmailValidationHelpers.field_b = null;
         if (param1 == 2) {
           return;
         }
@@ -134,12 +134,12 @@ class BevelTextPainter extends TextWidgetPainter {
           }
           super.paint(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        field_q = new aj(8, 0, 4, 1);
+        field_q = new GameOptionType(8, 0, 4, 1);
         field_p = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_t = "Create a free Account";
     }

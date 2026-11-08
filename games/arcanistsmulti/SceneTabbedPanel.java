@@ -24,17 +24,17 @@ final class SceneTabbedPanel extends SceneWidget {
     private int[] field_Ib;
 
     private final static void storeInviteRequest(int param0, int param1, int param2, long param3, String param4) {
-        rf.field_n = param3;
+        HighscoreEntry.field_n = param3;
         UiTheme.field_A = param4;
-        qj.field_c = param1;
+        TimeAndInputHelpers.field_c = param1;
         if (param0 != -1) {
           return;
         }
         try {
-          hi.field_g = param2;
-          bo.field_c = true;
+          ViewControllerHelpers.field_g = param2;
+          NameErrorHelpers.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class SceneTabbedPanel extends SceneWidget {
               SecondaryNodeDeque.closeQuickChat(14);
             } else {
               var5 = 32768 | this.field_Ib[param3];
-              var6 = nj.field_c;
+              var6 = NameCheckHelpers.field_c;
               if (var6 == 0 &&
                 null != DirectByteStorage.field_f) {
                 var6 = 1;
@@ -74,10 +74,10 @@ final class SceneTabbedPanel extends SceneWidget {
                 DiskCacheRequest.updateChatModeSetting(param2, 1, true, var6);
               }
               var8 = (String) null;
-              BufferedRandomAccessFile.sendReport(var5, (String) null, 70, param1, nj.field_c, MenuInputState.field_p);
-              SceneTabbedPanel.storeInviteRequest(param0 ^ -13, nj.field_c, var5, gg.field_e, MenuInputState.field_p);
+              BufferedRandomAccessFile.sendReport(var5, (String) null, 70, param1, NameCheckHelpers.field_c, MenuInputState.field_p);
+              SceneTabbedPanel.storeInviteRequest(param0 ^ -13, NameCheckHelpers.field_c, var5, DecodedSpriteHelpers.field_e, MenuInputState.field_p);
               SecondaryNodeDeque.closeQuickChat(14);
-              cf.resetIdleTimer(-113);
+              CredentialParseHelpers.resetIdleTimer(-113);
             }
           }
         } else {
@@ -264,7 +264,7 @@ final class SceneTabbedPanel extends SceneWidget {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class SceneTabbedPanel extends SceneWidget {
           SecondaryNodeDeque.closeQuickChat(14);
           return true;
         }
-        var5 = ed.field_Bb;
+        var5 = MainMenuDialog.field_Bb;
         if (param0 < 76) {
           this.setTabSpacing(22, -124);
         }

@@ -29,7 +29,7 @@ abstract class MouseWheelHandler {
 
     abstract int pollRotation(int param0);
 
-    static int a(int param0, int param1) {
+    static int bitXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

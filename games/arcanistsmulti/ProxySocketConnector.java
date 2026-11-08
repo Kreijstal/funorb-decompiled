@@ -17,7 +17,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (param0 != -44) {
           return true;
         }
-        stackIn_7_0 = (fj.field_j >= 10) && (!qe.field_p) && (!td.isConnectedToLobby(-97));
+        stackIn_7_0 = (BitAndSpriteHelpers.field_j >= 10) && (!QueuedPacket.field_p) && (!ThreeButtonPanel.isConnectedToLobby(-97));
         return stackIn_7_0;
     }
 
@@ -50,7 +50,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        hj var12_ref = null;
+        ClientIOException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
@@ -137,15 +137,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (hj) null;
+            if (false) throw (ClientIOException) null;
             var12 = this.connectThroughProxy(-8973, var11);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (hj decompiledCaughtParameter1) {
+          } catch (ClientIOException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (hj) (Object) decompiledCaughtException;
+            var12_ref = (ClientIOException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -234,11 +234,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new hj(var8);
+                  throw new ClientIOException(var8);
                 }
                 break;
               }
-              throw new hj("");
+              throw new ClientIOException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_9_0 = var13;
@@ -269,7 +269,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

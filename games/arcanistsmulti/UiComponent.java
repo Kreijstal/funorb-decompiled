@@ -70,7 +70,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        var5 = sk.getTooltipText(-14150);
+        var5 = TooltipHelpers.getTooltipText(-14150);
         if (!param1) {
           return;
         }
@@ -191,7 +191,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -267,14 +267,14 @@ class UiComponent extends IntrusiveNode {
             WrappedTextLayout.field_r != 0) {
             this.blur((byte) 29);
           }
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (SingleChildContainer.field_y == 0) {
           if (0 == WrappedTextLayout.field_r) {
             if (0 == PacketBuffer.field_m &&
-              la.field_f != 0) {
+              ScreenClearHelpers.field_f != 0) {
               this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var8 = MenuInputState.field_i;
               if (var8 != null) {
@@ -289,14 +289,14 @@ class UiComponent extends IntrusiveNode {
                 this.blur((byte) 29);
               }
             }
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
-          if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
+          if (!this.handlePointerPress(ConfirmedNameValidator.field_s, WrappedTextLayout.field_r, this, param1, 10, QueuedResponse.field_h, param0)) {
             if (var5 == 0) {
               if (0 == PacketBuffer.field_m &&
-                la.field_f != 0) {
+                ScreenClearHelpers.field_f != 0) {
                 this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
                 var9 = MenuInputState.field_i;
                 if (var9 != null) {
@@ -313,8 +313,8 @@ class UiComponent extends IntrusiveNode {
                   this.blur((byte) 29);
                 }
               }
-              la.field_f = PacketBuffer.field_m;
-              qg.setPointerTarget(38, this.getTooltip(false));
+              ScreenClearHelpers.field_f = PacketBuffer.field_m;
+              ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
               return param2;
             }
             this.blur((byte) 29);
@@ -325,13 +325,13 @@ class UiComponent extends IntrusiveNode {
             param2 = false;
           }
           if (0 != PacketBuffer.field_m) {
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
-          if (la.field_f == 0) {
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+          if (ScreenClearHelpers.field_f == 0) {
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -347,14 +347,14 @@ class UiComponent extends IntrusiveNode {
             WrappedTextLayout.field_r != 0) {
             this.blur((byte) 29);
           }
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (var5 == 0) {
           if (0 == WrappedTextLayout.field_r) {
             if (0 == PacketBuffer.field_m &&
-              la.field_f != 0) {
+              ScreenClearHelpers.field_f != 0) {
               this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var11 = MenuInputState.field_i;
               if (var11 != null) {
@@ -369,13 +369,13 @@ class UiComponent extends IntrusiveNode {
                 this.blur((byte) 29);
               }
             }
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
-          if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
+          if (!this.handlePointerPress(ConfirmedNameValidator.field_s, WrappedTextLayout.field_r, this, param1, 10, QueuedResponse.field_h, param0)) {
             if (0 == PacketBuffer.field_m &&
-              la.field_f != 0) {
+              ScreenClearHelpers.field_f != 0) {
               this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var12 = MenuInputState.field_i;
               if (var12 != null) {
@@ -392,19 +392,19 @@ class UiComponent extends IntrusiveNode {
                 this.blur((byte) 29);
               }
             }
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           param2 = false;
           if (0 != PacketBuffer.field_m) {
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
-          if (la.field_f == 0) {
-            la.field_f = PacketBuffer.field_m;
-            qg.setPointerTarget(38, this.getTooltip(false));
+          if (ScreenClearHelpers.field_f == 0) {
+            ScreenClearHelpers.field_f = PacketBuffer.field_m;
+            ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -420,14 +420,14 @@ class UiComponent extends IntrusiveNode {
             WrappedTextLayout.field_r != 0) {
             this.blur((byte) 29);
           }
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         this.handleMouseWheel(param1, param0, EmailLoginCredentials.field_g, MenuButtonPanel.field_I, SingleChildContainer.field_y, 0, this);
         if (0 == WrappedTextLayout.field_r) {
           if (0 == PacketBuffer.field_m &&
-            la.field_f != 0) {
+            ScreenClearHelpers.field_f != 0) {
             this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
             var14 = MenuInputState.field_i;
             if (var14 != null) {
@@ -442,11 +442,11 @@ class UiComponent extends IntrusiveNode {
               this.blur((byte) 29);
             }
           }
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
-        if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
+        if (!this.handlePointerPress(ConfirmedNameValidator.field_s, WrappedTextLayout.field_r, this, param1, 10, QueuedResponse.field_h, param0)) {
           this.blur((byte) 29);
           if (var7 != 0) {
             param2 = false;
@@ -455,13 +455,13 @@ class UiComponent extends IntrusiveNode {
           param2 = false;
         }
         if (0 != PacketBuffer.field_m) {
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
-        if (la.field_f == 0) {
-          la.field_f = PacketBuffer.field_m;
-          qg.setPointerTarget(38, this.getTooltip(false));
+        if (ScreenClearHelpers.field_f == 0) {
+          ScreenClearHelpers.field_f = PacketBuffer.field_m;
+          ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -477,8 +477,8 @@ class UiComponent extends IntrusiveNode {
           WrappedTextLayout.field_r != 0) {
           this.blur((byte) 29);
         }
-        la.field_f = PacketBuffer.field_m;
-        qg.setPointerTarget(38, this.getTooltip(false));
+        ScreenClearHelpers.field_f = PacketBuffer.field_m;
+        ClientRuntimeException.setPointerTarget(38, this.getTooltip(false));
         return param2;
     }
 
@@ -504,7 +504,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -515,7 +515,7 @@ class UiComponent extends IntrusiveNode {
           }
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "qm.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -558,7 +558,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -589,7 +589,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -664,7 +664,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -724,20 +724,20 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
-          fj.detachKeyboardInput((java.awt.Component) ((Object) param0), 115);
+          BitAndSpriteHelpers.detachKeyboardInput((java.awt.Component) ((Object) param0), 115);
           MenuInputState.detachMouseInput((java.awt.Component) ((Object) param0), 0);
           if (null != StrongCacheEntry.field_w) {
             StrongCacheEntry.field_w.detach((java.awt.Component) ((Object) param0), (byte) -22);
           }
           int var2_int = 17 / ((-7 - param1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.KB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "qm.KB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ class UiComponent extends IntrusiveNode {
             this.field_k = var4.getPreferredHeight(this, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -779,7 +779,7 @@ class UiComponent extends IntrusiveNode {
           this.field_j = param1;
           this.field_o = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

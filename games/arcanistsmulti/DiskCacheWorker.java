@@ -8,7 +8,7 @@ final class DiskCacheWorker implements Runnable {
     private Thread field_h;
     private boolean field_b;
     int field_d;
-    static co field_g;
+    static BattleResetHelpers field_g;
     static String field_f;
 
     final DiskCacheRequest read(SectorCacheStore param0, int param1, int param2) {
@@ -60,7 +60,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class DiskCacheWorker implements Runnable {
         int var1 = -24 % ((71 - param0) / 35);
         MusicPatchPcmStream.field_s = true;
         ClientException.field_b.deactivatePanels(-126);
-        jn.openAccountDialog(fi.field_a, false, -1);
+        LobbyStateHelpers.openAccountDialog(DecimalCheckHelpers.field_a, false, -1);
     }
 
     final static SceneWidget getContextScrollContent(byte param0) {
@@ -288,7 +288,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -300,20 +300,20 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.queueThreadStart(126, 5, (Runnable) (this));
           while (0 == var2.field_e) {
-            ao.sleepMillis(10L, 1);
+            LobbyLayoutHelpers.sleepMillis(10L, 1);
           }
           if (var2.field_e == 2) {
             throw new RuntimeException();
           }
           this.field_h = (Thread) (var2.field_g);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_f = "Just one target left! You seem to be doing well with these minions - perhaps a tougher challenge is required...";
         field_c = "Encouraging rule breaking";
-        field_g = new co();
+        field_g = new BattleResetHelpers();
     }
 }

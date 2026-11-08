@@ -38,19 +38,19 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void tickMessageTimer(byte param0) {
         RuntimeException runtimeException = null;
-        rb var1 = null;
+        TimedMessage var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -49) {
             return;
           }
-          var1 = (rb) (pb.field_m.first(12623));
+          var1 = (TimedMessage) (QueuedResponse.field_m.first(12623));
           if (null != var1) {
             var1.field_h = var1.field_h - 1;
             if (var1.field_h < 0) {
@@ -61,7 +61,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "e.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "e.C(" + param0 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -172,13 +172,13 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           if (param0 != 1) {
             LoginPanel.tickMessageTimer((byte) 123);
           }
-          qj.field_a = param4;
+          TimeAndInputHelpers.field_a = param4;
           IntrusiveNodeHashTable.field_h = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "e.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "e.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           field_M = null;
           field_D = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "e.I(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "e.I(" + param0 + ')');
         }
     }
 
@@ -243,15 +243,15 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           var2 = new PacketBuffer(param0);
           var2.position = param0.length - 2;
           ModalPanelStack.field_J = var2.readUnsignedShort(-98);
-          jg.field_p = new int[ModalPanelStack.field_J];
+          ChatLine.field_p = new int[ModalPanelStack.field_J];
           FadingModalPanel.field_O = new byte[ModalPanelStack.field_J][];
           SectorCacheStore.field_d = new int[ModalPanelStack.field_J];
-          ho.field_i = new int[ModalPanelStack.field_J];
+          ServerMessage.field_i = new int[ModalPanelStack.field_J];
           AccountRegistrationPanel.field_I = new byte[ModalPanelStack.field_J][];
-          hl.field_l = new int[ModalPanelStack.field_J];
+          BufferedMessage.field_l = new int[ModalPanelStack.field_J];
           SceneScrollPane.field_Ib = new boolean[ModalPanelStack.field_J];
           var2.position = param0.length - (7 + ModalPanelStack.field_J * 8);
-          pb.field_g = var2.readUnsignedShort(-98);
+          QueuedResponse.field_g = var2.readUnsignedShort(-98);
           QuickChatPhraseCache.field_a = var2.readUnsignedShort(-98);
           var3 = 1 + (var2.readUnsignedByte((byte) -103) & 255);
           var4 = 0;
@@ -260,7 +260,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               var4 = 0;
               break;
             }
-            hl.field_l[var4] = var2.readUnsignedShort(-98);
+            BufferedMessage.field_l[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           do {
@@ -276,27 +276,27 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               var4 = 0;
               break;
             }
-            jg.field_p[var4] = var2.readUnsignedShort(-98);
+            ChatLine.field_p[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           do {
             if (!(ModalPanelStack.field_J > var4)) {
               var2.position = -(3 * (-1 + var3)) - 8 * ModalPanelStack.field_J + (-7 + param0.length);
-              ph.field_c = new int[var3];
+              PriceCaptionGlobals.field_c = new int[var3];
               break;
             }
-            ho.field_i[var4] = var2.readUnsignedShort(-98);
+            ServerMessage.field_i[var4] = var2.readUnsignedShort(-98);
             var4++;
           } while (var15 == 0);
           var4 = 1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 >= var3))) {
-            ph.field_c[var4] = var2.readUnsignedMedium(11609);
+            PriceCaptionGlobals.field_c[var4] = var2.readUnsignedMedium(11609);
             stackIn_42_0 = -1;
-            stackIn_42_1 = ~ph.field_c[var4];
+            stackIn_42_1 = ~PriceCaptionGlobals.field_c[var4];
             if (var15 == 0) {
               if (stackIn_42_0 == stackIn_42_1) {
-                ph.field_c[var4] = 1;
+                PriceCaptionGlobals.field_c[var4] = 1;
               }
               var4++;
               continue;
@@ -318,8 +318,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             stackIn_48_1 = var4;
             stackIn_48_2 = -1;
             if (stackIn_48_0 < (stackIn_48_1 ^ stackIn_48_2)) {
-              var5 = jg.field_p[var4];
-              var6 = ho.field_i[var4];
+              var5 = ChatLine.field_p[var4];
+              var6 = ServerMessage.field_i[var4];
               var7 = var5 * var6;
               var8 = new byte[var7];
               AccountRegistrationPanel.field_I[var4] = var8;
@@ -412,7 +412,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -424,7 +424,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             this.field_G = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "e.M(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "e.M(" + param0 + ')');
         }
     }
 
@@ -433,7 +433,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException var5 = null;
         try {
           if (null != this.field_E) {
-            ia.field_c.drawParagraph(this.field_E, 20 + this.field_n + param1, 15 + (this.field_j + param3), this.field_v - 40, this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
+            RootInputHelpers.field_c.drawParagraph(this.field_E, 20 + this.field_n + param1, 15 + (this.field_j + param3), this.field_v - 40, this.field_k, 16777215, -1, 1, 0, RootInputHelpers.field_c.field_C);
           }
           if (this.field_J != null) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 10, param3 + 134, this.field_v - 20, 4210752);
@@ -446,7 +446,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "e.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "e.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -487,8 +487,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           this.field_O = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
           this.field_G = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (this.field_F) {
-            this.field_P = new TextButton(sk.field_b, (UiListener) null);
-            this.field_L = new TextButton(ki.field_u, (UiListener) null);
+            this.field_P = new TextButton(TooltipHelpers.field_b, (UiListener) null);
+            this.field_L = new TextButton(EmailValidator.field_u, (UiListener) null);
             this.field_O.field_B = false;
             decompiledFrameRemainder0 = (var11 != 0);
           }
@@ -503,7 +503,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = ae.field_b;
+              stackIn_18_3 = LobbyRequestHelpers.field_b;
             }
             this.field_L = new TextButton(stackIn_18_3, (UiListener) null);
             if (this.field_R) {
@@ -525,14 +525,14 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             this.field_J.field_q = SceneTextInput.field_Bb;
           }
           if (this.field_F) {
-            this.field_L.field_q = fo.field_e;
+            this.field_L.field_q = MessageCaptionGlobals.field_e;
             if (var11 != 0) {
               if (!this.field_N) {
                 this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
-                this.field_L.field_q = hj.field_c;
+                this.field_L.field_q = ClientIOException.field_c;
                 this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
               } else {
-                this.field_L.field_q = hj.field_c;
+                this.field_L.field_q = ClientIOException.field_c;
                 this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
               }
             }
@@ -543,26 +543,26 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               decompiledSharedTail2 = (var11 != 0);
             }
             if (decompiledSharedTail2) {
-              this.field_L.field_q = hj.field_c;
+              this.field_L.field_q = ClientIOException.field_c;
               this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           }
           this.field_j = 15;
-          var7 = ia.field_c;
+          var7 = RootInputHelpers.field_c;
           if (this.field_E != null) {
             this.field_j = this.field_j + (5 + var7.paragraphHeight(this.field_E, -40 + this.field_v, var7.field_C));
           }
           var8 = GrowableIntList.field_b;
-          var9 = oj.readLastLoginMethod(122, IconButtonPainter.getApplet(117));
+          var9 = LoginMethodHelpers.readLastLoginMethod(122, IconButtonPainter.getApplet(117));
           if (var9 == DiskCacheRequest.field_y) {
             var8 = BirthDateEntryPanel.field_H;
             if ((var11 != 0) &&
-              (of.field_n == var9)) {
-              var8 = wh.field_b;
+              (GradientBarPainter.field_n == var9)) {
+              var8 = PaletteSpriteHelpers.field_b;
             }
           } else {
-            if (of.field_n == var9) {
-              var8 = wh.field_b;
+            if (GradientBarPainter.field_n == var9) {
+              var8 = PaletteSpriteHelpers.field_b;
             }
           }
           dupTemp$0 = new LabeledField(10, this.field_j, this.field_v - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
@@ -632,7 +632,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -651,7 +651,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "e.O(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "e.O(" + param0 + ')');
         }
     }
 
@@ -679,7 +679,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
                     return;
                   }
                 }
-                kj.setPendingMessage(21744);
+                PendingMessageHelpers.setPendingMessage(21744);
                 if (var7 == 0) {
                   return;
                 }
@@ -706,7 +706,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -723,7 +723,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "e.K(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "e.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -745,7 +745,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "e.L(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "e.L(" + param0 + ')');
         }
     }
 
@@ -792,7 +792,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -808,7 +808,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 54 % ((param1 - 33) / 52);
-          stackIn_1_0 = cj.submitAccountCreationRequest(false, (byte) -91, 0, param0, 0, param2, (String) null);
+          stackIn_1_0 = AccountCreationHelpers.submitAccountCreationRequest(false, (byte) -91, 0, param0, 0, param2, (String) null);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -826,7 +826,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

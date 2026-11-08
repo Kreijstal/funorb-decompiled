@@ -623,7 +623,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = GrowableIntList.highestBitIndex((byte) -79, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = jo.reverseBits(var10, (byte) -73, var11);
+            var9[var11] = BitHelpers.reverseBits(var10, (byte) -73, var11);
           }
           if (var1 == 0) {
             field_p = var6_ref_float__;

@@ -26,7 +26,7 @@ final class QuickChatPhrase extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        aj var7 = null;
+        GameOptionType var7 = null;
         int var9 = 0;
         PacketBuffer var10 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
@@ -47,7 +47,7 @@ final class QuickChatPhrase extends DualLinkNode {
                 this.field_v = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param1.readUnsignedShort(param0 - 94);
-                  var7 = no.findEntryById(var6, 0);
+                  var7 = SocialDialog.findEntryById(var6, 0);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_e];
@@ -78,7 +78,7 @@ final class QuickChatPhrase extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class QuickChatPhrase extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class QuickChatPhrase extends DualLinkNode {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = fj.bitOr(this.field_u[var2], 32768);
+            this.field_u[var2] = BitAndSpriteHelpers.bitOr(this.field_u[var2], 32768);
           }
         }
         if (param0 > -122) {
@@ -197,10 +197,10 @@ final class QuickChatPhrase extends DualLinkNode {
               }
               var5 = null;
               if (TextLine.field_h == 0) {
-                var5 = bo.getNameErrorMessage(var4, (byte) -26, param2);
+                var5 = NameErrorHelpers.getNameErrorMessage(var4, (byte) -26, param2);
               }
               if (1 == TextLine.field_h) {
-                var5 = oe.getIgnoreNameError(var4, 29140, param2);
+                var5 = CalendarHelpers.getIgnoreNameError(var4, 29140, param2);
               }
               if (TextLine.field_h == 2) {
                 var5 = ValidationState.getDisplayNameError((byte) -48, param2, var4);
@@ -210,7 +210,7 @@ final class QuickChatPhrase extends DualLinkNode {
               }
               if (var5 != null) {
                 var6 = (String) null;
-                ao.addChatMessage(0, (byte) 126, (String) (var5), var4, 2, (String) null);
+                LobbyLayoutHelpers.addChatMessage(0, (byte) 126, (String) (var5), var4, 2, (String) null);
               }
               PasswordFieldPainter.field_A = null;
               TextLine.field_h = -1;
@@ -243,7 +243,7 @@ final class QuickChatPhrase extends DualLinkNode {
           }
           var7 = new ConditionalTextValue(param2);
           var8 = new ConditionalTextValue(param5);
-          stackIn_4_0 = cj.submitAccountCreationRequest(param0, (byte) -91, param1, var8, param4, var7, param3);
+          stackIn_4_0 = AccountCreationHelpers.submitAccountCreationRequest(param0, (byte) -91, param1, var8, param4, var7, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class QuickChatPhrase extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 

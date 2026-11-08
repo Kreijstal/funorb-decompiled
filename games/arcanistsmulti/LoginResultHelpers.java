@@ -1,0 +1,86 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoginResultHelpers {
+    static String field_a;
+    static int field_e;
+    static IndexedSprite[] field_d;
+    static String field_b;
+    static DisplayNameForm field_c;
+
+    public static void releaseStatics(byte param0) {
+        field_b = null;
+        if (param0 != 98) {
+          return;
+        }
+        field_d = null;
+        field_c = null;
+        field_a = null;
+    }
+
+    final static void handleLoginResult(boolean param0, int param1, String param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          Bzip2State.field_h = false;
+          HuffmanCodec.field_k = false;
+          if (null != RawDataNode.field_k &&
+            RawDataNode.field_k.field_G) {
+            var3_int = 1;
+            if (param1 == 8) {
+              if (MusicPatchPcmStream.field_s) {
+                param2 = NameCheckHelpers.field_f;
+              } else {
+                param2 = Bzip2State.field_v;
+              }
+              param1 = 2;
+              PaletteSpriteHelpers.field_f.setUsername(26152, BattleAction.field_g);
+            }
+            if (10 == param1) {
+              var3_int = 0;
+              Scrollbar.openDisplayNameForm(-90);
+            }
+            if (var3_int != 0) {
+              if (Bzip2State.field_h) {
+                param2 = CachedArchiveProvider.formatTemplate(114, new String[]{param2}, PlayerInfoPanel.field_Eb);
+              }
+              if (NodeHashTable.field_h) {
+                param2 = CheckboxPainter.field_n;
+              }
+              RawDataNode.field_k.showResult(true, param2, param1);
+            }
+            if (param1 != 256 &&
+              param1 != 10 &&
+              !MusicPatchPcmStream.field_s) {
+              PaletteSpriteHelpers.field_f.clearFields(true);
+            }
+          }
+          if (param0) {
+            return;
+          }
+          field_b = (String) null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_28_0 = var3;
+          stackIn_28_1 = new StringBuilder().append("oa.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = "Chat view has been scrolled up. Scroll down to chat.";
+        field_e = 50;
+        field_b = "Minimap";
+    }
+}

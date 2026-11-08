@@ -36,12 +36,12 @@ class EditableTextWidget extends TextButton {
     final static void pollOrbCoinData(int param0) {
         int var1;
         if (!ContextActionMenu.field_Jb) {
-          if (ce.field_i == null) {
-            ce.field_i = CachedArchiveProvider.createPendingTask(4, -21402);
+          if (GameSelectionHelpers.field_i == null) {
+            GameSelectionHelpers.field_i = CachedArchiveProvider.createPendingTask(4, -21402);
           }
-          if (ce.field_i.field_l) {
-            ad.field_f = ko.orArrays(ad.field_f, ce.field_i.field_i, true);
-            ce.field_i = null;
+          if (GameSelectionHelpers.field_i.field_l) {
+            SpellbookCaptionGlobals.field_f = ListEntryMenuHelpers.orArrays(SpellbookCaptionGlobals.field_f, GameSelectionHelpers.field_i.field_i, true);
+            GameSelectionHelpers.field_i = null;
             ContextActionMenu.field_Jb = true;
           }
         }
@@ -52,40 +52,40 @@ class EditableTextWidget extends TextButton {
           if (0 == (1 & PlayerActionMenu.field_g)) {
             var1 = ResizableViewResizeListener.field_d;
             if (0 >= var1 &&
-              qf.field_d >= 2) {
+              MembershipGlobals.field_d >= 2) {
               System.out.println("No data to pull");
             }
           } else {
-            if (2 <= qf.field_d) {
+            if (2 <= MembershipGlobals.field_d) {
               System.out.println("Orb coins not availiable");
             }
           }
           NodeHashTableIterator.field_e = true;
         }
         if (!SectorCacheStore.field_g) {
-          if (null == ci.field_d) {
-            ci.field_d = AlternateUsernameCredentials.queueResponse(6, false);
+          if (null == ModalStackHelpers.field_d) {
+            ModalStackHelpers.field_d = AlternateUsernameCredentials.queueResponse(6, false);
           }
-          if (ci.field_d.field_k) {
-            ec.applyColourTheme(ci.field_d.field_j, (byte) -49);
-            ci.field_d = null;
+          if (ModalStackHelpers.field_d.field_k) {
+            SpriteFrame.applyColourTheme(ModalStackHelpers.field_d.field_j, (byte) -49);
+            ModalStackHelpers.field_d = null;
             SectorCacheStore.field_g = true;
           }
         }
-        if (!la.field_a &&
-          !ta.field_b) {
-          he.field_e.writeOpcode((byte) -84, 65);
-          ta.field_b = true;
+        if (!ScreenClearHelpers.field_a &&
+          !LoadingTask.field_b) {
+          StatusMessageHelpers.field_e.writeOpcode((byte) -84, 65);
+          LoadingTask.field_b = true;
         }
-        if (la.field_a) {
+        if (ScreenClearHelpers.field_a) {
           QuickChatCategoryCache.field_a = true;
         }
         if (ContextActionMenu.field_Jb &&
           SectorCacheStore.field_g &&
           QuickChatCategoryCache.field_a &&
           NodeHashTableIterator.field_e) {
-          wm.finishLoadingDialog(0);
-          qc.configureViewport(false);
+          PaddedContainer.finishLoadingDialog(0);
+          ViewportSetupHelpers.configureViewport(false);
         }
     }
 
@@ -103,7 +103,7 @@ class EditableTextWidget extends TextButton {
             if (this.field_N != this.field_J) {
               var5.drawSelection(param3, (UiComponent) (this), param1, 6600, this.field_N, this.field_J);
             }
-            var6 = qj.monotonicTimeMillis(-26572);
+            var6 = TimeAndInputHelpers.monotonicTimeMillis(-26572);
             if ((-this.field_Q + var6) % 1000L < 500L) {
               var5.drawCaret(79, param3, param1, this.field_N, (UiComponent) (this));
             }
@@ -160,7 +160,7 @@ class EditableTextWidget extends TextButton {
                 this.field_N = var6;
               }
             }
-            this.field_Q = qj.monotonicTimeMillis(-26572);
+            this.field_Q = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,13 +173,13 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void setCaret(int param0, int param1) {
         this.field_N = param1;
-        if (!ri.field_b[param0]) {
+        if (!RasterSetupHelpers.field_b[param0]) {
           this.field_J = this.field_N;
         }
     }
@@ -204,7 +204,7 @@ class EditableTextWidget extends TextButton {
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           SceneScrollPane.field_Db = false;
-          om.field_x = null;
+          CapsuleBar.field_x = null;
           DirectByteStorage.field_f = null;
           if (param0 >= -97) {
             var3 = (CipherPacketBuffer) null;
@@ -214,31 +214,31 @@ class EditableTextWidget extends TextButton {
             LinkButtonPainter.field_j.clear(-124);
             LinkButtonPainter.field_j = null;
           }
-          bc.field_c = null;
+          OptionToggleHelpers.field_c = null;
           if (null != UiTheme.field_a) {
             UiTheme.field_a.clear(99);
             UiTheme.field_a = null;
           }
-          nk.field_q = null;
-          if (ph.field_a != null) {
-            ph.field_a.clear(10);
-            ph.field_a = null;
+          ListRequest.field_q = null;
+          if (PriceCaptionGlobals.field_a != null) {
+            PriceCaptionGlobals.field_a.clear(10);
+            PriceCaptionGlobals.field_a = null;
           }
           OptionsDialog.field_qb = null;
-          if (null != bc.field_c) {
-            var4 = (SocialListEntry) (bc.field_c.firstInTraversal(102));
+          if (null != OptionToggleHelpers.field_c) {
+            var4 = (SocialListEntry) (OptionToggleHelpers.field_c.firstInTraversal(102));
             while (var4 != null) {
               var4.unlinkSecondary((byte) 88);
-              var4 = (SocialListEntry) (bc.field_c.nextInTraversal(-1));
+              var4 = (SocialListEntry) (OptionToggleHelpers.field_c.nextInTraversal(-1));
             }
-            bc.field_c = null;
+            OptionToggleHelpers.field_c = null;
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "rn.L(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "rn.L(" + param0 + ')');
         }
     }
 
@@ -283,9 +283,9 @@ class EditableTextWidget extends TextButton {
           this.field_H = param2;
           this.setText(true, param0, false);
           this.field_M = true;
-          this.field_Q = qj.monotonicTimeMillis(-26572);
+          this.field_Q = TimeAndInputHelpers.monotonicTimeMillis(-26572);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ class EditableTextWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_Q = qj.monotonicTimeMillis(-26572);
+          this.field_Q = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           if (param2 != 60 &&
             param2 != 62) {
             if (param1 >= -120) {
@@ -358,7 +358,7 @@ class EditableTextWidget extends TextButton {
                 if (param3 == 97) {
                   if (this.field_N < this.field_g.length()) {
                     stackIn_73_1 = 81;
-                    if (!ri.field_b[82]) {
+                    if (!RasterSetupHelpers.field_b[82]) {
                       stackIn_74_2 = 1 + this.field_N;
                     } else {
                       stackIn_74_2 = this.nextWordBoundary(-9125);
@@ -379,17 +379,17 @@ class EditableTextWidget extends TextButton {
                     this.notifyTextSubmitted(false);
                     return true;
                   }
-                  if (ri.field_b[82] &&
+                  if (RasterSetupHelpers.field_b[82] &&
                     param3 == 65) {
                     this.cutSelection((byte) 122);
                     return true;
                   }
-                  if (ri.field_b[82] &&
+                  if (RasterSetupHelpers.field_b[82] &&
                     66 == param3) {
                     this.copySelection((byte) 56);
                     return true;
                   }
-                  if (ri.field_b[82] &&
+                  if (RasterSetupHelpers.field_b[82] &&
                     67 == param3) {
                     this.pasteClipboard(-9711);
                     return true;
@@ -398,7 +398,7 @@ class EditableTextWidget extends TextButton {
               } else {
                 if (this.field_N > 0) {
                   stackIn_45_1 = 81;
-                  if (ri.field_b[82]) {
+                  if (RasterSetupHelpers.field_b[82]) {
                     stackIn_46_2 = this.previousWordBoundary(1000);
                   } else {
                     stackIn_46_2 = this.field_N - 1;
@@ -431,7 +431,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -550,7 +550,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -576,7 +576,7 @@ class EditableTextWidget extends TextButton {
         try {
           this.notifyTextChanged(-22706);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "rn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "rn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -600,42 +600,42 @@ class EditableTextWidget extends TextButton {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = hd.readBitFlag(param1, (byte) 118) ? 1 : 0;
-          var4 = hd.readBitFlag(param1, (byte) 126) ? 1 : 0;
+          var3 = NameTextHelpers.readBitFlag(param1, (byte) 118) ? 1 : 0;
+          var4 = NameTextHelpers.readBitFlag(param1, (byte) 126) ? 1 : 0;
           if (!param0) {
             field_K = (String) null;
           }
           var5 = new MeshModel();
           var5.field_f = (short)param1.readBits(28089, 16);
-          var5.field_b = eo.readPackedShorts(param1, var5.field_b, 16, 16);
-          var5.field_B = eo.readPackedShorts(param1, var5.field_B, 16, 16);
-          var5.field_L = eo.readPackedShorts(param1, var5.field_L, 16, 16);
+          var5.field_b = PackedShortHelpers.readPackedShorts(param1, var5.field_b, 16, 16);
+          var5.field_B = PackedShortHelpers.readPackedShorts(param1, var5.field_B, 16, 16);
+          var5.field_L = PackedShortHelpers.readPackedShorts(param1, var5.field_L, 16, 16);
           var5.field_G = (short)param1.readBits(28089, 16);
-          var5.field_U = eo.readPackedShorts(param1, var5.field_U, 16, 16);
-          var5.field_T = eo.readPackedShorts(param1, var5.field_T, 16, 16);
-          var5.field_O = eo.readPackedShorts(param1, var5.field_O, 16, 16);
+          var5.field_U = PackedShortHelpers.readPackedShorts(param1, var5.field_U, 16, 16);
+          var5.field_T = PackedShortHelpers.readPackedShorts(param1, var5.field_T, 16, 16);
+          var5.field_O = PackedShortHelpers.readPackedShorts(param1, var5.field_O, 16, 16);
           if (var3 != 0) {
             var5.field_A = (short)param1.readBits(28089, 16);
-            var5.field_r = eo.readPackedShorts(param1, var5.field_r, 16, 16);
-            var5.field_e = eo.readPackedShorts(param1, var5.field_e, 16, 16);
-            var5.field_S = eo.readPackedShorts(param1, var5.field_S, 16, 16);
-            var5.field_w = eo.readPackedShorts(param1, var5.field_w, 16, 16);
-            var5.field_q = eo.readPackedShorts(param1, var5.field_q, 16, 16);
-            var5.field_u = eo.readPackedShorts(param1, var5.field_u, 16, 16);
+            var5.field_r = PackedShortHelpers.readPackedShorts(param1, var5.field_r, 16, 16);
+            var5.field_e = PackedShortHelpers.readPackedShorts(param1, var5.field_e, 16, 16);
+            var5.field_S = PackedShortHelpers.readPackedShorts(param1, var5.field_S, 16, 16);
+            var5.field_w = PackedShortHelpers.readPackedShorts(param1, var5.field_w, 16, 16);
+            var5.field_q = PackedShortHelpers.readPackedShorts(param1, var5.field_q, 16, 16);
+            var5.field_u = PackedShortHelpers.readPackedShorts(param1, var5.field_u, 16, 16);
           }
           if (var4 != 0) {
             param1.readBits(28089, 16);
-            var5.field_Q = eo.readPackedShorts(param1, var5.field_Q, 16, 16);
-            var5.field_d = eo.readPackedShorts(param1, var5.field_d, 16, 16);
-            var5.field_D = eo.readPackedShorts(param1, var5.field_D, 16, 16);
-            var5.field_s = eo.readPackedShorts(param1, var5.field_s, 16, 16);
-            var5.field_h = eo.readPackedShorts(param1, var5.field_h, 16, 16);
+            var5.field_Q = PackedShortHelpers.readPackedShorts(param1, var5.field_Q, 16, 16);
+            var5.field_d = PackedShortHelpers.readPackedShorts(param1, var5.field_d, 16, 16);
+            var5.field_D = PackedShortHelpers.readPackedShorts(param1, var5.field_D, 16, 16);
+            var5.field_s = PackedShortHelpers.readPackedShorts(param1, var5.field_s, 16, 16);
+            var5.field_h = PackedShortHelpers.readPackedShorts(param1, var5.field_h, 16, 16);
           }
-          if (hd.readBitFlag(param1, (byte) 126)) {
-            var5.field_z = eo.readPackedShorts(param1, var5.field_z, 16, 16);
+          if (NameTextHelpers.readBitFlag(param1, (byte) 126)) {
+            var5.field_z = PackedShortHelpers.readPackedShorts(param1, var5.field_z, 16, 16);
           }
-          if (hd.readBitFlag(param1, (byte) 120)) {
-            var5.field_H = ub.readPackedBytes(3, param1, 16, var5.field_H);
+          if (NameTextHelpers.readBitFlag(param1, (byte) 120)) {
+            var5.field_H = StatsSendHelpers.readPackedBytes(3, param1, 16, var5.field_H);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_H.length; var7++) {
               if ((var5.field_H[var7] & 255) > var6) {
@@ -660,7 +660,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -712,7 +712,7 @@ class EditableTextWidget extends TextButton {
             stackIn_6_2 = 0;
           }
           this.setCaret(stackIn_5_1, stackIn_6_2);
-          var9 = qj.monotonicTimeMillis(-26572);
+          var9 = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           stackIn_9_1 = !(-this.field_P + var9 >= 250L);
           this.field_R = stackIn_9_1;
           if (this.field_R) {
@@ -736,7 +736,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

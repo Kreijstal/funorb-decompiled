@@ -77,7 +77,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,8 +95,8 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           if (!param2) {
             OptionsDialog.releaseStatics(-104);
           }
-          if (fc.decodeSpriteSheet(-123, param0, param1, param3)) {
-            stackIn_6_0 = ge.createBinaryFont(param4.getFile(param3, 26219, param1), 3417);
+          if (SpriteDecodeHelpers.decodeSpriteSheet(-123, param0, param1, param3)) {
+            stackIn_6_0 = BattleAction.createBinaryFont(param4.getFile(param3, 26219, param1), 3417);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -117,7 +117,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_V = aa.queryDisplayModes(fi.field_d, (byte) 77);
+          this.field_V = CommonUiHelpers.queryDisplayModes(DecimalCheckHelpers.field_d, (byte) 77);
           if (this.field_V.length > 0) {
             for (var2_int = 0; var2_int < this.field_V.length; var2_int++) {
               if (null != this.field_V[var2_int]) {
@@ -201,7 +201,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
                 this.field_V[incrementValue$0] = var3_ref_uj__[var5];
               }
             }
-            pm.sortDisplayModes(this.field_V, -1);
+            EmailValidationHelpers.sortDisplayModes(this.field_V, -1);
           }
           stackIn_31_1 = !(0 >= this.field_V.length);
           this.field_yb = stackIn_31_1;
@@ -246,11 +246,11 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           this.field_ob.field_R = 83;
           this.field_ob.setSpacing(0, 5, 5);
           this.addChild(-123, this.field_ob);
-          this.field_jb = this.addIconButton(-1, ci.field_b, oa.field_d, (UiListener) (this));
+          this.field_jb = this.addIconButton(-1, ModalStackHelpers.field_b, LoginResultHelpers.field_d, (UiListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_mb = this.addIconButton(-1, fo.field_f, MusicPatch.field_k, (UiListener) (this));
+            this.field_mb = this.addIconButton(-1, MessageCaptionGlobals.field_f, MusicPatch.field_k, (UiListener) (this));
           }
-          this.field_lb = this.addIconButton(-1, oj.field_g, qj.field_j, (UiListener) (this));
+          this.field_lb = this.addIconButton(-1, LoginMethodHelpers.field_g, TimeAndInputHelpers.field_j, (UiListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -279,20 +279,20 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             this.field_zb.setBounds(18, this.field_lb.field_k + (this.field_lb.field_j + (this.field_ob.field_j - 19)), 126, this.field_ob.field_n + this.field_lb.field_n, -54);
             this.field_B.addFirst((IntrusiveNode) (this.field_zb), (byte) -58);
           }
-          this.field_kb = this.addButton((UiListener) (this), lm.field_a, 410);
+          this.field_kb = this.addButton((UiListener) (this), GameDetailsRenderer.field_a, 410);
           var5Lifetime1 = this.field_kb.field_v / 2 + this.field_kb.field_n;
           this.field_kb.field_v = 150;
           this.field_kb.field_n = var5Lifetime1 - (20 + this.field_kb.field_v);
-          this.field_ub = this.addButton((UiListener) (this), hj.field_e, 410);
+          this.field_ub = this.addButton((UiListener) (this), ClientIOException.field_e, 410);
           this.field_ub.field_B = false;
           this.field_ub.field_v = this.field_kb.field_v;
           this.field_ub.field_n = var5Lifetime1 + 20;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
-              stackIn_74_0 = on.field_b;
+              stackIn_74_0 = LoginMessageTable.field_b;
             } else {
-              stackIn_74_0 = tm.field_c;
+              stackIn_74_0 = IntensityTableHelpers.field_c;
             }
             var10 = stackIn_74_0;
             var6 = var10;
@@ -301,7 +301,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             var7.field_k = 80;
             var7.field_v = this.field_v;
             var7.field_n = 0;
-            var7.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(ia.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(RootInputHelpers.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.addChild(-96, var7);
           }
           this.field_nb = false;
@@ -320,14 +320,14 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
     final static void storeLoginMethodLayout(int param0, int param1, int param2, byte param3) {
         LoginMethod.field_a = param2;
-        pn.field_d = param0;
-        wm.field_I = param1;
+        LoginStackHelpers.field_d = param0;
+        PaddedContainer.field_I = param1;
         if (param3 != -43) {
           field_tb = (long[]) null;
         }
@@ -355,7 +355,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         try {
           try {
             var4 = param0.getGraphics();
-            ce.field_m.draw(param3, var4, 0, param2);
+            GameSelectionHelpers.field_m.draw(param3, var4, 0, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -376,7 +376,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -431,46 +431,46 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        jg var9 = null;
+        ChatLine var9 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (jo.field_e < DiskCacheRequest.field_F) {
-            jo.field_e = jo.field_e + 1;
+          if (BitHelpers.field_e < DiskCacheRequest.field_F) {
+            BitHelpers.field_e = BitHelpers.field_e + 1;
           }
-          if (TextLine.field_k != ce.field_m.field_m) {
-            Scrollbar.field_N = Scrollbar.field_N + (ce.field_m.field_m - TextLine.field_k);
-            TextLine.field_k = ce.field_m.field_m;
+          if (TextLine.field_k != GameSelectionHelpers.field_m.field_m) {
+            Scrollbar.field_N = Scrollbar.field_N + (GameSelectionHelpers.field_m.field_m - TextLine.field_k);
+            TextLine.field_k = GameSelectionHelpers.field_m.field_m;
           }
-          if (jo.field_e <= 0) {
+          if (BitHelpers.field_e <= 0) {
             return;
           }
-          ed.animateOverlayPosition(120);
+          MainMenuDialog.animateOverlayPosition(120);
           IntKeyLookup.field_g.updateInputFullScreen(param3, (byte) 60);
           if (param2) {
             field_tb = (long[]) null;
           }
           if (null != AccountRegistrationPanel.field_U) {
-            if (!wh.field_g) {
+            if (!PaletteSpriteHelpers.field_g) {
               AccountRegistrationPanel.field_U = null;
             } else {
               AccountRegistrationPanel.field_U.processPointerInput(IntKeyLookup.field_g.field_V, IntKeyLookup.field_g.field_nb, param3, (byte) -104);
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
-            var5 = mn.field_s[var4_int];
+            var5 = MatchingFieldValidator.field_s[var4_int];
             if (var5 != null) {
               if (var5.field_U != 0) {
-                ko.openListEntryMenu(var4_int, var5, (byte) -86);
+                ListEntryMenuHelpers.openListEntryMenu(var4_int, var5, (byte) -86);
               }
               var6 = ReflectionCheckRequest.getChatMode((byte) 119, var4_int);
-              ia.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
-              IntrusiveDequeCursor.field_f[var4_int].field_rb = cf.field_b[var6];
+              RootInputHelpers.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
+              IntrusiveDequeCursor.field_f[var4_int].field_rb = CredentialParseHelpers.field_b[var6];
             }
           }
-          if (g.field_g.field_U != 0) {
-            db.field_a = new ChatInputWidget(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
+          if (SupportPageHelpers.field_g.field_U != 0) {
+            Crc32Helpers.field_a = new ChatInputWidget(SupportPageHelpers.field_g.field_V, SupportPageHelpers.field_g.field_nb, SupportPageHelpers.field_g.field_x, SupportPageHelpers.field_g.field_I, param0, EffectVolumeHelpers.field_d, SectorCacheStore.field_l, ColourBucketTable.field_b, IntrusiveNode.field_c, SpriteFrame.field_g, NameCheckHelpers.field_d, (String) null, 0L);
           }
-          var9 = f.findChatLineAt(16711422, param1, ImageProducerRasterBuffer.field_r, SceneTextInput.field_Gb);
+          var9 = PendingRequest.findChatLineAt(16711422, param1, ImageProducerRasterBuffer.field_r, SceneTextInput.field_Gb);
           if (var9 != null) {
             EmptyPainter.openChatLineMenu(0, var9);
           }
@@ -482,7 +482,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "kn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "kn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -511,7 +511,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
                 }
               }
               GzipDecoder.toggleFullscreen(true, 5);
-              this.field_H.pushPanel(new bj(this.field_H), 15637);
+              this.field_H.pushPanel(new ButtonMenuDialog(this.field_H), 15637);
             }
           } else {
             HuffmanCodec.restoreWindowedMode(6);
@@ -563,12 +563,12 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
                   if (var6_int == 0 &&
                     param4 == this.field_lb) {
                     if (!this.field_yb) {
-                      this.field_H.pushPanel(new qn(this.field_H, QuickChatCategory.field_C), 15637);
+                      this.field_H.pushPanel(new MessageDialog(this.field_H, QuickChatCategory.field_C), 15637);
                     } else {
-                      if (ah.field_c > 0) {
+                      if (AccountFlowHelpers.field_c > 0) {
                         this.selectButton(param4, 0);
                       } else {
-                        this.field_H.pushPanel(new gf(this.field_H), 15637);
+                        this.field_H.pushPanel(new DisplayNameChangedDialog(this.field_H), 15637);
                       }
                     }
                   }
@@ -592,7 +592,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -661,7 +661,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -817,7 +817,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -871,7 +871,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -45,7 +45,7 @@ abstract class Js5Transport {
         if (!SocketJs5Transport.field_r) {
           return false;
         }
-        if (~nj.field_c == param0) {
+        if (~NameCheckHelpers.field_c == param0) {
           return true;
         }
         return false;
@@ -87,7 +87,7 @@ abstract class Js5Transport {
             field_d = false;
           }
           if (var4 == null) {
-            var4 = r.field_b;
+            var4 = OverlayHelpers.field_b;
           }
           var5 = var4.field_V;
           var6 = var5.getPlayerStat((byte) 120, param2);
@@ -112,7 +112,7 @@ abstract class Js5Transport {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ abstract class Js5Transport {
           CachedArchiveProvider.field_t.drawText(param2, -1 + param1, CachedArchiveProvider.field_t.field_C + param0, param3, param3);
           CachedArchiveProvider.field_t.drawText(param2, param1, param0 + CachedArchiveProvider.field_t.field_C, param4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

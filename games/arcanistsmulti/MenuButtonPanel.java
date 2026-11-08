@@ -7,7 +7,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
     static IntrusiveDeque field_O;
     private String field_J;
     static String field_Q;
-    private ed field_G;
+    private MainMenuDialog field_G;
     static String field_R;
     static String field_N;
     static String field_E;
@@ -21,7 +21,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
     private TextButton[] field_M;
     static int field_I;
 
-    MenuButtonPanel(ed param0, BitmapFont param1, String param2) {
+    MenuButtonPanel(MainMenuDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_K = 0;
@@ -32,7 +32,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           var4_int = this.field_J == null ? 0 : this.field_D.paragraphHeight(this.field_J, 260, this.field_D.field_C);
           this.setBounds(22 + var4_int, 0, 288, 0, -51);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           this.field_S[var4_int] = param2;
           int var5 = 64 / ((71 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "me.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "me.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
     }
 
     private final static IndexedSprite createDecodedIndexedSprite(int param0) {
-        IndexedSprite var1 = new IndexedSprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], AccountRegistrationPanel.field_I[param0], ph.field_c);
+        IndexedSprite var1 = new IndexedSprite(QueuedResponse.field_g, QuickChatPhraseCache.field_a, BufferedMessage.field_l[0], SectorCacheStore.field_d[0], ChatLine.field_p[0], ServerMessage.field_i[0], AccountRegistrationPanel.field_I[param0], PriceCaptionGlobals.field_c);
         CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
     }
@@ -157,20 +157,20 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
             }
             var6 = null;
             var7 = null;
-            if (null != ri.field_g.field_q) {
-              bm.field_e = new BufferedRandomAccessFile(ri.field_g.field_q, 5200, 0);
-              ri.field_g.field_q = null;
-              var6 = new SectorCacheStore(255, bm.field_e, new BufferedRandomAccessFile(ri.field_g.field_e, 12000, 0), 2097152);
+            if (null != RasterSetupHelpers.field_g.field_q) {
+              TutorialCaptionGlobals.field_e = new BufferedRandomAccessFile(RasterSetupHelpers.field_g.field_q, 5200, 0);
+              RasterSetupHelpers.field_g.field_q = null;
+              var6 = new SectorCacheStore(255, TutorialCaptionGlobals.field_e, new BufferedRandomAccessFile(RasterSetupHelpers.field_g.field_e, 12000, 0), 2097152);
             }
-            if (bm.field_e != null) {
-              if (bb.field_b == null) {
-                bb.field_b = new BufferedRandomAccessFile[ri.field_g.field_d.length];
+            if (TutorialCaptionGlobals.field_e != null) {
+              if (LoginLoadingHelpers.field_b == null) {
+                LoginLoadingHelpers.field_b = new BufferedRandomAccessFile[RasterSetupHelpers.field_g.field_d.length];
               }
-              if (bb.field_b[param0] == null) {
-                bb.field_b[param0] = new BufferedRandomAccessFile(ri.field_g.field_d[param0], 12000, 0);
-                ri.field_g.field_d[param0] = null;
+              if (LoginLoadingHelpers.field_b[param0] == null) {
+                LoginLoadingHelpers.field_b[param0] = new BufferedRandomAccessFile(RasterSetupHelpers.field_g.field_d[param0], 12000, 0);
+                RasterSetupHelpers.field_g.field_d[param0] = null;
               }
-              var7 = new SectorCacheStore(param0, bm.field_e, bb.field_b[param0], 2097152);
+              var7 = new SectorCacheStore(param0, TutorialCaptionGlobals.field_e, LoginLoadingHelpers.field_b[param0], 2097152);
             }
             var8 = ValidationStatusIcon.field_O.createProvider((SectorCacheStore) (var6), param5, -113, (SectorCacheStore) (var7), param0);
             if (param3) {
@@ -202,7 +202,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           if (param1 != 31027) {
             MenuButtonPanel.createDecodedIndexedSprite(50);
           }
-          if (fc.decodeSpriteSheet(-120, param0, param2, param3)) {
+          if (SpriteDecodeHelpers.decodeSpriteSheet(-120, param0, param2, param3)) {
             stackIn_6_0 = MenuButtonPanel.createDecodedIndexedSprite(0);
             return stackIn_6_0;
           }
@@ -218,7 +218,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

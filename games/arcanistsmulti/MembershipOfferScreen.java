@@ -40,8 +40,8 @@ final class MembershipOfferScreen {
     final static void defineScreenLayout(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           NumericDateInputWidget.field_L[param3] = param1;
-          lm.field_e[param3] = param6;
-          eo.field_b[param3] = param5;
+          GameDetailsRenderer.field_e[param3] = param6;
+          PackedShortHelpers.field_b[param3] = param5;
           if (param2 != 0) {
             BitmapFont var8 = (BitmapFont) null;
             MembershipOfferScreen.splitIntoTwoLines((String[]) null, (String) null, -76, (BitmapFont) null, 57);
@@ -49,7 +49,7 @@ final class MembershipOfferScreen {
           DualLinkDeque.field_f[param3] = param4;
           ValidationHelpWidget.field_U[param3] = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -110,12 +110,12 @@ final class MembershipOfferScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "hf.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "hf.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void readMembershipFlag(int param0) {
-        wh.field_g = false;
+        PaletteSpriteHelpers.field_g = false;
         AlternateUsernameCredentials.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
           MembershipOfferScreen.releaseStatics(true);
@@ -138,7 +138,7 @@ final class MembershipOfferScreen {
         RuntimeException var9 = null;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ec.pushClipState(65280);
+          SpriteFrame.pushClipState(65280);
           for (var9_int = param7; var9_int < param0; var9_int++) {
             SoftwareRasterizer.setClip(param2, var9_int, param1, 1 + var9_int);
             var10 = var9_int * param6.length / param0;
@@ -172,7 +172,7 @@ final class MembershipOfferScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -209,19 +209,19 @@ final class MembershipOfferScreen {
           EmailLoginCredentials.field_o.isGroupAvailableByName("members_expansion_screen", -24417) &&
           EmailLoginCredentials.field_o.isGroupAvailableByName("arialish12", -24417) &&
           EmailLoginCredentials.field_o.isGroupAvailableByName("pump32", -24417) &&
-          bb.field_a != null &&
-          bb.field_a.ensureIndex(-10923) &&
-          bb.field_a.isGroupAvailableByName("arialish12", -24417) &&
-          bb.field_a.isGroupAvailableByName("pump32", -24417)) {
-          SectorCacheStore.field_j = af.loadIndexedSpriteByName("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
-          SocialListEntry.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
-          NameSuggestionsPanel.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
-          fd.field_b = WhirlpoolHasher.loadCoverageFont("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
-          fd.field_f = SocialListEntry.loadSpriteByName("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
-          qf.field_b = SocialListEntry.loadSpriteByName("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
+          LoginLoadingHelpers.field_a != null &&
+          LoginLoadingHelpers.field_a.ensureIndex(-10923) &&
+          LoginLoadingHelpers.field_a.isGroupAvailableByName("arialish12", -24417) &&
+          LoginLoadingHelpers.field_a.isGroupAvailableByName("pump32", -24417)) {
+          SectorCacheStore.field_j = PairedSceneWidget.loadIndexedSpriteByName("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
+          SocialListEntry.field_Ib = BitAndSpriteHelpers.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
+          NameSuggestionsPanel.field_F = LoadingTracker.loadBinaryFont(LoginLoadingHelpers.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
+          CookieHelpers.field_b = WhirlpoolHasher.loadCoverageFont("", LoginLoadingHelpers.field_a, "pump32", -119, EmailLoginCredentials.field_o);
+          CookieHelpers.field_f = SocialListEntry.loadSpriteByName("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
+          MembershipGlobals.field_b = SocialListEntry.loadSpriteByName("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
           KeyboardInputHandler.field_c = IconTextSceneWidget.loadSpritesByName((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
           EmailLoginCredentials.field_o = null;
-          bb.field_a = null;
+          LoginLoadingHelpers.field_a = null;
         }
         this.buildHeaderSprite(16180917);
         if (null == SectorCacheStore.field_j) {
@@ -260,11 +260,11 @@ final class MembershipOfferScreen {
         var2Lifetime3 = 89 % ((-46 - param0) / 43);
         this.field_g.drawTransparent(16, 302);
         NameSuggestionsPanel.field_F.drawParagraph(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        fd.field_f.drawTransparent(30, 330);
+        CookieHelpers.field_f.drawTransparent(30, 330);
         NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        qf.field_b.drawTransparent(508 + (127 - qf.field_b.field_n) / 2, 315);
+        MembershipGlobals.field_b.drawTransparent(508 + (127 - MembershipGlobals.field_b.field_n) / 2, 315);
         if (0 != this.field_d.field_h) {
           if (this.field_d.field_h == 1) {
             KeyboardInputHandler.field_c[1].drawTransparent(508, 387);
@@ -278,7 +278,7 @@ final class MembershipOfferScreen {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        wa var7 = null;
+        PlayerInfoPanel var7 = null;
         CharSequence var8 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -293,22 +293,22 @@ final class MembershipOfferScreen {
         try {
           var8 = (CharSequence) ((Object) param0);
           if (!IntrusiveDeque.isValidDisplayNameText(var8, 0)) {
-            stackIn_2_0 = fn.field_h;
+            stackIn_2_0 = GameListHelpers.field_h;
             return stackIn_2_0;
           }
           if (SpriteState.field_t != 2) {
-            stackIn_5_0 = rk.field_L;
+            stackIn_5_0 = GradientBarButton.field_L;
             return stackIn_5_0;
           }
-          var7 = mf.findFriendByName(-1, param1);
+          var7 = EffectVolumeHelpers.findFriendByName(-1, param1);
           if (var7 == null) {
             stackIn_9_0 = CachedArchiveProvider.formatTemplate(param3 ^ 10068676, new String[]{param1}, BufferedSocket.field_f);
             return stackIn_9_0;
           }
           var7.unlink(true);
           var7.unlinkSecondary((byte) 88);
-          pc.field_b = pc.field_b - 1;
-          var5 = he.field_e;
+          TexturedSpriteHelpers.field_b = TexturedSpriteHelpers.field_b - 1;
+          var5 = StatusMessageHelpers.field_e;
           var5.writeOpcode((byte) -50, param2);
           var5.position = var5.position + 1;
           var6 = var5.position;
@@ -336,7 +336,7 @@ final class MembershipOfferScreen {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class MembershipOfferScreen {
           return;
         }
         try {
-          ko.openSubscribePage(IconButtonPainter.getApplet(124), (byte) -108);
+          ListEntryMenuHelpers.openSubscribePage(IconButtonPainter.getApplet(124), (byte) -108);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -367,7 +367,7 @@ final class MembershipOfferScreen {
         try {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
-            fi.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
+            DecimalCheckHelpers.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
             this.field_u = GameAppletShell.parseDecimal((CharSequence) ((Object) var7), 126);
           } else {
             this.field_u = 2;
@@ -413,7 +413,7 @@ final class MembershipOfferScreen {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -428,34 +428,34 @@ final class MembershipOfferScreen {
         String var6 = null;
         String var7 = null;
         if (this.field_k == null) {
-          if (fd.field_b == null) {
+          if (CookieHelpers.field_b == null) {
             return;
           }
           this.field_k = new Sprite(622, 47);
-          fk.setSpriteRasterTarget(this.field_k, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_k, -23095);
           SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
           var3 = 10068666;
           var15 = BoundedRandomAccessFile.buildPaletteRamp(var3, var2, param0 ^ 16128330);
-          this.drawGradientParagraph(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
+          this.drawGradientParagraph(47, 622, 0, CookieHelpers.field_b, this.field_j, 23146, var15, 0);
           QuickChatCategory.popClipState(-15405);
           this.field_g = new Sprite(475, 24);
-          this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, MenuButtonPainter.field_r, 475);
+          this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, CookieHelpers.field_b, MenuButtonPainter.field_r, 475);
           var13 = BoundedRandomAccessFile.buildPaletteRamp(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
           var5 = new Sprite(121, 122);
-          fk.setSpriteRasterTarget(var5, param0 ^ -16170116);
+          SoundEffectVoice.setSpriteRasterTarget(var5, param0 ^ -16170116);
           SoftwareRasterizer.fillVerticalGradient(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
           SoftwareRasterizer.fillVerticalGradient(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
           var6 = WidgetStyleLayer.field_l;
-          var7 = ph.field_b;
-          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
-          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
-          this.drawScaledCaption(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
+          var7 = PriceCaptionGlobals.field_b;
+          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, -16, CookieHelpers.field_b, var6, var5.field_q);
+          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, 20, CookieHelpers.field_b, var7, var5.field_q);
+          this.drawScaledCaption(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - CookieHelpers.field_b.field_C), CookieHelpers.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
           QuickChatCategory.popClipState(-15405);
           this.field_e = new Sprite(121, 122);
-          fk.setSpriteRasterTarget(this.field_e, param0 - 16204012);
+          SoundEffectVoice.setSpriteRasterTarget(this.field_e, param0 - 16204012);
           var5.drawCenteredRotatedScaledBilinear(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
           QuickChatCategory.popClipState(param0 - 16196322);
           return;
@@ -484,11 +484,11 @@ final class MembershipOfferScreen {
             return;
           }
           var13 = new Sprite(var11_int, var12);
-          fk.setSpriteRasterTarget(var13, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(var13, -23095);
           param0.drawScaled((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
           this.drawGradientParagraph(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
           QuickChatCategory.popClipState(param3 - 15532);
-          fk.setSpriteRasterTarget(param0, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(param0, -23095);
           var13.drawScaledAveraged(param2, param6, param9, param4);
           QuickChatCategory.popClipState(param3 ^ -15444);
           return;
@@ -520,7 +520,7 @@ final class MembershipOfferScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -551,16 +551,16 @@ final class MembershipOfferScreen {
             NameSuggestionsPanel.field_F.drawParagraph(JaggrabDownloader.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
-        if (vf.field_o > this.field_s) {
+        if (RawDataNode.field_o > this.field_s) {
           var7 = this.field_i[this.field_n];
           var2Lifetime1 = var7;
           if (var2Lifetime1 != null) {
-            var3 = (60 + var7.field_g) * this.field_s / vf.field_o;
+            var3 = (60 + var7.field_g) * this.field_s / RawDataNode.field_o;
             var4 = var3 - 30;
             if (!this.field_h) {
-              td.drawShadedMaskRow(-256 * var4 / 30, (byte) -115, (-var4 + var7.field_g) * 256 / 30, var7, 9, 58);
+              ThreeButtonPanel.drawShadedMaskRow(-256 * var4 / 30, (byte) -115, (-var4 + var7.field_g) * 256 / 30, var7, 9, 58);
             } else {
-              td.drawShadedMaskRow(256 * (-var4 + var7.field_g) / 30, (byte) 70, var4 * -256 / 30, var7, 9, 58);
+              ThreeButtonPanel.drawShadedMaskRow(256 * (-var4 + var7.field_g) / 30, (byte) 70, var4 * -256 / 30, var7, 9, 58);
             }
           }
         }
@@ -578,9 +578,9 @@ final class MembershipOfferScreen {
         if (!param1) {
           return -60;
         }
-        while (65536 <= MidiPcmStream.multiplyFixed16(vf.field_q, (byte) 96, this.field_c)) {
+        while (65536 <= MidiPcmStream.multiplyFixed16(RawDataNode.field_q, (byte) 96, this.field_c)) {
           this.field_p = this.field_p + 1;
-          this.field_c = this.field_c - vf.field_q;
+          this.field_c = this.field_c - RawDataNode.field_q;
         }
         var3 = -1;
         if (this.field_i != null) {
@@ -588,12 +588,12 @@ final class MembershipOfferScreen {
         }
         if (-1 != var3) {
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_s < vf.field_m) {
+          if (this.field_s < RawDataNode.field_m) {
             this.field_s = this.field_s + 1;
-            if (this.field_s > vf.field_o) {
+            if (this.field_s > RawDataNode.field_o) {
               if (this.field_i != null &&
                 this.field_i[this.field_l] != null) {
-                if ((!(this.field_s < vf.field_m)) &&
+                if ((!(this.field_s < RawDataNode.field_m)) &&
                   ((this.field_i[(this.field_l + 1) % var3] == null))) {
                   this.field_s = this.field_s - 1;
                 }
@@ -603,13 +603,13 @@ final class MembershipOfferScreen {
                 this.field_s = this.field_s - 1;
               }
             } else {
-              if (this.field_s >= vf.field_m &&
+              if (this.field_s >= RawDataNode.field_m &&
                 this.field_i[(this.field_l + 1) % var3] == null) {
                 this.field_s = this.field_s - 1;
               }
             }
           }
-          if (vf.field_m <= this.field_s) {
+          if (RawDataNode.field_m <= this.field_s) {
             this.field_n = this.field_l;
             if (!this.field_h) {
               this.field_l = this.field_l - 1;
@@ -622,46 +622,46 @@ final class MembershipOfferScreen {
                 this.field_l = this.field_l - var3;
               }
             }
-            this.field_s = this.field_s - vf.field_m;
+            this.field_s = this.field_s - RawDataNode.field_m;
           }
-          if (this.field_s > vf.field_o) {
+          if (this.field_s > RawDataNode.field_o) {
             this.field_h = true;
           }
         }
         if (SocialListEntry.field_Ib != null) {
           var4 = 0;
           if (WrappedTextLayout.field_r != 0 &&
-            ja.field_s > 257 &&
-            290 > ja.field_s) {
-            if (pb.field_h > 9 &&
-              82 > pb.field_h) {
+            ConfirmedNameValidator.field_s > 257 &&
+            290 > ConfirmedNameValidator.field_s) {
+            if (QueuedResponse.field_h > 9 &&
+              82 > QueuedResponse.field_h) {
               var4 = 1;
               this.field_h = false;
-              this.field_s = vf.field_m;
+              this.field_s = RawDataNode.field_m;
             }
-            if (558 < pb.field_h &&
-              pb.field_h < 631) {
+            if (558 < QueuedResponse.field_h &&
+              QueuedResponse.field_h < 631) {
               this.field_h = true;
-              this.field_s = vf.field_m;
+              this.field_s = RawDataNode.field_m;
               var4 = 1;
             }
           }
           if (var4 == 0 &&
-            vf.field_o < this.field_s &&
-            ja.field_s > 257 &&
-            ja.field_s < 290) {
+            RawDataNode.field_o < this.field_s &&
+            ConfirmedNameValidator.field_s > 257 &&
+            ConfirmedNameValidator.field_s < 290) {
             if (EmailLoginCredentials.field_g > 9 &&
               82 > EmailLoginCredentials.field_g) {
-              this.field_s = vf.field_o;
+              this.field_s = RawDataNode.field_o;
             }
             if (558 < EmailLoginCredentials.field_g &&
               EmailLoginCredentials.field_g < 631) {
-              this.field_s = vf.field_o;
+              this.field_s = RawDataNode.field_o;
             }
           }
         }
         if (param0) {
-          this.field_d.setItemBounds(this.hitTestButtons(EmailLoginCredentials.field_g, 112, MenuButtonPanel.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
+          this.field_d.setItemBounds(this.hitTestButtons(EmailLoginCredentials.field_g, 112, MenuButtonPanel.field_I), this.hitTestButtons(QueuedResponse.field_h, 76, ConfirmedNameValidator.field_s), -97);
           var4Lifetime1 = 0;
           if (this.field_d.isActivatePressed(true)) {
             if (this.field_d.field_h == 0) {
@@ -802,7 +802,7 @@ final class MembershipOfferScreen {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ final class MembershipOfferScreen {
         try {
           this.initialize(param2, -126, param1, param0, true, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

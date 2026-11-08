@@ -552,7 +552,7 @@ final class MusicTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        vf var14;
+        RawDataNode var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -624,9 +624,9 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (vf) (this.field_h.get((long)var13, -36));
+                var14 = (RawDataNode) (this.field_h.get((long)var13, -36));
                 if (var14 == null) {
-                  var14 = new vf(new byte[128]);
+                  var14 = new RawDataNode(new byte[128]);
                   this.field_h.put(var14, true, (long)var13);
                 }
                 var14.field_t[var11Lifetime2] = (byte) 1;

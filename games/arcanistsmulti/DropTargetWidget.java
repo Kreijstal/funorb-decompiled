@@ -9,7 +9,7 @@ final class DropTargetWidget extends SingleChildContainer {
     static String field_H;
     static String field_O;
     static String field_I;
-    static aj field_G;
+    static GameOptionType field_G;
     static int field_P;
     static String field_M;
     static int field_N;
@@ -55,7 +55,7 @@ final class DropTargetWidget extends SingleChildContainer {
             MenuInputState.field_i = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "q.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "q.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,13 +64,13 @@ final class DropTargetWidget extends SingleChildContainer {
         Sprite[] var2Lifetime1;
         if (param1 == 0) {
           var2 = new Sprite[9];
-          var2[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
+          var2[4] = GameSelectionHelpers.createFilledSprite(64, param0, MouseWheelHandler.bitXor(param1, 21385));
           return var2;
         }
         SceneWidget var3 = (SceneWidget) null;
         DropTargetWidget.buildAccountScene((SceneWidget) null, false, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null);
         var2Lifetime1 = new Sprite[9];
-        var2Lifetime1[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
+        var2Lifetime1[4] = GameSelectionHelpers.createFilledSprite(64, param0, MouseWheelHandler.bitXor(param1, 21385));
         return var2Lifetime1;
     }
 
@@ -95,38 +95,38 @@ final class DropTargetWidget extends SingleChildContainer {
             return;
           }
           SocketJs5Transport.field_r = param1;
-          if (!wh.field_g) {
+          if (!PaletteSpriteHelpers.field_g) {
             if (AlternateUsernameCredentials.field_p) {
-              var5 = ra.field_l;
+              var5 = DateHelpers.field_l;
             } else {
-              var5 = aj.field_i;
+              var5 = GameOptionType.field_i;
             }
           } else {
-            var5 = rk.field_N;
+            var5 = GradientBarButton.field_N;
           }
           var7 = (String) null;
-          rb.showSavedLayout(ArchiveIndex.field_u, var5, 0, (String) null, 97);
-          lo.field_y = sa.field_Cb;
+          TimedMessage.showSavedLayout(ArchiveIndex.field_u, var5, 0, (String) null, 97);
+          AgeValidator.field_y = ConfirmScene.field_Cb;
           ResizableViewResizeListener.field_a = SingleChildContainer.field_D;
           SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & Battle.field_A.field_J) >> 1));
           SingleChildContainer.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & Battle.field_A.field_eb >> 1);
           SingleChildContainer.field_D.field_zb = ((Battle.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
-          tm.field_d = new SceneWidget(0L, param3);
+          IntensityTableHelpers.field_d = new SceneWidget(0L, param3);
           ValidatedTextWidget.field_U = new SceneWidget(0L, param2);
           SceneScrollbar.field_Jb = new SceneWidget(0L, (SceneWidget) null);
-          ck.field_d = new SceneWidget(0L, param4);
+          MusicVolumeHelpers.field_d = new SceneWidget(0L, param4);
           SingleChildContainer.field_D = new SceneWidget(0L, param0);
           SingleChildContainer.field_D.field_Z = QuickChatCategory.field_x;
-          ck.field_d.addChild(SingleChildContainer.field_D, 41);
-          sa.field_Cb = new SceneWidget(0L, lo.field_y);
-          ck.field_d.addChild(sa.field_Cb, 97);
-          MembershipOfferScreen.field_f = new SceneWidget(0L, Battle.field_A, fe.field_k);
-          ih.field_d = new SceneWidget(0L, Battle.field_A);
-          tm.field_d.addChild(ValidatedTextWidget.field_U, 65);
-          tm.field_d.addChild(SceneScrollbar.field_Jb, 126);
-          SceneScrollbar.field_Jb.addChild(ck.field_d, 115);
+          MusicVolumeHelpers.field_d.addChild(SingleChildContainer.field_D, 41);
+          ConfirmScene.field_Cb = new SceneWidget(0L, AgeValidator.field_y);
+          MusicVolumeHelpers.field_d.addChild(ConfirmScene.field_Cb, 97);
+          MembershipOfferScreen.field_f = new SceneWidget(0L, Battle.field_A, PendingTask.field_k);
+          PointerOriginHelpers.field_d = new SceneWidget(0L, Battle.field_A);
+          IntensityTableHelpers.field_d.addChild(ValidatedTextWidget.field_U, 65);
+          IntensityTableHelpers.field_d.addChild(SceneScrollbar.field_Jb, 126);
+          SceneScrollbar.field_Jb.addChild(MusicVolumeHelpers.field_d, 115);
           SceneScrollbar.field_Jb.addChild(MembershipOfferScreen.field_f, 81);
-          SceneScrollbar.field_Jb.addChild(ih.field_d, 69);
+          SceneScrollbar.field_Jb.addChild(PointerOriginHelpers.field_d, 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class DropTargetWidget extends SingleChildContainer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class DropTargetWidget extends SingleChildContainer {
         try {
           this.field_B = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class DropTargetWidget extends SingleChildContainer {
         field_I = "Options Menu";
         field_O = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_H = "This is the Book of Seas. Sea spells focus on diverse attacks from above and below. You require 5 wands to purchase this spellbook; you currently have ";
-        field_G = new aj(13, 0, 1, 0);
+        field_G = new GameOptionType(13, 0, 1, 0);
         field_M = "<%0> has left the lobby.";
     }
 }

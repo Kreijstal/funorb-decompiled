@@ -42,7 +42,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_e[var2] = TextLayout.longXor(on.longAnd((long)this.field_b[var3 + 7], 255L), TextLayout.longXor(on.longAnd(255L, (long)this.field_b[6 + var3]) << 8, TextLayout.longXor(TextLayout.longXor(on.longAnd(4278190080L, (long)this.field_b[4 + var3] << 24), TextLayout.longXor(on.longAnd(1095216660480L, (long)this.field_b[var3 + 3] << 32), TextLayout.longXor(TextLayout.longXor((long)this.field_b[var3] << 56, on.longAnd((long)this.field_b[var3 + 1], 255L) << 48), on.longAnd((long)this.field_b[var3 + 2], 255L) << 40))), on.longAnd(255L, (long)this.field_b[5 + var3]) << 16)));
+          this.field_e[var2] = TextLayout.longXor(LoginMessageTable.longAnd((long)this.field_b[var3 + 7], 255L), TextLayout.longXor(LoginMessageTable.longAnd(255L, (long)this.field_b[6 + var3]) << 8, TextLayout.longXor(TextLayout.longXor(LoginMessageTable.longAnd(4278190080L, (long)this.field_b[4 + var3] << 24), TextLayout.longXor(LoginMessageTable.longAnd(1095216660480L, (long)this.field_b[var3 + 3] << 32), TextLayout.longXor(TextLayout.longXor((long)this.field_b[var3] << 56, LoginMessageTable.longAnd((long)this.field_b[var3 + 1], 255L) << 48), LoginMessageTable.longAnd((long)this.field_b[var3 + 2], 255L) << 40))), LoginMessageTable.longAnd(255L, (long)this.field_b[5 + var3]) << 16)));
           var2++;
           var3 += 8;
         }
@@ -59,7 +59,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2], mb.field_L[var4][NameValidator.bitAnd(255, (int)(this.field_c[NameValidator.bitAnd(7, -var4 + var3Lifetime2)] >>> var5))]);
+              this.field_j[var3Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2], DropdownItemList.field_L[var4][NameValidator.bitAnd(255, (int)(this.field_c[NameValidator.bitAnd(7, -var4 + var3Lifetime2)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -67,14 +67,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime2Lifetime1 = 0; 8 > var3Lifetime2Lifetime1; var3Lifetime2Lifetime1++) {
             this.field_c[var3Lifetime2Lifetime1] = this.field_j[var3Lifetime2Lifetime1];
           }
-          this.field_c[0] = TextLayout.longXor(this.field_c[0], mb.field_V[var2Lifetime2]);
+          this.field_c[0] = TextLayout.longXor(this.field_c[0], DropdownItemList.field_V[var2Lifetime2]);
           for (var3Lifetime2Lifetime2 = 0; var3Lifetime2Lifetime2 < 8; var3Lifetime2Lifetime2++) {
             this.field_j[var3Lifetime2Lifetime2] = this.field_c[var3Lifetime2Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime2Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2Lifetime2], mb.field_L[var7][NameValidator.bitAnd((int)(this.field_f[NameValidator.bitAnd(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime2Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2Lifetime2], DropdownItemList.field_L[var7][NameValidator.bitAnd((int)(this.field_f[NameValidator.bitAnd(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -122,7 +122,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], var8 >>> var7);
+              this.field_b[this.field_n] = (byte)BitAndSpriteHelpers.bitOr((int) this.field_b[this.field_n], var8 >>> var7);
               this.field_n = this.field_n + 1;
               this.field_h = this.field_h + (-var7 + 8);
               if (512 == this.field_h) {
@@ -140,7 +140,7 @@ final class WhirlpoolHasher {
           }
           if (param0 > 0L) {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], var8Lifetime1 >>> var7);
+            this.field_b[this.field_n] = (byte)BitAndSpriteHelpers.bitOr((int) this.field_b[this.field_n], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -169,7 +169,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], 128 >>> NameValidator.bitAnd(this.field_h, 7));
+          this.field_b[this.field_n] = (byte)BitAndSpriteHelpers.bitOr((int) this.field_b[this.field_n], 128 >>> NameValidator.bitAnd(this.field_h, 7));
           this.field_n = this.field_n + 1;
           if (32 < this.field_n) {
             while (this.field_n < 64) {
@@ -234,11 +234,11 @@ final class WhirlpoolHasher {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static int getChatLineColour(jg param0, byte param1) {
+    final static int getChatLineColour(ChatLine param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -268,7 +268,7 @@ final class WhirlpoolHasher {
             if (4 == param0.field_m) {
               var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
             } else {
-              if (param0.field_h == qf.field_a) {
+              if (param0.field_h == MembershipGlobals.field_a) {
                 var3Lifetime1 = ResizableViewResizeListener.field_c[param0.field_m];
               } else {
                 var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
@@ -287,7 +287,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -367,27 +367,27 @@ final class WhirlpoolHasher {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void resetTutorialUnit(BattleUnit param0, boolean param1) {
-        jg var3 = null;
+        ChatLine var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          qn.field_ob.trySelectSpell(0, 4, 0, rk.field_O.field_y / 2, 0, rk.field_O.field_y / 2, 0, -60);
+          MessageDialog.field_ob.trySelectSpell(0, 4, 0, GradientBarButton.field_O.field_y / 2, 0, GradientBarButton.field_O.field_y / 2, 0, -60);
           if (StatefulTextPainter.field_p != 6) {
             param0.setHealth((byte) -92, 250);
           } else {
             field_k = 6;
           }
           if (!param1) {
-            var3 = (jg) null;
-            WhirlpoolHasher.getChatLineColour((jg) null, (byte) -20);
+            var3 = (ChatLine) null;
+            WhirlpoolHasher.getChatLineColour((ChatLine) null, (byte) -20);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -400,7 +400,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class WhirlpoolHasher {
         if (param0 != 1283220456) {
           WhirlpoolHasher.getLoginMethods(95);
         }
-        return new LoginMethod[]{DiskCacheRequest.field_y, of.field_n, UiTheme.field_f};
+        return new LoginMethod[]{DiskCacheRequest.field_y, GradientBarPainter.field_n, UiTheme.field_f};
     }
 
     static {

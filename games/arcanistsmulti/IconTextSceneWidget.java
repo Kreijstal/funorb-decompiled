@@ -10,14 +10,14 @@ final class IconTextSceneWidget extends SceneWidget {
     static SceneWidget field_Db;
     static SceneWidget field_Fb;
     static java.math.BigInteger field_Jb;
-    static hb field_Gb;
+    static SceneListPanel field_Gb;
 
     final static void setViewSize(int param0, int param1, int param2) {
         if (param1 != 19129) {
           return;
         }
         SoundCache.field_c = param0;
-        mf.field_c = param2;
+        EffectVolumeHelpers.field_c = param2;
         if (ClientException.field_b != null) {
           ClientException.field_b.recentrePanels(-118, param0, param2);
         }
@@ -71,7 +71,7 @@ final class IconTextSceneWidget extends SceneWidget {
           }
           var4_int = param1.getGroupProgressByName(param3, param0 ^ 65);
           var5 = param1.getFileId(param2, (byte) 29, var4_int);
-          stackIn_3_0 = om.loadSprites(var5, var4_int, (byte) -123, param1);
+          stackIn_3_0 = CapsuleBar.loadSprites(var5, var4_int, (byte) -123, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ final class IconTextSceneWidget extends SceneWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class IconTextSceneWidget extends SceneWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

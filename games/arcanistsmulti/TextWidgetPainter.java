@@ -41,7 +41,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -84,14 +84,14 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (var9 >= um.field_a.length) {
+              if (var9 >= SessionCookieHelpers.field_a.length) {
                 if (var8_int == 0) {
                   return;
                 }
                 ByteStorage.field_a = true;
                 return;
               }
-              var19 = um.field_a[var9];
+              var19 = SessionCookieHelpers.field_a[var9];
               var18 = var19;
               var10 = var18;
               var11 = 0;
@@ -99,7 +99,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
-                    param6 != vf.field_l) {
+                    param6 != RawDataNode.field_l) {
                     break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -118,7 +118,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var13Lifetime1 = var19[var12];
                 var14 = var10[var12 + 1];
                 if (var13Lifetime1 == -1) {
-                  if (var14 != ao.field_h[param0]) {
+                  if (var14 != LobbyLayoutHelpers.field_h[param0]) {
                     break scanLoop1;
                   }
                 } else {
@@ -129,7 +129,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                     if (param6 <= var13Lifetime1) {
                       break scanLoop1;
                     }
-                    if ((qa.field_l[var13Lifetime1] & 255) != var14) {
+                    if ((NoticeHelpers.field_l[var13Lifetime1] & 255) != var14) {
                       break scanLoop1;
                     }
                   }
@@ -155,7 +155,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           var9 = 1;
           if (param2) {
             if (param6 == -1) {
-              for (var10_int = 0; ao.field_h.length > var10_int; var10_int++) {
+              for (var10_int = 0; LobbyLayoutHelpers.field_h.length > var10_int; var10_int++) {
                 if ((MidiPcmStream.field_E[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
                   var9 = 0;
                   decompiledFrameCompleted0 = false;
@@ -167,7 +167,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0)) {
               for (var10_intLifetime2 = 0; var10_intLifetime2 < var16.length - 1; var10_intLifetime2++) {
-                if (0 == (ng.field_D[(param7 + var10_intLifetime2) / 8] & 1 << (var10_intLifetime2 + param7 & 7))) {
+                if (0 == (TermsNoticePanel.field_D[(param7 + var10_intLifetime2) / 8] & 1 << (var10_intLifetime2 + param7 & 7))) {
                   continue;
                 }
                 var9 = 0;
@@ -181,7 +181,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           while (true) {
             stackIn_26_0 = ~var11;
             if (-1 == param6) {
-              stackIn_27_1 = ao.field_h.length;
+              stackIn_27_1 = LobbyLayoutHelpers.field_h.length;
             } else {
               stackIn_27_1 = var17.length - 1;
             }
@@ -191,7 +191,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               }
               for (var11 = 0; var11 < var17.length - 1; var11++) {
                 if (param6 != -1) {
-                  qa.field_l[param6] = (byte)var11;
+                  NoticeHelpers.field_l[param6] = (byte)var11;
                 } else {
                   param0 = var11;
                 }
@@ -205,10 +205,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (param6 == -1) {
               param0 = var11;
             } else {
-              qa.field_l[param6] = (byte)var11;
+              NoticeHelpers.field_l[param6] = (byte)var11;
             }
             if (param6 == -1 &&
-              ao.field_h.length == 1) {
+              LobbyLayoutHelpers.field_h.length == 1) {
               var12 = 1;
             } else {
               var13_ref_nl = var8[var11 + 1];
@@ -225,7 +225,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var12 = stackIn_51_0;
               } else {
                 if (-1 == param6) {
-                  stackIn_42_0 = (ao.field_h[var11] != DirectByteStorage.field_f.field_dc) ? 0 : 1;
+                  stackIn_42_0 = (LobbyLayoutHelpers.field_h[var11] != DirectByteStorage.field_f.field_dc) ? 0 : 1;
                 } else {
                   stackIn_42_0 = ((DirectByteStorage.field_f.field_Wb[param6] & 255) != var11) ? 0 : 1;
                 }
@@ -252,7 +252,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           param0.field_m = this.field_m;
           param0.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.lineForCharacter((byte) -67, var8);
             var11 = var18.lineForCharacter((byte) 77, var9);
-            da.clipToRectangle(param2 + param1.field_n + param1.field_v, param1.field_j + param0 + param1.field_k, 123, param2 + param1.field_n, param1.field_j + param0);
+            MusicAndClipHelpers.clipToRectangle(param2 + param1.field_n + param1.field_v, param1.field_j + param0 + param1.field_k, 123, param2 + param1.field_n, param1.field_j + param0);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_f[var12];
               if (~var12 == ~var10) {
@@ -353,7 +353,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -406,12 +406,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var10 = this.textOriginX(param2, 9293, var9, param4);
             var11 = this.getTextY(param1, -13372, param4) + Math.max(0, var8.field_g);
             var12 = this.getTextY(param1, -13372, param4) + Math.min(this.getAvailableHeight(param4, false), Math.min(var8.field_e, var14.field_f.length > 1 + var7 ? var13.field_f[1 + var7].field_g : var8.field_e));
-            da.clipToRectangle(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
+            MusicAndClipHelpers.clipToRectangle(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
             MusicCrossfadeStream.field_n.drawLine(var10, var10, var12, this.field_o, var11, (byte) 102);
             QuickChatCategory.popClipState(-15405);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -433,7 +433,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             this.field_c = 110;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           this.paintTextRun(0, param3 + 23123, this.field_k, 0, param2, param0, param1, this.field_c);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -501,7 +501,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -530,7 +530,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -634,7 +634,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -652,7 +652,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          da.clipToRectangle(param4.field_v + (param4.field_n + param6), param5 - (-param4.field_j - param4.field_k), 121, param6 + param4.field_n, param4.field_j + param5);
+          MusicAndClipHelpers.clipToRectangle(param4.field_v + (param4.field_n + param6), param5 - (-param4.field_j - param4.field_k), 121, param6 + param4.field_n, param4.field_j + param5);
           if (param1 != 23034) {
             field_b = (String) null;
           }
@@ -703,7 +703,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -737,7 +737,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -767,7 +767,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -812,7 +812,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -844,7 +844,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -893,7 +893,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           this.field_m = param1;
           this.field_k = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

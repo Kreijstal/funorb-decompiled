@@ -4,7 +4,7 @@
 final class ChatInputWidget extends SceneWidget {
     long field_Fb;
     private SceneWidget field_Eb;
-    private af field_Kb;
+    private PairedSceneWidget field_Kb;
     static String field_Bb;
     private SceneWidget field_Gb;
     private SceneWidget field_Ib;
@@ -20,10 +20,10 @@ final class ChatInputWidget extends SceneWidget {
     private SceneWidget[] field_Ob;
 
     final static boolean processOverlayInput(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        if (pn.hasOpenOverlay((byte) -123)) {
-          mc.updateQuickChatInput(param3, param5, -113, param4);
-          if (null != eo.field_c &&
-            eo.field_c.processInput(param4, param2, param6, param3, param0 ^ 12815)) {
+        if (LoginStackHelpers.hasOpenOverlay((byte) -123)) {
+          QuickChatInputHelpers.updateQuickChatInput(param3, param5, -113, param4);
+          if (null != PackedShortHelpers.field_c &&
+            PackedShortHelpers.field_c.processInput(param4, param2, param6, param3, param0 ^ 12815)) {
             param4 = false;
             IntrusiveDequeCursor.closePlayerMenu(false);
           }
@@ -46,7 +46,7 @@ final class ChatInputWidget extends SceneWidget {
         return stackIn_6_0;
     }
 
-    ChatInputWidget(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, af param9, SceneWidget param10, String param11, long param12) {
+    ChatInputWidget(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, PairedSceneWidget param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -57,14 +57,14 @@ final class ChatInputWidget extends SceneWidget {
         int var20 = 0;
         int var21 = 0;
         Object stackIn_7_0;
-        af stackIn_7_1;
-        af stackIn_7_2;
+        PairedSceneWidget stackIn_7_1;
+        PairedSceneWidget stackIn_7_2;
         long stackIn_7_3;
-        af stackIn_7_4;
+        PairedSceneWidget stackIn_7_4;
         Object stackIn_8_0;
         Object stackIn_9_0;
-        af stackIn_9_1;
-        af stackIn_9_2;
+        PairedSceneWidget stackIn_9_1;
+        PairedSceneWidget stackIn_9_2;
         String stackIn_9_5;
         SceneWidget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -94,8 +94,8 @@ final class ChatInputWidget extends SceneWidget {
         SceneWidget[] var28 = null;
         Object stackIn_7_0Lifetime1;
         Object stackIn_9_0Lifetime1;
-        af stackIn_9_1Lifetime1;
-        af stackIn_9_2Lifetime1;
+        PairedSceneWidget stackIn_9_1Lifetime1;
+        PairedSceneWidget stackIn_9_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -116,7 +116,7 @@ final class ChatInputWidget extends SceneWidget {
         this.field_Hb = -2;
         try {
           this.field_Fb = param12;
-          this.field_Nb = new SceneWidget(0L, param6, qj.field_e.toUpperCase());
+          this.field_Nb = new SceneWidget(0L, param6, TimeAndInputHelpers.field_e.toUpperCase());
           this.field_Nb.field_X = 1;
           this.addChild(this.field_Nb, 81);
           this.field_Gb = new SceneWidget(0L, param7);
@@ -124,11 +124,11 @@ final class ChatInputWidget extends SceneWidget {
           this.field_Pb = new SceneWidget(0L, (SceneWidget) null);
           this.addChild(this.field_Pb, 89);
           if (param11 != null) {
-            this.field_Eb = new SceneWidget(0L, param8, da.field_e);
+            this.field_Eb = new SceneWidget(0L, param8, MusicAndClipHelpers.field_e);
             this.field_Eb.field_ob = 11184810;
             this.field_Eb.field_X = 1;
             this.field_Pb.addChild(this.field_Eb, 104);
-            this.field_Ib = new SceneWidget(0L, param8, rf.field_q);
+            this.field_Ib = new SceneWidget(0L, param8, HighscoreEntry.field_q);
             this.field_Ib.field_X = 1;
             this.field_Ib.field_ob = 11184810;
             this.field_Pb.addChild(this.field_Ib, 61);
@@ -137,17 +137,17 @@ final class ChatInputWidget extends SceneWidget {
             this.field_Pb.addChild(this.field_Mb, 95);
             this.field_Mb.field_L = "|";
             if (!(5 > BevelTextPainter.field_r) ||
-              !(qf.field_d < 2)) {
+              !(MembershipGlobals.field_d < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
-                stackIn_7_4 = (af) (param9);
+                stackIn_7_4 = (PairedSceneWidget) (param9);
                 if (BevelTextPainter.field_r < 7) {
                   stackIn_8_0 = this;
                   stackIn_7_0Lifetime1 = stackIn_8_0;
-                  if (qf.field_d < 2) {
+                  if (MembershipGlobals.field_d < 2) {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
@@ -158,9 +158,9 @@ final class ChatInputWidget extends SceneWidget {
                 stackIn_9_0Lifetime1 = this;
                 stackIn_9_1Lifetime1 = null;
                 stackIn_9_2Lifetime1 = null;
-                stackIn_9_5 = no.field_wb;
+                stackIn_9_5 = SocialDialog.field_wb;
               }
-              this.field_Kb = new af(stackIn_7_3, stackIn_7_4, stackIn_9_5);
+              this.field_Kb = new PairedSceneWidget(stackIn_7_3, stackIn_7_4, stackIn_9_5);
               this.field_Pb.addChild(this.field_Kb, 31);
             }
             var28 = new SceneWidget[3];
@@ -171,8 +171,8 @@ final class ChatInputWidget extends SceneWidget {
             this.field_Pb.addChild(var28[1], 107);
             var28[2] = new SceneWidget(0L, (SceneWidget) null);
             this.field_Pb.addChild(var28[2], 60);
-            this.field_Ob = new SceneWidget[aj.field_g];
-            for (var16 = 0; aj.field_g > var16; var16++) {
+            this.field_Ob = new SceneWidget[GameOptionType.field_g];
+            for (var16 = 0; GameOptionType.field_g > var16; var16++) {
               if (ModalPanelStack.field_K[var16] != null) {
                 this.field_Ob[var16] = new SceneWidget(0L, param10, ModalPanelStack.field_K[var16]);
                 this.field_Ob[var16].field_X = 0;
@@ -187,7 +187,7 @@ final class ChatInputWidget extends SceneWidget {
               discarded$0 = this.field_Db.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_Z.textWidth(ri.field_e);
+            var17 = param6.field_Z.textWidth(RasterSetupHelpers.field_e);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -195,11 +195,11 @@ final class ChatInputWidget extends SceneWidget {
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_Z.textWidth(ed.field_Db);
+            var17Lifetime3 = param6.field_Z.textWidth(MainMenuDialog.field_Db);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; aj.field_g > var17Lifetime4; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; GameOptionType.field_g > var17Lifetime4; var17Lifetime4++) {
               if (this.field_Ob[var17Lifetime4] != null) {
                 var18 = this.field_Ob[var17Lifetime4].getContentWidth(-25921);
                 if (var18 > var16Lifetime2) {
@@ -213,7 +213,7 @@ final class ChatInputWidget extends SceneWidget {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.addLabel(param6, var18Lifetime3, var28[0], ri.field_e, var16Lifetime2, (byte) 126);
+            var18Lifetime3 = this.addLabel(param6, var18Lifetime3, var28[0], RasterSetupHelpers.field_e, var16Lifetime2, (byte) 126);
             var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 77, this.field_Ob[6]);
             var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 15, this.field_Ob[9]);
             var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 103, this.field_Ob[5]);
@@ -234,7 +234,7 @@ final class ChatInputWidget extends SceneWidget {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.addLabel(param6, var18Lifetime5, var28[2], ed.field_Db, var16Lifetime2, (byte) 127);
+            var18Lifetime5 = this.addLabel(param6, var18Lifetime5, var28[2], MainMenuDialog.field_Db, var16Lifetime2, (byte) 127);
             var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], -118, this.field_Ob[13]);
             var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], 94, this.field_Ob[21]);
             var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], -126, this.field_Ob[11]);
@@ -271,15 +271,15 @@ final class ChatInputWidget extends SceneWidget {
             var28[2].setBounds(var16Lifetime2, 39 + 2 * var16Lifetime2, var21, var17Lifetime5, (byte) -120);
             var22 = var21;
             this.field_Pb.setBounds(var19 + 26, 0, 24, 10 + (var22 + var17Lifetime5), (byte) -120);
-            this.field_Pb.field_v = of.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
+            this.field_Pb.field_v = GradientBarPainter.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 34 + var22 + var17Lifetime5;
-            var25 = ih.clampToScreenX(param0, var23, param2, 246);
+            var25 = PointerOriginHelpers.clampToScreenX(param0, var23, param2, 246);
             var26 = LoginMethod.clampToScreenY(10, param3, var24, param1);
             this.setBounds(var23, var25, var26, var24, (byte) -120);
             return;
           }
-          this.field_Eb = new SceneWidget(0L, param8, mn.field_x);
+          this.field_Eb = new SceneWidget(0L, param8, MatchingFieldValidator.field_x);
           this.field_Eb.field_ob = 11184810;
           this.field_Eb.field_X = 1;
           this.field_Pb.addChild(this.field_Eb, 109);
@@ -289,10 +289,10 @@ final class ChatInputWidget extends SceneWidget {
           this.field_Eb.setBounds(var15_int, 13, var16Lifetime1, ImageProducerRasterBuffer.field_r * var17Lifetime1, (byte) -120);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ImageProducerRasterBuffer.field_r;
           this.field_Pb.setBounds(13 + var15_int + 13, 0, 24, 10 + var16Lifetime1, (byte) -120);
-          this.field_Pb.field_v = of.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
+          this.field_Pb.field_v = GradientBarPainter.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = ih.clampToScreenX(param0, var18Lifetime1, param2, 246);
+          var20Lifetime1 = PointerOriginHelpers.clampToScreenX(param0, var18Lifetime1, param2, 246);
           var21Lifetime1 = LoginMethod.clampToScreenY(10, param3, var19Lifetime1, param1);
           this.setBounds(var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1, (byte) -120);
           return;
@@ -342,7 +342,7 @@ final class ChatInputWidget extends SceneWidget {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ final class ChatInputWidget extends SceneWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -428,11 +428,11 @@ final class ChatInputWidget extends SceneWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = fb.replaceCharacter(false, '_', param0, "");
+          param0 = StringReplaceHelpers.replaceCharacter(false, '_', param0, "");
           if (param2 != 0) {
             field_Jb = (String) null;
           }
-          var3 = pn.reverseString(param2 ^ 8671, param0);
+          var3 = LoginStackHelpers.reverseString(param2 ^ 8671, param0);
           stackIn_7_0 = (param1.indexOf(param0) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,7 +451,7 @@ final class ChatInputWidget extends SceneWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -498,13 +498,13 @@ final class ChatInputWidget extends SceneWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final int processInput(boolean param0, byte param1) {
         int var3 = 0;
-        af stackIn_8_0 = null;
+        PairedSceneWidget stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         SceneWidget stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
@@ -521,7 +521,7 @@ final class ChatInputWidget extends SceneWidget {
             stackIn_8_0.field_ab = stackIn_9_1;
           }
           this.field_Mb.field_x = this.field_x - this.field_Mb.field_T;
-          for (var3 = 0; var3 < aj.field_g; var3++) {
+          for (var3 = 0; var3 < GameOptionType.field_g; var3++) {
             if (null != this.field_Ob[var3]) {
               stackIn_17_0 = this.field_Ob[var3];
               stackIn_18_1 = !(0 >= this.field_Db.length());

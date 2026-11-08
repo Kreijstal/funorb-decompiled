@@ -54,7 +54,7 @@ final class HotspotRegion extends IntrusiveNode {
               var4 = IsaacCipher.field_d;
             }
             if (var3 == 3) {
-              var4 = hi.field_b;
+              var4 = ViewControllerHelpers.field_b;
             }
             var5 = -1;
             for (var6 = 0; var6 < var4.length; var6++) {
@@ -85,7 +85,7 @@ final class HotspotRegion extends IntrusiveNode {
           for (var3Lifetime2 = 0; 16 > var3Lifetime2; var3Lifetime2++) {
             incrementValue$1 = var2;
             var2++;
-            var1[incrementValue$1] = (byte)b.field_f[var3Lifetime2];
+            var1[incrementValue$1] = (byte)ThrowableFormatHelpers.field_f[var3Lifetime2];
           }
           if (!MenuScreen.getSessionFlag((byte) 112)) {
             DualLinkNode.createPendingRequest(6, -25866, var10);
@@ -94,16 +94,16 @@ final class HotspotRegion extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "vl.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "vl.C(" + param0 + ')');
         }
     }
 
     final static void addQuickChatMenu(byte param0, SceneTabbedPanel param1) {
         try {
           int var2_int = 72 % ((param0 - 77) / 38);
-          co.field_f.addChild(param1, 9);
+          BattleResetHelpers.field_f.addChild(param1, 9);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,15 +167,15 @@ final class HotspotRegion extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
     final static void updateFadeLevel(int param0) {
         if (!UiTheme.field_n) {
-          lo.field_q = (1600 + lo.field_q * 120) / 128;
+          AgeValidator.field_q = (1600 + AgeValidator.field_q * 120) / 128;
         } else {
-          lo.field_q = 120 * lo.field_q / 128;
+          AgeValidator.field_q = 120 * AgeValidator.field_q / 128;
         }
         if (param0 != 128) {
           SceneTabbedPanel var2 = (SceneTabbedPanel) null;

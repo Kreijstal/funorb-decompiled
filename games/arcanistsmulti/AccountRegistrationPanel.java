@@ -39,10 +39,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             return true;
           }
           var4 = var3.getValidationState(-83);
-          if (var4 == ra.field_k) {
+          if (var4 == DateHelpers.field_k) {
             return false;
           }
-          if (var4 == da.field_f) {
+          if (var4 == MusicAndClipHelpers.field_f) {
             return false;
           }
           if (SocialListEntry.field_Wb != var4) {
@@ -59,7 +59,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           var4 = param0;
           ((EditableTextWidget) ((Object) var3)).setText(false, var4, false);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ln.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ln.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -192,21 +192,21 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_H = new ValidatedTextWidget("", (UiListener) null, 3);
         int var1 = 1;
         this.field_F = new Checkbox("", (UiListener) null, var1 != 0);
-        this.field_C = new TextButton(wm.field_G, (UiListener) null);
+        this.field_C = new TextButton(PaddedContainer.field_G, (UiListener) null);
         this.field_O = new TextButton(OptionsDialog.field_rb, (UiListener) null);
         this.field_K.field_q = ValidationState.field_b;
         this.field_N.field_q = ArchiveIndex.field_s;
         this.field_D.field_q = SceneScrollPane.field_Fb;
-        this.field_P.field_q = ao.field_c;
-        this.field_E.field_q = nk.field_j;
+        this.field_P.field_q = LobbyLayoutHelpers.field_c;
+        this.field_E.field_q = ListRequest.field_j;
         this.field_H.field_q = MenuScreen.field_k;
-        this.field_F.field_q = ce.field_l;
+        this.field_F.field_q = GameSelectionHelpers.field_l;
         this.field_K.setValidator(new NameValidator(this.field_K), (byte) 18);
-        this.field_N.setValidator(new ki(this.field_N), (byte) -127);
-        this.field_D.setValidator(new ja(this.field_D, this.field_N), (byte) -128);
-        this.field_P.setValidator(new ui(this.field_P, this.field_K, this.field_N), (byte) -127);
-        this.field_E.setValidator(new mn(this.field_E, this.field_P), (byte) -128);
-        this.field_H.setValidator(new lo(this.field_H), (byte) 39);
+        this.field_N.setValidator(new EmailValidator(this.field_N), (byte) -127);
+        this.field_D.setValidator(new ConfirmedNameValidator(this.field_D, this.field_N), (byte) -128);
+        this.field_P.setValidator(new PasswordValidator(this.field_P, this.field_K, this.field_N), (byte) -127);
+        this.field_E.setValidator(new MatchingFieldValidator(this.field_E, this.field_P), (byte) -128);
+        this.field_H.setValidator(new AgeValidator(this.field_H), (byte) 39);
         this.field_C.field_B = false;
         this.field_C.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
         this.field_O.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -215,22 +215,22 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_D.field_r = (WidgetPainter) ((Object) dupTemp$0);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$0);
         this.field_H.field_r = (WidgetPainter) ((Object) new BevelTextPainter(10000536));
-        this.field_F.field_r = (WidgetPainter) ((Object) new ii());
+        this.field_F.field_r = (WidgetPainter) ((Object) new IconHighlightPainter());
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_P.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = CachedArchiveProvider.formatTemplate(-23, new String[]{this.getLinkOpenMarkup((byte) 34), this.getLinkCloseMarkup(false)}, fn.field_d);
+        String var2 = CachedArchiveProvider.formatTemplate(-23, new String[]{this.getLinkOpenMarkup((byte) 34), this.getLinkCloseMarkup(false)}, GameListHelpers.field_d);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_N, Checkbox.field_K, var3, 170, 109);
         var3 = var3 + (5 + this.addFieldWithHelp("", this.field_D, 25, 20, 170, SceneScrollPane.field_Gb, var3));
         var3 = var3 + this.addLabeledField(this.field_P, ValidationState.field_a, var3, 170, 126);
         var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_E, WhirlpoolHasher.field_p, 99, 170, BattleScreen.field_A));
-        var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));
+        var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_K, ButtonMenuDialog.field_kb, -67, 170, CredentialKind.field_h));
         var3 = var3 + this.addFieldWithStatusIcon(ProxySocketConnector.field_n, this.field_H, (byte) -71, 170, var3);
         LabeledField var4 = new LabeledField(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, WidgetStyleLayer.field_e, 11579568, AudioService.field_c);
         this.addChild(-114, var4);
         var3 = var3 + var4.field_k;
-        TextWidgetPainter var5 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_c.field_C, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(RootInputHelpers.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, RootInputHelpers.field_c.field_C, -1, 2147483647, true);
         this.field_S = new TextHotspotWidget(var2, var5);
         this.field_S.field_q = "";
         this.field_S.setHotspotTooltip(0, 0, MenuButtonPainter.field_s);
@@ -283,7 +283,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           var3 = Integer.parseInt(this.field_H.field_g);
         } catch (NumberFormatException numberFormatException) {
         }
-        return bb.showAccountDialog(this.field_P.field_g, this.field_K.field_g, var3, this, -30001, this.field_N.field_g, this.field_F.field_z);
+        return LoginLoadingHelpers.showAccountDialog(this.field_P.field_g, this.field_K.field_g, var3, this, -30001, this.field_N.field_g, this.field_F.field_z);
     }
 
     final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
@@ -334,7 +334,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           super.updatePointer(param0, param1, param2, param3);
           this.field_C.field_B = this.areAllFieldsValid(0);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledField(20, param6, 120 + param4, param2, param1, false, 120, 3, ia.field_c, 16777215, param5);
+          var10 = new LabeledField(20, param6, 120 + param4, param2, param1, false, 120, 3, RootInputHelpers.field_c, 16777215, param5);
           this.addChild(-75, var10);
           var9 = new ValidationHelpWidget(((ValidationProviderSource) ((Object) param1)).getValidationProvider(0), param0, 126, param6 + var10.field_k, param4 + 50, param3);
           var9.field_o = (UiListener) (this);
@@ -436,7 +436,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new LabeledField(20, param4, param3 + 120, 25, param1, false, 120, 3, ia.field_c, 16777215, param0);
+          var8 = new LabeledField(20, param4, param3 + 120, 25, param1, false, 120, 3, RootInputHelpers.field_c, 16777215, param0);
           if (param2 != -71) {
             stackIn_2_0 = 93;
             return stackIn_2_0;
@@ -487,7 +487,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (param4 <= 97) {
             discarded$1 = this.getLinkOpenMarkup((byte) -39);
           }
-          var6 = new LabeledField(20, param2, param3 + 120, 25, param0, false, 120, 3, ia.field_c, 16777215, param1);
+          var6 = new LabeledField(20, param2, param3 + 120, 25, param0, false, 120, 3, RootInputHelpers.field_c, 16777215, param1);
           this.addChild(-66, var6);
           stackIn_3_0 = var6.field_k;
           return stackIn_3_0;
@@ -526,7 +526,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

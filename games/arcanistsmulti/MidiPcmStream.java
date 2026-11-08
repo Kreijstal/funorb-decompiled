@@ -210,7 +210,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -387,7 +387,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var6 = null;
         Object var7 = null;
         int var8 = 0;
-        vf var9 = null;
+        RawDataNode var9 = null;
         int var10 = 0;
         MusicPatch var11 = null;
         int var12 = 0;
@@ -400,7 +400,7 @@ final class MidiPcmStream extends PcmStream {
           if (param0 > 0) {
             var7 = new int[]{param0};
           }
-          var9 = (vf) (param3.field_h.first(10));
+          var9 = (RawDataNode) (param3.field_h.first(10));
           while (var9 != null) {
             var10 = (int)var9.key;
             var11 = (MusicPatch) (this.field_F.get((long)var10, -102));
@@ -416,7 +416,7 @@ final class MidiPcmStream extends PcmStream {
               !var11.prepareSamples(-99, param1, (int[]) (var7), var9.field_t)) {
               var6_int = 0;
             }
-            var9 = (vf) (param3.field_h.next(-62));
+            var9 = (RawDataNode) (param3.field_h.next(-62));
           }
           if (var6_int != 0) {
             param3.releasePatchUsage();
@@ -445,7 +445,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var21 = null;
         java.applet.Applet var22 = null;
         try {
-          IsaacCipher.configureLobbyLayout((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new ec(param12), param20, param1, new ec(param17), param11, param4, param16, param5, new ec(param19), param0);
+          IsaacCipher.configureLobbyLayout((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new SpriteFrame(param12), param20, param1, new SpriteFrame(param17), param11, param4, param16, param5, new SpriteFrame(param19), param0);
           if (param15 >= -99) {
             var22 = (java.applet.Applet) null;
             MidiPcmStream.logoutAndReload(125, (java.applet.Applet) null);
@@ -558,7 +558,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -671,12 +671,12 @@ final class MidiPcmStream extends PcmStream {
             if (var6Lifetime1 < 64) {
               this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -2);
             } else {
-              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 1);
+              this.field_Q[var4Lifetime1] = BitAndSpriteHelpers.bitOr(this.field_Q[var4Lifetime1], 1);
             }
           }
           if (var5Lifetime1 == 65) {
             if (var6Lifetime1 >= 64) {
-              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 2);
+              this.field_Q[var4Lifetime1] = BitAndSpriteHelpers.bitOr(this.field_Q[var4Lifetime1], 2);
             } else {
               this.allNotesOff((byte) -62, var4Lifetime1);
               this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -3);
@@ -726,7 +726,7 @@ final class MidiPcmStream extends PcmStream {
               this.releaseSostenutoNotes(var4Lifetime1, param0 - 27298);
               this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -5);
             } else {
-              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 4);
+              this.field_Q[var4Lifetime1] = BitAndSpriteHelpers.bitOr(this.field_Q[var4Lifetime1], 4);
             }
           }
           if (var5Lifetime1 == 17) {
@@ -781,7 +781,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -849,7 +849,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.startTrack(-61, param1, param2, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -993,7 +993,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -1074,7 +1074,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1165,10 +1165,10 @@ final class MidiPcmStream extends PcmStream {
             java.applet.Applet var3 = (java.applet.Applet) null;
             MidiPcmStream.logoutAndReload(87, (java.applet.Applet) null);
           }
-          um.setSessionCookie("", param1, 13680);
-          mc.reloadPage(param0 ^ 30451, param1);
+          SessionCookieHelpers.setSessionCookie("", param1, 13680);
+          QuickChatInputHelpers.reloadPage(param0 ^ 30451, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1208,7 +1208,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_K = this.field_N.field_d[this.field_U];
           this.field_t = this.field_N.tickTime(this.field_K);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gh.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -1252,7 +1252,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1294,7 +1294,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1307,7 +1307,7 @@ final class MidiPcmStream extends PcmStream {
           int var2_int = 66 / ((param0 + 27) / 62);
           TextLayout.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gh.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

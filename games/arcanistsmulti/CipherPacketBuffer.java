@@ -10,16 +10,16 @@ final class CipherPacketBuffer extends PacketBuffer {
     private IsaacCipher opcodeCipher;
     static String field_s;
 
-    final static ho createMessage(int param0, int param1, String param2) {
-        ho var3 = null;
+    final static ServerMessage createMessage(int param0, int param1, String param2) {
+        ServerMessage var3 = null;
         RuntimeException var3_ref = null;
-        ho stackIn_3_0 = null;
+        ServerMessage stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ho(false);
+          var3 = new ServerMessage(false);
           var3.field_e = param2;
           var3.field_a = param1;
           if (param0 != 0) {
@@ -37,7 +37,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           int var3_int = -46 / ((obfuscationGuard + 16) / 57);
           this.opcodeCipher = new IsaacCipher(seed);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ab.C(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ab.C(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

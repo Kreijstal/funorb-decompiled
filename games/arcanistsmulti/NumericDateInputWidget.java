@@ -18,7 +18,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     static int field_K;
     static String field_P;
 
-    final static jg readChatMessage(boolean param0, int param1) {
+    final static ChatLine readChatMessage(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_24_0 = null;
@@ -38,48 +38,48 @@ final class NumericDateInputWidget extends DateInputWidget {
         stackIn_3_0 = ((128 & var3) != 0);
         ValidationHelpWidget.field_V = stackIn_3_0;
         ScrollContainer.field_W = var3 & 127;
-        db.field_e = var8.readUnsignedByte((byte) 44);
+        Crc32Helpers.field_e = var8.readUnsignedByte((byte) 44);
         FadingModalPanel.field_P = var8.readLong(-943038560);
         if (ScrollContainer.field_W != 2) {
           Scrollbar.field_M = 0;
-          i.field_f = 0;
+          ChatPanel.field_f = 0;
         } else {
-          i.field_f = var8.readUnsignedShort(-98);
+          ChatPanel.field_f = var8.readUnsignedShort(-98);
           Scrollbar.field_M = var8.readUnsignedMedium(11609);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -105) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        vf.field_j = var8.readString(-1);
+        RawDataNode.field_j = var8.readString(-1);
         if (var4 == 0) {
-          ff.field_a = vf.field_j;
+          FrameAndQuickChatHelpers.field_a = RawDataNode.field_j;
         } else {
-          ff.field_a = var8.readString(-1);
+          FrameAndQuickChatHelpers.field_a = var8.readString(-1);
         }
         if (ScrollContainer.field_W == 1) {
-          mc.field_c = var8.readUnsignedShort(-98);
+          QuickChatInputHelpers.field_c = var8.readUnsignedShort(-98);
           field_N = var8.readString(-1);
         } else {
           if (ScrollContainer.field_W == 4) {
-            mc.field_c = var8.readUnsignedShort(-98);
+            QuickChatInputHelpers.field_c = var8.readUnsignedShort(-98);
             field_N = var8.readString(-1);
           } else {
             field_N = null;
-            mc.field_c = 0;
+            QuickChatInputHelpers.field_c = 0;
           }
         }
         if (param1 < 36) {
-          return (jg) null;
+          return (ChatLine) null;
         }
         if (!param0) {
-          fe.field_p = WhirlpoolHasher.readHuffmanString(var8, 80, -79);
+          PendingTask.field_p = WhirlpoolHasher.readHuffmanString(var8, 80, -79);
           ImageProducerRasterBuffer.field_s = null;
-          return new jg(param0);
+          return new ChatLine(param0);
         }
         var5 = var8.readUnsignedShort(-98);
         try {
-          var9 = th.field_d.getDefinition(var5, (byte) -119);
-          fe.field_p = var9.getText(true);
-          if (ff.field_a.equals(ah.field_b)) {
+          var9 = NameTable.field_d.getDefinition(var5, (byte) -119);
+          PendingTask.field_p = var9.getText(true);
+          if (FrameAndQuickChatHelpers.field_a.equals(AccountFlowHelpers.field_b)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_u;
@@ -89,11 +89,11 @@ final class NumericDateInputWidget extends DateInputWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           DelegatingCanvas.reportError((Throwable) ((Object) var6), "CC1", (byte) 20);
-          fe.field_p = null;
+          PendingTask.field_p = null;
           ImageProducerRasterBuffer.field_s = null;
-          return new jg(param0);
+          return new ChatLine(param0);
         }
-        return new jg(param0);
+        return new ChatLine(param0);
     }
 
     final String getTooltip(boolean param0) {
@@ -125,7 +125,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           int var3_int = -113 / ((63 - param1) / 47);
           this.field_J.field_o = (UiListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     }
 
     final static void initializeLoginStackQuiet(boolean param0) {
-        pn.initializeLoginStack(-47);
+        LoginStackHelpers.initializeLoginStack(-47);
         if (!param0) {
           NumericDateInputWidget.readChatMessage(false, -104);
         }
@@ -210,7 +210,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         try {
           WidgetStyleLayer.field_e.drawCentered(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         try {
           this.setBounds(param5, param3, param4, param2, -58);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           }
           this.addChild(-103, this.field_J);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

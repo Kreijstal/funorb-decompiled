@@ -40,7 +40,7 @@ final class BattleScreen {
     private int field_R;
     private int field_Q;
     static String field_N;
-    private ge field_f;
+    private BattleAction field_f;
     boolean field_i;
     private boolean field_F;
     private boolean field_k;
@@ -76,10 +76,10 @@ final class BattleScreen {
           ClientException.field_b.processPointerInput(ValidationStatusIcon.field_S, SceneScrollPane.field_Jb, true, (byte) -100);
           ClientException.field_b.updatePanels(4);
           while (BevelTextPainter.pollKeyEvent(false)) {
-            ClientException.field_b.processKey(ed.field_Bb, (byte) -89, IntrusiveDeque.field_d);
+            ClientException.field_b.processKey(MainMenuDialog.field_Bb, (byte) -89, IntrusiveDeque.field_d);
           }
-          if (qg.field_c != -1) {
-            var1_int = qg.field_c;
+          if (ClientRuntimeException.field_c != -1) {
+            var1_int = ClientRuntimeException.field_c;
             DebouncedValidator.setPendingMessageId(-1, (byte) 30);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
@@ -92,7 +92,7 @@ final class BattleScreen {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
-          if (hb.field_Gb == sk.field_a) {
+          if (SceneListPanel.field_Gb == TooltipHelpers.field_a) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
@@ -100,7 +100,7 @@ final class BattleScreen {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (SceneScrollbar.field_Gb == sk.field_a) {
+          if (SceneScrollbar.field_Gb == TooltipHelpers.field_a) {
             stackIn_26_0 = 2;
             return stackIn_26_0;
           }
@@ -109,7 +109,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "le.KB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "le.KB(" + param0 + ')');
         }
     }
 
@@ -145,20 +145,20 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "le.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "le.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void bufferIncomingMessage(int param0, int param1, PacketBuffer param2, boolean param3) {
         RuntimeException runtimeException = null;
-        hl var5 = null;
+        BufferedMessage var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new hl();
+          var5 = new BufferedMessage();
           var5.field_k = param1;
           var6 = new byte[param0];
           param2.readBytes((byte) 123, 0, var6, param0);
@@ -179,7 +179,7 @@ final class BattleScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.BB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.BB(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "le.U(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "le.U(" + param0 + ')');
         }
     }
 
@@ -258,34 +258,34 @@ final class BattleScreen {
           var5_int = IntKeyLookup.field_g.field_nb;
           var6 = var5_int / 2 + this.field_V.field_H - param0;
           for (var7 = 0; var7 < EmailLoginCredentials.field_f; var7++) {
-            var8 = (int)Math.abs(18.0 * Math.cos(3.141592653589793 * (double)(param3 + (var7 + ge.field_r * 4)) / 64.0));
-            if (ge.field_r < 64) {
-              var8 = var8 * (ge.field_r - 32) / 32;
+            var8 = (int)Math.abs(18.0 * Math.cos(3.141592653589793 * (double)(param3 + (var7 + BattleAction.field_r * 4)) / 64.0));
+            if (BattleAction.field_r < 64) {
+              var8 = var8 * (BattleAction.field_r - 32) / 32;
             } else {
-              var8 = var8 * (96 - ge.field_r) / 32;
+              var8 = var8 * (96 - BattleAction.field_r) / 32;
             }
             if (var8 > 0) {
               var8 = -var8;
             }
             var8 += 12;
-            var8 = (int)((double)var8 + (32.0 + 8.0 * Math.sin((double)ge.field_r * 3.141592653589793 / 64.0)));
+            var8 = (int)((double)var8 + (32.0 + 8.0 * Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0)));
             SoftwareRasterizer.drawVerticalLineAlpha(var7, -var8 + var6, var8, (65792 | param1) >> 1, 128);
           }
           if (param2 != 12224) {
             return;
           }
           for (var7Lifetime1 = 0; EmailLoginCredentials.field_f > var7Lifetime1; var7Lifetime1++) {
-            var8Lifetime1 = (int)Math.abs(20.0 * Math.sin(3.141592653589793 * (double)(param3 + (4 * ge.field_r + var7Lifetime1)) / 64.0));
-            if (64 <= ge.field_r) {
-              var8Lifetime1 = var8Lifetime1 * (-ge.field_r + 96) / 32;
+            var8Lifetime1 = (int)Math.abs(20.0 * Math.sin(3.141592653589793 * (double)(param3 + (4 * BattleAction.field_r + var7Lifetime1)) / 64.0));
+            if (64 <= BattleAction.field_r) {
+              var8Lifetime1 = var8Lifetime1 * (-BattleAction.field_r + 96) / 32;
             } else {
-              var8Lifetime1 = (-32 + ge.field_r) * var8Lifetime1 / 32;
+              var8Lifetime1 = (-32 + BattleAction.field_r) * var8Lifetime1 / 32;
             }
             if (var8Lifetime1 > 0) {
               var8Lifetime1 = -var8Lifetime1;
             }
             var8Lifetime1 += 8;
-            var8Lifetime1 = (int)((double)var8Lifetime1 + (Math.sin((double)ge.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
+            var8Lifetime1 = (int)((double)var8Lifetime1 + (Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
             SoftwareRasterizer.setClip(0, var6 - var8Lifetime1, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
             SoftwareRasterizer.fillVerticalGradient(var7Lifetime1, var6 - 64, 1, 128, (123361 | param1) >> 1, 0);
           }
@@ -297,7 +297,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "le.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "le.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.NA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.NA(" + param0 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.DB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.DB(" + param0 + ')');
         }
     }
 
@@ -388,14 +388,14 @@ final class BattleScreen {
           if (var16 != null &&
             0 == (1 << param2 & (this.field_a | this.field_J)) &&
             var16.field_I != null && (param2 == 0 ||
-            !qg.hasMenuPage(param3 - 99) ||
+            !ClientRuntimeException.hasMenuPage(param3 - 99) ||
             StatefulTextPainter.field_p == 6)) {
             var6 = var16.getStatusTimer(-126);
             if (0 > var6) {
               var6 = 0;
             }
             var7 = var16.getDisplayedHealth(-20357) + var6;
-            var8 = nj.field_n[param2];
+            var8 = NameCheckHelpers.field_n[param2];
             if (var16.getType(-22625) == 27) {
               var8 = 13413102;
             }
@@ -470,8 +470,8 @@ final class BattleScreen {
             SoftwareRasterizer.setClip(3 + var12, 3 + (-8 + (this.field_l[param2] / 2 + param0)), -6 + var11_intLifetime1 + (3 + var12), 20 + (-8 + param0) + this.field_l[param2] / 2 - 6);
             var11_intLifetime1 = var11_intLifetime1 + (this.field_j + param2 * 5) * this.field_l[param2] / 17 / 2;
             while (0 < var11_intLifetime1) {
-              var11_intLifetime1 = var11_intLifetime1 - g.field_a.field_n;
-              g.field_a.drawAdditive(var11_intLifetime1 + 3 + var12, -12 + (param0 + this.field_l[param2] / 2 - 5), 64);
+              var11_intLifetime1 = var11_intLifetime1 - SupportPageHelpers.field_a.field_n;
+              SupportPageHelpers.field_a.drawAdditive(var11_intLifetime1 + 3 + var12, -12 + (param0 + this.field_l[param2] / 2 - 5), 64);
             }
             SoftwareRasterizer.resetClip();
             var11_intLifetime2 = this.field_v[param2] + 17;
@@ -491,15 +491,15 @@ final class BattleScreen {
                 var13 = Integer.toString(var9);
               }
               if (this.field_l[param2] >= 34 &&
-                fb.field_a != null &&
-                null != fb.field_a[2]) {
-                fb.field_a[2].draw(1 + var12, param0);
+                StringReplaceHelpers.field_a != null &&
+                null != StringReplaceHelpers.field_a[2]) {
+                StringReplaceHelpers.field_a[2].draw(1 + var12, param0);
               }
               SpellProjectile.field_B.drawText(var13, var12, -6 + (param0 + this.field_l[param2] - 8 - (-4 - SpellProjectile.field_B.field_C / 2)), 0, 0);
               SpellProjectile.field_B.drawText(var13, var12 - 1, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + param0) + (this.field_l[param2] - 8 + 4), 0, 0);
               SpellProjectile.field_B.drawText(var13, var12, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + (this.field_l[param2] + param0 - 8)) + 4, var8, -1);
             }
-            var11 = qo.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
+            var11 = NameHelpers.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
             SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 25, SpellProjectile.field_B.field_C / 2 + (-1 + param0 + this.field_l[param2] / 2), 8421504 ^ (var8 | 8421504), 0);
             SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 26, -1 + (-1 + this.field_l[param2] / 2 + param0 + SpellProjectile.field_B.field_C / 2), 8421504 ^ (8421504 | var8), 0);
             SpellProjectile.field_B.drawCentered(var11, param1 / 2 + 12 + 26, -1 + (param0 + this.field_l[param2] / 2 + SpellProjectile.field_B.field_C / 2), var8, -1);
@@ -509,7 +509,7 @@ final class BattleScreen {
               if (param2 == 1) {
                 var8Lifetime1 = 16777215;
                 param0 -= 20;
-                var11Lifetime1 = sb.field_c;
+                var11Lifetime1 = AudioShutdownHelpers.field_c;
                 SpellProjectile.field_B.drawCentered(var11Lifetime1, -1 + param1 / 2 + 36, SpellProjectile.field_B.field_C / 2 + param0 + 8, 8421504 ^ (var8Lifetime1 | 8421504), 0);
                 SpellProjectile.field_B.drawCentered(var11Lifetime1, 12 + param1 / 2 + 24, -1 + param0 - (-8 - SpellProjectile.field_B.field_C / 2), (var8Lifetime1 | 8421504) ^ 8421504, 0);
                 SpellProjectile.field_B.drawCentered(var11Lifetime1, param1 / 2 + 36, 8 + param0 + SpellProjectile.field_B.field_C / 2, var8Lifetime1, -1);
@@ -525,7 +525,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "le.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "le.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -537,7 +537,7 @@ final class BattleScreen {
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9_int = 0;
-        qa var9 = null;
+        NoticeHelpers var9 = null;
         int var10 = 0;
         Object var11_ref = null;
         int var11 = 0;
@@ -561,12 +561,12 @@ final class BattleScreen {
         int var12Lifetime2;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ce.field_m.makeRasterTarget(true);
+          GameSelectionHelpers.field_m.makeRasterTarget(true);
           SoftwareRasterizer.setClip(param4, param2, param4 + param6, param2 + param1);
           if (this.field_k &&
             !this.field_V.isTurnActive(4)) {
             SoftwareRasterizer.fillRectangle(param4, param2, param6, param1, 0);
-            var8 = rb.field_l + " - " + this.field_L + "%";
+            var8 = TimedMessage.field_l + " - " + this.field_L + "%";
             CachedArchiveProvider.field_t.drawParagraph(var8, param4, param2, param6, param1, 16777215, -1, 1, 1, 0);
             return;
           }
@@ -631,7 +631,7 @@ final class BattleScreen {
           if (param3 &&
             !this.field_V.isTurnActive(param5 ^ 100) &&
             this.field_V.getCurrentPlayer(false) >= 0) {
-            var9_intLifetime1 = nj.field_n[this.field_V.getCurrentPlayer(false)];
+            var9_intLifetime1 = NameCheckHelpers.field_n[this.field_V.getCurrentPlayer(false)];
             if (this.field_y &&
               !this.field_V.isAnimating(true) &&
               this.field_z > 0 && (StatefulTextPainter.field_p == -1 ||
@@ -661,16 +661,16 @@ final class BattleScreen {
                   var11_refLifetime1Lifetime1 = ((StringBuilder) (Object) stackIn_73_0).append(stackIn_74_1).append(var12).toString();
                 }
                 var12Lifetime2 = EmailLoginCredentials.field_f / 2;
-                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
+                SpellProjectile.field_B.drawCentered(BattleResetHelpers.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
                 SoftwareRasterizer.blurRectangle(5, 5, var12Lifetime2 - 48, 0, 96, 44);
                 SoftwareRasterizer.drawRectangle(-48 + var12Lifetime2, 0, 96, 44, 0);
                 SoftwareRasterizer.drawRectangle(-1 + var12Lifetime2 - 48, 0, 98, 45, 11768360);
                 SoftwareRasterizer.drawRectangle(-50 + var12Lifetime2, 0, 100, 46, 8547138);
                 SoftwareRasterizer.drawRectangle(var12Lifetime2 - 51, 0, 102, 47, 0);
-                SpellProjectile.field_B.drawCentered(co.field_i, -1 + var12Lifetime2, 16, 0, 0);
-                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 15, 0, 0);
-                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
+                SpellProjectile.field_B.drawCentered(BattleResetHelpers.field_i, -1 + var12Lifetime2, 16, 0, 0);
+                SpellProjectile.field_B.drawCentered(BattleResetHelpers.field_i, var12Lifetime2, 15, 0, 0);
+                SpellProjectile.field_B.drawCentered(BattleResetHelpers.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 if (var11_refLifetime1Lifetime1 != null) {
                   CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), -1 + var12Lifetime2, 40, 0, 0);
                   CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 39, 0, 0);
@@ -717,7 +717,7 @@ final class BattleScreen {
                   } else {
                     if ((this.field_b & 1 << var10Lifetime1) != 0) {
                       if (this.field_i) {
-                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-69, new String[]{var15_ref}, pb.field_i);
+                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-69, new String[]{var15_ref}, QueuedResponse.field_i);
                       } else {
                         var11_refLifetime2 = CachedArchiveProvider.formatTemplate(param5 - 127, new String[]{var15_ref}, CachedArchiveProvider.field_y);
                       }
@@ -731,7 +731,7 @@ final class BattleScreen {
                         if ((this.field_D & 1 << var10Lifetime1) == 0) {
                           break regionExit1;
                         }
-                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-19, new String[]{var15_ref}, ph.field_d);
+                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-19, new String[]{var15_ref}, PriceCaptionGlobals.field_d);
                       }
                     }
                   }
@@ -750,7 +750,7 @@ final class BattleScreen {
           }
           if (!this.field_V.isTurnActive(4)) {
           }
-          var9 = (qa) (b.field_a.first(12623));
+          var9 = (NoticeHelpers) (ThrowableFormatHelpers.field_a.first(12623));
           if (var9 != null) {
             var11 = DirectByteStorage.field_h;
             if (var11 >= 80) {
@@ -763,7 +763,7 @@ final class BattleScreen {
               var10Lifetime2 = var11 / 2 - 32;
             }
             IntrusiveNodeHashTable.field_a[var9.field_n].drawScaled(8, var10Lifetime2, 32, 32);
-            CachedArchiveProvider.field_t.drawText(rb.field_n[var9.field_n], 48, CachedArchiveProvider.field_t.field_C + var10Lifetime2, 0, -1);
+            CachedArchiveProvider.field_t.drawText(TimedMessage.field_n[var9.field_n], 48, CachedArchiveProvider.field_t.field_C + var10Lifetime2, 0, -1);
           }
           if (SpriteState.field_p) {
             if (null != this.field_V) {
@@ -773,12 +773,12 @@ final class BattleScreen {
               CachedArchiveProvider.field_t.drawText("Backup c-sum" + this.field_w.countUnitsWithDebugOverlay(4), 64, 96, 65535, 0);
             }
           }
-          sb.drawTimedMessage(param5 ^ 47);
+          AudioShutdownHelpers.drawTimedMessage(param5 ^ 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var8_ref), "le.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var8_ref), "le.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -817,13 +817,13 @@ final class BattleScreen {
             }
             WhirlpoolHasher.field_k = WhirlpoolHasher.field_k + 1;
           }
-          if (td.hasMembership(true) &&
-            ri.field_b[82] &&
-            ri.field_b[86] &&
+          if (ThreeButtonPanel.hasMembership(true) &&
+            RasterSetupHelpers.field_b[82] &&
+            RasterSetupHelpers.field_b[86] &&
             IntrusiveDeque.field_d == 12) {
-            he.field_e.writeOpcode((byte) -59, 67);
-            he.field_e.writeInt(0, (byte) -101);
-            we.sendKeepAlive(0, (byte) 113);
+            StatusMessageHelpers.field_e.writeOpcode((byte) -59, 67);
+            StatusMessageHelpers.field_e.writeInt(0, (byte) -101);
+            KeepAliveHelpers.sendKeepAlive(0, (byte) 113);
           }
           if ((!this.field_V.isTurnFinished((byte) 89) ||
             this.field_V.isWaitingForInput(39)) &&
@@ -844,7 +844,7 @@ final class BattleScreen {
           if (this.field_ab) {
             stackIn_32_0 = var2_int;
             if (!SocketJs5Transport.field_r &&
-              !pn.hasOpenOverlay((byte) 119) &&
+              !LoginStackHelpers.hasOpenOverlay((byte) 119) &&
               this.field_V.getCurrentPlayer(false) == this.field_I) {
               stackIn_33_1 = 1;
             } else {
@@ -941,7 +941,7 @@ final class BattleScreen {
           }
           this.field_O = false;
           if (!this.field_ab &&
-            qg.hasMenuPage(-79)) {
+            ClientRuntimeException.hasMenuPage(-79)) {
             MeshModel.handleZoomKeys((byte) 86);
           }
           if (13 != IntrusiveDeque.field_d) {
@@ -958,12 +958,12 @@ final class BattleScreen {
             }
           }
           var4Lifetime1 = var3Lifetime1;
-          gj.switchScreen(false, true, var4Lifetime1, mn.field_r);
+          ScreenSwitchHelpers.switchScreen(false, true, var4Lifetime1, MatchingFieldValidator.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.J(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.J(" + param0 + ')');
         }
     }
 
@@ -977,7 +977,7 @@ final class BattleScreen {
         boolean dupTemp$6 = false;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
-        hl var2_ref = null;
+        BufferedMessage var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -987,7 +987,7 @@ final class BattleScreen {
         var2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_ref = (hl) (this.field_cb.first(12623));
+          var2_ref = (BufferedMessage) (this.field_cb.first(12623));
           if (param0 <= 26) {
             this.field_v = (int[]) null;
           }
@@ -1055,13 +1055,13 @@ final class BattleScreen {
               return;
             }
             var2_ref.unlink(true);
-            var2_ref = (hl) (this.field_cb.next(0));
+            var2_ref = (BufferedMessage) (this.field_cb.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref2), "le.I(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref2), "le.I(" + param0 + ')');
         }
     }
 
@@ -1074,7 +1074,7 @@ final class BattleScreen {
           field_N = null;
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.EB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.EB(" + param0 + ')');
         }
     }
 
@@ -1164,22 +1164,22 @@ final class BattleScreen {
                   IntrusiveNodeHashTable.field_f = null;
                 }
               } else {
-                IntrusiveNodeHashTable.field_f = ck.field_g;
+                IntrusiveNodeHashTable.field_f = MusicVolumeHelpers.field_g;
                 if (var5_ref_ml.getDisplayedHealth(-20357) <= var6) {
-                  IntrusiveNodeHashTable.field_f = bc.field_a;
+                  IntrusiveNodeHashTable.field_f = OptionToggleHelpers.field_a;
                 }
                 IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-44, new String[]{Integer.toString(var6)}, IntrusiveNodeHashTable.field_f);
               }
               ArrayWidgetContainer.field_A = 270;
             }
           }
-          if (qg.hasMenuPage(-114)) {
+          if (ClientRuntimeException.hasMenuPage(-114)) {
             DelegatingCanvas.updateBattleTurn(-3, var4 != 0);
           }
           if (this.field_H) {
             this.drawSpellbookPanel(8);
           }
-          ce.field_m.makeRasterTarget(true);
+          GameSelectionHelpers.field_m.makeRasterTarget(true);
           var5 = 0;
           var5 += 6;
           if (this.field_g) {
@@ -1200,17 +1200,17 @@ final class BattleScreen {
           if (param0 > -112) {
             this.drawUnitHighlights(-71, -18, -117);
           }
-          if (mf.field_g == -4) {
-            mf.field_g = -1;
+          if (EffectVolumeHelpers.field_g == -4) {
+            EffectVolumeHelpers.field_g = -1;
           }
           if (this.field_I >= 0 && (StatefulTextPainter.field_p == -1 ||
             StatefulTextPainter.field_p == 7) && (10 != this.field_V.field_x[this.field_I] &&
             this.field_I == this.field_bb)) {
             var6 = 30;
-            var7Lifetime1 = -150 + (var3_int + ii.getHoldTimer((byte) -117));
+            var7Lifetime1 = -150 + (var3_int + IconHighlightPainter.getHoldTimer((byte) -117));
             var8 = 0;
             if ((-var7Lifetime1 + MenuButtonPanel.field_I + 24) * (-var7Lifetime1 + (MenuButtonPanel.field_I + 24)) + (-var6 + EmailLoginCredentials.field_g) * (-var6 + EmailLoginCredentials.field_g) < 1296) {
-              mf.field_g = -4;
+              EffectVolumeHelpers.field_g = -4;
               var8 = 1;
               var9 = 100;
               if (4 == this.field_V.field_x[this.field_I]) {
@@ -1222,29 +1222,29 @@ final class BattleScreen {
               }
               if (this.field_V.field_X[this.field_I] < var9) {
                 if (ConditionalTextValue.field_f) {
-                  IntrusiveNodeHashTable.field_f = vm.field_d[this.field_V.field_x[this.field_I] + 128 + 12];
+                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[this.field_V.field_x[this.field_I] + 128 + 12];
                   if (this.field_V.field_x[this.field_I] == 8) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[156];
+                    IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[156];
                   }
                   if (9 == this.field_V.field_x[this.field_I]) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[157];
+                    IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[157];
                   }
                 }
                 if (this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true).getDisplayedHealth(-20357) <= 20) {
                   var8 = 0;
                   if (ConditionalTextValue.field_f) {
-                    IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_f + hm.field_b;
+                    IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_f + Cp1252Helpers.field_b;
                   }
                 }
               } else {
                 var8 = 0;
                 if (ConditionalTextValue.field_f) {
-                  IntrusiveNodeHashTable.field_f = vm.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + LoadingTracker.field_i;
+                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + LoadingTracker.field_i;
                   if (8 == this.field_V.field_x[this.field_I]) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[156] + LoadingTracker.field_i;
+                    IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[156] + LoadingTracker.field_i;
                   }
                   if (this.field_V.field_x[this.field_I] == 9) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[157] + LoadingTracker.field_i;
+                    IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[157] + LoadingTracker.field_i;
                   }
                 }
               }
@@ -1301,7 +1301,7 @@ final class BattleScreen {
               SpellProjectile.field_B.drawCentered(var12, var6, var7Lifetime1, 16777215, -1);
             }
           }
-          sb.drawSideBar(param1, -58);
+          AudioShutdownHelpers.drawSideBar(param1, -58);
           if (null == IntrusiveNodeHashTable.field_f) {
             this.drawTurnBar(-25343);
           }
@@ -1366,12 +1366,12 @@ final class BattleScreen {
                 return;
               }
               SoftwareRasterizer.fillCircleAlpha(var6, var7Lifetime2, 16, 16777215, 128);
-              mf.field_g = -3;
+              EffectVolumeHelpers.field_g = -3;
               var10Lifetime1 = WhirlpoolHasher.field_a;
-              if (!ao.field_d) {
+              if (!LobbyLayoutHelpers.field_d) {
                 if (1 >= UiTheme.field_t) {
                   if (UiTheme.field_t != 1) {
-                    var10Lifetime1 = bm.field_b;
+                    var10Lifetime1 = TutorialCaptionGlobals.field_b;
                   } else {
                     var10Lifetime1 = ConnectionState.field_a;
                   }
@@ -1390,7 +1390,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "le.TA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "le.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1429,7 +1429,7 @@ final class BattleScreen {
             for (var5Lifetime1 = 0; this.field_V.getPlayerCount(0) > var5Lifetime1; var5Lifetime1 += 2) {
               param0 = this.drawPlayerSummary(param0, var4, var5Lifetime1, -4);
             }
-            var5_ref_String = sb.field_c;
+            var5_ref_String = AudioShutdownHelpers.field_c;
             var6 = 16777215;
             SpellProjectile.field_B.drawCentered(var5_ref_String, 23 + (12 + var4 / 2), SpellProjectile.field_B.field_C / 2 + (8 + param0), 8421504 ^ (8421504 | var6), 0);
             SpellProjectile.field_B.drawCentered(var5_ref_String, 12 + (var4 / 2 + 24), -1 + (SpellProjectile.field_B.field_C / 2 + param0 + 8), 8421504 ^ (var6 | 8421504), 0);
@@ -1444,7 +1444,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "le.WA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "le.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1490,7 +1490,7 @@ final class BattleScreen {
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (null != this.field_V.getTerrainMask((byte) 69)) {
-            stackIn_7_0 = nj.field_n;
+            stackIn_7_0 = NameCheckHelpers.field_n;
             if (0 > this.field_I) {
               stackIn_8_1 = 6;
             } else {
@@ -1533,7 +1533,7 @@ final class BattleScreen {
                   var9.getType(-22625) != 12) {
                   var2_intLifetime1 = 0;
                   var10 = var9.getTeam(false);
-                  var2_intLifetime1 = nj.field_n[var10];
+                  var2_intLifetime1 = NameCheckHelpers.field_n[var10];
                   var11_int = EmailLoginCredentials.field_f + (-var3 - var6) + (var9.getX(-99) >> this.field_K);
                   var12_int = var5 - (var4 + var6 - (var9.getY((byte) 110) - (var9.getSize(param0 - 8331) >> 1) >> this.field_K));
                   SoftwareRasterizer.fillCircle(var11_int, var12_int, 14 + (var9.getSize(-8323) >> 1) >> this.field_K, (var2_intLifetime1 | 8421504) ^ 8421504);
@@ -1554,7 +1554,7 @@ final class BattleScreen {
               if (this.field_K != 2) {
                 SoftwareRasterizer.resetClip();
               } else {
-                i.resetFadeTimer(90);
+                ChatPanel.resetFadeTimer(90);
                 DropdownList.field_N = -1;
                 EmptyPainter.field_b = null;
                 var10Lifetime1 = this.field_V.getPlayerCount(param0 ^ 8);
@@ -1592,7 +1592,7 @@ final class BattleScreen {
                     null == var9Lifetime1Lifetime1.getLinkedUnit(24501)) {
                     var2_intLifetime1Lifetime1 = 0;
                     var14Lifetime1 = var9Lifetime1Lifetime1.getOwnerId(17571);
-                    var2_intLifetime1Lifetime1 = nj.field_n[var14Lifetime1];
+                    var2_intLifetime1Lifetime1 = NameCheckHelpers.field_n[var14Lifetime1];
                     var15_intLifetime1 = var9Lifetime1Lifetime1.getY((byte) -39);
                     var16 = var9Lifetime1Lifetime1.getSize(-8323);
                     SoftwareRasterizer.drawVerticalLine(var22[var14Lifetime1], var21[var14Lifetime1] - 1, -var6 + (var5 - var4) + ((var15_intLifetime1 - var16 >> this.field_K) - var21[var14Lifetime1]), var2_intLifetime1Lifetime1);
@@ -1608,7 +1608,7 @@ final class BattleScreen {
                     var9Lifetime1Lifetime2.getLinkedUnit(param0 + 24493) == null) {
                     var2_intLifetime1Lifetime1 = 0;
                     var14Lifetime2 = var9Lifetime1Lifetime2.getOwnerId(17571);
-                    var2_intLifetime1Lifetime1 = nj.field_n[var14Lifetime2];
+                    var2_intLifetime1Lifetime1 = NameCheckHelpers.field_n[var14Lifetime2];
                     var15 = this.field_V.field_k[var14Lifetime2];
                     SpellProjectile.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2] - 1, (var2_intLifetime1Lifetime1 | 8421504) ^ 8421504, 0);
                     SpellProjectile.field_B.drawCentered(var15, -1 + var22[var14Lifetime2], var21[var14Lifetime2], 8421504 ^ (8421504 | var2_intLifetime1Lifetime1), 0);
@@ -1627,7 +1627,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.O(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.O(" + param0 + ')');
         }
     }
 
@@ -1636,16 +1636,16 @@ final class BattleScreen {
         RuntimeException var2 = null;
         try {
           if (TextLayout.field_c != null) {
-            fk.drawTooltipBox(0, TextLayout.field_c);
+            SoundEffectVoice.drawTooltipBox(0, TextLayout.field_c);
           }
-          if (eo.field_c != null) {
-            eo.field_c.draw(param0 ^ -22718, param1);
+          if (PackedShortHelpers.field_c != null) {
+            PackedShortHelpers.field_c.draw(param0 ^ -22718, param1);
           }
           KeyboardInputHandler.drawPasswordScene(param1, (byte) -101);
-          if (db.field_a != null) {
-            db.field_a.drawFullScreen(param1, true);
+          if (Crc32Helpers.field_a != null) {
+            Crc32Helpers.field_a.drawFullScreen(param1, true);
           }
-          ed.drawModalOverlay((byte) 90, param1);
+          MainMenuDialog.drawModalOverlay((byte) 90, param1);
           if (param0 != 1) {
             field_A = (String) null;
           }
@@ -1653,7 +1653,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.JA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.JA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1744,7 +1744,7 @@ final class BattleScreen {
                 var9_intLifetime1 = var6.getSize(-8323);
                 stackIn_152_0 = (this.field_V.canStandAt(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
-                ce.field_m.makeRasterTarget(true);
+                GameSelectionHelpers.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
                 SoftwareRasterizer.resetClip();
                 var11_int = -param1 + (this.field_s + (EmailLoginCredentials.field_f >> 1));
@@ -1761,7 +1761,7 @@ final class BattleScreen {
                 var9_intLifetime2 = var6.getSize(-8323);
                 stackIn_25_0 = (this.field_V.canPlaceUnitAt(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
-                ce.field_m.makeRasterTarget(true);
+                GameSelectionHelpers.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
                 SoftwareRasterizer.resetClip();
                 var11_intLifetime1 = (EmailLoginCredentials.field_f >> 1) + (this.field_s - param1);
@@ -1801,7 +1801,7 @@ final class BattleScreen {
                 if (9 == DropdownList.field_N) {
                   stackIn_57_0 = (this.field_V.isInsideMargin(false, this.field_s, this.field_r)) ? 65280 : 16711680;
                   var9_intLifetime3 = stackIn_57_0;
-                  ce.field_m.makeRasterTarget(true);
+                  GameSelectionHelpers.field_m.makeRasterTarget(true);
                   var10Lifetime4 = 32;
                   var11_intLifetime2 = (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_s);
                   var12Lifetime2 = -(var10Lifetime4 >> 1) + (-param2 + this.field_r + (var4_int >> 1));
@@ -1840,7 +1840,7 @@ final class BattleScreen {
                     stackIn_66_0 = 16711680;
                   }
                   var9_intLifetime3Lifetime2 = stackIn_66_0;
-                  ce.field_m.makeRasterTarget(true);
+                  GameSelectionHelpers.field_m.makeRasterTarget(true);
                   var10Lifetime4 = 32;
                   var11_intLifetime2Lifetime1 = (EmailLoginCredentials.field_f >> 1) - param1 + var7Lifetime1;
                   var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.getSize(-8323) + 32);
@@ -1918,7 +1918,7 @@ final class BattleScreen {
                 }
                 stackIn_144_0 = (this.field_V.isUnitInRange(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
-                ce.field_m.makeRasterTarget(true);
+                GameSelectionHelpers.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
                 var11_intLifetime3 = -param1 + (var7Lifetime1 + (EmailLoginCredentials.field_f >> 1));
                 var12Lifetime3 = (var4_int >> 1) + var8Lifetime1 + (-param2 - (var9_intLifetime4 >> 1));
@@ -1970,7 +1970,7 @@ final class BattleScreen {
               var11.makeRasterTarget();
               var9.drawSilhouette(8, 8, var10Lifetime1);
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, var11.field_n, var11.field_w);
-              ce.field_m.makeRasterTarget(true);
+              GameSelectionHelpers.field_m.makeRasterTarget(true);
               var11.drawAdditive(-param1 + (-(var9.field_n / 2) + var7Lifetime1 + (EmailLoginCredentials.field_f >> 1) - 8), var8Lifetime1 + (-var9.field_w + (-param2 + (var4_int >> 1)) - 8), 256);
               var9.drawSilhouette((EmailLoginCredentials.field_f >> 1) + var7Lifetime1 + (-(var9.field_n / 2) - param1), (var4_int >> 1) + (var8Lifetime1 - var9.field_w - param2), var10Lifetime1);
               var9.drawAlpha(-param1 + (var7Lifetime1 - var9.field_n / 2 + (EmailLoginCredentials.field_f >> 1)), -param2 + var8Lifetime1 - (var9.field_w - (var4_int >> 1)), 128);
@@ -1980,7 +1980,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "le.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "le.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2005,7 +2005,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.QA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.QA(" + param0 + ')');
         }
     }
 
@@ -2017,12 +2017,12 @@ final class BattleScreen {
           if (param0 >= -75) {
             this.drawTimerBar(66);
           }
-          stackIn_3_0 = this.handleServerMessage(UiContainer.field_z, on.field_g, 0, fj.field_h);
+          stackIn_3_0 = this.handleServerMessage(UiContainer.field_z, LoginMessageTable.field_g, 0, BitAndSpriteHelpers.field_h);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.OB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.OB(" + param0 + ')');
         }
     }
 
@@ -2047,7 +2047,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.B(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.B(" + param0 + ')');
         }
     }
 
@@ -2064,14 +2064,14 @@ final class BattleScreen {
             SceneTabbedPanel.field_Tb = new Sprite(640, 480);
           }
           SceneTabbedPanel.field_Tb.makeRasterTarget();
-          var2_int = wm.statusColour(this.field_V.getArenaTheme(-31497), (byte) -124);
-          var3 = ng.rankColour((byte) -124, this.field_V.getArenaTheme(-31497));
+          var2_int = PaddedContainer.statusColour(this.field_V.getArenaTheme(-31497), (byte) -124);
+          var3 = TermsNoticePanel.rankColour((byte) -124, this.field_V.getArenaTheme(-31497));
           GzipDecoder.field_a = var2_int;
           SocialListEntry.field_Lb = var3;
           SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var2_int, var3);
           if (null == LoginPanel.field_M[this.field_V.getArenaTheme(-31497)]) {
-            ue.field_d.field_f = 0;
-            af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(115, new String[]{Integer.toString(this.field_V.getArenaTheme(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
+            BattleStartHelpers.field_d.field_f = 0;
+            PairedSceneWidget.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(115, new String[]{Integer.toString(this.field_V.getArenaTheme(-31497))}, "background<%0>"), "", 19412, BattleStartHelpers.field_d).drawScaled(0, 0, 640, 480);
           }
           if (param0 != 413355681) {
             this.field_S = 49;
@@ -2086,7 +2086,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.F(" + param0 + ')');
         }
     }
 
@@ -2116,7 +2116,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "le.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "le.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2220,7 +2220,7 @@ final class BattleScreen {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -2232,30 +2232,30 @@ final class BattleScreen {
           if (param2 != 1) {
             field_E = (SceneWidget) null;
           }
-          stackIn_3_0 = th.createBevelFrameSprites(param4, 1, 3, param0, param2 - 32574, param3, 1, 1, param1);
+          stackIn_3_0 = NameTable.createBevelFrameSprites(param4, 1, 3, param0, param2 - 32574, param3, 1, 1, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "le.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "le.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void sendSelectedSpell(int param0) {
         try {
           int var2_int = -52 / ((-45 - param0) / 63);
-          he.field_e.writeOpcode((byte) -78, 63);
-          he.field_e.writeByte(this.field_V.getRound((byte) -75), (byte) -10);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -78, 63);
+          StatusMessageHelpers.field_e.writeByte(this.field_V.getRound((byte) -75), (byte) -10);
           this.field_V.setAnimating(true);
           this.field_w.setAnimating(true);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.SA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.SA(" + param0 + ')');
         }
     }
 
     private final void submitAction(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
         try {
-          this.field_f = new ge(this.field_I, param3, param1, param4, param6, param7, param0, param8);
+          this.field_f = new BattleAction(this.field_I, param3, param1, param4, param6, param7, param0, param8);
           this.field_W = param2;
           this.field_x = 50;
           if (param5 != -30) {
@@ -2263,7 +2263,7 @@ final class BattleScreen {
           }
           ResizableModalPanel.sendGameOption(20, this.field_f, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -2301,7 +2301,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.GA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.GA(" + param0 + ')');
         }
     }
 
@@ -2326,7 +2326,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.JB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.JB(" + param0 + ')');
         }
     }
 
@@ -2351,7 +2351,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.Q(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.Q(" + param0 + ')');
         }
     }
 
@@ -2374,7 +2374,7 @@ final class BattleScreen {
             this.field_k = false;
             this.field_V.copyFrom((byte) 112, this.field_w);
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
-            this.field_V.field_sb = cf.field_h;
+            this.field_V.field_sb = CredentialParseHelpers.field_h;
             this.field_C = true;
             this.field_bb = this.field_V.getCurrentPlayer(false);
             var5 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
@@ -2398,7 +2398,7 @@ final class BattleScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2423,7 +2423,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.E(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.E(" + param0 + ')');
         }
     }
 
@@ -2437,12 +2437,12 @@ final class BattleScreen {
           if (param0 != 26873) {
             return;
           }
-          he.field_e.writeOpcode((byte) -74, 60);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -74, 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.BA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.BA(" + param0 + ')');
         }
     }
 
@@ -2456,12 +2456,12 @@ final class BattleScreen {
           if (!param0) {
             this.field_a = -59;
           }
-          he.field_e.writeOpcode((byte) -24, 59);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -24, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.RB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.RB(" + param0 + ')');
         }
     }
 
@@ -2473,7 +2473,7 @@ final class BattleScreen {
           }
           this.drawBattleViewport(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.FB(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2506,7 +2506,7 @@ final class BattleScreen {
         try {
           SoftwareRasterizer.clear();
           var5_int = 0;
-          param0 = param0 + ue.getSelectedOption((byte) -32);
+          param0 = param0 + BattleStartHelpers.getSelectedOption((byte) -32);
           var7 = EmailLoginCredentials.field_j;
           var7Lifetime1 = IntKeyLookup.field_g.field_nb;
           var8 = this.field_V.getTerrainOffset(true);
@@ -2520,56 +2520,56 @@ final class BattleScreen {
           } else {
             SceneTabbedPanel.field_Tb.drawScaled(var5_intLifetime1, var6, 1280, 960);
           }
-          ge.field_r = ge.field_r + 1;
-          if (ge.field_r > 128) {
-            ge.field_r = ge.field_r - 128;
+          BattleAction.field_r = BattleAction.field_r + 1;
+          if (BattleAction.field_r > 128) {
+            BattleAction.field_r = BattleAction.field_r - 128;
           }
           for (var9 = 0; EmailLoginCredentials.field_f > var9; var9++) {
-            var10 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9 + ge.field_r + param0) / 64.0) * 12.0);
-            if (ge.field_r >= 64) {
-              var10 = (96 - ge.field_r) * var10 / 32;
+            var10 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9 + BattleAction.field_r + param0) / 64.0) * 12.0);
+            if (BattleAction.field_r >= 64) {
+              var10 = (96 - BattleAction.field_r) * var10 / 32;
             } else {
-              var10 = (ge.field_r - 32) * var10 / 32;
+              var10 = (BattleAction.field_r - 32) * var10 / 32;
             }
             if (var10 > 0) {
               var10 = -var10;
             }
             var10 += 22;
-            var10 = (int)((double)var10 + (8.0 * Math.sin(3.141592653589793 * (double)ge.field_r / 64.0) + 32.0));
+            var10 = (int)((double)var10 + (8.0 * Math.sin(3.141592653589793 * (double)BattleAction.field_r / 64.0) + 32.0));
             SoftwareRasterizer.drawVerticalLine(var9, -var10 + this.field_V.field_H + (-param3 + (var7Lifetime1 >> 1)), var10, (16449 | param2) >> 1);
           }
           for (var9Lifetime1 = 0; EmailLoginCredentials.field_f > var9Lifetime1; var9Lifetime1++) {
-            var10Lifetime1 = (int)Math.abs(Math.cos((double)(ge.field_r + (var9Lifetime1 + param0)) * 3.141592653589793 / 64.0) * 14.0);
-            if (ge.field_r < 64) {
-              var10Lifetime1 = var10Lifetime1 * (ge.field_r - 32) / 32;
+            var10Lifetime1 = (int)Math.abs(Math.cos((double)(BattleAction.field_r + (var9Lifetime1 + param0)) * 3.141592653589793 / 64.0) * 14.0);
+            if (BattleAction.field_r < 64) {
+              var10Lifetime1 = var10Lifetime1 * (BattleAction.field_r - 32) / 32;
             } else {
-              var10Lifetime1 = var10Lifetime1 * (96 - ge.field_r) / 32;
+              var10Lifetime1 = var10Lifetime1 * (96 - BattleAction.field_r) / 32;
             }
             if (var10Lifetime1 > 0) {
               var10Lifetime1 = -var10Lifetime1;
             }
             var10Lifetime1 += 20;
-            var10Lifetime1 = (int)((double)var10Lifetime1 + (8.0 * Math.sin((double)ge.field_r * 3.141592653589793 / 64.0) + 32.0));
+            var10Lifetime1 = (int)((double)var10Lifetime1 + (8.0 * Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0) + 32.0));
             SoftwareRasterizer.drawVerticalLine(var9Lifetime1, -param3 + this.field_V.field_H - (-(var7Lifetime1 >> 1) + var10Lifetime1), var10Lifetime1, 16448 | param2 >> 1);
           }
           if (param1 > -82) {
             this.field_V = (Battle) null;
           }
           for (var9Lifetime2 = 0; var9Lifetime2 < EmailLoginCredentials.field_f; var9Lifetime2++) {
-            var10Lifetime2 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9Lifetime2 + ge.field_r * 2 + param0) / 64.0) * 16.0);
-            if (ge.field_r < 64) {
-              var10Lifetime2 = (ge.field_r - 32) * var10Lifetime2 / 32;
+            var10Lifetime2 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9Lifetime2 + BattleAction.field_r * 2 + param0) / 64.0) * 16.0);
+            if (BattleAction.field_r < 64) {
+              var10Lifetime2 = (BattleAction.field_r - 32) * var10Lifetime2 / 32;
             } else {
-              var10Lifetime2 = var10Lifetime2 * (96 - ge.field_r) / 32;
+              var10Lifetime2 = var10Lifetime2 * (96 - BattleAction.field_r) / 32;
             }
             if (var10Lifetime2 > 0) {
               var10Lifetime2 = -var10Lifetime2;
             }
             var10Lifetime2 += 16;
-            var10Lifetime2 = (int)((double)var10Lifetime2 + (Math.sin((double)ge.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
+            var10Lifetime2 = (int)((double)var10Lifetime2 + (Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
             SoftwareRasterizer.drawVerticalLineAlpha(var9Lifetime2, -var10Lifetime2 + (-param3 + this.field_V.field_H + (var7Lifetime1 >> 1)), var10Lifetime2, param2 | 16448, 128);
           }
-          if (td.hasMembership(true) &&
+          if (ThreeButtonPanel.hasMembership(true) &&
             this.field_T) {
             this.field_V.getTerrainMask((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
           } else {
@@ -2644,7 +2644,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "le.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "le.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2681,7 +2681,7 @@ final class BattleScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -2712,7 +2712,7 @@ final class BattleScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -2772,7 +2772,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.S(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.S(" + param0 + ')');
         }
     }
 
@@ -2793,24 +2793,24 @@ final class BattleScreen {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (WrappedTextLayout.field_r == 1 &&
-            -3 == mf.field_g) {
-            stackIn_9_0 = !(ao.field_d);
-            ao.field_d = stackIn_9_0;
-            if (ao.field_d) {
+            -3 == EffectVolumeHelpers.field_g) {
+            stackIn_9_0 = !(LobbyLayoutHelpers.field_d);
+            LobbyLayoutHelpers.field_d = stackIn_9_0;
+            if (LobbyLayoutHelpers.field_d) {
               UiTheme.field_t = 0;
             }
           }
           var2_int = IntKeyLookup.field_g.field_nb;
           if (this.field_I < 0) {
-            stackIn_17_0 = (!ao.field_d) ? 1 : 0;
+            stackIn_17_0 = (!LobbyLayoutHelpers.field_d) ? 1 : 0;
           } else {
             stackIn_17_0 = 1;
           }
           boolean decompiledFrameRemainder5 = true;
           var3 = stackIn_17_0;
-          if ((ri.field_b[96] ||
+          if ((RasterSetupHelpers.field_b[96] ||
             var3 != 0 &&
-            ri.field_b[ClientException.field_a]) && -16 < this.field_n) {
+            RasterSetupHelpers.field_b[ClientException.field_a]) && -16 < this.field_n) {
             this.field_m.clearTarget(param0 + 0);
             this.field_n = this.field_n - 2;
             this.field_t = true;
@@ -2822,9 +2822,9 @@ final class BattleScreen {
             }
           }
           boolean decompiledFrameRemainder4 = true;
-          if ((ri.field_b[97] ||
+          if ((RasterSetupHelpers.field_b[97] ||
             var3 != 0 &&
-            ri.field_b[qo.field_b]) && this.field_n < 16) {
+            RasterSetupHelpers.field_b[NameHelpers.field_b]) && this.field_n < 16) {
             this.field_m.clearTarget(0);
             this.field_n = this.field_n + 2;
             this.field_t = true;
@@ -2836,9 +2836,9 @@ final class BattleScreen {
             }
           }
           boolean decompiledFrameRemainder3 = true;
-          if ((ri.field_b[98] ||
+          if ((RasterSetupHelpers.field_b[98] ||
             var3 != 0 &&
-            ri.field_b[fi.field_e]) && -16 < this.field_S) {
+            RasterSetupHelpers.field_b[DecimalCheckHelpers.field_e]) && -16 < this.field_S) {
             this.field_m.clearTarget(0);
             this.field_S = this.field_S - 2;
             this.field_t = true;
@@ -2850,9 +2850,9 @@ final class BattleScreen {
             }
           }
           boolean decompiledFrameRemainder2 = true;
-          if ((ri.field_b[99] ||
+          if ((RasterSetupHelpers.field_b[99] ||
             var3 != 0 &&
-            ri.field_b[cm.field_j]) && 16 > this.field_S) {
+            RasterSetupHelpers.field_b[StatsRecord.field_j]) && 16 > this.field_S) {
             this.field_m.clearTarget(0);
             this.field_t = true;
             this.field_S = this.field_S + 2;
@@ -2878,7 +2878,7 @@ final class BattleScreen {
           var4 = 0;
           if (!this.field_V.isTurnFinished((byte) 89) &&
             !this.field_V.hasPendingActions(-45) && (!SocketJs5Transport.field_r &&
-            !pn.hasOpenOverlay((byte) 110) ||
+            !LoginStackHelpers.hasOpenOverlay((byte) 110) ||
             !this.field_ab)) {
             var5 = this.field_V.field_y >> this.field_K;
             var6 = this.field_V.field_H >> this.field_K;
@@ -2913,7 +2913,7 @@ final class BattleScreen {
           if ((this.field_V.getCurrentPlayer(false) == this.field_I &&
             !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.isAnimating(true))) {
             if ((this.field_ab) &&
-              (decompiledFrameRemainder0 = !(pn.hasOpenOverlay((byte) -51)))) {
+              (decompiledFrameRemainder0 = !(LoginStackHelpers.hasOpenOverlay((byte) -51)))) {
               decompiledFrameRemainder0 = !(SocketJs5Transport.field_r);
             }
             if ((decompiledFrameRemainder0) &&
@@ -2933,7 +2933,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.P(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.P(" + param0 + ')');
         }
     }
 
@@ -2956,14 +2956,14 @@ final class BattleScreen {
           var9 = this.field_V.getUnitByOwner(param2, true);
           if ((var9 == null ||
             !(0 >= ((this.field_J | this.field_a) & 1 << var9.getOwnerId(17571)))) && (0 == param2 ||
-            !qg.hasMenuPage(-113) ||
+            !ClientRuntimeException.hasMenuPage(-113) ||
             WhirlpoolHasher.field_k == 6)) {
             var5 = 16777215;
             var8 = this.field_V.field_k[param2];
             var6 = var8;
             if ((1 << param2 & this.field_J) > 0) {
               if ((1 << param2 & this.field_a) > 0) {
-                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 ^ -124, new String[]{var8}, qc.field_g);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 ^ -124, new String[]{var8}, ViewportSetupHelpers.field_g);
               } else {
                 var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 + 116, new String[]{var8}, MenuScreen.field_a);
               }
@@ -2984,7 +2984,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "le.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "le.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3086,7 +3086,7 @@ final class BattleScreen {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3103,7 +3103,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.LB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.LB(" + param0 + ')');
         }
     }
 
@@ -3117,11 +3117,11 @@ final class BattleScreen {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        rb var4_ref_rb = null;
+        TimedMessage var4_ref_rb = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        rb var8 = null;
+        TimedMessage var8 = null;
         BattleUnit var9 = null;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -3134,8 +3134,8 @@ final class BattleScreen {
           }
           this.field_o = false;
           if (!SocketJs5Transport.field_r &&
-            !pn.hasOpenOverlay((byte) 111) && (ri.field_b[69] ||
-            ri.field_b[ao.field_f])) {
+            !LoginStackHelpers.hasOpenOverlay((byte) 111) && (RasterSetupHelpers.field_b[69] ||
+            RasterSetupHelpers.field_b[LobbyLayoutHelpers.field_f])) {
             this.field_t = false;
             this.field_m.followUnit(-96, this.field_V.getUnitByOwner(this.field_bb, true));
           }
@@ -3160,17 +3160,17 @@ final class BattleScreen {
             this.field_P = this.field_P - 256;
           }
           this.field_j = this.field_j + 1;
-          if (this.field_j > g.field_a.field_n * 2) {
-            this.field_j = this.field_j - g.field_a.field_n * 2;
+          if (this.field_j > SupportPageHelpers.field_a.field_n * 2) {
+            this.field_j = this.field_j - SupportPageHelpers.field_a.field_n * 2;
           }
           var3_int = 0;
           LoginPanel.tickMessageTimer((byte) -49);
-          if (dm.isMessageQueueIdle((byte) 97)) {
+          if (AlphaContainer.isMessageQueueIdle((byte) 97)) {
             this.stepBattle((byte) -106);
             if (!this.field_V.isTurnFinished((byte) 89) &&
               this.field_V.isTurnActive(4) &&
-              mn.field_r != 3 &&
-              -5 != mn.field_r &&
+              MatchingFieldValidator.field_r != 3 &&
+              -5 != MatchingFieldValidator.field_r &&
               this.field_V.hasStats(1)) {
               var4 = this.field_V.getCurrentPlayer(false);
               if (ResizableModalPanel.field_Y != null &&
@@ -3202,7 +3202,7 @@ final class BattleScreen {
                   this.setSeenBit((byte) 79, 56, 199);
                 }
               }
-              gj.switchScreen(true, true, 3, mn.field_r);
+              ScreenSwitchHelpers.switchScreen(true, true, 3, MatchingFieldValidator.field_r);
             }
           } else {
             var3_int = 1;
@@ -3211,17 +3211,17 @@ final class BattleScreen {
           if (!this.field_t) {
             this.updateCameraFollow(17608);
           }
-          if (this.field_I > 0 && (ri.field_b[69] ||
-            ri.field_b[ao.field_f] ||
-            ri.field_b[WeightedLruCache.field_g] ||
-            ri.field_b[UsernameCredentials.field_g] ||
-            ri.field_b[84] ||
-            ri.field_b[82] ||
-            ri.field_b[81] ||
-            ri.field_b[ko.field_k] ||
-            ri.field_b[GameApplet.field_w] ||
-            ri.field_b[85])) {
-            var8 = (rb) (pb.field_m.first(12623));
+          if (this.field_I > 0 && (RasterSetupHelpers.field_b[69] ||
+            RasterSetupHelpers.field_b[LobbyLayoutHelpers.field_f] ||
+            RasterSetupHelpers.field_b[WeightedLruCache.field_g] ||
+            RasterSetupHelpers.field_b[UsernameCredentials.field_g] ||
+            RasterSetupHelpers.field_b[84] ||
+            RasterSetupHelpers.field_b[82] ||
+            RasterSetupHelpers.field_b[81] ||
+            RasterSetupHelpers.field_b[ListEntryMenuHelpers.field_k] ||
+            RasterSetupHelpers.field_b[GameApplet.field_w] ||
+            RasterSetupHelpers.field_b[85])) {
+            var8 = (TimedMessage) (QueuedResponse.field_m.first(12623));
             var4_ref_rb = var8;
             this.field_K = 4;
             this.field_M = 2000;
@@ -3250,10 +3250,10 @@ final class BattleScreen {
               this.field_V.refreshUnits((byte) -20);
               if (!this.field_ab &&
                 this.field_V.isGameOver(this.field_J, -93)) {
-                if (!qg.hasMenuPage(-102)) {
-                  gj.switchScreen(false, true, -1, mn.field_r);
+                if (!ClientRuntimeException.hasMenuPage(-102)) {
+                  ScreenSwitchHelpers.switchScreen(false, true, -1, MatchingFieldValidator.field_r);
                 } else {
-                  mh.endTurnInput((byte) 74);
+                  CompoundButton.endTurnInput((byte) 74);
                 }
               }
               if (!this.field_ab &&
@@ -3274,20 +3274,20 @@ final class BattleScreen {
             !this.field_V.isTurnActive(4) &&
             !this.field_V.hasPendingActions(-127) &&
             var3_int == 0 &&
-            pb.field_m.isEmpty(true) &&
+            QueuedResponse.field_m.isEmpty(true) &&
             !this.field_ab) {
             if (this.field_y) {
               this.field_t = false;
               this.beginNextTurn(false);
               if (StatefulTextPainter.field_p == 6 &&
                 this.field_V.getCurrentPlayer(false) != 0) {
-                hj.updateAiTargets(-20602);
+                ClientIOException.updateAiTargets(-20602);
               } else {
                 this.field_V.queueAction(this.field_V.getCurrentPlayer(false), 157, (byte) 36, 0, 0, 0, 0, this.field_V.getCurrentPlayer(false), 0);
               }
             } else {
-              if (qg.hasMenuPage(-96)) {
-                ik.resetCurrentPlayer(0);
+              if (ClientRuntimeException.hasMenuPage(-96)) {
+                LobbyBuilderHelpers.resetCurrentPlayer(0);
                 this.beginNextTurn(false);
               } else {
                 this.beginNextTurn(false);
@@ -3331,20 +3331,20 @@ final class BattleScreen {
               this.resetSelection(false);
             }
           }
-          if (null != b.field_a.first(12623)) {
+          if (null != ThrowableFormatHelpers.field_a.first(12623)) {
             fieldTemp$1 = DirectByteStorage.field_h + 1;
             DirectByteStorage.field_h = DirectByteStorage.field_h + 1;
             if (fieldTemp$1 != 335) {
               return;
             }
             DirectByteStorage.field_h = 0;
-            b.field_a.removeFirst(true);
+            ThrowableFormatHelpers.field_a.removeFirst(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "le.IB(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "le.IB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3357,7 +3357,7 @@ final class BattleScreen {
         PacketBuffer var3 = null;
         try {
           stackIn_3_0 = this.field_V;
-          stackIn_3_1 = qg.hasMenuPage(-81);
+          stackIn_3_1 = ClientRuntimeException.hasMenuPage(-81);
           if (this.field_t) {
             stackIn_4_2 = null;
           } else {
@@ -3372,7 +3372,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.PB(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.PB(" + param0 + ')');
         }
     }
 
@@ -3391,7 +3391,7 @@ final class BattleScreen {
           }
           if (68 == param1) {
             this.field_D = param0.readUnsignedByte((byte) -90);
-            jg.updateTurnCaptions(-3);
+            ChatLine.updateTurnCaptions(-3);
             return true;
           }
           if (param1 == 69) {
@@ -3486,7 +3486,7 @@ final class BattleScreen {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3499,22 +3499,22 @@ final class BattleScreen {
         RuntimeException var1 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1_long = qj.monotonicTimeMillis(-26572);
+          var1_long = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           if (param0 <= 67) {
             return true;
           }
-          var3 = -mh.field_K + var1_long;
+          var3 = -CompoundButton.field_K + var1_long;
           if (30000L < var3) {
-            mh.field_K = var1_long;
-            ik.field_b = 0;
+            CompoundButton.field_K = var1_long;
+            LobbyBuilderHelpers.field_b = 0;
             return true;
           }
           var5 = 3000;
-          if (7 <= ik.field_b) {
+          if (7 <= LobbyBuilderHelpers.field_b) {
             var5 = 12000;
           } else {
-            if (ik.field_b < 5) {
-              if (ik.field_b >= 3) {
+            if (LobbyBuilderHelpers.field_b < 5) {
+              if (LobbyBuilderHelpers.field_b >= 3) {
                 var5 = 6000;
               }
             } else {
@@ -3524,13 +3524,13 @@ final class BattleScreen {
           if ((long)var5 >= var3) {
             return false;
           }
-          ik.field_b = ik.field_b + 1;
-          mh.field_K = var1_long;
+          LobbyBuilderHelpers.field_b = LobbyBuilderHelpers.field_b + 1;
+          CompoundButton.field_K = var1_long;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "le.DA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "le.DA(" + param0 + ')');
         }
     }
 
@@ -3542,7 +3542,7 @@ final class BattleScreen {
             this.field_Z = 120;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.MA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.MA(" + param0 + ')');
         }
     }
 
@@ -3553,25 +3553,25 @@ final class BattleScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (DirectByteStorage.isBitSet(param1, ad.field_f, param0 ^ 79)) {
+          if (DirectByteStorage.isBitSet(param1, SpellbookCaptionGlobals.field_f, param0 ^ 79)) {
             return;
           }
-          var6 = ad.field_f;
+          var6 = SpellbookCaptionGlobals.field_f;
           var4 = var6;
           var5 = param1;
-          var6[var5 >> 5] = fj.bitOr(var6[var5 >> 5], 1 << NameValidator.bitAnd(var5, 31));
+          var6[var5 >> 5] = BitAndSpriteHelpers.bitOr(var6[var5 >> 5], 1 << NameValidator.bitAnd(var5, 31));
           if (param0 != 79) {
             this.field_O = false;
           }
-          b.field_a.addLast(new qa(param1), -1);
+          ThrowableFormatHelpers.field_a.addLast(new NoticeHelpers(param1), -1);
           if (!this.field_U) {
-            wh.field_h.addLast(new cm(param1, param2, 0, 0, 0, 0), param0 - 80);
+            PaletteSpriteHelpers.field_h.addLast(new StatsRecord(param1, param2, 0, 0, 0, 0), param0 - 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4_ref), "le.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4_ref), "le.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3609,7 +3609,7 @@ final class BattleScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3708,7 +3708,7 @@ final class BattleScreen {
             1 < this.field_z)) {
             if (!this.field_ab) {
               stackIn_60_0 = 1;
-            } else if (pn.hasOpenOverlay((byte) 127)) {
+            } else if (LoginStackHelpers.hasOpenOverlay((byte) 127)) {
               stackIn_60_0 = 0;
             } else if (!SocketJs5Transport.field_r) {
               stackIn_60_0 = 1;
@@ -3725,7 +3725,7 @@ final class BattleScreen {
               if (var6.getDisplayedHealth(param1 ^ -20367) > 0 &&
                 null == var6.getLinkedUnit(24501)) {
                 if ((!(this.field_ab)) &&
-                  (!(!qg.hasMenuPage(-92))) &&
+                  (!(!ClientRuntimeException.hasMenuPage(-92))) &&
                   ((StatefulTextPainter.field_p != 7))) {
                   WhirlpoolHasher.resetTutorialUnit(var6, true);
                 }
@@ -3739,8 +3739,8 @@ final class BattleScreen {
               }
             }
             boolean decompiledFrameRemainder1 = true;
-            if (var7 != 0 && (ri.field_b[WeightedLruCache.field_g] ||
-              ri.field_b[ko.field_k])) {
+            if (var7 != 0 && (RasterSetupHelpers.field_b[WeightedLruCache.field_g] ||
+              RasterSetupHelpers.field_b[ListEntryMenuHelpers.field_k])) {
               stackIn_79_0 = 1;
               decompiledFrameRemainder1 = false;
             }
@@ -3749,8 +3749,8 @@ final class BattleScreen {
             }
             boolean decompiledFrameRemainder0 = true;
             var8 = stackIn_79_0;
-            if (var7 != 0 && (ri.field_b[UsernameCredentials.field_g] ||
-              ri.field_b[GameApplet.field_w])) {
+            if (var7 != 0 && (RasterSetupHelpers.field_b[UsernameCredentials.field_g] ||
+              RasterSetupHelpers.field_b[GameApplet.field_w])) {
               stackIn_86_0 = 1;
               decompiledFrameRemainder0 = false;
             }
@@ -3764,16 +3764,16 @@ final class BattleScreen {
               this.advanceReplay(2000);
             }
             if (var7 != 0) {
-              if (!ri.field_b[69] &&
-                !ri.field_b[ao.field_f]) {
+              if (!RasterSetupHelpers.field_b[69] &&
+                !RasterSetupHelpers.field_b[LobbyLayoutHelpers.field_f]) {
                 this.field_Y = 0;
               } else {
                 this.field_t = false;
                 if (this.field_Y > 0) {
                   this.field_Y = this.field_Y - 1;
                 } else {
-                  if (cf.field_h[224] != null) {
-                    DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[224], cf.field_h[224]);
+                  if (CredentialParseHelpers.field_h[224] != null) {
+                    DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[224], CredentialParseHelpers.field_h[224]);
                   }
                   this.field_Y = 25;
                   var6 = this.getSelectedUnit(10781);
@@ -3825,10 +3825,10 @@ final class BattleScreen {
           }
           if (var7 != 0) {
             if (WrappedTextLayout.field_r == 1) {
-              if (mf.field_g >= 0 &&
-                null != lm.field_f &&
-                this.field_V.canOwnerCast(lm.field_f[mf.field_g], true, this.field_bb)) {
-                DropdownList.field_N = lm.field_f[mf.field_g];
+              if (EffectVolumeHelpers.field_g >= 0 &&
+                null != GameDetailsRenderer.field_f &&
+                this.field_V.canOwnerCast(GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g], true, this.field_bb)) {
+                DropdownList.field_N = GameDetailsRenderer.field_f[EffectVolumeHelpers.field_g];
                 var8Lifetime1 = 9;
                 if (DropdownList.field_N / 12 <= 9) {
                   var8Lifetime1 = DropdownList.field_N / 12;
@@ -3838,17 +3838,17 @@ final class BattleScreen {
                 } else {
                   var8Lifetime1 = 9;
                 }
-                th.field_g[9] = 42;
-                if (null != cf.field_h[th.field_g[var8Lifetime1]]) {
-                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[th.field_g[var8Lifetime1]], cf.field_h[th.field_g[var8Lifetime1]]);
+                NameTable.field_g[9] = 42;
+                if (null != CredentialParseHelpers.field_h[NameTable.field_g[var8Lifetime1]]) {
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[NameTable.field_g[var8Lifetime1]], CredentialParseHelpers.field_h[NameTable.field_g[var8Lifetime1]]);
                 }
                 this.field_s = -1000;
               }
-              if (mf.field_g == -2) {
+              if (EffectVolumeHelpers.field_g == -2) {
                 stackIn_151_0 = !(ConditionalTextValue.field_f);
                 ConditionalTextValue.field_f = stackIn_151_0;
               }
-              if (mf.field_g == -4) {
+              if (EffectVolumeHelpers.field_g == -4) {
                 var8Lifetime1 = 100;
                 if (this.field_V.field_x[this.field_I] == 4) {
                   var8Lifetime1 = this.field_V.field_X[this.field_I] / 5 * 5 + 5;
@@ -3867,7 +3867,7 @@ final class BattleScreen {
                   this.field_V.onPlayerDefeated(this.field_bb, false);
                 }
               }
-              if (mf.field_g < -1) {
+              if (EffectVolumeHelpers.field_g < -1) {
                 this.field_s = -1000;
               }
             }
@@ -3879,7 +3879,7 @@ final class BattleScreen {
               null == EmptyPainter.field_b &&
               var6 != null &&
               !param0 &&
-              -1 == mf.field_g) {
+              -1 == EffectVolumeHelpers.field_g) {
               stackIn_181_0 = (DropdownList.field_N < 0) ? 0 : 1;
               var8Lifetime1Lifetime1 = stackIn_181_0;
               if (PacketBuffer.field_m == 1 && ((this.field_u > 0 ||
@@ -3887,24 +3887,24 @@ final class BattleScreen {
                 (this.field_u == 0 ||
                 !(DropdownList.field_N < 0))) && this.field_u < 100) {
                 if (WrappedTextLayout.field_r == 1 &&
-                  cf.field_h[222] != null) {
-                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[222], cf.field_h[222]);
+                  CredentialParseHelpers.field_h[222] != null) {
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[222], CredentialParseHelpers.field_h[222]);
                 }
-                if (null == sm.field_e) {
+                if (null == AudioAndCookieHelpers.field_e) {
                   var9Lifetime1 = -12 + DropdownList.field_N;
                   if (var9Lifetime1 >= 0 &&
                     var9Lifetime1 < 96 &&
                     var9Lifetime1 / 12 != 6) {
-                    if (null != cf.field_h[wh.field_i[var9Lifetime1 / 12]]) {
-                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[var9Lifetime1 / 12]], 100, SceneWidgetNode.field_r[wh.field_i[var9Lifetime1 / 12]]);
+                    if (null != CredentialParseHelpers.field_h[PaletteSpriteHelpers.field_i[var9Lifetime1 / 12]]) {
+                      AudioAndCookieHelpers.field_e = PcmSampleStream.createAtRatePercent(CredentialParseHelpers.field_h[PaletteSpriteHelpers.field_i[var9Lifetime1 / 12]], 100, SceneWidgetNode.field_r[PaletteSpriteHelpers.field_i[var9Lifetime1 / 12]]);
                     }
                   } else {
-                    if (cf.field_h[wh.field_i[0]] != null) {
-                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[0]], 100, SceneWidgetNode.field_r[wh.field_i[0]]);
+                    if (CredentialParseHelpers.field_h[PaletteSpriteHelpers.field_i[0]] != null) {
+                      AudioAndCookieHelpers.field_e = PcmSampleStream.createAtRatePercent(CredentialParseHelpers.field_h[PaletteSpriteHelpers.field_i[0]], 100, SceneWidgetNode.field_r[PaletteSpriteHelpers.field_i[0]]);
                     }
                   }
-                  if (null != sm.field_e) {
-                    ValidationHelpWidget.playEffectStream(sm.field_e, (byte) 68);
+                  if (null != AudioAndCookieHelpers.field_e) {
+                    ValidationHelpWidget.playEffectStream(AudioAndCookieHelpers.field_e, (byte) 68);
                   }
                 }
                 var8Lifetime1Lifetime1 = 0;
@@ -3942,9 +3942,9 @@ final class BattleScreen {
                     this.field_u = 1;
                   }
                 }
-                if (sm.field_e != null) {
-                  DateOfBirthValidator.stopEffectStream(sm.field_e, param1 ^ 119);
-                  sm.field_e = null;
+                if (AudioAndCookieHelpers.field_e != null) {
+                  DateOfBirthValidator.stopEffectStream(AudioAndCookieHelpers.field_e, param1 ^ 119);
+                  AudioAndCookieHelpers.field_e = null;
                 }
                 boolean decompiledFrameRemainder2 = true;
                 var9Lifetime1Lifetime2 = var6.getX(-51);
@@ -4032,7 +4032,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4046,13 +4046,13 @@ final class BattleScreen {
           }
           if (!this.field_ab) {
             var3_int = param1 ? 1 : 0;
-            gj.switchScreen(var3_int != 0, true, 0, mn.field_r);
+            ScreenSwitchHelpers.switchScreen(var3_int != 0, true, 0, MatchingFieldValidator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "le.W(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "le.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4111,7 +4111,7 @@ final class BattleScreen {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4153,7 +4153,7 @@ final class BattleScreen {
               this.field_t = false;
               this.field_V.queueAction(this.field_V.getCurrentPlayer(false), var8, (byte) 11, var9, var4, var5, var7, var3_int, var6);
               if (((var8 != 6 &&
-                var8 != 79) || pb.field_m.isEmpty(true))) {
+                var8 != 79) || QueuedResponse.field_m.isEmpty(true))) {
                 Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[var8], 8421504, (byte) -41);
               }
               decompiledFrameRemainder0 = false;
@@ -4179,7 +4179,7 @@ final class BattleScreen {
               } else {
                 this.field_V.queueAction(this.field_V.getCurrentPlayer(false), var8, (byte) 25, var9, var4, var5, var7, var3_int, var6);
                 if (var8 == 159) {
-                  Scrollbar.queueTimedMessage(kj.field_b, 8421504, (byte) -117);
+                  Scrollbar.queueTimedMessage(PendingMessageHelpers.field_b, 8421504, (byte) -117);
                 }
               }
             }
@@ -4198,7 +4198,7 @@ final class BattleScreen {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -4223,7 +4223,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.IA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.IA(" + param0 + ')');
         }
     }
 
@@ -4406,7 +4406,7 @@ final class BattleScreen {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 
@@ -4427,9 +4427,9 @@ final class BattleScreen {
           }
           if (var4 != var3_int) {
             if (this.field_k) {
-              he.field_e.writeOpcode((byte) -67, 67);
-              he.field_e.writeInt(var4, (byte) -101);
-              we.sendKeepAlive(0, (byte) 93);
+              StatusMessageHelpers.field_e.writeOpcode((byte) -67, 67);
+              StatusMessageHelpers.field_e.writeInt(var4, (byte) -101);
+              KeepAliveHelpers.sendKeepAlive(0, (byte) 93);
             }
             ProxySocketConnector.closeActiveConnection(false);
           }
@@ -4449,7 +4449,7 @@ final class BattleScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4494,7 +4494,7 @@ final class BattleScreen {
               SoftwareRasterizer.fillCircle(var7, var8, 20, 16777215);
               QuickChatPhraseCache.fillCircleMasked(20, (byte) 99, 192, var7, var8);
               SoftwareRasterizer.drawCircleOutline(var7, var8, 20, 0);
-              bb.field_g[dd.field_f[DropdownList.field_N]].drawTransparent(var7 - 20, var8 - 20);
+              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[DropdownList.field_N]].drawTransparent(var7 - 20, var8 - 20);
             }
             if (this.field_u == 0 &&
               DropdownList.field_N == -1 &&
@@ -4506,7 +4506,7 @@ final class BattleScreen {
               }
               var7Lifetime1 = -param2 + ((EmailLoginCredentials.field_f >> 1) + var6Lifetime1.getX(param1 ^ -82));
               var8Lifetime1 = -64 + var6Lifetime1.getY((byte) 117) + (-param0 + ((var4_int >> 1) - var6Lifetime1.getSize(-8323))) - this.field_M;
-              var9 = nj.field_n[this.field_V.getCurrentPlayer(false)];
+              var9 = NameCheckHelpers.field_n[this.field_V.getCurrentPlayer(false)];
               if (this.field_V.getCurrentPlayer(false) >= 0) {
                 DualLinkDeque.field_b[3].drawTinted(var7Lifetime1 - 16, -(int)(Math.sin(3.14 * (double)this.field_P / 32.0) * 32.0) - 16 + var8Lifetime1, var9);
               }
@@ -4518,7 +4518,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "le.VA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "le.VA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4612,7 +4612,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.C(" + param0 + ')');
         }
     }
 
@@ -4624,7 +4624,7 @@ final class BattleScreen {
           this.field_F = param0 ? true : false;
           this.field_z = this.field_V.getThemeParameter(12955);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.R(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "le.R(" + param0 + ')');
         }
     }
 
@@ -4673,13 +4673,13 @@ final class BattleScreen {
             if (this.field_V.getRound((byte) -75) >= this.field_V.getTurnTimeLimit(4)) {
               SoftwareRasterizer.fillRoundedRectangle(-4 + var2_int, -4 + var3, 48, 48, 8, 8323072);
               SoftwareRasterizer.fillRoundedRectangle(-2 + var2_int, var3 - 2, 44, 44, 6, 16711680);
-              bb.field_g[var4].drawTransparent(var2_int, var3);
+              LoginLoadingHelpers.field_g[var4].drawTransparent(var2_int, var3);
               return;
             }
             var5 = 256 * (this.field_V.getTurnTimeLimit(4) - this.field_V.getRound((byte) -75)) / this.field_V.getTurnTimeLimit(4);
             SoftwareRasterizer.fillRoundedRectangle(-4 + var2_int, var3 - 4, 48, 48, 8, 8355711);
             SoftwareRasterizer.fillRoundedRectangle(-2 + var2_int, var3 - 2, 44, 44, 6, 16777215);
-            bb.field_g[var4].drawAlpha(var2_int, var3, -var5 + 256);
+            LoginLoadingHelpers.field_g[var4].drawAlpha(var2_int, var3, -var5 + 256);
             var6 = (-1 + this.field_V.getTurnTimeLimit(4) + (-this.field_V.getRound((byte) -75) + this.field_V.getPlayerCount(0))) / this.field_V.getPlayerCount(0);
             CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + (var3 - 1), 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
             CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -5 + var2_int, -4 + var3, 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -4689,7 +4689,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.HA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.HA(" + param0 + ')');
         }
     }
 
@@ -4708,9 +4708,9 @@ final class BattleScreen {
               param1 != 116 &&
               param1 != 158 && (6 != param1 &&
               param1 != 79 ||
-              pb.field_m.isEmpty(true))) {
+              QueuedResponse.field_m.isEmpty(true))) {
               if (param1 == 159) {
-                Scrollbar.queueTimedMessage(kj.field_b, 8421504, (byte) -42);
+                Scrollbar.queueTimedMessage(PendingMessageHelpers.field_b, 8421504, (byte) -42);
               } else {
                 Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[param1], 8421504, (byte) -103);
               }
@@ -4719,17 +4719,17 @@ final class BattleScreen {
           } else {
             this.field_V.setAnimating(true);
           }
-          if (!qg.hasMenuPage(-127)) {
+          if (!ClientRuntimeException.hasMenuPage(-127)) {
             if (!this.field_V.isGameOver(this.field_J, -89)) {
               return;
             }
-            gj.switchScreen(false, true, -1, mn.field_r);
+            ScreenSwitchHelpers.switchScreen(false, true, -1, MatchingFieldValidator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var9), "le.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var9), "le.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -4740,7 +4740,7 @@ final class BattleScreen {
           if (!this.field_ab) {
             throw new IllegalStateException();
           }
-          he.field_e.writeOpcode((byte) -79, 61);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -79, 61);
           if (param0 != -61) {
             this.field_e = -97;
           }
@@ -4748,7 +4748,7 @@ final class BattleScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "le.FA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "le.FA(" + param0 + ')');
         }
     }
 
@@ -4769,7 +4769,7 @@ final class BattleScreen {
           if (null != this.field_w) {
             this.field_w.beginTurn(var3_int, (byte) 60, var4);
           }
-          gj.switchScreen(false, true, param1, mn.field_r);
+          ScreenSwitchHelpers.switchScreen(false, true, param1, MatchingFieldValidator.field_r);
           this.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4782,7 +4782,7 @@ final class BattleScreen {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4841,7 +4841,7 @@ final class BattleScreen {
           this.field_V.field_hb = this.field_V.field_y >> 1;
           this.field_V.regenerateTerrain(88);
           this.field_V.renderTerrainSprite(true);
-          ue.startBattleScreen((byte) -117, this);
+          BattleStartHelpers.startBattleScreen((byte) -117, this);
           this.field_W = -1;
           this.field_x = 0;
           this.field_f = null;
@@ -4850,7 +4850,7 @@ final class BattleScreen {
           if (!this.field_ab) {
             BufferedSocket.setActiveBattleScreen(this, true);
             UiContainer.selectMenuPage((byte) 83, 0);
-            this.field_V.field_sb = cf.field_h;
+            this.field_V.field_sb = CredentialParseHelpers.field_h;
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
           } else {
             CachedArchiveProvider.clearBattleReferences(63);
@@ -4907,7 +4907,7 @@ final class BattleScreen {
             stackIn_32_0 = stackIn_28_0;
             stackIn_32_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

@@ -28,34 +28,34 @@ final class ConnectionState {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        qe var4_ref_qe = null;
+        QueuedPacket var4_ref_qe = null;
         int var4 = 0;
-        qe var5 = null;
+        QueuedPacket var5 = null;
         int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (qc.field_c != ResizableModalPanel.field_eb) {
+          if (ViewportSetupHelpers.field_c != ResizableModalPanel.field_eb) {
             return false;
           }
           if (param0 != 26) {
             return false;
           }
-          var2_long = qj.monotonicTimeMillis(-26572);
+          var2_long = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           if (ResizableModalPanel.field_ab != 0 &&
             MenuInputState.field_d < 0) {
-            var4_ref_qe = (qe) (uf.field_a.first(12623));
+            var4_ref_qe = (QueuedPacket) (LobbyInputHelpers.field_a.first(12623));
             if (var4_ref_qe != null &&
               var4_ref_qe.field_q < var2_long) {
               var4_ref_qe.unlink(true);
-              fj.field_h = var4_ref_qe.field_k.length;
+              BitAndSpriteHelpers.field_h = var4_ref_qe.field_k.length;
               UiContainer.field_z.position = 0;
-              for (var5_int = 0; var5_int < fj.field_h; var5_int++) {
+              for (var5_int = 0; var5_int < BitAndSpriteHelpers.field_h; var5_int++) {
                 UiContainer.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
               ArchiveRequest.field_m = Battle.field_W;
               Battle.field_W = DraggableWidget.field_I;
-              DraggableWidget.field_I = on.field_g;
-              on.field_g = var4_ref_qe.field_g;
+              DraggableWidget.field_I = LoginMessageTable.field_g;
+              LoginMessageTable.field_g = var4_ref_qe.field_g;
               return true;
             }
           }
@@ -67,31 +67,31 @@ final class ConnectionState {
               }
               MenuInputState.field_d = UiContainer.field_z.readOpcode((byte) 62);
               UiContainer.field_z.position = 0;
-              fj.field_h = param1[MenuInputState.field_d];
+              BitAndSpriteHelpers.field_h = param1[MenuInputState.field_d];
             }
-            if (!pn.readServerStatus(-12564)) {
+            if (!LoginStackHelpers.readServerStatus(-12564)) {
               return false;
             }
             if (ResizableModalPanel.field_ab == 0) {
               ArchiveRequest.field_m = Battle.field_W;
               Battle.field_W = DraggableWidget.field_I;
-              DraggableWidget.field_I = on.field_g;
-              on.field_g = MenuInputState.field_d;
+              DraggableWidget.field_I = LoginMessageTable.field_g;
+              LoginMessageTable.field_g = MenuInputState.field_d;
               MenuInputState.field_d = -1;
               return true;
             }
             var4 = ResizableModalPanel.field_ab;
-            if (0.0 != hb.field_Cb) {
-              var4 = (int)((double)var4 + TextButton.field_D.nextGaussian() * hb.field_Cb);
+            if (0.0 != SceneListPanel.field_Cb) {
+              var4 = (int)((double)var4 + TextButton.field_D.nextGaussian() * SceneListPanel.field_Cb);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
-            var5 = new qe(var2_long + (long)var4, MenuInputState.field_d, new byte[fj.field_h]);
-            for (var6 = 0; fj.field_h > var6; var6++) {
+            var5 = new QueuedPacket(var2_long + (long)var4, MenuInputState.field_d, new byte[BitAndSpriteHelpers.field_h]);
+            for (var6 = 0; BitAndSpriteHelpers.field_h > var6; var6++) {
               var5.field_k[var6] = UiContainer.field_z.payload[var6];
             }
-            uf.field_a.addLast(var5, -1);
+            LobbyInputHelpers.field_a.addLast(var5, -1);
             MenuInputState.field_d = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class ConnectionState {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -112,20 +112,20 @@ final class ConnectionState {
         int var2;
         boolean stackIn_6_0 = false;
         var2 = -128 % ((param0 - 17) / 52);
-        stackIn_6_0 = (this == co.field_h) || (this == bb.field_c) || (this == qc.field_c);
+        stackIn_6_0 = (this == BattleResetHelpers.field_h) || (this == LoginLoadingHelpers.field_c) || (this == ViewportSetupHelpers.field_c);
         return stackIn_6_0;
     }
 
     final static void startReconnect(int param0) {
-        if (!qe.field_p) {
+        if (!QueuedPacket.field_p) {
           throw new IllegalStateException();
         }
         if (param0 != 3020) {
           field_a = (String) null;
         }
-        lh.field_n = true;
+        ValueListPainter.field_n = true;
         CachedArchiveProvider.showLoginPanelDefault(false, (byte) -106);
-        fj.field_j = 0;
+        BitAndSpriteHelpers.field_j = 0;
     }
 
     final static int greatestCommonDivisor(int param0, int param1, boolean param2) {
@@ -181,54 +181,54 @@ final class ConnectionState {
             if (0 > param1) {
               return -1;
             }
-            return gj.field_g[param1] >> 12;
+            return ScreenSwitchHelpers.field_g[param1] >> 12;
           }
           if (param1 >= 4096) {
             if (16384 <= param1) {
-              return gj.field_g[param1 >> 8] >> 8;
+              return ScreenSwitchHelpers.field_g[param1 >> 8] >> 8;
             }
-            return gj.field_g[param1 >> 6] >> 9;
+            return ScreenSwitchHelpers.field_g[param1 >> 6] >> 9;
           }
           if (param1 < 1024) {
-            return gj.field_g[param1 >> 2] >> 11;
+            return ScreenSwitchHelpers.field_g[param1 >> 2] >> 11;
           }
-          return gj.field_g[param1 >> 4] >> 10;
+          return ScreenSwitchHelpers.field_g[param1 >> 4] >> 10;
         }
         if (param1 < 16777216) {
           if (param1 >= 1048576) {
             if (param1 >= 4194304) {
-              return gj.field_g[param1 >> 16] >> 4;
+              return ScreenSwitchHelpers.field_g[param1 >> 16] >> 4;
             }
-            return gj.field_g[param1 >> 14] >> 5;
+            return ScreenSwitchHelpers.field_g[param1 >> 14] >> 5;
           }
           if (param1 < 262144) {
-            return gj.field_g[param1 >> 10] >> 7;
+            return ScreenSwitchHelpers.field_g[param1 >> 10] >> 7;
           }
-          return gj.field_g[param1 >> 12] >> 6;
+          return ScreenSwitchHelpers.field_g[param1 >> 12] >> 6;
         }
         if (param1 >= 268435456) {
           if (1073741824 <= param1) {
-            return gj.field_g[param1 >> 24] << var3;
+            return ScreenSwitchHelpers.field_g[param1 >> 24] << var3;
           }
           if (var3 >= 1) {
-            stackIn_49_0 = gj.field_g[param1 >> 22] << var3 - 1;
+            stackIn_49_0 = ScreenSwitchHelpers.field_g[param1 >> 22] << var3 - 1;
           } else {
-            stackIn_49_0 = gj.field_g[param1 >> 22] >> -var3 + 1;
+            stackIn_49_0 = ScreenSwitchHelpers.field_g[param1 >> 22] >> -var3 + 1;
           }
           return stackIn_49_0;
         }
         if (param1 < 67108864) {
           if (var3 < 3) {
-            stackIn_44_0 = gj.field_g[param1 >> 18] >> 3 - var3;
+            stackIn_44_0 = ScreenSwitchHelpers.field_g[param1 >> 18] >> 3 - var3;
           } else {
-            stackIn_44_0 = gj.field_g[param1 >> 18] << var3 - 3;
+            stackIn_44_0 = ScreenSwitchHelpers.field_g[param1 >> 18] << var3 - 3;
           }
           return stackIn_44_0;
         }
         if (var3 >= 2) {
-          stackIn_40_0 = gj.field_g[param1 >> 20] << -2 + var3;
+          stackIn_40_0 = ScreenSwitchHelpers.field_g[param1 >> 20] << -2 + var3;
         } else {
-          stackIn_40_0 = gj.field_g[param1 >> 20] >> -var3 + 2;
+          stackIn_40_0 = ScreenSwitchHelpers.field_g[param1 >> 20] >> -var3 + 2;
         }
         return stackIn_40_0;
     }

@@ -59,22 +59,22 @@ abstract class ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "tl.E(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "tl.E(" + param0 + ')');
         }
     }
 
     final static int computeLoadingPercent(byte param0) {
-        if (ih.field_f < 2) {
+        if (PointerOriginHelpers.field_f < 2) {
           return 0;
         }
         if (param0 != -77) {
           ArchiveProvider.clearLayoutRows((byte) -108);
         }
         if (LinkButtonPainter.field_f == 0) {
-          if (!da.field_b.ensureIndex(-10923)) {
+          if (!MusicAndClipHelpers.field_b.ensureIndex(-10923)) {
             return 20;
           }
-          if (!da.field_b.isGroupAvailableByName("commonui", -24417)) {
+          if (!MusicAndClipHelpers.field_b.isGroupAvailableByName("commonui", -24417)) {
             return 40;
           }
           if (!DiskCacheRequest.field_C.ensureIndex(-10923)) {
@@ -83,29 +83,29 @@ abstract class ArchiveProvider {
           if (!DiskCacheRequest.field_C.isGroupAvailableByName("commonui", -24417)) {
             return 60;
           }
-          if (!ho.field_g.ensureIndex(-10923)) {
+          if (!ServerMessage.field_g.ensureIndex(-10923)) {
             return 70;
           }
-          if (ho.field_g.areAllGroupsAvailable(-86)) {
+          if (ServerMessage.field_g.areAllGroupsAvailable(-86)) {
             return 100;
           }
           return 80;
         }
-        if (null != lh.field_g) {
-          if (!lh.field_g.ensureIndex(-10923)) {
+        if (null != ValueListPainter.field_g) {
+          if (!ValueListPainter.field_g.ensureIndex(-10923)) {
             return 14;
           }
-          if (!lh.field_g.hasGroupName(true, "")) {
+          if (!ValueListPainter.field_g.hasGroupName(true, "")) {
             return 29;
           }
-          if (!lh.field_g.isGroupAvailableByName("", -24417)) {
+          if (!ValueListPainter.field_g.isGroupAvailableByName("", -24417)) {
             return 29;
           }
         }
-        if (!da.field_b.ensureIndex(param0 ^ 10982)) {
+        if (!MusicAndClipHelpers.field_b.ensureIndex(param0 ^ 10982)) {
           return 43;
         }
-        if (!da.field_b.isGroupAvailableByName("commonui", -24417)) {
+        if (!MusicAndClipHelpers.field_b.isGroupAvailableByName("commonui", -24417)) {
           return 57;
         }
         if (!DiskCacheRequest.field_C.ensureIndex(-10923)) {
@@ -114,10 +114,10 @@ abstract class ArchiveProvider {
         if (!DiskCacheRequest.field_C.isGroupAvailableByName("commonui", param0 ^ 24364)) {
           return 80;
         }
-        if (!ho.field_g.ensureIndex(-10923)) {
+        if (!ServerMessage.field_g.ensureIndex(-10923)) {
           return 82;
         }
-        if (!ho.field_g.areAllGroupsAvailable(param0 ^ 35)) {
+        if (!ServerMessage.field_g.areAllGroupsAvailable(param0 ^ 35)) {
           return 86;
         }
         return 100;

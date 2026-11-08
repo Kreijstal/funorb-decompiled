@@ -35,7 +35,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           var9 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             if (null == CredentialKind.field_c &&
-              !ie.pollStatusSocket(-62, param4)) {
+              !StatusDialog.pollStatusSocket(-62, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -102,17 +102,17 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               stackIn_7_0 = 41;
               return stackIn_7_0;
             }
-            if (pc.field_g == ResizableModalPanel.field_eb) {
+            if (TexturedSpriteHelpers.field_g == ResizableModalPanel.field_eb) {
               if (param4) {
                 var10 = (String) null;
-                fd.field_e = ci.createCredentials(false, (String) null, -95, fk.field_k, param5);
+                CookieHelpers.field_e = ModalStackHelpers.createCredentials(false, (String) null, -95, SoundEffectVoice.field_k, param5);
               } else {
-                fd.field_e = cf.parseCredentials(param3, param5, (byte) -128, false);
+                CookieHelpers.field_e = CredentialParseHelpers.parseCredentials(param3, param5, (byte) -128, false);
               }
-              he.field_e.position = 0;
-              he.field_e.writeByte(14, (byte) -105);
-              he.field_e.writeByte(fd.field_e.getCredentialKind(0).field_g, (byte) -106);
-              we.sendKeepAlive(-1, (byte) 86);
+              StatusMessageHelpers.field_e.position = 0;
+              StatusMessageHelpers.field_e.writeByte(14, (byte) -105);
+              StatusMessageHelpers.field_e.writeByte(CookieHelpers.field_e.getCredentialKind(0).field_g, (byte) -106);
+              KeepAliveHelpers.sendKeepAlive(-1, (byte) 86);
               ResizableModalPanel.field_eb = ContextActionMenu.field_Db;
             }
             if (ResizableModalPanel.field_eb == ContextActionMenu.field_Db &&
@@ -122,51 +122,51 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               if (0 == var6_int) {
                 ResizableModalPanel.field_eb = SocketConnector.field_c;
               } else {
-                on.field_g = var6_int;
-                fj.field_h = -1;
-                ResizableModalPanel.field_eb = lf.field_f;
+                LoginMessageTable.field_g = var6_int;
+                BitAndSpriteHelpers.field_h = -1;
+                ResizableModalPanel.field_eb = ScreenTransitionHelpers.field_f;
               }
             }
             if (ResizableModalPanel.field_eb == SocketConnector.field_c &&
               ContextActionMenu.hasIncomingBytes((byte) -86, 8)) {
-              of.field_j = UiContainer.field_z.readLong(-943038560);
+              GradientBarPainter.field_j = UiContainer.field_z.readLong(-943038560);
               UiContainer.field_z.position = 0;
-              SceneScrollPane.writeLoginBlock(param4, fd.field_e, (byte) 116, param2, param0);
-              ResizableModalPanel.field_eb = co.field_h;
+              SceneScrollPane.writeLoginBlock(param4, CookieHelpers.field_e, (byte) 116, param2, param0);
+              ResizableModalPanel.field_eb = BattleResetHelpers.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ResizableModalPanel.field_eb == co.field_h &&
+            if (ResizableModalPanel.field_eb == BattleResetHelpers.field_h &&
               ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
               var6_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -122);
               UiContainer.field_z.position = 0;
               AudioService.field_i = null;
-              on.field_g = var6_intLifetime1;
+              LoginMessageTable.field_g = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  fj.field_h = -1;
-                  ResizableModalPanel.field_eb = lf.field_f;
+                  BitAndSpriteHelpers.field_h = -1;
+                  ResizableModalPanel.field_eb = ScreenTransitionHelpers.field_f;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
                   ProxySocketConnector.closeActiveConnection(false);
-                  bb.field_h = false;
+                  LoginLoadingHelpers.field_h = false;
                   stackIn_34_0 = var6_intLifetime1;
                   return stackIn_34_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ResizableModalPanel.field_eb = bb.field_c;
-                fj.field_h = -1;
+                ResizableModalPanel.field_eb = LoginLoadingHelpers.field_c;
+                BitAndSpriteHelpers.field_h = -1;
               }
             }
-            if (ResizableModalPanel.field_eb == bb.field_c &&
-              pn.readServerStatus(-12564)) {
-              fk.field_k = UiContainer.field_z.readLong(-943038560);
-              fn.field_f = param5;
-              qf.field_d = UiContainer.field_z.readUnsignedByte((byte) 115);
+            if (ResizableModalPanel.field_eb == LoginLoadingHelpers.field_c &&
+              LoginStackHelpers.readServerStatus(-12564)) {
+              SoundEffectVoice.field_k = UiContainer.field_z.readLong(-943038560);
+              GameListHelpers.field_f = param5;
+              MembershipGlobals.field_d = UiContainer.field_z.readUnsignedByte((byte) 115);
               BevelTextPainter.field_r = UiContainer.field_z.readUnsignedByte((byte) 93);
-              ah.field_c = UiContainer.field_z.readUnsignedShort(-98);
+              AccountFlowHelpers.field_c = UiContainer.field_z.readUnsignedShort(-98);
               var6 = UiContainer.field_z.readOptionalString(103);
               var7 = UiContainer.field_z.readUnsignedByte((byte) -94);
               if ((1 & var7) != 0) {
@@ -174,45 +174,45 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               }
               if (!param4) {
                 stackIn_46_0 = ((4 & var7) != 0);
-                fd.field_a = stackIn_46_0;
+                CookieHelpers.field_a = stackIn_46_0;
                 stackIn_49_0 = (0 != (var7 & 2));
                 AlternateUsernameCredentials.field_p = stackIn_49_0;
                 stackIn_52_0 = ((var7 & 8) != 0);
-                wh.field_g = stackIn_52_0;
-                if (wh.field_g) {
+                PaletteSpriteHelpers.field_g = stackIn_52_0;
+                if (PaletteSpriteHelpers.field_g) {
                   AlternateUsernameCredentials.field_p = true;
                 }
               }
               stackIn_58_0 = (0 != (16 & var7));
               TextButton.field_E = stackIn_58_0;
-              if (fl.field_a) {
+              if (FinalFrameHelpers.field_a) {
                 UiContainer.field_z.readUnsignedByte((byte) 110);
                 PlayerActionMenu.field_g = UiContainer.field_z.readUnsignedByte((byte) -115);
                 UiContainer.field_z.readInt(-10674);
                 ResizableViewResizeListener.field_d = UiContainer.field_z.readUnsignedShort(-98);
-                ra.field_f = new byte[ResizableViewResizeListener.field_d];
+                DateHelpers.field_f = new byte[ResizableViewResizeListener.field_d];
                 for (var8 = 0; var8 < ResizableViewResizeListener.field_d; var8++) {
-                  ra.field_f[var8] = UiContainer.field_z.readByte(6);
+                  DateHelpers.field_f[var8] = UiContainer.field_z.readByte(6);
                 }
               }
-              ah.field_b = UiContainer.field_z.readString(-1);
-              var11 = (CharSequence) ((Object) ah.field_b);
-              nm.field_b = Js5ArchiveManager.normalizeNameForLookup(var11, -13);
-              dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
-              ResizableModalPanel.field_eb = qc.field_c;
-              if (fd.field_e.getCredentialKind(0) == BufferedSocket.field_q) {
+              AccountFlowHelpers.field_b = UiContainer.field_z.readString(-1);
+              var11 = (CharSequence) ((Object) AccountFlowHelpers.field_b);
+              UrlHelpers.field_b = Js5ArchiveManager.normalizeNameForLookup(var11, -13);
+              PasswordCheckHelpers.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
+              ResizableModalPanel.field_eb = ViewportSetupHelpers.field_c;
+              if (CookieHelpers.field_e.getCredentialKind(0) == BufferedSocket.field_q) {
                 DiskCacheRequest.field_y.saveAsLastLoginMethod(IconButtonPainter.getApplet(118), (byte) -93);
               } else {
-                if (fd.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
-                  of.field_n.saveAsLastLoginMethod(IconButtonPainter.getApplet(120), (byte) -118);
+                if (CookieHelpers.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
+                  GradientBarPainter.field_n.saveAsLastLoginMethod(IconButtonPainter.getApplet(120), (byte) -118);
                 }
               }
-              bb.field_h = false;
+              LoginLoadingHelpers.field_h = false;
               if (var6 != null) {
                 NodeHashTableIterator.setSettingsCookie(var6, IconButtonPainter.getApplet(108), 0);
               }
-              if (0 >= ah.field_c &&
-                !fd.field_a) {
+              if (0 >= AccountFlowHelpers.field_c &&
+                !CookieHelpers.field_a) {
                 try {
                   JavaScriptBridge.callFunction(IconButtonPainter.getApplet(125), 108, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -221,54 +221,54 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 }
               } else {
                 try {
-                  JavaScriptBridge.callFunctionWithArgs("zap", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
+                  JavaScriptBridge.callFunctionWithArgs("zap", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(SoundEffectVoice.field_k, 29424)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (ah.field_c > 0) {
+              if (AccountFlowHelpers.field_c > 0) {
                 Js5Transport.field_d = true;
               }
-              he.field_e.installCipher(-107, hj.field_a);
+              StatusMessageHelpers.field_e.installCipher(-107, ClientIOException.field_a);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                hj.field_a[var8Lifetime1] = hj.field_a[var8Lifetime1] + 50;
+                ClientIOException.field_a[var8Lifetime1] = ClientIOException.field_a[var8Lifetime1] + 50;
               }
-              UiContainer.field_z.installCipher(90, hj.field_a);
-              stackIn_85_0 = on.field_g;
+              UiContainer.field_z.installCipher(90, ClientIOException.field_a);
+              stackIn_85_0 = LoginMessageTable.field_g;
               return stackIn_85_0;
             }
-            if (ResizableModalPanel.field_eb == lf.field_f &&
-              pn.readServerStatus(-12564)) {
+            if (ResizableModalPanel.field_eb == ScreenTransitionHelpers.field_f &&
+              LoginStackHelpers.readServerStatus(-12564)) {
               ProxySocketConnector.closeActiveConnection(false);
-              if (7 == on.field_g &&
-                !bb.field_h) {
-                bb.field_h = true;
+              if (7 == LoginMessageTable.field_g &&
+                !LoginLoadingHelpers.field_h) {
+                LoginLoadingHelpers.field_h = true;
                 stackIn_92_0 = -1;
                 return stackIn_92_0;
               }
-              if (on.field_g == 7) {
-                on.field_g = 3;
+              if (LoginMessageTable.field_g == 7) {
+                LoginMessageTable.field_g = 3;
               }
               MenuButtonPanel.field_E = UiContainer.field_z.readString(-1);
-              bb.field_h = false;
-              stackIn_96_0 = on.field_g;
+              LoginLoadingHelpers.field_h = false;
+              stackIn_96_0 = LoginMessageTable.field_g;
               return stackIn_96_0;
             }
             if (null == CredentialKind.field_c) {
-              if (bb.field_h) {
-                if (rk.timeSinceLastInput(-68) <= 30000L) {
+              if (LoginLoadingHelpers.field_h) {
+                if (GradientBarButton.timeSinceLastInput(-68) <= 30000L) {
                   MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
                 } else {
                   MenuButtonPanel.field_E = DualLinkDeque.field_a;
                 }
-                bb.field_h = false;
+                LoginLoadingHelpers.field_h = false;
                 stackIn_105_0 = 3;
                 return stackIn_105_0;
               }
-              var6_intLifetime2 = ng.field_G;
-              ng.field_G = SceneTextInput.field_Lb;
-              bb.field_h = true;
+              var6_intLifetime2 = TermsNoticePanel.field_G;
+              TermsNoticePanel.field_G = SceneTextInput.field_Lb;
+              LoginLoadingHelpers.field_h = true;
               SceneTextInput.field_Lb = var6_intLifetime2;
             }
             stackIn_107_0 = -1;
@@ -289,7 +289,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             } else {
               stackIn_114_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -358,7 +358,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -490,7 +490,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -517,7 +517,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (var5_int != 80) {
             return false;
           }
-          if (ri.field_b[81]) {
+          if (RasterSetupHelpers.field_b[81]) {
             stackIn_13_0 = this.focusChildIfUnfocused(param0, 0);
           } else {
             stackIn_13_0 = this.focusUnfocusedChild(false, param0);
@@ -558,7 +558,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -584,7 +584,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -594,9 +594,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             BitmapFont var3 = (BitmapFont) null;
             SingleChildContainer.setDefaultFont((byte) 9, (BitmapFont) null);
           }
-          mc.field_b = param1;
+          QuickChatInputHelpers.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -622,7 +622,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

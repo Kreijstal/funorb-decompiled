@@ -10,7 +10,7 @@ final class ScreenDisplayMode {
     int field_e;
     static Sprite[] field_i;
     int field_a;
-    static co field_h;
+    static BattleResetHelpers field_h;
 
     final static int randomBelow(IsaacRandom param0, int param1, byte param2) {
         int var3_int = 0;
@@ -51,7 +51,7 @@ final class ScreenDisplayMode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class ScreenDisplayMode {
     }
 
     final static void sendScreenRequest(int param0, byte param1, int param2) {
-        CipherPacketBuffer var3 = he.field_e;
+        CipherPacketBuffer var3 = StatusMessageHelpers.field_e;
         var3.writeOpcode((byte) -32, param2);
         var3.writeByte(3, (byte) -54);
         var3.writeByte(8, (byte) -85);
@@ -91,6 +91,6 @@ final class ScreenDisplayMode {
     static {
         field_b = "Since you have figured out the controls and don't need movement explained, select the Arcane<nbsp>Flash spell.";
         field_c = new int[]{70, 71, 72};
-        field_h = new co();
+        field_h = new BattleResetHelpers();
     }
 }

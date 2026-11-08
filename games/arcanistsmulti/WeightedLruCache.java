@@ -152,7 +152,7 @@ final class WeightedLruCache {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class WeightedLruCache {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class WeightedLruCache {
           var4 = (CacheEntry) (this.field_c.get((byte) -79, param1));
           this.removeEntry(var4, 2147483647);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class WeightedLruCache {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class WeightedLruCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class WeightedLruCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4_ref), "ig.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4_ref), "ig.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class WeightedLruCache {
           field_a = null;
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ')');
         }
     }
 
@@ -338,12 +338,12 @@ final class WeightedLruCache {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ce.field_h > 0 &&
+          if (GameSelectionHelpers.field_h > 0 &&
             IntrusiveNode.field_d) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
             LinkButtonPainter.field_h.drawFullScreen(param1, true);
           }
-          if (sm.field_a <= param0 &&
+          if (AudioAndCookieHelpers.field_a <= param0 &&
             QuickChatCategory.field_y <= 0) {
             return;
           }
@@ -355,7 +355,7 @@ final class WeightedLruCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "ig.F(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "ig.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class WeightedLruCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.<init>(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ig.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

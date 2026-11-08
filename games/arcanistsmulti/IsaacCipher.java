@@ -15,7 +15,7 @@ final class IsaacCipher {
     static ValidationState field_c;
     static int[][] field_d;
 
-    final static void configureLobbyLayout(byte param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, ec param11, int param12, BitmapFont param13, ec param14, int param15, int param16, int param17, int param18, ec param19, int param20) {
+    final static void configureLobbyLayout(byte param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, SpriteFrame param11, int param12, BitmapFont param13, SpriteFrame param14, int param15, int param16, int param17, int param18, SpriteFrame param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -35,7 +35,7 @@ final class IsaacCipher {
             return;
           }
           LoginPanel.storeLoginLayout(1, param8, param12, param1, param2);
-          td.storeLayoutValues(true, param17, param5);
+          ThreeButtonPanel.storeLayoutValues(true, param17, param5);
           LoadingTracker.setFrameLayout(param14, 120, param16, param15, param19, param18);
           NanoFrameClock.noOperation(param10, param11, param7, 69);
           FadingModalPanel.storeLayoutValues(-1, param6, param20, param9);
@@ -74,22 +74,22 @@ final class IsaacCipher {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
         }
     }
 
     final static void initializeIntro(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         try {
           DisplayNameForm.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
-          ed.loadJagexLogoSound((byte) -17, param2);
+          MainMenuDialog.loadJagexLogoSound((byte) -17, param2);
           ArcanistsMulti.loadLogoModels(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);
-          fl.loadFinalFrameImage(-2389, param2);
-          tm.buildIntensityTable(5968);
+          FinalFrameHelpers.loadFinalFrameImage(-2389, param2);
+          IntensityTableHelpers.buildIntensityTable(5968);
           ModalPanelStack.renderLogoBanner(0);
           SoundCache.field_a = -DisplayNameForm.field_G + 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ final class IsaacCipher {
           }
           this.initializeState((byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

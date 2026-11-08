@@ -218,7 +218,7 @@ final class HuffmanCodec {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class HuffmanCodec {
             var14 = var12 + (-1 + (var11 + var13) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = fj.bitOr(var7_int, var10 >>> var13);
+            dupTemp$0 = BitAndSpriteHelpers.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param0[var12] = (byte)dupTemp$0;
             if (var12 < var14) {
@@ -311,7 +311,7 @@ final class HuffmanCodec {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ final class HuffmanCodec {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class HuffmanCodec {
               var21 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var20 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var22 = ((PacketBuffer) ((Object) var1)).readString(-1);
-              var23 = fn.lookupEntry(var3_long, 119);
+              var23 = GameListHelpers.lookupEntry(var3_long, 119);
               var8_ref_cg = var23;
               stackIn_45_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_45_0;
@@ -443,9 +443,9 @@ final class HuffmanCodec {
                 }
               } else {
                 var8_ref_cg = new SocialListEntry(var21, var22, var3_long);
-                bc.field_c.put(var8_ref_cg, var3_long, (byte) 126);
+                OptionToggleHelpers.field_c.put(var8_ref_cg, var3_long, (byte) 126);
               }
-              var8_ref_cg.field_Ob = qj.monotonicTimeMillis(-26572) - (long)((PacketBuffer) ((Object) var1)).readInt(-10674);
+              var8_ref_cg.field_Ob = TimeAndInputHelpers.monotonicTimeMillis(-26572) - (long)((PacketBuffer) ((Object) var1)).readInt(-10674);
               var8_ref_cg.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(31);
               stackIn_51_0 = var8_ref_cg;
@@ -460,10 +460,10 @@ final class HuffmanCodec {
             if (6 == var2) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -96);
-              var24 = fn.lookupEntry(var3_longLifetime1, 111);
+              var24 = GameListHelpers.lookupEntry(var3_longLifetime1, 111);
               if (var24 != null) {
                 if (var24.field_Kb) {
-                  oe.field_b = oe.field_b - 1;
+                  CalendarHelpers.field_b = CalendarHelpers.field_b - 1;
                   var24.field_Kb = false;
                 }
                 if (var5 != 0) {
@@ -483,24 +483,24 @@ final class HuffmanCodec {
                 var33.unlinkSecondary((byte) 88);
                 var33 = (SocialListEntry) (LinkButtonPainter.field_j.next(0));
               }
-              oe.field_b = 0;
+              CalendarHelpers.field_b = 0;
               return;
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-              var4 = (LobbyGameEntry) (nk.field_q.get((long)var3, (byte) -93));
+              var4 = (LobbyGameEntry) (ListRequest.field_q.get((long)var3, (byte) -93));
               if (var4 == null) {
-                var4 = new LobbyGameEntry(vf.field_l);
-                nk.field_q.put(var4, (long)var3, (byte) 116);
+                var4 = new LobbyGameEntry(RawDataNode.field_l);
+                ListRequest.field_q.put(var4, (long)var3, (byte) 116);
               }
               SceneScrollPane.readGameEntry(var1, var4, true, 2);
-              cb.insertSortedGame(var4, 67);
+              GameListSortHelpers.insertSortedGame(var4, 67);
               return;
             }
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 105);
-              var15 = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime4, (byte) -70));
+              var15 = (LobbyGameEntry) (ListRequest.field_q.get((long)var3Lifetime4, (byte) -70));
               var31 = var15;
               if (var15 == null) {
                 return;
@@ -528,7 +528,7 @@ final class HuffmanCodec {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -107);
-                var17_ref = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime5, (byte) -105));
+                var17_ref = (LobbyGameEntry) (ListRequest.field_q.get((long)var3Lifetime5, (byte) -105));
                 if (var17_ref != null) {
                   var17_ref.field_Nb = false;
                   var13 = var17_ref;
@@ -538,7 +538,7 @@ final class HuffmanCodec {
                     var17_ref.field_bc = TextLine.field_i;
                   }
                   var13.field_Hb = false;
-                  cb.insertSortedGame(var17_ref, 25);
+                  GameListSortHelpers.insertSortedGame(var17_ref, 25);
                 }
                 return;
               }
@@ -550,7 +550,7 @@ final class HuffmanCodec {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     var26 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
-                    var7 = vf.lookupSocialEntry(var3_longLifetime2, 8192);
+                    var7 = RawDataNode.lookupSocialEntry(var3_longLifetime2, 8192);
                     if (var7 == null) {
                       var7 = new SocialListEntry(var26, var27, var3_longLifetime2);
                       OptionsDialog.field_qb.put(var7, var3_longLifetime2, (byte) 121);
@@ -564,13 +564,13 @@ final class HuffmanCodec {
                     stackIn_93_0.field_Jb = stackIn_94_1;
                     var7.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -109);
                     var7.field_Bb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
-                    ph.field_a.addLast(var7, -1);
+                    PriceCaptionGlobals.field_a.addLast(var7, -1);
                     return;
                   }
                   if (19 == var2) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -111);
-                    var14 = vf.lookupSocialEntry(var3_longLifetime2, 8192);
+                    var14 = RawDataNode.lookupSocialEntry(var3_longLifetime2, 8192);
                     var28 = var14;
                     if (var14 == null) {
                       return;
@@ -595,16 +595,16 @@ final class HuffmanCodec {
                       PatchEnvelopeSet.field_a = 0L;
                       return;
                     }
-                    PatchEnvelopeSet.field_a = qj.monotonicTimeMillis(-26572) + (long)var3Lifetime5;
+                    PatchEnvelopeSet.field_a = TimeAndInputHelpers.monotonicTimeMillis(-26572) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
-                    sk.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
+                    TooltipHelpers.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
                     DelegatingCanvas.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(121);
                     return;
                   }
                   if (var2 == 23) {
-                    qf.field_a = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
+                    MembershipGlobals.field_a = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     return;
                   }
                   DelegatingCanvas.reportError((Throwable) null, "L1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
@@ -613,7 +613,7 @@ final class HuffmanCodec {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 107);
-                var29 = fn.lookupEntry(var3_longLifetime2, 123);
+                var29 = GameListHelpers.lookupEntry(var3_longLifetime2, 123);
                 if (var29 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
                     var29.field_Eb = TextLine.field_i;
@@ -624,7 +624,7 @@ final class HuffmanCodec {
                   } else {
                     if (var29.field_Kb) {
                       var29.field_Kb = false;
-                      oe.field_b = oe.field_b - 1;
+                      CalendarHelpers.field_b = CalendarHelpers.field_b - 1;
                     }
                   }
                   NodeHashTableIterator.insertSorted(var29, (byte) 15);
@@ -632,11 +632,11 @@ final class HuffmanCodec {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
-              var30 = fn.lookupEntry(var3_longLifetime2Lifetime1, 121);
+              var30 = GameListHelpers.lookupEntry(var3_longLifetime2Lifetime1, 121);
               if (var30 != null) {
                 if (var2 != 14) {
                   if (!var30.field_Kb) {
-                    oe.field_b = oe.field_b + 1;
+                    CalendarHelpers.field_b = CalendarHelpers.field_b + 1;
                     var30.field_Kb = true;
                   }
                 } else {
@@ -647,7 +647,7 @@ final class HuffmanCodec {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-            var19_ref = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime6, (byte) -98));
+            var19_ref = (LobbyGameEntry) (ListRequest.field_q.get((long)var3Lifetime6, (byte) -98));
             var25 = var19_ref;
             if (var25 != null) {
               if (var2 != 11) {
@@ -655,36 +655,36 @@ final class HuffmanCodec {
               } else {
                 var25.field_Hb = true;
               }
-              cb.insertSortedGame(var25, -26);
+              GameListSortHelpers.insertSortedGame(var25, -26);
             }
             return;
           }
-          var3_ref_cg = (SocialListEntry) (ph.field_a.first(12623));
+          var3_ref_cg = (SocialListEntry) (PriceCaptionGlobals.field_a.first(12623));
           while (var3_ref_cg != null) {
             var3_ref_cg.unlink(true);
             var3_ref_cg.unlinkSecondary((byte) 88);
-            var3_ref_cg = (SocialListEntry) (ph.field_a.next(0));
+            var3_ref_cg = (SocialListEntry) (PriceCaptionGlobals.field_a.next(0));
           }
-          var3_ref_cgLifetime1 = (SocialListEntry) (bc.field_c.firstInTraversal(-79));
+          var3_ref_cgLifetime1 = (SocialListEntry) (OptionToggleHelpers.field_c.firstInTraversal(-79));
           while (var3_ref_cgLifetime1 != null) {
             if (var3_ref_cgLifetime1.field_Db ||
               var3_ref_cgLifetime1.field_Kb) {
               if (var3_ref_cgLifetime1.field_Kb) {
-                oe.field_b = oe.field_b - 1;
+                CalendarHelpers.field_b = CalendarHelpers.field_b - 1;
                 var3_ref_cgLifetime1.field_Kb = false;
               }
               var3_ref_cgLifetime1.field_Db = false;
               NodeHashTableIterator.insertSorted(var3_ref_cgLifetime1, (byte) -109);
             }
-            var3_ref_cgLifetime1 = (SocialListEntry) (bc.field_c.nextInTraversal(-1));
+            var3_ref_cgLifetime1 = (SocialListEntry) (OptionToggleHelpers.field_c.nextInTraversal(-1));
           }
           if (var2 == 1 &&
             DirectByteStorage.field_f != null) {
-            va.field_e = DirectByteStorage.field_f.field_ic;
+            GradientPanelPainter.field_e = DirectByteStorage.field_f.field_ic;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-            DirectByteStorage.field_f = new LobbyGameEntry(vf.field_l);
+            DirectByteStorage.field_f = new LobbyGameEntry(RawDataNode.field_l);
             DirectByteStorage.field_f.setSecondaryKey(46, (long)var3Lifetime1);
             SceneScrollPane.readGameEntry(var1, DirectByteStorage.field_f, false, 2);
             PatchEnvelopeSet.field_a = 0L;
@@ -693,10 +693,10 @@ final class HuffmanCodec {
           }
           if (var2 != 2 &&
             var2 != 3) {
-            om.field_x = null;
+            CapsuleBar.field_x = null;
           } else {
-            if (null == om.field_x) {
-              om.field_x = new LobbyGameEntry(vf.field_l);
+            if (null == CapsuleBar.field_x) {
+              CapsuleBar.field_x = new LobbyGameEntry(RawDataNode.field_l);
             }
           }
           if (var2 != 3) {
@@ -709,14 +709,14 @@ final class HuffmanCodec {
           }
           DropTargetWidget.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 32);
           DropTargetWidget.field_N = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 72);
-          for (var3Lifetime3 = 0; var3Lifetime3 < ng.field_D.length; var3Lifetime3++) {
-            ng.field_D[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(6);
+          for (var3Lifetime3 = 0; var3Lifetime3 < TermsNoticePanel.field_D.length; var3Lifetime3++) {
+            TermsNoticePanel.field_D[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "u.D(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "u.D(" + param0 + ')');
         }
     }
 
@@ -728,12 +728,12 @@ final class HuffmanCodec {
           return;
         }
         UiComponent.attachInputListeners(ProxySocketConnector.field_m, (byte) 122);
-        ProxySocketConnector.field_m.closeFrame(fi.field_d, (byte) 67);
+        ProxySocketConnector.field_m.closeFrame(DecimalCheckHelpers.field_d, (byte) 67);
         ProxySocketConnector.field_m = null;
         if (ResizableModalPanel.field_Y != null) {
           ResizableModalPanel.field_Y.restoreWindowedSize(true);
         }
-        on.field_c.requestFocus();
+        LoginMessageTable.field_c.requestFocus();
     }
 
     public static void releaseStatics(int param0) {
@@ -793,7 +793,7 @@ final class HuffmanCodec {
                   if (var11 == var8) {
                     var12 = 1 << -var10 + 32;
                     if ((var12 & var11) == 0) {
-                      var3[var10] = fj.bitOr(var12, var11);
+                      var3[var10] = BitAndSpriteHelpers.bitOr(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[-1 + var10];
@@ -847,7 +847,7 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -890,19 +890,19 @@ final class HuffmanCodec {
             return stackIn_16_0;
           }
           if (param1 == 6) {
-            stackIn_20_0 = CachedArchiveProvider.formatTemplate(120, new String[]{param2}, b.field_b);
+            stackIn_20_0 = CachedArchiveProvider.formatTemplate(120, new String[]{param2}, ThrowableFormatHelpers.field_b);
             return stackIn_20_0;
           }
           if (param1 == 7) {
-            stackIn_23_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, ho.field_d);
+            stackIn_23_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, ServerMessage.field_d);
             return stackIn_23_0;
           }
           if (param1 == 8) {
-            stackIn_26_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, c.field_c);
+            stackIn_26_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, ChatPanelHelpers.field_c);
             return stackIn_26_0;
           }
           if (param1 == 11) {
-            stackIn_30_0 = CachedArchiveProvider.formatTemplate(-92, new String[]{param2}, ui.field_w);
+            stackIn_30_0 = CachedArchiveProvider.formatTemplate(-92, new String[]{param2}, PasswordValidator.field_w);
             return stackIn_30_0;
           }
           if (param1 == 12) {
@@ -915,7 +915,7 @@ final class HuffmanCodec {
           if (param1 != 13) {
             return null;
           }
-          stackIn_40_0 = CachedArchiveProvider.formatTemplate(-123, new String[]{param2}, qo.field_d);
+          stackIn_40_0 = CachedArchiveProvider.formatTemplate(-123, new String[]{param2}, NameHelpers.field_d);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -927,7 +927,7 @@ final class HuffmanCodec {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

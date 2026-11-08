@@ -97,7 +97,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,11 +126,11 @@ final class IntrusiveNodeHashTable {
     final static void openLoginFlow(int param0) {
         if (param0 != -1) {
           field_b = (Sprite[]) null;
-          ff.setLoginContext(true, kf.field_a, (byte) -97, on.field_d);
+          FrameAndQuickChatHelpers.setLoginContext(true, SharedCaptionGlobals.field_a, (byte) -97, LoginMessageTable.field_d);
           NodeHashTable.field_h = true;
           return;
         }
-        ff.setLoginContext(true, kf.field_a, (byte) -97, on.field_d);
+        FrameAndQuickChatHelpers.setLoginContext(true, SharedCaptionGlobals.field_a, (byte) -97, LoginMessageTable.field_d);
         NodeHashTable.field_h = true;
     }
 
@@ -138,16 +138,16 @@ final class IntrusiveNodeHashTable {
         if (param0 != 25117) {
           return -35;
         }
-        return ih.field_b;
+        return PointerOriginHelpers.field_b;
     }
 
     final static void openLobbyRowMenu(int param0, boolean param1, int param2) {
-        wa var3 = null;
+        PlayerInfoPanel var3 = null;
         PlayerActionMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        wa var3Lifetime1;
+        PlayerInfoPanel var3Lifetime1;
         PlayerActionMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
         PlayerActionMenu var4Lifetime2;
@@ -156,44 +156,44 @@ final class IntrusiveNodeHashTable {
         int var6Lifetime1;
         if (param0 != 1) {
           field_j = (String) null;
-          var3 = bj.createLobbyRow(param1, -3, param2);
+          var3 = ButtonMenuDialog.createLobbyRow(param1, -3, param2);
           if (var3 != null) {
-            eo.field_c.populateActions((byte) 72, false);
-            var4 = eo.field_c;
+            PackedShortHelpers.field_c.populateActions((byte) 72, false);
+            var4 = PackedShortHelpers.field_c;
             var5_ref_String = Js5NetworkRequest.field_z;
             var4.field_l.addAction(5, var5_ref_String, (byte) -26);
-            var4Lifetime2 = eo.field_c;
-            var5 = pb.field_h;
-            var6 = ja.field_s;
+            var4Lifetime2 = PackedShortHelpers.field_c;
+            var5 = QueuedResponse.field_h;
+            var6 = ConfirmedNameValidator.field_s;
             var4Lifetime2.field_l.openAt(0, 0, param0 - 29467, var6, var5);
           }
           FrameClock.drawGameListView(param2, param1, false);
           return;
         }
-        var3Lifetime1 = bj.createLobbyRow(param1, -3, param2);
+        var3Lifetime1 = ButtonMenuDialog.createLobbyRow(param1, -3, param2);
         if (var3Lifetime1 != null) {
-          eo.field_c.populateActions((byte) 72, false);
-          var4Lifetime1 = eo.field_c;
+          PackedShortHelpers.field_c.populateActions((byte) 72, false);
+          var4Lifetime1 = PackedShortHelpers.field_c;
           var5_ref_StringLifetime1 = Js5NetworkRequest.field_z;
           var4Lifetime1.field_l.addAction(5, var5_ref_StringLifetime1, (byte) -26);
-          var4Lifetime1Lifetime1 = eo.field_c;
-          var5Lifetime1 = pb.field_h;
-          var6Lifetime1 = ja.field_s;
+          var4Lifetime1Lifetime1 = PackedShortHelpers.field_c;
+          var5Lifetime1 = QueuedResponse.field_h;
+          var6Lifetime1 = ConfirmedNameValidator.field_s;
           var4Lifetime1Lifetime1.field_l.openAt(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
         }
         FrameClock.drawGameListView(param2, param1, false);
     }
 
-    final static ri validateEmailDomain(String param0, int param1) {
+    final static RasterSetupHelpers validateEmailDomain(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ri stackIn_3_0 = null;
-        ri stackIn_7_0 = null;
-        ri stackIn_11_0 = null;
-        ri stackIn_21_0 = null;
-        ri stackIn_25_0 = null;
+        RasterSetupHelpers stackIn_3_0 = null;
+        RasterSetupHelpers stackIn_7_0 = null;
+        RasterSetupHelpers stackIn_11_0 = null;
+        RasterSetupHelpers stackIn_21_0 = null;
+        RasterSetupHelpers stackIn_25_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -203,7 +203,7 @@ final class IntrusiveNodeHashTable {
         try {
           var2_int = param0.length();
           if (param1 != 45) {
-            stackIn_3_0 = (ri) null;
+            stackIn_3_0 = (RasterSetupHelpers) null;
             return stackIn_3_0;
           }
           if (var2_int == 0) {
@@ -211,7 +211,7 @@ final class IntrusiveNodeHashTable {
             return stackIn_7_0;
           }
           if (var2_int > 63) {
-            stackIn_11_0 = b.field_e;
+            stackIn_11_0 = ThrowableFormatHelpers.field_e;
             return stackIn_11_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {
@@ -240,7 +240,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class IntrusiveNodeHashTable {
           }
           node.secondaryKey = key;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mo.I(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mo.I(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -324,43 +324,43 @@ final class IntrusiveNodeHashTable {
     }
 
     final static void serviceAudio(int param0) {
-        fk var1 = null;
+        SoundEffectVoice var1 = null;
         int var2 = 0;
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        fk var1Lifetime1;
+        SoundEffectVoice var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           ReflectionCheckRequest.field_k.serviceOutput();
-          lf.field_a.serviceOutput();
+          ScreenTransitionHelpers.field_a.serviceOutput();
           if (param0 != 200) {
             field_a = (Sprite[]) null;
           }
-          ja.field_u = ja.field_u - 1;
-          if (ja.field_u == 0) {
-            ja.field_u = 200;
-            var1 = (fk) (qn.field_mb.first(12623));
+          ConfirmedNameValidator.field_u = ConfirmedNameValidator.field_u - 1;
+          if (ConfirmedNameValidator.field_u == 0) {
+            ConfirmedNameValidator.field_u = 200;
+            var1 = (SoundEffectVoice) (MessageDialog.field_mb.first(12623));
             while (var1 != null) {
               if (!var1.field_n.isLinked((byte) -93)) {
                 var1.unlink(true);
               }
-              var1 = (fk) (qn.field_mb.next(0));
+              var1 = (SoundEffectVoice) (MessageDialog.field_mb.next(0));
             }
-            if (he.field_f != null) {
-              var1Lifetime1 = (fk) (he.field_f.first(12623));
+            if (StatusMessageHelpers.field_f != null) {
+              var1Lifetime1 = (SoundEffectVoice) (StatusMessageHelpers.field_f.first(12623));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_n.isLinked((byte) -44)) {
                   var1Lifetime1.unlink(true);
                 }
-                var1Lifetime1 = (fk) (he.field_f.next(0));
+                var1Lifetime1 = (SoundEffectVoice) (StatusMessageHelpers.field_f.next(0));
               }
             }
           }
           if (null != GrowableIntList.field_h) {
             stackIn_19_0 = GrowableIntList.field_h.isReady((byte) -8);
             if (!stackIn_19_0) {
-              f.field_g = null;
+              PendingRequest.field_g = null;
               return;
             }
           }
@@ -368,7 +368,7 @@ final class IntrusiveNodeHashTable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "mo.J(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "mo.J(" + param0 + ')');
         }
     }
 

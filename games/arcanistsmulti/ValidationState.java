@@ -32,7 +32,7 @@ final class ValidationState {
             field_e = (Sprite) null;
           }
           var10 = (CharSequence) ((Object) param2);
-          var3_int = wa.countCharacter(param1, var10, (byte) -16);
+          var3_int = PlayerInfoPanel.countCharacter(param1, var10, (byte) -16);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -57,12 +57,12 @@ final class ValidationState {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void processDisconnectQueue(byte param0) {
-        ce var1 = (ce) (lh.field_c.first(12623));
+        GameSelectionHelpers var1 = (GameSelectionHelpers) (ValueListPainter.field_c.first(12623));
         int var2 = -104 % ((-41 - param0) / 40);
         if (var1 == null) {
           ProxySocketConnector.closeActiveConnection(false);
@@ -80,19 +80,19 @@ final class ValidationState {
         if (param0) {
           ValidationState.processDisconnectQueue((byte) -111);
         }
-        if (wh.field_g) {
-          return AccountRegistrationPanel.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
+        if (PaletteSpriteHelpers.field_g) {
+          return AccountRegistrationPanel.field_U.processKey(MainMenuDialog.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
-        if (oj.field_i) {
+        if (LoginMethodHelpers.field_i) {
           return TextTableInitializer.handleQuickChatKey(param3, -14, param2);
         }
-        if (rk.handleLobbyKey((byte) -60, param3, param2)) {
+        if (GradientBarButton.handleLobbyKey((byte) -60, param3, param2)) {
           return true;
         }
         if (AlternateUsernameCredentials.field_p) {
           return false;
         }
-        return ko.drawChatInputLine(-110, param1, param2);
+        return ListEntryMenuHelpers.drawChatInputLine(-110, param1, param2);
     }
 
     public final String toString() {
@@ -119,7 +119,7 @@ final class ValidationState {
         try {
           var7 = (CharSequence) ((Object) param2);
           if (!IntrusiveDeque.isValidDisplayNameText(var7, 0)) {
-            stackIn_3_0 = fn.field_h;
+            stackIn_3_0 = GameListHelpers.field_h;
             return stackIn_3_0;
           }
           if (MouseInputHandler.isCurrentUser(16, param2)) {
@@ -130,11 +130,11 @@ final class ValidationState {
             stackIn_11_0 = FadingModalPanel.field_K;
             return stackIn_11_0;
           }
-          if (sa.isFriend(param2, 320)) {
+          if (ConfirmScene.isFriend(param2, 320)) {
             stackIn_15_0 = CachedArchiveProvider.formatTemplate(119, new String[]{param2}, ValidationHelpWidget.field_bb);
             return stackIn_15_0;
           }
-          if (pc.field_b >= 100) {
+          if (TexturedSpriteHelpers.field_b >= 100) {
             stackIn_19_0 = StrongCacheEntry.field_u;
             return stackIn_19_0;
           }
@@ -142,7 +142,7 @@ final class ValidationState {
             stackIn_23_0 = CachedArchiveProvider.formatTemplate(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
             return stackIn_23_0;
           }
-          var6 = he.field_e;
+          var6 = StatusMessageHelpers.field_e;
           var6.writeOpcode((byte) -67, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
@@ -165,7 +165,7 @@ final class ValidationState {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class ValidationState {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -219,34 +219,34 @@ final class ValidationState {
         if (param2 != 4) {
           field_b = (String) null;
         }
-        if (sk.field_e >= 0) {
-          QuickChatCategoryCache.field_c.field_rb = CachedArchiveProvider.formatTemplate(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
+        if (TooltipHelpers.field_e >= 0) {
+          QuickChatCategoryCache.field_c.field_rb = CachedArchiveProvider.formatTemplate(-14, new String[]{Integer.toString(TooltipHelpers.field_e)}, SoundCache.field_j);
         } else {
           QuickChatCategoryCache.field_c.field_rb = null;
         }
         stackIn_11_0 = BufferedSocket.field_d;
-        stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (om.field_x == null);
+        stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (CapsuleBar.field_x == null);
         ((SceneWidget) (Object) stackIn_11_0).updateInputFullScreen(stackIn_12_1, (byte) 75);
-        stackIn_18_0 = fn.field_e;
-        stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (null == om.field_x);
+        stackIn_18_0 = GameListHelpers.field_e;
+        stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (null == CapsuleBar.field_x);
         ((SceneWidget) (Object) stackIn_18_0).updateInputFullScreen(stackIn_19_1, (byte) 121);
         stackIn_23_0 = LinkButtonPainter.field_h;
         stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
         ((SceneWidget) (Object) stackIn_23_0).updateInputFullScreen(stackIn_24_1, (byte) 115);
-        aj.field_h.field_c.updateTabs((byte) 100);
-        if (0 != ii.field_b.field_U) {
+        GameOptionType.field_h.field_c.updateTabs((byte) 100);
+        if (0 != IconHighlightPainter.field_b.field_U) {
           SceneTextInput.field_Mb = true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (of.field_a.field_U != 0) {
+        if (GradientBarPainter.field_a.field_U != 0) {
           if (!LinkButtonPainter.field_c &&
-            0 >= ah.field_c) {
-            if (2 > qf.field_d) {
+            0 >= AccountFlowHelpers.field_c) {
+            if (2 > MembershipGlobals.field_d) {
               MenuButtonPanel.field_C = true;
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (!ri.field_b[12]) {
+              if (!RasterSetupHelpers.field_b[12]) {
                 MenuButtonPanel.field_C = true;
                 decompiledFrameRemainder0 = false;
               }
@@ -257,13 +257,13 @@ final class ValidationState {
           }
         }
         if (0 != GrowableIntList.field_a.field_U) {
-          if (ao.field_h.length == 1 &&
-            SocketJs5Transport.field_t != ao.field_h[0]) {
-            SocketJs5Transport.field_t = ao.field_h[0];
+          if (LobbyLayoutHelpers.field_h.length == 1 &&
+            SocketJs5Transport.field_t != LobbyLayoutHelpers.field_h[0]) {
+            SocketJs5Transport.field_t = LobbyLayoutHelpers.field_h[0];
           }
           SceneScrollPane.sendBytesPacket(param2 - 13218, 0, BattleUnit.field_m, param3, SocketJs5Transport.field_t, true);
         }
-        if (0 != dm.field_E.field_U) {
+        if (0 != AlphaContainer.field_E.field_U) {
           IntrusiveNode.field_d = false;
         }
     }

@@ -101,11 +101,11 @@ final class SecondaryNodeDeque implements Iterable {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (vm.field_b == null) {
+            if (MouseStateHelpers.field_b == null) {
               stackIn_17_0 = param0.getParameter("settings");
               return stackIn_17_0;
             }
-            stackIn_15_0 = vm.field_b;
+            stackIn_15_0 = MouseStateHelpers.field_b;
             return stackIn_15_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -117,7 +117,7 @@ final class SecondaryNodeDeque implements Iterable {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -129,7 +129,7 @@ final class SecondaryNodeDeque implements Iterable {
     final static void sendTwoByteRequest(int param0, boolean param1) {
         CipherPacketBuffer var2 = null;
         if (param1) {
-          var2 = he.field_e;
+          var2 = StatusMessageHelpers.field_e;
           var2.writeOpcode((byte) -124, param0);
           var2.writeByte(1, (byte) -54);
           var2.writeByte(2, (byte) -47);
@@ -150,7 +150,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,27 +170,27 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final static void closeQuickChat(int param0) {
-        oj.field_i = false;
+        LoginMethodHelpers.field_i = false;
         if (CacheEntry.field_q != null) {
           CacheEntry.field_q.clearTabStates(-111);
         }
         if (param0 != 14) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           SecondaryNodeDeque.getSettingsCookie((java.applet.Applet) null, 114);
-          if (nj.field_c != 0) {
-            ue.clearChatInput(10);
-            ng.field_K = 0;
+          if (NameCheckHelpers.field_c != 0) {
+            BattleStartHelpers.clearChatInput(10);
+            TermsNoticePanel.field_K = 0;
             return;
           }
-          ng.field_K = 0;
+          TermsNoticePanel.field_K = 0;
           return;
         }
-        if (nj.field_c == 0) {
-          ng.field_K = 0;
+        if (NameCheckHelpers.field_c == 0) {
+          TermsNoticePanel.field_K = 0;
           return;
         }
-        ue.clearChatInput(10);
-        ng.field_K = 0;
+        BattleStartHelpers.clearChatInput(10);
+        TermsNoticePanel.field_K = 0;
     }
 
     static {

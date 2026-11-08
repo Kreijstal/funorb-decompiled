@@ -54,7 +54,7 @@ final class ValidationStatusIcon extends TextButton {
           this.field_H = this.field_H + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -82,24 +82,24 @@ final class ValidationStatusIcon extends TextButton {
         var5 = param1 + (this.field_n + (this.field_v >> 1));
         var6 = this.field_j + param3 + (this.field_k >> 1);
         var8 = this.field_T.getValidationState(-116);
-        if (da.field_f == var8) {
+        if (MusicAndClipHelpers.field_f == var8) {
           var16 = ContentTransitionDialog.field_lb[0];
           var9 = var16.field_n << 1;
           var10 = var16.field_w << 1;
           if (ArchiveIndex.field_o == null) {
             ArchiveIndex.field_o = new Sprite(var9, var10);
-            fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
           } else {
             if (ArchiveIndex.field_o.field_q < var9) {
               ArchiveIndex.field_o = new Sprite(var9, var10);
-              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
             } else {
               if (var10 <= ArchiveIndex.field_o.field_y) {
-                fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+                SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
                 SoftwareRasterizer.clear();
               } else {
                 ArchiveIndex.field_o = new Sprite(var9, var10);
-                fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+                SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
               }
             }
           }
@@ -109,7 +109,7 @@ final class ValidationStatusIcon extends TextButton {
           return;
         }
         if (var8 != IsaacCipher.field_c) {
-          if (ra.field_k == var8) {
+          if (DateHelpers.field_k == var8) {
             var14 = ContentTransitionDialog.field_lb[2];
             var14.drawAdditive(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
             return;
@@ -126,18 +126,18 @@ final class ValidationStatusIcon extends TextButton {
         var10Lifetime1 = var15.field_w << 1;
         if (ArchiveIndex.field_o == null) {
           ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-          fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+          SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
         } else {
           if (ArchiveIndex.field_o.field_q < var9Lifetime1) {
             ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-            fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+            SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
           } else {
             if (var10Lifetime1 <= ArchiveIndex.field_o.field_y) {
-              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
               SoftwareRasterizer.clear();
             } else {
               ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
+              SoundEffectVoice.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
             }
           }
         }
@@ -167,7 +167,7 @@ final class ValidationStatusIcon extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class ValidationStatusIcon extends TextButton {
         try {
           this.field_T = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

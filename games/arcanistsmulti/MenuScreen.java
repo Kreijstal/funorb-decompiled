@@ -14,7 +14,7 @@ final class MenuScreen {
     private double field_f;
     static String field_c;
     static String field_a;
-    static on[] field_q;
+    static LoginMessageTable[] field_q;
     private int field_d;
     static String field_o;
     static String field_k;
@@ -33,11 +33,11 @@ final class MenuScreen {
         int var5_intLifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (ArcanistsMulti.i((byte) -120)) {
+          if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -120)) {
             return;
           }
           if (param1 > 0) {
-            SpellProjectile.field_B.drawParagraph(ic.field_b, param2, -48 + param0, 300, 80, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(SpriteTrimHelpers.field_b, param2, -48 + param0, 300, 80, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             param0 += 24;
             param2 += 16;
             SpellProjectile.field_B.drawParagraph(IsaacCipher.field_l + param1, param2, param0, 70, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
@@ -67,7 +67,7 @@ final class MenuScreen {
             }
           } else {
             SpellProjectile.field_B.drawParagraph(TextFieldValidator.field_i, param2, -48 + param0, 300, 80, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
-            SpellProjectile.field_B.drawParagraph(aa.field_j, param2, param0 + 24, 300, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(CommonUiHelpers.field_j, param2, param0 + 24, 300, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
           }
           stackIn_28_0Lifetime1 = 97;
           stackIn_28_1Lifetime1 = (param3 - 56) / 48;
@@ -76,7 +76,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "lc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "lc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -170,12 +170,12 @@ final class MenuScreen {
               return stackIn_67_0;
             }
           }
-          stackIn_69_0 = eo.field_b[this.field_l];
+          stackIn_69_0 = PackedShortHelpers.field_b[this.field_l];
           return stackIn_69_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.V(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -187,12 +187,12 @@ final class MenuScreen {
           if (param0 != 112) {
             field_o = (String) null;
           }
-          stackIn_4_0 = qe.field_p;
+          stackIn_4_0 = QueuedPacket.field_p;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "lc.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "lc.F(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class MenuScreen {
         RuntimeException var2 = null;
         try {
           if (WrappedTextLayout.field_r == 1) {
-            var2_int = dd.field_g;
+            var2_int = PasswordCheckHelpers.field_g;
             if (LabeledField.field_K != var2_int) {
               if (var2_int != -1) {
                 LabeledField.field_K = var2_int;
@@ -218,7 +218,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.C(" + param0 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class MenuScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class MenuScreen {
         int stackIn_94_1Lifetime1;
         var23 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3 = uc.field_a + 96;
+          var3 = QuickChatHelpers.field_a + 96;
           var4 = 64 + ValidatedTextWidget.field_I;
           var5 = var4;
           var6 = 512;
@@ -300,83 +300,83 @@ final class MenuScreen {
           if (var12_int != 0) {
             if (var12_int != 1) {
               if (var12_int == 2) {
-                var2 = lf.field_d;
+                var2 = ScreenTransitionHelpers.field_d;
                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                 var7 = var4;
                 var9 = 45 + ValidatedTextWidget.field_I;
                 var8 = 550;
                 var10 = 230 + ValidatedTextWidget.field_I;
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
-                var2 = cf.field_e;
+                var2 = CredentialParseHelpers.field_e;
                 var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                bb.field_g[0].drawTransparent(var4, var3);
+                LoginLoadingHelpers.field_g[0].drawTransparent(var4, var3);
                 var4 += 40;
-                bb.field_g[12].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[12].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[14].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[14].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[38].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[38].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[43].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[43].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
-                bb.field_g[44].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[44].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[49].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[49].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
-                bb.field_g[51].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[51].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[61].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[61].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
-                bb.field_g[64].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[64].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[96].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[96].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
-                bb.field_g[100].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[100].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[108].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[108].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 += 30;
-                var2 = pm.field_g;
+                var2 = EmailValidationHelpers.field_g;
                 var4 = var7;
                 SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = ClientException.field_h;
                 var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                bb.field_g[1].drawTransparent(var4, var3);
+                LoginLoadingHelpers.field_g[1].drawTransparent(var4, var3);
                 var4 += 40;
-                bb.field_g[8].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[8].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[10].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[10].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
-                bb.field_g[19].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[19].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[26].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[26].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[31].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[31].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[34].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[34].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[45].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[45].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[56].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[56].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[132].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[132].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[97].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[97].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[101].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[101].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[115].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[115].drawHalfSize(var4, var3);
                 var3 -= 20;
                 var4 += 20;
                 var3 += 50;
@@ -386,37 +386,37 @@ final class MenuScreen {
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = Scrollbar.field_S;
                 var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                bb.field_g[7].drawTransparent(var4, var3);
+                LoginLoadingHelpers.field_g[7].drawTransparent(var4, var3);
                 var4 += 40;
-                bb.field_g[20].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[20].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[72].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[72].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[135].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[135].drawHalfSize(var4, var3);
                 var3 += 20;
                 var3 += 30;
-                var2 = oj.field_a;
+                var2 = LoginMethodHelpers.field_a;
                 var4 = var7;
                 SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
-                var2 = mn.field_q;
+                var2 = MatchingFieldValidator.field_q;
                 var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                bb.field_g[3].drawTransparent(var4, var3);
+                LoginLoadingHelpers.field_g[3].drawTransparent(var4, var3);
                 var4 += 40;
-                bb.field_g[13].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[13].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[24].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[24].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[36].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[36].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[98].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[98].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
-                bb.field_g[99].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[99].drawHalfSize(var4, var3);
                 var3 += 20;
-                bb.field_g[114].drawHalfSize(var4, var3);
+                LoginLoadingHelpers.field_g[114].drawHalfSize(var4, var3);
                 var4 += 20;
                 var3 -= 20;
                 var2 = ConnectionState.field_b;
@@ -433,46 +433,46 @@ final class MenuScreen {
                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                   var7 = var4;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
-                  var2 = qj.field_b;
+                  var2 = TimeAndInputHelpers.field_b;
                   var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                  bb.field_g[2].drawTransparent(var4, var3);
+                  LoginLoadingHelpers.field_g[2].drawTransparent(var4, var3);
                   var4 += 40;
-                  bb.field_g[15].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[15].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[25].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[25].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[32].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[32].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[33].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[33].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[35].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[35].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[37].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[37].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[53].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[53].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[54].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[54].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[59].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[59].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[65].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[65].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[66].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[66].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[71].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[71].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[76].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[76].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[77].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[77].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[133].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[133].drawHalfSize(var4, var3);
                   var3 += 20;
                   var2 = JaggrabDownloader.field_i;
                   var3 += 30;
@@ -481,51 +481,51 @@ final class MenuScreen {
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = LoadingTracker.field_f;
                   var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                  bb.field_g[4].drawTransparent(var4, var3);
+                  LoginLoadingHelpers.field_g[4].drawTransparent(var4, var3);
                   var4 += 40;
-                  bb.field_g[5].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[5].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[9].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[9].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[11].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[11].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[17].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[17].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[21].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[21].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[29].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[29].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[39].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[39].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[41].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[41].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[42].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[42].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[52].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[52].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[55].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[55].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[63].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[63].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[67].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[67].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[68].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[68].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[74].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[74].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[106].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[106].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[109].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[109].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[112].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[112].drawHalfSize(var4, var3);
                   var3 += 30;
                   var4 += 20;
                   var2 = DisplayNameForm.field_J;
@@ -534,19 +534,19 @@ final class MenuScreen {
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = MenuButtonPanel.field_P;
                   var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                  bb.field_g[73].drawTransparent(var4, var3);
+                  LoginLoadingHelpers.field_g[73].drawTransparent(var4, var3);
                   var4 += 40;
-                  bb.field_g[22].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[22].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[46].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[46].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[48].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[48].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[60].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[60].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[103].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[103].drawHalfSize(var4, var3);
                   var3 += 20;
                   var3 += 30;
                   var2 = IsaacRandom.field_e;
@@ -556,58 +556,58 @@ final class MenuScreen {
                   SoftwareRasterizer.setClip(0, var3 + 60, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
                   SoftwareRasterizer.fillRoundedRectangleBlended(var9, var3, var8, 105, 25, 16777215, 128);
                   SoftwareRasterizer.resetClip();
-                  var2 = om.field_L;
+                  var2 = CapsuleBar.field_L;
                   var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                  bb.field_g[75].drawTransparent(var4, var3);
+                  LoginLoadingHelpers.field_g[75].drawTransparent(var4, var3);
                   var4 += 40;
-                  bb.field_g[6].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[6].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[16].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[16].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[18].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[18].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[23].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[23].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[27].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[27].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[28].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[28].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[30].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[30].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[40].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[40].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[47].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[47].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[50].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[50].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[57].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[57].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[58].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[58].drawHalfSize(var4, var3);
                   var3 -= 20;
                   var4 += 20;
-                  bb.field_g[62].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[62].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[69].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[69].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[70].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[70].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[102].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[102].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 -= 20;
-                  bb.field_g[104].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[104].drawHalfSize(var4, var3);
                   var3 += 20;
-                  bb.field_g[110].drawHalfSize(var4, var3);
+                  LoginLoadingHelpers.field_g[110].drawHalfSize(var4, var3);
                   var4 += 20;
                   var3 += 30;
                   var2 = SecondaryNodeDeque.field_e;
                   SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                  var2 = jn.field_b;
+                  var2 = LobbyStateHelpers.field_b;
                   SpellProjectile.field_B.drawParagraph(var2, var5, -5 + var3, var6, 60, 0, -1, 1, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   var4 = var7;
                 } else {
@@ -615,17 +615,17 @@ final class MenuScreen {
                     var2 = IntKeyLookup.field_e;
                     var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                     var4 = 320 + (ValidatedTextWidget.field_I - 80);
-                    var3 = -70 + uc.field_a + 240;
+                    var3 = -70 + QuickChatHelpers.field_a + 240;
                     SoftwareRasterizer.drawRectangle(-1 + var4, var3 - 1, 162, 122, 0);
-                    md.field_f[2].drawScaled(var4, -24 + var3, 160, 160);
+                    FlagSumHelpers.field_f[2].drawScaled(var4, -24 + var3, 160, 160);
                     SoftwareRasterizer.drawLine(var4 - 170, var3 + 22, var4 - 10, 22 + var3, 16711680);
                     SoftwareRasterizer.drawLine(var4 + 5, 5 + var3 + 15, -10 + var4, var3 + 22, 16711680);
-                    SpellProjectile.field_B.drawText(ue.field_a, -180 + var4, 20 + var3, 0, 16711680);
+                    SpellProjectile.field_B.drawText(BattleStartHelpers.field_a, -180 + var4, 20 + var3, 0, 16711680);
                     SoftwareRasterizer.drawRoundedRectangle(var4 + 5, var3 + 5, 50, 30, 6, 16711680);
                     SoftwareRasterizer.fillRoundedRectangleBlended(5 + var4, var3 + 5, 50, 30, 6, 16711680, 64);
                     SoftwareRasterizer.drawLine(-170 + var4, -18 + var3, var4 + 40, -18 + var3, 65280);
                     SoftwareRasterizer.drawLine(10 + (var4 + 70), var3, var4 + 40, var3 - 18, 65280);
-                    SpellProjectile.field_B.drawText(lh.field_h, var4 - 180, -20 + var3, 0, 65280);
+                    SpellProjectile.field_B.drawText(ValueListPainter.field_h, var4 - 180, -20 + var3, 0, 65280);
                     SoftwareRasterizer.drawRoundedRectangle(70 + var4, var3, 20, 15, 4, 65280);
                     SoftwareRasterizer.fillRoundedRectangleBlended(70 + var4, var3, 20, 15, 4, 65280, 64);
                     SoftwareRasterizer.drawLine(180 + (160 + var4), var3 + 22, 10 + (160 + var4), var3 + 22, 33023);
@@ -640,14 +640,14 @@ final class MenuScreen {
                     SoftwareRasterizer.fillRoundedRectangleBlended(var4 + 5, 105 + var3, 110, 15, 6, 16711935, 64);
                     SoftwareRasterizer.drawLine(180 + var4 + 160, var3 + 102, var4 + 170, 102 + var3, 16776960);
                     SoftwareRasterizer.drawLine(40 + var4 + 125, 7 + (105 + var3), 170 + var4, 102 + var3, 16776960);
-                    SpellProjectile.field_B.drawRightAlignedText(oa.field_b, 180 + (var4 + 160), 100 + var3, 0, 16776960);
+                    SpellProjectile.field_B.drawRightAlignedText(LoginResultHelpers.field_b, 180 + (var4 + 160), 100 + var3, 0, 16776960);
                     SoftwareRasterizer.drawRoundedRectangle(125 + var4, var3 + 105, 40, 15, 6, 16776960);
                     SoftwareRasterizer.fillRoundedRectangleBlended(125 + var4, var3 + 105, 40, 15, 6, 16776960, 64);
                     var3 += 140;
                     var2 = QuickChatPhrase.field_m;
                     var4 = ValidatedTextWidget.field_I + 64;
                     var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var4, var3, 512, 128, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                    var2 = tn.field_Kb;
+                    var2 = SceneTabStrip.field_Kb;
                     var3 += 16;
                     var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var4, var3, 192, 128, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                     var12_int = 0;
@@ -664,31 +664,31 @@ final class MenuScreen {
                     var20.makeRasterTarget();
                     SoftwareRasterizer.fillCircle(64, 64, 32, 7829367);
                     QuickChatPhraseCache.fillCircleMasked(32, (byte) 62, 128, 64, 64);
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var17 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 118, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var4 + var16);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var17 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 118, QuickChatCategoryCache.field_d[1], QueuedPacket.field_i[MenuInputState.field_c[3]], var4 + var16);
                     if (MenuInputState.field_c[0] != 46) {
-                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var13_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -123, QuickChatCategoryCache.field_d[1], fn.field_b[0], var4 + var12_int);
+                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var13_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -123, QuickChatCategoryCache.field_d[1], GameListHelpers.field_b[0], var4 + var12_int);
                     }
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 109, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var4);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 109, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var4);
                     var3 -= 8;
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 47, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var4);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 47, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var4);
                     var3 += 16;
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var4);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var4);
                     if (MenuInputState.field_c[5] != 53 &&
                       MenuInputState.field_c[5] != 55) {
-                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -90, QuickChatCategoryCache.field_d[1], bo.field_a[0], var4);
+                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -90, QuickChatCategoryCache.field_d[1], NameErrorHelpers.field_a[0], var4);
                     }
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var4);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var4);
                     var3 += 8;
                     var3 += 16;
                     if (46 != MenuInputState.field_c[0]) {
-                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var15, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -117, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var14 + var4);
+                      TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var15, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -117, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var14 + var4);
                     }
-                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var19, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 20, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var4 + var18);
-                    ce.field_m.makeRasterTarget(true);
+                    TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var19, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 20, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var4 + var18);
+                    GameSelectionHelpers.field_m.makeRasterTarget(true);
                     var21 = 320 + ValidatedTextWidget.field_I;
-                    var22 = 350 + uc.field_a;
+                    var22 = 350 + QuickChatHelpers.field_a;
                     var20.drawHalfSize(var21, var22);
                     SoftwareRasterizer.setClip(var21, 46 + var22, 64 + var21, EmailLoginCredentials.field_j);
                     TextLayout.field_d.draw(var21 - 32, -92 + (10 + var22));
@@ -697,22 +697,22 @@ final class MenuScreen {
                   } else {
                     if (var12_int != 5) {
                       if (var12_int == 6) {
-                        var2 = gl.field_a;
+                        var2 = NineSliceHelpers.field_a;
                         var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                        var2 = hl.field_i;
+                        var2 = BufferedMessage.field_i;
                         var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 8);
                         var2 = GrowableIntList.field_f;
                         var3 = var3 + (8 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
-                        var2 = nm.field_d;
+                        var2 = UrlHelpers.field_d;
                         var3 = var3 + (16 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5 + 32, var3, var6 - 64, 480, 16777215, 0, 1, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
-                        var2 = va.field_a;
+                        var2 = GradientPanelPainter.field_a;
                         var3 = var3 + (8 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
                       } else {
                         if (var12_int == 7) {
-                          var2 = db.field_d;
-                          if (ArcanistsMulti.i((byte) -99)) {
+                          var2 = Crc32Helpers.field_d;
+                          if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -99)) {
                             var12_int = 74 + ValidatedTextWidget.field_I + CachedArchiveProvider.field_t.textWidth(var2);
-                            ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
+                            IconHighlightPainter.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
                             SpellProjectile.field_B.drawText(SceneWidget.field_M, var12_int + 40, (SpellProjectile.field_B.field_C + CachedArchiveProvider.field_t.field_C) / 2 + var3, 16711680, -1);
                           }
                           var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
@@ -725,37 +725,37 @@ final class MenuScreen {
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
                           var3 = var3 + (2 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
-                          var2 = ik.field_a;
+                          var2 = LobbyBuilderHelpers.field_a;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                          var2 = CachedArchiveProvider.formatTemplate(-51, new String[]{Integer.toString(var11[2], 16)}, ra.field_b);
+                          var2 = CachedArchiveProvider.formatTemplate(-51, new String[]{Integer.toString(var11[2], 16)}, DateHelpers.field_b);
                           var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = field_p;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                          var2 = CachedArchiveProvider.formatTemplate(-116, new String[]{Integer.toString(var11[3], 16)}, hm.field_a);
+                          var2 = CachedArchiveProvider.formatTemplate(-116, new String[]{Integer.toString(var11[3], 16)}, Cp1252Helpers.field_a);
                           var3 = var3 + (2 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                           var2 = IterableNodeHashTable.field_b;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                          var2 = CachedArchiveProvider.formatTemplate(-47, new String[]{Integer.toString(var11[4], 16)}, pc.field_a);
+                          var2 = CachedArchiveProvider.formatTemplate(-47, new String[]{Integer.toString(var11[4], 16)}, TexturedSpriteHelpers.field_a);
                           var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 2);
                           var2 = ScrollContainer.field_M;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-120, new String[]{Integer.toString(var11[5], 16)}, NodeHashTable.field_b);
                           var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
-                          var2 = pb.field_l;
+                          var2 = QueuedResponse.field_l;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                           var2 = CachedArchiveProvider.formatTemplate(122, new String[]{Integer.toString(var11[6], 16)}, SocketConnector.field_f);
                           var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = CanvasRasterBuffer.field_f;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                          var2 = CachedArchiveProvider.formatTemplate(-71, new String[]{Integer.toString(var11[7], 16)}, ra.field_e);
+                          var2 = CachedArchiveProvider.formatTemplate(-71, new String[]{Integer.toString(var11[7], 16)}, DateHelpers.field_e);
                           var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 2);
                           var2 = MusicPatch.field_i;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                          var2 = CachedArchiveProvider.formatTemplate(113, new String[]{Integer.toString(var11[8], 16)}, fo.field_i);
+                          var2 = CachedArchiveProvider.formatTemplate(113, new String[]{Integer.toString(var11[8], 16)}, MessageCaptionGlobals.field_i);
                           var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
-                          var2 = mf.field_e;
+                          var2 = EffectVolumeHelpers.field_e;
                           SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                          var2 = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var11[9], 16)}, ie.field_Rb);
+                          var2 = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var11[9], 16)}, StatusDialog.field_Rb);
                           var3 = var3 + (6 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                           var2 = IntrusiveDeque.field_a;
                           var3 = var3 + (8 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
@@ -772,7 +772,7 @@ final class MenuScreen {
                             this.drawPlayerTile(var3, var4, (byte) -77, 0);
                             var2 = OptionsDialog.field_pb;
                             SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                            bb.field_g[5].drawTransparent(var4, var3 + 80);
+                            LoginLoadingHelpers.field_g[5].drawTransparent(var4, var3 + 80);
                           } else {
                             if (var12_int != 9) {
                               if (var12_int == 10) {
@@ -781,34 +781,34 @@ final class MenuScreen {
                                 this.drawPlayerTile(var3, var4, (byte) -47, 4);
                                 var2 = ValidationHelpWidget.field_S;
                                 SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                                bb.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
+                                LoginLoadingHelpers.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
                                 var2 = SingleChildContainer.field_A;
                                 var3 += 128;
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.drawPlayerTile(var3, var4, (byte) -86, 5);
-                                var2 = lm.field_d;
+                                var2 = GameDetailsRenderer.field_d;
                                 SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                                bb.field_g[55].drawTransparent(var4, 80 + var3);
+                                LoginLoadingHelpers.field_g[55].drawTransparent(var4, 80 + var3);
                               } else {
                                 if (var12_int == 11) {
-                                  var2 = ck.field_c;
+                                  var2 = MusicVolumeHelpers.field_c;
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.drawPlayerTile(var3, var4, (byte) -36, 6);
-                                  var2 = qj.field_f;
+                                  var2 = TimeAndInputHelpers.field_f;
                                   SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
-                                  bb.field_g[67].drawTransparent(var4, var3 + 80);
+                                  LoginLoadingHelpers.field_g[67].drawTransparent(var4, var3 + 80);
                                   var3 += 128;
-                                  var2 = b.field_c;
+                                  var2 = ThrowableFormatHelpers.field_c;
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.drawPlayerTile(var3, var4, (byte) -42, 7);
                                   var2 = ClipState.field_l;
                                   SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                                  bb.field_g[85].drawTransparent(var4, 120 + (-40 + var3));
+                                  LoginLoadingHelpers.field_g[85].drawTransparent(var4, 120 + (-40 + var3));
                                 } else {
                                   if (12 == var12_int) {
-                                    var2 = lo.field_t;
+                                    var2 = AgeValidator.field_t;
                                     var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                                    var2 = ao.field_b;
+                                    var2 = LobbyLayoutHelpers.field_b;
                                     var12 = new String[50];
                                     var13 = new int[]{480};
                                     var14 = SpellProjectile.field_B.wrapText(var2, var13, var12);
@@ -821,7 +821,7 @@ final class MenuScreen {
                                       stackIn_94_1 = 2;
                                       if (stackIn_94_0 > stackIn_94_1 &&
                                         45 == var12[var24].charAt(1)) {
-                                        gj.field_f[0].draw(-2 + var4, -12 + var3);
+                                        ScreenSwitchHelpers.field_f[0].draw(-2 + var4, -12 + var3);
                                       }
                                       var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                       var24++;
@@ -830,28 +830,28 @@ final class MenuScreen {
                                 }
                               }
                             } else {
-                              var2 = rk.field_J;
+                              var2 = GradientBarButton.field_J;
                               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                               this.drawPlayerTile(var3, var4, (byte) -49, 1);
-                              var2 = ah.field_e;
+                              var2 = AccountFlowHelpers.field_e;
                               SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                              bb.field_g[17].drawTransparent(var4, var3 + 80);
+                              LoginLoadingHelpers.field_g[17].drawTransparent(var4, var3 + 80);
                               var2 = JaggrabDownloader.field_o;
                               var3 += 128;
                               var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                               this.drawPlayerTile(var3, var4, (byte) -71, 2);
                               var2 = SceneScrollPane.field_Bb;
                               SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
-                              bb.field_g[42].drawTransparent(var4, 80 + var3);
+                              LoginLoadingHelpers.field_g[42].drawTransparent(var4, 80 + var3);
                             }
                           }
                         }
                       }
                     } else {
-                      var2 = i.field_h;
-                      if (ArcanistsMulti.i((byte) -92)) {
+                      var2 = ChatPanel.field_h;
+                      if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -92)) {
                         var12_int = ValidatedTextWidget.field_I + (74 + CachedArchiveProvider.field_t.textWidth(var2));
-                        ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
+                        IconHighlightPainter.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
                         SpellProjectile.field_B.drawText(QuickChatPhrase.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + SpellProjectile.field_B.field_C) / 2, 16711680, -1);
                       }
                       var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
@@ -863,8 +863,8 @@ final class MenuScreen {
                       var4 += 320;
                       var3 += 16;
                       SoftwareRasterizer.setClip(0, var3, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
-                      fe.field_g.drawTransparent(ValidatedTextWidget.field_I + 43, var3 - 32);
-                      fe.field_g.drawTransparent(106 + ValidatedTextWidget.field_I, -32 + var3);
+                      PendingTask.field_g.drawTransparent(ValidatedTextWidget.field_I + 43, var3 - 32);
+                      PendingTask.field_g.drawTransparent(106 + ValidatedTextWidget.field_I, -32 + var3);
                       SoftwareRasterizer.resetClip();
                       DualLinkDeque.field_b[7].draw(var4, -2 + var3);
                       SpellProjectile.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
@@ -877,7 +877,7 @@ final class MenuScreen {
                       var3 = var3 + (16 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 312, 480, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                       var3 += 48;
                       var3 += 24;
-                      var2 = fo.field_j;
+                      var2 = MessageCaptionGlobals.field_j;
                       var3 -= 32;
                       WhirlpoolHasher.field_o[9].drawHalfSize(64 + ValidatedTextWidget.field_I, var3);
                       WhirlpoolHasher.field_o[2].drawHalfSize(ValidatedTextWidget.field_I + 64, var3);
@@ -889,37 +889,37 @@ final class MenuScreen {
                 }
               }
             } else {
-              var2 = fj.field_g;
+              var2 = BitAndSpriteHelpers.field_g;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-              var2 = md.field_e;
+              var2 = FlagSumHelpers.field_e;
               var3 = var3 + (16 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
               var2 = UiComponent.field_l;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-              var2 = cc.field_b;
-              var2 = CachedArchiveProvider.formatTemplate(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
+              var2 = AngleHelpers.field_b;
+              var2 = CachedArchiveProvider.formatTemplate(118, new String[]{GameListHelpers.field_g[84], GameListHelpers.field_g[85], GameListHelpers.field_g[82], GameListHelpers.field_g[81]}, var2);
               var3 = var3 + (16 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
               var2 = CredentialKind.field_e;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-              var2 = vf.field_p;
-              var2 = CachedArchiveProvider.formatTemplate(124, new String[]{fn.field_g[69], fn.field_g[ao.field_f]}, var2);
+              var2 = RawDataNode.field_p;
+              var2 = CachedArchiveProvider.formatTemplate(124, new String[]{GameListHelpers.field_g[69], GameListHelpers.field_g[LobbyLayoutHelpers.field_f]}, var2);
               var3 = var3 + (32 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
             }
           } else {
-            var2 = wm.field_J;
+            var2 = PaddedContainer.field_J;
             var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 16);
-            var2 = nj.field_j;
+            var2 = NameCheckHelpers.field_j;
             var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 16);
             var2 = GameApplet.field_u;
             var3 = var3 + (16 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
-            if (ArcanistsMulti.i((byte) -121)) {
-              stackIn_48_0 = cb.field_d;
+            if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -121)) {
+              stackIn_48_0 = GameListSortHelpers.field_d;
             } else {
               stackIn_48_0 = BirthDateEntryPanel.field_J;
             }
             var2 = stackIn_48_0;
-            var2 = CachedArchiveProvider.formatTemplate(119, new String[]{ie.field_Lb, KeyboardInputHandler.field_l}, var2);
+            var2 = CachedArchiveProvider.formatTemplate(119, new String[]{StatusDialog.field_Lb, KeyboardInputHandler.field_l}, var2);
             var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 16);
-            var2 = fd.field_c;
+            var2 = CookieHelpers.field_c;
             var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 32);
           }
           stackIn_94_0Lifetime1 = param0;
@@ -927,12 +927,12 @@ final class MenuScreen {
           if (stackIn_94_0Lifetime1 < stackIn_94_1Lifetime1) {
             discarded$0 = this.isItemUnlocked(-45, -88);
           }
-          CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.formatPageNumber(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
+          CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.formatPageNumber(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 112, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.GA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "lc.GA(" + param0 + ')');
         }
     }
 
@@ -944,15 +944,15 @@ final class MenuScreen {
             MenuScreen.releaseStatics(true);
           }
           SoundCache.field_c = param1;
-          mf.field_c = param0;
-          if (null != pm.field_e) {
-            pm.field_e.recentrePanels(-120, param1, param0);
+          EffectVolumeHelpers.field_c = param0;
+          if (null != EmailValidationHelpers.field_e) {
+            EmailValidationHelpers.field_e.recentrePanels(-120, param1, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -971,13 +971,13 @@ final class MenuScreen {
           if (param2 >= -113) {
             field_r = (String) null;
           }
-          dd.field_g = -1;
-          oj.field_e = SpriteState.field_v;
+          PasswordCheckHelpers.field_g = -1;
+          LoginMethodHelpers.field_e = SpriteState.field_v;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "lc.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "lc.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1135,7 +1135,7 @@ final class MenuScreen {
                 }
                 case 7: {
                     try {
-                        if (!this.drawButtonBox(stackIn_7_1 != 0, 65, (byte) -127, true, 32 + (ValidatedTextWidget.field_I + 86 * var4_int), 65, uc.field_a + 104)) {
+                        if (!this.drawButtonBox(stackIn_7_1 != 0, 65, (byte) -127, true, 32 + (ValidatedTextWidget.field_I + 86 * var4_int), 65, QuickChatHelpers.field_a + 104)) {
                             /* Inlined CFG state: 9. */
                             {
                                 stackIn_10_0 = 0;
@@ -1162,7 +1162,7 @@ final class MenuScreen {
                 case 10: {
                     try {
                         var5 = stackIn_10_0;
-                        mc.field_a[var4_int].drawTransparent(86 * var4_int + (32 + ValidatedTextWidget.field_I), 104 + uc.field_a);
+                        QuickChatInputHelpers.field_a[var4_int].drawTransparent(86 * var4_int + (32 + ValidatedTextWidget.field_I), 104 + QuickChatHelpers.field_a);
                         if (var5 == 0) {
                             statePc = 17;
                         } else {
@@ -1185,12 +1185,12 @@ final class MenuScreen {
                             {
                                 this.field_m = 7;
                                 var6 = -128 + (var4_int * 86 + 32 + ValidatedTextWidget.field_I);
-                                var7 = 103 + (uc.field_a - 16);
-                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, var7 - 1, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
-                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6 - 1, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
-                                SpellProjectile.field_B.drawParagraph(nj.field_l, 1 + var6, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
-                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, 1 + var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
-                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, var7, 192, 192, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                var7 = 103 + (QuickChatHelpers.field_a - 16);
+                                SpellProjectile.field_B.drawParagraph(NameCheckHelpers.field_l, var6, var7 - 1, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(NameCheckHelpers.field_l, var6 - 1, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(NameCheckHelpers.field_l, 1 + var6, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(NameCheckHelpers.field_l, var6, 1 + var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(NameCheckHelpers.field_l, var6, var7, 192, 192, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C);
                                 statePc = 17;
                                 continue scanLoop1;
                             }
@@ -1297,7 +1297,7 @@ final class MenuScreen {
                         if (this.field_h == 3) {
                             /* Inlined CFG state: 29. */
                             {
-                                var4 = qe.field_i;
+                                var4 = QueuedPacket.field_i;
                                 statePc = 30;
                                 continue scanLoop1;
                             }
@@ -1366,8 +1366,8 @@ final class MenuScreen {
                 }
                 case 36: {
                     try {
-                        discarded$0 = this.drawButtonBox(true, 180, (byte) -106, false, ValidatedTextWidget.field_I + 32, 114, 182 + uc.field_a);
-                        var3 = 210 + uc.field_a;
+                        discarded$0 = this.drawButtonBox(true, 180, (byte) -106, false, ValidatedTextWidget.field_I + 32, 114, 182 + QuickChatHelpers.field_a);
+                        var3 = 210 + QuickChatHelpers.field_a;
                         var2_int = ValidatedTextWidget.field_I + 90;
                         var13 = -1;
                         var14 = 0;
@@ -1397,7 +1397,7 @@ final class MenuScreen {
                             {
                                 stackIn_51_0 = 12;
                                 stackIn_39_0 = stackIn_51_0;
-                                stackIn_51_1 = b.field_f[var14];
+                                stackIn_51_1 = ThrowableFormatHelpers.field_f[var14];
                                 stackIn_39_1 = stackIn_51_1;
                                 if (false) {
                                     statePc = 51;
@@ -1415,7 +1415,7 @@ final class MenuScreen {
                                                 {
                                                 }
                                                 {
-                                                    if (0 != b.field_f[var14] % 12) {
+                                                    if (0 != ThrowableFormatHelpers.field_f[var14] % 12) {
                                                         statePc = 49;
                                                         continue scanLoop1;
                                                     } else {
@@ -1425,7 +1425,7 @@ final class MenuScreen {
                                                             {
                                                             }
                                                             {
-                                                                if (b.field_f[11 + var14] != 11 + b.field_f[var14]) {
+                                                                if (ThrowableFormatHelpers.field_f[11 + var14] != 11 + ThrowableFormatHelpers.field_f[var14]) {
                                                                     statePc = 49;
                                                                 } else {
                                                                     statePc = 46;
@@ -1456,7 +1456,7 @@ final class MenuScreen {
                         {
                         }
                         {
-                            var13 = b.field_f[var14] / 12 - 1;
+                            var13 = ThrowableFormatHelpers.field_f[var14] / 12 - 1;
                             statePc = 49;
                             continue scanLoop1;
                         }
@@ -1528,7 +1528,7 @@ final class MenuScreen {
                 case 55: {
                     try {
                         var15 = 1;
-                        var16_ref = lf.field_c;
+                        var16_ref = ScreenTransitionHelpers.field_c;
                         var14 = 1;
                         statePc = 56;
                         continue scanLoop1;
@@ -1598,7 +1598,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 63. */
                             {
-                                var16_ref = fo.field_g;
+                                var16_ref = MessageCaptionGlobals.field_g;
                                 statePc = 64;
                                 continue scanLoop1;
                             }
@@ -1617,7 +1617,7 @@ final class MenuScreen {
                         if (var13 == 4) {
                             /* Inlined CFG state: 67. */
                             {
-                                var16_ref = fc.field_e;
+                                var16_ref = SpriteDecodeHelpers.field_e;
                                 var14 = 1;
                                 statePc = 68;
                                 continue scanLoop1;
@@ -1693,7 +1693,7 @@ final class MenuScreen {
                         if (7 == var13) {
                             /* Inlined CFG state: 77. */
                             {
-                                var16_ref = eo.field_a;
+                                var16_ref = PackedShortHelpers.field_a;
                                 statePc = 78;
                                 continue scanLoop1;
                             }
@@ -1723,7 +1723,7 @@ final class MenuScreen {
                             {
                                 var15 = 1;
                                 var14 = 1;
-                                var16_ref = ae.field_a;
+                                var16_ref = LobbyRequestHelpers.field_a;
                                 statePc = 80;
                                 continue scanLoop1;
                             }
@@ -1960,18 +1960,18 @@ final class MenuScreen {
                         var2_int += 20;
                         var3 += 40;
                         var3 = var3 - var29;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var20 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -82, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[5]), var19 + var2_int);
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var22, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -105, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[4]), var21 + var2_int);
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[3]), var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var20 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -82, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[5]), var19 + var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var22, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -105, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[4]), var21 + var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[3]), var2_int);
                         var3 -= 3;
                         var3 -= 6;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -77, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[2]), var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -77, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[2]), var2_int);
                         var3 += 6;
                         var3 -= 6;
                         var3 += 3;
                         var3 += 6;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 51, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[1]), var2_int + var25);
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var24 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 37, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[0]), var23 + var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 51, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[1]), var2_int + var25);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var24 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 37, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[0]), var23 + var2_int);
                         var2_int = var17_int;
                         var3 = var18_int;
                         statePc = 111;
@@ -1990,8 +1990,8 @@ final class MenuScreen {
                         if (var17_int > 8) {
                             /* Inlined CFG state: 105. */
                             {
-                                var17_int = fo.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
-                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w - (-32 + (int)(Math.sin(this.field_f) * 4.0)), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 100, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
+                                var17_int = MessageCaptionGlobals.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w - (-32 + (int)(Math.sin(this.field_f) * 4.0)), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 100, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
                                 statePc = 111;
                                 continue scanLoop1;
                             }
@@ -2019,8 +2019,8 @@ final class MenuScreen {
                         if (var17_int > 12) {
                             /* Inlined CFG state: 110. */
                             {
-                                var17_int = fo.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
-                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], 64 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 117, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
+                                var17_int = MessageCaptionGlobals.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], 64 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 117, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
                                 statePc = 111;
                                 continue scanLoop1;
                             }
@@ -2238,7 +2238,7 @@ final class MenuScreen {
                 }
                 case 132: {
                     try {
-                        var16 = -qe.field_i[MenuInputState.field_c[3]].field_o - qe.field_i[MenuInputState.field_c[3]].field_y + qe.field_i[MenuInputState.field_c[3]].field_w;
+                        var16 = -QueuedPacket.field_i[MenuInputState.field_c[3]].field_o - QueuedPacket.field_i[MenuInputState.field_c[3]].field_y + QueuedPacket.field_i[MenuInputState.field_c[3]].field_w;
                         if (var16 < var12) {
                             /* Inlined CFG state: 135. */
                             {
@@ -2284,11 +2284,11 @@ final class MenuScreen {
                         if (var18_int >= 6) {
                             /* Inlined CFG state: 140. */
                             {
-                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var12 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -121, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var2_int + var10);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var12 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -121, QuickChatCategoryCache.field_d[1], QueuedPacket.field_i[MenuInputState.field_c[3]], var2_int + var10);
                                 if (46 != MenuInputState.field_c[0]) {
                                     /* Inlined CFG state: 143. */
                                     {
-                                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var8 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 105, QuickChatCategoryCache.field_d[1], fn.field_b[0], var6 + var2_int);
+                                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var8 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 105, QuickChatCategoryCache.field_d[1], GameListHelpers.field_b[0], var6 + var2_int);
                                         statePc = 144;
                                         continue scanLoop1;
                                     }
@@ -2320,12 +2320,12 @@ final class MenuScreen {
                 }
                 case 144: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var2_int);
                         var3 -= 8;
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var2_int);
                         var3 += 16;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var2_int);
                         if (MenuInputState.field_c[5] == 53) {
                             statePc = 150;
                             continue scanLoop1;
@@ -2335,7 +2335,7 @@ final class MenuScreen {
                                 if (MenuInputState.field_c[5] != 55) {
                                     /* Inlined CFG state: 149. */
                                     {
-                                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], bo.field_a[0], var2_int);
+                                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], NameErrorHelpers.field_a[0], var2_int);
                                         statePc = 150;
                                         continue scanLoop1;
                                     }
@@ -2360,7 +2360,7 @@ final class MenuScreen {
                 case 150: {
                     try {
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -109, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -109, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var2_int);
                         var3 += 8;
                         var3 += 16;
                         if (46 == MenuInputState.field_c[0]) {
@@ -2369,7 +2369,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 151. */
                             {
-                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var7, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var2_int + var5);
+                                TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var7, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var2_int + var5);
                                 statePc = 153;
                                 continue scanLoop1;
                             }
@@ -2385,7 +2385,7 @@ final class MenuScreen {
                 }
                 case 153: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var11 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var2_int);
+                        TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var11 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var2_int);
                         var18_int = 0;
                         statePc = 154;
                         continue scanLoop1;
@@ -2408,10 +2408,10 @@ final class MenuScreen {
                                     {
                                         /* Sequential CFG blocks: 174, 176. */
                                         {
-                                            SceneWidgetNode.field_q.drawSilhouette(225 + ValidatedTextWidget.field_I, 182 + uc.field_a, 0);
+                                            SceneWidgetNode.field_q.drawSilhouette(225 + ValidatedTextWidget.field_I, 182 + QuickChatHelpers.field_a, 0);
                                         }
                                         {
-                                            SceneWidgetNode.field_q.drawAlpha(225 + ValidatedTextWidget.field_I, uc.field_a + 182, 128);
+                                            SceneWidgetNode.field_q.drawAlpha(225 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 182, 128);
                                             statePc = 177;
                                             continue scanLoop1;
                                         }
@@ -2439,7 +2439,7 @@ final class MenuScreen {
                                                             {
                                                             }
                                                             {
-                                                                if (~MenuButtonPanel.field_I > ~(uc.field_a + 182)) {
+                                                                if (~MenuButtonPanel.field_I > ~(QuickChatHelpers.field_a + 182)) {
                                                                     statePc = 172;
                                                                 } else {
                                                                     statePc = 165;
@@ -2478,7 +2478,7 @@ final class MenuScreen {
                         {
                         }
                         {
-                            if (~MenuButtonPanel.field_I <= ~(SceneWidgetNode.field_q.field_w + (uc.field_a + 182))) {
+                            if (~MenuButtonPanel.field_I <= ~(SceneWidgetNode.field_q.field_w + (QuickChatHelpers.field_a + 182))) {
                                 statePc = 172;
                                 continue scanLoop1;
                             } else {
@@ -2488,8 +2488,8 @@ final class MenuScreen {
                                     {
                                     }
                                     {
-                                        SceneWidgetNode.field_q.drawSilhouette(225 + ValidatedTextWidget.field_I, 182 + uc.field_a, 16777215);
-                                        SceneWidgetNode.field_q.drawAlpha(ValidatedTextWidget.field_I + 225, 182 + uc.field_a, 128);
+                                        SceneWidgetNode.field_q.drawSilhouette(225 + ValidatedTextWidget.field_I, 182 + QuickChatHelpers.field_a, 16777215);
+                                        SceneWidgetNode.field_q.drawAlpha(ValidatedTextWidget.field_I + 225, 182 + QuickChatHelpers.field_a, 128);
                                         this.field_i = -3;
                                         this.field_m = 6;
                                         statePc = 177;
@@ -2509,7 +2509,7 @@ final class MenuScreen {
                 }
                 case 172: {
                     try {
-                        SceneWidgetNode.field_q.drawTransparent(225 + ValidatedTextWidget.field_I, uc.field_a + 182);
+                        SceneWidgetNode.field_q.drawTransparent(225 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 182);
                         statePc = 177;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_172) {
@@ -2523,18 +2523,18 @@ final class MenuScreen {
                 }
                 case 177: {
                     try {
-                        if (this.field_n >= -27 + mb.getKeyCodeForSlot(this.field_h, 813231272)) {
+                        if (this.field_n >= -27 + DropdownItemList.getKeyCodeForSlot(this.field_h, 813231272)) {
                             /* Inlined CFG state: 189. */
                             {
-                                this.field_b.drawSilhouette(590 + ValidatedTextWidget.field_I, uc.field_a + 182, 0);
-                                this.field_b.drawAlpha(590 + ValidatedTextWidget.field_I, 182 + uc.field_a, 128);
+                                this.field_b.drawSilhouette(590 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 182, 0);
+                                this.field_b.drawAlpha(590 + ValidatedTextWidget.field_I, 182 + QuickChatHelpers.field_a, 128);
                                 statePc = 191;
                                 continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 178. */
                             {
-                                if (SpellProjectile.isPointerInRect(SceneWidgetNode.field_q.field_w, uc.field_a + 182, SceneWidgetNode.field_q.field_n, param0 ^ -12, 590 + ValidatedTextWidget.field_I)) {
+                                if (SpellProjectile.isPointerInRect(SceneWidgetNode.field_q.field_w, QuickChatHelpers.field_a + 182, SceneWidgetNode.field_q.field_n, param0 ^ -12, 590 + ValidatedTextWidget.field_I)) {
                                     /* Inlined CFG state: 183. */
                                     {
                                         if (this.field_b == null) {
@@ -2559,7 +2559,7 @@ final class MenuScreen {
                                         {
                                         }
                                         {
-                                            SceneWidgetNode.field_q.drawHorizontalFlip(ValidatedTextWidget.field_I + 590, uc.field_a + 182);
+                                            SceneWidgetNode.field_q.drawHorizontalFlip(ValidatedTextWidget.field_I + 590, QuickChatHelpers.field_a + 182);
                                             statePc = 191;
                                             continue scanLoop1;
                                         }
@@ -2578,8 +2578,8 @@ final class MenuScreen {
                 }
                 case 188: {
                     try {
-                        this.field_b.drawSilhouette(ValidatedTextWidget.field_I + 590, 182 + uc.field_a, 16777215);
-                        this.field_b.drawAlpha(ValidatedTextWidget.field_I + 590, uc.field_a + 182, 128);
+                        this.field_b.drawSilhouette(ValidatedTextWidget.field_I + 590, 182 + QuickChatHelpers.field_a, 16777215);
+                        this.field_b.drawAlpha(ValidatedTextWidget.field_I + 590, QuickChatHelpers.field_a + 182, 128);
                         this.field_i = 3;
                         this.field_m = 6;
                         statePc = 191;
@@ -2595,7 +2595,7 @@ final class MenuScreen {
                 }
                 case 191: {
                     try {
-                        discarded$1 = this.drawButtonBox(false, 330, (byte) -24, false, ValidatedTextWidget.field_I + 254, 114, 182 + uc.field_a);
+                        discarded$1 = this.drawButtonBox(false, 330, (byte) -24, false, ValidatedTextWidget.field_I + 254, 114, 182 + QuickChatHelpers.field_a);
                         if (var4 != null) {
                             statePc = 194;
                         } else {
@@ -2626,7 +2626,7 @@ final class MenuScreen {
                 }
                 case 194: {
                     try {
-                        var18_int = mb.getKeyCodeForSlot(this.field_h, 813231272);
+                        var18_int = DropdownItemList.getKeyCodeForSlot(this.field_h, 813231272);
                         statePc = 195;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_194) {
@@ -2687,7 +2687,7 @@ final class MenuScreen {
                         var18 = null;
                         var19 = 0;
                         var20 = 0;
-                        var3 = uc.field_a + 188;
+                        var3 = QuickChatHelpers.field_a + 188;
                         var2_int = 264 + ValidatedTextWidget.field_I;
                         if (param0 == 12) {
                             statePc = 203;
@@ -2802,7 +2802,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 208. */
                             {
-                                stackIn_205_0 = mb.getKeyCodeForSlot(this.field_h, 813231272);
+                                stackIn_205_0 = DropdownItemList.getKeyCodeForSlot(this.field_h, 813231272);
                                 stackIn_209_0 = stackIn_205_0;
                                 stackIn_205_1 = var21;
                                 stackIn_209_1 = stackIn_205_1;
@@ -5853,7 +5853,7 @@ final class MenuScreen {
                             {
                                 var30 = var27 >> 5;
                                 var31 = -(var30 << 5) + var27;
-                                if ((ad.field_f[var30] & 1 << var31) != 0) {
+                                if ((SpellbookCaptionGlobals.field_f[var30] & 1 << var31) != 0) {
                                     /* Inlined CFG state: 620. */
                                     {
                                         stackIn_621_0 = 0;
@@ -6043,7 +6043,7 @@ final class MenuScreen {
                 }
                 case 648: {
                     try {
-                        if (qf.field_d < 2) {
+                        if (MembershipGlobals.field_d < 2) {
                             statePc = 650;
                             continue scanLoop1;
                         } else {
@@ -6158,7 +6158,7 @@ final class MenuScreen {
                                 if (var29 == -1) {
                                     /* Inlined CFG state: 670. */
                                     {
-                                        var18 = CachedArchiveProvider.formatTemplate(123, new String[]{rb.field_n[var27]}, ArrayWidgetContainer.field_y);
+                                        var18 = CachedArchiveProvider.formatTemplate(123, new String[]{TimedMessage.field_n[var27]}, ArrayWidgetContainer.field_y);
                                         statePc = 671;
                                         continue scanLoop1;
                                     }
@@ -6218,12 +6218,12 @@ final class MenuScreen {
                 }
                 case 678: {
                     try {
-                        discarded$3 = this.drawButtonBox(false, 180, (byte) 111, false, ValidatedTextWidget.field_I + 32, 98, 309 + uc.field_a);
-                        discarded$4 = this.drawButtonBox(false, 166, (byte) 79, false, 39 + ValidatedTextWidget.field_I, 29, 390 + uc.field_a);
-                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + uc.field_a, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[0]) {
+                        discarded$3 = this.drawButtonBox(false, 180, (byte) 111, false, ValidatedTextWidget.field_I + 32, 98, 309 + QuickChatHelpers.field_a);
+                        discarded$4 = this.drawButtonBox(false, 166, (byte) 79, false, 39 + ValidatedTextWidget.field_I, 29, 390 + QuickChatHelpers.field_a);
+                        CachedArchiveProvider.field_t.drawParagraph(DecodedSpriteHelpers.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + QuickChatHelpers.field_a, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(DecodedSpriteHelpers.field_f, ValidatedTextWidget.field_I + 39, QuickChatHelpers.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(DecodedSpriteHelpers.field_f, ValidatedTextWidget.field_I + 39, QuickChatHelpers.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[0]) {
                             statePc = 684;
                         } else {
                             statePc = 679;
@@ -6267,7 +6267,7 @@ final class MenuScreen {
                 }
                 case 684: {
                     try {
-                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[0]) {
+                        if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[0]) {
                             statePc = 690;
                             continue scanLoop1;
                         } else {
@@ -6300,7 +6300,7 @@ final class MenuScreen {
                 }
                 case 690: {
                     try {
-                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
+                        if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[2]) {
                             statePc = 696;
                             continue scanLoop1;
                         } else {
@@ -6333,7 +6333,7 @@ final class MenuScreen {
                 }
                 case 696: {
                     try {
-                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
+                        if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[2]) {
                             statePc = 702;
                             continue scanLoop1;
                         } else {
@@ -6366,7 +6366,7 @@ final class MenuScreen {
                 }
                 case 702: {
                     try {
-                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
+                        if (ViewControllerHelpers.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 708;
                             continue scanLoop1;
                         } else {
@@ -6401,7 +6401,7 @@ final class MenuScreen {
                 }
                 case 708: {
                     try {
-                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
+                        if (ViewControllerHelpers.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 714;
                             continue scanLoop1;
                         } else {
@@ -6436,7 +6436,7 @@ final class MenuScreen {
                 }
                 case 714: {
                     try {
-                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[3]) {
+                        if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[3]) {
                             statePc = 720;
                             continue scanLoop1;
                         } else {
@@ -6469,7 +6469,7 @@ final class MenuScreen {
                 }
                 case 720: {
                     try {
-                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
+                        if (ViewControllerHelpers.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 726;
                             continue scanLoop1;
                         } else {
@@ -6502,8 +6502,8 @@ final class MenuScreen {
                 }
                 case 726: {
                     try {
-                        SoftwareRasterizer.drawRectangle(ValidatedTextWidget.field_I + 58, uc.field_a + 317, 131, 67, 16777215);
-                        SoftwareRasterizer.fillRectangle(59 + ValidatedTextWidget.field_I, uc.field_a + 318, 129, 65, 0);
+                        SoftwareRasterizer.drawRectangle(ValidatedTextWidget.field_I + 58, QuickChatHelpers.field_a + 317, 131, 67, 16777215);
+                        SoftwareRasterizer.fillRectangle(59 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 318, 129, 65, 0);
                         var23 = 0;
                         statePc = 727;
                         continue scanLoop1;
@@ -6536,13 +6536,13 @@ final class MenuScreen {
                         if (stackIn_728_0 <= stackIn_728_1) {
                             /* Inlined CFG state: 779. */
                             {
-                                discarded$5 = this.drawButtonBox(false, 180, (byte) 106, false, ValidatedTextWidget.field_I + 225, 98, 309 + uc.field_a);
-                                discarded$6 = this.drawButtonBox(false, 166, (byte) -98, false, 232 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
-                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 6 + (ValidatedTextWidget.field_I + 225), -1 + (uc.field_a + 390), 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 7 + (225 + ValidatedTextWidget.field_I), -2 + uc.field_a + 390, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, ValidatedTextWidget.field_I + 225 + 7, -1 + (uc.field_a + 390), 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                SoftwareRasterizer.drawRectangle(248 + ValidatedTextWidget.field_I, 317 + uc.field_a, 131, 67, 16777215);
-                                SoftwareRasterizer.fillRectangle(249 + ValidatedTextWidget.field_I, 318 + uc.field_a, 129, 65, 0);
+                                discarded$5 = this.drawButtonBox(false, 180, (byte) 106, false, ValidatedTextWidget.field_I + 225, 98, 309 + QuickChatHelpers.field_a);
+                                discarded$6 = this.drawButtonBox(false, 166, (byte) -98, false, 232 + ValidatedTextWidget.field_I, 29, QuickChatHelpers.field_a + 390);
+                                CachedArchiveProvider.field_t.drawParagraph(GameSelectionHelpers.field_j, 6 + (ValidatedTextWidget.field_I + 225), -1 + (QuickChatHelpers.field_a + 390), 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(GameSelectionHelpers.field_j, 7 + (225 + ValidatedTextWidget.field_I), -2 + QuickChatHelpers.field_a + 390, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(GameSelectionHelpers.field_j, ValidatedTextWidget.field_I + 225 + 7, -1 + (QuickChatHelpers.field_a + 390), 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                SoftwareRasterizer.drawRectangle(248 + ValidatedTextWidget.field_I, 317 + QuickChatHelpers.field_a, 131, 67, 16777215);
+                                SoftwareRasterizer.fillRectangle(249 + ValidatedTextWidget.field_I, 318 + QuickChatHelpers.field_a, 129, 65, 0);
                                 var23 = 0;
                                 statePc = 780;
                                 continue scanLoop1;
@@ -6577,7 +6577,7 @@ final class MenuScreen {
                             /* Inlined CFG state: 731. */
                             {
                                 var25 = var24 * 8 + var23;
-                                var3 = uc.field_a + 319 + var24 * 16;
+                                var3 = QuickChatHelpers.field_a + 319 + var24 * 16;
                                 var2_int = var23 * 16 + ValidatedTextWidget.field_I + 60;
                                 var26 = (AlternateUsernameCredentials.field_n[var25][0] << 16) + (AlternateUsernameCredentials.field_n[var25][2] + (AlternateUsernameCredentials.field_n[var25][1] << 8));
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var26);
@@ -6597,7 +6597,7 @@ final class MenuScreen {
                                         } else {
                                             /* Inlined CFG state: 733. */
                                             {
-                                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[0]) {
+                                                if (QuickChatCategoryCache.field_d[3] == ViewControllerHelpers.field_b[0]) {
                                                     /* Inlined CFG state: 737. */
                                                     {
                                                         var26 = 0;
@@ -6634,7 +6634,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 739. */
                             {
-                                if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
+                                if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[2]) {
                                     statePc = 743;
                                     continue scanLoop1;
                                 } else {
@@ -6669,7 +6669,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 744. */
                             {
-                                if (QuickChatCategoryCache.field_d[3] != hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] != ViewControllerHelpers.field_b[3]) {
                                     statePc = 748;
                                     continue scanLoop1;
                                 } else {
@@ -6704,7 +6704,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 749. */
                             {
-                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] == ViewControllerHelpers.field_b[3]) {
                                     /* Inlined CFG state: 753. */
                                     {
                                         var26 = 0;
@@ -6960,7 +6960,7 @@ final class MenuScreen {
                             {
                                 var25 = 8 * var24 + var23;
                                 var26 = (GameApplet.field_z[var25][0] << 16) + (GameApplet.field_z[var25][2] + (GameApplet.field_z[var25][1] << 8));
-                                var3 = var24 * 16 + 319 + uc.field_a;
+                                var3 = var24 * 16 + 319 + QuickChatHelpers.field_a;
                                 var2_int = 250 + ValidatedTextWidget.field_I + 16 * var23;
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var26);
                                 stackIn_781_0 = 2;
@@ -6979,7 +6979,7 @@ final class MenuScreen {
                                         } else {
                                             /* Inlined CFG state: 786. */
                                             {
-                                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[0]) {
+                                                if (QuickChatCategoryCache.field_d[3] == ViewControllerHelpers.field_b[0]) {
                                                     /* Inlined CFG state: 790. */
                                                     {
                                                         var26 = 0;
@@ -7016,7 +7016,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 792. */
                             {
-                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[2]) {
+                                if (QuickChatCategoryCache.field_d[3] == ViewControllerHelpers.field_b[2]) {
                                     /* Inlined CFG state: 796. */
                                     {
                                         var26 = 0;
@@ -7049,7 +7049,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 798. */
                             {
-                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] == ViewControllerHelpers.field_b[3]) {
                                     /* Inlined CFG state: 802. */
                                     {
                                         var26 = 0;
@@ -7082,7 +7082,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 804. */
                             {
-                                if (hi.field_b[3] == QuickChatCategoryCache.field_d[3]) {
+                                if (ViewControllerHelpers.field_b[3] == QuickChatCategoryCache.field_d[3]) {
                                     /* Inlined CFG state: 808. */
                                     {
                                         var26 = 0;
@@ -7260,13 +7260,13 @@ final class MenuScreen {
                 }
                 case 837: {
                     try {
-                        discarded$7 = this.drawButtonBox(false, 93, (byte) -106, false, ValidatedTextWidget.field_I + 417, 98, uc.field_a + 309);
-                        discarded$8 = this.drawButtonBox(false, var23, (byte) -96, false, var24 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
-                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, -1 + ValidatedTextWidget.field_I + var24, uc.field_a + 390 - 1, var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, 390 + (uc.field_a - 2), var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, -1 + (uc.field_a + 390), var23, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        SoftwareRasterizer.drawRectangle(431 + ValidatedTextWidget.field_I, uc.field_a + 317, 67, 67, 16777215);
-                        SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 432, uc.field_a + 318, 65, 65, 0);
+                        discarded$7 = this.drawButtonBox(false, 93, (byte) -106, false, ValidatedTextWidget.field_I + 417, 98, QuickChatHelpers.field_a + 309);
+                        discarded$8 = this.drawButtonBox(false, var23, (byte) -96, false, var24 + ValidatedTextWidget.field_I, 29, QuickChatHelpers.field_a + 390);
+                        CachedArchiveProvider.field_t.drawParagraph(NameTable.field_j, -1 + ValidatedTextWidget.field_I + var24, QuickChatHelpers.field_a + 390 - 1, var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(NameTable.field_j, var24 + ValidatedTextWidget.field_I, 390 + (QuickChatHelpers.field_a - 2), var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(NameTable.field_j, var24 + ValidatedTextWidget.field_I, -1 + (QuickChatHelpers.field_a + 390), var23, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        SoftwareRasterizer.drawRectangle(431 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 317, 67, 67, 16777215);
+                        SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 432, QuickChatHelpers.field_a + 318, 65, 65, 0);
                         var25 = 0;
                         statePc = 838;
                         continue scanLoop1;
@@ -7299,13 +7299,13 @@ final class MenuScreen {
                         if (stackIn_839_0 >= stackIn_839_1) {
                             /* Inlined CFG state: 860. */
                             {
-                                discarded$9 = this.drawButtonBox(false, 93, (byte) 93, false, 520 + ValidatedTextWidget.field_I, 98, 309 + uc.field_a);
-                                discarded$10 = this.drawButtonBox(false, 79, (byte) 121, false, 7 + ValidatedTextWidget.field_I + 520, 29, 390 + uc.field_a);
-                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, 7 + ValidatedTextWidget.field_I + 520 - 1, 389 + uc.field_a, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 527, 390 + uc.field_a - 2, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 520 + 7, -1 + uc.field_a + 390, 79, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
-                                SoftwareRasterizer.drawRectangle(535 + ValidatedTextWidget.field_I, uc.field_a + 333, 67, 35, 16777215);
-                                SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 536, uc.field_a + 318 + 16, 65, 33, 0);
+                                discarded$9 = this.drawButtonBox(false, 93, (byte) 93, false, 520 + ValidatedTextWidget.field_I, 98, 309 + QuickChatHelpers.field_a);
+                                discarded$10 = this.drawButtonBox(false, 79, (byte) 121, false, 7 + ValidatedTextWidget.field_I + 520, 29, 390 + QuickChatHelpers.field_a);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, 7 + ValidatedTextWidget.field_I + 520 - 1, 389 + QuickChatHelpers.field_a, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 527, 390 + QuickChatHelpers.field_a - 2, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 520 + 7, -1 + QuickChatHelpers.field_a + 390, 79, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                SoftwareRasterizer.drawRectangle(535 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 333, 67, 35, 16777215);
+                                SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 536, QuickChatHelpers.field_a + 318 + 16, 65, 33, 0);
                                 var25 = 0;
                                 statePc = 861;
                                 continue scanLoop1;
@@ -7342,7 +7342,7 @@ final class MenuScreen {
                                 var27 = var25 + var26 * 4;
                                 var2_int = var25 * 16 + (ValidatedTextWidget.field_I + 433);
                                 var28 = (IsaacCipher.field_d[var27][0] << 16) + (IsaacCipher.field_d[var27][2] + (IsaacCipher.field_d[var27][1] << 8));
-                                var3 = 16 * var26 + 319 + uc.field_a;
+                                var3 = 16 * var26 + 319 + QuickChatHelpers.field_a;
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var28);
                                 stackIn_839_0 = ~EmailLoginCredentials.field_g;
                                 stackIn_843_0 = stackIn_839_0;
@@ -7514,9 +7514,9 @@ final class MenuScreen {
                             /* Inlined CFG state: 865. */
                             {
                                 var27 = 4 * var26 + var25;
-                                var3 = var26 * 16 + uc.field_a + 335;
+                                var3 = var26 * 16 + QuickChatHelpers.field_a + 335;
                                 var2_int = var25 * 16 + ValidatedTextWidget.field_I + 537;
-                                var28 = (hi.field_b[var27][0] << 16) + (hi.field_b[var27][1] << 8) + hi.field_b[var27][2];
+                                var28 = (ViewControllerHelpers.field_b[var27][0] << 16) + (ViewControllerHelpers.field_b[var27][1] << 8) + ViewControllerHelpers.field_b[var27][2];
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var28);
                                 stackIn_862_0 = ~EmailLoginCredentials.field_g;
                                 stackIn_866_0 = stackIn_862_0;
@@ -7602,7 +7602,7 @@ final class MenuScreen {
                 }
                 case 878: {
                     try {
-                        if (hi.field_b[var27] != QuickChatCategoryCache.field_d[3]) {
+                        if (ViewControllerHelpers.field_b[var27] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 881;
                             continue scanLoop1;
                         } else {
@@ -7638,7 +7638,7 @@ final class MenuScreen {
                 }
                 case 884: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    throw aa.wrapException((Throwable) ((Object) var2), "lc.P(" + param0 + ')');
+                    throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.P(" + param0 + ')');
                 }
                 case 885: {
                     return;
@@ -7694,9 +7694,9 @@ final class MenuScreen {
                   var6 = param0 ? 1 : 0;
                   stackIn_134_0 = var6;
                   stackIn_135_1 = !(param2);
-                  gj.switchScreen(stackIn_134_0 != 0, stackIn_135_1, 0, mn.field_r);
+                  ScreenSwitchHelpers.switchScreen(stackIn_134_0 != 0, stackIn_135_1, 0, MatchingFieldValidator.field_r);
                   MusicCrossfadeStream.field_A = false;
-                  fi.field_h = true;
+                  DecimalCheckHelpers.field_h = true;
                   return;
                 }
                 if (var6 == 24) {
@@ -7704,8 +7704,8 @@ final class MenuScreen {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
-                  gj.switchScreen(var6 != 0, true, 10, mn.field_r);
-                  tn.field_Cb = true;
+                  ScreenSwitchHelpers.switchScreen(var6 != 0, true, 10, MatchingFieldValidator.field_r);
+                  SceneTabStrip.field_Cb = true;
                   return;
                 }
                 if (var6 != 22) {
@@ -7716,17 +7716,17 @@ final class MenuScreen {
                     var6 = param0 ? 1 : 0;
                     stackIn_155_0 = var6;
                     stackIn_156_1 = !(param2);
-                    gj.switchScreen(stackIn_155_0 != 0, stackIn_156_1, 15, mn.field_r);
+                    ScreenSwitchHelpers.switchScreen(stackIn_155_0 != 0, stackIn_156_1, 15, MatchingFieldValidator.field_r);
                     return;
                   }
                   if (15 == var6) {
                     if (this.field_g.isActivatePressed(true)) {
                       if (!MenuScreen.getSessionFlag((byte) 112) &&
-                        ah.field_c > 0) {
+                        AccountFlowHelpers.field_c > 0) {
                         return;
                       }
                       var6 = param0 ? 1 : 0;
-                      gj.switchScreen(var6 != 0, true, 16, mn.field_r);
+                      ScreenSwitchHelpers.switchScreen(var6 != 0, true, 16, MatchingFieldValidator.field_r);
                       return;
                     }
                   } else {
@@ -7736,16 +7736,16 @@ final class MenuScreen {
                       }
                       SecondaryNodeDequeIterator.field_e = 0;
                       var6 = param0 ? 1 : 0;
-                      gj.switchScreen(var6 != 0, true, 7, mn.field_r);
+                      ScreenSwitchHelpers.switchScreen(var6 != 0, true, 7, MatchingFieldValidator.field_r);
                       return;
                     }
                     if (8 == var6) {
                       if (!this.field_g.isActivatePressed(true)) {
                         return;
                       }
-                      var6 = th.field_f;
+                      var6 = NameTable.field_f;
                       var7 = param0 ? 1 : 0;
-                      gj.switchScreen(var7 != 0, true, var6, mn.field_r);
+                      ScreenSwitchHelpers.switchScreen(var7 != 0, true, var6, MatchingFieldValidator.field_r);
                       return;
                     }
                     if (var6 != 4) {
@@ -7755,33 +7755,33 @@ final class MenuScreen {
                             return;
                           }
                           var6 = param0 ? 1 : 0;
-                          gj.switchScreen(var6 != 0, true, 12, mn.field_r);
+                          ScreenSwitchHelpers.switchScreen(var6 != 0, true, 12, MatchingFieldValidator.field_r);
                           return;
                         }
                         if (20 == var6) {
                           var5 = 0;
                           if (this.field_g.isHomePressed(-13722) &&
                             CheckboxPainter.field_l > 0) {
-                            mf.setSoundEffectVolume(0, 21298);
+                            EffectVolumeHelpers.setSoundEffectVolume(0, 21298);
                             var5 = 1;
                           }
                           if (this.field_g.isEndPressed((byte) 112) &&
                             CheckboxPainter.field_l < 256) {
                             var5 = 1;
-                            mf.setSoundEffectVolume(256, 21298);
+                            EffectVolumeHelpers.setSoundEffectVolume(256, 21298);
                           }
                           if (this.field_g.isPointerMode((byte) -26)) {
-                            var6 = this.getItemTop(41, param1) + (this.getItemY(param1, (byte) 103) + (ff.field_c - 120)) >> 1;
+                            var6 = this.getItemTop(41, param1) + (this.getItemY(param1, (byte) 103) + (FrameAndQuickChatHelpers.field_c - 120)) >> 1;
                             var7Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                             var8 = var7Lifetime1 * 256 / 120;
                             var5 = 1;
                             if (0 >= var8) {
-                              mf.setSoundEffectVolume(0, 21298);
+                              EffectVolumeHelpers.setSoundEffectVolume(0, 21298);
                             } else {
                               if (256 > var8) {
-                                mf.setSoundEffectVolume(var8, 21298);
+                                EffectVolumeHelpers.setSoundEffectVolume(var8, 21298);
                               } else {
-                                mf.setSoundEffectVolume(256, 21298);
+                                EffectVolumeHelpers.setSoundEffectVolume(256, 21298);
                               }
                             }
                           }
@@ -7799,12 +7799,12 @@ final class MenuScreen {
                             return;
                           }
                           decompiledFrameRemainder0 = (!(this.field_g.isPointerMode((byte) -102)) ||
-                            !(oj.field_e >= SpriteState.field_v));
+                            !(LoginMethodHelpers.field_e >= SpriteState.field_v));
                           if (decompiledFrameRemainder0) {
-                            if (null != cf.field_h[CacheEntry.field_n[0][2]]) {
-                              DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[0][2]], cf.field_h[CacheEntry.field_n[0][2]]);
+                            if (null != CredentialParseHelpers.field_h[CacheEntry.field_n[0][2]]) {
+                              DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[0][2]], CredentialParseHelpers.field_h[CacheEntry.field_n[0][2]]);
                             }
-                            oj.field_e = 20 + SpriteState.field_v;
+                            LoginMethodHelpers.field_e = 20 + SpriteState.field_v;
                             return;
                           }
                         }
@@ -7817,7 +7817,7 @@ final class MenuScreen {
                               EmptyPainter.setMusicVolume(256, false);
                             }
                             if (this.field_g.isPointerMode((byte) 85)) {
-                              var6 = -120 + this.getItemTop(41, param1) - (-this.getItemY(param1, (byte) 103) - ff.field_c) >> 1;
+                              var6 = -120 + this.getItemTop(41, param1) - (-this.getItemY(param1, (byte) 103) - FrameAndQuickChatHelpers.field_c) >> 1;
                               var7Lifetime1Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                               var8Lifetime1 = 256 * var7Lifetime1Lifetime1 / 120;
                               if (var8Lifetime1 > 0) {
@@ -7836,7 +7836,7 @@ final class MenuScreen {
                             if (!this.field_g.isRightPressed(-74)) {
                               return;
                             }
-                            ck.stepMusicVolumeUp((byte) 115);
+                            MusicVolumeHelpers.stepMusicVolumeUp((byte) 115);
                             return;
                           }
                           if (var6 == 6) {
@@ -7852,7 +7852,7 @@ final class MenuScreen {
                                 }
                                 SpriteState.field_z.sendTurnCommand59(true);
                                 var6 = param0 ? 1 : 0;
-                                gj.switchScreen(var6 != 0, true, -1, mn.field_r);
+                                ScreenSwitchHelpers.switchScreen(var6 != 0, true, -1, MatchingFieldValidator.field_r);
                                 return;
                               }
                               if (var6 != 11) {
@@ -7864,13 +7864,13 @@ final class MenuScreen {
                                   }
                                   SpriteState.field_z.sendTurnCommand61((byte) -61);
                                   var6 = param0 ? 1 : 0;
-                                  gj.switchScreen(var6 != 0, true, -1, mn.field_r);
+                                  ScreenSwitchHelpers.switchScreen(var6 != 0, true, -1, MatchingFieldValidator.field_r);
                                   return;
                                 }
                                 if (var6 != 13) {
                                   if (var6 == 17) {
                                     if (this.field_g.isActivatePressed(true)) {
-                                      ie.field_Sb = 0;
+                                      StatusDialog.field_Sb = 0;
                                       return;
                                     }
                                   } else {
@@ -7880,7 +7880,7 @@ final class MenuScreen {
                                       if (!((MenuInputState) (Object) stackIn_329_0).isActivatePressed(stackIn_330_1)) {
                                         return;
                                       }
-                                      ie.field_Sb = 1;
+                                      StatusDialog.field_Sb = 1;
                                       return;
                                     }
                                     if (var6 != 23) {
@@ -7958,7 +7958,7 @@ final class MenuScreen {
                                               return;
                                             }
                                             var6 = param0 ? 1 : 0;
-                                            gj.switchScreen(var6 != 0, true, -1, mn.field_r);
+                                            ScreenSwitchHelpers.switchScreen(var6 != 0, true, -1, MatchingFieldValidator.field_r);
                                           }
                                         }
                                       }
@@ -7967,7 +7967,7 @@ final class MenuScreen {
                                         if ((this.field_l != 8 &&
                                           CheckboxPainter.field_g != 6) &&
                                           (decompiledFrameRemainder0 = (10 == this.field_l))) {
-                                          ko.openSubscribePage(IconButtonPainter.getApplet(103), (byte) -60);
+                                          ListEntryMenuHelpers.openSubscribePage(IconButtonPainter.getApplet(103), (byte) -60);
                                           return;
                                         }
                                         if (decompiledFrameRemainder0) {
@@ -7981,14 +7981,14 @@ final class MenuScreen {
                                   stackIn_309_0 = this.field_g;
                                   stackIn_310_1 = !(param2);
                                   if (((MenuInputState) (Object) stackIn_309_0).isActivatePressed(stackIn_310_1)) {
-                                    if (hi.field_a) {
+                                    if (ViewControllerHelpers.field_a) {
                                       var6 = param0 ? 1 : 0;
-                                      gj.switchScreen(var6 != 0, true, -5, mn.field_r);
+                                      ScreenSwitchHelpers.switchScreen(var6 != 0, true, -5, MatchingFieldValidator.field_r);
                                     }
                                     if (StatefulTextPainter.field_w) {
-                                      qe.sendShortSettingRequest(0, (byte) -35, 11);
+                                      QueuedPacket.sendShortSettingRequest(0, (byte) -35, 11);
                                     }
-                                    fi.field_h = true;
+                                    DecimalCheckHelpers.field_h = true;
                                     return;
                                   }
                                 }
@@ -7996,14 +7996,14 @@ final class MenuScreen {
                                 if (this.field_g.isActivatePressed(true)) {
                                   SpriteState.field_z.sendTurnCommand60(26873);
                                   var6 = param0 ? 1 : 0;
-                                  gj.switchScreen(var6 != 0, true, -1, mn.field_r);
+                                  ScreenSwitchHelpers.switchScreen(var6 != 0, true, -1, MatchingFieldValidator.field_r);
                                   return;
                                 }
                               }
                             } else {
                               if (this.field_g.isActivatePressed(true)) {
                                 SpriteState.field_z.returnToLobby(-111, param0);
-                                fi.field_h = true;
+                                DecimalCheckHelpers.field_h = true;
                                 MusicCrossfadeStream.field_A = false;
                                 return;
                               }
@@ -8015,14 +8015,14 @@ final class MenuScreen {
                         stackIn_188_1 = !(param2);
                         if (((MenuInputState) (Object) stackIn_187_0).isActivatePressed(stackIn_188_1)) {
                           var6 = param0 ? 1 : 0;
-                          gj.switchScreen(var6 != 0, true, 11, mn.field_r);
+                          ScreenSwitchHelpers.switchScreen(var6 != 0, true, 11, MatchingFieldValidator.field_r);
                           return;
                         }
                       }
                     } else {
                       if (this.field_g.isActivatePressed(true)) {
                         var6 = param0 ? 1 : 0;
-                        gj.switchScreen(var6 != 0, true, 6, mn.field_r);
+                        ScreenSwitchHelpers.switchScreen(var6 != 0, true, 6, MatchingFieldValidator.field_r);
                         return;
                       }
                     }
@@ -8032,7 +8032,7 @@ final class MenuScreen {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
-                  gj.switchScreen(var6 != 0, true, 8, mn.field_r);
+                  ScreenSwitchHelpers.switchScreen(var6 != 0, true, 8, MatchingFieldValidator.field_r);
                   if (!param0) {
                     this.field_g.field_h = 1;
                     return;
@@ -8043,7 +8043,7 @@ final class MenuScreen {
                   var6 = param0 ? 1 : 0;
                   stackIn_125_0 = var6;
                   stackIn_126_1 = !(param2);
-                  gj.switchScreen(stackIn_125_0 != 0, stackIn_126_1, -1, mn.field_r);
+                  ScreenSwitchHelpers.switchScreen(stackIn_125_0 != 0, stackIn_126_1, -1, MatchingFieldValidator.field_r);
                   return;
                 }
               }
@@ -8053,21 +8053,21 @@ final class MenuScreen {
                   LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
-                  gj.switchScreen(var6 != 0, true, -4, mn.field_r);
+                  ScreenSwitchHelpers.switchScreen(var6 != 0, true, -4, MatchingFieldValidator.field_r);
                 }
               }
             }
           } else {
             if (this.field_g.isActivatePressed(true)) {
               var6 = param0 ? 1 : 0;
-              gj.switchScreen(var6 != 0, true, -3, mn.field_r);
+              ScreenSwitchHelpers.switchScreen(var6 != 0, true, -3, MatchingFieldValidator.field_r);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "lc.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "lc.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -8090,45 +8090,45 @@ final class MenuScreen {
         try {
           var2 = null;
           var3 = null;
-          var4 = -32 + 3 * uc.field_a / 4 + 240;
-          fe.field_o.drawTransparent(-(fe.field_o.field_n / 2) + (EmailLoginCredentials.field_f >> 1), -(fe.field_o.field_w / 2) - 20 + var4);
+          var4 = -32 + 3 * QuickChatHelpers.field_a / 4 + 240;
+          PendingTask.field_o.drawTransparent(-(PendingTask.field_o.field_n / 2) + (EmailLoginCredentials.field_f >> 1), -(PendingTask.field_o.field_w / 2) - 20 + var4);
           var5 = (EmailLoginCredentials.field_f >> 1) - 120;
           if (StatefulTextPainter.field_p == 0) {
-            var2 = aj.field_f;
-            var3 = jo.field_d;
-            bb.field_g[0].drawTransparent(var5 - 28, -48 + var4);
+            var2 = GameOptionType.field_f;
+            var3 = BitHelpers.field_d;
+            LoginLoadingHelpers.field_g[0].drawTransparent(var5 - 28, -48 + var4);
           }
           if (param0 == StatefulTextPainter.field_p) {
             var2 = AudioService.field_d;
             var3 = LinkButtonPainter.field_b;
-            bb.field_g[1].drawTransparent(var5 - 28, -32 + var4);
+            LoginLoadingHelpers.field_g[1].drawTransparent(var5 - 28, -32 + var4);
           }
           if (StatefulTextPainter.field_p == 2) {
-            var3 = pc.field_f;
+            var3 = TexturedSpriteHelpers.field_f;
             var2 = DateInputWidget.field_F;
-            bb.field_g[72].drawTransparent(-28 + var5, -48 + var4);
+            LoginLoadingHelpers.field_g[72].drawTransparent(-28 + var5, -48 + var4);
           }
           if (3 == StatefulTextPainter.field_p) {
             var3 = SoundCache.field_h;
             var2 = JaggrabDownloader.field_c;
-            bb.field_g[4].drawTransparent(var5 - 28, var4);
+            LoginLoadingHelpers.field_g[4].drawTransparent(var5 - 28, var4);
           }
           if (StatefulTextPainter.field_p == 4) {
-            var2 = gj.field_b;
-            var3 = lm.field_h;
-            bb.field_g[76].drawTransparent(-28 + var5, -32 + var4);
+            var2 = ScreenSwitchHelpers.field_b;
+            var3 = GameDetailsRenderer.field_h;
+            LoginLoadingHelpers.field_g[76].drawTransparent(-28 + var5, -32 + var4);
           }
           if (StatefulTextPainter.field_p == 5) {
-            var3 = bj.field_pb;
-            var2 = ih.field_a;
-            bb.field_g[75].drawTransparent(-28 + var5, var4 - 48);
+            var3 = ButtonMenuDialog.field_pb;
+            var2 = PointerOriginHelpers.field_a;
+            LoginLoadingHelpers.field_g[75].drawTransparent(-28 + var5, var4 - 48);
           }
           if (StatefulTextPainter.field_p == 6) {
             var2 = QuickChatPhraseCache.field_j;
             SpriteState.field_z.field_z = 6050;
             var3 = LobbyGameEntry.field_lc;
-            bb.field_g[0].drawTransparent(var5 - 48, var4);
-            bb.field_g[1].drawTransparent(-8 + var5, var4);
+            LoginLoadingHelpers.field_g[0].drawTransparent(var5 - 48, var4);
+            LoginLoadingHelpers.field_g[1].drawTransparent(-8 + var5, var4);
             SecondaryNodeDeque.field_c[5].draw(var5 - SecondaryNodeDeque.field_c[0].field_g / 2 - 4, -80 + var4);
             SecondaryNodeDeque.field_c[4].draw(-4 + (var5 - SecondaryNodeDeque.field_c[0].field_g / 2), -80 + var4);
             SecondaryNodeDeque.field_c[3].draw(-(SecondaryNodeDeque.field_c[0].field_g / 2) + (var5 - 4), var4 - 80);
@@ -8137,8 +8137,8 @@ final class MenuScreen {
             SecondaryNodeDeque.field_c[0].draw(-(SecondaryNodeDeque.field_c[0].field_g / 2) + var5 - 16, var4 - 80);
           }
           if (7 == StatefulTextPainter.field_p) {
-            var3 = kj.field_d;
-            var2 = bm.field_c;
+            var3 = PendingMessageHelpers.field_d;
+            var2 = TutorialCaptionGlobals.field_c;
             var6 = 0;
             var7 = 0;
             while (true) {
@@ -8149,9 +8149,9 @@ final class MenuScreen {
               }
               for (var8 = 0; 4 > var8; var8++) {
                 stackIn_24_0Lifetime1 = 0;
-                stackIn_24_1Lifetime1 = ~b.field_f[var6];
+                stackIn_24_1Lifetime1 = ~ThrowableFormatHelpers.field_f[var6];
                 if (stackIn_24_0Lifetime1 != stackIn_24_1Lifetime1) {
-                  bb.field_g[dd.field_f[b.field_f[var6]]].drawTransparent((-2 + var7) * 40 + var5 - 8, -30 + (var4 + (var8 - 2) * 40));
+                  LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[ThrowableFormatHelpers.field_f[var6]]].drawTransparent((-2 + var7) * 40 + var5 - 8, -30 + (var4 + (var8 - 2) * 40));
                 }
                 var6++;
               }
@@ -8171,7 +8171,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) (var2), "lc.E(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) (var2), "lc.E(" + param0 + ')');
         }
     }
 
@@ -8225,7 +8225,7 @@ final class MenuScreen {
             var26[55] = false;
           }
           var3 = new int[][][]{new int[][]{new int[]{13, 14}, new int[]{0, 2, 4}, new int[]{1, 3, 5}, new int[]{31, 47}, new int[]{49, 51, 53}, new int[]{50, 52}}, new int[][]{new int[]{46, 56, 87}, new int[]{43, 36, 37, 38, 35}, new int[]{57, 58, 59, 60, 61, 45}, new int[]{41, 44, 12, 72, 73}, new int[]{26, 27, 28, 29}, new int[]{48, 55}}, new int[][]{new int[]{54, 80}, new int[]{6, 7, 8, 9, 10, 11}, new int[]{16, 17, 32}, new int[]{18, 19, 20, 21, 23, 22}, new int[]{24, 25, 33}, new int[]{30}}, new int[][]{new int[]{42, 34, 40, 39, 15}, new int[]{62, 71, 79, 82, 86, 88}, new int[]{65, 66, 67, 69, 85, 92}, new int[]{63, 64, 68, 70, 94, 84}, new int[]{74, 78, 83, 81, 93, 89}, new int[]{91}}};
-          var31 = ad.field_f;
+          var31 = SpellbookCaptionGlobals.field_f;
           var27 = var31;
           var4 = var27;
           if (2 > var31.length) {
@@ -8233,7 +8233,7 @@ final class MenuScreen {
             var28 = var32;
             var25 = var28;
             var4 = var25;
-            var25[0] = ad.field_f[0];
+            var25[0] = SpellbookCaptionGlobals.field_f[0];
             var32[1] = 0;
           }
           var5 = Js5Transport.isFeatureEnabled(0, (byte) -33) ? 1 : 0;
@@ -8257,8 +8257,8 @@ final class MenuScreen {
           }
           var6 = 80;
           var7 = 100;
-          if (ArcanistsMulti.i((byte) -127)) {
-            stackIn_35_0 = ii.field_d;
+          if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -127)) {
+            stackIn_35_0 = IconHighlightPainter.field_d;
           } else {
             stackIn_35_0 = TextLine.field_b;
           }
@@ -8267,14 +8267,14 @@ final class MenuScreen {
           var10 = 280;
           var11 = 60;
           var12 = 220;
-          var13 = dd.field_g;
-          dd.field_g = -1;
+          var13 = PasswordCheckHelpers.field_g;
+          PasswordCheckHelpers.field_g = -1;
           var14 = IntrusiveDeque.field_g;
           var15 = 0;
           scanLoop1: while (true) {
             stackIn_37_0 = var3[var14].length;
             if (stackIn_37_0 > var15) {
-              var7Lifetime1 = var9 - (-(var10 * (1 + var15) / (var3[var14].length + 1)) - uc.field_a);
+              var7Lifetime1 = var9 - (-(var10 * (1 + var15) / (var3[var14].length + 1)) - QuickChatHelpers.field_a);
               for (var16 = 0; var3[var14][var15].length > var16; var16++) {
                 var17 = var3[var14][var15][var16];
                 var6Lifetime1 = ValidatedTextWidget.field_I + var11 + var12 * (1 + var16) / (1 + var3[var14][var15].length);
@@ -8282,7 +8282,7 @@ final class MenuScreen {
                 stackIn_37_0 = stackOut_40_0 ? 1 : 0;
                 stackIn_41_0 = stackOut_40_0;
                 if (stackIn_41_0) {
-                  dd.field_g = var17;
+                  PasswordCheckHelpers.field_g = var17;
                 }
                 if (0 != (var4[var17 >> 5] & 1 << (var17 & 31))) {
                   if (~var17 == ~LabeledField.field_K) {
@@ -8314,24 +8314,24 @@ final class MenuScreen {
           if (-1 != LabeledField.field_K) {
             stackIn_75_0 = LabeledField.field_K;
           } else {
-            stackIn_75_0 = dd.field_g;
+            stackIn_75_0 = PasswordCheckHelpers.field_g;
           }
           var15Lifetime1 = stackIn_75_0;
           if (-1 != var15Lifetime1) {
             var16Lifetime1 = CachedArchiveProvider.field_t.field_o + CachedArchiveProvider.field_t.field_m;
-            SpellProjectile.field_B.drawCentered(rb.field_n[var15Lifetime1], 447 + ValidatedTextWidget.field_I, uc.field_a + 126, 0, -1);
+            SpellProjectile.field_B.drawCentered(TimedMessage.field_n[var15Lifetime1], 447 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 126, 0, -1);
             stackIn_85_0 = ((var4[var15Lifetime1 >> 5] & 1 << (31 & var15Lifetime1)) == 0) ? 0 : 1;
             var17Lifetime1 = stackIn_85_0;
             if (var17Lifetime1 != 0) {
-              SpellProjectile.field_B.drawCentered(rk.field_H, ValidatedTextWidget.field_I + 447, -8 + uc.field_a + (126 + var16Lifetime1), 0, -1);
+              SpellProjectile.field_B.drawCentered(GradientBarButton.field_H, ValidatedTextWidget.field_I + 447, -8 + QuickChatHelpers.field_a + (126 + var16Lifetime1), 0, -1);
             } else {
-              SpellProjectile.field_B.drawCentered(AlternateUsernameCredentials.field_l, ValidatedTextWidget.field_I + 447, var16Lifetime1 + uc.field_a + 118, 16711680, -1);
+              SpellProjectile.field_B.drawCentered(AlternateUsernameCredentials.field_l, ValidatedTextWidget.field_I + 447, var16Lifetime1 + QuickChatHelpers.field_a + 118, 16711680, -1);
             }
             var18 = 126 + var16Lifetime1;
             if (var17Lifetime1 != 0) {
-              IntrusiveNodeHashTable.field_a[var15Lifetime1].drawTransparent(340 + ValidatedTextWidget.field_I, var18 + uc.field_a);
+              IntrusiveNodeHashTable.field_a[var15Lifetime1].drawTransparent(340 + ValidatedTextWidget.field_I, var18 + QuickChatHelpers.field_a);
             } else {
-              TextLine.field_b.drawTransparent(340 + ValidatedTextWidget.field_I, var18 + uc.field_a);
+              TextLine.field_b.drawTransparent(340 + ValidatedTextWidget.field_I, var18 + QuickChatHelpers.field_a);
             }
             var18 = var18 + CachedArchiveProvider.field_t.field_C;
             var18 = var18 + CachedArchiveProvider.field_t.field_C;
@@ -8340,28 +8340,28 @@ final class MenuScreen {
               var30 = new String[16];
               var20 = SpellProjectile.field_B.wrapText(PacketBuffer.field_k, new int[]{220}, var30);
               for (var21 = 0; var20 > var21; var21++) {
-                SpellProjectile.field_B.drawText(var30[var21], 12 + (340 + ValidatedTextWidget.field_I), 95 + uc.field_a + var18, 0, -1);
+                SpellProjectile.field_B.drawText(var30[var21], 12 + (340 + ValidatedTextWidget.field_I), 95 + QuickChatHelpers.field_a + var18, 0, -1);
                 var18 = var18 + SpellProjectile.field_B.field_C;
               }
             } else {
               var29 = new String[16];
-              var20 = SpellProjectile.field_B.wrapText(af.field_Bb[var15Lifetime1], new int[]{220}, var29);
+              var20 = SpellProjectile.field_B.wrapText(PairedSceneWidget.field_Bb[var15Lifetime1], new int[]{220}, var29);
               for (var21 = 0; var20 > var21; var21++) {
-                SpellProjectile.field_B.drawText(var29[var21], 340 + (ValidatedTextWidget.field_I + 12), -8 + (uc.field_a + var18) + 120, 0, -1);
+                SpellProjectile.field_B.drawText(var29[var21], 340 + (ValidatedTextWidget.field_I + 12), -8 + (QuickChatHelpers.field_a + var18) + 120, 0, -1);
                 var18 = var18 + SpellProjectile.field_B.field_C;
               }
-              SpellProjectile.field_B.drawCentered(lo.field_x, ValidatedTextWidget.field_I + 530, uc.field_a + 170, 0, -1);
-              SpellProjectile.field_B.drawCentered("" + 100 * ValidationState.field_g[var15Lifetime1], ValidatedTextWidget.field_I + 530, 185 + uc.field_a, 0, -1);
-              SpellProjectile.field_B.drawCentered(FullscreenFocusCanvas.field_c, 530 + ValidatedTextWidget.field_I, uc.field_a + 220, 0, -1);
+              SpellProjectile.field_B.drawCentered(AgeValidator.field_x, ValidatedTextWidget.field_I + 530, QuickChatHelpers.field_a + 170, 0, -1);
+              SpellProjectile.field_B.drawCentered("" + 100 * ValidationState.field_g[var15Lifetime1], ValidatedTextWidget.field_I + 530, 185 + QuickChatHelpers.field_a, 0, -1);
+              SpellProjectile.field_B.drawCentered(FullscreenFocusCanvas.field_c, 530 + ValidatedTextWidget.field_I, QuickChatHelpers.field_a + 220, 0, -1);
               var21 = 514;
               var22 = 224;
               if (10 == ValidationState.field_g[var15Lifetime1]) {
                 var21 -= 24;
               }
               for (var23 = 0; var23 < ValidationState.field_g[var15Lifetime1]; var23++) {
-                ih.field_e.drawTransparent(var21 + ValidatedTextWidget.field_I, var22 + uc.field_a);
+                PointerOriginHelpers.field_e.drawTransparent(var21 + ValidatedTextWidget.field_I, var22 + QuickChatHelpers.field_a);
                 if (ValidationState.field_g[var15Lifetime1] == 10) {
-                  ih.field_e.drawTransparent(var21 + ValidatedTextWidget.field_I + 32, uc.field_a + var22);
+                  PointerOriginHelpers.field_e.drawTransparent(var21 + ValidatedTextWidget.field_I + 32, QuickChatHelpers.field_a + var22);
                 }
                 var21 -= 8;
                 if (0 == var23 % 3) {
@@ -8375,19 +8375,19 @@ final class MenuScreen {
               }
             }
           } else {
-            SpellProjectile.field_B.drawParagraph(qo.field_c, -16 + (ValidatedTextWidget.field_I + 320) + 50, 134 + uc.field_a, 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(NameHelpers.field_c, -16 + (ValidatedTextWidget.field_I + 320) + 50, 134 + QuickChatHelpers.field_a, 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             if (!MenuScreen.getSessionFlag((byte) 112)) {
-              SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
+              SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, QuickChatHelpers.field_a + 325, 0, -1);
               return;
             }
-            SpellProjectile.field_B.drawParagraph(FrameClock.field_c, -16 + (50 + ValidatedTextWidget.field_I) + 320, -16 + (250 + uc.field_a), 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(FrameClock.field_c, -16 + (50 + ValidatedTextWidget.field_I) + 320, -16 + (250 + QuickChatHelpers.field_a), 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
           }
-          SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
+          SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, QuickChatHelpers.field_a + 325, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.M(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.M(" + param0 + ')');
         }
     }
 
@@ -8402,10 +8402,10 @@ final class MenuScreen {
           }
           SoftwareRasterizer.drawRectangle(-2 + param1, param0 - 2, 244, 123, 11833896);
           SoftwareRasterizer.drawRectangle(param1 - 1, param0 - 1, 242, 121, 0);
-          SoftwareRasterizer.fillVerticalGradient(param1, param0, 240, 119, wm.statusColour(param3, (byte) -122), ng.rankColour((byte) -37, param3));
+          SoftwareRasterizer.fillVerticalGradient(param1, param0, 240, 119, PaddedContainer.statusColour(param3, (byte) -122), TermsNoticePanel.rankColour((byte) -37, param3));
           if (LoginPanel.field_M[param3] == null) {
-            ue.field_d.field_f = 0;
-            LoginPanel.field_M[param3] = af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, ue.field_d);
+            BattleStartHelpers.field_d.field_f = 0;
+            LoginPanel.field_M[param3] = PairedSceneWidget.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, BattleStartHelpers.field_d);
             LoginPanel.field_M[param3].drawHalfSize(param1, param0);
             LoginPanel.field_M[param3] = null;
           } else {
@@ -8415,7 +8415,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var5), "lc.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "lc.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -8429,7 +8429,7 @@ final class MenuScreen {
         int var6 = 0;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (ArcanistsMulti.i((byte) -73)) {
+          if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -73)) {
             return;
           }
           var2_int = 80;
@@ -8461,24 +8461,24 @@ final class MenuScreen {
               if ((var4 & 1) == 1) {
                 DualLinkDeque.field_b[7].draw(var3 + 10, 8);
               }
-              if (ad.field_d <= 0) {
-                if (ad.field_d <= 0) {
-                  SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 25, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
+              if (SpellbookCaptionGlobals.field_d <= 0) {
+                if (SpellbookCaptionGlobals.field_d <= 0) {
+                  SpellProjectile.field_B.drawParagraph(CompoundButton.field_I + var4, var3 + 25, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
                 } else {
-                  rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[ad.field_d - 1].field_y / 2) - rb.field_o[ad.field_d - 1].field_o + 33, 16711680);
-                  SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
+                  TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].drawTintedGrayscale(var3 + 23, -(TimedMessage.field_o[SpellbookCaptionGlobals.field_d - 1].field_y / 2) - TimedMessage.field_o[SpellbookCaptionGlobals.field_d - 1].field_o + 33, 16711680);
+                  SpellProjectile.field_B.drawParagraph(CompoundButton.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
                 }
               } else {
-                rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[-1 + ad.field_d].field_y / 2) + (-rb.field_o[-1 + ad.field_d].field_o + 33), 16711680);
-                SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, 50, 44, 16777215, -1, 2, 1, 14);
+                TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].drawTintedGrayscale(var3 + 23, -(TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].field_y / 2) + (-TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].field_o + 33), 16711680);
+                SpellProjectile.field_B.drawParagraph(CompoundButton.field_I + var4, var3 + 23, 4, 50, 44, 16777215, -1, 2, 1, 14);
               }
             } else {
-              if (ad.field_d > 0) {
+              if (SpellbookCaptionGlobals.field_d > 0) {
                 var5 = 19;
                 if (LinkButtonPainter.field_f == 3) {
                   var5 -= 7;
                 }
-                rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[ad.field_d - 1].field_y / 2) - rb.field_o[-1 + ad.field_d].field_o + var5, 16711680);
+                TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].drawTintedGrayscale(var3 + 23, -(TimedMessage.field_o[SpellbookCaptionGlobals.field_d - 1].field_y / 2) - TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].field_o + var5, 16711680);
                 SpellProjectile.field_B.drawParagraph(GrowableIntList.field_l, var3 + 5, 4, -10 + var2_int, 38, 16777215, -1, 1, 2, 14);
               } else {
                 SpellProjectile.field_B.drawParagraph(GrowableIntList.field_l, 5 + var3, 4, -10 + var2_int, 44, 16777215, -1, 1, 1, 14);
@@ -8489,18 +8489,18 @@ final class MenuScreen {
             if (var4 > 5) {
               SpellProjectile.field_B.drawCharacter('+', 17 + var3, 30, 16711935);
             }
-            if (ad.field_d <= 0) {
-              SpellProjectile.field_B.drawParagraph(mh.field_I + var4, 23 + var3, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
+            if (SpellbookCaptionGlobals.field_d <= 0) {
+              SpellProjectile.field_B.drawParagraph(CompoundButton.field_I + var4, 23 + var3, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
             } else {
-              rb.field_o[-1 + ad.field_d].drawTintedGrayscale(23 + var3, -(rb.field_o[ad.field_d - 1].field_y / 2) + (33 - rb.field_o[-1 + ad.field_d].field_o), 16711680);
-              SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
+              TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].drawTintedGrayscale(23 + var3, -(TimedMessage.field_o[SpellbookCaptionGlobals.field_d - 1].field_y / 2) + (33 - TimedMessage.field_o[-1 + SpellbookCaptionGlobals.field_d].field_o), 16711680);
+              SpellProjectile.field_B.drawParagraph(CompoundButton.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.T(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.T(" + param0 + ')');
         }
     }
 
@@ -8517,7 +8517,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.KA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8536,7 +8536,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.NA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8594,7 +8594,7 @@ final class MenuScreen {
         try {
           var2 = SpriteState.field_z;
           if (var2 == null) {
-            var2 = r.field_b;
+            var2 = OverlayHelpers.field_b;
           }
           var3 = var2.field_V.getPlayerCount(0);
           var6 = EmailLoginCredentials.field_f / 2;
@@ -8625,7 +8625,7 @@ final class MenuScreen {
           var9 = new int[]{0, 255, 0};
           var10 = new int[]{0, 0, 255};
           var11 = new int[]{255, 255, 255};
-          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, QueuedPacket.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, NameErrorHelpers.field_a, ModalPanelStack.field_I, GameListHelpers.field_b};
           var13 = new double[]{-0.75, 0.75, -0.5, 0.5, -0.25, 0.25};
           var14 = 0;
           while (true) {
@@ -8636,8 +8636,8 @@ final class MenuScreen {
             }
             var4Lifetime3 = 3.141592653589793 * var13[var14];
             var15 = var6 + (int)(240.0 * Math.sin(var4Lifetime3));
-            var16 = uc.field_a * 3 / 4 - (-240 - (int)(140.0 * Math.cos(var4Lifetime3)));
-            var17 = nj.field_n[var14];
+            var16 = QuickChatHelpers.field_a * 3 / 4 - (-240 - (int)(140.0 * Math.cos(var4Lifetime3)));
+            var17 = NameCheckHelpers.field_n[var14];
             for (var18 = -32; var18 < 32; var18++) {
               SoftwareRasterizer.setClip(0, var16 + var18, EmailLoginCredentials.field_f, var18 + var16 + 8);
               SoftwareRasterizer.fillCircle(var15, -(var18 / 2) + var16, 32, 7891535);
@@ -8650,7 +8650,7 @@ final class MenuScreen {
             }
             SoftwareRasterizer.resetClip();
             var18Lifetime2 = -5 + var7;
-            var19 = ae.field_d;
+            var19 = LobbyRequestHelpers.field_d;
             if (var2.field_I == var2.field_V.getCurrentPlayer(false)) {
               if (250 > MusicPatchNode.field_s) {
                 var20_ref_String = Integer.toString(5 - (MusicPatchNode.field_s - 1) / 50);
@@ -8659,7 +8659,7 @@ final class MenuScreen {
                 CachedArchiveProvider.field_t.drawCentered(var20_ref_String, var6, var18Lifetime2 + 64, 16777215, -1);
               }
             } else {
-              var19 = qe.field_s;
+              var19 = QueuedPacket.field_s;
             }
             SpellProjectile.field_B.drawParagraph(var19, var6 - 128 - 1, -1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
             SpellProjectile.field_B.drawParagraph(var19, -129 + var6, var18Lifetime2 + 1, 256, 64, 0, -1, 1, 0, 14);
@@ -8686,18 +8686,18 @@ final class MenuScreen {
             var11[0] = var2.field_V.field_N[var14][9];
             var11[1] = var2.field_V.field_N[var14][10];
             var11[2] = var2.field_V.field_N[var14][11];
-            pc.drawTexturedSpriteIntGuard(var10, var16 - 2, var11, var8, -101, var9, var12[8][0], 0 + var15);
-            pc.drawTexturedSpriteIntGuard(var10, var16 + var20 - 0, var11, var8, 34, var9, var12[3][var2.field_V.field_N[var14][15]], var15 + 12);
-            pc.drawTexturedSpriteIntGuard(var10, 0 + var16, var11, var8, 56, var9, var12[1][var2.field_V.field_N[var14][12]], 0 + var15);
-            pc.drawTexturedSpriteIntGuard(var10, var16 + 2, var11, var8, 39, var9, var12[7][0], var15 + 0);
-            pc.drawTexturedSpriteIntGuard(var10, -40 + var16 + 16, var11, var8, -121, var9, var12[0][var2.field_V.field_N[var14][13]], 0 + var15);
-            pc.drawTexturedSpriteIntGuard(var10, -8 + var16, var11, var8, 37, var9, var12[4][var2.field_V.field_N[var14][17]], 0 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, var16 - 2, var11, var8, -101, var9, var12[8][0], 0 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, var16 + var20 - 0, var11, var8, 34, var9, var12[3][var2.field_V.field_N[var14][15]], var15 + 12);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, 0 + var16, var11, var8, 56, var9, var12[1][var2.field_V.field_N[var14][12]], 0 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, var16 + 2, var11, var8, 39, var9, var12[7][0], var15 + 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, -40 + var16 + 16, var11, var8, -121, var9, var12[0][var2.field_V.field_N[var14][13]], 0 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, -8 + var16, var11, var8, 37, var9, var12[4][var2.field_V.field_N[var14][17]], 0 + var15);
             if (53 != var2.field_V.field_N[var14][17] &&
               55 != var2.field_V.field_N[var14][17]) {
-              pc.drawTexturedSpriteIntGuard(var10, -40 + var16 + 32, var11, var8, -118, var9, var12[6][var14], 0 + var15);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, -40 + var16 + 32, var11, var8, -118, var9, var12[6][var14], 0 + var15);
             }
-            pc.drawTexturedSpriteIntGuard(var10, 16 + var16 - 40, var11, var8, -105, var9, var12[5][var2.field_V.field_N[var14][16]], var15 + 0);
-            pc.drawTexturedSpriteIntGuard(var10, var20 + var16 - 0, var11, var8, 118, var9, var12[2][var2.field_V.field_N[var14][14]], -12 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, 16 + var16 - 40, var11, var8, -105, var9, var12[5][var2.field_V.field_N[var14][16]], var15 + 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, var20 + var16 - 0, var11, var8, 118, var9, var12[2][var2.field_V.field_N[var14][14]], -12 + var15);
             var15 += 32;
             var16 += 64;
             var21 = var2.field_V.field_k[var14];
@@ -8708,8 +8708,8 @@ final class MenuScreen {
             SoftwareRasterizer.fillVerticalGradient(var15 + 3, -8 + (var16 + 3), -6 + var23, 15, var17, (8421504 | var17) ^ 8421504);
             SoftwareRasterizer.setClip(var15 + 3, -8 + var16 + 3, 3 + var15 + (var23 - 6), -10 + var16 + 20);
             while (0 < var23) {
-              var23 = var23 - g.field_a.field_n;
-              g.field_a.drawAdditive(3 + var15 + var23, -10 + (3 + (-8 + var16)), 64);
+              var23 = var23 - SupportPageHelpers.field_a.field_n;
+              SupportPageHelpers.field_a.drawAdditive(3 + var15 + var23, -10 + (3 + (-8 + var16)), 64);
             }
             SoftwareRasterizer.resetClip();
             var23Lifetime1 = var22 + 15;
@@ -8754,7 +8754,7 @@ final class MenuScreen {
                 QuickChatPhraseCache.fillCircleMasked(10, (byte) 99, 256, var15 + 10, var16 + 10);
                 stackIn_85_0 = (var23Lifetime2 != 0) ? 0 : 1;
                 var23Lifetime2 = stackIn_85_0;
-                bb.field_g[dd.field_f[var26]].drawHalfSize(var15, var16);
+                LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var26]].drawHalfSize(var15, var16);
                 if (var23Lifetime2 != 0) {
                   var15 -= 20;
                   var16 -= 20;
@@ -8768,7 +8768,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.Q(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "lc.Q(" + param0 + ')');
         }
     }
 
@@ -8863,7 +8863,7 @@ final class MenuScreen {
         try {
           var2 = SpriteState.field_z;
           if (var2 == null) {
-            var2 = r.field_b;
+            var2 = OverlayHelpers.field_b;
           }
           var3 = var2.field_V.getPlayerCount(0);
           var4 = var2.field_V.getCurrentPlayer(false);
@@ -8896,7 +8896,7 @@ final class MenuScreen {
           var10 = new int[]{0, 255, 0};
           var11 = new int[]{0, 0, 255};
           var12 = new int[]{255, 255, 255};
-          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, QueuedPacket.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, NameErrorHelpers.field_a, ModalPanelStack.field_I, GameListHelpers.field_b};
           var14 = new StringBuilder(20);
           if (null != var2.field_w) {
             var2.field_V = var2.field_w;
@@ -8904,7 +8904,7 @@ final class MenuScreen {
           if (var4 >= 0) {
             if (var2.field_V.field_d) {
               if (0 == var4) {
-                discarded$0 = var14.append(EditableTextWidget.field_K + b.field_d + "<br><br>");
+                discarded$0 = var14.append(EditableTextWidget.field_K + ThrowableFormatHelpers.field_d + "<br><br>");
               }
               if (1 == var4) {
                 discarded$1 = var14.append(EditableTextWidget.field_K + BirthDateEntryPanel.field_I + "<br><br>");
@@ -8914,9 +8914,9 @@ final class MenuScreen {
             }
           } else {
             if (-2 == var4) {
-              discarded$3 = var14.append(ff.field_d);
+              discarded$3 = var14.append(FrameAndQuickChatHelpers.field_d);
             } else {
-              discarded$4 = var14.append(th.field_a);
+              discarded$4 = var14.append(NameTable.field_a);
             }
           }
           var15 = var14.toString();
@@ -8924,13 +8924,13 @@ final class MenuScreen {
             var16 = 0;
             incrementValue$5 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$5, lo.field_v);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$5, AgeValidator.field_v);
             incrementValue$6 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$6, tm.field_e);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$6, IntensityTableHelpers.field_e);
             incrementValue$7 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$7, qa.field_p);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$7, NoticeHelpers.field_p);
             incrementValue$8 = var16;
             var16++;
             var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$8, TextHotspotWidget.field_N);
@@ -8948,25 +8948,25 @@ final class MenuScreen {
             var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$12, PacketBuffer.field_h);
             incrementValue$13 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$13, ed.field_Eb);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$13, MainMenuDialog.field_Eb);
             incrementValue$14 = var16;
             var16++;
             var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$14, ResizableModalPanel.field_X);
             incrementValue$15 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$15, ao.field_a);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$15, LobbyLayoutHelpers.field_a);
             incrementValue$16 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$16, co.field_b);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$16, BattleResetHelpers.field_b);
             incrementValue$17 = var16;
             var16++;
             var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$17, SoundCache.field_i);
             incrementValue$18 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$18, nj.field_i);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$18, NameCheckHelpers.field_i);
             incrementValue$19 = var16;
             var16++;
-            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$19, rk.field_S);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$19, GradientBarButton.field_S);
             incrementValue$20 = var16;
             var16++;
             var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
@@ -8976,11 +8976,11 @@ final class MenuScreen {
               var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$21, NanoFrameClock.field_q);
             }
           } else {
-            var15 = nj.field_b;
+            var15 = NameCheckHelpers.field_b;
           }
           var16Lifetime1 = 128 + 14 * SpellProjectile.field_B.wrappedLineCount(var15, 256);
           var17 = SpriteState.field_v / 3 % var16Lifetime1 - 128;
-          var18 = uc.field_a + 180;
+          var18 = QuickChatHelpers.field_a + 180;
           SoftwareRasterizer.setClip(0, var18, EmailLoginCredentials.field_f, 128 + var18);
           SpellProjectile.field_B.drawParagraph(var15, -128 + var7 - 1, -var17 - 1 + var18, 256, 256, 0, -1, 1, 0, 14);
           SpellProjectile.field_B.drawParagraph(var15, var7 - 129, -var17 + var18 + 1, 256, 256, 0, -1, 1, 0, 14);
@@ -9016,8 +9016,8 @@ final class MenuScreen {
             }
             var21 = stackIn_73_0;
             var22 = (int)(240.0 * Math.sin(var5Lifetime3)) + var7;
-            var23 = uc.field_a / 2 + (240 + (int)(140.0 * Math.cos(var5Lifetime3)));
-            var24 = nj.field_n[var20];
+            var23 = QuickChatHelpers.field_a / 2 + (240 + (int)(140.0 * Math.cos(var5Lifetime3)));
+            var24 = NameCheckHelpers.field_n[var20];
             if (var21 != 0) {
               for (var25 = -48; var25 < 48; var25++) {
                 SoftwareRasterizer.setClip(0, var25 + (var23 - 16), EmailLoginCredentials.field_f, 24 + var23 + var25);
@@ -9062,19 +9062,19 @@ final class MenuScreen {
             var12[1] = var2.field_V.field_N[var20][10];
             var12[2] = var2.field_V.field_N[var20][11];
             if (46 != var2.field_V.field_N[var20][12]) {
-              pc.drawTexturedSpriteIntGuard(var11, -2 + (var23 + var26), var12, var9, 29, var10, var13[8][0], var22 + 0);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, -2 + (var23 + var26), var12, var9, 29, var10, var13[8][0], var22 + 0);
             }
-            pc.drawTexturedSpriteIntGuard(var11, var23 + var25Lifetime1 - (0 - var26 / 2), var12, var9, -82, var10, var13[3][var2.field_V.field_N[var20][15]], 12 + var22);
-            pc.drawTexturedSpriteIntGuard(var11, 0 + var23 + var26 * 3 / 2, var12, var9, -81, var10, var13[1][var2.field_V.field_N[var20][12]], var22 + 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, var23 + var25Lifetime1 - (0 - var26 / 2), var12, var9, -82, var10, var13[3][var2.field_V.field_N[var20][15]], 12 + var22);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, 0 + var23 + var26 * 3 / 2, var12, var9, -81, var10, var13[1][var2.field_V.field_N[var20][12]], var22 + 0);
             if (var2.field_V.field_N[var20][12] != 46) {
-              pc.drawTexturedSpriteIntGuard(var11, 2 + var23, var12, var9, -93, var10, var13[7][0], var22 - 0);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, 2 + var23, var12, var9, -93, var10, var13[7][0], var22 - 0);
             }
             if (var21 == 0) {
               var23 += 16;
               var22 += 8;
             }
-            pc.drawTexturedSpriteIntGuard(var11, -40 + (var23 + (16 + var26 * 3 / 2)), var12, var9, 92, var10, var13[0][var2.field_V.field_N[var20][13]], var22 + 0);
-            pc.drawTexturedSpriteIntGuard(var11, var23 - (-32 + (40 - var26 * 3 / 2)), var12, var9, -125, var10, var13[4][var2.field_V.field_N[var20][17]], var22 - 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, -40 + (var23 + (16 + var26 * 3 / 2)), var12, var9, 92, var10, var13[0][var2.field_V.field_N[var20][13]], var22 + 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, var23 - (-32 + (40 - var26 * 3 / 2)), var12, var9, -125, var10, var13[4][var2.field_V.field_N[var20][17]], var22 - 0);
             if (var2.field_V.field_N[var20][17] != 53 &&
               var2.field_V.field_N[var20][17] != 55) {
               stackIn_114_0 = var11;
@@ -9089,14 +9089,14 @@ final class MenuScreen {
               } else {
                 stackIn_115_7 = 16;
               }
-              pc.drawTexturedSpriteIntGuard(stackIn_114_0, stackIn_114_1, stackIn_114_2, stackIn_114_3, stackIn_114_4, stackIn_114_5, stackIn_114_6[stackIn_115_7 + (var20 + SpriteState.field_v / 200) % 8], var22 - 0);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(stackIn_114_0, stackIn_114_1, stackIn_114_2, stackIn_114_3, stackIn_114_4, stackIn_114_5, stackIn_114_6[stackIn_115_7 + (var20 + SpriteState.field_v / 200) % 8], var22 - 0);
             }
-            pc.drawTexturedSpriteIntGuard(var11, 3 * var26 / 2 + var23 + 16 - 40, var12, var9, -102, var10, var13[5][var2.field_V.field_N[var20][16]], var22 + 0);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, 3 * var26 / 2 + var23 + 16 - 40, var12, var9, -102, var10, var13[5][var2.field_V.field_N[var20][16]], var22 + 0);
             if (var21 == 0) {
               var23 -= 16;
               var22 -= 8;
             }
-            pc.drawTexturedSpriteIntGuard(var11, var26 * 2 + (var25Lifetime1 + var23 + 0), var12, var9, -88, var10, var13[2][var2.field_V.field_N[var20][14]], var22 - 12);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, var26 * 2 + (var25Lifetime1 + var23 + 0), var12, var9, -88, var10, var13[2][var2.field_V.field_N[var20][14]], var22 - 12);
             var22 += 32;
             var23 += 64;
             var27 = var2.field_V.field_k[var20];
@@ -9110,8 +9110,8 @@ final class MenuScreen {
             SoftwareRasterizer.fillVerticalGradient(var22 + 3, -8 + (var23 + 3), var16Lifetime2 - 6, 15, var24, 8421504 ^ (8421504 | var24));
             SoftwareRasterizer.setClip(var22 + 3, -5 + var23, var16Lifetime2 + 3 + var22 - 6, -2 + (17 + (var23 - 8)) + 3);
             while (var16Lifetime2 > 0) {
-              var16Lifetime2 = var16Lifetime2 - g.field_a.field_n;
-              g.field_a.drawAdditive(var22 + (3 + var16Lifetime2), 3 + (var23 - 18), 64);
+              var16Lifetime2 = var16Lifetime2 - SupportPageHelpers.field_a.field_n;
+              SupportPageHelpers.field_a.drawAdditive(var22 + (3 + var16Lifetime2), 3 + (var23 - 18), 64);
             }
             SoftwareRasterizer.resetClip();
             var16Lifetime2Lifetime1 = 15 + var28;
@@ -9166,7 +9166,7 @@ final class MenuScreen {
                 DualLinkDeque.field_b[7].drawFadedToColour(16 + 8 * var32 + 8, 24, 0, 16744703);
               }
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 8 * var30 + 24 + 32, 80);
-              ce.field_m.makeRasterTarget(true);
+              GameSelectionHelpers.field_m.makeRasterTarget(true);
               var31.drawAdditive(-(var30 * 8) + (var22 - 36), -24 + var23 - 16, 256);
               var31.drawAdditive(-14 + (var22 + (-(8 * var30) - 16)) + 6, -16 + (-24 + var23), 256);
               var31.drawAdditive(var22 - (8 * var30 + 30), -24 + var23 - 22, 256);
@@ -9181,7 +9181,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.JA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "lc.JA(" + param0 + ')');
         }
     }
 
@@ -9273,7 +9273,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var8), "lc.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var8), "lc.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -9301,29 +9301,29 @@ final class MenuScreen {
             this.drawCaption(12);
             return;
           }
-          if (null == nj.field_e) {
-            nj.field_e = EmptyPainter.findOrCreateListRequest(true, 10, 0, 7);
+          if (null == NameCheckHelpers.field_e) {
+            NameCheckHelpers.field_e = EmptyPainter.findOrCreateListRequest(true, 10, 0, 7);
           }
-          var2_int = 125 + uc.field_a - 16;
+          var2_int = 125 + QuickChatHelpers.field_a - 16;
           var2_int += 16;
           var3 = 0;
-          SpellProjectile.field_B.drawCentered(FixedViewResizeListener.field_d, no.field_tb[0] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          SpellProjectile.field_B.drawCentered(TextHotspotWidget.field_H, no.field_tb[1] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          SpellProjectile.field_B.drawCentered(QuickChatCategory.field_o, no.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          SpellProjectile.field_B.drawCentered(fc.field_d, no.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          SpellProjectile.field_B.drawCentered(ScrollContainer.field_N, no.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(FixedViewResizeListener.field_d, SocialDialog.field_tb[0] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(TextHotspotWidget.field_H, SocialDialog.field_tb[1] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(QuickChatCategory.field_o, SocialDialog.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(SpriteDecodeHelpers.field_d, SocialDialog.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(ScrollContainer.field_N, SocialDialog.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           if (!param0) {
             this.updateHoverSelection(-123);
           }
           boolean decompiledFrameRemainder0 = true;
           var2_int = var2_int + (8 + CachedArchiveProvider.field_t.field_C);
-          if (!nj.field_e.field_g) {
+          if (!NameCheckHelpers.field_e.field_g) {
             var4 = PatchEnvelopeSet.field_f;
           } else {
-            if (null != nj.field_e.field_r) {
+            if (null != NameCheckHelpers.field_e.field_r) {
               var4 = WhirlpoolHasher.field_d;
-              var5 = nj.field_e.field_r[ie.field_Sb];
-              var6 = nj.field_e.field_l[ie.field_Sb];
+              var5 = NameCheckHelpers.field_e.field_r[StatusDialog.field_Sb];
+              var6 = NameCheckHelpers.field_e.field_l[StatusDialog.field_Sb];
               var7 = 0;
               for (var8 = 0; var8 < 10; var8++) {
                 if (null != var5[var8]) {
@@ -9332,7 +9332,7 @@ final class MenuScreen {
                     var3Lifetime1 = 16777215;
                   }
                   var9 = var5[var8];
-                  if (var9.equals(ah.field_b)) {
+                  if (var9.equals(AccountFlowHelpers.field_b)) {
                     var3Lifetime1 = 16776960;
                     var7 = 1;
                   }
@@ -9343,37 +9343,37 @@ final class MenuScreen {
               }
               if ((var7 == 0)) {
                 var3Lifetime1Lifetime1 = 16776960;
-                this.drawStatRow(var3Lifetime1Lifetime1, nj.field_e.field_k, ah.field_b, nj.field_e.field_s, nj.field_e.field_i, -1, (byte) -126, nj.field_e.field_h, var2_int);
+                this.drawStatRow(var3Lifetime1Lifetime1, NameCheckHelpers.field_e.field_k, AccountFlowHelpers.field_b, NameCheckHelpers.field_e.field_s, NameCheckHelpers.field_e.field_i, -1, (byte) -126, NameCheckHelpers.field_e.field_h, var2_int);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              var4 = rk.field_R;
+              var4 = GradientBarButton.field_R;
             }
           }
           var3Lifetime2 = 0;
-          var2_intLifetime1 = -16 + uc.field_a + 125;
-          SoftwareRasterizer.drawVerticalLine(-((-no.field_tb[0] + no.field_tb[1]) / 2) + no.field_tb[0] + ValidatedTextWidget.field_I, 16 + (var2_intLifetime1 + 9), 276, var3Lifetime2);
-          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (no.field_tb[0] + no.field_tb[1]) / 2, 16 + (9 + var2_intLifetime1), 276, var3Lifetime2);
-          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (no.field_tb[2] + no.field_tb[1]) / 2, 16 + (9 + var2_intLifetime1), 276, var3Lifetime2);
-          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (no.field_tb[2] + no.field_tb[3]) / 2, 16 + var2_intLifetime1 + 9, 276, var3Lifetime2);
-          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (no.field_tb[3] + no.field_tb[4]) / 2, 9 + var2_intLifetime1 + 16, 276, var3Lifetime2);
+          var2_intLifetime1 = -16 + QuickChatHelpers.field_a + 125;
+          SoftwareRasterizer.drawVerticalLine(-((-SocialDialog.field_tb[0] + SocialDialog.field_tb[1]) / 2) + SocialDialog.field_tb[0] + ValidatedTextWidget.field_I, 16 + (var2_intLifetime1 + 9), 276, var3Lifetime2);
+          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (SocialDialog.field_tb[0] + SocialDialog.field_tb[1]) / 2, 16 + (9 + var2_intLifetime1), 276, var3Lifetime2);
+          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (SocialDialog.field_tb[2] + SocialDialog.field_tb[1]) / 2, 16 + (9 + var2_intLifetime1), 276, var3Lifetime2);
+          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (SocialDialog.field_tb[2] + SocialDialog.field_tb[3]) / 2, 16 + var2_intLifetime1 + 9, 276, var3Lifetime2);
+          SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (SocialDialog.field_tb[3] + SocialDialog.field_tb[4]) / 2, 9 + var2_intLifetime1 + 16, 276, var3Lifetime2);
           if ("" != var4) {
-            var2_intLifetime2 = 16 + uc.field_a + 125;
+            var2_intLifetime2 = 16 + QuickChatHelpers.field_a + 125;
             SpellProjectile.field_B.drawText(var4, ValidatedTextWidget.field_I + 64, -16 + var2_intLifetime2, 0, -1);
           }
-          if (ie.field_Sb != 0) {
-            var2_intLifetime3 = uc.field_a + 125;
+          if (StatusDialog.field_Sb != 0) {
+            var2_intLifetime3 = QuickChatHelpers.field_a + 125;
             SpellProjectile.field_B.drawCentered(SceneTabbedPanel.field_Cb, 320 + ValidatedTextWidget.field_I, var2_intLifetime3 - 16, 0, -1);
           } else {
-            var2_intLifetime3 = uc.field_a + 125;
+            var2_intLifetime3 = QuickChatHelpers.field_a + 125;
             SpellProjectile.field_B.drawCentered(MenuButtonPanel.field_N, ValidatedTextWidget.field_I + 320, var2_intLifetime3 - 16, 0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.U(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.U(" + param0 + ')');
         }
     }
 
@@ -9383,10 +9383,10 @@ final class MenuScreen {
         }
         try {
           if (6 == this.field_l) {
-            nj.field_e = null;
+            NameCheckHelpers.field_e = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.D(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "lc.D(" + param0 + ')');
         }
     }
 
@@ -9427,34 +9427,34 @@ final class MenuScreen {
         try {
           boolean decompiledFrameRemainder0 = true;
           var4_int = NumericDateInputWidget.field_L[this.field_l][param2];
-          var5 = ce.field_g[var4_int];
+          var5 = GameSelectionHelpers.field_g[var4_int];
           if (var4_int == 8) {
-            if (th.field_f != 0 &&
-              mn.field_r != 0 &&
-              10 != th.field_f &&
-              10 != mn.field_r) {
-              if (th.field_f != 1 &&
-                mn.field_r != 1) {
-                if (th.field_f != 2 &&
-                  2 != mn.field_r &&
-                  3 != th.field_f &&
-                  3 != mn.field_r &&
-                  th.field_f != 4 &&
-                  mn.field_r != 4) {
-                  if ((th.field_f == 15 ||
-                    mn.field_r == 15)) {
-                    var5 = ce.field_g[14];
+            if (NameTable.field_f != 0 &&
+              MatchingFieldValidator.field_r != 0 &&
+              10 != NameTable.field_f &&
+              10 != MatchingFieldValidator.field_r) {
+              if (NameTable.field_f != 1 &&
+                MatchingFieldValidator.field_r != 1) {
+                if (NameTable.field_f != 2 &&
+                  2 != MatchingFieldValidator.field_r &&
+                  3 != NameTable.field_f &&
+                  3 != MatchingFieldValidator.field_r &&
+                  NameTable.field_f != 4 &&
+                  MatchingFieldValidator.field_r != 4) {
+                  if ((NameTable.field_f == 15 ||
+                    MatchingFieldValidator.field_r == 15)) {
+                    var5 = GameSelectionHelpers.field_g[14];
                   }
                 } else {
                   var5 = DropTargetWidget.field_I;
                 }
               } else {
-                var5 = ja.field_r;
+                var5 = ConfirmedNameValidator.field_r;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              var5 = ce.field_g[7];
+              var5 = GameSelectionHelpers.field_g[7];
             }
           }
           var6 = CachedArchiveProvider.field_t.textWidth(var5);
@@ -9463,7 +9463,7 @@ final class MenuScreen {
           var9 = this.getItemColumnLeft(param2, -7661);
           if (var4_int == 20 ||
             var4_int == 21) {
-            var6 = ff.field_c + 120;
+            var6 = FrameAndQuickChatHelpers.field_c + 120;
           }
           var10 = -var6 + (var7 + var8) >> 1;
           var11 = this.getItemSpacing(param2, 110);
@@ -9491,8 +9491,8 @@ final class MenuScreen {
             SoftwareRasterizer.drawRoundedRectangle(1 + var7, var9, var12 - 2, var13, 5, 0);
             SoftwareRasterizer.drawRoundedRectangle(var7, var9 - 1, var12, var13 + 2, 6, 16777215);
             SoftwareRasterizer.setClip(var7 + 2, 1 + var9, var12 + (2 + var7 - 4), -2 + (1 + var9 + var13));
-            for (var15 = 2 + var7; (var12 + (2 + var7 - 4)) > var15; var15 = var15 + sm.field_d.field_n) {
-              sm.field_d.drawAdditive(var15, -16 + var9, 32);
+            for (var15 = 2 + var7; (var12 + (2 + var7 - 4)) > var15; var15 = var15 + AudioAndCookieHelpers.field_d.field_n) {
+              AudioAndCookieHelpers.field_d.drawAdditive(var15, -16 + var9, 32);
             }
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.fillRoundedRectangleBlended(var7 + 4, var9 + 2, var12 - 8, 9, 4, 16777215, 64);
@@ -9503,7 +9503,7 @@ final class MenuScreen {
           stackIn_81_0 = (param1) ? 16598235 : 16738820;
           var16 = stackIn_81_0;
           if (!MenuScreen.getSessionFlag((byte) 112) &&
-            0 < ah.field_c &&
+            0 < AccountFlowHelpers.field_c &&
             var4_int == 15) {
             stackIn_93_0 = (!param1) ? 0 : 7097239;
             var15Lifetime1 = stackIn_93_0;
@@ -9529,7 +9529,7 @@ final class MenuScreen {
             var4_int != 21) {
             return;
           }
-          var10 = var10 + ff.field_c;
+          var10 = var10 + FrameAndQuickChatHelpers.field_c;
           SoftwareRasterizer.fillRoundedRectangle(var10, -4 + (var9 + var11 / 2), 121, 8, 3, var17);
           SoftwareRasterizer.drawRoundedRectangle(var10, -4 + (var11 / 2 + var9), 121, 8, 3, var18);
           if (20 == var4_int) {
@@ -9544,7 +9544,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "lc.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "lc.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -9559,18 +9559,18 @@ final class MenuScreen {
             this.field_l != 8 &&
             this.field_l != 7) {
             if (param1 == -7661) {
-              stackIn_14_0 = this.getItemLeft(param0, param1 + 7736) + uc.field_a;
+              stackIn_14_0 = this.getItemLeft(param0, param1 + 7736) + QuickChatHelpers.field_a;
               return stackIn_14_0;
             }
             stackIn_12_0 = 94;
             return stackIn_12_0;
           }
-          stackIn_9_0 = this.getItemLeft(param0, 75) + uc.field_a + uc.field_a / 8;
+          stackIn_9_0 = this.getItemLeft(param0, 75) + QuickChatHelpers.field_a + QuickChatHelpers.field_a / 8;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.G(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -9722,7 +9722,7 @@ final class MenuScreen {
           var3 = -GridContainer.field_P + NodeHashTableIterator.field_j;
           this.drawBottomPanel(-26733);
           this.field_m = -1;
-          discarded$0 = this.drawButtonBox(false, 245, (byte) -43, false, ValidatedTextWidget.field_I + 26, 245, uc.field_a + 178);
+          discarded$0 = this.drawButtonBox(false, 245, (byte) -43, false, ValidatedTextWidget.field_I + 26, 245, QuickChatHelpers.field_a + 178);
           if (this.field_d < 0) {
             this.field_d = 0;
           }
@@ -9736,7 +9736,7 @@ final class MenuScreen {
           if (6 + this.field_d <= this.field_h) {
             this.field_h = 5 + this.field_d;
           }
-          var5 = uc.field_a + 102;
+          var5 = QuickChatHelpers.field_a + 102;
           var6 = 41 + ValidatedTextWidget.field_I;
           SoftwareRasterizer.addHorizontalLineScaled(var6, var5 + 4, 558, 16777215, 128);
           SoftwareRasterizer.fillRectangleAlpha(var6, 5 + var5, 558, 55, 16777215, 64);
@@ -9821,21 +9821,21 @@ final class MenuScreen {
               var11 += 0;
               var12 = 8947848;
             }
-            stackIn_87_0 = (~bc.field_b != ~var9) ? 0 : 1;
+            stackIn_87_0 = (~OptionToggleHelpers.field_b != ~var9) ? 0 : 1;
             var13_int = stackIn_87_0;
             SoftwareRasterizer.fillRectangle(var10, var11, 65, 65, var12);
             stackIn_91_1 = (var9 == this.field_h);
             discarded$3 = this.drawButtonBox(stackIn_91_1, 65, (byte) 74, true, var10, 65, var11);
             if (var13_int != 0) {
               if (var9 == 9 &&
-                !ArcanistsMulti.i((byte) -77) &&
-                0 < ad.field_d) {
+                !ArcanistsMulti.isOfflineOrNotLoaded((byte) -77) &&
+                0 < SpellbookCaptionGlobals.field_d) {
                 var13_int = 0;
               }
-              if (0L != (1L << -14 + var9 * 8 & cb.field_e) &&
+              if (0L != (1L << -14 + var9 * 8 & GameListSortHelpers.field_e) &&
                 var9 > 1 &&
                 var9 < 9 &&
-                (cb.field_e & 1L << -13 + 8 * var9 + mf.field_a / 2) != 0L) {
+                (GameListSortHelpers.field_e & 1L << -13 + 8 * var9 + EffectVolumeHelpers.field_a / 2) != 0L) {
                 var13_int = 0;
               }
               if (var13_int != 0) {
@@ -9846,17 +9846,17 @@ final class MenuScreen {
             boolean decompiledFrameRemainder2 = true;
             if (this.field_h == var9) {
               if (this.field_h != 9) {
-                if (0L == (1L << -14 + 8 * this.field_h & cb.field_e) &&
+                if (0L == (1L << -14 + 8 * this.field_h & GameListSortHelpers.field_e) &&
                   1 < this.field_h) {
-                  WhirlpoolHasher.field_o[10].drawSilhouette(26 + (ValidatedTextWidget.field_I + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, var12 >> 1 & 8355711 | 8421504);
-                  WhirlpoolHasher.field_o[var9].drawSilhouette(ValidatedTextWidget.field_I + (32 - (6 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2)), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 8355711 & var12 >> 1 | 8421504);
-                  SoftwareRasterizer.blurRectangle(6, 6, 8 + (32 + ValidatedTextWidget.field_I), 186 + uc.field_a, 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + ValidatedTextWidget.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
-                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + ValidatedTextWidget.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
-                  ce.field_m.makeRasterTarget(true);
+                  WhirlpoolHasher.field_o[10].drawSilhouette(26 + (ValidatedTextWidget.field_I + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, var12 >> 1 & 8355711 | 8421504);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(ValidatedTextWidget.field_I + (32 - (6 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2)), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, 8355711 & var12 >> 1 | 8421504);
+                  SoftwareRasterizer.blurRectangle(6, 6, 8 + (32 + ValidatedTextWidget.field_I), 186 + QuickChatHelpers.field_a, 229, 229);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + ValidatedTextWidget.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + ValidatedTextWidget.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
+                  GameSelectionHelpers.field_m.makeRasterTarget(true);
                   var14 = 416 + (ValidatedTextWidget.field_I << 4) + 1960;
-                  var15 = 2848 + ((uc.field_a << 4) + 1960);
-                  if (!ArcanistsMulti.i((byte) -102)) {
+                  var15 = 2848 + ((QuickChatHelpers.field_a << 4) + 1960);
+                  if (!ArcanistsMulti.isOfflineOrNotLoaded((byte) -102)) {
                     var32.drawRotatedAboutPivot(80, 1088, var14, var15, SpriteState.field_v * 30 - 26214, 4096);
                     var32.drawRotatedAboutPivot(80, 1088, var14, var15, -13107 + SpriteState.field_v * 30, 4096);
                     var32.drawRotatedAboutPivot(80, 1088, var14, var15, SpriteState.field_v * 30 + 0, 4096);
@@ -9866,39 +9866,39 @@ final class MenuScreen {
                       var16_double = (double)(SpriteState.field_v & 255) * 3.141592653589793 / 128.0;
                       var18 = (int)(4096.0 + 256.0 * Math.cos(4.0 * var16_double) - 256.0);
                       var19 = (int)(0.0 + 5000.0 * Math.sin(2.0 * var16_double));
-                      QuickChatPhrase.field_x[4].drawRotatedQuarterScale(var18, uc.field_a + 300, param0 ^ 0, 148 + ValidatedTextWidget.field_I, var19);
-                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 111, 128, -(8 * var18 / 4096) + (148 + ValidatedTextWidget.field_I), -(var18 * 8 / 4096) + 300 + uc.field_a);
+                      QuickChatPhrase.field_x[4].drawRotatedQuarterScale(var18, QuickChatHelpers.field_a + 300, param0 ^ 0, 148 + ValidatedTextWidget.field_I, var19);
+                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 111, 128, -(8 * var18 / 4096) + (148 + ValidatedTextWidget.field_I), -(var18 * 8 / 4096) + 300 + QuickChatHelpers.field_a);
                     }
                   }
-                  if (!(!SpellProjectile.isPointerInRect(256, 178 + uc.field_a, 256, -8, ValidatedTextWidget.field_I + 26))) {
+                  if (!(!SpellProjectile.isPointerInRect(256, 178 + QuickChatHelpers.field_a, 256, -8, ValidatedTextWidget.field_I + 26))) {
                     this.field_i = var9;
                     this.field_m = 5;
                   }
                   decompiledFrameRemainder2 = false;
                 }
                 else {
-                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (ValidatedTextWidget.field_I - 6) + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2, 178 + uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12) >> 1 | 8421504);
-                  WhirlpoolHasher.field_o[var9].drawSilhouette(-6 + ValidatedTextWidget.field_I - (-32 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 8421504 | (var12 & 16711422) >> 1);
-                  SoftwareRasterizer.blurRectangle(6, 6, 8 + ValidatedTextWidget.field_I + 32, 8 + uc.field_a + 178, 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + ValidatedTextWidget.field_I + 26, uc.field_a + 178 + (245 - WhirlpoolHasher.field_o[9].field_w) / 2);
-                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + ValidatedTextWidget.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + (uc.field_a + 178));
+                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (ValidatedTextWidget.field_I - 6) + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2, 178 + QuickChatHelpers.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12) >> 1 | 8421504);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(-6 + ValidatedTextWidget.field_I - (-32 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 8421504 | (var12 & 16711422) >> 1);
+                  SoftwareRasterizer.blurRectangle(6, 6, 8 + ValidatedTextWidget.field_I + 32, 8 + QuickChatHelpers.field_a + 178, 229, 229);
+                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + ValidatedTextWidget.field_I + 26, QuickChatHelpers.field_a + 178 + (245 - WhirlpoolHasher.field_o[9].field_w) / 2);
+                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + ValidatedTextWidget.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + (QuickChatHelpers.field_a + 178));
                 }
               } else {
-                if (ArcanistsMulti.i((byte) -72) &&
-                  0 >= ad.field_d) {
-                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (ValidatedTextWidget.field_I - 6 + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), 178 + uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12 | 16843009) >> 1);
-                  WhirlpoolHasher.field_o[var9].drawSilhouette((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 32 - 6), 178 + (uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2), (var12 & 16711422 | 16843009) >> 1);
-                  SoftwareRasterizer.blurRectangle(6, 6, ValidatedTextWidget.field_I + 32 + 8, 8 + (uc.field_a + 178), 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity(-6 + (ValidatedTextWidget.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 64);
-                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 26), uc.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
-                  ce.field_m.makeRasterTarget(true);
+                if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -72) &&
+                  0 >= SpellbookCaptionGlobals.field_d) {
+                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (ValidatedTextWidget.field_I - 6 + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), 178 + QuickChatHelpers.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12 | 16843009) >> 1);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 32 - 6), 178 + (QuickChatHelpers.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2), (var12 & 16711422 | 16843009) >> 1);
+                  SoftwareRasterizer.blurRectangle(6, 6, ValidatedTextWidget.field_I + 32 + 8, 8 + (QuickChatHelpers.field_a + 178), 229, 229);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity(-6 + (ValidatedTextWidget.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 26), QuickChatHelpers.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
+                  GameSelectionHelpers.field_m.makeRasterTarget(true);
                 } else {
-                  WhirlpoolHasher.field_o[10].drawSilhouette((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 - 6 + (ValidatedTextWidget.field_I + 32), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
-                  WhirlpoolHasher.field_o[var9].drawSilhouette(32 + (ValidatedTextWidget.field_I + (-6 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2)), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, var12 >> 1 & 8355711 | 8421504);
-                  SoftwareRasterizer.blurRectangle(6, 6, 32 + ValidatedTextWidget.field_I + 8, 8 + (uc.field_a + 178), 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + 32 + (ValidatedTextWidget.field_I - 6), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178);
-                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + ValidatedTextWidget.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2));
-                  ce.field_m.makeRasterTarget(true);
+                  WhirlpoolHasher.field_o[10].drawSilhouette((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 - 6 + (ValidatedTextWidget.field_I + 32), 178 + (QuickChatHelpers.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(32 + (ValidatedTextWidget.field_I + (-6 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2)), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, var12 >> 1 & 8355711 | 8421504);
+                  SoftwareRasterizer.blurRectangle(6, 6, 32 + ValidatedTextWidget.field_I + 8, 8 + (QuickChatHelpers.field_a + 178), 229, 229);
+                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + 32 + (ValidatedTextWidget.field_I - 6), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178);
+                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + ValidatedTextWidget.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), 178 + (QuickChatHelpers.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2));
+                  GameSelectionHelpers.field_m.makeRasterTarget(true);
                 }
               }
             }
@@ -9910,11 +9910,11 @@ final class MenuScreen {
             }
             var9++;
           }
-          discarded$1 = this.drawButtonBox(false, 332, (byte) -71, false, 287 + ValidatedTextWidget.field_I, 245, 178 + uc.field_a);
-          discarded$2 = this.drawButtonBox(true, 284, (byte) 108, false, 21 + ValidatedTextWidget.field_I + 287, 29, -4 + (178 + uc.field_a));
-          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 21 + (290 + ValidatedTextWidget.field_I) - 1, -4 + (uc.field_a + 178 - 1), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 311 + ValidatedTextWidget.field_I, -2 + (178 + uc.field_a) - 4, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 290 + (ValidatedTextWidget.field_I + 21), -5 + uc.field_a + 178, 281, 29, 12569299, -1, param0, 1, CachedArchiveProvider.field_t.field_C);
+          discarded$1 = this.drawButtonBox(false, 332, (byte) -71, false, 287 + ValidatedTextWidget.field_I, 245, 178 + QuickChatHelpers.field_a);
+          discarded$2 = this.drawButtonBox(true, 284, (byte) 108, false, 21 + ValidatedTextWidget.field_I + 287, 29, -4 + (178 + QuickChatHelpers.field_a));
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 21 + (290 + ValidatedTextWidget.field_I) - 1, -4 + (QuickChatHelpers.field_a + 178 - 1), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 311 + ValidatedTextWidget.field_I, -2 + (178 + QuickChatHelpers.field_a) - 4, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 290 + (ValidatedTextWidget.field_I + 21), -5 + QuickChatHelpers.field_a + 178, 281, 29, 12569299, -1, param0, 1, CachedArchiveProvider.field_t.field_C);
           var9Lifetime1 = -1;
           var10Lifetime1 = -1;
           var11Lifetime1 = 0;
@@ -9925,9 +9925,9 @@ final class MenuScreen {
             if (stackIn_154_0 > -9) {
               for (var13_intLifetime1 = 0; var13_intLifetime1 < 2; var13_intLifetime1++) {
                 var14 = 290 + ValidatedTextWidget.field_I + 41 * var12Lifetime1;
-                var15Lifetime1 = 209 + (uc.field_a + var13_intLifetime1 * 41);
+                var15Lifetime1 = 209 + (QuickChatHelpers.field_a + var13_intLifetime1 * 41);
                 discarded$5 = this.drawButtonBox(true, 39, (byte) -104, true, var14, 39, var15Lifetime1);
-                var16 = b.field_f[var13_intLifetime1 + 2 * var12Lifetime1];
+                var16 = ThrowableFormatHelpers.field_f[var13_intLifetime1 + 2 * var12Lifetime1];
                 stackIn_154_0 = ~var16;
                 if (stackIn_154_0 != 0) {
                   var17_int = 1;
@@ -9957,53 +9957,53 @@ final class MenuScreen {
                     }
                   }
                   if (var17_int != 0) {
-                    bb.field_g[dd.field_f[var16]].drawTransparent(var14 - 1, var15Lifetime1 - 1);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var16]].drawTransparent(var14 - 1, var15Lifetime1 - 1);
                   } else {
-                    bb.field_g[dd.field_f[var16]].drawTransparentWithOpacity(var14 - 1, -1 + var15Lifetime1, 64);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var16]].drawTransparentWithOpacity(var14 - 1, -1 + var15Lifetime1, 64);
                     SoftwareRasterizer.drawLine(var14, var15Lifetime1, var14 + 32, 32 + var15Lifetime1, 16711680);
                     SoftwareRasterizer.drawLine(32 + var14, var15Lifetime1, var14, 32 + var15Lifetime1, 16711680);
-                    b.field_f[var13_intLifetime1 + 2 * var12Lifetime1] = -1;
+                    ThrowableFormatHelpers.field_f[var13_intLifetime1 + 2 * var12Lifetime1] = -1;
                   }
                   boolean decompiledFrameRemainder5 = true;
-                  if (!ArcanistsMulti.i((byte) -62)) {
+                  if (!ArcanistsMulti.isOfflineOrNotLoaded((byte) -62)) {
                     if (var16 < 108) {
                       if (var16 >= 22) {
                         if (var19Lifetime1 > 1 &&
-                          0L == (cb.field_e & 1L << var19Lifetime1 * 8 - 14) && (bc.field_b != var19Lifetime1 ||
-                          ~mf.field_a != ~(-(var19Lifetime1 * 12) + var16) &&
-                          ~(mf.field_a + 1) != ~(var16 - var19Lifetime1 * 12))) {
-                          ii.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
+                          0L == (GameListSortHelpers.field_e & 1L << var19Lifetime1 * 8 - 14) && (OptionToggleHelpers.field_b != var19Lifetime1 ||
+                          ~EffectVolumeHelpers.field_a != ~(-(var19Lifetime1 * 12) + var16) &&
+                          ~(EffectVolumeHelpers.field_a + 1) != ~(var16 - var19Lifetime1 * 12))) {
+                          IconHighlightPainter.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
                           decompiledFrameRemainder5 = false;
                         }
                         else {
                           if (var18Lifetime1 % 12 >= 10) {
-                            if ((1L << -18 + (var18Lifetime1 % 12 + 8 * var19Lifetime1) & cb.field_e) == 0L) {
-                              ii.field_d.drawScaledAlpha(-1 + var14, -1 + var15Lifetime1, 40, 40, 128);
+                            if ((1L << -18 + (var18Lifetime1 % 12 + 8 * var19Lifetime1) & GameListSortHelpers.field_e) == 0L) {
+                              IconHighlightPainter.field_d.drawScaledAlpha(-1 + var14, -1 + var15Lifetime1, 40, 40, 128);
                             }
                           } else {
                             if ((1 & var18Lifetime1) == 1 &&
-                              (1L << -13 + 8 * var19Lifetime1 + (var18Lifetime1 % 12 - 1) / 2 & cb.field_e) == 0L && (~bc.field_b != ~var19Lifetime1 ||
-                              -(var19Lifetime1 * 12) + var16 != 1 + mf.field_a)) {
-                              ii.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
+                              (1L << -13 + 8 * var19Lifetime1 + (var18Lifetime1 % 12 - 1) / 2 & GameListSortHelpers.field_e) == 0L && (~OptionToggleHelpers.field_b != ~var19Lifetime1 ||
+                              -(var19Lifetime1 * 12) + var16 != 1 + EffectVolumeHelpers.field_a)) {
+                              IconHighlightPainter.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
                             }
                           }
                         }
                       }
                     } else {
-                      if (ArcanistsMulti.i((byte) -119) ||
-                        ad.field_d == 0) {
-                        ii.field_d.drawScaledAlpha(-1 + var14, var15Lifetime1 - 1, 40, 40, 128);
+                      if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -119) ||
+                        SpellbookCaptionGlobals.field_d == 0) {
+                        IconHighlightPainter.field_d.drawScaledAlpha(-1 + var14, var15Lifetime1 - 1, 40, 40, 128);
                       }
                     }
                   } else {
                     if (var16 >= 22) {
-                      if (~bc.field_b == ~var19Lifetime1) {
-                        if ((~mf.field_a != ~(-(var19Lifetime1 * 12) + var16)) &&
-                          (-(var19Lifetime1 * 12) + var16 != 1 + mf.field_a)) {
-                          ii.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
+                      if (~OptionToggleHelpers.field_b == ~var19Lifetime1) {
+                        if ((~EffectVolumeHelpers.field_a != ~(-(var19Lifetime1 * 12) + var16)) &&
+                          (-(var19Lifetime1 * 12) + var16 != 1 + EffectVolumeHelpers.field_a)) {
+                          IconHighlightPainter.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
                         }
                       } else {
-                        ii.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
+                        IconHighlightPainter.field_d.drawScaledAlpha(var14 - 1, -1 + var15Lifetime1, 40, 40, 128);
                       }
                     }
                   }
@@ -10026,14 +10026,14 @@ final class MenuScreen {
             var13_intLifetime2 = 96;
             var14_doubleLifetime1 = (double)var12Lifetime2 * 3.141592653589793 * 2.0 / 128.0;
             var16Lifetime1 = 132 + (ValidatedTextWidget.field_I - (int)(Math.cos(var14_doubleLifetime1) * (double)var13_intLifetime2));
-            var17_intLifetime1 = -16 + (122 + (uc.field_a + 178 - (int)((double)var13_intLifetime2 * Math.sin(var14_doubleLifetime1))));
+            var17_intLifetime1 = -16 + (122 + (QuickChatHelpers.field_a + 178 - (int)((double)var13_intLifetime2 * Math.sin(var14_doubleLifetime1))));
             SoftwareRasterizer.fillCircle(var16Lifetime1 + 16, 16 + var17_intLifetime1, 5, 0);
           }
           for (var12Lifetime3 = 0; var12Lifetime3 < 128; var12Lifetime3++) {
             var13_intLifetime3 = 96;
             var14_doubleLifetime2 = 3.141592653589793 * (double)var12Lifetime3 * 2.0 / 128.0;
             var16Lifetime2 = 122 + (ValidatedTextWidget.field_I + 32) + (-6 - (int)(Math.cos(var14_doubleLifetime2) * (double)var13_intLifetime3) - 16);
-            var17_intLifetime2 = 178 + (uc.field_a + 122) - ((int)(Math.sin(var14_doubleLifetime2) * (double)var13_intLifetime3) + 16);
+            var17_intLifetime2 = 178 + (QuickChatHelpers.field_a + 122) - ((int)(Math.sin(var14_doubleLifetime2) * (double)var13_intLifetime3) + 16);
             SoftwareRasterizer.fillCircle(var16Lifetime2 + 16, 16 + var17_intLifetime2, 4, 10326659);
           }
           var12Lifetime4 = this.field_h * 12;
@@ -10097,7 +10097,7 @@ final class MenuScreen {
                 var21 = var30;
                 while (true) {
                   if (var30 < 16) {
-                    stackIn_376_0 = b.field_f[var30];
+                    stackIn_376_0 = ThrowableFormatHelpers.field_f[var30];
                     stackIn_376_1 = -1 + (var12Lifetime4 + var13_intLifetime4);
                     if (stackIn_376_0 == stackIn_376_1) {
                       var20++;
@@ -10118,14 +10118,14 @@ final class MenuScreen {
               if (0 < this.field_h &&
                 this.field_h != 9) {
                 if ((1 & var13_intLifetime4) != 0) {
-                  if ((cb.field_e & 1L << -13 + 8 * this.field_h + (-1 + var13_intLifetime4) / 2) == 0L && (this.field_h != bc.field_b ||
-                    mf.field_a != -1 + var13_intLifetime4) && this.field_h > 1) {
+                  if ((GameListSortHelpers.field_e & 1L << -13 + 8 * this.field_h + (-1 + var13_intLifetime4) / 2) == 0L && (this.field_h != OptionToggleHelpers.field_b ||
+                    EffectVolumeHelpers.field_a != -1 + var13_intLifetime4) && this.field_h > 1) {
                     var16Lifetime3 = 0;
                     var17_intLifetime3 = 2;
                   }
                 } else {
-                  if (0L == (1L << -14 + 8 * this.field_h & cb.field_e) && (~this.field_h != ~bc.field_b ||
-                    mf.field_a != var13_intLifetime4) && 1 < this.field_h) {
+                  if (0L == (1L << -14 + 8 * this.field_h & GameListSortHelpers.field_e) && (~this.field_h != ~OptionToggleHelpers.field_b ||
+                    EffectVolumeHelpers.field_a != var13_intLifetime4) && 1 < this.field_h) {
                     var16Lifetime3 = 0;
                     var17_intLifetime3 = 0;
                   }
@@ -10138,11 +10138,11 @@ final class MenuScreen {
                 while (true) {
                   if (var21 < 16) {
                     stackIn_353_0 = var12Lifetime4;
-                    stackIn_353_1 = b.field_f[var21];
+                    stackIn_353_1 = ThrowableFormatHelpers.field_f[var21];
                     if (stackIn_353_0 <= stackIn_353_1 &&
-                      b.field_f[var21] < (10 + var12Lifetime4) && (0 == (1 & b.field_f[var21]) ||
+                      ThrowableFormatHelpers.field_f[var21] < (10 + var12Lifetime4) && (0 == (1 & ThrowableFormatHelpers.field_f[var21]) ||
                       var21 > 0 &&
-                      ~(-1 + b.field_f[var21]) == ~b.field_f[-1 + var21])) {
+                      ~(-1 + ThrowableFormatHelpers.field_f[var21]) == ~ThrowableFormatHelpers.field_f[-1 + var21])) {
                       var20++;
                     }
                     var21++;
@@ -10155,7 +10155,7 @@ final class MenuScreen {
                     var16Lifetime3 = 0;
                   }
                   var18Lifetime2 += 2;
-                  if (0L == (1L << 8 * this.field_h - (-(var13_intLifetime4 % 12) + 18) & cb.field_e)) {
+                  if (0L == (1L << 8 * this.field_h - (-(var13_intLifetime4 % 12) + 18) & GameListSortHelpers.field_e)) {
                     if (this.field_h >= 9) {
                       break;
                     }
@@ -10169,9 +10169,9 @@ final class MenuScreen {
             {
               var20_double = 2.0 * ((double)var15Lifetime2Lifetime1 * 3.141592653589793) / (double)var11Lifetime2;
               var22 = 122 + (-6 + ValidatedTextWidget.field_I) + 32 - (int)((double)var14 * Math.cos(var20_double)) - 16;
-              var23 = 178 + uc.field_a - (-122 + (int)((double)var14 * Math.sin(var20_double)) + 16);
-              if (this.field_h == 9 && (ArcanistsMulti.i((byte) -87) ||
-                !(ad.field_d > 0))) {
+              var23 = 178 + QuickChatHelpers.field_a - (-122 + (int)((double)var14 * Math.sin(var20_double)) + 16);
+              if (this.field_h == 9 && (ArcanistsMulti.isOfflineOrNotLoaded((byte) -87) ||
+                !(SpellbookCaptionGlobals.field_d > 0))) {
                 if (EmailLoginCredentials.field_g < var22) {
                 } else if (var23 > MenuButtonPanel.field_I) {
                 } else if ((var22 + 32) <= EmailLoginCredentials.field_g) {
@@ -10202,20 +10202,20 @@ final class MenuScreen {
                       this.field_m = 4;
                       for (var24 = 0; var24 < 16; var24++) {
                         stackIn_493_0 = var12Lifetime4;
-                        stackIn_493_1 = b.field_f[var24];
+                        stackIn_493_1 = ThrowableFormatHelpers.field_f[var24];
                         if (stackIn_493_0 <= stackIn_493_1 &&
-                          10 + var12Lifetime4 > b.field_f[var24] &&
-                          (1 & b.field_f[var24]) != 0 &&
+                          10 + var12Lifetime4 > ThrowableFormatHelpers.field_f[var24] &&
+                          (1 & ThrowableFormatHelpers.field_f[var24]) != 0 &&
                           var24 > 0 &&
-                          ~b.field_f[var24 - 1] == ~(b.field_f[var24] - 1)) {
+                          ~ThrowableFormatHelpers.field_f[var24 - 1] == ~(ThrowableFormatHelpers.field_f[var24] - 1)) {
                         }
                       }
                       this.field_i = var12Lifetime4 + var13_intLifetime4;
                     }
                     var18Lifetime2 += 2;
-                    if ((cb.field_e & 1L << -14 + this.field_h * 8) == 0L && (this.field_h != bc.field_b ||
-                      var13_intLifetime4 != mf.field_a &&
-                      ~var13_intLifetime4 != ~(mf.field_a + 1)) && (this.field_h > 1 &&
+                    if ((GameListSortHelpers.field_e & 1L << -14 + this.field_h * 8) == 0L && (this.field_h != OptionToggleHelpers.field_b ||
+                      var13_intLifetime4 != EffectVolumeHelpers.field_a &&
+                      ~var13_intLifetime4 != ~(EffectVolumeHelpers.field_a + 1)) && (this.field_h > 1 &&
                       this.field_h < 9)) {
                       this.field_i = var13_intLifetime4 + var12Lifetime4;
                       this.field_m = 6;
@@ -10247,25 +10247,25 @@ final class MenuScreen {
             SoftwareRasterizer.drawCircleOutline(16 + var22, 16 + var23, var18Lifetime2 + 4, 0);
             SoftwareRasterizer.fillCircle(16 + var22, 16 + var23, var18Lifetime2, 13947080);
             SoftwareRasterizer.drawCircleOutline(var22 + 16, 16 + var23, var18Lifetime2, 0);
-            if (9 == this.field_h && (ad.field_d == 0 ||
-              ArcanistsMulti.i((byte) -74))) {
-              bb.field_g[dd.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+            if (9 == this.field_h && (SpellbookCaptionGlobals.field_d == 0 ||
+              ArcanistsMulti.isOfflineOrNotLoaded((byte) -74))) {
+              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
               decompiledFrameRemainder3 = false;
             }
             else {
-              if ((cb.field_e & 1L << this.field_h * 8 - 14) == 0L &&
+              if ((GameListSortHelpers.field_e & 1L << this.field_h * 8 - 14) == 0L &&
                 this.field_h > 1 &&
                 this.field_h < 9 &&
                 var16Lifetime3 == 0) {
-                bb.field_g[dd.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, var23 - 4, 32);
+                LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, var23 - 4, 32);
               } else {
                 if (var16Lifetime3 != 0) {
-                  bb.field_g[dd.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparent(-4 + var22, var23 - 4);
+                  LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparent(-4 + var22, var23 - 4);
                   var24Lifetime1 = 0;
                   var31 = 0;
                   var25_int = var31;
                   while (var31 < 16) {
-                    stackIn_573_0 = b.field_f[var31];
+                    stackIn_573_0 = ThrowableFormatHelpers.field_f[var31];
                     stackIn_573_1 = var13_intLifetime4 + var12Lifetime4;
                     if (stackIn_573_0 == stackIn_573_1) {
                       var24Lifetime1 = 1;
@@ -10280,12 +10280,12 @@ final class MenuScreen {
                 }
                 else {
                   if (var17_intLifetime3 == 0) {
-                    bb.field_g[dd.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
                   } else {
-                    bb.field_g[dd.field_f[var12Lifetime4 + var13_intLifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var12Lifetime4 + var13_intLifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
                     var24Lifetime1Lifetime1 = var22 + 16 << 4;
                     var25_intLifetime1 = 16 + var23 << 4;
-                    if (!ArcanistsMulti.i((byte) -102)) {
+                    if (!ArcanistsMulti.isOfflineOrNotLoaded((byte) -102)) {
                       if (var17_intLifetime3 == 3) {
                         var32.drawRotatedAboutPivot(80, 320, var24Lifetime1Lifetime1, var25_intLifetime1, SpriteState.field_v * 30 - 21845, 4096);
                         var32.drawRotatedAboutPivot(80, 320, var24Lifetime1Lifetime1, var25_intLifetime1, SpriteState.field_v * 30 + 0, 4096);
@@ -10304,10 +10304,10 @@ final class MenuScreen {
             stackIn_573_1Lifetime1 = this.field_h;
             if (stackIn_573_0Lifetime1 == stackIn_573_1Lifetime1 &&
               10 <= var13_intLifetime4 &&
-              ArcanistsMulti.i((byte) -84)) {
-              ii.field_d.drawScaledAlpha(-4 + var22, var23 - 4, 40, 40, 128);
+              ArcanistsMulti.isOfflineOrNotLoaded((byte) -84)) {
+              IconHighlightPainter.field_d.drawScaledAlpha(-4 + var22, var23 - 4, 40, 40, 128);
             }
-            stackIn_586_0 = ((cb.field_e & 1L << this.field_h * 8 - 14) == 0L) ? 0 : 1;
+            stackIn_586_0 = ((GameListSortHelpers.field_e & 1L << this.field_h * 8 - 14) == 0L) ? 0 : 1;
             var24Lifetime2 = stackIn_586_0;
             if (var16Lifetime3 == 0 &&
               0 < var17_intLifetime3 &&
@@ -10316,7 +10316,7 @@ final class MenuScreen {
               var23 <= MenuButtonPanel.field_I &&
               32 + var22 > EmailLoginCredentials.field_g &&
               MenuButtonPanel.field_I < 32 + var23 &&
-              !ArcanistsMulti.i((byte) -125))) {
+              !ArcanistsMulti.isOfflineOrNotLoaded((byte) -125))) {
               var25 = 3.141592653589793 * (double)(255 & SpriteState.field_v) / 128.0;
               var27 = (int)(2048.0 + Math.cos(var25 * 4.0) * 256.0 - 256.0);
               var28 = (int)(5000.0 * Math.sin(var25 * 2.0) + 0.0);
@@ -10328,10 +10328,10 @@ final class MenuScreen {
                 QuickChatPhraseCache.fillCircleMasked(8, (byte) 126, 128, -(var27 * 8 / 4096) + var22 + 32, var23 - 8 * var27 / 4096);
               }
             }
-            if (~bc.field_b == ~this.field_h && (~var13_intLifetime4 == ~mf.field_a &&
+            if (~OptionToggleHelpers.field_b == ~this.field_h && (~var13_intLifetime4 == ~EffectVolumeHelpers.field_a &&
               var24Lifetime2 == 0 ||
-              mf.field_a + 1 == var13_intLifetime4 &&
-              (1L << (-1 + var13_intLifetime4) / 2 - 13 + 8 * this.field_h & cb.field_e) == 0L)) {
+              EffectVolumeHelpers.field_a + 1 == var13_intLifetime4 &&
+              (1L << (-1 + var13_intLifetime4) / 2 - 13 + 8 * this.field_h & GameListSortHelpers.field_e) == 0L)) {
               var25Lifetime1 = Math.cos(3.141592653589793 * (double)(SpriteState.field_v & 255) / 64.0) * 5.0 + 32.0;
               var27Lifetime1 = (int)(Math.cos(var20_double) * var25Lifetime1) + (16 + var22);
               var28Lifetime1 = (int)(var25Lifetime1 * Math.sin(var20_double)) + 16 + var23;
@@ -10342,17 +10342,17 @@ final class MenuScreen {
           stackIn_636_0Lifetime1 = -2;
           stackIn_636_1Lifetime1 = ~this.field_h;
           if (stackIn_636_0Lifetime1 > stackIn_636_1Lifetime1 &&
-            ArcanistsMulti.i((byte) -127) &&
+            ArcanistsMulti.isOfflineOrNotLoaded((byte) -127) &&
             this.field_h < 9) {
             var13_intLifetime5 = 122 + (ValidatedTextWidget.field_I + 26);
-            var14 = 178 + (uc.field_a + 122);
-            ii.field_d.drawAlpha(-64 + var13_intLifetime5, -64 + var14, 128);
+            var14 = 178 + (QuickChatHelpers.field_a + 122);
+            IconHighlightPainter.field_d.drawAlpha(-64 + var13_intLifetime5, -64 + var14, 128);
           }
-          if (9 == this.field_h && (!(ad.field_d > 0) ||
-            ArcanistsMulti.i((byte) -60))) {
+          if (9 == this.field_h && (!(SpellbookCaptionGlobals.field_d > 0) ||
+            ArcanistsMulti.isOfflineOrNotLoaded((byte) -60))) {
             var13_intLifetime6 = 148 + ValidatedTextWidget.field_I;
-            var14 = uc.field_a + 178 + 122;
-            ii.field_d.drawAlpha(var13_intLifetime6 - 64, -64 + var14, 128);
+            var14 = QuickChatHelpers.field_a + 178 + 122;
+            IconHighlightPainter.field_d.drawAlpha(var13_intLifetime6 - 64, -64 + var14, 128);
           }
           if (this.field_m != 1 &&
             6 != this.field_m &&
@@ -10365,23 +10365,23 @@ final class MenuScreen {
               if (this.field_i >= 16) {
                 return;
               }
-              if (b.field_f[this.field_i] == -1) {
+              if (ThrowableFormatHelpers.field_f[this.field_i] == -1) {
                 return;
               }
               boolean decompiledFrameRemainder1 = true;
-              var13_intLifetime7 = b.field_f[this.field_i];
+              var13_intLifetime7 = ThrowableFormatHelpers.field_f[this.field_i];
               var36 = PasswordFieldPainter.field_w[var13_intLifetime7];
-              var37 = vm.field_d[var13_intLifetime7];
+              var37 = MouseStateHelpers.field_d[var13_intLifetime7];
               var16Lifetime4 = ValidatedTextWidget.field_I + 301;
-              var17_intLifetime4 = -1 + (uc.field_a + 303);
-              if (ArcanistsMulti.i((byte) -91) &&
-                var13_intLifetime7 >= 22 && (~(var13_intLifetime7 / 12) != ~bc.field_b ||
-                ~(-(var13_intLifetime7 / 12 * 12) + var13_intLifetime7) != ~mf.field_a &&
-                var13_intLifetime7 - 12 * (var13_intLifetime7 / 12) != 1 + mf.field_a)) {
+              var17_intLifetime4 = -1 + (QuickChatHelpers.field_a + 303);
+              if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -91) &&
+                var13_intLifetime7 >= 22 && (~(var13_intLifetime7 / 12) != ~OptionToggleHelpers.field_b ||
+                ~(-(var13_intLifetime7 / 12 * 12) + var13_intLifetime7) != ~EffectVolumeHelpers.field_a &&
+                var13_intLifetime7 - 12 * (var13_intLifetime7 / 12) != 1 + EffectVolumeHelpers.field_a)) {
                 SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4 - 1, var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
                 SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4, -1 + var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
                 SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4, var17_intLifetime4, 141, 29, 12569299, -1, 1, 1, SpellProjectile.field_B.field_C);
-                SpellProjectile.field_B.drawParagraph(qe.field_r, 447, 294, 171, 29, 16711680, 0, 1, 1, SpellProjectile.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(QueuedPacket.field_r, 447, 294, 171, 29, 16711680, 0, 1, 1, SpellProjectile.field_B.field_C);
                 decompiledFrameRemainder1 = false;
               }
               else {
@@ -10389,24 +10389,24 @@ final class MenuScreen {
                 CachedArchiveProvider.field_t.drawParagraph(var36, 10 + var16Lifetime4, var17_intLifetime4 - 1, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                 CachedArchiveProvider.field_t.drawParagraph(var36, var16Lifetime4 + 10, var17_intLifetime4, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
               }
-              SpellProjectile.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), uc.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), QuickChatHelpers.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
               return;
             }
             var13 = HotspotRegion.field_l;
             if (0 < this.field_h) {
-              var13 = tn.field_Ib;
-              if (this.field_h == 9 && (ad.field_d == 0 ||
-                ArcanistsMulti.i((byte) -77))) {
+              var13 = SceneTabStrip.field_Ib;
+              if (this.field_h == 9 && (SpellbookCaptionGlobals.field_d == 0 ||
+                ArcanistsMulti.isOfflineOrNotLoaded((byte) -77))) {
                 var13 = IntrusiveDeque.field_j;
               }
             }
             boolean decompiledFrameRemainder0 = true;
             if (EmailLoginCredentials.field_g >= (ValidatedTextWidget.field_I + 557) &&
-              (uc.field_a + 51) >= MenuButtonPanel.field_I &&
-              !ArcanistsMulti.i((byte) -50)) {
+              (QuickChatHelpers.field_a + 51) >= MenuButtonPanel.field_I &&
+              !ArcanistsMulti.isOfflineOrNotLoaded((byte) -50)) {
               var13 = "";
               var14 = ValidatedTextWidget.field_I + 300;
-              var15Lifetime3 = 340 + uc.field_a;
+              var15Lifetime3 = 340 + QuickChatHelpers.field_a;
               this.drawHintText(var15Lifetime3, var3, var14, 113);
             } else {
               if (this.field_m == 0) {
@@ -10418,10 +10418,10 @@ final class MenuScreen {
                 }
                 if (2 == Math.abs(this.field_i)) {
                   var14_ref_String = MusicCrossfadeStream.field_z;
-                  var13 = ri.field_d;
+                  var13 = RasterSetupHelpers.field_d;
                 }
                 if (Math.abs(this.field_i) == 3) {
-                  var13 = hm.field_d;
+                  var13 = Cp1252Helpers.field_d;
                   var14_ref_String = UiContainer.field_x;
                 }
                 if (Math.abs(this.field_i) == 4) {
@@ -10430,7 +10430,7 @@ final class MenuScreen {
                 }
                 if (Math.abs(this.field_i) == 5) {
                   var13 = IterableNodeHashTable.field_g;
-                  var14_ref_String = ad.field_g;
+                  var14_ref_String = SpellbookCaptionGlobals.field_g;
                 }
                 if (6 == Math.abs(this.field_i)) {
                   var13 = SoundCache.field_f;
@@ -10448,24 +10448,24 @@ final class MenuScreen {
                   var13 = FullscreenFocusCanvas.field_f;
                   var14_ref_String = BevelBoxPainter.field_c;
                 }
-                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, -1 + (311 + ValidatedTextWidget.field_I), -1 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 2, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 1), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, -1 + (311 + ValidatedTextWidget.field_I), -1 + (303 + QuickChatHelpers.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + QuickChatHelpers.field_a - 2, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + (ValidatedTextWidget.field_I + 290), 303 + (QuickChatHelpers.field_a - 1), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
               } else {
                 if (3 == this.field_m) {
                   var34 = PasswordFieldPainter.field_w[this.field_i];
                   var14_ref_String = var34;
-                  CachedArchiveProvider.field_t.drawParagraph(var34, ValidatedTextWidget.field_I + 310, -1 + (uc.field_a + 303), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                  CachedArchiveProvider.field_t.drawParagraph(var34, 21 + ValidatedTextWidget.field_I + 290, 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                  CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + ValidatedTextWidget.field_I + 290, -1 + (303 + uc.field_a), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  CachedArchiveProvider.field_t.drawParagraph(var34, ValidatedTextWidget.field_I + 310, -1 + (QuickChatHelpers.field_a + 303), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  CachedArchiveProvider.field_t.drawParagraph(var34, 21 + ValidatedTextWidget.field_I + 290, 303 + (QuickChatHelpers.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + ValidatedTextWidget.field_I + 290, -1 + (303 + QuickChatHelpers.field_a), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                   var13 = CachedArchiveProvider.formatTemplate(param0 + 126, new String[]{PasswordFieldPainter.field_w[-1 + this.field_i]}, NodeHashTableIterator.field_f);
                 } else {
                   if (this.field_m == 4) {
                     var33 = PasswordFieldPainter.field_w[this.field_i];
                     var14_ref_String = var33;
-                    CachedArchiveProvider.field_t.drawParagraph(var33, 290 + ValidatedTextWidget.field_I + 21 - 1, -1 + uc.field_a + 303, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                    CachedArchiveProvider.field_t.drawParagraph(var33, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                    CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 1, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var33, 290 + ValidatedTextWidget.field_I + 21 - 1, -1 + QuickChatHelpers.field_a + 303, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var33, 21 + (ValidatedTextWidget.field_I + 290), 303 + (QuickChatHelpers.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + QuickChatHelpers.field_a - 1, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                     var15_ref_String = LoadingProgressDialog.field_qb;
                     if (this.field_h == 2) {
                       var15_ref_String = MusicCrossfadeStream.field_z;
@@ -10477,7 +10477,7 @@ final class MenuScreen {
                       var15_ref_String = SecondaryNodeDequeIterator.field_d;
                     }
                     if (5 == this.field_h) {
-                      var15_ref_String = ad.field_g;
+                      var15_ref_String = SpellbookCaptionGlobals.field_g;
                     }
                     if (this.field_h == 6) {
                       var15_ref_String = TextHotspotWidget.field_M;
@@ -10494,10 +10494,10 @@ final class MenuScreen {
                     var16Lifetime4Lifetime1 = 0;
                     var17_intLifetime4Lifetime1 = 0;
                     while (16 > var17_intLifetime4Lifetime1) {
-                      stackIn_770_0 = b.field_f[var17_intLifetime4Lifetime1];
+                      stackIn_770_0 = ThrowableFormatHelpers.field_f[var17_intLifetime4Lifetime1];
                       stackIn_770_1 = this.field_h * 12;
                       if (stackIn_770_0 >= stackIn_770_1 &&
-                        10 + 12 * this.field_h >= b.field_f[var17_intLifetime4Lifetime1]) {
+                        10 + 12 * this.field_h >= ThrowableFormatHelpers.field_f[var17_intLifetime4Lifetime1]) {
                         var16Lifetime4Lifetime1++;
                       }
                       var17_intLifetime4Lifetime1++;
@@ -10515,19 +10515,19 @@ final class MenuScreen {
                       var13 = "You Should NEVER EVER EVER SEE THIS!!!";
                       var14_ref_String = LoadingProgressDialog.field_qb;
                       if (Math.abs(this.field_h) == 2) {
-                        var13 = sb.field_d + var3;
+                        var13 = AudioShutdownHelpers.field_d + var3;
                         var14_ref_String = MusicCrossfadeStream.field_z;
                       }
                       if (3 == Math.abs(this.field_h)) {
-                        var13 = ec.field_h + var3;
+                        var13 = SpriteFrame.field_h + var3;
                         var14_ref_String = UiContainer.field_x;
                       }
                       if (Math.abs(this.field_h) == 4) {
                         var14_ref_String = SecondaryNodeDequeIterator.field_d;
-                        var13 = ie.field_Jb + var3;
+                        var13 = StatusDialog.field_Jb + var3;
                       }
                       if (Math.abs(this.field_h) == 5) {
-                        var14_ref_String = ad.field_g;
+                        var14_ref_String = SpellbookCaptionGlobals.field_g;
                         var13 = ArchiveIndex.field_v + var3;
                       }
                       if (6 == Math.abs(this.field_h)) {
@@ -10542,13 +10542,13 @@ final class MenuScreen {
                         var14_ref_String = QuickChatCategory.field_r;
                         var13 = DropTargetWidget.field_H + var3;
                       }
-                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21 - 1), 302 + uc.field_a, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + ValidatedTextWidget.field_I + 21, -2 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
-                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, ValidatedTextWidget.field_I + 311, uc.field_a + 302, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21 - 1), 302 + QuickChatHelpers.field_a, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + ValidatedTextWidget.field_I + 21, -2 + (303 + QuickChatHelpers.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, ValidatedTextWidget.field_I + 311, QuickChatHelpers.field_a + 302, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                       var13 = "";
                       var15Lifetime3 = 300 + ValidatedTextWidget.field_I;
-                      var16Lifetime4Lifetime1 = uc.field_a + 336;
-                      SpellProjectile.field_B.drawParagraph(aj.field_b, var15Lifetime3, var16Lifetime4Lifetime1, 70, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+                      var16Lifetime4Lifetime1 = QuickChatHelpers.field_a + 336;
+                      SpellProjectile.field_B.drawParagraph(GameOptionType.field_b, var15Lifetime3, var16Lifetime4Lifetime1, 70, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
                       var15Lifetime3 += 74;
                       var17_intLifetime4Lifetime1 = 0;
                       while (true) {
@@ -10566,13 +10566,13 @@ final class MenuScreen {
                         }
                         break;
                       }
-                      if (ArcanistsMulti.i((byte) -90)) {
+                      if (ArcanistsMulti.isOfflineOrNotLoaded((byte) -90)) {
                         var13 = Battle.field_yb;
                       } else {
                         stackIn_731_0Lifetime1 = var3;
                         stackIn_731_1Lifetime1 = 5;
                         if (stackIn_731_0Lifetime1 < stackIn_731_1Lifetime1) {
-                          var13 = mb.field_R;
+                          var13 = DropdownItemList.field_R;
                         } else {
                           var13 = SceneTabbedPanel.field_Ob;
                         }
@@ -10585,9 +10585,9 @@ final class MenuScreen {
               }
             }
             if (153 <= NodeHashTableIterator.field_j &&
-              ad.field_d < 10) {
-              var14 = 308 + (ValidatedTextWidget.field_I + ad.field_d * 32);
-              var15Lifetime3Lifetime1 = 400 + uc.field_a;
+              SpellbookCaptionGlobals.field_d < 10) {
+              var14 = 308 + (ValidatedTextWidget.field_I + SpellbookCaptionGlobals.field_d * 32);
+              var15Lifetime3Lifetime1 = 400 + QuickChatHelpers.field_a;
               if (EmailLoginCredentials.field_g >= (-16 + var14) &&
                 EmailLoginCredentials.field_g <= (16 + var14) &&
                 MenuButtonPanel.field_I >= -16 + var15Lifetime3Lifetime1 &&
@@ -10595,31 +10595,31 @@ final class MenuScreen {
                 this.field_m = 9;
               }
             }
-            if ((tn.field_Ib == var13 ||
+            if ((SceneTabStrip.field_Ib == var13 ||
               var13 == HotspotRegion.field_l) &&
               (153 <= NodeHashTableIterator.field_j &&
-              10 > ad.field_d)) {
+              10 > SpellbookCaptionGlobals.field_d)) {
               var13 = DropdownList.field_F;
               if (this.field_m == 9) {
                 var35 = UiTheme.field_h;
-                var14 = 250 + ad.field_d * 250;
-                var13 = var35 + CachedArchiveProvider.formatTemplate(param0 ^ -50, new String[]{Integer.toString(var14)}, ck.field_e);
+                var14 = 250 + SpellbookCaptionGlobals.field_d * 250;
+                var13 = var35 + CachedArchiveProvider.formatTemplate(param0 ^ -50, new String[]{Integer.toString(var14)}, MusicVolumeHelpers.field_e);
               }
-              SpellProjectile.field_B.drawParagraph(var13, ValidatedTextWidget.field_I + 302, 116 + (178 + uc.field_a), 299, 129, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var13, ValidatedTextWidget.field_I + 302, 116 + (178 + QuickChatHelpers.field_a), 299, 129, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
               for (var14 = 0; var14 < 10; var14++) {
                 var15Lifetime3Lifetime2 = 308 + ValidatedTextWidget.field_I + var14 * 32;
-                var16Lifetime4Lifetime2 = uc.field_a + 400;
-                if (ad.field_d >= var14) {
+                var16Lifetime4Lifetime2 = QuickChatHelpers.field_a + 400;
+                if (SpellbookCaptionGlobals.field_d >= var14) {
                   SoftwareRasterizer.drawCircleOutline(var15Lifetime3Lifetime2, -1 + var16Lifetime4Lifetime2, 14, 16711680);
                   SoftwareRasterizer.drawCircleOutline(var15Lifetime3Lifetime2 - 1, var16Lifetime4Lifetime2, 14, 16711680);
                   SoftwareRasterizer.drawCircleOutline(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2 + 1, 14, 8912896);
                   SoftwareRasterizer.drawCircleOutline(1 + var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, 14, 8912896);
                   SoftwareRasterizer.fillCircleAlpha(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, 14, 0, 128);
                   SoftwareRasterizer.drawCircleOutline(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, 14, 16744576);
-                  if (ad.field_d != var14) {
-                    rb.field_o[var14].drawTintedGrayscale(var15Lifetime3Lifetime2 - 15, -rb.field_o[var14].field_o + (var16Lifetime4Lifetime2 - rb.field_o[var14].field_y / 2), 16711680);
+                  if (SpellbookCaptionGlobals.field_d != var14) {
+                    TimedMessage.field_o[var14].drawTintedGrayscale(var15Lifetime3Lifetime2 - 15, -TimedMessage.field_o[var14].field_o + (var16Lifetime4Lifetime2 - TimedMessage.field_o[var14].field_y / 2), 16711680);
                   } else {
-                    rb.field_o[var14].drawSilhouette(var15Lifetime3Lifetime2 - 15, -(rb.field_o[var14].field_y / 2) + (var16Lifetime4Lifetime2 - rb.field_o[var14].field_o), 0);
+                    TimedMessage.field_o[var14].drawSilhouette(var15Lifetime3Lifetime2 - 15, -(TimedMessage.field_o[var14].field_y / 2) + (var16Lifetime4Lifetime2 - TimedMessage.field_o[var14].field_o), 0);
                     if ((var15Lifetime3Lifetime2 - 16) <= EmailLoginCredentials.field_g &&
                       EmailLoginCredentials.field_g <= 16 + var15Lifetime3Lifetime2 &&
                       (-16 + var16Lifetime4Lifetime2) <= MenuButtonPanel.field_I &&
@@ -10645,22 +10645,22 @@ final class MenuScreen {
               }
               return;
             }
-            SpellProjectile.field_B.drawParagraph(var13, 12 + (290 + ValidatedTextWidget.field_I), 294 + uc.field_a, 299, 129, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(var13, 12 + (290 + ValidatedTextWidget.field_I), 294 + QuickChatHelpers.field_a, 299, 129, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             return;
           }
           if (this.field_i >= var12Lifetime4) {
             var38 = PasswordFieldPainter.field_w[this.field_i];
             var13Lifetime1 = var38;
-            var39 = vm.field_d[this.field_i];
+            var39 = MouseStateHelpers.field_d[this.field_i];
             var15Lifetime4 = 11 + ValidatedTextWidget.field_I + 290;
-            var16Lifetime5 = 302 + uc.field_a;
+            var16Lifetime5 = 302 + QuickChatHelpers.field_a;
             if (1 != this.field_m) {
               SpellProjectile.field_B.drawParagraph(var38, -1 + var15Lifetime4, var16Lifetime5, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
               SpellProjectile.field_B.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
               SpellProjectile.field_B.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 141, 29, 12569299, -1, 1, 1, SpellProjectile.field_B.field_C);
               var17 = null;
               var18Lifetime3 = 16711680;
-              if (!ArcanistsMulti.i((byte) -101)) {
+              if (!ArcanistsMulti.isOfflineOrNotLoaded((byte) -101)) {
                 if (this.field_m != 6) {
                   if (this.field_m == 7) {
                     if (var3 >= 2) {
@@ -10680,16 +10680,16 @@ final class MenuScreen {
                     }
                   }
                 } else {
-                  var40 = ra.field_i;
+                  var40 = DateHelpers.field_i;
                   if (9 != this.field_h) {
                     SpellProjectile.field_B.drawParagraph(var40, 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, SpellProjectile.field_B.field_C);
-                    SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
+                    SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (QuickChatHelpers.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
                     return;
                   }
-                  var17 = vf.field_h;
+                  var17 = RawDataNode.field_h;
                 }
               } else {
-                var17 = gg.field_g;
+                var17 = DecodedSpriteHelpers.field_g;
               }
               SpellProjectile.field_B.drawParagraph((String) (var17), 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, SpellProjectile.field_B.field_C);
             } else {
@@ -10697,13 +10697,13 @@ final class MenuScreen {
               CachedArchiveProvider.field_t.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 301, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
               CachedArchiveProvider.field_t.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 301, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
             }
-            SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (QuickChatHelpers.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.N(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.N(" + param0 + ')');
         }
     }
 
@@ -10743,7 +10743,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.L(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -10754,14 +10754,14 @@ final class MenuScreen {
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (td.hasMembership(true)) {
-            if (ri.field_b[82] &&
-              ri.field_b[28]) {
-              gj.switchScreen(false, true, 10, mn.field_r);
+          if (ThreeButtonPanel.hasMembership(true)) {
+            if (RasterSetupHelpers.field_b[82] &&
+              RasterSetupHelpers.field_b[28]) {
+              ScreenSwitchHelpers.switchScreen(false, true, 10, MatchingFieldValidator.field_r);
             }
-            if (ri.field_b[82] &&
-              ri.field_b[70]) {
-              ah.field_c = 1;
+            if (RasterSetupHelpers.field_b[82] &&
+              RasterSetupHelpers.field_b[70]) {
+              AccountFlowHelpers.field_c = 1;
             }
             if (CheckboxPainter.field_g == 12) {
               if (IntrusiveDeque.field_d == 26 &&
@@ -10881,7 +10881,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.EA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.EA(" + param0 + ')');
         }
     }
 
@@ -10939,7 +10939,7 @@ final class MenuScreen {
               return stackIn_32_0;
             }
             if (param0 != 1) {
-              stackIn_37_0 = param0 * 220 + lm.field_e[this.field_l];
+              stackIn_37_0 = param0 * 220 + GameDetailsRenderer.field_e[this.field_l];
               return stackIn_37_0;
             }
             stackIn_35_0 = 287;
@@ -10986,14 +10986,14 @@ final class MenuScreen {
             }
           }
           if (param1 != 200) {
-            field_q = (on[]) null;
+            field_q = (LoginMessageTable[]) null;
           }
-          stackIn_93_0 = lm.field_e[this.field_l];
+          stackIn_93_0 = GameDetailsRenderer.field_e[this.field_l];
           return stackIn_93_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.IA(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11058,20 +11058,20 @@ final class MenuScreen {
           }
           SpellProjectile.field_B.drawText(var11, 90 + ValidatedTextWidget.field_I, param8, param0, -1);
           var15 = Integer.toString(param4);
-          SpellProjectile.field_B.drawCentered(var15, no.field_tb[0] + ValidatedTextWidget.field_I, param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var15, SocialDialog.field_tb[0] + ValidatedTextWidget.field_I, param8, param0, -1);
           if (500 <= var10_int) {
             stackIn_25_0 = "500+";
           } else {
             stackIn_25_0 = Integer.toString(var10_int);
           }
           var11Lifetime1 = stackIn_25_0;
-          SpellProjectile.field_B.drawCentered(var11Lifetime1, ValidatedTextWidget.field_I + no.field_tb[1], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var11Lifetime1, ValidatedTextWidget.field_I + SocialDialog.field_tb[1], param8, param0, -1);
           var16 = param1 + "%";
-          SpellProjectile.field_B.drawCentered(var16, ValidatedTextWidget.field_I + no.field_tb[2], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var16, ValidatedTextWidget.field_I + SocialDialog.field_tb[2], param8, param0, -1);
           var17 = param3 + "%";
-          SpellProjectile.field_B.drawCentered(var17, ValidatedTextWidget.field_I + no.field_tb[3], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var17, ValidatedTextWidget.field_I + SocialDialog.field_tb[3], param8, param0, -1);
           var18 = param7 + "%";
-          SpellProjectile.field_B.drawCentered(var18, ValidatedTextWidget.field_I + no.field_tb[4], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var18, ValidatedTextWidget.field_I + SocialDialog.field_tb[4], param8, param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11083,7 +11083,7 @@ final class MenuScreen {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -11140,7 +11140,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.LA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.LA(" + param0 + ')');
         }
     }
 
@@ -11200,16 +11200,16 @@ final class MenuScreen {
         int var8Lifetime1Lifetime1;
         var21 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (cc.hasPendingValidation((byte) 118)) {
-            pb.drawOrbCoinScreen(2341);
+          if (AngleHelpers.hasPendingValidation((byte) 118)) {
+            QueuedResponse.drawOrbCoinScreen(2341);
             return;
           }
           if (param0 != -45) {
             return;
           }
           if (!MenuScreen.getSessionFlag((byte) 112) &&
-            0 < ah.field_c) {
-            ce.field_g[15] = wj.field_e;
+            0 < AccountFlowHelpers.field_c) {
+            GameSelectionHelpers.field_g[15] = ColourBucketTable.field_e;
           }
           if (this.field_l == 16) {
             SoftwareRasterizer.clear();
@@ -11220,13 +11220,13 @@ final class MenuScreen {
             this.field_l == 3) {
             var2 = SpriteState.field_z;
             if (var2 == null) {
-              var2 = r.field_b;
+              var2 = OverlayHelpers.field_b;
             }
             var3 = var2.field_V.getCurrentPlayer(false);
             if (var3 < 0) {
               var3 = 6;
             }
-            stackIn_35_0 = nj.field_n;
+            stackIn_35_0 = NameCheckHelpers.field_n;
             if (this.field_l == 3) {
               stackIn_36_1 = var3;
             } else {
@@ -11238,7 +11238,7 @@ final class MenuScreen {
             }
             var4 = stackIn_35_0[stackIn_36_1];
             if (var2.field_V.field_d) {
-              stackIn_42_0 = nj.field_n;
+              stackIn_42_0 = NameCheckHelpers.field_n;
               if (this.field_l != 3) {
                 if (var2.field_I >= 0) {
                   stackIn_46_1 = 1 & var3;
@@ -11270,25 +11270,25 @@ final class MenuScreen {
           }
           if (14 != this.field_l) {
             boolean decompiledFrameRemainder0 = true;
-            ce.field_m.makeRasterTarget(true);
-            if (!qn.isValidOption(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
+            GameSelectionHelpers.field_m.makeRasterTarget(true);
+            if (!MessageDialog.isValidOption(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
               !(480 >= EmailLoginCredentials.field_j))) {
               ValidationHelpWidget.renderTiledBackground(param0 ^ -47, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
               decompiledFrameRemainder0 = false;
             }
             else {
               if (0 == (SpriteState.field_v & 63)) {
-                pn.field_c = null;
+                LoginStackHelpers.field_c = null;
               }
             }
             if (15 == this.field_l) {
-              wm.field_H[0].drawTransparent(ValidatedTextWidget.field_I, uc.field_a);
+              PaddedContainer.field_H[0].drawTransparent(ValidatedTextWidget.field_I, QuickChatHelpers.field_a);
             } else {
-              if (null != wm.field_H[this.field_l]) {
-                wm.field_H[this.field_l].drawTransparent(ValidatedTextWidget.field_I, uc.field_a);
+              if (null != PaddedContainer.field_H[this.field_l]) {
+                PaddedContainer.field_H[this.field_l].drawTransparent(ValidatedTextWidget.field_I, QuickChatHelpers.field_a);
               } else {
                 NanoFrameClock.renderThemeBackground(true, this.field_l);
-                ce.field_m.makeRasterTarget(true);
+                GameSelectionHelpers.field_m.makeRasterTarget(true);
               }
             }
           }
@@ -11314,11 +11314,11 @@ final class MenuScreen {
           if (this.field_l == 1 ||
             2 == this.field_l ||
             4 == this.field_l) {
-            gl.drawNineSliceFrame(ValidationHelpWidget.field_U[this.field_l] * NumericDateInputWidget.field_L[this.field_l].length + 48, -24 + this.getItemTop(41, 0), -27327, 48 - (-this.getItemY(0, (byte) 103) + this.getItemTop(41, 0)), kf.field_b, this.getItemColumnLeft(0, -7661) - 24);
+            NineSliceHelpers.drawNineSliceFrame(ValidationHelpWidget.field_U[this.field_l] * NumericDateInputWidget.field_L[this.field_l].length + 48, -24 + this.getItemTop(41, 0), -27327, 48 - (-this.getItemY(0, (byte) 103) + this.getItemTop(41, 0)), SharedCaptionGlobals.field_b, this.getItemColumnLeft(0, -7661) - 24);
           }
           var2Lifetime1 = SpriteState.field_z;
           if (var2Lifetime1 == null) {
-            var2Lifetime1 = r.field_b;
+            var2Lifetime1 = OverlayHelpers.field_b;
           }
           if (this.field_l == 2 &&
             var2Lifetime1.field_V.getCurrentPlayer(false) == var2Lifetime1.field_I) {
@@ -11350,29 +11350,29 @@ final class MenuScreen {
             var16 = 160;
             var17 = new Sprite(128, 256);
             var17.makeRasterTarget();
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -116, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var7Lifetime1 + var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -116, QuickChatCategoryCache.field_d[1], QueuedPacket.field_i[MenuInputState.field_c[3]], var7Lifetime1 + var15);
             if (46 != MenuInputState.field_c[0]) {
-              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -(var11 / 2) + var4Lifetime2 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -81, QuickChatCategoryCache.field_d[1], fn.field_b[0], var3Lifetime2 + var15);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -(var11 / 2) + var4Lifetime2 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -81, QuickChatCategoryCache.field_d[1], GameListHelpers.field_b[0], var3Lifetime2 + var15);
             }
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 68, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 68, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var15);
             var16 -= 8;
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 43, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 43, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var15);
             var16 += 16;
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 45, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 45, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var15);
             if (53 != MenuInputState.field_c[5] &&
               MenuInputState.field_c[5] != 55) {
-              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -125, QuickChatCategoryCache.field_d[1], bo.field_a[var14], var15);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -125, QuickChatCategoryCache.field_d[1], NameErrorHelpers.field_a[var14], var15);
             }
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 2, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var15);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 2, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var15);
             var16 += 8;
             var16 += 16;
             if (MenuInputState.field_c[0] != 46) {
-              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var16 + (var6Lifetime1 - var11 / 2), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var15 + var5Lifetime2);
+              TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var16 + (var6Lifetime1 - var11 / 2), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var15 + var5Lifetime2);
             }
-            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var10Lifetime1 + (var16 - var11), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -111, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var15);
-            ce.field_m.makeRasterTarget(true);
+            TexturedSpriteHelpers.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var10Lifetime1 + (var16 - var11), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -111, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var15);
+            GameSelectionHelpers.field_m.makeRasterTarget(true);
             var18 = EmailLoginCredentials.field_f - 256;
             var19 = EmailLoginCredentials.field_j - 128;
             SoftwareRasterizer.fillRectangleAlpha(var18, var19, 256, 128, 0, 192);
@@ -11437,7 +11437,7 @@ final class MenuScreen {
                     }
                   }
                 } else {
-                  SpellProjectile.field_B.drawParagraph(TextWidgetPainter.field_b, ValidatedTextWidget.field_I + 80, uc.field_a + 140, 480, 180, 0, -1, 0, 1, 30);
+                  SpellProjectile.field_B.drawParagraph(TextWidgetPainter.field_b, ValidatedTextWidget.field_I + 80, QuickChatHelpers.field_a + 140, 480, 180, 0, -1, 0, 1, 30);
                 }
               } else {
                 this.drawIconBar(true);
@@ -11453,16 +11453,16 @@ final class MenuScreen {
           }
           var3Lifetime4 = -208 + EmailLoginCredentials.field_f;
           var4Lifetime3 = EmailLoginCredentials.field_j - 40;
-          var5Lifetime3 = 200 * (SingleChildContainer.field_C + jo.field_c + SectorCacheStore.field_f) / 127;
+          var5Lifetime3 = 200 * (SingleChildContainer.field_C + BitHelpers.field_c + SectorCacheStore.field_f) / 127;
           var6Lifetime2 = 11176106;
           var7Lifetime2 = 34;
           if (200 > var5Lifetime3) {
             SoftwareRasterizer.setClip(var3Lifetime4, var4Lifetime3, var3Lifetime4 + var5Lifetime3, var4Lifetime3 + 32);
             SoftwareRasterizer.fillRoundedVerticalGradientAdditive(var3Lifetime4, var4Lifetime3, 200, 32, 15, var6Lifetime2, var7Lifetime2);
-            SpellProjectile.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 16777215, 0);
+            SpellProjectile.field_B.drawCentered(RequestQueueHelpers.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 16777215, 0);
             SoftwareRasterizer.setClip(var5Lifetime3 + var3Lifetime4, var4Lifetime3, 200 + var3Lifetime4, var4Lifetime3 + 32);
             SoftwareRasterizer.fillRoundedVerticalGradientAdditive(var3Lifetime4, var4Lifetime3, 200, 32, 15, var6Lifetime2 >> 1 & 8355711, var7Lifetime2);
-            SpellProjectile.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 0, 16777215);
+            SpellProjectile.field_B.drawCentered(RequestQueueHelpers.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 0, 16777215);
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.drawRoundedRectangle(var3Lifetime4, var4Lifetime3, 200, 32, 15, 0);
           }
@@ -11470,7 +11470,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.FA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "lc.FA(" + param0 + ')');
         }
     }
 
@@ -11489,7 +11489,7 @@ final class MenuScreen {
             MenuScreen.getSessionFlag((byte) -10);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.BA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "lc.BA(" + param0 + ')');
         }
     }
 
@@ -11508,18 +11508,18 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.J(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.J(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void drawCaption(int param0) {
         try {
-          SpellProjectile.field_B.drawParagraph(FrameClock.field_c, 64 + ValidatedTextWidget.field_I, 128 + uc.field_a, 512, 224, 0, -1, 1, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
+          SpellProjectile.field_B.drawParagraph(FrameClock.field_c, 64 + ValidatedTextWidget.field_I, 128 + QuickChatHelpers.field_a, 512, 224, 0, -1, 1, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
           if (param0 != 12) {
             MenuScreen.getSessionFlag((byte) -6);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.W(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "lc.W(" + param0 + ')');
         }
     }
 
@@ -11534,17 +11534,17 @@ final class MenuScreen {
             return false;
           }
           var4 = 7 - (7 & param0);
-          if (param1 != (1 << var4 & ra.field_f[var3_int])) {
+          if (param1 != (1 << var4 & DateHelpers.field_f[var3_int])) {
             return true;
           }
-          if (2 > qf.field_d) {
+          if (2 > MembershipGlobals.field_d) {
             return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.K(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11553,7 +11553,7 @@ final class MenuScreen {
           int var2_int = -61 % ((-38 - param0) / 46);
           this.field_g.pollKeysAndPointer(82, 2);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.H(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "lc.H(" + param0 + ')');
         }
     }
 
@@ -11601,7 +11601,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var4), "lc.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "lc.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11703,7 +11703,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "lc.O(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "lc.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11722,7 +11722,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "lc.<init>(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "lc.<init>(" + param0 + ')');
         }
     }
 
@@ -11767,13 +11767,13 @@ final class MenuScreen {
           if (param0 <= 76) {
             this.field_h = -27;
           }
-          fo.field_k = fo.field_k + 1;
-          if (cc.hasPendingValidation((byte) 118)) {
-            var2_int = ii.handleOptionKeys(89);
+          MessageCaptionGlobals.field_k = MessageCaptionGlobals.field_k + 1;
+          if (AngleHelpers.hasPendingValidation((byte) 118)) {
+            var2_int = IconHighlightPainter.handleOptionKeys(89);
             if (var2_int != 2) {
               return;
             }
-            dm.clearValidationState((byte) -96);
+            AlphaContainer.clearValidationState((byte) -96);
           }
           if (!TextLayout.field_b &&
             !IntrusiveDequeCursor.field_g) {
@@ -11788,10 +11788,10 @@ final class MenuScreen {
                     2 != this.field_l &&
                     3 != this.field_l &&
                     this.field_l != 4) {
-                    gj.switchScreen(false, true, th.field_f, th.field_f);
+                    ScreenSwitchHelpers.switchScreen(false, true, NameTable.field_f, NameTable.field_f);
                     continue;
                   }
-                  gj.switchScreen(false, true, -1, mn.field_r);
+                  ScreenSwitchHelpers.switchScreen(false, true, -1, MatchingFieldValidator.field_r);
                   continue;
                 }
                 this.handleShortcutKeys(111);
@@ -11801,7 +11801,7 @@ final class MenuScreen {
                 this.performItemAction(false, this.field_g.field_h, false);
                 continue;
               }
-              this.field_g.setItemBounds(this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.hitTestItem((byte) 88, pb.field_h, ja.field_s), -97);
+              this.field_g.setItemBounds(this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.hitTestItem((byte) 88, QueuedResponse.field_h, ConfirmedNameValidator.field_s), -97);
               stackIn_46_0Lifetime1 = this.field_g.field_h;
               stackIn_46_1Lifetime1 = -1;
               if (stackIn_46_0Lifetime1 == stackIn_46_1Lifetime1) {
@@ -11815,8 +11815,8 @@ final class MenuScreen {
             MusicPatchNode.field_s = MusicPatchNode.field_s + 1;
             if (!(MusicPatchNode.field_s <= 100) ||
               PacketBuffer.field_m != 0 ||
-              ri.field_b[84]) {
-              gj.switchScreen(false, true, 0, mn.field_r);
+              RasterSetupHelpers.field_b[84]) {
+              ScreenSwitchHelpers.switchScreen(false, true, 0, MatchingFieldValidator.field_r);
             }
           }
           if (this.field_l == 8) {
@@ -11825,19 +11825,19 @@ final class MenuScreen {
           if (16 == this.field_l) {
             var2 = SceneWidgetNode.field_s;
             stackIn_71_0 = var2;
-            stackIn_72_1 = (!LoadingTracker.canSubmitDate(-1)) && (~mn.field_r == ~this.field_l);
+            stackIn_72_1 = (!LoadingTracker.canSubmitDate(-1)) && (~MatchingFieldValidator.field_r == ~this.field_l);
             var3 = ((MembershipOfferScreen) (Object) stackIn_71_0).advanceAnimation(stackIn_72_1, true);
             if (var3 != 3 && (var3 == 1 ||
               var3 == 2)) {
               stackIn_85_0 = (var3 != 2) ? 0 : 1;
               var4 = stackIn_85_0;
-              gj.switchScreen(var4 != 0, true, 0, mn.field_r);
+              ScreenSwitchHelpers.switchScreen(var4 != 0, true, 0, MatchingFieldValidator.field_r);
             }
           }
           if (this.field_l == 5) {
             MusicPatchNode.field_s = MusicPatchNode.field_s + 1;
             if (MusicPatchNode.field_s > 250) {
-              gj.switchScreen(true, true, -1, mn.field_r);
+              ScreenSwitchHelpers.switchScreen(true, true, -1, MatchingFieldValidator.field_r);
             }
           }
           if (3 == this.field_l) {
@@ -11853,7 +11853,7 @@ final class MenuScreen {
                 var2_intLifetime1 = 0;
                 for (var3Lifetime1 = 0; var3Lifetime1 < 16; var3Lifetime1++) {
                   stackIn_121_0 = this.field_i;
-                  stackIn_121_1 = b.field_f[var3Lifetime1];
+                  stackIn_121_1 = ThrowableFormatHelpers.field_f[var3Lifetime1];
                   if (stackIn_121_0 == stackIn_121_1) {
                     var2_intLifetime1 = 1;
                     this.field_i = var3Lifetime1;
@@ -11863,7 +11863,7 @@ final class MenuScreen {
                 if ((var2_intLifetime1 != 0) &&
                   (decompiledFrameRemainder0 = (this.field_m == 2))) {
                   for (var2_intLifetime1 = this.field_i; var2_intLifetime1 < 15; var2_intLifetime1++) {
-                    b.field_f[var2_intLifetime1] = b.field_f[1 + var2_intLifetime1];
+                    ThrowableFormatHelpers.field_f[var2_intLifetime1] = ThrowableFormatHelpers.field_f[1 + var2_intLifetime1];
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -11877,9 +11877,9 @@ final class MenuScreen {
                       break;
                     }
                     stackIn_124_0 = -1;
-                    stackIn_124_1 = b.field_f[var3Lifetime1];
+                    stackIn_124_1 = ThrowableFormatHelpers.field_f[var3Lifetime1];
                     if (stackIn_124_0 == stackIn_124_1) {
-                      b.field_f[var3Lifetime1] = this.field_i;
+                      ThrowableFormatHelpers.field_f[var3Lifetime1] = this.field_i;
                       this.field_i = -1;
                     }
                     var3Lifetime1++;
@@ -11889,30 +11889,30 @@ final class MenuScreen {
               if ((decompiledFrameRemainder1) && ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_m == 2)))) {
                 for (var2_intLifetime1 = this.field_i; var2_intLifetime1 < 15; var2_intLifetime1++) {
-                  b.field_f[var2_intLifetime1] = b.field_f[1 + var2_intLifetime1];
+                  ThrowableFormatHelpers.field_f[var2_intLifetime1] = ThrowableFormatHelpers.field_f[1 + var2_intLifetime1];
                 }
               }
               if (decompiledFrameRemainder0) {
-                b.field_f[15] = -1;
+                ThrowableFormatHelpers.field_f[15] = -1;
               }
               if (this.field_m == 0) {
                 this.field_h = this.field_i;
               }
               if (this.field_m == 5 &&
                 NodeHashTableIterator.field_j >= (5 + GridContainer.field_P)) {
-                ByteStorage.a(2, this.field_h * 8 - 14);
+                ByteStorage.sendOptionSelection(2, this.field_h * 8 - 14);
               }
               if (this.field_m == 7 &&
                 2 + GridContainer.field_P <= NodeHashTableIterator.field_j) {
-                ByteStorage.a(2, -13 + this.field_h * 8 + (-1 + this.field_i % 12) / 2);
+                ByteStorage.sendOptionSelection(2, -13 + this.field_h * 8 + (-1 + this.field_i % 12) / 2);
               }
               if (this.field_m == 8 &&
                 (3 + GridContainer.field_P) <= NodeHashTableIterator.field_j) {
-                ByteStorage.a(2, this.field_i % 12 + this.field_h * 8 - 18);
+                ByteStorage.sendOptionSelection(2, this.field_i % 12 + this.field_h * 8 - 18);
               }
               if (this.field_m == 9 &&
-                ri.field_b[82]) {
-                bb.sendSettingsUpdate((byte) -120);
+                RasterSetupHelpers.field_b[82]) {
+                LoginLoadingHelpers.sendSettingsUpdate((byte) -120);
               }
             }
             var2_intLifetime1Lifetime1 = 0;
@@ -11929,13 +11929,13 @@ final class MenuScreen {
                   break scanLoop1;
                 }
                 stackIn_165_0Lifetime1 = 0;
-                stackIn_165_1Lifetime1 = ~b.field_f[var3Lifetime1Lifetime1];
+                stackIn_165_1Lifetime1 = ~ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1];
                 if ((stackIn_165_0Lifetime1 == stackIn_165_1Lifetime1 ||
-                  !(b.field_f[1 + var3Lifetime1Lifetime1] >= b.field_f[var3Lifetime1Lifetime1])) &&
-                  b.field_f[var3Lifetime1Lifetime1 + 1] != -1) {
-                  var4Lifetime1 = b.field_f[var3Lifetime1Lifetime1];
-                  b.field_f[var3Lifetime1Lifetime1] = b.field_f[var3Lifetime1Lifetime1 + 1];
-                  b.field_f[1 + var3Lifetime1Lifetime1] = var4Lifetime1;
+                  !(ThrowableFormatHelpers.field_f[1 + var3Lifetime1Lifetime1] >= ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1])) &&
+                  ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1 + 1] != -1) {
+                  var4Lifetime1 = ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1];
+                  ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1] = ThrowableFormatHelpers.field_f[var3Lifetime1Lifetime1 + 1];
+                  ThrowableFormatHelpers.field_f[1 + var3Lifetime1Lifetime1] = var4Lifetime1;
                   var2_intLifetime1Lifetime2 = 1;
                 }
                 var3Lifetime1Lifetime1++;
@@ -11966,7 +11966,7 @@ final class MenuScreen {
                 QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[this.field_i];
               }
               if (this.field_m == 5) {
-                QuickChatCategoryCache.field_d[3] = hi.field_b[this.field_i];
+                QuickChatCategoryCache.field_d[3] = ViewControllerHelpers.field_b[this.field_i];
               }
               if (this.field_m == 7) {
                 MenuInputState.field_c[0] = (int)(12.0 * Math.random());
@@ -11980,8 +11980,8 @@ final class MenuScreen {
                 QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[(int)(Math.random() * (double)IsaacCipher.field_d.length)];
                 stackIn_217_0 = QuickChatCategoryCache.field_d;
                 stackIn_217_1 = 3;
-                stackIn_217_2 = hi.field_b;
-                stackIn_217_3 = (int)(Math.random() * (double)hi.field_b.length);
+                stackIn_217_2 = ViewControllerHelpers.field_b;
+                stackIn_217_3 = (int)(Math.random() * (double)ViewControllerHelpers.field_b.length);
                 if (!(Math.random() < 1.1)) {
                   stackIn_218_4 = 8;
                 } else {
@@ -11998,7 +11998,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.R(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "lc.R(" + param0 + ')');
         }
     }
 
@@ -12006,11 +12006,11 @@ final class MenuScreen {
         int var0 = 0;
         field_r = "Waiting";
         field_j = new IntrusiveDeque();
-        field_q = new on[255];
+        field_q = new LoginMessageTable[255];
         field_a = "<%0> has resigned.";
         field_c = "Owner";
         for (var0 = 0; field_q.length > var0; var0++) {
-          field_q[var0] = new on();
+          field_q[var0] = new LoginMessageTable();
         }
         field_k = "Type your age in years";
         field_e = "Solicitation";

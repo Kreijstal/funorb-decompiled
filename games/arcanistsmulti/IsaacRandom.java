@@ -208,9 +208,9 @@ final class IsaacRandom {
     }
 
     final static void layoutQuickChatMenu(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
-        co.field_f.setBounds(param3, param0, param5, param1, (byte) -120);
+        BattleResetHelpers.field_f.setBounds(param3, param0, param5, param1, (byte) -120);
         if (null != CacheEntry.field_q) {
-          CacheEntry.field_q.layout(param6, -ng.field_K + param6, param1, true, param1, param4);
+          CacheEntry.field_q.layout(param6, -TermsNoticePanel.field_K + param6, param1, true, param1, param4);
         }
         if (param2 != 19) {
           field_e = (String) null;
@@ -269,7 +269,7 @@ final class IsaacRandom {
           }
           this.initializeState(1046142536);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

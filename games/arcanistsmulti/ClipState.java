@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClipState extends IntrusiveNode {
-    static ri field_i;
+    static RasterSetupHelpers field_i;
     static int field_m;
     static String field_s;
     int field_p;
@@ -163,7 +163,7 @@ final class ClipState extends IntrusiveNode {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param15).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class ClipState extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class ClipState extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "uh.G(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "uh.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class ClipState extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "uh.E(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "uh.E(" + param0 + ')');
         }
     }
 
@@ -297,20 +297,20 @@ final class ClipState extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final static void drawDimmedScene(boolean param0, int param1) {
         try {
-          if (pn.hasOpenOverlay((byte) -120)) {
+          if (LoginStackHelpers.hasOpenOverlay((byte) -120)) {
             param0 = false;
           }
           WeightedLruCache.drawModalScenes(0, param0);
           int var2_int = 32 % ((param1 - 18) / 50);
-          cj.drawModalDimOverlay(-127);
+          AccountCreationHelpers.drawModalDimOverlay(-127);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "uh.F(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "uh.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class ClipState extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class ClipState extends IntrusiveNode {
         field_s = "Cancel draw";
         field_q = "Increases the power of your flame spells by up to 50%";
         field_l = "Make your way to the islands of Mos Le'Harmless to get your hands on some 'rum', but watch out for the monkeys - they might just rain on your parade.";
-        field_i = new ri();
+        field_i = new RasterSetupHelpers();
         field_n = new IntrusiveDeque();
     }
 }

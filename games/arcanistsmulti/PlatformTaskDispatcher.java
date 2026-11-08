@@ -106,7 +106,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          hj var3_ref = null;
+          ClientIOException var3_ref = null;
           BoundedRandomAccessFile var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
@@ -154,21 +154,21 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_f;
                 switch (var2_int) {
                   case 1:
-                    if (qj.monotonicTimeMillis(-26572) < field_w) {
+                    if (TimeAndInputHelpers.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     var8.field_g = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_b)), var8.field_c);
                     break;
                   case 22:
-                    if (qj.monotonicTimeMillis(-26572) < field_w) {
+                    if (TimeAndInputHelpers.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (hj) null;
+                      if (false) throw (ClientIOException) null;
                       var8.field_g = ProxySocketConnector.create((String) (var8.field_b), var8.field_c, 0).openSocket((byte) -128);
-                    } catch (hj decompiledCaughtParameter1) {
+                    } catch (ClientIOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (hj) (Object) decompiledCaughtException;
+                      var3_ref = (ClientIOException) (Object) decompiledCaughtException;
                       var8.field_g = var3_ref.getMessage();
                       throw var3_ref;
                     }
@@ -204,7 +204,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 21:
-                        if (field_w > qj.monotonicTimeMillis(-26572)) {
+                        if (field_w > TimeAndInputHelpers.monotonicTimeMillis(-26572)) {
                           throw new IOException();
                         }
                         var8.field_g = java.net.InetAddress.getByName((String) (var8.field_b)).getAddress();
@@ -300,7 +300,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 3:
-                        if (field_w > qj.monotonicTimeMillis(-26572)) {
+                        if (field_w > TimeAndInputHelpers.monotonicTimeMillis(-26572)) {
                           throw new IOException();
                         }
                         var10 = (var8.field_c >> 24 & 255) + "." + ((var8.field_c & 16726054) >> 16) + "." + ((65321 & var8.field_c) >> 8) + "." + (var8.field_c & 255);
@@ -317,7 +317,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_g = ((Class) (var9[0])).getDeclaredField((String) (var9[1]));
                     break;
                   case 4:
-                    if (qj.monotonicTimeMillis(-26572) < field_w) {
+                    if (TimeAndInputHelpers.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     var8.field_g = new DataInputStream(((java.net.URL) (var8.field_b)).openStream());

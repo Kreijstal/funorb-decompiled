@@ -6,7 +6,7 @@ final class CameraFollowTarget {
     static int field_i;
     static String field_a;
     BattleUnit field_d;
-    static ec field_f;
+    static SpriteFrame field_f;
     SpellProjectile field_h;
     static String field_e;
     static String field_c;
@@ -28,13 +28,13 @@ final class CameraFollowTarget {
             var1_int = var1_int + var3;
           }
           if (param0 != 91) {
-            field_f = (ec) null;
+            field_f = (SpriteFrame) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "ol.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "ol.A(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class CameraFollowTarget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class CameraFollowTarget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class CameraFollowTarget {
           }
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class CameraFollowTarget {
           this.field_h = param0;
           this.field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

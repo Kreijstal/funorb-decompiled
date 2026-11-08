@@ -53,7 +53,7 @@ final class PatchEnvelopeSet {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = lm.field_c;
+            stackIn_3_0 = GameDetailsRenderer.field_c;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -62,8 +62,8 @@ final class PatchEnvelopeSet {
             var4 = Js5ArchiveManager.normalizeNameForLookup(param1, -13);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!rk.isNameSeparator((byte) 117, var4.charAt(0)) &&
-                !rk.isNameSeparator((byte) 118, var4.charAt(-1 + var4.length()))) {
+              if (!GradientBarButton.isNameSeparator((byte) 117, var4.charAt(0)) &&
+                !GradientBarButton.isNameSeparator((byte) 118, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 var6 = 0;
                 if (!param2) {
@@ -72,14 +72,14 @@ final class PatchEnvelopeSet {
                 }
                 while (var6 < param1.length()) {
                   var7 = param1.charAt(var6);
-                  if (rk.isNameSeparator((byte) 123, (char) var7)) {
+                  if (GradientBarButton.isNameSeparator((byte) 123, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if (2 <= var5 &&
                     !param0) {
-                    stackIn_29_0 = ff.field_e;
+                    stackIn_29_0 = FrameAndQuickChatHelpers.field_e;
                     return stackIn_29_0;
                   }
                   var6++;
@@ -93,10 +93,10 @@ final class PatchEnvelopeSet {
               stackIn_18_0 = GridContainer.field_H;
               return stackIn_18_0;
             }
-            stackIn_13_0 = lm.field_c;
+            stackIn_13_0 = GameDetailsRenderer.field_c;
             return stackIn_13_0;
           }
-          stackIn_8_0 = lm.field_c;
+          stackIn_8_0 = GameDetailsRenderer.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ final class PatchEnvelopeSet {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class PatchEnvelopeSet {
         if (param0 < 80) {
           PatchEnvelopeSet.releaseStatics((byte) 114);
         }
-        g.field_e.setContent((byte) -92, (UiComponent) (new td()));
+        SupportPageHelpers.field_e.setContent((byte) -92, (UiComponent) (new ThreeButtonPanel()));
     }
 
     final static void showLoadingDialog(int param0) {
@@ -124,10 +124,10 @@ final class PatchEnvelopeSet {
           PatchEnvelopeSet.openSimpleDialog(-120);
         }
         ClientException.field_b.deactivatePanels(-120);
-        if (null == ci.field_c) {
-          ci.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
+        if (null == ModalStackHelpers.field_c) {
+          ModalStackHelpers.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
         }
-        ClientException.field_b.pushPanel(ci.field_c, param0 + 15637);
+        ClientException.field_b.pushPanel(ModalStackHelpers.field_c, param0 + 15637);
     }
 
     final static void closeNetworkResources(int param0) {
@@ -138,20 +138,20 @@ final class PatchEnvelopeSet {
             if (GrowableIntList.field_c != null) {
               GrowableIntList.field_c.closeConnection(param0 ^ 16700264);
             }
-            if (null != ed.field_yb) {
-              ed.field_yb.stop((byte) 90);
+            if (null != MainMenuDialog.field_yb) {
+              MainMenuDialog.field_yb.stop((byte) 90);
             }
-            if (null != bm.field_e) {
+            if (null != TutorialCaptionGlobals.field_e) {
               try {
-                bm.field_e.close((byte) -101);
+                TutorialCaptionGlobals.field_e.close((byte) -101);
               } catch (IOException iOException) {
               }
             }
-            if (null != bb.field_b) {
-              for (var1_int = 0; var1_int < bb.field_b.length; var1_int++) {
-                if (null != bb.field_b[var1_int]) {
+            if (null != LoginLoadingHelpers.field_b) {
+              for (var1_int = 0; var1_int < LoginLoadingHelpers.field_b.length; var1_int++) {
+                if (null != LoginLoadingHelpers.field_b[var1_int]) {
                   try {
-                    bb.field_b[var1_int].close((byte) -101);
+                    LoginLoadingHelpers.field_b[var1_int].close((byte) -101);
                   } catch (IOException var2_ref) {
                   }
                 }
@@ -161,7 +161,7 @@ final class PatchEnvelopeSet {
               field_f = (String) null;
             }
           } catch (RuntimeException runtimeException) {
-            throw aa.wrapException((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -175,10 +175,10 @@ final class PatchEnvelopeSet {
         if (null != ClientException.field_b) {
           ClientException.field_b.removeClosedPanels((byte) 83);
         }
-        if (ci.field_c != null) {
-          ci.field_c.markComplete((byte) 61);
+        if (ModalStackHelpers.field_c != null) {
+          ModalStackHelpers.field_c.markComplete((byte) 61);
         }
-        hb.resetLobbyState((byte) -102);
+        SceneListPanel.resetLobbyState((byte) -102);
     }
 
     final static String decodeCp1252String(int param0, int param1, byte param2, byte[] param3) {
@@ -240,7 +240,7 @@ final class PatchEnvelopeSet {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

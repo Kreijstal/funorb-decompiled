@@ -31,7 +31,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
             field_o = 48;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "rl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
             field_h = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "rl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         while (0L != param0) {
           var7 = param0;
           param0 = param0 / 37L;
-          var9 = qa.field_h[(int)(var7 - param0 * 37L)];
+          var9 = NoticeHelpers.field_h[(int)(var7 - param0 * 37L)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));

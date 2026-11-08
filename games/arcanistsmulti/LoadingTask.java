@@ -1,0 +1,55 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoadingTask {
+    static int field_e;
+    static String field_a;
+    String field_f;
+    static SceneWidget[] field_i;
+    int field_h;
+    static boolean field_b;
+    String field_j;
+    ResourceArchive field_c;
+    String field_g;
+    static boolean field_d;
+
+    final static int classifyLowBits(boolean param0, int param1) {
+        int var2 = 7 & 6 + param1;
+        if (!param0) {
+          field_b = true;
+          if (0 == var2) {
+            return 5;
+          }
+          if (var2 <= 5) {
+            return 2;
+          }
+          return 3;
+        }
+        if (0 == var2) {
+          return 5;
+        }
+        if (var2 <= 5) {
+          return 2;
+        }
+        return 3;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_a = null;
+        if (param0 != 5) {
+          field_e = -50;
+          field_i = null;
+          return;
+        }
+        field_i = null;
+    }
+
+    private LoadingTask() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_e = 0;
+        field_a = "You need to play 1 more rated game to unlock this option.";
+    }
+}

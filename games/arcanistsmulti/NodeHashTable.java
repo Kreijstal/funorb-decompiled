@@ -115,7 +115,7 @@ final class NodeHashTable {
           return (String) null;
         }
         int var9 = Battle.field_Bb.get(13);
-        return WhirlpoolHasher.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + no.field_ub[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return WhirlpoolHasher.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + SocialDialog.field_ub[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final void put(IntrusiveNode param0, boolean param1, long param2) {
@@ -133,7 +133,7 @@ final class NodeHashTable {
           param0.next.previous = param0;
           param0.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

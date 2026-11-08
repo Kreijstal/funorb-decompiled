@@ -69,7 +69,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class WrappedTextLayout extends TextLayout {
           SectorCacheStore.computeTagOffsets(0, var10, param4, param2, (byte) 35);
           int var7 = -84 / ((-47 - param1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "re.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "re.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class WrappedTextLayout extends TextLayout {
           RuntimeException var2_ref = null;
           var7 = ArcanistsMulti.field_G ? 1 : 0;
           try {
-            if (cb.field_a) {
+            if (GameListSortHelpers.field_a) {
               return true;
             }
             try {
@@ -194,7 +194,7 @@ final class WrappedTextLayout extends TextLayout {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -331,7 +331,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

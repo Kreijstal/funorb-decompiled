@@ -15,14 +15,14 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          GzipDecoder.sortRankingRange(true, ao.field_g, -24595, 0, MouseInputHandler.field_b, param1, tm.field_g);
+          GzipDecoder.sortRankingRange(true, LobbyLayoutHelpers.field_g, -24595, 0, MouseInputHandler.field_b, param1, IntensityTableHelpers.field_g);
           for (var2_int = 0; MouseInputHandler.field_b > var2_int; var2_int++) {
-            ki.field_r[var2_int + param1] = var2_int;
+            EmailValidator.field_r[var2_int + param1] = var2_int;
           }
           if (param0 > -103) {
             field_U = (SceneWidget) null;
           }
-          GzipDecoder.sortRankingRange(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
+          GzipDecoder.sortRankingRange(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, NoticeHelpers.field_m);
           if (param1 >= MouseInputHandler.field_b) {
             return;
           }
@@ -31,7 +31,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "bi.H(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "bi.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = dd.copyBytes(param2, 0);
+          stackIn_11_0 = PasswordCheckHelpers.copyBytes(param2, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             return null;
           }
           if (this.field_q != null) {
-            ih.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
+            PointerOriginHelpers.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
             return this.field_q;
           }
           return null;
@@ -94,7 +94,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           return null;
         }
         if (this.field_q != null) {
-          ih.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
+          PointerOriginHelpers.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
           return this.field_q;
         }
         return null;
@@ -105,7 +105,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           super.updatePointer(param0, param1, param2, param3);
           this.field_V = EmailLoginCredentials.field_g - (this.field_n + param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           this.field_T = param0;
           int var3_int = -16 / ((-87 - param1) / 37);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "bi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "bi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

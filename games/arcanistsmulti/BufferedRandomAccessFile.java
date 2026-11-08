@@ -170,7 +170,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -393,7 +393,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class BufferedRandomAccessFile {
         CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
-          var9 = he.field_e;
+          var9 = StatusMessageHelpers.field_e;
           var9.writeOpcode((byte) -58, param3);
           var9.position = var9.position + 1;
           if (param2 <= 60) {
@@ -432,7 +432,7 @@ final class BufferedRandomAccessFile {
           }
           var9.writeByteLengthAtMark(-var7 + var9.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -458,7 +458,7 @@ final class BufferedRandomAccessFile {
           this.field_j = new byte[param2];
           this.field_d = 0L;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

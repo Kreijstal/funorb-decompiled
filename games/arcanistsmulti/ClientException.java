@@ -24,10 +24,10 @@ final class ClientException extends RuntimeException {
           if (param0 != -1) {
             field_b = (ModalPanelStack) null;
           }
-          if (fn.field_f == null) {
+          if (GameListHelpers.field_f == null) {
             return false;
           }
-          stackIn_9_0 = !(param1.toLowerCase().indexOf(fn.field_f.toLowerCase()) < 0);
+          stackIn_9_0 = !(param1.toLowerCase().indexOf(GameListHelpers.field_f.toLowerCase()) < 0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,34 +39,34 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void sendGameSettings(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param2 == 11) {
-          he.field_e.writeOpcode((byte) -124, 58);
-          he.field_e.writeByte(param0, (byte) -82);
-          he.field_e.writeShort(param6, (byte) -68);
-          he.field_e.writeShort(param8, (byte) -68);
-          he.field_e.writeShort(param7, (byte) -95);
-          he.field_e.writeShort(param1, (byte) -59);
-          he.field_e.writeShort(param4, (byte) -66);
-          he.field_e.writeByte(param3, (byte) -35);
-          he.field_e.writeByte(param5, (byte) -128);
+          StatusMessageHelpers.field_e.writeOpcode((byte) -124, 58);
+          StatusMessageHelpers.field_e.writeByte(param0, (byte) -82);
+          StatusMessageHelpers.field_e.writeShort(param6, (byte) -68);
+          StatusMessageHelpers.field_e.writeShort(param8, (byte) -68);
+          StatusMessageHelpers.field_e.writeShort(param7, (byte) -95);
+          StatusMessageHelpers.field_e.writeShort(param1, (byte) -59);
+          StatusMessageHelpers.field_e.writeShort(param4, (byte) -66);
+          StatusMessageHelpers.field_e.writeByte(param3, (byte) -35);
+          StatusMessageHelpers.field_e.writeByte(param5, (byte) -128);
           return;
         }
         String var10 = (String) null;
         ClientException.containsFilterWord(2, (String) null);
-        he.field_e.writeOpcode((byte) -124, 58);
-        he.field_e.writeByte(param0, (byte) -82);
-        he.field_e.writeShort(param6, (byte) -68);
-        he.field_e.writeShort(param8, (byte) -68);
-        he.field_e.writeShort(param7, (byte) -95);
-        he.field_e.writeShort(param1, (byte) -59);
-        he.field_e.writeShort(param4, (byte) -66);
-        he.field_e.writeByte(param3, (byte) -35);
-        he.field_e.writeByte(param5, (byte) -128);
+        StatusMessageHelpers.field_e.writeOpcode((byte) -124, 58);
+        StatusMessageHelpers.field_e.writeByte(param0, (byte) -82);
+        StatusMessageHelpers.field_e.writeShort(param6, (byte) -68);
+        StatusMessageHelpers.field_e.writeShort(param8, (byte) -68);
+        StatusMessageHelpers.field_e.writeShort(param7, (byte) -95);
+        StatusMessageHelpers.field_e.writeShort(param1, (byte) -59);
+        StatusMessageHelpers.field_e.writeShort(param4, (byte) -66);
+        StatusMessageHelpers.field_e.writeByte(param3, (byte) -35);
+        StatusMessageHelpers.field_e.writeByte(param5, (byte) -128);
     }
 
     public static void releaseStatics(byte param0) {

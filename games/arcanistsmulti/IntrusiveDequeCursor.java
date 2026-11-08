@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDequeCursor {
-    static aj field_b;
+    static GameOptionType field_b;
     static int field_j;
     static String field_h;
     static int field_i;
@@ -64,7 +64,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -74,8 +74,8 @@ final class IntrusiveDequeCursor {
           IntrusiveDequeCursor.layoutLobbyPanels(-109, -10, 3, -53, 6, 89);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ih.field_f >= 20 &&
-          ue.isReadyForLobby(125) && (!(0 < dd.field_j) ||
+        if (PointerOriginHelpers.field_f >= 20 &&
+          BattleStartHelpers.isReadyForLobby(125) && (!(0 < PasswordCheckHelpers.field_j) ||
           LabeledField.alwaysTrue(param0 ^ 15587))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -106,7 +106,7 @@ final class IntrusiveDequeCursor {
           }
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "oc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "oc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,12 +133,12 @@ final class IntrusiveDequeCursor {
     }
 
     final static void closePlayerMenu(boolean param0) {
-        if (eo.field_c != null &&
-          eo.field_c.field_c != null) {
-          eo.field_c.field_c.field_ab = false;
+        if (PackedShortHelpers.field_c != null &&
+          PackedShortHelpers.field_c.field_c != null) {
+          PackedShortHelpers.field_c.field_c.field_ab = false;
         }
-        dd.field_h = null;
-        eo.field_c = null;
+        PasswordCheckHelpers.field_h = null;
+        PackedShortHelpers.field_c = null;
         if (param0) {
           IntrusiveDequeCursor.canShowAdvert(-89);
         }
@@ -176,12 +176,12 @@ final class IntrusiveDequeCursor {
           NanoFrameClock.field_t.setBounds(var6_int - 6, 3, 3, IntKeyLookup.field_g.field_I - 6, (byte) -120);
           var7 = -5 + NanoFrameClock.field_t.field_I;
           CredentialKind.field_d.setBounds(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
-          SingleChildContainer.field_D.setBounds(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
-          sa.field_Cb.setBounds(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
+          SingleChildContainer.field_D.setBounds(-ConfirmScene.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
+          ConfirmScene.field_Cb.setBounds(ConfirmScene.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
-          qo.field_f.setBoundsAndLayout(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
+          NameHelpers.field_f.setBoundsAndLayout(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
           if (AccountRegistrationPanel.field_U != null) {
-            AccountRegistrationPanel.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
+            AccountRegistrationPanel.field_U.setBounds(NameHelpers.field_f.field_I, NameHelpers.field_f.field_db, NameHelpers.field_f.field_x, NameHelpers.field_f.field_T, -104);
           }
           var8 = -param3 + (IntKeyLookup.field_g.field_x - var6_int);
           var9 = var8 / 2;
@@ -189,16 +189,16 @@ final class IntrusiveDequeCursor {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != mn.field_s[var12]) {
-              var13 = (2 + (IntKeyLookup.field_g.field_I - 6)) * var11 / (1 + lf.field_g) + 3;
+              null != MatchingFieldValidator.field_s[var12]) {
+              var13 = (2 + (IntKeyLookup.field_g.field_I - 6)) * var11 / (1 + ScreenTransitionHelpers.field_g) + 3;
               var11++;
-              var7Lifetime1 = (-6 + IntKeyLookup.field_g.field_I + 2) * var11 / (lf.field_g + 1) + 3 - 2 - var13;
+              var7Lifetime1 = (-6 + IntKeyLookup.field_g.field_I + 2) * var11 / (ScreenTransitionHelpers.field_g + 1) + 3 - 2 - var13;
               if (var12 >= 5) {
-                g.field_g.setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
+                SupportPageHelpers.field_g.setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
               } else {
-                mn.field_s[var12].setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
-                ta.field_i[var12].setBounds(-param3 + var9, param3, 0, var7Lifetime1, (byte) -120);
-                ia.field_b[var12].setBounds(param2, var9, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
+                MatchingFieldValidator.field_s[var12].setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
+                LoadingTask.field_i[var12].setBounds(-param3 + var9, param3, 0, var7Lifetime1, (byte) -120);
+                RootInputHelpers.field_b[var12].setBounds(param2, var9, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
                 field_f[var12].setBounds(-var10 + (-param3 + var8), var10, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
               }
             }
@@ -210,7 +210,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var6), "oc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var6), "oc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -261,12 +261,12 @@ final class IntrusiveDequeCursor {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_b = new aj(2, 4, 4, 0);
+        field_b = new GameOptionType(2, 4, 4, 0);
         field_d = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_h = "Press 'ESC' to open the menu";
         field_a = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};

@@ -6,7 +6,7 @@ final class QuickChatCategoryCache {
     static boolean field_f;
     private WeightedLruCache field_g;
     private ResourceArchive field_e;
-    static ec field_h;
+    static SpriteFrame field_h;
     static SceneWidget field_c;
     static int[][] field_d;
     private ResourceArchive field_i;
@@ -91,12 +91,12 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final static boolean isFriendOrMember(long param0, boolean param1, String param2) {
-        wa var4 = null;
+        PlayerInfoPanel var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
@@ -112,7 +112,7 @@ final class QuickChatCategoryCache {
             var4.field_Lb != null) {
             return true;
           }
-          stackIn_11_0 = (DirectByteStorage.field_f != null) && (vf.lookupSocialEntry(param0, 8192) != null);
+          stackIn_11_0 = (DirectByteStorage.field_f != null) && (RawDataNode.lookupSocialEntry(param0, 8192) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

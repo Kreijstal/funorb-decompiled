@@ -14,13 +14,13 @@ final class LabeledField extends SingleChildContainer {
     private boolean field_J;
 
     final static void openOptionsDialog(byte param0) {
-        pm.field_e.deactivatePanels(param0 ^ -36);
+        EmailValidationHelpers.field_e.deactivatePanels(param0 ^ -36);
         if (param0 == 94) {
-          pm.field_e.pushPanel(new OptionsDialog(pm.field_e), 15637);
+          EmailValidationHelpers.field_e.pushPanel(new OptionsDialog(EmailValidationHelpers.field_e), 15637);
           return;
         }
         LabeledField.openOptionsDialog((byte) 118);
-        pm.field_e.pushPanel(new OptionsDialog(pm.field_e), 15637);
+        EmailValidationHelpers.field_e.pushPanel(new OptionsDialog(EmailValidationHelpers.field_e), 15637);
     }
 
     final String getTooltip(boolean param0) {
@@ -59,7 +59,7 @@ final class LabeledField extends SingleChildContainer {
     }
 
     final static void clearOrDimScreen(boolean param0, int param1) {
-        la.clearOrDimScreen(param0, true, (byte) -96);
+        ScreenClearHelpers.clearOrDimScreen(param0, true, (byte) -96);
         if (param1 != 4474111) {
           field_M = (int[]) null;
         }
@@ -83,7 +83,7 @@ final class LabeledField extends SingleChildContainer {
             var16 = (String) null;
             LabeledField.showFramedNotice((Sprite[]) null, true, (BitmapFont) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
           }
-          TextLayout.configureLobbyStyles(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, DualLinkDeque.field_d, new ec(param0), wm.field_I);
+          TextLayout.configureLobbyStyles(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new SpriteFrame(param4), param8, param13, param2, LoginStackHelpers.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, DualLinkDeque.field_d, new SpriteFrame(param0), PaddedContainer.field_I);
           CanvasRasterBuffer.showNoticeDialog(param11, (byte) -72, param12, param5, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

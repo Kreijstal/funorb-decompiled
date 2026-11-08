@@ -30,22 +30,22 @@ abstract class GameApplet extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         LinkButtonPainter.field_f = this.field_n;
         StrongCacheEntry.selectLanguageTexts(false, LinkButtonPainter.field_f);
-        LobbyGameEntry.initializeConnectionState(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, LinkButtonPainter.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
-        ArchiveRequest.initializeNetworking((byte) -81, LinkButtonPainter.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
+        LobbyGameEntry.initializeConnectionState(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, LinkButtonPainter.field_f, 5000, this.field_v, this.field_C, DecimalCheckHelpers.field_d, param0);
+        ArchiveRequest.initializeNetworking((byte) -81, LinkButtonPainter.field_f, this.field_C, this.field_x, DecimalCheckHelpers.field_d, param2, this.field_B, this.field_l, this.field_q);
         TextButton.initializeKeyCodeMap((byte) -60);
-        StrongCacheEntry.field_w = qj.createMouseWheelHandler((byte) -86);
-        IntKeyLookup.attachInputHandlers(on.field_c, (byte) 122);
-        sa.field_Bb = param6;
+        StrongCacheEntry.field_w = TimeAndInputHelpers.createMouseWheelHandler((byte) -86);
+        IntKeyLookup.attachInputHandlers(LoginMessageTable.field_c, (byte) 122);
+        ConfirmScene.field_Bb = param6;
         HuffmanCodec.field_g = param1;
-        dm.field_H = param7;
-        ce.field_n = param5;
-        cj.field_d = param3;
+        AlphaContainer.field_H = param7;
+        GameSelectionHelpers.field_n = param5;
+        AccountCreationHelpers.field_d = param3;
         this.initializePacketLengths(param4 ^ 5016);
         OptionsDialog.resetConnectionAttempts(false);
     }
 
     private final void enableMessageGroup1(int param0) {
-        cc.field_d[1] = true;
+        AngleHelpers.field_d[1] = true;
         if (param0 > -72) {
           this.field_n = -27;
         }
@@ -55,7 +55,7 @@ abstract class GameApplet extends GameAppletShell {
         if (param0 <= 35) {
           return;
         }
-        cc.field_d[6] = true;
+        AngleHelpers.field_d[6] = true;
     }
 
     public static void releaseStatics(boolean param0) {
@@ -73,7 +73,7 @@ abstract class GameApplet extends GameAppletShell {
 
     private final void enableMessageGroup4(int param0) {
         int var2 = 9 / ((56 - param0) / 58);
-        cc.field_d[4] = true;
+        AngleHelpers.field_d[4] = true;
     }
 
     final int pollLogin(boolean param0, boolean param1) {
@@ -129,7 +129,7 @@ abstract class GameApplet extends GameAppletShell {
             if (var9 != null) {
               this.field_m = Integer.parseInt(var9);
             }
-            wa.field_Nb = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            PlayerInfoPanel.field_Nb = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.startApplet(32, param0, param1, 11431, this.field_B, param2, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ abstract class GameApplet extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -178,19 +178,19 @@ abstract class GameApplet extends GameAppletShell {
           if (var4 == 1) {
             var5_int = LoginPanel.submitAccountCreation(IconTextSceneWidget.createConnectionCaption((byte) 13), -67, ModalPanelStack.createRememberedUsername((byte) 126));
             if (var5_int != -1) {
-              fl.handleNameCheckReply(20657, MenuButtonPanel.field_E, Bzip2State.field_M, var5_int);
+              FinalFrameHelpers.handleNameCheckReply(20657, MenuButtonPanel.field_E, Bzip2State.field_M, var5_int);
               Bzip2State.field_M = null;
               MenuButtonPanel.field_E = null;
             }
-            var10 = dm.takePendingFlag(18727);
+            var10 = AlphaContainer.takePendingFlag(18727);
             if (var10 != null) {
-              wh.setDisplayFlag((byte) 117, var10.booleanValue());
+              PaletteSpriteHelpers.setDisplayFlag((byte) 117, var10.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = QuickChatPhrase.submitAccountCreation(ho.isMembersOnly((byte) 93), IsaacRandom.getUiValue(-94), ed.getStatusMessage(-952), ConditionalTextValue.getAccountCaption((byte) -107), this.field_m, BufferedSocket.getConnectionCaption(0), (byte) -110);
+            var5_intLifetime1 = QuickChatPhrase.submitAccountCreation(ServerMessage.isMembersOnly((byte) 93), IsaacRandom.getUiValue(-94), MainMenuDialog.getStatusMessage(-952), ConditionalTextValue.getAccountCaption((byte) -107), this.field_m, BufferedSocket.getConnectionCaption(0), (byte) -110);
             if (var5_intLifetime1 != -1) {
-              pn.handleRegistrationReply(Bzip2State.field_M, var5_intLifetime1, -42, MenuButtonPanel.field_E);
+              LoginStackHelpers.handleRegistrationReply(Bzip2State.field_M, var5_intLifetime1, -42, MenuButtonPanel.field_E);
               MenuButtonPanel.field_E = null;
               Bzip2State.field_M = null;
             }
@@ -204,24 +204,24 @@ abstract class GameApplet extends GameAppletShell {
             if (param1) {
               QuickChatCategoryCache.field_f = false;
             } else {
-              var5_intLifetime2 = SingleChildContainer.performLogin(this.field_m, 57, this.field_t, ed.getStatusMessage(-952), false, ConditionalTextValue.getAccountCaption((byte) -108));
+              var5_intLifetime2 = SingleChildContainer.performLogin(this.field_m, 57, this.field_t, MainMenuDialog.getStatusMessage(-952), false, ConditionalTextValue.getAccountCaption((byte) -108));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 != 0) {
-                  oa.handleLoginResult(!param0, var5_intLifetime2, MenuButtonPanel.field_E);
+                  LoginResultHelpers.handleLoginResult(!param0, var5_intLifetime2, MenuButtonPanel.field_E);
                   MenuButtonPanel.field_E = null;
                 } else {
-                  MeshModel.field_K = fk.field_k;
+                  MeshModel.field_K = SoundEffectVoice.field_k;
                   ArcanistsMulti.updateNoticeText((byte) 48);
-                  qe.field_p = false;
-                  fj.field_j = 10;
+                  QueuedPacket.field_p = false;
+                  BitAndSpriteHelpers.field_j = 10;
                 }
               }
             }
           }
           if (var4 == 4) {
             if (!Js5Transport.field_d) {
-              qe.field_p = true;
-              fj.field_j = 10;
+              QueuedPacket.field_p = true;
+              BitAndSpriteHelpers.field_j = 10;
             } else {
               MidiPcmStream.logoutAndReload(2, IconButtonPainter.getApplet(120));
             }
@@ -230,8 +230,8 @@ abstract class GameApplet extends GameAppletShell {
             UsernameCredentials.openQuitPage((byte) 125, IconButtonPainter.getApplet(121));
           }
           if (6 == var4 &&
-            lh.field_n) {
-            fj.field_j = 10;
+            ValueListPainter.field_n) {
+            BitAndSpriteHelpers.field_j = 10;
           }
           if (var4 == 7) {
             ConditionalTextValue.openServerList(IconButtonPainter.getApplet(116), 27901);
@@ -240,33 +240,33 @@ abstract class GameApplet extends GameAppletShell {
             MidiPcmStream.logoutAndReload(2, IconButtonPainter.getApplet(118));
           }
           if (var4 == 9) {
-            g.openSupportPage(IconButtonPainter.getApplet(122), -10400);
+            SupportPageHelpers.openSupportPage(IconButtonPainter.getApplet(122), -10400);
           }
           if (10 == var4) {
-            he.field_e.writeOpcode((byte) -68, 17);
+            StatusMessageHelpers.field_e.writeOpcode((byte) -68, 17);
           }
           if (var4 == 11) {
-            mc.reloadPage(30449, IconButtonPainter.getApplet(122));
+            QuickChatInputHelpers.reloadPage(30449, IconButtonPainter.getApplet(122));
           }
           if (var4 == 12) {
-            fk.openUrl(IconButtonPainter.getApplet(116), false, ArchiveProvider.getModalCaption((byte) 121));
+            SoundEffectVoice.openUrl(IconButtonPainter.getApplet(116), false, ArchiveProvider.getModalCaption((byte) 121));
           }
           if (var4 == 13) {
             try {
               if (Battle.field_P == null) {
-                Battle.field_P = new JaggrabDownloader(fi.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                Battle.field_P = new JaggrabDownloader(DecimalCheckHelpers.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (Battle.field_P.poll(-91)) {
                 var11 = Battle.field_P.getResponse(21496);
                 if (var11 == null) {
                   stackIn_70_0 = null;
                   stackIn_71_1 = !(param0);
-                  bc.sendDefaultToggle((String) (stackIn_70_0), stackIn_71_1);
+                  OptionToggleHelpers.sendDefaultToggle((String) (stackIn_70_0), stackIn_71_1);
                 } else {
                   var7 = PatchEnvelopeSet.decodeCp1252String(0, var11.position, (byte) -123, var11.payload);
                   stackIn_66_0 = var7;
                   stackIn_67_1 = !(param0);
-                  bc.sendDefaultToggle(stackIn_66_0, stackIn_67_1);
+                  OptionToggleHelpers.sendDefaultToggle(stackIn_66_0, stackIn_67_1);
                 }
                 Battle.field_P = null;
               }
@@ -275,7 +275,7 @@ abstract class GameApplet extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               DelegatingCanvas.reportError((Throwable) ((Object) var5), "S1", (byte) 20);
               var9 = (String) null;
-              bc.sendDefaultToggle((String) null, true);
+              OptionToggleHelpers.sendDefaultToggle((String) null, true);
               Battle.field_P = null;
             }
           }
@@ -283,7 +283,7 @@ abstract class GameApplet extends GameAppletShell {
             return 118;
           }
           if (15 == var4) {
-            fj.field_j = 10;
+            BitAndSpriteHelpers.field_j = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -306,15 +306,15 @@ abstract class GameApplet extends GameAppletShell {
         if (param0 >= -87) {
           this.field_l = 90;
         }
-        if (ue.isReadyForLobby(122)) {
+        if (BattleStartHelpers.isReadyForLobby(122)) {
           discarded$1 = this.pollLoginResponse(false, false, ProxySocketConnector.field_m != null ? true : false);
         } else {
-          if (ih.field_f >= 10) {
+          if (PointerOriginHelpers.field_f >= 10) {
             if (!TextFieldValidator.isIntroFinished(true)) {
-              wm.advanceIntroTimer((byte) 27);
+              PaddedContainer.advanceIntroTimer((byte) 27);
             } else {
-              if (0 != fj.field_j) {
-                ia.updateRootInputWrapper(-14296, SingleChildContainer.field_y);
+              if (0 != BitAndSpriteHelpers.field_j) {
+                RootInputHelpers.updateRootInputWrapper(-14296, SingleChildContainer.field_y);
               } else {
                 discarded$2 = this.pollLoginResponse(false, false, false);
               }
@@ -327,9 +327,9 @@ abstract class GameApplet extends GameAppletShell {
         if (param0 < 89) {
           this.enableMessageGroup1(-128);
         }
-        cc.field_d[13] = true;
-        cc.field_d[12] = true;
-        cc.field_d[11] = true;
+        AngleHelpers.field_d[13] = true;
+        AngleHelpers.field_d[12] = true;
+        AngleHelpers.field_d[11] = true;
     }
 
     final int attemptReconnect(int param0) {
@@ -343,25 +343,25 @@ abstract class GameApplet extends GameAppletShell {
         if (QuickChatCategoryCache.field_f) {
           return -1;
         }
-        var2 = SingleChildContainer.performLogin(this.field_m, 85, this.field_t, ed.getStatusMessage(-952), true, ConditionalTextValue.getAccountCaption((byte) -112));
+        var2 = SingleChildContainer.performLogin(this.field_m, 85, this.field_t, MainMenuDialog.getStatusMessage(-952), true, ConditionalTextValue.getAccountCaption((byte) -112));
         if (var2 == -1) {
           return -1;
         }
         if (var2 != 0 &&
           1 != var2) {
-          if (!oj.field_h) {
+          if (!LoginMethodHelpers.field_h) {
             this.showErrorPage("reconnect", (byte) -117);
           }
-          fk.requestLogout(-11);
+          SoundEffectVoice.requestLogout(-11);
           if (param0 < 70) {
             this.enableMessageGroup4(92);
           }
-          oa.handleLoginResult(true, var2, MenuButtonPanel.field_E);
+          LoginResultHelpers.handleLoginResult(true, var2, MenuButtonPanel.field_E);
           QuickChatCategoryCache.field_f = true;
-          tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
+          SceneTabStrip.field_Hb = TimeAndInputHelpers.monotonicTimeMillis(-26572) + 15000L;
           return var2;
         }
-        if (fj.field_j != 11) {
+        if (BitAndSpriteHelpers.field_j != 11) {
           return var2;
         }
         if (HuffmanCodec.field_b != 0) {
@@ -391,35 +391,35 @@ abstract class GameApplet extends GameAppletShell {
     }
 
     private final void enableDefaultMessageGroups(boolean param0, int param1) {
-        cc.field_d[7] = true;
-        cc.field_d[17] = true;
+        AngleHelpers.field_d[7] = true;
+        AngleHelpers.field_d[17] = true;
         if (param1 != 51) {
           this.field_q = (String) null;
         }
-        cc.field_d[18] = true;
-        cc.field_d[8] = param0;
-        cc.field_d[16] = true;
-        cc.field_d[3] = true;
-        cc.field_d[0] = true;
+        AngleHelpers.field_d[18] = true;
+        AngleHelpers.field_d[8] = param0;
+        AngleHelpers.field_d[16] = true;
+        AngleHelpers.field_d[3] = true;
+        AngleHelpers.field_d[0] = true;
     }
 
     private final void storeSessionCookie(int param0) {
-        String var2 = qj.readIncomingString(10040319);
+        String var2 = TimeAndInputHelpers.readIncomingString(10040319);
         if (param0 != -18075) {
           return;
         }
-        um.setSessionCookie(var2, IconButtonPainter.getApplet(105), param0 ^ -29675);
+        SessionCookieHelpers.setSessionCookie(var2, IconButtonPainter.getApplet(105), param0 ^ -29675);
     }
 
     final void dispatchServerMessage(int param0) {
         boolean stackIn_31_0 = false;
         int var2;
-        jg var3;
+        ChatLine var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = on.field_g;
+        var2 = LoginMessageTable.field_g;
         if (var2 < 64 &&
-          cc.field_d[var2]) {
+          AngleHelpers.field_d[var2]) {
           if (param0 > -3) {
             this.updateJs5Connection(true, true);
           }
@@ -429,13 +429,13 @@ abstract class GameApplet extends GameAppletShell {
           if (var2 != 1) {
             if (var2 != 2) {
               if (var2 == 3) {
-                fk.readAchievementUpdate((byte) -20);
+                SoundEffectVoice.readAchievementUpdate((byte) -20);
               } else {
                 if (4 == var2) {
-                  om.readLobbyRatings((byte) 29);
+                  CapsuleBar.readLobbyRatings((byte) 29);
                 } else {
                   if (var2 == 5) {
-                    rb.readAchievementList(-54);
+                    TimedMessage.readAchievementList(-54);
                   } else {
                     if (6 == var2) {
                       IntrusiveNode.readLobbyListUpdate(-112);
@@ -444,7 +444,7 @@ abstract class GameApplet extends GameAppletShell {
                         this.storeSessionCookie(-18075);
                       } else {
                         if (var2 == 8) {
-                          qe.handleReflectionCheck(fi.field_d, fj.field_h, UiContainer.field_z, 0);
+                          QueuedPacket.handleReflectionCheck(DecimalCheckHelpers.field_d, BitAndSpriteHelpers.field_h, UiContainer.field_z, 0);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -493,7 +493,7 @@ abstract class GameApplet extends GameAppletShell {
         if (param0 > -17) {
           field_D = (ResourceArchive) null;
         }
-        cc.field_d[2] = true;
+        AngleHelpers.field_d[2] = true;
     }
 
     final void updateJs5Connection(boolean param0, boolean param1) {
@@ -511,33 +511,33 @@ abstract class GameApplet extends GameAppletShell {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (ResizableModalPanel.field_Y != null) {
           if (ProxySocketConnector.field_m == null) {
-            var6 = qe.getTopContainer(-4);
+            var6 = QueuedPacket.getTopContainer(-4);
             var4 = var6.getSize();
             ResizableModalPanel.field_Y.setRequestedSize(var4.height, var4.width, true);
           }
           ResizableModalPanel.field_Y.update((byte) 93);
         }
         BevelBoxPainter.updateKeyRepeat(24);
-        vm.pollMouseInput(0);
+        MouseStateHelpers.pollMouseInput(0);
         if (!IntrusiveDequeCursor.canShowAdvert(-15576) &&
-          fj.field_j != 11) {
-          i.openPendingDialog(0);
+          BitAndSpriteHelpers.field_j != 11) {
+          ChatPanel.openPendingDialog(0);
         }
         if (null != StrongCacheEntry.field_w) {
           SingleChildContainer.field_y = StrongCacheEntry.field_w.pollRotation(-1);
         }
-        if (td.isConnectedToLobby(-97)) {
+        if (ThreeButtonPanel.isConnectedToLobby(-97)) {
           var3 = LinkButtonPainter.getFramesPerSecond(-2) * 1200;
           if (this.field_A ||
             !(SectorCacheStore.getTickCount(1497225488) <= var3) &&
-            !(ao.getFrameCounter(true) <= var3)) {
+            !(LobbyLayoutHelpers.getFrameCounter(true) <= var3)) {
             this.field_A = false;
             ProxySocketConnector.closeActiveConnection(false);
-            fk.requestLogout(-11);
-            oa.handleLoginResult(true, 2, TextFieldValidator.field_j);
-            hm.noOperation(0);
+            SoundEffectVoice.requestLogout(-11);
+            LoginResultHelpers.handleLoginResult(true, 2, TextFieldValidator.field_j);
+            Cp1252Helpers.noOperation(0);
             QuickChatCategoryCache.field_f = true;
-            tn.field_Hb = 15000L + qj.monotonicTimeMillis(-26572);
+            SceneTabStrip.field_Hb = 15000L + TimeAndInputHelpers.monotonicTimeMillis(-26572);
           }
         }
         if (HuffmanCodec.field_b == -1 ||
@@ -547,18 +547,18 @@ abstract class GameApplet extends GameAppletShell {
           HuffmanCodec.field_b = CheckboxPainter.getConnectionStage((byte) 116);
           if (var3Lifetime1 != 0 &&
             HuffmanCodec.field_b == 0 &&
-            11 == fj.field_j &&
+            11 == BitAndSpriteHelpers.field_j &&
             !ProxySocketConnector.canStartGame((byte) -44)) {
             ArcanistsMulti.updateNoticeText((byte) 48);
           }
           if (HuffmanCodec.field_b != -1 &&
             HuffmanCodec.field_b != 0) {
-            tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
+            SceneTabStrip.field_Hb = TimeAndInputHelpers.monotonicTimeMillis(-26572) + 15000L;
           }
         }
         if (HuffmanCodec.field_b != -1 &&
           HuffmanCodec.field_b != 0) {
-          if (ih.field_f < 10) {
+          if (PointerOriginHelpers.field_f < 10) {
             if (3 == HuffmanCodec.field_b) {
               this.showErrorPage("js5crc", (byte) -128);
             } else {
@@ -577,24 +577,24 @@ abstract class GameApplet extends GameAppletShell {
               }
             }
           } else {
-            if (fj.field_j >= 10) {
-              fk.requestLogout(-11);
+            if (BitAndSpriteHelpers.field_j >= 10) {
+              SoundEffectVoice.requestLogout(-11);
               if (HuffmanCodec.field_b != 3) {
                 if (HuffmanCodec.field_b == 4) {
-                  oa.handleLoginResult(true, 256, BattleScreen.field_N);
+                  LoginResultHelpers.handleLoginResult(true, 256, BattleScreen.field_N);
                 } else {
                   if (HuffmanCodec.field_b == 2) {
-                    oa.handleLoginResult(true, 256, BevelTextPainter.field_p);
+                    LoginResultHelpers.handleLoginResult(true, 256, BevelTextPainter.field_p);
                   } else {
                     if (HuffmanCodec.field_b != 5) {
-                      oa.handleLoginResult(true, 256, dd.field_a);
+                      LoginResultHelpers.handleLoginResult(true, 256, PasswordCheckHelpers.field_a);
                     } else {
-                      oa.handleLoginResult(true, 5, IndexedSpriteState.field_d);
+                      LoginResultHelpers.handleLoginResult(true, 5, IndexedSpriteState.field_d);
                     }
                   }
                 }
               } else {
-                oa.handleLoginResult(param0, 256, JaggrabDownloader.field_e);
+                LoginResultHelpers.handleLoginResult(param0, 256, JaggrabDownloader.field_e);
               }
               QuickChatCategoryCache.field_f = true;
             }
@@ -603,7 +603,7 @@ abstract class GameApplet extends GameAppletShell {
         if ((HuffmanCodec.field_b != -1 &&
           HuffmanCodec.field_b != 0 ||
           ProxySocketConnector.canStartGame((byte) -44)) &&
-          qj.monotonicTimeMillis(-26572) >= tn.field_Hb) {
+          TimeAndInputHelpers.monotonicTimeMillis(-26572) >= SceneTabStrip.field_Hb) {
           QuickChatCategoryCache.field_f = false;
           if (HuffmanCodec.field_b != -1 &&
             0 != HuffmanCodec.field_b) {
@@ -613,113 +613,113 @@ abstract class GameApplet extends GameAppletShell {
         }
         if (HuffmanCodec.field_b == 0 &&
           !ProxySocketConnector.canStartGame((byte) -44)) {
-          ii.field_f = false;
+          IconHighlightPainter.field_f = false;
         }
-        if (ih.field_f == 0 &&
+        if (PointerOriginHelpers.field_f == 0 &&
           FrameClock.isMessageShowing(0)) {
-          ih.field_f = 1;
+          PointerOriginHelpers.field_f = 1;
         }
         if (!param0) {
           field_p = (int[]) null;
         }
-        if (1 == ih.field_f) {
+        if (1 == PointerOriginHelpers.field_f) {
           if (LinkButtonPainter.field_f != 0) {
-            lh.field_g = BufferedRandomAccessFile.openArchive(ce.field_n, (byte) 65);
+            ValueListPainter.field_g = BufferedRandomAccessFile.openArchive(GameSelectionHelpers.field_n, (byte) 65);
           }
-          da.field_b = ViewportController.openArchive((byte) -93, false, true, cj.field_d, 1);
-          DiskCacheRequest.field_C = ViewportController.openArchive((byte) -93, false, true, dm.field_H, 1);
-          ho.field_g = ViewportController.openArchive((byte) -93, false, true, HuffmanCodec.field_g, 1);
+          MusicAndClipHelpers.field_b = ViewportController.openArchive((byte) -93, false, true, AccountCreationHelpers.field_d, 1);
+          DiskCacheRequest.field_C = ViewportController.openArchive((byte) -93, false, true, AlphaContainer.field_H, 1);
+          ServerMessage.field_g = ViewportController.openArchive((byte) -93, false, true, HuffmanCodec.field_g, 1);
           field_D = DiskCacheRequest.field_C;
-          ih.field_f = 2;
-          LoadingTracker.field_a = da.field_b;
+          PointerOriginHelpers.field_f = 2;
+          LoadingTracker.field_a = MusicAndClipHelpers.field_b;
         }
-        if (ih.field_f == 2) {
-          if (lh.field_g != null &&
-            lh.field_g.ensureIndex(-10923)) {
-            if (!lh.field_g.hasGroupName(true, "")) {
-              lh.field_g = null;
+        if (PointerOriginHelpers.field_f == 2) {
+          if (ValueListPainter.field_g != null &&
+            ValueListPainter.field_g.ensureIndex(-10923)) {
+            if (!ValueListPainter.field_g.hasGroupName(true, "")) {
+              ValueListPainter.field_g = null;
             } else {
-              if (lh.field_g.isGroupAvailableByName("", -24417)) {
-                on.initializeLoginMessages((byte) -84, lh.field_g);
-                lh.field_g = null;
+              if (ValueListPainter.field_g.isGroupAvailableByName("", -24417)) {
+                LoginMessageTable.initializeLoginMessages((byte) -84, ValueListPainter.field_g);
+                ValueListPainter.field_g = null;
                 Checkbox.resetTimers(2);
               }
             }
           }
-          if (null == lh.field_g) {
-            ih.field_f = 3;
+          if (null == ValueListPainter.field_g) {
+            PointerOriginHelpers.field_f = 3;
           }
         }
-        if (ih.field_f == 3 &&
-          IntrusiveDeque.areCommonUiResourcesReady(ho.field_g, param0, DiskCacheRequest.field_C, da.field_b) &&
-          ValidationState.areAllGroupsReady(18306, ho.field_g)) {
-          rk.clearCursorSprites(-73);
-          cj.composeAgreementText(-128);
+        if (PointerOriginHelpers.field_f == 3 &&
+          IntrusiveDeque.areCommonUiResourcesReady(ServerMessage.field_g, param0, DiskCacheRequest.field_C, MusicAndClipHelpers.field_b) &&
+          ValidationState.areAllGroupsReady(18306, ServerMessage.field_g)) {
+          GradientBarButton.clearCursorSprites(-73);
+          AccountCreationHelpers.composeAgreementText(-128);
           ArrayWidgetContainer.field_C = JaggrabDownloader.field_l;
-          lh.field_n = false;
-          th.initializeUi(da.field_b, ho.field_g, DiskCacheRequest.field_C, (byte) -40, Js5Transport.field_d);
-          if (af.field_Ib ||
+          ValueListPainter.field_n = false;
+          NameTable.initializeUi(MusicAndClipHelpers.field_b, ServerMessage.field_g, DiskCacheRequest.field_C, (byte) -40, Js5Transport.field_d);
+          if (PairedSceneWidget.field_Ib ||
             null != Bzip2State.field_y) {
-            stackIn_101_0 = !(af.field_Ib);
+            stackIn_101_0 = !(PairedSceneWidget.field_Ib);
             stackIn_103_1 = Bzip2State.field_y;
-            stackIn_104_2 = !(af.field_Ib);
+            stackIn_104_2 = !(PairedSceneWidget.field_Ib);
             BevelBoxPainter.openLoginPanel(stackIn_101_0, stackIn_103_1, stackIn_104_2, false);
           }
-          if (wa.field_Nb) {
+          if (PlayerInfoPanel.field_Nb) {
             QuickChatCategory.showLoadingWithMessage(4);
           }
           if (null == Js5ArchiveManager.field_k) {
             Js5ArchiveManager.field_k = AlternateUsernameCredentials.getEffectMixer(false);
-            mb.field_P = ValidationHelpWidget.getSelectedIndex((byte) -34);
+            DropdownItemList.field_P = ValidationHelpWidget.getSelectedIndex((byte) -34);
           }
-          IsaacCipher.initializeIntro(mb.field_P, Js5ArchiveManager.field_k, ho.field_g, 121);
-          ho.field_g = null;
+          IsaacCipher.initializeIntro(DropdownItemList.field_P, Js5ArchiveManager.field_k, ServerMessage.field_g, 121);
+          ServerMessage.field_g = null;
           DiskCacheRequest.field_C = null;
-          da.field_b = null;
+          MusicAndClipHelpers.field_b = null;
           ArcanistsMulti.readUsernameParameter((java.applet.Applet) (this), -1);
           Checkbox.resetTimers(2);
-          ih.field_f = 10;
+          PointerOriginHelpers.field_f = 10;
         }
-        if (ih.field_f == 10) {
+        if (PointerOriginHelpers.field_f == 10) {
           if (LinkButtonPainter.field_f != 0) {
-            va.field_c = BufferedRandomAccessFile.openArchive(sa.field_Bb, (byte) 94);
+            GradientPanelPainter.field_c = BufferedRandomAccessFile.openArchive(ConfirmScene.field_Bb, (byte) 94);
           }
-          ih.field_f = 11;
+          PointerOriginHelpers.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ih.field_f == 11) {
-          if (null != va.field_c && (!va.field_c.ensureIndex(-10923) ||
-            !va.field_c.areAllGroupsAvailable(-49))) {
-            rb.setCaptionAndScale(qe.formatLoadingProgress(AlternateUsernameCredentials.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
+        if (PointerOriginHelpers.field_f == 11) {
+          if (null != GradientPanelPainter.field_c && (!GradientPanelPainter.field_c.ensureIndex(-10923) ||
+            !GradientPanelPainter.field_c.areAllGroupsAvailable(-49))) {
+            TimedMessage.setCaptionAndScale(QueuedPacket.formatLoadingProgress(AlternateUsernameCredentials.field_o, 87, GradientPanelPainter.field_c, IntrusiveDeque.field_f), false, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
-            ja.field_y = true;
-            ih.field_f = 12;
+            ConfirmedNameValidator.field_y = true;
+            PointerOriginHelpers.field_f = 12;
           }
         }
-        if (ih.field_f == 12 &&
-          !ja.field_y) {
-          ih.field_f = 13;
+        if (PointerOriginHelpers.field_f == 12 &&
+          !ConfirmedNameValidator.field_y) {
+          PointerOriginHelpers.field_f = 13;
         }
-        if (ih.field_f == 13) {
+        if (PointerOriginHelpers.field_f == 13) {
           var3Lifetime2 = 1;
-          if (pm.field_h != null) {
-            stackIn_133_0 = (!pm.field_h.advanceTasks(93)) ? 0 : 1;
+          if (EmailValidationHelpers.field_h != null) {
+            stackIn_133_0 = (!EmailValidationHelpers.field_h.advanceTasks(93)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            rb.setCaptionAndScale(pm.field_h.field_j, false, pm.field_h.field_b);
+            TimedMessage.setCaptionAndScale(EmailValidationHelpers.field_h.field_j, false, EmailValidationHelpers.field_h.field_b);
           }
           if (var3Lifetime2 != 0) {
-            ih.field_f = 20;
+            PointerOriginHelpers.field_f = 20;
           }
         }
         if (!param1 &&
           TextWidgetPainter.field_j) {
-          UiComponent.attachInputListeners(on.field_c, (byte) 117);
+          UiComponent.attachInputListeners(LoginMessageTable.field_c, (byte) 117);
           this.detachCanvas(-11232);
-          IntKeyLookup.attachInputHandlers(on.field_c, (byte) 125);
+          IntKeyLookup.attachInputHandlers(LoginMessageTable.field_c, (byte) 125);
         }
-        if (cc.field_d[8]) {
+        if (AngleHelpers.field_d[8]) {
           UsernameCredentials.sendPendingDateRequests(-99);
         }
     }
@@ -728,7 +728,7 @@ abstract class GameApplet extends GameAppletShell {
         int discarded$0 = 0;
         int var2 = UiContainer.field_z.readUnsignedByte((byte) 97);
         int var3 = (1 & var2) != 0 ? 1 : 0;
-        int var4 = -1 + fj.field_h;
+        int var4 = -1 + BitAndSpriteHelpers.field_h;
         byte[] var5 = new byte[var4];
         if (param0) {
           discarded$0 = this.pollLoginResponse(false, true, false);
@@ -764,7 +764,7 @@ abstract class GameApplet extends GameAppletShell {
         if (param0 != 6) {
           this.updateConnection(-83);
         }
-        cc.field_d[5] = true;
+        AngleHelpers.field_d[5] = true;
     }
 
     protected GameApplet() {

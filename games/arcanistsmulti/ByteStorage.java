@@ -8,7 +8,7 @@ abstract class ByteStorage {
     static boolean field_a;
     static Sprite field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -7) {
           field_e = null;
           field_d = null;
@@ -30,7 +30,7 @@ abstract class ByteStorage {
             return true;
           }
           if (param0 != -256) {
-            ByteStorage.a((byte) 112);
+            ByteStorage.releaseStatics((byte) 112);
           }
           if (param1 != 8364 &&
             param1 != 338 &&
@@ -65,13 +65,13 @@ abstract class ByteStorage {
             }
             return true;
           }
-          ByteStorage.a((byte) 112);
+          ByteStorage.releaseStatics((byte) 112);
         } else {
           if (param1 <= 255) {
             return true;
           }
           if (param0 != -256) {
-            ByteStorage.a((byte) 112);
+            ByteStorage.releaseStatics((byte) 112);
           }
         }
         if (param1 == 8364) {
@@ -92,43 +92,43 @@ abstract class ByteStorage {
         return false;
     }
 
-    final static void a(int param0, int param1) {
-        if (nm.field_h == -1) {
-          nm.field_h = param1;
+    final static void sendOptionSelection(int param0, int param1) {
+        if (UrlHelpers.field_h == -1) {
+          UrlHelpers.field_h = param1;
           MenuScreen.getSessionFlag((byte) 112);
-          he.field_e.writeOpcode((byte) -76, 66);
-          he.field_e.writeByte(param1, (byte) -78);
-          if (param0 > qf.field_d) {
+          StatusMessageHelpers.field_e.writeOpcode((byte) -76, 66);
+          StatusMessageHelpers.field_e.writeByte(param1, (byte) -78);
+          if (param0 > MembershipGlobals.field_d) {
             return;
           }
-          if (GridContainer.field_P + ta.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
+          if (GridContainer.field_P + LoadingTask.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
             return;
           }
-          if ((cb.field_e & 1L << param1) == 0L) {
-            GridContainer.field_P = GridContainer.field_P + ta.classifyLowBits(true, param1);
-            nm.field_h = -1;
-            cb.field_e = cb.field_e | 1L << param1;
+          if ((GameListSortHelpers.field_e & 1L << param1) == 0L) {
+            GridContainer.field_P = GridContainer.field_P + LoadingTask.classifyLowBits(true, param1);
+            UrlHelpers.field_h = -1;
+            GameListSortHelpers.field_e = GameListSortHelpers.field_e | 1L << param1;
             return;
           }
           return;
         }
-        if (param1 != nm.field_h) {
+        if (param1 != UrlHelpers.field_h) {
           return;
         }
-        nm.field_h = param1;
+        UrlHelpers.field_h = param1;
         MenuScreen.getSessionFlag((byte) 112);
-        he.field_e.writeOpcode((byte) -76, 66);
-        he.field_e.writeByte(param1, (byte) -78);
-        if (param0 > qf.field_d) {
+        StatusMessageHelpers.field_e.writeOpcode((byte) -76, 66);
+        StatusMessageHelpers.field_e.writeByte(param1, (byte) -78);
+        if (param0 > MembershipGlobals.field_d) {
           return;
         }
-        if (GridContainer.field_P + ta.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
+        if (GridContainer.field_P + LoadingTask.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
           return;
         }
-        if ((cb.field_e & 1L << param1) == 0L) {
-          GridContainer.field_P = GridContainer.field_P + ta.classifyLowBits(true, param1);
-          nm.field_h = -1;
-          cb.field_e = cb.field_e | 1L << param1;
+        if ((GameListSortHelpers.field_e & 1L << param1) == 0L) {
+          GridContainer.field_P = GridContainer.field_P + LoadingTask.classifyLowBits(true, param1);
+          UrlHelpers.field_h = -1;
+          GameListSortHelpers.field_e = GameListSortHelpers.field_e | 1L << param1;
           return;
         }
     }
@@ -139,7 +139,7 @@ abstract class ByteStorage {
         if (var2 != null) {
           var2.drawLayersAndTooltip(IntKeyLookup.field_g.field_V, true, IntKeyLookup.field_g.field_nb);
           if (param1 > -11) {
-            ByteStorage.a(97, -65);
+            ByteStorage.sendOptionSelection(97, -65);
             return;
           }
           return;
@@ -147,7 +147,7 @@ abstract class ByteStorage {
         if (param1 <= -11) {
           return;
         }
-        ByteStorage.a(97, -65);
+        ByteStorage.sendOptionSelection(97, -65);
     }
 
     abstract byte[] get(byte param0);

@@ -34,7 +34,7 @@ final class SocialListEntry extends SceneWidget {
           var5 = (CharSequence) ((Object) this.field_Tb);
           Js5ArchiveManager.normalizeNameForLookup(var5, -13);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class SocialListEntry extends SceneWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -133,9 +133,9 @@ final class SocialListEntry extends SceneWidget {
             var8 = EmailLoginCredentials.field_e[9] >> 2;
             var9 = EmailLoginCredentials.field_e[10] >> 2;
             var10_int = EmailLoginCredentials.field_e[11] >> 2;
-            var11 = var9 * tn.field_Gb[4] + (var8 * tn.field_Gb[3] + tn.field_Gb[5] * var10_int) >> 14;
-            var12 = var10_int * tn.field_Gb[8] + tn.field_Gb[6] * var8 + tn.field_Gb[7] * var9 >> 14;
-            var13 = var10_int * tn.field_Gb[11] + var8 * tn.field_Gb[9] + tn.field_Gb[10] * var9 >> 14;
+            var11 = var9 * SceneTabStrip.field_Gb[4] + (var8 * SceneTabStrip.field_Gb[3] + SceneTabStrip.field_Gb[5] * var10_int) >> 14;
+            var12 = var10_int * SceneTabStrip.field_Gb[8] + SceneTabStrip.field_Gb[6] * var8 + SceneTabStrip.field_Gb[7] * var9 >> 14;
+            var13 = var10_int * SceneTabStrip.field_Gb[11] + var8 * SceneTabStrip.field_Gb[9] + SceneTabStrip.field_Gb[10] * var9 >> 14;
             var2[var3] = var13 * var7 + (var6 * var12 + var11 * var5) >> 16;
           }
           var3Lifetime1 = EmailLoginCredentials.field_e[9] >> 8;
@@ -143,7 +143,7 @@ final class SocialListEntry extends SceneWidget {
           var5Lifetime1 = EmailLoginCredentials.field_e[11] >> 8;
           var6Lifetime1 = SoundCache.field_a << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = of.sine(param0 - 252566934, var6Lifetime1) >> 8;
+          var8Lifetime1 = GradientBarPainter.sine(param0 - 252566934, var6Lifetime1) >> 8;
           var9Lifetime1 = BevelBoxPainter.cosine(var6Lifetime1, -108) >> 8;
           if (EmailLoginCredentials.field_g != -1 &&
             MenuButtonPanel.field_I != -1) {
@@ -176,16 +176,16 @@ final class SocialListEntry extends SceneWidget {
             var17 = QuickChatCategory.field_u[var16];
             ValidationHelpWidget.computeIntroShake(var16, param0 ^ 252570192);
             for (var18 = 0; var18 < 3; var18++) {
-              tn.field_Gb[var18] = tn.field_Gb[var18] + QuickChatPhraseCache.field_g[var15][var18];
+              SceneTabStrip.field_Gb[var18] = SceneTabStrip.field_Gb[var18] + QuickChatPhraseCache.field_g[var15][var18];
             }
-            SceneWidgetNode.projectModel((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
-            cj.drawModel(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
+            SceneWidgetNode.projectModel((byte) -61, EmailLoginCredentials.field_e, SceneTabStrip.field_Gb, true, var17, false, false);
+            AccountCreationHelpers.drawModel(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class SocialListEntry extends SceneWidget {
           var6 = (CharSequence) ((Object) this.field_Tb);
           Js5ArchiveManager.normalizeNameForLookup(var6, -13);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class SocialListEntry extends SceneWidget {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class SocialListEntry extends SceneWidget {
           }
           var4_int = param2.getGroupProgressByName(param3, -79);
           var5 = param2.getFileId(param0, (byte) 54, var4_int);
-          stackIn_3_0 = hj.loadFirstSprite(var4_int, param2, var5, (byte) -10);
+          stackIn_3_0 = ClientIOException.loadFirstSprite(var4_int, param2, var5, (byte) -10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -302,7 +302,7 @@ final class SocialListEntry extends SceneWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -26,8 +26,8 @@ abstract class LoginCredentials {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= bm.field_f) {
-            if (param1.length() > dd.field_d) {
+            param1.length() >= TutorialCaptionGlobals.field_f) {
+            if (param1.length() > PasswordCheckHelpers.field_d) {
               return true;
             }
             if (param0 >= -50) {
@@ -46,7 +46,7 @@ abstract class LoginCredentials {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

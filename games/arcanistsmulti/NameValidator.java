@@ -24,7 +24,7 @@ final class NameValidator extends TextFieldValidator {
     }
 
     final ValidationState validateText(String param0, int param1) {
-        ho var3 = null;
+        ServerMessage var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -38,11 +38,11 @@ final class NameValidator extends TextFieldValidator {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!DebouncedValidator.isValidName((byte) 127, var4)) {
-            stackIn_2_0 = ra.field_k;
+            stackIn_2_0 = DateHelpers.field_k;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_r)) {
-            var3 = r.matchPendingMessage(param0, 256);
+            var3 = OverlayHelpers.matchPendingMessage(param0, 256);
             if (var3 != null &&
               null == var3.field_e) {
               this.field_r = param0;
@@ -54,7 +54,7 @@ final class NameValidator extends TextFieldValidator {
           }
           var3_int = 0 % ((param1 + 50) / 36);
           if (!this.field_w) {
-            stackIn_13_0 = ra.field_k;
+            stackIn_13_0 = DateHelpers.field_k;
           } else {
             stackIn_13_0 = CacheEntry.field_s;
           }
@@ -69,7 +69,7 @@ final class NameValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,17 +84,17 @@ final class NameValidator extends TextFieldValidator {
         if (param0 > -52) {
           return;
         }
-        if (ce.field_m.field_m != TextLine.field_k) {
-          Scrollbar.field_N = Scrollbar.field_N + (ce.field_m.field_m - TextLine.field_k);
-          TextLine.field_k = ce.field_m.field_m;
+        if (GameSelectionHelpers.field_m.field_m != TextLine.field_k) {
+          Scrollbar.field_N = Scrollbar.field_N + (GameSelectionHelpers.field_m.field_m - TextLine.field_k);
+          TextLine.field_k = GameSelectionHelpers.field_m.field_m;
         }
-        if (!(jo.field_e <= 0)) {
-          jo.field_e = jo.field_e - 1;
+        if (!(BitHelpers.field_e <= 0)) {
+          BitHelpers.field_e = BitHelpers.field_e - 1;
         }
-        if (0 >= jo.field_e) {
+        if (0 >= BitHelpers.field_e) {
           return;
         }
-        ed.animateOverlayPosition(120);
+        MainMenuDialog.animateOverlayPosition(120);
     }
 
     static int bitAnd(int param0, int param1) {
@@ -109,7 +109,7 @@ final class NameValidator extends TextFieldValidator {
     final String messageForText(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        ho var4 = null;
+        ServerMessage var4 = null;
         CharSequence var5 = null;
         String stackIn_5_0 = null;
         Object stackIn_12_0 = null;
@@ -129,7 +129,7 @@ final class NameValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_r)) {
-            var4 = r.matchPendingMessage(param0, 256);
+            var4 = OverlayHelpers.matchPendingMessage(param0, 256);
             if (var4 == null) {
               return null;
             }
@@ -143,7 +143,7 @@ final class NameValidator extends TextFieldValidator {
           if (this.field_w) {
             return PacketBuffer.field_i;
           }
-          stackIn_17_0 = ec.field_e;
+          stackIn_17_0 = SpriteFrame.field_e;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class NameValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

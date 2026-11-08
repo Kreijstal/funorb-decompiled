@@ -187,7 +187,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class MusicCrossfadeStream extends PcmStream {
             MusicCrossfadeStream.layoutZoomedLobby(-10, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -414,32 +414,32 @@ final class MusicCrossfadeStream extends PcmStream {
         var14 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           SecondaryNodeDequeIterator.field_g = SoftwareRasterizer.field_e;
-          ri.field_a = SoftwareRasterizer.field_j;
+          RasterSetupHelpers.field_a = SoftwareRasterizer.field_j;
           stackIn_3_0 = 16;
           if (!param1) {
             stackIn_4_1 = QuickChatCategory.field_y;
           } else {
-            stackIn_4_1 = sm.field_a;
+            stackIn_4_1 = AudioAndCookieHelpers.field_a;
           }
           TextHotspotWidget.positionZoomedPanels(stackIn_3_0, stackIn_4_1);
-          tn.field_Ob.layoutChatColumns(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
-          aj.field_d.setBounds(Checkbox.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
-          stackIn_6_0 = qc.field_d;
+          SceneTabStrip.field_Ob.layoutChatColumns(0, 0, -42 + BufferedMessage.field_m.field_I, BufferedMessage.field_m.field_x, 5);
+          GameOptionType.field_d.setBounds(Checkbox.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+          stackIn_6_0 = ViewportSetupHelpers.field_d;
           stackIn_6_1 = Checkbox.field_M.field_x;
-          if (!fc.field_a) {
+          if (!SpriteDecodeHelpers.field_a) {
             stackIn_7_2 = 0;
           } else {
             stackIn_7_2 = CacheEntry.field_p + 2 + 42;
           }
           ((SceneWidget) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
           MembershipOfferScreen.field_q.setBounds(CacheEntry.field_p + 42, -40 + (Checkbox.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          lf.field_b.setBoundsAndLayout(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, Checkbox.field_M.field_x, false, 0, Checkbox.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
+          ScreenTransitionHelpers.field_b.setBoundsAndLayout(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, Checkbox.field_M.field_x, false, 0, Checkbox.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
-          IntrusiveNodeHashTable.field_o.setBounds(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
+          IntrusiveNodeHashTable.field_o.setBounds(BufferedMessage.field_m.field_x, 0, -40 + BufferedMessage.field_m.field_I, 40, (byte) -120);
           IconTextSceneWidget.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
           SpellProjectile.field_m.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 30, -42 + ReflectionCheckRequest.field_h.field_I - 30, (byte) -120);
-          var3 = 3 + vf.field_l;
-          if (ao.field_h.length < 2) {
+          var3 = 3 + RawDataNode.field_l;
+          if (LobbyLayoutHelpers.field_h.length < 2) {
             var3--;
           }
           if (param1) {
@@ -455,9 +455,9 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           BevelTextPainter.field_s.setBounds(-5 + SpellProjectile.field_m.field_x - 5, 5, 5, var5, (byte) -120);
           var6 = var5 + 7;
-          for (var7 = 0; var7 < 4 + vf.field_l; var7++) {
+          for (var7 = 0; var7 < 4 + RawDataNode.field_l; var7++) {
             if ((var7 != 1 ||
-              !(ao.field_h.length < 2)) && (var7 != 3 ||
+              !(LobbyLayoutHelpers.field_h.length < 2)) && (var7 != 3 ||
               !(BattleScreen.field_q <= 1))) {
               if (!param1 &&
                 3 == var7) {
@@ -539,15 +539,15 @@ final class MusicCrossfadeStream extends PcmStream {
           IconTextSceneWidget.field_Fb.setBounds(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
           MembershipOfferScreen.field_t.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 0, 24, (byte) -120);
           Js5ArchiveManager.field_g.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 24, -24 + IconTextSceneWidget.field_Fb.field_I, (byte) -120);
-          Js5ArchiveManager.field_g.field_v = of.createGradientFrame(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
+          Js5ArchiveManager.field_g.field_v = GradientBarPainter.createGradientFrame(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
           StatefulTextPainter.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
-          gj.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
-          ie.layoutTopBar((byte) 112);
+          ScreenSwitchHelpers.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
+          StatusDialog.layoutTopBar((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "io.G(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "io.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -570,22 +570,22 @@ final class MusicCrossfadeStream extends PcmStream {
             if (param4 != -6885) {
               field_u = (String) null;
             }
-            var9 = on.field_c.getGraphics();
+            var9 = LoginMessageTable.field_c.getGraphics();
             if (null == SpriteState.field_m) {
               SpriteState.field_m = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, MusicPatchNode.field_r, co.field_c);
+              var9.fillRect(0, 0, MusicPatchNode.field_r, BattleResetHelpers.field_c);
             }
             if (param0 == null) {
               param0 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == ik.field_e) {
-                ik.field_e = on.field_c.createImage(304, 34);
+              if (null == LobbyBuilderHelpers.field_e) {
+                LobbyBuilderHelpers.field_e = LoginMessageTable.field_c.createImage(304, 34);
               }
-              var10 = ik.field_e.getGraphics();
+              var10 = LobbyBuilderHelpers.field_e.getGraphics();
               var10.setColor(param0);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param3, 30);
@@ -595,12 +595,12 @@ final class MusicCrossfadeStream extends PcmStream {
               var10.setFont(SpriteState.field_m);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(param1.length() * 6) + 304) / 2, 22);
-              var9.drawImage(ik.field_e, MusicPatchNode.field_r / 2 - 152, co.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(LobbyBuilderHelpers.field_e, MusicPatchNode.field_r / 2 - 152, BattleResetHelpers.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + MusicPatchNode.field_r / 2;
-              var8 = -18 + co.field_c / 2;
+              var8 = -18 + BattleResetHelpers.field_c / 2;
               var9.setColor(param0);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, param3 * 3, 30);
@@ -614,12 +614,12 @@ final class MusicCrossfadeStream extends PcmStream {
             if (DelegatingCanvas.field_a != null) {
               var9.setFont(SpriteState.field_m);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(DelegatingCanvas.field_a, MusicPatchNode.field_r / 2 - 6 * DelegatingCanvas.field_a.length() / 2, -26 + co.field_c / 2);
+              var9.drawString(DelegatingCanvas.field_a, MusicPatchNode.field_r / 2 - 6 * DelegatingCanvas.field_a.length() / 2, -26 + BattleResetHelpers.field_c / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            on.field_c.repaint();
+            LoginMessageTable.field_c.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -638,7 +638,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -666,9 +666,9 @@ final class MusicCrossfadeStream extends PcmStream {
             }
           }
           var2_intLifetime1 = -44 % ((-45 - param1) / 34);
-          vf.field_g.reset(true, 0, false, TextFieldValidator.unsupportedLookup(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
+          RawDataNode.field_g.reset(true, 0, false, TextFieldValidator.unsupportedLookup(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
         }
     }
 

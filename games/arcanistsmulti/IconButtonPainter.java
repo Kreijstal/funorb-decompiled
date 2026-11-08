@@ -8,7 +8,7 @@ final class IconButtonPainter extends TextWidgetPainter {
     static String field_s;
 
     final static void resetNameValidation(int param0) {
-        mn.restoreSavedLayout(98);
+        MatchingFieldValidator.restoreSavedLayout(98);
         if (param0 != 16777215) {
           field_q = (String) null;
         }
@@ -87,7 +87,7 @@ final class IconButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -106,10 +106,10 @@ final class IconButtonPainter extends TextWidgetPainter {
 
     IconButtonPainter(IndexedSprite[] param0) {
         try {
-          this.field_g = ia.field_c;
+          this.field_g = RootInputHelpers.field_c;
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

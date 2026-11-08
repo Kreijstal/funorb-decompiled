@@ -98,9 +98,9 @@ abstract class DebouncedValidator implements ValidationProvider {
                 return false;
               }
               NodeHashTable.field_m = NodeHashTable.field_m + (var10 - (-var11 + var17) << 1);
-              ce.field_k = ce.field_k + (-var16 + var12 + var13 << 1);
+              GameSelectionHelpers.field_k = GameSelectionHelpers.field_k + (-var16 + var12 + var13 << 1);
               if (var21[var14] == -1) {
-                jo.field_b = true;
+                BitHelpers.field_b = true;
               }
               return true;
             }
@@ -116,7 +116,7 @@ abstract class DebouncedValidator implements ValidationProvider {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ abstract class DebouncedValidator implements ValidationProvider {
         if (this.isEmpty((byte) -90)) {
           return null;
         }
-        if (qj.monotonicTimeMillis(-26572) >= 350L + this.field_e) {
+        if (TimeAndInputHelpers.monotonicTimeMillis(-26572) >= 350L + this.field_e) {
           return this.computeMessage(true);
         }
         return null;
@@ -136,10 +136,10 @@ abstract class DebouncedValidator implements ValidationProvider {
     public final void restartDebounce(int param0) {
         if (param0 != -17444) {
           DebouncedValidator.logMaxMemory(false);
-          this.field_e = qj.monotonicTimeMillis(-26572);
+          this.field_e = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           return;
         }
-        this.field_e = qj.monotonicTimeMillis(-26572);
+        this.field_e = TimeAndInputHelpers.monotonicTimeMillis(-26572);
     }
 
     final static void logMaxMemory(boolean param0) {
@@ -202,7 +202,7 @@ abstract class DebouncedValidator implements ValidationProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 88 / ((-13 - param0) / 38);
-          stackIn_1_0 = hd.isValidNameText(param1, (byte) 59, false);
+          stackIn_1_0 = NameTextHelpers.isValidNameText(param1, (byte) 59, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ abstract class DebouncedValidator implements ValidationProvider {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -223,10 +223,10 @@ abstract class DebouncedValidator implements ValidationProvider {
     final static void setPendingMessageId(int param0, byte param1) {
         if (param1 != 30) {
           DebouncedValidator.setPendingMessageId(-79, (byte) -26);
-          qg.field_c = param0;
+          ClientRuntimeException.field_c = param0;
           return;
         }
-        qg.field_c = param0;
+        ClientRuntimeException.field_c = param0;
     }
 
     public final ValidationState getValidationState(int param0) {
@@ -235,13 +235,13 @@ abstract class DebouncedValidator implements ValidationProvider {
         }
         if (param0 > -65) {
           this.restartDebounce(-88);
-          if (!(this.field_e + 350L <= qj.monotonicTimeMillis(-26572))) {
-            return da.field_f;
+          if (!(this.field_e + 350L <= TimeAndInputHelpers.monotonicTimeMillis(-26572))) {
+            return MusicAndClipHelpers.field_f;
           }
           return this.computeState((byte) -66);
         }
-        if (!(this.field_e + 350L <= qj.monotonicTimeMillis(-26572))) {
-          return da.field_f;
+        if (!(this.field_e + 350L <= TimeAndInputHelpers.monotonicTimeMillis(-26572))) {
+          return MusicAndClipHelpers.field_f;
         }
         return this.computeState((byte) -66);
     }

@@ -31,19 +31,19 @@ final class SoundCache {
 
     final static void showLoadingProgress(boolean param0, String param1, float param2, byte param3) {
         try {
-          if (ci.field_c == null) {
-            ci.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
-            ClientException.field_b.pushPanel(ci.field_c, 15637);
+          if (ModalStackHelpers.field_c == null) {
+            ModalStackHelpers.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
+            ClientException.field_b.pushPanel(ModalStackHelpers.field_c, 15637);
           }
-          ci.field_c.setProgress(param1, param2, param0, (byte) -105);
+          ModalStackHelpers.field_c.setProgress(param1, param2, param0, (byte) -105);
           SoftwareRasterizer.clear();
           if (param3 != -100) {
             String var5 = (String) null;
             SoundCache.showLoadingProgress(true, (String) null, -0.9587674736976624f, (byte) 42);
           }
-          lm.drawRootContainer((byte) -120, true);
+          GameDetailsRenderer.drawRootContainer((byte) -120, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class SoundCache {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class SoundCache {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class SoundCache {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class SoundCache {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -233,15 +233,15 @@ final class SoundCache {
         if (param0 != 0) {
           String var2 = (String) null;
           SoundCache.showLoadingProgress(true, (String) null, 0.18466001749038696f, (byte) 40);
-          if (null == ah.field_b) {
+          if (null == AccountFlowHelpers.field_b) {
             return "";
           }
-          return ah.field_b;
+          return AccountFlowHelpers.field_b;
         }
-        if (null == ah.field_b) {
+        if (null == AccountFlowHelpers.field_b) {
           return "";
         }
-        return ah.field_b;
+        return AccountFlowHelpers.field_b;
     }
 
     SoundCache(ResourceArchive param0, ResourceArchive param1) {
@@ -251,7 +251,7 @@ final class SoundCache {
           this.field_g = param1;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

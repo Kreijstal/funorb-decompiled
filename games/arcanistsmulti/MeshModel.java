@@ -50,7 +50,7 @@ final class MeshModel {
 
     final static void handleZoomKeys(byte param0) {
         int var1;
-        if (!td.hasMembership(true)) {
+        if (!ThreeButtonPanel.hasMembership(true)) {
           return;
         }
         if (IntrusiveDeque.field_d == 71 &&
@@ -62,15 +62,15 @@ final class MeshModel {
           UiContainer.selectMenuPage((byte) -125, StatefulTextPainter.field_p + 1);
         }
         if (IntrusiveDeque.field_d == 33 &&
-          0 < ed.field_Cb) {
-          ed.field_Cb = ed.field_Cb - 1;
+          0 < MainMenuDialog.field_Cb) {
+          MainMenuDialog.field_Cb = MainMenuDialog.field_Cb - 1;
         }
         if (IntrusiveDeque.field_d == 34 &&
-          ed.field_Cb < 8) {
-          ed.field_Cb = ed.field_Cb + 1;
+          MainMenuDialog.field_Cb < 8) {
+          MainMenuDialog.field_Cb = MainMenuDialog.field_Cb + 1;
         }
         if (IntrusiveDeque.field_d == 35) {
-          ed.field_Cb = 6;
+          MainMenuDialog.field_Cb = 6;
         }
         var1 = 36 / ((21 - param0) / 50);
     }

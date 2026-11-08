@@ -209,7 +209,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
             if (param3 != 102) {
               if (param3 == 103) {
                 if (this.field_Y &&
-                  ri.field_b[82]) {
+                  RasterSetupHelpers.field_b[82]) {
                   this.scrollBy(-780737471, 65536);
                   return true;
                 }
@@ -293,7 +293,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
               }
             } else {
               if (this.field_Y &&
-                ri.field_b[82]) {
+                RasterSetupHelpers.field_b[82]) {
                 this.scrollBy(-780737471, 0);
                 return true;
               }
@@ -314,7 +314,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -628,7 +628,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -731,8 +731,8 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
         }
     }
 
-    final static gl[] readPackedEntries(byte param0, CipherPacketBuffer param1) {
-        gl[] stackIn_11_0 = null;
+    final static NineSliceHelpers[] readPackedEntries(byte param0, CipherPacketBuffer param1) {
+        NineSliceHelpers[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -740,9 +740,9 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        gl[] var4 = null;
+        NineSliceHelpers[] var4 = null;
         int var5 = 0;
-        gl var6 = null;
+        NineSliceHelpers var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var5Lifetime1;
@@ -753,10 +753,10 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
             return null;
           }
           var3 = param1.readBits(28089, 12);
-          var4 = new gl[var3];
+          var4 = new NineSliceHelpers[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (hd.readBitFlag(param1, (byte) 112)) {
-              var6 = new gl();
+            if (NameTextHelpers.readBitFlag(param1, (byte) 112)) {
+              var6 = new NineSliceHelpers();
               param1.readBits(28089, 24);
               param1.readBits(28089, 24);
               var6.field_e = param1.readBits(28089, 24);
@@ -766,7 +766,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
               param1.readBits(28089, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits(28089, fj.bitLength(-1 + var5, 29797));
+              var6_int = param1.readBits(28089, BitAndSpriteHelpers.bitLength(-1 + var5, 29797));
               var4[var5] = var4[var6_int];
             }
           }
@@ -783,7 +783,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -812,15 +812,15 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
     }
 
     final static void queueTimedMessage(String param0, int param1, byte param2) {
-        rb var3 = null;
+        TimedMessage var3 = null;
         if (param2 > -27) {
           return;
         }
         try {
-          var3 = new rb(param0, param1);
-          pb.field_m.addLast(var3, -1);
+          var3 = new TimedMessage(param0, param1);
+          QueuedResponse.field_m.addLast(var3, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ma.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ma.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -840,11 +840,11 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
 
     final static void openDisplayNameForm(int param0) {
         int var1 = 39 / ((62 - param0) / 49);
-        if (vf.field_k != null) {
-          vf.field_k.dismiss(77);
+        if (RawDataNode.field_k != null) {
+          RawDataNode.field_k.dismiss(77);
         }
-        oa.field_c = new DisplayNameForm();
-        g.field_e.setContent((byte) -92, (UiComponent) (oa.field_c));
+        LoginResultHelpers.field_c = new DisplayNameForm();
+        SupportPageHelpers.field_e.setContent((byte) -92, (UiComponent) (LoginResultHelpers.field_c));
     }
 
     final void setValue(byte param0, int param1) {
@@ -936,7 +936,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

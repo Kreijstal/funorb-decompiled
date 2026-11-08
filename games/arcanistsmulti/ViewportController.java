@@ -27,10 +27,10 @@ final class ViewportController {
 
     final FullscreenFocusCanvas enterFullscreen(int param0) {
         this.field_j = MusicPatchNode.field_r;
-        this.field_r = co.field_c;
+        this.field_r = BattleResetHelpers.field_c;
         this.field_a.onViewResized(this.field_m, this.field_c, 120);
         TextWidgetPainter.field_j = false;
-        FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, this.field_c, this.field_m);
+        FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, DecimalCheckHelpers.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
           if (var2 == null) {
             this.restoreWindowedSize(true);
@@ -47,9 +47,9 @@ final class ViewportController {
     final static SceneWidget getListContent(byte param0) {
         if (param0 <= 112) {
           ViewportController.openArchive((byte) -59, true, false, -83, -46);
-          return uc.getListContent(115);
+          return QuickChatHelpers.getListContent(115);
         }
-        return uc.getListContent(115);
+        return QuickChatHelpers.getListContent(115);
     }
 
     final boolean isSizeAllowed(int param0, int param1, int param2) {
@@ -156,12 +156,12 @@ final class ViewportController {
           if (MusicPatchNode.field_r != var2) {
             this.field_a.onViewResized(var2, var3, 121);
           } else {
-            if (co.field_c != var3) {
+            if (BattleResetHelpers.field_c != var3) {
               this.field_a.onViewResized(var2, var3, 121);
             }
           }
           if (this.field_d > 0) {
-            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
+            LoadingTask.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           }
           return;
         }
@@ -251,12 +251,12 @@ final class ViewportController {
         if (MusicPatchNode.field_r != var2) {
           this.field_a.onViewResized(var2, var3Lifetime1, 121);
         } else {
-          if (co.field_c != var3Lifetime1) {
+          if (BattleResetHelpers.field_c != var3Lifetime1) {
             this.field_a.onViewResized(var2, var3Lifetime1, 121);
           }
         }
         if (this.field_d > 0) {
-          ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
+          LoadingTask.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
         }
         return;
     }
@@ -282,7 +282,7 @@ final class ViewportController {
         if (this.field_q > NumericDateInputWidget.field_K) {
           return false;
         }
-        if (ah.field_c > 0) {
+        if (AccountFlowHelpers.field_c > 0) {
           return true;
         }
         return false;
@@ -299,7 +299,7 @@ final class ViewportController {
     final boolean isOverMaximumSize(boolean param0) {
         if (param0) {
           this.setWindowedSize(-12, -65, (byte) -64);
-          if (ah.field_c <= 0) {
+          if (AccountFlowHelpers.field_c <= 0) {
             return false;
           }
           if (NumericDateInputWidget.field_K < this.field_q) {
@@ -307,7 +307,7 @@ final class ViewportController {
           }
           return false;
         }
-        if (ah.field_c <= 0) {
+        if (AccountFlowHelpers.field_c <= 0) {
           return false;
         }
         if (NumericDateInputWidget.field_K < this.field_q) {
@@ -346,7 +346,7 @@ final class ViewportController {
           if (ProxySocketConnector.field_m != null) {
             return;
           }
-          if (ah.field_c <= 0) {
+          if (AccountFlowHelpers.field_c <= 0) {
             this.field_l = false;
           }
           if (this.field_l) {
@@ -364,23 +364,23 @@ final class ViewportController {
             return;
           }
           if (this.field_d > MusicPatchNode.field_r) {
-            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
+            LoadingTask.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           } else {
             if (this.field_d <= 0) {
               if (this.field_o == MusicPatchNode.field_r &&
-                this.field_e == co.field_c) {
+                this.field_e == BattleResetHelpers.field_c) {
                 return;
               }
               this.field_a.onViewResized(this.field_o, this.field_e, param0 ^ -4);
               return;
             }
-            ta.field_e = 0;
+            LoadingTask.field_e = 0;
           }
         } else {
           if (ProxySocketConnector.field_m != null) {
             return;
           }
-          if (ah.field_c <= 0) {
+          if (AccountFlowHelpers.field_c <= 0) {
             this.field_l = false;
           }
           if (this.field_l) {
@@ -398,15 +398,15 @@ final class ViewportController {
             return;
           }
           if (this.field_d > MusicPatchNode.field_r) {
-            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
+            LoadingTask.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           } else {
             if (this.field_d > 0) {
-              ta.field_e = 0;
+              LoadingTask.field_e = 0;
             }
           }
         }
         if (this.field_o == MusicPatchNode.field_r &&
-          this.field_e == co.field_c) {
+          this.field_e == BattleResetHelpers.field_c) {
           return;
         }
         this.field_a.onViewResized(this.field_o, this.field_e, param0 ^ -4);
@@ -449,7 +449,7 @@ final class ViewportController {
           this.field_k = param2;
           this.field_i = param7;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "v.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "v.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -40,7 +40,7 @@ final class ContextActionMenu extends SceneWidget {
               var2_int = param1 - UiContainer.field_z.position;
             }
             CredentialKind.field_c.readFully(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
-            hi.field_d = qj.monotonicTimeMillis(-26572);
+            ViewControllerHelpers.field_d = TimeAndInputHelpers.monotonicTimeMillis(-26572);
             UiContainer.field_z.position = UiContainer.field_z.position + var2_int;
             if (param1 > UiContainer.field_z.position) {
               return false;
@@ -51,7 +51,7 @@ final class ContextActionMenu extends SceneWidget {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              rk.timeSinceLastInput(-66) <= 30000L) {
+              GradientBarButton.timeSinceLastInput(-66) <= 30000L) {
               return false;
             }
             ProxySocketConnector.closeActiveConnection(false);
@@ -173,10 +173,10 @@ final class ContextActionMenu extends SceneWidget {
             field_Db = (ConnectionState) null;
           }
           stackIn_5_0 = DebouncedValidator.field_g;
-          stackIn_6_1 = (dd.field_h == DebouncedValidator.field_g);
+          stackIn_6_1 = (PasswordCheckHelpers.field_h == DebouncedValidator.field_g);
           var7_int = ((SceneScrollPane) (Object) stackIn_5_0).relayout(stackIn_6_1, (byte) 98, (2 + ImageProducerRasterBuffer.field_r) * 2, 2, param1 * (8 + ImageProducerRasterBuffer.field_r * 4), param6) ? 1 : 0;
           var8 = DebouncedValidator.field_g.field_Cb.field_G;
-          var9 = qj.monotonicTimeMillis(-26572);
+          var9 = TimeAndInputHelpers.monotonicTimeMillis(-26572);
           var11 = null;
           var12 = (LobbyGameEntry) (var8.first(param3 + 12623));
           while (var12 != null) {
@@ -186,7 +186,7 @@ final class ContextActionMenu extends SceneWidget {
               var14 = param4 | param2;
               var12.addChild(var12.field_Gb, param3 ^ 47);
               var12.field_Gb.field_X = 1;
-              var12.field_jc = new SceneWidget(0L, qa.field_j);
+              var12.field_jc = new SceneWidget(0L, NoticeHelpers.field_j);
               var12.addChild(var12.field_jc, 80);
               var12.field_Mb = new SceneWidget(0L, BattleScreen.field_E);
               var12.addChild(var12.field_Mb, 65);
@@ -194,25 +194,25 @@ final class ContextActionMenu extends SceneWidget {
               var12.field_Eb = new SceneWidget(0L, BattleScreen.field_E);
               var12.addChild(var12.field_Eb, 35);
               var12.field_Eb.field_t = 0;
-              var12.field_cc = new SceneWidget(0L, qa.field_j);
+              var12.field_cc = new SceneWidget(0L, NoticeHelpers.field_j);
               var12.addChild(var12.field_cc, 125);
               var12.field_cc.field_X = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_3 = 0L;
-              if (fc.field_a) {
+              if (SpriteDecodeHelpers.field_a) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
                 stackIn_13_4 = BattleScreen.field_E;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = qa.field_j;
+                stackIn_13_4 = NoticeHelpers.field_j;
               }
               stackIn_12_0.field_ec = new SceneWidget(stackIn_12_3, stackIn_13_4);
               var12.addChild(var12.field_ec, 35);
-              var12.field_pc = new SceneWidget[vf.field_l];
+              var12.field_pc = new SceneWidget[RawDataNode.field_l];
               var12.field_Ub = new SceneWidget(0L, (SceneWidget) null);
               if ((1 << Scrollbar.field_U & var14) != 0) {
                 var12.field_ec.addChild(var12.field_Ub, 76);
@@ -222,7 +222,7 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_ec.addChild(var12.field_Cb, 125);
               }
               var12.field_Jb = new SceneWidget(0L, (SceneWidget) null);
-              if ((1 << hb.field_Kb & var14) != 0) {
+              if ((1 << SceneListPanel.field_Kb & var14) != 0) {
                 var12.field_ec.addChild(var12.field_Jb, 44);
               }
               var12.field_Xb = new SceneWidget(0L, (SceneWidget) null);
@@ -236,9 +236,9 @@ final class ContextActionMenu extends SceneWidget {
               var43.field_gb = 1;
               var44.field_gb = 1;
               var45.field_gb = 1;
-              for (var18_int = 0; var18_int < vf.field_l; var18_int++) {
+              for (var18_int = 0; var18_int < RawDataNode.field_l; var18_int++) {
                 var12.field_pc[var18_int] = new SceneWidget(0L, (SceneWidget) null);
-                if ((var14 & 1 << var18_int + fe.field_j) != 0) {
+                if ((var14 & 1 << var18_int + PendingTask.field_j) != 0) {
                   var12.field_ec.addChild(var12.field_pc[var18_int], 20);
                 }
                 var12.field_pc[var18_int].field_gb = 1;
@@ -247,10 +247,10 @@ final class ContextActionMenu extends SceneWidget {
               stackIn_30_1 = null;
               stackIn_30_2 = null;
               stackIn_30_3 = 0L;
-              if (fc.field_a) {
+              if (SpriteDecodeHelpers.field_a) {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
-                stackIn_31_4 = qa.field_j;
+                stackIn_31_4 = NoticeHelpers.field_j;
               } else {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
@@ -259,11 +259,11 @@ final class ContextActionMenu extends SceneWidget {
               stackIn_30_0.field_hc = new SceneWidget(stackIn_30_3, stackIn_31_4);
               var12.addChild(var12.field_hc, 7);
               var12.field_hc.field_X = 2;
-              var12.field_Vb = new SceneWidget(0L, qa.field_j);
+              var12.field_Vb = new SceneWidget(0L, NoticeHelpers.field_j);
               var12.addChild(var12.field_Vb, param3 ^ 14);
-              var12.field_Ib = new SceneWidget(0L, nj.field_d);
+              var12.field_Ib = new SceneWidget(0L, NameCheckHelpers.field_d);
               var12.addChild(var12.field_Ib, 56);
-              var12.field_fc = new SceneWidget(0L, nj.field_d);
+              var12.field_fc = new SceneWidget(0L, NameCheckHelpers.field_d);
               var12.addChild(var12.field_fc, 24);
               var12.field_Kb = new SceneWidget(0L, IntrusiveNode.field_c);
               var12.addChild(var12.field_Kb, 44);
@@ -302,7 +302,7 @@ final class ContextActionMenu extends SceneWidget {
             var21 = var12.field_ec;
             var12.field_ec.field_I = 0;
             var21.field_x = 0;
-            for (var22_int = 0; vf.field_l > var22_int; var22_int++) {
+            for (var22_int = 0; RawDataNode.field_l > var22_int; var22_int++) {
               var12.field_pc[var22_int].field_W = null;
               var23 = var12.field_pc[var22_int];
               var12.field_pc[var22_int].field_I = 0;
@@ -355,7 +355,7 @@ final class ContextActionMenu extends SceneWidget {
                 } else {
                   if (var12.field_kc && (var12.field_Ob ||
                     var12.field_Hb)) {
-                    var12.field_Zb.field_rb = qn.field_pb;
+                    var12.field_Zb.field_rb = MessageDialog.field_pb;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
@@ -372,12 +372,12 @@ final class ContextActionMenu extends SceneWidget {
                   if (!var12.field_mc) {
                     var12.field_Gb.field_rb = DropdownList.field_C;
                   } else {
-                    var12.field_Gb.field_rb = lo.field_z;
+                    var12.field_Gb.field_rb = AgeValidator.field_z;
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Zb.field_rb = qn.field_pb;
+                  var12.field_Zb.field_rb = MessageDialog.field_pb;
                 }
               }
               if (var12.field_Zb.field_rb == null) {
@@ -404,7 +404,7 @@ final class ContextActionMenu extends SceneWidget {
               }
               var12.field_cc.field_rb = Integer.toString(var12.field_Db);
               var12.field_cc.setBounds(48, 200, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
-              stackIn_69_0 = (!fc.field_a) ? 200 : 250;
+              stackIn_69_0 = (!SpriteDecodeHelpers.field_a) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_ec.setBounds(365 - var33_intLifetime1 - 2, var33_intLifetime1, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               var34_int = MenuButtonPainter.field_p;
@@ -421,7 +421,7 @@ final class ContextActionMenu extends SceneWidget {
                   stackIn_80_0 = 1;
                 }
                 var36 = stackIn_80_0;
-                stackIn_82_0 = sk.field_f;
+                stackIn_82_0 = TooltipHelpers.field_f;
                 if (var36 != 0) {
                   stackIn_83_1 = 1;
                 } else {
@@ -432,8 +432,8 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_Cb.setBounds(var51_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var51_ref.field_n + MenuButtonPainter.field_p);
               }
-              if ((1 << hb.field_Kb & var14Lifetime1) != 0) {
-                var52_ref = ec.field_i[var12.field_Fb - 1];
+              if ((1 << SceneListPanel.field_Kb & var14Lifetime1) != 0) {
+                var52_ref = SpriteFrame.field_i[var12.field_Fb - 1];
                 var12.field_Jb.field_W = var52_ref;
                 var12.field_Jb.setBounds(var52_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var52_ref.field_n + MenuButtonPainter.field_p);
@@ -450,11 +450,11 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_Xb.setBounds(var53_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var53_ref.field_n + MenuButtonPainter.field_p);
               }
-              if (null != nk.field_m) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < vf.field_l; var36Lifetime1++) {
-                  if (nk.field_m[var36Lifetime1] != null &&
-                    (var14Lifetime1 & 1 << var36Lifetime1 + fe.field_j) != 0) {
-                    var42 = nk.field_m[var36Lifetime1][255 & var12.field_Wb[var36Lifetime1]];
+              if (null != ListRequest.field_m) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < RawDataNode.field_l; var36Lifetime1++) {
+                  if (ListRequest.field_m[var36Lifetime1] != null &&
+                    (var14Lifetime1 & 1 << var36Lifetime1 + PendingTask.field_j) != 0) {
+                    var42 = ListRequest.field_m[var36Lifetime1][255 & var12.field_Wb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_pc[var36Lifetime1].field_W = var42;
                     var12.field_pc[var36Lifetime1].setBounds(var54.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
@@ -468,7 +468,7 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_Cb.field_T = var12.field_Cb.field_T + var36Lifetime2;
                 var12.field_Jb.field_T = var12.field_Jb.field_T + var36Lifetime2;
                 var12.field_Xb.field_T = var12.field_Xb.field_T + var36Lifetime2;
-                for (var37_int = 0; var37_int < vf.field_l; var37_int++) {
+                for (var37_int = 0; var37_int < RawDataNode.field_l; var37_int++) {
                   dupTemp$0 = var12.field_pc[var37_int];
                   dupTemp$0.field_T = dupTemp$0.field_T + var36Lifetime2;
                 }
@@ -494,7 +494,7 @@ final class ContextActionMenu extends SceneWidget {
               if (var12.field_Qb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(ad.field_a);
+                discarded$1 = var37.append(SpellbookCaptionGlobals.field_a);
                 discarded$2 = var37.append(var12.field_Qb[0]);
                 for (var38_intLifetime1 = 1; var12.field_Rb > var38_intLifetime1; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -517,7 +517,7 @@ final class ContextActionMenu extends SceneWidget {
                 var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
             }
-            var33 = vf.formatChatPrefix(-111, var32, var12.field_ac);
+            var33 = RawDataNode.formatChatPrefix(-111, var32, var12.field_ac);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Kb.field_Z.wrappedLineCount(var33, -SceneTextInput.field_Gb - SceneTextInput.field_Gb + var12.field_x);
               var12.field_Kb.field_u = 256 * var12.field_bc / TextLine.field_i;
@@ -531,11 +531,11 @@ final class ContextActionMenu extends SceneWidget {
             if (var13 != 0) {
               DebouncedValidator.field_g.field_Cb.positionAfter((byte) 124, (SceneWidget) (var11), var12, 2);
             }
-            for (var34_intLifetime2 = 0; var34_intLifetime2 < vf.field_l; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; var34_intLifetime2 < RawDataNode.field_l; var34_intLifetime2++) {
               if (var12.field_pc[var34_intLifetime2].field_C) {
-                if (null != qa.field_o) {
-                  if (null != qa.field_o[var34_intLifetime2]) {
-                    var35 = qa.field_o[var34_intLifetime2][var12.field_Wb[var34_intLifetime2] & 255];
+                if (null != NoticeHelpers.field_o) {
+                  if (null != NoticeHelpers.field_o[var34_intLifetime2]) {
+                    var35 = NoticeHelpers.field_o[var34_intLifetime2][var12.field_Wb[var34_intLifetime2] & 255];
                   } else {
                     var35 = null;
                   }
@@ -553,13 +553,13 @@ final class ContextActionMenu extends SceneWidget {
               if (var12.field_Pb == 1) {
                 var34 = IntKeyLookup.field_c;
               } else {
-                var34 = vm.field_c[var12.field_Pb];
+                var34 = MouseStateHelpers.field_c[var12.field_Pb];
               }
-              TextLayout.field_c = on.field_a + " - " + var34;
+              TextLayout.field_c = LoginMessageTable.field_a + " - " + var34;
             }
             if (var12.field_Xb.field_C) {
               if (var12.field_oc) {
-                stackIn_154_0 = ri.field_c;
+                stackIn_154_0 = RasterSetupHelpers.field_c;
               } else {
                 stackIn_154_0 = IntKeyLookup.field_h;
               }
@@ -569,20 +569,20 @@ final class ContextActionMenu extends SceneWidget {
               if (!var12.field_Ob &&
                 !var12.field_Hb) {
                 if (!var12.field_kc) {
-                  stackIn_163_0 = pc.field_c;
+                  stackIn_163_0 = TexturedSpriteHelpers.field_c;
                 } else {
-                  stackIn_163_0 = fi.field_g;
+                  stackIn_163_0 = DecimalCheckHelpers.field_g;
                 }
               } else {
-                stackIn_163_0 = qo.field_g;
+                stackIn_163_0 = NameHelpers.field_g;
               }
               TextLayout.field_c = stackIn_163_0;
             }
             if (var12.field_Jb.field_C) {
               if (2 == var12.field_Fb) {
-                stackIn_168_0 = sk.field_d;
+                stackIn_168_0 = TooltipHelpers.field_d;
               } else {
-                stackIn_168_0 = bh.field_d;
+                stackIn_168_0 = QuickChatCaptionGlobals.field_d;
               }
               TextLayout.field_c = stackIn_168_0;
             }
@@ -598,7 +598,7 @@ final class ContextActionMenu extends SceneWidget {
                 if (var12.field_Lb && (!var12.field_kc ||
                   !var12.field_Ob &&
                   !var12.field_Hb)) {
-                  qe.sendShortSettingRequest(var12.getSortKey((byte) 78), (byte) -35, param0);
+                  QueuedPacket.sendShortSettingRequest(var12.getSortKey((byte) 78), (byte) -35, param0);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -612,7 +612,7 @@ final class ContextActionMenu extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var7), "pe.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var7), "pe.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -631,18 +631,18 @@ final class ContextActionMenu extends SceneWidget {
     }
 
     final static boolean handleEscapeForOverlays(int param0, int param1, byte param2, int param3) {
-        if (null != eo.field_c &&
-          eo.field_c.handleEscape((byte) 49)) {
+        if (null != PackedShortHelpers.field_c &&
+          PackedShortHelpers.field_c.handleEscape((byte) 49)) {
           IntrusiveDequeCursor.closePlayerMenu(false);
           return true;
         }
-        if (db.field_a != null &&
-          db.field_a.handleEscape((byte) 2)) {
-          db.field_a = null;
+        if (Crc32Helpers.field_a != null &&
+          Crc32Helpers.field_a.handleEscape((byte) 2)) {
+          Crc32Helpers.field_a = null;
           IntrusiveDequeCursor.closePlayerMenu(false);
           return true;
         }
-        if (lo.handlePasswordKey(false)) {
+        if (AgeValidator.handlePasswordKey(false)) {
           return true;
         }
         if (ValidationState.routeKeyInput(false, param1, param3, param0)) {
@@ -655,13 +655,13 @@ final class ContextActionMenu extends SceneWidget {
         return false;
     }
 
-    final static ho getCurrentMessage(boolean param0) {
+    final static ServerMessage getCurrentMessage(boolean param0) {
         if (SceneScrollbar.field_Gb == ScreenDisplayMode.field_h) {
           throw new IllegalStateException();
         }
         if (DiskCacheWorker.field_g == SceneScrollbar.field_Gb) {
           SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
-          return i.field_i;
+          return ChatPanel.field_i;
         }
         if (!param0) {
           return null;
@@ -814,7 +814,7 @@ final class ContextActionMenu extends SceneWidget {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -822,7 +822,7 @@ final class ContextActionMenu extends SceneWidget {
         if (param0 != 0) {
           return (SceneWidget) null;
         }
-        return dd.field_c.field_Eb;
+        return PasswordCheckHelpers.field_c.field_Eb;
     }
 
     final void addAction(int param0, String param1, byte param2) {
@@ -838,7 +838,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Pb[this.field_Kb] = param0;
           this.field_Kb = this.field_Kb + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "pe.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -864,7 +864,7 @@ final class ContextActionMenu extends SceneWidget {
         int var8Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_Kb == 0) {
-          this.field_Ob[this.field_Kb] = new IconTextSceneWidget(0L, (SceneWidget) null, (SceneWidget) null, this.field_Qb, (Sprite) null, db.field_c);
+          this.field_Ob[this.field_Kb] = new IconTextSceneWidget(0L, (SceneWidget) null, (SceneWidget) null, this.field_Qb, (Sprite) null, Crc32Helpers.field_c);
           this.field_Ob[this.field_Kb].field_gb = 1;
           this.addChild(this.field_Ob[this.field_Kb], 97);
           this.field_Pb[this.field_Kb] = -1;
@@ -882,7 +882,7 @@ final class ContextActionMenu extends SceneWidget {
         if (param2 != -29466) {
           return;
         }
-        var8Lifetime1 = ih.clampToScreenX(param4, var6, param0, 246);
+        var8Lifetime1 = PointerOriginHelpers.clampToScreenX(param4, var6, param0, 246);
         var9 = LoginMethod.clampToScreenY(10, param1, var7Lifetime1, param3);
         this.setBounds(var6, var8Lifetime1, var9, var7Lifetime1, (byte) -120);
         for (var10 = 0; var10 < this.field_Kb; var10++) {
@@ -906,7 +906,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Mb = param8;
           this.field_Eb = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -923,7 +923,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Pb[this.field_Kb] = param1;
           this.field_Kb = this.field_Kb + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

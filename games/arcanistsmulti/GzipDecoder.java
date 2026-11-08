@@ -18,12 +18,12 @@ final class GzipDecoder {
         if (param1 != 5) {
           return;
         }
-        if (ah.field_c > 0) {
+        if (AccountFlowHelpers.field_c > 0) {
           if (ResizableModalPanel.field_Y != null) {
             ProxySocketConnector.field_m = ResizableModalPanel.field_Y.enterFullscreen(param1 + 122);
             NameSuggestionsPanel.notifyBrowserResizing(2, 0);
           } else {
-            ProxySocketConnector.field_m = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, 480, 640);
+            ProxySocketConnector.field_m = CameraFollowTarget.createFullscreenCanvas(0, 0, false, DecimalCheckHelpers.field_d, 480, 640);
           }
           if (null == ProxySocketConnector.field_m) {
             var2 = 3;
@@ -35,8 +35,8 @@ final class GzipDecoder {
           var2 = (MenuScreen.getSessionFlag((byte) 112)) ? 0 : 1;
         }
         if (null == ResizableModalPanel.field_Y &&
-          ri.field_f) {
-          qa.showNoticeByType(param0, -4693, var2);
+          RasterSetupHelpers.field_f) {
+          NoticeHelpers.showNoticeByType(param0, -4693, var2);
         }
     }
 
@@ -79,9 +79,9 @@ final class GzipDecoder {
             var9 = param6;
             var10 = param1;
             for (var11 = param3; var11 < param4; var11++) {
-              var12 = ki.field_r[var11];
+              var12 = EmailValidator.field_r[var11];
               if (!param0) {
-                stackIn_23_0 = lm.field_i[var12];
+                stackIn_23_0 = GameDetailsRenderer.field_i[var12];
               } else {
                 stackIn_23_0 = Battle.field_z[var12];
               }
@@ -91,10 +91,10 @@ final class GzipDecoder {
                   var10 = var13;
                 }
               } else {
-                ki.field_r[var11] = ki.field_r[var8];
+                EmailValidator.field_r[var11] = EmailValidator.field_r[var8];
                 incrementValue$0 = var8;
                 var8++;
-                ki.field_r[incrementValue$0] = var12;
+                EmailValidator.field_r[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -106,11 +106,11 @@ final class GzipDecoder {
           }
           for (var7_intLifetime1 = param4 - 1; param3 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param3; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = ki.field_r[var8Lifetime1];
-              var10Lifetime1 = ki.field_r[var8Lifetime1 + 1];
-              if (bo.isRankedBefore(param0, var9Lifetime1, (byte) -76, var10Lifetime1)) {
-                ki.field_r[var8Lifetime1] = var10Lifetime1;
-                ki.field_r[var8Lifetime1 + 1] = var9Lifetime1;
+              var9Lifetime1 = EmailValidator.field_r[var8Lifetime1];
+              var10Lifetime1 = EmailValidator.field_r[var8Lifetime1 + 1];
+              if (NameErrorHelpers.isRankedBefore(param0, var9Lifetime1, (byte) -76, var10Lifetime1)) {
+                EmailValidator.field_r[var8Lifetime1] = var10Lifetime1;
+                EmailValidator.field_r[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -118,24 +118,24 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var7), "nb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var7), "nb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static void setLoginNameAndHash(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
-          nj.field_c = 2;
+          NameCheckHelpers.field_c = 2;
           MenuInputState.field_p = param0;
           if (param2 != -26510) {
             field_a = -55;
           }
           var5 = (CharSequence) ((Object) param0);
           GridContainer.field_S = Js5ArchiveManager.normalizeNameForLookup(var5, -13);
-          gg.field_e = param1;
+          DecodedSpriteHelpers.field_e = param1;
           SocketJs5Transport.field_r = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class GzipDecoder {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

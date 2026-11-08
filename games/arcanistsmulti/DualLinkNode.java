@@ -18,21 +18,21 @@ class DualLinkNode extends IntrusiveNode {
         field_g = null;
     }
 
-    final static ri validateEmailText(int param0, String param1) {
+    final static RasterSetupHelpers validateEmailText(int param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
         String[] var4 = null;
         String var6 = null;
-        ri var7 = null;
+        RasterSetupHelpers var7 = null;
         int var8 = 0;
-        ri stackIn_4_0 = null;
-        ri stackIn_8_0 = null;
-        ri stackIn_11_0 = null;
-        ri stackIn_15_0 = null;
-        ri stackIn_21_0 = null;
-        ri stackIn_24_0 = null;
+        RasterSetupHelpers stackIn_4_0 = null;
+        RasterSetupHelpers stackIn_8_0 = null;
+        RasterSetupHelpers stackIn_11_0 = null;
+        RasterSetupHelpers stackIn_15_0 = null;
+        RasterSetupHelpers stackIn_21_0 = null;
+        RasterSetupHelpers stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -45,12 +45,12 @@ class DualLinkNode extends IntrusiveNode {
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            stackIn_8_0 = b.field_e;
+            stackIn_8_0 = ThrowableFormatHelpers.field_e;
             return stackIn_8_0;
           }
           var3 = ValidationState.split(false, '.', param1);
           if (param0 != 32752) {
-            stackIn_11_0 = (ri) null;
+            stackIn_11_0 = (RasterSetupHelpers) null;
             return stackIn_11_0;
           }
           if (var3.length < 2) {
@@ -66,7 +66,7 @@ class DualLinkNode extends IntrusiveNode {
               return stackIn_21_0;
             }
           }
-          stackIn_24_0 = ik.parseDigits(param0 - 32810, var3[var3.length - 1]);
+          stackIn_24_0 = LobbyBuilderHelpers.parseDigits(param0 - 32810, var3[var3.length - 1]);
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,27 +78,27 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    final static f createPendingRequest(int param0, int param1, byte[] param2) {
-        f var3 = null;
+    final static PendingRequest createPendingRequest(int param0, int param1, byte[] param2) {
+        PendingRequest var3 = null;
         RuntimeException var3_ref = null;
-        f stackIn_2_0 = null;
-        f stackIn_4_0 = null;
+        PendingRequest stackIn_2_0 = null;
+        PendingRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -25866) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PendingRequest) null;
             return stackIn_2_0;
           }
-          var3 = new f(param2);
-          cm.field_l.addLast(var3, -1);
-          pb.sendChatLine(32, param0, var3);
+          var3 = new PendingRequest(param2);
+          StatsRecord.field_l.addLast(var3, -1);
+          QueuedResponse.sendChatLine(32, param0, var3);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

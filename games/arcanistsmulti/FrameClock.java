@@ -11,7 +11,7 @@ abstract class FrameClock {
     final int sleepAndCountTicks(long param0, int param1) {
         long var4 = this.nanosUntilNextTick((byte) 52);
         if (var4 > 0L) {
-          ao.sleepMillis(var4, 1);
+          LobbyLayoutHelpers.sleepMillis(var4, 1);
         }
         if (param1 != -1) {
           field_e = (SceneWidget) null;
@@ -37,7 +37,7 @@ abstract class FrameClock {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        wa var6 = null;
+        PlayerInfoPanel var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -54,32 +54,32 @@ abstract class FrameClock {
           if (param2) {
             FrameClock.charToString(-89, '\002');
           }
-          stackIn_5_0 = dd.field_c.field_Db;
-          stackIn_6_1 = (dd.field_h == dd.field_c.field_Db);
+          stackIn_5_0 = PasswordCheckHelpers.field_c.field_Db;
+          stackIn_6_1 = (PasswordCheckHelpers.field_h == PasswordCheckHelpers.field_c.field_Db);
           var3_int = ((SceneScrollPane) (Object) stackIn_5_0).relayout(stackIn_6_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, param0 * (ImageProducerRasterBuffer.field_r * 3 + 6), param1) ? 1 : 0;
-          var4 = dd.field_c.field_Eb.field_G;
+          var4 = PasswordCheckHelpers.field_c.field_Eb.field_G;
           if (SpriteState.field_t != 2 &&
             SpriteState.field_t != 1) {
-            dd.field_c.field_ub = false;
-            dd.field_c.field_Db.field_Hb.field_rb = JaggrabDownloader.field_l;
-            fc.resetChildOffsets((byte) -104, dd.field_c.field_Eb);
+            PasswordCheckHelpers.field_c.field_ub = false;
+            PasswordCheckHelpers.field_c.field_Db.field_Hb.field_rb = JaggrabDownloader.field_l;
+            SpriteDecodeHelpers.resetChildOffsets((byte) -104, PasswordCheckHelpers.field_c.field_Eb);
             return;
           }
-          dd.field_c.field_Db.field_Hb.field_rb = null;
-          dd.field_c.field_ub = true;
+          PasswordCheckHelpers.field_c.field_Db.field_Hb.field_rb = null;
+          PasswordCheckHelpers.field_c.field_ub = true;
           var5 = null;
-          var6 = (wa) (var4.first(12623));
+          var6 = (PlayerInfoPanel) (var4.first(12623));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_G == null) {
-              var6.field_Jb = new SceneWidget(0L, qa.field_j);
+              var6.field_Jb = new SceneWidget(0L, NoticeHelpers.field_j);
               var6.addChild(var6.field_Jb, 96);
-              var6.field_Mb = new SceneWidget(0L, qa.field_j);
+              var6.field_Mb = new SceneWidget(0L, NoticeHelpers.field_j);
               var6.addChild(var6.field_Mb, 112);
               var7 = 1;
               var6.markTreeDirty((byte) 20);
             }
-            var6.field_x = dd.field_c.field_Eb.field_x;
+            var6.field_x = PasswordCheckHelpers.field_c.field_Eb.field_x;
             var6.field_Jb.setBounds(var6.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             var8 = 0;
             if (var6.field_Gb != null &&
@@ -109,7 +109,7 @@ abstract class FrameClock {
               var6.field_B = ImageProducerRasterBuffer.field_r - var6.field_I;
             }
             if (var7 != 0) {
-              dd.field_c.field_Eb.positionAfter((byte) 125, (SceneWidget) (var5), var6, 2);
+              PasswordCheckHelpers.field_c.field_Eb.positionAfter((byte) 125, (SceneWidget) (var5), var6, 2);
             }
             if (null != var6.field_Mb &&
               var6.field_Mb.field_C) {
@@ -122,31 +122,31 @@ abstract class FrameClock {
             }
             var5 = var6;
             if (var6.field_U != 0) {
-              ArcanistsMulti.openInfoPanel(-26335, (int[]) null, dd.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
-              var16 = eo.field_c;
+              ArcanistsMulti.openInfoPanel(-26335, (int[]) null, PasswordCheckHelpers.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
+              var16 = PackedShortHelpers.field_c;
               var13_ref_String = NumericDateInputWidget.field_M;
               var16.field_l.addAction(7, var13_ref_String, (byte) -26);
-              var17 = eo.field_c;
-              var13 = pb.field_h;
-              var14 = ja.field_s;
+              var17 = PackedShortHelpers.field_c;
+              var13 = QueuedResponse.field_h;
+              var14 = ConfirmedNameValidator.field_s;
               var17.field_l.openAt(0, 0, -29466, var14, var13);
             }
-            var6 = (wa) (var4.next(0));
+            var6 = (PlayerInfoPanel) (var4.next(0));
           }
-          if (dd.field_c.field_Jb.field_U != 0) {
-            PasswordFieldPainter.field_A = new SceneTextInput(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, SecondaryNodeDequeIterator.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+          if (PasswordCheckHelpers.field_c.field_Jb.field_U != 0) {
+            PasswordFieldPainter.field_A = new SceneTextInput(PasswordCheckHelpers.field_c.field_Jb.field_V, PasswordCheckHelpers.field_c.field_Jb.field_nb, PasswordCheckHelpers.field_c.field_Jb.field_x, PasswordCheckHelpers.field_c.field_Jb.field_I, SecondaryNodeDequeIterator.field_a, MusicVolumeHelpers.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
             TextLine.field_h = 2;
           }
-          if (dd.field_c.field_Lb.field_U == 0) {
+          if (PasswordCheckHelpers.field_c.field_Lb.field_U == 0) {
             return;
           }
-          PasswordFieldPainter.field_A = new SceneTextInput(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+          PasswordFieldPainter.field_A = new SceneTextInput(PasswordCheckHelpers.field_c.field_Lb.field_V, PasswordCheckHelpers.field_c.field_Lb.field_nb, PasswordCheckHelpers.field_c.field_Lb.field_x, PasswordCheckHelpers.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, MusicVolumeHelpers.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
           TextLine.field_h = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "hg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "hg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -163,17 +163,17 @@ abstract class FrameClock {
           }
           param1.addFocusListener(CredentialKind.field_a);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "hg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "hg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int applyLoginResponse(byte param0, int param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         ClipState.field_m = 0;
-        td.field_E = null;
+        ThreeButtonPanel.field_E = null;
         field_a = null;
-        int var2 = ed.field_Hb;
-        ed.field_Hb = qe.field_h;
+        int var2 = MainMenuDialog.field_Hb;
+        MainMenuDialog.field_Hb = QueuedPacket.field_h;
         if (param1 == 51) {
           GrowableIntList.field_c.field_o = 2;
         } else {
@@ -184,7 +184,7 @@ abstract class FrameClock {
           }
         }
         GrowableIntList.field_c.field_i = GrowableIntList.field_c.field_i + 1;
-        qe.field_h = var2;
+        QueuedPacket.field_h = var2;
         if (GrowableIntList.field_c.field_i >= 2 &&
           param1 == 51) {
           return 2;
@@ -228,15 +228,15 @@ abstract class FrameClock {
 
     final static void reattachInput(boolean param0) {
         HuffmanCodec.restoreWindowedMode(6);
-        if (on.field_c != null) {
-          UiComponent.attachInputListeners(on.field_c, (byte) 91);
+        if (LoginMessageTable.field_c != null) {
+          UiComponent.attachInputListeners(LoginMessageTable.field_c, (byte) 91);
         }
-        mh.clearKeyQueue((byte) 45);
-        ng.clearPendingMouseHandler((byte) -23);
+        CompoundButton.clearKeyQueue((byte) 45);
+        TermsNoticePanel.clearPendingMouseHandler((byte) -23);
         PatchEnvelopeSet.closeNetworkResources(11670);
-        if (tm.isLobbyConnected(!param0 ? true : false)) {
-          he.field_e.writeOpcode((byte) -107, 1);
-          we.sendKeepAlive(0, (byte) 94);
+        if (IntensityTableHelpers.isLobbyConnected(!param0 ? true : false)) {
+          StatusMessageHelpers.field_e.writeOpcode((byte) -107, 1);
+          KeepAliveHelpers.sendKeepAlive(0, (byte) 94);
         }
         ProxySocketConnector.closeActiveConnection(param0);
     }
@@ -246,14 +246,14 @@ abstract class FrameClock {
           if (param3 > -97) {
             field_b = 88;
           }
-          Bzip2State.initializeLobbyWidgets(md.field_b, SpellProjectile.field_A, nj.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
-          ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
-          cf.field_b[2] = TextButton.field_A;
-          cf.field_b[1] = HuffmanCodec.field_d;
-          cf.field_b[0] = GzipDecoder.field_e;
-          hj.initializeQuickChat(DiskCacheRequest.field_w, param0, 3896);
+          Bzip2State.initializeLobbyWidgets(FlagSumHelpers.field_b, SpellProjectile.field_A, NameCheckHelpers.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, NameTable.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          ArchiveProvider.field_a = QueuedPacket.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
+          CredentialParseHelpers.field_b[2] = TextButton.field_A;
+          CredentialParseHelpers.field_b[1] = HuffmanCodec.field_d;
+          CredentialParseHelpers.field_b[0] = GzipDecoder.field_e;
+          ClientIOException.initializeQuickChat(DiskCacheRequest.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

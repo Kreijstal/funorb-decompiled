@@ -8,9 +8,9 @@ final class LoginMethod {
     static int[] field_b;
     private String field_d;
 
-    final static void addChatLine(jg param0, byte param1) {
+    final static void addChatLine(ChatLine param0, byte param1) {
         int var2_int = 0;
-        jg var3 = null;
+        ChatLine var3 = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == param0.field_e) {
           return;
@@ -18,7 +18,7 @@ final class LoginMethod {
         if (param0.field_d != 0 ||
           param0.field_k != 0) {
           for (var2_int = 0; SecondaryNodeDeque.field_f > var2_int; var2_int++) {
-            var3 = g.field_d[var2_int];
+            var3 = SupportPageHelpers.field_d[var2_int];
             if (var3.field_m == 2 &&
               (var3.field_d == param0.field_d && param0.field_k == var3.field_k)) {
               return;
@@ -30,14 +30,14 @@ final class LoginMethod {
         }
         try {
           if (param0.field_f != null) {
-            fo.field_h = param0.field_h;
-            ao.field_e = param0.field_f;
+            MessageCaptionGlobals.field_h = param0.field_h;
+            LobbyLayoutHelpers.field_e = param0.field_f;
             LoadingProgressDialog.field_rb = param0.field_m;
-            of.field_c = param0.field_n;
+            GradientBarPainter.field_c = param0.field_n;
           }
           TextLine.appendChatLineToHistory(param0, (byte) -74);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,19 +74,19 @@ final class LoginMethod {
             var3_int = stackIn_10_0;
             var4 = 2949191;
             var5 = 4325449;
-            var6 = sm.field_d;
+            var6 = AudioAndCookieHelpers.field_d;
             var7 = var6.field_A.length;
             if (var3_int == 0) {
               SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var4, var5);
             } else {
-              var8 = uc.field_a + 480;
-              if (uc.field_a > 1) {
-                var9 = gf.blendColours((uc.field_a * 1024 + 491520) / 480, (byte) 16, var5, var4);
-                SoftwareRasterizer.fillVerticalGradient(0, 0, param0 / 2, uc.field_a / 2, var9, var4);
+              var8 = QuickChatHelpers.field_a + 480;
+              if (QuickChatHelpers.field_a > 1) {
+                var9 = DisplayNameChangedDialog.blendColours((QuickChatHelpers.field_a * 1024 + 491520) / 480, (byte) 16, var5, var4);
+                SoftwareRasterizer.fillVerticalGradient(0, 0, param0 / 2, QuickChatHelpers.field_a / 2, var9, var4);
               }
-              SoftwareRasterizer.fillVerticalGradient(0, uc.field_a / 2, param0 / 2, 240, var4, var5);
+              SoftwareRasterizer.fillVerticalGradient(0, QuickChatHelpers.field_a / 2, param0 / 2, 240, var4, var5);
               if (param1 - var8 > 1) {
-                var9Lifetime2 = gf.blendColours((491520 + (param1 - var8) * 1024) / 480, (byte) 14, var4, var5);
+                var9Lifetime2 = DisplayNameChangedDialog.blendColours((491520 + (param1 - var8) * 1024) / 480, (byte) 14, var4, var5);
                 SoftwareRasterizer.fillVerticalGradient(0, var8 / 2, param0 / 2, (param1 - var8) / 2, var5, var9Lifetime2);
               }
             }
@@ -141,7 +141,7 @@ final class LoginMethod {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var3), "ql.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "ql.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class LoginMethod {
         if (param0 != 1) {
           return (SceneWidget) null;
         }
-        return mc.getValidatorContent((byte) 21);
+        return QuickChatInputHelpers.getValidatorContent((byte) 21);
     }
 
     final static Sprite[] createSolidFrame(int param0, byte param1, int param2, int param3) {
@@ -166,14 +166,14 @@ final class LoginMethod {
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = ce.createFilledSprite(param0, param3, 21385);
+        var7[0] = GameSelectionHelpers.createFilledSprite(param0, param3, 21385);
         if (param1 < 69) {
           return (Sprite[]) null;
         }
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = ce.createFilledSprite(64, param2, 21385);
+        var4[4] = GameSelectionHelpers.createFilledSprite(64, param2, 21385);
         return var4;
     }
 
@@ -182,9 +182,9 @@ final class LoginMethod {
           if (param1 > -3) {
             field_a = 59;
           }
-          sm.setCookie(31536000L, "jagex-last-login-method", param0, -15367, this.field_d);
+          AudioAndCookieHelpers.setCookie(31536000L, "jagex-last-login-method", param0, -15367, this.field_d);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class LoginMethod {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,14 +236,14 @@ final class LoginMethod {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void readLoginName(boolean param0) {
-        ah.field_b = UiContainer.field_z.readString(-1);
-        CharSequence var2 = (CharSequence) ((Object) ah.field_b);
-        nm.field_b = Js5ArchiveManager.normalizeNameForLookup(var2, -13);
+        AccountFlowHelpers.field_b = UiContainer.field_z.readString(-1);
+        CharSequence var2 = (CharSequence) ((Object) AccountFlowHelpers.field_b);
+        UrlHelpers.field_b = Js5ArchiveManager.normalizeNameForLookup(var2, -13);
         if (!param0) {
           field_b = (int[]) null;
         }

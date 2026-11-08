@@ -190,13 +190,13 @@ final class LobbyGameEntry extends SceneWidget {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void sendNameRequest(long param0, int param1, int param2) {
         int var5 = 89 / ((param1 - 3) / 62);
-        CipherPacketBuffer var4 = he.field_e;
+        CipherPacketBuffer var4 = StatusMessageHelpers.field_e;
         var4.writeOpcode((byte) -99, param2);
         var4.position = var4.position + 1;
         int var6 = var4.position;
@@ -222,26 +222,26 @@ final class LobbyGameEntry extends SceneWidget {
           RuntimeException var15_ref = null;
           try {
             UiContainer.field_z = new CipherPacketBuffer(param9);
-            he.field_e = new CipherPacketBuffer(param6);
-            md.field_c = param8;
-            ho.field_c = param10;
+            StatusMessageHelpers.field_e = new CipherPacketBuffer(param6);
+            FlagSumHelpers.field_c = param8;
+            ServerMessage.field_c = param10;
             DropTargetWidget.field_P = param2;
             ProxySocketConnector.field_q = param5;
-            fl.field_a = param13;
-            vf.field_r = param1;
+            FinalFrameHelpers.field_a = param13;
+            RawDataNode.field_r = param1;
             LinkButtonPainter.field_d = param0;
-            ng.field_G = param11;
+            TermsNoticePanel.field_G = param11;
             Js5Transport.field_d = param4;
             if (param3 != 0) {
               field_gc = (String) null;
             }
             SceneTextInput.field_Lb = param7;
-            qg.field_b = param12;
-            if (qg.field_b.field_n == null) {
+            ClientRuntimeException.field_b = param12;
+            if (ClientRuntimeException.field_b.field_n == null) {
               return;
             }
             try {
-              IntrusiveNode.field_f = new BufferedRandomAccessFile(qg.field_b.field_n, 64, 0);
+              IntrusiveNode.field_f = new BufferedRandomAccessFile(ClientRuntimeException.field_b.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class LobbyGameEntry extends SceneWidget {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(')').toString());
+            throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -276,9 +276,9 @@ final class LobbyGameEntry extends SceneWidget {
     final static SceneWidget getEntryListContent(byte param0) {
         if (param0 <= 13) {
           LobbyGameEntry.clearStatusCookieForApplet((byte) 105);
-          return nj.field_m.field_Cb;
+          return NameCheckHelpers.field_m.field_Cb;
         }
-        return nj.field_m.field_Cb;
+        return NameCheckHelpers.field_m.field_Cb;
     }
 
     LobbyGameEntry(int param0) {

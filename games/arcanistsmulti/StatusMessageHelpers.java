@@ -1,0 +1,46 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StatusMessageHelpers {
+    static CipherPacketBuffer field_e;
+    static IntrusiveDeque field_f;
+    static String field_b;
+    static String field_g;
+    static int[] field_a;
+    static String field_c;
+    static String field_d;
+
+    public static void releaseStatics(int param0) {
+        field_e = null;
+        field_b = null;
+        field_f = null;
+        field_a = null;
+        field_c = null;
+        field_g = null;
+        if (param0 == -31399) {
+          field_d = null;
+          return;
+        }
+        field_d = (String) null;
+        field_d = null;
+    }
+
+    final static void showStatusMessage(int param0, String param1) {
+        if (param0 != 1) {
+          return;
+        }
+        try {
+          FadingModalPanel.setServiceName((byte) 84, param1);
+          LobbyStateHelpers.openAccountDialog(ButtonMenuDialog.field_qb, false, param0 - 2);
+        } catch (RuntimeException runtimeException) {
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_g = "Achievements";
+        field_b = "Instructions";
+        field_c = "Private";
+        field_f = null;
+    }
+}

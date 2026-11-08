@@ -4,7 +4,7 @@
 final class IntKeyLookup {
     static String field_c;
     private int[] field_f;
-    static ri field_b;
+    static RasterSetupHelpers field_b;
     static String field_h;
     static int field_a;
     static SceneWidget field_g;
@@ -34,12 +34,12 @@ final class IntKeyLookup {
           return;
         }
         try {
-          no.attachMouseInput((java.awt.Component) ((Object) param0), 0);
+          SocialDialog.attachMouseInput((java.awt.Component) ((Object) param0), 0);
           if (null != StrongCacheEntry.field_w) {
             StrongCacheEntry.field_w.attach(-15238, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class IntKeyLookup {
         if (SoundCache.field_a > 200) {
           var5 = (-SoundCache.field_a + 250 << 8) / 50;
         }
-        fk.setSpriteRasterTarget(LoadingTracker.field_h, -23095);
+        SoundEffectVoice.setSpriteRasterTarget(LoadingTracker.field_h, -23095);
         MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
         SocialListEntry.buildLogoModelFrame(252566882);
@@ -236,14 +236,14 @@ final class IntKeyLookup {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     static {
         field_c = "RuneScape clan";
         field_h = "Unrated game";
-        field_b = new ri();
+        field_b = new RasterSetupHelpers();
         field_d = new IntrusiveDequeCursor();
         field_e = "Game interface:";
     }

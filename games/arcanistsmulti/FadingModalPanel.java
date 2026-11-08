@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class FadingModalPanel extends UiContainer {
-    static ih field_C;
+    static PointerOriginHelpers field_C;
     ModalPanelStack field_H;
     static int field_L;
     static String field_F;
@@ -28,7 +28,7 @@ abstract class FadingModalPanel extends UiContainer {
           }
           AudioService.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vi.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vi.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,20 +85,20 @@ abstract class FadingModalPanel extends UiContainer {
     abstract void drawPanel(int param0, byte param1, int param2);
 
     final void centerOnScreen(int param0, int param1, int param2) {
-        this.setBounds(param2, -param2 + mf.field_c >> 1, param0, -param0 + SoundCache.field_c >> 1, -112);
+        this.setBounds(param2, -param2 + EffectVolumeHelpers.field_c >> 1, param0, -param0 + SoundCache.field_c >> 1, -112);
         if (param1 != 0) {
           this.drawLayer((byte) -50, 71, 43, -75);
         }
     }
 
     FadingModalPanel(ModalPanelStack param0, int param1, int param2) {
-        super(-param1 + SoundCache.field_c >> 1, mf.field_c - param2 >> 1, param1, param2, (WidgetPainter) null);
+        super(-param1 + SoundCache.field_c >> 1, EffectVolumeHelpers.field_c - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_H = param0;
           this.field_G = false;
           this.field_S = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -114,26 +114,26 @@ abstract class FadingModalPanel extends UiContainer {
           super.drawLayer((byte) -76, param1, param2, param3);
           return;
         }
-        if (null == ed.field_vb) {
-          ed.field_vb = new Sprite(this.field_v, this.field_k);
+        if (null == MainMenuDialog.field_vb) {
+          MainMenuDialog.field_vb = new Sprite(this.field_v, this.field_k);
         } else {
-          if (ed.field_vb.field_q < this.field_v) {
-            ed.field_vb = new Sprite(this.field_v, this.field_k);
+          if (MainMenuDialog.field_vb.field_q < this.field_v) {
+            MainMenuDialog.field_vb = new Sprite(this.field_v, this.field_k);
           } else {
-            if (this.field_k > ed.field_vb.field_y) {
-              ed.field_vb = new Sprite(this.field_v, this.field_k);
+            if (this.field_k > MainMenuDialog.field_vb.field_y) {
+              MainMenuDialog.field_vb = new Sprite(this.field_v, this.field_k);
             }
           }
         }
         if (param0 >= -52) {
           field_E = (Sprite[]) null;
         }
-        fk.setSpriteRasterTarget(ed.field_vb, -23095);
+        SoundEffectVoice.setSpriteRasterTarget(MainMenuDialog.field_vb, -23095);
         SoftwareRasterizer.clear();
         this.drawPanel(0, (byte) -117, 0);
         super.drawLayer((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
         QuickChatCategory.popClipState(-15405);
-        ed.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
+        MainMenuDialog.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
     }
 
     boolean updateFade(byte param0) {
@@ -216,7 +216,7 @@ abstract class FadingModalPanel extends UiContainer {
         field_N = new int[]{62};
         field_F = null;
         field_J = "Unpacking music";
-        field_C = new ih();
+        field_C = new PointerOriginHelpers();
         field_R = "You are offering a rematch.";
     }
 }

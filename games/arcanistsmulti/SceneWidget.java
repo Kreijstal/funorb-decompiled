@@ -170,9 +170,9 @@ class SceneWidget extends SceneWidgetNode {
         var21 = this.field_qb + var19;
         var22 = this.field_tb + var20;
         if (!this.field_yb) {
-          gl.drawNineSliceFrame(this.field_I, this.field_V, -27327, this.field_x, var16, this.field_nb);
+          NineSliceHelpers.drawNineSliceFrame(this.field_I, this.field_V, -27327, this.field_x, var16, this.field_nb);
         } else {
-          gl.drawNineSliceFrame(param3, param6, -27327, param5, var16, param10);
+          NineSliceHelpers.drawNineSliceFrame(param3, param6, -27327, param5, var16, param10);
         }
         var23 = 32 / ((25 - param7) / 47);
         if (var17 != null) {
@@ -246,8 +246,8 @@ class SceneWidget extends SceneWidgetNode {
     }
 
     final void updateInputFullScreen(boolean param0, byte param1) {
-        fd.field_i = !param0 ? true : false;
-        ui.field_v = !param0 ? true : false;
+        CookieHelpers.field_i = !param0 ? true : false;
+        PasswordValidator.field_v = !param0 ? true : false;
         if (param1 < 28) {
           this.field_xb = (Sprite[]) null;
         }
@@ -426,7 +426,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -531,7 +531,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -639,17 +639,17 @@ class SceneWidget extends SceneWidgetNode {
         var11 = SoftwareRasterizer.field_k;
         SoftwareRasterizer.intersectClip(this.field_V, this.field_nb, this.field_V + this.field_x, this.field_nb + this.field_I);
         var12 = 0;
-        if (!fd.field_i &&
+        if (!CookieHelpers.field_i &&
           param2 &&
           WrappedTextLayout.field_r != 0 &&
-          SoftwareRasterizer.field_i <= pb.field_h &&
-          SoftwareRasterizer.field_h > pb.field_h &&
-          SoftwareRasterizer.field_c <= ja.field_s &&
-          ja.field_s < SoftwareRasterizer.field_k) {
+          SoftwareRasterizer.field_i <= QueuedResponse.field_h &&
+          SoftwareRasterizer.field_h > QueuedResponse.field_h &&
+          SoftwareRasterizer.field_c <= ConfirmedNameValidator.field_s &&
+          ConfirmedNameValidator.field_s < SoftwareRasterizer.field_k) {
           var12 = 1;
-          this.field_cb = -this.field_V + pb.field_h;
+          this.field_cb = -this.field_V + QueuedResponse.field_h;
           this.field_P = WrappedTextLayout.field_r;
-          this.field_y = -this.field_nb + ja.field_s;
+          this.field_y = -this.field_nb + ConfirmedNameValidator.field_s;
           this.field_U = WrappedTextLayout.field_r;
         } else {
           if (WrappedTextLayout.field_r != 0) {
@@ -657,7 +657,7 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_U = 0;
         }
-        stackIn_30_1 = (!ui.field_v) && (EmailLoginCredentials.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > EmailLoginCredentials.field_g) && (MenuButtonPanel.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > MenuButtonPanel.field_I);
+        stackIn_30_1 = (!PasswordValidator.field_v) && (EmailLoginCredentials.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > EmailLoginCredentials.field_g) && (MenuButtonPanel.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > MenuButtonPanel.field_I);
         this.field_A = stackIn_30_1;
         if (PacketBuffer.field_m == 0) {
           this.field_P = 0;
@@ -672,10 +672,10 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.field_A) {
-          ui.field_v = true;
+          PasswordValidator.field_v = true;
         }
         if (var12 != 0) {
-          fd.field_i = true;
+          CookieHelpers.field_i = true;
         }
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (~this.field_P != param3 &&
@@ -784,7 +784,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

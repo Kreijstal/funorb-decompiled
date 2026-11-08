@@ -8,10 +8,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (null != ResizableModalPanel.field_hb) {
-            rk.field_K = 0;
+            GradientBarButton.field_K = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,20 +21,20 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (null != ResizableModalPanel.field_hb) {
-            rf.field_o = 0;
+            HighscoreEntry.field_o = 0;
             BevelBoxPainter.field_g = param0.getX();
-            dd.field_i = param0.getY();
-            qa.field_g = true;
+            PasswordCheckHelpers.field_i = param0.getY();
+            NoticeHelpers.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,19 +47,19 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (ResizableModalPanel.field_hb != null) {
-            rf.field_o = 0;
-            bo.field_e = param0.getX();
+            HighscoreEntry.field_o = 0;
+            NameErrorHelpers.field_e = param0.getX();
             ResizableViewResizeListener.field_j = param0.getY();
-            qj.monotonicTimeMillis(-26572);
+            TimeAndInputHelpers.monotonicTimeMillis(-26572);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ValidationState.field_c = 2;
-              rk.field_K = 2;
+              GradientBarButton.field_K = 2;
             } else {
               ValidationState.field_c = 1;
-              rk.field_K = 1;
+              GradientBarButton.field_K = 1;
             }
             var2_int = param0.getModifiers();
-            qa.field_g = true;
+            NoticeHelpers.field_g = true;
             if ((var2_int & 16) == 0) {
             }
             if ((var2_int & 4) != 0) {
@@ -82,7 +82,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -96,13 +96,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (ResizableModalPanel.field_hb != null) {
-            rf.field_o = 0;
+            HighscoreEntry.field_o = 0;
             BevelBoxPainter.field_g = -1;
-            dd.field_i = -1;
-            qa.field_g = true;
+            PasswordCheckHelpers.field_i = -1;
+            NoticeHelpers.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,9 +115,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ResizableModalPanel.field_hb) {
-            rf.field_o = 0;
-            rk.field_K = 0;
-            qa.field_g = true;
+            HighscoreEntry.field_o = 0;
+            GradientBarButton.field_K = 0;
+            NoticeHelpers.field_g = true;
             var2_int = param0.getModifiers();
             if (0 != (var2_int & 16)) {
             }
@@ -141,7 +141,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -151,26 +151,26 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (ResizableModalPanel.field_hb != null) {
-            rf.field_o = 0;
+            HighscoreEntry.field_o = 0;
             BevelBoxPainter.field_g = param0.getX();
-            dd.field_i = param0.getY();
-            qa.field_g = true;
+            PasswordCheckHelpers.field_i = param0.getY();
+            NoticeHelpers.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (ResizableModalPanel.field_hb != null) {
-            rf.field_o = 0;
+            HighscoreEntry.field_o = 0;
             BevelBoxPainter.field_g = param0.getX();
-            dd.field_i = param0.getY();
-            qa.field_g = true;
+            PasswordCheckHelpers.field_i = param0.getY();
+            NoticeHelpers.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,22 +179,22 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          kj.field_c = param1.readUnsignedShort(-98) << 5;
+          PendingMessageHelpers.field_c = param1.readUnsignedShort(-98) << 5;
           var2_int = param1.readUnsignedByte((byte) 99);
           IntrusiveDequeCursor.field_j = var2_int << 18 & 1835008;
-          kj.field_c = kj.field_c + (var2_int >> 3);
+          PendingMessageHelpers.field_c = PendingMessageHelpers.field_c + (var2_int >> 3);
           int var3 = 13 / ((71 - param0) / 52);
           IntrusiveDequeCursor.field_j = IntrusiveDequeCursor.field_j + (param1.readUnsignedShort(-98) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -97);
-          fo.field_a = var2_intLifetime1 << 15 & 2064384;
+          MessageCaptionGlobals.field_a = var2_intLifetime1 << 15 & 2064384;
           IntrusiveDequeCursor.field_j = IntrusiveDequeCursor.field_j + (var2_intLifetime1 >> 6);
-          fo.field_a = fo.field_a + (param1.readUnsignedByte((byte) -93) << 7);
+          MessageCaptionGlobals.field_a = MessageCaptionGlobals.field_a + (param1.readUnsignedByte((byte) -93) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -97);
-          fo.field_a = fo.field_a + (var2_intLifetime2 >> 1);
-          qj.field_g = (1 & var2_intLifetime2) << 16;
-          qj.field_g = qj.field_g + param1.readUnsignedShort(-98);
+          MessageCaptionGlobals.field_a = MessageCaptionGlobals.field_a + (var2_intLifetime2 >> 1);
+          TimeAndInputHelpers.field_g = (1 & var2_intLifetime2) << 16;
+          TimeAndInputHelpers.field_g = TimeAndInputHelpers.field_g + param1.readUnsignedShort(-98);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "je.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "je.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             field_b = 108;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = nm.field_b.equals(Js5ArchiveManager.normalizeNameForLookup(var3, -13));
+          stackIn_3_0 = UrlHelpers.field_b.equals(Js5ArchiveManager.normalizeNameForLookup(var3, -13));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,7 +223,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -248,26 +248,26 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           ArcanistsMulti.openInfoPanel(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.getSortKey((byte) 73), (String) null, param1);
           if (param1.field_Lb && (2 == param1.field_Fb ||
-            !(qf.field_d < 2))) {
-            var9 = eo.field_c;
+            !(MembershipGlobals.field_d < 2))) {
+            var9 = PackedShortHelpers.field_c;
             var10 = CachedArchiveProvider.formatTemplate(param0 - 949002960, new String[]{param2}, LinkButtonPainter.field_i);
             var9.field_l.addAction(10, var10, (byte) -26);
           }
-          eo.field_c.addSocialActions(param0 ^ 949002929);
+          PackedShortHelpers.field_c.addSocialActions(param0 ^ 949002929);
           if (param3) {
-            if (eo.field_c.field_e != ki.field_q) {
-              var13 = eo.field_c;
+            if (PackedShortHelpers.field_c.field_e != EmailValidator.field_q) {
+              var13 = PackedShortHelpers.field_c;
               var14 = CachedArchiveProvider.formatTemplate(-50, new String[]{param2}, FixedViewResizeListener.field_f);
               var13.field_l.addAction(15, var14, (byte) -26);
             } else {
-              var11 = eo.field_c;
+              var11 = PackedShortHelpers.field_c;
               var12 = CachedArchiveProvider.formatTemplate(-50, new String[]{param2}, LoadingTracker.field_o);
               var11.field_l.addAction(16, var12, (byte) -26);
             }
           }
-          var15 = eo.field_c;
-          var5 = pb.field_h;
-          var6 = ja.field_s;
+          var15 = PackedShortHelpers.field_c;
+          var5 = QueuedResponse.field_h;
+          var6 = ConfirmedNameValidator.field_s;
           var15.field_l.openAt(0, 0, param0 - 949032396, var6, var5);
           if (param0 == 949002930) {
             return;
@@ -291,7 +291,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

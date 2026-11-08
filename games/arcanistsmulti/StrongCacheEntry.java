@@ -31,20 +31,20 @@ final class StrongCacheEntry extends CacheEntry {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void selectLanguageTexts(boolean param0, int param1) {
-        bb.field_e = fd.field_g[param1];
+        LoginLoadingHelpers.field_e = CookieHelpers.field_g[param1];
         if (param0) {
           return;
         }
         try {
           IntrusiveDeque.field_f = BufferedSocket.field_k[param1];
-          AlternateUsernameCredentials.field_o = fn.field_c[param1];
+          AlternateUsernameCredentials.field_o = GameListHelpers.field_c[param1];
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "nh.F(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "nh.F(" + param0 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class StrongCacheEntry extends CacheEntry {
         try {
           TextLine.updateChatView(param1, 121, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) runtimeException), "nh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var2), "nh.B(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "nh.B(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1), "nh.H(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "nh.H(" + param0 + ')');
         }
     }
 
@@ -126,23 +126,23 @@ final class StrongCacheEntry extends CacheEntry {
         int var4 = 0;
         String var4_ref_String = null;
         String var5 = null;
-        wa var6 = null;
-        wa var7 = null;
+        PlayerInfoPanel var6 = null;
+        PlayerInfoPanel var7 = null;
         String var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        wa var6Lifetime1;
+        PlayerInfoPanel var6Lifetime1;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var1 = UiContainer.field_z;
           var2 = var1.readUnsignedByte((byte) -107);
           if (0 == var2) {
-            if (uc.field_c == null) {
-              uc.field_c = new IntrusiveNodeHashTable(128);
-              pc.field_b = 0;
+            if (QuickChatHelpers.field_c == null) {
+              QuickChatHelpers.field_c = new IntrusiveNodeHashTable(128);
+              TexturedSpriteHelpers.field_b = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte((byte) -125) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
@@ -154,23 +154,23 @@ final class StrongCacheEntry extends CacheEntry {
               var9 != 0) {
               var5 = var1.readString(-1);
             }
-            var6 = mf.findFriendByName(-1, var4_ref_String);
+            var6 = EffectVolumeHelpers.findFriendByName(-1, var4_ref_String);
             var7_ref = var1.readString(-1);
             var8 = Js5ArchiveManager.normalizeNameForLookup((CharSequence) ((Object) var4_ref_String), -13);
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = mf.findFriendByName(-1, var7_ref);
+              var6 = EffectVolumeHelpers.findFriendByName(-1, var7_ref);
               if (var6 != null) {
-                uc.field_c.put(var6, (long)var8.hashCode(), (byte) 118);
+                QuickChatHelpers.field_c.put(var6, (long)var8.hashCode(), (byte) 118);
               }
             }
             if (null == var6) {
-              var6 = new wa();
-              uc.field_c.put(var6, (long)var8.hashCode(), (byte) 126);
-              fieldTemp$1 = pc.field_b;
-              pc.field_b = pc.field_b + 1;
+              var6 = new PlayerInfoPanel();
+              QuickChatHelpers.field_c.put(var6, (long)var8.hashCode(), (byte) 126);
+              fieldTemp$1 = TexturedSpriteHelpers.field_b;
+              TexturedSpriteHelpers.field_b = TexturedSpriteHelpers.field_b + 1;
               var6.field_Bb = fieldTemp$1;
               QuickChatCategory.field_B.addLast(var6, -1);
             }
@@ -202,13 +202,13 @@ final class StrongCacheEntry extends CacheEntry {
             }
             SpriteState.field_t = 1;
             var3 = var1.readString(-1);
-            ie.field_Nb = ((String) (var3)).intern();
+            StatusDialog.field_Nb = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 110);
-            qo.decodeChatSettings(2, var4);
+            NameHelpers.decodeChatSettings(2, var4);
             return;
           }
-          if (null == ie.field_Qb) {
-            ie.field_Qb = new IntrusiveNodeHashTable(128);
+          if (null == StatusDialog.field_Qb) {
+            StatusDialog.field_Qb = new IntrusiveNodeHashTable(128);
             LoadingTracker.field_m = 0;
           }
           var3Lifetime1 = var1.readString(-1);
@@ -221,12 +221,12 @@ final class StrongCacheEntry extends CacheEntry {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = UsernameCredentials.findEntryByName(0, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.normalizeNameForLookup((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
+              StatusDialog.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.normalizeNameForLookup((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new wa();
-            ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.normalizeNameForLookup((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
+            var6Lifetime1 = new PlayerInfoPanel();
+            StatusDialog.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.normalizeNameForLookup((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
             fieldTemp$0 = LoadingTracker.field_m;
             LoadingTracker.field_m = LoadingTracker.field_m + 1;
             var6Lifetime1.field_Bb = fieldTemp$0;
@@ -239,10 +239,10 @@ final class StrongCacheEntry extends CacheEntry {
           var6Lifetime1.field_Cb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
           var6Lifetime1.unlink(true);
-          var7 = (wa) (TextLine.field_d.first(12623));
+          var7 = (PlayerInfoPanel) (TextLine.field_d.first(12623));
           while (null != var7) {
-            if (qa.sortsBefore(false, var6Lifetime1, var7)) {
-              var7 = (wa) (TextLine.field_d.next(0));
+            if (NoticeHelpers.sortsBefore(false, var6Lifetime1, var7)) {
+              var7 = (PlayerInfoPanel) (TextLine.field_d.next(0));
               if (var9 == 0) {
                 continue;
               }
@@ -250,7 +250,7 @@ final class StrongCacheEntry extends CacheEntry {
             break;
           }
           if (var7 != null) {
-            da.insertBefore(var7, 20, var6Lifetime1);
+            MusicAndClipHelpers.insertBefore(var7, 20, var6Lifetime1);
             if (var9 == 0) {
               return;
             }
@@ -260,7 +260,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.wrapException((Throwable) ((Object) var1_ref), "nh.I(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1_ref), "nh.I(" + param0 + ')');
         }
     }
 

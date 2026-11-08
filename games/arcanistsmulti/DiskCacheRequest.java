@@ -22,59 +22,59 @@ final class DiskCacheRequest extends ArchiveRequest {
         if (!param2) {
           DiskCacheRequest.releaseStatics((byte) 111);
           if (0 == param3) {
-            if (param1 == on.field_h) {
+            if (param1 == LoginMessageTable.field_h) {
               if (param3 != 1) {
                 if (2 != param3) {
                   return;
                 }
-                if (param1 == hd.field_b) {
+                if (param1 == NameTextHelpers.field_b) {
                   return;
                 }
-                hd.field_b = param1;
-                ui.field_s = true;
-                ub.sendChatSettings(param0, false);
+                NameTextHelpers.field_b = param1;
+                PasswordValidator.field_s = true;
+                StatsSendHelpers.sendChatSettings(param0, false);
                 return;
               }
-              if (ra.field_m == param1) {
+              if (DateHelpers.field_m == param1) {
                 if (2 != param3) {
                   return;
                 }
-                if (param1 == hd.field_b) {
+                if (param1 == NameTextHelpers.field_b) {
                   return;
                 }
-                hd.field_b = param1;
-                ui.field_s = true;
-                ub.sendChatSettings(param0, false);
+                NameTextHelpers.field_b = param1;
+                PasswordValidator.field_s = true;
+                StatsSendHelpers.sendChatSettings(param0, false);
                 return;
               }
-              ui.field_s = true;
-              ra.field_m = param1;
-              ub.sendChatSettings(param0, false);
+              PasswordValidator.field_s = true;
+              DateHelpers.field_m = param1;
+              StatsSendHelpers.sendChatSettings(param0, false);
               if (2 != param3) {
                 return;
               }
-              if (param1 != hd.field_b) {
-                hd.field_b = param1;
-                ui.field_s = true;
-                ub.sendChatSettings(param0, false);
+              if (param1 != NameTextHelpers.field_b) {
+                NameTextHelpers.field_b = param1;
+                PasswordValidator.field_s = true;
+                StatsSendHelpers.sendChatSettings(param0, false);
                 return;
               }
               return;
             }
-            ui.field_s = true;
-            on.field_h = param1;
-            ub.sendChatSettings(param0, !param2 ? true : false);
+            PasswordValidator.field_s = true;
+            LoginMessageTable.field_h = param1;
+            StatsSendHelpers.sendChatSettings(param0, !param2 ? true : false);
           }
           if (param3 == 1 &&
-            ra.field_m != param1) {
-            ui.field_s = true;
-            ra.field_m = param1;
-            ub.sendChatSettings(param0, false);
+            DateHelpers.field_m != param1) {
+            PasswordValidator.field_s = true;
+            DateHelpers.field_m = param1;
+            StatsSendHelpers.sendChatSettings(param0, false);
             if (2 == param3 &&
-              param1 != hd.field_b) {
-              hd.field_b = param1;
-              ui.field_s = true;
-              ub.sendChatSettings(param0, false);
+              param1 != NameTextHelpers.field_b) {
+              NameTextHelpers.field_b = param1;
+              PasswordValidator.field_s = true;
+              StatsSendHelpers.sendChatSettings(param0, false);
               return;
             }
             return;
@@ -82,62 +82,62 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (2 != param3) {
             return;
           }
-          if (param1 == hd.field_b) {
+          if (param1 == NameTextHelpers.field_b) {
             return;
           }
-          hd.field_b = param1;
-          ui.field_s = true;
-          ub.sendChatSettings(param0, false);
+          NameTextHelpers.field_b = param1;
+          PasswordValidator.field_s = true;
+          StatsSendHelpers.sendChatSettings(param0, false);
           return;
         }
         if (0 == param3) {
-          if (param1 == on.field_h) {
+          if (param1 == LoginMessageTable.field_h) {
             if (param3 == 1 &&
-              ra.field_m != param1) {
-              ui.field_s = true;
-              ra.field_m = param1;
-              ub.sendChatSettings(param0, false);
+              DateHelpers.field_m != param1) {
+              PasswordValidator.field_s = true;
+              DateHelpers.field_m = param1;
+              StatsSendHelpers.sendChatSettings(param0, false);
               if (2 == param3 &&
-                param1 != hd.field_b) {
-                hd.field_b = param1;
-                ui.field_s = true;
-                ub.sendChatSettings(param0, false);
+                param1 != NameTextHelpers.field_b) {
+                NameTextHelpers.field_b = param1;
+                PasswordValidator.field_s = true;
+                StatsSendHelpers.sendChatSettings(param0, false);
                 return;
               }
               return;
             }
             if (2 == param3 &&
-              param1 != hd.field_b) {
-              hd.field_b = param1;
-              ui.field_s = true;
-              ub.sendChatSettings(param0, false);
+              param1 != NameTextHelpers.field_b) {
+              NameTextHelpers.field_b = param1;
+              PasswordValidator.field_s = true;
+              StatsSendHelpers.sendChatSettings(param0, false);
               return;
             }
             return;
           }
-          ui.field_s = true;
-          on.field_h = param1;
-          ub.sendChatSettings(param0, !param2 ? true : false);
+          PasswordValidator.field_s = true;
+          LoginMessageTable.field_h = param1;
+          StatsSendHelpers.sendChatSettings(param0, !param2 ? true : false);
         }
         if (param3 == 1 &&
-          ra.field_m != param1) {
-          ui.field_s = true;
-          ra.field_m = param1;
-          ub.sendChatSettings(param0, false);
+          DateHelpers.field_m != param1) {
+          PasswordValidator.field_s = true;
+          DateHelpers.field_m = param1;
+          StatsSendHelpers.sendChatSettings(param0, false);
           if (2 == param3 &&
-            param1 != hd.field_b) {
-            hd.field_b = param1;
-            ui.field_s = true;
-            ub.sendChatSettings(param0, false);
+            param1 != NameTextHelpers.field_b) {
+            NameTextHelpers.field_b = param1;
+            PasswordValidator.field_s = true;
+            StatsSendHelpers.sendChatSettings(param0, false);
             return;
           }
           return;
         }
         if (2 == param3 &&
-          param1 != hd.field_b) {
-          hd.field_b = param1;
-          ui.field_s = true;
-          ub.sendChatSettings(param0, false);
+          param1 != NameTextHelpers.field_b) {
+          NameTextHelpers.field_b = param1;
+          PasswordValidator.field_s = true;
+          StatsSendHelpers.sendChatSettings(param0, false);
           return;
         }
     }
