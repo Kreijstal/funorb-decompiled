@@ -41,11 +41,11 @@ final class PasswordValidator extends TextInputValidator {
             if (!ViewportController.field_y) {
               var5 = ModelTableScene.presstabtochat;
             } else {
-              var5 = sk.pressf10toquickchat;
+              var5 = PaletteFontLoader.pressf10toquickchat;
             }
           }
           var7 = (String) null;
-          dr.a((String) null, 11468, FreePlayRules.field_g, 0, var5);
+          LogoFinalFrameLoader.a((String) null, 11468, FreePlayRules.field_g, 0, var5);
           TimeTrialSelectScreen.field_J.capturedTextColor = (8355711 & TickClock.field_h.capturedTextColor >> 1) + (FreePlayRules.field_g - (8355711 & FreePlayRules.field_g >> 1));
           ArchiveProvider.field_i = NineBallRules.field_j;
           TimeTrialSelectScreen.field_J.activeTextColor = ((TickClock.field_h.activeTextColor & 16711423) >> 1) + (-((16711423 & FreePlayRules.field_g) >> 1) + FreePlayRules.field_g);
@@ -53,21 +53,21 @@ final class PasswordValidator extends TextInputValidator {
           CipherPacketBuffer.field_z = TimeTrialSelectScreen.field_J;
           Bzip2DecoderState.field_D = new UiComponent(0L, param4);
           IntrusiveNode.field_e = new UiComponent(0L, param3);
-          ml.field_e = new UiComponent(0L, (UiComponent) null);
-          vi.field_c = new UiComponent(0L, param1);
+          LoginMethod.field_e = new UiComponent(0L, (UiComponent) null);
+          Cp1252CharacterSupport.field_c = new UiComponent(0L, param1);
           TimeTrialSelectScreen.field_J = new UiComponent(0L, param2);
-          TimeTrialSelectScreen.field_J.font = m.field_c;
-          vi.field_c.addChild(78, TimeTrialSelectScreen.field_J);
+          TimeTrialSelectScreen.field_J.font = RatingTextState.field_c;
+          Cp1252CharacterSupport.field_c.addChild(78, TimeTrialSelectScreen.field_J);
           NineBallRules.field_j = new UiComponent(0L, ArchiveProvider.field_i);
-          vi.field_c.addChild(113, NineBallRules.field_j);
-          OptionsScreen.field_L = new UiComponent(0L, TickClock.field_h, ra.tabHidechattemporarily);
-          wn.field_g = new UiComponent(0L, TickClock.field_h);
+          Cp1252CharacterSupport.field_c.addChild(113, NineBallRules.field_j);
+          OptionsScreen.field_L = new UiComponent(0L, TickClock.field_h, IntegerRecordProtocolSupport.tabHidechattemporarily);
+          ReflectionReplySupport.field_g = new UiComponent(0L, TickClock.field_h);
           var6 = 43 % ((-44 - param0) / 45);
           Bzip2DecoderState.field_D.addChild(14, IntrusiveNode.field_e);
-          Bzip2DecoderState.field_D.addChild(-121, ml.field_e);
-          ml.field_e.addChild(-96, vi.field_c);
-          ml.field_e.addChild(127, OptionsScreen.field_L);
-          ml.field_e.addChild(43, wn.field_g);
+          Bzip2DecoderState.field_D.addChild(-121, LoginMethod.field_e);
+          LoginMethod.field_e.addChild(-96, Cp1252CharacterSupport.field_c);
+          LoginMethod.field_e.addChild(127, OptionsScreen.field_L);
+          LoginMethod.field_e.addChild(43, ReflectionReplySupport.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,13 +101,13 @@ final class PasswordValidator extends TextInputValidator {
         }
     }
 
-    final na validationStateForText(String param0, boolean param1) {
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        na stackIn_5_0 = null;
-        na stackIn_9_0 = null;
-        na stackIn_13_0 = null;
+        IntegerSyntaxSupport stackIn_5_0 = null;
+        IntegerSyntaxSupport stackIn_9_0 = null;
+        IntegerSyntaxSupport stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -119,17 +119,17 @@ final class PasswordValidator extends TextInputValidator {
           }
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_5_0 = gp.field_d;
+            stackIn_5_0 = AchievementProtocolSupport.field_d;
             return stackIn_5_0;
           }
-          if (!jd.a((byte) -122, var3, var4)) {
-            stackIn_9_0 = gp.field_d;
+          if (!Atan2Support.a((byte) -122, var3, var4)) {
+            stackIn_9_0 = AchievementProtocolSupport.field_d;
             return stackIn_9_0;
           }
           if (!this.passwordContainsEmailPart(-31894, param0)) {
             return ProxySocketConnector.field_e;
           }
-          stackIn_13_0 = gp.field_d;
+          stackIn_13_0 = AchievementProtocolSupport.field_d;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class PasswordValidator extends TextInputValidator {
             var6 = (String) null;
             this.validationMessageForText((String) null, -37);
           }
-          if (qa.a(1, var5)) {
+          if (HotspotRectangle.a(1, var5)) {
             stackIn_10_0 = IterableNodeHashTable.createAlertPasschars;
             return stackIn_10_0;
           }
@@ -259,7 +259,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_14_0;
           }
           if (this.passwordContainsEmailPart(-31894, param0)) {
-            stackIn_18_0 = l.createAlertPasscontainsemail;
+            stackIn_18_0 = ClientUiResourceState.createAlertPasscontainsemail;
             return stackIn_18_0;
           }
           if (var7.length() <= 0) {

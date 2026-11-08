@@ -10,7 +10,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_g;
     private int field_h;
     private int field_o;
-    static ie field_a;
+    static BrowserCookieSupport field_a;
     private int field_f;
     private int field_l;
     private int field_k;
@@ -33,7 +33,7 @@ final class CheckboxPainter implements WidgetPainter {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == gd.field_c) {
+          if (null == LoginTextSupport.field_c) {
             stackIn_2_0 = null;
             return (SocialListEntry) (stackIn_2_0);
           }
@@ -42,7 +42,7 @@ final class CheckboxPainter implements WidgetPainter {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (SocialListEntry) (gd.field_c.findFirst((long)var2.hashCode(), false));
+          var3 = (SocialListEntry) (LoginTextSupport.field_c.findFirst((long)var2.hashCode(), false));
           while (true) {
             if (var3 == null) {
               if (param1 == 1) {
@@ -58,7 +58,7 @@ final class CheckboxPainter implements WidgetPainter {
               var4 = var3.name;
             }
             if (!var4.equals(var2)) {
-              var3 = (SocialListEntry) (gd.field_c.findNext(param1 ^ -98));
+              var3 = (SocialListEntry) (LoginTextSupport.field_c.findNext(param1 ^ -98));
               continue;
             }
             break;
@@ -149,7 +149,7 @@ final class CheckboxPainter implements WidgetPainter {
         if (param0 != 23467) {
           return 80;
         }
-        return rl.field_a;
+        return MonotonicClock.field_a;
     }
 
     final static void a(Sprite param0, int param1) {
@@ -182,6 +182,6 @@ final class CheckboxPainter implements WidgetPainter {
 
     static {
         ratedGameTips = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
-        field_a = new ie();
+        field_a = new BrowserCookieSupport();
     }
 }

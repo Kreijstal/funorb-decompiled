@@ -4,7 +4,7 @@
 final class MusicPatch extends IntrusiveNode {
     private int[] sampleIds;
     short[] field_s;
-    kp[] envelopes;
+    MusicPatchEnvelope[] envelopes;
     byte[] field_n;
     static char[] field_o;
     static String tutorialEightBallComplete;
@@ -112,7 +112,7 @@ final class MusicPatch extends IntrusiveNode {
     MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        kp dupTemp$8 = null;
+        MusicPatchEnvelope dupTemp$8 = null;
         int incrementValue$5 = 0;
         int var25_int = 0;
         int incrementValue$4 = 0;
@@ -134,11 +134,11 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        kp[] var13 = null;
+        MusicPatchEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        kp var15_ref = null;
+        MusicPatchEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -163,19 +163,19 @@ final class MusicPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        kp var40 = null;
+        MusicPatchEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        kp var45 = null;
+        MusicPatchEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        kp var48 = null;
-        kp var49 = null;
-        kp var50 = null;
-        kp var51 = null;
-        kp var52 = null;
+        MusicPatchEnvelope var48 = null;
+        MusicPatchEnvelope var49 = null;
+        MusicPatchEnvelope var50 = null;
+        MusicPatchEnvelope var51 = null;
+        MusicPatchEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -242,7 +242,7 @@ final class MusicPatch extends IntrusiveNode {
           this.samples = new PcmSample[128];
           this.field_p = new byte[128];
           this.field_s = new short[128];
-          this.envelopes = new kp[128];
+          this.envelopes = new MusicPatchEnvelope[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
@@ -302,9 +302,9 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new kp[var12];
+          var13 = new MusicPatchEnvelope[var12];
           for (var14Lifetime1 = 0; var14Lifetime1 < var13.length; var14Lifetime1++) {
-            dupTemp$8 = new kp();
+            dupTemp$8 = new MusicPatchEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -366,7 +366,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(-112);
             }
-            this.field_s[var23] = (short)(this.field_s[var23] + (ArchiveLoadSequence.b(2, -1 + var22) << 14));
+            this.field_s[var23] = (short)(this.field_s[var23] + (ArchiveLoadSequence.bitwiseAnd(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.sampleIds[var23] = var22;
           }
@@ -421,7 +421,7 @@ final class MusicPatch extends IntrusiveNode {
                   var20Lifetime5 = -1;
                 }
               }
-              this.envelopes[var26] = (kp) (var25);
+              this.envelopes[var26] = (MusicPatchEnvelope) (var25);
               var20Lifetime5--;
             }
           }

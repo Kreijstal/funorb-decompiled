@@ -1,0 +1,40 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountTextSupport {
+    static int[] field_f;
+    static int[] field_e;
+    static boolean field_d;
+    static IntrusiveDeque field_c;
+    static String playerColonFr;
+    static String tutorialNineBallFinal;
+    static UiComponent field_b;
+
+    final static String b(boolean param0) {
+        if (!param0) {
+          return (String) null;
+        }
+        return ChatInputSupport.field_g;
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_c = null;
+        field_b = null;
+        playerColonFr = null;
+        tutorialNineBallFinal = null;
+        field_e = null;
+        if (param0) {
+          field_f = null;
+          return;
+        }
+        AccountTextSupport.b(false);
+        field_f = null;
+    }
+
+    static {
+        field_e = new int[]{16777215, 16777062, 6711039, 16737894, 10040268, 16764006, 6750054, 10053171, 3355443, 16777062, 6711039, 16737894, 10040268, 16764006, 6750054, 10053171};
+        playerColonFr = "<%0> : ";
+        field_c = new IntrusiveDeque();
+        tutorialNineBallFinal = "That concludes the Nine-ball Tutorial! Simple, eh? Press <img=3> to go to the options menu to end the tutorial.";
+    }
+}

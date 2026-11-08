@@ -140,7 +140,7 @@ class AudioOutput {
           if (this.field_s) {
             return;
           }
-          var1 = rl.monotonicTimeMillis((byte) -127);
+          var1 = MonotonicClock.monotonicTimeMillis((byte) -127);
           try {
             if (var1 > this.field_g + 6000L) {
               this.field_g = var1 - 6000L;
@@ -148,7 +148,7 @@ class AudioOutput {
             while (var1 > this.field_g + 5000L) {
               this.skipFrames(256);
               this.field_g = this.field_g + (long)(256000 / sampleRate);
-              var1 = rl.monotonicTimeMillis((byte) -120);
+              var1 = MonotonicClock.monotonicTimeMillis((byte) -120);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,7 +356,7 @@ class AudioOutput {
         if (this.rootStream != null) {
           this.rootStream.mixInto(param0, 0, param1);
         }
-        this.field_g = rl.monotonicTimeMillis((byte) -125);
+        this.field_g = MonotonicClock.monotonicTimeMillis((byte) -125);
     }
 
     private final static void resetStreamTree(PcmStream param0) {
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_e = 32;
         this.field_s = false;
-        this.field_g = rl.monotonicTimeMillis((byte) -104);
+        this.field_g = MonotonicClock.monotonicTimeMillis((byte) -104);
         this.field_b = 0L;
         this.field_d = 0L;
         this.field_c = 0;

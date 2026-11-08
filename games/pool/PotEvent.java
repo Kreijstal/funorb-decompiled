@@ -32,7 +32,7 @@ final class PotEvent extends IntrusiveNode {
             field_p = (int[]) null;
           }
           var4 = -1L;
-          nn.setBrowserCookie(var4, (byte) -120, param1, var3, var2);
+          BrowserCookieWriter.setBrowserCookie(var4, (byte) -120, param1, var3, var2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

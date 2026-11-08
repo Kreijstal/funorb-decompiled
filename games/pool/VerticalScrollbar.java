@@ -406,11 +406,11 @@ final class VerticalScrollbar extends UiComponent {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 27194) {
-          na.field_e = !param1 ? new vn(Camera.muChatGame, ProjectedLineSupport.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
+          IntegerSyntaxSupport.field_e = !param1 ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
           SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
-          SceneNode.field_k.addChild(64, na.field_e.field_i);
+          SceneNode.field_k.addChild(64, IntegerSyntaxSupport.field_e.field_i);
           SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
-          DebugTuningSupport.field_b = new UiComponent(0L, tq.field_m);
+          DebugTuningSupport.field_b = new UiComponent(0L, AccountStateQuery.field_m);
           IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
           DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
           DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
@@ -420,11 +420,11 @@ final class VerticalScrollbar extends UiComponent {
           return;
         }
         VerticalScrollbar.f((byte) 19);
-        na.field_e = !param1 ? new vn(Camera.muChatGame, ProjectedLineSupport.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
+        IntegerSyntaxSupport.field_e = !param1 ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
         SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
-        SceneNode.field_k.addChild(64, na.field_e.field_i);
+        SceneNode.field_k.addChild(64, IntegerSyntaxSupport.field_e.field_i);
         SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
-        DebugTuningSupport.field_b = new UiComponent(0L, tq.field_m);
+        DebugTuningSupport.field_b = new UiComponent(0L, AccountStateQuery.field_m);
         IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
         DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
         DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
@@ -452,18 +452,18 @@ final class VerticalScrollbar extends UiComponent {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        i var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var4 = (i) (ue.field_b.last((byte) 96));
+          var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.last((byte) 96));
           while (var4 != null) {
-            gp.a(param1, var4, -6725);
-            var4 = (i) (ue.field_b.previous((byte) -5));
+            AchievementProtocolSupport.a(param1, var4, -6725);
+            var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.previous((byte) -5));
           }
           var2 = NodeHashTableIterator.field_j.last((byte) 87);
           while (var2 != null) {
-            kp.a(param0 ^ 59, param1);
+            MusicPatchEnvelope.a(param0 ^ 59, param1);
             var2 = NodeHashTableIterator.field_j.previous((byte) -5);
           }
           if (param0 == 58) {
@@ -487,7 +487,7 @@ final class VerticalScrollbar extends UiComponent {
     }
 
     final static void h(int param0) {
-        lf.a(4, (byte) 105);
+        LoginEncryptionSupport.a(4, (byte) 105);
         if (param0 == 15158) {
           return;
         }

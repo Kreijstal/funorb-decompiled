@@ -202,16 +202,16 @@ final class IntrusiveNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static pn a(int param0, byte param1, int param2, int param3) {
+    final static ChatMessage a(int param0, byte param1, int param2, int param3) {
         boolean stackIn_47_0 = false;
         Object var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        pn var8_ref_pn;
+        ChatMessage var8_ref_pn;
         int var9;
-        pn var9_ref_pn;
+        ChatMessage var9_ref_pn;
         int var10_int;
         String var10;
         String var11;
@@ -226,11 +226,11 @@ final class IntrusiveNodeHashTable implements Iterable {
         var5 = 0;
         var6 = 0;
         for (var7 = IntrusiveDequeCursor.field_e - 1; var7 >= 0; var7--) {
-          var8_ref_pn = wb.field_e[var7];
+          var8_ref_pn = RankingsProtocolSupport.field_e[var7];
           var9 = 0;
           if (!RankingsRequest.field_z &&
             var5 < QuickChatPhraseDefinition.field_E) {
-            var10_int = f.a(5, var8_ref_pn.field_p);
+            var10_int = LobbyPanelLayoutSupport.a(5, var8_ref_pn.field_p);
             if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||
               !MenuSelection.a(var8_ref_pn.field_q, 24552))) {
               var9 = 1;
@@ -239,7 +239,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           if (var9 != 0) {
             var5++;
             if (null == var8_ref_pn.field_u ||
-              lf.field_c) {
+              LoginEncryptionSupport.field_c) {
               if (null == var8_ref_pn.field_u) {
                 MidiNoteMixer.field_r = MidiNoteMixer.field_r + 1;
               }
@@ -248,7 +248,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               var12 = QuickChatHelpDialog.a(var8_ref_pn, -55);
               var8_ref_pn.field_u = new UiComponent(0L, TickClock.field_h, var11);
               var8_ref_pn.field_u.capturedTextColor = -(var12 >> 1 & 8355711) + (var12 + ((16711423 & TickClock.field_h.capturedTextColor) >> 1));
-              var8_ref_pn.field_u.font = m.field_c;
+              var8_ref_pn.field_u.font = RatingTextState.field_c;
               var8_ref_pn.field_u.textColor = var12;
               var8_ref_pn.field_u.activeTextColor = var12 - (var12 >> 1 & 8355711) + ((TickClock.field_h.activeTextColor & 16711423) >> 1);
               var6 = var6 + param2;
@@ -259,7 +259,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; IntrusiveDequeCursor.field_e > var8; var8++) {
-          var9_ref_pn = wb.field_e[var8];
+          var9_ref_pn = RankingsProtocolSupport.field_e[var8];
           if (var9_ref_pn.field_u != null) {
             Js5ArchiveManager.field_b.content.addChild(-104, var9_ref_pn.field_u);
             var9_ref_pn.field_u.setBounds(var7Lifetime1, 2147483647, param3, var9_ref_pn.field_u.getContentWidth(true), param2);
@@ -272,13 +272,13 @@ final class IntrusiveNodeHashTable implements Iterable {
         var8Lifetime1 = Js5ArchiveManager.field_b.content.height + Js5ArchiveManager.field_b.content.remainingHeight + (-var7Lifetime1 + var6);
         Js5ArchiveManager.field_b.content.height = Js5ArchiveManager.field_b.content.height - var8Lifetime1;
         Js5ArchiveManager.field_b.content.localY = Js5ArchiveManager.field_b.content.localY + var8Lifetime1;
-        if (lf.field_c) {
+        if (LoginEncryptionSupport.field_c) {
           Js5ArchiveManager.field_b.content.height = var7Lifetime1;
         }
-        if (lf.field_c) {
-          lf.field_c = false;
+        if (LoginEncryptionSupport.field_c) {
+          LoginEncryptionSupport.field_c = false;
           Js5ArchiveManager.field_b.content.remainingY = 0;
-          gd.field_b = true;
+          LoginTextSupport.field_b = true;
           Js5ArchiveManager.field_b.content.localY = -Js5ArchiveManager.field_b.content.height + Js5ArchiveManager.field_b.viewport.height;
         }
         if (param1 > -58) {
@@ -287,16 +287,16 @@ final class IntrusiveNodeHashTable implements Iterable {
         Js5ArchiveManager.field_b.content.remainingHeight = -Js5ArchiveManager.field_b.content.height + var7Lifetime1;
         if (DualLinkNode.field_p &&
           null != Bzip2DecoderState.field_D) {
-          gd.field_b = true;
+          LoginTextSupport.field_b = true;
         }
         var9Lifetime1 = -Js5ArchiveManager.field_b.content.remainingHeight - (Js5ArchiveManager.field_b.content.height - Js5ArchiveManager.field_b.viewport.height);
-        if (gd.field_b) {
+        if (LoginTextSupport.field_b) {
           Js5ArchiveManager.field_b.content.remainingY = -Js5ArchiveManager.field_b.content.localY + var9Lifetime1;
         }
         Js5ArchiveManager.field_b.updateScroll(-1207, param0 * (2 * param2), param2, true);
         stackIn_47_0 = (Js5ArchiveManager.field_b.content.localY + Js5ArchiveManager.field_b.content.remainingY == var9Lifetime1);
-        gd.field_b = stackIn_47_0;
-        return (pn) (var4);
+        LoginTextSupport.field_b = stackIn_47_0;
+        return (ChatMessage) (var4);
     }
 
     public static void releaseStatics(int param0) {

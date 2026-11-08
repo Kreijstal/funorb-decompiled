@@ -29,7 +29,7 @@ final class LoginPayloadKind {
 
     final static boolean a(int param0, int param1, int param2) {
         if (IterableDualLinkDeque.field_a == 13) {
-          th.b(-1);
+          ChatInputSupport.b(-1);
           return true;
         }
         if (IterableDualLinkDeque.field_a == 102) {

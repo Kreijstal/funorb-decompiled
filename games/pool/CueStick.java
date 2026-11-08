@@ -18,7 +18,7 @@ final class CueStick {
 
     final static void a(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         try {
-          AlternateLongAndTextLoginPayload.a(md.field_d, ol.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, i.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
+          AlternateLongAndTextLoginPayload.a(RenderingInitializationSupport.field_d, FixedPointVectorSupport.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, AchievementSubmission.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
           if (param1) {
             ResourceArchive var5 = (ResourceArchive) null;
             CueStick.a(true, true, (ResourceArchive) null, (ResourceArchive) null);
@@ -53,8 +53,8 @@ final class CueStick {
         int[] var13 = null;
         var9 = Pool.field_O;
         try {
-          nn.a(param0, true);
-          gn.mirrorAlongZ(param0, 5);
+          BrowserCookieWriter.a(param0, true);
+          FaceBucketSupport.mirrorAlongZ(param0, 5);
           param0.computeBounds();
           while (1500 > -param0.field_V + param0.field_x) {
             for (var3_int = 0; param0.vertexCount > var3_int; var3_int++) {
@@ -66,7 +66,7 @@ final class CueStick {
             param0.computeBounds();
           }
           var13 = new int[3];
-          ln.recenterModel(var13, 0, param0);
+          ModelOriginSupport.recenterModel(var13, 0, param0);
           this.segments = new MeshBuilder[2];
           if (param1 > -96) {
             this.field_m = (ModelMesh[]) null;
@@ -166,8 +166,8 @@ final class CueStick {
             var16 = this.segments[var3].addVertex(PotEvent.a(param0 ^ 4887, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, Math.sin(3.141592653589793 * (double)var14 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, var5 - var9));
             var17 = this.segments[var3].addVertex(PotEvent.a(4885, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(param0 ^ 4887, Math.sin(2.0 * ((double)var13 * 3.141592653589793) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
             var18 = this.segments[var3].addVertex(PotEvent.a(4885, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, Math.sin(2.0 * (3.141592653589793 * (double)var14) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
-            this.segments[var3].addFace(var15, var16, var17, (byte) 1, hh.rgbToPackedHsl((byte) 95, 10053171), (byte) 0);
-            this.segments[var3].addFace(var18, var17, var16, (byte) 1, hh.rgbToPackedHsl((byte) -1, 10053171), (byte) 0);
+            this.segments[var3].addFace(var15, var16, var17, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 95, 10053171), (byte) 0);
+            this.segments[var3].addFace(var18, var17, var16, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -1, 10053171), (byte) 0);
           }
           this.segmentOffsets[var3] = var9;
           this.segments[var3].computeBounds();
@@ -234,13 +234,13 @@ final class CueStick {
           stackIn_9_1 = -79;
           stackIn_10_2 = (param0) && (!LoginPayloadKind.field_d);
           ((UiComponent) (Object) stackIn_9_0).drawRoot((byte) stackIn_9_1, stackIn_10_2);
-          stackIn_13_0 = oi.field_n;
+          stackIn_13_0 = IntegerRecordSubmission.field_n;
           stackIn_13_1 = -79;
           stackIn_14_2 = (param0) && (!LoginPayloadKind.field_d);
           ((UiComponent) (Object) stackIn_13_0).drawRoot((byte) stackIn_13_1, stackIn_14_2);
         }
         if (!(PoolMatchController.field_z <= 0) ||
-          !(nj.field_b <= 0)) {
+          !(LogoMaterial.field_b <= 0)) {
           if (null != KillerBallSkin.field_n) {
             KillerBallSkin.field_n.a(SceneNode.field_k.localX, 0);
           }
@@ -278,8 +278,8 @@ final class CueStick {
         }
         try {
           LobbyPlayer.field_Ub = param1;
-          e.field_a.children.clear((byte) 53);
-          e.field_a.addChild(-112, LobbyPlayer.field_Ub);
+          ChoiceButtonSupport.field_a.children.clear((byte) 53);
+          ChoiceButtonSupport.field_a.addChild(-112, LobbyPlayer.field_Ub);
           ArrayWidgetGroup.field_H = true;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -19,14 +19,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
         int var3;
         Sprite var4;
         var3 = Pool.field_O;
-        pn.field_l.a(0, 0);
+        ChatMessage.field_l.a(0, 0);
         if (LocalGameSetupScreen.f((byte) 109)) {
           MembershipBenefitsLoader.loadBenefitsScreenAssets(-2);
           if (!RankingsRequest.field_l) {
             for (var2 = 0; var2 < PotEvent.field_m.field_D.length; var2++) {
               if ((PotEvent.field_m.field_D[var2] & -16777216) == 0 &&
                 0 != (PotEvent.field_m.field_D[var2] & 16777215)) {
-                PotEvent.field_m.field_D[var2] = md.bitwiseOr(PotEvent.field_m.field_D[var2], -16777216);
+                PotEvent.field_m.field_D[var2] = RenderingInitializationSupport.bitwiseOr(PotEvent.field_m.field_D[var2], -16777216);
               }
             }
             RankingsRequest.field_l = true;
@@ -109,14 +109,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final void advanceScreen(int param0) {
         int var2 = 0;
         if (param0 == -1) {
-          var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.a(!StartupInterfaceSupport.a(11) ? true : false, (byte) 65);
         } else {
           MembershipBenefitsScreen.releaseStatics(false);
-          var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.a(!StartupInterfaceSupport.a(11) ? true : false, (byte) 65);
         }
         if (3 == var2) {
           if (MatchingTextValidator.field_u != null) {
-            tq.d((byte) -106);
+            AccountStateQuery.d((byte) -106);
           }
           DisplayModeSupport.openSubscribePage(NanoTickClock.getApplet(58), 2056898529);
         }

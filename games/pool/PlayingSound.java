@@ -61,7 +61,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -83,7 +83,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
                         continue scanLoop1;
@@ -99,7 +99,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -150,7 +150,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
                         continue scanLoop1;
@@ -164,7 +164,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -213,7 +213,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_16) {
                         statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
                         continue scanLoop1;
@@ -227,7 +227,7 @@ final class PlayingSound extends IntrusiveNode {
                     } catch (Throwable stateCaught_20) {
                         statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
+                            throw PlayingSound.<RuntimeException>throwUnchecked(stateCaught_20);
                         }
                         caughtException = stateCaught_20;
                         continue scanLoop1;
@@ -312,7 +312,7 @@ final class PlayingSound extends IntrusiveNode {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

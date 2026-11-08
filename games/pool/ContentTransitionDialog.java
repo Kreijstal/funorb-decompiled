@@ -258,23 +258,23 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var8 = (Ball) null;
           ContentTransitionDialog.applyBallCollisionImpulse(101, (Ball) null, (Ball) null, (byte) 35);
         }
-        var1 = LinkButtonPainter.field_a[0] * rc.field_f[0];
+        var1 = LinkButtonPainter.field_a[0] * AccountTextSupport.field_f[0];
         var17 = LimitedRandomAccessFile.field_b[0];
         if (!DebouncedValidationProvider.field_d[0]) {
           var9 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
-            var9[var5_int] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var17[var5_int], 255)];
+            var9[var5_int] = IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd((int) var17[var5_int], 255)];
           }
-          var3 = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var9);
+          var3 = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], var9);
         } else {
           var18 = StateIconLabel.field_Sb[0];
           var14 = new int[var1];
           var12 = var14;
           var5 = var12;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = md.bitwiseOr(ArchiveLoadSequence.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var17[var6])]);
+            var5[var6] = RenderingInitializationSupport.bitwiseOr(ArchiveLoadSequence.bitwiseAnd(-16777216, var18[var6] << 24), IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd(255, (int) var17[var6])]);
           }
-          var3 = new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var14);
+          var3 = new ArgbSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], var14);
         }
         OpacityWidget.h(-1);
         return (Sprite) (var3);
@@ -348,28 +348,28 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         int[] var13;
         byte[] var16;
         byte[] var17;
-        var1 = new Sprite[wf.field_d];
+        var1 = new Sprite[PacketAvailabilitySupport.field_d];
         if (param0 != 65) {
           ContentTransitionDialog.k((byte) -62);
         }
-        for (var2 = 0; wf.field_d > var2; var2++) {
-          var3 = LinkButtonPainter.field_a[var2] * rc.field_f[var2];
+        for (var2 = 0; PacketAvailabilitySupport.field_d > var2; var2++) {
+          var3 = LinkButtonPainter.field_a[var2] * AccountTextSupport.field_f[var2];
           var16 = LimitedRandomAccessFile.field_b[var2];
           if (!DebouncedValidationProvider.field_d[var2]) {
             var8 = new int[var3];
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var8[var6_int] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var16[var6_int], 255)];
+              var8[var6_int] = IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd((int) var16[var6_int], 255)];
             }
-            var1[var2] = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var8);
+            var1[var2] = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], var8);
           } else {
             var17 = StateIconLabel.field_Sb[var2];
             var13 = new int[var3];
             var11 = var13;
             var6 = var11;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = md.bitwiseOr(ArchiveLoadSequence.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var16[var7])]);
+              var6[var7] = RenderingInitializationSupport.bitwiseOr(ArchiveLoadSequence.bitwiseAnd((int) var17[var7], 255) << 24, IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd(255, (int) var16[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var13));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], var13));
           }
         }
         OpacityWidget.h(-1);

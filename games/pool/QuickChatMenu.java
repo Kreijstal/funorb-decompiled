@@ -120,7 +120,7 @@ final class QuickChatMenu extends UiComponent {
           DialogLayer.i(15975);
           return true;
         }
-        int var5 = ml.field_b;
+        int var5 = LoginMethod.field_b;
         if (var5 > 0) {
           if (var5 == ArchiveLoadStep.keycharTheCharacterUnderQuestionmark) {
             var5 = 63;
@@ -193,22 +193,22 @@ final class QuickChatMenu extends UiComponent {
             this.setExpansionTicks(-124, 0);
             this.selectedItem = param0;
             this.openSubmenu = this.submenus[this.selectedItem];
-            gf.a(this.openSubmenu, 0);
+            UsernameSuggestionSupport.attachQuickChatMenu(this.openSubmenu, 0);
             this.openSubmenu.setExpansionTicks(-84, 12);
           } else {
             if (-1 != this.messageIds[param0]) {
               var5 = this.messageIds[param0] | 32768;
-              var6 = hn.field_b;
+              var6 = CookieDateSupport.field_b;
               if (var6 == 0 &&
                 null != HighscoresScreen.field_L) {
                 var6 = 1;
               }
-              if (f.a(5, var6) == 2) {
-                om.a(1, var6, param2, (byte) -89);
+              if (LobbyPanelLayoutSupport.a(5, var6) == 2) {
+                TextInputPainter.a(1, var6, param2, (byte) -89);
               }
               var7 = (String) null;
-              AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, hn.field_b, var5);
-              Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, hn.field_b, (byte) -76, QuickChatMenuSupport.field_d);
+              AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, var5);
+              Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, (byte) -76, QuickChatMenuSupport.field_d);
               DialogLayer.i(15975);
               InputIdleSupport.resetInputIdleTimer(false);
             } else {
@@ -298,12 +298,12 @@ final class QuickChatMenu extends UiComponent {
           var12 = "</col>";
           for (var13 = 0; this.itemCount > var13; var13++) {
             if (this.shortcuts[var13] > 0) {
-              param6[var13] = var11 + ShotRecord.a(false, this.shortcuts[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ShotRecord.charToString(false, this.shortcuts[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.submenus[var13] != null ||
               this.messageIds[var13] == -1) {
-              var14 = ue.field_c;
+              var14 = StartupInterfaceSupport.field_c;
             }
             this.items[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(-126, this.items[var13]);
@@ -312,7 +312,7 @@ final class QuickChatMenu extends UiComponent {
               this.contentWidth = var15;
             }
           }
-          this.contentWidth = this.contentWidth + (ue.field_c.field_w + 10);
+          this.contentWidth = this.contentWidth + (StartupInterfaceSupport.field_c.field_w + 10);
           this.setExpansionTicks(-88, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

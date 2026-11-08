@@ -99,14 +99,14 @@ final class IntKeyLookup {
         if (param5 != 33) {
           IntKeyLookup.releaseStatics(-79);
         }
-        if (oj.c(-86)) {
+        if (HighScoreSubmission.c(-86)) {
           ShotRecord.a(param6, param3, -40960, param4);
           if (PlasmaBallSkin.field_m != null &&
             PlasmaBallSkin.field_m.handleMenuSelection(param2, param1, param4, 25427, param3)) {
             param4 = false;
             ProgressDialog.m(8421504);
           }
-          ii.a(-31668, param3, param4);
+          ProxyConnectorSupport.a(-31668, param3, param4);
           PlasmaBallSkin.a(true, param0, param4);
           param4 = false;
         }
@@ -200,7 +200,7 @@ final class IntKeyLookup {
         int var3 = 0;
         int var4 = 0;
         IntLookupQuery var4_ref_fl = null;
-        oi var5 = null;
+        IntegerRecordSubmission var5 = null;
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
@@ -229,18 +229,18 @@ final class IntKeyLookup {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-100) << (ArchiveLoadSequence.b(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-100) << (ArchiveLoadSequence.bitwiseAnd(var7, 3) << 8));
             }
             var4_ref_fl.unlink((byte) -117);
             return;
           }
           if (var2 == 1) {
             var4 = var9.readSignedSmart(param0 - 272);
-            var5 = (oi) (qr.field_a.last((byte) 68));
+            var5 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.last((byte) 68));
             while (var5 != null) {
               if (var3 != var5.field_t ||
                 var4 != var5.field_l) {
-                var5 = (oi) (qr.field_a.previous((byte) -5));
+                var5 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.previous((byte) -5));
                 continue;
               }
               break;
@@ -252,7 +252,7 @@ final class IntKeyLookup {
             var5.unlink((byte) -117);
             return;
           }
-          GrowableIntList.reportClientError((Throwable) null, "LR1: " + t.formatPacketDump(param0 ^ 159), param0 - 8754);
+          GrowableIntList.reportClientError((Throwable) null, "LR1: " + PacketDiagnosticsSupport.formatPacketDump(param0 ^ 159), param0 - 8754);
           ShotEvent.c(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

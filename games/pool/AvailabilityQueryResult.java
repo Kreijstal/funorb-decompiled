@@ -1,0 +1,109 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AvailabilityQueryResult {
+    static int field_d;
+    static int field_g;
+    static int field_b;
+    static IntrusiveDeque field_a;
+    private boolean field_e;
+    private String field_c;
+    private boolean field_f;
+
+    public static void releaseStatics(byte param0) {
+        if (param0 < 41) {
+          AvailabilityQueryResult.a(123, false);
+          field_a = null;
+          return;
+        }
+        field_a = null;
+    }
+
+    final boolean isAvailable(byte param0) {
+        int var2 = 105 / ((param0 - 0) / 60);
+        return this.field_e;
+    }
+
+    final boolean isComplete(int param0) {
+        if (param0 <= 74) {
+          this.isAvailable((byte) 103);
+          return this.field_f;
+        }
+        return this.field_f;
+    }
+
+    final String getText(int param0) {
+        if (param0 != 2) {
+          return (String) null;
+        }
+        return this.field_c;
+    }
+
+    final static void validateQueryGuard(int param0) {
+        if (param0 != 640) {
+          field_a = (IntrusiveDeque) null;
+        }
+    }
+
+    final void complete(boolean param0, byte param1) {
+        if (param1 <= 108) {
+          return;
+        }
+        this.field_e = param0 ? true : false;
+        this.field_f = true;
+    }
+
+    AvailabilityQueryResult(String param0) {
+        this.field_e = false;
+        this.field_f = false;
+        try {
+          this.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0, boolean param1) {
+        int var2;
+        int var3;
+        var3 = Pool.field_O;
+        if (UsernameSuggestionsPanel.field_V <= 0) {
+          if (!NanoTickClock.isClientConnected(-120)) {
+            var2 = 1;
+          } else {
+            var2 = 0;
+          }
+        } else {
+          if (PlasmaTableScene.field_gb == null) {
+            MatchingTextValidator.field_u = CompressedContainerSupport.openFullscreenCanvas(640, StatefulTextPainter.field_s, (byte) 0, 480, 0, 0);
+            if (null != MatchingTextValidator.field_u) {
+              var2 = 2;
+              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
+            } else {
+              var2 = 3;
+            }
+          } else {
+            MatchingTextValidator.field_u = PlasmaTableScene.field_gb.b(-71);
+            ArchiveAvailabilitySupport.notifyBrowserResize(25692, 2);
+            if (null != MatchingTextValidator.field_u) {
+              var2 = 2;
+              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
+            } else {
+              var2 = 3;
+            }
+          }
+        }
+        if (PlasmaTableScene.field_gb == null &&
+          ButtonWidget.field_J) {
+          CacheEntry.a(param1, 4, var2);
+        }
+        if (param0 == -28038) {
+          return;
+        }
+        field_a = (IntrusiveDeque) null;
+    }
+
+    static {
+        field_a = new IntrusiveDeque();
+    }
+}

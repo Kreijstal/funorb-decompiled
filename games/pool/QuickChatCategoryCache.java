@@ -135,9 +135,9 @@ final class QuickChatCategoryCache {
         return -PlasmaTableScene.field_Z + VertexNormal.field_i;
     }
 
-    final static void a(pn param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         int var2_int = 0;
-        pn var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -155,7 +155,7 @@ final class QuickChatCategoryCache {
           if (param0.field_m != 0 ||
             param0.field_e != 0) {
             for (var2_int = 0; var2_int < IntrusiveDequeCursor.field_e; var2_int++) {
-              var3 = wb.field_e[var2_int];
+              var3 = RankingsProtocolSupport.field_e[var2_int];
               if (var3.field_p == 2 &&
                 param0.field_m == var3.field_m &&
                 param0.field_e == var3.field_e) {
@@ -164,10 +164,10 @@ final class QuickChatCategoryCache {
             }
           }
           if (param0.field_d != null) {
-            hp.field_a = param0.field_b;
-            ro.field_s = param0.field_q;
+            SupportPageLauncher.field_a = param0.field_b;
+            ProjectedVertex.field_s = param0.field_q;
             DiskCacheWorker.field_g = param0.field_d;
-            hg.field_a = param0.field_p;
+            AppletContainerSupport.field_a = param0.field_p;
           }
           ClientException.a(-114, param0);
           return;
@@ -185,7 +185,7 @@ final class QuickChatCategoryCache {
         }
     }
 
-    final static pn a(byte param0, boolean param1) {
+    final static ChatMessage a(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
@@ -203,16 +203,16 @@ final class QuickChatCategoryCache {
         var2 = var8;
         var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
-        qg.field_d = stackIn_3_0;
+        VertexTransformSupport.field_d = stackIn_3_0;
         MeshBase.field_d = var3 & 127;
         AimTarget.field_e = var8.readUnsignedByte(-105);
-        qg.field_c = var8.readLong(-412303328);
+        VertexTransformSupport.field_c = var8.readLong(-412303328);
         if (2 != MeshBase.field_d) {
-          m.field_e = 0;
-          wq.field_a = 0;
+          RatingTextState.field_e = 0;
+          PacketDecodeState.field_a = 0;
         } else {
-          wq.field_a = var8.readUnsignedShort(-1034);
-          m.field_e = var8.readUnsignedMedium(98);
+          PacketDecodeState.field_a = var8.readUnsignedShort(-1034);
+          RatingTextState.field_e = var8.readUnsignedMedium(98);
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -226,15 +226,15 @@ final class QuickChatCategoryCache {
           ArchiveProvider.field_f = var8.j(param0 ^ 82);
         }
         if (MeshBase.field_d == 1) {
-          pp.field_b = var8.readUnsignedShort(-1034);
-          tp.field_g = var8.j(-49);
+          MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
+          LookupRetrySupport.field_g = var8.j(-49);
         } else {
           if (4 == MeshBase.field_d) {
-            pp.field_b = var8.readUnsignedShort(-1034);
-            tp.field_g = var8.j(-49);
+            MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
+            LookupRetrySupport.field_g = var8.j(-49);
           } else {
-            pp.field_b = 0;
-            tp.field_g = null;
+            MeshColorSupport.field_b = 0;
+            LookupRetrySupport.field_g = null;
           }
         }
         if (param1) {
@@ -259,7 +259,7 @@ final class QuickChatCategoryCache {
           SectorCacheStore.field_a = DisplayModeSupport.a(var8, 80, true);
           DebugTuningSlider.field_p = null;
         }
-        return new pn(param1);
+        return new ChatMessage(param1);
     }
 
     final QuickChatCategoryDefinition a(byte param0, int param1) {
@@ -332,7 +332,7 @@ final class QuickChatCategoryCache {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static pn $cfr$intArgs$a$9af18640dc82(int param0, boolean param1) {
+    final static ChatMessage $cfr$intArgs$a$9af18640dc82(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
@@ -350,16 +350,16 @@ final class QuickChatCategoryCache {
         var2 = var8;
         var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
-        qg.field_d = stackIn_3_0;
+        VertexTransformSupport.field_d = stackIn_3_0;
         MeshBase.field_d = var3 & 127;
         AimTarget.field_e = var8.readUnsignedByte(-105);
-        qg.field_c = var8.readLong(-412303328);
+        VertexTransformSupport.field_c = var8.readLong(-412303328);
         if (2 != MeshBase.field_d) {
-          m.field_e = 0;
-          wq.field_a = 0;
+          RatingTextState.field_e = 0;
+          PacketDecodeState.field_a = 0;
         } else {
-          wq.field_a = var8.readUnsignedShort(-1034);
-          m.field_e = var8.readUnsignedMedium(98);
+          PacketDecodeState.field_a = var8.readUnsignedShort(-1034);
+          RatingTextState.field_e = var8.readUnsignedMedium(98);
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -373,15 +373,15 @@ final class QuickChatCategoryCache {
           ArchiveProvider.field_f = var8.j(param0 ^ 82);
         }
         if (MeshBase.field_d == 1) {
-          pp.field_b = var8.readUnsignedShort(-1034);
-          tp.field_g = var8.j(-49);
+          MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
+          LookupRetrySupport.field_g = var8.j(-49);
         } else {
           if (4 == MeshBase.field_d) {
-            pp.field_b = var8.readUnsignedShort(-1034);
-            tp.field_g = var8.j(-49);
+            MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
+            LookupRetrySupport.field_g = var8.j(-49);
           } else {
-            pp.field_b = 0;
-            tp.field_g = null;
+            MeshColorSupport.field_b = 0;
+            LookupRetrySupport.field_g = null;
           }
         }
         if (param1) {
@@ -406,6 +406,6 @@ final class QuickChatCategoryCache {
           SectorCacheStore.field_a = DisplayModeSupport.a(var8, 80, true);
           DebugTuningSlider.field_p = null;
         }
-        return new pn(param1);
+        return new ChatMessage(param1);
     }
 }

@@ -18,11 +18,11 @@ final class KillerBallSkin extends BallSkin {
         Object var4 = null;
         RuntimeException var4_ref = null;
         try {
-          if (ij.field_u != param3) {
+          if (AnimatedNotification.field_u != param3) {
             var4 = RankingsScreen.field_N;
             synchronized (var4) {
               RankingsScreen.field_N.setChannelVolumeScale((byte) -121, -1, 256);
-              ij.field_u = param3;
+              AnimatedNotification.field_u = param3;
               RankingsScreen.field_N.loadScoreAndResetSynthesis(param3, param1, (byte) -14, param2);
             }
           }
@@ -226,7 +226,7 @@ final class KillerBallSkin extends BallSkin {
     final static void b(int param0, byte param1) {
         int var2 = 99 % ((-11 - param1) / 49);
         ArrayWidgetGroup.field_M = ArrayWidgetGroup.field_M + param0;
-        tq.field_q = (Js5Transport.field_q.field_y + sa.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
+        AccountStateQuery.field_q = (Js5Transport.field_q.field_y + CollisionContact.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
     }
 
     final void loadBallMeshes(ResourceArchive param0, byte param1) {

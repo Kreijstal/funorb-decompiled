@@ -112,7 +112,7 @@ abstract class IndexedSpriteState {
             for (var8Lifetime1 = param2; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = NetworkGameClient.field_H[var8Lifetime1];
               var10Lifetime1 = NetworkGameClient.field_H[var8Lifetime1 + 1];
-              if (he.a(var9Lifetime1, param6, var10Lifetime1, 0)) {
+              if (CanvasInputSupport.a(var9Lifetime1, param6, var10Lifetime1, 0)) {
                 NetworkGameClient.field_H[var8Lifetime1] = var10Lifetime1;
                 NetworkGameClient.field_H[var8Lifetime1 + 1] = var9Lifetime1;
               }

@@ -67,8 +67,8 @@ final class EightBallRules extends GameRules {
           var6_int = 8 + param1 + 8 + 487 + param3;
           ProgressDialog.field_hb.setBounds(3, 2147483647, 3, var6_int - 6, IntLookupQuery.field_q.height - 6);
           var7 = -5 + ProgressDialog.field_hb.height;
-          ph.field_d.setBounds(-param2 + var7, 2147483647, 5, param3 + 2 + 485 + param1, param2);
-          TimeTrialSelectScreen.field_J.setBounds(0, 2147483647, param1, -param1 + (ph.field_d.width - NineBallRules.field_j.width), param2);
+          AccountProtocolStage.field_d.setBounds(-param2 + var7, 2147483647, 5, param3 + 2 + 485 + param1, param2);
+          TimeTrialSelectScreen.field_J.setBounds(0, 2147483647, param1, -param1 + (AccountProtocolStage.field_d.width - NineBallRules.field_j.width), param2);
           NineBallRules.field_j.setBounds(0, 2147483647, param1 + TimeTrialSelectScreen.field_J.width, NineBallRules.field_j.width, param2);
           var7 = var7 - (2 + param2);
           Js5ArchiveManager.field_b.setScrollPaneBounds(param3, -5 + var7, (byte) -112, 2, param3 + 2 + (485 + param1), 5, 5);
@@ -84,15 +84,15 @@ final class EightBallRules extends GameRules {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              il.field_g[var12] != null) {
+              BeveledFrameSpriteFactory.field_g[var12] != null) {
               var13 = var11 * (-6 + (IntLookupQuery.field_q.height + 2)) / (AchievementNotice.field_m + 1) + 3;
               var11++;
               var7Lifetime1 = -var13 + 1 + (2 + (-6 + IntLookupQuery.field_q.height)) * var11 / (1 + AchievementNotice.field_m);
               if (5 > var12) {
-                il.field_g[var12].setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
-                ln.field_v[var12].setBounds(0, param4 ^ 2147483611, param1, var9 - param1, var7Lifetime1);
+                BeveledFrameSpriteFactory.field_g[var12].setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
+                ModelOriginSupport.field_v[var12].setBounds(0, param4 ^ 2147483611, param1, var9 - param1, var7Lifetime1);
                 AlignedIconLabel.field_Mb[var12].setBounds(param5, 2147483647, var9, param0, var7Lifetime1 - param5 - param5);
-                ta.field_b[var12].setBounds(param5, 2147483647, var10, -var10 + var8 - param1, -param5 + (var7Lifetime1 - param5));
+                GradientPaletteSupport.field_b[var12].setBounds(param5, 2147483647, var10, -var10 + var8 - param1, -param5 + (var7Lifetime1 - param5));
               } else {
                 MeshBoundsSupport.field_e.setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
               }
@@ -188,8 +188,8 @@ final class EightBallRules extends GameRules {
         if (param0 > -25) {
           return;
         }
-        DraggableWidget.field_S[10] = dq.field_a.groupName((byte) 96, 0);
-        DraggableWidget.field_S[11] = dq.field_a.groupName((byte) 40, 1);
+        DraggableWidget.field_S[10] = TransformRotationSupport.field_a.groupName((byte) 96, 0);
+        DraggableWidget.field_S[11] = TransformRotationSupport.field_a.groupName((byte) 40, 1);
     }
 
     final int defaultBallInHandMode(int param0) {
@@ -433,7 +433,7 @@ final class EightBallRules extends GameRules {
                 stackIn_99_1 = 0;
               }
               var4 = stackIn_98_0 | stackIn_99_1;
-              var4 = var4 | i.field_m;
+              var4 = var4 | AchievementSubmission.field_m;
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -441,10 +441,10 @@ final class EightBallRules extends GameRules {
               var11 = 3 & var10;
               if (var11 != 0) {
                 if (var11 == 1) {
-                  var4 = var4 | (ClientException.field_b | i.field_m);
+                  var4 = var4 | (ClientException.field_b | AchievementSubmission.field_m);
                 }
               } else {
-                var4 = var4 | i.field_m;
+                var4 = var4 | AchievementSubmission.field_m;
                 this.assignGroups((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
               }
               if ((8 & var10) == 8) {
@@ -482,7 +482,7 @@ final class EightBallRules extends GameRules {
         if (param1 != -32) {
           field_e = -117;
         }
-        return uj.field_a;
+        return WorldPointProjectionSupport.field_a;
     }
 
     private final boolean areSameGroup(int param0, int param1, byte param2) {
@@ -604,7 +604,7 @@ final class EightBallRules extends GameRules {
           ShotRecord var3 = (ShotRecord) null;
           this.nextPlayerIndex((ShotRecord) null, (byte) 56);
         }
-        return ThemeSelectScreen.field_O | ll.field_f;
+        return ThemeSelectScreen.field_O | BrowserUrlSupport.field_f;
     }
 
     private final int p(int param0) {
@@ -617,22 +617,22 @@ final class EightBallRules extends GameRules {
     }
 
     final static void a(int param0, boolean param1) {
-        oi var3 = null;
+        IntegerRecordSubmission var3 = null;
         IntLookupQuery var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var3 = (oi) (qr.field_a.last((byte) 69));
+          var3 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.last((byte) 69));
           while (var3 != null) {
-            ra.a(param0, var3, -102);
-            var3 = (oi) (qr.field_a.previous((byte) -5));
+            IntegerRecordProtocolSupport.a(param0, var3, -102);
+            var3 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.previous((byte) -5));
           }
           if (!param1) {
             return;
           }
           var4 = (IntLookupQuery) (TutorialFactory.field_g.last((byte) 83));
           while (var4 != null) {
-            pm.a(var4, param0, true);
+            SceneNodeEntry.a(var4, param0, true);
             var4 = (IntLookupQuery) (TutorialFactory.field_g.previous((byte) -5));
           }
           return;
@@ -755,22 +755,22 @@ final class EightBallRules extends GameRules {
             stackIn_6_0 = ClassicBallSkin.field_n;
             return stackIn_6_0;
           }
-          if (dq.field_a instanceof ClassicBallSkin) {
+          if (TransformRotationSupport.field_a instanceof ClassicBallSkin) {
             var3_int = param0.groupBefore;
             if (0 == var3_int) {
-              stackIn_15_0 = dq.field_a.field_e[1];
+              stackIn_15_0 = TransformRotationSupport.field_a.field_e[1];
               return stackIn_15_0;
             }
             if (var3_int == 1) {
-              stackIn_17_0 = dq.field_a.field_e[10];
+              stackIn_17_0 = TransformRotationSupport.field_a.field_e[10];
               return stackIn_17_0;
             }
             if (var3_int == 2) {
-              stackIn_19_0 = dq.field_a.field_e[8];
+              stackIn_19_0 = TransformRotationSupport.field_a.field_e[8];
               return stackIn_19_0;
             }
           }
-          stackIn_21_0 = dq.field_a.field_e[param0.groupBefore];
+          stackIn_21_0 = TransformRotationSupport.field_a.field_e[param0.groupBefore];
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -928,7 +928,7 @@ final class EightBallRules extends GameRules {
         if (param0 != -30) {
           this.initialGroup(-100);
         }
-        return ThemeSelectScreen.field_O | ll.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
+        return ThemeSelectScreen.field_O | BrowserUrlSupport.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
     }
 
     final String joinPlayerNames(int param0, String[] param1) {
@@ -952,7 +952,7 @@ final class EightBallRules extends GameRules {
             return (String) (stackIn_3_0);
           }
           if (2 == this.field_d.playerCount) {
-            stackIn_16_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, w.playerVsPlayer);
+            stackIn_16_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, GrowableIntListFactory.playerVsPlayer);
             return stackIn_16_0;
           }
           var3_int = param1.length >> 1;
@@ -1013,9 +1013,9 @@ final class EightBallRules extends GameRules {
         }
         param1 = param1 & 8191;
         if (param1 < 4096) {
-          return param1 >= 2048 ? wf.field_b[-param1 + 4096] : wf.field_b[param1];
+          return param1 >= 2048 ? PacketAvailabilitySupport.field_b[-param1 + 4096] : PacketAvailabilitySupport.field_b[param1];
         }
-        return param1 < 6144 ? -wf.field_b[-4096 + param1] : -wf.field_b[8192 - param1];
+        return param1 < 6144 ? -PacketAvailabilitySupport.field_b[-4096 + param1] : -PacketAvailabilitySupport.field_b[8192 - param1];
     }
 
     final void readRulesState(PacketBuffer param0, boolean param1) {
@@ -1037,11 +1037,11 @@ final class EightBallRules extends GameRules {
             this.field_g[1] = -1;
           }
           if (null != this.field_f) {
-            this.field_f[0] = ArchiveLoadSequence.b(7, var3_int);
+            this.field_f[0] = ArchiveLoadSequence.bitwiseAnd(7, var3_int);
             if (this.field_f[0] == 7) {
               this.field_f[0] = -1;
             }
-            this.field_f[1] = ArchiveLoadSequence.b(var3_int, 63) >> 3;
+            this.field_f[1] = ArchiveLoadSequence.bitwiseAnd(var3_int, 63) >> 3;
             if (this.field_f[1] != 7) {
               return;
             }

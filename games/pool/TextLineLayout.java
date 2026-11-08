@@ -67,11 +67,11 @@ final class TextLineLayout {
         }
     }
 
-    final static ij a(String param0, byte param1, String param2, int param3) {
-        ij var4 = null;
+    final static AnimatedNotification a(String param0, byte param1, String param2, int param3) {
+        AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
-        ij stackIn_10_0 = null;
-        ij stackIn_12_0 = null;
+        AnimatedNotification stackIn_10_0 = null;
+        AnimatedNotification stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -86,11 +86,11 @@ final class TextLineLayout {
             stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);
             return stackIn_12_0;
           }
-          var4 = (ij) (MarkerSliderPainter.field_i.last((byte) -88));
+          var4 = (AnimatedNotification) (MarkerSliderPainter.field_i.last((byte) -88));
           if (param3 == var4.field_m &&
-            var4.field_H <= kg.field_m &&
-            var4.field_H + var4.field_B > kg.field_m) {
-            kg.field_m = var4.field_H;
+            var4.field_H <= ByteRecordSubmission.field_m &&
+            var4.field_H + var4.field_B > ByteRecordSubmission.field_m) {
+            ByteRecordSubmission.field_m = var4.field_H;
           }
           stackIn_10_0 = var4;
           return stackIn_10_0;

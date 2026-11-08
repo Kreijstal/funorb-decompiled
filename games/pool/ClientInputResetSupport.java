@@ -9,9 +9,9 @@ final class ClientInputResetSupport {
     static int field_b;
 
     final static void resetClientInput(byte param0) {
-        tq.d((byte) -128);
+        AccountStateQuery.d((byte) -128);
         if (TimeTrialSelectScreen.field_K != null) {
-          he.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
+          CanvasInputSupport.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
         }
         LimitedRandomAccessFile.a(-22444);
         int var1 = 8 / ((param0 + 12) / 55);

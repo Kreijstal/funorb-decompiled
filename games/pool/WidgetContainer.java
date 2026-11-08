@@ -249,7 +249,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void a(boolean param0, oj param1, int param2) {
+    final static void a(boolean param0, HighScoreSubmission param1, int param2) {
         int var5 = 0;
         CipherPacketBuffer stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
@@ -532,7 +532,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = TextInputWidget.decodeBase37Name(param0, td.encodeBase37((byte) 52, param1));
+          var2 = TextInputWidget.decodeBase37Name(param0, Base37Support.encodeBase37((byte) 52, param1));
           if (param0) {
             field_J = (int[]) null;
           }
@@ -581,7 +581,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           while (var4 != null) {
             if (var4.hasKeyboardFocus(-108)) {
               var5 = new IntrusiveDequeCursor(this.children);
-              var5.a(var4, param1 ^ -123);
+              var5.firstFrom(var4, param1 ^ -123);
               var6 = (UiWidget) (var5.next((byte) -71));
               while (var6 != null) {
                 if (var6.requestKeyboardFocus(param0, (byte) 73)) {
@@ -620,7 +620,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             field_H = 62;
           }
           if (!param1) {
-            stackIn_6_0 = dq.field_f.b(param0);
+            stackIn_6_0 = TransformRotationSupport.field_f.b(param0);
             return stackIn_6_0;
           }
           stackIn_4_0 = ProgressBarWidget.field_R.b(param0);

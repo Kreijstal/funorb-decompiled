@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SocketArchiveNetworkClient extends Js5Transport {
-    static ml field_v;
+    static LoginMethod field_v;
     static UiComponent field_x;
     static int field_u;
     private BufferedSocket socket;
@@ -100,8 +100,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           }
           var9 = param4.wrapText(param2, new int[]{param1}, var8);
           var10 = param2.toLowerCase();
-          for (var11 = 0; var11 < lb.field_P.length; var11++) {
-            var12 = lb.field_P[var11];
+          for (var11 = 0; var11 < DimmedPauseMenu.field_P.length; var11++) {
+            var12 = DimmedPauseMenu.field_P[var11];
             for (var13 = 0; var12.length > var13; var13++) {
               var14 = var12[var13];
               if (var14 != null) {
@@ -332,7 +332,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             if (param0 <= 8) {
               return;
             }
-            this.field_d = rl.monotonicTimeMillis((byte) -117);
+            this.field_d = MonotonicClock.monotonicTimeMillis((byte) -117);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -390,7 +390,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           NetworkArchiveRequest var2Lifetime1;
           var16 = Pool.field_O;
           if (null != this.socket) {
-            var2_long = rl.monotonicTimeMillis((byte) -126);
+            var2_long = MonotonicClock.monotonicTimeMillis((byte) -126);
             var4 = (int)(-this.field_d + var2_long);
             this.field_d = var2_long;
             if (200 < var4) {
@@ -698,45 +698,45 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             return 4;
           }
           try {
-            if (rl.field_e == 0) {
-              AudioService.field_c = ButtonWidget.field_M.openSocket(AccountWelcomePanel.field_X, na.field_a, 0);
-              rl.field_e = rl.field_e + 1;
+            if (MonotonicClock.field_e == 0) {
+              AudioService.field_c = ButtonWidget.field_M.openSocket(AccountWelcomePanel.field_X, IntegerSyntaxSupport.field_a, 0);
+              MonotonicClock.field_e = MonotonicClock.field_e + 1;
             }
-            if (rl.field_e == 1) {
+            if (MonotonicClock.field_e == 1) {
               if (AudioService.field_c.field_f == 2) {
                 stackIn_14_0 = Under13NoticePanel.a(false, -1);
                 return stackIn_14_0;
               }
               if (AudioService.field_c.field_f == 1) {
-                rl.field_e = rl.field_e + 1;
+                MonotonicClock.field_e = MonotonicClock.field_e + 1;
               }
             }
-            if (2 == rl.field_e) {
-              dq.field_h = new BufferedSocket((java.net.Socket) (AudioService.field_c.field_e), ButtonWidget.field_M);
+            if (2 == MonotonicClock.field_e) {
+              TransformRotationSupport.field_h = new BufferedSocket((java.net.Socket) (AudioService.field_c.field_e), ButtonWidget.field_M);
               var2 = new PacketBuffer(13);
-              ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, om.field_v, UiWidget.field_B);
+              ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, TextInputPainter.field_v, UiWidget.field_B);
               var2.writeByte(15, false);
               var2.writeInt(true, SpaceObject.field_f);
-              dq.field_h.a(var2.payload, (byte) 72, 13, 0);
-              rl.field_e = rl.field_e + 1;
-              MembershipBenefitsLoader.field_d = rl.monotonicTimeMillis((byte) -105) + 30000L;
+              TransformRotationSupport.field_h.a(var2.payload, (byte) 72, 13, 0);
+              MonotonicClock.field_e = MonotonicClock.field_e + 1;
+              MembershipBenefitsLoader.field_d = MonotonicClock.monotonicTimeMillis((byte) -105) + 30000L;
             }
-            if (rl.field_e == 3) {
-              if (0 < dq.field_h.readByte(72)) {
-                var1_int = dq.field_h.a(14528);
+            if (MonotonicClock.field_e == 3) {
+              if (0 < TransformRotationSupport.field_h.readByte(72)) {
+                var1_int = TransformRotationSupport.field_h.a(14528);
                 if (var1_int != 0) {
                   stackIn_27_0 = Under13NoticePanel.a(false, var1_int);
                   return stackIn_27_0;
                 }
-                rl.field_e = rl.field_e + 1;
+                MonotonicClock.field_e = MonotonicClock.field_e + 1;
               } else {
-                if (rl.monotonicTimeMillis((byte) -110) > MembershipBenefitsLoader.field_d) {
+                if (MonotonicClock.monotonicTimeMillis((byte) -110) > MembershipBenefitsLoader.field_d) {
                   stackIn_24_0 = Under13NoticePanel.a(false, -2);
                   return stackIn_24_0;
                 }
               }
             }
-            if (rl.field_e != 4) {
+            if (MonotonicClock.field_e != 4) {
               if (param0 == -27108) {
                 stackIn_36_0 = -1;
                 return stackIn_36_0;
@@ -744,10 +744,10 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               stackIn_34_0 = -29;
               return stackIn_34_0;
             }
-            GameRules.field_c.attachConnection(101, sa.field_k, dq.field_h);
+            GameRules.field_c.attachConnection(101, CollisionContact.field_k, TransformRotationSupport.field_h);
             AudioService.field_c = null;
-            rl.field_e = 0;
-            dq.field_h = null;
+            MonotonicClock.field_e = 0;
+            TransformRotationSupport.field_h = null;
             stackIn_31_0 = 0;
             return stackIn_31_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -763,6 +763,6 @@ final class SocketArchiveNetworkClient extends Js5Transport {
     }
 
     static {
-        field_v = new ml("usename");
+        field_v = new LoginMethod("usename");
     }
 }

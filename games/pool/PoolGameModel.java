@@ -353,7 +353,7 @@ final class PoolGameModel {
             }
             var4_int = 0;
           }
-          if ((param2.endResolution & ll.field_f) != 0) {
+          if ((param2.endResolution & BrowserUrlSupport.field_f) != 0) {
             var4_int = 1;
           }
           if ((ArchiveAvailabilitySupport.field_g & param2.endResolution) != 0) {
@@ -405,7 +405,7 @@ final class PoolGameModel {
         long var4;
         long var6;
         ShotRecord var8;
-        hh.field_e = 0;
+        PackedColorSupport.field_e = 0;
         for (var2 = 0; this.balls.length > var2; var2++) {
           if (this.balls[var2].inPlay) {
             for (var3 = var2 + 1; this.balls.length > var3; var3++) {
@@ -415,9 +415,9 @@ final class PoolGameModel {
                 var4 = FullscreenFocusCanvas.multiplyFixedChecked(var4, var4, false);
                 var6 = FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false);
                 if (var4 + var6 < 16777216L) {
-                  DropTargetWidget.field_N[hh.field_e][0] = var2;
-                  DropTargetWidget.field_N[hh.field_e][1] = var3;
-                  hh.field_e = hh.field_e + 1;
+                  DropTargetWidget.field_N[PackedColorSupport.field_e][0] = var2;
+                  DropTargetWidget.field_N[PackedColorSupport.field_e][1] = var3;
+                  PackedColorSupport.field_e = PackedColorSupport.field_e + 1;
                 }
               }
             }
@@ -622,9 +622,9 @@ final class PoolGameModel {
           var10 = 0;
           var11 = 0;
           while (true) {
-            if (hh.field_e > 0) {
+            if (PackedColorSupport.field_e > 0) {
               var12 = 0;
-              for (var13 = 0; var13 < hh.field_e; var13++) {
+              for (var13 = 0; var13 < PackedColorSupport.field_e; var13++) {
                 if (param4 == DropTargetWidget.field_N[var13][0] ||
                   param4 == DropTargetWidget.field_N[var13][1]) {
                   var12++;
@@ -762,14 +762,14 @@ final class PoolGameModel {
                       if (0L == (LinkButtonPainter.field_i & 16L)) {
                         return false;
                       }
-                      ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.a(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
                 }
                 if (((AccountContentDialog.field_ub != null)) &&
                   ((0L != (16L & LinkButtonPainter.field_i)))) {
-                  ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
+                  ViewportController.a(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -802,7 +802,7 @@ final class PoolGameModel {
                     var29 = (long)DisplayModeSupport.field_e[2] + var23 * (long)DisplayModeSupport.field_e[11];
                     if (null != AccountContentDialog.field_ub &&
                       (LinkButtonPainter.field_i & 16L) != 0L) {
-                      ViewportController.a(ol.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.a(FixedPointVectorSupport.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
@@ -818,7 +818,7 @@ final class PoolGameModel {
                   var31 = (long)DisplayModeSupport.field_e[11] * var25 + (long)DisplayModeSupport.field_e[2];
                   if (null != AccountContentDialog.field_ub &&
                     (LinkButtonPainter.field_i & 16L) != 0L) {
-                    ViewportController.a(ol.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
+                    ViewportController.a(FixedPointVectorSupport.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
                   }
                   return false;
                 }
@@ -887,7 +887,7 @@ final class PoolGameModel {
             var7 = var5 >> 8;
             var8 = var6 * var6 + var7 * var7;
             if (var8 > 31690296) {
-              var9 = rf.inverseSquareRoot(var8, -122);
+              var9 = AccountDisplayNameSupport.inverseSquareRoot(var8, -122);
               var10.positionY = (var5 / (var9 >> 8) << 8) + 9437184;
               var10.positionX = (var4 / (var9 >> 8) << 8) + 9437184;
             }
@@ -1179,11 +1179,11 @@ final class PoolGameModel {
         if (9216 < var5) {
           throw new IllegalStateException("Strike point out of range! " + var3.field_D + "," + var3.field_H);
         }
-        int var6 = -rf.inverseSquareRoot(-(var5 << 2) + 65536, -121) >> 9;
+        int var6 = -AccountDisplayNameSupport.inverseSquareRoot(-(var5 << 2) + 65536, -121) >> 9;
         int var7 = ScrollPaneWithFooter.sine((int) var3.elevation, true);
-        int var8 = hc.cosine(2047, (int) var3.elevation);
+        int var8 = SceneNodeFactory.cosine(2047, (int) var3.elevation);
         int var9 = ScrollPaneWithFooter.sine((int) var3.aimAngle, true);
-        int var10 = hc.cosine(2047, (int) var3.aimAngle);
+        int var10 = SceneNodeFactory.cosine(2047, (int) var3.aimAngle);
         int var11 = var9;
         int var12 = -var10;
         int var13 = NameEntryPopup.a(var7, false, -var12);
@@ -1209,7 +1209,7 @@ final class PoolGameModel {
         if (GameRules.field_b == MatchingTextValidator.field_w) {
           return;
         }
-        if (ShotEvent.a(true, MatchingTextValidator.field_w)) {
+        if (ShotEvent.isNonnegative(true, MatchingTextValidator.field_w)) {
           DisplayModeSupport.field_c[MatchingTextValidator.field_w].onExit((byte) -6);
         }
         MatchingTextValidator.field_w = GameRules.field_b;
@@ -1219,20 +1219,20 @@ final class PoolGameModel {
           ContextMenu.field_Sb = false;
         }
         ThemeSelectScreen.field_P = 0;
-        TranslatedUiText.field_d = jc.field_c;
+        TranslatedUiText.field_d = AppletUrlSupport.field_c;
         int var1 = -44 % ((-83 - param0) / 40);
         if (ProxyAuthenticationRequiredException.field_a) {
-          ti.field_d = null;
+          DebugSliderInputSupport.field_d = null;
           ArchiveIndex.field_l = new IntrusiveDeque();
-          ClientException.field_g = ek.a(124);
-          hp.field_c = ek.a(-110);
+          ClientException.field_g = MenuSelectionSupport.createEmptyGameStateWords(124);
+          SupportPageLauncher.field_c = MenuSelectionSupport.createEmptyGameStateWords(-110);
           ProxyAuthenticationRequiredException.field_a = false;
         }
-        if (l.field_a) {
+        if (ClientUiResourceState.field_a) {
           DialogLayer.a(true);
-          mj.b(0);
+          TransformSupport.b(0);
           DialogLayer.l(-121);
-          l.field_a = false;
+          ClientUiResourceState.field_a = false;
         }
     }
 
@@ -1367,7 +1367,7 @@ final class PoolGameModel {
         var7 = 1;
         var8 = 1;
         var9 = 1;
-        var10 = hc.cosine(2047, 170) * 16;
+        var10 = SceneNodeFactory.cosine(2047, 170) * 16;
         do {
           var11 = 0;
           scanLoop1: while (true) {
@@ -1533,33 +1533,33 @@ final class PoolGameModel {
         var13 = Pool.field_O;
         try {
           DelayedServerPacket.field_s = SoftwareRasterizer.width;
-          f.field_h = SoftwareRasterizer.height;
+          LobbyPanelLayoutSupport.field_h = SoftwareRasterizer.height;
           stackIn_3_0 = -127;
           if (param0) {
             stackIn_4_1 = PoolMatchController.field_z;
           } else {
-            stackIn_4_1 = nj.field_b;
+            stackIn_4_1 = LogoMaterial.field_b;
           }
           DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
-          na.field_e.a(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
+          IntegerSyntaxSupport.field_e.a(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
           MarkerSliderPainter.field_c.setBounds(0, 2147483647, 0, ProjectedLineSupport.field_d.width, ArchiveIndex.field_x);
           stackIn_6_0 = LoginRequiredScreen.field_M;
           stackIn_6_1 = 2 + ArchiveIndex.field_x;
           stackIn_6_2 = param1 ^ 2147483647;
           stackIn_6_3 = 0;
           stackIn_6_4 = ProjectedLineSupport.field_d.width;
-          if (!tq.field_p) {
+          if (!AccountStateQuery.field_p) {
             stackIn_7_5 = 0;
           } else {
             stackIn_7_5 = 2 + (2 + TranslatedUiText.field_n) + 40;
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
-          jh.field_a.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + ProjectedLineSupport.field_d.width - 40), TranslatedUiText.field_n + 42, 18);
+          MenuScreenBase.field_a.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + ProjectedLineSupport.field_d.width - 40), TranslatedUiText.field_n + 42, 18);
           DualLinkDeque.field_f.setScrollPaneBounds(TranslatedUiText.field_n, -22 + (ProjectedLineSupport.field_d.height - ArchiveIndex.field_x), (byte) -112, 2, ProjectedLineSupport.field_d.width, 0, ArchiveIndex.field_x + 22);
           ContentTransitionDialog.field_ob.setBounds(SceneNode.field_k.height - 40, 2147483647, 0, SceneNode.field_k.width, 40);
-          ii.field_e.setBounds(0, param1 ^ 2147483647, 0, Bzip2DecoderState.field_f.width, 30);
+          ProxyConnectorSupport.field_e.setBounds(0, param1 ^ 2147483647, 0, Bzip2DecoderState.field_f.width, 30);
           MusicCrossfadeStream.field_x.setBounds(30, 2147483647, 0, Bzip2DecoderState.field_f.width, -30 + (-2 + Bzip2DecoderState.field_f.height) - 40);
-          var2_int = dr.field_c + 3;
+          var2_int = LogoFinalFrameLoader.field_c + 3;
           if (DiskArchiveRequest.field_T.length < 2) {
             var2_int--;
           }
@@ -1574,18 +1574,18 @@ final class PoolGameModel {
           if (var4 > 40) {
             var4 = 40;
           }
-          oi.field_q.setBounds(5, 2147483647, 5, -5 + MusicCrossfadeStream.field_x.width - 5, var4);
+          IntegerRecordSubmission.field_q.setBounds(5, 2147483647, 5, -5 + MusicCrossfadeStream.field_x.width - 5, var4);
           var5 = 5 + var4 + 2;
-          for (var6 = param1; var6 < 4 + dr.field_c; var6++) {
+          for (var6 = param1; var6 < 4 + LogoFinalFrameLoader.field_c; var6++) {
             if ((var6 != 1 ||
               !(DiskArchiveRequest.field_T.length < 2)) && (var6 != 3 ||
-              !(ji.field_g <= 1))) {
+              !(ParticleTrail.field_g <= 1))) {
               if (!param0 &&
                 var6 == 3) {
-                dupTemp$0 = oi.field_v[var6];
+                dupTemp$0 = IntegerRecordSubmission.field_v[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                oi.field_v[var6].height = 0;
+                IntegerRecordSubmission.field_v[var6].height = 0;
                 var14.width = 0;
                 for (var8 = 0; FreePlayRules.field_f[var6].length > var8; var8++) {
                   if (null != FreePlayRules.field_f[var6][var8]) {
@@ -1596,8 +1596,8 @@ final class PoolGameModel {
                 }
               } else if (param0 &&
                 0 == var6) {
-                var7 = oi.field_v[var6];
-                oi.field_v[var6].height = 0;
+                var7 = IntegerRecordSubmission.field_v[var6];
+                IntegerRecordSubmission.field_v[var6].height = 0;
                 var7.width = 0;
                 for (var8 = 0; var8 < FreePlayRules.field_f[var6].length; var8++) {
                   if (null != FreePlayRules.field_f[var6][var8]) {
@@ -1622,8 +1622,8 @@ final class PoolGameModel {
                 }
                 var7_int = stackIn_41_0;
                 if (var7_int != 0) {
-                  var8_ref_vh = oi.field_v[var6];
-                  oi.field_v[var6].height = 0;
+                  var8_ref_vh = IntegerRecordSubmission.field_v[var6];
+                  IntegerRecordSubmission.field_v[var6].height = 0;
                   var8_ref_vh.width = 0;
                   var15 = 0;
                   var9_int = var15;
@@ -1636,7 +1636,7 @@ final class PoolGameModel {
                     var15++;
                   }
                 } else {
-                  oi.field_v[var6].setBounds(var5, 2147483647, 5, 103, var3);
+                  IntegerRecordSubmission.field_v[var6].setBounds(var5, 2147483647, 5, 103, var3);
                   var8 = 110;
                   if (!param0) {
                     if (null != FreePlayRules.field_f[var6][0]) {
@@ -1645,14 +1645,14 @@ final class PoolGameModel {
                       var9.width = 0;
                     }
                   } else {
-                    FreePlayRules.field_f[var6][0].setIconLabelBounds(var8, true, 2, var3, ja.field_b, 38, var5);
+                    FreePlayRules.field_f[var6][0].setIconLabelBounds(var8, true, 2, var3, ByteArrayPool.field_b, 38, var5);
                     var8 += 40;
                   }
                   var9_int = 2 - var8 + (-5 + Bzip2DecoderState.field_f.width);
                   var10_int = FreePlayRules.field_f[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
-                    FreePlayRules.field_f[var6][1 + var11].setIconLabelBounds(var12 + var8, true, 2, var3, ja.field_b, -2 + ((var11 + 1) * var9_int / var10_int - var12), var5);
+                    FreePlayRules.field_f[var6][1 + var11].setIconLabelBounds(var12 + var8, true, 2, var3, ByteArrayPool.field_b, -2 + ((var11 + 1) * var9_int / var10_int - var12), var5);
                   }
                   var5 = var5 + (2 + var3);
                 }
@@ -1662,7 +1662,7 @@ final class PoolGameModel {
           DebugTuningSupport.field_b.setBounds(10, 2147483647, SoftwareRasterizer.width - 360 >> 1, 360, -134 + SoftwareRasterizer.height - 10);
           Pool.field_P.setBounds(0, 2147483647, 0, DebugTuningSupport.field_b.width, 24);
           IntrusiveDequeCursor.field_b.setBounds(24, 2147483647, 0, DebugTuningSupport.field_b.width, -24 + DebugTuningSupport.field_b.height);
-          IntrusiveDequeCursor.field_b.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 1, IntrusiveDequeCursor.field_b.height, 11579568, 8421504);
+          IntrusiveDequeCursor.field_b.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 1, IntrusiveDequeCursor.field_b.height, 11579568, 8421504);
           QuickChatMenuSupport.field_e.setBounds(5, 2147483647, 5, -10 + IntrusiveDequeCursor.field_b.width, -2 + (-24 + (-10 + IntrusiveDequeCursor.field_b.height)));
           AccountContentDialog.field_vb.setBounds(-24 + (IntrusiveDequeCursor.field_b.height - 5), param1 ^ 2147483647, (-80 + IntrusiveDequeCursor.field_b.width) / 2, 80, 24);
           MenuLabelSupport.layoutChatPanelControls(true);
@@ -1739,7 +1739,7 @@ final class PoolGameModel {
         PotEvent var5;
         Pocket var6;
         ShotRecord var7;
-        qa.a(this.field_e, this.cushionSegments, this.balls, 0);
+        HotspotRectangle.a(this.field_e, this.cushionSegments, this.balls, 0);
         var7 = this.currentShot(79);
         if (param0 > -2) {
           return;
@@ -1779,7 +1779,7 @@ final class PoolGameModel {
 
     final static void m(int param0) {
         DebugTuningSlider.d((byte) -125);
-        lf.a(param0, (byte) 93);
+        LoginEncryptionSupport.a(param0, (byte) 93);
     }
 
     final boolean tryPlaceBall(int param0, int param1, int param2, int param3, boolean param4) {
@@ -1805,7 +1805,7 @@ final class PoolGameModel {
         }
         var6Lifetime1 = 0;
         this.findOverlappingBalls((byte) 77);
-        for (var10 = 0; hh.field_e > var10; var10++) {
+        for (var10 = 0; PackedColorSupport.field_e > var10; var10++) {
           if (param3 != DropTargetWidget.field_N[var10][0]) {
             if (param3 == DropTargetWidget.field_N[var10][1]) {
               var6Lifetime1++;
@@ -1862,42 +1862,42 @@ final class PoolGameModel {
     }
 
     final static void initializeTutorialPanel(int param0) {
-        field_k = new UiComponent(0L, (UiComponent) null, SoftwareRasterizer.width - ff.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, ff.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
+        field_k = new UiComponent(0L, (UiComponent) null, SoftwareRasterizer.width - SlidingPanelSupport.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, SlidingPanelSupport.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
         MenuSelection.a(true, field_k);
-        field_k.frameSprites = ff.field_e;
-        qa.field_v = new UiComponent("tut_close", (UiComponent) null);
+        field_k.frameSprites = SlidingPanelSupport.field_e;
+        HotspotRectangle.field_v = new UiComponent("tut_close", (UiComponent) null);
         UiComponent dupTemp$0 = new UiComponent("tut_skip", (UiComponent) null);
-        jq.field_d = dupTemp$0;
+        QuickChatNavigationSupport.field_d = dupTemp$0;
         field_k.addChild(-111, dupTemp$0);
         UiComponent dupTemp$1 = new UiComponent("tut_prev", (UiComponent) null);
-        pl.field_b = dupTemp$1;
+        VertexProjectionSupport.field_b = dupTemp$1;
         field_k.addChild(-104, dupTemp$1);
-        pl.field_b.setBounds(72, 2147483647, 277, 15, 15);
-        qa.field_v.setBounds(72, 2147483647, 297, 15, 15);
-        jq.field_d.setBounds(72, 2147483647, 317, 15, 15);
-        pl.field_b.activeSprite = PolarObject.field_d[8];
-        pl.field_b.capturedSprite = PolarObject.field_d[12];
-        pl.field_b.sprite = PolarObject.field_d[4];
-        pl.field_b.disabledSprite = PolarObject.field_d[0];
-        qa.field_v.disabledSprite = PolarObject.field_d[2];
-        qa.field_v.capturedSprite = PolarObject.field_d[14];
+        VertexProjectionSupport.field_b.setBounds(72, 2147483647, 277, 15, 15);
+        HotspotRectangle.field_v.setBounds(72, 2147483647, 297, 15, 15);
+        QuickChatNavigationSupport.field_d.setBounds(72, 2147483647, 317, 15, 15);
+        VertexProjectionSupport.field_b.activeSprite = PolarObject.field_d[8];
+        VertexProjectionSupport.field_b.capturedSprite = PolarObject.field_d[12];
+        VertexProjectionSupport.field_b.sprite = PolarObject.field_d[4];
+        VertexProjectionSupport.field_b.disabledSprite = PolarObject.field_d[0];
+        HotspotRectangle.field_v.disabledSprite = PolarObject.field_d[2];
+        HotspotRectangle.field_v.capturedSprite = PolarObject.field_d[14];
         if (param0 != -27397) {
           return;
         }
-        qa.field_v.sprite = PolarObject.field_d[6];
-        qa.field_v.activeSprite = PolarObject.field_d[10];
-        jq.field_d.activeSprite = PolarObject.field_d[11];
-        jq.field_d.sprite = PolarObject.field_d[7];
-        jq.field_d.capturedSprite = PolarObject.field_d[15];
-        jq.field_d.disabledSprite = PolarObject.field_d[3];
+        HotspotRectangle.field_v.sprite = PolarObject.field_d[6];
+        HotspotRectangle.field_v.activeSprite = PolarObject.field_d[10];
+        QuickChatNavigationSupport.field_d.activeSprite = PolarObject.field_d[11];
+        QuickChatNavigationSupport.field_d.sprite = PolarObject.field_d[7];
+        QuickChatNavigationSupport.field_d.capturedSprite = PolarObject.field_d[15];
+        QuickChatNavigationSupport.field_d.disabledSprite = PolarObject.field_d[3];
     }
 
     final void fillCueTransform(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var14_int = 0;
         int var7_int = ScrollPaneWithFooter.sine(param1, true);
-        int var8 = hc.cosine(2047, param1);
+        int var8 = SceneNodeFactory.cosine(2047, param1);
         int var9 = ScrollPaneWithFooter.sine(param3, true);
-        int var10 = hc.cosine(2047, param3);
+        int var10 = SceneNodeFactory.cosine(2047, param3);
         param0[9] = NameEntryPopup.a(var10, false, var7_int);
         param0[10] = NameEntryPopup.a(var9, false, var7_int);
         param0[3] = var9;
@@ -1911,7 +1911,7 @@ final class PoolGameModel {
         int var12 = 53 / ((param2 + 17) / 58);
         int var13 = param4 * 65536 / 128;
         try {
-          var14_int = rf.inverseSquareRoot(-NameEntryPopup.a(var11, false, var11) + (65536 - NameEntryPopup.a(var13, false, var13)), -122);
+          var14_int = AccountDisplayNameSupport.inverseSquareRoot(-NameEntryPopup.a(var11, false, var11) + (65536 - NameEntryPopup.a(var13, false, var13)), -122);
           param0[0] = this.balls[0].positionX + (NameEntryPopup.a(param0[3], false, var11) + (NameEntryPopup.a(param0[6], false, var13) + NameEntryPopup.a(param0[9], false, var14_int))) * 8;
           param0[1] = this.balls[0].positionY + 8 * (NameEntryPopup.a(param0[4], false, var11) + NameEntryPopup.a(param0[7], false, var13) + NameEntryPopup.a(param0[10], false, var14_int));
           param0[2] = this.balls[0].positionZ + (NameEntryPopup.a(param0[5], false, var11) + NameEntryPopup.a(param0[8], false, var13) + NameEntryPopup.a(param0[11], false, var14_int)) * 8;

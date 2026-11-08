@@ -10,25 +10,25 @@ final class FixedAngleSupport {
           FixedAngleSupport.a((byte) -16);
           if (param1 < 0) {
             if (param1 >= -65536) {
-              return -un.field_a[-param1 >> 5];
+              return -LookupProtocolSupport.field_a[-param1 >> 5];
             }
-            return un.field_a[134217728 / -param1] - 2048;
+            return LookupProtocolSupport.field_a[134217728 / -param1] - 2048;
           }
           if (65536 >= param1) {
-            return un.field_a[param1 >> 5];
+            return LookupProtocolSupport.field_a[param1 >> 5];
           }
-          return -un.field_a[134217728 / param1] + 2048;
+          return -LookupProtocolSupport.field_a[134217728 / param1] + 2048;
         }
         if (param1 < 0) {
           if (param1 >= -65536) {
-            return -un.field_a[-param1 >> 5];
+            return -LookupProtocolSupport.field_a[-param1 >> 5];
           }
-          return un.field_a[134217728 / -param1] - 2048;
+          return LookupProtocolSupport.field_a[134217728 / -param1] - 2048;
         }
         if (65536 >= param1) {
-          return un.field_a[param1 >> 5];
+          return LookupProtocolSupport.field_a[param1 >> 5];
         }
-        return -un.field_a[134217728 / param1] + 2048;
+        return -LookupProtocolSupport.field_a[134217728 / param1] + 2048;
     }
 
     public static void releaseStatics(byte param0) {
@@ -39,15 +39,15 @@ final class FixedAngleSupport {
         tooltipBreak = null;
     }
 
-    final static tq a(int param0, int param1) {
-        tq var2 = null;
+    final static AccountStateQuery a(int param0, int param1) {
+        AccountStateQuery var2 = null;
         if (param1 >= 9) {
-          var2 = new tq();
+          var2 = new AccountStateQuery();
           NodeHashTableIterator.field_j.addFirst((byte) 127, var2);
-          kp.a(1, param0);
+          MusicPatchEnvelope.a(1, param0);
           return var2;
         }
-        return (tq) null;
+        return (AccountStateQuery) null;
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, byte param7, int param8, int[] param9, byte param10) {
@@ -81,21 +81,21 @@ final class FixedAngleSupport {
           param0 = param0 & -4;
           param4 = param4 & -4;
           CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
-          var12 = -na.field_f + la.field_f;
+          var12 = -IntegerSyntaxSupport.field_f + ChatPanelSupport.field_f;
           var13 = ReportAbuseDialog.field_Nb - BallEvent.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;
           if (var14 == 0) {
             return;
           }
           var15 = (int)(Math.sqrt((double)((float)var14 / 4.0f)) * 4.0);
-          for (var16 = ic.field_a; var16 < na.field_c; var16 += 4) {
+          for (var16 = SharedRateScaleSupport.field_a; var16 < IntegerSyntaxSupport.field_c; var16 += 4) {
             var17 = -BallEvent.field_a + var16;
             var18 = -ReportAbuseDialog.field_Nb + var16;
             var19 = var17 * var13;
             var20 = var17 * var12;
             for (var21 = MembershipBenefitsScreen.field_I; QuickChatPhraseRegistry.field_f > var21; var21 += 4) {
-              var22 = -na.field_f + var21;
-              var23 = var21 - la.field_f;
+              var22 = -IntegerSyntaxSupport.field_f + var21;
+              var23 = var21 - ChatPanelSupport.field_f;
               var24 = var22 * var12 + var19 >> 2;
               if ((0 != param7 ||
                 !(0 > var22 * ThreeSliceButtonPainter.field_w + DelayedServerPacket.field_u * var17)) && (param10 != 0 ||
@@ -144,14 +144,14 @@ final class FixedAngleSupport {
         int[] var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = wp.field_g;
+        var1 = CompressedContainerSupport.field_g;
         synchronized (var1) {
           ClientInputResetSupport.field_b = ReflectionCheck.field_v;
           PoolUiText.field_g = PoolUiText.field_g + 1;
-          wn.field_i = ArchiveLoadStep.field_l;
-          DebouncedValidationProvider.field_f = wn.field_k;
-          LoginPayload.field_c = m.field_d;
-          m.field_d = false;
+          ReflectionReplySupport.field_i = ArchiveLoadStep.field_l;
+          DebouncedValidationProvider.field_f = ReflectionReplySupport.field_k;
+          LoginPayload.field_c = RatingTextState.field_d;
+          RatingTextState.field_d = false;
           MatchingTextValidator.field_s = CueAim.field_c;
           DialogLayer.field_W = Ball.field_f;
           UsernameAvailabilityValidator.field_o = MatchingTextValidator.field_o;
@@ -269,21 +269,21 @@ final class FixedAngleSupport {
           param0 = param0 & -4;
           param4 = param4 & -4;
           CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
-          var12 = -na.field_f + la.field_f;
+          var12 = -IntegerSyntaxSupport.field_f + ChatPanelSupport.field_f;
           var13 = ReportAbuseDialog.field_Nb - BallEvent.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;
           if (var14 == 0) {
             return;
           }
           var15 = (int)(Math.sqrt((double)((float)var14 / 4.0f)) * 4.0);
-          for (var16 = ic.field_a; var16 < na.field_c; var16 += 4) {
+          for (var16 = SharedRateScaleSupport.field_a; var16 < IntegerSyntaxSupport.field_c; var16 += 4) {
             var17 = -BallEvent.field_a + var16;
             var18 = -ReportAbuseDialog.field_Nb + var16;
             var19 = var17 * var13;
             var20 = var17 * var12;
             for (var21 = MembershipBenefitsScreen.field_I; QuickChatPhraseRegistry.field_f > var21; var21 += 4) {
-              var22 = -na.field_f + var21;
-              var23 = var21 - la.field_f;
+              var22 = -IntegerSyntaxSupport.field_f + var21;
+              var23 = var21 - ChatPanelSupport.field_f;
               var24 = var22 * var12 + var19 >> 2;
               if ((0 != param7 ||
                 !(0 > var22 * ThreeSliceButtonPainter.field_w + DelayedServerPacket.field_u * var17)) && (param10 != 0 ||

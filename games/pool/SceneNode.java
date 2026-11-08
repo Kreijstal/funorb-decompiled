@@ -327,13 +327,13 @@ final class SceneNode {
           var13 = new int[]{var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var10, var9, var10, var9, var10, var9, var10};
           var14 = new int[]{6697779, 6710886, 6710886, 6710886, 3368499, 6710886, 6710886, 6710886, 3355494, 6710886, 6710886, 6710886};
           MembershipBenefitsScreen.a(24, 0, true, var11, var13, var12, param2);
-          qg.transformVertices(var13, 0, param0, var12, 24, var11, (byte) 56);
+          VertexTransformSupport.transformVertices(var13, 0, param0, var12, 24, var11, (byte) 56);
           for (var15 = 0; var15 < 24; var15 += 2) {
             if (0 <= var13[var15] &&
               var13[1 + var15] >= 0 &&
               !NanoTickClock.a(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
               var18 = (int[]) null;
-              ic.a(var12, var15, var11, (int[]) null, var13, 4);
+              SharedRateScaleSupport.a(var12, var15, var11, (int[]) null, var13, 4);
               if (var13[var15] == 0) {
                 var13[var15] = 1;
               }
@@ -601,7 +601,7 @@ final class SceneNode {
     final void normalizeOffsets(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
-        this.field_d = il.a((byte) 123, this.field_d);
+        this.field_d = BeveledFrameSpriteFactory.a((byte) 123, this.field_d);
         if (null != this.field_b) {
           for (var2 = 0; var2 < this.field_b.length; var2++) {
             this.field_b[var2].normalizeOffsets(0);
@@ -644,7 +644,7 @@ final class SceneNode {
           }
           var7Lifetime1 = TriangleRasterizer.projectionCenterY + var10 / var8;
           var6_intLifetime1 = var9 / var8 + TriangleRasterizer.projectionCenterX;
-          sa.field_h.drawCentered(param1, var6_intLifetime1, var7Lifetime1, 16764142, param0);
+          CollisionContact.field_h.drawCentered(param1, var6_intLifetime1, var7Lifetime1, 16764142, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -682,7 +682,7 @@ final class SceneNode {
         int incrementValue$2 = 0;
         int var3_int = 0;
         int var4 = 0;
-        pm var5 = null;
+        SceneNodeEntry var5 = null;
         int var6 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -694,12 +694,12 @@ final class SceneNode {
           this.field_b = new SceneNode[param1.size(114)];
           var3_int = 30 / ((-64 - param0) / 40);
           var4 = 0;
-          var5 = (pm) (param1.last((byte) -94));
+          var5 = (SceneNodeEntry) (param1.last((byte) -94));
           while (var5 != null) {
             incrementValue$2 = var4;
             var4++;
             this.field_b[incrementValue$2] = var5.field_n;
-            var5 = (pm) (param1.previous((byte) -5));
+            var5 = (SceneNodeEntry) (param1.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -733,7 +733,7 @@ final class SceneNode {
         this.field_c = (int[][]) null;
         this.field_e = null;
         this.field_i = null;
-        this.field_d = hp.copyIntArray(ln.field_m, (byte) 88);
+        this.field_d = SupportPageLauncher.copyIntArray(ModelOriginSupport.field_m, (byte) 88);
     }
 
     SceneNode(int param0) {
@@ -744,7 +744,7 @@ final class SceneNode {
         this.field_c = (int[][]) null;
         this.field_e = null;
         this.field_i = null;
-        this.field_d = hp.copyIntArray(ln.field_m, (byte) 94);
+        this.field_d = SupportPageLauncher.copyIntArray(ModelOriginSupport.field_m, (byte) 94);
         this.field_b = new SceneNode[param0];
     }
 

@@ -27,7 +27,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         field_Hb = null;
     }
 
-    private final void a(wc param0, int param1, boolean param2) {
+    private final void a(LoginResponse param0, int param1, boolean param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -86,7 +86,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 this.replaceContent(var5, 30);
                 return;
               }
-              var5.addActionButton(9, e.tocustomersupport, 1);
+              var5.addActionButton(9, ChoiceButtonSupport.tocustomersupport, 1);
             }
           }
           this.replaceContent(var5, 30);
@@ -107,7 +107,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     public final void onButtonActivated(boolean param0, int param1, int param2, ButtonWidget param3, int param4) {
         if (this.field_Eb) {
-          t.a(115, false, true);
+          PacketDiagnosticsSupport.a(115, false, true);
           return;
         }
         NineSliceFrame.a((byte) 41);
@@ -122,8 +122,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     final boolean advanceDialogAnimation(byte param0) {
-        wc var2 = null;
-        wc var2Lifetime1;
+        LoginResponse var2 = null;
+        LoginResponse var2Lifetime1;
         if (param0 != -20) {
           mpRematchnewgame = (String) null;
           if (!this.dialogOpen) {
@@ -178,13 +178,13 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           return;
         }
         MaxLengthTextInputWidget.m(param0 ^ 22150);
-        if (!ShotEvent.a(true, GameRules.field_b)) {
+        if (!ShotEvent.isNonnegative(true, GameRules.field_b)) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
               }
               return;
             }
@@ -218,7 +218,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           if (GameRules.field_b == -4) {
             return;
           }
-          TextLineLayout.a((byte) -27, il.field_c[3]);
+          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
           return;
         }
         DisplayModeSupport.field_c[GameRules.field_b].parentScreenId = param2;
@@ -233,7 +233,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
               }
               return;
             }
@@ -241,7 +241,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -257,7 +257,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -266,7 +266,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -275,7 +275,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -289,7 +289,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -298,7 +298,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -311,7 +311,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -320,7 +320,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -329,7 +329,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -338,7 +338,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -351,7 +351,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         if (GameRules.field_b == -4) {
           return;
         }
-        TextLineLayout.a((byte) -27, il.field_c[3]);
+        TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
         return;
     }
 

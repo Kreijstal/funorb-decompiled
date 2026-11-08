@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_f;
-    static na field_e;
+    static IntegerSyntaxSupport field_e;
     static int keycodeDefaultDown2;
     static long field_g;
 
@@ -312,14 +312,14 @@ final class ProxySocketConnector extends SocketConnector {
           }
         }
         if (var7 != null) {
-          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) var7);
         }
         return this.b(5101);
     }
 
     final static void a(boolean param0) {
         String var1 = null;
-        if (ro.field_e) {
+        if (ProjectedVertex.field_e) {
           if (MeshBoundsSupport.field_d != null) {
             MeshBoundsSupport.field_d.dismissDialog(17);
           }
@@ -337,10 +337,10 @@ final class ProxySocketConnector extends SocketConnector {
         CharSequence var5 = null;
         try {
           if (param0 >= -58) {
-            field_e = (na) null;
+            field_e = (IntegerSyntaxSupport) null;
           }
           ArrayWidgetGroup.field_I = param2;
-          hn.field_b = 2;
+          CookieDateSupport.field_b = 2;
           var5 = (CharSequence) ((Object) param2);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(88, var5);
           QuickChatMenuSupport.field_d = param1;
@@ -352,11 +352,11 @@ final class ProxySocketConnector extends SocketConnector {
 
     static {
         keycodeDefaultDown2 = 99;
-        field_e = new na();
+        field_e = new IntegerSyntaxSupport();
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

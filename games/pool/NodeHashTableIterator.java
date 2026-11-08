@@ -148,7 +148,7 @@ final class NodeHashTableIterator implements Iterator {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          dr.openPlayerContextMenu((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
+          LogoFinalFrameLoader.openPlayerContextMenu((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
           if (0 == param2) {
             var11 = PlasmaBallSkin.field_m;
             var12 = ThemeSelectScreen.field_M[0];
@@ -160,7 +160,7 @@ final class NodeHashTableIterator implements Iterator {
             var15 = ThemeSelectScreen.field_M[1];
             var30Lifetime4 = var15;
             var30Lifetime5 = var15;
-            var16 = sa.muChatLobbyFriends;
+            var16 = CollisionContact.muChatLobbyFriends;
             var14.field_n.addIconAction(12, (byte) -77, var15, var16);
             var17 = PlasmaBallSkin.field_m;
             var18 = ThemeSelectScreen.field_M[2];
@@ -174,13 +174,13 @@ final class NodeHashTableIterator implements Iterator {
             var21 = ThemeSelectScreen.field_M[0];
             var30Lifetime1 = var21;
             var30Lifetime1Lifetime1 = var21;
-            var22 = ra.muChatGameShowAll;
+            var22 = IntegerRecordProtocolSupport.muChatGameShowAll;
             var20.field_n.addIconAction(11, (byte) -87, var21, var22);
             var23 = PlasmaBallSkin.field_m;
             var24 = ThemeSelectScreen.field_M[1];
             var30Lifetime1Lifetime2 = var24;
             var30Lifetime1Lifetime3 = var24;
-            var25 = md.muChatGameFriends;
+            var25 = RenderingInitializationSupport.muChatGameFriends;
             var23.field_n.addIconAction(12, (byte) -119, var24, var25);
             var26 = PlasmaBallSkin.field_m;
             var27 = ThemeSelectScreen.field_M[2];
@@ -192,11 +192,11 @@ final class NodeHashTableIterator implements Iterator {
           if (param2 == 2) {
             var29 = PlasmaBallSkin.field_m;
             var30Lifetime2 = ThemeSelectScreen.field_M[0];
-            var31 = kp.muChatPmShowAll;
+            var31 = MusicPatchEnvelope.muChatPmShowAll;
             var29.field_n.addIconAction(11, (byte) -122, var30Lifetime2, var31);
             var32 = PlasmaBallSkin.field_m;
             var33 = ThemeSelectScreen.field_M[1];
-            var34 = rm.muChatPmFriends;
+            var34 = MeshSymmetrySupport.muChatPmFriends;
             var32.field_n.addIconAction(12, (byte) 122, var33, var34);
             var35 = PlasmaBallSkin.field_m;
             var36 = ThemeSelectScreen.field_M[2];

@@ -41,8 +41,8 @@ final class FaceNormal {
         try {
           var4 = param1.toLowerCase();
           var5 = null;
-          for (var6 = 0; var6 < lb.field_P.length; var6++) {
-            var7 = lb.field_P[var6];
+          for (var6 = 0; var6 < DimmedPauseMenu.field_P.length; var6++) {
+            var7 = DimmedPauseMenu.field_P[var6];
             for (var8 = 0; var8 < var7.length; var8++) {
               var9 = var7[var8];
               if (var9 != null) {
@@ -132,9 +132,9 @@ final class FaceNormal {
 
     final static void a(int param0) {
         LocalGameSetupScreen.field_L = new String[ClientInputResetSupport.field_a];
-        LocalGameSetupScreen.field_L[11] = wc.rule22;
+        LocalGameSetupScreen.field_L[11] = LoginResponse.rule22;
         LocalGameSetupScreen.field_L[18] = ContextMenu.rule12;
-        LocalGameSetupScreen.field_L[15] = jd.rule04;
+        LocalGameSetupScreen.field_L[15] = Atan2Support.rule04;
         LocalGameSetupScreen.field_L[9] = ArchiveAvailabilitySupport.rule01;
         LocalGameSetupScreen.field_L[20] = ModelInstance.rule14;
         LocalGameSetupScreen.field_L[4] = PlayingSound.rule05;
@@ -143,7 +143,7 @@ final class FaceNormal {
           FaceNormal.a(20, (Sprite) null, (String) null);
         }
         LocalGameSetupScreen.field_L[6] = DateInputWidget.rule00;
-        LocalGameSetupScreen.field_L[21] = il.rule21;
+        LocalGameSetupScreen.field_L[21] = BeveledFrameSpriteFactory.rule21;
         LocalGameSetupScreen.field_L[7] = CheckboxWidget.rule03;
         LocalGameSetupScreen.field_L[13] = NineSliceFrame.rule20;
         LocalGameSetupScreen.field_L[16] = MouseHandler.rule10;

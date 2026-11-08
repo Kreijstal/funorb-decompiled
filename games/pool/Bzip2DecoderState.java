@@ -74,12 +74,12 @@ final class Bzip2DecoderState {
           LobbyGame.field_Pb = LobbyGame.field_Pb - 1;
           if (LobbyGame.field_Pb == 0) {
             LobbyGame.field_Pb = 200;
-            var1 = (PlayingSound) (oj.field_o.last((byte) 116));
+            var1 = (PlayingSound) (HighScoreSubmission.field_o.last((byte) 116));
             while (var1 != null) {
               if (!var1.field_m.b(-126)) {
                 var1.unlink((byte) -117);
               }
-              var1 = (PlayingSound) (oj.field_o.previous((byte) -5));
+              var1 = (PlayingSound) (HighScoreSubmission.field_o.previous((byte) -5));
             }
             if (UsernameSuggestionsPanel.field_R != null) {
               var1Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.last((byte) -84));
@@ -92,7 +92,7 @@ final class Bzip2DecoderState {
             }
           }
           if (null != RankingsScreen.field_N &&
-            RankingsScreen.field_N.d(-11414)) {
+            RankingsScreen.field_N.isReady(-11414)) {
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.B(" + param0 + ')');
@@ -116,9 +116,9 @@ final class Bzip2DecoderState {
           }
           QuickChatDynamicCommand.field_c = param4;
           AccountWelcomePanel.field_T = true;
-          ie.field_e = param1;
+          BrowserCookieSupport.field_e = param1;
           PasswordValidator.field_x = param0;
-          tq.field_t = param2;
+          AccountStateQuery.field_t = param2;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

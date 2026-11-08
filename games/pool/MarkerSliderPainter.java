@@ -36,7 +36,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             return stackIn_2_0;
           }
           var3 = new SceneNode();
-          var3.field_d = il.a((byte) 112, param2);
+          var3.field_d = BeveledFrameSpriteFactory.a((byte) 112, param2);
           var3.field_i = param1;
           IntrusiveNodeHashTable.a(var3.field_d, -123, var3.field_i);
           stackIn_4_0 = var3;
@@ -127,7 +127,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         if (param0 > -82) {
           field_i = (IntrusiveDeque) null;
         }
-        t.a(110, true, true);
+        PacketDiagnosticsSupport.a(110, true, true);
     }
 
     final static void a(MeshBuilder param0, byte param1) {

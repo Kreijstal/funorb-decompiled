@@ -8,7 +8,7 @@ final class DualLinkDeque {
     private DualLinkNode field_e;
     static ScrollPane field_f;
     static int field_a;
-    static nl field_g;
+    static ServerListLauncher field_g;
 
     final DualLinkNode a(byte param0) {
         int var3 = -47 % ((param0 - 25) / 39);
@@ -54,20 +54,20 @@ final class DualLinkDeque {
         UiComponent var6 = null;
         UiComponent var3 = null;
         try {
-          oi.field_o = WidgetStyleLayer.loadSprite("basic", (byte) 54, "display_name_changed", param1);
+          IntegerRecordSubmission.field_o = WidgetStyleLayer.loadSprite("basic", (byte) 54, "display_name_changed", param1);
           NameEntryPopup.field_Mb = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, StateIconLabel.muLobbyFriendAdd, PacketBuffer.muLobbyFriendRm);
-          InputIdleSupport.field_c = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, ScreenProjectionSupport.muLobbyNameAdd, tp.muLobbyNameRm);
+          InputIdleSupport.field_c = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, ScreenProjectionSupport.muLobbyNameAdd, LookupRetrySupport.muLobbyNameRm);
           SingleChildWidget.field_J = new UiComponent(0L, (UiComponent) null);
           AccountContentDialog.field_sb = new UiComponent(0L, AlignedIconLabel.field_Lb);
           AccountContentDialog.field_sb.horizontalAlignment = param0;
-          PoolUiText.field_e = new UiComponent(0L, lf.field_d, jh.muLobbyName);
-          ByteStorage.field_f = new UiComponent(0L, Under13NoticePanel.field_Q, f.muLobbyLocation);
-          rc.field_b = new UiComponent(0L, UiWidget.field_A);
+          PoolUiText.field_e = new UiComponent(0L, LoginEncryptionSupport.field_d, MenuScreenBase.muLobbyName);
+          ByteStorage.field_f = new UiComponent(0L, Under13NoticePanel.field_Q, LobbyPanelLayoutSupport.muLobbyLocation);
+          AccountTextSupport.field_b = new UiComponent(0L, UiWidget.field_A);
           SingleChildWidget.field_J.addChild(param0 - 103, AccountContentDialog.field_sb);
           SingleChildWidget.field_J.addChild(92, PoolUiText.field_e);
           SingleChildWidget.field_J.addChild(14, ByteStorage.field_f);
           SingleChildWidget.field_J.addChild(127, NameEntryPopup.field_Mb);
-          SingleChildWidget.field_J.addChild(param0 ^ -107, rc.field_b);
+          SingleChildWidget.field_J.addChild(param0 ^ -107, AccountTextSupport.field_b);
           NameEntryPopup.field_Mb.scrollPane.viewport.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
           NameEntryPopup.field_Mb.scrollPane.viewport.verticalAlignment = 1;
           var5 = NameEntryPopup.field_Mb.scrollPane.viewport;
@@ -126,6 +126,6 @@ final class DualLinkDeque {
     static {
         doubleplusgoodShot = new String[]{"Awesome shot!", "Pure skill!"};
         field_a = 5;
-        field_g = new nl();
+        field_g = new ServerListLauncher();
     }
 }

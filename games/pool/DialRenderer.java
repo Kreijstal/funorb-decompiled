@@ -22,10 +22,10 @@ final class DialRenderer implements WidgetPainter {
         if (!(2 >= BallDebugOverlay.field_i)) {
           BallDebugOverlay.field_i = 2;
         }
-        ol.field_e = param1 >> 2 & 3;
+        FixedPointVectorSupport.field_e = param1 >> 2 & 3;
         ResourceArchive.field_e = param1 & 3;
-        if (!(ol.field_e <= 2)) {
-          ol.field_e = 2;
+        if (!(FixedPointVectorSupport.field_e <= 2)) {
+          FixedPointVectorSupport.field_e = 2;
         }
         if (2 < ResourceArchive.field_e) {
           ResourceArchive.field_e = 2;

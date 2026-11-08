@@ -174,7 +174,7 @@ final class VorbisSample extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisSample.a(this.packets[param0], 0);
+        VorbisSample.setBitstream(this.packets[param0], 0);
         VorbisSample.readBit();
         var2 = VorbisSample.readBits(TextHotspotRegion.a(modeMappings.length - 1, 0));
         var3 = longBlockModes[var2] ? 1 : 0;
@@ -570,7 +570,7 @@ final class VorbisSample extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisSample.a(param0, 0);
+        VorbisSample.setBitstream(param0, 0);
         field_E = 1 << VorbisSample.readBits(4);
         longBlockSize = 1 << VorbisSample.readBits(4);
         field_R = new float[longBlockSize];
@@ -663,7 +663,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitstream(byte[] param0, int param1) {
         bitData = param0;
         field_O = param1;
         bitOffset = 0;

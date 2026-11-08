@@ -83,7 +83,7 @@ final class ArchiveAvailabilitySupport {
           throw new IllegalStateException();
         }
         ClassicBallSkin.field_o = true;
-        ii.a(false, param0 ^ param0);
+        ProxyConnectorSupport.a(false, param0 ^ param0);
         PlasmaTableScene.field_ab = 0;
     }
 
@@ -182,7 +182,7 @@ final class ArchiveAvailabilitySupport {
           stackIn_35_1 = "";
         }
         stackIn_37_0 = ((StringBuilder) (Object) stackIn_34_0).append(stackIn_35_1);
-        if (0 != (ll.field_f & param0)) {
+        if (0 != (BrowserUrlSupport.field_f & param0)) {
           stackIn_38_1 = "ends turn|";
         } else {
           stackIn_38_1 = "";

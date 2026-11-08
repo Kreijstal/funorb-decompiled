@@ -14,11 +14,11 @@ final class MatchingTextValidator extends TextInputValidator {
     static Sprite[] field_t;
     static int field_n;
 
-    final na validationStateForText(String param0, boolean param1) {
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        na stackIn_6_0 = null;
-        na stackIn_10_0 = null;
+        IntegerSyntaxSupport stackIn_6_0 = null;
+        IntegerSyntaxSupport stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -31,14 +31,14 @@ final class MatchingTextValidator extends TextInputValidator {
             var3 = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider(83);
             if (var3 != null &&
               var3.getDebouncedValidationState(-31873) != ProxySocketConnector.field_e) {
-              stackIn_6_0 = gp.field_d;
+              stackIn_6_0 = AchievementProtocolSupport.field_d;
               return stackIn_6_0;
             }
           }
           if (param0.equals(this.referenceInput.widgetText)) {
             stackIn_10_0 = ProxySocketConnector.field_e;
           } else {
-            stackIn_10_0 = gp.field_d;
+            stackIn_10_0 = AchievementProtocolSupport.field_d;
           }
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

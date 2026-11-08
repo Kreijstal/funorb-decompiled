@@ -62,7 +62,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             if (param0 > -10) {
               this.getHoverText(39);
             }
-            te.a((byte) -39, DebouncedValidationProvider.field_f, wn.field_i - this.field_bb + this.widgetWidth);
+            ByteArrayNode.a((byte) -39, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i - this.field_bb + this.widgetWidth);
             stackIn_10_0 = this.hoverText;
             return stackIn_10_0;
           }
@@ -79,9 +79,9 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
         try {
           OptionsScreen.f(-1);
           DualLinkDeque.field_c = true;
-          ro.field_e = true;
+          ProjectedVertex.field_e = true;
           TabbedPane.field_Ub.hideAllDialogs(-22216);
-          wf.a(param0, na.connectionlostReconnecting, -127);
+          PacketAvailabilitySupport.a(param0, IntegerSyntaxSupport.connectionlostReconnecting, -127);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
         }
@@ -112,8 +112,8 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           var1 = PlayerContextMenu.field_e;
           var2 = var1.readUnsignedByte(-125);
           if (var2 == 0) {
-            if (gd.field_c == null) {
-              gd.field_c = new DualLinkNodeHashTable(128);
+            if (LoginTextSupport.field_c == null) {
+              LoginTextSupport.field_c = new DualLinkNodeHashTable(128);
               TextHotspotRegion.field_t = 0;
             }
             stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
@@ -133,16 +133,16 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             if (null == var6) {
               var6 = CheckboxPainter.a(var7, 1);
               if (var6 != null) {
-                gd.field_c.put(-6946, (long)var8.hashCode(), var6);
+                LoginTextSupport.field_c.put(-6946, (long)var8.hashCode(), var6);
               }
             }
             if (null == var6) {
               var6 = new SocialListEntry();
-              gd.field_c.put(param0 ^ -28521, (long)var8.hashCode(), var6);
+              LoginTextSupport.field_c.put(param0 ^ -28521, (long)var8.hashCode(), var6);
               fieldTemp$0 = TextHotspotRegion.field_t;
               TextHotspotRegion.field_t = TextHotspotRegion.field_t + 1;
               var6.insertionIndex = fieldTemp$0;
-              jq.field_c.addFirst((byte) -31, var6);
+              QuickChatNavigationSupport.field_c.addFirst((byte) -31, var6);
             }
             var6.actionName = var5;
             var6.previousName = var7;
@@ -151,14 +151,14 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (th.field_a == 1) {
-                th.field_a = 2;
+              if (ChatInputSupport.field_a == 1) {
+                ChatInputSupport.field_a = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (th.field_a == 2) {
-                th.field_a = 1;
+              if (ChatInputSupport.field_a == 2) {
+                ChatInputSupport.field_a = 1;
               }
               return;
             }
@@ -166,11 +166,11 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
               MaxLengthTextInputWidget.a((int[]) null, (int[]) null, true);
             }
             if (var2 != 4) {
-              GrowableIntList.reportClientError((Throwable) null, "F1: " + t.formatPacketDump(93), param0 ^ -21796);
+              GrowableIntList.reportClientError((Throwable) null, "F1: " + PacketDiagnosticsSupport.formatPacketDump(93), param0 ^ -21796);
               ShotEvent.c(99);
               return;
             }
-            th.field_a = 1;
+            ChatInputSupport.field_a = 1;
             var3 = var1.j(-118);
             LocalGameSetupScreen.field_J = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-84);
@@ -187,9 +187,9 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           }
           var4_ref_StringLifetime1 = var1.j(-70);
           var5Lifetime1 = var1.j(-54);
-          var6Lifetime1 = gf.a(param0 - 29667, var4_ref_StringLifetime1);
+          var6Lifetime1 = UsernameSuggestionSupport.a(param0 - 29667, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = gf.a(92, var5Lifetime1);
+            var6Lifetime1 = UsernameSuggestionSupport.a(92, var5Lifetime1);
             if (null != var6Lifetime1) {
               AimTarget.field_b.put(-6946, (long)TutorialController.normalizeDisplayName(123, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
             }
@@ -249,7 +249,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (MouseHandler.a(param0, -90)) {
+          if (MouseHandler.hasSingleBitOrZero(param0, -90)) {
             stackIn_10_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param0 >> 32);
             return stackIn_10_0;
           }
@@ -350,7 +350,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           if (param1 != 958) {
             return;
           }
-          this.field_bb = wn.field_i - (this.widgetX + param2);
+          this.field_bb = ReflectionReplySupport.field_i - (this.widgetX + param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,21 +367,21 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
     }
 
     final static void m(int param0) {
-        jc.field_e = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r) - 131072, -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r));
-        jc.field_e.normalise(true);
-        LoginPayloadKind.field_a = dq.field_a;
+        AppletUrlSupport.field_e = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r) - 131072, -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r));
+        AppletUrlSupport.field_e.normalise(true);
+        LoginPayloadKind.field_a = TransformRotationSupport.field_a;
         if (LoginPayloadKind.field_a == null) {
           LoginPayloadKind.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = MaxLengthTextInputWidget.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, RankingsRequest.field_r);
-        tp.field_h[1] = 0;
-        tp.field_h[0] = -140;
+        ReflectionRequestSupport.field_e = MaxLengthTextInputWidget.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, RankingsRequest.field_r);
+        LookupRetrySupport.field_h[1] = 0;
+        LookupRetrySupport.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         if (param0 != -23499) {
           return;
         }
         try {
-          tp.field_h[2] = 128;
+          LookupRetrySupport.field_h[2] = 128;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.PA(" + param0 + ')');
         }

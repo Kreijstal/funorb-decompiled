@@ -16,19 +16,19 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         LobbyGame.field_Vb = new UiComponent("decision box", (UiComponent) null);
         MenuSelection.a(true, LobbyGame.field_Vb);
         NanoTickClock.field_t = new UiComponent("decision button a", (UiComponent) null);
-        rl.field_b = new UiComponent("decision button b", (UiComponent) null);
+        MonotonicClock.field_b = new UiComponent("decision button b", (UiComponent) null);
         if (param0 < -103) {
           GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
-          GlowSprite.applyButtonStyle(29022, rl.field_b);
+          GlowSprite.applyButtonStyle(29022, MonotonicClock.field_b);
           LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
-          LobbyGame.field_Vb.addChild(-104, rl.field_b);
+          LobbyGame.field_Vb.addChild(-104, MonotonicClock.field_b);
           return;
         }
         MessageDialog.o((byte) -98);
         GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
-        GlowSprite.applyButtonStyle(29022, rl.field_b);
+        GlowSprite.applyButtonStyle(29022, MonotonicClock.field_b);
         LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
-        LobbyGame.field_Vb.addChild(-104, rl.field_b);
+        LobbyGame.field_Vb.addChild(-104, MonotonicClock.field_b);
     }
 
     final boolean handleKeyInput(char param0, int param1, boolean param2, UiWidget param3) {
@@ -86,13 +86,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         this.statusProgressBar.setStripeColors(4210752, 19365, 2121792);
         if (param0 == -33) {
           var2 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
-          var2.addActionButton(15, ti.returntogame, param0 + 34);
+          var2.addActionButton(15, DebugSliderInputSupport.returntogame, param0 + 34);
           this.replaceContent(var2, param0 + 63);
           return;
         }
         this.field_tb = false;
         var2Lifetime1 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
-        var2Lifetime1.addActionButton(15, ti.returntogame, param0 + 34);
+        var2Lifetime1.addActionButton(15, DebugSliderInputSupport.returntogame, param0 + 34);
         this.replaceContent(var2Lifetime1, param0 + 63);
     }
 
@@ -149,7 +149,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               var5.addActionButton(8, StatefulTextPainter.playfreeversion, 1);
             } else {
               if (param1 == 6) {
-                var5.addActionButton(9, e.tocustomersupport, 1);
+                var5.addActionButton(9, ChoiceButtonSupport.tocustomersupport, 1);
               } else {
                 if (param1 != 9) {
                   this.replaceContent(var5, 30);
@@ -185,7 +185,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_ub) {
-            lf.a(3, (byte) 121);
+            LoginEncryptionSupport.a(3, (byte) 121);
             this.dismissDialog(17);
           } else {
             LoginForm.a("tochangedisplayname.ws", NanoTickClock.getApplet(97), false);

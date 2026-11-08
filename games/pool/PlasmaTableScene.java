@@ -17,7 +17,7 @@ final class PlasmaTableScene extends TableScene {
     static DialogLayer field_cb;
     private PcmSample field_Y;
     static int field_ab;
-    private ji[] field_K;
+    private ParticleTrail[] field_K;
     private PcmSample field_Q;
     static int field_V;
     private PcmSample field_N;
@@ -50,34 +50,34 @@ final class PlasmaTableScene extends TableScene {
         var8 = Pool.field_O;
         try {
           super.buildTableGeometry(param0, param1);
-          t.field_a = new int[3][17][33];
-          ro.field_v = new int[3][17][33];
-          ArrayWidgetGroup.field_K = new jd[16][32];
-          DelegatingCanvas.field_a = new jd[16][32];
+          PacketDiagnosticsSupport.field_a = new int[3][17][33];
+          ProjectedVertex.field_v = new int[3][17][33];
+          ArrayWidgetGroup.field_K = new Atan2Support[16][32];
+          DelegatingCanvas.field_a = new Atan2Support[16][32];
           for (var3_int = 0; var3_int <= 16; var3_int++) {
             var4_int = var3_int * 2304 / 16;
             for (var5_int = 0; var5_int <= 32; var5_int++) {
-              t.field_a[0][var3_int][var5_int] = 4608 * var5_int / 32;
-              t.field_a[1][var3_int][var5_int] = var4_int;
-              t.field_a[2][var3_int][var5_int] = 0;
+              PacketDiagnosticsSupport.field_a[0][var3_int][var5_int] = 4608 * var5_int / 32;
+              PacketDiagnosticsSupport.field_a[1][var3_int][var5_int] = var4_int;
+              PacketDiagnosticsSupport.field_a[2][var3_int][var5_int] = 0;
             }
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < 16; var3_intLifetime1++) {
             for (var4_intLifetime1 = 0; var4_intLifetime1 < 32; var4_intLifetime1++) {
-              ArrayWidgetGroup.field_K[var3_intLifetime1][var4_intLifetime1] = new jd();
-              DelegatingCanvas.field_a[var3_intLifetime1][var4_intLifetime1] = new jd();
+              ArrayWidgetGroup.field_K[var3_intLifetime1][var4_intLifetime1] = new Atan2Support();
+              DelegatingCanvas.field_a[var3_intLifetime1][var4_intLifetime1] = new Atan2Support();
             }
           }
-          LimitedRandomAccessFile.field_i = ta.buildGradientPalette(new int[]{0, 16744383, 256, 0}, param1 - 22022);
+          LimitedRandomAccessFile.field_i = GradientPaletteSupport.buildGradientPalette(new int[]{0, 16744383, 256, 0}, param1 - 22022);
           this.buildWireframeGrid(10);
-          this.field_K = new ji[12];
+          this.field_K = new ParticleTrail[12];
           for (var3_intLifetime2 = 0; var3_intLifetime2 < 6; var3_intLifetime2++) {
             var4 = param0.cushionSegments[(var3_intLifetime2 * 4 + 3) % param0.cushionSegments.length];
             var5 = param0.cushionSegments[(var3_intLifetime2 * 4 + 4) % param0.cushionSegments.length];
             var6 = param0.cushionSegments[(5 + 4 * var3_intLifetime2) % param0.cushionSegments.length];
             var7 = param0.cushionSegments[(6 + 4 * var3_intLifetime2) % param0.cushionSegments.length];
-            this.field_K[2 * var3_intLifetime2] = new ji(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var6.startX >> 13, var6.startY >> 13, var7.startX >> 13, var7.startY >> 13});
-            this.field_K[1 + var3_intLifetime2 * 2] = new ji(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var5.startX >> 13, var5.startY >> 13, var4.startX >> 13, var4.startY >> 13});
+            this.field_K[2 * var3_intLifetime2] = new ParticleTrail(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var6.startX >> 13, var6.startY >> 13, var7.startX >> 13, var7.startY >> 13});
+            this.field_K[1 + var3_intLifetime2 * 2] = new ParticleTrail(new int[]{var5.startX + var5.endX >> 14, var5.startY + var5.endY >> 14, var5.startX >> 13, var5.startY >> 13, var4.startX >> 13, var4.startY >> 13});
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,36 +105,36 @@ final class PlasmaTableScene extends TableScene {
         if (var6 == 5) {
           var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (0 == var6) {
-            kp.a(100, this.field_hb, param3, param1);
+            MusicPatchEnvelope.a(100, this.field_hb, param3, param1);
           } else {
             if (var6 != 1) {
               if (var6 == 2) {
-                kp.a(100, this.field_db, param3, param1);
+                MusicPatchEnvelope.a(100, this.field_db, param3, param1);
               } else {
                 if (var6 == 3) {
-                  kp.a(100, this.field_T, param3, param1);
+                  MusicPatchEnvelope.a(100, this.field_T, param3, param1);
                 }
               }
             } else {
-              kp.a(100, this.field_N, param3, param1);
+              MusicPatchEnvelope.a(100, this.field_N, param3, param1);
             }
           }
         } else {
           if (2 != var6) {
             if (3 != var6) {
               if (var6 == 7) {
-                kp.a(100, this.field_W, param3, param1);
+                MusicPatchEnvelope.a(100, this.field_W, param3, param1);
               } else {
                 if (var6 == 8) {
-                  kp.a(100, this.field_Q, param3, param1);
+                  MusicPatchEnvelope.a(100, this.field_Q, param3, param1);
                 } else {
                   if (var6 != 6) {
                     if (var6 == 4) {
-                      kp.a(100, this.field_J, param3, param1);
+                      MusicPatchEnvelope.a(100, this.field_J, param3, param1);
                     } else {
                       if (var6 != 9) {
                         if (var6 == 10) {
-                          kp.a(100, this.field_fb, param3, param1 * 64 >> 8);
+                          MusicPatchEnvelope.a(100, this.field_fb, param3, param1 * 64 >> 8);
                         }
                       } else {
                         if (null != this.field_bb) {
@@ -147,16 +147,16 @@ final class PlasmaTableScene extends TableScene {
                       }
                     }
                   } else {
-                    kp.a(100, this.field_O, param3, param1);
+                    MusicPatchEnvelope.a(100, this.field_O, param3, param1);
                     System.out.println("playing respot the white");
                   }
                 }
               }
             } else {
-              kp.a(100, this.field_Y, param3, param1);
+              MusicPatchEnvelope.a(100, this.field_Y, param3, param1);
             }
           } else {
-            kp.a(100, this.field_P, param3, param1);
+            MusicPatchEnvelope.a(100, this.field_P, param3, param1);
           }
         }
     }
@@ -200,7 +200,7 @@ final class PlasmaTableScene extends TableScene {
         int var9Lifetime3;
         int var9Lifetime4;
         int var14Lifetime1;
-        var16 = f.a((byte) 100, param0);
+        var16 = LobbyPanelLayoutSupport.a((byte) 100, param0);
         var15 = var16;
         param0 = var15;
         param0[0] = param0[0] - 2304;
@@ -211,7 +211,7 @@ final class PlasmaTableScene extends TableScene {
         var1 = 65536 / SoftwareRasterizer.width;
         ClassicBallSkin.field_l = ClassicBallSkin.field_l & 127;
         EmailAvailabilityValidator.field_x = -64 + ClassicBallSkin.field_l;
-        gn.field_b = 0 + ClassicBallSkin.field_l;
+        FaceBucketSupport.field_b = 0 + ClassicBallSkin.field_l;
         stackIn_2_0 = LimitedRandomAccessFile.field_i;
         if (ClassicBallSkin.field_l >= 16) {
           stackIn_3_1 = ClassicBallSkin.field_l >> 1;
@@ -223,18 +223,18 @@ final class PlasmaTableScene extends TableScene {
         ArchiveLoadSequence.field_g = 128 + ClassicBallSkin.field_l;
         ProjectedLineSupport.field_g = LimitedRandomAccessFile.field_i[64 + (ClassicBallSkin.field_l >> 1)];
         DateInputWidget.field_Y = 192 + ClassicBallSkin.field_l;
-        gn.field_d = 256 + ClassicBallSkin.field_l;
-        pn.field_s = LimitedRandomAccessFile.field_i[128 + (ClassicBallSkin.field_l >> 1)];
+        FaceBucketSupport.field_d = 256 + ClassicBallSkin.field_l;
+        ChatMessage.field_s = LimitedRandomAccessFile.field_i[128 + (ClassicBallSkin.field_l >> 1)];
         UsernameSuggestionsPanel.field_O = 320 + ClassicBallSkin.field_l;
-        ll.field_c = 384 + ClassicBallSkin.field_l;
+        BrowserUrlSupport.field_c = 384 + ClassicBallSkin.field_l;
         NineSliceFrame.field_f = LimitedRandomAccessFile.field_i[192 + (ClassicBallSkin.field_l >> 1)];
-        DisplayNamePanel.field_V = ll.field_c * ll.field_c;
+        DisplayNamePanel.field_V = BrowserUrlSupport.field_c * BrowserUrlSupport.field_c;
         var2 = SoftwareRasterizer.clipTop;
         var3 = 256 - var16[2];
         var4 = var16[8] * var3;
         var5 = var16[11] * var3;
-        var6 = ll.field_c - var16[0];
-        var7 = ll.field_c - var16[1];
+        var6 = BrowserUrlSupport.field_c - var16[0];
+        var7 = BrowserUrlSupport.field_c - var16[1];
         var8 = var16[9] * var6 + var16[10] * var7 + var5 >> 16;
         if (var8 > 0) {
           var9 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6 + var16[7] * var7 + var4) >> 7 / var8;
@@ -243,8 +243,8 @@ final class PlasmaTableScene extends TableScene {
             var2 = var9;
           }
         }
-        var6Lifetime1 = -ll.field_c - var16[0];
-        var7Lifetime1 = ll.field_c - var16[1];
+        var6Lifetime1 = -BrowserUrlSupport.field_c - var16[0];
+        var7Lifetime1 = BrowserUrlSupport.field_c - var16[1];
         var8Lifetime1 = var16[9] * var6Lifetime1 + var16[10] * var7Lifetime1 + var5 >> 16;
         if (var8Lifetime1 > 0) {
           var9Lifetime1 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime1 + var16[7] * var7Lifetime1 + var4) >> 7 / var8Lifetime1;
@@ -253,8 +253,8 @@ final class PlasmaTableScene extends TableScene {
             var2 = var9Lifetime1;
           }
         }
-        var6Lifetime2 = ll.field_c - var16[0];
-        var7Lifetime2 = -ll.field_c - var16[1];
+        var6Lifetime2 = BrowserUrlSupport.field_c - var16[0];
+        var7Lifetime2 = -BrowserUrlSupport.field_c - var16[1];
         var8Lifetime2 = var16[9] * var6Lifetime2 + var16[10] * var7Lifetime2 + var5 >> 16;
         if (var8Lifetime2 > 0) {
           var9Lifetime2 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime2 + var16[7] * var7Lifetime2 + var4) >> 7 / var8Lifetime2;
@@ -263,8 +263,8 @@ final class PlasmaTableScene extends TableScene {
             var2 = var9Lifetime2;
           }
         }
-        var6Lifetime3 = -ll.field_c - var16[0];
-        var7Lifetime3 = -ll.field_c - var16[1];
+        var6Lifetime3 = -BrowserUrlSupport.field_c - var16[0];
+        var7Lifetime3 = -BrowserUrlSupport.field_c - var16[1];
         var8Lifetime3 = var16[9] * var6Lifetime3 + var16[10] * var7Lifetime3 + var5 >> 16;
         if (var8Lifetime3 > 0) {
           var9Lifetime3 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime3 + var16[7] * var7Lifetime3 + var4) >> 7 / var8Lifetime3;
@@ -281,7 +281,7 @@ final class PlasmaTableScene extends TableScene {
           var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipLeft - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
           var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
           if (var13 > 0) {
-            var13 = rf.inverseSquareRoot(var13, -126);
+            var13 = AccountDisplayNameSupport.inverseSquareRoot(var13, -126);
             var10 = ArchiveProvider.divideFixed16(var13, (byte) -82, (long)var10);
             var11 = ArchiveProvider.divideFixed16(var13, (byte) -125, (long)var11);
             var12 = ArchiveProvider.divideFixed16(var13, (byte) -109, (long)var12);
@@ -294,7 +294,7 @@ final class PlasmaTableScene extends TableScene {
               var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipRight - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
               var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
               if (var13 > 0) {
-                var13 = rf.inverseSquareRoot(var13, -126);
+                var13 = AccountDisplayNameSupport.inverseSquareRoot(var13, -126);
                 var10 = ArchiveProvider.divideFixed16(var13, (byte) -115, (long)var10);
                 var11 = ArchiveProvider.divideFixed16(var13, (byte) -115, (long)var11);
                 var12 = ArchiveProvider.divideFixed16(var13, (byte) -97, (long)var12);
@@ -318,11 +318,11 @@ final class PlasmaTableScene extends TableScene {
     final void releaseModels(boolean param0) {
         super.releaseModels(param0);
         LimitedRandomAccessFile.field_i = null;
-        t.field_a = (int[][][]) null;
-        ArrayWidgetGroup.field_K = (jd[][]) null;
-        ro.field_v = (int[][][]) null;
+        PacketDiagnosticsSupport.field_a = (int[][][]) null;
+        ArrayWidgetGroup.field_K = (Atan2Support[][]) null;
+        ProjectedVertex.field_v = (int[][][]) null;
         IntrusiveNode.field_b = (WireframeQuad[][][]) null;
-        DelegatingCanvas.field_a = (jd[][]) null;
+        DelegatingCanvas.field_a = (Atan2Support[][]) null;
         this.field_K = null;
     }
 
@@ -334,16 +334,16 @@ final class PlasmaTableScene extends TableScene {
         for (var9 = SoftwareRasterizer.clipLeft; var9 < SoftwareRasterizer.clipRight; var9++) {
           var10 = param4 >> 16;
           var11 = param5 >> 16;
-          if (var11 <= ll.field_c &&
-            var10 <= ll.field_c &&
-            var11 >= -ll.field_c &&
-            var10 >= -ll.field_c) {
+          if (var11 <= BrowserUrlSupport.field_c &&
+            var10 <= BrowserUrlSupport.field_c &&
+            var11 >= -BrowserUrlSupport.field_c &&
+            var10 >= -BrowserUrlSupport.field_c) {
             var12 = var11 * var11 + var10 * var10;
             if (var12 >= 0 &&
               var12 <= DisplayNamePanel.field_V) {
               param1 = LoginTextValue.a(false, var12);
               if (param1 > EmailAvailabilityValidator.field_x &&
-                param1 < gn.field_b) {
+                param1 < FaceBucketSupport.field_b) {
                 param1 = (param1 - EmailAvailabilityValidator.field_x - 32) * 255 >> 5;
                 if (param1 < 0) {
                   param1 = -param1;
@@ -375,12 +375,12 @@ final class PlasmaTableScene extends TableScene {
                   SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                 } else {
                   if (param1 > DateInputWidget.field_Y &&
-                    param1 < gn.field_d) {
+                    param1 < FaceBucketSupport.field_d) {
                     param1 = (param1 - DateInputWidget.field_Y - 32) * 255 >> 5;
                     if (param1 < 0) {
                       param1 = -param1;
                     }
-                    param0 = pn.field_s;
+                    param0 = ChatMessage.field_s;
                     param1 = 255 - param1 >> 1;
                     param2 = (param0 & 16711935) * param1;
                     param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
@@ -391,7 +391,7 @@ final class PlasmaTableScene extends TableScene {
                     SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                   } else {
                     if (param1 > UsernameSuggestionsPanel.field_O &&
-                      param1 < ll.field_c) {
+                      param1 < BrowserUrlSupport.field_c) {
                       param1 = (param1 - UsernameSuggestionsPanel.field_O - 32) * 255 >> 5;
                       if (param1 < 0) {
                         param1 = -param1;
@@ -451,29 +451,29 @@ final class PlasmaTableScene extends TableScene {
 
     private final void a(Ball[] param0, byte param1) {
         int var3_int = 0;
-        jd dupTemp$0 = null;
+        Atan2Support dupTemp$0 = null;
         int var16 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jd[] var3 = null;
+        Atan2Support[] var3 = null;
         RuntimeException var3_ref = null;
-        jd[] var4 = null;
+        Atan2Support[] var4 = null;
         int var4_int = 0;
-        jd[] var5 = null;
+        Atan2Support[] var5 = null;
         int var5_int = 0;
         int var6_int = 0;
-        jd[][] var6 = null;
-        jd var7 = null;
-        jd var8 = null;
-        jd var9 = null;
-        jd var10 = null;
-        jd var11 = null;
-        jd var12 = null;
-        jd var13 = null;
-        jd var14 = null;
-        jd var15 = null;
+        Atan2Support[][] var6 = null;
+        Atan2Support var7 = null;
+        Atan2Support var8 = null;
+        Atan2Support var9 = null;
+        Atan2Support var10 = null;
+        Atan2Support var11 = null;
+        Atan2Support var12 = null;
+        Atan2Support var13 = null;
+        Atan2Support var14 = null;
+        Atan2Support var15 = null;
         int var17 = 0;
         int var18 = 0;
         var18 = Pool.field_O;
@@ -578,7 +578,7 @@ final class PlasmaTableScene extends TableScene {
         int[] var13 = null;
         var8 = Pool.field_O;
         try {
-          var9 = f.a((byte) 96, param1);
+          var9 = LobbyPanelLayoutSupport.a((byte) 96, param1);
           var13 = var9;
           var9[0] = var9[0] - 2304;
           var9[1] = var9[1] - 1152;
@@ -678,7 +678,7 @@ final class PlasmaTableScene extends TableScene {
               return;
             }
             if (!NanoTickClock.a(113, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
-              this.field_S = ic.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
+              this.field_S = SharedRateScaleSupport.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
               var10 = 0;
               var5_intLifetime1 = var10;
               while (this.field_R.length > var10) {
@@ -691,7 +691,7 @@ final class PlasmaTableScene extends TableScene {
               if (param2.gameModel.rules instanceof EightBallRules) {
                 var6Lifetime1 = ((EightBallRules) (param2.gameModel.rules)).initialGroup(-1);
                 if (-1 != var6Lifetime1) {
-                  var5 = hf.a(var6Lifetime1, (byte) 73);
+                  var5 = ChatReplacementSupport.getRenderingPalette(var6Lifetime1, (byte) 73);
                 }
               }
               stackIn_26_0 = (0 != (1 & this.field_S)) ? 2 : 1;
@@ -700,7 +700,7 @@ final class PlasmaTableScene extends TableScene {
               } else {
                 stackIn_29_1 = 1;
               }
-              wn.$cfr$intArgs$a$2435eea43ef1(stackIn_26_0, stackIn_29_1, var5, this.field_X, 127, 0, this.field_R, this.field_M);
+              ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_26_0, stackIn_29_1, var5, this.field_X, 127, 0, this.field_R, this.field_M);
             }
             param2.buildAimPreviewTrail(-125);
             return;
@@ -994,7 +994,7 @@ final class PlasmaTableScene extends TableScene {
           this.prepareBallDrawOrder(false, var16, var14);
           QuaternionRotationSupport.b(0);
           PlasmaTableScene.a(var16);
-          var17 = f.a((byte) 77, var16);
+          var17 = LobbyPanelLayoutSupport.a((byte) 77, var16);
           var15 = var17;
           var5_ref_int__ = var15;
           var5_ref_int__[0] = var5_ref_int__[0] - 2304;
@@ -1020,7 +1020,7 @@ final class PlasmaTableScene extends TableScene {
           }
           if ((this.field_L[0] > 0 ||
             this.field_L[1] > 0) && !NanoTickClock.a(59, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
-            this.field_S = ic.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
+            this.field_S = SharedRateScaleSupport.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
             var12 = 0;
             var6_intLifetime1 = var12;
             while (this.field_R.length > var12) {
@@ -1033,7 +1033,7 @@ final class PlasmaTableScene extends TableScene {
             if (param1.gameModel.rules instanceof EightBallRules) {
               var7Lifetime1 = ((EightBallRules) (param1.gameModel.rules)).initialGroup(-1);
               if (var7Lifetime1 != -1) {
-                var6 = hf.a(var7Lifetime1, (byte) 96);
+                var6 = ChatReplacementSupport.getRenderingPalette(var7Lifetime1, (byte) 96);
               }
             }
             stackIn_18_0 = ((1 & this.field_S) == 0) ? 1 : 2;
@@ -1042,7 +1042,7 @@ final class PlasmaTableScene extends TableScene {
             } else {
               stackIn_21_1 = 2;
             }
-            wn.$cfr$intArgs$a$2435eea43ef1(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
+            ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
           }
           this.drawWireframeGrid((byte) 44, var16);
           this.drawBallsInOrder(var16, (byte) 79, false, var14, false);
@@ -1103,14 +1103,14 @@ final class PlasmaTableScene extends TableScene {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        jd[] var16 = null;
+        Atan2Support[] var16 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        jd var24 = null;
+        Atan2Support var24 = null;
         int var25 = 0;
         int var26 = 0;
         int[] var27 = null;
@@ -1134,30 +1134,30 @@ final class PlasmaTableScene extends TableScene {
         var26 = Pool.field_O;
         try {
           var3_int = 0;
-          var34 = ro.field_v[0][var3_int];
+          var34 = ProjectedVertex.field_v[0][var3_int];
           var29 = var34;
           var27 = var29;
           var4 = var27;
-          var5 = ro.field_v[1][var3_int];
+          var5 = ProjectedVertex.field_v[1][var3_int];
           if (param0 != -25) {
             this.field_Y = (PcmSample) null;
           }
-          var35 = ro.field_v[2][var3_int];
+          var35 = ProjectedVertex.field_v[2][var3_int];
           var30 = var35;
           var28 = var30;
           var6 = var28;
-          pl.projectVertices(var5, var34.length, 0, param1, 0, var27, t.field_a[1][var3_int], t.field_a[2][var3_int], t.field_a[0][var3_int].length, var35, -26182, t.field_a[0][var3_int]);
+          VertexProjectionSupport.projectVertices(var5, var34.length, 0, param1, 0, var27, PacketDiagnosticsSupport.field_a[1][var3_int], PacketDiagnosticsSupport.field_a[2][var3_int], PacketDiagnosticsSupport.field_a[0][var3_int].length, var35, -26182, PacketDiagnosticsSupport.field_a[0][var3_int]);
           for (var3_intLifetime1 = 1; 16 >= var3_intLifetime1; var3_intLifetime1++) {
-            var36 = ro.field_v[0][var3_intLifetime1];
+            var36 = ProjectedVertex.field_v[0][var3_intLifetime1];
             var31 = var36;
             var7 = var31;
-            var38 = ro.field_v[1][var3_intLifetime1];
+            var38 = ProjectedVertex.field_v[1][var3_intLifetime1];
             var33 = var38;
             var8 = var33;
-            var37 = ro.field_v[2][var3_intLifetime1];
+            var37 = ProjectedVertex.field_v[2][var3_intLifetime1];
             var32 = var37;
             var9 = var32;
-            pl.projectVertices(var8, var36.length, 0, param1, 0, var7, t.field_a[1][var3_intLifetime1], t.field_a[2][var3_intLifetime1], t.field_a[0][var3_intLifetime1].length, var37, -26182, t.field_a[0][var3_intLifetime1]);
+            VertexProjectionSupport.projectVertices(var8, var36.length, 0, param1, 0, var7, PacketDiagnosticsSupport.field_a[1][var3_intLifetime1], PacketDiagnosticsSupport.field_a[2][var3_intLifetime1], PacketDiagnosticsSupport.field_a[0][var3_intLifetime1].length, var37, -26182, PacketDiagnosticsSupport.field_a[0][var3_intLifetime1]);
             var10 = var4[0];
             var11 = var5[0];
             var12 = var6[0];

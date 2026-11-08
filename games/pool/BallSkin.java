@@ -54,7 +54,7 @@ abstract class BallSkin {
           this.field_j = (ModelMesh[]) null;
         }
         for (var2 = 0; var2 < this.field_k.length; var2++) {
-          this.field_k[var2] = ta.buildGradientPalette(new int[]{0, 0, 128, this.ballColor(var2, true)}, -119);
+          this.field_k[var2] = GradientPaletteSupport.buildGradientPalette(new int[]{0, 0, 128, this.ballColor(var2, true)}, -119);
         }
     }
 
@@ -119,18 +119,18 @@ abstract class BallSkin {
           var6_intLifetime1 = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4) + var9 / var8;
           var11 = 32 + 589824 / var8;
           if (!param0) {
-            stackIn_10_0 = ff.field_h;
+            stackIn_10_0 = SlidingPanelSupport.field_h;
           } else {
-            stackIn_10_0 = ff.field_i;
+            stackIn_10_0 = SlidingPanelSupport.field_i;
           }
           var15 = stackIn_10_0;
           var14 = var15;
           var12 = var14;
           for (var13 = 0; var13 < var15.length; var13++) {
-            ff.field_a[var13] = md.bitwiseOr(md.bitwiseOr(ArchiveLoadSequence.b(Js5Transport.field_n[param2] * ArchiveLoadSequence.b(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.b(-16776974, ArchiveLoadSequence.b(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.b(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.b(255, var15[var13]) >>> 8));
+            SlidingPanelSupport.field_a[var13] = RenderingInitializationSupport.bitwiseOr(RenderingInitializationSupport.bitwiseOr(ArchiveLoadSequence.bitwiseAnd(Js5Transport.field_n[param2] * ArchiveLoadSequence.bitwiseAnd(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.bitwiseAnd(-16776974, ArchiveLoadSequence.bitwiseAnd(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.bitwiseAnd(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.bitwiseAnd(255, var15[var13]) >>> 8));
           }
           if (2147483647L > 64L * ((long)var11 * (long)var11)) {
-            SoftwareRasterizer.fillRadialGlow(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
+            SoftwareRasterizer.fillRadialGlow(var6_intLifetime1, var7Lifetime1, var11, 64, SlidingPanelSupport.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

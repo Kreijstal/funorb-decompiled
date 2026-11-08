@@ -59,7 +59,7 @@ final class Ball {
         this.field_h = this.velocityY + -this.angularVelocityX * -8;
         if (0 != this.field_l ||
           this.field_h != 0) {
-          var2 = rf.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -123);
+          var2 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -123);
           if (var2 != 0) {
             this.field_l = ArchiveProvider.divideFixed16(var2, (byte) -100, (long)this.field_l);
             this.field_h = ArchiveProvider.divideFixed16(var2, (byte) -75, (long)this.field_h);
@@ -256,23 +256,23 @@ final class Ball {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6) {
-        if (null == ta.field_h ||
+        if (null == GradientPaletteSupport.field_h ||
           null == ReportAbuseDialog.field_Xb ||
           null == UsernameSuggestionsPanel.field_R) {
           ReportAbuseDialog.field_Xb = new PcmStreamMixer();
-          ta.field_h = new ReverbPcmStream(ReportAbuseDialog.field_Xb);
-          SpaceObject.field_d.b(ta.field_h);
+          GradientPaletteSupport.field_h = new ReverbPcmStream(ReportAbuseDialog.field_Xb);
+          SpaceObject.field_d.addSubstream(GradientPaletteSupport.field_h);
           UsernameSuggestionsPanel.field_R = new IntrusiveDeque();
         }
-        ta.field_h.a(param1);
-        ta.field_h.f(param4);
-        ta.field_h.setDampingTimeMicros(param5);
-        ta.field_h.setWetGain(param0);
+        GradientPaletteSupport.field_h.a(param1);
+        GradientPaletteSupport.field_h.f(param4);
+        GradientPaletteSupport.field_h.setDampingTimeMicros(param5);
+        GradientPaletteSupport.field_h.setWetGain(param0);
         if (param6 != -1) {
           field_J = (QuickChatDynamicCommand) null;
         }
-        ta.field_h.d(param2);
-        ta.field_h.setStereoWidth(param3);
+        GradientPaletteSupport.field_h.d(param2);
+        GradientPaletteSupport.field_h.setStereoWidth(param3);
     }
 
     final void b(boolean param0) {
@@ -280,7 +280,7 @@ final class Ball {
         if (this.angularVelocityX != 0 ||
           0 != this.angularVelocityY ||
           this.angularVelocityZ != 0) {
-          var2 = rf.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ), -121);
+          var2 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ), -121);
           if (0 < var2) {
             this.spinDelta.setFromAxisAngle(111, -ArchiveProvider.divideFixed16(var2, (byte) -92, (long)this.angularVelocityX), -ArchiveProvider.divideFixed16(var2, (byte) -84, (long)this.angularVelocityY), ArchiveProvider.divideFixed16(var2, (byte) -101, (long)this.angularVelocityZ), (int)((double)(var2 * 1024) / 205887.41614566068));
             this.orientation.multiplyBy(3, this.spinDelta);
@@ -324,7 +324,7 @@ final class Ball {
         if (0 != this.angularVelocityX ||
           this.angularVelocityY != 0 ||
           this.angularVelocityZ != 0) {
-          var2_int = rf.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)), -126);
+          var2_int = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)), -126);
           if (var2_int > 0) {
             this.spinDelta.setFromAxisAngle(77, -ArchiveProvider.divideFixed16(var2_int, (byte) -82, (long)this.angularVelocityX), -ArchiveProvider.divideFixed16(var2_int, (byte) -63, (long)this.angularVelocityY), ArchiveProvider.divideFixed16(var2_int, (byte) -117, (long)this.angularVelocityZ), 1024 * var2_int / 205887);
             this.orientation.multiplyBy(3, this.spinDelta);
@@ -346,13 +346,13 @@ final class Ball {
                 }
                 return;
               }
-              var2_intLifetime1 = rf.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -125);
+              var2_intLifetime1 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -125);
               if (0 != var2_intLifetime1) {
                 this.field_l = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -100, (long)this.field_l);
                 this.field_h = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -107, (long)this.field_h);
-                this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -117, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
-                this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -118, (long)(vn.a(this.field_l * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
-                this.field_d = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
+                this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -117, (long)(ReflectionRequestSupport.a(this.field_h * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
+                this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -118, (long)(ReflectionRequestSupport.a(this.field_l * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
+                this.field_d = NameEntryPopup.a(ReflectionReplySupport.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                 this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                 this.angularVelocityY = this.angularVelocityY + this.field_y;
                 this.angularVelocityX = this.angularVelocityX + this.field_a;
@@ -383,8 +383,8 @@ final class Ball {
                       var2 <= 2147483647L) {
                       this.field_l = ArchiveProvider.divideFixed16((int)var2, (byte) -128, (long)this.field_l);
                       this.field_h = ArchiveProvider.divideFixed16((int)var2, (byte) -104, (long)this.field_h);
-                      this.field_A = -NameEntryPopup.a(dr.field_f, false, this.field_l) / 50;
-                      this.field_u = -NameEntryPopup.a(dr.field_f, false, this.field_h) / 50;
+                      this.field_A = -NameEntryPopup.a(LogoFinalFrameLoader.field_f, false, this.field_l) / 50;
+                      this.field_u = -NameEntryPopup.a(LogoFinalFrameLoader.field_f, false, this.field_h) / 50;
                       var4 = FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_A, (long)this.field_A, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_u, (long)this.field_u, false);
                       var6 = this.horizontalSpeedSquared(-14770);
                       if (var6 < var4) {
@@ -395,15 +395,15 @@ final class Ball {
                       }
                       this.velocityX = this.velocityX + this.field_A;
                       this.velocityY = this.velocityY + this.field_u;
-                      this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, dr.field_f) / 50));
-                      this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, PasswordValidator.field_q, dr.field_f) / 50));
-                      this.field_d = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
-                      this.velocityX = this.velocityX + vn.a(this.angularVelocityZ, 0, -this.velocityY, MusicVoice.field_l);
-                      this.velocityY = this.velocityY + vn.a(this.angularVelocityZ, 0, this.velocityX, MusicVoice.field_l);
+                      this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(ReflectionRequestSupport.a(this.field_h * 8, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
+                      this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(ReflectionRequestSupport.a(8 * this.field_l, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
+                      this.field_d = NameEntryPopup.a(ReflectionReplySupport.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
+                      this.velocityX = this.velocityX + ReflectionRequestSupport.a(this.angularVelocityZ, 0, -this.velocityY, MusicVoice.field_l);
+                      this.velocityY = this.velocityY + ReflectionRequestSupport.a(this.angularVelocityZ, 0, this.velocityX, MusicVoice.field_l);
                       this.angularVelocityY = this.angularVelocityY + this.field_y;
                       this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                       this.angularVelocityX = this.angularVelocityX + this.field_a;
-                      this.angularVelocityZ = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ);
+                      this.angularVelocityZ = NameEntryPopup.a(ReflectionReplySupport.field_l, false, this.angularVelocityZ);
                       var8 = this.velocityX + -8 * this.angularVelocityY;
                       var9 = this.velocityY + -this.angularVelocityX * -8;
                       var10 = this.field_l - var8;
@@ -438,7 +438,7 @@ final class Ball {
         }
     }
 
-    final void a(int param0) {
+    final void allocateRenderTransform(int param0) {
         if (param0 <= 98) {
           this.horizontalSpeed(15);
         }

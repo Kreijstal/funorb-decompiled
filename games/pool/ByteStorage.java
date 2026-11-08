@@ -28,7 +28,7 @@ abstract class ByteStorage {
 
     final static void b(int param0) {
         String var2 = (String) null;
-        rf.a((String) null, -125, "");
+        AccountDisplayNameSupport.a((String) null, -125, "");
         if (param0 != 3) {
           field_f = (UiComponent) null;
         }
@@ -39,15 +39,15 @@ abstract class ByteStorage {
     abstract byte[] toByteArray(int param0);
 
     final static void d(int param0) {
-        if (un.field_e != 0) {
-          TextureCache.field_c.sprite = dq.createTextLabelSprite(2, 0, il.off);
+        if (LookupProtocolSupport.field_e != 0) {
+          TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(2, 0, BeveledFrameSpriteFactory.off);
           if (param0 > -97) {
             ByteStorage.b(111);
             return;
           }
           return;
         }
-        TextureCache.field_c.sprite = dq.createTextLabelSprite(3, 0, jc.on);
+        TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(3, 0, AppletUrlSupport.on);
         if (param0 > -97) {
           ByteStorage.b(111);
           return;

@@ -197,7 +197,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         this.createAccountButton.setWidgetBounds(var3, this.widgetWidth - var3 >> 1, 30, false, -78 + (this.widgetHeight - 2 * var2));
         this.goBackButton.listener = (WidgetListener) (this);
         this.createAccountButton.listener = (WidgetListener) (this);
-        this.createAccountButton.hoverText = fc.loginCreateTooltip;
+        this.createAccountButton.hoverText = AccountMenuText.loginCreateTooltip;
         this.justPlayButton.listener = (WidgetListener) (this);
         this.justPlayButton.hoverText = ArchiveProvider.loginJustplayTooltip;
         this.addChild(true, this.goBackButton);

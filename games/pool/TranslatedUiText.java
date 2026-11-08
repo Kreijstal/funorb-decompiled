@@ -55,7 +55,7 @@ final class TranslatedUiText {
 
     final static void b(int param0) {
         try {
-          sm.field_C = null;
+          PasswordInputPainter.field_C = null;
           if (param0 != -31384) {
             TranslatedUiText.releaseStatics(103);
           }
@@ -71,7 +71,7 @@ final class TranslatedUiText {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          EmailAvailabilityValidator.field_s = th.field_b;
+          EmailAvailabilityValidator.field_s = ChatInputSupport.field_b;
           SocialListEntry.field_Ub = param1;
           if (param2 <= 74) {
             field_h = -97;
@@ -144,7 +144,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -109, "error_js5connect_full");
                 if (null != var2) {
-                  hh.errorJs5connectFull = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20942);
+                  PackedColorSupport.errorJs5connectFull = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20942);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "error_js5connect");
                 if (var2 != null) {
@@ -152,7 +152,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -55, "login_gameupdated");
                 if (null != var2) {
-                  dk.loginGameupdated = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  GlowParticle.loginGameupdated = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -119, "create_unable");
                 if (var2 != null) {
@@ -188,7 +188,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "ticketing_xunread");
                 if (null != var2) {
-                  sa.ticketingXunread = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  CollisionContact.ticketingXunread = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "ticketing_gotowebsite");
                 if (var2 != null) {
@@ -220,11 +220,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -73, "mu_chat_ignore");
                 if (null != var2) {
-                  ll.muChatIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  BrowserUrlSupport.muChatIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "mu_chat_tips");
                 if (var2 != null) {
-                  je.muChatTips = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  ArchiveBootstrapSupport.muChatTips = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -30, "mu_chat_game");
                 if (null != var2) {
@@ -236,7 +236,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -110, "mu_x_entered_game");
                 if (var2 != null) {
-                  th.muXEnteredGame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21006);
+                  ChatInputSupport.muXEnteredGame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21006);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -100, "mu_x_joined_your_game");
                 if (var2 != null) {
@@ -260,7 +260,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
-                  ii.muXCannotJoinInprogress = Cp1252DecodingSupport.decodeBytesToString(var2, -27);
+                  ProxyConnectorSupport.muXCannotJoinInprogress = Cp1252DecodingSupport.decodeBytesToString(var2, -27);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -123, "mu_x_declined_invite");
                 if (var2 != null) {
@@ -280,7 +280,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "mu_entered_other_game");
                 if (null != var2) {
-                  ti.muEnteredOtherGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  DebugSliderInputSupport.muEnteredOtherGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "mu_game_is_full");
                 if (var2 != null) {
@@ -288,7 +288,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 106, "mu_game_has_started");
                 if (var2 != null) {
-                  wb.muGameHasStarted = Cp1252DecodingSupport.decodeBytesToString(var2, -110);
+                  RankingsProtocolSupport.muGameHasStarted = Cp1252DecodingSupport.decodeBytesToString(var2, -110);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "mu_you_declined_invite");
                 if (null != var2) {
@@ -312,7 +312,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -77, "mu_lobby_name");
                 if (null != var2) {
-                  jh.muLobbyName = Cp1252DecodingSupport.decodeBytesToString(var2, -104);
+                  MenuScreenBase.muLobbyName = Cp1252DecodingSupport.decodeBytesToString(var2, -104);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -114, "mu_lobby_rating");
                 if (null != var2) {
@@ -332,11 +332,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "mu_lobby_name_rm");
                 if (var2 != null) {
-                  tp.muLobbyNameRm = Cp1252DecodingSupport.decodeBytesToString(var2, -74);
+                  LookupRetrySupport.muLobbyNameRm = Cp1252DecodingSupport.decodeBytesToString(var2, -74);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -76, "mu_lobby_location");
                 if (null != var2) {
-                  f.muLobbyLocation = Cp1252DecodingSupport.decodeBytesToString(var2, -41);
+                  LobbyPanelLayoutSupport.muLobbyLocation = Cp1252DecodingSupport.decodeBytesToString(var2, -41);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 121, "mu_gamelist_all_games");
                 if (var2 != null) {
@@ -356,7 +356,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "mu_gamelist_avg_rating");
                 if (null != var2) {
-                  ol.muGamelistAvgRating = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  FixedPointVectorSupport.muGamelistAvgRating = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "mu_gamelist_options");
                 if (var2 != null) {
@@ -364,11 +364,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -49, "mu_gamelist_elapsed_time");
                 if (var2 != null) {
-                  ml.muGamelistElapsedTime = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  LoginMethod.muGamelistElapsedTime = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 121, "mu_play_rated");
                 if (var2 != null) {
-                  fc.muPlayRated = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  AccountMenuText.muPlayRated = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "mu_create_unrated");
                 if (var2 != null) {
@@ -396,11 +396,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "mu_options_ratedgametype");
                 if (var2 != null) {
-                  pk.muOptionsRatedgametype = Cp1252DecodingSupport.decodeBytesToString(var2, -50);
+                  NameNormalizationSupport.muOptionsRatedgametype = Cp1252DecodingSupport.decodeBytesToString(var2, -50);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -103, "yes");
                 if (null != var2) {
-                  rm.yes = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  MeshSymmetrySupport.yes = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -78, "no");
                 if (null != var2) {
@@ -412,7 +412,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -71, "close");
                 if (var2 != null) {
-                  th.close = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21104);
+                  ChatInputSupport.close = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21104);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "add_x_to_friends");
                 if (var2 != null) {
@@ -420,7 +420,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "add_x_to_ignore");
                 if (null != var2) {
-                  jh.addXToIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21087);
+                  MenuScreenBase.addXToIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21087);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -70, "rm_x_from_friends");
                 if (null != var2) {
@@ -428,11 +428,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "rm_x_from_ignore");
                 if (var2 != null) {
-                  ph.rmXFromIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  AccountProtocolStage.rmXFromIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "send_pm_to_x");
                 if (var2 != null) {
-                  rp.sendPmToX = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  NineSliceFrameSupport.sendPmToX = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -65, "send_qc_to_x");
                 if (null != var2) {
@@ -440,7 +440,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "send_pm");
                 if (null != var2) {
-                  wb.sendPm = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  RankingsProtocolSupport.sendPm = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "invite_accept_xs_game");
                 if (var2 != null) {
@@ -464,19 +464,19 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -75, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
-                  th.muGameoptKickXFromThisGame = Cp1252DecodingSupport.decodeBytesToString(var2, -9);
+                  ChatInputSupport.muGameoptKickXFromThisGame = Cp1252DecodingSupport.decodeBytesToString(var2, -9);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
-                  jh.muGameoptWithdrawInviteToX = Cp1252DecodingSupport.decodeBytesToString(var2, -7);
+                  MenuScreenBase.muGameoptWithdrawInviteToX = Cp1252DecodingSupport.decodeBytesToString(var2, -7);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "mu_gameopt_accept_x_into_game");
                 if (null != var2) {
-                  gf.muGameoptAcceptXIntoGame = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  UsernameSuggestionSupport.muGameoptAcceptXIntoGame = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -95, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
-                  ro.muGameoptRejectXFromGame = Cp1252DecodingSupport.decodeBytesToString(var2, -53);
+                  ProjectedVertex.muGameoptRejectXFromGame = Cp1252DecodingSupport.decodeBytesToString(var2, -53);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -29, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
@@ -504,7 +504,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -90, "mu_chat_lobby_friends");
                 if (null != var2) {
-                  sa.muChatLobbyFriends = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CollisionContact.muChatLobbyFriends = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -114, "mu_chat_lobby_hide");
                 if (var2 != null) {
@@ -512,7 +512,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -106, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  ra.muChatGameShowAll = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  IntegerRecordProtocolSupport.muChatGameShowAll = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -97, "mu_chat_game_friends_only");
                 if (var2 != null) {
@@ -520,7 +520,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -88, "mu_chat_game_friends");
                 if (null != var2) {
-                  md.muChatGameFriends = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
+                  RenderingInitializationSupport.muChatGameFriends = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "mu_chat_game_hide");
                 if (var2 != null) {
@@ -528,7 +528,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -68, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  kp.muChatPmShowAll = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
+                  MusicPatchEnvelope.muChatPmShowAll = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -63, "mu_chat_pm_friends_only");
                 if (null != var2) {
@@ -536,7 +536,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -68, "mu_chat_pm_friends");
                 if (var2 != null) {
-                  rm.muChatPmFriends = Cp1252DecodingSupport.decodeBytesToString(var2, 2);
+                  MeshSymmetrySupport.muChatPmFriends = Cp1252DecodingSupport.decodeBytesToString(var2, 2);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
@@ -544,11 +544,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  lf.youHaveBeenRemovedFromXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  LoginEncryptionSupport.youHaveBeenRemovedFromXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "your_rating_is_x");
                 if (null != var2) {
-                  m.yourRatingIsX = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RatingTextState.yourRatingIsX = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "you_are_on_x_server");
                 if (var2 != null) {
@@ -560,7 +560,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -73, "unrated_game");
                 if (var2 != null) {
-                  hh.unratedGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  PackedColorSupport.unratedGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "rated_game_tips");
                 if (null != var2) {
@@ -572,7 +572,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -121, "searching_for_opponents_plural");
                 if (null != var2) {
-                  vi.searchingForOpponentsPlural = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  Cp1252CharacterSupport.searchingForOpponentsPlural = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "find_opponent_singular");
                 if (null != var2) {
@@ -592,15 +592,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "waiting_to_start_hint");
                 if (var2 != null) {
-                  la.waitingToStartHint = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  ChatPanelSupport.waitingToStartHint = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "your_game");
                 if (var2 != null) {
-                  rf.yourGame = Cp1252DecodingSupport.decodeBytesToString(var2, -126);
+                  AccountDisplayNameSupport.yourGame = Cp1252DecodingSupport.decodeBytesToString(var2, -126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "game_full");
                 if (null != var2) {
-                  ro.gameFull = Cp1252DecodingSupport.decodeBytesToString(var2, -116);
+                  ProjectedVertex.gameFull = Cp1252DecodingSupport.decodeBytesToString(var2, -116);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "join_requests_one");
                 if (null != var2) {
@@ -612,7 +612,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "xs_game");
                 if (var2 != null) {
-                  th.xsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 2);
+                  ChatInputSupport.xsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 2);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -95, "waiting_for_x_to_start_game");
                 if (var2 != null) {
@@ -624,7 +624,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -66, "players_x_of_y");
                 if (null != var2) {
-                  qa.playersXOfY = Cp1252DecodingSupport.decodeBytesToString(var2, 13);
+                  HotspotRectangle.playersXOfY = Cp1252DecodingSupport.decodeBytesToString(var2, 13);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -92, "message_lobby");
                 if (null != var2) {
@@ -660,11 +660,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 93, "accept");
                 if (null != var2) {
-                  ie.accept = Cp1252DecodingSupport.decodeBytesToString(var2, 13);
+                  BrowserCookieSupport.accept = Cp1252DecodingSupport.decodeBytesToString(var2, 13);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -35, "reject");
                 if (var2 != null) {
-                  qa.reject = Cp1252DecodingSupport.decodeBytesToString(var2, -47);
+                  HotspotRectangle.reject = Cp1252DecodingSupport.decodeBytesToString(var2, -47);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -94, "invite");
                 if (null != var2) {
@@ -672,7 +672,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -105, "status_concluded");
                 if (null != var2) {
-                  pn.statusConcluded = Cp1252DecodingSupport.decodeBytesToString(var2, -34);
+                  ChatMessage.statusConcluded = Cp1252DecodingSupport.decodeBytesToString(var2, -34);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "status_spectate");
                 if (null != var2) {
@@ -700,7 +700,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "you_are_invited_to_xs_game");
                 if (var2 != null) {
-                  jc.youAreInvitedToXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  AppletUrlSupport.youAreInvitedToXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "asking_to_join_xs_game");
                 if (null != var2) {
@@ -708,7 +708,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 111, "who_can_join");
                 if (null != var2) {
-                  ic.whoCanJoin = Cp1252DecodingSupport.decodeBytesToString(var2, -18);
+                  SharedRateScaleSupport.whoCanJoin = Cp1252DecodingSupport.decodeBytesToString(var2, -18);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -123, "you_can_join");
                 if (null != var2) {
@@ -736,7 +736,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -100, "hide_players_in_xs_game");
                 if (var2 != null) {
-                  jj.hidePlayersInXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, -8);
+                  BirthDatePromptPanel.hidePlayersInXsGame = Cp1252DecodingSupport.decodeBytesToString(var2, -8);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "show_players_in_xs_game");
                 if (null != var2) {
@@ -768,7 +768,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 121, "multiconst_similar_rating");
                 if (var2 != null) {
-                  hf.multiconstSimilarRating = Cp1252DecodingSupport.decodeBytesToString(var2, 9);
+                  ChatReplacementSupport.multiconstSimilarRating = Cp1252DecodingSupport.decodeBytesToString(var2, 9);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -36, "multiconst_open");
                 if (null != var2) {
@@ -788,7 +788,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -47, "pressf10toquickchat");
                 if (null != var2) {
-                  sk.pressf10toquickchat = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
+                  PaletteFontLoader.pressf10toquickchat = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -30, "dob_chatdisabled");
                 if (null != var2) {
@@ -800,7 +800,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 101, "tab_hidechattemporarily");
                 if (null != var2) {
-                  ra.tabHidechattemporarily = Cp1252DecodingSupport.decodeBytesToString(var2, -84);
+                  IntegerRecordProtocolSupport.tabHidechattemporarily = Cp1252DecodingSupport.decodeBytesToString(var2, -84);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "esc_cancelprivatemessage");
                 if (null != var2) {
@@ -808,7 +808,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "esc_cancelthisline");
                 if (null != var2) {
-                  ff.escCancelthisline = Cp1252DecodingSupport.decodeBytesToString(var2, -1);
+                  SlidingPanelSupport.escCancelthisline = Cp1252DecodingSupport.decodeBytesToString(var2, -1);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "privatequickchat_from_x");
                 if (var2 != null) {
@@ -816,11 +816,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "privatequickchat_to_x");
                 if (var2 != null) {
-                  jl.privatequickchatToX = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20987);
+                  SpriteSheetLoadSupport.privatequickchatToX = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20987);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -104, "privatechat_blankarea_explanation");
                 if (null != var2) {
-                  wb.privatechatBlankareaExplanation = Cp1252DecodingSupport.decodeBytesToString(var2, -48);
+                  RankingsProtocolSupport.privatechatBlankareaExplanation = Cp1252DecodingSupport.decodeBytesToString(var2, -48);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
@@ -832,7 +832,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -51, "privatechat_friend_notlisted");
                 if (null != var2) {
-                  tp.privatechatFriendNotlisted = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
+                  LookupRetrySupport.privatechatFriendNotlisted = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "chatviewscrolledup");
                 if (var2 != null) {
@@ -848,7 +848,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "runescapeclan");
                 if (var2 != null) {
-                  th.runescapeclan = Cp1252DecodingSupport.decodeBytesToString(var2, -55);
+                  ChatInputSupport.runescapeclan = Cp1252DecodingSupport.decodeBytesToString(var2, -55);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "rated_membersonly");
                 if (var2 != null) {
@@ -868,15 +868,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -86, "gameopt_needrating");
                 if (null != var2) {
-                  sm.gameoptNeedrating = Cp1252DecodingSupport.decodeBytesToString(var2, -89);
+                  PasswordInputPainter.gameoptNeedrating = Cp1252DecodingSupport.decodeBytesToString(var2, -89);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -65, "gameopt_unratedonly");
                 if (null != var2) {
-                  he.gameoptUnratedonly = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
+                  CanvasInputSupport.gameoptUnratedonly = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -66, "gameopt_notunlocked");
                 if (null != var2) {
-                  dk.gameoptNotunlocked = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  GlowParticle.gameoptNotunlocked = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "gameopt_cannotbecombined1");
                 if (var2 != null) {
@@ -888,7 +888,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "gameopt_playernotmember");
                 if (var2 != null) {
-                  dq.gameoptPlayernotmember = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21085);
+                  TransformRotationSupport.gameoptPlayernotmember = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21085);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "gameopt_younotmember");
                 if (var2 != null) {
@@ -896,7 +896,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -118, "gameopt_playerneedsrating");
                 if (null != var2) {
-                  jq.gameoptPlayerneedsrating = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  QuickChatNavigationSupport.gameoptPlayerneedsrating = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -86, "gameopt_youneedrating");
                 if (null != var2) {
@@ -904,7 +904,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -45, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  sm.gameoptPlayerneedsratedgames = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
+                  PasswordInputPainter.gameoptPlayerneedsratedgames = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -29, "gameopt_youneedratedgames");
                 if (null != var2) {
@@ -912,11 +912,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -87, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  jd.gameoptPlayerneeds1ratedgame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 20993);
+                  Atan2Support.gameoptPlayerneeds1ratedgame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 20993);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -119, "gameopt_youneed1ratedgame");
                 if (null != var2) {
-                  rf.gameoptYouneed1ratedgame = Cp1252DecodingSupport.decodeBytesToString(var2, -61);
+                  AccountDisplayNameSupport.gameoptYouneed1ratedgame = Cp1252DecodingSupport.decodeBytesToString(var2, -61);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -32, "gameopt_playerhasntunlocked");
                 if (null != var2) {
@@ -928,7 +928,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "gameopt_trychanging1");
                 if (null != var2) {
-                  ii.gameoptTrychanging1 = Cp1252DecodingSupport.decodeBytesToString(var2, -37);
+                  ProxyConnectorSupport.gameoptTrychanging1 = Cp1252DecodingSupport.decodeBytesToString(var2, -37);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "gameopt_trychanging2");
                 if (var2 != null) {
@@ -940,7 +940,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -43, "gameopt_needchanging2");
                 if (null != var2) {
-                  tp.gameoptNeedchanging2 = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  LookupRetrySupport.gameoptNeedchanging2 = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "gameopt_mightchange");
                 if (var2 != null) {
@@ -952,7 +952,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -108, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  t.gameoptPlayersdontqualifySelectgametab = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20885);
+                  PacketDiagnosticsSupport.gameoptPlayersdontqualifySelectgametab = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20885);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -73, "gameopt_unselectedoptions");
                 if (null != var2) {
@@ -982,11 +982,11 @@ final class TranslatedUiText {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  wc.field_a = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21098);
+                  LoginResponse.field_a = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21098);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 93, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  m.gameoptPleasetrychanging = Cp1252DecodingSupport.decodeBytesToString(var2, -116);
+                  RatingTextState.gameoptPleasetrychanging = Cp1252DecodingSupport.decodeBytesToString(var2, -116);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "ra_title");
                 if (var2 != null) {
@@ -998,15 +998,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "ra_suggestmute");
                 if (null != var2) {
-                  tq.raSuggestmute = Cp1252DecodingSupport.decodeBytesToString(var2, -24);
+                  AccountStateQuery.raSuggestmute = Cp1252DecodingSupport.decodeBytesToString(var2, -24);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "ra_intro");
                 if (null != var2) {
-                  dq.raIntro = Cp1252DecodingSupport.decodeBytesToString(var2, -6);
+                  TransformRotationSupport.raIntro = Cp1252DecodingSupport.decodeBytesToString(var2, -6);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -85, "ra_intro_no_name");
                 if (null != var2) {
-                  th.raIntroNoName = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21097);
+                  ChatInputSupport.raIntroNoName = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21097);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "ra_explanation");
                 if (var2 != null) {
@@ -1034,7 +1034,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "rule_0_4");
                 if (var2 != null) {
-                  jd.rule04 = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  Atan2Support.rule04 = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "rule_0_5");
                 if (var2 != null) {
@@ -1042,7 +1042,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "rule_pillar_1");
                 if (var2 != null) {
-                  qa.rulePillar1 = Cp1252DecodingSupport.decodeBytesToString(var2, -37);
+                  HotspotRectangle.rulePillar1 = Cp1252DecodingSupport.decodeBytesToString(var2, -37);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -39, "rule_1_0");
                 if (null != var2) {
@@ -1074,11 +1074,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "rule_2_1");
                 if (null != var2) {
-                  il.rule21 = Cp1252DecodingSupport.decodeBytesToString(var2, -126);
+                  BeveledFrameSpriteFactory.rule21 = Cp1252DecodingSupport.decodeBytesToString(var2, -126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "rule_2_2");
                 if (null != var2) {
-                  wc.rule22 = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  LoginResponse.rule22 = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "createafreeaccount");
                 if (null != var2) {
@@ -1094,11 +1094,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -30, "pleaselogin");
                 if (null != var2) {
-                  pl.pleaselogin = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20910);
+                  VertexProjectionSupport.pleaselogin = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20910);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "pleaselogin_member");
                 if (null != var2) {
-                  jc.pleaseloginMember = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
+                  AppletUrlSupport.pleaseloginMember = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "invaliduserorpass");
                 if (var2 != null) {
@@ -1126,7 +1126,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "tocustomersupport");
                 if (var2 != null) {
-                  e.tocustomersupport = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ChoiceButtonSupport.tocustomersupport = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -44, "changedisplayname");
                 if (null != var2) {
@@ -1146,7 +1146,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 101, "login");
                 if (null != var2) {
-                  sa.login = Cp1252DecodingSupport.decodeBytesToString(var2, 1);
+                  CollisionContact.login = Cp1252DecodingSupport.decodeBytesToString(var2, 1);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "goback");
                 if (var2 != null) {
@@ -1190,7 +1190,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "connectionlost_reconnecting");
                 if (var2 != null) {
-                  na.connectionlostReconnecting = Cp1252DecodingSupport.decodeBytesToString(var2, -25);
+                  IntegerSyntaxSupport.connectionlostReconnecting = Cp1252DecodingSupport.decodeBytesToString(var2, -25);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -114, "connectionlost_withreason");
                 if (var2 != null) {
@@ -1314,7 +1314,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 104, "checking");
                 if (var2 != null) {
-                  oi.checking = Cp1252DecodingSupport.decodeBytesToString(var2, 10);
+                  IntegerRecordSubmission.checking = Cp1252DecodingSupport.decodeBytesToString(var2, 10);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 96, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1489,7 +1489,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 111, "create_password_confirm");
                 if (null != var2) {
-                  e.createPasswordConfirm = Cp1252DecodingSupport.decodeBytesToString(var2, -64);
+                  ChoiceButtonSupport.createPasswordConfirm = Cp1252DecodingSupport.decodeBytesToString(var2, -64);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "create_email");
                 if (null != var2) {
@@ -1553,7 +1553,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "login_username_email");
                 if (null != var2) {
-                  vi.loginUsernameEmail = Cp1252DecodingSupport.decodeBytesToString(var2, -124);
+                  Cp1252CharacterSupport.loginUsernameEmail = Cp1252DecodingSupport.decodeBytesToString(var2, -124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -36, "login_username");
                 if (null != var2) {
@@ -1565,7 +1565,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -89, "login_username_tooltip");
                 if (var2 != null) {
-                  pn.loginUsernameTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  ChatMessage.loginUsernameTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -45, "login_password_tooltip");
                 if (var2 != null) {
@@ -1577,7 +1577,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -115, "login_create_tooltip");
                 if (null != var2) {
-                  fc.loginCreateTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  AccountMenuText.loginCreateTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "login_justplay_tooltip");
                 if (var2 != null) {
@@ -1589,7 +1589,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "login_no_displayname");
                 if (var2 != null) {
-                  ij.loginNoDisplayname = Cp1252DecodingSupport.decodeBytesToString(var2, -118);
+                  AnimatedNotification.loginNoDisplayname = Cp1252DecodingSupport.decodeBytesToString(var2, -118);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "create_username_tooltip");
                 if (var2 != null) {
@@ -1609,7 +1609,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "create_password_tooltip");
                 if (null != var2) {
-                  kc.createPasswordTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
+                  CanvasInputAttachmentSupport.createPasswordTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -54, "create_password_hint");
                 if (var2 != null) {
@@ -1617,7 +1617,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -125, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  ii.createPasswordConfirmTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20969);
+                  ProxyConnectorSupport.createPasswordConfirmTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20969);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -99, "create_email_tooltip");
                 if (var2 != null) {
@@ -1625,7 +1625,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -58, "create_email_confirm_tooltip");
                 if (null != var2) {
-                  wp.createEmailConfirmTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
+                  CompressedContainerSupport.createEmailConfirmTooltip = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "create_age_tooltip");
                 if (var2 != null) {
@@ -1665,11 +1665,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -112, "create_username_available");
                 if (null != var2) {
-                  lb.createUsernameAvailable = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20924);
+                  DimmedPauseMenu.createUsernameAvailable = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20924);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -39, "create_alert_namelength");
                 if (null != var2) {
-                  gp.createAlertNamelength = Cp1252DecodingSupport.decodeBytesToString(var2, -103);
+                  AchievementProtocolSupport.createAlertNamelength = Cp1252DecodingSupport.decodeBytesToString(var2, -103);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "create_alert_namechars");
                 if (var2 != null) {
@@ -1701,7 +1701,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  l.createAlertPasscontainsemail = Cp1252DecodingSupport.decodeBytesToString(var2, -46);
+                  ClientUiResourceState.createAlertPasscontainsemail = Cp1252DecodingSupport.decodeBytesToString(var2, -46);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 102, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -1721,7 +1721,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "create_alert_invaliddate");
                 if (var2 != null) {
-                  ij.createAlertInvaliddate = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  AnimatedNotification.createAlertInvaliddate = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -49, "create_alert_invalidage");
                 if (null != var2) {
@@ -1761,7 +1761,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "unable_to_add_ignore");
                 if (var2 != null) {
-                  rl.unableToAddIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, -80);
+                  MonotonicClock.unableToAddIgnore = Cp1252DecodingSupport.decodeBytesToString(var2, -80);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "unable_to_delete_friend");
                 if (var2 != null) {
@@ -1789,7 +1789,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "ignorelistdupe");
                 if (null != var2) {
-                  mg.ignorelistdupe = Cp1252DecodingSupport.decodeBytesToString(var2, -39);
+                  LobbyPlayerLookupSupport.ignorelistdupe = Cp1252DecodingSupport.decodeBytesToString(var2, -39);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -90, "ignorenotfound");
                 if (var2 != null) {
@@ -1801,7 +1801,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -43, "removefriendfirst");
                 if (null != var2) {
-                  gf.removefriendfirst = Cp1252DecodingSupport.decodeBytesToString(var2, -62);
+                  UsernameSuggestionSupport.removefriendfirst = Cp1252DecodingSupport.decodeBytesToString(var2, -62);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "enterfriend_add");
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "enterignore_del");
                 if (var2 != null) {
-                  jj.enterignoreDel = Cp1252DecodingSupport.decodeBytesToString(var2, -76);
+                  BirthDatePromptPanel.enterignoreDel = Cp1252DecodingSupport.decodeBytesToString(var2, -76);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 105, "text_removed_from_game");
                 if (var2 != null) {
@@ -1841,7 +1841,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -111, "waitingfor_graphics");
                 if (null != var2) {
-                  rp.waitingforGraphics = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21104);
+                  NineSliceFrameSupport.waitingforGraphics = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21104);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "waitingfor_models");
                 if (null != var2) {
@@ -1885,7 +1885,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -74, "loading_graphics");
                 if (null != var2) {
-                  oj.loadingGraphics = Cp1252DecodingSupport.decodeBytesToString(var2, -87);
+                  HighScoreSubmission.loadingGraphics = Cp1252DecodingSupport.decodeBytesToString(var2, -87);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "loading_models");
             }
@@ -1967,7 +1967,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -70, "tutorial");
                 if (null != var2) {
-                  sa.tutorial = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  CollisionContact.tutorial = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "playtutorial");
                 if (null != var2) {
@@ -1991,11 +1991,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "highscores");
                 if (var2 != null) {
-                  un.highscores = Cp1252DecodingSupport.decodeBytesToString(var2, -69);
+                  LookupProtocolSupport.highscores = Cp1252DecodingSupport.decodeBytesToString(var2, -69);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -72, "rankings");
                 if (var2 != null) {
-                  uj.rankings = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  WorldPointProjectionSupport.rankings = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -62, "achievements");
                 if (null != var2) {
@@ -2027,7 +2027,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -32, "returntomainmenu");
                 if (var2 != null) {
-                  wp.returntomainmenu = Cp1252DecodingSupport.decodeBytesToString(var2, -124);
+                  CompressedContainerSupport.returntomainmenu = Cp1252DecodingSupport.decodeBytesToString(var2, -124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "returntopausemenu");
                 if (null != var2) {
@@ -2107,15 +2107,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "ok");
                 if (var2 != null) {
-                  wn.ok = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  ReflectionReplySupport.ok = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "on");
                 if (var2 != null) {
-                  jc.on = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  AppletUrlSupport.on = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -117, "off");
                 if (null != var2) {
-                  il.off = Cp1252DecodingSupport.decodeBytesToString(var2, -60);
+                  BeveledFrameSpriteFactory.off = Cp1252DecodingSupport.decodeBytesToString(var2, -60);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "previous");
                 if (var2 != null) {
@@ -2127,7 +2127,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 111, "next");
                 if (var2 != null) {
-                  ue.next = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  StartupInterfaceSupport.next = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -69, "graphics_colon");
                 if (null != var2) {
@@ -2135,7 +2135,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -104, "hotseatmultiplayer");
                 if (var2 != null) {
-                  tg.hotseatmultiplayer = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21137);
+                  ScoreboardNameRecord.hotseatmultiplayer = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21137);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "entermultiplayerlobby");
                 if (var2 != null) {
@@ -2147,7 +2147,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -121, "returntogame");
                 if (null != var2) {
-                  ti.returntogame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21104);
+                  DebugSliderInputSupport.returntogame = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21104);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -37, "endgameresign");
                 if (var2 != null) {
@@ -2163,7 +2163,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "acceptdraw");
                 if (var2 != null) {
-                  ff.acceptdraw = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21139);
+                  SlidingPanelSupport.acceptdraw = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21139);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "resign");
                 if (null != var2) {
@@ -2171,7 +2171,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "returntolobby");
                 if (null != var2) {
-                  dk.returntolobby = Cp1252DecodingSupport.decodeBytesToString(var2, 15);
+                  GlowParticle.returntolobby = Cp1252DecodingSupport.decodeBytesToString(var2, 15);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -74, "cont");
                 if (null != var2) {
@@ -2435,7 +2435,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "mp_cancelrematch_unrated");
                 if (var2 != null) {
-                  w.mpCancelrematchUnrated = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  GrowableIntListFactory.mpCancelrematchUnrated = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 120, "mp_rematchnewgame");
                 if (var2 != null) {
@@ -2443,7 +2443,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 124, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  e.mpRematchnewgameUnrated = Cp1252DecodingSupport.decodeBytesToString(var2, -92);
+                  ChoiceButtonSupport.mpRematchnewgameUnrated = Cp1252DecodingSupport.decodeBytesToString(var2, -92);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "mp_x_wantstodraw");
                 if (var2 != null) {
@@ -2499,7 +2499,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 106, "mp_youhavewon");
                 if (null != var2) {
-                  il.mpYouhavewon = Cp1252DecodingSupport.decodeBytesToString(var2, -66);
+                  BeveledFrameSpriteFactory.mpYouhavewon = Cp1252DecodingSupport.decodeBytesToString(var2, -66);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -90, "mp_gamedrawn");
                 if (null != var2) {
@@ -2539,7 +2539,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "click_to_quickchat");
                 if (var2 != null) {
-                  je.clickToQuickchat = Cp1252DecodingSupport.decodeBytesToString(var2, -111);
+                  ArchiveBootstrapSupport.clickToQuickchat = Cp1252DecodingSupport.decodeBytesToString(var2, -111);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "autorespond");
                 if (null != var2) {
@@ -2547,35 +2547,35 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "quickchat_help");
                 if (null != var2) {
-                  w.quickchatHelp = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
+                  GrowableIntListFactory.quickchatHelp = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21140);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -105, "quickchat_help_title");
                 if (null != var2) {
-                  jd.quickchatHelpTitle = Cp1252DecodingSupport.decodeBytesToString(var2, -105);
+                  Atan2Support.quickchatHelpTitle = Cp1252DecodingSupport.decodeBytesToString(var2, -105);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -61, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  DottedRectangleSupport.quickchatShortcutHelp[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  LookupQuery.quickchatShortcutHelp[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -76, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  DottedRectangleSupport.quickchatShortcutHelp[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  LookupQuery.quickchatShortcutHelp[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  DottedRectangleSupport.quickchatShortcutHelp[2] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21139);
+                  LookupQuery.quickchatShortcutHelp[2] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21139);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 120, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  DottedRectangleSupport.quickchatShortcutHelp[3] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
+                  LookupQuery.quickchatShortcutHelp[3] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21136);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -112, "quickchat_shortcut_help,4");
                 if (null != var2) {
-                  DottedRectangleSupport.quickchatShortcutHelp[4] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20967);
+                  LookupQuery.quickchatShortcutHelp[4] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20967);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  DottedRectangleSupport.quickchatShortcutHelp[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -75);
+                  LookupQuery.quickchatShortcutHelp[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -75);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "quickchat_shortcut_keys,0");
                 if (null != var2) {
@@ -2643,15 +2643,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 106, "members_expansion_benefits,0");
                 if (null != var2) {
-                  vn.membersExpansionBenefits[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 4);
+                  ReflectionRequestSupport.membersExpansionBenefits[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 4);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -84, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  vn.membersExpansionBenefits[1] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21137);
+                  ReflectionRequestSupport.membersExpansionBenefits[1] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21137);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  vn.membersExpansionBenefits[2] = Cp1252DecodingSupport.decodeBytesToString(var2, TutorialFactory.bitwiseXor(param1, -21100));
+                  ReflectionRequestSupport.membersExpansionBenefits[2] = Cp1252DecodingSupport.decodeBytesToString(var2, TutorialFactory.bitwiseXor(param1, -21100));
                 }
                 var2 = DebouncedValidationProvider.a((byte) -78, "members_expansion_price_top");
                 if (var2 != null) {
@@ -2663,19 +2663,19 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -86, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  rf.reconnectLostSeq[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -3);
+                  AccountDisplayNameSupport.reconnectLostSeq[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -3);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -126, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  rf.reconnectLostSeq[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  AccountDisplayNameSupport.reconnectLostSeq[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -63, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  rf.reconnectLostSeq[2] = Cp1252DecodingSupport.decodeBytesToString(var2, TutorialFactory.bitwiseXor(param1, 21092));
+                  AccountDisplayNameSupport.reconnectLostSeq[2] = Cp1252DecodingSupport.decodeBytesToString(var2, TutorialFactory.bitwiseXor(param1, 21092));
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  rf.reconnectLostSeq[3] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  AccountDisplayNameSupport.reconnectLostSeq[3] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "reconnect_lost");
                 if (null != var2) {
@@ -2731,7 +2731,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "fs_button_accept");
                 if (var2 != null) {
-                  jc.fsButtonAccept = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21100);
+                  AppletUrlSupport.fsButtonAccept = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21100);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "fs_accept_afteraccept");
                 if (var2 != null) {
@@ -2747,7 +2747,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -39, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  rl.fsAcceptCountdownSing = Cp1252DecodingSupport.decodeBytesToString(var2, -95);
+                  MonotonicClock.fsAcceptCountdownSing = Cp1252DecodingSupport.decodeBytesToString(var2, -95);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -38, "fs_accept_countdown_pl");
                 if (null != var2) {
@@ -2763,11 +2763,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "fs_button_members");
                 if (null != var2) {
-                  wp.fsButtonMembers = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20991);
+                  CompressedContainerSupport.fsButtonMembers = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 20991);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -54, "fs_unavailable");
                 if (null != var2) {
-                  ih.fsUnavailable = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21097);
+                  LoginRequestSupport.fsUnavailable = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21097);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
@@ -2787,7 +2787,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -38, "fs_button_tryagain");
                 if (null != var2) {
-                  hg.fsButtonTryagain = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21061);
+                  AppletContainerSupport.fsButtonTryagain = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ 21061);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -77, "graphics_ui_fs_countdown");
                 if (null != var2) {
@@ -2841,15 +2841,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -79, "hs_mode_name,0");
                 if (var2 != null) {
-                  ih.hsModeName[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -77);
+                  LoginRequestSupport.hsModeName[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -77);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -59, "hs_mode_name,1");
                 if (null != var2) {
-                  ih.hsModeName[1] = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
+                  LoginRequestSupport.hsModeName[1] = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -95, "hs_mode_name,2");
                 if (null != var2) {
-                  ih.hsModeName[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -106);
+                  LoginRequestSupport.hsModeName[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -106);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "rating_mode_name,0");
                 if (null != var2) {
@@ -2905,11 +2905,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -31, "serviceunavailable");
                 if (var2 != null) {
-                  fh.serviceunavailable = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  ArchiveFactory.serviceunavailable = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 93, "createtouse");
                 if (var2 != null) {
-                  ra.createtouse = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21100);
+                  IntegerRecordProtocolSupport.createtouse = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21100);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 111, "achievementsoffline");
                 if (null != var2) {
@@ -2989,31 +2989,31 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "mustlogin4,1");
                 if (null != var2) {
-                  nl.mustlogin4[1] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
+                  ServerListLauncher.mustlogin4[1] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -73, "mustlogin4,2");
                 if (var2 != null) {
-                  nl.mustlogin4[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
+                  ServerListLauncher.mustlogin4[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 96, "mustlogin4,3");
                 if (var2 != null) {
-                  nl.mustlogin4[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -43);
+                  ServerListLauncher.mustlogin4[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -43);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -106, "mustlogin4,4");
                 if (var2 != null) {
-                  nl.mustlogin4[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -13);
+                  ServerListLauncher.mustlogin4[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -13);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -111, "mustlogin4,5");
                 if (var2 != null) {
-                  nl.mustlogin4[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  ServerListLauncher.mustlogin4[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "mustlogin4,6");
                 if (var2 != null) {
-                  nl.mustlogin4[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -97);
+                  ServerListLauncher.mustlogin4[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -97);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -97, "mustlogin4,7");
                 if (var2 != null) {
-                  nl.mustlogin4[7] = Cp1252DecodingSupport.decodeBytesToString(var2, -42);
+                  ServerListLauncher.mustlogin4[7] = Cp1252DecodingSupport.decodeBytesToString(var2, -42);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -3021,31 +3021,31 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "mustlogin_alternate,1");
                 if (null != var2) {
-                  ml.mustloginAlternate[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  LoginMethod.mustloginAlternate[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  ml.mustloginAlternate[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -106);
+                  LoginMethod.mustloginAlternate[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -106);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -54, "mustlogin_alternate,3");
                 if (null != var2) {
-                  ml.mustloginAlternate[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -123);
+                  LoginMethod.mustloginAlternate[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  ml.mustloginAlternate[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -36);
+                  LoginMethod.mustloginAlternate[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -36);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "mustlogin_alternate,5");
                 if (var2 != null) {
-                  ml.mustloginAlternate[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  LoginMethod.mustloginAlternate[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 126, "mustlogin_alternate,6");
                 if (null != var2) {
-                  ml.mustloginAlternate[6] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
+                  LoginMethod.mustloginAlternate[6] = Cp1252DecodingSupport.decodeBytesToString(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 120, "mustlogin_alternate,7");
                 if (var2 != null) {
-                  ml.mustloginAlternate[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  LoginMethod.mustloginAlternate[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -99, "subscription_cost_monthly,0");
                 if (var2 != null) {
@@ -3169,8 +3169,8 @@ final class TranslatedUiText {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
-        ln var3 = null;
-        kg var4_ref_kg = null;
+        ModelOriginSupport var3 = null;
+        ByteRecordSubmission var4_ref_kg = null;
         int var4 = 0;
         Object var5 = null;
         byte[] var5_array = null;
@@ -3184,14 +3184,14 @@ final class TranslatedUiText {
           var2 = var1.readUnsignedByte(-72);
           if (var2 != 0) {
             if (var2 != 1) {
-              GrowableIntList.reportClientError((Throwable) null, "A1: " + t.formatPacketDump(93), -8555);
+              GrowableIntList.reportClientError((Throwable) null, "A1: " + PacketDiagnosticsSupport.formatPacketDump(93), -8555);
               ShotEvent.c(120);
               if (var6 == 0) {
                 return;
               }
             }
             var3_int = var1.readInt(true);
-            var4_ref_kg = (kg) (ArchiveLoadStep.field_c.last((byte) 86));
+            var4_ref_kg = (ByteRecordSubmission) (ArchiveLoadStep.field_c.last((byte) 86));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (null != var4_ref_kg) {
@@ -3199,7 +3199,7 @@ final class TranslatedUiText {
                 decompiledFrameRemainder0 = (var6 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_21_0 != var4_ref_kg.field_o)) {
-                  var4_ref_kg = (kg) (ArchiveLoadStep.field_c.previous((byte) -5));
+                  var4_ref_kg = (ByteRecordSubmission) (ArchiveLoadStep.field_c.previous((byte) -5));
                   continue;
                 }
               }
@@ -3217,7 +3217,7 @@ final class TranslatedUiText {
               return;
             }
           }
-          var3 = (ln) (LoginTextValue.field_f.last((byte) -101));
+          var3 = (ModelOriginSupport) (LoginTextValue.field_f.last((byte) -101));
           if (var3 == null) {
             ShotEvent.c(116);
             return;
@@ -3252,10 +3252,10 @@ final class TranslatedUiText {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var2 = (RankingsRequest) (rc.field_c.last((byte) 120));
+          var2 = (RankingsRequest) (AccountTextSupport.field_c.last((byte) 120));
           while (null != var2) {
-            wb.a(var2, param0, (byte) -96);
-            var2 = (RankingsRequest) (rc.field_c.previous((byte) -5));
+            RankingsProtocolSupport.sendRankingsRequest(var2, param0, (byte) -96);
+            var2 = (RankingsRequest) (AccountTextSupport.field_c.previous((byte) -5));
             if (var3 != 0) {
               return;
             }

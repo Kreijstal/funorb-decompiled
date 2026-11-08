@@ -3,7 +3,7 @@
  */
 final class DelegatingCanvas extends java.awt.Canvas {
     static int field_d;
-    static jd[][] field_a;
+    static Atan2Support[][] field_a;
     static String openinpopupwindow;
     private java.awt.Component field_c;
 
@@ -49,15 +49,15 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     final static void a(int param0) {
         BirthDateValidator.field_m = new UiComponent(0L, (UiComponent) null);
-        if (tq.field_p) {
-          BirthDateValidator.field_m.addChild(21, pm.field_m);
+        if (AccountStateQuery.field_p) {
+          BirthDateValidator.field_m.addChild(21, SceneNodeEntry.field_m);
         }
         BirthDateValidator.field_m.addChild(39, QuickChatMenuSupport.field_e);
-        kg.field_l = new vn(BirthDateValidator.muChatLobby, BirthDateValidator.field_m);
+        ByteRecordSubmission.field_l = new ReflectionRequestSupport(BirthDateValidator.muChatLobby, BirthDateValidator.field_m);
         BufferedFile.field_a = new UiComponent(0L, (UiComponent) null);
-        BufferedFile.field_a.addChild(-117, kg.field_l.field_i);
+        BufferedFile.field_a.addChild(-117, ByteRecordSubmission.field_l.field_i);
         BufferedFile.field_a.addChild(-120, ProgressBarWidget.field_K);
-        f.layoutLobbyPanels(48);
+        LobbyPanelLayoutSupport.layoutLobbyPanels(48);
         int var1 = 106 / ((-83 - param0) / 35);
     }
 
@@ -78,7 +78,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     public static void releaseStatics(byte param0) {
-        field_a = (jd[][]) null;
+        field_a = (Atan2Support[][]) null;
         if (param0 != 38) {
           openinpopupwindow = (String) null;
         }

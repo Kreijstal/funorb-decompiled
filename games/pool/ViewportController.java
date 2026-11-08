@@ -4,7 +4,7 @@
 final class ViewportController {
     private int field_k;
     private int field_l;
-    static ro[] field_c;
+    static ProjectedVertex[] field_c;
     private int field_f;
     static String muXCannotJoinFull;
     private int field_u;
@@ -43,17 +43,17 @@ final class ViewportController {
         var5 = Pool.field_O;
         try {
           var2 = null;
-          for (var3 = 0; nn.field_b.length > var3; var3++) {
-            var4 = nn.field_b[var3];
+          for (var3 = 0; BrowserCookieWriter.field_b.length > var3; var3++) {
+            var4 = BrowserCookieWriter.field_b[var3];
             var4.loadModels(param0, param1 ^ -98);
             if (null != var4.field_A &&
               var2 == null) {
               var2 = var4.field_A;
             }
           }
-          for (var3Lifetime1 = param1; var3Lifetime1 < nn.field_b.length; var3Lifetime1++) {
-            if (nn.field_b[var3Lifetime1].field_A == null) {
-              nn.field_b[var3Lifetime1].field_A = (CueStick) (var2);
+          for (var3Lifetime1 = param1; var3Lifetime1 < BrowserCookieWriter.field_b.length; var3Lifetime1++) {
+            if (BrowserCookieWriter.field_b[var3Lifetime1].field_A == null) {
+              BrowserCookieWriter.field_b[var3Lifetime1].field_A = (CueStick) (var2);
             }
           }
           for (var3Lifetime2 = 0; PoolGameModel.field_B.length > var3Lifetime2; var3Lifetime2++) {
@@ -92,21 +92,21 @@ final class ViewportController {
             return;
           }
           this.field_r = this.field_l;
-          if (this.field_v <= rf.field_d) {
+          if (this.field_v <= AccountDisplayNameSupport.field_d) {
             this.a(2);
           } else {
             this.field_e = false;
           }
           return;
         }
-        if (ml.field_d < this.field_j) {
-          ProjectedLineSupport.field_e = (this.field_j - ml.field_d) / 2;
+        if (LoginMethod.field_d < this.field_j) {
+          ProjectedLineSupport.field_e = (this.field_j - LoginMethod.field_d) / 2;
         } else {
           if (0 < this.field_j) {
             ProjectedLineSupport.field_e = 0;
           }
         }
-        if (ml.field_d == this.field_d &&
+        if (LoginMethod.field_d == this.field_d &&
           ArchiveIndex.field_c == this.field_h) {
           return;
         }
@@ -129,7 +129,7 @@ final class ViewportController {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialListEntry var3 = wp.a(param0, param2, 100);
+        SocialListEntry var3 = CompressedContainerSupport.a(param0, param2, 100);
         PlayerContextMenu var4Lifetime1;
         if (param1 >= -72) {
           int[] var7 = (int[]) null;
@@ -199,12 +199,12 @@ final class ViewportController {
     }
 
     final FullscreenFocusCanvas b(int param0) {
-        this.field_u = ml.field_d;
+        this.field_u = LoginMethod.field_d;
         this.field_i = ArchiveIndex.field_c;
         this.field_o.onViewportResize(this.field_p, this.field_a, 117);
         int var2 = 35 % ((58 - param0) / 41);
         TabbedPane.field_Sb = false;
-        FullscreenFocusCanvas var3 = wp.openFullscreenCanvas(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
+        FullscreenFocusCanvas var3 = CompressedContainerSupport.openFullscreenCanvas(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
         if (var3 == null) {
           this.d(22472);
         }
@@ -221,7 +221,7 @@ final class ViewportController {
         if (param1 != 50) {
           ViewportController.a(true, 91, 8);
         }
-        qa.a((byte) 55, param0);
+        HotspotRectangle.a((byte) 55, param0);
         AudioService.a(0, param0);
     }
 
@@ -264,21 +264,21 @@ final class ViewportController {
             }
           }
         }
-        if (ml.field_d != var2 ||
+        if (LoginMethod.field_d != var2 ||
           ArchiveIndex.field_c != var3) {
           this.field_o.onViewportResize(var3, var2, param0 + 99);
         }
         if (this.field_j > 0) {
-          ProjectedLineSupport.field_e = (-ml.field_d + this.field_j) / 2;
+          ProjectedLineSupport.field_e = (-LoginMethod.field_d + this.field_j) / 2;
         }
     }
 
     final boolean e(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 73) {
-          field_c = (ro[]) null;
+          field_c = (ProjectedVertex[]) null;
         }
-        stackIn_6_0 = (rf.field_d >= this.field_v) && (UsernameSuggestionsPanel.field_V > 0);
+        stackIn_6_0 = (AccountDisplayNameSupport.field_d >= this.field_v) && (UsernameSuggestionsPanel.field_V > 0);
         return stackIn_6_0;
     }
 

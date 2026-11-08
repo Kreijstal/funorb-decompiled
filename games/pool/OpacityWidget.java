@@ -16,8 +16,8 @@ final class OpacityWidget extends SingleChildWidget {
           benefitsPrice = (String) null;
         }
         LimitedRandomAccessFile.field_b = (byte[][]) null;
-        rc.field_f = null;
-        ih.field_d = null;
+        AccountTextSupport.field_f = null;
+        LoginRequestSupport.field_d = null;
         LinkButtonPainter.field_a = null;
         AchievementsScreen.field_I = null;
     }
@@ -76,17 +76,17 @@ final class OpacityWidget extends SingleChildWidget {
               scanLoop1: while (true) {
                 if (var19.length <= var12) {
                   if (var11 == 0 &&
-                    dr.field_c != param5) {
+                    LogoFinalFrameLoader.field_c != param5) {
                     break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
                     if (-1 != var13) {
                       if (var13 < param5) {
-                        gf.field_b[var13] = true;
+                        UsernameSuggestionSupport.field_b[var13] = true;
                       }
                     } else {
-                      ln.field_p = true;
+                      ModelOriginSupport.field_p = true;
                     }
                   }
                   var8_int = 0;
@@ -102,7 +102,7 @@ final class OpacityWidget extends SingleChildWidget {
                     if (param5 <= var13Lifetime1) {
                       break scanLoop1;
                     }
-                    if ((255 & dk.field_j[var13Lifetime1]) != var14) {
+                    if ((255 & GlowParticle.field_j[var13Lifetime1]) != var14) {
                       break scanLoop1;
                     }
                   }
@@ -135,7 +135,7 @@ final class OpacityWidget extends SingleChildWidget {
             if (param7) {
               if (param5 == -1) {
                 for (var10_int = 0; var10_int < DiskArchiveRequest.field_T.length; var10_int++) {
-                  if ((md.field_c[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
+                  if ((RenderingInitializationSupport.field_c[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;
@@ -169,7 +169,7 @@ final class OpacityWidget extends SingleChildWidget {
                 }
                 for (var11 = 0; var11 < var17.length - 1; var11++) {
                   if (param5 != -1) {
-                    dk.field_j[param5] = (byte)var11;
+                    GlowParticle.field_j[param5] = (byte)var11;
                   } else {
                     param6 = var11;
                   }
@@ -183,7 +183,7 @@ final class OpacityWidget extends SingleChildWidget {
               if (param5 == -1) {
                 param6 = var11;
               } else {
-                dk.field_j[param5] = (byte)var11;
+                GlowParticle.field_j[param5] = (byte)var11;
               }
               if (param5 == -1 &&
                 DiskArchiveRequest.field_T.length == 1) {
@@ -240,7 +240,7 @@ final class OpacityWidget extends SingleChildWidget {
 
     final static boolean h(byte param0) {
         int var1 = 26 % ((-52 - param0) / 32);
-        return sm.field_C != null ? true : false;
+        return PasswordInputPainter.field_C != null ? true : false;
     }
 
     public static void releaseStatics(byte param0) {
@@ -306,7 +306,7 @@ final class OpacityWidget extends SingleChildWidget {
 
     final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         try {
-          rl.field_c = param2;
+          MonotonicClock.field_c = param2;
           IterableNodeHashTable.field_k = param0;
           if (param1 != -32) {
             youCanSpectate = (String) null;

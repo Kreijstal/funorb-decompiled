@@ -6,7 +6,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     static String unableToDeleteIgnore;
     static Sprite field_i;
     static SceneNode field_h;
-    static qr field_j;
+    static AvailabilityQueryResult field_j;
 
     public final void onTextInputChanged(TextInputWidget param0, int param1) {
         try {
@@ -40,7 +40,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         return true;
     }
 
-    abstract na validationStateForText(String param0, boolean param1);
+    abstract IntegerSyntaxSupport validationStateForText(String param0, boolean param1);
 
     public final void onTextInputSubmitted(TextInputWidget param0, boolean param1) {
         try {
@@ -133,7 +133,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         field_h = null;
     }
 
-    final na currentValidationState(int param0) {
+    final IntegerSyntaxSupport currentValidationState(int param0) {
         if (param0 == -14836) {
           return this.validationStateForText(this.validatedInput.widgetText, true);
         }

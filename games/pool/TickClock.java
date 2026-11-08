@@ -27,7 +27,7 @@ abstract class TickClock {
             TickClock.releaseStatics((byte) -60);
           }
           var4 = (String) null;
-          stackIn_3_0 = ih.a((String) null, (byte) 107, 0, false, param2, param1, 0);
+          stackIn_3_0 = LoginRequestSupport.a((String) null, (byte) 107, 0, false, param2, param1, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ abstract class TickClock {
     final static void a(byte param0, PcmSampleStream param1) {
         try {
           int var2_int = 59 % ((param0 + 75) / 33);
-          SpaceObject.field_d.a(param1);
+          SpaceObject.field_d.removeSubstream(param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -117,7 +117,7 @@ abstract class TickClock {
             var6 = param1;
           } else {
             var7 = (CharSequence) ((Object) param1);
-            var4_long = td.encodeBase37((byte) 52, var7);
+            var4_long = Base37Support.encodeBase37((byte) 52, var7);
           }
           stackIn_6_0 = LoginPayloadFactory.createLoginPayload(var4_long, param2 - 10805, param3, param0, (String) (var6));
           return stackIn_6_0;

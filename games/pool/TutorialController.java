@@ -113,7 +113,7 @@ final class TutorialController {
     final boolean handleButtonPress(int param0) {
         int var2 = -86 % ((40 - param0) / 46);
         int var3 = 0;
-        if (qa.field_v.pressedButton != 0) {
+        if (HotspotRectangle.field_v.pressedButton != 0) {
           this.d((byte) -105);
           var3 = 1;
         } else {
@@ -121,12 +121,12 @@ final class TutorialController {
             return false;
           }
         }
-        if (0 != jq.field_d.pressedButton) {
+        if (0 != QuickChatNavigationSupport.field_d.pressedButton) {
           this.setUpStepState((byte) 89);
           this.goToPreviousStep(255);
           var3 = 1;
         }
-        if (0 != pl.field_b.pressedButton) {
+        if (0 != VertexProjectionSupport.field_b.pressedButton) {
           var3 = 1;
           this.goToNextStep((byte) -87);
         }
@@ -152,8 +152,8 @@ final class TutorialController {
         if (this.field_b) {
           PoolGameModel.field_k.updateRoot(true, false);
         }
-        if (!qa.field_v.b(param0 - 142)) {
-          qa.field_v.updateRoot(true, false);
+        if (!HotspotRectangle.field_v.b(param0 - 142)) {
+          HotspotRectangle.field_v.updateRoot(true, false);
         }
         if (ThreeSliceButtonPainter.field_s >= 0) {
           var2 = this.previousStep.getHeight((byte) -111);
@@ -175,17 +175,17 @@ final class TutorialController {
             }
           }
         }
-        if (!(oj.field_q < 0) ||
+        if (!(HighScoreSubmission.field_q < 0) ||
           TranslatedUiText.field_e) {
-          oj.field_q = oj.field_q + 1;
-          nj.field_c = hc.cosine(2047, oj.field_q * 2048 / 25) + 163840 >> 10;
-          if (oj.field_q >= 25) {
+          HighScoreSubmission.field_q = HighScoreSubmission.field_q + 1;
+          LogoMaterial.field_c = SceneNodeFactory.cosine(2047, HighScoreSubmission.field_q * 2048 / 25) + 163840 >> 10;
+          if (HighScoreSubmission.field_q >= 25) {
             if (TranslatedUiText.field_e) {
               TranslatedUiText.field_e = false;
-              oj.field_q = 0;
+              HighScoreSubmission.field_q = 0;
             } else {
-              oj.field_q = -1;
-              nj.field_c = 256;
+              HighScoreSubmission.field_q = -1;
+              LogoMaterial.field_c = 256;
             }
           }
         }
@@ -210,8 +210,8 @@ final class TutorialController {
           if (0 <= TextPairLoginPayload.field_i) {
             this.renderPanel(10, (-TextPairLoginPayload.field_i + 25) * 255 / 25);
           }
-          if (!qa.field_v.b(-119)) {
-            qa.field_v.drawRoot((byte) -79, false);
+          if (!HotspotRectangle.field_v.b(-119)) {
+            HotspotRectangle.field_v.drawRoot((byte) -79, false);
           }
         } else {
           if (ThreeSliceButtonPainter.field_s >= 0) {
@@ -228,7 +228,7 @@ final class TutorialController {
             SoftwareRasterizer.clear();
             this.drawStepProgress((byte) -109);
             this.currentStep.draw(false);
-            var4 = -5 + (-qa.field_v.height + (PoolGameModel.field_k.height + PoolGameModel.field_k.localY));
+            var4 = -5 + (-HotspotRectangle.field_v.height + (PoolGameModel.field_k.height + PoolGameModel.field_k.localY));
             var5 = PoolGameModel.field_k.localY;
             var6 = PoolGameModel.field_k.localX + 5;
             var7 = PoolGameModel.field_k.width + PoolGameModel.field_k.localX - 10;
@@ -236,7 +236,7 @@ final class TutorialController {
             PoolGameModel.field_k.localY = var3;
             OpacityWidget.field_P.bindAsRenderTarget(15100);
             PoolGameModel.field_k.drawRoot((byte) -79, false);
-            qa.field_v.drawRoot((byte) -79, false);
+            HotspotRectangle.field_v.drawRoot((byte) -79, false);
             if (SoftwareRasterizer.clipLeft > var6) {
               var6 = SoftwareRasterizer.clipLeft;
             }
@@ -268,11 +268,11 @@ final class TutorialController {
               SoftwareRasterizer.fillRectangleAlpha(5 + PoolGameModel.field_k.localX, PoolGameModel.field_k.localY + 5, -10 + PoolGameModel.field_k.width, PoolGameModel.field_k.height - 10, 0, 128);
               this.drawStepProgress((byte) -109);
               PoolGameModel.field_k.drawRoot((byte) -79, false);
-              qa.field_v.drawRoot((byte) -79, false);
+              HotspotRectangle.field_v.drawRoot((byte) -79, false);
               this.currentStep.draw(false);
             } else {
               this.renderPanel(10, 255 * TextPairLoginPayload.field_i / 25);
-              qa.field_v.drawRoot((byte) -79, false);
+              HotspotRectangle.field_v.drawRoot((byte) -79, false);
             }
           }
         }
@@ -330,7 +330,7 @@ final class TutorialController {
           if (param2 != 17924) {
             TutorialController.h(36);
           }
-          var3 = qa.reverseString(param1, 0);
+          var3 = HotspotRectangle.reverseString(param1, 0);
           if (param0.indexOf(param1) == -1 &&
             param0.indexOf(var3) == -1) {
             stackIn_14_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
@@ -433,10 +433,10 @@ final class TutorialController {
             var18 = var16;
             var8_ref_pq = this.field_a.gameModel.balls[var5_int];
             var15 = this.field_a.gameModel.currentShot(75);
-            ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{dq.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
+            ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{TransformRotationSupport.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
             this.field_a.gameModel.stopAllBalls(-95);
             this.field_a.gameModel.rules.assignGroups(var4_int, -1, 0);
-            var15.endResolution = i.field_m | MarkerSliderPainter.field_j;
+            var15.endResolution = AchievementSubmission.field_m | MarkerSliderPainter.field_j;
             var15.phase = 2;
             var15.pottedBalls = new IntrusiveDeque();
             var15.pottedBalls.addFirst((byte) 105, new PotEvent(var5_int, var6));
@@ -480,7 +480,7 @@ final class TutorialController {
             }
           }
           if (this.currentStep.field_s == 512 &&
-            0 != (param1.endResolution & i.field_m)) {
+            0 != (param1.endResolution & AchievementSubmission.field_m)) {
             this.onStepEvent(1, 9, -28186);
           }
           if (2048 == this.currentStep.field_s &&
@@ -583,12 +583,12 @@ final class TutorialController {
         int var20Lifetime2;
         var23 = new IntrusiveDequeCursor(this.field_d);
         var3 = 0;
-        var4 = PoolGameModel.field_k.localX + qg.field_b.field_G;
-        var5 = PoolGameModel.field_k.height + (PoolGameModel.field_k.localY + (-PoolGameModel.field_k.frameSprites[7].field_A - PoolGameModel.field_k.frameSprites[4].field_A) + (-PoolGameModel.field_k.frameSprites[1].field_A + qg.field_b.field_B));
-        var6 = var5 + qg.field_b.field_A;
+        var4 = PoolGameModel.field_k.localX + VertexTransformSupport.field_b.field_G;
+        var5 = PoolGameModel.field_k.height + (PoolGameModel.field_k.localY + (-PoolGameModel.field_k.frameSprites[7].field_A - PoolGameModel.field_k.frameSprites[4].field_A) + (-PoolGameModel.field_k.frameSprites[1].field_A + VertexTransformSupport.field_b.field_B));
+        var6 = var5 + VertexTransformSupport.field_b.field_A;
         var7 = (TutorialStep) (var23.last((byte) -92));
         while (this.field_d.field_e != var7.previous) {
-          var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + PoolGameModel.field_k.localX;
+          var8 = (var3 + 1) * (-VertexTransformSupport.field_b.field_G + VertexTransformSupport.field_b.field_w) / (this.field_k - 1) + VertexTransformSupport.field_b.field_G + PoolGameModel.field_k.localX;
           var9 = var4;
           if (var9 < SoftwareRasterizer.clipLeft) {
             var9 = SoftwareRasterizer.clipLeft;
@@ -607,14 +607,14 @@ final class TutorialController {
           }
           for (var13 = var11; var13 < var12; var13++) {
             var14 = var13 - var5;
-            stackIn_18_0 = qg.field_b.field_D;
+            stackIn_18_0 = VertexTransformSupport.field_b.field_D;
             if (this.currentStep != var7) {
               stackIn_19_1 = 0;
             } else {
               stackIn_19_1 = 1;
             }
-            var15 = stackIn_18_0[stackIn_19_1 + qg.field_b.field_z * (var13 - var5)];
-            var16 = qg.field_b.field_D[qg.field_b.field_z * (var13 - var5) + 2];
+            var15 = stackIn_18_0[stackIn_19_1 + VertexTransformSupport.field_b.field_z * (var13 - var5)];
+            var16 = VertexTransformSupport.field_b.field_D[VertexTransformSupport.field_b.field_z * (var13 - var5) + 2];
             for (var17 = var9; var17 < var10; var17++) {
               if (var9 == var17) {
                 var21 = var15 >> 8 & 255;
@@ -641,11 +641,11 @@ final class TutorialController {
                 }
               }
               var20Lifetime1 = var17 - var4;
-              if (var14 + var20Lifetime1 >= var7.field_u * (-var4 + (var8 + qg.field_b.field_A)) / var7.field_l) {
+              if (var14 + var20Lifetime1 >= var7.field_u * (-var4 + (var8 + VertexTransformSupport.field_b.field_A)) / var7.field_l) {
                 SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = var18;
               } else {
                 if (this.currentStep == var7) {
-                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = md.bitwiseOr(md.bitwiseOr(ArchiveLoadSequence.b(16711898, (-nj.field_c + 256) * (ArchiveLoadSequence.b(16744119, var18) >> 16) + (ArchiveLoadSequence.b(var19, 16714394) >> 16) * nj.field_c << 8), ArchiveLoadSequence.b((256 - nj.field_c) * ArchiveLoadSequence.b(var18 >> 8, 255) + (ArchiveLoadSequence.b(65295, var19) >> 8) * nj.field_c, 65280)), ArchiveLoadSequence.b(nj.field_c * ArchiveLoadSequence.b(var19, 255) + (256 - nj.field_c) * ArchiveLoadSequence.b(var18, 255) >> 8, 255));
+                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = RenderingInitializationSupport.bitwiseOr(RenderingInitializationSupport.bitwiseOr(ArchiveLoadSequence.bitwiseAnd(16711898, (-LogoMaterial.field_c + 256) * (ArchiveLoadSequence.bitwiseAnd(16744119, var18) >> 16) + (ArchiveLoadSequence.bitwiseAnd(var19, 16714394) >> 16) * LogoMaterial.field_c << 8), ArchiveLoadSequence.bitwiseAnd((256 - LogoMaterial.field_c) * ArchiveLoadSequence.bitwiseAnd(var18 >> 8, 255) + (ArchiveLoadSequence.bitwiseAnd(65295, var19) >> 8) * LogoMaterial.field_c, 65280)), ArchiveLoadSequence.bitwiseAnd(LogoMaterial.field_c * ArchiveLoadSequence.bitwiseAnd(var19, 255) + (256 - LogoMaterial.field_c) * ArchiveLoadSequence.bitwiseAnd(var18, 255) >> 8, 255));
                 } else {
                   if (var7.field_u > var7.field_l) {
                     SoftwareRasterizer.pixels[var17 + SoftwareRasterizer.width * var13] = var18;
@@ -668,11 +668,11 @@ final class TutorialController {
     private final void d(int param0) {
         if (!this.field_b) {
         } else {
-          qa.field_v.capturedSprite = PolarObject.field_d[13];
+          HotspotRectangle.field_v.capturedSprite = PolarObject.field_d[13];
           this.field_b = false;
-          qa.field_v.disabledSprite = PolarObject.field_d[1];
-          qa.field_v.activeSprite = PolarObject.field_d[9];
-          qa.field_v.sprite = PolarObject.field_d[5];
+          HotspotRectangle.field_v.disabledSprite = PolarObject.field_d[1];
+          HotspotRectangle.field_v.activeSprite = PolarObject.field_d[9];
+          HotspotRectangle.field_v.sprite = PolarObject.field_d[5];
           if (TextPairLoginPayload.field_i == -1) {
             TextPairLoginPayload.field_i = 0;
           } else {
@@ -721,7 +721,7 @@ final class TutorialController {
         int var1 = QuickChatCategoryCache.b((byte) -62);
         int var2 = CheckboxPainter.a(23467);
         Pool.field_I.draw(var1 + (TutorialStep.field_v << 1), -WhirlpoolHasher.field_b + PasswordValidator.field_n, -6316, -TutorialStep.field_v + PlasmaTableScene.field_Z, (WhirlpoolHasher.field_b << 1) + var2);
-        e.a(param0 ^ 29411);
+        ChoiceButtonSupport.a(param0 ^ 29411);
     }
 
     final static String joinText(int param0, byte param1, CharSequence[] param2, int param3) {
@@ -898,15 +898,15 @@ final class TutorialController {
 
     private final void layoutButtons(int param0) {
         int var2 = 0;
-        pl.field_b.localY = -3 + PoolGameModel.field_k.height - pl.field_b.height;
-        pl.field_b.localX = 277;
+        VertexProjectionSupport.field_b.localY = -3 + PoolGameModel.field_k.height - VertexProjectionSupport.field_b.height;
+        VertexProjectionSupport.field_b.localX = 277;
         if (param0 != 1) {
           return;
         }
-        qa.field_v.localX = 297 + PoolGameModel.field_k.localX;
-        qa.field_v.localY = -qa.field_v.height + PoolGameModel.field_k.localY - (-PoolGameModel.field_k.height + 3);
-        jq.field_d.localY = -3 + (PoolGameModel.field_k.height - jq.field_d.height);
-        jq.field_d.localX = 317;
+        HotspotRectangle.field_v.localX = 297 + PoolGameModel.field_k.localX;
+        HotspotRectangle.field_v.localY = -HotspotRectangle.field_v.height + PoolGameModel.field_k.localY - (-PoolGameModel.field_k.height + 3);
+        QuickChatNavigationSupport.field_d.localY = -3 + (PoolGameModel.field_k.height - QuickChatNavigationSupport.field_d.height);
+        QuickChatNavigationSupport.field_d.localX = 317;
         for (var2 = 0; var2 < this.field_k; var2++) {
         }
     }
@@ -917,15 +917,15 @@ final class TutorialController {
           if (null != this.currentStep) {
             this.currentStep.attachToTutorial(this, 74);
           }
-          qa.field_v.capturedSprite = PolarObject.field_d[14];
-          qa.field_v.sprite = PolarObject.field_d[6];
+          HotspotRectangle.field_v.capturedSprite = PolarObject.field_d[14];
+          HotspotRectangle.field_v.sprite = PolarObject.field_d[6];
           if (TextPairLoginPayload.field_i == -1) {
             TextPairLoginPayload.field_i = 0;
           } else {
             TextPairLoginPayload.field_i = 25 - TextPairLoginPayload.field_i;
           }
-          qa.field_v.activeSprite = PolarObject.field_d[10];
-          qa.field_v.disabledSprite = PolarObject.field_d[2];
+          HotspotRectangle.field_v.activeSprite = PolarObject.field_d[10];
+          HotspotRectangle.field_v.disabledSprite = PolarObject.field_d[2];
         }
         int var2 = -81 % ((-32 - param0) / 38);
     }

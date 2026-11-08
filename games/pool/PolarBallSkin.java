@@ -167,18 +167,18 @@ final class PolarBallSkin extends BallSkin {
 
     final String groupName(byte param0, int param1) {
         if (param0 >= 9) {
-          return param1 == 0 ? ij.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
+          return param1 == 0 ? AnimatedNotification.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
         }
         field_l = (PcmSample) null;
-        return param1 == 0 ? ij.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
+        return param1 == 0 ? AnimatedNotification.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
     }
 
-    final static ml[] a(byte param0) {
+    final static LoginMethod[] a(byte param0) {
         if (param0 == -66) {
-          return new ml[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
+          return new LoginMethod[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
         }
         field_p = 19;
-        return new ml[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
+        return new LoginMethod[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
     }
 
     static {

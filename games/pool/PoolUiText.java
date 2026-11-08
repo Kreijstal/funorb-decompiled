@@ -55,219 +55,219 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,0", (byte) 27);
                 if (null != var2) {
-                  md.achievementNames[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  RenderingInitializationSupport.achievementNames[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,1", (byte) 70);
                 if (null != var2) {
-                  md.achievementNames[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RenderingInitializationSupport.achievementNames[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,2", (byte) 37);
                 if (var2 != null) {
-                  md.achievementNames[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  RenderingInitializationSupport.achievementNames[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,3", (byte) 41);
                 if (null != var2) {
-                  md.achievementNames[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -26);
+                  RenderingInitializationSupport.achievementNames[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -26);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,4", (byte) 54);
                 if (null != var2) {
-                  md.achievementNames[4] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RenderingInitializationSupport.achievementNames[4] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,5", (byte) 88);
                 if (var2 != null) {
-                  md.achievementNames[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -31);
+                  RenderingInitializationSupport.achievementNames[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -31);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,6", (byte) 87);
                 if (null != var2) {
-                  md.achievementNames[6] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  RenderingInitializationSupport.achievementNames[6] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,7", (byte) 99);
                 if (null != var2) {
-                  md.achievementNames[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RenderingInitializationSupport.achievementNames[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,8", (byte) 127);
                 if (null != var2) {
-                  md.achievementNames[8] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  RenderingInitializationSupport.achievementNames[8] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,9", (byte) 47);
                 if (null != var2) {
-                  md.achievementNames[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  RenderingInitializationSupport.achievementNames[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,10", (byte) 87);
                 if (var2 != null) {
-                  md.achievementNames[10] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RenderingInitializationSupport.achievementNames[10] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,11", (byte) 46);
                 if (var2 != null) {
-                  md.achievementNames[11] = Cp1252DecodingSupport.decodeBytesToString(var2, -11);
+                  RenderingInitializationSupport.achievementNames[11] = Cp1252DecodingSupport.decodeBytesToString(var2, -11);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,12", (byte) 49);
                 if (null != var2) {
-                  md.achievementNames[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  RenderingInitializationSupport.achievementNames[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,13", (byte) 70);
                 if (null != var2) {
-                  md.achievementNames[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  RenderingInitializationSupport.achievementNames[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,14", (byte) 72);
                 if (null != var2) {
-                  md.achievementNames[14] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  RenderingInitializationSupport.achievementNames[14] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,15", (byte) 73);
                 if (var2 != null) {
-                  md.achievementNames[15] = Cp1252DecodingSupport.decodeBytesToString(var2, -45);
+                  RenderingInitializationSupport.achievementNames[15] = Cp1252DecodingSupport.decodeBytesToString(var2, -45);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,16", (byte) 18);
                 if (null != var2) {
-                  md.achievementNames[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -26);
+                  RenderingInitializationSupport.achievementNames[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -26);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,17", (byte) 39);
                 if (null != var2) {
-                  md.achievementNames[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  RenderingInitializationSupport.achievementNames[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,18", (byte) 22);
                 if (var2 != null) {
-                  md.achievementNames[18] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  RenderingInitializationSupport.achievementNames[18] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,19", (byte) 78);
                 if (null != var2) {
-                  md.achievementNames[19] = Cp1252DecodingSupport.decodeBytesToString(var2, -87);
+                  RenderingInitializationSupport.achievementNames[19] = Cp1252DecodingSupport.decodeBytesToString(var2, -87);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,20", (byte) 57);
                 if (var2 != null) {
-                  md.achievementNames[20] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  RenderingInitializationSupport.achievementNames[20] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,21", (byte) 36);
                 if (null != var2) {
-                  md.achievementNames[21] = Cp1252DecodingSupport.decodeBytesToString(var2, 8);
+                  RenderingInitializationSupport.achievementNames[21] = Cp1252DecodingSupport.decodeBytesToString(var2, 8);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,22", (byte) 116);
                 if (var2 != null) {
-                  md.achievementNames[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  RenderingInitializationSupport.achievementNames[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,23", (byte) 32);
                 if (null != var2) {
-                  md.achievementNames[23] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  RenderingInitializationSupport.achievementNames[23] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,24", (byte) 97);
                 if (null != var2) {
-                  md.achievementNames[24] = Cp1252DecodingSupport.decodeBytesToString(var2, -55);
+                  RenderingInitializationSupport.achievementNames[24] = Cp1252DecodingSupport.decodeBytesToString(var2, -55);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,25", (byte) 77);
                 if (null != var2) {
-                  md.achievementNames[25] = Cp1252DecodingSupport.decodeBytesToString(var2, -91);
+                  RenderingInitializationSupport.achievementNames[25] = Cp1252DecodingSupport.decodeBytesToString(var2, -91);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_names,26", (byte) 117);
                 if (var2 != null) {
-                  md.achievementNames[26] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  RenderingInitializationSupport.achievementNames[26] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,0", (byte) 47);
                 if (var2 != null) {
-                  kc.achievementCriteria[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
+                  CanvasInputAttachmentSupport.achievementCriteria[0] = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,1", (byte) 111);
                 if (var2 != null) {
-                  kc.achievementCriteria[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  CanvasInputAttachmentSupport.achievementCriteria[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,2", (byte) 82);
                 if (var2 != null) {
-                  kc.achievementCriteria[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 5);
+                  CanvasInputAttachmentSupport.achievementCriteria[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 5);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,3", (byte) 127);
                 if (var2 != null) {
-                  kc.achievementCriteria[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -42);
+                  CanvasInputAttachmentSupport.achievementCriteria[3] = Cp1252DecodingSupport.decodeBytesToString(var2, -42);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,4", (byte) 63);
                 if (var2 != null) {
-                  kc.achievementCriteria[4] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  CanvasInputAttachmentSupport.achievementCriteria[4] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,5", (byte) 18);
                 if (var2 != null) {
-                  kc.achievementCriteria[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  CanvasInputAttachmentSupport.achievementCriteria[5] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,6", (byte) 112);
                 if (var2 != null) {
-                  kc.achievementCriteria[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
+                  CanvasInputAttachmentSupport.achievementCriteria[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,7", (byte) 69);
                 if (null != var2) {
-                  kc.achievementCriteria[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  CanvasInputAttachmentSupport.achievementCriteria[7] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,8", (byte) 34);
                 if (var2 != null) {
-                  kc.achievementCriteria[8] = Cp1252DecodingSupport.decodeBytesToString(var2, -67);
+                  CanvasInputAttachmentSupport.achievementCriteria[8] = Cp1252DecodingSupport.decodeBytesToString(var2, -67);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,9", (byte) 35);
                 if (var2 != null) {
-                  kc.achievementCriteria[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  CanvasInputAttachmentSupport.achievementCriteria[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,10", (byte) 49);
                 if (var2 != null) {
-                  kc.achievementCriteria[10] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CanvasInputAttachmentSupport.achievementCriteria[10] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,11", (byte) 53);
                 if (var2 != null) {
-                  kc.achievementCriteria[11] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  CanvasInputAttachmentSupport.achievementCriteria[11] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,12", (byte) 51);
                 if (null != var2) {
-                  kc.achievementCriteria[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CanvasInputAttachmentSupport.achievementCriteria[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,13", (byte) 90);
                 if (null != var2) {
-                  kc.achievementCriteria[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  CanvasInputAttachmentSupport.achievementCriteria[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,14", (byte) 43);
                 if (var2 != null) {
-                  kc.achievementCriteria[14] = Cp1252DecodingSupport.decodeBytesToString(var2, -119);
+                  CanvasInputAttachmentSupport.achievementCriteria[14] = Cp1252DecodingSupport.decodeBytesToString(var2, -119);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,15", (byte) 89);
                 if (null != var2) {
-                  kc.achievementCriteria[15] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CanvasInputAttachmentSupport.achievementCriteria[15] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,16", (byte) 45);
                 if (var2 != null) {
-                  kc.achievementCriteria[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -9);
+                  CanvasInputAttachmentSupport.achievementCriteria[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -9);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,17", (byte) 29);
                 if (null != var2) {
-                  kc.achievementCriteria[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  CanvasInputAttachmentSupport.achievementCriteria[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,18", (byte) 61);
                 if (null != var2) {
-                  kc.achievementCriteria[18] = Cp1252DecodingSupport.decodeBytesToString(var2, -73);
+                  CanvasInputAttachmentSupport.achievementCriteria[18] = Cp1252DecodingSupport.decodeBytesToString(var2, -73);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,19", (byte) 76);
                 if (null != var2) {
-                  kc.achievementCriteria[19] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  CanvasInputAttachmentSupport.achievementCriteria[19] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,20", (byte) 125);
                 if (var2 != null) {
-                  kc.achievementCriteria[20] = Cp1252DecodingSupport.decodeBytesToString(var2, -40);
+                  CanvasInputAttachmentSupport.achievementCriteria[20] = Cp1252DecodingSupport.decodeBytesToString(var2, -40);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,21", (byte) 103);
                 if (null != var2) {
-                  kc.achievementCriteria[21] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CanvasInputAttachmentSupport.achievementCriteria[21] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,22", (byte) 66);
                 if (var2 != null) {
-                  kc.achievementCriteria[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 7);
+                  CanvasInputAttachmentSupport.achievementCriteria[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 7);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,23", (byte) 31);
                 if (var2 != null) {
-                  kc.achievementCriteria[23] = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
+                  CanvasInputAttachmentSupport.achievementCriteria[23] = Cp1252DecodingSupport.decodeBytesToString(var2, -71);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,24", (byte) 108);
                 if (null != var2) {
-                  kc.achievementCriteria[24] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  CanvasInputAttachmentSupport.achievementCriteria[24] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,25", (byte) 19);
                 if (null != var2) {
-                  kc.achievementCriteria[25] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  CanvasInputAttachmentSupport.achievementCriteria[25] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("achievement_criteria,26", (byte) 97);
                 if (var2 != null) {
-                  kc.achievementCriteria[26] = Cp1252DecodingSupport.decodeBytesToString(var2, -76);
+                  CanvasInputAttachmentSupport.achievementCriteria[26] = Cp1252DecodingSupport.decodeBytesToString(var2, -76);
                 }
                 var2 = LocalGameSetupScreen.a("gameoptlabels,0", (byte) 63);
                 if (var2 != null) {
@@ -431,95 +431,95 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,0", (byte) 121);
                 if (null != var2) {
-                  e.shotMessages[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  ChoiceButtonSupport.shotMessages[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,1", (byte) 47);
                 if (null != var2) {
-                  e.shotMessages[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ChoiceButtonSupport.shotMessages[1] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,2", (byte) 84);
                 if (var2 != null) {
-                  e.shotMessages[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -86);
+                  ChoiceButtonSupport.shotMessages[2] = Cp1252DecodingSupport.decodeBytesToString(var2, -86);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,3", (byte) 62);
                 if (var2 != null) {
-                  e.shotMessages[3] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  ChoiceButtonSupport.shotMessages[3] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,4", (byte) 22);
                 if (var2 != null) {
-                  e.shotMessages[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -15);
+                  ChoiceButtonSupport.shotMessages[4] = Cp1252DecodingSupport.decodeBytesToString(var2, -15);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,5", (byte) 108);
                 if (null != var2) {
-                  e.shotMessages[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -14);
+                  ChoiceButtonSupport.shotMessages[5] = Cp1252DecodingSupport.decodeBytesToString(var2, -14);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,6", (byte) 90);
                 if (null != var2) {
-                  e.shotMessages[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -78);
+                  ChoiceButtonSupport.shotMessages[6] = Cp1252DecodingSupport.decodeBytesToString(var2, -78);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,7", (byte) 28);
                 if (var2 != null) {
-                  e.shotMessages[7] = Cp1252DecodingSupport.decodeBytesToString(var2, -21);
+                  ChoiceButtonSupport.shotMessages[7] = Cp1252DecodingSupport.decodeBytesToString(var2, -21);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,8", (byte) 97);
                 if (var2 != null) {
-                  e.shotMessages[8] = Cp1252DecodingSupport.decodeBytesToString(var2, -25);
+                  ChoiceButtonSupport.shotMessages[8] = Cp1252DecodingSupport.decodeBytesToString(var2, -25);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,9", (byte) 115);
                 if (null != var2) {
-                  e.shotMessages[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  ChoiceButtonSupport.shotMessages[9] = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,10", (byte) 57);
                 if (var2 != null) {
-                  e.shotMessages[10] = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
+                  ChoiceButtonSupport.shotMessages[10] = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,11", (byte) 28);
                 if (var2 != null) {
-                  e.shotMessages[11] = Cp1252DecodingSupport.decodeBytesToString(var2, -22);
+                  ChoiceButtonSupport.shotMessages[11] = Cp1252DecodingSupport.decodeBytesToString(var2, -22);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,12", (byte) 53);
                 if (null != var2) {
-                  e.shotMessages[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  ChoiceButtonSupport.shotMessages[12] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,13", (byte) 83);
                 if (var2 != null) {
-                  e.shotMessages[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  ChoiceButtonSupport.shotMessages[13] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,14", (byte) 61);
                 if (null != var2) {
-                  e.shotMessages[14] = Cp1252DecodingSupport.decodeBytesToString(var2, -86);
+                  ChoiceButtonSupport.shotMessages[14] = Cp1252DecodingSupport.decodeBytesToString(var2, -86);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,15", (byte) 23);
                 if (null != var2) {
-                  e.shotMessages[15] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ChoiceButtonSupport.shotMessages[15] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,16", (byte) 30);
                 if (null != var2) {
-                  e.shotMessages[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -122);
+                  ChoiceButtonSupport.shotMessages[16] = Cp1252DecodingSupport.decodeBytesToString(var2, -122);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,17", (byte) 29);
                 if (var2 != null) {
-                  e.shotMessages[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ChoiceButtonSupport.shotMessages[17] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,18", (byte) 58);
                 if (var2 != null) {
-                  e.shotMessages[18] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ChoiceButtonSupport.shotMessages[18] = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,19", (byte) 50);
                 if (null != var2) {
-                  e.shotMessages[19] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  ChoiceButtonSupport.shotMessages[19] = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,20", (byte) 123);
                 if (var2 != null) {
-                  e.shotMessages[20] = Cp1252DecodingSupport.decodeBytesToString(var2, -112);
+                  ChoiceButtonSupport.shotMessages[20] = Cp1252DecodingSupport.decodeBytesToString(var2, -112);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,21", (byte) 89);
                 if (var2 != null) {
-                  e.shotMessages[21] = Cp1252DecodingSupport.decodeBytesToString(var2, -118);
+                  ChoiceButtonSupport.shotMessages[21] = Cp1252DecodingSupport.decodeBytesToString(var2, -118);
                 }
                 var2 = LocalGameSetupScreen.a("shot_messages,22", (byte) 116);
                 if (var2 != null) {
-                  e.shotMessages[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  ChoiceButtonSupport.shotMessages[22] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("n_second_time_penalty", (byte) 92);
                 if (var2 != null) {
@@ -655,7 +655,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("ballset_plasma_group_0_nocolour", (byte) 123);
                 if (null != var2) {
-                  pn.ballsetPlasmaGroup0Nocolour = Cp1252DecodingSupport.decodeBytesToString(var2, -73);
+                  ChatMessage.ballsetPlasmaGroup0Nocolour = Cp1252DecodingSupport.decodeBytesToString(var2, -73);
                 }
                 var2 = LocalGameSetupScreen.a("ballset_plasma_group_1_nocolour", (byte) 113);
                 if (var2 != null) {
@@ -692,7 +692,7 @@ final class PoolUiText {
                 var2 = LocalGameSetupScreen.a("ballset_space_group_1", (byte) 77);
                 var3 = 50 % ((param1 - 58) / 42);
                 if (var2 != null) {
-                  dq.field_g = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  TransformRotationSupport.field_g = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("ballset_jungle_group_0", (byte) 36);
                 if (null != var2) {
@@ -704,7 +704,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("ballset_polar_group_0", (byte) 119);
                 if (null != var2) {
-                  ij.ballsetPolarGroup0 = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
+                  AnimatedNotification.ballsetPolarGroup0 = Cp1252DecodingSupport.decodeBytesToString(var2, -81);
                 }
                 var2 = LocalGameSetupScreen.a("ballset_polar_group_1", (byte) 64);
                 if (null != var2) {
@@ -1062,11 +1062,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_title_basics", (byte) 103);
                 if (var2 != null) {
-                  jj.tutorialTitleBasics = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  BirthDatePromptPanel.tutorialTitleBasics = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_title_eight_ball", (byte) 113);
                 if (var2 != null) {
-                  fc.tutorialTitleEightBall = Cp1252DecodingSupport.decodeBytesToString(var2, -113);
+                  AccountMenuText.tutorialTitleEightBall = Cp1252DecodingSupport.decodeBytesToString(var2, -113);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_title_nine_ball", (byte) 39);
                 if (var2 != null) {
@@ -1074,15 +1074,15 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_hide", (byte) 57);
                 if (null != var2) {
-                  ln.tutorialHide = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  ModelOriginSupport.tutorialHide = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_show", (byte) 67);
                 if (null != var2) {
-                  ml.tutorialShow = Cp1252DecodingSupport.decodeBytesToString(var2, -44);
+                  LoginMethod.tutorialShow = Cp1252DecodingSupport.decodeBytesToString(var2, -44);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_prev", (byte) 41);
                 if (null != var2) {
-                  ll.tutorialPrev = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  BrowserUrlSupport.tutorialPrev = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_next", (byte) 127);
                 if (var2 != null) {
@@ -1102,11 +1102,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_camera_recentre", (byte) 20);
                 if (null != var2) {
-                  ie.tutorialCameraRecentre = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  BrowserCookieSupport.tutorialCameraRecentre = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_shot_mode_enter", (byte) 29);
                 if (var2 != null) {
-                  je.tutorialShotModeEnter = Cp1252DecodingSupport.decodeBytesToString(var2, -41);
+                  ArchiveBootstrapSupport.tutorialShotModeEnter = Cp1252DecodingSupport.decodeBytesToString(var2, -41);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_shot_mode_take", (byte) 19);
                 if (null != var2) {
@@ -1118,11 +1118,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_shot_mode_power", (byte) 76);
                 if (var2 != null) {
-                  na.tutorialShotModePower = Cp1252DecodingSupport.decodeBytesToString(var2, -70);
+                  IntegerSyntaxSupport.tutorialShotModePower = Cp1252DecodingSupport.decodeBytesToString(var2, -70);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_shot_mode_leave", (byte) 86);
                 if (var2 != null) {
-                  om.tutorialShotModeLeave = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  TextInputPainter.tutorialShotModeLeave = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_basic_complete", (byte) 115);
                 if (null != var2) {
@@ -1134,7 +1134,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_eight_ball_break", (byte) 66);
                 if (null != var2) {
-                  dr.tutorialEightBallBreak = Cp1252DecodingSupport.decodeBytesToString(var2, -80);
+                  LogoFinalFrameLoader.tutorialEightBallBreak = Cp1252DecodingSupport.decodeBytesToString(var2, -80);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_eight_ball_afterbreak", (byte) 120);
                 if (var2 != null) {
@@ -1142,7 +1142,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_eight_ball_afterfirstpot", (byte) 60);
                 if (var2 != null) {
-                  gn.tutorialEightBallAfterfirstpot = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  FaceBucketSupport.tutorialEightBallAfterfirstpot = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_eight_ball_aftergrouppot", (byte) 68);
                 if (null != var2) {
@@ -1174,7 +1174,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_nine_ball_potting_a_ball", (byte) 74);
                 if (var2 != null) {
-                  pl.tutorialNineBallPottingABall = Cp1252DecodingSupport.decodeBytesToString(var2, -83);
+                  VertexProjectionSupport.tutorialNineBallPottingABall = Cp1252DecodingSupport.decodeBytesToString(var2, -83);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_nine_ball_potting_nine", (byte) 77);
                 if (null != var2) {
@@ -1182,7 +1182,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_nine_ball_final", (byte) 35);
                 if (null != var2) {
-                  rc.tutorialNineBallFinal = Cp1252DecodingSupport.decodeBytesToString(var2, 12);
+                  AccountTextSupport.tutorialNineBallFinal = Cp1252DecodingSupport.decodeBytesToString(var2, 12);
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_enter_shot_mode", (byte) 39);
                 if (null != var2) {
@@ -1202,7 +1202,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_zoom", (byte) 27);
                 if (var2 != null) {
-                  sm.tickerHintZoom = Cp1252DecodingSupport.decodeBytesToString(var2, -119);
+                  PasswordInputPainter.tickerHintZoom = Cp1252DecodingSupport.decodeBytesToString(var2, -119);
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_shot_mode_aim", (byte) 105);
                 if (var2 != null) {
@@ -1210,11 +1210,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_aim", (byte) 39);
                 if (var2 != null) {
-                  sa.tickerHintAim = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  CollisionContact.tickerHintAim = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_rotate", (byte) 48);
                 if (null != var2) {
-                  pm.tickerHintRotate = Cp1252DecodingSupport.decodeBytesToString(var2, 0);
+                  SceneNodeEntry.tickerHintRotate = Cp1252DecodingSupport.decodeBytesToString(var2, 0);
                 }
                 var2 = LocalGameSetupScreen.a("ticker_hint_shoot", (byte) 73);
                 if (var2 != null) {
@@ -1254,7 +1254,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("status_versus", (byte) 55);
                 if (var2 != null) {
-                  tp.statusVersus = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  LookupRetrySupport.statusVersus = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("status_out_of_lives", (byte) 82);
                 if (null != var2) {
@@ -1298,7 +1298,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_list_are_group_name", (byte) 66);
                 if (null != var2) {
-                  w.playerListAreGroupName = Cp1252DecodingSupport.decodeBytesToString(var2, -20);
+                  GrowableIntListFactory.playerListAreGroupName = Cp1252DecodingSupport.decodeBytesToString(var2, -20);
                 }
                 var2 = LocalGameSetupScreen.a("player_you_x2_are_group_name", (byte) 116);
                 if (null != var2) {
@@ -1306,7 +1306,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_you_first_list_are_group_name", (byte) 75);
                 if (var2 != null) {
-                  ij.playerYouFirstListAreGroupName = Cp1252DecodingSupport.decodeBytesToString(var2, -20);
+                  AnimatedNotification.playerYouFirstListAreGroupName = Cp1252DecodingSupport.decodeBytesToString(var2, -20);
                 }
                 var2 = LocalGameSetupScreen.a("player_x2_have_won", (byte) 78);
                 if (null != var2) {
@@ -1314,7 +1314,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_list_have_won", (byte) 61);
                 if (var2 != null) {
-                  sk.playerListHaveWon = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  PaletteFontLoader.playerListHaveWon = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("player_you_x2_have_won", (byte) 97);
                 if (null != var2) {
@@ -1322,7 +1322,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_you_first_list_have_won", (byte) 88);
                 if (var2 != null) {
-                  jq.playerYouFirstListHaveWon = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  QuickChatNavigationSupport.playerYouFirstListHaveWon = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("player_is_offering_rematch", (byte) 33);
                 if (null != var2) {
@@ -1330,7 +1330,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_x2_are_offering_rematch", (byte) 73);
                 if (var2 != null) {
-                  hp.playerX2AreOfferingRematch = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  SupportPageLauncher.playerX2AreOfferingRematch = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("player_list_are_offering_rematch", (byte) 95);
                 if (var2 != null) {
@@ -1374,11 +1374,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_x2_are_out", (byte) 108);
                 if (null != var2) {
-                  mg.playerX2AreOut = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  LobbyPlayerLookupSupport.playerX2AreOut = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("player_list_are_out", (byte) 105);
                 if (null != var2) {
-                  jl.playerListAreOut = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  SpriteSheetLoadSupport.playerListAreOut = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("player_you_x2_are_out", (byte) 95);
                 if (var2 != null) {
@@ -1394,7 +1394,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_x2_have_resigned", (byte) 28);
                 if (null != var2) {
-                  w.playerX2HaveResigned = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
+                  GrowableIntListFactory.playerX2HaveResigned = Cp1252DecodingSupport.decodeBytesToString(var2, -52);
                 }
                 var2 = LocalGameSetupScreen.a("player_list_have_resigned", (byte) 67);
                 if (null != var2) {
@@ -1410,7 +1410,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_vs_player", (byte) 121);
                 if (var2 != null) {
-                  w.playerVsPlayer = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  GrowableIntListFactory.playerVsPlayer = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("player_list_vs_player_list", (byte) 84);
                 if (null != var2) {
@@ -1422,7 +1422,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_lose", (byte) 92);
                 if (null != var2) {
-                  ph.tutorialLose = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  AccountProtocolStage.tutorialLose = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("tutorial_lose_eight_ball_game", (byte) 90);
                 if (var2 != null) {
@@ -1438,7 +1438,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("cue_cant_go_there", (byte) 82);
                 if (null != var2) {
-                  jd.cueCantGoThere = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  Atan2Support.cueCantGoThere = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("player_x_gained_a_life", (byte) 100);
                 if (null != var2) {
@@ -1454,7 +1454,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("you_gained_a_life", (byte) 101);
                 if (var2 != null) {
-                  oj.youGainedALife = Cp1252DecodingSupport.decodeBytesToString(var2, -24);
+                  HighScoreSubmission.youGainedALife = Cp1252DecodingSupport.decodeBytesToString(var2, -24);
                 }
                 var2 = LocalGameSetupScreen.a("you_lost_a_life", (byte) 71);
                 if (var2 != null) {
@@ -1530,15 +1530,15 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("plusungood_shot,0", (byte) 79);
                 if (var2 != null) {
-                  he.plusungoodShot[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
+                  CanvasInputSupport.plusungoodShot[0] = Cp1252DecodingSupport.decodeBytesToString(var2, 123);
                 }
                 var2 = LocalGameSetupScreen.a("plusungood_shot,1", (byte) 40);
                 if (var2 != null) {
-                  he.plusungoodShot[1] = Cp1252DecodingSupport.decodeBytesToString(var2, -68);
+                  CanvasInputSupport.plusungoodShot[1] = Cp1252DecodingSupport.decodeBytesToString(var2, -68);
                 }
                 var2 = LocalGameSetupScreen.a("plusungood_shot,2", (byte) 58);
                 if (null != var2) {
-                  he.plusungoodShot[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
+                  CanvasInputSupport.plusungoodShot[2] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
                 var2 = LocalGameSetupScreen.a("doubleplusungood_shot,0", (byte) 49);
                 if (null != var2) {
@@ -1562,7 +1562,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("would_you_like_to_play_or_pass", (byte) 126);
                 if (null != var2) {
-                  ml.wouldYouLikeToPlayOrPass = Cp1252DecodingSupport.decodeBytesToString(var2, -89);
+                  LoginMethod.wouldYouLikeToPlayOrPass = Cp1252DecodingSupport.decodeBytesToString(var2, -89);
                 }
                 var2 = LocalGameSetupScreen.a("decision_button_play", (byte) 71);
                 if (null != var2) {
@@ -1570,11 +1570,11 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("decision_button_pass", (byte) 59);
                 if (null != var2) {
-                  rl.decisionButtonPass = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
+                  MonotonicClock.decisionButtonPass = Cp1252DecodingSupport.decodeBytesToString(var2, 125);
                 }
                 var2 = LocalGameSetupScreen.a("tooltip_ball_in_hand", (byte) 97);
                 if (var2 != null) {
-                  jq.tooltipBallInHand = Cp1252DecodingSupport.decodeBytesToString(var2, -128);
+                  QuickChatNavigationSupport.tooltipBallInHand = Cp1252DecodingSupport.decodeBytesToString(var2, -128);
                 }
                 var2 = LocalGameSetupScreen.a("tooltip_break", (byte) 106);
                 if (var2 != null) {
@@ -1586,7 +1586,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("tooltip_snookered", (byte) 73);
                 if (var2 != null) {
-                  tq.tooltipSnookered = Cp1252DecodingSupport.decodeBytesToString(var2, -32);
+                  AccountStateQuery.tooltipSnookered = Cp1252DecodingSupport.decodeBytesToString(var2, -32);
                 }
                 var2 = LocalGameSetupScreen.a("chat_button", (byte) 85);
                 if (null != var2) {
@@ -1610,7 +1610,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("highscore_header_time", (byte) 114);
                 if (var2 != null) {
-                  vi.highscoreHeaderTime = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  Cp1252CharacterSupport.highscoreHeaderTime = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("player_colon", (byte) 92);
                 if (null != var2) {
@@ -1618,7 +1618,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("player_colon_fr", (byte) 122);
                 if (null != var2) {
-                  rc.playerColonFr = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  AccountTextSupport.playerColonFr = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.a("time_trial_completed", (byte) 72);
                 if (null != var2) {
@@ -1666,7 +1666,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("menu_time_trial_without_guides", (byte) 68);
                 if (null != var2) {
-                  pl.menuTimeTrialWithoutGuides = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
+                  VertexProjectionSupport.menuTimeTrialWithoutGuides = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 var2 = LocalGameSetupScreen.a("achievements_only_in_rated", (byte) 28);
                 if (var2 != null) {
@@ -1674,7 +1674,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("progress_jungle_bulk", (byte) 58);
                 if (var2 != null) {
-                  sa.progressJungleBulk = Cp1252DecodingSupport.decodeBytesToString(var2, -108);
+                  CollisionContact.progressJungleBulk = Cp1252DecodingSupport.decodeBytesToString(var2, -108);
                 }
                 var2 = LocalGameSetupScreen.a("progress_jungle_finishing", (byte) 49);
                 if (var2 != null) {
@@ -1682,7 +1682,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("rated_membersonly", (byte) 84);
                 if (null != var2) {
-                  tq.ratedMembersonly = Cp1252DecodingSupport.decodeBytesToString(var2, -23);
+                  AccountStateQuery.ratedMembersonly = Cp1252DecodingSupport.decodeBytesToString(var2, -23);
                 }
                 var2 = LocalGameSetupScreen.a("youhavelost", (byte) 44);
                 if (null != var2) {
@@ -1694,7 +1694,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("keycode_default_up1", (byte) 82);
                 if (null != var2) {
-                  gp.keycodeDefaultUp1 = 255 & var2[0];
+                  AchievementProtocolSupport.keycodeDefaultUp1 = 255 & var2[0];
                 }
                 var2 = LocalGameSetupScreen.a("keycode_default_up2", (byte) 28);
                 if (var2 != null) {
@@ -1718,7 +1718,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.a("keycode_default_right1", (byte) 38);
                 if (null != var2) {
-                  gn.keycodeDefaultRight1 = var2[0] & 255;
+                  FaceBucketSupport.keycodeDefaultRight1 = var2[0] & 255;
                 }
                 var2 = LocalGameSetupScreen.a("keycode_default_right2", (byte) 91);
                 if (var2 != null) {

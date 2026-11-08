@@ -87,7 +87,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 3) {
-            stackIn_4_0 = ti.muEnteredOtherGame;
+            stackIn_4_0 = DebugSliderInputSupport.muEnteredOtherGame;
             return stackIn_4_0;
           }
           if (param1 == 6) {
@@ -95,7 +95,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
             return stackIn_9_0;
           }
           if (param1 == 7) {
-            stackIn_12_0 = wb.muGameHasStarted;
+            stackIn_12_0 = RankingsProtocolSupport.muGameHasStarted;
             return stackIn_12_0;
           }
           if (param1 == 8) {
@@ -222,17 +222,17 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           var3_int = param2;
           var4 = PasswordValidator.field_n;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var3_int < dq.field_j.length)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var3_int < TransformRotationSupport.field_j.length)))) {
             var5 = IterableNodeHashTable.field_c[var3_int];
             stackIn_16_0 = ~var5;
             if (var8 == 0) {
               if (stackIn_16_0 > -1) {
                 var4 = var4 + ShotRecord.field_y;
               } else {
-                var6 = WidgetContainer.a(dq.field_j[var3_int], true, false);
-                var7 = nn.field_c - (var6 >> 1);
+                var6 = WidgetContainer.a(TransformRotationSupport.field_j[var3_int], true, false);
+                var7 = BrowserCookieWriter.field_c - (var6 >> 1);
                 var4 = var4 + IterableDualLinkDeque.field_e;
-                if (ResizableDialog.a(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (rm.field_b << 1) + var6, var4, var7 - rm.field_b)) {
+                if (ResizableDialog.a(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {
                   stackIn_12_0 = var5;
                   return stackIn_12_0;
                 }
@@ -294,7 +294,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         var20 = Pool.field_O;
         try {
           Ball.field_F[0] = 16764000;
-          m.field_c = param1;
+          RatingTextState.field_c = param1;
           TickClock.field_h = param5;
           Ball.field_F[2] = 9474303;
           Ball.field_F[3] = 16736511;
@@ -324,19 +324,19 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           var17.children = new IntrusiveDeque();
           Js5ArchiveManager.field_b = new ScrollPane(0L, var17, param9, param3);
           ProgressDialog.field_hb.addChild(15, Js5ArchiveManager.field_b);
-          ph.field_d = new UiComponent(0L, param6);
-          ProgressDialog.field_hb.addChild(-3, ph.field_d);
+          AccountProtocolStage.field_d = new UiComponent(0L, param6);
+          ProgressDialog.field_hb.addChild(-3, AccountProtocolStage.field_d);
           TimeTrialSelectScreen.field_J = new UiComponent(0L, param4);
-          TimeTrialSelectScreen.field_J.font = m.field_c;
-          ph.field_d.addChild(-125, TimeTrialSelectScreen.field_J);
-          ph.field_d.markDescendantsToInheritVisualState((byte) -128);
+          TimeTrialSelectScreen.field_J.font = RatingTextState.field_c;
+          AccountProtocolStage.field_d.addChild(-125, TimeTrialSelectScreen.field_J);
+          AccountProtocolStage.field_d.markDescendantsToInheritVisualState((byte) -128);
           NineBallRules.field_j = new UiComponent(0L, (UiComponent) null);
           NineBallRules.field_j.frameSprites = var16;
-          ph.field_d.addChild(17, NineBallRules.field_j);
+          AccountProtocolStage.field_d.addChild(17, NineBallRules.field_j);
           AlignedIconLabel.field_Mb = new UiComponent[5];
-          il.field_g = new UiComponent[5];
-          ln.field_v = new UiComponent[5];
-          ta.field_b = new UiComponent[5];
+          BeveledFrameSpriteFactory.field_g = new UiComponent[5];
+          ModelOriginSupport.field_v = new UiComponent[5];
+          GradientPaletteSupport.field_b = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -361,17 +361,17 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
                 }
               }
               if (decompiledFrameRemainder0) {
-                il.field_g[var18] = new UiComponent(0L, param2);
-                ln.field_v[var18] = new UiComponent(0L, TickClock.field_h, var19);
+                BeveledFrameSpriteFactory.field_g[var18] = new UiComponent(0L, param2);
+                ModelOriginSupport.field_v[var18] = new UiComponent(0L, TickClock.field_h, var19);
                 AlignedIconLabel.field_Mb[var18] = new UiComponent(0L, (UiComponent) null);
                 AlignedIconLabel.field_Mb[var18].verticalAlignment = 1;
-                ta.field_b[var18] = new UiComponent(0L, TickClock.field_h);
-                ta.field_b[var18].verticalAlignment = 1;
-                il.field_g[var18].addChild(-98, ln.field_v[var18]);
-                il.field_g[var18].addChild(68, AlignedIconLabel.field_Mb[var18]);
-                il.field_g[var18].addChild(72, ta.field_b[var18]);
-                il.field_g[var18].markDescendantsToInheritVisualState((byte) -126);
-                IntLookupQuery.field_q.addChild(104, il.field_g[var18]);
+                GradientPaletteSupport.field_b[var18] = new UiComponent(0L, TickClock.field_h);
+                GradientPaletteSupport.field_b[var18].verticalAlignment = 1;
+                BeveledFrameSpriteFactory.field_g[var18].addChild(-98, ModelOriginSupport.field_v[var18]);
+                BeveledFrameSpriteFactory.field_g[var18].addChild(68, AlignedIconLabel.field_Mb[var18]);
+                BeveledFrameSpriteFactory.field_g[var18].addChild(72, GradientPaletteSupport.field_b[var18]);
+                BeveledFrameSpriteFactory.field_g[var18].markDescendantsToInheritVisualState((byte) -126);
+                IntLookupQuery.field_q.addChild(104, BeveledFrameSpriteFactory.field_g[var18]);
                 AchievementNotice.field_m = AchievementNotice.field_m + 1;
               }
               var18++;
@@ -383,9 +383,9 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
             MeshBoundsSupport.field_e = new UiComponent(0L, param7);
             MeshBoundsSupport.field_e.text = HuffmanCodec.reportabuse;
             IntLookupQuery.field_q.addChild(25, MeshBoundsSupport.field_e);
-            if (!mg.a(61) ||
+            if (!LobbyPlayerLookupSupport.a(61) ||
               RankingsRequest.field_z) {
-              ThemeSelectScreen.field_J = new jj(0, 0, 0, 0);
+              ThemeSelectScreen.field_J = new BirthDatePromptPanel(0, 0, 0, 0);
             }
             stackIn_35_0 = -31;
             stackIn_35_1 = (-73 - param11) / 49;

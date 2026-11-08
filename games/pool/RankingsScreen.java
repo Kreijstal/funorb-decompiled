@@ -6,7 +6,7 @@ final class RankingsScreen extends MenuScreen {
     static int field_K;
     static int field_M;
     static int[] field_L;
-    static nl field_J;
+    static ServerListLauncher field_J;
     static int[] field_I;
     static String friendlistdupe;
 
@@ -14,9 +14,9 @@ final class RankingsScreen extends MenuScreen {
         int var3;
         var3 = Pool.field_O;
         if (param0 != -34) {
-          field_J = (nl) null;
+          field_J = (ServerListLauncher) null;
         }
-        if (!NanoTickClock.b(10)) {
+        if (!NanoTickClock.isClientConnected(10)) {
           if (IterableDualLinkDeque.field_a == 96) {
             if (this.selection.selectedIndex > 0) {
               if (this.selection.selectedIndex != 2) {
@@ -79,20 +79,20 @@ final class RankingsScreen extends MenuScreen {
         }
         try {
           if (param0 != -1) {
-            sa.field_h.c(param0 + 1 + ". ", 90, param7, param6, -1);
+            CollisionContact.field_h.c(param0 + 1 + ". ", 90, param7, param6, -1);
           }
-          sa.field_h.d(param8, 95, param7, param6, -1);
+          CollisionContact.field_h.d(param8, 95, param7, param6, -1);
           var12 = Integer.toString(param4);
-          sa.field_h.drawCentered(var12, LongAndTextLoginPayload.field_i[0], param7, param6, -1);
+          CollisionContact.field_h.drawCentered(var12, LongAndTextLoginPayload.field_i[0], param7, param6, -1);
           var13 = var10_int >= 50 ? "50+" : Integer.toString(var10_int);
           String var11 = var13;
-          sa.field_h.drawCentered(var13, LongAndTextLoginPayload.field_i[1], param7, param6, -1);
+          CollisionContact.field_h.drawCentered(var13, LongAndTextLoginPayload.field_i[1], param7, param6, -1);
           var14 = param1 + "%";
-          sa.field_h.drawCentered(var14, LongAndTextLoginPayload.field_i[2], param7, param6, -1);
+          CollisionContact.field_h.drawCentered(var14, LongAndTextLoginPayload.field_i[2], param7, param6, -1);
           var15 = param2 + "%";
-          sa.field_h.drawCentered(var15, LongAndTextLoginPayload.field_i[3], param7, param6, -1);
+          CollisionContact.field_h.drawCentered(var15, LongAndTextLoginPayload.field_i[3], param7, param6, -1);
           var16 = param3 + "%";
-          sa.field_h.drawCentered(var16, LongAndTextLoginPayload.field_i[4], param7, param6, -1);
+          CollisionContact.field_h.drawCentered(var16, LongAndTextLoginPayload.field_i[4], param7, param6, -1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tl.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -102,7 +102,7 @@ final class RankingsScreen extends MenuScreen {
         if (param0 != 69) {
           field_N = (MidiPcmStream) null;
         }
-        if (!NanoTickClock.b(-114) &&
+        if (!NanoTickClock.isClientConnected(-114) &&
           param1 < 2) {
           return 24;
         }
@@ -118,14 +118,14 @@ final class RankingsScreen extends MenuScreen {
         try {
           var1_int = 0;
           while (LabeledChildWidget.h(param0 + 119)) {
-            un.field_f.navigateVertical(-15525);
-            if (!un.field_f.isPressActivated((byte) 119)) {
+            LookupProtocolSupport.field_f.navigateVertical(-15525);
+            if (!LookupProtocolSupport.field_f.isPressActivated((byte) 119)) {
               continue;
             }
             var1_int = 1;
           }
-          un.field_f.a(un.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), un.a(-49, DebouncedValidationProvider.field_f, wn.field_i), -30);
-          if (un.field_f.isPressActivated((byte) 99)) {
+          LookupProtocolSupport.field_f.a(LookupProtocolSupport.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), LookupProtocolSupport.a(-49, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), -30);
+          if (LookupProtocolSupport.field_f.isPressActivated((byte) 99)) {
             var1_int = 1;
           }
           var2 = 0;
@@ -133,10 +133,10 @@ final class RankingsScreen extends MenuScreen {
             RankingsScreen.d(-51, true);
           }
           if (var1_int != 0 &&
-            un.field_f.selectedIndex >= 0) {
-            var2 = LoginForm.field_V[un.field_f.selectedIndex];
+            LookupProtocolSupport.field_f.selectedIndex >= 0) {
+            var2 = LoginForm.field_V[LookupProtocolSupport.field_f.selectedIndex];
             if (var2 == 2) {
-              ra.a((byte) -108);
+              IntegerRecordProtocolSupport.a((byte) -108);
             }
           }
           stackIn_13_0 = var2;
@@ -424,7 +424,7 @@ final class RankingsScreen extends MenuScreen {
             }
             var35Lifetime1 = TriangleRasterizer.scanlineOffsets[param2];
             if (param10 != -49) {
-              field_J = (nl) null;
+              field_J = (ServerListLauncher) null;
             }
             while (param14 > param2) {
               var36Lifetime1 = var17_int >> 16;
@@ -619,7 +619,7 @@ final class RankingsScreen extends MenuScreen {
               stackIn_22_0 = FreePlayRules.field_f[0][var6 + 1];
               stackIn_23_1 = (var4_int != 0);
               stackIn_22_0.enabled = stackIn_23_1;
-              if (!tq.field_p &&
+              if (!AccountStateQuery.field_p &&
                 3 == var6) {
                 FreePlayRules.field_f[0][var6 + 1].enabled = false;
               }
@@ -644,10 +644,10 @@ final class RankingsScreen extends MenuScreen {
             var6Lifetime1 = stackIn_43_0;
             if (var6Lifetime1 != 0) {
               var7 = FullscreenFocusCanvas.field_d;
-              for (var8_int = 0; var8_int < md.field_c.length; var8_int++) {
-                md.field_c[var8_int] = (byte) 0;
+              for (var8_int = 0; var8_int < RenderingInitializationSupport.field_c.length; var8_int++) {
+                RenderingInitializationSupport.field_c[var8_int] = (byte) 0;
               }
-              md.field_c[var7 / 8] = (byte)md.bitwiseOr((int) md.field_c[var7 / 8], 1 << var7 % 8);
+              RenderingInitializationSupport.field_c[var7 / 8] = (byte)RenderingInitializationSupport.bitwiseOr((int) RenderingInitializationSupport.field_c[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (param3) ? -1 : 0;
             for (var7 = stackIn_51_0; DiskArchiveRequest.field_T.length > var7; var7++) {
@@ -668,11 +668,11 @@ final class RankingsScreen extends MenuScreen {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; md.field_c.length > var9; var9++) {
-                        md.field_c[var9] = (byte) 0;
+                      for (var9 = 0; RenderingInitializationSupport.field_c.length > var9; var9++) {
+                        RenderingInitializationSupport.field_c[var9] = (byte) 0;
                       }
                     } else {
-                      md.field_c[var7 / 8] = (byte)TutorialFactory.bitwiseXor((int) md.field_c[var7 / 8], 1 << ArchiveLoadSequence.b(var7, 7));
+                      RenderingInitializationSupport.field_c[var7 / 8] = (byte)TutorialFactory.bitwiseXor((int) RenderingInitializationSupport.field_c[var7 / 8], 1 << ArchiveLoadSequence.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -684,12 +684,12 @@ final class RankingsScreen extends MenuScreen {
                     dupTemp$0 = FreePlayRules.field_f[1][1 + var7];
                     stackIn_87_0 = dupTemp$0;
                     stackIn_87_1 = dupTemp$0.selected;
-                    stackIn_88_2 = ((md.field_c[var9 / 8] & 1 << (7 & var9)) == 0);
+                    stackIn_88_2 = ((RenderingInitializationSupport.field_c[var9 / 8] & 1 << (7 & var9)) == 0);
                     stackIn_87_0.selected = stackIn_87_1 & stackIn_88_2;
                   }
                 } else {
                   stackIn_79_0 = FreePlayRules.field_f[1][1 + var7];
-                  stackIn_79_1 = md.field_c[var7 / 8];
+                  stackIn_79_1 = RenderingInitializationSupport.field_c[var7 / 8];
                   stackIn_79_2 = 1 << (7 & var7);
                   stackIn_82_1 = ((stackIn_79_1 & stackIn_79_2) != 0);
                   stackIn_79_0.selected = stackIn_82_1;
@@ -743,17 +743,17 @@ final class RankingsScreen extends MenuScreen {
             stackIn_124_0.enabled = stackIn_125_1;
           }
           if (param3 &&
-            1 < ji.field_g) {
-            for (var6Lifetime3 = 0; ji.field_g + 1 > var6Lifetime3; var6Lifetime3++) {
+            1 < ParticleTrail.field_g) {
+            for (var6Lifetime3 = 0; ParticleTrail.field_g + 1 > var6Lifetime3; var6Lifetime3++) {
               var29 = FreePlayRules.field_f[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.pressedButton != 0) {
-                pm.field_l = var6Lifetime3;
+                SceneNodeEntry.field_l = var6Lifetime3;
               }
               if (var29.hovered &&
                 var6Lifetime3 > 0) {
-                if (null != wp.field_f) {
-                  stackIn_141_0 = wp.field_f[-1 + var6Lifetime3];
+                if (null != CompressedContainerSupport.field_f) {
+                  stackIn_141_0 = CompressedContainerSupport.field_f[-1 + var6Lifetime3];
                 } else {
                   stackIn_141_0 = null;
                 }
@@ -766,12 +766,12 @@ final class RankingsScreen extends MenuScreen {
               stackIn_147_1 = (var4_int != 0);
               stackIn_146_0.enabled = stackIn_147_1;
               stackIn_149_0 = var29;
-              stackIn_150_1 = (pm.field_l == var6Lifetime3);
+              stackIn_150_1 = (SceneNodeEntry.field_l == var6Lifetime3);
               stackIn_149_0.selected = stackIn_150_1;
             }
           }
           var6Lifetime4 = 0;
-          for (var7 = param2; var7 < dr.field_c; var7++) {
+          for (var7 = param2; var7 < LogoFinalFrameLoader.field_c; var7++) {
             var30 = FreePlayRules.field_f[4 + var7];
             var8_array = var30;
             stackIn_156_0 = (param3) ? -1 : 0;
@@ -800,7 +800,7 @@ final class RankingsScreen extends MenuScreen {
                   DebugTuningSlider.field_d[var7] != null) {
                   var16 = DebugTuningSlider.field_d[var7][var9];
                   if (0 < var16 &&
-                    mg.field_d < var16) {
+                    LobbyPlayerLookupSupport.field_d < var16) {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
@@ -823,9 +823,9 @@ final class RankingsScreen extends MenuScreen {
                   stackIn_192_0 = 0;
                 }
                 var13 = stackIn_192_0;
-                if (null != w.field_j &&
-                  w.field_j[var7] != null) {
-                  var16Lifetime2 = w.field_j[var7][var9];
+                if (null != GrowableIntListFactory.field_j &&
+                  GrowableIntListFactory.field_j[var7] != null) {
+                  var16Lifetime2 = GrowableIntListFactory.field_j[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !DualLinkNode.field_s &&
                     UsernameSuggestionsPanel.field_V <= 0) {
@@ -864,13 +864,13 @@ final class RankingsScreen extends MenuScreen {
                 ArchiveLoadStep.field_m != null && (!param3 ||
                 !LobbyGame.field_Ac)) {
                 PoolUiText.field_b = false;
-                if (dk.field_j == null) {
-                  dk.field_j = new byte[dr.field_c];
-                  gf.field_b = new boolean[dr.field_c];
+                if (GlowParticle.field_j == null) {
+                  GlowParticle.field_j = new byte[LogoFinalFrameLoader.field_c];
+                  UsernameSuggestionSupport.field_b = new boolean[LogoFinalFrameLoader.field_c];
                 }
-                ln.field_p = false;
+                ModelOriginSupport.field_p = false;
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
-                  gf.field_b[var17_int] = false;
+                  UsernameSuggestionSupport.field_b[var17_int] = false;
                 }
                 OpacityWidget.a(0, var7, var9, false, param1, -1, -1, param3);
                 if (2 <= TutorialController.field_i &&
@@ -887,10 +887,10 @@ final class RankingsScreen extends MenuScreen {
                 if (param3) {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
-                      AgeValidator.field_s[var18 / 8] = (byte)ArchiveLoadSequence.b((int) AgeValidator.field_s[var18 / 8], ~(1 << ArchiveLoadSequence.b(7, var18)));
+                      AgeValidator.field_s[var18 / 8] = (byte)ArchiveLoadSequence.bitwiseAnd((int) AgeValidator.field_s[var18 / 8], ~(1 << ArchiveLoadSequence.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)TutorialFactory.bitwiseXor((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7));
+                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)TutorialFactory.bitwiseXor((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << ArchiveLoadSequence.bitwiseAnd(var9 + var6Lifetime4, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -902,15 +902,15 @@ final class RankingsScreen extends MenuScreen {
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)ArchiveLoadSequence.b((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], ~(1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7)));
+                AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)ArchiveLoadSequence.bitwiseAnd((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], ~(1 << ArchiveLoadSequence.bitwiseAnd(var9 + var6Lifetime4, 7)));
               }
               if (var9 >= 0 &&
                 var17.hovered) {
-                if (null == mj.field_c) {
+                if (null == TransformSupport.field_c) {
                   var18_ref = null;
                 } else {
-                  if (mj.field_c[var7] != null) {
-                    var18_ref = mj.field_c[var7][var9];
+                  if (TransformSupport.field_c[var7] != null) {
+                    var18_ref = TransformSupport.field_c[var7][var9];
                   } else {
                     var18_ref = null;
                   }
@@ -931,7 +931,7 @@ final class RankingsScreen extends MenuScreen {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = he.gameoptUnratedonly;
+                  var21 = CanvasInputSupport.gameoptUnratedonly;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;
@@ -945,7 +945,7 @@ final class RankingsScreen extends MenuScreen {
                 } else {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = -TutorialSelectScreen.field_I + w.field_j[var7][var9];
+                      var22_int = -TutorialSelectScreen.field_I + GrowableIntListFactory.field_j[var7][var9];
                       if (var22_int == 1) {
                         var21 = TickClock.gameopt1moreratedgame;
                       } else {
@@ -953,7 +953,7 @@ final class RankingsScreen extends MenuScreen {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(mg.field_d), Integer.toString(DebugTuningSlider.field_d[var7][var9])}, -1, sm.gameoptNeedrating);
+                      var31 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(LobbyPlayerLookupSupport.field_d), Integer.toString(DebugTuningSlider.field_d[var7][var9])}, -1, PasswordInputPainter.gameoptNeedrating);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -967,7 +967,7 @@ final class RankingsScreen extends MenuScreen {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = dk.gameoptNotunlocked;
+                      var22 = GlowParticle.gameoptNotunlocked;
                       if (0 < var15 &&
                         null != WeightedLruCache.field_f &&
                         var15 <= WeightedLruCache.field_f.length &&
@@ -987,7 +987,7 @@ final class RankingsScreen extends MenuScreen {
                 if (var4_int != 0 &&
                   !PoolUiText.field_b) {
                   var22 = null;
-                  if (ln.field_p) {
+                  if (ModelOriginSupport.field_p) {
                     var22 = "</col>" + ArchiveAvailabilitySupport.muOptionsPlayers + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
@@ -997,7 +997,7 @@ final class RankingsScreen extends MenuScreen {
                   }
                   var23 = 0;
                   for (var24 = 0; var7 > var24; var24++) {
-                    if (gf.field_b[var24]) {
+                    if (UsernameSuggestionSupport.field_b[var24]) {
                       var25_refLifetime1 = "</col>" + ValidationMessageWidget.field_R[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
@@ -1154,7 +1154,7 @@ final class RankingsScreen extends MenuScreen {
             var6 = (String) null;
             this.createButtonLabel((String) null, 127, -77, -84);
           }
-          if (!NanoTickClock.b(96) &&
+          if (!NanoTickClock.isClientConnected(96) &&
             param3 < 2) {
             var7 = FreePlayRules.field_e.field_U[param1];
             var5 = var7;
@@ -1178,7 +1178,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final int getButtonRight(boolean param0, int param1) {
-        if (!NanoTickClock.b(-114)) {
+        if (!NanoTickClock.isClientConnected(-114)) {
           return param1 < 2 ? param1 * 240 + 300 : 380;
         }
         if (param0) {
@@ -1203,7 +1203,7 @@ final class RankingsScreen extends MenuScreen {
           super.handleMenuAction(param0 + 0, param1, param2);
         } else {
           if (this.selection.isPressActivated((byte) 75)) {
-            TranslatedUiText.a(pl.pleaselogin, this.screenId, (byte) 101);
+            TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 101);
           }
         }
     }
@@ -1238,15 +1238,15 @@ final class RankingsScreen extends MenuScreen {
         int var3Lifetime2Lifetime1;
         var10 = Pool.field_O;
         super.drawScreen(43);
-        if (NanoTickClock.b(-128)) {
-          this.f(320);
+        if (NanoTickClock.isClientConnected(-128)) {
+          this.drawCreateAccountHint(320);
           return;
         }
         if (BallSkin.field_b == null) {
-          BallSkin.field_b = wp.a(0, 10, (byte) 68, 7);
+          BallSkin.field_b = CompressedContainerSupport.a(0, 10, (byte) 68, 7);
         }
         var2 = 170;
-        nj.drawNineSlice(MidiPcmStream.field_y, (byte) 65, 520, 60, 150, ModernTableScene.field_Z.baselineHeight + 176 + 16);
+        LogoMaterial.drawNineSlice(MidiPcmStream.field_y, (byte) 65, 520, 60, 150, ModernTableScene.field_Z.baselineHeight + 176 + 16);
         var3 = 2;
         var3Lifetime1 = 15658734;
         ModernTableScene.field_Z.drawCentered(DateInputWidget.ratingRating, LongAndTextLoginPayload.field_i[0], var2, var3Lifetime1, -1);
@@ -1258,7 +1258,7 @@ final class RankingsScreen extends MenuScreen {
           return;
         }
         regionExit1: {
-          var2 = var2 + (8 + (ModernTableScene.field_Z.maxDescent + sa.field_h.maxAscent));
+          var2 = var2 + (8 + (ModernTableScene.field_Z.maxDescent + CollisionContact.field_h.maxAscent));
           if (!BallSkin.field_b.field_v) {
             var4 = ProjectedLineSupport.pleasewaitDotdotdot;
           } else {
@@ -1270,7 +1270,7 @@ final class RankingsScreen extends MenuScreen {
               for (var8 = 0; var8 < 10; var8++) {
                 if (var5 != null) {
                   stackIn_18_0 = 62;
-                  stackIn_18_1 = var2 - sa.field_h.maxAscent;
+                  stackIn_18_1 = var2 - CollisionContact.field_h.maxAscent;
                   stackIn_18_2 = 516;
                   stackIn_18_3 = 16;
                   if ((1 & var8) == 0) {
@@ -1296,17 +1296,17 @@ final class RankingsScreen extends MenuScreen {
               }
               break regionExit1;
             }
-            var4 = fh.serviceunavailable;
+            var4 = ArchiveFactory.serviceunavailable;
           }
         }
         if (var4 != null) {
-          sa.field_h.drawCentered((String) (var4), SoftwareRasterizer.width >> 1, 245, 16777215, -1);
+          CollisionContact.field_h.drawCentered((String) (var4), SoftwareRasterizer.width >> 1, 245, 16777215, -1);
         }
         return;
     }
 
-    private final void f(int param0) {
-        sa.field_h.drawCentered(ra.createtouse, param0, 380, 15658734, -1);
+    private final void drawCreateAccountHint(int param0) {
+        CollisionContact.field_h.drawCentered(IntegerRecordProtocolSupport.createtouse, param0, 380, 15658734, -1);
     }
 
     final static String a(int param0, int param1, byte[] param2, int param3) {
@@ -1339,7 +1339,7 @@ final class RankingsScreen extends MenuScreen {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = rf.field_a[-128 + var7];
+                var8 = AccountDisplayNameSupport.field_a[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;
                 }
@@ -1367,7 +1367,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final int getButtonLeft(int param0, int param1) {
-        if (!NanoTickClock.b(-117)) {
+        if (!NanoTickClock.isClientConnected(-117)) {
           return 2 <= param1 ? 260 : param1 * 240 + 100;
         }
         if (param0 != 0) {
@@ -1387,7 +1387,7 @@ final class RankingsScreen extends MenuScreen {
         if (param0 != 6) {
           this.drawScreen(120);
         }
-        if (!NanoTickClock.b(-119)) {
+        if (!NanoTickClock.isClientConnected(-119)) {
           if (param1 < 2) {
             return this.buttonTop;
           }
@@ -1398,7 +1398,7 @@ final class RankingsScreen extends MenuScreen {
 
     final static void d(int param0, boolean param1) {
         IntLookupQuery.field_q.drawRoot((byte) -79, param1);
-        jj var2 = ThemeSelectScreen.field_J;
+        BirthDatePromptPanel var2 = ThemeSelectScreen.field_J;
         if (var2 != null) {
           var2.renderWidgetPassesAndTooltip(IntLookupQuery.field_q.screenX, (byte) 74, IntLookupQuery.field_q.screenY);
         }

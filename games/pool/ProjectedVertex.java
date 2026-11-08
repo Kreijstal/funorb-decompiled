@@ -1,0 +1,332 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ProjectedVertex {
+    private int field_t;
+    int[] field_q;
+    int[] field_j;
+    private int field_b;
+    private int field_n;
+    int field_k;
+    private int field_a;
+    static String gameFull;
+    static boolean field_e;
+    static String field_s;
+    int field_m;
+    private int field_u;
+    static int[] field_d;
+    private int field_l;
+    int field_f;
+    private int field_o;
+    int[] field_h;
+    byte field_r;
+    int field_i;
+    static String muGameoptRejectXFromGame;
+    static int[][][] field_v;
+    private int[] field_c;
+
+    final static LogoMaterial[] a(int param0, CipherPacketBuffer param1) {
+        int var5 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        LogoMaterial[] var4 = null;
+        LogoMaterial var6_ref_nj = null;
+        int var6 = 0;
+        Object stackIn_4_0 = null;
+        LogoMaterial[] stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = param1.readBits(8, 92);
+          if (param0 != 24) {
+            field_s = (String) null;
+          }
+          if (var2_int > 0) {
+            stackIn_4_0 = null;
+            return (LogoMaterial[]) (stackIn_4_0);
+          }
+          var3 = param1.readBits(12, 82);
+          var4 = new LogoMaterial[var3];
+          for (var5 = 0; var3 > var5; var5++) {
+            if (!FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
+              var6 = param1.readBits(DelayedServerPacket.bitLength(16, -1 + var5), 105);
+              var4[var5] = var4[var6];
+            } else {
+              var6_ref_nj = new LogoMaterial();
+              param1.readBits(24, 22);
+              param1.readBits(24, param0 + 38);
+              var6_ref_nj.field_a = param1.readBits(24, 28);
+              param1.readBits(9, 44);
+              param1.readBits(12, 104);
+              param1.readBits(12, 125);
+              param1.readBits(12, 99);
+              var4[var5] = var6_ref_nj;
+            }
+          }
+          stackIn_12_0 = var4;
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("ro.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    final static void b(int param0) {
+        RuntimeException decompiledCaughtException = null;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        int[] var7 = null;
+        int var9 = 0;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        int[] var13 = null;
+        int[] var16 = null;
+        int[] var17 = null;
+        int[] var1Lifetime1;
+        int var3Lifetime1;
+        var4 = Pool.field_O;
+        try {
+          if (HighscoresScreen.field_K) {
+            return;
+          }
+          if (null == GradientPaletteSupport.field_g) {
+            GradientPaletteSupport.field_g = FixedAngleSupport.a(4, 47);
+          }
+          if (GradientPaletteSupport.field_g.field_s) {
+            var12 = ClientException.field_g;
+            var10 = var12;
+            var5 = var10;
+            var1 = var5;
+            var16 = GradientPaletteSupport.field_g.field_l;
+            for (var3 = 0; var3 < 8; var3++) {
+              var5[var3] = RenderingInitializationSupport.bitwiseOr(var12[var3], var16[var3]);
+            }
+            var13 = SupportPageLauncher.field_c;
+            var11 = var13;
+            var7 = var11;
+            var1Lifetime1 = var7;
+            var17 = GradientPaletteSupport.field_g.field_l;
+            var9 = 0;
+            var3Lifetime1 = var9;
+            while (var9 < 8) {
+              var7[var9] = ArchiveLoadSequence.bitwiseAnd(var13[var9], ~var17[var9]);
+              var9++;
+            }
+            HighscoresScreen.field_K = true;
+            GradientPaletteSupport.field_g = null;
+          }
+          if (param0 > -18) {
+            return;
+          }
+          if (HighscoresScreen.field_K) {
+            CacheEntry.g(47);
+            if (MatchingTextValidator.field_w == 18) {
+              if (FadingDialog.a(false, SupportPageLauncher.field_c)) {
+                DisplayModeSupport.field_c[18].onEnter(0, 0, false);
+              } else {
+                MatchingTextValidator.field_w = 16;
+                AccountCreationDialog.a(-3405, 16, GameRules.field_b, false);
+              }
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ro.A(" + param0 + ')');
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, byte param4, int[] param5) {
+        try {
+          param0 = param0 - param5[0];
+          param1 = param1 - param5[2];
+          param3 = param3 - param5[1];
+          this.field_u = param5[6] * param0 + (param3 * param5[7] + param1 * param5[8]) >> 16;
+          this.field_n = param1 * param5[5] + param0 * param5[3] + param3 * param5[4] >> 16;
+          this.field_a = param0 * param5[9] + (param3 * param5[10] + param5[11] * param1) >> 16;
+          if (param4 != 120) {
+            this.field_t = 28;
+          }
+          this.field_l = param2;
+          if (this.field_a != 0 &&
+            this.field_a != 1) {
+            this.field_b = IndexedSpriteState.a(this.field_a, this.field_n, (byte) 99);
+            this.field_o = DialRenderer.a(this.field_a, (byte) 103, this.field_u);
+            this.field_t = ProxyAuthenticationRequiredException.divideFixed12(this.field_l, this.field_a, (byte) 123);
+          }
+          this.field_k = 0;
+          this.field_i = 0;
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ro.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(ProjectedVertex param0, int param1) {
+        int var3_int = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          this.field_i = param0.field_f + this.field_f;
+          if (param1 != -16875) {
+            this.field_b = 105;
+          }
+          this.field_k = param0.field_m + this.field_m;
+          if (0 == this.field_i &&
+            this.field_k == 0) {
+            return;
+          }
+          var3_int = LoginTextValue.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
+          if (var3_int != 0) {
+            this.field_i = (this.field_i << 8) / var3_int;
+            this.field_k = (this.field_k << 8) / var3_int;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("ro.G(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final boolean b(ProjectedVertex param0, int param1) {
+        RuntimeException var3 = null;
+        ProjectedVertex var4 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 24) {
+            var4 = (ProjectedVertex) null;
+            this.b((ProjectedVertex) null, -17);
+          }
+          stackIn_3_0 = NanoTickClock.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ro.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_d = null;
+        if (param0 != 240) {
+          ProjectedVertex.b(-41);
+        }
+        muGameoptRejectXFromGame = null;
+        field_v = (int[][][]) null;
+        field_s = null;
+        gameFull = null;
+    }
+
+    final void a(byte param0, ProjectedVertex param1) {
+        int var3_int = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          this.field_q[0] = this.field_n;
+          this.field_j[0] = this.field_u;
+          this.field_c[0] = this.field_a;
+          this.field_h[0] = this.field_l;
+          this.field_q[1] = param1.field_n;
+          this.field_j[1] = param1.field_u;
+          this.field_c[1] = param1.field_a;
+          this.field_h[1] = param1.field_l;
+          this.field_r = SharedRateScaleSupport.a(this.field_j, 0, this.field_q, this.field_h, this.field_c, param0 - 56);
+          if ((this.field_r & 15) == 0) {
+            this.field_q[0] = this.field_b;
+            this.field_j[0] = this.field_o;
+            this.field_h[0] = this.field_t;
+          } else {
+            this.field_q[0] = IndexedSpriteState.a(this.field_c[0], this.field_q[0], (byte) 99);
+            this.field_j[0] = DialRenderer.a(this.field_c[0], (byte) 69, this.field_j[0]);
+            this.field_h[0] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
+          }
+          if ((this.field_r & 240) == 0) {
+            this.field_q[1] = param1.field_b;
+            this.field_j[1] = param1.field_o;
+            this.field_h[1] = param1.field_t;
+          } else {
+            this.field_q[1] = IndexedSpriteState.a(this.field_c[1], this.field_q[1], (byte) 99);
+            this.field_j[1] = DialRenderer.a(this.field_c[1], (byte) 68, this.field_j[1]);
+            this.field_h[1] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
+          }
+          this.field_m = this.field_j[1] - this.field_j[0];
+          if (param0 != 60) {
+            this.field_c = (int[]) null;
+          }
+          this.field_f = this.field_q[1] - this.field_q[0];
+          if (0 != this.field_f ||
+            this.field_m != 0) {
+            var3_int = LoginTextValue.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
+            if (var3_int != 0) {
+              this.field_m = (this.field_m << 8) / var3_int;
+              this.field_f = (this.field_f << 8) / var3_int;
+              return;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = var3;
+          stackIn_16_1 = new StringBuilder().append("ro.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    ProjectedVertex() {
+        this.field_h = new int[2];
+        this.field_q = new int[2];
+        this.field_j = new int[2];
+        this.field_c = new int[2];
+    }
+
+    static {
+        gameFull = "Game full";
+        muGameoptRejectXFromGame = "Reject <%0> from this game";
+    }
+}

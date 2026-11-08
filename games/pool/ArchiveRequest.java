@@ -75,7 +75,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var4_int = param0.getGroupId(param1, -1);
           var5 = param0.getFileId(var4_int, 0, param3);
           if (param2 == -24155) {
-            stackIn_4_0 = pn.loadIndexedSprites(var5, param0, var4_int, 120);
+            stackIn_4_0 = ChatMessage.loadIndexedSprites(var5, param0, var4_int, 120);
             return stackIn_4_0;
           }
           stackIn_2_0 = (IndexedSprite[]) null;

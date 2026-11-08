@@ -73,10 +73,10 @@ final class IsaacCipher {
             }
           }
           this.field_m = this.field_m + this.field_a[255 & var2 + 128];
-          dupTemp$1 = this.field_k + (this.field_a[ArchiveLoadSequence.b(var3 >> 2, 255)] + this.field_m);
+          dupTemp$1 = this.field_k + (this.field_a[ArchiveLoadSequence.bitwiseAnd(var3 >> 2, 255)] + this.field_m);
           var4 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          dupTemp$2 = this.field_a[ArchiveLoadSequence.b(var4, 261279) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_a[ArchiveLoadSequence.bitwiseAnd(var4, 261279) >> 8 >> 2] + var3;
           this.field_k = dupTemp$2;
           this.field_j[var2] = dupTemp$2;
           var2++;
@@ -255,9 +255,9 @@ final class IsaacCipher {
           param0.field_p = QuickChatPhraseDefinition.a(param0.field_p, (byte) -73, var2_int * 3);
           param0.field_H = QuickChatPhraseDefinition.a(param0.field_H, (byte) -73, var2_int * 3);
           param0.field_C = QuickChatPhraseDefinition.a(param0.field_C, (byte) -73, var2_int * 3);
-          param0.vertexX = jh.a(var2_int * 3, (byte) 108, param0.vertexX);
-          param0.vertexY = jh.a(3 * var2_int, (byte) 108, param0.vertexY);
-          param0.vertexZ = jh.a(var2_int * 3, (byte) 108, param0.vertexZ);
+          param0.vertexX = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexX);
+          param0.vertexY = MenuScreenBase.a(3 * var2_int, (byte) 108, param0.vertexY);
+          param0.vertexZ = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexZ);
           for (var2_intLifetime1 = 0; param0.faceCount > var2_intLifetime1; var2_intLifetime1++) {
             if (param0.field_L[var2_intLifetime1] != -1) {
               var3Lifetime1 = param0.field_k[var2_intLifetime1];

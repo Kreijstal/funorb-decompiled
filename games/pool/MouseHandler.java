@@ -13,13 +13,13 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wp.field_g == null) {
+          if (CompressedContainerSupport.field_g == null) {
             return;
           }
           PoolUiText.field_g = 0;
           ArchiveLoadStep.field_l = param0.getX();
-          wn.field_k = param0.getY();
-          m.field_d = true;
+          ReflectionReplySupport.field_k = param0.getY();
+          RatingTextState.field_d = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,13 +42,13 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wp.field_g) {
+          if (null == CompressedContainerSupport.field_g) {
             return;
           }
           PoolUiText.field_g = 0;
           ArchiveLoadStep.field_l = param0.getX();
-          wn.field_k = param0.getY();
-          m.field_d = true;
+          ReflectionReplySupport.field_k = param0.getY();
+          RatingTextState.field_d = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,11 +73,11 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (wp.field_g != null) {
+          if (CompressedContainerSupport.field_g != null) {
             PoolUiText.field_g = 0;
             ArchiveLoadStep.field_l = -1;
-            wn.field_k = -1;
-            m.field_d = true;
+            ReflectionReplySupport.field_k = -1;
+            RatingTextState.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ql.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -91,7 +91,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wp.field_g == null) {
+          if (CompressedContainerSupport.field_g == null) {
             return;
           }
           ReflectionCheck.field_v = 0;
@@ -121,10 +121,10 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wp.field_g != null) {
+          if (CompressedContainerSupport.field_g != null) {
             PoolUiText.field_g = 0;
             ReflectionCheck.field_v = 0;
-            m.field_d = true;
+            RatingTextState.field_d = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) != 0) {
             }
@@ -178,7 +178,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean hasSingleBitOrZero(int param0, int param1) {
         if (param1 > -34) {
           return true;
         }
@@ -192,13 +192,13 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wp.field_g) {
+          if (null == CompressedContainerSupport.field_g) {
             return;
           }
           PoolUiText.field_g = 0;
           ArchiveLoadStep.field_l = param0.getX();
-          wn.field_k = param0.getY();
-          m.field_d = true;
+          ReflectionReplySupport.field_k = param0.getY();
+          RatingTextState.field_d = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,11 +235,11 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wp.field_g) {
+          if (null != CompressedContainerSupport.field_g) {
             PoolUiText.field_g = 0;
             Ball.field_f = param0.getX();
             MatchingTextValidator.field_o = param0.getY();
-            rl.monotonicTimeMillis((byte) -115);
+            MonotonicClock.monotonicTimeMillis((byte) -115);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               CueAim.field_c = 2;
               ReflectionCheck.field_v = 2;
@@ -254,7 +254,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             }
             if ((var2_int & 16) != 0) {
             }
-            m.field_d = true;
+            RatingTextState.field_d = true;
           }
           if (!param0.isPopupTrigger()) {
             return;

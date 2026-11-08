@@ -57,7 +57,7 @@ final class DialWidget extends ButtonWidget {
         if (!(LobbyPlayer.field_fc <= 200)) {
           var5 = (-LobbyPlayer.field_fc + 250 << 8) / 50;
         }
-        CueAim.a(63, un.field_c);
+        CueAim.a(63, LookupProtocolSupport.field_c);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         TextHotspotRegion.a(-21818);
@@ -66,7 +66,7 @@ final class DialWidget extends ButtonWidget {
         }
         TriangleMesh.a(112);
         if (LobbyPlayer.field_fc < 150) {
-          un.field_c.drawHalfSize(var3, var4);
+          LookupProtocolSupport.field_c.drawHalfSize(var3, var4);
           var6 = -125 + LobbyPlayer.field_fc;
           if (var6 <= 0) {
             var6 = LobbyPlayer.field_fc - 140;
@@ -323,7 +323,7 @@ final class DialWidget extends ButtonWidget {
           var8_int = -this.centerOffsetX + (-this.widgetX - param1 + param6);
           var9 = -this.centerOffsetY - this.widgetY - param5 + param4;
           if (this.radius * this.radius > var8_int * var8_int + var9 * var9) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - pp.field_d;
+            var10 = Math.atan2((double)var9, (double)var8_int) - MeshColorSupport.field_d;
             if (0.0 > var10) {
               var10 = var10 - 3.141592653589793 / (double)this.stepCount;
             } else {

@@ -5,7 +5,7 @@ final class DropTargetWidget extends SingleChildWidget {
     static BallDebugOverlay[] field_O;
     static int[][] field_N;
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -51,13 +51,13 @@ final class DropTargetWidget extends SingleChildWidget {
     final static void g(byte param0) {
         if (param0 != 96) {
           field_O = (BallDebugOverlay[]) null;
-          if (!DottedRectangleSupport.c(1)) {
+          if (!LookupQuery.c(1)) {
             return;
           }
           CacheEntry.a(false, 4, 4);
           return;
         }
-        if (!DottedRectangleSupport.c(1)) {
+        if (!LookupQuery.c(1)) {
           return;
         }
         CacheEntry.a(false, 4, 4);

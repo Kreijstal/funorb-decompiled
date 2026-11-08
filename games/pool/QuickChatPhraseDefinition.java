@@ -37,7 +37,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = Pool.field_O;
         if (this.field_C != null) {
           for (var2 = 0; this.field_C.length > var2; var2++) {
-            this.field_C[var2] = md.bitwiseOr(this.field_C[var2], 32768);
+            this.field_C[var2] = RenderingInitializationSupport.bitwiseOr(this.field_C[var2], 32768);
           }
         }
         if (!param0) {
@@ -72,7 +72,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           if (param1 != -73) {
             field_w = (boolean[]) null;
           }
-          stackIn_3_0 = sk.extendShortArray((byte) -123, param2, param0, (short) 0);
+          stackIn_3_0 = PaletteFontLoader.extendShortArray((byte) -123, param2, param0, (short) 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,14 +178,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         try {
           var20 = ArchiveRequest.a(param4, "lobby", -24155, "crowns");
           var5 = var20;
-          gf.field_a = var20.length;
+          UsernameSuggestionSupport.field_a = var20.length;
           if (param2 != null) {
-            var6 = new IndexedSprite[param2.length + gf.field_a];
-            for (var7_int = 0; gf.field_a > var7_int; var7_int++) {
+            var6 = new IndexedSprite[param2.length + UsernameSuggestionSupport.field_a];
+            for (var7_int = 0; UsernameSuggestionSupport.field_a > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param2.length; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + gf.field_a] = param2[var7_intLifetime3];
+              var6[var7_intLifetime3 + UsernameSuggestionSupport.field_a] = param2[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -195,17 +195,17 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; gf.field_a > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; UsernameSuggestionSupport.field_a > var7_intLifetime1; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param2 != null) {
             if (param3 != null) {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param2.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + gf.field_a] = param3[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + UsernameSuggestionSupport.field_a] = param3[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param2.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + gf.field_a] = param2[var7_intLifetime2].fullHeight;
+                var6_array[var7_intLifetime2 + UsernameSuggestionSupport.field_a] = param2[var7_intLifetime2].fullHeight;
               }
             }
           }
@@ -213,13 +213,13 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           QuickChatPhraseRegistry.field_b = 11;
           DualLinkNodeHashTable.field_i = 2;
           ArchiveIndex.field_x = 15;
-          ja.field_b = 2;
-          var7 = he.a(param4, "largefont", 0, param0, "lobby");
-          MembershipBenefitsLoader.field_a = he.a(param4, "generalfont", 0, param0, "lobby");
-          ol.field_c = he.a(param4, "chatfont", 0, param0, "lobby");
+          ByteArrayPool.field_b = 2;
+          var7 = CanvasInputSupport.a(param4, "largefont", 0, param0, "lobby");
+          MembershipBenefitsLoader.field_a = CanvasInputSupport.a(param4, "generalfont", 0, param0, "lobby");
+          FixedPointVectorSupport.field_c = CanvasInputSupport.a(param4, "chatfont", 0, param0, "lobby");
           var7.setInlineSprites(var5, var24);
           MembershipBenefitsLoader.field_a.setInlineSprites(var5, var24);
-          ol.field_c.setInlineSprites(var5, var24);
+          FixedPointVectorSupport.field_c.setInlineSprites(var5, var24);
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.font = (BitmapFont) ((Object) var7);
           var8.lineSpacing = ArchiveIndex.field_x;
@@ -234,12 +234,12 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var10.verticalAlignment = 1;
           var11 = var10;
           var11.horizontalAlignment = 1;
-          rl.field_d = new UiComponent(0L, var8);
-          rl.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "heading"), 12519);
-          md.field_d = new UiComponent(0L, (UiComponent) null);
-          md.field_d.frameSprites = IterableDualLinkDeque.a(8421504, 4210752, false, 120, -86, false);
+          MonotonicClock.field_d = new UiComponent(0L, var8);
+          MonotonicClock.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "heading"), 12519);
+          RenderingInitializationSupport.field_d = new UiComponent(0L, (UiComponent) null);
+          RenderingInitializationSupport.field_d.frameSprites = IterableDualLinkDeque.a(8421504, 4210752, false, 120, -86, false);
           ScreenProjectionSupport.field_f = new UiComponent(0L, (UiComponent) null);
-          ScreenProjectionSupport.field_f.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 1, 114, 6316128, 6316128);
+          ScreenProjectionSupport.field_f.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 1, 114, 6316128, 6316128);
           ProgressDialog.field_qb = new UiComponent(0L, (UiComponent) null);
           ProgressDialog.field_qb.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "popup"), 12519);
           var12 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "popup_mouseover"), 12519);
@@ -247,17 +247,17 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var14 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "tab_active"), 12519);
           DiskArchiveRequest.field_J = new UiComponent(0L, var8);
           DiskArchiveRequest.field_J.frameSprites = var14;
-          qg.field_f = new UiComponent(0L, (UiComponent) null);
-          qg.field_f.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 115, "closebutton", param4);
-          qg.field_f.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 101, "closebutton_mouseover", param4);
+          VertexTransformSupport.field_f = new UiComponent(0L, (UiComponent) null);
+          VertexTransformSupport.field_f.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 115, "closebutton", param4);
+          VertexTransformSupport.field_f.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 101, "closebutton_mouseover", param4);
           MirroredSceneSupport.field_b = new UiComponent(0L, var8);
           MirroredSceneSupport.field_b.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, true, 40, -86, true);
-          lf.field_d = new UiComponent(0L, var10);
-          lf.field_d.textInset = 2;
-          lf.field_d.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, false, 30, -111, true);
-          f.field_e = new UiComponent(0L, var10);
-          f.field_e.textInset = 2;
-          f.field_e.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, false, 30, -123, false);
+          LoginEncryptionSupport.field_d = new UiComponent(0L, var10);
+          LoginEncryptionSupport.field_d.textInset = 2;
+          LoginEncryptionSupport.field_d.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, false, 30, -111, true);
+          LobbyPanelLayoutSupport.field_e = new UiComponent(0L, var10);
+          LobbyPanelLayoutSupport.field_e.textInset = 2;
+          LobbyPanelLayoutSupport.field_e.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, false, 30, -123, false);
           Under13NoticePanel.field_Q = new UiComponent(0L, var10);
           Under13NoticePanel.field_Q.textInset = 2;
           Under13NoticePanel.field_Q.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, true, 30, -107, false);
@@ -287,7 +287,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           PacketBuffer.field_s = new UiComponent(0L, GameApplet.field_a);
           PacketBuffer.field_s.copyStyle((byte) -87, UiWidget.field_A);
           var16 = NameEntryPopup.a(0, "lobby", param4, "button_mouseover");
-          IntrusiveDeque.field_c = new ContextMenu(ProgressDialog.field_qb, var12, AlignedIconLabel.field_Lb, UiWidget.field_A, 3, 2, ja.field_b, 3, ArchiveIndex.field_x);
+          IntrusiveDeque.field_c = new ContextMenu(ProgressDialog.field_qb, var12, AlignedIconLabel.field_Lb, UiWidget.field_A, 3, 2, ByteArrayPool.field_b, 3, ArchiveIndex.field_x);
           SocketArchiveNetworkClient.field_x = new UiComponent(0L, UiWidget.field_A);
           SocketArchiveNetworkClient.field_x.selectedOffsetY = 1;
           SocketArchiveNetworkClient.field_x.selectedOffsetX = 1;
@@ -305,16 +305,16 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           IndexedSpriteState.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "tab_mouseover"), 12519);
           IndexedSpriteState.field_c.selectedFrameSprites = var14;
           RankingsRequest.field_u = new UiComponent(0L, (UiComponent) null);
-          RankingsRequest.field_u.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, -1, 206, 1856141, 1127256);
+          RankingsRequest.field_u.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, -1, 206, 1856141, 1127256);
           CheckboxWidget.field_P = new UiComponent(0L, (UiComponent) null);
-          CheckboxWidget.field_P.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, -1, 290, 11579568, 6052956);
-          mg.field_c = new UiComponent(0L, var15);
-          mg.field_c.selectedOffsetY = 1;
-          mg.field_c.horizontalAlignment = 1;
-          mg.field_c.capturedOffsetX = 1;
-          mg.field_c.capturedOffsetY = 1;
-          mg.field_c.selectedOffsetX = 1;
-          rp.field_d = new UiComponent(0L, mg.field_c);
+          CheckboxWidget.field_P.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, -1, 290, 11579568, 6052956);
+          LobbyPlayerLookupSupport.field_c = new UiComponent(0L, var15);
+          LobbyPlayerLookupSupport.field_c.selectedOffsetY = 1;
+          LobbyPlayerLookupSupport.field_c.horizontalAlignment = 1;
+          LobbyPlayerLookupSupport.field_c.capturedOffsetX = 1;
+          LobbyPlayerLookupSupport.field_c.capturedOffsetY = 1;
+          LobbyPlayerLookupSupport.field_c.selectedOffsetX = 1;
+          NineSliceFrameSupport.field_d = new UiComponent(0L, LobbyPlayerLookupSupport.field_c);
           ButtonPainter.field_a = new UiComponent(0L, UiWidget.field_A);
           ButtonPainter.field_a.capturedOffsetY = 1;
           ButtonPainter.field_a.horizontalAlignment = 1;
@@ -323,8 +323,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           ButtonPainter.field_a.selectedOffsetY = 1;
           ModelInstance.field_i = new UiComponent(0L, ButtonPainter.field_a);
           ArchiveProvider.field_g = new UiComponent(0L, ButtonPainter.field_a);
-          tg.field_d = new UiComponent(0L, mg.field_c);
-          i.field_l = new UiComponent(0L, ButtonPainter.field_a);
+          ScoreboardNameRecord.field_d = new UiComponent(0L, LobbyPlayerLookupSupport.field_c);
+          AchievementSubmission.field_l = new UiComponent(0L, ButtonPainter.field_a);
           TutorialFactory.field_d = new UiComponent(0L, ButtonPainter.field_a);
           FaceNormal.field_c = new UiComponent(0L, ButtonPainter.field_a);
           ButtonPainter.field_a.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "smallbutton"), 12519);
@@ -333,23 +333,23 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           ButtonPainter.field_a.selectedFrameSprites = dupTemp$0;
           ButtonPainter.field_a.capturedFrameSprites = dupTemp$0;
           ButtonPainter.field_a.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "smallbutton_disabled"), 12519);
-          rp.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton"), 12519);
-          rp.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton_mouseover"), 12519);
-          rp.field_d.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton_mouseheld"), 12519);
-          mg.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton"), 12519);
-          mg.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_mouseover"), 12519);
-          mg.field_c.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_mouseheld"), 12519);
-          mg.field_c.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_disabled"), 12519);
+          NineSliceFrameSupport.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton"), 12519);
+          NineSliceFrameSupport.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton_mouseover"), 12519);
+          NineSliceFrameSupport.field_d.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "mediumbutton_mouseheld"), 12519);
+          LobbyPlayerLookupSupport.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton"), 12519);
+          LobbyPlayerLookupSupport.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_mouseover"), 12519);
+          LobbyPlayerLookupSupport.field_c.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_mouseheld"), 12519);
+          LobbyPlayerLookupSupport.field_c.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "bigbutton_disabled"), 12519);
           ModelInstance.field_i.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "greenbutton"), 12519);
           ModelInstance.field_i.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "greenbutton_mouseover"), 12519);
           ModelInstance.field_i.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "greenbutton_mouseheld"), 12519);
           ArchiveProvider.field_g.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "redbutton"), 12519);
           ArchiveProvider.field_g.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "redbutton_mouseover"), 12519);
           ArchiveProvider.field_g.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "redbutton_mouseheld"), 12519);
-          tg.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton"), 12519);
-          tg.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseover"), 12519);
-          tg.field_d.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseheld"), 12519);
-          tg.field_d.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_disabled"), 12519);
+          ScoreboardNameRecord.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton"), 12519);
+          ScoreboardNameRecord.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseover"), 12519);
+          ScoreboardNameRecord.field_d.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseheld"), 12519);
+          ScoreboardNameRecord.field_d.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_disabled"), 12519);
           FaceNormal.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton"), 12519);
           FaceNormal.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_mouseover"), 12519);
           if (param1) {
@@ -359,18 +359,18 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           FaceNormal.field_c.selectedFrameSprites = dupTemp$1;
           FaceNormal.field_c.capturedFrameSprites = dupTemp$1;
           FaceNormal.field_c.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_disabled"), 12519);
-          i.field_l.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton"), 12519);
-          i.field_l.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton_mouseover"), 12519);
+          AchievementSubmission.field_l.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton"), 12519);
+          AchievementSubmission.field_l.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton_mouseover"), 12519);
           dupTemp$2 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton_active"), 12519);
-          i.field_l.selectedFrameSprites = dupTemp$2;
-          i.field_l.capturedFrameSprites = dupTemp$2;
+          AchievementSubmission.field_l.selectedFrameSprites = dupTemp$2;
+          AchievementSubmission.field_l.capturedFrameSprites = dupTemp$2;
           TutorialFactory.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton"), 12519);
           TutorialFactory.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton_mouseover"), 12519);
           dupTemp$3 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton_active"), 12519);
           TutorialFactory.field_d.selectedFrameSprites = dupTemp$3;
           TutorialFactory.field_d.capturedFrameSprites = dupTemp$3;
           var17 = NameEntryPopup.a(0, "lobby", param4, "checkbox");
-          e.field_e = new StateIconLabel(0L, var17[1], var17[0], 1, UiWidget.field_A, (String) null);
+          ChoiceButtonSupport.field_e = new StateIconLabel(0L, var17[1], var17[0], 1, UiWidget.field_A, (String) null);
           LabeledChildWidget.field_R = new UiComponent(0L, (UiComponent) null);
           LabeledChildWidget.field_R.frameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 121, "slideregion", param4));
           LabeledChildWidget.field_R.activeFrameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 74, "slideregion_mouseover", param4));
@@ -381,17 +381,17 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           ArchiveRequest.field_y.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "dragbar_mouseover"), 12519);
           ArchiveRequest.field_y.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "dragbar_mouseheld"), 12519);
           ArchiveRequest.field_y.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "dragbar_disabled"), 12519);
-          uc.field_a = new UiComponent(0L, (UiComponent) null);
-          uc.field_a.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 86, "upbutton", param4);
-          uc.field_a.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 111, "upbutton_mouseover", param4);
-          uc.field_a.capturedSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 64, "upbutton_mouseheld", param4);
-          uc.field_a.disabledSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 97, "upbutton_disabled", param4);
-          kg.field_r = new UiComponent(0L, (UiComponent) null);
-          kg.field_r.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 73, "downbutton", param4);
-          kg.field_r.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 88, "downbutton_mouseover", param4);
-          kg.field_r.capturedSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 105, "downbutton_mouseheld", param4);
-          kg.field_r.disabledSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 94, "downbutton_disabled", param4);
-          RasterBuffer.field_f = new VerticalScrollbar(0L, uc.field_a, kg.field_r, LabeledChildWidget.field_R, ArchiveRequest.field_y);
+          RasterStateSupport.field_a = new UiComponent(0L, (UiComponent) null);
+          RasterStateSupport.field_a.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 86, "upbutton", param4);
+          RasterStateSupport.field_a.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 111, "upbutton_mouseover", param4);
+          RasterStateSupport.field_a.capturedSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 64, "upbutton_mouseheld", param4);
+          RasterStateSupport.field_a.disabledSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 97, "upbutton_disabled", param4);
+          ByteRecordSubmission.field_r = new UiComponent(0L, (UiComponent) null);
+          ByteRecordSubmission.field_r.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 73, "downbutton", param4);
+          ByteRecordSubmission.field_r.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 88, "downbutton_mouseover", param4);
+          ByteRecordSubmission.field_r.capturedSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 105, "downbutton_mouseheld", param4);
+          ByteRecordSubmission.field_r.disabledSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 94, "downbutton_disabled", param4);
+          RasterBuffer.field_f = new VerticalScrollbar(0L, RasterStateSupport.field_a, ByteRecordSubmission.field_r, LabeledChildWidget.field_R, ArchiveRequest.field_y);
           HighscoresScreen.field_J = new ScrollPaneWithFooter(0L, (UiComponent) null, AlternateLongAndTextLoginPayload.field_n, RasterBuffer.field_f, ButtonPainter.field_a, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -473,7 +473,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.field_A = jc.splitString(30634, param1.j(-25), '<');
+            this.field_A = AppletUrlSupport.splitString(30634, param1.j(-25), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

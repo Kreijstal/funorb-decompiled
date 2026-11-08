@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDequeCursor {
-    static ph field_c;
+    static AccountProtocolStage field_c;
     static int field_d;
     static int field_h;
     private IntrusiveDeque field_a;
@@ -40,8 +40,8 @@ final class IntrusiveDequeCursor {
           field_c = null;
           return;
         }
-        i var2 = (i) null;
-        IntrusiveDequeCursor.a(true, (i) null, 8);
+        AchievementSubmission var2 = (AchievementSubmission) null;
+        IntrusiveDequeCursor.submitAchievement(true, (AchievementSubmission) null, 8);
         field_b = null;
         field_c = null;
     }
@@ -74,7 +74,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+    final IntrusiveNode firstFrom(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_5_0 = null;
@@ -126,7 +126,7 @@ final class IntrusiveDequeCursor {
           this.field_g = var2.next;
           return var2;
         }
-        field_c = (ph) null;
+        field_c = (AccountProtocolStage) null;
         this.field_g = var2.next;
         return var2;
     }
@@ -173,23 +173,23 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final static void a(boolean param0, i param1, int param2) {
+    final static void submitAchievement(boolean param0, AchievementSubmission param1, int param2) {
         try {
-          ue.field_b.addFirst((byte) 85, param1);
+          StartupInterfaceSupport.field_b.addFirst((byte) 85, param1);
           if (param0) {
             field_h = -20;
           }
-          gp.a(param2, param1, -6725);
+          AchievementProtocolSupport.a(param2, param1, -6725);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(IntrusiveDeque param0, boolean param1) {
+    final void setDeque(IntrusiveDeque param0, boolean param1) {
         try {
           if (param1) {
             IntrusiveNode var4 = (IntrusiveNode) null;
-            this.a((IntrusiveNode) null, -99);
+            this.firstFrom((IntrusiveNode) null, -99);
           }
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
@@ -212,6 +212,6 @@ final class IntrusiveDequeCursor {
         field_h = 0;
         field_d = 3;
         friendnotfound = "<%0> is not on your friend list.";
-        field_c = new ph();
+        field_c = new AccountProtocolStage();
     }
 }

@@ -59,9 +59,9 @@ final class ShotRecord extends IntrusiveNode {
     final static GrowableIntList b(boolean param0) {
         if (!param0) {
           unableToDeleteFriend = (String) null;
-          return w.createGrowableIntList(false, 1);
+          return GrowableIntListFactory.createGrowableIntList(false, 1);
         }
-        return w.createGrowableIntList(false, 1);
+        return GrowableIntListFactory.createGrowableIntList(false, 1);
     }
 
     final String describe(int param0, PoolGameModel param1) {
@@ -191,7 +191,7 @@ final class ShotRecord extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         ModelInstance.a(param3, param2 ^ 40844);
-        hp.a(param1, param3, param0, 30);
+        SupportPageLauncher.a(param1, param3, param0, 30);
         if (param2 != -40960) {
           ShotRecord.b(false);
         }
@@ -271,7 +271,7 @@ final class ShotRecord extends IntrusiveNode {
                   var10 = 65280 & var8;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.pixels[var6_int] = md.bitwiseOr(var11, md.bitwiseOr(var9 << 16, var10));
+                  SoftwareRasterizer.pixels[var6_int] = RenderingInitializationSupport.bitwiseOr(var11, RenderingInitializationSupport.bitwiseOr(var9 << 16, var10));
                 }
                 var6_int++;
               }
@@ -538,7 +538,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           param0.writeMedium(this.endResolution, 66);
           if (param1 >= -65) {
-            ShotRecord.a(false, 'ﾨ');
+            ShotRecord.charToString(false, 'ﾨ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -878,7 +878,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final static String a(boolean param0, char param1) {
+    final static String charToString(boolean param0, char param1) {
         if (param0) {
           return (String) null;
         }

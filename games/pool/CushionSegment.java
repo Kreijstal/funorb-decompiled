@@ -18,9 +18,9 @@ final class CushionSegment {
     final static long d(byte param0) {
         if (param0 < 117) {
           CushionSegment.releaseStatics((byte) 7);
-          return rl.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
+          return MonotonicClock.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
         }
-        return rl.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
+        return MonotonicClock.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
     }
 
     final static void b(byte param0) {
@@ -37,12 +37,12 @@ final class CushionSegment {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        PasswordValidator.field_t[0] = (var1 >> 1) - ml.field_l[0];
-        PasswordValidator.field_t[1] = -ml.field_l[1];
-        PasswordValidator.field_t[2] = -ml.field_l[2] + var1;
-        int var2 = PasswordValidator.field_t[1] * ml.field_l[4] + ml.field_l[3] * PasswordValidator.field_t[0] + ml.field_l[5] * PasswordValidator.field_t[2] >> 7;
-        int var3 = PasswordValidator.field_t[2] * ml.field_l[8] + (ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6]) >> 7;
-        PasswordValidator.field_t[2] = ml.field_l[10] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[9] + ml.field_l[11] * PasswordValidator.field_t[2] >> 16;
+        PasswordValidator.field_t[0] = (var1 >> 1) - LoginMethod.field_l[0];
+        PasswordValidator.field_t[1] = -LoginMethod.field_l[1];
+        PasswordValidator.field_t[2] = -LoginMethod.field_l[2] + var1;
+        int var2 = PasswordValidator.field_t[1] * LoginMethod.field_l[4] + LoginMethod.field_l[3] * PasswordValidator.field_t[0] + LoginMethod.field_l[5] * PasswordValidator.field_t[2] >> 7;
+        int var3 = PasswordValidator.field_t[2] * LoginMethod.field_l[8] + (LoginMethod.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * LoginMethod.field_l[6]) >> 7;
+        PasswordValidator.field_t[2] = LoginMethod.field_l[10] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * LoginMethod.field_l[9] + LoginMethod.field_l[11] * PasswordValidator.field_t[2] >> 16;
         if (PasswordValidator.field_t[2] == 0) {
           PasswordValidator.field_t[2] = -1;
           PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
@@ -54,13 +54,13 @@ final class CushionSegment {
             return;
           }
           var4 = PasswordValidator.field_t[0];
-          PasswordValidator.field_t[0] = -ml.field_l[0];
+          PasswordValidator.field_t[0] = -LoginMethod.field_l[0];
           var5 = PasswordValidator.field_t[1];
-          PasswordValidator.field_t[2] = var1 - ml.field_l[2];
-          PasswordValidator.field_t[1] = -ml.field_l[1];
-          var6 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
-          var7 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
-          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+          PasswordValidator.field_t[2] = var1 - LoginMethod.field_l[2];
+          PasswordValidator.field_t[1] = -LoginMethod.field_l[1];
+          var6 = LoginMethod.field_l[4] * PasswordValidator.field_t[1] + (LoginMethod.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * LoginMethod.field_l[5]) >> 7;
+          var7 = LoginMethod.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * LoginMethod.field_l[6] + LoginMethod.field_l[8] * PasswordValidator.field_t[2] >> 7;
+          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * LoginMethod.field_l[11] + (PasswordValidator.field_t[0] * LoginMethod.field_l[9] + PasswordValidator.field_t[1] * LoginMethod.field_l[10]) >> 16;
           if (PasswordValidator.field_t[2] != 0) {
             PasswordValidator.field_t[0] = 320 + var6 / PasswordValidator.field_t[2];
             PasswordValidator.field_t[1] = var7 / PasswordValidator.field_t[2] + 240;
@@ -87,13 +87,13 @@ final class CushionSegment {
             return;
           }
           var4Lifetime1 = PasswordValidator.field_t[0];
-          PasswordValidator.field_t[0] = -ml.field_l[0];
+          PasswordValidator.field_t[0] = -LoginMethod.field_l[0];
           var5Lifetime1 = PasswordValidator.field_t[1];
-          PasswordValidator.field_t[2] = var1 - ml.field_l[2];
-          PasswordValidator.field_t[1] = -ml.field_l[1];
-          var6Lifetime1 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
-          var7Lifetime1 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
-          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+          PasswordValidator.field_t[2] = var1 - LoginMethod.field_l[2];
+          PasswordValidator.field_t[1] = -LoginMethod.field_l[1];
+          var6Lifetime1 = LoginMethod.field_l[4] * PasswordValidator.field_t[1] + (LoginMethod.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * LoginMethod.field_l[5]) >> 7;
+          var7Lifetime1 = LoginMethod.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * LoginMethod.field_l[6] + LoginMethod.field_l[8] * PasswordValidator.field_t[2] >> 7;
+          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * LoginMethod.field_l[11] + (PasswordValidator.field_t[0] * LoginMethod.field_l[9] + PasswordValidator.field_t[1] * LoginMethod.field_l[10]) >> 16;
           if (PasswordValidator.field_t[2] != 0) {
             PasswordValidator.field_t[0] = 320 + var6Lifetime1 / PasswordValidator.field_t[2];
             PasswordValidator.field_t[1] = var7Lifetime1 / PasswordValidator.field_t[2] + 240;
@@ -117,13 +117,13 @@ final class CushionSegment {
           return;
         }
         var4Lifetime2 = PasswordValidator.field_t[0];
-        PasswordValidator.field_t[0] = -ml.field_l[0];
+        PasswordValidator.field_t[0] = -LoginMethod.field_l[0];
         var5Lifetime2 = PasswordValidator.field_t[1];
-        PasswordValidator.field_t[2] = var1 - ml.field_l[2];
-        PasswordValidator.field_t[1] = -ml.field_l[1];
-        var6Lifetime2 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
-        var7Lifetime2 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
-        PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+        PasswordValidator.field_t[2] = var1 - LoginMethod.field_l[2];
+        PasswordValidator.field_t[1] = -LoginMethod.field_l[1];
+        var6Lifetime2 = LoginMethod.field_l[4] * PasswordValidator.field_t[1] + (LoginMethod.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * LoginMethod.field_l[5]) >> 7;
+        var7Lifetime2 = LoginMethod.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * LoginMethod.field_l[6] + LoginMethod.field_l[8] * PasswordValidator.field_t[2] >> 7;
+        PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * LoginMethod.field_l[11] + (PasswordValidator.field_t[0] * LoginMethod.field_l[9] + PasswordValidator.field_t[1] * LoginMethod.field_l[10]) >> 16;
         if (PasswordValidator.field_t[2] == 0) {
           PasswordValidator.field_t[2] = -1;
           PasswordValidator.field_t[0] = 320 + var6Lifetime2 / PasswordValidator.field_t[2];

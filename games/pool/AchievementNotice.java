@@ -14,13 +14,13 @@ final class AchievementNotice extends IntrusiveNode {
     final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           Ball.field_m = param4;
-          jc.field_h = param3;
+          AppletUrlSupport.field_h = param3;
           ArchiveIndex.field_r = param6;
           JaggrabDownloader.field_g = param5;
           LongAndTextLoginPayload.field_h = param0;
-          rf.field_c = param8;
+          AccountDisplayNameSupport.field_c = param8;
           IsaacCipher.field_e = param2;
-          vn.field_j = param1;
+          ReflectionRequestSupport.field_j = param1;
           if (param7 != -1) {
             field_n = (Sprite) null;
           }
@@ -36,17 +36,17 @@ final class AchievementNotice extends IntrusiveNode {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        sa var8_ref_sa = null;
+        CollisionContact var8_ref_sa = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12_int = 0;
-        sa var12 = null;
-        sa var13 = null;
+        CollisionContact var12 = null;
+        CollisionContact var13 = null;
         int var13_int = 0;
         int var14 = 0;
-        sa var15 = null;
-        sa var15Lifetime1;
+        CollisionContact var15 = null;
+        CollisionContact var15Lifetime1;
         int var7_intLifetime1;
         int var8Lifetime1;
         int var9Lifetime1;

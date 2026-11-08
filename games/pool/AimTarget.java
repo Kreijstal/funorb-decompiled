@@ -53,7 +53,7 @@ final class AimTarget {
 
     final static String getLoadingStatusMessage(byte param0) {
         if (QuickChatCategoryDefinition.field_y < 2) {
-          return kg.field_q;
+          return ByteRecordSubmission.field_q;
         }
         if (null != QuickChatPhraseRegistry.field_a) {
           if (!QuickChatPhraseRegistry.field_a.isIndexReady(84)) {
@@ -61,11 +61,11 @@ final class AimTarget {
           }
           return SingleChildWidget.field_F;
         }
-        if (!uj.field_d.isIndexReady(101)) {
-          return rp.waitingforGraphics;
+        if (!WorldPointProjectionSupport.field_d.isIndexReady(101)) {
+          return NineSliceFrameSupport.waitingforGraphics;
         }
-        if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
-          return oj.loadingGraphics + " - " + uj.field_d.getGroupProgressByName(100, "commonui") + "%";
+        if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", 0)) {
+          return HighScoreSubmission.loadingGraphics + " - " + WorldPointProjectionSupport.field_d.getGroupProgressByName(100, "commonui") + "%";
         }
         if (!PolarTableScene.field_nb.isIndexReady(-127)) {
           return SpaceTableScene.waitingforFonts;

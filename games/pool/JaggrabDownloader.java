@@ -113,21 +113,21 @@ final class JaggrabDownloader implements Runnable {
         var13 = Pool.field_O;
         try {
           boolean decompiledFrameCompleted4 = true;
-          mj.field_a = param1.vertexY;
+          TransformSupport.field_a = param1.vertexY;
           DirectByteStorage.field_k = param8.faceVertexA;
-          vn.field_h = param8.faceVertexB;
-          kp.field_h = param1;
+          ReflectionRequestSupport.field_h = param8.faceVertexB;
+          MusicPatchEnvelope.field_h = param1;
           AccountWelcomePanel.field_P = param8.faceVertexC;
-          ro.field_d = param8.vertexZ;
-          sa.field_r = param8.vertexY;
+          ProjectedVertex.field_d = param8.vertexZ;
+          CollisionContact.field_r = param8.vertexY;
           HighScoreRequest.field_w = param1.vertexX;
-          gn.field_e = param8;
+          FaceBucketSupport.field_e = param8;
           TranslatedUiText.field_b = param1.faceVertexC;
-          wn.field_d = param1.faceVertexA;
+          ReflectionReplySupport.field_d = param1.faceVertexA;
           QuickChatMenu.field_Yb = param8.vertexX;
-          sa.field_w = param1.vertexZ;
-          f.field_b = param1.faceVertexB;
-          u.a(param0, param4, param6, true, (int[]) null, (int[]) null, param9.vertexX, param9.faceVertexA, param5, (int[]) null, param9.vertexZ, param2, param9.faceCount, param9.vertexY, param9.field_Q, param9.faceVertexC, (int[]) null, param7, param9.faceVertexB, param9.field_l, (int[]) null, param9, param9.vertexCount, (int[]) null);
+          CollisionContact.field_w = param1.vertexZ;
+          LobbyPanelLayoutSupport.field_b = param1.faceVertexB;
+          MeshRenderSupport.a(param0, param4, param6, true, (int[]) null, (int[]) null, param9.vertexX, param9.faceVertexA, param5, (int[]) null, param9.vertexZ, param2, param9.faceCount, param9.vertexY, param9.field_Q, param9.faceVertexC, (int[]) null, param7, param9.faceVertexB, param9.field_l, (int[]) null, param9, param9.vertexCount, (int[]) null);
           var10 = param8;
           param1.field_J = null;
           var10.field_J = null;
@@ -136,24 +136,24 @@ final class JaggrabDownloader implements Runnable {
           param8.faceVertexC = AccountWelcomePanel.field_P;
           param8.vertexX = QuickChatMenu.field_Yb;
           param8.vertexCount = TranslatedUiText.field_a;
-          param8.vertexY = sa.field_r;
-          param8.vertexZ = ro.field_d;
+          param8.vertexY = CollisionContact.field_r;
+          param8.vertexZ = ProjectedVertex.field_d;
           param8.field_l = WhirlpoolHasher.field_g;
-          param8.field_M = nj.field_d;
+          param8.field_M = LogoMaterial.field_d;
           param8.faceCount = PoolMatchController.field_W;
           var11.field_Z = null;
-          param8.faceVertexB = vn.field_h;
+          param8.faceVertexB = ReflectionRequestSupport.field_h;
           param8.faceVertexA = DirectByteStorage.field_k;
-          param1.faceVertexA = wn.field_d;
-          param1.vertexZ = sa.field_w;
-          param1.faceVertexB = f.field_b;
-          param1.vertexY = mj.field_a;
+          param1.faceVertexA = ReflectionReplySupport.field_d;
+          param1.vertexZ = CollisionContact.field_w;
+          param1.faceVertexB = LobbyPanelLayoutSupport.field_b;
+          param1.vertexY = TransformSupport.field_a;
           param1.vertexX = HighScoreRequest.field_w;
           param1.field_M = MidiPcmStream.field_bb;
           param1.vertexCount = DebugTuningSupport.field_a;
           param1.faceCount = DateInputWidget.field_R;
           param1.faceVertexC = TranslatedUiText.field_b;
-          param1.field_l = ja.field_a;
+          param1.field_l = ByteArrayPool.field_a;
           if (param9.field_Q != null) {
             if (null == param8.field_Q ||
               !(param8.field_Q.length >= param8.faceCount)) {
@@ -475,7 +475,7 @@ final class JaggrabDownloader implements Runnable {
                 break;
               }
               if (stackIn_13_0 == stackIn_13_1) {
-                throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_i));
+                throw JaggrabDownloader.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_i));
               }
               var1 = this;
               synchronized (var1) {
@@ -717,7 +717,7 @@ final class JaggrabDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

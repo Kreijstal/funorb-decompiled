@@ -31,7 +31,7 @@ final class QuickChatMenuSupport {
         var9 = Pool.field_O;
         try {
           var3_int = ProgressBarWidget.field_S;
-          e.field_a = new UiComponent(0L, (UiComponent) null);
+          ChoiceButtonSupport.field_a = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             GrowableIntList.reportClientError((Throwable) null, "QC1", -8555);
@@ -42,29 +42,29 @@ final class QuickChatMenuSupport {
           stackIn_7_0.field_i = stackIn_8_1;
           param2.field_k = 0;
           DisplayNamePanel.field_N = new QuickChatCategoryCache(var3_int, param2, param2);
-          UiComponentNode.field_x = new QuickChatPhraseRegistry(var3_int, param2, param2, new wp());
+          UiComponentNode.field_x = new QuickChatPhraseRegistry(var3_int, param2, param2, new CompressedContainerSupport());
           var4 = TranslatedUiText.c(2);
           if (var4 == null) {
             var11 = (Throwable) null;
             GrowableIntList.reportClientError((Throwable) null, "QC2", -8555);
             return;
           }
-          gp.a((byte) 58, var4);
+          AchievementProtocolSupport.a((byte) 58, var4);
           var12 = (BitmapFont) null;
-          tp.field_i = MouseWheelInput.createFramedLabel(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
+          LookupRetrySupport.field_i = MouseWheelInput.createFramedLabel(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
           CushionSegment.field_c = MouseWheelInput.createFramedLabel(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           LoginRequiredScreen.field_J = MouseWheelInput.createFramedLabel(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
-          ue.field_c = new Sprite(10, 14);
-          ue.field_c.bindAsRenderTarget();
+          StartupInterfaceSupport.field_c = new Sprite(10, 14);
+          StartupInterfaceSupport.field_c.bindAsRenderTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          w.field_b = NanoTickClock.a(LoginRequiredScreen.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
-          e.field_a.children = new IntrusiveDeque();
+          GrowableIntListFactory.field_b = NanoTickClock.a(LoginRequiredScreen.field_J, CushionSegment.field_c, var4, LookupRetrySupport.field_i, (byte) 112);
+          ChoiceButtonSupport.field_a.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class QuickChatMenuSupport {
         var12 = -param3 + param7;
         var13 = var12;
         var14 = -var11;
-        var15 = rf.inverseSquareRoot(NameEntryPopup.a(var13, false, var13) + NameEntryPopup.a(var14, false, var14), -128);
+        var15 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(var13, false, var13) + NameEntryPopup.a(var14, false, var14), -128);
         if (0L < FullscreenFocusCanvas.multiplyFixedChecked((long)var13, (long)param10, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var14, (long)param4, false)) {
           param9 = param9 - ArchiveProvider.divideFixed16(var15, (byte) -73, (long)(var13 * param6));
           param3 = param3 - ArchiveProvider.divideFixed16(var15, (byte) -90, (long)(var14 * param6));

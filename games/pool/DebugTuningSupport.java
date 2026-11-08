@@ -35,7 +35,7 @@ final class DebugTuningSupport {
           MaxLengthTextInputWidget.b(false);
           PlasmaTableScene.field_ab = 11;
         } else {
-          if (!uc.a(-114)) {
+          if (!RasterStateSupport.acceptsClientGuard(-114)) {
             MaxLengthTextInputWidget.b(false);
             PlasmaTableScene.field_ab = 11;
           }
@@ -109,24 +109,24 @@ final class DebugTuningSupport {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (jd.field_c != null) {
+          if (Atan2Support.field_c != null) {
             if (param0 >= 0) {
-              decompiledFrameRemainder0 = (RankingsScreen.field_J == ta.field_a);
+              decompiledFrameRemainder0 = (RankingsScreen.field_J == GradientPaletteSupport.field_a);
               if ((decompiledFrameRemainder0) && (JaggrabDownloader.field_j.position == 0 &&
-                rl.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L)) {
+                MonotonicClock.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L)) {
                 JaggrabDownloader.field_j.writeCipheredOpcode(false, param0);
               }
             } else {
               if (JaggrabDownloader.field_j.position == 0 &&
-                rl.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L) {
+                MonotonicClock.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L) {
                 JaggrabDownloader.field_j.writeCipheredOpcode(false, param0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (JaggrabDownloader.field_j.position > 0) {
                 try {
-                  jd.field_c.a(JaggrabDownloader.field_j.payload, (byte) 70, JaggrabDownloader.field_j.position, 0);
-                  AccountCreationForm.field_Q = rl.monotonicTimeMillis((byte) -111);
+                  Atan2Support.field_c.a(JaggrabDownloader.field_j.payload, (byte) 70, JaggrabDownloader.field_j.position, 0);
+                  AccountCreationForm.field_Q = MonotonicClock.monotonicTimeMillis((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

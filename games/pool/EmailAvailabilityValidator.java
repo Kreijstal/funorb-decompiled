@@ -19,9 +19,9 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     final static IndexedSprite[] h(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
-        IndexedSprite[] var1 = new IndexedSprite[wf.field_d];
-        for (var2 = param0; wf.field_d > var2; var2++) {
-          var1[var2] = new IndexedSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], LimitedRandomAccessFile.field_b[var2], IntrusiveNode.field_h);
+        IndexedSprite[] var1 = new IndexedSprite[PacketAvailabilitySupport.field_d];
+        for (var2 = param0; PacketAvailabilitySupport.field_d > var2; var2++) {
+          var1[var2] = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], LimitedRandomAccessFile.field_b[var2], IntrusiveNode.field_h);
         }
         OpacityWidget.h(-1);
         return var1;
@@ -60,21 +60,21 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final static ij a(int param0, int param1) {
+    final static AnimatedNotification a(int param0, int param1) {
         IntrusiveDequeCursor var2;
-        ij var3;
+        AnimatedNotification var3;
         int var4;
         var4 = Pool.field_O;
         if (param0 != -2) {
-          return (ij) null;
+          return (AnimatedNotification) null;
         }
         var2 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
-        var3 = (ij) (var2.last((byte) -92));
+        var3 = (AnimatedNotification) (var2.last((byte) -92));
         while (var3 != null) {
           if (param1 == var3.field_m) {
             return var3;
           }
-          var3 = (ij) (var2.previous(-86));
+          var3 = (AnimatedNotification) (var2.previous(-86));
         }
         return null;
     }
@@ -112,32 +112,32 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final na validationStateForText(String param0, boolean param1) {
-        qr var3 = null;
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
+        AvailabilityQueryResult var3 = null;
         RuntimeException var3_ref = null;
-        na stackIn_3_0 = null;
-        na stackIn_8_0 = null;
-        na stackIn_13_0 = null;
+        IntegerSyntaxSupport stackIn_3_0 = null;
+        IntegerSyntaxSupport stackIn_8_0 = null;
+        IntegerSyntaxSupport stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.emailMatchValidator.validationStateForText(param0, param1) == gp.field_d) {
-            stackIn_3_0 = gp.field_d;
+          if (this.emailMatchValidator.validationStateForText(param0, param1) == AchievementProtocolSupport.field_d) {
+            stackIn_3_0 = AchievementProtocolSupport.field_d;
             return stackIn_3_0;
           }
           if (!param0.equals(this.cachedEmailCandidate)) {
             var3 = AccountCreationForm.b((byte) -25, param0);
-            if (!var3.a(80)) {
+            if (!var3.isComplete(80)) {
               stackIn_8_0 = Js5Transport.field_k;
               return stackIn_8_0;
             }
             this.cachedEmailCandidate = param0;
-            this.cachedEmailAvailable = var3.b((byte) -74);
+            this.cachedEmailAvailable = var3.isAvailable((byte) -74);
           }
           if (!this.cachedEmailAvailable) {
-            stackIn_13_0 = gp.field_d;
+            stackIn_13_0 = AchievementProtocolSupport.field_d;
           } else {
             stackIn_13_0 = ProxySocketConnector.field_e;
           }
@@ -166,11 +166,11 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.emailMatchValidator.validationStateForText(param0, true) == gp.field_d) {
+          if (this.emailMatchValidator.validationStateForText(param0, true) == AchievementProtocolSupport.field_d) {
             stackIn_2_0 = this.emailMatchValidator.validationMessageForText(param0, 0);
             return stackIn_2_0;
           }
-          if (this.validationStateForText(param0, true) == gp.field_d) {
+          if (this.validationStateForText(param0, true) == AchievementProtocolSupport.field_d) {
             stackIn_5_0 = Quaternion.createAlertEmailUnavailable;
             return stackIn_5_0;
           }

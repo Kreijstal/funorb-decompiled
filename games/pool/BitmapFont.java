@@ -28,7 +28,7 @@ abstract class BitmapFont extends DualLinkNode {
     private static int currentAlpha;
 
     final int measureCharacterAdvance(char param0) {
-        return this.glyphAdvances[vi.encodeCp1252Char(param0, true) & 255];
+        return this.glyphAdvances[Cp1252CharacterSupport.encodeCp1252Char(param0, true) & 255];
     }
 
     final static String truncateText(BitmapFont param0, String param1, int param2) {
@@ -333,7 +333,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_z.append((char) var14);
-                var14 = (char)(vi.encodeCp1252Char((char) var14, true) & 255);
+                var14 = (char)(Cp1252CharacterSupport.encodeCp1252Char((char) var14, true) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {
@@ -452,7 +452,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(vi.encodeCp1252Char((char) var8, true) & 255);
+              var8 = (char)(Cp1252CharacterSupport.encodeCp1252Char((char) var8, true) & 255);
               var9 = this.field_H[var8];
               var10 = this.glyphAdvances[var8];
               var11 = this.field_A[var8];
@@ -569,7 +569,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(vi.encodeCp1252Char((char) var7, true) & 255);
+              var7 = (char)(Cp1252CharacterSupport.encodeCp1252Char((char) var7, true) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.kerning != null &&
                 var3 != 0) {
@@ -674,7 +674,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(vi.encodeCp1252Char((char) var8, true) & 255);
+              var8 = (char)(Cp1252CharacterSupport.encodeCp1252Char((char) var8, true) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 param1 = param1 + this.kerning[(var5 << 8) + var8];

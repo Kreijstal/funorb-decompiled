@@ -227,7 +227,7 @@ final class BufferedSocket implements Runnable {
           ButtonPainter.field_b = param4;
           LoginPayload.field_d = param5;
           ContextMenu.field_Xb = param6;
-          TabbedPane.field_Lb = ra.field_e;
+          TabbedPane.field_Lb = IntegerRecordProtocolSupport.field_e;
           QuickChatCategoryDefinition.field_B = null;
           SocialListEntry.field_Rb = param1;
           return true;
@@ -274,7 +274,7 @@ final class BufferedSocket implements Runnable {
         return this.field_l.available();
     }
 
-    final static PcmStreamMixer b(int param0) {
+    final static PcmStreamMixer getSoundEffectMixer(int param0) {
         int var1 = 52 / ((param0 - 41) / 41);
         return SpaceObject.field_d;
     }

@@ -185,7 +185,7 @@ final class HuffmanCodec {
         RuntimeException var1 = null;
         try {
           DebugTuningSupport.createDebugSliders(-100);
-          var1_int = 4 + sa.field_h.maxDescent + sa.field_h.maxAscent;
+          var1_int = 4 + CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent;
           SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + DebugOverlayLayoutSupport.field_a.length * 32, var1_int + 112, 8421504, 127);
           var2 = 0;
           var3 = 56 / ((-35 - param0) / 33);
@@ -276,9 +276,9 @@ final class HuffmanCodec {
           var8 = 0;
           if (null != HighscoresScreen.field_L && (null != Pocket.field_j ||
             null != DebugTuningSlider.field_d ||
-            w.field_j != null ||
+            GrowableIntListFactory.field_j != null ||
             null != TextLayout.field_a)) {
-            for (var9 = 0; dr.field_c > var9; var9++) {
+            for (var9 = 0; LogoFinalFrameLoader.field_c > var9; var9++) {
               var10_int = 255 & HighscoresScreen.field_L.settings[var9];
               if (null != Pocket.field_j &&
                 Pocket.field_j[var9] != null &&
@@ -300,9 +300,9 @@ final class HuffmanCodec {
                 TextLayout.field_a[var9] != null) {
                 var8 = var8 | TextLayout.field_a[var9][var10_int];
               }
-              if (null != w.field_j &&
-                null != w.field_j[var9]) {
-                var11_intLifetime1 = w.field_j[var9][var10_int];
+              if (null != GrowableIntListFactory.field_j &&
+                null != GrowableIntListFactory.field_j[var9]) {
+                var11_intLifetime1 = GrowableIntListFactory.field_j[var9][var10_int];
                 if (var11_intLifetime1 > var7) {
                   var7 = var11_intLifetime1;
                 }
@@ -331,7 +331,7 @@ final class HuffmanCodec {
               var12.field_ac = new UiComponent(0L, PacketBuffer.field_s);
               var12.addChild(-106, var12.field_ac);
               var12.field_Tb = new UiComponent(0L, BallSkin.field_d);
-              if (tq.field_p) {
+              if (AccountStateQuery.field_p) {
                 var12.addChild(param4 + 165, var12.field_Tb);
               }
               var12.field_Tb.horizontalAlignment = 2;
@@ -376,7 +376,7 @@ final class HuffmanCodec {
             stackIn_62_0 = (var34.equals(var12.displayName)) ? 0 : 1;
             var22 = stackIn_62_0;
             if (var12.field_bc >= 4) {
-              var20 = "<img=" + (gf.field_a - 4 + var12.field_bc) + ">" + var34;
+              var20 = "<img=" + (UsernameSuggestionSupport.field_a - 4 + var12.field_bc) + ">" + var34;
             } else {
               if (var12.field_bc > 0) {
                 var20 = "<img=" + (var12.field_bc - 1) + ">" + var34;
@@ -413,8 +413,8 @@ final class HuffmanCodec {
                 } else {
                   if (var12.field_Yb) {
                     var12.field_ac.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, FullscreenDisplayMode.xWantsToJoin);
-                    var12.field_lc.text = ie.accept;
-                    var12.field_Zb.text = qa.reject;
+                    var12.field_lc.text = BrowserCookieSupport.accept;
+                    var12.field_Zb.text = HotspotRectangle.reject;
                   } else {
                     var12.field_lc.text = PlayerContextMenu.invite;
                   }
@@ -447,7 +447,7 @@ final class HuffmanCodec {
               stackIn_100_1 = var19;
               stackIn_100_2 = 2147483647;
               stackIn_100_3 = var25_int;
-              if (!tq.field_p) {
+              if (!AccountStateQuery.field_p) {
                 stackIn_101_4 = 0;
               } else {
                 stackIn_101_4 = 42;
@@ -521,7 +521,7 @@ final class HuffmanCodec {
                   if (var7 > var12.field_Xb) {
                     var25_int = var7 - var12.field_Xb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = rf.gameoptYouneed1ratedgame;
+                      var24Lifetime2 = AccountDisplayNameSupport.gameoptYouneed1ratedgame;
                     }
                     var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var25_int)}, -1, PolarObject.gameoptYouneedratedgames);
                   } else {
@@ -544,7 +544,7 @@ final class HuffmanCodec {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Pb) {
-                  var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, dq.gameoptPlayernotmember);
+                  var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, TransformRotationSupport.gameoptPlayernotmember);
                 } else {
                   if (var7 <= var12.field_Xb) {
                     if (var6 <= var12.field_Rb) {
@@ -559,14 +559,14 @@ final class HuffmanCodec {
                         }
                       }
                     } else {
-                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var6)}, -1, jq.gameoptPlayerneedsrating);
+                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var6)}, -1, QuickChatNavigationSupport.gameoptPlayerneedsrating);
                     }
                   } else {
                     var25_int = -var12.field_Xb + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, jd.gameoptPlayerneeds1ratedgame);
+                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, Atan2Support.gameoptPlayerneeds1ratedgame);
                     }
-                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var25_int)}, -1, sm.gameoptPlayerneedsratedgames);
+                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var25_int)}, -1, PasswordInputPainter.gameoptPlayerneedsratedgames);
                   }
                 }
               }
@@ -579,7 +579,7 @@ final class HuffmanCodec {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; dr.field_c > var27_int; var27_int++) {
+                for (var27_int = 0; LogoFinalFrameLoader.field_c > var27_int; var27_int++) {
                   var28 = 255 & HighscoresScreen.field_L.settings[var27_int];
                   var29 = 0;
                   if (Pocket.field_j != null &&
@@ -600,9 +600,9 @@ final class HuffmanCodec {
                       var29 = 1;
                     }
                   }
-                  if (null != w.field_j &&
-                    w.field_j[var27_int] != null) {
-                    var30_intLifetime1 = w.field_j[var27_int][var28];
+                  if (null != GrowableIntListFactory.field_j &&
+                    GrowableIntListFactory.field_j[var27_int] != null) {
+                    var30_intLifetime1 = GrowableIntListFactory.field_j[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
                       !DualLinkNode.field_s &&
                       !var12.field_Pb) {
@@ -635,7 +635,7 @@ final class HuffmanCodec {
                 if (param2 == DualLinkDeque.field_f &&
                   TikiTableScene.e((byte) 85)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, ii.gameoptTrychanging1);
+                    var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, ProxyConnectorSupport.gameoptTrychanging1);
                   } else {
                     var24Lifetime2 = var35 + "<br>" + Quaternion.gameoptTrychanging2 + (String) (var25);
                   }
@@ -643,7 +643,7 @@ final class HuffmanCodec {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, QuickChatCategoryDefinition.gameoptNeedchanging1);
                   } else {
-                    var24Lifetime2 = var35 + "<br>" + tp.gameoptNeedchanging2 + (String) (var25);
+                    var24Lifetime2 = var35 + "<br>" + LookupRetrySupport.gameoptNeedchanging2 + (String) (var25);
                   }
                 }
                 if (param2 == DualLinkDeque.field_f &&
@@ -919,7 +919,7 @@ final class HuffmanCodec {
             var7_int = var7_int & -var13 >> 31;
             var14 = (var11 + var13 - 1 >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = md.bitwiseOr(var7_int, var10 >>> var13);
+            dupTemp$0 = RenderingInitializationSupport.bitwiseOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -985,13 +985,13 @@ final class HuffmanCodec {
         int var7 = 0;
         var7 = Pool.field_O;
         try {
-          if (RankingsScreen.field_J != ta.field_a) {
+          if (RankingsScreen.field_J != GradientPaletteSupport.field_a) {
             return false;
           }
-          var2_long = rl.monotonicTimeMillis((byte) -103);
-          if (param0 != ii.field_d &&
-            wq.field_b < 0) {
-            var4_ref_fr = (DelayedServerPacket) (vn.field_g.last((byte) -112));
+          var2_long = MonotonicClock.monotonicTimeMillis((byte) -103);
+          if (param0 != ProxyConnectorSupport.field_d &&
+            PacketDecodeState.field_b < 0) {
+            var4_ref_fr = (DelayedServerPacket) (ReflectionRequestSupport.field_g.last((byte) -112));
             if (var4_ref_fr != null &&
               var4_ref_fr.field_p < var2_long) {
               var4_ref_fr.unlink((byte) -117);
@@ -1019,7 +1019,7 @@ final class HuffmanCodec {
           }
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
-        stackIn_17_0 = wq.field_b;
+        stackIn_17_0 = PacketDecodeState.field_b;
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
@@ -1027,35 +1027,35 @@ final class HuffmanCodec {
               if (!DialogLayer.b((byte) 107, 1)) {
                 return false;
               }
-              wq.field_b = PlayerContextMenu.field_e.readCipheredOpcode(param0 + 107);
+              PacketDecodeState.field_b = PlayerContextMenu.field_e.readCipheredOpcode(param0 + 107);
               PlayerContextMenu.field_e.position = 0;
-              ScrollPane.field_Pb = param1[wq.field_b];
+              ScrollPane.field_Pb = param1[PacketDecodeState.field_b];
             }
-            if (!wf.hasCompletePacket((byte) 39)) {
+            if (!PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
               return false;
             }
-            if (ii.field_d == 0) {
+            if (ProxyConnectorSupport.field_d == 0) {
               NodeHashTableIterator.field_e = DialRenderer.field_g;
               DialRenderer.field_g = MenuSelection.field_l;
               MenuSelection.field_l = Bzip2DecoderState.field_c;
-              Bzip2DecoderState.field_c = wq.field_b;
-              wq.field_b = -1;
+              Bzip2DecoderState.field_c = PacketDecodeState.field_b;
+              PacketDecodeState.field_b = -1;
               return true;
             }
-            var4 = ii.field_d;
-            if (hn.field_a != 0.0) {
-              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * hn.field_a);
+            var4 = ProxyConnectorSupport.field_d;
+            if (CookieDateSupport.field_a != 0.0) {
+              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * CookieDateSupport.field_a);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
-            var5 = new DelayedServerPacket(var2_long + (long)var4, wq.field_b, new byte[ScrollPane.field_Pb]);
+            var5 = new DelayedServerPacket(var2_long + (long)var4, PacketDecodeState.field_b, new byte[ScrollPane.field_Pb]);
             for (var6 = 0; var6 < ScrollPane.field_Pb; var6++) {
               var5.field_l[var6] = PlayerContextMenu.field_e.payload[var6];
             }
-            vn.field_g.addFirst((byte) -64, var5);
-            wq.field_b = -1;
-            stackIn_17_0 = wq.field_b;
+            ReflectionRequestSupport.field_g.addFirst((byte) -64, var5);
+            PacketDecodeState.field_b = -1;
+            stackIn_17_0 = PacketDecodeState.field_b;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -1076,7 +1076,7 @@ final class HuffmanCodec {
           Sprite[] var2 = (Sprite[]) null;
           HuffmanCodec.drawNineSlice(37, -53, 4, 85, 43, -30, (Sprite[]) null);
         }
-        return ResourceArchive.field_e + (ol.field_e << 2) + (BallDebugOverlay.field_i << 4);
+        return ResourceArchive.field_e + (FixedPointVectorSupport.field_e << 2) + (BallDebugOverlay.field_i << 4);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -1148,7 +1148,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = md.bitwiseOr(var12, var11);
+                  var3[var10] = RenderingInitializationSupport.bitwiseOr(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

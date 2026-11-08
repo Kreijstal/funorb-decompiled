@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CueAim {
-    static sa[] field_g;
+    static CollisionContact[] field_g;
     int polarAngle;
     static int field_m;
     static int field_b;
@@ -88,7 +88,7 @@ final class CueAim {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
-        nj stackIn_38_0 = null;
+        LogoMaterial stackIn_38_0 = null;
         int stackIn_43_0 = 0;
         int stackIn_47_0 = 0;
         RuntimeException stackIn_52_0 = null;
@@ -105,7 +105,7 @@ final class CueAim {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        nj var21 = null;
+        LogoMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -153,7 +153,7 @@ final class CueAim {
           var40 = var49;
           var8 = var40;
           var64 = new int[param2.field_o];
-          var61 = oj.field_r;
+          var61 = HighScoreSubmission.field_r;
           var62 = ProgressDialog.field_mb;
           var63 = PoolGameModel.field_g;
           for (var13 = 0; param2.field_o > var13; var13++) {
@@ -193,19 +193,19 @@ final class CueAim {
             var15Lifetime1 = param2.field_y[var14Lifetime1];
             var16 = param2.field_r[var14Lifetime1];
             var17 = param2.field_u[var14Lifetime1];
-            if (param2.field_x[var14Lifetime1] >= oj.field_r.length) {
+            if (param2.field_x[var14Lifetime1] >= HighScoreSubmission.field_r.length) {
               stackIn_25_0 = -1;
             } else {
               stackIn_25_0 = param2.field_x[var14Lifetime1];
             }
             var18 = stackIn_25_0;
-            if (oj.field_r.length > param2.field_w[var14Lifetime1]) {
+            if (HighScoreSubmission.field_r.length > param2.field_w[var14Lifetime1]) {
               stackIn_28_0 = param2.field_w[var14Lifetime1];
             } else {
               stackIn_28_0 = -1;
             }
             var19 = stackIn_28_0;
-            if (param2.field_O[var14Lifetime1] < oj.field_r.length) {
+            if (param2.field_O[var14Lifetime1] < HighScoreSubmission.field_r.length) {
               stackIn_31_0 = param2.field_O[var14Lifetime1];
             } else {
               stackIn_31_0 = -1;
@@ -263,7 +263,7 @@ final class CueAim {
               var39 = (16711913 & var36 * var30) >>> 8 | -755040001 & var30 * var35 >>> 8;
               var38 = var38 + var32 * 65793;
               var39 = var39 + 65793 * var33;
-              ta.a((byte) -125, var27, var22, 255 & var37, var39 >> 16, var38 >> 8 & 255, var23, var38 >> 16, (var39 & 65528) >> 8, var37 >> 8 & 255, var38 & 255, var24, var37 >> 16, var25, var26, 255 & var39);
+              GradientPaletteSupport.a((byte) -125, var27, var22, 255 & var37, var39 >> 16, var38 >> 8 & 255, var23, var38 >> 16, (var39 & 65528) >> 8, var37 >> 8 & 255, var38 & 255, var24, var37 >> 16, var25, var26, 255 & var39);
             }
             var43++;
           }
@@ -283,7 +283,7 @@ final class CueAim {
     }
 
     final static void a(byte param0) {
-        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, tq.field_m);
+        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, AccountStateQuery.field_m);
         if (param0 > -97) {
           TriangleMesh var2 = (TriangleMesh) null;
           CueAim.a(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);
@@ -376,7 +376,7 @@ final class CueAim {
 
     final static void a(int param0, Sprite param1) {
         try {
-          uc.pushRasterSnapshot((byte) 90);
+          RasterStateSupport.pushRasterSnapshot((byte) 90);
           SoftwareRasterizer.setTarget(param1.field_D, param1.field_w, param1.field_y);
           if (param0 < 38) {
             Sprite var3 = (Sprite) null;
@@ -463,11 +463,11 @@ final class CueAim {
 
     static {
         int var0 = 0;
-        field_g = new sa[512];
+        field_g = new CollisionContact[512];
         pottingTheRestOfYourGroup = "Potting the rest of your group for you.";
         field_i = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         for (var0 = 0; field_g.length > var0; var0++) {
-          field_g[var0] = new sa();
+          field_g[var0] = new CollisionContact();
         }
         field_c = 0;
         field_f = 479232;

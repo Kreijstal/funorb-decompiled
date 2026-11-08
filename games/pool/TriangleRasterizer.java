@@ -5,7 +5,7 @@ final class TriangleRasterizer {
     static int clipWidth;
     private static boolean field_g;
     private static boolean field_h;
-    static in textureProvider;
+    static TextureProvider textureProvider;
     static int[] scanlineOffsets;
     static boolean clipHorizontalSpans;
     static int[] cosineTable;
@@ -148,7 +148,7 @@ final class TriangleRasterizer {
         return (param0 & 65408) + param1;
     }
 
-    final static void setTextureProvider(in param0) {
+    final static void setTextureProvider(TextureProvider param0) {
         textureProvider = param0;
     }
 
@@ -1709,7 +1709,7 @@ final class TriangleRasterizer {
         if (var19 != null &&
           blendAlpha <= 10) {
           field_h = textureProvider.isSize64(param18, 55);
-          stackIn_6_0 = (textureProvider.a(param18, (byte) -91) == 0);
+          stackIn_6_0 = (textureProvider.getTextureAlphaMode(param18, (byte) -91) == 0);
           field_l = stackIn_6_0;
           var20 = param4 - param3;
           var21 = param1 - param0;
@@ -2290,7 +2290,7 @@ final class TriangleRasterizer {
           }
           return;
         }
-        var20Lifetime1 = textureProvider.getTextureId(108, param18);
+        var20Lifetime1 = textureProvider.getAverageTextureColor(108, param18);
         TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.scaleHslLightness(var20Lifetime1, param6), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param7), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param8));
     }
 
@@ -2300,7 +2300,7 @@ final class TriangleRasterizer {
         clipHeight = param3 - param1;
         TriangleRasterizer.centerProjection();
         if (scanlineOffsets.length < clipHeight) {
-          scanlineOffsets = new int[te.nextPowerOfTwo(-17931, clipHeight)];
+          scanlineOffsets = new int[ByteArrayNode.nextPowerOfTwo(-17931, clipHeight)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < clipHeight; var5++) {

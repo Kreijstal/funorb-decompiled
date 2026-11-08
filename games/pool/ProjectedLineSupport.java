@@ -32,7 +32,7 @@ final class ProjectedLineSupport {
             memberslevelName = (String) null;
           }
           var3 = param1.screenY;
-          stackIn_8_0 = (wn.field_i >= var2_int) && (var2_int + param1.width > wn.field_i) && (var3 <= DebouncedValidationProvider.field_f) && (var3 + param1.height > DebouncedValidationProvider.field_f);
+          stackIn_8_0 = (ReflectionReplySupport.field_i >= var2_int) && (var2_int + param1.width > ReflectionReplySupport.field_i) && (var3 <= DebouncedValidationProvider.field_f) && (var3 + param1.height > DebouncedValidationProvider.field_f);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class ProjectedLineSupport {
             stackIn_2_0 = null;
             return (AlphaFont) (stackIn_2_0);
           }
-          var2 = new AlphaFont(param0, AchievementsScreen.field_I, ih.field_d, LinkButtonPainter.field_a, rc.field_f, IntrusiveNode.field_h, LimitedRandomAccessFile.field_b);
+          var2 = new AlphaFont(param0, AchievementsScreen.field_I, LoginRequestSupport.field_d, LinkButtonPainter.field_a, AccountTextSupport.field_f, IntrusiveNode.field_h, LimitedRandomAccessFile.field_b);
           OpacityWidget.h(-1);
           if (!param1) {
             pleasewaitDotdotdot = (String) null;
@@ -100,8 +100,8 @@ final class ProjectedLineSupport {
     }
 
     final static void resetChatComposition(int param0) {
-        td.field_c.setLength(0);
-        hn.field_b = 0;
+        Base37Support.field_c.setLength(0);
+        CookieDateSupport.field_b = 0;
         if (param0 != 14851) {
           memberslevelName = (String) null;
         }

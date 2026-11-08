@@ -27,10 +27,10 @@ final class MidiNoteMixer extends PcmStream {
     final static void c(int param0) {
         if (param0 > -21) {
           field_s = (AudioOutput) null;
-          lf.a(17, (byte) 77);
+          LoginEncryptionSupport.a(17, (byte) 77);
           return;
         }
-        lf.a(17, (byte) 77);
+        LoginEncryptionSupport.a(17, (byte) 77);
     }
 
     private final void a(int param0, MusicVoice param1, int param2) {
@@ -148,7 +148,7 @@ final class MidiNoteMixer extends PcmStream {
               if (!var11.isRamping()) {
                 continue;
               }
-              this.field_p.b(var11);
+              this.field_p.addSubstream(var11);
             }
           }
           if (param3 != 1048575) {
@@ -260,7 +260,7 @@ final class MidiNoteMixer extends PcmStream {
           if (param1 != -30100) {
             MidiNoteMixer.releaseStatics(-75);
           }
-          stackIn_3_0 = tq.a(3, -20607, param0);
+          stackIn_3_0 = AccountStateQuery.a(3, -20607, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

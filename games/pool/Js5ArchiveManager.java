@@ -201,8 +201,8 @@ final class Js5ArchiveManager {
         var2.position = var2.position + 1;
         int var4 = var2.position;
         var2.writeByte(2, false);
-        var2.a(md.field_c, (byte) 0, 0, md.field_c.length);
-        var2.writeByte(pm.field_l, false);
+        var2.a(RenderingInitializationSupport.field_c, (byte) 0, 0, RenderingInitializationSupport.field_c.length);
+        var2.writeByte(SceneNodeEntry.field_l, false);
         var2.writeByte(FreePlayRules.field_l, false);
         var2.a(AgeValidator.field_s, (byte) 0, 0, AgeValidator.field_s.length);
         var2.writeByteLengthPrefix(var2.position - var4, true);

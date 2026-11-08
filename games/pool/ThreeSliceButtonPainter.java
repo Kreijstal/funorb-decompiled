@@ -103,7 +103,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             var13 = param1;
             var14 = param0;
             var15 = 8355711 & var16[var11] >> 1;
-            var10[var11] = ArchiveLoadSequence.b(255, var14 >> 17) + ArchiveLoadSequence.b(65280, var13 >> 9) - (-ArchiveLoadSequence.b(var12 >> 1, 16711680) - var15);
+            var10[var11] = ArchiveLoadSequence.bitwiseAnd(255, var14 >> 17) + ArchiveLoadSequence.bitwiseAnd(65280, var13 >> 9) - (-ArchiveLoadSequence.bitwiseAnd(var12 >> 1, 16711680) - var15);
             param0 = param0 + param5;
             param3++;
             param1 = param1 + param2;
@@ -151,7 +151,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     }
 
     private ThreeSliceButtonPainter(int param0, int param1, int param2) {
-        this.field_y = jj.field_S;
+        this.field_y = BirthDatePromptPanel.field_S;
         this.field_z = param2;
         this.font = LoginPayloadFactory.field_e;
         this.field_r = param0;

@@ -47,11 +47,11 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         int var2;
         int var3;
         var3 = Pool.field_O;
-        rl.field_e = 0;
-        dq.field_h = null;
+        MonotonicClock.field_e = 0;
+        TransformRotationSupport.field_h = null;
         AudioService.field_c = null;
-        var2 = na.field_a;
-        na.field_a = wn.field_h;
+        var2 = IntegerSyntaxSupport.field_a;
+        IntegerSyntaxSupport.field_a = ReflectionReplySupport.field_h;
         if (param1 == 51) {
           GameRules.field_c.field_a = 2;
         } else {
@@ -61,7 +61,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
             GameRules.field_c.field_a = 5;
           }
         }
-        wn.field_h = var2;
+        ReflectionReplySupport.field_h = var2;
         GameRules.field_c.field_e = GameRules.field_c.field_e + 1;
         if (GameRules.field_c.field_e >= 2 &&
           param1 == 51) {
@@ -110,7 +110,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           this.owner = param0;
           this.continueButton = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) null);
           this.continueButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          var7 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.h((byte) 44), this.g((byte) 99)}, -1, NodeHashTableIterator.createU13terms);
+          var7 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.h((byte) 44), this.closeLinkMarkup((byte) 99)}, -1, NodeHashTableIterator.createU13terms);
           var3 = 20;
           var4 = new TextWidgetPainter(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
           this.termsText = new HotspotTextWidget(var7, var4);
@@ -172,7 +172,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         }
     }
 
-    private final String g(byte param0) {
+    private final String closeLinkMarkup(byte param0) {
         int var2 = 117 % ((26 - param0) / 55);
         return "</col></u>";
     }

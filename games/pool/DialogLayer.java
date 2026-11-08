@@ -23,11 +23,11 @@ final class DialogLayer extends SingleChildWidget {
           if (param1 <= PlayerContextMenu.field_e.position) {
             return true;
           }
-          if (null == jd.field_c) {
+          if (null == Atan2Support.field_c) {
             return false;
           }
           try {
-            var2_int = jd.field_c.readByte(107);
+            var2_int = Atan2Support.field_c.readByte(107);
             if (param0 < 27) {
               connectionlostWithreason = (String) null;
             }
@@ -35,8 +35,8 @@ final class DialogLayer extends SingleChildWidget {
               if (var2_int > param1 - PlayerContextMenu.field_e.position) {
                 var2_int = param1 - PlayerContextMenu.field_e.position;
               }
-              jd.field_c.a(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
-              MenuScreen.field_v = rl.monotonicTimeMillis((byte) -97);
+              Atan2Support.field_c.a(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
+              MenuScreen.field_v = MonotonicClock.monotonicTimeMillis((byte) -97);
               PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + var2_int;
               if (param1 > PlayerContextMenu.field_e.position) {
                 return false;
@@ -66,7 +66,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, TranslatedUiText.field_j, md.field_b, (WidgetPainter) null, (WidgetListener) null);
+        super(0, 0, TranslatedUiText.field_j, RenderingInitializationSupport.field_b, (WidgetPainter) null, (WidgetListener) null);
         this.dialogs = new IntrusiveDeque();
     }
 
@@ -92,7 +92,7 @@ final class DialogLayer extends SingleChildWidget {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        pn var9 = null;
+        ChatMessage var9 = null;
         var7 = Pool.field_O;
         try {
           if (OpacityWidget.field_P.height != AwtEventQueueSupport.field_g) {
@@ -115,24 +115,24 @@ final class DialogLayer extends SingleChildWidget {
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            var5 = il.field_g[var4_int];
+            var5 = BeveledFrameSpriteFactory.field_g[var4_int];
             if (var5 != null) {
               if (var5.pressedButton != 0) {
                 NodeHashTableIterator.a(27937, var5, var4_int);
               }
-              var6 = f.a(param2 ^ 5, var4_int);
+              var6 = LobbyPanelLayoutSupport.a(param2 ^ 5, var4_int);
               AlignedIconLabel.field_Mb[var4_int].sprite = ThemeSelectScreen.field_M[var6];
-              ta.field_b[var4_int].text = TranslatedUiText.field_i[var6];
+              GradientPaletteSupport.field_b[var4_int].text = TranslatedUiText.field_i[var6];
             }
           }
           if (param2 != MeshBoundsSupport.field_e.pressedButton) {
-            fc.field_b = new ReportAbuseDialog(MeshBoundsSupport.field_e.screenX, MeshBoundsSupport.field_e.screenY, MeshBoundsSupport.field_e.width, MeshBoundsSupport.field_e.height, param3, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
+            AccountMenuText.field_b = new ReportAbuseDialog(MeshBoundsSupport.field_e.screenX, MeshBoundsSupport.field_e.screenY, MeshBoundsSupport.field_e.width, MeshBoundsSupport.field_e.height, param3, AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A, (String) null, 0L);
           }
           var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {
-            na.a(var9, 122);
+            IntegerSyntaxSupport.a(var9, 122);
           }
-          var8 = dk.a(1);
+          var8 = GlowParticle.a(1);
           if (var8 != null) {
             CacheEntry.field_B = var8;
           }
@@ -169,7 +169,7 @@ final class DialogLayer extends SingleChildWidget {
           if (param1 != -1) {
             DialogLayer.i(82);
           }
-          stackIn_5_0 = (gf.a(param1 ^ 88, param0) != null);
+          stackIn_5_0 = (UsernameSuggestionSupport.a(param1 ^ 88, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ final class DialogLayer extends SingleChildWidget {
     final static void a(boolean param0) {
         ProgressDialog.m(8421504);
         TranslatedUiText.b(-31384);
-        fc.field_b = null;
+        AccountMenuText.field_b = null;
         if (!param0) {
           DialogLayer.i(114);
         }
@@ -263,7 +263,7 @@ final class DialogLayer extends SingleChildWidget {
         if (null != LobbyPlayer.field_Ub) {
           LobbyPlayer.field_Ub.resetSelection(17517);
         }
-        if (0 != hn.field_b) {
+        if (0 != CookieDateSupport.field_b) {
           ProjectedLineSupport.resetChatComposition(param0 ^ 1124);
         }
         ProgressBarWidget.field_G = 0;
@@ -296,18 +296,18 @@ final class DialogLayer extends SingleChildWidget {
           LocalGameSetupScreen.field_J = null;
           AccountWelcomePanel.field_S = 0;
           SoundCache.field_k.clear((byte) 69);
-          jq.field_c.clear((byte) 48);
+          QuickChatNavigationSupport.field_c.clear((byte) 48);
           var2 = AimTarget.field_b.firstForIteration((byte) -125);
           while (var2 != null) {
             var2.unlinkNode(false);
             var2 = AimTarget.field_b.nextForIteration(83);
           }
-          var2Lifetime1 = gd.field_c.firstForIteration((byte) -125);
+          var2Lifetime1 = LoginTextSupport.field_c.firstForIteration((byte) -125);
           while (var2Lifetime1 != null) {
             var2Lifetime1.unlinkNode(false);
-            var2Lifetime1 = gd.field_c.nextForIteration(68);
+            var2Lifetime1 = LoginTextSupport.field_c.nextForIteration(68);
           }
-          th.field_a = 0;
+          ChatInputSupport.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.GA(" + param0 + ')');
         }

@@ -121,7 +121,7 @@ final class IntrusiveDeque {
             muChatLobbyShowAll = (String) null;
           }
           while (IntrusiveDequeCursor.field_e > var1_int) {
-            wb.field_e[var1_int] = null;
+            RankingsProtocolSupport.field_e[var1_int] = null;
             var1_int++;
           }
           IntrusiveDequeCursor.field_e = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TextureCache implements in {
+final class TextureCache implements TextureProvider {
     static String day;
     static int[] field_e;
     private Texture[] field_f;
@@ -53,21 +53,21 @@ final class TextureCache implements in {
         if (param3 > param2) {
           if (param1 <= param3) {
             if (param1 <= param2) {
-              ol.a(SoftwareRasterizer.pixels, param5, param4, param2, param7, param1, param3, param0, 19547);
+              FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param4, param2, param7, param1, param3, param0, 19547);
               if (param6 == 108) {
                 return;
               }
               TextureCache.a(-1);
               return;
             }
-            ol.a(SoftwareRasterizer.pixels, param5, param7, param1, param4, param2, param3, param0, 19547);
+            FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param1, param4, param2, param3, param0, 19547);
             if (param6 == 108) {
               return;
             }
             TextureCache.a(-1);
             return;
           }
-          ol.a(SoftwareRasterizer.pixels, param5, param7, param3, param0, param2, param1, param4, 19547);
+          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param3, param0, param2, param1, param4, 19547);
           if (param6 != 108) {
             TextureCache.a(-1);
             return;
@@ -75,7 +75,7 @@ final class TextureCache implements in {
           return;
         }
         if (param1 > param2) {
-          ol.a(SoftwareRasterizer.pixels, param5, param0, param2, param7, param3, param1, param4, param6 + 19439);
+          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param2, param7, param3, param1, param4, param6 + 19439);
           if (param6 != 108) {
             TextureCache.a(-1);
             return;
@@ -83,14 +83,14 @@ final class TextureCache implements in {
           return;
         }
         if (param1 <= param3) {
-          ol.a(SoftwareRasterizer.pixels, param5, param4, param3, param0, param1, param2, param7, 19547);
+          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param4, param3, param0, param1, param2, param7, 19547);
           if (param6 != 108) {
             TextureCache.a(-1);
             return;
           }
           return;
         }
-        ol.a(SoftwareRasterizer.pixels, param5, param0, param1, param4, param3, param2, param7, param6 + 19439);
+        FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param1, param4, param3, param2, param7, param6 + 19439);
         if (param6 != 108) {
           TextureCache.a(-1);
           return;
@@ -104,10 +104,10 @@ final class TextureCache implements in {
           if (ClientException.field_j) {
             return -1;
           }
-          if (hh.field_a < LongAndTextLoginPayload.field_l) {
+          if (PackedColorSupport.field_a < LongAndTextLoginPayload.field_l) {
             return -1;
           }
-          if (!(FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= hh.field_a)) {
+          if (!(FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= PackedColorSupport.field_a)) {
             return KillerBallSkin.field_m;
           }
           return -1;
@@ -115,16 +115,16 @@ final class TextureCache implements in {
         if (ClientException.field_j) {
           return -1;
         }
-        if (hh.field_a < LongAndTextLoginPayload.field_l) {
+        if (PackedColorSupport.field_a < LongAndTextLoginPayload.field_l) {
           return -1;
         }
-        if (FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= hh.field_a) {
+        if (FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= PackedColorSupport.field_a) {
           return -1;
         }
         return KillerBallSkin.field_m;
     }
 
-    public final int a(int param0, byte param1) {
+    public final int getTextureAlphaMode(int param0, byte param1) {
         if (param1 != -91) {
           field_c = (UiComponent) null;
           if (!this.field_f[param0].field_n) {
@@ -138,14 +138,14 @@ final class TextureCache implements in {
         return 0;
     }
 
-    public final int getTextureId(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         if (param0 < 44) {
           return -97;
         }
         if (this.field_f[param1] == null) {
           return 0;
         }
-        return this.field_f[param1].textureId;
+        return this.field_f[param1].averageColor;
     }
 
     final static void a(int param0, LobbyGame param1) {
@@ -228,10 +228,10 @@ final class TextureCache implements in {
         if (param2 < 12) {
           TextureCache.b(26);
           ScrollPane.a(param1, (byte) 0, param0);
-          return (tp.field_h[0] << 9) / tp.field_h[2] + 320;
+          return (LookupRetrySupport.field_h[0] << 9) / LookupRetrySupport.field_h[2] + 320;
         }
         ScrollPane.a(param1, (byte) 0, param0);
-        return (tp.field_h[0] << 9) / tp.field_h[2] + 320;
+        return (LookupRetrySupport.field_h[0] << 9) / LookupRetrySupport.field_h[2] + 320;
     }
 
     public static void releaseStatics(int param0) {

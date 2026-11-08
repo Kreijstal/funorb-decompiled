@@ -28,10 +28,10 @@ final class OptionsScreen extends MenuScreen {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (nl.field_c != null) {
+            if (ServerListLauncher.field_c != null) {
               try {
-                nl.field_c.seek(0, 0L);
-                nl.field_c.readFully(param1 + 114, var6);
+                ServerListLauncher.field_c.seek(0, 0L);
+                ServerListLauncher.field_c.readFully(param1 + 114, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -87,8 +87,8 @@ final class OptionsScreen extends MenuScreen {
 
     final static void f(int param0) {
         NetworkGameClient.field_z = false;
-        ro.field_e = false;
-        lf.a(param0, (byte) 111);
+        ProjectedVertex.field_e = false;
+        LoginEncryptionSupport.a(param0, (byte) 111);
         TimeTrialSelectScreen.field_I = IntrusiveDequeCursor.field_c;
         TabbedPane.field_Lb = IntrusiveDequeCursor.field_c;
     }
@@ -113,15 +113,15 @@ final class OptionsScreen extends MenuScreen {
         int[] var9 = null;
         int[] var7Lifetime1;
         try {
-          var8 = mj.identityTransform(-31121);
+          var8 = TransformSupport.identityTransform(-31121);
           var7 = var8;
           var8[param3] = param1;
           var8[0] = param5;
           var8[2] = param2;
-          param4[0 + param0] = hc.a(param6, var8, (byte) 101);
-          var9 = dq.a((byte) 10, f.a((byte) 94, var8));
+          param4[0 + param0] = SceneNodeFactory.createSceneNode(param6, var8, (byte) 101);
+          var9 = TransformRotationSupport.rotateTransformHalfTurnZ((byte) 10, LobbyPanelLayoutSupport.a((byte) 94, var8));
           var7Lifetime1 = var9;
-          param4[param0 + 1] = hc.a(param6, var9, (byte) 101);
+          param4[param0 + 1] = SceneNodeFactory.createSceneNode(param6, var9, (byte) 101);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "be.EB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

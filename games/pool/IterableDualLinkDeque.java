@@ -99,14 +99,14 @@ final class IterableDualLinkDeque implements Iterable {
           var2 = BufferedFile.field_h * BufferedFile.field_h;
           var3 = -(NodeHashTableIterator.field_a * NodeHashTableIterator.field_a) + var2;
           BufferedFile.field_a.setBounds(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
-          oi.field_n.setBounds(0, 2147483647, var1 + (202 + var3 * 438 / var2), 438, SoftwareRasterizer.height - 120 - 4);
+          IntegerRecordSubmission.field_n.setBounds(0, 2147483647, var1 + (202 + var3 * 438 / var2), 438, SoftwareRasterizer.height - 120 - 4);
           return;
         }
         field_b = 3;
         var2Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var3Lifetime1 = -(NodeHashTableIterator.field_a * NodeHashTableIterator.field_a) + var2Lifetime1;
         BufferedFile.field_a.setBounds(90, 2147483647, -(199 * var3Lifetime1 / var2Lifetime1) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
-        oi.field_n.setBounds(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, SoftwareRasterizer.height - 120 - 4);
+        IntegerRecordSubmission.field_n.setBounds(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, SoftwareRasterizer.height - 120 - 4);
     }
 
     final static void a(int param0, String param1) {
@@ -114,8 +114,8 @@ final class IterableDualLinkDeque implements Iterable {
           return;
         }
         try {
-          na.a(-58, param1);
-          wf.a(false, DebouncedValidationProvider.loggingIn, -128);
+          IntegerSyntaxSupport.a(-58, param1);
+          PacketAvailabilitySupport.a(false, DebouncedValidationProvider.loggingIn, -128);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -164,7 +164,7 @@ final class IterableDualLinkDeque implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -64) {
-            stackIn_4_0 = w.a(false, param1, (byte) -37);
+            stackIn_4_0 = GrowableIntListFactory.a(false, param1, (byte) -37);
             return stackIn_4_0;
           }
           return false;

@@ -3,7 +3,7 @@
  */
 final class MessageScreen extends MenuScreen {
     static IntrusiveDeque field_H;
-    static ie field_K;
+    static BrowserCookieSupport field_K;
     static TickClock field_J;
     static String field_I;
 
@@ -19,7 +19,7 @@ final class MessageScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -26) {
-            field_K = (ie) null;
+            field_K = (BrowserCookieSupport) null;
           }
           if (param2 == null) {
             return null;
@@ -34,7 +34,7 @@ final class MessageScreen extends MenuScreen {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = jj.a(param2, (byte) 91);
+          stackIn_11_0 = BirthDatePromptPanel.a(param2, (byte) 91);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ final class MessageScreen extends MenuScreen {
           }
           var6 = AccountCreationForm.field_V[KillerRules.field_f];
           if (param0 != -1) {
-            field_K = (ie) null;
+            field_K = (BrowserCookieSupport) null;
           }
           if (var6 != null) {
             var6.draw(245, 199);
@@ -187,9 +187,9 @@ final class MessageScreen extends MenuScreen {
               var2_int = (var7.field_w + 60) * SocketArchiveNetworkClient.field_u / QuickChatDynamicCommand.field_l;
               var3 = var2_int - 30;
               if (!InstructionsScreen.field_K) {
-                ml.a(var3 * -256 / 30, (byte) 63, 245, 199, var7, (var7.field_w - var3) * 256 / 30);
+                LoginMethod.a(var3 * -256 / 30, (byte) 63, 245, 199, var7, (var7.field_w - var3) * 256 / 30);
               } else {
-                ml.a((-var3 + var7.field_w) * 256 / 30, (byte) 117, 245, 199, var7, var3 * -256 / 30);
+                LoginMethod.a((-var3 + var7.field_w) * 256 / 30, (byte) 117, 245, 199, var7, var3 * -256 / 30);
               }
             }
           }
@@ -224,7 +224,7 @@ final class MessageScreen extends MenuScreen {
 
     static {
         field_H = new IntrusiveDeque();
-        field_K = new ie();
+        field_K = new BrowserCookieSupport();
         field_I = null;
     }
 }

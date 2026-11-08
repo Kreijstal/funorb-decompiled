@@ -74,10 +74,10 @@ final class LimitedRandomAccessFile {
         if (param0 != -22444) {
           LimitedRandomAccessFile.b((byte) -109);
         }
-        if (wn.field_a != null) {
-          var1 = wn.field_a;
+        if (ReflectionReplySupport.field_a != null) {
+          var1 = ReflectionReplySupport.field_a;
           synchronized (var1) {
-            wn.field_a = null;
+            ReflectionReplySupport.field_a = null;
           }
         }
     }
@@ -114,9 +114,9 @@ final class LimitedRandomAccessFile {
 
     final static void b(byte param0) {
         IntrusiveNode.field_e = null;
-        wn.field_g = null;
+        ReflectionReplySupport.field_g = null;
         OptionsScreen.field_L = null;
-        vi.field_c = null;
+        Cp1252CharacterSupport.field_c = null;
         Bzip2DecoderState.field_D = null;
         if (CipherPacketBuffer.field_z != null) {
           TimeTrialSelectScreen.field_J = CipherPacketBuffer.field_z;

@@ -12,13 +12,13 @@ final class AgeValidator extends TextInputValidator {
     static int field_q;
     static String createAlertPasscontainsnamePartial;
 
-    final na validationStateForText(String param0, boolean param1) {
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        na stackIn_2_0 = null;
-        na stackIn_9_0 = null;
+        IntegerSyntaxSupport stackIn_2_0 = null;
+        IntegerSyntaxSupport stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -26,7 +26,7 @@ final class AgeValidator extends TextInputValidator {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!AgeValidator.isFriend(10, var4)) {
-            stackIn_2_0 = gp.field_d;
+            stackIn_2_0 = AchievementProtocolSupport.field_d;
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -38,7 +38,7 @@ final class AgeValidator extends TextInputValidator {
             var3_int <= 130) {
             return ProxySocketConnector.field_e;
           }
-          stackIn_9_0 = gp.field_d;
+          stackIn_9_0 = AchievementProtocolSupport.field_d;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class AgeValidator extends TextInputValidator {
           if (param0 != 10) {
             AgeValidator.a(false, 105);
           }
-          stackIn_3_0 = na.isValidInteger(10, true, param1, 87);
+          stackIn_3_0 = IntegerSyntaxSupport.isValidInteger(10, true, param1, 87);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,14 +101,14 @@ final class AgeValidator extends TextInputValidator {
           if (!param0) {
             field_q = -113;
           }
-          var2 = (PlayingSound) (oj.field_o.last((byte) -36));
+          var2 = (PlayingSound) (HighScoreSubmission.field_o.last((byte) -36));
           while (var2 != null) {
             if (var2.field_m.b(-108)) {
               var2.field_o.setVolume(BallDebugOverlay.field_b * var2.field_n + 128 >> 8);
             } else {
               var2.unlink((byte) -117);
             }
-            var2 = (PlayingSound) (oj.field_o.previous((byte) -5));
+            var2 = (PlayingSound) (HighScoreSubmission.field_o.previous((byte) -5));
           }
           if (null != UsernameSuggestionsPanel.field_R) {
             var2Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.last((byte) 113));
@@ -131,7 +131,7 @@ final class AgeValidator extends TextInputValidator {
           field_r = 25;
           if (ArrayWidgetGroup.field_H) {
             SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-            e.field_a.drawRoot((byte) -79, false);
+            ChoiceButtonSupport.field_a.drawRoot((byte) -79, false);
             return;
           }
           return;
@@ -140,7 +140,7 @@ final class AgeValidator extends TextInputValidator {
           return;
         }
         SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-        e.field_a.drawRoot((byte) -79, false);
+        ChoiceButtonSupport.field_a.drawRoot((byte) -79, false);
     }
 
     final static void h(int param0) {
@@ -190,7 +190,7 @@ final class AgeValidator extends TextInputValidator {
             var4 = (String) null;
             this.validationMessageForText((String) null, -21);
           }
-          if (this.validationStateForText(param0, true) != gp.field_d) {
+          if (this.validationStateForText(param0, true) != AchievementProtocolSupport.field_d) {
             return null;
           }
           stackIn_5_0 = ThemeSelectScreen.createAlertInvalidage;

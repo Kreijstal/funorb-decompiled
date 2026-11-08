@@ -41,7 +41,7 @@ class UiWidget extends IntrusiveNode {
           if (param1 != 958) {
             return;
           }
-          var5_int = this.containsPointer(param2, param3, wn.field_i, param1 - 959, DebouncedValidationProvider.field_f) ? 1 : 0;
+          var5_int = this.containsPointer(param2, param3, ReflectionReplySupport.field_i, param1 - 959, DebouncedValidationProvider.field_f) ? 1 : 0;
           if (var5_int != (this.pointerInside ? 1 : 0)) {
             stackIn_7_1 = (var5_int != 0);
             this.pointerInside = stackIn_7_1;
@@ -416,13 +416,13 @@ class UiWidget extends IntrusiveNode {
               0 != MatchingTextValidator.field_s) {
               this.clearKeyboardFocus((byte) 99);
             }
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
-          if (wp.field_d != 0 &&
+          if (CompressedContainerSupport.field_d != 0 &&
             var5 != 0) {
-            this.handlePointerWheel(this, wn.field_i, wp.field_d, param3, (byte) -127, DebouncedValidationProvider.field_f, param1);
+            this.handlePointerWheel(this, ReflectionReplySupport.field_i, CompressedContainerSupport.field_d, param3, (byte) -127, DebouncedValidationProvider.field_f, param1);
             if (MatchingTextValidator.field_s != 0) {
               if (this.handlePointerPress(this, param1, true, MatchingTextValidator.field_s, UsernameAvailabilityValidator.field_o, param3, DialogLayer.field_W)) {
                 param2 = false;
@@ -431,16 +431,16 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (ClientInputResetSupport.field_b != 0) {
-              sa.field_t = ClientInputResetSupport.field_b;
-              ue.a((byte) 70, this.getHoverText(-94));
+              CollisionContact.field_t = ClientInputResetSupport.field_b;
+              StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
               return param2;
             }
-            if (sa.field_t == 0) {
-              sa.field_t = ClientInputResetSupport.field_b;
-              ue.a((byte) 70, this.getHoverText(-94));
+            if (CollisionContact.field_t == 0) {
+              CollisionContact.field_t = ClientInputResetSupport.field_b;
+              StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
               return param2;
             }
-            this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+            this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
             var7 = PasswordValidator.field_u;
             if (var7 != null) {
               if (var7.listener instanceof DropListener) {
@@ -448,24 +448,24 @@ class UiWidget extends IntrusiveNode {
               }
               PasswordValidator.field_u = null;
             }
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
           if (MatchingTextValidator.field_s != 0) {
             if (!this.handlePointerPress(this, param1, true, MatchingTextValidator.field_s, UsernameAvailabilityValidator.field_o, param3, DialogLayer.field_W)) {
               if (var5 == 0) {
                 if (ClientInputResetSupport.field_b != 0) {
-                  sa.field_t = ClientInputResetSupport.field_b;
-                  ue.a((byte) 70, this.getHoverText(-94));
+                  CollisionContact.field_t = ClientInputResetSupport.field_b;
+                  StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                   return param2;
                 }
-                if (sa.field_t == 0) {
-                  sa.field_t = ClientInputResetSupport.field_b;
-                  ue.a((byte) 70, this.getHoverText(-94));
+                if (CollisionContact.field_t == 0) {
+                  CollisionContact.field_t = ClientInputResetSupport.field_b;
+                  StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                   return param2;
                 }
-                this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+                this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
                 var8 = PasswordValidator.field_u;
                 if (var8 != null) {
                   if (var8.listener instanceof DropListener) {
@@ -473,22 +473,22 @@ class UiWidget extends IntrusiveNode {
                   }
                   PasswordValidator.field_u = null;
                 }
-                sa.field_t = ClientInputResetSupport.field_b;
-                ue.a((byte) 70, this.getHoverText(-94));
+                CollisionContact.field_t = ClientInputResetSupport.field_b;
+                StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                 return param2;
               }
               this.clearKeyboardFocus((byte) 99);
               if (ClientInputResetSupport.field_b != 0) {
-                sa.field_t = ClientInputResetSupport.field_b;
-                ue.a((byte) 70, this.getHoverText(-94));
+                CollisionContact.field_t = ClientInputResetSupport.field_b;
+                StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                 return param2;
               }
-              if (sa.field_t == 0) {
-                sa.field_t = ClientInputResetSupport.field_b;
-                ue.a((byte) 70, this.getHoverText(-94));
+              if (CollisionContact.field_t == 0) {
+                CollisionContact.field_t = ClientInputResetSupport.field_b;
+                StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                 return param2;
               }
-              this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+              this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
               var9 = PasswordValidator.field_u;
               if (var9 != null) {
                 if (var9.listener instanceof DropListener) {
@@ -496,23 +496,23 @@ class UiWidget extends IntrusiveNode {
                 }
                 PasswordValidator.field_u = null;
               }
-              sa.field_t = ClientInputResetSupport.field_b;
-              ue.a((byte) 70, this.getHoverText(-94));
+              CollisionContact.field_t = ClientInputResetSupport.field_b;
+              StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
               return param2;
             }
             param2 = false;
           }
           if (ClientInputResetSupport.field_b != 0) {
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
-          if (sa.field_t == 0) {
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+          if (CollisionContact.field_t == 0) {
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
-          this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+          this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
           var10 = PasswordValidator.field_u;
           if (var10 != null) {
             if (var10.listener instanceof DropListener) {
@@ -520,8 +520,8 @@ class UiWidget extends IntrusiveNode {
             }
             PasswordValidator.field_u = null;
           }
-          sa.field_t = ClientInputResetSupport.field_b;
-          ue.a((byte) 70, this.getHoverText(-94));
+          CollisionContact.field_t = ClientInputResetSupport.field_b;
+          StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
           return param2;
         }
         UiWidget.releaseStatics((byte) 17);
@@ -530,19 +530,19 @@ class UiWidget extends IntrusiveNode {
           if (var5Lifetime1 != 0 &&
             0 != MatchingTextValidator.field_s) {
             this.clearKeyboardFocus((byte) 99);
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
         } else {
-          if (wp.field_d == 0) {
+          if (CompressedContainerSupport.field_d == 0) {
             regionExit1: {
               if (MatchingTextValidator.field_s != 0) {
                 if (!this.handlePointerPress(this, param1, true, MatchingTextValidator.field_s, UsernameAvailabilityValidator.field_o, param3, DialogLayer.field_W)) {
                   if (var5Lifetime1 == 0) {
                     if (((ClientInputResetSupport.field_b == 0)) &&
-                      ((sa.field_t != 0))) {
-                      this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+                      ((CollisionContact.field_t != 0))) {
+                      this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
                       var11 = PasswordValidator.field_u;
                       if (var11 != null) {
                         if (var11.listener instanceof DropListener) {
@@ -554,8 +554,8 @@ class UiWidget extends IntrusiveNode {
                   } else {
                     this.clearKeyboardFocus((byte) 99);
                     if (((ClientInputResetSupport.field_b == 0)) &&
-                      ((sa.field_t != 0))) {
-                      this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+                      ((CollisionContact.field_t != 0))) {
+                      this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
                       var12 = PasswordValidator.field_u;
                       if (var12 != null) {
                         if (var12.listener instanceof DropListener) {
@@ -570,8 +570,8 @@ class UiWidget extends IntrusiveNode {
                 param2 = false;
               }
               if (ClientInputResetSupport.field_b == 0 &&
-                sa.field_t != 0) {
-                this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+                CollisionContact.field_t != 0) {
+                this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
                 var13 = PasswordValidator.field_u;
                 if (var13 != null) {
                   if (var13.listener instanceof DropListener) {
@@ -581,12 +581,12 @@ class UiWidget extends IntrusiveNode {
                 }
               }
             }
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
           if (var5Lifetime1 != 0) {
-            this.handlePointerWheel(this, wn.field_i, wp.field_d, param3, (byte) -127, DebouncedValidationProvider.field_f, param1);
+            this.handlePointerWheel(this, ReflectionReplySupport.field_i, CompressedContainerSupport.field_d, param3, (byte) -127, DebouncedValidationProvider.field_f, param1);
             if (MatchingTextValidator.field_s != 0) {
               if (this.handlePointerPress(this, param1, true, MatchingTextValidator.field_s, UsernameAvailabilityValidator.field_o, param3, DialogLayer.field_W)) {
                 param2 = false;
@@ -595,8 +595,8 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (ClientInputResetSupport.field_b == 0 &&
-              sa.field_t != 0) {
-              this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+              CollisionContact.field_t != 0) {
+              this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
               var14 = PasswordValidator.field_u;
               if (var14 != null) {
                 if (var14.listener instanceof DropListener) {
@@ -604,27 +604,27 @@ class UiWidget extends IntrusiveNode {
                 }
                 PasswordValidator.field_u = null;
               }
-              sa.field_t = ClientInputResetSupport.field_b;
-              ue.a((byte) 70, this.getHoverText(-94));
+              CollisionContact.field_t = ClientInputResetSupport.field_b;
+              StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
               return param2;
             }
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
           if (MatchingTextValidator.field_s != 0) {
             if (!this.handlePointerPress(this, param1, true, MatchingTextValidator.field_s, UsernameAvailabilityValidator.field_o, param3, DialogLayer.field_W)) {
               if (ClientInputResetSupport.field_b != 0) {
-                sa.field_t = ClientInputResetSupport.field_b;
-                ue.a((byte) 70, this.getHoverText(-94));
+                CollisionContact.field_t = ClientInputResetSupport.field_b;
+                StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                 return param2;
               }
-              if (sa.field_t == 0) {
-                sa.field_t = ClientInputResetSupport.field_b;
-                ue.a((byte) 70, this.getHoverText(-94));
+              if (CollisionContact.field_t == 0) {
+                CollisionContact.field_t = ClientInputResetSupport.field_b;
+                StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
                 return param2;
               }
-              this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+              this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
               var15 = PasswordValidator.field_u;
               if (var15 != null) {
                 if (var15.listener instanceof DropListener) {
@@ -632,15 +632,15 @@ class UiWidget extends IntrusiveNode {
                 }
                 PasswordValidator.field_u = null;
               }
-              sa.field_t = ClientInputResetSupport.field_b;
-              ue.a((byte) 70, this.getHoverText(-94));
+              CollisionContact.field_t = ClientInputResetSupport.field_b;
+              StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
               return param2;
             }
             param2 = false;
           }
           if (ClientInputResetSupport.field_b == 0 &&
-            sa.field_t != 0) {
-            this.handlePointerRelease(param1, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
+            CollisionContact.field_t != 0) {
+            this.handlePointerRelease(param1, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 105, this);
             var17 = PasswordValidator.field_u;
             if (var17 != null) {
               if (var17.listener instanceof DropListener) {
@@ -648,13 +648,13 @@ class UiWidget extends IntrusiveNode {
               }
               PasswordValidator.field_u = null;
             }
-            sa.field_t = ClientInputResetSupport.field_b;
-            ue.a((byte) 70, this.getHoverText(-94));
+            CollisionContact.field_t = ClientInputResetSupport.field_b;
+            StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
             return param2;
           }
         }
-        sa.field_t = ClientInputResetSupport.field_b;
-        ue.a((byte) 70, this.getHoverText(-94));
+        CollisionContact.field_t = ClientInputResetSupport.field_b;
+        StartupInterfaceSupport.a((byte) 70, this.getHoverText(-94));
         return param2;
     }
 
@@ -757,7 +757,7 @@ class UiWidget extends IntrusiveNode {
         if (param1 < 73) {
           return;
         }
-        String var5 = jd.a(9383);
+        String var5 = Atan2Support.a(9383);
         if (var5 == null) {
           return;
         }
@@ -802,15 +802,15 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
-        io var4 = null;
+        WidgetTextLayout var4 = null;
         this.textOffsetX = 0;
         this.textOffsetY = 0;
         try {
           this.listener = param2;
           this.renderer = param1;
           this.widgetText = param0;
-          if (this.renderer instanceof io) {
-            var4 = (io) ((Object) this.renderer);
+          if (this.renderer instanceof WidgetTextLayout) {
+            var4 = (WidgetTextLayout) ((Object) this.renderer);
             this.widgetWidth = var4.preferredWidth(this, -1848150943);
             this.widgetHeight = var4.preferredHeight(1, this);
           }

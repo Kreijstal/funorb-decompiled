@@ -10,7 +10,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         if (param0 != 0) {
           return true;
         }
-        return TimeTrialSelectScreen.field_I == ra.field_e ? true : false;
+        return TimeTrialSelectScreen.field_I == IntegerRecordProtocolSupport.field_e ? true : false;
     }
 
     final static void a(boolean param0, int param1) {
@@ -20,13 +20,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          IndexedSpriteState.a(ArchiveRequest.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
-          for (var2_int = 0; var2_int < jh.field_c; var2_int++) {
+          IndexedSpriteState.a(ArchiveRequest.field_z, MenuScreenBase.field_c, 0, LogoJingleLoader.field_a, param1, (byte) -63, param0);
+          for (var2_int = 0; var2_int < MenuScreenBase.field_c; var2_int++) {
             NetworkGameClient.field_H[var2_int + param1] = var2_int;
           }
-          IndexedSpriteState.a(DiskCacheWorker.field_d, jh.field_c + param1, param1, jl.field_c, param1 + param1, (byte) -74, false);
-          if (jh.field_c > param1) {
-            jh.field_c = param1;
+          IndexedSpriteState.a(DiskCacheWorker.field_d, MenuScreenBase.field_c + param1, param1, SpriteSheetLoadSupport.field_c, param1 + param1, (byte) -74, false);
+          if (MenuScreenBase.field_c > param1) {
+            MenuScreenBase.field_c = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

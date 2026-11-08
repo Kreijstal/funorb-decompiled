@@ -62,31 +62,31 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return ij.createAlertInvaliddate;
+        return AnimatedNotification.createAlertInvaliddate;
     }
 
     final static boolean h(int param0) {
         if (param0 != -3) {
           return true;
         }
-        if (null == sm.field_C) {
+        if (null == PasswordInputPainter.field_C) {
           return false;
         }
-        if (!sm.field_C.handleNormalizedNameKey(20628)) {
+        if (!PasswordInputPainter.field_C.handleNormalizedNameKey(20628)) {
           return false;
         }
         return true;
     }
 
-    final na currentValidationState(int param0) {
+    final IntegerSyntaxSupport currentValidationState(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        na stackIn_4_0 = null;
-        na stackIn_8_0 = null;
-        na stackIn_11_0 = null;
+        IntegerSyntaxSupport stackIn_4_0 = null;
+        IntegerSyntaxSupport stackIn_8_0 = null;
+        IntegerSyntaxSupport stackIn_11_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != -14836) {
@@ -97,21 +97,21 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var4 = this.dateInput.getYear(49);
           var5 = HighscoresScreen.h(param0 + 14872);
           if (1890 > var4) {
-            stackIn_4_0 = gp.field_d;
+            stackIn_4_0 = AchievementProtocolSupport.field_d;
             return stackIn_4_0;
           }
           if (-3 + var5 < var4) {
-            stackIn_8_0 = gp.field_d;
+            stackIn_8_0 = AchievementProtocolSupport.field_d;
             return stackIn_8_0;
           }
           if (!QuickChatMenu.a((byte) 122, var4, var3, var2_int)) {
-            stackIn_11_0 = gp.field_d;
+            stackIn_11_0 = AchievementProtocolSupport.field_d;
             return stackIn_11_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return gp.field_d;
+          return AchievementProtocolSupport.field_d;
         }
         return ProxySocketConnector.field_e;
     }

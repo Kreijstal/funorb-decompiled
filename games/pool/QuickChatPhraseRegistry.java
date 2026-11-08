@@ -255,7 +255,7 @@ final class QuickChatPhraseRegistry {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         int var5 = 35 / ((-27 - param3) / 38);
-        uc.pushRasterSnapshot((byte) -106);
+        RasterStateSupport.pushRasterSnapshot((byte) -106);
         SoftwareRasterizer.intersectClip(param0, param1, param2, param4);
     }
 
@@ -269,7 +269,7 @@ final class QuickChatPhraseRegistry {
         field_j = null;
     }
 
-    QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, si param3) {
+    QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatResolverMarker param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

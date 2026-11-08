@@ -22,13 +22,13 @@ final class LoginTextValue {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          TabbedPane.field_Lb = td.field_f;
+          TabbedPane.field_Lb = Base37Support.field_f;
           if (param3 != -16) {
             LoginTextValue.a(-100);
           }
           if (param1 == 255) {
             stackIn_7_0 = !(ButtonPainter.field_b >= 13);
-            QuickChatCategoryDefinition.field_B = ta.a(stackIn_7_0, param3 - 30898);
+            QuickChatCategoryDefinition.field_B = GradientPaletteSupport.a(stackIn_7_0, param3 - 30898);
             return;
           }
           if (param1 < 100) {
@@ -65,10 +65,10 @@ final class LoginTextValue {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (nl.field_c != null) {
+          if (ServerListLauncher.field_c != null) {
             try {
-              nl.field_c.seek(param0 ^ 100, 0L);
-              nl.field_c.write(24, PlayerContextMenu.field_e.payload, PlayerContextMenu.field_e.position, -1);
+              ServerListLauncher.field_c.seek(param0 ^ 100, 0L);
+              ServerListLauncher.field_c.write(24, PlayerContextMenu.field_e.payload, PlayerContextMenu.field_e.position, -1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

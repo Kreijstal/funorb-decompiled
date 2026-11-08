@@ -36,11 +36,11 @@ final class Pocket {
         RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
         try {
-          for (var1_int = param0; var1_int < ml.field_h.length; var1_int++) {
-            if (ml.field_h[var1_int][0] != 2 &&
-              ml.field_h[var1_int][2] != 2 &&
-              QuaternionRotationSupport.a(ml.field_h[var1_int][1], ml.field_h[var1_int][0], 115) &&
-              QuaternionRotationSupport.a(ml.field_h[var1_int][3], ml.field_h[var1_int][2], 110)) {
+          for (var1_int = param0; var1_int < LoginMethod.field_h.length; var1_int++) {
+            if (LoginMethod.field_h[var1_int][0] != 2 &&
+              LoginMethod.field_h[var1_int][2] != 2 &&
+              QuaternionRotationSupport.a(LoginMethod.field_h[var1_int][1], LoginMethod.field_h[var1_int][0], 115) &&
+              QuaternionRotationSupport.a(LoginMethod.field_h[var1_int][3], LoginMethod.field_h[var1_int][2], 110)) {
               return false;
             }
           }
@@ -171,15 +171,15 @@ final class Pocket {
         }
     }
 
-    final static ie a(int param0, String param1) {
+    final static BrowserCookieSupport a(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
-        ie stackIn_2_0 = null;
-        ie stackIn_6_0 = null;
-        ie stackIn_9_0 = null;
-        ie stackIn_19_0 = null;
-        ie stackIn_23_0 = null;
+        BrowserCookieSupport stackIn_2_0 = null;
+        BrowserCookieSupport stackIn_6_0 = null;
+        BrowserCookieSupport stackIn_9_0 = null;
+        BrowserCookieSupport stackIn_19_0 = null;
+        BrowserCookieSupport stackIn_23_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -188,15 +188,15 @@ final class Pocket {
         try {
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_2_0 = uj.field_e;
+            stackIn_2_0 = WorldPointProjectionSupport.field_e;
             return stackIn_2_0;
           }
           if (63 < var2_int) {
-            stackIn_6_0 = la.field_h;
+            stackIn_6_0 = ChatPanelSupport.field_h;
             return stackIn_6_0;
           }
           if (param0 <= 36) {
-            stackIn_9_0 = (ie) null;
+            stackIn_9_0 = (BrowserCookieSupport) null;
             return stackIn_9_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {
@@ -208,7 +208,7 @@ final class Pocket {
                 return stackIn_19_0;
               }
             } else {
-              if (ie.field_c.indexOf(var4) == -1) {
+              if (BrowserCookieSupport.field_c.indexOf(var4) == -1) {
                 stackIn_23_0 = MessageScreen.field_K;
                 return stackIn_23_0;
               }

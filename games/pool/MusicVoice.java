@@ -23,13 +23,13 @@ final class MusicVoice extends IntrusiveNode {
     PcmSampleStream field_o;
     int field_n;
     int field_p;
-    kp field_x;
+    MusicPatchEnvelope field_x;
 
     final static void c(byte param0) {
-        if (null != ta.field_h) {
-          SpaceObject.field_d.a(ta.field_h);
+        if (null != GradientPaletteSupport.field_h) {
+          SpaceObject.field_d.removeSubstream(GradientPaletteSupport.field_h);
         }
-        ta.field_h = null;
+        GradientPaletteSupport.field_h = null;
         UsernameSuggestionsPanel.field_R = null;
         int var1 = 107 / ((24 - param0) / 56);
         ReportAbuseDialog.field_Xb = null;
@@ -50,7 +50,7 @@ final class MusicVoice extends IntrusiveNode {
           var2 = param1.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != td.encodeBase37((byte) 52, var3)) {
+            if (0L != Base37Support.encodeBase37((byte) 52, var3)) {
               return;
             }
           }
@@ -85,7 +85,7 @@ final class MusicVoice extends IntrusiveNode {
         int var4Lifetime1;
         var6 = Pool.field_O;
         try {
-          KeyHandler.field_c = new int[jd.field_h.length][5][3];
+          KeyHandler.field_c = new int[Atan2Support.field_h.length][5][3];
           var2_int = param0[9] >> 2;
           var3 = param0[10] >> 2;
           var4 = var2_int * var2_int + var3 * var3 >> 16;
@@ -93,7 +93,7 @@ final class MusicVoice extends IntrusiveNode {
             var3 = 65536;
             var2_int = 0;
           } else {
-            var5 = rf.inverseSquareRoot(var4, -127);
+            var5 = AccountDisplayNameSupport.inverseSquareRoot(var4, -127);
             var2_int = ArchiveProvider.divideFixed16(var5, (byte) -81, (long)var2_int);
             var3 = ArchiveProvider.divideFixed16(var5, (byte) -121, (long)var3);
           }
@@ -108,19 +108,19 @@ final class MusicVoice extends IntrusiveNode {
           while (var8 < KeyHandler.field_c.length) {
             KeyHandler.field_c[var8][0][0] = var2_int;
             KeyHandler.field_c[var8][0][1] = var3;
-            KeyHandler.field_c[var8][0][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][0][2] = Atan2Support.field_h[var8];
             KeyHandler.field_c[var8][1][0] = var2_int >> 1;
             KeyHandler.field_c[var8][1][1] = var3 >> 1;
-            KeyHandler.field_c[var8][1][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][1][2] = Atan2Support.field_h[var8];
             KeyHandler.field_c[var8][2][0] = 0;
             KeyHandler.field_c[var8][2][1] = 0;
-            KeyHandler.field_c[var8][2][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][2][2] = Atan2Support.field_h[var8];
             KeyHandler.field_c[var8][3][0] = -var2_int >> 1;
             KeyHandler.field_c[var8][3][1] = -var3 >> 1;
-            KeyHandler.field_c[var8][3][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][3][2] = Atan2Support.field_h[var8];
             KeyHandler.field_c[var8][4][0] = -var2_int;
             KeyHandler.field_c[var8][4][1] = -var3;
-            KeyHandler.field_c[var8][4][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][4][2] = Atan2Support.field_h[var8];
             MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][0], false);
             MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][1], param1);
             MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][2], false);

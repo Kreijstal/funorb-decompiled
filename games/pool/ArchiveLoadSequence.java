@@ -79,7 +79,7 @@ final class ArchiveLoadSequence {
         field_l = null;
     }
 
-    static int b(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -128,7 +128,7 @@ final class ArchiveLoadSequence {
           ScreenProjectionSupport.field_a = param5;
           NanoTickClock.field_t.text = param2;
           EmailAvailabilityValidator.field_n = param4;
-          rl.field_b.text = param1;
+          MonotonicClock.field_b.text = param1;
           LobbyGame.field_Vb.text = param0;
           FreePlayRules.c((byte) -86);
           GzipDecoder.field_h = true;
@@ -139,7 +139,7 @@ final class ArchiveLoadSequence {
 
     final static LobbyGame a(int param0, int param1) {
         int var2 = 8 / ((73 - param1) / 46);
-        return lf.field_a == null ? null : (LobbyGame) (lf.field_a.findFirst((long)param0, false));
+        return LoginEncryptionSupport.field_a == null ? null : (LobbyGame) (LoginEncryptionSupport.field_a.findFirst((long)param0, false));
     }
 
     private ArchiveLoadSequence() throws Throwable {

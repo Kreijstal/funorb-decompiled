@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class TextWidgetPainter implements WidgetPainter, io {
+class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     static String field_n;
     private int shadowColor;
     int textColor;
@@ -448,9 +448,9 @@ class TextWidgetPainter implements WidgetPainter, io {
           if (null != CheckboxWidget.field_U) {
             CheckboxWidget.field_U.shutdown(-11307);
           }
-          if (ih.field_a != null) {
+          if (LoginRequestSupport.field_a != null) {
             try {
-              ih.field_a.close((byte) 86);
+              LoginRequestSupport.field_a.close((byte) 86);
             } catch (IOException iOException) {
             }
           }

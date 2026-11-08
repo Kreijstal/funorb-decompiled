@@ -6,18 +6,18 @@ final class EmailValidator extends TextInputValidator {
     static int[] field_n;
 
     final static void c(byte param0) {
-        hn.field_b = 0;
-        jq.a((byte) -128);
+        CookieDateSupport.field_b = 0;
+        QuickChatNavigationSupport.restoreQuickChatMenu((byte) -128);
         int var1 = 96 / ((param0 - 1) / 38);
     }
 
-    final na validationStateForText(String param0, boolean param1) {
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        na stackIn_6_0 = null;
-        na stackIn_9_0 = null;
-        na stackIn_11_0 = null;
+        IntegerSyntaxSupport stackIn_6_0 = null;
+        IntegerSyntaxSupport stackIn_9_0 = null;
+        IntegerSyntaxSupport stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -26,14 +26,14 @@ final class EmailValidator extends TextInputValidator {
           stackIn_3_0 = (Camera.a(-1, param0) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
-            stackIn_6_0 = gp.field_d;
+            stackIn_6_0 = AchievementProtocolSupport.field_d;
             return stackIn_6_0;
           }
           if (param1) {
             stackIn_11_0 = ProxySocketConnector.field_e;
             return stackIn_11_0;
           }
-          stackIn_9_0 = (na) null;
+          stackIn_9_0 = (IntegerSyntaxSupport) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class EmailValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validationStateForText(param0, true) == gp.field_d) {
+          if (this.validationStateForText(param0, true) == AchievementProtocolSupport.field_d) {
             stackIn_3_0 = DelayedServerPacket.createAlertInvalidemail;
             return stackIn_3_0;
           }

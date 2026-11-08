@@ -58,7 +58,7 @@ final class BirthDateInputWidget extends DateInputWidget {
             field_db = 112;
           }
           param0 = UiComponentNode.replaceChar('_', "", param0, 1);
-          var3 = qa.reverseString(param2, 0);
+          var3 = HotspotRectangle.reverseString(param2, 0);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

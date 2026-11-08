@@ -29,38 +29,38 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           var12 = param1;
           var3 = var12;
-          ml.field_l[6] = var12[6];
-          ml.field_l[10] = var12[10];
-          ml.field_l[9] = var12[9];
-          ml.field_l[4] = var12[4];
-          ml.field_l[5] = var12[5];
-          ml.field_l[8] = var12[8];
-          ml.field_l[11] = var12[11];
+          LoginMethod.field_l[6] = var12[6];
+          LoginMethod.field_l[10] = var12[10];
+          LoginMethod.field_l[9] = var12[9];
+          LoginMethod.field_l[4] = var12[4];
+          LoginMethod.field_l[5] = var12[5];
+          LoginMethod.field_l[8] = var12[8];
+          LoginMethod.field_l[11] = var12[11];
           if (0L != (LinkButtonPainter.field_i & 256L) &&
             TextLineLayout.field_c[58]) {
-            ml.field_l[1] = -1152 + var12[1] >> 4;
-            ml.field_l[2] = var12[2] >> 4;
-            ml.field_l[0] = var12[0] - 2304 >> 4;
+            LoginMethod.field_l[1] = -1152 + var12[1] >> 4;
+            LoginMethod.field_l[2] = var12[2] >> 4;
+            LoginMethod.field_l[0] = var12[0] - 2304 >> 4;
           } else {
-            var20 = ml.field_l;
-            ml.field_l[2] = 0;
-            var19 = ml.field_l;
+            var20 = LoginMethod.field_l;
+            LoginMethod.field_l[2] = 0;
+            var19 = LoginMethod.field_l;
             var19[1] = 0;
             var20[0] = 0;
           }
-          ml.field_l[7] = var12[7];
-          ml.field_l[3] = var12[3];
+          LoginMethod.field_l[7] = var12[7];
+          LoginMethod.field_l[3] = var12[3];
           var4 = 24 / ((-64 - param0) / 52);
           var3_int = 0;
           var5 = 0;
           while (CacheEntry.field_C[0].length > var3_int) {
             if (var5 < CacheEntry.field_C[0].length) {
-              var6 = -ml.field_l[0] + CacheEntry.field_C[0][var3_int];
-              var7 = -ml.field_l[1] + CacheEntry.field_C[1][var3_int];
-              var8 = CacheEntry.field_C[2][var3_int] - ml.field_l[2];
-              var9 = ml.field_l[3] * var6 - (-(var7 * ml.field_l[4]) - var8 * ml.field_l[5]) >> 3;
-              var10 = var8 * ml.field_l[8] + var7 * ml.field_l[7] + ml.field_l[6] * var6 >> 3;
-              var8 = var8 * ml.field_l[11] + ml.field_l[9] * var6 + ml.field_l[10] * var7 >> 16;
+              var6 = -LoginMethod.field_l[0] + CacheEntry.field_C[0][var3_int];
+              var7 = -LoginMethod.field_l[1] + CacheEntry.field_C[1][var3_int];
+              var8 = CacheEntry.field_C[2][var3_int] - LoginMethod.field_l[2];
+              var9 = LoginMethod.field_l[3] * var6 - (-(var7 * LoginMethod.field_l[4]) - var8 * LoginMethod.field_l[5]) >> 3;
+              var10 = var8 * LoginMethod.field_l[8] + var7 * LoginMethod.field_l[7] + LoginMethod.field_l[6] * var6 >> 3;
+              var8 = var8 * LoginMethod.field_l[11] + LoginMethod.field_l[9] * var6 + LoginMethod.field_l[10] * var7 >> 16;
               if (var8 == 0) {
                 var8 = -1;
               }
@@ -91,12 +91,12 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void loadSounds(SoundCache param0, int param1) {
         try {
-          ie.field_f = param0.getVorbisSound("space_ball_1", true, "");
+          BrowserCookieSupport.field_f = param0.getVorbisSound("space_ball_1", true, "");
           Bzip2DecoderState.field_i = param0.getVorbisSound("space_ball_2", true, "");
           IntrusiveNode.field_a = param0.getVorbisSound("space_ball_3", true, "");
           int var3_int = -40 / ((39 - param1) / 38);
           QuickChatDynamicCommand.field_j = param0.getVorbisSound("space_ball_4", true, "");
-          wn.field_b = param0.getVorbisSound("space_ball_cushion1", true, "");
+          ReflectionReplySupport.field_b = param0.getVorbisSound("space_ball_cushion1", true, "");
           PotEvent.field_o = param0.getVorbisSound("space_ball_cushion2", true, "");
           PacketBuffer.field_q = param0.getVorbisSound("space_ball_cushion3", true, "");
           IterableDualLinkDeque.field_f = param0.getVorbisSound("space_ball_cushion4", true, "");
@@ -197,7 +197,7 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void releaseModels(boolean param0) {
         super.releaseModels(param0);
-        ra.field_f = null;
+        IntegerRecordProtocolSupport.field_f = null;
         TextInputValidator.field_h = null;
         DialogLayer.field_R = null;
         DisplayModeSupport.field_b = (int[][]) null;
@@ -226,11 +226,11 @@ final class SpaceTableScene extends ModelTableScene {
         var4 = Pool.field_O;
         try {
           super.buildTableGeometry(param0, param1);
-          ra.field_f = new SpaceObject[32];
-          ReportAbuseDialog.field_Ub = new int[ra.field_f.length];
-          MultiHandleSliderWidget.field_N = new int[ra.field_f.length];
-          for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
-            ra.field_f[var3_int] = new SpaceObject(this.field_O[om.field_w]);
+          IntegerRecordProtocolSupport.field_f = new SpaceObject[32];
+          ReportAbuseDialog.field_Ub = new int[IntegerRecordProtocolSupport.field_f.length];
+          MultiHandleSliderWidget.field_N = new int[IntegerRecordProtocolSupport.field_f.length];
+          for (var3_int = 0; var3_int < IntegerRecordProtocolSupport.field_f.length; var3_int++) {
+            IntegerRecordProtocolSupport.field_f[var3_int] = new SpaceObject(this.field_O[TextInputPainter.field_w]);
             ReportAbuseDialog.field_Ub[var3_int] = var3_int;
           }
           return;
@@ -250,9 +250,9 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void b(boolean param0) {
         super.b(param0);
-        int var2 = -220 - gd.field_g;
+        int var2 = -220 - LoginTextSupport.field_g;
         TextInputValidator.field_h.translate(0, (byte) -97, var2, 0);
-        gd.field_g = gd.field_g + var2;
+        LoginTextSupport.field_g = LoginTextSupport.field_g + var2;
     }
 
     final void updatePottedBalls(int param0, PoolMatchController param1) {
@@ -266,12 +266,12 @@ final class SpaceTableScene extends ModelTableScene {
         var4 = Pool.field_O;
         try {
           super.updatePottedBalls(param0, param1);
-          for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
-            ra.field_f[var3_int].move(2115785453);
+          for (var3_int = 0; var3_int < IntegerRecordProtocolSupport.field_f.length; var3_int++) {
+            IntegerRecordProtocolSupport.field_f[var3_int].move(2115785453);
           }
-          if (gd.field_g < 0) {
+          if (LoginTextSupport.field_g < 0) {
             TextInputValidator.field_h.translate(0, (byte) -96, 1, 0);
-            gd.field_g = gd.field_g + 1;
+            LoginTextSupport.field_g = LoginTextSupport.field_g + 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final static UiComponent f(boolean param0) {
+    final static UiComponent getChatScrollContent(boolean param0) {
         if (!param0) {
           return (UiComponent) null;
         }
@@ -315,10 +315,10 @@ final class SpaceTableScene extends ModelTableScene {
           if (2 == var6) {
             var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
             if (var6 == 0) {
-              kp.a(100, ie.field_f, param3, param1);
+              MusicPatchEnvelope.a(100, BrowserCookieSupport.field_f, param3, param1);
             } else {
               if (var6 == 1) {
-                kp.a(100, IntrusiveNode.field_a, param3, param1);
+                MusicPatchEnvelope.a(100, IntrusiveNode.field_a, param3, param1);
               }
             }
           } else {
@@ -326,23 +326,23 @@ final class SpaceTableScene extends ModelTableScene {
               var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
               if (var6 != 0) {
                 if (var6 == 1) {
-                  kp.a(100, QuickChatDynamicCommand.field_j, param3, param1);
+                  MusicPatchEnvelope.a(100, QuickChatDynamicCommand.field_j, param3, param1);
                 }
               } else {
-                kp.a(100, Bzip2DecoderState.field_i, param3, param1);
+                MusicPatchEnvelope.a(100, Bzip2DecoderState.field_i, param3, param1);
               }
             } else {
               if (var6 == 7) {
-                kp.a(100, Ball.field_L, param3, param1);
+                MusicPatchEnvelope.a(100, Ball.field_L, param3, param1);
               } else {
                 if (var6 == 8) {
-                  kp.a(100, IsaacCipher.field_l, param3, param1);
+                  MusicPatchEnvelope.a(100, IsaacCipher.field_l, param3, param1);
                 } else {
                   if (var6 == 6) {
-                    kp.a(100, PolarBallSkin.field_l, param3, param1);
+                    MusicPatchEnvelope.a(100, PolarBallSkin.field_l, param3, param1);
                   } else {
                     if (var6 == 4) {
-                      kp.a(100, MirroredSceneSupport.field_a, param3, param1);
+                      MusicPatchEnvelope.a(100, MirroredSceneSupport.field_a, param3, param1);
                     }
                   }
                 }
@@ -352,18 +352,18 @@ final class SpaceTableScene extends ModelTableScene {
         } else {
           var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (var6 == 0) {
-            kp.a(100, wn.field_b, param3, param1);
+            MusicPatchEnvelope.a(100, ReflectionReplySupport.field_b, param3, param1);
           } else {
             if (1 != var6) {
               if (var6 == 2) {
-                kp.a(100, PacketBuffer.field_q, param3, param1);
+                MusicPatchEnvelope.a(100, PacketBuffer.field_q, param3, param1);
               } else {
                 if (var6 == 3) {
-                  kp.a(100, IterableDualLinkDeque.field_f, param3, param1);
+                  MusicPatchEnvelope.a(100, IterableDualLinkDeque.field_f, param3, param1);
                 }
               }
             } else {
-              kp.a(100, PotEvent.field_o, param3, param1);
+              MusicPatchEnvelope.a(100, PotEvent.field_o, param3, param1);
             }
           }
         }
@@ -452,15 +452,15 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           var25 = param1.gameModel.balls;
           var3 = var25;
-          var57 = f.a((byte) 109, param1.viewMatrix);
+          var57 = LobbyPanelLayoutSupport.a((byte) 109, param1.viewMatrix);
           var24 = var57;
           var4 = var24;
           var52 = var4;
           var19 = var52;
           var11 = var19;
           var5_ref_int__ = var11;
-          GzipDecoder.field_d[0] = var52[0] - sb.a(288.0f, true) >> 2;
-          GzipDecoder.field_d[1] = var52[1] - sb.a(144.0f, true) >> 2;
+          GzipDecoder.field_d[0] = var52[0] - SpriteResourceSupport.floatToFixed3(288.0f, true) >> 2;
+          GzipDecoder.field_d[1] = var52[1] - SpriteResourceSupport.floatToFixed3(144.0f, true) >> 2;
           GzipDecoder.field_d[2] = var52[2] >> 2;
           if (var5_ref_int__ != GzipDecoder.field_d) {
             GzipDecoder.field_d[7] = var52[7];
@@ -495,39 +495,39 @@ final class SpaceTableScene extends ModelTableScene {
           var21 = var54;
           var13 = var21;
           var5_ref_int__Lifetime2 = var13;
-          ml.field_l[7] = var54[7];
-          ml.field_l[4] = var54[4];
+          LoginMethod.field_l[7] = var54[7];
+          LoginMethod.field_l[4] = var54[4];
           if ((256L & LinkButtonPainter.field_i) != 0L &&
             TextLineLayout.field_c[58]) {
-            ml.field_l[0] = var54[0] - 2304 >> 4;
-            ml.field_l[1] = var54[1] - 1152 >> 4;
-            ml.field_l[2] = var54[2] >> 4;
+            LoginMethod.field_l[0] = var54[0] - 2304 >> 4;
+            LoginMethod.field_l[1] = var54[1] - 1152 >> 4;
+            LoginMethod.field_l[2] = var54[2] >> 4;
           } else {
-            var55 = ml.field_l;
+            var55 = LoginMethod.field_l;
             var22 = var55;
             var14 = var22;
             var6_ref_int__ = var14;
-            ml.field_l[2] = 0;
-            var56 = ml.field_l;
+            LoginMethod.field_l[2] = 0;
+            var56 = LoginMethod.field_l;
             var23 = var56;
             var15 = var23;
             var7_ref_int__ = var15;
             var55[0] = 0;
             var56[1] = 0;
           }
-          ml.field_l[8] = var54[8];
-          ml.field_l[5] = var54[5];
-          ml.field_l[6] = var54[6];
-          ml.field_l[9] = var54[9];
-          ml.field_l[11] = var54[11];
-          ml.field_l[10] = var54[10];
-          ml.field_l[3] = var54[3];
-          var4[1] = ArchiveLoadSequence.b(var57[1], -4);
-          var4[0] = ArchiveLoadSequence.b(var57[0], -4);
-          var4[2] = ArchiveLoadSequence.b(var57[2], -4);
+          LoginMethod.field_l[8] = var54[8];
+          LoginMethod.field_l[5] = var54[5];
+          LoginMethod.field_l[6] = var54[6];
+          LoginMethod.field_l[9] = var54[9];
+          LoginMethod.field_l[11] = var54[11];
+          LoginMethod.field_l[10] = var54[10];
+          LoginMethod.field_l[3] = var54[3];
+          var4[1] = ArchiveLoadSequence.bitwiseAnd(var57[1], -4);
+          var4[0] = ArchiveLoadSequence.bitwiseAnd(var57[0], -4);
+          var4[2] = ArchiveLoadSequence.bitwiseAnd(var57[2], -4);
           this.prepareBallDrawOrder(false, var57, var25);
-          for (var5 = 0; var5 < ra.field_f.length; var5++) {
-            MultiHandleSliderWidget.field_N[var5] = ra.field_f[ReportAbuseDialog.field_Ub[var5]].viewDepth(var57, (byte) 91);
+          for (var5 = 0; var5 < IntegerRecordProtocolSupport.field_f.length; var5++) {
+            MultiHandleSliderWidget.field_N[var5] = IntegerRecordProtocolSupport.field_f[ReportAbuseDialog.field_Ub[var5]].viewDepth(var57, (byte) 91);
           }
           DropTargetWidget.a(ReportAbuseDialog.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
           PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
@@ -537,17 +537,17 @@ final class SpaceTableScene extends ModelTableScene {
             waitingforFonts = (String) null;
           }
           var26.sortModelsByDepth((byte) -108, 0, var26.field_j.length, var88);
-          var28 = ff.field_d;
+          var28 = SlidingPanelSupport.field_d;
           var89 = GzipDecoder.field_d;
           var28.sortModelsByDepth((byte) 18, 0, var28.field_j.length, var89);
-          var30 = wb.field_c;
+          var30 = RankingsProtocolSupport.field_c;
           var90 = GzipDecoder.field_d;
           var30.sortModelsByDepth((byte) 120, 0, var30.field_j.length, var90);
-          var32 = tq.field_o;
+          var32 = AccountStateQuery.field_o;
           var91 = GzipDecoder.field_d;
           var32.sortModelsByDepth((byte) 48, 0, var32.field_j.length, var91);
           for (var5Lifetime1 = 0; var5Lifetime1 < LobbyGame.field_rc.length; var5Lifetime1++) {
-            var92 = tq.field_o.field_c[var5Lifetime1];
+            var92 = AccountStateQuery.field_o.field_c[var5Lifetime1];
             var7 = 576;
             var8 = 288;
             stackIn_21_0 = LobbyGame.field_rc;
@@ -575,7 +575,7 @@ final class SpaceTableScene extends ModelTableScene {
             stackIn_30_2 = !(stackIn_26_2 + stackIn_26_3 * stackIn_27_4 <= 0);
             stackIn_21_0[stackIn_21_1] = stackIn_30_2;
           }
-          var35 = ij.field_o;
+          var35 = AnimatedNotification.field_o;
           var93 = GzipDecoder.field_d;
           var35.sortModelsByDepth((byte) -116, 0, var35.field_j.length, var93);
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
@@ -586,13 +586,13 @@ final class SpaceTableScene extends ModelTableScene {
             }
           }
           NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
-          var16 = f.a((byte) -68, var57);
+          var16 = LobbyPanelLayoutSupport.a((byte) -68, var57);
           var94 = var16;
           var16[0] = var16[0] - 2304;
           var16[1] = var16[1] - 1152;
-          for (var6 = ra.field_f.length - 1; 0 <= var6; var6--) {
+          for (var6 = IntegerRecordProtocolSupport.field_f.length - 1; 0 <= var6; var6--) {
             if (PacketBuffer.field_l <= MultiHandleSliderWidget.field_N[var6]) {
-              ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 126);
+              IntegerRecordProtocolSupport.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 126);
               continue;
             }
             break;
@@ -600,20 +600,20 @@ final class SpaceTableScene extends ModelTableScene {
           var38 = TextInputValidator.field_h;
           var95 = GzipDecoder.field_d;
           var38.drawModelRange((byte) -105, 0, var38.field_j.length, var95);
-          var40 = ij.field_o;
+          var40 = AnimatedNotification.field_o;
           var96 = GzipDecoder.field_d;
           var40.drawModelRange((byte) -97, 0, var40.field_j.length, var96);
-          var42 = wb.field_c;
+          var42 = RankingsProtocolSupport.field_c;
           var97 = GzipDecoder.field_d;
           var42.drawModelRange((byte) -81, 0, var42.field_j.length, var97);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             this.drawBallsInOrder(var57, (byte) 126, false, var25, false);
           }
-          var44 = tq.field_o;
+          var44 = AccountStateQuery.field_o;
           var98 = GzipDecoder.field_d;
           var99 = LobbyGame.field_rc;
           var44.drawSortedModels(false, 0, var44.field_j.length, (byte) -24, var98, var99);
-          var47 = ff.field_d;
+          var47 = SlidingPanelSupport.field_d;
           var100 = GzipDecoder.field_d;
           var47.drawModelRange((byte) -114, 0, var47.field_j.length, var100);
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
@@ -631,7 +631,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             this.drawBallsInOrder(stackIn_47_1, (byte) stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_48_5);
           }
-          var49 = tq.field_o;
+          var49 = AccountStateQuery.field_o;
           var101 = GzipDecoder.field_d;
           var102 = LobbyGame.field_rc;
           var49.drawSortedModels(true, 0, var49.field_j.length, (byte) -83, var101, var102);
@@ -643,7 +643,7 @@ final class SpaceTableScene extends ModelTableScene {
             param1.buildAimPreviewTrail(param0 - 70);
           }
           while (var6 >= 0) {
-            ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 99);
+            IntegerRecordProtocolSupport.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 99);
             var6--;
           }
           return;
@@ -668,7 +668,7 @@ final class SpaceTableScene extends ModelTableScene {
           return;
         }
         try {
-          this.m(0);
+          this.validateSceneGuard(0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -746,7 +746,7 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           this.field_O = new MeshBuilder[13];
           var3_int = 0;
-          om.field_w = var3_int;
+          TextInputPainter.field_w = var3_int;
           incrementValue$13 = var3_int;
           var3_int++;
           this.field_O[incrementValue$13] = MeshBuilder.loadFromArchive(param0, "", "space_table/asteroid");
@@ -762,7 +762,7 @@ final class SpaceTableScene extends ModelTableScene {
           incrementValue$16 = var3_int;
           var3_int++;
           this.field_O[incrementValue$16] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_door_b");
-          ph.field_e = var3_int;
+          AccountProtocolStage.field_e = var3_int;
           incrementValue$17 = var3_int;
           var3_int++;
           this.field_O[incrementValue$17] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_table_post");
@@ -775,7 +775,7 @@ final class SpaceTableScene extends ModelTableScene {
           incrementValue$19 = var3_int;
           var3_int++;
           this.field_O[incrementValue$19] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_hole_b");
-          vn.field_f = var3_int;
+          ReflectionRequestSupport.field_f = var3_int;
           CachedArchiveSource.field_l = var3_int;
           incrementValue$20 = var3_int;
           var3_int++;
@@ -840,14 +840,14 @@ final class SpaceTableScene extends ModelTableScene {
           }
           this.field_M = new int[this.field_O.length][3];
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_O.length; var4Lifetime3++) {
-            ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
+            ModelOriginSupport.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          pp.a(this.field_O[MenuLabelSupport.field_b], (short) -8246, true, this.field_M[MenuLabelSupport.field_b], SingleChildWidget.field_I);
+          MeshColorSupport.a(this.field_O[MenuLabelSupport.field_b], (short) -8246, true, this.field_M[MenuLabelSupport.field_b], SingleChildWidget.field_I);
           if (param1 >= -43) {
             this.initializeScene(false);
           }
-          pp.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
-          DirectByteStorage.field_h = new byte[32][this.field_O[om.field_w].faceCount];
+          MeshColorSupport.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
+          DirectByteStorage.field_h = new byte[32][this.field_O[TextInputPainter.field_w].faceCount];
           for (var4Lifetime4 = 0; DirectByteStorage.field_h.length > var4Lifetime4; var4Lifetime4++) {
             for (var14 = 0; var14 < DirectByteStorage.field_h[var4Lifetime4].length; var14++) {
               DirectByteStorage.field_h[var4Lifetime4][var14] = (byte)(var4Lifetime4 * 255 / DirectByteStorage.field_h.length);
@@ -868,9 +868,9 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    private final void m(int param0) {
+    private final void validateSceneGuard(int param0) {
         if (param0 != 0) {
-          SpaceTableScene.f(false);
+          SpaceTableScene.getChatScrollContent(false);
         }
     }
 
@@ -898,18 +898,18 @@ final class SpaceTableScene extends ModelTableScene {
         int var2Lifetime3;
         int var3Lifetime1;
         int var3Lifetime2;
-        wb.field_c = dupTemp$0;
+        RankingsProtocolSupport.field_c = dupTemp$0;
         SceneNode dupTemp$1 = new SceneNode(4 * (-HuffmanCodec.field_d + ShotPreviewState.field_b));
-        ff.field_d = dupTemp$1;
-        SceneNode dupTemp$2 = new SceneNode(4 * (-vn.field_f + PolarBallSkin.field_o));
-        tq.field_o = dupTemp$2;
-        SceneNode dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
-        ij.field_o = dupTemp$3;
+        SlidingPanelSupport.field_d = dupTemp$1;
+        SceneNode dupTemp$2 = new SceneNode(4 * (-ReflectionRequestSupport.field_f + PolarBallSkin.field_o));
+        AccountStateQuery.field_o = dupTemp$2;
+        SceneNode dupTemp$3 = SceneNodeFactory.createSceneNode(this.field_O[AccountProtocolStage.field_e], this.field_M[AccountProtocolStage.field_e], (byte) 101);
+        AnimatedNotification.field_o = dupTemp$3;
         DialogLayer.field_R = new SceneNode(new SceneNode[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
         var3 = 0;
         for (var2 = AccountWelcomePanel.field_eb; var2 < TimeTrialRules.field_f; var2++) {
           var4 = var2;
-          var12 = wb.field_c.field_b;
+          var12 = RankingsProtocolSupport.field_c.field_b;
           var6 = var3;
           var25 = this.field_M[var4];
           MirroredSceneSupport.buildMirroredSceneEntries(var12, false, var25[1], var25[2], this.field_O[var4], var25[0], var6);
@@ -917,7 +917,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
         for (var2Lifetime1 = ShotRecord.field_J; CachedArchiveSource.field_l > var2Lifetime1; var2Lifetime1++) {
           var4 = var2Lifetime1;
-          var14 = wb.field_c.field_b;
+          var14 = RankingsProtocolSupport.field_c.field_b;
           var6 = var3;
           OptionsScreen.a(var6, this.field_M[var4][1], this.field_M[var4][2], 1, var14, this.field_M[var4][0], this.field_O[var4]);
           var3 += 2;
@@ -928,22 +928,22 @@ final class SpaceTableScene extends ModelTableScene {
         var3Lifetime1 = 0;
         for (var2Lifetime2 = HuffmanCodec.field_d; var2Lifetime2 < ShotPreviewState.field_b; var2Lifetime2++) {
           var4 = var2Lifetime2;
-          var15 = ff.field_d.field_b;
+          var15 = SlidingPanelSupport.field_d.field_b;
           var6 = var3Lifetime1;
           var26 = this.field_M[var4];
           MirroredSceneSupport.buildMirroredSceneEntries(var15, false, var26[1], var26[2], this.field_O[var4], var26[0], var6);
           var3Lifetime1 += 4;
         }
         var3Lifetime2 = 0;
-        for (var2Lifetime3 = vn.field_f; var2Lifetime3 < PolarBallSkin.field_o; var2Lifetime3++) {
+        for (var2Lifetime3 = ReflectionRequestSupport.field_f; var2Lifetime3 < PolarBallSkin.field_o; var2Lifetime3++) {
           var4 = var2Lifetime3;
-          var17 = tq.field_o.field_b;
+          var17 = AccountStateQuery.field_o.field_b;
           var6 = var3Lifetime2;
           var27 = this.field_M[var4];
           MirroredSceneSupport.buildMirroredSceneEntries(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
           var3Lifetime2 += 4;
         }
-        TextInputValidator.field_h = new SceneNode(new SceneNode[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[MenuLabelSupport.field_b], this.field_M[MenuLabelSupport.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
+        TextInputValidator.field_h = new SceneNode(new SceneNode[]{SceneNodeFactory.createSceneNode(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), SceneNodeFactory.createSceneNode(this.field_O[MenuLabelSupport.field_b], this.field_M[MenuLabelSupport.field_b], (byte) 101), SceneNodeFactory.createSceneNode(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
         TextInputValidator.field_h.mergeChildMeshes(false);
         TextInputValidator.field_h.normalizeOffsets(0);
         TextInputValidator.field_h.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
@@ -951,11 +951,11 @@ final class SpaceTableScene extends ModelTableScene {
         DialogLayer.field_R.mergeChildMeshes(false);
         DialogLayer.field_R.normalizeOffsets(0);
         DialogLayer.field_R.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
-        ij.field_o.allocateModelArrays(109);
-        ff.field_d.allocateModelArrays(97);
-        wb.field_c.allocateModelArrays(118);
-        tq.field_o.allocateModelArrays(90);
-        LobbyGame.field_rc = new boolean[tq.field_o.field_j.length];
+        AnimatedNotification.field_o.allocateModelArrays(109);
+        SlidingPanelSupport.field_d.allocateModelArrays(97);
+        RankingsProtocolSupport.field_c.allocateModelArrays(118);
+        AccountStateQuery.field_o.allocateModelArrays(90);
+        LobbyGame.field_rc = new boolean[AccountStateQuery.field_o.field_j.length];
         CacheEntry.field_C = new int[3][4096];
         DisplayModeSupport.field_b = new int[3][CacheEntry.field_C[0].length];
         for (var9 = 0; var9 < CacheEntry.field_C[0].length; var9++) {
@@ -965,7 +965,7 @@ final class SpaceTableScene extends ModelTableScene {
             var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, RankingsRequest.field_r) - 127;
             var7 = 256;
             var10 = var4 * var4 + (var5 * var5 + var6 * var6);
-            var8 = rf.inverseSquareRoot(var10, -121);
+            var8 = AccountDisplayNameSupport.inverseSquareRoot(var10, -121);
           } while (var8 == 0);
           CacheEntry.field_C[0][var9] = (var7 * var4 << 8) / var8;
           CacheEntry.field_C[1][var9] = (var5 * var7 << 8) / var8;
@@ -989,9 +989,9 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void buildPalettes(int param0) {
         super.buildPalettes(param0);
-        int[] var3 = ta.buildGradientPalette(new int[]{0, 0, 9, 13426175}, 47);
+        int[] var3 = GradientPaletteSupport.buildGradientPalette(new int[]{0, 0, 9, 13426175}, 47);
         int[] var2 = var3;
-        DiskArchiveRequest.field_K = ta.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
+        DiskArchiveRequest.field_K = GradientPaletteSupport.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
     }
 
     final void a(byte param0, boolean param1, int param2) {
@@ -1035,7 +1035,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             var2 = 1;
           }
-          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(wn.field_i, DebouncedValidationProvider.field_f, ~param0), -41);
+          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~param0), -41);
           if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
             var1_int = 1;
           }
@@ -1052,7 +1052,7 @@ final class SpaceTableScene extends ModelTableScene {
               if (ClientException.field_h == 2) {
                 if (param0 == ~var3 &&
                   ClientException.field_h == 2) {
-                  var4 = -QuickChatPhraseDefinition.field_y + rl.monotonicTimeMillis((byte) -128);
+                  var4 = -QuickChatPhraseDefinition.field_y + MonotonicClock.monotonicTimeMillis((byte) -128);
                   var6 = (int)((10999L - var4) / 1000L);
                   if (var6 <= 0) {
                     var3 = 2;
@@ -1066,7 +1066,7 @@ final class SpaceTableScene extends ModelTableScene {
           }
           if (param0 == ~var3 &&
             ClientException.field_h == 2) {
-            var4Lifetime1 = -QuickChatPhraseDefinition.field_y + rl.monotonicTimeMillis((byte) -128);
+            var4Lifetime1 = -QuickChatPhraseDefinition.field_y + MonotonicClock.monotonicTimeMillis((byte) -128);
             var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
             if (var6Lifetime1 <= 0) {
               var3 = 2;

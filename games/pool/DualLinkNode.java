@@ -14,7 +14,7 @@ class DualLinkNode extends IntrusiveNode {
     static boolean field_v;
     static int field_u;
 
-    final long a(int param0) {
+    final long getSecondaryKey(int param0) {
         int var2 = -37 / ((-49 - param0) / 48);
         return this.field_m;
     }
@@ -57,7 +57,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param2 > -107) {
           DualLinkNode.a(-20, 53, 78, true, 78, 37, 85);
         }
-        return il.a(1, 1, param4, 3, 4, 1, param0, param3, param1);
+        return BeveledFrameSpriteFactory.a(1, 1, param4, 3, 4, 1, param0, param3, param1);
     }
 
     final void unlinkNode(boolean param0) {
@@ -78,12 +78,12 @@ class DualLinkNode extends IntrusiveNode {
         if (param4 != 4010) {
           DualLinkNode.a(33, -109, 29, false, 1, 26, 48);
         }
-        if (hn.field_b != 2) {
+        if (CookieDateSupport.field_b != 2) {
           var7 = DialRenderer.messageGame;
         } else {
-          var7 = wb.sendPm;
+          var7 = RankingsProtocolSupport.sendPm;
         }
-        la.a(-57, param1, param2, param5, var7, param3, param0, param6);
+        ChatPanelSupport.a(-57, param1, param2, param5, var7, param3, param0, param6);
     }
 
     final static int a(int param0, String[] param1, String param2, BitmapFont param3, int param4) {

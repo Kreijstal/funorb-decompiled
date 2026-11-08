@@ -32,7 +32,7 @@ final class MembershipBenefitsLoader {
             stackIn_3_0 = ModelInstance.invalidName;
             return stackIn_3_0;
           }
-          if (2 != th.field_a) {
+          if (2 != ChatInputSupport.field_a) {
             stackIn_7_0 = TextInputValidator.unableToDeleteIgnore;
             return stackIn_7_0;
           }
@@ -144,18 +144,18 @@ final class MembershipBenefitsLoader {
           if (IterableNodeHashTable.field_k != null &&
             IterableNodeHashTable.field_k.isIndexReady(-86) &&
             IterableNodeHashTable.field_k.ensureGroupAvailableByName("benefits", 0) &&
-            null != rl.field_c &&
-            rl.field_c.isIndexReady(-62) &&
-            rl.field_c.ensureGroupAvailableByName("benefits", 0)) {
-            rf.field_e = WidgetStyleLayer.loadSprite("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
+            null != MonotonicClock.field_c &&
+            MonotonicClock.field_c.isIndexReady(-62) &&
+            MonotonicClock.field_c.ensureGroupAvailableByName("benefits", 0)) {
+            AccountDisplayNameSupport.field_e = WidgetStyleLayer.loadSprite("benefits", (byte) 51, "headline", IterableNodeHashTable.field_k);
             BallDebugOverlay.field_d = WidgetStyleLayer.loadSprite("benefits", (byte) 79, "blurbpane", IterableNodeHashTable.field_k);
-            ph.field_f = WidgetStyleLayer.loadSprite("benefits", (byte) 89, "button", IterableNodeHashTable.field_k);
-            i.field_o = WidgetStyleLayer.loadSprite("benefits", (byte) 109, "signup_text", IterableNodeHashTable.field_k);
+            AccountProtocolStage.field_f = WidgetStyleLayer.loadSprite("benefits", (byte) 89, "button", IterableNodeHashTable.field_k);
+            AchievementSubmission.field_o = WidgetStyleLayer.loadSprite("benefits", (byte) 109, "signup_text", IterableNodeHashTable.field_k);
             Pocket.field_h = WidgetStyleLayer.loadSprite("benefits", (byte) 86, "menu_text", IterableNodeHashTable.field_k);
             UiComponentNode.field_C = WidgetStyleLayer.loadSprite("benefits", (byte) 78, "button_frame", IterableNodeHashTable.field_k);
             ContextMenu.field_Yb = WidgetStyleLayer.loadSprite("benefits", (byte) 75, "arrow", IterableNodeHashTable.field_k);
-            DebugTuningSupport.field_d = (BitmapFont) ((Object) he.a(IterableNodeHashTable.field_k, "large_font", 0, rl.field_c, "benefits"));
-            SceneNode.field_h = (BitmapFont) ((Object) he.a(IterableNodeHashTable.field_k, "small_font", 0, rl.field_c, "benefits"));
+            DebugTuningSupport.field_d = (BitmapFont) ((Object) CanvasInputSupport.a(IterableNodeHashTable.field_k, "large_font", 0, MonotonicClock.field_c, "benefits"));
+            SceneNode.field_h = (BitmapFont) ((Object) CanvasInputSupport.a(IterableNodeHashTable.field_k, "small_font", 0, MonotonicClock.field_c, "benefits"));
             var27 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -165,12 +165,12 @@ final class MembershipBenefitsLoader {
             ContextMenu.field_Yb.drawGrayModulated(2, 2, DialWidget.field_X);
             MembershipBenefitsScreen.a(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
             ContextMenu.field_Yb = var11;
-            w.field_f = ContextMenu.field_Yb.copyFlippedHorizontal();
+            GrowableIntListFactory.field_f = ContextMenu.field_Yb.copyFlippedHorizontal();
             var12 = new Sprite(195, 221);
             var6 = var12.field_z / 2;
             var12.bindAsRenderTarget();
-            DebugTuningSupport.field_d.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{sa.field_o}, -1, HalloweenBallSkin.mbFullAccess1), var6, 40, 16777215, -1);
-            SceneNode.field_h.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{sa.field_o}, -1, BufferedSocket.mbFullAccess2), var6, 60, 16777215, -1);
+            DebugTuningSupport.field_d.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{CollisionContact.field_o}, -1, HalloweenBallSkin.mbFullAccess1), var6, 40, 16777215, -1);
+            SceneNode.field_h.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{CollisionContact.field_o}, -1, BufferedSocket.mbFullAccess2), var6, 60, 16777215, -1);
             DebugTuningSupport.field_d.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{LinkButtonPainter.field_e}, -1, CachedArchiveSource.mbAchievementCount1), var6, 110, 16777215, -1);
             SceneNode.field_h.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{LinkButtonPainter.field_e}, -1, PotEvent.mbAchievementCount2), var6, 130, 16777215, -1);
             DebugTuningSupport.field_d.drawCentered(UsernameSuggestionsPanel.field_X, var6, 180, 16777215, -1);
@@ -178,88 +178,88 @@ final class MembershipBenefitsLoader {
             MembershipBenefitsScreen.a(1, 3, var12.field_A, var12, 4, var12.field_z, 0, 0);
             BallDebugOverlay.field_d.bindAsRenderTarget();
             var12.draw(-BallDebugOverlay.field_d.field_G + 18, -BallDebugOverlay.field_d.field_B + 241);
-            for (var7 = 0; var7 < mk.field_a.length; var7++) {
+            for (var7 = 0; var7 < SharedWidgetLayoutSupport.field_a.length; var7++) {
               TikiBallSkin.field_m[var7].bindAsRenderTarget();
-              SceneNode.field_h.drawParagraph(mk.field_a[var7], 3, 3, -6 + TikiBallSkin.field_m[var7].field_z, -6 + TikiBallSkin.field_m[var7].field_A, DialWidget.field_X, -1, 1, 1, SceneNode.field_h.maxDescent + SceneNode.field_h.maxAscent);
+              SceneNode.field_h.drawParagraph(SharedWidgetLayoutSupport.field_a[var7], 3, 3, -6 + TikiBallSkin.field_m[var7].field_z, -6 + TikiBallSkin.field_m[var7].field_A, DialWidget.field_X, -1, 1, 1, SceneNode.field_h.maxDescent + SceneNode.field_h.maxAscent);
               MembershipBenefitsScreen.a(1, 3, TikiBallSkin.field_m[var7].field_A, TikiBallSkin.field_m[var7], 4, TikiBallSkin.field_m[var7].field_z, 0, 0);
             }
-            mk.field_a = null;
-            td.field_a = i.field_o.copy();
-            td.field_a.bindAsRenderTarget();
+            SharedWidgetLayoutSupport.field_a = null;
+            Base37Support.field_a = AchievementSubmission.field_o.copy();
+            Base37Support.field_a.bindAsRenderTarget();
             ShotRecord.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 0, (byte) 103, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(AgeValidator.field_o);
-            ln.field_o = 390 + (ph.field_f.field_A - UiComponentNode.field_C.field_A) / 2;
-            RasterSnapshot.field_o = 434 + (ph.field_f.field_z - UiComponentNode.field_C.field_z) / 2;
-            oj.field_s = 390 + (-UiComponentNode.field_C.field_A + ph.field_f.field_A) / 2;
+            ModelOriginSupport.field_o = 390 + (AccountProtocolStage.field_f.field_A - UiComponentNode.field_C.field_A) / 2;
+            RasterSnapshot.field_o = 434 + (AccountProtocolStage.field_f.field_z - UiComponentNode.field_C.field_z) / 2;
+            HighScoreSubmission.field_s = 390 + (-UiComponentNode.field_C.field_A + AccountProtocolStage.field_f.field_A) / 2;
             IterableNodeHashTable.field_k = null;
-            BufferedFile.field_n = (-UiComponentNode.field_C.field_z + ph.field_f.field_z) / 2 + 231;
+            BufferedFile.field_n = (-UiComponentNode.field_C.field_z + AccountProtocolStage.field_f.field_z) / 2 + 231;
           }
           if (null == ProgressDialog.field_gb) {
             return;
           }
-          if (null != vn.field_j &&
+          if (null != ReflectionRequestSupport.field_j &&
             null != DebugTuningSupport.field_d) {
             var28 = SoftwareRasterizer.pixels;
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(AgeValidator.field_o);
-            var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{FontPaletteSupport.subscriptionCostMonthly[qg.field_e]}, param0 ^ 1, OpacityWidget.benefitsPrice);
-            var5 = DebugTuningSupport.field_d.a(var14, jc.field_h);
-            var6Lifetime1 = DebugTuningSupport.field_d.measureWrappedHeight(var14, jc.field_h, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
-            var7Lifetime1 = LongAndTextLoginPayload.field_h + (-var5 + jc.field_h) / 2;
-            var8 = rf.field_c + (-var6Lifetime1 + IsaacCipher.field_e) / 2;
+            var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{FontPaletteSupport.subscriptionCostMonthly[VertexTransformSupport.field_e]}, param0 ^ 1, OpacityWidget.benefitsPrice);
+            var5 = DebugTuningSupport.field_d.a(var14, AppletUrlSupport.field_h);
+            var6Lifetime1 = DebugTuningSupport.field_d.measureWrappedHeight(var14, AppletUrlSupport.field_h, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
+            var7Lifetime1 = LongAndTextLoginPayload.field_h + (-var5 + AppletUrlSupport.field_h) / 2;
+            var8 = AccountDisplayNameSupport.field_c + (-var6Lifetime1 + IsaacCipher.field_e) / 2;
             var7Lifetime1 -= 3;
             var5 += 6;
             if (0 > var7Lifetime1) {
               var9_int = -var7Lifetime1;
-              vn.field_j.field_G = vn.field_j.field_G + var9_int;
+              ReflectionRequestSupport.field_j.field_G = ReflectionRequestSupport.field_j.field_G + var9_int;
               var5 = var5 + var9_int * 2;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               Ball.field_m = Ball.field_m - var9_int;
-              vn.field_j.field_w = vn.field_j.field_w + var9_int * 2;
+              ReflectionRequestSupport.field_j.field_w = ReflectionRequestSupport.field_j.field_w + var9_int * 2;
               LongAndTextLoginPayload.field_h = LongAndTextLoginPayload.field_h + var9_int;
             }
             var6Lifetime1 += 6;
             var8 -= 3;
-            if (var7Lifetime1 + var5 > vn.field_j.field_w) {
-              var9_intLifetime1 = var7Lifetime1 + (var5 - vn.field_j.field_w);
+            if (var7Lifetime1 + var5 > ReflectionRequestSupport.field_j.field_w) {
+              var9_intLifetime1 = var7Lifetime1 + (var5 - ReflectionRequestSupport.field_j.field_w);
               var5 = var5 + 2 * var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               LongAndTextLoginPayload.field_h = LongAndTextLoginPayload.field_h + var9_intLifetime1;
-              vn.field_j.field_G = vn.field_j.field_G + var9_intLifetime1;
+              ReflectionRequestSupport.field_j.field_G = ReflectionRequestSupport.field_j.field_G + var9_intLifetime1;
               Ball.field_m = Ball.field_m - var9_intLifetime1;
-              vn.field_j.field_w = vn.field_j.field_w + 2 * var9_intLifetime1;
+              ReflectionRequestSupport.field_j.field_w = ReflectionRequestSupport.field_j.field_w + 2 * var9_intLifetime1;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
               var8 = var8 + var9_intLifetime2;
-              vn.field_j.field_B = vn.field_j.field_B + var9_intLifetime2;
-              vn.field_j.field_y = vn.field_j.field_y + 2 * var9_intLifetime2;
+              ReflectionRequestSupport.field_j.field_B = ReflectionRequestSupport.field_j.field_B + var9_intLifetime2;
+              ReflectionRequestSupport.field_j.field_y = ReflectionRequestSupport.field_j.field_y + 2 * var9_intLifetime2;
               ArchiveIndex.field_r = ArchiveIndex.field_r - var9_intLifetime2;
-              rf.field_c = rf.field_c + var9_intLifetime2;
+              AccountDisplayNameSupport.field_c = AccountDisplayNameSupport.field_c + var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
             }
-            if (vn.field_j.field_y < var6Lifetime1 + var8) {
-              var9_intLifetime3 = -vn.field_j.field_y + (var8 + var6Lifetime1);
-              vn.field_j.field_y = vn.field_j.field_y + 2 * var9_intLifetime3;
+            if (ReflectionRequestSupport.field_j.field_y < var6Lifetime1 + var8) {
+              var9_intLifetime3 = -ReflectionRequestSupport.field_j.field_y + (var8 + var6Lifetime1);
+              ReflectionRequestSupport.field_j.field_y = ReflectionRequestSupport.field_j.field_y + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
-              rf.field_c = rf.field_c + var9_intLifetime3;
-              vn.field_j.field_B = vn.field_j.field_B + var9_intLifetime3;
+              AccountDisplayNameSupport.field_c = AccountDisplayNameSupport.field_c + var9_intLifetime3;
+              ReflectionRequestSupport.field_j.field_B = ReflectionRequestSupport.field_j.field_B + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               ArchiveIndex.field_r = ArchiveIndex.field_r - var9_intLifetime3;
             }
-            vn.field_j.normalizeCanvas();
-            var9 = new Sprite(vn.field_j.field_w, vn.field_j.field_y);
+            ReflectionRequestSupport.field_j.normalizeCanvas();
+            var9 = new Sprite(ReflectionRequestSupport.field_j.field_w, ReflectionRequestSupport.field_j.field_y);
             var9.bindAsRenderTarget();
-            DebugTuningSupport.field_d.drawParagraph(var14, LongAndTextLoginPayload.field_h, rf.field_c, jc.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
+            DebugTuningSupport.field_d.drawParagraph(var14, LongAndTextLoginPayload.field_h, AccountDisplayNameSupport.field_c, AppletUrlSupport.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
             MembershipBenefitsScreen.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
-            vn.field_j.bindAsRenderTarget();
+            ReflectionRequestSupport.field_j.bindAsRenderTarget();
             var9.draw(0, 0);
             UsernameAvailabilityValidator.field_u = new Sprite(640, 480);
             UsernameAvailabilityValidator.field_u.bindAsRenderTarget();
-            vn.field_j.drawRotated((vn.field_j.field_w >> 1) + Ball.field_m, (vn.field_j.field_y >> 1) + ArchiveIndex.field_r, JaggrabDownloader.field_g, 4096);
-            vn.field_j = null;
+            ReflectionRequestSupport.field_j.drawRotated((ReflectionRequestSupport.field_j.field_w >> 1) + Ball.field_m, (ReflectionRequestSupport.field_j.field_y >> 1) + ArchiveIndex.field_r, JaggrabDownloader.field_g, 4096);
+            ReflectionRequestSupport.field_j = null;
             UsernameAvailabilityValidator.field_u.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(AgeValidator.field_o);
@@ -306,8 +306,8 @@ final class MembershipBenefitsLoader {
           SoftwareRasterizer.saveClip(AgeValidator.field_o);
           SoftwareRasterizer.fillRoundedRectangleBlended(16, 16, 608, 112, 15, TableScene.field_k, ModelTableScene.field_L);
           SoftwareRasterizer.fillRoundedRectangleBlended(231, 144, 393, 232, 15, TableScene.field_k, ModelTableScene.field_L);
-          if (rf.field_e != null) {
-            rf.field_e.draw(0, 0);
+          if (AccountDisplayNameSupport.field_e != null) {
+            AccountDisplayNameSupport.field_e.draw(0, 0);
           }
           if (BallDebugOverlay.field_d != null) {
             BallDebugOverlay.field_d.draw(0, 0);
@@ -316,28 +316,28 @@ final class MembershipBenefitsLoader {
           if (null != UsernameAvailabilityValidator.field_u) {
             UsernameAvailabilityValidator.field_u.draw(0, 0);
           }
-          if (ph.field_f != null &&
+          if (AccountProtocolStage.field_f != null &&
             null != UiComponentNode.field_C) {
-            ph.field_f.draw(231, 390);
-            var1 = i.field_o;
-            if (jc.field_j.selectedIndex == 0) {
-              var1 = td.field_a;
+            AccountProtocolStage.field_f.draw(231, 390);
+            var1 = AchievementSubmission.field_o;
+            if (AppletUrlSupport.field_j.selectedIndex == 0) {
+              var1 = Base37Support.field_a;
             }
             var1.draw(0, 0);
             stackIn_52_0 = 40;
             stackIn_52_1 = 40;
             stackIn_52_2 = PoolMatchController.field_X;
-            if (jc.field_j.selectedIndex != 0) {
+            if (AppletUrlSupport.field_j.selectedIndex != 0) {
               stackIn_53_3 = 3;
             } else {
               stackIn_53_3 = 4;
             }
             var2Lifetime4 = stackIn_52_0 + (stackIn_52_1 * ScrollPaneWithFooter.sine(stackIn_52_2 << stackIn_53_3, true) >> 16);
             if (var2Lifetime4 > 0) {
-              ph.field_f.drawAdditive(230, 389, var2Lifetime4);
-              ph.field_f.drawAdditive(232, 389, var2Lifetime4);
-              ph.field_f.drawAdditive(232, 391, var2Lifetime4);
-              ph.field_f.drawAdditive(230, 391, var2Lifetime4);
+              AccountProtocolStage.field_f.drawAdditive(230, 389, var2Lifetime4);
+              AccountProtocolStage.field_f.drawAdditive(232, 389, var2Lifetime4);
+              AccountProtocolStage.field_f.drawAdditive(232, 391, var2Lifetime4);
+              AccountProtocolStage.field_f.drawAdditive(230, 391, var2Lifetime4);
               var1.drawAdditive(1, 1, var2Lifetime4);
               var1.drawAdditive(-1, 1, var2Lifetime4);
               var1.drawAdditive(1, -1, var2Lifetime4);
@@ -345,25 +345,25 @@ final class MembershipBenefitsLoader {
             }
             stackIn_57_0 = param0 ^ -2;
             stackIn_57_1 = BufferedFile.field_n;
-            stackIn_58_2 = (jc.field_j.selectedIndex == 0);
-            hg.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, oj.field_s);
+            stackIn_58_2 = (AppletUrlSupport.field_j.selectedIndex == 0);
+            AppletContainerSupport.drawMembershipButton(stackIn_57_0, stackIn_57_1, stackIn_58_2, HighScoreSubmission.field_s);
           }
-          if (null != ph.field_f &&
+          if (null != AccountProtocolStage.field_f &&
             UiComponentNode.field_C != null) {
-            ph.field_f.draw(434, 390);
+            AccountProtocolStage.field_f.draw(434, 390);
             Pocket.field_h.draw(0, 0);
-            if (1 == jc.field_j.selectedIndex) {
-              ShotRecord.a(ph.field_f.field_z - 4, 7 * ph.field_f.field_A / 12, 64, 392, (byte) 120, 436);
+            if (1 == AppletUrlSupport.field_j.selectedIndex) {
+              ShotRecord.a(AccountProtocolStage.field_f.field_z - 4, 7 * AccountProtocolStage.field_f.field_A / 12, 64, 392, (byte) 120, 436);
             }
             stackIn_66_0 = 0;
             stackIn_66_1 = RasterSnapshot.field_o;
-            stackIn_67_2 = (jc.field_j.selectedIndex == 1);
-            hg.a(stackIn_66_0, stackIn_66_1, stackIn_67_2, ln.field_o);
+            stackIn_67_2 = (AppletUrlSupport.field_j.selectedIndex == 1);
+            AppletContainerSupport.drawMembershipButton(stackIn_66_0, stackIn_66_1, stackIn_67_2, ModelOriginSupport.field_o);
           }
           if (ContextMenu.field_Yb != null) {
             var1_int = 357 - ContextMenu.field_Yb.field_y / 2;
             ContextMenu.field_Yb.draw(-ContextMenu.field_Yb.field_w + 269, var1_int);
-            w.field_f.draw(586, var1_int);
+            GrowableIntListFactory.field_f.draw(586, var1_int);
             if (DebouncedValidationProvider.field_f > var1_int &&
               DebouncedValidationProvider.field_f < ContextMenu.field_Yb.field_A + var1_int) {
               var2Lifetime5 = (ScrollPaneWithFooter.sine(PoolMatchController.field_X << 4, true) * 40 >> 16) + 40;
@@ -372,19 +372,19 @@ final class MembershipBenefitsLoader {
                 TikiBallSkin.field_m[KillerRules.field_f].draw(269, 340);
                 return;
               }
-              if (wn.field_i > -ContextMenu.field_Yb.field_z + 269 &&
-                wn.field_i < 269) {
+              if (ReflectionReplySupport.field_i > -ContextMenu.field_Yb.field_z + 269 &&
+                ReflectionReplySupport.field_i < 269) {
                 ContextMenu.field_Yb.drawAdditive(-ContextMenu.field_Yb.field_w + 268, var1_int - 1, var2Lifetime5);
                 ContextMenu.field_Yb.drawAdditive(269 - (ContextMenu.field_Yb.field_w - 1), -1 + var1_int, var2Lifetime5);
                 ContextMenu.field_Yb.drawAdditive(-ContextMenu.field_Yb.field_w + 269 - 1, var1_int + 1, var2Lifetime5);
                 ContextMenu.field_Yb.drawAdditive(1 + (-ContextMenu.field_Yb.field_w + 269), var1_int + 1, var2Lifetime5);
               } else {
-                if (wn.field_i > 586 &&
-                  wn.field_i < ContextMenu.field_Yb.field_z + 586) {
-                  w.field_f.drawAdditive(585, -1 + var1_int, var2Lifetime5);
-                  w.field_f.drawAdditive(587, var1_int - 1, var2Lifetime5);
-                  w.field_f.drawAdditive(585, var1_int + 1, var2Lifetime5);
-                  w.field_f.drawAdditive(587, 1 + var1_int, var2Lifetime5);
+                if (ReflectionReplySupport.field_i > 586 &&
+                  ReflectionReplySupport.field_i < ContextMenu.field_Yb.field_z + 586) {
+                  GrowableIntListFactory.field_f.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                  GrowableIntListFactory.field_f.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                  GrowableIntListFactory.field_f.drawAdditive(585, var1_int + 1, var2Lifetime5);
+                  GrowableIntListFactory.field_f.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                 }
               }
             }

@@ -75,7 +75,7 @@ final class QuickChatHelpDialog extends UiComponent {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param1, AchievementsScreen.field_I, ih.field_d, LinkButtonPainter.field_a, rc.field_f, LimitedRandomAccessFile.field_b);
+          var2 = new BinaryBitmapFont(param1, AchievementsScreen.field_I, LoginRequestSupport.field_d, LinkButtonPainter.field_a, AccountTextSupport.field_f, LimitedRandomAccessFile.field_b);
           OpacityWidget.h(-1);
           if (param0 < 119) {
             QuickChatHelpDialog.f(-82);
@@ -96,7 +96,7 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static int a(pn param0, int param1) {
+    final static int a(ChatMessage param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -105,7 +105,7 @@ final class QuickChatHelpDialog extends UiComponent {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        pn var4 = null;
+        ChatMessage var4 = null;
         int var2_intLifetime1;
         var3 = Pool.field_O;
         try {
@@ -133,8 +133,8 @@ final class QuickChatHelpDialog extends UiComponent {
             }
           }
           if (param1 > -30) {
-            var4 = (pn) null;
-            QuickChatHelpDialog.a((pn) null, 64);
+            var4 = (ChatMessage) null;
+            QuickChatHelpDialog.a((ChatMessage) null, 64);
           }
           stackIn_16_0 = var2_intLifetime1;
           return stackIn_16_0;
@@ -155,7 +155,7 @@ final class QuickChatHelpDialog extends UiComponent {
     final static void b(int param0, int param1) {
         int var2 = BufferedFile.field_h * BufferedFile.field_h;
         int var3 = -(param1 * param1) + var2;
-        ff.a(-24, SoftwareRasterizer.height - 120 + var3 * 120 / var2);
+        SlidingPanelSupport.positionSlidingPanel(-24, SoftwareRasterizer.height - 120 + var3 * 120 / var2);
         if (param0 == 5938) {
           return;
         }
@@ -198,7 +198,7 @@ final class QuickChatHelpDialog extends UiComponent {
           }
           var7 = new LoginTextValue(param2);
           var8 = new LoginTextValue(param0);
-          stackIn_3_0 = ih.a(param5, (byte) 87, param1, param4, var7, var8, param6);
+          stackIn_3_0 = LoginRequestSupport.a(param5, (byte) 87, param1, param4, var7, var8, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,18 +253,18 @@ final class QuickChatHelpDialog extends UiComponent {
         UiComponent var16 = null;
         int var10Lifetime1;
         try {
-          var16 = new UiComponent(0L, param1, w.quickchatHelp.toUpperCase());
+          var16 = new UiComponent(0L, param1, GrowableIntListFactory.quickchatHelp.toUpperCase());
           var16.horizontalAlignment = 1;
           this.closeButton = new UiComponent(0L, param2);
           var8 = new UiComponent(0L, param3);
-          var9 = new UiComponent(0L, param3, jd.quickchatHelpTitle);
+          var9 = new UiComponent(0L, param3, Atan2Support.quickchatHelpTitle);
           var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; DottedRectangleSupport.quickchatShortcutHelp.length > var12; var12++) {
+          for (var12 = 0; LookupQuery.quickchatShortcutHelp.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, ValidationMessageWidget.quickchatShortcutKeys[var12]);
-            var14 = new UiComponent(0L, param3, DottedRectangleSupport.quickchatShortcutHelp[var12]);
-            var15 = param3.font.b(DottedRectangleSupport.quickchatShortcutHelp[var12]);
+            var14 = new UiComponent(0L, param3, LookupQuery.quickchatShortcutHelp[var12]);
+            var15 = param3.font.b(LookupQuery.quickchatShortcutHelp[var12]);
             var13.setBounds(var10, 2147483647, 20, 65, 15);
             if (var11 < var15) {
               var11 = var15;
@@ -280,7 +280,7 @@ final class QuickChatHelpDialog extends UiComponent {
           this.closeButton.setBounds(5, 2147483647, -20 + var16.width, 15, 15);
           var8.setBounds(var16.height, 2147483647, 0, this.width, this.height - var16.height);
           var9.setBounds(20, 2147483647, 0, this.width, 15);
-          var8.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, var8.height, 11579568, 8421504);
+          var8.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 2105376, var8.height, 11579568, 8421504);
           var16.addChild(-115, this.closeButton);
           var8.addChild(-122, var9);
           this.addChild(-95, var16);

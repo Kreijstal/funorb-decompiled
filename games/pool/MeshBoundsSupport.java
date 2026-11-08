@@ -134,8 +134,8 @@ final class MeshBoundsSupport {
           stackIn_3_2 = (InputIdleSupport.field_c.scrollPane == WidgetStyleLayer.field_c);
           var3_int = ((ScrollPane) (Object) stackIn_2_0).updateContentLayout(stackIn_2_1, stackIn_3_2, 2, (byte) 115, ArchiveIndex.field_x + 2, param0 * (3 * ArchiveIndex.field_x + 6)) ? 1 : 0;
           var4 = InputIdleSupport.field_c.content.children;
-          if (th.field_a != 2 &&
-            th.field_a != 1) {
+          if (ChatInputSupport.field_a != 2 &&
+            ChatInputSupport.field_a != 1) {
             InputIdleSupport.field_c.enabled = false;
             InputIdleSupport.field_c.scrollPane.viewport.text = UiComponentNode.loading;
             AudioService.a(InputIdleSupport.field_c.content, (byte) 109);
@@ -160,14 +160,14 @@ final class MeshBoundsSupport {
               if (var6.previousName != null &&
                 !var6.previousName.equals("")) {
                 var6.field_Ob.activeTextColor = 16737894;
-                var6.field_Ob.sprite = oi.field_o;
+                var6.field_Ob.sprite = IntegerRecordSubmission.field_o;
                 var8 = 1;
-                var6.field_Ob.setBounds(0, 2147483647, 0, oi.field_o.field_w + 3, ArchiveIndex.field_x);
+                var6.field_Ob.setBounds(0, 2147483647, 0, IntegerRecordSubmission.field_o.field_w + 3, ArchiveIndex.field_x);
               }
               var9 = 0;
               var10 = var6.width;
               if (var8 != 0) {
-                var9 = oi.field_o.field_w + 3;
+                var9 = IntegerRecordSubmission.field_o.field_w + 3;
                 var10 = var10 - var9;
               }
               stackIn_19_0 = var6.field_Pb;
@@ -196,9 +196,9 @@ final class MeshBoundsSupport {
                 }
               }
               if (0 != var6.pressedButton) {
-                dr.openPlayerContextMenu(var6.name, -1, 0L, -1, InputIdleSupport.field_c.scrollPane, var6.actionName, 32540, var6, (int[]) null);
+                LogoFinalFrameLoader.openPlayerContextMenu(var6.name, -1, 0L, -1, InputIdleSupport.field_c.scrollPane, var6.actionName, 32540, var6, (int[]) null);
                 var16 = PlasmaBallSkin.field_m;
-                var13_ref_String = tp.muLobbyNameRm;
+                var13_ref_String = LookupRetrySupport.muLobbyNameRm;
                 var16.field_n.addAction(var13_ref_String, 17130, 7);
                 var17 = PlasmaBallSkin.field_m;
                 var13 = DialogLayer.field_W;
@@ -209,11 +209,11 @@ final class MeshBoundsSupport {
               var6 = (SocialListEntry) (var4.previous((byte) -5));
             }
             if (0 != InputIdleSupport.field_c.leftFooter.pressedButton) {
-              sm.field_C = new NameEntryPopup(InputIdleSupport.field_c.leftFooter.screenX, InputIdleSupport.field_c.leftFooter.screenY, InputIdleSupport.field_c.leftFooter.width, InputIdleSupport.field_c.leftFooter.height, SpaceObject.enterignoreAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              PasswordInputPainter.field_C = new NameEntryPopup(InputIdleSupport.field_c.leftFooter.screenX, InputIdleSupport.field_c.leftFooter.screenY, InputIdleSupport.field_c.leftFooter.width, InputIdleSupport.field_c.leftFooter.height, SpaceObject.enterignoreAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
               MatchingTextValidator.field_m = 2;
             }
             if (InputIdleSupport.field_c.rightFooter.pressedButton != 0) {
-              sm.field_C = new NameEntryPopup(InputIdleSupport.field_c.rightFooter.screenX, InputIdleSupport.field_c.rightFooter.screenY, InputIdleSupport.field_c.rightFooter.width, InputIdleSupport.field_c.rightFooter.height, jj.enterignoreDel, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              PasswordInputPainter.field_C = new NameEntryPopup(InputIdleSupport.field_c.rightFooter.screenX, InputIdleSupport.field_c.rightFooter.screenY, InputIdleSupport.field_c.rightFooter.width, InputIdleSupport.field_c.rightFooter.height, BirthDatePromptPanel.enterignoreDel, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
               MatchingTextValidator.field_m = 3;
             }
           }
@@ -292,7 +292,7 @@ final class MeshBoundsSupport {
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var7 = stackIn_29_0;
           param0.field_pc = param2.readUnsignedShort(-1034);
-          param0.field_sc = rl.monotonicTimeMillis((byte) -95) - (long)param2.readInt(true);
+          param0.field_sc = MonotonicClock.monotonicTimeMillis((byte) -95) - (long)param2.readInt(true);
           if (var6 != 0) {
             param0.field_qc = param2.readInt(true);
           } else {

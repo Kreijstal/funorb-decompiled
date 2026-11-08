@@ -6,7 +6,7 @@ import java.util.*;
 abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     static Sprite[] field_G;
     static boolean field_H;
-    static jd[][] field_K;
+    static Atan2Support[][] field_K;
     static String field_I;
     static int field_M;
     UiWidget[] children;
@@ -142,7 +142,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
 
     public static void releaseStatics(int param0) {
         field_I = null;
-        field_K = (jd[][]) null;
+        field_K = (Atan2Support[][]) null;
         if (param0 != 16) {
           return;
         }
@@ -286,7 +286,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         var11 = Pool.field_O;
         try {
           if (param4 >= -126) {
-            field_K = (jd[][]) null;
+            field_K = (Atan2Support[][]) null;
           }
           if (this.children == null) {
             return false;
@@ -747,7 +747,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
             return stackIn_3_0;
           }
           if (!param0) {
-            field_K = (jd[][]) null;
+            field_K = (Atan2Support[][]) null;
           }
           if (param1.equals("I")) {
             stackIn_8_0 = Integer.TYPE;
@@ -807,7 +807,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         var8 = Pool.field_O;
         try {
           if (param1 != 958) {
-            field_K = (jd[][]) null;
+            field_K = (Atan2Support[][]) null;
           }
           super.updatePointerState(param0, param1 + 0, param2, param3);
           if (this.children == null) {

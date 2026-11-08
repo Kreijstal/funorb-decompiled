@@ -1,0 +1,112 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountDisplayNameSupport {
+    static String[] reconnectLostSeq;
+    static String gameoptYouneed1ratedgame;
+    static char[] field_a;
+    static String yourGame;
+    static int field_d;
+    static Sprite field_g;
+    static Sprite field_e;
+    static int field_c;
+
+    final static String a(byte param0) {
+        if (null == ResourceArchive.field_j) {
+          return "";
+        }
+        if (param0 > -85) {
+          field_d = 115;
+          return ResourceArchive.field_j;
+        }
+        return ResourceArchive.field_j;
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_a = null;
+        field_e = null;
+        yourGame = null;
+        gameoptYouneed1ratedgame = null;
+        field_g = null;
+        if (param0) {
+          return;
+        }
+        reconnectLostSeq = null;
+    }
+
+    final static int inverseSquareRoot(int param0, int param1) {
+        int var2;
+        int var2Lifetime1;
+        if (param0 == 0) {
+          return 0;
+        }
+        if (0 > param0) {
+          throw new IllegalArgumentException("");
+        }
+        if (32768 > param0) {
+          if (128 > param0) {
+            if (param0 < 8) {
+              if (2 > param0) {
+                return 256;
+              }
+              var2 = 7;
+            } else {
+              var2 = (param0 < 32) ? 6 : 5;
+            }
+          } else {
+            if (param0 < 2048) {
+              var2 = (param0 < 512) ? 4 : 3;
+            } else {
+              var2 = (param0 >= 8192) ? 1 : 2;
+            }
+          }
+          param0 = param0 << (var2 << 1);
+          return KillerBallSkin.field_o[param0 - 32768] >> var2;
+        }
+        if (param0 < 131072) {
+          if (param1 <= -119) {
+            return KillerBallSkin.field_o[-32768 + param0];
+          }
+          gameoptYouneed1ratedgame = (String) null;
+          return KillerBallSkin.field_o[-32768 + param0];
+        }
+        if (param0 >= 33554432) {
+          if (param0 >= 536870912) {
+            var2Lifetime1 = 7;
+          } else {
+            var2Lifetime1 = (param0 >= 134217728) ? 6 : 5;
+          }
+        } else {
+          if (param0 < 2097152) {
+            var2Lifetime1 = (param0 >= 524288) ? 2 : 1;
+          } else {
+            var2Lifetime1 = (param0 < 8388608) ? 3 : 4;
+          }
+        }
+        param0 = param0 >> (var2Lifetime1 << 1);
+        return KillerBallSkin.field_o[param0 - 32768] << var2Lifetime1;
+    }
+
+    final static void a(String param0, int param1, String param2) {
+        try {
+          if (param1 > -116) {
+            field_g = (Sprite) null;
+          }
+          if (MeshBoundsSupport.field_d != null) {
+            MeshBoundsSupport.field_d.dismissDialog(17);
+          }
+          TextLineLayout.field_j = new LoginForm(param2, param0, false, true, true);
+          RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        reconnectLostSeq = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
+        field_a = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        gameoptYouneed1ratedgame = "You must play 1 more rated game before playing with the current options.";
+        field_d = 64;
+        yourGame = "Your game";
+    }
+}

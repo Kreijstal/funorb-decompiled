@@ -24,7 +24,7 @@ final class RankingsRequest extends IntrusiveNode {
         int var1 = 27 / ((param0 - 59) / 62);
         ResourceArchive.field_j = PlayerContextMenu.field_e.j(-100);
         CharSequence var2 = (CharSequence) ((Object) ResourceArchive.field_j);
-        oj.field_y = TutorialController.normalizeDisplayName(110, var2);
+        HighScoreSubmission.field_y = TutorialController.normalizeDisplayName(110, var2);
     }
 
     public static void releaseStatics(byte param0) {

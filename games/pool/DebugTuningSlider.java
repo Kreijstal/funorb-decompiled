@@ -23,14 +23,14 @@ final class DebugTuningSlider {
     static int[] field_p;
 
     final boolean updateFromMouse(byte param0) {
-        if (wn.field_i < this.field_j) {
+        if (ReflectionReplySupport.field_i < this.field_j) {
           if (param0 <= -79) {
             return false;
           }
           field_k = 111;
           return false;
         }
-        if (wn.field_i > this.field_l) {
+        if (ReflectionReplySupport.field_i > this.field_l) {
           if (param0 <= -79) {
             return false;
           }
@@ -39,7 +39,7 @@ final class DebugTuningSlider {
         }
         if (DebouncedValidationProvider.field_f >= this.field_e) {
           if (this.field_q >= DebouncedValidationProvider.field_f) {
-            this.a(-wp.field_d, false);
+            this.a(-CompressedContainerSupport.field_d, false);
             return true;
           }
           if (param0 <= -79) {
@@ -57,7 +57,7 @@ final class DebugTuningSlider {
 
     final void draw(int param0) {
         int var2 = 0;
-        sa.field_h.drawString(this.b((byte) 36) + ": " + Integer.toString(this.a(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
+        CollisionContact.field_h.drawString(this.b((byte) 36) + ": " + Integer.toString(this.a(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
         if (param0 == 3) {
           SoftwareRasterizer.fillRectangle(this.field_j, this.field_e, 16, 80, 3381555);
           var2 = this.field_q - (this.a(param0 ^ -195801557) - this.field_b) * 80 / (this.field_o - this.field_b);
@@ -90,19 +90,19 @@ final class DebugTuningSlider {
             return;
           }
           if (var3 == 3) {
-            kp.field_m = param1 >> 8;
+            MusicPatchEnvelope.field_m = param1 >> 8;
             return;
           }
           if (var3 == 4) {
-            dr.field_b = param1;
+            LogoFinalFrameLoader.field_b = param1;
             stackIn_43_0 = 6429081;
             stackIn_44_1 = (param0) ? false : true;
-            dr.field_f = NameEntryPopup.a(stackIn_43_0, stackIn_44_1, dr.field_b);
+            LogoFinalFrameLoader.field_f = NameEntryPopup.a(stackIn_43_0, stackIn_44_1, LogoFinalFrameLoader.field_b);
             return;
           }
           if (var3 == 5) {
-            l.field_e = param1;
-            l.field_g = NameEntryPopup.a(6429081, false, l.field_e);
+            ClientUiResourceState.field_e = param1;
+            ClientUiResourceState.field_g = NameEntryPopup.a(6429081, false, ClientUiResourceState.field_e);
             return;
           }
           if (var3 == 6) {
@@ -115,7 +115,7 @@ final class DebugTuningSlider {
             return;
           }
           if (var3 == 8) {
-            wn.field_l = param1;
+            ReflectionReplySupport.field_l = param1;
             return;
           }
           if (var3 == 9) {
@@ -143,19 +143,19 @@ final class DebugTuningSlider {
           return;
         }
         if (var3Lifetime1 == 3) {
-          kp.field_m = param1 >> 8;
+          MusicPatchEnvelope.field_m = param1 >> 8;
           return;
         }
         if (var3Lifetime1 == 4) {
-          dr.field_b = param1;
+          LogoFinalFrameLoader.field_b = param1;
           stackIn_12_0 = 6429081;
           stackIn_13_1 = (param0) ? false : true;
-          dr.field_f = NameEntryPopup.a(stackIn_12_0, stackIn_13_1, dr.field_b);
+          LogoFinalFrameLoader.field_f = NameEntryPopup.a(stackIn_12_0, stackIn_13_1, LogoFinalFrameLoader.field_b);
           return;
         }
         if (var3Lifetime1 == 5) {
-          l.field_e = param1;
-          l.field_g = NameEntryPopup.a(6429081, false, l.field_e);
+          ClientUiResourceState.field_e = param1;
+          ClientUiResourceState.field_g = NameEntryPopup.a(6429081, false, ClientUiResourceState.field_e);
           return;
         }
         if (var3Lifetime1 == 6) {
@@ -168,7 +168,7 @@ final class DebugTuningSlider {
           return;
         }
         if (var3Lifetime1 == 8) {
-          wn.field_l = param1;
+          ReflectionReplySupport.field_l = param1;
           return;
         }
         if (var3Lifetime1 == 9) {
@@ -196,12 +196,12 @@ final class DebugTuningSlider {
     }
 
     final static void a(String param0, int param1) {
-        th.field_g = param0;
+        ChatInputSupport.field_g = param0;
         if (param1 >= -126) {
           return;
         }
         try {
-          lf.a(12, (byte) 102);
+          LoginEncryptionSupport.a(12, (byte) 102);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -213,10 +213,10 @@ final class DebugTuningSlider {
           if (ClientInputResetSupport.field_b == 0) {
             return false;
           }
-          if (wn.field_i < this.field_j) {
+          if (ReflectionReplySupport.field_i < this.field_j) {
             return false;
           }
-          if (wn.field_i > this.field_l) {
+          if (ReflectionReplySupport.field_i > this.field_l) {
             return false;
           }
           if (DebouncedValidationProvider.field_f < this.field_e) {
@@ -232,10 +232,10 @@ final class DebugTuningSlider {
         if (ClientInputResetSupport.field_b == 0) {
           return false;
         }
-        if (wn.field_i < this.field_j) {
+        if (ReflectionReplySupport.field_i < this.field_j) {
           return false;
         }
-        if (wn.field_i > this.field_l) {
+        if (ReflectionReplySupport.field_i > this.field_l) {
           return false;
         }
         if (DebouncedValidationProvider.field_f < this.field_e) {
@@ -252,8 +252,8 @@ final class DebugTuningSlider {
         try {
           TriangleMesh.field_B = param4;
           IntrusiveNodeHashTable.field_d = param2;
-          rm.field_e = param5;
-          DottedRectangleSupport.field_m = param0;
+          MeshSymmetrySupport.field_e = param5;
+          LookupQuery.field_m = param0;
           IterableDualLinkDeque.field_g = param3;
           if (param1 != 26790) {
             String var7 = (String) null;
@@ -268,11 +268,11 @@ final class DebugTuningSlider {
         this.field_o = param0;
         this.field_b = param1;
         this.field_n = param2;
-        int var5 = sa.field_h.maxAscent + (18 + sa.field_h.maxDescent);
+        int var5 = CollisionContact.field_h.maxAscent + (18 + CollisionContact.field_h.maxDescent);
         if (param3 == -6) {
           this.field_g = 472;
-          this.field_r = var5 * this.field_n + sa.field_h.maxAscent;
-          this.field_j = sa.field_h.maxDescent + (this.field_r + 2);
+          this.field_r = var5 * this.field_n + CollisionContact.field_h.maxAscent;
+          this.field_j = CollisionContact.field_h.maxDescent + (this.field_r + 2);
           this.field_l = this.field_j + 16;
           this.field_e = 392;
           this.field_q = 80 + this.field_e;
@@ -296,13 +296,13 @@ final class DebugTuningSlider {
           return FullscreenDisplayMode.field_g << 8;
         }
         if (var2 == 3) {
-          return kp.field_m << 8;
+          return MusicPatchEnvelope.field_m << 8;
         }
         if (var2 == 4) {
-          return dr.field_b;
+          return LogoFinalFrameLoader.field_b;
         }
         if (5 == var2) {
-          return l.field_e;
+          return ClientUiResourceState.field_e;
         }
         if (var2 == 6) {
           return WireframeQuad.field_g;
@@ -311,7 +311,7 @@ final class DebugTuningSlider {
           return PasswordValidator.field_q;
         }
         if (var2 == 8) {
-          return wn.field_l;
+          return ReflectionReplySupport.field_l;
         }
         if (var2 == 9) {
           return CueAim.field_f;

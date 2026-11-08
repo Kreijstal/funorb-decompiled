@@ -15,12 +15,12 @@ final class NineSliceFrame {
         if (param0 != 41) {
           return;
         }
-        qa.a(true, LoginPayload.field_d, -104, SocialListEntry.field_Rb);
+        HotspotRectangle.a(true, LoginPayload.field_d, -104, SocialListEntry.field_Rb);
         PolarBallSkin.field_q = true;
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        nj.drawNineSlice(this.field_h, (byte) -72, param0, param3, param1, param4);
+        LogoMaterial.drawNineSlice(this.field_h, (byte) -72, param0, param3, param1, param4);
         if (param2 != -6316) {
           NineSliceFrame.a((byte) -25);
         }

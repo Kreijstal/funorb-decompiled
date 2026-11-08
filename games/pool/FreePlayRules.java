@@ -27,10 +27,10 @@ final class FreePlayRules extends GameRules {
           NanoTickClock.field_t.localX = LobbyGame.field_Vb.frameSprites[3].field_z;
           NanoTickClock.field_t.height = 20;
           NanoTickClock.field_t.localY = var1 + LobbyGame.field_Vb.frameSprites[1].field_A + 3;
-          rl.field_b.width = rl.field_b.font.b(rl.field_b.text) - (-rl.field_b.frameSprites[3].field_z - rl.field_b.frameSprites[5].field_z);
-          rl.field_b.height = NanoTickClock.field_t.height;
-          rl.field_b.localY = 3 + var1 + LobbyGame.field_Vb.frameSprites[1].field_A;
-          rl.field_b.localX = -LobbyGame.field_Vb.frameSprites[5].field_z + (LobbyGame.field_Vb.width - rl.field_b.width);
+          MonotonicClock.field_b.width = MonotonicClock.field_b.font.b(MonotonicClock.field_b.text) - (-MonotonicClock.field_b.frameSprites[3].field_z - MonotonicClock.field_b.frameSprites[5].field_z);
+          MonotonicClock.field_b.height = NanoTickClock.field_t.height;
+          MonotonicClock.field_b.localY = 3 + var1 + LobbyGame.field_Vb.frameSprites[1].field_A;
+          MonotonicClock.field_b.localX = -LobbyGame.field_Vb.frameSprites[5].field_z + (LobbyGame.field_Vb.width - MonotonicClock.field_b.width);
           LobbyGame.field_Vb.height = 3 + var1 + (LobbyGame.field_Vb.frameSprites[1].field_A + (NanoTickClock.field_t.height + LobbyGame.field_Vb.frameSprites[7].field_A));
           return;
         }
@@ -149,7 +149,7 @@ final class FreePlayRules extends GameRules {
 
     final int evaluateShot(byte param0) {
         int var2 = -96 / ((param0 + 37) / 60);
-        int var3 = ll.field_f;
+        int var3 = BrowserUrlSupport.field_f;
         if (this.field_d.isCueBallPotted((byte) 85)) {
           var3 = var3 | MeshBase.field_c;
         }
@@ -190,7 +190,7 @@ final class FreePlayRules extends GameRules {
         if (param0 != -1) {
           return 77;
         }
-        return ll.field_f;
+        return BrowserUrlSupport.field_f;
     }
 
     final int initialGroup(int param0) {

@@ -80,10 +80,10 @@ class TextInputWidget extends ButtonWidget {
           if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.renderer instanceof io)) {
+          if (!(this.renderer instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((io) ((Object) this.renderer)).characterIndexAtPosition(param5, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), 105, param1);
+          var8_int = ((WidgetTextLayout) ((Object) this.renderer)).characterIndexAtPosition(param5, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), 105, param1);
           stackIn_6_1 = 86;
           if (var8_int != -1) {
             stackIn_7_2 = var8_int;
@@ -91,7 +91,7 @@ class TextInputWidget extends ButtonWidget {
             stackIn_7_2 = 0;
           }
           this.moveCaret(stackIn_6_1, stackIn_7_2);
-          var8_long = rl.monotonicTimeMillis((byte) -107);
+          var8_long = MonotonicClock.monotonicTimeMillis((byte) -107);
           stackIn_10_1 = !(var8_long - this.lastPointerPressMillis >= 250L);
           this.wordSelectionDrag = stackIn_10_1;
           if (this.wordSelectionDrag) {
@@ -167,15 +167,15 @@ class TextInputWidget extends ButtonWidget {
     }
 
     void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
-        io var7 = null;
+        WidgetTextLayout var7 = null;
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
           this.updateCaretScroll(-20923);
           if (this.pressedPointerButton == 1) {
-            if (this.renderer instanceof io) {
-              var7 = (io) ((Object) this.renderer);
-              var6 = var7.characterIndexAtPosition(param3, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), param1 - 882, param2);
+            if (this.renderer instanceof WidgetTextLayout) {
+              var7 = (WidgetTextLayout) ((Object) this.renderer);
+              var6 = var7.characterIndexAtPosition(param3, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), param1 - 882, param2);
               if (-1 != var6) {
                 if (this.wordSelectionDrag && var6 < this.wordSelectionEndIndex &&
                   var6 > this.selectionAnchorIndex) {
@@ -184,7 +184,7 @@ class TextInputWidget extends ButtonWidget {
                 this.caretIndex = var6;
               }
             }
-            this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -126);
+            this.caretBlinkStartMillis = MonotonicClock.monotonicTimeMillis((byte) -126);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sl.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -325,10 +325,10 @@ class TextInputWidget extends ButtonWidget {
           this.textOffsetX = 0;
           return;
         }
-        if (!(this.renderer instanceof io)) {
+        if (!(this.renderer instanceof WidgetTextLayout)) {
           return;
         }
-        io var9 = (io) ((Object) this.renderer);
+        WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.renderer);
         TextLayout var3 = var9.ensureTextLayout(0, (UiWidget) (this));
         int var4 = var3.maxRightEdge(-1);
         int var5 = var9.contentWidth((byte) 26, (UiWidget) (this));
@@ -368,7 +368,7 @@ class TextInputWidget extends ButtonWidget {
           this.renderer = VerticalScrollbar.field_Sb.field_j;
           this.setInputText((byte) -124, true, param0);
           this.caretScrollingEnabled = true;
-          this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -101);
+          this.caretBlinkStartMillis = MonotonicClock.monotonicTimeMillis((byte) -101);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -396,7 +396,7 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -116);
+          this.caretBlinkStartMillis = MonotonicClock.monotonicTimeMillis((byte) -116);
           if (param2) {
             this.caretBlinkStartMillis = 25L;
           }
@@ -557,18 +557,18 @@ class TextInputWidget extends ButtonWidget {
     }
 
     final void renderWidget(int param0, byte param1, int param2, int param3) {
-        io var6 = null;
+        WidgetTextLayout var6 = null;
         long var7 = 0L;
         int var5 = 60 % ((-42 - param1) / 53);
         if (null != this.renderer &&
           param0 == 0) {
           this.renderer.paintWidget(this.enabled, param2, (byte) 77, param3, (UiWidget) (this));
-          if (this.renderer instanceof io) {
-            var6 = (io) ((Object) this.renderer);
+          if (this.renderer instanceof WidgetTextLayout) {
+            var6 = (WidgetTextLayout) ((Object) this.renderer);
             if (this.selectionAnchorIndex != this.caretIndex) {
               var6.drawSelection(this.caretIndex, this.selectionAnchorIndex, param2, param3, 154888568, (UiWidget) (this));
             }
-            var7 = rl.monotonicTimeMillis((byte) -126);
+            var7 = MonotonicClock.monotonicTimeMillis((byte) -126);
             if (500L > (-this.caretBlinkStartMillis + var7) % 1000L) {
               var6.drawCaret(1, param3, this.caretIndex, param2, (UiWidget) (this));
             }

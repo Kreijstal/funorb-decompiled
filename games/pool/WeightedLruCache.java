@@ -177,7 +177,7 @@ final class WeightedLruCache {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + hn.formatCookieDate(rl.monotonicTimeMillis((byte) -120) + 94608000000L, false) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + CookieDateSupport.formatCookieDate(MonotonicClock.monotonicTimeMillis((byte) -120) + 94608000000L, false) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

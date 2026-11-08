@@ -55,17 +55,17 @@ final class PolarObject {
               var4_ref_hm = new Quaternion();
               var4_ref_hm.setFromAxisAngle(66, 0, 0, 1, (int)this.field_c);
               this.field_e.multiplyBy(param1 ^ 9, var4_ref_hm);
-              this.field_e.toRotationMatrix(ek.field_b, -96);
+              this.field_e.toRotationMatrix(MenuSelectionSupport.field_b, -96);
               for (var5 = 0; var5 < this.field_h.field_b.length; var5++) {
-                this.field_h.field_b[var5].field_d[3] = ek.field_b[3];
-                this.field_h.field_b[var5].field_d[4] = ek.field_b[4];
-                this.field_h.field_b[var5].field_d[5] = ek.field_b[5];
-                this.field_h.field_b[var5].field_d[6] = ek.field_b[6];
-                this.field_h.field_b[var5].field_d[7] = ek.field_b[7];
-                this.field_h.field_b[var5].field_d[8] = ek.field_b[8];
-                this.field_h.field_b[var5].field_d[9] = ek.field_b[9];
-                this.field_h.field_b[var5].field_d[10] = ek.field_b[10];
-                this.field_h.field_b[var5].field_d[11] = ek.field_b[11];
+                this.field_h.field_b[var5].field_d[3] = MenuSelectionSupport.field_b[3];
+                this.field_h.field_b[var5].field_d[4] = MenuSelectionSupport.field_b[4];
+                this.field_h.field_b[var5].field_d[5] = MenuSelectionSupport.field_b[5];
+                this.field_h.field_b[var5].field_d[6] = MenuSelectionSupport.field_b[6];
+                this.field_h.field_b[var5].field_d[7] = MenuSelectionSupport.field_b[7];
+                this.field_h.field_b[var5].field_d[8] = MenuSelectionSupport.field_b[8];
+                this.field_h.field_b[var5].field_d[9] = MenuSelectionSupport.field_b[9];
+                this.field_h.field_b[var5].field_d[10] = MenuSelectionSupport.field_b[10];
+                this.field_h.field_b[var5].field_d[11] = MenuSelectionSupport.field_b[11];
               }
             }
             if (0.0f == this.field_i &&

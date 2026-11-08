@@ -35,7 +35,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             }
             var7 = this.actionIds[var6_int];
             if (var7 != -1) {
-              lf.a(this.actionIds[var6_int], (byte) 78);
+              LoginEncryptionSupport.a(this.actionIds[var6_int], (byte) 78);
             } else {
               this.dialog.dismissDialog(17);
             }
@@ -211,9 +211,9 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         var12 = Pool.field_O;
         try {
           DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-100, PoolMatchController.field_z);
-          if (null != tp.field_e) {
-            var4 = kc.field_b;
-            kc.field_b.height = 0;
+          if (null != LookupRetrySupport.field_e) {
+            var4 = CanvasInputAttachmentSupport.field_b;
+            CanvasInputAttachmentSupport.field_b.height = 0;
             var4.width = 0;
             var5 = MeshBoundsSupport.field_c;
             MeshBoundsSupport.field_c.height = 0;
@@ -221,7 +221,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             TextHotspotRegion.field_o.height = 0;
             var6 = TextHotspotRegion.field_o;
             var6.width = 0;
-            ii.field_e.text = ScrollPane.ratedGame.toUpperCase();
+            ProxyConnectorSupport.field_e.text = ScrollPane.ratedGame.toUpperCase();
             var7 = (Bzip2DecoderState.field_f.width + 2) / 2;
             TextHotspotRegion.field_o.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var7 - 2, 40);
             MeshBoundsSupport.field_c.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, var7, -var7 + Bzip2DecoderState.field_f.width, 40);
@@ -234,7 +234,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
               var10 = 0;
               while (true) {
                 if (DiskArchiveRequest.field_T.length > var10) {
-                  stackIn_11_0 = (0 == (md.field_c[var10 / 8] & 1 << (var10 & 7))) ? 0 : 1;
+                  stackIn_11_0 = (0 == (RenderingInitializationSupport.field_c[var10 / 8] & 1 << (var10 & 7))) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -272,23 +272,23 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 stackIn_40_3 = TutorialStep.ratedGameTipsSetupSingular;
               }
               stackIn_39_0.text = AccountWelcomePanel.substituteTemplateArguments(stackIn_39_1, stackIn_39_2, stackIn_40_3);
-              TextHotspotRegion.field_o.text = la.waitingToStartHint;
+              TextHotspotRegion.field_o.text = ChatPanelSupport.waitingToStartHint;
               ContentTransitionDialog.field_ob.enabled = true;
               PoolUiText.field_b = true;
               if (ArchiveLoadStep.field_m != null) {
-                if (null == dk.field_j) {
-                  gf.field_b = new boolean[dr.field_c];
-                  dk.field_j = new byte[dr.field_c];
+                if (null == GlowParticle.field_j) {
+                  UsernameSuggestionSupport.field_b = new boolean[LogoFinalFrameLoader.field_c];
+                  GlowParticle.field_j = new byte[LogoFinalFrameLoader.field_c];
                 }
                 PoolUiText.field_b = false;
-                ln.field_p = false;
+                ModelOriginSupport.field_p = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (dr.field_c > var13) {
-                  gf.field_b[var13] = false;
+                while (LogoFinalFrameLoader.field_c > var13) {
+                  UsernameSuggestionSupport.field_b[var13] = false;
                   var13++;
                 }
-                OpacityWidget.a(0, dr.field_c, -1, false, tp.field_e, -1, -1, true);
+                OpacityWidget.a(0, LogoFinalFrameLoader.field_c, -1, false, LookupRetrySupport.field_e, -1, -1, true);
                 if (!(2 > TutorialController.field_i) &&
                   TextLineLayout.field_c[12]) {
                   PoolUiText.field_b = true;
@@ -298,15 +298,15 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 MeshBoundsSupport.field_c.enabled = false;
                 if (MeshBoundsSupport.field_c.hovered) {
                   var9 = null;
-                  if (ln.field_p) {
+                  if (ModelOriginSupport.field_p) {
                     var9 = "<col=A00000>" + ArchiveAvailabilitySupport.muOptionsPlayers + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < dr.field_c; var10Lifetime1++) {
-                    if (gf.field_b[var10Lifetime1]) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < LogoFinalFrameLoader.field_c; var10Lifetime1++) {
+                    if (UsernameSuggestionSupport.field_b[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + ValidationMessageWidget.field_R[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
@@ -317,14 +317,14 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                       }
                     }
                   }
-                  CacheEntry.field_B = "<col=A00000>" + wc.field_a + "<br>" + m.gameoptPleasetrychanging + (String) (var9);
+                  CacheEntry.field_B = "<col=A00000>" + LoginResponse.field_a + "<br>" + RatingTextState.gameoptPleasetrychanging + (String) (var9);
                 }
               }
             } else {
               ContentTransitionDialog.field_ob.enabled = false;
               LimitedRandomAccessFile.field_j.text = CheckboxPainter.ratedGameTips;
               if (var8 != 0) {
-                stackIn_25_0 = vi.searchingForOpponentsPlural;
+                stackIn_25_0 = Cp1252CharacterSupport.searchingForOpponentsPlural;
               } else {
                 stackIn_25_0 = BallEvent.searchingForOpponentSingular;
               }
@@ -357,11 +357,11 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           stackIn_78_0 = DebugTuningSupport.field_b;
           stackIn_79_1 = (param2) && (!param0) && (AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, false);
-          na.field_e.field_i.processTabPresses(true);
+          IntegerSyntaxSupport.field_e.field_i.processTabPresses(true);
           var4_int = -10 % ((-1 - param3) / 35);
-          if (null != tp.field_e) {
+          if (null != LookupRetrySupport.field_e) {
             if (ContentTransitionDialog.field_ob.pressedButton != 0) {
-              te.b(param1, -29);
+              ByteArrayNode.b(param1, -29);
             }
             if (0 != MeshBoundsSupport.field_c.pressedButton) {
               if (LobbyGame.field_Ac) {
@@ -370,7 +370,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 Js5ArchiveManager.a((byte) 81, param1);
               }
             }
-            RankingsScreen.a(param1, tp.field_e, 0, true);
+            RankingsScreen.a(param1, LookupRetrySupport.field_e, 0, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -445,14 +445,14 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         RuntimeException var21 = null;
         try {
           ScrollPaneWithFooter.a((byte) -83, param0, param2, param4);
-          kg.a(param12, true, param13, param5, param19);
-          nj.a(param8, param9, -128);
+          ByteRecordSubmission.a(param12, true, param13, param5, param19);
+          LogoMaterial.a(param8, param9, -128);
           if (param16 != 255) {
             field_P = 121;
           }
           ClassicBallSkin.a((byte) -91, param1, param10, param7, param3, param14);
           BitmapTextLayout.a(111, param15, param17, param18);
-          ta.a((byte) -96, param11, param20, param6);
+          GradientPaletteSupport.a((byte) -96, param11, param20, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

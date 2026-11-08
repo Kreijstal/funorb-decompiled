@@ -27,9 +27,9 @@ final class BallDebugOverlay implements SceneDrawable {
         RuntimeException var6_ref = null;
         var8 = Pool.field_O;
         try {
-          sa.field_o = param4.getParameter("overxgames");
-          if (sa.field_o == null) {
-            sa.field_o = "0";
+          CollisionContact.field_o = param4.getParameter("overxgames");
+          if (CollisionContact.field_o == null) {
+            CollisionContact.field_o = "0";
           }
           LinkButtonPainter.field_e = param4.getParameter("overxachievements");
           if (null == LinkButtonPainter.field_e) {
@@ -38,9 +38,9 @@ final class BallDebugOverlay implements SceneDrawable {
           var6 = param4.getParameter("currency");
           if (var6 != null &&
             AgeValidator.isFriend(10, (CharSequence) ((Object) var6))) {
-            qg.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
+            VertexTransformSupport.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
           } else {
-            qg.field_e = 2;
+            VertexTransformSupport.field_e = 2;
           }
           if (param2 != 37) {
             field_j = (char[]) null;
@@ -52,7 +52,7 @@ final class BallDebugOverlay implements SceneDrawable {
           for (var7 = 0; var7 < param3.length; var7++) {
             TikiBallSkin.field_m[var7] = new Sprite(317, 34);
           }
-          mk.field_a = param3;
+          SharedWidgetLayoutSupport.field_a = param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class BallDebugOverlay implements SceneDrawable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          stackIn_2_0 = dq.field_a;
+          stackIn_2_0 = TransformRotationSupport.field_a;
           stackIn_2_1 = -1912602369;
           stackIn_2_2 = this.field_e;
           stackIn_2_3 = this.field_a.renderTransform;
@@ -99,16 +99,16 @@ final class BallDebugOverlay implements SceneDrawable {
             if (this.field_a.velocityX != 0 ||
               this.field_a.velocityY != 0 ||
               this.field_a.velocityZ != 0) {
-              ProjectedLineSupport.drawProjectedLine(16711680, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16711680, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
             }
             if (this.field_a.angularVelocityX != 0 ||
               this.field_a.angularVelocityY != 0 ||
               0 != this.field_a.angularVelocityZ) {
-              ProjectedLineSupport.drawProjectedLine(65280, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(65280, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
             }
             if (0 != this.field_a.field_l ||
               this.field_a.field_h != 0) {
-              ProjectedLineSupport.drawProjectedLine(16776960, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16776960, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
             }
           }
           if (param1 != -32215) {
@@ -131,7 +131,7 @@ final class BallDebugOverlay implements SceneDrawable {
 
     final static int cubicEaseIn(int param0, int param1, int param2, int param3) {
         if (param0 != 32635) {
-          BallDebugOverlay.a(true);
+          BallDebugOverlay.readPacketString(true);
         }
         return param2 * param2 * (param2 * param3) / param1 / param1 / param1;
     }
@@ -194,7 +194,7 @@ final class BallDebugOverlay implements SceneDrawable {
         return var6.reverse().toString();
     }
 
-    final static String a(boolean param0) {
+    final static String readPacketString(boolean param0) {
         if (param0) {
           field_j = (char[]) null;
         }

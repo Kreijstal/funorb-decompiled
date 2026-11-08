@@ -11,15 +11,15 @@ abstract class MeshBase {
     final static void a(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        kg var4 = null;
+        ByteRecordSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          var4 = (kg) (ArchiveLoadStep.field_c.last((byte) 65));
+          var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.last((byte) 65));
           while (var4 != null) {
             DelayedServerPacket.a(98, var4, param1);
-            var4 = (kg) (ArchiveLoadStep.field_c.previous((byte) -5));
+            var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.previous((byte) -5));
           }
           if (param0 != 10) {
             field_e = false;

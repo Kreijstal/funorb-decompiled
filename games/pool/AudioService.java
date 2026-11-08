@@ -41,7 +41,7 @@ final class AudioService implements Runnable {
 
     final static void a(int param0, boolean param1) {
         if (null != CacheEntry.field_B) {
-          pp.a(CacheEntry.field_B, 1259627265);
+          MeshColorSupport.a(CacheEntry.field_B, 1259627265);
         }
         if (PlasmaBallSkin.field_m != null) {
           PlasmaBallSkin.field_m.a(param1, 12887);
@@ -50,10 +50,10 @@ final class AudioService implements Runnable {
         if (param0 != 0) {
           field_f = 63;
         }
-        if (fc.field_b != null) {
-          fc.field_b.drawRoot((byte) -79, param1);
+        if (AccountMenuText.field_b != null) {
+          AccountMenuText.field_b.drawRoot((byte) -79, param1);
         }
-        t.a(48, param1);
+        PacketDiagnosticsSupport.a(48, param1);
     }
 
     public final void run() {

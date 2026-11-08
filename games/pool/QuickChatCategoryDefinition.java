@@ -10,7 +10,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     char[] phraseShortcuts;
     boolean rootMarker;
     static String gameoptNeedchanging1;
-    static wc field_B;
+    static LoginResponse field_B;
     int[] subcategoryIds;
     String title;
 
@@ -110,14 +110,14 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         int var2Lifetime1;
         if (this.phraseIds != null) {
           for (var2 = 0; var2 < this.phraseIds.length; var2++) {
-            this.phraseIds[var2] = md.bitwiseOr(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = RenderingInitializationSupport.bitwiseOr(this.phraseIds[var2], 32768);
           }
         }
         if (null != this.subcategoryIds) {
           var5 = 0;
           var2Lifetime1 = var5;
           while (this.subcategoryIds.length > var5) {
-            this.subcategoryIds[var5] = md.bitwiseOr(this.subcategoryIds[var5], 32768);
+            this.subcategoryIds[var5] = RenderingInitializationSupport.bitwiseOr(this.subcategoryIds[var5], 32768);
             var5++;
           }
         }
@@ -170,12 +170,12 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         try {
           IntKeyLookup.field_a = param1.readUnsignedShort(-1034) << 5;
           var2_int = param1.readUnsignedByte(-74);
-          jj.field_F = (var2_int & 7) << 18;
+          BirthDatePromptPanel.field_F = (var2_int & 7) << 18;
           IntKeyLookup.field_a = IntKeyLookup.field_a + (var2_int >> 3);
-          jj.field_F = jj.field_F + (param1.readUnsignedShort(-1034) << 2);
+          BirthDatePromptPanel.field_F = BirthDatePromptPanel.field_F + (param1.readUnsignedShort(-1034) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(-115);
           DialRenderer.field_n = (63 & var2_intLifetime1) << 15;
-          jj.field_F = jj.field_F + (var2_intLifetime1 >> 6);
+          BirthDatePromptPanel.field_F = BirthDatePromptPanel.field_F + (var2_intLifetime1 >> 6);
           if (param0 <= 112) {
             gameoptNeedchanging1 = (String) null;
           }

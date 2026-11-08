@@ -52,17 +52,17 @@ final class Camera {
               var6[1] = 1.0 - var4 + var9[1] * var4;
             }
           }
-          var16 = LabeledChildWidget.a(-128, lf.crossProduct(2, var8, var9));
-          var17 = LabeledChildWidget.a(-126, lf.crossProduct(2, var16, var8));
-          param0[3] = ClassicBallSkin.a(16, var16[0]);
-          param0[4] = ClassicBallSkin.a(16, var16[1]);
-          param0[5] = ClassicBallSkin.a(16, var16[2]);
-          param0[6] = ClassicBallSkin.a(16, var17[0]);
-          param0[7] = ClassicBallSkin.a(16, var17[1]);
-          param0[8] = ClassicBallSkin.a(16, var17[2]);
-          param0[9] = ClassicBallSkin.a(16, var8[0]);
-          param0[10] = ClassicBallSkin.a(16, var8[1]);
-          param0[11] = ClassicBallSkin.a(16, var8[2]);
+          var16 = LabeledChildWidget.a(-128, LoginEncryptionSupport.crossProduct(2, var8, var9));
+          var17 = LabeledChildWidget.a(-126, LoginEncryptionSupport.crossProduct(2, var16, var8));
+          param0[3] = ClassicBallSkin.doubleToFixed16(16, var16[0]);
+          param0[4] = ClassicBallSkin.doubleToFixed16(16, var16[1]);
+          param0[5] = ClassicBallSkin.doubleToFixed16(16, var16[2]);
+          param0[6] = ClassicBallSkin.doubleToFixed16(16, var17[0]);
+          param0[7] = ClassicBallSkin.doubleToFixed16(16, var17[1]);
+          param0[8] = ClassicBallSkin.doubleToFixed16(16, var17[2]);
+          param0[9] = ClassicBallSkin.doubleToFixed16(16, var8[0]);
+          param0[10] = ClassicBallSkin.doubleToFixed16(16, var8[1]);
+          param0[11] = ClassicBallSkin.doubleToFixed16(16, var8[2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -188,16 +188,16 @@ final class Camera {
         return Math.atan2(var6, this.eyeZ - this.targetZ);
     }
 
-    final static ie a(int param0, String param1) {
+    final static BrowserCookieSupport a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        ie var5 = null;
-        ie stackIn_4_0 = null;
-        ie stackIn_8_0 = null;
-        ie stackIn_11_0 = null;
-        ie stackIn_13_0 = null;
+        BrowserCookieSupport var5 = null;
+        BrowserCookieSupport stackIn_4_0 = null;
+        BrowserCookieSupport stackIn_8_0 = null;
+        BrowserCookieSupport stackIn_11_0 = null;
+        BrowserCookieSupport stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -207,14 +207,14 @@ final class Camera {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (param0 == var2_int) {
-              stackIn_8_0 = uj.field_e;
+              stackIn_8_0 = WorldPointProjectionSupport.field_e;
               return stackIn_8_0;
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
             var5 = PlasmaBallSkin.a(7, var3);
             if (var5 == null) {
-              stackIn_13_0 = jj.a(102, var4);
+              stackIn_13_0 = BirthDatePromptPanel.a(102, var4);
               return stackIn_13_0;
             }
             stackIn_11_0 = var5;
@@ -284,7 +284,7 @@ final class Camera {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        e.field_a.setBounds(param2, 2147483647, param4, param3, param1);
+        ChoiceButtonSupport.field_a.setBounds(param2, 2147483647, param4, param3, param1);
         if (LobbyPlayer.field_Ub != null) {
           LobbyPlayer.field_Ub.layoutMenuChain(param0, param6, -ProgressBarWidget.field_G + param6, (byte) 127, param1, param1);
         }
@@ -503,14 +503,14 @@ final class Camera {
         RuntimeException var20 = null;
         try {
           QuickChatMenu.field_ec = param14;
-          qa.field_t = param4;
+          HotspotRectangle.field_t = param4;
           AchievementsScreen.b(84, param1, param7, param6, param12);
           UsernameSuggestionsPanel.a(param18, param0, param13, -92);
           if (param16 != 2) {
             return;
           }
           DebugTuningSlider.a(param17, 26790, param10, param3, param5, param19);
-          w.a(param9, -17, param2);
+          GrowableIntListFactory.a(param9, -17, param2);
           SpriteState.a((byte) -82, param11, param8, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

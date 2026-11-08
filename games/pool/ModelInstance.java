@@ -49,9 +49,9 @@ final class ModelInstance implements SceneDrawable {
     }
 
     final static void a(boolean param0, int param1) {
-        if (null != sa.field_f &&
-          sa.field_f.updateAndPollDismissal((byte) -52, param0)) {
-          sa.field_f = null;
+        if (null != CollisionContact.field_f &&
+          CollisionContact.field_f.updateAndPollDismissal((byte) -52, param0)) {
+          CollisionContact.field_f = null;
         }
         int var2 = 20 / ((param1 + 42) / 48);
     }
@@ -230,7 +230,7 @@ final class ModelInstance implements SceneDrawable {
         int var2 = 0;
         int[] var3 = null;
         if (null == this.transform) {
-          this.transform = pn.field_r;
+          this.transform = ChatMessage.field_r;
         } else {
           if (this.transform.length < 12) {
             var2 = 0;
@@ -241,7 +241,7 @@ final class ModelInstance implements SceneDrawable {
               var2++;
             }
             while (var2 < this.transform.length) {
-              this.transform[var2] = pn.field_r[var2];
+              this.transform[var2] = ChatMessage.field_r[var2];
               var2++;
             }
           }
@@ -273,9 +273,9 @@ final class ModelInstance implements SceneDrawable {
             var4 = var3;
             var4 = var3;
           }
-          if (null != om.field_y &&
-            !om.field_y.equals(param2.getParameter("session"))) {
-            var4 = om.field_y;
+          if (null != TextInputPainter.field_y &&
+            !TextInputPainter.field_y.equals(param2.getParameter("session"))) {
+            var4 = TextInputPainter.field_y;
           }
           stackIn_7_0 = MusicVoice.rewriteUrlPathParameters(-1, param1, (String) (var3), (byte) 63, (String) (var4));
           return stackIn_7_0;
@@ -309,7 +309,7 @@ final class ModelInstance implements SceneDrawable {
           if (param0 <= 20) {
             this.a(-74, 99, 4);
           }
-          sa.field_h.drawCentered(param1, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
+          CollisionContact.field_h.drawCentered(param1, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

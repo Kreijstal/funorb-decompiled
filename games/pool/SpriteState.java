@@ -75,7 +75,7 @@ abstract class SpriteState extends DualLinkNode {
           if (param0 != -72) {
             return;
           }
-          pm.a(param13, param2, param11, param8, param14, param5, (IndexedSprite[]) null, (int[]) null, param10, param7, param9, param4, param1, param12, param3, param6, param0 ^ 6033);
+          SceneNodeEntry.a(param13, param2, param11, param8, param14, param5, (IndexedSprite[]) null, (int[]) null, param10, param7, param9, param4, param1, param12, param3, param6, param0 ^ 6033);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

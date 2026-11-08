@@ -9,7 +9,7 @@ final class MusicCrossfadeStream extends PcmStream {
     private int overlayMix256;
     private int primaryMixQ20;
     private boolean field_A;
-    static tg[] field_y;
+    static ScoreboardNameRecord[] field_y;
     private MidiPcmStream primarySynthesizer;
     static String thisisrunescapeclan;
     private int[] field_C;
@@ -59,13 +59,13 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (this.returnWhenTrackEnds) {
             if (0 < this.fadeStep &&
-              !this.primarySynthesizer.d(-11414)) {
+              !this.primarySynthesizer.isReady(-11414)) {
               this.fadeStep = -this.fadeStep;
               this.primaryTrack = null;
               this.returnWhenTrackEnds = false;
             } else {
               if (this.fadeStep < 0 &&
-                !this.secondarySynthesizer.d(-11414)) {
+                !this.secondarySynthesizer.isReady(-11414)) {
                 this.secondaryTrack = null;
                 this.fadeStep = -this.fadeStep;
                 this.returnWhenTrackEnds = false;
@@ -197,7 +197,7 @@ final class MusicCrossfadeStream extends PcmStream {
             return stackIn_2_0;
           }
           UsernameSuggestionsPanel.field_R.addFirst((byte) -108, var2);
-          ReportAbuseDialog.field_Xb.b(param1);
+          ReportAbuseDialog.field_Xb.addSubstream(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,31 +273,31 @@ final class MusicCrossfadeStream extends PcmStream {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        StateIconLabel.field_Nb[jh.field_c] = param1;
-        NetworkGameClient.field_H[jh.field_c] = jh.field_c;
-        TickClock.field_g[jh.field_c] = param3;
-        if (q.field_a < param3) {
-          jl.field_c = param3;
+        StateIconLabel.field_Nb[MenuScreenBase.field_c] = param1;
+        NetworkGameClient.field_H[MenuScreenBase.field_c] = MenuScreenBase.field_c;
+        TickClock.field_g[MenuScreenBase.field_c] = param3;
+        if (LogoJingleLoader.field_a < param3) {
+          SpriteSheetLoadSupport.field_c = param3;
         }
         if (!(ArchiveRequest.field_z <= param3)) {
           DiskCacheWorker.field_d = param3;
         }
-        MenuScreen.field_y[jh.field_c] = param4;
-        om.field_s[jh.field_c] = param5;
-        gd.field_d[jh.field_c] = param0;
+        MenuScreen.field_y[MenuScreenBase.field_c] = param4;
+        TextInputPainter.field_s[MenuScreenBase.field_c] = param5;
+        LoginTextSupport.field_d[MenuScreenBase.field_c] = param0;
         if (!param2) {
           return;
         }
         int var6 = param5 + (param4 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param4 / var6;
-        VertexNormal.field_c[jh.field_c] = var7;
+        VertexNormal.field_c[MenuScreenBase.field_c] = var7;
         if (var7 < DiskCacheWorker.field_d) {
           DiskCacheWorker.field_d = var7;
         }
-        if (!(var7 <= jl.field_c)) {
-          jl.field_c = var7;
+        if (!(var7 <= SpriteSheetLoadSupport.field_c)) {
+          SpriteSheetLoadSupport.field_c = var7;
         }
-        jh.field_c = jh.field_c + 1;
+        MenuScreenBase.field_c = MenuScreenBase.field_c + 1;
     }
 
     final synchronized void skip(int length) {
@@ -374,13 +374,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         if (this.returnWhenTrackEnds) {
           if (this.fadeStep > 0 &&
-            !this.primarySynthesizer.d(-11414)) {
+            !this.primarySynthesizer.isReady(-11414)) {
             this.returnWhenTrackEnds = false;
             this.fadeStep = -this.fadeStep;
             this.primaryTrack = null;
           } else {
             if (this.fadeStep < 0 &&
-              !this.secondarySynthesizer.d(-11414)) {
+              !this.secondarySynthesizer.isReady(-11414)) {
               this.secondaryTrack = null;
               this.fadeStep = -this.fadeStep;
               this.returnWhenTrackEnds = false;
@@ -488,10 +488,10 @@ final class MusicCrossfadeStream extends PcmStream {
         var7 = Pool.field_O;
         try {
           if (WhirlpoolHasher.field_c != 0) {
-            var2_long = rl.monotonicTimeMillis((byte) -94);
+            var2_long = MonotonicClock.monotonicTimeMillis((byte) -94);
             var4 = WhirlpoolHasher.field_c;
-            if (u.field_b != 0.0) {
-              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * u.field_b);
+            if (MeshRenderSupport.field_b != 0.0) {
+              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * MeshRenderSupport.field_b);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -559,10 +559,10 @@ final class MusicCrossfadeStream extends PcmStream {
 
     static {
         int var0 = 0;
-        field_y = new tg[255];
+        field_y = new ScoreboardNameRecord[255];
         thisisrunescapeclan = "This is your RuneScape clan if you have one.";
         for (var0 = 0; var0 < field_y.length; var0++) {
-          field_y[var0] = new tg();
+          field_y[var0] = new ScoreboardNameRecord();
         }
         field_B = new int[]{20, 21, 49, 6, 8};
     }

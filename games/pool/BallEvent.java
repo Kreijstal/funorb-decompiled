@@ -56,7 +56,7 @@ final class BallEvent {
           }
           var3 = (byte[]) (param0);
           if (param2) {
-            stackIn_10_0 = jj.a(var3, (byte) 91);
+            stackIn_10_0 = BirthDatePromptPanel.a(var3, (byte) 91);
             return stackIn_10_0;
           }
           stackIn_8_0 = var3;
@@ -178,7 +178,7 @@ final class BallEvent {
             field_a = 37;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = oj.field_y.equals(TutorialController.normalizeDisplayName(73, var3));
+          stackIn_3_0 = HighScoreSubmission.field_y.equals(TutorialController.normalizeDisplayName(73, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,11 +246,11 @@ final class BallEvent {
 
     final static void c(byte param0) {
         String var2 = null;
-        if (null != nl.field_d) {
-          var2 = nl.field_d;
+        if (null != ServerListLauncher.field_d) {
+          var2 = ServerListLauncher.field_d;
           String var1 = var2;
-          pn.a((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, lf.youHaveBeenRemovedFromXsGame));
-          nl.field_d = null;
+          ChatMessage.a((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, LoginEncryptionSupport.youHaveBeenRemovedFromXsGame));
+          ServerListLauncher.field_d = null;
         }
         if (param0 == 4) {
           return;

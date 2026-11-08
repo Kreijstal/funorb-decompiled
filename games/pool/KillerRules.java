@@ -17,9 +17,9 @@ final class KillerRules extends GameRules {
         if (param2 != -1) {
           KillerRules.a(56, -99, 1, -23);
         }
-        if (sa.field_f != null &&
+        if (CollisionContact.field_f != null &&
           IterableDualLinkDeque.field_a == 13) {
-          sa.field_f = null;
+          CollisionContact.field_f = null;
           return true;
         }
         if (!DualLinkNode.field_p) {
@@ -41,7 +41,7 @@ final class KillerRules extends GameRules {
         if (!UsernameSuggestionsPanel.g((byte) -121)) {
           return false;
         }
-        stackIn_22_0 = (!th.handleChatKey(param3, -103, param1)) ? 0 : 1;
+        stackIn_22_0 = (!ChatInputSupport.handleChatKey(param3, -103, param1)) ? 0 : 1;
         var4 = stackIn_22_0;
         if (80 == IterableDualLinkDeque.field_a ||
           84 == IterableDualLinkDeque.field_a) {
@@ -87,7 +87,7 @@ final class KillerRules extends GameRules {
         if (2 != var10.phase) {
           throw new IllegalStateException("Shot not finished yet, foo!");
         }
-        var4 = ll.field_f;
+        var4 = BrowserUrlSupport.field_f;
         if (this.field_d.isCueBallPotted((byte) 125)) {
           var4 = var4 | (AccountWelcomePanel.field_R | MeshBase.field_c);
           var10.field_t = true;
@@ -176,10 +176,10 @@ final class KillerRules extends GameRules {
           var3_int = 0;
           while (true) {
             var4 = param0.readUnsignedByte(-119);
-            this.field_e[var3_int] = ArchiveLoadSequence.b(var4, 254) >> 4;
+            this.field_e[var3_int] = ArchiveLoadSequence.bitwiseAnd(var4, 254) >> 4;
             var3_int++;
             if (this.field_d.field_h.length != var3_int) {
-              this.field_e[var3_int] = ArchiveLoadSequence.b(var4, 15);
+              this.field_e[var3_int] = ArchiveLoadSequence.bitwiseAnd(var4, 15);
               var3_int++;
               if (~var3_int != ~this.field_d.field_h.length) {
                 continue;
@@ -348,7 +348,7 @@ final class KillerRules extends GameRules {
         if (param1 != -32) {
           this.gainLife(28, 64);
         }
-        return uj.field_a;
+        return WorldPointProjectionSupport.field_a;
     }
 
     final int rulesStateByteLength(int param0) {
@@ -371,15 +371,15 @@ final class KillerRules extends GameRules {
         if (var4 != 2) {
           if (var4 != 3) {
             if (var4 == 1) {
-              var3Lifetime1 = ll.field_f | AccountWelcomePanel.field_R;
+              var3Lifetime1 = BrowserUrlSupport.field_f | AccountWelcomePanel.field_R;
             } else {
-              var3Lifetime1 = ll.field_f;
+              var3Lifetime1 = BrowserUrlSupport.field_f;
             }
           } else {
-            var3Lifetime1 = AccountWelcomePanel.field_V | ll.field_f;
+            var3Lifetime1 = AccountWelcomePanel.field_V | BrowserUrlSupport.field_f;
           }
         } else {
-          var3Lifetime1 = ll.field_f | AccountWelcomePanel.field_Q;
+          var3Lifetime1 = BrowserUrlSupport.field_f | AccountWelcomePanel.field_Q;
         }
         var6.field_t = true;
         if (~var6.breakSeed <= param0) {
@@ -434,10 +434,10 @@ final class KillerRules extends GameRules {
     }
 
     final static void c(byte param0) {
-        PoolUiText.field_f.sprite = dq.createTextLabelSprite(1, param0 ^ -45, Integer.toString(DelayedServerPacket.field_n));
-        dk.a(PoolUiText.field_f, (byte) 93);
+        PoolUiText.field_f.sprite = TransformRotationSupport.createTextLabelSprite(1, param0 ^ -45, Integer.toString(DelayedServerPacket.field_n));
+        GlowParticle.a(PoolUiText.field_f, (byte) 93);
         RasterSnapshot.field_w.enabled = 2 < DelayedServerPacket.field_n ? true : false;
-        ih.field_e.enabled = DelayedServerPacket.field_n < 8 ? true : false;
+        LoginRequestSupport.field_e.enabled = DelayedServerPacket.field_n < 8 ? true : false;
         if (param0 != -45) {
           KillerRules.c((byte) -61);
         }

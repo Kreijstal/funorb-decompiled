@@ -18,13 +18,13 @@ final class ClientException extends RuntimeException {
         if (param1 != 80) {
           return;
         }
-        if (oj.c(param1 ^ 48)) {
+        if (HighScoreSubmission.c(param1 ^ 48)) {
           param0 = false;
         }
         CueStick.a(param0, 118);
-        if (ji.field_f) {
-          SoftwareRasterizer.darkenRectangle(na.field_e.field_i.localX, na.field_e.field_i.localY, na.field_e.field_i.width, na.field_e.field_i.height);
-          na.field_e.field_i.drawRoot((byte) -79, param0);
+        if (ParticleTrail.field_f) {
+          SoftwareRasterizer.darkenRectangle(IntegerSyntaxSupport.field_e.field_i.localX, IntegerSyntaxSupport.field_e.field_i.localY, IntegerSyntaxSupport.field_e.field_i.width, IntegerSyntaxSupport.field_e.field_i.height);
+          IntegerSyntaxSupport.field_e.field_i.drawRoot((byte) -79, param0);
         }
         RankingsScreen.d(param1 ^ -5, param0);
     }
@@ -80,31 +80,31 @@ final class ClientException extends RuntimeException {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          wf.field_d = var17.readUnsignedShort(-1034);
-          StateIconLabel.field_Sb = new byte[wf.field_d][];
-          rc.field_f = new int[wf.field_d];
-          LimitedRandomAccessFile.field_b = new byte[wf.field_d][];
-          LinkButtonPainter.field_a = new int[wf.field_d];
-          AchievementsScreen.field_I = new int[wf.field_d];
-          ih.field_d = new int[wf.field_d];
-          DebouncedValidationProvider.field_d = new boolean[wf.field_d];
-          var17.position = param1.length - 7 - wf.field_d * 8;
+          PacketAvailabilitySupport.field_d = var17.readUnsignedShort(-1034);
+          StateIconLabel.field_Sb = new byte[PacketAvailabilitySupport.field_d][];
+          AccountTextSupport.field_f = new int[PacketAvailabilitySupport.field_d];
+          LimitedRandomAccessFile.field_b = new byte[PacketAvailabilitySupport.field_d][];
+          LinkButtonPainter.field_a = new int[PacketAvailabilitySupport.field_d];
+          AchievementsScreen.field_I = new int[PacketAvailabilitySupport.field_d];
+          LoginRequestSupport.field_d = new int[PacketAvailabilitySupport.field_d];
+          DebouncedValidationProvider.field_d = new boolean[PacketAvailabilitySupport.field_d];
+          var17.position = param1.length - 7 - PacketAvailabilitySupport.field_d * 8;
           DialRenderer.field_c = var17.readUnsignedShort(-1034);
-          tq.field_r = var17.readUnsignedShort(-1034);
+          AccountStateQuery.field_r = var17.readUnsignedShort(-1034);
           var3 = (var17.readUnsignedByte(-97) & 255) + 1;
-          for (var4 = 0; wf.field_d > var4; var4++) {
+          for (var4 = 0; PacketAvailabilitySupport.field_d > var4; var4++) {
             AchievementsScreen.field_I[var4] = var16.readUnsignedShort(-1034);
           }
-          for (var4Lifetime1 = 0; wf.field_d > var4Lifetime1; var4Lifetime1++) {
-            ih.field_d[var4Lifetime1] = var16.readUnsignedShort(-1034);
+          for (var4Lifetime1 = 0; PacketAvailabilitySupport.field_d > var4Lifetime1; var4Lifetime1++) {
+            LoginRequestSupport.field_d[var4Lifetime1] = var16.readUnsignedShort(-1034);
           }
-          for (var4Lifetime2 = 0; wf.field_d > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; PacketAvailabilitySupport.field_d > var4Lifetime2; var4Lifetime2++) {
             LinkButtonPainter.field_a[var4Lifetime2] = var16.readUnsignedShort(-1034);
           }
-          for (var4Lifetime3 = 0; wf.field_d > var4Lifetime3; var4Lifetime3++) {
-            rc.field_f[var4Lifetime3] = var16.readUnsignedShort(-1034);
+          for (var4Lifetime3 = 0; PacketAvailabilitySupport.field_d > var4Lifetime3; var4Lifetime3++) {
+            AccountTextSupport.field_f[var4Lifetime3] = var16.readUnsignedShort(-1034);
           }
-          var17.position = -(3 * (-1 + var3)) + (-(8 * wf.field_d) + (-7 + param1.length));
+          var17.position = -(3 * (-1 + var3)) + (-(8 * PacketAvailabilitySupport.field_d) + (-7 + param1.length));
           IntrusiveNode.field_h = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             IntrusiveNode.field_h[var4Lifetime4] = var16.readUnsignedMedium(99);
@@ -117,9 +117,9 @@ final class ClientException extends RuntimeException {
             var15 = (byte[]) null;
             ClientException.a(true, (byte[]) null);
           }
-          for (var4Lifetime5 = 0; wf.field_d > var4Lifetime5; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; PacketAvailabilitySupport.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = LinkButtonPainter.field_a[var4Lifetime5];
-            var6 = rc.field_f[var4Lifetime5];
+            var6 = AccountTextSupport.field_f[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
@@ -220,12 +220,12 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static void a(int param0, pn param1) {
+    final static void a(int param0, ChatMessage param1) {
         int dupTemp$4 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
         int incrementValue$3 = 0;
-        pn[] fieldTemp$1 = null;
+        ChatMessage[] fieldTemp$1 = null;
         int fieldTemp$2 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -244,8 +244,8 @@ final class ClientException extends RuntimeException {
             ClientException.releaseStatics(-9);
           }
           for (var2_intLifetime1 = 0; IntrusiveDequeCursor.field_e > var2_intLifetime1; var2_intLifetime1++) {
-            if (param1.field_p == wb.field_e[var2_intLifetime1].field_p) {
-              dupTemp$4 = wb.field_e[var2_intLifetime1].b(14842);
+            if (param1.field_p == RankingsProtocolSupport.field_e[var2_intLifetime1].field_p) {
+              dupTemp$4 = RankingsProtocolSupport.field_e[var2_intLifetime1].b(14842);
               MusicPatch.field_l[dupTemp$4] = MusicPatch.field_l[dupTemp$4] + 1;
             }
           }
@@ -254,8 +254,8 @@ final class ClientException extends RuntimeException {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < IntrusiveDequeCursor.field_e; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (wb.field_e[var3].field_p == param1.field_p) {
-              var4 = wb.field_e[var3].b(14842);
+            if (RankingsProtocolSupport.field_e[var3].field_p == param1.field_p) {
+              var4 = RankingsProtocolSupport.field_e[var3].b(14842);
               if (MusicPatch.field_l[var4] > QuickChatPhraseDefinition.field_E) {
                 MusicPatch.field_l[var4] = MusicPatch.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -264,11 +264,11 @@ final class ClientException extends RuntimeException {
             if (decompiledFrameRemainder0) {
               incrementValue$3 = var2_intLifetime2;
               var2_intLifetime2++;
-              wb.field_e[incrementValue$3] = wb.field_e[var3];
+              RankingsProtocolSupport.field_e[incrementValue$3] = RankingsProtocolSupport.field_e[var3];
             }
           }
           IntrusiveDequeCursor.field_e = var2_intLifetime2;
-          fieldTemp$1 = wb.field_e;
+          fieldTemp$1 = RankingsProtocolSupport.field_e;
           fieldTemp$2 = IntrusiveDequeCursor.field_e;
           IntrusiveDequeCursor.field_e = IntrusiveDequeCursor.field_e + 1;
           fieldTemp$1[fieldTemp$2] = param1;

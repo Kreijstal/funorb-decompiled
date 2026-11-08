@@ -84,7 +84,7 @@ final class StateIconLabel extends UiComponent {
           if (param0 != 23138) {
             StateIconLabel.releaseStatics(-5);
           }
-          var3 = qa.reverseString(param1, 0);
+          var3 = HotspotRectangle.reverseString(param1, 0);
           stackIn_7_0 = (-1 != param2.indexOf(param1)) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

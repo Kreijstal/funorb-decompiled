@@ -116,12 +116,12 @@ final class StrongCacheEntry extends CacheEntry {
               QuickChatDynamicCommand.field_l < SocketArchiveNetworkClient.field_u &&
               DebouncedValidationProvider.field_f > var3 &&
               DebouncedValidationProvider.field_f < var3 + ContextMenu.field_Yb.field_A) {
-              if (-ContextMenu.field_Yb.field_z + 269 < wn.field_i &&
-                wn.field_i < 269) {
+              if (-ContextMenu.field_Yb.field_z + 269 < ReflectionReplySupport.field_i &&
+                ReflectionReplySupport.field_i < 269) {
                 SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
               }
-              if (586 < wn.field_i &&
-                wn.field_i < 586 + ContextMenu.field_Yb.field_z) {
+              if (586 < ReflectionReplySupport.field_i &&
+                ReflectionReplySupport.field_i < 586 + ContextMenu.field_Yb.field_z) {
                 SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
               }
             }
@@ -129,13 +129,13 @@ final class StrongCacheEntry extends CacheEntry {
           if (!param0) {
             return 0;
           }
-          jc.field_j.a(ReflectionCheck.a((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ReflectionCheck.a((byte) -21, wn.field_i, DebouncedValidationProvider.field_f), param1 - 192);
-          if (jc.field_j.isPressActivated((byte) 62)) {
-            if (jc.field_j.selectedIndex == 0) {
+          AppletUrlSupport.field_j.a(ReflectionCheck.a((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ReflectionCheck.a((byte) -21, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), param1 - 192);
+          if (AppletUrlSupport.field_j.isPressActivated((byte) 62)) {
+            if (AppletUrlSupport.field_j.selectedIndex == 0) {
               stackIn_60_0 = 3;
               return stackIn_60_0;
             }
-            if (jc.field_j.selectedIndex == 1) {
+            if (AppletUrlSupport.field_j.selectedIndex == 1) {
               stackIn_64_0 = 2;
               return stackIn_64_0;
             }
@@ -145,13 +145,13 @@ final class StrongCacheEntry extends CacheEntry {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
-            jc.field_j.navigateHorizontal(true, 0);
-            if (jc.field_j.isPressActivated((byte) 101)) {
-              if (jc.field_j.selectedIndex == 0) {
+            AppletUrlSupport.field_j.navigateHorizontal(true, 0);
+            if (AppletUrlSupport.field_j.isPressActivated((byte) 101)) {
+              if (AppletUrlSupport.field_j.selectedIndex == 0) {
                 stackIn_71_0 = 3;
                 return stackIn_71_0;
               }
-              if (jc.field_j.selectedIndex == 1) {
+              if (AppletUrlSupport.field_j.selectedIndex == 1) {
                 stackIn_75_0 = 1;
                 return stackIn_75_0;
               }
@@ -188,7 +188,7 @@ final class StrongCacheEntry extends CacheEntry {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            wn.writeReflectionCheckReplies(var1, 1);
+            ReflectionReplySupport.writeReflectionCheckReplies(var1, 1);
             JaggrabDownloader.field_j.writeByteLengthPrefix(var1.position - var2, true);
           }
           return;
@@ -210,7 +210,7 @@ final class StrongCacheEntry extends CacheEntry {
 
     final static void a(int[] param0, int[] param1, byte param2) {
         try {
-          th.quickSortRange(0, param2 ^ 30966, param0, param1, param0.length - 1);
+          ChatInputSupport.quickSortRange(0, param2 ^ 30966, param0, param1, param0.length - 1);
           if (param2 != -54) {
             int[] var4 = (int[]) null;
             StrongCacheEntry.a((int[]) null, (int[]) null, (byte) -96);
@@ -250,7 +250,7 @@ final class StrongCacheEntry extends CacheEntry {
             var5 = var9;
             var6 = param2;
             var7 = param1;
-            var9[var6] = var7 + ArchiveLoadSequence.b(8355711, var9[var6] >> 1);
+            var9[var6] = var7 + ArchiveLoadSequence.bitwiseAnd(8355711, var9[var6] >> 1);
             param2++;
             param3--;
           }

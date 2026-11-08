@@ -15,7 +15,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param1 >= -2) {
           CipherPacketBuffer.a(true, 72, 4, -38, true);
         }
-        return ji.a(param2, param4, (byte) -56, param3, false, param0);
+        return ParticleTrail.a(param2, param4, (byte) -56, param3, false, param0);
     }
 
     final void endBitReading(int param0) {

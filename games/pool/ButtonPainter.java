@@ -5,7 +5,7 @@ final class ButtonPainter implements WidgetPainter {
     static UiComponent field_a;
     static int field_b;
 
-    final static int a(int param0, float param1, byte param2) {
+    final static int floatToFixed(int param0, float param1, byte param2) {
         int var3 = -90 / ((param2 - 82) / 36);
         return (int)(0.5f + (float)(1 << param0) * param1);
     }
@@ -141,7 +141,7 @@ final class ButtonPainter implements WidgetPainter {
           if (!param4.hasKeyboardFocus(126)) {
             return;
           }
-          DottedRectangleSupport.drawDottedRectangle(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
+          LookupQuery.drawDottedRectangle(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -135,11 +135,11 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           return;
         }
         if (!param4 && (DelayedServerPacket.field_s != SoftwareRasterizer.width ||
-          SoftwareRasterizer.height != f.field_h) && (SoftwareRasterizer.height == OpacityWidget.field_P.height &&
+          SoftwareRasterizer.height != LobbyPanelLayoutSupport.field_h) && (SoftwareRasterizer.height == OpacityWidget.field_P.height &&
           OpacityWidget.field_P.width == SoftwareRasterizer.width)) {
           if (null == HighscoresScreen.field_L) {
-            if (tp.field_e == null) {
-              f.layoutLobbyPanels(48);
+            if (LookupRetrySupport.field_e == null) {
+              LobbyPanelLayoutSupport.layoutLobbyPanels(48);
             } else {
               PoolGameModel.layoutLobbyAndChatPanels(true, 0);
             }
@@ -154,19 +154,19 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
         WidgetStyleLayer.a(param4, param5 ^ -13418);
         if (NodeHashTableIterator.field_a > 0) {
-          ie.a(param4, param1, param5 - 13502, param9);
+          BrowserCookieSupport.a(param4, param1, param5 - 13502, param9);
         }
         TextHotspotRegion.field_o.textInset = TimeTrialSelectScreen.field_M.textInset;
         TextHotspotRegion.field_o.horizontalAlignment = 1;
         if (PoolMatchController.field_z > 0) {
           MessageDialogContent.a(param4, param9, param1, 112);
         }
-        if (nj.field_b > 0) {
+        if (LogoMaterial.field_b > 0) {
           ButtonWidget.a(param8, param4, param1, -102, param9);
         }
         if (AccountWelcomePanel.field_bb &&
           HighscoresScreen.field_L.field_Nb <= HighscoresScreen.field_L.field_mc) {
-          DebugTuningSlider.field_c.viewport.text = ro.gameFull;
+          DebugTuningSlider.field_c.viewport.text = ProjectedVertex.gameFull;
           QuickChatMenuSupport.field_e.enabled = false;
           AudioService.a(DebugTuningSlider.field_c.content, (byte) 109);
         } else {
@@ -174,7 +174,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           DebugTuningSlider.field_c.viewport.text = null;
           HuffmanCodec.a(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
         }
-        mk.a(param3, 0, param9, param7, param6, param2, param0);
+        SharedWidgetLayoutSupport.a(param3, 0, param9, param7, param6, param2, param0);
         HuffmanCodec.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
         MultiHandleSliderWidget.field_V = MultiHandleSliderWidget.field_V + 1;
     }
@@ -229,7 +229,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
 
     final static void a(int param0, int param1, NineSliceFrame param2, int param3) {
         try {
-          kp.field_d = param1;
+          MusicPatchEnvelope.field_d = param1;
           ShotRecord.field_o = param0;
           int var4_int = 87 % ((40 - param3) / 48);
           VerticalScrollbar.field_Vb = param2;

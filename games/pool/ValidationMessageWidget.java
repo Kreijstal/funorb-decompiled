@@ -57,7 +57,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
 
     final void renderWidget(int param0, byte param1, int param2, int param3) {
         String var5;
-        na var6;
+        IntegerSyntaxSupport var6;
         int var9;
         int var10;
         int var11;
@@ -81,9 +81,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite var32;
         Sprite var33;
         Sprite var34;
-        io var35;
-        io var36;
-        io var37;
+        WidgetTextLayout var35;
+        WidgetTextLayout var36;
+        WidgetTextLayout var37;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -100,25 +100,25 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         int var13Lifetime4;
         int var12Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        na var6Lifetime1;
+        IntegerSyntaxSupport var6Lifetime1;
         var19 = null;
         var25 = null;
         var30 = null;
         var14 = Pool.field_O;
         var6 = this.field_S.getDebouncedValidationState(-31873);
-        if (var6 == ji.field_h) {
-          var18 = oi.checking;
+        if (var6 == ParticleTrail.field_h) {
+          var18 = IntegerRecordSubmission.checking;
           if (!var18.equals(this.widgetText)) {
             this.widgetText = var18;
             this.rebuildHotspotBounds((byte) 33);
           }
           super.renderWidget(param0, (byte) 112, param2, param3);
           var6 = this.field_S.getDebouncedValidationState(-31873);
-          var35 = (io) ((Object) this.renderer);
+          var35 = (WidgetTextLayout) ((Object) this.renderer);
           var10 = -91 % ((-42 - param1) / 53);
           var9 = this.widgetX + param2;
           var11 = var35.textTop(param3, (UiWidget) (this), (byte) -7) + (var35.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
-          if (ji.field_h == var6) {
+          if (ParticleTrail.field_h == var6) {
             var21 = FixedAngleSupport.field_a[0];
             var12 = var21.field_w << 1;
             var13 = var21.field_y << 1;
@@ -145,7 +145,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return;
           }
           if (Js5Transport.field_k != var6) {
-            if (gp.field_d == var6) {
+            if (AchievementProtocolSupport.field_d == var6) {
               var22 = FixedAngleSupport.field_a[2];
               var22.drawAdditive(var9, var11 - (var22.field_A >> 1), 256);
               return;
@@ -175,18 +175,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         if (var6 == Js5Transport.field_k) {
-          var24 = oi.checking;
+          var24 = IntegerRecordSubmission.checking;
           if (!var24.equals(this.widgetText)) {
             this.widgetText = var24;
             this.rebuildHotspotBounds((byte) 33);
           }
           super.renderWidget(param0, (byte) 112, param2, param3);
           var6 = this.field_S.getDebouncedValidationState(-31873);
-          var36 = (io) ((Object) this.renderer);
+          var36 = (WidgetTextLayout) ((Object) this.renderer);
           var10Lifetime1 = -91 % ((-42 - param1) / 53);
           var9Lifetime1 = this.widgetX + param2;
           var11Lifetime1 = var36.textTop(param3, (UiWidget) (this), (byte) -7) + (var36.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
-          if (ji.field_h == var6) {
+          if (ParticleTrail.field_h == var6) {
             var27 = FixedAngleSupport.field_a[0];
             var12Lifetime1 = var27.field_w << 1;
             var13Lifetime1 = var27.field_y << 1;
@@ -213,7 +213,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return;
           }
           if (Js5Transport.field_k != var6) {
-            if (gp.field_d == var6) {
+            if (AchievementProtocolSupport.field_d == var6) {
               var28 = FixedAngleSupport.field_a[2];
               var28.drawAdditive(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
               return;
@@ -252,11 +252,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         super.renderWidget(param0, (byte) 112, param2, param3);
         var6Lifetime1 = this.field_S.getDebouncedValidationState(-31873);
-        var37 = (io) ((Object) this.renderer);
+        var37 = (WidgetTextLayout) ((Object) this.renderer);
         var10Lifetime2 = -91 % ((-42 - param1) / 53);
         var9Lifetime2 = this.widgetX + param2;
         var11Lifetime2 = var37.textTop(param3, (UiWidget) (this), (byte) -7) + (var37.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
-        if (ji.field_h == var6Lifetime1) {
+        if (ParticleTrail.field_h == var6Lifetime1) {
           var32 = FixedAngleSupport.field_a[0];
           var12Lifetime2 = var32.field_w << 1;
           var13Lifetime2 = var32.field_y << 1;
@@ -283,7 +283,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         if (Js5Transport.field_k != var6Lifetime1) {
-          if (gp.field_d == var6Lifetime1) {
+          if (AchievementProtocolSupport.field_d == var6Lifetime1) {
             var33 = FixedAngleSupport.field_a[2];
             var33.drawAdditive(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
             return;

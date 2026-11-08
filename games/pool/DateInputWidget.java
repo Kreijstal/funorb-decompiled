@@ -81,13 +81,13 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         OptionsScreen discarded$1 = new OptionsScreen(14, 180, 460, 160, 24, MusicCrossfadeStream.field_B);
         TimeTrialSelectScreen discarded$2 = new TimeTrialSelectScreen(DialogLayer.field_Q, 2, 180, 460, 160, 24, new int[]{50, 51, 8});
         PauseMenuScreen discarded$3 = new PauseMenuScreen((Sprite) null, 3, 180, 460, 160, 24, ArchiveIndex.field_o);
-        PauseMenuScreen discarded$4 = new PauseMenuScreen((Sprite) null, 8, 180, 460, 160, 24, e.field_d);
+        PauseMenuScreen discarded$4 = new PauseMenuScreen((Sprite) null, 8, 180, 460, 160, 24, ChoiceButtonSupport.field_d);
         PauseMenuScreen discarded$5 = new PauseMenuScreen((Sprite) null, 9, 180, 460, 160, 24, LimitedRandomAccessFile.field_f);
         PauseMenuScreen discarded$6 = new PauseMenuScreen((Sprite) null, 24, 180, 460, 160, 24, TutorialSelectScreen.field_J);
         PauseMenuScreen discarded$7 = new PauseMenuScreen((Sprite) null, 10, 180, 460, 160, 24, WireframeQuad.field_r);
         PauseMenuScreen discarded$8 = new PauseMenuScreen((Sprite) null, 11, 180, 460, 160, 24, RankingsScreen.field_L);
         PauseMenuScreen discarded$9 = new PauseMenuScreen((Sprite) null, 12, 180, 460, 160, 24, MenuScreen.field_m);
-        lb discarded$10 = new lb((Sprite) null, 23, 180, 460, 160, 24, new int[]{9, 3});
+        DimmedPauseMenu discarded$10 = new DimmedPauseMenu((Sprite) null, 23, 180, 460, 160, 24, new int[]{9, 3});
         PauseMenuScreen discarded$11 = new PauseMenuScreen((Sprite) null, 22, 180, 460, 160, 24, new int[]{2, 21, 59, 60, 54, 55, 56, 57, 58});
         HighscoresScreen discarded$12 = new HighscoresScreen(16, 180, 460, 410, 24, new int[]{23, 8});
         RankingsScreen discarded$13 = new RankingsScreen(15, 180, 460, 410, 24, new int[]{23, 8});
@@ -133,7 +133,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
               }
               var3 = var8 + "settings";
               var4 = (String) (JavaScriptBridge.callWindowFunction((byte) 124, "getcookies", param0));
-              var5 = jc.splitString(30634, var4, ';');
+              var5 = AppletUrlSupport.splitString(30634, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&

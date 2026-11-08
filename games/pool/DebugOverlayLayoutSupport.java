@@ -61,12 +61,12 @@ final class DebugOverlayLayoutSupport {
         if (param0 != 0) {
           return;
         }
-        if (wp.field_g == null) {
+        if (CompressedContainerSupport.field_g == null) {
           return;
         }
-        var1 = wp.field_g;
+        var1 = CompressedContainerSupport.field_g;
         synchronized (var1) {
-          wp.field_g = null;
+          CompressedContainerSupport.field_g = null;
         }
     }
 

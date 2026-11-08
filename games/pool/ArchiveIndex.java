@@ -31,7 +31,7 @@ final class ArchiveIndex {
 
     final static void a(byte param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          lf.writeEncryptedPayload(param3, param2.payload, param1, param4, param2.position, 0, 0);
+          LoginEncryptionSupport.writeEncryptedPayload(param3, param2.payload, param1, param4, param2.position, 0, 0);
           if (param0 != 93) {
             ArchiveIndex.a(122, 64, 86);
           }
@@ -99,7 +99,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Pool.field_O;
         try {
-          var17 = new PacketBuffer(wp.decompressContainer(0, param0));
+          var17 = new PacketBuffer(CompressedContainerSupport.decompressContainer(0, param0));
           var4 = var17.readUnsignedByte(param1 ^ 105);
           if (var4 >= 5 &&
             var4 <= 7) {

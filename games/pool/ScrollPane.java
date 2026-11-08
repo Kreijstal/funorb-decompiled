@@ -90,7 +90,7 @@ final class ScrollPane extends UiComponent {
         if (param1 != 0) {
           field_Ob = 7;
         }
-        tp.field_h[0] = -140 + param2 * 280 / param0;
+        LookupRetrySupport.field_h[0] = -140 + param2 * 280 / param0;
     }
 
     final static void a(byte param0, ResourceArchive param1) {
@@ -100,10 +100,10 @@ final class ScrollPane extends UiComponent {
           if (param0 <= 16) {
             field_Tb = (QuickChatDynamicCommand) null;
           }
-          for (var2_int = 0; nn.field_b.length > var2_int; var2_int++) {
-            nn.field_b[var2_int].loadBackdrop(5, param1);
+          for (var2_int = 0; BrowserCookieWriter.field_b.length > var2_int; var2_int++) {
+            BrowserCookieWriter.field_b[var2_int].loadBackdrop(5, param1);
           }
-          pn.field_l = new Sprite(param1.getFileByName(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
+          ChatMessage.field_l = new Sprite(param1.getFileByName(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "of.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -175,7 +175,7 @@ final class ScrollPane extends UiComponent {
           if (var9 == null) {
             return;
           }
-          SoftwareRasterizer.saveClip(kg.field_t);
+          SoftwareRasterizer.saveClip(ByteRecordSubmission.field_t);
           var4 = var9.field_A;
           param2 = param2 - (var4 >> 1);
           SoftwareRasterizer.setClip(param0, param2, param0 + 230, var4 + param2);
@@ -201,7 +201,7 @@ final class ScrollPane extends UiComponent {
             }
             break;
           }
-          SoftwareRasterizer.restoreClip(kg.field_t);
+          SoftwareRasterizer.restoreClip(ByteRecordSubmission.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

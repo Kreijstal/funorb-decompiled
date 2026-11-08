@@ -22,13 +22,13 @@ final class ProgressDialog extends ResizableDialog {
         if (param0 == 23323) {
           var3 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + AwtEventQueueSupport.field_g) * var2 / var1;
           IntLookupQuery.field_q.setBounds(var3, 2147483647, RasterSnapshot.field_u, 640, 120);
-          Camera.a(ja.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+          Camera.a(ByteArrayPool.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
           return;
         }
         field_ib = (int[]) null;
         var3Lifetime1 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + AwtEventQueueSupport.field_g) * var2 / var1;
         IntLookupQuery.field_q.setBounds(var3Lifetime1, 2147483647, RasterSnapshot.field_u, 640, 120);
-        Camera.a(ja.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+        Camera.a(ByteArrayPool.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
     }
 
     final void drawDialogFrame(int param0, int param1, int param2) {

@@ -122,7 +122,7 @@ final class WidgetStyleLayer {
           if (6 + var7 + var5_int > SoftwareRasterizer.width) {
             var7 = -var5_int + SoftwareRasterizer.width - 6;
           }
-          var8 = 32 + (-param3.field_L + pm.field_p);
+          var8 = 32 + (-param3.field_L + SceneNodeEntry.field_p);
           if (SoftwareRasterizer.height < var8 + var6 + 6) {
             var8 = -6 - var6 + SoftwareRasterizer.height;
           }
@@ -174,10 +174,10 @@ final class WidgetStyleLayer {
               PoolMatchController.field_z = PoolMatchController.field_z - 1;
               return;
             }
-            if (0 >= nj.field_b) {
+            if (0 >= LogoMaterial.field_b) {
               return;
             }
-            nj.field_b = nj.field_b - 1;
+            LogoMaterial.field_b = LogoMaterial.field_b - 1;
             return;
           }
           if (HighscoresScreen.field_L != null) {
@@ -189,22 +189,22 @@ final class WidgetStyleLayer {
               PoolMatchController.field_z = PoolMatchController.field_z - 1;
               return;
             }
-            if (BufferedFile.field_h > nj.field_b) {
-              if (nj.field_b == 0) {
+            if (BufferedFile.field_h > LogoMaterial.field_b) {
+              if (LogoMaterial.field_b == 0) {
                 VerticalScrollbar.a(27194, false);
               }
-              nj.field_b = nj.field_b + 1;
+              LogoMaterial.field_b = LogoMaterial.field_b + 1;
               return;
             }
           } else {
-            if (tp.field_e == null) {
+            if (LookupRetrySupport.field_e == null) {
               AccountWelcomePanel.field_bb = false;
               if (0 < PoolMatchController.field_z) {
                 PoolMatchController.field_z = PoolMatchController.field_z - 1;
                 return;
               }
-              if (nj.field_b > 0) {
-                nj.field_b = nj.field_b - 1;
+              if (LogoMaterial.field_b > 0) {
+                LogoMaterial.field_b = LogoMaterial.field_b - 1;
                 return;
               }
               if (NodeHashTableIterator.field_a >= BufferedFile.field_h) {
@@ -220,8 +220,8 @@ final class WidgetStyleLayer {
               NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
               return;
             }
-            if (nj.field_b > 0) {
-              nj.field_b = nj.field_b - 1;
+            if (LogoMaterial.field_b > 0) {
+              LogoMaterial.field_b = LogoMaterial.field_b - 1;
               return;
             }
             if (PoolMatchController.field_z < BufferedFile.field_h) {
@@ -450,7 +450,7 @@ final class WidgetStyleLayer {
     final static void a(boolean param0) {
         try {
           DualLinkNode.field_p = param0;
-          hn.field_b = 0;
+          CookieDateSupport.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pf.I(" + param0 + ')');
         }
@@ -536,7 +536,7 @@ final class WidgetStyleLayer {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          nj.drawNineSlice(this.frameSprites, (byte) -112, param2.widgetWidth, param1 + param2.widgetX, param0 + param2.widgetY, param2.widgetHeight);
+          LogoMaterial.drawNineSlice(this.frameSprites, (byte) -112, param2.widgetWidth, param1 + param2.widgetX, param0 + param2.widgetY, param2.widgetHeight);
           if (null != this.sprite) {
             var6_int = param2.widgetX + param1 + this.offsetX;
             if (param3.horizontalAlignment == 1) {

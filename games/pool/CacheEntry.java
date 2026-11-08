@@ -19,23 +19,23 @@ abstract class CacheEntry extends DualLinkNode {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        na.field_f = param4;
+        IntegerSyntaxSupport.field_f = param4;
         ReportAbuseDialog.field_Nb = param0;
         BallEvent.field_a = param2;
         if (param6 != 1727215554) {
           CacheEntry.releaseStatics(-21);
         }
-        la.field_f = param3;
-        if (na.field_f - param1 >= la.field_f - param5) {
-          stackIn_5_0 = -param5 + la.field_f;
+        ChatPanelSupport.field_f = param3;
+        if (IntegerSyntaxSupport.field_f - param1 >= ChatPanelSupport.field_f - param5) {
+          stackIn_5_0 = -param5 + ChatPanelSupport.field_f;
         } else {
-          stackIn_5_0 = na.field_f - param1;
+          stackIn_5_0 = IntegerSyntaxSupport.field_f - param1;
         }
         MembershipBenefitsScreen.field_I = stackIn_5_0;
-        if (param1 + na.field_f <= param5 + la.field_f) {
-          stackIn_8_0 = la.field_f + param5;
+        if (param1 + IntegerSyntaxSupport.field_f <= param5 + ChatPanelSupport.field_f) {
+          stackIn_8_0 = ChatPanelSupport.field_f + param5;
         } else {
-          stackIn_8_0 = param1 + na.field_f;
+          stackIn_8_0 = param1 + IntegerSyntaxSupport.field_f;
         }
         QuickChatPhraseRegistry.field_f = stackIn_8_0;
         if (ReportAbuseDialog.field_Nb - param5 <= -param1 + BallEvent.field_a) {
@@ -43,18 +43,18 @@ abstract class CacheEntry extends DualLinkNode {
         } else {
           stackIn_11_0 = BallEvent.field_a - param1;
         }
-        ic.field_a = stackIn_11_0;
+        SharedRateScaleSupport.field_a = stackIn_11_0;
         if (BallEvent.field_a + param1 <= param5 + ReportAbuseDialog.field_Nb) {
           stackIn_14_0 = param5 + ReportAbuseDialog.field_Nb;
         } else {
           stackIn_14_0 = param1 + BallEvent.field_a;
         }
-        na.field_c = stackIn_14_0;
-        if (ic.field_a < SoftwareRasterizer.clipTop << 2) {
-          if (SoftwareRasterizer.clipTop << 2 > na.field_c) {
-            na.field_c = SoftwareRasterizer.clipTop << 2;
+        IntegerSyntaxSupport.field_c = stackIn_14_0;
+        if (SharedRateScaleSupport.field_a < SoftwareRasterizer.clipTop << 2) {
+          if (SoftwareRasterizer.clipTop << 2 > IntegerSyntaxSupport.field_c) {
+            IntegerSyntaxSupport.field_c = SoftwareRasterizer.clipTop << 2;
           }
-          ic.field_a = SoftwareRasterizer.clipTop << 2;
+          SharedRateScaleSupport.field_a = SoftwareRasterizer.clipTop << 2;
         }
         if (SoftwareRasterizer.clipLeft << 2 > MembershipBenefitsScreen.field_I) {
           MembershipBenefitsScreen.field_I = SoftwareRasterizer.clipLeft << 2;
@@ -62,10 +62,10 @@ abstract class CacheEntry extends DualLinkNode {
             QuickChatPhraseRegistry.field_f = SoftwareRasterizer.clipLeft << 2;
           }
         }
-        if (na.field_c > SoftwareRasterizer.clipBottom << 2) {
-          na.field_c = SoftwareRasterizer.clipBottom << 2;
-          if (ic.field_a > SoftwareRasterizer.clipBottom << 2) {
-            ic.field_a = SoftwareRasterizer.clipBottom << 2;
+        if (IntegerSyntaxSupport.field_c > SoftwareRasterizer.clipBottom << 2) {
+          IntegerSyntaxSupport.field_c = SoftwareRasterizer.clipBottom << 2;
+          if (SharedRateScaleSupport.field_a > SoftwareRasterizer.clipBottom << 2) {
+            SharedRateScaleSupport.field_a = SoftwareRasterizer.clipBottom << 2;
           }
         }
         if (QuickChatPhraseRegistry.field_f > SoftwareRasterizer.clipRight << 2) {
@@ -79,16 +79,16 @@ abstract class CacheEntry extends DualLinkNode {
     final static void g(int param0) {
         DisplayModeSupport.field_c[16].setItems(FullscreenDisplayMode.field_m, true);
         DisplayModeSupport.field_c[15].setItems(UsernameAvailabilityValidator.field_t, true);
-        DisplayModeSupport.field_c[17].setItems(ml.field_k, true);
+        DisplayModeSupport.field_c[17].setItems(LoginMethod.field_k, true);
         int var1 = 125 % ((-17 - param0) / 34);
-        if (!mg.a(true)) {
+        if (!LobbyPlayerLookupSupport.a(true)) {
           DisplayModeSupport.field_c[3].setItems(OpacityWidget.field_O, true);
-          DisplayModeSupport.field_c[10].setItems(kc.field_h, true);
+          DisplayModeSupport.field_c[10].setItems(CanvasInputAttachmentSupport.field_h, true);
           DisplayModeSupport.field_c[11].setItems(AccountCreationDialog.field_Hb, true);
           DisplayModeSupport.field_c[12].setItems(ScrollPaneWithFooter.field_Nb, true);
           DisplayModeSupport.field_c[8].setItems(KillerBallSkin.field_r, true);
           DisplayModeSupport.field_c[24].setItems(SingleChildWidget.field_G, true);
-          DisplayModeSupport.field_c[9].setItems(w.field_d, true);
+          DisplayModeSupport.field_c[9].setItems(GrowableIntListFactory.field_d, true);
         }
     }
 
@@ -141,105 +141,105 @@ abstract class CacheEntry extends DualLinkNode {
           ChatMessageLine.field_o = true;
           ClientException.field_h = param2;
           if (ClientException.field_h == 0) {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, StatefulTextPainter.fsNonmember, dq.field_f, 0);
+            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
             var4 = 3 + var3_int;
             IterableNodeHashTable.field_c = new int[var4];
-            dq.field_j = new String[var4];
+            TransformRotationSupport.field_j = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               IterableNodeHashTable.field_c[var5] = -1;
             }
             ByteStorage.field_c = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              dq.field_j[var5] = ih.field_c[var5];
+              TransformRotationSupport.field_j[var5] = LoginRequestSupport.field_c[var5];
             }
-            dq.field_j[var4 - 3] = "";
-            dq.field_j[var4 - 2] = wp.fsButtonMembers;
+            TransformRotationSupport.field_j[var4 - 3] = "";
+            TransformRotationSupport.field_j[var4 - 2] = CompressedContainerSupport.fsButtonMembers;
             IterableNodeHashTable.field_c[-2 + var4] = 0;
             ByteStorage.field_c[0] = 4;
-            dq.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
+            TransformRotationSupport.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             ByteStorage.field_c[1] = 5;
           } else if (ClientException.field_h == 1) {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, StatefulTextPainter.fsNonmember, dq.field_f, 0);
+            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
             var4 = 2 + var3_int;
-            dq.field_j = new String[var4];
+            TransformRotationSupport.field_j = new String[var4];
             IterableNodeHashTable.field_c = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               IterableNodeHashTable.field_c[var5] = -1;
             }
             ByteStorage.field_c = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              dq.field_j[var5] = ih.field_c[var5];
+              TransformRotationSupport.field_j[var5] = LoginRequestSupport.field_c[var5];
             }
-            dq.field_j[-2 + var4] = "";
-            dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
+            TransformRotationSupport.field_j[-2 + var4] = "";
+            TransformRotationSupport.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
             IterableNodeHashTable.field_c[var4 - 1] = 0;
             ByteStorage.field_c[0] = 5;
           } else if (ClientException.field_h != 2) {
             if (ClientException.field_h == 3) {
               if (StatefulTextPainter.field_s.field_k) {
-                var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, ih.fsUnavailable, dq.field_f, param1 ^ 4);
+                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, LoginRequestSupport.fsUnavailable, TransformRotationSupport.field_f, param1 ^ 4);
               } else {
-                var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, ValidationIconWidget.fsUnavailableTrySignedApplet, dq.field_f, 0);
+                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, ValidationIconWidget.fsUnavailableTrySignedApplet, TransformRotationSupport.field_f, 0);
               }
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
-              dq.field_j = new String[var4];
+              TransformRotationSupport.field_j = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 IterableNodeHashTable.field_c[var5] = -1;
               }
               ByteStorage.field_c = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                dq.field_j[var5] = ih.field_c[var5];
+                TransformRotationSupport.field_j[var5] = LoginRequestSupport.field_c[var5];
               }
-              dq.field_j[-2 + var4] = "";
-              dq.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
+              TransformRotationSupport.field_j[-2 + var4] = "";
+              TransformRotationSupport.field_j[-1 + var4] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               ByteStorage.field_c[0] = 5;
             } else if (4 == ClientException.field_h) {
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, QuickChatPhraseRegistry.fsFocus, dq.field_f, 0);
+              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, QuickChatPhraseRegistry.fsFocus, TransformRotationSupport.field_f, 0);
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
-              dq.field_j = new String[var4];
+              TransformRotationSupport.field_j = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 IterableNodeHashTable.field_c[var5] = -1;
               }
               ByteStorage.field_c = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                dq.field_j[var5] = ih.field_c[var5];
+                TransformRotationSupport.field_j[var5] = LoginRequestSupport.field_c[var5];
               }
-              dq.field_j[-2 + var4] = "";
-              dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
+              TransformRotationSupport.field_j[-2 + var4] = "";
+              TransformRotationSupport.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               ByteStorage.field_c[0] = 5;
             } else {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, DebugTuningSupport.fsTimeout, dq.field_f, param1 ^ 4);
+              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, DebugTuningSupport.fsTimeout, TransformRotationSupport.field_f, param1 ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
-              dq.field_j = new String[var4];
+              TransformRotationSupport.field_j = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 IterableNodeHashTable.field_c[var5] = -1;
               }
               ByteStorage.field_c = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                dq.field_j[var5] = ih.field_c[var5];
+                TransformRotationSupport.field_j[var5] = LoginRequestSupport.field_c[var5];
               }
-              dq.field_j[var4 - 3] = "";
-              dq.field_j[var4 - 2] = hg.fsButtonTryagain;
+              TransformRotationSupport.field_j[var4 - 3] = "";
+              TransformRotationSupport.field_j[var4 - 2] = AppletContainerSupport.fsButtonTryagain;
               IterableNodeHashTable.field_c[var4 - 2] = 0;
               ByteStorage.field_c[0] = 3;
-              dq.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
+              TransformRotationSupport.field_j[var4 - 1] = DirectByteStorage.fsButtonClose;
               IterableNodeHashTable.field_c[-1 + var4] = 1;
               ByteStorage.field_c[1] = 5;
             }
           } else {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, param1 - 5, rl.fsAcceptCountdownSing), dq.field_f, 0);
+            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, param1 - 5, MonotonicClock.fsAcceptCountdownSing), TransformRotationSupport.field_f, 0);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(ih.field_c[var5])) {
+              if (!"<%0>".equals(LoginRequestSupport.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -249,13 +249,13 @@ abstract class CacheEntry extends DualLinkNode {
               throw new IllegalStateException();
             }
             NanoTickClock.field_n = new String[var4];
-            ArrayOperations.copy(ih.field_c, 0, NanoTickClock.field_n, 0, var4);
+            ArrayOperations.copy(LoginRequestSupport.field_c, 0, NanoTickClock.field_n, 0, var4);
             MusicCrossfadeStream.field_H = new String[-1 + var3_int - var4];
-            ArrayOperations.copy(ih.field_c, 1 + var4, MusicCrossfadeStream.field_H, 0, -var4 + var3_int - 1);
+            ArrayOperations.copy(LoginRequestSupport.field_c, 1 + var4, MusicCrossfadeStream.field_H, 0, -var4 + var3_int - 1);
             var4 = -1;
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, -1, SoundCache.fsAcceptCountdownPl), dq.field_f, 0);
+            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, -1, SoundCache.fsAcceptCountdownPl), TransformRotationSupport.field_f, 0);
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ih.field_c[var5])) {
+              if (!"<%0>".equals(LoginRequestSupport.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -265,9 +265,9 @@ abstract class CacheEntry extends DualLinkNode {
               throw new IllegalStateException();
             }
             MultiHandleSliderWidget.field_W = new String[var4];
-            ArrayOperations.copy(ih.field_c, 0, MultiHandleSliderWidget.field_W, 0, var4);
+            ArrayOperations.copy(LoginRequestSupport.field_c, 0, MultiHandleSliderWidget.field_W, 0, var4);
             KeyHandler.field_a = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copy(ih.field_c, 1 + var4, KeyHandler.field_a, 0, -1 + (-var4 + var3_int));
+            ArrayOperations.copy(LoginRequestSupport.field_c, 1 + var4, KeyHandler.field_a, 0, -1 + (-var4 + var3_int));
             if (NanoTickClock.field_n.length >= MultiHandleSliderWidget.field_W.length) {
               stackIn_52_0 = NanoTickClock.field_n.length;
             } else {
@@ -282,23 +282,23 @@ abstract class CacheEntry extends DualLinkNode {
             var6 = stackIn_55_0;
             var7 = var5 + (7 + var6);
             IterableNodeHashTable.field_c = new int[var7];
-            dq.field_j = new String[var7];
+            TransformRotationSupport.field_j = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
               IterableNodeHashTable.field_c[var8] = -1;
             }
-            dq.field_j[1] = jc.fsButtonAccept;
+            TransformRotationSupport.field_j[1] = AppletUrlSupport.fsButtonAccept;
             ByteStorage.field_c = new int[2];
             IterableNodeHashTable.field_c[1] = 0;
-            dq.field_j[0] = ProjectedLineSupport.fsAcceptBeforeaccept;
+            TransformRotationSupport.field_j[0] = ProjectedLineSupport.fsAcceptBeforeaccept;
             IterableNodeHashTable.field_c[3] = 1;
-            dq.field_j[3] = ArchiveIndex.fsButtonCancel;
+            TransformRotationSupport.field_j[3] = ArchiveIndex.fsButtonCancel;
             ByteStorage.field_c[1] = 2;
-            dq.field_j[2] = DisplayNamePanel.fsAcceptAfteraccept;
-            dq.field_j[5] = "";
-            dq.field_j[4] = TranslatedUiText.field_c;
+            TransformRotationSupport.field_j[2] = DisplayNamePanel.fsAcceptAfteraccept;
+            TransformRotationSupport.field_j[5] = "";
+            TransformRotationSupport.field_j[4] = TranslatedUiText.field_c;
             ByteStorage.field_c[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_62_0 = dq.field_j;
+              stackIn_62_0 = TransformRotationSupport.field_j;
               stackIn_62_1 = var8Lifetime2 + 6;
               if (-var5 + (MultiHandleSliderWidget.field_W.length + var8Lifetime2) < 0) {
                 stackIn_63_2 = "";
@@ -307,10 +307,10 @@ abstract class CacheEntry extends DualLinkNode {
               }
               stackIn_62_0[stackIn_62_1] = stackIn_63_2;
             }
-            dq.field_j[var5 + 6] = null;
+            TransformRotationSupport.field_j[var5 + 6] = null;
             IterableNodeHashTable.field_c[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_67_0 = dq.field_j;
+              stackIn_67_0 = TransformRotationSupport.field_j;
               stackIn_67_1 = var5 + 7 + var8Lifetime3;
               stackIn_67_2 = KeyHandler.field_a.length;
               stackIn_67_3 = var8Lifetime3;
@@ -321,12 +321,12 @@ abstract class CacheEntry extends DualLinkNode {
               }
               stackIn_67_0[stackIn_67_1] = stackIn_70_2;
             }
-            QuickChatPhraseDefinition.field_y = rl.monotonicTimeMillis((byte) -119);
+            QuickChatPhraseDefinition.field_y = MonotonicClock.monotonicTimeMillis((byte) -119);
           }
           LabeledChildWidget.field_W.itemCount = ByteStorage.field_c.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < dq.field_j.length; var4Lifetime1++) {
-            stackIn_90_0 = dq.field_j[var4Lifetime1];
+          for (var4Lifetime1 = 0; var4Lifetime1 < TransformRotationSupport.field_j.length; var4Lifetime1++) {
+            stackIn_90_0 = TransformRotationSupport.field_j[var4Lifetime1];
             stackIn_91_1 = !(IterableNodeHashTable.field_c[var4Lifetime1] < 0);
             var5Lifetime1 = WidgetContainer.a(stackIn_90_0, stackIn_91_1, false);
             if (var3_intLifetime1 < var5Lifetime1) {
@@ -352,36 +352,36 @@ abstract class CacheEntry extends DualLinkNode {
               }
             }
           }
-          PlasmaTableScene.field_Z = nn.field_c - (var3_intLifetime1 >> 1);
-          rl.field_a = (IterableDualLinkDeque.field_e + NineBallRules.field_h << 1) * LabeledChildWidget.field_W.itemCount;
-          VertexNormal.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + nn.field_c);
-          for (var4Lifetime2 = 0; var4Lifetime2 < dq.field_j.length; var4Lifetime2++) {
-            stackIn_114_0 = rl.field_a;
+          PlasmaTableScene.field_Z = BrowserCookieWriter.field_c - (var3_intLifetime1 >> 1);
+          MonotonicClock.field_a = (IterableDualLinkDeque.field_e + NineBallRules.field_h << 1) * LabeledChildWidget.field_W.itemCount;
+          VertexNormal.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + BrowserCookieWriter.field_c);
+          for (var4Lifetime2 = 0; var4Lifetime2 < TransformRotationSupport.field_j.length; var4Lifetime2++) {
+            stackIn_114_0 = MonotonicClock.field_a;
             if (0 > IterableNodeHashTable.field_c[var4Lifetime2]) {
               stackIn_115_1 = ShotRecord.field_y;
             } else {
               stackIn_115_1 = WidgetContainer.field_I;
             }
-            rl.field_a = stackIn_114_0 + stackIn_115_1;
+            MonotonicClock.field_a = stackIn_114_0 + stackIn_115_1;
           }
-          PasswordValidator.field_n = ClientInputResetSupport.field_e - (rl.field_a >> 1);
-          ra.field_b = new int[dq.field_j.length][];
+          PasswordValidator.field_n = ClientInputResetSupport.field_e - (MonotonicClock.field_a >> 1);
+          IntegerRecordProtocolSupport.field_b = new int[TransformRotationSupport.field_j.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = PasswordValidator.field_n;
           if (param1 != 4) {
             return;
           }
-          while (var4Lifetime3 < dq.field_j.length) {
+          while (var4Lifetime3 < TransformRotationSupport.field_j.length) {
             var6Lifetime1 = IterableNodeHashTable.field_c[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = WidgetContainer.a(dq.field_j[var4Lifetime3], true, false);
-              var8Lifetime1 = nn.field_c - (var7Lifetime2 >> 1);
+              var7Lifetime2 = WidgetContainer.a(TransformRotationSupport.field_j[var4Lifetime3], true, false);
+              var8Lifetime1 = BrowserCookieWriter.field_c - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + IterableDualLinkDeque.field_e;
-              ra.field_b[var4Lifetime3] = new int[4];
-              ra.field_b[var4Lifetime3][0] = var8Lifetime1 - rm.field_b;
-              ra.field_b[var4Lifetime3][1] = var5Lifetime3;
-              ra.field_b[var4Lifetime3][2] = var7Lifetime2 + (rm.field_b << 1);
-              ra.field_b[var4Lifetime3][3] = (NineBallRules.field_h << 1) + WidgetContainer.field_I;
+              IntegerRecordProtocolSupport.field_b[var4Lifetime3] = new int[4];
+              IntegerRecordProtocolSupport.field_b[var4Lifetime3][0] = var8Lifetime1 - MeshSymmetrySupport.field_b;
+              IntegerRecordProtocolSupport.field_b[var4Lifetime3][1] = var5Lifetime3;
+              IntegerRecordProtocolSupport.field_b[var4Lifetime3][2] = var7Lifetime2 + (MeshSymmetrySupport.field_b << 1);
+              IntegerRecordProtocolSupport.field_b[var4Lifetime3][3] = (NineBallRules.field_h << 1) + WidgetContainer.field_I;
               var5Lifetime3 = var5Lifetime3 + (IterableDualLinkDeque.field_e + ((NineBallRules.field_h << 1) + WidgetContainer.field_I));
             } else {
               var5Lifetime3 = var5Lifetime3 + ShotRecord.field_y;
@@ -389,7 +389,7 @@ abstract class CacheEntry extends DualLinkNode {
             var4Lifetime3++;
           }
           if (ClientException.field_h != 2) {
-            LabeledChildWidget.field_W.initializeSelection(param0, 0, AlternateLongAndTextLoginPayload.a(wn.field_i, DebouncedValidationProvider.field_f, 0), true);
+            LabeledChildWidget.field_W.initializeSelection(param0, 0, AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, 0), true);
           } else {
             LabeledChildWidget.field_W.initializeSelection(param0, -1, -1, true);
           }

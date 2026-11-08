@@ -49,7 +49,7 @@ final class TimeTrialRules extends GameRules {
         if (param1 != -32) {
           this.defaultBallInHandMode(79);
         }
-        return uj.field_a;
+        return WorldPointProjectionSupport.field_a;
     }
 
     final boolean isTargetVisible(int param0, int param1) {
@@ -196,16 +196,16 @@ final class TimeTrialRules extends GameRules {
               return;
             }
             TutorialFactory.field_a = param5;
-            kc.field_c = param12;
+            CanvasInputAttachmentSupport.field_c = param12;
             NanoTickClock.field_s = param6;
             PlayerContextMenu.field_j = param13;
             UsernameSuggestionsPanel.field_S = param7;
             CushionSegment.field_g = param3;
-            lf.field_b = param10;
+            LoginEncryptionSupport.field_b = param10;
             LobbyPlayer.field_ec = param1;
             if (MarkerSliderPainter.field_a.field_b != null) {
               try {
-                nl.field_c = new BufferedFile(MarkerSliderPainter.field_a.field_b, 64, 0);
+                ServerListLauncher.field_c = new BufferedFile(MarkerSliderPainter.field_a.field_b, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -259,9 +259,9 @@ final class TimeTrialRules extends GameRules {
             return stackIn_2_0;
           }
           if (param0.groupBefore != -1) {
-            stackIn_6_0 = dq.field_a.field_e[2];
+            stackIn_6_0 = TransformRotationSupport.field_a.field_e[2];
           } else {
-            stackIn_6_0 = dq.field_a.field_e[0];
+            stackIn_6_0 = TransformRotationSupport.field_a.field_e[0];
           }
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

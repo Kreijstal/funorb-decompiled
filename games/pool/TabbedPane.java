@@ -7,7 +7,7 @@ final class TabbedPane extends UiComponent {
     int selectedTab;
     private UiComponent[] panels;
     private UiComponent[] tabButtons;
-    static ph field_Lb;
+    static AccountProtocolStage field_Lb;
     static String loginm3;
     static String fullscreen;
     private UiComponent body;
@@ -61,7 +61,7 @@ final class TabbedPane extends UiComponent {
         if (param1 <= 51) {
           return (String) null;
         }
-        return ((param0 & MarkerSliderPainter.field_j) == 0 ? "" : "cont vis|") + ((ThemeSelectScreen.field_O & param0) == 0 ? "" : "gv visit+1|") + ((OptionsScreen.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & AccountWelcomePanel.field_Q) ? "" : "gv BiH anywhere|") + (0 != (AccountWelcomePanel.field_R & param0) ? "gv BiH kitchen|" : "") + ((AccountWelcomePanel.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ScreenProjectionSupport.field_e & param0) != 0 ? "wins|" : "") + ((Quaternion.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & MeshBase.field_c) ? "respot white|" : "") + ((param0 & MenuScreen.field_F) == 0 ? "" : "rerack|") + (0 != (ll.field_f & param0) ? "ends turn|" : "");
+        return ((param0 & MarkerSliderPainter.field_j) == 0 ? "" : "cont vis|") + ((ThemeSelectScreen.field_O & param0) == 0 ? "" : "gv visit+1|") + ((OptionsScreen.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & AccountWelcomePanel.field_Q) ? "" : "gv BiH anywhere|") + (0 != (AccountWelcomePanel.field_R & param0) ? "gv BiH kitchen|" : "") + ((AccountWelcomePanel.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ScreenProjectionSupport.field_e & param0) != 0 ? "wins|" : "") + ((Quaternion.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & MeshBase.field_c) ? "respot white|" : "") + ((param0 & MenuScreen.field_F) == 0 ? "" : "rerack|") + (0 != (BrowserUrlSupport.field_f & param0) ? "ends turn|" : "");
     }
 
     TabbedPane(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {

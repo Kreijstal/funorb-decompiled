@@ -117,11 +117,11 @@ class ButtonWidget extends UiWidget {
         var18 = null;
         var19 = Pool.field_O;
         try {
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-58, nj.field_b);
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-58, LogoMaterial.field_b);
           if (null != HighscoresScreen.field_L) {
             ContentTransitionDialog.field_ob.enabled = true;
-            kc.field_b.height = 0;
-            var5 = kc.field_b;
+            CanvasInputAttachmentSupport.field_b.height = 0;
+            var5 = CanvasInputAttachmentSupport.field_b;
             var5.width = 0;
             MeshBoundsSupport.field_c.height = 0;
             var6 = MeshBoundsSupport.field_c;
@@ -130,21 +130,21 @@ class ButtonWidget extends UiWidget {
             var7 = TextHotspotRegion.field_o;
             var7.width = 0;
             if (TikiTableScene.e((byte) 85)) {
-              ii.field_e.text = rf.yourGame.toUpperCase();
+              ProxyConnectorSupport.field_e.text = AccountDisplayNameSupport.yourGame.toUpperCase();
               var9 = (2 + Bzip2DecoderState.field_f.width) / 2;
-              kc.field_b.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var9 - 2, 40);
+              CanvasInputAttachmentSupport.field_b.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var9 - 2, 40);
               if (HighscoresScreen.field_L.field_mc < HighscoresScreen.field_L.field_Nb) {
-                kc.field_b.text = LimitedRandomAccessFile.muInvitePlayers.toUpperCase();
-                kc.field_b.enabled = true;
+                CanvasInputAttachmentSupport.field_b.text = LimitedRandomAccessFile.muInvitePlayers.toUpperCase();
+                CanvasInputAttachmentSupport.field_b.enabled = true;
                 if (var19 != 0) {
-                  kc.field_b.text = ro.gameFull.toUpperCase();
-                  kc.field_b.enabled = false;
+                  CanvasInputAttachmentSupport.field_b.text = ProjectedVertex.gameFull.toUpperCase();
+                  CanvasInputAttachmentSupport.field_b.enabled = false;
                 }
               } else {
-                kc.field_b.text = ro.gameFull.toUpperCase();
-                kc.field_b.enabled = false;
+                CanvasInputAttachmentSupport.field_b.text = ProjectedVertex.gameFull.toUpperCase();
+                CanvasInputAttachmentSupport.field_b.enabled = false;
               }
-              kc.field_b.frameSprites = mg.field_c.frameSprites;
+              CanvasInputAttachmentSupport.field_b.frameSprites = LobbyPlayerLookupSupport.field_c.frameSprites;
               if (PoolMatchController.field_jb > 0) {
                 boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
@@ -156,9 +156,9 @@ class ButtonWidget extends UiWidget {
                 }
                 if ((MultiHandleSliderWidget.field_V & 16) == 0 &&
                   !AccountWelcomePanel.field_bb) {
-                  kc.field_b.frameSprites = mg.field_c.activeFrameSprites;
+                  CanvasInputAttachmentSupport.field_b.frameSprites = LobbyPlayerLookupSupport.field_c.activeFrameSprites;
                 }
-                kc.field_b.text = kc.field_b.text + "<br>" + var10_ref_String;
+                CanvasInputAttachmentSupport.field_b.text = CanvasInputAttachmentSupport.field_b.text + "<br>" + var10_ref_String;
               }
               MeshBoundsSupport.field_c.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, var9, -var9 + Bzip2DecoderState.field_f.width, 40);
               MeshBoundsSupport.field_c.text = UsernameAvailabilityValidator.startgame.toUpperCase();
@@ -168,17 +168,17 @@ class ButtonWidget extends UiWidget {
               stackIn_20_0.enabled = stackIn_21_1;
               var10 = 2;
               if (ArchiveLoadStep.field_m != null) {
-                if (null == dk.field_j) {
-                  dk.field_j = new byte[dr.field_c];
-                  gf.field_b = new boolean[dr.field_c];
+                if (null == GlowParticle.field_j) {
+                  GlowParticle.field_j = new byte[LogoFinalFrameLoader.field_c];
+                  UsernameSuggestionSupport.field_b = new boolean[LogoFinalFrameLoader.field_c];
                 }
                 var11 = 0;
                 do {
-                  if (!(var11 < dr.field_c)) {
+                  if (!(var11 < LogoFinalFrameLoader.field_c)) {
                     var10 = 0;
                     break;
                   }
-                  gf.field_b[var11] = false;
+                  UsernameSuggestionSupport.field_b[var11] = false;
                   var11++;
                 } while (var19 == 0);
                 scanLoop1: while (true) {
@@ -235,7 +235,7 @@ class ButtonWidget extends UiWidget {
                             }
                             var15 += 2;
                           }
-                          gf.field_b[var14] = true;
+                          UsernameSuggestionSupport.field_b[var14] = true;
                           break;
                         }
                         var12++;
@@ -266,8 +266,8 @@ class ButtonWidget extends UiWidget {
                   var12 = 0;
                   var13 = 0;
                   while (true) {
-                    if (var13 < dr.field_c) {
-                      stackOut_75_0 = gf.field_b[var13];
+                    if (var13 < LogoFinalFrameLoader.field_c) {
+                      stackOut_75_0 = UsernameSuggestionSupport.field_b[var13];
                       stackIn_83_0 = stackOut_75_0 ? 1 : 0;
                       stackIn_76_0 = stackOut_75_0;
                       if (var19 == 0) {
@@ -314,7 +314,7 @@ class ButtonWidget extends UiWidget {
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != Pocket.field_j ||
                 null != DebugTuningSlider.field_d ||
-                w.field_j != null ||
+                GrowableIntListFactory.field_j != null ||
                 null != TextLayout.field_a)) {
                 var11 = 0;
                 var12 = 0;
@@ -323,7 +323,7 @@ class ButtonWidget extends UiWidget {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(dr.field_c > var16)))) {
+                while (!(decompiledNaturalLoopExit0 = (!(LogoFinalFrameLoader.field_c > var16)))) {
                   var17_int = HighscoresScreen.field_L.settings[var16] & 255;
                   if (var19 == 0) {
                     if (Pocket.field_j != null &&
@@ -346,9 +346,9 @@ class ButtonWidget extends UiWidget {
                       TextLayout.field_a[var16] != null) {
                       var15 = var15 | TextLayout.field_a[var16][var17_int];
                     }
-                    if (null != w.field_j &&
-                      w.field_j[var16] != null) {
-                      var18_intLifetime1 = w.field_j[var16][var17_int];
+                    if (null != GrowableIntListFactory.field_j &&
+                      GrowableIntListFactory.field_j[var16] != null) {
+                      var18_intLifetime1 = GrowableIntListFactory.field_j[var16][var17_int];
                       if (var18_intLifetime1 > var14) {
                         var14 = var18_intLifetime1;
                       }
@@ -423,8 +423,8 @@ class ButtonWidget extends UiWidget {
                 if (var16 != 0) {
                   MeshBoundsSupport.field_c.enabled = false;
                   if (MeshBoundsSupport.field_c.hovered) {
-                    if (na.field_e.field_i.selectedTab != 0) {
-                      CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{Camera.muChatGame}, -1, t.gameoptPlayersdontqualifySelectgametab);
+                    if (IntegerSyntaxSupport.field_e.field_i.selectedTab != 0) {
+                      CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{Camera.muChatGame}, -1, PacketDiagnosticsSupport.gameoptPlayersdontqualifySelectgametab);
                       if (var19 != 0) {
                         CacheEntry.field_B = QuickChatHelpDialog.gameoptPlayersdontqualify;
                       }
@@ -436,27 +436,27 @@ class ButtonWidget extends UiWidget {
               }
               if (var19 != 0) {
                 var9_ref_String = HighscoresScreen.field_L.field_Ob;
-                ii.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
+                ProxyConnectorSupport.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, ChatInputSupport.xsGame).toUpperCase();
                 TextHotspotRegion.field_o.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, 0, Bzip2DecoderState.field_f.width, 40);
                 TextHotspotRegion.field_o.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
                 var8 = TextHotspotRegion.field_o;
               }
             } else {
               var9_ref_String = HighscoresScreen.field_L.field_Ob;
-              ii.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
+              ProxyConnectorSupport.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, ChatInputSupport.xsGame).toUpperCase();
               TextHotspotRegion.field_o.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, 0, Bzip2DecoderState.field_f.width, 40);
               TextHotspotRegion.field_o.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
               var8 = TextHotspotRegion.field_o;
             }
             if (StrongCacheEntry.field_K != 0L) {
-              var9 = (int)(-rl.monotonicTimeMillis((byte) -94) + StrongCacheEntry.field_K);
+              var9 = (int)(-MonotonicClock.monotonicTimeMillis((byte) -94) + StrongCacheEntry.field_K);
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;
               }
               var8.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var9)}, -1, WireframeQuad.gameOptionsChanged);
             }
-            MarkerSliderPainter.field_c.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(HighscoresScreen.field_L.field_mc), Integer.toString(HighscoresScreen.field_L.field_Nb)}, -1, qa.playersXOfY);
+            MarkerSliderPainter.field_c.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(HighscoresScreen.field_L.field_mc), Integer.toString(HighscoresScreen.field_L.field_Nb)}, -1, HotspotRectangle.playersXOfY);
           }
           stackIn_173_0 = SceneNode.field_k;
           stackIn_174_1 = (param2) && (!param1) && (!AccountWelcomePanel.field_bb);
@@ -468,12 +468,12 @@ class ButtonWidget extends UiWidget {
           stackIn_183_0 = DebugTuningSupport.field_b;
           stackIn_184_1 = (param2) && (!param1) && (AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_183_0).updateRoot(stackIn_184_1, false);
-          na.field_e.field_i.processTabPresses(true);
+          IntegerSyntaxSupport.field_e.field_i.processTabPresses(true);
           if (null != HighscoresScreen.field_L) {
             if (ContentTransitionDialog.field_ob.pressedButton != 0) {
               AccountCreationForm.a(HighscoresScreen.field_L.getGameId(20872), true, param4);
             }
-            if (kc.field_b.pressedButton != 0) {
+            if (CanvasInputAttachmentSupport.field_b.pressedButton != 0) {
               AccountWelcomePanel.field_bb = true;
             }
             if (MeshBoundsSupport.field_c.pressedButton != 0) {
@@ -544,11 +544,11 @@ class ButtonWidget extends UiWidget {
             if (~ClientInputResetSupport.field_b == ~this.pressedPointerButton) {
               return;
             }
-            if (this.containsPointer(param2, param3, wn.field_i, -1, DebouncedValidationProvider.field_f) &&
+            if (this.containsPointer(param2, param3, ReflectionReplySupport.field_i, -1, DebouncedValidationProvider.field_f) &&
               ClientInputResetSupport.field_b == 0) {
-              this.activateButton(16, -param2 + wn.field_i, -param3 + DebouncedValidationProvider.field_f, this.pressedPointerButton);
+              this.activateButton(16, -param2 + ReflectionReplySupport.field_i, -param3 + DebouncedValidationProvider.field_f, this.pressedPointerButton);
             }
-            this.handlePointerRelease(param2, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 115, param0);
+            this.handlePointerRelease(param2, ReflectionReplySupport.field_i, param3, DebouncedValidationProvider.field_f, (byte) 115, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -663,7 +663,7 @@ class ButtonWidget extends UiWidget {
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param2.length() > var4)))) {
-            stackOut_7_0 = uc.isNameCharacter(param2.charAt(var4), (byte) -51);
+            stackOut_7_0 = RasterStateSupport.isNameCharacter(param2.charAt(var4), (byte) -51);
             stackIn_14_0 = stackOut_7_0 ? 1 : 0;
             stackIn_8_0 = stackOut_7_0;
             if (var5 == 0) {

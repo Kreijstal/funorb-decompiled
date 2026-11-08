@@ -8,7 +8,7 @@ final class ReportAbuseDialog extends UiComponent {
     private StringBuilder reportedName;
     private UiComponent closeButton;
     long reportTargetId;
-    static na field_Pb;
+    static IntegerSyntaxSupport field_Pb;
     private UiComponent nameDisplay;
     private StateIconLabel muteControl;
     private UiComponent instructions;
@@ -207,7 +207,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.body = new UiComponent(0L, (UiComponent) null);
           this.addChild(-107, this.body);
           if (param11 != null) {
-            this.instructions = new UiComponent(0L, param8, dq.raIntro);
+            this.instructions = new UiComponent(0L, param8, TransformRotationSupport.raIntro);
             this.instructions.textColor = 11184810;
             this.instructions.horizontalAlignment = 1;
             this.body.addChild(11, this.instructions);
@@ -219,7 +219,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.nameDisplay.textColor = 16764006;
             this.body.addChild(112, this.nameDisplay);
             this.nameDisplay.textSuffix = "|";
-            if (!(ta.field_f < 5) ||
+            if (!(GradientPaletteSupport.field_f < 5) ||
               !(TutorialController.field_i < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
@@ -227,14 +227,14 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
                 stackIn_6_4 = (StateIconLabel) (param9);
-                if (ta.field_f < 7) {
+                if (GradientPaletteSupport.field_f < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
                   if (TutorialController.field_i < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = tq.raSuggestmute;
+                    stackIn_8_5 = AccountStateQuery.raSuggestmute;
                     break regionExit1;
                   }
                 }
@@ -274,7 +274,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.font.b(qa.rulePillar1);
+            var17Lifetime2 = param6.font.b(HotspotRectangle.rulePillar1);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -307,7 +307,7 @@ final class ReportAbuseDialog extends UiComponent {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.appendReasonHeading(qa.rulePillar1, var18Lifetime4, var27[1], (byte) -114, param6, var16Lifetime2);
+            var18Lifetime4 = this.appendReasonHeading(HotspotRectangle.rulePillar1, var18Lifetime4, var27[1], (byte) -114, param6, var16Lifetime2);
             var18Lifetime4 = this.appendReasonButton(this.reasonButtons[16], -126, var18Lifetime4, var27[1], var16Lifetime2);
             var18Lifetime4 = this.appendReasonButton(this.reasonButtons[17], -126, var18Lifetime4, var27[1], var16Lifetime2);
             var18Lifetime4 = this.appendReasonButton(this.reasonButtons[18], -128, var18Lifetime4, var27[1], var16Lifetime2);
@@ -354,7 +354,7 @@ final class ReportAbuseDialog extends UiComponent {
             var27[2].setBounds(var21, 2147483647, 13 - (-(2 * var16Lifetime2) - 26), var16Lifetime2, var17Lifetime5);
             var22 = var21;
             this.body.setBounds(24, 2147483647, 0, 13 + (13 + var19), 10 + var22 + var17Lifetime5);
-            this.body.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
+            this.body.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
             var23 = 13 + var19 + 13;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = DebugTuningSupport.adjustWidthForRightEdge(var23, param2, param0, 0);
@@ -362,7 +362,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.setBounds(var26, 2147483647, var25, var23, var24);
             return;
           }
-          this.instructions = new UiComponent(0L, param8, th.raIntroNoName);
+          this.instructions = new UiComponent(0L, param8, ChatInputSupport.raIntroNoName);
           this.instructions.horizontalAlignment = 1;
           this.instructions.textColor = 11184810;
           this.body.addChild(123, this.instructions);
@@ -372,7 +372,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.instructions.setBounds(var16Lifetime1, 2147483647, 13, var15_int, ArchiveIndex.field_x * var17Lifetime1);
           var16Lifetime1 = var16Lifetime1 + ArchiveIndex.field_x * var17Lifetime1;
           this.body.setBounds(24, 2147483647, 0, 13 + var15_int + 13, var16Lifetime1 + 10);
-          this.body.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
+          this.body.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = DebugTuningSupport.adjustWidthForRightEdge(var18Lifetime1, param2, param0, 0);
@@ -545,7 +545,7 @@ final class ReportAbuseDialog extends UiComponent {
             stackIn_6_0 = QuickChatMenu.field_ec.b(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = qa.field_t.b(param2);
+          stackIn_4_0 = HotspotRectangle.field_t.b(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -565,7 +565,7 @@ final class ReportAbuseDialog extends UiComponent {
         field_Xb = null;
         mbIncludingGamename = "(Including <%0>)";
         loginEmail = "Email: ";
-        field_Pb = new na();
+        field_Pb = new IntegerSyntaxSupport();
         field_Wb = new char[]{(char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122};
         field_ac = new int[64][3];
         textGameName = "Funorb Pool";

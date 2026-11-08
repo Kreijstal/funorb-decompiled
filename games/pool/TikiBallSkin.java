@@ -155,7 +155,7 @@ final class TikiBallSkin extends BallSkin {
         if (param0 < 9) {
           this.c(-109);
         }
-        return 0 == param1 ? BirthDateValidator.ballsetSpaceGroup0 : dq.field_g;
+        return 0 == param1 ? BirthDateValidator.ballsetSpaceGroup0 : TransformRotationSupport.field_g;
     }
 
     final void loadTopBarSprites(int param0, ResourceArchive param1) {

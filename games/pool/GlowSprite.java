@@ -16,7 +16,7 @@ final class GlowSprite implements SceneDrawable {
           return;
         }
         try {
-          SoftwareRasterizer.fillRadialGlow(this.field_h, this.field_f, this.field_b, 127, dq.field_a.gradientPalette(this.field_d, 0));
+          SoftwareRasterizer.fillRadialGlow(this.field_h, this.field_f, this.field_b, 127, TransformRotationSupport.field_a.gradientPalette(this.field_d, 0));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ar.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -62,16 +62,16 @@ final class GlowSprite implements SceneDrawable {
 
     final static void applyButtonStyle(int param0, UiComponent param1) {
         try {
-          param1.capturedFrameSprites = ln.field_s;
+          param1.capturedFrameSprites = ModelOriginSupport.field_s;
           param1.textColor = 16777215;
           if (param0 != 29022) {
             GlowSprite.a((byte) 26);
           }
-          param1.activeFrameSprites = ln.field_s;
+          param1.activeFrameSprites = ModelOriginSupport.field_s;
           param1.horizontalAlignment = 1;
           param1.verticalAlignment = 1;
-          param1.font = (BitmapFont) ((Object) sa.field_h);
-          param1.frameSprites = rm.field_g;
+          param1.font = (BitmapFont) ((Object) CollisionContact.field_h);
+          param1.frameSprites = MeshSymmetrySupport.field_g;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ar.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

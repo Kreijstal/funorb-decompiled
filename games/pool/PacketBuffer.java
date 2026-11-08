@@ -718,7 +718,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int capacity) {
-        this.payload = ja.acquireByteArray(capacity, -1);
+        this.payload = ByteArrayPool.acquireByteArray(capacity, -1);
         this.position = 0;
     }
 
@@ -748,7 +748,7 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final static String a(byte param0, pn param1) {
+    final static String a(byte param0, ChatMessage param1) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -789,7 +789,7 @@ class PacketBuffer extends IntrusiveNode {
             if (!param1.field_g) {
               if (param1.field_m == 0 &&
                 param1.field_e == 0) {
-                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, jl.privatequickchatToX);
+                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, SpriteSheetLoadSupport.privatequickchatToX);
               } else {
                 var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, UiComponent.privatequickchatFromX);
               }
@@ -800,7 +800,7 @@ class PacketBuffer extends IntrusiveNode {
               var3Lifetime1 = "[" + BirthDateValidator.muChatLobby + "] ";
             }
             if (param1.field_p == 1) {
-              var3Lifetime1 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{param1.field_n}, -1, th.xsGame) + "] ";
+              var3Lifetime1 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{param1.field_n}, -1, ChatInputSupport.xsGame) + "] ";
             }
             if (param1.field_p == 4 &&
               null != PlayerContextMenu.field_g) {

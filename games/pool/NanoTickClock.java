@@ -15,7 +15,7 @@ final class NanoTickClock extends TickClock {
     static UiComponent field_t;
     static boolean field_s;
 
-    final static boolean b(int param0) {
+    final static boolean isClientConnected(int param0) {
         int var1 = 10 % ((param0 + 65) / 42);
         return FullscreenErrorDialog.field_kb;
     }
@@ -127,7 +127,7 @@ final class NanoTickClock extends TickClock {
                 }
                 var10[var12Lifetime1 + var14] = param2.phraseIds[var14];
               } else {
-                var8[var12Lifetime1 + var14] = w.quickchatHelp;
+                var8[var12Lifetime1 + var14] = GrowableIntListFactory.quickchatHelp;
                 var9[var14 + var12Lifetime1] = param2.phraseShortcuts[var14];
                 var10[var12Lifetime1 + var14] = param2.phraseIds[var14];
               }
@@ -214,13 +214,13 @@ final class NanoTickClock extends TickClock {
     }
 
     final static void c(int param0) {
-        int var1 = ml.b(27);
+        int var1 = LoginMethod.getSharedPanelWidth(27);
         if (param0 != 1527590113) {
           return;
         }
         int var2 = ContentTransitionDialog.k((byte) 59);
-        VerticalScrollbar.field_Vb.draw((kp.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - kp.field_d, (ShotRecord.field_o << 1) + var2);
-        jj.h(-9395);
+        VerticalScrollbar.field_Vb.draw((MusicPatchEnvelope.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - MusicPatchEnvelope.field_d, (ShotRecord.field_o << 1) + var2);
+        BirthDatePromptPanel.h(-9395);
     }
 
     final static MusicPatch a(ResourceArchive param0, byte param1, int param2) {
@@ -311,7 +311,7 @@ final class NanoTickClock extends TickClock {
         }
         long var6 = 0L;
         if (param0) {
-          NanoTickClock.b(85);
+          NanoTickClock.isClientConnected(85);
         }
         for (var8 = 1; this.field_l >= var8; var8++) {
           var6 = var6 + this.field_o[(10 + this.field_j - var8) % 10];

@@ -18,7 +18,7 @@ final class MusicTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        te var14;
+        ByteArrayNode var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -44,7 +44,7 @@ final class MusicTrack extends IntrusiveNode {
         var18[9] = 128;
         var22[9] = 128;
         var4 = new MidiFileReader(this.field_l);
-        var5 = var4.d();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
           var4.readDelta(var6);
@@ -60,7 +60,7 @@ final class MusicTrack extends IntrusiveNode {
             var4.seekTrack(var6Lifetime1);
             var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.c();
+              var4.markEndOfTrack();
               var4.saveTrackPosition(var6Lifetime1);
               if (var4.isDone()) {
                 return;
@@ -90,9 +90,9 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (te) (this.field_m.get(false, (long)var13));
+                var14 = (ByteArrayNode) (this.field_m.get(false, (long)var13));
                 if (var14 == null) {
-                  var14 = new te(new byte[128]);
+                  var14 = new ByteArrayNode(new byte[128]);
                   this.field_m.put((byte) -127, var14, (long)var13);
                 }
                 var14.field_l[var11Lifetime2] = (byte) 1;
@@ -112,7 +112,7 @@ final class MusicTrack extends IntrusiveNode {
         return new MusicTrack(new PacketBuffer(var3));
     }
 
-    final void a() {
+    final void clearInstrumentUsage() {
         this.field_m = null;
     }
 

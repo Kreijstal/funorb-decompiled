@@ -18,9 +18,9 @@ class UiComponentNode extends DualLinkNode {
         param0 = param0 & 8191;
         int var2 = 13 / ((param1 + 21) / 41);
         if (param0 < 4096) {
-          return param0 >= 2048 ? -wf.field_b[param0 - 2048] : wf.field_b[2048 - param0];
+          return param0 >= 2048 ? -PacketAvailabilitySupport.field_b[param0 - 2048] : PacketAvailabilitySupport.field_b[2048 - param0];
         }
-        return param0 < 6144 ? -wf.field_b[6144 - param0] : wf.field_b[-6144 + param0];
+        return param0 < 6144 ? -PacketAvailabilitySupport.field_b[6144 - param0] : PacketAvailabilitySupport.field_b[-6144 + param0];
     }
 
     final static String replaceChar(char param0, String param1, String param2, int param3) {
@@ -115,7 +115,7 @@ class UiComponentNode extends DualLinkNode {
     final static void c(byte param0) {
         if (FullscreenErrorDialog.field_kb) {
           ClassicBallSkin.field_o = true;
-          ii.a(true, 0);
+          ProxyConnectorSupport.a(true, 0);
           PlasmaTableScene.field_ab = 0;
           if (param0 <= 18) {
             rule02 = (String) null;

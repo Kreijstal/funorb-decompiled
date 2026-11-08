@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DelayedServerPacket extends IntrusiveNode {
-    static nl field_o;
+    static ServerListLauncher field_o;
     static String createAlertInvalidemail;
     static int field_n;
     long field_p;
@@ -70,7 +70,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, kg param1, int param2) {
+    final static void a(int param0, ByteRecordSubmission param1, int param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
@@ -137,7 +137,7 @@ final class DelayedServerPacket extends IntrusiveNode {
 
     static {
         createAlertInvalidemail = "Please check if address is correct";
-        field_o = new nl();
+        field_o = new ServerListLauncher();
         muOptionsWhocanjoin = "Who can join";
     }
 

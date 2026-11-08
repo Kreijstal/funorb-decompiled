@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class MenuScreen extends jh {
+class MenuScreen extends MenuScreenBase {
     int buttonSpacing;
     TextHotspotRegion field_G;
     MenuSelection selection;
@@ -43,22 +43,22 @@ class MenuScreen extends jh {
         }
         if (this.drawsBackground) {
           if (this.framedPanel) {
-            pn.field_l.a(0, 0);
+            ChatMessage.field_l.a(0, 0);
           } else {
-            IntrusiveNodeHashTable.field_b[ie.field_h].a(0, 0);
-            ti.field_g = ti.field_g + 1;
-            if (!(0 >= ti.field_g)) {
-              var2 = (ie.field_h + 1) % IntrusiveNodeHashTable.field_b.length;
-              IntrusiveNodeHashTable.field_b[var2].drawShadedGrayscale(0, 0, ti.field_g);
-              if (ti.field_g > 255) {
-                ie.field_h = var2;
-                ti.field_g = -750;
+            IntrusiveNodeHashTable.field_b[BrowserCookieSupport.field_h].a(0, 0);
+            DebugSliderInputSupport.field_g = DebugSliderInputSupport.field_g + 1;
+            if (!(0 >= DebugSliderInputSupport.field_g)) {
+              var2 = (BrowserCookieSupport.field_h + 1) % IntrusiveNodeHashTable.field_b.length;
+              IntrusiveNodeHashTable.field_b[var2].drawShadedGrayscale(0, 0, DebugSliderInputSupport.field_g);
+              if (DebugSliderInputSupport.field_g > 255) {
+                BrowserCookieSupport.field_h = var2;
+                DebugSliderInputSupport.field_g = -750;
               }
             }
           }
         }
         if (this.framedPanel) {
-          ja.a(this.panelWidth, this.panelHeight, true, this.panelX, this.panelY);
+          ByteArrayPool.a(this.panelWidth, this.panelHeight, true, this.panelX, this.panelY);
         }
         if (null != this.headerSprite) {
           this.headerSprite.draw(SoftwareRasterizer.width - this.headerSprite.field_z >> 1, 10);
@@ -129,14 +129,14 @@ class MenuScreen extends jh {
           var9 = -var5 + var6;
           var10 = this.getButtonHeight((byte) 69, param1);
           var16 = this.getButtonFrameSprites(param1, -34);
-          nj.drawNineSlice(var16, (byte) 6, var9, var5, var7, var10);
+          LogoMaterial.drawNineSlice(var16, (byte) 6, var9, var5, var7, var10);
         }
         var9Lifetime1 = this.getButtonState(param1, -4);
-        if (jq.field_e[param1] != var4 ||
+        if (QuickChatNavigationSupport.field_e[param1] != var4 ||
           var9Lifetime1 != FreePlayRules.field_h[param1]) {
           var10_ref_dd = this.createButtonLabel(var4, var9Lifetime1, 0, param1);
           ArrayWidgetGroup.field_G[param1] = var10_ref_dd;
-          jq.field_e[param1] = var4;
+          QuickChatNavigationSupport.field_e[param1] = var4;
           FreePlayRules.field_h[param1] = var9Lifetime1;
         }
         var10Lifetime1 = ArrayWidgetGroup.field_G[param1].field_z;
@@ -163,7 +163,7 @@ class MenuScreen extends jh {
           stackIn_39_0 = 120 * TranslatedUiText.field_h / 256;
         }
         var14Lifetime1 = stackIn_39_0;
-        wp.field_a.draw(-(wp.field_a.field_z >> 1) + (var14Lifetime1 + var11), -4 + ((wp.field_a.field_A >> 1) + var7));
+        CompressedContainerSupport.field_a.draw(-(CompressedContainerSupport.field_a.field_z >> 1) + (var14Lifetime1 + var11), -4 + ((CompressedContainerSupport.field_a.field_A >> 1) + var7));
         return;
     }
 
@@ -177,7 +177,7 @@ class MenuScreen extends jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_4_0 = dq.createTextLabelSprite(param1, 0, param0);
+            stackIn_4_0 = TransformRotationSupport.createTextLabelSprite(param1, 0, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite) null;
@@ -206,7 +206,7 @@ class MenuScreen extends jh {
     Sprite[] getButtonFrameSprites(int param0, int param1) {
         int var3;
         if (param0 == this.selection.selectedIndex) {
-          return ln.field_s;
+          return ModelOriginSupport.field_s;
         }
         if (param1 != -34) {
           this.getButtonHeight((byte) -13, 83);
@@ -215,9 +215,9 @@ class MenuScreen extends jh {
         if ((var3 != 17 ||
           SocialListEntry.field_Lb != 0) && (var3 != 18 ||
           1 != SocialListEntry.field_Lb)) {
-          return rm.field_g;
+          return MeshSymmetrySupport.field_g;
         }
-        return ln.field_s;
+        return ModelOriginSupport.field_s;
     }
 
     void advanceScreen(int param0) {
@@ -236,7 +236,7 @@ class MenuScreen extends jh {
             }
             this.handleMenuAction(-16470, false, this.selection.selectedIndex);
           }
-          this.selection.a(this.findButtonAt(-6564, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), this.findButtonAt(-6564, DebouncedValidationProvider.field_f, wn.field_i), param0 ^ -109);
+          this.selection.a(this.findButtonAt(-6564, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), this.findButtonAt(-6564, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), param0 ^ -109);
           if (-1 != this.selection.selectedIndex) {
             this.handleMenuAction(-16470, true, this.selection.selectedIndex);
           }
@@ -377,7 +377,7 @@ class MenuScreen extends jh {
           return;
         }
         if (this.selection.field_a) {
-          TextLineLayout.a((byte) -27, il.field_c[0]);
+          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
         }
         regionExit1: {
           regionExit2: {
@@ -399,11 +399,11 @@ class MenuScreen extends jh {
                     if (!this.selection.isPressActivated((byte) 78)) {
                       break regionExit2;
                     }
-                    stackIn_82_0 = !(th.field_h);
-                    th.field_h = stackIn_82_0;
+                    stackIn_82_0 = !(ChatInputSupport.field_h);
+                    ChatInputSupport.field_h = stackIn_82_0;
                     stackIn_84_0 = TranslatedUiText.field_f;
                     stackIn_84_1 = 49;
-                    if (th.field_h) {
+                    if (ChatInputSupport.field_h) {
                       stackIn_85_2 = NodeHashTableIterator.mouseYAxisInverted;
                     } else {
                       stackIn_85_2 = PoolMatchController.mouseYAxisNormal;
@@ -487,12 +487,12 @@ class MenuScreen extends jh {
                                               if (!this.selection.isPressActivated((byte) 90)) {
                                                 break regionExit2;
                                               }
-                                              un.field_e = 0;
+                                              LookupProtocolSupport.field_e = 0;
                                               GameRules.field_b = -8;
                                             } else {
                                               if (var6 == 51) {
                                                 if (!(!this.selection.isPressActivated((byte) 83))) {
-                                                  un.field_e = 1;
+                                                  LookupProtocolSupport.field_e = 1;
                                                   GameRules.field_b = -8;
                                                 }
                                               } else {
@@ -500,9 +500,9 @@ class MenuScreen extends jh {
                                                   if (!this.selection.isPressActivated((byte) 76)) {
                                                     break regionExit2;
                                                   }
-                                                  if (NanoTickClock.b(107)) {
+                                                  if (NanoTickClock.isClientConnected(107)) {
                                                     WireframeQuad.field_x = true;
-                                                    TranslatedUiText.a(pl.pleaselogin, -4, (byte) 82);
+                                                    TranslatedUiText.a(VertexProjectionSupport.pleaselogin, -4, (byte) 82);
                                                   } else {
                                                     var6 = param1 ? 1 : 0;
                                                     AccountCreationDialog.a(-3405, -4, GameRules.field_b, var6 != 0);
@@ -514,7 +514,7 @@ class MenuScreen extends jh {
                                                       if (!(!this.selection.isPressActivated((byte) 50))) {
                                                         var6 = param1 ? 1 : 0;
                                                         AccountCreationDialog.a(-3405, 0, GameRules.field_b, var6 != 0);
-                                                        jc.field_c = false;
+                                                        AppletUrlSupport.field_c = false;
                                                       }
                                                     } else {
                                                       if (var6 == 24) {
@@ -585,7 +585,7 @@ class MenuScreen extends jh {
                                                                       }
                                                                       if (this.selection.isPointerHeld((byte) 111)) {
                                                                         var6 = this.getButtonLeft(0, param2) + (this.getButtonRight(false, param2) + Ball.field_H) - 120 >> 1;
-                                                                        var7 = -var6 + wn.field_i;
+                                                                        var7 = -var6 + ReflectionReplySupport.field_i;
                                                                         var8 = 256 * var7 / 120;
                                                                         if (0 >= var8) {
                                                                           AgeValidator.a(true, 0);
@@ -613,7 +613,7 @@ class MenuScreen extends jh {
                                                                           SocialListEntry.field_Tb <= field_D) {
                                                                           break regionExit2;
                                                                         }
-                                                                        TextLineLayout.a((byte) -27, il.field_c[2]);
+                                                                        TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[2]);
                                                                         field_D = SocialListEntry.field_Tb + 20;
                                                                       }
                                                                     } else {
@@ -626,7 +626,7 @@ class MenuScreen extends jh {
                                                                         }
                                                                         if (this.selection.isPointerHeld((byte) 105)) {
                                                                           var6 = this.getButtonLeft(0, param2) + this.getButtonRight(false, param2) + Ball.field_H - 120 >> 1;
-                                                                          var7 = wn.field_i - var6;
+                                                                          var7 = ReflectionReplySupport.field_i - var6;
                                                                           var8 = 256 * var7 / 120;
                                                                           if (var8 > 0) {
                                                                             if (var8 >= 256) {
@@ -650,11 +650,11 @@ class MenuScreen extends jh {
                                                                             break regionExit2;
                                                                           }
                                                                           if (MatchingTextValidator.field_u != null) {
-                                                                            tq.d((byte) -124);
+                                                                            AccountStateQuery.d((byte) -124);
                                                                           } else {
                                                                             var6 = param1 ? 1 : 0;
                                                                             NineSliceFrame.field_c = false;
-                                                                            qr.a(-28038, var6 != 0);
+                                                                            AvailabilityQueryResult.a(-28038, var6 != 0);
                                                                           }
                                                                         } else {
                                                                           if (var6 != 61 &&
@@ -665,7 +665,7 @@ class MenuScreen extends jh {
                                                                                 var6 = param1 ? 1 : 0;
                                                                                 stackIn_212_0 = -3405;
                                                                                 stackIn_212_1 = -1;
-                                                                                if (mg.a(true)) {
+                                                                                if (LobbyPlayerLookupSupport.a(true)) {
                                                                                   stackIn_213_2 = 21;
                                                                                 } else {
                                                                                   stackIn_213_2 = 0;
@@ -679,7 +679,7 @@ class MenuScreen extends jh {
                                                                                   var6 = param1 ? 1 : 0;
                                                                                   stackIn_218_0 = -3405;
                                                                                   stackIn_218_1 = -1;
-                                                                                  if (mg.a(true)) {
+                                                                                  if (LobbyPlayerLookupSupport.a(true)) {
                                                                                     stackIn_219_2 = 21;
                                                                                   } else {
                                                                                     stackIn_219_2 = 0;
@@ -697,7 +697,7 @@ class MenuScreen extends jh {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_224_0 = -3405;
                                                                                     stackIn_224_1 = -7;
-                                                                                    if (!mg.a(true)) {
+                                                                                    if (!LobbyPlayerLookupSupport.a(true)) {
                                                                                       stackIn_225_2 = 0;
                                                                                     } else {
                                                                                       stackIn_225_2 = 21;
@@ -713,7 +713,7 @@ class MenuScreen extends jh {
                                                                                           var6 = param1 ? 1 : 0;
                                                                                           AccountCreationDialog.a(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
                                                                                         }
-                                                                                        if (!(!mj.field_e)) {
+                                                                                        if (!(!TransformSupport.field_e)) {
                                                                                           FaceNormal.a(0, 3, 11);
                                                                                         }
                                                                                       }
@@ -745,22 +745,22 @@ class MenuScreen extends jh {
                                                                                   if (!this.selection.isPressActivated((byte) 78)) {
                                                                                     break regionExit2;
                                                                                   }
-                                                                                  if ((AccountContentDialog.field_ub.modeFlags & f.field_f) != 0) {
+                                                                                  if ((AccountContentDialog.field_ub.modeFlags & LobbyPanelLayoutSupport.field_f) != 0) {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_240_0 = -3405;
                                                                                     stackIn_240_1 = -8;
-                                                                                    if (mg.a(true)) {
+                                                                                    if (LobbyPlayerLookupSupport.a(true)) {
                                                                                       stackIn_241_2 = 21;
                                                                                     } else {
                                                                                       stackIn_241_2 = 0;
                                                                                     }
                                                                                     AccountCreationDialog.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, var6 != 0);
                                                                                   } else {
-                                                                                    if ((AccountContentDialog.field_ub.modeFlags & sk.field_d) != 0) {
+                                                                                    if ((AccountContentDialog.field_ub.modeFlags & PaletteFontLoader.field_d) != 0) {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_236_0 = -3405;
                                                                                       stackIn_236_1 = -6;
-                                                                                      if (!mg.a(true)) {
+                                                                                      if (!LobbyPlayerLookupSupport.a(true)) {
                                                                                         stackIn_237_2 = 0;
                                                                                       } else {
                                                                                         stackIn_237_2 = 21;
@@ -770,7 +770,7 @@ class MenuScreen extends jh {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_232_0 = -3405;
                                                                                       stackIn_232_1 = -7;
-                                                                                      if (!mg.a(true)) {
+                                                                                      if (!LobbyPlayerLookupSupport.a(true)) {
                                                                                         stackIn_233_2 = 0;
                                                                                       } else {
                                                                                         stackIn_233_2 = 21;
@@ -787,7 +787,7 @@ class MenuScreen extends jh {
                                                                             }
                                                                             AccountContentDialog.field_ub.openInGameMenu(256, param1);
                                                                             ContextMenu.field_Sb = true;
-                                                                            jc.field_c = false;
+                                                                            AppletUrlSupport.field_c = false;
                                                                           }
                                                                         }
                                                                       }
@@ -805,7 +805,7 @@ class MenuScreen extends jh {
                                                       var6 = param1 ? 1 : 0;
                                                       stackIn_129_0 = -3405;
                                                       stackIn_129_1 = -1;
-                                                      if (mg.a(true)) {
+                                                      if (LobbyPlayerLookupSupport.a(true)) {
                                                         stackIn_130_2 = 21;
                                                       } else {
                                                         stackIn_130_2 = 0;
@@ -840,7 +840,7 @@ class MenuScreen extends jh {
         }
     }
 
-    final void c(byte param0) {
+    final void validateMenuGuard(byte param0) {
         if (param0 > -15) {
           this.getButtonHeight((byte) 12, -69);
         }
@@ -964,7 +964,7 @@ class MenuScreen extends jh {
         if (param0 != ~this.selection.selectedIndex) {
           param1 = this.selection.selectedIndex;
         }
-        this.selection.initializeSelection(param2, param1, this.findButtonAt(-6564, DebouncedValidationProvider.field_f, wn.field_i), true);
+        this.selection.initializeSelection(param2, param1, this.findButtonAt(-6564, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), true);
         field_D = SocialListEntry.field_Tb;
     }
 
@@ -994,7 +994,7 @@ class MenuScreen extends jh {
         return true;
     }
 
-    final void b(int param0) {
+    final void clearBackground(int param0) {
         SoftwareRasterizer.fillRectangle(param0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
     }
 
@@ -1029,7 +1029,7 @@ class MenuScreen extends jh {
           !(ArrayWidgetGroup.field_G.length >= this.selection.itemCount)) {
           ArrayWidgetGroup.field_G = new Sprite[this.selection.itemCount];
           FreePlayRules.field_h = new int[this.selection.itemCount];
-          jq.field_e = new String[this.selection.itemCount];
+          QuickChatNavigationSupport.field_e = new String[this.selection.itemCount];
         }
         if (param0 < 36) {
           return;
@@ -1059,7 +1059,7 @@ class MenuScreen extends jh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          dr.openPlayerContextMenu(param6.displayName, -1, param6.playerId, -1, param1, param6.accountName, 32540, param6, (int[]) null);
+          LogoFinalFrameLoader.openPlayerContextMenu(param6.displayName, -1, param6.playerId, -1, param1, param6.accountName, 32540, param6, (int[]) null);
           PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, true);
           PlasmaBallSkin.field_m.buildPlayerMenu(0, (int[]) null, (byte) 75);
           PlasmaBallSkin.field_m.addReportAbuseAction((byte) 65);

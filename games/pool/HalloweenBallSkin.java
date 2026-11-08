@@ -50,7 +50,7 @@ final class HalloweenBallSkin extends BallSkin {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (td.isAlphanumeric(param0, (byte) 123)) {
+          if (Base37Support.isAlphanumeric(param0, (byte) 123)) {
             return true;
           }
           var5 = LinkButtonPainter.field_d;
@@ -158,11 +158,11 @@ final class HalloweenBallSkin extends BallSkin {
             stackIn_3_0 = ModelInstance.invalidName;
             return stackIn_3_0;
           }
-          if (2 != th.field_a) {
+          if (2 != ChatInputSupport.field_a) {
             stackIn_6_0 = ShotRecord.unableToDeleteFriend;
             return stackIn_6_0;
           }
-          var8 = gf.a(-83, param1);
+          var8 = UsernameSuggestionSupport.a(-83, param1);
           if (var8 == null) {
             stackIn_10_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, IntrusiveDequeCursor.friendnotfound);
             return stackIn_10_0;

@@ -61,10 +61,10 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     public final void resetValidationDelay(int param0) {
         if (param0 != 11755) {
           this.lastInputChangeMillis = 87L;
-          this.lastInputChangeMillis = rl.monotonicTimeMillis((byte) -109);
+          this.lastInputChangeMillis = MonotonicClock.monotonicTimeMillis((byte) -109);
           return;
         }
-        this.lastInputChangeMillis = rl.monotonicTimeMillis((byte) -109);
+        this.lastInputChangeMillis = MonotonicClock.monotonicTimeMillis((byte) -109);
     }
 
     public static void releaseStatics(int param0) {
@@ -77,17 +77,17 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         youCanJoin = null;
     }
 
-    final static wc a(int param0, boolean param1, String param2) {
-        wc var3 = null;
+    final static LoginResponse a(int param0, boolean param1, String param2) {
+        LoginResponse var3 = null;
         RuntimeException var3_ref = null;
         java.applet.Applet var4 = null;
-        wc stackIn_3_0 = null;
+        LoginResponse stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new wc(false);
+          var3 = new LoginResponse(false);
           if (!param1) {
             var4 = (java.applet.Applet) null;
             DebouncedValidationProvider.a((java.applet.Applet) null, (byte) 49);
@@ -110,21 +110,21 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         }
     }
 
-    public final na getDebouncedValidationState(int param0) {
+    public final IntegerSyntaxSupport getDebouncedValidationState(int param0) {
         if (this.isInputEmpty(-3)) {
           return ReportAbuseDialog.field_Pb;
         }
         if (param0 != -31873) {
           field_g = -106;
-          if ((350L + this.lastInputChangeMillis) <= rl.monotonicTimeMillis((byte) -101)) {
+          if ((350L + this.lastInputChangeMillis) <= MonotonicClock.monotonicTimeMillis((byte) -101)) {
             return this.currentValidationState(param0 ^ 17779);
           }
-          return ji.field_h;
+          return ParticleTrail.field_h;
         }
-        if ((350L + this.lastInputChangeMillis) <= rl.monotonicTimeMillis((byte) -101)) {
+        if ((350L + this.lastInputChangeMillis) <= MonotonicClock.monotonicTimeMillis((byte) -101)) {
           return this.currentValidationState(param0 ^ 17779);
         }
-        return ji.field_h;
+        return ParticleTrail.field_h;
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -182,13 +182,13 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         }
     }
 
-    abstract na currentValidationState(int param0);
+    abstract IntegerSyntaxSupport currentValidationState(int param0);
 
     public final String getDebouncedValidationMessage(int param0) {
         if (this.isInputEmpty(-3)) {
           return null;
         }
-        if (rl.monotonicTimeMillis((byte) -123) < this.lastInputChangeMillis + 350L) {
+        if (MonotonicClock.monotonicTimeMillis((byte) -123) < this.lastInputChangeMillis + 350L) {
           return null;
         }
         if (param0 > 61) {

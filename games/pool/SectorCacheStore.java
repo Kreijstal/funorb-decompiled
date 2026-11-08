@@ -432,7 +432,7 @@ final class SectorCacheStore {
           boolean stackIn_48_0 = false;
           boolean stackIn_51_0 = false;
           boolean stackIn_54_0 = false;
-          ml stackIn_67_0 = null;
+          LoginMethod stackIn_67_0 = null;
           java.applet.Applet stackIn_67_1 = null;
           boolean stackIn_68_2 = false;
           int stackIn_86_0 = 0;
@@ -461,25 +461,25 @@ final class SectorCacheStore {
           int var8Lifetime1;
           var9 = Pool.field_O;
           try {
-            if (null == jd.field_c &&
-              !sa.a((byte) 65, param2)) {
+            if (null == Atan2Support.field_c &&
+              !CollisionContact.a((byte) 65, param2)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
             if (RankingsScreen.field_J == Js5Transport.field_h) {
               if (!param2) {
-                hn.field_c = TickClock.a(false, param1, -5790, param5);
+                CookieDateSupport.field_c = TickClock.a(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
-                hn.field_c = LoginPayloadFactory.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
+                CookieDateSupport.field_c = LoginPayloadFactory.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
               }
               JaggrabDownloader.field_j.position = 0;
               JaggrabDownloader.field_j.writeByte(14, false);
-              JaggrabDownloader.field_j.writeByte(hn.field_c.payloadKind((byte) -101).wireId, false);
+              JaggrabDownloader.field_j.writeByte(CookieDateSupport.field_c.payloadKind((byte) -101).wireId, false);
               DebugTuningSupport.flushClientPackets(-1, 0);
-              RankingsScreen.field_J = vn.field_d;
+              RankingsScreen.field_J = ReflectionRequestSupport.field_d;
             }
-            if (vn.field_d == RankingsScreen.field_J &&
+            if (ReflectionRequestSupport.field_d == RankingsScreen.field_J &&
               DialogLayer.b((byte) 87, 1)) {
               var6_int = PlayerContextMenu.field_e.readUnsignedByte(-82);
               if (var6_int == 0) {
@@ -495,7 +495,7 @@ final class SectorCacheStore {
               DialogLayer.b((byte) 43, 8)) {
               Pool.field_Q = PlayerContextMenu.field_e.readLong(-412303328);
               PlayerContextMenu.field_e.position = 0;
-              MessageScreen.a(param2, hn.field_c, param3, -98300704, param4);
+              MessageScreen.a(param2, CookieDateSupport.field_c, param3, -98300704, param4);
               RankingsScreen.field_J = DualLinkDeque.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -521,15 +521,15 @@ final class SectorCacheStore {
               }
               if (decompiledFrameRemainder0) {
                 ScrollPane.field_Pb = -1;
-                RankingsScreen.field_J = ff.field_b;
+                RankingsScreen.field_J = SlidingPanelSupport.field_b;
               }
             }
-            if (ff.field_b == RankingsScreen.field_J &&
-              wf.hasCompletePacket((byte) 39)) {
+            if (SlidingPanelSupport.field_b == RankingsScreen.field_J &&
+              PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
               Quaternion.field_a = PlayerContextMenu.field_e.readLong(-412303328);
               UiWidget.field_E = param5;
               TutorialController.field_i = PlayerContextMenu.field_e.readUnsignedByte(-68);
-              ta.field_f = PlayerContextMenu.field_e.readUnsignedByte(-105);
+              GradientPaletteSupport.field_f = PlayerContextMenu.field_e.readUnsignedByte(-105);
               UsernameSuggestionsPanel.field_V = PlayerContextMenu.field_e.readUnsignedShort(-1034);
               var12 = PlayerContextMenu.field_e.readNullableString(108);
               var7 = PlayerContextMenu.field_e.readUnsignedByte(-76);
@@ -561,16 +561,16 @@ final class SectorCacheStore {
               }
               ResourceArchive.field_j = PlayerContextMenu.field_e.j(-22);
               var13 = (CharSequence) ((Object) ResourceArchive.field_j);
-              oj.field_y = TutorialController.normalizeDisplayName(101, var13);
+              HighScoreSubmission.field_y = TutorialController.normalizeDisplayName(101, var13);
               Js5Transport.field_l = PlayerContextMenu.field_e.readUnsignedByte(-126);
-              RankingsScreen.field_J = ta.field_a;
-              if (hn.field_c.payloadKind((byte) -110) == DiskArchiveRequest.field_L) {
+              RankingsScreen.field_J = GradientPaletteSupport.field_a;
+              if (CookieDateSupport.field_c.payloadKind((byte) -110) == DiskArchiveRequest.field_L) {
                 stackIn_67_0 = SocialListEntry.field_Xb;
                 stackIn_67_1 = NanoTickClock.getApplet(78);
                 stackIn_68_2 = !(param0);
-                ((ml) (Object) stackIn_67_0).saveLastLoginMethodCookie(stackIn_67_1, stackIn_68_2);
+                ((LoginMethod) (Object) stackIn_67_0).saveLastLoginMethodCookie(stackIn_67_1, stackIn_68_2);
               } else {
-                if (hn.field_c.payloadKind((byte) 37) == rp.field_b) {
+                if (CookieDateSupport.field_c.payloadKind((byte) 37) == NineSliceFrameSupport.field_b) {
                   SocketArchiveNetworkClient.field_v.saveLastLoginMethodCookie(NanoTickClock.getApplet(105), true);
                 }
               }
@@ -610,7 +610,7 @@ final class SectorCacheStore {
               SectorCacheStore.a(true, (String) null, false, false, 59, (String) null);
             }
             if (RankingsScreen.field_J == Quaternion.field_k &&
-              wf.hasCompletePacket((byte) 39)) {
+              PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
               ShotEvent.c(-64);
               if (Bzip2DecoderState.field_c == 7 &&
                 !ArchiveLoadStep.field_e) {
@@ -626,7 +626,7 @@ final class SectorCacheStore {
               stackIn_98_0 = Bzip2DecoderState.field_c;
               return stackIn_98_0;
             }
-            if (null == jd.field_c) {
+            if (null == Atan2Support.field_c) {
               if (ArchiveLoadStep.field_e) {
                 if (30000L >= CushionSegment.d((byte) 118)) {
                   LoginTextValue.field_g = DialWidget.loginm2;

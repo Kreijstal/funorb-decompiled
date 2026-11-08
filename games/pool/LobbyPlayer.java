@@ -155,7 +155,7 @@ final class LobbyPlayer extends UiComponent {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseXor(long param0, long param1) {
         return param0 ^ param1;
     }
 

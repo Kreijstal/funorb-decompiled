@@ -10,7 +10,7 @@ final class SocialListEntry extends UiComponent {
     int insertionIndex;
     static int field_Qb;
     UiComponent field_Nb;
-    static ml field_Xb;
+    static LoginMethod field_Xb;
     static int field_Vb;
     String serverName;
     UiComponent field_Pb;
@@ -38,7 +38,7 @@ final class SocialListEntry extends UiComponent {
         CipherPacketBuffer var4 = null;
         CipherPacketBuffer var4Lifetime1;
         if (param1 != AgeValidator.field_r) {
-          var6 = (LobbyGame) (lf.field_a.findFirst((long)AgeValidator.field_r, false));
+          var6 = (LobbyGame) (LoginEncryptionSupport.field_a.findFirst((long)AgeValidator.field_r, false));
           var7 = var6;
           AgeValidator.field_r = param1;
           if (var7 != null) {
@@ -74,6 +74,6 @@ final class SocialListEntry extends UiComponent {
 
     static {
         field_Vb = 50;
-        field_Xb = new ml("email");
+        field_Xb = new LoginMethod("email");
     }
 }

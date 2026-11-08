@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TutorialSelectScreen extends MenuScreen {
-    static nl field_L;
+    static ServerListLauncher field_L;
     static String mpOfferrematchUnrated;
     static int[] field_J;
     static Sprite[] field_K;
@@ -93,6 +93,6 @@ final class TutorialSelectScreen extends MenuScreen {
     static {
         mpOfferrematchUnrated = "Offer unrated rematch";
         field_J = new int[]{62, 20, 21, 49, 5, 3, 61};
-        field_L = new nl();
+        field_L = new ServerListLauncher();
     }
 }

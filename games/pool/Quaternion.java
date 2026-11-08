@@ -4,7 +4,7 @@
 final class Quaternion {
     int x;
     int z;
-    static nl field_k;
+    static ServerListLauncher field_k;
     static int field_e;
     private static int field_i;
     int w;
@@ -66,7 +66,7 @@ final class Quaternion {
           createAlertEmailUnavailable = (String) null;
           if (var2 >= 65535) {
             if (65537 < var2) {
-              var2 = rf.inverseSquareRoot(var2, -127);
+              var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
               this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
               this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
               this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -74,7 +74,7 @@ final class Quaternion {
             }
             return;
           }
-          var2 = rf.inverseSquareRoot(var2, -127);
+          var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
           this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
           this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
           this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -82,7 +82,7 @@ final class Quaternion {
           return;
         }
         if (var2 < 65535) {
-          var2 = rf.inverseSquareRoot(var2, -127);
+          var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
           this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
           this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
           this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -92,7 +92,7 @@ final class Quaternion {
         if (65537 >= var2) {
           return;
         }
-        var2 = rf.inverseSquareRoot(var2, -127);
+        var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
         this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
         this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
         this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -106,7 +106,7 @@ final class Quaternion {
         try {
           var3_int = NameEntryPopup.a(this.w, false, param1.w) + (-NameEntryPopup.a(this.x, false, param1.x) - NameEntryPopup.a(this.y, false, param1.y) - NameEntryPopup.a(this.z, false, param1.z));
           if (param0 != 3) {
-            field_k = (nl) null;
+            field_k = (ServerListLauncher) null;
           }
           var4 = NameEntryPopup.a(this.x, false, param1.w) + (NameEntryPopup.a(this.w, false, param1.x) + NameEntryPopup.a(this.z, false, param1.y)) - NameEntryPopup.a(this.y, false, param1.z);
           var5 = NameEntryPopup.a(this.y, false, param1.w) - NameEntryPopup.a(this.z, false, param1.x) + NameEntryPopup.a(this.w, false, param1.y) + NameEntryPopup.a(this.x, false, param1.z);
@@ -223,7 +223,7 @@ final class Quaternion {
     final void setFromAxisAngle(int param0, int param1, int param2, int param3, int param4) {
         param4 = param4 >> 1;
         int var6 = ScrollPaneWithFooter.sine(param4, true);
-        int var7 = hc.cosine(2047, param4);
+        int var7 = SceneNodeFactory.cosine(2047, param4);
         this.w = var7;
         this.x = NameEntryPopup.a(var6, false, param1);
         this.y = NameEntryPopup.a(var6, false, param2);
@@ -236,7 +236,7 @@ final class Quaternion {
     }
 
     final static void a(boolean param0, int param1) {
-        if (oj.c(-26)) {
+        if (HighScoreSubmission.c(-26)) {
           param0 = false;
         }
         DraggableWidget.a(-114, param0);
@@ -253,7 +253,7 @@ final class Quaternion {
     }
 
     static {
-        field_k = new nl();
+        field_k = new ServerListLauncher();
         keycodeDefaultDown1 = 49;
         field_i = 8;
         createAlertEmailUnavailable = "Email address is unavailable";

@@ -12,7 +12,7 @@ class LongAndTextLoginPayload extends LoginPayload {
 
     LoginPayloadKind payloadKind(byte param0) {
         int var2 = -3 / ((param0 + 54) / 43);
-        return rp.field_b;
+        return NineSliceFrameSupport.field_b;
     }
 
     public static void releaseStatics(int param0) {

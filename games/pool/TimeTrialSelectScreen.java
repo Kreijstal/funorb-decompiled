@@ -6,7 +6,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
     static UiComponent field_J;
     static java.awt.Canvas field_K;
     static int field_H;
-    static ph field_I;
+    static AccountProtocolStage field_I;
     static int[] field_L;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
@@ -18,9 +18,9 @@ final class TimeTrialSelectScreen extends MenuScreen {
           if (param0) {
             TimeTrialSelectScreen.f(118);
           }
-          if (null != fc.field_b &&
-            fc.field_b.handleCancelKey(13)) {
-            fc.field_b = null;
+          if (null != AccountMenuText.field_b &&
+            AccountMenuText.field_b.handleCancelKey(13)) {
+            AccountMenuText.field_b = null;
             ProgressDialog.m(8421504);
             return true;
           }
@@ -33,9 +33,9 @@ final class TimeTrialSelectScreen extends MenuScreen {
           return false;
         }
         if (!param0) {
-          if (null != fc.field_b &&
-            fc.field_b.handleCancelKey(13)) {
-            fc.field_b = null;
+          if (null != AccountMenuText.field_b &&
+            AccountMenuText.field_b.handleCancelKey(13)) {
+            AccountMenuText.field_b = null;
             ProgressDialog.m(8421504);
             return true;
           }
@@ -48,7 +48,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           return false;
         }
         TimeTrialSelectScreen.f(118);
-        if (null == fc.field_b) {
+        if (null == AccountMenuText.field_b) {
           if (BirthDateValidator.h(-3)) {
             return true;
           }
@@ -57,8 +57,8 @@ final class TimeTrialSelectScreen extends MenuScreen {
           }
           return false;
         }
-        if (fc.field_b.handleCancelKey(13)) {
-          fc.field_b = null;
+        if (AccountMenuText.field_b.handleCancelKey(13)) {
+          AccountMenuText.field_b = null;
           ProgressDialog.m(8421504);
           return true;
         }

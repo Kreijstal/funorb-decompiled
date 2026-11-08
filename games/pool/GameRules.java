@@ -21,7 +21,7 @@ abstract class GameRules {
           String var2 = (String) null;
           GameRules.handleLoginResponse((String[]) null, false, -52, (String) null);
         }
-        return ie.loadBrowserCookies((byte) 28, NanoTickClock.getApplet(71));
+        return BrowserCookieSupport.loadBrowserCookies((byte) 28, NanoTickClock.getApplet(71));
     }
 
     void initializeShot(ShotRecord param0, boolean param1) {
@@ -193,21 +193,21 @@ abstract class GameRules {
           if (param1) {
             field_b = 100;
           }
-          TimeTrialSelectScreen.field_I = td.field_f;
+          TimeTrialSelectScreen.field_I = Base37Support.field_f;
           if (param2 != 255) {
             if (param2 >= 100 &&
               param2 <= 105) {
               var4 = args;
-              gf.setNameSuggestions(92, var4);
+              UsernameSuggestionSupport.setNameSuggestions(92, var4);
               PoolMatchController.field_gb = PauseMenuScreen.a(args, 57);
               return;
             }
             PoolMatchController.field_gb = DebouncedValidationProvider.a(param2, true, param3);
           } else {
             stackIn_6_0 = !(ButtonPainter.field_b >= 13);
-            PoolMatchController.field_gb = ta.a(stackIn_6_0, -30914);
+            PoolMatchController.field_gb = GradientPaletteSupport.a(stackIn_6_0, -30914);
             var5 = (String[]) null;
-            gf.setNameSuggestions(108, (String[]) null);
+            UsernameSuggestionSupport.setNameSuggestions(108, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,7 +276,7 @@ abstract class GameRules {
             return null;
           }
           if (this.field_d.playerCount == 2) {
-            stackIn_6_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, w.playerVsPlayer);
+            stackIn_6_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, GrowableIntListFactory.playerVsPlayer);
             return stackIn_6_0;
           }
           var3_int = 0;

@@ -5,7 +5,7 @@ final class AchievementsScreen extends MenuScreen {
     static int[] field_H;
     static String tutorialShotModeTake;
     static int[] field_J;
-    static he field_K;
+    static CanvasInputSupport field_K;
     static int[] field_I;
 
     final void drawScreen(int param0) {
@@ -43,9 +43,9 @@ final class AchievementsScreen extends MenuScreen {
         var2 = stackIn_3_0;
         var3_int = 60;
         var4 = 120;
-        nj.drawNineSlice(rm.field_g, (byte) 91, -(var3_int * 2) + SoftwareRasterizer.width, var3_int, var4, SoftwareRasterizer.height - 220);
+        LogoMaterial.drawNineSlice(MeshSymmetrySupport.field_g, (byte) 91, -(var3_int * 2) + SoftwareRasterizer.width, var3_int, var4, SoftwareRasterizer.height - 220);
         if (var2 != 0) {
-          stackIn_6_0 = hp.field_c;
+          stackIn_6_0 = SupportPageLauncher.field_c;
         } else {
           stackIn_6_0 = ClientException.field_g;
         }
@@ -57,24 +57,24 @@ final class AchievementsScreen extends MenuScreen {
         }
         if (var2 != 0) {
           if (IntrusiveNodeHashTable.field_j != -1 &&
-            t.isBitClear(0, var15, IntrusiveNodeHashTable.field_j)) {
+            PacketDiagnosticsSupport.isBitClear(0, var15, IntrusiveNodeHashTable.field_j)) {
             IntrusiveNodeHashTable.field_j = -1;
           }
           if (LobbyGame.field_Gc != -1 &&
-            t.isBitClear(0, var15, LobbyGame.field_Gc)) {
+            PacketDiagnosticsSupport.isBitClear(0, var15, LobbyGame.field_Gc)) {
             LobbyGame.field_Gc = -1;
           }
         }
         var4Lifetime1 = 0;
-        var5 = -UsernameAvailabilityValidator.field_r.field_w + td.field_g.field_w >> 3;
+        var5 = -UsernameAvailabilityValidator.field_r.field_w + Base37Support.field_g.field_w >> 3;
         for (var6 = 0; var6 < NineBallRules.achievementNameCount((byte) -9); var6++) {
           var7 = this.getIconX(-45, var6);
           var8 = this.getIconY(var6, true);
           if (var6 == IntrusiveNodeHashTable.field_j) {
-            td.field_g.drawQuarterSize(var7 - var5, -var5 + var8);
+            Base37Support.field_g.drawQuarterSize(var7 - var5, -var5 + var8);
           } else {
             if (var6 == LobbyGame.field_Gc) {
-              te.field_n.drawQuarterSize(-var5 + var7, var8 - var5);
+              ByteArrayNode.field_n.drawQuarterSize(-var5 + var7, var8 - var5);
             }
           }
           regionExit1: {
@@ -95,7 +95,7 @@ final class AchievementsScreen extends MenuScreen {
             }
           }
         }
-        nj.drawNineSlice(MidiPcmStream.field_y, (byte) -81, 500, -500 + SoftwareRasterizer.width >> 1, 205, 165);
+        LogoMaterial.drawNineSlice(MidiPcmStream.field_y, (byte) -81, 500, -500 + SoftwareRasterizer.width >> 1, 205, 165);
         if (IntrusiveNodeHashTable.field_j == -1) {
           stackIn_37_0 = LobbyGame.field_Gc;
         } else {
@@ -103,10 +103,10 @@ final class AchievementsScreen extends MenuScreen {
         }
         var6Lifetime1 = stackIn_37_0;
         if (var6Lifetime1 != -1) {
-          ModernTableScene.field_Z.d(md.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
+          ModernTableScene.field_Z.d(RenderingInitializationSupport.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
           stackIn_41_0 = (!ButtonWidget.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
           var7Lifetime1 = stackIn_41_0;
-          stackIn_46_0 = sa.field_h;
+          stackIn_46_0 = CollisionContact.field_h;
           if (var7Lifetime1 != 0) {
             stackIn_47_1 = SectorCacheStore.achieved;
           } else {
@@ -117,13 +117,13 @@ final class AchievementsScreen extends MenuScreen {
               stackIn_47_1 = FontPaletteSupport.notyetachieved;
             }
           }
-          ((BinaryBitmapFont) (Object) stackIn_46_0).d(stackIn_47_1, 225, sa.field_h.maxAscent + 240, 13412966, -1);
+          ((BinaryBitmapFont) (Object) stackIn_46_0).d(stackIn_47_1, 225, CollisionContact.field_h.maxAscent + 240, 13412966, -1);
           if (var7Lifetime1 != 0) {
             IsaacCipher.field_f[var6Lifetime1].draw(85, 225);
           } else {
             LoginPayloadKind.a(-17104, var6Lifetime1).draw(85, 225);
           }
-          var8 = sa.field_h.baselineHeight + 5;
+          var8 = CollisionContact.field_h.baselineHeight + 5;
           if (TikiTableScene.field_fb[var6Lifetime1]) {
             stackIn_56_0 = (var7Lifetime1 != 0) ? 1 : 0;
           } else {
@@ -137,40 +137,40 @@ final class AchievementsScreen extends MenuScreen {
           } else {
             if (null == PolarObject.field_g ||
               var6Lifetime1 != AlignedIconLabel.field_Qb) {
-              PolarObject.field_g = FaceNormal.a("</col>", kc.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
-              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, kc.achievementCriteria[var6Lifetime1], 260, sa.field_h, true, 225);
+              PolarObject.field_g = FaceNormal.a("</col>", CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
+              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], 260, CollisionContact.field_h, true, 225);
               AlignedIconLabel.field_Qb = var6Lifetime1;
-              IterableDualLinkDeque.field_b = sa.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
+              IterableDualLinkDeque.field_b = CollisionContact.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
             }
           }
-          stackIn_64_0 = sa.field_h;
+          stackIn_64_0 = CollisionContact.field_h;
           if (var9 != 0) {
             stackIn_65_1 = PolarObject.field_g;
           } else {
             stackIn_65_1 = TickClock.secretachievement;
           }
           ((BinaryBitmapFont) (Object) stackIn_64_0).drawParagraph(stackIn_65_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
-          sa.field_h.d(Under13NoticePanel.orbpointsColon + WidgetContainer.field_J[var6Lifetime1] * 100, 225, 340 + sa.field_h.maxAscent, 13421772, -1);
-          sa.field_h.d(CheckboxWidget.orbcoinsColon, 345, sa.field_h.maxAscent + 340, 13421772, -1);
-          var10 = 345 + sa.field_h.b(CheckboxWidget.orbcoinsColon);
-          var11 = (-dq.field_k.field_A + sa.field_h.maxDescent + sa.field_h.maxAscent >> 1) + 340;
+          CollisionContact.field_h.d(Under13NoticePanel.orbpointsColon + WidgetContainer.field_J[var6Lifetime1] * 100, 225, 340 + CollisionContact.field_h.maxAscent, 13421772, -1);
+          CollisionContact.field_h.d(CheckboxWidget.orbcoinsColon, 345, CollisionContact.field_h.maxAscent + 340, 13421772, -1);
+          var10 = 345 + CollisionContact.field_h.b(CheckboxWidget.orbcoinsColon);
+          var11 = (-TransformRotationSupport.field_k.field_A + CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent >> 1) + 340;
           for (var12 = 0; WidgetContainer.field_J[var6Lifetime1] > var12; var12++) {
-            dq.field_k.draw(var10, var11);
-            var10 = var10 + dq.field_k.field_z / 3;
+            TransformRotationSupport.field_k.draw(var10, var11);
+            var10 = var10 + TransformRotationSupport.field_k.field_z / 3;
           }
         } else {
           FreePlayRules.field_e.drawCentered(StrongCacheEntry.mouseoveranicon, SoftwareRasterizer.width >> 1, 215 + FreePlayRules.field_e.maxAscent, 4, -1);
-          if (NanoTickClock.b(-107)) {
+          if (NanoTickClock.isClientConnected(-107)) {
             var7Lifetime1 = 215 + this.buttonTop >> 1;
-            FreePlayRules.field_e.drawParagraph(ra.createtouse, SoftwareRasterizer.width >> 2, -FreePlayRules.field_e.baselineHeight + var7Lifetime1, SoftwareRasterizer.width >> 1, 240, 4, -1, 0, 0, 0);
+            FreePlayRules.field_e.drawParagraph(IntegerRecordProtocolSupport.createtouse, SoftwareRasterizer.width >> 2, -FreePlayRules.field_e.baselineHeight + var7Lifetime1, SoftwareRasterizer.width >> 1, 240, 4, -1, 0, 0, 0);
           }
         }
         if (this.selection.itemCount == 1) {
-          sa.field_h.drawParagraph(ArchiveAvailabilitySupport.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
+          CollisionContact.field_h.drawParagraph(ArchiveAvailabilitySupport.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
         }
         var7Lifetime2 = TextureCache.a(104);
         if (-1 != var7Lifetime2) {
-          qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, LoginPayload.field_e[var7Lifetime2], 15658734, 4144959);
+          HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var7Lifetime2], 15658734, 4144959);
           if (this.field_G != null) {
             this.field_G.drawOutline(15658734, 0, 128, -1, true, 70 - IterableDualLinkDeque.field_b >> 1);
           }
@@ -188,14 +188,14 @@ final class AchievementsScreen extends MenuScreen {
         int var8;
         var9 = Pool.field_O;
         if (param1) {
-          stackIn_3_0 = hp.field_c;
+          stackIn_3_0 = SupportPageLauncher.field_c;
         } else {
           stackIn_3_0 = ClientException.field_g;
         }
         var10 = stackIn_3_0;
         var5 = var10;
         for (var6 = 0; NineBallRules.achievementNameCount((byte) -108) > var6; var6++) {
-          if (!t.isBitClear(0, var10, var6) ||
+          if (!PacketDiagnosticsSupport.isBitClear(0, var10, var6) ||
             !param1) {
             var7 = this.getIconX(-55, var6);
             var8 = this.getIconY(var6, true);
@@ -218,7 +218,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 >= 0) {
           field_H = (int[]) null;
         }
-        return (-468 + SoftwareRasterizer.width >> 1) + (var3 < 13 ? param1 * 36 : -(pp.a(true) ? 18 : 0) + (param1 - 13) * 36);
+        return (-468 + SoftwareRasterizer.width >> 1) + (var3 < 13 ? param1 * 36 : -(MeshColorSupport.a(true) ? 18 : 0) + (param1 - 13) * 36);
     }
 
     final int getButtonLeft(int param0, int param1) {
@@ -242,7 +242,7 @@ final class AchievementsScreen extends MenuScreen {
           return this.getButtonLeft(0, param1) + 340;
         }
         if (param0) {
-          field_K = (he) null;
+          field_K = (CanvasInputSupport) null;
         }
         if (param1 == 1) {
           return 130 + this.getButtonLeft(0, param1);
@@ -257,11 +257,11 @@ final class AchievementsScreen extends MenuScreen {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
-        un.field_h = param1;
+        LookupProtocolSupport.field_h = param1;
         int var5 = 69 % ((param0 - 25) / 50);
         LobbyGame.field_yc = param4;
         MenuScreen.field_u = param2;
-        qr.field_g = param3;
+        AvailabilityQueryResult.field_g = param3;
     }
 
     AchievementsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -277,9 +277,9 @@ final class AchievementsScreen extends MenuScreen {
 
     private final void a(boolean param0, byte param1) {
         int var3;
-        LobbyGame.field_Gc = this.findIconAt(wn.field_i, param0, DebouncedValidationProvider.field_f, false);
+        LobbyGame.field_Gc = this.findIconAt(ReflectionReplySupport.field_i, param0, DebouncedValidationProvider.field_f, false);
         if (MatchingTextValidator.field_s == 1) {
-          TextLineLayout.a((byte) -27, il.field_c[0]);
+          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
           var3 = this.findIconAt(DialogLayer.field_W, param0, UsernameAvailabilityValidator.field_o, false);
           if (IntrusiveNodeHashTable.field_j == var3) {
             IntrusiveNodeHashTable.field_j = -1;
@@ -345,7 +345,7 @@ final class AchievementsScreen extends MenuScreen {
         if (ScrollPaneWithFooter.field_Lb != null &&
           null != PolarObject.field_g &&
           -1 != AlignedIconLabel.field_Qb) {
-          this.field_G = ScreenProjectionSupport.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
+          this.field_G = ScreenProjectionSupport.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, ReflectionReplySupport.field_i, param0 ^ -15396);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
           stackIn_12_0 = 0;
@@ -369,7 +369,7 @@ final class AchievementsScreen extends MenuScreen {
         if (var4 != 48) {
           if (var4 == 23) {
             if (this.selection.isPressActivated((byte) 108)) {
-              TranslatedUiText.a(pl.pleaselogin, this.screenId, (byte) 81);
+              TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 81);
             }
           } else {
             super.handleMenuAction(-16470, param1, param2);
@@ -379,7 +379,7 @@ final class AchievementsScreen extends MenuScreen {
             var4 = param1 ? 1 : 0;
             stackIn_8_0 = -3405;
             stackIn_8_1 = 16;
-            stackIn_9_2 = (!mg.a(true)) ? 0 : 21;
+            stackIn_9_2 = (!LobbyPlayerLookupSupport.a(true)) ? 0 : 21;
             AccountCreationDialog.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
           }
         }
@@ -403,6 +403,6 @@ final class AchievementsScreen extends MenuScreen {
         field_H = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         field_J = new int[]{0, 4096, 5793, 7094, 8192, 9159, 10033, 10837, 11585, 12288, 12953, 13585, 14189, 14768, 15326, 15864, 16384, 16888, 17378, 17854, 18318, 18770, 19212, 19644, 20066, 20480, 20886, 21283, 21674, 22058, 22435, 22806, 23170, 23530, 23884, 24232, 24576, 24915, 25249, 25580, 25905, 26227, 26545, 26859, 27170, 27477, 27780, 28081, 28378, 28672, 28963, 29251, 29537, 29819, 30099, 30377, 30652, 30924, 31194, 31462, 31727, 31991, 32252, 32511, 32768, 33023, 33276, 33527, 33776, 34024, 34270, 34514, 34756, 34996, 35235, 35472, 35708, 35942, 36175, 36406, 36636, 36864, 37091, 37316, 37540, 37763, 37985, 38205, 38424, 38642, 38858, 39073, 39287, 39500, 39712, 39923, 40132, 40341, 40548, 40755, 40960, 41164, 41368, 41570, 41771, 41972, 42171, 42369, 42567, 42763, 42959, 43154, 43348, 43541, 43733, 43925, 44115, 44305, 44494, 44682, 44869, 45056, 45242, 45427, 45611, 45795, 45977, 46160, 46341, 46522, 46702, 46881, 47059, 47237, 47415, 47591, 47767, 47942, 48117, 48291, 48465, 48637, 48809, 48981, 49152, 49322, 49492, 49661, 49830, 49998, 50166, 50332, 50499, 50665, 50830, 50995, 51159, 51323, 51486, 51649, 51811, 51972, 52134, 52294, 52454, 52614, 52773, 52932, 53090, 53248, 53405, 53562, 53719, 53874, 54030, 54185, 54340, 54494, 54647, 54801, 54954, 55106, 55258, 55410, 55561, 55712, 55862, 56012, 56162, 56311, 56459, 56608, 56756, 56903, 57051, 57198, 57344, 57490, 57636, 57781, 57926, 58071, 58215, 58359, 58503, 58646, 58789, 58931, 59073, 59215, 59357, 59498, 59639, 59779, 59919, 60059, 60199, 60338, 60477, 60615, 60753, 60891, 61029, 61166, 61303, 61440, 61576, 61712, 61848, 61984, 62119, 62254, 62388, 62523, 62657, 62790, 62924, 63057, 63190, 63323, 63455, 63587, 63719, 63850, 63982, 64113, 64243, 64374, 64504, 64634, 64763, 64893, 65022, 65151, 65279, 65408};
         tutorialShotModeTake = "To <u=ffffff>take a shot</u>, <img=0> <col=99ff99>click on the cue ball</col> where you would like to strike it. If you click nearer the bottom, the cue ball will back-spin, if you click nearer the top, it will forward-spin.";
-        field_K = new he();
+        field_K = new CanvasInputSupport();
     }
 }

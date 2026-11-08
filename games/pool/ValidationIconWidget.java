@@ -96,7 +96,7 @@ final class ValidationIconWidget extends ButtonWidget {
         int var5;
         int var6;
         int var7;
-        na var9;
+        IntegerSyntaxSupport var9;
         int var10;
         int var11;
         int var12;
@@ -112,9 +112,9 @@ final class ValidationIconWidget extends ButtonWidget {
         var7 = 1 % ((-42 - param1) / 53);
         var6 = (this.widgetHeight >> 1) + (param3 + this.widgetY);
         var9 = this.validationProvider.getDebouncedValidationState(-31873);
-        if (ji.field_h != var9 &&
+        if (ParticleTrail.field_h != var9 &&
           Js5Transport.field_k != var9) {
-          if (var9 == gp.field_d) {
+          if (var9 == AchievementProtocolSupport.field_d) {
             var15 = FixedAngleSupport.field_a[2];
             var15.drawAdditive(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
           } else if (var9 == ProxySocketConnector.field_e) {
@@ -125,22 +125,22 @@ final class ValidationIconWidget extends ButtonWidget {
           var13 = FixedAngleSupport.field_a[0];
           var10 = var13.field_w << 1;
           var11 = var13.field_y << 1;
-          if (null != sm.field_z &&
-            sm.field_z.field_z >= var10 &&
-            sm.field_z.field_A >= var11) {
-            CueAim.a(104, sm.field_z);
+          if (null != PasswordInputPainter.field_z &&
+            PasswordInputPainter.field_z.field_z >= var10 &&
+            PasswordInputPainter.field_z.field_A >= var11) {
+            CueAim.a(104, PasswordInputPainter.field_z);
             SoftwareRasterizer.clear();
           } else {
-            sm.field_z = new Sprite(var10, var11);
-            CueAim.a(56, sm.field_z);
+            PasswordInputPainter.field_z = new Sprite(var10, var11);
+            CueAim.a(56, PasswordInputPainter.field_z);
           }
           var13.drawRotatedAboutPivot(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
           TriangleMesh.a(112);
-          sm.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
+          PasswordInputPainter.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
         }
     }
 
-    final static int a(int param0, int param1, HighScoreRequest param2, oj param3) {
+    final static int a(int param0, int param1, HighScoreRequest param2, HighScoreSubmission param3) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;

@@ -38,13 +38,13 @@ final class QuaternionRotationSupport {
             return stackIn_42_0;
           }
           if (var3 == 0) {
-            stackIn_55_0 = (la.field_a == param0);
+            stackIn_55_0 = (ChatPanelSupport.field_a == param0);
             return stackIn_55_0;
           }
           if (var3 != 3) {
             return true;
           }
-          stackIn_50_0 = (param0 == un.field_e);
+          stackIn_50_0 = (param0 == LookupProtocolSupport.field_e);
           return stackIn_50_0;
         }
         QuaternionRotationSupport.a(93, 66, 62);
@@ -62,13 +62,13 @@ final class QuaternionRotationSupport {
           return stackIn_15_0;
         }
         if (var3Lifetime1 == 0) {
-          stackIn_20_0 = (la.field_a == param0);
+          stackIn_20_0 = (ChatPanelSupport.field_a == param0);
           return stackIn_20_0;
         }
         if (var3Lifetime1 != 3) {
           return true;
         }
-        stackIn_26_0 = (param0 == un.field_e);
+        stackIn_26_0 = (param0 == LookupProtocolSupport.field_e);
         return stackIn_26_0;
     }
 

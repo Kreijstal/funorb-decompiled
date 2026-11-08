@@ -19,7 +19,7 @@ final class DraggableWidget extends SingleChildWidget {
         if (NodeHashTableIterator.field_a > 0 &&
           LoginPayloadKind.field_d) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
-          ln.field_q.drawRoot((byte) -79, param1);
+          ModelOriginSupport.field_q.drawRoot((byte) -79, param1);
         }
         if (PoolMatchController.field_z > 0) {
           if (AccountWelcomePanel.field_bb) {
@@ -27,7 +27,7 @@ final class DraggableWidget extends SingleChildWidget {
             DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
           }
         } else {
-          if (nj.field_b > 0 &&
+          if (LogoMaterial.field_b > 0 &&
             AccountWelcomePanel.field_bb) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
             DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
@@ -49,7 +49,7 @@ final class DraggableWidget extends SingleChildWidget {
     final static void a(int param0, int param1) {
         QuickChatPhraseDefinition.field_E = param0;
         MusicPatch.field_l = new int[3];
-        wb.field_e = new pn[param0 * 15];
+        RankingsProtocolSupport.field_e = new ChatMessage[param0 * 15];
         IntrusiveDequeCursor.field_e = 0;
         if (param1 > -43) {
           field_V = 16;
@@ -138,13 +138,13 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, PcmStreamMixer param3) {
         try {
-          ProjectedLineSupport.field_h = param1 * CachedArchiveSource.a(-21282) / 1000;
+          ProjectedLineSupport.field_h = param1 * CachedArchiveSource.getTargetFramesPerSecond(-21282) / 1000;
           if (param2) {
             field_S = (String[]) null;
           }
-          q.loadLogoJingle(param0, 102);
-          oj.loadLogoModel(param0, (byte) -106);
-          dr.loadFinalFrame((byte) -65, param0);
+          LogoJingleLoader.loadLogoJingle(param0, 102);
+          HighScoreSubmission.loadLogoModel(param0, (byte) -106);
+          LogoFinalFrameLoader.loadFinalFrame((byte) -65, param0);
           MessageDialogContent.a(-257);
           SpaceBallSkin.i(23);
           LobbyPlayer.field_fc = 0 - ProjectedLineSupport.field_h;
@@ -209,7 +209,7 @@ final class DraggableWidget extends SingleChildWidget {
           if ((!(this.child instanceof ButtonWidget) ||
             ((ButtonWidget) (this.child)).enabled) &&
             this.pressedPointerButton == 1) {
-            var5_int = -this.grabOffsetX + wn.field_i - param2;
+            var5_int = -this.grabOffsetX + ReflectionReplySupport.field_i - param2;
             var6 = DebouncedValidationProvider.field_f - this.grabOffsetY - param3;
             if (var5_int != this.widgetX ||
               this.widgetY != var6) {
@@ -273,12 +273,12 @@ final class DraggableWidget extends SingleChildWidget {
     final static boolean i(int param0) {
         if (param0 != -1) {
           field_S = (String[]) null;
-          if (null == sa.field_f) {
+          if (null == CollisionContact.field_f) {
             return ArrayWidgetGroup.field_H ? true : false;
           }
           return true;
         }
-        if (null != sa.field_f) {
+        if (null != CollisionContact.field_f) {
           return true;
         }
         if (!ArrayWidgetGroup.field_H) {

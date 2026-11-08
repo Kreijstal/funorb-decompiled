@@ -204,7 +204,7 @@ final class ProgressBarWidget extends UiWidget {
           if (param2 != 2) {
             field_R = (BitmapFont) null;
           }
-          stackIn_6_0 = (2 <= param1) && (!nj.a(param1, 125, param0, ml.field_h));
+          stackIn_6_0 = (2 <= param1) && (!LogoMaterial.a(param1, 125, param0, LoginMethod.field_h));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,11 +257,11 @@ final class ProgressBarWidget extends UiWidget {
         this.rebuildSprites((byte) 83);
     }
 
-    final static ij a(boolean param0, int param1, String param2, String param3) {
-        ij var4 = null;
+    final static AnimatedNotification a(boolean param0, int param1, String param2, String param3) {
+        AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
-        ij stackIn_2_0 = null;
-        ij stackIn_4_0 = null;
+        AnimatedNotification stackIn_2_0 = null;
+        AnimatedNotification stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -269,13 +269,13 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          qg.a((byte) 48, param1);
-          var4 = new ij(param1);
+          VertexTransformSupport.a((byte) 48, param1);
+          var4 = new AnimatedNotification(param1);
           if (!param0) {
-            stackIn_2_0 = (ij) null;
+            stackIn_2_0 = (AnimatedNotification) null;
             return stackIn_2_0;
           }
-          var4.a(param2, (byte) 87, param3);
+          var4.renderNotificationText(param2, (byte) 87, param3);
           MarkerSliderPainter.field_i.addFirst((byte) 92, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HighScoreRequest extends IntrusiveNode {
-    static nl field_l;
+    static ServerListLauncher field_l;
     int field_v;
     String[][] field_m;
     long[][] field_q;
@@ -20,30 +20,30 @@ final class HighScoreRequest extends IntrusiveNode {
     static int[] field_w;
 
     final static LoginTextValue c(int param0) {
-        String var1 = sa.a(false);
+        String var1 = CollisionContact.a(false);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
         if (param0 == 8388) {
-          return new LoginTextValue(sa.a(false), NetworkArchiveRequest.h(0));
+          return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
         }
         HighScoreRequest.a(115, true);
-        return new LoginTextValue(sa.a(false), NetworkArchiveRequest.h(0));
+        return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
     }
 
     final static void a(int param0, boolean param1) {
         int var3 = 0;
-        oj var4 = null;
+        HighScoreSubmission var4 = null;
         HighScoreRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          var4 = (oj) (ta.field_i.last((byte) 81));
+          var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.last((byte) 81));
           while (var4 != null) {
             WidgetContainer.a(!param1, var4, param0);
-            var4 = (oj) (ta.field_i.previous((byte) -5));
+            var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.previous((byte) -5));
           }
           if (!param1) {
             HighScoreRequest.releaseStatics(104);
@@ -143,7 +143,7 @@ final class HighScoreRequest extends IntrusiveNode {
     }
 
     static {
-        field_l = new nl();
+        field_l = new ServerListLauncher();
         field_s = new int[12];
         field_o = 2;
         field_p = new int[12];

@@ -57,20 +57,20 @@ final class TriangleMesh {
         if (param0 != 84) {
           field_B = 96;
         }
-        stackIn_6_0 = (jd.field_c != null) && (RankingsScreen.field_J.b(719));
+        stackIn_6_0 = (Atan2Support.field_c != null) && (RankingsScreen.field_J.b(719));
         return stackIn_6_0;
     }
 
     final static void d(int param0) {
-        nn.field_b = new TableScene[5];
-        nn.field_b[0] = (TableScene) ((Object) new ModernTableScene());
-        nn.field_b[1] = (TableScene) ((Object) new PlasmaTableScene());
-        nn.field_b[2] = (TableScene) ((Object) new TikiTableScene());
-        nn.field_b[3] = (TableScene) ((Object) new PolarTableScene());
+        BrowserCookieWriter.field_b = new TableScene[5];
+        BrowserCookieWriter.field_b[0] = (TableScene) ((Object) new ModernTableScene());
+        BrowserCookieWriter.field_b[1] = (TableScene) ((Object) new PlasmaTableScene());
+        BrowserCookieWriter.field_b[2] = (TableScene) ((Object) new TikiTableScene());
+        BrowserCookieWriter.field_b[3] = (TableScene) ((Object) new PolarTableScene());
         if (param0 >= -75) {
           return;
         }
-        nn.field_b[4] = (TableScene) ((Object) new SpaceTableScene());
+        BrowserCookieWriter.field_b[4] = (TableScene) ((Object) new SpaceTableScene());
     }
 
     final static void a(int param0) {

@@ -21,17 +21,17 @@ class PauseMenuScreen extends MenuScreen {
 
     final void navigateBack(byte param0) {
         if (param0 < -11) {
-          AccountCreationDialog.a(-3405, -1, mg.a(true) ? 21 : 0, false);
+          AccountCreationDialog.a(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
           return;
         }
         this.field_K = (Sprite) null;
-        AccountCreationDialog.a(-3405, -1, mg.a(true) ? 21 : 0, false);
+        AccountCreationDialog.a(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
     }
 
-    final static wc a(String[] args, int param1) {
-        wc var2 = null;
+    final static LoginResponse a(String[] args, int param1) {
+        LoginResponse var2 = null;
         RuntimeException var2_ref = null;
-        wc stackIn_3_0 = null;
+        LoginResponse stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,7 +40,7 @@ class PauseMenuScreen extends MenuScreen {
           if (param1 != 57) {
             PauseMenuScreen.g(-2, 69);
           }
-          var2 = new wc(false);
+          var2 = new LoginResponse(false);
           var2.field_c = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -171,16 +171,16 @@ class PauseMenuScreen extends MenuScreen {
         int stackIn_128_0 = 0;
         int var2;
         int var2Lifetime1;
-        hh.field_a = hh.field_a + 1;
+        PackedColorSupport.field_a = PackedColorSupport.field_a + 1;
         if (param0 != 0) {
           playerNs = (String[]) null;
           if (KillerBallSkin.field_m == param1) {
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
             }
           } else {
             if (ClientException.field_j) {
@@ -188,14 +188,14 @@ class PauseMenuScreen extends MenuScreen {
               if (param1 != -1) {
                 if (!ClientException.field_j &&
                   var2 == 0) {
-                  hh.field_a = 0;
+                  PackedColorSupport.field_a = 0;
                 } else {
-                  hh.field_a = LongAndTextLoginPayload.field_l;
+                  PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                 }
               } else {
-                hh.field_a = 0;
+                PackedColorSupport.field_a = 0;
               }
-              TimeTrialSelectScreen.field_H = wn.field_i;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
               if (param1 == -1) {
                 if (var2 != 0) {
                   ClientException.field_j = true;
@@ -203,24 +203,24 @@ class PauseMenuScreen extends MenuScreen {
               } else {
                 ClientException.field_j = false;
               }
-              pm.field_p = DebouncedValidationProvider.field_f;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             } else {
-              if (hh.field_a < LongAndTextLoginPayload.field_l) {
+              if (PackedColorSupport.field_a < LongAndTextLoginPayload.field_l) {
                 var2 = 0;
                 if (param1 != -1) {
                   if (ClientException.field_j) {
-                    hh.field_a = LongAndTextLoginPayload.field_l;
+                    PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                   } else {
                     if (var2 != 0) {
-                      hh.field_a = LongAndTextLoginPayload.field_l;
+                      PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                     } else {
-                      hh.field_a = 0;
+                      PackedColorSupport.field_a = 0;
                     }
                   }
                 } else {
-                  hh.field_a = 0;
+                  PackedColorSupport.field_a = 0;
                 }
-                TimeTrialSelectScreen.field_H = wn.field_i;
+                TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
                 if (param1 == -1) {
                   if (var2 != 0) {
                     ClientException.field_j = true;
@@ -228,78 +228,78 @@ class PauseMenuScreen extends MenuScreen {
                 } else {
                   ClientException.field_j = false;
                 }
-                pm.field_p = DebouncedValidationProvider.field_f;
+                SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
               } else {
-                stackIn_52_0 = (FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= hh.field_a) ? 0 : 1;
+                stackIn_52_0 = (FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= PackedColorSupport.field_a) ? 0 : 1;
                 boolean decompiledFrameRemainder1 = true;
                 var2 = stackIn_52_0;
                 if (param1 != -1) {
                   if (ClientException.field_j) {
-                    hh.field_a = LongAndTextLoginPayload.field_l;
+                    PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var2 != 0) {
-                      hh.field_a = LongAndTextLoginPayload.field_l;
+                      PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                       decompiledFrameRemainder1 = false;
                     }
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  hh.field_a = 0;
+                  PackedColorSupport.field_a = 0;
                 }
                 boolean decompiledFrameRemainder0 = true;
-                TimeTrialSelectScreen.field_H = wn.field_i;
+                TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
                 if (param1 == -1) {
                   if (var2 != 0) {
                     ClientException.field_j = true;
-                    pm.field_p = DebouncedValidationProvider.field_f;
+                    SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
                     decompiledFrameRemainder0 = false;
                   }
                 } else {
                   ClientException.field_j = false;
                 }
                 if (decompiledFrameRemainder0) {
-                  pm.field_p = DebouncedValidationProvider.field_f;
+                  SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
                 }
               }
             }
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
             }
           }
           KillerBallSkin.field_m = param1;
           if (ClientException.field_j &&
-            SocialListEntry.field_Vb == hh.field_a) {
-            hh.field_a = 0;
+            SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+            PackedColorSupport.field_a = 0;
             ClientException.field_j = false;
           }
           return;
         }
         if (KillerBallSkin.field_m == param1) {
           if (!ClientException.field_j &&
-            hh.field_a < LongAndTextLoginPayload.field_l &&
+            PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
             LoginPayload.field_c) {
-            pm.field_p = DebouncedValidationProvider.field_f;
-            TimeTrialSelectScreen.field_H = wn.field_i;
-            hh.field_a = 0;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+            TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+            PackedColorSupport.field_a = 0;
           }
           KillerBallSkin.field_m = param1;
           if (ClientException.field_j &&
-            SocialListEntry.field_Vb == hh.field_a) {
-            hh.field_a = 0;
+            SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+            PackedColorSupport.field_a = 0;
             ClientException.field_j = false;
             return;
           }
           return;
         }
         if (!ClientException.field_j) {
-          if (hh.field_a >= LongAndTextLoginPayload.field_l) {
-            stackIn_128_0 = (FadingDialog.field_Q + LongAndTextLoginPayload.field_l > hh.field_a) ? 1 : 0;
+          if (PackedColorSupport.field_a >= LongAndTextLoginPayload.field_l) {
+            stackIn_128_0 = (FadingDialog.field_Q + LongAndTextLoginPayload.field_l > PackedColorSupport.field_a) ? 1 : 0;
           } else {
             stackIn_128_0 = 0;
           }
@@ -308,21 +308,21 @@ class PauseMenuScreen extends MenuScreen {
         }
         var2Lifetime1 = stackIn_128_0;
         if (param1 == -1) {
-          hh.field_a = 0;
-          TimeTrialSelectScreen.field_H = wn.field_i;
+          PackedColorSupport.field_a = 0;
+          TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
           if (param1 != -1) {
             ClientException.field_j = false;
-            pm.field_p = DebouncedValidationProvider.field_f;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
               KillerBallSkin.field_m = param1;
               if (ClientException.field_j &&
-                SocialListEntry.field_Vb == hh.field_a) {
-                hh.field_a = 0;
+                SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+                PackedColorSupport.field_a = 0;
                 ClientException.field_j = false;
               }
               return;
@@ -330,36 +330,36 @@ class PauseMenuScreen extends MenuScreen {
           } else {
             if (var2Lifetime1 != 0) {
               ClientException.field_j = true;
-              pm.field_p = DebouncedValidationProvider.field_f;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
               if (!ClientException.field_j &&
-                hh.field_a < LongAndTextLoginPayload.field_l &&
+                PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
                 LoginPayload.field_c) {
-                pm.field_p = DebouncedValidationProvider.field_f;
-                TimeTrialSelectScreen.field_H = wn.field_i;
-                hh.field_a = 0;
+                SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+                TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+                PackedColorSupport.field_a = 0;
                 KillerBallSkin.field_m = param1;
                 if (ClientException.field_j &&
-                  SocialListEntry.field_Vb == hh.field_a) {
-                  hh.field_a = 0;
+                  SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+                  PackedColorSupport.field_a = 0;
                   ClientException.field_j = false;
                 }
                 return;
               }
             } else {
-              pm.field_p = DebouncedValidationProvider.field_f;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
               if (!ClientException.field_j &&
-                hh.field_a < LongAndTextLoginPayload.field_l &&
+                PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
                 LoginPayload.field_c) {
-                pm.field_p = DebouncedValidationProvider.field_f;
-                TimeTrialSelectScreen.field_H = wn.field_i;
-                hh.field_a = 0;
+                SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+                TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+                PackedColorSupport.field_a = 0;
               }
             }
           }
         } else {
           if (ClientException.field_j) {
-            hh.field_a = LongAndTextLoginPayload.field_l;
-            TimeTrialSelectScreen.field_H = wn.field_i;
+            PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
+            TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
             if (param1 == -1) {
               if (var2Lifetime1 != 0) {
                 ClientException.field_j = true;
@@ -367,80 +367,80 @@ class PauseMenuScreen extends MenuScreen {
             } else {
               ClientException.field_j = false;
             }
-            pm.field_p = DebouncedValidationProvider.field_f;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
             }
             KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
-              SocialListEntry.field_Vb == hh.field_a) {
-              hh.field_a = 0;
+              SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+              PackedColorSupport.field_a = 0;
               ClientException.field_j = false;
             }
             return;
           }
           if (var2Lifetime1 != 0) {
-            hh.field_a = LongAndTextLoginPayload.field_l;
-            TimeTrialSelectScreen.field_H = wn.field_i;
+            PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
+            TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
             if (param1 == -1) {
               ClientException.field_j = true;
             } else {
               ClientException.field_j = false;
             }
-            pm.field_p = DebouncedValidationProvider.field_f;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
             }
             KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
-              SocialListEntry.field_Vb == hh.field_a) {
-              hh.field_a = 0;
+              SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+              PackedColorSupport.field_a = 0;
               ClientException.field_j = false;
               return;
             }
             return;
           }
-          hh.field_a = 0;
-          TimeTrialSelectScreen.field_H = wn.field_i;
+          PackedColorSupport.field_a = 0;
+          TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
           if (param1 != -1) {
             ClientException.field_j = false;
           } else {
-            pm.field_p = DebouncedValidationProvider.field_f;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
-              hh.field_a < LongAndTextLoginPayload.field_l &&
+              PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
-              pm.field_p = DebouncedValidationProvider.field_f;
-              TimeTrialSelectScreen.field_H = wn.field_i;
-              hh.field_a = 0;
+              SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+              TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+              PackedColorSupport.field_a = 0;
             }
             KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
-              SocialListEntry.field_Vb == hh.field_a) {
-              hh.field_a = 0;
+              SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+              PackedColorSupport.field_a = 0;
               ClientException.field_j = false;
               return;
             }
             return;
           }
-          pm.field_p = DebouncedValidationProvider.field_f;
+          SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
           if (!ClientException.field_j &&
-            hh.field_a < LongAndTextLoginPayload.field_l &&
+            PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
             LoginPayload.field_c) {
-            pm.field_p = DebouncedValidationProvider.field_f;
-            TimeTrialSelectScreen.field_H = wn.field_i;
-            hh.field_a = 0;
+            SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
+            TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
+            PackedColorSupport.field_a = 0;
             KillerBallSkin.field_m = param1;
             if (ClientException.field_j &&
-              SocialListEntry.field_Vb == hh.field_a) {
-              hh.field_a = 0;
+              SocialListEntry.field_Vb == PackedColorSupport.field_a) {
+              PackedColorSupport.field_a = 0;
               ClientException.field_j = false;
             }
             return;
@@ -450,10 +450,10 @@ class PauseMenuScreen extends MenuScreen {
         if (!ClientException.field_j) {
           return;
         }
-        if (SocialListEntry.field_Vb != hh.field_a) {
+        if (SocialListEntry.field_Vb != PackedColorSupport.field_a) {
           return;
         }
-        hh.field_a = 0;
+        PackedColorSupport.field_a = 0;
         ClientException.field_j = false;
         return;
     }
@@ -482,27 +482,27 @@ class PauseMenuScreen extends MenuScreen {
         var4 = this.itemIds[param2];
         if (var4 == 54) {
           if (this.selection.isPressActivated((byte) 54)) {
-            KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
+            KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[0].field_b);
           }
         } else {
           if (var4 == 55) {
             if (this.selection.isPressActivated((byte) 115)) {
-              KillerBallSkin.a(256, true, true, nn.field_b[1].field_b);
+              KillerBallSkin.a(256, true, true, BrowserCookieWriter.field_b[1].field_b);
             }
           } else {
             if (56 == var4) {
               if (this.selection.isPressActivated((byte) 54)) {
-                KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
+                KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[2].field_b);
               }
             } else {
               if (var4 == 57) {
                 if (this.selection.isPressActivated((byte) 56)) {
-                  KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
+                  KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[3].field_b);
                 }
               } else {
                 if (58 == var4) {
                   if (this.selection.isPressActivated((byte) 62)) {
-                    KillerBallSkin.a(param0 + 16726, true, true, nn.field_b[4].field_b);
+                    KillerBallSkin.a(param0 + 16726, true, true, BrowserCookieWriter.field_b[4].field_b);
                   }
                 } else {
                   if (59 != var4) {
@@ -510,7 +510,7 @@ class PauseMenuScreen extends MenuScreen {
                       super.handleMenuAction(-16470, param1, param2);
                     } else {
                       if (this.selection.isPressActivated((byte) 125)) {
-                        KillerBallSkin.a(256, true, true, jh.field_d);
+                        KillerBallSkin.a(256, true, true, MenuScreenBase.field_d);
                       }
                     }
                   } else {

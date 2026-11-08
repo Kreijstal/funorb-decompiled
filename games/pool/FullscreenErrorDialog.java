@@ -46,7 +46,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         }
     }
 
-    FullscreenErrorDialog(DialogLayer param0, he param1) {
+    FullscreenErrorDialog(DialogLayer param0, CanvasInputSupport param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -58,11 +58,11 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != ic.field_c) {
+          if (param1 != SharedRateScaleSupport.field_c) {
             if (AchievementsScreen.field_K == param1) {
               var3 = QuickChatPhraseRegistry.fsFocus;
               this.widgetHeight = this.widgetHeight + 10;
-              if (je.b((byte) 124)) {
+              if (ArchiveBootstrapSupport.b((byte) 124)) {
                 this.widgetHeight = this.widgetHeight + 20;
                 var3 = HuffmanCodec.fsFocusOrResolution;
               }

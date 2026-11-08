@@ -11,7 +11,7 @@ final class BitmapTextLayout extends TextLayout {
     static String[][] field_q;
     static String muOptionsAllowSpectate;
     private BitmapFont field_i;
-    static ml field_l;
+    static LoginMethod field_l;
     private int field_r;
     private int field_s;
     private int field_u;
@@ -175,7 +175,7 @@ final class BitmapTextLayout extends TextLayout {
             var1 = TextLineLayout.field_j.getEnteredName(-103);
           }
           if (var1.length() == 0) {
-            var1 = rf.a((byte) -119);
+            var1 = AccountDisplayNameSupport.a((byte) -119);
           }
           if (var1.length() == 0) {
             var1 = LoginPayloadKind.dEFAULTPLAYERNAME;
@@ -533,7 +533,7 @@ final class BitmapTextLayout extends TextLayout {
           var19 = param5[9] * var24 + param5[10] * var25 + param5[11] * var26 >> 14;
           var16 = param5[6] * var24 - (-(param5[7] * var25) - var26 * param5[8]) >> 14;
           if (param0 != -3) {
-            field_l = (ml) null;
+            field_l = (LoginMethod) null;
           }
           var15 = var23 * param5[8] + (param5[7] * var22 + param5[6] * var21) >> 14;
           var18 = var23 * param5[11] + var21 * param5[9] + param5[10] * var22 >> 14;
@@ -568,9 +568,9 @@ final class BitmapTextLayout extends TextLayout {
               ButtonWidget.field_L[var23Lifetime2] = var29Lifetime1;
             }
             if (param1) {
-              ie.field_d[var23Lifetime2] = var27Lifetime1 >> MenuScreen.field_i;
+              BrowserCookieSupport.field_d[var23Lifetime2] = var27Lifetime1 >> MenuScreen.field_i;
               TextLineLayout.field_a[var23Lifetime2] = var28Lifetime1 >> MenuScreen.field_i;
-              ja.field_d[var23Lifetime2] = var29Lifetime1;
+              ByteArrayPool.field_d[var23Lifetime2] = var29Lifetime1;
             }
           }
           if (param6.field_g != null &&
@@ -592,14 +592,14 @@ final class BitmapTextLayout extends TextLayout {
               var24Lifetime2Lifetime1 = param6.field_C[var23Lifetime3];
               var25Lifetime2Lifetime1 = param6.field_M[var23Lifetime3];
               var26Lifetime2Lifetime1 = param6.field_c[var23Lifetime3];
-              hp.field_d[var23Lifetime3] = (var18 * var26Lifetime2Lifetime1 + (var24Lifetime2Lifetime1 * var12 + var15 * var25Lifetime2Lifetime1) >> 16) + var9;
+              SupportPageLauncher.field_d[var23Lifetime3] = (var18 * var26Lifetime2Lifetime1 + (var24Lifetime2Lifetime1 * var12 + var15 * var25Lifetime2Lifetime1) >> 16) + var9;
               NineBallRules.field_g[var23Lifetime3] = (var26Lifetime2Lifetime1 * var19 + (var16 * var25Lifetime2Lifetime1 + var24Lifetime2Lifetime1 * var13) >> 16) + var10;
               PlayerContextMenu.field_c[var23Lifetime3] = (var24Lifetime2Lifetime1 * var14 + (var25Lifetime2Lifetime1 * var17 + var20 * var26Lifetime2Lifetime1) >> 16) + var11;
               var24Lifetime2Lifetime2 = param6.field_J[var23Lifetime3];
               var25Lifetime2Lifetime2 = param6.field_A[var23Lifetime3];
               var26Lifetime2Lifetime2 = param6.field_E[var23Lifetime3];
               TextInputWidget.field_P[var23Lifetime3] = var9 + (var18 * var26Lifetime2Lifetime2 + var24Lifetime2Lifetime2 * var12 + var25Lifetime2Lifetime2 * var15 >> 16);
-              oi.field_w[var23Lifetime3] = (var26Lifetime2Lifetime2 * var19 + var25Lifetime2Lifetime2 * var16 + var24Lifetime2Lifetime2 * var13 >> 16) + var10;
+              IntegerRecordSubmission.field_w[var23Lifetime3] = (var26Lifetime2Lifetime2 * var19 + var25Lifetime2Lifetime2 * var16 + var24Lifetime2Lifetime2 * var13 >> 16) + var10;
               UsernameSuggestionsPanel.field_P[var23Lifetime3] = var11 + (var17 * var25Lifetime2Lifetime2 + var14 * var24Lifetime2Lifetime2 + var26Lifetime2Lifetime2 * var20 >> 16);
             }
           }
@@ -614,13 +614,13 @@ final class BitmapTextLayout extends TextLayout {
             var16Lifetime1 = param5[10];
             var17Lifetime1 = param5[11];
             for (var18Lifetime1 = 0; param6.field_o > var18Lifetime1; var18Lifetime1++) {
-              if (oj.field_r.length <= var18Lifetime1) {
+              if (HighScoreSubmission.field_r.length <= var18Lifetime1) {
                 break;
               }
               var19Lifetime1 = param6.field_Q[var18Lifetime1];
               var20Lifetime1 = param6.field_p[var18Lifetime1];
               var21Lifetime3 = param6.field_j[var18Lifetime1];
-              oj.field_r[var18Lifetime1] = var15Lifetime1 * var21Lifetime3 + (var12Lifetime1 * var20Lifetime1 + var19Lifetime1 * var9Lifetime1) >> 16;
+              HighScoreSubmission.field_r[var18Lifetime1] = var15Lifetime1 * var21Lifetime3 + (var12Lifetime1 * var20Lifetime1 + var19Lifetime1 * var9Lifetime1) >> 16;
               ProgressDialog.field_mb[var18Lifetime1] = var16Lifetime1 * var21Lifetime3 + var20Lifetime1 * var13Lifetime1 + var10Lifetime1 * var19Lifetime1 >> 16;
               PoolGameModel.field_g[var18Lifetime1] = var21Lifetime3 * var17Lifetime1 + var19Lifetime1 * var11Lifetime1 + var20Lifetime1 * var14Lifetime1 >> 16;
             }
@@ -677,6 +677,6 @@ final class BitmapTextLayout extends TextLayout {
         muOptionsAllowSpectate = "Allow spectators?";
         field_p = 16;
         field_j = 1 << field_p;
-        field_l = new ml("");
+        field_l = new LoginMethod("");
     }
 }

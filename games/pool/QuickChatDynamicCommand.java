@@ -33,14 +33,14 @@ final class QuickChatDynamicCommand {
             param0 = 0;
           }
           ArrayWidgetGroup.field_I = param3;
-          hn.field_b = param0;
+          CookieDateSupport.field_b = param0;
           if (param4 != 76) {
             field_f = -23;
           }
           var7 = (CharSequence) ((Object) param3);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(62, var7);
           QuickChatMenuSupport.field_d = param2;
-          var6 = WhirlpoolHasher.a((byte) 92, LoginRequiredScreen.field_J, param1, tp.field_i, CushionSegment.field_c);
+          var6 = WhirlpoolHasher.a((byte) 92, LoginRequiredScreen.field_J, param1, LookupRetrySupport.field_i, CushionSegment.field_c);
           CueStick.a(111, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,9 +87,9 @@ final class QuickChatDynamicCommand {
 
     final static void detachMouseListeners(java.awt.Component param0, boolean param1) {
         try {
-          param0.removeMouseListener(wp.field_g);
-          param0.removeMouseMotionListener(wp.field_g);
-          param0.removeFocusListener(wp.field_g);
+          param0.removeMouseListener(CompressedContainerSupport.field_g);
+          param0.removeMouseMotionListener(CompressedContainerSupport.field_g);
+          param0.removeFocusListener(CompressedContainerSupport.field_g);
           ReflectionCheck.field_v = 0;
           if (param1) {
             QuickChatDynamicCommand.releaseStatics((byte) -103);
@@ -108,6 +108,6 @@ final class QuickChatDynamicCommand {
         unableToSendMessagePasswordA = "You appear to be telling someone your password - please don't!";
         definitionDefinitions = new String[]{"One turn at the table, which may be several shots.", "Having potted no balls before in the game, potting all of your balls and winning the game in one visit (without missing a shot).", "When your ball is very close to a pocket so it's difficult or impossible for your opponent to pot in it without potting yours.", "When you cannot hit any target ball directly without fouling.", "Hitting a ball which hits another ball into a pocket (a chain reaction).", "The line going across the table that the cue ball initially sits on.", "Hitting a ball into a pocket.", "The first shot of the game where you strike the rack with the cue ball.", "A single strike of the cue ball with the cue until all the balls come to rest.", "The holes in the corners and centre of the long sides of the table that the balls fall into.", "When the balls are taken out of the pockets during a game and placed back in their starting positions.", "The initial setup of the balls at the beginning of a game.", "The white ball.", "A shot that breaks one or more rules.", "The borders of the table between the pockets.", "One of the sets of balls, either spots or stripes.", "When you are able to move the cue ball, usually following a foul."};
         inviteDeclineXsGame = "Decline invitation to <%0>'s game";
-        ic.a((byte) 36, 50);
+        SharedRateScaleSupport.a((byte) 36, 50);
     }
 }

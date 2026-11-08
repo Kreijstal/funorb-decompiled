@@ -160,7 +160,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           TimeTrialSelectScreen.field_K = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
-          TimeTrialSelectScreen.field_K.setSize(ml.field_d, ArchiveIndex.field_c);
+          TimeTrialSelectScreen.field_K.setSize(LoginMethod.field_d, ArchiveIndex.field_c);
           TimeTrialSelectScreen.field_K.setVisible(true);
           if (TextLayout.field_e == var2) {
             var3 = TextLayout.field_e.getInsets();
@@ -178,9 +178,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           PlasmaBallSkin.field_q = true;
           MeshBase.field_e = true;
-          he.field_c = true;
+          CanvasInputSupport.field_c = true;
           TabbedPane.field_Sb = false;
-          ph.field_b = rl.monotonicTimeMillis((byte) -94);
+          AccountProtocolStage.field_b = MonotonicClock.monotonicTimeMillis((byte) -94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ModernTableScene.field_ib == this &&
             !AgeValidator.field_p) {
-            rm.field_c = 0L;
+            MeshSymmetrySupport.field_c = 0L;
             return;
           }
           return;
@@ -341,24 +341,24 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         int var6_int = 0;
         java.awt.Insets var6 = null;
         try {
-          var2_long = rl.monotonicTimeMillis((byte) -115);
+          var2_long = MonotonicClock.monotonicTimeMillis((byte) -115);
           if (param0 > -19) {
             return;
           }
-          var4 = FullscreenDisplayMode.field_l[t.field_d];
-          FullscreenDisplayMode.field_l[t.field_d] = var2_long;
-          t.field_d = 31 & t.field_d + 1;
+          var4 = FullscreenDisplayMode.field_l[PacketDiagnosticsSupport.field_d];
+          FullscreenDisplayMode.field_l[PacketDiagnosticsSupport.field_d] = var2_long;
+          PacketDiagnosticsSupport.field_d = 31 & PacketDiagnosticsSupport.field_d + 1;
           if (0L != var4 &&
             var2_long > var4) {
             var6_int = (int)(-var4 + var2_long);
-            un.field_g = ((var6_int >> 1) + 32000) / var6_int;
+            LookupProtocolSupport.field_g = ((var6_int >> 1) + 32000) / var6_int;
           }
           fieldTemp$1 = UiWidget.field_o;
           UiWidget.field_o = UiWidget.field_o + 1;
           if (fieldTemp$1 > 50) {
-            he.field_c = true;
+            CanvasInputSupport.field_c = true;
             UiWidget.field_o = UiWidget.field_o - 50;
-            TimeTrialSelectScreen.field_K.setSize(ml.field_d, ArchiveIndex.field_c);
+            TimeTrialSelectScreen.field_K.setSize(LoginMethod.field_d, ArchiveIndex.field_c);
             TimeTrialSelectScreen.field_K.setVisible(true);
             if (null != TextLayout.field_e &&
               RasterBuffer.field_l == null) {
@@ -409,7 +409,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ModernTableScene.field_ib == this &&
             !AgeValidator.field_p) {
-            rm.field_c = rl.monotonicTimeMillis((byte) -113) + 4000L;
+            MeshSymmetrySupport.field_c = MonotonicClock.monotonicTimeMillis((byte) -113) + 4000L;
             return;
           }
           return;
@@ -427,7 +427,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = rl.monotonicTimeMillis((byte) -118);
+          var2_long = MonotonicClock.monotonicTimeMillis((byte) -118);
           if (param0 != -15568) {
             this.windowIconified((java.awt.event.WindowEvent) null);
           }
@@ -567,13 +567,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 ProxyAuthenticationRequiredException.detectMaxMemoryMb(-19);
                 this.recreateCanvas((byte) 55);
-                OpacityWidget.field_P = MouseWheelInput.createRasterBuffer(ml.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
+                OpacityWidget.field_P = MouseWheelInput.createRasterBuffer(LoginMethod.field_d, ArchiveIndex.field_c, -44, (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
                 this.initializeGame((byte) -46);
                 MessageScreen.field_J = SocketArchiveNetworkClient.createTickClock(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (rm.field_c != 0L) {
-                    stackIn_99_0 = $cfr$lcmp(~rm.field_c, ~rl.monotonicTimeMillis((byte) -122));
+                  if (MeshSymmetrySupport.field_c != 0L) {
+                    stackIn_99_0 = compareLongs(~MeshSymmetrySupport.field_c, ~MonotonicClock.monotonicTimeMillis((byte) -122));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 >= 0)) {
@@ -730,7 +730,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          rm.field_c = rl.monotonicTimeMillis((byte) -119);
+          MeshSymmetrySupport.field_c = MonotonicClock.monotonicTimeMillis((byte) -119);
           SoundCache.a(-79, 5000L);
           QuickChatPhraseRegistry.field_c = null;
           this.shutdown(20171, false);
@@ -770,7 +770,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ArchiveIndex.field_c = param1;
               ArchiveLoadSequence.field_f = param1;
               UsernameAvailabilityValidator.field_v = 0;
-              ml.field_d = param6;
+              LoginMethod.field_d = param6;
               Pocket.field_b = param6;
               ProgressBarWidget.field_W = NanoTickClock.getApplet(77);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param5, true);
@@ -825,9 +825,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ModernTableScene.field_ib == this &&
             !AgeValidator.field_p) {
-            he.field_c = true;
+            CanvasInputSupport.field_c = true;
             if (AchievementNotice.field_o &&
-              -ph.field_b + rl.monotonicTimeMillis((byte) -128) > 1000L) {
+              -AccountProtocolStage.field_b + MonotonicClock.monotonicTimeMillis((byte) -128) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (Pocket.field_b > var2.width) {
@@ -879,7 +879,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           PlasmaBallSkin.field_q = true;
-          he.field_c = true;
+          CanvasInputSupport.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -935,7 +935,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_c = 20;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

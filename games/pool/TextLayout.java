@@ -195,23 +195,23 @@ abstract class TextLayout {
         RuntimeException var11 = null;
         int var12 = 0;
         Object var13 = null;
-        ro var14 = null;
-        ro var15 = null;
+        ProjectedVertex var14 = null;
+        ProjectedVertex var15 = null;
         int var16 = 0;
-        ro var18 = null;
-        ro var19 = null;
-        ro var20 = null;
-        ro var15Lifetime1;
-        ro var15Lifetime2;
-        ro var15Lifetime3;
-        ro var15Lifetime4;
+        ProjectedVertex var18 = null;
+        ProjectedVertex var19 = null;
+        ProjectedVertex var20 = null;
+        ProjectedVertex var15Lifetime1;
+        ProjectedVertex var15Lifetime2;
+        ProjectedVertex var15Lifetime3;
+        ProjectedVertex var15Lifetime4;
         int var11_intLifetime1;
         int var11_intLifetime2;
         int var12Lifetime1;
         try {
           if (ViewportController.field_c == null ||
             !(param1 <= ViewportController.field_c.length)) {
-            kg.a(param1, (byte) 49);
+            ByteRecordSubmission.a(param1, (byte) 49);
           }
           for (var11_int = 0; param1 > var11_int; var11_int++) {
             ViewportController.field_c[var11_int].a(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);

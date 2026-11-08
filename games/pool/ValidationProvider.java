@@ -6,7 +6,7 @@ interface ValidationProvider {
 
     public abstract void resetValidationDelay(int param0);
 
-    public abstract na getDebouncedValidationState(int param0);
+    public abstract IntegerSyntaxSupport getDebouncedValidationState(int param0);
 
     public abstract boolean isInputEmpty(int param0);
 }

@@ -189,7 +189,7 @@ final class DisplayModeSupport {
             }
             return (char)var2;
           }
-          var3 = rf.field_a[-128 + var2];
+          var3 = AccountDisplayNameSupport.field_a[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }
@@ -217,11 +217,11 @@ final class DisplayModeSupport {
 
     final static int[] a(int param0, int param1) {
         if (param1 > 111) {
-          return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : dq.field_i : FontPaletteSupport.field_c;
+          return 0 == param0 ? AppletUrlSupport.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
         DisplayModeSupport.openSubscribePage((java.applet.Applet) null, 17);
-        return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : dq.field_i : FontPaletteSupport.field_c;
+        return 0 == param0 ? AppletUrlSupport.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
     }
 
     static {

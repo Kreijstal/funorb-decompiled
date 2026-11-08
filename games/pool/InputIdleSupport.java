@@ -28,7 +28,7 @@ final class InputIdleSupport {
     }
 
     final static void resetInputIdleTimer(boolean param0) {
-        VerticalScrollbar.field_Pb = rl.monotonicTimeMillis((byte) -121);
+        VerticalScrollbar.field_Pb = MonotonicClock.monotonicTimeMillis((byte) -121);
         CachedArchiveSource.field_j = 0;
         if (param0) {
           field_a = (ResourceArchive) null;
@@ -48,7 +48,7 @@ final class InputIdleSupport {
             var4 = (byte[]) null;
             InputIdleSupport.crc64((byte[]) null, (byte) 105, 91);
           }
-          stackIn_3_0 = ii.crc64(param0, param2, 0, 154302664);
+          stackIn_3_0 = ProxyConnectorSupport.crc64(param0, param2, 0, 154302664);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

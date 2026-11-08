@@ -94,14 +94,14 @@ final class NineBallRules extends GameRules {
         if (param0 >= -6) {
           NineBallRules.achievementNameCount((byte) -21);
         }
-        return !pp.a(true) ? -1 + md.achievementNames.length : md.achievementNames.length;
+        return !MeshColorSupport.a(true) ? -1 + RenderingInitializationSupport.achievementNames.length : RenderingInitializationSupport.achievementNames.length;
     }
 
     private final int baseResolutionFlags(int param0) {
         if (param0 != 10) {
           field_j = (UiComponent) null;
         }
-        return AccountWelcomePanel.field_Q | ll.field_f;
+        return AccountWelcomePanel.field_Q | BrowserUrlSupport.field_f;
     }
 
     final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
@@ -148,7 +148,7 @@ final class NineBallRules extends GameRules {
           if (!DualLinkNode.field_p) {
             return false;
           }
-          if (hn.field_b == 2 &&
+          if (CookieDateSupport.field_b == 2 &&
             ResourceArchive.field_a != null) {
             var3 = (CharSequence) ((Object) param0);
             if (!ResourceArchive.field_a.equals(TutorialController.normalizeDisplayName(91, var3))) {
@@ -362,7 +362,7 @@ final class NineBallRules extends GameRules {
           boolean decompiledFrameRemainder0 = true;
           var6_int = 94 % ((param2 + 49) / 53);
           if (param1 != null && (2 != param3 ||
-            tq.a(false, param4, param0))) {
+            AccountStateQuery.a(false, param4, param0))) {
             stackIn_6_0 = true;
             decompiledFrameRemainder0 = false;
           }

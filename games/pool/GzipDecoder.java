@@ -13,17 +13,17 @@ final class GzipDecoder {
     static PcmStreamMixer field_c;
     static String raTitle;
 
-    final static qr a(int param0, String param1) {
+    final static AvailabilityQueryResult a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        qr stackIn_1_0 = null;
+        AvailabilityQueryResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -79 % ((51 - param0) / 49);
-          stackIn_1_0 = new qr(param1);
+          stackIn_1_0 = new AvailabilityQueryResult(param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

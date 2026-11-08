@@ -116,10 +116,10 @@ final class TextHotspotRegion extends IntrusiveNode {
           var7Lifetime1 = 0;
           var8Lifetime1 = EightBallRules.sineLookup((byte) -123, var6Lifetime1) >> 8;
           var9Lifetime1 = UiComponentNode.sineFixed(var6Lifetime1, (byte) 83) >> 8;
-          if (wn.field_i != -1 &&
+          if (ReflectionReplySupport.field_i != -1 &&
             DebouncedValidationProvider.field_f != -1) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = -320 + wn.field_i;
+            var7Lifetime1 = -320 + ReflectionReplySupport.field_i;
             var8Lifetime1 = -DebouncedValidationProvider.field_f + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1)));
@@ -168,11 +168,11 @@ final class TextHotspotRegion extends IntrusiveNode {
         field_o = null;
     }
 
-    final static ij a(boolean param0, int param1, String param2, String param3) {
-        ij var4 = null;
+    final static AnimatedNotification a(boolean param0, int param1, String param2, String param3) {
+        AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
-        ij stackIn_3_0 = null;
-        ij stackIn_7_0 = null;
+        AnimatedNotification stackIn_3_0 = null;
+        AnimatedNotification stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -181,8 +181,8 @@ final class TextHotspotRegion extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (EmailAvailabilityValidator.a(-2, param1) == null) {
-            var4 = new ij(param1);
-            var4.a(param2, (byte) 120, param3);
+            var4 = new AnimatedNotification(param1);
+            var4.renderNotificationText(param2, (byte) 120, param3);
             MarkerSliderPainter.field_i.addFirst((byte) -20, var4);
             stackIn_3_0 = var4;
             return stackIn_3_0;
@@ -190,7 +190,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           if (param0) {
             return null;
           }
-          stackIn_7_0 = (ij) null;
+          stackIn_7_0 = (AnimatedNotification) null;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

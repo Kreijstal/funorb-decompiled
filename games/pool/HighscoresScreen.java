@@ -70,18 +70,18 @@ final class HighscoresScreen extends MenuScreen {
         regionExit1: {
           if (DateInputWidget.field_V.field_u) {
             if (null != DateInputWidget.field_V.field_m) {
-              nj.drawNineSlice(MidiPcmStream.field_y, (byte) -87, 320, 160, 160, 165 + ModernTableScene.field_Z.baselineHeight + 16);
+              LogoMaterial.drawNineSlice(MidiPcmStream.field_y, (byte) -87, 320, 160, 160, 165 + ModernTableScene.field_Z.baselineHeight + 16);
               var2 = ModernTableScene.noHighscores;
               var3 = DateInputWidget.field_V.field_m[MembershipBenefitsScreen.field_J];
               var15 = DateInputWidget.field_V.field_z[MembershipBenefitsScreen.field_J];
               var5 = 180;
-              ModernTableScene.field_Z.drawCentered(vi.highscoreHeaderTime, 438, var5, 15658734, -1);
+              ModernTableScene.field_Z.drawCentered(Cp1252CharacterSupport.highscoreHeaderTime, 438, var5, 15658734, -1);
               var5 = var5 + (ModernTableScene.field_Z.maxAscent + 8);
-              var6 = ValidationIconWidget.a(MembershipBenefitsScreen.field_J, param0 ^ -3, DateInputWidget.field_V, ti.field_d);
+              var6 = ValidationIconWidget.a(MembershipBenefitsScreen.field_J, param0 ^ -3, DateInputWidget.field_V, DebugSliderInputSupport.field_d);
               for (var7 = 0; var7 < 10; var7++) {
                 if (null != var3[var7]) {
                   stackIn_13_0 = 162;
-                  stackIn_13_1 = -sa.field_h.maxAscent + var5;
+                  stackIn_13_1 = -CollisionContact.field_h.maxAscent + var5;
                   stackIn_13_2 = 316;
                   stackIn_13_3 = 15;
                   if ((1 & var7) == 0) {
@@ -96,28 +96,28 @@ final class HighscoresScreen extends MenuScreen {
                     var8 = 16764057;
                   }
                   var10 = var3[var7];
-                  sa.field_h.c(var7 + 1 + ". ", 190, var5, var8, -1);
-                  sa.field_h.d(var10, 190, var5, var8, -1);
+                  CollisionContact.field_h.c(var7 + 1 + ". ", 190, var5, var8, -1);
+                  CollisionContact.field_h.d(var10, 190, var5, var8, -1);
                   var2 = "";
-                  sa.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var9, (byte) -80), 440, var5, var8, -1);
+                  CollisionContact.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var9, (byte) -80), 440, var5, var8, -1);
                 }
                 var5 += 15;
               }
-              if (((null != ti.field_d)) &&
+              if (((null != DebugSliderInputSupport.field_d)) &&
                 (!(0 <= var6)) &&
-                ((ti.field_d.field_l == StrongCacheEntry.field_O))) {
-                var7Lifetime1 = ti.field_d.field_z[0];
-                sa.field_h.d(ResourceArchive.field_j, 190, var5, 16764057, -1);
-                sa.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
+                ((DebugSliderInputSupport.field_d.field_l == StrongCacheEntry.field_O))) {
+                var7Lifetime1 = DebugSliderInputSupport.field_d.field_z[0];
+                CollisionContact.field_h.d(ResourceArchive.field_j, 190, var5, 16764057, -1);
+                CollisionContact.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
               }
               break regionExit1;
             }
-            var2 = fh.serviceunavailable;
+            var2 = ArchiveFactory.serviceunavailable;
           } else {
             var2 = ProjectedLineSupport.pleasewaitDotdotdot;
           }
         }
-        sa.field_h.drawCentered(var2, SoftwareRasterizer.width >> 1, 202, 16777215, -1);
+        CollisionContact.field_h.drawCentered(var2, SoftwareRasterizer.width >> 1, 202, 16777215, -1);
         if (param0 != -3) {
           field_P = -127;
         }
@@ -133,7 +133,7 @@ final class HighscoresScreen extends MenuScreen {
         return 0;
     }
 
-    private final void f(int param0) {
+    private final void validateHighscoresGuard(int param0) {
         if (param0 != 2931) {
           field_N = false;
         }
@@ -158,7 +158,7 @@ final class HighscoresScreen extends MenuScreen {
           return 97;
         }
         regionExit1: {
-          if (!NanoTickClock.b(35)) {
+          if (!NanoTickClock.isClientConnected(35)) {
             var3 = param1;
             if (var3 != 0 &&
               1 != var3) {
@@ -182,7 +182,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final void handleNavigationKey(int param0) {
-        if (NanoTickClock.b(param0 + 37)) {
+        if (NanoTickClock.isClientConnected(param0 + 37)) {
           super.handleNavigationKey(-34);
         } else {
           if (IterableDualLinkDeque.field_a == 96) {
@@ -206,14 +206,14 @@ final class HighscoresScreen extends MenuScreen {
         if (param1 != -4) {
           field_P = -95;
         }
-        return ButtonPainter.a(16, param0, (byte) 127);
+        return ButtonPainter.floatToFixed(16, param0, (byte) 127);
     }
 
     final int getButtonHeight(byte param0, int param1) {
         if (param0 != 69) {
           HighscoresScreen.a(93, (byte) -1, 126);
         }
-        if (!NanoTickClock.b(param0 - 178) &&
+        if (!NanoTickClock.isClientConnected(param0 - 178) &&
           param1 < 3) {
           return 24;
         }
@@ -239,12 +239,12 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final static void a(java.awt.Component param0, byte param1) {
-        param0.removeKeyListener(wn.field_a);
+        param0.removeKeyListener(ReflectionReplySupport.field_a);
         if (param1 != -39) {
           return;
         }
         try {
-          param0.removeFocusListener(wn.field_a);
+          param0.removeFocusListener(ReflectionReplySupport.field_a);
           MessageDialog.field_xb = -1;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -265,7 +265,7 @@ final class HighscoresScreen extends MenuScreen {
           if (param2 != 0) {
             field_N = false;
           }
-          if (!NanoTickClock.b(36) &&
+          if (!NanoTickClock.isClientConnected(36) &&
             3 > param3) {
             var6 = FreePlayRules.field_e.field_U[param1];
             var5 = var6;
@@ -289,7 +289,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final int getButtonRight(boolean param0, int param1) {
-        if (!NanoTickClock.b(72)) {
+        if (!NanoTickClock.isClientConnected(72)) {
           if (param1 < 3) {
             return 120 + this.getButtonLeft(0, param1);
           }
@@ -314,7 +314,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param0 != 6) {
           field_K = true;
         }
-        if (!NanoTickClock.b(-5)) {
+        if (!NanoTickClock.isClientConnected(-5)) {
           if (param1 < 3) {
             return 130;
           }
@@ -336,16 +336,16 @@ final class HighscoresScreen extends MenuScreen {
 
     final void drawScreen(int param0) {
         super.drawScreen(105);
-        if (NanoTickClock.b(95)) {
-          this.f(2931);
+        if (NanoTickClock.isClientConnected(95)) {
+          this.validateHighscoresGuard(2931);
         } else {
           this.drawHighscoreTable(-3);
         }
         if (param0 <= 36) {
           field_P = -120;
         }
-        String var2 = !NanoTickClock.b(66) ? MultiHandleSliderWidget.hsFriendTip : ra.createtouse;
-        sa.field_h.drawCentered(var2, 320, 380, 15658734, -1);
+        String var2 = !NanoTickClock.isClientConnected(66) ? MultiHandleSliderWidget.hsFriendTip : IntegerRecordProtocolSupport.createtouse;
+        CollisionContact.field_h.drawCentered(var2, 320, 380, 15658734, -1);
     }
 
     final void handleMenuAction(int param0, boolean param1, int param2) {
@@ -384,7 +384,7 @@ final class HighscoresScreen extends MenuScreen {
                     super.handleMenuAction(-16470, param1, param2);
                   } else {
                     if (this.selection.isPressActivated((byte) 93)) {
-                      TranslatedUiText.a(pl.pleaselogin, this.screenId, (byte) 83);
+                      TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 83);
                     }
                   }
                 }
@@ -544,7 +544,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param1 != -34) {
           field_J = (ScrollPaneWithFooter) null;
         }
-        return this.g(param0, 53) ? ln.field_s : super.getButtonFrameSprites(param0, -34);
+        return this.g(param0, 53) ? ModelOriginSupport.field_s : super.getButtonFrameSprites(param0, -34);
     }
 
     public static void clearSharedReferences(int param0) {

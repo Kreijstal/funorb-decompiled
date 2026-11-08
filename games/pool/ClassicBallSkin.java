@@ -19,10 +19,10 @@ final class ClassicBallSkin extends BallSkin {
         if (!param1) {
           return 118;
         }
-        return rc.field_e[param0];
+        return AccountTextSupport.field_e[param0];
     }
 
-    final static int a(int param0, double param1) {
+    final static int doubleToFixed16(int param0, double param1) {
         if (param0 != 16) {
           return -57;
         }
@@ -84,10 +84,10 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 != 1) {
           NineSliceFrame var2 = (NineSliceFrame) null;
           ClassicBallSkin.a((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
-          sa.field_f = new QuickChatHelpDialog(tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
+          CollisionContact.field_f = new QuickChatHelpDialog(AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A);
           return;
         }
-        sa.field_f = new QuickChatHelpDialog(tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
+        CollisionContact.field_f = new QuickChatHelpDialog(AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A);
     }
 
     ClassicBallSkin() {
@@ -102,14 +102,14 @@ final class ClassicBallSkin extends BallSkin {
     }
 
     final static void a(byte param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
-        td.field_e = param2;
+        Base37Support.field_e = param2;
         IterableDualLinkDeque.field_e = param1;
         NineBallRules.field_h = param5;
         if (param0 > -24) {
           return;
         }
         try {
-          rm.field_b = param4;
+          MeshSymmetrySupport.field_b = param4;
           TutorialStep.field_m = param3;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

@@ -129,7 +129,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }
-          if (2 != th.field_a) {
+          if (2 != ChatInputSupport.field_a) {
             stackIn_6_0 = AgeValidator.unableToAddFriend;
             return stackIn_6_0;
           }

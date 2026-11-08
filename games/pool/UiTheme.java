@@ -21,21 +21,21 @@ final class UiTheme {
     final static boolean a(byte param0, int param1) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
-        ij var3 = null;
+        AnimatedNotification var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
           var2 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
-          var3 = (ij) (var2.last((byte) -92));
+          var3 = (AnimatedNotification) (var2.last((byte) -92));
           while (true) {
             if (var3 == null) {
               var4 = 116 / ((param0 + 61) / 60);
               return false;
             }
             if (~var3.field_m != ~param1) {
-              var3 = (ij) (var2.previous(-100));
+              var3 = (AnimatedNotification) (var2.previous(-100));
               continue;
             }
             break;
@@ -128,14 +128,14 @@ final class UiTheme {
               var13 = var9 / var8;
               var12 = 2 * ((var13 + (var9 % var8 - 1)) / var13) + var8;
             }
-            if (null == w.field_k) {
-              w.field_k = new String[16];
+            if (null == GrowableIntListFactory.field_k) {
+              GrowableIntListFactory.field_k = new String[16];
             }
-            var11Lifetime1 = this.tooltipFont.wrapText(param2, new int[]{var12}, w.field_k);
+            var11Lifetime1 = this.tooltipFont.wrapText(param2, new int[]{var12}, GrowableIntListFactory.field_k);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.tooltipFont.b(w.field_k[var13Lifetime2]);
+              var14 = this.tooltipFont.b(GrowableIntListFactory.field_k[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }

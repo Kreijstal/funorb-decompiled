@@ -64,17 +64,17 @@ abstract class ResizableDialog extends FadingDialog {
             return 0;
           }
           if (param1 < 0) {
-            return -jd.atan2Angle(param0, 1164778608, -param1);
+            return -Atan2Support.atan2Angle(param0, 1164778608, -param1);
           }
-          return jd.atan2Angle(param0, 1164778608, param1);
+          return Atan2Support.atan2Angle(param0, 1164778608, param1);
         }
         if (0 == param1) {
           return 4096;
         }
         if (param1 >= 0) {
-          return -jd.atan2Angle(-param0, 1164778608, param1) + 4096;
+          return -Atan2Support.atan2Angle(-param0, 1164778608, param1) + 4096;
         }
-        return -4096 + jd.atan2Angle(-param0, 1164778608, -param1);
+        return -4096 + Atan2Support.atan2Angle(-param0, 1164778608, -param1);
     }
 
     final void startResizeTransition(byte param0, int param1, int param2, int param3) {
@@ -107,10 +107,10 @@ abstract class ResizableDialog extends FadingDialog {
               return 29;
             }
           }
-          if (!uj.field_d.isIndexReady(84)) {
+          if (!WorldPointProjectionSupport.field_d.isIndexReady(84)) {
             return 43;
           }
-          if (!uj.field_d.ensureGroupAvailableByName("commonui", param0 - 19535)) {
+          if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", param0 - 19535)) {
             return 57;
           }
           if (!PolarTableScene.field_nb.isIndexReady(-96)) {
@@ -126,10 +126,10 @@ abstract class ResizableDialog extends FadingDialog {
             return 86;
           }
         } else {
-          if (!uj.field_d.isIndexReady(param0 - 19430)) {
+          if (!WorldPointProjectionSupport.field_d.isIndexReady(param0 - 19430)) {
             return 20;
           }
-          if (!uj.field_d.ensureGroupAvailableByName("commonui", 0)) {
+          if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", 0)) {
             return 40;
           }
           if (!PolarTableScene.field_nb.isIndexReady(104)) {

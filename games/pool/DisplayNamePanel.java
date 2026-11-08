@@ -165,7 +165,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     private final boolean isInputValid(int param0, ValidationProviderSource param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        na var4 = null;
+        IntegerSyntaxSupport var4 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -212,15 +212,15 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.displayNameInput = new MaxLengthTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(PoolUiText.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(ij.loginNoDisplayname, var1, (WidgetListener) null);
-        this.okButton = new ButtonWidget(wn.ok, (WidgetListener) null);
+        UiWidget var2 = new UiWidget(AnimatedNotification.loginNoDisplayname, var1, (WidgetListener) null);
+        this.okButton = new ButtonWidget(ReflectionReplySupport.ok, (WidgetListener) null);
         this.cancelButton = new ButtonWidget(OptionsScreen.cancel, (WidgetListener) null);
         this.displayNameInput.hoverText = ThemeSelectScreen.createDisplaynameTooltip;
         this.displayNameInput.a((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
         this.okButton.enabled = false;
         this.okButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.cancelButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
-        this.displayNameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
+        this.displayNameInput.renderer = (WidgetPainter) ((Object) new TextInputPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

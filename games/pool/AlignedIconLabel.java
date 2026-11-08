@@ -103,10 +103,10 @@ final class AlignedIconLabel extends UiComponent {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        tq var11 = null;
-        i var12 = null;
+        AccountStateQuery var11 = null;
+        AchievementSubmission var12 = null;
         CipherPacketBuffer var13 = null;
-        tq var14 = null;
+        AccountStateQuery var14 = null;
         var8 = Pool.field_O;
         try {
           var13 = PlayerContextMenu.field_e;
@@ -115,7 +115,7 @@ final class AlignedIconLabel extends UiComponent {
             AlignedIconLabel.f(44);
           }
           if (0 == var2) {
-            var10 = ek.a(121);
+            var10 = MenuSelectionSupport.createEmptyGameStateWords(121);
             var3 = var10;
             var9 = var10;
             var4 = var9;
@@ -124,7 +124,7 @@ final class AlignedIconLabel extends UiComponent {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var11 = (tq) (NodeHashTableIterator.field_j.last((byte) 77));
+            var11 = (AccountStateQuery) (NodeHashTableIterator.field_j.last((byte) 77));
             if (var11 == null) {
               ShotEvent.c(-107);
               return;
@@ -135,7 +135,7 @@ final class AlignedIconLabel extends UiComponent {
             return;
           }
           if (var2 == 1) {
-            var12 = (i) (ue.field_b.last((byte) -19));
+            var12 = (AchievementSubmission) (StartupInterfaceSupport.field_b.last((byte) -19));
             if (var12 == null) {
               ShotEvent.c(-69);
               return;
@@ -143,16 +143,16 @@ final class AlignedIconLabel extends UiComponent {
             var12.unlink((byte) -117);
           } else {
             if (2 == var2) {
-              var14 = (tq) (NodeHashTableIterator.field_j.last((byte) -112));
+              var14 = (AccountStateQuery) (NodeHashTableIterator.field_j.last((byte) -112));
               if (var14 == null) {
                 ShotEvent.c(-81);
                 return;
               }
-              var14.field_l = ek.a(117);
+              var14.field_l = MenuSelectionSupport.createEmptyGameStateWords(117);
               var14.field_s = true;
               var14.unlink((byte) -117);
             } else {
-              GrowableIntList.reportClientError((Throwable) null, "A1: " + t.formatPacketDump(99), -8555);
+              GrowableIntList.reportClientError((Throwable) null, "A1: " + PacketDiagnosticsSupport.formatPacketDump(99), -8555);
               ShotEvent.c(84);
             }
           }

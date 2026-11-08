@@ -7,7 +7,7 @@ final class ValueNoise {
     private static int[] field_b;
     private static int[] field_a;
 
-    final static void a() {
+    final static void releaseNoiseTable() {
         field_b = null;
     }
 

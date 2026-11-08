@@ -22,11 +22,11 @@ final class DualLinkDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new PlayingSound(param1, param1);
-          oj.field_o.addFirst((byte) -74, var2);
+          HighScoreSubmission.field_o.addFirst((byte) -74, var2);
           if (param0 != -24296) {
             DualLinkDequeIterator.releaseStatics(-16);
           }
-          SpaceObject.field_d.b(param1);
+          SpaceObject.field_d.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,10 +49,10 @@ final class DualLinkDequeIterator implements Iterator {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          return !TextInputValidator.field_j.a(114) ? true : false;
+          return !TextInputValidator.field_j.isComplete(114) ? true : false;
         }
         DualLinkDequeIterator.releaseStatics(69);
-        return !TextInputValidator.field_j.a(114) ? true : false;
+        return !TextInputValidator.field_j.isComplete(114) ? true : false;
     }
 
     public final void remove() {

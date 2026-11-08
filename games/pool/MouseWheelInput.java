@@ -100,8 +100,8 @@ abstract class MouseWheelInput {
         PoolMatchController.field_X = 0;
         KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
-        jc.field_j = new MenuSelection(2);
-        jc.field_j.initializeSelection(param1, -1, ReflectionCheck.a((byte) -84, wn.field_i, DebouncedValidationProvider.field_f), true);
+        AppletUrlSupport.field_j = new MenuSelection(2);
+        AppletUrlSupport.field_j.initializeSelection(param1, -1, ReflectionCheck.a((byte) -84, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), true);
     }
 
     final static void c(int param0) {
@@ -121,7 +121,7 @@ abstract class MouseWheelInput {
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
-        oj var6_ref_oj = null;
+        HighScoreSubmission var6_ref_oj = null;
         int var7 = 0;
         String[][] var8 = null;
         String[][] var9 = null;
@@ -252,10 +252,10 @@ abstract class MouseWheelInput {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(-1034);
             var4_long = var27.readLong(-412303328);
-            var6_ref_oj = (oj) (ta.field_i.last((byte) 71));
+            var6_ref_oj = (HighScoreSubmission) (GradientPaletteSupport.field_i.last((byte) 71));
             while (var6_ref_oj != null) {
               if (var6_ref_oj.field_B != var3Lifetime1) {
-                var6_ref_oj = (oj) (ta.field_i.previous((byte) -5));
+                var6_ref_oj = (HighScoreSubmission) (GradientPaletteSupport.field_i.previous((byte) -5));
                 continue;
               }
               break;
@@ -268,7 +268,7 @@ abstract class MouseWheelInput {
             var6_ref_oj.unlink((byte) -117);
             return;
           }
-          GrowableIntList.reportClientError((Throwable) null, "HS1: " + t.formatPacketDump(112), -8555);
+          GrowableIntList.reportClientError((Throwable) null, "HS1: " + PacketDiagnosticsSupport.formatPacketDump(112), -8555);
           ShotEvent.c(-101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -291,19 +291,19 @@ abstract class MouseWheelInput {
             var5 = (BitmapFont) null;
             MouseWheelInput.createFramedLabel(61, -54, 2, 71, 91, -21, -24, 76, 60, (BitmapFont) null, -98, -116, 30);
           }
-          var1 = wn.field_a;
+          var1 = ReflectionReplySupport.field_a;
           synchronized (var1) {
-            WireframeQuad.field_s = ja.field_c;
-            ti.field_e = ti.field_e + 1;
+            WireframeQuad.field_s = ByteArrayPool.field_c;
+            DebugSliderInputSupport.field_e = DebugSliderInputSupport.field_e + 1;
             if (0 > MessageDialog.field_xb) {
               for (var2 = 0; var2 < 112; var2++) {
                 TextLineLayout.field_c[var2] = false;
               }
-              MessageDialog.field_xb = jq.field_g;
+              MessageDialog.field_xb = QuickChatNavigationSupport.field_g;
             } else {
-              while (jq.field_g != MessageDialog.field_xb) {
-                var2 = KeyHandler.field_b[jq.field_g];
-                jq.field_g = 127 & 1 + jq.field_g;
+              while (QuickChatNavigationSupport.field_g != MessageDialog.field_xb) {
+                var2 = KeyHandler.field_b[QuickChatNavigationSupport.field_g];
+                QuickChatNavigationSupport.field_g = 127 & 1 + QuickChatNavigationSupport.field_g;
                 if (0 > var2) {
                   TextLineLayout.field_c[~var2] = false;
                   continue;
@@ -311,7 +311,7 @@ abstract class MouseWheelInput {
                 TextLineLayout.field_c[var2] = true;
               }
             }
-            ja.field_c = TextLayout.field_h;
+            ByteArrayPool.field_c = TextLayout.field_h;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

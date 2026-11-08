@@ -120,12 +120,12 @@ final class ScrollPaneWithFooter extends UiComponent {
         try {
           DraggableWidget.field_T = param1;
           ProgressBarWidget.field_R = param3;
-          dq.field_f = param2;
-          nj.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 97);
+          TransformRotationSupport.field_f = param2;
+          LogoMaterial.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 97);
           if (param0 != -83) {
             field_Lb = (IntrusiveDeque) null;
           }
-          kg.a(param3.field_L, true, param2.maxDescent + param2.field_L, param3.maxDescent + param3.field_L, param2.field_L);
+          ByteRecordSubmission.a(param3.field_L, true, param2.maxDescent + param2.field_L, param3.maxDescent + param3.field_L, param2.field_L);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ao.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

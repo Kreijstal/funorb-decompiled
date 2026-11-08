@@ -32,7 +32,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = Pool.field_O;
         try {
-          this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], 128 >>> ArchiveLoadSequence.b(this.field_j, 7));
+          this.field_a[this.field_k] = (byte)RenderingInitializationSupport.bitwiseOr((int) this.field_a[this.field_k], 128 >>> ArchiveLoadSequence.bitwiseAnd(this.field_j, 7));
           this.field_k = this.field_k + 1;
           if (this.field_k > 32) {
             while (this.field_k < 64) {
@@ -218,7 +218,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param0[var5_int] << var6 | (param0[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], var8 >>> var7);
+              this.field_a[this.field_k] = (byte)RenderingInitializationSupport.bitwiseOr((int) this.field_a[this.field_k], var8 >>> var7);
               this.field_k = this.field_k + 1;
               this.field_j = this.field_j + (8 - var7);
               if (512 == this.field_j) {
@@ -226,7 +226,7 @@ final class WhirlpoolHasher {
                 this.field_k = 0;
                 this.field_j = 0;
               }
-              this.field_a[this.field_k] = (byte)ArchiveLoadSequence.b(var8 << 8 - var7, 255);
+              this.field_a[this.field_k] = (byte)ArchiveLoadSequence.bitwiseAnd(var8 << 8 - var7, 255);
               this.field_j = this.field_j + var7;
               param2 = param2 - 8L;
               var5_int++;
@@ -238,7 +238,7 @@ final class WhirlpoolHasher {
             stackIn_16_0 = param0[var5_int] << var6;
             stackIn_16_1 = 255;
             var8Lifetime1 = stackIn_16_0 & stackIn_16_1;
-            this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], var8Lifetime1 >>> var7);
+            this.field_a[this.field_k] = (byte)RenderingInitializationSupport.bitwiseOr((int) this.field_a[this.field_k], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -251,7 +251,7 @@ final class WhirlpoolHasher {
               this.field_j = 0;
               this.field_k = 0;
             }
-            this.field_a[this.field_k] = (byte)ArchiveLoadSequence.b(var8Lifetime1 << -var7 + 8, 255);
+            this.field_a[this.field_k] = (byte)ArchiveLoadSequence.bitwiseAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_j = this.field_j + (int)param2;
           } else {
             this.field_j = (int)((long)this.field_j + param2);
@@ -313,7 +313,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_n[var2] = LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[7 + var3], 255L), LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[var3 + 5], 255L) << 16, LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[var3 + 4], 255L) << 24, LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[1 + var3] << 48, 71776119061217280L), (long)this.field_a[var3] << 56), mj.bitwiseAnd((long)this.field_a[2 + var3], 255L) << 40), mj.bitwiseAnd(1095216660480L, (long)this.field_a[3 + var3] << 32)))), mj.bitwiseAnd(65280L, (long)this.field_a[var3 + 6] << 8)));
+          this.field_n[var2] = LobbyPlayer.bitwiseXor(TransformSupport.bitwiseAnd((long)this.field_a[7 + var3], 255L), LobbyPlayer.bitwiseXor(LobbyPlayer.bitwiseXor(TransformSupport.bitwiseAnd((long)this.field_a[var3 + 5], 255L) << 16, LobbyPlayer.bitwiseXor(TransformSupport.bitwiseAnd((long)this.field_a[var3 + 4], 255L) << 24, LobbyPlayer.bitwiseXor(LobbyPlayer.bitwiseXor(LobbyPlayer.bitwiseXor(TransformSupport.bitwiseAnd((long)this.field_a[1 + var3] << 48, 71776119061217280L), (long)this.field_a[var3] << 56), TransformSupport.bitwiseAnd((long)this.field_a[2 + var3], 255L) << 40), TransformSupport.bitwiseAnd(1095216660480L, (long)this.field_a[3 + var3] << 32)))), TransformSupport.bitwiseAnd(65280L, (long)this.field_a[var3 + 6] << 8)));
           var2++;
           var3 += 8;
         }
@@ -321,7 +321,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_o[var2Lifetime1];
           arrayValue$1 = this.field_n[var2Lifetime1];
           this.field_m[var2Lifetime1] = dupTemp$0;
-          this.field_l[var2Lifetime1] = LobbyPlayer.a(arrayValue$1, dupTemp$0);
+          this.field_l[var2Lifetime1] = LobbyPlayer.bitwiseXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -329,7 +329,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_e[var3Lifetime1] = LobbyPlayer.a(this.field_e[var3Lifetime1], LabeledChildWidget.field_N[var4][ArchiveLoadSequence.b((int)(this.field_m[ArchiveLoadSequence.b(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_e[var3Lifetime1] = LobbyPlayer.bitwiseXor(this.field_e[var3Lifetime1], LabeledChildWidget.field_N[var4][ArchiveLoadSequence.bitwiseAnd((int)(this.field_m[ArchiveLoadSequence.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -337,14 +337,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_m[var3Lifetime1Lifetime1] = this.field_e[var3Lifetime1Lifetime1];
           }
-          this.field_m[0] = LobbyPlayer.a(this.field_m[0], LabeledChildWidget.field_Z[var2Lifetime2]);
+          this.field_m[0] = LobbyPlayer.bitwiseXor(this.field_m[0], LabeledChildWidget.field_Z[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_e[var3Lifetime1Lifetime2] = this.field_m[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = LobbyPlayer.a(this.field_e[var3Lifetime1Lifetime2], LabeledChildWidget.field_N[var7][ArchiveLoadSequence.b(255, (int)(this.field_l[ArchiveLoadSequence.b(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_e[var3Lifetime1Lifetime2] = LobbyPlayer.bitwiseXor(this.field_e[var3Lifetime1Lifetime2], LabeledChildWidget.field_N[var7][ArchiveLoadSequence.bitwiseAnd(255, (int)(this.field_l[ArchiveLoadSequence.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -357,11 +357,11 @@ final class WhirlpoolHasher {
           this.field_e = (long[]) null;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_o[var2Lifetime3] = LobbyPlayer.a(this.field_o[var2Lifetime3], LobbyPlayer.a(this.field_l[var2Lifetime3], this.field_n[var2Lifetime3]));
+          this.field_o[var2Lifetime3] = LobbyPlayer.bitwiseXor(this.field_o[var2Lifetime3], LobbyPlayer.bitwiseXor(this.field_l[var2Lifetime3], this.field_n[var2Lifetime3]));
         }
     }
 
-    final static int a(int param0) {
+    final static int constantOne(int param0) {
         if (param0 != 0) {
           field_g = 75;
           return 1;

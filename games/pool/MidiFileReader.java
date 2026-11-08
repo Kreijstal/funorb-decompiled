@@ -17,11 +17,11 @@ final class MidiFileReader {
         return var2;
     }
 
-    final boolean a() {
+    final boolean isReady() {
         return this.packet.payload != null;
     }
 
-    final long b(int param0) {
+    final long ticksToTime(int param0) {
         return this.timeOffset + (long)param0 * (long)this.tempoMicrosPerQuarter;
     }
 
@@ -84,7 +84,7 @@ final class MidiFileReader {
         this.runningStatus = new int[var2];
     }
 
-    final int d() {
+    final int trackCount() {
         return this.trackPositions.length;
     }
 
@@ -207,7 +207,7 @@ final class MidiFileReader {
         this.parse(param0);
     }
 
-    final void c() {
+    final void markEndOfTrack() {
         this.packet.position = -1;
     }
 

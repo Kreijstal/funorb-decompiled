@@ -15,13 +15,13 @@ final class NameEntryPopup extends UiComponent {
     final static Sprite f(byte param0) {
         int var4_int = 0;
         int var5 = Pool.field_O;
-        int var1 = rc.field_f[0] * LinkButtonPainter.field_a[0];
+        int var1 = AccountTextSupport.field_f[0] * LinkButtonPainter.field_a[0];
         byte[] var2 = LimitedRandomAccessFile.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var2[var4_int], 255)];
+          var3[var4_int] = IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var3);
+        Sprite var4 = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], var3);
         if (param0 != 89) {
           NameEntryPopup.f((byte) 30);
         }
@@ -132,7 +132,7 @@ final class NameEntryPopup extends UiComponent {
         try {
           var4_int = param2.getGroupId(param1, param0 - 1);
           var5 = param2.getFileId(var4_int, param0, param3);
-          stackIn_1_0 = ln.a(var4_int, (byte) 110, param2, var5);
+          stackIn_1_0 = ModelOriginSupport.a(var4_int, (byte) 110, param2, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class NameEntryPopup extends UiComponent {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            om.field_y = param2;
+            TextInputPainter.field_y = param2;
             try {
               if (param1 != -18788) {
                 waitingforMusic = (String) null;
@@ -215,7 +215,7 @@ final class NameEntryPopup extends UiComponent {
           TikiTableScene.a(' ', this.nameBuffer.length() - 1, -2790, this.nameBuffer);
         }
         if (this.nameBuffer.length() < 12) {
-          var2 = Character.toLowerCase(ml.field_b);
+          var2 = Character.toLowerCase(LoginMethod.field_b);
           if (var2 == 32) {
             var2 = 95;
           }
@@ -243,15 +243,15 @@ final class NameEntryPopup extends UiComponent {
         return true;
     }
 
-    final static ml a(java.applet.Applet param0, int param1) {
+    final static LoginMethod a(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        ml[] var3 = null;
+        LoginMethod[] var3 = null;
         int var4 = 0;
-        ml var5 = null;
-        ml stackIn_4_0 = null;
-        ml stackIn_9_0 = null;
-        ml stackIn_12_0 = null;
+        LoginMethod var5 = null;
+        LoginMethod stackIn_4_0 = null;
+        LoginMethod stackIn_9_0 = null;
+        LoginMethod stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -273,7 +273,7 @@ final class NameEntryPopup extends UiComponent {
               return stackIn_12_0;
             }
             var5 = var3[var4];
-            if (!var5.a(var2, (byte) 49)) {
+            if (!var5.matchesName(var2, (byte) 49)) {
               var4++;
               continue;
             }
@@ -342,13 +342,13 @@ final class NameEntryPopup extends UiComponent {
               this.nameBuffer.length() > 0) {
               TikiTableScene.a(' ', -1 + this.nameBuffer.length(), -2790, this.nameBuffer);
             }
-            if (he.canAppendNameCharacter(ml.field_b, (CharSequence) ((Object) this.nameBuffer), 15692) ||
+            if (CanvasInputSupport.canAppendNameCharacter(LoginMethod.field_b, (CharSequence) ((Object) this.nameBuffer), 15692) ||
               (this.nameBuffer.length() == 0 &&
-              ml.field_b == 91 ||
+              LoginMethod.field_b == 91 ||
               1 == this.nameBuffer.length() &&
-              ml.field_b == 35) ||
-              ml.field_b == 93) {
-              discarded$2 = this.nameBuffer.append(ml.field_b);
+              LoginMethod.field_b == 35) ||
+              LoginMethod.field_b == 93) {
+              discarded$2 = this.nameBuffer.append(LoginMethod.field_b);
             }
             if (IterableDualLinkDeque.field_a != 84) {
               if (13 != IterableDualLinkDeque.field_a) {

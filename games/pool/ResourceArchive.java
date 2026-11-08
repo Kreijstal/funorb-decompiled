@@ -132,7 +132,7 @@ final class ResourceArchive {
             return false;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.field_p.indexOf(t.hashString(29050, var4), (byte) 126);
+          var3_int = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(29050, var4), (byte) 126);
           stackIn_7_0 = this.loadGroup(var3_int, (byte) 53);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,12 +211,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           var5 = 36 % ((param1 - 40) / 52);
           var7 = (CharSequence) ((Object) param2);
-          var4_int = this.index.field_p.indexOf(t.hashString(29050, var7), (byte) 120);
+          var4_int = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(29050, var7), (byte) 120);
           if (!this.isGroupValid(var4_int, (byte) -91)) {
             return false;
           }
           var8 = (CharSequence) ((Object) param0);
-          var6 = this.index.field_n[var4_int].indexOf(t.hashString(29050, var8), (byte) 127);
+          var6 = this.index.field_n[var4_int].indexOf(PacketDiagnosticsSupport.hashString(29050, var8), (byte) 127);
           stackIn_7_0 = this.ensureFileLoaded(var6, var4_int, 32);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,8 +248,8 @@ final class ResourceArchive {
         int var1_intLifetime1;
         var2 = Pool.field_O;
         try {
-          for (var1_int = 0; var1_int < nn.field_b.length; var1_int++) {
-            nn.field_b[var1_int].buildPalettes(25879);
+          for (var1_int = 0; var1_int < BrowserCookieWriter.field_b.length; var1_int++) {
+            BrowserCookieWriter.field_b[var1_int].buildPalettes(25879);
           }
           var3 = param0;
           var1_intLifetime1 = var3;
@@ -396,7 +396,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.index.field_p.indexOf(t.hashString(param1 + 29051, var5), (byte) -120);
+          var3_int = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(param1 + 29051, var5), (byte) -120);
           if (this.isGroupValid(var3_int, (byte) -71)) {
             stackIn_9_0 = var3_int;
             return stackIn_9_0;
@@ -507,7 +507,7 @@ final class ResourceArchive {
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.index.field_n[param0].indexOf(t.hashString(29050, var5), (byte) 118);
+          var4_int = this.index.field_n[param0].indexOf(PacketDiagnosticsSupport.hashString(29050, var5), (byte) 118);
           if (this.isFileValid(param1 ^ -21918, var4_int, param0)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -611,7 +611,7 @@ final class ResourceArchive {
             this.field_d = (ArchiveProvider) null;
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.field_p.indexOf(t.hashString(param0 + 28950, var4), (byte) 117);
+          var3_int = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(param0 + 28950, var4), (byte) 117);
           stackIn_7_0 = this.getGroupProgress(-29867, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -651,12 +651,12 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.field_p.indexOf(t.hashString(29050, var6), (byte) -63);
+          var4_int = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(29050, var6), (byte) -63);
           if (!this.isGroupValid(var4_int, (byte) -120)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.index.field_n[var4_int].indexOf(t.hashString(29050, var7), (byte) -114);
+          var5 = this.index.field_n[var4_int].indexOf(PacketDiagnosticsSupport.hashString(29050, var7), (byte) -114);
           stackIn_9_0 = this.getFileBytesUnkeyed(125, var5, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -728,7 +728,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var3_int = 29 / ((param0 + 48) / 57);
           var5 = (CharSequence) ((Object) param1);
-          var4 = this.index.field_p.indexOf(t.hashString(29050, var5), (byte) 119);
+          var4 = this.index.field_p.indexOf(PacketDiagnosticsSupport.hashString(29050, var5), (byte) 119);
           if (var4 >= 0) {
             return true;
           }
@@ -871,7 +871,7 @@ final class ResourceArchive {
             var9 = BallEvent.a(this.field_l[param3], -19261, false);
           }
           try {
-            var35 = wp.decompressContainer(param0, var9);
+            var35 = CompressedContainerSupport.decompressContainer(param0, var9);
             var26 = var35;
             var22 = var26;
             var42 = var22;

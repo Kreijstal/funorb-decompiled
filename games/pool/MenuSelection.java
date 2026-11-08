@@ -47,7 +47,7 @@ final class MenuSelection {
         }
     }
 
-    final static void a(byte param0) {
+    final static void validateSelectionGuard(byte param0) {
         int var1 = 11 / ((42 - param0) / 35);
     }
 
@@ -284,8 +284,8 @@ final class MenuSelection {
             if (0 < PoolMatchController.field_z) {
               DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
             }
-            if (nj.field_b > 0) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+            if (LogoMaterial.field_b > 0) {
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
@@ -294,8 +294,8 @@ final class MenuSelection {
           }
           IterableDualLinkDeque.a((byte) -80);
           if (0 >= PoolMatchController.field_z) {
-            if (nj.field_b > 0) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+            if (LogoMaterial.field_b > 0) {
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
@@ -303,8 +303,8 @@ final class MenuSelection {
             return;
           }
           DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
-          if (nj.field_b > 0) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+          if (LogoMaterial.field_b > 0) {
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -320,8 +320,8 @@ final class MenuSelection {
           if (0 < PoolMatchController.field_z) {
             DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
-          if (nj.field_b > 0) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+          if (LogoMaterial.field_b > 0) {
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -329,7 +329,7 @@ final class MenuSelection {
           MenuSelection.releaseStatics(67);
           return;
         }
-        if (nj.field_b <= 0) {
+        if (LogoMaterial.field_b <= 0) {
           if (NodeHashTableIterator.field_a > 0) {
             IterableDualLinkDeque.a((byte) -80);
           }
@@ -337,7 +337,7 @@ final class MenuSelection {
             DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
         } else {
-          nj.field_b = nj.field_b - 1;
+          LogoMaterial.field_b = LogoMaterial.field_b - 1;
           if (NodeHashTableIterator.field_a > 0) {
             IterableDualLinkDeque.a((byte) -80);
             if (0 < PoolMatchController.field_z) {
@@ -345,8 +345,8 @@ final class MenuSelection {
             }
           } else {
             if (0 >= PoolMatchController.field_z) {
-              if (nj.field_b > 0) {
-                DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+              if (LogoMaterial.field_b > 0) {
+                DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
               }
               if (param0 == -13953) {
                 return;
@@ -357,8 +357,8 @@ final class MenuSelection {
             DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
         }
-        if (nj.field_b > 0) {
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+        if (LogoMaterial.field_b > 0) {
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
         }
         if (param0 != -13953) {
           MenuSelection.releaseStatics(67);
@@ -484,8 +484,8 @@ final class MenuSelection {
         try {
           param1.textColor = 16777215;
           param1.horizontalAlignment = 1;
-          param1.font = (BitmapFont) ((Object) sa.field_h);
-          param1.frameSprites = rm.field_g;
+          param1.font = (BitmapFont) ((Object) CollisionContact.field_h);
+          param1.frameSprites = MeshSymmetrySupport.field_g;
           param1.capturedFrameSprites = null;
           if (!param0) {
             field_d = (BufferedFile[]) null;

@@ -25,7 +25,7 @@ final class TutorialStep extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -101) {
-            stackIn_4_0 = 20 + (qa.field_v.height + this.field_t);
+            stackIn_4_0 = 20 + (HotspotRectangle.field_v.height + this.field_t);
             return stackIn_4_0;
           }
           stackIn_2_0 = -65;
@@ -39,7 +39,7 @@ final class TutorialStep extends IntrusiveNode {
 
     final void buildOutline(int param0) {
         try {
-          this.field_q = ScreenProjectionSupport.findHotspotRegion(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
+          this.field_q = ScreenProjectionSupport.findHotspotRegion(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, ReflectionReplySupport.field_i - PoolGameModel.field_k.localX, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
@@ -87,29 +87,29 @@ final class TutorialStep extends IntrusiveNode {
           }
           this.field_y = TextLayout.field_f;
           if (this.field_p.indexOf("<img=") == -1) {
-            this.field_y = sa.field_h.baselineHeight;
+            this.field_y = CollisionContact.field_h.baselineHeight;
           }
-          this.field_t = sa.field_h.measureWrappedHeight(this.field_p, this.field_n, this.field_y);
+          this.field_t = CollisionContact.field_h.measureWrappedHeight(this.field_p, this.field_n, this.field_y);
           if (param0.field_d.field_e != this.next &&
-            !pl.field_b.enabled) {
-            pl.field_b.enabled = true;
+            !VertexProjectionSupport.field_b.enabled) {
+            VertexProjectionSupport.field_b.enabled = true;
           } else {
             if (this.next == param0.field_d.field_e &&
-              pl.field_b.enabled) {
-              pl.field_b.pressedButton = 0;
-              pl.field_b.enabled = false;
+              VertexProjectionSupport.field_b.enabled) {
+              VertexProjectionSupport.field_b.pressedButton = 0;
+              VertexProjectionSupport.field_b.enabled = false;
             }
           }
           if ((param0.field_d.field_e != this.previous ||
             param0.field_j != null) &&
-            !jq.field_d.enabled) {
-            jq.field_d.enabled = true;
+            !QuickChatNavigationSupport.field_d.enabled) {
+            QuickChatNavigationSupport.field_d.enabled = true;
           } else {
             if (this.previous == param0.field_d.field_e &&
               null == param0.field_j &&
-              jq.field_d.enabled) {
-              jq.field_d.enabled = false;
-              jq.field_d.pressedButton = 0;
+              QuickChatNavigationSupport.field_d.enabled) {
+              QuickChatNavigationSupport.field_d.enabled = false;
+              QuickChatNavigationSupport.field_d.pressedButton = 0;
             }
           }
           var3_int = this.field_s;
@@ -126,9 +126,9 @@ final class TutorialStep extends IntrusiveNode {
           }
           this.field_z = new Sprite(PoolGameModel.field_k.width, this.field_t + 10);
           this.field_z.bindAsRenderTarget();
-          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
-          sa.field_h.drawParagraph(FaceNormal.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
-          this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
+          CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
+          CollisionContact.field_h.drawParagraph(FaceNormal.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
+          this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, CollisionContact.field_h, true, 10);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

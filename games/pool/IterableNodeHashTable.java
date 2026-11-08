@@ -61,7 +61,7 @@ final class IterableNodeHashTable {
           if (param0 != 524288) {
             field_c = (int[]) null;
           }
-          var2_int = nj.b(TutorialController.field_i, ta.field_f, -21223);
+          var2_int = LogoMaterial.b(TutorialController.field_i, GradientPaletteSupport.field_f, -21223);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -96,7 +96,7 @@ final class IterableNodeHashTable {
           if (AccountContentDialog.field_ub.gameModel.field_x == 0) {
             TranslatedUiText.field_f[10] = DateInputWidget.offerdraw;
           } else {
-            TranslatedUiText.field_f[10] = ff.acceptdraw;
+            TranslatedUiText.field_f[10] = SlidingPanelSupport.acceptdraw;
           }
         }
     }

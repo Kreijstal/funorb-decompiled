@@ -70,7 +70,7 @@ final class ShotEvent extends IntrusiveNode {
         if (param0 != 8192) {
           field_m = (int[][]) null;
         }
-        wf.field_c = null;
+        PacketAvailabilitySupport.field_c = null;
         ProjectedLineSupport.field_c = null;
     }
 
@@ -85,9 +85,9 @@ final class ShotEvent extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0 * sa.field_h.baselineHeight;
-          var5 = param2 * sa.field_h.baselineHeight;
-          sa.field_h.d(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
+          var4_int = param0 * CollisionContact.field_h.baselineHeight;
+          var5 = param2 * CollisionContact.field_h.baselineHeight;
+          CollisionContact.field_h.d(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
           if (param3.field_i != null) {
             param2++;
             param2 = ShotEvent.drawBallEventDebug(1 + param0, 30409, param2, param3.field_i);
@@ -118,9 +118,9 @@ final class ShotEvent extends IntrusiveNode {
 
     final static void c(int param0) {
         int var1 = 24 / ((-10 - param0) / 49);
-        if (null != jd.field_c) {
-          jd.field_c.c(-96);
-          jd.field_c = null;
+        if (null != Atan2Support.field_c) {
+          Atan2Support.field_c.c(-96);
+          Atan2Support.field_c = null;
         }
     }
 
@@ -131,17 +131,17 @@ final class ShotEvent extends IntrusiveNode {
         param0 = param0 >> 5;
         if (param0 < 0) {
           if (-2048 <= param0) {
-            return -te.field_m[-param0];
+            return -ByteArrayNode.field_m[-param0];
           }
           return 0;
         }
         if (param0 <= 2048) {
-          return te.field_m[param0];
+          return ByteArrayNode.field_m[param0];
         }
         return 0;
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean isNonnegative(boolean param0, int param1) {
         if (!param0) {
           joinRequestXsGame = (String) null;
         }

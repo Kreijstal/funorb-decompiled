@@ -36,7 +36,7 @@ abstract class LoginPayload {
           try {
             try {
               var3 = (String) (JavaScriptBridge.callWindowFunction((byte) 126, "getcookies", param2));
-              var4 = jc.splitString(param0 ^ -9075, var3, ';');
+              var4 = AppletUrlSupport.splitString(param0 ^ -9075, var3, ';');
               if (param0 != -21721) {
                 LoginPayload.releaseStatics(38);
               }
@@ -81,8 +81,8 @@ abstract class LoginPayload {
     }
 
     final static void a(int param0, boolean param1) {
-        if (null != sm.field_C) {
-          sm.field_C.drawRoot((byte) -79, param1);
+        if (null != PasswordInputPainter.field_C) {
+          PasswordInputPainter.field_C.drawRoot((byte) -79, param1);
         }
         if (param0 >= -81) {
           String var3 = (String) null;
@@ -120,7 +120,7 @@ abstract class LoginPayload {
         int var2 = 0;
         int var3 = 0;
         String var4 = null;
-        ij var5 = null;
+        AnimatedNotification var5 = null;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -131,8 +131,8 @@ abstract class LoginPayload {
             LoginPayload.a(true, (String) null, 27);
           }
           if (!MarkerSliderPainter.field_i.isEmpty(0) &&
-            kg.field_m >= 0) {
-            var5 = (ij) (MarkerSliderPainter.field_i.last((byte) 108));
+            ByteRecordSubmission.field_m >= 0) {
+            var5 = (AnimatedNotification) (MarkerSliderPainter.field_i.last((byte) 108));
             if (var5.field_E == 0) {
               if (var5.field_w != 256) {
                 var5.field_K.drawShadedGrayscale(-(var5.field_K.field_z / 2) + var5.field_J, var5.field_C - var5.field_K.field_A / 2, var5.field_w);
@@ -243,7 +243,7 @@ abstract class LoginPayload {
           if (null != MeshBoundsSupport.field_d &&
             MeshBoundsSupport.field_d.dialogOpen) {
             if (8 == param2) {
-              if (ro.field_e) {
+              if (ProjectedVertex.field_e) {
                 param1 = ThreeSliceButtonPainter.invalidpass;
               } else {
                 param1 = HighScoreRequest.invaliduserorpass;
@@ -253,7 +253,7 @@ abstract class LoginPayload {
             }
             var3_int = 1;
             if (param2 == 10) {
-              ta.a(-984040272);
+              GradientPaletteSupport.a(-984040272);
               var3_int = 0;
             }
             if (var3_int != 0) {
@@ -267,7 +267,7 @@ abstract class LoginPayload {
             }
             if (param2 != 256 &&
               param2 != 10) {
-              if (ro.field_e) {
+              if (ProjectedVertex.field_e) {
                 return;
               }
               TextLineLayout.field_j.clearInputs((byte) -108);

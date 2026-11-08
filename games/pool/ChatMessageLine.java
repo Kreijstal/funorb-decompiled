@@ -26,11 +26,11 @@ final class ChatMessageLine extends IntrusiveNode {
     }
 
     final void renderSprite(int param0) {
-        int var2 = sa.field_h.b(this.text);
-        this.renderedSprite = new Sprite(2 + var2, sa.field_h.maxAscent - (-sa.field_h.maxDescent - 2));
+        int var2 = CollisionContact.field_h.b(this.text);
+        this.renderedSprite = new Sprite(2 + var2, CollisionContact.field_h.maxAscent - (-CollisionContact.field_h.maxDescent - 2));
         this.renderedSprite.bindAsRenderTarget();
-        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
-        sa.field_h.d(this.text, 1, 1 + sa.field_h.maxAscent, this.color, param0);
+        CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
+        CollisionContact.field_h.d(this.text, 1, 1 + CollisionContact.field_h.maxAscent, this.color, param0);
         OpacityWidget.field_P.bindAsRenderTarget(param0 ^ -15101);
         this.renderedSprite.addOutline((16711423 & this.color) >> 1);
     }

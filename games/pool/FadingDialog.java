@@ -33,9 +33,9 @@ abstract class FadingDialog extends WidgetContainer {
     abstract void drawDialogFrame(int param0, int param1, int param2);
 
     final static void a(boolean param0, int param1) {
-        ff.a(0, param0);
+        SlidingPanelSupport.drawSharedPanelRoot(0, param0);
         if (null != CacheEntry.field_B) {
-          pp.a(CacheEntry.field_B, 1259627265);
+          MeshColorSupport.a(CacheEntry.field_B, 1259627265);
         }
         if (param1 != 1) {
           int[] var3 = (int[]) null;
@@ -87,7 +87,7 @@ abstract class FadingDialog extends WidgetContainer {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        sa var7 = null;
+        CollisionContact var7 = null;
         int var7_int = 0;
         Ball var8 = null;
         int var8_int = 0;
@@ -164,14 +164,14 @@ abstract class FadingDialog extends WidgetContainer {
             }
             if (-1 != var7.field_x) {
               var8.field_c = var8.field_c + 1;
-              sm.bounceBallOffCushion(var7.field_u, param0[var7.field_x], 117, var8);
+              PasswordInputPainter.bounceBallOffCushion(var7.field_u, param0[var7.field_x], 117, var8);
               if (null != var8.field_q) {
                 var8.field_q.a((int) var7.field_x, -26401, var8);
               }
             }
             if (var7.field_a != -1) {
               var8.field_c = var8.field_c + 1;
-              dk.bounceBallOffPoint(param3[var7.field_a][0], (byte) -20, var7.field_u, var8, param3[var7.field_a][1]);
+              GlowParticle.bounceBallOffPoint(param3[var7.field_a][0], (byte) -20, var7.field_u, var8, param3[var7.field_a][1]);
               if (var8.field_q != null) {
                 var8.field_q.a(var8, (int) var7.field_a, (byte) 5);
               }
@@ -211,7 +211,7 @@ abstract class FadingDialog extends WidgetContainer {
         if (param1 != 31936) {
           discarded$0 = this.getTargetOpacity(87);
         }
-        this.setWidgetBounds(param2, -param2 + TranslatedUiText.field_j >> 1, param0, false, md.field_b - param0 >> 1);
+        this.setWidgetBounds(param2, -param2 + TranslatedUiText.field_j >> 1, param0, false, RenderingInitializationSupport.field_b - param0 >> 1);
     }
 
     final void renderWidget(int param0, byte param1, int param2, int param3) {
@@ -242,7 +242,7 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     FadingDialog(DialogLayer param0, int param1, int param2) {
-        super(-param1 + TranslatedUiText.field_j >> 1, -param2 + md.field_b >> 1, param1, param2, (WidgetPainter) null);
+        super(-param1 + TranslatedUiText.field_j >> 1, -param2 + RenderingInitializationSupport.field_b >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.dialogLayer = param0;
           this.dialogOpacity = 0;

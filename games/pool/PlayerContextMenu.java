@@ -17,7 +17,7 @@ final class PlayerContextMenu {
     private int[] field_h;
     ContextMenu field_n;
 
-    final void addChatFilterActions(pn param0, boolean param1) {
+    final void addChatFilterActions(ChatMessage param0, boolean param1) {
         if (param0.field_g) {
           return;
         }
@@ -33,7 +33,7 @@ final class PlayerContextMenu {
             this.field_n.addAction(Pool.muChatLobbyHide, 17130, 13);
           }
           if (param0.field_p == 1) {
-            if (ol.field_e == 0) {
+            if (FixedPointVectorSupport.field_e == 0) {
               this.field_n.addAction(IntKeyLookup.muChatGameFriendsOnly, 17130, 12);
             }
             this.field_n.addAction(TextLayout.muChatGameHide, 17130, 13);
@@ -106,15 +106,15 @@ final class PlayerContextMenu {
         String var7 = null;
         try {
           if (null != this.field_m && (~this.field_l != ~BitmapTextLayout.field_m ||
-            2 == param0) && th.field_a == 2) {
+            2 == param0) && ChatInputSupport.field_a == 2) {
             var7 = this.getTargetName(3);
             var4 = var7;
-            var5 = gf.a(-103, this.field_m);
+            var5 = UsernameSuggestionSupport.a(-103, this.field_m);
             var6 = MenuSelection.a(this.field_m, 24552) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, QuickChatHelpDialog.addXToFriends), 17130, 4);
-              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, jh.addXToIgnore), 17130, 6);
+              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, MenuScreenBase.addXToIgnore), 17130, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !RankingsRequest.field_z) {
@@ -126,7 +126,7 @@ final class PlayerContextMenu {
               if (!NineBallRules.a(this.field_m, (byte) -101) &&
                 !RankingsRequest.field_z) {
                 if (!ViewportController.field_y) {
-                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, rp.sendPmToX), 17130, 8);
+                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, NineSliceFrameSupport.sendPmToX), 17130, 8);
                 }
                 this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TutorialController.sendQcToX), 17130, 18);
                 if (param1 != null) {
@@ -137,7 +137,7 @@ final class PlayerContextMenu {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, FaceNormal.rmXFromFriends), 17130, 5);
             }
             if (var6 != 0) {
-              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, ph.rmXFromIgnore), 17130, 7);
+              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, AccountProtocolStage.rmXFromIgnore), 17130, 7);
             }
           }
           if (param2 < 43) {
@@ -177,7 +177,7 @@ final class PlayerContextMenu {
         var5 = Pool.field_O;
         if (param2 != 8) {
           if (param2 == 18) {
-            tq.a(this.field_l, (byte) -104, this.field_m);
+            AccountStateQuery.a(this.field_l, (byte) -104, this.field_m);
           } else {
             if (param2 != 11) {
               if (12 != param2) {
@@ -195,13 +195,13 @@ final class PlayerContextMenu {
                     }
                   }
                 } else {
-                  om.a(2, this.field_a, param0, (byte) -45);
+                  TextInputPainter.a(2, this.field_a, param0, (byte) -45);
                 }
               } else {
-                om.a(1, this.field_a, param0, (byte) 126);
+                TextInputPainter.a(1, this.field_a, param0, (byte) 126);
               }
             } else {
-              om.a(0, this.field_a, param0, (byte) 121);
+              TextInputPainter.a(0, this.field_a, param0, (byte) 121);
             }
           }
         } else {
@@ -221,7 +221,7 @@ final class PlayerContextMenu {
         if (17 != param2) {
           return false;
         }
-        fc.field_b = new ReportAbuseDialog(this.field_i.screenX, this.field_i.screenY, this.field_i.width, this.field_i.height, param1, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, this.field_m, this.field_l);
+        AccountMenuText.field_b = new ReportAbuseDialog(this.field_i.screenX, this.field_i.screenY, this.field_i.width, this.field_i.height, param1, AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A, this.field_m, this.field_l);
         return true;
     }
 
@@ -250,12 +250,12 @@ final class PlayerContextMenu {
     }
 
     final static void updatePageControls(int param0) {
-        VerticalScrollbar.field_Nb.sprite = dq.createTextLabelSprite(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, PolarObject.timerSecs));
+        VerticalScrollbar.field_Nb.sprite = TransformRotationSupport.createTextLabelSprite(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(ReflectionReplySupport.field_f[ChatPanelSupport.field_a] / 50)}, -1, PolarObject.timerSecs));
         if (param0 != 13) {
           PlayerContextMenu.updatePageControls(-82);
         }
-        TickClock.field_i.enabled = la.field_a > 0 ? true : false;
-        DualLinkNodeHashTable.field_f.enabled = la.field_a < -1 + te.field_p[0] ? true : false;
+        TickClock.field_i.enabled = ChatPanelSupport.field_a > 0 ? true : false;
+        DualLinkNodeHashTable.field_f.enabled = ChatPanelSupport.field_a < -1 + ByteArrayNode.field_p[0] ? true : false;
     }
 
     private final boolean a(int param0, int param1, int param2) {
@@ -270,7 +270,7 @@ final class PlayerContextMenu {
             var4_ref = HalloweenBallSkin.a((byte) 91, this.field_m, param1);
           } else {
             if (param0 == 6) {
-              var4_ref = jd.a(param1, this.field_m, param2 ^ 4);
+              var4_ref = Atan2Support.a(param1, this.field_m, param2 ^ 4);
             } else {
               if (param0 != 7) {
                 return false;
@@ -281,7 +281,7 @@ final class PlayerContextMenu {
         }
         if (var4_ref != null) {
           var5 = (String) null;
-          jh.a(0, var4_ref, (String) null, 2, this.field_m, true);
+          MenuScreenBase.a(0, var4_ref, (String) null, 2, this.field_m, true);
         }
         if (param2 == 6) {
           return true;
@@ -297,13 +297,13 @@ final class PlayerContextMenu {
           this.field_l != BitmapTextLayout.field_m &&
           null != HighscoresScreen.field_L &&
           TikiTableScene.e((byte) 85)) {
-          var6 = mg.findLobbyPlayer(param0 ^ 124, this.field_l);
+          var6 = LobbyPlayerLookupSupport.findLobbyPlayer(param0 ^ 124, this.field_l);
           var4 = QuickChatHelpDialog.b(this.field_l, 0);
           var5 = this.getTargetName(3);
           if (var4 != null) {
             if (!HighscoresScreen.field_L.field_ec ||
               !(HighscoresScreen.field_L.field_qc < 0)) {
-              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, th.muGameoptKickXFromThisGame), 17130, 1);
+              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, ChatInputSupport.muGameoptKickXFromThisGame), 17130, 1);
             }
           } else {
             if (var6 != null &&
@@ -312,13 +312,13 @@ final class PlayerContextMenu {
               if (!var6.field_mc) {
                 if (param1 &&
                   var6.field_Yb) {
-                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, gf.muGameoptAcceptXIntoGame), param0 + 17006, 0);
-                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, param0 - 125, ro.muGameoptRejectXFromGame), 17130, 1);
+                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, UsernameSuggestionSupport.muGameoptAcceptXIntoGame), param0 + 17006, 0);
+                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, param0 - 125, ProjectedVertex.muGameoptRejectXFromGame), 17130, 1);
                 } else {
                   this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, IterableDualLinkDeque.muGameoptInviteXToGame), 17130, 0);
                 }
               } else {
-                this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, jh.muGameoptWithdrawInviteToX), param0 + 17006, 1);
+                this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, MenuScreenBase.muGameoptWithdrawInviteToX), param0 + 17006, 1);
               }
             }
           }
@@ -361,7 +361,7 @@ final class PlayerContextMenu {
             return true;
           }
           if (0 != param1) {
-            var5 = rf.field_a;
+            var5 = AccountDisplayNameSupport.field_a;
             var2 = var5;
             for (var3 = 0; var3 < var5.length; var3++) {
               var4 = var5[var3];

@@ -175,7 +175,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     private final boolean isInputValid(byte param0, ValidationProviderSource param1) {
         ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        na var4 = null;
+        IntegerSyntaxSupport var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -186,10 +186,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             return true;
           }
           var4 = var3.getDebouncedValidationState(-31873);
-          if (gp.field_d == var4) {
+          if (AchievementProtocolSupport.field_d == var4) {
             return false;
           }
-          if (ji.field_h == var4) {
+          if (ParticleTrail.field_h == var4) {
             return false;
           }
           if (ReportAbuseDialog.field_Pb == var4) {
@@ -439,9 +439,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.backButton = new ButtonWidget(ValidationIconWidget.goback, (WidgetListener) null);
         this.displayNameInput.hoverText = ThemeSelectScreen.createDisplaynameTooltip;
         this.emailInput.hoverText = CheckboxWidget.createEmailTooltip;
-        this.emailConfirmInput.hoverText = wp.createEmailConfirmTooltip;
-        this.passwordInput.hoverText = kc.createPasswordTooltip;
-        this.passwordConfirmInput.hoverText = ii.createPasswordConfirmTooltip;
+        this.emailConfirmInput.hoverText = CompressedContainerSupport.createEmailConfirmTooltip;
+        this.passwordInput.hoverText = CanvasInputAttachmentSupport.createPasswordTooltip;
+        this.passwordConfirmInput.hoverText = ProxyConnectorSupport.createPasswordConfirmTooltip;
         this.ageInput.hoverText = PoolMatchController.createAgeTooltip;
         this.newsOptInCheckbox.hoverText = LoginForm.createOptinNewsTooltip;
         this.displayNameInput.a((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
@@ -453,21 +453,21 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.createButton.enabled = false;
         this.createButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.backButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
-        this.displayNameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
-        om dupTemp$0 = new om(10000536);
+        this.displayNameInput.renderer = (WidgetPainter) ((Object) new TextInputPainter(10000536));
+        TextInputPainter dupTemp$0 = new TextInputPainter(10000536);
         this.emailConfirmInput.renderer = (WidgetPainter) ((Object) dupTemp$0);
         this.emailInput.renderer = (WidgetPainter) ((Object) dupTemp$0);
-        this.ageInput.renderer = (WidgetPainter) ((Object) new om(10000536));
+        this.ageInput.renderer = (WidgetPainter) ((Object) new TextInputPainter(10000536));
         this.newsOptInCheckbox.renderer = (WidgetPainter) ((Object) new ButtonPainter());
-        sm dupTemp$1 = new sm(10000536);
+        PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.passwordConfirmInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.i(11579568)}, -1, ArchiveProvider.createAgreeterms);
+        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.closeLinkMarkup(11579568)}, -1, ArchiveProvider.createAgreeterms);
         int var3 = 20;
         var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
         var3 = var3 + (5 + this.a(ProxyAuthenticationRequiredException.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
         var3 = var3 + this.a((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
-        var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, ChoiceButtonSupport.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
         var3 = var3 + this.a(MusicPatch.createAge, (byte) -114, 170, var3, this.ageInput);
         LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.widgetWidth, 25, this.newsOptInCheckbox, true, -120 + this.widgetWidth, 5, PoolUiText.field_a, 11579568, ArchiveAvailabilitySupport.createOptinNews);
@@ -496,21 +496,21 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.setWidgetBounds(496, 0, var3 + 55 + var6, false, 0);
     }
 
-    final static qr b(byte param0, String param1) {
+    final static AvailabilityQueryResult b(byte param0, String param1) {
         RuntimeException var2 = null;
-        qr stackIn_2_0 = null;
-        qr stackIn_7_0 = null;
+        AvailabilityQueryResult stackIn_2_0 = null;
+        AvailabilityQueryResult stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -25) {
-            stackIn_2_0 = (qr) null;
+            stackIn_2_0 = (AvailabilityQueryResult) null;
             return stackIn_2_0;
           }
-          if (TextInputValidator.field_j.a(param0 + 121) &&
-            !param1.equals(TextInputValidator.field_j.b(2))) {
+          if (TextInputValidator.field_j.isComplete(param0 + 121) &&
+            !param1.equals(TextInputValidator.field_j.getText(2))) {
             TextInputValidator.field_j = GzipDecoder.a(117, param1);
           }
           stackIn_7_0 = TextInputValidator.field_j;
@@ -538,7 +538,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String i(int param0) {
+    private final String closeLinkMarkup(int param0) {
         if (param0 != 11579568) {
           this.newsOptInCheckbox = (CheckboxWidget) null;
           return "</col></u>";

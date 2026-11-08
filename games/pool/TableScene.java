@@ -146,7 +146,7 @@ abstract class TableScene {
             return;
           }
           if (var13.positionZ < 0) {
-            var12 = 1179648 - rf.inverseSquareRoot(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
+            var12 = 1179648 - AccountDisplayNameSupport.inverseSquareRoot(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
           } else {
             var12 = 655360;
           }
@@ -235,12 +235,12 @@ abstract class TableScene {
           var24 = (var22 + var21) / 2;
           var25 = var18.addVertex(var19 - var23, var21 - var24, 0);
           var26 = var18.addVertex(-var23 + var20, -var24 + var22, 0);
-          var27 = var18.addVertex(var19 - var23, var21 - var24, sb.a(-16.0f, true));
-          var28 = var18.addVertex(var20 - var23, var22 - var24, sb.a(-16.0f, true));
-          var18.addFace(var25, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
-          var18.addFace(var28, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
-          var18.addFace(var25, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
-          var18.addFace(var28, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
+          var27 = var18.addVertex(var19 - var23, var21 - var24, SpriteResourceSupport.floatToFixed3(-16.0f, true));
+          var28 = var18.addVertex(var20 - var23, var22 - var24, SpriteResourceSupport.floatToFixed3(-16.0f, true));
+          var18.addFace(var25, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
+          var18.addFace(var28, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
+          var18.addFace(var25, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
+          var18.addFace(var28, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
           var12[var16] = var18;
           var13[var16] = new ModelInstance((ModelMesh) (var12[var16].createModelMesh(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
         }
@@ -249,7 +249,7 @@ abstract class TableScene {
     }
 
     private final void markViewDirty(int param0) {
-        hh.field_c = true;
+        PackedColorSupport.field_c = true;
         if (param0 != 0) {
           this.floorColor(-49);
         }
@@ -358,7 +358,7 @@ abstract class TableScene {
         if (param1.positionZ > -524288) {
           return;
         }
-        if (dq.field_a.field_g) {
+        if (TransformRotationSupport.field_a.field_g) {
           var3 = this.field_q + (param1.positionX >> 13);
           var4 = this.field_e + (param1.positionY >> 13);
           var5 = this.field_u + (param1.positionZ >> 13);
@@ -374,7 +374,7 @@ abstract class TableScene {
         var10 = -var6;
         var11 = var9 * var9 + var10 * var10;
         if (var11 > 0) {
-          var11 = rf.inverseSquareRoot(var11, -121) >> 8;
+          var11 = AccountDisplayNameSupport.inverseSquareRoot(var11, -121) >> 8;
           var9 = (var9 << 8) / var11;
           var10 = (var10 << 8) / var11;
         }
@@ -383,7 +383,7 @@ abstract class TableScene {
         var13 = var6 * var10 - var7 * var9 >> 8;
         var14 = var11Lifetime1 * var11Lifetime1 + var12 * var12 + var13 * var13;
         if (var14 > 0) {
-          var14 = rf.inverseSquareRoot(var14, -125) >> 8;
+          var14 = AccountDisplayNameSupport.inverseSquareRoot(var14, -125) >> 8;
           var11Lifetime1 = (var11Lifetime1 << 8) / var14;
           var12 = (var12 << 8) / var14;
           var13 = (var13 << 8) / var14;
@@ -1144,7 +1144,7 @@ abstract class TableScene {
             var7 = LinkButtonPainter.field_f[var6_int];
             if (var7 >= param3.length) {
               if (param4) {
-                w.field_a[var7].draw(param0, -32215);
+                GrowableIntListFactory.field_a[var7].draw(param0, -32215);
               }
             } else {
               var8 = param3[var7];
@@ -1156,7 +1156,7 @@ abstract class TableScene {
               }
               if (stackIn_9_0 != (param2 ? 1 : 0) &&
                 !var8.field_o) {
-                w.field_a[var7].draw(param0, -32215);
+                GrowableIntListFactory.field_a[var7].draw(param0, -32215);
               }
             }
           }
@@ -1200,19 +1200,19 @@ abstract class TableScene {
           for (var4_int = 0; var4_int < param2.length; var4_int++) {
             if (param2[var4_int].transformDirty) {
               param2[var4_int].updateRenderTransform(2);
-              dq.field_a.buildBallModel(false, param2[var4_int].renderTransform, var4_int);
+              TransformRotationSupport.field_a.buildBallModel(false, param2[var4_int].renderTransform, var4_int);
             }
-            w.field_a[var4_int] = (SceneDrawable) ((Object) DropTargetWidget.field_O[var4_int]);
+            GrowableIntListFactory.field_a[var4_int] = (SceneDrawable) ((Object) DropTargetWidget.field_O[var4_int]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
-            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -111);
+            GrowableIntList.field_d[var4_int] = GrowableIntListFactory.field_a[var4_int].viewDepth(param1, -111);
           }
           for (var5 = 0; var5 < QuickChatPhraseRegistry.field_g; var5++) {
-            w.field_a[var4_int] = (SceneDrawable) ((Object) ArchiveLoadSequence.field_e[var5]);
+            GrowableIntListFactory.field_a[var4_int] = (SceneDrawable) ((Object) ArchiveLoadSequence.field_e[var5]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
-            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -114);
+            GrowableIntList.field_d[var4_int] = GrowableIntListFactory.field_a[var4_int].viewDepth(param1, -114);
             var4_int++;
           }
-          th.quickSortRange(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));
+          ChatInputSupport.quickSortRange(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1297,13 +1297,13 @@ abstract class TableScene {
         int var3_intLifetime1;
         try {
           DropTargetWidget.field_O = new BallDebugOverlay[param0.balls.length];
-          w.field_a = new SceneDrawable[ArchiveLoadSequence.field_e.length + param0.balls.length];
+          GrowableIntListFactory.field_a = new SceneDrawable[ArchiveLoadSequence.field_e.length + param0.balls.length];
           var3_int = param1;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.balls.length; var3_intLifetime1++) {
             DropTargetWidget.field_O[var3_intLifetime1] = new BallDebugOverlay(var3_intLifetime1, param0);
           }
-          GrowableIntList.field_d = new int[w.field_a.length];
-          LinkButtonPainter.field_f = new int[w.field_a.length];
+          GrowableIntList.field_d = new int[GrowableIntListFactory.field_a.length];
+          LinkButtonPainter.field_f = new int[GrowableIntListFactory.field_a.length];
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1504,8 +1504,8 @@ abstract class TableScene {
         int var12 = this.field_s.addVertex(var9, -var10, 0);
         int var13 = this.field_s.addVertex(-var9, var10, 0);
         int var14 = this.field_s.addVertex(var9, var10, 0);
-        this.field_s.addFace(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.floorColor(684)), this.floorTexture(-56));
-        this.field_s.addFace(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.floorColor(684)), this.floorTexture(91));
+        this.field_s.addFace(var11, var13, var12, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -105, this.floorColor(684)), this.floorTexture(-56));
+        this.field_s.addFace(var14, var12, var13, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -127, this.floorColor(684)), this.floorTexture(91));
         ModelMesh var15 = (ModelMesh) (this.createModelMeshUntransformed(103, this.field_s));
         for (var16 = 0; var16 < var4; var16++) {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;

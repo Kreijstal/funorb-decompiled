@@ -184,7 +184,7 @@ final class GrowableIntList {
             if (IntrusiveNode.field_j == null) {
               stackIn_15_1 = null;
               stackIn_15_2 = null;
-              stackIn_15_5 = "" + hf.field_e;
+              stackIn_15_5 = "" + ChatReplacementSupport.field_e;
             } else {
               stackIn_15_1 = null;
               stackIn_15_2 = null;

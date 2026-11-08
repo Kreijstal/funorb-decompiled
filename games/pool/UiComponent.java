@@ -392,9 +392,9 @@ class UiComponent extends UiComponentNode {
         }
         var22 = var20 + this.contentOffsetY;
         if (!this.useParentFrameBounds) {
-          nj.drawNineSlice(var16, (byte) -85, this.width, this.screenX, this.screenY, this.height);
+          LogoMaterial.drawNineSlice(var16, (byte) -85, this.width, this.screenX, this.screenY, this.height);
         } else {
-          nj.drawNineSlice(var16, (byte) -107, param7, param1, param6, param5);
+          LogoMaterial.drawNineSlice(var16, (byte) -107, param7, param1, param6, param5);
         }
         if (var17 != null) {
           var23_int = var21 + this.screenX;
@@ -561,7 +561,7 @@ class UiComponent extends UiComponentNode {
     }
 
     final void updateRoot(boolean param0, boolean param1) {
-        rc.field_d = !param0 ? true : false;
+        AccountTextSupport.field_d = !param0 ? true : false;
         if (param1) {
           this.sprite = (Sprite) null;
         }
@@ -635,7 +635,7 @@ class UiComponent extends UiComponentNode {
         var12 = SoftwareRasterizer.clipBottom;
         SoftwareRasterizer.intersectClip(this.screenX, this.screenY, this.screenX + this.width, this.height + this.screenY);
         var13 = 0;
-        if (!rc.field_d &&
+        if (!AccountTextSupport.field_d &&
           param1 &&
           0 != MatchingTextValidator.field_s &&
           SoftwareRasterizer.clipLeft <= DialogLayer.field_W &&
@@ -656,7 +656,7 @@ class UiComponent extends UiComponentNode {
         if (0 == ClientInputResetSupport.field_b) {
           this.capturedButton = 0;
         }
-        stackIn_33_1 = (!ProjectedLineSupport.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (DebouncedValidationProvider.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > DebouncedValidationProvider.field_f);
+        stackIn_33_1 = (!ProjectedLineSupport.field_f) && (SoftwareRasterizer.clipLeft <= ReflectionReplySupport.field_i) && (ReflectionReplySupport.field_i < SoftwareRasterizer.clipRight) && (DebouncedValidationProvider.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > DebouncedValidationProvider.field_f);
         this.hovered = stackIn_33_1;
         stackIn_38_1 = (this.hovered) && (this.capturedButton == ClientInputResetSupport.field_b) && (param1);
         this.activeInside = stackIn_38_1;
@@ -668,7 +668,7 @@ class UiComponent extends UiComponentNode {
           }
         }
         if (var13 != 0) {
-          rc.field_d = true;
+          AccountTextSupport.field_d = true;
         }
         if (this.hovered) {
           ProjectedLineSupport.field_f = true;
@@ -676,7 +676,7 @@ class UiComponent extends UiComponentNode {
         SoftwareRasterizer.setClip(var8, var9, var10, var12);
         if (this.capturedButton != 0 &&
           this.draggable) {
-          this.localX = -param5 + (wn.field_i - this.pressLocalX);
+          this.localX = -param5 + (ReflectionReplySupport.field_i - this.pressLocalX);
           this.localY = -param0 + (DebouncedValidationProvider.field_f - this.pressLocalY);
           if (this.localX < 0) {
             this.localX = 0;

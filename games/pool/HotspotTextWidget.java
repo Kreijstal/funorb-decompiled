@@ -4,7 +4,7 @@
 class HotspotTextWidget extends ButtonWidget {
     private IntrusiveDeque hotspotBounds;
     private String[] hotspotHoverTexts;
-    private qa hoveredHotspot;
+    private HotspotRectangle hoveredHotspot;
 
     void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         int var5_int = 0;
@@ -18,7 +18,7 @@ class HotspotTextWidget extends ButtonWidget {
           super.updatePointerState(param0, param1, param2, param3);
           this.hoveredHotspot = null;
           if (this.pointerInside) {
-            var5_int = -this.widgetX - param2 + wn.field_i;
+            var5_int = -this.widgetX - param2 + ReflectionReplySupport.field_i;
             var6 = -this.widgetY + (-param3 + DebouncedValidationProvider.field_f);
             this.hoveredHotspot = this.findHotspot(var6, var5_int, -31244);
           }
@@ -110,7 +110,7 @@ class HotspotTextWidget extends ButtonWidget {
         int stackIn_12_0 = 0;
         int var2;
         int var3;
-        io var4;
+        WidgetTextLayout var4;
         TextLayout var5;
         int var6;
         String var7;
@@ -121,12 +121,12 @@ class HotspotTextWidget extends ButtonWidget {
         TextLineLayout var13;
         int var14;
         int var15;
-        qa var16;
+        HotspotRectangle var16;
         int var8Lifetime1;
         var2 = -46 / ((param0 + 35) / 50);
         this.hotspotBounds = new IntrusiveDeque();
         var3 = 0;
-        var4 = (io) ((Object) this.renderer);
+        var4 = (WidgetTextLayout) ((Object) this.renderer);
         var5 = var4.ensureTextLayout(0, (UiWidget) (this));
         while (true) {
           var6 = this.widgetText.indexOf("<hotspot=", var3);
@@ -158,9 +158,9 @@ class HotspotTextWidget extends ButtonWidget {
               stackIn_12_0 = var5.caretX(var3, (byte) -104);
             }
             var15 = stackIn_12_0;
-            var16 = new qa(var8Lifetime1, var14, var13.top, var15 - var14, Math.max(var4.lineHeight(-10492), var13.bottom - var13.top));
+            var16 = new HotspotRectangle(var8Lifetime1, var14, var13.top, var15 - var14, Math.max(var4.lineHeight(-10492), var13.bottom - var13.top));
             if (var11 != null) {
-              ((qa) (var11)).field_l = var16;
+              ((HotspotRectangle) (var11)).field_l = var16;
             }
             this.hotspotBounds.addFirst((byte) 82, var16);
             var11 = var16;
@@ -176,14 +176,14 @@ class HotspotTextWidget extends ButtonWidget {
         if (param0 != 0) {
           return;
         }
-        io var6 = (io) ((Object) this.renderer);
-        qa var7 = this.hoveredHotspot;
+        WidgetTextLayout var6 = (WidgetTextLayout) ((Object) this.renderer);
+        HotspotRectangle var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
           var8 = var6.textLeft(5286, (UiWidget) (this), param2);
           var9 = var6.textTop(param3, (UiWidget) (this), (byte) -7);
           do {
-            DottedRectangleSupport.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
+            LookupQuery.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
             var7 = var7.field_l;
           } while (var7 != null);
         }
@@ -205,10 +205,10 @@ class HotspotTextWidget extends ButtonWidget {
         return this.hotspotHoverTexts[this.hoveredHotspot.field_s];
     }
 
-    private final qa findHotspot(int param0, int param1, int param2) {
-        qa var5 = null;
+    private final HotspotRectangle findHotspot(int param0, int param1, int param2) {
+        HotspotRectangle var5 = null;
         int var6 = Pool.field_O;
-        qa var4 = (qa) (this.hotspotBounds.last((byte) -21));
+        HotspotRectangle var4 = (HotspotRectangle) (this.hotspotBounds.last((byte) -21));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -218,19 +218,19 @@ class HotspotTextWidget extends ButtonWidget {
             }
             var5 = var5.field_l;
           }
-          var4 = (qa) (this.hotspotBounds.previous((byte) -5));
+          var4 = (HotspotRectangle) (this.hotspotBounds.previous((byte) -5));
         }
         if (param2 == -31244) {
           return null;
         }
-        return (qa) null;
+        return (HotspotRectangle) null;
     }
 
     final void activateButton(int param0, int param1, int param2, int param3) {
         super.activateButton(param0, param1, param2, param3);
         int var5 = param1 - this.widgetX;
         int var6 = -this.widgetY + param2;
-        qa var7 = this.findHotspot(var6, var5, param0 - 31260);
+        HotspotRectangle var7 = this.findHotspot(var6, var5, param0 - 31260);
         if (var7 != null &&
           null != this.listener) {
           ((HotspotActivationListener) ((Object) this.listener)).onHotspotActivated(param3, this, param0 - 12163, var7.field_s);
@@ -239,7 +239,7 @@ class HotspotTextWidget extends ButtonWidget {
 
     final void fitTextBounds(int param0, int param1, int param2, int param3) {
         int var5 = -72 / ((param3 + 62) / 41);
-        this.setWidgetBounds(param2, param0, ((io) ((Object) this.renderer)).preferredHeight(1, (UiWidget) (this)), false, param1);
+        this.setWidgetBounds(param2, param0, ((WidgetTextLayout) ((Object) this.renderer)).preferredHeight(1, (UiWidget) (this)), false, param1);
     }
 
     HotspotTextWidget(String param0, WidgetPainter param1) {

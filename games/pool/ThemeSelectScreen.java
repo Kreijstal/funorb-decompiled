@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ThemeSelectScreen extends MenuScreen {
-    static jj field_J;
+    static BirthDatePromptPanel field_J;
     static Sprite[] field_M;
     static String statusPrivate;
     static int field_P;
@@ -130,21 +130,21 @@ final class ThemeSelectScreen extends MenuScreen {
         int[] var9 = null;
         int[] var5 = null;
         int var6 = 0;
-        Sprite[] var1 = new Sprite[wf.field_d];
+        Sprite[] var1 = new Sprite[PacketAvailabilitySupport.field_d];
         if (param0 != 152) {
           PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
           ThemeSelectScreen.a((java.awt.Component) null, (MidiPcmStream) null, -111, (PlatformTaskDispatcher) null, -54, true);
         }
-        for (var2 = 0; var2 < wf.field_d; var2++) {
-          var3 = LinkButtonPainter.field_a[var2] * rc.field_f[var2];
+        for (var2 = 0; var2 < PacketAvailabilitySupport.field_d; var2++) {
+          var3 = LinkButtonPainter.field_a[var2] * AccountTextSupport.field_f[var2];
           var10 = LimitedRandomAccessFile.field_b[var2];
           var11 = new int[var3];
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var10[var6], 255)];
+            var5[var6] = IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd((int) var10[var6], 255)];
           }
-          var1[var2] = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var11);
+          var1[var2] = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], var11);
         }
         OpacityWidget.h(-1);
         return var1;

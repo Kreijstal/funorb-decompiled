@@ -9,7 +9,7 @@ final class Texture extends IntrusiveNode {
     boolean field_n;
     float field_p;
     private int[] field_l;
-    int textureId;
+    int averageColor;
 
     final void releasePixels() {
         this.pixels = null;
@@ -59,7 +59,7 @@ final class Texture extends IntrusiveNode {
         var4Lifetime1 = param1 * param1;
         this.pixels = new int[var4Lifetime1];
         for (var5 = 0; var5 < this.field_m.length; var5++) {
-          var6 = sb.a(-7575, param2, this.field_m[var5]);
+          var6 = SpriteResourceSupport.loadIndexedSprite(-7575, param2, this.field_m[var5]);
           var6.normalizeCanvas();
           var17 = var6.field_j;
           var15 = var17;
@@ -134,7 +134,7 @@ final class Texture extends IntrusiveNode {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        this.textureId = param0.readUnsignedShort(-1034);
+        this.averageColor = param0.readUnsignedShort(-1034);
         stackIn_3_1 = (param0.readUnsignedByte(-78) == 1);
         this.field_n = stackIn_3_1;
         var2 = param0.readUnsignedByte(-99);

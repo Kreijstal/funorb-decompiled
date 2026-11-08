@@ -18,8 +18,8 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         RuntimeException var2 = null;
         int var3Lifetime1;
         try {
-          if (wn.field_a != null) {
-            ti.field_e = 0;
+          if (ReflectionReplySupport.field_a != null) {
+            DebugSliderInputSupport.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < AchievementsScreen.field_H.length) {
@@ -34,7 +34,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               var2_int >= 0) {
               field_b[MessageDialog.field_xb] = var2_int;
               MessageDialog.field_xb = 1 + MessageDialog.field_xb & 127;
-              if (MessageDialog.field_xb == jq.field_g) {
+              if (MessageDialog.field_xb == QuickChatNavigationSupport.field_g) {
                 MessageDialog.field_xb = -1;
               }
             }
@@ -42,7 +42,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               var3 = TextLayout.field_h + 1 & 127;
               if (var3 != WireframeQuad.field_s) {
                 QuickChatCategoryCache.field_b[TextLayout.field_h] = var2_int;
-                ek.field_c[TextLayout.field_h] = (char)0;
+                MenuSelectionSupport.field_c[TextLayout.field_h] = (char)0;
                 TextLayout.field_h = var3;
               }
             }
@@ -81,13 +81,13 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         try {
           if (QuickChatCategoryDefinition.field_y < 10) {
             var3_int = 0;
-            if (he.field_c) {
-              he.field_c = false;
+            if (CanvasInputSupport.field_c) {
+              CanvasInputSupport.field_c = false;
               var3_int = 1;
             }
             ModelTableScene.a(var3_int != 0, 30, AimTarget.getLoadingStatusMessage((byte) 84), LocalGameSetupScreen.field_H, ResizableDialog.i(19535));
           } else {
-            if (u.a(108)) {
+            if (MeshRenderSupport.a(108)) {
               if (PlasmaTableScene.field_ab == 0) {
                 ResourceArchive.a(param1, (byte) 109, false);
                 ButtonWidget.a(0, 0, (byte) -65, param2);
@@ -136,14 +136,14 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != wn.field_a) {
+          if (null != ReflectionReplySupport.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
               PlayerContextMenu.isValidNameCharacter((byte) 112, (char) var2_int)) {
               var3 = 1 + TextLayout.field_h & 127;
               if (WireframeQuad.field_s != var3) {
                 QuickChatCategoryCache.field_b[TextLayout.field_h] = -1;
-                ek.field_c[TextLayout.field_h] = (char)var2_int;
+                MenuSelectionSupport.field_c[TextLayout.field_h] = (char)var2_int;
                 TextLayout.field_h = var3;
               }
             }
@@ -162,8 +162,8 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wn.field_a) {
-            ti.field_e = 0;
+          if (null != ReflectionReplySupport.field_a) {
+            DebugSliderInputSupport.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               AchievementsScreen.field_H.length > var2_int) {
@@ -175,7 +175,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               var2_int >= 0) {
               field_b[MessageDialog.field_xb] = ~var2_int;
               MessageDialog.field_xb = 127 & 1 + MessageDialog.field_xb;
-              if (MessageDialog.field_xb == jq.field_g) {
+              if (MessageDialog.field_xb == QuickChatNavigationSupport.field_g) {
                 MessageDialog.field_xb = -1;
               }
             }
@@ -198,7 +198,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
 
     final static IndexedSprite a(byte param0) {
         int var2 = 77 % ((20 - param0) / 41);
-        IndexedSprite var1 = new IndexedSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], LimitedRandomAccessFile.field_b[0], IntrusiveNode.field_h);
+        IndexedSprite var1 = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], LimitedRandomAccessFile.field_b[0], IntrusiveNode.field_h);
         OpacityWidget.h(-1);
         return var1;
     }
@@ -217,7 +217,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (wn.field_a != null) {
+          if (ReflectionReplySupport.field_a != null) {
             MessageDialog.field_xb = -1;
           }
         } catch (RuntimeException runtimeException) {

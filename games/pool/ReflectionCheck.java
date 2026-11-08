@@ -29,10 +29,10 @@ final class ReflectionCheck extends IntrusiveNode {
           if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
             return -1;
           }
-          if (param2 < ln.field_o) {
+          if (param2 < ModelOriginSupport.field_o) {
             return -1;
           }
-          if (ln.field_o + UiComponentNode.field_C.field_A <= param2) {
+          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= param2) {
             return -1;
           }
           return 1;
@@ -44,16 +44,16 @@ final class ReflectionCheck extends IntrusiveNode {
           if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
             return -1;
           }
-          if (param2 < ln.field_o) {
+          if (param2 < ModelOriginSupport.field_o) {
             return -1;
           }
-          if (ln.field_o + UiComponentNode.field_C.field_A <= param2) {
+          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= param2) {
             return -1;
           }
           return 1;
         }
-        if (oj.field_s <= param2 &&
-          param2 < oj.field_s + UiComponentNode.field_C.field_A) {
+        if (HighScoreSubmission.field_s <= param2 &&
+          param2 < HighScoreSubmission.field_s + UiComponentNode.field_C.field_A) {
           return 0;
         }
         if (param1 < RasterSnapshot.field_o) {
@@ -62,10 +62,10 @@ final class ReflectionCheck extends IntrusiveNode {
         if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
           return -1;
         }
-        if (param2 < ln.field_o) {
+        if (param2 < ModelOriginSupport.field_o) {
           return -1;
         }
-        if (ln.field_o + UiComponentNode.field_C.field_A > param2) {
+        if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A > param2) {
           return 1;
         }
         return -1;

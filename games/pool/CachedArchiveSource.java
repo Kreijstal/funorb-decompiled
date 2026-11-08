@@ -121,7 +121,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         var8 = Pool.field_O;
         try {
           if (param1 == null) {
-            stackIn_3_0 = gp.createAlertNamelength;
+            stackIn_3_0 = AchievementProtocolSupport.createAlertNamelength;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -134,7 +134,7 @@ final class CachedArchiveSource extends ArchiveProvider {
                 !Js5ArchiveManager.a(0, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 if (param2 < 96) {
-                  CachedArchiveSource.a(-125);
+                  CachedArchiveSource.getTargetFramesPerSecond(-125);
                 }
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
@@ -158,10 +158,10 @@ final class CachedArchiveSource extends ArchiveProvider {
               stackIn_18_0 = StatefulTextPainter.createAlertNameleadingspace;
               return stackIn_18_0;
             }
-            stackIn_13_0 = gp.createAlertNamelength;
+            stackIn_13_0 = AchievementProtocolSupport.createAlertNamelength;
             return stackIn_13_0;
           }
-          stackIn_8_0 = gp.createAlertNamelength;
+          stackIn_8_0 = AchievementProtocolSupport.createAlertNamelength;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         }
     }
 
-    final static int a(int param0) {
+    final static int getTargetFramesPerSecond(int param0) {
         if (param0 != -21282) {
           return 111;
         }
@@ -614,7 +614,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           var2_intLifetime1 = 86 % ((param0 - 82) / 40);
           return;
         }
-        if (rl.monotonicTimeMillis((byte) -124) < this.field_F) {
+        if (MonotonicClock.monotonicTimeMillis((byte) -124) < this.field_F) {
           var2_intLifetime2 = 86 % ((param0 - 82) / 40);
           return;
         }
@@ -632,7 +632,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           }
           var2 = (ArchiveRequest) (this.groupRequests.next(-1));
         }
-        this.field_F = rl.monotonicTimeMillis((byte) -107) + 1000L;
+        this.field_F = MonotonicClock.monotonicTimeMillis((byte) -107) + 1000L;
         var2_intLifetime3 = 86 % ((param0 - 82) / 40);
         return;
     }

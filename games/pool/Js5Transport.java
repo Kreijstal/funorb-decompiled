@@ -3,9 +3,9 @@
  */
 abstract class Js5Transport {
     DualLinkDeque urgentPending;
-    static na field_k;
+    static IntegerSyntaxSupport field_k;
     static int[] field_s;
-    static nl field_h;
+    static ServerListLauncher field_h;
     DualLinkDeque urgentInFlight;
     static Sprite field_q;
     DualLinkDeque prefetchPending;
@@ -309,9 +309,9 @@ abstract class Js5Transport {
     }
 
     static {
-        field_k = new na();
+        field_k = new IntegerSyntaxSupport();
         field_s = new int[16];
-        field_h = new nl();
+        field_h = new ServerListLauncher();
         field_n = new int[16];
         field_g = new QuickChatDynamicCommand(8, 0, 4, 1);
         mpGamedrawn = "Game drawn";

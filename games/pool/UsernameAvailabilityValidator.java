@@ -16,7 +16,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final String validationMessageForText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        wc var4 = null;
+        LoginResponse var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         Object stackIn_11_0 = null;
@@ -28,7 +28,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          var3 = pk.a(var5, param1 - 89);
+          var3 = NameNormalizationSupport.a(var5, param1 - 89);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;
@@ -37,7 +37,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             field_u = (Sprite) null;
           }
           if (!param0.equals(this.cachedUsernameCandidate)) {
-            var4 = sm.a(param0, 118);
+            var4 = PasswordInputPainter.a(param0, 118);
             if (var4 == null) {
               return null;
             }
@@ -49,7 +49,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             this.cachedUsernameAvailable = var4.field_f;
           }
           if (this.cachedUsernameAvailable) {
-            stackIn_17_0 = lb.createUsernameAvailable;
+            stackIn_17_0 = DimmedPauseMenu.createUsernameAvailable;
             return stackIn_17_0;
           }
           stackIn_15_0 = TextHotspotRegion.createUsernameUnavailable;
@@ -68,14 +68,14 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    final na validationStateForText(String param0, boolean param1) {
-        wc var3 = null;
+    final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
+        LoginResponse var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        na stackIn_2_0 = null;
-        na stackIn_5_0 = null;
-        na stackIn_11_0 = null;
-        na stackIn_16_0 = null;
+        IntegerSyntaxSupport stackIn_2_0 = null;
+        IntegerSyntaxSupport stackIn_5_0 = null;
+        IntegerSyntaxSupport stackIn_11_0 = null;
+        IntegerSyntaxSupport stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -83,15 +83,15 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!IterableDualLinkDeque.a((byte) -64, var4)) {
-            stackIn_2_0 = gp.field_d;
+            stackIn_2_0 = AchievementProtocolSupport.field_d;
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_5_0 = (na) null;
+            stackIn_5_0 = (IntegerSyntaxSupport) null;
             return stackIn_5_0;
           }
           if (!param0.equals(this.cachedUsernameCandidate)) {
-            var3 = sm.a(param0, -51);
+            var3 = PasswordInputPainter.a(param0, -51);
             if (var3 != null &&
               var3.field_b == null) {
               this.cachedUsernameCandidate = param0;
@@ -104,7 +104,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (this.cachedUsernameAvailable) {
             stackIn_16_0 = ProxySocketConnector.field_e;
           } else {
-            stackIn_16_0 = gp.field_d;
+            stackIn_16_0 = AchievementProtocolSupport.field_d;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

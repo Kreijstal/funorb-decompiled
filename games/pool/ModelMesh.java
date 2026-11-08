@@ -904,10 +904,10 @@ final class ModelMesh extends RenderableModel {
                 break regionExit1;
               }
               if (param1 &&
-                this.isPointInTriangleBounds(tp.field_b + TriangleRasterizer.projectionCenterX, ScrollPaneWithFooter.field_Rb + TriangleRasterizer.projectionCenterY, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
+                this.isPointInTriangleBounds(LookupRetrySupport.field_b + TriangleRasterizer.projectionCenterX, ScrollPaneWithFooter.field_Rb + TriangleRasterizer.projectionCenterY, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = Js5ArchiveManager.field_g;
                 Js5ArchiveManager.field_g = Js5ArchiveManager.field_g + 1;
-                dq.field_d[fieldTemp$13] = param2;
+                TransformRotationSupport.field_d[fieldTemp$13] = param2;
                 param1 = false;
               }
               if ((var12 - var13) * (field_v[var11] - field_v[var10]) - (field_v[var9] - field_v[var10]) * (var14_int - var13) > 0) {

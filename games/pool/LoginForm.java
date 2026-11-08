@@ -97,7 +97,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        ml var9 = null;
+        LoginMethod var9 = null;
         LabeledChildWidget var11 = null;
         LabeledChildWidget var12 = null;
         try {
@@ -115,7 +115,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           this.usernameInput = (TextInputWidget) ((Object) new MaxLengthTextInputWidget(param0, (WidgetListener) (this), 100));
           this.passwordInput = (TextInputWidget) ((Object) new MaxLengthTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_P) {
-            this.loginButton = new ButtonWidget(sa.login, (WidgetListener) null);
+            this.loginButton = new ButtonWidget(CollisionContact.login, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_O) {
@@ -136,19 +136,19 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.secondaryButton = new ButtonWidget(FullscreenDisplayMode.quittowebsite, (WidgetListener) null);
             this.usernameInput.enabled = false;
           }
-          this.usernameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
-          this.passwordInput.renderer = (WidgetPainter) ((Object) new sm(10000536));
+          this.usernameInput.renderer = (WidgetPainter) ((Object) new TextInputPainter(10000536));
+          this.passwordInput.renderer = (WidgetPainter) ((Object) new PasswordInputPainter(10000536));
           var6 = new ThreeSliceButtonPainter();
           this.loginButton.renderer = (WidgetPainter) ((Object) var6);
           if (this.secondaryButton != null) {
             this.secondaryButton.renderer = (WidgetPainter) ((Object) var6);
           }
-          this.usernameInput.hoverText = pn.loginUsernameTooltip;
+          this.usernameInput.hoverText = ChatMessage.loginUsernameTooltip;
           if (null != this.createAccountButton) {
             this.createAccountButton.renderer = (WidgetPainter) ((Object) var6);
           }
           if (this.createAccountButton != null) {
-            this.createAccountButton.hoverText = fc.loginCreateTooltip;
+            this.createAccountButton.hoverText = AccountMenuText.loginCreateTooltip;
           }
           if (!this.field_P) {
             if (this.field_O) {
@@ -165,7 +165,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (this.field_T != null) {
             this.widgetY = this.widgetY + (5 + var7.measureWrappedHeight(this.field_T, -40 + this.widgetWidth, var7.maxAscent));
           }
-          var8 = vi.loginUsernameEmail;
+          var8 = Cp1252CharacterSupport.loginUsernameEmail;
           var9 = NameEntryPopup.a(NanoTickClock.getApplet(76), 5137);
           if (var9 == SocialListEntry.field_Xb) {
             var8 = ReportAbuseDialog.loginEmail;
@@ -303,7 +303,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     private final void submitLogin(int param0) {
         UiWidget var3;
-        if (td.a(true) ||
+        if (Base37Support.a(true) ||
           !(this.usernameInput.widgetText.length() <= 0) &&
           !(this.passwordInput.widgetText.length() <= 0)) {
           LoginForm.a((byte) 34, this.usernameInput.widgetText, this.passwordInput.widgetText);
@@ -320,7 +320,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             String var4 = (String) null;
             LoginForm.a((byte) -59, (String) null, (String) null);
           }
-          qa.a(false, param1, -102, param2);
+          HotspotRectangle.a(false, param1, -102, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -449,7 +449,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
               var3 = ModelInstance.a((byte) -61, var3, param1);
-              jc.openUrl(-10553, param1, var3.toString(), true);
+              AppletUrlSupport.openUrl(-10553, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;

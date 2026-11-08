@@ -119,13 +119,13 @@ final class LobbyGame extends UiComponent {
         NetworkGameClient.field_z = false;
         ClientException.field_d = null;
         var1 = -42 % ((-1 - param0) / 38);
-        if (!ro.field_e) {
+        if (!ProjectedVertex.field_e) {
           var2 = Js5Transport.field_l;
           if (var2 > 0) {
             if (1 == var2) {
               ClientException.field_d = DialRenderer.ticketingOneunread;
             } else {
-              ClientException.field_d = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var2)}, -1, sa.ticketingXunread);
+              ClientException.field_d = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var2)}, -1, CollisionContact.ticketingXunread);
             }
             ClientException.field_d = DebugOverlayLayoutSupport.joinCharSequences(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) CacheEntry.ticketingGotowebsite)});
           }
@@ -207,7 +207,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -229,7 +229,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -270,7 +270,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
                         continue scanLoop1;
@@ -306,7 +306,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -320,7 +320,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_14) {
                         statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
                         continue scanLoop1;
@@ -337,7 +337,7 @@ final class LobbyGame extends UiComponent {
                     } catch (Throwable stateCaught_16) {
                         statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 19 : -1);
                         if (statePc == -1) {
-                            throw LobbyGame.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
+                            throw LobbyGame.<RuntimeException>throwUnchecked(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
                         continue scanLoop1;
@@ -412,7 +412,7 @@ final class LobbyGame extends UiComponent {
         if (param0 != 20872) {
           this.field_Dc = true;
         }
-        return (int)this.a(-127);
+        return (int)this.getSecondaryKey(-127);
     }
 
     final boolean comesBeforeGame(LobbyGame param0, boolean param1) {
@@ -594,7 +594,7 @@ final class LobbyGame extends UiComponent {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

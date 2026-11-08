@@ -135,18 +135,18 @@ final class LocalGameSetupScreen extends MenuScreen {
           if (!ViewportController.field_q.ensureGroupAvailableByName("benefits", 0)) {
             return false;
           }
-          if (!rl.field_h.ensureGroupAvailableByName("benefits/", 0)) {
+          if (!MonotonicClock.field_h.ensureGroupAvailableByName("benefits/", 0)) {
             return false;
           }
-          PotEvent.field_m = lb.loadSprite(ViewportController.field_q, param0 - 29, "benefits", "members_benefits_borders");
+          PotEvent.field_m = DimmedPauseMenu.loadSprite(ViewportController.field_q, param0 - 29, "benefits", "members_benefits_borders");
           for (var1_int = 0; var1_int < PotEvent.field_m.field_D.length; var1_int++) {
             if (0 == (-16777216 & PotEvent.field_m.field_D[var1_int])) {
               PotEvent.field_m.field_D[var1_int] = 0;
             }
           }
-          rf.field_g = WidgetStyleLayer.loadSprite("benefits", (byte) 118, "members_benefits_logo", ViewportController.field_q);
+          AccountDisplayNameSupport.field_g = WidgetStyleLayer.loadSprite("benefits", (byte) 118, "members_benefits_logo", ViewportController.field_q);
           QuickChatMenu.field_Rb = WidgetStyleLayer.loadSprite("benefits", (byte) 69, "members_benefits_price", ViewportController.field_q);
-          var5 = new Sprite(rl.field_h.getFileByName(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) TextLineLayout.a((byte) -67)));
+          var5 = new Sprite(MonotonicClock.field_h.getFileByName(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) TextLineLayout.a((byte) -67)));
           ShotEvent.field_o = new Sprite[3];
           for (var2 = 0; var2 < ShotEvent.field_o.length; var2++) {
             var3 = new Sprite(var5.field_w, var5.field_y / ShotEvent.field_o.length);
@@ -161,7 +161,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           FaceNormal.a(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
           AchievementNotice.a(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
           GameApplet.a(ShotEvent.field_o, -58);
-          CheckboxPainter.a(rf.field_g, 106);
+          CheckboxPainter.a(AccountDisplayNameSupport.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,8 +200,8 @@ final class LocalGameSetupScreen extends MenuScreen {
                   if (44 != var4) {
                     if (var4 == 45) {
                       if (this.selection.isPressActivated((byte) 71) &&
-                        la.field_a < te.field_p[0] - 1) {
-                        la.field_a = la.field_a + 1;
+                        ChatPanelSupport.field_a < ByteArrayNode.field_p[0] - 1) {
+                        ChatPanelSupport.field_a = ChatPanelSupport.field_a + 1;
                         PlayerContextMenu.updatePageControls(param0 ^ -16473);
                       }
                     } else {
@@ -209,15 +209,15 @@ final class LocalGameSetupScreen extends MenuScreen {
                         super.handleMenuAction(-16470, param1, param2);
                       } else {
                         if (this.selection.isPressActivated((byte) 64)) {
-                          un.field_e = 1 - un.field_e;
+                          LookupProtocolSupport.field_e = 1 - LookupProtocolSupport.field_e;
                           ByteStorage.d(param0 ^ 16424);
                         }
                       }
                     }
                   } else {
                     if (this.selection.isPressActivated((byte) 68) &&
-                      la.field_a > 0) {
-                      la.field_a = la.field_a - 1;
+                      ChatPanelSupport.field_a > 0) {
+                      ChatPanelSupport.field_a = ChatPanelSupport.field_a - 1;
                       PlayerContextMenu.updatePageControls(13);
                     }
                   }
@@ -264,74 +264,74 @@ final class LocalGameSetupScreen extends MenuScreen {
         NineSliceFrame.field_a = new UiComponent(-1L, (UiComponent) null, var2, var3, SoftwareRasterizer.width - 2 * var2, -var3 + var4 + (SoftwareRasterizer.height - var3), (String) null);
         IterableNodeHashTable.field_e = new UiComponent(-1L, (UiComponent) null, 40, 50, 240, 200, (String) null);
         IterableNodeHashTable.field_e.horizontalAlignment = 1;
-        IterableNodeHashTable.field_e.frameSprites = rm.field_g;
-        IterableNodeHashTable.field_e.selectedFrameSprites = ln.field_s;
+        IterableNodeHashTable.field_e.frameSprites = MeshSymmetrySupport.field_g;
+        IterableNodeHashTable.field_e.selectedFrameSprites = ModelOriginSupport.field_s;
         NineSliceFrame.field_a.addChild(-114, IterableNodeHashTable.field_e);
-        UiComponent dupTemp$0 = u.a((byte) 68, 10, 55, false, 28);
+        UiComponent dupTemp$0 = MeshRenderSupport.a((byte) 68, 10, 55, false, 28);
         TikiTableScene.field_V = dupTemp$0;
         IterableNodeHashTable.field_e.addChild(-102, dupTemp$0);
-        UiComponent dupTemp$1 = u.a((byte) 120, 210, 55, true, 27);
+        UiComponent dupTemp$1 = MeshRenderSupport.a((byte) 120, 210, 55, true, 27);
         ArchiveLoadStep.field_f = dupTemp$1;
         IterableNodeHashTable.field_e.addChild(122, dupTemp$1);
         MultiHandleSliderWidget.a(false, IterableNodeHashTable.field_e, TikiTableScene.field_V);
         MultiHandleSliderWidget.a(false, IterableNodeHashTable.field_e, ArchiveLoadStep.field_f);
-        jq.field_f = new UiComponent(-1L, (UiComponent) null, 0, 0, 160, 150, (String) null);
-        jq.field_f.horizontalAlignment = 1;
-        jq.field_f.verticalAlignment = 1;
-        jq.field_f.frameSprites = UsernameSuggestionsPanel.field_N;
-        IterableNodeHashTable.field_e.addChild(-116, jq.field_f);
+        QuickChatNavigationSupport.field_f = new UiComponent(-1L, (UiComponent) null, 0, 0, 160, 150, (String) null);
+        QuickChatNavigationSupport.field_f.horizontalAlignment = 1;
+        QuickChatNavigationSupport.field_f.verticalAlignment = 1;
+        QuickChatNavigationSupport.field_f.frameSprites = UsernameSuggestionsPanel.field_N;
+        IterableNodeHashTable.field_e.addChild(-116, QuickChatNavigationSupport.field_f);
         this.g(4);
         PoolGameModel.field_v = new UiComponent(-1L, (UiComponent) null, 290, IterableNodeHashTable.field_e.localY, 270, 60, (String) null);
-        PoolGameModel.field_v.sprite = dq.createTextLabelSprite(4, 0, ArchiveAvailabilitySupport.muOptionsPlayers);
+        PoolGameModel.field_v.sprite = TransformRotationSupport.createTextLabelSprite(4, 0, ArchiveAvailabilitySupport.muOptionsPlayers);
         PoolGameModel.field_v.sprite.field_G = 10;
-        PoolGameModel.field_v.frameSprites = rm.field_g;
-        dk.a(PoolGameModel.field_v, (byte) 93);
+        PoolGameModel.field_v.frameSprites = MeshSymmetrySupport.field_g;
+        GlowParticle.a(PoolGameModel.field_v, (byte) 93);
         PoolUiText.field_f = new UiComponent(-1L, (UiComponent) null, 130, 10, 100, 40, (String) null);
         PoolUiText.field_f.verticalAlignment = 1;
         PoolUiText.field_f.horizontalAlignment = 1;
         PoolUiText.field_f.frameSprites = UsernameSuggestionsPanel.field_N;
         PoolGameModel.field_v.addChild(-106, PoolUiText.field_f);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, PoolUiText.field_f);
-        UiComponent dupTemp$2 = u.a((byte) 67, 100, 10, false, 64);
+        UiComponent dupTemp$2 = MeshRenderSupport.a((byte) 67, 100, 10, false, 64);
         RasterSnapshot.field_w = dupTemp$2;
         PoolGameModel.field_v.addChild(114, dupTemp$2);
-        UiComponent dupTemp$3 = u.a((byte) 112, 235, 10, true, 63);
-        ih.field_e = dupTemp$3;
+        UiComponent dupTemp$3 = MeshRenderSupport.a((byte) 112, 235, 10, true, 63);
+        LoginRequestSupport.field_e = dupTemp$3;
         PoolGameModel.field_v.addChild(33, dupTemp$3);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, RasterSnapshot.field_w);
-        MultiHandleSliderWidget.a(false, PoolGameModel.field_v, ih.field_e);
+        MultiHandleSliderWidget.a(false, PoolGameModel.field_v, LoginRequestSupport.field_e);
         KillerRules.c((byte) -45);
         NineSliceFrame.field_a.addChild(-111, PoolGameModel.field_v);
-        hg.field_c = new UiComponent(0L, (UiComponent) null, PoolGameModel.field_v.localX, PoolGameModel.field_v.localY - (-PoolGameModel.field_v.height - 10), PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
-        hg.field_c.horizontalAlignment = 0;
-        hg.field_c.frameSprites = rm.field_g;
-        hg.field_c.sprite = dq.createTextLabelSprite(4, 0, CushionSegment.timer);
-        hg.field_c.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
-        dk.a(hg.field_c, (byte) 93);
-        NineSliceFrame.field_a.addChild(-99, hg.field_c);
+        AppletContainerSupport.field_c = new UiComponent(0L, (UiComponent) null, PoolGameModel.field_v.localX, PoolGameModel.field_v.localY - (-PoolGameModel.field_v.height - 10), PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
+        AppletContainerSupport.field_c.horizontalAlignment = 0;
+        AppletContainerSupport.field_c.frameSprites = MeshSymmetrySupport.field_g;
+        AppletContainerSupport.field_c.sprite = TransformRotationSupport.createTextLabelSprite(4, 0, CushionSegment.timer);
+        AppletContainerSupport.field_c.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
+        GlowParticle.a(AppletContainerSupport.field_c, (byte) 93);
+        NineSliceFrame.field_a.addChild(-99, AppletContainerSupport.field_c);
         VerticalScrollbar.field_Nb = new UiComponent(-1L, (UiComponent) null, PoolUiText.field_f.localX, PoolUiText.field_f.localY, PoolUiText.field_f.width, PoolUiText.field_f.height, (String) null);
         VerticalScrollbar.field_Nb.horizontalAlignment = 1;
         VerticalScrollbar.field_Nb.frameSprites = UsernameSuggestionsPanel.field_N;
         VerticalScrollbar.field_Nb.verticalAlignment = 1;
-        hg.field_c.addChild(49, VerticalScrollbar.field_Nb);
-        UiComponent dupTemp$4 = u.a((byte) 102, RasterSnapshot.field_w.localX, RasterSnapshot.field_w.localY, false, 45);
+        AppletContainerSupport.field_c.addChild(49, VerticalScrollbar.field_Nb);
+        UiComponent dupTemp$4 = MeshRenderSupport.a((byte) 102, RasterSnapshot.field_w.localX, RasterSnapshot.field_w.localY, false, 45);
         DualLinkNodeHashTable.field_f = dupTemp$4;
-        hg.field_c.addChild(112, dupTemp$4);
-        UiComponent dupTemp$5 = u.a((byte) 124, ih.field_e.localX, RasterSnapshot.field_w.localY, true, 44);
+        AppletContainerSupport.field_c.addChild(112, dupTemp$4);
+        UiComponent dupTemp$5 = MeshRenderSupport.a((byte) 124, LoginRequestSupport.field_e.localX, RasterSnapshot.field_w.localY, true, 44);
         TickClock.field_i = dupTemp$5;
-        hg.field_c.addChild(84, dupTemp$5);
-        MultiHandleSliderWidget.a(false, hg.field_c, DualLinkNodeHashTable.field_f);
-        MultiHandleSliderWidget.a(false, hg.field_c, TickClock.field_i);
+        AppletContainerSupport.field_c.addChild(84, dupTemp$5);
+        MultiHandleSliderWidget.a(false, AppletContainerSupport.field_c, DualLinkNodeHashTable.field_f);
+        MultiHandleSliderWidget.a(false, AppletContainerSupport.field_c, TickClock.field_i);
         PlayerContextMenu.updatePageControls(13);
-        CacheEntry.field_x = new UiComponent(46L, (UiComponent) null, PoolGameModel.field_v.localX, hg.field_c.localY + hg.field_c.height + 10, PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
-        CacheEntry.field_x.frameSprites = rm.field_g;
+        CacheEntry.field_x = new UiComponent(46L, (UiComponent) null, PoolGameModel.field_v.localX, AppletContainerSupport.field_c.localY + AppletContainerSupport.field_c.height + 10, PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
+        CacheEntry.field_x.frameSprites = MeshSymmetrySupport.field_g;
         CacheEntry.field_x.horizontalAlignment = 0;
-        CacheEntry.field_x.selectedFrameSprites = ln.field_s;
-        CacheEntry.field_x.sprite = dq.createTextLabelSprite(4, 0, DisplayModeSupport.gameoptlabels[3]);
-        CacheEntry.field_x.selectedSprite = dq.createTextLabelSprite(3, 0, DisplayModeSupport.gameoptlabels[3]);
+        CacheEntry.field_x.selectedFrameSprites = ModelOriginSupport.field_s;
+        CacheEntry.field_x.sprite = TransformRotationSupport.createTextLabelSprite(4, 0, DisplayModeSupport.gameoptlabels[3]);
+        CacheEntry.field_x.selectedSprite = TransformRotationSupport.createTextLabelSprite(3, 0, DisplayModeSupport.gameoptlabels[3]);
         CacheEntry.field_x.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
         CacheEntry.field_x.selectedSprite.field_G = PoolGameModel.field_v.sprite.field_G;
-        dk.a(CacheEntry.field_x, (byte) 93);
+        GlowParticle.a(CacheEntry.field_x, (byte) 93);
         TextureCache.field_c = new UiComponent(-1L, (UiComponent) null, PoolUiText.field_f.localX, PoolUiText.field_f.localY, PoolUiText.field_f.width, PoolUiText.field_f.height, (String) null);
         TextureCache.field_c.horizontalAlignment = 1;
         TextureCache.field_c.frameSprites = UsernameSuggestionsPanel.field_N;
@@ -356,9 +356,9 @@ final class LocalGameSetupScreen extends MenuScreen {
     }
 
     private final void g(int param0) {
-        IterableNodeHashTable.field_e.sprite = dq.createTextLabelSprite(param0, 0, LobbyPlayer.rulesetNames[DialWidget.field_W]);
-        jq.field_f.sprite = sb.field_c[DialWidget.field_W];
-        TextureCache.a(IterableNodeHashTable.field_e, jq.field_f, -89);
+        IterableNodeHashTable.field_e.sprite = TransformRotationSupport.createTextLabelSprite(param0, 0, LobbyPlayer.rulesetNames[DialWidget.field_W]);
+        QuickChatNavigationSupport.field_f.sprite = SpriteResourceSupport.field_c[DialWidget.field_W];
+        TextureCache.a(IterableNodeHashTable.field_e, QuickChatNavigationSupport.field_f, -89);
     }
 
     final void drawScreen(int param0) {
@@ -392,7 +392,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         NineSliceFrame.field_a.updateRoot(true, false);
         super.advanceScreen(-1);
         int var2 = ~this.selection.selectedIndex <= param0 ? this.itemIds[this.selection.selectedIndex] : -1;
-        ek.a(NineSliceFrame.field_a, (byte) -111, var2);
+        MenuSelectionSupport.selectComponentTreeByKey(NineSliceFrame.field_a, (byte) -111, var2);
     }
 
     LocalGameSetupScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -464,7 +464,7 @@ final class LocalGameSetupScreen extends MenuScreen {
     }
 
     final static void f(int param0) {
-        DottedRectangleSupport var1 = (DottedRectangleSupport) (BallSkin.field_i.last((byte) -105));
+        LookupQuery var1 = (LookupQuery) (BallSkin.field_i.last((byte) -105));
         int var2 = -46 / ((-18 - param0) / 38);
         if (var1 == null) {
           ShotEvent.c(-127);
