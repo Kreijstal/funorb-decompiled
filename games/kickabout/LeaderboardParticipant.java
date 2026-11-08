@@ -76,7 +76,7 @@ final class LeaderboardParticipant {
         int var17_intLifetime4;
         var21 = Kickabout.field_G;
         try {
-          ok.field_b = param11;
+          Cp1252EncodingSupport.field_b = param11;
           MouseInputHandler.field_f = param2;
           HighScoreQuery.field_f = param10;
           SharedSpriteTables.field_a = param7;
@@ -87,7 +87,7 @@ final class LeaderboardParticipant {
           VertexNormal.field_d = param0;
           LoadingProgressDialog.field_Q = param12;
           IntValueNode.field_f = param3;
-          ca.field_g = param6;
+          GradientRasterSupport.field_g = param6;
           TextFieldValidator.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
           CachedArchiveSource.field_m = ModalStack.a(param9, 86, "lobby", "ratedgame");
           MarkerSliderWidget.field_L = ModalStack.a(param9, -6, "lobby", "opentome");
@@ -95,13 +95,13 @@ final class LeaderboardParticipant {
           WidgetContainer.field_w = new String[5];
           WidgetContainer.field_w[0] = ConsoleExpression.field_m;
           WidgetContainer.field_w[4] = TeamSelectionAgent.field_g;
-          WidgetContainer.field_w[3] = bq.field_b;
+          WidgetContainer.field_w[3] = MatchUiLayoutSupport.field_b;
           WidgetContainer.field_w[2] = LobbyMatchPreview.field_h;
           WidgetContainer.field_w[1] = IconButtonPainter.field_d;
           TickClock.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
           StatefulTextPainter.field_s = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
-          TextPromptState.field_c = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
-          LineupView.field_u = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
+          TextPromptState.field_c = new UiLayoutNode(0L, SquadPickerDialog.field_P, GoalSpriteLoader.field_b);
+          LineupView.field_u = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, SharedScrollbarState.field_b);
           TickClock.field_d.addChild((byte) -114, StatefulTextPainter.field_s);
           if (NetworkArchiveRequest.field_t) {
             TickClock.field_d.addChild((byte) -107, TextPromptState.field_c);
@@ -118,16 +118,16 @@ final class LeaderboardParticipant {
           AuctionItem.field_o = new UiLayoutNode(0L, LeaguesHelpScreen.field_H, ConsoleValue.field_f.toUpperCase());
           QuickChatCategoryCache.field_b = new UiLayoutNode(0L, AudioService.field_g);
           PlayingView.field_w = new UiLayoutNode(0L, TrinketIcon.field_zb, NameSuggestionsPanel.field_B);
-          LoginRequiredDialog.field_G = new UiLayoutNode(0L, gw.field_a, UrlRequest.field_j);
+          LoginRequiredDialog.field_G = new UiLayoutNode(0L, HuffmanTextSupport.field_a, UrlRequest.field_j);
           if (param13 <= 23) {
             field_i = (String) null;
           }
-          TextWidgetPainter.field_n = new UiLayoutNode(0L, gw.field_a, ThreadSleepSupport.field_c);
-          AuctionsHelpScreen.field_G = new UiLayoutNode(0L, gw.field_a, UiLayoutNode.field_C);
-          DateInputWidget.field_D = new UiLayoutNode(0L, gw.field_a, ArchiveManager.field_j);
-          RegistrationRequestDialog.field_lb = new UiLayoutNode(0L, SquadPickerDialog.field_P, ig.field_h);
-          ShopPlayerSlot.field_Jb = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
-          ClassNameSupport.field_d = new UiLayoutNode(0L, TextFieldNode.field_Qb, vp.field_n.toUpperCase());
+          TextWidgetPainter.field_n = new UiLayoutNode(0L, HuffmanTextSupport.field_a, ThreadSleepSupport.field_c);
+          AuctionsHelpScreen.field_G = new UiLayoutNode(0L, HuffmanTextSupport.field_a, UiLayoutNode.field_C);
+          DateInputWidget.field_D = new UiLayoutNode(0L, HuffmanTextSupport.field_a, ArchiveManager.field_j);
+          RegistrationRequestDialog.field_lb = new UiLayoutNode(0L, SquadPickerDialog.field_P, MatchHudSupport.field_h);
+          ShopPlayerSlot.field_Jb = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, SharedScrollbarState.field_b);
+          ClassNameSupport.field_d = new UiLayoutNode(0L, TextFieldNode.field_Qb, MatchTextInputOverlay.field_n.toUpperCase());
           ClassNameSupport.field_d.field_lb = NetworkArchiveRequest.field_t;
           stackIn_7_0 = null;
           stackIn_7_1 = null;
@@ -136,7 +136,7 @@ final class LeaderboardParticipant {
           if (NetworkArchiveRequest.field_t) {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_4 = oo.field_g;
+            stackIn_8_4 = PlatformTaskState.field_g;
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
@@ -175,50 +175,50 @@ final class LeaderboardParticipant {
           GameQuickChatResolver.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           GameQuickChatResolver.field_c.field_A = 1;
           BufferedSocket.field_u = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
-          DoSomethingCommand.field_D = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
-          ClientException.field_c = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
+          DoSomethingCommand.field_D = new UiLayoutNode(0L, SquadPickerDialog.field_P, GoalSpriteLoader.field_b);
+          ClientException.field_c = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, SharedScrollbarState.field_b);
           AchievementsScreen.field_C.addChild((byte) -114, GameQuickChatResolver.field_c);
           AchievementsScreen.field_C.addChild((byte) -105, BufferedSocket.field_u);
           if (NetworkArchiveRequest.field_t) {
             AchievementsScreen.field_C.addChild((byte) -123, DoSomethingCommand.field_D);
           }
           AchievementsScreen.field_C.addChild((byte) -122, (UiLayoutNode) (ClientException.field_c));
-          TrinketUnlockNotice.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, ns.field_b.toUpperCase());
+          TrinketUnlockNotice.field_b = new UiLayoutNode(0L, LongPlusOneCommand.field_D, NotificationPanelPositionSupport.field_b.toUpperCase());
           IterableDualLinkDeque.field_h = new UiLayoutNode(0L, LeaguesHelpScreen.field_H);
-          sg.field_a = new UiLayoutNode(0L, AudioService.field_g);
+          ByteArrayPoolState.field_a = new UiLayoutNode(0L, AudioService.field_g);
           MouseInputHandler.field_d = new UiLayoutNode(0L, IntValueNode.field_i, IntDoubleCommand.field_F.toUpperCase());
           SocialTabsPanel.field_c = new ContextMenuItem[param4 + 4][];
           SessionUrlSupport.field_b = new UiLayoutNode[4 + param4];
-          SessionUrlSupport.field_b[0] = new UiLayoutNode(0L, DisplayModeSupport.field_b, mi.field_a);
+          SessionUrlSupport.field_b[0] = new UiLayoutNode(0L, DisplayModeSupport.field_b, ConsoleArgumentSupport.field_a);
           SocialTabsPanel.field_c[0] = new ContextMenuItem[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            SocialTabsPanel.field_c[0][var17_int + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
+            SocialTabsPanel.field_c[0][var17_int + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= VertexNormal.field_d.length) {
             SessionUrlSupport.field_b[1] = new UiLayoutNode(0L, DisplayModeSupport.field_b, Checkbox.field_H);
             array$0 = new ContextMenuItem[VertexNormal.field_d.length + 1];
             SocialTabsPanel.field_c[1] = array$0;
-            SocialTabsPanel.field_c[1][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[1][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, FaceNormal.field_b);
             for (var17_intLifetime1 = 0; VertexNormal.field_d.length > var17_intLifetime1; var17_intLifetime1++) {
-              SocialTabsPanel.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(VertexNormal.field_d[var17_intLifetime1]));
+              SocialTabsPanel.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, Integer.toString(VertexNormal.field_d[var17_intLifetime1]));
             }
           }
           SessionUrlSupport.field_b[2] = new UiLayoutNode(0L, DisplayModeSupport.field_b, GzipDecoder.field_b);
-          SocialTabsPanel.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[1], um.field_g)};
+          SocialTabsPanel.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, FaceNormal.field_b), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, MessageDialog.field_E[1], MachineTokenStorageSupport.field_g)};
           if (MouseInputHandler.field_f > 1) {
             SessionUrlSupport.field_b[3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, DisplayNameUiSupport.field_b);
             array$1 = new ContextMenuItem[1 + MouseInputHandler.field_f];
             SocialTabsPanel.field_c[3] = array$1;
-            SocialTabsPanel.field_c[3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, FaceNormal.field_b);
             for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              SocialTabsPanel.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
+              SocialTabsPanel.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
-            SessionUrlSupport.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, ok.field_b[var17_intLifetime3]);
+            SessionUrlSupport.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, Cp1252EncodingSupport.field_b[var17_intLifetime3]);
             array$2 = new ContextMenuItem[TextLayoutLine.b(255, (int) NamedValueEntry.field_k[var17_intLifetime3]) + 1];
             SocialTabsPanel.field_c[var17_intLifetime3 + 4] = array$2;
-            SocialTabsPanel.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, FaceNormal.field_b);
             for (var18 = 0; (255 & NamedValueEntry.field_k[var17_intLifetime3]) > var18; var18++) {
               if (HighScoreQuery.field_f != null) {
                 if (null == HighScoreQuery.field_f[var17_intLifetime3]) {
@@ -238,7 +238,7 @@ final class LeaderboardParticipant {
               } else {
                 var20 = null;
               }
-              SocialTabsPanel.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
+              SocialTabsPanel.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -263,16 +263,16 @@ final class LeaderboardParticipant {
           var17.field_A = 1;
           AuctionItem.field_p = new UiLayoutNode(0L, (UiLayoutNode) null);
           AuctionItem.field_p.addChild((byte) -106, IterableDualLinkDeque.field_h);
-          AuctionItem.field_p.addChild((byte) -111, sg.field_a);
-          sg.field_a.addChild((byte) -107, MouseInputHandler.field_d);
+          AuctionItem.field_p.addChild((byte) -111, ByteArrayPoolState.field_a);
+          ByteArrayPoolState.field_a.addChild((byte) -107, MouseInputHandler.field_d);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(VertexNormal.field_d.length < 2)) && (var18Lifetime2 != 3 ||
               !(MouseInputHandler.field_f <= 1))) {
-              sg.field_a.addChild((byte) -121, SessionUrlSupport.field_b[var18Lifetime2]);
+              ByteArrayPoolState.field_a.addChild((byte) -121, SessionUrlSupport.field_b[var18Lifetime2]);
               for (var19 = 0; var19 < SocialTabsPanel.field_c[var18Lifetime2].length; var19++) {
                 if (SocialTabsPanel.field_c[var18Lifetime2][var19] != null) {
-                  sg.field_a.addChild((byte) -115, (UiLayoutNode) (SocialTabsPanel.field_c[var18Lifetime2][var19]));
+                  ByteArrayPoolState.field_a.addChild((byte) -115, (UiLayoutNode) (SocialTabsPanel.field_c[var18Lifetime2][var19]));
                 }
               }
             }
@@ -280,7 +280,7 @@ final class LeaderboardParticipant {
           AuctionItem.field_p.addChild((byte) -112, DualLinkHashTable.field_d);
           AuctionItem.field_p.addChild((byte) -124, GoalStateAgent.field_k);
           AuctionItem.field_p.addChild((byte) -108, MarkerSliderWidget.field_F);
-          is.field_b = new UiLayoutNode(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
+          TextLineLayoutSupport.field_b = new UiLayoutNode(0L, AccountTermsPanel.field_H, SocialRowOrderSupport.field_b.toUpperCase());
           BlackFadeScreen.field_i = new UiLayoutNode(0L, PortraitCacheOrder.field_a, CalendarSupport.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,9 +383,9 @@ final class LeaderboardParticipant {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = lt.field_a[TextLayoutLine.b((int) var21[var6], 255)];
+              var10[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
+            var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
           } else {
             var16 = RowRangeRequest.field_e[var2];
             var12 = var16;
@@ -395,9 +395,9 @@ final class LeaderboardParticipant {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = PainterStyle.a(lt.field_a[TextLayoutLine.b((int) var21[var7], 255)], TextLayoutLine.b(-16777216, var16[var7] << 24));
+              var6_ref_int__[var7] = PainterStyle.a(PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var21[var7], 255)], TextLayoutLine.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {
@@ -566,7 +566,7 @@ final class LeaderboardParticipant {
         }
         try {
           ClassDescriptorSupport.field_a.addLast(param1, 3);
-          te.writeAchievementSubmission(param0, param1, (byte) -112);
+          QuickChatMenuFactory.writeAchievementSubmission(param0, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

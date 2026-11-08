@@ -61,7 +61,7 @@ final class ListingRowCache {
         int var2 = 20 % ((param0 + 4) / 40);
         for (var3 = 0; 7 > var3; var3++) {
           AuctionListingDialog.field_L[var3].a(true);
-          mt.field_f[var3] = 0;
+          GoalSpriteLoader.field_f[var3] = 0;
         }
     }
 
@@ -72,19 +72,19 @@ final class ListingRowCache {
           param1 != ServerTextTemplate.field_a) {
           WidgetContainer.field_z = true;
           ServerTextTemplate.field_a = param1;
-          ca.a(3, param3);
+          GradientRasterSupport.a(3, param3);
         }
         if (param2 == 1 &&
           ConsoleTokenCursor.field_b != param1) {
           ConsoleTokenCursor.field_b = param1;
           WidgetContainer.field_z = true;
-          ca.a(3, param3);
+          GradientRasterSupport.a(3, param3);
         }
         if (param2 == 2 &&
-          fc.field_a != param1) {
+          LoginResponseUiSupport.field_a != param1) {
           WidgetContainer.field_z = true;
-          fc.field_a = param1;
-          ca.a(3, param3);
+          LoginResponseUiSupport.field_a = param1;
+          GradientRasterSupport.a(3, param3);
         }
     }
 
@@ -130,7 +130,7 @@ final class ListingRowCache {
           if (var5 == null) {
             var5 = new CachedListingRow(param1, PlayerPortraitCacheEntry.millisToMinutes(-1090519040, param2));
             AuctionListingDialog.field_L[param1.category].put(var5, -116, (long)param1.rowId);
-            mt.field_f[param1.category] = mt.field_f[param1.category] + 1;
+            GoalSpriteLoader.field_f[param1.category] = GoalSpriteLoader.field_f[param1.category] + 1;
           } else {
             var5.field_g = param1;
             var5.field_f = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, param2);
@@ -156,7 +156,7 @@ final class ListingRowCache {
             var7 = 5;
             if (param1 > var6.field_g.rowId ||
               var6.field_g.rowId > param0) {
-              if (256 <= mt.field_f[var5]) {
+              if (256 <= GoalSpriteLoader.field_f[var5]) {
                 var7 = 0;
               } else {
                 var7 = 2;
@@ -164,7 +164,7 @@ final class ListingRowCache {
             }
             if (-var6.field_f + var4 >= var7) {
               var6.c((byte) -109);
-              mt.field_f[var5] = mt.field_f[var5] - 1;
+              GoalSpriteLoader.field_f[var5] = GoalSpriteLoader.field_f[var5] - 1;
             }
             var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].a(-1));
           }

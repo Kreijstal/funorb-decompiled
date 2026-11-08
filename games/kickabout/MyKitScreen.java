@@ -270,9 +270,9 @@ final class MyKitScreen extends TeamManagementScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
           var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
         }
-        un.field_d.a(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
+        ByteArrayPool.field_d.a(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
-          un.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
+          ByteArrayPool.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
         this.field_P.draw(114, false);
         AuctionListing.a(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
@@ -481,7 +481,7 @@ final class MyKitScreen extends TeamManagementScreen {
         if (param0 <= 100) {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
-        if (!LoadingProgressSupport.field_d.field_k[0].prepareTrackSamples(1, 176400, vp.field_j, bq.field_a, LocalizedTextLoader.field_d[param1])) {
+        if (!LoadingProgressSupport.field_d.field_k[0].prepareTrackSamples(1, 176400, MatchTextInputOverlay.field_j, MatchUiLayoutSupport.field_a, LocalizedTextLoader.field_d[param1])) {
           AnimationPlayer.a((byte) 113);
           return false;
         }

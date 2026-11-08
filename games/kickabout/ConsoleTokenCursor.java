@@ -49,7 +49,7 @@ final class ConsoleTokenCursor {
           PasswordFieldPainter.field_B.clear(22997);
           SquadPickerDialog.field_N = new DualLinkHashTable(param2);
           DelayedServerPacket.field_h = 0;
-          mi.field_d = -1;
+          ConsoleArgumentSupport.field_d = -1;
           MusicPatchNode.field_o = -1;
           SharedSpriteTables.field_b = 0;
           if (param6.field_jb == null) {

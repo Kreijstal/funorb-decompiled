@@ -25,13 +25,13 @@ final class SquadPickerDialog extends MessageDialog {
         }
         try {
           QuickChatPhraseDefinition.field_r = param1;
-          or.field_d.b(54, (byte) 89);
-          fieldTemp$0 = or.field_d.field_n + 1;
-          or.field_d.field_n = or.field_d.field_n + 1;
+          FootballerAiOverlaySupport.field_d.b(54, (byte) 89);
+          fieldTemp$0 = FootballerAiOverlaySupport.field_d.field_n + 1;
+          FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
           var3_int = fieldTemp$0;
-          or.field_d.writeCircumfixedString(param1, (byte) -127);
-          or.field_d.writeByte(102, param0);
-          or.field_d.backpatchByteLength(62, -var3_int + or.field_d.field_n);
+          FootballerAiOverlaySupport.field_d.writeCircumfixedString(param1, (byte) -127);
+          FootballerAiOverlaySupport.field_d.writeByte(102, param0);
+          FootballerAiOverlaySupport.field_d.backpatchByteLength(62, -var3_int + FootballerAiOverlaySupport.field_d.field_n);
           BeveledTextPainter.field_t = 500;
           PlayerContextMenu.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -221,7 +221,7 @@ final class SquadPickerDialog extends MessageDialog {
         }
         TutorialChoiceDialog.field_H = true;
         SumIntegersCommand.a(false, -112);
-        vj.field_c = 0;
+        RasterGlowSupport.field_c = 0;
         if (param0 == 66) {
           return;
         }

@@ -87,7 +87,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = or.field_d;
+        CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         int var3 = -31 / ((param0 - 40) / 56);
         var2.b(param1, (byte) 120);
         var2.writeByte(106, 1);
@@ -134,7 +134,7 @@ final class NodeHashTableIterator implements Iterator {
 
     final static boolean a(int param0, int param1, int param2) {
         if (~FixedQuaternion.field_e == param1) {
-          hq.b((byte) 124);
+          ClientInteractionSupport.dismissQuickChat((byte) 124);
           return true;
         }
         if (FixedQuaternion.field_e == 102) {

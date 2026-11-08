@@ -48,7 +48,7 @@ final class ConsoleEvaluationException extends Exception {
             }
           } else {
             if (ArchiveIndex.field_h == null) {
-              SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(oo.field_c, param1 + 0, 480, 0, 640, 0);
+              SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(PlatformTaskState.field_c, param1 + 0, 480, 0, 640, 0);
               if (null == SplashScreen.field_m) {
                 var2 = 3;
               } else {
@@ -95,7 +95,7 @@ final class ConsoleEvaluationException extends Exception {
             return;
           }
           if (ArchiveIndex.field_h == null) {
-            SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(oo.field_c, param1 + 0, 480, 0, 640, 0);
+            SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(PlatformTaskState.field_c, param1 + 0, 480, 0, 640, 0);
           } else {
             SplashScreen.field_m = ArchiveIndex.field_h.enterFullscreen(30182);
             BrowserUiSupport.notifyBrowserResize(500, 2);

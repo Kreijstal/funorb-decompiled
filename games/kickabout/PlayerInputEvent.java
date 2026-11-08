@@ -42,11 +42,11 @@ final class PlayerInputEvent extends DualLinkNode {
         if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
           return BufferedSocket.field_q + " - " + SceneSpriteFactory.field_b.getGroupProgressByName("commonui", -16248) + "%";
         }
-        if (!gs.field_c.ensureIndex(-122)) {
-          return te.field_b;
+        if (!SelectionMarkerSupport.field_c.ensureIndex(-122)) {
+          return QuickChatMenuFactory.field_b;
         }
-        if (!gs.field_c.a(false, "commonui")) {
-          return TextLine.field_l + " - " + gs.field_c.getGroupProgressByName("commonui", -16248) + "%";
+        if (!SelectionMarkerSupport.field_c.a(false, "commonui")) {
+          return TextLine.field_l + " - " + SelectionMarkerSupport.field_c.getGroupProgressByName("commonui", -16248) + "%";
         }
         if (!PlayerStats.field_k.ensureIndex(-96)) {
           return TeamSelectionAgent.field_l;
@@ -54,7 +54,7 @@ final class PlayerInputEvent extends DualLinkNode {
         if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
           return SumIntegersCommand.field_H + " - " + PlayerStats.field_k.e(-8185) + "%";
         }
-        return uf.field_a;
+        return RegistrationUiSupport.field_a;
     }
 
     public static void a(int param0) {
@@ -92,7 +92,7 @@ final class PlayerInputEvent extends DualLinkNode {
         int var11Lifetime1;
         var12 = Kickabout.field_G;
         try {
-          var14 = un.field_e;
+          var14 = ByteArrayPool.field_e;
           var2 = var14.readUnsignedByte((byte) -109);
           var3 = (RankingsRequest) (WorldDrawEntry.field_i.g(24009));
           while (var3 != null) {
@@ -118,12 +118,12 @@ final class PlayerInputEvent extends DualLinkNode {
               ByteStorage.a(var14, 542439655);
               if (var6_intLifetime1 == 0) {
                 var3.field_f = FormationView.field_r;
-                var3.field_m = pl.field_d;
+                var3.field_m = GameOptionMenuSupport.field_d;
                 var3.field_j = MenuButton.field_j;
                 var3.field_h = AuctionsHelpScreen.field_E;
-                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
+                WidgetStyleFactory.appendRankingStatistics(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, GameOptionMenuSupport.field_d);
               } else {
-                su.a(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, pl.field_d);
+                WidgetStyleFactory.appendRankingStatistics(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, GameOptionMenuSupport.field_d);
               }
             }
             TabStrip.a(var5, (byte) 63);

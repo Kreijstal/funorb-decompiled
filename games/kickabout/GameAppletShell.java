@@ -34,12 +34,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == MatchScreen.field_p &&
             !ChatComposeMode.field_b) {
-            oo.field_f = true;
-            if (is.field_c &&
+            PlatformTaskState.field_f = true;
+            if (TextLineLayoutSupport.field_c &&
               -TextLine.field_e + MonotonicClock.monotonicMillis(80) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < uk.field_a) {
+                if (var2.width < SharedScrollbarState.field_a) {
                   return;
                 }
                 if (var2.height < PlayerPortraitCacheEntry.field_f) {
@@ -100,11 +100,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Insets var6 = null;
         try {
           var2_long = MonotonicClock.monotonicMillis(85);
-          var4 = mi.field_b[CachedArchiveSource.field_E];
+          var4 = ConsoleArgumentSupport.field_b[CachedArchiveSource.field_E];
           if (param0 >= -31) {
             field_n = (String) null;
           }
-          mi.field_b[CachedArchiveSource.field_E] = var2_long;
+          ConsoleArgumentSupport.field_b[CachedArchiveSource.field_E] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
@@ -115,18 +115,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           TeamSelectionView.field_q = TeamSelectionView.field_q + 1;
           if (50 < fieldTemp$1) {
             TeamSelectionView.field_q = TeamSelectionView.field_q - 50;
-            oo.field_f = true;
+            PlatformTaskState.field_f = true;
             RegistrationRequestState.field_d.setSize(SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B);
             RegistrationRequestState.field_d.setVisible(true);
             if (null != ServerMessageScreen.field_A &&
-              null == fa.field_k) {
+              null == PendingRequestAcknowledgement.field_k) {
               var6 = ServerMessageScreen.field_A.getInsets();
-              RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H + var6.left, is.field_g + var6.top);
+              RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H + var6.left, TextLineLayoutSupport.field_g + var6.top);
               if (Kickabout.field_G != 0) {
-                RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
+                RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, TextLineLayoutSupport.field_g);
               }
             } else {
-              RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
+              RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, TextLineLayoutSupport.field_g);
             }
           }
           this.paintFrame((byte) 82);
@@ -284,9 +284,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != oo.field_c) {
+          if (null != PlatformTaskState.field_c) {
             try {
-              oo.field_c.a(true);
+              PlatformTaskState.field_c.a(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -370,7 +370,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           TextHotspotRegion.field_l = true;
-          oo.field_f = true;
+          PlatformTaskState.field_f = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,8 +402,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             RegistrationRequestState.field_d.getParent().remove((java.awt.Component) ((Object) RegistrationRequestState.field_d));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (fa.field_k != null) {
-            var2 = fa.field_k;
+          if (PendingRequestAcknowledgement.field_k != null) {
+            var2 = PendingRequestAcknowledgement.field_k;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -431,18 +431,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           RegistrationRequestState.field_d.setVisible(true);
           boolean decompiledSharedTail0 = (ServerMessageScreen.field_A == var2);
           if (!decompiledSharedTail0) {
-            RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, is.field_g);
+            RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H, TextLineLayoutSupport.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = ServerMessageScreen.field_A.getInsets();
-            RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H + var3.left, is.field_g + var3.top);
+            RegistrationRequestState.field_d.setLocation(BytePlusOneCommand.field_H + var3.left, TextLineLayoutSupport.field_g + var3.top);
           }
           RegistrationRequestState.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           RegistrationRequestState.field_d.requestFocus();
           TextHotspotRegion.field_l = true;
-          vb.field_k = true;
-          oo.field_f = true;
+          PitchDecorationSupport.field_k = true;
+          PlatformTaskState.field_f = true;
           if (param0 >= -79) {
             this.run();
           }
@@ -595,7 +595,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_80_0 < stackIn_80_1) {
                     break;
                   }
-                  is.field_c = true;
+                  TextLineLayoutSupport.field_c = true;
                   break;
                 }
               }
@@ -636,7 +636,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < SectorCacheStore.field_b)) {
                       this.d(-43);
-                      ReflectionCheck.a((byte) 41, oo.field_c, RegistrationRequestState.field_d);
+                      ReflectionCheck.a((byte) 41, PlatformTaskState.field_c, RegistrationRequestState.field_d);
                       break;
                     }
                     this.a(true);
@@ -708,7 +708,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               SpriteNumberPainter.field_d = param1;
-              uk.field_a = param1;
+              SharedScrollbarState.field_a = param1;
               MatchScreen.field_p = this;
               BytePlusOneCommand.field_H = 0;
               if (param3 != -126) {
@@ -716,13 +716,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               ReceivedAuctionItem.field_B = param4;
               PlayerPortraitCacheEntry.field_f = param4;
-              is.field_g = 0;
+              TextLineLayoutSupport.field_g = 0;
               RotaryDialPainter.field_e = param2;
-              ug.field_a = AppletContextSupport.getActiveApplet(31);
+              SocialListLayoutSupport.field_a = AppletContextSupport.getActiveApplet(31);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param0, true);
-              oo.field_c = dupTemp$0;
+              PlatformTaskState.field_c = dupTemp$0;
               DelegatingCanvas.field_a = dupTemp$0;
-              var8 = oo.field_c.a(1, (byte) 110, (Runnable) (this));
+              var8 = PlatformTaskState.field_c.a(1, (byte) 110, (Runnable) (this));
               while (true) {
                 if (var8.field_a == 0) {
                   ThreadSleepSupport.sleepMillis(10L, 1);
@@ -856,7 +856,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           var6 = this;
           synchronized (var6) {
-            vb.field_k = TextHotspotRegion.field_l;
+            PitchDecorationSupport.field_k = TextHotspotRegion.field_l;
             if (!param0) {
               field_f = (String) null;
             }

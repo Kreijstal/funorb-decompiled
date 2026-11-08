@@ -189,17 +189,17 @@ final class TextFieldNode extends UiLayoutNode {
                 var4 = 0;
               }
             }
-            if (or.field_d.field_n > 0) {
-              var14 = new byte[or.field_d.field_n];
+            if (FootballerAiOverlaySupport.field_d.field_n > 0) {
+              var14 = new byte[FootballerAiOverlaySupport.field_d.field_n];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var6 < var14.length; var6++) {
-                var8[var6] = or.field_d.field_f[var6];
+                var8[var6] = FootballerAiOverlaySupport.field_d.field_f[var6];
               }
-              var6_ref_jm = new DelayedServerPacket((long)var4 + var2_long, or.field_d.field_n, var17);
+              var6_ref_jm = new DelayedServerPacket((long)var4 + var2_long, FootballerAiOverlaySupport.field_d.field_n, var17);
               DualLinkNode.field_g.addLast(var6_ref_jm, 3);
-              or.field_d.field_n = 0;
+              FootballerAiOverlaySupport.field_d.field_n = 0;
             }
             var9 = (DelayedServerPacket) (DualLinkNode.field_g.g(24009));
             var13 = var9;
@@ -209,10 +209,10 @@ final class TextFieldNode extends UiLayoutNode {
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.opcode) {
-                or.field_d.field_f[var10] = var9.data[var10];
+                FootballerAiOverlaySupport.field_d.field_f[var10] = var9.data[var10];
                 var10++;
               }
-              or.field_d.field_n = var13.opcode;
+              FootballerAiOverlaySupport.field_d.field_n = var13.opcode;
             }
           }
           ClientPacketFlushSupport.flushPackets(param0, false);
@@ -248,7 +248,7 @@ final class TextFieldNode extends UiLayoutNode {
     final static void a(boolean param0, RankingsRequest param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = or.field_d;
+          var3 = FootballerAiOverlaySupport.field_d;
           var3.b(param2, (byte) 98);
           if (!param0) {
             TextFieldNode.c(-62, -59);

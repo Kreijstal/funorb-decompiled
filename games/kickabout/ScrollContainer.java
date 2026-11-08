@@ -27,7 +27,7 @@ final class ScrollContainer extends UiLayoutNode {
     }
 
     ScrollContainer(String param0, UiLayoutNode param1, UiLayoutNode param2, ScrollBar param3) {
-        this(vb.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3);
+        this(PitchDecorationSupport.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3);
     }
 
     final void advanceScroll(int param0, boolean param1, byte param2, int param3) {
@@ -83,10 +83,10 @@ final class ScrollContainer extends UiLayoutNode {
 
     final static void h(byte param0) {
         MouseInputHandler.field_c = null;
-        lt.field_a = null;
+        PlayAreaMovementSupport.field_a = null;
         SquadPickerDialog.field_O = (byte[][]) null;
         IsaacRandom.field_f = null;
-        fc.field_g = null;
+        LoginResponseUiSupport.field_g = null;
         PasswordValidator.field_j = null;
         if (param0 >= -69) {
           ScrollContainer.i((byte) 118);

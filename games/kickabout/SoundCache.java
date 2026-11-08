@@ -242,10 +242,10 @@ final class SoundCache {
         int var8 = SingleChildContainer.field_y.get(12);
         int var9 = SingleChildContainer.field_y.get(13);
         if (param1 <= -69) {
-          return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return RankingRowFactory.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         SoundCache.releaseStatics((byte) -2);
-        return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return RankingRowFactory.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final PcmSample getFlatSoundEffect(int param0, int param1, int[] param2) {

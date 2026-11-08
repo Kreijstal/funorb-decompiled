@@ -46,11 +46,11 @@ final class AccountNameCheckState {
         int var1;
         int var1Lifetime1;
         if (param0 == 82) {
-          if (null != um.field_e &&
-            5 == um.field_e.matchState.phase) {
+          if (null != MachineTokenStorageSupport.field_e &&
+            5 == MachineTokenStorageSupport.field_e.matchState.phase) {
             return true;
           }
-          if (um.field_e == null &&
+          if (MachineTokenStorageSupport.field_e == null &&
             null == GameModesHelpScreen.field_G) {
             var1 = AuctionLogEntry.field_h.screenId;
             if (-5 == var1) {
@@ -61,11 +61,11 @@ final class AccountNameCheckState {
           return false;
         }
         field_b = (String) null;
-        if (null != um.field_e &&
-          5 == um.field_e.matchState.phase) {
+        if (null != MachineTokenStorageSupport.field_e &&
+          5 == MachineTokenStorageSupport.field_e.matchState.phase) {
           return true;
         }
-        if (um.field_e != null) {
+        if (MachineTokenStorageSupport.field_e != null) {
           return false;
         }
         if (null != GameModesHelpScreen.field_G) {

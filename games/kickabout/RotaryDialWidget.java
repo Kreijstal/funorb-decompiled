@@ -32,7 +32,7 @@ final class RotaryDialWidget extends TextButton {
           if (var8_int * var8_int + var9 * var9 >= this.field_J * this.field_J) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - vb.field_c;
+          var10 = Math.atan2((double)var9, (double)var8_int) - PitchDecorationSupport.field_c;
           if (!(0.0 > var10)) {
             if (0.0 < var10) {
               var10 = var10 + 3.141592653589793 / (double)this.field_K;

@@ -82,10 +82,10 @@ final class IntDoubleCommand extends ConsoleCommand {
         int var13Lifetime1;
         int var13Lifetime2;
         int var13Lifetime3;
-        var14 = et.field_d.field_P[1][param6 + 1];
+        var14 = ThumbnailStateFactory.field_d.field_P[1][param6 + 1];
         var8 = var14;
         var9 = FadingSoundSupport.field_c[param6];
-        var10 = te.field_a[param6];
+        var10 = QuickChatMenuFactory.field_a[param6];
         if ((param5 - 5) <= param1 &&
           (param7 + 5) >= param1 &&
           (param4 - 5) <= param3 &&
@@ -126,7 +126,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               TournamentChampionDialog.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
               return;
             }
-            if (0 != et.field_d.field_V.possessorTeam) {
+            if (0 != ThumbnailStateFactory.field_d.field_V.possessorTeam) {
               if (AccountInputValidationResult.field_f.action != 9 &&
                 7 != AccountInputValidationResult.field_f.action &&
                 AccountInputValidationResult.field_f.action != 12 &&
@@ -138,11 +138,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               }
               var12Lifetime1 = stackIn_56_0;
               var13Lifetime1 = 0 / ((-30 - param0) / 52);
-              if (et.field_d.field_V.possessorTeam == -1) {
+              if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
                 TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
-              if (et.field_d.field_V.possessorTeam == 0) {
+              if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
                 if (var12Lifetime1 != 0) {
                   TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 } else {
@@ -176,11 +176,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               }
               var12Lifetime2 = stackIn_78_0;
               var13Lifetime2 = 0 / ((-30 - param0) / 52);
-              if (et.field_d.field_V.possessorTeam == -1) {
+              if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
                 TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
-              if (et.field_d.field_V.possessorTeam == 0 &&
+              if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0 &&
                 var12Lifetime2 != 0) {
                 TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
                 return;
@@ -203,11 +203,11 @@ final class IntDoubleCommand extends ConsoleCommand {
             }
             var12Lifetime3 = stackIn_96_0;
             var13Lifetime3 = 0 / ((-30 - param0) / 52);
-            if (et.field_d.field_V.possessorTeam == -1) {
+            if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
               TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
               return;
             }
-            if (et.field_d.field_V.possessorTeam == 0) {
+            if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
               if (var12Lifetime3 != 0) {
                 TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
               } else {
@@ -226,7 +226,7 @@ final class IntDoubleCommand extends ConsoleCommand {
             TournamentChampionDialog.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
             return;
           }
-          if (0 == et.field_d.field_V.possessorTeam) {
+          if (0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) {
             if (var11 == 0) {
               return;
             }
@@ -262,7 +262,7 @@ final class IntDoubleCommand extends ConsoleCommand {
           }
           AnimationClip.field_d.setProgress(param1, param0, 9255, param2);
           SoftwareRasterizer.clearFramebuffer();
-          oa.a((byte) -106, true);
+          OverlayLayerSupport.drawSharedWidget((byte) -106, true);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

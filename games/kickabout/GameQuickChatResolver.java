@@ -8,7 +8,7 @@ final class GameQuickChatResolver implements QuickChatResolver {
     static int field_a;
 
     final static void a(int param0, int param1, byte param2) {
-        et.field_b = true;
+        ThumbnailStateFactory.field_b = true;
         if (LoginMethod.a(false)) {
           return;
         }
@@ -22,7 +22,7 @@ final class GameQuickChatResolver implements QuickChatResolver {
 
     final static void a(int param0, String param1) {
         try {
-          vp.field_p = param1;
+          MatchTextInputOverlay.field_p = param1;
           if (param0 != 2) {
             GameQuickChatResolver.a(122, 101, (byte) 60);
           }

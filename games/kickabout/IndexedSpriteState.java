@@ -50,7 +50,7 @@ abstract class IndexedSpriteState {
     }
 
     final static void a(byte param0, String param1) {
-        et.field_b = true;
+        ThumbnailStateFactory.field_b = true;
         if (param0 != -67) {
           String var3 = (String) null;
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);
@@ -75,7 +75,7 @@ abstract class IndexedSpriteState {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$b6210757cdab(int param0, String param1) {
-        et.field_b = true;
+        ThumbnailStateFactory.field_b = true;
         if (param0 != -67) {
           String var3 = (String) null;
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);

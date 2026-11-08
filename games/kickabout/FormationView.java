@@ -46,7 +46,7 @@ final class FormationView extends MatchPhaseView {
         int var6Lifetime2;
         var7 = Kickabout.field_G;
         this.drawPanelBackground(param0 ^ 106);
-        this.drawTitle(false, tl.field_b);
+        this.drawTitle(false, ConsoleTokenParser.field_b);
         if (!this.field_a.field_C.formationConfirmed[this.field_h]) {
           if (this.field_g != -2 &&
             this.field_g == this.field_a.b((byte) -89, this.field_h)) {
@@ -63,7 +63,7 @@ final class FormationView extends MatchPhaseView {
             }
             var2_ref_String = stackIn_16_0;
           } else {
-            var2_ref_String = br.field_b;
+            var2_ref_String = KitUnlockNoticeSupport.field_b;
           }
         } else {
           var2_ref_String = PitchPurchaseSupport.field_a;
@@ -83,7 +83,7 @@ final class FormationView extends MatchPhaseView {
         var2 = this.field_a.field_C.formationChoice[this.field_h];
         SoftwareRasterizer.fillRoundedRectangleBlended(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
-        un.field_d.d(var3, 293, 351, 16777215, -1);
+        ByteArrayPool.field_d.d(var3, 293, 351, 16777215, -1);
         TextLayoutLine.field_f.c(220, 100);
         for (var4Lifetime2 = 0; 4 > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * AccountNameCharacterSupport.field_b[var2][var4Lifetime2] / 896 + 220;
@@ -105,7 +105,7 @@ final class FormationView extends MatchPhaseView {
         this.a(0, var4Lifetime3, (byte) -107, 30);
         this.a(1, var5Lifetime2, (byte) -78, 30);
         if (this.field_a.field_f) {
-          un.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
         }
     }
 
@@ -212,8 +212,8 @@ final class FormationView extends MatchPhaseView {
     private final void g(int param0, int param1) {
         this.field_a.enqueueEvent(SquadGridWidget.createFormationEvent(param1, this.field_g, (byte) 0), param0 ^ -127);
         if (this.field_f) {
-          or.field_d.b(73, (byte) 112);
-          or.field_d.writeByte(param0 ^ 96, param1);
+          FootballerAiOverlaySupport.field_d.b(73, (byte) 112);
+          FootballerAiOverlaySupport.field_d.writeByte(param0 ^ 96, param1);
         }
         if (param0 != 8) {
           this.isButtonEnabled(29, 11);

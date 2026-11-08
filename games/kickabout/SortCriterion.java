@@ -99,7 +99,7 @@ abstract class SortCriterion {
         stackIn_26_0 = (!param2) ? 5 : 3;
         var13 = stackIn_26_0;
         if (!NanoTickClock.field_n) {
-          var23 = oa.a(param2, param5, (byte) 95);
+          var23 = OverlayLayerSupport.a(param2, param5, (byte) 95);
           PacketBuffer.a(121, var23);
           for (var15 = 0; var13 > var15; var15++) {
             if (!param2 ||
@@ -149,7 +149,7 @@ abstract class SortCriterion {
         }
         for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
           DelayedServerPacket.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
-          var16 = oa.a(param2, param5, (byte) 95);
+          var16 = OverlayLayerSupport.a(param2, param5, (byte) 95);
           PacketBuffer.a(-101, var16);
           for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {
             var18_ref_nr__ = var24[var17Lifetime2];

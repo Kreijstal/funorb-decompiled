@@ -112,7 +112,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             stackIn_12_0 = this.field_e.field_v >> 1;
           }
           var2 = stackIn_12_0;
-          var3 = ug.a(0, this.field_k);
+          var3 = SocialListLayoutSupport.worldToScreenX(0, this.field_k);
           var4 = IntKeyLookup.a((byte) -59, this.field_g + var2);
           var5_int = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
@@ -130,14 +130,14 @@ final class WorldDrawEntry extends IntrusiveNode {
             stackIn_5_0 = this.field_e.field_v >> 1;
           }
           var2Lifetime1 = stackIn_5_0;
-          var3Lifetime1 = ug.a(0, this.field_k);
+          var3Lifetime1 = SocialListLayoutSupport.worldToScreenX(0, this.field_k);
           var4Lifetime1 = IntKeyLookup.a((byte) -59, this.field_g + var2Lifetime1);
           var5_intLifetime1 = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6Lifetime1 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
           this.field_e.drawScaled(var3Lifetime1 - (var5_intLifetime1 >> 1), -(var6Lifetime1 >> 1) + var4Lifetime1, var5_intLifetime1, var6Lifetime1);
         } else {
           if (this.field_j == 5) {
-            var2Lifetime1 = ug.a(param0 ^ 192, this.field_k);
+            var2Lifetime1 = SocialListLayoutSupport.worldToScreenX(param0 ^ 192, this.field_k);
             var3Lifetime1 = IntKeyLookup.a((byte) -110, (this.field_e.field_v >> 1) + this.field_g);
             var4Lifetime1 = InstrumentNoteMask.field_i << 4;
             var5 = MonotonicClock.monotonicMillis(param0 - 126);

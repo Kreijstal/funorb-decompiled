@@ -68,7 +68,7 @@ final class AnimationClip {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = param1 >= gs.field_a.length ? 100 : gs.field_a[param1];
+        int var2 = param1 >= SelectionMarkerSupport.field_a.length ? 100 : SelectionMarkerSupport.field_a[param1];
         if (param0 >= -89) {
           return 7;
         }
@@ -104,7 +104,7 @@ final class AnimationClip {
         }
         boolean decompiledFrameRemainder0 = true;
         stackIn_8_0 = ArchiveIndex.field_t;
-        if (param3 == ih.field_c &&
+        if (param3 == FormationMaskSupport.field_c &&
           RankingsScreen.field_C == param0) {
           if (param2) {
             stackIn_7_1 = 0;
@@ -124,7 +124,7 @@ final class AnimationClip {
         PlayerArchetypeSortCriterion.field_r = -1;
         NanoTickClock.field_n = param2;
         RankingsScreen.field_C = param0;
-        ih.field_c = param3;
+        FormationMaskSupport.field_c = param3;
     }
 
     private final void a(int param0, PacketBuffer param1, int param2) {

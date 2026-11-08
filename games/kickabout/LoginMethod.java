@@ -166,8 +166,8 @@ final class LoginMethod {
             var3 = 450 * var5 / var7 + 672;
             var2_int = 448 + var4 * 450 / var7;
           }
-          ql.field_a[1] = var3;
-          ql.field_a[0] = var2_int;
+          MatchHudRoutingSupport.field_a[1] = var3;
+          MatchHudRoutingSupport.field_a[0] = var2_int;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -49,16 +49,16 @@ final class Bzip2State {
           boolean decompiledFrameRemainder0 = true;
           if (param12 < param2) {
             if (param2 < param14) {
-              mk.a(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, SoftwareRasterizer.field_a, param2, param10);
+              TutorialScenerySupport.a(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, SoftwareRasterizer.field_a, param2, param10);
               decompiledFrameRemainder0 = (var17 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (param14 > param12) {
-                mk.a(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, SoftwareRasterizer.field_a, param14, param0);
+                TutorialScenerySupport.a(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, SoftwareRasterizer.field_a, param14, param0);
                 decompiledFrameRemainder0 = (var17 != 0);
               }
               if (decompiledFrameRemainder0) {
-                mk.a(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, SoftwareRasterizer.field_a, param12, param15);
+                TutorialScenerySupport.a(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, SoftwareRasterizer.field_a, param12, param15);
               }
             }
           }
@@ -66,23 +66,23 @@ final class Bzip2State {
             (!(param12 < param2) ||
             var17 != 0)) {
             if (param14 > param12) {
-              mk.a(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, SoftwareRasterizer.field_a, param12, param15);
+              TutorialScenerySupport.a(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, SoftwareRasterizer.field_a, param12, param15);
               if (var17 != 0) {
                 if (param14 <= param2) {
-                  mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
-                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                  TutorialScenerySupport.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
+                  TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 } else {
-                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                  TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 }
               }
             } else {
               boolean decompiledSharedTail0 = !(param14 <= param2);
               if (!decompiledSharedTail0) {
-                mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
+                TutorialScenerySupport.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
                 decompiledSharedTail0 = (var17 != 0);
               }
               if (decompiledSharedTail0) {
-                mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
               }
             }
           }
@@ -101,7 +101,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          AccountRegistrationResponse.field_j = new Sprite(tn.field_e.field_o, tn.field_e.field_v);
+          AccountRegistrationResponse.field_j = new Sprite(SocialUiState.field_e.field_o, SocialUiState.field_e.field_v);
           if (param0 > -32) {
             field_I = (HuffmanCodec) null;
           }
@@ -307,7 +307,7 @@ final class Bzip2State {
                   var25Lifetime1Lifetime1 = param0.field_C[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_J[var23Lifetime2];
                   TextFieldValidator.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime2Lifetime1 >> 16) + var9;
-                  un.field_a[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  ByteArrayPool.field_a[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var26Lifetime1Lifetime1 * var19 >> 16);
                   ThreeCommand.field_A[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime2Lifetime1 * var14) >> 16);
                   var24Lifetime2Lifetime1 = param0.field_O[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_H[var23Lifetime2];
@@ -319,7 +319,7 @@ final class Bzip2State {
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
                   ConsoleValue.field_g[var23Lifetime2] = (var12 * var24Lifetime2Lifetime1 + var15 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18 >> 16) + var9;
-                  jl.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 >> 16) + var10;
+                  InputLayoutState.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var24Lifetime2Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 >> 16) + var10;
                   PasswordLoginCredentials.field_g[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + (var24Lifetime2Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {

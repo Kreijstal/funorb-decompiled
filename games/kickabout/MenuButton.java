@@ -47,7 +47,7 @@ final class MenuButton {
           } else {
             if (this.kind != 1) {
               if (this.kind == 2) {
-                if (null != um.field_e) {
+                if (null != MachineTokenStorageSupport.field_e) {
                   DelayedServerPacket.a(-1, param1, param0 - 1);
                 } else {
                   if (SortCriterion.field_l != null) {
@@ -83,7 +83,7 @@ final class MenuButton {
                                     } else {
                                       if (this.kind != 42) {
                                         if (43 == this.kind) {
-                                          vj.a(-25, param1);
+                                          RasterGlowSupport.returnToPreviousScreen(-25, param1);
                                         } else {
                                           if (this.kind == 21) {
                                             ((PagedHelpScreen) (AuctionLogEntry.field_h)).showPreviousPage((byte) -95);
@@ -104,7 +104,7 @@ final class MenuButton {
                                                       } else {
                                                         if (this.kind != 24) {
                                                           if (this.kind == 7) {
-                                                            vj.a(param0 ^ -106, param1);
+                                                            RasterGlowSupport.returnToPreviousScreen(param0 ^ -106, param1);
                                                           } else {
                                                             if (this.kind == 3) {
                                                               DelayedServerPacket.a(7, param1, param0 ^ 1);
@@ -112,7 +112,7 @@ final class MenuButton {
                                                               if (this.kind != 5) {
                                                                 if (this.kind != 8) {
                                                                   if (this.kind == 9) {
-                                                                    um.field_e.offerDraw(-94);
+                                                                    MachineTokenStorageSupport.field_e.offerDraw(-94);
                                                                     DelayedServerPacket.a(-1, param1, param0 - 1);
                                                                   } else {
                                                                     if (10 != this.kind) {
@@ -151,7 +151,7 @@ final class MenuButton {
                                                                                     RotaryDialPainter.field_n = stackIn_67_0;
                                                                                   }
                                                                                 } else {
-                                                                                  ql.a((byte) 101, true, NineSlicePanelPainter.field_f);
+                                                                                  MatchHudRoutingSupport.a((byte) 101, true, NineSlicePanelPainter.field_f);
                                                                                   SpriteButtonPainter.field_v = 2147483647;
                                                                                 }
                                                                               } else {
@@ -162,12 +162,12 @@ final class MenuButton {
                                                                         }
                                                                       }
                                                                     } else {
-                                                                      um.field_e.resign(-76);
+                                                                      MachineTokenStorageSupport.field_e.resign(-76);
                                                                       DelayedServerPacket.a(-1, param1, -2);
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  um.field_e.leaveMatch(param1, 18);
+                                                                  MachineTokenStorageSupport.field_e.leaveMatch(param1, 18);
                                                                   FriendsListPanel.field_Db = true;
                                                                 }
                                                               } else {
@@ -196,7 +196,7 @@ final class MenuButton {
                                           }
                                         }
                                       } else {
-                                        vj.a(-48, param1);
+                                        RasterGlowSupport.returnToPreviousScreen(-48, param1);
                                       }
                                     }
                                   }
@@ -256,7 +256,7 @@ final class MenuButton {
           ConsoleValue.a(var5, (byte) 20);
         }
         if (this.kind == 16) {
-          pe.a(var5, (byte) -121);
+          MeshPreviewSupport.a(var5, (byte) -121);
         }
     }
 
@@ -290,18 +290,18 @@ final class MenuButton {
             ConsoleValue.a(var7, (byte) 46);
           }
           if (16 == this.kind) {
-            pe.a(var7, (byte) -121);
+            MeshPreviewSupport.a(var7, (byte) -121);
           }
         }
         this.field_f = !param2 ? -1 : param4;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, PlayerStats param4, boolean param5, int param6) {
-        et.field_b = true;
+        ThumbnailStateFactory.field_b = true;
         if (LoginMethod.a(false)) {
           return;
         }
-        ok.field_c = param5;
+        Cp1252EncodingSupport.field_c = param5;
         CachedListingRow.field_j = param2 ? true : false;
         VerticalScrollbar.field_Ib = param3;
         if (param1 != 0) {
@@ -341,7 +341,7 @@ final class MenuButton {
         Sprite var10 = null;
         var6 = Kickabout.field_G;
         try {
-          if (ug.field_c == null) {
+          if (SocialListLayoutSupport.field_c == null) {
             if (!QuickChatKeysHelpPanel.field_Cb.a(false, "stadium_icon")) {
               return;
             }
@@ -363,8 +363,8 @@ final class MenuButton {
             var9 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
             var10 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
             AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
-            DebugConsole.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
-            lt.field_d = new Sprite[]{et.a(0, RasterGammaSupport.field_d[0], var10, 50)[1], et.a(param0 - 2, RasterGammaSupport.field_d[1], var10, 50)[1]};
+            DebugConsole.field_y = new Sprite[][]{ThumbnailStateFactory.createThumbnailStates(0, PlatformTaskState.field_a, var10, var10.field_o), ThumbnailStateFactory.createThumbnailStates(0, SocialUiState.field_c, var10, 62)};
+            PlayAreaMovementSupport.field_d = new Sprite[]{ThumbnailStateFactory.createThumbnailStates(0, RasterGammaSupport.field_d[0], var10, 50)[1], ThumbnailStateFactory.createThumbnailStates(param0 - 2, RasterGammaSupport.field_d[1], var10, 50)[1]};
             DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
             RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
             PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
@@ -438,9 +438,9 @@ final class MenuButton {
             } else {
               if (this.kind == 9) {
                 this.field_p = NumericDateInputWidget.field_N.toLowerCase();
-                if (um.field_e != null &&
-                  um.field_e.localSeat >= 0 &&
-                  um.field_e.matchState.participantStatus[um.field_e.localSeat].offerDraw) {
+                if (MachineTokenStorageSupport.field_e != null &&
+                  MachineTokenStorageSupport.field_e.localSeat >= 0 &&
+                  MachineTokenStorageSupport.field_e.matchState.participantStatus[MachineTokenStorageSupport.field_e.localSeat].offerDraw) {
                   this.field_p = DiagnosticsOverlaySupport.field_b.toLowerCase();
                 }
               }

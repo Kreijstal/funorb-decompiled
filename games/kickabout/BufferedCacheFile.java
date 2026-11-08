@@ -87,7 +87,7 @@ final class BufferedCacheFile {
 
     final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
-          vp.field_k = param1;
+          MatchTextInputOverlay.field_k = param1;
           MainMenuScreen.field_F = param3;
           MeshObject.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
@@ -158,7 +158,7 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, uk.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
+          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, SharedScrollbarState.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, TextInputUiSupport.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
           ClassDescriptorSupport.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = GeneratedPanelPainter.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;
@@ -210,7 +210,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_14_6 = 0;
           }
-          stackIn_15_0 = fs.a(stackIn_4_0, stackIn_5_1, stackIn_8_2, stackIn_10_3, stackIn_10_4, stackIn_11_5, stackIn_14_6, param2, param5, param3);
+          stackIn_15_0 = PanelSpriteFactory.a(stackIn_4_0, stackIn_5_1, stackIn_8_2, stackIn_10_3, stackIn_10_4, stackIn_11_5, stackIn_14_6, param2, param5, param3);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -207,9 +207,9 @@ final class ServerTextTemplate {
     }
 
     final static void a(int param0, int param1) {
-        ig.field_d = param0;
+        MatchHudSupport.field_d = param0;
         SquadGridWidget.field_Db = null;
-        um.field_b = false;
+        MachineTokenStorageSupport.field_b = false;
         if (param1 <= 27) {
           field_k = (String[]) null;
         }

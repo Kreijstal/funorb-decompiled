@@ -57,10 +57,10 @@ final class RegistrationRequestState {
             return;
           }
           if (!param2) {
-            un.field_d.a(param3, var10, -10 + var11, 16777215, -1);
+            ByteArrayPool.field_d.a(param3, var10, -10 + var11, 16777215, -1);
             return;
           }
-          un.field_d.d(param3, var10 + (var8_int >> 1), var11 - 10, 16777215, -1);
+          ByteArrayPool.field_d.d(param3, var10 + (var8_int >> 1), var11 - 10, 16777215, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

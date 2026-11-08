@@ -34,9 +34,9 @@ final class PlayArea {
     }
 
     final void a(int param0, int param1) {
-        int var3 = ug.a(param0 ^ -2943, this.field_g >> 16);
+        int var3 = SocialListLayoutSupport.worldToScreenX(param0 ^ -2943, this.field_g >> 16);
         int var4 = IntKeyLookup.a((byte) -123, this.field_b >> 16);
-        int var5 = -var3 + ug.a(param0 ^ param0, this.field_i >> 16);
+        int var5 = -var3 + SocialListLayoutSupport.worldToScreenX(param0 ^ param0, this.field_i >> 16);
         int var6 = -var4 + IntKeyLookup.a((byte) -117, this.field_h >> 16);
         SoftwareRasterizer.fillRectangleAlpha(var3, var4, var5, var6, param1, 50);
         SoftwareRasterizer.e(var3, var4, var5, var6, param1);
@@ -45,15 +45,15 @@ final class PlayArea {
     final static void a(CommonGame param0, int param1) {
         try {
           MyKitScreen.field_O = true;
-          et.field_d = param0;
+          ThumbnailStateFactory.field_d = param0;
           if (null == UiKeyRoutingSupport.field_b) {
             UiKeyRoutingSupport.field_b = ParticipantStatus.c(0);
           }
-          AccountInputValidationResult.field_f = (RenderedFootballer) (et.field_d.field_P[0][3]);
-          fc.field_c = (RenderedFootballer) (et.field_d.field_P[0][4]);
+          AccountInputValidationResult.field_f = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[0][3]);
+          LoginResponseUiSupport.field_c = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[0][4]);
           TickClock.field_a = 0;
           AuctionLogEntry.field_g = 640;
-          EmailAvailabilityValidator.field_k = (RenderedFootballer) (et.field_d.field_P[param1][1]);
+          EmailAvailabilityValidator.field_k = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[param1][1]);
           CheckboxLabelWidget.c(1, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "la.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

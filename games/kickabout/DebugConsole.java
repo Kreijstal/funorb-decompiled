@@ -30,7 +30,7 @@ final class DebugConsole extends ConsolePanel {
           UiLayoutNode var4 = null;
           try {
             try {
-              var6 = fj.a(false, param0);
+              var6 = ConsoleLexer.tokenize(false, param0);
               if (!param1) {
                 this.b(5);
               }
@@ -141,7 +141,7 @@ final class DebugConsole extends ConsolePanel {
           var6Lifetime1 = var13;
           var3 = this.field_k.getCaretPosition(-1);
           var4 = DialogOverlay.a(var13, (byte) -81);
-          var5 = mi.a(var3, var4, 1);
+          var5 = ConsoleArgumentSupport.findExpressionBoundary(var3, var4, 1);
           this.field_j.field_s = 0;
           var6Lifetime2 = "";
           if (var5 >= 0) {
@@ -484,7 +484,7 @@ final class DebugConsole extends ConsolePanel {
           var6Lifetime1 = var16;
           var3 = this.field_k.getCaretPosition(-1);
           var4 = DialogOverlay.a(var16, (byte) -33);
-          var5 = mi.a(var3, var4, 1);
+          var5 = ConsoleArgumentSupport.findExpressionBoundary(var3, var4, 1);
           var6Lifetime2 = "";
           if (var5 >= 0) {
             var17 = var4[var5];
@@ -584,7 +584,7 @@ final class DebugConsole extends ConsolePanel {
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
-              var12 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, br.field_a, new String[]{param3});
+              var12 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, KitUnlockNoticeSupport.field_a, new String[]{param3});
               var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;

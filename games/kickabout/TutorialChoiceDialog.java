@@ -55,7 +55,7 @@ final class TutorialChoiceDialog extends MessageDialog {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.decodeSpriteSheetFromArchive(param0, param2, param1, param3 ^ 123)) {
+          if (!RankingRowFactory.decodeSpriteSheetFromArchive(param0, param2, param1, param3 ^ 123)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }

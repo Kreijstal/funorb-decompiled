@@ -38,17 +38,17 @@ class BallAgent extends MatchAgent {
     final int computeChecksum(int param0) {
         int var3 = 18 / ((81 - param0) / 37);
         int var2 = 0;
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.positionX);
-        var2 = fj.rotateLeftFourBits(-40, this.positionY ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.height ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.velocityX ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.velocityY);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
-        var2 = fj.rotateLeftFourBits(-40, this.possessorTeam ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.possessorSlot ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.uncatchable);
-        var2 = fj.rotateLeftFourBits(-40, this.highFriction ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.modelId ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.positionX);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.positionY ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.height ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.velocityX ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.velocityY);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.possessorTeam ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.possessorSlot ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.uncatchable);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.highFriction ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.modelId ^ var2);
         return var2;
     }
 
@@ -211,8 +211,8 @@ class BallAgent extends MatchAgent {
           if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;
           }
-          this.uncatchable = hq.a(22531, 9, param0, 0);
-          this.highFriction = hq.a(22531, 5, param0, 0);
+          this.uncatchable = ClientInteractionSupport.a(22531, 9, param0, 0);
+          this.highFriction = ClientInteractionSupport.a(22531, 5, param0, 0);
           this.modelId = param0.readBits(4, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -334,7 +334,7 @@ class BallAgent extends MatchAgent {
           stackIn_17_0 = (var5 != 0) ? 2000L : 58982L;
           var6 = stackIn_17_0;
           var8 = MusicPatch.field_m[param1];
-          var17 = lt.moveWithinAreas(this.velocityX, this.velocityY, param2, -66, this.height, this.positionY, this.positionX, this.verticalVelocity);
+          var17 = PlayAreaMovementSupport.moveWithinAreas(this.velocityX, this.velocityY, param2, -66, this.height, this.positionY, this.positionX, this.verticalVelocity);
           this.height = var17[2];
           this.positionX = var17[0];
           this.positionY = var17[1];
@@ -347,7 +347,7 @@ class BallAgent extends MatchAgent {
             this.field_y = true;
           }
           if (var17[5] != this.verticalVelocity) {
-            this.verticalVelocity = d.decelerateFixedVelocity(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
+            this.verticalVelocity = FixedVelocitySupport.decelerateFixedVelocity(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
             if (this.verticalVelocity == 0) {
               this.height = 0;
             }
@@ -363,7 +363,7 @@ class BallAgent extends MatchAgent {
             stackIn_38_0 = 60293L;
           } else {
             if (this.height >= 65536) {
-              stackIn_38_0 = sg.field_d[param1];
+              stackIn_38_0 = ByteArrayPoolState.field_d[param1];
             } else {
               stackIn_38_0 = PlayerSurnameSortCriterion.field_q[param1];
             }

@@ -233,7 +233,7 @@ class ColumnTableWidget extends UiLayoutNode {
         RuntimeException var3 = null;
         var7 = Kickabout.field_G;
         try {
-          ql.sortByCriterion(this.field_Fb, param0, (byte) 124);
+          MatchHudRoutingSupport.sortByCriterion(this.field_Fb, param0, (byte) 124);
           var3_int = 5;
           var4_ref_im__ = this.field_Fb;
           for (var5 = 0; var5 < var4_ref_im__.length; var5++) {

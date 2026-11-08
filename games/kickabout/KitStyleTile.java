@@ -27,36 +27,36 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        var5 = et.field_d.field_V;
+        var5 = ThumbnailStateFactory.field_d.field_V;
         if (HuffmanCodec.field_e == 1) {
           if (HoverTooltip.field_Eb) {
             var2 = EmailAvailabilityValidator.field_k.pixelY(true);
             var3 = (var2 * -200 + 326800) / -490;
-            mj.a(256.0, 60, 448.0, (double)(var3 + 1344));
+            PitchAppearanceSupport.setProjectionTarget(256.0, 60, 448.0, (double)(var3 + 1344));
           } else {
-            mj.a(256.0, param0 ^ 13487, (double)EmailAvailabilityValidator.field_k.pixelX(-122), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+            PitchAppearanceSupport.setProjectionTarget(256.0, param0 ^ 13487, (double)EmailAvailabilityValidator.field_k.pixelX(-122), (double)EmailAvailabilityValidator.field_k.pixelY(true));
           }
         } else {
           if (HuffmanCodec.field_e != 2) {
             if (HuffmanCodec.field_e != 3) {
               if (HuffmanCodec.field_e == 4) {
                 if (!HoverTooltip.field_Eb) {
-                  mj.a(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
+                  PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
                 } else {
-                  mj.a(160.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
+                  PitchAppearanceSupport.setProjectionTarget(160.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
                 }
               } else {
                 if (5 != HuffmanCodec.field_e) {
                   if (6 == HuffmanCodec.field_e) {
-                    mj.a(180.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-99) + AccountInputValidationResult.field_f.pixelX(-97) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+                    PitchAppearanceSupport.setProjectionTarget(180.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-99) + AccountInputValidationResult.field_f.pixelX(-97) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                   } else {
                     if (HuffmanCodec.field_e == 7) {
-                      var2_ref_nl = et.field_d.field_P[1][4];
-                      mj.a(220.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
+                      var2_ref_nl = ThumbnailStateFactory.field_d.field_P[1][4];
+                      PitchAppearanceSupport.setProjectionTarget(220.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
                     } else {
                       if (HuffmanCodec.field_e != 8) {
                         if (HuffmanCodec.field_e == 9) {
-                          mj.a(220.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-128) + AccountInputValidationResult.field_f.pixelX(-121) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+                          PitchAppearanceSupport.setProjectionTarget(220.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-128) + AccountInputValidationResult.field_f.pixelX(-121) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                         } else {
                           if (HuffmanCodec.field_e != 10) {
                             if (HuffmanCodec.field_e != 11) {
@@ -66,24 +66,24 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                                     var5.positionY >= 0) {
                                     if (var5.possessorTeam != 0 &&
                                       var5.horizontalSpeedSquared(-125) < 1638400) {
-                                      mj.a(200.0, 60, (double)(fc.field_c.pixelX(param0 - 13584) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
+                                      PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)(LoginResponseUiSupport.field_c.pixelX(param0 - 13584) + var5.pixelX(true) >> 1), (double)(LoginResponseUiSupport.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
                                     } else {
-                                      mj.a(170.0, param0 - 13399, (double)(fc.field_c.pixelX(param0 ^ -13553) * 3 + 448 >> 2), (double)(fc.field_c.pixelY(true) * 3 >> 2));
+                                      PitchAppearanceSupport.setProjectionTarget(170.0, param0 - 13399, (double)(LoginResponseUiSupport.field_c.pixelX(param0 ^ -13553) * 3 + 448 >> 2), (double)(LoginResponseUiSupport.field_c.pixelY(true) * 3 >> 2));
                                     }
                                     decompiledFrameRemainder0 = false;
                                   }
                                   else {
-                                    mj.a(230.0, 60, 448.0, 50.0);
+                                    PitchAppearanceSupport.setProjectionTarget(230.0, 60, 448.0, 50.0);
                                   }
                                 }
                               } else {
-                                mj.a(200.0, 60, (double)(fc.field_c.pixelX(-92) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + (-160 + var5.pixelY(879306160)) >> 1));
+                                PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)(LoginResponseUiSupport.field_c.pixelX(-92) + var5.pixelX(true) >> 1), (double)(LoginResponseUiSupport.field_c.pixelY(true) + (-160 + var5.pixelY(879306160)) >> 1));
                               }
                             } else {
-                              mj.a(200.0, 60, (double)(fc.field_c.pixelX(-109) + var5.pixelX(true) >> 1), (double)(fc.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
+                              PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)(LoginResponseUiSupport.field_c.pixelX(-109) + var5.pixelX(true) >> 1), (double)(LoginResponseUiSupport.field_c.pixelY(true) + var5.pixelY(879306160) >> 1));
                             }
                           } else {
-                            mj.a(160.0, 60, 448.0, 672.0);
+                            PitchAppearanceSupport.setProjectionTarget(160.0, 60, 448.0, 672.0);
                           }
                         }
                       } else {
@@ -97,26 +97,26 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                           var3 = 2;
                         }
                         if (!HoverTooltip.field_Eb) {
-                          mj.a(190.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-92), (double)te.field_a[var3]);
+                          PitchAppearanceSupport.setProjectionTarget(190.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-92), (double)QuickChatMenuFactory.field_a[var3]);
                         } else {
-                          mj.a(256.0, 60, (double)AccountInputValidationResult.field_f.pixelX(param0 ^ -13551), (double)AccountInputValidationResult.field_f.pixelY(true));
+                          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)AccountInputValidationResult.field_f.pixelX(param0 ^ -13551), (double)AccountInputValidationResult.field_f.pixelY(true));
                         }
                       }
                     }
                   }
                 } else {
                   if (HoverTooltip.field_Eb) {
-                    mj.a(160.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-124), (double)AccountInputValidationResult.field_f.pixelY(true));
+                    PitchAppearanceSupport.setProjectionTarget(160.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-124), (double)AccountInputValidationResult.field_f.pixelY(true));
                   } else {
-                    mj.a(200.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-118), (double)(AccountInputValidationResult.field_f.pixelY(true) - 55));
+                    PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-118), (double)(AccountInputValidationResult.field_f.pixelY(true) - 55));
                   }
                 }
               }
             } else {
-              mj.a(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(-108), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+              PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(-108), (double)EmailAvailabilityValidator.field_k.pixelY(true));
             }
           } else {
-            mj.a(226.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(-111), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+            PitchAppearanceSupport.setProjectionTarget(226.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(-111), (double)EmailAvailabilityValidator.field_k.pixelY(true));
           }
         }
 
@@ -245,7 +245,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           ((Sprite) ((Object) var8)).c(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
         if (this.field_Ib) {
-          var11 = fc.field_h;
+          var11 = LoginResponseUiSupport.field_h;
           var11.c(var5 - (var11.field_q >> 1), var6 - (var11.field_w >> 1));
         }
         return;
@@ -338,7 +338,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         }
         if (this.field_sb == 1) {
           if (this.field_Ib) {
-            br.a((byte) -98, this.field_Cb.field_k);
+            KitUnlockNoticeSupport.enqueueLockedKitNotice((byte) -98, this.field_Cb.field_k);
           } else {
             if (!this.field_Kb) {
               LoginKind.a((byte) 81);

@@ -18,7 +18,7 @@ final class ThreeCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_B = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(mi.a(true));
+          stackIn_3_0 = new ConsoleValue(ConsoleArgumentSupport.constantThree(true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class ThreeCommand extends ConsoleCommand {
         if (param1 != 16355) {
           ThreeCommand.a(false, 111);
           NamedValueContainer.a(63, param0);
-          if (gs.field_b) {
+          if (SelectionMarkerSupport.field_b) {
             SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
             HighScoreQuery.field_l.tabs.draw(122, param0);
             PasswordLoginCredentials.a(param0, (byte) -93);
@@ -51,7 +51,7 @@ final class ThreeCommand extends ConsoleCommand {
           return;
         }
         NamedValueContainer.a(63, param0);
-        if (!gs.field_b) {
+        if (!SelectionMarkerSupport.field_b) {
           PasswordLoginCredentials.a(param0, (byte) -93);
           return;
         }

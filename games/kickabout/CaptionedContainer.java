@@ -41,7 +41,7 @@ final class CaptionedContainer extends SingleChildContainer {
             decompiledFrameRemainder0 = (null == EmailAvailabilityValidator.field_o);
           }
           if (decompiledFrameRemainder0) {
-            if (!nc.field_a) {
+            if (!LoginPacketSupport.field_a) {
               if (TutorialCaptionSupport.field_e <= StreetSceneryLoader.field_i) {
                 stackIn_19_0 = (StreetSceneryLoader.field_i < TutorialCaptionSupport.field_e + GameModeDefinition.field_i) ? 1 : 0;
               } else {
@@ -54,7 +54,7 @@ final class CaptionedContainer extends SingleChildContainer {
             if (param0 == null) {
               StreetSceneryLoader.field_i = 0;
             } else {
-              if (nc.field_a) {
+              if (LoginPacketSupport.field_a) {
                 StreetSceneryLoader.field_i = TutorialCaptionSupport.field_e;
               } else {
                 if (var2_int == 0) {
@@ -68,13 +68,13 @@ final class CaptionedContainer extends SingleChildContainer {
             AccountNameCharacterSupport.field_e = ScrollBar.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
-                nc.field_a = true;
+                LoginPacketSupport.field_a = true;
               }
             } else {
-              nc.field_a = false;
+              LoginPacketSupport.field_a = false;
             }
           }
-          if (!nc.field_a &&
+          if (!LoginPacketSupport.field_a &&
             TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i &&
             BytePlusOneCommand.field_C) {
             StreetSceneryLoader.field_i = 0;
@@ -82,10 +82,10 @@ final class CaptionedContainer extends SingleChildContainer {
             AccountNameCharacterSupport.field_e = ScrollBar.field_Hb;
           }
           EmailAvailabilityValidator.field_o = param0;
-          if (nc.field_a &&
+          if (LoginPacketSupport.field_a &&
             StreetSceneryLoader.field_i == PitchBoundaryCacheState.field_b) {
             StreetSceneryLoader.field_i = 0;
-            nc.field_a = false;
+            LoginPacketSupport.field_a = false;
           }
           TextLine.field_h = -1;
           ScrollBar.field_Hb = -1;

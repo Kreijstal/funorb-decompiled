@@ -60,7 +60,7 @@ final class Trinket {
             return stackIn_2_0;
           }
           if (0 == this.field_h) {
-            stackIn_7_0 = ca.field_c[this.field_k];
+            stackIn_7_0 = GradientRasterSupport.field_c[this.field_k];
             return stackIn_7_0;
           }
           var2_int = MusicPatch.field_g[this.field_h];
@@ -247,10 +247,10 @@ final class Trinket {
         int var9 = 0;
         var9 = Kickabout.field_G;
         try {
-          if (!hq.field_a) {
+          if (!ClientInteractionSupport.field_a) {
             return;
           }
-          var2_int = ug.a(0, param0.getRenderedX(1606384336));
+          var2_int = SocialListLayoutSupport.worldToScreenX(0, param0.getRenderedX(1606384336));
           var3 = IntKeyLookup.a((byte) -64, param0.field_bb >> 16);
           if (param1 != 100) {
             return;
@@ -492,7 +492,7 @@ final class Trinket {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          te.a(true, param1);
+          QuickChatMenuFactory.setLoginExtraText(true, param1);
           MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, false);
           if (param0 < 14) {
             field_c = -13;
@@ -550,7 +550,7 @@ final class Trinket {
           var2 = null;
           if (NodeHashTableIterator.field_b == 0 &&
             null != ArchiveSource.field_b) {
-            var2 = vp.field_g;
+            var2 = MatchTextInputOverlay.field_g;
           }
           if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.b(param0 - 3194)) {
@@ -564,13 +564,13 @@ final class Trinket {
             }
             if (DebugConsole.field_s) {
               TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
-              hq.b((byte) 110);
+              ClientInteractionSupport.dismissQuickChat((byte) 110);
             }
           }
           if (null == var2 &&
             !NineSlicePanelPainter.field_a &&
             ContentTransitionDialog.field_Y == null) {
-            var2 = et.field_a;
+            var2 = ThumbnailStateFactory.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
@@ -596,7 +596,7 @@ final class Trinket {
               var10 != 0) {
               if (var6 == 0) {
                 if (null == PlayerContextMenu.field_i &&
-                  uk.field_d) {
+                  SharedScrollbarState.field_d) {
                   var4 = "[" + ButtonMenuScreen.field_z + "] ";
                 }
                 if (PlayerContextMenu.field_i != null) {
@@ -612,7 +612,7 @@ final class Trinket {
                   var6 = 1;
                 }
               }
-              if (!vb.hasSavedInputLayout(118)) {
+              if (!PitchDecorationSupport.hasSavedInputLayout(118)) {
                 stackIn_63_0 = "<img=3>: ";
               } else {
                 stackIn_63_0 = ": ";
@@ -631,7 +631,7 @@ final class Trinket {
                 var5 = "";
               }
               var9 = FootballerAgent.field_i.a(var4);
-              if (!vb.hasSavedInputLayout(119)) {
+              if (!PitchDecorationSupport.hasSavedInputLayout(119)) {
                 if (RotaryDialPainter.field_b.field_gb &&
                   BytePlusOneCommand.field_A - RotaryDialPainter.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
@@ -647,7 +647,7 @@ final class Trinket {
                 }
               }
             }
-            MarkerSliderWidget.a(var7, sg.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
+            MarkerSliderWidget.a(var7, ByteArrayPoolState.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
             if (!TextFieldNode.field_Wb) {
               WeightedCacheEntry.field_s.field_gb = false;
             }

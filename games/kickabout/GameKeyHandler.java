@@ -11,7 +11,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           return;
         }
         try {
-          gs.field_d = param0;
+          SelectionMarkerSupport.field_d = param0;
           ListingRowCache.field_c = param1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "de.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -22,9 +22,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param1 != -110) {
           return;
         }
-        vp.field_a = (param0 << 16) / 150;
-        vp.field_f = param0 * 400 / 150;
-        vp.field_c = param0 * 100 / 150;
+        MatchTextInputOverlay.field_a = (param0 << 16) / 150;
+        MatchTextInputOverlay.field_f = param0 * 400 / 150;
+        MatchTextInputOverlay.field_c = param0 * 100 / 150;
     }
 
     final static int a(int param0, byte param1) {
@@ -126,11 +126,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var5 = InstrumentNoteMask.field_i * 140 >> 8;
           stackIn_4_0 = (SessionUrlSupport.screenToWorldX(0, (byte) -1) >= -var2 + 896 >> 1) ? 0 : 1;
           var6 = stackIn_4_0;
-          stackIn_7_0 = (ig.screenToWorldY(0, 4620) >= 1344 - var3 >> 1) ? 0 : 1;
+          stackIn_7_0 = (MatchHudSupport.screenToWorldY(0, 4620) >= 1344 - var3 >> 1) ? 0 : 1;
           var7 = stackIn_7_0;
           stackIn_10_0 = (896 + var2 >> 1 >= SessionUrlSupport.screenToWorldX(640, (byte) -1)) ? 0 : 1;
           var8 = stackIn_10_0;
-          stackIn_13_0 = (ig.screenToWorldY(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
+          stackIn_13_0 = (MatchHudSupport.screenToWorldY(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
           var9 = stackIn_13_0;
           var10 = MySquadScreen.c(-75, 448);
           var11 = PitchProjectionSupport.worldToScreenY(672, (byte) -56);
@@ -170,8 +170,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               AuctionsScreen.a(-840618968, -var19 + var14, DateInputValidator.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
-              ListRow.a(-12376, var16, var13 * var22Lifetime1 + var15, mt.field_d);
-              AuctionsScreen.a(-840618968, var16 + var4, hq.field_e[var1_int], var15 + var22Lifetime1 * var13);
+              ListRow.a(-12376, var16, var13 * var22Lifetime1 + var15, GoalSpriteLoader.field_d);
+              AuctionsScreen.a(-840618968, var16 + var4, ClientInteractionSupport.field_e[var1_int], var15 + var22Lifetime1 * var13);
             }
           }
           if (var6 != 0 &&
@@ -210,7 +210,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (null != PlayerModelPreview.field_q) {
-            fj.field_c = 0;
+            ConsoleLexer.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               NumericDateInputWidget.field_Q.length > var2_int) {
@@ -269,7 +269,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (PlayerModelPreview.field_q != null) {
-            fj.field_c = 0;
+            ConsoleLexer.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               NumericDateInputWidget.field_Q.length > var2_int) {

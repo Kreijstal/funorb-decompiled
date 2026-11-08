@@ -98,7 +98,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         RuntimeException var4 = null;
         var5 = Kickabout.field_G;
         try {
-          mj.field_a = LinkTextPainter.field_d;
+          PitchAppearanceSupport.field_a = LinkTextPainter.field_d;
           if (param3 != -1) {
             LeagueWinnerDialog.b(-9, -128);
           }
@@ -115,7 +115,7 @@ final class LeagueWinnerDialog extends MessageDialog {
               }
             }
           } else {
-            stackIn_7_0 = !(tn.field_b >= 13);
+            stackIn_7_0 = !(SocialUiState.field_b >= 13);
             JaggrabDownloader.field_h = SquadGridWidget.a(stackIn_7_0, param3 ^ -42);
             MusicPatchPcmStream.a(param3 ^ -18268, (String[]) null);
           }
@@ -156,7 +156,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         if (param0 <= 60) {
           field_K = (String[]) null;
         }
-        or.field_d.b(78, (byte) 113);
+        FootballerAiOverlaySupport.field_d.b(78, (byte) 113);
     }
 
     final static AccountInputValidationResult a(String param0, int param1) {

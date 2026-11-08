@@ -35,8 +35,8 @@ final class SellPlayerDialog extends MessageDialog {
         int var4Lifetime3Lifetime1;
         var8 = Kickabout.field_G;
         try {
-          if (null != et.field_d &&
-            et.field_d.phase == 4 &&
+          if (null != ThumbnailStateFactory.field_d &&
+            ThumbnailStateFactory.field_d.phase == 4 &&
             HuffmanCodec.field_e == 14 &&
             0 < AnimationSkeleton.field_m) {
             fieldTemp$0 = AnimationSkeleton.field_m - 1;
@@ -45,15 +45,15 @@ final class SellPlayerDialog extends MessageDialog {
               RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -118);
             }
           }
-          if (null == et.field_d) {
+          if (null == ThumbnailStateFactory.field_d) {
             return;
           }
           if (HoverTooltip.field_Eb) {
             if (QuickChatCategoryCache.advanceScriptedTutorialPlayers(105)) {
               HoverTooltip.field_Eb = false;
-              et.field_d.participantStatus[0].controlledSlot = vb.field_d;
+              ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = PitchDecorationSupport.field_d;
               LoggedPossession.a(false);
-              mk.b(-1622);
+              TutorialScenerySupport.buildTutorialScenery(-1622);
               LeagueWinnerDialog.g(99);
             }
           } else {
@@ -100,7 +100,7 @@ final class SellPlayerDialog extends MessageDialog {
             }
             AuctionLogEntry.field_g = AuctionLogEntry.field_g + var4;
           }
-          ul.b(11);
+          TextInputUiSupport.updateTutorialMarker(11);
           ReceivedAuctionItem.h((byte) 125);
           if (HuffmanCodec.field_e == 6) {
             DualLinkDeque.a((byte) -127);
@@ -108,11 +108,11 @@ final class SellPlayerDialog extends MessageDialog {
           boolean decompiledFrameRemainder0 = true;
           if (HuffmanCodec.field_e == 7) {
             for (var4Lifetime1 = 1; var4Lifetime1 < 4; var4Lifetime1++) {
-              ig.moveTutorialPlayerToLineup(true, (byte) 85, var4Lifetime1, 1);
+              MatchHudSupport.moveTutorialPlayerToLineup(true, (byte) 85, var4Lifetime1, 1);
             }
-            ig.moveTutorialPlayerToLineup(false, (byte) 23, 1, 0);
-            var4_ref_nl = et.field_d.field_P[1][4];
-            if (0 == et.field_d.field_V.possessorTeam &&
+            MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 23, 1, 0);
+            var4_ref_nl = ThumbnailStateFactory.field_d.field_P[1][4];
+            if (0 == ThumbnailStateFactory.field_d.field_V.possessorTeam &&
               var4_ref_nl.action == 0) {
               var5_int = var4_ref_nl.pixelX(-111) - AccountInputValidationResult.field_f.pixelX(-124);
               var6 = var4_ref_nl.pixelY(true) - AccountInputValidationResult.field_f.pixelY(true);
@@ -123,7 +123,7 @@ final class SellPlayerDialog extends MessageDialog {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (1 == et.field_d.field_V.possessorTeam &&
+              if (1 == ThumbnailStateFactory.field_d.field_V.possessorTeam &&
                 var4_ref_nl.action == 0) {
                 QuickChatCategory.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (HoverTooltip.field_Eb &&
@@ -136,67 +136,67 @@ final class SellPlayerDialog extends MessageDialog {
           }
           if (HuffmanCodec.field_e == 8) {
             if (!HoverTooltip.field_Eb) {
-              et.field_d.participantStatus[1].controlledSlot = 0;
-              var4Lifetime2 = et.field_d.field_V.pixelX(true);
-              var5_intLifetime1 = et.field_d.field_V.pixelY(879306160);
+              ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
+              var4Lifetime2 = ThumbnailStateFactory.field_d.field_V.pixelX(true);
+              var5_intLifetime1 = ThumbnailStateFactory.field_d.field_V.pixelY(879306160);
               IntDoubleCommand.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
               IntDoubleCommand.a((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
               IntDoubleCommand.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
               IntDoubleCommand.a((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
             } else {
-              ig.moveTutorialPlayerToLineup(false, (byte) 109, 4, 1);
+              MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 109, 4, 1);
             }
           }
           if (HuffmanCodec.field_e == 9) {
             for (var4Lifetime3 = 1; var4Lifetime3 < 3; var4Lifetime3++) {
-              ig.moveTutorialPlayerToLineup(true, (byte) 83, var4Lifetime3, 1);
+              MatchHudSupport.moveTutorialPlayerToLineup(true, (byte) 83, var4Lifetime3, 1);
             }
             for (var4Lifetime3Lifetime1 = 3; var4Lifetime3Lifetime1 < 5; var4Lifetime3Lifetime1++) {
               if (!HoverTooltip.field_Eb &&
-                et.field_d.field_P[1][var4Lifetime3Lifetime1].action == 0) {
-                et.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
+                ThumbnailStateFactory.field_d.field_P[1][var4Lifetime3Lifetime1].action == 0) {
+                ThumbnailStateFactory.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
               }
             }
             AuctionsHelpScreen.d(true);
           }
           var4Lifetime4 = -97 / ((param0 - 88) / 34);
           if (HuffmanCodec.field_e == 10) {
-            ig.moveTutorialPlayerToLineup(false, (byte) 124, 3, 1);
-            ig.moveTutorialPlayerToLineup(false, (byte) 90, 4, 1);
-            ig.moveTutorialPlayerToLineup(false, (byte) 52, 3, 0);
+            MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 124, 3, 1);
+            MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 90, 4, 1);
+            MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 52, 3, 0);
           }
           if (HuffmanCodec.field_e == 11) {
-            ig.moveTutorialPlayerToLineup(false, (byte) 85, 1, 0);
+            MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 85, 1, 0);
           }
           if (HuffmanCodec.field_e == 12 &&
-            et.field_d.field_X.goalCount > 25) {
-            et.field_d.field_X.goalCount = 0;
-            if (et.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
+            ThumbnailStateFactory.field_d.field_X.goalCount > 25) {
+            ThumbnailStateFactory.field_d.field_X.goalCount = 0;
+            if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
               CheckboxLabelWidget.c(13, false);
             }
           }
           if (HuffmanCodec.field_e == 13) {
             if (!HoverTooltip.field_Eb) {
-              if (et.field_d.field_X.goalCount > 25) {
-                et.field_d.field_X.goalCount = 0;
-                if (et.field_d.field_V.horizontalSpeedSquared(44) == 0) {
+              if (ThumbnailStateFactory.field_d.field_X.goalCount > 25) {
+                ThumbnailStateFactory.field_d.field_X.goalCount = 0;
+                if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(44) == 0) {
                   CheckboxLabelWidget.c(14, false);
                 }
               }
             } else {
-              et.field_d.field_X.goalCount = 0;
-              if (et.field_d.field_P[1][0].positionY < 0) {
+              ThumbnailStateFactory.field_d.field_X.goalCount = 0;
+              if (ThumbnailStateFactory.field_d.field_P[1][0].positionY < 0) {
                 RasterStateSnapshot.a(2235, 2949120, 4, 29360128);
               }
-              if (et.field_d.field_V.possessorTeam == 0) {
-                et.field_d.field_V.possessorTeam = -1;
+              if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
+                ThumbnailStateFactory.field_d.field_V.possessorTeam = -1;
               }
-              et.field_d.participantStatus[0].controlledSlot = 0;
+              ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = 0;
             }
           }
           if (HuffmanCodec.field_e == 14 &&
             MyKitScreen.field_O &&
-            et.field_d.phase == 4) {
+            ThumbnailStateFactory.field_d.phase == 4) {
             MyKitScreen.field_O = false;
             var10 = GameLoopApplet.field_E.field_J;
             var9 = var10;
@@ -212,8 +212,8 @@ final class SellPlayerDialog extends MessageDialog {
                   var6Lifetime1 = var6Lifetime1 | 1 << var7;
                 }
               }
-              or.field_d.b(69, (byte) 78);
-              or.field_d.writeInt(-78, var6Lifetime1);
+              FootballerAiOverlaySupport.field_d.b(69, (byte) 78);
+              FootballerAiOverlaySupport.field_d.writeInt(-78, var6Lifetime1);
             }
           }
           return;

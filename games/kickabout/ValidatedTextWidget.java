@@ -26,7 +26,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
     }
 
     final static void a(boolean param0, int param1) {
-        vb.field_j = 0;
+        PitchDecorationSupport.field_j = 0;
         AlphaContainer.field_C = new int[3];
         if (param0) {
           RenderedBall var3 = (RenderedBall) null;

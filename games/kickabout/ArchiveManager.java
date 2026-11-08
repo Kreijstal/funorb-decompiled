@@ -175,7 +175,7 @@ final class ArchiveManager {
           var5 = CheckboxLabelWidget.field_Cb.field_X.paragraphHeight(param1, 272, CheckboxLabelWidget.field_Cb.field_xb);
           var6 = -103 + var3 / 2 - var5 / 2;
           TriangleMesh.field_j.setBounds(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
-          TriangleMesh.field_j.field_R = fs.a(TriangleMesh.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
+          TriangleMesh.field_j.field_R = PanelSpriteFactory.createPanelSprites(TriangleMesh.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
           CheckboxLabelWidget.field_Cb.setBounds(true, -24 + TriangleMesh.field_j.field_q - 24, 24, 16, -24 + (-20 + TriangleMesh.field_j.field_mb));
           RandomAccessCacheFile.field_a.setBounds(true, 80, 120, -20 + TriangleMesh.field_j.field_mb - 24, 24);
         } catch (RuntimeException runtimeException) {
@@ -206,8 +206,8 @@ final class ArchiveManager {
 
     final static void a(int param0, int param1, int param2) {
         String var4;
-        if (null == oo.field_e) {
-          oo.field_e = new int[param1 * 2];
+        if (null == PlatformTaskState.field_e) {
+          PlatformTaskState.field_e = new int[param1 * 2];
           if (LobbyMatchPreview.field_m == null ||
             !(LobbyMatchPreview.field_m.length >= param1)) {
             LobbyMatchPreview.field_m = new int[2 * param1];
@@ -232,9 +232,9 @@ final class ArchiveManager {
                 !(param2 + param1 <= ByteStorage.field_d.length)) {
                 ByteStorage.field_d = new int[(param2 + param1) * 2];
               }
-              if (null == ug.field_f ||
-                !(ug.field_f.length >= param1)) {
-                ug.field_f = new boolean[2 * param1];
+              if (null == SocialListLayoutSupport.field_f ||
+                !(SocialListLayoutSupport.field_f.length >= param1)) {
+                SocialListLayoutSupport.field_f = new boolean[2 * param1];
               }
             } else {
               if (param1 > DialogOverlay.field_a.length) {
@@ -243,30 +243,30 @@ final class ArchiveManager {
                   !(param2 + param1 <= ByteStorage.field_d.length)) {
                   ByteStorage.field_d = new int[(param2 + param1) * 2];
                 }
-                if (null == ug.field_f ||
-                  !(ug.field_f.length >= param1)) {
-                  ug.field_f = new boolean[2 * param1];
+                if (null == SocialListLayoutSupport.field_f ||
+                  !(SocialListLayoutSupport.field_f.length >= param1)) {
+                  SocialListLayoutSupport.field_f = new boolean[2 * param1];
                 }
               } else {
                 if (ByteStorage.field_d == null) {
                   ByteStorage.field_d = new int[(param2 + param1) * 2];
-                  if (null == ug.field_f ||
-                    !(ug.field_f.length >= param1)) {
-                    ug.field_f = new boolean[2 * param1];
+                  if (null == SocialListLayoutSupport.field_f ||
+                    !(SocialListLayoutSupport.field_f.length >= param1)) {
+                    SocialListLayoutSupport.field_f = new boolean[2 * param1];
                   }
                 } else {
                   if (param2 + param1 > ByteStorage.field_d.length) {
                     ByteStorage.field_d = new int[(param2 + param1) * 2];
-                    if (null == ug.field_f ||
-                      !(ug.field_f.length >= param1)) {
-                      ug.field_f = new boolean[2 * param1];
+                    if (null == SocialListLayoutSupport.field_f ||
+                      !(SocialListLayoutSupport.field_f.length >= param1)) {
+                      SocialListLayoutSupport.field_f = new boolean[2 * param1];
                     }
                   } else {
-                    if (null == ug.field_f) {
-                      ug.field_f = new boolean[2 * param1];
+                    if (null == SocialListLayoutSupport.field_f) {
+                      SocialListLayoutSupport.field_f = new boolean[2 * param1];
                     } else {
-                      if (ug.field_f.length < param1) {
-                        ug.field_f = new boolean[2 * param1];
+                      if (SocialListLayoutSupport.field_f.length < param1) {
+                        SocialListLayoutSupport.field_f = new boolean[2 * param1];
                       }
                     }
                   }
@@ -293,12 +293,12 @@ final class ArchiveManager {
             !(param2 + param1 <= ByteStorage.field_d.length)) {
             ByteStorage.field_d = new int[(param2 + param1) * 2];
           }
-          if (null == ug.field_f ||
-            !(ug.field_f.length >= param1)) {
-            ug.field_f = new boolean[2 * param1];
+          if (null == SocialListLayoutSupport.field_f ||
+            !(SocialListLayoutSupport.field_f.length >= param1)) {
+            SocialListLayoutSupport.field_f = new boolean[2 * param1];
           }
         } else {
-          if (param1 <= oo.field_e.length) {
+          if (param1 <= PlatformTaskState.field_e.length) {
             if (LobbyMatchPreview.field_m == null ||
               !(LobbyMatchPreview.field_m.length >= param1)) {
               LobbyMatchPreview.field_m = new int[2 * param1];
@@ -323,9 +323,9 @@ final class ArchiveManager {
                   !(param2 + param1 <= ByteStorage.field_d.length)) {
                   ByteStorage.field_d = new int[(param2 + param1) * 2];
                 }
-                if (null == ug.field_f ||
-                  !(ug.field_f.length >= param1)) {
-                  ug.field_f = new boolean[2 * param1];
+                if (null == SocialListLayoutSupport.field_f ||
+                  !(SocialListLayoutSupport.field_f.length >= param1)) {
+                  SocialListLayoutSupport.field_f = new boolean[2 * param1];
                 }
               } else {
                 if (param1 > DialogOverlay.field_a.length) {
@@ -334,30 +334,30 @@ final class ArchiveManager {
                     !(param2 + param1 <= ByteStorage.field_d.length)) {
                     ByteStorage.field_d = new int[(param2 + param1) * 2];
                   }
-                  if (null == ug.field_f ||
-                    !(ug.field_f.length >= param1)) {
-                    ug.field_f = new boolean[2 * param1];
+                  if (null == SocialListLayoutSupport.field_f ||
+                    !(SocialListLayoutSupport.field_f.length >= param1)) {
+                    SocialListLayoutSupport.field_f = new boolean[2 * param1];
                   }
                 } else {
                   if (ByteStorage.field_d == null) {
                     ByteStorage.field_d = new int[(param2 + param1) * 2];
-                    if (null == ug.field_f ||
-                      !(ug.field_f.length >= param1)) {
-                      ug.field_f = new boolean[2 * param1];
+                    if (null == SocialListLayoutSupport.field_f ||
+                      !(SocialListLayoutSupport.field_f.length >= param1)) {
+                      SocialListLayoutSupport.field_f = new boolean[2 * param1];
                     }
                   } else {
                     if (param2 + param1 > ByteStorage.field_d.length) {
                       ByteStorage.field_d = new int[(param2 + param1) * 2];
-                      if (null == ug.field_f ||
-                        !(ug.field_f.length >= param1)) {
-                        ug.field_f = new boolean[2 * param1];
+                      if (null == SocialListLayoutSupport.field_f ||
+                        !(SocialListLayoutSupport.field_f.length >= param1)) {
+                        SocialListLayoutSupport.field_f = new boolean[2 * param1];
                       }
                     } else {
-                      if (null == ug.field_f) {
-                        ug.field_f = new boolean[2 * param1];
+                      if (null == SocialListLayoutSupport.field_f) {
+                        SocialListLayoutSupport.field_f = new boolean[2 * param1];
                       } else {
-                        if (ug.field_f.length < param1) {
-                          ug.field_f = new boolean[2 * param1];
+                        if (SocialListLayoutSupport.field_f.length < param1) {
+                          SocialListLayoutSupport.field_f = new boolean[2 * param1];
                         }
                       }
                     }
@@ -384,12 +384,12 @@ final class ArchiveManager {
               !(param2 + param1 <= ByteStorage.field_d.length)) {
               ByteStorage.field_d = new int[(param2 + param1) * 2];
             }
-            if (null == ug.field_f ||
-              !(ug.field_f.length >= param1)) {
-              ug.field_f = new boolean[2 * param1];
+            if (null == SocialListLayoutSupport.field_f ||
+              !(SocialListLayoutSupport.field_f.length >= param1)) {
+              SocialListLayoutSupport.field_f = new boolean[2 * param1];
             }
           } else {
-            oo.field_e = new int[param1 * 2];
+            PlatformTaskState.field_e = new int[param1 * 2];
             if (LobbyMatchPreview.field_m == null ||
               !(LobbyMatchPreview.field_m.length >= param1)) {
               LobbyMatchPreview.field_m = new int[2 * param1];
@@ -412,23 +412,23 @@ final class ArchiveManager {
                 DialogOverlay.field_a = new int[param1 * 2];
                 if (ByteStorage.field_d == null) {
                   ByteStorage.field_d = new int[(param2 + param1) * 2];
-                  if (null == ug.field_f ||
-                    !(ug.field_f.length >= param1)) {
-                    ug.field_f = new boolean[2 * param1];
+                  if (null == SocialListLayoutSupport.field_f ||
+                    !(SocialListLayoutSupport.field_f.length >= param1)) {
+                    SocialListLayoutSupport.field_f = new boolean[2 * param1];
                   }
                 } else {
                   if (param2 + param1 > ByteStorage.field_d.length) {
                     ByteStorage.field_d = new int[(param2 + param1) * 2];
-                    if (null == ug.field_f ||
-                      !(ug.field_f.length >= param1)) {
-                      ug.field_f = new boolean[2 * param1];
+                    if (null == SocialListLayoutSupport.field_f ||
+                      !(SocialListLayoutSupport.field_f.length >= param1)) {
+                      SocialListLayoutSupport.field_f = new boolean[2 * param1];
                     }
                   } else {
-                    if (null == ug.field_f) {
-                      ug.field_f = new boolean[2 * param1];
+                    if (null == SocialListLayoutSupport.field_f) {
+                      SocialListLayoutSupport.field_f = new boolean[2 * param1];
                     } else {
-                      if (ug.field_f.length < param1) {
-                        ug.field_f = new boolean[2 * param1];
+                      if (SocialListLayoutSupport.field_f.length < param1) {
+                        SocialListLayoutSupport.field_f = new boolean[2 * param1];
                       }
                     }
                   }
@@ -449,11 +449,11 @@ final class ArchiveManager {
                     }
                   }
                 }
-                if (null == ug.field_f) {
-                  ug.field_f = new boolean[2 * param1];
+                if (null == SocialListLayoutSupport.field_f) {
+                  SocialListLayoutSupport.field_f = new boolean[2 * param1];
                 } else {
-                  if (ug.field_f.length < param1) {
-                    ug.field_f = new boolean[2 * param1];
+                  if (SocialListLayoutSupport.field_f.length < param1) {
+                    SocialListLayoutSupport.field_f = new boolean[2 * param1];
                   }
                 }
               }
@@ -477,8 +477,8 @@ final class ArchiveManager {
               !(param2 + param1 <= ByteStorage.field_d.length)) {
               ByteStorage.field_d = new int[(param2 + param1) * 2];
             }
-            if (null != ug.field_f &&
-              ug.field_f.length >= param1) {
+            if (null != SocialListLayoutSupport.field_f &&
+              SocialListLayoutSupport.field_f.length >= param1) {
               BlackFadeScreen.field_g = -2147483648;
               TournamentLobbyScreen.field_V = -2147483648;
               TextHotspotRegion.field_k = 2147483647;
@@ -486,7 +486,7 @@ final class ArchiveManager {
               AuctionsScreen.field_O = 0;
               return;
             }
-            ug.field_f = new boolean[2 * param1];
+            SocialListLayoutSupport.field_f = new boolean[2 * param1];
           }
         }
         BlackFadeScreen.field_g = -2147483648;

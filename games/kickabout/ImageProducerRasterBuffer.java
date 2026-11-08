@@ -220,7 +220,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             IterableNodeHashTable.a(true, (byte) 89);
             return;
           }
-          if (null == um.field_e) {
+          if (null == MachineTokenStorageSupport.field_e) {
             FaceNormal.field_c = false;
             var1 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
             var2 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
@@ -229,7 +229,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = fieldTemp$0 % MarkerSliderWidget.field_E.length;
             }
-            mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+            PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
             IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
@@ -245,7 +245,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = fieldTemp$1 % MarkerSliderWidget.field_E.length;
               }
-              mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+              PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
               IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
@@ -259,7 +259,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = fieldTemp$2 % MarkerSliderWidget.field_E.length;
             }
-            mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+            PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
             IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
@@ -275,7 +275,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$3 % MarkerSliderWidget.field_E.length;
           }
-          mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
@@ -283,7 +283,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           IterableNodeHashTable.a(true, (byte) 89);
           return;
         }
-        if (null == um.field_e) {
+        if (null == MachineTokenStorageSupport.field_e) {
           FaceNormal.field_c = false;
           var1Lifetime1 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
           var2Lifetime1 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
@@ -292,7 +292,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$4 % MarkerSliderWidget.field_E.length;
           }
-          mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
@@ -309,7 +309,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = fieldTemp$5 % MarkerSliderWidget.field_E.length;
               }
-              mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+              PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
               IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
@@ -322,7 +322,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$6 % MarkerSliderWidget.field_E.length;
           }
-          mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
@@ -335,7 +335,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = fieldTemp$7 % MarkerSliderWidget.field_E.length;
           }
-          mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
           IterableNodeHashTable.a(false, (byte) 89);
           return;
         }

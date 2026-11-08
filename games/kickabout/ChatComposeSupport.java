@@ -12,7 +12,7 @@ final class ChatComposeSupport {
     static int field_g;
 
     final static void prepareChatSend(String param0, int param1, long param2, int param3, byte param4) {
-        vb.field_h = param1;
+        PitchDecorationSupport.field_h = param1;
         ArchivePreloadEntry.field_f = param0;
         CommonGame.field_j = true;
         if (param4 > -49) {

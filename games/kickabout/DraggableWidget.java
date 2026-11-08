@@ -40,10 +40,10 @@ final class DraggableWidget extends SingleChildContainer {
         int[] var12 = null;
         var10 = Kickabout.field_G;
         try {
-          if (ug.field_c == null) {
+          if (SocialListLayoutSupport.field_c == null) {
             return;
           }
-          var7 = ug.field_c[param0];
+          var7 = SocialListLayoutSupport.field_c[param0];
           if (param4) {
             var7 = ShopPlayerSlot.field_Hb[param0];
           }
@@ -310,7 +310,7 @@ final class DraggableWidget extends SingleChildContainer {
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
           param2 = false;
-          hq.b((byte) 114);
+          ClientInteractionSupport.dismissQuickChat((byte) 114);
         }
         if (param2) {
           ClassNameSupport.field_g.processClicks(param3, param0, (byte) -127);

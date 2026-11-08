@@ -43,7 +43,7 @@ final class PlayerPortraitCacheEntry {
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
-          oa.a((byte) -126, param0);
+          OverlayLayerSupport.drawSharedWidget((byte) -126, param0);
           if (param2 != 39) {
             PlayerPortraitCacheEntry.millisToMinutes(115, 82L);
             return;
@@ -51,7 +51,7 @@ final class PlayerPortraitCacheEntry {
           return;
         }
         SoftwareRasterizer.clearFramebuffer();
-        oa.a((byte) -126, param0);
+        OverlayLayerSupport.drawSharedWidget((byte) -126, param0);
         if (param2 != 39) {
           PlayerPortraitCacheEntry.millisToMinutes(115, 82L);
           return;
@@ -170,7 +170,7 @@ final class PlayerPortraitCacheEntry {
           }
           ClubStateFactory.field_f = LinkTextPainter.field_d;
           if (param3 == 255) {
-            stackIn_12_0 = !(tn.field_b >= 13);
+            stackIn_12_0 = !(SocialUiState.field_b >= 13);
             ArchiveIndex.field_a = SquadGridWidget.a(stackIn_12_0, 124);
             return;
           }

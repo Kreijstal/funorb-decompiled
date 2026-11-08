@@ -27,7 +27,7 @@ final class AchievementSubmission extends IntrusiveNode {
           for (var1_int = 0; var1_int < AnimationSkeleton.field_g.length; var1_int++) {
             LocalizedTextLoader.field_c[var1_int] = new Sprite(94, 84);
             var2 = AuctionsHelpScreen.a(var1_int, (int) ClubStateFactory.a(255, 63), true, (int) ClubStateFactory.a(65280, param0 - 65217)).createModelMesh(100, 728, 20, -56, -20);
-            pe.a(var2, LocalizedTextLoader.field_c[var1_int], var1_int, 40);
+            MeshPreviewSupport.renderMeshPreview(var2, LocalizedTextLoader.field_c[var1_int], var1_int, 40);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,7 +9,7 @@ final class ArchiveReconnectSupport {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
-        iv.field_o = null;
+        SharedWidgetFactory.field_o = null;
         AnimationSkeleton.field_e = null;
         IterableDualLinkDeque.field_a = 0;
         var2 = GameSoundEffect.field_b;

@@ -179,7 +179,7 @@ final class ClubStateFactory {
     }
 
     final static void setCalendarTime(long param0, int param1) {
-        oa.field_a.setTime(new Date(param0));
+        OverlayLayerSupport.field_a.setTime(new Date(param0));
         if (param1 != 0) {
           field_d = (Sprite[]) null;
         }

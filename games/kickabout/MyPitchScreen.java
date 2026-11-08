@@ -133,9 +133,9 @@ final class MyPitchScreen extends TeamManagementScreen {
           IsSixCommand.field_C.a(TooltipOverlay.field_c, var3 + 70, 368, 16777215, -1);
           IsSixCommand.field_C.a(ClientUiUpdateSupport.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
         }
-        un.field_d.a(ca.field_a, this.slideOffsetX + 25, 115, 16777215, -1);
-        un.field_d.a(FormationView.field_j, 25 + this.slideOffsetX, 223, 16777215, -1);
-        un.field_d.a(GameLoopApplet.field_C, 25 + this.slideOffsetX, 331, 16777215, -1);
+        ByteArrayPool.field_d.a(GradientRasterSupport.field_a, this.slideOffsetX + 25, 115, 16777215, -1);
+        ByteArrayPool.field_d.a(FormationView.field_j, 25 + this.slideOffsetX, 223, 16777215, -1);
+        ByteArrayPool.field_d.a(GameLoopApplet.field_C, 25 + this.slideOffsetX, 331, 16777215, -1);
     }
 
     final void buildWidgets(int param0) {
@@ -150,7 +150,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (param1 <= 99) {
           this.field_I = true;
         }
-        ig.b(this.slideOffsetX, -12452);
+        MatchHudSupport.drawNumericRewardPanel(this.slideOffsetX, -12452);
     }
 
     final void updateScreen(byte param0, boolean param1) {
@@ -208,22 +208,22 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
           try {
             if (IterableDualLinkDeque.field_a == 0) {
-              iv.field_o = PainterStyle.field_e.a(true, ScrollContainer.field_yb, GameSoundEffect.field_b);
+              SharedWidgetFactory.field_o = PainterStyle.field_e.a(true, ScrollContainer.field_yb, GameSoundEffect.field_b);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
             }
             if (IterableDualLinkDeque.field_a == 1) {
-              if (iv.field_o.field_a == 2) {
+              if (SharedWidgetFactory.field_o.field_a == 2) {
                 stackIn_16_0 = ArchiveReconnectSupport.retryArchiveConnection(-120, -1);
                 return stackIn_16_0;
               }
-              if (1 == iv.field_o.field_a) {
+              if (1 == SharedWidgetFactory.field_o.field_a) {
                 IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               }
             }
             if (IterableDualLinkDeque.field_a == 2) {
-              AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (iv.field_o.field_b), PainterStyle.field_e);
+              AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (SharedWidgetFactory.field_o.field_b), PainterStyle.field_e);
               var2 = new PacketBuffer(13);
-              ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
+              ImageProducerRasterBuffer.a(FootballerAiOverlaySupport.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, SocialPlayerRow.field_Db);
               AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);
@@ -252,7 +252,7 @@ final class MyPitchScreen extends TeamManagementScreen {
             ParticipantStatus.field_t.attachSocket(AnimationSkeleton.field_e, 20, TrinketUnlockNotice.field_f);
             AnimationSkeleton.field_e = null;
             IterableDualLinkDeque.field_a = 0;
-            iv.field_o = null;
+            SharedWidgetFactory.field_o = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

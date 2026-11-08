@@ -30,7 +30,7 @@ final class BrowserUiSupport {
           var8 = MonotonicClock.placePopupVertically(var3, 20, var6, 29079);
           SoftwareRasterizer.e(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRect(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          ConsoleEvaluationException.field_e.field_X.a(param1, 3 + var7, var8 - (-1 - ig.field_c) - ConsoleEvaluationException.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, LineupPositionSupport.field_c);
+          ConsoleEvaluationException.field_e.field_X.a(param1, 3 + var7, var8 - (-1 - MatchHudSupport.field_c) - ConsoleEvaluationException.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, LineupPositionSupport.field_c);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

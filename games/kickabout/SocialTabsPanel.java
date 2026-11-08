@@ -28,13 +28,13 @@ final class SocialTabsPanel {
         var8 = Kickabout.field_G;
         try {
           HelpTipDialog.field_I = new AnimationClip[5][17];
-          hq.field_b = new AnimationClip[5];
+          ClientInteractionSupport.field_b = new AnimationClip[5];
           GameKeyHandler.a(param1, param3, (byte) -69);
           var10 = new AnimationFrameset(0);
           var11 = var10;
           while (!var11.ensureLoaded((byte) 103)) {
           }
-          pe.a((byte) 82, var10);
+          MeshPreviewSupport.setSharedAnimationFrameset((byte) 82, var10);
           HelpTipDialog.field_I[0][0] = new AnimationClip(param2, "characters", "ka_tank_aggressive_tackle");
           HelpTipDialog.field_I[0][1] = new AnimationClip(param2, "characters", "ka_tank_fall");
           HelpTipDialog.field_I[0][2] = new AnimationClip(param2, "characters", "ka_tank_fall_stand");
@@ -90,11 +90,11 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[4][0] = new AnimationClip(param2, "characters", "ka_keeper_aggressive_tackle");
           HelpTipDialog.field_I[4][6] = new AnimationClip(param2, "characters", "ka_keeper_tackle_stand");
           LoadingProgressSupport.reportStageProgress(89, 6, 5);
-          hq.field_b[0] = new AnimationClip(param2, "fans", "fan01_cheer");
-          hq.field_b[1] = new AnimationClip(param2, "fans", "fan02_cheer");
-          hq.field_b[2] = new AnimationClip(param2, "fans", "fan03_cheer");
-          hq.field_b[3] = new AnimationClip(param2, "fans", "fan04_cheer");
-          hq.field_b[4] = new AnimationClip(param2, "fans", "fan05_cheer");
+          ClientInteractionSupport.field_b[0] = new AnimationClip(param2, "fans", "fan01_cheer");
+          ClientInteractionSupport.field_b[1] = new AnimationClip(param2, "fans", "fan02_cheer");
+          ClientInteractionSupport.field_b[2] = new AnimationClip(param2, "fans", "fan03_cheer");
+          ClientInteractionSupport.field_b[3] = new AnimationClip(param2, "fans", "fan04_cheer");
+          ClientInteractionSupport.field_b[4] = new AnimationClip(param2, "fans", "fan05_cheer");
           for (var5 = 0; var5 < 5; var5++) {
             for (var6 = 0; var6 < 17; var6++) {
               var7 = 0;
@@ -226,7 +226,7 @@ final class SocialTabsPanel {
           if (!param2) {
             field_c = (ContextMenuItem[][]) null;
           }
-          var5 = or.field_d;
+          var5 = FootballerAiOverlaySupport.field_d;
           var5.b(param1, (byte) -75);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;

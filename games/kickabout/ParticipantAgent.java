@@ -39,29 +39,29 @@ final class ParticipantAgent extends MatchAgent {
     }
 
     final static void initializeGameSoundEffects(SoundCache param0, ResourceArchive param1, byte param2) {
-        bq.field_a = param0;
+        MatchUiLayoutSupport.field_a = param0;
         SortCriterion.field_h = param1;
-        TextFieldNode.field_Db[44] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_menu_btn"));
-        TextFieldNode.field_Db[45] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_menu_tab_btn"));
-        TextFieldNode.field_Db[46] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_save_and_exit_btn"));
-        TextFieldNode.field_Db[47] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_back_and_exit"));
+        TextFieldNode.field_Db[44] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_menu_btn"));
+        TextFieldNode.field_Db[45] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_menu_tab_btn"));
+        TextFieldNode.field_Db[46] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_save_and_exit_btn"));
+        TextFieldNode.field_Db[47] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_back_and_exit"));
         LoadingProgressSupport.reportStageProgress(-111, 100, 25);
-        TextFieldNode.field_Db[48] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_menu_select_btn"));
-        TextFieldNode.field_Db[49] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_complete_purchase_btn"));
-        TextFieldNode.field_Db[50] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_attach_powerup"));
-        TextFieldNode.field_Db[51] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_profile_expand_btn"));
+        TextFieldNode.field_Db[48] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_menu_select_btn"));
+        TextFieldNode.field_Db[49] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_complete_purchase_btn"));
+        TextFieldNode.field_Db[50] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_attach_powerup"));
+        TextFieldNode.field_Db[51] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_profile_expand_btn"));
         LoadingProgressSupport.reportStageProgress(param2 + 0, 100, 50);
-        TextFieldNode.field_Db[52] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_profile_collapse_btn"));
-        TextFieldNode.field_Db[53] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_warning_error_msg"));
-        TextFieldNode.field_Db[54] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_mouse_over"));
-        TextFieldNode.field_Db[55] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_menu_slide_left"));
-        TextFieldNode.field_Db[56] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_menu_slide_right"));
-        TextFieldNode.field_Db[57] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_profile_expand_all_btn"));
+        TextFieldNode.field_Db[52] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_profile_collapse_btn"));
+        TextFieldNode.field_Db[53] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_warning_error_msg"));
+        TextFieldNode.field_Db[54] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_mouse_over"));
+        TextFieldNode.field_Db[55] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_menu_slide_left"));
+        TextFieldNode.field_Db[56] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_menu_slide_right"));
+        TextFieldNode.field_Db[57] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_profile_expand_all_btn"));
         LoadingProgressSupport.reportStageProgress(-118, 100, 75);
-        TextFieldNode.field_Db[58] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_profile_collapse_all_btn"));
-        TextFieldNode.field_Db[59] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_scroll_left_btn"));
-        TextFieldNode.field_Db[60] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_scroll_right_btn"));
-        TextFieldNode.field_Db[61] = new GameSoundEffect(bq.field_a.getNamedSoundEffect("", true, "KaB_toggle_checkbox"));
+        TextFieldNode.field_Db[58] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_profile_collapse_all_btn"));
+        TextFieldNode.field_Db[59] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_scroll_left_btn"));
+        TextFieldNode.field_Db[60] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_scroll_right_btn"));
+        TextFieldNode.field_Db[61] = new GameSoundEffect(MatchUiLayoutSupport.field_a.getNamedSoundEffect("", true, "KaB_toggle_checkbox"));
         TextFieldNode.field_Db[43] = new GameSoundEffect(0, 43, "KaB_crowd_win_cheer_lvl4");
         TextFieldNode.field_Db[33] = new GameSoundEffect(0, 33, "KaB_whistle_blow_fulltime_ALL");
         TextFieldNode.field_Db[34] = new GameSoundEffect(0, 34, "KaB_whistle_blow_kickoff_ALL");

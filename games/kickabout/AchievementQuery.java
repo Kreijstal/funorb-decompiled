@@ -16,7 +16,7 @@ final class AchievementQuery extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 75 / ((72 - param2) / 47);
-          if (cu.decodeSpriteSheetFromArchive(param1, param3, param0, 117)) {
+          if (RankingRowFactory.decodeSpriteSheetFromArchive(param1, param3, param0, 117)) {
             return LeaderboardParticipant.a(-125);
           }
           return null;

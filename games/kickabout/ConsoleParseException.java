@@ -42,7 +42,7 @@ final class ConsoleParseException extends Exception {
         String var7 = null;
         var6 = Kickabout.field_G;
         try {
-          if (null != jl.field_f) {
+          if (null != InputLayoutState.field_f) {
             return;
           }
           TextFieldNode.field_Wb = false;
@@ -61,7 +61,7 @@ final class ConsoleParseException extends Exception {
           RotaryDialPainter.field_b.field_H = SoundStreamHandle.field_e + (-((SoundStreamHandle.field_e & 16711422) >> 1) + (8355711 & ArchiveRequest.field_o.field_H >> 1));
           RotaryDialPainter.field_b.field_ub = -((16711423 & SoundStreamHandle.field_e) >> 1) + SoundStreamHandle.field_e + (ArchiveRequest.field_o.field_ub >> 1 & 8355711);
           ButtonMenuScreen.field_n = WeightedCacheEntry.field_s;
-          jl.field_f = RotaryDialPainter.field_b;
+          InputLayoutState.field_f = RotaryDialPainter.field_b;
           ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
           QuickChatMenuBuilder.field_e = new UiLayoutNode(0L, param1);
           PagedHelpScreen.field_D = new UiLayoutNode(0L, (UiLayoutNode) null);

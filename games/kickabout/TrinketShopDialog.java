@@ -173,7 +173,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new ScrollContainer(vb.hashString31(0, var5), this.g((byte) -119), ConsolePanel.field_q, TextEntrySupport.field_b, ParticipantAgent.field_m);
+        this.field_L = new ScrollContainer(PitchDecorationSupport.hashString31(0, var5), this.g((byte) -119), ConsolePanel.field_q, TextEntrySupport.field_b, ParticipantAgent.field_m);
         this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }

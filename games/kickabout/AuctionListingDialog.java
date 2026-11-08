@@ -23,9 +23,9 @@ final class AuctionListingDialog extends MessageDialog {
           this.a(var6, this.field_t, this.field_D, -87, this.field_u);
           dupTemp$0 = this.field_i[0];
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
-          var4 = pg.a(false, 21)[1];
-          var5 = 20 + un.field_d.a(var4);
-          this.field_i[1] = SoftwareDrawingSupport.createRenderedButton(var4, 7126504, un.field_d, var5, false);
+          var4 = SharedPanelFactory.getMessageButtonLabels(false, 21)[1];
+          var5 = 20 + ByteArrayPool.field_d.a(var4);
+          this.field_i[1] = SoftwareDrawingSupport.createRenderedButton(var4, 7126504, ByteArrayPool.field_d, var5, false);
           this.field_i[1].field_J = this.field_i[0].field_J;
           this.field_i[1].field_s = this.field_i[0].field_s + (this.field_i[0].field_q + 20);
         } catch (RuntimeException runtimeException) {
@@ -40,8 +40,8 @@ final class AuctionListingDialog extends MessageDialog {
         super.handleResult(62, param1);
         if (!PlayArea.a(100) &&
           this.field_G) {
-          or.field_d.b(60, (byte) 104);
-          this.field_J.writeToPacket(or.field_d, 5);
+          FootballerAiOverlaySupport.field_d.b(60, (byte) 104);
+          this.field_J.writeToPacket(FootballerAiOverlaySupport.field_d, 5);
         }
         BuyPlayerDialog.field_K.addLast(this.field_J, 3);
         ((AuctionsScreen) (VertexNormal.getMenuScreen(-104, 16))).field_H = -1L;

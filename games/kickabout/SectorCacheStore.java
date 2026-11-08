@@ -204,7 +204,7 @@ final class SectorCacheStore {
           }
           if (0 != param1.field_j ||
             param1.field_p != 0) {
-            for (var2_int = 0; vb.field_j > var2_int; var2_int++) {
+            for (var2_int = 0; PitchDecorationSupport.field_j > var2_int; var2_int++) {
               var3 = GrowableIntList.field_b[var2_int];
               if (var3.field_c == 2 &&
                 var3.field_j == param1.field_j &&
@@ -215,7 +215,7 @@ final class SectorCacheStore {
           }
           if (param1.field_r != null) {
             GameOverView.field_z = param1.field_c;
-            mv.field_a = param1.field_q;
+            DefaultPlayerFactory.field_a = param1.field_q;
             PlayerModelPreview.field_r = param1.field_d;
             PlayerShopScreen.field_S = param1.field_r;
           }
@@ -463,7 +463,7 @@ final class SectorCacheStore {
                 break;
               }
               if (var5 == null) {
-                var9 = cu.a(false, 0, var3, var2, false, false);
+                var9 = RankingRowFactory.createRankingRow(false, 0, var3, var2, false, false);
                 var5 = var9;
                 var9.setBounds(true, 327, 5, var4, 16);
               }

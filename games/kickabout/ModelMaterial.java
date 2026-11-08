@@ -76,7 +76,7 @@ final class ModelMaterial {
         var16 = null;
         var9 = Kickabout.field_G;
         try {
-          var15 = un.field_e;
+          var15 = ByteArrayPool.field_e;
           var2 = 123 % ((param0 + 25) / 60);
           var3 = var15.readUnsignedByte((byte) -106);
           if (var3 == 0) {

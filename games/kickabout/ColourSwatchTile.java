@@ -77,7 +77,7 @@ final class ColourSwatchTile extends UiLayoutNode {
             ArrayWidgetContainer.field_z[1].drawScaledAlpha(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
             ArrayWidgetContainer.field_z[3].drawScaledAdditive(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
           }
-          su.field_a.c((-su.field_a.field_o + var7 >> 1) + var5, (var7 - su.field_a.field_v >> 1) + var6);
+          WidgetStyleFactory.field_a.c((-WidgetStyleFactory.field_a.field_o + var7 >> 1) + var5, (var7 - WidgetStyleFactory.field_a.field_v >> 1) + var6);
           SoftwareRasterizer.drawHorizontalLineAlpha(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
           SoftwareRasterizer.drawVerticalLineAlpha(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
           SoftwareRasterizer.drawVerticalLineAlpha(2 + var5, 2 + var6, var7 - 5, 0, 90);

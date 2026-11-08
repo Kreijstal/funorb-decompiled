@@ -36,7 +36,7 @@ final class UiInputRoutingSupport {
     final static void buildSliderTrackSprites(boolean param0, int param1) {
         DateInputValidator.field_e = DebugConsole.a(25, 0, true, !param0 ? true : false, 11, param1);
         DualLinkNode.field_h = DebugConsole.a(50, 25, param0, !param0 ? true : false, 11, param1);
-        hq.field_e = DebugConsole.a(75, 50, false, false, 11, param1);
+        ClientInteractionSupport.field_e = DebugConsole.a(75, 50, false, false, 11, param1);
         ModalPanel.field_G = DebugConsole.a(100, 75, false, false, 11, param1);
     }
 

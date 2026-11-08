@@ -27,7 +27,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (!param1) {
             field_Ib = true;
           }
-          vb.field_l = ChatComposeSupport.field_a[2];
+          PitchDecorationSupport.field_l = ChatComposeSupport.field_a[2];
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -190,14 +190,14 @@ final class SquadGridWidget extends UiLayoutNode {
         int var8Lifetime1;
         var12 = Kickabout.field_G;
         try {
-          var3_int = un.field_e.readUnsignedMedium(-107);
-          var4 = un.field_e.readUnsignedByte((byte) -121);
-          var5 = un.field_e.readUnsignedByte((byte) -118);
+          var3_int = ByteArrayPool.field_e.readUnsignedMedium(-107);
+          var4 = ByteArrayPool.field_e.readUnsignedByte((byte) -121);
+          var5 = ByteArrayPool.field_e.readUnsignedByte((byte) -118);
           stackIn_4_0 = (AnimationSkeleton.field_k == var5) ? 0 : 1;
           var6 = stackIn_4_0;
           var7 = new ListingRow[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.a(ByteArrayPool.field_e, param0 + 18758);
           }
           LineupView.field_y.addAll(param0 ^ -107, var7, MonotonicClock.monotonicMillis(param0 + 186));
           if (!param2 &&
@@ -290,12 +290,12 @@ final class SquadGridWidget extends UiLayoutNode {
         int var2;
         if (!PlayArea.a(100) &&
           null != this.field_Bb) {
-          or.field_d.b(81, (byte) 84);
-          or.field_d.field_n = or.field_d.field_n + 2;
-          var2 = or.field_d.field_n;
-          or.field_d.writeByte(106, 1);
-          this.field_Bb.writeToPacket(1, or.field_d);
-          or.field_d.backpatchShortLength(-var2 + or.field_d.field_n, 62);
+          FootballerAiOverlaySupport.field_d.b(81, (byte) 84);
+          FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
+          var2 = FootballerAiOverlaySupport.field_d.field_n;
+          FootballerAiOverlaySupport.field_d.writeByte(106, 1);
+          this.field_Bb.writeToPacket(1, FootballerAiOverlaySupport.field_d);
+          FootballerAiOverlaySupport.field_d.backpatchShortLength(-var2 + FootballerAiOverlaySupport.field_d.field_n, 62);
           if (!param0) {
             field_Gb = 97;
           }
@@ -610,7 +610,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
         AuctionsHelpScreen.field_F = new String[8];
         AuctionsHelpScreen.field_F[7] = DisplayModeSupport.field_c;
-        fs.field_a = new String[]{RotaryDialWidget.field_F, MouseInputHandler.field_a};
+        PanelSpriteFactory.field_a = new String[]{RotaryDialWidget.field_F, MouseInputHandler.field_a};
         GameModeDefinition.field_e = new String[]{RenderedFootballer.field_Q};
         AuctionsHelpScreen.field_F[1] = ChatInputState.field_f;
         AuctionsHelpScreen.field_F[4] = DisplayModeSupport.field_d;
@@ -618,21 +618,21 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionsHelpScreen.field_F[0] = PlayerShopScreen.field_H;
         MatchingTextValidator.field_o = new String[57];
         LoginForm.field_M = new String[]{TickClock.field_g, MouseInputHandler.field_a};
-        ArchiveSource.field_d = new String[]{NumericDateInputWidget.field_C, iv.field_n, MouseInputHandler.field_a};
+        ArchiveSource.field_d = new String[]{NumericDateInputWidget.field_C, SharedWidgetFactory.field_n, MouseInputHandler.field_a};
         ReflectionCheck.field_q = new String[]{RotaryDialWidget.field_F, BroadcastServerCommand.field_F};
         AuctionsHelpScreen.field_F[3] = PlayerArchetypeSortCriterion.field_t;
         FullscreenFocusCanvas.field_i = new String[]{RotaryDialWidget.field_F, TickClock.field_g};
         AuctionItem.field_u = new String[]{RotaryDialWidget.field_F};
         AuctionsHelpScreen.field_F[2] = WhirlpoolHasher.field_i;
-        AuctionsHelpScreen.field_F[5] = fc.field_e;
+        AuctionsHelpScreen.field_F[5] = LoginResponseUiSupport.field_e;
         AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, UiInputRoutingSupport.field_a, MouseInputHandler.field_a};
         MatchingTextValidator.field_o[10] = MonotonicClock.field_b;
-        MatchingTextValidator.field_o[12] = ns.field_b;
+        MatchingTextValidator.field_o[12] = NotificationPanelPositionSupport.field_b;
         MatchingTextValidator.field_o[3] = HoverTooltip.field_zb;
-        MatchingTextValidator.field_o[4] = pe.field_b;
+        MatchingTextValidator.field_o[4] = MeshPreviewSupport.field_b;
         MatchingTextValidator.field_o[2] = TeamManagementScreen.field_E;
         MatchingTextValidator.field_o[25] = ScrollContainer.field_Bb;
-        MatchingTextValidator.field_o[28] = pr.field_b;
+        MatchingTextValidator.field_o[28] = LeagueRatingRequirements.field_b;
         MatchingTextValidator.field_o[55] = DemoIntegersCommand.field_B;
         MatchingTextValidator.field_o[8] = IconLabel.field_Eb;
         MatchingTextValidator.field_o[27] = DebouncedValidationProvider.field_c;
@@ -666,7 +666,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[42] = TrinketTile.field_Fb;
         MatchingTextValidator.field_o[21] = RotaryDialPainter.field_f;
         MatchingTextValidator.field_o[44] = DualLinkDeque.field_b;
-        MatchingTextValidator.field_o[13] = cu.field_f[0];
+        MatchingTextValidator.field_o[13] = RankingRowFactory.field_f[0];
         MatchingTextValidator.field_o[20] = GameOverView.field_n;
         MatchingTextValidator.field_o[17] = DebugConsole.field_A;
         MatchingTextValidator.field_o[34] = PasswordValidator.field_m;
@@ -678,22 +678,22 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[32] = "";
         MatchingTextValidator.field_o[56] = FaceNormal.field_h;
         MatchingTextValidator.field_o[54] = ArchiveSource.field_a;
-        MatchingTextValidator.field_o[53] = ul.field_b;
-        MatchingTextValidator.field_o[51] = vp.field_d;
+        MatchingTextValidator.field_o[53] = TextInputUiSupport.field_b;
+        MatchingTextValidator.field_o[51] = MatchTextInputOverlay.field_d;
         MatchingTextValidator.field_o[49] = TutorialChoiceDialog.field_K;
         MatchingTextValidator.field_o[37] = "";
         ArchivePreloadEntry.field_b = ArchivePreloadEntry.field_b.toLowerCase();
         MusicPatchNode.field_i = MusicPatchNode.field_i.toLowerCase();
-        fa.field_g = new String[57];
+        PendingRequestAcknowledgement.field_g = new String[57];
         if (param0 != -19) {
           return;
         }
-        fa.field_g[28] = GameModeDefinition.field_b;
-        fa.field_g[26] = StrongCacheEntry.field_C;
-        fa.field_g[46] = TextLayout.field_b;
+        PendingRequestAcknowledgement.field_g[28] = GameModeDefinition.field_b;
+        PendingRequestAcknowledgement.field_g[26] = StrongCacheEntry.field_C;
+        PendingRequestAcknowledgement.field_g[46] = TextLayout.field_b;
         ValidationState.field_d = new String[24];
-        fa.field_g[48] = TutorialMessages.field_a;
-        fa.field_g[45] = PitchBoundaryCacheState.field_a;
+        PendingRequestAcknowledgement.field_g[48] = TutorialMessages.field_a;
+        PendingRequestAcknowledgement.field_g[45] = PitchBoundaryCacheState.field_a;
         ValidationState.field_d[18] = AnimationFrameset.field_s;
         ValidationState.field_d[1] = DemoIntegersCommand.field_C;
         ValidationState.field_d[4] = AudioService.field_a;
@@ -715,11 +715,11 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[19] = ScrollPane.field_yb;
         ValidationState.field_d[3] = PlayerModelPreview.field_l;
         ValidationState.field_d[14] = TickClock.field_c;
-        ValidationState.field_d[2] = mt.field_c;
+        ValidationState.field_d[2] = GoalSpriteLoader.field_c;
         ValidationState.field_d[8] = MusicPatch.field_o;
         ValidationState.field_d[13] = AccountInputValidationResult.field_d;
         ValidationState.field_d[11] = SceneSpriteFactory.field_c;
-        LobbyGameRecord.field_g[0] = lt.field_b;
+        LobbyGameRecord.field_g[0] = PlayAreaMovementSupport.field_b;
         LobbyGameRecord.field_g[2] = WeightedCacheEntry.field_n;
         LobbyGameRecord.field_g[3] = AccountMessagePanel.field_C;
         LobbyGameRecord.field_g[1] = Checkbox.field_G;
@@ -773,14 +773,14 @@ final class SquadGridWidget extends UiLayoutNode {
         int var8Lifetime1;
         var12 = Kickabout.field_G;
         try {
-          var3_int = un.field_e.readUnsignedMedium(-107);
-          var4 = un.field_e.readUnsignedByte((byte) -121);
-          var5 = un.field_e.readUnsignedByte((byte) -118);
+          var3_int = ByteArrayPool.field_e.readUnsignedMedium(-107);
+          var4 = ByteArrayPool.field_e.readUnsignedByte((byte) -121);
+          var5 = ByteArrayPool.field_e.readUnsignedByte((byte) -118);
           stackIn_4_0 = (AnimationSkeleton.field_k == var5) ? 0 : 1;
           var6 = stackIn_4_0;
           var7 = new ListingRow[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = BroadcastServerCommand.a(un.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.a(ByteArrayPool.field_e, param0 + 18758);
           }
           LineupView.field_y.addAll(param0 ^ -107, var7, MonotonicClock.monotonicMillis(param0 + 186));
           if (!param2 &&

@@ -45,7 +45,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             stackIn_10_0 = LookupQuery.field_g;
             return stackIn_10_0;
           }
-          stackIn_8_0 = ql.field_b;
+          stackIn_8_0 = MatchHudRoutingSupport.field_b;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -63,7 +63,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
     final static void b(byte param0) {
         int var1 = (ColorQuantizationBox.field_a - 640) / 2;
         int var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
-        int var3 = var2 - ns.field_a * ns.field_a;
+        int var3 = var2 - NotificationPanelPositionSupport.field_a * NotificationPanelPositionSupport.field_a;
         if (param0 > 81) {
           UiKeyRoutingSupport.field_c.setBounds(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
           AuctionPriceLimits.field_d.setBounds(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));

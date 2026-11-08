@@ -15,7 +15,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_w;
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = or.field_d;
+        CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.b(param1, (byte) 108);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
@@ -89,7 +89,7 @@ abstract class SpriteState extends DualLinkNode {
         var18 = null;
         var19 = Kickabout.field_G;
         try {
-          ConsoleEvaluationException.a(7, ee.field_b);
+          ConsoleEvaluationException.a(7, GameMediaSupport.field_b);
           if (PlayerContextMenu.field_i != null) {
             boolean decompiledFrameRemainder0 = true;
             TrinketUnlockNotice.field_b.field_lb = true;
@@ -117,7 +117,7 @@ abstract class SpriteState extends DualLinkNode {
                 DualLinkHashTable.field_d.field_E = LeagueWinnerDialog.field_I.toUpperCase();
                 DualLinkHashTable.field_d.field_lb = false;
               } else {
-                DualLinkHashTable.field_d.field_E = po.field_b.toUpperCase();
+                DualLinkHashTable.field_d.field_E = SocialRowOrderSupport.field_b.toUpperCase();
                 DualLinkHashTable.field_d.field_lb = true;
               }
               DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_R;
@@ -318,7 +318,7 @@ abstract class SpriteState extends DualLinkNode {
                   var12Lifetime2 = 0;
                   for (var13_intLifetime1 = 0; UiKeyRoutingSupport.field_j > var13_intLifetime1; var13_intLifetime1++) {
                     if (WhirlpoolHasher.field_f[var13_intLifetime1]) {
-                      var24 = "<col=A00000>" + ok.field_b[var13_intLifetime1] + "</col>";
+                      var24 = "<col=A00000>" + Cp1252EncodingSupport.field_b[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
                         var11 = var24;
                       } else {
@@ -364,7 +364,7 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_161_1 = 0;
           stackIn_162_2 = (param0) && (!param4) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_161_0).updateInput(stackIn_161_1, stackIn_162_2);
-          stackIn_166_0 = tn.field_f;
+          stackIn_166_0 = SocialUiState.field_f;
           stackIn_166_1 = 0;
           stackIn_167_2 = (param0) && (!param4) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_166_0).updateInput(stackIn_166_1, stackIn_167_2);
@@ -374,7 +374,7 @@ abstract class SpriteState extends DualLinkNode {
               ContextMenu.a(PlayerContextMenu.field_i.h((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
-              gs.field_e = true;
+              SelectionMarkerSupport.field_e = true;
             }
             if (DualLinkHashTable.field_d.field_sb != 0) {
               TrinketCatalog.field_b = true;

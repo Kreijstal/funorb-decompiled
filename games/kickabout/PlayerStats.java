@@ -147,7 +147,7 @@ final class PlayerStats implements PopupCard {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = or.field_d;
+        CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.b(param0, (byte) 85);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
@@ -361,7 +361,7 @@ final class PlayerStats implements PopupCard {
         if (null != AnimationClip.field_d) {
           AnimationClip.field_d.p(param0 ^ 1496);
         }
-        d.a((byte) 127);
+        FixedVelocitySupport.a((byte) 127);
     }
 
     final void writeToPacket(byte param0, PacketBuffer param1) {
@@ -422,16 +422,16 @@ final class PlayerStats implements PopupCard {
         int var2 = 0;
         int var3 = 0;
         ClientPacketFlushSupport.field_c = param0;
-        if (TextPromptDialog.field_Bb != pg.field_b) {
+        if (TextPromptDialog.field_Bb != SharedPanelFactory.field_b) {
           var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
-          var3 = -(pg.field_b * pg.field_b) + var2;
+          var3 = -(SharedPanelFactory.field_b * SharedPanelFactory.field_b) + var2;
           param0 = param0 + var3 * (-param0 + VerticalScrollbar.field_Ab) / var2;
         }
         if (param1 >= -65) {
           PlayerStats.a(-79, -94);
         }
         GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
-        RankingRowNode.a(119, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
+        RankingRowNode.a(119, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 
     final int trinketSpeedBonus(int param0, boolean param1) {
@@ -681,7 +681,7 @@ final class PlayerStats implements PopupCard {
           return true;
         }
         GoalStateAgent.field_g = 15000L + MonotonicClock.monotonicMillis(param0 - 109);
-        return vj.field_c == 11 ? true : false;
+        return RasterGlowSupport.field_c == 11 ? true : false;
     }
 
     final boolean c(boolean param0, byte param1) {
@@ -819,7 +819,7 @@ final class PlayerStats implements PopupCard {
         String var1Lifetime18;
         String var1Lifetime19;
         if (!this.isEmpty(-2)) {
-          var4 = "Type: " + uf.field_e[this.archetype] + "\n";
+          var4 = "Type: " + RegistrationUiSupport.field_e[this.archetype] + "\n";
           var1 = var4;
           var1Lifetime1 = var4;
           var5 = var4;
@@ -986,7 +986,7 @@ final class PlayerStats implements PopupCard {
           var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
         }
         ConsoleTokenCursor.field_d.c(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
-        ConsoleTokenCursor.field_d.c(uf.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);
+        ConsoleTokenCursor.field_d.c(RegistrationUiSupport.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);
         param6 = param6 + var26[0];
         var17_int = 0;
         while (true) {
@@ -1010,7 +1010,7 @@ final class PlayerStats implements PopupCard {
             if (this.f(13467)) {
               SoftwareDrawingSupport.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
               SoftwareRasterizer.drawVerticalLine(-1 + var13 + param1, param6, var26[2] + 1, 65793);
-              ConsoleTokenCursor.field_d.d(oo.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
+              ConsoleTokenCursor.field_d.d(PlatformTaskState.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
             }
             param6 = param6 + var26[2];
             if (param2) {

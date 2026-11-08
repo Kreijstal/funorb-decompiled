@@ -29,10 +29,10 @@ final class ContextMenuItem extends UiLayoutNode {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          for (var1_int = 0; vb.field_j > var1_int; var1_int++) {
+          for (var1_int = 0; PitchDecorationSupport.field_j > var1_int; var1_int++) {
             GrowableIntList.field_b[var1_int] = null;
           }
-          vb.field_j = 0;
+          PitchDecorationSupport.field_j = 0;
           if (param0 < 84) {
             ContextMenuItem.a(12);
           }

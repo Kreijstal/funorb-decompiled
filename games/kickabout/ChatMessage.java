@@ -72,8 +72,8 @@ final class ChatMessage {
     }
 
     ChatMessage(boolean param0) {
-        this.field_l = vp.field_e;
-        this.field_g = ee.field_a;
+        this.field_l = MatchTextInputOverlay.field_e;
+        this.field_g = GameMediaSupport.field_a;
         this.field_p = DateInputWidget.field_G;
         this.field_h = SortCriterion.field_d;
         this.field_n = WorldSpriteDecoration.field_f;

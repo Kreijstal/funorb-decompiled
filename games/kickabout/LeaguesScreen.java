@@ -86,7 +86,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           FadingSoundPlayer.field_w = FadingSoundPlayer.field_w - 1;
         }
         var5 = AnimationSkeleton.field_k;
-        if (SpriteBackgroundSupport.field_b + un.field_d.a(ContextMenu.field_Jb) >= 20) {
+        if (SpriteBackgroundSupport.field_b + ByteArrayPool.field_d.a(ContextMenu.field_Jb) >= 20) {
           SpriteBackgroundSupport.field_b = SpriteBackgroundSupport.field_b - 1;
         } else {
           SpriteBackgroundSupport.field_b = 370;
@@ -286,8 +286,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
           AnimationSkeleton.field_k < ConsoleTokenCursor.field_h.length) {
           var3_ref = ConsoleTokenCursor.field_h[AnimationSkeleton.field_k];
         }
-        un.field_d.d(var3_ref.toLowerCase(), this.slideOffsetX + 194, 156, 16679959, -1);
-        var4Lifetime1 = un.field_d.a(var3_ref.toLowerCase());
+        ByteArrayPool.field_d.d(var3_ref.toLowerCase(), this.slideOffsetX + 194, 156, 16679959, -1);
+        var4Lifetime1 = ByteArrayPool.field_d.a(var3_ref.toLowerCase());
         if (SoftwareDrawingSupport.field_f != null) {
           SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(194 + this.slideOffsetX - (var4Lifetime1 >> 1) - 28, 146);
           SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(14 + ((var4Lifetime1 >> 1) + this.slideOffsetX) + 194, 146);
@@ -309,7 +309,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           AuctionTableWidget.field_Hb.field_Db.field_jb.a(false) == 0) {
           if (!PlayArea.a(100)) {
             if (!PlayerContextMenu.field_f) {
-              un.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
+              ByteArrayPool.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
               ReceivedAuctionItemRow.a(this.slideOffsetX + 194, -65, 290);
             }
@@ -320,9 +320,9 @@ final class LeaguesScreen extends ButtonMenuScreen {
         SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T), 4 + AuctionTableWidget.field_Hb.field_q, 24, 0, 196);
         AuctionListing.a(AuctionTableWidget.field_Hb.field_F + (AuctionTableWidget.field_Hb.field_q + 2), -22914, 1 + AuctionTableWidget.field_Hb.field_F, AuctionTableWidget.field_Hb.field_T + (AuctionTableWidget.field_Hb.field_mb + 4) + 24, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T));
         if (FadingSoundPlayer.field_w > 0) {
-          un.field_d.d(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
+          ByteArrayPool.field_d.d(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
         } else {
-          un.field_d.a(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
+          ByteArrayPool.field_d.a(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
         }
         TeamManagementScreen.e(param0 + 128);
         if (PlayArea.a(100) ||

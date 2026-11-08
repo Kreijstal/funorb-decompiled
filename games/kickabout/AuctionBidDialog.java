@@ -118,9 +118,9 @@ final class AuctionBidDialog extends MessageDialog {
           return;
         }
         if (0 == param1) {
-          or.field_d.b(this.field_J, (byte) 124);
-          or.field_d.writeLong(this.field_M, -1781890008);
-          or.field_d.writeInt(-74, this.field_N);
+          FootballerAiOverlaySupport.field_d.b(this.field_J, (byte) 124);
+          FootballerAiOverlaySupport.field_d.writeLong(this.field_M, -1781890008);
+          FootballerAiOverlaySupport.field_d.writeInt(-74, this.field_N);
           ParticipantStatus.$cfr$intArgs$a$60f25194e713(true, 128, 118, 49);
           this.field_M = -1L;
           ((AuctionsScreen) (VertexNormal.getMenuScreen(-108, 16))).field_H = -1L;

@@ -26,7 +26,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var5 = 0;
-        if (null == et.field_d) {
+        if (null == ThumbnailStateFactory.field_d) {
           return;
         }
         WriteIntegersCommand.h(-92);
@@ -41,7 +41,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
         if (param0 > -75) {
           return;
         }
-        ul.a((byte) -126, (String) (var1));
+        TextInputUiSupport.drawTutorialCaptionPanel((byte) -126, (String) (var1));
         if (-1 == var2) {
           return;
         }

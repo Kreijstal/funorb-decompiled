@@ -24,9 +24,9 @@ final class TrinketPickerDialog extends MessageDialog {
         TrinketIcon var3 = null;
         int incrementValue$0 = 0;
         this.field_K = new UiLayoutNode();
-        this.field_I = new TrinketIcon[ok.field_a.a(false)];
+        this.field_I = new TrinketIcon[Cp1252EncodingSupport.field_a.a(false)];
         int var1 = 0;
-        IntValueNode var2 = (IntValueNode) (ok.field_a.g(24009));
+        IntValueNode var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.g(24009));
         while (var2 != null) {
           var3 = new TrinketIcon(var2.field_j);
           var3.field_J = var3.field_mb * (var1 / 5);
@@ -35,7 +35,7 @@ final class TrinketPickerDialog extends MessageDialog {
           incrementValue$0 = var1;
           var1++;
           this.field_I[incrementValue$0] = var3;
-          var2 = (IntValueNode) (ok.field_a.c(33));
+          var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.c(33));
         }
         this.field_K.setBounds(true, 300, 100, 80, 200);
     }
@@ -100,13 +100,13 @@ final class TrinketPickerDialog extends MessageDialog {
             SoftwareRasterizer.fillRoundedRectangleBlended(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
             SoftwareRasterizer.drawRoundedRectangle(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
             ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
-            un.field_d.d(AvailabilityCheckRequest.field_c[var6.field_Bb].toLowerCase(), (ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
+            ByteArrayPool.field_d.d(AvailabilityCheckRequest.field_c[var6.field_Bb].toLowerCase(), (ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];
-            var8 = un.field_d.wrapText(ProxyAuthenticationRequiredException.field_a[var6.field_Bb], new int[]{240}, var7);
+            var8 = ByteArrayPool.field_d.wrapText(ProxyAuthenticationRequiredException.field_a[var6.field_Bb], new int[]{240}, var7);
             var9 = 0;
-            var10 = un.field_d.field_p + un.field_d.field_L;
+            var10 = ByteArrayPool.field_d.field_p + ByteArrayPool.field_d.field_L;
             for (var11 = 0; var11 < var8; var11++) {
-              un.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
+              ByteArrayPool.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
               var9 = var9 + var10;
             }
           }

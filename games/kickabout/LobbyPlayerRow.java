@@ -133,7 +133,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
           return DualLinkDequeIterator.field_e.getQuery(3);
         }
-        if (mj.field_a == PlayerModelPreview.field_f) {
+        if (PitchAppearanceSupport.field_a == PlayerModelPreview.field_f) {
           return DualLinkDequeIterator.field_e.getQuery(param0 ^ 323);
         }
         return TutorialMessages.field_b;
@@ -156,7 +156,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           if (null != AuctionPriceLimits.field_a &&
             IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
             var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, TrinketShopDialog.field_G));
-            var2 = ug.a(param0, var10.field_kb >> 16);
+            var2 = SocialListLayoutSupport.worldToScreenX(param0, var10.field_kb >> 16);
             var3 = IntKeyLookup.a((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
               var2 = 320;

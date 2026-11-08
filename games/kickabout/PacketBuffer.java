@@ -660,7 +660,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.field_n = 0;
-        this.field_f = un.a(param0, false);
+        this.field_f = ByteArrayPool.allocateBytes(param0, false);
     }
 
     final void writeString(int param0, String param1) {
@@ -709,7 +709,7 @@ class PacketBuffer extends IntrusiveNode {
           if (var2 == null) {
             PasswordFieldPainter.field_B.addLast(param1, 3);
           } else {
-            ug.a(var2, 16737894, param1);
+            SocialListLayoutSupport.insertNodeBefore(var2, 16737894, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

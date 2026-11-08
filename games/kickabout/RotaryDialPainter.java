@@ -155,7 +155,7 @@ final class RotaryDialPainter implements WidgetPainter {
             var60 = var44.field_G;
             FadingSoundSupport.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
           } else {
-            or.b(false);
+            FootballerAiOverlaySupport.compactFaceDepthBuckets(false);
           }
           var54 = new int[param6.field_k];
           var49 = var54;

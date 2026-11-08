@@ -9,12 +9,12 @@ final class SaveChangesDialog extends MessageDialog {
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (FixedQuaternion.field_e == 9 &&
-          PitchPurchaseSupport.a(GameOverView.field_z, mv.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
+          PitchPurchaseSupport.a(GameOverView.field_z, DefaultPlayerFactory.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
           if (GameOverView.field_z != 2 &&
             var3 != 0) {
             return false;
           }
-          return mi.a(PlayerModelPreview.field_r, mv.field_a, (byte) 124, GameOverView.field_z, PlayerShopScreen.field_S);
+          return ConsoleArgumentSupport.beginPrivateQuickChat(PlayerModelPreview.field_r, DefaultPlayerFactory.field_a, (byte) 124, GameOverView.field_z, PlayerShopScreen.field_S);
         }
         int var4 = 1 % ((59 - param0) / 44);
         if (10 == FixedQuaternion.field_e) {
@@ -38,7 +38,7 @@ final class SaveChangesDialog extends MessageDialog {
             return true;
           }
           String var5 = (String) null;
-          PasswordLoginCredentials.a(vb.field_h, 101, PlayerShopScreen.field_K, param2, ArchivePreloadEntry.field_f, (String) null);
+          PasswordLoginCredentials.a(PitchDecorationSupport.field_h, 101, PlayerShopScreen.field_K, param2, ArchivePreloadEntry.field_f, (String) null);
           return true;
         }
         return false;

@@ -1,0 +1,28 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NotificationPanelPositionSupport {
+    static String field_b;
+    static int field_a;
+    static Sprite field_c;
+    static String[] field_d;
+
+    public static void releaseStatics(byte param0) {
+        field_c = null;
+        field_b = null;
+        field_d = null;
+        int var1 = -49 / ((-36 - param0) / 59);
+    }
+
+    final static void updateBottomPanelOffset(int param0) {
+        if (param0 != 3585) {
+          return;
+        }
+        ClientInteractionSupport.field_d = -21 + (480 - IconLabel.field_Bb);
+    }
+
+    static {
+        field_b = "Return to lobby";
+        field_d = new String[]{"Game:", "Rated", "Unrated", "Winner:", "Loser:"};
+    }
+}

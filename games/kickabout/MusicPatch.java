@@ -81,7 +81,7 @@ final class MusicPatch extends IntrusiveNode {
             return;
           }
           var1_int = -SquadPickerDialog.field_Q.field_o + PasswordLoginCredentials.field_i;
-          var2 = hq.field_d;
+          var2 = ClientInteractionSupport.field_d;
           if (param0 != 16777215) {
             MusicPatch.drawMatchMinimap(32);
           }
@@ -89,8 +89,8 @@ final class MusicPatch extends IntrusiveNode {
           if (SocketArchiveNetworkClient.field_w != null) {
             AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
-              if (mk.field_c != -2) {
-                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[mk.field_c].team) ? 0 : 1;
+              if (TutorialScenerySupport.field_c != -2) {
+                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[TutorialScenerySupport.field_c].team) ? 0 : 1;
               } else {
                 stackIn_17_0 = (var3_int != 0) ? 0 : 1;
               }

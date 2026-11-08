@@ -46,19 +46,19 @@ final class DualLinkDequeIterator implements Iterator {
         }
         if (var3Lifetime1 != 2) {
           StreetSceneryLoader.field_m = null;
-          fs.field_b = -1;
+          PanelSpriteFactory.field_b = -1;
           var3Lifetime1 = 91 % ((-21 - param0) / 44);
           return;
         }
         if (StreetSceneryLoader.field_m.field_E == null) {
           StreetSceneryLoader.field_m = null;
-          fs.field_b = -1;
+          PanelSpriteFactory.field_b = -1;
           var3Lifetime2 = 91 % ((-21 - param0) / 44);
           return;
         }
         if (StreetSceneryLoader.field_m.field_E.equals("")) {
           StreetSceneryLoader.field_m = null;
-          fs.field_b = -1;
+          PanelSpriteFactory.field_b = -1;
           var3Lifetime3 = 91 % ((-21 - param0) / 44);
           return;
         }
@@ -71,28 +71,28 @@ final class DualLinkDequeIterator implements Iterator {
           var4 = StreetSceneryLoader.field_m.field_E;
         }
         var5Lifetime1 = null;
-        if (fs.field_b == 0) {
+        if (PanelSpriteFactory.field_b == 0) {
           var5Lifetime1 = BroadcastServerCommand.a(param1, 100, var4);
         }
-        if (fs.field_b == 1) {
+        if (PanelSpriteFactory.field_b == 1) {
           var5Lifetime1 = FriendRemovalSupport.requestFriendRemoval(param1, (byte) 100, var4);
         }
-        if (fs.field_b == 2) {
+        if (PanelSpriteFactory.field_b == 2) {
           var5Lifetime1 = ClassDescriptorSupport.requestIgnore(var4, param1, (byte) 126);
         }
-        if (fs.field_b == 3) {
+        if (PanelSpriteFactory.field_b == 3) {
           var5Lifetime1 = VertexNormal.a(var4, 2, param1, var4);
         }
         if (var5Lifetime1 == null) {
           StreetSceneryLoader.field_m = null;
-          fs.field_b = -1;
+          PanelSpriteFactory.field_b = -1;
           var3Lifetime4 = 91 % ((-21 - param0) / 44);
           return;
         }
         var6 = (String) null;
         TextButton.a((String) null, var4, 0, 2, (String) (var5Lifetime1), -115);
         StreetSceneryLoader.field_m = null;
-        fs.field_b = -1;
+        PanelSpriteFactory.field_b = -1;
         var3Lifetime5 = 91 % ((-21 - param0) / 44);
         return;
     }

@@ -22,8 +22,8 @@ final class QuickChatCategoryCache {
             GameLoopApplet.b(15848, 11, 0);
           }
         } else {
-          if (um.field_e.isSpectator(param0 - 2) &&
-            !um.field_e.b(-21660)) {
+          if (MachineTokenStorageSupport.field_e.isSpectator(param0 - 2) &&
+            !MachineTokenStorageSupport.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
             ContextMenu.a(PlayerContextMenu.field_i.h((byte) 74), (byte) -114, 11);
@@ -151,7 +151,7 @@ final class QuickChatCategoryCache {
             return stackIn_14_0 != 0;
           }
           if (HuffmanCodec.field_e == 7) {
-            var2_ref_nl = et.field_d.field_P[1][4];
+            var2_ref_nl = ThumbnailStateFactory.field_d.field_P[1][4];
             stackIn_68_0 = (var2_ref_nl.pixelX(-107) == 180) && (var2_ref_nl.pixelY(true) == 550);
             return stackIn_68_0;
           }
@@ -166,7 +166,7 @@ final class QuickChatCategoryCache {
             }
             var2Lifetime3Lifetime1 = stackIn_50_0 & stackIn_51_1;
             stackIn_53_0 = var2Lifetime3Lifetime1;
-            if (et.field_d.field_P[1][4].positionY != AchievementsScreen.a((byte) -27, 1)) {
+            if (ThumbnailStateFactory.field_d.field_P[1][4].positionY != AchievementsScreen.a((byte) -27, 1)) {
               stackIn_54_1 = 0;
             } else {
               stackIn_54_1 = 1;
@@ -174,8 +174,8 @@ final class QuickChatCategoryCache {
             var2Lifetime3Lifetime2 = stackIn_53_0 & stackIn_54_1;
             if (var2Lifetime3Lifetime2 != 0) {
               for (var3 = 0; var3 < 4; var3++) {
-                var4 = (RenderedFootballer) (et.field_d.field_P[1][1 + var3]);
-                var4.setPosition(FadingSoundSupport.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
+                var4 = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[1][1 + var3]);
+                var4.setPosition(FadingSoundSupport.field_c[var3] << 16, false, 0, QuickChatMenuFactory.field_a[var3] << 16);
                 var4.directionMask = 0;
                 stackIn_60_0 = var4;
                 if (var3 == 1) {
@@ -193,8 +193,8 @@ final class QuickChatCategoryCache {
             var2Lifetime4 = 1;
             var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(2, (byte) 119, 49152000, AccountInputValidationResult.field_f, 55050240) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 119, 31457280, et.field_d.field_P[1][3], 54067200) ? 1 : 0;
-            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 123, 31457280, et.field_d.field_P[1][4], 56033280) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 119, 31457280, ThumbnailStateFactory.field_d.field_P[1][3], 54067200) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 123, 31457280, ThumbnailStateFactory.field_d.field_P[1][4], 56033280) ? 1 : 0;
             stackIn_46_0 = var2Lifetime4;
             return stackIn_46_0 != 0;
           }
@@ -203,17 +203,17 @@ final class QuickChatCategoryCache {
               return true;
             }
             if (HuffmanCodec.field_e == 12) {
-              stackIn_44_0 = QuickChatCategory.advanceToPoint(4, (byte) 107, 29360128, fc.field_c, 19660800);
+              stackIn_44_0 = QuickChatCategory.advanceToPoint(4, (byte) 107, 29360128, LoginResponseUiSupport.field_c, 19660800);
               return stackIn_44_0;
             }
             if (HuffmanCodec.field_e != 13) {
               return true;
             }
             var2Lifetime5 = 1;
-            var2Lifetime5 = var2Lifetime5 != 0 & QuickChatCategory.advanceToPoint(4, (byte) 96, 29360128, fc.field_c, 19660800) ? 1 : 0;
-            var2Lifetime5 = var2Lifetime5 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 84, 29360128, et.field_d.field_P[1][0], 1310720) ? 1 : 0;
+            var2Lifetime5 = var2Lifetime5 != 0 & QuickChatCategory.advanceToPoint(4, (byte) 96, 29360128, LoginResponseUiSupport.field_c, 19660800) ? 1 : 0;
+            var2Lifetime5 = var2Lifetime5 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 84, 29360128, ThumbnailStateFactory.field_d.field_P[1][0], 1310720) ? 1 : 0;
             stackIn_40_0 = var2Lifetime5;
-            if (-1 != et.field_d.field_V.possessorTeam) {
+            if (-1 != ThumbnailStateFactory.field_d.field_V.possessorTeam) {
               stackIn_41_1 = 0;
             } else {
               stackIn_41_1 = 1;
@@ -226,19 +226,19 @@ final class QuickChatCategoryCache {
           var2Lifetime6 = var2Lifetime6 != 0 & QuickChatCategory.advanceToPoint(12, (byte) 113, 3276800, EmailAvailabilityValidator.field_k, 58982400) ? 1 : 0;
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
-            0 == et.field_d.field_V.possessorTeam) {
+            0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) {
             SelectableTrinketIcon.b(200, -2, -100, 30);
           }
-          var2Lifetime6 = var2Lifetime6 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 86, 29360128, fc.field_c, 36438016) ? 1 : 0;
+          var2Lifetime6 = var2Lifetime6 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 86, 29360128, LoginResponseUiSupport.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;
-          if (-1 != et.field_d.field_V.possessorTeam) {
+          if (-1 != ThumbnailStateFactory.field_d.field_V.possessorTeam) {
             stackIn_27_1 = 0;
           } else {
             stackIn_27_1 = 1;
           }
           var2Lifetime7 = stackIn_26_0 & stackIn_27_1;
           stackIn_29_0 = var2Lifetime7;
-          if (et.field_d.field_V.horizontalSpeedSquared(-105) >= 131072) {
+          if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(-105) >= 131072) {
             stackIn_30_1 = 0;
           } else {
             stackIn_30_1 = 1;

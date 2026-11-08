@@ -33,7 +33,7 @@ final class AnimationSkeleton extends IntrusiveNode {
         if (param0 != 100) {
           field_g = (GameModeDefinition[]) null;
         }
-        et.field_b = true;
+        ThumbnailStateFactory.field_b = true;
         if (LoginMethod.a(false)) {
           return;
         }
@@ -99,7 +99,7 @@ final class AnimationSkeleton extends IntrusiveNode {
                 return 15;
               }
               if (HuffmanCodec.field_e == 12) {
-                if (et.field_d.field_V.possessorTeam == 0) {
+                if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
                   return 16;
                 }
               } else {
@@ -109,13 +109,13 @@ final class AnimationSkeleton extends IntrusiveNode {
                   }
                 } else {
                   if (HuffmanCodec.field_e == 14) {
-                    if (2 == et.field_d.phase) {
+                    if (2 == ThumbnailStateFactory.field_d.phase) {
                       return 18;
                     }
-                    if (et.field_d.phase == 3) {
+                    if (ThumbnailStateFactory.field_d.phase == 3) {
                       return 19;
                     }
-                    if (et.field_d.phase == 4 &&
+                    if (ThumbnailStateFactory.field_d.phase == 4 &&
                       field_m > 0) {
                       return 20;
                     }
@@ -133,8 +133,8 @@ final class AnimationSkeleton extends IntrusiveNode {
             return 9;
           }
           if (HoverTooltip.field_Eb &&
-            1 == et.field_d.field_V.possessorTeam &&
-            et.field_d.getBallCarrier((byte) -96).action == 0) {
+            1 == ThumbnailStateFactory.field_d.field_V.possessorTeam &&
+            ThumbnailStateFactory.field_d.getBallCarrier((byte) -96).action == 0) {
             return 8;
           }
         }

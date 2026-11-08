@@ -139,7 +139,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         UiLayoutNode var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiLayoutNode(0L, param1, vp.field_b.toUpperCase());
+          var17 = new UiLayoutNode(0L, param1, MatchTextInputOverlay.field_b.toUpperCase());
           var17.field_A = 1;
           this.field_yb = new UiLayoutNode(0L, param2);
           var8 = new UiLayoutNode(0L, param3);
@@ -166,7 +166,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
           this.field_yb.setBounds(true, 15, -20 + var17.field_q, 5, 15);
           var8.setBounds(true, this.field_q, 0, var17.field_mb, -var17.field_mb + this.field_mb);
           var9.setBounds(true, this.field_q, 0, 20, 15);
-          var8.field_R = fs.a(var8.field_mb, 3, 2105376, 11579568, 8421504, (byte) 83);
+          var8.field_R = PanelSpriteFactory.createPanelSprites(var8.field_mb, 3, 2105376, 11579568, 8421504, (byte) 83);
           var17.addChild((byte) -110, this.field_yb);
           var8.addChild((byte) -107, var9);
           this.addChild((byte) -107, var17);

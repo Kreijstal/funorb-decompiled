@@ -21,34 +21,34 @@ final class AudioOutputSupport {
         int var1 = IntTripleCommand.h((byte) -118);
         int var2 = EmailSyntaxValidator.e((byte) 18);
         if (param0) {
-          IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+          IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - TextLineLayoutSupport.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (TextLineLayoutSupport.field_d << 1), 3);
           VerticalScrollbar.k(0);
           return;
         }
         field_c = (String) null;
-        IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+        IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - TextLineLayoutSupport.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (TextLineLayoutSupport.field_d << 1), 3);
         VerticalScrollbar.k(0);
     }
 
     final static void shutdownAudioOutputs(int param0) {
         if (null != PitchPurchaseSupport.field_d) {
           PitchPurchaseSupport.field_d.shutdown();
-          if (null == pg.field_d) {
+          if (null == SharedPanelFactory.field_d) {
             if (param0 == 4) {
               return;
             }
             field_a = -35;
             return;
           }
-          pg.field_d.shutdown();
+          SharedPanelFactory.field_d.shutdown();
           if (param0 != 4) {
             field_a = -35;
             return;
           }
           return;
         }
-        if (null != pg.field_d) {
-          pg.field_d.shutdown();
+        if (null != SharedPanelFactory.field_d) {
+          SharedPanelFactory.field_d.shutdown();
           if (param0 == 4) {
             return;
           }

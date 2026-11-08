@@ -218,7 +218,7 @@ class FootballerAgent extends MatchAgent {
             var6 = this.directionY * var8Lifetime1;
             var5_int = var8Lifetime1 * this.directionX;
           }
-          var13 = lt.moveWithinAreas(var5_int, var6, param1, -61, this.height, this.positionY, this.positionX, this.verticalVelocity);
+          var13 = PlayAreaMovementSupport.moveWithinAreas(var5_int, var6, param1, -61, this.height, this.positionY, this.positionX, this.verticalVelocity);
           this.positionY = var13[1];
           this.positionX = var13[0];
           this.height = var13[2];
@@ -273,39 +273,39 @@ class FootballerAgent extends MatchAgent {
 
     final int computeChecksum(byte param0) {
         int var2 = this.stats.computeChecksum(0);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_A);
-        var2 = fj.rotateLeftFourBits(-40, this.field_g ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_q);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_D);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.positionX);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_A);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.field_g ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_q);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_D);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.positionX);
         if (param0 > -61) {
           this.setAction((byte) -7, -29);
         }
-        var2 = fj.rotateLeftFourBits(-40, this.positionY ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.height);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
-        var2 = fj.rotateLeftFourBits(-40, this.aiWait ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_o);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_t);
-        var2 = fj.rotateLeftFourBits(-40, this.directionMask ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.field_h ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.directionX);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.directionY);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.action);
-        var2 = fj.rotateLeftFourBits(-40, this.actionTime ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.dashCooldown ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_z);
-        var2 = fj.rotateLeftFourBits(-40, this.field_x ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.field_P ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ (!this.field_O ? 0 : 1));
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_k);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_m);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ (!this.field_s ? 0 : 1));
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_r);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_B);
-        var2 = fj.rotateLeftFourBits(-40, this.archetype ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ (this.member ? 1 : 0));
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ (this.megamode ? 1 : 0));
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.positionY ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.height);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.aiWait ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_o);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_t);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.directionMask ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.field_h ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.directionX);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.directionY);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.action);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.actionTime ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.dashCooldown ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_z);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.field_x ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.field_P ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ (!this.field_O ? 0 : 1));
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_k);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_m);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ (!this.field_s ? 0 : 1));
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_r);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.field_B);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.archetype ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ (this.member ? 1 : 0));
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ (this.megamode ? 1 : 0));
         return var2;
     }
 
@@ -320,21 +320,21 @@ class FootballerAgent extends MatchAgent {
         try {
           this.positionX = param1.readBits(26, param0 ^ -13927);
           this.positionY = param1.readBits(27, 59);
-          this.height = hq.a(22531, 30, param1, 0);
+          this.height = ClientInteractionSupport.a(22531, 30, param1, 0);
           this.verticalVelocity = BufferedCacheFile.a((byte) 125, 17, param1, 0, 24, 25);
           this.directionMask = param1.readBits(4, 59);
           this.directionY = param1.readBits(2, 59) - 1;
           this.directionX = -1 + param1.readBits(2, param0 + 13977);
-          this.action = hq.a(param0 ^ -28255, WriteIntegersCommand.a(14, false), param1, 0);
-          this.actionTime = hq.a(22531, 8, param1, 0);
-          this.dashCooldown = hq.a(22531, 9, param1, 0);
+          this.action = ClientInteractionSupport.a(param0 ^ -28255, WriteIntegersCommand.a(14, false), param1, 0);
+          this.actionTime = ClientInteractionSupport.a(22531, 8, param1, 0);
+          this.dashCooldown = ClientInteractionSupport.a(22531, 9, param1, 0);
           this.aiWait = param1.readBits(3, param0 ^ -13927);
           this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
           this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
-          this.field_k = mk.a(param1, 30, (byte) 6, 18);
-          this.field_m = mk.a(param1, 30, (byte) 6, 18);
-          this.field_r = mk.a(param1, 30, (byte) 6, 18);
-          this.field_B = mk.a(param1, 30, (byte) 6, 18);
+          this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+          this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+          this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+          this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           this.field_h = param1.readBits(4, 59);
           this.field_z = param1.readBits(9, 59) - 5;
           this.field_x = IsaacRandom.a(11, -30273, param1);
@@ -406,7 +406,7 @@ class FootballerAgent extends MatchAgent {
             this.positionY = this.positionY + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
             this.height = this.height + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
           }
-          this.verticalVelocity = mk.a(param1, 25, (byte) 6, 0);
+          this.verticalVelocity = TutorialScenerySupport.a(param1, 25, (byte) 6, 0);
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.directionMask = param1.readBits(4, 59);
             this.directionY = -1 + param1.readBits(2, param0 ^ 50);
@@ -416,7 +416,7 @@ class FootballerAgent extends MatchAgent {
             this.action = param1.readBits(WriteIntegersCommand.a(14, false), 59);
             this.actionTime = param1.readBits(8, param0 ^ 50);
           }
-          this.dashCooldown = hq.a(param0 ^ 22538, param0, param1, 0);
+          this.dashCooldown = ClientInteractionSupport.a(param0 ^ 22538, param0, param1, 0);
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.aiWait = param1.readBits(3, 59);
           }
@@ -429,10 +429,10 @@ class FootballerAgent extends MatchAgent {
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
-            this.field_k = mk.a(param1, 30, (byte) 6, 18);
-            this.field_m = mk.a(param1, 30, (byte) 6, 18);
-            this.field_r = mk.a(param1, 30, (byte) 6, 18);
-            this.field_B = mk.a(param1, 30, (byte) 6, 18);
+            this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+            this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+            this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+            this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_A = param1.readBits(32, param0 ^ 50);

@@ -23,18 +23,18 @@ final class LoadingProgressSupport {
     }
 
     final static void a(boolean param0) {
-        fa var1 = null;
+        PendingRequestAcknowledgement var1 = null;
         CipherPacketBuffer var2 = null;
-        fa var1Lifetime1;
+        PendingRequestAcknowledgement var1Lifetime1;
         CipherPacketBuffer var2Lifetime1;
         if (!param0) {
           LoadingProgressSupport.reportStageProgress(-17, -97, 99);
-          var1 = (fa) (FootballerAgent.field_f.g(24009));
+          var1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(24009));
           if (var1 == null) {
             FormationView.b((byte) -116);
             return;
           }
-          var2 = un.field_e;
+          var2 = ByteArrayPool.field_e;
           var2.readInt(4);
           var2.readInt(4);
           var2.readInt(4);
@@ -42,12 +42,12 @@ final class LoadingProgressSupport {
           var1.c((byte) -109);
           return;
         }
-        var1Lifetime1 = (fa) (FootballerAgent.field_f.g(24009));
+        var1Lifetime1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(24009));
         if (var1Lifetime1 == null) {
           FormationView.b((byte) -116);
           return;
         }
-        var2Lifetime1 = un.field_e;
+        var2Lifetime1 = ByteArrayPool.field_e;
         var2Lifetime1.readInt(4);
         var2Lifetime1.readInt(4);
         var2Lifetime1.readInt(4);

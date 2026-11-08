@@ -88,7 +88,7 @@ final class QuickChatMenuBuilder {
             for (var14 = 0; param1.phraseIds.length > var14; var14++) {
               var15 = param1.phraseIds[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = vp.field_b;
+                var8[var14 + var12Lifetime1] = MatchTextInputOverlay.field_b;
                 var9[var12Lifetime1 + var14] = param1.phraseShortcuts[var14];
                 var10[var12Lifetime1 + var14] = param1.phraseIds[var14];
               } else {
@@ -138,13 +138,13 @@ final class QuickChatMenuBuilder {
     }
 
     final static ChatMessage getNewestChatMessage(int param0) {
-        if (vb.field_j == 0) {
+        if (PitchDecorationSupport.field_j == 0) {
           return null;
         }
         if (param0 != 17475) {
           return (ChatMessage) null;
         }
-        return GrowableIntList.field_b[-1 + vb.field_j];
+        return GrowableIntList.field_b[-1 + PitchDecorationSupport.field_j];
     }
 
     public static void releaseStatics(boolean param0) {

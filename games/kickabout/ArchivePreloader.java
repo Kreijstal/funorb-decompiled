@@ -201,14 +201,14 @@ final class ArchivePreloader {
                         var18 = -1 - var17 + TriangleRasterizer.field_b;
                       }
                       if (var17 < 0) {
-                        vj.a(param5, var16Lifetime2, var18 + var17, param4, 108);
+                        RasterGlowSupport.blendConstantSpanHalf(param5, var16Lifetime2, var18 + var17, param4, 108);
                       } else {
-                        vj.a(param5, var16Lifetime2 + var17, var18, param4, 102);
+                        RasterGlowSupport.blendConstantSpanHalf(param5, var16Lifetime2 + var17, var18, param4, 102);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < TriangleRasterizer.field_b) {
-                        vj.a(param5, var17 + var16Lifetime2, var18, param4, -26);
+                        RasterGlowSupport.blendConstantSpanHalf(param5, var17 + var16Lifetime2, var18, param4, -26);
                       }
                     }
                   }
@@ -250,16 +250,16 @@ final class ArchivePreloader {
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
                     var16Lifetime1 < TriangleRasterizer.field_b) {
-                    vj.a(param5, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param4, 104);
+                    RasterGlowSupport.blendConstantSpanHalf(param5, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param4, 104);
                   }
                 } else {
                   if (TriangleRasterizer.field_b <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = TriangleRasterizer.field_b + (-var16Lifetime1 - 1);
                   }
                   if (var16Lifetime1 < 0) {
-                    vj.a(param5, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param4, 114);
+                    RasterGlowSupport.blendConstantSpanHalf(param5, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param4, 114);
                   } else {
-                    vj.a(param5, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param4, param2 ^ -2285);
+                    RasterGlowSupport.blendConstantSpanHalf(param5, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param4, param2 ^ -2285);
                   }
                 }
               }

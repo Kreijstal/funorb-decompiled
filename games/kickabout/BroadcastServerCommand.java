@@ -76,7 +76,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_24_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }
-          var5 = or.field_d;
+          var5 = FootballerAiOverlaySupport.field_d;
           var5.b(param0, (byte) 93);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;

@@ -43,7 +43,7 @@ final class TextPromptDialog extends UiLayoutNode {
         var4 = null;
         var5 = 0;
         var6 = 0;
-        for (var7 = vb.field_j - 1; var7 >= 0; var7--) {
+        for (var7 = PitchDecorationSupport.field_j - 1; var7 >= 0; var7--) {
           var8_ref_tv = GrowableIntList.field_b[var7];
           var9 = 0;
           if (!PacketBuffer.field_l &&
@@ -75,7 +75,7 @@ final class TextPromptDialog extends UiLayoutNode {
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; vb.field_j > var8; var8++) {
+        for (var8 = 0; PitchDecorationSupport.field_j > var8; var8++) {
           var9_ref_tv = GrowableIntList.field_b[var8];
           if (null != var9_ref_tv.field_s) {
             AuctionSettingsDialog.field_G.field_Ab.addChild((byte) -105, var9_ref_tv.field_s);
@@ -330,7 +330,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Cb.field_A = 1;
             this.field_Cb.field_y = 11184810;
             this.field_Nb.addChild((byte) -110, this.field_Cb);
-            this.field_Lb = new UiLayoutNode(0L, param8, nc.field_d);
+            this.field_Lb = new UiLayoutNode(0L, param8, LoginPacketSupport.field_d);
             this.field_Lb.field_y = 11184810;
             this.field_Lb.field_A = 1;
             this.field_Nb.addChild((byte) -116, this.field_Lb);
@@ -473,7 +473,7 @@ final class TextPromptDialog extends UiLayoutNode {
             var28[2].setBounds(true, var16Lifetime2, 26 + (13 + var16Lifetime2 * 2), var21, var17Lifetime5);
             var22 = var21;
             this.field_Nb.setBounds(true, 13 + (13 + var19), 0, 24, 10 + var22 + var17Lifetime5);
-            this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 127);
+            this.field_Nb.field_R = PanelSpriteFactory.createPanelSprites(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 127);
             var23 = var19 + 13 + 13;
             var24 = 10 + (var17Lifetime5 + 24) + var22;
             var25 = StripedProgressBar.b(var23, param0, param2, 127);
@@ -491,7 +491,7 @@ final class TextPromptDialog extends UiLayoutNode {
           this.field_Cb.setBounds(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * LineupPositionSupport.field_c);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * LineupPositionSupport.field_c;
           this.field_Nb.setBounds(true, 13 + var15_int + 13, 0, 24, var16Lifetime1 + 10);
-          this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
+          this.field_Nb.field_R = PanelSpriteFactory.createPanelSprites(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = StripedProgressBar.b(var18Lifetime1, param0, param2, 127);

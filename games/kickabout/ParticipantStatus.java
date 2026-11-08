@@ -34,8 +34,8 @@ final class ParticipantStatus extends MatchAgent {
           }
           var4_int = AccountNameCharacterSupport.field_c[param3][param0 - 1][2];
           var5 = AccountNameCharacterSupport.field_c[param3][-1 + param0][3];
-          var6 = var4_int * ql.field_a[0] / 896;
-          var7 = var5 * ql.field_a[1] / 1344;
+          var6 = var4_int * MatchHudRoutingSupport.field_a[0] / 896;
+          var7 = var5 * MatchHudRoutingSupport.field_a[1] / 1344;
           if (param1 == 0) {
             var8 = var6 + AccountNameCharacterSupport.field_c[param3][-1 + param0][0];
             var9 = var7 + AccountNameCharacterSupport.field_c[param3][param0 - 1][1];
@@ -241,68 +241,68 @@ final class ParticipantStatus extends MatchAgent {
             TrinketCatalog.field_b = false;
           }
           if (param0) {
-            if (ns.field_a > 0) {
-              ns.field_a = ns.field_a - 1;
+            if (NotificationPanelPositionSupport.field_a > 0) {
+              NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a - 1;
               return;
             }
-            if (fj.field_a > 0) {
-              fj.field_a = fj.field_a - 1;
+            if (ConsoleLexer.field_a > 0) {
+              ConsoleLexer.field_a = ConsoleLexer.field_a - 1;
               return;
             }
-            if (ee.field_b > 0) {
-              ee.field_b = ee.field_b - 1;
+            if (GameMediaSupport.field_b > 0) {
+              GameMediaSupport.field_b = GameMediaSupport.field_b - 1;
               return;
             }
           } else {
             if (PlayerContextMenu.field_i == null) {
               if (null == ArchiveSource.field_b) {
                 TrinketCatalog.field_b = false;
-                if (fj.field_a > 0) {
-                  fj.field_a = fj.field_a - 1;
+                if (ConsoleLexer.field_a > 0) {
+                  ConsoleLexer.field_a = ConsoleLexer.field_a - 1;
                   return;
                 }
-                if (0 < ee.field_b) {
-                  ee.field_b = ee.field_b - 1;
+                if (0 < GameMediaSupport.field_b) {
+                  GameMediaSupport.field_b = GameMediaSupport.field_b - 1;
                   return;
                 }
-                if (ns.field_a >= TextPromptDialog.field_Bb) {
+                if (NotificationPanelPositionSupport.field_a >= TextPromptDialog.field_Bb) {
                   return;
                 }
-                if (ns.field_a == 0) {
+                if (NotificationPanelPositionSupport.field_a == 0) {
                   VerticalScrollbar.h(param1 - 1);
                 }
-                ns.field_a = ns.field_a + 1;
+                NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a + 1;
                 return;
               }
-              if (ns.field_a > 0) {
-                ns.field_a = ns.field_a - 1;
+              if (NotificationPanelPositionSupport.field_a > 0) {
+                NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a - 1;
                 return;
               }
-              if (ee.field_b > 0) {
-                ee.field_b = ee.field_b - 1;
+              if (GameMediaSupport.field_b > 0) {
+                GameMediaSupport.field_b = GameMediaSupport.field_b - 1;
                 return;
               }
-              if (TextPromptDialog.field_Bb > fj.field_a) {
-                if (fj.field_a == 0) {
-                  pg.a(-35, true);
+              if (TextPromptDialog.field_Bb > ConsoleLexer.field_a) {
+                if (ConsoleLexer.field_a == 0) {
+                  SharedPanelFactory.createSharedPanels(-35, true);
                 }
-                fj.field_a = fj.field_a + 1;
+                ConsoleLexer.field_a = ConsoleLexer.field_a + 1;
                 return;
               }
             } else {
-              if (0 < ns.field_a) {
-                ns.field_a = ns.field_a - 1;
+              if (0 < NotificationPanelPositionSupport.field_a) {
+                NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a - 1;
                 return;
               }
-              if (0 < fj.field_a) {
-                fj.field_a = fj.field_a - 1;
+              if (0 < ConsoleLexer.field_a) {
+                ConsoleLexer.field_a = ConsoleLexer.field_a - 1;
                 return;
               }
-              if (ee.field_b < TextPromptDialog.field_Bb) {
-                if (0 == ee.field_b) {
-                  pg.a(-35, false);
+              if (GameMediaSupport.field_b < TextPromptDialog.field_Bb) {
+                if (0 == GameMediaSupport.field_b) {
+                  SharedPanelFactory.createSharedPanels(-35, false);
                 }
-                ee.field_b = ee.field_b + 1;
+                GameMediaSupport.field_b = GameMediaSupport.field_b + 1;
                 return;
               }
             }

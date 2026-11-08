@@ -17,9 +17,9 @@ final class GoalStateAgent extends MatchAgent {
           return;
         }
         try {
-          this.score[0] = hq.a(22531, 7, param0, 0);
-          this.score[1] = hq.a(22531, 7, param0, 0);
-          this.goalCount = hq.a(22531, 10, param0, 0);
+          this.score[0] = ClientInteractionSupport.a(22531, 7, param0, 0);
+          this.score[1] = ClientInteractionSupport.a(22531, 7, param0, 0);
+          this.goalCount = ClientInteractionSupport.a(22531, 10, param0, 0);
           int var3_int = -57 % ((25 - param1) / 63);
           this.goalScorer = -1 + param0.readBits(2, 59);
         } catch (RuntimeException runtimeException) {
@@ -101,7 +101,7 @@ final class GoalStateAgent extends MatchAgent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.decodeSpriteSheetFromArchive(param1, param2, param0, 114)) {
+          if (!RankingRowFactory.decodeSpriteSheetFromArchive(param1, param2, param0, 114)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
@@ -144,10 +144,10 @@ final class GoalStateAgent extends MatchAgent {
 
     final int computeChecksum(int param0) {
         int var2 = 0;
-        var2 = fj.rotateLeftFourBits(-40, this.score[param0] ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, this.score[1] ^ var2);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.goalCount);
-        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.goalScorer);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.score[param0] ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, this.score[1] ^ var2);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.goalCount);
+        var2 = ConsoleLexer.rotateLeftFourBits(-40, var2 ^ this.goalScorer);
         return var2;
     }
 

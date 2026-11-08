@@ -35,7 +35,7 @@ final class MarkerSliderWidget extends TextButton {
           if (param1 == null) {
             return null;
           }
-          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, lt.field_a, SquadPickerDialog.field_O);
+          var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, LoginResponseUiSupport.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, PlayAreaMovementSupport.field_a, SquadPickerDialog.field_O);
           ScrollContainer.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -56,7 +56,7 @@ final class MarkerSliderWidget extends TextButton {
     final static void a(int param0, double param1, double param2, int param3, int param4) {
         int var8;
         var8 = Kickabout.field_G;
-        if (cu.field_c != 0) {
+        if (RankingRowFactory.field_c != 0) {
           if (param4 == 0) {
             ConsolePanel.field_i = null;
           }
@@ -70,7 +70,7 @@ final class MarkerSliderWidget extends TextButton {
           }
         }
         MessageDialog.field_B = param2;
-        cu.field_c = param4;
+        RankingRowFactory.field_c = param4;
         if (param3 != PitchProjectionSupport.field_b) {
           if (0 == param0) {
             DualLinkNode.field_g = null;
@@ -207,7 +207,7 @@ final class MarkerSliderWidget extends TextButton {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = or.field_d;
+        CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.b(param0, (byte) -104);
         var2.writeByte(106, 1);
         var2.writeByte(117, 1);

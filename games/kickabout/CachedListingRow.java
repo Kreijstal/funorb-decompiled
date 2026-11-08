@@ -17,7 +17,7 @@ final class CachedListingRow extends IntrusiveNode {
         int var6;
         var6 = Kickabout.field_G;
         if (param2 == 3) {
-          return mt.a((byte) -43);
+          return GoalSpriteLoader.ensureGoalSprites((byte) -43);
         }
         var3 = "";
         var4 = 0;

@@ -25,9 +25,9 @@ final class CalendarSupport {
         ClubStateFactory.setCalendarTime(MonotonicClock.monotonicMillis(-70), 0);
         if (param0 != 2) {
           CalendarSupport.currentMonthIndex(31);
-          return oa.field_a.get(2);
+          return OverlayLayerSupport.field_a.get(2);
         }
-        return oa.field_a.get(2);
+        return OverlayLayerSupport.field_a.get(2);
     }
 
     static {

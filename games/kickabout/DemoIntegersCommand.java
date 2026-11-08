@@ -72,14 +72,14 @@ final class DemoIntegersCommand extends ConsoleCommand {
         ChatMessage var9 = null;
         var8 = Kickabout.field_G;
         try {
-          if (pg.field_b < TextPromptDialog.field_Bb) {
-            pg.field_b = pg.field_b + 1;
+          if (SharedPanelFactory.field_b < TextPromptDialog.field_Bb) {
+            SharedPanelFactory.field_b = SharedPanelFactory.field_b + 1;
           }
           if (VerticalScrollbar.field_Ab != ColorQuantizationBox.field_f.field_e) {
             ClientPacketFlushSupport.field_c = ClientPacketFlushSupport.field_c + (ColorQuantizationBox.field_f.field_e - VerticalScrollbar.field_Ab);
             VerticalScrollbar.field_Ab = ColorQuantizationBox.field_f.field_e;
           }
-          if (pg.field_b <= 0) {
+          if (SharedPanelFactory.field_b <= 0) {
             return;
           }
           WeightedLruCache.a(0);
@@ -104,7 +104,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
             }
           }
           if (0 != ChatInputState.field_a.field_sb) {
-            TextPromptState.field_b = new TextPromptDialog(ChatInputState.field_a.field_F, ChatInputState.field_a.field_T, ChatInputState.field_a.field_q, ChatInputState.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
+            TextPromptState.field_b = new TextPromptDialog(ChatInputState.field_a.field_F, ChatInputState.field_a.field_T, ChatInputState.field_a.field_q, ChatInputState.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, TextInputUiSupport.field_c, (String) null, 0L);
           }
           var9 = TextPromptDialog.a(param1, LineupPositionSupport.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {

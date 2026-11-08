@@ -27,7 +27,7 @@ final class MenuSelection {
         if (param0 < 57) {
           field_f = (int[]) null;
         }
-        CipherPacketBuffer var4 = or.field_d;
+        CipherPacketBuffer var4 = FootballerAiOverlaySupport.field_d;
         var4.b(param1, (byte) 120);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;
@@ -58,7 +58,7 @@ final class MenuSelection {
         if (this.field_i != 0 &&
           FootballerAgent.field_p != 0) {
           if (0 >= this.field_d) {
-            this.field_d = vj.field_b;
+            this.field_d = RasterGlowSupport.field_b;
           }
           this.field_d = this.field_d - 1;
         }

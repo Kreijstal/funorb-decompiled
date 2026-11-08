@@ -161,7 +161,7 @@ final class DualLinkDeque {
             return;
           }
           while (var1_int < 3) {
-            var2 = et.field_d.field_P[1][var1_int + 1];
+            var2 = ThumbnailStateFactory.field_d.field_P[1][var1_int + 1];
             if (QuickChatCategory.advanceToPoint(0, (byte) 86, var2.positionX, var2, KitStyleTile.field_zb[var1_int] << 16)) {
               KitStyleTile.field_zb[var1_int] = 700 + (-var2.pixelY(true) + 700);
               if (KitStyleTile.field_zb[var1_int] <= 700) {

@@ -88,7 +88,7 @@ final class PlayerStatSortCriterion extends SortCriterion {
         if (param0) {
           PlayerStatSortCriterion.b((byte) -67);
         }
-        return oa.field_a.get(5);
+        return OverlayLayerSupport.field_a.get(5);
     }
 
     public static void b(byte param0) {

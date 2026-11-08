@@ -67,7 +67,7 @@ final class DisplayModeSupport {
           var11 = ClassDescriptorSupport.field_d[0];
           var29 = var11;
           var29Lifetime3 = var11;
-          var10 = ig.field_b;
+          var10 = MatchHudSupport.field_b;
           var9.field_j.addItemWithIcon(var10, param1, 11, var11);
           var12 = TextButton.field_v;
           var14 = ClassDescriptorSupport.field_d[1];

@@ -66,9 +66,9 @@ final class TrinketTile extends UiLayoutNode {
           }
           TeamSelectionAgent.a((byte) -45, var4);
           var12 = (BitmapFont) null;
-          FullscreenErrorDialog.field_S = su.a(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
-          RegistrationRequestState.field_a = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
-          NameSuggestionsPanel.field_E = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
+          FullscreenErrorDialog.field_S = WidgetStyleFactory.createStyledWidget(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
+          RegistrationRequestState.field_a = WidgetStyleFactory.createStyledWidget(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
+          NameSuggestionsPanel.field_E = WidgetStyleFactory.createStyledWidget(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_f;
           var16 = SoftwareRasterizer.field_a;
@@ -135,7 +135,7 @@ final class TrinketTile extends UiLayoutNode {
           SoftwareRasterizer.field_h < this.field_T) {
           return;
         }
-        un.field_d.a(this.field_zb, this.field_F + 50, (this.field_mb >> 1) + this.field_T, 16777215, -1);
+        ByteArrayPool.field_d.a(this.field_zb, this.field_F + 50, (this.field_mb >> 1) + this.field_T, 16777215, -1);
         if (param0 != -76) {
           this.field_Db = 84;
         }

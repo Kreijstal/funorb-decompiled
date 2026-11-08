@@ -342,7 +342,7 @@ final class ClubState {
         String var27Lifetime2;
         String var27Lifetime3;
         var5 = Kickabout.field_G;
-        var6 = "=====PROFILE[" + su.decodeBase37Name(0, this.field_e) + "]=====\n";
+        var6 = "=====PROFILE[" + WidgetStyleFactory.decodeBase37Name(0, this.field_e) + "]=====\n";
         var1 = var6;
         var1Lifetime1 = var6;
         if (this.field_M) {
@@ -514,7 +514,7 @@ final class ClubState {
         var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
         var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
         var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
-        var39 = var38 + "Nemesis - " + su.decodeBase37Name(0, this.field_H) + "\n";
+        var39 = var38 + "Nemesis - " + WidgetStyleFactory.decodeBase37Name(0, this.field_H) + "\n";
         var40 = var39 + "\n";
         var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
         stackIn_49_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");

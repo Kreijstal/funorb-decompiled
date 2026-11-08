@@ -94,7 +94,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         MusicPatchNode.b(67);
         GameModesHelpScreen.i((byte) -90);
         TextPromptState.field_b = null;
-        fa.closeQuickChat(47);
+        PendingRequestAcknowledgement.closeQuickChat(47);
         if (param0 != 119) {
           ReceivedAuctionItem.b(104);
         }
@@ -122,9 +122,9 @@ final class ReceivedAuctionItem extends AuctionItem {
           if (HoverTooltip.field_Eb) {
             return;
           }
-          var9 = et.field_d.field_V;
+          var9 = ThumbnailStateFactory.field_d.field_V;
           if (RegistrationRequestState.field_i) {
-            var2 = et.field_d.participantStatus[0].controlledSlot;
+            var2 = ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot;
             if (var9.possessorTeam == 1) {
               var9.possessorTeam = -1;
             }
@@ -137,7 +137,7 @@ final class ReceivedAuctionItem extends AuctionItem {
               RegistrationRequestState.field_i = false;
               return;
             }
-            var3 = et.field_d.field_P[0][var2];
+            var3 = ThumbnailStateFactory.field_d.field_P[0][var2];
             if (!RasterStateSnapshot.a(2235, var3.positionY, 20, var3.positionX)) {
               var9.uncatchable = 3;
             } else {
@@ -152,9 +152,9 @@ final class ReceivedAuctionItem extends AuctionItem {
               if (var9.positionY >= 88080384) {
                 return;
               }
-              var2_ref_nl = et.field_d.getControlledFootballer((byte) 120, 0);
+              var2_ref_nl = ThumbnailStateFactory.field_d.getControlledFootballer((byte) 120, 0);
               var3_int = 0;
-              var4 = et.field_d.field_x;
+              var4 = ThumbnailStateFactory.field_d.field_x;
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5];
                 var3_int = var3_int != 0 | var6.containsPoint(var2_ref_nl.positionX, var2_ref_nl.positionY, 703166480, var2_ref_nl.height) ? 1 : 0;
@@ -228,7 +228,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         QuickChatCategory.field_s = true;
         AccountRegistrationResponse.field_a = ServerTextTemplate.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
-        ns.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
+        NotificationPanelPositionSupport.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
         AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
         ClientPacketFlushSupport.field_e = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
         FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");

@@ -100,28 +100,28 @@ final class DelayedServerPacket extends IntrusiveNode {
             return;
           }
           if (AuctionLogEntry.field_h instanceof MatchScreen &&
-            null != um.field_e &&
-            um.field_e.isGameOverViewShown((byte) 95)) {
-            var8 = um.field_e.getGameOverEntries((byte) -123);
+            null != MachineTokenStorageSupport.field_e &&
+            MachineTokenStorageSupport.field_e.isGameOverViewShown((byte) 95)) {
+            var8 = MachineTokenStorageSupport.field_e.getGameOverEntries((byte) -123);
             if (var8 != null &&
               var8.a(false) > 0) {
-              or.field_d.b(81, (byte) 127);
-              or.field_d.field_n = or.field_d.field_n + 2;
-              var4 = or.field_d.field_n;
-              or.field_d.writeByte(param2 ^ -106, var8.a(false));
+              FootballerAiOverlaySupport.field_d.b(81, (byte) 127);
+              FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
+              var4 = FootballerAiOverlaySupport.field_d.field_n;
+              FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -106, var8.a(false));
               var7 = (ManagerAction) (var8.g(24009));
               while (var7 != null) {
-                var7.writeToPacket(1, or.field_d);
+                var7.writeToPacket(1, FootballerAiOverlaySupport.field_d);
                 var7 = (ManagerAction) (var8.c(param2 ^ -33));
               }
-              or.field_d.backpatchShortLength(-var4 + or.field_d.field_n, 62);
+              FootballerAiOverlaySupport.field_d.backpatchShortLength(-var4 + FootballerAiOverlaySupport.field_d.field_n, 62);
             }
           }
           GameModesHelpScreen.field_G = DebouncedValidationProvider.a(param0, 24939);
           if (26 == AuctionLogEntry.field_h.screenId &&
             !(GameModesHelpScreen.field_G instanceof MatchScreen) &&
             !PlayArea.a(param2 ^ -102)) {
-            or.field_d.b(91, (byte) 114);
+            FootballerAiOverlaySupport.field_d.b(91, (byte) 114);
           }
           boolean decompiledFrameRemainder0 = true;
           if (AuctionLogEntry.field_h.screenId == 12) {
@@ -162,10 +162,10 @@ final class DelayedServerPacket extends IntrusiveNode {
                 var5 = 255;
               }
               if (!PlayArea.a(100)) {
-                or.field_d.b(65, (byte) 119);
-                or.field_d.writeByte(103, var5);
-                or.field_d.writeByte(param2 ^ -113, var4Lifetime1);
-                or.field_d.writeByte(param2 + 119, var3_int);
+                FootballerAiOverlaySupport.field_d.b(65, (byte) 119);
+                FootballerAiOverlaySupport.field_d.writeByte(103, var5);
+                FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -113, var4Lifetime1);
+                FootballerAiOverlaySupport.field_d.writeByte(param2 + 119, var3_int);
               }
               GameLoopApplet.field_E.field_p = LoadingProgressSupport.a((byte) 97);
               GameLoopApplet.field_E.field_F = IntrusiveNode.b((byte) -95);

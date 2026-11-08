@@ -33,7 +33,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         int var9Lifetime1;
         var10 = Kickabout.field_G;
         try {
-          var7_int = ql.alignToEight(param2, (byte) 122);
+          var7_int = MatchHudRoutingSupport.alignToEight(param2, (byte) 122);
           if (PopupDialog.field_g == null) {
             PopupDialog.field_g = new java.security.SecureRandom();
           }
@@ -51,21 +51,21 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
           AuctionsHelpScreen.field_I.writeBytes(param3, param2, 1991220144, param4);
           AuctionsHelpScreen.field_I.padToPosition((byte) 114, var7_int);
           AuctionsHelpScreen.field_I.xteaEncrypt(var13, (byte) 53);
-          if (uf.field_c == null ||
-            !(uf.field_c.field_f.length >= 100)) {
-            uf.field_c = new PacketBuffer(100);
+          if (RegistrationUiSupport.field_c == null ||
+            !(RegistrationUiSupport.field_c.field_f.length >= 100)) {
+            RegistrationUiSupport.field_c = new PacketBuffer(100);
           }
-          uf.field_c.field_n = 0;
-          uf.field_c.writeByte(111, param5);
+          RegistrationUiSupport.field_c.field_n = 0;
+          RegistrationUiSupport.field_c.writeByte(111, param5);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            uf.field_c.writeInt(param5 ^ -103, var13[var11]);
+            RegistrationUiSupport.field_c.writeInt(param5 ^ -103, var13[var11]);
             var11++;
           }
-          uf.field_c.writeShort(param5 - 1207444482, param2);
-          uf.field_c.rsaEncrypt(param1, param6, param5 ^ 44);
-          param0.writeBytes(0, uf.field_c.field_n, 1991220144, uf.field_c.field_f);
+          RegistrationUiSupport.field_c.writeShort(param5 - 1207444482, param2);
+          RegistrationUiSupport.field_c.rsaEncrypt(param1, param6, param5 ^ 44);
+          param0.writeBytes(0, RegistrationUiSupport.field_c.field_n, 1991220144, RegistrationUiSupport.field_c.field_f);
           param0.writeBytes(0, AuctionsHelpScreen.field_I.field_n, 1991220144, AuctionsHelpScreen.field_I.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

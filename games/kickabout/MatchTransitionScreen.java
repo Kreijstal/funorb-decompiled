@@ -18,15 +18,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (GameModesHelpScreen.field_G != null) {
           return;
         }
-        if (!um.field_b) {
+        if (!MachineTokenStorageSupport.field_b) {
           var4 = MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
           var5 = ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
-          mj.a(256.0, 60, (double)var4, (double)var5);
+          PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)var4, (double)var5);
           SocialPlayerRow.resetCameraToTarget((byte) 93);
-          DelayedServerPacket.a(ig.field_d, false, -2);
+          DelayedServerPacket.a(MatchHudSupport.field_d, false, -2);
           return;
         }
-        if (ih.field_c != ChatComposeSupport.field_g) {
+        if (FormationMaskSupport.field_c != ChatComposeSupport.field_g) {
           AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
         } else {
           if (FullscreenFailureReason.field_f != RankingsScreen.field_C) {
@@ -41,7 +41,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (FadingSoundPlayer.field_q) {
           return;
         }
-        mj.a(140.0, 60, 448.0, 672.0);
+        PitchAppearanceSupport.setProjectionTarget(140.0, 60, 448.0, 672.0);
         if (MyKitScreen.field_O) {
           KitStyleTile.j(13459);
         }
@@ -298,15 +298,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (param4) {
           AuctionsHelpScreen.field_H = ModalPanel.field_B;
           ParticipantStatus.a(param4, 1);
-          if (ns.field_a > 0) {
+          if (NotificationPanelPositionSupport.field_a > 0) {
             ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
           }
           MarkerSliderWidget.field_F.field_A = 1;
           MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-          if (fj.field_a > 0) {
+          if (ConsoleLexer.field_a > 0) {
             BeveledTextPainter.a(102, param4, param7, param6);
           }
-          if (ee.field_b > 0) {
+          if (GameMediaSupport.field_b > 0) {
             SpriteState.a(param7, param6, -2, param9, param4);
           }
           if (TrinketCatalog.field_b &&
@@ -332,15 +332,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
                   ParticipantStatus.a(param4, 1);
-                  if (ns.field_a > 0) {
+                  if (NotificationPanelPositionSupport.field_a > 0) {
                     ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-                  if (fj.field_a > 0) {
+                  if (ConsoleLexer.field_a > 0) {
                     BeveledTextPainter.a(102, param4, param7, param6);
                   }
-                  if (ee.field_b > 0) {
+                  if (GameMediaSupport.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
@@ -358,23 +358,23 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
                 }
-                bq.a(103, true);
+                MatchUiLayoutSupport.layoutMatchUi(103, true);
               } else {
-                bq.a(98, false);
+                MatchUiLayoutSupport.layoutMatchUi(98, false);
               }
             }
             if (!param4) {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
-              if (ns.field_a > 0) {
+              if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-              if (fj.field_a > 0) {
+              if (ConsoleLexer.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
-              if (ee.field_b > 0) {
+              if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
@@ -390,15 +390,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
-              if (ns.field_a > 0) {
+              if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-              if (fj.field_a > 0) {
+              if (ConsoleLexer.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
-              if (ee.field_b > 0) {
+              if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
@@ -425,15 +425,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
                   ParticipantStatus.a(param4, 1);
-                  if (ns.field_a > 0) {
+                  if (NotificationPanelPositionSupport.field_a > 0) {
                     ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-                  if (fj.field_a > 0) {
+                  if (ConsoleLexer.field_a > 0) {
                     BeveledTextPainter.a(102, param4, param7, param6);
                   }
-                  if (ee.field_b > 0) {
+                  if (GameMediaSupport.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
@@ -451,23 +451,23 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
                 }
-                bq.a(103, true);
+                MatchUiLayoutSupport.layoutMatchUi(103, true);
               } else {
-                bq.a(98, false);
+                MatchUiLayoutSupport.layoutMatchUi(98, false);
               }
             }
             if (!param4) {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
-              if (ns.field_a > 0) {
+              if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-              if (fj.field_a > 0) {
+              if (ConsoleLexer.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
-              if (ee.field_b > 0) {
+              if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
@@ -483,14 +483,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
-              if (ns.field_a > 0) {
+              if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
-              if (fj.field_a > 0) {
+              if (ConsoleLexer.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
-                if (ee.field_b > 0) {
+                if (GameMediaSupport.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (TrinketCatalog.field_b &&
@@ -504,7 +504,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                 }
               } else {
-                if (ee.field_b > 0) {
+                if (GameMediaSupport.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (!TrinketCatalog.field_b) {
@@ -533,13 +533,13 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
 
     final void drawScreen(int param0, boolean param1) {
         super.drawScreen(param0, param1);
-        if (null == um.field_e) {
+        if (null == MachineTokenStorageSupport.field_e) {
           return;
         }
-        if (-2 == ig.field_d) {
+        if (-2 == MatchHudSupport.field_d) {
           return;
         }
-        um.field_e.c((byte) 80);
+        MachineTokenStorageSupport.field_e.c((byte) 80);
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {

@@ -82,7 +82,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByFrameOffset(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_i.field_c) {
-            ug.a(param0, 16737894, param1);
+            SocialListLayoutSupport.insertNodeBefore(param0, 16737894, param1);
             this.field_l = ((PcmMixerListener) (this.field_i.field_c.field_d)).frameOffset;
             return;
           }
@@ -92,7 +92,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        ug.a(param0, 16737894, param1);
+        SocialListLayoutSupport.insertNodeBefore(param0, 16737894, param1);
         this.field_l = ((PcmMixerListener) (this.field_i.field_c.field_d)).frameOffset;
         return;
     }

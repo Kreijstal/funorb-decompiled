@@ -142,18 +142,18 @@ class ButtonMenuScreen extends AppScreen {
         }
         if (-1 != this.field_o) {
           var3Lifetime1 = -((this.slideOffsetX << 6) / 640);
-          var8 = ug.field_b[this.field_o][1];
-          var5_ref_ut = ug.field_b[this.field_o][0];
+          var8 = SocialListLayoutSupport.field_b[this.field_o][1];
+          var5_ref_ut = SocialListLayoutSupport.field_b[this.field_o][0];
           for (var6Lifetime1 = 0; var6Lifetime1 < FormationAgent.field_f - var5_ref_ut.field_o; var6Lifetime1 = var6Lifetime1 + var8.field_o) {
             var8.d(var6Lifetime1, var3Lifetime1);
           }
           var5_ref_ut.d(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
           var6Lifetime1Lifetime1 = var3Lifetime1 - (-var5_ref_ut.field_v + 18);
           if (null != this.field_w) {
-            un.field_d.a(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
+            ByteArrayPool.field_d.a(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
           }
           if (null != this.field_s) {
-            un.field_d.c(this.field_s, this.field_p, var6Lifetime1Lifetime1, 16777215, -1);
+            ByteArrayPool.field_d.c(this.field_s, this.field_p, var6Lifetime1Lifetime1, 16777215, -1);
           }
         }
         if (this.field_m) {
@@ -274,7 +274,7 @@ class ButtonMenuScreen extends AppScreen {
               this.slideOffsetX = -this.slideOffsetX;
             }
           } else {
-            this.slideOffsetX = FormationAgent.field_f - po.a((AppScreen) (this), -4);
+            this.slideOffsetX = FormationAgent.field_f - SocialRowOrderSupport.getScreenPanelWidth((AppScreen) (this), -4);
           }
           if (param2 >= -28) {
             this.slideOffsetX = 124;
@@ -415,7 +415,7 @@ class ButtonMenuScreen extends AppScreen {
         var3 = Kickabout.field_G;
         try {
           if (HuffmanCodec.field_e == 1) {
-            stackIn_70_0 = (et.field_d.field_V.possessorTeam == 0);
+            stackIn_70_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0);
             return stackIn_70_0;
           }
           if (2 == HuffmanCodec.field_e) {
@@ -427,23 +427,23 @@ class ButtonMenuScreen extends AppScreen {
             return stackIn_12_0;
           }
           if (HuffmanCodec.field_e == 4) {
-            stackIn_66_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 3);
+            stackIn_66_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) && (ThumbnailStateFactory.field_d.field_V.possessorSlot == 3);
             return stackIn_66_0;
           }
           if (5 == HuffmanCodec.field_e) {
-            stackIn_19_0 = (et.field_d.field_V.possessorTeam == 0) && (et.field_d.field_V.possessorSlot == 1);
+            stackIn_19_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) && (ThumbnailStateFactory.field_d.field_V.possessorSlot == 1);
             return stackIn_19_0;
           }
           if (HuffmanCodec.field_e == 6) {
-            stackIn_61_0 = (et.field_d.field_V.possessorTeam == 0) && (3 == et.field_d.field_V.possessorSlot);
+            stackIn_61_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) && (3 == ThumbnailStateFactory.field_d.field_V.possessorSlot);
             return stackIn_61_0;
           }
           if (HuffmanCodec.field_e == 7) {
-            stackIn_49_0 = (et.field_d.field_V.possessorTeam != 0) ? 0 : 1;
+            stackIn_49_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam != 0) ? 0 : 1;
             var1_int = stackIn_49_0;
             for (var2 = 1; 4 > var2; var2++) {
               stackIn_53_0 = var1_int;
-              if (et.field_d.field_P[1][var2].positionY != AchievementsScreen.a((byte) -27, 1)) {
+              if (ThumbnailStateFactory.field_d.field_P[1][var2].positionY != AchievementsScreen.a((byte) -27, 1)) {
                 stackIn_54_1 = 0;
               } else {
                 stackIn_54_1 = 1;
@@ -454,19 +454,19 @@ class ButtonMenuScreen extends AppScreen {
             return stackIn_56_0 != 0;
           }
           if (8 == HuffmanCodec.field_e) {
-            stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (AccountInputValidationResult.field_f.pixelX(-115) > 760) && (AccountInputValidationResult.field_f.pixelY(true) > 1000);
+            stackIn_28_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) && (AccountInputValidationResult.field_f.pixelX(-115) > 760) && (AccountInputValidationResult.field_f.pixelY(true) > 1000);
             return stackIn_28_0;
           }
           if (9 == HuffmanCodec.field_e) {
-            stackIn_34_0 = (0 == et.field_d.field_V.possessorTeam) && (et.field_d.field_V.possessorSlot == 1);
+            stackIn_34_0 = (0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) && (ThumbnailStateFactory.field_d.field_V.possessorSlot == 1);
             return stackIn_34_0;
           }
           if (HuffmanCodec.field_e == 10) {
-            stackIn_39_0 = (et.field_d.participantStatus[0].controlledSlot == 4);
+            stackIn_39_0 = (ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot == 4);
             return stackIn_39_0;
           }
           if (11 == HuffmanCodec.field_e) {
-            stackIn_45_0 = (et.field_d.field_V.possessorTeam == 0);
+            stackIn_45_0 = (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0);
             return stackIn_45_0;
           }
           if (param0 != -8) {
@@ -546,8 +546,8 @@ class ButtonMenuScreen extends AppScreen {
           }
           var4 = stackIn_11_0;
           if (var4 != -1 &&
-            null != fa.field_g[var4]) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, fa.field_g[var4]);
+            null != PendingRequestAcknowledgement.field_g[var4]) {
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, PendingRequestAcknowledgement.field_g[var4]);
           }
         }
         var9 = 0;
@@ -605,7 +605,7 @@ class ButtonMenuScreen extends AppScreen {
           18 == this.screenId) {
           return;
         }
-        vj.a(106, false);
+        RasterGlowSupport.returnToPreviousScreen(106, false);
     }
 
     public static void c(byte param0) {

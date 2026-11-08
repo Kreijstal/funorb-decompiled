@@ -29,37 +29,37 @@ abstract class LoginCredentials {
         boolean stackIn_29_1 = false;
         CommonGame stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
-        stackIn_2_0 = et.field_d;
+        stackIn_2_0 = ThumbnailStateFactory.field_d;
         stackIn_3_1 = (param5) ? false : true;
         stackIn_2_0.field_h = stackIn_3_1;
-        stackIn_5_0 = et.field_d;
+        stackIn_5_0 = ThumbnailStateFactory.field_d;
         stackIn_6_1 = (param2) ? false : true;
         stackIn_5_0.field_l = stackIn_6_1;
         if (param0 == -25246) {
-          stackIn_9_0 = et.field_d;
+          stackIn_9_0 = ThumbnailStateFactory.field_d;
           stackIn_10_1 = (param6) ? false : true;
           stackIn_9_0.field_A = stackIn_10_1;
-          stackIn_12_0 = et.field_d;
+          stackIn_12_0 = ThumbnailStateFactory.field_d;
           stackIn_13_1 = (param1) ? false : true;
           stackIn_12_0.field_Y = stackIn_13_1;
-          stackIn_15_0 = et.field_d;
+          stackIn_15_0 = ThumbnailStateFactory.field_d;
           stackIn_16_1 = (param4) ? false : true;
           stackIn_15_0.field_y = stackIn_16_1;
-          stackIn_18_0 = et.field_d;
+          stackIn_18_0 = ThumbnailStateFactory.field_d;
           stackIn_19_1 = (param3) ? false : true;
           stackIn_18_0.field_z = stackIn_19_1;
         } else {
           LoginCredentials.a(23);
-          stackIn_22_0 = et.field_d;
+          stackIn_22_0 = ThumbnailStateFactory.field_d;
           stackIn_23_1 = (param6) ? false : true;
           stackIn_22_0.field_A = stackIn_23_1;
-          stackIn_25_0 = et.field_d;
+          stackIn_25_0 = ThumbnailStateFactory.field_d;
           stackIn_26_1 = (param1) ? false : true;
           stackIn_25_0.field_Y = stackIn_26_1;
-          stackIn_28_0 = et.field_d;
+          stackIn_28_0 = ThumbnailStateFactory.field_d;
           stackIn_29_1 = (param4) ? false : true;
           stackIn_28_0.field_y = stackIn_29_1;
-          stackIn_31_0 = et.field_d;
+          stackIn_31_0 = ThumbnailStateFactory.field_d;
           stackIn_32_1 = (param3) ? false : true;
           stackIn_31_0.field_z = stackIn_32_1;
         }
@@ -102,8 +102,8 @@ abstract class LoginCredentials {
           if (!SetLagCommand.a((byte) 52, 1)) {
             return false;
           }
-          MusicVolumeSupport.field_b = un.field_e.readUnsignedByte((byte) -106);
-          un.field_e.field_n = 0;
+          MusicVolumeSupport.field_b = ByteArrayPool.field_e.readUnsignedByte((byte) -106);
+          ByteArrayPool.field_e.field_n = 0;
         }
         if (param0 != 180) {
           return false;
@@ -114,8 +114,8 @@ abstract class LoginCredentials {
         if (!SetLagCommand.a((byte) 29, 2)) {
           return false;
         }
-        MusicVolumeSupport.field_b = un.field_e.readUnsignedShort((byte) 81);
-        un.field_e.field_n = 0;
+        MusicVolumeSupport.field_b = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
+        ByteArrayPool.field_e.field_n = 0;
         return SetLagCommand.a((byte) -114, MusicVolumeSupport.field_b);
     }
 

@@ -70,7 +70,7 @@ final class UrlRequest {
               if (var2 == null) {
                 return;
               }
-              this.field_h = new JaggrabDownloader(oo.field_c, new java.net.URL(var2, "motd"), 100000);
+              this.field_h = new JaggrabDownloader(PlatformTaskState.field_c, new java.net.URL(var2, "motd"), 100000);
               return;
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

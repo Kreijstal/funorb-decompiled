@@ -30,10 +30,10 @@ final class WeightedLruCache {
 
     final static void a(int param0) {
         int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
-        int var2 = -(pg.field_b * pg.field_b) + var1;
+        int var2 = -(SharedPanelFactory.field_b * SharedPanelFactory.field_b) + var1;
         int var3 = ClientPacketFlushSupport.field_c + var2 * (-ClientPacketFlushSupport.field_c + VerticalScrollbar.field_Ab) / var1;
         GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
-        RankingRowNode.a(124, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
+        RankingRowNode.a(124, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
     final static boolean a(boolean param0) {
@@ -82,10 +82,10 @@ final class WeightedLruCache {
     final static void a(int param0, boolean param1) {
         if (param0 == 1) {
           TournamentChampionDialog.field_I = 0;
-          ig.field_g = vp.field_c;
+          MatchHudSupport.field_g = MatchTextInputOverlay.field_c;
           LoginCredentials.field_e = 0;
           AuctionItem.field_l = new MenuSelection(2);
-          AuctionItem.field_l.a(vp.a(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
+          AuctionItem.field_l.a(MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
           return;
         }
     }

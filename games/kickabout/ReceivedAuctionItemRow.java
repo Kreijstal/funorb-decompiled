@@ -77,7 +77,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                 SocketArchiveNetworkClient.a((byte) 126, 4);
                 ShopPlayerSlot.c(53, -113);
               } else {
-                ca.enqueueAuctionBidDialog(this.field_Hb, 255);
+                GradientRasterSupport.enqueueAuctionBidDialog(this.field_Hb, 255);
               }
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(param0 + 1, this.field_Hb.field_a)) {
@@ -90,7 +90,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                       SocketArchiveNetworkClient.a((byte) 126, 2);
                       ShopPlayerSlot.c(53, 40);
                     } else {
-                      is.a((byte) -123, this.field_Hb);
+                      TextLineLayoutSupport.enqueueAuctionPurchaseDialog((byte) -123, this.field_Hb);
                     }
                   } else {
                     SocketArchiveNetworkClient.a((byte) 126, 6);
@@ -188,7 +188,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                 ConsoleTokenCursor.field_d.c(CalendarSupport.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
-            this.field_X.a(uf.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+            this.field_X.a(RegistrationUiSupport.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[1];
             var6 = 7 + var4;
             for (var7 = 0; 3 > var7; var7++) {
@@ -229,7 +229,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             if (this.field_Hb.field_j) {
               this.field_X.d(BeveledTextPainter.field_s, (this.field_Db[4] >> 1) + var4, 4 + this.field_T + (this.field_mb >> 1), 16711680, -1);
             } else {
-              this.field_X.d(ql.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
+              this.field_X.d(MatchHudRoutingSupport.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
             }
             var4 = var4 + this.field_Db[4];
             this.field_X.d(LocalizedTextLoader.formatCurrencyAmount(this.field_Hb.field_i, 26300), (this.field_Db[5] >> 1) + var4, -7 + ((this.field_mb >> 1) + this.field_T), this.field_y, -1);
@@ -378,7 +378,7 @@ final class ReceivedAuctionItemRow extends ListRow {
           if (var4 != 0) {
             stackIn_14_0 = ConsoleTokenCursor.field_d;
           } else {
-            stackIn_14_0 = un.field_d;
+            stackIn_14_0 = ByteArrayPool.field_d;
           }
           var5 = stackIn_14_0;
           this.field_Jb = SoftwareDrawingSupport.createRenderedButton(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);

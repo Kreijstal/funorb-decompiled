@@ -160,7 +160,7 @@ final class SquadSlotWidget extends UiLayoutNode {
               if (null != GameModesHelpScreen.field_G) {
                 return;
               }
-              this.field_Db = pg.a(param0, param1, this.field_Eb, -79, param3);
+              this.field_Db = SharedPanelFactory.createThrottledPlayerPreview(param0, param1, this.field_Eb, -79, param3);
             }
           } else {
             this.field_Db.stepMovement(2, (PlayArea[]) null, false, false);

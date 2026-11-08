@@ -84,7 +84,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
-        super(param0, fj.field_b, TriangleMesh.field_L, false, false);
+        super(param0, ConsoleLexer.field_b, TriangleMesh.field_L, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
@@ -110,7 +110,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (this.field_pb) {
             return super.advanceDialogAnimation(-1);
           }
-          var2 = uf.a(param0 - 1459);
+          var2 = RegistrationUiSupport.pollRegistrationResponse(param0 - 1459);
           if (var2 == null) {
             return super.advanceDialogAnimation(-1);
           }
@@ -123,7 +123,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         if (this.field_pb) {
           return super.advanceDialogAnimation(-1);
         }
-        var2Lifetime1 = uf.a(param0 - 1459);
+        var2Lifetime1 = RegistrationUiSupport.pollRegistrationResponse(param0 - 1459);
         if (var2Lifetime1 == null) {
           return super.advanceDialogAnimation(-1);
         }
@@ -184,7 +184,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (param2 != -71) {
             return;
           }
-          var5 = new AccountMessagePanel((AccountRequestDialog) (this), fj.field_b, var4);
+          var5 = new AccountMessagePanel((AccountRequestDialog) (this), ConsoleLexer.field_b, var4);
           if (param1.success) {
             if (param1.needsTerms) {
               this.a((byte) -126, (UiWidget) (new AccountTermsPanel(this)));
@@ -194,9 +194,9 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             if (!this.field_nb) {
               if (param1.responseCode != 5) {
-                var5.a((byte) 55, -1, is.field_f);
+                var5.a((byte) 55, -1, TextLineLayoutSupport.field_f);
               } else {
-                var5.a((byte) 75, 11, ql.field_d);
+                var5.a((byte) 75, 11, MatchHudRoutingSupport.field_d);
                 var5.a((byte) 66, 17, AccountNameAvailabilityValidator.field_o);
               }
             } else {

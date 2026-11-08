@@ -37,8 +37,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (param0 != -38) {
           this.field_B = (ReceivedAuctionItemRow[]) null;
         }
-        this.field_R = SoftwareDrawingSupport.createRenderedButton(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
-        this.field_P = SoftwareDrawingSupport.createRenderedButton(AccountNameCheckState.field_b, 16679959, un.field_d, 162, true);
+        this.field_R = SoftwareDrawingSupport.createRenderedButton(ThreeCommand.field_B, 7126504, ByteArrayPool.field_d, 162, true);
+        this.field_P = SoftwareDrawingSupport.createRenderedButton(AccountNameCheckState.field_b, 16679959, ByteArrayPool.field_d, 162, true);
         this.field_R.field_s = 10;
         this.field_R.field_J = 56;
         this.field_P.field_J = 86;
@@ -48,7 +48,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_K.setBounds(true, 420, 195, 51, 66);
         this.field_E = new CheckboxLabelWidget[4];
         for (var2 = 0; 4 > var2; var2++) {
-          this.field_E[var2] = new CheckboxLabelWidget(uf.field_e[var2], IsSixCommand.field_C, 90);
+          this.field_E[var2] = new CheckboxLabelWidget(RegistrationUiSupport.field_e[var2], IsSixCommand.field_C, 90);
           this.field_E[var2].field_s = var2 * 100 + 15;
           this.field_E[var2].field_J = 27;
           this.field_E[var2].field_Gb = true;
@@ -111,7 +111,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
     }
 
     final static void sendAuctionAction(int param0, int param1, byte param2) {
-        CipherPacketBuffer var3 = or.field_d;
+        CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
         var3.b(param1, (byte) 127);
         var3.writeByte(123, 3);
         int var4 = 127 / ((57 - param2) / 58);
@@ -272,8 +272,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
             if (var9 == 0) {
               var6[var10].drawHalfSize(-7 + (SoftwareRasterizer.field_g >> 1), var12 + 5);
             } else {
-              var14 = mk.field_b[var16[var10]].toLowerCase();
-              un.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
+              var14 = TutorialScenerySupport.field_b[var16[var10]].toLowerCase();
+              ByteArrayPool.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
             }
             TeamManagementScreen.e(120);
             SpriteBackgroundSupport.fillTransparentBackground(var13, (byte) -51);
@@ -359,7 +359,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
     }
 
     final void drawOverlay(boolean param0, int param1) {
-        ig.b(this.slideOffsetX, -12452);
+        MatchHudSupport.drawNumericRewardPanel(this.slideOffsetX, -12452);
         if (param1 < 99) {
           this.field_F = -63;
         }
@@ -374,7 +374,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
-        un.field_d.a(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
+        ByteArrayPool.field_d.a(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
         for (var3_int = 0; 4 > var3_int; var3_int++) {
           this.field_E[var3_int].a(false, (byte) 46);
         }
@@ -475,7 +475,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             while (var18 != null) {
               if (var7 >= param3) {
                 if (var7 == 0) {
-                  var10_ref_jr = new ReceivedAuctionItemRow(nc.field_b);
+                  var10_ref_jr = new ReceivedAuctionItemRow(LoginPacketSupport.field_b);
                   var10_ref_jr.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
                   var10_ref_jr.field_mb = 50;
                   var10_ref_jr.field_y = 16777215;
@@ -591,7 +591,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             ModelMaterialDecoder.field_g) {
             return;
           }
-          or.field_d.b(84, (byte) 112);
+          FootballerAiOverlaySupport.field_d.b(84, (byte) 112);
           var2 = MonotonicClock.monotonicMillis(-79);
           if (param0 != 30353) {
             this.field_J = -31L;
@@ -626,7 +626,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{RegistrationUiSupport.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {
@@ -677,7 +677,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int var8 = Kickabout.field_G;
         try {
           PlayerPortraitCacheEntry.field_g = null;
-          var9 = DiagnosticsOverlaySupport.field_d == 0L ? gw.field_b : ArchiveSource.field_e;
+          var9 = DiagnosticsOverlaySupport.field_d == 0L ? HuffmanTextSupport.field_b : ArchiveSource.field_e;
           String var2 = var9;
           var3 = new String[]{var9, PasswordFieldPainter.field_D};
           if (param0 != 10) {
@@ -698,35 +698,35 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var10.field_R = 31;
           }
           var6 = WeightedLruCache.field_d > 0 ? 3 : 2;
-          um.field_e = new MatchScreen(false, (PlayerStats[]) null, var3, 0, false, false, 3, var6, false, false, false, false, false, -1, var4);
+          MachineTokenStorageSupport.field_e = new MatchScreen(false, (PlayerStats[]) null, var3, 0, false, false, 3, var6, false, false, false, false, false, -1, var4);
           for (var7 = 0; var7 < 2; var7++) {
-            um.field_e.matchState.field_g[var7].team = var7;
+            MachineTokenStorageSupport.field_e.matchState.field_g[var7].team = var7;
           }
-          um.field_e.matchState.surface = var5.field_K;
-          um.field_e.matchState.tier = var5.field_o;
-          um.field_e.matchState.field_H[0] = var5.field_w;
-          um.field_e.matchState.field_d[0] = var5.field_k;
-          um.field_e.matchState.field_Q[0] = var5.field_R;
-          um.field_e.matchState.field_H[1] = var4.field_w;
-          um.field_e.matchState.field_d[1] = var4.field_k;
-          um.field_e.matchState.field_Q[1] = var4.field_R;
+          MachineTokenStorageSupport.field_e.matchState.surface = var5.field_K;
+          MachineTokenStorageSupport.field_e.matchState.tier = var5.field_o;
+          MachineTokenStorageSupport.field_e.matchState.field_H[0] = var5.field_w;
+          MachineTokenStorageSupport.field_e.matchState.field_d[0] = var5.field_k;
+          MachineTokenStorageSupport.field_e.matchState.field_Q[0] = var5.field_R;
+          MachineTokenStorageSupport.field_e.matchState.field_H[1] = var4.field_w;
+          MachineTokenStorageSupport.field_e.matchState.field_d[1] = var4.field_k;
+          MachineTokenStorageSupport.field_e.matchState.field_Q[1] = var4.field_R;
           if (param1) {
-            um.field_e.matchState.field_b[0][0] = var5.squad[2];
-            um.field_e.matchState.field_b[0][1] = var5.squad[0];
-            um.field_e.matchState.field_b[0][2] = var5.squad[1];
-            um.field_e.matchState.field_b[0][3] = var5.squad[3];
-            um.field_e.matchState.field_b[1][0] = var4.squad[0];
-            um.field_e.matchState.field_b[1][1] = var4.squad[1];
-            um.field_e.matchState.field_b[1][2] = var4.squad[2];
-            um.field_e.matchState.disableLocal = true;
-            um.field_e.matchState.field_b[1][3] = var4.squad[3];
-            um.field_e.beginPhase(param0 + 26405, 4);
-            PlayArea.a(um.field_e.matchState, 0);
+            MachineTokenStorageSupport.field_e.matchState.field_b[0][0] = var5.squad[2];
+            MachineTokenStorageSupport.field_e.matchState.field_b[0][1] = var5.squad[0];
+            MachineTokenStorageSupport.field_e.matchState.field_b[0][2] = var5.squad[1];
+            MachineTokenStorageSupport.field_e.matchState.field_b[0][3] = var5.squad[3];
+            MachineTokenStorageSupport.field_e.matchState.field_b[1][0] = var4.squad[0];
+            MachineTokenStorageSupport.field_e.matchState.field_b[1][1] = var4.squad[1];
+            MachineTokenStorageSupport.field_e.matchState.field_b[1][2] = var4.squad[2];
+            MachineTokenStorageSupport.field_e.matchState.disableLocal = true;
+            MachineTokenStorageSupport.field_e.matchState.field_b[1][3] = var4.squad[3];
+            MachineTokenStorageSupport.field_e.beginPhase(param0 + 26405, 4);
+            PlayArea.a(MachineTokenStorageSupport.field_e.matchState, 0);
           } else {
-            um.field_e.beginPhase(26415, 2);
+            MachineTokenStorageSupport.field_e.beginPhase(26415, 2);
             RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -117);
           }
-          StringCursor.a(false, (byte) -122, um.field_e.matchState.tier, um.field_e.matchState.surface);
+          StringCursor.a(false, (byte) -122, MachineTokenStorageSupport.field_e.matchState.tier, MachineTokenStorageSupport.field_e.matchState.surface);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wf.IA(" + param0 + ',' + param1 + ')');
         }
@@ -777,13 +777,13 @@ final class AuctionsScreen extends ButtonMenuScreen {
           if (this.field_D - 5 <= this.field_T.a(false)) {
             this.requestAuctionRefresh(30353);
           }
-          or.field_d.b(param0 ? 83 : 55, (byte) -91);
-          or.field_d.n(-115);
-          or.field_d.a(4, 79, this.field_U);
-          or.field_d.a(3, 93, this.field_F);
-          or.field_d.a(3, 79, this.field_C);
-          or.field_d.b(false);
-          or.field_d.writeMedium(-5 + this.field_D, (byte) 109);
+          FootballerAiOverlaySupport.field_d.b(param0 ? 83 : 55, (byte) -91);
+          FootballerAiOverlaySupport.field_d.n(-115);
+          FootballerAiOverlaySupport.field_d.a(4, 79, this.field_U);
+          FootballerAiOverlaySupport.field_d.a(3, 93, this.field_F);
+          FootballerAiOverlaySupport.field_d.a(3, 79, this.field_C);
+          FootballerAiOverlaySupport.field_d.b(false);
+          FootballerAiOverlaySupport.field_d.writeMedium(-5 + this.field_D, (byte) 109);
           var3 = MonotonicClock.monotonicMillis(-111);
           this.field_P.field_lb = true;
           this.field_H = var3;

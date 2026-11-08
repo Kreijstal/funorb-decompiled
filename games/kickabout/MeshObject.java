@@ -63,7 +63,7 @@ abstract class MeshObject {
               IntValueNode.field_e = new WorldSpriteDecoration[26];
               var1_int = 0;
               for (var2 = 0; var2 < 14; var2++) {
-                var3_ref_ut = oo.field_b[LoggedPossession.a((byte) -24, 3)];
+                var3_ref_ut = PlatformTaskState.field_b[LoggedPossession.a((byte) -24, 3)];
                 var4 = -280;
                 var5 = -200 + var2 * 130;
                 if (LoggedPossession.a((byte) -24, 2) == 0) {
@@ -107,19 +107,19 @@ abstract class MeshObject {
                 var1_int = 0;
                 incrementValue$46 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$46] = new WorldSpriteDecoration(oo.field_b[1], 1002, -229);
+                IntValueNode.field_e[incrementValue$46] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], 1002, -229);
                 incrementValue$47 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$47] = new WorldSpriteDecoration(oo.field_b[2], 1126, -206);
+                IntValueNode.field_e[incrementValue$47] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], 1126, -206);
                 incrementValue$48 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$48] = new WorldSpriteDecoration(oo.field_b[0], -332, 200);
+                IntValueNode.field_e[incrementValue$48] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], -332, 200);
                 incrementValue$49 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$49] = new WorldSpriteDecoration(oo.field_b[0], -170, 1428);
+                IntValueNode.field_e[incrementValue$49] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], -170, 1428);
                 incrementValue$50 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$50] = new WorldSpriteDecoration(oo.field_b[1], -296, 1415);
+                IntValueNode.field_e[incrementValue$50] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], -296, 1415);
               } else {
                 if (RankingsScreen.field_C == 3) {
                   IntValueNode.field_e = new WorldSpriteDecoration[]{};
@@ -131,16 +131,16 @@ abstract class MeshObject {
             var1_int = 0;
             incrementValue$51 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$51] = new WorldSpriteDecoration(oo.field_b[0], -156, -31);
+            IntValueNode.field_e[incrementValue$51] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], -156, -31);
             incrementValue$52 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$52] = new WorldSpriteDecoration(oo.field_b[2], 933, 763);
+            IntValueNode.field_e[incrementValue$52] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], 933, 763);
             incrementValue$53 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$53] = new WorldSpriteDecoration(oo.field_b[0], 943, -36);
+            IntValueNode.field_e[incrementValue$53] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], 943, -36);
             incrementValue$54 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$54] = new WorldSpriteDecoration(oo.field_b[0], -141, 1275);
+            IntValueNode.field_e[incrementValue$54] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], -141, 1275);
             incrementValue$55 = var1_int;
             var1_int++;
             IntValueNode.field_e[incrementValue$55] = new WorldSpriteDecoration(MouseInputHandler.field_g[0], -390, 629);
@@ -155,37 +155,37 @@ abstract class MeshObject {
             IntValueNode.field_e[incrementValue$58] = new WorldSpriteDecoration(MouseInputHandler.field_g[0], -259, 379);
             incrementValue$59 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$59] = new WorldSpriteDecoration(oo.field_b[0], 180, 1371);
+            IntValueNode.field_e[incrementValue$59] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], 180, 1371);
             incrementValue$60 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$60] = new WorldSpriteDecoration(oo.field_b[1], 566, 1422);
+            IntValueNode.field_e[incrementValue$60] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], 566, 1422);
             incrementValue$61 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$61] = new WorldSpriteDecoration(oo.field_b[0], 750, 1353);
+            IntValueNode.field_e[incrementValue$61] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], 750, 1353);
             incrementValue$62 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$62] = new WorldSpriteDecoration(oo.field_b[2], 51, 1415);
+            IntValueNode.field_e[incrementValue$62] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], 51, 1415);
             incrementValue$63 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$63] = new WorldSpriteDecoration(oo.field_b[1], 1014, 211);
+            IntValueNode.field_e[incrementValue$63] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], 1014, 211);
             incrementValue$64 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$64] = new WorldSpriteDecoration(oo.field_b[2], 775, -174);
+            IntValueNode.field_e[incrementValue$64] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], 775, -174);
             incrementValue$65 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$65] = new WorldSpriteDecoration(oo.field_b[1], 570, -220);
+            IntValueNode.field_e[incrementValue$65] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], 570, -220);
             incrementValue$66 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$66] = new WorldSpriteDecoration(oo.field_b[0], 211, -199);
+            IntValueNode.field_e[incrementValue$66] = new WorldSpriteDecoration(PlatformTaskState.field_b[0], 211, -199);
             incrementValue$67 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$67] = new WorldSpriteDecoration(oo.field_b[2], -31, -163);
+            IntValueNode.field_e[incrementValue$67] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], -31, -163);
             incrementValue$68 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$68] = new WorldSpriteDecoration(oo.field_b[1], -288, 1213);
+            IntValueNode.field_e[incrementValue$68] = new WorldSpriteDecoration(PlatformTaskState.field_b[1], -288, 1213);
             incrementValue$69 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$69] = new WorldSpriteDecoration(oo.field_b[2], -200, 1041);
+            IntValueNode.field_e[incrementValue$69] = new WorldSpriteDecoration(PlatformTaskState.field_b[2], -200, 1041);
           }
           if (param0 != 11383) {
             field_e = true;
@@ -219,22 +219,22 @@ abstract class MeshObject {
             return;
           }
           if (AuctionLogEntry.field_h instanceof RankingsScreen) {
-            ug.field_e = null;
+            SocialListLayoutSupport.field_e = null;
           }
           GameModesHelpScreen.field_G.setTransitionProgress(256, true, -91, AuctionLogEntry.field_h);
           AuctionLogEntry.field_h = GameModesHelpScreen.field_G;
           GameModesHelpScreen.field_G = null;
           BuyPlayerDialog.field_I = 0;
-          FormationAgent.field_f = po.a(AuctionLogEntry.field_h, -4);
+          FormationAgent.field_f = SocialRowOrderSupport.getScreenPanelWidth(AuctionLogEntry.field_h, -4);
           if (TextButton.field_B) {
             SortCriterion.field_l = null;
             TextButton.field_B = false;
           }
           if (FriendsListPanel.field_Db) {
-            um.field_e = null;
+            MachineTokenStorageSupport.field_e = null;
             FriendsListPanel.field_Db = false;
-            oa.b(-23217);
-            mv.$cfr$intArgs$a$6121ff5511c4(119);
+            OverlayLayerSupport.shutdownSharedAudio(-23217);
+            DefaultPlayerFactory.buildSharedContextActions(119);
             BytePlusOneCommand.g(0);
           }
           if (TickClock.field_j) {

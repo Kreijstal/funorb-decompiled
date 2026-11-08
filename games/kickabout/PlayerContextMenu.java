@@ -20,7 +20,7 @@ final class PlayerContextMenu {
 
     private final boolean openFriendPrompt(int param0, int param1, int param2) {
         if (param2 == 17) {
-          TextPromptState.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
+          TextPromptState.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, TextInputUiSupport.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -178,7 +178,7 @@ final class PlayerContextMenu {
           }
           var3 = this.getDisplayName(-26719);
           String var2 = var3;
-          this.field_j.addItem(0, 17, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, vp.field_m, new String[]{var3}));
+          this.field_j.addItem(0, 17, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MatchTextInputOverlay.field_m, new String[]{var3}));
         }
         if (param0 <= -11) {
           return;
@@ -192,7 +192,7 @@ final class PlayerContextMenu {
         var5 = Kickabout.field_G;
         var4 = -30 % ((param1 - 2) / 48);
         if (param0 == 8) {
-          ig.beginPrivateMessage(this.field_b, this.field_k, (byte) 88);
+          MatchHudSupport.beginPrivateMessage(this.field_b, this.field_k, (byte) 88);
           return true;
         }
         if (param0 == 18) {
@@ -222,7 +222,7 @@ final class PlayerContextMenu {
         if (param0 != 19) {
           return false;
         }
-        mi.a(this.field_b, this.field_k, (byte) 127, this.field_l, this.field_h);
+        ConsoleArgumentSupport.beginPrivateQuickChat(this.field_b, this.field_k, (byte) 127, this.field_l, this.field_h);
         return true;
     }
 
@@ -238,8 +238,8 @@ final class PlayerContextMenu {
           RuntimeException var15_ref = null;
           String var16 = null;
           try {
-            un.field_e = new CipherPacketBuffer(param7);
-            or.field_d = new CipherPacketBuffer(param12);
+            ByteArrayPool.field_e = new CipherPacketBuffer(param7);
+            FootballerAiOverlaySupport.field_d = new CipherPacketBuffer(param12);
             AuctionItem.field_g = param9;
             GrowableIntList.field_c = param2;
             RotaryDialWidget.field_E = param1;
@@ -455,7 +455,7 @@ final class PlayerContextMenu {
           return;
         }
         if (var5.field_Xb) {
-          this.field_j.addItem(param0 ^ 1, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gs.field_f, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectionMarkerSupport.field_f, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -592,7 +592,7 @@ final class PlayerContextMenu {
                   if (!WriteIntegersCommand.field_C) {
                     this.field_j.addItem(0, 8, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var5}));
                   }
-                  this.field_j.addItem(0, 18, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
+                  this.field_j.addItem(0, 18, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameMediaSupport.field_c, new String[]{var5}));
                   if (param2 != null) {
                     this.field_h = param2;
                     this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MonotonicClock.field_a, new String[]{var5}));
@@ -646,7 +646,7 @@ final class PlayerContextMenu {
             this.field_j.addItem(param1 - 11, 13, GameModeDefinition.field_a);
           }
           if (param0.field_c == 2) {
-            if (0 == fc.field_a) {
+            if (0 == LoginResponseUiSupport.field_a) {
               this.field_j.addItem(0, 12, SpriteState.field_u);
             }
             this.field_j.addItem(0, 13, TextWidgetPainter.field_g);
@@ -685,7 +685,7 @@ final class PlayerContextMenu {
 
     PlayerContextMenu(UiLayoutNode param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new ContextMenu(su.field_b);
+          this.field_j = new ContextMenu(WidgetStyleFactory.field_b);
           this.field_k = param2;
           this.field_g = param0;
           this.field_l = param5;

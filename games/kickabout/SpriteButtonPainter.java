@@ -15,7 +15,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
     final static void a(int param0) {
         PitchOptionTile.field_yb = 80;
         IconLabel.field_Bb = 120;
-        hq.field_d = -IconLabel.field_Bb + 480 - 21;
+        ClientInteractionSupport.field_d = -IconLabel.field_Bb + 480 - 21;
         if (param0 != -363021503) {
           SpriteButtonPainter.releaseStatics(110);
         }
@@ -85,7 +85,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
           var7 = stackIn_13_0;
           stackIn_16_0 = (!param1) ? 7105644 : 16777215;
           var8 = stackIn_16_0;
-          gw.a(param3.field_g + (param2 + (-this.field_r[0].field_v + param3.field_i >> 1)), -27981, param4 + param3.field_t, param3.field_n, var7, this.field_r);
+          HuffmanTextSupport.drawThreeSliceStrip(param3.field_g + (param2 + (-this.field_r[0].field_v + param3.field_i >> 1)), -27981, param4 + param3.field_t, param3.field_n, var7, this.field_r);
           this.field_a.a(param3.field_q, param3.field_t + param4, -2 + (param3.field_g + param2), param3.field_n, param3.field_i, var8, -1, 1, 1, this.field_a.field_G);
           var9 = -73 / ((param0 - 59) / 53);
           return;
@@ -163,7 +163,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
 
     private SpriteButtonPainter(int param0, int param1, int param2) {
         this.field_r = IntrusiveDequeCursor.field_a;
-        this.field_a = fj.field_b;
+        this.field_a = ConsoleLexer.field_b;
         this.field_s = param0;
         this.field_w = param2;
         this.field_x = param1;

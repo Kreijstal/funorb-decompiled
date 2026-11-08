@@ -129,7 +129,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
           for (var2 = 0; 2 > var2; var2++) {
             var3 = 102 * var2 + 20;
             SoftwareRasterizer.fillRoundedRectangleBlended(var1_int, var3, 160, 92, 12, 65793, 128);
-            un.field_d.d(RandomAccessCacheFile.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
+            ByteArrayPool.field_d.d(RandomAccessCacheFile.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
             var4 = AccountRegistrationPanel.field_C[var2];
             var4[0][1].drawScaledAveraged(14 + var1_int, 49 + var3, 20, 20);
             var4[1][1].drawScaledAveraged(var1_int + 14 + 38, var3 + 49, 20, 20);

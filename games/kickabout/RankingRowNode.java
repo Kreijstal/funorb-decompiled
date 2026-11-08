@@ -116,7 +116,7 @@ final class RankingRowNode extends UiLayoutNode {
         SoftwareRasterizer.fillRectangleAlpha(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
         SoftwareRasterizer.fillRectangleAlpha(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
         if (null == this.field_Hb) {
-          ConsoleTokenCursor.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.a(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
           var3 = 52 % ((-31 - param0) / 59);
           return;
         }
@@ -131,19 +131,19 @@ final class RankingRowNode extends UiLayoutNode {
           var3Lifetime1Lifetime1 = 52 % ((-31 - param0) / 59);
           return;
         }
-        ConsoleTokenCursor.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+        ConsoleTokenCursor.field_d.a(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
         var3Lifetime2 = 52 % ((-31 - param0) / 59);
     }
 
     final void c(boolean param0) {
         if (param0) {
           this.h((byte) 103);
-          cu.field_a.addLast((IntrusiveNode) (this), 3);
+          RankingRowFactory.field_a.addLast((IntrusiveNode) (this), 3);
           return;
         }
         this.field_Bb = (String) null;
         this.h((byte) 103);
-        cu.field_a.addLast((IntrusiveNode) (this), 3);
+        RankingRowFactory.field_a.addLast((IntrusiveNode) (this), 3);
     }
 
     final void h(byte param0) {

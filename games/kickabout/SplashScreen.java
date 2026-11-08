@@ -139,7 +139,7 @@ final class SplashScreen extends AppScreen {
           }
           stackIn_44_0 = (ScrollPane) (param0);
           stackIn_44_1 = param1 * (4 * LineupPositionSupport.field_c + 8);
-          stackIn_45_2 = (ig.field_f == param0);
+          stackIn_45_2 = (MatchHudSupport.field_f == param0);
           stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (LineupPositionSupport.field_c + 2) * 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_48_0;
           var10 = param0.field_Ab.field_jb;
@@ -241,10 +241,10 @@ final class SplashScreen extends AppScreen {
                     var12.field_Tb.field_E = AvailabilityCheckRequest.field_a;
                     var12.field_Hb.field_E = DemoIntegersCommand.field_A;
                   } else {
-                    var12.field_Tb.field_E = nc.field_c;
+                    var12.field_Tb.field_E = LoginPacketSupport.field_c;
                   }
                 } else {
-                  var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ug.field_d, new String[]{var20});
+                  var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListLayoutSupport.field_d, new String[]{var20});
                   var12.field_Hb.field_E = AsciiCharacterSupport.field_a;
                 }
               }
@@ -351,10 +351,10 @@ final class SplashScreen extends AppScreen {
                         var25_int = LoginCredentials.a((byte) -86, ~var12.field_Pb & var8);
                         var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClassDescriptorSupport.field_e, new String[]{var20});
                         if (var25_int > 0 &&
-                          null != um.field_a &&
-                          var25_int <= um.field_a.length &&
-                          um.field_a[-1 + var25_int] != null) {
-                          var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, um.field_a[var25_int - 1][2], new String[]{var20});
+                          null != MachineTokenStorageSupport.field_a &&
+                          var25_int <= MachineTokenStorageSupport.field_a.length &&
+                          MachineTokenStorageSupport.field_a[-1 + var25_int] != null) {
+                          var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MachineTokenStorageSupport.field_a[var25_int - 1][2], new String[]{var20});
                         }
                       }
                     }
@@ -381,12 +381,12 @@ final class SplashScreen extends AppScreen {
                     if (var12.field_Qb >= var6) {
                       if ((var8 & ~var12.field_Pb) != 0) {
                         var25_int = LoginCredentials.a((byte) -63, ~var12.field_Pb & var8);
-                        var24Lifetime2 = ca.field_e;
+                        var24Lifetime2 = GradientRasterSupport.field_e;
                         if (var25_int > 0 &&
-                          null != um.field_a &&
-                          var25_int <= um.field_a.length &&
-                          um.field_a[-1 + var25_int] != null) {
-                          var24Lifetime2 = um.field_a[-1 + var25_int][1];
+                          null != MachineTokenStorageSupport.field_a &&
+                          var25_int <= MachineTokenStorageSupport.field_a.length &&
+                          MachineTokenStorageSupport.field_a[-1 + var25_int] != null) {
+                          var24Lifetime2 = MachineTokenStorageSupport.field_a[-1 + var25_int][1];
                         }
                       }
                     } else {
@@ -443,7 +443,7 @@ final class SplashScreen extends AppScreen {
                     var29 = 1;
                   }
                   if (var29 != 0) {
-                    var30_refLifetime2 = "<col=A00000>" + ok.field_b[var27_int] + "</col>";
+                    var30_refLifetime2 = "<col=A00000>" + Cp1252EncodingSupport.field_b[var27_int] + "</col>";
                     var25 = var30_refLifetime2;
                     var24Lifetime2 = var25;
                     var25 = var30_refLifetime2;
@@ -468,7 +468,7 @@ final class SplashScreen extends AppScreen {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WorldDrawEntry.field_l, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + po.field_c + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + SocialRowOrderSupport.field_c + (String) (var25);
                   }
                 }
                 if (ClientException.field_c == param0 &&
@@ -520,7 +520,7 @@ final class SplashScreen extends AppScreen {
           this.setTransitionProgress(-112, true, 15, (AppScreen) null);
         }
         PlayerInputFactory.a((byte) -25);
-        mv.$cfr$intArgs$a$6121ff5511c4(122);
+        DefaultPlayerFactory.buildSharedContextActions(122);
         DelayedServerPacket.a(0, false, param0 + 255);
     }
 

@@ -37,7 +37,7 @@ final class StringCursor {
             var6 = ReceivedAuctionItem.field_y;
             var4Lifetime1.field_j.layoutItems(0, 0, var5, var6, 0);
           }
-          ug.a(param2, 2, param0);
+          SocialListLayoutSupport.layoutSocialRows(param2, 2, param0);
           return;
         }
     }
@@ -45,20 +45,20 @@ final class StringCursor {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == 5) {
           PlayerModelPreview.field_j = param1;
-          jl.field_d = param2;
+          InputLayoutState.field_d = param2;
           ConsoleExpression.field_g = param0;
           PlayArea.field_c = param3;
           return;
         }
         field_h = (int[]) null;
         PlayerModelPreview.field_j = param1;
-        jl.field_d = param2;
+        InputLayoutState.field_d = param2;
         ConsoleExpression.field_g = param0;
         PlayArea.field_c = param3;
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
-        um.field_b = true;
+        MachineTokenStorageSupport.field_b = true;
         ChatComposeSupport.field_g = param3;
         SquadGridWidget.field_Db = null;
         TeamSelectionView.field_j = param0 ? true : false;
@@ -95,9 +95,9 @@ final class StringCursor {
           BufferedSocket.field_i[20] = PitchSurfaceLoader.field_a;
           BufferedSocket.field_i[4] = AuctionItem.field_n;
           BufferedSocket.field_i[13] = ParticipantStatus.field_o;
-          BufferedSocket.field_i[7] = ca.field_b;
+          BufferedSocket.field_i[7] = GradientRasterSupport.field_b;
           BufferedSocket.field_i[21] = BlobSubmission.field_e;
-          BufferedSocket.field_i[5] = fs.field_c;
+          BufferedSocket.field_i[5] = PanelSpriteFactory.field_c;
           BufferedSocket.field_i[17] = ImageProducerRasterBuffer.field_k;
           return;
         }
@@ -106,9 +106,9 @@ final class StringCursor {
         BufferedSocket.field_i[20] = PitchSurfaceLoader.field_a;
         BufferedSocket.field_i[4] = AuctionItem.field_n;
         BufferedSocket.field_i[13] = ParticipantStatus.field_o;
-        BufferedSocket.field_i[7] = ca.field_b;
+        BufferedSocket.field_i[7] = GradientRasterSupport.field_b;
         BufferedSocket.field_i[21] = BlobSubmission.field_e;
-        BufferedSocket.field_i[5] = fs.field_c;
+        BufferedSocket.field_i[5] = PanelSpriteFactory.field_c;
         BufferedSocket.field_i[17] = ImageProducerRasterBuffer.field_k;
     }
 

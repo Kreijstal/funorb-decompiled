@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class UiLayoutNode extends iv {
+class UiLayoutNode extends SharedWidgetFactory {
     int field_x;
     int field_A;
     boolean field_lb;
@@ -82,13 +82,13 @@ class UiLayoutNode extends iv {
             }
           }
           TrinketCatalog.a(param0, 15, param2, param1, param3, false);
-          if (ih.field_c == 0) {
-            RasterBuffer.a(75, gw.field_d, 15, 15);
+          if (FormationMaskSupport.field_c == 0) {
+            RasterBuffer.a(75, HuffmanTextSupport.field_d, 15, 15);
           }
-          if (1 == ih.field_c) {
+          if (1 == FormationMaskSupport.field_c) {
             RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
           }
-          if (2 == ih.field_c) {
+          if (2 == FormationMaskSupport.field_c) {
             RankingsRequest.a(15, 15, 124);
           }
           TeamManagementScreen.e(param0 ^ 122);
@@ -429,7 +429,7 @@ class UiLayoutNode extends iv {
             var7Lifetime6 = "";
             if (NodeHashTableIterator.field_b == 0) {
               if (PlayerContextMenu.field_i == null &&
-                uk.field_d) {
+                SharedScrollbarState.field_d) {
                 var7Lifetime6 = "[" + ButtonMenuScreen.field_z + "] ";
               }
               if (PlayerContextMenu.field_i != null) {

@@ -74,10 +74,10 @@ final class CheckboxPainter implements WidgetPainter {
                 stackIn_18_0 = StrongCacheEntry.field_D.length;
               }
               var7 = stackIn_18_0;
-              if (pg.field_a.length < CaptionedContainer.field_E.length) {
+              if (SharedPanelFactory.field_a.length < CaptionedContainer.field_E.length) {
                 stackIn_21_0 = CaptionedContainer.field_E.length;
               } else {
-                stackIn_21_0 = pg.field_a.length;
+                stackIn_21_0 = SharedPanelFactory.field_a.length;
               }
               var8 = stackIn_21_0;
               if (6 <= var3 &&
@@ -91,10 +91,10 @@ final class CheckboxPainter implements WidgetPainter {
               }
               if (var3 >= var7 + 7 &&
                 var3 < var8 + 7 + var7) {
-                if (pg.field_a.length <= var3 - (7 + var7)) {
+                if (SharedPanelFactory.field_a.length <= var3 - (7 + var7)) {
                   stackIn_33_0 = "";
                 } else {
-                  stackIn_33_0 = pg.field_a[-7 + (var3 - var7)];
+                  stackIn_33_0 = SharedPanelFactory.field_a[-7 + (var3 - var7)];
                 }
                 var6 = stackIn_33_0;
               }
@@ -109,23 +109,23 @@ final class CheckboxPainter implements WidgetPainter {
             var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (DirectByteStorage.field_k.selectedIndex == var4) {
-                stackIn_44_0 = qn.field_a;
+                stackIn_44_0 = SharedChatLayoutSupport.field_a;
               } else {
                 stackIn_44_0 = LinkTextPainter.field_e;
               }
               var9 = stackIn_44_0;
               var1_int = var1_int + ThreadSleepSupport.field_a;
               if (var9 != null) {
-                var9.drawPanel(-DiskCacheWorker.field_d + var8Lifetime1, PlayerModelPreview.field_j + (pr.field_d << 1), var1_int, var7Lifetime1 + (DiskCacheWorker.field_d << 1), param0 ^ 3);
+                var9.drawPanel(-DiskCacheWorker.field_d + var8Lifetime1, PlayerModelPreview.field_j + (LeagueRatingRequirements.field_d << 1), var1_int, var7Lifetime1 + (DiskCacheWorker.field_d << 1), param0 ^ 3);
               }
-              var1_int = var1_int + pr.field_d;
+              var1_int = var1_int + LeagueRatingRequirements.field_d;
             }
             if (var4 < 0) {
-              MeshObject.field_f.a(var6, var8Lifetime1, jl.field_d + var1_int, var5, -1);
+              MeshObject.field_f.a(var6, var8Lifetime1, InputLayoutState.field_d + var1_int, var5, -1);
               var1_int = var1_int + PlayArea.field_c;
             } else {
               MainMenuScreen.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
-              var1_int = var1_int + (PlayerModelPreview.field_j + ThreadSleepSupport.field_a + pr.field_d);
+              var1_int = var1_int + (PlayerModelPreview.field_j + ThreadSleepSupport.field_a + LeagueRatingRequirements.field_d);
             }
           }
           return;
@@ -159,25 +159,25 @@ final class CheckboxPainter implements WidgetPainter {
         }
         if (FadingSoundPlayer.field_q) {
           AccountNameCheckState.a(0, 0);
-          var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, ih.field_c, (byte) -110);
+          var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, FormationMaskSupport.field_c, (byte) -110);
           if (var1 != -1) {
             DelayedServerPacket.a(100, 9863, var1);
             return;
           }
-          if (!CachedListingRow.loadGoalScenery(63, ih.field_c, RankingsScreen.field_C)) {
+          if (!CachedListingRow.loadGoalScenery(63, FormationMaskSupport.field_c, RankingsScreen.field_C)) {
             DelayedServerPacket.a(2, 9863, 1);
             return;
           }
           AccountNameCheckState.a(0, 1);
-          if (0 != ih.field_c) {
-            if (ih.field_c == 1) {
+          if (0 != FormationMaskSupport.field_c) {
+            if (FormationMaskSupport.field_c == 1) {
               var1Lifetime1 = ReceivedAuctionItem.b(123);
               if (var1Lifetime1 != -1) {
                 DelayedServerPacket.a(100, 9863, var1Lifetime1);
                 return;
               }
             } else {
-              if (ih.field_c == 2) {
+              if (FormationMaskSupport.field_c == 2) {
                 var1Lifetime1 = StreetSceneryLoader.loadStreetScenery(-124);
                 if (var1Lifetime1 != -1) {
                   DelayedServerPacket.a(100, 9863, var1Lifetime1);
@@ -208,13 +208,13 @@ final class CheckboxPainter implements WidgetPainter {
             }
           }
           AccountNameCheckState.a(0, 3);
-          var1Lifetime3 = GrowableIntList.a(5464, ih.field_c, RankingsScreen.field_C);
+          var1Lifetime3 = GrowableIntList.a(5464, FormationMaskSupport.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.a(100, 9863, var1Lifetime3);
             return;
           }
           AccountNameCheckState.a(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(FormationMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
@@ -244,7 +244,7 @@ final class CheckboxPainter implements WidgetPainter {
             DateInputValidator.field_e = null;
             DualLinkNode.field_h = null;
             ModalPanel.field_G = null;
-            hq.field_e = null;
+            ClientInteractionSupport.field_e = null;
             ClientPacketFlushSupport.field_f = null;
             AccountNameCheckState.a(0, 6);
             if (0 == RankingsScreen.field_C) {
@@ -264,22 +264,22 @@ final class CheckboxPainter implements WidgetPainter {
               UiInputRoutingSupport.buildSliderTrackSprites(true, 128);
             }
             if (RankingsScreen.field_C == 3) {
-              mj.a((byte) -39, 128);
+              PitchAppearanceSupport.buildPitchSprites((byte) -39, 128);
             }
             AccountNameCheckState.a(0, 8);
-            vb.a(true);
+            PitchDecorationSupport.buildPitchDecorations(true);
             AccountNameCheckState.a(0, 9);
-            if (0 == ih.field_c) {
+            if (0 == FormationMaskSupport.field_c) {
               MusicPatchPcmStream.b(1);
             }
-            if (ih.field_c == 1) {
+            if (FormationMaskSupport.field_c == 1) {
               GameResourceLoader.a((byte) -48);
             }
-            if (ih.field_c == 2) {
+            if (FormationMaskSupport.field_c == 2) {
               MeshObject.a(11383);
             }
             AccountNameCheckState.a(0, 10);
-            vp.a(-4121, RankingsScreen.field_C);
+            MatchTextInputOverlay.setRenderDetail(-4121, RankingsScreen.field_C);
             ArchiveIndex.field_t = false;
           }
           FadingSoundPlayer.field_q = false;
@@ -349,15 +349,15 @@ final class CheckboxPainter implements WidgetPainter {
             var4_int++;
           }
           if (0 < var4_int) {
-            or.field_d.b(53, (byte) 118);
-            or.field_d.writeShort(-1207444472, 2 + 5 * var4_int);
-            or.field_d.writeByte(121, var4_int);
+            FootballerAiOverlaySupport.field_d.b(53, (byte) 118);
+            FootballerAiOverlaySupport.field_d.writeShort(-1207444472, 2 + 5 * var4_int);
+            FootballerAiOverlaySupport.field_d.writeByte(121, var4_int);
             var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.removeFirst((byte) 126));
             while (var9 != null) {
-              var9.writeToPacket(or.field_d, (byte) 95);
+              var9.writeToPacket(FootballerAiOverlaySupport.field_d, (byte) 95);
               var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.removeFirst((byte) 127));
             }
-            or.field_d.writeByte(105, param3);
+            FootballerAiOverlaySupport.field_d.writeByte(105, param3);
             PlayerContextMenu.field_f = true;
             BeveledTextPainter.field_t = 500;
             return;

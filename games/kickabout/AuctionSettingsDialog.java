@@ -43,12 +43,12 @@ final class AuctionSettingsDialog extends MessageDialog {
                 AuctionBidDialog.field_L > 0) {
                 var3 = var3 | 4;
               }
-              or.field_d.b(51, (byte) 127);
-              or.field_d.writeByte(105, ArchiveNetworkClient.field_m);
-              or.field_d.writeByte(126, ee.field_d);
-              or.field_d.writeByte(109, var3);
-              or.field_d.writeInt(-95, LocalizedTextLoader.field_f);
-              stackIn_27_0 = or.field_d;
+              FootballerAiOverlaySupport.field_d.b(51, (byte) 127);
+              FootballerAiOverlaySupport.field_d.writeByte(105, ArchiveNetworkClient.field_m);
+              FootballerAiOverlaySupport.field_d.writeByte(126, GameMediaSupport.field_d);
+              FootballerAiOverlaySupport.field_d.writeByte(109, var3);
+              FootballerAiOverlaySupport.field_d.writeInt(-95, LocalizedTextLoader.field_f);
+              stackIn_27_0 = FootballerAiOverlaySupport.field_d;
               stackIn_27_1 = -75;
               if (!ServerTextTemplate.field_e) {
                 stackIn_28_2 = 0;
@@ -229,15 +229,15 @@ final class AuctionSettingsDialog extends MessageDialog {
         var9 = 75 + var8 + 6;
         SoftwareRasterizer.fillRoundedRectangleBlended(-47 + var4, var6, 90, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
-        un.field_d.d(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
+        ByteArrayPool.field_d.d(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
         IsSixCommand.field_C.d(LocalizedTextLoader.formatCurrencyAmount(QuickChatPhraseCache.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
-        un.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
+        ByteArrayPool.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
         IsSixCommand.field_C.d(LocalizedTextLoader.formatCurrencyAmount(IndexedSpriteState.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
         SoftwareRasterizer.fillRoundedRectangleBlended(var5, var6, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(var7, var8, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(var4, var9, 260, 120, 10, 65793, 128);
-        un.field_d.d(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
-        un.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
+        ByteArrayPool.field_d.d(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
+        ByteArrayPool.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
         if (StrongCacheEntry.g(2368)) {
           stackIn_8_0 = (MonotonicClock.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
         } else {
@@ -249,13 +249,13 @@ final class AuctionSettingsDialog extends MessageDialog {
         SoftwareRasterizer.fillRectangleAlpha(ChatInputState.field_b.field_s + 85, ChatInputState.field_b.field_J + 6, UnreadMessagesScreen.field_A.field_q + 4, -4 + UnreadMessagesScreen.field_A.field_mb, 7829367, 128);
         IsSixCommand.field_C.a('£', 91 + ChatInputState.field_b.field_s, ChatInputState.field_b.field_J + 19, 16777215);
         ChatInputState.field_b.draw(110, var10 != 0 & this.field_F);
-        oa.field_b.field_J = 5 + (var8 - 13);
-        oa.field_b.field_s = var4 + 10;
-        SoftwareRasterizer.fillRectangleAlpha(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
+        OverlayLayerSupport.field_b.field_J = 5 + (var8 - 13);
+        OverlayLayerSupport.field_b.field_s = var4 + 10;
+        SoftwareRasterizer.fillRectangleAlpha(OverlayLayerSupport.field_b.field_s + 85, 40 + OverlayLayerSupport.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
         if (ServerTextTemplate.field_e) {
-          IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
+          IsSixCommand.field_C.a('£', OverlayLayerSupport.field_b.field_s + 91, 53 + OverlayLayerSupport.field_b.field_J, 16777215);
         }
-        oa.field_b.draw(94, var10 != 0 & this.field_I);
+        OverlayLayerSupport.field_b.draw(94, var10 != 0 & this.field_I);
         DisplayModeSupport.field_a.a(false, (byte) 46);
         if (LocalizedTextLoader.field_f < QuickChatPhraseCache.field_c) {
           IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
@@ -282,15 +282,15 @@ final class AuctionSettingsDialog extends MessageDialog {
             }
           }
         } else {
-          IsSixCommand.field_C.d(um.field_f, var4 + 130, var8 + 67, 16711680, -1);
+          IsSixCommand.field_C.d(MachineTokenStorageSupport.field_f, var4 + 130, var8 + 67, 16711680, -1);
         }
         for (var11 = 0; var11 < 5; var11++) {
           FriendRemovalSupport.field_d[var11].setBounds(true, FriendRemovalSupport.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), FriendRemovalSupport.field_d[var11].field_mb);
           if (FriendRemovalSupport.field_d[var11].field_gb) {
             SoftwareRasterizer.fillRoundedRectangleBlended(FriendRemovalSupport.field_d[var11].field_F, FriendRemovalSupport.field_d[var11].field_T, FriendRemovalSupport.field_d[var11].field_q, FriendRemovalSupport.field_d[var11].field_mb - 2, 6, 16777215, 140);
           }
-          if (ee.field_d == var11) {
-            su.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
+          if (GameMediaSupport.field_d == var11) {
+            WidgetStyleFactory.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
           }
           FriendRemovalSupport.field_d[var11].draw(112, false);
         }
@@ -319,7 +319,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         ArchiveNetworkClient.field_m = param0;
         ServerTextTemplate.field_e = true;
         ClubStateFactory.field_c = GameLoopApplet.field_E.squad[ArchiveNetworkClient.field_m];
-        QuickChatPhraseCache.field_c = su.a((byte) -107, ClubStateFactory.field_c);
+        QuickChatPhraseCache.field_c = WidgetStyleFactory.getReducedPlayerValue((byte) -107, ClubStateFactory.field_c);
         IndexedSpriteState.field_g = AuctionPriceLimits.maximumAuctionPrice(ClubStateFactory.field_c, -31);
         LocalizedTextLoader.field_f = QuickChatPhraseCache.field_c;
         BlackFadeScreen.field_l = 8;
@@ -347,13 +347,13 @@ final class AuctionSettingsDialog extends MessageDialog {
         ChatInputState.field_b.field_mb = 24;
         ChatInputState.field_b.field_q = 240;
         ChatInputState.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
-        oa.field_b = new UiLayoutNode();
-        oa.field_b.field_B = 40;
-        oa.field_b.field_mb = 60;
-        oa.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
-        oa.field_b.field_A = 1;
-        oa.field_b.field_q = 240;
-        oa.field_b.field_y = 16777215;
+        OverlayLayerSupport.field_b = new UiLayoutNode();
+        OverlayLayerSupport.field_b.field_B = 40;
+        OverlayLayerSupport.field_b.field_mb = 60;
+        OverlayLayerSupport.field_b.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
+        OverlayLayerSupport.field_b.field_A = 1;
+        OverlayLayerSupport.field_b.field_q = 240;
+        OverlayLayerSupport.field_b.field_y = 16777215;
         UiLayoutNode var3 = new UiLayoutNode();
         var3.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
         var3.field_p = 1;
@@ -372,26 +372,26 @@ final class AuctionSettingsDialog extends MessageDialog {
         ChatInputState.field_b.addChild((byte) -113, (UiLayoutNode) (UnreadMessagesScreen.field_A));
         StatChoiceDialog.field_F = new TextFieldNode(0L, var3, var10, var5, 20);
         StatChoiceDialog.field_F.field_R = null;
-        StatChoiceDialog.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
-        oa.field_b.addChild((byte) -121, (UiLayoutNode) (StatChoiceDialog.field_F));
-        DisplayModeSupport.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), un.field_d);
+        StatChoiceDialog.field_F.a(-630, 5 + (-33 + (OverlayLayerSupport.field_b.field_q >> 1)), 8 + (OverlayLayerSupport.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
+        OverlayLayerSupport.field_b.addChild((byte) -121, (UiLayoutNode) (StatChoiceDialog.field_F));
+        DisplayModeSupport.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), ByteArrayPool.field_d);
         DisplayModeSupport.field_a.field_J = 5;
-        DisplayModeSupport.field_a.field_s = 5 + (oa.field_b.field_q - DisplayModeSupport.field_a.field_q >> 1);
+        DisplayModeSupport.field_a.field_s = 5 + (OverlayLayerSupport.field_b.field_q - DisplayModeSupport.field_a.field_q >> 1);
         AuctionBidDialog.field_I = SoftwareDrawingSupport.createButtonNode(false, 0);
         AccountMessagePanel.field_L = SoftwareDrawingSupport.createButtonNode(true, 0);
-        hq.field_c = SoftwareDrawingSupport.createButtonNode(false, 0);
+        ClientInteractionSupport.field_c = SoftwareDrawingSupport.createButtonNode(false, 0);
         Trinket.field_a = SoftwareDrawingSupport.createButtonNode(true, 0);
         AccountMessagePanel.field_L.field_s = (ChatInputState.field_b.field_q >> 1) + ((AccountMessagePanel.field_L.field_q >> 1) + AccountMessagePanel.field_L.field_q);
-        Trinket.field_a.field_s = Trinket.field_a.field_q - (-(Trinket.field_a.field_q >> 1) - (oa.field_b.field_q >> 1));
+        Trinket.field_a.field_s = Trinket.field_a.field_q - (-(Trinket.field_a.field_q >> 1) - (OverlayLayerSupport.field_b.field_q >> 1));
         AuctionBidDialog.field_I.field_s = -(AuctionBidDialog.field_I.field_q >> 1) + (-(AuctionBidDialog.field_I.field_q * 2) + (ChatInputState.field_b.field_q >> 1));
-        hq.field_c.field_s = (oa.field_b.field_q >> 1) + (-(2 * hq.field_c.field_q) - (hq.field_c.field_q >> 1));
+        ClientInteractionSupport.field_c.field_s = (OverlayLayerSupport.field_b.field_q >> 1) + (-(2 * ClientInteractionSupport.field_c.field_q) - (ClientInteractionSupport.field_c.field_q >> 1));
         Trinket.field_a.field_J = 35;
-        hq.field_c.field_J = 35;
+        ClientInteractionSupport.field_c.field_J = 35;
         ChatInputState.field_b.addChild((byte) -108, AuctionBidDialog.field_I);
         ChatInputState.field_b.addChild((byte) -125, AccountMessagePanel.field_L);
-        oa.field_b.addChild((byte) -117, hq.field_c);
-        oa.field_b.addChild((byte) -115, Trinket.field_a);
-        oa.field_b.addChild((byte) -113, (UiLayoutNode) (DisplayModeSupport.field_a));
+        OverlayLayerSupport.field_b.addChild((byte) -117, ClientInteractionSupport.field_c);
+        OverlayLayerSupport.field_b.addChild((byte) -115, Trinket.field_a);
+        OverlayLayerSupport.field_b.addChild((byte) -113, (UiLayoutNode) (DisplayModeSupport.field_a));
         UnreadMessagesScreen.field_A.setText(Integer.toString(LocalizedTextLoader.field_f), -23174);
         StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
         this.field_F = true;
@@ -466,12 +466,12 @@ final class AuctionSettingsDialog extends MessageDialog {
           FriendRemovalSupport.field_d[var3].updateInput(0, param1);
         }
         ChatInputState.field_b.updateInput(0, param1);
-        oa.field_b.updateInput(0, param1);
+        OverlayLayerSupport.field_b.updateInput(0, param1);
         UnreadMessagesScreen.field_A.updatePointer(param0 + 11567);
         StatChoiceDialog.field_F.updatePointer(11570);
         for (var3 = 0; var3 < 5; var3++) {
           if (FriendRemovalSupport.field_d[var3].field_gb) {
-            if (var3 == ee.field_d) {
+            if (var3 == GameMediaSupport.field_d) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
             } else {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
@@ -508,7 +508,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ListRow.field_zb);
           }
         }
-        if (hq.field_c.field_Q) {
+        if (ClientInteractionSupport.field_c.field_Q) {
           if (ServerTextTemplate.field_e) {
             if (QuickChatPhraseCache.field_c != AuctionBidDialog.field_L) {
               if (LocalizedTextLoader.field_f == AuctionBidDialog.field_L) {
@@ -538,7 +538,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         stackIn_52_0 = Trinket.field_a;
         stackIn_53_1 = (IndexedSpriteState.field_g <= AuctionBidDialog.field_L) ? false : true;
         stackIn_52_0.field_lb = stackIn_53_1 & ServerTextTemplate.field_e;
-        stackIn_55_0 = hq.field_c;
+        stackIn_55_0 = ClientInteractionSupport.field_c;
         stackIn_56_1 = (AuctionBidDialog.field_L <= LocalizedTextLoader.field_f) ? false : true;
         stackIn_55_0.field_lb = stackIn_56_1 & ServerTextTemplate.field_e;
         if (DisplayModeSupport.field_a.field_gb) {
@@ -629,7 +629,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             var3 = 1;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (1 == hq.field_c.field_qb) {
+          if (1 == ClientInteractionSupport.field_c.field_qb) {
             if (AlternateKeyedLoginCredentials.field_o % var5 == 0) {
               if (LocalizedTextLoader.field_f >= AuctionBidDialog.field_L) {
                 var3 = 1;
@@ -696,7 +696,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         }
         for (var6Lifetime1 = 0; FriendRemovalSupport.field_d.length > var6Lifetime1; var6Lifetime1++) {
           if (FriendRemovalSupport.field_d[var6Lifetime1].field_sb == 1) {
-            ee.field_d = var6Lifetime1;
+            GameMediaSupport.field_d = var6Lifetime1;
             ShopPlayerSlot.c(61, 14);
             this.field_I = false;
             this.field_F = false;

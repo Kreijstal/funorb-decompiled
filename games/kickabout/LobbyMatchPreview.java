@@ -46,8 +46,8 @@ final class LobbyMatchPreview {
           SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
           PacketBuffer.a(-47, StreetSceneryLoader.field_j);
           SoftwareRasterizer.clearFramebuffer();
-          un.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
-          un.field_d.a(MarkerSliderPainter.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
+          ByteArrayPool.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
+          ByteArrayPool.field_d.a(MarkerSliderPainter.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
           StreetSceneryLoader.field_j.b(var2, var3, 96);
         }
@@ -88,12 +88,12 @@ final class LobbyMatchPreview {
           TeamManagementScreen.e(119);
         } else {
           if (0 > this.field_e.field_f) {
-            un.field_d.a(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+            ByteArrayPool.field_d.a(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_e.field_f < 4) {
-              un.field_d.a(TickClock.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+              ByteArrayPool.field_d.a(TickClock.field_i, this.field_l + 2, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             } else {
-              un.field_d.a(IterableDualLinkDeque.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
+              ByteArrayPool.field_d.a(IterableDualLinkDeque.field_e, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
             }
           }
         }
@@ -177,8 +177,8 @@ final class LobbyMatchPreview {
             if (QuickChatPhraseCache.field_d) {
               return;
             }
-            or.field_d.b(86, (byte) -69);
-            or.field_d.writeByte(121, this.field_k);
+            FootballerAiOverlaySupport.field_d.b(86, (byte) -69);
+            FootballerAiOverlaySupport.field_d.writeByte(121, this.field_k);
             QuickChatPhraseCache.field_d = true;
           }
           return;

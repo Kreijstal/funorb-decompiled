@@ -73,13 +73,13 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final void a(int param0, byte param1, int param2) {
         super.a(param0, (byte) -128, param2);
-        fj.field_b.d(this.field_U, (this.field_n >> 1) + param0, param2 + 103, 16777215, -1);
+        ConsoleLexer.field_b.d(this.field_U, (this.field_n >> 1) + param0, param2 + 103, 16777215, -1);
         int var4 = 80 / ((-55 - param1) / 45);
         if (this.field_S == null) {
           return;
         }
         SoftwareRasterizer.drawHorizontalLine(param0 + 20, -7 + (param2 + 120), 260, 8421504);
-        fj.field_b.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
+        ConsoleLexer.field_b.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, ConsoleLexer.field_b.field_G);
     }
 
     final static void a(int param0, ReceivedAuctionItem param1) {
@@ -97,7 +97,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         try {
           this.field_S = param1;
           if (this.field_S != null) {
-            var3_int = fj.field_b.paragraphHeight(this.field_S, 260, fj.field_b.field_G);
+            var3_int = ConsoleLexer.field_b.paragraphHeight(this.field_S, 260, ConsoleLexer.field_b.field_G);
             this.a((byte) 110, var3_int + 150, 300);
           }
           this.field_Y = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);

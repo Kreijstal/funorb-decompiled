@@ -18,10 +18,10 @@ final class VertexNormal {
             String var7 = (String) null;
             VertexNormal.a((String) null, 123, -38, (String) null);
           }
-          pr.field_d = param3;
+          LeagueRatingRequirements.field_d = param3;
           DiskCacheWorker.field_d = param4;
           ThreadSleepSupport.field_a = param1;
-          qn.field_a = param2;
+          SharedChatLayoutSupport.field_a = param2;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -29,11 +29,11 @@ final class VertexNormal {
 
     final static ButtonMenuScreen getMenuScreen(int param0, int param1) {
         if (param0 < -43) {
-          return un.field_b[param1];
+          return ByteArrayPool.field_b[param1];
         }
         NineSlicePanelPainter var3 = (NineSlicePanelPainter) null;
         VertexNormal.a((NineSlicePanelPainter) null, 59, (NineSlicePanelPainter) null, 65, 60, 35);
-        return un.field_b[param1];
+        return ByteArrayPool.field_b[param1];
     }
 
     final static String a(String param0, int param1, int param2, String param3) {
@@ -70,7 +70,7 @@ final class VertexNormal {
           var7.c((byte) -109);
           var7.unlinkSecondary(66);
           StripedProgressBar.field_y = StripedProgressBar.field_y - 1;
-          var5 = or.field_d;
+          var5 = FootballerAiOverlaySupport.field_d;
           var5.b(param2, (byte) 110);
           var5.field_n = var5.field_n + 1;
           var6 = var5.field_n;

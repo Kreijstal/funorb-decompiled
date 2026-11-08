@@ -172,9 +172,9 @@ final class VerticalScrollbar extends UiLayoutNode {
           WhirlpoolHasher.field_m.addChild((byte) -127, ConsoleValue.field_a);
         }
         WhirlpoolHasher.field_m.addChild((byte) -114, TickClock.field_d);
-        tn.field_d = new SocialTabsPanel(ButtonMenuScreen.field_z, WhirlpoolHasher.field_m);
+        SocialUiState.field_d = new SocialTabsPanel(ButtonMenuScreen.field_z, WhirlpoolHasher.field_m);
         UiKeyRoutingSupport.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
-        UiKeyRoutingSupport.field_c.addChild((byte) -127, (UiLayoutNode) (tn.field_d.tabs));
+        UiKeyRoutingSupport.field_c.addChild((byte) -127, (UiLayoutNode) (SocialUiState.field_d.tabs));
         UiKeyRoutingSupport.field_c.addChild((byte) -116, MouseWheelInput.field_a);
         CipherPacketBuffer.c(false);
     }
@@ -530,7 +530,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         var25 = null;
         var11 = Kickabout.field_G;
         try {
-          var1 = un.field_e;
+          var1 = ByteArrayPool.field_e;
           var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -118);
           if (param0 != 14) {
             field_zb = (int[][]) null;
@@ -709,7 +709,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     return;
                   }
                   if (var2 == 22) {
-                    mi.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
+                    ConsoleArgumentSupport.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
                     MusicPatchNode.field_o = ((PacketBuffer) ((Object) var1)).readVarInt(121);
                     return;
                   }

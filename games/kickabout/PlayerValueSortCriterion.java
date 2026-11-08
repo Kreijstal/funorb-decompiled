@@ -103,7 +103,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
         int var17Lifetime1;
         var19 = Kickabout.field_G;
         try {
-          var4 = un.field_d;
+          var4 = ByteArrayPool.field_d;
           var23 = new int[2];
           var20 = var23;
           var5 = var20;
@@ -133,13 +133,13 @@ final class PlayerValueSortCriterion extends SortCriterion {
           var7[var8Lifetime1] = 473 - var24[var8Lifetime1];
           var7[-var8Lifetime1 + 1] = -2 + var25[var8Lifetime1] - var6[-var8Lifetime1 + 1];
           for (var9Lifetime1 = 0; 2 > var9Lifetime1; var9Lifetime1++) {
-            SoftwareRasterizer.fillRoundedRectangleBlended(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
-            SoftwareRasterizer.fillRoundedRectangleBlended(643 - (et.field_c + VertexNormal.field_c + 2), var25[var9Lifetime1], VertexNormal.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(-ThumbnailStateFactory.field_c + 644, var25[var9Lifetime1], ThumbnailStateFactory.field_c, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(643 - (ThumbnailStateFactory.field_c + VertexNormal.field_c + 2), var25[var9Lifetime1], VertexNormal.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
             var10 = AsciiCharacterSupport.field_c.field_X.score[var9Lifetime1];
             if (var10 > 99) {
               var10 = 99;
             }
-            ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-VertexNormal.field_c + 644 - et.field_c + (VertexNormal.field_c >> 1)) + 1, (var24[var9Lifetime1] + VertexNormal.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
+            ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-VertexNormal.field_c + 644 - ThumbnailStateFactory.field_c + (VertexNormal.field_c >> 1)) + 1, (var24[var9Lifetime1] + VertexNormal.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
             for (var12 = 0; AsciiCharacterSupport.field_c.playerCount > var12; var12++) {
               if (~var9Lifetime1 == ~AsciiCharacterSupport.field_c.field_g[var12].team) {
@@ -147,7 +147,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
                 var14 = param0[var12];
                 var15 = SingleChildContainer.a(true, var14);
                 if (JaggrabDownloader.field_c &&
-                  644 - et.field_c < ArrayWidgetContainer.field_x &&
+                  644 - ThumbnailStateFactory.field_c < ArrayWidgetContainer.field_x &&
                   ArrayWidgetContainer.field_x < 640 &&
                   TutorialCaptionSupport.field_j > var13 - VertexNormal.field_c &&
                   TutorialCaptionSupport.field_j < var13) {
@@ -155,17 +155,17 @@ final class PlayerValueSortCriterion extends SortCriterion {
                 }
                 stackIn_29_0 = (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
-                ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
+                ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12], -ThumbnailStateFactory.field_c + 644 + 10, var13, var16, -1);
                 if (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) {
                   if (AsciiCharacterSupport.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
-                    AuctionListing.a(-VertexNormal.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
-                    SoftwareRasterizer.fillRoundedRectangleBlended(642 - (et.field_c + (VertexNormal.field_c + var17)), var13 - VertexNormal.field_c + 3, var17 + 4, VertexNormal.field_c - 2, 6, 65793, param1);
-                    ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-et.field_c + 644 - VertexNormal.field_c - (2 + var17)), var13, 16777215, -1);
+                    AuctionListing.a(-VertexNormal.field_c + (-ThumbnailStateFactory.field_c + 642) - 1, -22914, 0, 480, 0);
+                    SoftwareRasterizer.fillRoundedRectangleBlended(642 - (ThumbnailStateFactory.field_c + (VertexNormal.field_c + var17)), var13 - VertexNormal.field_c + 3, var17 + 4, VertexNormal.field_c - 2, 6, 65793, param1);
+                    ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-ThumbnailStateFactory.field_c + 644 - VertexNormal.field_c - (2 + var17)), var13, 16777215, -1);
                     TeamManagementScreen.e(119);
                   }
                 } else {
-                  var17 = 644 + (-et.field_c + 10);
+                  var17 = 644 + (-ThumbnailStateFactory.field_c + 10);
                   var18 = ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12]);
                   SoftwareRasterizer.drawLine(var17, -2 + (var13 - TextPromptDialog.field_yb), var18 + var17, var13 - 1, 13382451);
                   SoftwareRasterizer.drawLine(var17, -1 + var13, var17 + var18, -2 - TextPromptDialog.field_yb + var13, 13382451);

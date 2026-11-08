@@ -23,7 +23,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         CipherPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = Kickabout.field_G;
-        var8 = un.field_e;
+        var8 = ByteArrayPool.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) -112);
         stackIn_3_0 = ((128 & var3) != 0);
@@ -48,18 +48,18 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
-          vp.field_e = var8.readString(42);
+          MatchTextInputOverlay.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
             WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
-            vp.field_e = var8.readString(42);
+            MatchTextInputOverlay.field_e = var8.readString(42);
           } else {
             WorldSpriteDecoration.field_f = 0;
-            vp.field_e = null;
+            MatchTextInputOverlay.field_e = null;
           }
         }
         if (!param1) {
-          ee.field_a = gw.a(80, (byte) -96, var8);
+          GameMediaSupport.field_a = HuffmanTextSupport.readHuffmanString(80, (byte) -96, var8);
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
@@ -70,7 +70,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         var5 = var8.readUnsignedShort((byte) 81);
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
-          ee.field_a = var9.getDisplayText((byte) -98);
+          GameMediaSupport.field_a = var9.getDisplayText((byte) -98);
           if (LookupRecordUpdate.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
@@ -81,7 +81,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
-          ee.field_a = null;
+          GameMediaSupport.field_a = null;
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
@@ -143,7 +143,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        po.a(-27, param1);
+        SocialRowOrderSupport.updateQuickChatKeysHelp(-27, param1);
         DraggableWidget.a(param0, (byte) -26, param1, param3);
         if (param2 != 14686) {
           field_g = (int[]) null;
@@ -210,7 +210,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         CipherPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = Kickabout.field_G;
-        var8 = un.field_e;
+        var8 = ByteArrayPool.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) -112);
         stackIn_3_0 = ((128 & var3) != 0);
@@ -235,18 +235,18 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
-          vp.field_e = var8.readString(42);
+          MatchTextInputOverlay.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
             WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
-            vp.field_e = var8.readString(42);
+            MatchTextInputOverlay.field_e = var8.readString(42);
           } else {
             WorldSpriteDecoration.field_f = 0;
-            vp.field_e = null;
+            MatchTextInputOverlay.field_e = null;
           }
         }
         if (!param1) {
-          ee.field_a = gw.a(80, (byte) -96, var8);
+          GameMediaSupport.field_a = HuffmanTextSupport.readHuffmanString(80, (byte) -96, var8);
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
@@ -257,7 +257,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         var5 = var8.readUnsignedShort((byte) 81);
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
-          ee.field_a = var9.getDisplayText((byte) -98);
+          GameMediaSupport.field_a = var9.getDisplayText((byte) -98);
           if (LookupRecordUpdate.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
@@ -268,7 +268,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
-          ee.field_a = null;
+          GameMediaSupport.field_a = null;
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);

@@ -180,9 +180,9 @@ final class NanoTickClock extends TickClock {
         if (param0 != -59) {
           field_t = (PlayArea[]) null;
         }
-        if (null != um.field_e &&
-          um.field_e.field_A) {
-          var1 = um.field_e.field_B;
+        if (null != MachineTokenStorageSupport.field_e &&
+          MachineTokenStorageSupport.field_e.field_A) {
+          var1 = MachineTokenStorageSupport.field_e.field_B;
         } else {
           if (null != SortCriterion.field_l) {
             var1 = SortCriterion.field_l.f(123);
@@ -191,8 +191,8 @@ final class NanoTickClock extends TickClock {
         if (-1 == var1) {
           return;
         }
-        or.field_d.b(88, (byte) -46);
-        or.field_d.writeByte(127, var1);
+        FootballerAiOverlaySupport.field_d.b(88, (byte) -46);
+        FootballerAiOverlaySupport.field_d.writeByte(127, var1);
         QuickChatPhraseCache.field_d = true;
     }
 

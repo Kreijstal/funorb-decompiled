@@ -64,7 +64,7 @@ final class ModalStack extends SingleChildContainer {
           var4_int = param0.getGroupId(param2, -1);
           var5 = -67 % ((-81 - param1) / 38);
           var6 = param0.getFileId((byte) -102, param3, var4_int);
-          stackIn_1_0 = fa.a(var4_int, (byte) -89, var6, param0);
+          stackIn_1_0 = PendingRequestAcknowledgement.loadSpriteSheet(var4_int, (byte) -89, var6, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,14 +130,14 @@ final class ModalStack extends SingleChildContainer {
         try {
           stackIn_4_0 = RotaryDialPainter.field_d.field_Cb;
           stackIn_4_1 = (LineupPositionSupport.field_c * 3 + 6) * param2;
-          stackIn_5_2 = (RotaryDialPainter.field_d.field_Cb == ig.field_f);
+          stackIn_5_2 = (RotaryDialPainter.field_d.field_Cb == MatchHudSupport.field_f);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + LineupPositionSupport.field_c) ? 1 : 0;
           var4 = RotaryDialPainter.field_d.field_yb.field_jb;
           var5 = null;
           if (PitchCoordinateSupport.field_d == 2) {
             TriangleMesh.field_R.field_lb = true;
-            MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
+            MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RegistrationUiSupport.field_d, new String[]{BufferedSocket.field_h});
             RotaryDialPainter.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (SocialPlayerRow) (var4.g(24009));
@@ -237,7 +237,7 @@ final class ModalStack extends SingleChildContainer {
                       var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
-                    var18Lifetime1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var16});
+                    var18Lifetime1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameMediaSupport.field_c, new String[]{var16});
                     var17Lifetime1.field_j.addItem(0, 18, var18Lifetime1);
                   }
                 } else {
@@ -256,16 +256,16 @@ final class ModalStack extends SingleChildContainer {
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
               StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_Eb.field_F, RotaryDialPainter.field_d.field_Eb.field_T, RotaryDialPainter.field_d.field_Eb.field_q, RotaryDialPainter.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
-              fs.field_b = 0;
+              PanelSpriteFactory.field_b = 0;
             }
             if (RotaryDialPainter.field_d.field_zb.field_sb != 0) {
               StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_zb.field_F, RotaryDialPainter.field_d.field_zb.field_T, RotaryDialPainter.field_d.field_zb.field_q, RotaryDialPainter.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
-              fs.field_b = 1;
+              PanelSpriteFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            MarkerSliderPainter.field_f.field_E = uf.field_a;
+            MarkerSliderPainter.field_f.field_E = RegistrationUiSupport.field_a;
             TriangleMesh.field_R.field_lb = false;
             if (PitchCoordinateSupport.field_d == 1) {
               RotaryDialPainter.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;

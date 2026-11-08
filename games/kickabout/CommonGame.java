@@ -2206,7 +2206,7 @@ final class CommonGame {
           }
           var6 = (var4 - this.field_V.positionX) * 3 >> 2;
           var7 = (var5 - this.field_V.positionY) * 3 >> 2;
-          var8 = sg.field_d[this.surface];
+          var8 = ByteArrayPoolState.field_d[this.surface];
           var10 = var8;
           var12_int = 0;
           if (param1 != -72) {
@@ -2381,13 +2381,13 @@ final class CommonGame {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          or.field_d.b(param3, (byte) 77);
-          or.field_d.field_n = or.field_d.field_n + 1;
-          var7_int = or.field_d.field_n;
-          or.field_d.writeLong(param1, -1781890008);
-          or.field_d.writeString(14190, param5);
-          or.field_d.writeByte(118, param2);
-          stackIn_3_0 = or.field_d;
+          FootballerAiOverlaySupport.field_d.b(param3, (byte) 77);
+          FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
+          var7_int = FootballerAiOverlaySupport.field_d.field_n;
+          FootballerAiOverlaySupport.field_d.writeLong(param1, -1781890008);
+          FootballerAiOverlaySupport.field_d.writeString(14190, param5);
+          FootballerAiOverlaySupport.field_d.writeByte(118, param2);
+          stackIn_3_0 = FootballerAiOverlaySupport.field_d;
           stackIn_3_1 = 114;
           if (param4) {
             stackIn_4_2 = 1;
@@ -2398,7 +2398,7 @@ final class CommonGame {
           if (param0 <= 101) {
             field_j = false;
           }
-          or.field_d.backpatchByteLength(62, or.field_d.field_n - var7_int);
+          FootballerAiOverlaySupport.field_d.backpatchByteLength(62, FootballerAiOverlaySupport.field_d.field_n - var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2681,7 +2681,7 @@ final class CommonGame {
                       if (var4 != 0) {
                         var6_ref = this.field_b[var3_intLifetime1][-1 + var4];
                       } else {
-                        var6_ref = mv.b(false);
+                        var6_ref = DefaultPlayerFactory.createDefaultPlayer(false);
                       }
                       this.field_P[var3_intLifetime1][var4] = new FootballerAgent();
                       this.field_P[var3_intLifetime1][var4].applyPlayerStats(var5 != 0, var6_ref, 3);

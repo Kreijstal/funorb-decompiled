@@ -107,7 +107,7 @@ final class AnimationPlayer {
         try {
           SplashScreen.field_k.resetTiming(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            mi.field_b[var1_int] = 0L;
+            ConsoleArgumentSupport.field_b[var1_int] = 0L;
           }
           if (param0 <= 40) {
             AnimationPlayer.a((byte) 120);

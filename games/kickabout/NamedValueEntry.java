@@ -85,7 +85,7 @@ final class NamedValueEntry extends IntrusiveNode {
             var4.field_Kb = null;
           }
           DelayedServerPacket.field_h = param0;
-          var5 = or.field_d;
+          var5 = FootballerAiOverlaySupport.field_d;
           var5.b(param2, (byte) -61);
           var5.writeByte(107, 3);
           var5.writeByte(118, 11);
@@ -181,7 +181,7 @@ final class NamedValueEntry extends IntrusiveNode {
             stackIn_26_0[stackIn_26_1] = stackIn_27_2;
             var6[1] = 640 - var14[0];
             for (var7 = 0; var7 < 2; var7++) {
-              stackIn_31_0 = un.field_d;
+              stackIn_31_0 = ByteArrayPool.field_d;
               if (var7 != 0) {
                 stackIn_32_1 = CommonGame.field_a;
               } else {

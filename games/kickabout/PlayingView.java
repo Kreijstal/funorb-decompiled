@@ -181,7 +181,7 @@ final class PlayingView extends MatchPhaseView {
         int var9;
         var9 = Kickabout.field_G;
         if (!this.field_E) {
-          gs.a(0);
+          SelectionMarkerSupport.a(0);
           this.field_E = true;
         }
         if (40 > this.field_a.field_X.goalCount) {
@@ -389,10 +389,10 @@ final class PlayingView extends MatchPhaseView {
             var7 = InstrumentNoteMask.createMouseEvent(this.field_g, var6, 85, (byte) var5, (byte) var4);
             this.queueInputEvent(false, var7);
             if (this.field_f) {
-              or.field_d.b(71, (byte) 94);
-              or.field_d.writeByte(114, var6);
-              or.field_d.writeByte(111, var4);
-              or.field_d.writeByte(125, var5);
+              FootballerAiOverlaySupport.field_d.b(71, (byte) 94);
+              FootballerAiOverlaySupport.field_d.writeByte(114, var6);
+              FootballerAiOverlaySupport.field_d.writeByte(111, var4);
+              FootballerAiOverlaySupport.field_d.writeByte(125, var5);
             }
             return;
           }
@@ -890,7 +890,7 @@ final class PlayingView extends MatchPhaseView {
           return;
         }
         if (this.field_a.field_X.goalCount > 25) {
-          mj.a(128.0, 60, 448.0, 672.0);
+          PitchAppearanceSupport.setProjectionTarget(128.0, 60, 448.0, 672.0);
           return;
         }
         if (MyKitScreen.field_O) {
@@ -907,7 +907,7 @@ final class PlayingView extends MatchPhaseView {
           var5 = var3.h(1000);
           var6 = var3.directionX * 0;
           var7 = 50 * var3.directionY;
-          mj.a((double)this.field_q, 60, (double)(var6 + var4), (double)(var5 + var7));
+          PitchAppearanceSupport.setProjectionTarget((double)this.field_q, 60, (double)(var6 + var4), (double)(var5 + var7));
         } else {
           var4_ref_ob = (RenderedBall) (this.field_a.field_V);
           var5 = var4_ref_ob.positionX >> 16;
@@ -921,7 +921,7 @@ final class PlayingView extends MatchPhaseView {
           if (340.0 < var17) {
             var11 = 340.0 * var11 / var17;
           }
-          mj.a(var11, 60, (double)((int)var7_double + var5 >> 1), (double)((int)var9 + var6 >> 1));
+          PitchAppearanceSupport.setProjectionTarget(var11, 60, (double)((int)var7_double + var5 >> 1), (double)((int)var9 + var6 >> 1));
         }
         return;
     }
@@ -951,7 +951,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_L = true;
         }
         var4 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 93, this.field_g));
-        var5 = ug.a(0, var4.field_kb >> 16);
+        var5 = SocialListLayoutSupport.worldToScreenX(0, var4.field_kb >> 16);
         var6 = IntKeyLookup.a((byte) -110, var4.field_bb >> 16);
         if (this.field_a.c(this.field_g, -50) &&
           var4.action != 2) {
@@ -960,11 +960,11 @@ final class PlayingView extends MatchPhaseView {
           }
           if (var4.action != 1) {
             PasswordValidator.a(706856675, 128, 256, var2, var3, true);
-            ee.a(653278209, var5, var6);
+            GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           } else {
             var7 = var4.a(var4.actionTime, (byte) -68);
             PasswordValidator.a(706856675, 256, var7, var2, var3, true);
-            ee.a(653278209, var5, var6);
+            GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           }
         } else {
           if (this.field_a.field_l) {
@@ -982,10 +982,10 @@ final class PlayingView extends MatchPhaseView {
             var9 = (var8 << 8) / var7;
             var9 = 3 * var9 >> 2;
             PasswordValidator.a(706856675, 256, var9, var2, var3, false);
-            ee.a(653278209, var5, var6);
+            GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           } else {
             PasswordValidator.a(706856675, 128, 192, var2, var3, false);
-            ee.a(653278209, var5, var6);
+            GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           }
         }
     }
@@ -1158,8 +1158,8 @@ final class PlayingView extends MatchPhaseView {
           MainMenuScreen.a(this.field_h, param1, param0, true);
           ArrayWidgetContainer.a(0, param0, var6_int, this.field_C);
           CachedTextLayout.a(param0, var6_int, 50);
-          ih.a(-3, param0, this.field_h);
-          un.a(param0, this.field_h, 101);
+          FormationMaskSupport.a(-3, param0, this.field_h);
+          ByteArrayPool.setActiveMatch(param0, this.field_h, 101);
           this.field_q = 172;
           stackIn_10_0 = (param0.field_g[var6_int].team == 1);
           FaceNormal.field_c = stackIn_10_0;
@@ -1188,8 +1188,8 @@ final class PlayingView extends MatchPhaseView {
     private final void b(boolean param0) {
         this.queueInputEvent(param0, PlayerInputFactory.createKeyheldEvent(param0, this.field_H, this.field_g));
         if (this.field_f) {
-          or.field_d.b(68, (byte) -65);
-          or.field_d.writeByte(123, this.field_H);
+          FootballerAiOverlaySupport.field_d.b(68, (byte) -65);
+          FootballerAiOverlaySupport.field_d.writeByte(123, this.field_H);
         }
     }
 
@@ -1199,8 +1199,8 @@ final class PlayingView extends MatchPhaseView {
         }
         this.queueInputEvent(false, WelcomeDialog.createKeypressEvent(1, this.field_g, param0));
         if (this.field_f) {
-          or.field_d.b(70, (byte) 99);
-          or.field_d.writeByte(param1 ^ -107, param0);
+          FootballerAiOverlaySupport.field_d.b(70, (byte) 99);
+          FootballerAiOverlaySupport.field_d.writeByte(param1 ^ -107, param0);
         }
     }
 
@@ -1265,7 +1265,7 @@ final class PlayingView extends MatchPhaseView {
           }
         }
         ((RenderedBall) (this.field_a.field_V)).drawShadow(param0 - 13);
-        gs.b(0);
+        SelectionMarkerSupport.drawWorldEntries(0);
         if (param0 != 1) {
           return;
         }
@@ -1283,13 +1283,13 @@ final class PlayingView extends MatchPhaseView {
           for (var3Lifetime1 = 0; this.field_a.playerCount > var3Lifetime1; var3Lifetime1++) {
             if (this.field_a.participantStatus[var3Lifetime1].isActive(3511)) {
               var4_ref_gm = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
-              this.field_C[var3Lifetime1].c(ug.a(0, var4_ref_gm.getRenderedX(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
+              this.field_C[var3Lifetime1].c(SocialListLayoutSupport.worldToScreenX(0, var4_ref_gm.getRenderedX(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
             }
           }
         }
         if (this.field_a.field_X.goalCount < 40 &&
           !MyKitScreen.field_O) {
-          ns.a(3585);
+          NotificationPanelPositionSupport.updateBottomPanelOffset(3585);
           MusicPatch.drawMatchMinimap(16777215);
           if (this.isLocalParticipantActive((byte) 13)) {
             CommonGame.b(false);
@@ -1303,15 +1303,15 @@ final class PlayingView extends MatchPhaseView {
         }
         if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_l) {
-          un.field_d.d(vb.field_f.toUpperCase(), 320, 30, 16777215, -1);
+          ByteArrayPool.field_d.d(PitchDecorationSupport.field_f.toUpperCase(), 320, 30, 16777215, -1);
         }
         if (this.field_a.field_f) {
-          un.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
         }
-        if (gs.field_g) {
+        if (SelectionMarkerSupport.field_g) {
           var2Lifetime2 = 370;
           var3Lifetime2 = -45;
-          SoftwareRasterizer.e(ug.a(0, var2Lifetime2), IntKeyLookup.a((byte) -89, var3Lifetime2), 155 * InstrumentNoteMask.field_i >> 8, 45 * InstrumentNoteMask.field_i >> 8, 16711935);
+          SoftwareRasterizer.e(SocialListLayoutSupport.worldToScreenX(0, var2Lifetime2), IntKeyLookup.a((byte) -89, var3Lifetime2), 155 * InstrumentNoteMask.field_i >> 8, 45 * InstrumentNoteMask.field_i >> 8, 16711935);
           LongPlusOneCommand.a(this.field_a, param0 ^ 72, 0);
           LongPlusOneCommand.a(this.field_a, 48, 1);
         }
@@ -1322,11 +1322,11 @@ final class PlayingView extends MatchPhaseView {
           LoginMethod.computeCameraFocus(this.field_a, (byte) -98);
           if (var3Lifetime3 == 0) {
             for (var4 = 1; var4 < 5; var4++) {
-              or.a(this.field_a, var4, var2Lifetime3, (byte) 99);
+              FootballerAiOverlaySupport.drawFootballerAiOverlay(this.field_a, var4, var2Lifetime3, (byte) 99);
             }
             return;
           }
-          or.a(this.field_a, var3Lifetime3, var2Lifetime3, (byte) 99);
+          FootballerAiOverlaySupport.drawFootballerAiOverlay(this.field_a, var3Lifetime3, var2Lifetime3, (byte) 99);
         }
         return;
     }
@@ -1398,8 +1398,8 @@ final class PlayingView extends MatchPhaseView {
                 this.queueInputEvent(false, GrowableIntList.createCheatEvent(this.field_g, (byte) 8, var5));
               }
               if (this.field_f) {
-                or.field_d.b(76, (byte) 98);
-                or.field_d.writeBytes(0, 8, 1991220144, this.field_t);
+                FootballerAiOverlaySupport.field_d.b(76, (byte) 98);
+                FootballerAiOverlaySupport.field_d.writeBytes(0, 8, 1991220144, this.field_t);
               }
             }
           }
@@ -1430,7 +1430,7 @@ final class PlayingView extends MatchPhaseView {
           return;
         }
         IntTripleCommand.a(this.field_r, -22488);
-        is.a(7249);
+        TextLineLayoutSupport.tickWorldEntries(7249);
         this.l(2115);
         GameKeyHandler.b(40);
         ArchiveIndex.c(88);
@@ -1533,20 +1533,20 @@ final class PlayingView extends MatchPhaseView {
         try {
           if (10 > DateInputValidator.field_d) {
             var3_int = 0;
-            if (oo.field_f) {
+            if (PlatformTaskState.field_f) {
               var3_int = 1;
-              oo.field_f = false;
+              PlatformTaskState.field_f = false;
             }
-            AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, pe.a((byte) 92));
+            AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
           } else {
             if (!TournamentChampionDialog.i(-86)) {
               SoftwareRasterizer.clearFramebuffer();
               ValidationState.a(320, 240, (byte) 122);
-              su.a(27744, 0, 0, param0);
+              WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
             } else {
-              if (vj.field_c == 0) {
+              if (RasterGlowSupport.field_c == 0) {
                 PlayerPortraitCacheEntry.a(false, param1, (byte) 39);
-                su.a(27744, 0, 0, param0);
+                WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
               } else {
                 FormationAgent.a(param0, -14142);
               }

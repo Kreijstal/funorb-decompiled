@@ -12,7 +12,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.fillRoundedRectangleBlended(param2 - 8, param4 - 11, MarkerSliderPainter.field_n, 20, 6, param5, param1);
-        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : QuickChatMenuBuilder.field_a, new String[]{mk.field_b[ClassDescriptorSupport.field_h]});
+        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : QuickChatMenuBuilder.field_a, new String[]{TutorialScenerySupport.field_b[ClassDescriptorSupport.field_h]});
         ConsoleTokenCursor.field_d.a(var6, param2, param4, param0, param3);
     }
 
@@ -266,8 +266,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param1 != 4) {
             field_a = (String) null;
           }
-          is.field_a = param2;
-          WorldSpriteSequence.field_f = new AccountRequestDialog(RankingsRequest.field_l, fj.field_b, param0, AuctionBidDialog.field_G, is.field_a);
+          TextLineLayoutSupport.field_a = param2;
+          WorldSpriteSequence.field_f = new AccountRequestDialog(RankingsRequest.field_l, ConsoleLexer.field_b, param0, AuctionBidDialog.field_G, TextLineLayoutSupport.field_a);
           RankingsRequest.field_l.a(WorldSpriteSequence.field_f, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

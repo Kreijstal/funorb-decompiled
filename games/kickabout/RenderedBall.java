@@ -102,8 +102,8 @@ final class RenderedBall extends BallAgent {
               LobbyPlayerRow.a(128, false, 240, ClientUiUpdateSupport.field_f + var7, var5Lifetime1);
             }
           } else {
-            if (ih.field_c != 0) {
-              stackIn_32_0 = (ih.field_c != 1) ? 2 : 1;
+            if (FormationMaskSupport.field_c != 0) {
+              stackIn_32_0 = (FormationMaskSupport.field_c != 1) ? 2 : 1;
             } else {
               stackIn_32_0 = 0;
             }
@@ -113,13 +113,13 @@ final class RenderedBall extends BallAgent {
             } else {
               var6 = (this.verticalVelocity >> 16) * 32;
             }
-            if (ih.field_c == 0) {
+            if (FormationMaskSupport.field_c == 0) {
               var6 -= 40;
             }
-            if (ih.field_c == 1) {
+            if (FormationMaskSupport.field_c == 1) {
               var6 -= 20;
             }
-            if (ih.field_c == 2) {
+            if (FormationMaskSupport.field_c == 2) {
               var6 -= 40;
             }
             LobbyPlayerRow.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
@@ -343,7 +343,7 @@ final class RenderedBall extends BallAgent {
         try {
           var1_int = -78 % ((param0 + 26) / 53);
           if (null == EmailAvailabilityValidator.field_q) {
-            EmailAvailabilityValidator.field_q = mk.requestAchievementMask(4, 26731);
+            EmailAvailabilityValidator.field_q = TutorialScenerySupport.requestAchievementMask(4, 26731);
           }
           if (!EmailAvailabilityValidator.field_q.complete) {
             return false;
@@ -393,7 +393,7 @@ final class RenderedBall extends BallAgent {
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        SpritePixelSupport.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
+        SpritePixelSupport.a(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {
@@ -489,7 +489,7 @@ final class RenderedBall extends BallAgent {
           var3 = "";
           if (param1.field_c != 2) {
             if (0 == param1.field_c &&
-              uk.field_d) {
+              SharedScrollbarState.field_d) {
               var3 = "[" + ButtonMenuScreen.field_z + "] ";
             }
             if (1 == param1.field_c) {
@@ -651,7 +651,7 @@ final class RenderedBall extends BallAgent {
           return;
         }
         int var2 = this.getRenderedScale(-1);
-        int var3 = ug.a(0, this.getRenderedX(param0 + 14899));
+        int var3 = SocialListLayoutSupport.worldToScreenX(0, this.getRenderedX(param0 + 14899));
         int var4 = IntKeyLookup.a((byte) -107, this.getRenderedY(true));
         if (SocketArchiveNetworkClient.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;

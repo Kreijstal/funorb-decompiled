@@ -1,0 +1,150 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FootballerAiOverlaySupport {
+    static CipherPacketBuffer field_d;
+    static int[] field_a;
+    static int field_c;
+    static String[][] field_b;
+
+    final static int getKeyboardIdleTicks(boolean param0) {
+        if (!param0) {
+          return -97;
+        }
+        return ConsoleLexer.field_c;
+    }
+
+    final static void compactFaceDepthBuckets(boolean param0) {
+        int var2 = 0;
+        int var1_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var4 = Kickabout.field_G;
+        try {
+          var1_int = ArchivePreloader.field_b[0];
+          if (param0) {
+            FootballerAiOverlaySupport.releaseStatics((byte) -13);
+          }
+          for (var2 = 1; var2 < ArchivePreloader.field_b.length; var2++) {
+            var3 = ArchivePreloader.field_b[var2];
+            ArrayOperations.copyInts(GameSoundEffect.field_e, var2 << 4, GameSoundEffect.field_e, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw GameSoundEffect.wrapException((Throwable) ((Object) var1), "or.B(" + param0 + ')');
+        }
+    }
+
+    final static void printError(String param0, int param1) {
+        if (param1 != 1) {
+          return;
+        }
+        System.out.println("Error: " + ThreadSleepSupport.replaceAll(-1, "%0a", "\n", param0));
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_d = null;
+        field_b = (String[][]) null;
+        field_a = null;
+        if (param0 <= 33) {
+          String var2 = (String) null;
+          FootballerAiOverlaySupport.printError((String) null, 5);
+        }
+    }
+
+    final static void drawFootballerAiOverlay(CommonGame param0, int param1, int param2, byte param3) {
+        FootballerAgent var30 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        int[][][] var22 = null;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        int var28 = 0;
+        int var29 = Kickabout.field_G;
+        try {
+          var30 = param0.field_P[param2][param1];
+          var5 = var30.pixelX(-110);
+          var6 = var30.pixelY(true);
+          var7 = param0.field_r[param2];
+          var8 = AccountNameCharacterSupport.field_c[var7][-1 + param1][2];
+          var9 = AccountNameCharacterSupport.field_c[var7][-1 + param1][3];
+          var10 = AccountNameCharacterSupport.field_c[var7][param1 - 1][0];
+          var11 = AccountNameCharacterSupport.field_c[var7][-1 + param1][1];
+          InstrumentEnvelope.buildBoundaryCameraLookup(6711, param0);
+          if (param2 == 1) {
+            var11 = -var9 + 1344 - var11;
+            var10 = -var8 + 896 - var10;
+          }
+          ParticipantStatus.a(param1, param2, (byte) 112, param0.field_r[param2]);
+          var12 = SocialListLayoutSupport.worldToScreenX(param3 - 99, var5);
+          var13 = IntKeyLookup.a((byte) -96, var6);
+          var14 = SocialListLayoutSupport.worldToScreenX(0, MatchingTextValidator.field_m[0]);
+          var15 = IntKeyLookup.a((byte) -76, MatchingTextValidator.field_m[1]);
+          var16 = InstrumentNoteMask.field_i * 10 >> 8;
+          var17 = (-1 + (1 << var30.aiWait) & (1 + param1) * ((1 + param2) * 19) + param0.aiTick) * InstrumentNoteMask.field_i >> 8;
+          if (param3 != 99) {
+            field_a = (int[]) null;
+          }
+          var18 = (1 << var30.aiWait) * InstrumentNoteMask.field_i >> 8;
+          var19 = param2 == 1 ? 13369344 : FormationMaskSupport.field_c != 2 ? 65793 : 16777215;
+          var20 = 24;
+          var21 = 24;
+          if ((10 & var30.directionMask) == 0) {
+            var20 = var20 << 1;
+          }
+          if ((5 & var30.directionMask) == 0) {
+            var21 = var21 << 1;
+          }
+          var20 = InstrumentNoteMask.field_i * (var20 << 1) >> 8;
+          var21 = InstrumentNoteMask.field_i * (var21 << 1) >> 8;
+          SoftwareDrawingSupport.drawRectangleOutline(SocialListLayoutSupport.worldToScreenX(0, var10), IntKeyLookup.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
+          var22 = UiInputRoutingSupport.field_c[param2][-1 + param1];
+          for (var23 = 0; 4 > var23; var23++) {
+            for (var24 = 0; var24 < -1 + var22[var23].length; var24++) {
+              var25 = SocialListLayoutSupport.worldToScreenX(param3 ^ 99, var22[var23][var24][0]);
+              var26 = IntKeyLookup.a((byte) -79, var22[var23][var24][1]);
+              var27 = SocialListLayoutSupport.worldToScreenX(0, var22[var23][var24 + 1][0]);
+              var28 = IntKeyLookup.a((byte) -99, var22[var23][var24 + 1][1]);
+              SoftwareRasterizer.drawLineBlendedInclusive(var25, var26, var27, var28, var19, 128);
+            }
+          }
+          SoftwareDrawingSupport.b(var14, var15, var16, 16777045);
+          SoftwareRasterizer.drawLineBlendedInclusive(var12, var13, var14, var15, 16776960, 160);
+          SoftwareRasterizer.drawRectangleAlpha(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
+          SoftwareRasterizer.fillRect(var12 - (var18 >> 1), 10 + var13, var18, 6, 65793);
+          SoftwareRasterizer.fillRect(-(var18 >> 1) + var12 + 1, var13 + 11, -2 + var18 - var17, 4, 13369344);
+          SoftwareRasterizer.drawHorizontalLineAlpha(1 + (var12 - (var18 >> 1)), var13 + 12, -2 + (var18 - var17), 16777215, 220);
+          SoftwareRasterizer.drawHorizontalLineAlpha(-(var18 >> 1) + var12 + 1, var13 + 13, var18 - var17 - 2, 16777215, 120);
+        } catch (RuntimeException runtimeException) {
+          throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    static {
+        field_a = new int[2];
+        field_b = new String[][]{new String[]{"Play a 4 Minute game, rewards are reduced", "Play a 8 Minute game", "Play a 12 Minute game, rewards are increased"}, new String[]{"Play a normal game of Kickabout", "Play a Facebook Minileague Game"}, new String[]{"Play a normal game with your own team.", "Play an Exhibition Game with preset level 50 players. No experience is earnt."}, new String[]{"Play a single game.", "Play in a Knockout tournament."}};
+    }
+}

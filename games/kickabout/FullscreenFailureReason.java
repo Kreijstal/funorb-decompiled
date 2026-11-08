@@ -105,7 +105,7 @@ final class FullscreenFailureReason {
     final static boolean b(byte param0) {
         if (param0 != 97) {
           field_d = -103;
-          if (10 > vj.field_c) {
+          if (10 > RasterGlowSupport.field_c) {
             return false;
           }
           if (13 <= DateInputValidator.field_d) {
@@ -113,7 +113,7 @@ final class FullscreenFailureReason {
           }
           return false;
         }
-        if (10 > vj.field_c) {
+        if (10 > RasterGlowSupport.field_c) {
           return false;
         }
         if (13 <= DateInputValidator.field_d) {

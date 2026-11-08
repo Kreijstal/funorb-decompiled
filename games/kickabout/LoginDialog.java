@@ -192,7 +192,7 @@ final class LoginDialog extends ContentTransitionDialog {
           RowRangeRequest.field_e = new byte[MenuButton.field_l][];
           MouseInputHandler.field_c = new int[MenuButton.field_l];
           IsaacRandom.field_f = new int[MenuButton.field_l];
-          fc.field_g = new int[MenuButton.field_l];
+          LoginResponseUiSupport.field_g = new int[MenuButton.field_l];
           SquadPickerDialog.field_O = new byte[MenuButton.field_l][];
           var17.field_n = -(MenuButton.field_l * 8) + param1.length - 7;
           AvailabilityCheckRequest.field_i = var17.readUnsignedShort((byte) 81);
@@ -202,7 +202,7 @@ final class LoginDialog extends ContentTransitionDialog {
             IsaacRandom.field_f[var4] = var16.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime1 = 0; MenuButton.field_l > var4Lifetime1; var4Lifetime1++) {
-            fc.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) 81);
+            LoginResponseUiSupport.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) 81);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < MenuButton.field_l; var4Lifetime2++) {
             MouseInputHandler.field_c[var4Lifetime2] = var17.readUnsignedShort((byte) 81);
@@ -211,11 +211,11 @@ final class LoginDialog extends ContentTransitionDialog {
             PasswordValidator.field_j[var4Lifetime3] = var17.readUnsignedShort((byte) 81);
           }
           var17.field_n = -7 + (param1.length + (-(MenuButton.field_l * 8) - 3 * (-1 + var3)));
-          lt.field_a = new int[var3];
+          PlayAreaMovementSupport.field_a = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            lt.field_a[var4Lifetime4] = var17.readUnsignedMedium(-123);
-            if (lt.field_a[var4Lifetime4] == 0) {
-              lt.field_a[var4Lifetime4] = 1;
+            PlayAreaMovementSupport.field_a[var4Lifetime4] = var17.readUnsignedMedium(-123);
+            if (PlayAreaMovementSupport.field_a[var4Lifetime4] == 0) {
+              PlayAreaMovementSupport.field_a[var4Lifetime4] = 1;
             }
           }
           var17.field_n = 0;

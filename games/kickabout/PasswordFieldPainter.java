@@ -60,8 +60,8 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           if (param1 != -587) {
             PasswordFieldPainter.getQuickChatCommandTypes(-111);
           }
-          while (UnreadMessagesScreen.a(vp.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
-            TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - vp.field_a;
+          while (UnreadMessagesScreen.a(MatchTextInputOverlay.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
+            TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - MatchTextInputOverlay.field_a;
           }
           var2_int = -1;
           if (AlternateKeyedLoginCredentials.field_n != null) {
@@ -73,22 +73,22 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (vp.field_f > ig.field_g) {
-              ig.field_g = ig.field_g + 1;
-              if (vp.field_c < ig.field_g && (AlternateKeyedLoginCredentials.field_n == null ||
+            if (MatchTextInputOverlay.field_f > MatchHudSupport.field_g) {
+              MatchHudSupport.field_g = MatchHudSupport.field_g + 1;
+              if (MatchTextInputOverlay.field_c < MatchHudSupport.field_g && (AlternateKeyedLoginCredentials.field_n == null ||
                 AlternateKeyedLoginCredentials.field_n[LoginCredentials.field_e] == null)) {
-                ig.field_g = ig.field_g - 1;
+                MatchHudSupport.field_g = MatchHudSupport.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ig.field_g >= vp.field_f &&
+                if (MatchHudSupport.field_g >= MatchTextInputOverlay.field_f &&
                   null == AlternateKeyedLoginCredentials.field_n[(LoginCredentials.field_e + 1) % var2_int]) {
-                  ig.field_g = ig.field_g - 1;
+                  MatchHudSupport.field_g = MatchHudSupport.field_g - 1;
                 }
               }
             }
-            if (vp.field_f <= ig.field_g) {
-              ig.field_g = ig.field_g - vp.field_f;
+            if (MatchTextInputOverlay.field_f <= MatchHudSupport.field_g) {
+              MatchHudSupport.field_g = MatchHudSupport.field_g - MatchTextInputOverlay.field_f;
               if (HighScoreSubmission.field_m) {
                 LoginCredentials.field_e = LoginCredentials.field_e + 1;
                 if (LoginCredentials.field_e >= var2_int) {
@@ -101,7 +101,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
                 }
               }
             }
-            if (vp.field_c < ig.field_g) {
+            if (MatchTextInputOverlay.field_c < MatchHudSupport.field_g) {
               HighScoreSubmission.field_m = true;
             }
           }
@@ -114,34 +114,34 @@ final class PasswordFieldPainter extends BeveledTextPainter {
               if (269 - TextInputWidget.field_E.field_q < HighScoreSubmission.field_q &&
                 HighScoreSubmission.field_q < 269) {
                 HighScoreSubmission.field_m = false;
-                ig.field_g = vp.field_f;
+                MatchHudSupport.field_g = MatchTextInputOverlay.field_f;
                 var4 = 1;
               }
               if (HighScoreSubmission.field_q > 586 &&
                 HighScoreSubmission.field_q < TextInputWidget.field_E.field_q + 586) {
-                ig.field_g = vp.field_f;
+                MatchHudSupport.field_g = MatchTextInputOverlay.field_f;
                 var4 = 1;
                 HighScoreSubmission.field_m = true;
               }
             }
             if (var4 == 0 &&
-              ig.field_g > vp.field_c &&
+              MatchHudSupport.field_g > MatchTextInputOverlay.field_c &&
               var3 < ArchiveManager.field_m &&
               var3 + TextInputWidget.field_E.field_w > ArchiveManager.field_m) {
               if (BytePlusOneCommand.field_A > 269 - TextInputWidget.field_E.field_q &&
                 269 > BytePlusOneCommand.field_A) {
-                ig.field_g = vp.field_c;
+                MatchHudSupport.field_g = MatchTextInputOverlay.field_c;
               }
               if (BytePlusOneCommand.field_A > 586 &&
                 BytePlusOneCommand.field_A < TextInputWidget.field_E.field_q + 586) {
-                ig.field_g = vp.field_c;
+                MatchHudSupport.field_g = MatchTextInputOverlay.field_c;
               }
             }
           }
           if (!param0) {
             return 0;
           }
-          AuctionItem.field_l.a(-21174, vp.a(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, (byte) 69));
+          AuctionItem.field_l.a(-21174, MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), MatchTextInputOverlay.hitTestPairedControls(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, (byte) 69));
           if (AuctionItem.field_l.c(-1)) {
             if (AuctionItem.field_l.selectedIndex == 0) {
               stackIn_58_0 = 3;
@@ -217,10 +217,10 @@ final class PasswordFieldPainter extends BeveledTextPainter {
 
     final static QuickChatCommandType[] getQuickChatCommandTypes(int param0) {
         if (param0 == -27666) {
-          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, MachineTokenStorageSupport.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, MatchTextInputOverlay.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
         }
         field_A = true;
-        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, MachineTokenStorageSupport.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, MatchTextInputOverlay.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
     }
 
     PasswordFieldPainter(int param0) {

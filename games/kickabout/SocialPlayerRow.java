@@ -41,9 +41,9 @@ final class SocialPlayerRow extends UiLayoutNode {
         try {
           TriangleMesh.field_B[1] = 525;
           TriangleMesh.field_B[0] = 370;
-          stackIn_3_0 = or.field_a;
+          stackIn_3_0 = FootballerAiOverlaySupport.field_a;
           stackIn_3_1 = 0;
-          stackIn_3_2 = or.field_a;
+          stackIn_3_2 = FootballerAiOverlaySupport.field_a;
           stackIn_3_3 = 1;
           if (param0 != 1) {
             stackIn_4_4 = 1344;
@@ -58,13 +58,13 @@ final class SocialPlayerRow extends UiLayoutNode {
             var5 = TriangleMesh.field_B[0];
             TriangleMesh.field_B[0] = TriangleMesh.field_B[1];
             TriangleMesh.field_B[1] = var5;
-            var5Lifetime3 = or.field_a[0];
-            or.field_a[0] = or.field_a[1];
-            or.field_a[1] = var5Lifetime3;
+            var5Lifetime3 = FootballerAiOverlaySupport.field_a[0];
+            FootballerAiOverlaySupport.field_a[0] = FootballerAiOverlaySupport.field_a[1];
+            FootballerAiOverlaySupport.field_a[1] = var5Lifetime3;
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var6 = -var3_int + TriangleMesh.field_B[var5Lifetime1];
-            var7 = -var4 + or.field_a[var5Lifetime1];
+            var7 = -var4 + FootballerAiOverlaySupport.field_a[var5Lifetime1];
             ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
           }
           var5Lifetime2 = ContentTransitionDialog.field_Q[0] - 30;
@@ -73,7 +73,7 @@ final class SocialPlayerRow extends UiLayoutNode {
           while (var9 < 2) {
             if (0 != ContentTransitionDialog.field_Q[var9]) {
               TriangleMesh.field_B[var9] = var5Lifetime2 * (-var3_int + TriangleMesh.field_B[var9]) / ContentTransitionDialog.field_Q[var9] + var3_int;
-              or.field_a[var9] = var5Lifetime2 * (or.field_a[var9] - var4) / ContentTransitionDialog.field_Q[var9] + var4;
+              FootballerAiOverlaySupport.field_a[var9] = var5Lifetime2 * (FootballerAiOverlaySupport.field_a[var9] - var4) / ContentTransitionDialog.field_Q[var9] + var4;
             }
             var9++;
           }

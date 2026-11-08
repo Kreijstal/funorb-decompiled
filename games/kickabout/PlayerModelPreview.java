@@ -91,14 +91,14 @@ final class PlayerModelPreview extends IntrusiveNode {
         this.field_h.a(param0, 111);
         ModelMesh var5 = (ModelMesh) (this.field_h.applyCurrentFrame(this.field_p, false, true, true));
         SpritePixelSupport.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
-        PacketBuffer.a(103, ok.field_d);
+        PacketBuffer.a(103, Cp1252EncodingSupport.field_d);
         SoftwareRasterizer.clearFramebuffer();
         TriangleRasterizer.useRasterClip();
         int var4 = 950;
         TriangleRasterizer.setProjectionCenter(128, 240);
         var5.a(0, this.field_n << 8, 0, 300, 0, 0, 0, var4);
         TeamManagementScreen.e(param1 ^ -124);
-        ok.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
+        Cp1252EncodingSupport.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
     }
 
     final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
@@ -161,10 +161,10 @@ final class PlayerModelPreview extends IntrusiveNode {
         Random var8 = new Random();
         var8 = var8;
         this.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
-        this.field_p = ok.a(-49, this.field_s, var8);
+        this.field_p = Cp1252EncodingSupport.a(-49, this.field_s, var8);
         this.field_h = new AnimationPlayer(1);
         int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
-        this.field_h.a(hq.field_b[var6], (byte) -107);
+        this.field_h.a(ClientInteractionSupport.field_b[var6], (byte) -107);
     }
 
     public static void releaseStatics(byte param0) {

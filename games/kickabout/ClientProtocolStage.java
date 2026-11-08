@@ -17,7 +17,7 @@ final class ClientProtocolStage {
           var2 = ConsoleTokenCursor.field_b;
         }
         if (2 == param1) {
-          var2 = fc.field_a;
+          var2 = LoginResponseUiSupport.field_a;
         }
         return var2;
     }
@@ -31,14 +31,14 @@ final class ClientProtocolStage {
         if (null != RegistrationRequestState.field_d) {
           SumIntegersCommand.a(-120, RegistrationRequestState.field_d);
         }
-        gs.d(98);
-        vp.c(-107);
+        SelectionMarkerSupport.clearPlayerPreviewResource(98);
+        MatchTextInputOverlay.clearSharedMouseHandler(-107);
         if (!param0) {
           field_b = (String[]) null;
         }
         TrinketCountSortCriterion.b((byte) 44);
         if (LinkTextPainter.b(0)) {
-          or.field_d.b(1, (byte) -106);
+          FootballerAiOverlaySupport.field_d.b(1, (byte) -106);
           ClientPacketFlushSupport.flushPackets(0, false);
         }
         FormationView.b((byte) -116);

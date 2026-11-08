@@ -127,7 +127,7 @@ final class ClassDescriptorSupport {
             stackIn_20_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }
-          var5 = or.field_d;
+          var5 = FootballerAiOverlaySupport.field_d;
           var5.b(param1, (byte) 97);
           var5.field_n = var5.field_n + 1;
           if (param2 <= 124) {

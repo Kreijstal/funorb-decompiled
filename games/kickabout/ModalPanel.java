@@ -11,7 +11,7 @@ abstract class ModalPanel extends WidgetContainer {
     static UiLayoutNode field_D;
 
     final static IndexedSprite h(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], SquadPickerDialog.field_O[0], lt.field_a);
+        IndexedSprite var1 = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], SquadPickerDialog.field_O[0], PlayAreaMovementSupport.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
         ScrollContainer.h((byte) -98);
         return var1;
@@ -29,42 +29,42 @@ abstract class ModalPanel extends WidgetContainer {
           super.drawLayer(param0, 65, param2, param3);
           return;
         }
-        if (null == d.field_a) {
-          d.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, d.field_a);
+        if (null == FixedVelocitySupport.field_a) {
+          FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
+          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
-          d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
+          FixedVelocitySupport.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
-        if (d.field_a.field_q < this.field_n) {
-          d.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, d.field_a);
+        if (FixedVelocitySupport.field_a.field_q < this.field_n) {
+          FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
+          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
-          d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
+          FixedVelocitySupport.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
-        if (this.field_i > d.field_a.field_w) {
-          d.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, d.field_a);
+        if (this.field_i > FixedVelocitySupport.field_a.field_w) {
+          FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
+          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
-          d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
+          FixedVelocitySupport.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
-        PacketBuffer.a(param1 - 190, d.field_a);
+        PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
         this.a(0, (byte) 125, 0);
         super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
         TeamManagementScreen.e(127);
-        d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
+        FixedVelocitySupport.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
     }
 
     final static Sprite[] i(byte param0) {
@@ -81,9 +81,9 @@ abstract class ModalPanel extends WidgetContainer {
             var4 = SquadPickerDialog.field_O[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
-              var5[var6] = lt.field_a[TextLayoutLine.b((int) var4[var6], 255)];
+              var5[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var4[var6], 255)];
             }
-            var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
+            var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
           }
           ScrollContainer.h((byte) -70);
           return var1;

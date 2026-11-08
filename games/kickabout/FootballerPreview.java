@@ -57,9 +57,9 @@ final class FootballerPreview {
     final static Sprite a(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
-          return MeshObject.field_b[ih.field_c][RankingsScreen.field_C];
+          return MeshObject.field_b[FormationMaskSupport.field_c][RankingsScreen.field_C];
         }
-        return MeshObject.field_b[ih.field_c][RankingsScreen.field_C];
+        return MeshObject.field_b[FormationMaskSupport.field_c][RankingsScreen.field_C];
     }
 
     final void draw(int param0, int param1, int param2) {

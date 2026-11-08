@@ -15,8 +15,8 @@ final class AgeValidator extends TextFieldValidator {
         try {
           var1 = PlayerModelPreview.field_q;
           synchronized (var1) {
-            LineupAgent.field_n = vb.field_b;
-            fj.field_c = fj.field_c + 1;
+            LineupAgent.field_n = PitchDecorationSupport.field_b;
+            ConsoleLexer.field_c = ConsoleLexer.field_c + 1;
             if (param0 > GzipDecoder.field_d) {
               var5 = 0;
               var2 = var5;
@@ -36,7 +36,7 @@ final class AgeValidator extends TextFieldValidator {
                 GameplayHelpScreen.field_G[~var2] = false;
               }
             }
-            vb.field_b = MarkerSliderPainter.field_j;
+            PitchDecorationSupport.field_b = MarkerSliderPainter.field_j;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

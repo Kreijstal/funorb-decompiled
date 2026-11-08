@@ -163,8 +163,8 @@ final class StripedProgressBar extends UiWidget {
         DiagnosticsOverlaySupport.field_g = false;
         AuctionBidDialog.field_G = false;
         IndexedSpriteState.b(38, -1);
-        mj.field_a = vj.field_a;
-        ClubStateFactory.field_f = vj.field_a;
+        PitchAppearanceSupport.field_a = RasterGlowSupport.field_a;
+        ClubStateFactory.field_f = RasterGlowSupport.field_a;
     }
 
     final void setColors(byte param0, int param1, int param2) {

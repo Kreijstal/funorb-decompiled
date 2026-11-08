@@ -83,8 +83,8 @@ final class ClientUiUpdateSupport {
         int stackIn_65_1 = 0;
         boolean stackIn_66_2 = false;
         GeneratedPanelPainter.b((byte) 123);
-        if (mi.field_d >= 0) {
-          ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(mi.field_d)});
+        if (ConsoleArgumentSupport.field_d >= 0) {
+          ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(ConsoleArgumentSupport.field_d)});
           stackIn_51_0 = UiKeyRoutingSupport.field_c;
           stackIn_51_1 = 0;
           stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);
@@ -118,7 +118,7 @@ final class ClientUiUpdateSupport {
           stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
           ((UiLayoutNode) (Object) stackIn_21_0).updateInput(stackIn_21_1, stackIn_22_2);
         }
-        tn.field_d.tabs.h((byte) 47);
+        SocialUiState.field_d.tabs.h((byte) 47);
         if (MouseWheelInput.field_a.field_sb != 0) {
           PlayerInputFactory.field_f = true;
         }
@@ -141,7 +141,7 @@ final class ClientUiUpdateSupport {
             VertexNormal.field_d[0] != ThreeCommand.field_D) {
             ThreeCommand.field_D = VertexNormal.field_d[0];
           }
-          oa.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
+          OverlayLayerSupport.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
         }
         if (RandomAccessCacheFile.field_a.field_sb != 0) {
           TextWidgetPainter.field_f = false;

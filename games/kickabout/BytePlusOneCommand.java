@@ -28,7 +28,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           if (param1) {
             BytePlusOneCommand.a(65, -77, 21);
           }
-          ig.field_f = param2;
+          MatchHudSupport.field_f = param2;
           TextButton.field_v = new PlayerContextMenu(param0, param6, param4, param7, param8, param3, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -106,19 +106,19 @@ final class BytePlusOneCommand extends ConsoleCommand {
         int var20 = 0;
         var20 = Kickabout.field_G;
         try {
-          uk.field_d = param5;
+          SharedScrollbarState.field_d = param5;
           ArchiveRequest.field_o = param8;
-          sg.field_c[4] = 16711935;
-          sg.field_c[2] = 9474303;
-          sg.field_c[3] = 16736511;
-          sg.field_c[0] = 16764000;
-          sg.field_c[1] = 6356832;
+          ByteArrayPoolState.field_c[4] = 16711935;
+          ByteArrayPoolState.field_c[2] = 9474303;
+          ByteArrayPoolState.field_c[3] = 16736511;
+          ByteArrayPoolState.field_c[0] = 16764000;
+          ByteArrayPoolState.field_c[1] = 6356832;
           FootballerAgent.field_i = param0;
           SoundStreamHandle.field_e = 8421504;
           StringCursor.field_h[3] = 16736511;
           StringCursor.field_h[2] = 16736352;
           StringCursor.field_h[0] = 16764000;
-          sg.field_c[4] = 16711935;
+          ByteArrayPoolState.field_c[4] = 16711935;
           StringCursor.field_h[1] = 6356832;
           var12 = new Sprite(4, 4);
           var13 = var12.field_y;
@@ -131,14 +131,14 @@ final class BytePlusOneCommand extends ConsoleCommand {
           var16 = new Sprite[9];
           var16[4] = var12;
           GrayscalePaletteSupport.field_a = new UiLayoutNode(0L, param7);
-          uf.field_b = new UiLayoutNode(0L, param6);
-          GrayscalePaletteSupport.field_a.addChild((byte) -121, uf.field_b);
+          RegistrationUiSupport.field_b = new UiLayoutNode(0L, param6);
+          GrayscalePaletteSupport.field_a.addChild((byte) -121, RegistrationUiSupport.field_b);
           var17 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var17.field_jb = new IntrusiveDeque();
           AuctionSettingsDialog.field_G = new ScrollPane(0L, var17, param1, param3);
-          uf.field_b.addChild((byte) -110, (UiLayoutNode) (AuctionSettingsDialog.field_G));
+          RegistrationUiSupport.field_b.addChild((byte) -110, (UiLayoutNode) (AuctionSettingsDialog.field_G));
           DebugConsole.field_z = new UiLayoutNode(0L, param11);
-          uf.field_b.addChild((byte) -128, DebugConsole.field_z);
+          RegistrationUiSupport.field_b.addChild((byte) -128, DebugConsole.field_z);
           RotaryDialPainter.field_b = new UiLayoutNode(0L, param9);
           RotaryDialPainter.field_b.field_X = FootballerAgent.field_i;
           DebugConsole.field_z.addChild((byte) -116, RotaryDialPainter.field_b);
@@ -157,19 +157,19 @@ final class BytePlusOneCommand extends ConsoleCommand {
             if (var20 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_31_0 == 0) {
-                if (!uk.field_d) {
+                if (!SharedScrollbarState.field_d) {
                   stackIn_13_0 = DraggableWidget.field_F;
                 } else {
                   stackIn_13_0 = ButtonMenuScreen.field_z;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
-                uk.field_d) {
+                SharedScrollbarState.field_d) {
                 var19 = ClientPacketFlushSupport.field_d;
               } else {
                 decompiledFrameRemainder0 = (var18 == 2);
                 if (decompiledFrameRemainder0) {
-                  var19 = pl.field_b;
+                  var19 = GameOptionMenuSupport.field_b;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -193,7 +193,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           }
           if (decompiledNaturalLoopExit0) {
             ChatInputState.field_a = new UiLayoutNode(0L, param2);
-            ChatInputState.field_a.field_E = ig.field_i;
+            ChatInputState.field_a.field_E = MatchHudSupport.field_i;
             GrayscalePaletteSupport.field_a.addChild((byte) -104, ChatInputState.field_a);
             stackIn_31_0 = WorldSpriteDecoration.b(-14954) ? 1 : 0;
           }
@@ -343,7 +343,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         try {
           MyKitScreen.field_O = false;
           HuffmanCodec.field_e = param0;
-          et.field_d = null;
+          ThumbnailStateFactory.field_d = null;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
         }

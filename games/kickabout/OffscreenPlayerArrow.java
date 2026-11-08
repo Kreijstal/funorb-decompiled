@@ -25,7 +25,7 @@ final class OffscreenPlayerArrow {
         double var9Lifetime3;
         this.field_c = param2;
         this.field_k = false;
-        var5 = ug.a(0, this.field_i.field_kb >> 16);
+        var5 = SocialListLayoutSupport.worldToScreenX(0, this.field_i.field_kb >> 16);
         var6 = IntKeyLookup.a((byte) -94, this.field_i.field_bb >> 16);
         if (param0 >= 10 &&
           param1 >= 10 &&
@@ -103,7 +103,7 @@ final class OffscreenPlayerArrow {
         int var1 = 0;
         int var2 = 0;
         if (HuffmanCodec.field_e == 1) {
-          var1 = et.field_d.field_P[0][1].pixelY(true);
+          var1 = ThumbnailStateFactory.field_d.field_P[0][1].pixelY(true);
           var2 = 30 + (var1 - 1634 << 8) / -490;
           return Math.max(0, Math.min(256, 768 - var2 * 3));
         }

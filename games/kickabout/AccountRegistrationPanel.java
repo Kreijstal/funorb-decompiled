@@ -163,9 +163,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             MatchScreen.field_l.drawAdditive(0, 0, 16);
           } else {
             if (!param0) {
-              tt.field_e.drawAdditive(0, 0, 16);
+              SocialListProtocolSupport.field_e.drawAdditive(0, 0, 16);
               AuctionListing.a(SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
-              for (var7 = tt.field_e.field_o; SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
+              for (var7 = SocialListProtocolSupport.field_e.field_o; SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.drawAdditive(var7, 0, 16);
               }
               TeamManagementScreen.e(124);
@@ -231,7 +231,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int var1 = 1;
         this.field_O = new Checkbox("", (UiListener) null, var1 != 0);
         this.field_Q = new TextButton(AudioOutputSupport.field_c, (UiListener) null);
-        this.field_F = new TextButton(vb.field_e, (UiListener) null);
+        this.field_F = new TextButton(PitchDecorationSupport.field_e, (UiListener) null);
         this.field_E.field_u = SortCriterion.field_b;
         this.field_S.field_u = ColourSwatchTile.field_Bb;
         this.field_K.field_u = TutorialChoiceDialog.field_G;
@@ -262,17 +262,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
         var3 = var3 + this.a(170, TrinketTile.field_Ib, 21621, var3, this.field_T);
-        var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
+        var3 = var3 + (this.a(this.field_N, PendingRequestAcknowledgement.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
         var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
-        var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
+        var3 = var3 + this.a(var3, GameOptionMenuSupport.field_a, 170, this.field_J, (byte) 117);
         CaptionedContainer var4 = new CaptionedContainer(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
         TextWidgetPainter var5 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
         this.field_R = new TextHotspotWidget(var2, var5);
         this.field_R.field_u = "";
-        this.field_R.a(fa.field_e, 0, 12082);
-        this.field_R.a(fa.field_e, 1, 12082);
+        this.field_R.a(PendingRequestAcknowledgement.field_e, 0, 12082);
+        this.field_R.a(PendingRequestAcknowledgement.field_e, 1, 12082);
         this.field_R.field_k = (UiListener) (this);
         this.field_R.c(-1, this.field_n - 90, 46, var3);
         var3 = var3 + (15 + this.field_R.field_i);
@@ -416,28 +416,28 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
 
     final static void m(int param0) {
         int var2 = Kickabout.field_G;
-        if (0 < ns.field_a) {
-          ns.field_a = ns.field_a - 1;
+        if (0 < NotificationPanelPositionSupport.field_a) {
+          NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a - 1;
         } else {
-          if (fj.field_a > 0) {
-            fj.field_a = fj.field_a - 1;
+          if (ConsoleLexer.field_a > 0) {
+            ConsoleLexer.field_a = ConsoleLexer.field_a - 1;
           } else {
-            if (0 < ee.field_b) {
-              ee.field_b = ee.field_b - 1;
+            if (0 < GameMediaSupport.field_b) {
+              GameMediaSupport.field_b = GameMediaSupport.field_b - 1;
             }
           }
         }
         if (param0 != -19417) {
           field_I = (LoginMethod) null;
         }
-        if (!(ns.field_a <= 0)) {
+        if (!(NotificationPanelPositionSupport.field_a <= 0)) {
           GeneratedPanelPainter.b((byte) 82);
         }
-        if (fj.field_a > 0) {
-          ConsoleEvaluationException.a(param0 + 19335, fj.field_a);
+        if (ConsoleLexer.field_a > 0) {
+          ConsoleEvaluationException.a(param0 + 19335, ConsoleLexer.field_a);
         }
-        if (!(ee.field_b <= 0)) {
-          ConsoleEvaluationException.a(125, ee.field_b);
+        if (!(GameMediaSupport.field_b <= 0)) {
+          ConsoleEvaluationException.a(125, GameMediaSupport.field_b);
         }
     }
 

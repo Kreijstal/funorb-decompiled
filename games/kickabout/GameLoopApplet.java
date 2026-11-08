@@ -25,7 +25,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             IntTripleCommand.field_A[10] = -1;
             IntTripleCommand.field_A[9] = -1;
             UrlRequest.field_g = new Vector();
-            oa.registerOverlay(false, (OverlayLayer) (this));
+            OverlayLayerSupport.registerOverlay(false, (OverlayLayer) (this));
           } catch (RuntimeException runtimeException) {
             throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
           }
@@ -40,7 +40,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (param0 != 15848) {
           GameLoopApplet.n((byte) 32);
         }
-        CipherPacketBuffer var3 = or.field_d;
+        CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
         var3.b(param1, (byte) -117);
         var3.writeByte(param0 - 15721, 3);
         var3.writeByte(109, 10);
@@ -82,9 +82,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           NetworkGameClient.field_t.bindArchives(7312);
           PitchBoundaryCacheState.field_c = false;
         }
-        if (uf.c(608)) {
+        if (RegistrationUiSupport.c(608)) {
           this.n(-93);
-          if (uf.c(608)) {
+          if (RegistrationUiSupport.c(608)) {
             return;
           }
         }
@@ -122,9 +122,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (param0 > -25) {
           this.paint(120);
         }
-        gw.b(5);
+        HuffmanTextSupport.b(5);
         TextFieldNode.c(0, 0);
-        if (hq.a((byte) 10)) {
+        if (ClientInteractionSupport.a((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
             var2 == 1) {
@@ -137,7 +137,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           if (this.isConnectionBusy((byte) -120)) {
             var3 = 1;
           }
-          if (!hq.a((byte) 10)) {
+          if (!ClientInteractionSupport.a((byte) 10)) {
             var3 = 0;
           }
           if (var3 != 0) {
@@ -168,11 +168,11 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             if (MarkerSliderWidget.i(0)) {
               ScrollPane.h(-1);
             } else {
-              var3 = pg.a(-3);
+              var3 = SharedPanelFactory.pollPromptAction(-3);
               if (var3 != 2) {
                 if (3 != var3) {
                   if (var3 == 4) {
-                    ql.a((byte) 50, false, FullscreenFailureReason.field_b);
+                    MatchHudRoutingSupport.a((byte) 50, false, FullscreenFailureReason.field_b);
                     ProxySocketConnector.field_e = true;
                   }
                 } else {
@@ -207,7 +207,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 if (!MarkerSliderWidget.i(0)) {
                   var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
-                    ql.a((byte) 50, true, NineSlicePanelPainter.field_f);
+                    MatchHudRoutingSupport.a((byte) 50, true, NineSlicePanelPainter.field_f);
                   }
                   this.update(-25, false);
                 } else {
@@ -274,7 +274,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var3 = 0;
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
-        if (uf.c(608)) {
+        if (RegistrationUiSupport.c(608)) {
           PlayingView.a(var2, StrongCacheEntry.g(2368), 0);
           return;
         }
@@ -299,7 +299,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           this.r(10);
         } else {
           CheatCodeListener.d(-27302);
-          su.a(27744, 0, 0, var2);
+          WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, var2);
         }
     }
 
@@ -312,14 +312,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          ClubStateFactory.field_d = new Sprite[ig.field_a.length];
-          ValidationIndicator.field_G = new Sprite[ig.field_a.length];
+          ClubStateFactory.field_d = new Sprite[MatchHudSupport.field_a.length];
+          ValidationIndicator.field_G = new Sprite[MatchHudSupport.field_a.length];
           if (param0 != -10) {
             return;
           }
-          for (var1_int = 0; ig.field_a.length > var1_int; var1_int++) {
-            ClubStateFactory.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), ig.field_a[var1_int]);
-            ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, ig.field_a[var1_int]);
+          for (var1_int = 0; MatchHudSupport.field_a.length > var1_int; var1_int++) {
+            ClubStateFactory.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), MatchHudSupport.field_a[var1_int]);
+            ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, MatchHudSupport.field_a[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -356,7 +356,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var3;
         var3 = Kickabout.field_G;
         while (ClassNameSupport.a(-125, IntTripleCommand.field_A)) {
-          if (this.handlePacket(AppletContextSupport.field_b, un.field_e, 1)) {
+          if (this.handlePacket(AppletContextSupport.field_b, ByteArrayPool.field_e, 1)) {
             continue;
           }
           this.dispatchServerPacket(95);

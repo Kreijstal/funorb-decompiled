@@ -14,13 +14,13 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         if (!param0) {
           AuctionsHelpScreen.g(57);
         }
-        if (0 != et.field_d.participantStatus[1].controlledSlot) {
-          if (et.field_d.field_V.possessorTeam == 1) {
-            var1 = et.field_d.getControlledFootballer((byte) 104, 0);
-            var2 = et.field_d.getControlledFootballer((byte) -71, 1);
+        if (0 != ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot) {
+          if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 1) {
+            var1 = ThumbnailStateFactory.field_d.getControlledFootballer((byte) 104, 0);
+            var2 = ThumbnailStateFactory.field_d.getControlledFootballer((byte) -71, 1);
             SelectableTrinketIcon.b(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
           }
-          et.field_d.participantStatus[1].controlledSlot = 0;
+          ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
         }
     }
 
@@ -132,7 +132,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         if (this.pageIndex == 0) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 198, 560, 200, 10, 65793, 128);
           MusicVolumeSupport.drawMessagePanel(SpriteResourceSupport.field_b, this.slideOffsetX + 40, 560, false, 0, 126);
-          un.field_d.a(ClientPacketFlushSupport.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
+          ByteArrayPool.field_d.a(ClientPacketFlushSupport.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
             IsSixCommand.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.slideOffsetX, 256 + 50 * var3, 16777215, -1);
             IsSixCommand.field_C.a(AuctionHelpResources.field_a[var3], this.slideOffsetX + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);

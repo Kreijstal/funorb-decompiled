@@ -115,7 +115,7 @@ final class TournamentChampionDialog extends MessageDialog {
           var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[42], new String[]{param0});
           var3 = WriteIntegersCommand.field_E[6];
           this.a(var2, this.field_t, var3, -99, this.field_u);
-          this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), pg.a(false, 42), 1054928844);
+          this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), SharedPanelFactory.getMessageButtonLabels(false, 42), 1054928844);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -189,8 +189,8 @@ final class TournamentChampionDialog extends MessageDialog {
         if (PlayerContextMenu.field_f) {
           return;
         }
-        or.field_d.b(77, (byte) 85);
-        or.field_d.writeByte(105, param0);
+        FootballerAiOverlaySupport.field_d.b(77, (byte) 85);
+        FootballerAiOverlaySupport.field_d.writeByte(105, param0);
         BeveledTextPainter.field_t = param1;
         PlayerContextMenu.field_f = true;
     }
@@ -216,7 +216,7 @@ final class TournamentChampionDialog extends MessageDialog {
         if (param0 != 0) {
           return 9;
         }
-        return tl.a(-127);
+        return ConsoleTokenParser.getMouseIdleTicks(-127);
     }
 
     static {

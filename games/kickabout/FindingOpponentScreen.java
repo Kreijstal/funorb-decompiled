@@ -10,7 +10,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static LeaderboardParticipant[] field_F;
 
     final void buildWidgets(int param0) {
-        this.field_A = SoftwareDrawingSupport.createRenderedButton("", 7126504, un.field_d, -1, false);
+        this.field_A = SoftwareDrawingSupport.createRenderedButton("", 7126504, ByteArrayPool.field_d, -1, false);
         if (param0 != -38) {
           this.updateScreen((byte) -76, false);
         }
@@ -24,12 +24,12 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         this.field_A.draw(50, param0);
         String var3 = SingleChildContainer.field_w.toLowerCase();
         int var4 = (int)Math.abs(-(MonotonicClock.monotonicMillis(-58) / 1000L % 6L) + 3L);
-        un.field_d.c(GoalkeeperAiSupport.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
+        ByteArrayPool.field_d.c(GoalkeeperAiSupport.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
         for (var5 = 0; var4 > var5; var5++) {
           var3 = var3 + ".";
         }
         if (param1 >= 99) {
-          un.field_d.a(var3, this.field_A.field_F - 150, -150 + this.field_A.field_T, this.field_A.field_q + 300, 130, 16777215, -1, this.field_C, 1, 1, 0);
+          ByteArrayPool.field_d.a(var3, this.field_A.field_F - 150, -150 + this.field_A.field_T, this.field_A.field_q + 300, 130, 16777215, -1, this.field_C, 1, 1, 0);
           return;
         }
     }
@@ -76,11 +76,11 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
 
     final static void g(byte param0) {
         if (param0 < -112) {
-          SoftwareDrawingSupport.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+          SoftwareDrawingSupport.b(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
         }
         FindingOpponentScreen.releaseStatics(70);
-        SoftwareDrawingSupport.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+        SoftwareDrawingSupport.b(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {
@@ -110,7 +110,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
           return;
         }
         AchievementSubmission.a((byte) -120);
-        vj.a(-81, true);
+        RasterGlowSupport.returnToPreviousScreen(-81, true);
     }
 
     final void enterScreen(int param0, int param1, boolean param2) {

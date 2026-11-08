@@ -37,29 +37,29 @@ abstract class TickClock {
         QuickChatMenuBuilder.field_e = null;
         if (param0 >= -82) {
           TickClock.releaseStatics((byte) 24);
-          if (null != jl.field_f) {
-            RotaryDialPainter.field_b = jl.field_f;
+          if (null != InputLayoutState.field_f) {
+            RotaryDialPainter.field_b = InputLayoutState.field_f;
             WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
             ButtonMenuScreen.field_n = null;
             RotaryDialPainter.field_b.field_ab = -1;
             RotaryDialPainter.field_b.field_ub = -1;
-            jl.field_f = null;
+            InputLayoutState.field_f = null;
             Kickabout.field_H = null;
             return;
           }
           Kickabout.field_H = null;
           return;
         }
-        if (null == jl.field_f) {
+        if (null == InputLayoutState.field_f) {
           Kickabout.field_H = null;
           return;
         }
-        RotaryDialPainter.field_b = jl.field_f;
+        RotaryDialPainter.field_b = InputLayoutState.field_f;
         WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
         ButtonMenuScreen.field_n = null;
         RotaryDialPainter.field_b.field_ab = -1;
         RotaryDialPainter.field_b.field_ub = -1;
-        jl.field_f = null;
+        InputLayoutState.field_f = null;
         Kickabout.field_H = null;
     }
 

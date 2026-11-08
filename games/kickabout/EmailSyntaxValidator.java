@@ -156,21 +156,21 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           BlobSubmission.field_i = dupTemp$0;
           IterableDualLinkDeque.field_c = dupTemp$0;
           if (1 != ArrayWidgetContainer.field_A.field_a) {
-            un.field_c = AudioService.field_h;
+            ByteArrayPool.field_c = AudioService.field_h;
           } else {
             try {
               SpriteButtonPainter.field_y = new BufferedSocket((java.net.Socket) (ArrayWidgetContainer.field_A.field_b), LoginMethod.field_c);
-              or.field_d.field_n = 0;
-              var2_ref_ml = un.field_e;
-              un.field_c = SpriteBackgroundSupport.field_d;
+              FootballerAiOverlaySupport.field_d.field_n = 0;
+              var2_ref_ml = ByteArrayPool.field_e;
+              ByteArrayPool.field_c = SpriteBackgroundSupport.field_d;
               var2_ref_ml.field_n = 0;
               PagedHelpScreen.field_A = param0 ? -2 : -1;
               TeamSelectionView.field_n = param0 ? -2 : -1;
               SquadSlotWidget.field_Ab = param0 ? -2 : -1;
-              ImageProducerRasterBuffer.a(AuctionItem.field_g, ClassDescriptorSupport.field_g, or.field_d, -3210, RotaryDialWidget.field_E);
+              ImageProducerRasterBuffer.a(AuctionItem.field_g, ClassDescriptorSupport.field_g, FootballerAiOverlaySupport.field_d, -3210, RotaryDialWidget.field_E);
               ClientPacketFlushSupport.flushPackets(-1, false);
             } catch (IOException iOException) {
-              un.field_c = AudioService.field_h;
+              ByteArrayPool.field_c = AudioService.field_h;
             }
           }
           ArrayWidgetContainer.field_A = null;
@@ -192,7 +192,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         if (param0 != -42) {
           return true;
         }
-        stackIn_6_0 = (null != oo.field_c) && (oo.field_c.field_l);
+        stackIn_6_0 = (null != PlatformTaskState.field_c) && (PlatformTaskState.field_c.field_l);
         return stackIn_6_0;
     }
 

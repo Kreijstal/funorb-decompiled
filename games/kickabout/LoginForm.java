@@ -39,14 +39,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final static void a(Sprite param0, int param1) {
         double[] var3 = null;
-        if (ih.field_c == 0) {
+        if (FormationMaskSupport.field_c == 0) {
           return;
         }
         try {
           if (param1 != 20684) {
             field_B = (int[]) null;
           }
-          var3 = WorldSpriteDecoration.field_a[ih.field_c];
+          var3 = WorldSpriteDecoration.field_a[FormationMaskSupport.field_c];
           double[] var2 = var3;
           SpritePixelSupport.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
@@ -254,7 +254,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (!this.field_C) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = is.field_f;
+              stackIn_19_3 = TextLineLayoutSupport.field_f;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -421,7 +421,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if ((var7 & 1) != 0) {
               stackIn_11_0 = ModalPanel.field_G;
             } else {
-              stackIn_11_0 = hq.field_e;
+              stackIn_11_0 = ClientInteractionSupport.field_e;
             }
             var9 = stackIn_11_0;
             AuctionsScreen.a(-840618968, var2, var8[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));

@@ -60,7 +60,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         if (this.field_r) {
           LobbyPlayerRow.a(this.stream, true);
         } else {
-          mj.a(true, this.stream);
+          PitchAppearanceSupport.detachSampleStream(true, this.stream);
         }
         if (param0 <= 67) {
           this.update((byte) 6);

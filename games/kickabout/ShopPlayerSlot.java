@@ -20,7 +20,7 @@ final class ShopPlayerSlot extends ListRow {
     static String field_Cb;
     String field_Nb;
 
-    final static void a(int param0, fa param1, int param2) {
+    final static void a(int param0, PendingRequestAcknowledgement param1, int param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -28,7 +28,7 @@ final class ShopPlayerSlot extends ListRow {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = or.field_d;
+          var3 = FootballerAiOverlaySupport.field_d;
           var3.b(param0, (byte) -117);
           var3.writeByte(113, param1.field_i);
           var3.writeShort(-1207444472, param1.field_f);
@@ -59,8 +59,8 @@ final class ShopPlayerSlot extends ListRow {
         try {
           SquadPickerDialog.a(16, param0, true);
           if (param1 != 74) {
-            fa var3 = (fa) null;
-            ShopPlayerSlot.a(40, (fa) null, -96);
+            PendingRequestAcknowledgement var3 = (PendingRequestAcknowledgement) null;
+            ShopPlayerSlot.a(40, (PendingRequestAcknowledgement) null, -96);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -103,7 +103,7 @@ final class ShopPlayerSlot extends ListRow {
           }
           this.field_X.a(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
-          this.field_X.a(uf.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+          this.field_X.a(RegistrationUiSupport.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[1];
           var5 = 6 + var3Lifetime1;
           for (var6 = 0; 3 > var6; var6++) {

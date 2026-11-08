@@ -114,34 +114,34 @@ final class ScrollBar extends UiLayoutNode {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (ns.field_a <= 0) {
+        if (NotificationPanelPositionSupport.field_a <= 0) {
           if (param0 <= 10) {
             field_Eb = (String) null;
-            if (fj.field_a <= 0 &&
-              ee.field_b <= 0) {
+            if (ConsoleLexer.field_a <= 0 &&
+              GameMediaSupport.field_b <= 0) {
               return;
             }
             if (!TrinketCatalog.field_b) {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
-            tn.field_f.draw(125, param1);
+            SocialUiState.field_f.draw(125, param1);
             return;
           }
-          if (fj.field_a > 0) {
+          if (ConsoleLexer.field_a > 0) {
             if (!TrinketCatalog.field_b) {
               return;
             }
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
-            tn.field_f.draw(125, param1);
+            SocialUiState.field_f.draw(125, param1);
             return;
           }
-          if (ee.field_b <= 0) {
+          if (GameMediaSupport.field_b <= 0) {
             return;
           }
           if (TrinketCatalog.field_b) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
-            tn.field_f.draw(125, param1);
+            SocialUiState.field_f.draw(125, param1);
           }
           return;
         }
@@ -149,8 +149,8 @@ final class ScrollBar extends UiLayoutNode {
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
-          if (fj.field_a <= 0 &&
-            ee.field_b <= 0) {
+          if (ConsoleLexer.field_a <= 0 &&
+            GameMediaSupport.field_b <= 0) {
             return;
           }
           if (!TrinketCatalog.field_b) {
@@ -162,12 +162,12 @@ final class ScrollBar extends UiLayoutNode {
           if (param0 <= 10) {
             field_Eb = (String) null;
           }
-          if (fj.field_a > 0) {
+          if (ConsoleLexer.field_a > 0) {
             if (!TrinketCatalog.field_b) {
               return;
             }
           } else {
-            if (ee.field_b <= 0) {
+            if (GameMediaSupport.field_b <= 0) {
               return;
             }
             if (!TrinketCatalog.field_b) {
@@ -176,7 +176,7 @@ final class ScrollBar extends UiLayoutNode {
           }
         }
         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
-        tn.field_f.draw(125, param1);
+        SocialUiState.field_f.draw(125, param1);
     }
 
     private ScrollBar(long param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
@@ -461,7 +461,7 @@ final class ScrollBar extends UiLayoutNode {
     }
 
     ScrollBar(String param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
-        this(vb.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
+        this(PitchDecorationSupport.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
     }
 
     final int getDraggedOffsetVertical(int param0, boolean param1, byte param2, int param3) {

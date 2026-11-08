@@ -29,7 +29,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             } else {
               if (param0.field_j == 0 &&
                 param0.field_p == 0) {
-                var2_intLifetime1 = sg.field_c[param0.field_c];
+                var2_intLifetime1 = ByteArrayPoolState.field_c[param0.field_c];
               } else {
                 var2_intLifetime1 = StringCursor.field_h[param0.field_c];
               }
@@ -39,7 +39,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var2_intLifetime1 = StringCursor.field_h[param0.field_c];
             } else {
               if (param0.field_d == AnimationPlayer.field_c) {
-                var2_intLifetime1 = sg.field_c[param0.field_c];
+                var2_intLifetime1 = ByteArrayPoolState.field_c[param0.field_c];
               } else {
                 var2_intLifetime1 = StringCursor.field_h[param0.field_c];
               }
@@ -114,7 +114,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         if (0 == this.pageIndex) {
           MusicVolumeSupport.drawMessagePanel(GuestLoginSupport.field_b, 40 + this.slideOffsetX, 280, true, 0, 263);
           SoftwareRasterizer.fillRoundedRectangleBlended(350 + this.slideOffsetX, 144, 226, 232, 10, 65793, 140);
-          un.field_d.a(RegistrationRequestState.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
+          ByteArrayPool.field_d.a(RegistrationRequestState.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
           var3 = this.slideOffsetX + 370;
           SoftwareRasterizer.fillRectangleAlpha(var3, 186, 184, 174, 16777215, 30);
           SoftwareRasterizer.drawRectangleAlpha(var3 - 1, 185, 186, 176, 16777215, 128);
@@ -190,7 +190,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               }
             }
             if (var3 != null) {
-              var5Lifetime1 = ug.a(0, var2_ref_gm.field_kb >> 16);
+              var5Lifetime1 = SocialListLayoutSupport.worldToScreenX(0, var2_ref_gm.field_kb >> 16);
               var6 = IntKeyLookup.a((byte) -114, var2_ref_gm.field_bb >> 16);
               if (InstrumentNoteMask.field_i == 256) {
                 var7 = var4 >> 1;

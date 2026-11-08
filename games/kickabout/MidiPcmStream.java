@@ -1074,7 +1074,7 @@ final class MidiPcmStream extends PcmStream {
               }
             }
           } else {
-            if (ih.field_c == 0) {
+            if (FormationMaskSupport.field_c == 0) {
               stackIn_12_0 = var4;
               if (param0) {
                 stackIn_13_1 = 53;
@@ -1084,7 +1084,7 @@ final class MidiPcmStream extends PcmStream {
               var4 = stackIn_12_0 - (stackIn_13_1 * InstrumentNoteMask.field_i >> 8);
               var2 = IntrusiveNodeHashTable.field_g[6];
             }
-            if (ih.field_c == 1) {
+            if (FormationMaskSupport.field_c == 1) {
               var2 = IntrusiveNodeHashTable.field_g[5];
               stackIn_18_0 = var4;
               stackIn_18_1 = InstrumentNoteMask.field_i;
@@ -1095,7 +1095,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var4 = stackIn_18_0 - (stackIn_18_1 * stackIn_19_2 >> 8);
             }
-            if (ih.field_c == 2) {
+            if (FormationMaskSupport.field_c == 2) {
               var2 = IntrusiveNodeHashTable.field_g[4];
               stackIn_24_0 = var4;
               if (param0) {
@@ -1113,7 +1113,7 @@ final class MidiPcmStream extends PcmStream {
               ListRow.a(-12376, MySquadScreen.c(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
           }
-          if (ih.field_c == 2) {
+          if (FormationMaskSupport.field_c == 2) {
             var5Lifetime1 = MySquadScreen.c(-105, -47);
             var6Lifetime1 = MySquadScreen.c(param1 + 94, 892);
             stackIn_48_0 = (!param0) ? 0 : 3;

@@ -12,7 +12,7 @@ final class FadingChatMessage extends IntrusiveNode {
     final static void a(int param0, int param1, HighScoreQuery param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = or.field_d;
+          var3 = FootballerAiOverlaySupport.field_d;
           var3.b(param0, (byte) 73);
           var3.writeByte(115, 5);
           var3.writeByte(118, 0);

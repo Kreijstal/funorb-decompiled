@@ -78,7 +78,7 @@ final class TeamSelectionView extends MatchPhaseView {
         for (var5 = 0; var5 < this.field_a.playerCount; var5++) {
           var6 = this.field_k[var5];
           if (!this.field_a.participantStatus[var5].isActive(3511)) {
-            var7 = un.field_d.a(var6.field_E);
+            var7 = ByteArrayPool.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
             SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
@@ -93,11 +93,11 @@ final class TeamSelectionView extends MatchPhaseView {
           TeamManagementScreen.e(121);
           var4Lifetime1 += 23;
           if (this.field_a.field_n.isReadyOrInactive(param0 ^ 8659, var5)) {
-            vb.field_l.c(564, var6.field_T - 4);
+            PitchDecorationSupport.field_l.c(564, var6.field_T - 4);
           }
         }
         if (this.field_a.field_f) {
-          un.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
         }
     }
 
@@ -182,8 +182,8 @@ final class TeamSelectionView extends MatchPhaseView {
           return;
         }
         if (this.field_f) {
-          or.field_d.b(72, (byte) -47);
-          or.field_d.writeByte(117, param1);
+          FootballerAiOverlaySupport.field_d.b(72, (byte) -47);
+          FootballerAiOverlaySupport.field_d.writeByte(117, param1);
         }
     }
 
@@ -204,7 +204,7 @@ final class TeamSelectionView extends MatchPhaseView {
             var5 = new UiLayoutNode();
             var5.field_E = param0.field_S[var4_int].toLowerCase();
             var5.field_y = 16777215;
-            var5.field_X = (BitmapFont) ((Object) un.field_d);
+            var5.field_X = (BitmapFont) ((Object) ByteArrayPool.field_d);
             var5.field_A = 1;
             var5.field_q = 158;
             var5.field_mb = 21;
@@ -218,7 +218,7 @@ final class TeamSelectionView extends MatchPhaseView {
             this.field_t.addChild((byte) -126, this.field_k[var4_int]);
           }
           if (this.isLocalParticipantActive((byte) 13)) {
-            this.field_l = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, 120);
+            this.field_l = new CheckboxLabelWidget(HoverTooltip.field_Ab, ByteArrayPool.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
             this.field_t.addChild((byte) -121, (UiLayoutNode) (this.field_l));
@@ -409,7 +409,7 @@ final class TeamSelectionView extends MatchPhaseView {
           return;
         }
         try {
-          ul.a(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
+          TextInputUiSupport.drawWrappedTextPanel(param2, 1, param3, true, (byte) -120, param1, 16, param4, 1, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

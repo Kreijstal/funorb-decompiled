@@ -356,7 +356,7 @@ abstract class MatchPhaseView {
     }
 
     void updateCamera(boolean param0) {
-        mj.a(140.0, 60, 448.0, 672.0);
+        PitchAppearanceSupport.setProjectionTarget(140.0, 60, 448.0, 672.0);
         if (!param0) {
           this.positionButtons(69);
         }
@@ -381,7 +381,7 @@ abstract class MatchPhaseView {
         SoftwareRasterizer.clearFramebuffer();
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;
-        un.field_d.d(var5, var6, var7, 16777215, -1);
+        ByteArrayPool.field_d.d(var5, var6, var7, 16777215, -1);
         AuctionSettingsDialog.field_H.c(-16 + var6, var7 - 31);
         TeamManagementScreen.e(124);
         var8 = 256;
@@ -459,9 +459,9 @@ abstract class MatchPhaseView {
             stackIn_24_0 = (this.field_a.participantStatus[var14].isActive(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
             var9 = this.field_a.field_S[var14].toLowerCase();
-            un.field_d.d(var9, param3 + 80, param1, var8, -1);
+            ByteArrayPool.field_d.d(var9, param3 + 80, param1, var8, -1);
             if (!this.field_a.participantStatus[var14].isActive(3511)) {
-              var10 = un.field_d.a(var9);
+              var10 = ByteArrayPool.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
               SoftwareRasterizer.drawLine(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
@@ -480,7 +480,7 @@ abstract class MatchPhaseView {
           if (param0) {
             this.field_a = (CommonGame) null;
           }
-          un.field_d.d(param1.toUpperCase(), 320, 83, 16777215, -1);
+          ByteArrayPool.field_d.d(param1.toUpperCase(), 320, 83, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -569,7 +569,7 @@ abstract class MatchPhaseView {
           SoftwareRasterizer.fillRoundedRectangleBlended(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           TeamManagementScreen.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
-            vb.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);
+            PitchDecorationSupport.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);
           }
           var5[var8] = var5[var8] + 23;
           var10++;

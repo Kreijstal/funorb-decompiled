@@ -177,7 +177,7 @@ final class GameModeDefinition {
           this.field_k = param0;
           this.field_j = param2 ? true : false;
           this.field_g = param1;
-          this.field_l = ih.a(21656, param4);
+          this.field_l = FormationMaskSupport.decodeFormationMask(21656, param4);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

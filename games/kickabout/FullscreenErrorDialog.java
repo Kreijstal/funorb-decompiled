@@ -39,7 +39,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           PlayerMeshFactory.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
           RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
           ServerTextTemplate.field_j = ServerTextTemplate.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
-          gw.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          HuffmanTextSupport.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);
@@ -71,7 +71,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             SquadSlotWidget.field_yb.addLast(param0, 3);
             return;
           }
-          ug.a(var2, 16737894, param0);
+          SocialListLayoutSupport.insertNodeBefore(var2, 16737894, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,7 +176,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           var4.field_i = 80;
           var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(EmailSyntaxValidator.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-98, var4);
-          this.field_U = this.addButton((byte) -53, (UiListener) (this), pg.field_c);
+          this.field_U = this.addButton((byte) -53, (UiListener) (this), SharedPanelFactory.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,8 +220,8 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             var2 = 0;
             var3 = new String[10];
             while (10 > var2) {
-              if (-var2 - 1 + vb.field_j >= 0) {
-                var4_ref_tv = GrowableIntList.field_b[-var2 + (vb.field_j - 1)];
+              if (-var2 - 1 + PitchDecorationSupport.field_j >= 0) {
+                var4_ref_tv = GrowableIntList.field_b[-var2 + (PitchDecorationSupport.field_j - 1)];
                 if (var4_ref_tv != AccountRegistrationPanel.field_D) {
                   if (null != var4_ref_tv.field_s) {
                     var3[var2] = var4_ref_tv.field_s.field_E;

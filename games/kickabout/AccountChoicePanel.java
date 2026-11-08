@@ -87,7 +87,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_E = new TextButton(ConsoleEvaluationException.field_f, (UiListener) null);
-        this.field_J = new TextButton(vb.field_e, (UiListener) null);
+        this.field_J = new TextButton(PitchDecorationSupport.field_e, (UiListener) null);
         this.field_H = new TextButton(TrinketCountSortCriterion.field_o, (UiListener) null);
         SpriteButtonPainter var1 = new SpriteButtonPainter();
         this.field_E.field_r = (WidgetPainter) ((Object) var1);
@@ -150,7 +150,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_t;
         int var6 = param3 + this.field_g;
-        ModelMaterial.field_a.a(vb.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
+        ModelMaterial.field_a.a(PitchDecorationSupport.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
         super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 

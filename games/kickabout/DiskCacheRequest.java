@@ -30,7 +30,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (!param1) {
             field_w = (String) null;
           }
-          bq.a((byte) 108, param0);
+          MatchUiLayoutSupport.reloadAppletPage((byte) 108, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

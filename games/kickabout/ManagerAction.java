@@ -152,14 +152,14 @@ final class ManagerAction extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         int var7_int = 0;
         try {
-          var7_int = un.field_d.a(param6) + 15;
+          var7_int = ByteArrayPool.field_d.a(param6) + 15;
           AuctionListing.a(10, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
           TeamManagementScreen.e(123);
           AuctionListing.a(param3, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
           TeamManagementScreen.e(param0 + 113);
-          un.field_d.c(param6, param3, param4, param5, -1);
+          ByteArrayPool.field_d.c(param6, param3, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

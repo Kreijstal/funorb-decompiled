@@ -41,10 +41,10 @@ final class InstrumentNoteMask extends IntrusiveNode {
             var4 = MatchAgent.a(0, param0);
             if (var4 != null &&
               1 <= var4.length()) {
-              if (ca.isNameSeparator(false, var4.charAt(0))) {
+              if (GradientRasterSupport.isNameSeparator(false, var4.charAt(0))) {
                 return false;
               }
-              if (ca.isNameSeparator(false, var4.charAt(-1 + var4.length()))) {
+              if (GradientRasterSupport.isNameSeparator(false, var4.charAt(-1 + var4.length()))) {
                 return false;
               }
               if (param1 != -26200) {
@@ -53,7 +53,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
               var5 = 0;
               for (var6 = 0; param0.length() > var6; var6++) {
                 var7 = param0.charAt(var6);
-                if (!ca.isNameSeparator(false, (char) var7)) {
+                if (!GradientRasterSupport.isNameSeparator(false, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

@@ -95,7 +95,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             RankingsRequest.field_n[var3_int] = 256;
           }
           PitchPurchaseSupport.field_d = PcmPlayerService.createPlayer(param0, param2, 0, 22050);
-          pg.field_d = PcmPlayerService.createPlayer(param0, param2, 1, 1024);
+          SharedPanelFactory.field_d = PcmPlayerService.createPlayer(param0, param2, 1, 1024);
           if (param1 != 23) {
             FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
@@ -109,7 +109,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           PitchPurchaseSupport.field_d.setRootStream(LoadingProgressSupport.field_d);
           PlayerMeshFactory.field_b = new PcmStreamMixer();
-          pg.field_d.setRootStream(PlayerMeshFactory.field_b);
+          SharedPanelFactory.field_d.setRootStream(PlayerMeshFactory.field_b);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

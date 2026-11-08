@@ -129,7 +129,7 @@ final class IntTripleCommand extends ConsoleCommand {
     }
 
     final static void a(long param0, int param1, int param2) {
-        CipherPacketBuffer var4 = or.field_d;
+        CipherPacketBuffer var4 = FootballerAiOverlaySupport.field_d;
         var4.b(param1, (byte) -94);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;
@@ -147,9 +147,9 @@ final class IntTripleCommand extends ConsoleCommand {
         if (param0 != -54) {
           return;
         }
-        po.field_f = true;
+        SocialRowOrderSupport.field_f = true;
         RankingsRequest.field_l.k(103);
-        MouseInputHandler.a(ul.field_a, 4, false);
+        MouseInputHandler.a(TextInputUiSupport.field_a, 4, false);
     }
 
     static {

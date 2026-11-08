@@ -11,12 +11,12 @@ final class NotCommand extends ConsoleCommand {
     final static void g(byte param0) {
         if (param0 == -47) {
           WeightedLruCache.a(0);
-          qn.a(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
+          SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
           return;
         }
         NotCommand.a(83, false, -82, 24, true, (byte) 68);
         WeightedLruCache.a(0);
-        qn.a(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
+        SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
     }
 
     final static Sprite[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {

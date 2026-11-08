@@ -72,7 +72,7 @@ class TextHotspotWidget extends TextButton {
     }
 
     final static void a(byte param0, int param1) {
-        CipherPacketBuffer var2 = or.field_d;
+        CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         if (param0 != -105) {
           TextHotspotWidget.i(83);
         }
@@ -107,11 +107,11 @@ class TextHotspotWidget extends TextButton {
           if (param0 != -28153) {
             field_L = (Sprite) null;
           }
-          or.field_d.b(89, (byte) 77);
-          or.field_d.field_n = or.field_d.field_n + 2;
-          var2_int = or.field_d.field_n;
-          or.field_d.writeString(14190, param1);
-          or.field_d.backpatchShortLength(or.field_d.field_n - var2_int, 62);
+          FootballerAiOverlaySupport.field_d.b(89, (byte) 77);
+          FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
+          var2_int = FootballerAiOverlaySupport.field_d.field_n;
+          FootballerAiOverlaySupport.field_d.writeString(14190, param1);
+          FootballerAiOverlaySupport.field_d.backpatchShortLength(FootballerAiOverlaySupport.field_d.field_n - var2_int, 62);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

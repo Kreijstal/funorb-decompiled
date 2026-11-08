@@ -106,17 +106,17 @@ final class MusicPatchNode extends IntrusiveNode {
         }
         if (null == TextButton.field_v) {
           TextButton.field_v = null;
-          ig.field_f = null;
+          MatchHudSupport.field_f = null;
           return;
         }
         if (null != TextButton.field_v.field_g) {
           TextButton.field_v.field_g.field_I = false;
           TextButton.field_v = null;
-          ig.field_f = null;
+          MatchHudSupport.field_f = null;
           return;
         }
         TextButton.field_v = null;
-        ig.field_f = null;
+        MatchHudSupport.field_f = null;
     }
 
     public static void releaseStatics(byte param0) {
@@ -135,7 +135,7 @@ final class MusicPatchNode extends IntrusiveNode {
     }
 
     final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3, int param4) {
-        DualLinkDequeIterator.field_e = su.a(-3505, "");
+        DualLinkDequeIterator.field_e = WidgetStyleFactory.createAvailabilityRequest(-3505, "");
         if (param4 >= -118) {
           return;
         }
@@ -143,8 +143,8 @@ final class MusicPatchNode extends IntrusiveNode {
           DualLinkDequeIterator.field_e.complete(false, (byte) 108);
           StatefulTextPainter.a(param0, param3, false, param2);
           IntKeyLookup.a(-93);
-          mj.field_a = vj.field_a;
-          ClubStateFactory.field_f = vj.field_a;
+          PitchAppearanceSupport.field_a = RasterGlowSupport.field_a;
+          ClubStateFactory.field_f = RasterGlowSupport.field_a;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -152,18 +152,18 @@ final class MusicPatchNode extends IntrusiveNode {
 
     final static void a(int param0, int param1) {
         int var3 = 0;
-        fa var4 = null;
+        PendingRequestAcknowledgement var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (fa) (FootballerAgent.field_f.g(param0 + 24009));
+          var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(param0 + 24009));
           if (param0 != 0) {
             MusicPatchNode.b(79);
           }
           while (var4 != null) {
             ShopPlayerSlot.a(param1, var4, -51265247);
-            var4 = (fa) (FootballerAgent.field_f.c(33));
+            var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -128,7 +128,7 @@ final class AuctionListing extends IntrusiveNode {
           if (!param0) {
             field_l = (String[]) null;
           }
-          var2 = or.field_d;
+          var2 = FootballerAiOverlaySupport.field_d;
           var2.b(param1, (byte) 83);
           var2.writeByte(110, 1);
           var2.writeByte(123, 0);
@@ -307,7 +307,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -86, "error_js5connect");
                 if (var2 != null) {
-                  ih.field_b = BlackFadeScreen.a(var2, true);
+                  FormationMaskSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -120, "login_gameupdated");
                 if (null != var2) {
@@ -391,7 +391,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -68, "mu_chat_private");
                 if (var2 != null) {
-                  pl.field_b = BlackFadeScreen.a(var2, true);
+                  GameOptionMenuSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -111, "mu_x_entered_game");
                 if (var2 != null) {
@@ -475,7 +475,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -90, "mu_lobby_rating");
                 if (var2 != null) {
-                  mt.field_b = BlackFadeScreen.a(var2, true);
+                  GoalSpriteLoader.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -80, "mu_lobby_friend_add");
                 if (var2 != null) {
@@ -523,15 +523,15 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -60, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  ig.field_h = BlackFadeScreen.a(var2, true);
+                  MatchHudSupport.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -106, "mu_play_rated");
                 if (null != var2) {
-                  vp.field_n = BlackFadeScreen.a(var2, true);
+                  MatchTextInputOverlay.field_n = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -71, "mu_create_unrated");
                 if (null != var2) {
-                  oo.field_g = BlackFadeScreen.a(var2, param0);
+                  PlatformTaskState.field_g = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -74, "mu_options");
                 if (var2 != null) {
@@ -539,7 +539,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -75, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  mi.field_a = BlackFadeScreen.a(var2, param0);
+                  ConsoleArgumentSupport.field_a = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -124, "mu_options_players");
                 if (var2 != null) {
@@ -559,7 +559,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -74, "yes");
                 if (var2 != null) {
-                  um.field_g = BlackFadeScreen.a(var2, true);
+                  MachineTokenStorageSupport.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -114, "no");
                 if (var2 != null) {
@@ -567,7 +567,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -113, "mu_invite_players");
                 if (var2 != null) {
-                  po.field_b = BlackFadeScreen.a(var2, true);
+                  SocialRowOrderSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -114, "close");
                 if (null != var2) {
@@ -595,7 +595,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -74, "send_qc_to_x");
                 if (null != var2) {
-                  ee.field_c = BlackFadeScreen.a(var2, true);
+                  GameMediaSupport.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -57, "send_pm");
                 if (null != var2) {
@@ -611,7 +611,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -99, "join_xs_game");
                 if (null != var2) {
-                  gs.field_f = BlackFadeScreen.a(var2, param0);
+                  SelectionMarkerSupport.field_f = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -72, "join_request_xs_game");
                 if (null != var2) {
@@ -643,7 +643,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -105, "report_x_for_abuse");
                 if (null != var2) {
-                  vp.field_m = BlackFadeScreen.a(var2, true);
+                  MatchTextInputOverlay.field_m = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -125, "unable_to_send_message_password_a");
                 if (null != var2) {
@@ -655,7 +655,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -89, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  ig.field_b = BlackFadeScreen.a(var2, true);
+                  MatchHudSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -64, "mu_chat_lobby_friends_only");
                 if (null != var2) {
@@ -711,11 +711,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -119, "you_are_on_x_server");
                 if (var2 != null) {
-                  uf.field_d = BlackFadeScreen.a(var2, true);
+                  RegistrationUiSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -126, "rated_game");
                 if (var2 != null) {
-                  qn.field_d = BlackFadeScreen.a(var2, param0);
+                  SharedChatLayoutSupport.field_d = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -75, "unrated_game");
                 if (null != var2) {
@@ -811,7 +811,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -109, "inviting_x");
                 if (null != var2) {
-                  ug.field_d = BlackFadeScreen.a(var2, true);
+                  SocialListLayoutSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -53, "x_wants_to_join");
                 if (var2 != null) {
@@ -827,7 +827,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -101, "invite");
                 if (null != var2) {
-                  nc.field_c = BlackFadeScreen.a(var2, true);
+                  LoginPacketSupport.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -82, "status_concluded");
                 if (var2 != null) {
@@ -899,7 +899,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -126, "show_players_in_xs_game");
                 if (var2 != null) {
-                  br.field_a = BlackFadeScreen.a(var2, param0);
+                  KitUnlockNoticeSupport.field_a = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -85, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
@@ -927,7 +927,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -63, "multiconst_similar_rating");
                 if (null != var2) {
-                  bq.field_b = BlackFadeScreen.a(var2, param0);
+                  MatchUiLayoutSupport.field_b = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -58, "multiconst_open");
                 if (null != var2) {
@@ -939,7 +939,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -118, "reportabuse");
                 if (var2 != null) {
-                  ig.field_i = BlackFadeScreen.a(var2, true);
+                  MatchHudSupport.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -70, "presstabtochat");
                 if (null != var2) {
@@ -983,7 +983,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -110, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
-                  vp.field_g = BlackFadeScreen.a(var2, true);
+                  MatchTextInputOverlay.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -71, "privatechat_friend_offline");
                 if (null != var2) {
@@ -995,7 +995,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -93, "chatviewscrolledup");
                 if (null != var2) {
-                  et.field_a = BlackFadeScreen.a(var2, true);
+                  ThumbnailStateFactory.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -124, "thisisrunescapeclan");
                 if (var2 != null) {
@@ -1007,7 +1007,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -51, "runescapeclan");
                 if (null != var2) {
-                  vj.field_f = BlackFadeScreen.a(var2, true);
+                  RasterGlowSupport.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -106, "rated_membersonly");
                 if (null != var2) {
@@ -1083,7 +1083,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -82, "gameopt_youhaventunlocked");
                 if (null != var2) {
-                  ca.field_e = BlackFadeScreen.a(var2, true);
+                  GradientRasterSupport.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -103, "gameopt_trychanging1");
                 if (var2 != null) {
@@ -1099,7 +1099,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -70, "gameopt_needchanging2");
                 if (var2 != null) {
-                  po.field_c = BlackFadeScreen.a(var2, true);
+                  SocialRowOrderSupport.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -60, "gameopt_mightchange");
                 if (var2 != null) {
@@ -1169,7 +1169,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -65, "ra_explanation");
                 if (var2 != null) {
-                  nc.field_d = BlackFadeScreen.a(var2, true);
+                  LoginPacketSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -81, "rule_pillar_0");
                 if (null != var2) {
@@ -1185,11 +1185,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -102, "rule_0_2");
                 if (null != var2) {
-                  fs.field_c = BlackFadeScreen.a(var2, param0);
+                  PanelSpriteFactory.field_c = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -75, "rule_0_3");
                 if (null != var2) {
-                  ca.field_b = BlackFadeScreen.a(var2, true);
+                  GradientRasterSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -114, "rule_0_4");
                 if (var2 != null) {
@@ -1277,7 +1277,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -52, "reloadgame");
                 if (var2 != null) {
-                  ql.field_d = BlackFadeScreen.a(var2, true);
+                  MatchHudRoutingSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -64, "toserverlist");
                 if (null != var2) {
@@ -1309,7 +1309,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -83, "goback");
                 if (null != var2) {
-                  vb.field_e = BlackFadeScreen.a(var2, true);
+                  PitchDecorationSupport.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -67, "otheroptions");
                 if (null != var2) {
@@ -1349,7 +1349,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -108, "connectionlost_reconnecting");
                 if (null != var2) {
-                  ul.field_a = BlackFadeScreen.a(var2, true);
+                  TextInputUiSupport.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -95, "connectionlost_withreason");
                 if (var2 != null) {
@@ -1369,7 +1369,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -127, "back");
                 if (null != var2) {
-                  is.field_f = BlackFadeScreen.a(var2, true);
+                  TextLineLayoutSupport.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -51, "exitfullscreenmode");
                 if (null != var2) {
@@ -1525,7 +1525,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -79, "openinpopupwindow");
                 if (null != var2) {
-                  fa.field_e = BlackFadeScreen.a(var2, param0);
+                  PendingRequestAcknowledgement.field_e = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -71, "create");
                 if (var2 != null) {
@@ -1621,7 +1621,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -92, "create_welcome");
                 if (null != var2) {
-                  vb.field_i = BlackFadeScreen.a(var2, true);
+                  PitchDecorationSupport.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -109, "create_u13_welcome");
                 if (var2 != null) {
@@ -1645,7 +1645,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -124, "create_password_confirm");
                 if (var2 != null) {
-                  fa.field_h = BlackFadeScreen.a(var2, param0);
+                  PendingRequestAcknowledgement.field_h = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -71, "create_email");
                 if (null != var2) {
@@ -1657,7 +1657,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -52, "create_age");
                 if (var2 != null) {
-                  pl.field_a = BlackFadeScreen.a(var2, param0);
+                  GameOptionMenuSupport.field_a = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -126, "create_u13_email");
                 if (var2 != null) {
@@ -1832,7 +1832,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -75, "create_alert_namechars");
                 if (null != var2) {
-                  pl.field_c = BlackFadeScreen.a(var2, true);
+                  GameOptionMenuSupport.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -68, "create_alert_nameleadingspace");
                 if (null != var2) {
@@ -1876,7 +1876,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -54, "create_alert_email_unavailable");
                 if (null != var2) {
-                  ql.field_b = BlackFadeScreen.a(var2, true);
+                  MatchHudRoutingSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -97, "create_alert_invaliddate");
                 if (null != var2) {
@@ -1976,7 +1976,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -106, "enterignore_del");
                 if (null != var2) {
-                  oo.field_d = BlackFadeScreen.a(var2, true);
+                  PlatformTaskState.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -91, "text_removed_from_game");
                 if (null != var2) {
@@ -2008,7 +2008,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -73, "waitingfor_fonts");
                 if (var2 != null) {
-                  te.field_b = BlackFadeScreen.a(var2, true);
+                  QuickChatMenuFactory.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -70, "waitingfor_soundeffects");
                 if (var2 != null) {
@@ -2040,7 +2040,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -122, "waitingfor_animations");
                 if (null != var2) {
-                  cu.field_b = BlackFadeScreen.a(var2, true);
+                  RankingRowFactory.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -117, "loading_graphics");
                 if (var2 != null) {
@@ -2086,7 +2086,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -87, "loading_animations");
                 if (null != var2) {
-                  vp.field_l = BlackFadeScreen.a(var2, true);
+                  MatchTextInputOverlay.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -84, "unpacking_graphics");
                 if (var2 != null) {
@@ -2122,7 +2122,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -50, "instructions");
                 if (var2 != null) {
-                  pe.field_b = BlackFadeScreen.a(var2, true);
+                  MeshPreviewSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -79, "tutorial");
                 if (null != var2) {
@@ -2330,7 +2330,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -84, "returntolobby");
                 if (null != var2) {
-                  ns.field_b = BlackFadeScreen.a(var2, true);
+                  NotificationPanelPositionSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -110, "cont");
                 if (null != var2) {
@@ -2522,7 +2522,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -92, "orbcoins_colon");
                 if (var2 != null) {
-                  po.field_d = BlackFadeScreen.a(var2, true);
+                  SocialRowOrderSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -75, "achieved_colon_description");
                 if (var2 != null) {
@@ -2590,7 +2590,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -52, "mp_cancelrematch");
                 if (var2 != null) {
-                  gw.field_e = BlackFadeScreen.a(var2, param0);
+                  HuffmanTextSupport.field_e = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -123, "mp_cancelrematch_unrated");
                 if (var2 != null) {
@@ -2706,7 +2706,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -92, "quickchat_help");
                 if (null != var2) {
-                  vp.field_b = BlackFadeScreen.a(var2, true);
+                  MatchTextInputOverlay.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -94, "quickchat_help_title");
                 if (null != var2) {
@@ -2778,7 +2778,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -50, "rating_won");
                 if (var2 != null) {
-                  mt.field_e = BlackFadeScreen.a(var2, true);
+                  GoalSpriteLoader.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -50, "rating_lost");
                 if (null != var2) {
@@ -2894,7 +2894,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -56, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  vj.field_d = BlackFadeScreen.a(var2, true);
+                  RasterGlowSupport.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -69, "fs_button_cancel");
                 if (var2 != null) {
@@ -2914,11 +2914,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -52, "fs_nonmember");
                 if (var2 != null) {
-                  tt.field_a = BlackFadeScreen.a(var2, true);
+                  SocialListProtocolSupport.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -96, "fs_button_close");
                 if (null != var2) {
-                  pg.field_c = BlackFadeScreen.a(var2, param0);
+                  SharedPanelFactory.field_c = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -74, "fs_button_members");
                 if (var2 != null) {
@@ -2946,7 +2946,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -99, "fs_button_tryagain");
                 if (null != var2) {
-                  mi.field_c = BlackFadeScreen.a(var2, param0);
+                  ConsoleArgumentSupport.field_c = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -83, "graphics_ui_fs_countdown");
                 if (var2 != null) {
@@ -3012,11 +3012,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -127, "rating_mode_name,0");
                 if (null != var2) {
-                  cu.field_f[0] = BlackFadeScreen.a(var2, true);
+                  RankingRowFactory.field_f[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -93, "rating_mode_name,1");
                 if (var2 != null) {
-                  cu.field_f[1] = BlackFadeScreen.a(var2, true);
+                  RankingRowFactory.field_f[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -103, "rating_mode_long_name,0");
                 if (null != var2) {
@@ -3060,7 +3060,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -65, "pleasewait_dotdotdot");
                 if (null != var2) {
-                  uf.field_a = BlackFadeScreen.a(var2, true);
+                  RegistrationUiSupport.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -80, "serviceunavailable");
                 if (null != var2) {
@@ -3116,31 +3116,31 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -66, "mustlogin3,1");
                 if (var2 != null) {
-                  jl.field_a[1] = BlackFadeScreen.a(var2, true);
+                  InputLayoutState.field_a[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -111, "mustlogin3,2");
                 if (null != var2) {
-                  jl.field_a[2] = BlackFadeScreen.a(var2, param0);
+                  InputLayoutState.field_a[2] = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -127, "mustlogin3,3");
                 if (var2 != null) {
-                  jl.field_a[3] = BlackFadeScreen.a(var2, param0);
+                  InputLayoutState.field_a[3] = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -123, "mustlogin3,4");
                 if (null != var2) {
-                  jl.field_a[4] = BlackFadeScreen.a(var2, true);
+                  InputLayoutState.field_a[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -76, "mustlogin3,5");
                 if (null != var2) {
-                  jl.field_a[5] = BlackFadeScreen.a(var2, true);
+                  InputLayoutState.field_a[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -87, "mustlogin3,6");
                 if (null != var2) {
-                  jl.field_a[6] = BlackFadeScreen.a(var2, true);
+                  InputLayoutState.field_a[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -93, "mustlogin3,7");
                 if (var2 != null) {
-                  jl.field_a[7] = BlackFadeScreen.a(var2, param0);
+                  InputLayoutState.field_a[7] = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -90, "discard");
                 if (null != var2) {

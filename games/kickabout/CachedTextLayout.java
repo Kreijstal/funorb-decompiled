@@ -22,7 +22,7 @@ final class CachedTextLayout extends TextLayout {
           LoginMethod.field_d = true;
           PasswordLoginCredentials.field_i = -SquadPickerDialog.field_Q.field_o;
           AuctionListingDialog.field_I = 0;
-          mk.field_c = param1;
+          TutorialScenerySupport.field_c = param1;
           CachedListingRow.field_i = param2;
           SocketArchiveNetworkClient.field_w = param0;
         } catch (RuntimeException runtimeException) {
@@ -102,7 +102,7 @@ final class CachedTextLayout extends TextLayout {
             CommonGame var7 = (CommonGame) null;
             CachedTextLayout.a((CommonGame) null, -19, 117);
           }
-          is.a(param3, param1, var9, 0, -1942293368);
+          TextLineLayoutSupport.computeCharacterPositions(param3, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "st.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -220,7 +220,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_41_3 = 0;
               }
-              is.a(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_41_3, -1942293368);
+              TextLineLayoutSupport.computeCharacterPositions(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_41_3, -1942293368);
             }
             var11 = var11 + param7;
             this.field_c[var12Lifetime1] = var14;
@@ -269,7 +269,7 @@ final class CachedTextLayout extends TextLayout {
           var9 = var8;
           var9.field_b[0] = -param4.a(param1) + param3;
           var9.field_b[param1.length()] = param3;
-          is.a(param4, param1, var9, 0, -1942293368);
+          TextLineLayoutSupport.computeCharacterPositions(param4, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "st.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -306,7 +306,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = param2.a(param3);
           var8.field_b[0] = param1 - (var7 >> 1);
           var8.field_b[param3.length()] = (var7 >> 1) + param1;
-          is.a(param2, param3, var8, 0, -1942293368);
+          TextLineLayoutSupport.computeCharacterPositions(param2, param3, var8, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "st.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -316,10 +316,10 @@ final class CachedTextLayout extends TextLayout {
         PasswordLoginCredentials.field_i = param0;
         if (param1 < 76) {
           field_d = (String) null;
-          hq.field_d = param2;
+          ClientInteractionSupport.field_d = param2;
           return;
         }
-        hq.field_d = param2;
+        ClientInteractionSupport.field_d = param2;
     }
 
     public CachedTextLayout() {

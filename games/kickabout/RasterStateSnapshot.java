@@ -41,7 +41,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
         int stackIn_33_0 = 0;
         int stackIn_36_0 = 0;
         var12 = null;
-        var12_ref = (RenderedBall) (et.field_d.field_V);
+        var12_ref = (RenderedBall) (ThumbnailStateFactory.field_d.field_V);
         if (param3 != var12_ref.positionX) {
           var5 = var12_ref.positionX;
           var6 = var12_ref.positionY;
@@ -133,7 +133,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           ListingRow.field_d = 0;
           BufferedSocket.field_h = null;
           GameplayHelpScreen.field_I.clear(22997);
-          qn.field_b.clear(22997);
+          SharedChatLayoutSupport.field_b.clear(22997);
           var1 = AvailabilityCheckRequest.field_b.b((byte) 72);
           while (var1 != null) {
             var1.unlinkSecondary(-104);

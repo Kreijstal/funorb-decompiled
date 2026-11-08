@@ -141,7 +141,7 @@ final class SpriteResourceSupport {
           if (param0 != 52) {
             SpriteResourceSupport.createRingSprite(34, 19);
           }
-          et.field_b = true;
+          ThumbnailStateFactory.field_b = true;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -2324,7 +2324,7 @@ final class TriangleRasterizer {
         field_k = param3 - param1;
         TriangleRasterizer.centerProjection();
         if (field_q.length < field_k) {
-          field_q = new int[ig.ceilPowerOfTwo((byte) 6, field_k)];
+          field_q = new int[MatchHudSupport.ceilPowerOfTwo((byte) 6, field_k)];
         }
         int var4 = param1 * SoftwareRasterizer.field_g + param0;
         for (var5 = 0; var5 < field_k; var5++) {

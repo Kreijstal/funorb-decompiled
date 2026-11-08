@@ -47,7 +47,7 @@ final class LoginText {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             AlphaContainer.field_C[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; vb.field_j > var2_intLifetime1; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; PitchDecorationSupport.field_j > var2_intLifetime1; var2_intLifetime1++) {
             if (GrowableIntList.field_b[var2_intLifetime1].field_c == param1.field_c) {
               dupTemp$3 = GrowableIntList.field_b[var2_intLifetime1].b(80);
               AlphaContainer.field_C[dupTemp$3] = AlphaContainer.field_C[dupTemp$3] + 1;
@@ -56,7 +56,7 @@ final class LoginText {
           dupTemp$0 = param1.b(80);
           AlphaContainer.field_C[dupTemp$0] = AlphaContainer.field_C[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; vb.field_j > var3; var3++) {
+          for (var3 = 0; PitchDecorationSupport.field_j > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_c == ~GrowableIntList.field_b[var3].field_c) {
               var4 = GrowableIntList.field_b[var3].b(80);
@@ -74,9 +74,9 @@ final class LoginText {
           if (!param0) {
             return;
           }
-          vb.field_j = var2_intLifetime2;
-          fieldTemp$1 = vb.field_j;
-          vb.field_j = vb.field_j + 1;
+          PitchDecorationSupport.field_j = var2_intLifetime2;
+          fieldTemp$1 = PitchDecorationSupport.field_j;
+          PitchDecorationSupport.field_j = PitchDecorationSupport.field_j + 1;
           GrowableIntList.field_b[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

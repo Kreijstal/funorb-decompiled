@@ -46,7 +46,7 @@ final class HighScoreSubmission extends IntrusiveNode {
         var9 = Kickabout.field_G;
         try {
           var1_int = -114 % ((32 - param0) / 47);
-          var2 = un.field_e;
+          var2 = ByteArrayPool.field_e;
           var3 = var2.readUnsignedByte((byte) -123);
           var4 = var2.readUnsignedByte((byte) -112);
           if (0 == var3) {

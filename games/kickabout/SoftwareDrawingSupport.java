@@ -440,7 +440,7 @@ final class SoftwareDrawingSupport {
         SoftwareRasterizer.fillRectangleAlpha(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
-        if (un.field_d.a(param2) > param5 - 20) {
+        if (ByteArrayPool.field_d.a(param2) > param5 - 20) {
           var12 = (double)(IsSixCommand.field_C.a(param2) - (param5 - 30));
           var14 = -(int)(Math.sin(var7 / 1000.0) * var12 + var12 / 2.0);
           IsSixCommand.field_C.a(param2, param3 + 8 + var14, param4 + (param6 >> 1) - 3, var11, -1);
@@ -456,7 +456,7 @@ final class SoftwareDrawingSupport {
         SoftwareRasterizer.fillRectangleAlpha(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
-        if (un.field_d.a(param1) > param5 - 20) {
+        if (ByteArrayPool.field_d.a(param1) > param5 - 20) {
           var12Lifetime1 = (double)(IsSixCommand.field_C.a(param1) - (param5 - 30));
           var14Lifetime1 = -(int)(Math.sin(var7 / 1000.0) * var12Lifetime1 + var12Lifetime1 / 2.0);
           IsSixCommand.field_C.a(param1, param3 + 8 + var14Lifetime1, param4 + param6 - 3, var10, -1);
@@ -612,7 +612,7 @@ final class SoftwareDrawingSupport {
         }
         var1Lifetime1 = stackIn_20_0;
         if (var1Lifetime1 == 0) {
-          stackIn_23_0 = un.field_d;
+          stackIn_23_0 = ByteArrayPool.field_d;
         } else {
           stackIn_23_0 = ConsoleTokenCursor.field_d;
         }
@@ -1081,7 +1081,7 @@ final class SoftwareDrawingSupport {
             SoftwareRasterizer.drawLineBlendedInclusive(param0, param1, param0 + var13, param1 - var12, var16, var15);
             param0++;
           }
-          SoftwareDrawingSupport.a(param2[var18], un.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
+          SoftwareDrawingSupport.a(param2[var18], ByteArrayPool.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
           param0 = param0 + var17;
         }
         param0 = var10;
@@ -1094,7 +1094,7 @@ final class SoftwareDrawingSupport {
           }
           SoftwareRasterizer.fillRectangleAlpha(param0 - var18Lifetime1 - var17, param1 + var19Lifetime1 * (param6 + var17), var18Lifetime1, param6, var20, var15);
           var21 = param8[var19Lifetime1].toLowerCase();
-          stackIn_12_0 = un.field_d;
+          stackIn_12_0 = ByteArrayPool.field_d;
           stackIn_12_1 = var21;
           stackIn_12_2 = param0 - (var18Lifetime1 >> 1);
           stackIn_12_3 = param1 + var19Lifetime1 * (param6 + var17) + (param6 + var17 + 5 >> 1);
@@ -1117,7 +1117,7 @@ final class SoftwareDrawingSupport {
             if (param4 != null) {
               var24 = var25 + param4[var22];
             }
-            stackIn_22_0 = un.field_d;
+            stackIn_22_0 = ByteArrayPool.field_d;
             stackIn_22_1 = var24;
             stackIn_22_2 = param0 + (var22 + 1) * (var11 + var17) - (var11 + var17 >> 1);
             stackIn_22_3 = param1 + var19Lifetime1 * (param6 + var17) + (param6 + var17 + 5 >> 1);
@@ -1139,7 +1139,7 @@ final class SoftwareDrawingSupport {
     }
 
     final static UiLayoutNode a(String param0, int param1) {
-        return SoftwareDrawingSupport.a(param0, param1, un.field_d);
+        return SoftwareDrawingSupport.a(param0, param1, ByteArrayPool.field_d);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

@@ -51,7 +51,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         if (param0 != 1) {
           this.drawContent(-98);
           if (this.field_a.field_f) {
-            un.field_d.a("FB", 5, 17, 16777215, -1);
+            ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
             return;
           }
           return;
@@ -59,7 +59,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         if (!this.field_a.field_f) {
           return;
         }
-        un.field_d.a("FB", 5, 17, 16777215, -1);
+        ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
     }
 
     public static void f(int param0) {
@@ -80,8 +80,8 @@ final class WaitForPlayersView extends MatchPhaseView {
           return;
         }
         if (!this.field_l) {
-          or.field_d.b(75, (byte) 74);
-          or.field_d.writeByte(121, 4);
+          FootballerAiOverlaySupport.field_d.b(75, (byte) 74);
+          FootballerAiOverlaySupport.field_d.writeByte(121, 4);
           this.field_l = true;
           return;
         }

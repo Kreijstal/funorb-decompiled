@@ -33,7 +33,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           if (param0 != -28) {
             PasswordLoginCredentials.c(-80);
           }
-          pg.field_d.serviceOutput();
+          SharedPanelFactory.field_d.serviceOutput();
           BeveledTextPainter.field_r = BeveledTextPainter.field_r - 1;
           if (BeveledTextPainter.field_r == 0) {
             BeveledTextPainter.field_r = 200;
@@ -184,7 +184,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ClubStateFactory.field_f != vj.field_a) {
+          if (ClubStateFactory.field_f != RasterGlowSupport.field_a) {
             return false;
           }
           var8 = new RegistrationRequestDialog(RankingsRequest.field_l, param4);
@@ -192,7 +192,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           if (!DiagnosticsOverlaySupport.c((byte) 59)) {
             ArchiveIndex.field_a = null;
             ArchiveManager.field_c = param2;
-            tn.field_b = param5;
+            SocialUiState.field_b = param5;
             AccountRegistrationResponse.field_i = param6;
             ClubStateFactory.field_f = PlayerModelPreview.field_f;
             AccountInputValidationResult.field_a = param1;
@@ -241,7 +241,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
-          var9 = or.field_d;
+          var9 = FootballerAiOverlaySupport.field_d;
           CipherPacketBuffer var6 = var9;
           var9.b(param3, (byte) 104);
           var9.field_n = var9.field_n + 1;
@@ -254,7 +254,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           if (param5 == null) {
             var9.writeShort(-1207444472, param0);
           } else {
-            cu.writeHuffmanString((byte) 104, param5, var9);
+            RankingRowFactory.writeHuffmanString((byte) 104, param5, var9);
           }
           var9.backpatchByteLength(62, -var7 + var9.field_n);
         } catch (RuntimeException runtimeException) {

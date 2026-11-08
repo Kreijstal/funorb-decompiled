@@ -73,11 +73,11 @@ final class PlayerSurnameSortCriterion extends SortCriterion {
         if (2 < ConsoleTokenCursor.field_b) {
           ConsoleTokenCursor.field_b = 2;
         }
-        fc.field_a = param0 & 3;
-        if (fc.field_a <= 2) {
+        LoginResponseUiSupport.field_a = param0 & 3;
+        if (LoginResponseUiSupport.field_a <= 2) {
           return;
         }
-        fc.field_a = 2;
+        LoginResponseUiSupport.field_a = 2;
     }
 
     final int compare(int param0, Object param1, Object param2) {

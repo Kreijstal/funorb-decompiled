@@ -262,14 +262,14 @@ final class WidgetTheme {
               var13 = var9 / var8;
               var12 = 2 * ((var13 + var9 % var8 - 1) / var13) + var8;
             }
-            if (null == tl.field_a) {
-              tl.field_a = new String[16];
+            if (null == ConsoleTokenParser.field_a) {
+              ConsoleTokenParser.field_a = new String[16];
             }
-            var11Lifetime1 = this.field_a.wrapText(param1, new int[]{var12}, tl.field_a);
+            var11Lifetime1 = this.field_a.wrapText(param1, new int[]{var12}, ConsoleTokenParser.field_a);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_a.a(tl.field_a[var13Lifetime2]);
+              var14 = this.field_a.a(ConsoleTokenParser.field_a[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

@@ -95,7 +95,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (var3_int >= 12) {
             return false;
           }
-          if (!ca.isNameSeparator(param0, param2)) {
+          if (!GradientRasterSupport.isNameSeparator(param0, param2)) {
             return true;
           }
           if (var3_int != 0) {
@@ -189,13 +189,13 @@ final class StatefulTextPainter extends TextWidgetPainter {
         var13 = Kickabout.field_G;
         try {
           LoadingProgressSupport.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
-          vb.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
+          PitchDecorationSupport.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
           KeyedLoginCredentials.field_f = SpriteResourceSupport.loadNamedSprite((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
           ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
-          fj.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
+          ConsoleLexer.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
           var17 = new Sprite(param0.takeFileByName("", "button.gif", 34), (java.awt.Component) ((Object) RegistrationRequestState.field_d));
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
@@ -221,7 +221,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             var14 = var6[var9];
             var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = ul.a(var5[var9], (byte) 100, var19[var11_int]);
+              var14[var11_int] = TextInputUiSupport.copyWithPalette(var5[var9], (byte) 100, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_w;

@@ -141,13 +141,13 @@ final class StatChoiceDialog extends MessageDialog {
             if (!PlayArea.a(100)) {
               var4 = new ManagerAction(3, new int[]{this.field_P, this.field_H});
               if (AuctionLogEntry.field_h instanceof MatchScreen &&
-                null != um.field_e &&
-                um.field_e.isGameOverViewShown((byte) 76)) {
-                um.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
+                null != MachineTokenStorageSupport.field_e &&
+                MachineTokenStorageSupport.field_e.isGameOverViewShown((byte) 76)) {
+                MachineTokenStorageSupport.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
               }
             }
           } else {
-            cu.a((byte) -5, this.field_P, this.field_H);
+            RankingRowFactory.a((byte) -5, this.field_P, this.field_H);
           }
         }
     }

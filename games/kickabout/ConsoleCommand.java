@@ -143,7 +143,7 @@ abstract class ConsoleCommand extends DualLinkNode {
     abstract ConsoleValue execute(byte param0, ConsoleValue[] param1);
 
     final static void a(int param0, int param1, boolean param2, NineSlicePanelPainter param3) {
-        mt.field_a = param1;
+        GoalSpriteLoader.field_a = param1;
         if (param2) {
           return;
         }

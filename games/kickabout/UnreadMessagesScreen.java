@@ -86,7 +86,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             CachedTextLayout.field_m = DisplayModeSupport.concatenate(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
           }
           WorldSpriteSequence.field_f.closeDialog(-105);
-          fj.showLoadingProgressDialog(param0 ^ 44);
+          ConsoleLexer.showLoadingProgressDialog(param0 ^ 44);
         }
     }
 
@@ -122,23 +122,23 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
               }
               var3 = var3 + param0;
             }
-            or.printError(var3, param2 ^ 0);
+            FootballerAiOverlaySupport.printError(var3, param2 ^ 0);
             var7 = ThreadSleepSupport.replaceAll(-1, ":", "%3a", var3);
             var8 = ThreadSleepSupport.replaceAll(param2 ^ -2, "@", "%40", var7);
             var9 = ThreadSleepSupport.replaceAll(-1, "&", "%26", var8);
             var10 = ThreadSleepSupport.replaceAll(-1, "#", "%23", var9);
-            if (null == ug.field_a) {
+            if (null == SocialListLayoutSupport.field_a) {
               return;
             }
             stackIn_13_0 = DelegatingCanvas.field_a;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
-            stackIn_13_3 = ug.field_a.getCodeBase();
+            stackIn_13_3 = SocialListLayoutSupport.field_a.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(RotaryDialPainter.field_e).append("&u=");
             if (null == ModelMaterialDecoder.field_b) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = "" + tn.field_a;
+              stackIn_14_5 = "" + SocialUiState.field_a;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;

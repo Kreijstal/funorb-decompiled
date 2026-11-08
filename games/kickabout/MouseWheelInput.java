@@ -251,7 +251,7 @@ abstract class MouseWheelInput {
     }
 
     final static void a(int param0) {
-        or.field_d.b(9, (byte) -52);
+        FootballerAiOverlaySupport.field_d.b(9, (byte) -52);
         if (param0 != -1822) {
           MouseWheelInput.a(-16, -37);
           LoginText.field_e = true;

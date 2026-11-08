@@ -50,8 +50,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var16 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRoundedRectangleBlended(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
-        SoftwareRasterizer.fillRoundedRectangleBlended(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
-        bq.field_d.draw(46, false);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-4 + MatchUiLayoutSupport.field_d.field_F, -4 + MatchUiLayoutSupport.field_d.field_T, 2 + MatchUiLayoutSupport.field_d.field_q, 4 + (MatchUiLayoutSupport.field_d.field_mb << 1), 8, 0, 128);
+        MatchUiLayoutSupport.field_d.draw(46, false);
         ModalPanel.field_D.draw(97, false);
         ContextMenuItem.field_Ib.draw(param0 + 84, false);
         AuctionListing.a(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
@@ -104,11 +104,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
               var12 = field_A;
             }
             var11 += 16;
-            var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+            var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
             var18.c(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
             var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
             var11 += 18;
-            var18.c(po.field_d, var7 + var13, var11, 16777215, -1);
+            var18.c(SocialRowOrderSupport.field_d, var7 + var13, var11, 16777215, -1);
             for (var14 = WidgetTheme.field_g[var5] / 100; var14 > 0; var14--) {
               var15 = 5 * var14 + (var13 + (var7 - 2));
               PlayerShopScreen.field_R.drawHalfSize(var15, -14 + var11);
@@ -132,11 +132,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var12Lifetime2 = field_A;
           }
           var11Lifetime2 += 16;
-          var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
           var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
           var11Lifetime2 += 18;
-          var18.c(po.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
+          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
           for (var14Lifetime3 = WidgetTheme.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
             var15Lifetime2 = 5 * var14Lifetime3 + (var13Lifetime2 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime2, -14 + var11Lifetime2);
@@ -161,11 +161,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
-          var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
@@ -177,11 +177,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
-          var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
@@ -200,16 +200,16 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var2 = 0;
         UiLayoutNode var3 = null;
         int var4 = Kickabout.field_G;
-        bq.field_d = SoftwareDrawingSupport.a(false);
+        MatchUiLayoutSupport.field_d = SoftwareDrawingSupport.a(false);
         ModalPanel.field_D = SoftwareDrawingSupport.a(true);
         for (var2 = 0; 2 > var2; var2++) {
-          var3 = var2 == 0 ? bq.field_d : ModalPanel.field_D;
+          var3 = var2 == 0 ? MatchUiLayoutSupport.field_d : ModalPanel.field_D;
           var3.field_N.rotateClockwise();
           var3.field_vb.rotateClockwise();
           var3.field_r.rotateClockwise();
           var3.field_t.rotateClockwise();
         }
-        bq.field_d.field_lb = false;
+        MatchUiLayoutSupport.field_d.field_lb = false;
         ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
@@ -232,7 +232,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var6 = Kickabout.field_G;
         int var4Lifetime1;
         super.updateScreen((byte) 101, param1);
-        bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
+        MatchUiLayoutSupport.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
         int var3 = 41 % ((param0 - 38) / 60);
         ModalPanel.field_D.setBounds(true, 32, this.slideOffsetX + 310, 176, 32);
         ContextMenuItem.field_Ib.setBounds(true, 300, 45 + this.slideOffsetX, 70, 200);
@@ -240,7 +240,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           this.field_B = this.field_B - 1;
           var4 = ContextMenuItem.field_Ib.field_Db.field_J;
           ContextMenuItem.field_Ib.updateInput(0, param1);
-          bq.field_d.updateInput(0, param1);
+          MatchUiLayoutSupport.field_d.updateInput(0, param1);
           ModalPanel.field_D.updateInput(0, param1);
           RenderedBall.field_C = -1;
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
@@ -285,7 +285,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         }
         var4Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
         ContextMenuItem.field_Ib.updateInput(0, param1);
-        bq.field_d.updateInput(0, param1);
+        MatchUiLayoutSupport.field_d.updateInput(0, param1);
         ModalPanel.field_D.updateInput(0, param1);
         RenderedBall.field_C = -1;
         var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
@@ -332,7 +332,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var8 = Kickabout.field_G;
         var2 = 0;
         var3 = 0;
-        if (bq.field_d.field_qb == 1) {
+        if (MatchUiLayoutSupport.field_d.field_qb == 1) {
           if (0 == WelcomeDialog.field_I % 2) {
             var2 = 1;
             ContextMenuItem.field_Ib.field_Db.field_v = ContextMenuItem.field_Ib.field_Db.field_v + 16;
@@ -360,9 +360,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var5 = ContextMenuItem.field_Ib.field_Db.field_J;
             var6 = ContextMenuItem.field_Ib.field_Db.field_v;
             if (-(var5 + var6) >= 0) {
-              bq.field_d.field_lb = true;
+              MatchUiLayoutSupport.field_d.field_lb = true;
             } else {
-              bq.field_d.field_lb = false;
+              MatchUiLayoutSupport.field_d.field_lb = false;
               ContextMenuItem.field_Ib.field_Db.field_v = -var5;
             }
             var7 = ContextMenuItem.field_Ib.field_Db.field_mb;
@@ -386,9 +386,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var5Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_J;
         var6Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_v;
         if (-(var5Lifetime1 + var6Lifetime1) >= 0) {
-          bq.field_d.field_lb = true;
+          MatchUiLayoutSupport.field_d.field_lb = true;
         } else {
-          bq.field_d.field_lb = false;
+          MatchUiLayoutSupport.field_d.field_lb = false;
           ContextMenuItem.field_Ib.field_Db.field_v = -var5Lifetime1;
         }
         var7Lifetime1 = ContextMenuItem.field_Ib.field_Db.field_mb;
@@ -476,10 +476,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         try {
           super.setTransitionProgress(param0, param1, -70, param3);
-          bq.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
+          MatchUiLayoutSupport.field_d.setBounds(true, 32, 310 + this.slideOffsetX, 144, 32);
           ModalPanel.field_D.setBounds(true, 32, 310 + this.slideOffsetX, 176, 32);
           ContextMenuItem.field_Ib.setBounds(true, 300, this.slideOffsetX + 45, 70, 200);
-          bq.field_d.updateInput(0, false);
+          MatchUiLayoutSupport.field_d.updateInput(0, false);
           ModalPanel.field_D.updateInput(0, false);
           ContextMenuItem.field_Ib.updateInput(0, false);
           if (param2 >= -28) {

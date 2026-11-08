@@ -42,7 +42,7 @@ final class MySquadScreen extends TeamManagementScreen {
           if (!RegistrationRequestState.field_h.a(-4)) {
             ValidationIndicator.field_F = true;
           } else {
-            or.field_d.b(63, (byte) -86);
+            FootballerAiOverlaySupport.field_d.b(63, (byte) -86);
           }
         }
         this.rebuildPlayerPanel(param0 - 46);
@@ -53,7 +53,7 @@ final class MySquadScreen extends TeamManagementScreen {
         if (param1 < 99) {
           this.field_S = 96;
         }
-        ig.b(this.slideOffsetX, -12452);
+        MatchHudSupport.drawNumericRewardPanel(this.slideOffsetX, -12452);
     }
 
     final void refreshSelectedPlayer(byte param0) {
@@ -183,12 +183,12 @@ final class MySquadScreen extends TeamManagementScreen {
         var3 = (UiLayoutNode) (this.field_Y.field_jb.g(24009));
         while (var3 != null) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
-          un.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
+          ByteArrayPool.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
           var3 = (UiLayoutNode) (this.field_Y.field_jb.c(33));
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
-        un.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
+        ByteArrayPool.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
         var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
@@ -217,7 +217,7 @@ final class MySquadScreen extends TeamManagementScreen {
           var5.a(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
           var11 += 22;
           var5.c(PromotionDialog.field_H, var10, var11, 268435455, -1);
-          var5.a(uf.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
+          var5.a(RegistrationUiSupport.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
@@ -279,7 +279,7 @@ final class MySquadScreen extends TeamManagementScreen {
                     }
                   } else {
                     if (var17_int != 1) {
-                      var20 = ql.field_c[var28.field_s];
+                      var20 = MatchHudRoutingSupport.field_c[var28.field_s];
                     } else {
                       if (var28.field_r) {
                         var20 = LocalizedTextLoader.formatCurrencyAmount(var28.field_t, 26300);
@@ -409,7 +409,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_I.field_E = ClientUiOverlay.field_g.toLowerCase();
         this.field_W.field_E = ConsoleTokenCursor.field_f.toLowerCase();
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
-        this.field_G.field_E = ca.field_d.toLowerCase();
+        this.field_G.field_E = GradientRasterSupport.field_d.toLowerCase();
         this.field_X.field_E = BlobSubmission.field_k.toLowerCase();
         this.field_Q = SoftwareDrawingSupport.a(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new UiLayoutNode[]{};

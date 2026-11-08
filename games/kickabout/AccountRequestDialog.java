@@ -176,7 +176,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           var7 = new AccountMessagePanel(this, this.field_eb, param2);
           var4 = var7;
           if (param0 == 5) {
-            var7.a((byte) 72, 11, ql.field_d);
+            var7.a((byte) 72, 11, MatchHudRoutingSupport.field_d);
             var7.a((byte) 104, 17, AccountNameAvailabilityValidator.field_o);
           } else {
             if (param0 == 256) {
@@ -188,7 +188,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               if (this.field_gb) {
                 stackIn_11_3 = QuickChatCategoryCache.field_d;
               } else {
-                stackIn_11_3 = is.field_f;
+                stackIn_11_3 = TextLineLayoutSupport.field_f;
               }
               ((AccountMessagePanel) (Object) stackIn_10_0).a((byte) stackIn_10_1, stackIn_10_2, stackIn_11_3);
             }

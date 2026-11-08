@@ -76,7 +76,7 @@ final class IconLabel extends UiLayoutNode {
         byte[] var12 = null;
         var6 = Kickabout.field_G;
         try {
-          var8 = un.field_e;
+          var8 = ByteArrayPool.field_e;
           var2 = var8.readUnsignedByte((byte) -114);
           if (param0 == var2) {
             var3_ref_k = (StreetSceneryLoader) (IterableDualLinkDeque.field_f.g(param0 ^ 24009));

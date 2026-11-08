@@ -210,7 +210,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (!cu.decodeSpriteSheetFromArchive(param1, param2, param0, param3 ^ -105)) {
+          if (!RankingRowFactory.decodeSpriteSheetFromArchive(param1, param2, param0, param3 ^ -105)) {
             return null;
           }
           stackIn_7_0 = MatchAgent.b(param3 + 9);

@@ -167,7 +167,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         int var3 = Kickabout.field_G;
         IndexedSprite[] var1 = new IndexedSprite[MenuButton.field_l];
         for (var2 = 0; var2 < MenuButton.field_l; var2++) {
-          var1[var2] = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], SquadPickerDialog.field_O[var2], lt.field_a);
+          var1[var2] = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], SquadPickerDialog.field_O[var2], PlayAreaMovementSupport.field_a);
         }
         if (param0 <= 78) {
           NumericDateInputWidget.n(-91);

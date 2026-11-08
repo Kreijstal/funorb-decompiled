@@ -79,7 +79,7 @@ abstract class AppScreen {
           SocialPlayerRow.field_Db = param6;
           GzipDecoder.field_f = param1;
           AlternateKeyedLoginCredentials.field_k = param5;
-          or.field_c = param3;
+          FootballerAiOverlaySupport.field_c = param3;
           ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           SplashScreen.field_i = new DiskCacheWorker(param2);
           FriendsListPanel.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
@@ -127,50 +127,50 @@ abstract class AppScreen {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (SpriteBackgroundSupport.field_d == un.field_c) {
+            if (SpriteBackgroundSupport.field_d == ByteArrayPool.field_c) {
               if (param3) {
                 var10 = (String) null;
                 FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, DiagnosticsOverlaySupport.field_d, (byte) 30, false, (String) null);
               } else {
                 FullscreenFocusCanvas.field_h = LeaderboardParticipant.a(-111, param4, false, param1);
               }
-              or.field_d.field_n = 0;
-              or.field_d.writeByte(108, 14);
-              or.field_d.writeByte(124, FullscreenFocusCanvas.field_h.getLoginKind((byte) -104).field_a);
+              FootballerAiOverlaySupport.field_d.field_n = 0;
+              FootballerAiOverlaySupport.field_d.writeByte(108, 14);
+              FootballerAiOverlaySupport.field_d.writeByte(124, FullscreenFocusCanvas.field_h.getLoginKind((byte) -104).field_a);
               ClientPacketFlushSupport.flushPackets(-1, false);
-              un.field_c = uk.field_c;
+              ByteArrayPool.field_c = SharedScrollbarState.field_c;
             }
-            if (un.field_c == uk.field_c &&
+            if (ByteArrayPool.field_c == SharedScrollbarState.field_c &&
               SetLagCommand.a((byte) -98, 1)) {
-              var6_int = un.field_e.readUnsignedByte((byte) -123);
+              var6_int = ByteArrayPool.field_e.readUnsignedByte((byte) -123);
               if (var6_int == 0) {
-                un.field_c = tl.field_c;
+                ByteArrayPool.field_c = ConsoleTokenParser.field_c;
               } else {
                 MusicVolumeSupport.field_b = -1;
                 AppletContextSupport.field_b = var6_int;
-                un.field_c = AccountRequestDialog.field_fb;
+                ByteArrayPool.field_c = AccountRequestDialog.field_fb;
               }
-              un.field_e.field_n = 0;
+              ByteArrayPool.field_e.field_n = 0;
             }
-            if (un.field_c == tl.field_c &&
+            if (ByteArrayPool.field_c == ConsoleTokenParser.field_c &&
               SetLagCommand.a((byte) 115, 8)) {
-              AccountInputValidationResult.field_c = un.field_e.readLong((byte) -124);
-              un.field_e.field_n = 0;
-              nc.a(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
-              un.field_c = ClubState.field_c;
+              AccountInputValidationResult.field_c = ByteArrayPool.field_e.readLong((byte) -124);
+              ByteArrayPool.field_e.field_n = 0;
+              LoginPacketSupport.sendLoginPacket(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
+              ByteArrayPool.field_c = ClubState.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (un.field_c == ClubState.field_c &&
+            if (ByteArrayPool.field_c == ClubState.field_c &&
               SetLagCommand.a((byte) -127, 1)) {
-              var6_intLifetime1 = un.field_e.readUnsignedByte((byte) -105);
+              var6_intLifetime1 = ByteArrayPool.field_e.readUnsignedByte((byte) -105);
               AppletContextSupport.field_b = var6_intLifetime1;
               BroadcastServerCommand.field_A = null;
-              un.field_e.field_n = 0;
+              ByteArrayPool.field_e.field_n = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
                   MusicVolumeSupport.field_b = -1;
-                  un.field_c = AccountRequestDialog.field_fb;
+                  ByteArrayPool.field_c = AccountRequestDialog.field_fb;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -181,27 +181,27 @@ abstract class AppScreen {
                 }
               }
               if (decompiledFrameRemainder0) {
-                un.field_c = AuctionListingDialog.field_H;
+                ByteArrayPool.field_c = AuctionListingDialog.field_H;
                 MusicVolumeSupport.field_b = -1;
               }
             }
-            if (AuctionListingDialog.field_H == un.field_c &&
+            if (AuctionListingDialog.field_H == ByteArrayPool.field_c &&
               LoginCredentials.a(180)) {
-              DiagnosticsOverlaySupport.field_d = un.field_e.readLong((byte) -124);
+              DiagnosticsOverlaySupport.field_d = ByteArrayPool.field_e.readLong((byte) -124);
               LoginMethod.field_e = param4;
-              ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
-              LobbyMatchPreview.field_c = un.field_e.readUnsignedByte((byte) -112);
-              WeightedLruCache.field_d = un.field_e.readUnsignedShort((byte) 81);
-              var11 = un.field_e.a(true);
-              var7 = un.field_e.readUnsignedByte((byte) -106);
+              ScrollContainer.field_Ib = ByteArrayPool.field_e.readUnsignedByte((byte) -118);
+              LobbyMatchPreview.field_c = ByteArrayPool.field_e.readUnsignedByte((byte) -112);
+              WeightedLruCache.field_d = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
+              var11 = ByteArrayPool.field_e.a(true);
+              var7 = ByteArrayPool.field_e.readUnsignedByte((byte) -106);
               if ((1 & var7) != 0) {
-                um.a((byte) 114);
+                MachineTokenStorageSupport.storeMachineToken((byte) 114);
               }
               if (!param3) {
                 stackIn_51_0 = (0 != (2 & var7));
                 WriteIntegersCommand.field_C = stackIn_51_0;
                 stackIn_54_0 = ((4 & var7) != 0);
-                fc.field_f = stackIn_54_0;
+                LoginResponseUiSupport.field_f = stackIn_54_0;
                 stackIn_57_0 = ((var7 & 8) != 0);
                 PacketBuffer.field_l = stackIn_57_0;
                 if (PacketBuffer.field_l) {
@@ -210,34 +210,34 @@ abstract class AppScreen {
                 stackIn_62_0 = ((16 & var7) != 0);
                 DateOfBirthPanel.field_E = stackIn_62_0;
                 if (ParticipantAgent.field_n) {
-                  un.field_e.readUnsignedByte((byte) -118);
-                  vp.field_h = un.field_e.readUnsignedByte((byte) -124);
-                  un.field_e.readInt(4);
-                  field_e = un.field_e.readUnsignedShort((byte) 81);
+                  ByteArrayPool.field_e.readUnsignedByte((byte) -118);
+                  MatchTextInputOverlay.field_h = ByteArrayPool.field_e.readUnsignedByte((byte) -124);
+                  ByteArrayPool.field_e.readInt(4);
+                  field_e = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
                   KitStyleTile.field_yb = new byte[field_e];
                   for (var8 = 0; var8 < field_e; var8++) {
-                    KitStyleTile.field_yb[var8] = un.field_e.readByte((byte) -114);
+                    KitStyleTile.field_yb[var8] = ByteArrayPool.field_e.readByte((byte) -114);
                   }
                 }
               } else {
                 stackIn_43_0 = ((16 & var7) != 0);
                 DateOfBirthPanel.field_E = stackIn_43_0;
                 if (ParticipantAgent.field_n) {
-                  un.field_e.readUnsignedByte((byte) -118);
-                  vp.field_h = un.field_e.readUnsignedByte((byte) -124);
-                  un.field_e.readInt(4);
-                  field_e = un.field_e.readUnsignedShort((byte) 81);
+                  ByteArrayPool.field_e.readUnsignedByte((byte) -118);
+                  MatchTextInputOverlay.field_h = ByteArrayPool.field_e.readUnsignedByte((byte) -124);
+                  ByteArrayPool.field_e.readInt(4);
+                  field_e = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
                   KitStyleTile.field_yb = new byte[field_e];
                   for (var8 = 0; var8 < field_e; var8++) {
-                    KitStyleTile.field_yb[var8] = un.field_e.readByte((byte) -114);
+                    KitStyleTile.field_yb[var8] = ByteArrayPool.field_e.readByte((byte) -114);
                   }
                 }
               }
-              ArchiveSource.field_e = un.field_e.readString(8);
+              ArchiveSource.field_e = ByteArrayPool.field_e.readString(8);
               var12 = (CharSequence) ((Object) ArchiveSource.field_e);
               DebugConsole.field_w = MatchAgent.a(0, var12);
-              PlayerArchetypeSortCriterion.field_n = un.field_e.readUnsignedByte((byte) -128);
-              un.field_c = RegistrationRequestDialog.field_rb;
+              PlayerArchetypeSortCriterion.field_n = ByteArrayPool.field_e.readUnsignedByte((byte) -128);
+              ByteArrayPool.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {
                 if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -115) == MatchScreen.field_w) {
                   AccountRegistrationPanel.field_I.saveLastLoginMethod(-122, AppletContextSupport.getActiveApplet(-115));
@@ -250,7 +250,7 @@ abstract class AppScreen {
                 BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(47), true, var11);
               }
               if (WeightedLruCache.field_d <= 0 &&
-                !fc.field_f) {
+                !LoginResponseUiSupport.field_f) {
                 try {
                   AppletJavaScriptBridge.a(30858, "unzap", AppletContextSupport.getActiveApplet(-110));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -268,15 +268,15 @@ abstract class AppScreen {
               if (WeightedLruCache.field_d > 0) {
                 GrowableIntList.field_c = true;
               }
-              or.field_d.installCipher((byte) 117, UrlRequest.field_f);
+              FootballerAiOverlaySupport.field_d.installCipher((byte) 117, UrlRequest.field_f);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 UrlRequest.field_f[var8Lifetime1] = UrlRequest.field_f[var8Lifetime1] + 50;
               }
-              un.field_e.installCipher((byte) 125, UrlRequest.field_f);
+              ByteArrayPool.field_e.installCipher((byte) 125, UrlRequest.field_f);
               stackIn_91_0 = AppletContextSupport.field_b;
               return stackIn_91_0;
             }
-            if (AccountRequestDialog.field_fb == un.field_c &&
+            if (AccountRequestDialog.field_fb == ByteArrayPool.field_c &&
               LoginCredentials.a(180)) {
               FormationView.b((byte) -116);
               if (AppletContextSupport.field_b == 7 &&
@@ -288,7 +288,7 @@ abstract class AppScreen {
               if (7 == AppletContextSupport.field_b) {
                 AppletContextSupport.field_b = 3;
               }
-              ListingRowCache.field_b = un.field_e.readString(4);
+              ListingRowCache.field_b = ByteArrayPool.field_e.readString(4);
               ContextMenuItem.field_Db = false;
               stackIn_102_0 = AppletContextSupport.field_b;
               return stackIn_102_0;

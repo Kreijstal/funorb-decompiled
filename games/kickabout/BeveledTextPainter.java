@@ -226,9 +226,9 @@ class BeveledTextPainter extends TextWidgetPainter {
           }
           LineupPositionSupport.field_c = 15;
           DiskCacheWorker.field_b = 4;
-          ig.field_c = 11;
+          MatchHudSupport.field_c = 11;
           BytePlusOneCommand.field_I = 2;
-          mj.field_b = 2;
+          PitchAppearanceSupport.field_b = 2;
           var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
           ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
           CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
@@ -258,7 +258,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           DoSomethingCommand.field_B = new UiLayoutNode(0L, (UiLayoutNode) null);
           DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
           ClientProtocolStage.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ClientProtocolStage.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
+          ClientProtocolStage.field_c.field_R = PanelSpriteFactory.createPanelSprites(114, 3, 1, 6316128, 6316128, (byte) 92);
           StrongCacheEntry.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
           StrongCacheEntry.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
           var12 = ClientException.a(ModalStack.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
@@ -274,9 +274,9 @@ class BeveledTextPainter extends TextWidgetPainter {
           TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
           TrinketIcon.field_zb.field_kb = 2;
           TrinketIcon.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
-          gw.field_a = new UiLayoutNode(0L, var10);
-          gw.field_a.field_kb = 2;
-          gw.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
+          HuffmanTextSupport.field_a = new UiLayoutNode(0L, var10);
+          HuffmanTextSupport.field_a.field_kb = 2;
+          HuffmanTextSupport.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
           SquadPickerDialog.field_P = new UiLayoutNode(0L, var10);
           SquadPickerDialog.field_P.field_kb = 2;
           SquadPickerDialog.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
@@ -285,13 +285,13 @@ class BeveledTextPainter extends TextWidgetPainter {
           ConsoleEvaluationException.field_e.field_y = 13421772;
           ConsoleEvaluationException.field_e.field_xb = LineupPositionSupport.field_c;
           ConsoleEvaluationException.field_e.field_p = 1;
-          ul.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          ul.field_c.field_hb = 8421504;
-          ul.field_c.field_H = 16777215;
-          ul.field_c.field_ab = 16777215;
-          ul.field_c.field_ub = 16777215;
-          ul.field_c.field_y = 16764006;
-          var15 = new UiLayoutNode(0L, ul.field_c);
+          TextInputUiSupport.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          TextInputUiSupport.field_c.field_hb = 8421504;
+          TextInputUiSupport.field_c.field_H = 16777215;
+          TextInputUiSupport.field_c.field_ab = 16777215;
+          TextInputUiSupport.field_c.field_ub = 16777215;
+          TextInputUiSupport.field_c.field_y = 16764006;
+          var15 = new UiLayoutNode(0L, TextInputUiSupport.field_c);
           var15.field_y = 16777215;
           var15.field_X = (BitmapFont) ((Object) var7);
           var15.field_xb = LineupPositionSupport.field_c;
@@ -302,12 +302,12 @@ class BeveledTextPainter extends TextWidgetPainter {
           DisplayModeSupport.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           DisplayModeSupport.field_b.field_kb = 2;
           AuctionSettingsDialog.field_J = new UiLayoutNode(0L, RasterGammaSupport.field_c);
-          AuctionSettingsDialog.field_J.applyStyle(ul.field_c, (byte) -100);
+          AuctionSettingsDialog.field_J.applyStyle(TextInputUiSupport.field_c, (byte) -100);
           BlobSubmission.field_f = new UiLayoutNode(0L, DisplayModeSupport.field_b);
-          BlobSubmission.field_f.applyStyle(ul.field_c, (byte) -85);
+          BlobSubmission.field_f.applyStyle(TextInputUiSupport.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, LineupPositionSupport.field_c);
-          MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
+          WidgetStyleFactory.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, TextInputUiSupport.field_c, 3, 2, PitchAppearanceSupport.field_b, 3, LineupPositionSupport.field_c);
+          MouseWheelInput.field_e = new UiLayoutNode(0L, TextInputUiSupport.field_c);
           MouseWheelInput.field_e.field_R = var13;
           MouseWheelInput.field_e.field_eb = 1;
           MouseWheelInput.field_e.field_S = var16;
@@ -318,15 +318,15 @@ class BeveledTextPainter extends TextWidgetPainter {
           MouseWheelInput.field_e.field_u = ModalStack.a(param4, -119, "lobby", "button_active");
           MouseWheelInput.field_e.field_tb = ModalStack.a(param4, -119, "lobby", "button_disabled");
           MouseWheelInput.field_e.field_A = 1;
-          MatchingTextValidator.field_n = new UiLayoutNode(0L, ul.field_c);
+          MatchingTextValidator.field_n = new UiLayoutNode(0L, TextInputUiSupport.field_c);
           MatchingTextValidator.field_n.field_A = 1;
           MatchingTextValidator.field_n.field_R = ClientException.a(ModalStack.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
           MatchingTextValidator.field_n.field_S = ClientException.a(ModalStack.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
           MatchingTextValidator.field_n.field_u = var14;
           MouseInputHandler.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
-          MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
+          MouseInputHandler.field_b.field_R = PanelSpriteFactory.createPanelSprites(206, 3, -1, 1856141, 1127256, (byte) 91);
           AudioService.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
-          AudioService.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
+          AudioService.field_g.field_R = PanelSpriteFactory.createPanelSprites(290, 3, -1, 11579568, 6052956, (byte) 118);
           TextFieldNode.field_Qb = new UiLayoutNode(0L, var15);
           TextFieldNode.field_Qb.field_A = 1;
           TextFieldNode.field_Qb.field_eb = 1;
@@ -334,24 +334,24 @@ class BeveledTextPainter extends TextWidgetPainter {
           TextFieldNode.field_Qb.field_x = 1;
           TextFieldNode.field_Qb.field_O = 1;
           PortraitCacheOrder.field_a = new UiLayoutNode(0L, TextFieldNode.field_Qb);
-          um.field_d = new UiLayoutNode(0L, ul.field_c);
-          um.field_d.field_cb = 1;
-          um.field_d.field_O = 1;
-          um.field_d.field_A = 1;
-          um.field_d.field_x = 1;
-          um.field_d.field_eb = 1;
-          LoggedPlayer.field_r = new UiLayoutNode(0L, um.field_d);
-          DisplayNameForm.field_F = new UiLayoutNode(0L, um.field_d);
+          MachineTokenStorageSupport.field_d = new UiLayoutNode(0L, TextInputUiSupport.field_c);
+          MachineTokenStorageSupport.field_d.field_cb = 1;
+          MachineTokenStorageSupport.field_d.field_O = 1;
+          MachineTokenStorageSupport.field_d.field_A = 1;
+          MachineTokenStorageSupport.field_d.field_x = 1;
+          MachineTokenStorageSupport.field_d.field_eb = 1;
+          LoggedPlayer.field_r = new UiLayoutNode(0L, MachineTokenStorageSupport.field_d);
+          DisplayNameForm.field_F = new UiLayoutNode(0L, MachineTokenStorageSupport.field_d);
           LongPlusOneCommand.field_D = new UiLayoutNode(0L, TextFieldNode.field_Qb);
-          TrinketPickerDialog.field_F = new UiLayoutNode(0L, um.field_d);
-          MonotonicClock.field_d = new UiLayoutNode(0L, um.field_d);
-          StreetSceneryLoader.field_f = new UiLayoutNode(0L, um.field_d);
-          um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
-          um.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
+          TrinketPickerDialog.field_F = new UiLayoutNode(0L, MachineTokenStorageSupport.field_d);
+          MonotonicClock.field_d = new UiLayoutNode(0L, MachineTokenStorageSupport.field_d);
+          StreetSceneryLoader.field_f = new UiLayoutNode(0L, MachineTokenStorageSupport.field_d);
+          MachineTokenStorageSupport.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
+          MachineTokenStorageSupport.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
           dupTemp$0 = ClientException.a(ModalStack.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
-          um.field_d.field_u = dupTemp$0;
-          um.field_d.field_rb = dupTemp$0;
-          um.field_d.field_tb = ClientException.a(ModalStack.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
+          MachineTokenStorageSupport.field_d.field_u = dupTemp$0;
+          MachineTokenStorageSupport.field_d.field_rb = dupTemp$0;
+          MachineTokenStorageSupport.field_d.field_tb = ClientException.a(ModalStack.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
           PortraitCacheOrder.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
           PortraitCacheOrder.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
           PortraitCacheOrder.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
@@ -386,7 +386,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           MonotonicClock.field_d.field_u = dupTemp$3;
           MonotonicClock.field_d.field_rb = dupTemp$3;
           var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
-          MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
+          MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, TextInputUiSupport.field_c, (String) null);
           ScrollPane.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
           ScrollPane.field_Hb.field_R = CanvasResizePolicy.centerOnlyPanelSlices((byte) -83, SpriteResourceSupport.loadNamedSprite((byte) 98, "lobby", param4, "slideregion"));
           ScrollPane.field_Hb.field_S = CanvasResizePolicy.centerOnlyPanelSlices((byte) -96, SpriteResourceSupport.loadNamedSprite((byte) 113, "lobby", param4, "slideregion_mouseover"));
@@ -407,8 +407,8 @@ class BeveledTextPainter extends TextWidgetPainter {
           IterableDualLinkDeque.field_b.field_vb = SpriteResourceSupport.loadNamedSprite((byte) 108, "lobby", param4, "downbutton_mouseover");
           IterableDualLinkDeque.field_b.field_r = SpriteResourceSupport.loadNamedSprite((byte) 115, "lobby", param4, "downbutton_mouseheld");
           IterableDualLinkDeque.field_b.field_t = SpriteResourceSupport.loadNamedSprite((byte) 119, "lobby", param4, "downbutton_disabled");
-          uk.field_b = new VerticalScrollbar(0L, SpriteBackgroundSupport.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, PitchCoordinateSupport.field_a);
-          BroadcastServerCommand.field_D = new FriendsListPanel(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          SharedScrollbarState.field_b = new VerticalScrollbar(0L, SpriteBackgroundSupport.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, PitchCoordinateSupport.field_a);
+          BroadcastServerCommand.field_D = new FriendsListPanel(0L, (UiLayoutNode) null, SoundCache.field_b, SharedScrollbarState.field_b, MachineTokenStorageSupport.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -563,7 +563,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         var13 = Kickabout.field_G;
         try {
           var4_int = -109 / ((-55 - param0) / 60);
-          ConsoleEvaluationException.a(127, fj.field_a);
+          ConsoleEvaluationException.a(127, ConsoleLexer.field_a);
           if (null != ArchiveSource.field_b) {
             var5 = DualLinkHashTable.field_d;
             DualLinkHashTable.field_d.field_mb = 0;
@@ -574,7 +574,7 @@ class BeveledTextPainter extends TextWidgetPainter {
             MarkerSliderWidget.field_F.field_mb = 0;
             var7 = MarkerSliderWidget.field_F;
             var7.field_q = 0;
-            IterableDualLinkDeque.field_h.field_E = qn.field_d.toUpperCase();
+            IterableDualLinkDeque.field_h.field_E = SharedChatLayoutSupport.field_d.toUpperCase();
             var8 = (2 + AuctionItem.field_p.field_q) / 2;
             MarkerSliderWidget.field_F.setBounds(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
             GoalStateAgent.field_k.setBounds(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
@@ -652,10 +652,10 @@ class BeveledTextPainter extends TextWidgetPainter {
               stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               MarkerSliderWidget.field_F.field_E = CheckboxLabelWidget.field_Db;
               TrinketUnlockNotice.field_b.field_lb = true;
-              tt.field_c = true;
+              SocialListProtocolSupport.field_c = true;
               if (null != PlayArea.field_k) {
-                ee.field_e = false;
-                tt.field_c = false;
+                GameMediaSupport.field_e = false;
+                SocialListProtocolSupport.field_c = false;
                 if (SumIntegersCommand.field_G == null) {
                   WhirlpoolHasher.field_f = new boolean[UiKeyRoutingSupport.field_j];
                   SumIntegersCommand.field_G = new byte[UiKeyRoutingSupport.field_j];
@@ -666,17 +666,17 @@ class BeveledTextPainter extends TextWidgetPainter {
                   WhirlpoolHasher.field_f[var14] = false;
                   var14++;
                 }
-                pl.a(0, UiKeyRoutingSupport.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
+                GameOptionMenuSupport.a(0, UiKeyRoutingSupport.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > ScrollContainer.field_Ib) &&
                   GameplayHelpScreen.field_G[12]) {
-                  tt.field_c = true;
+                  SocialListProtocolSupport.field_c = true;
                 }
               }
-              if (!tt.field_c) {
+              if (!SocialListProtocolSupport.field_c) {
                 GoalStateAgent.field_k.field_lb = false;
                 if (GoalStateAgent.field_k.field_Q) {
                   var10 = null;
-                  if (ee.field_e) {
+                  if (GameMediaSupport.field_e) {
                     var10 = "<col=A00000>" + Checkbox.field_H + "</col>";
                     var12 = var10;
                     var10 = var12;
@@ -685,7 +685,7 @@ class BeveledTextPainter extends TextWidgetPainter {
                   }
                   for (var11Lifetime1 = 0; var11Lifetime1 < UiKeyRoutingSupport.field_j; var11Lifetime1++) {
                     if (WhirlpoolHasher.field_f[var11Lifetime1]) {
-                      var12_ref = "<col=A00000>" + ok.field_b[var11Lifetime1] + "</col>";
+                      var12_ref = "<col=A00000>" + Cp1252EncodingSupport.field_b[var11Lifetime1] + "</col>";
                       var10 = var12_ref;
                       var10 = var12_ref;
                       if (var10 != null) {
@@ -708,7 +708,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           stackIn_70_1 = 0;
           stackIn_71_2 = (param2) && (!param1) && (!TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_70_0).updateInput(stackIn_70_1, stackIn_71_2);
-          stackIn_75_0 = tn.field_f;
+          stackIn_75_0 = SocialUiState.field_f;
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_75_0).updateInput(stackIn_75_1, stackIn_76_2);

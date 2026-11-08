@@ -135,7 +135,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
 
     final static AppScreen a(int param0, int param1) {
         if (param0 == -1) {
-          return (AppScreen) ((Object) um.field_e);
+          return (AppScreen) ((Object) MachineTokenStorageSupport.field_e);
         }
         if (param0 == -2) {
           return (AppScreen) ((Object) SortCriterion.field_l);

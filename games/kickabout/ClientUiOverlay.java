@@ -68,7 +68,7 @@ final class ClientUiOverlay implements OverlayLayer {
           var1 = var6 + ":";
           for (var2 = 0; var2 < MusicVolumeSupport.field_b; var2++) {
             var7 = var1 + ' ';
-            var3 = un.field_e.field_f[var2] & 255;
+            var3 = ByteArrayPool.field_e.field_f[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 <= var4) {
@@ -318,13 +318,13 @@ final class ClientUiOverlay implements OverlayLayer {
           stackIn_24_9 = true;
           stackIn_24_10 = 13;
           stackIn_25_11 = (this.capturesInput((byte) 121)) ? false : true;
-          te.$cfr$intArgs$a$20586b1b86c8(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
-          if (gs.field_e) {
-            or.field_d.b(50, (byte) 105);
-            gs.field_e = false;
+          QuickChatMenuFactory.$cfr$intArgs$a$20586b1b86c8(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
+          if (SelectionMarkerSupport.field_e) {
+            FootballerAiOverlaySupport.field_d.b(50, (byte) 105);
+            SelectionMarkerSupport.field_e = false;
           }
           if (PlayerInputFactory.field_f) {
-            or.field_d.b(10, (byte) -97);
+            FootballerAiOverlaySupport.field_d.b(10, (byte) -97);
             PlayerInputFactory.field_f = false;
           }
         } else {

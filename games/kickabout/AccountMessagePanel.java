@@ -186,7 +186,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           return ConsoleExpression.field_e;
         }
         if (1 == param0) {
-          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, po.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300), LocalizedTextLoader.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
+          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialRowOrderSupport.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300), LocalizedTextLoader.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
         }
         if (param0 == 2) {
           return PasswordFieldPainter.field_C;

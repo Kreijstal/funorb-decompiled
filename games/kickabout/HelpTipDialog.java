@@ -48,8 +48,8 @@ final class HelpTipDialog extends MessageDialog {
               var4 = var4 | 1 << var5;
             }
           }
-          or.field_d.b(69, (byte) 119);
-          or.field_d.writeInt(-57, var4);
+          FootballerAiOverlaySupport.field_d.b(69, (byte) 119);
+          FootballerAiOverlaySupport.field_d.writeInt(-57, var4);
         }
     }
 

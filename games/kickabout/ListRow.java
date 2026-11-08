@@ -33,8 +33,8 @@ abstract class ListRow extends UiLayoutNode {
         if (ClassNameSupport.field_a) {
           ClassNameSupport.field_a = false;
           var1 = DropTargetWidget.l(param0 ^ 634588136);
-          oo.field_c.a((byte) 53, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x, (java.awt.Component) ((Object) var1));
-          oo.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
+          PlatformTaskState.field_c.a((byte) 53, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x, (java.awt.Component) ((Object) var1));
+          PlatformTaskState.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
           ArchiveManager.field_m = TutorialCaptionSupport.field_j;
           BytePlusOneCommand.field_A = ArrayWidgetContainer.field_x;
         }

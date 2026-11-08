@@ -89,7 +89,7 @@ final class JaggrabDownloader implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_k.getFile() + "\n\n"));
-            var3.write(ok.a(var5, (byte) 106));
+            var3.write(Cp1252EncodingSupport.a(var5, (byte) 106));
             this.field_d = new DataInputStream(var4.getInputStream());
           }
           this.field_g.field_n = 0;
@@ -143,7 +143,7 @@ final class JaggrabDownloader implements Runnable {
     final static String a(boolean param0) {
         if (!param0) {
           JaggrabDownloader.releaseStatics(28);
-          if (nc.field_a) {
+          if (LoginPacketSupport.field_a) {
             return null;
           }
           if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {
@@ -154,7 +154,7 @@ final class JaggrabDownloader implements Runnable {
           }
           return null;
         }
-        if (nc.field_a) {
+        if (LoginPacketSupport.field_a) {
           return null;
         }
         if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {

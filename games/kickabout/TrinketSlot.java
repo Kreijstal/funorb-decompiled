@@ -222,12 +222,12 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         InstrumentEnvelope.field_a.writeByte(112, param2);
         InstrumentEnvelope.field_a.writeShort(-1207444472, param1);
         InstrumentEnvelope.field_a.rsaEncrypt(CascadingMenu.field_Nb, ManagerAction.field_h, 38);
-        or.field_d.b(18, (byte) -83);
-        int fieldTemp$0 = or.field_d.field_n + 1;
-        or.field_d.field_n = or.field_d.field_n + 1;
+        FootballerAiOverlaySupport.field_d.b(18, (byte) -83);
+        int fieldTemp$0 = FootballerAiOverlaySupport.field_d.field_n + 1;
+        FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
         int var4 = fieldTemp$0;
-        or.field_d.writeBytes(0, InstrumentEnvelope.field_a.field_n, 1991220144, InstrumentEnvelope.field_a.field_f);
-        or.field_d.backpatchByteLength(62, -var4 + or.field_d.field_n);
+        FootballerAiOverlaySupport.field_d.writeBytes(0, InstrumentEnvelope.field_a.field_n, 1991220144, InstrumentEnvelope.field_a.field_f);
+        FootballerAiOverlaySupport.field_d.backpatchByteLength(62, -var4 + FootballerAiOverlaySupport.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);
     }
 

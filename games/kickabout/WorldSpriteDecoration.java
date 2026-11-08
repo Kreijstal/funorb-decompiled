@@ -16,7 +16,7 @@ final class WorldSpriteDecoration {
         if (param0 != -14954) {
           field_d = (NineSlicePanelPainter) null;
         }
-        stackIn_6_0 = (SpriteButtonPainter.field_y != null) && (RegistrationRequestDialog.field_rb == un.field_c);
+        stackIn_6_0 = (SpriteButtonPainter.field_y != null) && (RegistrationRequestDialog.field_rb == ByteArrayPool.field_c);
         return stackIn_6_0;
     }
 
@@ -83,8 +83,8 @@ final class WorldSpriteDecoration {
     }
 
     final static void a(int param0) {
-        ql.a(true, AccountRegistrationResponse.field_i, AccountInputValidationResult.field_a, 3960);
-        is.field_a = true;
+        MatchHudRoutingSupport.setAccountStatusText(true, AccountRegistrationResponse.field_i, AccountInputValidationResult.field_a, 3960);
+        TextLineLayoutSupport.field_a = true;
         if (param0 > -63) {
           field_a = (double[][]) null;
         }

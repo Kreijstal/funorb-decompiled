@@ -23,18 +23,18 @@ final class AudioService implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 16 / ((param0 - 46) / 47);
-          if (mj.field_a == PlayerModelPreview.field_f) {
+          if (PitchAppearanceSupport.field_a == PlayerModelPreview.field_f) {
             stackIn_2_0 = null;
             return (AccountRegistrationResponse) (stackIn_2_0);
           }
-          if (mj.field_a == LinkTextPainter.field_d &&
-            param1.equals(pr.field_c)) {
-            mj.field_a = vj.field_a;
+          if (PitchAppearanceSupport.field_a == LinkTextPainter.field_d &&
+            param1.equals(LeagueRatingRequirements.field_c)) {
+            PitchAppearanceSupport.field_a = RasterGlowSupport.field_a;
             stackIn_9_0 = JaggrabDownloader.field_h;
             return stackIn_9_0;
           }
-          mj.field_a = PlayerModelPreview.field_f;
-          pr.field_c = param1;
+          PitchAppearanceSupport.field_a = PlayerModelPreview.field_f;
+          LeagueRatingRequirements.field_c = param1;
           JaggrabDownloader.field_h = null;
           stackIn_7_0 = null;
           return (AccountRegistrationResponse) (stackIn_7_0);

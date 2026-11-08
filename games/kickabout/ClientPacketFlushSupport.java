@@ -39,28 +39,28 @@ final class ClientPacketFlushSupport {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (SpriteButtonPainter.field_y != null && (param0 < 0 ||
-            un.field_c == RegistrationRequestDialog.field_rb)) {
-            if (0 == or.field_d.field_n &&
+            ByteArrayPool.field_c == RegistrationRequestDialog.field_rb)) {
+            if (0 == FootballerAiOverlaySupport.field_d.field_n &&
               (BlobSubmission.field_i + 10000L) < MonotonicClock.monotonicMillis(86)) {
-              or.field_d.b(param0, (byte) 101);
+              FootballerAiOverlaySupport.field_d.b(param0, (byte) 101);
             }
             if (param1) {
               return;
             }
-            if (or.field_d.field_n > 0) {
+            if (FootballerAiOverlaySupport.field_d.field_n > 0) {
               try {
-                SpriteButtonPainter.field_y.write(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
+                SpriteButtonPainter.field_y.write(FootballerAiOverlaySupport.field_d.field_n, (byte) -127, 0, FootballerAiOverlaySupport.field_d.field_f);
                 BlobSubmission.field_i = MonotonicClock.monotonicMillis(-117);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 FormationView.b((byte) -116);
               }
-              or.field_d.field_n = 0;
+              FootballerAiOverlaySupport.field_d.field_n = 0;
             }
             return;
           }
-          or.field_d.field_n = 0;
+          FootballerAiOverlaySupport.field_d.field_n = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -9,11 +9,11 @@ final class BigCommand extends ConsoleCommand {
         if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
           return SessionUrlSupport.field_f;
         }
-        if (PlayerModelPreview.field_f == mj.field_a) {
-          return pr.field_c;
+        if (PlayerModelPreview.field_f == PitchAppearanceSupport.field_a) {
+          return LeagueRatingRequirements.field_c;
         }
         if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
-          return pr.field_c;
+          return LeagueRatingRequirements.field_c;
         }
         return TutorialMessages.field_b;
     }

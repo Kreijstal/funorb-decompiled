@@ -141,7 +141,7 @@ final class BlackFadeScreen extends AppScreen {
         try {
           if (DualLinkDequeIterator.field_e.isComplete((byte) -80) &&
             !param1.equals(DualLinkDequeIterator.field_e.getQuery(3))) {
-            DualLinkDequeIterator.field_e = su.a(-3505, param1);
+            DualLinkDequeIterator.field_e = WidgetStyleFactory.createAvailabilityRequest(-3505, param1);
           }
           if (param0) {
             field_i = (UiLayoutNode) null;

@@ -61,7 +61,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         if (param0 != 1315216324) {
           AuctionLogEntry.a(0);
         }
-        return fc.field_a + (ConsoleTokenCursor.field_b << 2) + (ServerTextTemplate.field_a << 4);
+        return LoginResponseUiSupport.field_a + (ConsoleTokenCursor.field_b << 2) + (ServerTextTemplate.field_a << 4);
     }
 
     final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
@@ -75,14 +75,14 @@ final class AuctionLogEntry extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.decodeSpriteSheetFromArchive(param2, param4, param3, 123)) {
+          if (!RankingRowFactory.decodeSpriteSheetFromArchive(param2, param4, param3, 123)) {
             return null;
           }
           if (param0 != 10) {
             var6 = (java.applet.Applet) null;
             AuctionLogEntry.openSubscribePage((java.applet.Applet) null, (byte) -14);
           }
-          stackIn_6_0 = tt.a(12015, param1.b(param3, -32669, param2));
+          stackIn_6_0 = SocialListProtocolSupport.createBinaryFont(12015, param1.b(param3, -32669, param2));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

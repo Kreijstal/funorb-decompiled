@@ -14,72 +14,72 @@ final class LoggedPossession {
     final static void a(boolean param0) {
         int var2;
         var2 = Kickabout.field_G;
-        et.field_d.field_B = NanoTickClock.field_t;
+        ThumbnailStateFactory.field_d.field_B = NanoTickClock.field_t;
         if (param0) {
           LoggedPossession.releaseStatics(-10);
         }
         boolean decompiledFrameRemainder0 = true;
-        et.field_d.field_x = ClubStateFactory.field_g;
+        ThumbnailStateFactory.field_d.field_x = ClubStateFactory.field_g;
         if (HuffmanCodec.field_e == 1) {
-          et.field_d.field_x = new PlayArea[]{new PlayArea(368, 600, 528, 1200)};
-          et.field_d.field_B = et.field_d.field_x;
+          ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(368, 600, 528, 1200)};
+          ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
         } else {
           if (HuffmanCodec.field_e != 2) {
             if (HuffmanCodec.field_e != 3) {
               if (HuffmanCodec.field_e != 4) {
                 if (HuffmanCodec.field_e != 5) {
                   if (6 == HuffmanCodec.field_e) {
-                    et.field_d.field_x = new PlayArea[]{new PlayArea(320, 0, 660, 1344)};
-                    et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
+                    ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(320, 0, 660, 1344)};
+                    ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                   } else {
                     if (HuffmanCodec.field_e != 7) {
                       if (HuffmanCodec.field_e == 8) {
-                        et.field_d.field_x = new PlayArea[]{new PlayArea(10, 200, 860, 300), new PlayArea(348, 100, 648, 400), new PlayArea(10, 610, 860, 710), new PlayArea(258, 510, 558, 810), new PlayArea(10, 1000, 860, 1100), new PlayArea(298, 900, 748, 1200), new PlayArea(760, 200, 860, 710), new PlayArea(10, 610, 110, 1100)};
-                        et.field_d.field_B = et.field_d.field_x;
+                        ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(10, 200, 860, 300), new PlayArea(348, 100, 648, 400), new PlayArea(10, 610, 860, 710), new PlayArea(258, 510, 558, 810), new PlayArea(10, 1000, 860, 1100), new PlayArea(298, 900, 748, 1200), new PlayArea(760, 200, 860, 710), new PlayArea(10, 610, 110, 1100)};
+                        ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
                       } else {
                         if (HuffmanCodec.field_e == 9) {
-                          et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 800)};
-                          et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
+                          ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 800)};
+                          ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
                         } else {
                           if (HuffmanCodec.field_e != 10 &&
                             HuffmanCodec.field_e != 11) {
                             if (HuffmanCodec.field_e == 12) {
-                              et.field_d.field_x = new PlayArea[]{};
-                              et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
+                              ThumbnailStateFactory.field_d.field_x = new PlayArea[]{};
+                              ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                             } else {
                               if ((HuffmanCodec.field_e == 13)) {
-                                et.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 530)};
-                                et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
+                                ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(0, 0, 896, 530)};
+                                ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 530), new PlayArea(370, -45, 525, 530, 0, 45)};
                               }
                             }
                             decompiledFrameRemainder0 = false;
                           }
                           else {
-                            et.field_d.field_x = new PlayArea[]{new PlayArea(300, 466, 850, 646), new PlayArea(0, 672, 100, 1344)};
-                            et.field_d.field_B = et.field_d.field_x;
+                            ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(300, 466, 850, 646), new PlayArea(0, 672, 100, 1344)};
+                            ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
                           }
                         }
                       }
                     } else {
-                      et.field_d.field_x = new PlayArea[]{new PlayArea(60, 250, 300, 700), new PlayArea(320, 0, 896, 1344)};
-                      et.field_d.field_B = et.field_d.field_x;
+                      ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(60, 250, 300, 700), new PlayArea(320, 0, 896, 1344)};
+                      ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
                     }
                   }
                 } else {
-                  et.field_d.field_x = new PlayArea[]{};
-                  et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 900), new PlayArea(0, 940, 896, 1344), new PlayArea(826, 0, 896, 1344), new PlayArea(0, 0, 710, 1344)};
+                  ThumbnailStateFactory.field_d.field_x = new PlayArea[]{};
+                  ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 900), new PlayArea(0, 940, 896, 1344), new PlayArea(826, 0, 896, 1344), new PlayArea(0, 0, 710, 1344)};
                 }
               } else {
-                et.field_d.field_x = new PlayArea[]{};
-                et.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
+                ThumbnailStateFactory.field_d.field_x = new PlayArea[]{};
+                ThumbnailStateFactory.field_d.field_B = new PlayArea[]{new PlayArea(0, 0, 896, 1344)};
               }
             } else {
-              et.field_d.field_x = new PlayArea[]{new PlayArea(390, 220, 850, 320), new PlayArea(600, 220, 850, 620), new PlayArea(20, 470, 850, 620), new PlayArea(20, 470, 200, 900), new PlayArea(20, 800, 390, 900), new PlayArea(310, 800, 390, 1160), new PlayArea(310, 1060, 850, 1160)};
-              et.field_d.field_B = et.field_d.field_x;
+              ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(390, 220, 850, 320), new PlayArea(600, 220, 850, 620), new PlayArea(20, 470, 850, 620), new PlayArea(20, 470, 200, 900), new PlayArea(20, 800, 390, 900), new PlayArea(310, 800, 390, 1160), new PlayArea(310, 1060, 850, 1160)};
+              ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
             }
           } else {
-            et.field_d.field_x = new PlayArea[]{new PlayArea(368, 240, 528, 770)};
-            et.field_d.field_B = et.field_d.field_x;
+            ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(368, 240, 528, 770)};
+            ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
           }
         }
 
@@ -118,7 +118,7 @@ final class LoggedPossession {
         if (param0 != -24) {
           return 63;
         }
-        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, param1, is.field_e);
+        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, param1, TextLineLayoutSupport.field_e);
     }
 
     final void recordTick(int param0, CommonGame param1) {

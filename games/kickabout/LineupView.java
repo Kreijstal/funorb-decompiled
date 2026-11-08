@@ -104,7 +104,7 @@ final class LineupView extends MatchPhaseView {
         }
         ((Sprite) (Object) stackIn_17_0).drawScaledAlpha(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
         if (param1) {
-          un.field_d.d(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
+          ByteArrayPool.field_d.d(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
         }
     }
 
@@ -474,7 +474,7 @@ final class LineupView extends MatchPhaseView {
             if (this.field_h == this.field_a.field_g[var11].team) {
               SoftwareRasterizer.fillRoundedRectangleBlended(412, var4Lifetime5, 186, 21, 7, 65793, 128);
               if (this.field_a.field_o.isReadyOrInactive(param0 - 87, var11)) {
-                vb.field_l.c(574, var4Lifetime5 - 4);
+                PitchDecorationSupport.field_l.c(574, var4Lifetime5 - 4);
               }
               var4Lifetime5 += 23;
             }
@@ -499,14 +499,14 @@ final class LineupView extends MatchPhaseView {
               var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreSubmission.field_p, new String[]{Integer.toString(var6 + 1)});
             }
           } else {
-            var5 = ig.field_j;
+            var5 = MatchHudSupport.field_j;
           }
-          ul.a(130, 1, 105, true, (byte) 26, 225, 18, 380, 1, var5);
+          TextInputUiSupport.drawWrappedTextPanel(130, 1, 105, true, (byte) 26, 225, 18, 380, 1, var5);
         } else {
-          ul.a(230, 1, 105, true, (byte) -123, 210, 18, 390, 1, HighScoreQuery.field_q);
+          TextInputUiSupport.drawWrappedTextPanel(230, 1, 105, true, (byte) -123, 210, 18, 390, 1, HighScoreQuery.field_q);
         }
         if (this.field_a.field_f) {
-          un.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
         }
     }
 
@@ -581,8 +581,8 @@ final class LineupView extends MatchPhaseView {
           return;
         }
         if (this.field_f) {
-          or.field_d.b(74, (byte) 121);
-          or.field_d.writeShort(-1207444472, param1);
+          FootballerAiOverlaySupport.field_d.b(74, (byte) 121);
+          FootballerAiOverlaySupport.field_d.writeShort(-1207444472, param1);
         }
     }
 
@@ -658,7 +658,7 @@ final class LineupView extends MatchPhaseView {
             this.field_A.setBounds(true, 156, 45, 112, 225);
             this.field_q.addChild((byte) -104, this.field_A);
             this.field_q.updateInput(0, true);
-            this.field_o = new CheckboxLabelWidget(HoverTooltip.field_Ab, un.field_d, var12.field_q);
+            this.field_o = new CheckboxLabelWidget(HoverTooltip.field_Ab, ByteArrayPool.field_d, var12.field_q);
             this.field_o.field_lb = false;
             this.field_o.field_J = 7 + var12.field_mb + var12.field_T;
             this.field_o.field_s = var12.field_F;

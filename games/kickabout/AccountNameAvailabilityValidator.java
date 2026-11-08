@@ -24,7 +24,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!ih.a(var4, true)) {
+          if (!FormationMaskSupport.a(var4, true)) {
             stackIn_2_0 = PitchOptionTile.field_Bb;
             return stackIn_2_0;
           }

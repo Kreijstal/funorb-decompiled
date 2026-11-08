@@ -150,7 +150,7 @@ final class SetLagCommand extends ConsoleCommand {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           IOException var2_ref_IOException = null;
-          if (un.field_e.field_n >= param1) {
+          if (ByteArrayPool.field_e.field_n >= param1) {
             return true;
           }
           if (SpriteButtonPainter.field_y == null) {
@@ -159,16 +159,16 @@ final class SetLagCommand extends ConsoleCommand {
           try {
             var2 = SpriteButtonPainter.field_y.a((byte) 63);
             if (0 < var2) {
-              if (param1 - un.field_e.field_n < var2) {
-                var2 = -un.field_e.field_n + param1;
+              if (param1 - ByteArrayPool.field_e.field_n < var2) {
+                var2 = -ByteArrayPool.field_e.field_n + param1;
               }
-              SpriteButtonPainter.field_y.readFully(un.field_e.field_f, var2, un.field_e.field_n, -4847);
+              SpriteButtonPainter.field_y.readFully(ByteArrayPool.field_e.field_f, var2, ByteArrayPool.field_e.field_n, -4847);
               IterableDualLinkDeque.field_c = MonotonicClock.monotonicMillis(-128);
-              un.field_e.field_n = un.field_e.field_n + var2;
-              if (param1 > un.field_e.field_n) {
+              ByteArrayPool.field_e.field_n = ByteArrayPool.field_e.field_n + var2;
+              if (param1 > ByteArrayPool.field_e.field_n) {
                 return false;
               }
-              un.field_e.field_n = 0;
+              ByteArrayPool.field_e.field_n = 0;
               return true;
             }
             if (0 > var2 ||

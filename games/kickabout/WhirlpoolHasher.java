@@ -131,7 +131,7 @@ final class WhirlpoolHasher {
           var12 = 5 + (var10 + param3);
           PagedHelpScreen.field_D.setBounds(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
-          PagedHelpScreen.field_D.field_R = fs.a(PagedHelpScreen.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
+          PagedHelpScreen.field_D.field_R = PanelSpriteFactory.createPanelSprites(PagedHelpScreen.field_D.field_mb, 3, 2105376, 11579568, 8421504, (byte) 118);
           ContentTransitionDialog.field_Y.setBounds(true, var9_int, param4 - var9_int / 2, -(var12 / 2) + param5, var12);
           if (param0 != 49) {
             field_f = (boolean[]) null;
@@ -195,9 +195,9 @@ final class WhirlpoolHasher {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (un.field_c == SpriteBackgroundSupport.field_d) {
+          if (ByteArrayPool.field_c == SpriteBackgroundSupport.field_d) {
             TutorialMessages.field_f = null;
-            or.field_d.field_n = 0;
+            FootballerAiOverlaySupport.field_d.field_n = 0;
             if (param5 == null) {
               InstrumentEnvelope.field_a.field_n = 0;
               InstrumentEnvelope.field_a.writeInt(-56, TrinketUnlockNotice.field_d.nextInt());
@@ -216,11 +216,11 @@ final class WhirlpoolHasher {
                 stackIn_21_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_20_0).writeCircumfixedString(stackIn_21_1, (byte) -128);
-              or.field_d.writeByte(106, 16);
-              or.field_d.field_n = or.field_d.field_n + 1;
-              var9 = or.field_d.field_n;
-              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -89, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
-              or.field_d.backpatchByteLength(62, -var9 + or.field_d.field_n);
+              FootballerAiOverlaySupport.field_d.writeByte(106, 16);
+              FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
+              var9 = FootballerAiOverlaySupport.field_d.field_n;
+              IconLabel.a(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -89, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
+              FootballerAiOverlaySupport.field_d.backpatchByteLength(62, -var9 + FootballerAiOverlaySupport.field_d.field_n);
             } else {
               var9 = 0;
               if (param4) {
@@ -236,27 +236,27 @@ final class WhirlpoolHasher {
               InstrumentEnvelope.field_a.writeShort(-1207444472, param0);
               InstrumentEnvelope.field_a.writeByte(106, param3);
               InstrumentEnvelope.field_a.writeByte(125, var9);
-              or.field_d.writeByte(123, 18);
-              or.field_d.field_n = or.field_d.field_n + 2;
-              var10 = or.field_d.field_n;
+              FootballerAiOverlaySupport.field_d.writeByte(123, 18);
+              FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
+              var10 = FootballerAiOverlaySupport.field_d.field_n;
               var11_ref_String = DelegatingCanvas.a(AppletContextSupport.getActiveApplet(50), (byte) 123);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              or.field_d.writeString(14190, var11_ref_String);
-              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
-              or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
+              FootballerAiOverlaySupport.field_d.writeString(14190, var11_ref_String);
+              IconLabel.a(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
+              FootballerAiOverlaySupport.field_d.backpatchShortLength(-var10 + FootballerAiOverlaySupport.field_d.field_n, 62);
             }
             ClientPacketFlushSupport.flushPackets(-1, false);
-            un.field_c = ByteStorage.field_e;
+            ByteArrayPool.field_c = ByteStorage.field_e;
           }
-          if (ByteStorage.field_e == un.field_c &&
+          if (ByteStorage.field_e == ByteArrayPool.field_c &&
             SetLagCommand.a((byte) 55, 1)) {
-            var9Lifetime1 = un.field_e.readUnsignedByte((byte) -116);
-            un.field_e.field_n = 0;
+            var9Lifetime1 = ByteArrayPool.field_e.readUnsignedByte((byte) -116);
+            ByteArrayPool.field_e.field_n = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              un.field_c = StatefulTextPainter.field_t;
+              ByteArrayPool.field_c = StatefulTextPainter.field_t;
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -268,25 +268,25 @@ final class WhirlpoolHasher {
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                SetLagCommand.a((byte) 51, lt.a((byte) 40));
-                TutorialMessages.field_f = new Boolean(PlayerInputEvent.a(un.field_e, (byte) 93));
-                un.field_e.field_n = 0;
+                SetLagCommand.a((byte) 51, PlayAreaMovementSupport.constantOne((byte) 40));
+                TutorialMessages.field_f = new Boolean(PlayerInputEvent.a(ByteArrayPool.field_e, (byte) 93));
+                ByteArrayPool.field_e.field_n = 0;
               } else {
                 AppletContextSupport.field_b = var9Lifetime1;
-                un.field_c = TournamentLobbyScreen.field_N;
+                ByteArrayPool.field_c = TournamentLobbyScreen.field_N;
                 MusicVolumeSupport.field_b = -1;
               }
             }
           }
-          if (StatefulTextPainter.field_t == un.field_c) {
+          if (StatefulTextPainter.field_t == ByteArrayPool.field_c) {
             var9Lifetime2 = 2;
             if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
-              var10Lifetime1 = un.field_e.readUnsignedShort((byte) 81);
-              un.field_e.field_n = 0;
+              var10Lifetime1 = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
+              ByteArrayPool.field_e.field_n = 0;
               if (SetLagCommand.a((byte) -118, var10Lifetime1)) {
                 var11 = ValidatedTextWidget.field_X.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ValidatedTextWidget.field_X[var12] = un.field_e.readCircumfixedString(17);
+                  ValidatedTextWidget.field_X[var12] = ByteArrayPool.field_e.readCircumfixedString(17);
                 }
                 FormationView.b((byte) -116);
                 ContextMenuItem.field_Db = false;
@@ -295,12 +295,12 @@ final class WhirlpoolHasher {
               }
             }
           }
-          if (TournamentLobbyScreen.field_N == un.field_c &&
+          if (TournamentLobbyScreen.field_N == ByteArrayPool.field_c &&
             LoginCredentials.a(180)) {
             if (AppletContextSupport.field_b != 255) {
-              ListingRowCache.field_b = un.field_e.readString(61);
+              ListingRowCache.field_b = ByteArrayPool.field_e.readString(61);
             } else {
-              var9_ref_String = un.field_e.a(true);
+              var9_ref_String = ByteArrayPool.field_e.a(true);
               if (var9_ref_String != null) {
                 BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(62), true, var9_ref_String);
               }

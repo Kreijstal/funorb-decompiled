@@ -54,7 +54,7 @@ final class DropTargetWidget extends SingleChildContainer {
             HighScoreQuery.field_m = new DualLinkHashTable(64);
           }
           GameplayHelpScreen.field_I = param1.field_jb;
-          qn.field_b = param2.field_jb;
+          SharedChatLayoutSupport.field_b = param2.field_jb;
           RasterStateSnapshot.a(0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ln.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

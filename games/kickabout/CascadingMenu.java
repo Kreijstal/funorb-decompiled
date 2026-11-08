@@ -299,11 +299,11 @@ final class CascadingMenu extends UiLayoutNode {
               String var8 = (String) null;
               PasswordLoginCredentials.a(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);
               ChatComposeSupport.prepareChatSend(TrinketTile.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
-              fa.closeQuickChat(125);
+              PendingRequestAcknowledgement.closeQuickChat(125);
               DelayedServerPacket.b(68);
             } else {
-              gw.a(8);
-              fa.closeQuickChat(-123);
+              HuffmanTextSupport.createQuickChatKeysHelpPanel(8);
+              PendingRequestAcknowledgement.closeQuickChat(-123);
             }
           }
         }
@@ -334,7 +334,7 @@ final class CascadingMenu extends UiLayoutNode {
         if (null == this.field_Kb &&
           ClassNameSupport.field_g == this &&
           var4 != 0) {
-          fa.closeQuickChat(98);
+          PendingRequestAcknowledgement.closeQuickChat(98);
           return true;
         }
         var5 = ClassDescriptorSupport.field_c;

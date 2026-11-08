@@ -185,8 +185,8 @@ final class RankingsScreen extends ButtonMenuScreen {
             var1 = DropTargetWidget.l(64);
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             TutorialCaptionSupport.field_j = ArchiveManager.field_m;
-            oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
-            oo.field_c.a(-126, (java.awt.Component) ((Object) var1), false);
+            PlatformTaskState.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
+            PlatformTaskState.field_c.a(-126, (java.awt.Component) ((Object) var1), false);
             BytePlusOneCommand.field_A = 320;
             ArchiveManager.field_m = 240;
           }
@@ -198,8 +198,8 @@ final class RankingsScreen extends ButtonMenuScreen {
           var1Lifetime1 = DropTargetWidget.l(64);
           ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
           TutorialCaptionSupport.field_j = ArchiveManager.field_m;
-          oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
-          oo.field_c.a(-126, (java.awt.Component) ((Object) var1Lifetime1), false);
+          PlatformTaskState.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
+          PlatformTaskState.field_c.a(-126, (java.awt.Component) ((Object) var1Lifetime1), false);
           BytePlusOneCommand.field_A = 320;
           ArchiveManager.field_m = 240;
         }
@@ -243,32 +243,32 @@ final class RankingsScreen extends ButtonMenuScreen {
           this.drawLoginRequiredText((byte) -4);
           return;
         }
-        if (ug.field_e == null) {
-          ug.field_e = PitchOptionTile.a(10, (byte) 100, 0, 7);
+        if (SocialListLayoutSupport.field_e == null) {
+          SocialListLayoutSupport.field_e = PitchOptionTile.a(10, (byte) 100, 0, 7);
         }
         var3 = 99;
         var4 = 11184810;
         ConsoleTokenCursor.field_d.d(CachedArchiveSource.field_p, CipherPacketBuffer.field_r[0] + this.slideOffsetX, var3, var4, -1);
         ConsoleTokenCursor.field_d.d(StreetSceneryLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[1], var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(mt.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[2], var3, var4, -1);
+        ConsoleTokenCursor.field_d.d(GoalSpriteLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[2], var3, var4, -1);
         ConsoleTokenCursor.field_d.d(TeamManagementScreen.field_D, CipherPacketBuffer.field_r[3] + this.slideOffsetX, var3, var4, -1);
         ConsoleTokenCursor.field_d.d(MouseInputHandler.field_e, CipherPacketBuffer.field_r[4] + this.slideOffsetX, var3, var4, -1);
         var3 = var3 + (ConsoleTokenCursor.field_d.field_G + 8);
-        if (!ug.field_e.field_e) {
-          var5 = uf.field_a;
+        if (!SocialListLayoutSupport.field_e.field_e) {
+          var5 = RegistrationUiSupport.field_a;
         } else {
-          if (null == ug.field_e.field_i) {
+          if (null == SocialListLayoutSupport.field_e.field_i) {
             var12 = QuickChatPhraseDefinition.field_o;
             var13 = var12;
             var13Lifetime2 = var12;
             var3 = 385 + ConsoleTokenCursor.field_d.field_G;
-            un.field_d.d(var12.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
+            ByteArrayPool.field_d.d(var12.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
             return;
           }
           var5 = CheckboxLabelWidget.field_Fb;
-          var11 = ug.field_e.field_i[AccountRequestDialog.field_ib];
+          var11 = SocialListLayoutSupport.field_e.field_i[AccountRequestDialog.field_ib];
           var6 = var11;
-          var7 = ug.field_e.field_o[AccountRequestDialog.field_ib];
+          var7 = SocialListLayoutSupport.field_e.field_o[AccountRequestDialog.field_ib];
           var8 = 0;
           for (var9 = 0; var9 < 10; var9++) {
             if (null != var11[var9]) {
@@ -286,11 +286,11 @@ final class RankingsScreen extends ButtonMenuScreen {
           }
           if (var8 == 0) {
             var4Lifetime1Lifetime1 = 16777215;
-            this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ArchiveSource.field_e, ug.field_e.field_m, var4Lifetime1Lifetime1, ug.field_e.field_j, -1, var3);
+            this.a(SocialListLayoutSupport.field_e.field_f, SocialListLayoutSupport.field_e.field_h, (byte) 105, ArchiveSource.field_e, SocialListLayoutSupport.field_e.field_m, var4Lifetime1Lifetime1, SocialListLayoutSupport.field_e.field_j, -1, var3);
           }
         }
         var3Lifetime1 = 385 + ConsoleTokenCursor.field_d.field_G;
-        un.field_d.d(var5.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
+        ByteArrayPool.field_d.d(var5.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
     }
 
     public static void f(int param0) {

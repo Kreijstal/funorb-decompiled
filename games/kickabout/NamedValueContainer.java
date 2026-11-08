@@ -124,7 +124,7 @@ final class NamedValueContainer {
         String var3;
         String var3Lifetime1;
         AuctionListing.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
-        if (0 < ns.field_a) {
+        if (0 < NotificationPanelPositionSupport.field_a) {
           if (IntrusiveDeque.field_e != null) {
             IntrusiveDeque.field_e.d(UiKeyRoutingSupport.field_c.field_s, 0);
             stackIn_5_0 = UiKeyRoutingSupport.field_c;
@@ -136,8 +136,8 @@ final class NamedValueContainer {
             stackIn_10_2 = (param1) && (!TextWidgetPainter.field_f);
             ((UiLayoutNode) (Object) stackIn_9_0).draw(stackIn_9_1, stackIn_10_2);
             if (param0 == 63) {
-              if (!(0 >= fj.field_a) ||
-                !(ee.field_b <= 0)) {
+              if (!(0 >= ConsoleLexer.field_a) ||
+                !(GameMediaSupport.field_b <= 0)) {
                 if (null != IntrusiveDeque.field_e) {
                   IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
                 }
@@ -155,7 +155,7 @@ final class NamedValueContainer {
             }
             var3 = (String) null;
             NamedValueContainer.a((String) null, 87L, (byte) -24, false, (String) null);
-            if (0 < fj.field_a) {
+            if (0 < ConsoleLexer.field_a) {
               if (null != IntrusiveDeque.field_e) {
                 IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
               }
@@ -168,7 +168,7 @@ final class NamedValueContainer {
               stackIn_37_2 = (param1) && (!TrinketCatalog.field_b);
               ((UiLayoutNode) (Object) stackIn_36_0).draw(stackIn_36_1, stackIn_37_2);
             } else {
-              if (ee.field_b > 0) {
+              if (GameMediaSupport.field_b > 0) {
                 if (null == IntrusiveDeque.field_e) {
                   stackIn_44_0 = TrinketIcon.field_Cb;
                   stackIn_44_1 = 102;
@@ -204,7 +204,7 @@ final class NamedValueContainer {
           ((UiLayoutNode) (Object) stackIn_67_0).draw(stackIn_67_1, stackIn_68_2);
         }
         if (param0 == 63) {
-          if (0 < fj.field_a) {
+          if (0 < ConsoleLexer.field_a) {
             if (null == IntrusiveDeque.field_e) {
               stackIn_140_0 = TrinketIcon.field_Cb;
               stackIn_140_1 = 102;
@@ -226,7 +226,7 @@ final class NamedValueContainer {
               ((UiLayoutNode) (Object) stackIn_153_0).draw(stackIn_153_1, stackIn_154_2);
             }
           } else {
-            if (ee.field_b > 0) {
+            if (GameMediaSupport.field_b > 0) {
               if (null == IntrusiveDeque.field_e) {
                 stackIn_120_0 = TrinketIcon.field_Cb;
                 stackIn_120_1 = 102;
@@ -252,7 +252,7 @@ final class NamedValueContainer {
         } else {
           var3Lifetime1 = (String) null;
           NamedValueContainer.a((String) null, 87L, (byte) -24, false, (String) null);
-          if (0 < fj.field_a) {
+          if (0 < ConsoleLexer.field_a) {
             if (null == IntrusiveDeque.field_e) {
               stackIn_97_0 = TrinketIcon.field_Cb;
               stackIn_97_1 = 102;
@@ -274,7 +274,7 @@ final class NamedValueContainer {
               ((UiLayoutNode) (Object) stackIn_110_0).draw(stackIn_110_1, stackIn_111_2);
             }
           } else {
-            if (ee.field_b > 0) {
+            if (GameMediaSupport.field_b > 0) {
               if (null == IntrusiveDeque.field_e) {
                 stackIn_86_0 = TrinketIcon.field_Cb;
                 stackIn_86_1 = 102;

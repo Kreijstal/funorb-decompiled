@@ -244,8 +244,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             SocketArchiveNetworkClient.a(5, (ResourceArchive) null);
           }
           if (param1 == 28) {
-            if (su.field_c != null) {
-              su.field_c.beginClose(19910);
+            if (WidgetStyleFactory.field_c != null) {
+              WidgetStyleFactory.field_c.beginClose(19910);
             }
             var5 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
             while (var5 != null) {
@@ -409,7 +409,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           MarkerSliderPainter.field_f.field_A = 1;
           AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
           AudioOutputSupport.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
-          BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
+          BlankScreen.field_h = new UiLayoutNode(0L, TextInputUiSupport.field_c);
           TriangleMesh.field_R.addChild((byte) -109, MarkerSliderPainter.field_f);
           TriangleMesh.field_R.addChild((byte) -122, AlphaContainer.field_E);
           TriangleMesh.field_R.addChild((byte) -108, AudioOutputSupport.field_f);

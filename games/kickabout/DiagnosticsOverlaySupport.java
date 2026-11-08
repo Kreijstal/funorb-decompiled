@@ -27,7 +27,7 @@ final class DiagnosticsOverlaySupport {
           return;
         }
         try {
-          ul.a(param1, 1, param2, false, (byte) 117, param5, 16, param0, 1, param4);
+          TextInputUiSupport.drawWrappedTextPanel(param1, 1, param2, false, (byte) 117, param5, 16, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -80,15 +80,15 @@ final class DiagnosticsOverlaySupport {
           if (LineupAgent.field_g) {
             var1_int++;
           }
-          if (fa.field_j != 0) {
+          if (PendingRequestAcknowledgement.field_j != 0) {
             var1_int++;
           }
           if (IsSixCommand.field_B) {
             var1_int++;
           }
           if (LineupAgent.field_o &&
-            null != um.field_e) {
-            var1_int = var1_int + um.field_e.matchState.playerCount;
+            null != MachineTokenStorageSupport.field_e) {
+            var1_int = var1_int + MachineTokenStorageSupport.field_e.matchState.playerCount;
           }
           if (var1_int == 0) {
             return;
@@ -115,11 +115,11 @@ final class DiagnosticsOverlaySupport {
             var2 += 20;
           }
           if (LineupAgent.field_o &&
-            null != um.field_e) {
-            for (var3 = 0; var3 < um.field_e.matchState.playerCount; var3++) {
-              stackIn_42_0 = (~var3 == ~um.field_e.localSeat) ? 16777215 : 11184812;
+            null != MachineTokenStorageSupport.field_e) {
+            for (var3 = 0; var3 < MachineTokenStorageSupport.field_e.matchState.playerCount; var3++) {
+              stackIn_42_0 = (~var3 == ~MachineTokenStorageSupport.field_e.localSeat) ? 16777215 : 11184812;
               var4 = stackIn_42_0;
-              var10 = um.field_e.matchState.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.matchState.field_g[var3].team;
+              var10 = MachineTokenStorageSupport.field_e.matchState.field_S[var3] + ": " + MachineTokenStorageSupport.field_e.field_z[var3] + "ms / team " + MachineTokenStorageSupport.field_e.matchState.field_g[var3].team;
               IsSixCommand.field_C.c(var10, 620, var2, var4, 0);
               var2 += 20;
             }
@@ -144,16 +144,16 @@ final class DiagnosticsOverlaySupport {
             IsSixCommand.field_C.c(var14, 620, var2, 16777215, 0);
             var2 += 20;
           }
-          if (fa.field_j != 0) {
+          if (PendingRequestAcknowledgement.field_j != 0) {
             var15 = "Range:";
             var3_ref_String = var15;
-            if (1 == fa.field_j) {
+            if (1 == PendingRequestAcknowledgement.field_j) {
               var3_ref_String = var15 + " Ball";
             }
-            if (fa.field_j == 2) {
+            if (PendingRequestAcknowledgement.field_j == 2) {
               var3_ref_String = var3_ref_String + " Player";
             }
-            if (fa.field_j == 3) {
+            if (PendingRequestAcknowledgement.field_j == 3) {
               var3_ref_String = var3_ref_String + " Ball & Player";
             }
             IsSixCommand.field_C.c(var3_ref_String, 620, var2, 16777215, 0);

@@ -15,7 +15,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           if (param0 != -59) {
             TexturedPanelPainter.a(114);
           }
-          if (vb.field_b == LineupAgent.field_n) {
+          if (PitchDecorationSupport.field_b == LineupAgent.field_n) {
             return false;
           }
           FixedQuaternion.field_e = QuickChatCategoryCache.field_a[LineupAgent.field_n];
@@ -37,7 +37,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         int var7 = 0;
         int var8 = Kickabout.field_G;
         int var7Lifetime1;
-        SoftwareDrawingSupport.drawSpriteClipped(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
+        SoftwareDrawingSupport.drawSpriteClipped(TutorialScenerySupport.field_a, param0, param2, param3, param1, 256, TutorialScenerySupport.field_a.field_v - param1);
         int[] var11 = new int[4];
         int[] var10 = var11;
         int[] var9 = var10;
@@ -84,16 +84,16 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           return;
         }
         try {
-          or.field_d.b(81, (byte) 99);
-          or.field_d.field_n = or.field_d.field_n + 2;
-          var1_int = or.field_d.field_n;
-          or.field_d.writeByte(109, MusicPatchNode.field_h.a(false));
+          FootballerAiOverlaySupport.field_d.b(81, (byte) 99);
+          FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
+          var1_int = FootballerAiOverlaySupport.field_d.field_n;
+          FootballerAiOverlaySupport.field_d.writeByte(109, MusicPatchNode.field_h.a(false));
           var2 = (ManagerAction) (MusicPatchNode.field_h.g(param0 + 24065));
           while (var2 != null) {
-            var2.writeToPacket(1, or.field_d);
+            var2.writeToPacket(1, FootballerAiOverlaySupport.field_d);
             var2 = (ManagerAction) (MusicPatchNode.field_h.c(param0 ^ -23));
           }
-          or.field_d.backpatchShortLength(or.field_d.field_n - var1_int, param0 + 118);
+          FootballerAiOverlaySupport.field_d.backpatchShortLength(FootballerAiOverlaySupport.field_d.field_n - var1_int, param0 + 118);
           MusicPatchNode.field_h.clear(param0 + 23053);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
@@ -116,7 +116,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           if (param0 != -59) {
             TexturedPanelPainter.a(114);
           }
-          if (vb.field_b == LineupAgent.field_n) {
+          if (PitchDecorationSupport.field_b == LineupAgent.field_n) {
             return false;
           }
           FixedQuaternion.field_e = QuickChatCategoryCache.field_a[LineupAgent.field_n];

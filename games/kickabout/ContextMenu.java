@@ -31,7 +31,7 @@ final class ContextMenu extends UiLayoutNode {
         if (param0 != -20010) {
           field_Ib = (String) null;
         }
-        return mj.field_a == PlayerModelPreview.field_f ? true : false;
+        return PitchAppearanceSupport.field_a == PlayerModelPreview.field_f ? true : false;
     }
 
     final int getSelectedActionId(byte param0, boolean param1) {
@@ -191,7 +191,7 @@ final class ContextMenu extends UiLayoutNode {
         if (param1 > -75) {
           field_yb = (char[]) null;
         }
-        CipherPacketBuffer var3 = or.field_d;
+        CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
         var3.b(param2, (byte) -76);
         var3.writeByte(111, 3);
         var3.writeByte(125, 9);

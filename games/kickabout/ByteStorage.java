@@ -16,7 +16,7 @@ abstract class ByteStorage {
         CipherPacketBuffer var4 = null;
         try {
           int var3_int = -84 / ((param2 + 50) / 61);
-          var4 = or.field_d;
+          var4 = FootballerAiOverlaySupport.field_d;
           var4.b(param0, (byte) -80);
           var4.writeByte(125, 2);
           var4.writeByte(119, 0);
@@ -47,9 +47,9 @@ abstract class ByteStorage {
           return;
         }
         try {
-          pl.field_d = param0.readUnsignedShort((byte) 81) << 5;
+          GameOptionMenuSupport.field_d = param0.readUnsignedShort((byte) 81) << 5;
           var2_int = param0.readUnsignedByte((byte) -125);
-          pl.field_d = pl.field_d + (var2_int >> 3);
+          GameOptionMenuSupport.field_d = GameOptionMenuSupport.field_d + (var2_int >> 3);
           AuctionsHelpScreen.field_E = 1835008 & var2_int << 18;
           AuctionsHelpScreen.field_E = AuctionsHelpScreen.field_E + (param0.readUnsignedShort((byte) 81) << 2);
           var2_intLifetime1 = param0.readUnsignedByte((byte) -126);

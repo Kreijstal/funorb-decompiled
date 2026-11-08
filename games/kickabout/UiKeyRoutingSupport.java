@@ -37,7 +37,7 @@ final class UiKeyRoutingSupport {
 
     final static void a(String param0, byte param1, String param2) {
         try {
-          ql.a(false, param0, param2, 3960);
+          MatchHudRoutingSupport.setAccountStatusText(false, param0, param2, 3960);
           if (param1 >= -114) {
             field_h = (String) null;
           }
@@ -61,7 +61,7 @@ final class UiKeyRoutingSupport {
           MusicPatchNode.b(85);
           return true;
         }
-        if (br.a(param0 ^ 62)) {
+        if (KitUnlockNoticeSupport.handleSharedPromptKey(param0 ^ 62)) {
           return true;
         }
         if (HighScoreQuery.dispatchKeyInput(param3, param2, param1, -20859)) {

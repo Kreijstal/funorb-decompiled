@@ -37,23 +37,23 @@ final class ClassNameSupport {
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
-          if (un.field_c != RegistrationRequestDialog.field_rb) {
+          if (ByteArrayPool.field_c != RegistrationRequestDialog.field_rb) {
             return false;
           }
           if (param0 >= -1) {
             ClassNameSupport.releaseStatics((byte) 127);
           }
           var2_long = MonotonicClock.monotonicMillis(-90);
-          if (cu.field_c != 0 &&
+          if (RankingRowFactory.field_c != 0 &&
             DirectByteStorage.field_i < 0) {
             var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.g(24009));
             if (var4_ref_jm != null &&
               var4_ref_jm.dueTime < var2_long) {
               var4_ref_jm.c((byte) -109);
               MusicVolumeSupport.field_b = var4_ref_jm.data.length;
-              un.field_e.field_n = 0;
+              ByteArrayPool.field_e.field_n = 0;
               for (var5_int = 0; var5_int < MusicVolumeSupport.field_b; var5_int++) {
-                un.field_e.field_f[var5_int] = var4_ref_jm.data[var5_int];
+                ByteArrayPool.field_e.field_f[var5_int] = var4_ref_jm.data[var5_int];
               }
               PagedHelpScreen.field_A = TeamSelectionView.field_n;
               TeamSelectionView.field_n = SquadSlotWidget.field_Ab;
@@ -64,18 +64,18 @@ final class ClassNameSupport {
           }
           while (true) {
             if (0 > DirectByteStorage.field_i) {
-              un.field_e.field_n = 0;
+              ByteArrayPool.field_e.field_n = 0;
               if (!SetLagCommand.a((byte) 83, 1)) {
                 return false;
               }
-              DirectByteStorage.field_i = un.field_e.k((byte) 107);
-              un.field_e.field_n = 0;
+              DirectByteStorage.field_i = ByteArrayPool.field_e.k((byte) 107);
+              ByteArrayPool.field_e.field_n = 0;
               MusicVolumeSupport.field_b = param1[DirectByteStorage.field_i];
             }
             if (!LoginCredentials.a(180)) {
               return false;
             }
-            if (cu.field_c == 0) {
+            if (RankingRowFactory.field_c == 0) {
               PagedHelpScreen.field_A = TeamSelectionView.field_n;
               TeamSelectionView.field_n = SquadSlotWidget.field_Ab;
               SquadSlotWidget.field_Ab = AppletContextSupport.field_b;
@@ -83,7 +83,7 @@ final class ClassNameSupport {
               DirectByteStorage.field_i = -1;
               return true;
             }
-            var4 = cu.field_c;
+            var4 = RankingRowFactory.field_c;
             if (0.0 != MessageDialog.field_B) {
               var4 = (int)((double)var4 + TrinketUnlockNotice.field_d.nextGaussian() * MessageDialog.field_B);
               if (var4 < 0) {
@@ -92,7 +92,7 @@ final class ClassNameSupport {
             }
             var5 = new DelayedServerPacket(var2_long + (long)var4, DirectByteStorage.field_i, new byte[MusicVolumeSupport.field_b]);
             for (var6 = 0; var6 < MusicVolumeSupport.field_b; var6++) {
-              var5.data[var6] = un.field_e.field_f[var6];
+              var5.data[var6] = ByteArrayPool.field_e.field_f[var6];
             }
             ConsolePanel.field_i.addLast(var5, 3);
             DirectByteStorage.field_i = -1;

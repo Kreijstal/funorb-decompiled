@@ -107,7 +107,7 @@ final class AnimationFrameset extends DualLinkNode {
           var5_ref_iw = new PacketBuffer(var28);
           var5_ref_iw.field_n = 1;
           var6 = var5_ref_iw.readUnsignedShort((byte) 81);
-          var2 = var2 != 0 & gs.field_d.ensureFlatFileAvailable(var6, 119) ? 1 : 0;
+          var2 = var2 != 0 & SelectionMarkerSupport.field_d.ensureFlatFileAvailable(var6, 119) ? 1 : 0;
           var16++;
         }
         if (var2 == 0) {
@@ -134,7 +134,7 @@ final class AnimationFrameset extends DualLinkNode {
             break;
           }
           if (var11 == null) {
-            var15 = new AnimationSkeleton(var10, gs.field_d.getSingleFile(0, var10));
+            var15 = new AnimationSkeleton(var10, SelectionMarkerSupport.field_d.getSingleFile(0, var10));
             var11 = var15;
             var3.addLast(var15, 3);
           }

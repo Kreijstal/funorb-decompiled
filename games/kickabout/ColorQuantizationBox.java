@@ -70,7 +70,7 @@ final class ColorQuantizationBox {
             PacketBuffer.a(-122, AudioOutputSupport.field_b);
             SoftwareRasterizer.clearFramebuffer();
           }
-          var15 = un.field_d;
+          var15 = ByteArrayPool.field_d;
           if (MonotonicClock.monotonicMillis(107) % 1000L < 500L) {
             ((BitmapFont) ((Object) var15)).d(":", var11, var12, 16777215, -1);
           }
@@ -256,8 +256,8 @@ final class ColorQuantizationBox {
         if (param1 <= 12) {
           return;
         }
-        if (null == su.field_c) {
-          su.field_c = (PopupDialog) ((Object) new MessageDialog(param0));
+        if (null == WidgetStyleFactory.field_c) {
+          WidgetStyleFactory.field_c = (PopupDialog) ((Object) new MessageDialog(param0));
         }
     }
 

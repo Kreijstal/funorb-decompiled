@@ -91,9 +91,9 @@ abstract class MatchAgent {
         byte[] var2 = SquadPickerDialog.field_O[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = lt.field_a[TextLayoutLine.b(255, (int) var2[var4_int])];
+          var3[var4_int] = PlayAreaMovementSupport.field_a[TextLayoutLine.b(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
+        Sprite var4 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
         ScrollContainer.h((byte) -81);
         return var4;
     }
@@ -344,14 +344,14 @@ abstract class MatchAgent {
           var2_int = param0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (ca.isNameSeparator(false, param1.charAt(var2_int))) {
+            if (GradientRasterSupport.isNameSeparator(false, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (ca.isNameSeparator(false, param1.charAt(-1 + var3))) {
+            if (GradientRasterSupport.isNameSeparator(false, param1.charAt(-1 + var3))) {
               var3--;
               continue;
             }
@@ -419,7 +419,7 @@ abstract class MatchAgent {
             var4 = (MatchAgent) null;
             this.copyStateFrom((byte) 17, (MatchAgent) null);
           }
-          this.field_b = -hq.a(22531, 6, param0, 0) + 64;
+          this.field_b = -ClientInteractionSupport.a(22531, 6, param0, 0) + 64;
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
             this.field_e = param0.readBits(4, param1 + 55) - 1;
           }

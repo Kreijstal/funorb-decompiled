@@ -257,7 +257,7 @@ final class TriangleMesh {
           if (param2 >= -43) {
             field_B = (int[]) null;
           }
-          if (cu.decodeSpriteSheetFromArchive(param3, param1, param0, 112)) {
+          if (RankingRowFactory.decodeSpriteSheetFromArchive(param3, param1, param0, 112)) {
             stackIn_6_0 = MarkerSliderWidget.a(-109, param4.b(param0, -32669, param3));
             return stackIn_6_0;
           }

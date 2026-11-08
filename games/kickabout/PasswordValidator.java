@@ -154,10 +154,10 @@ final class PasswordValidator extends TextFieldValidator {
           PacketBuffer.a(-68, AccountRegistrationResponse.field_j);
           SoftwareRasterizer.clearFramebuffer();
           AuctionListing.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
-          tn.field_e.drawScaled(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
+          SocialUiState.field_e.drawScaled(0, 0, SocialUiState.field_e.field_o * var7 / 140, SocialUiState.field_e.field_v);
           TeamManagementScreen.e(124);
           AuctionListing.a(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
-          tn.field_e.d(-140 + var7, 0);
+          SocialUiState.field_e.d(-140 + var7, 0);
           TeamManagementScreen.e(param0 - 706856552);
           if (MouseWheelInput.field_f) {
             for (var8 = 0; SoftwareRasterizer.field_a.length > var8; var8++) {
@@ -235,7 +235,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
         int var5 = (int)(MonotonicClock.monotonicMillis(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
-        Sprite var6 = lt.field_c[var5];
+        Sprite var6 = PlayAreaMovementSupport.field_c[var5];
         if (!param3) {
           var6.c(-(var6.field_o >> 1) + param1, -(var6.field_v >> 1) + param2);
         } else {
@@ -332,8 +332,8 @@ final class PasswordValidator extends TextFieldValidator {
           return;
         }
         try {
-          var4 = Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[0]), Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[3]), ((BitmapFont) ((Object) var11)).a(ns.field_d[4]))) + 20;
-          var5 = Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[1]), ((BitmapFont) ((Object) var11)).a(ns.field_d[2])) + 20;
+          var4 = Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[0]), Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[3]), ((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[4]))) + 20;
+          var5 = Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[1]), ((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[2])) + 20;
           var6 = var5 + var5 + var4;
           var7 = -(var6 >> 1) + param1;
           var8 = -34 + param0;
@@ -345,15 +345,15 @@ final class PasswordValidator extends TextFieldValidator {
           SoftwareRasterizer.drawVerticalLineAlpha(var7 + var4, 4 + var8, 59, 16777215, 100);
           SoftwareRasterizer.drawVerticalLineAlpha(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
           var9Lifetime1 = 22 + var8 - 4;
-          ((BitmapFont) ((Object) var3)).c(ns.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d(ns.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d(ns.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d(NotificationPanelPositionSupport.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d(NotificationPanelPositionSupport.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((BitmapFont) ((Object) var3)).c(ns.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("+30", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("+3", -2 + var7 + (var4 + (var5 + (var5 >> 1))), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((BitmapFont) ((Object) var3)).c(ns.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
         } catch (RuntimeException runtimeException) {

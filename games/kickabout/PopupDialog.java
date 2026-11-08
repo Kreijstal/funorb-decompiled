@@ -258,7 +258,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
           for (var6 = 0; this.field_i.length > var6; var6++) {
             param1[var6] = param1[var6].toLowerCase();
-            this.field_i[var6] = SoftwareDrawingSupport.createRenderedButton(param1[var6], 7126504, un.field_d, 90, false);
+            this.field_i[var6] = SoftwareDrawingSupport.createRenderedButton(param1[var6], 7126504, ByteArrayPool.field_d, 90, false);
             var7 = this.field_k + this.field_r + (-this.field_i[var6].field_mb - 10);
             this.field_i[var6].field_s = 100 * var6 + var5;
             this.field_i[var6].field_J = var7;
@@ -275,7 +275,7 @@ abstract class PopupDialog extends IntrusiveNode {
         int var5 = Kickabout.field_G;
         AuctionListing.a(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
         for (var4 = 0; this.field_e > var4; var4++) {
-          mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
+          TutorialScenerySupport.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }
         AuctionLogEntry.field_j.drawScaledAdditive(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.drawBody((byte) -29, param1, param2);

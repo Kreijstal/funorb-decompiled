@@ -63,20 +63,20 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         try {
           for (var2_int = 0; 2 > var2_int; var2_int++) {
             for (var3 = 1; 5 > var3; var3++) {
-              et.field_d.field_P[var2_int][var3].directionMask = 0;
-              et.field_d.field_E.clear(22997);
+              ThumbnailStateFactory.field_d.field_P[var2_int][var3].directionMask = 0;
+              ThumbnailStateFactory.field_d.field_E.clear(22997);
             }
           }
-          et.field_d.participantStatus[0].controlledSlot = 0;
+          ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = 0;
           HuffmanCodec.field_e = param0;
           RegistrationRequestState.field_i = false;
-          et.field_d.participantStatus[1].controlledSlot = 0;
+          ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
           if (HuffmanCodec.field_e == 1) {
             EmailAvailabilityValidator.field_k.setPosition(29360128, false, 0, 107085824);
             EmailAvailabilityValidator.field_k.field_R = 1024;
             EmailAvailabilityValidator.field_k.setDirectionFromMask(4, 26214);
-            et.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
-            vb.field_d = 1;
+            ThumbnailStateFactory.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
+            PitchDecorationSupport.field_d = 1;
           } else {
             if (HuffmanCodec.field_e != 2) {
               if (HuffmanCodec.field_e != 3) {
@@ -84,43 +84,43 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                   if (HuffmanCodec.field_e != 5) {
                     if (6 == HuffmanCodec.field_e) {
                       AccountInputValidationResult.field_f.setPosition(655360, param1, 0, 19005440);
-                      vb.field_d = 1;
+                      PitchDecorationSupport.field_d = 1;
                       var5 = 0;
                       var2_intLifetime1 = var5;
                       while (3 > var5) {
                         KitStyleTile.field_zb[var5] = 740;
-                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).setPosition(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
+                        ((RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[1][1 + var5])).setPosition(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
                         var5++;
                       }
                     } else {
                       if (HuffmanCodec.field_e == 7) {
-                        vb.field_d = 3;
-                        var8 = (RenderedFootballer) (et.field_d.field_P[1][4]);
+                        PitchDecorationSupport.field_d = 3;
+                        var8 = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[1][4]);
                         var8.setPosition(-13107200, false, 0, 22937600);
-                        et.field_d.participantStatus[1].controlledSlot = 4;
+                        ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 4;
                         var8.directionMask = 8;
                         AccountInputValidationResult.field_f.directionMask = 4;
                       } else {
                         if (HuffmanCodec.field_e == 8) {
-                          vb.field_d = 3;
+                          PitchDecorationSupport.field_d = 3;
                         } else {
                           if (HuffmanCodec.field_e != 9) {
                             if (HuffmanCodec.field_e != 10) {
                               if (HuffmanCodec.field_e == 11) {
-                                vb.field_d = 4;
+                                PitchDecorationSupport.field_d = 4;
                               } else {
                                 if (12 == HuffmanCodec.field_e) {
-                                  vb.field_d = 4;
+                                  PitchDecorationSupport.field_d = 4;
                                 } else {
                                   if (HuffmanCodec.field_e != 13) {
                                     if (HuffmanCodec.field_e == 14) {
-                                      um.field_e.beginPhase(26415, 2);
-                                      et.field_d.disableLocal = false;
+                                      MachineTokenStorageSupport.field_e.beginPhase(26415, 2);
+                                      ThumbnailStateFactory.field_d.disableLocal = false;
                                       AnimationSkeleton.field_m = 500;
                                     }
                                   } else {
-                                    vb.field_d = 4;
-                                    var7 = (RenderedFootballer) (et.field_d.field_P[1][0]);
+                                    PitchDecorationSupport.field_d = 4;
+                                    var7 = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[1][0]);
                                     var7.setPosition(29360128, false, 0, -19005440);
                                     var7.field_o = 8;
                                     var7.directionMask = 0;
@@ -128,35 +128,35 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                                 }
                               }
                             } else {
-                              vb.field_d = 1;
-                              fc.field_c.setPosition(1310720, false, 0, 36438016);
+                              PitchDecorationSupport.field_d = 1;
+                              LoginResponseUiSupport.field_c.setPosition(1310720, false, 0, 36438016);
                             }
                           } else {
-                            vb.field_d = 3;
+                            PitchDecorationSupport.field_d = 3;
                             EmailAvailabilityValidator.field_k.setPosition(0, false, 0, 44040192);
                           }
                         }
                       }
                     }
                   } else {
-                    vb.field_d = 3;
+                    PitchDecorationSupport.field_d = 3;
                   }
                 } else {
                   AccountInputValidationResult.field_f.setPosition(42270720, false, 0, 41287680);
-                  vb.field_d = 1;
+                  PitchDecorationSupport.field_d = 1;
                 }
               } else {
-                vb.field_d = 1;
+                PitchDecorationSupport.field_d = 1;
               }
             } else {
-              vb.field_d = 1;
+              PitchDecorationSupport.field_d = 1;
             }
           }
           HoverTooltip.field_Eb = true;
           LoginCredentials.a(-25246, false, param1, false, false, false, false);
-          mk.b(-1622);
-          et.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
-          et.field_d.field_B = et.field_d.field_x;
+          TutorialScenerySupport.buildTutorialScenery(-1622);
+          ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
+          ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -96,11 +96,11 @@ final class MatchScreen extends AppScreen {
             }
           }
           LoadingProgressSupport.reportStageProgress(72, 5, 4);
-          gw.field_f[0] = MeshData.load(param1, "", "fans/fan_01");
-          gw.field_f[1] = MeshData.load(param1, "", "fans/fan_02");
-          gw.field_f[2] = MeshData.load(param1, "", "fans/fan_03");
-          gw.field_f[3] = MeshData.load(param1, "", "fans/fan_04");
-          gw.field_f[4] = MeshData.load(param1, "", "fans/fan_05");
+          HuffmanTextSupport.field_f[0] = MeshData.load(param1, "", "fans/fan_01");
+          HuffmanTextSupport.field_f[1] = MeshData.load(param1, "", "fans/fan_02");
+          HuffmanTextSupport.field_f[2] = MeshData.load(param1, "", "fans/fan_03");
+          HuffmanTextSupport.field_f[3] = MeshData.load(param1, "", "fans/fan_04");
+          HuffmanTextSupport.field_f[4] = MeshData.load(param1, "", "fans/fan_05");
           FriendRemovalSupport.field_f = MeshData.load(param1, "", "characters/torso");
           RowRangeRequest.field_k = MeshData.load(param1, "", "characters/keeper_body_halloween");
           IndexedSpriteState.field_j = new MeshData[5];
@@ -303,7 +303,7 @@ final class MatchScreen extends AppScreen {
             this.matchState.disableOpponent = true;
           }
           GoalkeeperAiSupport.initializeFadingChat(ServerMessageScreen.field_E, -448);
-          nc.a(this.matchState, (byte) -85, this.localSeat, this.isOnlineMatch);
+          LoginPacketSupport.configureParticipantNamePanel(this.matchState, (byte) -85, this.localSeat, this.isOnlineMatch);
           this.stateReceived = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -592,7 +592,7 @@ final class MatchScreen extends AppScreen {
           return;
         }
         this.phaseController.drawContent(1);
-        if ((1 & fa.field_j) != 0) {
+        if ((1 & PendingRequestAcknowledgement.field_j) != 0) {
           var7 = this.matchState.field_B;
           var3_ref_la__ = var7;
           for (var4Lifetime1 = 0; var7.length > var4Lifetime1; var4Lifetime1++) {
@@ -600,7 +600,7 @@ final class MatchScreen extends AppScreen {
             var5.a(-2943, 16777215);
           }
         }
-        if ((fa.field_j & 2) != 0) {
+        if ((PendingRequestAcknowledgement.field_j & 2) != 0) {
           var8 = this.matchState.field_x;
           var3_ref_la__Lifetime1 = var8;
           for (var4Lifetime2 = 0; var4Lifetime2 < var8.length; var4Lifetime2++) {
@@ -619,7 +619,7 @@ final class MatchScreen extends AppScreen {
             stackIn_24_0 = 0;
           }
           var3 = stackIn_24_0;
-          ql.a((byte) 96, var3 != 0, this.field_z);
+          MatchHudRoutingSupport.drawMatchHud((byte) 96, var3 != 0, this.field_z);
         }
         SquadGridWidget.b(-109);
     }
@@ -650,8 +650,8 @@ final class MatchScreen extends AppScreen {
           field_x = (String) null;
         }
         if (this.isOnlineMatch) {
-          or.field_d.b(75, (byte) 112);
-          or.field_d.writeByte(118, param1);
+          FootballerAiOverlaySupport.field_d.b(75, (byte) 112);
+          FootballerAiOverlaySupport.field_d.writeByte(118, param1);
         }
     }
 
@@ -737,7 +737,7 @@ final class MatchScreen extends AppScreen {
         if (param1 > -5) {
           return false;
         }
-        if (param0 == tt.field_b) {
+        if (param0 == SocialListProtocolSupport.field_b) {
           LoginMethod.field_d = !LoginMethod.field_d ? true : false;
         }
         if (!this.stateReceived) {
@@ -802,7 +802,7 @@ final class MatchScreen extends AppScreen {
           }
           if (this.matchState.phase > 0 &&
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
-            ih.field_c != this.matchState.surface ||
+            FormationMaskSupport.field_c != this.matchState.surface ||
             !NanoTickClock.field_n)) {
             StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }

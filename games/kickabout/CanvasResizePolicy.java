@@ -146,7 +146,7 @@ final class CanvasResizePolicy {
         this.field_f = ReceivedAuctionItem.field_B;
         this.resizeListener.resizeCanvas(111, this.field_u, this.field_b);
         SquadGridWidget.field_Ib = false;
-        FullscreenFocusCanvas var2 = ModelMaterial.createFullscreenCanvas(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
+        FullscreenFocusCanvas var2 = ModelMaterial.createFullscreenCanvas(PlatformTaskState.field_c, 0, this.field_b, 0, this.field_u, 0);
         if (param0 != 30182) {
           this.updateCanvasSize(119);
           if (var2 == null) {

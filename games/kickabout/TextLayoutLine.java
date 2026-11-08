@@ -22,7 +22,7 @@ final class TextLayoutLine {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = ig.screenToWorldY(param1, param0 ^ -2167);
+        int var2 = MatchHudSupport.screenToWorldY(param1, param0 ^ -2167);
         if (FaceNormal.field_c) {
           var2 = -var2 + 1344;
         }

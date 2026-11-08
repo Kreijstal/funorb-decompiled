@@ -40,10 +40,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
           AppScreen.field_a.e();
           var2.d(0, 0);
-          po.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
-          po.field_e.e();
+          SocialRowOrderSupport.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
+          SocialRowOrderSupport.field_e.e();
           var2.d(0, -AppScreen.field_a.field_w);
-          po.field_e.field_n = AppScreen.field_a.field_w;
+          SocialRowOrderSupport.field_e.field_n = AppScreen.field_a.field_w;
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -163,7 +163,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         ColorQuantizationBox.field_a = SoftwareRasterizer.field_g;
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         GeneratedPanelPainter.b((byte) 92);
-        tn.field_d.layout(0, UiKeyRoutingSupport.field_c.field_q, 0, -2 + UiKeyRoutingSupport.field_c.field_mb - 40, (byte) -123);
+        SocialUiState.field_d.layout(0, UiKeyRoutingSupport.field_c.field_q, 0, -2 + UiKeyRoutingSupport.field_c.field_mb - 40, (byte) -123);
         ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, LineupPositionSupport.field_c);
         var1 = LineupPositionSupport.field_c + 2;
         if (param0) {

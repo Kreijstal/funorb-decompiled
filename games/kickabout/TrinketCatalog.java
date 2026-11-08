@@ -721,7 +721,7 @@ final class TrinketCatalog {
           SoftwareDrawingSupport.b(param1 + 314, 1344 + (param0 - 122), 268, 122, param3);
           SoftwareDrawingSupport.b(param1 + 179, param0, 537, 268, param3);
           SoftwareDrawingSupport.b(179 + param1, 1076 + param0, 537, 268, param3);
-          vj.a(0);
+          RasterGlowSupport.applyRasterGlow(0);
           return;
         }
     }

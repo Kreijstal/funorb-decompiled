@@ -37,7 +37,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           GameplayHelpScreen.j((byte) 80);
         }
         var2 = 0;
-        var3 = ca.field_f.length;
+        var3 = GradientRasterSupport.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
           !AccountRegistrationResponse.a((byte) 50) &&
           !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
@@ -48,15 +48,15 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5.setBounds(true, Trinket.field_d.field_q, 20, 44 + var4 * 44 - 10, Trinket.field_d.field_w);
           var5.field_N = (Sprite) ((Object) Trinket.field_d);
           var12.addChild((byte) -121, var5);
-          var6 = ca.field_f[var4];
-          for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
+          var6 = GradientRasterSupport.field_f[var4];
+          for (var7 = 0; var7 < GradientRasterSupport.field_f[var4]; var7++) {
             if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
               !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
           }
           var7Lifetime1 = 0;
-          for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
+          for (var8 = 0; var8 < GradientRasterSupport.field_f[var4]; var8++) {
             var9 = 0;
             if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
               !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
@@ -331,7 +331,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = 40 + this.slideOffsetX;
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 150, 210, 200, 10, 65793, 140);
-          un.field_d.a(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
+          ByteArrayPool.field_d.a(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
             IsSixCommand.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
@@ -362,7 +362,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           while (2 > var10) {
             var5Lifetime1 = this.slideOffsetX + (50 + var10 * 14);
             var6Lifetime1 = var10 * 12 + 361;
-            lt.field_d[var10].c(var5Lifetime1, var6Lifetime1);
+            PlayAreaMovementSupport.field_d[var10].c(var5Lifetime1, var6Lifetime1);
             var10++;
           }
         }
@@ -518,7 +518,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             stackIn_10_1 = 60;
           }
           var5 = stackIn_9_0 + stackIn_10_1;
-          un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
+          ByteArrayPool.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
           SoftwareRasterizer.clearFramebuffer();
           CalendarSupport.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
@@ -557,7 +557,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           UrlRequest.field_k.drawHalfSize(var5 - (UrlRequest.field_k.field_o >> 2), -(UrlRequest.field_k.field_v >> 2) + 280);
           stackIn_31_0 = IsSixCommand.field_C;
-          stackIn_31_1 = cu.field_d[var4];
+          stackIn_31_1 = RankingRowFactory.field_d[var4];
           if (0 == var4) {
             stackIn_32_2 = 85;
           } else {
@@ -632,7 +632,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
-          un.field_d.a(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
+          ByteArrayPool.field_d.a(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
             GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
           }
@@ -687,7 +687,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var4 = 30 + this.field_E.field_Db.field_T;
         var5 = var4;
         for (var6 = 0; var6 < 4; var6++) {
-          un.field_d.a(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
+          ByteArrayPool.field_d.a(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
           SoftwareDrawingSupport.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
           var5 += 6;
           var5 = var5 + IsSixCommand.field_C.a(ServerTextTemplate.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;

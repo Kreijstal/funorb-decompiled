@@ -39,7 +39,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         if (param0 != 2368) {
           return false;
         }
-        return null == SplashScreen.field_m ? vb.field_k : true;
+        return null == SplashScreen.field_m ? PitchDecorationSupport.field_k : true;
     }
 
     StrongCacheEntry(Object param0, int param1) {

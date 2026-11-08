@@ -13,10 +13,10 @@ final class AccountNameCharacterSupport {
         if (param0 > -10) {
           field_b = (int[][]) null;
         }
-        if (vj.field_c == 10 ||
+        if (RasterGlowSupport.field_c == 10 ||
           !PitchSurfaceLoader.d(1)) {
           IntTripleCommand.g((byte) -54);
-          vj.field_c = 11;
+          RasterGlowSupport.field_c = 11;
         }
         WhirlpoolHasher.field_h = true;
     }

@@ -32,7 +32,7 @@ final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
           var4_int = 37 % ((param2 - 60) / 56);
           var5 = param0.field_o;
           var6 = param0.field_v;
-          var7 = ug.a(0, param1.field_kb >> 16) - (var5 >> 1);
+          var7 = SocialListLayoutSupport.worldToScreenX(0, param1.field_kb >> 16) - (var5 >> 1);
           var8 = -(var6 >> 1) + IntKeyLookup.a((byte) -101, param1.field_bb >> 16);
           if (InstrumentNoteMask.field_i == 256) {
             if (1 == SocketArchiveNetworkClient.field_v) {
