@@ -112,7 +112,7 @@ final class EmailFormatError {
               ClockAndCookieHelpers.field_g.writeCipheredOpcode(71, (byte) -117);
               ClockAndCookieHelpers.field_g.writeByte((byte) 122, var2);
               if (var2 >= 10) {
-                ClockAndCookieHelpers.field_g.writeShort(jh.field_a[var2 - 10], 31);
+                ClockAndCookieHelpers.field_g.writeShort(TrigonometryHelpers.field_a[var2 - 10], 31);
               } else {
                 ClockAndCookieHelpers.field_g.writeShort(0, 105);
               }

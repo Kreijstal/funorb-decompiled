@@ -45,7 +45,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
               return null;
             }
           } else {
-            stackIn_4_0 = SocketConnector.formatTemplate(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = SocketConnector.formatTemplate(PatchNoteUsage.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

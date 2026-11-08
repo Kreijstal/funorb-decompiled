@@ -1032,7 +1032,7 @@ final class SentinelDesigner {
           var8 = 106;
           QuickChatPhraseDefinition.field_C = -1;
           if (param1) {
-            stackIn_50_0 = ce.field_t;
+            stackIn_50_0 = PatchNoteUsage.field_t;
           } else {
             stackIn_50_0 = DirectByteStorage.field_m;
           }
@@ -2300,7 +2300,7 @@ final class SentinelDesigner {
                                                                     }
                                                                     TableColumns.field_g = -1;
                                                                     if (!ChatPanelHelpers.areBaseAssetsLoaded(-99)) {
-                                                                      ClientGlobals.field_a = dg.field_e;
+                                                                      ClientGlobals.field_a = InterfaceTextHelpers.field_e;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -2350,7 +2350,7 @@ final class SentinelDesigner {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      ClientGlobals.field_a = dg.field_e;
+                                                                      ClientGlobals.field_a = InterfaceTextHelpers.field_e;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -3361,7 +3361,7 @@ final class SentinelDesigner {
           }
           DateOfBirthValidator.field_o = 4;
           if (param1) {
-            stackIn_30_0 = ce.field_t;
+            stackIn_30_0 = PatchNoteUsage.field_t;
           } else {
             stackIn_30_0 = DirectByteStorage.field_m;
           }
@@ -3557,15 +3557,15 @@ final class SentinelDesigner {
               if (var17 != 0 ||
                 var24 != 0) {
                 if (1 == var17) {
-                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(-1, jh.field_a[var11]);
+                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(-1, TrigonometryHelpers.field_a[var11]);
                   var16 = SessionSeedHelpers.field_c[1][var11];
-                  var15 = jh.field_a[var11];
+                  var15 = TrigonometryHelpers.field_a[var11];
                   decompiledFrameRemainder1 = false;
                 }
                 if (((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = (var17 == 2))) && (var24 == 0)) {
-                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(param2 ^ -30242, jh.field_a[10 + var11]);
-                  var15 = jh.field_a[var11 + 10];
+                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(param2 ^ -30242, TrigonometryHelpers.field_a[10 + var11]);
+                  var15 = TrigonometryHelpers.field_a[var11 + 10];
                   var16 = SessionSeedHelpers.field_c[2][var11];
                   decompiledFrameRemainder1 = false;
                 }
@@ -3899,7 +3899,7 @@ final class SentinelDesigner {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = SocialListPanel.isAllZero(ce.field_t, 18286) ? 1 : 0;
+          var2_int = SocialListPanel.isAllZero(PatchNoteUsage.field_t, 18286) ? 1 : 0;
           if (param0 <= 63) {
             this.field_k = -30;
           }
@@ -4280,11 +4280,11 @@ final class SentinelDesigner {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, jh.field_a[QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, TrigonometryHelpers.field_a[QuickChatHelpDialog.field_Ub])});
               decompiledFrameRemainder1 = (var29 != 0);
             }
             if (decompiledFrameRemainder1) {
-              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, jh.field_a[10 + QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, TrigonometryHelpers.field_a[10 + QuickChatHelpDialog.field_Ub])});
             }
           }
           if (DirectByteStorage.field_j != 0) {
@@ -4298,7 +4298,7 @@ final class SentinelDesigner {
             QuickChatHelpDialog.field_Ub < QuickChatParameterType.field_f[DirectByteStorage.field_j]) {
             var13 = SessionSeedHelpers.field_c[DirectByteStorage.field_j][QuickChatHelpDialog.field_Ub];
             var14 = 3 * var13 / 2;
-            var15 = jh.field_a[(-1 + DirectByteStorage.field_j) * 10 + QuickChatHelpDialog.field_Ub];
+            var15 = TrigonometryHelpers.field_a[(-1 + DirectByteStorage.field_j) * 10 + QuickChatHelpDialog.field_Ub];
             if (var14 >= var15) {
               var16 = 20 + BirthDateEntryPanel.field_U.textWidth(var12) / 2;
               stackIn_34_0 = AccountChoicePanel.field_Z;
@@ -6361,7 +6361,7 @@ final class SentinelDesigner {
                                     BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.formatMinutesSeconds(param0 - 1, var6_int), (this.getItemLeft(127, 19) + this.getItemRight(19, (byte) 120)) / 2, this.getItemTop(19, (byte) 76) - (-this.getItemHeight(25, 19) - 17), var5_int, -1);
                                     break;
                                   }
-                                  var6_int = var6_int + jh.field_a[var7];
+                                  var6_int = var6_int + TrigonometryHelpers.field_a[var7];
                                   var7++;
                                 } while (var19 == 0);
                                 if (var19 == 0) {
@@ -6411,7 +6411,7 @@ final class SentinelDesigner {
                                   var7 = 0;
                                   var8 = 0;
                                   while (var8 < QuickChatParameterType.field_f[1]) {
-                                    var7 = var7 + jh.field_a[var8];
+                                    var7 = var7 + TrigonometryHelpers.field_a[var8];
                                     var8++;
                                     if (var19 != 0) {
                                       decompiledFrameCompleted1 = false;
@@ -6429,7 +6429,7 @@ final class SentinelDesigner {
                                   var7 = 0;
                                   var8 = 0;
                                   while (var8 < QuickChatParameterType.field_f[2]) {
-                                    var7 = var7 + jh.field_a[var8 + 10];
+                                    var7 = var7 + TrigonometryHelpers.field_a[var8 + 10];
                                     var8++;
                                     if (var19 != 0) {
                                       decompiledFrameCompleted0 = false;

@@ -13,8 +13,8 @@ final class LoginHandshakeHelpers {
     final static void writeLoginHandshake(int param0, int param1, int param2, boolean param3) {
         FallingPickup.field_y.position = 0;
         FallingPickup.field_y.writeByte((byte) 122, 12);
-        FallingPickup.field_y.writeInt(param3, rb.field_g.nextInt());
-        FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+        FallingPickup.field_y.writeInt(param3, AngleHelpers.field_g.nextInt());
+        FallingPickup.field_y.writeInt(true, AngleHelpers.field_g.nextInt());
         FallingPickup.field_y.writeByte((byte) 121, param0);
         FallingPickup.field_y.writeByte((byte) 109, param2);
         FallingPickup.field_y.writeShort(param1, 59);

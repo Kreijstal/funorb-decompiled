@@ -290,14 +290,14 @@ final class BenefitsScreenHelpers {
             null != ValidatedTextWidget.field_ub) {
             QuickChatInputHelpers.field_e.drawTransparent(231, 390);
             var2_ref_wk = TextLayout.field_f;
-            if (jh.field_i.field_e == 0) {
+            if (TrigonometryHelpers.field_i.field_e == 0) {
               var2_ref_wk = ChatHistoryHelpers.field_e;
             }
             var2_ref_wk.drawTransparent(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 20612;
             stackIn_51_2 = ConditionalTextValue.field_e;
-            if (0 != jh.field_i.field_e) {
+            if (0 != TrigonometryHelpers.field_i.field_e) {
               stackIn_52_3 = 3;
             } else {
               stackIn_52_3 = 4;
@@ -315,19 +315,19 @@ final class BenefitsScreenHelpers {
             }
             stackIn_57_0 = LoadingCaptionHelpers.field_a;
             stackIn_57_1 = -28;
-            stackIn_58_2 = (jh.field_i.field_e == 0);
+            stackIn_58_2 = (TrigonometryHelpers.field_i.field_e == 0);
             TutorialStep.drawGlintingButtonFrame(stackIn_57_0, stackIn_57_1, stackIn_58_2, RasterSnapshot.field_s);
           }
           if (null != QuickChatInputHelpers.field_e &&
             null != ValidatedTextWidget.field_ub) {
             QuickChatInputHelpers.field_e.drawTransparent(434, 390);
             ValidatedTextWidget.field_pb.drawTransparent(0, 0);
-            if (jh.field_i.field_e == 1) {
+            if (TrigonometryHelpers.field_i.field_e == 1) {
               MusicPatchPcmStream.recolorGreenPixelsInRect(QuickChatInputHelpers.field_e.field_F * 7 / 12, 436, QuickChatInputHelpers.field_e.field_A - 4, 64, 392, 40);
             }
             stackIn_66_0 = ClientException.field_m;
             stackIn_66_1 = -3;
-            stackIn_67_2 = (jh.field_i.field_e == 1);
+            stackIn_67_2 = (TrigonometryHelpers.field_i.field_e == 1);
             TutorialStep.drawGlintingButtonFrame(stackIn_66_0, stackIn_66_1, stackIn_67_2, PendingAckRequest.field_u);
           }
           if (NodeIterator.field_b != null) {

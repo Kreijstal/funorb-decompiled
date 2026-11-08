@@ -124,7 +124,7 @@ final class LobbySetupHelpers {
           Explosion.field_C.field_Kb = 1;
           BufferedSocket.field_i = new SceneWidget(0L, EmailValidationHelpers.field_c, NodeIterator.field_i.toUpperCase());
           LoginCredentialHelpers.field_c = new SceneWidget(0L, ParticleEffect.field_E, ProxySocketConnector.field_q.toUpperCase());
-          IterableNodeHashTable.field_d = new SceneWidget(0L, ce.field_o);
+          IterableNodeHashTable.field_d = new SceneWidget(0L, PatchNoteUsage.field_o);
           ReportAbuseDialog.field_bc = new SceneWidget(0L, MusicCrossfadeStream.field_J, StatSubmission.field_p);
           NumberParsingHelpers.field_d = new SceneWidget(0L, LobbyStateHelpers.field_f, field_c);
           BattleTerrain.field_q = new SceneWidget(0L, LobbyStateHelpers.field_f, RequestResendHelpers.field_f);
@@ -190,7 +190,7 @@ final class LobbySetupHelpers {
           HuffmanDecoder.field_i.addChild(NanoTickClock.field_t, 124);
           QuickChatCategory.field_E = new SceneWidget(0L, EmailValidationHelpers.field_c, TextAndBitHelpers.field_c.toUpperCase());
           EmailAvailabilityValidator.field_q = new SceneWidget(0L, ParticleEffect.field_E);
-          Js5NetworkRequest.field_L = new SceneWidget(0L, ce.field_o);
+          Js5NetworkRequest.field_L = new SceneWidget(0L, PatchNoteUsage.field_o);
           MusicPatchEnvelope.field_d = new SceneWidget(0L, PendingByteArrayRequest.field_p, SpriteFrame.field_b.toUpperCase());
           ChatHistoryAllocator.field_h = new IconTextComponent[4 + param10][];
           ArchiveLoadStep.field_k = new SceneWidget[4 + param10];
@@ -200,7 +200,7 @@ final class LobbySetupHelpers {
             ChatHistoryAllocator.field_h[0][var17_int + 1] = new IconTextComponent(0L, LoginDialog.field_Ab, (SceneWidget) null, ParticleEffect.field_K, HighscoreColumnHeader.field_i[var17_int], HuffmanDecoder.field_j[var17_int]);
           }
           if (ViewportController.field_l.length >= 2) {
-            ArchiveLoadStep.field_k[1] = new SceneWidget(0L, NumberParsingHelpers.field_b, rb.field_d);
+            ArchiveLoadStep.field_k[1] = new SceneWidget(0L, NumberParsingHelpers.field_b, AngleHelpers.field_d);
             array$0 = new IconTextComponent[ViewportController.field_l.length + 1];
             ChatHistoryAllocator.field_h[1] = array$0;
             ChatHistoryAllocator.field_h[1][0] = new IconTextComponent(0L, LoginDialog.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, DiskCacheWorker.field_e);
@@ -561,8 +561,8 @@ final class LobbySetupHelpers {
           ModalStack.field_U.field_bb = var14;
           UrlAndReplyHelpers.field_c = new SceneWidget(0L, (SceneWidget) null);
           UrlAndReplyHelpers.field_c.field_I = PopupMenuSupport.buildSolidFrameSprites(3, -1, 1856141, 206, 1127256, 13574);
-          ce.field_o = new SceneWidget(0L, (SceneWidget) null);
-          ce.field_o.field_I = PopupMenuSupport.buildSolidFrameSprites(3, -1, 11579568, 290, 6052956, 13574);
+          PatchNoteUsage.field_o = new SceneWidget(0L, (SceneWidget) null);
+          PatchNoteUsage.field_o.field_I = PopupMenuSupport.buildSolidFrameSprites(3, -1, 11579568, 290, 6052956, 13574);
           MenuInputState.field_j = new SceneWidget(0L, var15);
           MenuInputState.field_j.field_Kb = 1;
           MenuInputState.field_j.field_Qb = 1;

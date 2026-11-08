@@ -1996,6 +1996,14 @@
       "renamedSymbol": "C:QuickChatPacketHelpers"
     },
     {
+      "symbol": "C:ce",
+      "originalName": "ce",
+      "to": "PatchNoteUsage",
+      "evidence": "ce.java: IntrusiveNode holding a 128-entry byte array; MusicTrack keys one per patch and marks each MIDI note-on key used by that patch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PatchNoteUsage"
+    },
+    {
       "symbol": "C:cf",
       "originalName": "cf",
       "to": "StatSubmission",
@@ -2130,6 +2138,14 @@
       "evidence": "df.java: ArchiveRequest backed by the SectorCacheStore.",
       "confidence": "reviewed",
       "renamedSymbol": "C:DiskCacheRequest"
+    },
+    {
+      "symbol": "C:dg",
+      "originalName": "dg",
+      "to": "InterfaceTextHelpers",
+      "evidence": "dg.java: Static-only grab-bag holding interface captions (loading wait, Members, Offer rematch, private Quick Chat, component-slot hint) and a flag table.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:InterfaceTextHelpers"
     },
     {
       "symbol": "C:dh",
@@ -2834,6 +2850,14 @@
       "evidence": "jg.java: Window/viewport size limits, resize listener and auto-resize state.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ViewportController"
+    },
+    {
+      "symbol": "C:jh",
+      "originalName": "jh",
+      "to": "TrigonometryHelpers",
+      "evidence": "jh.java: Static-only grab-bag whose only method is sine16 over the 8192-unit angle table, plus unrelated UI statics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:TrigonometryHelpers"
     },
     {
       "symbol": "C:ji",
@@ -3738,6 +3762,14 @@
       "evidence": "ra.java: Sentinel and traversal over the second intrusive links.",
       "confidence": "reviewed",
       "renamedSymbol": "C:DualNodeDeque"
+    },
+    {
+      "symbol": "C:rb",
+      "originalName": "rb",
+      "to": "AngleHelpers",
+      "evidence": "rb.java: Static-only grab-bag whose only method is firstQuadrantAngle8192 (atan of the delta ratio), plus unrelated network and random statics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AngleHelpers"
     },
     {
       "symbol": "C:rc",
@@ -7921,7 +7953,7 @@
       "to": "releaseStatics",
       "evidence": "ce.java: Static method that only nulls this class's static references (obfuscation guard calls are dead).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ce.releaseStatics(B)V"
+      "renamedSymbol": "M:PatchNoteUsage.releaseStatics(B)V"
     },
     {
       "symbol": "M:cf.a(B)V",
@@ -9193,7 +9225,7 @@
       "to": "releaseStatics",
       "evidence": "dg.java: Static method that only nulls this class's static references (obfuscation guard calls are dead).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:dg.releaseStatics(B)V"
+      "renamedSymbol": "M:InterfaceTextHelpers.releaseStatics(B)V"
     },
     {
       "symbol": "M:dh.a(II)Lcm;",
@@ -15057,7 +15089,7 @@
       "to": "releaseStatics",
       "evidence": "jh.java: Static method that only nulls this class's static references (obfuscation guard calls are dead).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:jh.releaseStatics(I)V"
+      "renamedSymbol": "M:TrigonometryHelpers.releaseStatics(I)V"
     },
     {
       "symbol": "M:jh.a(II)I",
@@ -15065,7 +15097,7 @@
       "to": "sine16",
       "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:jh.sine16(II)I"
+      "renamedSymbol": "M:TrigonometryHelpers.sine16(II)I"
     },
     {
       "symbol": "M:ji.a(B)V",
@@ -22529,7 +22561,7 @@
       "to": "releaseStatics",
       "evidence": "rb.java: Static method that only nulls this class's static references (obfuscation guard calls are dead).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rb.releaseStatics(B)V"
+      "renamedSymbol": "M:AngleHelpers.releaseStatics(B)V"
     },
     {
       "symbol": "M:rb.a(III)I",
@@ -22537,7 +22569,7 @@
       "to": "firstQuadrantAngle8192",
       "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rb.firstQuadrantAngle8192(III)I"
+      "renamedSymbol": "M:AngleHelpers.firstQuadrantAngle8192(III)I"
     },
     {
       "symbol": "M:rc.a(I)V",
@@ -28193,7 +28225,7 @@
       "to": "angle",
       "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:jh.sine16(II)I#0"
+      "renamedSymbol": "P:TrigonometryHelpers.sine16(II)I#0"
     },
     {
       "symbol": "P:jh.a(II)I#1",
@@ -28201,7 +28233,7 @@
       "to": "halfTurnBoundary",
       "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:jh.sine16(II)I#1"
+      "renamedSymbol": "P:TrigonometryHelpers.sine16(II)I#1"
     },
     {
       "symbol": "P:jk.<init>([I)V#0",
@@ -28873,7 +28905,7 @@
       "to": "deltaX",
       "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#0"
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#0"
     },
     {
       "symbol": "P:rb.a(III)I#1",
@@ -28881,7 +28913,7 @@
       "to": "obfuscationGuard",
       "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#1"
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#1"
     },
     {
       "symbol": "P:rb.a(III)I#2",
@@ -28889,7 +28921,7 @@
       "to": "deltaY",
       "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#2"
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#2"
     },
     {
       "symbol": "P:uh.<init>(I)V#0",
@@ -31805,9 +31837,9 @@
     },
     {
       "symbol": "C:ce",
-      "renamedSymbol": "C:ce",
+      "renamedSymbol": "C:PatchNoteUsage",
       "originalName": "ce",
-      "renamedName": "ce",
+      "renamedName": "PatchNoteUsage",
       "declaration": {
         "file": "ce.java",
         "start": 50,
@@ -32003,9 +32035,9 @@
     },
     {
       "symbol": "C:dg",
-      "renamedSymbol": "C:dg",
+      "renamedSymbol": "C:InterfaceTextHelpers",
       "originalName": "dg",
-      "renamedName": "dg",
+      "renamedName": "InterfaceTextHelpers",
       "declaration": {
         "file": "dg.java",
         "start": 50,
@@ -33004,9 +33036,9 @@
     },
     {
       "symbol": "C:jh",
-      "renamedSymbol": "C:jh",
+      "renamedSymbol": "C:TrigonometryHelpers",
       "originalName": "jh",
-      "renamedName": "jh",
+      "renamedName": "TrigonometryHelpers",
       "declaration": {
         "file": "jh.java",
         "start": 50,
@@ -34258,9 +34290,9 @@
     },
     {
       "symbol": "C:rb",
-      "renamedSymbol": "C:rb",
+      "renamedSymbol": "C:AngleHelpers",
       "originalName": "rb",
-      "renamedName": "rb",
+      "renamedName": "AngleHelpers",
       "declaration": {
         "file": "rb.java",
         "start": 71,
@@ -39131,7 +39163,7 @@
     },
     {
       "symbol": "F:ce.field_o:Lgh;",
-      "renamedSymbol": "F:ce.field_o:LSceneWidget;",
+      "renamedSymbol": "F:PatchNoteUsage.field_o:LSceneWidget;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -39142,7 +39174,7 @@
     },
     {
       "symbol": "F:ce.field_p:Lwk;",
-      "renamedSymbol": "F:ce.field_p:LRgbSprite;",
+      "renamedSymbol": "F:PatchNoteUsage.field_p:LRgbSprite;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -39153,7 +39185,7 @@
     },
     {
       "symbol": "F:ce.field_q:[Lgk;",
-      "renamedSymbol": "F:ce.field_q:[LIndexedSprite;",
+      "renamedSymbol": "F:PatchNoteUsage.field_q:[LIndexedSprite;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -39164,7 +39196,7 @@
     },
     {
       "symbol": "F:ce.field_r:I",
-      "renamedSymbol": "F:ce.field_r:I",
+      "renamedSymbol": "F:PatchNoteUsage.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -39175,7 +39207,7 @@
     },
     {
       "symbol": "F:ce.field_s:[B",
-      "renamedSymbol": "F:ce.field_s:[B",
+      "renamedSymbol": "F:PatchNoteUsage.field_s:[B",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -39186,7 +39218,7 @@
     },
     {
       "symbol": "F:ce.field_t:[I",
-      "renamedSymbol": "F:ce.field_t:[I",
+      "renamedSymbol": "F:PatchNoteUsage.field_t:[I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -39197,7 +39229,7 @@
     },
     {
       "symbol": "F:ce.field_u:Ljava/lang/String;",
-      "renamedSymbol": "F:ce.field_u:Ljava/lang/String;",
+      "renamedSymbol": "F:PatchNoteUsage.field_u:Ljava/lang/String;",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -39208,7 +39240,7 @@
     },
     {
       "symbol": "F:ce.field_v:[Lwk;",
-      "renamedSymbol": "F:ce.field_v:[LRgbSprite;",
+      "renamedSymbol": "F:PatchNoteUsage.field_v:[LRgbSprite;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -39219,7 +39251,7 @@
     },
     {
       "symbol": "F:ce.field_w:Z",
-      "renamedSymbol": "F:ce.field_w:Z",
+      "renamedSymbol": "F:PatchNoteUsage.field_w:Z",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -41001,7 +41033,7 @@
     },
     {
       "symbol": "F:dg.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -41012,7 +41044,7 @@
     },
     {
       "symbol": "F:dg.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -41023,7 +41055,7 @@
     },
     {
       "symbol": "F:dg.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -41034,7 +41066,7 @@
     },
     {
       "symbol": "F:dg.field_d:I",
-      "renamedSymbol": "F:dg.field_d:I",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -41045,7 +41077,7 @@
     },
     {
       "symbol": "F:dg.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -41056,7 +41088,7 @@
     },
     {
       "symbol": "F:dg.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -41067,7 +41099,7 @@
     },
     {
       "symbol": "F:dg.field_g:Lgh;",
-      "renamedSymbol": "F:dg.field_g:LSceneWidget;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_g:LSceneWidget;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -41078,7 +41110,7 @@
     },
     {
       "symbol": "F:dg.field_h:[Z",
-      "renamedSymbol": "F:dg.field_h:[Z",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_h:[Z",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -41089,7 +41121,7 @@
     },
     {
       "symbol": "F:dg.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:dg.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextHelpers.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -53123,7 +53155,7 @@
     },
     {
       "symbol": "F:jh.field_a:[I",
-      "renamedSymbol": "F:jh.field_a:[I",
+      "renamedSymbol": "F:TrigonometryHelpers.field_a:[I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -53134,7 +53166,7 @@
     },
     {
       "symbol": "F:jh.field_b:[Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_b:[Ljava/lang/String;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_b:[Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -53145,7 +53177,7 @@
     },
     {
       "symbol": "F:jh.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -53156,7 +53188,7 @@
     },
     {
       "symbol": "F:jh.field_d:I",
-      "renamedSymbol": "F:jh.field_d:I",
+      "renamedSymbol": "F:TrigonometryHelpers.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -53167,7 +53199,7 @@
     },
     {
       "symbol": "F:jh.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -53178,7 +53210,7 @@
     },
     {
       "symbol": "F:jh.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -53189,7 +53221,7 @@
     },
     {
       "symbol": "F:jh.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_g:Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -53200,7 +53232,7 @@
     },
     {
       "symbol": "F:jh.field_h:Lwk;",
-      "renamedSymbol": "F:jh.field_h:LRgbSprite;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_h:LRgbSprite;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -53211,7 +53243,7 @@
     },
     {
       "symbol": "F:jh.field_i:Lrm;",
-      "renamedSymbol": "F:jh.field_i:LMenuInputState;",
+      "renamedSymbol": "F:TrigonometryHelpers.field_i:LMenuInputState;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -68710,7 +68742,7 @@
     },
     {
       "symbol": "F:rb.field_a:I",
-      "renamedSymbol": "F:rb.field_a:I",
+      "renamedSymbol": "F:AngleHelpers.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -68721,7 +68753,7 @@
     },
     {
       "symbol": "F:rb.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:rb.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:AngleHelpers.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -68732,7 +68764,7 @@
     },
     {
       "symbol": "F:rb.field_c:J",
-      "renamedSymbol": "F:rb.field_c:J",
+      "renamedSymbol": "F:AngleHelpers.field_c:J",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -68743,7 +68775,7 @@
     },
     {
       "symbol": "F:rb.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:rb.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:AngleHelpers.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -68754,7 +68786,7 @@
     },
     {
       "symbol": "F:rb.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:rb.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:AngleHelpers.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -68765,7 +68797,7 @@
     },
     {
       "symbol": "F:rb.field_f:I",
-      "renamedSymbol": "F:rb.field_f:I",
+      "renamedSymbol": "F:AngleHelpers.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -68776,7 +68808,7 @@
     },
     {
       "symbol": "F:rb.field_g:Ljava/util/Random;",
-      "renamedSymbol": "F:rb.field_g:Ljava/util/Random;",
+      "renamedSymbol": "F:AngleHelpers.field_g:Ljava/util/Random;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -68787,7 +68819,7 @@
     },
     {
       "symbol": "F:rb.field_h:Lsg;",
-      "renamedSymbol": "F:rb.field_h:LBufferedSocket;",
+      "renamedSymbol": "F:AngleHelpers.field_h:LBufferedSocket;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -68798,7 +68830,7 @@
     },
     {
       "symbol": "F:rb.field_i:[B",
-      "renamedSymbol": "F:rb.field_i:[B",
+      "renamedSymbol": "F:AngleHelpers.field_i:[B",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -68809,7 +68841,7 @@
     },
     {
       "symbol": "F:rb.field_j:I",
-      "renamedSymbol": "F:rb.field_j:I",
+      "renamedSymbol": "F:AngleHelpers.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -96716,7 +96748,7 @@
     },
     {
       "symbol": "L:ce.<init>([B)V#0",
-      "renamedSymbol": "L:ce.<init>([B)V#0",
+      "renamedSymbol": "L:PatchNoteUsage.<init>([B)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -109762,7 +109794,7 @@
     },
     {
       "symbol": "L:dg.a(B)V#0",
-      "renamedSymbol": "L:dg.releaseStatics(B)V#0",
+      "renamedSymbol": "L:InterfaceTextHelpers.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -165620,7 +165652,7 @@
     },
     {
       "symbol": "L:jh.<initializer>()V#0",
-      "renamedSymbol": "L:jh.<initializer>()V#0",
+      "renamedSymbol": "L:TrigonometryHelpers.<initializer>()V#0",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -309511,9 +309543,9 @@
     },
     {
       "symbol": "M:ce.<init>([B)V",
-      "renamedSymbol": "M:ce.<init>([B)V",
+      "renamedSymbol": "M:PatchNoteUsage.<init>([B)V",
       "originalName": "ce",
-      "renamedName": "ce",
+      "renamedName": "PatchNoteUsage",
       "declaration": {
         "file": "ce.java",
         "start": 301,
@@ -309522,7 +309554,7 @@
     },
     {
       "symbol": "M:ce.a(B)V",
-      "renamedSymbol": "M:ce.releaseStatics(B)V",
+      "renamedSymbol": "M:PatchNoteUsage.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -311425,7 +311457,7 @@
     },
     {
       "symbol": "M:dg.a(B)V",
-      "renamedSymbol": "M:dg.releaseStatics(B)V",
+      "renamedSymbol": "M:InterfaceTextHelpers.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -320533,7 +320565,7 @@
     },
     {
       "symbol": "M:jh.a(I)V",
-      "renamedSymbol": "M:jh.releaseStatics(I)V",
+      "renamedSymbol": "M:TrigonometryHelpers.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -320544,7 +320576,7 @@
     },
     {
       "symbol": "M:jh.a(II)I",
-      "renamedSymbol": "M:jh.sine16(II)I",
+      "renamedSymbol": "M:TrigonometryHelpers.sine16(II)I",
       "originalName": "a",
       "renamedName": "sine16",
       "declaration": {
@@ -332336,7 +332368,7 @@
     },
     {
       "symbol": "M:rb.a(B)V",
-      "renamedSymbol": "M:rb.releaseStatics(B)V",
+      "renamedSymbol": "M:AngleHelpers.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -332347,7 +332379,7 @@
     },
     {
       "symbol": "M:rb.a(III)I",
-      "renamedSymbol": "M:rb.firstQuadrantAngle8192(III)I",
+      "renamedSymbol": "M:AngleHelpers.firstQuadrantAngle8192(III)I",
       "originalName": "a",
       "renamedName": "firstQuadrantAngle8192",
       "declaration": {
@@ -346592,7 +346624,7 @@
     },
     {
       "symbol": "P:ce.<init>([B)V#0",
-      "renamedSymbol": "P:ce.<init>([B)V#0",
+      "renamedSymbol": "P:PatchNoteUsage.<init>([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -346603,7 +346635,7 @@
     },
     {
       "symbol": "P:ce.a(B)V#0",
-      "renamedSymbol": "P:ce.releaseStatics(B)V#0",
+      "renamedSymbol": "P:PatchNoteUsage.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -351960,7 +351992,7 @@
     },
     {
       "symbol": "P:dg.a(B)V#0",
-      "renamedSymbol": "P:dg.releaseStatics(B)V#0",
+      "renamedSymbol": "P:InterfaceTextHelpers.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376413,7 +376445,7 @@
     },
     {
       "symbol": "P:jh.a(I)V#0",
-      "renamedSymbol": "P:jh.releaseStatics(I)V#0",
+      "renamedSymbol": "P:TrigonometryHelpers.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376424,7 +376456,7 @@
     },
     {
       "symbol": "P:jh.a(II)I#0",
-      "renamedSymbol": "P:jh.sine16(II)I#0",
+      "renamedSymbol": "P:TrigonometryHelpers.sine16(II)I#0",
       "originalName": "param0",
       "renamedName": "angle",
       "declaration": {
@@ -376435,7 +376467,7 @@
     },
     {
       "symbol": "P:jh.a(II)I#1",
-      "renamedSymbol": "P:jh.sine16(II)I#1",
+      "renamedSymbol": "P:TrigonometryHelpers.sine16(II)I#1",
       "originalName": "param1",
       "renamedName": "halfTurnBoundary",
       "declaration": {
@@ -406916,7 +406948,7 @@
     },
     {
       "symbol": "P:rb.a(B)V#0",
-      "renamedSymbol": "P:rb.releaseStatics(B)V#0",
+      "renamedSymbol": "P:AngleHelpers.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406927,7 +406959,7 @@
     },
     {
       "symbol": "P:rb.a(III)I#0",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#0",
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#0",
       "originalName": "param0",
       "renamedName": "deltaX",
       "declaration": {
@@ -406938,7 +406970,7 @@
     },
     {
       "symbol": "P:rb.a(III)I#1",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#1",
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#1",
       "originalName": "param1",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -406949,7 +406981,7 @@
     },
     {
       "symbol": "P:rb.a(III)I#2",
-      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#2",
+      "renamedSymbol": "P:AngleHelpers.firstQuadrantAngle8192(III)I#2",
       "originalName": "param2",
       "renamedName": "deltaY",
       "declaration": {
@@ -426247,7 +426279,7 @@
       "original": "SteelSentinels.java",
       "renamed": "SteelSentinels.java",
       "inputSha256": "a94ff943e31507b66191a2f4209bc81349a151f988ccbf465e01aa7a8f3089fe",
-      "outputSha256": "f433ea3acd98a65385018a12acd2260a97ef38f548445a7551f6cd72c1190878",
+      "outputSha256": "10fedcc7e481ff54fb56d4488283ab2151a19744726bd565ffb9cd50189250c3",
       "edits": [
         {
           "start": 80,
@@ -447106,6 +447138,13 @@
           "renamed": "NameValidationHelpers"
         },
         {
+          "start": 131568,
+          "end": 131570,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 131729,
           "end": 131731,
           "symbol": "C:vn",
@@ -447349,6 +447388,20 @@
           "symbol": "M:gi.f(B)I",
           "original": "f",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 133606,
+          "end": 133608,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 133658,
+          "end": 133660,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 133681,
@@ -450508,6 +450561,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 148162,
+          "end": 148164,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 148165,
           "end": 148166,
           "symbol": "M:jh.a(I)V",
@@ -451019,6 +451079,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 149002,
+          "end": 149004,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 149005,
           "end": 149006,
           "symbol": "M:dg.a(B)V",
@@ -451304,6 +451371,13 @@
           "symbol": "M:gf.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 149478,
+          "end": 149480,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 149481,
@@ -452291,6 +452365,13 @@
           "symbol": "M:p.a()V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 151122,
+          "end": 151124,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 151125,
@@ -457123,7 +457204,7 @@
       "original": "ai.java",
       "renamed": "NotificationMessage.java",
       "inputSha256": "5798bcf321925b5b9115168961b81b4f12b1245fc75a729f0c94f2a5193f3d9f",
-      "outputSha256": "2d2950c6b56ba5636a4788c3e18f7849af1dafc7b4b0a9f9f80ab675b382885a",
+      "outputSha256": "bac9cf0f808aa17de107a60b884d1c4c9508e0c8237ac824847af253244c9038",
       "edits": [
         {
           "start": 50,
@@ -457278,6 +457359,13 @@
           "symbol": "M:vn.a(II)I",
           "original": "a",
           "renamed": "bitOr"
+        },
+        {
+          "start": 1449,
+          "end": 1451,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 1483,
@@ -460601,7 +460689,7 @@
       "original": "ao.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "8d2ec8816f02ac5e55b9e98a50cf75ab79894c0160bebccf452ed9a821cab621",
-      "outputSha256": "6d2bb78ce1221ef68dd271789e52d1603e42bf2f215b5cd39873ca0f46d7e35b",
+      "outputSha256": "18bbc4e7e75a5526c77a7a7ae3e3e9735cd7a5594333ef8679871cda443e8db7",
       "edits": [
         {
           "start": 50,
@@ -460681,11 +460769,60 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 1439,
+          "end": 1441,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 1473,
+          "end": 1475,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 1579,
           "end": 1580,
           "symbol": "M:mi.a(Ljava/lang/String;[I[Ljava/lang/String;)I",
           "original": "a",
           "renamed": "wrapText"
+        },
+        {
+          "start": 1597,
+          "end": 1599,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 1951,
+          "end": 1953,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 2039,
+          "end": 2041,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 2063,
+          "end": 2065,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 2400,
+          "end": 2402,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 3460,
@@ -461169,7 +461306,7 @@
       "original": "b.java",
       "renamed": "DialWidgetPainter.java",
       "inputSha256": "fc84f5e2d34647ddb6cfdb6b4222eba981fae4cf1c52b6bce70aaea00df69e2b",
-      "outputSha256": "044eecaefeb49ffe8cdd5b9b6e220e5d92ef69210bfdeb27eea7f8dfb7cc7fa4",
+      "outputSha256": "499194a6e2f97dd9edf6cc2c9628ec9a12cf176a91cd81deda17aa4cadba2b49",
       "edits": [
         {
           "start": 50,
@@ -461401,6 +461538,20 @@
           "symbol": "M:gi.a(IBI[B)V",
           "original": "a",
           "renamed": "writeBytes"
+        },
+        {
+          "start": 2887,
+          "end": 2889,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 2922,
+          "end": 2924,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 2948,
@@ -462887,7 +463038,7 @@
       "original": "bc.java",
       "renamed": "ValidatedTextWidget.java",
       "inputSha256": "f7f1c6f827fa4e3ce5f0c192fc23ed1ffddc0fe74061cc203c4f27ca90af0921",
-      "outputSha256": "15c584e21989d30e4ba15134b65f54cb6e410d7a40db5028e48087523e8e1707",
+      "outputSha256": "cc78372fe13a0d7b7f15e77f8c2a856dbc52e117fc8c570d5316c52330d49249",
       "edits": [
         {
           "start": 50,
@@ -463212,11 +463363,25 @@
           "renamed": "NumberParsingHelpers"
         },
         {
+          "start": 3175,
+          "end": 3177,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 3207,
           "end": 3209,
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "NumberParsingHelpers"
+        },
+        {
+          "start": 3223,
+          "end": 3225,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 3255,
@@ -466189,7 +466354,7 @@
       "original": "bh.java",
       "renamed": "SentinelCommandSimulator.java",
       "inputSha256": "58a0ebcf5633dc7a337af05348caa5c11a4ae6a9ca2df3cc699f3ad34f8a159b",
-      "outputSha256": "9b81ce46c437629bb8b34d5bee1fc3076754a8ee2b1b283ce68136d44a2e33fc",
+      "outputSha256": "569f461968712024188a83606394fa15d355f0639b0b9688e41313fc925c45ac",
       "edits": [
         {
           "start": 50,
@@ -467879,6 +468044,13 @@
           "renamed": "alwaysOne"
         },
         {
+          "start": 29303,
+          "end": 29305,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 29306,
           "end": 29307,
           "symbol": "M:jh.a(II)I",
@@ -468514,6 +468686,13 @@
           "symbol": "F:je.field_B:I",
           "original": "field_B",
           "renamed": "aimAngle"
+        },
+        {
+          "start": 38338,
+          "end": 38340,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 38341,
@@ -472063,7 +472242,7 @@
       "original": "c.java",
       "renamed": "PendingByteArrayRequest.java",
       "inputSha256": "ebfbf9cfe8ad8cbd493eb01ba6d067d9321be21467a733dc337ac5209c278231",
-      "outputSha256": "12981863a8746148171f5ca28a3380c43ed7d182d5be7938e92d5462ea9494ae",
+      "outputSha256": "ef16cfe0be3cdccf6e48f0837c60fd2112467c6b7d41f4956aa3c142eb93f39b",
       "edits": [
         {
           "start": 50,
@@ -472710,6 +472889,13 @@
           "renamed": "LoginActionHelpers"
         },
         {
+          "start": 3772,
+          "end": 3774,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 3783,
           "end": 3784,
           "symbol": "M:rm.a(III)V",
@@ -472773,11 +472959,32 @@
           "renamed": "TextButton"
         },
         {
+          "start": 3888,
+          "end": 3890,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 3899,
           "end": 3900,
           "symbol": "M:rm.c(I)Z",
           "original": "c",
           "renamed": "isForwardAction"
+        },
+        {
+          "start": 3941,
+          "end": 3943,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 4068,
+          "end": 4070,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 4215,
@@ -472794,6 +473001,13 @@
           "renamed": "pollKeyEvent"
         },
         {
+          "start": 4244,
+          "end": 4246,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 4255,
           "end": 4256,
           "symbol": "M:rm.a(ZI)V",
@@ -472801,11 +473015,32 @@
           "renamed": "handleHorizontalKey"
         },
         {
+          "start": 4285,
+          "end": 4287,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 4296,
           "end": 4297,
           "symbol": "M:rm.c(I)Z",
           "original": "c",
           "renamed": "isForwardAction"
+        },
+        {
+          "start": 4329,
+          "end": 4331,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 4469,
+          "end": 4471,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 4618,
@@ -472869,7 +473104,7 @@
       "original": "ca.java",
       "renamed": "MusicPatch.java",
       "inputSha256": "04f37b950910600759f9658994e83d9c6d4c4eec2fef6c132ed01abd9ec7f9c2",
-      "outputSha256": "cbacbfc645251573b028543b65c60c108ac57c6529d07bd2bfb2239a7c8b0b31",
+      "outputSha256": "7ad80dc5468c61cf7879e79269e0d36b01aa4bddb02e8258e030db1123220a09",
       "edits": [
         {
           "start": 50,
@@ -474622,6 +474857,13 @@
           "renamed": "UsernameCredentials"
         },
         {
+          "start": 25027,
+          "end": 25029,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 25112,
           "end": 25114,
           "symbol": "C:ij",
@@ -475341,7 +475583,7 @@
       "original": "cb.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "3163d31b770a8444b69f444af8116d8d6f35315a4a7030cecb199e0ee3067b25",
-      "outputSha256": "b27c64a1d794ab99e21782c185b920aed84ec6d40a8f2a613ef74b4ec2fcb146",
+      "outputSha256": "a045016543668ec0ad05be27ae767121a646ed110b9d3a617daa58b31c8441f5",
       "edits": [
         {
           "start": 50,
@@ -475757,6 +475999,20 @@
           "renamed": "DisplayNameAndAudioHelpers"
         },
         {
+          "start": 8673,
+          "end": 8675,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 8724,
+          "end": 8726,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 8922,
           "end": 8924,
           "symbol": "C:un",
@@ -475883,6 +476139,27 @@
           "renamed": "DisplayNameAndAudioHelpers"
         },
         {
+          "start": 10297,
+          "end": 10299,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 10348,
+          "end": 10350,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 10541,
+          "end": 10543,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 10570,
           "end": 10572,
           "symbol": "C:vn",
@@ -475895,6 +476172,13 @@
           "symbol": "M:vn.a(II)I",
           "original": "a",
           "renamed": "bitOr"
+        },
+        {
+          "start": 10581,
+          "end": 10583,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 10759,
@@ -475925,6 +476209,27 @@
           "renamed": "ViewportController"
         },
         {
+          "start": 11452,
+          "end": 11454,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 11512,
+          "end": 11514,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 11616,
+          "end": 11618,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 11645,
           "end": 11647,
           "symbol": "C:bi",
@@ -475937,6 +476242,13 @@
           "symbol": "M:bi.a(II)I",
           "original": "a",
           "renamed": "bitXor"
+        },
+        {
+          "start": 11656,
+          "end": 11658,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 11683,
@@ -475974,11 +476286,25 @@
           "renamed": "ChatHistoryAllocator"
         },
         {
+          "start": 12158,
+          "end": 12160,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 12355,
           "end": 12357,
           "symbol": "C:un",
           "original": "un",
           "renamed": "ChatHistoryAllocator"
+        },
+        {
+          "start": 12413,
+          "end": 12415,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 12722,
@@ -476742,6 +477068,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 23832,
+          "end": 23834,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 24222,
@@ -478401,10 +478734,17 @@
     },
     {
       "original": "ce.java",
-      "renamed": "ce.java",
+      "renamed": "PatchNoteUsage.java",
       "inputSha256": "1a8ef1cb93561acad0859e06d3055036aff507a723e29b388d47b8142995129b",
-      "outputSha256": "07cede1d44528c6473e3d342767caf0726e900589d02497498ed609f65965c1c",
+      "outputSha256": "1f56b78502b8fb8d702ef8fe13cacd91756be2965a6bbca35dbf43b3d379ed0e",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
         {
           "start": 61,
           "end": 63,
@@ -478439,6 +478779,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 301,
+          "end": 303,
+          "symbol": "M:ce.<init>([B)V",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 438,
@@ -480417,7 +480764,7 @@
       "original": "ci.java",
       "renamed": "ClientErrorSupport.java",
       "inputSha256": "f2e869facc97a5284f442c909d5fd59ade09ceb7b17cd42ca636a0654f9ef759",
-      "outputSha256": "1ceaa117c8587dd687f95d28fc5be1ef899668cc64abf2bad7620d643db49f5b",
+      "outputSha256": "93ffda4092d7f52274c595efd4a6f1b7e449c1a7e7b41547d8eb2d9a9125cf47",
       "edits": [
         {
           "start": 50,
@@ -480889,6 +481236,13 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 3129,
+          "end": 3131,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 3146,
           "end": 3148,
           "symbol": "C:gk",
@@ -480922,6 +481276,13 @@
           "symbol": "C:lh",
           "original": "lh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 3227,
+          "end": 3229,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 3239,
@@ -482289,7 +482650,7 @@
       "original": "cl.java",
       "renamed": "LoginResultHelpers.java",
       "inputSha256": "c4344a55accc050e12577dfb4a278da809bf687c255aef63b9ef74fb3e6a2fff",
-      "outputSha256": "75cfe007a8cd33dd85563e63d0bca7335c72b3dc86eda60aa39eaf1079e3bf08",
+      "outputSha256": "ee2973661804294a4fb8aa2b7ef4d8174d28c138394c366a4a6398d44edfc57c",
       "edits": [
         {
           "start": 50,
@@ -482626,6 +482987,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 4927,
+          "end": 4929,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 4951,
@@ -483776,6 +484144,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 11659,
+          "end": 11661,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 11672,
           "end": 11674,
           "symbol": "C:mm",
@@ -483886,6 +484261,13 @@
           "symbol": "M:wd.$cfr$intArgs$a$1694234bddb3(Ljava/lang/String;IZ)I",
           "original": "$cfr$intArgs$a$1694234bddb3",
           "renamed": "measureMenuText"
+        },
+        {
+          "start": 13213,
+          "end": 13215,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 13255,
@@ -484243,7 +484625,7 @@
       "original": "cm.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "abe48b32ba14cec768dee7254020675c38853ea52ba69465a20b74d02213424e",
-      "outputSha256": "a90149f4f9efb5284df7cdd5ea349321686cae38855b9138a3ec6705e72d1c3a",
+      "outputSha256": "99bad264587c10dcd575f71d24645e4eb64ef12dc2de68ccca1a4109f817026b",
       "edits": [
         {
           "start": 50,
@@ -486185,6 +486567,13 @@
           "renamed": "deltaY"
         },
         {
+          "start": 26746,
+          "end": 26748,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 26749,
           "end": 26750,
           "symbol": "M:rb.a(III)I",
@@ -486204,6 +486593,13 @@
           "symbol": "P:cm.a(III)I#0",
           "original": "param0",
           "renamed": "deltaY"
+        },
+        {
+          "start": 26819,
+          "end": 26821,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 26822,
@@ -486241,6 +486637,13 @@
           "renamed": "deltaY"
         },
         {
+          "start": 26959,
+          "end": 26961,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 26962,
           "end": 26963,
           "symbol": "M:rb.a(III)I",
@@ -486260,6 +486663,13 @@
           "symbol": "P:cm.a(III)I#0",
           "original": "param0",
           "renamed": "deltaY"
+        },
+        {
+          "start": 27013,
+          "end": 27015,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 27016,
@@ -494133,7 +494543,7 @@
       "original": "dd.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "6639855c5c1e832f78444e38c4bdca41373c885d22a2ebd68a48a0cbabb03645",
-      "outputSha256": "ab5db3a390e87c01f26c93c32a3e55d4d13f72d34c593b8c08c396dbdc45b66c",
+      "outputSha256": "951b94258058c65505c216d3136e7b2dd7143423f047e43916dac2e51a6592fc",
       "edits": [
         {
           "start": 50,
@@ -494745,6 +495155,13 @@
           "renamed": "addItem"
         },
         {
+          "start": 6676,
+          "end": 6678,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 6728,
           "end": 6729,
           "symbol": "M:dn.a(IILjava/lang/String;)V",
@@ -495135,6 +495552,13 @@
           "symbol": "M:db.a(Ljava/lang/String;I[Ljava/lang/String;)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatTemplate"
+        },
+        {
+          "start": 10631,
+          "end": 10633,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 10788,
@@ -497326,10 +497750,17 @@
     },
     {
       "original": "dg.java",
-      "renamed": "dg.java",
+      "renamed": "InterfaceTextHelpers.java",
       "inputSha256": "e108bd7520cadf5846d97ebc2bcb18c8607a11765b32311722835b9a6ec98120",
-      "outputSha256": "809d44a1b88cc8b08d5061a60c87f7a71d8f8646dac2785f07345dab5309d45e",
+      "outputSha256": "cdb36e9bbd0c7d8ec75a406583e47c15064aa74de798b683da9ebec7111307cb",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
         {
           "start": 120,
           "end": 122,
@@ -497892,7 +498323,7 @@
       "original": "dk.java",
       "renamed": "DualNodeHashTable.java",
       "inputSha256": "7ba57fc1df1ffc741490a5060fac74f4f6c7dbcc6840b7e59f8ec69d62bc7863",
-      "outputSha256": "3caaa2096a252bf907fbd1af1d7803305fd3c01249df77b60e045a1d9c47ac52",
+      "outputSha256": "14ed6bdeae778db943d765c881d67f7b411af49533f97de532317703ab885903",
       "edits": [
         {
           "start": 50,
@@ -498117,6 +498548,13 @@
           "symbol": "C:in",
           "original": "in",
           "renamed": "SocialPacketHelpers"
+        },
+        {
+          "start": 2911,
+          "end": 2913,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 2924,
@@ -501143,7 +501581,7 @@
       "original": "dn.java",
       "renamed": "ContextMenu.java",
       "inputSha256": "b7e6fcd5570b8d217a33915a6d13fc3431e5b41908d6fef9359807b743a71ad1",
-      "outputSha256": "d6321f714a05f8598906463fb00b83f52a85187aac0dcd9e3f73176b681b6e8d",
+      "outputSha256": "a44644e207ca3b90d8a335092713bd5619088e66e92d8c8c4ddfa159001d693c",
       "edits": [
         {
           "start": 50,
@@ -503526,6 +503964,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 12703,
+          "end": 12705,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 12716,
           "end": 12718,
           "symbol": "C:jk",
@@ -503965,6 +504410,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 14769,
+          "end": 14771,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 14782,
@@ -504518,6 +504970,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 17465,
+          "end": 17467,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 17478,
@@ -506429,6 +506888,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 26327,
+          "end": 26329,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 26340,
@@ -509110,6 +509576,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 39076,
+          "end": 39078,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 39089,
@@ -512668,6 +513141,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 56544,
+          "end": 56546,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 56557,
           "end": 56559,
           "symbol": "C:jk",
@@ -514668,6 +515148,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 66428,
+          "end": 66430,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 66441,
@@ -518779,6 +519266,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 86385,
+          "end": 86387,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 86398,
           "end": 86400,
           "symbol": "C:jk",
@@ -519941,6 +520435,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 92402,
+          "end": 92404,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 92415,
           "end": 92417,
           "symbol": "C:jk",
@@ -520177,6 +520678,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 93555,
+          "end": 93557,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 93568,
@@ -522704,6 +523212,13 @@
           "symbol": "M:mm.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadNamedFile"
+        },
+        {
+          "start": 106159,
+          "end": 106161,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 106172,
@@ -525821,6 +526336,13 @@
           "renamed": "buildRotationMatrix"
         },
         {
+          "start": 127815,
+          "end": 127817,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 127818,
           "end": 127819,
           "symbol": "M:jh.a(II)I",
@@ -525840,6 +526362,13 @@
           "symbol": "M:kg.a(IB)I",
           "original": "a",
           "renamed": "cosine16"
+        },
+        {
+          "start": 128009,
+          "end": 128011,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 128012,
@@ -529849,7 +530378,7 @@
       "original": "ee.java",
       "renamed": "CombatWorld.java",
       "inputSha256": "6bc708ebd080211ebe7caf6c62a17acddc67ea4f0fb707df4446101195ab2f54",
-      "outputSha256": "eea3473704d0e75c1d1eec5199d96942c64f5b27af87041a960467afe529095d",
+      "outputSha256": "e2b8e9ff0c470e214bb6bbb266d96295b686acd832f026a2848d090ef89cf6bb",
       "edits": [
         {
           "start": 50,
@@ -544169,6 +544698,13 @@
           "renamed": "aimAngle"
         },
         {
+          "start": 176308,
+          "end": 176310,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 176311,
           "end": 176312,
           "symbol": "M:jh.a(II)I",
@@ -551129,7 +551665,7 @@
       "original": "ef.java",
       "renamed": "EmailFormatError.java",
       "inputSha256": "2b9f0476acdf1a8f5a8a2fe484d9b8e54208e0b10cb4f538a1c319505cb86a44",
-      "outputSha256": "a2472fd7b6d2c032904e7da3a85f299a56d46b4a36c2b072a08ef78a2e92c2b9",
+      "outputSha256": "369e557760ba6e1ddb2750357cfbe62aabff9336d2f8a2a09dcf71a3b772a30d",
       "edits": [
         {
           "start": 50,
@@ -551333,6 +551869,13 @@
           "symbol": "M:gi.d(II)V",
           "original": "d",
           "renamed": "writeShort"
+        },
+        {
+          "start": 3426,
+          "end": 3428,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 3493,
@@ -552468,7 +553011,7 @@
       "original": "eh.java",
       "renamed": "SocialListUiHelpers.java",
       "inputSha256": "ad644c69f1cb035b1eff904c86390a9712258147f68c4bc07339f3193bbf7f61",
-      "outputSha256": "351a8f6d13ef386c83db2c89d6b3c19ddfcae4d92ab2a7c7563efc937d3a9ef3",
+      "outputSha256": "5c1f85346a3f81d9bb6252c869e60fd48fb4df8476ed491ff5398a7d4367e31c",
       "edits": [
         {
           "start": 50,
@@ -552791,6 +553334,13 @@
           "symbol": "M:mm.a(I)J",
           "original": "a",
           "renamed": "monotonicMillis"
+        },
+        {
+          "start": 2393,
+          "end": 2395,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 2524,
@@ -553157,6 +553707,13 @@
           "renamed": "SocketConnector"
         },
         {
+          "start": 5776,
+          "end": 5778,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 5816,
           "end": 5817,
           "symbol": "M:gh.a(IIIII)V",
@@ -553169,6 +553726,20 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 5843,
+          "end": 5845,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
+          "start": 6013,
+          "end": 6015,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 6183,
@@ -562225,7 +562796,7 @@
       "original": "ff.java",
       "renamed": "ValidationHelpWidget.java",
       "inputSha256": "c939dd5d605eb9920fb37b5da85aab4c3a975373cbe597b91f2dcbfaa47d37dc",
-      "outputSha256": "020ff2bf4da155bcaa0a51d14e30177735f9c3c07d137cfa496b0df5667e5352",
+      "outputSha256": "206df198bbf10a53886a4c771ca99e16b0d1798c9eec8c319e74982ba25526c1",
       "edits": [
         {
           "start": 50,
@@ -566666,6 +567237,20 @@
           "renamed": "SocialRequestHelpers"
         },
         {
+          "start": 43927,
+          "end": 43929,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 43994,
+          "end": 43996,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 44138,
           "end": 44140,
           "symbol": "C:ni",
@@ -567170,6 +567755,13 @@
           "renamed": "cosine16"
         },
         {
+          "start": 50082,
+          "end": 50084,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 50085,
           "end": 50086,
           "symbol": "M:jh.a(II)I",
@@ -567203,6 +567795,13 @@
           "symbol": "M:kg.a(IB)I",
           "original": "a",
           "renamed": "cosine16"
+        },
+        {
+          "start": 50215,
+          "end": 50217,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 50218,
@@ -567240,6 +567839,13 @@
           "renamed": "cosine16"
         },
         {
+          "start": 50378,
+          "end": 50380,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 50381,
           "end": 50382,
           "symbol": "M:jh.a(II)I",
@@ -567273,6 +567879,13 @@
           "symbol": "M:kg.a(IB)I",
           "original": "a",
           "renamed": "cosine16"
+        },
+        {
+          "start": 50615,
+          "end": 50617,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 50618,
@@ -574014,7 +574627,7 @@
       "original": "g.java",
       "renamed": "GrowableIntList.java",
       "inputSha256": "096ff8d7853107c4f19ce47a17f38d5e2d416130d3b8ab3a1bacc21f011a3ecb",
-      "outputSha256": "cb1f1a3a64a701dbf5144d1cbd8197a5b20172eb48f5424e3fc1e518cf291ff4",
+      "outputSha256": "4190b8e11506fed32b2ae251bf74cbe76156b6f69c7841dbd574795a8f45902f",
       "edits": [
         {
           "start": 50,
@@ -574589,6 +575202,13 @@
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "PacketLoopHelpers"
+        },
+        {
+          "start": 8391,
+          "end": 8393,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 8422,
@@ -581401,7 +582021,7 @@
       "original": "gj.java",
       "renamed": "SpriteDrawHelpers.java",
       "inputSha256": "4705ca6a3b8530050a5064ef80fdf45866abd3f9805efa1a2f82371fc7020b3c",
-      "outputSha256": "de93769f0a9361a7c090dcb07931e4e2a91066a15e80cbdef327e50db454ca39",
+      "outputSha256": "b21d7a78e1afa1fa288a063bb12e949940e687544043ae078b37e34989211f3e",
       "edits": [
         {
           "start": 69,
@@ -581887,6 +582507,13 @@
           "renamed": "flushOutgoingPackets"
         },
         {
+          "start": 6303,
+          "end": 6305,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 6391,
           "end": 6393,
           "symbol": "C:rn",
@@ -582011,6 +582638,13 @@
           "symbol": "F:gi.field_p:I",
           "original": "field_p",
           "renamed": "position"
+        },
+        {
+          "start": 7048,
+          "end": 7050,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 7059,
@@ -583576,7 +584210,7 @@
       "original": "h.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "c1b06f7ab5144bca1e74e5087a96842398179f42e47a3addc0f55dd270802f54",
-      "outputSha256": "623c71e7f8e7c82c8d7d03af9748c25620e71032d193d52d199ede73690da7ca",
+      "outputSha256": "e9032f86ce15300775526b61bdde68a50e963bc60299c8be838a918cb7a41386",
       "edits": [
         {
           "start": 71,
@@ -583733,6 +584367,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 933,
+          "end": 935,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 984,
           "end": 986,
           "symbol": "C:ti",
@@ -583873,6 +584514,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 1576,
+          "end": 1578,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 1677,
           "end": 1679,
           "symbol": "C:ed",
@@ -583976,6 +584624,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 2050,
+          "end": 2052,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 2105,
@@ -606159,7 +606814,7 @@
       "original": "ic.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "245743095d8ca52697c0a78626e9f4b9c23cefb19fb70fdca80c8f950a166540",
-      "outputSha256": "0698175e2e36f75e6dcf241521b1160df7abf25aa4d687533eb2e63fb274ccb0",
+      "outputSha256": "4c1fed0001ebe0e7576f1f24c95131ccf4a443c7ecf546326f26ba8123a43c7f",
       "edits": [
         {
           "start": 50,
@@ -607576,6 +608231,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 30628,
+          "end": 30630,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 30674,
           "end": 30676,
           "symbol": "C:ca",
@@ -607602,6 +608264,13 @@
           "symbol": "M:ic.e(I)V",
           "original": "e",
           "renamed": "dispatchDueMidiMessages"
+        },
+        {
+          "start": 31003,
+          "end": 31005,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 31023,
@@ -607658,6 +608327,13 @@
           "symbol": "M:ca.a([BILub;[I)Z",
           "original": "a",
           "renamed": "prepareSamples"
+        },
+        {
+          "start": 31889,
+          "end": 31891,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 31909,
@@ -608794,6 +609470,13 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 52438,
+          "end": 52440,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 52561,
           "end": 52562,
           "symbol": "M:gh.a(IIIII)V",
@@ -608806,6 +609489,20 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 52591,
+          "end": 52593,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
+          "start": 53146,
+          "end": 53148,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 53341,
@@ -609002,6 +609699,13 @@
           "symbol": "M:db.a(Ljava/lang/String;I[Ljava/lang/String;)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatTemplate"
+        },
+        {
+          "start": 55225,
+          "end": 55227,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 55307,
@@ -614826,7 +615530,7 @@
       "original": "in.java",
       "renamed": "SocialPacketHelpers.java",
       "inputSha256": "1759945493bd6e90e1353d7ff98d4e0a155ba2febcce005558cee32ca0b6fd35",
-      "outputSha256": "0deb54b8d2dde9d51cab766fa01e547fd110f2f0b855bea611bbb2a7ec467621",
+      "outputSha256": "6a99fc67f84505a03846cfadd2112c69e25b7b9e17eb6ae1b06e8a4ab36efaa4",
       "edits": [
         {
           "start": 50,
@@ -616535,6 +617239,20 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "LoadoutHelpers"
+        },
+        {
+          "start": 13458,
+          "end": 13460,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 13508,
+          "end": 13510,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 13538,
@@ -625681,10 +626399,17 @@
     },
     {
       "original": "jh.java",
-      "renamed": "jh.java",
+      "renamed": "TrigonometryHelpers.java",
       "inputSha256": "43e4ed5ea703d5d9f5bcc858e2c48f3f1aa90bd79643ec54c684f8427b6c4d28",
-      "outputSha256": "5d6c41a462c9d5a15b7237adab5fc9ac9aa6081e4cc6f1c41d55488cb9fcaf0c",
+      "outputSha256": "706a8bc5e2183c59a1747fb580a41a13c1257686257017c4925f78f123af5090",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
         {
           "start": 66,
           "end": 68,
@@ -625854,6 +626579,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 866,
+          "end": 868,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 869,
           "end": 870,
           "symbol": "M:jh.a(I)V",
@@ -625866,7 +626598,7 @@
       "original": "ji.java",
       "renamed": "SentinelDesigner.java",
       "inputSha256": "5bfd31d8ae82c24ef98f30b8cf2dd3e56f0bb0ac3fdcd4fb780f4f96954dfdf2",
-      "outputSha256": "10b1493caaa3b81ed714342a015cf7b8cf91475ef6c011511d876d37f4012543",
+      "outputSha256": "75174826b728880133e25eb02f8c55b124b6720231b87ff1c13aac713ed31c8a",
       "edits": [
         {
           "start": 50,
@@ -628730,6 +629462,13 @@
           "symbol": "C:ao",
           "original": "ao",
           "renamed": "QuickChatPhraseDefinition"
+        },
+        {
+          "start": 34948,
+          "end": 34950,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 35006,
@@ -631888,6 +632627,13 @@
           "renamed": "ClientGlobals"
         },
         {
+          "start": 100437,
+          "end": 100439,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 100615,
           "end": 100617,
           "symbol": "B:ji.a(BIZ)V#0",
@@ -632129,6 +632875,13 @@
           "symbol": "C:km",
           "original": "km",
           "renamed": "ClientGlobals"
+        },
+        {
+          "start": 104855,
+          "end": 104857,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 105033,
@@ -636169,6 +636922,13 @@
           "renamed": "DateOfBirthValidator"
         },
         {
+          "start": 161666,
+          "end": 161668,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 161724,
           "end": 161726,
           "symbol": "C:ge",
@@ -636743,11 +637503,25 @@
           "renamed": "formatMinutesSeconds"
         },
         {
+          "start": 167826,
+          "end": 167828,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 167872,
           "end": 167874,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SessionSeedHelpers"
+        },
+        {
+          "start": 167920,
+          "end": 167922,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 168173,
@@ -636762,6 +637536,20 @@
           "symbol": "M:qa.a(II)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatMinutesSeconds"
+        },
+        {
+          "start": 168195,
+          "end": 168197,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 168246,
+          "end": 168248,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 168296,
@@ -637609,6 +638397,13 @@
           "symbol": "M:ql.a([II)Z",
           "original": "a",
           "renamed": "isAllZero"
+        },
+        {
+          "start": 181014,
+          "end": 181016,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 181141,
@@ -638836,6 +639631,13 @@
           "renamed": "formatMinutesSeconds"
         },
         {
+          "start": 194722,
+          "end": 194724,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 194733,
           "end": 194735,
           "symbol": "C:ol",
@@ -638876,6 +639678,13 @@
           "symbol": "M:qa.a(II)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatMinutesSeconds"
+        },
+        {
+          "start": 194948,
+          "end": 194950,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 194964,
@@ -638988,6 +639797,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 195515,
+          "end": 195517,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 195532,
@@ -644990,6 +645806,13 @@
           "renamed": "getItemHeight"
         },
         {
+          "start": 274573,
+          "end": 274575,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 274777,
           "end": 274780,
           "symbol": "B:ji.r(I)V#0",
@@ -645132,6 +645955,13 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 277521,
+          "end": 277523,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 277932,
           "end": 277934,
           "symbol": "C:pl",
@@ -645200,6 +646030,13 @@
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "QuickChatParameterType"
+        },
+        {
+          "start": 278613,
+          "end": 278615,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 279029,
@@ -648868,7 +649705,7 @@
       "original": "jj.java",
       "renamed": "MeshMaterial.java",
       "inputSha256": "2178a23931a030aadb5d0c9028c2fbec7207d36a0e4ed18d5711ffe014f388c0",
-      "outputSha256": "ac2ab127386de3f187eb5a091ea5f3d1dfe2375c3008a2f8dc50977aa5b65697",
+      "outputSha256": "e174dfeb95f515926cc2cf0fd3a6832f1c8fa19a943575cbc3177f88c87efe20",
       "edits": [
         {
           "start": 50,
@@ -649023,6 +649860,13 @@
           "symbol": "F:SteelSentinels.field_G:I",
           "original": "field_G",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 2183,
+          "end": 2185,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 2212,
@@ -650325,6 +651169,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "ArrayWidgetContainer"
+        },
+        {
+          "start": 8375,
+          "end": 8377,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 8407,
@@ -655993,7 +656844,7 @@
       "original": "ka.java",
       "renamed": "ModalStack.java",
       "inputSha256": "1b873b11e697f0be270a484cf71ec4a5e14178917602f49334e01cedbe0ac1a6",
-      "outputSha256": "9367c2429c9905e408c39408501f3f2d1f75af61e2e26841516b7b927056be24",
+      "outputSha256": "08c9dab11f8af2f3ab75b926cb15323abc4003841178da2cd03ed688785f24bb",
       "edits": [
         {
           "start": 50,
@@ -656248,6 +657099,13 @@
           "renamed": "getText"
         },
         {
+          "start": 2489,
+          "end": 2491,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 2524,
           "end": 2526,
           "symbol": "C:rc",
@@ -656325,6 +657183,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 2833,
+          "end": 2835,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 2870,
           "end": 2872,
           "symbol": "C:ne",
@@ -656337,6 +657202,13 @@
           "symbol": "M:gi.b(ZI)V",
           "original": "b",
           "renamed": "writeInt"
+        },
+        {
+          "start": 2889,
+          "end": 2891,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 2941,
@@ -656549,6 +657421,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 3998,
+          "end": 4000,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 4035,
           "end": 4037,
           "symbol": "C:ne",
@@ -656561,6 +657440,13 @@
           "symbol": "M:gi.b(ZI)V",
           "original": "b",
           "renamed": "writeInt"
+        },
+        {
+          "start": 4054,
+          "end": 4056,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 4091,
@@ -657352,6 +658238,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "ArrayWidgetContainer"
+        },
+        {
+          "start": 7324,
+          "end": 7326,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 7354,
@@ -665850,7 +666743,7 @@
       "original": "la.java",
       "renamed": "BenefitsScreenHelpers.java",
       "inputSha256": "cb3949ade0dd0bb2e3465b0ad13a4d4265612137a1ac9d926618dc582e95426f",
-      "outputSha256": "9015a3c20844c5aed3780a2a30e2ab79b688171960554d169c91e0d5e57b272d",
+      "outputSha256": "00ba5d68405fd9105950edc3a2ef8f04fb3aca254266ef099c2aa56c4dd26932",
       "edits": [
         {
           "start": 50,
@@ -668534,6 +669427,13 @@
           "renamed": "TextLayout"
         },
         {
+          "start": 12760,
+          "end": 12762,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 12815,
           "end": 12817,
           "symbol": "C:tf",
@@ -668553,6 +669453,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "ConditionalTextValue"
+        },
+        {
+          "start": 12999,
+          "end": 13001,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 13164,
@@ -668660,6 +669567,13 @@
           "renamed": "LoadingCaptionHelpers"
         },
         {
+          "start": 13792,
+          "end": 13794,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 13830,
           "end": 13832,
           "symbol": "C:sf",
@@ -668723,6 +669637,13 @@
           "renamed": "drawTransparent"
         },
         {
+          "start": 14084,
+          "end": 14086,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 14125,
           "end": 14127,
           "symbol": "C:ej",
@@ -668756,6 +669677,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "ClientException"
+        },
+        {
+          "start": 14314,
+          "end": 14316,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 14352,
@@ -669393,7 +670321,7 @@
       "original": "lb.java",
       "renamed": "VerticalScrollbar.java",
       "inputSha256": "20f46a00ef53cea70afcba4cc379449a1d5a25b1126078657367171679e61046",
-      "outputSha256": "bb2f7b4ec9608065d330bb089daf1a4e8dc30f68d2d86761d4284815f080a1cd",
+      "outputSha256": "72b94df677a94ab47405da8a3e938e9795bcca7aaa16f60fe8118836478a4c5f",
       "edits": [
         {
           "start": 50,
@@ -669499,6 +670427,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "SceneWidget"
+        },
+        {
+          "start": 1061,
+          "end": 1063,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 1074,
@@ -670325,7 +671260,7 @@
       "original": "lc.java",
       "renamed": "SettingSearchHelpers.java",
       "inputSha256": "0e641149f0d5910a2ac8712179e9c1b48153c66eb9136f542f11e45b990c32f9",
-      "outputSha256": "b489e58f900b1cc2c6689f60ee6b7080d62daa9b102dc7220e4ee0faa4a12ff6",
+      "outputSha256": "13eec100f9af59773409c3fff621f66ccb4fcf9c9954bfef668f1dba0c7d4868",
       "edits": [
         {
           "start": 50,
@@ -670682,6 +671617,13 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "ViewportController"
+        },
+        {
+          "start": 6905,
+          "end": 6907,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 7282,
@@ -671145,7 +672087,7 @@
       "original": "le.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "3cc7efb10ccf7e4c5199c97022d85dcc33bf454be907cec73152b0acd2ca0ba5",
-      "outputSha256": "e123a19ce155194fb6a5acaafcd18de67830d45fe74af9dd845a7fe160b4127e",
+      "outputSha256": "e81f91c0627081c7d2e37d11c020b975af164a76d7f3bf5bdf499862c93ba681",
       "edits": [
         {
           "start": 50,
@@ -671260,11 +672202,25 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 2643,
+          "end": 2645,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 2660,
           "end": 2662,
           "symbol": "C:rm",
           "original": "rm",
           "renamed": "MenuInputState"
+        },
+        {
+          "start": 2722,
+          "end": 2724,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 2733,
@@ -682318,7 +683274,7 @@
       "original": "mb.java",
       "renamed": "Sentinel.java",
       "inputSha256": "9354ba2747e7a8b0c5811e5312a0ba12fdee193b9ece567e326e4873f358f164",
-      "outputSha256": "83f0324795a697a6811de10db406d3fc9fc8e565c2b78d6bcec14b8b8b893f39",
+      "outputSha256": "60220efd0ce9f6c750c082372e6e3c8b9b04df0bf02081a2975e6024a2b3df49",
       "edits": [
         {
           "start": 50,
@@ -687996,6 +688952,13 @@
           "symbol": "F:mb.field_Gb:I",
           "original": "field_Gb",
           "renamed": "worldY"
+        },
+        {
+          "start": 52607,
+          "end": 52609,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 52610,
@@ -694198,6 +695161,13 @@
           "symbol": "F:ee.field_r:I",
           "original": "field_r",
           "renamed": "simulationTick"
+        },
+        {
+          "start": 91170,
+          "end": 91172,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 91173,
@@ -701972,6 +702942,13 @@
           "renamed": "drawRectangleOutlineAlpha"
         },
         {
+          "start": 150824,
+          "end": 150826,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 150827,
           "end": 150828,
           "symbol": "M:jh.a(II)I",
@@ -706891,7 +707868,7 @@
       "original": "mj.java",
       "renamed": "TabbedPanel.java",
       "inputSha256": "313d550af0c24bb543828ee37e3e85926989c6087857c7dbc3ce722cf33c0249",
-      "outputSha256": "2171a2e013f36b27a046af048481ecb6f7889c9ebd1e34226123aafd47cfe55a",
+      "outputSha256": "9bad36a457ab0c295b88aabf75ae18b059e2ab496cfdbcca66ae1e3b30a2b8d1",
       "edits": [
         {
           "start": 71,
@@ -707363,6 +708340,34 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 10107,
+          "end": 10109,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 10145,
+          "end": 10147,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 10269,
+          "end": 10271,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 10312,
+          "end": 10314,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 10407,
           "end": 10409,
           "symbol": "C:fm",
@@ -707473,6 +708478,20 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "DualNodeDeque"
+        },
+        {
+          "start": 11055,
+          "end": 11057,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 11143,
+          "end": 11145,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 11218,
@@ -709080,7 +710099,7 @@
       "original": "n.java",
       "renamed": "FunOrbClient.java",
       "inputSha256": "7690b8bb3e3ae79ec6005b6b7e1f211835ab6f81f905b1b5ec7b5c59ab223d38",
-      "outputSha256": "9ee562c58b79904dc80a6f82257b3fa6b19802f6150cd54143a670b85cbef715",
+      "outputSha256": "4d9a191d67f351c65069bc677237e9f76a76ef764a20afc981b3f82f812f1c8f",
       "edits": [
         {
           "start": 53,
@@ -709979,6 +710998,13 @@
           "renamed": "enablePacketFive"
         },
         {
+          "start": 5377,
+          "end": 5379,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 5429,
           "end": 5430,
           "symbol": "M:n.a(ILjava/lang/String;III)V",
@@ -710448,11 +711474,39 @@
           "renamed": "enablePacketFour"
         },
         {
+          "start": 10826,
+          "end": 10828,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 10878,
           "end": 10879,
           "symbol": "M:n.b(Z)V",
           "original": "b",
           "renamed": "enablePacketsElevenToThirteen"
+        },
+        {
+          "start": 10906,
+          "end": 10908,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 10937,
+          "end": 10939,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 11018,
+          "end": 11020,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 11063,
@@ -710551,6 +711605,13 @@
           "symbol": "M:n.j(I)V",
           "original": "j",
           "renamed": "enablePacketTwo"
+        },
+        {
+          "start": 12149,
+          "end": 12151,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 12193,
@@ -710670,6 +711731,13 @@
           "symbol": "M:n.f(B)V",
           "original": "f",
           "renamed": "enablePacketOne"
+        },
+        {
+          "start": 12933,
+          "end": 12935,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 12985,
@@ -712660,6 +713728,13 @@
           "renamed": "ArchiveLoadStep"
         },
         {
+          "start": 21001,
+          "end": 21003,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 21028,
           "end": 21030,
           "symbol": "C:sa",
@@ -712763,6 +713838,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "ArrayWidgetContainer"
+        },
+        {
+          "start": 21570,
+          "end": 21572,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 21719,
@@ -713059,6 +714141,13 @@
           "renamed": "enablePacketSix"
         },
         {
+          "start": 23907,
+          "end": 23909,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 24011,
           "end": 24012,
           "symbol": "M:n.a(ILjava/lang/String;III)V",
@@ -713071,6 +714160,55 @@
           "symbol": "M:n.a(ZZ)V",
           "original": "a",
           "renamed": "configureCommonPacketHandlers"
+        },
+        {
+          "start": 24133,
+          "end": 24135,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24163,
+          "end": 24165,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24195,
+          "end": 24197,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24225,
+          "end": 24227,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24256,
+          "end": 24258,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24287,
+          "end": 24289,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
+          "start": 24319,
+          "end": 24321,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 24363,
@@ -713814,7 +714952,7 @@
       "original": "nb.java",
       "renamed": "GameplayController.java",
       "inputSha256": "e63c079b0a91b59b1f529c0ac6abb5f49d9d1151c6572be9b7acdb4e19b020c8",
-      "outputSha256": "08d32306363effb98a43ed191ba11046f33472c006cc0d9b8b527f76aa65abfd",
+      "outputSha256": "f5ac2020dc84291313e0dc03280891ab2347e0cc30141609fac3bc0d96e9dfb9",
       "edits": [
         {
           "start": 50,
@@ -719113,6 +720251,13 @@
           "symbol": "M:ql.a([II)Z",
           "original": "a",
           "renamed": "isAllZero"
+        },
+        {
+          "start": 69385,
+          "end": 69387,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 69435,
@@ -735497,6 +736642,13 @@
           "renamed": "isAllZero"
         },
         {
+          "start": 251220,
+          "end": 251222,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 251364,
           "end": 251366,
           "symbol": "C:db",
@@ -735616,6 +736768,13 @@
           "renamed": "isAllZero"
         },
         {
+          "start": 252279,
+          "end": 252281,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 252330,
           "end": 252332,
           "symbol": "C:uf",
@@ -735630,6 +736789,13 @@
           "renamed": "countSetBitsInArray"
         },
         {
+          "start": 252340,
+          "end": 252342,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 252736,
           "end": 252738,
           "symbol": "C:ve",
@@ -735642,6 +736808,13 @@
           "symbol": "M:ve.a([III)Z",
           "original": "a",
           "renamed": "isBitSet"
+        },
+        {
+          "start": 252741,
+          "end": 252743,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 252979,
@@ -742031,6 +743204,13 @@
           "renamed": "getProfileLength"
         },
         {
+          "start": 338596,
+          "end": 338598,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 338628,
           "end": 338630,
           "symbol": "C:im",
@@ -742064,6 +743244,13 @@
           "symbol": "M:hd.b(I)I",
           "original": "b",
           "renamed": "getTerrainType"
+        },
+        {
+          "start": 338730,
+          "end": 338732,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 338747,
@@ -742122,6 +743309,13 @@
           "renamed": "getTerrainType"
         },
         {
+          "start": 338947,
+          "end": 338949,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 338964,
           "end": 338966,
           "symbol": "C:wk",
@@ -742176,6 +743370,13 @@
           "symbol": "M:hd.b(I)I",
           "original": "b",
           "renamed": "getTerrainType"
+        },
+        {
+          "start": 339174,
+          "end": 339176,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 339191,
@@ -742234,6 +743435,13 @@
           "renamed": "getTerrainType"
         },
         {
+          "start": 339396,
+          "end": 339398,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 339413,
           "end": 339415,
           "symbol": "C:wk",
@@ -742267,6 +743475,20 @@
           "symbol": "M:gl.a(Z)Ljava/awt/Canvas;",
           "original": "a",
           "renamed": "getActiveCanvas"
+        },
+        {
+          "start": 339570,
+          "end": 339572,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
+          "start": 339610,
+          "end": 339612,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 339621,
@@ -745344,6 +746566,13 @@
           "renamed": "detachAllParticles"
         },
         {
+          "start": 393029,
+          "end": 393031,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 393096,
           "end": 393097,
           "symbol": "M:nb.g(I)V",
@@ -745414,6 +746643,13 @@
           "renamed": "countSetBitsInArray"
         },
         {
+          "start": 394137,
+          "end": 394139,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 394432,
           "end": 394434,
           "symbol": "C:ve",
@@ -745426,6 +746662,13 @@
           "symbol": "M:ve.a([III)Z",
           "original": "a",
           "renamed": "isBitSet"
+        },
+        {
+          "start": 394437,
+          "end": 394439,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 394627,
@@ -751548,6 +752791,13 @@
           "symbol": "M:mi.a(Ljava/lang/String;IIII)V",
           "original": "a",
           "renamed": "drawCentered"
+        },
+        {
+          "start": 448485,
+          "end": 448487,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 448508,
@@ -758494,6 +759744,13 @@
           "renamed": "NameAvailabilityValidator"
         },
         {
+          "start": 498728,
+          "end": 498730,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 498761,
           "end": 498768,
           "symbol": "F:nb.field_C:Lmb;",
@@ -759031,6 +760288,13 @@
           "symbol": "C:nj",
           "original": "nj",
           "renamed": "AccountTermsPanel"
+        },
+        {
+          "start": 502721,
+          "end": 502723,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 502734,
@@ -762381,7 +763645,7 @@
       "original": "ng.java",
       "renamed": "MembershipPromotionScreen.java",
       "inputSha256": "2cb202e10bbc172f73cf296b789f97b117db8cf97a63383d709f89ab8c05a84d",
-      "outputSha256": "689e557879b74432f73645c85c6184a941856ccedf7d61853fa26f2fce2668d9",
+      "outputSha256": "456eb548e407214d15d72f56358a4b69a8402fac75bdf8496908cfd838a17076",
       "edits": [
         {
           "start": 50,
@@ -762867,6 +764131,13 @@
           "renamed": "TutorialStepTable"
         },
         {
+          "start": 2872,
+          "end": 2874,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 2885,
           "end": 2887,
           "symbol": "C:ec",
@@ -763315,11 +764586,25 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 4904,
+          "end": 4906,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 4918,
           "end": 4919,
           "symbol": "M:wk.a(II)V",
           "original": "a",
           "renamed": "drawTransparent"
+        },
+        {
+          "start": 5003,
+          "end": 5005,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 5017,
@@ -766648,7 +767933,7 @@
       "original": "nk.java",
       "renamed": "ArticulatedPart.java",
       "inputSha256": "443b5792554ee4576af65e4fa6b37030782fdf48f20d3b26ecf9776c387414e5",
-      "outputSha256": "5b58b57140478a4a0d211831794e6d6606fa5222747aa34101bbadefb6b29655",
+      "outputSha256": "56dc31d65d9c1ce39a24ac97413eec0c676d694cd9f36c598df106da99da3b3f",
       "edits": [
         {
           "start": 50,
@@ -767358,6 +768643,13 @@
           "renamed": "instructions"
         },
         {
+          "start": 4072,
+          "end": 4074,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 4075,
           "end": 4076,
           "symbol": "M:jh.a(II)I",
@@ -767552,6 +768844,13 @@
           "symbol": "F:qd.field_d:Lnk;",
           "original": "field_d",
           "renamed": "attachedPart"
+        },
+        {
+          "start": 5864,
+          "end": 5866,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 5867,
@@ -767804,6 +769103,13 @@
           "symbol": "F:nk.field_I:[Lqd;",
           "original": "field_I",
           "renamed": "instructions"
+        },
+        {
+          "start": 7562,
+          "end": 7564,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 7565,
@@ -768523,6 +769829,13 @@
           "renamed": "instructions"
         },
         {
+          "start": 17561,
+          "end": 17563,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 17564,
           "end": 17565,
           "symbol": "M:jh.a(II)I",
@@ -768767,6 +770080,13 @@
           "symbol": "F:nk.field_I:[Lqd;",
           "original": "field_I",
           "renamed": "instructions"
+        },
+        {
+          "start": 20538,
+          "end": 20540,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 20541,
@@ -769187,6 +770507,13 @@
           "symbol": "F:qd.field_d:Lnk;",
           "original": "field_d",
           "renamed": "attachedPart"
+        },
+        {
+          "start": 25361,
+          "end": 25363,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 25364,
@@ -776314,7 +777641,7 @@
       "original": "oc.java",
       "renamed": "MessageMenuHelpers.java",
       "inputSha256": "4eff529f4411a262e7190934d9e72217adf2f619de57178573f5f6109e47c064",
-      "outputSha256": "dafdff6c49f880230fc14c8f06f587723be6ecea01a2c29a30f3e68d3279b967",
+      "outputSha256": "9757fc6cc15f45ad7dd7a72fa6b81d199091e7f05eac31348eb3ed66cbf34d64",
       "edits": [
         {
           "start": 50,
@@ -777080,6 +778407,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 10137,
+          "end": 10139,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 10194,
@@ -778589,7 +779923,7 @@
       "original": "oh.java",
       "renamed": "LobbySetupHelpers.java",
       "inputSha256": "a360ecde925831a8980e049bde41459409ab41e99668e949b4ae8ad6676eec5f",
-      "outputSha256": "5f4a632c5beb81c8cf38221aa874ac9e53d2ad2c06c403e1eff0da5d88f30eb7",
+      "outputSha256": "6299bef0a00995bb9db54ec548f76b43dec1b31f21f13ee11ddf762ef1e0c08e",
       "edits": [
         {
           "start": 50,
@@ -779360,6 +780694,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "SceneWidget"
+        },
+        {
+          "start": 4715,
+          "end": 4717,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 4738,
@@ -780398,6 +781739,13 @@
           "renamed": "SceneWidget"
         },
         {
+          "start": 7586,
+          "end": 7588,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 7609,
           "end": 7611,
           "symbol": "C:bj",
@@ -780571,6 +781919,13 @@
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "NumberParsingHelpers"
+        },
+        {
+          "start": 8159,
+          "end": 8161,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 8198,
@@ -783401,6 +784756,13 @@
           "renamed": "buildSolidFrameSprites"
         },
         {
+          "start": 24674,
+          "end": 24676,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 24691,
           "end": 24693,
           "symbol": "C:gh",
@@ -783413,6 +784775,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "SceneWidget"
+        },
+        {
+          "start": 24720,
+          "end": 24722,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 24741,
@@ -786611,7 +787980,7 @@
       "original": "ol.java",
       "renamed": "QuickChatHelpDialog.java",
       "inputSha256": "cca199c3c0268ddc46ee1c40d3dbe56026f7231b985f3a73aebd6c2669a7a0ec",
-      "outputSha256": "2b393405d5d53515fc3f980b8e78214295a0febc7615cce15fea3a91623b0021",
+      "outputSha256": "5f9a994bc474894c1eb3d48ab2b654ebe4a4b0fef5de0098a42c51729cc8c3dc",
       "edits": [
         {
           "start": 50,
@@ -787704,6 +789073,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 10449,
+          "end": 10451,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 10712,
@@ -793424,7 +794800,7 @@
       "original": "pl.java",
       "renamed": "BirthDateEntryPanel.java",
       "inputSha256": "dafb2fbb34fe259cd16eefcbab077060cbb35b30bdc3907832c800caf3bf7ae1",
-      "outputSha256": "6e2a96ac1473aa775a0788476a60faa2662c19f5752260649d8fe53891b89104",
+      "outputSha256": "eb8b14eaac8494e6bb00cee3a259b960d0ff9f3276bc219f2c4d43393fe4574e",
       "edits": [
         {
           "start": 50,
@@ -793903,6 +795279,13 @@
           "renamed": "ViewportController"
         },
         {
+          "start": 4228,
+          "end": 4230,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 4481,
           "end": 4483,
           "symbol": "C:jg",
@@ -794286,6 +795669,13 @@
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 7544,
+          "end": 7546,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 7784,
@@ -794790,7 +796180,7 @@
       "original": "pm.java",
       "renamed": "LoginForm.java",
       "inputSha256": "a906ff59e5dfd794fe0be4812b4583d984afaa4517f4b8af1a8a3734d21043a8",
-      "outputSha256": "82a15d17d2dcd32e166966483307fb61617b64b44691efde909ff882bec3d884",
+      "outputSha256": "013225a3e787925d6ef46aa5069c41da5c6a44c857058f5e31fb732919d7225d",
       "edits": [
         {
           "start": 50,
@@ -795743,6 +797133,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "LabeledField"
+        },
+        {
+          "start": 10120,
+          "end": 10122,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 10177,
@@ -796718,6 +798115,13 @@
           "renamed": "DateOfBirthValidator"
         },
         {
+          "start": 21085,
+          "end": 21087,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 21088,
           "end": 21089,
           "symbol": "M:jh.a(II)I",
@@ -796893,11 +798297,32 @@
           "renamed": "closeConnection"
         },
         {
+          "start": 23441,
+          "end": 23443,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 23465,
+          "end": 23467,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 23476,
           "end": 23477,
           "symbol": "M:sg.b(I)V",
           "original": "b",
           "renamed": "close"
+        },
+        {
+          "start": 23496,
+          "end": 23498,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         }
       ]
     },
@@ -806411,7 +807836,7 @@
       "original": "qh.java",
       "renamed": "IconTextComponent.java",
       "inputSha256": "f5b534ddc138ba9641b2bce5319ccdb93d3b0575b71fada456b60938d052d222",
-      "outputSha256": "1fe33f9101f1d39b1fa56e407e7512a1fd42d33adda6e3329082bc0aa6bf16b3",
+      "outputSha256": "b0a15fda3a650c94386566695b702b3109678c597aeab2ac371c269f5b93f2be",
       "edits": [
         {
           "start": 69,
@@ -806650,6 +808075,13 @@
           "symbol": "C:jf",
           "original": "jf",
           "renamed": "EditableTextWidget"
+        },
+        {
+          "start": 1508,
+          "end": 1510,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 1520,
@@ -807477,7 +808909,7 @@
       "original": "qj.java",
       "renamed": "SentinelAnimationEditor.java",
       "inputSha256": "568cef4b8016192886a4c2af767c7740d146d0117ca6e0a6dc7535d61725424a",
-      "outputSha256": "4defa0edbfbf217832b9cd0debd0584898cedc9d4b2b909452afd05ef58afaca",
+      "outputSha256": "13ce42ce0399e4ca1ee9f5658af952bc947b678fe951e2e75a9a250a1b6ed8f8",
       "edits": [
         {
           "start": 50,
@@ -807583,6 +809015,13 @@
           "symbol": "C:ei",
           "original": "ei",
           "renamed": "NameAvailabilityValidator"
+        },
+        {
+          "start": 2266,
+          "end": 2268,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 2358,
@@ -807858,6 +809297,13 @@
           "renamed": "NameAvailabilityValidator"
         },
         {
+          "start": 3798,
+          "end": 3800,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 3832,
           "end": 3834,
           "symbol": "C:ei",
@@ -807947,6 +809393,13 @@
           "symbol": "C:qe",
           "original": "qe",
           "renamed": "TextSpriteHelpers"
+        },
+        {
+          "start": 5161,
+          "end": 5163,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 5266,
@@ -808089,6 +809542,13 @@
           "renamed": "TextSpriteHelpers"
         },
         {
+          "start": 6126,
+          "end": 6128,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 6168,
           "end": 6170,
           "symbol": "C:ka",
@@ -808192,6 +809652,13 @@
           "symbol": "M:o.a(BI)I",
           "original": "a",
           "renamed": "getAnimationSetIndex"
+        },
+        {
+          "start": 6726,
+          "end": 6728,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 6756,
@@ -808383,6 +809850,13 @@
           "renamed": "getAnimationSetIndex"
         },
         {
+          "start": 7821,
+          "end": 7823,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 7851,
           "end": 7853,
           "symbol": "C:ka",
@@ -808542,6 +810016,13 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "SettingSearchHelpers"
+        },
+        {
+          "start": 8797,
+          "end": 8799,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 8848,
@@ -808738,6 +810219,13 @@
           "symbol": "M:o.a(BI)I",
           "original": "a",
           "renamed": "getAnimationSetIndex"
+        },
+        {
+          "start": 10031,
+          "end": 10033,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 10082,
@@ -809013,6 +810501,13 @@
           "renamed": "IconLookupHelpers"
         },
         {
+          "start": 12324,
+          "end": 12326,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 12647,
           "end": 12649,
           "symbol": "C:ka",
@@ -809069,11 +810564,25 @@
           "renamed": "TextSpriteHelpers"
         },
         {
+          "start": 13060,
+          "end": 13062,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 13280,
           "end": 13282,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "IconLookupHelpers"
+        },
+        {
+          "start": 13415,
+          "end": 13417,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 13786,
@@ -809853,6 +811362,13 @@
           "renamed": "drawCircleOutline"
         },
         {
+          "start": 22116,
+          "end": 22118,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 22192,
           "end": 22194,
           "symbol": "C:pb",
@@ -810091,6 +811607,13 @@
           "renamed": "fillCircleBlended"
         },
         {
+          "start": 24081,
+          "end": 24083,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 24125,
           "end": 24127,
           "symbol": "C:pb",
@@ -810236,6 +811759,13 @@
           "symbol": "M:wk.c(IIII)V",
           "original": "c",
           "renamed": "drawScaled"
+        },
+        {
+          "start": 25908,
+          "end": 25910,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 26023,
@@ -810488,6 +812018,13 @@
           "symbol": "M:pb.c()V",
           "original": "c",
           "renamed": "resetClip"
+        },
+        {
+          "start": 28311,
+          "end": 28313,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 28339,
@@ -810763,6 +812300,13 @@
           "renamed": "TextSpriteHelpers"
         },
         {
+          "start": 32223,
+          "end": 32225,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 32605,
           "end": 32607,
           "symbol": "C:wb",
@@ -810901,6 +812445,13 @@
           "symbol": "M:o.a(BI)I",
           "original": "a",
           "renamed": "getAnimationSetIndex"
+        },
+        {
+          "start": 33807,
+          "end": 33809,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 34132,
@@ -813425,10 +814976,17 @@
     },
     {
       "original": "rb.java",
-      "renamed": "rb.java",
+      "renamed": "AngleHelpers.java",
       "inputSha256": "b5756c99dc83fc0f2d47206152ac12537531ab6bb5662c5ed22734a79946780a",
-      "outputSha256": "dc8757c0d90a82e75cdffbeacfd8f310d0ab244b13d334186462231eea318eae",
+      "outputSha256": "1163b92f6fdbfbbda46d19cc2c7abdf8531c65e0712575b498c4f6bc402ea57c",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
         {
           "start": 198,
           "end": 200,
@@ -813470,6 +815028,13 @@
           "symbol": "P:rb.a(III)I#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 442,
+          "end": 444,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 445,
@@ -813626,6 +815191,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 1022,
+          "end": 1024,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 1025,
           "end": 1026,
           "symbol": "M:rb.a(B)V",
@@ -813638,7 +815210,7 @@
       "original": "rc.java",
       "renamed": "SectorCacheStore.java",
       "inputSha256": "d360ffe1f36aee606b6f39a3f6d379ca105cfa141be4e6c187794e93a14448ab",
-      "outputSha256": "e1e592351ac88a3b22bba9e332a4ef9d4eb298a4aca87e4410ec682c2e40e2d3",
+      "outputSha256": "4483807be58c906ae72465892d2b6401513506c8d29a8621154afed2b6525b35",
       "edits": [
         {
           "start": 69,
@@ -815312,6 +816884,13 @@
           "symbol": "M:ji.a(ILjava/lang/String;)[B",
           "original": "a",
           "renamed": "readTextResourceBytes"
+        },
+        {
+          "start": 12652,
+          "end": 12654,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 12665,
@@ -850531,6 +852110,13 @@
           "renamed": "readTextResourceBytes"
         },
         {
+          "start": 173897,
+          "end": 173899,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 173966,
           "end": 173968,
           "symbol": "C:ji",
@@ -859127,6 +860713,13 @@
           "renamed": "readTextResourceBytes"
         },
         {
+          "start": 212856,
+          "end": 212858,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 212869,
           "end": 212871,
           "symbol": "C:jk",
@@ -862744,6 +864337,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "DelayedServerPacket"
+        },
+        {
+          "start": 230820,
+          "end": 230822,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 230837,
@@ -866942,7 +868542,7 @@
       "original": "rj.java",
       "renamed": "BufferedRandomAccessFile.java",
       "inputSha256": "116cd4069093f3cd448c3c0ed711f1ed554b421efa1b4895f6f1d933272b2fe5",
-      "outputSha256": "2067ff44b0950cc5239580d82e816ffc49ead30aeabcd6f37532ce7a8c6cc675",
+      "outputSha256": "5d720f5edc043c3a3a96288015086b33df6d9fe4a4dc43d06900da52da76fa85",
       "edits": [
         {
           "start": 69,
@@ -871544,6 +873144,13 @@
           "renamed": "KeyRoutingHelpers"
         },
         {
+          "start": 46021,
+          "end": 46023,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 46038,
           "end": 46040,
           "symbol": "C:gh",
@@ -871551,11 +873158,25 @@
           "renamed": "SceneWidget"
         },
         {
+          "start": 46064,
+          "end": 46066,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
+        },
+        {
           "start": 46085,
           "end": 46087,
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "MembershipPromotionScreen"
+        },
+        {
+          "start": 46109,
+          "end": 46111,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 46131,
@@ -873741,7 +875362,7 @@
       "original": "rl.java",
       "renamed": "PacketLoopHelpers.java",
       "inputSha256": "8b02647a0dafa3c62aa92ccf8caeb87e2f284d2d2930114d0e0faced0d8bf96e",
-      "outputSha256": "5a038683d22a4dc7359558e81cb5a88107e21545e5cce2b03d4981f783d4c637",
+      "outputSha256": "4a90b26b8f0df82b1a56d2eaea53a2e26d99df7b68ef2435bb52c7caae0ca46e",
       "edits": [
         {
           "start": 50,
@@ -874555,6 +876176,13 @@
           "kind": "label"
         },
         {
+          "start": 15207,
+          "end": 15209,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 15235,
           "end": 15237,
           "symbol": "C:nh",
@@ -875014,6 +876642,20 @@
           "renamed": "ConditionalTextValue"
         },
         {
+          "start": 22573,
+          "end": 22575,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
+          "start": 22595,
+          "end": 22597,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 22625,
           "end": 22627,
           "symbol": "C:lb",
@@ -875070,6 +876712,13 @@
           "renamed": "TutorialStep"
         },
         {
+          "start": 22776,
+          "end": 22778,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 22840,
           "end": 22842,
           "symbol": "C:wk",
@@ -875089,7 +876738,7 @@
       "original": "rm.java",
       "renamed": "MenuInputState.java",
       "inputSha256": "11b44abb7fd8876bd871069f93d0b6c81ae4facc6c580d327e4ef1417e3fddac",
-      "outputSha256": "cc61fc9f0a91cc4da041c69bb128f1f26206f6aaa6c2bbb3d84a474ff7c52645",
+      "outputSha256": "6aa82dd6b0a1e03956ec6211bcc69ad99a45d389b7744b1e98f45db24a628d79",
       "edits": [
         {
           "start": 50,
@@ -875349,6 +876998,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "LoginActionHelpers"
+        },
+        {
+          "start": 3330,
+          "end": 3332,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 3352,
@@ -875713,7 +877369,7 @@
       "original": "rn.java",
       "renamed": "PendingAckRequest.java",
       "inputSha256": "dca3fcd94f86684a190bfbb5888e78996c1c9e726b87c3f6e17be17c26bf64d1",
-      "outputSha256": "fc19a7fb1bea23bbded529d7ccc8dd2cb35bf1b4e2efc5e698feee703f87d5df",
+      "outputSha256": "519a19df378e13a52b2fb3e46e41136634b6ae2ac78778540754e9ca6b491ec9",
       "edits": [
         {
           "start": 50,
@@ -875975,11 +877631,25 @@
           "renamed": "isConnected"
         },
         {
+          "start": 3414,
+          "end": 3416,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 3496,
           "end": 3497,
           "symbol": "M:rf.b(I)Z",
           "original": "b",
           "renamed": "isResponseStage"
+        },
+        {
+          "start": 3589,
+          "end": 3591,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 3665,
@@ -881979,7 +883649,7 @@
       "original": "sg.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "a8b15f1fd75db68026d825084fdb7ad36d15def9a945e642f3a7eb62c89444cc",
-      "outputSha256": "ab080a2adc2ed34df0acb677781f22a456c5e50318c5f0ecc19b9958fadb30ec",
+      "outputSha256": "eef831789233b52f70bb416a186f5bff9476cdb41cefc374cefe0f4f1e6e5138",
       "edits": [
         {
           "start": 69,
@@ -882423,6 +884093,13 @@
           "renamed": "LoadoutHelpers"
         },
         {
+          "start": 13733,
+          "end": 13735,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 13756,
           "end": 13758,
           "symbol": "C:gl",
@@ -882764,7 +884441,7 @@
       "original": "sh.java",
       "renamed": "MenuLayoutHelpers.java",
       "inputSha256": "3d7ba90548d69b78de0ae3aa8e9587c1befa292cd2db093b1120d1641f037df0",
-      "outputSha256": "a142f0a0f97d8ee35f247565dffaa687dbdf471ad2977d55f0183cf15f764b66",
+      "outputSha256": "b329293df9081590cd52a8860331aa688edd3878be65c06d79f05199e28dabf4",
       "edits": [
         {
           "start": 50,
@@ -882786,6 +884463,13 @@
           "symbol": "M:sh.c(I)I",
           "original": "c",
           "renamed": "getPopupMenuWidth"
+        },
+        {
+          "start": 253,
+          "end": 255,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 266,
@@ -882977,6 +884661,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 1495,
+          "end": 1497,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 1562,
           "end": 1564,
           "symbol": "C:hc",
@@ -883052,6 +884743,13 @@
           "symbol": "C:km",
           "original": "km",
           "renamed": "ClientGlobals"
+        },
+        {
+          "start": 2378,
+          "end": 2380,
+          "symbol": "C:dg",
+          "original": "dg",
+          "renamed": "InterfaceTextHelpers"
         },
         {
           "start": 2471,
@@ -890925,7 +892623,7 @@
       "original": "tg.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "c46746d7e86df93eee8433e7d7143c88f7e7853cbbf6515034f923ff6a5f8866",
-      "outputSha256": "b9d937ca5d8580b6848915d611738e2bc27f2c6a12ca25c59d29b79e0232dc5a",
+      "outputSha256": "3bfda5bfcfae2c0257cfd4cf3f0b31dec7a5c4f0e252287f46f4145be3d26eb4",
       "edits": [
         {
           "start": 50,
@@ -890968,6 +892666,13 @@
           "symbol": "C:ab",
           "original": "ab",
           "renamed": "MidiFileReader"
+        },
+        {
+          "start": 412,
+          "end": 414,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 785,
@@ -891054,11 +892759,25 @@
           "renamed": "isDone"
         },
         {
+          "start": 2615,
+          "end": 2617,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 2633,
           "end": 2634,
           "symbol": "M:uh.a(JI)Lck;",
           "original": "a",
           "renamed": "get"
+        },
+        {
+          "start": 2722,
+          "end": 2724,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 2772,
@@ -897077,7 +898796,7 @@
       "original": "ud.java",
       "renamed": "RankingQuery.java",
       "inputSha256": "ce2dae659ed1c03e8d0af0ee8f3938e4e9db595e6b822bc1f6e4b84a303a607e",
-      "outputSha256": "6e09943123acf672570e4db5518cb0c2c6ab57e31019ba4e2951b369c25f075b",
+      "outputSha256": "a14ffea69f40da211d3666ad45ab9716e88a7a095c81c08d4f7eba600ef8a57c",
       "edits": [
         {
           "start": 50,
@@ -897171,6 +898890,13 @@
           "renamed": "isLoggedIn"
         },
         {
+          "start": 723,
+          "end": 725,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 783,
           "end": 785,
           "symbol": "C:jd",
@@ -897225,7 +898951,7 @@
       "original": "ue.java",
       "renamed": "LoginHandshakeHelpers.java",
       "inputSha256": "d5964f56ab5a7a08899177c2cb7137c69587305dd14b55cc5be65bed45bae886",
-      "outputSha256": "3aee4001125a7bace4a8a9e82bbce84b56c596da062ce6c9d665841522cc7b25",
+      "outputSha256": "02d56dd24424dbdb23fe8d2c1670e5c1aeb4594f9f79c815c3626eb7f538d97a",
       "edits": [
         {
           "start": 50,
@@ -897305,6 +899031,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 414,
+          "end": 416,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 445,
           "end": 447,
           "symbol": "C:ne",
@@ -897317,6 +899050,13 @@
           "symbol": "M:gi.b(ZI)V",
           "original": "b",
           "renamed": "writeInt"
+        },
+        {
+          "start": 464,
+          "end": 466,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 495,
@@ -908263,7 +910003,7 @@
       "original": "ve.java",
       "renamed": "AssetDecoders.java",
       "inputSha256": "f7e286c297df6d467d015731a1be19909ff79c77bded51afeab51336f9370b73",
-      "outputSha256": "a90594c8c095baabc27886bd2d2076679595fe87dbcc68c2413050c3c9b56f96",
+      "outputSha256": "b92cd113fbd42768075cd4d3dd971f79d82fb18619c5f02bb57d27ed629dd614",
       "edits": [
         {
           "start": 69,
@@ -908728,6 +910468,20 @@
           "renamed": "position"
         },
         {
+          "start": 3029,
+          "end": 3031,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3114,
+          "end": 3116,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 3125,
           "end": 3126,
           "symbol": "M:sg.a(I)I",
@@ -908761,6 +910515,13 @@
           "symbol": "F:gi.field_p:I",
           "original": "field_p",
           "renamed": "position"
+        },
+        {
+          "start": 3308,
+          "end": 3310,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
         },
         {
           "start": 3319,
@@ -910612,7 +912373,7 @@
       "original": "vi.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "915b6a27ecba8cd33805182215279710210746a0d50235e0e34f9e9a53000f94",
-      "outputSha256": "42bb568b76d8de00308cc76e3f4e248ce6bafe847c0abac5146e36b655489b98",
+      "outputSha256": "ffecbc2f8de1d83f70da618ab597762c3a5ccdf994061a6fc869272a392faf07",
       "edits": [
         {
           "start": 50,
@@ -911383,6 +913144,13 @@
           "symbol": "M:vi.a(Llh;ILjava/lang/String;II)I",
           "original": "a",
           "renamed": "addLabeledField"
+        },
+        {
+          "start": 4357,
+          "end": 4359,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 4409,
@@ -915223,7 +916991,7 @@
       "original": "vn.java",
       "renamed": "DateOfBirthValidator.java",
       "inputSha256": "5d8ded43d909949af48bd329fe75ae4be5804bc7671a3d1a8a4802cf8d8badfb",
-      "outputSha256": "f4a88d8924fb904b04337eb38ee51cf49ea29860ddb27d2a32d4735a135b5804",
+      "outputSha256": "dc31822279ed87c94f459c5d20346d22aef6477325d5fbe7d75cf703b683fb03",
       "edits": [
         {
           "start": 50,
@@ -915371,6 +917139,13 @@
           "symbol": "M:db.a(Ljava/lang/String;I[Ljava/lang/String;)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatTemplate"
+        },
+        {
+          "start": 1402,
+          "end": 1404,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 1761,
@@ -917551,7 +919326,7 @@
       "original": "wc.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "c0cdb9d79839b834e84d7733f761b2beb3d1b79489270b2f7a2750b43487c9d8",
-      "outputSha256": "9bc134d71b36bcc0fe58fb12a20cbfa571829e9a3a76570df3de0fbd8571ee1a",
+      "outputSha256": "71f6ebcc0e8f837450bce70aa37cc1dfc0a91b2d4e638f34b60b9ddfb29b679f",
       "edits": [
         {
           "start": 50,
@@ -917631,6 +919406,13 @@
           "renamed": "LabeledField"
         },
         {
+          "start": 1023,
+          "end": 1025,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 1492,
           "end": 1494,
           "symbol": "C:ci",
@@ -917671,6 +919453,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "LabeledField"
+        },
+        {
+          "start": 1888,
+          "end": 1890,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 1989,
@@ -917722,6 +919511,55 @@
           "renamed": "ChatPanelSetupHelpers"
         },
         {
+          "start": 3568,
+          "end": 3570,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
+          "start": 3687,
+          "end": 3689,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3700,
+          "end": 3702,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3784,
+          "end": 3786,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3797,
+          "end": 3799,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3881,
+          "end": 3883,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 3894,
+          "end": 3896,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
           "start": 4496,
           "end": 4498,
           "symbol": "C:ci",
@@ -917764,6 +919602,13 @@
           "renamed": "LabeledField"
         },
         {
+          "start": 4895,
+          "end": 4897,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
+        },
+        {
           "start": 4996,
           "end": 4998,
           "symbol": "C:ci",
@@ -917804,6 +919649,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "LabeledField"
+        },
+        {
+          "start": 5598,
+          "end": 5600,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 6068,
@@ -917930,6 +919782,55 @@
           "symbol": "C:wn",
           "original": "wn",
           "renamed": "ChatPanelSetupHelpers"
+        },
+        {
+          "start": 7440,
+          "end": 7442,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7453,
+          "end": 7455,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7536,
+          "end": 7538,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7549,
+          "end": 7551,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7632,
+          "end": 7634,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7645,
+          "end": 7647,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "AngleHelpers"
+        },
+        {
+          "start": 7687,
+          "end": 7689,
+          "symbol": "C:ce",
+          "original": "ce",
+          "renamed": "PatchNoteUsage"
         },
         {
           "start": 8276,
@@ -923455,7 +925356,7 @@
       "original": "wl.java",
       "renamed": "Projectile.java",
       "inputSha256": "eca35aa2e8feeb43b62cf3077c209fd6a6753dbd57ffe18696eced95b701d1ee",
-      "outputSha256": "c07bf58abd70c31035ed26f620890de29a4d07efcd242eef0812ad66b3ffb684",
+      "outputSha256": "4e5a7c3141061f37221c51c0751880cbac3519871ae7db1c91d5a72823758d2f",
       "edits": [
         {
           "start": 50,
@@ -927336,6 +929237,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 38970,
+          "end": 38972,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 38973,
           "end": 38974,
           "symbol": "M:jh.a(II)I",
@@ -927523,6 +929431,13 @@
           "symbol": "F:wl.field_eb:I",
           "original": "field_eb",
           "renamed": "velocityX"
+        },
+        {
+          "start": 40093,
+          "end": 40095,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 40096,
@@ -928463,6 +930378,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 45976,
+          "end": 45978,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
+        },
+        {
           "start": 45979,
           "end": 45980,
           "symbol": "M:jh.a(II)I",
@@ -928678,6 +930600,13 @@
           "symbol": "F:wl.field_eb:I",
           "original": "field_eb",
           "renamed": "velocityX"
+        },
+        {
+          "start": 46989,
+          "end": 46991,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 46992,
@@ -931093,6 +933022,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 64864,
+          "end": 64866,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 64867,
@@ -933810,6 +935746,13 @@
           "symbol": "F:wl.field_eb:I",
           "original": "field_eb",
           "renamed": "velocityX"
+        },
+        {
+          "start": 80401,
+          "end": 80403,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "TrigonometryHelpers"
         },
         {
           "start": 80404,
@@ -939606,10 +941549,10 @@
       "commit": "56c18e5fa3eda13b7324b0df50a3746fc39e3242",
       "subdirectory": "games/steelsentinels"
     },
-    "rulesSha256": "6cefcaddcc9c7dc68083ce6c4ad54a2113f1471bf860abe53d7541645624670a",
+    "rulesSha256": "d593a9de3ec1954885347265942dddde2cc8032c5a9835a949f3192310242cdf",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1",
-    "outputTreeSha256": "7eae880fb972579cfc2525e225c63f543b5201796f1e06b24549c1a722d44140",
+    "outputTreeSha256": "2bcb2dd601ce64b27db4d3eb790189dd67d8fa8a743f4344ee30c4946c795674",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

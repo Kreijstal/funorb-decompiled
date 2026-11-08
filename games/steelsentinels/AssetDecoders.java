@@ -73,15 +73,15 @@ final class AssetDecoders {
           if (LoginConnectionStage.field_d.position >= param1) {
             return true;
           }
-          if (rb.field_h == null) {
+          if (AngleHelpers.field_h == null) {
             return false;
           }
-          int var2_int = rb.field_h.readUnsignedByte(-119);
+          int var2_int = AngleHelpers.field_h.readUnsignedByte(-119);
           if (var2_int > 0) {
             if (!(var2_int <= -LoginConnectionStage.field_d.position + param1)) {
               var2_int = -LoginConnectionStage.field_d.position + param1;
             }
-            rb.field_h.readFully(LoginConnectionStage.field_d.position, var2_int, LoginConnectionStage.field_d.payload, -256);
+            AngleHelpers.field_h.readFully(LoginConnectionStage.field_d.position, var2_int, LoginConnectionStage.field_d.payload, -256);
             QuickChatPhraseCache.field_b = ClockAndCookieHelpers.monotonicMillis(-100);
             LoginConnectionStage.field_d.position = LoginConnectionStage.field_d.position + var2_int;
             if (LoginConnectionStage.field_d.position < param1) {

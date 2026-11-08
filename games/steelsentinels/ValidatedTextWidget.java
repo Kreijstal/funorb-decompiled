@@ -85,8 +85,8 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         int var6 = 0;
         String var7 = null;
         try {
-          NumberParsingHelpers.field_k[0] = rb.field_g.nextInt();
-          NumberParsingHelpers.field_k[1] = rb.field_g.nextInt();
+          NumberParsingHelpers.field_k[0] = AngleHelpers.field_g.nextInt();
+          NumberParsingHelpers.field_k[1] = AngleHelpers.field_g.nextInt();
           FallingPickup.field_y.position = 0;
           NumberParsingHelpers.field_k[param1] = (int)(TextButton.field_G >> 32);
           NumberParsingHelpers.field_k[3] = (int)TextButton.field_G;

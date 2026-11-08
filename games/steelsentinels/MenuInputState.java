@@ -127,7 +127,7 @@ final class MenuInputState {
           LoginActionHelpers.field_g[20] = LoadingScreenHelpers.field_c;
           LoginActionHelpers.field_g[11] = TutorialStep.field_b;
           LoginActionHelpers.field_g[18] = HighscoreSubmission.field_v;
-          LoginActionHelpers.field_g[7] = rb.field_e;
+          LoginActionHelpers.field_g[7] = AngleHelpers.field_e;
           LoginActionHelpers.field_g[5] = MusicPatchEnvelope.field_f;
           LoginActionHelpers.field_g[16] = SentinelCommandSimulator.field_i;
           LoginActionHelpers.field_g[17] = LoginEncryptionHelpers.field_d;

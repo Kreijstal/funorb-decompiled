@@ -627,7 +627,7 @@ final class MusicPatch extends IntrusiveNode {
                 if (var12.field_dc) {
                   stackIn_164_0 = UsernameCredentials.field_p;
                 } else {
-                  stackIn_164_0 = jh.field_e;
+                  stackIn_164_0 = TrigonometryHelpers.field_e;
                 }
               } else {
                 stackIn_164_0 = NameSuggestionsPanel.field_V;

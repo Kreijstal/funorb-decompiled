@@ -110,7 +110,7 @@ final class ArticulatedPart extends DualNode {
           if (var14 == 0) {
             if (stackIn_5_0 != null &&
               this.instructions[var8].field_u) {
-              var9 = 16 * jh.sine16(8192 * -var7 / 65536, 4096) / 65536;
+              var9 = 16 * TrigonometryHelpers.sine16(8192 * -var7 / 65536, 4096) / 65536;
               var10 = 16 * ScrollContainer.cosine16(8192 * -var7 / 65536, (byte) -74) / 65536;
               var11 = (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
               var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * MusicPatchNode.field_w >> 16);
@@ -151,7 +151,7 @@ final class ArticulatedPart extends DualNode {
           if (var14 == 0) {
             if (this.instructions[var15].field_q != -1 ||
               null != this.instructions[var15].attachedPart) {
-              var10Lifetime1 = jh.sine16(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
+              var10Lifetime1 = TrigonometryHelpers.sine16(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
               var11Lifetime1 = 16 * ScrollContainer.cosine16(-var7 * 8192 / 65536, (byte) -82) / 65536;
               this.instructions[var15].field_k = (((-this.field_G + this.instructions[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.instructions[var15].field_r)) * MusicPatchNode.field_w >> 16) + param2;
               this.instructions[var15].field_l = ((var11Lifetime1 * (this.instructions[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.instructions[var15].field_s)) * MusicPatchNode.field_w >> 16) + param3;
@@ -174,7 +174,7 @@ final class ArticulatedPart extends DualNode {
                   if (UiComponent.field_t < this.instructions[var15].field_l + var8Lifetime1) {
                     UiComponent.field_t = this.instructions[var15].field_l + var8Lifetime1;
                   }
-                  var10Lifetime1Lifetime1 = jh.sine16(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
+                  var10Lifetime1Lifetime1 = TrigonometryHelpers.sine16(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
                   var11Lifetime1Lifetime1 = ScrollContainer.cosine16(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
                 }
               } else {
@@ -480,7 +480,7 @@ final class ArticulatedPart extends DualNode {
             if (var13 == 0) {
               if (stackIn_27_0 != stackIn_9_1 &&
                 this.instructions[var8].field_u) {
-                var9 = jh.sine16(-var7 / 8, 4096) / 256;
+                var9 = TrigonometryHelpers.sine16(-var7 / 8, 4096) / 256;
                 var10 = ScrollContainer.cosine16(-var7 / 8, (byte) -103) / 256;
                 var11 = param3 * (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
                 var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * MusicPatchNode.field_w >> 20) + param2;
@@ -551,7 +551,7 @@ final class ArticulatedPart extends DualNode {
           if (var13 == 0) {
             if (null != this.instructions[var14].attachedPart &&
               !this.instructions[var14].field_u) {
-              var9Lifetime1 = jh.sine16(-var7 / 8, 4096) / 256;
+              var9Lifetime1 = TrigonometryHelpers.sine16(-var7 / 8, 4096) / 256;
               var10Lifetime1 = ScrollContainer.cosine16(-var7 / 8, (byte) -71) / 256;
               var11Lifetime1 = param3 * (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
               var12Lifetime1 = param2 + (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
@@ -677,7 +677,7 @@ final class ArticulatedPart extends DualNode {
         while (var5 < this.instructions.length) {
           if (var10 == 0) {
             if (null != this.instructions[var5].attachedPart) {
-              var6 = 32 * jh.sine16(-this.rotation * 8192 / 65536, 4096) / 65536;
+              var6 = 32 * TrigonometryHelpers.sine16(-this.rotation * 8192 / 65536, 4096) / 65536;
               var7 = ScrollContainer.cosine16(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
               var8 = param1 + ((-this.field_E + this.instructions[var5].field_r) * var6 + var7 * (this.instructions[var5].field_s - this.field_G)) * param2;
               var9 = param3 + (-this.field_E + this.instructions[var5].field_r) * var7 - var6 * (this.instructions[var5].field_s - this.field_G);

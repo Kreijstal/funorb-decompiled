@@ -22,7 +22,7 @@ final class MusicTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        ce var14;
+        PatchNoteUsage var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -94,9 +94,9 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (ce) (this.field_o.get((long)var13, 126));
+                var14 = (PatchNoteUsage) (this.field_o.get((long)var13, 126));
                 if (var14 == null) {
-                  var14 = new ce(new byte[128]);
+                  var14 = new PatchNoteUsage(new byte[128]);
                   this.field_o.put((long)var13, var14, -1816);
                 }
                 var14.field_s[var11Lifetime2] = (byte) 1;

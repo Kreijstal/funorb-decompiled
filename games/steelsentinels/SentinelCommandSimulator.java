@@ -898,7 +898,7 @@ final class SentinelCommandSimulator {
           var15 = 4;
           var14 = 256;
         }
-        var9Lifetime2 = jh.sine16(param3 >> 3, 4096) * 100 >> 16;
+        var9Lifetime2 = TrigonometryHelpers.sine16(param3 >> 3, 4096) * 100 >> 16;
         if (var13 < 1) {
           var13 = 1;
         }
@@ -1193,7 +1193,7 @@ final class SentinelCommandSimulator {
           if (1 > var9) {
             var9 = 1;
           }
-          var5Lifetime2 = jh.sine16(param2.aimAngle >> 3, 4096) * 100 >> 16;
+          var5Lifetime2 = TrigonometryHelpers.sine16(param2.aimAngle >> 3, 4096) * 100 >> 16;
           if (var4_int == 6) {
             var12 = 32;
             var10 = 512;

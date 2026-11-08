@@ -302,7 +302,7 @@ final class MessageMenuHelpers {
           WeightedLruCache.field_q = true;
           var11 = param2;
           if (!param4) {
-            stackIn_4_0 = dg.field_f;
+            stackIn_4_0 = InterfaceTextHelpers.field_f;
           } else {
             stackIn_4_0 = StatSubmission.field_v;
           }

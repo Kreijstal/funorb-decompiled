@@ -255,8 +255,8 @@ final class DiskCacheWorker implements Runnable {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = DisplayNameAndAudioHelpers.field_h;
-                for (var8_int = 0; var8_int < rb.field_i.length; var8_int++) {
-                  rb.field_i[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < AngleHelpers.field_i.length; var8_int++) {
+                  AngleHelpers.field_i[var8_int] = (byte) 0;
                 }
               }
             }
@@ -297,15 +297,15 @@ final class DiskCacheWorker implements Runnable {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = DisplayNameAndAudioHelpers.field_h;
-                for (var8_int = 0; var8_int < rb.field_i.length; var8_int++) {
-                  rb.field_i[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < AngleHelpers.field_i.length; var8_int++) {
+                  AngleHelpers.field_i[var8_int] = (byte) 0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            rb.field_i[var7 / 8] = (byte)DateOfBirthValidator.bitOr((int) rb.field_i[var7 / 8], 1 << var7 % 8);
+            AngleHelpers.field_i[var7 / 8] = (byte)DateOfBirthValidator.bitOr((int) AngleHelpers.field_i[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_65_0 = (!param3) ? 0 : -1;
@@ -327,11 +327,11 @@ final class DiskCacheWorker implements Runnable {
                 } else {
                   if (var6 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; rb.field_i.length > var9; var9++) {
-                        rb.field_i[var9] = (byte) 0;
+                      for (var9 = 0; AngleHelpers.field_i.length > var9; var9++) {
+                        AngleHelpers.field_i[var9] = (byte) 0;
                       }
                     } else {
-                      rb.field_i[var7 / 8] = (byte)TextAndBitHelpers.bitXor((int) rb.field_i[var7 / 8], 1 << ClientUiHelpers.bitAnd(7, var7));
+                      AngleHelpers.field_i[var7 / 8] = (byte)TextAndBitHelpers.bitXor((int) AngleHelpers.field_i[var7 / 8], 1 << ClientUiHelpers.bitAnd(7, var7));
                     }
                   }
                 }
@@ -343,12 +343,12 @@ final class DiskCacheWorker implements Runnable {
                     dupTemp$0 = ChatHistoryAllocator.field_h[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.field_G;
-                    stackIn_97_2 = ((rb.field_i[var9 / 8] & 1 << (var9 & 7)) == 0);
+                    stackIn_97_2 = ((AngleHelpers.field_i[var9 / 8] & 1 << (var9 & 7)) == 0);
                     stackIn_96_0.field_G = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
                   stackIn_99_0 = ChatHistoryAllocator.field_h[1][var7 + 1];
-                  stackIn_99_1 = rb.field_i[var7 / 8];
+                  stackIn_99_1 = AngleHelpers.field_i[var7 / 8];
                   stackIn_99_2 = 1;
                   stackIn_99_3 = var7 & 7;
                   stackIn_102_1 = ((stackIn_99_1 & stackIn_99_2 << stackIn_99_3) != 0);
@@ -648,7 +648,7 @@ final class DiskCacheWorker implements Runnable {
                   !MembershipPromotionScreen.field_k) {
                   var22 = null;
                   if (PacketBuffer.field_u) {
-                    var22 = "</col>" + rb.field_d + "<col=A00000>";
+                    var22 = "</col>" + AngleHelpers.field_d + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;

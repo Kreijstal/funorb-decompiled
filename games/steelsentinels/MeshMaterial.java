@@ -73,7 +73,7 @@ final class MeshMaterial {
             if (param0 > -98) {
               field_d = -13;
             }
-            if (null == rb.field_h &&
+            if (null == AngleHelpers.field_h &&
               !SectorCacheStore.pollGameSocketConnection(127, param4)) {
               stackIn_7_0 = -1;
               return stackIn_7_0;
@@ -231,7 +231,7 @@ final class MeshMaterial {
               stackIn_96_0 = ArrayWidgetContainer.field_N;
               return stackIn_96_0;
             }
-            if (null == rb.field_h) {
+            if (null == AngleHelpers.field_h) {
               if (AlphaContainer.field_T) {
                 if (30000L >= LoadingProgressDialog.millisSinceLastPacketRead(150)) {
                   OptionMaskHelpers.field_e = ValidatedTextWidget.field_mb;

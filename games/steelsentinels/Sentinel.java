@@ -1506,7 +1506,7 @@ final class Sentinel extends IntrusiveNode {
           !this.field_Hb) {
           var11 = this.chassis.findPartByName(0, "Energy Blade");
           this.chassis.updateWorldPositions((byte) -128, this.worldX, this.field_E, this.worldY);
-          var4Lifetime2 = this.field_E * (jh.sine16(var11.rotation - 5000 >> 3, 4096) * 100 >> 16);
+          var4Lifetime2 = this.field_E * (TrigonometryHelpers.sine16(var11.rotation - 5000 >> 3, 4096) * 100 >> 16);
           var5Lifetime2 = 100 * -ScrollContainer.cosine16(var11.rotation - 5000 >> 3, (byte) -119) >> 16;
           var6Lifetime2 = 100;
           var7_ref_qb = ArticulatedPart.createParticle(12, var4Lifetime2 * -500 / var6Lifetime2 + this.velocityX, this.world, 99, var11.field_V + var5Lifetime2 * -700 / var6Lifetime2 - 500 * (this.field_E * var4Lifetime2) / var6Lifetime2, this.field_u, 50, this.velocityY + var5Lifetime2 * -500 / var6Lifetime2, var11.field_T + var4Lifetime2 * -700 / var6Lifetime2 + var5Lifetime2 * (this.field_E * 500) / var6Lifetime2, var11.field_T);
@@ -2511,7 +2511,7 @@ final class Sentinel extends IntrusiveNode {
             param2.componentId == 45) {
             param0.aimAngle = param0.aimAngle + (-64 + (this.world.simulationTick & 127));
           }
-          var18 = 100 * jh.sine16(param0.aimAngle >> 3, 4096) >> 16;
+          var18 = 100 * TrigonometryHelpers.sine16(param0.aimAngle >> 3, 4096) >> 16;
           var19 = -ScrollContainer.cosine16(param0.aimAngle >> 3, (byte) -92) * 100 >> 16;
           if (var18 < 0) {
             this.field_E = -1;
@@ -4066,7 +4066,7 @@ final class Sentinel extends IntrusiveNode {
         }
         SoftwareRaster.fillRectangleBlended(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
         var9 = WeightedLruCache.getIconSprite(this.activeModuleType, (byte) -102);
-        SoftwareRaster.drawRectangleOutlineAlpha(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
+        SoftwareRaster.drawRectangleOutlineAlpha(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + TrigonometryHelpers.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
           var11 = (int[]) null;
           this.applyDesign(82, -14, (int[]) null, -75);

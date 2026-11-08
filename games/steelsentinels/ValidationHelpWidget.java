@@ -1206,9 +1206,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
               if (ThreeSliceButtonPainter.field_v.findAttachedComponentId((byte) 2, SocialRequestHelpers.field_h) != -1) {
                 if (var14_ref != null) {
-                  var14_ref = (String) (var14_ref) + "<br><br>" + dg.field_c;
+                  var14_ref = (String) (var14_ref) + "<br><br>" + InterfaceTextHelpers.field_c;
                 } else {
-                  var14_ref = dg.field_c;
+                  var14_ref = InterfaceTextHelpers.field_c;
                 }
               }
             }
@@ -1365,14 +1365,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               ((BitmapFont) ((Object) var8_ref)).drawCentered(MatchingTextValidator.field_s, var27, 14 + var28 + var29, 1044724, 0);
               var11 = 8192 * var11 / 65536;
               for (var30 = var11; var30 < var12; var30 += 100) {
-                SoftwareRaster.drawLine(var27, var28, var29 * ScrollContainer.cosine16(var30, (byte) -76) / 65536 + var27, var28 + var29 * jh.sine16(var30, 4096) / 65536, 1044724);
-                SoftwareRaster.drawLine(var27, var28 + 1, var27 + ScrollContainer.cosine16(var30, (byte) -82) * var29 / 65536, var29 * jh.sine16(var30, 4096) / 65536 + 1 + var28, 1044724);
+                SoftwareRaster.drawLine(var27, var28, var29 * ScrollContainer.cosine16(var30, (byte) -76) / 65536 + var27, var28 + var29 * TrigonometryHelpers.sine16(var30, 4096) / 65536, 1044724);
+                SoftwareRaster.drawLine(var27, var28 + 1, var27 + ScrollContainer.cosine16(var30, (byte) -82) * var29 / 65536, var29 * TrigonometryHelpers.sine16(var30, 4096) / 65536 + 1 + var28, 1044724);
               }
-              SoftwareRaster.drawLine(var27, var28, ScrollContainer.cosine16(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * jh.sine16(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.drawLine(var27, var28, ScrollContainer.cosine16(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * TrigonometryHelpers.sine16(var12, 4096) / 65536, 1044724);
               if (var10 >= 0) {
                 var21 = var21 + (18 + var29);
               }
-              SoftwareRaster.drawLine(var27, 1 + var28, ScrollContainer.cosine16(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.sine16(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.drawLine(var27, 1 + var28, ScrollContainer.cosine16(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * TrigonometryHelpers.sine16(var12, 4096) / 65536, 1044724);
             }
             if ((RegistrationRequestDialog.field_Ob & 16) != 0) {
               DropTargetWidget.drawIconLabelRows(var21 - 10, var22 + 10, 17, false, var9);

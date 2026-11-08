@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg {
+final class InterfaceTextHelpers {
     static String field_f;
     static String field_e;
     static SceneWidget field_g;

@@ -325,7 +325,7 @@ final class QuickChatHelpDialog extends SceneWidget {
             for (var2 = 0; 8 > var2; var2++) {
               var9[var2] = 0;
             }
-            var10 = ce.field_t;
+            var10 = PatchNoteUsage.field_t;
             var8 = var10;
             var5 = var8;
             var1Lifetime1 = var5;

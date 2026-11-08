@@ -263,7 +263,7 @@ final class GrowableIntList {
     final static void initializeArchiveServices(int param0, int param1, int param2, int param3, SystemTaskService param4, byte param5, int param6, int param7, String param8) {
         try {
           PacketLoopHelpers.field_f = param8;
-          rb.field_f = param2;
+          AngleHelpers.field_f = param2;
           UiComponent.field_B = param3;
           ChatPanelSetupHelpers.field_g = param0;
           ClientGlobals.field_k = param4;

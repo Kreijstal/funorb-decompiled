@@ -97,9 +97,9 @@ final class ClientErrorSupport {
           NanoTickClock.loadIndexedSprite(param0, (byte) 85, "commonui", "dropdown");
           var5 = ArchiveLoadSequence.loadIndexedSpritesByName(45, "commonui", param0, "screen_options");
           UiComponent.field_q = new IndexedSprite[4];
-          ce.field_q = new IndexedSprite[4];
+          PatchNoteUsage.field_q = new IndexedSprite[4];
           PasswordValidator.field_r = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{UiComponent.field_q, ce.field_q, PasswordValidator.field_r};
+          var6 = new IndexedSprite[][]{UiComponent.field_q, PatchNoteUsage.field_q, PasswordValidator.field_r};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

@@ -30,7 +30,7 @@ final class DraggableWidget extends SingleChildContainer {
               ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
             } else {
               if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << SessionSeedHelpers.field_j | BoundedUrlRequest.field_i.field_N)) {
-                ImageProducerRasterBuffer.field_A[12] = dg.field_a;
+                ImageProducerRasterBuffer.field_A[12] = InterfaceTextHelpers.field_a;
               } else {
                 ImageProducerRasterBuffer.field_A[12] = LoadoutCostHelpers.field_d;
               }
@@ -47,7 +47,7 @@ final class DraggableWidget extends SingleChildContainer {
                 if ((BoundedUrlRequest.field_i.field_N | 1 << SessionSeedHelpers.field_j) != -1 + (1 << BoundedUrlRequest.field_i.world.playerCount)) {
                   ImageProducerRasterBuffer.field_A[12] = LoginResultHelpers.field_i;
                 } else {
-                  ImageProducerRasterBuffer.field_A[12] = jh.field_g;
+                  ImageProducerRasterBuffer.field_A[12] = TrigonometryHelpers.field_g;
                 }
               }
             }
@@ -59,7 +59,7 @@ final class DraggableWidget extends SingleChildContainer {
                 ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
               } else {
                 if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << SessionSeedHelpers.field_j | BoundedUrlRequest.field_i.field_N)) {
-                  ImageProducerRasterBuffer.field_A[12] = dg.field_a;
+                  ImageProducerRasterBuffer.field_A[12] = InterfaceTextHelpers.field_a;
                 } else {
                   ImageProducerRasterBuffer.field_A[12] = LoadoutCostHelpers.field_d;
                 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends IntrusiveNode {
+final class PatchNoteUsage extends IntrusiveNode {
     static int[] field_t;
     static SceneWidget field_o;
     static int field_r;
@@ -12,7 +12,7 @@ final class ce extends IntrusiveNode {
     static String field_u;
     static RgbSprite field_p;
 
-    ce(byte[] param0) {
+    PatchNoteUsage(byte[] param0) {
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {

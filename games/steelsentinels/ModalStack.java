@@ -82,7 +82,7 @@ final class ModalStack extends SingleChildContainer {
         try {
           var15 = param5.getText(2134230754);
           var8 = param6.getText(2134230754);
-          if (rb.field_h == null &&
+          if (AngleHelpers.field_h == null &&
             !SectorCacheStore.pollGameSocketConnection(119, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -92,8 +92,8 @@ final class ModalStack extends SingleChildContainer {
             TextHotspotWidget.field_bb = null;
             if (param0 == null) {
               FallingPickup.field_y.position = 0;
-              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
-              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, AngleHelpers.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, AngleHelpers.field_g.nextInt());
               stackIn_16_0 = FallingPickup.field_y;
               stackIn_16_1 = 13588;
               if (!param5.isFlagged((byte) 51)) {
@@ -121,8 +121,8 @@ final class ModalStack extends SingleChildContainer {
               if (param1) {
                 var9 = var9 | 1;
               }
-              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
-              FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, AngleHelpers.field_g.nextInt());
+              FallingPickup.field_y.writeInt(true, AngleHelpers.field_g.nextInt());
               FallingPickup.field_y.writePrefixedString(13588, var15);
               FallingPickup.field_y.writePrefixedString(13588, var8);
               var17 = (CharSequence) ((Object) param0);
@@ -208,7 +208,7 @@ final class ModalStack extends SingleChildContainer {
             stackIn_54_0 = ArrayWidgetContainer.field_N;
             return stackIn_54_0;
           }
-          if (null == rb.field_h) {
+          if (null == AngleHelpers.field_h) {
             if (AlphaContainer.field_T) {
               if (LoadingProgressDialog.millisSinceLastPacketRead(150) <= 30000L) {
                 OptionMaskHelpers.field_e = ValidatedTextWidget.field_mb;

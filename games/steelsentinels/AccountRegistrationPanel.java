@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_Y, 170, WeightedLruCache.field_i, var3, 126);
         var3 = var3 + (5 + this.addFieldWithHelp(var3, true, GrowableIntList.field_m, this.field_jb, "", 20, 170));
-        var3 = var3 + this.addLabeledField(this.field_hb, 170, jh.field_c, var3, 126);
+        var3 = var3 + this.addLabeledField(this.field_hb, 170, TrigonometryHelpers.field_c, var3, 126);
         var3 = var3 + (this.addFieldWithHelpDefaultWidth(ParticleEffect.field_N, 170, GrowableIntList.field_b, 12973, this.field_Q, var3) + 5);
         var3 = var3 + (5 + this.addFieldWithHelpDefaultWidth(LinkButtonPainter.field_b, 170, StatSubmission.field_s, 12973, this.field_cb, var3));
         var3 = var3 + this.addFieldWithIndicator(var3, false, CombatWorld.field_L, this.field_eb, 170);

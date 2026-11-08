@@ -48,7 +48,7 @@ final class IconTextComponent extends SceneWidget {
             if (2 == DualNodeDequeIterator.field_d) {
               LoginEncryptionHelpers.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), ClientGlobals.field_k);
               var2 = new PacketBuffer(13);
-              SpriteCheckboxPainter.writeServiceHeader(var2, 12, EditableTextWidget.field_ib, rb.field_f, MenuLayoutHelpers.field_a);
+              SpriteCheckboxPainter.writeServiceHeader(var2, 12, EditableTextWidget.field_ib, AngleHelpers.field_f, MenuLayoutHelpers.field_a);
               var2.writeByte((byte) 120, 15);
               var2.writeInt(true, ChatPanelSetupHelpers.field_g);
               LoginEncryptionHelpers.field_c.write(13, var2.payload, -100, 0);

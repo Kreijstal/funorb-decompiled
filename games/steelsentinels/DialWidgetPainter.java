@@ -69,7 +69,7 @@ final class DialWidgetPainter implements WidgetPainter {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte((byte) 113, 2);
-        var2.writeBytes(rb.field_i.length, (byte) -122, 0, rb.field_i);
+        var2.writeBytes(AngleHelpers.field_i.length, (byte) -122, 0, AngleHelpers.field_i);
         var2.writeByte((byte) 125, CachedArchiveProvider.field_l);
         var2.writeByte((byte) 110, GameplayController.field_L);
         var2.writeBytes(ImageProducerRasterBuffer.field_s.length, (byte) -122, 0, ImageProducerRasterBuffer.field_s);

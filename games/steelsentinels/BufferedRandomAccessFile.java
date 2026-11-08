@@ -1184,9 +1184,9 @@ final class BufferedRandomAccessFile {
             ThreeSliceButtonPainter.field_s.field_Ib = 17;
             var9 = new SceneWidget("", var7);
             var9.field_I = KeyRoutingHelpers.field_b;
-            dg.field_g = new SceneWidget("", var7);
-            dg.field_g.field_I = MembershipPromotionScreen.field_p;
-            dg.field_g.field_Ab = ResourceArchive.field_b;
+            InterfaceTextHelpers.field_g = new SceneWidget("", var7);
+            InterfaceTextHelpers.field_g.field_I = MembershipPromotionScreen.field_p;
+            InterfaceTextHelpers.field_g.field_Ab = ResourceArchive.field_b;
             var10 = new SceneWidget("", var7);
             var10.field_Ab = Js5ArchiveManager.field_c;
             var10.field_nb = 16777215;

@@ -51,7 +51,7 @@ final class NotificationMessage extends IntrusiveNode {
               for (var4 = 0; var4 < 8; var4++) {
                 var6[var4] = DateOfBirthValidator.bitOr(var6[var4], var13[var4]);
               }
-              var8 = ce.field_t;
+              var8 = PatchNoteUsage.field_t;
               var14 = TickClock.field_i.field_s;
               var10 = 0;
               var4Lifetime1 = var10;

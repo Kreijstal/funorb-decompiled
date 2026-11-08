@@ -85,7 +85,7 @@ final class SentinelAnimationEditor {
           this.field_t = TextSpriteHelpers.field_e;
         }
         if (NameAvailabilityValidator.field_q == 20) {
-          this.field_t = jh.field_d;
+          this.field_t = TrigonometryHelpers.field_d;
           this.field_b = 17;
           this.field_f = -1;
         }
@@ -125,7 +125,7 @@ final class SentinelAnimationEditor {
           this.field_p = NodeHashTable.field_e;
         }
         if (NameAvailabilityValidator.field_q == 51) {
-          this.field_p = rb.field_j;
+          this.field_p = AngleHelpers.field_j;
         }
         if (NameAvailabilityValidator.field_q == 41) {
           var2Lifetime1 = SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n);
@@ -160,7 +160,7 @@ final class SentinelAnimationEditor {
             this.field_b < 14) {
             this.field_b = 14;
           }
-          if (jh.field_d == this.field_t &&
+          if (TrigonometryHelpers.field_d == this.field_t &&
             this.field_b < 17) {
             this.field_b = this.field_b + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
           }
@@ -183,7 +183,7 @@ final class SentinelAnimationEditor {
             this.field_b > 16) {
             this.field_b = 16;
           }
-          if (this.field_t == jh.field_d &&
+          if (this.field_t == TrigonometryHelpers.field_d &&
             this.field_b >= ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] + 17) {
             this.field_b = this.field_b - ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
           }
@@ -196,7 +196,7 @@ final class SentinelAnimationEditor {
                 dupTemp$0[4] = dupTemp$0[4] - 1;
               }
             } else {
-              if (this.field_t == jh.field_d &&
+              if (this.field_t == TrigonometryHelpers.field_d &&
                 ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] > 3) {
                 dupTemp$1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$1[7] = dupTemp$1[7] - 1;
@@ -222,7 +222,7 @@ final class SentinelAnimationEditor {
                 dupTemp$4[4] = dupTemp$4[4] + 1;
               }
             } else {
-              if (this.field_t == jh.field_d &&
+              if (this.field_t == TrigonometryHelpers.field_d &&
                 ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] < 8) {
                 dupTemp$5 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$5[7] = dupTemp$5[7] + 1;
@@ -248,7 +248,7 @@ final class SentinelAnimationEditor {
             }
           } else {
             if (this.field_t != SettingSearchHelpers.field_g) {
-              if (jh.field_d == this.field_t) {
+              if (TrigonometryHelpers.field_d == this.field_t) {
                 if (!SoundAndUrlHelpers.field_e[81]) {
                   if (1 < ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5]) {
                     dupTemp$8 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
@@ -277,7 +277,7 @@ final class SentinelAnimationEditor {
                 dupTemp$11[2] = dupTemp$11[2] + 1;
               }
             } else {
-              if (jh.field_d == this.field_t) {
+              if (TrigonometryHelpers.field_d == this.field_t) {
                 if (!SoundAndUrlHelpers.field_e[81]) {
                   if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5] < 256) {
                     dupTemp$12 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
@@ -337,7 +337,7 @@ final class SentinelAnimationEditor {
             this.field_l.field_Pb = 0;
             this.field_l.field_U = 1;
             if (this.field_p != IconLookupHelpers.field_i) {
-              if (this.field_p == rb.field_j) {
+              if (this.field_p == AngleHelpers.field_j) {
                 this.field_l.field_mb = 0;
                 this.field_e = 0;
               } else {
@@ -354,7 +354,7 @@ final class SentinelAnimationEditor {
           } else {
             if (SettingSearchHelpers.field_g != this.field_t) {
               if (this.field_t != TextSpriteHelpers.field_e) {
-                if (this.field_t == jh.field_d) {
+                if (this.field_t == TrigonometryHelpers.field_d) {
                   this.field_l.field_Lb = false;
                   this.field_l.field_Pb = 25;
                   this.field_l.field_oc = 0;
@@ -362,7 +362,7 @@ final class SentinelAnimationEditor {
                   if (IconLookupHelpers.field_i == this.field_p) {
                     this.field_e = 0;
                   } else {
-                    if (this.field_p == rb.field_j) {
+                    if (this.field_p == AngleHelpers.field_j) {
                       this.field_l.field_mb = 0;
                       this.field_e = 0;
                     } else {
@@ -583,7 +583,7 @@ final class SentinelAnimationEditor {
           }
           var2Lifetime1 = 160;
           var3Lifetime1 = 380;
-          if (this.field_t == jh.field_d) {
+          if (this.field_t == TrigonometryHelpers.field_d) {
             for (var5 = 0; var5 < 64; var5++) {
               SoftwareRaster.drawLine(var2Lifetime1 - (64 - (1 & var5)), var3Lifetime1 - (-64 - var5 / 2), (1 & var5) + 128 + var2Lifetime1, var5 / 2 + (-128 + var3Lifetime1), 3351057);
             }
@@ -606,7 +606,7 @@ final class SentinelAnimationEditor {
             SoftwareRaster.fillCircleBlended(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
             SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * var5Lifetime1 * (this.field_b - (var7_intLifetime1 + 1)) / var6Lifetime1 - this.field_g * (var7_intLifetime1 * var5Lifetime1) / (var6Lifetime1 * 2), 7 + var3Lifetime1, 7, 16711680, 128);
           } else {
-            if (jh.field_d != this.field_t) {
+            if (TrigonometryHelpers.field_d != this.field_t) {
               SoftwareRaster.fillCircle(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             } else {
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
@@ -625,7 +625,7 @@ final class SentinelAnimationEditor {
           }
           Js5NetworkRequest.field_J[this.field_b].drawScaled(var2Lifetime1 - 128, -256 + var3Lifetime1, 256, 256);
           var2Lifetime1 += 320;
-          if (this.field_t == jh.field_d) {
+          if (this.field_t == TrigonometryHelpers.field_d) {
             for (var7_intLifetime2 = 0; var7_intLifetime2 < 64; var7_intLifetime2++) {
               SoftwareRaster.drawLine((1 & var7_intLifetime2) + (var2Lifetime1 - 64), 64 + (var3Lifetime1 + var7_intLifetime2 / 2), 128 + (var2Lifetime1 + (1 & var7_intLifetime2)), var3Lifetime1 + (-128 + var7_intLifetime2 / 2), 3351057);
             }
@@ -654,7 +654,7 @@ final class SentinelAnimationEditor {
             }
             SoftwareRaster.resetClip();
           } else {
-            if (this.field_t == jh.field_d) {
+            if (this.field_t == TrigonometryHelpers.field_d) {
               SoftwareRaster.setClip(-128 + var2Lifetime1, 130, var2Lifetime1 + 128, var3Lifetime1);
               if (0 > this.field_w ||
                 !(this.field_w < this.field_l.animatedParts.length)) {
@@ -718,7 +718,7 @@ final class SentinelAnimationEditor {
           }
           var19 = var7Lifetime13 + "4 - Edit air anim</col><br>";
           var7Lifetime14 = var19;
-          if (this.field_t == jh.field_d) {
+          if (this.field_t == TrigonometryHelpers.field_d) {
             var7Lifetime14 = var19 + "<col=ffffff>";
           }
           var20 = var7Lifetime14 + "5 - Edit climb anim</col><br>";
@@ -735,7 +735,7 @@ final class SentinelAnimationEditor {
             var26 = var25 + "Frame = " + (1 + (this.field_b - 9)) + " of " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4] + " (arrow keys to change, + and - to change max frame no)<br>";
             var7Lifetime15 = var26 + "Jump Animation Time = " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] / 50 + "." + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] / 5 % 10 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] * 2 % 10 + " secs (<lt> and <gt> to change)<br>";
           }
-          if (jh.field_d == this.field_t) {
+          if (TrigonometryHelpers.field_d == this.field_t) {
             var27 = var7Lifetime15 + "S - show treadmill animation<br>M - show moving animation<br>F - show still frame<br>";
             var28 = var27 + "Speed = " + var5Lifetime1 + " (<lt> and <gt> to change)<br>";
             var29 = var28 + "Frame = " + (1 + (this.field_b - 17)) + " of " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] + " (arrow keys to change, + and - to change max frame no)<br>";

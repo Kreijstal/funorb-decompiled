@@ -105,7 +105,7 @@ final class DualNodeHashTable {
           var1_int = SingleChildContainer.field_Q;
           var2 = 0;
           if (SocialPacketHelpers.field_a == 2) {
-            var3_long = -rb.field_c + ClockAndCookieHelpers.monotonicMillis(117);
+            var3_long = -AngleHelpers.field_c + ClockAndCookieHelpers.monotonicMillis(117);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

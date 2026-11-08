@@ -275,13 +275,13 @@ final class TabbedPanel extends SceneWidget {
           }
           if (1 + param3 <= QuickChatParameterType.field_f[param0]) {
             if (param0 == 1) {
-              if (param2 < jh.field_a[param3]) {
-                jh.field_a[param3] = param2;
+              if (param2 < TrigonometryHelpers.field_a[param3]) {
+                TrigonometryHelpers.field_a[param3] = param2;
               }
             } else {
               if (param0 == 2 &&
-                param2 < jh.field_a[10 + param3]) {
-                jh.field_a[param3 + 10] = param2;
+                param2 < TrigonometryHelpers.field_a[10 + param3]) {
+                TrigonometryHelpers.field_a[param3 + 10] = param2;
               }
             }
           } else {
@@ -305,10 +305,10 @@ final class TabbedPanel extends SceneWidget {
               ClientGlobals.field_a = DualNodeDeque.field_b;
             }
             if (1 == param0) {
-              jh.field_a[param3] = param2;
+              TrigonometryHelpers.field_a[param3] = param2;
             }
             if (param0 == 2) {
-              jh.field_a[param3 + 10] = param2;
+              TrigonometryHelpers.field_a[param3 + 10] = param2;
             }
           }
           if (!ByteArrayPoolHelpers.isAccountCreationMode(85)) {

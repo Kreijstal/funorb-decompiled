@@ -112,25 +112,25 @@ final class PendingByteArrayRequest extends IntrusiveNode {
             }
           }
           if (param0) {
-            jh.field_i.updatePointer(param1 - 145, NameAvailabilityValidator.hitTestPairedSprites(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true), NameAvailabilityValidator.hitTestPairedSprites(BufferedRandomAccessFile.field_j, TextButton.field_S, true));
-            if (jh.field_i.isForwardAction(param1 ^ 269)) {
-              if (0 == jh.field_i.field_e) {
+            TrigonometryHelpers.field_i.updatePointer(param1 - 145, NameAvailabilityValidator.hitTestPairedSprites(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true), NameAvailabilityValidator.hitTestPairedSprites(BufferedRandomAccessFile.field_j, TextButton.field_S, true));
+            if (TrigonometryHelpers.field_i.isForwardAction(param1 ^ 269)) {
+              if (0 == TrigonometryHelpers.field_i.field_e) {
                 stackIn_59_0 = 3;
                 return stackIn_59_0;
               }
-              if (jh.field_i.field_e == 1) {
+              if (TrigonometryHelpers.field_i.field_e == 1) {
                 stackIn_62_0 = 2;
                 return stackIn_62_0;
               }
             }
             while (UiContainer.pollKeyEvent(22759)) {
-              jh.field_i.handleHorizontalKey(true, 0);
-              if (jh.field_i.isForwardAction(0)) {
-                if (0 == jh.field_i.field_e) {
+              TrigonometryHelpers.field_i.handleHorizontalKey(true, 0);
+              if (TrigonometryHelpers.field_i.isForwardAction(0)) {
+                if (0 == TrigonometryHelpers.field_i.field_e) {
                   stackIn_68_0 = 3;
                   return stackIn_68_0;
                 }
-                if (1 == jh.field_i.field_e) {
+                if (1 == TrigonometryHelpers.field_i.field_e) {
                   stackIn_71_0 = 1;
                   return stackIn_71_0;
                 }

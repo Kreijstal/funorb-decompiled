@@ -157,7 +157,7 @@ final class LoginResultHelpers {
               ProxySocketConnector.field_j[var5] = TextButton.field_J[var5];
             }
             ProxySocketConnector.field_j[-3 + var4] = "";
-            ProxySocketConnector.field_j[-2 + var4] = dg.field_f;
+            ProxySocketConnector.field_j[-2 + var4] = InterfaceTextHelpers.field_f;
             LinkButtonPainter.field_m[var4 - 2] = 0;
             MessageMenuHelpers.field_b[0] = 4;
             ProxySocketConnector.field_j[-1 + var4] = EditableTextWidget.field_cb;
@@ -323,7 +323,7 @@ final class LoginResultHelpers {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_45_2;
             }
-            rb.field_c = ClockAndCookieHelpers.monotonicMillis(76);
+            AngleHelpers.field_c = ClockAndCookieHelpers.monotonicMillis(76);
           }
           DualNodeDeque.field_f.field_m = MessageMenuHelpers.field_b.length;
           var3_intLifetime1 = 0;
@@ -355,7 +355,7 @@ final class LoginResultHelpers {
               }
             }
           }
-          ce.field_r = -(var3_intLifetime1 >> 1) + (QuickChatMenu.field_kc + var3_intLifetime1);
+          PatchNoteUsage.field_r = -(var3_intLifetime1 >> 1) + (QuickChatMenu.field_kc + var3_intLifetime1);
           TickClock.field_d = (SectorCacheStore.field_j + MembershipPromotionScreen.field_m << 1) * DualNodeDeque.field_f.field_m;
           MusicPatchPcmStream.field_D = QuickChatMenu.field_kc - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; ProxySocketConnector.field_j.length > var4Lifetime2; var4Lifetime2++) {

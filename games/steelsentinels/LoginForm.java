@@ -281,7 +281,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, -100);
           this.field_z = this.field_z + (5 + ((UiComponent) ((Object) var12)).field_E);
-          dupTemp$1 = new LabeledField(10, this.field_z, this.field_x - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, jh.field_c);
+          dupTemp$1 = new LabeledField(10, this.field_z, this.field_x - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, TrigonometryHelpers.field_c);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, -120);
           this.field_bb.field_A = (UiListener) (this);
@@ -581,7 +581,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var5Lifetime1 = EmailAvailabilityValidator.field_s[11] >> 8;
           var6Lifetime1 = DateOfBirthValidator.field_h << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = jh.sine16(var6Lifetime1, 4096) >> 8;
+          var8Lifetime1 = TrigonometryHelpers.sine16(var6Lifetime1, 4096) >> 8;
           var9Lifetime1 = ScrollContainer.cosine16(var6Lifetime1, (byte) -84) >> 8;
           if (-1 != LobbySetupHelpers.field_f &&
             DelegatingCanvas.field_c != -1) {
@@ -629,9 +629,9 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
 
     final static void closeConnection(int param0) {
         int var1 = -116 / ((33 - param0) / 34);
-        if (null != rb.field_h) {
-          rb.field_h.close(12110);
-          rb.field_h = null;
+        if (null != AngleHelpers.field_h) {
+          AngleHelpers.field_h.close(12110);
+          AngleHelpers.field_h = null;
         }
     }
 

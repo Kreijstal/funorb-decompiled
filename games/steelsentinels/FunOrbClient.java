@@ -164,7 +164,7 @@ abstract class FunOrbClient extends GameApplet {
 
     private final void enablePacketFive(byte param0) {
         int var2 = -57 / ((param0 - 47) / 53);
-        dg.field_h[5] = true;
+        InterfaceTextHelpers.field_h[5] = true;
     }
 
     private final void readAppletParameters(int param0, String param1, int param2, int param3, int param4) {
@@ -313,16 +313,16 @@ abstract class FunOrbClient extends GameApplet {
         if (param0 >= -86) {
           return;
         }
-        dg.field_h[4] = true;
+        InterfaceTextHelpers.field_h[4] = true;
     }
 
     private final void enablePacketsElevenToThirteen(boolean param0) {
-        dg.field_h[12] = true;
-        dg.field_h[11] = true;
+        InterfaceTextHelpers.field_h[12] = true;
+        InterfaceTextHelpers.field_h[11] = true;
         if (param0) {
           return;
         }
-        dg.field_h[13] = true;
+        InterfaceTextHelpers.field_h[13] = true;
     }
 
     final void startWithDefaultSize(int param0, int param1, String param2) {
@@ -365,7 +365,7 @@ abstract class FunOrbClient extends GameApplet {
         if (param0 != -17573) {
           this.field_q = 102;
         }
-        dg.field_h[2] = true;
+        InterfaceTextHelpers.field_h[2] = true;
     }
 
     final void updateLoginFlow(int param0) {
@@ -394,7 +394,7 @@ abstract class FunOrbClient extends GameApplet {
         if (param0 != -17) {
           this.field_E = false;
         }
-        dg.field_h[1] = true;
+        InterfaceTextHelpers.field_h[1] = true;
     }
 
     private final void handleOpenUrlPacket(int param0) {
@@ -652,7 +652,7 @@ abstract class FunOrbClient extends GameApplet {
           this.recreateCanvas(false);
           HighscoreColumnHeader.attachCanvasInput((byte) -93, ArchiveLoadStep.field_n);
         }
-        if (dg.field_h[8]) {
+        if (InterfaceTextHelpers.field_h[8]) {
           LoadingStatusHelpers.sendReflectionCheckReplies((byte) -110);
         }
     }
@@ -677,7 +677,7 @@ abstract class FunOrbClient extends GameApplet {
         }
         var2 = ArrayWidgetContainer.field_N;
         if (var2 < 64 &&
-          dg.field_h[var2]) {
+          InterfaceTextHelpers.field_h[var2]) {
           if (0 == var2) {
             return;
           }
@@ -746,7 +746,7 @@ abstract class FunOrbClient extends GameApplet {
     }
 
     private final void enablePacketSix(int param0) {
-        dg.field_h[6] = true;
+        InterfaceTextHelpers.field_h[6] = true;
         if (param0 <= 11) {
           String var3 = (String) null;
           this.readAppletParameters(12, (String) null, -17, -112, 117);
@@ -754,13 +754,13 @@ abstract class FunOrbClient extends GameApplet {
     }
 
     private final void configureCommonPacketHandlers(boolean param0, boolean param1) {
-        dg.field_h[3] = true;
-        dg.field_h[8] = param1;
-        dg.field_h[7] = true;
-        dg.field_h[16] = true;
-        dg.field_h[18] = true;
-        dg.field_h[0] = param0;
-        dg.field_h[17] = true;
+        InterfaceTextHelpers.field_h[3] = true;
+        InterfaceTextHelpers.field_h[8] = param1;
+        InterfaceTextHelpers.field_h[7] = true;
+        InterfaceTextHelpers.field_h[16] = true;
+        InterfaceTextHelpers.field_h[18] = true;
+        InterfaceTextHelpers.field_h[0] = param0;
+        InterfaceTextHelpers.field_h[17] = true;
     }
 
     protected FunOrbClient() {

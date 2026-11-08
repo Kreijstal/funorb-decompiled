@@ -830,7 +830,7 @@ final class MidiPcmStream extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        ce var8 = null;
+        PatchNoteUsage var8 = null;
         int var9 = 0;
         MusicPatch var10 = null;
         int var11 = 0;
@@ -845,7 +845,7 @@ final class MidiPcmStream extends PcmStream {
           if (param2 != 21687) {
             this.dispatchDueMidiMessages(-35);
           }
-          var8 = (ce) (param1.field_o.first(0));
+          var8 = (PatchNoteUsage) (param1.field_o.first(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8))) {
             var9 = (int)var8.key;
@@ -866,7 +866,7 @@ final class MidiPcmStream extends PcmStream {
                 (!var10.prepareSamples(var8.field_s, param2 - 34109, param3, (int[]) (var7)))) {
                 var6_int = 0;
               }
-              var8 = (ce) (param1.field_o.next((byte) 94));
+              var8 = (PatchNoteUsage) (param1.field_o.next((byte) 94));
               continue;
             }
             break;
@@ -1374,10 +1374,10 @@ final class MidiPcmStream extends PcmStream {
                 var12 = 0;
                 if (var7.field_Vb != null &&
                   !var7.field_Vb.equals("")) {
-                  var7.field_cc.field_Pb = ce.field_p;
+                  var7.field_cc.field_Pb = PatchNoteUsage.field_p;
                   var7.field_cc.field_rb = var11;
                   var12 = 1;
-                  var7.field_cc.setBounds(0, var9, SocketConnector.field_b, 0, 3 + ce.field_p.field_z);
+                  var7.field_cc.setBounds(0, var9, SocketConnector.field_b, 0, 3 + PatchNoteUsage.field_p.field_z);
                 }
                 var7.field_ec.field_rb = var11;
                 var7.field_Ub.field_rb = var11;
@@ -1390,7 +1390,7 @@ final class MidiPcmStream extends PcmStream {
                 var13 = 0;
                 var14 = -82 + var7.field_zb;
                 if (var12 != 0) {
-                  var13 = ce.field_p.field_z + 3;
+                  var13 = PatchNoteUsage.field_p.field_z + 3;
                   var14 = var14 - var13;
                 }
                 stackIn_37_0 = var7.field_Ub;
@@ -1435,7 +1435,7 @@ final class MidiPcmStream extends PcmStream {
                       var17.field_j.addItem(2, 8, var18);
                     }
                     var17Lifetime1 = AudioService.field_i;
-                    var18Lifetime1 = SocketConnector.formatTemplate(dg.field_b, -96, new String[]{var16});
+                    var18Lifetime1 = SocketConnector.formatTemplate(InterfaceTextHelpers.field_b, -96, new String[]{var16});
                     var17Lifetime1.field_j.addItem(2, 18, var18Lifetime1);
                   }
                 } else {

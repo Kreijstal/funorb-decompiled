@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh {
+final class TrigonometryHelpers {
     static MenuInputState field_i;
     static String field_c;
     static int field_d;
@@ -30,7 +30,7 @@ final class jh {
         field_a = null;
         field_b = null;
         if (param0 != 30706) {
-          jh.releaseStatics(49);
+          TrigonometryHelpers.releaseStatics(49);
         }
     }
 

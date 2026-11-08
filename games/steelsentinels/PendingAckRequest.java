@@ -105,7 +105,7 @@ final class PendingAckRequest extends IntrusiveNode {
     final static boolean isConnected(byte param0) {
         if (param0 != -14) {
           field_r = (String[]) null;
-          if (rb.field_h == null) {
+          if (AngleHelpers.field_h == null) {
             return false;
           }
           if (field_v.isResponseStage(122)) {
@@ -113,7 +113,7 @@ final class PendingAckRequest extends IntrusiveNode {
           }
           return false;
         }
-        if (rb.field_h == null) {
+        if (AngleHelpers.field_h == null) {
           return false;
         }
         if (field_v.isResponseStage(122)) {

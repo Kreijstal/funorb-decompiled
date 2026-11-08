@@ -2469,7 +2469,7 @@ public final class SteelSentinels extends FunOrbClient {
                   var5++;
                 }
                 if (NameValidationHelpers.field_h) {
-                  var3_ref = ce.field_t;
+                  var3_ref = PatchNoteUsage.field_t;
                   var4_ref = var2;
                   var5 = 0;
                   while (var5 < 8) {
@@ -2526,8 +2526,8 @@ public final class SteelSentinels extends FunOrbClient {
                 }
                 var2_int = 0;
                 while (true) {
-                  if (jh.field_a.length > var2_int) {
-                    jh.field_a[var2_int] = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
+                  if (TrigonometryHelpers.field_a.length > var2_int) {
+                    TrigonometryHelpers.field_a[var2_int] = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
                     var2_int++;
                     continue;
                   }
@@ -2948,7 +2948,7 @@ public final class SteelSentinels extends FunOrbClient {
           NodeIterator.releaseStatics(5370);
           BitmapFont.releaseStatics();
           RequestResendHelpers.releaseStatics(-119);
-          jh.releaseStatics(30706);
+          TrigonometryHelpers.releaseStatics(30706);
           QuickChatInputHelpers.releaseStatics(false);
           SentinelCommand.releaseStatics((byte) -110);
           Projectile.releaseStatics(31554);
@@ -2985,7 +2985,7 @@ public final class SteelSentinels extends FunOrbClient {
           ReflectionCheckHelpers.releaseStatics(-1);
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
-          dg.releaseStatics((byte) -84);
+          InterfaceTextHelpers.releaseStatics((byte) -84);
           LoginStateQueries.releaseStatics(0);
           HighscoreSubmissionFactory.releaseStatics(true);
           Sprite.releaseStatics((byte) 66);
@@ -3006,7 +3006,7 @@ public final class SteelSentinels extends FunOrbClient {
           SpriteFrame.releaseStatics(124);
           EmailValidationHelpers.releaseStatics(-1);
           GeneratedSpriteHelpers.releaseStatics(-111);
-          rb.releaseStatics((byte) -82);
+          AngleHelpers.releaseStatics((byte) -82);
           LoadingScreenHelpers.releaseStatics(true);
           TextAndMenuHelpers.releaseStatics((byte) -105);
           BirthDateEntryPanel.releaseStatics(true);
@@ -3077,7 +3077,7 @@ public final class SteelSentinels extends FunOrbClient {
           DisplayMode.releaseStatics(-13);
           LoginHandshakeHelpers.releaseStatics((byte) -96);
           SynthInstrument.releaseStatics();
-          ce.releaseStatics((byte) 77);
+          PatchNoteUsage.releaseStatics((byte) 77);
           SentinelCommandSimulator.releaseStatics((byte) -98);
           Explosion.releaseStatics(-2107133436);
           WhirlpoolHasher.releaseStatics((byte) 121);

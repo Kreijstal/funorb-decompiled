@@ -9,7 +9,7 @@ final class MenuLayoutHelpers {
 
     final static int getPopupMenuWidth(int param0) {
         int var1 = 124 % ((param0 - 17) / 56);
-        return ce.field_r - MusicPatchPcmStream.field_D;
+        return PatchNoteUsage.field_r - MusicPatchPcmStream.field_D;
     }
 
     final static void drawTitleBar(int param0, int param1, int param2, int param3, int param4) {
@@ -46,7 +46,7 @@ final class MenuLayoutHelpers {
             var5 = (DirectByteStorage.field_j - 1) * 10;
             for (var6 = 0; var6 < QuickChatParameterType.field_f[DirectByteStorage.field_j]; var6++) {
               if (~QuickChatHelpDialog.field_Ub != ~var6) {
-                var4 = var4 + jh.field_a[var6 + var5];
+                var4 = var4 + TrigonometryHelpers.field_a[var6 + var5];
               }
             }
             LabeledField.field_V = var4;
@@ -78,7 +78,7 @@ final class MenuLayoutHelpers {
           }
           if (param2) {
             if (!ChatPanelHelpers.areBaseAssetsLoaded(-78)) {
-              ClientGlobals.field_a = dg.field_e;
+              ClientGlobals.field_a = InterfaceTextHelpers.field_e;
             } else {
               var4Lifetime1 = param1 ? 1 : 0;
               IterableNodeHashTable.switchScreen(-3, var4Lifetime1 != 0, -1, 0);

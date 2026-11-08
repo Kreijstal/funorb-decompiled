@@ -740,17 +740,17 @@ final class ResourceArchive {
             return 4096;
           }
           if (deltaY < 0) {
-            return rb.firstQuadrantAngle8192(-deltaX, 2048, -deltaY) - 4096;
+            return AngleHelpers.firstQuadrantAngle8192(-deltaX, 2048, -deltaY) - 4096;
           }
-          return 4096 - rb.firstQuadrantAngle8192(-deltaX, 2048, deltaY);
+          return 4096 - AngleHelpers.firstQuadrantAngle8192(-deltaX, 2048, deltaY);
         }
         if (0 == deltaY) {
           return 0;
         }
         if (deltaY < 0) {
-          return -rb.firstQuadrantAngle8192(deltaX, 2048, -deltaY);
+          return -AngleHelpers.firstQuadrantAngle8192(deltaX, 2048, -deltaY);
         }
-        return rb.firstQuadrantAngle8192(deltaX, 2048, deltaY);
+        return AngleHelpers.firstQuadrantAngle8192(deltaX, 2048, deltaY);
     }
 
     final byte[] getFile(int groupId, byte obfuscationGuard, int fileId) {

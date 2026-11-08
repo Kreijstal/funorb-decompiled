@@ -375,7 +375,7 @@ final class BufferedSocket implements Runnable {
           NanoTickClock.field_v = param1;
           UrlAndReplyHelpers.field_a = param6.length;
           LoadoutHelpers.field_f = false;
-          rb.field_i = new byte[(NanoTickClock.field_v + 7) / 8];
+          AngleHelpers.field_i = new byte[(NanoTickClock.field_v + 7) / 8];
           LoginEncryptionHelpers.field_b = null;
           ByteArrayPoolHelpers.field_a = null;
           var10_int = 0;

@@ -367,8 +367,8 @@ final class SocialPacketHelpers {
             return;
           }
           LoadoutHelpers.field_f = true;
-          for (var3Lifetime2 = 0; var3Lifetime2 < rb.field_i.length; var3Lifetime2++) {
-            rb.field_i[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
+          for (var3Lifetime2 = 0; var3Lifetime2 < AngleHelpers.field_i.length; var3Lifetime2++) {
+            AngleHelpers.field_i[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
           }
           CachedArchiveProvider.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -93);
           GameplayController.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -59);

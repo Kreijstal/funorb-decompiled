@@ -43,20 +43,20 @@ final class QuickChatPhraseDefinition extends DualNode {
         Throwable decompiledCaughtException = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          if (jh.field_b == null) {
-            jh.field_b = new String[16];
+          if (TrigonometryHelpers.field_b == null) {
+            TrigonometryHelpers.field_b = new String[16];
           }
           do {
             try {
-              var4_int = param0.wrapText(param3, param1, jh.field_b);
+              var4_int = param0.wrapText(param3, param1, TrigonometryHelpers.field_b);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               arrayIndexOutOfBoundsException = (ArrayIndexOutOfBoundsException) (Object) decompiledCaughtException;
-              if (jh.field_b.length >= 1024) {
+              if (TrigonometryHelpers.field_b.length >= 1024) {
                 return null;
               }
-              jh.field_b = new String[jh.field_b.length << 1];
+              TrigonometryHelpers.field_b = new String[TrigonometryHelpers.field_b.length << 1];
               decompiledRegionSelector0 = 1;
             }
           } while (decompiledRegionSelector0 != 0);
@@ -66,7 +66,7 @@ final class QuickChatPhraseDefinition extends DualNode {
             field_B = (int[]) null;
           }
           while (var4_int > var6) {
-            var5[var6] = jh.field_b[var6];
+            var5[var6] = TrigonometryHelpers.field_b[var6];
             var6++;
           }
           stackIn_14_0 = var5;

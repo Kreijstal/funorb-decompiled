@@ -206,7 +206,7 @@ final class PlayerContextMenu {
           this.field_f = param1.field_k;
           if (0 == param1.field_k) {
             if (0 == BufferedSocket.field_c) {
-              this.field_j.addItem(param0 + 2, 12, jh.field_f);
+              this.field_j.addItem(param0 + 2, 12, TrigonometryHelpers.field_f);
             }
             this.field_j.addItem(param0 ^ 2, 13, ValidationIndicator.field_V);
           }
@@ -317,7 +317,7 @@ final class PlayerContextMenu {
                 if (!DesignerPageTables.field_g) {
                   this.field_j.addItem(2, 8, SocketConnector.formatTemplate(BufferedRandomAccessFile.field_c, -108, new String[]{var7}));
                 }
-                this.field_j.addItem(param1 + 4, 18, SocketConnector.formatTemplate(dg.field_b, param1 ^ 61, new String[]{var7}));
+                this.field_j.addItem(param1 + 4, 18, SocketConnector.formatTemplate(InterfaceTextHelpers.field_b, param1 ^ 61, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
                   this.field_j.addItem(param1 ^ -4, 19, SocketConnector.formatTemplate(SocialRequestHelpers.field_f, param1 - 77, new String[]{var7}));

@@ -4485,7 +4485,7 @@ final class CombatWorld {
           var10_int = param8;
           var11 = param4;
           while (param7 > var11) {
-            var12 = jh.sine16(param0 * (var11 >> 3), 4096) * param3 >> 16;
+            var12 = TrigonometryHelpers.sine16(param0 * (var11 >> 3), 4096) * param3 >> 16;
             var13 = ScrollContainer.cosine16((var11 >> 3) * param0, (byte) -87) * -param3 >> 16;
             if (var17 != 0) {
               return;

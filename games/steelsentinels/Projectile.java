@@ -1025,7 +1025,7 @@ final class Projectile extends DualNode {
                   if (stackIn_34_0) {
                     var10.affectedSentinels = null;
                   }
-                  var10.velocityX = var10.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
+                  var10.velocityX = var10.velocityX + (TrigonometryHelpers.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
                   var10.velocityY = var10.velocityY + (ScrollContainer.cosine16(var5 * 8192 / 7 + this.world.simulationTick, (byte) -98) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
                   this.world.field_db.addLast(3, var10);
                 }
@@ -1043,7 +1043,7 @@ final class Projectile extends DualNode {
                       var8.affectedSentinels = null;
                     }
                     var8.field_kb = this.field_kb;
-                    var8.velocityX = var8.velocityX + (jh.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
+                    var8.velocityX = var8.velocityX + (TrigonometryHelpers.sine16(8192 * var5 / 7 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
                     var8.velocityY = var8.velocityY + (ScrollContainer.cosine16(8192 * var5 / 7 + this.world.simulationTick, (byte) -94) * MouseInputHandler.randomBelow((byte) -61, var9, 16) >> 15);
                     LoginForm.field_db.addLast(3, var8);
                   }
@@ -1177,7 +1177,7 @@ final class Projectile extends DualNode {
               if (stackIn_68_0) {
                 var9.affectedSentinels = null;
               }
-              var9.velocityX = var9.velocityX + (jh.sine16(8192 * var4 / 10 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var10, 64) >> 16);
+              var9.velocityX = var9.velocityX + (TrigonometryHelpers.sine16(8192 * var4 / 10 + this.world.simulationTick, 4096) * MouseInputHandler.randomBelow((byte) -61, var10, 64) >> 16);
               var9.velocityY = var9.velocityY + (ScrollContainer.cosine16(this.world.simulationTick + var4 * 8192 / 10, (byte) -98) * MouseInputHandler.randomBelow((byte) -61, var10, 48) >> 16);
               this.world.field_db.addLast(3, var9);
             }
@@ -1193,7 +1193,7 @@ final class Projectile extends DualNode {
                   var7.affectedSentinels = null;
                 }
                 var7.field_kb = this.field_kb;
-                var7.velocityX = var7.velocityX + (jh.sine16(this.world.simulationTick + 8192 * var4 / 10, 4096) * MouseInputHandler.randomBelow((byte) -61, var8, 64) >> 16);
+                var7.velocityX = var7.velocityX + (TrigonometryHelpers.sine16(this.world.simulationTick + 8192 * var4 / 10, 4096) * MouseInputHandler.randomBelow((byte) -61, var8, 64) >> 16);
                 var7.velocityY = var7.velocityY + (ScrollContainer.cosine16(this.world.simulationTick + 8192 * var4 / 10, (byte) -108) * MouseInputHandler.randomBelow((byte) -61, var8, 48) >> 16);
                 LoginForm.field_db.addLast(param1 + 32, var7);
               }
@@ -1644,7 +1644,7 @@ final class Projectile extends DualNode {
             }
             heading = heading + headingDelta;
             this.velocityX = ScrollContainer.cosine16(heading, (byte) -127) * speed >> 16;
-            this.velocityY = jh.sine16(heading, 4096) * speed >> 16;
+            this.velocityY = TrigonometryHelpers.sine16(heading, 4096) * speed >> 16;
             this.applyGravity = false;
             if (!this.world.field_h &&
               !this.field_V) {
@@ -2008,7 +2008,7 @@ final class Projectile extends DualNode {
                       var5_ref_wl.affectedSentinels = null;
                     }
                     var5_ref_wl.field_kb = this.field_kb;
-                    var5_ref_wl.velocityX = var5_ref_wl.velocityX + (jh.sine16(8192 * var4Lifetime1Lifetime4 / 7 + this.world.simulationTick, obfuscationGuard ^ -4097) * MouseInputHandler.randomBelow((byte) -61, var11, 16) >> 13);
+                    var5_ref_wl.velocityX = var5_ref_wl.velocityX + (TrigonometryHelpers.sine16(8192 * var4Lifetime1Lifetime4 / 7 + this.world.simulationTick, obfuscationGuard ^ -4097) * MouseInputHandler.randomBelow((byte) -61, var11, 16) >> 13);
                     var5_ref_wl.velocityX = Math.abs(var5_ref_wl.velocityX) * -this.velocityX;
                     var5_ref_wl.velocityY = var5_ref_wl.velocityY + (ScrollContainer.cosine16(var4Lifetime1Lifetime4 * 8192 / 7 + this.world.simulationTick, (byte) -95) * MouseInputHandler.randomBelow((byte) -61, var11, 16) >> 13);
                     this.world.field_db.addLast(3, var5_ref_wl);

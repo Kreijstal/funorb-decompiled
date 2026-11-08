@@ -30,7 +30,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           PendingPackedReply.field_q = 0;
           SentinelDesigner.field_j = param0.getX();
           LabeledField.field_G = param0.getY();
-          ce.field_w = true;
+          PatchNoteUsage.field_w = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             PendingPackedReply.field_q = 0;
             SentinelDesigner.field_j = param0.getX();
             LabeledField.field_G = param0.getY();
-            ce.field_w = true;
+            PatchNoteUsage.field_w = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -96,16 +96,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (SoundCache.field_e != null) {
             PendingPackedReply.field_q = 0;
             ChatPanelSetupHelpers.field_d = 0;
-            ce.field_w = true;
+            PatchNoteUsage.field_w = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
-              rb.field_a = rb.field_a & -2;
+              AngleHelpers.field_a = AngleHelpers.field_a & -2;
             }
             if ((var2_int & 8) != 0) {
-              rb.field_a = rb.field_a & -3;
+              AngleHelpers.field_a = AngleHelpers.field_a & -3;
             }
             if ((4 & var2_int) != 0) {
-              rb.field_a = rb.field_a & -5;
+              AngleHelpers.field_a = AngleHelpers.field_a & -5;
             }
           }
           if (!param0.isPopupTrigger()) {
@@ -133,7 +133,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             PendingPackedReply.field_q = 0;
             SentinelDesigner.field_j = param0.getX();
             LabeledField.field_G = param0.getY();
-            ce.field_w = true;
+            PatchNoteUsage.field_w = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "wc.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -153,7 +153,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           PendingPackedReply.field_q = 0;
           SentinelDesigner.field_j = -1;
           LabeledField.field_G = -1;
-          ce.field_w = true;
+          PatchNoteUsage.field_w = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,15 +202,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
-              rb.field_a = rb.field_a | 1;
+              AngleHelpers.field_a = AngleHelpers.field_a | 1;
             }
             if ((8 & var2_int) != 0) {
-              rb.field_a = rb.field_a | 2;
+              AngleHelpers.field_a = AngleHelpers.field_a | 2;
             }
             if ((var2_int & 4) != 0) {
-              rb.field_a = rb.field_a | 4;
+              AngleHelpers.field_a = AngleHelpers.field_a | 4;
             }
-            ce.field_w = true;
+            PatchNoteUsage.field_w = true;
           }
           if (!param0.isPopupTrigger()) {
             return;

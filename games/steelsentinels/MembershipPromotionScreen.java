@@ -90,7 +90,7 @@ final class MembershipPromotionScreen {
           FunOrbClient.field_w = UrlAndReplyHelpers.loadCoverageFontByName(TutorialStepTable.field_a, BufferedRandomAccessFile.field_d, (byte) -69, "", "pump32");
           TextSpriteHelpers.field_g = ContextMenu.loadSprite("members_expansion_screen", -42, "benefit_orbs", TutorialStepTable.field_a);
           SectorCacheStore.field_d = ContextMenu.loadSprite("members_expansion_screen", -83, "button_text", TutorialStepTable.field_a);
-          ce.field_v = ClientUiHelpers.loadRgbSpritesByName((byte) -80, "button_highlights", TutorialStepTable.field_a, "members_expansion_screen");
+          PatchNoteUsage.field_v = ClientUiHelpers.loadRgbSpritesByName((byte) -80, "button_highlights", TutorialStepTable.field_a, "members_expansion_screen");
           TutorialStepTable.field_a = null;
           BufferedRandomAccessFile.field_d = null;
         }
@@ -140,10 +140,10 @@ final class MembershipPromotionScreen {
           this.drawGradientText(-67, (int[]) null, -60, 99, (String) null, 51, (BitmapFont) null, (byte) 82);
         }
         if (this.field_n.field_e == 0) {
-          ce.field_v[0].drawTransparent(508, 299);
+          PatchNoteUsage.field_v[0].drawTransparent(508, 299);
         } else {
           if (this.field_n.field_e == 1) {
-            ce.field_v[1].drawTransparent(508, 387);
+            PatchNoteUsage.field_v[1].drawTransparent(508, 387);
           }
         }
     }

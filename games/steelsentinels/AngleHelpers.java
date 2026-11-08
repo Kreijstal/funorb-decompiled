@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rb {
+final class AngleHelpers {
     static Random field_g;
     static String field_d;
     static int field_j;
@@ -17,7 +17,7 @@ final class rb {
 
     final static int firstQuadrantAngle8192(int deltaX, int obfuscationGuard, int deltaY) {
         if (obfuscationGuard != 2048) {
-          rb.firstQuadrantAngle8192(-3, -22, 110);
+          AngleHelpers.firstQuadrantAngle8192(-3, -22, 110);
           if (deltaX < deltaY) {
             return 2048 - DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
           }
@@ -37,7 +37,7 @@ final class rb {
         field_b = null;
         field_g = null;
         if (param0 != -82) {
-          rb.releaseStatics((byte) -125);
+          AngleHelpers.releaseStatics((byte) -125);
         }
     }
 

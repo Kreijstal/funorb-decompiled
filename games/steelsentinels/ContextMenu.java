@@ -327,7 +327,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mu_options_players");
                 if (var2 != null) {
-                  rb.field_d = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  AngleHelpers.field_d = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mu_options_dontmind");
                 if (null != var2) {
@@ -379,7 +379,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "send_qc_to_x");
                 if (var2 != null) {
-                  dg.field_b = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  InterfaceTextHelpers.field_b = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "send_pm");
                 if (null != var2) {
@@ -443,7 +443,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mu_chat_lobby_friends_only");
                 if (null != var2) {
-                  jh.field_f = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  TrigonometryHelpers.field_f = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mu_chat_lobby_friends");
                 if (null != var2) {
@@ -663,7 +663,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "you_cannot_join_in_progress");
                 if (var2 != null) {
-                  jh.field_e = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  TrigonometryHelpers.field_e = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "you_can_spectate");
                 if (null != var2) {
@@ -973,7 +973,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "rule_0_3");
                 if (var2 != null) {
-                  rb.field_e = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  AngleHelpers.field_e = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "rule_0_4");
                 if (var2 != null) {
@@ -1428,7 +1428,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "create_password");
                 if (var2 != null) {
-                  jh.field_c = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  TrigonometryHelpers.field_c = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "create_password_confirm");
                 if (null != var2) {
@@ -1672,7 +1672,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "create_alert_yearrange");
                 if (null != var2) {
-                  ce.field_u = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  PatchNoteUsage.field_u = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "create_alert_mismatch");
                 if (var2 != null) {
@@ -2198,7 +2198,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "pressescforoptionsmenu_doesntpause");
                 if (var2 != null) {
-                  rb.field_b = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  AngleHelpers.field_b = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "pressescforoptionsmenu_doesntpause_short");
                 if (null != var2) {
@@ -2358,7 +2358,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mp_offerrematch");
                 if (var2 != null) {
-                  dg.field_a = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  InterfaceTextHelpers.field_a = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mp_offerrematch_unrated");
                 if (null != var2) {
@@ -2386,7 +2386,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  jh.field_g = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  TrigonometryHelpers.field_g = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mp_x_wantstodraw");
                 if (null != var2) {
@@ -2706,7 +2706,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "fs_button_members");
                 if (var2 != null) {
-                  dg.field_f = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  InterfaceTextHelpers.field_f = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "fs_unavailable");
                 if (null != var2) {
@@ -3250,13 +3250,13 @@ final class ContextMenu extends SceneWidget {
         int[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = jh.sine16(param1, 4096);
+          var3_int = TrigonometryHelpers.sine16(param1, 4096);
           var4 = ScrollContainer.cosine16(param1, (byte) -83);
           if (param2 <= 61) {
             stackIn_2_0 = (int[]) null;
             return stackIn_2_0;
           }
-          var5 = jh.sine16(param0, 4096);
+          var5 = TrigonometryHelpers.sine16(param0, 4096);
           var6 = ScrollContainer.cosine16(param0, (byte) -101);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var6 * (long)var3_int >> 16);

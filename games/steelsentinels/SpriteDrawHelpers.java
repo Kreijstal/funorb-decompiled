@@ -173,7 +173,7 @@ final class SpriteDrawHelpers {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != rb.field_h) {
+          if (null != AngleHelpers.field_h) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (PendingAckRequest.field_v == AccountNoticeDialog.field_sb);
               if ((decompiledFrameRemainder0) && (ClockAndCookieHelpers.field_g.position == 0 &&
@@ -192,7 +192,7 @@ final class SpriteDrawHelpers {
               }
               if (ClockAndCookieHelpers.field_g.position > 0) {
                 try {
-                  rb.field_h.write(ClockAndCookieHelpers.field_g.position, ClockAndCookieHelpers.field_g.payload, -100, 0);
+                  AngleHelpers.field_h.write(ClockAndCookieHelpers.field_g.position, ClockAndCookieHelpers.field_g.payload, -100, 0);
                   RequestResendHelpers.field_d = ClockAndCookieHelpers.monotonicMillis(param0 + 58);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

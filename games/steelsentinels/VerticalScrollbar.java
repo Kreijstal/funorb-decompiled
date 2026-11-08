@@ -42,7 +42,7 @@ final class VerticalScrollbar extends SceneWidget {
         SceneWidget var6 = null;
         SceneWidget var3 = null;
         try {
-          ce.field_p = PacketLoopHelpers.loadRgbSpriteByName(param1, "basic", "display_name_changed", false);
+          PatchNoteUsage.field_p = PacketLoopHelpers.loadRgbSpriteByName(param1, "basic", "display_name_changed", false);
           ClientGlobals.field_j = new SocialListPanel(0L, NodeHashTableIterator.field_e, MarkerSliderPainter.field_i, DiskCacheWorker.field_d);
           AccountRegistrationPanel.field_W = new SocialListPanel(0L, NodeHashTableIterator.field_e, DirectByteStorage.field_k, LoadingStatusHelpers.field_a);
           WhirlpoolHasher.field_m = new SceneWidget(0L, (SceneWidget) null);

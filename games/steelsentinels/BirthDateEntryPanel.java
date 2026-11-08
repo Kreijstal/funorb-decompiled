@@ -130,7 +130,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
               var10 = 0;
               while (true) {
                 if (var10 < ViewportController.field_l.length) {
-                  stackIn_11_0 = ((rb.field_i[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
+                  stackIn_11_0 = ((AngleHelpers.field_i[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -219,7 +219,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
                 if (BoundedUrlRequest.field_q.field_K) {
                   var9 = null;
                   if (PacketBuffer.field_u) {
-                    var9 = "<col=A00000>" + rb.field_d + "</col>";
+                    var9 = "<col=A00000>" + AngleHelpers.field_d + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;

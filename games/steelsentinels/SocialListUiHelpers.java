@@ -89,7 +89,7 @@ final class SocialListUiHelpers {
           }
           if (var3 == 0 &&
             SocialPacketHelpers.field_a == 2) {
-            var4 = ClockAndCookieHelpers.monotonicMillis(-63) - rb.field_c;
+            var4 = ClockAndCookieHelpers.monotonicMillis(-63) - AngleHelpers.field_c;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
@@ -190,14 +190,14 @@ final class SocialListUiHelpers {
             if (null != var6.field_Vb &&
               !var6.field_Vb.equals("")) {
               var6.field_cc.field_rb = 16737894;
-              var6.field_cc.field_Pb = ce.field_p;
-              var6.field_cc.setBounds(0, 0, SocketConnector.field_b, 0, 3 + ce.field_p.field_z);
+              var6.field_cc.field_Pb = PatchNoteUsage.field_p;
+              var6.field_cc.setBounds(0, 0, SocketConnector.field_b, 0, 3 + PatchNoteUsage.field_p.field_z);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_zb;
             if (var8 != 0) {
-              var9 = 3 + ce.field_p.field_z;
+              var9 = 3 + PatchNoteUsage.field_p.field_z;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_Ub;

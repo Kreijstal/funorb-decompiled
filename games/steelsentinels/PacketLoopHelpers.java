@@ -360,7 +360,7 @@ final class PacketLoopHelpers {
                 }
                 case 33: {
                     try {
-                        var4 = (int)((double)var4 + rb.field_g.nextGaussian() * Bzip2State.field_f);
+                        var4 = (int)((double)var4 + AngleHelpers.field_g.nextGaussian() * Bzip2State.field_f);
                         if (0 > var4) {
                             /* Inlined CFG state: 35. */
                             {
@@ -537,13 +537,13 @@ final class PacketLoopHelpers {
           PendingPackedReply.field_q = PendingPackedReply.field_q + 1;
           LobbySetupHelpers.field_f = SentinelDesigner.field_j;
           DelegatingCanvas.field_c = LabeledField.field_G;
-          ConditionalTextValue.field_a = ce.field_w;
-          ce.field_w = false;
+          ConditionalTextValue.field_a = PatchNoteUsage.field_w;
+          PatchNoteUsage.field_w = false;
           VerticalScrollbar.field_gc = LoadoutHelpers.field_c;
           TextButton.field_S = RegistrationRequestDialog.field_Rb;
           BufferedRandomAccessFile.field_j = LoginCredentials.field_d;
           LoadoutHelpers.field_c = param0;
-          TutorialStep.field_d = rb.field_a;
+          TutorialStep.field_d = AngleHelpers.field_a;
         }
     }
 

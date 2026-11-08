@@ -340,7 +340,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(57, "waitforloading");
                 if (null != var2) {
-                  dg.field_e = IntKeyLookup.decodeWindowsCodePageString(param0 ^ 13, var2);
+                  InterfaceTextHelpers.field_e = IntKeyLookup.decodeWindowsCodePageString(param0 ^ 13, var2);
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(90, "needtrainingmsg");
                 if (null != var2) {
@@ -4240,7 +4240,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(116, "keycode_edd");
                 if (null != var2) {
-                  dg.field_d = var2[0] & 255;
+                  InterfaceTextHelpers.field_d = var2[0] & 255;
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(100, "keycode_centrecamera");
                 if (null != var2) {
@@ -5209,7 +5209,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(86, "shiftclickmsg");
                 if (null != var2) {
-                  dg.field_c = IntKeyLookup.decodeWindowsCodePageString(13, var2);
+                  InterfaceTextHelpers.field_c = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(param0 + 121, "engineeringstatedesc,0");
                 if (null != var2) {
@@ -5658,7 +5658,7 @@ final class SectorCacheStore {
             }
             if (DelayedServerPacket.field_o.field_a == 1) {
               try {
-                rb.field_h = new BufferedSocket((java.net.Socket) (DelayedServerPacket.field_o.field_c), ArticulatedPart.field_A);
+                AngleHelpers.field_h = new BufferedSocket((java.net.Socket) (DelayedServerPacket.field_o.field_c), ArticulatedPart.field_A);
                 ClockAndCookieHelpers.field_g.position = 0;
                 var2 = LoginConnectionStage.field_d;
                 var2.position = 0;

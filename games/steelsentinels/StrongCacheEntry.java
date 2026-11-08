@@ -73,9 +73,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         GradientOutlineTextPainter.field_u = 0;
         ConditionalTextValue.field_e = 0;
         UiComponent.field_r = 0;
-        jh.field_i = new MenuInputState(2);
+        TrigonometryHelpers.field_i = new MenuInputState(2);
         int var2 = 116 / ((param0 - 57) / 61);
-        jh.field_i.initializeSelection(param1, -1, 0, NameAvailabilityValidator.hitTestPairedSprites(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true));
+        TrigonometryHelpers.field_i.initializeSelection(param1, -1, 0, NameAvailabilityValidator.hitTestPairedSprites(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true));
     }
 
     StrongCacheEntry(Object param0, int param1) {

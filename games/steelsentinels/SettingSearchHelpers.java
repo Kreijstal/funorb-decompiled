@@ -200,7 +200,7 @@ final class SettingSearchHelpers {
               } else {
                 var10 = 0;
                 while (!(var10 >= ViewportController.field_l.length)) {
-                  if ((rb.field_i[var10 / 8] & 1 << (7 & var10)) == 0) {
+                  if ((AngleHelpers.field_i[var10 / 8] & 1 << (7 & var10)) == 0) {
                     var10++;
                     continue;
                   }

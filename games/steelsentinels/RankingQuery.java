@@ -30,7 +30,7 @@ final class RankingQuery extends IntrusiveNode {
 
     final static boolean isLoggedIn(int param0) {
         int var1 = -125 % ((-54 - param0) / 33);
-        if (null == rb.field_h) {
+        if (null == AngleHelpers.field_h) {
           return false;
         }
         if (AccountNoticeDialog.field_sb == PendingAckRequest.field_v) {

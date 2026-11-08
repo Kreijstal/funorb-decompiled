@@ -1799,7 +1799,7 @@ final class GameplayController {
             stackIn_23_0 = 0;
           }
           var5 = stackIn_23_0;
-          var6 = SocialListPanel.isAllZero(ce.field_t, 18286) ? 1 : 0;
+          var6 = SocialListPanel.isAllZero(PatchNoteUsage.field_t, 18286) ? 1 : 0;
           if (null != LoadoutHelpers.field_i) {
             stackIn_27_0 = LoadoutHelpers.field_i.length;
           } else {
@@ -6373,7 +6373,7 @@ final class GameplayController {
             var2_int == 0 && (!(MusicPatchNode.field_F <= 0) ||
             !(PasswordFieldPainter.field_v <= 0))) {
             var28Lifetime1 = 32 + var7;
-            if (SocialListPanel.isAllZero(ce.field_t, 18286)) {
+            if (SocialListPanel.isAllZero(PatchNoteUsage.field_t, 18286)) {
               var28Lifetime1 -= 15;
             }
             var29_ref_String = "00a2ff";
@@ -6397,8 +6397,8 @@ final class GameplayController {
           }
           if (SessionSeedHelpers.field_j >= 0 &&
             var2_int == 0 &&
-            SocialListPanel.isAllZero(ce.field_t, 18286)) {
-            var28Lifetime2 = SocialTabsPanel.countSetBitsInArray(120, ce.field_t);
+            SocialListPanel.isAllZero(PatchNoteUsage.field_t, 18286)) {
+            var28Lifetime2 = SocialTabsPanel.countSetBitsInArray(120, PatchNoteUsage.field_t);
             var29Lifetime2 = -10 + var28Lifetime2 * 40;
             var30Lifetime2 = (640 - var29Lifetime2) / 2;
             var31Lifetime2 = 0;
@@ -6406,7 +6406,7 @@ final class GameplayController {
             var33_intLifetime2 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (256 <= var33_intLifetime2))) {
-              stackOut_414_0 = AssetDecoders.isBitSet(ce.field_t, 1, var33_intLifetime2);
+              stackOut_414_0 = AssetDecoders.isBitSet(PatchNoteUsage.field_t, 1, var33_intLifetime2);
               stackIn_433_0 = stackOut_414_0 ? 1 : 0;
               stackIn_415_0 = stackOut_414_0;
               if (var51 == 0) {
@@ -8699,23 +8699,23 @@ final class GameplayController {
                 if (var11Lifetime2 >= 4) {
                   var11Lifetime2 -= 4;
                 }
-                if (null == jh.field_h) {
+                if (null == TrigonometryHelpers.field_h) {
                   LobbyStateHelpers.field_h.fileRetentionMode = 0;
                   if (this.world.terrain.getTerrainType(55) == 0) {
-                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
+                    TrigonometryHelpers.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
                   }
                   if (1 == this.world.terrain.getTerrainType(79)) {
-                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
+                    TrigonometryHelpers.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
                   }
                   if (this.world.terrain.getTerrainType(63) == 2) {
-                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
+                    TrigonometryHelpers.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
                   }
                   if (this.world.terrain.getTerrainType(90) == 3) {
-                    jh.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
+                    TrigonometryHelpers.field_h = new RgbSprite(LobbyStateHelpers.field_h.getFileByName("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false)));
                   }
                 }
-                if (jh.field_h != null) {
-                  jh.field_h.drawScaled(var15, var16, 2 * var13Lifetime2, var13Lifetime2);
+                if (TrigonometryHelpers.field_h != null) {
+                  TrigonometryHelpers.field_h.drawScaled(var15, var16, 2 * var13Lifetime2, var13Lifetime2);
                 }
                 if (this.world.terrain.getTerrainType(113) != 3 &&
                   ModalStack.field_V) {
@@ -10005,7 +10005,7 @@ final class GameplayController {
           this.world.pendingParticles.clear(6);
           this.world.particles.clear(6);
           SocketConnector.detachAllParticles(10000);
-          jh.field_h = null;
+          TrigonometryHelpers.field_h = null;
           if (param0 >= -60) {
             this.handleKeyInput(109);
           }
@@ -10041,7 +10041,7 @@ final class GameplayController {
           if (!param0) {
             this.setupTutorialScenario((byte) -91);
           }
-          var3_int = SocialTabsPanel.countSetBitsInArray(108, ce.field_t);
+          var3_int = SocialTabsPanel.countSetBitsInArray(108, PatchNoteUsage.field_t);
           var4 = 0;
           var5 = 0;
           var6 = (20 - 52 * var3_int + 640) / 2;
@@ -10049,7 +10049,7 @@ final class GameplayController {
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3_int <= var4))) {
-            stackOut_6_0 = AssetDecoders.isBitSet(ce.field_t, 1, var5);
+            stackOut_6_0 = AssetDecoders.isBitSet(PatchNoteUsage.field_t, 1, var5);
             stackIn_28_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var11 == 0) {
@@ -11465,7 +11465,7 @@ final class GameplayController {
           SoftwareRaster.drawRectangleOutline(218, 198, 204, 44, 16777215);
           SoftwareRaster.fillRectangleBlended(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
           BirthDateEntryPanel.field_U.drawCentered(AgeValidator.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, BirthDateEntryPanel.field_U.field_U / 2 + 220, 16777215, 0);
-          BirthDateEntryPanel.field_U.drawCentered(rb.field_b, 320, 220 + BirthDateEntryPanel.field_U.field_U / 2 + 40, 16777215, 0);
+          BirthDateEntryPanel.field_U.drawCentered(AngleHelpers.field_b, 320, 220 + BirthDateEntryPanel.field_U.field_U / 2 + 40, 16777215, 0);
           this.drawHud(true, 1956917985);
           if (this.field_d) {
             if (ModalPanel.field_T &&
@@ -12660,7 +12660,7 @@ final class GameplayController {
                 }
               }
             }
-            if (~NameAvailabilityValidator.field_q == ~dg.field_d &&
+            if (~NameAvailabilityValidator.field_q == ~InterfaceTextHelpers.field_d &&
               this.controlledSentinel.hasModuleType(24, -27)) {
               var4Lifetime6 = Js5Transport.field_h[this.world.field_c] + this.world.simulationTick;
               var5Lifetime5 = (SentinelCommand) (this.controlledSentinel.pendingCommands.last(1063677678));
@@ -12765,7 +12765,7 @@ final class GameplayController {
           UiContainer.field_M = IconTextComponent.field_Yb;
           SocketJs5Transport.field_w = new int[10];
           AccountTermsPanel.field_U = new int[10];
-          ce.field_t = ViewportController.createEightIntArray(true);
+          PatchNoteUsage.field_t = ViewportController.createEightIntArray(true);
           var12_int = 0;
           if (this.field_J) {
             var13 = param3.length;
