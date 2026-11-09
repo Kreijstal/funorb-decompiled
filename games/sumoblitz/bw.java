@@ -127,7 +127,7 @@ final class bw extends qt {
             ph.gameplaySession.resetSession(88);
             this.b((byte) -128);
           } else {
-            wt.a(1 + oh.levelIndex % 5, (byte) 56);
+            wt.a(1 + OpenGlShaderProgram.levelIndex % 5, (byte) 56);
             this.b((byte) -127);
           }
         }

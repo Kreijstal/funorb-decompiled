@@ -44,7 +44,7 @@ final class wn {
         if (param2 > -93) {
           return false;
         }
-        int var6 = -13 + Math.max(wg.a(-123, param1), Math.max(wg.a(-122, param4), wg.a(-127, param0)));
+        int var6 = -13 + Math.max(OpenGlAssemblyProgram.floorLog2Magnitude(-123, param1), Math.max(OpenGlAssemblyProgram.floorLog2Magnitude(-122, param4), OpenGlAssemblyProgram.floorLog2Magnitude(-127, param0)));
         if (0 < var6) {
           param1 = param1 >> var6;
           param4 = param4 >> var6;

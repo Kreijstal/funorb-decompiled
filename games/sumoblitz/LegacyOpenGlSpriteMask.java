@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlSpriteMask extends SpriteMask {
-    f texture;
+    LegacyOpenGlSpriteTexture texture;
     static ToolkitSprite field_e;
     static float[] field_g;
 

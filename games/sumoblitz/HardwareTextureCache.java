@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr {
+final class HardwareTextureCache {
     static CompactMeshGeometry[] field_b;
     static ToolkitSprite[] field_e;
     static of field_f;
-    private TextureProvider field_c;
-    private sd field_d;
-    private HardwareGraphicsToolkit field_a;
+    private TextureProvider provider;
+    private SoftLruCache textures;
+    private HardwareGraphicsToolkit toolkit;
 
     public static void releaseStatics(byte param0) {
         field_b = null;
@@ -18,16 +18,16 @@ final class mr {
         }
     }
 
-    final void a(int param0) {
-        if (param0 > 80) {
-          this.field_d.a(5, 22663);
+    final void ageTextures(int guard) {
+        if (guard > 80) {
+          this.textures.age(5, 22663);
           return;
         }
-        mr.a(47, (byte) -69);
-        this.field_d.a(5, 22663);
+        HardwareTextureCache.bitLength(47, (byte) -69);
+        this.textures.age(5, 22663);
     }
 
-    final Texture2D a(int param0, int param1) {
+    final Texture2D getTexture(int guard, int textureId) {
         Object var3;
         Texture2D var4;
         TextureMetadata var5;
@@ -112,206 +112,206 @@ final class mr {
         int[] var7Lifetime1Lifetime1;
         int[] var7Lifetime1Lifetime2;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var3 = this.field_d.a((long)param1, 112);
+        var3 = this.textures.get((long)textureId, 112);
         if (var3 != null) {
           return (Texture2D) (var3);
         }
-        if (param0 <= 81) {
-          mr.releaseStatics((byte) -13);
-          if (!this.field_c.b(-29912, param1)) {
+        if (guard <= 81) {
+          HardwareTextureCache.releaseStatics((byte) -13);
+          if (!this.provider.b(-29912, textureId)) {
             return null;
           }
-          var12 = this.field_c.a(-29193, param1);
+          var12 = this.provider.a(-29193, textureId);
           var5 = var12;
           if (!var12.field_n) {
-            stackIn_9_0 = this.field_a.field_tc;
+            stackIn_9_0 = this.toolkit.field_tc;
           } else {
             stackIn_9_0 = 64;
           }
           var6 = stackIn_9_0;
           if (var12.field_s) {
-            if (this.field_a.a()) {
-              var39 = this.field_c.a(var6, false, 0.699999988079071f, param1, var6, -70);
-              stackIn_13_0 = this.field_a;
+            if (this.toolkit.a()) {
+              var39 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -70);
+              stackIn_13_0 = this.toolkit;
               stackIn_13_1 = var6;
               stackIn_13_2 = nl.RGBA;
               stackIn_13_3 = 110;
               stackIn_14_4 = (var12.field_k == 0) ? false : true;
               var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
               var4.setWrap(var12.field_i, var12.field_l, true);
-              this.field_d.a((long)param1, var4, (byte) 19);
+              this.textures.put((long)textureId, var4, (byte) 19);
               return var4;
             }
             if (2 == var12.field_p) {
-              var7 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
+              var7 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
             } else {
               if (PlayingSound.a(108, (int) var12.field_d)) {
-                var7 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
+                var7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
               } else {
-                var7 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
+                var7 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
               }
             }
-            stackIn_23_0 = this.field_a;
+            stackIn_23_0 = this.toolkit;
             stackIn_23_1 = var7;
             stackIn_23_2 = var6;
             stackIn_24_3 = (var12.field_k == 0) ? false : true;
             var13 = ((HardwareGraphicsToolkit) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
             var13.setWrap(var12.field_i, var12.field_l, true);
-            this.field_d.a((long)param1, var13, (byte) 19);
+            this.textures.put((long)textureId, var13, (byte) 19);
             return var13;
           }
           if (2 == var12.field_p) {
-            var7Lifetime5 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
-            stackIn_29_0 = this.field_a;
+            var7Lifetime5 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+            stackIn_29_0 = this.toolkit;
             stackIn_29_1 = var7Lifetime5;
             stackIn_29_2 = var6;
             stackIn_30_3 = (var12.field_k == 0) ? false : true;
             var18 = ((HardwareGraphicsToolkit) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
             var18.setWrap(var12.field_i, var12.field_l, true);
-            this.field_d.a((long)param1, var18, (byte) 19);
+            this.textures.put((long)textureId, var18, (byte) 19);
             return var18;
           }
           if (!PlayingSound.a(108, (int) var12.field_d)) {
-            var7Lifetime6 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
-            stackIn_40_0 = this.field_a;
+            var7Lifetime6 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+            stackIn_40_0 = this.toolkit;
             stackIn_40_1 = var7Lifetime6;
             stackIn_40_2 = var6;
             stackIn_41_3 = (var12.field_k == 0) ? false : true;
             var23 = ((HardwareGraphicsToolkit) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
             var23.setWrap(var12.field_i, var12.field_l, true);
-            this.field_d.a((long)param1, var23, (byte) 19);
+            this.textures.put((long)textureId, var23, (byte) 19);
             return var23;
           }
-          var7Lifetime7 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
-          stackIn_34_0 = this.field_a;
+          var7Lifetime7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
+          stackIn_34_0 = this.toolkit;
           stackIn_34_1 = var7Lifetime7;
           stackIn_34_2 = var6;
           stackIn_35_3 = (var12.field_k == 0) ? false : true;
           var4Lifetime3 = ((HardwareGraphicsToolkit) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
           var4Lifetime3.setWrap(var12.field_i, var12.field_l, true);
-          this.field_d.a((long)param1, var4Lifetime3, (byte) 19);
+          this.textures.put((long)textureId, var4Lifetime3, (byte) 19);
           return var4Lifetime3;
         }
-        if (!this.field_c.b(-29912, param1)) {
+        if (!this.provider.b(-29912, textureId)) {
           return null;
         }
-        var29 = this.field_c.a(-29193, param1);
+        var29 = this.provider.a(-29193, textureId);
         if (!var29.field_n) {
-          stackIn_48_0 = this.field_a.field_tc;
+          stackIn_48_0 = this.toolkit.field_tc;
         } else {
           stackIn_48_0 = 64;
         }
         var6Lifetime1 = stackIn_48_0;
         if (!var29.field_s) {
           if (2 == var29.field_p) {
-            var7Lifetime1 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
-            stackIn_72_0 = this.field_a;
+            var7Lifetime1 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+            stackIn_72_0 = this.toolkit;
             stackIn_72_1 = var7Lifetime1;
             stackIn_72_2 = var6Lifetime1;
             stackIn_73_3 = (var29.field_k == 0) ? false : true;
             var33 = ((HardwareGraphicsToolkit) (Object) stackIn_72_0).a(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
             var33.setWrap(var29.field_i, var29.field_l, true);
-            this.field_d.a((long)param1, var33, (byte) 19);
+            this.textures.put((long)textureId, var33, (byte) 19);
             return var33;
           }
           if (!PlayingSound.a(108, (int) var29.field_d)) {
-            var7Lifetime1Lifetime1 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
-            stackIn_83_0 = this.field_a;
+            var7Lifetime1Lifetime1 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+            stackIn_83_0 = this.toolkit;
             stackIn_83_1 = var7Lifetime1Lifetime1;
             stackIn_83_2 = var6Lifetime1;
             stackIn_84_3 = (var29.field_k == 0) ? false : true;
             var34 = ((HardwareGraphicsToolkit) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
             var34.setWrap(var29.field_i, var29.field_l, true);
-            this.field_d.a((long)param1, var34, (byte) 19);
+            this.textures.put((long)textureId, var34, (byte) 19);
             return var34;
           }
-          var7Lifetime1Lifetime2 = this.field_c.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, param1);
-          stackIn_77_0 = this.field_a;
+          var7Lifetime1Lifetime2 = this.provider.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
+          stackIn_77_0 = this.toolkit;
           stackIn_77_1 = var7Lifetime1Lifetime2;
           stackIn_77_2 = var6Lifetime1;
           stackIn_78_3 = (var29.field_k == 0) ? false : true;
           var4Lifetime1 = ((HardwareGraphicsToolkit) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
           var4Lifetime1.setWrap(var29.field_i, var29.field_l, true);
-          this.field_d.a((long)param1, var4Lifetime1, (byte) 19);
+          this.textures.put((long)textureId, var4Lifetime1, (byte) 19);
           return var4Lifetime1;
         }
-        if (this.field_a.a()) {
-          var40 = this.field_c.a(var6Lifetime1, false, 0.699999988079071f, param1, var6Lifetime1, -70);
-          stackIn_52_0 = this.field_a;
+        if (this.toolkit.a()) {
+          var40 = this.provider.a(var6Lifetime1, false, 0.699999988079071f, textureId, var6Lifetime1, -70);
+          stackIn_52_0 = this.toolkit;
           stackIn_52_1 = var6Lifetime1;
           stackIn_52_2 = nl.RGBA;
           stackIn_52_3 = 110;
           stackIn_53_4 = (var29.field_k == 0) ? false : true;
           var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
           var4Lifetime2.setWrap(var29.field_i, var29.field_l, true);
-          this.field_d.a((long)param1, var4Lifetime2, (byte) 19);
+          this.textures.put((long)textureId, var4Lifetime2, (byte) 19);
           return var4Lifetime2;
         }
         if (2 == var29.field_p) {
-          var7Lifetime2 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
-          stackIn_57_0 = this.field_a;
+          var7Lifetime2 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+          stackIn_57_0 = this.toolkit;
           stackIn_57_1 = var7Lifetime2;
           stackIn_57_2 = var6Lifetime1;
           stackIn_58_3 = (var29.field_k == 0) ? false : true;
           var30 = ((HardwareGraphicsToolkit) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
           var30.setWrap(var29.field_i, var29.field_l, true);
-          this.field_d.a((long)param1, var30, (byte) 19);
+          this.textures.put((long)textureId, var30, (byte) 19);
           return var30;
         }
         if (!PlayingSound.a(108, (int) var29.field_d)) {
-          var7Lifetime3 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
-          stackIn_66_0 = this.field_a;
+          var7Lifetime3 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+          stackIn_66_0 = this.toolkit;
           stackIn_66_1 = var7Lifetime3;
           stackIn_66_2 = var6Lifetime1;
           stackIn_67_3 = (var29.field_k == 0) ? false : true;
           var31 = ((HardwareGraphicsToolkit) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
           var31.setWrap(var29.field_i, var29.field_l, true);
-          this.field_d.a((long)param1, var31, (byte) 19);
+          this.textures.put((long)textureId, var31, (byte) 19);
           return var31;
         }
-        var7Lifetime4 = this.field_c.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, param1);
-        stackIn_62_0 = this.field_a;
+        var7Lifetime4 = this.provider.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
+        stackIn_62_0 = this.toolkit;
         stackIn_62_1 = var7Lifetime4;
         stackIn_62_2 = var6Lifetime1;
         stackIn_63_3 = (var29.field_k == 0) ? false : true;
         var32 = ((HardwareGraphicsToolkit) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
         var32.setWrap(var29.field_i, var29.field_l, true);
-        this.field_d.a((long)param1, var32, (byte) 19);
+        this.textures.put((long)textureId, var32, (byte) 19);
         return var32;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int value, byte guard) {
         int var2;
         var2 = 0;
-        if (param1 != -115) {
+        if (guard != -115) {
           return 23;
         }
-        if (0 > param0) {
-          param0 = param0 >>> 16;
+        if (0 > value) {
+          value = value >>> 16;
           var2 += 16;
         } else {
-          if (param0 >= 65536) {
-            param0 = param0 >>> 16;
+          if (value >= 65536) {
+            value = value >>> 16;
             var2 += 16;
           }
         }
-        if (param0 >= 256) {
+        if (value >= 256) {
           var2 += 8;
-          param0 = param0 >>> 8;
+          value = value >>> 8;
         }
-        if (param0 >= 16) {
-          param0 = param0 >>> 4;
+        if (value >= 16) {
+          value = value >>> 4;
           var2 += 4;
         }
-        if (param0 >= 4) {
+        if (value >= 4) {
           var2 += 2;
-          param0 = param0 >>> 2;
+          value = value >>> 2;
         }
-        if (1 <= param0) {
-          param0 = param0 >>> 1;
+        if (1 <= value) {
+          value = value >>> 1;
           var2++;
         }
-        return var2 + param0;
+        return var2 + value;
     }
 
     final static byte[] a(float param0, float param1, int param2, int param3, ab param4, float param5, float param6, float param7, int param8, int param9, int param10) {
@@ -346,13 +346,13 @@ final class mr {
         }
     }
 
-    mr(HardwareGraphicsToolkit param0, TextureProvider param1) {
-        this.field_d = new sd(256);
+    HardwareTextureCache(HardwareGraphicsToolkit owner, TextureProvider textureProvider) {
+        this.textures = new SoftLruCache(256);
         try {
-          this.field_a = param0;
-          this.field_c = param1;
+          this.toolkit = owner;
+          this.provider = textureProvider;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mr.<init>(" + (owner != null ? "{...}" : "null") + ',' + (textureProvider != null ? "{...}" : "null") + ')');
         }
     }
 

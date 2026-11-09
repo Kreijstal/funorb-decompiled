@@ -4,7 +4,7 @@
 final class DirectXTransparentWaterEffect extends ShaderEffect {
     private static float[] field_g;
     private jagdx.IDirect3DVertexShader field_e;
-    private sk field_h;
+    private WaterTextureResources field_h;
     private DirectXGraphicsToolkit field_f;
 
     final void c(boolean param0) {
@@ -26,26 +26,26 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         int var5Lifetime1;
         if (param0 == 34023) {
           var7 = this.field_f.field_Cc;
-          if (this.field_h.field_g) {
+          if (this.field_h.useVolumeTextures) {
             var5_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-            this.field_b.a(this.field_h.field_f, 114);
+            this.field_b.a(this.field_h.animatedVolume, 114);
             var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
             var5 = 16 * (this.field_b.field_kc % 4000) / 4000;
-            this.field_b.a(this.field_h.field_d[var5], param0 ^ 33939);
+            this.field_b.a(this.field_h.animatedSlices[var5], param0 ^ 33939);
             var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
         this.field_f = (DirectXGraphicsToolkit) null;
         jagdx.IDirect3DDevice var6 = this.field_f.field_Cc;
-        if (this.field_h.field_g) {
+        if (this.field_h.useVolumeTextures) {
           var5_floatLifetime1 = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-          this.field_b.a(this.field_h.field_f, 114);
+          this.field_b.a(this.field_h.animatedVolume, 114);
           var6.b(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
           var5Lifetime1 = 16 * (this.field_b.field_kc % 4000) / 4000;
-          this.field_b.a(this.field_h.field_d[var5Lifetime1], param0 ^ 33939);
+          this.field_b.a(this.field_h.animatedSlices[var5Lifetime1], param0 ^ 33939);
           var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
@@ -124,12 +124,12 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    DirectXTransparentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, sk param2) {
+    DirectXTransparentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, WaterTextureResources param2) {
         super(param0);
         this.field_f = param0;
         this.field_h = param2;
         if (param1 != null &&
-          this.field_h.c(41) &&
+          this.field_h.hasAnimatedTextures(41) &&
           257 <= (65535 & this.field_f.field_Kc.VertexShaderVersion)) {
           this.field_e = this.field_f.field_Cc.a(param1.fetchNamedFile("transparent_water", "dx", -1));
         } else {

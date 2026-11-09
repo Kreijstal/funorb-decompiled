@@ -19,7 +19,7 @@ final class qi {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            sd.a(var1, param0 + 119);
+            SoftLruCache.a(var1, param0 + 119);
             InwardSparkParticle.field_v.patchByteLength(var1.position - var2, -13745);
           }
           if (param0 == 8) {

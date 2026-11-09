@@ -194,7 +194,7 @@ final class ArenaPad extends IntrusiveNode {
                 if (!(Math.abs(-drone.facingRadians + var15) < 1.5707963267948966)) {
                   SecondaryNodeQueue.a(drone, (byte) 113);
                   this.triggerCooldownTicks = 200;
-                  if (12 == oh.levelIndex) {
+                  if (12 == OpenGlShaderProgram.levelIndex) {
                     bn.field_P = true;
                   }
                   ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
@@ -220,7 +220,7 @@ final class ArenaPad extends IntrusiveNode {
               }
               if (decompiledFrameRemainder7) {
                 SecondaryNodeQueue.a(drone, (byte) 113);
-                if (oh.levelIndex == 12) {
+                if (OpenGlShaderProgram.levelIndex == 12) {
                   bn.field_P = true;
                 }
                 this.triggerCooldownTicks = 200;
@@ -481,8 +481,8 @@ final class ArenaPad extends IntrusiveNode {
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6)) {
-            f.field_r[0].draw((this.xQ8 >> 8) - (f.field_r[0].width() >> 1), (this.yQ8 >> 8) - (f.field_r[0].height() >> 1));
-            f.field_r[1].draw((this.xQ8 >> 8) - (f.field_r[1].width() >> 1), (this.yQ8 >> 8) - (f.field_r[1].height() >> 1), 0, -15687169, 1);
+            LegacyOpenGlSpriteTexture.field_r[0].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].height() >> 1));
+            LegacyOpenGlSpriteTexture.field_r[1].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].height() >> 1), 0, -15687169, 1);
             decompiledFrameRemainder7 = (ul.field_f == 1);
             if (decompiledFrameRemainder7) {
               vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -15687169, 1);
@@ -490,8 +490,8 @@ final class ArenaPad extends IntrusiveNode {
             }
           }
           if (decompiledFrameRemainder7) {
-            f.field_r[0].draw((this.xQ8 >> 8) - (f.field_r[0].width() >> 1), (this.yQ8 >> 8) - (f.field_r[0].height() >> 1));
-            f.field_r[1].draw((this.xQ8 >> 8) - (f.field_r[1].width() >> 1), (this.yQ8 >> 8) - (f.field_r[1].height() >> 1), 0, -31744, 1);
+            LegacyOpenGlSpriteTexture.field_r[0].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].height() >> 1));
+            LegacyOpenGlSpriteTexture.field_r[1].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].height() >> 1), 0, -31744, 1);
             if (1 == ul.field_f) {
               vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -31744, 1);
             }
@@ -616,10 +616,10 @@ final class ArenaPad extends IntrusiveNode {
           DisplayModeConfirmationDialog.field_U = param0.readUnsignedShort(255) << 5;
           var2_int = param0.readUnsignedByte(-31302);
           DisplayModeConfirmationDialog.field_U = DisplayModeConfirmationDialog.field_U + (var2_int >> 3);
-          sd.field_f = 1835008 & var2_int << 18;
-          sd.field_f = sd.field_f + (param0.readUnsignedShort(255) << 2);
+          SoftLruCache.field_f = 1835008 & var2_int << 18;
+          SoftLruCache.field_f = SoftLruCache.field_f + (param0.readUnsignedShort(255) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(-31302);
-          sd.field_f = sd.field_f + (var2_intLifetime1 >> 6);
+          SoftLruCache.field_f = SoftLruCache.field_f + (var2_intLifetime1 >> 6);
           ReassignUpgradesScreen.field_l = (63 & var2_intLifetime1) << 15;
           ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.readUnsignedByte(-31302) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-31302);

@@ -22,15 +22,15 @@ final class fb {
           }
           bk.field_e[1] = fd.field_d.nextInt();
           bk.field_e[2] = (int)(oc.field_g >> 32);
-          sd.field_e.position = 0;
+          SoftLruCache.field_e.position = 0;
           bk.field_e[3] = (int)oc.field_g;
-          sd.field_e.writeInt(48, bk.field_e[0]);
-          sd.field_e.writeInt(48, bk.field_e[1]);
-          sd.field_e.writeInt(48, bk.field_e[2]);
-          sd.field_e.writeInt(48, bk.field_e[3]);
-          StrongCacheReference.a(sd.field_e, true);
-          sd.field_e.writeShort(param2 + 12917, param3);
-          param4.a(sd.field_e, (byte) -113);
+          SoftLruCache.field_e.writeInt(48, bk.field_e[0]);
+          SoftLruCache.field_e.writeInt(48, bk.field_e[1]);
+          SoftLruCache.field_e.writeInt(48, bk.field_e[2]);
+          SoftLruCache.field_e.writeInt(48, bk.field_e[3]);
+          StrongCacheReference.a(SoftLruCache.field_e, true);
+          SoftLruCache.field_e.writeShort(param2 + 12917, param3);
+          param4.a(SoftLruCache.field_e, (byte) -113);
           InwardSparkParticle.field_v.position = 0;
           if (param0) {
             InwardSparkParticle.field_v.writeByte((byte) 89, 18);
@@ -63,7 +63,7 @@ final class fb {
           if (rp.field_b != null) {
             InwardSparkParticle.field_v.writeCircumfixedString(rp.field_b, (byte) 19);
           }
-          ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+          ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
           InwardSparkParticle.field_v.patchShortLength(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
           MessageDialog.a(param2 + 12793, -1);
           return;

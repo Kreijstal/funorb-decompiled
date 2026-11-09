@@ -9,19 +9,19 @@ final class gq extends ve {
     final boolean d(int param0) {
         if (param0 != -8111) {
           this.c(-104);
-          if (!this.field_m.field_xc) {
+          if (!this.field_m.supportsFramebufferObjects) {
             return false;
           }
-          if (this.field_m.field_wb) {
-            return this.field_m.field_Hb ? true : false;
+          if (this.field_m.supportsFragmentShaders) {
+            return this.field_m.supportsFloatTextures ? true : false;
           }
           return false;
         }
-        if (!this.field_m.field_xc) {
+        if (!this.field_m.supportsFramebufferObjects) {
           return false;
         }
-        if (this.field_m.field_wb) {
-          return this.field_m.field_Hb ? true : false;
+        if (this.field_m.supportsFragmentShaders) {
+          return this.field_m.supportsFloatTextures ? true : false;
         }
         return false;
     }

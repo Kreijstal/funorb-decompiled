@@ -73,7 +73,7 @@ final class ph {
     }
 
     final static void a(byte param0) {
-        f.field_s = null;
+        LegacyOpenGlSpriteTexture.field_s = null;
         if (param0 > -77) {
           usernameText = (String) null;
         }

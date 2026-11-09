@@ -22,7 +22,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = wg.a(64, param0, 3);
+        var3[4] = OpenGlAssemblyProgram.createSolidSprite(64, param0, 3);
         if (param1 >= -114) {
           OpenGlBuffer.a(63, -120);
         }
@@ -101,7 +101,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
 
     final static void a(int param0, Drone param1) {
         try {
-          kf.field_u = param1;
+          LegacyOpenGlRenderbuffer.field_u = param1;
           im.field_b = new IntrusiveDeque();
           up.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;

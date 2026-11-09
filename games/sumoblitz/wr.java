@@ -302,12 +302,12 @@ final class wr extends InteractiveWidget {
         }
     }
 
-    final static vk a(LegacyOpenGlGraphicsToolkit param0, int param1, String param2, int param3) {
+    final static LegacyOpenGlAssemblyProgram compileAssemblyProgram(LegacyOpenGlGraphicsToolkit toolkit, int target, String source, int guard) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        vk stackIn_2_0 = null;
+        LegacyOpenGlAssemblyProgram stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vk stackIn_7_0 = null;
+        LegacyOpenGlAssemblyProgram stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -315,39 +315,39 @@ final class wr extends InteractiveWidget {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -24674) {
-            stackIn_2_0 = (vk) null;
+          if (guard != -24674) {
+            stackIn_2_0 = (LegacyOpenGlAssemblyProgram) null;
             return stackIn_2_0;
           }
           var4_int = jaggl.OpenGL.glGenProgramARB();
-          jaggl.OpenGL.glBindProgramARB(param1, var4_int);
-          jaggl.OpenGL.glProgramStringARB(param1, 34933, param2);
+          jaggl.OpenGL.glBindProgramARB(target, var4_int);
+          jaggl.OpenGL.glProgramStringARB(target, 34933, source);
           jaggl.OpenGL.glGetIntegerv(34379, GameInstructions.field_h, 0);
           if (GameInstructions.field_h[0] == -1) {
-            jaggl.OpenGL.glBindProgramARB(param1, 0);
-            stackIn_7_0 = new vk(param0, param1, var4_int);
+            jaggl.OpenGL.glBindProgramARB(target, 0);
+            stackIn_7_0 = new LegacyOpenGlAssemblyProgram(toolkit, target, var4_int);
             return stackIn_7_0;
           }
-          jaggl.OpenGL.glBindProgramARB(param1, 0);
+          jaggl.OpenGL.glBindProgramARB(target, 0);
           stackIn_5_0 = null;
-          return (vk) (stackIn_5_0);
+          return (LegacyOpenGlAssemblyProgram) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("wr.G(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(target).append(',');
+          if (source == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 

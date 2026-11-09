@@ -858,7 +858,7 @@ class Drone {
                         }
                         ((GraphicsToolkit) (Object) stackIn_45_0).drawCircle(stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5);
                       } else {
-                        stackIn_41_0 = mr.field_e[0];
+                        stackIn_41_0 = HardwareTextureCache.field_e[0];
                         stackIn_41_1 = (float)(this.xQ8 >> 8);
                         stackIn_41_2 = (float)(this.yQ8 >> 8);
                         stackIn_41_3 = 3072.0;
@@ -897,9 +897,9 @@ class Drone {
               if (this.isBlastReady(20) &&
                 0 < this.blastButtonHeldTicks &&
                 ul.field_f == 0) {
-                ht.field_e[6 - this.blastButtonHeldTicks / 7 + 3].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
+                LegacyOpenGlTexture.field_e[6 - this.blastButtonHeldTicks / 7 + 3].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
               } else {
-                stackIn_23_0 = ht.field_e[0];
+                stackIn_23_0 = LegacyOpenGlTexture.field_e[0];
                 stackIn_23_1 = (float)(this.xQ8 >> 8);
                 stackIn_23_2 = (float)(this.yQ8 >> 8);
                 if (!this.isBlastActive(114)) {
@@ -961,7 +961,7 @@ class Drone {
                           toolkit.drawCircle(this.xQ8 + var8 >> 8, this.yQ8 + var9 >> 8, var10, var6 + tt.a((byte) -128, this.droneType), 1);
                           toolkit.drawCircle(var8 + this.xQ8 >> 8, var9 + this.yQ8 >> 8, var10 >> 2, 2236962 + var6, 1);
                         } else {
-                          stackIn_83_0 = mr.field_e[1];
+                          stackIn_83_0 = HardwareTextureCache.field_e[1];
                           stackIn_83_1 = (float)(this.xQ8 + var8 >> 8);
                           stackIn_83_2 = (float)(var9 + this.yQ8 >> 8);
                           stackIn_83_3 = 4096.0;
@@ -999,7 +999,7 @@ class Drone {
                   }
                 }
               } else {
-                stackIn_66_0 = ht.field_e[1];
+                stackIn_66_0 = LegacyOpenGlTexture.field_e[1];
                 stackIn_66_1 = (float)(var8 + this.xQ8 >> 8);
                 stackIn_66_2 = (float)(this.yQ8 + var9 >> 8);
                 stackIn_66_3 = 4096.0;

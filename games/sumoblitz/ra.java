@@ -24,9 +24,9 @@ final class ra extends LegacyOpenGlEffect {
         return true;
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.field_b.a(param0 + 45, param2);
+          this.field_b.bindTexture(param0 + 45, param2);
           if (param0 != 35) {
             this.a((byte) -49, true);
           }
@@ -61,13 +61,13 @@ final class ra extends LegacyOpenGlEffect {
     final static java.applet.Applet c(int param0) {
         if (param0 != 2) {
           ra.c(-55);
-          if (qj.field_c != null) {
-            return qj.field_c;
+          if (OpenGlShader.field_c != null) {
+            return OpenGlShader.field_c;
           }
           return (java.applet.Applet) ((Object) ke.field_a);
         }
-        if (qj.field_c != null) {
-          return qj.field_c;
+        if (OpenGlShader.field_c != null) {
+          return OpenGlShader.field_c;
         }
         return (java.applet.Applet) ((Object) ke.field_a);
     }

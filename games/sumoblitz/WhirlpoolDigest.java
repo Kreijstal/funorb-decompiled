@@ -126,7 +126,7 @@ final class WhirlpoolDigest {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.block[var2] = bi.a(bi.a(sd.a(65280L, (long)this.buffer[6 + var3] << 8), bi.a(bi.a(bi.a(bi.a(bi.a((long)this.buffer[var3] << 56, sd.a((long)this.buffer[var3 + 1], 255L) << 48), sd.a(255L, (long)this.buffer[2 + var3]) << 40), sd.a(255L, (long)this.buffer[var3 + 3]) << 32), sd.a(255L, (long)this.buffer[4 + var3]) << 24), sd.a(16711680L, (long)this.buffer[5 + var3] << 16))), sd.a((long)this.buffer[7 + var3], 255L));
+          this.block[var2] = bi.a(bi.a(SoftLruCache.bitwiseAnd(65280L, (long)this.buffer[6 + var3] << 8), bi.a(bi.a(bi.a(bi.a(bi.a((long)this.buffer[var3] << 56, SoftLruCache.bitwiseAnd((long)this.buffer[var3 + 1], 255L) << 48), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[2 + var3]) << 40), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[var3 + 3]) << 32), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[4 + var3]) << 24), SoftLruCache.bitwiseAnd(16711680L, (long)this.buffer[5 + var3] << 16))), SoftLruCache.bitwiseAnd((long)this.buffer[7 + var3], 255L));
           var3 += 8;
           var2++;
         }

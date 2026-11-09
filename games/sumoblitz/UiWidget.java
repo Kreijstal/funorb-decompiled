@@ -398,12 +398,12 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (ar.field_G != 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (ml.field_l == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
@@ -418,28 +418,28 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == hk.field_c) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
                 ml.field_l = ar.field_G;
-                ek.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (hk.field_c == 0) {
                 if (ar.field_G != 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (ml.field_l == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
@@ -447,85 +447,85 @@ class UiWidget extends IntrusiveNode {
                 if (var12 == null) {
                   if (var7 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (!(var12.listener instanceof WidgetDropListener)) {
                   MessageDialog.field_gb = null;
                   if (var7 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 ((WidgetDropListener) (var12.listener)).onDrop(var12, (DropTargetWidget) null, 20302);
                 MessageDialog.field_gb = null;
                 if (var7 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (var5 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == hk.field_c) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
                 ml.field_l = ar.field_G;
-                ek.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
                 if (var5 == 0) {
                   if (ar.field_G != 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (ml.field_l == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
                   var13 = MessageDialog.field_gb;
                   if (var13 == null) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (!(var13.listener instanceof WidgetDropListener)) {
@@ -536,13 +536,13 @@ class UiWidget extends IntrusiveNode {
                       this.clearFocus((byte) 115);
                     }
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   ((WidgetDropListener) (var13.listener)).onDrop(var13, (DropTargetWidget) null, 20302);
                   MessageDialog.field_gb = null;
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) -116);
@@ -567,13 +567,13 @@ class UiWidget extends IntrusiveNode {
                     var5 != 0) {
                     if (0 == hk.field_c) {
                       ml.field_l = ar.field_G;
-                      ek.a(this.hoveredTooltip(-6696), -124);
+                      LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                       return inputAvailable;
                     }
                     this.clearFocus((byte) 115);
                   }
                   ml.field_l = ar.field_G;
-                  ek.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 ((WidgetDropListener) (var14.listener)).onDrop(var14, (DropTargetWidget) null, 20302);
@@ -582,13 +582,13 @@ class UiWidget extends IntrusiveNode {
                   var5 != 0) {
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                 }
                 ml.field_l = ar.field_G;
-                ek.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (var7 == 0) {
@@ -598,7 +598,7 @@ class UiWidget extends IntrusiveNode {
             if (var5 != 0) {
               if (0 == hk.field_c) {
                 ml.field_l = ar.field_G;
-                ek.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               this.clearFocus((byte) 115);
@@ -606,7 +606,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         ml.field_l = ar.field_G;
-        ek.a(this.hoveredTooltip(-6696), -124);
+        LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
         return inputAvailable;
     }
 

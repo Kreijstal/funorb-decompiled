@@ -100,10 +100,10 @@ final class wq {
           var3 = var10.readUnsignedByte(-31302);
           var10.i((byte) 54);
           au.field_i = ok.a(-126, var10);
-          mr.field_b = new CompactMeshGeometry[var3];
+          HardwareTextureCache.field_b = new CompactMeshGeometry[var3];
           kh.field_c = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            mr.field_b[var4] = ImageProducerRasterBuffer.a(var8, -16736);
+            HardwareTextureCache.field_b[var4] = ImageProducerRasterBuffer.a(var8, -16736);
           }
           if (param0) {
             wq.a(-93);
@@ -112,7 +112,7 @@ final class wq {
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = mr.field_b[var9];
+            var5 = HardwareTextureCache.field_b[var9];
             stackIn_10_0 = var5;
             stackIn_10_1 = 6;
             stackIn_10_2 = 1;

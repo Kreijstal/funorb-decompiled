@@ -74,7 +74,7 @@ class MenuScreen {
         var8 = 53;
         var9 = Js5Client.achievementsText;
         if (param0) {
-          var9 = sd.achievementsThisGameText;
+          var9 = SoftLruCache.achievementsThisGameText;
         }
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
@@ -861,13 +861,13 @@ class MenuScreen {
                       if (MessageDialog.arcadeMode) {
                         ph.gameplaySession.startArcadeGame((byte) -120);
                         if (var9 != 0) {
-                          ph.gameplaySession.startLevel(oh.levelIndex, false, false);
+                          ph.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
                         }
                       } else {
-                        ph.gameplaySession.startLevel(oh.levelIndex, false, false);
+                        ph.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
                       }
                     }
-                    DropDownWidget.field_C = oh.levelIndex;
+                    DropDownWidget.field_C = OpenGlShaderProgram.levelIndex;
                     IntrusiveNodeHashTable.field_c = 0;
                     ph.gameplaySession.closePauseMenu((byte) 112);
                     AffineTransform3D.field_j = 0;
@@ -1157,7 +1157,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (null != CompactMeshGeometry.field_o) {
-                      b.c((byte) 127);
+                      LegacyOpenGlNormalMapGenerator.c((byte) 127);
                       if (var9 == 0) {
                         break regionExit2;
                       }
@@ -1274,7 +1274,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (CompactMeshGeometry.field_o != null) {
-                      b.c((byte) 126);
+                      LegacyOpenGlNormalMapGenerator.c((byte) 126);
                     }
                     jl.a(ra.c(2), false);
                     if (var9 == 0) {
@@ -1285,8 +1285,8 @@ class MenuScreen {
                       var5 = 24 / ((-15 - param1) / 43);
                       break regionExit1;
                     }
-                    mk.field_a = 1;
-                    mr.field_f = null;
+                    LegacyOpenGlShader.field_a = 1;
+                    HardwareTextureCache.field_f = null;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1296,8 +1296,8 @@ class MenuScreen {
                     break regionExit2;
                 }
                 if (!(!this.field_g.d(-31260))) {
-                  mr.field_f = null;
-                  mk.field_a = 0;
+                  HardwareTextureCache.field_f = null;
+                  LegacyOpenGlShader.field_a = 0;
                 }
                 break regionExit2;
               }
@@ -1323,8 +1323,8 @@ class MenuScreen {
         MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         var5 += 70;
-        mr.field_e[0].drawRotated((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        mr.field_e[1].drawRotated((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        HardwareTextureCache.field_e[0].drawRotated((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        HardwareTextureCache.field_e[1].drawRotated((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -117, 0);
         MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
@@ -1424,7 +1424,7 @@ class MenuScreen {
                   DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
-                  qv.field_k.a(b.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
+                  qv.field_k.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
                   stackIn_32_0 = qv.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != IntrusiveNodeHashTable.field_c);
@@ -1442,7 +1442,7 @@ class MenuScreen {
                   stackIn_47_3 = false;
                   stackIn_48_4 = (0 != OpenGlTransparentWaterEffect.field_e);
                   ((ToolkitFont) (Object) stackIn_44_0).a(SlowBurstParticle.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
-                  uq.field_a.a(b.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
+                  uq.field_a.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = uq.field_a;
                   stackIn_50_1 = false;
                   stackIn_51_2 = (IntrusiveNodeHashTable.field_c != 0);
@@ -1683,11 +1683,11 @@ class MenuScreen {
           return true;
         }
         if (param0 == 3 &&
-          0 == mk.field_a) {
+          0 == LegacyOpenGlShader.field_a) {
           return false;
         }
         if (param0 == 4 &&
-          mk.field_a == 1) {
+          LegacyOpenGlShader.field_a == 1) {
           return false;
         }
         if (Bzip2State.field_j < 2) {
@@ -1938,10 +1938,10 @@ class MenuScreen {
                 break regionExit2;
               }
             }
-            if (mr.field_f == null) {
-              mr.field_f = of.a(2, 1, mk.field_a, 3, 10);
+            if (HardwareTextureCache.field_f == null) {
+              HardwareTextureCache.field_f = of.a(2, 1, LegacyOpenGlShader.field_a, 3, 10);
             }
-            var7_ref_of = mr.field_f;
+            var7_ref_of = HardwareTextureCache.field_f;
             if (var7_ref_of.field_q) {
               if (var7_ref_of.field_o == null) {
                 var6 = SectorCacheStore.serviceUnavailableText;

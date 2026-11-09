@@ -96,7 +96,7 @@ abstract class GameClientShell extends GameApplet {
           gr.field_l == 0) {
           stackIn_27_0 = (gr.field_l != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_27_0;
-          gr.field_l = cs.g(-5);
+          gr.field_l = LegacyOpenGlFramebuffer.g(-5);
           if (var3Lifetime1 != 0 &&
             gr.field_l == 0 &&
             11 == jv.field_a &&
@@ -168,7 +168,7 @@ abstract class GameClientShell extends GameApplet {
           ch.field_h = false;
         }
         if (TextureCoordinateGeneration.field_a == 0 &&
-          f.d((byte) 63)) {
+          LegacyOpenGlSpriteTexture.d((byte) 63)) {
           TextureCoordinateGeneration.field_a = 1;
         }
         if (TextureCoordinateGeneration.field_a == 1) {
@@ -240,7 +240,7 @@ abstract class GameClientShell extends GameApplet {
         if (TextureCoordinateGeneration.field_a == 11) {
           if (vf.field_a != null && (!vf.field_a.loadIndex((byte) 127) ||
             !vf.field_a.tryLoadAllGroups(true))) {
-            NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, ek.field_k, vf.field_a));
+            NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, LegacyOpenGlTexture3D.field_k, vf.field_a));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -363,7 +363,7 @@ abstract class GameClientShell extends GameApplet {
               ue.a((byte) -70);
             } else {
               if (var2 == 3) {
-                b.a(-30084);
+                LegacyOpenGlNormalMapGenerator.a(-30084);
               } else {
                 if (var2 != 4) {
                   if (var2 != 5) {
@@ -478,7 +478,7 @@ abstract class GameClientShell extends GameApplet {
             jl.a(7, param0);
           }
           if (InteractiveWidget.field_z[8]) {
-            vk.a(-58);
+            LegacyOpenGlAssemblyProgram.a(-58);
           }
         }
         return var2;
@@ -621,7 +621,7 @@ abstract class GameClientShell extends GameApplet {
             this.field_w = 90;
           }
           if (var4 == 1) {
-            var5_int = tn.a(ht.c(true), 0, qt.a((byte) 21));
+            var5_int = tn.a(LegacyOpenGlTexture.c(true), 0, qt.a((byte) 21));
             if (var5_int != -1) {
               jv.a(var5_int, mn.field_g, MouseWheelInput.field_c, true);
               MouseWheelInput.field_c = null;
@@ -685,7 +685,7 @@ abstract class GameClientShell extends GameApplet {
             MessageDialog.a(-1540, ra.c(param0 - 16979));
           }
           if (9 == var4) {
-            us.a(ra.c(2), (byte) -124);
+            LegacyOpenGlTexture2D.openSupportPage(ra.c(2), (byte) -124);
           }
           if (var4 == 10) {
             InwardSparkParticle.field_v.g(17, param0 ^ 16989);
@@ -694,7 +694,7 @@ abstract class GameClientShell extends GameApplet {
             of.a(8192, ra.c(2));
           }
           if (var4 == 12) {
-            cn.a(f.e(false), ra.c(2), (byte) -103);
+            cn.a(LegacyOpenGlSpriteTexture.e(false), ra.c(2), (byte) -103);
           }
           if (var4 == 13) {
             try {
@@ -704,7 +704,7 @@ abstract class GameClientShell extends GameApplet {
               if (IntrusiveNode.field_e.a((byte) -110)) {
                 var12 = IntrusiveNode.field_e.b((byte) 126);
                 if (var12 != null) {
-                  var7 = sd.a(var12.payload, 0, var12.position, 26564);
+                  var7 = SoftLruCache.decodeCp1252(var12.payload, 0, var12.position, 26564);
                   GraphicsToolkit.a((byte) 115, var7);
                 } else {
                   var9 = (String) null;

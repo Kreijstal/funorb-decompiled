@@ -34,7 +34,7 @@ abstract class bt extends pt {
         return (uw) ((Object) new fd());
     }
 
-    abstract hp b(byte param0);
+    abstract LegacyOpenGlCubeTexture b(byte param0);
 
     static {
         field_f = 0L;

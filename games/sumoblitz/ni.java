@@ -1137,7 +1137,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("logging_in", (byte) -23);
                 if (null != var2) {
-                  us.loggingInText = MusicVoice.a(0, var2);
+                  LegacyOpenGlTexture2D.loggingInText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("reconnect", (byte) -23);
                 if (var2 != null) {
@@ -1456,7 +1456,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_password_confirm", (byte) -23);
                 if (var2 != null) {
-                  ht.confirmPasswordText = MusicVoice.a(0, var2);
+                  LegacyOpenGlTexture.confirmPasswordText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_email", (byte) -23);
                 if (null != var2) {
@@ -1876,7 +1876,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("loading_levels", (byte) -23);
                 if (null != var2) {
-                  b.loadingLevelsText = MusicVoice.a(0, var2);
+                  LegacyOpenGlNormalMapGenerator.loadingLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("loading_extradata", (byte) -23);
                 if (null != var2) {
@@ -1964,7 +1964,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("achievements", (byte) -23);
                 if (null != var2) {
-                  kf.achievementsText = MusicVoice.a(param0 ^ 7, var2);
+                  LegacyOpenGlRenderbuffer.achievementsText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("achievementsthisgame", (byte) -23);
                 if (null != var2) {
@@ -2710,7 +2710,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_aftercancel", (byte) -23);
                 if (var2 != null) {
-                  oh.toReturnToTheText = MusicVoice.a(param0 ^ 7, var2);
+                  OpenGlShaderProgram.toReturnToTheText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_countdown_sing", (byte) -23);
                 if (null != var2) {
@@ -2890,7 +2890,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin1", (byte) -23);
                 if (var2 != null) {
-                  b.youAreNotCurrentlyText = MusicVoice.a(param0 ^ 7, var2);
+                  LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,1", (byte) -23);
                 if (var2 != null) {
@@ -3148,18 +3148,18 @@ final class ni extends ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new Sprite[9];
-          dupTemp$2 = wg.a(param1, param4, GzipDecompressor.bitwiseXor(param2, 3));
+          dupTemp$2 = OpenGlAssemblyProgram.createSolidSprite(param1, param4, GzipDecompressor.bitwiseXor(param2, 3));
           var5[6] = dupTemp$2;
           var5[3] = dupTemp$2;
           var5[2] = dupTemp$2;
           var5[1] = dupTemp$2;
           var5[param2] = dupTemp$2;
-          dupTemp$3 = wg.a(param1, param0, 3);
+          dupTemp$3 = OpenGlAssemblyProgram.createSolidSprite(param1, param0, 3);
           var5[8] = dupTemp$3;
           var5[7] = dupTemp$3;
           var5[5] = dupTemp$3;
           if (0 != param3) {
-            var5[4] = wg.a(64, param3, param2 + 3);
+            var5[4] = OpenGlAssemblyProgram.createSolidSprite(64, param3, param2 + 3);
           }
           stackIn_5_0 = var5;
           return stackIn_5_0;

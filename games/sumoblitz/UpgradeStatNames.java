@@ -17,6 +17,6 @@ final class UpgradeStatNames {
     static {
         field_z = "ee.A(";
         names = new String[]{"Speed", "Traction", "Bounce", "Spikes", "Armour"};
-        mr.a(1600, (byte) -115);
+        HardwareTextureCache.bitLength(1600, (byte) -115);
     }
 }

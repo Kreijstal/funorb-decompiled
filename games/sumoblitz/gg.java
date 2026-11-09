@@ -21,7 +21,7 @@ final class gg extends DualLinkNode {
           if (me.a(false, param0)) {
             return false;
           }
-          if (hp.a(param0, true)) {
+          if (LegacyOpenGlCubeTexture.hasUniformCharacters(param0, true)) {
             return false;
           }
           if (ArrayWidgetContainer.a(param0, 30996)) {
@@ -85,8 +85,8 @@ final class gg extends DualLinkNode {
           }
           bj.powerupPickups = new IntrusiveDeque();
           is.arenaPads = new IntrusiveDeque();
-          if (oh.levelIndex != -1) {
-            is.arenaPads = EnemyDrone.field_S[oh.levelIndex].field_d;
+          if (OpenGlShaderProgram.levelIndex != -1) {
+            is.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
           }
           HardwareGraphicsHeap.field_o = new Random();
           db.droneSlotLimit = 1;
@@ -94,14 +94,14 @@ final class gg extends DualLinkNode {
           an.waveIndex = 0;
           Bzip2State.field_J = new wc[6];
           var1_int = 0;
-          if (-1 != oh.levelIndex) {
-            if (!MidiNoteMixer.field_r[oh.levelIndex]) {
-              for (var2 = cj.field_e[oh.levelIndex]; var2 < 6 + cj.field_e[oh.levelIndex]; var2++) {
+          if (-1 != OpenGlShaderProgram.levelIndex) {
+            if (!MidiNoteMixer.field_r[OpenGlShaderProgram.levelIndex]) {
+              for (var2 = cj.field_e[OpenGlShaderProgram.levelIndex]; var2 < 6 + cj.field_e[OpenGlShaderProgram.levelIndex]; var2++) {
                 Bzip2State.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
               }
             } else {
-              Bzip2State.field_J = ((om) (ab.field_a.a(107, (long)oh.levelIndex))).a(-120);
+              Bzip2State.field_J = ((om) (ab.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).a(-120);
             }
           }
           FadingWidget.score = 0;
@@ -114,7 +114,7 @@ final class gg extends DualLinkNode {
           MusicPatch.simulationPaused = false;
           ke.a(false);
           oc.field_e = 1000;
-          TextLayout.a(0, oh.levelIndex % 5 + 1);
+          TextLayout.a(0, OpenGlShaderProgram.levelIndex % 5 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -41,7 +41,7 @@ class jb extends se {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + ga.field_g.a(0, param0.position, var4, 116, var3_int, param0.payload);
-            var5 = sd.a(var4, 0, var3_int, 26564);
+            var5 = SoftLruCache.decodeCp1252(var4, 0, var3_int, 26564);
             if (param2 == -14832) {
               stackIn_7_0 = var5;
               return stackIn_7_0;

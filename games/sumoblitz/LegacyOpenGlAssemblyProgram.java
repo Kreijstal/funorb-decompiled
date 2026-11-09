@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk {
+final class LegacyOpenGlAssemblyProgram {
     static String[] levelLoadStepLabels;
-    int field_a;
-    private LegacyOpenGlGraphicsToolkit field_c;
+    int programId;
+    private LegacyOpenGlGraphicsToolkit toolkit;
     static String field_d;
     static boolean field_e;
 
     protected final void finalize() throws Throwable {
-        this.field_c.a(this.field_a, (byte) 113);
+        this.toolkit.queueAssemblyProgramDeletion(this.programId, (byte) 113);
         super.finalize();
     }
 
@@ -66,8 +66,8 @@ final class vk {
                 pd.field_q[incrementValue$0] = var12;
               }
             }
-            vk.a(var9, param1, param2, var8, param4, param5, param6);
-            vk.a(param0, var10, (byte) -107, param3, param4, var8, param6);
+            LegacyOpenGlAssemblyProgram.a(var9, param1, param2, var8, param4, param5, param6);
+            LegacyOpenGlAssemblyProgram.a(param0, var10, (byte) -107, param3, param4, var8, param6);
             return;
           }
           for (var7_intLifetime1 = -1 + param3; var7_intLifetime1 > param5; var7_intLifetime1--) {
@@ -90,7 +90,7 @@ final class vk {
 
     final static void a(int param0) {
         if (param0 > -31) {
-          vk.a(-31);
+          LegacyOpenGlAssemblyProgram.a(-31);
         }
         qr.field_c = new IntrusiveDeque();
     }
@@ -98,17 +98,17 @@ final class vk {
     public static void b(int param0) {
         levelLoadStepLabels = null;
         if (param0 != 429166529) {
-          vk.a(100, 10, (byte) 96, 17, -1, -25, true);
+          LegacyOpenGlAssemblyProgram.a(100, 10, (byte) 96, 17, -1, -25, true);
         }
         field_d = null;
     }
 
-    vk(LegacyOpenGlGraphicsToolkit param0, int param1, int param2) {
+    LegacyOpenGlAssemblyProgram(LegacyOpenGlGraphicsToolkit owner, int target, int id) {
         try {
-          this.field_a = param2;
-          this.field_c = param0;
+          this.programId = id;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (owner != null ? "{...}" : "null") + ',' + target + ',' + id + ')');
         }
     }
 

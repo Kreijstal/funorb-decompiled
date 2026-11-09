@@ -4,9 +4,9 @@
 final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     static String loginText;
     private boolean field_e;
-    private sk field_f;
+    private WaterTextureResources field_f;
     private boolean field_h;
-    private oh field_j;
+    private OpenGlShaderProgram field_j;
     static ToolkitSprite field_i;
 
     final boolean b(byte param0) {
@@ -27,7 +27,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           var5 = (float)(1 << ((61 & param2) >> 3)) / 32.0f;
           var6 = param1 & 65535;
           var7 = (float)((param1 & 213452) >> 16) / 8.0f;
-          var8 = this.field_j.field_d;
+          var8 = this.field_j.programHandle;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_b.field_kc % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
@@ -47,7 +47,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         field_i = null;
     }
 
-    OpenGlEnvironmentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, sk param2) {
+    OpenGlEnvironmentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, WaterTextureResources param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -58,20 +58,20 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qj var4 = null;
+        OpenGlShader var4 = null;
         RuntimeException var4_ref = null;
-        qj var5 = null;
-        qj var6 = null;
+        OpenGlShader var5 = null;
+        OpenGlShader var6 = null;
         try {
           this.field_f = param2;
           if (param1 != null &&
             param0.field_Jc &&
             param0.field_Mc) {
-            var6 = ClientException.a(35633, param0, param1.fetchNamedFile("environment_mapped_water_v", "gl", -1), -124);
+            var6 = ClientException.compileShader(35633, param0, param1.fetchNamedFile("environment_mapped_water_v", "gl", -1), -124);
             var4 = var6;
-            var5 = ClientException.a(35632, param0, param1.fetchNamedFile("environment_mapped_water_f", "gl", -1), -115);
-            this.field_j = ht.a(new qj[]{var6, var5}, param0, (byte) 109);
-            stackIn_9_1 = (this.field_j != null) && (this.field_f.a(-128));
+            var5 = ClientException.compileShader(35632, param0, param1.fetchNamedFile("environment_mapped_water_f", "gl", -1), -115);
+            this.field_j = LegacyOpenGlTexture.linkShaderProgram(new OpenGlShader[]{var6, var5}, param0, (byte) 109);
+            stackIn_9_1 = (this.field_j != null) && (this.field_f.ensureNormalMap(-128));
             this.field_e = stackIn_9_1;
             return;
           }
@@ -152,8 +152,8 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           this.field_b.g(1, param1 ^ -20137);
           this.field_b.a(var3, 122);
           this.field_b.g(0, -125);
-          this.field_b.a(this.field_f.field_e, 127);
-          var4 = this.field_j.field_d;
+          this.field_b.a(this.field_f.normalMap, 127);
+          var4 = this.field_j.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
@@ -166,7 +166,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     final void c(boolean param0) {
         if (param0) {
-          this.field_j = (oh) null;
+          this.field_j = (OpenGlShaderProgram) null;
         }
         if (this.field_h) {
           this.field_b.g(1, -124);

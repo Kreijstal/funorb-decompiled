@@ -127,7 +127,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           boolean decompiledFrameRemainder1 = true;
           if (3 == param2) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - DropDownWidget.field_C;
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
             ts.field_a = ts.field_a - nq.field_i;
           } else {
             if (param2 != 4 &&
@@ -135,12 +135,12 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               6 != param2 &&
               param2 != 7) {
               if (param2 == 10) {
-                GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   2 == param2)) {
-                  fb.field_a = fb.field_a + oh.levelIndex;
+                  fb.field_a = fb.field_a + OpenGlShaderProgram.levelIndex;
                 }
               }
               decompiledFrameRemainder1 = false;
@@ -149,7 +149,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               ts.field_a = ts.field_a + nq.field_i;
             }
           }
-          if (!f.field_w) {
+          if (!LegacyOpenGlSpriteTexture.field_w) {
             OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -159,12 +159,12 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               6 != param2 &&
               param2 != 7) {
               if (10 == param2) {
-                GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   param2 == 2)) {
-                  fb.field_a = fb.field_a - oh.levelIndex;
+                  fb.field_a = fb.field_a - OpenGlShaderProgram.levelIndex;
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -174,7 +174,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             }
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + DropDownWidget.field_C;
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
             ts.field_a = ts.field_a + nq.field_i;
           }
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
@@ -255,7 +255,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
 
     final static void e(boolean param0) {
         try {
-          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + oh.toReturnToTheText + "<br>" + "<br>" + c.ifYouDoNothingText;
+          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + c.ifYouDoNothingText;
           if (!param0) {
             th.e(false);
           }

@@ -71,7 +71,7 @@ final class TextureFilter {
             if (cd.field_d != 4) {
               return -1;
             }
-            jk.field_b.attachConnection(vk.field_e, (byte) 114, InstrumentNoteMask.field_n);
+            jk.field_b.attachConnection(LegacyOpenGlAssemblyProgram.field_e, (byte) 114, InstrumentNoteMask.field_n);
             BufferedSocket.field_p = null;
             InstrumentNoteMask.field_n = null;
             cd.field_d = 0;

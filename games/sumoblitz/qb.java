@@ -28,7 +28,7 @@ final class qb extends ff {
 
     final static void d(int param0) {
         il.field_a = FadingWidget.score;
-        oh.levelIndex = oh.levelIndex + 1;
+        OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
         kr.field_e = 3;
         uk.field_ob = true;
         if (!jl.a(-89)) {
@@ -40,7 +40,7 @@ final class qb extends ff {
         FadingWidget.score = 0;
         CacheReferenceNode.field_u = 0;
         gn.a(param0, true);
-        TextLayout.a(0, 1 + oh.levelIndex % 5);
+        TextLayout.a(0, 1 + OpenGlShaderProgram.levelIndex % 5);
     }
 
     static {

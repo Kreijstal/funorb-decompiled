@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
-    sk field_Mb;
+    WaterTextureResources field_Mb;
     private Hashtable field_Q;
     Object field_Ib;
     int field_Sb;
@@ -48,7 +48,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_Vb;
     private int field_xb;
     int field_kc;
-    private mr field_lc;
+    private HardwareTextureCache field_lc;
     TextureCombineOperation[] field_K;
     boolean field_Bb;
     boolean field_I;
@@ -239,7 +239,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void h(byte param0) {
         if (param0 > -77) {
-          this.field_lc = (mr) null;
+          this.field_lc = (HardwareTextureCache) null;
         }
     }
 
@@ -627,7 +627,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_yb = new jl(this);
         this.field_M = this.createIndexBuffer(3, true);
         this.P(-55);
-        this.field_Mb = new sk(this);
+        this.field_Mb = new WaterTextureResources(this);
         this.field_X[1] = this.createShaderEffect(0, 1);
         this.field_X[2] = this.createShaderEffect(0, 2);
         this.field_X[4] = this.createShaderEffect(0, 4);
@@ -814,7 +814,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         qf.field_a = 0;
         GraphicsHeap.field_k = -1;
         up.field_d = false;
-        hp.field_l = null;
+        LegacyOpenGlCubeTexture.field_l = null;
         int var1 = 47 / ((9 - param0) / 43);
     }
 
@@ -1557,7 +1557,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_rb = var11.width;
             kr.a(true, -107, false);
             if (null != this.textureProvider) {
-              this.field_lc = new mr(this, this.textureProvider);
+              this.field_lc = new HardwareTextureCache(this, this.textureProvider);
               this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.textureProvider.a(32075), this.field_dc);
               for (var8 = 0; var8 < this.textureProvider.a(32075); var8++) {
                 var9 = this.textureProvider.a(-29193, var8);
@@ -1740,7 +1740,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     void updateTime(int timeMillis) {
         if (this.field_lc != null) {
-          this.field_lc.a(125);
+          this.field_lc.ageTextures(125);
         }
         this.field_kc = 2147483647 & timeMillis;
     }
@@ -2009,7 +2009,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           if (0 > param0) {
             this.l(0);
           } else {
-            var5 = this.field_lc.a(param2 + 37, param0);
+            var5 = this.field_lc.getTexture(param2 + 37, param0);
             var10 = this.textureProvider.a(-29193, param0);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {

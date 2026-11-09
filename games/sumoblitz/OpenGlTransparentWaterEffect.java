@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlTransparentWaterEffect extends ShaderEffect {
-    private sk field_f;
+    private WaterTextureResources field_f;
     static ts field_h;
     private OpenGlGraphicsToolkit field_j;
-    private wg field_g;
+    private OpenGlAssemblyProgram field_g;
     static int field_e;
     static boolean field_k;
     static SpriteData[] field_i;
 
     final void a(boolean param0, int param1) {
-        jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_b);
+        jaggl.OpenGL.glBindProgramARB(34336, this.field_g.programId);
         jaggl.OpenGL.glEnable(34336);
         this.field_b.a(FontMetrics.PREVIOUS, 0, param1 - 20186);
         if (param1 != 20186) {
@@ -108,13 +108,13 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         if (param0 != 34023) {
           field_e = 83;
         }
-        if (this.field_f.field_g) {
+        if (this.field_f.useVolumeTextures) {
           var4_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-          this.field_b.a(this.field_f.field_f, 96);
+          this.field_b.a(this.field_f.animatedVolume, 96);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
           var4 = 16 * (this.field_b.field_kc % 4000) / 4000;
-          this.field_b.a(this.field_f.field_d[var4], 114);
+          this.field_b.a(this.field_f.animatedSlices[var4], 114);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
     }
@@ -307,7 +307,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    OpenGlTransparentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, sk param2) {
+    OpenGlTransparentWaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1, WaterTextureResources param2) {
         super(param0);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -322,9 +322,9 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           this.field_f = param2;
           this.field_j = param0;
           if (param1 != null &&
-            this.field_f.c(83) &&
+            this.field_f.hasAnimatedTextures(83) &&
             this.field_j.field_Ac) {
-            this.field_g = ve.a((byte) 103, this.field_j, param1.fetchNamedFile("transparent_water", "gl", -1), 34336);
+            this.field_g = ve.compileAssemblyProgram((byte) 103, this.field_j, param1.fetchNamedFile("transparent_water", "gl", -1), 34336);
             return;
           }
           this.field_g = null;

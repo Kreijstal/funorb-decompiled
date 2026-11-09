@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class sd {
-    private int field_d;
-    private SecondaryNodeDeque field_h;
-    private int field_g;
+final class SoftLruCache {
+    private int remainingCapacity;
+    private SecondaryNodeDeque recency;
+    private int capacity;
     static PacketBuffer field_e;
     static String achievementsThisGameText;
-    private IterableNodeHashTable field_c;
+    private IterableNodeHashTable entries;
     static SpriteData[] field_a;
     static int field_f;
 
@@ -65,36 +65,36 @@ final class sd {
         }
     }
 
-    final Object a(byte param0) {
+    final Object nextValue(byte guard) {
         CacheReferenceNode var2;
         Object var3;
         CacheReferenceNode var4;
         int var5;
         byte[] var6;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (CacheReferenceNode) (this.field_c.next(-1));
+        var2 = (CacheReferenceNode) (this.entries.next(-1));
         while (var2 != null) {
           var3 = var2.getValue((byte) 107);
           if (var3 != null) {
             return var3;
           }
           var4 = var2;
-          var2 = (CacheReferenceNode) (this.field_c.next(-1));
+          var2 = (CacheReferenceNode) (this.entries.next(-1));
           var4.unlink(false);
           var4.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var4.weight;
+          this.remainingCapacity = this.remainingCapacity + var4.weight;
         }
-        if (param0 == -92) {
+        if (guard == -92) {
           return null;
         }
         var6 = (byte[]) null;
-        sd.a((byte[]) null, 41, -100, 63);
+        SoftLruCache.decodeCp1252((byte[]) null, 41, -100, 63);
         return null;
     }
 
-    final Object a(long param0, int param1) {
+    final Object get(long key, int guard) {
         StrongCacheReference var6 = null;
-        CacheReferenceNode var7 = (CacheReferenceNode) (this.field_c.get(575, param0));
+        CacheReferenceNode var7 = (CacheReferenceNode) (this.entries.get(575, key));
         if (var7 == null) {
           return null;
         }
@@ -102,63 +102,63 @@ final class sd {
         if (var5 == null) {
           var7.unlink(false);
           var7.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var7.weight;
+          this.remainingCapacity = this.remainingCapacity + var7.weight;
           return null;
         }
         if (var7.isSoftReference(115)) {
           var6 = new StrongCacheReference(var5, var7.weight);
-          this.field_c.put(-20657, var6, var7.key);
-          this.field_h.addLast((DualLinkNode) (var6), (byte) -122);
+          this.entries.put(-20657, var6, var7.key);
+          this.recency.addLast((DualLinkNode) (var6), (byte) -122);
           ((CacheReferenceNode) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(false);
           var7.unlinkSecondary(-5106);
         } else {
-          this.field_h.addLast((DualLinkNode) (var7), (byte) -124);
+          this.recency.addLast((DualLinkNode) (var7), (byte) -124);
           var7.secondaryKey = 0L;
         }
-        if (param1 <= 43) {
-          this.field_d = 126;
+        if (guard <= 43) {
+          this.remainingCapacity = 126;
         }
         return var5;
     }
 
-    final void a(int param0, int param1) {
+    final void age(int maxStrongAge, int guard) {
         long fieldTemp$0 = 0L;
         CacheReferenceNode var3;
         SoftCacheReference var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 != 22663) {
+        if (guard != 22663) {
           return;
         }
-        var3 = (CacheReferenceNode) (this.field_h.first(-1));
+        var3 = (CacheReferenceNode) (this.recency.first(-1));
         while (var3 != null) {
-          if (var3.isSoftReference(param1 ^ -22690)) {
+          if (var3.isSoftReference(guard ^ -22690)) {
             if (var3.getValue((byte) -62) == null) {
               var3.unlink(false);
               var3.unlinkSecondary(-5106);
-              this.field_d = this.field_d + var3.weight;
+              this.remainingCapacity = this.remainingCapacity + var3.weight;
             }
           } else {
             fieldTemp$0 = var3.secondaryKey + 1L;
             var3.secondaryKey = var3.secondaryKey + 1L;
-            if (fieldTemp$0 <= (long)param0) {
-              var3 = (CacheReferenceNode) (this.field_h.next((byte) -122));
+            if (fieldTemp$0 <= (long)maxStrongAge) {
+              var3 = (CacheReferenceNode) (this.recency.next((byte) -122));
               continue;
             }
             var4 = new SoftCacheReference(var3.getValue((byte) -102), var3.weight);
-            this.field_c.put(param1 ^ -2104, var4, var3.key);
+            this.entries.put(guard ^ -2104, var4, var3.key);
             pt.a(var3, 2066481250, var4);
             var3.unlink(false);
             var3.unlinkSecondary(-5106);
           }
-          var3 = (CacheReferenceNode) (this.field_h.next((byte) -122));
+          var3 = (CacheReferenceNode) (this.recency.next((byte) -122));
         }
         return;
     }
 
-    static long a(long param0, long param1) {
-        return param0 & param1;
+    static long bitwiseAnd(long left, long right) {
+        return left & right;
     }
 
     final static void a(pl param0, int param1) {
@@ -369,8 +369,8 @@ final class sd {
         }
     }
 
-    sd(int param0) {
-        this(param0, param0);
+    SoftLruCache(int maxWeight) {
+        this(maxWeight, maxWeight);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
@@ -402,19 +402,19 @@ final class sd {
         }
     }
 
-    private final void a(CacheReferenceNode param0, byte param1) {
+    private final void removeEntry(CacheReferenceNode entry, byte guard) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != null) {
-            param0.unlink(false);
-            param0.unlinkSecondary(-5106);
-            this.field_d = this.field_d + param0.weight;
+          if (entry != null) {
+            entry.unlink(false);
+            entry.unlinkSecondary(-5106);
+            this.remainingCapacity = this.remainingCapacity + entry.weight;
           }
-          if (param1 != -124) {
+          if (guard != -124) {
             field_a = (SpriteData[]) null;
           }
           return;
@@ -423,34 +423,34 @@ final class sd {
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("sd.M(");
-          if (param0 == null) {
+          if (entry == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(long param0, Object param1, byte param2) {
+    final void put(long key, Object value, byte guard) {
         try {
-          this.a(1, (byte) -95, param1, param0);
-          if (param2 != 19) {
-            this.a(-95L, false);
+          this.putWeighted(1, (byte) -95, value, key);
+          if (guard != 19) {
+            this.remove(-95L, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.J(" + key + ',' + (value != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final Object b(int param0) {
+    final Object firstValue(int guard) {
         CacheReferenceNode var2;
         Object var3;
         CacheReferenceNode var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (CacheReferenceNode) (this.field_c.first(-1));
-        if (param0 != 0) {
+        var2 = (CacheReferenceNode) (this.entries.first(-1));
+        if (guard != 0) {
           return (Object) null;
         }
         while (var2 != null) {
@@ -459,15 +459,15 @@ final class sd {
             return var3;
           }
           var4 = var2;
-          var2 = (CacheReferenceNode) (this.field_c.next(-1));
+          var2 = (CacheReferenceNode) (this.entries.next(-1));
           var4.unlink(false);
           var4.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var4.weight;
+          this.remainingCapacity = this.remainingCapacity + var4.weight;
         }
         return null;
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252(byte[] bytes, int offset, int length, int guard) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -486,16 +486,16 @@ final class sd {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var11 = new char[param2];
+          var11 = new char[length];
           var10 = var11;
           var4 = var10;
-          if (param3 != 26564) {
+          if (guard != 26564) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
           var5 = 0;
-          for (var6 = 0; var6 < param2; var6++) {
-            var7 = 255 & param0[param1 + var6];
+          for (var6 = 0; var6 < length; var6++) {
+            var7 = 255 & bytes[offset + var6];
             if (0 != var7) {
               if (var7 >= 128 &&
                 var7 < 160) {
@@ -517,21 +517,21 @@ final class sd {
           var4_ref = decompiledCaughtException;
           stackIn_21_0 = var4_ref;
           stackIn_21_1 = new StringBuilder().append("sd.H(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(offset).append(',').append(length).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void a(long param0, boolean param1) {
-        CacheReferenceNode var4 = (CacheReferenceNode) (this.field_c.get(575, param0));
-        if (param1) {
-          this.a(-43, (byte) -104, (Object) null, -101L);
+    private final void remove(long key, boolean guard) {
+        CacheReferenceNode var4 = (CacheReferenceNode) (this.entries.get(575, key));
+        if (guard) {
+          this.putWeighted(-43, (byte) -104, (Object) null, -101L);
         }
-        this.a(var4, (byte) -124);
+        this.removeEntry(var4, (byte) -124);
     }
 
     public static void releaseStatics(int param0) {
@@ -543,42 +543,42 @@ final class sd {
         field_e = null;
     }
 
-    private final void a(int param0, byte param1, Object param2, long param3) {
+    private final void putWeighted(int weight, byte guard, Object value, long key) {
         CacheReferenceNode var6 = null;
         StrongCacheReference var6_ref = null;
         int var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_g < param0) {
+          if (this.capacity < weight) {
             throw new IllegalStateException();
           }
-          this.a(param3, false);
-          this.field_d = this.field_d - param0;
-          while (0 > this.field_d) {
-            var6 = (CacheReferenceNode) (this.field_h.removeFirst((byte) -61));
-            this.a(var6, (byte) -124);
+          this.remove(key, false);
+          this.remainingCapacity = this.remainingCapacity - weight;
+          while (0 > this.remainingCapacity) {
+            var6 = (CacheReferenceNode) (this.recency.removeFirst((byte) -61));
+            this.removeEntry(var6, (byte) -124);
           }
-          var6_ref = new StrongCacheReference(param2, param0);
-          this.field_c.put(-20657, var6_ref, param3);
-          int var7 = 2 % ((12 - param1) / 33);
-          this.field_h.addLast((DualLinkNode) (var6_ref), (byte) -122);
+          var6_ref = new StrongCacheReference(value, weight);
+          this.entries.put(-20657, var6_ref, key);
+          int var7 = 2 % ((12 - guard) / 33);
+          this.recency.addLast((DualLinkNode) (var6_ref), (byte) -122);
           ((CacheReferenceNode) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.B(" + weight + ',' + guard + ',' + (value != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 
-    private sd(int param0, int param1) {
+    private SoftLruCache(int maxWeight, int maxBuckets) {
         int var3;
-        this.field_h = new SecondaryNodeDeque();
-        this.field_d = param0;
-        this.field_g = param0;
-        for (var3 = 1; var3 + var3 < param0; var3 = var3 + var3) {
-          if (param1 > var3) {
+        this.recency = new SecondaryNodeDeque();
+        this.remainingCapacity = maxWeight;
+        this.capacity = maxWeight;
+        for (var3 = 1; var3 + var3 < maxWeight; var3 = var3 + var3) {
+          if (maxBuckets > var3) {
             continue;
           }
           break;
         }
-        this.field_c = new IterableNodeHashTable(var3);
+        this.entries = new IterableNodeHashTable(var3);
     }
 
     static {

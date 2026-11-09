@@ -30,7 +30,7 @@ abstract class LegacyOpenGlEffect {
 
     abstract void b(int param0);
 
-    abstract void a(byte param0, int param1, ht param2);
+    abstract void a(byte param0, int param1, LegacyOpenGlTexture param2);
 
     abstract void a(int param0, boolean param1);
 

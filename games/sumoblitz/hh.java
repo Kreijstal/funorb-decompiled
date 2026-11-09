@@ -29,8 +29,8 @@ final class hh extends IOException {
         try {
           try {
             var10 = qn.field_f.getGraphics();
-            if (null == f.field_s) {
-              f.field_s = new java.awt.Font("Helvetica", 1, 13);
+            if (null == LegacyOpenGlSpriteTexture.field_s) {
+              LegacyOpenGlSpriteTexture.field_s = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var10.setColor(java.awt.Color.black);
@@ -50,7 +50,7 @@ final class hh extends IOException {
               var11.setColor(java.awt.Color.black);
               var11.drawRect(1, 1, 301, 31);
               var11.fillRect(param1 * 3 + 2, 2, 300 - 3 * param1, 30);
-              var11.setFont(f.field_s);
+              var11.setFont(LegacyOpenGlSpriteTexture.field_s);
               if (!param0) {
                 var9 = (String) null;
                 hh.a(true, -9, (java.awt.Color) null, true, (String) null);
@@ -69,16 +69,16 @@ final class hh extends IOException {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(var7 + 1, 1 + var8, 301, 31);
               var10.fillRect(param1 * 3 + (var7 + 2), var8 + 2, 300 - param1 * 3, 30);
-              var10.setFont(f.field_s);
+              var10.setFont(LegacyOpenGlSpriteTexture.field_s);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, var7 + (304 - param4.length() * 6) / 2, 22 + var8);
             }
-            if (vk.field_d == null) {
+            if (LegacyOpenGlAssemblyProgram.field_d == null) {
               return;
             }
-            var10.setFont(f.field_s);
+            var10.setFont(LegacyOpenGlSpriteTexture.field_s);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(vk.field_d, gi.field_h / 2 - vk.field_d.length() * 6 / 2, wq.field_b / 2 - 26);
+            var10.drawString(LegacyOpenGlAssemblyProgram.field_d, gi.field_h / 2 - LegacyOpenGlAssemblyProgram.field_d.length() * 6 / 2, wq.field_b / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

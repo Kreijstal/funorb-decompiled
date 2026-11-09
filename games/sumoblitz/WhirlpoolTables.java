@@ -98,7 +98,7 @@ final class WhirlpoolTables {
         roundConstants[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (-1 + var0);
-            roundConstants[var0] = bi.a(bi.a(bi.a(bi.a(sd.a(4278190080L, roundTables[4][4 + var1]), bi.a(sd.a(1095216660480L, roundTables[3][var1 + 3]), bi.a(sd.a(280375465082880L, roundTables[2][var1 + 2]), bi.a(sd.a(roundTables[1][var1 + 1], 71776119061217280L), sd.a(roundTables[0][var1], -72057594037927936L))))), sd.a(16711680L, roundTables[5][var1 + 5])), sd.a(roundTables[6][6 + var1], 65280L)), sd.a(roundTables[7][7 + var1], 255L));
+            roundConstants[var0] = bi.a(bi.a(bi.a(bi.a(SoftLruCache.bitwiseAnd(4278190080L, roundTables[4][4 + var1]), bi.a(SoftLruCache.bitwiseAnd(1095216660480L, roundTables[3][var1 + 3]), bi.a(SoftLruCache.bitwiseAnd(280375465082880L, roundTables[2][var1 + 2]), bi.a(SoftLruCache.bitwiseAnd(roundTables[1][var1 + 1], 71776119061217280L), SoftLruCache.bitwiseAnd(roundTables[0][var1], -72057594037927936L))))), SoftLruCache.bitwiseAnd(16711680L, roundTables[5][var1 + 5])), SoftLruCache.bitwiseAnd(roundTables[6][6 + var1], 65280L)), SoftLruCache.bitwiseAnd(roundTables[7][7 + var1], 255L));
         }
         resumeGameText = "Resume Game";
     }

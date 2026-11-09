@@ -61,7 +61,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[1] = WhirlpoolTables.resumeGameText;
         GameClientShell.field_u[5] = RenderPresentationException.menuText;
         GameClientShell.field_u[11] = RasterBuffer.quitText;
-        GameClientShell.field_u[14] = kf.achievementsText;
+        GameClientShell.field_u[14] = LegacyOpenGlRenderbuffer.achievementsText;
         GameClientShell.field_u[6] = RenderPresentationException.menuText;
         GameClientShell.field_u[12] = ff.soundText;
         GameClientShell.field_u[7] = nj.endGameText;

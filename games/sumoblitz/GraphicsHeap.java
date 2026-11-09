@@ -77,9 +77,9 @@ abstract class GraphicsHeap extends IntrusiveNode {
     final static int c(boolean param0) {
         if (param0) {
           field_l = (int[]) null;
-          return ht.field_h;
+          return LegacyOpenGlTexture.field_h;
         }
-        return ht.field_h;
+        return LegacyOpenGlTexture.field_h;
     }
 
     protected GraphicsHeap() {

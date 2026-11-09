@@ -3,7 +3,7 @@
  */
 final class wt extends LegacyOpenGlEffect {
     private boolean field_j;
-    private hp[] field_e;
+    private LegacyOpenGlCubeTexture[] field_e;
     static ArchiveCatalog field_i;
     private tq field_f;
     private boolean field_g;
@@ -16,9 +16,9 @@ final class wt extends LegacyOpenGlEffect {
         return true;
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.field_b.a(33, param2);
+          this.field_b.bindTexture(33, param2);
           this.field_b.c(param1, true);
           if (param0 != 35) {
             this.a((byte) 46, 96, -43);
@@ -179,10 +179,10 @@ final class wt extends LegacyOpenGlEffect {
                 var9++;
               }
             }
-            this.field_e = new hp[3];
-            this.field_e[0] = new hp(this.field_b, 6406, 64, false, var27, 6406);
-            this.field_e[1] = new hp(this.field_b, 6406, 64, false, var28, 6406);
-            this.field_e[2] = new hp(this.field_b, 6406, 64, false, var29, 6406);
+            this.field_e = new LegacyOpenGlCubeTexture[3];
+            this.field_e[0] = new LegacyOpenGlCubeTexture(this.field_b, 6406, 64, false, var27, 6406);
+            this.field_e[1] = new LegacyOpenGlCubeTexture(this.field_b, 6406, 64, false, var28, 6406);
+            this.field_e[2] = new LegacyOpenGlCubeTexture(this.field_b, 6406, 64, false, var29, 6406);
             this.d(-125);
             return;
           }
@@ -213,10 +213,10 @@ final class wt extends LegacyOpenGlEffect {
         if (this.field_g) {
           if (!this.field_j) {
             this.field_b.g(2, 124);
-            this.field_b.a(39, (ht) null);
+            this.field_b.bindTexture(39, (LegacyOpenGlTexture) null);
           }
           this.field_b.g(1, 91);
-          this.field_b.a(59, (ht) null);
+          this.field_b.bindTexture(59, (LegacyOpenGlTexture) null);
           this.field_b.g(0, 92);
           this.field_f.a((byte) 121, '\001');
           this.field_g = false;
@@ -225,7 +225,7 @@ final class wt extends LegacyOpenGlEffect {
         }
         this.field_b.a(20685, 8448, 8448);
         if (param0 > -125) {
-          this.field_e = (hp[]) null;
+          this.field_e = (LegacyOpenGlCubeTexture[]) null;
         }
     }
 
@@ -237,7 +237,7 @@ final class wt extends LegacyOpenGlEffect {
           param1) {
           if (!this.field_j) {
             this.field_b.g(2, 89);
-            this.field_b.a(101, this.field_b.field_n);
+            this.field_b.bindTexture(101, this.field_b.field_n);
             this.field_b.g(0, 105);
           }
           this.field_f.a((byte) 121, '\0');
@@ -257,7 +257,7 @@ final class wt extends LegacyOpenGlEffect {
     final void a(byte param0, int param1, int param2) {
         if (this.field_g) {
           this.field_b.g(1, 122);
-          this.field_b.a(107, this.field_e[param1 - 1]);
+          this.field_b.bindTexture(107, this.field_e[param1 - 1]);
           this.field_b.g(0, 95);
         }
         if (param0 < 39) {

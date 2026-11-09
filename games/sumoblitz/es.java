@@ -4,7 +4,7 @@
 final class es extends LegacyOpenGlEffect {
     private ch field_f;
     private int field_h;
-    private vk field_i;
+    private LegacyOpenGlAssemblyProgram field_i;
     private float field_g;
     private tq field_k;
     private float[] field_e;
@@ -39,7 +39,7 @@ final class es extends LegacyOpenGlEffect {
           return;
         }
         if ((param1 & 128) != 0) {
-          this.field_b.a(32, (ht) null);
+          this.field_b.bindTexture(32, (LegacyOpenGlTexture) null);
           this.field_b.g(0, 122);
           if ((param1 & 64) != 0) {
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
@@ -73,9 +73,9 @@ final class es extends LegacyOpenGlEffect {
         }
         if ((1 & param2) != 1) {
           if (!this.field_f.field_g) {
-            this.field_b.a(86, this.field_f.field_i[0]);
+            this.field_b.bindTexture(86, this.field_f.field_i[0]);
           } else {
-            this.field_b.a(54, this.field_f.field_b);
+            this.field_b.bindTexture(54, this.field_f.field_b);
           }
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
           this.field_b.g(0, 122);
@@ -99,7 +99,7 @@ final class es extends LegacyOpenGlEffect {
           }
         } else {
           if (this.field_f.field_g) {
-            this.field_b.a(36, this.field_f.field_b);
+            this.field_b.bindTexture(36, this.field_f.field_b);
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, this.field_g, 0.0f, 0.0f, 1.0f);
             this.field_b.g(0, 122);
             if ((param1 & 64) != 0) {
@@ -132,7 +132,7 @@ final class es extends LegacyOpenGlEffect {
             }
           } else {
             var4Lifetime1 = 16 * (this.field_b.field_Ac % 4000) / 4000;
-            this.field_b.a(13, this.field_f.field_i[var4Lifetime1]);
+            this.field_b.bindTexture(13, this.field_f.field_i[var4Lifetime1]);
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
             this.field_b.g(0, 122);
             if ((param1 & 64) != 0) {
@@ -163,9 +163,9 @@ final class es extends LegacyOpenGlEffect {
         }
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.field_b.a(param0 ^ 9, param2);
+          this.field_b.bindTexture(param0 ^ 9, param2);
           this.field_b.c(param1, true);
           if (param0 != 35) {
             this.a(false);
@@ -181,7 +181,7 @@ final class es extends LegacyOpenGlEffect {
         }
         this.field_k.a((byte) 121, '\001');
         this.field_b.g(1, 119);
-        this.field_b.a(16, (ht) null);
+        this.field_b.bindTexture(16, (LegacyOpenGlTexture) null);
         this.field_b.g(0, 118);
         if (param0 > -125) {
           this.a(53, false);
@@ -213,7 +213,7 @@ final class es extends LegacyOpenGlEffect {
           this.field_f = param1;
           if (this.field_b.field_Ib &&
             this.field_b.field_T >= 2) {
-            this.field_i = wr.a(this.field_b, 34336, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", -24674);
+            this.field_i = wr.compileAssemblyProgram(this.field_b, 34336, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", -24674);
             if (null == this.field_i) {
               return;
             }
@@ -268,7 +268,7 @@ final class es extends LegacyOpenGlEffect {
         this.field_b.a(20685, 7681, 260);
         this.field_b.a(121, 0, 34166, 770);
         this.field_b.g(0, 96);
-        jaggl.OpenGL.glBindProgramARB(34336, this.field_i.field_a);
+        jaggl.OpenGL.glBindProgramARB(34336, this.field_i.programId);
         jaggl.OpenGL.glEnable(34336);
         this.field_k.a(true);
         this.field_k.a(1, 4864);

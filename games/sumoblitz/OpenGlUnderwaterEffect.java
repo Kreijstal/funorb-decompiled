@@ -4,17 +4,17 @@
 final class OpenGlUnderwaterEffect extends ShaderEffect {
     static int[] field_k;
     static String field_n;
-    private wg field_f;
+    private OpenGlAssemblyProgram field_f;
     static int field_r;
     static IntrusiveDeque field_q;
     private boolean field_e;
-    private wg field_g;
+    private OpenGlAssemblyProgram field_g;
     private boolean field_u;
     static ToolkitSprite field_t;
     private float[] field_s;
-    private wg field_m;
+    private OpenGlAssemblyProgram field_m;
     private boolean field_h;
-    private wg field_j;
+    private OpenGlAssemblyProgram field_j;
     private Texture2D field_o;
     private boolean field_l;
     static int field_i;
@@ -75,9 +75,9 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         int var2 = this.field_b.M(-125);
         AffineTransform3D var3 = this.field_b.g((byte) -28);
         if (this.field_e) {
-          jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.field_b : this.field_j.field_b);
+          jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.programId : this.field_j.programId);
         } else {
-          jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? this.field_f.field_b : this.field_m.field_b);
+          jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? this.field_f.programId : this.field_m.programId);
         }
         jaggl.OpenGL.glEnable(34336);
         this.field_l = true;
@@ -109,10 +109,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         try {
           if (param1 != null &&
             param0.field_Ac) {
-            this.field_m = ve.a((byte) 83, param0, param1.fetchNamedFile("uw_ground_unlit", "gl", -1), 34336);
-            this.field_j = ve.a((byte) 83, param0, param1.fetchNamedFile("uw_ground_lit", "gl", -1), 34336);
-            this.field_f = ve.a((byte) 73, param0, param1.fetchNamedFile("uw_model_unlit", "gl", -1), 34336);
-            this.field_g = ve.a((byte) -120, param0, param1.fetchNamedFile("uw_model_lit", "gl", -1), 34336);
+            this.field_m = ve.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_unlit", "gl", -1), 34336);
+            this.field_j = ve.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_lit", "gl", -1), 34336);
+            this.field_f = ve.compileAssemblyProgram((byte) 73, param0, param1.fetchNamedFile("uw_model_unlit", "gl", -1), 34336);
+            this.field_g = ve.compileAssemblyProgram((byte) -120, param0, param1.fetchNamedFile("uw_model_lit", "gl", -1), 34336);
             stackIn_7_0 = (this.field_f == null) ? 0 : 1;
             if (this.field_j == null) {
               stackIn_10_1 = 0;
@@ -203,7 +203,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     final static void d(byte param0) {
         int var1 = uv.b(-25843);
         int var2 = fu.e((byte) 78);
-        CompactMeshGeometry.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
+        CompactMeshGeometry.field_v.a(var1 + (LegacyOpenGlRenderbuffer.field_B << 1), -LegacyOpenGlRenderbuffer.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
         if (param0 == -7) {
           sj.a((byte) 124);
           return;

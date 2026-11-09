@@ -117,7 +117,7 @@ final class qc {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         if (!vs.b((byte) 9)) {
           ph.gameplaySession.submitSessionStatistics(-113);
-          mr.field_f = null;
+          HardwareTextureCache.field_f = null;
         } else {
           if (0 < IntrusiveNodeHashTable.field_c) {
             StrongCacheReference.switchMenuScreen(-7753, param0, 6);

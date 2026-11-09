@@ -103,7 +103,7 @@ final class pl extends PacketBuffer {
           param0.removeMouseListener(wk.field_h);
           param0.removeMouseMotionListener(wk.field_h);
           param0.removeFocusListener(wk.field_h);
-          b.field_a = 0;
+          LegacyOpenGlNormalMapGenerator.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -47,7 +47,7 @@ final class kj extends LegacyOpenGlEffect {
         this.field_f.a((byte) 121, '\001');
         if (param0 <= -125) {
           this.field_b.g(1, 100);
-          this.field_b.a(88, (ht) null);
+          this.field_b.bindTexture(88, (LegacyOpenGlTexture) null);
           this.field_b.g(0, 110);
           return;
         }
@@ -81,7 +81,7 @@ final class kj extends LegacyOpenGlEffect {
             jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
           } else {
             var8 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-            this.field_b.a(90, this.field_g.field_a[var8 % 16]);
+            this.field_b.bindTexture(90, this.field_g.field_a[var8 % 16]);
           }
           this.field_b.g(0, 90);
           if (param0 < 39) {
@@ -108,7 +108,7 @@ final class kj extends LegacyOpenGlEffect {
           jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
         } else {
           var8Lifetime1 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-          this.field_b.a(90, this.field_g.field_a[var8Lifetime1 % 16]);
+          this.field_b.bindTexture(90, this.field_g.field_a[var8Lifetime1 % 16]);
         }
         this.field_b.g(0, 90);
         if (param0 < 39) {
@@ -122,7 +122,7 @@ final class kj extends LegacyOpenGlEffect {
           this.field_f.a((byte) 121, '\0');
           if (this.field_g.field_g) {
             this.field_b.g(1, 120);
-            this.field_b.a(56, this.field_g.field_f);
+            this.field_b.bindTexture(56, this.field_g.field_f);
             this.field_b.g(0, 110);
           }
           return;
@@ -191,12 +191,12 @@ final class kj extends LegacyOpenGlEffect {
         return true;
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         if (param0 != 35) {
           return;
         }
         try {
-          this.field_b.a(46, param2);
+          this.field_b.bindTexture(46, param2);
           this.field_b.c(param1, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

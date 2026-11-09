@@ -19,7 +19,7 @@ final class dn {
         }
         if (null != DropDownListWidget.field_H) {
           if (!DropDownListWidget.field_H.loadIndex((byte) 127)) {
-            return ek.field_k;
+            return LegacyOpenGlTexture3D.field_k;
           }
           return mm.field_c;
         }

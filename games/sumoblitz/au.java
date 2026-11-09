@@ -23,7 +23,7 @@ final class au extends LegacyOpenGlEffect {
         }
         this.field_f.a((byte) 121, '\001');
         this.field_b.g(1, 113);
-        this.field_b.a(78, (ht) null);
+        this.field_b.bindTexture(78, (LegacyOpenGlTexture) null);
         this.field_b.g(0, 121);
         this.field_b.a(20685, 8448, 8448);
         this.field_g = false;
@@ -95,13 +95,13 @@ final class au extends LegacyOpenGlEffect {
         return true;
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         try {
           if (param0 != 35) {
-            ht var5 = (ht) null;
-            this.a((byte) 33, -117, (ht) null);
+            LegacyOpenGlTexture var5 = (LegacyOpenGlTexture) null;
+            this.a((byte) 33, -117, (LegacyOpenGlTexture) null);
           }
-          this.field_b.a(41, param2);
+          this.field_b.bindTexture(41, param2);
           this.field_b.c(param1, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -127,7 +127,7 @@ final class au extends LegacyOpenGlEffect {
     }
 
     final void a(byte param0, boolean param1) {
-        hp var3;
+        LegacyOpenGlCubeTexture var3;
         var3 = this.field_b.j((byte) 62);
         if (this.field_f == null) {
           this.field_b.a(112, 0, 34168, 770);
@@ -140,7 +140,7 @@ final class au extends LegacyOpenGlEffect {
             } else {
               this.field_f.a((byte) 121, '\0');
               this.field_b.g(1, 98);
-              this.field_b.a(119, var3);
+              this.field_b.bindTexture(119, var3);
               jaggl.OpenGL.glMatrixMode(5890);
               jaggl.OpenGL.glLoadMatrixf(this.field_b.field_mc.a(5), 0);
               jaggl.OpenGL.glMatrixMode(5888);
@@ -223,8 +223,8 @@ final class au extends LegacyOpenGlEffect {
         Object var1 = null;
         var1 = wk.field_h;
         synchronized (var1) {
-          ht.field_h = ht.field_h + 1;
-          ar.field_G = b.field_a;
+          LegacyOpenGlTexture.field_h = LegacyOpenGlTexture.field_h + 1;
+          ar.field_G = LegacyOpenGlNormalMapGenerator.field_a;
           ko.field_p = SoftCacheReference.field_C;
           pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ResourceArchive.field_i;
@@ -234,7 +234,7 @@ final class au extends LegacyOpenGlEffect {
           if (param0 < 93) {
             au.d(-50);
           }
-          jc.field_f = ek.field_l;
+          jc.field_f = LegacyOpenGlTexture3D.field_l;
           kb.field_i = 0;
         }
     }

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg {
-    private OpenGlGraphicsToolkit field_a;
-    int field_b;
+final class OpenGlAssemblyProgram {
+    private OpenGlGraphicsToolkit toolkit;
+    int programId;
 
     final static int b(int param0, int param1, int param2) {
         int var3_int = 0;
@@ -21,7 +21,7 @@ final class wg {
           var3_int = 0;
           var4 = hh.field_f;
           if (param1 != 1882601153) {
-            wg.a(78, -126, 77);
+            OpenGlAssemblyProgram.createSolidSprite(78, -126, 77);
           }
           while (IntIndexHashTable.field_c.length > var3_int) {
             var5 = eb.field_a[var3_int];
@@ -48,31 +48,31 @@ final class wg {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int floorLog2Magnitude(int guard, int value) {
         int var2 = 0;
-        if (param0 < -113) {
-          if (param1 < 0) {
-            param1 = -param1;
+        if (guard < -113) {
+          if (value < 0) {
+            value = -value;
           }
           var2 = 0;
-          if (param1 > 65535) {
+          if (value > 65535) {
             var2 = var2 | 16;
-            param1 = param1 >>> 16;
+            value = value >>> 16;
           }
-          if (param1 > 255) {
+          if (value > 255) {
             var2 = var2 | 8;
-            param1 = param1 >>> 8;
+            value = value >>> 8;
           }
-          if (param1 > 15) {
+          if (value > 15) {
             var2 = var2 | 4;
-            param1 = param1 >>> 4;
+            value = value >>> 4;
           }
-          if (3 < param1) {
-            param1 = param1 >>> 2;
+          if (3 < value) {
+            value = value >>> 2;
             var2 = var2 | 2;
           }
-          if (param1 > 1) {
-            param1 = param1 >>> 1;
+          if (value > 1) {
+            value = value >>> 1;
             var2 = var2 | 1;
           }
           return var2;
@@ -81,28 +81,28 @@ final class wg {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_a.a(this.field_b, (byte) -96);
+        this.toolkit.a(this.programId, (byte) -96);
         super.finalize();
     }
 
-    wg(OpenGlGraphicsToolkit param0, int param1, int param2) {
+    OpenGlAssemblyProgram(OpenGlGraphicsToolkit owner, int target, int id) {
         try {
-          this.field_b = param2;
-          this.field_a = param0;
+          this.programId = id;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (owner != null ? "{...}" : "null") + ',' + target + ',' + id + ')');
         }
     }
 
-    final static Sprite a(int param0, int param1, int param2) {
+    final static Sprite createSolidSprite(int size, int color, int guard) {
         int var4 = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        Sprite var6 = new Sprite(param0, param0);
+        Sprite var6 = new Sprite(size, size);
         Sprite var3 = var6;
         for (var4 = 0; var3.pixels.length > var4; var4++) {
-          var6.pixels[var4] = param1;
+          var6.pixels[var4] = color;
         }
-        if (param2 == 3) {
+        if (guard == 3) {
           return var3;
         }
         return (Sprite) null;

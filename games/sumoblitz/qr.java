@@ -49,14 +49,14 @@ final class qr {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          vk.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
+          LegacyOpenGlAssemblyProgram.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
           if (param0 != 13136) {
             field_d = (int[]) null;
           }
           for (var2_int = 0; var2_int < se.field_d; var2_int++) {
             pd.field_q[param1 + var2_int] = var2_int;
           }
-          vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
+          LegacyOpenGlAssemblyProgram.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
           if (se.field_d > param1) {
             se.field_d = param1;
           }

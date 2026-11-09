@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk {
-    Texture3D field_e;
-    Texture3D field_f;
+final class WaterTextureResources {
+    Texture3D normalMap;
+    Texture3D animatedVolume;
     static SpriteData[] field_c;
-    boolean field_g;
-    private HardwareGraphicsToolkit field_a;
-    Texture2D[] field_d;
-    private Texture2D[] field_b;
+    boolean useVolumeTextures;
+    private HardwareGraphicsToolkit toolkit;
+    Texture2D[] animatedSlices;
+    private Texture2D[] secondarySlices;
 
-    final boolean a(int param0) {
+    final boolean ensureNormalMap(int guard) {
         byte[] var22 = null;
         byte[] var19 = null;
         byte[] var18 = null;
@@ -38,9 +38,9 @@ final class sk {
         byte[] var2 = null;
         int var16 = Sumoblitz.field_L ? 1 : 0;
         byte[] var2Lifetime1;
-        if (this.field_e == null) {
+        if (this.normalMap == null) {
           if (ab.field_b == null) {
-            var22 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+            var22 = HardwareTextureCache.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
             var19 = var22;
             var18 = var19;
             var2 = var18;
@@ -78,35 +78,35 @@ final class sk {
               }
             }
           }
-          this.field_e = this.field_a.a(true, nl.RGBA, 16, 128, var24, 128);
+          this.normalMap = this.toolkit.a(true, nl.RGBA, 16, 128, var24, 128);
         }
-        if (param0 > -120) {
-          this.field_g = true;
+        if (guard > -120) {
+          this.useVolumeTextures = true;
         }
-        return this.field_e != null ? true : false;
+        return this.normalMap != null ? true : false;
     }
 
-    final boolean c(int param0) {
-        if (param0 <= 14) {
+    final boolean hasAnimatedTextures(int guard) {
+        if (guard <= 14) {
           return false;
         }
-        return !this.field_g ? this.field_d != null ? true : false : null != this.field_f ? true : false;
+        return !this.useVolumeTextures ? this.animatedSlices != null ? true : false : null != this.animatedVolume ? true : false;
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 128) {
-          sk.releaseStatics(-102);
+          WaterTextureResources.releaseStatics(-102);
         }
         field_c = null;
     }
 
-    final static mk a(LegacyOpenGlGraphicsToolkit param0, boolean param1, int param2, String param3) {
+    final static LegacyOpenGlShader compileShader(LegacyOpenGlGraphicsToolkit toolkit, boolean guard, int shaderType, String source) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;
-        mk stackIn_2_0 = null;
+        LegacyOpenGlShader stackIn_2_0 = null;
         Object stackIn_13_0 = null;
-        mk stackIn_15_0 = null;
+        LegacyOpenGlShader stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -114,12 +114,12 @@ final class sk {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param2);
-          jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
+          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(shaderType);
+          jaggl.OpenGL.glShaderSourceARB(var4_long, source);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
           jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, DroneChargeParticle.field_z, 0);
-          if (param1) {
-            stackIn_2_0 = (mk) null;
+          if (guard) {
+            stackIn_2_0 = (LegacyOpenGlShader) null;
             return stackIn_2_0;
           }
           if (DroneChargeParticle.field_z[0] == 0) {
@@ -135,23 +135,23 @@ final class sk {
             if (0 == DroneChargeParticle.field_z[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_13_0 = null;
-              return (mk) (stackIn_13_0);
+              return (LegacyOpenGlShader) (stackIn_13_0);
             }
           }
-          stackIn_15_0 = new mk(param0, var4_long, param2);
+          stackIn_15_0 = new LegacyOpenGlShader(toolkit, var4_long, shaderType);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_18_0 = var4;
           stackIn_18_1 = new StringBuilder().append("sk.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(',').append(shaderType).append(',');
+          if (source == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -160,7 +160,7 @@ final class sk {
         }
     }
 
-    sk(HardwareGraphicsToolkit param0) {
+    WaterTextureResources(HardwareGraphicsToolkit owner) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -172,46 +172,46 @@ final class sk {
         byte[] var17 = null;
         byte[] var18 = null;
         int var2_intLifetime1;
-        this.field_e = null;
-        this.field_f = null;
-        this.field_d = null;
-        this.field_b = null;
+        this.normalMap = null;
+        this.animatedVolume = null;
+        this.animatedSlices = null;
+        this.secondarySlices = null;
         try {
-          this.field_a = param0;
-          this.field_g = this.field_a.field_Eb;
-          if (this.field_g &&
-            !this.field_a.a((byte) -42, GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA)) {
-            this.field_g = false;
+          this.toolkit = owner;
+          this.useVolumeTextures = this.toolkit.field_Eb;
+          if (this.useVolumeTextures &&
+            !this.toolkit.a((byte) -42, GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA)) {
+            this.useVolumeTextures = false;
           }
-          if (!this.field_g &&
-            !this.field_a.a(GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA, 6)) {
+          if (!this.useVolumeTextures &&
+            !this.toolkit.a(GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA, 6)) {
             return;
           }
           InwardSparkParticle.f(23369);
-          if (!this.field_g) {
-            this.field_d = new Texture2D[16];
+          if (!this.useVolumeTextures) {
+            this.animatedSlices = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var17 = iq.a(pd.field_n, 14381, 32768, var2_int * 32768);
-              this.field_d[var2_int] = this.field_a.a(var17, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
+              this.animatedSlices[var2_int] = this.toolkit.a(var17, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
-            this.field_b = new Texture2D[16];
+            this.secondarySlices = new Texture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var18 = iq.a(mk.field_d, 14381, 32768, 32768 * var2_intLifetime1);
-              this.field_b[var2_intLifetime1] = this.field_a.a(var18, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
+              var18 = iq.a(LegacyOpenGlShader.field_d, 14381, 32768, 32768 * var2_intLifetime1);
+              this.secondarySlices[var2_intLifetime1] = this.toolkit.a(var18, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             return;
           }
           var15 = ab.extractByteArray(false, pd.field_n, 0);
-          this.field_f = this.field_a.a(true, ps.LUMINANCE_ALPHA, 16, 128, var15, 128);
-          var16 = ab.extractByteArray(false, mk.field_d, 0);
-          this.field_a.a(true, ps.LUMINANCE_ALPHA, 16, 128, var16, 128);
+          this.animatedVolume = this.toolkit.a(true, ps.LUMINANCE_ALPHA, 16, 128, var15, 128);
+          var16 = ab.extractByteArray(false, LegacyOpenGlShader.field_d, 0);
+          this.toolkit.a(true, ps.LUMINANCE_ALPHA, 16, 128, var16, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_19_0 = var2;
           stackIn_19_1 = new StringBuilder().append("sk.<init>(");
-          if (param0 == null) {
+          if (owner == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";

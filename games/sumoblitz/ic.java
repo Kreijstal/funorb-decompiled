@@ -242,7 +242,7 @@ final class ic {
 
     ic() {
         cw discarded$0 = new cw(786336);
-        mr.a(1600, (byte) -115);
+        HardwareTextureCache.bitLength(1600, (byte) -115);
     }
 
     static {

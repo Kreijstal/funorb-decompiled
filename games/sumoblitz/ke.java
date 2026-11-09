@@ -52,7 +52,7 @@ final class ke {
         if (null == Bzip2State.field_J) {
           return;
         }
-        if (-1 == oh.levelIndex) {
+        if (-1 == OpenGlShaderProgram.levelIndex) {
           return;
         }
         if (an.waveIndex == -1) {

@@ -78,7 +78,7 @@ public final class Sumoblitz extends GameClientShell {
           }
           oi.a(-27864);
           if (CompactMeshGeometry.field_o != null) {
-            b.c((byte) 81);
+            LegacyOpenGlNormalMapGenerator.c((byte) 81);
           }
           MessageDialog.m(0);
           return;
@@ -101,7 +101,7 @@ public final class Sumoblitz extends GameClientShell {
         try {
           if (2 <= Bzip2State.field_j &&
             hw.field_b[41]) {
-            f.field_w = true;
+            LegacyOpenGlSpriteTexture.field_w = true;
             kh.field_e = 16777215;
           }
           var2_int = -73 / ((8 - param0) / 40);
@@ -174,7 +174,7 @@ public final class Sumoblitz extends GameClientShell {
               return;
             }
             if (nj.field_b == 2) {
-              mr.field_f = null;
+              HardwareTextureCache.field_f = null;
             }
             eh.field_a = 0;
             nj.field_b = OpenGlCubeTexture.field_k;
@@ -433,7 +433,7 @@ public final class Sumoblitz extends GameClientShell {
             this.advanceScreenTransition((byte) -69);
           }
           GzipDecompressor.field_a = true;
-          kf.field_v = wd.a(4, (byte) 125);
+          LegacyOpenGlRenderbuffer.field_v = wd.a(4, (byte) 125);
           dq.field_Z = wd.a(5, (byte) 125);
           SecondaryNodeDeque.field_d = wd.a(6, (byte) 125);
           er.field_c = wd.a(7, (byte) 125);
@@ -480,7 +480,7 @@ public final class Sumoblitz extends GameClientShell {
           NetworkResourceRequest.e((byte) 76);
           if (CompactMeshGeometry.field_o != null &&
             CompactMeshGeometry.field_o.field_a) {
-            b.c((byte) 49);
+            LegacyOpenGlNormalMapGenerator.c((byte) 49);
             qw.a((byte) 35);
           }
           stackIn_11_1 = (null != CompactMeshGeometry.field_o);
@@ -525,7 +525,7 @@ public final class Sumoblitz extends GameClientShell {
                   var2_int = kt.a(-38);
                   switch (var2_int) {
                     case 2:
-                      b.c((byte) 71);
+                      LegacyOpenGlNormalMapGenerator.c((byte) 71);
                       break;
                     case 3:
                       vb.a((byte) -21, true);
@@ -558,7 +558,7 @@ public final class Sumoblitz extends GameClientShell {
                   if (1 == var2_int ||
                     var2_int == 2) {
                     if (null != CompactMeshGeometry.field_o) {
-                      b.c((byte) 49);
+                      LegacyOpenGlNormalMapGenerator.c((byte) 49);
                     }
                     if (2 == var2_int) {
                       jl.a(ra.c(2), false);
@@ -696,8 +696,8 @@ public final class Sumoblitz extends GameClientShell {
                           gg.field_r.tryLoadAllGroups(param1)) {
                           if (ForceFieldRingEffect.field_s.loadIndex((byte) 127) &&
                             ForceFieldRingEffect.field_s.tryLoadAllGroups(true)) {
-                            if (kf.field_v.loadIndex((byte) 127) &&
-                              kf.field_v.tryLoadAllGroups(true)) {
+                            if (LegacyOpenGlRenderbuffer.field_v.loadIndex((byte) 127) &&
+                              LegacyOpenGlRenderbuffer.field_v.tryLoadAllGroups(true)) {
                               if (dq.field_Z.loadIndex((byte) 127) &&
                                 dq.field_Z.tryLoadAllGroups(true)) {
                                 if (GraphicsToolkitManager.field_d.loadIndex((byte) 127) &&
@@ -882,13 +882,13 @@ public final class Sumoblitz extends GameClientShell {
                                   VertexAttribute.b(0);
                                   return false;
                                 }
-                                NameSuggestionsPanel.a(20, 60.0f, ProxySocketConnector.a(ArenaPad.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, b.loadingLevelsText));
+                                NameSuggestionsPanel.a(20, 60.0f, ProxySocketConnector.a(ArenaPad.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, LegacyOpenGlNormalMapGenerator.loadingLevelsText));
                                 return false;
                               }
                               NameSuggestionsPanel.a(20, 55.0f, pt.a("", dq.field_Z, ToolkitRasterBuffer.waitingForFontsText, true, ow.loadingFontsText));
                               return false;
                             }
-                            NameSuggestionsPanel.a(20, 45.0f, pt.a("", kf.field_v, ProgressDialog.waitingForGraphicsText, true, es.loadingGraphicsText));
+                            NameSuggestionsPanel.a(20, 45.0f, pt.a("", LegacyOpenGlRenderbuffer.field_v, ProgressDialog.waitingForGraphicsText, true, es.loadingGraphicsText));
                             return false;
                           }
                           NameSuggestionsPanel.a(20, 40.0f, pt.a("", ForceFieldRingEffect.field_s, ve.waitingForMusicText, true, MessageDialog.loadingMusicText));
@@ -1439,7 +1439,7 @@ public final class Sumoblitz extends GameClientShell {
                     OpenGlTexture.a(50, 26175);
                     ByteArrayStorage.compatibilityNoOp(50, -106);
                     mo.a(86, 0);
-                    ek.b(true, 0);
+                    LegacyOpenGlTexture3D.playLoopingSound(true, 0);
                   }
                   break;
                 }
@@ -1610,10 +1610,10 @@ public final class Sumoblitz extends GameClientShell {
                 }
               }
             }
-            NameSuggestionsPanel.a(pi.field_c, dq.field_Z, 20, kf.field_v);
-            NetworkResourceRequest.a(7966, dq.field_Z, kf.field_v);
+            NameSuggestionsPanel.a(pi.field_c, dq.field_Z, 20, LegacyOpenGlRenderbuffer.field_v);
+            NetworkResourceRequest.a(7966, dq.field_Z, LegacyOpenGlRenderbuffer.field_v);
             pi.field_c = null;
-            kf.field_v = null;
+            LegacyOpenGlRenderbuffer.field_v = null;
             dq.field_Z = null;
             VertexAttribute.b(0);
             return false;
@@ -1800,7 +1800,7 @@ public final class Sumoblitz extends GameClientShell {
           oq.g(-6811);
           qw.releaseStatics(-122);
           is.releaseStatics(false);
-          sd.releaseStatics(1);
+          SoftLruCache.releaseStatics(1);
           un.releaseStatics(true);
           ow.releaseStatics((byte) 123);
           sv.releaseStatics(1284);
@@ -1842,22 +1842,22 @@ public final class Sumoblitz extends GameClientShell {
           eb.releaseStatics((byte) 0);
           gq.releaseStatics(false);
           ic.releaseStatics(106);
-          b.releaseStatics((byte) -69);
+          LegacyOpenGlNormalMapGenerator.releaseStatics((byte) -69);
           cm.releaseStatics(0);
           LegacyOpenGlTransform3D.releaseStatics(0);
-          ht.releaseStatics((byte) -81);
-          us.releaseStatics((byte) 28);
+          LegacyOpenGlTexture.releaseStatics((byte) -81);
+          LegacyOpenGlTexture2D.releaseStatics((byte) 28);
           bt.releaseStatics((byte) -21);
-          hp.releaseStatics(1);
+          LegacyOpenGlCubeTexture.releaseStatics(1);
           HardwareGraphicsToolkit.releaseStatics(8);
           VertexAttribute.releaseStatics(2);
           GpuDataType.releaseStatics(0);
-          sk.releaseStatics(128);
+          WaterTextureResources.releaseStatics(128);
           AffineTransform3D.releaseStatics((byte) 49);
           hv.releaseStatics(-7520);
           ko.d(0);
           tf.releaseStatics((byte) 17);
-          mr.releaseStatics((byte) -109);
+          HardwareTextureCache.releaseStatics((byte) -109);
           ShaderEffect.releaseStatics(-119);
           em.releaseStatics(true);
           il.releaseStatics(26238);
@@ -1890,15 +1890,15 @@ public final class Sumoblitz extends GameClientShell {
           ToolkitImageProducerBuffer.releaseStatics(119);
           ka.releaseStatics((byte) -59);
           r.releaseStatics(33);
-          sn.releaseStatics((byte) -62);
-          ek.releaseStatics(-21551);
+          LegacyOpenGlShaderProgram.releaseStatics((byte) -62);
+          LegacyOpenGlTexture3D.releaseStatics(-21551);
           ve.releaseStatics((byte) -58);
           LegacyOpenGlEffect.releaseStatics((byte) -76);
           ch.releaseStatics((byte) 60);
           lf.a(1821625704);
-          kf.releaseStatics(-21057);
+          LegacyOpenGlRenderbuffer.releaseStatics(-21057);
           LegacyOpenGlGraphicsHeap.releaseStatics(-20388);
-          f.releaseStatics(!param0);
+          LegacyOpenGlSpriteTexture.releaseStatics(!param0);
           wh.releaseStatics(-1);
           uj.releaseStatics(true);
           jq.releaseStatics(107);
@@ -1911,14 +1911,14 @@ public final class Sumoblitz extends GameClientShell {
           es.releaseStatics(4);
           tt.releaseStatics(true);
           mo.releaseStatics(2);
-          vk.b(429166529);
+          LegacyOpenGlAssemblyProgram.b(429166529);
           gi.releaseStatics(8192);
-          pr.releaseStatics(7064);
+          LegacyOpenGlTexture1D.releaseStatics(7064);
           au.releaseStatics((byte) -127);
           ga.releaseStatics(true);
           lv.releaseStatics(3);
           gr.releaseStatics((byte) -19);
-          mk.releaseStatics(-25140);
+          LegacyOpenGlShader.releaseStatics(-25140);
           ei.releaseStatics(-124);
           TextureFilter.releaseStatics(0);
           HardwareGraphicsHeap.releaseStatics(124);
@@ -1939,7 +1939,7 @@ public final class Sumoblitz extends GameClientShell {
           OpenGlUnderwaterEffect.releaseStatics(12);
           OpenGlTransparentWaterEffect.d((byte) 79);
           OpenGlEnvironmentWaterEffect.releaseStatics(!param0);
-          oh.releaseStatics((byte) -60);
+          OpenGlShaderProgram.releaseStatics((byte) -60);
           OpenGlBuffer.releaseStatics((byte) 13);
           OpenGlIndexBuffer.releaseStatics(param0);
           OpenGlVertexLayout.releaseStatics(123);
@@ -1947,7 +1947,7 @@ public final class Sumoblitz extends GameClientShell {
           SecondaryNodeDequeIterator.releaseStatics(-95);
           LegacyOpenGlSpriteMask.releaseStatics(!param0);
           ph.releaseStatics(1882049616);
-          qj.releaseStatics((byte) -70);
+          OpenGlShader.releaseStatics((byte) -70);
           fw.releaseStatics(-114);
           bl.releaseStatics(false);
           of.a(-26437);

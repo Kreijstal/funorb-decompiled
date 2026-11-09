@@ -4,7 +4,7 @@
 final class is {
     private ResourceArchive field_d;
     static boolean field_b;
-    private sd field_f;
+    private SoftLruCache field_f;
     private ResourceArchive field_e;
     static IntrusiveDeque arenaPads;
     static boolean field_a;
@@ -26,7 +26,7 @@ final class is {
 
     final oq a(int param0, int param1) {
         byte[] var4 = null;
-        oq var3 = (oq) (this.field_f.a((long)param0, 123));
+        oq var3 = (oq) (this.field_f.get((long)param0, 123));
         if (var3 == null) {
           if (param0 >= 32768) {
             var4 = this.field_d.fetchFile((byte) 115, param0 & 32767, 1);
@@ -40,7 +40,7 @@ final class is {
           if (param1 >= ~param0) {
             var3.e(param1 ^ 32885);
           }
-          this.field_f.a((long)param0, var3, (byte) 19);
+          this.field_f.put((long)param0, var3, (byte) 19);
           return var3;
         }
         return var3;

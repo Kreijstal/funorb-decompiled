@@ -54,7 +54,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
               this.a((String[]) null, true);
             }
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_B[var4_int] = kf.a((CharSequence) ((Object) param0[var4_int]), (byte) 38).replace(' ', ' ');
+              this.field_B[var4_int] = LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) ((Object) param0[var4_int]), (byte) 38).replace(' ', ' ');
             }
             var4 = new bv(kw.field_b, 0, 1);
             this.field_C = new InteractiveWidget[1 + var3_int];
@@ -229,7 +229,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ResourceRequest.field_r = SpriteData.b(param3, "", "statline_tab_flip");
           ok.field_d = SpriteData.b(param3, "", "button_off");
           hh.field_a = SpriteData.b(param3, "", "button_over");
-          sk.field_c = SpriteData.b(param3, "", "button_on");
+          WaterTextureResources.field_c = SpriteData.b(param3, "", "button_on");
           gq.field_o = SpriteData.b(param3, "", "chargebar_vertical");
           IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
           ve.field_k = SpriteData.a(param3, "", "mouse");
@@ -252,7 +252,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
           FullscreenMembershipDialog.field_T = SpriteData.a(param3, "", "particle_alpha");
           dq.field_v = SpriteData.b(param3, "", "particles_alpha");
-          kf.field_w = SpriteData.b(param3, "", "particle_ring");
+          LegacyOpenGlRenderbuffer.field_w = SpriteData.b(param3, "", "particle_ring");
           bj.field_g = SpriteData.a(param3, "", "particle_sprinkle");
           ks.field_t = SpriteData.a(param3, "", "particle_star");
           ShaderEffect.field_c = SpriteData.a(param3, "", "particle_pixel");
@@ -266,8 +266,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ml.field_p = SpriteData.a(param3, "", "driftinglight_rough");
           th.field_C = SpriteData.a(param3, "", "shockwave");
           MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
-          sd.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
-          hp.field_n = SpriteData.b(param3, "", "electricity");
+          SoftLruCache.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
+          LegacyOpenGlCubeTexture.field_n = SpriteData.b(param3, "", "electricity");
           ni.field_h = SpriteData.b(param3, "", "electricity_flip");
           ArchiveCatalog.field_f = SpriteData.a(param3, "", "attract");
           MusicVoice.field_o = SpriteData.a(param3, "", "repulse");

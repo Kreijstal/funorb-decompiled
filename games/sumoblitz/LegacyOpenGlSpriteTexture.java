@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f extends us {
-    int field_u;
+final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
+    int spriteWidth;
     static ToolkitSprite[] field_r;
-    float field_v;
+    float maxV;
     static ts field_t;
     static java.awt.Font field_s;
-    float field_q;
-    int field_p;
+    float maxU;
+    int spriteHeight;
     static boolean field_w;
 
     public static void releaseStatics(boolean param0) {
         field_s = null;
         field_r = null;
         if (param0) {
-          f.d((byte) 31);
+          LegacyOpenGlSpriteTexture.d((byte) 31);
           field_t = null;
           return;
         }
         field_t = null;
     }
 
-    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    LegacyOpenGlSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
@@ -32,15 +32,15 @@ final class f extends us {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_p = param3;
-          this.field_u = param2;
-          if (this.field_c != 34037) {
-            this.field_q = 1.0f;
-            this.field_v = 1.0f;
+          this.spriteHeight = param3;
+          this.spriteWidth = param2;
+          if (this.target != 34037) {
+            this.maxU = 1.0f;
+            this.maxV = 1.0f;
             return;
           }
-          this.field_q = (float)param2;
-          this.field_v = (float)param3;
+          this.maxU = (float)param2;
+          this.maxV = (float)param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,15 +62,15 @@ final class f extends us {
         }
     }
 
-    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    LegacyOpenGlSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
-          this.field_u = param2;
-          this.field_p = param3;
-          this.a(0, param6, param7, 0, param2, 0, 0, true, (byte) -124, param3);
-          this.field_q = (float)param2 / (float)param4;
-          this.field_v = (float)param3 / (float)param5;
-          this.a(false, false, -27365);
+          this.spriteWidth = param2;
+          this.spriteHeight = param3;
+          this.uploadBytes(0, param6, param7, 0, param2, 0, 0, true, (byte) -124, param3);
+          this.maxU = (float)param2 / (float)param4;
+          this.maxV = (float)param3 / (float)param5;
+          this.setWrap(false, false, -27365);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -78,13 +78,13 @@ final class f extends us {
 
     final static boolean d(byte param0) {
         if (param0 != 63) {
-          f.e(false);
+          LegacyOpenGlSpriteTexture.e(false);
           return wt.field_i.loadMasterIndex((byte) 126);
         }
         return wt.field_i.loadMasterIndex((byte) 126);
     }
 
-    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    LegacyOpenGlSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
@@ -94,15 +94,15 @@ final class f extends us {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_u = param3;
-          this.field_p = param4;
-          if (34037 == this.field_c) {
-            this.field_v = (float)param4;
-            this.field_q = (float)param3;
+          this.spriteWidth = param3;
+          this.spriteHeight = param4;
+          if (34037 == this.target) {
+            this.maxV = (float)param4;
+            this.maxU = (float)param3;
             return;
           }
-          this.field_v = 1.0f;
-          this.field_q = 1.0f;
+          this.maxV = 1.0f;
+          this.maxU = 1.0f;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,15 +132,15 @@ final class f extends us {
         return ArchiveProvider.field_c;
     }
 
-    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
+    LegacyOpenGlSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
-          this.field_p = param2;
-          this.field_u = param1;
-          this.a(param2, param1, 0, param5, 0, 0, 0, true, true);
-          this.field_v = (float)param2 / (float)param4;
-          this.field_q = (float)param1 / (float)param3;
-          this.a(false, false, -27365);
+          this.spriteHeight = param2;
+          this.spriteWidth = param1;
+          this.uploadInts(param2, param1, 0, param5, 0, 0, 0, true, true);
+          this.maxV = (float)param2 / (float)param4;
+          this.maxU = (float)param1 / (float)param3;
+          this.setWrap(false, false, -27365);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

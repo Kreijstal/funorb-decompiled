@@ -9,27 +9,27 @@ final class VictoryScreen extends MenuScreen {
     final void update(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         super.update(param0 + 0);
-        kf.field_u.update(param0 ^ 18481);
+        LegacyOpenGlRenderbuffer.field_u.update(param0 ^ 18481);
         if (this.field_i % 50 == 0) {
           up.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
         }
-        kf.field_u.steerTowardPoint(false, LoginForm.field_E, up.field_a);
+        LegacyOpenGlRenderbuffer.field_u.steerTowardPoint(false, LoginForm.field_E, up.field_a);
         if (param0 != -18556) {
           this.field_i = -126;
         }
         if (0 == this.field_i % 100) {
-          ff.a(kf.field_u.xQ8, 40, kf.field_u.yQ8, im.field_b, lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
+          ff.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, im.field_b, lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
           gn.a(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (kf.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, kf.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (kf.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1024 + (kf.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + kf.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, kf.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
         } else {
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, kf.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1024 + (kf.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, kf.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, kf.field_u.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, kf.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1024 + kf.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1024 + LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
         }
         TimedSceneEffect var2 = (TimedSceneEffect) (im.field_b.first(68));
         while (var2 != null) {
@@ -102,7 +102,7 @@ final class VictoryScreen extends MenuScreen {
             var7.render(toolkit, guard + 2230);
             var7 = (TimedSceneEffect) (im.field_b.next((byte) 18));
           }
-          kf.field_u.render(toolkit, guard + 21754);
+          LegacyOpenGlRenderbuffer.field_u.render(toolkit, guard + 21754);
           super.render(opacity, toolkit, guard);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "di.B(" + opacity + ',' + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');

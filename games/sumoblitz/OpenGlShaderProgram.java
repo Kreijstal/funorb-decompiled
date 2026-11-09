@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh {
-    long field_d;
-    private OpenGlGraphicsToolkit field_a;
+final class OpenGlShaderProgram {
+    long programHandle;
+    private OpenGlGraphicsToolkit toolkit;
     static java.math.BigInteger field_c;
     static String toReturnToTheText;
     static int levelIndex;
 
-    oh(OpenGlGraphicsToolkit param0, long param1, qj[] param2) {
+    OpenGlShaderProgram(OpenGlGraphicsToolkit owner, long handle, OpenGlShader[] shaders) {
         try {
-          this.field_a = param0;
-          this.field_d = param1;
+          this.toolkit = owner;
+          this.programHandle = handle;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oh.<init>(" + (owner != null ? "{...}" : "null") + ',' + handle + ',' + (shaders != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class oh {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_a.a(33984, this.field_d);
+        this.toolkit.a(33984, this.programHandle);
         super.finalize();
     }
 

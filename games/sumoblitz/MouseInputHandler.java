@@ -14,16 +14,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (wk.field_h != null) {
-            ht.field_h = 0;
+            LegacyOpenGlTexture.field_h = 0;
             GzipDecompressor.field_d = param0.getX();
-            ek.field_l = param0.getY();
+            LegacyOpenGlTexture3D.field_l = param0.getY();
             wq.a(-33);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kb.field_i = 2;
-              b.field_a = 2;
+              LegacyOpenGlNormalMapGenerator.field_a = 2;
             } else {
               kb.field_i = 1;
-              b.field_a = 1;
+              LegacyOpenGlNormalMapGenerator.field_a = 1;
             }
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
@@ -56,7 +56,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (null != wk.field_h) {
-            ht.field_h = 0;
+            LegacyOpenGlTexture.field_h = 0;
             SoftCacheReference.field_C = -1;
             SecondaryNodeDeque.field_b = -1;
             ResourceArchive.field_i = true;
@@ -76,7 +76,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (wk.field_h == null) {
             return;
           }
-          b.field_a = 0;
+          LegacyOpenGlNormalMapGenerator.field_a = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,7 +102,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == wk.field_h) {
             return;
           }
-          ht.field_h = 0;
+          LegacyOpenGlTexture.field_h = 0;
           SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;
@@ -140,8 +140,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (wk.field_h != null) {
-            ht.field_h = 0;
-            b.field_a = 0;
+            LegacyOpenGlTexture.field_h = 0;
+            LegacyOpenGlNormalMapGenerator.field_a = 0;
             ResourceArchive.field_i = true;
             var2_int = param0.getModifiers();
             if ((4 & var2_int) == 0) {
@@ -206,7 +206,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == wk.field_h) {
             return;
           }
-          ht.field_h = 0;
+          LegacyOpenGlTexture.field_h = 0;
           SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;
@@ -235,7 +235,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (wk.field_h == null) {
             return;
           }
-          ht.field_h = 0;
+          LegacyOpenGlTexture.field_h = 0;
           SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;

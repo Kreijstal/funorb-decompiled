@@ -21,10 +21,10 @@ final class InwardSparkParticle extends TimedSceneEffect {
           var3 = var1.a(128, 128, false, 16);
           pd.field_n = DroneDebris.storeByteArray((byte) -125, var3, false);
         }
-        if (mk.field_d == null) {
+        if (LegacyOpenGlShader.field_d == null) {
           var1_ref = new ks();
           var4 = var1_ref.b(1, 128, 128, 16);
-          mk.field_d = DroneDebris.storeByteArray((byte) -120, var4, false);
+          LegacyOpenGlShader.field_d = DroneDebris.storeByteArray((byte) -120, var4, false);
         }
         if (param0 != 23369) {
           livesText = (String) null;

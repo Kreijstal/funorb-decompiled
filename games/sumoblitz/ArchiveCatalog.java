@@ -602,7 +602,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime12 = ke.a((byte) 102, "achievethisgame");
           if (null != var2Lifetime12) {
-            sd.achievementsThisGameText = MusicVoice.a(param1 + 5, var2Lifetime12);
+            SoftLruCache.achievementsThisGameText = MusicVoice.a(param1 + 5, var2Lifetime12);
           }
           var2Lifetime13 = ke.a((byte) 107, "achieve");
           if (var2Lifetime13 != null) {
@@ -1357,11 +1357,11 @@ final class ArchiveCatalog {
           }
           var2Lifetime200 = ke.a((byte) 122, "editModes,0");
           if (var2Lifetime200 != null) {
-            vk.levelLoadStepLabels[0] = MusicVoice.a(param1 + 5, var2Lifetime200);
+            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[0] = MusicVoice.a(param1 + 5, var2Lifetime200);
           }
           var2Lifetime201 = ke.a((byte) 95, "editModes,1");
           if (null != var2Lifetime201) {
-            vk.levelLoadStepLabels[1] = MusicVoice.a(0, var2Lifetime201);
+            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[1] = MusicVoice.a(0, var2Lifetime201);
           }
           var2Lifetime202 = ke.a((byte) 101, "hudScore");
           if (var2Lifetime202 != null) {

@@ -84,10 +84,10 @@ final class SoundCache {
 
     final static boolean isLevelIndexTwentyFour(int param0) {
         if (param0 < -5) {
-          return oh.levelIndex == 24 ? true : false;
+          return OpenGlShaderProgram.levelIndex == 24 ? true : false;
         }
         SoundCache.releaseStatics(true);
-        return oh.levelIndex == 24 ? true : false;
+        return OpenGlShaderProgram.levelIndex == 24 ? true : false;
     }
 
     final PcmSample getVorbisByName(int param0, String param1) {

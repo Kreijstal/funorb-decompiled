@@ -3,19 +3,19 @@
  */
 final class LegacyOpenGlBitmapFont extends ToolkitFont {
     private tq field_e;
-    private f field_c;
+    private LegacyOpenGlSpriteTexture field_c;
     private LegacyOpenGlGraphicsToolkit field_f;
     private boolean field_d;
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
         LegacyOpenGlSpriteMask var9;
-        f var10;
+        LegacyOpenGlSpriteTexture var10;
         float var11;
         float var12;
         var9 = (LegacyOpenGlSpriteMask) (param5);
         var10 = var9.texture;
         this.field_f.k(-25462);
-        this.field_f.a(68, this.field_c);
+        this.field_f.bindTexture(68, this.field_c);
         if (!this.field_d &&
           !param4) {
           this.field_f.a(20685, 7681, 7681);
@@ -24,13 +24,13 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           this.field_f.b(34168, 768, 0, -120);
         }
         this.field_f.g(1, 86);
-        this.field_f.a(122, var10);
+        this.field_f.bindTexture(122, var10);
         this.field_f.a(20685, 8448, 7681);
         this.field_f.b(34168, 768, 0, -116);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
-        var11 = var10.field_q / (float)var10.field_u;
-        var12 = var10.field_v / (float)var10.field_p;
+        var11 = var10.maxU / (float)var10.spriteWidth;
+        var12 = var10.maxV / (float)var10.spriteHeight;
         jaggl.OpenGL.glTexGenfv(8192, 9474, new float[]{var11, 0.0f, 0.0f, (float)(-param6) * var11}, 0);
         jaggl.OpenGL.glTexGenfv(8193, 9474, new float[]{0.0f, var12, 0.0f, (float)(-param7) * var12}, 0);
         jaggl.OpenGL.glEnable(3168);
@@ -43,7 +43,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         jaggl.OpenGL.glDisable(3169);
         this.field_f.b(5890, 768, 0, -116);
         this.field_f.a(20685, 8448, 8448);
-        this.field_f.a(103, (ht) null);
+        this.field_f.bindTexture(103, (LegacyOpenGlTexture) null);
         this.field_f.g(0, 115);
         if (this.field_d ||
           param4) {
@@ -215,10 +215,10 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           this.field_c = InteractiveWidget.a(param0, var6Lifetime1, var6Lifetime1, var30, false, 6406, 121, 6406);
           this.field_d = true;
         }
-        this.field_c.a(false, 0);
+        this.field_c.setLinearFiltering(false, 0);
         this.field_e = new tq(param0, 256);
-        var7 = this.field_c.field_q / (float)this.field_c.field_u;
-        var8 = this.field_c.field_v / (float)this.field_c.field_p;
+        var7 = this.field_c.maxU / (float)this.field_c.spriteWidth;
+        var8 = this.field_c.maxV / (float)this.field_c.spriteHeight;
         for (var9 = 0; var9 < 256; var9++) {
           var29 = param2[var9];
           var11Lifetime1 = var29.field_i;
@@ -233,13 +233,13 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           var20 = (var16 + (float)var11Lifetime1) * var8;
           this.field_e.a(var9, 4864);
           jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glTexCoord2f(var17, this.field_c.field_v - var18);
+          jaggl.OpenGL.glTexCoord2f(var17, this.field_c.maxV - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var17, this.field_c.field_v - var20);
+          jaggl.OpenGL.glTexCoord2f(var17, this.field_c.maxV - var20);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1 + var11Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var19, this.field_c.field_v - var20);
+          jaggl.OpenGL.glTexCoord2f(var19, this.field_c.maxV - var20);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1 + var11Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var19, this.field_c.field_v - var18);
+          jaggl.OpenGL.glTexCoord2f(var19, this.field_c.maxV - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1);
           jaggl.OpenGL.glEnd();
           this.field_e.a(true);
@@ -248,7 +248,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         this.field_f.k(-25462);
-        this.field_f.a(45, this.field_c);
+        this.field_f.bindTexture(45, this.field_c);
         if (!this.field_d &&
           !param4) {
           this.field_f.a(20685, 7681, 7681);

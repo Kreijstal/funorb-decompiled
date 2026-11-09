@@ -34,17 +34,17 @@ final class er {
         SpriteState.field_B = DroneDebris.createToolkitSprites(ResourceRequest.field_r, var2, 28513);
         SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(ok.field_d, var2, 28513);
         IntrusiveDeque.field_c = DroneDebris.createToolkitSprites(hh.field_a, var2, 28513);
-        ok.field_j = DroneDebris.createToolkitSprites(sk.field_c, var2, 28513);
-        pr.field_k = DroneDebris.createToolkitSprites(gq.field_o, var2, 28513);
+        ok.field_j = DroneDebris.createToolkitSprites(WaterTextureResources.field_c, var2, 28513);
+        LegacyOpenGlTexture1D.field_k = DroneDebris.createToolkitSprites(gq.field_o, var2, 28513);
         LegacyOpenGlSpriteMask.field_e = ResizingDialog.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
         HudMessage.field_m = ResizingDialog.a(var2, ve.field_k, (byte) -11);
         bt.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
-        ht.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
+        LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
         hv.field_d = DroneDebris.createToolkitSprites(ks.field_w, var2, 28513);
         s.field_n = DroneDebris.createToolkitSprites(fl.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
-        mr.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
+        HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
         if (param0) {
           field_c = (ResourceArchive) null;
           ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
@@ -59,7 +59,7 @@ final class er {
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
           uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
           CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
-          OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
+          OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
           ResizingDialog.a(var2, bj.field_g, (byte) -11);
           ResizingDialog.a(var2, ks.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
@@ -73,8 +73,8 @@ final class er {
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
           kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
           OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
-          ml.field_w = DroneDebris.createToolkitSprites(sd.field_a, var2, 28513);
-          ok.field_f = DroneDebris.createToolkitSprites(hp.field_n, var2, 28513);
+          ml.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
+          ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
           ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
           ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
@@ -89,7 +89,7 @@ final class er {
           o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
           ng.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
           OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, tc.field_i, (byte) -11);
-          f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
+          LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
           vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
           wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
           tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
@@ -108,7 +108,7 @@ final class er {
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
         uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
         CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
-        OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
+        OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
         ResizingDialog.a(var2, bj.field_g, (byte) -11);
         ResizingDialog.a(var2, ks.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
@@ -122,8 +122,8 @@ final class er {
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
         kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
         OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
-        ml.field_w = DroneDebris.createToolkitSprites(sd.field_a, var2, 28513);
-        ok.field_f = DroneDebris.createToolkitSprites(hp.field_n, var2, 28513);
+        ml.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
+        ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
         ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
         ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
@@ -138,7 +138,7 @@ final class er {
         o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
         ng.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
         OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, tc.field_i, (byte) -11);
-        f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
+        LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
         vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
         wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
         tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};

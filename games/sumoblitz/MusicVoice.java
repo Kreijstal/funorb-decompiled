@@ -38,7 +38,7 @@ final class MusicVoice extends IntrusiveNode {
           if (param0 != 0) {
             MusicVoice.releaseStatics((byte) -101);
           }
-          stackIn_3_0 = sd.a(param1, 0, param1.length, 26564);
+          stackIn_3_0 = SoftLruCache.decodeCp1252(param1, 0, param1.length, 26564);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

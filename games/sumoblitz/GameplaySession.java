@@ -47,7 +47,7 @@ final class GameplaySession {
           if (0 == lg.field_c % 500 ||
             null == this.firstGradientColors ||
             this.secondGradientColors == null) {
-            var3_int = oh.levelIndex % 6;
+            var3_int = OpenGlShaderProgram.levelIndex % 6;
             if (var3_int == -1) {
               var3_int = 0;
             }
@@ -600,11 +600,11 @@ final class GameplaySession {
             }
             var21 = stackIn_64_0;
             var22 = ScrollViewport.field_z[var15Lifetime1];
-            var23 = hp.field_o[var15Lifetime1];
+            var23 = LegacyOpenGlCubeTexture.field_o[var15Lifetime1];
             var24 = ScrollViewport.field_z[var16];
-            var25 = hp.field_o[var16];
+            var25 = LegacyOpenGlCubeTexture.field_o[var16];
             var26 = ScrollViewport.field_z[var17];
-            var27 = hp.field_o[var17];
+            var27 = LegacyOpenGlCubeTexture.field_o[var17];
             if (var19 == var18 &&
               var20 == var19) {
               var28 = var8_array[var18];
@@ -619,7 +619,7 @@ final class GameplaySession {
               var32 = 65280 & var30;
               var33 = (-16711696 & var31 * var28) >>> 8 | (16711739 & var28 * var32) >>> 8;
               var33 = var33 + var29 * 65793;
-              sd.a(var24, 8355711 & var33 >> 1, var27, (byte) 27, var25, var23, var26, var22);
+              SoftLruCache.a(var24, 8355711 & var33 >> 1, var27, (byte) 27, var25, var23, var26, var22);
             } else {
               var28 = var8_array[var18];
               var29 = var8_array[var19];
@@ -721,7 +721,7 @@ final class GameplaySession {
                 var2.applyPowerup((byte) 88, var3);
                 gn.a(27, true);
                 if (2 == var3.effectIndex) {
-                  b.field_c = true;
+                  LegacyOpenGlNormalMapGenerator.field_c = true;
                   rn.a(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
                 } else if (var3.effectIndex != 0) {
                   if (var3.effectIndex == 1) {
@@ -814,38 +814,38 @@ final class GameplaySession {
                     if (hw.field_b[81]) {
                       gg.a((byte) 125);
                     }
-                    f.field_w = true;
+                    LegacyOpenGlSpriteTexture.field_w = true;
                     if (var3 == 0) {
                       return;
                     }
                   }
                   GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining + 1;
-                  f.field_w = true;
+                  LegacyOpenGlSpriteTexture.field_w = true;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 SpriteMask.drones[0].upgradeStat(-42, 2);
-                f.field_w = true;
+                LegacyOpenGlSpriteTexture.field_w = true;
                 if (var3 == 0) {
                   return;
                 }
               }
               SpriteMask.drones[0].upgradeStat(-34, 1);
-              f.field_w = true;
+              LegacyOpenGlSpriteTexture.field_w = true;
               if (var3 == 0) {
                 return;
               }
             }
             SpriteMask.drones[0].upgradeStat(-32, 0);
-            f.field_w = true;
+            LegacyOpenGlSpriteTexture.field_w = true;
             if (var3 == 0) {
               return;
             }
           }
           o.a(0);
           gg.a((byte) 87);
-          f.field_w = true;
+          LegacyOpenGlSpriteTexture.field_w = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -876,7 +876,7 @@ final class GameplaySession {
           GameKeyHandler.field_a = null;
           ig.hudMessages.clear(116);
           FadingWidget.score = 0;
-          f.field_w = false;
+          LegacyOpenGlSpriteTexture.field_w = false;
           fb.field_a = 0;
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
@@ -1085,7 +1085,7 @@ final class GameplaySession {
           if (TextureFormat.elapsedTicks - uc.field_f == 100 &&
             !MusicPatch.simulationPaused &&
             !MessageDialog.arcadeMode) {
-            sj.a(-1, an.waveIndex, oh.levelIndex);
+            sj.a(-1, an.waveIndex, OpenGlShaderProgram.levelIndex);
           }
           boolean decompiledFrameRemainder2 = true;
           if (GridWidgetContainer.livesRemaining > 0) {
@@ -1146,7 +1146,7 @@ final class GameplaySession {
               th.b(24753, 244, 11);
             }
           }
-          if (SpriteMask.drones[0] != null && (!(6 > oh.levelIndex) ||
+          if (SpriteMask.drones[0] != null && (!(6 > OpenGlShaderProgram.levelIndex) ||
             TextureMetadata.field_f[6] ||
             MessageDialog.arcadeMode)) {
             boolean decompiledFrameRemainder1 = true;
@@ -1338,11 +1338,11 @@ final class GameplaySession {
                   th.b(24753, 249, 6);
                 }
                 if (nq.field_i == 5 &&
-                  !b.field_c) {
+                  !LegacyOpenGlNormalMapGenerator.field_c) {
                   th.b(24753, 248, 7);
                 }
                 if (SoundCache.isLevelIndexTwentyFour(-102)) {
-                  oh.levelIndex = oh.levelIndex + 1;
+                  OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
                 }
                 if (Bzip2State.field_J != null &&
                   Bzip2State.field_J.length <= an.waveIndex &&
@@ -1354,7 +1354,7 @@ final class GameplaySession {
                   if (DropDownWidget.field_C == 0) {
                     th.b(24753, 252, 3);
                   }
-                  if (oh.levelIndex == 25) {
+                  if (OpenGlShaderProgram.levelIndex == 25) {
                     if (ResourceArchive.field_f == 10) {
                       th.b(24753, 255, 0);
                     }
@@ -1564,10 +1564,10 @@ final class GameplaySession {
             stackIn_28_4 = var3Lifetime1;
             stackIn_28_5 = 16777215;
             stackIn_28_6 = 1;
-            if (oh.levelIndex > -1) {
+            if (OpenGlShaderProgram.levelIndex > -1) {
               stackIn_29_0 = null;
               stackIn_29_1 = null;
-              stackIn_29_7 = oh.levelIndex % 3;
+              stackIn_29_7 = OpenGlShaderProgram.levelIndex % 3;
             } else {
               stackIn_29_0 = null;
               stackIn_29_1 = null;
@@ -1615,10 +1615,10 @@ final class GameplaySession {
             stackIn_51_4 = var3Lifetime2;
             stackIn_51_5 = 16777215;
             stackIn_51_6 = 0;
-            if (oh.levelIndex > -1) {
+            if (OpenGlShaderProgram.levelIndex > -1) {
               stackIn_52_0 = null;
               stackIn_52_1 = null;
-              stackIn_52_7 = oh.levelIndex % 3;
+              stackIn_52_7 = OpenGlShaderProgram.levelIndex % 3;
             } else {
               stackIn_52_0 = null;
               stackIn_52_1 = null;
@@ -1643,7 +1643,7 @@ final class GameplaySession {
           var2_int = 54 / ((-65 - param0) / 47);
           if (null == GameKeyHandler.field_a &&
             0 < IntrusiveNodeHashTable.field_c &&
-            !f.field_w) {
+            !LegacyOpenGlSpriteTexture.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
               GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
@@ -1714,11 +1714,11 @@ final class GameplaySession {
                   HudMessage.field_s[4].draw(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1740,9 +1740,9 @@ final class GameplaySession {
                 qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
                 uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
-              pr.field_k[0].draw(3, 42);
-              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + pr.field_k[0].height(), 0, 40);
-              pr.field_k[1].draw(3, 42);
+              LegacyOpenGlTexture1D.field_k[0].draw(3, 42);
+              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + LegacyOpenGlTexture1D.field_k[0].height(), 0, 40);
+              LegacyOpenGlTexture1D.field_k[1].draw(3, 42);
               var3.a(29709);
               if (var4.isBlastReady(20)) {
                 var5Lifetime1 = lg.field_c << 2;
@@ -1752,7 +1752,7 @@ final class GameplaySession {
                   stackIn_40_0 = -(var5Lifetime1 % 255) + 510;
                 }
                 var6 = stackIn_40_0;
-                pr.field_k[2].draw(3, 42, 0, 16777215 | var6 << 24, 1);
+                LegacyOpenGlTexture1D.field_k[2].draw(3, 42, 0, 16777215 | var6 << 24, 1);
               }
               if (MessageDialog.arcadeMode) {
                 break;
@@ -1822,15 +1822,15 @@ final class GameplaySession {
           FadingWidget.score = 0;
           SoftwareTransform3D.field_b = 0;
           DropDownWidget.field_C = levelIndex;
-          f.field_w = false;
+          LegacyOpenGlSpriteTexture.field_w = false;
           IntrusiveNodeHashTable.field_c = 0;
-          oh.levelIndex = levelIndex;
+          OpenGlShaderProgram.levelIndex = levelIndex;
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           TextureFormat.elapsedTicks = 0;
           fb.field_a = 0;
           tc.e(104);
-          if (oh.levelIndex == 0 &&
+          if (OpenGlShaderProgram.levelIndex == 0 &&
             !TextureMetadata.field_f[0]) {
             bw.field_d = true;
             this.showBlastHint = true;

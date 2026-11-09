@@ -233,7 +233,7 @@ final class CachedTextLayout extends TextLayout {
           return null;
         }
         if (!(qf.field_a >= GameClientShell.field_s + sb.field_c)) {
-          return hp.field_l;
+          return LegacyOpenGlCubeTexture.field_l;
         }
         return null;
     }
@@ -347,16 +347,16 @@ final class CachedTextLayout extends TextLayout {
               if (param4) {
                 var9 = var9 | 1;
               }
-              sd.field_e.position = 0;
-              sd.field_e.writeInt(48, fd.field_d.nextInt());
-              sd.field_e.writeInt(48, fd.field_d.nextInt());
-              sd.field_e.writeCircumfixedString(var15, (byte) -108);
-              sd.field_e.writeCircumfixedString(var8, (byte) -121);
+              SoftLruCache.field_e.position = 0;
+              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              SoftLruCache.field_e.writeCircumfixedString(var15, (byte) -108);
+              SoftLruCache.field_e.writeCircumfixedString(var8, (byte) -121);
               var17 = (CharSequence) ((Object) param6);
-              sd.field_e.writeCircumfixedString(kh.a(var17, 1457), (byte) -107);
-              sd.field_e.writeShort(-69, param3);
-              sd.field_e.writeByte((byte) 50, param1);
-              sd.field_e.writeByte((byte) 50, var9);
+              SoftLruCache.field_e.writeCircumfixedString(kh.a(var17, 1457), (byte) -107);
+              SoftLruCache.field_e.writeShort(-69, param3);
+              SoftLruCache.field_e.writeByte((byte) 50, param1);
+              SoftLruCache.field_e.writeByte((byte) 50, var9);
               InwardSparkParticle.field_v.writeByte((byte) 114, 18);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
               var10 = InwardSparkParticle.field_v.position;
@@ -365,20 +365,20 @@ final class CachedTextLayout extends TextLayout {
                 var11_ref_String = "";
               }
               InwardSparkParticle.field_v.writeCp1252String(var11_ref_String, (byte) -115);
-              ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+              ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
             } else {
-              sd.field_e.position = 0;
-              sd.field_e.writeInt(48, fd.field_d.nextInt());
-              sd.field_e.writeInt(48, fd.field_d.nextInt());
-              stackIn_13_0 = sd.field_e;
+              SoftLruCache.field_e.position = 0;
+              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              stackIn_13_0 = SoftLruCache.field_e;
               if (!param0.a(110)) {
                 stackIn_14_1 = "";
               } else {
                 stackIn_14_1 = var15;
               }
               ((PacketBuffer) (Object) stackIn_13_0).writeCircumfixedString(stackIn_14_1, (byte) 120);
-              stackIn_16_0 = sd.field_e;
+              stackIn_16_0 = SoftLruCache.field_e;
               if (!param2.a(91)) {
                 stackIn_17_1 = "";
               } else {
@@ -388,7 +388,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 108, 16);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
               var9 = InwardSparkParticle.field_v.position;
-              ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+              ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);

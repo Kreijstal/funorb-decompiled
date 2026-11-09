@@ -7,10 +7,10 @@ final class kk {
     static ToolkitSprite field_f;
     private LegacyOpenGlGraphicsToolkit field_a;
     static boolean[] field_b;
-    private sd field_d;
+    private SoftLruCache field_d;
 
     final void a(int param0) {
-        this.field_d.a(5, 22663);
+        this.field_d.age(5, 22663);
         int var2 = 36 / ((param0 - 41) / 59);
     }
 
@@ -75,79 +75,79 @@ final class kk {
         kk.a(-15, -46, 72, (ResourceArchive) null);
     }
 
-    final us a(int param0, int param1) {
+    final LegacyOpenGlTexture2D a(int param0, int param1) {
         Object var3;
         TextureMetadata var5;
         int var6;
         int[] var7;
         int var8;
-        us var18;
+        LegacyOpenGlTexture2D var18;
         int[] var23;
         int stackIn_7_0 = 0;
-        us stackIn_12_0;
-        us stackIn_12_1;
+        LegacyOpenGlTexture2D stackIn_12_0;
+        LegacyOpenGlTexture2D stackIn_12_1;
         LegacyOpenGlGraphicsToolkit stackIn_12_2;
         int stackIn_12_3;
         int stackIn_12_4;
         int stackIn_12_5;
         int stackIn_12_6;
-        us stackIn_13_0 = null;
-        us stackIn_13_1 = null;
+        LegacyOpenGlTexture2D stackIn_13_0 = null;
+        LegacyOpenGlTexture2D stackIn_13_1 = null;
         boolean stackIn_13_7 = false;
-        us stackIn_21_0;
-        us stackIn_21_1;
+        LegacyOpenGlTexture2D stackIn_21_0;
+        LegacyOpenGlTexture2D stackIn_21_1;
         LegacyOpenGlGraphicsToolkit stackIn_21_2;
         int stackIn_21_3;
         int stackIn_21_4;
         int stackIn_21_5;
         int stackIn_21_6;
-        us stackIn_22_0 = null;
-        us stackIn_22_1 = null;
+        LegacyOpenGlTexture2D stackIn_22_0 = null;
+        LegacyOpenGlTexture2D stackIn_22_1 = null;
         boolean stackIn_22_7 = false;
-        us stackIn_31_0;
-        us stackIn_31_1;
+        LegacyOpenGlTexture2D stackIn_31_0;
+        LegacyOpenGlTexture2D stackIn_31_1;
         LegacyOpenGlGraphicsToolkit stackIn_31_2;
         int stackIn_31_3;
         int stackIn_31_4;
         int stackIn_31_5;
         int stackIn_31_6;
-        us stackIn_32_0 = null;
-        us stackIn_32_1 = null;
+        LegacyOpenGlTexture2D stackIn_32_0 = null;
+        LegacyOpenGlTexture2D stackIn_32_1 = null;
         boolean stackIn_32_7 = false;
-        us stackIn_40_0;
-        us stackIn_40_1;
+        LegacyOpenGlTexture2D stackIn_40_0;
+        LegacyOpenGlTexture2D stackIn_40_1;
         LegacyOpenGlGraphicsToolkit stackIn_40_2;
         int stackIn_40_3;
         int stackIn_40_4;
         int stackIn_40_5;
         int stackIn_40_6;
-        us stackIn_41_0 = null;
-        us stackIn_41_1 = null;
+        LegacyOpenGlTexture2D stackIn_41_0 = null;
+        LegacyOpenGlTexture2D stackIn_41_1 = null;
         boolean stackIn_41_7 = false;
-        us stackIn_47_0;
-        us stackIn_47_1;
+        LegacyOpenGlTexture2D stackIn_47_0;
+        LegacyOpenGlTexture2D stackIn_47_1;
         LegacyOpenGlGraphicsToolkit stackIn_47_2;
         int stackIn_47_3;
         int stackIn_47_4;
         int stackIn_47_5;
         int stackIn_47_6;
-        us stackIn_48_0 = null;
-        us stackIn_48_1 = null;
+        LegacyOpenGlTexture2D stackIn_48_0 = null;
+        LegacyOpenGlTexture2D stackIn_48_1 = null;
         boolean stackIn_48_7 = false;
-        us var4;
+        LegacyOpenGlTexture2D var4;
         float[] var7_array;
         float[] var9;
         float[] var10;
         float[] var11;
-        us var19;
-        us var21;
-        us var22;
+        LegacyOpenGlTexture2D var19;
+        LegacyOpenGlTexture2D var21;
+        LegacyOpenGlTexture2D var22;
         int[] var24;
         int[] var7Lifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var3 = this.field_d.a((long)param1, 120);
+        var3 = this.field_d.get((long)param1, 120);
         if (var3 != null) {
-          return (us) (var3);
+          return (LegacyOpenGlTexture2D) (var3);
         }
         if (!this.field_c.b(-29912, param1)) {
           return null;
@@ -181,12 +181,12 @@ final class kk {
                 stackIn_13_1 = null;
                 stackIn_13_7 = true;
               }
-              var18 = new us(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_13_7, var23, 0, 0, false);
+              var18 = new LegacyOpenGlTexture2D(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_13_7, var23, 0, 0, false);
               if (param0 != 0) {
-                return (us) null;
+                return (LegacyOpenGlTexture2D) null;
               }
-              var18.a(var5.field_l, var5.field_i, -27365);
-              this.field_d.a((long)param1, var18, (byte) 19);
+              var18.setWrap(var5.field_l, var5.field_i, -27365);
+              this.field_d.put((long)param1, var18, (byte) 19);
               return var18;
             }
             var7 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
@@ -207,12 +207,12 @@ final class kk {
             stackIn_22_1 = null;
             stackIn_22_7 = true;
           }
-          var19 = new us(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_21_6, stackIn_22_7, var7, 0, 0, false);
+          var19 = new LegacyOpenGlTexture2D(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_21_6, stackIn_22_7, var7, 0, 0, false);
           if (param0 != 0) {
-            return (us) null;
+            return (LegacyOpenGlTexture2D) null;
           }
-          var19.a(var5.field_l, var5.field_i, -27365);
-          this.field_d.a((long)param1, var19, (byte) 19);
+          var19.setWrap(var5.field_l, var5.field_i, -27365);
+          this.field_d.put((long)param1, var19, (byte) 19);
           return var19;
         }
         if (this.field_a.a()) {
@@ -236,12 +236,12 @@ final class kk {
             stackIn_48_1 = null;
             stackIn_48_7 = true;
           }
-          var4 = new us(stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7, var11, 6408);
+          var4 = new LegacyOpenGlTexture2D(stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7, var11, 6408);
           if (param0 != 0) {
-            return (us) null;
+            return (LegacyOpenGlTexture2D) null;
           }
-          var4.a(var5.field_l, var5.field_i, -27365);
-          this.field_d.a((long)param1, var4, (byte) 19);
+          var4.setWrap(var5.field_l, var5.field_i, -27365);
+          this.field_d.put((long)param1, var4, (byte) 19);
           return var4;
         }
         if (2 == var5.field_p) {
@@ -265,12 +265,12 @@ final class kk {
               stackIn_32_1 = null;
               stackIn_32_7 = true;
             }
-            var21 = new us(stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_31_6, stackIn_32_7, var24, 0, 0, false);
+            var21 = new LegacyOpenGlTexture2D(stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_31_6, stackIn_32_7, var24, 0, 0, false);
             if (param0 != 0) {
-              return (us) null;
+              return (LegacyOpenGlTexture2D) null;
             }
-            var21.a(var5.field_l, var5.field_i, -27365);
-            this.field_d.a((long)param1, var21, (byte) 19);
+            var21.setWrap(var5.field_l, var5.field_i, -27365);
+            this.field_d.put((long)param1, var21, (byte) 19);
             return var21;
           }
           var7Lifetime1 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
@@ -291,17 +291,17 @@ final class kk {
           stackIn_41_1 = null;
           stackIn_41_7 = true;
         }
-        var22 = new us(stackIn_40_2, stackIn_40_3, stackIn_40_4, stackIn_40_5, stackIn_40_6, stackIn_41_7, var7Lifetime1, 0, 0, false);
+        var22 = new LegacyOpenGlTexture2D(stackIn_40_2, stackIn_40_3, stackIn_40_4, stackIn_40_5, stackIn_40_6, stackIn_41_7, var7Lifetime1, 0, 0, false);
         if (param0 != 0) {
-          return (us) null;
+          return (LegacyOpenGlTexture2D) null;
         }
-        var22.a(var5.field_l, var5.field_i, -27365);
-        this.field_d.a((long)param1, var22, (byte) 19);
+        var22.setWrap(var5.field_l, var5.field_i, -27365);
+        this.field_d.put((long)param1, var22, (byte) 19);
         return var22;
     }
 
     kk(LegacyOpenGlGraphicsToolkit param0, TextureProvider param1) {
-        this.field_d = new sd(256);
+        this.field_d = new SoftLruCache(256);
         try {
           this.field_c = param1;
           this.field_a = param0;

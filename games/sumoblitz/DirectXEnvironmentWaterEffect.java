@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DirectXEnvironmentWaterEffect extends ShaderEffect {
-    private sk field_k;
+    private WaterTextureResources field_k;
     private DirectXGraphicsToolkit field_h;
     private static float[] field_f;
     private boolean field_j;
@@ -122,7 +122,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
             this.field_b.g(1, param1 - 20310);
             this.field_b.a(var3, 99);
             this.field_b.g(0, -123);
-            this.field_b.a(this.field_k.field_e, 108);
+            this.field_b.a(this.field_k.normalMap, 108);
             this.field_e = true;
             this.b(param1 ^ -20215);
             this.a((byte) -65);
@@ -176,7 +176,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    DirectXEnvironmentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, sk param2) {
+    DirectXEnvironmentWaterEffect(DirectXGraphicsToolkit param0, ResourceArchive param1, WaterTextureResources param2) {
         super(param0);
         boolean stackIn_14_1 = false;
         this.field_k = param2;
@@ -207,7 +207,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         }
         this.field_g = this.field_h.field_Cc.a(param1.fetchNamedFile("environment_mapped_water_v", "dx", -1));
         this.field_i = this.field_h.field_Cc.b(param1.fetchNamedFile("environment_mapped_water_f", "dx", -1));
-        stackIn_14_1 = (null != this.field_g) && (null != this.field_i) && (this.field_k.a(-123));
+        stackIn_14_1 = (null != this.field_g) && (null != this.field_i) && (this.field_k.ensureNormalMap(-123));
         this.field_j = stackIn_14_1;
     }
 

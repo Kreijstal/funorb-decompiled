@@ -57,10 +57,10 @@ abstract class pb {
 
     final static ts[] a(int param0) {
         if (param0 >= 10) {
-          return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, f.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
+          return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
         }
         field_b = (nb) null;
-        return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, f.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
+        return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, js.field_G, ic.field_a, uc.field_d};
     }
 
     public static void releaseStatics(int param0) {

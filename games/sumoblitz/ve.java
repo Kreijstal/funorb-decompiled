@@ -15,13 +15,13 @@ abstract class ve extends IntrusiveNode {
         return this.field_n;
     }
 
-    final static wg a(byte param0, OpenGlGraphicsToolkit param1, byte[] param2, int param3) {
+    final static OpenGlAssemblyProgram compileAssemblyProgram(byte guard, OpenGlGraphicsToolkit toolkit, byte[] source, int target) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        wg stackIn_7_0 = null;
+        OpenGlAssemblyProgram stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -29,40 +29,40 @@ abstract class ve extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == null) {
+          if (source == null) {
             stackIn_2_0 = null;
-            return (wg) (stackIn_2_0);
+            return (OpenGlAssemblyProgram) (stackIn_2_0);
           }
           var4_int = jaggl.OpenGL.glGenProgramARB();
-          var5 = 50 / ((param0 + 9) / 58);
-          jaggl.OpenGL.glBindProgramARB(param3, var4_int);
-          jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
+          var5 = 50 / ((guard + 9) / 58);
+          jaggl.OpenGL.glBindProgramARB(target, var4_int);
+          jaggl.OpenGL.glProgramRawARB(target, 34933, source);
           jaggl.OpenGL.glGetIntegerv(34379, GzipDecompressor.field_e, 0);
           if (GzipDecompressor.field_e[0] == -1) {
-            jaggl.OpenGL.glBindProgramARB(param3, 0);
-            stackIn_7_0 = new wg(param1, param3, var4_int);
+            jaggl.OpenGL.glBindProgramARB(target, 0);
+            stackIn_7_0 = new OpenGlAssemblyProgram(toolkit, target, var4_int);
             return stackIn_7_0;
           }
-          jaggl.OpenGL.glBindProgramARB(param3, 0);
+          jaggl.OpenGL.glBindProgramARB(target, 0);
           stackIn_5_0 = null;
-          return (wg) (stackIn_5_0);
+          return (OpenGlAssemblyProgram) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ve.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ve.F(").append(guard).append(',');
+          if (toolkit == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (source == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(target).append(')').toString());
         }
     }
 

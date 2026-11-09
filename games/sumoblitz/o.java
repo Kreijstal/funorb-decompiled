@@ -6,33 +6,33 @@ final class o {
     static String field_a;
 
     final static void a(int param0) {
-        TextureMetadata.field_f[oh.levelIndex] = true;
+        TextureMetadata.field_f[OpenGlShaderProgram.levelIndex] = true;
         jk.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
-          qn.field_d[oh.levelIndex] = true;
+          qn.field_d[OpenGlShaderProgram.levelIndex] = true;
         }
         if (GridWidgetContainer.livesRemaining == 3) {
-          up.field_g[oh.levelIndex] = true;
+          up.field_g[OpenGlShaderProgram.levelIndex] = true;
         }
         of.a((byte) -104);
         OpenGlIndexBuffer.g(123);
         if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }
-        if (!(oh.levelIndex <= bl.field_e)) {
-          bl.field_e = oh.levelIndex;
+        if (!(OpenGlShaderProgram.levelIndex <= bl.field_e)) {
+          bl.field_e = OpenGlShaderProgram.levelIndex;
         }
         int var1 = TextureFormat.elapsedTicks;
-        if (!(var1 >= CacheIoRequest.field_z[oh.levelIndex])) {
-          CacheIoRequest.field_z[oh.levelIndex] = var1;
+        if (!(var1 >= CacheIoRequest.field_z[OpenGlShaderProgram.levelIndex])) {
+          CacheIoRequest.field_z[OpenGlShaderProgram.levelIndex] = var1;
         }
-        if (OpenGlTexture3D.field_j[oh.levelIndex] < FadingWidget.score) {
-          OpenGlTexture3D.field_j[oh.levelIndex] = FadingWidget.score;
+        if (OpenGlTexture3D.field_j[OpenGlShaderProgram.levelIndex] < FadingWidget.score) {
+          OpenGlTexture3D.field_j[OpenGlShaderProgram.levelIndex] = FadingWidget.score;
         }
         if (param0 != 0) {
           field_a = (String) null;
         }
-        if (oh.levelIndex == 12 &&
+        if (OpenGlShaderProgram.levelIndex == 12 &&
           !bn.field_P) {
           th.b(24753, 245, 10);
         }

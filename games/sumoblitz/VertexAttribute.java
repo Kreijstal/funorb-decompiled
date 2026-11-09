@@ -201,7 +201,7 @@ final class VertexAttribute {
         TEXCOORD2 = new VertexAttribute(4, 2, GpuDataType.FLOAT);
         TEXCOORD3 = new VertexAttribute(5, 3, GpuDataType.FLOAT);
         TEXCOORD4 = new VertexAttribute(6, 4, GpuDataType.FLOAT);
-        BITS_PER_ATTRIBUTE = mr.a(16, (byte) -115);
+        BITS_PER_ATTRIBUTE = HardwareTextureCache.bitLength(16, (byte) -115);
         continueText = "Continue";
     }
 }

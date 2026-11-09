@@ -53,7 +53,7 @@ final class br {
           if (param0 >= -79) {
             return -19;
           }
-          if (this.field_j == qj.field_d) {
+          if (this.field_j == OpenGlShader.field_d) {
             return 1;
           }
           if (wh.field_s != 2) {
@@ -67,7 +67,7 @@ final class br {
         if (param0 >= -79) {
           return -19;
         }
-        if (this.field_j == qj.field_d) {
+        if (this.field_j == OpenGlShader.field_d) {
           return 1;
         }
         if (wh.field_s != 2) {

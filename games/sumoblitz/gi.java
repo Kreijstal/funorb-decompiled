@@ -3,7 +3,7 @@
  */
 final class gi extends LegacyOpenGlEffect {
     private ch field_e;
-    private pr field_l;
+    private LegacyOpenGlTexture1D field_l;
     static qr field_g;
     private tq field_j;
     static int[] field_k;
@@ -24,7 +24,7 @@ final class gi extends LegacyOpenGlEffect {
           return;
         }
         this.field_b.g(1, 94);
-        this.field_b.a(24, (ht) null);
+        this.field_b.bindTexture(24, (LegacyOpenGlTexture) null);
         this.field_b.a(1.0f, 15, 0.0f);
         this.field_b.g(0, 100);
         this.field_b.a(20685, 8448, 8448);
@@ -82,14 +82,14 @@ final class gi extends LegacyOpenGlEffect {
         int var5 = Sumoblitz.field_L ? 1 : 0;
         if ((1 & param1) != 1) {
           if (!this.field_e.field_g) {
-            this.field_b.a(108, this.field_e.field_i[0]);
+            this.field_b.bindTexture(108, this.field_e.field_i[0]);
             if (param0 <= 39) {
               this.d(2);
               return;
             }
             return;
           }
-          this.field_b.a(82, this.field_e.field_b);
+          this.field_b.bindTexture(82, this.field_e.field_b);
           GpuDataType.field_a[1] = 0.0f;
           GpuDataType.field_a[2] = 0.0f;
           GpuDataType.field_a[3] = 0.0f;
@@ -103,14 +103,14 @@ final class gi extends LegacyOpenGlEffect {
         }
         if (!this.field_e.field_g) {
           var4 = this.field_b.field_Ac % 4000 * 16 / 4000;
-          this.field_b.a(39, this.field_e.field_i[var4]);
+          this.field_b.bindTexture(39, this.field_e.field_i[var4]);
           if (param0 > 39) {
             return;
           }
           this.d(2);
           return;
         }
-        this.field_b.a(80, this.field_e.field_b);
+        this.field_b.bindTexture(80, this.field_e.field_b);
         GpuDataType.field_a[3] = (float)(this.field_b.field_Ac % 4000) / 4000.0f;
         GpuDataType.field_a[2] = 0.0f;
         GpuDataType.field_a[0] = 0.0f;
@@ -136,7 +136,7 @@ final class gi extends LegacyOpenGlEffect {
           jaggl.OpenGL.glTexGenfv(8192, 9474, GpuDataType.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
           this.field_b.a(0.5f, 15, (float)this.field_b.field_kc);
-          this.field_b.a(11, this.field_l);
+          this.field_b.bindTexture(11, this.field_l);
           this.field_b.g(0, 115);
         }
         this.field_j.a((byte) 121, '\0');
@@ -158,8 +158,8 @@ final class gi extends LegacyOpenGlEffect {
         try {
           this.field_e = param1;
           this.d(-53);
-          this.field_l = new pr(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
-          this.field_l.a(false, (byte) 126);
+          this.field_l = new LegacyOpenGlTexture1D(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
+          this.field_l.setRepeat(false, (byte) 126);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -218,10 +218,10 @@ final class gi extends LegacyOpenGlEffect {
         this.field_j.a(true);
     }
 
-    final void a(byte param0, int param1, ht param2) {
+    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
         try {
           if (param0 != 35) {
-            this.field_l = (pr) null;
+            this.field_l = (LegacyOpenGlTexture1D) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -7,9 +7,9 @@ final class ClientException extends RuntimeException {
     static String creatingYourAccountText;
     Throwable field_b;
 
-    final static qj a(int param0, OpenGlGraphicsToolkit param1, byte[] param2, int param3) {
+    final static OpenGlShader compileShader(int shaderType, OpenGlGraphicsToolkit toolkit, byte[] source, int guard) {
         Object stackIn_15_0 = null;
-        qj stackIn_19_0 = null;
+        OpenGlShader stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -20,14 +20,14 @@ final class ClientException extends RuntimeException {
         RuntimeException var4 = null;
         byte[] var10 = null;
         try {
-          if (param2 == null) {
+          if (source == null) {
             return null;
           }
-          if (0 == param2.length) {
+          if (0 == source.length) {
             return null;
           }
-          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
-          jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
+          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(shaderType);
+          jaggl.OpenGL.glShaderSourceRawARB(var4_long, source);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
           jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, TextInputWidget.field_H, 0);
           if (TextInputWidget.field_H[0] == 0) {
@@ -43,38 +43,38 @@ final class ClientException extends RuntimeException {
             if (TextInputWidget.field_H[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_15_0 = null;
-              return (qj) (stackIn_15_0);
+              return (OpenGlShader) (stackIn_15_0);
             }
           }
-          if (param3 > -113) {
+          if (guard > -113) {
             ClientException.releaseStatics((byte) -11);
           }
-          stackIn_19_0 = new qj(param1, var4_long, param0);
+          stackIn_19_0 = new OpenGlShader(toolkit, var4_long, shaderType);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("su.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_22_1 = new StringBuilder().append("su.A(").append(shaderType).append(',');
+          if (toolkit == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param2 == null) {
+          if (source == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(guard).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          ClientException.a(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
+          ClientException.compileShader(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
           if (!TimedSceneEffect.field_r) {
             return vs.b((byte) 9) ? true : false;
           }

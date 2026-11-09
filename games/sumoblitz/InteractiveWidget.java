@@ -105,11 +105,11 @@ class InteractiveWidget extends UiWidget {
         this.enabled = true;
     }
 
-    final static f a(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
+    final static LegacyOpenGlSpriteTexture a(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
-        f stackIn_7_0 = null;
-        f stackIn_10_0 = null;
-        f stackIn_12_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_7_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_10_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -123,13 +123,13 @@ class InteractiveWidget extends UiWidget {
           if (!param0.field_Cc && (!rm.a(param2, -105) ||
             !rm.a(param1, -103))) {
             if (param0.field_C) {
-              stackIn_12_0 = new f(param0, 34037, param5, param2, param1, param4, param3, param7);
+              stackIn_12_0 = new LegacyOpenGlSpriteTexture(param0, 34037, param5, param2, param1, param4, param3, param7);
               return stackIn_12_0;
             }
-            stackIn_10_0 = new f(param0, param5, param2, param1, hn.a(false, param2), hn.a(false, param1), param3, param7);
+            stackIn_10_0 = new LegacyOpenGlSpriteTexture(param0, param5, param2, param1, hn.a(false, param2), hn.a(false, param1), param3, param7);
             return stackIn_10_0;
           }
-          stackIn_7_0 = new f(param0, 3553, param5, param2, param1, param4, param3, param7);
+          stackIn_7_0 = new LegacyOpenGlSpriteTexture(param0, 3553, param5, param2, param1, param4, param3, param7);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

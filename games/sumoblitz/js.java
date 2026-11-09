@@ -652,7 +652,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           var3 = var3 + this.a(ks.emailLoginText, 170, var3, 78, this.field_I);
           var3 = var3 + (5 + this.a(var3, 170, (byte) 125, 20, "", this.field_E, pq.confirmEmailText));
           var3 = var3 + this.a(pi.passwordText, 170, var3, 55, this.field_N);
-          var3 = var3 + (5 + this.a(ht.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));
+          var3 = var3 + (5 + this.a(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));
           var3 = var3 + (this.a(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.field_A) + 5);
           var3 = var3 + this.a(170, fm.ageText, var3, this.field_K, 64);
           var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.field_H, true, -120 + this.width, 5, jm.field_a, 11579568, lv.pleaseSendMeNewsText);
@@ -727,12 +727,12 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
         }
     }
 
-    final static f a(int param0, int param1, int param2, boolean param3, LegacyOpenGlGraphicsToolkit param4, byte param5, int param6, int[] param7) {
+    final static LegacyOpenGlSpriteTexture a(int param0, int param1, int param2, boolean param3, LegacyOpenGlGraphicsToolkit param4, byte param5, int param6, int[] param7) {
         RuntimeException var8 = null;
-        f stackIn_2_0 = null;
-        f stackIn_11_0 = null;
-        f stackIn_14_0 = null;
-        f stackIn_16_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_2_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_11_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_14_0 = null;
+        LegacyOpenGlSpriteTexture stackIn_16_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -741,19 +741,19 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 >= -6) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (LegacyOpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
           if (!param4.field_Cc && (!rm.a(param6, -116) ||
             !rm.a(param0, -126))) {
             if (param4.field_C) {
-              stackIn_16_0 = new f(param4, 34037, param6, param0, param3, param7, param2, param1);
+              stackIn_16_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param6, param0, param3, param7, param2, param1);
               return stackIn_16_0;
             }
-            stackIn_14_0 = new f(param4, param6, param0, hn.a(false, param6), hn.a(false, param0), param7);
+            stackIn_14_0 = new LegacyOpenGlSpriteTexture(param4, param6, param0, hn.a(false, param6), hn.a(false, param0), param7);
             return stackIn_14_0;
           }
-          stackIn_11_0 = new f(param4, 3553, param6, param0, param3, param7, param2, param1);
+          stackIn_11_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param6, param0, param3, param7, param2, param1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

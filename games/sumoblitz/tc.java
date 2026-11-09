@@ -43,7 +43,7 @@ final class tc extends na {
             stackIn_8_0 = ContentTransitionDialog.passwordsCanOnlyContainText;
             return stackIn_8_0;
           }
-          if (hp.a(var5, true)) {
+          if (LegacyOpenGlCubeTexture.hasUniformCharacters(var5, true)) {
             stackIn_11_0 = ScrollPane.thisPasswordContainsRepeatedText;
             return stackIn_11_0;
           }
@@ -184,7 +184,7 @@ final class tc extends na {
           DroneChargeParticle.field_w = false;
           bi.field_c = 0;
           ew.field_e = 0;
-          b.field_c = false;
+          LegacyOpenGlNormalMapGenerator.field_c = false;
           SecondaryNodeDeque.field_e = false;
           vb.field_E = false;
           nq.field_i = 0;

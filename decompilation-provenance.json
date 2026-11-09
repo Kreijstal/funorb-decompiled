@@ -11116,17 +11116,17 @@
       "inputTreeSha256": "dfdbde2d64759f8dd722b88882ac48873a91678b6b97428875939f419d9e9bcc",
       "sources": {
         "files": 586,
-        "sha256": "cbee461534f82606a943a74625e9c5103dfaa725dddb3ddaef505305df00aa5d"
+        "sha256": "17a749441b222423ed3f6e4ec9275f51c367b48ac0df4deeed7fb97f6ddb3197"
       },
       "dictionary": {
         "path": "decompilation/sumoblitz-naming.json",
-        "sha256": "70a1d341567c79db223cdaa198964d2f15aa7acdd4d213a716747289b66e94d3"
+        "sha256": "593df4ca566610d49d46a1d0b905124788892f827be098d60ca361ae89b5c155"
       },
       "readingGuide": {
         "path": "games/sumoblitz/README.md",
-        "sha256": "bbb6d920ba14db64c2b01649709d95f154304f4c28d66584fdc38780d01ac711"
+        "sha256": "fd35f90638424e4311deeae082ab6044871f4f82f37d9c501a368cadf0ddfdfe"
       },
-      "rulesSha256": "64bf8ccadd8b1d236ee8a53603c262003effa55bd17acfcf836b2554822909cd",
+      "rulesSha256": "141707276880df1485383616b523a6cfbfc3743ac44bd99957bfe3a0fb0de31d",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13197,7 +13197,7 @@
         },
         "publishedSources": {
           "files": 586,
-          "sha256": "cbee461534f82606a943a74625e9c5103dfaa725dddb3ddaef505305df00aa5d"
+          "sha256": "17a749441b222423ed3f6e4ec9275f51c367b48ac0df4deeed7fb97f6ddb3197"
         }
       },
       "terraphoenix": {

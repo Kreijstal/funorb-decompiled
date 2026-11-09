@@ -41,7 +41,7 @@ final class ct extends ml {
               ps.field_e[13] == bi.field_c) {
               th.b(24753, 242, 13);
             }
-            if (7 == oh.levelIndex &&
+            if (7 == OpenGlShaderProgram.levelIndex &&
               0 == an.waveIndex) {
               if (param1.variant == 5) {
                 ei.field_a = ei.field_a + 1;

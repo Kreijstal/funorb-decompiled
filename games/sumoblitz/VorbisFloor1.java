@@ -165,7 +165,7 @@ final class VorbisFloor1 {
         var2 = this.xList.length;
         System.arraycopy(this.xList, 0, decodedX, 0, var2);
         var3 = ranges[this.multiplier - 1];
-        var4 = mr.a(var3 - 1, (byte) -115);
+        var4 = HardwareTextureCache.bitLength(var3 - 1, (byte) -115);
         decodedY[0] = VorbisSample.readBits(var4);
         decodedY[1] = VorbisSample.readBits(var4);
         var5 = 2;

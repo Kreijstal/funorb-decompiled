@@ -3,14 +3,14 @@
  */
 final class ch {
     static int field_d;
-    ek field_b;
-    ek field_c;
-    us[] field_a;
+    LegacyOpenGlTexture3D field_b;
+    LegacyOpenGlTexture3D field_c;
+    LegacyOpenGlTexture2D[] field_a;
     static String playFreeVersionText;
     static boolean field_h;
     boolean field_g;
-    ek field_f;
-    us[] field_i;
+    LegacyOpenGlTexture3D field_f;
+    LegacyOpenGlTexture2D[] field_i;
 
     public static void releaseStatics(byte param0) {
         playFreeVersionText = null;
@@ -37,8 +37,8 @@ final class ch {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ek var4 = null;
-        b var10 = null;
+        LegacyOpenGlTexture3D var4 = null;
+        LegacyOpenGlNormalMapGenerator var10 = null;
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
@@ -54,34 +54,34 @@ final class ch {
           this.field_g = param0.field_Ic;
           MusicPatchEnvelope.a(param0, (byte) 123);
           if (!this.field_g) {
-            this.field_i = new us[16];
+            this.field_i = new LegacyOpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var23 = iq.a(ic.field_b, 14381, 32768, var2_int * 32768);
-              this.field_i[var2_int] = new us(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
+              this.field_i[var2_int] = new LegacyOpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
-            this.field_a = new us[16];
+            this.field_a = new LegacyOpenGlTexture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var24 = iq.a(GameplaySession.field_j, 14381, 32768, var2_intLifetime1 * 32768);
-              this.field_a[var2_intLifetime1] = new us(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
+              this.field_a[var2_intLifetime1] = new LegacyOpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
           var20 = ab.extractByteArray(false, ic.field_b, 0);
-          this.field_b = new ek(param0, 6410, 128, 128, 16, var20, 6410);
+          this.field_b = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
           var21 = ab.extractByteArray(false, GameplaySession.field_j, 0);
-          this.field_f = new ek(param0, 6410, 128, 128, 16, var21, 6410);
+          this.field_f = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_Sb;
-          if (var10.b((byte) -101)) {
+          if (var10.ensureProgram((byte) -101)) {
             var22 = ab.extractByteArray(false, PlayingSound.field_m, 0);
-            this.field_c = new ek(param0, 6408, 128, 128, 16);
-            var4 = new ek(param0, 6409, 128, 128, 16, var22, 6409);
-            if (!var10.a(this.field_c, 2.0f, false, var4)) {
-              this.field_c.b((byte) 106);
+            this.field_c = new LegacyOpenGlTexture3D(param0, 6408, 128, 128, 16);
+            var4 = new LegacyOpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
+            if (!var10.generateNormalMap(this.field_c, 2.0f, false, var4)) {
+              this.field_c.close((byte) 106);
               this.field_c = null;
             } else {
-              this.field_c.a(false);
+              this.field_c.generateMipmaps(false);
             }
-            var4.b((byte) 126);
+            var4.close((byte) 126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

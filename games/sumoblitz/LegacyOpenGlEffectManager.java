@@ -444,7 +444,7 @@ final class LegacyOpenGlEffectManager {
         this.field_e = (ch) null;
     }
 
-    final boolean a(int param0, byte param1, ht param2) {
+    final boolean a(int param0, byte param1, LegacyOpenGlTexture param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;

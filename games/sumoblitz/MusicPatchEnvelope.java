@@ -49,7 +49,7 @@ final class MusicPatchEnvelope {
         int var2_int = 0;
         ip var8 = null;
         qb var10 = null;
-        b var12 = null;
+        LegacyOpenGlNormalMapGenerator var12 = null;
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
@@ -71,11 +71,11 @@ final class MusicPatchEnvelope {
             GameplaySession.field_j = DroneDebris.storeByteArray((byte) -117, var21, false);
           }
           var12 = param0.field_Sb;
-          if (var12.b((byte) -101)) {
+          if (var12.ensureProgram((byte) -101)) {
             if (null != PlayingSound.field_m) {
               return;
             }
-            var22 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+            var22 = HardwareTextureCache.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
             PlayingSound.field_m = DroneDebris.storeByteArray((byte) -126, var22, false);
           }
           return;

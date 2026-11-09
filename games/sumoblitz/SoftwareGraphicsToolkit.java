@@ -20,7 +20,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int projectionScaleX;
     private int contextCount;
     int clipRight;
-    private sd field_u;
+    private SoftLruCache field_u;
     private int field_m;
     private int projectionCenterY;
     private SoftwareRenderTarget renderTarget;
@@ -31,7 +31,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int targetHeight;
     private int farPlane;
     private rp[] contexts;
-    private sd field_E;
+    private SoftLruCache field_E;
     private static String offText;
 
     final void updateTime(int timeMillis) {
@@ -39,7 +39,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var5 = 0;
         TextureMetadata var6 = null;
         int var2 = timeMillis - this.field_A;
-        Object var3 = this.field_u.b(0);
+        Object var3 = this.field_u.firstValue(0);
         while (var3 != null) {
           var4 = (le) (var3);
           if (var4.field_p) {
@@ -52,11 +52,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             }
             var4.field_p = false;
           }
-          var3 = this.field_u.a((byte) -92);
+          var3 = this.field_u.nextValue((byte) -92);
         }
         this.field_A = timeMillis;
-        this.field_E.a(5, 22663);
-        this.field_u.a(5, 22663);
+        this.field_E.age(5, 22663);
+        this.field_u.age(5, 22663);
     }
 
     final int farPlane() {
@@ -190,9 +190,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.clipLeft = 0;
         this.clipTop = 0;
         this.farPlane = 3500;
-        this.field_E = new sd(16);
+        this.field_E = new SoftLruCache(16);
         try {
-          this.field_u = new sd(256);
+          this.field_u = new SoftLruCache(256);
           discarded$0 = new SoftwareTransform3D();
           this.createContexts(1);
           this.bindContextToCurrentThread(0);

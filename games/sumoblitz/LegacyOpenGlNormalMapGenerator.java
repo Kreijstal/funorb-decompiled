@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b {
+final class LegacyOpenGlNormalMapGenerator {
     static volatile int field_a;
     static String youAreNotCurrentlyText;
     static boolean field_c;
-    private LegacyOpenGlGraphicsToolkit field_e;
+    private LegacyOpenGlGraphicsToolkit toolkit;
     static String loadingLevelsText;
-    private sn field_b;
+    private LegacyOpenGlShaderProgram program;
 
     public static void releaseStatics(byte param0) {
         loadingLevelsText = null;
@@ -17,11 +17,11 @@ final class b {
         }
     }
 
-    b(LegacyOpenGlGraphicsToolkit param0) {
+    LegacyOpenGlNormalMapGenerator(LegacyOpenGlGraphicsToolkit owner) {
         try {
-          this.field_e = param0;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "b.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,32 +37,32 @@ final class b {
         }
     }
 
-    final boolean b(byte param0) {
-        mk var3 = null;
-        mk var2 = null;
-        if (this.field_e.field_xc &&
-          this.field_e.field_wb &&
-          this.field_b == null) {
-          var3 = sk.a(this.field_e, false, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
+    final boolean ensureProgram(byte guard) {
+        LegacyOpenGlShader var3 = null;
+        LegacyOpenGlShader var2 = null;
+        if (this.toolkit.supportsFramebufferObjects &&
+          this.toolkit.supportsFragmentShaders &&
+          this.program == null) {
+          var3 = WaterTextureResources.compileShader(this.toolkit, false, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
           var2 = var3;
           if (var2 != null) {
-            this.field_b = hc.a(-14382, new mk[]{var3}, this.field_e);
+            this.program = hc.linkShaderProgram(-14382, new LegacyOpenGlShader[]{var3}, this.toolkit);
           }
         }
-        if (param0 != -101) {
+        if (guard != -101) {
           field_a = -88;
         }
-        return null != this.field_b ? true : false;
+        return null != this.program ? true : false;
     }
 
-    final boolean a(ek param0, float param1, boolean param2, ek param3) {
+    final boolean generateNormalMap(LegacyOpenGlTexture3D destination, float relief, boolean initialResult, LegacyOpenGlTexture3D heightMap) {
         int var8 = 0;
         RuntimeException var5 = null;
-        kf var6 = null;
+        LegacyOpenGlRenderbuffer var6 = null;
         int var7 = 0;
         float var9 = 0.0f;
         int var10 = 0;
-        cs var11 = null;
+        LegacyOpenGlFramebuffer var11 = null;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -72,15 +72,15 @@ final class b {
         RuntimeException decompiledCaughtException = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!this.b((byte) -101)) {
+          if (!this.ensureProgram((byte) -101)) {
             return false;
           }
-          var11 = this.field_e.field_G;
-          var6 = new kf(this.field_e, 6408, param0.field_p, param0.field_q);
-          this.field_e.a(var11, -98);
-          var7 = param2 ? 1 : 0;
-          var11.a(var6, 0, -14269);
-          if (var11.h(-276)) {
+          var11 = this.toolkit.scratchFramebuffer;
+          var6 = new LegacyOpenGlRenderbuffer(this.toolkit, 6408, destination.width, destination.height);
+          this.toolkit.pushFramebuffer(var11, -98);
+          var7 = initialResult ? 1 : 0;
+          var11.attachRenderbuffer(var6, 0, -14269);
+          if (var11.isComplete(-276)) {
             jaggl.OpenGL.glPushMatrix();
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5889);
@@ -88,14 +88,14 @@ final class b {
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
             jaggl.OpenGL.glPushAttrib(2048);
-            jaggl.OpenGL.glViewport(0, 0, param0.field_p, param0.field_q);
-            jaggl.OpenGL.glUseProgramObjectARB(this.field_b.field_c);
-            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_c, "heightMap"), 0);
-            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_c, "rcpRelief"), 1.0f / param1);
-            jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_c, "sampleSize"), 1.0f / (float)param3.field_p, 1.0f / (float)param3.field_q);
-            for (var8 = 0; var8 < param0.field_o; var8++) {
-              var9 = (float)var8 / (float)param0.field_o;
-              this.field_e.a(117, param3);
+            jaggl.OpenGL.glViewport(0, 0, destination.width, destination.height);
+            jaggl.OpenGL.glUseProgramObjectARB(this.program.programHandle);
+            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.programHandle, "heightMap"), 0);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.programHandle, "rcpRelief"), 1.0f / relief);
+            jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.programHandle, "sampleSize"), 1.0f / (float)heightMap.width, 1.0f / (float)heightMap.height);
+            for (var8 = 0; var8 < destination.depth; var8++) {
+              var9 = (float)var8 / (float)destination.depth;
+              this.toolkit.bindTexture(117, heightMap);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord3f(0.0f, 0.0f, var9);
               jaggl.OpenGL.glVertex2f(0.0f, 0.0f);
@@ -106,7 +106,7 @@ final class b {
               jaggl.OpenGL.glTexCoord3f(0.0f, 1.0f, var9);
               jaggl.OpenGL.glVertex2f(0.0f, 1.0f);
               jaggl.OpenGL.glEnd();
-              param0.a(0, (byte) 80, 0, var8, param0.field_q, param0.field_p, 0, 0);
+              destination.copyFromFramebuffer(0, (byte) 80, 0, var8, destination.height, destination.width, 0, 0);
             }
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             jaggl.OpenGL.glPopAttrib();
@@ -115,8 +115,8 @@ final class b {
             var7 = 1;
             jaggl.OpenGL.glPopMatrix();
           }
-          var11.a(0, 17012);
-          this.field_e.a((byte) -72, (mw) (var11));
+          var11.detachAttachment(0, 17012);
+          this.toolkit.popFramebuffer((byte) -72, (LegacyOpenGlFramebufferTarget) (var11));
           stackIn_11_0 = var7;
           return stackIn_11_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,13 +124,13 @@ final class b {
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
           stackIn_14_1 = new StringBuilder().append("b.B(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(relief).append(',').append(initialResult).append(',');
+          if (heightMap == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -162,7 +162,7 @@ final class b {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != -30084) {
-            b.c((byte) -53);
+            LegacyOpenGlNormalMapGenerator.c((byte) -53);
           }
           var13 = ig.field_a;
           var2 = var13.readUnsignedByte(-31302);

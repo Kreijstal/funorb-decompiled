@@ -17,13 +17,13 @@ final class kd {
 
     final static ResourceArchive a(byte param0, int param1) {
         int var2 = 39 % ((param0 + 45) / 59);
-        if (sn.field_d != null) {
-          return sn.field_d;
+        if (LegacyOpenGlShaderProgram.field_d != null) {
+          return LegacyOpenGlShaderProgram.field_d;
         }
         if (-1 != param1) {
           return ng.a(1, -101, true, param1, false, true);
         }
-        return sn.field_d;
+        return LegacyOpenGlShaderProgram.field_d;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -57,7 +57,7 @@ final class kd {
         if (MusicPatch.field_u > 200) {
           var5 = (250 - MusicPatch.field_u << 8) / 50;
         }
-        jq.a(7161, sn.field_a);
+        jq.a(7161, LegacyOpenGlShaderProgram.field_a);
         nk.b();
         SoftwareRasterizer.clear();
         ok.b(param2 + 0);
@@ -127,7 +127,7 @@ final class kd {
           }
           return;
         }
-        sn.field_a.drawHalfSize(var3, var4);
+        LegacyOpenGlShaderProgram.field_a.drawHalfSize(var3, var4);
         var6Lifetime1 = MusicPatch.field_u - 125;
         if (var6Lifetime1 <= 0) {
           var6Lifetime1 = MusicPatch.field_u - 140;

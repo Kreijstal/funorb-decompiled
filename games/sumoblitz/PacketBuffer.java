@@ -186,7 +186,7 @@ class PacketBuffer extends IntrusiveNode {
         var5 = 83 / ((guard - 0) / 48);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return sd.a(this.payload, var3, var4, 26564);
+          return SoftLruCache.decodeCp1252(this.payload, var3, var4, 26564);
         }
         return "";
     }
@@ -546,7 +546,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         var3 = this.position - var2 + terminatorAdjustment;
         if (var3 != 0) {
-          return sd.a(this.payload, var2, var3, 26564);
+          return SoftLruCache.decodeCp1252(this.payload, var2, var3, 26564);
         }
         return "";
     }

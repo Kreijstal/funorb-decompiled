@@ -4,7 +4,7 @@
 final class ib extends ShaderEffect {
     private float field_e;
     static int[][] field_g;
-    private sk field_f;
+    private WaterTextureResources field_f;
 
     final void a(byte param0) {
         AffineTransform3D var2 = null;
@@ -25,7 +25,7 @@ final class ib extends ShaderEffect {
         this.field_e = -0.03486540541052818f;
     }
 
-    ib(HardwareGraphicsToolkit param0, sk param1) {
+    ib(HardwareGraphicsToolkit param0, WaterTextureResources param1) {
         super(param0);
         this.field_e = 0.0f;
         try {
@@ -38,9 +38,9 @@ final class ib extends ShaderEffect {
     final boolean b(byte param0) {
         if (param0 >= -8) {
           this.field_e = -0.8005875945091248f;
-          return this.field_f.c(51);
+          return this.field_f.hasAnimatedTextures(51);
         }
-        return this.field_f.c(51);
+        return this.field_f.hasAnimatedTextures(51);
     }
 
     public static void e(int param0) {
@@ -69,7 +69,7 @@ final class ib extends ShaderEffect {
     final void a(int param0, int param1, GpuTexture param2) {
         try {
           if (param1 != 18834) {
-            this.field_f = (sk) null;
+            this.field_f = (WaterTextureResources) null;
           }
           this.field_b.a(param2, 126);
         } catch (RuntimeException runtimeException) {
@@ -90,7 +90,7 @@ final class ib extends ShaderEffect {
           this.a((byte) -107);
           return;
         }
-        this.field_f = (sk) null;
+        this.field_f = (WaterTextureResources) null;
         this.field_b.a(false, -16777216);
         this.field_b.a(mm.CONSTANT, 0, true);
         this.a((byte) -107);
@@ -126,20 +126,20 @@ final class ib extends ShaderEffect {
           this.field_b.a((GpuTexture) null, 97);
         } else {
           if ((1 & param1) != 1) {
-            if (!this.field_f.field_g) {
-              this.field_b.a(this.field_f.field_d[0], 108);
+            if (!this.field_f.useVolumeTextures) {
+              this.field_b.a(this.field_f.animatedSlices[0], 108);
             } else {
-              this.field_b.a(this.field_f.field_f, 126);
+              this.field_b.a(this.field_f.animatedVolume, 126);
             }
           } else {
-            if (!this.field_f.field_g) {
+            if (!this.field_f.useVolumeTextures) {
               var4 = this.field_b.field_kc % 4000 * 16 / 4000;
-              this.field_b.a(this.field_f.field_d[var4], 93);
+              this.field_b.a(this.field_f.animatedSlices[var4], 93);
               this.field_b.g(0, -113);
               return;
             }
             this.field_e = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-            this.field_b.a(this.field_f.field_f, 122);
+            this.field_b.a(this.field_f.animatedVolume, 122);
           }
         }
         this.field_b.g(0, -113);

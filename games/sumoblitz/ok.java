@@ -304,12 +304,12 @@ final class ok {
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
           OpenGlUnderwaterEffect.field_k = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = mr.field_b.length;
+          var1_int = HardwareTextureCache.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_gk = mr.field_b[var3];
+            var4_ref_gk = HardwareTextureCache.field_b[var3];
             var4_ref_gk.a(false);
             IntrusiveDequeCursor.a((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
@@ -347,15 +347,15 @@ final class ok {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; var15 < mr.field_b.length; var15++) {
+          for (var15 = 0; var15 < HardwareTextureCache.field_b.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; mr.field_b.length > var17_int; var17_int++) {
+            for (var17_int = 1; HardwareTextureCache.field_b.length > var17_int; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = mr.field_b[var16];
+            var17 = HardwareTextureCache.field_b[var16];
             IntrusiveDequeCursor.a((byte) 79, var16);
             for (var18 = 0; 3 > var18; var18++) {
               uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];

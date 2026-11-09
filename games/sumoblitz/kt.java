@@ -71,7 +71,7 @@ final class kt {
             }
             var2 = 1;
           }
-          nj.field_a.a(true, wg.b(jc.field_f, 1882601153, nb.field_a), wg.b(pi.field_e, 1882601153, ko.field_p));
+          nj.field_a.a(true, OpenGlAssemblyProgram.b(jc.field_f, 1882601153, nb.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
           if (nj.field_a.d(-31260)) {
             var1_int = 1;
           }

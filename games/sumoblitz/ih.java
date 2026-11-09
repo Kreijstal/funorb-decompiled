@@ -57,7 +57,7 @@ final class ih {
         int var13Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = mr.a((-param4 + param3) * 3, (byte) -115);
+          var5_int = HardwareTextureCache.bitLength((-param4 + param3) * 3, (byte) -115);
           var6 = 3 * param4;
           var7 = -10 + var5_int;
           HardwareGraphicsToolkit.C(-114);
@@ -78,11 +78,11 @@ final class ih {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = ScrollViewport.field_z[var9];
-                var13 = hp.field_o[var9];
+                var13 = LegacyOpenGlCubeTexture.field_o[var9];
                 var14 = ScrollViewport.field_z[var10] - var12;
                 var15 = ScrollViewport.field_z[var11] - var12;
-                var16 = hp.field_o[var10] - var13;
-                var17 = hp.field_o[var11] - var13;
+                var16 = LegacyOpenGlCubeTexture.field_o[var10] - var13;
+                var17 = LegacyOpenGlCubeTexture.field_o[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {

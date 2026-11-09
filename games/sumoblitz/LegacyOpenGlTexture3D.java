@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends ht {
+final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
     static String field_k;
-    int field_o;
-    int field_p;
-    int field_q;
+    int depth;
+    int width;
+    int height;
     static volatile int field_l;
-    private int field_m;
-    private int field_n;
+    private int framebufferAttachment;
+    private int framebufferTarget;
 
-    ek(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4) {
-        super(param0, 32879, param1, param4 * (param2 * param3), false);
-        this.field_n = -1;
-        this.field_m = -1;
+    LegacyOpenGlTexture3D(LegacyOpenGlGraphicsToolkit owner, int storageFormat, int pixelWidth, int pixelHeight, int slices) {
+        super(owner, 32879, storageFormat, slices * (pixelWidth * pixelHeight), false);
+        this.framebufferTarget = -1;
+        this.framebufferAttachment = -1;
         try {
-          this.field_p = param2;
-          this.field_q = param3;
-          this.field_o = param4;
-          this.field_d.a(63, (ht) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, ForceFieldRingEffect.glBaseFormat(false, this.field_a), 5121, (byte[]) null, 0);
-          this.a(true, 0);
+          this.width = pixelWidth;
+          this.height = pixelHeight;
+          this.depth = slices;
+          this.toolkit.bindTexture(63, (LegacyOpenGlTexture) (this));
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.width, this.height, this.depth, 0, ForceFieldRingEffect.glBaseFormat(false, this.internalFormat), 5121, (byte[]) null, 0);
+          this.setLinearFiltering(true, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (owner != null ? "{...}" : "null") + ',' + storageFormat + ',' + pixelWidth + ',' + pixelHeight + ',' + slices + ')');
         }
     }
 
@@ -33,11 +33,11 @@ final class ek extends ht {
         field_k = null;
     }
 
-    public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_n, this.field_m, this.field_c, 0, 0, 0);
-        this.field_n = -1;
-        int var2 = -76 / ((44 - param0) / 58);
-        this.field_m = -1;
+    public final void detachFramebuffer(int guard) {
+        jaggl.OpenGL.glFramebufferTexture3DEXT(this.framebufferTarget, this.framebufferAttachment, this.target, 0, 0, 0);
+        this.framebufferTarget = -1;
+        int var2 = -76 / ((44 - guard) / 58);
+        this.framebufferAttachment = -1;
     }
 
     final static void a(String param0, int param1) {
@@ -60,9 +60,9 @@ final class ek extends ht {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(hp.field_l));
+            decompiledFrameRemainder0 = !(param0.equals(LegacyOpenGlCubeTexture.field_l));
           } else {
-            decompiledFrameRemainder0 = (hp.field_l == null);
+            decompiledFrameRemainder0 = (LegacyOpenGlCubeTexture.field_l == null);
           }
           if (decompiledFrameRemainder0) {
             if (!up.field_d) {
@@ -98,7 +98,7 @@ final class ek extends ht {
               }
             }
           }
-          hp.field_l = param0;
+          LegacyOpenGlCubeTexture.field_l = param0;
           var2_intLifetime1 = -62 % ((-74 - param1) / 35);
           if (!up.field_d &&
             qf.field_a < GameClientShell.field_s &&
@@ -129,41 +129,41 @@ final class ek extends ht {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.field_d.a(param1 ^ 36, (ht) (this));
-        jaggl.OpenGL.glCopyTexSubImage3D(this.field_c, 0, param0, param2, param3, param7, param6, param5, param4);
+    final void copyFromFramebuffer(int destinationX, byte guard, int destinationY, int destinationZ, int height, int width, int sourceY, int sourceX) {
+        this.toolkit.bindTexture(guard ^ 36, (LegacyOpenGlTexture) (this));
+        jaggl.OpenGL.glCopyTexSubImage3D(this.target, 0, destinationX, destinationY, destinationZ, sourceX, sourceY, width, height);
         jaggl.OpenGL.glFlush();
-        if (param1 != 80) {
-          this.field_n = 57;
+        if (guard != 80) {
+          this.framebufferTarget = 57;
         }
     }
 
-    ek(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
-        super(param0, 32879, param1, param3 * param2 * param4, false);
-        this.field_n = -1;
-        this.field_m = -1;
+    LegacyOpenGlTexture3D(LegacyOpenGlGraphicsToolkit owner, int storageFormat, int pixelWidth, int pixelHeight, int slices, byte[] pixels, int sourceFormat) {
+        super(owner, 32879, storageFormat, pixelHeight * pixelWidth * slices, false);
+        this.framebufferTarget = -1;
+        this.framebufferAttachment = -1;
         try {
-          this.field_p = param2;
-          this.field_q = param3;
-          this.field_o = param4;
-          this.field_d.a(72, (ht) (this));
+          this.width = pixelWidth;
+          this.height = pixelHeight;
+          this.depth = slices;
+          this.toolkit.bindTexture(72, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, param6, 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.width, this.height, this.depth, 0, sourceFormat, 5121, pixels, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
-          this.a(true, 0);
+          this.setLinearFiltering(true, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (owner != null ? "{...}" : "null") + ',' + storageFormat + ',' + pixelWidth + ',' + pixelHeight + ',' + slices + ',' + (pixels != null ? "{...}" : "null") + ',' + sourceFormat + ')');
         }
     }
 
-    final static void b(boolean param0, int param1) {
-        PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[param1], 100, 96);
-        if (param0) {
+    final static void playLoopingSound(boolean guard, int sampleId) {
+        PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[sampleId], 100, 96);
+        if (guard) {
           var2.setLoopCount(-1);
           qq.addPlayingSound(18416, var2);
           return;
         }
-        ek.b(true, 27);
+        LegacyOpenGlTexture3D.playLoopingSound(true, 27);
         var2.setLoopCount(-1);
         qq.addPlayingSound(18416, var2);
     }

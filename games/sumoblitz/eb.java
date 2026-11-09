@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    private cs field_d;
+    private LegacyOpenGlFramebuffer field_d;
     static ResourceArchive field_f;
     static SoundCache field_b;
     private IntrusiveDeque field_e;
@@ -57,15 +57,15 @@ final class eb {
         this.field_e = new IntrusiveDeque();
         try {
           this.field_c = param0;
-          if (this.field_c.field_xc) {
+          if (this.field_c.supportsFramebufferObjects) {
             if (!this.field_c.field_C) {
               return;
             }
-            this.field_d = new cs(this.field_c);
+            this.field_d = new LegacyOpenGlFramebuffer(this.field_c);
             if (this.field_c.field_Bc > 1 &&
               this.field_c.field_B &&
               this.field_c.field_vb) {
-              this.field_d = new cs(this.field_c);
+              this.field_d = new LegacyOpenGlFramebuffer(this.field_c);
               return;
             }
           }

@@ -364,7 +364,7 @@ final class ou extends na {
             IntIndexHashTable.field_c[5] = "";
             IntIndexHashTable.field_c[3] = up.cancelText;
             IntIndexHashTable.field_c[2] = ws.toKeepFullscreenOrText;
-            IntIndexHashTable.field_c[4] = oh.toReturnToTheText;
+            IntIndexHashTable.field_c[4] = OpenGlShaderProgram.toReturnToTheText;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_41_0 = IntIndexHashTable.field_c;
               stackIn_41_1 = var8Lifetime2 + 6;
@@ -458,7 +458,7 @@ final class ou extends na {
           if (DroneChargeParticle.field_s == 2) {
             nj.field_a.a(param0, 84, -1, -1);
           } else {
-            nj.field_a.a(param0, -27, wg.b(pi.field_e, 1882601153, ko.field_p), 0);
+            nj.field_a.a(param0, -27, OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

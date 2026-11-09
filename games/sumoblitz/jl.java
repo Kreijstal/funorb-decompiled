@@ -19,7 +19,7 @@ final class jl {
         if (param0 >= -19) {
           jl.a(0, false);
         }
-        stackIn_7_0 = (25 > oh.levelIndex) && (SpriteMask.drones[0] != null) && (SpriteMask.drones[0].isActive((byte) 115));
+        stackIn_7_0 = (25 > OpenGlShaderProgram.levelIndex) && (SpriteMask.drones[0] != null) && (SpriteMask.drones[0].isActive((byte) 115));
         return stackIn_7_0;
     }
 

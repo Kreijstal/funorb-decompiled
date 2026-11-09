@@ -43,7 +43,7 @@ final class DroneDebris extends TimedSceneEffect {
             field_A = false;
           }
           if (this.droneType == 0) {
-            ht.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+            LegacyOpenGlTexture.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           } else {
             if (this.droneType == 1) {
               ContentDialog.field_ab[this.fragmentIndex + 2].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
@@ -54,7 +54,7 @@ final class DroneDebris extends TimedSceneEffect {
                     MenuScreen.field_a[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
                   } else {
                     if (this.droneType == 5) {
-                      mr.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)(3072.0 * ((double)this.radiusPixels / 14.0)), (int)(this.rotation * 65535.0), 1, 0, 2);
+                      HardwareTextureCache.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)(3072.0 * ((double)this.radiusPixels / 14.0)), (int)(this.rotation * 65535.0), 1, 0, 2);
                     }
                   }
                 } else {

@@ -44,9 +44,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (qj.field_c != null &&
-            this != qj.field_c) {
-            stackIn_8_0 = qj.field_c.getParameter(param0);
+          if (OpenGlShader.field_c != null &&
+            this != OpenGlShader.field_c) {
+            stackIn_8_0 = OpenGlShader.field_c.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -72,7 +72,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          qj.field_c = param0;
+          OpenGlShader.field_c = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,9 +102,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (qj.field_c != null &&
-            qj.field_c != this) {
-            stackIn_10_0 = qj.field_c.getAppletContext();
+          if (OpenGlShader.field_c != null &&
+            OpenGlShader.field_c != this) {
+            stackIn_10_0 = OpenGlShader.field_c.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -137,8 +137,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             gr.field_e = true;
           }
-          if (null != qj.field_c) {
-            qj.field_c.destroy();
+          if (null != OpenGlShader.field_c) {
+            OpenGlShader.field_c.destroy();
           }
           try {
             this.g(-15254);
@@ -280,9 +280,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (PrimitiveType.field_c != null) {
           return null;
         }
-        if (null != qj.field_c &&
-          this != qj.field_c) {
-          return qj.field_c.getCodeBase();
+        if (null != OpenGlShader.field_c &&
+          this != OpenGlShader.field_c) {
+          return OpenGlShader.field_c.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -401,9 +401,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (qj.field_c != null &&
-            qj.field_c != this) {
-            stackIn_10_0 = qj.field_c.getDocumentBase();
+          if (OpenGlShader.field_c != null &&
+            OpenGlShader.field_c != this) {
+            stackIn_10_0 = OpenGlShader.field_c.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -585,8 +585,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null == of.field_n) {
             if (PrimitiveType.field_c == null) {
-              if (null != qj.field_c) {
-                var2 = qj.field_c;
+              if (null != OpenGlShader.field_c) {
+                var2 = OpenGlShader.field_c;
                 if (var4 != 0) {
                   var2 = ke.field_a;
                   var2 = PrimitiveType.field_c;
@@ -878,8 +878,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = ke.field_a;
-                if (qj.field_c != null) {
-                  var1 = qj.field_c;
+                if (OpenGlShader.field_c != null) {
+                  var1 = OpenGlShader.field_c;
                 }
                 var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
@@ -892,7 +892,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.b(true);
                 this.e(1000);
-                ProgressDialog.field_R = sd.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
+                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
                 this.initializeGame(28196);
                 jl.field_a = bt.a(false);
                 do {
