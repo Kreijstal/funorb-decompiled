@@ -10,7 +10,7 @@ final class SoftwarePaletteFont extends ToolkitFont {
     private int[] field_h;
     private int[] field_d;
 
-    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitPaletteGlyph(byte[] indices, int[] pixels, int[] palette, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip) {
         int var12 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;
@@ -36,71 +36,71 @@ final class SoftwarePaletteFont extends ToolkitFont {
         int var11Lifetime1Lifetime2;
         int var11Lifetime1Lifetime3;
         int var11Lifetime1Lifetime4;
-        var10 = -(param5 >> 2);
-        param5 = -(param5 & 3);
+        var10 = -(width >> 2);
+        width = -(width & 3);
         var11 = 0;
-        for (var12 = -param6; var12 < 0; var12++) {
+        for (var12 = -height; var12 < 0; var12++) {
           for (var13 = var10; var13 < 0; var13++) {
-            incrementValue$3 = param3;
-            param3++;
-            dupTemp$4 = param0[incrementValue$3];
+            incrementValue$3 = sourceOffset;
+            sourceOffset++;
+            dupTemp$4 = indices[incrementValue$3];
             var11Lifetime1 = dupTemp$4;
             if (dupTemp$4 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              incrementValue$5 = param4;
-              param4++;
-              param1[incrementValue$5] = param2[var11Lifetime1 & 255];
+              incrementValue$5 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$5] = palette[var11Lifetime1 & 255];
             }
-            incrementValue$6 = param3;
-            param3++;
-            dupTemp$7 = param0[incrementValue$6];
+            incrementValue$6 = sourceOffset;
+            sourceOffset++;
+            dupTemp$7 = indices[incrementValue$6];
             var11Lifetime1Lifetime2 = dupTemp$7;
             if (dupTemp$7 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              incrementValue$8 = param4;
-              param4++;
-              param1[incrementValue$8] = param2[var11Lifetime1Lifetime2 & 255];
+              incrementValue$8 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$8] = palette[var11Lifetime1Lifetime2 & 255];
             }
-            incrementValue$9 = param3;
-            param3++;
-            dupTemp$10 = param0[incrementValue$9];
+            incrementValue$9 = sourceOffset;
+            sourceOffset++;
+            dupTemp$10 = indices[incrementValue$9];
             var11Lifetime1Lifetime3 = dupTemp$10;
             if (dupTemp$10 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              incrementValue$11 = param4;
-              param4++;
-              param1[incrementValue$11] = param2[var11Lifetime1Lifetime3 & 255];
+              incrementValue$11 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$11] = palette[var11Lifetime1Lifetime3 & 255];
             }
-            incrementValue$12 = param3;
-            param3++;
-            dupTemp$13 = param0[incrementValue$12];
+            incrementValue$12 = sourceOffset;
+            sourceOffset++;
+            dupTemp$13 = indices[incrementValue$12];
             var11Lifetime1Lifetime4 = dupTemp$13;
             if (dupTemp$13 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              incrementValue$14 = param4;
-              param4++;
-              param1[incrementValue$14] = param2[var11Lifetime1Lifetime4 & 255];
+              incrementValue$14 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$14] = palette[var11Lifetime1Lifetime4 & 255];
             }
           }
-          for (var13Lifetime1 = param5; var13Lifetime1 < 0; var13Lifetime1++) {
-            incrementValue$0 = param3;
-            param3++;
-            dupTemp$1 = param0[incrementValue$0];
+          for (var13Lifetime1 = width; var13Lifetime1 < 0; var13Lifetime1++) {
+            incrementValue$0 = sourceOffset;
+            sourceOffset++;
+            dupTemp$1 = indices[incrementValue$0];
             var11Lifetime1Lifetime1 = dupTemp$1;
             if (dupTemp$1 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              incrementValue$2 = param4;
-              param4++;
-              param1[incrementValue$2] = param2[var11Lifetime1Lifetime1 & 255];
+              incrementValue$2 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$2] = palette[var11Lifetime1Lifetime1 & 255];
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationOffset = destinationOffset + destinationRowSkip;
+          sourceOffset = sourceOffset + sourceRowSkip;
         }
     }
 
@@ -147,9 +147,9 @@ final class SoftwarePaletteFont extends ToolkitFont {
           return;
         }
         if (param4) {
-          this.a(this.field_e[param0], this.field_g.pixels, param3, var12, var9, var6, var7, var10, var11);
+          this.blitSolidGlyph(this.field_e[param0], this.field_g.pixels, param3, var12, var9, var6, var7, var10, var11);
         } else {
-          this.a(this.field_e[param0], this.field_g.pixels, this.field_i, var12, var9, var6, var7, var10, var11);
+          this.blitPaletteGlyph(this.field_e[param0], this.field_g.pixels, this.field_i, var12, var9, var6, var7, var10, var11);
         }
     }
 
@@ -200,13 +200,13 @@ final class SoftwarePaletteFont extends ToolkitFont {
           return;
         }
         if (param4) {
-          this.a(this.field_e[param0], this.field_g.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_c[param0], param5, param6, param7);
+          this.blitMaskedSolidGlyph(this.field_e[param0], this.field_g.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_c[param0], param5, param6, param7);
         } else {
-          this.a(this.field_e[param0], this.field_g.pixels, this.field_i, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_c[param0], param5, param6, param7);
+          this.blitMaskedPaletteGlyph(this.field_e[param0], this.field_g.pixels, this.field_i, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_c[param0], param5, param6, param7);
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
+    private final void blitMaskedSolidGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip, int x, int y, int glyphStride, SpriteMask mask, int maskX, int maskY) {
         int var22 = 0;
         int var27 = 0;
         int stackIn_5_0 = 0;
@@ -225,46 +225,46 @@ final class SoftwarePaletteFont extends ToolkitFont {
         int[] var29;
         int var26Lifetime1;
         var16 = null;
-        var16_ref = (ScanlineSpriteMask) (param12);
+        var16_ref = (ScanlineSpriteMask) (mask);
         var29 = var16_ref.rowStarts;
         var28 = var29;
         var17 = var28;
         var18 = var16_ref.rowWidths;
-        var19 = param9 - this.field_g.clipLeft;
-        var20 = param10;
-        if (param14 > var20) {
-          var20 = param14;
-          param4 = param4 + (param14 - param10) * this.field_g.targetWidth;
-          param3 = param3 + (param14 - param10) * param11;
+        var19 = x - this.field_g.clipLeft;
+        var20 = y;
+        if (maskY > var20) {
+          var20 = maskY;
+          destinationOffset = destinationOffset + (maskY - y) * this.field_g.targetWidth;
+          sourceOffset = sourceOffset + (maskY - y) * glyphStride;
         }
-        if (param14 + var29.length >= param10 + param6) {
-          stackIn_5_0 = param10 + param6;
+        if (maskY + var29.length >= y + height) {
+          stackIn_5_0 = y + height;
         } else {
-          stackIn_5_0 = param14 + var29.length;
+          stackIn_5_0 = maskY + var29.length;
         }
         var21 = stackIn_5_0;
         for (var22 = var20; var22 < var21; var22++) {
           boolean decompiledFrameRemainder0 = true;
-          var23 = var17[var22 - param14] + param13;
-          var24 = var18[var22 - param14];
-          var25 = param5;
+          var23 = var17[var22 - maskY] + maskX;
+          var24 = var18[var22 - maskY];
+          var25 = width;
           if (var19 <= var23) {
             var26 = var23 - var19;
-            if (var26 >= param5) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+            if (var26 >= width) {
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param3 = param3 + var26;
+              sourceOffset = sourceOffset + var26;
               var25 = var25 - var26;
-              param4 = param4 + var26;
+              destinationOffset = destinationOffset + var26;
             }
           } else {
             var26 = var19 - var23;
             if (var26 >= var24) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -279,61 +279,61 @@ final class SoftwarePaletteFont extends ToolkitFont {
               var24 = var25;
             }
             for (var27 = -var24; var27 < 0; var27++) {
-              if (param0[param3++] == 0) {
-                param4++;
+              if (glyph[sourceOffset++] == 0) {
+                destinationOffset++;
               } else {
-                param1[param4++] = param2;
+                pixels[destinationOffset++] = color;
               }
             }
-            param3 = param3 + (var26Lifetime1 + param3);
-            param4 = param4 + (var26Lifetime1 + param7);
+            sourceOffset = sourceOffset + (var26Lifetime1 + sourceOffset);
+            destinationOffset = destinationOffset + (var26Lifetime1 + destinationRowSkip);
           }
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitSolidGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip) {
         int var11 = 0;
         int var10;
         int var12;
         int var12Lifetime1;
-        var10 = -(param5 >> 2);
-        param5 = -(param5 & 3);
-        for (var11 = -param6; var11 < 0; var11++) {
+        var10 = -(width >> 2);
+        width = -(width & 3);
+        for (var11 = -height; var11 < 0; var11++) {
           for (var12 = var10; var12 < 0; var12++) {
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
-            }
-          }
-          for (var12Lifetime1 = param5; var12Lifetime1 < 0; var12Lifetime1++) {
-            if (param0[param3++] == 0) {
-              param4++;
-            } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          for (var12Lifetime1 = width; var12Lifetime1 < 0; var12Lifetime1++) {
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
+            } else {
+              pixels[destinationOffset++] = color;
+            }
+          }
+          destinationOffset = destinationOffset + destinationRowSkip;
+          sourceOffset = sourceOffset + sourceRowSkip;
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, SpriteMask param13, int param14, int param15) {
+    private final void blitMaskedPaletteGlyph(byte[] indices, int[] pixels, int[] palette, int unused, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip, int x, int y, int glyphStride, SpriteMask mask, int maskX, int maskY) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$0 = 0;
@@ -357,47 +357,47 @@ final class SoftwarePaletteFont extends ToolkitFont {
         int var23Lifetime1;
         int var28Lifetime1;
         var17 = null;
-        var17_ref = (ScanlineSpriteMask) (param13);
+        var17_ref = (ScanlineSpriteMask) (mask);
         var31 = var17_ref.rowStarts;
         var30 = var31;
         var18 = var30;
         var19 = var17_ref.rowWidths;
-        var20 = param10 - this.field_g.clipLeft;
-        var21 = param11;
-        if (param15 > var21) {
-          var21 = param15;
-          param5 = param5 + (param15 - param11) * this.field_g.targetWidth;
-          param4 = param4 + (param15 - param11) * param12;
+        var20 = x - this.field_g.clipLeft;
+        var21 = y;
+        if (maskY > var21) {
+          var21 = maskY;
+          destinationOffset = destinationOffset + (maskY - y) * this.field_g.targetWidth;
+          sourceOffset = sourceOffset + (maskY - y) * glyphStride;
         }
-        if (param15 + var31.length >= param11 + param7) {
-          stackIn_5_0 = param11 + param7;
+        if (maskY + var31.length >= y + height) {
+          stackIn_5_0 = y + height;
         } else {
-          stackIn_5_0 = param15 + var31.length;
+          stackIn_5_0 = maskY + var31.length;
         }
         var22 = stackIn_5_0;
         var23 = 0;
         for (var24 = var21; var24 < var22; var24++) {
           boolean decompiledFrameRemainder0 = true;
-          var25 = var18[var24 - param15] + param14;
-          var26 = var19[var24 - param15];
-          var27 = param6;
+          var25 = var18[var24 - maskY] + maskX;
+          var26 = var19[var24 - maskY];
+          var27 = width;
           if (var20 <= var25) {
             var28 = var25 - var20;
-            if (var28 >= param6) {
-              param4 = param4 + (param6 + param9);
-              param5 = param5 + (param6 + param8);
+            if (var28 >= width) {
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param4 = param4 + var28;
+              sourceOffset = sourceOffset + var28;
               var27 = var27 - var28;
-              param5 = param5 + var28;
+              destinationOffset = destinationOffset + var28;
             }
           } else {
             var28 = var20 - var25;
             if (var28 >= var26) {
-              param4 = param4 + (param6 + param9);
-              param5 = param5 + (param6 + param8);
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -412,20 +412,20 @@ final class SoftwarePaletteFont extends ToolkitFont {
               var26 = var27;
             }
             for (var29 = -var26; var29 < 0; var29++) {
-              incrementValue$0 = param4;
-              param4++;
-              dupTemp$1 = param0[incrementValue$0];
+              incrementValue$0 = sourceOffset;
+              sourceOffset++;
+              dupTemp$1 = indices[incrementValue$0];
               var23Lifetime1 = dupTemp$1;
               if (dupTemp$1 == 0) {
-                param5++;
+                destinationOffset++;
               } else {
-                incrementValue$2 = param5;
-                param5++;
-                param1[incrementValue$2] = param2[var23Lifetime1 & 255];
+                incrementValue$2 = destinationOffset;
+                destinationOffset++;
+                pixels[incrementValue$2] = palette[var23Lifetime1 & 255];
               }
             }
-            param4 = param4 + (var28Lifetime1 + param9);
-            param5 = param5 + (var28Lifetime1 + param8);
+            sourceOffset = sourceOffset + (var28Lifetime1 + sourceRowSkip);
+            destinationOffset = destinationOffset + (var28Lifetime1 + destinationRowSkip);
           }
         }
     }
@@ -441,10 +441,10 @@ final class SoftwarePaletteFont extends ToolkitFont {
         this.field_f = new int[param2.length];
         this.field_d = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
-          this.field_e[var6] = param2[var6].field_e;
-          this.field_f[var6] = param2[var6].field_d;
-          this.field_d[var6] = param2[var6].field_c;
+          this.field_e[var6] = param2[var6].indices;
+          this.field_f[var6] = param2[var6].topInset;
+          this.field_d[var6] = param2[var6].leftInset;
         }
-        this.field_i = param2[0].field_g;
+        this.field_i = param2[0].palette;
     }
 }

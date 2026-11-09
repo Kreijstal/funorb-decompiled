@@ -153,7 +153,7 @@ final class DisplayPromptRenderer {
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (guard == -1) {
           if (!SocketJs5Client.field_p[levelIndex] &&
-            !TextureMetadata.field_f[levelIndex]) {
+            !TextureMetadata.completedLevels[levelIndex]) {
             var3 = levelIndex;
             if (0 == var3) {
               if (waveIndex == 0) {
@@ -262,7 +262,7 @@ final class DisplayPromptRenderer {
         if (SocketJs5Client.field_p[levelIndex]) {
           return;
         }
-        if (TextureMetadata.field_f[levelIndex]) {
+        if (TextureMetadata.completedLevels[levelIndex]) {
           return;
         }
         var3Lifetime1 = levelIndex;

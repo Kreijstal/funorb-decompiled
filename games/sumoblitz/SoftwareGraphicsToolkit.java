@@ -46,7 +46,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var4.elapsedMillis = var4.elapsedMillis + var2;
             var5 = var4.elapsedMillis / 20;
             if (var5 > 0) {
-              var6 = this.textureProvider.a(-29193, var4.textureId);
+              var6 = this.textureProvider.metadata(-29193, var4.textureId);
               var4.scroll(var6.field_c * var2 * 50 / 1000, var6.field_u * var2 * 50 / 1000);
               var4.elapsedMillis = var4.elapsedMillis - var5 * 20;
             }
@@ -116,14 +116,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         byte[] var21;
         int[] var22;
         int[] var23;
-        var20 = data.field_g;
+        var20 = data.palette;
         var16 = var20;
         var3 = var16;
-        var4 = data.field_e;
-        var5 = data.field_h;
-        var6 = data.field_i;
+        var4 = data.indices;
+        var5 = data.width;
+        var6 = data.height;
         if (preferIndexed &&
-          data.field_a == null) {
+          data.alpha == null) {
           var22 = new int[var20.length];
           var18 = var22;
           var8 = var18;
@@ -145,7 +145,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           var23 = new int[var5 * var6];
           var19 = var23;
           var15 = var19;
-          var9 = data.field_a;
+          var9 = data.alpha;
           if (var9 != null) {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
@@ -172,7 +172,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var7 = new SoftwareRgbSprite(this, var23, var5, var6);
           }
         }
-        ((ToolkitSprite) (var7)).setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
+        ((ToolkitSprite) (var7)).setInsets(data.leftInset, data.topInset, data.rightInset, data.bottomInset);
         return (ToolkitSprite) (var7);
     }
 
@@ -1508,9 +1508,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         var5 = new int[glyphs.length];
         var6 = 0;
         for (var7 = 0; var7 < glyphs.length; var7++) {
-          var4[var7] = glyphs[var7].field_h;
-          var5[var7] = glyphs[var7].field_i;
-          if (glyphs[var7].field_a != null) {
+          var4[var7] = glyphs[var7].width;
+          var5[var7] = glyphs[var7].height;
+          if (glyphs[var7].alpha != null) {
             var6 = 1;
           }
         }

@@ -9,7 +9,7 @@ final class SoftwareAlphaFont extends ToolkitFont {
     private int[] field_h;
     private int[] field_f;
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
+    private final void blitMaskedCoverageGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip, int x, int y, int glyphStride, SpriteMask mask, int maskX, int maskY) {
         int var22 = 0;
         int var27 = 0;
         int incrementValue$0 = 0;
@@ -33,46 +33,46 @@ final class SoftwareAlphaFont extends ToolkitFont {
         int[] var32;
         int var26Lifetime1;
         var16 = null;
-        var16_ref = (ScanlineSpriteMask) (param12);
+        var16_ref = (ScanlineSpriteMask) (mask);
         var32 = var16_ref.rowStarts;
         var31 = var32;
         var17 = var31;
         var18 = var16_ref.rowWidths;
-        var19 = param9 - this.field_c.clipLeft;
-        var20 = param10;
-        if (param14 > var20) {
-          var20 = param14;
-          param4 = param4 + (param14 - param10) * this.field_c.targetWidth;
-          param3 = param3 + (param14 - param10) * param11;
+        var19 = x - this.field_c.clipLeft;
+        var20 = y;
+        if (maskY > var20) {
+          var20 = maskY;
+          destinationOffset = destinationOffset + (maskY - y) * this.field_c.targetWidth;
+          sourceOffset = sourceOffset + (maskY - y) * glyphStride;
         }
-        if (param14 + var32.length >= param10 + param6) {
-          stackIn_5_0 = param10 + param6;
+        if (maskY + var32.length >= y + height) {
+          stackIn_5_0 = y + height;
         } else {
-          stackIn_5_0 = param14 + var32.length;
+          stackIn_5_0 = maskY + var32.length;
         }
         var21 = stackIn_5_0;
         for (var22 = var20; var22 < var21; var22++) {
           boolean decompiledFrameRemainder0 = true;
-          var23 = var17[var22 - param14] + param13;
-          var24 = var18[var22 - param14];
-          var25 = param5;
+          var23 = var17[var22 - maskY] + maskX;
+          var24 = var18[var22 - maskY];
+          var25 = width;
           if (var19 <= var23) {
             var26 = var23 - var19;
-            if (var26 >= param5) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+            if (var26 >= width) {
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param3 = param3 + var26;
+              sourceOffset = sourceOffset + var26;
               var25 = var25 - var26;
-              param4 = param4 + var26;
+              destinationOffset = destinationOffset + var26;
             }
           } else {
             var26 = var19 - var23;
             if (var26 >= var24) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -87,22 +87,22 @@ final class SoftwareAlphaFont extends ToolkitFont {
               var24 = var25;
             }
             for (var27 = -var24; var27 < 0; var27++) {
-              incrementValue$0 = param3;
-              param3++;
-              var28 = param0[incrementValue$0] & 255;
+              incrementValue$0 = sourceOffset;
+              sourceOffset++;
+              var28 = glyph[incrementValue$0] & 255;
               if (var28 == 0) {
-                param4++;
+                destinationOffset++;
               } else {
-                var29 = ((param2 & 16711935) * var28 & -16711936) + ((param2 & 65280) * var28 & 16711680) >> 8;
+                var29 = ((color & 16711935) * var28 & -16711936) + ((color & 65280) * var28 & 16711680) >> 8;
                 var28 = 256 - var28;
-                var30 = param1[param4];
-                incrementValue$1 = param4;
-                param4++;
-                param1[incrementValue$1] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
+                var30 = pixels[destinationOffset];
+                incrementValue$1 = destinationOffset;
+                destinationOffset++;
+                pixels[incrementValue$1] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
               }
             }
-            param3 = param3 + (var26Lifetime1 + param8);
-            param4 = param4 + (var26Lifetime1 + param7);
+            sourceOffset = sourceOffset + (var26Lifetime1 + sourceRowSkip);
+            destinationOffset = destinationOffset + (var26Lifetime1 + destinationRowSkip);
           }
         }
     }
@@ -149,7 +149,7 @@ final class SoftwareAlphaFont extends ToolkitFont {
           var7 <= 0) {
           return;
         }
-        this.a(this.field_d[param0], this.field_c.pixels, param3, var12, var9, var6, var7, var10, var11);
+        this.blitCoverageGlyph(this.field_d[param0], this.field_c.pixels, param3, var12, var9, var6, var7, var10, var11);
     }
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
@@ -198,10 +198,10 @@ final class SoftwareAlphaFont extends ToolkitFont {
           var10 <= 0) {
           return;
         }
-        this.a(this.field_d[param0], this.field_c.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
+        this.blitMaskedCoverageGlyph(this.field_d[param0], this.field_c.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitCoverageGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;
@@ -209,24 +209,24 @@ final class SoftwareAlphaFont extends ToolkitFont {
         int var12;
         int var13;
         int var14;
-        for (var10 = -param6; var10 < 0; var10++) {
-          for (var11 = -param5; var11 < 0; var11++) {
-            incrementValue$11 = param3;
-            param3++;
-            var12 = param0[incrementValue$11] & 255;
+        for (var10 = -height; var10 < 0; var10++) {
+          for (var11 = -width; var11 < 0; var11++) {
+            incrementValue$11 = sourceOffset;
+            sourceOffset++;
+            var12 = glyph[incrementValue$11] & 255;
             if (var12 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
-              var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
+              var13 = ((color & 16711935) * var12 & -16711936) + ((color & 65280) * var12 & 16711680) >> 8;
               var12 = 256 - var12;
-              var14 = param1[param4];
-              incrementValue$12 = param4;
-              param4++;
-              param1[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+              var14 = pixels[destinationOffset];
+              incrementValue$12 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationOffset = destinationOffset + destinationRowSkip;
+          sourceOffset = sourceOffset + sourceRowSkip;
         }
     }
 
@@ -250,8 +250,8 @@ final class SoftwareAlphaFont extends ToolkitFont {
         this.field_f = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
           var7 = param2[var6];
-          if (var7.field_a == null) {
-            var14 = var7.field_e;
+          if (var7.alpha == null) {
+            var14 = var7.indices;
             array$0 = new byte[var14.length];
             this.field_d[var6] = array$0;
             var9 = array$0;
@@ -266,10 +266,10 @@ final class SoftwareAlphaFont extends ToolkitFont {
               stackIn_8_0[stackIn_8_1] = (byte)stackIn_9_2;
             }
           } else {
-            this.field_d[var6] = var7.field_a;
+            this.field_d[var6] = var7.alpha;
           }
-          this.field_g[var6] = var7.field_d;
-          this.field_f[var6] = var7.field_c;
+          this.field_g[var6] = var7.topInset;
+          this.field_f[var6] = var7.leftInset;
         }
     }
 }

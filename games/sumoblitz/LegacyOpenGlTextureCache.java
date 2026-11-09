@@ -149,10 +149,10 @@ final class LegacyOpenGlTextureCache {
         if (var3 != null) {
           return (LegacyOpenGlTexture2D) (var3);
         }
-        if (!this.provider.b(-29912, textureId)) {
+        if (!this.provider.isTextureReady(-29912, textureId)) {
           return null;
         }
-        var5 = this.provider.a(-29193, textureId);
+        var5 = this.provider.metadata(-29193, textureId);
         if (!var5.field_n) {
           stackIn_7_0 = this.toolkit.field_X;
         } else {
@@ -161,10 +161,10 @@ final class LegacyOpenGlTextureCache {
         var6 = stackIn_7_0;
         if (!var5.field_s) {
           if (2 == var5.field_p) {
-            var7 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
+            var7 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
           } else {
             if (!PlayingSound.a(-83, (int) var5.field_d)) {
-              var23 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
+              var23 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
               stackIn_12_0 = null;
               stackIn_12_1 = null;
               stackIn_12_2 = this.toolkit;
@@ -189,7 +189,7 @@ final class LegacyOpenGlTextureCache {
               this.textures.put((long)textureId, var18, (byte) 19);
               return var18;
             }
-            var7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
+            var7 = this.provider.loadPixels(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
           }
           stackIn_21_0 = null;
           stackIn_21_1 = null;
@@ -216,7 +216,7 @@ final class LegacyOpenGlTextureCache {
           return var19;
         }
         if (this.toolkit.isFloatPostProcessingEnabled()) {
-          var11 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -101);
+          var11 = this.provider.loadFloatPixels(var6, false, 0.699999988079071f, textureId, var6, -101);
           var10 = var11;
           var9 = var10;
           var7_array = var9;
@@ -245,10 +245,10 @@ final class LegacyOpenGlTextureCache {
           return var4;
         }
         if (2 == var5.field_p) {
-          var7Lifetime1 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
+          var7Lifetime1 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
         } else {
           if (!PlayingSound.a(-83, (int) var5.field_d)) {
-            var24 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
+            var24 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_31_0 = null;
             stackIn_31_1 = null;
             stackIn_31_2 = this.toolkit;
@@ -273,7 +273,7 @@ final class LegacyOpenGlTextureCache {
             this.textures.put((long)textureId, var21, (byte) 19);
             return var21;
           }
-          var7Lifetime1 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
+          var7Lifetime1 = this.provider.loadPixels(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
         }
         stackIn_40_0 = null;
         stackIn_40_1 = null;

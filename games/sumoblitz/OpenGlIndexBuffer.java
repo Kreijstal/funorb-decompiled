@@ -31,12 +31,12 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
         field_p = null;
     }
 
-    final static void g(int param0) {
-        LegacyOpenGlSpecularEffect.field_h[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
-        LegacyOpenGlSpecularEffect.field_h[0] = ResourceArchive.selectedSpeedLevel;
-        LegacyOpenGlSpecularEffect.field_h[2] = AccountStatusDialogState.selectedBounceLevel;
-        IsaacPacketBuffer.field_u = LegacyOpenGlSpecularEffect.field_h[1] + LegacyOpenGlSpecularEffect.field_h[0] - 2 + (LegacyOpenGlSpecularEffect.field_h[2] - 1);
-        if (param0 < 100) {
+    final static void beginUpgradeReassignment(int guard) {
+        LegacyOpenGlSpecularEffect.pendingUpgradeLevels[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
+        LegacyOpenGlSpecularEffect.pendingUpgradeLevels[0] = ResourceArchive.selectedSpeedLevel;
+        LegacyOpenGlSpecularEffect.pendingUpgradeLevels[2] = AccountStatusDialogState.selectedBounceLevel;
+        IsaacPacketBuffer.allocatedUpgradePoints = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[1] + LegacyOpenGlSpecularEffect.pendingUpgradeLevels[0] - 2 + (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[2] - 1);
+        if (guard < 100) {
           OpenGlIndexBuffer.b(46, -94);
         }
     }

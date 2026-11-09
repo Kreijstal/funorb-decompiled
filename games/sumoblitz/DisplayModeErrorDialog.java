@@ -21,7 +21,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
             if (CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE == param1) {
               this.height = this.height + 10;
               var3 = LimitedRandomAccessFile.field_c;
-              if (CacheReferenceNode.a((byte) -96)) {
+              if (CacheReferenceNode.canAutoResizeCanvas((byte) -96)) {
                 this.height = this.height + 20;
                 var3 = PasswordInputRenderer.unfortunatelyThereWasAText;
               }

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpriteData {
-    byte[] field_a;
-    int field_f;
-    byte[] field_e;
-    int[] field_g;
-    int field_b;
-    int field_i;
-    int field_h;
-    int field_d;
-    int field_c;
+    byte[] alpha;
+    int bottomInset;
+    byte[] indices;
+    int[] palette;
+    int rightInset;
+    int height;
+    int width;
+    int topInset;
+    int leftInset;
 
     private final static SpriteData[] decodeSpriteSheet(byte[] bytes) {
         byte dupTemp$1 = 0;
@@ -57,21 +57,21 @@ final class SpriteData {
         var5 = var1.readUnsignedShort(255);
         var6 = (var1.readUnsignedByte(-31302) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
-          var3[var7_int].field_c = var1.readUnsignedShort(255);
+          var3[var7_int].leftInset = var1.readUnsignedShort(255);
         }
         for (var7_intLifetime1 = 0; var7_intLifetime1 < var2; var7_intLifetime1++) {
-          var3[var7_intLifetime1].field_d = var1.readUnsignedShort(255);
+          var3[var7_intLifetime1].topInset = var1.readUnsignedShort(255);
         }
         for (var7_intLifetime2 = 0; var7_intLifetime2 < var2; var7_intLifetime2++) {
-          var3[var7_intLifetime2].field_h = var1.readUnsignedShort(255);
+          var3[var7_intLifetime2].width = var1.readUnsignedShort(255);
         }
         for (var7_intLifetime3 = 0; var7_intLifetime3 < var2; var7_intLifetime3++) {
-          var3[var7_intLifetime3].field_i = var1.readUnsignedShort(255);
+          var3[var7_intLifetime3].height = var1.readUnsignedShort(255);
         }
         for (var7_intLifetime4 = 0; var7_intLifetime4 < var2; var7_intLifetime4++) {
           var8_ref_ri = var3[var7_intLifetime4];
-          var8_ref_ri.field_b = var4Lifetime1 - var8_ref_ri.field_h - var8_ref_ri.field_c;
-          var8_ref_ri.field_f = var5 - var8_ref_ri.field_i - var8_ref_ri.field_d;
+          var8_ref_ri.rightInset = var4Lifetime1 - var8_ref_ri.width - var8_ref_ri.leftInset;
+          var8_ref_ri.bottomInset = var5 - var8_ref_ri.height - var8_ref_ri.topInset;
         }
         var1.position = bytes.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
@@ -84,36 +84,36 @@ final class SpriteData {
           }
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
-          var3[var8Lifetime1].field_g = var7;
+          var3[var8Lifetime1].palette = var7;
         }
         var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
-          var10 = var9.field_h * var9.field_i;
-          var9.field_e = new byte[var10];
+          var10 = var9.width * var9.height;
+          var9.indices = new byte[var10];
           var11 = var1.readUnsignedByte(-31302);
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {
-                var9.field_e[var12] = var1.readByte(true);
+                var9.indices[var12] = var1.readByte(true);
               }
             } else {
-              for (var12 = 0; var12 < var9.field_h; var12++) {
-                for (var13 = 0; var13 < var9.field_i; var13++) {
-                  var9.field_e[var12 + var13 * var9.field_h] = var1.readByte(true);
+              for (var12 = 0; var12 < var9.width; var12++) {
+                for (var13 = 0; var13 < var9.height; var13++) {
+                  var9.indices[var12 + var13 * var9.width] = var1.readByte(true);
                 }
               }
             }
           } else {
             var12 = 0;
-            var9.field_a = new byte[var10];
+            var9.alpha = new byte[var10];
             if ((var11 & 1) == 0) {
               for (var13 = 0; var13 < var10; var13++) {
-                var9.field_e[var13] = var1.readByte(true);
+                var9.indices[var13] = var1.readByte(true);
               }
               for (var13 = 0; var13 < var10; var13++) {
                 dupTemp$1 = var1.readByte(true);
-                var9.field_a[var13] = dupTemp$1;
+                var9.alpha[var13] = dupTemp$1;
                 var14 = dupTemp$1;
                 stackIn_53_0 = var12;
                 if (var14 == -1) {
@@ -124,15 +124,15 @@ final class SpriteData {
                 var12 = stackIn_53_0 | stackIn_54_1;
               }
             } else {
-              for (var13 = 0; var13 < var9.field_h; var13++) {
-                for (var14 = 0; var14 < var9.field_i; var14++) {
-                  var9.field_e[var13 + var14 * var9.field_h] = var1.readByte(true);
+              for (var13 = 0; var13 < var9.width; var13++) {
+                for (var14 = 0; var14 < var9.height; var14++) {
+                  var9.indices[var13 + var14 * var9.width] = var1.readByte(true);
                 }
               }
-              for (var13 = 0; var13 < var9.field_h; var13++) {
-                for (var14 = 0; var14 < var9.field_i; var14++) {
+              for (var13 = 0; var13 < var9.width; var13++) {
+                for (var14 = 0; var14 < var9.height; var14++) {
                   dupTemp$0 = var1.readByte(true);
-                  var9.field_a[var13 + var14 * var9.field_h] = dupTemp$0;
+                  var9.alpha[var13 + var14 * var9.width] = dupTemp$0;
                   var15 = dupTemp$0;
                   stackIn_67_0 = var12;
                   if (var15 == -1) {
@@ -145,7 +145,7 @@ final class SpriteData {
               }
             }
             if (var12 == 0) {
-              var9.field_a = null;
+              var9.alpha = null;
             }
           }
         }

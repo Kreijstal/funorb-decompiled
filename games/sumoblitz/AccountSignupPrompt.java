@@ -35,7 +35,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (source == this.field_A) {
-            SpriteState.e(0);
+            SpriteState.showBlankLoginForm(0);
           } else {
             if (source != this.field_B) {
               if (this.field_C == source) {

@@ -211,8 +211,8 @@ final class MenuSelectionController {
                   var3.variant == 6)) {
                   var4Lifetime2 = EnemyDroneFactory.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
                   var5 = EnemyDroneFactory.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
-                  HardwareUnlitEffect.a(var4Lifetime2, false);
-                  HardwareUnlitEffect.a(var5, false);
+                  HardwareUnlitEffect.placeAndRegisterDrone(var4Lifetime2, false);
+                  HardwareUnlitEffect.placeAndRegisterDrone(var5, false);
                 }
                 if (var3.destructionTicks > 100) {
                   if (MessageDialog.arcadeMode) {

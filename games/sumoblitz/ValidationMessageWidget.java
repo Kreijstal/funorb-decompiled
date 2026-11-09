@@ -158,28 +158,28 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             FullscreenPromptController.PENDING != var6Lifetime5) {
             if (AccountConnectionPhase.INVALID == var6Lifetime5) {
               var18 = ToolkitRasterStateCacheEntry.field_m[2];
-              var18.d(var9, -(var18.field_u >> 1) + var10, 256);
+              var18.drawAdditive(var9, -(var18.height >> 1) + var10, 256);
               return;
             }
             if (PerlinNoiseFactory.VALID != var6Lifetime5) {
               return;
             }
             var19 = ToolkitRasterStateCacheEntry.field_m[1];
-            var19.d(var9, var10 - (var19.field_u >> 1), 256);
+            var19.drawAdditive(var9, var10 - (var19.height >> 1), 256);
             return;
           }
           var20 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11 = var20.field_z << 1;
-          var12 = var20.field_w << 1;
+          var11 = var20.paddedWidth << 1;
+          var12 = var20.paddedHeight << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11, var12);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
-            if (var11 > this.field_K.field_x) {
+            if (var11 > this.field_K.width) {
               this.field_K = new Sprite(var11, var12);
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
-              if (this.field_K.field_u < var12) {
+              if (this.field_K.height < var12) {
                 this.field_K = new Sprite(var11, var12);
                 LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               } else {
@@ -188,9 +188,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var20.drawRotatedScaled(112, 144, var20.field_z << 4, var20.field_w << 4, -this.animationTicks << 10, 4096);
+          var20.drawRotatedScaled(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var20.field_z >> 1) + var9, -var20.field_w + var10, 256);
+          this.field_K.drawAdditive(-(var20.paddedWidth >> 1) + var9, -var20.paddedHeight + var10, 256);
           return;
         }
         this.renderLayer(-71, -15, (byte) -42, -1);
@@ -210,28 +210,28 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             FullscreenPromptController.PENDING != var6Lifetime1) {
             if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var23 = ToolkitRasterStateCacheEntry.field_m[2];
-              var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
+              var23.drawAdditive(var9Lifetime1, -(var23.height >> 1) + var10Lifetime1, 256);
               return;
             }
             if (PerlinNoiseFactory.VALID != var6Lifetime1) {
               return;
             }
             var24 = ToolkitRasterStateCacheEntry.field_m[1];
-            var24.d(var9Lifetime1, var10Lifetime1 - (var24.field_u >> 1), 256);
+            var24.drawAdditive(var9Lifetime1, var10Lifetime1 - (var24.height >> 1), 256);
             return;
           }
           var25 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11Lifetime1 = var25.field_z << 1;
-          var12Lifetime1 = var25.field_w << 1;
+          var11Lifetime1 = var25.paddedWidth << 1;
+          var12Lifetime1 = var25.paddedHeight << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
-            if (var11Lifetime1 > this.field_K.field_x) {
+            if (var11Lifetime1 > this.field_K.width) {
               this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
-              if (this.field_K.field_u < var12Lifetime1) {
+              if (this.field_K.height < var12Lifetime1) {
                 this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
                 LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               } else {
@@ -240,9 +240,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var25.drawRotatedScaled(112, 144, var25.field_z << 4, var25.field_w << 4, -this.animationTicks << 10, 4096);
+          var25.drawRotatedScaled(112, 144, var25.paddedWidth << 4, var25.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var25.field_z >> 1) + var9Lifetime1, -var25.field_w + var10Lifetime1, 256);
+          this.field_K.drawAdditive(-(var25.paddedWidth >> 1) + var9Lifetime1, -var25.paddedHeight + var10Lifetime1, 256);
           return;
         }
         if (var6Lifetime1 == FullscreenPromptController.PENDING) {
@@ -260,28 +260,28 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             FullscreenPromptController.PENDING != var6Lifetime1) {
             if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var28 = ToolkitRasterStateCacheEntry.field_m[2];
-              var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
+              var28.drawAdditive(var9Lifetime2, -(var28.height >> 1) + var10Lifetime2, 256);
               return;
             }
             if (PerlinNoiseFactory.VALID != var6Lifetime1) {
               return;
             }
             var29 = ToolkitRasterStateCacheEntry.field_m[1];
-            var29.d(var9Lifetime2, var10Lifetime2 - (var29.field_u >> 1), 256);
+            var29.drawAdditive(var9Lifetime2, var10Lifetime2 - (var29.height >> 1), 256);
             return;
           }
           var30 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11Lifetime2 = var30.field_z << 1;
-          var12Lifetime2 = var30.field_w << 1;
+          var11Lifetime2 = var30.paddedWidth << 1;
+          var12Lifetime2 = var30.paddedHeight << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
-            if (var11Lifetime2 > this.field_K.field_x) {
+            if (var11Lifetime2 > this.field_K.width) {
               this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
-              if (this.field_K.field_u >= var12Lifetime2) {
+              if (this.field_K.height >= var12Lifetime2) {
                 LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
@@ -290,9 +290,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var30.drawRotatedScaled(112, 144, var30.field_z << 4, var30.field_w << 4, -this.animationTicks << 10, 4096);
+          var30.drawRotatedScaled(112, 144, var30.paddedWidth << 4, var30.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var30.field_z >> 1) + var9Lifetime2, -var30.field_w + var10Lifetime2, 256);
+          this.field_K.drawAdditive(-(var30.paddedWidth >> 1) + var9Lifetime2, -var30.paddedHeight + var10Lifetime2, 256);
           return;
         }
         var31 = this.validator.getMessage(3690);
@@ -310,28 +310,28 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             FullscreenPromptController.PENDING != var6Lifetime2) {
             if (AccountConnectionPhase.INVALID == var6Lifetime2) {
               var33 = ToolkitRasterStateCacheEntry.field_m[2];
-              var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
+              var33.drawAdditive(var9Lifetime3, -(var33.height >> 1) + var10Lifetime3, 256);
               return;
             }
             if (PerlinNoiseFactory.VALID != var6Lifetime2) {
               return;
             }
             var34 = ToolkitRasterStateCacheEntry.field_m[1];
-            var34.d(var9Lifetime3, var10Lifetime3 - (var34.field_u >> 1), 256);
+            var34.drawAdditive(var9Lifetime3, var10Lifetime3 - (var34.height >> 1), 256);
             return;
           }
           var35 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11Lifetime3 = var35.field_z << 1;
-          var12Lifetime3 = var35.field_w << 1;
+          var11Lifetime3 = var35.paddedWidth << 1;
+          var12Lifetime3 = var35.paddedHeight << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
-            if (var11Lifetime3 > this.field_K.field_x) {
+            if (var11Lifetime3 > this.field_K.width) {
               this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
-              if (this.field_K.field_u >= var12Lifetime3) {
+              if (this.field_K.height >= var12Lifetime3) {
                 LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
@@ -340,9 +340,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var35.drawRotatedScaled(112, 144, var35.field_z << 4, var35.field_w << 4, -this.animationTicks << 10, 4096);
+          var35.drawRotatedScaled(112, 144, var35.paddedWidth << 4, var35.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var35.field_z >> 1) + var9Lifetime3, -var35.field_w + var10Lifetime3, 256);
+          this.field_K.drawAdditive(-(var35.paddedWidth >> 1) + var9Lifetime3, -var35.paddedHeight + var10Lifetime3, 256);
           return;
         }
         var36 = this.field_U;
@@ -356,22 +356,22 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             FullscreenPromptController.PENDING != var6Lifetime3) {
             if (AccountConnectionPhase.INVALID == var6Lifetime3) {
               var47 = ToolkitRasterStateCacheEntry.field_m[2];
-              var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
+              var47.drawAdditive(var9Lifetime4, -(var47.height >> 1) + var10Lifetime4, 256);
               return;
             }
             if (PerlinNoiseFactory.VALID != var6Lifetime3) {
               return;
             }
             var48 = ToolkitRasterStateCacheEntry.field_m[1];
-            var48.d(var9Lifetime4, var10Lifetime4 - (var48.field_u >> 1), 256);
+            var48.drawAdditive(var9Lifetime4, var10Lifetime4 - (var48.height >> 1), 256);
             return;
           }
           var49 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11Lifetime4 = var49.field_z << 1;
-          var12Lifetime4 = var49.field_w << 1;
+          var11Lifetime4 = var49.paddedWidth << 1;
+          var12Lifetime4 = var49.paddedHeight << 1;
           if (this.field_K != null &&
-            var11Lifetime4 <= this.field_K.field_x) {
-            if (this.field_K.field_u >= var12Lifetime4) {
+            var11Lifetime4 <= this.field_K.width) {
+            if (this.field_K.height >= var12Lifetime4) {
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
@@ -382,9 +382,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           }
-          var49.drawRotatedScaled(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
+          var49.drawRotatedScaled(112, 144, var49.paddedWidth << 4, var49.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var49.field_z >> 1) + var9Lifetime4, -var49.field_w + var10Lifetime4, 256);
+          this.field_K.drawAdditive(-(var49.paddedWidth >> 1) + var9Lifetime4, -var49.paddedHeight + var10Lifetime4, 256);
           return;
         }
         this.text = var36;
@@ -396,11 +396,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var10Lifetime5 = var54.textOriginY(parentY, (UiWidget) (this), 0) + (var54.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
         if (var6Lifetime4 == GameInstructions.DEBOUNCING) {
           var38 = ToolkitRasterStateCacheEntry.field_m[0];
-          var11Lifetime5 = var38.field_z << 1;
-          var12Lifetime5 = var38.field_w << 1;
+          var11Lifetime5 = var38.paddedWidth << 1;
+          var12Lifetime5 = var38.paddedHeight << 1;
           if (this.field_K != null &&
-            var11Lifetime5 <= this.field_K.field_x) {
-            if (this.field_K.field_u >= var12Lifetime5) {
+            var11Lifetime5 <= this.field_K.width) {
+            if (this.field_K.height >= var12Lifetime5) {
               LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
@@ -411,31 +411,31 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           }
-          var38.drawRotatedScaled(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
+          var38.drawRotatedScaled(112, 144, var38.paddedWidth << 4, var38.paddedHeight << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
-          this.field_K.d(-(var38.field_z >> 1) + var9Lifetime5, -var38.field_w + var10Lifetime5, 256);
+          this.field_K.drawAdditive(-(var38.paddedWidth >> 1) + var9Lifetime5, -var38.paddedHeight + var10Lifetime5, 256);
           return;
         }
         if (FullscreenPromptController.PENDING != var6Lifetime4) {
           if (AccountConnectionPhase.INVALID == var6Lifetime4) {
             var44 = ToolkitRasterStateCacheEntry.field_m[2];
-            var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
+            var44.drawAdditive(var9Lifetime5, -(var44.height >> 1) + var10Lifetime5, 256);
             return;
           }
           if (PerlinNoiseFactory.VALID != var6Lifetime4) {
             return;
           }
           var45 = ToolkitRasterStateCacheEntry.field_m[1];
-          var45.d(var9Lifetime5, var10Lifetime5 - (var45.field_u >> 1), 256);
+          var45.drawAdditive(var9Lifetime5, var10Lifetime5 - (var45.height >> 1), 256);
           return;
         }
         var39 = ToolkitRasterStateCacheEntry.field_m[0];
         var16 = var39;
-        var11Lifetime6 = var39.field_z << 1;
-        var12Lifetime6 = var39.field_w << 1;
+        var11Lifetime6 = var39.paddedWidth << 1;
+        var12Lifetime6 = var39.paddedHeight << 1;
         if (this.field_K != null &&
-          var11Lifetime6 <= this.field_K.field_x) {
-          if (this.field_K.field_u >= var12Lifetime6) {
+          var11Lifetime6 <= this.field_K.width) {
+          if (this.field_K.height >= var12Lifetime6) {
             LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             SoftwareRasterizer.clear();
           } else {
@@ -446,9 +446,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
           LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
         }
-        var39.drawRotatedScaled(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
+        var39.drawRotatedScaled(112, 144, var39.paddedWidth << 4, var39.paddedHeight << 4, -this.animationTicks << 10, 4096);
         ClientException.popRasterState((byte) -50);
-        this.field_K.d(-(var39.field_z >> 1) + var9Lifetime5, -var39.field_w + var10Lifetime5, 256);
+        this.field_K.drawAdditive(-(var39.paddedWidth >> 1) + var9Lifetime5, -var39.paddedHeight + var10Lifetime5, 256);
         return;
     }
 

@@ -132,18 +132,18 @@ abstract class ByteArrayStorage {
           return;
         }
         try {
-          var6_int = param4[0].field_z;
-          var7 = param4[2].field_z;
-          var8 = param4[1].field_z;
-          param4[0].b(param5, param2, param0);
+          var6_int = param4[0].paddedWidth;
+          var7 = param4[2].paddedWidth;
+          var8 = param4[1].paddedWidth;
+          param4[0].drawRecolored(param5, param2, param0);
           int var9 = -64 % ((param3 + 25) / 61);
-          param4[2].b(-var7 + param1 + param5, param2, param0);
+          param4[2].drawRecolored(-var7 + param1 + param5, param2, param0);
           SoftwareRasterizer.saveClip(PerlinNoise2D.field_t);
-          SoftwareRasterizer.intersectClip(param5 + var6_int, param2, -var7 + (param1 + param5), param2 + param4[1].field_w);
+          SoftwareRasterizer.intersectClip(param5 + var6_int, param2, -var7 + (param1 + param5), param2 + param4[1].paddedHeight);
           var10 = param5 + var6_int;
           var11 = -var7 + param1 + param5;
           for (param5 = var10; param5 < var11; param5 = param5 + var8) {
-            param4[1].b(param5, param2, param0);
+            param4[1].drawRecolored(param5, param2, param0);
           }
           SoftwareRasterizer.restoreClip(PerlinNoise2D.field_t);
         } catch (RuntimeException runtimeException) {

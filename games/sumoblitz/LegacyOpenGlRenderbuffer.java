@@ -104,7 +104,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
                 }
               }
               if (OpenGlTexture3D.field_j[var3] != 0) {
-                TextureMetadata.field_f[var3] = true;
+                TextureMetadata.completedLevels[var3] = true;
                 ToolkitRasterStateFrame.field_e = var3;
               }
             }

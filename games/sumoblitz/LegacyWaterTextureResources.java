@@ -27,7 +27,7 @@ final class LegacyWaterTextureResources {
         if (guard != 0) {
           LegacyWaterTextureResources.showConnectionLost(20);
         }
-        HardwareUnlitEffect.a(PerlinNoiseFactory.connectionLostAttemptingToText, false, (byte) 49);
+        HardwareUnlitEffect.showAccountProgressDialog(PerlinNoiseFactory.connectionLostAttemptingToText, false, (byte) 49);
     }
 
     LegacyWaterTextureResources(LegacyOpenGlGraphicsToolkit toolkit) {

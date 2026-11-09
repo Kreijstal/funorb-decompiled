@@ -234,16 +234,16 @@ final class WidgetStateStyle {
             var7_int = this.offsetX + (parentX + widget.x);
             var8 = this.offsetY + widget.y + parentY;
             if (1 == renderer.horizontalAlignment) {
-              var7_int = var7_int + (widget.width - this.icon.field_z) / 2;
+              var7_int = var7_int + (widget.width - this.icon.paddedWidth) / 2;
             }
             if (renderer.horizontalAlignment == 2) {
-              var7_int = var7_int + (widget.width - this.icon.field_z);
+              var7_int = var7_int + (widget.width - this.icon.paddedWidth);
             }
             if (1 == renderer.verticalAlignment) {
-              var8 = var8 + (-this.icon.field_w + widget.height) / 2;
+              var8 = var8 + (-this.icon.paddedHeight + widget.height) / 2;
             }
             if (2 == renderer.verticalAlignment) {
-              var8 = var8 + (-this.icon.field_w + widget.height);
+              var8 = var8 + (-this.icon.paddedHeight + widget.height);
             }
             this.icon.draw(var7_int, var8);
           }

@@ -885,27 +885,27 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         int[] var12 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var10 = new int[data.field_i * data.field_h];
+          var10 = new int[data.height * data.width];
           var12 = var10;
           var11 = var12;
           var3 = var11;
           var4 = 0;
           var5 = 0;
-          if (data.field_a != null) {
-            for (var6_int = 0; data.field_i > var6_int; var6_int++) {
-              for (var7 = 0; data.field_h > var7; var7++) {
+          if (data.alpha != null) {
+            for (var6_int = 0; data.height > var6_int; var6_int++) {
+              for (var7 = 0; data.width > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = LegacyOpenGlInterleavedStream.bitwiseOr(data.field_g[LegacyOpenGlPostProcessManager.bitwiseAnd((int) data.field_e[var4], 255)], data.field_a[var4] << 24);
+                var3[incrementValue$0] = LegacyOpenGlInterleavedStream.bitwiseOr(data.palette[LegacyOpenGlPostProcessManager.bitwiseAnd((int) data.indices[var4], 255)], data.alpha[var4] << 24);
                 var4++;
               }
             }
           } else {
-            for (var6_int = 0; data.field_i > var6_int; var6_int++) {
-              for (var7 = 0; data.field_h > var7; var7++) {
+            for (var6_int = 0; data.height > var6_int; var6_int++) {
+              for (var7 = 0; data.width > var7; var7++) {
                 incrementValue$1 = var4;
                 var4++;
-                var8 = data.field_g[255 & data.field_e[incrementValue$1]];
+                var8 = data.palette[255 & data.indices[incrementValue$1]];
                 incrementValue$2 = var5;
                 var5++;
                 stackIn_8_0 = var10;
@@ -919,8 +919,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               }
             }
           }
-          var6 = this.createSpriteCopy(0, -2, data.field_i, data.field_h, data.field_h, var12);
-          var6.setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
+          var6 = this.createSpriteCopy(0, -2, data.height, data.width, data.width, var12);
+          var6.setInsets(data.leftInset, data.topInset, data.rightInset, data.bottomInset);
           stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2376,7 +2376,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             this.resetTextureMatrix(false);
           } else {
             var5 = this.field_Pb.texture(0, textureId);
-            var10 = this.textureProvider.a(-29193, textureId);
+            var10 = this.textureProvider.metadata(-29193, textureId);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {
               this.resetTextureMatrix(false);

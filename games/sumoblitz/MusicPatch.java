@@ -654,7 +654,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (-var27Lifetime6Lifetime1 + var30) * var28 + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = TextInputWidget.b(var32, var30 - var27Lifetime6Lifetime1, false);
+                var34 = TextInputWidget.floorDivideByPositive(var32, var30 - var27Lifetime6Lifetime1, false);
                 var32 = var32 + (var31 - var28);
                 this.noteVolumes[var33] = (byte)(32 + this.noteVolumes[var33] * var34 >> 6);
               }
@@ -694,7 +694,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = TextInputWidget.b(var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, false);
+                var34Lifetime1 = TextInputWidget.floorDivideByPositive(var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, false);
                 var35 = (this.notePans[var37] & 255) + var34Lifetime1;
                 if (0 > var35) {
                   var35 = 0;

@@ -6,7 +6,7 @@ final class LevelCompletionSupport {
     static String field_a;
 
     final static void completeLevel(int guard) {
-        TextureMetadata.field_f[OpenGlShaderProgram.levelIndex] = true;
+        TextureMetadata.completedLevels[OpenGlShaderProgram.levelIndex] = true;
         Js5ClientState.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
           NineSlicePanel.field_d[OpenGlShaderProgram.levelIndex] = true;
@@ -15,7 +15,7 @@ final class LevelCompletionSupport {
           IntroMeshProjection.threeLifeCompletions[OpenGlShaderProgram.levelIndex] = true;
         }
         HiscoreRequest.openPauseMenu((byte) -104);
-        OpenGlIndexBuffer.g(123);
+        OpenGlIndexBuffer.beginUpgradeReassignment(123);
         if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }

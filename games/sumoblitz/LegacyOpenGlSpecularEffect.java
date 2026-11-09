@@ -7,7 +7,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
     static ArchiveCatalog field_i;
     private LegacyOpenGlDisplayLists stateLists;
     private boolean active;
-    static int[] field_h;
+    static int[] pendingUpgradeLevels;
 
     final boolean isSupported(byte guard) {
         if (guard >= -64) {
@@ -30,14 +30,14 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
 
     final static void c(int param0) {
         if (param0 != 8193) {
-          field_h = (int[]) null;
+          pendingUpgradeLevels = (int[]) null;
         }
     }
 
     final void refreshState(int guard, boolean lighting) {
         this.toolkit.setTextureCombineOperations(20685, 7681, 8448);
         if (guard >= -30) {
-          field_h = (int[]) null;
+          pendingUpgradeLevels = (int[]) null;
         }
     }
 
@@ -206,7 +206,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           return;
         }
         field_i = null;
-        field_h = null;
+        pendingUpgradeLevels = null;
     }
 
     final void disable(int guard) {
@@ -266,6 +266,6 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
     }
 
     static {
-        field_h = new int[]{1, 1, 1};
+        pendingUpgradeLevels = new int[]{1, 1, 1};
     }
 }

@@ -66,7 +66,7 @@ final class IntroLogoRenderer {
         }
         ClientException.popRasterState((byte) -69);
         if (MusicPatch.field_u >= 150) {
-          LoginIdentifierSupport.field_a.a(var3 + 15, 10 + var4, var5);
+          LoginIdentifierSupport.field_a.drawAlpha(var3 + 15, 10 + var4, var5);
           var6 = MusicPatch.field_u - 125;
           if (var6 <= 0) {
             var6 = MusicPatch.field_u - 140;
@@ -75,7 +75,7 @@ final class IntroLogoRenderer {
               if (20 > var6) {
                 var7 = var6 * 256 / 20;
               }
-              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7 >> 8);
+              MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7 >> 8);
             }
             return;
           }
@@ -86,44 +86,44 @@ final class IntroLogoRenderer {
               if (20 > var6) {
                 var7Lifetime7 = var6 * 256 / 20;
               }
-              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime7 >> 8);
+              MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime7 >> 8);
             }
             return;
           }
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
-            MenuFadeState.introGlow.d(var3, var4, var7Lifetime8);
+            MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime8);
             var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
               if (20 > var6) {
                 var7Lifetime8 = var6 * 256 / 20;
               }
-              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime8 >> 8);
+              MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime8 >> 8);
             }
             return;
           }
           if (var6 < 30) {
-            MenuFadeState.introGlow.d(var3, var4, 256);
+            MenuFadeState.introGlow.drawAdditive(var3, var4, 256);
             var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
               if (20 > var6) {
                 var7Lifetime9 = var6 * 256 / 20;
               }
-              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime9 >> 8);
+              MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime9 >> 8);
             }
             return;
           }
           var7Lifetime10 = (12800 - 256 * var6) / 20;
-          MenuFadeState.introGlow.d(var3, var4, var7Lifetime10);
+          MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime10);
           var6Lifetime3 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
             if (20 > var6Lifetime3) {
               var7Lifetime11 = var6Lifetime3 * 256 / 20;
             }
-            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime11 >> 8);
+            MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime11 >> 8);
           }
           return;
         }
@@ -136,7 +136,7 @@ final class IntroLogoRenderer {
             if (20 > var6Lifetime1) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
             }
-            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+            MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
           }
           return;
         }
@@ -147,44 +147,44 @@ final class IntroLogoRenderer {
             if (20 > var6Lifetime1) {
               var7Lifetime2 = var6Lifetime1 * 256 / 20;
             }
-            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime2 >> 8);
+            MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
-          MenuFadeState.introGlow.d(var3, var4, var7Lifetime3);
+          MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime3);
           var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime3Lifetime1 = var6Lifetime1 * 256 / 20;
             }
-            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime3Lifetime1 >> 8);
+            MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime3Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime1 < 30) {
-          MenuFadeState.introGlow.d(var3, var4, 256);
+          MenuFadeState.introGlow.drawAdditive(var3, var4, 256);
           var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime4 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime4 = var6Lifetime1 * 256 / 20;
             }
-            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime4 >> 8);
+            MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
         var7Lifetime5 = (12800 - 256 * var6Lifetime1) / 20;
-        MenuFadeState.introGlow.d(var3, var4, var7Lifetime5);
+        MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime5);
         var6Lifetime2 = MusicPatch.field_u - 140;
         if (0 < var6Lifetime2) {
           var7Lifetime6 = 256;
           if (20 > var6Lifetime2) {
             var7Lifetime6 = var6Lifetime2 * 256 / 20;
           }
-          MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime6 >> 8);
+          MusicPatchEnvelope.field_a.drawAlpha(var3 + 15, 10 + var4, var5 * var7Lifetime6 >> 8);
         }
     }
 

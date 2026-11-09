@@ -88,9 +88,9 @@ final class LegacyOpenGlAssemblyProgram {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 > -31) {
-          LegacyOpenGlAssemblyProgram.a(-31);
+    final static void resetReflectionChecks(int guard) {
+        if (guard > -31) {
+          LegacyOpenGlAssemblyProgram.resetReflectionChecks(-31);
         }
         AccountConnectionPhase.reflectionChecks = new IntrusiveDeque();
     }

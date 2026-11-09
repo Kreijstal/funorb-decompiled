@@ -15,7 +15,7 @@ abstract class CacheReferenceNode extends DualLinkNode {
     public static void releaseStatics(byte param0) {
         field_t = null;
         if (param0 != 54) {
-          CacheReferenceNode.a(-29);
+          CacheReferenceNode.increaseMusicVolume(-29);
           field_v = null;
           field_y = null;
           return;
@@ -24,7 +24,7 @@ abstract class CacheReferenceNode extends DualLinkNode {
         field_y = null;
     }
 
-    final static void a(int param0) {
+    final static void increaseMusicVolume(int guard) {
         int var1 = 0;
         int var1Lifetime1;
         if (TextureGeneratorNode.musicVolume >= 224) {
@@ -33,15 +33,15 @@ abstract class CacheReferenceNode extends DualLinkNode {
           var1 = TextureGeneratorNode.musicVolume % 32;
           LegacyOpenGlRenderBufferSet.setMusicVolume(0, TextureGeneratorNode.musicVolume + (32 - var1));
         }
-        var1Lifetime1 = -44 % ((param0 - 35) / 40);
+        var1Lifetime1 = -44 % ((guard - 35) / 40);
     }
 
     abstract Object getValue(byte param0);
 
     abstract boolean isSoftReference(int param0);
 
-    final static boolean a(byte param0) {
-        int var1 = 102 / ((param0 + 27) / 59);
+    final static boolean canAutoResizeCanvas(byte guard) {
+        int var1 = 102 / ((guard + 27) / 59);
         if (SecondaryNodeDequeIterator.field_b == null) {
           return false;
         }

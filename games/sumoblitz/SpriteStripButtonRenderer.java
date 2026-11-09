@@ -57,7 +57,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
           var7 = stackIn_16_0;
           stackIn_19_0 = (!isEnabled) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          ByteArrayStorage.drawHorizontalSpriteStrip(var7, widget.width, widget.y + (parentY + (-this.backgroundStrip[0].field_w + widget.height >> 1)), 67, this.backgroundStrip, widget.x + parentX);
+          ByteArrayStorage.drawHorizontalSpriteStrip(var7, widget.width, widget.y + (parentY + (-this.backgroundStrip[0].paddedHeight + widget.height >> 1)), 67, this.backgroundStrip, widget.x + parentX);
           this.font.drawParagraph(widget.text, parentX + widget.x, widget.y + (parentY - 2), widget.width, widget.height, var8, -1, 1, 1, this.font.ascent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

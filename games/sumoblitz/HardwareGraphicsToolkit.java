@@ -28,7 +28,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private boolean field_fb;
     boolean field_Z;
     private float field_qb;
-    private int field_Pb;
+    private int waterSurfaceHeight;
     int activeTextureUnit;
     int field_bc;
     private int effectParameters1;
@@ -255,9 +255,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract Object createSurface(java.awt.Canvas canvas, int guard);
 
-    final int M(int param0) {
-        int var2 = -35 / ((param0 - 54) / 59);
-        return this.field_Pb;
+    final int underwaterSurfaceHeight(int guard) {
+        int var2 = -35 / ((guard - 54) / 59);
+        return this.waterSurfaceHeight;
     }
 
     final static String replaceText(String needle, String text, String replacement, boolean guard) {
@@ -428,28 +428,28 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int[] var12 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (0 != data.field_h &&
-            0 != data.field_i) {
-            var12 = new int[data.field_h * data.field_i];
+          if (0 != data.width &&
+            0 != data.height) {
+            var12 = new int[data.width * data.height];
             var11 = var12;
             var4 = var11;
             var5 = 0;
             var6 = 0;
-            if (null != data.field_a) {
-              for (var7 = 0; var7 < data.field_i; var7++) {
-                for (var8 = 0; var8 < data.field_h; var8++) {
+            if (null != data.alpha) {
+              for (var7 = 0; var7 < data.height; var7++) {
+                for (var8 = 0; var8 < data.width; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = LegacyOpenGlInterleavedStream.bitwiseOr(data.field_a[var5] << 24, data.field_g[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) data.field_e[var5])]);
+                  var4[incrementValue$2] = LegacyOpenGlInterleavedStream.bitwiseOr(data.alpha[var5] << 24, data.palette[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) data.indices[var5])]);
                   var5++;
                 }
               }
             } else {
-              for (var7 = 0; var7 < data.field_i; var7++) {
-                for (var8 = 0; data.field_h > var8; var8++) {
+              for (var7 = 0; var7 < data.height; var7++) {
+                for (var8 = 0; data.width > var8; var8++) {
                   incrementValue$0 = var5;
                   var5++;
-                  var9 = data.field_g[data.field_e[incrementValue$0] & 255];
+                  var9 = data.palette[data.indices[incrementValue$0] & 255];
                   incrementValue$1 = var6;
                   var6++;
                   stackIn_18_0 = var4;
@@ -463,11 +463,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 }
               }
             }
-            var3 = this.createSpriteCopy(0, -2, data.field_i, data.field_h, data.field_h, var12);
+            var3 = this.createSpriteCopy(0, -2, data.height, data.width, data.width, var12);
           } else {
             var3 = this.createSpriteCopy(0, -2, 1, 1, 1, new int[]{0});
           }
-          var3.setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
+          var3.setInsets(data.leftInset, data.topInset, data.rightInset, data.bottomInset);
           stackIn_23_0 = var3;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1558,9 +1558,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             RasterColorTables.retainColorTables(true, -107, false);
             if (null != this.textureProvider) {
               this.field_lc = new HardwareTextureCache(this, this.textureProvider);
-              this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.textureProvider.a(32075), this.field_dc);
-              for (var8 = 0; var8 < this.textureProvider.a(32075); var8++) {
-                var9 = this.textureProvider.a(-29193, var8);
+              this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.textureProvider.textureCount(32075), this.field_dc);
+              for (var8 = 0; var8 < this.textureProvider.textureCount(32075); var8++) {
+                var9 = this.textureProvider.metadata(-29193, var8);
                 if (var9 != null) {
                   this.field_nc.initTextureMetrics(var8, var9.field_t, var9.field_g);
                 }
@@ -1850,8 +1850,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_Ob;
     }
 
-    private final boolean o(byte param0) {
-        if (param0 != 24) {
+    private final boolean supportsUnderwaterShaders(byte guard) {
+        if (guard != 24) {
           this.applyActiveTexture(83);
         }
         return this.effects[3].isSupported((byte) -59);
@@ -1868,7 +1868,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (guard != 2147483647) {
           this.activeShaderEffect = (ShaderEffect) null;
         }
-        allowSpecializedEffects = allowSpecializedEffects & this.o((byte) 24);
+        allowSpecializedEffects = allowSpecializedEffects & this.supportsUnderwaterShaders((byte) 24);
         if (!allowSpecializedEffects && (effectId == 4 ||
           8 == effectId ||
           9 == effectId)) {
@@ -2010,7 +2010,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.resetTextureTransform(0);
           } else {
             var5 = this.field_lc.getTexture(guard + 37, textureId);
-            var10 = this.textureProvider.a(-29193, textureId);
+            var10 = this.textureProvider.metadata(-29193, textureId);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {
               this.resetTextureTransform(0);

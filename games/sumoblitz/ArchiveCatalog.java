@@ -1683,19 +1683,19 @@ final class ArchiveCatalog {
         }
     }
 
-    final static void a(byte param0) {
+    final static void increaseMusicVolume(byte guard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (param0 != -6) {
+          if (guard != -6) {
             field_f = (SpriteData) null;
           }
-          CacheReferenceNode.a(-99);
+          CacheReferenceNode.increaseMusicVolume(-99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "rj.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "rj.I(" + guard + ')');
         }
     }
 

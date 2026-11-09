@@ -351,8 +351,8 @@ final class IntrusiveDequeCursor {
           return;
         }
         FadingWidget.score = FadingWidget.score + param0;
-        if (BufferedCacheFile.a((byte) -84, 10) < 5) {
-          if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
+        if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) < 5) {
+          if (5 <= BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + param0;
             if (var2 >= 50000) {
               return;
@@ -367,7 +367,7 @@ final class IntrusiveDequeCursor {
           }
           QuickChatCommand.field_a = QuickChatCommand.field_a + param0;
         } else {
-          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           } else {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a - param0;

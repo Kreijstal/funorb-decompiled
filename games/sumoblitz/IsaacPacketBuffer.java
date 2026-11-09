@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IsaacPacketBuffer extends PacketBuffer {
-    static int field_u;
+    static int allocatedUpgradePoints;
     static String changeDisplayNameText;
     private int bitPosition;
     static String[] field_r;

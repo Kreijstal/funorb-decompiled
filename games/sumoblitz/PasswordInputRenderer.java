@@ -19,7 +19,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
           if (!guard) {
             field_s = -86;
           }
-          stackIn_3_0 = HardwareUnlitEffect.a(widget.text.length(), '*', -1);
+          stackIn_3_0 = HardwareUnlitEffect.repeatCharacter(widget.text.length(), '*', -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

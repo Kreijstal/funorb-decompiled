@@ -142,7 +142,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
               this.toolkit.setActiveTextureUnit(1, 98);
               this.toolkit.bindTexture(119, var3);
               jaggl.OpenGL.glMatrixMode(5890);
-              jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_mc.a(5), 0);
+              jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_mc.rotationMatrix(5), 0);
               jaggl.OpenGL.glMatrixMode(5888);
               this.toolkit.setActiveTextureUnit(0, 85);
               this.active = true;

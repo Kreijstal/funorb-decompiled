@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. Reproducible naming rules live in dekobloko-work/readable; the reverse dictionary is ../../decompilation/sumoblitz-naming.json.
 
-Resolved declarations: 587/587 classes and 3582/3927 methods have readable names; 472 constructors follow their class names.
-Remaining: 0 opaque class names and 345 opaque method names. The complete naming goal is still in progress.
+Resolved declarations: 587/587 classes and 3671/3927 methods have readable names; 472 constructors follow their class names.
+Remaining: 0 opaque class names and 256 opaque method names. The complete naming goal is still in progress.
 
 Audit with `node readable/naming-coverage.mjs sumoblitz` in dekobloko-work; it exits unsuccessfully while opaque names remain.
 

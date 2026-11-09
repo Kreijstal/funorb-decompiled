@@ -183,7 +183,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != this.toolkit.field_yb ? this.modelLitProgram.programId : this.groundLitProgram.programId);
         }
-        var2.a(TextLayout.field_c, 26839, -1.0f, 0.0f, (float)this.toolkit.field_yb, 0.0f);
+        var2.transformPlane(TextLayout.field_c, 26839, -1.0f, 0.0f, (float)this.toolkit.field_yb, 0.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, TextLayout.field_c[0], TextLayout.field_c[1], TextLayout.field_c[2], TextLayout.field_c[3]);
         jaggl.OpenGL.glEnable(34336);
         this.active = true;

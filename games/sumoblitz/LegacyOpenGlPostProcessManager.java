@@ -17,10 +17,10 @@ final class LegacyOpenGlPostProcessManager {
         return null != this.framebuffer ? true : false;
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = param0 - 1 & param2 >> 31;
-        if (param1 > 87) {
-          return ((param2 >>> 31) + param2) % param0 + var3;
+    final static int floorModByPositive(int divisor, int guard, int value) {
+        int var3 = divisor - 1 & value >> 31;
+        if (guard > 87) {
+          return ((value >>> 31) + value) % divisor + var3;
         }
         return -115;
     }

@@ -237,8 +237,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder2)) {
             var3_int = -drone.xQ8 + this.acceleratorTargetXQ8;
             var4 = -drone.yQ8 + this.acceleratorTargetYQ8;
-            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)drone.mass);
-            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)drone.mass);
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + 0.00016 * (double)RasterBuffer.signum(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.signum(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)drone.mass);
             drone.steeringSuppressed = true;
             LegacyOpenGlDisplayLists.playSoundEffectIfChanged(-111, ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -315,8 +315,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameCompleted0)) {
             var3_intLifetime2 = this.xQ8 - drone.xQ8;
             var4Lifetime2 = -drone.yQ8 + this.yQ8;
-            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + (double)RasterBuffer.a(guard ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)drone.mass);
-            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)drone.mass);
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + (double)RasterBuffer.signum(guard ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.signum(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)drone.mass);
             this.contactThisTick = true;
             LegacyOpenGlDisplayLists.playSoundEffectIfChanged(-119, 1, true);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -325,8 +325,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameCompleted0)) {
             var4Lifetime1 = this.yQ8 - drone.yQ8;
             var3_intLifetime1 = -drone.xQ8 + this.xQ8;
-            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)drone.mass);
-            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)drone.mass);
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 - (double)RasterBuffer.signum(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 - 0.000035 * (double)RasterBuffer.signum(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)drone.mass);
             this.contactThisTick = true;
             LegacyOpenGlDisplayLists.playSoundEffectIfChanged(-123, 2, true);
           }

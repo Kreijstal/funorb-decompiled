@@ -105,7 +105,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
             }
           }
           FadingWidget.score = 0;
-          if (5 >= BufferedCacheFile.a((byte) -84, 10)) {
+          if (5 >= BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;

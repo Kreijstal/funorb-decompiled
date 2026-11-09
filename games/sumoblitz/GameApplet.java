@@ -890,7 +890,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                CompactMeshGeometry.b(true);
+                CompactMeshGeometry.refreshMaxHeapMiB(true);
                 this.replaceCanvas(1000);
                 ProgressDialog.field_R = SoftLruCache.a(IntroMeshResources.canvasHeight, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
                 this.initializeGame(28196);

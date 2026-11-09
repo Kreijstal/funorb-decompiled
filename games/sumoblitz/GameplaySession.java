@@ -1094,15 +1094,15 @@ final class GameplaySession {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a - 5;
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 3;
             TextureFormat.elapsedTicks = TextureFormat.elapsedTicks + 1;
-            if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-              if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
+            if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
+              if (5 <= BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
                 SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + 1;
                 decompiledFrameRemainder2 = (var6 != 0);
               }
               if (decompiledFrameRemainder2) {
                 QuickChatCommand.field_a = QuickChatCommand.field_a + 1;
                 if (var6 != 0) {
-                  if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+                  if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
                     LoginPacketWriter.field_a = LoginPacketWriter.field_a - 1;
                     GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   } else {
@@ -1111,7 +1111,7 @@ final class GameplaySession {
                 }
               }
             } else {
-              if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+              if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
                 LoginPacketWriter.field_a = LoginPacketWriter.field_a - 1;
                 if (var6 != 0) {
                   GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
@@ -1147,7 +1147,7 @@ final class GameplaySession {
             }
           }
           if (SpriteMask.drones[0] != null && (!(6 > OpenGlShaderProgram.levelIndex) ||
-            TextureMetadata.field_f[6] ||
+            TextureMetadata.completedLevels[6] ||
             MessageDialog.arcadeMode)) {
             boolean decompiledFrameRemainder1 = true;
             if (AppletTickHistory.field_b > 0 &&
@@ -1236,7 +1236,7 @@ final class GameplaySession {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                HardwareUnlitEffect.a(EnemyDroneFactory.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
+                HardwareUnlitEffect.placeAndRegisterDrone(EnemyDroneFactory.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1262,7 +1262,7 @@ final class GameplaySession {
               (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(AgeValidator.countEnemyDrones(true) >= (SpriteMask.drones.length - 1)))) {
               var4 = EnemyDroneFactory.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-              HardwareUnlitEffect.a(var4, false);
+              HardwareUnlitEffect.placeAndRegisterDrone(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1831,7 +1831,7 @@ final class GameplaySession {
           LoginPacketWriter.field_a = 0;
           PasswordValidator.resetAchievementProgress(104);
           if (OpenGlShaderProgram.levelIndex == 0 &&
-            !TextureMetadata.field_f[0]) {
+            !TextureMetadata.completedLevels[0]) {
             NextLevelChoiceOverlay.field_d = true;
             this.showBlastHint = true;
           }

@@ -113,11 +113,11 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         var5 = 0;
         for (var6 = 0; var6 < 256; var6++) {
           var22 = param2[var6];
-          if (var22.field_i > var5) {
-            var5 = var22.field_i;
+          if (var22.height > var5) {
+            var5 = var22.height;
           }
-          if (var22.field_h > var5) {
-            var5 = var22.field_h;
+          if (var22.width > var5) {
+            var5 = var22.width;
           }
         }
         var6Lifetime1 = var5 * 16;
@@ -127,15 +127,15 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           var7_ref_int__ = var28;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var25 = param2[var8_int];
-            var10 = var25.field_g;
-            var31 = var25.field_a;
+            var10 = var25.palette;
+            var31 = var25.alpha;
             var26 = var31;
             var11_ref_byte__ = var26;
-            var32 = var25.field_e;
+            var32 = var25.indices;
             var27 = var32;
             var12_ref_byte__ = var27;
-            var13 = var25.field_i;
-            var14 = var25.field_h;
+            var13 = var25.height;
+            var14 = var25.width;
             var15_int = var8_int % 16 * var5;
             var16_int = var8_int / 16 * var5;
             var17_int = var16_int * var6Lifetime1 + var15_int;
@@ -177,14 +177,14 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           var7_ref_byte__ = var24;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var23 = param2[var8_int];
-            var10_int = var23.field_i;
-            var11 = var23.field_h;
+            var10_int = var23.height;
+            var11 = var23.width;
             var12 = var8_int % 16 * var5;
             var13 = var8_int / 16 * var5;
             var14 = var13 * var6Lifetime1 + var12;
             var15_int = 0;
-            if (var23.field_a != null) {
-              var16_ref_byte__ = var23.field_a;
+            if (var23.alpha != null) {
+              var16_ref_byte__ = var23.alpha;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   var7_ref_byte__[var14++] = var16_ref_byte__[var15_int++];
@@ -192,7 +192,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
                 var14 = var14 + (var6Lifetime1 - var11);
               }
             } else {
-              var16_ref_byte__ = var23.field_e;
+              var16_ref_byte__ = var23.indices;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   incrementValue$6 = var14;
@@ -221,10 +221,10 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         var8 = this.field_c.maxV / (float)this.field_c.spriteHeight;
         for (var9 = 0; var9 < 256; var9++) {
           var29 = param2[var9];
-          var11Lifetime1 = var29.field_i;
-          var12Lifetime1 = var29.field_h;
-          var13Lifetime1 = var29.field_d;
-          var14Lifetime1 = var29.field_c;
+          var11Lifetime1 = var29.height;
+          var12Lifetime1 = var29.width;
+          var13Lifetime1 = var29.topInset;
+          var14Lifetime1 = var29.leftInset;
           var15 = (float)(var9 % 16 * var5);
           var16 = (float)(var9 / 16 * var5);
           var17 = var15 * var7;

@@ -26,7 +26,7 @@ final class CompactMeshGeometry {
     int[] field_J;
     static PlatformTaskDispatcher field_O;
     static SpriteData field_N;
-    private boolean field_d;
+    private boolean boundsValid;
     short[] field_h;
     int[] field_q;
     static FullscreenCanvas field_o;
@@ -49,7 +49,7 @@ final class CompactMeshGeometry {
     short[] field_R;
     short field_D;
 
-    final static void b(boolean param0) {
+    final static void refreshMaxHeapMiB(boolean guard) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;
@@ -59,8 +59,8 @@ final class CompactMeshGeometry {
           Long var3 = null;
           Object[] var4 = null;
           try {
-            if (!param0) {
-              CompactMeshGeometry.b(true);
+            if (!guard) {
+              CompactMeshGeometry.refreshMaxHeapMiB(true);
             }
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
             if (var1 != null) {
@@ -98,7 +98,7 @@ final class CompactMeshGeometry {
         field_O = null;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final void scaleVertices(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         for (var6 = 0; var6 < this.field_D; var6++) {
@@ -109,17 +109,17 @@ final class CompactMeshGeometry {
         if (!param3) {
           return;
         }
-        this.a((byte) 101);
+        this.invalidateBounds((byte) 101);
     }
 
-    private final void a(byte param0) {
-        if (param0 != 101) {
+    private final void invalidateBounds(byte guard) {
+        if (guard != 101) {
           this.field_l = (short[]) null;
         }
-        this.field_d = false;
+        this.boundsValid = false;
     }
 
-    final void a(boolean param0) {
+    final void computeBounds(boolean guard) {
         int var8 = 0;
         int var2;
         int var3;
@@ -132,18 +132,18 @@ final class CompactMeshGeometry {
         int var11;
         int var12;
         var12 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_d) {
+        if (this.boundsValid) {
           return;
         }
-        this.field_d = true;
+        this.boundsValid = true;
         var2 = 32767;
         var3 = 32767;
         var4 = 32767;
         var5 = -32768;
         var6 = -32768;
         var7 = -32768;
-        if (param0) {
-          this.a((byte) -95);
+        if (guard) {
+          this.invalidateBounds((byte) -95);
         }
         for (var8 = 0; var8 < this.field_D; var8++) {
           var9 = this.field_Q[var8];
@@ -176,7 +176,7 @@ final class CompactMeshGeometry {
         this.field_j = var3;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void translateVertices(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         for (var5 = 0; var5 < this.field_D; var5++) {
@@ -184,7 +184,7 @@ final class CompactMeshGeometry {
           this.field_B[var5] = (short)(this.field_B[var5] + param1);
           this.field_r[var5] = (short)(this.field_r[var5] + param0);
         }
-        this.a((byte) 101);
+        this.invalidateBounds((byte) 101);
         if (param2 != -81) {
           this.field_n = (short) -48;
         }
@@ -192,7 +192,7 @@ final class CompactMeshGeometry {
 
     CompactMeshGeometry() {
         this.field_E = (byte) 0;
-        this.field_d = false;
+        this.boundsValid = false;
     }
 
     static {

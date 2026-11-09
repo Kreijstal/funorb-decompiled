@@ -178,7 +178,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             decompiledSharedTail0 = (Sumoblitz.field_L);
           }
           if (decompiledSharedTail0) {
-            LegacyOpenGlTransform3D.a(pixelWidth, pixelHeight, (byte) 11, textureTarget, storageFormat, pixels, sourceFormat);
+            LegacyOpenGlTransform3D.uploadFloatMipmaps(pixelWidth, pixelHeight, (byte) 11, textureTarget, storageFormat, pixels, sourceFormat);
             this.noteMipmaps(true, true);
           }
           this.setLinearFiltering(true, 0);

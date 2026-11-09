@@ -16,7 +16,7 @@ final class TextureMetadata {
     boolean field_i;
     boolean field_b;
     byte field_j;
-    static boolean[] field_f;
+    static boolean[] completedLevels;
     byte field_t;
     boolean field_m;
     byte field_d;
@@ -98,12 +98,12 @@ final class TextureMetadata {
     }
 
     public static void releaseStatics(boolean param0) {
-        field_f = null;
+        completedLevels = null;
         field_a = null;
         if (param0) {
           return;
         }
-        field_f = (boolean[]) null;
+        completedLevels = (boolean[]) null;
     }
 
     private TextureMetadata() throws Throwable {
@@ -111,6 +111,6 @@ final class TextureMetadata {
     }
 
     static {
-        field_f = new boolean[25];
+        completedLevels = new boolean[25];
     }
 }

@@ -21,8 +21,8 @@ final class RotarySelectorWidget extends InteractiveWidget {
         field_J = null;
     }
 
-    final static void a(byte param0, boolean param1) {
-        int var2 = 104 / ((param0 - 78) / 36);
+    final static void initializeGraphicsOptions(byte guard, boolean unused) {
+        int var2 = 104 / ((guard - 78) / 36);
         FullscreenPromptController.initializeGraphicsOptions((byte) 108);
     }
 
@@ -40,7 +40,7 @@ final class RotarySelectorWidget extends InteractiveWidget {
         try {
           if (!super.onPointerPressed(root, -47, pointerY, button, parentX, pointerX, parentY)) {
             if (guard > -42) {
-              RotarySelectorWidget.a((byte) 68, false);
+              RotarySelectorWidget.initializeGraphicsOptions((byte) 68, false);
             }
             return false;
           }

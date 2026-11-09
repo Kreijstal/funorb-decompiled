@@ -123,7 +123,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           }
           stackIn_31_1 = !(this.field_Z.length <= 0);
           this.field_R = stackIn_31_1;
-          stackIn_34_0 = (!CacheReferenceNode.a((byte) -90)) ? 0 : 1;
+          stackIn_34_0 = (!CacheReferenceNode.canAutoResizeCanvas((byte) -90)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
@@ -597,7 +597,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_O == this.field_X) {
           HardwareAnimatedWaterEffect.d(1);
-          IterableNodeHashTable.b(0);
+          IterableNodeHashTable.disableAutomaticCanvasResizing(0);
         } else {
           if (this.field_Y != this.field_O) {
             if (this.field_O == this.field_T &&
@@ -611,7 +611,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             }
           } else {
             HardwareAnimatedWaterEffect.d(1);
-            OpenGlBuffer.f(-5812);
+            OpenGlBuffer.enableAutomaticCanvasResizing(-5812);
           }
         }
         if (param0 < 65) {

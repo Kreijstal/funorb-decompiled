@@ -41,7 +41,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.toolkit.setColorCombineSource((byte) 89, 2, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.setActiveTextureUnit(0, guard - 20311);
-        this.d(-86);
+        this.bindUnderwaterShader(-86);
     }
 
     final void disable(boolean guard) {
@@ -138,11 +138,11 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    private final void d(int param0) {
+    private final void bindUnderwaterShader(int guard) {
         jagdx.IDirect3DVertexShader var2 = null;
-        int var5 = -19 % ((-23 - param0) / 63);
+        int var5 = -19 % ((-23 - guard) / 63);
         jagdx.IDirect3DDevice var3 = this.field_l.field_Cc;
-        int var4 = this.toolkit.M(-66);
+        int var4 = this.toolkit.underwaterSurfaceHeight(-66);
         AffineTransform3D var6 = this.toolkit.viewTransform((byte) -28);
         if (this.field_o) {
           var2 = var4 != 2147483647 ? this.field_m : this.field_n;

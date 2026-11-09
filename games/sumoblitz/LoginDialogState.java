@@ -173,9 +173,9 @@ final class LoginDialogState {
 
     final static void restoreBaselineUpgrades(int guard) {
         try {
-          AccountStatusDialogState.selectedBounceLevel = LegacyOpenGlSpecularEffect.field_h[2];
-          LegacyOpenGlEffectManager.selectedTractionLevel = LegacyOpenGlSpecularEffect.field_h[1];
-          ResourceArchive.selectedSpeedLevel = LegacyOpenGlSpecularEffect.field_h[0];
+          AccountStatusDialogState.selectedBounceLevel = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[2];
+          LegacyOpenGlEffectManager.selectedTractionLevel = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[1];
+          ResourceArchive.selectedSpeedLevel = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[0];
           int var1_int = -21 / ((guard + 59) / 40);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.C(" + guard + ')');

@@ -37,7 +37,7 @@ final class WhirlpoolTables {
           CacheIoRequest.field_A = new int[25];
           OpenGlTexture3D.field_j = new int[25];
           ToolkitRasterStateFrame.field_e = -1;
-          TextureMetadata.field_f = new boolean[25];
+          TextureMetadata.completedLevels = new boolean[25];
           ResourceArchive.selectedSpeedLevel = 1;
           IntroMeshProjection.threeLifeCompletions = new boolean[25];
           LegacyOpenGlEffectManager.selectedTractionLevel = 1;
@@ -51,7 +51,7 @@ final class WhirlpoolTables {
         CacheIoRequest.field_A = new int[25];
         OpenGlTexture3D.field_j = new int[25];
         ToolkitRasterStateFrame.field_e = -1;
-        TextureMetadata.field_f = new boolean[25];
+        TextureMetadata.completedLevels = new boolean[25];
         ResourceArchive.selectedSpeedLevel = 1;
         IntroMeshProjection.threeLifeCompletions = new boolean[25];
         LegacyOpenGlEffectManager.selectedTractionLevel = 1;

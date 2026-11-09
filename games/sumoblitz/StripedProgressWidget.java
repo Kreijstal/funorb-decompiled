@@ -155,15 +155,15 @@ final class StripedProgressWidget extends UiWidget {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var5_int = x + this.width;
-          TextCaretLayout.pushClip(this.height + y, y, 1, x + this.rightCapMask.field_x, -this.rightCapMask.field_x + var5_int);
-          for (var6 = x - this.stripePhase; var6 < var5_int; var6 = var6 + tile.field_x) {
+          TextCaretLayout.pushClip(this.height + y, y, 1, x + this.rightCapMask.width, -this.rightCapMask.width + var5_int);
+          for (var6 = x - this.stripePhase; var6 < var5_int; var6 = var6 + tile.width) {
             tile.draw(var6, y);
           }
           if (guard != 256) {
             this.animated = true;
           }
           ClientException.popRasterState((byte) -51);
-          if (x + this.rightCapMask.field_x >= SoftwareRasterizer.clipLeft) {
+          if (x + this.rightCapMask.width >= SoftwareRasterizer.clipLeft) {
             LegacyVertexAttribute.pushSpriteRaster(guard + 6905, this.capScratch);
             tile.draw(-this.stripePhase, 0);
             tile.draw(this.stripeWidth * 2 - this.stripePhase, 0);
@@ -171,15 +171,15 @@ final class StripedProgressWidget extends UiWidget {
             ClientException.popRasterState((byte) -105);
             this.capScratch.draw(x, y);
           }
-          if (SoftwareRasterizer.clipRight >= -this.rightCapMask.field_x + var5_int) {
+          if (SoftwareRasterizer.clipRight >= -this.rightCapMask.width + var5_int) {
             LegacyVertexAttribute.pushSpriteRaster(7161, this.capScratch);
-            for (var7 = this.stripePhase + this.width - this.rightCapMask.field_x; this.stripeWidth * 2 < var7; var7 = var7 - this.stripeWidth * 2) {
+            for (var7 = this.stripePhase + this.width - this.rightCapMask.width; this.stripeWidth * 2 < var7; var7 = var7 - this.stripeWidth * 2) {
             }
             tile.draw(-var7, 0);
             tile.draw(2 * this.stripeWidth - var7, 0);
             this.rightCapMask.drawMultiply(0, 0);
             ClientException.popRasterState((byte) 106);
-            this.capScratch.draw(var5_int - this.rightCapMask.field_x, y);
+            this.capScratch.draw(var5_int - this.rightCapMask.width, y);
             return;
           }
           return;

@@ -310,7 +310,7 @@ final class IsaacCipher {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_gk = HardwareTextureCache.introMeshes[var3];
-            var4_ref_gk.a(false);
+            var4_ref_gk.computeBounds(false);
             IntrusiveDequeCursor.a((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
             var6 = var4_ref_gk.field_j + var4_ref_gk.field_f >> 1;

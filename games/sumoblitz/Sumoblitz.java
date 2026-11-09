@@ -146,7 +146,7 @@ public final class Sumoblitz extends GameClientShell {
                 RendererPreference.field_b = SecondaryNodeQueue.field_d;
                 if (-2 == RendererPreference.field_b) {
                   RendererPreference.field_b = 0;
-                  RotarySelectorWidget.a((byte) 122, false);
+                  RotarySelectorWidget.initializeGraphicsOptions((byte) 122, false);
                 }
               }
               LegacyOpenGlUnlitEffect.field_e = 3;
@@ -308,7 +308,7 @@ public final class Sumoblitz extends GameClientShell {
               } else {
                 stackIn_50_0 = AppletFocusState.focused;
               }
-              SoftwareTransform3D.a(stackIn_50_0, 25);
+              SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_50_0, 25);
             }
             if (Bzip2State.field_j >= 2 &&
               SceneryParticle.field_v) {
@@ -355,7 +355,7 @@ public final class Sumoblitz extends GameClientShell {
               var5_intLifetime1 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
               var6Lifetime1 = 0 * (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) / 2;
               DialogOriginSupport.setDialogOrigin(var5_intLifetime1, var6Lifetime1, 59);
-              SoftwareTransform3D.a(false, (byte) -122);
+              SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
               this.field_F = true;
               decompiledFrameRemainder0 = (var10 != 0);
             }
@@ -367,7 +367,7 @@ public final class Sumoblitz extends GameClientShell {
                     var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                     var6Lifetime1Lifetime1 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                     VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
-                    SoftwareTransform3D.a(false, param0 ^ 121);
+                    SoftwareTransform3D.drawDimmedAccountDialogs(false, param0 ^ 121);
                     this.field_F = true;
                   }
                 }
@@ -375,7 +375,7 @@ public final class Sumoblitz extends GameClientShell {
                 var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                 var6Lifetime1Lifetime1 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                 VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
-                SoftwareTransform3D.a(false, param0 ^ 121);
+                SoftwareTransform3D.drawDimmedAccountDialogs(false, param0 ^ 121);
                 this.field_F = true;
               }
             }
@@ -383,8 +383,8 @@ public final class Sumoblitz extends GameClientShell {
               var5_intLifetime2 = SoftwareRasterizer.width;
               var6Lifetime2 = SoftwareRasterizer.height;
               if (this.field_K != null) {
-                var6Lifetime2 = this.field_K.field_u;
-                var5_intLifetime2 = this.field_K.field_x;
+                var6Lifetime2 = this.field_K.height;
+                var5_intLifetime2 = this.field_K.width;
               }
               var7Lifetime1 = (-var5_intLifetime2 + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
               var8 = (IntroMeshResources.canvasHeight - var6Lifetime2) / 2;
@@ -514,7 +514,7 @@ public final class Sumoblitz extends GameClientShell {
                 }
                 decompiledFrameRemainder0 = !(!DisplayPromptState.isDisplayPromptOpen((byte) 119));
                 if (decompiledFrameRemainder0) {
-                  RotarySelectorWidget.a((byte) -111, true);
+                  RotarySelectorWidget.initializeGraphicsOptions((byte) -111, true);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
@@ -528,7 +528,7 @@ public final class Sumoblitz extends GameClientShell {
                       LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) 71);
                       break;
                     case 3:
-                      RotarySelectorWidget.a((byte) -21, true);
+                      RotarySelectorWidget.initializeGraphicsOptions((byte) -21, true);
                       break;
                     case 4:
                       DroneProximitySupport.showGuestLogin(true);
@@ -768,7 +768,7 @@ public final class Sumoblitz extends GameClientShell {
                                             } else {
                                               stackIn_134_0 = AppletFocusState.focused;
                                             }
-                                            SoftwareTransform3D.a(stackIn_134_0, 25);
+                                            SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_134_0, 25);
                                           }
                                           if (Bzip2State.field_j >= 2 &&
                                             SceneryParticle.field_v) {
@@ -819,7 +819,7 @@ public final class Sumoblitz extends GameClientShell {
                                             var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                                             var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                                             DialogOriginSupport.setDialogOrigin(var6_int, var7, 76);
-                                            SoftwareTransform3D.a(false, (byte) -122);
+                                            SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
                                             this.field_F = true;
                                             decompiledSharedTail8 = (var11 != 0);
                                           }
@@ -828,7 +828,7 @@ public final class Sumoblitz extends GameClientShell {
                                               var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                                               var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                                               VertexAttribute.a(var6_int, -45, var7);
-                                              SoftwareTransform3D.a(false, -66);
+                                              SoftwareTransform3D.drawDimmedAccountDialogs(false, -66);
                                               this.field_F = true;
                                               if (var11 != 0 &&
                                                 !ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
@@ -844,8 +844,8 @@ public final class Sumoblitz extends GameClientShell {
                                             var6_int = SoftwareRasterizer.width;
                                             var7 = SoftwareRasterizer.height;
                                             if (this.field_K != null) {
-                                              var6_int = this.field_K.field_x;
-                                              var7 = this.field_K.field_u;
+                                              var6_int = this.field_K.width;
+                                              var7 = this.field_K.height;
                                             }
                                             var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                                             var9 = (-var7 + IntroMeshResources.canvasHeight) / 2;
@@ -969,7 +969,7 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         stackIn_249_0 = AppletFocusState.focused;
                       }
-                      SoftwareTransform3D.a(stackIn_249_0, 64);
+                      SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_249_0, 64);
                     }
                     if (2 <= Bzip2State.field_j &&
                       SceneryParticle.field_v) {
@@ -1017,7 +1017,7 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var7 = 0 * (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) / 2;
                       DialogOriginSupport.setDialogOrigin(var6_int, var7, 126);
-                      SoftwareTransform3D.a(false, (byte) -122);
+                      SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
                       this.field_F = true;
                       decompiledFrameRemainder4 = (var11 != 0);
                     }
@@ -1029,7 +1029,7 @@ public final class Sumoblitz extends GameClientShell {
                             var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                             var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                             VertexAttribute.a(var6_int, -66, var7);
-                            SoftwareTransform3D.a(false, -124);
+                            SoftwareTransform3D.drawDimmedAccountDialogs(false, -124);
                             this.field_F = true;
                           }
                         }
@@ -1037,7 +1037,7 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                         var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                         VertexAttribute.a(var6_int, -66, var7);
-                        SoftwareTransform3D.a(false, -124);
+                        SoftwareTransform3D.drawDimmedAccountDialogs(false, -124);
                         this.field_F = true;
                       }
                     }
@@ -1045,8 +1045,8 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = SoftwareRasterizer.width;
                       var7 = SoftwareRasterizer.height;
                       if (null != this.field_K) {
-                        var6_int = this.field_K.field_x;
-                        var7 = this.field_K.field_u;
+                        var6_int = this.field_K.width;
+                        var7 = this.field_K.height;
                       }
                       var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var9 = (-var7 + IntroMeshResources.canvasHeight) / 2;
@@ -1135,7 +1135,7 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         stackIn_363_0 = true;
                       }
-                      SoftwareTransform3D.a(stackIn_363_0, -122);
+                      SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_363_0, -122);
                     }
                     if (Bzip2State.field_j >= 2 &&
                       SceneryParticle.field_v) {
@@ -1182,7 +1182,7 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                       DialogOriginSupport.setDialogOrigin(var6_int, var7, 86);
-                      SoftwareTransform3D.a(false, (byte) -122);
+                      SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
                       this.field_F = true;
                       decompiledFrameRemainder2 = (var11 != 0);
                     }
@@ -1194,7 +1194,7 @@ public final class Sumoblitz extends GameClientShell {
                             var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                             var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                             VertexAttribute.a(var6_int, -82, var7);
-                            SoftwareTransform3D.a(false, -100);
+                            SoftwareTransform3D.drawDimmedAccountDialogs(false, -100);
                             this.field_F = true;
                           }
                         }
@@ -1202,7 +1202,7 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                         var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                         VertexAttribute.a(var6_int, -82, var7);
-                        SoftwareTransform3D.a(false, -100);
+                        SoftwareTransform3D.drawDimmedAccountDialogs(false, -100);
                         this.field_F = true;
                       }
                     }
@@ -1210,8 +1210,8 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = SoftwareRasterizer.width;
                       var7 = SoftwareRasterizer.height;
                       if (this.field_K != null) {
-                        var6_int = this.field_K.field_x;
-                        var7 = this.field_K.field_u;
+                        var6_int = this.field_K.width;
+                        var7 = this.field_K.height;
                       }
                       var8 = (LegacyOpenGlRidgedWaterEffect.field_h - var6_int) / 2;
                       var9 = (-var7 + IntroMeshResources.canvasHeight) / 2;
@@ -1312,7 +1312,7 @@ public final class Sumoblitz extends GameClientShell {
                         } else {
                           stackIn_492_0 = AppletFocusState.focused;
                         }
-                        SoftwareTransform3D.a(stackIn_492_0, 115);
+                        SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_492_0, 115);
                       }
                       if (Bzip2State.field_j >= 2 &&
                         SceneryParticle.field_v) {
@@ -1363,7 +1363,7 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) * 0 / 2;
                         var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                         DialogOriginSupport.setDialogOrigin(var6_int, var7, -44);
-                        SoftwareTransform3D.a(false, (byte) -122);
+                        SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
                         this.field_F = true;
                         decompiledSharedTail2 = (var11 != 0);
                       }
@@ -1372,7 +1372,7 @@ public final class Sumoblitz extends GameClientShell {
                           var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                           var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                           VertexAttribute.a(var6_int, -95, var7);
-                          SoftwareTransform3D.a(false, -109);
+                          SoftwareTransform3D.drawDimmedAccountDialogs(false, -109);
                           this.field_F = true;
                           if (var11 != 0 &&
                             !ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
@@ -1388,8 +1388,8 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = SoftwareRasterizer.width;
                         var7 = SoftwareRasterizer.height;
                         if (this.field_K != null) {
-                          var7 = this.field_K.field_u;
-                          var6_int = this.field_K.field_x;
+                          var7 = this.field_K.height;
+                          var6_int = this.field_K.width;
                         }
                         var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                         var9 = (-var7 + IntroMeshResources.canvasHeight) / 2;
@@ -1511,7 +1511,7 @@ public final class Sumoblitz extends GameClientShell {
                     } else {
                       stackIn_606_0 = true;
                     }
-                    SoftwareTransform3D.a(stackIn_606_0, -75);
+                    SoftwareTransform3D.drawDimmedAccountDialogs(stackIn_606_0, -75);
                   }
                   if (Bzip2State.field_j >= 2 &&
                     SceneryParticle.field_v) {
@@ -1558,7 +1558,7 @@ public final class Sumoblitz extends GameClientShell {
                     var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                     var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                     DialogOriginSupport.setDialogOrigin(var6_int, var7, -105);
-                    SoftwareTransform3D.a(false, (byte) -122);
+                    SoftwareTransform3D.renderOpenDialogs(false, (byte) -122);
                     this.field_F = true;
                     decompiledSharedTail0 = (var11 != 0);
                   }
@@ -1567,7 +1567,7 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                       VertexAttribute.a(var6_int, -53, var7);
-                      SoftwareTransform3D.a(false, -101);
+                      SoftwareTransform3D.drawDimmedAccountDialogs(false, -101);
                       this.field_F = true;
                       if (var11 != 0 &&
                         !ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
@@ -1583,8 +1583,8 @@ public final class Sumoblitz extends GameClientShell {
                     var6_int = SoftwareRasterizer.width;
                     var7 = SoftwareRasterizer.height;
                     if (this.field_K != null) {
-                      var6_int = this.field_K.field_x;
-                      var7 = this.field_K.field_u;
+                      var6_int = this.field_K.width;
+                      var7 = this.field_K.height;
                     }
                     var8 = (LegacyOpenGlRidgedWaterEffect.field_h - var6_int) / 2;
                     var9 = (IntroMeshResources.canvasHeight - var7) / 2;
@@ -1875,7 +1875,7 @@ public final class Sumoblitz extends GameClientShell {
           DropTargetWidget.releaseStatics((byte) 118);
           ScrollPane.releaseStatics(param0);
           DisplayModeConfirmationDialog.releaseStatics((byte) -43);
-          FullscreenMembershipDialog.k(50);
+          FullscreenMembershipDialog.releaseMembershipStatics(50);
           ScrollViewport.releaseStatics(!param0);
           DirectByteArrayStorage.releaseStatics(17);
           QuickChatCommand.releaseStatics(-13252);

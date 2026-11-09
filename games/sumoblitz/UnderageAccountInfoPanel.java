@@ -110,12 +110,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           IsaacPacketBuffer.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
-          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }
-          if (BufferedCacheFile.a((byte) -84, 10) < 5) {
+          if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) < 5) {
             QuickChatCommand.field_a = QuickChatCommand.field_a - IntrusiveNodeHashTable.field_c;
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - IntrusiveNodeHashTable.field_c;
@@ -177,12 +177,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
             QuickChatCommand.field_a = QuickChatCommand.field_a + MatchingTextValidator.field_i;
           }
-          if (5 > BufferedCacheFile.a((byte) -84, 10)) {
+          if (5 > BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - TextureFormat.elapsedTicks;
           } else {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a - TextureFormat.elapsedTicks;
           }
-          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + IntrusiveNodeHashTable.field_c;
             return;
           }

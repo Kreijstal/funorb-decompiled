@@ -17,7 +17,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         super(owner);
     }
 
-    final static void a(Drone param0, boolean param1) {
+    final static void placeAndRegisterDrone(Drone drone, boolean guard) {
         int var2_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -47,10 +47,10 @@ final class HardwareUnlitEffect extends ShaderEffect {
           for (var2_int = 0; ServerDataWriteRequest.droneSlotLimit > var2_int; var2_int++) {
             var11 = SpriteMask.drones[var2_int];
             if (var11 != null) {
-              var4 = var11.radiusQ8 + param0.radiusQ8;
-              if (DroneProximitySupport.isWithinRadius(var11.yQ8, var4, -104, param0.xQ8, var11.xQ8, param0.yQ8)) {
-                var5 = -var11.xQ8 + param0.xQ8;
-                var6 = param0.yQ8 - var11.yQ8;
+              var4 = var11.radiusQ8 + drone.radiusQ8;
+              if (DroneProximitySupport.isWithinRadius(var11.yQ8, var4, -104, drone.xQ8, var11.xQ8, drone.yQ8)) {
+                var5 = -var11.xQ8 + drone.xQ8;
+                var6 = drone.yQ8 - var11.yQ8;
                 if (var5 == 0) {
                   var5 = -1 + (2 & TextureFormat.elapsedTicks << 1);
                 }
@@ -61,8 +61,8 @@ final class HardwareUnlitEffect extends ShaderEffect {
                 if (var4 > var7) {
                   var8 = var5 * (-var7 + var4) / var7;
                   var9 = (var4 - var7) * var6 / var7;
-                  param0.xQ8 = param0.xQ8 + var8;
-                  param0.yQ8 = param0.yQ8 + var9;
+                  drone.xQ8 = drone.xQ8 + var8;
+                  drone.yQ8 = drone.yQ8 + var9;
                   var11.xQ8 = var11.xQ8 - var8;
                   var11.yQ8 = var11.yQ8 - var9;
                 }
@@ -71,53 +71,53 @@ final class HardwareUnlitEffect extends ShaderEffect {
           }
           var12 = new IntrusiveDequeCursor(QuickChatPhraseProvider.arenaPads);
           var3 = (ArenaPad) (var12.first((byte) -80));
-          if (param1) {
+          if (guard) {
             return;
           }
           while (var3 != null) {
-            var4Lifetime1 = (var3.radiusPixels << 8) + param0.radiusQ8;
-            if (DroneProximitySupport.isWithinRadius(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
-              var5Lifetime1 = -var3.xQ8 + param0.xQ8;
+            var4Lifetime1 = (var3.radiusPixels << 8) + drone.radiusQ8;
+            if (DroneProximitySupport.isWithinRadius(drone.yQ8, var4Lifetime1, -114, var3.xQ8, drone.xQ8, var3.yQ8)) {
+              var5Lifetime1 = -var3.xQ8 + drone.xQ8;
               if (var5Lifetime1 == 0) {
                 var5Lifetime1 = -1 + (2 & TextureFormat.elapsedTicks << 1);
               }
-              var6Lifetime1 = -var3.yQ8 + param0.yQ8;
+              var6Lifetime1 = -var3.yQ8 + drone.yQ8;
               if (var6Lifetime1 == 0) {
                 var6Lifetime1 = -1 + ((TextureFormat.elapsedTicks & 1) << 1);
               }
               var7Lifetime1 = (int)Math.round(Math.sqrt((double)((float)var6Lifetime1 * (float)var6Lifetime1 + (float)var5Lifetime1 * (float)var5Lifetime1)));
               if (var4Lifetime1 > var7Lifetime1) {
                 var8Lifetime1 = var5Lifetime1 * (-var7Lifetime1 + var4Lifetime1) / var7Lifetime1;
-                param0.xQ8 = param0.xQ8 + (var8Lifetime1 << 1);
+                drone.xQ8 = drone.xQ8 + (var8Lifetime1 << 1);
                 var9Lifetime1 = (var4Lifetime1 - var7Lifetime1) * var6Lifetime1 / var7Lifetime1;
-                param0.yQ8 = param0.yQ8 + (var9Lifetime1 << 1);
+                drone.yQ8 = drone.yQ8 + (var9Lifetime1 << 1);
               }
             }
             var3 = (ArenaPad) (var12.next(0));
           }
-          if (-param0.radiusQ8 + param0.xQ8 < 6656) {
-            param0.xQ8 = param0.xQ8 + (26 << 9 + param0.radiusQ8);
+          if (-drone.radiusQ8 + drone.xQ8 < 6656) {
+            drone.xQ8 = drone.xQ8 + (26 << 9 + drone.radiusQ8);
           }
-          if (-param0.radiusQ8 + param0.yQ8 < 6656) {
-            param0.yQ8 = param0.yQ8 + (26 << param0.radiusQ8 + 9);
+          if (-drone.radiusQ8 + drone.yQ8 < 6656) {
+            drone.yQ8 = drone.yQ8 + (26 << drone.radiusQ8 + 9);
           }
-          if (param0.radiusQ8 + param0.xQ8 > ArchiveCatalog.field_c - 26 << 8) {
-            param0.xQ8 = param0.xQ8 - (26 << 9 + param0.radiusQ8);
+          if (drone.radiusQ8 + drone.xQ8 > ArchiveCatalog.field_c - 26 << 8) {
+            drone.xQ8 = drone.xQ8 - (26 << 9 + drone.radiusQ8);
           }
-          if (RasterStateFrame.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
-            param0.yQ8 = param0.yQ8 - (26 << 9 + param0.radiusQ8);
+          if (RasterStateFrame.field_k - 26 << 8 < drone.radiusQ8 + drone.yQ8) {
+            drone.yQ8 = drone.yQ8 - (26 << 9 + drone.radiusQ8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ServerDataWriteRequest.droneSlotLimit; var4Lifetime2++) {
             if (SpriteMask.drones[var4Lifetime2] == null &&
               var4Lifetime2 != 0) {
-              SpriteMask.drones[var4Lifetime2] = param0;
+              SpriteMask.drones[var4Lifetime2] = drone;
               return;
             }
           }
           if (SpriteMask.drones.length > ServerDataWriteRequest.droneSlotLimit) {
             fieldTemp$0 = ServerDataWriteRequest.droneSlotLimit;
             ServerDataWriteRequest.droneSlotLimit = ServerDataWriteRequest.droneSlotLimit + 1;
-            SpriteMask.drones[fieldTemp$0] = param0;
+            SpriteMask.drones[fieldTemp$0] = drone;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,16 +125,16 @@ final class HardwareUnlitEffect extends ShaderEffect {
           var2 = decompiledCaughtException;
           stackIn_53_0 = var2;
           stackIn_53_1 = new StringBuilder().append("oc.P(");
-          if (param0 == null) {
+          if (drone == null) {
             stackIn_54_2 = "null";
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static int d(int param0) {
+    final static int completedLevelCount(int guard) {
         int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -144,11 +144,11 @@ final class HardwareUnlitEffect extends ShaderEffect {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1_int = 0;
-          if (param0 != 17079) {
+          if (guard != 17079) {
             field_f = -57;
           }
           for (var2 = 0; var2 < 25; var2++) {
-            if (TextureMetadata.field_f[var2]) {
+            if (TextureMetadata.completedLevels[var2]) {
               var1_int++;
             }
           }
@@ -157,19 +157,19 @@ final class HardwareUnlitEffect extends ShaderEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "oc.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "oc.N(" + guard + ')');
         }
     }
 
-    final static void a(String param0, boolean param1, byte param2) {
+    final static void showAccountProgressDialog(String message, boolean returnToLogin, byte guard) {
         try {
           StatusMessagePanel.field_A = true;
-          int var3_int = -70 % ((param2 + 39) / 44);
-          LoginDialogState.field_c = param1 ? true : false;
-          AccountStatusDialogState.activeDialog = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, ReconnectState.reconnecting, LoginDialogState.field_c);
+          int var3_int = -70 % ((guard + 39) / 44);
+          LoginDialogState.field_c = returnToLogin ? true : false;
+          AccountStatusDialogState.activeDialog = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, message, ReconnectState.reconnecting, LoginDialogState.field_c);
           RenderPresentationException.field_a.pushDialog((byte) 108, AccountStatusDialogState.activeDialog);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (message != null ? "{...}" : "null") + ',' + returnToLogin + ',' + guard + ')');
         }
     }
 
@@ -180,21 +180,21 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final boolean isSupported(byte guard) {
         if (guard > -8) {
           Drone var3 = (Drone) null;
-          HardwareUnlitEffect.a((Drone) null, false);
+          HardwareUnlitEffect.placeAndRegisterDrone((Drone) null, false);
         }
         return true;
     }
 
-    final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int top, byte guard, int x, int left, int height, int y, int width) {
         boolean stackIn_8_0 = false;
-        if (param1 != 122) {
-          HardwareUnlitEffect.d(-55);
+        if (guard != 122) {
+          HardwareUnlitEffect.completedLevelCount(-55);
         }
-        stackIn_8_0 = (param3 <= param2) && (param2 < param6 + param3) && (param5 >= param0) && (param4 + param0 > param5);
+        stackIn_8_0 = (left <= x) && (x < width + left) && (y >= top) && (height + top > y);
         return stackIn_8_0;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void appendHiscoreRow(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         OpenGlUnderwaterEffect.field_p[LoginCredentials.field_d] = param3;
         FourIntReadRequest.field_q[LoginCredentials.field_d] = LoginCredentials.field_d;
         LoginFieldValue.field_a[LoginCredentials.field_d] = param5;
@@ -210,7 +210,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         int var6 = param0 + param4 + param1;
         if (!param2) {
           String var8 = (String) null;
-          HardwareUnlitEffect.a((String) null, false, (byte) 69);
+          HardwareUnlitEffect.showAccountProgressDialog((String) null, false, (byte) 69);
         }
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
         IntroductionOverlaySupport.field_c[LoginCredentials.field_d] = var7;
@@ -223,16 +223,16 @@ final class HardwareUnlitEffect extends ShaderEffect {
         }
     }
 
-    final static String a(int param0, char param1, int param2) {
+    final static String repeatCharacter(int count, char character, int guard) {
         int var4 = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        char[] var6 = new char[param0];
+        char[] var6 = new char[count];
         char[] var3 = var6;
-        for (var4 = 0; param0 > var4; var4++) {
-          var6[var4] = param1;
+        for (var4 = 0; count > var4; var4++) {
+          var6[var4] = character;
         }
-        if (param2 != -1) {
-          HardwareUnlitEffect.a(-114, (byte) 68, -4, 84, 1, -123, 101);
+        if (guard != -1) {
+          HardwareUnlitEffect.containsPoint(-114, (byte) 68, -4, 84, 1, -123, 101);
         }
         return new String(var3);
     }
@@ -258,7 +258,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final void setParameters(int guard, int parameters1, int parameters0) {
         if (guard != 34023) {
           String var5 = (String) null;
-          HardwareUnlitEffect.a((String) null, false, (byte) -121);
+          HardwareUnlitEffect.showAccountProgressDialog((String) null, false, (byte) -121);
         }
     }
 

@@ -118,11 +118,11 @@ final class IntroMeshResources {
             stackIn_10_2 = 1;
             stackIn_10_3 = 6;
             stackIn_11_4 = !(guard);
-            ((CompactMeshGeometry) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, 6);
-            var5.a(false);
+            ((CompactMeshGeometry) (Object) stackIn_10_0).scaleVertices(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, 6);
+            var5.computeBounds(false);
             var6 = new int[]{var5.field_t + var5.field_T >> 1, var5.field_j + var5.field_f >> 1, var5.field_P + var5.field_S >> 1};
             LoginIdentifierSupport.introMeshCenters[var9] = var6;
-            var5.a(-var6[2], -var6[1], (byte) -81, -var6[0]);
+            var5.translateVertices(-var6[2], -var6[1], (byte) -81, -var6[0]);
             var9++;
           }
           return;

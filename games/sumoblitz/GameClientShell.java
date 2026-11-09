@@ -78,7 +78,7 @@ abstract class GameClientShell extends GameApplet {
         if (guard >= -97) {
           this.gameHost = (String) null;
         }
-        if (TimedSceneEffect.a((byte) 90)) {
+        if (TimedSceneEffect.isAccountConnected((byte) 90)) {
           var3 = 1200 * Base37NameAlphabet.ticksPerSecond(-79);
           if (this.field_B ||
             !(var3 >= HiscorePlayerName.a((byte) 114)) &&
@@ -478,7 +478,7 @@ abstract class GameClientShell extends GameApplet {
             HardwareQuadBatchBuffers.resendFourStatHiscoreRequests(7, guard);
           }
           if (InteractiveWidget.enabledAccountPackets[8]) {
-            LegacyOpenGlAssemblyProgram.a(-58);
+            LegacyOpenGlAssemblyProgram.resetReflectionChecks(-58);
           }
         }
         return var2;

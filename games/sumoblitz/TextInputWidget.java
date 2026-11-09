@@ -81,12 +81,12 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    final static int b(int param0, int param1, boolean param2) {
-        if (param2) {
+    final static int floorDivideByPositive(int value, int divisor, boolean guard) {
+        if (guard) {
           field_N = (float[]) null;
         }
-        int var3 = param0 >>> 31;
-        return (var3 + param0) / param1 - var3;
+        int var3 = value >>> 31;
+        return (var3 + value) / divisor - var3;
     }
 
     public static void releaseStatics(int param0) {

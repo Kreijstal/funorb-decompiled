@@ -118,10 +118,10 @@ final class HardwareTextureCache {
         }
         if (guard <= 81) {
           HardwareTextureCache.releaseStatics((byte) -13);
-          if (!this.provider.b(-29912, textureId)) {
+          if (!this.provider.isTextureReady(-29912, textureId)) {
             return null;
           }
-          var12 = this.provider.a(-29193, textureId);
+          var12 = this.provider.metadata(-29193, textureId);
           var5 = var12;
           if (!var12.field_n) {
             stackIn_9_0 = this.toolkit.field_tc;
@@ -131,7 +131,7 @@ final class HardwareTextureCache {
           var6 = stackIn_9_0;
           if (var12.field_s) {
             if (this.toolkit.isFloatPostProcessingEnabled()) {
-              var39 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -70);
+              var39 = this.provider.loadFloatPixels(var6, false, 0.699999988079071f, textureId, var6, -70);
               stackIn_13_0 = this.toolkit;
               stackIn_13_1 = var6;
               stackIn_13_2 = BeveledTextInputRenderer.RGBA;
@@ -143,12 +143,12 @@ final class HardwareTextureCache {
               return var4;
             }
             if (2 == var12.field_p) {
-              var7 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+              var7 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
             } else {
               if (PlayingSound.a(108, (int) var12.field_d)) {
-                var7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
+                var7 = this.provider.loadPixels(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
               } else {
-                var7 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+                var7 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
               }
             }
             stackIn_23_0 = this.toolkit;
@@ -161,7 +161,7 @@ final class HardwareTextureCache {
             return var13;
           }
           if (2 == var12.field_p) {
-            var7Lifetime5 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+            var7Lifetime5 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_29_0 = this.toolkit;
             stackIn_29_1 = var7Lifetime5;
             stackIn_29_2 = var6;
@@ -172,7 +172,7 @@ final class HardwareTextureCache {
             return var18;
           }
           if (!PlayingSound.a(108, (int) var12.field_d)) {
-            var7Lifetime6 = this.provider.a(-25069, var6, var6, false, 0.699999988079071f, textureId);
+            var7Lifetime6 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_40_0 = this.toolkit;
             stackIn_40_1 = var7Lifetime6;
             stackIn_40_2 = var6;
@@ -182,7 +182,7 @@ final class HardwareTextureCache {
             this.textures.put((long)textureId, var23, (byte) 19);
             return var23;
           }
-          var7Lifetime7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
+          var7Lifetime7 = this.provider.loadPixels(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
           stackIn_34_0 = this.toolkit;
           stackIn_34_1 = var7Lifetime7;
           stackIn_34_2 = var6;
@@ -192,10 +192,10 @@ final class HardwareTextureCache {
           this.textures.put((long)textureId, var4Lifetime3, (byte) 19);
           return var4Lifetime3;
         }
-        if (!this.provider.b(-29912, textureId)) {
+        if (!this.provider.isTextureReady(-29912, textureId)) {
           return null;
         }
-        var29 = this.provider.a(-29193, textureId);
+        var29 = this.provider.metadata(-29193, textureId);
         if (!var29.field_n) {
           stackIn_48_0 = this.toolkit.field_tc;
         } else {
@@ -204,7 +204,7 @@ final class HardwareTextureCache {
         var6Lifetime1 = stackIn_48_0;
         if (!var29.field_s) {
           if (2 == var29.field_p) {
-            var7Lifetime1 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+            var7Lifetime1 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
             stackIn_72_0 = this.toolkit;
             stackIn_72_1 = var7Lifetime1;
             stackIn_72_2 = var6Lifetime1;
@@ -215,7 +215,7 @@ final class HardwareTextureCache {
             return var33;
           }
           if (!PlayingSound.a(108, (int) var29.field_d)) {
-            var7Lifetime1Lifetime1 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+            var7Lifetime1Lifetime1 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
             stackIn_83_0 = this.toolkit;
             stackIn_83_1 = var7Lifetime1Lifetime1;
             stackIn_83_2 = var6Lifetime1;
@@ -225,7 +225,7 @@ final class HardwareTextureCache {
             this.textures.put((long)textureId, var34, (byte) 19);
             return var34;
           }
-          var7Lifetime1Lifetime2 = this.provider.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
+          var7Lifetime1Lifetime2 = this.provider.loadPixels(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
           stackIn_77_0 = this.toolkit;
           stackIn_77_1 = var7Lifetime1Lifetime2;
           stackIn_77_2 = var6Lifetime1;
@@ -236,7 +236,7 @@ final class HardwareTextureCache {
           return var4Lifetime1;
         }
         if (this.toolkit.isFloatPostProcessingEnabled()) {
-          var40 = this.provider.a(var6Lifetime1, false, 0.699999988079071f, textureId, var6Lifetime1, -70);
+          var40 = this.provider.loadFloatPixels(var6Lifetime1, false, 0.699999988079071f, textureId, var6Lifetime1, -70);
           stackIn_52_0 = this.toolkit;
           stackIn_52_1 = var6Lifetime1;
           stackIn_52_2 = BeveledTextInputRenderer.RGBA;
@@ -248,7 +248,7 @@ final class HardwareTextureCache {
           return var4Lifetime2;
         }
         if (2 == var29.field_p) {
-          var7Lifetime2 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+          var7Lifetime2 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
           stackIn_57_0 = this.toolkit;
           stackIn_57_1 = var7Lifetime2;
           stackIn_57_2 = var6Lifetime1;
@@ -259,7 +259,7 @@ final class HardwareTextureCache {
           return var30;
         }
         if (!PlayingSound.a(108, (int) var29.field_d)) {
-          var7Lifetime3 = this.provider.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
+          var7Lifetime3 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
           stackIn_66_0 = this.toolkit;
           stackIn_66_1 = var7Lifetime3;
           stackIn_66_2 = var6Lifetime1;
@@ -269,7 +269,7 @@ final class HardwareTextureCache {
           this.textures.put((long)textureId, var31, (byte) 19);
           return var31;
         }
-        var7Lifetime4 = this.provider.a(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
+        var7Lifetime4 = this.provider.loadPixels(true, var6Lifetime1, (byte) -81, var6Lifetime1, 0.699999988079071f, textureId);
         stackIn_62_0 = this.toolkit;
         stackIn_62_1 = var7Lifetime4;
         stackIn_62_2 = var6Lifetime1;

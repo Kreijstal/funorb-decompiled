@@ -134,7 +134,7 @@ final class DroneEscalationSupport {
               var3 = 5;
             }
             var6 = EnemyDroneFactory.createEnemyDrone(var3, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, source.variant, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-            HardwareUnlitEffect.a(var6, false);
+            HardwareUnlitEffect.placeAndRegisterDrone(var6, false);
             return;
           }
           var3Lifetime1 = source.variant;
@@ -162,7 +162,7 @@ final class DroneEscalationSupport {
             var3Lifetime1 = 6;
           }
           var7 = EnemyDroneFactory.createEnemyDrone(source.droneType, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-          HardwareUnlitEffect.a(var7, false);
+          HardwareUnlitEffect.placeAndRegisterDrone(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -90,7 +90,7 @@ final class LevelSelectScreen extends MenuScreen {
             var12 = -21 + var9Lifetime1;
             var13 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
-            if (TextureMetadata.field_f[this.field_i]) {
+            if (TextureMetadata.completedLevels[this.field_i]) {
               MessageDialog.field_db.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
               LegacyOpenGlEffect.field_c.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
               MessageDialog.field_db.drawCenteredText(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
@@ -189,7 +189,7 @@ final class LevelSelectScreen extends MenuScreen {
           AudioOutputBootstrap.field_b[82] &&
           AudioOutputBootstrap.field_b[48]) {
           for (var5 = 0; var5 < 25; var5++) {
-            TextureMetadata.field_f[var5] = true;
+            TextureMetadata.completedLevels[var5] = true;
           }
           ToolkitRasterStateFrame.field_e = 25;
         }

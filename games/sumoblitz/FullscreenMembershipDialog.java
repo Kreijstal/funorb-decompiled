@@ -24,13 +24,13 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           }
           if (source == this.field_U) {
             IntIndexHashTable.a(0);
-            this.e(false);
+            this.setOpenIfActive(false);
             return;
           }
           if (this.field_P != source) {
             return;
           }
-          this.e(false);
+          this.setOpenIfActive(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,11 +66,11 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseMembershipStatics(int guard) {
         field_S = null;
         tryAgainText = null;
         playerText = null;
-        if (param0 == 50) {
+        if (guard == 50) {
           field_T = null;
           youHave1UnreadText = null;
           return;
@@ -128,11 +128,11 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         }
     }
 
-    private final void e(boolean param0) {
+    private final void setOpenIfActive(boolean keepOpen) {
         if (!this.open) {
           return;
         }
-        this.open = param0 ? true : false;
+        this.open = keepOpen ? true : false;
     }
 
     private final InteractiveWidget a(int param0, WidgetListener param1, String param2) {
@@ -181,8 +181,8 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         }
     }
 
-    final static void l(int param0) {
-        TextLayout.decreaseMusicVolume(param0 ^ param0);
+    final static void decreaseMusicVolume(int guard) {
+        TextLayout.decreaseMusicVolume(guard ^ guard);
     }
 
     final static int glTextureCombineSource(int guard, TextureCombineSource source) {

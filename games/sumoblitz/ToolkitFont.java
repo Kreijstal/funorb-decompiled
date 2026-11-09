@@ -536,7 +536,7 @@ abstract class ToolkitFont {
             var14[var11_int] = Js5ClientState.withPalette(var19[var11_int], var5[var9], -105);
           }
         }
-        var9 = var17.field_u;
+        var9 = var17.height;
         if (guard != 17474) {
           return;
         }
@@ -547,13 +547,13 @@ abstract class ToolkitFont {
           var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.bindRaster();
-          var17.c(0, 0);
+          var17.drawPixels(0, 0);
           var11 = new Sprite(var9, var9);
           var11.bindRaster();
-          var17.c(var9 - var17.field_x, 0);
-          var12 = new Sprite(-(2 * var9) + var17.field_x, var9);
+          var17.drawPixels(var9 - var17.width, 0);
+          var12 = new Sprite(-(2 * var9) + var17.width, var9);
           var12.bindRaster();
-          var17.c(-var9, 0);
+          var17.drawPixels(-var9, 0);
           ClientException.popRasterState((byte) -73);
           LevelCompleteUpgradeScreen.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

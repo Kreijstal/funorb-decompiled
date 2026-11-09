@@ -31,7 +31,7 @@ final class OpenGlAssemblyProgram {
               var6 = MessageDialog.displayPromptTextWidthIntGuard(-59, IntIndexHashTable.field_c[var3_int], true);
               var7 = BeveledCheckboxRenderer.field_a - (var6 >> 1);
               var4 = var4 + DroneIntroductionOverlay.field_a;
-              if (HardwareUnlitEffect.a(var4, (byte) 122, param2, var7 - DebouncedInputValidator.field_b, LegacyOpenGlUnderwaterEffect.field_h + (TextLayout.field_b << 1), param0, (DebouncedInputValidator.field_b << 1) + var6)) {
+              if (HardwareUnlitEffect.containsPoint(var4, (byte) 122, param2, var7 - DebouncedInputValidator.field_b, LegacyOpenGlUnderwaterEffect.field_h + (TextLayout.field_b << 1), param0, (DebouncedInputValidator.field_b << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

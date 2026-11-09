@@ -23,7 +23,7 @@ final class LegacyVertexAttribute {
     final static void pushSpriteRaster(int guard, Sprite sprite) {
         try {
           GameApplet.pushRasterState(82);
-          SoftwareRasterizer.setRaster(sprite.pixels, sprite.field_z, sprite.field_w);
+          SoftwareRasterizer.setRaster(sprite.pixels, sprite.paddedWidth, sprite.paddedHeight);
           if (guard != 7161) {
             LegacyVertexAttribute.setLoadingLanguage(-84, -69);
           }

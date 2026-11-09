@@ -35,8 +35,8 @@ final class IntroFinalFrameResources {
         int var4 = 0;
         try {
           var6 = new Sprite(archive.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
-          var3 = var6.field_x;
-          var4 = var6.field_u;
+          var3 = var6.width;
+          var4 = var6.height;
           GameApplet.pushRasterState(103);
           if (guard >= -62) {
             ResourceArchive var5 = (ResourceArchive) null;
@@ -44,11 +44,11 @@ final class IntroFinalFrameResources {
           }
           LoginIdentifierSupport.field_a = new Sprite(var3, var4 * 3 / 4);
           LoginIdentifierSupport.field_a.bindRaster();
-          var6.c(0, 0);
-          MusicPatchEnvelope.field_a = new Sprite(var3, var4 - LoginIdentifierSupport.field_a.field_u);
+          var6.drawPixels(0, 0);
+          MusicPatchEnvelope.field_a = new Sprite(var3, var4 - LoginIdentifierSupport.field_a.height);
           MusicPatchEnvelope.field_a.bindRaster();
-          var6.c(0, -LoginIdentifierSupport.field_a.field_u);
-          MusicPatchEnvelope.field_a.field_A = LoginIdentifierSupport.field_a.field_u;
+          var6.drawPixels(0, -LoginIdentifierSupport.field_a.height);
+          MusicPatchEnvelope.field_a.offsetY = LoginIdentifierSupport.field_a.height;
           ClientException.popRasterState((byte) 71);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (archive != null ? "{...}" : "null") + ',' + guard + ')');

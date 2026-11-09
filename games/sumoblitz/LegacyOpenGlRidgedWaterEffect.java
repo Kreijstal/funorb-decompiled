@@ -228,10 +228,10 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        ScanlineSpriteMask.pendingTooltipY = param0;
-        EmptyWidgetRenderer.pendingTooltipX = param1;
-        if (param2 > -75) {
+    final static void setTooltipAnchor(int y, int x, int guard) {
+        ScanlineSpriteMask.pendingTooltipY = y;
+        EmptyWidgetRenderer.pendingTooltipX = x;
+        if (guard > -75) {
           LegacyOpenGlRidgedWaterEffect.releaseStatics(48);
         }
     }

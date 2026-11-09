@@ -41,7 +41,7 @@ final class BeveledCheckboxRenderer implements WidgetRenderer {
           var8 = ToolkitRasterStateCacheEntry.field_m[1];
           if (widget instanceof InteractiveWidget &&
             ((InteractiveWidget) (widget)).selected) {
-            var8.d((-var8.field_z + widget.width >> 1) + (var6_int + 1), (-var8.field_w + widget.height >> 1) + (var7 + 1), 256);
+            var8.drawAdditive((-var8.paddedWidth + widget.width >> 1) + (var6_int + 1), (-var8.paddedHeight + widget.height >> 1) + (var7 + 1), 256);
           }
           if (!widget.hasFocus(guard - 5592406)) {
             return;

@@ -14,7 +14,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
     int repeatY;
     static int[] field_t;
     private short[] frequencies;
-    static float[] field_n;
+    static float[] transformMatrixScratch;
 
     final void fillRow(int guard, int row, int[] output) {
         int var7 = 0;
@@ -330,7 +330,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
     public static void releaseStatics(int param0) {
         ORTHOGRAPHIC = null;
         field_t = null;
-        field_n = null;
+        transformMatrixScratch = null;
         if (param0 != 2) {
           membershipBenefitLines = (String[]) null;
         }
@@ -366,6 +366,6 @@ final class PerlinNoise2D extends TextureGeneratorNode {
         membershipBenefitLines = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         ORTHOGRAPHIC = new ProjectionMode();
         field_t = new int[4];
-        field_n = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
+        transformMatrixScratch = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
     }
 }

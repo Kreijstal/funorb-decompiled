@@ -33,9 +33,9 @@ class TimedSceneEffect extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
-        if (param0 <= 82) {
-          TimedSceneEffect.a((byte) 13);
+    final static boolean isAccountConnected(byte guard) {
+        if (guard <= 82) {
+          TimedSceneEffect.isAccountConnected((byte) 13);
           if (null == DisplayModeConfirmationDialog.accountSocket) {
             return false;
           }

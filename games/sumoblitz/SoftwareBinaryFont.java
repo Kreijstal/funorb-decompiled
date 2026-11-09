@@ -56,13 +56,13 @@ final class SoftwareBinaryFont extends ToolkitFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.a(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
+          this.blitMaskedGlyph(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
         } else {
-          this.b(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
+          this.blitMaskedGlyphAlpha(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitGlyphAlpha(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$12 = 0;
@@ -70,22 +70,22 @@ final class SoftwareBinaryFont extends ToolkitFont {
         int var11;
         int var14;
         int var15;
-        var10 = param2 >>> 24;
+        var10 = color >>> 24;
         var11 = 255 - var10;
-        for (var12 = -param6; var12 < 0; var12++) {
-          for (var13 = -param5; var13 < 0; var13++) {
-            if (param0[param3++] == 0) {
-              param4++;
+        for (var12 = -height; var12 < 0; var12++) {
+          for (var13 = -width; var13 < 0; var13++) {
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              var14 = ((param2 & 16711935) * var10 & -16711936) + ((param2 & 65280) * var10 & 16711680) >> 8;
-              var15 = param1[param4];
-              incrementValue$12 = param4;
-              param4++;
-              param1[incrementValue$12] = (((var15 & 16711935) * var11 & -16711936) + ((var15 & 65280) * var11 & 16711680) >> 8) + var14;
+              var14 = ((color & 16711935) * var10 & -16711936) + ((color & 65280) * var10 & 16711680) >> 8;
+              var15 = pixels[destinationOffset];
+              incrementValue$12 = destinationOffset;
+              destinationOffset++;
+              pixels[incrementValue$12] = (((var15 & 16711935) * var11 & -16711936) + ((var15 & 65280) * var11 & 16711680) >> 8) + var14;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationOffset = destinationOffset + destinationRowSkip;
+          sourceOffset = sourceOffset + sourceRowSkip;
         }
     }
 
@@ -132,10 +132,10 @@ final class SoftwareBinaryFont extends ToolkitFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.b(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
+          this.blitGlyph(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
         } else {
           if ((param3 & -16777216) != 0) {
-            this.a(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
+            this.blitGlyphAlpha(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
           }
         }
     }
@@ -150,55 +150,55 @@ final class SoftwareBinaryFont extends ToolkitFont {
         this.field_g = new int[param2.length];
         this.field_f = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
-          this.field_d[var6] = param2[var6].field_e;
-          this.field_g[var6] = param2[var6].field_d;
-          this.field_f[var6] = param2[var6].field_c;
+          this.field_d[var6] = param2[var6].indices;
+          this.field_g[var6] = param2[var6].topInset;
+          this.field_f[var6] = param2[var6].leftInset;
         }
     }
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip) {
         int var11 = 0;
         int var10;
         int var12;
         int var12Lifetime1;
-        var10 = -(param5 >> 2);
-        param5 = -(param5 & 3);
-        for (var11 = -param6; var11 < 0; var11++) {
+        var10 = -(width >> 2);
+        width = -(width & 3);
+        for (var11 = -height; var11 < 0; var11++) {
           for (var12 = var10; var12 < 0; var12++) {
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
-            if (param0[param3++] == 0) {
-              param4++;
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
             } else {
-              param1[param4++] = param2;
-            }
-          }
-          for (var12Lifetime1 = param5; var12Lifetime1 < 0; var12Lifetime1++) {
-            if (param0[param3++] == 0) {
-              param4++;
-            } else {
-              param1[param4++] = param2;
+              pixels[destinationOffset++] = color;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          for (var12Lifetime1 = width; var12Lifetime1 < 0; var12Lifetime1++) {
+            if (glyph[sourceOffset++] == 0) {
+              destinationOffset++;
+            } else {
+              pixels[destinationOffset++] = color;
+            }
+          }
+          destinationOffset = destinationOffset + destinationRowSkip;
+          sourceOffset = sourceOffset + sourceRowSkip;
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
+    private final void blitMaskedGlyph(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip, int x, int y, int glyphStride, SpriteMask mask, int maskX, int maskY) {
         int var21 = 0;
         int var26 = 0;
         int stackIn_5_0 = 0;
@@ -216,45 +216,45 @@ final class SoftwareBinaryFont extends ToolkitFont {
         int[] var28;
         int var25Lifetime1;
         var16 = null;
-        var16_ref = (ScanlineSpriteMask) (param12);
+        var16_ref = (ScanlineSpriteMask) (mask);
         var28 = var16_ref.rowStarts;
         var27 = var28;
         var17 = var27;
         var18 = var16_ref.rowWidths;
-        var19 = param10;
-        if (param14 > var19) {
-          var19 = param14;
-          param4 = param4 + (param14 - param10) * this.field_e.targetWidth;
-          param3 = param3 + (param14 - param10) * param11;
+        var19 = y;
+        if (maskY > var19) {
+          var19 = maskY;
+          destinationOffset = destinationOffset + (maskY - y) * this.field_e.targetWidth;
+          sourceOffset = sourceOffset + (maskY - y) * glyphStride;
         }
-        if (param14 + var28.length >= param10 + param6) {
-          stackIn_5_0 = param10 + param6;
+        if (maskY + var28.length >= y + height) {
+          stackIn_5_0 = y + height;
         } else {
-          stackIn_5_0 = param14 + var28.length;
+          stackIn_5_0 = maskY + var28.length;
         }
         var20 = stackIn_5_0;
         for (var21 = var19; var21 < var20; var21++) {
           boolean decompiledFrameRemainder0 = true;
-          var22 = param13 + var17[var21 - param14];
-          var23 = var18[var21 - param14];
-          var24 = param5;
-          if (param9 <= var22) {
-            var25 = var22 - param9;
-            if (var25 >= param5) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+          var22 = maskX + var17[var21 - maskY];
+          var23 = var18[var21 - maskY];
+          var24 = width;
+          if (x <= var22) {
+            var25 = var22 - x;
+            if (var25 >= width) {
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param3 = param3 + var25;
+              sourceOffset = sourceOffset + var25;
               var24 = var24 - var25;
-              param4 = param4 + var25;
+              destinationOffset = destinationOffset + var25;
             }
           } else {
-            var25 = param9 - var22;
+            var25 = x - var22;
             if (var25 >= var23) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -269,19 +269,19 @@ final class SoftwareBinaryFont extends ToolkitFont {
               var23 = var24;
             }
             for (var26 = 0; var26 < var23; var26++) {
-              if (param0[param3++] == 0) {
-                param4++;
+              if (glyph[sourceOffset++] == 0) {
+                destinationOffset++;
               } else {
-                param1[param4++] = param2;
+                pixels[destinationOffset++] = color;
               }
             }
-            param3 = param3 + (var25Lifetime1 + param8);
-            param4 = param4 + (var25Lifetime1 + param7);
+            sourceOffset = sourceOffset + (var25Lifetime1 + sourceRowSkip);
+            destinationOffset = destinationOffset + (var25Lifetime1 + destinationRowSkip);
           }
         }
     }
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
+    private final void blitMaskedGlyphAlpha(byte[] glyph, int[] pixels, int color, int sourceOffset, int destinationOffset, int width, int height, int destinationRowSkip, int sourceRowSkip, int x, int y, int glyphStride, SpriteMask mask, int maskX, int maskY) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$1 = 0;
@@ -305,48 +305,48 @@ final class SoftwareBinaryFont extends ToolkitFont {
         int[] var33;
         int var28Lifetime1;
         var16 = null;
-        var16_ref = (ScanlineSpriteMask) (param12);
+        var16_ref = (ScanlineSpriteMask) (mask);
         var33 = var16_ref.rowStarts;
         var32 = var33;
         var17 = var32;
         var18 = var16_ref.rowWidths;
-        var19 = param9 - this.field_e.clipLeft;
-        var20 = param10;
-        if (param14 > var20) {
-          var20 = param14;
-          param4 = param4 + (param14 - param10) * this.field_e.targetWidth;
-          param3 = param3 + (param14 - param10) * param11;
+        var19 = x - this.field_e.clipLeft;
+        var20 = y;
+        if (maskY > var20) {
+          var20 = maskY;
+          destinationOffset = destinationOffset + (maskY - y) * this.field_e.targetWidth;
+          sourceOffset = sourceOffset + (maskY - y) * glyphStride;
         }
-        if (param14 + var33.length >= param10 + param6) {
-          stackIn_5_0 = param10 + param6;
+        if (maskY + var33.length >= y + height) {
+          stackIn_5_0 = y + height;
         } else {
-          stackIn_5_0 = param14 + var33.length;
+          stackIn_5_0 = maskY + var33.length;
         }
         var21 = stackIn_5_0;
-        var22 = param2 >>> 24;
+        var22 = color >>> 24;
         var23 = 255 - var22;
         for (var24 = var20; var24 < var21; var24++) {
           boolean decompiledFrameRemainder0 = true;
-          var25 = var17[var24 - param14] + param13;
-          var26 = var18[var24 - param14];
-          var27 = param5;
+          var25 = var17[var24 - maskY] + maskX;
+          var26 = var18[var24 - maskY];
+          var27 = width;
           if (var19 <= var25) {
             var28 = var25 - var19;
-            if (var28 >= param5) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+            if (var28 >= width) {
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param3 = param3 + var28;
+              sourceOffset = sourceOffset + var28;
               var27 = var27 - var28;
-              param4 = param4 + var28;
+              destinationOffset = destinationOffset + var28;
             }
           } else {
             var28 = var19 - var25;
             if (var28 >= var26) {
-              param3 = param3 + (param5 + param8);
-              param4 = param4 + (param5 + param7);
+              sourceOffset = sourceOffset + (width + sourceRowSkip);
+              destinationOffset = destinationOffset + (width + destinationRowSkip);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -361,18 +361,18 @@ final class SoftwareBinaryFont extends ToolkitFont {
               var26 = var27;
             }
             for (var29 = -var26; var29 < 0; var29++) {
-              if (param0[param3++] == 0) {
-                param4++;
+              if (glyph[sourceOffset++] == 0) {
+                destinationOffset++;
               } else {
-                var30 = ((param2 & 16711935) * var22 & -16711936) + ((param2 & 65280) * var22 & 16711680) >> 8;
-                var31 = param1[param4];
-                incrementValue$1 = param4;
-                param4++;
-                param1[incrementValue$1] = (((var31 & 16711935) * var23 & -16711936) + ((var31 & 65280) * var23 & 16711680) >> 8) + var30;
+                var30 = ((color & 16711935) * var22 & -16711936) + ((color & 65280) * var22 & 16711680) >> 8;
+                var31 = pixels[destinationOffset];
+                incrementValue$1 = destinationOffset;
+                destinationOffset++;
+                pixels[incrementValue$1] = (((var31 & 16711935) * var23 & -16711936) + ((var31 & 65280) * var23 & 16711680) >> 8) + var30;
               }
             }
-            param3 = param3 + (var28Lifetime1 + param8);
-            param4 = param4 + (var28Lifetime1 + param7);
+            sourceOffset = sourceOffset + (var28Lifetime1 + sourceRowSkip);
+            destinationOffset = destinationOffset + (var28Lifetime1 + destinationRowSkip);
           }
         }
     }

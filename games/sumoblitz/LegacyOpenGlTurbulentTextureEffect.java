@@ -295,7 +295,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         this.stateLists.callList((byte) 121, '\0');
         this.toolkit.setActiveTextureUnit(1, 115);
         jaggl.OpenGL.glMatrixMode(5890);
-        jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_mc.b((byte) 57), 0);
+        jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_mc.affineMatrix((byte) 57), 0);
         if (guard >= 33) {
           jaggl.OpenGL.glMatrixMode(5888);
           this.toolkit.setActiveTextureUnit(0, 115);

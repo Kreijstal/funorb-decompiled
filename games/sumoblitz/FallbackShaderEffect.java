@@ -2570,7 +2570,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("keychar_the_character_under_questionmark", (byte) -23);
                 if (var2 != null) {
-                  SoftwareTransform3D.a(var2[0], (byte) -51);
+                  SoftwareTransform3D.decodeCp1252Byte(var2[0], (byte) -51);
                 }
                 var2 = OpenGlCubeTexture.a("rating_noratings", (byte) -23);
                 if (null != var2) {

@@ -230,7 +230,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
           if (param1 != -47) {
             field_C = 74;
           }
-          HardwareUnlitEffect.a(LegacyOpenGlTexture2D.loggingInText, false, (byte) -89);
+          HardwareUnlitEffect.showAccountProgressDialog(LegacyOpenGlTexture2D.loggingInText, false, (byte) -89);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

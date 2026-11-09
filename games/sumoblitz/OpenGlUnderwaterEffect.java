@@ -71,8 +71,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         field_t = null;
     }
 
-    private final void e(byte param0) {
-        int var2 = this.toolkit.M(-125);
+    private final void bindUnderwaterProgram(byte guard) {
+        int var2 = this.toolkit.underwaterSurfaceHeight(-125);
         AffineTransform3D var3 = this.toolkit.viewTransform((byte) -28);
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.programId : this.field_j.programId);
@@ -83,8 +83,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.field_l = true;
         var3.transformPlane(0.0f, this.field_s, (byte) 71, 0.0f, -1.0f, (float)var2);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_s[0], this.field_s[1], this.field_s[2], this.field_s[3]);
-        this.updateFogUniforms(param0 + 246);
-        if (param0 == 14) {
+        this.updateFogUniforms(guard + 246);
+        if (guard == 14) {
           return;
         }
         this.enable(true, 123);
@@ -269,7 +269,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.toolkit.setColorCombineSource((byte) 85, 2, true, false, LegacyVertexAttribute.TEXTURE);
           this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
           this.toolkit.setActiveTextureUnit(0, -108);
-          this.e((byte) 14);
+          this.bindUnderwaterProgram((byte) 14);
           return;
         }
     }

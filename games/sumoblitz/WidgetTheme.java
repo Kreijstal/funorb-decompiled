@@ -331,8 +331,8 @@ final class WidgetTheme {
           var6.horizontalAlignment = 0;
           var7 = new StatefulWidgetRenderer(var4, true);
           var7.horizontalAlignment = 0;
-          var7.setBackgroundSlicesForAllStates(OpenGlBuffer.a(8947848, -115), 28715);
-          var7.createStateStyle(false, 1).withBackgroundSlices(OpenGlBuffer.a(11184810, -125), 2147483647).withTextColor(2236962, 17818);
+          var7.setBackgroundSlicesForAllStates(OpenGlBuffer.createSolidPanelSlices(8947848, -115), 28715);
+          var7.createStateStyle(false, 1).withBackgroundSlices(OpenGlBuffer.createSolidPanelSlices(11184810, -125), 2147483647).withTextColor(2236962, 17818);
           this.checkboxRenderer = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new RotarySelectorRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerTrackRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);

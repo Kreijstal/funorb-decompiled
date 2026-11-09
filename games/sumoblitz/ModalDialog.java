@@ -45,16 +45,16 @@ abstract class ModalDialog extends WidgetContainer {
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        if (TickClock.field_a.field_x < this.width) {
+        if (TickClock.field_a.width < this.width) {
           TickClock.field_a = new Sprite(this.width, this.height);
           LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
@@ -62,16 +62,16 @@ abstract class ModalDialog extends WidgetContainer {
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        if (this.height > TickClock.field_a.field_u) {
+        if (this.height > TickClock.field_a.height) {
           TickClock.field_a = new Sprite(this.width, this.height);
           LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
@@ -79,13 +79,13 @@ abstract class ModalDialog extends WidgetContainer {
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
         LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
@@ -94,13 +94,13 @@ abstract class ModalDialog extends WidgetContainer {
         if (guard < -35) {
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
         this.focusedChild(-77);
         super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
         ClientException.popRasterState((byte) 114);
-        TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+        TickClock.field_a.drawAlpha(parentX + this.x, parentY + this.y, this.opacity);
     }
 
     boolean advanceAnimation(int guard) {

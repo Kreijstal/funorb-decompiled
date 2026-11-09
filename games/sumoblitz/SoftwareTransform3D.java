@@ -49,23 +49,23 @@ final class SoftwareTransform3D extends Transform3D {
             if (sprites[3] == null) {
               stackIn_10_0 = 0;
             } else {
-              stackIn_10_0 = sprites[3].field_z;
+              stackIn_10_0 = sprites[3].paddedWidth;
             }
             var6_int = stackIn_10_0;
             if (null == sprites[5]) {
               stackIn_13_0 = 0;
             } else {
-              stackIn_13_0 = sprites[5].field_z;
+              stackIn_13_0 = sprites[5].paddedWidth;
             }
             var7 = stackIn_13_0;
             if (null == sprites[1]) {
               stackIn_16_0 = 0;
             } else {
-              stackIn_16_0 = sprites[1].field_w;
+              stackIn_16_0 = sprites[1].paddedHeight;
             }
             var8 = stackIn_16_0;
             if (sprites[7] != null) {
-              stackIn_19_0 = sprites[7].field_w;
+              stackIn_19_0 = sprites[7].paddedHeight;
             } else {
               stackIn_19_0 = 0;
             }
@@ -113,45 +113,45 @@ final class SoftwareTransform3D extends Transform3D {
               SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[1] != null &&
-              0 != sprites[1].field_z) {
+              0 != sprites[1].paddedWidth) {
               SoftwareRasterizer.intersectClip(var16, y, var17, var18);
-              for (var20 = var12; var13 > var20; var20 = var20 + sprites[1].field_z) {
+              for (var20 = var12; var13 > var20; var20 = var20 + sprites[1].paddedWidth) {
                 sprites[1].draw(var20, y);
               }
               SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[7] != null &&
-              sprites[7].field_z != 0) {
+              sprites[7].paddedWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + sprites[7].field_z) {
+              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + sprites[7].paddedWidth) {
                 sprites[7].draw(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (null != sprites[3] &&
-              sprites[3].field_w != 0) {
+              sprites[3].paddedHeight != 0) {
               SoftwareRasterizer.intersectClip(x, var18, var16, var19);
-              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].field_w) {
+              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].paddedHeight) {
                 sprites[3].draw(x, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[5] != null &&
-              sprites[5].field_w != 0) {
+              sprites[5].paddedHeight != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].field_w) {
+              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].paddedHeight) {
                 sprites[5].draw(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[4] != null &&
-              sprites[4].field_z != 0) {
-              if (0 == sprites[4].field_w) {
+              sprites[4].paddedWidth != 0) {
+              if (0 == sprites[4].paddedHeight) {
                 return;
               }
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].field_w) {
-                for (var21 = var12; var13 > var21; var21 = var21 + sprites[4].field_z) {
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].paddedHeight) {
+                for (var21 = var12; var13 > var21; var21 = var21 + sprites[4].paddedWidth) {
                   sprites[4].draw(var21, var20Lifetime4);
                 }
               }
@@ -174,13 +174,13 @@ final class SoftwareTransform3D extends Transform3D {
         }
     }
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeCp1252Byte(byte value, byte guard) {
         int var3 = 0;
-        int var2 = param0 & 255;
+        int var2 = value & 255;
         if (var2 == 0) {
           throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (param1 <= -29) {
+        if (guard <= -29) {
           if (var2 >= 128 &&
             var2 < 160) {
             var3 = AccountCreationProgressDialog.CP1252_EXTENSION[var2 - 128];
@@ -208,9 +208,9 @@ final class SoftwareTransform3D extends Transform3D {
         this.a(56);
     }
 
-    final static void a(boolean param0, int param1) {
-        LoginDialogNavigation.drawAccountDialogs(true, (byte) -71, param0);
-        int var2 = 48 % ((-25 - param1) / 41);
+    final static void drawDimmedAccountDialogs(boolean unused, int guard) {
+        LoginDialogNavigation.drawAccountDialogs(true, (byte) -71, unused);
+        int var2 = 48 % ((-25 - guard) / 41);
     }
 
     private final void a(int param0) {
@@ -219,12 +219,12 @@ final class SoftwareTransform3D extends Transform3D {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void renderOpenDialogs(boolean dimBackground, byte guard) {
         if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
-          if (param1 != -122) {
+          if (guard != -122) {
             field_b = 120;
           }
-          if (param0) {
+          if (dimBackground) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           }
           HardwareTextureSprite.field_e.render(0, 0, false);

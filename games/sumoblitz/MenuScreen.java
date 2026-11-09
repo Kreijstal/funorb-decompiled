@@ -1116,10 +1116,10 @@ class MenuScreen {
                       NativeLibraryExtractor.restoreMusicVolume(22075);
                     }
                     if (this.selection.isLeftPressed(2542)) {
-                      FullscreenMembershipDialog.l(34168);
+                      FullscreenMembershipDialog.decreaseMusicVolume(34168);
                     }
                     if (this.selection.isRightPressed(116224)) {
-                      ArchiveCatalog.a((byte) -6);
+                      ArchiveCatalog.increaseMusicVolume((byte) -6);
                     }
                     if (!this.selection.isPointerHeld((byte) 52)) {
                       break regionExit2;
@@ -1162,7 +1162,7 @@ class MenuScreen {
                         break regionExit2;
                       }
                     }
-                    RotarySelectorWidget.a((byte) 126, animateTransition);
+                    RotarySelectorWidget.initializeGraphicsOptions((byte) 126, animateTransition);
                     if (var9 == 0) {
                       break regionExit2;
                     }

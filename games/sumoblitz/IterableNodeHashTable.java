@@ -10,11 +10,11 @@ final class IterableNodeHashTable implements Iterable {
     private IntrusiveNode field_a;
     private int field_e;
 
-    final static void b(int param0) {
+    final static void disableAutomaticCanvasResizing(int mode) {
         if (null != SecondaryNodeDequeIterator.field_b) {
           SecondaryNodeDequeIterator.field_b.automatic = false;
         }
-        HardwareQuadBatchBuffers.notifyBrowserResizing(25, param0);
+        HardwareQuadBatchBuffers.notifyBrowserResizing(25, mode);
     }
 
     final IntrusiveNode first(int param0) {

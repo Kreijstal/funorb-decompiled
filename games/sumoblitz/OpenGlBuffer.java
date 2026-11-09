@@ -19,12 +19,12 @@ abstract class OpenGlBuffer implements GpuBuffer {
     static ToolkitSprite[] field_g;
     static int targetMarkerXQ8;
 
-    final static Sprite[] a(int param0, int param1) {
+    final static Sprite[] createSolidPanelSlices(int color, int guard) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = OpenGlAssemblyProgram.createSolidSprite(64, param0, 3);
-        if (param1 >= -114) {
-          OpenGlBuffer.a(63, -120);
+        var3[4] = OpenGlAssemblyProgram.createSolidSprite(64, color, 3);
+        if (guard >= -114) {
+          OpenGlBuffer.createSolidPanelSlices(63, -120);
         }
         return var2;
     }
@@ -107,7 +107,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LimitedRandomAccessFile.d(22030);
           if (param0 != 35040) {
-            OpenGlBuffer.a(116, -119);
+            OpenGlBuffer.createSolidPanelSlices(116, -119);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ua.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -147,15 +147,15 @@ abstract class OpenGlBuffer implements GpuBuffer {
         return this.bufferId == 0 ? this.clientBuffer.getAddress() : 0L;
     }
 
-    final static void f(int param0) {
+    final static void enableAutomaticCanvasResizing(int guard) {
         if (null == SecondaryNodeDequeIterator.field_b) {
           throw new IllegalStateException("NGR");
         }
-        if (param0 != -5812) {
+        if (guard != -5812) {
           INTERPOLATE = (TextureCombineOperation) null;
         }
         SecondaryNodeDequeIterator.field_b.automatic = true;
-        HardwareQuadBatchBuffers.notifyBrowserResizing(param0 + 5837, 1);
+        HardwareQuadBatchBuffers.notifyBrowserResizing(guard + 5837, 1);
     }
 
     final static String a(byte param0, String param1) {
@@ -169,7 +169,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 5) {
-            OpenGlBuffer.f(77);
+            OpenGlBuffer.enableAutomaticCanvasResizing(77);
           }
           if (FixedPointPerlinNoise3D.field_h.startsWith("win")) {
             stackIn_11_0 = param1 + ".dll";

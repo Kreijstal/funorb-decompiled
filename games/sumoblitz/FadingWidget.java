@@ -84,13 +84,13 @@ final class FadingWidget extends SingleChildWidget {
         if (guard < -35) {
           this.child.renderLayer(0, 0, (byte) -55, layer);
           ClientException.popRasterState((byte) 108);
-          var6.a(this.x + parentX, parentY + this.y, this.opacity);
+          var6.drawAlpha(this.x + parentX, parentY + this.y, this.opacity);
           return;
         }
         field_C = (String) null;
         this.child.renderLayer(0, 0, (byte) -55, layer);
         ClientException.popRasterState((byte) 108);
-        var6.a(this.x + parentX, parentY + this.y, this.opacity);
+        var6.drawAlpha(this.x + parentX, parentY + this.y, this.opacity);
     }
 
     static {

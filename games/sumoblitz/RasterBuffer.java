@@ -23,17 +23,17 @@ abstract class RasterBuffer {
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (param0 > -34) {
+    final static int signum(int guard, int value) {
+        if (guard > -34) {
           return 14;
         }
-        if (param1 < 0) {
+        if (value < 0) {
           return -1;
         }
-        if (param1 > 0) {
+        if (value > 0) {
           return 1;
         }
-        return param1;
+        return value;
     }
 
     abstract void initializeRaster(java.awt.Component component, int height, int width, int guard);
@@ -51,7 +51,7 @@ abstract class RasterBuffer {
           if (param0 == 2) {
             return;
           }
-          RasterBuffer.a(-6, -112);
+          RasterBuffer.signum(-6, -112);
           return;
         }
         var1 = Js5ClientState.field_c;
@@ -68,7 +68,7 @@ abstract class RasterBuffer {
         if (param0 == 2) {
           return;
         }
-        RasterBuffer.a(-6, -112);
+        RasterBuffer.signum(-6, -112);
         return;
     }
 

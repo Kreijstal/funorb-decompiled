@@ -30,22 +30,22 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             }
             if (-1 != this.field_i) {
               if (ActiveCanvasProvider.field_c == 1 &&
-                HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-                if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+                HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+                if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                   return;
                 }
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
                 return;
               }
               if (ActiveCanvasProvider.field_c == 2) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-                if (LegacyOpenGlSpecularEffect.field_h[this.field_i] < 1) {
-                  LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-                  IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+                if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] < 1) {
+                  LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+                  IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
                 }
               }
             }
@@ -56,47 +56,47 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
               return;
             }
             if (ActiveCanvasProvider.field_c == 1 &&
-              HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+              HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                 return;
               }
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
               return;
             }
             if (ActiveCanvasProvider.field_c != 2) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-            if (LegacyOpenGlSpecularEffect.field_h[this.field_i] >= 1) {
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] >= 1) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
             return;
           }
           this.field_i = -1;
           if (-1 != this.field_i) {
             if (ActiveCanvasProvider.field_c == 1 &&
-              HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+              HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                 return;
               }
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
               return;
             }
             if (ActiveCanvasProvider.field_c == 2) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] < 1) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] < 1) {
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
               }
             }
           }
@@ -119,22 +119,22 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             }
             if (-1 != this.field_i) {
               if (ActiveCanvasProvider.field_c == 1 &&
-                HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-                if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+                HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+                if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                   return;
                 }
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
                 return;
               }
               if (ActiveCanvasProvider.field_c == 2) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-                if (LegacyOpenGlSpecularEffect.field_h[this.field_i] < 1) {
-                  LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-                  IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+                if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] < 1) {
+                  LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+                  IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
                 }
               }
             }
@@ -145,47 +145,47 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
               return;
             }
             if (ActiveCanvasProvider.field_c == 1 &&
-              HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+              HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                 return;
               }
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
               return;
             }
             if (ActiveCanvasProvider.field_c != 2) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-            if (LegacyOpenGlSpecularEffect.field_h[this.field_i] >= 1) {
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] >= 1) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
             return;
           }
           this.field_i = -1;
           if (-1 != this.field_i) {
             if (ActiveCanvasProvider.field_c == 1 &&
-              HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+              HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                 return;
               }
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
               return;
             }
             if (ActiveCanvasProvider.field_c == 2) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] < 1) {
-                LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-                IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] < 1) {
+                LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+                IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
               }
             }
           }
@@ -205,26 +205,26 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           }
           if (-1 != this.field_i) {
             if (ActiveCanvasProvider.field_c == 1 &&
-              HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-              if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+              HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+              if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
                 return;
               }
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
               return;
             }
             if (ActiveCanvasProvider.field_c != 2) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-            if (LegacyOpenGlSpecularEffect.field_h[this.field_i] >= 1) {
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] >= 1) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
             return;
           }
           return;
@@ -234,22 +234,22 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             return;
           }
           if (ActiveCanvasProvider.field_c == 1 &&
-            HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-            if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+            HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
               return;
             }
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
             return;
           }
           if (ActiveCanvasProvider.field_c == 2) {
-            LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-            IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-            if (LegacyOpenGlSpecularEffect.field_h[this.field_i] < 1) {
-              LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-              IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+            LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+            IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] < 1) {
+              LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+              IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
               return;
             }
           }
@@ -260,26 +260,26 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           return;
         }
         if (ActiveCanvasProvider.field_c == 1 &&
-          HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u > 0) {
-          LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] + 1;
-          IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
-          if (LegacyOpenGlSpecularEffect.field_h[this.field_i] <= 10) {
+          HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints > 0) {
+          LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] + 1;
+          IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
+          if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] <= 10) {
             return;
           }
-          LegacyOpenGlSpecularEffect.field_h[this.field_i] = 10;
-          IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
+          LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 10;
+          IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
           return;
         }
         if (ActiveCanvasProvider.field_c != 2) {
           return;
         }
-        LegacyOpenGlSpecularEffect.field_h[this.field_i] = LegacyOpenGlSpecularEffect.field_h[this.field_i] - 1;
-        IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u - 1;
-        if (LegacyOpenGlSpecularEffect.field_h[this.field_i] >= 1) {
+        LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] - 1;
+        IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints - 1;
+        if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] >= 1) {
           return;
         }
-        LegacyOpenGlSpecularEffect.field_h[this.field_i] = 1;
-        IsaacPacketBuffer.field_u = IsaacPacketBuffer.field_u + 1;
+        LegacyOpenGlSpecularEffect.pendingUpgradeLevels[this.field_i] = 1;
+        IsaacPacketBuffer.allocatedUpgradePoints = IsaacPacketBuffer.allocatedUpgradePoints + 1;
         return;
     }
 
@@ -318,8 +318,8 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           GameTrackPlayback.field_a.drawWrappedText(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, AchievementThresholds.scoreText.toUpperCase() + " " + BlendMode.lastLevelScore + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, -23620), (SpriteMask) null, 1, 1);
           MessageDialog.field_db.drawWrappedText(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.drawWrappedText(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
-          GameTrackPlayback.field_a.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
+          GameTrackPlayback.field_a.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {
@@ -332,8 +332,8 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             }
             var8 = stackIn_8_0;
             DelegatingCanvas.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
-            if (LegacyOpenGlSpecularEffect.field_h[var5] == 1) {
-              stackIn_14_0 = (HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u == 0) ? 1 : 0;
+            if (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[var5] == 1) {
+              stackIn_14_0 = (HardwareUnlitEffect.completedLevelCount(17079) - IsaacPacketBuffer.allocatedUpgradePoints == 0) ? 1 : 0;
             } else {
               stackIn_14_0 = 0;
             }
@@ -345,8 +345,8 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             } else {
               MusicCrossfadeStream.field_q[var5].draw(-(MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             }
-            QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
-            GameTrackPlayback.field_a.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);
+            QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.pendingUpgradeLevels[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
+            GameTrackPlayback.field_a.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.pendingUpgradeLevels[var5]), -1, -16777216, 320, var4_int + 55, 0);
             var5++;
             var4_int += 126;
           }

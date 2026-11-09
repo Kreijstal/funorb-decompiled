@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SpriteState extends DualLinkNode {
-    int field_z;
+    int paddedWidth;
     static int[] noiseFadeQ12;
-    int field_A;
+    int offsetY;
     static String myHiscoresText;
-    int field_u;
-    int field_v;
+    int height;
+    int offsetX;
     static IntrusiveDeque field_t;
-    int field_x;
-    int field_w;
+    int width;
+    int paddedHeight;
     static int field_s;
     static ToolkitSprite[] field_B;
 
-    final static void e(int param0) {
+    final static void showBlankLoginForm(int guard) {
         String var2 = (String) null;
         AccountNameSupport.showLoginForm((byte) 77, "", (String) null);
-        if (param0 != 0) {
+        if (guard != 0) {
           myHiscoresText = (String) null;
         }
     }

@@ -482,11 +482,11 @@ final class BufferedCacheFile {
         }
     }
 
-    final static int a(byte param0, int param1) {
-        if (param0 != -84) {
-          BufferedCacheFile.a((byte) 37, 116);
+    final static int nextGameplayRandomInt(byte guard, int bound) {
+        if (guard != -84) {
+          BufferedCacheFile.nextGameplayRandomInt((byte) 37, 116);
         }
-        return ExpandingRingEffect.nextRandomInt(param1, LegacyOpenGlEffectManager.field_b, (byte) -96);
+        return ExpandingRingEffect.nextRandomInt(bound, LegacyOpenGlEffectManager.field_b, (byte) -96);
     }
 
     static {

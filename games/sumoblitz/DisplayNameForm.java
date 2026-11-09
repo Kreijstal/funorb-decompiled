@@ -383,7 +383,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         RuntimeException decompiledCaughtException = null;
         try {
           if (source == this.backButton) {
-            SpriteState.e(0);
+            SpriteState.showBlankLoginForm(0);
           } else {
             if (this.submitButton == source) {
               this.submitDisplayName(true);

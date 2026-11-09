@@ -25,13 +25,13 @@ final class NativePaletteFont extends ToolkitFont implements NativeResource {
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
         for (var11 = 0; var11 < param3.length; var11++) {
-          var6[var11] = param3[var11].field_e;
-          var7[var11] = param3[var11].field_h;
-          var8[var11] = param3[var11].field_i;
-          var9[var11] = param3[var11].field_c;
-          var10[var11] = param3[var11].field_d;
+          var6[var11] = param3[var11].indices;
+          var7[var11] = param3[var11].width;
+          var8[var11] = param3[var11].height;
+          var9[var11] = param3[var11].leftInset;
+          var10[var11] = param3[var11].topInset;
         }
-        this.S(param0, param1, var6, param3[0].field_g, var7, var8, var9, var10);
+        this.S(param0, param1, var6, param3[0].palette, var7, var8, var9, var10);
     }
 
     private final native void PA(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
