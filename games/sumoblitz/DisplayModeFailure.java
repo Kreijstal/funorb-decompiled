@@ -9,8 +9,8 @@ final class DisplayModeFailure {
     static int spriteSheetWidth;
 
     final static void showDisplayNameForm(byte guard) {
-        if (null != hc.field_c) {
-          hc.field_c.n(-7);
+        if (null != AccountStatusDialogState.activeDialog) {
+          AccountStatusDialogState.activeDialog.n(-7);
           if (guard == -49) {
             SecondaryNodeQueue.field_a = new DisplayNameForm();
             SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);

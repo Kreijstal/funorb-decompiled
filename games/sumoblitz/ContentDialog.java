@@ -33,11 +33,11 @@ final class ContentDialog extends ContentTransitionDialog {
 
     final static void raiseSoundVolume(int threshold) {
         if (threshold <= RasterColorTables.soundVolume) {
-          lf.setSoundVolume(256, (byte) -58);
+          LegacyOpenGlRenderBufferSet.setSoundVolume(256, (byte) -58);
           return;
         }
         int var1 = RasterColorTables.soundVolume % 32;
-        lf.setSoundVolume(32 + (RasterColorTables.soundVolume - var1), (byte) -58);
+        LegacyOpenGlRenderBufferSet.setSoundVolume(32 + (RasterColorTables.soundVolume - var1), (byte) -58);
     }
 
     static {

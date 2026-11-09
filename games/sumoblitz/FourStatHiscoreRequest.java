@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends IntrusiveNode {
-    int field_l;
+final class FourStatHiscoreRequest extends IntrusiveNode {
+    int rowLimit;
     static ServerDataReadRequest field_o;
-    int field_n;
+    int requestId;
     static long field_k;
     static String acceptText;
 
     public static void releaseStatics(int param0) {
         if (param0 != -11807) {
-          km.gameContainer(false);
+          FourStatHiscoreRequest.gameContainer(false);
         }
         field_o = null;
         acceptText = null;
@@ -130,10 +130,10 @@ final class km extends IntrusiveNode {
         if (PrimitiveType.field_c != null) {
           return (java.awt.Container) ((Object) PrimitiveType.field_c);
         }
-        return (java.awt.Container) ((Object) LegacyOpenGlUnlitEffect.c(2));
+        return (java.awt.Container) ((Object) LegacyOpenGlUnlitEffect.activeApplet(2));
     }
 
-    private km() throws Throwable {
+    private FourStatHiscoreRequest() throws Throwable {
         throw new Error();
     }
 

@@ -71,7 +71,7 @@ final class MarkerTrackRenderer implements WidgetRenderer {
           ReconnectState.reconnecting = false;
           StatusMessagePanel.field_A = false;
           ReflectionCheck.setAccountDialogResult(-1, -69);
-          vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+          Base37NameAlphabet.nameAvailabilityState = AccountRequestDefaults.IDLE;
           ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
           return;
         }
@@ -79,22 +79,22 @@ final class MarkerTrackRenderer implements WidgetRenderer {
         ReconnectState.reconnecting = false;
         StatusMessagePanel.field_A = false;
         ReflectionCheck.setAccountDialogResult(-1, -69);
-        vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+        Base37NameAlphabet.nameAvailabilityState = AccountRequestDefaults.IDLE;
         ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
     }
 
-    final static void a(int param0, km param1, int param2) {
+    final static void sendFourStatHiscoreRequest(int guard, FourStatHiscoreRequest request, int opcode) {
         IsaacPacketBuffer var3 = null;
         try {
-          if (param0 != -1) {
+          if (guard != -1) {
             field_e = 23;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.writeCipherByte(param2, param0 ^ -9);
-          var3.writeByte((byte) 85, param1.field_n);
-          var3.writeByte((byte) 23, param1.field_l);
+          var3.writeCipherByte(opcode, guard ^ -9);
+          var3.writeByte((byte) 85, request.requestId);
+          var3.writeByte((byte) 23, request.rowLimit);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "iu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "iu.B(" + guard + ',' + (request != null ? "{...}" : "null") + ',' + opcode + ')');
         }
     }
 

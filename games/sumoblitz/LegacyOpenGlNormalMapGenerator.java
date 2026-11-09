@@ -25,11 +25,11 @@ final class LegacyOpenGlNormalMapGenerator {
         }
     }
 
-    final static void c(byte param0) {
-        if (param0 <= 1) {
+    final static void exitFullscreenIfActive(byte guard) {
+        if (guard <= 1) {
           return;
         }
-        if (null == lt.field_m) {
+        if (null == FourIntUpdateRequest.platformDispatcher) {
           return;
         }
         if (null != CompactMeshGeometry.field_o) {
@@ -46,7 +46,7 @@ final class LegacyOpenGlNormalMapGenerator {
           var3 = WaterTextureResources.compileShader(this.toolkit, false, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
           var2 = var3;
           if (var2 != null) {
-            this.program = hc.linkShaderProgram(-14382, new LegacyOpenGlShader[]{var3}, this.toolkit);
+            this.program = AccountStatusDialogState.linkShaderProgram(-14382, new LegacyOpenGlShader[]{var3}, this.toolkit);
           }
         }
         if (guard != -101) {
@@ -162,7 +162,7 @@ final class LegacyOpenGlNormalMapGenerator {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != -30084) {
-            LegacyOpenGlNormalMapGenerator.c((byte) -53);
+            LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) -53);
           }
           var13 = NativeLibraryExtractor.field_a;
           var2 = var13.readUnsignedByte(-31302);

@@ -59,7 +59,7 @@ abstract class CubeMapSource {
         int var3 = 0;
         int var4 = 0;
         QueuedIntArrayRequest var4_ref_qv = null;
-        lt var5 = null;
+        FourIntUpdateRequest var5 = null;
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
@@ -95,11 +95,11 @@ abstract class CubeMapSource {
           }
           if (1 == var2) {
             var4 = var10.readSignedSmart(-2858);
-            var5 = (lt) (HardwareCubeMapSource.field_d.first(-73));
+            var5 = (FourIntUpdateRequest) (HardwareCubeMapSource.field_d.first(-73));
             while (var5 != null) {
-              if (var3 != var5.field_k ||
-                var4 != var5.field_o) {
-                var5 = (lt) (HardwareCubeMapSource.field_d.next((byte) 18));
+              if (var3 != var5.byteKey ||
+                var4 != var5.smartKey) {
+                var5 = (FourIntUpdateRequest) (HardwareCubeMapSource.field_d.next((byte) 18));
                 continue;
               }
               break;

@@ -53,8 +53,8 @@ final class AccountUiBootstrap {
         }
         try {
           RenderPresentationException.field_a.closeAllDialogs((byte) -34);
-          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, allowSignup, allowGuestPlay);
-          SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, no.field_a);
+          LoginFormState.activeForm = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, allowSignup, allowGuestPlay);
+          SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, LoginFormState.activeForm);
           RenderPresentationException.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + guard + ',' + allowGuestPlay + ',' + (unused != null ? "{...}" : "null") + ',' + allowSignup + ')');
@@ -111,8 +111,8 @@ final class AccountUiBootstrap {
           return;
         }
         try {
-          SecondaryNodeQueue.b(246);
-          vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+          SecondaryNodeQueue.initializeLoginLayer(246);
+          Base37NameAlphabet.nameAvailabilityState = AccountRequestDefaults.IDLE;
           ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (extraArchive != null ? "{...}" : "null") + ',' + unused + ',' + guard + ',' + (fontArchive != null ? "{...}" : "null") + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');

@@ -72,7 +72,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         field_z = null;
         MODULATE = null;
         if (!param0) {
-          SlowBurstParticle.c((byte) 28);
+          SlowBurstParticle.readFourStatHiscores((byte) 28);
         }
     }
 
@@ -86,7 +86,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           if (this.textureKind == 0) {
             IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
           } else {
-            im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
+            ParticleSpriteResources.sparkSprite.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
           }
           if (guard > -121) {
             MODULATE = (TextureCombineOperation) null;
@@ -114,11 +114,11 @@ final class SlowBurstParticle extends TimedSceneEffect {
         this.velocityXQ8 = velocityXQ8;
     }
 
-    final static void c(byte param0) {
+    final static void readFourStatHiscores(byte guard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        km var3 = null;
+        FourStatHiscoreRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -138,16 +138,16 @@ final class SlowBurstParticle extends TimedSceneEffect {
         int var11Lifetime1;
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != -77) {
+          if (guard != -77) {
             return;
           }
           var13 = NativeLibraryExtractor.field_a;
           var15 = var13;
           var2 = var15.readUnsignedByte(-31302);
-          var3 = (km) (EmailValidationError.field_a.first(122));
+          var3 = (FourStatHiscoreRequest) (EmailValidationError.field_a.first(122));
           while (var3 != null) {
-            if (var2 != var3.field_n) {
-              var3 = (km) (EmailValidationError.field_a.next((byte) 18));
+            if (var2 != var3.requestId) {
+              var3 = (FourStatHiscoreRequest) (EmailValidationError.field_a.next((byte) 18));
               continue;
             }
             break;
@@ -158,7 +158,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           }
           var4 = var15.readUnsignedByte(-31302);
           if (var4 != 0) {
-            var5 = var3.field_l;
+            var5 = var3.rowLimit;
             RenderPresentationException.field_b[0] = QueuedIntArrayRequest.field_o;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
@@ -179,7 +179,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = pd.field_q[var9];
+              var11 = FourIntReadRequest.field_q[var9];
               var6[0][var10] = RenderPresentationException.field_b[var11];
               var19[0][var10 * 4] = LoginFieldValue.field_a[var11];
               var19[0][var10 * 4 + 1] = ContentTransitionPhase.field_f[var11];
@@ -197,7 +197,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = pd.field_q[var9Lifetime1 + var5];
+              var11Lifetime1 = FourIntReadRequest.field_q[var9Lifetime1 + var5];
               var6[1][var14] = RenderPresentationException.field_b[var11Lifetime1];
               var19[1][4 * var14] = LoginFieldValue.field_a[var11Lifetime1];
               var19[1][1 + 4 * var14] = ContentTransitionPhase.field_f[var11Lifetime1];
@@ -219,7 +219,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "vi.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "vi.A(" + guard + ')');
         }
     }
 
@@ -233,13 +233,13 @@ final class SlowBurstParticle extends TimedSceneEffect {
         try {
           var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.first(85));
           while (var4 != null) {
-            km.sendSessionStatistics((byte) -120, param0, var4);
+            FourStatHiscoreRequest.sendSessionStatistics((byte) -120, param0, var4);
             var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.next((byte) 18));
           }
-          var5 = (HiscoreRequest) (oi.field_b.first(109));
+          var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.first(109));
           while (var5 != null) {
-            pd.sendHiscoreRequest((byte) -65, param0, var5);
-            var5 = (HiscoreRequest) (oi.field_b.next((byte) 18));
+            FourIntReadRequest.sendHiscoreRequest((byte) -65, param0, var5);
+            var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.next((byte) 18));
           }
           if (param1 > -63) {
             field_z = (int[]) null;
@@ -252,15 +252,15 @@ final class SlowBurstParticle extends TimedSceneEffect {
         }
     }
 
-    final static String a(int param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = param0;
-        if (param3) {
+    final static String discardContinuationText(int baseIndex, boolean secondFlag, boolean thirdFlag, boolean firstFlag) {
+        int var4 = baseIndex;
+        if (firstFlag) {
           var4 += 4;
         }
-        if (param1) {
+        if (secondFlag) {
           var4 += 2;
         }
-        if (param2) {
+        if (thirdFlag) {
           var4++;
         }
         return RasterColorTables.field_f[var4];

@@ -87,7 +87,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.updateClipRowOffsets();
     }
 
-    final boolean a() {
+    final boolean isFloatPostProcessingEnabled() {
         return false;
     }
 
@@ -1322,7 +1322,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void registerCanvas(java.awt.Canvas canvas, int width, int height) {
         ToolkitRasterBuffer var4;
-        var4 = (ToolkitRasterBuffer) (this.canvasBuffers.a(106, (long)canvas.hashCode()));
+        var4 = (ToolkitRasterBuffer) (this.canvasBuffers.get(106, (long)canvas.hashCode()));
         if (var4 != null) {
           if (var4.width == width &&
             var4.height == height) {
@@ -1350,7 +1350,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.refreshContexts();
           }
         } else {
-          var2 = (ToolkitRasterBuffer) (this.canvasBuffers.a(127, (long)canvas.hashCode()));
+          var2 = (ToolkitRasterBuffer) (this.canvasBuffers.get(127, (long)canvas.hashCode()));
           if (var2 != null) {
             this.canvas = canvas;
             var3 = canvas.getSize();
@@ -1848,7 +1848,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void resizeCanvas(java.awt.Canvas canvas, int width, int height) {
         java.awt.Dimension var5 = null;
-        ToolkitRasterBuffer var4 = (ToolkitRasterBuffer) (this.canvasBuffers.a(122, (long)canvas.hashCode()));
+        ToolkitRasterBuffer var4 = (ToolkitRasterBuffer) (this.canvasBuffers.get(122, (long)canvas.hashCode()));
         if (var4 != null) {
           var4.unlink(false);
           var4 = SessionStatisticsSubmission.createToolkitRasterBuffer(width, height, canvas, -91);

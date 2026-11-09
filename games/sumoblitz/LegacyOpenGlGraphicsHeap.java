@@ -61,7 +61,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           AffineTransform3D.field_j = param0;
           return;
         }
-        if (IntroductionOverlaySupport.supportsFullscreen((byte) -29, lt.field_m)) {
+        if (IntroductionOverlaySupport.supportsFullscreen((byte) -29, FourIntUpdateRequest.platformDispatcher)) {
           DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
           LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
           DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
@@ -164,7 +164,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, LoadingStatusText.preparationMessage(102));
             return;
           }
-          if (!lf.isIntroFinished(-251)) {
+          if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
             SoftwareRasterizer.clear();
             IntroLogoRenderer.drawIntroLogo(240, 320, 256);
             IterableNodeHashTable.a(0, 0, param1, (byte) 125);

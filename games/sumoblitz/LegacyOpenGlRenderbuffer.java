@@ -81,7 +81,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
           ToolkitRasterStateFrame.field_e = var6.readUnsignedByte(-31302);
           ResourceArchive.selectedSpeedLevel = var6.readUnsignedByte(-31302);
           LegacyOpenGlEffectManager.selectedTractionLevel = var6.readUnsignedByte(-31302);
-          hc.selectedBounceLevel = var6.readUnsignedByte(-31302);
+          AccountStatusDialogState.selectedBounceLevel = var6.readUnsignedByte(-31302);
           if (param0 <= 92) {
             return;
           }
@@ -93,7 +93,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
                 var4 = var6.readUnsignedByte(-31302);
                 CacheIoRequest.field_A[var3] = -1 + LegacyOpenGlPostProcessManager.bitwiseAnd(4, var4);
                 if (var2 >= 3) {
-                  stackIn_16_0 = up.field_g;
+                  stackIn_16_0 = IntroMeshProjection.threeLifeCompletions;
                   stackIn_16_1 = var3;
                   stackIn_17_2 = (LegacyOpenGlPostProcessManager.bitwiseAnd(1, var4 >> 6) == 1);
                   stackIn_16_0[stackIn_16_1] = stackIn_17_2;

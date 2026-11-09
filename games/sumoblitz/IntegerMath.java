@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntegerMath {
-    final static void a(byte param0) {
+    final static void advanceIntroTick(byte guard) {
         if (0 - LegacyOpenGlRidgedWaterEffect.field_i == MusicPatch.field_u) {
-          if (param0 > 42) {
+          if (guard > 42) {
             MusicPatch.field_u = MusicPatch.field_u + 1;
             return;
           }
           return;
         }
         if (250 - LegacyOpenGlRidgedWaterEffect.field_i != MusicPatch.field_u) {
-          if (param0 > 42) {
+          if (guard > 42) {
             MusicPatch.field_u = MusicPatch.field_u + 1;
             return;
           }
           return;
         }
-        if (param0 > 42) {
+        if (guard > 42) {
           MusicPatch.field_u = MusicPatch.field_u + 1;
           return;
         }

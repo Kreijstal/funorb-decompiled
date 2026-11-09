@@ -58,18 +58,18 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         this.toolkit.setLightingSuppressed(false, (byte) -81);
     }
 
-    final static java.applet.Applet c(int param0) {
-        if (param0 != 2) {
-          LegacyOpenGlUnlitEffect.c(-55);
+    final static java.applet.Applet activeApplet(int guard) {
+        if (guard != 2) {
+          LegacyOpenGlUnlitEffect.activeApplet(-55);
           if (OpenGlShader.field_c != null) {
             return OpenGlShader.field_c;
           }
-          return (java.applet.Applet) ((Object) ke.field_a);
+          return (java.applet.Applet) ((Object) AppletInstanceState.activeApplet);
         }
         if (OpenGlShader.field_c != null) {
           return OpenGlShader.field_c;
         }
-        return (java.applet.Applet) ((Object) ke.field_a);
+        return (java.applet.Applet) ((Object) AppletInstanceState.activeApplet);
     }
 
     final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
@@ -90,7 +90,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 != -46) {
-            LegacyOpenGlUnlitEffect.c(-41);
+            LegacyOpenGlUnlitEffect.activeApplet(-41);
           }
           if (2 <= param0 &&
             param0 <= 36) {

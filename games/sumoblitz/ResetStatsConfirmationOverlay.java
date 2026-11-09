@@ -30,8 +30,8 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
         RuntimeException var3 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          DelegatingCanvas.a(up.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
-          hc.field_e.a(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
+          AccountStatusDialogState.headingFont.a(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
           if (guard != 22707) {
             ResetStatsConfirmationOverlay.a(73, 17, -78);
           }
@@ -40,10 +40,10 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
           while (600 > var3_int) {
             var5 = toolkit;
             var6 = var3_int;
-            var7 = up.field_c;
+            var7 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
             if (var4 != this.hoveredOption) {
-              hc.field_e.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
+              AccountStatusDialogState.headingFont.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
               ForceFieldRingEffect.field_t.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), guard ^ 22707);
             }
@@ -80,7 +80,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
         int var3Lifetime1;
         if (guard <= 0) {
           field_d = (PcmSample[][][]) null;
-          var3 = (pi.field_e - 200) / 100;
+          var3 = (ArenaDefinitionCodec.field_e - 200) / 100;
           this.hoveredOption = var2 + var3 * 2;
           if ((-70 + PointLight.mouseX) % 300 <= 200) {
             if (2 <= this.hoveredOption) {
@@ -147,7 +147,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
           }
           return;
         }
-        var3Lifetime1 = (pi.field_e - 200) / 100;
+        var3Lifetime1 = (ArenaDefinitionCodec.field_e - 200) / 100;
         this.hoveredOption = var2 + var3Lifetime1 * 2;
         if ((-70 + PointLight.mouseX) % 300 > 200) {
           this.hoveredOption = -1;

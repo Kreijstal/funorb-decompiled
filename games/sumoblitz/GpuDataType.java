@@ -14,14 +14,14 @@ final class GpuDataType {
     static SecondaryNodeHashTable field_b;
     static float[] field_a;
 
-    final static void a(int param0, PcmSampleStream param1) {
+    final static void removeSoundStream(int guard, PcmSampleStream stream) {
         try {
-          DisplayPromptRenderer.field_c.removeSubstream(param1);
-          if (param0 < 93) {
+          DisplayPromptRenderer.field_c.removeSubstream(stream);
+          if (guard < 93) {
             GpuDataType.releaseStatics(-28);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "io.A(" + guard + ',' + (stream != null ? "{...}" : "null") + ')');
         }
     }
 

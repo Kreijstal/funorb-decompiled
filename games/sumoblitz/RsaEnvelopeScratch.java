@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sv {
-    static PacketBuffer field_c;
+final class RsaEnvelopeScratch {
+    static PacketBuffer rsaBuffer;
     static FontMetrics field_a;
     static int field_b;
     private static String field_z;
 
     public static void releaseStatics(int param0) {
-        field_c = null;
+        rsaBuffer = null;
         if (param0 != 1284) {
           return;
         }

@@ -86,7 +86,7 @@ final class DisplaySizeController {
             stackIn_5_0 = new FullscreenDisplayMode[]{};
             return stackIn_5_0;
           }
-          var8 = dispatcher.b((byte) 21);
+          var8 = dispatcher.listDisplayModes((byte) 21);
           while (var8.status == 0) {
             TextureCombineOperation.sleepMillis(10L, (byte) 80);
           }
@@ -157,7 +157,7 @@ final class DisplaySizeController {
         this.resizeListener.resizeCanvas(8310, this.fullscreenWidth, this.fullscreenHeight);
         int var2 = -25 % ((50 - guard) / 48);
         DroneDebris.field_A = false;
-        FullscreenCanvas var3 = IndexedSprite.a(this.fullscreenWidth, 8089, 0, this.fullscreenHeight, lt.field_m, 0);
+        FullscreenCanvas var3 = IndexedSprite.a(this.fullscreenWidth, 8089, 0, this.fullscreenHeight, FourIntUpdateRequest.platformDispatcher, 0);
         if (var3 == null) {
           this.restoreWindowedSize(2);
         }

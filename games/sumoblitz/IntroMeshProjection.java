@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class up {
+final class IntroMeshProjection {
     static boolean field_d;
     static int field_a;
     static ToolkitSprite[] field_e;
-    static boolean[] field_g;
+    static boolean[] threeLifeCompletions;
     static ToolkitSprite[] field_c;
     private static int[] field_f;
     static String cancelText;
 
-    final static void a(int[] param0, int[] param1, boolean param2, boolean param3, CompactMeshGeometry param4, boolean param5, int param6) {
+    final static void projectIntroMesh(int[] viewTransform, int[] modelTransform, boolean sortFlag, boolean retainViewCoordinates, CompactMeshGeometry mesh, boolean transformNormals, int guard) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         int stackIn_71_0 = 0;
@@ -68,42 +68,42 @@ final class up {
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
-          var21 = param0[3] >> 2;
-          var22 = param0[4] >> 2;
-          var23 = param0[5] >> 2;
-          var24 = param0[6] >> 2;
-          var25 = param0[7] >> 2;
-          var26 = param0[8] >> 2;
-          var27 = param0[9] >> 2;
-          var28 = param0[10] >> 2;
-          var29 = param0[11] >> 2;
-          var12 = param1[3] * var21 - (-(param1[4] * var22) - param1[5] * var23) >> 14;
-          var13 = param1[4] * var25 + (param1[3] * var24 + var26 * param1[5]) >> 14;
-          if (param6 != -1622738130) {
+          var21 = viewTransform[3] >> 2;
+          var22 = viewTransform[4] >> 2;
+          var23 = viewTransform[5] >> 2;
+          var24 = viewTransform[6] >> 2;
+          var25 = viewTransform[7] >> 2;
+          var26 = viewTransform[8] >> 2;
+          var27 = viewTransform[9] >> 2;
+          var28 = viewTransform[10] >> 2;
+          var29 = viewTransform[11] >> 2;
+          var12 = modelTransform[3] * var21 - (-(modelTransform[4] * var22) - modelTransform[5] * var23) >> 14;
+          var13 = modelTransform[4] * var25 + (modelTransform[3] * var24 + var26 * modelTransform[5]) >> 14;
+          if (guard != -1622738130) {
             return;
           }
-          var18 = var23 * param1[11] + (param1[10] * var22 + var21 * param1[9]) >> 14;
-          var19 = param1[11] * var26 + param1[9] * var24 + var25 * param1[10] >> 14;
-          var17 = var27 * param1[6] - (-(var28 * param1[7]) - param1[8] * var29) >> 14;
-          var14 = var29 * param1[5] + (param1[4] * var28 + param1[3] * var27) >> 14;
-          var16 = var24 * param1[6] - (-(var25 * param1[7]) - param1[8] * var26) >> 14;
-          var15 = param1[6] * var21 - (-(var22 * param1[7]) - var23 * param1[8]) >> 14;
-          var20 = var29 * param1[11] + (var27 * param1[9] + param1[10] * var28) >> 14;
-          var21Lifetime1 = param1[0] - param0[0];
-          var22Lifetime1 = -param0[1] + param1[1];
-          var23Lifetime1 = -param0[2] + param1[2];
-          var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + param0[5] * var23Lifetime1) >> 16 - IntrusiveDeque.field_b;
-          var11 = param0[11] * var23Lifetime1 + param0[10] * var22Lifetime1 + var21Lifetime1 * param0[9] >> 16;
-          var10 = var21Lifetime1 * param0[6] + var22Lifetime1 * param0[7] + param0[8] * var23Lifetime1 >> 16 - IntrusiveDeque.field_b;
+          var18 = var23 * modelTransform[11] + (modelTransform[10] * var22 + var21 * modelTransform[9]) >> 14;
+          var19 = modelTransform[11] * var26 + modelTransform[9] * var24 + var25 * modelTransform[10] >> 14;
+          var17 = var27 * modelTransform[6] - (-(var28 * modelTransform[7]) - modelTransform[8] * var29) >> 14;
+          var14 = var29 * modelTransform[5] + (modelTransform[4] * var28 + modelTransform[3] * var27) >> 14;
+          var16 = var24 * modelTransform[6] - (-(var25 * modelTransform[7]) - modelTransform[8] * var26) >> 14;
+          var15 = modelTransform[6] * var21 - (-(var22 * modelTransform[7]) - var23 * modelTransform[8]) >> 14;
+          var20 = var29 * modelTransform[11] + (var27 * modelTransform[9] + modelTransform[10] * var28) >> 14;
+          var21Lifetime1 = modelTransform[0] - viewTransform[0];
+          var22Lifetime1 = -viewTransform[1] + modelTransform[1];
+          var23Lifetime1 = -viewTransform[2] + modelTransform[2];
+          var9 = var21Lifetime1 * viewTransform[3] + (viewTransform[4] * var22Lifetime1 + viewTransform[5] * var23Lifetime1) >> 16 - IntrusiveDeque.field_b;
+          var11 = viewTransform[11] * var23Lifetime1 + viewTransform[10] * var22Lifetime1 + var21Lifetime1 * viewTransform[9] >> 16;
+          var10 = var21Lifetime1 * viewTransform[6] + var22Lifetime1 * viewTransform[7] + viewTransform[8] * var23Lifetime1 >> 16 - IntrusiveDeque.field_b;
           var21Lifetime2 = SoftwareRasterViewport.centerX;
           var22Lifetime2 = SoftwareRasterViewport.centerY;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var23Lifetime2 < param4.field_D) {
-              var24Lifetime1 = param4.field_Q[var23Lifetime2];
-              var25Lifetime1 = param4.field_B[var23Lifetime2];
-              var26Lifetime1 = param4.field_r[var23Lifetime2];
+            if (var23Lifetime2 < mesh.field_D) {
+              var24Lifetime1 = mesh.field_Q[var23Lifetime2];
+              var25Lifetime1 = mesh.field_B[var23Lifetime2];
+              var26Lifetime1 = mesh.field_r[var23Lifetime2];
               var27Lifetime1 = (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> -IntrusiveDeque.field_b + 16) + var9;
               var28Lifetime1 = (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var19 * var26Lifetime1 >> -IntrusiveDeque.field_b + 16) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var24Lifetime1 * var14 >> 16) + var11;
@@ -130,7 +130,7 @@ final class up {
                 } else {
                   LegacyOpenGlRidgedWaterEffect.field_k[var23Lifetime2] = -2147483648;
                 }
-                if (param3) {
+                if (retainViewCoordinates) {
                   PowerupTrailParticle.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
                   LegacyOpenGlGraphicsHeap.field_q[var23Lifetime2] = var28Lifetime1 >> IntrusiveDeque.field_b;
                   field_f[var23Lifetime2] = var29Lifetime1;
@@ -140,32 +140,32 @@ final class up {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (null != param4.field_I &&
-                null != param4.field_m &&
-                null != param4.field_M &&
-                null != param4.field_F &&
-                null != param4.field_i &&
-                param4.field_J != null &&
-                param4.field_q != null &&
-                null != param4.field_p &&
-                null != param4.field_s) {
+              if (null != mesh.field_I &&
+                null != mesh.field_m &&
+                null != mesh.field_M &&
+                null != mesh.field_F &&
+                null != mesh.field_i &&
+                mesh.field_J != null &&
+                mesh.field_q != null &&
+                null != mesh.field_p &&
+                null != mesh.field_s) {
                 var23Lifetime2 = 0;
-                while (!(param4.field_n <= var23Lifetime2)) {
-                  var24Lifetime1Lifetime1 = param4.field_I[var23Lifetime2];
-                  var25Lifetime1Lifetime1 = param4.field_m[var23Lifetime2];
-                  var26Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
+                while (!(mesh.field_n <= var23Lifetime2)) {
+                  var24Lifetime1Lifetime1 = mesh.field_I[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = mesh.field_m[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = mesh.field_M[var23Lifetime2];
                   SecondaryNodeHashTable.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
                   LegacyOpenGlReflectionEffect.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
                   LegacyOpenGlEffect.field_d[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16);
-                  var24Lifetime1Lifetime1 = param4.field_F[var23Lifetime2];
-                  var25Lifetime1Lifetime1 = param4.field_i[var23Lifetime2];
-                  var26Lifetime1Lifetime1 = param4.field_J[var23Lifetime2];
+                  var24Lifetime1Lifetime1 = mesh.field_F[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = mesh.field_i[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = mesh.field_J[var23Lifetime2];
                   TextureCoordinateGeneration.field_b[var23Lifetime2] = var9 + (var25Lifetime1Lifetime1 * var15 + (var12 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18) >> 16);
                   FontMetrics.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
                   SpriteMask.field_d[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 - (-(var17 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var20) >> 16);
-                  var24Lifetime1Lifetime1 = param4.field_q[var23Lifetime2];
-                  var25Lifetime1Lifetime1 = param4.field_p[var23Lifetime2];
-                  var26Lifetime1Lifetime1 = param4.field_s[var23Lifetime2];
+                  var24Lifetime1Lifetime1 = mesh.field_q[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = mesh.field_p[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = mesh.field_s[var23Lifetime2];
                   OpenGlBuffer.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12) >> 16);
                   ContentTransitionPhase.field_e[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1 >> 16);
                   PowerupPickup.field_k[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
@@ -175,19 +175,19 @@ final class up {
                   }
                 }
               }
-              if (param5) {
-                var9 = param1[3];
-                var10 = param1[4];
-                var11 = param1[5];
-                var12 = param1[6];
-                var13 = param1[7];
-                var14 = param1[8];
-                var15 = param1[9];
-                var16 = param1[10];
-                var17 = param1[11];
+              if (transformNormals) {
+                var9 = modelTransform[3];
+                var10 = modelTransform[4];
+                var11 = modelTransform[5];
+                var12 = modelTransform[6];
+                var13 = modelTransform[7];
+                var14 = modelTransform[8];
+                var15 = modelTransform[9];
+                var16 = modelTransform[10];
+                var17 = modelTransform[11];
                 var18 = 0;
                 while (true) {
-                  stackIn_62_0Lifetime1 = ~param4.field_c;
+                  stackIn_62_0Lifetime1 = ~mesh.field_c;
                   stackIn_62_1Lifetime1 = ~var18;
                   if (stackIn_62_0Lifetime1 >= stackIn_62_1Lifetime1) {
                     break;
@@ -199,44 +199,44 @@ final class up {
                   if (stackIn_71_0 >= HiscoreRequest.field_t.length) {
                     break;
                   }
-                  var19 = param4.field_x[var18];
-                  var20 = param4.field_g[var18];
-                  var21Lifetime2 = param4.field_L[var18];
+                  var19 = mesh.field_x[var18];
+                  var20 = mesh.field_g[var18];
+                  var21Lifetime2 = mesh.field_L[var18];
                   HiscoreRequest.field_t[var18] = var19 * var9 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
-                  r.field_r[var18] = var20 * var13 + var19 * var10 + var21Lifetime2 * var16 >> 16;
+                  DualLinkedRenderResource.field_r[var18] = var20 * var13 + var19 * var10 + var21Lifetime2 * var16 >> 16;
                   AccountConnectionPhase.field_d[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
                   var18++;
                 }
               }
             }
-            stackIn_71_0 = param2 ? 1 : 0;
+            stackIn_71_0 = sortFlag ? 1 : 0;
             break;
           }
-          LoginDialogState.a(stackIn_71_0 != 0, param4, -1, var8, var7_int);
+          LoginDialogState.a(stackIn_71_0 != 0, mesh, -1, var8, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_76_0 = var7;
           stackIn_76_1 = new StringBuilder().append("up.A(");
-          if (param0 == null) {
+          if (viewTransform == null) {
             stackIn_77_2 = "null";
           } else {
             stackIn_77_2 = "{...}";
           }
           stackIn_80_1 = ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',');
-          if (param1 == null) {
+          if (modelTransform == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";
           }
-          stackIn_84_1 = ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_84_1 = ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(sortFlag).append(',').append(retainViewCoordinates).append(',');
+          if (mesh == null) {
             stackIn_85_2 = "null";
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(transformNormals).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -247,9 +247,9 @@ final class up {
           field_c = null;
           field_e = null;
           field_f = null;
-          field_g = null;
+          threeLifeCompletions = null;
           if (param0 > -9) {
-            up.a((int[]) null, (int[]) null, true, true, (CompactMeshGeometry) null, false, 41);
+            IntroMeshProjection.projectIntroMesh((int[]) null, (int[]) null, true, true, (CompactMeshGeometry) null, false, 41);
           }
           cancelText = null;
           return;
@@ -263,7 +263,7 @@ final class up {
     static {
         field_d = false;
         field_f = new int[8192];
-        field_g = new boolean[25];
+        threeLifeCompletions = new boolean[25];
         cancelText = "Cancel";
     }
 }

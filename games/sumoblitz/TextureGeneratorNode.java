@@ -41,13 +41,13 @@ abstract class TextureGeneratorNode extends IntrusiveNode {
         if (guard == 30692) {
           ResourceArchive.selectedSpeedLevel = PasswordInputRenderer.upgradeAllocation[0];
           LegacyOpenGlEffectManager.selectedTractionLevel = PasswordInputRenderer.upgradeAllocation[1];
-          hc.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
+          AccountStatusDialogState.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
           return;
         }
         defeatText = (String) null;
         ResourceArchive.selectedSpeedLevel = PasswordInputRenderer.upgradeAllocation[0];
         LegacyOpenGlEffectManager.selectedTractionLevel = PasswordInputRenderer.upgradeAllocation[1];
-        hc.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
+        AccountStatusDialogState.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
     }
 
     public static void releaseStatics(boolean param0) {

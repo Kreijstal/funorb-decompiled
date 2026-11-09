@@ -384,7 +384,7 @@ abstract class ToolkitFont {
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = no.parseDecimal((byte) -127, var21);
+                                    var16_int = LoginFormState.parseDecimal((byte) -127, var21);
                                     var17 = param2[var16_int];
                                     if (param7 != null) {
                                       stackIn_25_0 = param7[var16_int];
@@ -445,7 +445,7 @@ abstract class ToolkitFont {
                     GameDefinitionLoader.field_a = GameDefinitionLoader.field_a & 255;
                   }
                 }
-                var15 = this.field_b.a(var14, (byte) -53);
+                var15 = this.field_b.characterWidth(var14, (byte) -53);
                 if (-1 != ScrollControl.field_I) {
                   this.field_a.drawHorizontalLineAlpha(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
                 }

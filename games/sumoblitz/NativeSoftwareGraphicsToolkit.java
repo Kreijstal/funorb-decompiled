@@ -32,7 +32,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     protected final synchronized void finalize() {
         this.close((byte) -22);
         if (this.field_nativeid != 0L) {
-          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
+          NativeResourceReaper.deferDisposal((NativeResource) (this), (byte) -37);
         }
     }
 
@@ -45,7 +45,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          NativeCanvasSurface var4 = (NativeCanvasSurface) (this.field_q.a(106, (long)param0.hashCode()));
+          NativeCanvasSurface var4 = (NativeCanvasSurface) (this.field_q.get(106, (long)param0.hashCode()));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -73,7 +73,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private final void a(java.awt.Canvas param0) {
         NativeCanvasSurface var2 = null;
         if (param0 != null) {
-          var2 = (NativeCanvasSurface) (this.field_q.a(127, (long)param0.hashCode()));
+          var2 = (NativeCanvasSurface) (this.field_q.get(127, (long)param0.hashCode()));
           this.field_r = var2;
           this.t(var2);
         } else {
@@ -147,7 +147,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
           if (!ScrollPane.b((byte) -124, "sw3d")) {
             throw new RuntimeException("");
           }
-          NativeResourceReaper.b((byte) -119);
+          NativeResourceReaper.retainOwner((byte) -119);
           this.MA(this.textureProvider, 0, 0);
           RasterColorTables.retainColorTables(true, -21, false);
           this.field_k = true;
@@ -188,7 +188,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private final void g() {
         System.gc();
         System.runFinalization();
-        NativeResourceReaper.a(-121);
+        NativeResourceReaper.drainPending(-121);
     }
 
     final void dispose() {
@@ -211,7 +211,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
           this.field_k = false;
         }
         this.g();
-        NativeResourceReaper.a((byte) -107);
+        NativeResourceReaper.releaseOwner((byte) -107);
         this.field_m = true;
     }
 
@@ -302,7 +302,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
 
     final native void setDepthRange(int nearPlane, int farPlane);
 
-    final boolean a() {
+    final boolean isFloatPostProcessingEnabled() {
         return false;
     }
 
@@ -319,7 +319,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     final native void intersectClip(int left, int top, int right, int bottom);
 
     final void updateTime(int timeMillis) {
-        NativeResourceReaper.a(-127);
+        NativeResourceReaper.drainPending(-127);
         this.d(timeMillis);
         NativeGraphicsHeap var2 = (NativeGraphicsHeap) (this.field_o.first(-61));
         while (var2 != null) {
@@ -335,11 +335,11 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     final native void clear(int color);
 
     private final void g(int param0) {
-        this.field_s[param0].a();
+        this.field_s[param0].bindToCurrentThread();
     }
 
     private final Object OA() {
-        return new ba(this);
+        return new NativeDualLinkedRenderResource(this);
     }
 
     static {

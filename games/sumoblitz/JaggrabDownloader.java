@@ -57,7 +57,7 @@ final class JaggrabDownloader implements Runnable {
         var2 = 4 / ((param0 + 41) / 43);
         if (this.field_g == 0) {
           if (this.field_e == null) {
-            this.field_e = this.field_b.a((byte) 107, this.field_a);
+            this.field_e = this.field_b.openUrlStream((byte) 107, this.field_a);
           }
           if (0 == this.field_e.status) {
             return false;
@@ -70,7 +70,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_g == 1) {
           if (this.field_f == null) {
-            this.field_f = this.field_b.a((byte) 51, this.field_a.getHost(), 443);
+            this.field_f = this.field_b.openDirectSocket((byte) 51, this.field_a.getHost(), 443);
           }
           if (this.field_f.status == 0) {
             return false;
@@ -83,7 +83,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_h != null) {
           if (null == this.field_c) {
-            this.field_c = this.field_b.a(true, (Runnable) (this), 5);
+            this.field_c = this.field_b.startThread(true, (Runnable) (this), 5);
           }
           if (0 == this.field_c.status) {
             return false;
@@ -115,7 +115,7 @@ final class JaggrabDownloader implements Runnable {
           this.finalize();
           this.field_g = this.field_g + 1;
           if (null == this.field_c) {
-            this.field_c = this.field_b.a(true, (Runnable) (this), 5);
+            this.field_c = this.field_b.startThread(true, (Runnable) (this), 5);
           }
           if (0 == this.field_c.status) {
             return false;
@@ -128,7 +128,7 @@ final class JaggrabDownloader implements Runnable {
           return false;
         }
         if (null == this.field_c) {
-          this.field_c = this.field_b.a(true, (Runnable) (this), 5);
+          this.field_c = this.field_b.startThread(true, (Runnable) (this), 5);
         }
         if (0 == this.field_c.status) {
           return false;

@@ -52,10 +52,10 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         int var2_intLifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          qf.field_a = qf.field_a + 1;
+          PerlinGradient.field_a = PerlinGradient.field_a + 1;
           if (EmptyWidgetRenderer.field_d == -1 &&
             ScanlineSpriteMask.field_e == -1) {
-            ScanlineSpriteMask.field_e = pi.field_e;
+            ScanlineSpriteMask.field_e = ArenaDefinitionCodec.field_e;
             EmptyWidgetRenderer.field_d = PointLight.mouseX;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -65,9 +65,9 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
             decompiledFrameRemainder0 = (LegacyOpenGlCubeTexture.field_l == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!up.field_d) {
-              if (qf.field_a >= GameClientShell.field_s) {
-                stackIn_17_0 = (GameClientShell.field_s + GameDefinitionLoader.field_c > qf.field_a) ? 1 : 0;
+            if (!IntroMeshProjection.field_d) {
+              if (PerlinGradient.field_a >= GameClientShell.field_s) {
+                stackIn_17_0 = (GameClientShell.field_s + GameDefinitionLoader.field_c > PerlinGradient.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -76,41 +76,41 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
             }
             var2_int = stackIn_17_0;
             if (param0 == null) {
-              qf.field_a = 0;
+              PerlinGradient.field_a = 0;
             } else {
-              if (up.field_d) {
-                qf.field_a = GameClientShell.field_s;
+              if (IntroMeshProjection.field_d) {
+                PerlinGradient.field_a = GameClientShell.field_s;
               } else {
                 if (var2_int == 0) {
-                  qf.field_a = 0;
+                  PerlinGradient.field_a = 0;
                 } else {
-                  qf.field_a = GameClientShell.field_s;
+                  PerlinGradient.field_a = GameClientShell.field_s;
                 }
               }
             }
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
             VertexLayout.field_b = EmptyWidgetRenderer.field_d;
             if (param0 != null) {
-              up.field_d = false;
+              IntroMeshProjection.field_d = false;
             } else {
               if (var2_int != 0) {
-                up.field_d = true;
+                IntroMeshProjection.field_d = true;
               }
             }
           }
           LegacyOpenGlCubeTexture.field_l = param0;
           var2_intLifetime1 = -62 % ((-74 - param1) / 35);
-          if (!up.field_d &&
-            qf.field_a < GameClientShell.field_s &&
+          if (!IntroMeshProjection.field_d &&
+            PerlinGradient.field_a < GameClientShell.field_s &&
             LegacyOpenGlClientVertexBuffer.field_d) {
-            qf.field_a = 0;
+            PerlinGradient.field_a = 0;
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
             VertexLayout.field_b = EmptyWidgetRenderer.field_d;
           }
-          if (up.field_d &&
-            qf.field_a == PlayerDrone.field_T) {
-            qf.field_a = 0;
-            up.field_d = false;
+          if (IntroMeshProjection.field_d &&
+            PerlinGradient.field_a == PlayerDrone.field_T) {
+            PerlinGradient.field_a = 0;
+            IntroMeshProjection.field_d = false;
           }
           ScanlineSpriteMask.field_e = -1;
           EmptyWidgetRenderer.field_d = -1;

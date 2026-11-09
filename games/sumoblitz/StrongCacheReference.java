@@ -86,7 +86,7 @@ final class StrongCacheReference extends CacheReferenceNode {
         }
         if (0 == OpenGlCubeTexture.field_k &&
           7 != RendererPreference.field_b) {
-          TextLayout.a(0, 0);
+          TextLayout.playGameTrack(0, 0);
         }
     }
 

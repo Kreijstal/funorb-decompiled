@@ -59,7 +59,7 @@ final class NanoTickClock extends TickClock {
           ServerIntArrayRequest.field_l = null;
           ProxySocketConnector.accountCreationState = LegacyOpenGlGraphicsHeap.PENDING;
           ArenaBackdropPalettes.field_d = password;
-          lq.field_d = age;
+          IntroFinalFrameResources.field_d = age;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

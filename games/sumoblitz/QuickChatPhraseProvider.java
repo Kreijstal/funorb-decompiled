@@ -10,7 +10,7 @@ final class QuickChatPhraseProvider {
     static boolean field_a;
 
     final static void b(int param0) {
-        lf.setSoundVolume(256, (byte) -58);
+        LegacyOpenGlRenderBufferSet.setSoundVolume(256, (byte) -58);
         if (param0 <= 56) {
           field_b = false;
         }

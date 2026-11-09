@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends IntrusiveNode {
+final class FourIntReadRequest extends IntrusiveNode {
     static ProjectionMode PERSPECTIVE;
     int field_o;
     int field_k;
@@ -19,7 +19,7 @@ final class pd extends IntrusiveNode {
           PERSPECTIVE = null;
           return;
         }
-        pd.releaseStatics((byte) 113);
+        FourIntReadRequest.releaseStatics((byte) 113);
         field_q = null;
         nameText = null;
         hardwareRidgedWaterData = null;
@@ -56,7 +56,7 @@ final class pd extends IntrusiveNode {
         try {
           if (guard != 5412) {
             var4 = (byte[]) null;
-            pd.writeServerData((byte[]) null, 48, 96);
+            FourIntReadRequest.writeServerData((byte[]) null, 48, 96);
           }
           var3 = new ServerDataWriteRequest(payload);
           LoginMethodPreference.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
@@ -77,7 +77,7 @@ final class pd extends IntrusiveNode {
         }
     }
 
-    private pd() throws Throwable {
+    private FourIntReadRequest() throws Throwable {
         throw new Error();
     }
 

@@ -45,7 +45,7 @@ final class LegacyOpenGlAssemblyProgram {
             var9 = param1;
             var10 = param0;
             for (var11 = param5; param3 > var11; var11++) {
-              var12 = pd.field_q[var11];
+              var12 = FourIntReadRequest.field_q[var11];
               if (!param6) {
                 stackIn_23_0 = IntroductionOverlaySupport.field_c[var12];
               } else {
@@ -57,13 +57,13 @@ final class LegacyOpenGlAssemblyProgram {
                   var10 = var13;
                 }
               } else {
-                pd.field_q[var11] = pd.field_q[var8];
+                FourIntReadRequest.field_q[var11] = FourIntReadRequest.field_q[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                pd.field_q[incrementValue$0] = var12;
+                FourIntReadRequest.field_q[incrementValue$0] = var12;
               }
             }
             LegacyOpenGlAssemblyProgram.a(var9, param1, param2, var8, param4, param5, param6);
@@ -72,11 +72,11 @@ final class LegacyOpenGlAssemblyProgram {
           }
           for (var7_intLifetime1 = -1 + param3; var7_intLifetime1 > param5; var7_intLifetime1--) {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = pd.field_q[var8Lifetime1];
-              var10Lifetime1 = pd.field_q[1 + var8Lifetime1];
+              var9Lifetime1 = FourIntReadRequest.field_q[var8Lifetime1];
+              var10Lifetime1 = FourIntReadRequest.field_q[1 + var8Lifetime1];
               if (HardwareQuadBatchBuffers.a(var10Lifetime1, var9Lifetime1, param6, (byte) 98)) {
-                pd.field_q[var8Lifetime1] = var10Lifetime1;
-                pd.field_q[var8Lifetime1 + 1] = var9Lifetime1;
+                FourIntReadRequest.field_q[var8Lifetime1] = var10Lifetime1;
+                FourIntReadRequest.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -95,9 +95,9 @@ final class LegacyOpenGlAssemblyProgram {
         AccountConnectionPhase.reflectionChecks = new IntrusiveDeque();
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int guard) {
         levelLoadStepLabels = null;
-        if (param0 != 429166529) {
+        if (guard != 429166529) {
           LegacyOpenGlAssemblyProgram.a(100, 10, (byte) 96, 17, -1, -25, true);
         }
         field_d = null;

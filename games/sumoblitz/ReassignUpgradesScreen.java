@@ -31,9 +31,9 @@ final class ReassignUpgradesScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          DelegatingCanvas.a(up.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
           ForceFieldRingEffect.field_t.a(NextLevelChoiceOverlay.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
-          hc.field_e.a(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
+          AccountStatusDialogState.headingFont.a(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           QueuedIntArrayRequest.field_k.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
@@ -96,9 +96,9 @@ final class ReassignUpgradesScreen extends MenuScreen {
         var2 = (PointLight.mouseX - 140) / 126;
         if (PointLight.mouseX < 140) {
           var2 = -1;
-          var3 = (-200 + pi.field_e) / 150;
-          if (!(pi.field_e >= 200) ||
-            !(pi.field_e <= 350)) {
+          var3 = (-200 + ArenaDefinitionCodec.field_e) / 150;
+          if (!(ArenaDefinitionCodec.field_e >= 200) ||
+            !(ArenaDefinitionCodec.field_e <= 350)) {
             var3 = -1;
           }
           this.field_k = var3 * 3 + var2;
@@ -175,8 +175,8 @@ final class ReassignUpgradesScreen extends MenuScreen {
         if (520 < PointLight.mouseX) {
           var2 = -1;
         }
-        var3Lifetime1 = (-200 + pi.field_e) / 150;
-        if (pi.field_e < 200) {
+        var3Lifetime1 = (-200 + ArenaDefinitionCodec.field_e) / 150;
+        if (ArenaDefinitionCodec.field_e < 200) {
           var3Lifetime1 = -1;
           this.field_k = var3Lifetime1 * 3 + var2;
           if ((-140 + PointLight.mouseX) % 126 > 111) {
@@ -249,7 +249,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
           }
           return;
         }
-        if (pi.field_e > 350) {
+        if (ArenaDefinitionCodec.field_e > 350) {
           var3Lifetime1 = -1;
         }
         this.field_k = var3Lifetime1 * 3 + var2;

@@ -57,7 +57,7 @@ final class DroneIntroductionOverlay {
         int var8 = 0;
         DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, -16777216, 3, toolkit, 360, 170, 1, true);
         if (!(Sumoblitz.field_J.length <= this.droneType)) {
-          DelegatingCanvas.a(up.field_c, Sumoblitz.field_J[this.droneType].height() + 6, 167, -16777216, 3, toolkit, Sumoblitz.field_J[this.droneType].width() + 6, 187, 1, true);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, Sumoblitz.field_J[this.droneType].height() + 6, 167, -16777216, 3, toolkit, Sumoblitz.field_J[this.droneType].width() + 6, 187, 1, true);
           Sumoblitz.field_J[this.droneType].draw(170, 190);
         }
         int var3_int = Sumoblitz.field_J.length > this.droneType ? 380 : 320;

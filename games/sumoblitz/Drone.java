@@ -1026,9 +1026,9 @@ class Drone {
           } else if (this.variant == 2 &&
             0 == this.destructionTicks) {
             if (0 == this.variantCooldownTicks) {
-              up.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
+              IntroMeshProjection.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
             } else {
-              up.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
+              IntroMeshProjection.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
             }
           } else {
             if (this.variant == 3 &&

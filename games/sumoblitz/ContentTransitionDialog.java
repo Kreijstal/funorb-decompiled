@@ -44,7 +44,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
               }
               return super.advanceAnimation(-28778);
             }
-            this.transitionPhase = lw.RESIZING;
+            this.transitionPhase = CanvasResizeState.RESIZING;
             this.animateResize(false, this.headerHeight + (12 + this.pendingContent.height), this.contentResizeDuration, this.pendingContent.width + 12);
             this.transitionTicks = 0;
             this.contentWrapper.opacity = 0;
@@ -175,7 +175,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
             this.installContent((UiWidget) null, 78);
           }
           this.pendingContent = newContent;
-          if (lw.RESIZING == this.transitionPhase) {
+          if (CanvasResizeState.RESIZING == this.transitionPhase) {
             this.animateResize(false, this.pendingContent.height + this.headerHeight + 12, this.contentResizeDuration, this.pendingContent.width + 12);
             this.transitionTicks = 0;
             return;

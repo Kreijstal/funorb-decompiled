@@ -8,7 +8,7 @@ abstract class Transform3D {
         if (param0 != -97) {
           return -56;
         }
-        return lq.field_d;
+        return IntroFinalFrameResources.field_d;
     }
 
     public static void releaseStatics(boolean param0) {

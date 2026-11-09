@@ -169,7 +169,7 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11;
         int var5Lifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (ByteArrayCacheNode) (pi.field_a.get((byte) -88, (long)param0));
+        var2 = (ByteArrayCacheNode) (ArenaDefinitionCodec.field_a.get((byte) -88, (long)param0));
         if (var2 == null) {
           var11 = new byte[512];
           var10 = var11;
@@ -187,7 +187,7 @@ final class MusicPatch extends IntrusiveNode {
             var3_ref_byte__[var6] = (byte) var8;
           }
           var2 = new ByteArrayCacheNode(var11);
-          pi.field_a.put((long)param0, var2, -128);
+          ArenaDefinitionCodec.field_a.put((long)param0, var2, -128);
         }
         var3 = -104 / ((60 - param1) / 58);
         return var2.bytes;
@@ -221,7 +221,7 @@ final class MusicPatch extends IntrusiveNode {
         while (param1 != 0L) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = vm.field_b[(int)(-(37L * param1) + var7)];
+          var9 = Base37NameAlphabet.alphabet[(int)(-(37L * param1) + var7)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;

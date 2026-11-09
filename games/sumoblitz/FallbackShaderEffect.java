@@ -1089,7 +1089,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("toserverlist", (byte) -23);
                 if (null != var2) {
-                  lq.toServerListText = MusicVoice.a(0, var2);
+                  IntroFinalFrameResources.toServerListText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("tocustomersupport", (byte) -23);
                 if (null != var2) {
@@ -1381,54 +1381,54 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,0", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[0] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[0] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,1", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[1] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[1] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,2", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[2] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[2] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,3", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,4", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[4] = MusicVoice.a(param0 - 7, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[4] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,5", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[5] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[5] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,6", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[6] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[6] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,7", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[7] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[7] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,8", (byte) -23);
                 if (param0 != 7) {
                   finished = true; return;
                 }
                 if (var2 != null) {
-                  lf.monthNames[8] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[8] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,9", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[9] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[9] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,10", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[10] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[10] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("monthnames,11", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[11] = MusicVoice.a(0, var2);
+                  LegacyOpenGlRenderBufferSet.monthNames[11] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_welcome", (byte) -23);
                 if (null != var2) {
@@ -1452,7 +1452,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_password", (byte) -23);
                 if (var2 != null) {
-                  pi.passwordText = MusicVoice.a(param0 - 7, var2);
+                  ArenaDefinitionCodec.passwordText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_password_confirm", (byte) -23);
                 if (var2 != null) {
@@ -1588,7 +1588,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_email_tooltip", (byte) -23);
                 if (null != var2) {
-                  pi.yourEmailAddressIsText = MusicVoice.a(0, var2);
+                  ArenaDefinitionCodec.yourEmailAddressIsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_email_confirm_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1668,7 +1668,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passcontainsemail", (byte) -23);
                 if (var2 != null) {
-                  pc.thisPasswordContainsYourText = MusicVoice.a(0, var2);
+                  FriendListState.thisPasswordContainsYourText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passcontainsname_partial", (byte) -23);
                 if (var2 != null) {
@@ -1704,7 +1704,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_passwordvalid", (byte) -23);
                 if (var2 != null) {
-                  ka.passwordIsValidText = MusicVoice.a(param0 ^ 7, var2);
+                  RenderBufferSet.passwordIsValidText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_emailvalid", (byte) -23);
                 if (var2 != null) {
@@ -2698,7 +2698,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_button_accept", (byte) -23);
                 if (var2 != null) {
-                  km.acceptText = MusicVoice.a(0, var2);
+                  FourStatHiscoreRequest.acceptText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_afteraccept", (byte) -23);
                 if (null != var2) {
@@ -2706,7 +2706,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_button_cancel", (byte) -23);
                 if (var2 != null) {
-                  up.cancelText = MusicVoice.a(0, var2);
+                  IntroMeshProjection.cancelText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_aftercancel", (byte) -23);
                 if (var2 != null) {
@@ -2718,7 +2718,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_countdown_pl", (byte) -23);
                 if (null != var2) {
-                  lq.field_a = MusicVoice.a(param0 ^ 7, var2);
+                  IntroFinalFrameResources.field_a = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_nonmember", (byte) -23);
                 if (var2 != null) {
@@ -2862,7 +2862,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_need_memory", (byte) -23);
                 if (var2 != null) {
-                  lw.moreMemoryIsRequiredText = MusicVoice.a(0, var2);
+                  CanvasResizeState.moreMemoryIsRequiredText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("pleasewait_dotdotdot", (byte) -23);
                 if (null != var2) {
@@ -2950,7 +2950,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("discard", (byte) -23);
                 if (null != var2) {
-                  vp.discardText = MusicVoice.a(param0 ^ 7, var2);
+                  DroneVariantScoring.discardText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,1", (byte) -23);
                 if (null != var2) {

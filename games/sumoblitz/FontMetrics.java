@@ -134,7 +134,7 @@ final class FontMetrics {
                       regionExit1: {
                         if (!var19.equals("lt")) {
                           if (var19.equals("gt")) {
-                            var17 = var17 + this.a(62, (byte) -53);
+                            var17 = var17 + this.characterWidth(62, (byte) -53);
                             if (null != this.field_j &&
                               -1 != var12) {
                               var17 = var17 + this.field_j[var12][62];
@@ -143,7 +143,7 @@ final class FontMetrics {
                           } else {
                             if (!var19.equals("nbsp")) {
                               if (var19.equals("shy")) {
-                                var17 = var17 + this.a(173, (byte) -53);
+                                var17 = var17 + this.characterWidth(173, (byte) -53);
                                 if (this.field_j != null &&
                                   var12 != -1) {
                                   var17 = var17 + this.field_j[var12][173];
@@ -161,7 +161,7 @@ final class FontMetrics {
                                           break regionExit1;
                                         }
                                         try {
-                                          var20_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var19.substring(4)));
+                                          var20_int = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var19.substring(4)));
                                           var17 = var17 + param4[var20_int].paddedWidth();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
@@ -174,14 +174,14 @@ final class FontMetrics {
                                           break regionExit1;
                                         }
                                       }
-                                      var17 = var17 + this.a(174, (byte) -53);
+                                      var17 = var17 + this.characterWidth(174, (byte) -53);
                                       if (this.field_j != null &&
                                         var12 != -1) {
                                         var17 = var17 + this.field_j[var12][174];
                                       }
                                       var12 = 174;
                                     } else {
-                                      var17 = var17 + this.a(169, (byte) -53);
+                                      var17 = var17 + this.characterWidth(169, (byte) -53);
                                       if (null != this.field_j &&
                                         -1 != var12) {
                                         var17 = var17 + this.field_j[var12][169];
@@ -189,7 +189,7 @@ final class FontMetrics {
                                       var12 = 169;
                                     }
                                   } else {
-                                    var17 = var17 + this.a(8364, (byte) -53);
+                                    var17 = var17 + this.characterWidth(8364, (byte) -53);
                                     if (null != this.field_j &&
                                       var12 != -1) {
                                       var17 = var17 + this.field_j[var12][8364];
@@ -197,7 +197,7 @@ final class FontMetrics {
                                     var12 = 8364;
                                   }
                                 } else {
-                                  var17 = var17 + this.a(215, (byte) -53);
+                                  var17 = var17 + this.characterWidth(215, (byte) -53);
                                   if (this.field_j != null &&
                                     var12 != -1) {
                                     var17 = var17 + this.field_j[var12][215];
@@ -206,7 +206,7 @@ final class FontMetrics {
                                 }
                               }
                             } else {
-                              var17 = var17 + this.a(160, (byte) -53);
+                              var17 = var17 + this.characterWidth(160, (byte) -53);
                               if (null != this.field_j &&
                                 var12 != -1) {
                                 var17 = var17 + this.field_j[var12][160];
@@ -216,7 +216,7 @@ final class FontMetrics {
                           }
                           break regionExit1;
                         }
-                        var17 = var17 + this.a(60, (byte) -53);
+                        var17 = var17 + this.characterWidth(60, (byte) -53);
                         if (this.field_j != null &&
                           var12 != -1) {
                           var17 = var17 + this.field_j[var12][60];
@@ -228,7 +228,7 @@ final class FontMetrics {
                   }
                 } else {
                   var18 = var15;
-                  var17 = var17 + this.a(var16, (byte) -53);
+                  var17 = var17 + this.characterWidth(var16, (byte) -53);
                   if (null != this.field_j &&
                     var12 != -1) {
                     var17 = var17 + this.field_j[var12][var16];
@@ -401,7 +401,7 @@ final class FontMetrics {
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (param1 != null))) {
                                   try {
-                                    var11_int = no.parseDecimal((byte) -127, (CharSequence) ((Object) var10.substring(4)));
+                                    var11_int = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var10.substring(4)));
                                     var5 = -1;
                                     var6 = var6 + param1[var11_int].paddedWidth();
                                     decompiledRegionSelector0 = 0;
@@ -462,20 +462,20 @@ final class FontMetrics {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int characterWidth(int character, byte guard) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -53) {
+          if (guard != -53) {
             this.field_h = -30;
           }
-          stackIn_4_0 = this.field_g[param0] & 255;
+          stackIn_4_0 = this.field_g[character] & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ta.E(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ta.E(" + character + ',' + guard + ')');
         }
     }
 
@@ -560,7 +560,7 @@ final class FontMetrics {
                                   (decompiledFrameRemainder0 = !(!var12_ref_String.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (null != param2))) {
                                   try {
-                                    var13_int = no.parseDecimal((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
+                                    var13_int = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
                                     var6 = -1;
                                     var7 = var7 + param2[var13_int].paddedWidth();
                                     if (var7 > param0) {
@@ -671,7 +671,7 @@ final class FontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -49) {
-            this.a(-23, (byte) 121);
+            this.characterWidth(-23, (byte) 121);
           }
           if (null != this.field_j) {
             stackIn_7_0 = this.field_j[param2][param1];
@@ -686,16 +686,16 @@ final class FontMetrics {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         try {
           FULLSCREEN_CONFIRMATION_TIMEOUT = null;
           field_e = null;
           PREVIOUS = null;
-          if (param0) {
+          if (guard) {
             field_b = -45;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ta.B(" + guard + ')');
         }
     }
 

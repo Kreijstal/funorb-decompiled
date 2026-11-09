@@ -99,11 +99,11 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           return null;
         }
         if (guard == -6696) {
-          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
+          LegacyOpenGlRidgedWaterEffect.a(ArenaDefinitionCodec.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
           return this.tooltip;
         }
         this.validator = (InputValidator) null;
-        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
+        LegacyOpenGlRidgedWaterEffect.a(ArenaDefinitionCodec.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
         return this.tooltip;
     }
 

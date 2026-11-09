@@ -43,26 +43,26 @@ class UiStyle extends UiStyleNode {
     private Sprite field_r;
     private String field_F;
 
-    final static void a(byte param0, int param1) {
+    final static void resendFourIntReadRequests(byte guard, int opcode) {
         int var3 = 0;
-        pd var4 = null;
+        FourIntReadRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != 115) {
-            UiStyle.a((byte) 19, -85);
+          if (guard != 115) {
+            UiStyle.resendFourIntReadRequests((byte) 19, -85);
           }
-          var4 = (pd) (PerlinNoiseSliceGenerator.field_g.first(-87));
+          var4 = (FourIntReadRequest) (PerlinNoiseSliceGenerator.field_g.first(-87));
           while (var4 != null) {
-            SpriteSheetSupport.a(var4, param1, (byte) 117);
-            var4 = (pd) (PerlinNoiseSliceGenerator.field_g.next((byte) 18));
+            SpriteSheetSupport.sendFourIntReadRequest(var4, opcode, (byte) 117);
+            var4 = (FourIntReadRequest) (PerlinNoiseSliceGenerator.field_g.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dq.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dq.C(" + guard + ',' + opcode + ')');
         }
     }
 

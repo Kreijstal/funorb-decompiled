@@ -60,7 +60,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyScissor(int guard) {
         if (guard != 4) {
-          this.a();
+          this.isFloatPostProcessingEnabled();
         }
         this.field_Cc.SetScissorRect(this.field_r + this.clipTop, this.field_y + this.clipLeft, this.clipRight, this.clipBottom);
     }
@@ -415,7 +415,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param1 >= -23) {
           field_Zc = (int[]) null;
         }
-        if (lf.REPLACE == param0) {
+        if (LegacyOpenGlRenderBufferSet.REPLACE == param0) {
           return 2;
         }
         if (SlowBurstParticle.MODULATE == param0) {
@@ -487,7 +487,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Tc = false;
     }
 
-    final boolean a() {
+    final boolean isFloatPostProcessingEnabled() {
         return false;
     }
 

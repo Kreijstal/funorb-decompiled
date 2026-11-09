@@ -215,7 +215,7 @@ final class LegacyOpenGlTextureCache {
           this.textures.put((long)textureId, var19, (byte) 19);
           return var19;
         }
-        if (this.toolkit.a()) {
+        if (this.toolkit.isFloatPostProcessingEnabled()) {
           var11 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -101);
           var10 = var11;
           var9 = var10;

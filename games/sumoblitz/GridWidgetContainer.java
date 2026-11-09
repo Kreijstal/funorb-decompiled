@@ -211,7 +211,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           IsaacPacketBuffer var4 = null;
           IsaacPacketBuffer var5 = null;
           if (EmptyWidgetRenderer.field_a == null) {
-            EmptyWidgetRenderer.field_a = CacheReferenceNode.field_t.a((byte) 71, ScrollPane.field_C, vp.field_a);
+            EmptyWidgetRenderer.field_a = CacheReferenceNode.field_t.openDirectSocket((byte) 71, ScrollPane.field_C, DroneVariantScoring.field_a);
           }
           if (param0 > -33) {
             GridWidgetContainer.a((byte) 116, false);

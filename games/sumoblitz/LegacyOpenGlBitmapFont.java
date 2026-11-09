@@ -21,12 +21,12 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           this.field_f.setTextureCombineOperations(20685, 7681, 7681);
         } else {
           this.field_f.setTextureCombineOperations(20685, 8448, 7681);
-          this.field_f.b(34168, 768, 0, -120);
+          this.field_f.setTextureCombineSources(34168, 768, 0, -120);
         }
         this.field_f.setActiveTextureUnit(1, 86);
         this.field_f.bindTexture(122, var10);
         this.field_f.setTextureCombineOperations(20685, 8448, 7681);
-        this.field_f.b(34168, 768, 0, -116);
+        this.field_f.setTextureCombineSources(34168, 768, 0, -116);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
         var11 = var10.maxU / (float)var10.spriteWidth;
@@ -41,13 +41,13 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
-        this.field_f.b(5890, 768, 0, -116);
+        this.field_f.setTextureCombineSources(5890, 768, 0, -116);
         this.field_f.setTextureCombineOperations(20685, 8448, 8448);
         this.field_f.bindTexture(103, (LegacyOpenGlTexture) null);
         this.field_f.setActiveTextureUnit(0, 115);
         if (this.field_d ||
           param4) {
-          this.field_f.b(5890, 768, 0, -124);
+          this.field_f.setTextureCombineSources(5890, 768, 0, -124);
         }
     }
 
@@ -254,7 +254,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           this.field_f.setTextureCombineOperations(20685, 7681, 7681);
         } else {
           this.field_f.setTextureCombineOperations(20685, 8448, 7681);
-          this.field_f.b(34168, 768, 0, -121);
+          this.field_f.setTextureCombineSources(34168, 768, 0, -121);
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
@@ -262,7 +262,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_d ||
           param4) {
-          this.field_f.b(5890, 768, 0, -2);
+          this.field_f.setTextureCombineSources(5890, 768, 0, -2);
         }
     }
 }

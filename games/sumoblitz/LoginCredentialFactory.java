@@ -56,7 +56,7 @@ final class LoginCredentialFactory {
           LoginCredentialFactory.initializePlayerFromUpgradeSettings(-65);
           SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
           SpriteMask.drones[0].speedLevel = ResourceArchive.selectedSpeedLevel;
-          SpriteMask.drones[0].bounceLevel = hc.selectedBounceLevel;
+          SpriteMask.drones[0].bounceLevel = AccountStatusDialogState.selectedBounceLevel;
           SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.selectedTractionLevel;
           SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
           AppletTickHistory.field_b = 250;
@@ -69,7 +69,7 @@ final class LoginCredentialFactory {
         }
         SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
         SpriteMask.drones[0].speedLevel = ResourceArchive.selectedSpeedLevel;
-        SpriteMask.drones[0].bounceLevel = hc.selectedBounceLevel;
+        SpriteMask.drones[0].bounceLevel = AccountStatusDialogState.selectedBounceLevel;
         SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.selectedTractionLevel;
         SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
         AppletTickHistory.field_b = 250;

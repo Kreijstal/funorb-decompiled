@@ -12,7 +12,7 @@ final class IntrusiveNodeHashTable {
     static IntrusiveDeque field_g;
     static String field_h;
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean guard) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
@@ -23,7 +23,7 @@ final class IntrusiveNodeHashTable {
           this.field_d = var2.next;
           return var2;
         }
-        if (!param0) {
+        if (!guard) {
           return (IntrusiveNode) null;
         }
         do {
@@ -38,16 +38,16 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int guard, long key) {
         IntrusiveNode var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 < 102) {
+        if (guard < 102) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var4 = this.field_i[(int)(param1 & (long)(-1 + this.field_a))];
+        IntrusiveNode var4 = this.field_i[(int)(key & (long)(-1 + this.field_a))];
         this.field_e = var4.next;
         while (this.field_e != var4) {
-          if (~param1 == ~this.field_e.key) {
+          if (~key == ~this.field_e.key) {
             var5 = this.field_e;
             this.field_e = this.field_e.next;
             return var5;
@@ -89,12 +89,12 @@ final class IntrusiveNodeHashTable {
         field_g = null;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode first(int guard) {
         this.field_b = 0;
-        if (param0 < 36) {
+        if (guard < 36) {
           return (IntrusiveNode) null;
         }
-        return this.a(true);
+        return this.next(true);
     }
 
     final static boolean a(boolean param0, int param1, int param2) {

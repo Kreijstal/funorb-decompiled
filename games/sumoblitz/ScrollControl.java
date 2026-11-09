@@ -403,14 +403,14 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
             this.track.actionCode == 1) {
             if (this.verticalEnabled) {
               if (!this.horizontalEnabled) {
-                if ((this.thumb.height >> 1) + parentY + this.thumb.y < pi.field_e) {
+                if ((this.thumb.height >> 1) + parentY + this.thumb.y < ArenaDefinitionCodec.field_e) {
                   this.setVerticalPositionAndNotify(this.field_O + this.verticalPositionQ16, (byte) -125);
                 } else {
                   this.setVerticalPositionAndNotify(this.verticalPositionQ16 - this.field_O, (byte) -125);
                 }
               } else {
                 var6Lifetime1 = -(this.thumb.width >> 1) + (-this.thumb.x - this.x - parentX + PointLight.mouseX);
-                var7 = -parentY + (pi.field_e - this.y) - (this.thumb.y + (this.thumb.height >> 1));
+                var7 = -parentY + (ArenaDefinitionCodec.field_e - this.y) - (this.thumb.y + (this.thumb.height >> 1));
                 if (Math.abs(var7) > Math.abs(var6Lifetime1)) {
                   if (var7 > 0) {
                     this.setVerticalPositionAndNotify(this.field_O + this.verticalPositionQ16, (byte) -125);

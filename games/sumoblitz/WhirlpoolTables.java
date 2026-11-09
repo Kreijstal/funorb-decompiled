@@ -19,7 +19,7 @@ final class WhirlpoolTables {
 
     final static void c(int param0) {
         LegacyOpenGlEffectManager.selectedTractionLevel = 1;
-        hc.selectedBounceLevel = 1;
+        AccountStatusDialogState.selectedBounceLevel = 1;
         if (param0 >= 40) {
           ResourceArchive.selectedSpeedLevel = 1;
           ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
@@ -33,13 +33,13 @@ final class WhirlpoolTables {
     final static void a(int param0) {
         CacheIoRequest.field_z = new int[25];
         if (param0 == 17534) {
-          hc.selectedBounceLevel = 1;
+          AccountStatusDialogState.selectedBounceLevel = 1;
           CacheIoRequest.field_A = new int[25];
           OpenGlTexture3D.field_j = new int[25];
           ToolkitRasterStateFrame.field_e = -1;
           TextureMetadata.field_f = new boolean[25];
           ResourceArchive.selectedSpeedLevel = 1;
-          up.field_g = new boolean[25];
+          IntroMeshProjection.threeLifeCompletions = new boolean[25];
           LegacyOpenGlEffectManager.selectedTractionLevel = 1;
           NineSlicePanel.field_d = new boolean[25];
           ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);
@@ -47,13 +47,13 @@ final class WhirlpoolTables {
           return;
         }
         roundTables = (long[][]) null;
-        hc.selectedBounceLevel = 1;
+        AccountStatusDialogState.selectedBounceLevel = 1;
         CacheIoRequest.field_A = new int[25];
         OpenGlTexture3D.field_j = new int[25];
         ToolkitRasterStateFrame.field_e = -1;
         TextureMetadata.field_f = new boolean[25];
         ResourceArchive.selectedSpeedLevel = 1;
-        up.field_g = new boolean[25];
+        IntroMeshProjection.threeLifeCompletions = new boolean[25];
         LegacyOpenGlEffectManager.selectedTractionLevel = 1;
         NineSlicePanel.field_d = new boolean[25];
         ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);

@@ -166,8 +166,8 @@ final class HardwareUnlitEffect extends ShaderEffect {
           StatusMessagePanel.field_A = true;
           int var3_int = -70 % ((param2 + 39) / 44);
           LoginDialogState.field_c = param1 ? true : false;
-          hc.field_c = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, ReconnectState.reconnecting, LoginDialogState.field_c);
-          RenderPresentationException.field_a.pushDialog((byte) 108, hc.field_c);
+          AccountStatusDialogState.activeDialog = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, ReconnectState.reconnecting, LoginDialogState.field_c);
+          RenderPresentationException.field_a.pushDialog((byte) 108, AccountStatusDialogState.activeDialog);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -196,7 +196,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         OpenGlUnderwaterEffect.field_p[LoginCredentials.field_d] = param3;
-        pd.field_q[LoginCredentials.field_d] = LoginCredentials.field_d;
+        FourIntReadRequest.field_q[LoginCredentials.field_d] = LoginCredentials.field_d;
         LoginFieldValue.field_a[LoginCredentials.field_d] = param5;
         if (!(param5 >= GameplaySession.field_k)) {
           NoiseSliceGenerator.field_c = param5;

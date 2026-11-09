@@ -100,7 +100,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
             }
           }
         } else {
-          var5.steerTowardPoint(false, pi.field_e << 8, PointLight.mouseX << 8);
+          var5.steerTowardPoint(false, ArenaDefinitionCodec.field_e << 8, PointLight.mouseX << 8);
           StatisticsSubmissionSupport.field_a = true;
         }
         if (!AudioOutputBootstrap.field_b[83]) {

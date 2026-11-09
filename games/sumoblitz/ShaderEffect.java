@@ -88,7 +88,7 @@ abstract class ShaderEffect {
           if (guard != -9267) {
             ShaderEffect.releaseStatics(38);
           }
-          if (operation == lf.REPLACE) {
+          if (operation == LegacyOpenGlRenderBufferSet.REPLACE) {
             stackIn_4_0 = 7681;
             return stackIn_4_0;
           }

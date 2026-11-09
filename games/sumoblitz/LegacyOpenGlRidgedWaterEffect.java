@@ -58,7 +58,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return ValidationStatusWidget.field_G;
         }
-        if (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
+        if (Base37NameAlphabet.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
           return PowerupPickup.field_s;
         }
         if (param0 != -2) {
@@ -170,7 +170,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         this.stateLists.beginList(0, 4864);
         this.toolkit.setActiveTextureUnit(1, 100);
         this.toolkit.setTextureCombineOperations(20685, 260, 7681);
-        this.toolkit.b(34168, 768, 0, 104);
+        this.toolkit.setTextureCombineSources(34168, 768, 0, 104);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glEnable(3168);
         this.toolkit.setActiveTextureUnit(0, 123);
@@ -188,7 +188,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           field_k = (int[]) null;
           this.toolkit.setActiveTextureUnit(1, 110);
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(5890, 768, 0, -118);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, -118);
           jaggl.OpenGL.glDisable(3168);
           this.toolkit.setActiveTextureUnit(0, 95);
           jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
@@ -204,7 +204,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
         this.toolkit.setActiveTextureUnit(1, 110);
         this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-        this.toolkit.b(5890, 768, 0, -118);
+        this.toolkit.setTextureCombineSources(5890, 768, 0, -118);
         jaggl.OpenGL.glDisable(3168);
         this.toolkit.setActiveTextureUnit(0, 95);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);

@@ -200,11 +200,11 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         return this.field_u;
     }
 
-    final static void d(byte param0) {
+    final static void drawDisplayPromptPanel(byte guard) {
         int var1 = SpriteOptionRenderer.fullscreenDialogWidth(-25843);
         int var2 = MarkerTrackWidget.fullscreenDialogHeight((byte) 78);
-        CompactMeshGeometry.field_v.draw(var1 + (LegacyOpenGlRenderbuffer.field_B << 1), -LegacyOpenGlRenderbuffer.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, ProxyAuthenticationRequiredException.field_f - pd.field_l);
-        if (param0 == -7) {
+        CompactMeshGeometry.field_v.draw(var1 + (LegacyOpenGlRenderbuffer.field_B << 1), -LegacyOpenGlRenderbuffer.field_B + VertexStreamLayout.field_b, (FourIntReadRequest.field_l << 1) + var2, 19, ProxyAuthenticationRequiredException.field_f - FourIntReadRequest.field_l);
+        if (guard == -7) {
           DisplayPromptRenderer.drawDisplayPrompt((byte) 124);
           return;
         }
@@ -264,7 +264,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.field_e = lighting ? true : false;
           this.toolkit.setActiveTextureUnit(1, -112);
           this.toolkit.a(this.field_o, guard - 20070);
-          this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
           this.toolkit.setColorCombineSource((byte) 85, 2, true, false, LegacyVertexAttribute.TEXTURE);
           this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);

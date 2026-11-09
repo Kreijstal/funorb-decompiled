@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class HardwareBufferSet extends ka {
+final class HardwareBufferSet extends RenderBufferSet {
     private IndexBufferReference field_g;
     private int field_e;
     static String musicText;

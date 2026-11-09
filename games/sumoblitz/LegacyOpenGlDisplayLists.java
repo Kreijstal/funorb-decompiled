@@ -5,22 +5,22 @@ final class LegacyOpenGlDisplayLists {
     private int baseListId;
     static LegacyBitmapFont field_a;
 
-    final static void a(int param0, int param1, boolean param2) {
-        if (param1 == GameInstructions.field_b) {
+    final static void playSoundEffectIfChanged(int guard, int sampleId, boolean loop) {
+        if (sampleId == GameInstructions.field_b) {
           return;
         }
-        GameInstructions.field_b = param1;
-        if (param2) {
+        GameInstructions.field_b = sampleId;
+        if (loop) {
           TextureCoordinateGeneration.a(GameInstructions.field_b, 124);
           QueuedIntArrayRequest.playLoopingSample(GameInstructions.field_b, 4);
-          if (param0 > -87) {
+          if (guard > -87) {
             field_a = (LegacyBitmapFont) null;
             return;
           }
           return;
         }
         ArchiveLoadRequirement.playSoundEffect(GameInstructions.field_b, true);
-        if (param0 > -87) {
+        if (guard > -87) {
           field_a = (LegacyBitmapFont) null;
           return;
         }
@@ -68,7 +68,7 @@ final class LegacyOpenGlDisplayLists {
         if (param1) {
           return (param2 & 256) != 0 ? true : false;
         }
-        LegacyOpenGlDisplayLists.a(34, -21, true);
+        LegacyOpenGlDisplayLists.playSoundEffectIfChanged(34, -21, true);
         return (param2 & 256) != 0 ? true : false;
     }
 

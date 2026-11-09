@@ -12,7 +12,7 @@ final class LevelCompletionSupport {
           NineSlicePanel.field_d[OpenGlShaderProgram.levelIndex] = true;
         }
         if (GridWidgetContainer.livesRemaining == 3) {
-          up.field_g[OpenGlShaderProgram.levelIndex] = true;
+          IntroMeshProjection.threeLifeCompletions[OpenGlShaderProgram.levelIndex] = true;
         }
         HiscoreRequest.openPauseMenu((byte) -104);
         OpenGlIndexBuffer.g(123);

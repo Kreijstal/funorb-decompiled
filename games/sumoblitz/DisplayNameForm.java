@@ -95,7 +95,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
             !IntegerMath.isSingleBitOrZero(height, guard - 23259)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pc.glFormatComponents(format, (byte) -83);
+          var7_int = FriendListState.glFormatComponents(format, (byte) -83);
           var8 = 0;
           stackIn_11_0 = (width >= height) ? height : width;
           var9 = stackIn_11_0;

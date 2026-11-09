@@ -175,7 +175,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
-        var12 = (ResourceRequest) (this.groupRequests.a(120, (long)groupId));
+        var12 = (ResourceRequest) (this.groupRequests.get(120, (long)groupId));
         var4 = var12;
         if (var12 != null &&
           requestMode == 0 &&
@@ -354,7 +354,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final int groupLoadPercent(int groupId, int guard) {
-        ResourceRequest var3 = (ResourceRequest) (this.groupRequests.a(guard + 120, (long)groupId));
+        ResourceRequest var3 = (ResourceRequest) (this.groupRequests.get(guard + 120, (long)groupId));
         if (var3 != null) {
           return var3.loadPercent(-1);
         }
@@ -483,7 +483,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
         if (this.discardCompletedRequests &&
           IntroMeshResources.monotonicTimeMillis(-91) >= this.nextCleanupMillis) {
-          var2 = (ResourceRequest) (this.groupRequests.a(84));
+          var2 = (ResourceRequest) (this.groupRequests.first(84));
           while (var2 != null) {
             if (!var2.pending) {
               if (!var2.cleanupMarked) {
@@ -495,7 +495,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var2.unlink(false);
               }
             }
-            var2 = (ResourceRequest) (this.groupRequests.a(true));
+            var2 = (ResourceRequest) (this.groupRequests.next(true));
           }
           this.nextCleanupMillis = 1000L + IntroMeshResources.monotonicTimeMillis(-42);
         }

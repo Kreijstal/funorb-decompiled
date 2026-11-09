@@ -16,10 +16,10 @@ final class InwardSparkParticle extends TimedSceneEffect {
         byte[] var3 = null;
         HardwareTurbulentWaterNoise var1_ref = null;
         byte[] var4 = null;
-        if (null == pd.hardwareRidgedWaterData) {
+        if (null == FourIntReadRequest.hardwareRidgedWaterData) {
           var1 = new HardwareRidgedWaterNoise();
           var3 = var1.generate(128, 128, false, 16);
-          pd.hardwareRidgedWaterData = DroneDebris.storeByteArray((byte) -125, var3, false);
+          FourIntReadRequest.hardwareRidgedWaterData = DroneDebris.storeByteArray((byte) -125, var3, false);
         }
         if (LegacyOpenGlShader.hardwareTurbulentWaterData == null) {
           var1_ref = new HardwareTurbulentWaterNoise();
@@ -50,7 +50,7 @@ final class InwardSparkParticle extends TimedSceneEffect {
             this.updateAndIsExpired(-59);
           }
           if (0 != this.textureKind) {
-            im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
+            ParticleSpriteResources.sparkSprite.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           } else {
             IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no {
-    static SpriteData field_c;
-    static IntrusiveDeque field_d;
-    static LoginForm field_a;
+final class LoginFormState {
+    static SpriteData ghostCloudSpriteData;
+    static IntrusiveDeque pendingServerReads;
+    static LoginForm activeForm;
     static String[] field_b;
 
     public static void releaseStatics(int param0) {
@@ -12,9 +12,9 @@ final class no {
           return;
         }
         field_b = null;
-        field_d = null;
-        field_a = null;
-        field_c = null;
+        pendingServerReads = null;
+        activeForm = null;
+        ghostCloudSpriteData = null;
     }
 
     final static int parseDecimal(byte guard, CharSequence text) {
@@ -26,7 +26,7 @@ final class no {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard > -126) {
-            no.releaseStatics(-92);
+            LoginFormState.releaseStatics(-92);
           }
           stackIn_3_0 = SpriteOptionRenderer.parseInt(10, text, true, (byte) -84);
           return stackIn_3_0;
@@ -45,6 +45,6 @@ final class no {
     }
 
     static {
-        field_d = new IntrusiveDeque();
+        pendingServerReads = new IntrusiveDeque();
     }
 }

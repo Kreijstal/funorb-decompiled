@@ -81,7 +81,7 @@ final class AccountPacketReader {
           var4 = 96 / ((guard + 72) / 53);
           var2_long = IntroMeshResources.monotonicTimeMillis(-45);
           if (0 != ByteArrayPool.field_c &&
-            lq.field_b < 0) {
+            IntroFinalFrameResources.field_b < 0) {
             var5_ref_ub = (DelayedInboundPacket) (ScoreMultiplierTable.field_b.first(-99));
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.deliveryTimeMillis) {
@@ -110,7 +110,7 @@ final class AccountPacketReader {
           }
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(guard).append(')').toString());
         }
-        stackIn_17_0 = lq.field_b;
+        stackIn_17_0 = IntroFinalFrameResources.field_b;
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
@@ -118,19 +118,19 @@ final class AccountPacketReader {
               if (!OpenGlIndexBuffer.b(-1, 1)) {
                 return false;
               }
-              lq.field_b = NativeLibraryExtractor.field_a.readCipherByte(255);
+              IntroFinalFrameResources.field_b = NativeLibraryExtractor.field_a.readCipherByte(255);
               NativeLibraryExtractor.field_a.position = 0;
-              HardwareBufferSet.field_d = packetLengths[lq.field_b];
+              HardwareBufferSet.field_d = packetLengths[IntroFinalFrameResources.field_b];
             }
-            if (!lt.a((byte) 119)) {
+            if (!FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
               return false;
             }
             if (ByteArrayPool.field_c == 0) {
               ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
               RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
               ContentTransitionDialog.field_Q = TextureFormat.field_a;
-              TextureFormat.field_a = lq.field_b;
-              lq.field_b = -1;
+              TextureFormat.field_a = IntroFinalFrameResources.field_b;
+              IntroFinalFrameResources.field_b = -1;
               return true;
             }
             var5 = ByteArrayPool.field_c;
@@ -140,13 +140,13 @@ final class AccountPacketReader {
                 var5 = 0;
               }
             }
-            var6 = new DelayedInboundPacket((long)var5 + var2_long, lq.field_b, new byte[HardwareBufferSet.field_d]);
+            var6 = new DelayedInboundPacket((long)var5 + var2_long, IntroFinalFrameResources.field_b, new byte[HardwareBufferSet.field_d]);
             for (var7 = 0; HardwareBufferSet.field_d > var7; var7++) {
               var6.payload[var7] = NativeLibraryExtractor.field_a.payload[var7];
             }
             ScoreMultiplierTable.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
-            lq.field_b = -1;
-            stackIn_17_0 = lq.field_b;
+            IntroFinalFrameResources.field_b = -1;
+            stackIn_17_0 = IntroFinalFrameResources.field_b;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

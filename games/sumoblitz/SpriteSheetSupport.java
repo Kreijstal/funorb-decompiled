@@ -37,18 +37,18 @@ final class SpriteSheetSupport {
         }
     }
 
-    final static void a(pd param0, int param1, byte param2) {
+    final static void sendFourIntReadRequest(FourIntReadRequest request, int opcode, byte guard) {
         IsaacPacketBuffer var3 = null;
         try {
-          if (param2 < 93) {
+          if (guard < 93) {
             startGameText = (String) null;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.writeCipherByte(param1, 8);
-          var3.writeByte((byte) 111, param0.field_k);
-          var3.writeShort(-10, param0.field_o);
+          var3.writeCipherByte(opcode, 8);
+          var3.writeByte((byte) 111, request.field_k);
+          var3.writeShort(-10, request.field_o);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "k.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "k.A(" + (request != null ? "{...}" : "null") + ',' + opcode + ',' + guard + ')');
         }
     }
 

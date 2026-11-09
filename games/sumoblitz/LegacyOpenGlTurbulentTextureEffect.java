@@ -264,9 +264,9 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         this.stateLists = new LegacyOpenGlDisplayLists(this.toolkit, 2);
         this.stateLists.beginList(0, 4864);
         this.toolkit.setActiveTextureUnit(1, 90);
-        this.toolkit.e(0, -16777216);
+        this.toolkit.setTextureConstantArgb(0, -16777216);
         this.toolkit.setTextureCombineOperations(20685, 7681, 260);
-        this.toolkit.a(121, 0, 34166, 770);
+        this.toolkit.setTextureCombineOperands(121, 0, 34166, 770);
         this.toolkit.setActiveTextureUnit(0, 96);
         jaggl.OpenGL.glBindProgramARB(34336, this.program.programId);
         jaggl.OpenGL.glEnable(34336);
@@ -277,7 +277,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMatrixMode(5888);
         this.toolkit.setTextureCombineMode(0, guard);
-        this.toolkit.a(122, 0, 5890, 770);
+        this.toolkit.setTextureCombineOperands(122, 0, 5890, 770);
         this.toolkit.setActiveTextureUnit(0, 99);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34336);

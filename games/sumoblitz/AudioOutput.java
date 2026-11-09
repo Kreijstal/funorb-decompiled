@@ -80,7 +80,7 @@ class AudioOutput {
                 serviceThread == null) {
                 serviceThread = new AudioServiceThread();
                 serviceThread.taskDispatcher = taskDispatcher;
-                taskDispatcher.a(true, (Runnable) ((Object) serviceThread), threadPriority);
+                taskDispatcher.startThread(true, (Runnable) ((Object) serviceThread), threadPriority);
               }
               if (serviceThread != null) {
                 if (serviceThread.outputs[outputIndex] != null) {

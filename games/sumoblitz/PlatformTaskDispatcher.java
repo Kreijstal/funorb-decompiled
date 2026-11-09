@@ -76,18 +76,18 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final PlatformTask a(Object param0, int param1, int param2, boolean param3, int param4) {
+    private final PlatformTask enqueueTask(Object argument, int secondIntArgument, int intArgument, boolean guard, int operation) {
         PlatformTask var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         var6 = new PlatformTask();
-        var6.secondIntArgument = param1;
-        var6.operation = param4;
-        var6.objectArgument = param0;
-        var6.intArgument = param2;
+        var6.secondIntArgument = secondIntArgument;
+        var6.operation = operation;
+        var6.objectArgument = argument;
+        var6.intArgument = intArgument;
         var7 = this;
         synchronized (var7) {
-          if (param3) {
+          if (guard) {
             this.field_d = (LimitedRandomAccessFile) null;
           }
           if (this.field_x == null) {
@@ -102,14 +102,14 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    private final PlatformTask a(int param0, String param1, boolean param2, boolean param3) {
-        if (!param2) {
+    private final PlatformTask openSocket(int port, String host, boolean guard, boolean useProxy) {
+        if (!guard) {
           this.field_b = (MicrosoftCursorCallback) null;
         }
-        return this.a(param1, 0, param0, false, param3 ? 22 : 1);
+        return this.enqueueTask(host, 0, port, false, useProxy ? 22 : 1);
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean guard) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -123,9 +123,9 @@ final class PlatformTaskDispatcher implements Runnable {
             this.field_m = true;
             this.notifyAll();
           }
-          if (param0) {
+          if (guard) {
             var4 = (Runnable) null;
-            this.a(true, (Runnable) null, 68);
+            this.startThread(true, (Runnable) null, 68);
           }
           try {
             this.field_a.join();
@@ -255,7 +255,7 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_f) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 6:
@@ -303,21 +303,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_v, new Object[]{var15[0], var15[1], new Integer(var8.intArgument), new Integer(var8.secondIntArgument), var15[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_o.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var16_ref = (String) (var8.objectArgument);
                             if (!var16_ref.startsWith("http://") &&
                               !var16_ref.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var16_ref.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var16_ref.charAt(var5)) == -1) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var16_ref + "\"");
@@ -326,7 +326,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.result = var3_ref2;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref2);
                           }
                         }
                         break;
@@ -439,26 +439,26 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_w ? true : false;
     }
 
-    final PlatformTask a(int param0, Class param1, String param2, Class[] param3) {
-        if (param0 != 0) {
+    final PlatformTask findDeclaredMethod(int guard, Class owner, String name, Class[] parameterTypes) {
+        if (guard != 0) {
           this.field_i = (LimitedRandomAccessFile[]) null;
         }
-        return this.a(new Object[]{param1, param2, param3}, 0, 0, false, 8);
+        return this.enqueueTask(new Object[]{owner, name, parameterTypes}, 0, 0, false, 8);
     }
 
-    final PlatformTask a(boolean param0, Runnable param1, int param2) {
-        if (!param0) {
+    final PlatformTask startThread(boolean guard, Runnable runnable, int priority) {
+        if (!guard) {
           File var5 = (File) null;
           this.a((byte[]) null, -30, (File) null);
         }
-        return this.a(param1, 0, param2, !param0 ? true : false, 2);
+        return this.enqueueTask(runnable, 0, priority, !guard ? true : false, 2);
     }
 
-    final PlatformTask a(byte param0, String param1, int param2) {
-        if (param0 < 8) {
+    final PlatformTask openDirectSocket(byte guard, String host, int port) {
+        if (guard < 8) {
           field_j = 62;
         }
-        return this.a(param2, param1, true, false);
+        return this.openSocket(port, host, true, false);
     }
 
     final boolean a(byte[] param0, int param1, File param2) {
@@ -470,7 +470,7 @@ final class PlatformTaskDispatcher implements Runnable {
           var4 = new FileOutputStream(param2);
           if (param1 != -31357) {
             var5 = (Class[]) null;
-            this.a(-111, (Class) null, (String) null, (Class[]) null);
+            this.findDeclaredMethod(-111, (Class) null, (String) null, (Class[]) null);
           }
           var4.write(param0, 0, param0.length);
           var4.close();
@@ -482,38 +482,38 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(byte param0, java.net.URL param1) {
-        if (param0 <= 71) {
+    final PlatformTask openUrlStream(byte guard, java.net.URL url) {
+        if (guard <= 71) {
           return (PlatformTask) null;
         }
-        return this.a(param1, 0, 0, false, 4);
+        return this.enqueueTask(url, 0, 0, false, 4);
     }
 
-    final PlatformTask a(java.awt.Frame param0, int param1) {
-        if (param1 != 19) {
+    final PlatformTask restoreDisplayMode(java.awt.Frame frame, int guard) {
+        if (guard != 19) {
           this.supportsFullscreen((byte) -116);
         }
-        return this.a(param0, 0, 0, false, 7);
+        return this.enqueueTask(frame, 0, 0, false, 7);
     }
 
-    final PlatformTask b(byte param0) {
-        int var2 = -105 % ((73 - param0) / 41);
-        return this.a((Object) null, 0, 0, false, 5);
+    final PlatformTask listDisplayModes(byte guard) {
+        int var2 = -105 % ((73 - guard) / 41);
+        return this.enqueueTask((Object) null, 0, 0, false, 5);
     }
 
-    final PlatformTask a(int param0, String param1, Class param2) {
-        if (param0 != 0) {
+    final PlatformTask findDeclaredField(int guard, String name, Class owner) {
+        if (guard != 0) {
           Class var5 = (Class) null;
-          this.a(-2, (String) null, (Class) null);
+          this.findDeclaredField(-2, (String) null, (Class) null);
         }
-        return this.a(new Object[]{param2, param1}, 0, 0, false, 9);
+        return this.enqueueTask(new Object[]{owner, name}, 0, 0, false, 9);
     }
 
-    final PlatformTask a(boolean param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask enterFullscreen(boolean param0, int param1, int param2, int param3, int param4) {
         if (param0) {
           return (PlatformTask) null;
         }
-        return this.a((Object) null, param1 + (param2 << 16), param4 + (param3 << 16), false, 6);
+        return this.enqueueTask((Object) null, param1 + (param2 << 16), param4 + (param3 << 16), false, 6);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
@@ -675,7 +675,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

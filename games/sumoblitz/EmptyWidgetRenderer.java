@@ -33,7 +33,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             NativeLibraryExtractor.field_a = new IsaacPacketBuffer(param3);
             InwardSparkParticle.field_v = new IsaacPacketBuffer(param8);
             CacheIoRequest.field_v = param5;
-            vp.field_a = param7;
+            DroneVariantScoring.field_a = param7;
             MouseInputShutdown.field_b = param13;
             ScrollPane.field_C = param9;
             CacheReferenceNode.field_t = param2;

@@ -12,7 +12,7 @@ final class SpriteData {
     int field_d;
     int field_c;
 
-    private final static SpriteData[] a(byte[] param0) {
+    private final static SpriteData[] decodeSpriteSheet(byte[] bytes) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_53_0 = 0;
@@ -45,14 +45,14 @@ final class SpriteData {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new PacketBuffer(param0);
-        var1.position = param0.length - 2;
+        var1 = new PacketBuffer(bytes);
+        var1.position = bytes.length - 2;
         var2 = var1.readUnsignedShort(255);
         var3 = new SpriteData[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new SpriteData();
         }
-        var1.position = param0.length - 7 - var2 * 8;
+        var1.position = bytes.length - 7 - var2 * 8;
         var4Lifetime1 = var1.readUnsignedShort(255);
         var5 = var1.readUnsignedShort(255);
         var6 = (var1.readUnsignedByte(-31302) & 255) + 1;
@@ -73,7 +73,7 @@ final class SpriteData {
           var8_ref_ri.field_b = var4Lifetime1 - var8_ref_ri.field_h - var8_ref_ri.field_c;
           var8_ref_ri.field_f = var5 - var8_ref_ri.field_i - var8_ref_ri.field_d;
         }
-        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = bytes.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -152,27 +152,27 @@ final class SpriteData {
         return var3;
     }
 
-    final static SpriteData[] a(ResourceArchive param0, String param1) {
-        byte[] var2 = param0.fetchFlatNamedFile((byte) 111, param1);
+    final static SpriteData[] loadFlatSheet(ResourceArchive archive, String name) {
+        byte[] var2 = archive.fetchFlatNamedFile((byte) 111, name);
         if (var2 == null) {
           return null;
         }
-        return SpriteData.a(var2);
+        return SpriteData.decodeSpriteSheet(var2);
     }
 
-    final static SpriteData[] b(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.fetchNamedFile(param2, param1, -1);
+    final static SpriteData[] loadSheet(ResourceArchive archive, String groupName, String fileName) {
+        byte[] var3 = archive.fetchNamedFile(fileName, groupName, -1);
         if (var3 == null) {
           return null;
         }
-        return SpriteData.a(var3);
+        return SpriteData.decodeSpriteSheet(var3);
     }
 
-    final static SpriteData a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.fetchNamedFile(param2, param1, -1);
+    final static SpriteData loadSprite(ResourceArchive archive, String groupName, String fileName) {
+        byte[] var3 = archive.fetchNamedFile(fileName, groupName, -1);
         if (var3 == null) {
           return null;
         }
-        return SpriteData.a(var3)[0];
+        return SpriteData.decodeSpriteSheet(var3)[0];
     }
 }

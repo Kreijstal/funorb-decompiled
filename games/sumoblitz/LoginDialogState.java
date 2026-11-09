@@ -65,7 +65,7 @@ final class LoginDialogState {
             null != param1.field_a) {
             LegacyOpenGlGraphicsHeap.c((byte) 71);
           }
-          sv.field_b = 0;
+          RsaEnvelopeScratch.field_b = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param1.field_n > var8)))) {
@@ -124,7 +124,7 @@ final class LoginDialogState {
                           dupTemp$0 = param1.field_a[var8];
                           LoginForm.field_G[dupTemp$0] = LoginForm.field_G[dupTemp$0] + 1;
                         }
-                        sv.field_b = sv.field_b + 1;
+                        RsaEnvelopeScratch.field_b = RsaEnvelopeScratch.field_b + 1;
                         break;
                       }
                     }
@@ -173,7 +173,7 @@ final class LoginDialogState {
 
     final static void restoreBaselineUpgrades(int guard) {
         try {
-          hc.selectedBounceLevel = LegacyOpenGlSpecularEffect.field_h[2];
+          AccountStatusDialogState.selectedBounceLevel = LegacyOpenGlSpecularEffect.field_h[2];
           LegacyOpenGlEffectManager.selectedTractionLevel = LegacyOpenGlSpecularEffect.field_h[1];
           ResourceArchive.selectedSpeedLevel = LegacyOpenGlSpecularEffect.field_h[0];
           int var1_int = -21 / ((guard + 59) / 40);

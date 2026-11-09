@@ -90,7 +90,7 @@ final class StatisticsSubmissionSupport {
             StatisticsSubmissionSupport.findSubmittedHiscore((HiscoreRequest) null, 14, (SessionStatisticsSubmission) null, -12);
           }
           HuffmanDecoder.field_f.addLast((IntrusiveNode) (submission), (byte) 39);
-          km.sendSessionStatistics((byte) 69, opcode, submission);
+          FourStatHiscoreRequest.sendSessionStatistics((byte) 69, opcode, submission);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kp.A(" + opcode + ',' + (submission != null ? "{...}" : "null") + ',' + guard + ')');
         }

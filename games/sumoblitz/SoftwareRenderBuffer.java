@@ -120,7 +120,7 @@ final class SoftwareRenderBuffer implements RenderBuffer {
         }
         try {
           if (11 == LoginDialogNavigation.field_a) {
-            tu.a((byte) -126);
+            CanvasPresentationHook.beforeCanvasPresent((byte) -126);
           }
           VertexStreamLayout.a(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
           IterableNodeHashTable.a(0, 0, param1, (byte) 124);

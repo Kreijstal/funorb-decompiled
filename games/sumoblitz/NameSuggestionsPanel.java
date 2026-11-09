@@ -9,15 +9,15 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     static String orbPointsText;
     private String[] field_B;
 
-    final static void a(int param0, float param1, String param2) {
+    final static void setLoadingProgress(int guard, float progress, String message) {
         try {
-          ContentTransitionDialog.field_R = param1;
-          LegacyOpenGlVertexBuffer.field_k = param2;
-          if (param0 != 20) {
+          ContentTransitionDialog.field_R = progress;
+          LegacyOpenGlVertexBuffer.field_k = message;
+          if (guard != 20) {
             field_F = (SpriteData[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.D(" + guard + ',' + progress + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,26 +134,26 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
-        if (param0 != 26) {
+    final static String discardLinkPrefix(byte guard, boolean firstFlag, boolean secondFlag, boolean thirdFlag) {
+        if (guard != 26) {
           return (String) null;
         }
         int var4 = 0;
-        if (param1) {
+        if (firstFlag) {
           var4 += 4;
         }
-        if (param3) {
+        if (thirdFlag) {
           var4 += 2;
         }
-        if (param2) {
+        if (secondFlag) {
           var4++;
         }
         return LabeledWidget.field_G[var4];
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasLoginSessionSocket(byte guard) {
         boolean stackIn_6_0 = false;
-        if (param0 >= -34) {
+        if (guard >= -34) {
           field_E = (BufferedCacheFile) null;
         }
         stackIn_6_0 = (null != DisplayModeConfirmationDialog.accountSocket) && (TextCaretLayout.accountPhase.isLoginSessionPhase(17704));
@@ -178,7 +178,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           }
           if (guard != 710) {
             var8 = (String) null;
-            NameSuggestionsPanel.a(117, 1.4675142765045166f, (String) null);
+            NameSuggestionsPanel.setLoadingProgress(117, 1.4675142765045166f, (String) null);
           }
           if (source == this.field_C[this.field_B.length]) {
             this.field_A.invalidateNameAvailability((byte) -86);
@@ -199,92 +199,92 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        SecondaryNodeHashTable.field_g = SpriteData.b(param3, "", "fontalpha");
+        SecondaryNodeHashTable.field_g = SpriteData.loadSheet(param3, "", "fontalpha");
         SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
-        ArchiveLoadingStage.field_b = SpriteData.b(param3, "", "fontglow");
+        ArchiveLoadingStage.field_b = SpriteData.loadSheet(param3, "", "fontglow");
         VertexStreamLayout.field_c = SocketConnector.field_a;
-        OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
+        OpenGlTransparentWaterEffect.field_i = SpriteData.loadSheet(param3, "", "smallfontalpha");
         AccountConnectionPhase.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
-        LegacyOpenGlReflectionEffect.field_j = SpriteData.b(param3, "", "glowfontalpha");
-        sv.field_a = AccountConnectionPhase.field_a;
-        DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
+        LegacyOpenGlReflectionEffect.field_j = SpriteData.loadSheet(param3, "", "glowfontalpha");
+        RsaEnvelopeScratch.field_a = AccountConnectionPhase.field_a;
+        DropDownWidget.field_F = SpriteData.loadSheet(param3, "", "boldfontalpha");
         LoginTextResources.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
-        ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
+        ProxySocketConnector.field_f = SpriteData.loadSheet(param3, "", "boldglowfontalpha");
         IntroLightingLookup.field_b = LoginTextResources.field_b;
-        field_F = SpriteData.b(param3, "", "menu_frame");
-        MidiNoteMixer.field_q = SpriteData.b(param3, "", "tooltip_kit");
-        SoftwareRenderTarget.field_b = SpriteData.b(param3, "", "achievements");
-        CompactMeshGeometry.field_N = SpriteData.a(param0, "basic", "unachieved");
-        MusicCrossfadeStream.field_p = SpriteData.a(param0, "basic", "locked");
-        IntrusiveNode.field_d = SpriteData.a(param3, "", "titleimage");
-        OpenGlCubeTexture.field_i = SpriteData.a(param3, "", "lock");
-        hc.field_b = SpriteData.a(param3, "", "heart");
-        oi.field_d = SpriteData.a(param3, "", "skull");
-        TextLayoutLine.field_c = SpriteData.b(param3, "", "slider");
+        field_F = SpriteData.loadSheet(param3, "", "menu_frame");
+        MidiNoteMixer.field_q = SpriteData.loadSheet(param3, "", "tooltip_kit");
+        SoftwareRenderTarget.field_b = SpriteData.loadSheet(param3, "", "achievements");
+        CompactMeshGeometry.field_N = SpriteData.loadSprite(param0, "basic", "unachieved");
+        MusicCrossfadeStream.field_p = SpriteData.loadSprite(param0, "basic", "locked");
+        IntrusiveNode.field_d = SpriteData.loadSprite(param3, "", "titleimage");
+        OpenGlCubeTexture.field_i = SpriteData.loadSprite(param3, "", "lock");
+        AccountStatusDialogState.heartSpriteData = SpriteData.loadSprite(param3, "", "heart");
+        HiscoreRequestQueue.field_d = SpriteData.loadSprite(param3, "", "skull");
+        TextLayoutLine.field_c = SpriteData.loadSheet(param3, "", "slider");
         if (param2 != 20) {
           return;
         }
         try {
-          LoginMethodPreference.field_c = SpriteData.b(param3, "", "statline_tab");
-          ResourceRequest.field_r = SpriteData.b(param3, "", "statline_tab_flip");
-          IsaacCipher.field_d = SpriteData.b(param3, "", "button_off");
-          ProxyAuthenticationRequiredException.field_a = SpriteData.b(param3, "", "button_over");
-          WaterTextureResources.field_c = SpriteData.b(param3, "", "button_on");
-          LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.b(param3, "", "chargebar_vertical");
-          IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
-          LegacyOpenGlPostProcessEffect.field_k = SpriteData.a(param3, "", "mouse");
-          BufferedSocket.field_n = SpriteData.a(param3, "", "keyboard");
-          RasterStateFrame.field_l = SpriteData.b(param3, "", "player");
-          LegacyOpenGlTextureCache.field_e = SpriteData.b(param3, "", "mook");
-          HardwareTurbulentWaterNoise.field_w = SpriteData.b(param3, "", "fast");
-          StatefulWidgetRenderer.field_r = SpriteData.b(param3, "", "sleeper");
-          RasterColorTables.field_b = SpriteData.b(param3, "", "splitter");
-          DisplayModeConfirmationDialog.field_V = SpriteData.b(param3, "", "seeker");
-          LruNodeCache.field_a = SpriteData.b(param3, "", "shadowdudes");
-          CachedTextLayout.field_h = SpriteData.b(param3, "", "mod_armour");
-          RendererSession.field_b = SpriteData.b(param3, "", "mod_bomb");
-          FullscreenDisplayMode.field_c = SpriteData.b(param3, "", "mod_spikes");
-          ServerDataReadRequest.field_k = SpriteData.a(param3, "", "zap");
-          Transform3D.field_a = SpriteData.b(param3, "", "chargebar");
-          ToolkitRasterStateFrame.field_a = SpriteData.a(param3, "", "bounceup");
-          EnemyDroneFactory.field_c = SpriteData.b(param3, "", "powerups");
-          HiscorePlayerName.field_d = SpriteData.a(param3, "", "particle");
-          DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
-          FullscreenMembershipDialog.field_T = SpriteData.a(param3, "", "particle_alpha");
-          UiStyle.field_v = SpriteData.b(param3, "", "particles_alpha");
-          LegacyOpenGlRenderbuffer.field_w = SpriteData.b(param3, "", "particle_ring");
-          EmailAvailabilityRequest.field_g = SpriteData.a(param3, "", "particle_sprinkle");
-          HardwareTurbulentWaterNoise.field_t = SpriteData.a(param3, "", "particle_star");
-          ShaderEffect.field_c = SpriteData.a(param3, "", "particle_pixel");
-          SpriteStripButtonRenderer.field_p = SpriteData.a(param3, "", "particle_pixel_alpha");
-          pc.field_c = SpriteData.a(param3, "", "ghost");
-          no.field_c = SpriteData.a(param3, "", "ghost_cloud");
-          LabeledWidget.field_E = SpriteData.a(param3, "", "ghost_splatter");
-          ArchiveLoadingStage.field_c = SpriteData.a(param3, "", "shadow");
-          SceneryParticle.field_C = SpriteData.a(param3, "", "driftinglight");
-          wf.field_a = SpriteData.a(param3, "", "driftinglight_snow");
-          RidgedNoise3D.field_p = SpriteData.a(param3, "", "driftinglight_rough");
-          UnderageAccountInfoPanel.field_C = SpriteData.a(param3, "", "shockwave");
-          MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
-          SoftLruCache.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
-          LegacyOpenGlCubeTexture.field_n = SpriteData.b(param3, "", "electricity");
-          FallbackShaderEffect.field_h = SpriteData.b(param3, "", "electricity_flip");
-          ArchiveCatalog.field_f = SpriteData.a(param3, "", "attract");
-          MusicVoice.field_o = SpriteData.a(param3, "", "repulse");
-          VertexBufferReference.field_c = SpriteData.a(param3, "", "icepatch");
-          BigBurstaProgress.attractorSpriteData = SpriteData.b(param3, "", "attractor");
-          IntList.field_e = SpriteData.a(param3, "", "bouncer");
-          FullscreenMembershipDialog.field_S = SpriteData.b(param3, "", "landmine");
-          ByteArrayStorage.field_a = SpriteData.b(param3, "", "repeller");
-          ScrollViewport.field_C = SpriteData.b(param3, "", "accelerator");
-          pc.field_b = SpriteData.b(param3, "", "teleporter");
-          ScrollPane.field_F = SpriteData.b(param3, "", "ice");
-          DroneWaveDefinition.field_m = SpriteData.b(param3, "", "zaptrap");
-          ke.field_c = SpriteData.a(param3, "reticule");
-          PasswordValidator.field_i = SpriteData.a(param3, "", "reticule_flat");
-          hc.field_a = SpriteData.b(param3, "", "gravitywell");
-          RasterStateFrame.field_o = SpriteData.a(param3, "", "gravitywell_field");
-          StripedProgressWidget.field_F = SpriteData.b(param3, "", "tutorial_images");
+          LoginMethodPreference.field_c = SpriteData.loadSheet(param3, "", "statline_tab");
+          ResourceRequest.field_r = SpriteData.loadSheet(param3, "", "statline_tab_flip");
+          IsaacCipher.field_d = SpriteData.loadSheet(param3, "", "button_off");
+          ProxyAuthenticationRequiredException.field_a = SpriteData.loadSheet(param3, "", "button_over");
+          WaterTextureResources.field_c = SpriteData.loadSheet(param3, "", "button_on");
+          LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.loadSheet(param3, "", "chargebar_vertical");
+          IntrusiveDequeCursor.field_e = SpriteData.loadSprite(param3, "", "congratulations");
+          LegacyOpenGlPostProcessEffect.field_k = SpriteData.loadSprite(param3, "", "mouse");
+          BufferedSocket.field_n = SpriteData.loadSprite(param3, "", "keyboard");
+          RasterStateFrame.field_l = SpriteData.loadSheet(param3, "", "player");
+          LegacyOpenGlTextureCache.field_e = SpriteData.loadSheet(param3, "", "mook");
+          HardwareTurbulentWaterNoise.field_w = SpriteData.loadSheet(param3, "", "fast");
+          StatefulWidgetRenderer.field_r = SpriteData.loadSheet(param3, "", "sleeper");
+          RasterColorTables.field_b = SpriteData.loadSheet(param3, "", "splitter");
+          DisplayModeConfirmationDialog.field_V = SpriteData.loadSheet(param3, "", "seeker");
+          LruNodeCache.field_a = SpriteData.loadSheet(param3, "", "shadowdudes");
+          CachedTextLayout.field_h = SpriteData.loadSheet(param3, "", "mod_armour");
+          RendererSession.field_b = SpriteData.loadSheet(param3, "", "mod_bomb");
+          FullscreenDisplayMode.field_c = SpriteData.loadSheet(param3, "", "mod_spikes");
+          ServerDataReadRequest.field_k = SpriteData.loadSprite(param3, "", "zap");
+          Transform3D.field_a = SpriteData.loadSheet(param3, "", "chargebar");
+          ToolkitRasterStateFrame.field_a = SpriteData.loadSprite(param3, "", "bounceup");
+          EnemyDroneFactory.field_c = SpriteData.loadSheet(param3, "", "powerups");
+          HiscorePlayerName.field_d = SpriteData.loadSprite(param3, "", "particle");
+          DroneChargeParticle.field_v = SpriteData.loadSheet(param3, "", "particles");
+          FullscreenMembershipDialog.field_T = SpriteData.loadSprite(param3, "", "particle_alpha");
+          UiStyle.field_v = SpriteData.loadSheet(param3, "", "particles_alpha");
+          LegacyOpenGlRenderbuffer.field_w = SpriteData.loadSheet(param3, "", "particle_ring");
+          EmailAvailabilityRequest.field_g = SpriteData.loadSprite(param3, "", "particle_sprinkle");
+          HardwareTurbulentWaterNoise.field_t = SpriteData.loadSprite(param3, "", "particle_star");
+          ShaderEffect.field_c = SpriteData.loadSprite(param3, "", "particle_pixel");
+          SpriteStripButtonRenderer.field_p = SpriteData.loadSprite(param3, "", "particle_pixel_alpha");
+          FriendListState.ghostSpriteData = SpriteData.loadSprite(param3, "", "ghost");
+          LoginFormState.ghostCloudSpriteData = SpriteData.loadSprite(param3, "", "ghost_cloud");
+          LabeledWidget.field_E = SpriteData.loadSprite(param3, "", "ghost_splatter");
+          ArchiveLoadingStage.field_c = SpriteData.loadSprite(param3, "", "shadow");
+          SceneryParticle.field_C = SpriteData.loadSprite(param3, "", "driftinglight");
+          SnowParticleSpriteData.spriteData = SpriteData.loadSprite(param3, "", "driftinglight_snow");
+          RidgedNoise3D.field_p = SpriteData.loadSprite(param3, "", "driftinglight_rough");
+          UnderageAccountInfoPanel.field_C = SpriteData.loadSprite(param3, "", "shockwave");
+          MouseInputHandler.field_b = SpriteData.loadSheet(param3, "", "lightningrod");
+          SoftLruCache.field_a = SpriteData.loadSheet(param3, "", "lightningrod_lowgraphics");
+          LegacyOpenGlCubeTexture.field_n = SpriteData.loadSheet(param3, "", "electricity");
+          FallbackShaderEffect.field_h = SpriteData.loadSheet(param3, "", "electricity_flip");
+          ArchiveCatalog.field_f = SpriteData.loadSprite(param3, "", "attract");
+          MusicVoice.field_o = SpriteData.loadSprite(param3, "", "repulse");
+          VertexBufferReference.field_c = SpriteData.loadSprite(param3, "", "icepatch");
+          BigBurstaProgress.attractorSpriteData = SpriteData.loadSheet(param3, "", "attractor");
+          IntList.field_e = SpriteData.loadSprite(param3, "", "bouncer");
+          FullscreenMembershipDialog.field_S = SpriteData.loadSheet(param3, "", "landmine");
+          ByteArrayStorage.field_a = SpriteData.loadSheet(param3, "", "repeller");
+          ScrollViewport.field_C = SpriteData.loadSheet(param3, "", "accelerator");
+          FriendListState.teleporterSpriteData = SpriteData.loadSheet(param3, "", "teleporter");
+          ScrollPane.field_F = SpriteData.loadSheet(param3, "", "ice");
+          DroneWaveDefinition.field_m = SpriteData.loadSheet(param3, "", "zaptrap");
+          AppletInstanceState.reticuleSpriteData = SpriteData.loadFlatSheet(param3, "reticule");
+          PasswordValidator.field_i = SpriteData.loadSprite(param3, "", "reticule_flat");
+          AccountStatusDialogState.gravityWellSpriteData = SpriteData.loadSheet(param3, "", "gravitywell");
+          RasterStateFrame.field_o = SpriteData.loadSprite(param3, "", "gravitywell_field");
+          StripedProgressWidget.field_F = SpriteData.loadSheet(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -309,18 +309,18 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
-        if (param0 != 26) {
+    final static String discardLinkPrefixIntGuard(int guard, boolean firstFlag, boolean secondFlag, boolean thirdFlag) {
+        if (guard != 26) {
           return (String) null;
         }
         int var4 = 0;
-        if (param1) {
+        if (firstFlag) {
           var4 += 4;
         }
-        if (param3) {
+        if (thirdFlag) {
           var4 += 2;
         }
-        if (param2) {
+        if (secondFlag) {
           var4++;
         }
         return LabeledWidget.field_G[var4];

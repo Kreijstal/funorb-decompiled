@@ -82,7 +82,7 @@ final class WidgetTheme {
         RuntimeException var5 = null;
         try {
           if (guard != 13421772) {
-            this.a(104, 13, -85, (byte) 98, -17);
+            this.pushClip(104, 13, -85, (byte) 98, -17);
           }
           if (!this.wrapTooltips) {
             this.drawSingleLineTooltip(y, text, x, -22699);
@@ -104,9 +104,9 @@ final class WidgetTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        TextCaretLayout.pushClip(param0, param2, 1, param1, param4);
-        if (param3 > -57) {
+    final void pushClip(int bottom, int left, int top, byte guard, int right) {
+        TextCaretLayout.pushClip(bottom, top, 1, left, right);
+        if (guard > -57) {
           String var7 = (String) null;
           this.drawTooltip(-116, 1, -84, (String) null);
         }
@@ -154,9 +154,9 @@ final class WidgetTheme {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.drawLine(param3, param5, param1, param4, param0);
-        if (param2) {
+    final void drawLine(int color, int endX, boolean guard, int startX, int endY, int startY) {
+        SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
+        if (guard) {
           this.field_f = (WidgetRenderer) null;
         }
     }
@@ -381,9 +381,9 @@ final class WidgetTheme {
         instructionsText = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRasterizer.fillRectangleAlpha(param4, param6, param5, param2, param3, param0);
-        if (param1 != 3) {
+    final void fillRectangleAlpha(int opacity, int guard, int height, int color, int x, int width, int y) {
+        SoftwareRasterizer.fillRectangleAlpha(x, y, width, height, color, opacity);
+        if (guard != 3) {
           byte[] var9 = (byte[]) null;
           WidgetTheme.copyBytes((byte[]) null, -45);
         }

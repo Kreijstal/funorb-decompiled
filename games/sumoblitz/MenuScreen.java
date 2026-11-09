@@ -79,7 +79,7 @@ class MenuScreen {
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
         var12 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, true, false, false, true};
-        DelegatingCanvas.a(up.field_c, 380, -5, param2 << 24, 3, var22, 650, 55, 1, true);
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, param2 << 24, 3, var22, 650, 55, 1, true);
         var8Lifetime1 = 35;
         if (param1 >= -56) {
           return;
@@ -121,8 +121,8 @@ class MenuScreen {
                 var19 = var13;
                 if (var18 <= PointLight.mouseX &&
                   (var18 + 48) >= PointLight.mouseX &&
-                  pi.field_e >= var19 &&
-                  pi.field_e <= var19 + 48 && (!var12[var17] ||
+                  ArenaDefinitionCodec.field_e >= var19 &&
+                  ArenaDefinitionCodec.field_e <= var19 + 48 && (!var12[var17] ||
                   (var14 & 1 << var17) != 0)) {
                   var15 = var17;
                 }
@@ -167,7 +167,7 @@ class MenuScreen {
                     var10[var17]) {
                     var20 = EnemyDroneFactory.field_a;
                   } else {
-                    var20 = pi.field_d;
+                    var20 = ArenaDefinitionCodec.field_d;
                   }
                 }
               } else {
@@ -264,7 +264,7 @@ class MenuScreen {
             if (var21 != 0) {
               if (!(HardwareRidgedWaterNoise.field_x <= 0) ||
                 !var10[var15]) {
-                pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
+                ArenaDefinitionCodec.field_d.draw(160, -30 + var20_int, 0, var5, 1);
                 EnemyDroneFactory.field_a.draw(160, var20_int - 30, 0, var5, 1);
               } else {
                 EnemyDroneFactory.field_a.draw(160, var20_int - 30, 0, var5, 1);
@@ -273,7 +273,7 @@ class MenuScreen {
           } else {
             if (!(HardwareRidgedWaterNoise.field_x <= 0) ||
               !var10[var15]) {
-              pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
+              ArenaDefinitionCodec.field_d.draw(160, -30 + var20_int, 0, var5, 1);
               if (var21 != 0) {
                 EnemyDroneFactory.field_a.draw(160, var20_int - 30, 0, var5, 1);
               }
@@ -414,7 +414,7 @@ class MenuScreen {
             param1 < 2) {
             var14_ref = ForceFieldRingEffect.field_t;
             var15_ref = LoginTextResources.field_b;
-            var13_ref = hc.field_e;
+            var13_ref = AccountStatusDialogState.headingFont;
           } else {
             var13_ref = GameTrackPlayback.field_a;
             var14_ref = QueuedIntArrayRequest.field_k;
@@ -483,18 +483,18 @@ class MenuScreen {
           var14_ref.a(-1, -24 + (var10 >> 1) + var7, var9.toUpperCase(), var16 + (var17 + var15_ref.field_i + var6_int), param4 << 24 | 5023231, 115);
           var13_ref.a(-1, -24 + var7 + (var10 >> 1), var9.toUpperCase(), var6_int + var15_ref.field_i - (-var17 - var16), var12, 127);
           var19 = var19 + (16 + SocketJs5Client.field_q);
-          vm.field_a[1].drawRotated((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
-          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
-          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() * 2 - 2 - 2 + (var19 + 10)), (float)(-2 + (var6_int + 3 + 10)), 4096, 0, 1, 0, 2);
-          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() * 3 - 2 + var19 - 2 + 10), (float)(10 + (3 + var6_int) - 2), 4096, 0, 1, 0, 2);
-          vm.field_a[3].drawRotated((float)(-2 + var19 - 2 + 10 + 4 * vm.field_a[1].paddedWidth()), (float)(3 + var6_int + 8), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[1].drawRotated((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[2].drawRotated((float)(Base37NameAlphabet.field_a[1].paddedWidth() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[2].drawRotated((float)(Base37NameAlphabet.field_a[1].paddedWidth() * 2 - 2 - 2 + (var19 + 10)), (float)(-2 + (var6_int + 3 + 10)), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[2].drawRotated((float)(Base37NameAlphabet.field_a[1].paddedWidth() * 3 - 2 + var19 - 2 + 10), (float)(10 + (3 + var6_int) - 2), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[3].drawRotated((float)(-2 + var19 - 2 + 10 + 4 * Base37NameAlphabet.field_a[1].paddedWidth()), (float)(3 + var6_int + 8), 4096, 0, 1, 0, 2);
           if (var8 != 12) {
             stackIn_44_0 = TextureGeneratorNode.musicVolume;
           } else {
             stackIn_44_0 = RasterColorTables.soundVolume;
           }
           var20 = stackIn_44_0;
-          vm.field_a[0].drawRotated((float)(10 + (var19 + (var20 >> 1) - 2) - 2), (float)(10 + (var6_int + 1)), 4096, 0, 1, 0, 2);
+          Base37NameAlphabet.field_a[0].drawRotated((float)(10 + (var19 + (var20 >> 1) - 2) - 2), (float)(10 + (var6_int + 1)), 4096, 0, 1, 0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -697,7 +697,7 @@ class MenuScreen {
         if (this.screenId == 3) {
           var3 = 2;
         }
-        this.field_g.resetSelection(param1, -123, this.a(PointLight.mouseX, (byte) 41, pi.field_e), var3);
+        this.field_g.resetSelection(param1, -123, this.a(PointLight.mouseX, (byte) 41, ArenaDefinitionCodec.field_e), var3);
         this.field_c = -1;
     }
 
@@ -912,7 +912,7 @@ class MenuScreen {
                         StrongCacheReference.switchMenuScreen(-7753, true, 7);
                       }
                     }
-                    TextLayout.a(0, 0);
+                    TextLayout.playGameTrack(0, 0);
                     AffineTransform3D.field_j = 0;
                     UiWidget.d((byte) -107);
                     if (var9 == 0) {
@@ -959,7 +959,7 @@ class MenuScreen {
                       AffineTransform3D.field_j = 0;
                     }
                     AffineTransform3D.field_j = 0;
-                    TextLayout.a(0, 0);
+                    TextLayout.playGameTrack(0, 0);
                     UiWidget.d((byte) -52);
                     LruNodeCache.gameplaySession.resetSession(111);
                     if (var9 == 0) {
@@ -1066,7 +1066,7 @@ class MenuScreen {
                     }
                   case 12:
                     if (this.field_g.isHomePressed(-103)) {
-                      lt.c((byte) 53);
+                      FourIntUpdateRequest.muteSoundEffects((byte) 53);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.field_g.isEndPressed(103)) {
@@ -1093,16 +1093,16 @@ class MenuScreen {
                           OpenGlVertexLayout.a(16440, var8);
                           if (var9 != 0) {
                             QuickChatPhraseProvider.b(100);
-                            lt.c((byte) 53);
+                            FourIntUpdateRequest.muteSoundEffects((byte) 53);
                           }
                         } else {
                           QuickChatPhraseProvider.b(100);
                           if (var9 != 0) {
-                            lt.c((byte) 53);
+                            FourIntUpdateRequest.muteSoundEffects((byte) 53);
                           }
                         }
                       } else {
-                        lt.c((byte) 53);
+                        FourIntUpdateRequest.muteSoundEffects((byte) 53);
                       }
                     }
                     if (var9 == 0) {
@@ -1129,23 +1129,23 @@ class MenuScreen {
                       var7 = 8 + ((-var6 + (this.b(param2, 35) + this.f(90, param2)) >> 1) + (SocketJs5Client.field_q - (SocketJs5Client.field_q >> 2)));
                       var8 = -var7 + PointLight.mouseX << 1;
                       if (var8 <= 0) {
-                        lf.setMusicVolume(0, 0);
+                        LegacyOpenGlRenderBufferSet.setMusicVolume(0, 0);
                         if (var9 != 0) {
                           if (var8 >= 256) {
-                            lf.setMusicVolume(0, 256);
-                            lf.setMusicVolume(0, var8);
+                            LegacyOpenGlRenderBufferSet.setMusicVolume(0, 256);
+                            LegacyOpenGlRenderBufferSet.setMusicVolume(0, var8);
                           } else {
-                            lf.setMusicVolume(0, var8);
+                            LegacyOpenGlRenderBufferSet.setMusicVolume(0, var8);
                           }
                         }
                       } else {
                         if (var8 >= 256) {
-                          lf.setMusicVolume(0, 256);
+                          LegacyOpenGlRenderBufferSet.setMusicVolume(0, 256);
                           if (var9 != 0) {
-                            lf.setMusicVolume(0, var8);
+                            LegacyOpenGlRenderBufferSet.setMusicVolume(0, var8);
                           }
                         } else {
-                          lf.setMusicVolume(0, var8);
+                          LegacyOpenGlRenderBufferSet.setMusicVolume(0, var8);
                         }
                       }
                     }
@@ -1157,7 +1157,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (null != CompactMeshGeometry.field_o) {
-                      LegacyOpenGlNormalMapGenerator.c((byte) 127);
+                      LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) 127);
                       if (var9 == 0) {
                         break regionExit2;
                       }
@@ -1274,9 +1274,9 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (CompactMeshGeometry.field_o != null) {
-                      LegacyOpenGlNormalMapGenerator.c((byte) 126);
+                      LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) 126);
                     }
-                    HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.c(2), false);
+                    HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.activeApplet(2), false);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1392,7 +1392,7 @@ class MenuScreen {
           if (0 == this.screenId ||
             1 == this.screenId ||
             this.screenId == 8) {
-            DelegatingCanvas.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
+            DelegatingCanvas.a(IntroMeshProjection.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
             if (DisplaySizeController.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
@@ -1420,7 +1420,7 @@ class MenuScreen {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (this.screenId == 6)) {
-                  DelegatingCanvas.a(up.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
+                  DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
                   DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
@@ -1435,13 +1435,13 @@ class MenuScreen {
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_38_0).a(NameSuggestionsPanel.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
+                  ((ToolkitFont) (Object) stackIn_38_0).a(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
                   stackIn_44_0 = QueuedIntArrayRequest.field_k;
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_47_3 = false;
                   stackIn_48_4 = (0 != OpenGlTransparentWaterEffect.field_e);
-                  ((ToolkitFont) (Object) stackIn_44_0).a(SlowBurstParticle.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_44_0).a(SlowBurstParticle.discardContinuationText(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   GameTrackPlayback.field_a.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = GameTrackPlayback.field_a;
                   stackIn_50_1 = false;
@@ -1453,13 +1453,13 @@ class MenuScreen {
                   stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_59_3 = false;
                   stackIn_60_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_56_0).a(NameSuggestionsPanel.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_56_0).a(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
                   stackIn_62_0 = GameTrackPlayback.field_a;
                   stackIn_62_1 = 0;
                   stackIn_63_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_65_3 = false;
                   stackIn_66_4 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_62_0).a(SlowBurstParticle.a(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | opacity << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_62_0).a(SlowBurstParticle.discardContinuationText(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | opacity << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   if (var8 != 0) {
                     this.h(opacity, 1);
                   }
@@ -1550,7 +1550,7 @@ class MenuScreen {
         var9 = MatchingTextValidator.field_h.getToolkit(-125);
         var4 = param1 << 24 | 16777215;
         var5 = 664;
-        DelegatingCanvas.a(up.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
         if (param0 < 114) {
           return;
         }
@@ -1831,7 +1831,7 @@ class MenuScreen {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_g.updatePointerSelection(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(PointLight.mouseX, (byte) 49, pi.field_e));
+          this.field_g.updatePointerSelection(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(PointLight.mouseX, (byte) 49, ArenaDefinitionCodec.field_e));
         }
         if (-1 != this.field_g.selectedIndex) {
           this.a(true, (byte) 105, this.field_g.selectedIndex);
@@ -1916,7 +1916,7 @@ class MenuScreen {
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         var20 = MatchingTextValidator.field_h.getToolkit(-124);
-        DelegatingCanvas.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
         var4 = 0;
         if (EmailValidationError.field_c == 2) {
         }
@@ -1963,11 +1963,11 @@ class MenuScreen {
                 Math.sqrt((double)var14);
               }
               var15 = param0 << 24 | 16777215;
-              QueuedIntArrayRequest.field_k.a(var11, var12, 5023231 | param0 << 24, pd.nameText, (byte) -30, -1);
+              QueuedIntArrayRequest.field_k.a(var11, var12, 5023231 | param0 << 24, FourIntReadRequest.nameText, (byte) -30, -1);
               if (~var10 == ~var4) {
                 var15 = -17409;
               }
-              GameTrackPlayback.field_a.a(var11, var12, var15, pd.nameText, (byte) -71, -1);
+              GameTrackPlayback.field_a.a(var11, var12, var15, FourIntReadRequest.nameText, (byte) -71, -1);
               QueuedIntArrayRequest.field_k.a(-1, var13, LoginCredentials.scoreText, var11, 5023231 | param0 << 24, 72);
               GameTrackPlayback.field_a.a(-1, var13, LoginCredentials.scoreText, var11, var15, 59);
               var11 += 20;
@@ -2042,7 +2042,7 @@ class MenuScreen {
             this.resetSelection(-7, true);
           }
           ForceFieldRingEffect.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
-          hc.field_e.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
+          AccountStatusDialogState.headingFont.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vp {
+final class DroneVariantScoring {
     static String discardText;
     static NineSlicePanel field_e;
-    static double[] field_d;
+    static double[] scoreMultipliers;
     static int[] chatPriorityCounts;
     static int field_a;
     private static String field_z;
@@ -14,18 +14,18 @@ final class vp {
         if (param0 < -95) {
           chatPriorityCounts = null;
           field_e = null;
-          field_d = null;
+          scoreMultipliers = null;
           return;
         }
         discardText = (String) null;
         chatPriorityCounts = null;
         field_e = null;
-        field_d = null;
+        scoreMultipliers = null;
     }
 
     static {
         field_z = "vp.A(";
-        field_d = new double[]{1.0, 1.5, 2.0, 1.5, 0.5, 1.25, 5.0};
+        scoreMultipliers = new double[]{1.0, 1.5, 2.0, 1.5, 0.5, 1.25, 5.0};
         discardText = "Discard";
     }
 }

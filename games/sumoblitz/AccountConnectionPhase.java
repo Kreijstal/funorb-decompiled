@@ -54,7 +54,7 @@ final class AccountConnectionPhase {
             field_d = (int[]) null;
           }
           for (var2_int = 0; var2_int < LoginCredentials.field_d; var2_int++) {
-            pd.field_q[param1 + var2_int] = var2_int;
+            FourIntReadRequest.field_q[param1 + var2_int] = var2_int;
           }
           LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, param1 + LoginCredentials.field_d, param1 + param1, param1, false);
           if (LoginCredentials.field_d > param1) {

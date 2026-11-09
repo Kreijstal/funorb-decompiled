@@ -29,19 +29,19 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
           if (!guard) {
             return;
           }
-          DelegatingCanvas.a(up.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, guard);
-          hc.field_e.a(hc.continueToNextLevelText, -1, -16777216, 150, 320, 0);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, guard);
+          AccountStatusDialogState.headingFont.a(AccountStatusDialogState.continueToNextLevelText, -1, -16777216, 150, 320, 0);
           var3_int = 45;
           var4 = 0;
           while (var3_int < 600) {
             var5 = toolkit;
             var6 = var3_int;
-            var7 = up.field_c;
+            var7 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 250, 200, 1, true);
             if (this.hoveredOption == var4) {
               ForceFieldRingEffect.field_t.a(NextLevelChoiceLabels.choices[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
             } else {
-              hc.field_e.a(NextLevelChoiceLabels.choices[var4], -1, -16777216, 260, 125 + var3_int, 0);
+              AccountStatusDialogState.headingFont.a(NextLevelChoiceLabels.choices[var4], -1, -16777216, 260, 125 + var3_int, 0);
             }
             var4++;
             var3_int += 300;
@@ -111,7 +111,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
           reassignPowerupsText = (String) null;
         }
         int var2 = (PointLight.mouseX - 45) / 300;
-        int var3 = (pi.field_e - 200) / 100;
+        int var3 = (ArenaDefinitionCodec.field_e - 200) / 100;
         this.hoveredOption = var2 + 2 * var3;
         if ((PointLight.mouseX - 45) % 300 > 250) {
           this.hoveredOption = -1;
@@ -123,11 +123,11 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
           if (this.hoveredOption != 0) {
             StrongCacheReference.switchMenuScreen(-7753, true, 7);
             AffineTransform3D.field_j = 0;
-            TextLayout.a(0, 0);
+            TextLayout.playGameTrack(0, 0);
             LruNodeCache.gameplaySession.resetSession(88);
             this.hide((byte) -128);
           } else {
-            LegacyOpenGlSpecularEffect.a(1 + OpenGlShaderProgram.levelIndex % 5, (byte) 56);
+            LegacyOpenGlSpecularEffect.playGameTrack(1 + OpenGlShaderProgram.levelIndex % 5, (byte) 56);
             this.hide((byte) -127);
           }
         }

@@ -79,10 +79,10 @@ final class AccountNameSupport {
     final static void muteMusic(int guard) {
         if (guard != 24238) {
           field_a = (int[]) null;
-          lf.setMusicVolume(0, 0);
+          LegacyOpenGlRenderBufferSet.setMusicVolume(0, 0);
           return;
         }
-        lf.setMusicVolume(0, 0);
+        LegacyOpenGlRenderBufferSet.setMusicVolume(0, 0);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -94,15 +94,15 @@ final class AccountNameSupport {
 
     final static void showLoginForm(byte guard, String identifier, String message) {
         try {
-          if (hc.field_c != null) {
-            hc.field_c.n(-7);
+          if (AccountStatusDialogState.activeDialog != null) {
+            AccountStatusDialogState.activeDialog.n(-7);
           }
-          no.field_a = new LoginForm(identifier, message, false, true, true);
+          LoginFormState.activeForm = new LoginForm(identifier, message, false, true, true);
           if (guard < 73) {
             String var4 = (String) null;
             AccountNameSupport.containsNameIgnoringUnderscores(false, (String) null, (String) null);
           }
-          SlowBurstParticle.field_y.transitionToContent((byte) -119, no.field_a);
+          SlowBurstParticle.field_y.transitionToContent((byte) -119, LoginFormState.activeForm);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wv.E(" + guard + ',' + (identifier != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ')');
         }

@@ -212,7 +212,7 @@ class UsernameCredentials extends LoginCredentials {
               }
             }
             if (TextCaretLayout.accountPhase == MusicVoice.WAIT_LOGIN_DETAILS &&
-              lt.a((byte) 119)) {
+              FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
               StringBuilderSupport.field_a = NativeLibraryExtractor.field_a.readLong((byte) 114);
               Bzip2State.field_j = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
               NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
@@ -247,26 +247,26 @@ class UsernameCredentials extends LoginCredentials {
               TextCaretLayout.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
                 if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
-                  LevelSelectScreen.field_j.savePreference(true, LegacyOpenGlUnlitEffect.c(2));
+                  LevelSelectScreen.field_j.savePreference(true, LegacyOpenGlUnlitEffect.activeApplet(2));
                 }
               } else {
-                OpenGlTexture3D.field_m.savePreference(true, LegacyOpenGlUnlitEffect.c(2));
+                OpenGlTexture3D.field_m.savePreference(true, LegacyOpenGlUnlitEffect.activeApplet(2));
               }
               LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
-                UsernameCredentials.writeAppletSettings((byte) -118, var6, LegacyOpenGlUnlitEffect.c(2));
+                UsernameCredentials.writeAppletSettings((byte) -118, var6, LegacyOpenGlUnlitEffect.activeApplet(2));
               }
               if (HardwareRidgedWaterNoise.field_x <= 0 &&
                 !DelegatingCanvas.field_c) {
                 try {
-                  BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.c(2), 93, "unzap");
+                  BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.activeApplet(2), 93, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  BrowserScriptBridge.call(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
+                  BrowserScriptBridge.call(-111, LegacyOpenGlUnlitEffect.activeApplet(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -284,7 +284,7 @@ class UsernameCredentials extends LoginCredentials {
               return stackIn_73_0;
             }
             if (TextCaretLayout.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
-              lt.a((byte) 119)) {
+              FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
               if (TextureFormat.field_a == 7 &&
                 !LimitedRandomAccessFile.field_g) {
@@ -311,8 +311,8 @@ class UsernameCredentials extends LoginCredentials {
                 stackIn_94_0 = 3;
                 return stackIn_94_0;
               }
-              var6_intLifetime2 = vp.field_a;
-              vp.field_a = LoginCredentialType.field_b;
+              var6_intLifetime2 = DroneVariantScoring.field_a;
+              DroneVariantScoring.field_a = LoginCredentialType.field_b;
               LimitedRandomAccessFile.field_g = true;
               LoginCredentialType.field_b = var6_intLifetime2;
             }

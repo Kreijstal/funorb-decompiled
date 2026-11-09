@@ -18,7 +18,7 @@ final class BufferedCacheFile {
     private long length;
 
     final static void c(int param0) {
-        NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.c(param0 ^ 2));
+        NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.activeApplet(param0 ^ 2));
         if (param0 != 0) {
           String var2 = (String) null;
           BufferedCacheFile.a(42L, (java.applet.Applet) null, false, (String) null, (String) null);

@@ -12,7 +12,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
 
     final void disable(int guard) {
         if (!this.active) {
-          this.toolkit.a(114, 0, 5890, 770);
+          this.toolkit.setTextureCombineOperands(114, 0, 5890, 770);
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
           this.active = false;
           if (guard >= -125) {
@@ -49,8 +49,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           this.stateLists.beginList(0, 4864);
           this.toolkit.setActiveTextureUnit(1, 116);
           this.toolkit.setTextureCombineOperations(20685, 7681, 34165);
-          this.toolkit.b(34168, 770, 2, 9);
-          this.toolkit.a(109, 0, 34167, 770);
+          this.toolkit.setTextureCombineSources(34168, 770, 2, 9);
+          this.toolkit.setTextureCombineOperands(109, 0, 34167, 770);
           jaggl.OpenGL.glTexGeni(8192, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8193, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8194, 9472, 34066);
@@ -62,8 +62,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           this.stateLists.beginList(1, 4864);
           this.toolkit.setActiveTextureUnit(1, 121);
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(34166, 770, 2, -123);
-          this.toolkit.a(115, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(34166, 770, 2, -123);
+          this.toolkit.setTextureCombineOperands(115, 0, 5890, 770);
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
           jaggl.OpenGL.glDisable(3170);
@@ -130,13 +130,13 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         LegacyOpenGlCubeTexture var3;
         var3 = this.toolkit.environmentCube((byte) 62);
         if (this.stateLists == null) {
-          this.toolkit.a(112, 0, 34168, 770);
+          this.toolkit.setTextureCombineOperands(112, 0, 34168, 770);
         } else {
           if (var3 == null) {
-            this.toolkit.a(112, 0, 34168, 770);
+            this.toolkit.setTextureCombineOperands(112, 0, 34168, 770);
           } else {
             if (!lighting) {
-              this.toolkit.a(112, 0, 34168, 770);
+              this.toolkit.setTextureCombineOperands(112, 0, 34168, 770);
             } else {
               this.stateLists.callList((byte) 121, '\0');
               this.toolkit.setActiveTextureUnit(1, 98);
@@ -226,7 +226,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           LegacyOpenGlTexture.field_h = LegacyOpenGlTexture.field_h + 1;
           HotspotTextWidget.activePointerButton = LegacyOpenGlNormalMapGenerator.field_a;
           PointLight.mouseX = SoftCacheReference.field_C;
-          pi.field_e = SecondaryNodeDeque.field_b;
+          ArenaDefinitionCodec.field_e = SecondaryNodeDeque.field_b;
           LegacyOpenGlClientVertexBuffer.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;
           ActiveCanvasProvider.field_c = LegacyOpenGlBuffer.field_i;

@@ -53,8 +53,8 @@ final class ByteArrayPool {
           0 < ImageProducerRasterBuffer.field_k) {
           fieldTemp$5 = ImageProducerRasterBuffer.field_k - 1;
           ImageProducerRasterBuffer.field_k = ImageProducerRasterBuffer.field_k - 1;
-          var2_ref_byte__Lifetime2 = ke.field_b[fieldTemp$5];
-          ke.field_b[ImageProducerRasterBuffer.field_k] = null;
+          var2_ref_byte__Lifetime2 = AppletInstanceState.largeBytePool[fieldTemp$5];
+          AppletInstanceState.largeBytePool[ImageProducerRasterBuffer.field_k] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (null != CompactMeshGeometry.field_w) {

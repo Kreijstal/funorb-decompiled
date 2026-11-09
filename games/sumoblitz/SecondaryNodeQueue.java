@@ -118,7 +118,7 @@ final class SecondaryNodeQueue {
                       var13[var18] = UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var11[var18]);
                       var18++;
                     }
-                    var5.methodTasks[var6] = dispatcher.a(0, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var20), var21, var13);
+                    var5.methodTasks[var6] = dispatcher.findDeclaredMethod(0, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var20), var21, var13);
                     var5.arguments[var6] = var22;
                   }
                 } else {
@@ -132,7 +132,7 @@ final class SecondaryNodeQueue {
                   }
                   var5.operations[var6] = var7_int;
                   var5.fieldValues[var6] = var10;
-                  var5.fieldTasks[var6] = dispatcher.a(0, var16, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var17));
+                  var5.fieldTasks[var6] = dispatcher.findDeclaredField(0, var16, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,11 +183,11 @@ final class SecondaryNodeQueue {
         }
     }
 
-    final static void b(int param0) {
+    final static void initializeLoginLayer(int guard) {
         HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
         RenderPresentationException.field_a = new DialogLayer();
         WidgetStateStyle.showLoginDialog((byte) 127, true, true);
-        if (param0 != 246) {
+        if (guard != 246) {
           SecondaryNodeQueue.a(22, 45, -112, 42, -110, true, -91, 8, 90);
         }
     }

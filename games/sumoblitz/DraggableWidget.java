@@ -89,7 +89,7 @@ final class DraggableWidget extends SingleChildWidget {
             ((InteractiveWidget) (this.child)).enabled) &&
             this.pressedButton == 1) {
             var5_int = -parentX - this.field_H + PointLight.mouseX;
-            var6 = -parentY - this.field_J + pi.field_e;
+            var6 = -parentY - this.field_J + ArenaDefinitionCodec.field_e;
             if (var5_int != this.x ||
               this.y != var6) {
               this.x = var5_int;

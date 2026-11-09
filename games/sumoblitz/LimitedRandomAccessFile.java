@@ -130,21 +130,21 @@ final class LimitedRandomAccessFile {
           DroneIntroductionOverlay.field_c.writeBytes(param2, (byte) -123, param1, param6);
           DroneIntroductionOverlay.field_c.padTo((byte) -3, var7_int);
           DroneIntroductionOverlay.field_c.encryptXtea(var13, 104);
-          if (sv.field_c == null ||
-            !(100 <= sv.field_c.payload.length)) {
-            sv.field_c = new PacketBuffer(100);
+          if (RsaEnvelopeScratch.rsaBuffer == null ||
+            !(100 <= RsaEnvelopeScratch.rsaBuffer.payload.length)) {
+            RsaEnvelopeScratch.rsaBuffer = new PacketBuffer(100);
           }
-          sv.field_c.position = 0;
-          sv.field_c.writeByte((byte) 25, 10);
+          RsaEnvelopeScratch.rsaBuffer.position = 0;
+          RsaEnvelopeScratch.rsaBuffer.writeByte((byte) 25, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            sv.field_c.writeInt(48, var13[var11]);
+            RsaEnvelopeScratch.rsaBuffer.writeInt(48, var13[var11]);
             var11++;
           }
-          sv.field_c.writeShort(125, param1);
-          sv.field_c.encryptRsa((byte) 123, param0, param3);
-          param5.writeBytes(sv.field_c.payload, (byte) -123, sv.field_c.position, 0);
+          RsaEnvelopeScratch.rsaBuffer.writeShort(125, param1);
+          RsaEnvelopeScratch.rsaBuffer.encryptRsa((byte) 123, param0, param3);
+          param5.writeBytes(RsaEnvelopeScratch.rsaBuffer.payload, (byte) -123, RsaEnvelopeScratch.rsaBuffer.position, 0);
           if (param4 > -6) {
             return;
           }

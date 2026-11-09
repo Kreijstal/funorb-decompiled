@@ -18,7 +18,7 @@ final class ServerDataWriteRequest extends IntrusiveNode {
             var3 = (java.awt.Canvas) null;
             ServerDataWriteRequest.attachInputHandlers(true, (java.awt.Canvas) null);
           }
-          lq.attachKeyboardInput(0, (java.awt.Component) ((Object) canvas));
+          IntroFinalFrameResources.attachKeyboardInput(0, (java.awt.Component) ((Object) canvas));
           MouseInputRegistration.attachMouseInput((java.awt.Component) ((Object) canvas), true);
           if (null == InwardSparkParticle.field_w) {
             return;

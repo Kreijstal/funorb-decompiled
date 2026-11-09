@@ -34,7 +34,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
     final static void g(int param0) {
         LegacyOpenGlSpecularEffect.field_h[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
         LegacyOpenGlSpecularEffect.field_h[0] = ResourceArchive.selectedSpeedLevel;
-        LegacyOpenGlSpecularEffect.field_h[2] = hc.selectedBounceLevel;
+        LegacyOpenGlSpecularEffect.field_h[2] = AccountStatusDialogState.selectedBounceLevel;
         IsaacPacketBuffer.field_u = LegacyOpenGlSpecularEffect.field_h[1] + LegacyOpenGlSpecularEffect.field_h[0] - 2 + (LegacyOpenGlSpecularEffect.field_h[2] - 1);
         if (param0 < 100) {
           OpenGlIndexBuffer.b(46, -94);

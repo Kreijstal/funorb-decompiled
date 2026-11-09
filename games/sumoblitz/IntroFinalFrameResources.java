@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq {
+final class IntroFinalFrameResources {
     static String field_a;
     static int field_d;
     static int field_b;
@@ -20,7 +20,7 @@ final class lq {
           component.setFocusTraversalKeysEnabled(false);
           if (guard != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
-            lq.attachKeyboardInput(-23, (java.awt.Component) null);
+            IntroFinalFrameResources.attachKeyboardInput(-23, (java.awt.Component) null);
           }
           component.addKeyListener(EmailCredentials.field_e);
           component.addFocusListener(EmailCredentials.field_e);
@@ -40,7 +40,7 @@ final class lq {
           GameApplet.pushRasterState(103);
           if (guard >= -62) {
             ResourceArchive var5 = (ResourceArchive) null;
-            lq.archiveLoadingMessage(-58, (String) null, (String) null, (ResourceArchive) null);
+            IntroFinalFrameResources.archiveLoadingMessage(-58, (String) null, (String) null, (ResourceArchive) null);
           }
           LoginIdentifierSupport.field_a = new Sprite(var3, var4 * 3 / 4);
           LoginIdentifierSupport.field_a.bindRaster();

@@ -47,7 +47,7 @@ abstract class RasterBuffer {
         StatusMessagePanel.field_A = false;
         SocketJs5Client.field_s = null;
         if (ReconnectState.reconnecting) {
-          hc.field_c.e(false);
+          AccountStatusDialogState.activeDialog.e(false);
           if (param0 == 2) {
             return;
           }
@@ -63,7 +63,7 @@ abstract class RasterBuffer {
           }
           SocketJs5Client.field_s = HardwareReflectionEffect.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
         }
-        hc.field_c.n(param0 ^ -5);
+        AccountStatusDialogState.activeDialog.n(param0 ^ -5);
         SoftwareRenderBuffer.a(5178);
         if (param0 == 2) {
           return;

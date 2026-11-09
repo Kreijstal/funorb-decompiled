@@ -61,8 +61,8 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
             }
             this.toolkit.bindTexture(guard + 43, this.toolkit.field_n);
             this.toolkit.setTextureCombineMode(1, true);
-            this.toolkit.b(34168, 768, 0, -116);
-            this.toolkit.a(guard + 75, 0, 34168, 770);
+            this.toolkit.setTextureCombineSources(34168, 768, 0, -116);
+            this.toolkit.setTextureCombineOperands(guard + 75, 0, 34168, 770);
             this.usingFallbackTexture = true;
             return;
           }
@@ -71,8 +71,8 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
             this.toolkit.setTextureCombineMode(combineMode, true);
             return;
           }
-          this.toolkit.b(5890, 768, 0, 29);
-          this.toolkit.a(120, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, 29);
+          this.toolkit.setTextureCombineOperands(120, 0, 5890, 770);
           this.usingFallbackTexture = false;
           this.toolkit.bindTexture(76, texture);
           this.toolkit.setTextureCombineMode(combineMode, true);
@@ -157,9 +157,9 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         this.toolkit.setActiveTextureUnit(1, 123);
         this.toolkit.bindTexture(67, this.fogRamp);
         this.toolkit.setTextureCombineOperations(20685, 7681, 34165);
-        this.toolkit.b(34166, 768, 0, -116);
-        this.toolkit.b(5890, 770, 2, -118);
-        this.toolkit.a(124, 0, 34168, 770);
+        this.toolkit.setTextureCombineSources(34166, 768, 0, -116);
+        this.toolkit.setTextureCombineSources(5890, 770, 2, -118);
+        this.toolkit.setTextureCombineOperands(124, 0, 34168, 770);
         this.toolkit.setActiveTextureUnit(0, 120);
         if (guard < 33) {
           this.updateFogParameters((byte) 68);
@@ -209,7 +209,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
           var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.field_u, (float)this.toolkit.field_Mb / 255.0f);
           this.toolkit.setActiveTextureUnit(1, guard + 37);
-          this.toolkit.e(0, this.toolkit.field_k);
+          this.toolkit.setTextureConstantArgb(0, this.toolkit.field_k);
           this.toolkit.setActiveTextureUnit(0, guard ^ 11);
         }
         if (guard == 87) {
@@ -237,13 +237,13 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         if (guard < -125) {
           this.toolkit.bindTexture(110, (LegacyOpenGlTexture) null);
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(5890, 768, 0, 3);
-          this.toolkit.b(34166, 770, 2, 83);
-          this.toolkit.a(120, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, 3);
+          this.toolkit.setTextureCombineSources(34166, 770, 2, 83);
+          this.toolkit.setTextureCombineOperands(120, 0, 5890, 770);
           this.toolkit.setActiveTextureUnit(0, 92);
           if (this.usingFallbackTexture) {
-            this.toolkit.b(5890, 768, 0, -124);
-            this.toolkit.a(111, 0, 5890, 770);
+            this.toolkit.setTextureCombineSources(5890, 768, 0, -124);
+            this.toolkit.setTextureCombineOperands(111, 0, 5890, 770);
             this.usingFallbackTexture = false;
           }
           return;
@@ -251,13 +251,13 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         this.groundUnlitProgram = (LegacyOpenGlAssemblyProgram) null;
         this.toolkit.bindTexture(110, (LegacyOpenGlTexture) null);
         this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-        this.toolkit.b(5890, 768, 0, 3);
-        this.toolkit.b(34166, 770, 2, 83);
-        this.toolkit.a(120, 0, 5890, 770);
+        this.toolkit.setTextureCombineSources(5890, 768, 0, 3);
+        this.toolkit.setTextureCombineSources(34166, 770, 2, 83);
+        this.toolkit.setTextureCombineOperands(120, 0, 5890, 770);
         this.toolkit.setActiveTextureUnit(0, 92);
         if (this.usingFallbackTexture) {
-          this.toolkit.b(5890, 768, 0, -124);
-          this.toolkit.a(111, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, -124);
+          this.toolkit.setTextureCombineOperands(111, 0, 5890, 770);
           this.usingFallbackTexture = false;
         }
     }

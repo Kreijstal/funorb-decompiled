@@ -73,19 +73,19 @@ final class MusicVoice extends IntrusiveNode {
         this.patch = null;
     }
 
-    final static void c(boolean param0) {
+    final static void readFourIntResponse(boolean guard) {
         IsaacPacketBuffer var2 = null;
-        if (param0) {
+        if (guard) {
           return;
         }
-        pd var1 = (pd) (PerlinNoiseSliceGenerator.field_g.first(103));
+        FourIntReadRequest var1 = (FourIntReadRequest) (PerlinNoiseSliceGenerator.field_g.first(103));
         if (var1 != null) {
           var2 = NativeLibraryExtractor.field_a;
           var2.readInt(true);
           var2.readInt(true);
           var2.readInt(true);
           var2.readInt(true);
-          var1.unlink(param0);
+          var1.unlink(guard);
           return;
         }
         LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);

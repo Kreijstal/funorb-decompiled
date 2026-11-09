@@ -119,7 +119,7 @@ abstract class GraphicsToolkit {
         field_d = null;
     }
 
-    abstract boolean a();
+    abstract boolean isFloatPostProcessingEnabled();
 
     final static void insertNodeBefore(int guard, IntrusiveNode before, IntrusiveNode node) {
         if (null != node.previous) {
@@ -165,7 +165,7 @@ abstract class GraphicsToolkit {
           this.drawHorizontalLine(x, y, length, color, 1);
           return;
         }
-        this.a();
+        this.isFloatPostProcessingEnabled();
         this.drawHorizontalLine(x, y, length, color, 1);
     }
 
@@ -179,7 +179,7 @@ abstract class GraphicsToolkit {
           return;
         }
         ResizingDialog.field_F = null;
-        no.field_b = null;
+        LoginFormState.field_b = null;
     }
 
     abstract void drawLine(int x0, int y0, int x1, int y1, int color, int blendMode);

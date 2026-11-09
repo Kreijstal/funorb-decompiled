@@ -167,14 +167,14 @@ final class HardwareTextureSprite extends ToolkitSprite {
         if (guard <= -25) {
           PasswordInputRenderer.upgradeAllocation[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
           PasswordInputRenderer.upgradeAllocation[0] = ResourceArchive.selectedSpeedLevel;
-          PasswordInputRenderer.upgradeAllocation[2] = hc.selectedBounceLevel;
+          PasswordInputRenderer.upgradeAllocation[2] = AccountStatusDialogState.selectedBounceLevel;
           IsaacCipher.field_k = -1 + (-1 + PasswordInputRenderer.upgradeAllocation[1] - 1 + PasswordInputRenderer.upgradeAllocation[0]) + PasswordInputRenderer.upgradeAllocation[2];
           return;
         }
         blastReadyText = (String) null;
         PasswordInputRenderer.upgradeAllocation[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
         PasswordInputRenderer.upgradeAllocation[0] = ResourceArchive.selectedSpeedLevel;
-        PasswordInputRenderer.upgradeAllocation[2] = hc.selectedBounceLevel;
+        PasswordInputRenderer.upgradeAllocation[2] = AccountStatusDialogState.selectedBounceLevel;
         IsaacCipher.field_k = -1 + (-1 + PasswordInputRenderer.upgradeAllocation[1] - 1 + PasswordInputRenderer.upgradeAllocation[0]) + PasswordInputRenderer.upgradeAllocation[2];
     }
 

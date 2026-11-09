@@ -77,10 +77,10 @@ class IntrusiveNode {
               var3 = var3 + param0;
             }
             BlendMode.printClientError((byte) 96, var3);
-            var7 = HardwareGraphicsToolkit.a(":", var3, "%3a", true);
-            var8 = HardwareGraphicsToolkit.a("@", var7, "%40", true);
-            var9 = HardwareGraphicsToolkit.a("&", var8, "%26", true);
-            var10 = HardwareGraphicsToolkit.a("#", var9, "%23", true);
+            var7 = HardwareGraphicsToolkit.replaceText(":", var3, "%3a", true);
+            var8 = HardwareGraphicsToolkit.replaceText("@", var7, "%40", true);
+            var9 = HardwareGraphicsToolkit.replaceText("&", var8, "%26", true);
+            var10 = HardwareGraphicsToolkit.replaceText("#", var9, "%23", true);
             if (HardwareRidgedWaterNoise.field_z == null) {
               return;
             }
@@ -100,9 +100,9 @@ class IntrusiveNode {
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + km.field_k;
+              stackIn_15_6 = "" + FourStatHiscoreRequest.field_k;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).openUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
               TextureCombineOperation.sleepMillis(1L, (byte) 73);
             }

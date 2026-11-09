@@ -46,9 +46,9 @@ final class LoginDialogNavigation {
           if (!guard) {
             field_a = -32;
           }
-          vm.nameAvailabilityState = DropTargetWidget.COMPLETE;
+          Base37NameAlphabet.nameAvailabilityState = DropTargetWidget.COMPLETE;
           if (255 == response) {
-            stackIn_7_0 = !(lq.field_d >= 13);
+            stackIn_7_0 = !(IntroFinalFrameResources.field_d >= 13);
             DraggableWidget.field_z = LegacyOpenGlEffect.accountSuccess(stackIn_7_0, 8192);
             var6 = (String[]) null;
             InwardSparkParticle.a(256, (String[]) null);

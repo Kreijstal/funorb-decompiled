@@ -110,7 +110,7 @@ final class BurstParticle extends TimedSceneEffect {
             this.updateAndIsExpired(84);
           }
           if (this.textureKind != 0) {
-            im.field_a.draw(this.x >> 8, this.y >> 8, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
+            ParticleSpriteResources.sparkSprite.draw(this.x >> 8, this.y >> 8, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
             return;
           }
           IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 3, 16777215 + (256 / this.initialLifetime * this.remainingTicks << 24), 1);

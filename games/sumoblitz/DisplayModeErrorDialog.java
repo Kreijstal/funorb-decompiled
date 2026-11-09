@@ -99,12 +99,12 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         }
     }
 
-    private final void k(int param0) {
+    private final void closeDialog(int guard) {
         if (!this.open) {
           return;
         }
         this.open = false;
-        if (param0 != 38) {
+        if (guard != 38) {
           field_P = -104;
         }
     }
@@ -160,7 +160,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_O == source) {
-            this.k(38);
+            this.closeDialog(38);
           }
           if (guard == 710) {
             return;

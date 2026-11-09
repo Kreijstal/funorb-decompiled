@@ -18,8 +18,8 @@ final class ClientExceptionSupport {
         return var2;
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean guard) {
+        if (!guard) {
           MISSING_EMAIL_COMPONENT = null;
           field_b = null;
           ifYouDoNothingText = null;

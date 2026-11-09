@@ -36,7 +36,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_o = lighting ? true : false;
         this.toolkit.setActiveTextureUnit(1, guard - 20312);
         this.toolkit.a(this.field_i, guard - 20076);
-        this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 0, guard ^ guard);
         this.toolkit.setColorCombineSource((byte) 89, 2, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);

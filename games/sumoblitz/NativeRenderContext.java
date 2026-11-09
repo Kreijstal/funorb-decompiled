@@ -2,46 +2,46 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NativeRenderContext implements NativeResource {
-    private NativeSoftwareGraphicsToolkit field_a;
+    private NativeSoftwareGraphicsToolkit toolkit;
     long field_nativeid;
 
-    private final native void E(long param0, boolean param1);
+    private final native void disposeNative(long nativeHandle, boolean deferred);
 
-    final void a() {
+    final void bindToCurrentThread() {
         Thread.currentThread();
-        this.b();
+        this.bindHandle();
     }
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
+          NativeResourceReaper.deferDisposal((NativeResource) (this), (byte) -37);
         }
     }
 
-    private final void b() {
-        this.M(this.field_nativeid);
+    private final void bindHandle() {
+        this.bindNative(this.field_nativeid);
     }
 
     public final void disposeNativeResource(boolean param0) {
-        this.E(this.field_nativeid, param0);
+        this.disposeNative(this.field_nativeid, param0);
     }
 
-    private final native void M(long param0);
+    private final native void bindNative(long nativeHandle);
 
     NativeRenderContext(NativeSoftwareGraphicsToolkit param0, int param1, int param2) {
-        this.field_a = param0;
-        i discarded$0 = new i(this.field_a);
-        i discarded$1 = new i(this.field_a);
-        i discarded$2 = new i(this.field_a);
-        i discarded$3 = new i(this.field_a);
-        i discarded$4 = new i(this.field_a);
-        i discarded$5 = new i(this.field_a);
-        i discarded$6 = new i(this.field_a);
-        i discarded$7 = new i(this.field_a);
-        i discarded$8 = new i(this.field_a);
-        i discarded$9 = new i(this.field_a);
-        this.HA(this.field_nativeid, param0, param1, param2);
+        this.toolkit = param0;
+        NativeRenderBufferSet discarded$0 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$1 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$2 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$3 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$4 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$5 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$6 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$7 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$8 = new NativeRenderBufferSet(this.toolkit);
+        NativeRenderBufferSet discarded$9 = new NativeRenderBufferSet(this.toolkit);
+        this.initializeNative(this.field_nativeid, param0, param1, param2);
     }
 
-    private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);
+    private final native void initializeNative(long nativeHandle, GraphicsToolkit toolkit, int firstCapacity, int secondCapacity);
 }

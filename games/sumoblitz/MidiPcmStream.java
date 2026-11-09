@@ -308,11 +308,11 @@ final class MidiPcmStream extends PcmStream {
           if (~param4 < param2) {
             var7 = new int[]{param4};
           }
-          var8 = (InstrumentNoteMask) (param1.instrumentUsage.a(52));
+          var8 = (InstrumentNoteMask) (param1.instrumentUsage.first(52));
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
-              var10 = (MusicPatch) (this.patches.a(param2 ^ -119, (long)var9));
+              var10 = (MusicPatch) (this.patches.get(param2 ^ -119, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
@@ -331,7 +331,7 @@ final class MidiPcmStream extends PcmStream {
                 if (decompiledFrameRemainder0) {
                   var6_int = 0;
                 }
-                var8 = (InstrumentNoteMask) (param1.instrumentUsage.a(true));
+                var8 = (InstrumentNoteMask) (param1.instrumentUsage.next(true));
                 continue;
               }
             } else {
@@ -816,7 +816,7 @@ final class MidiPcmStream extends PcmStream {
             break;
           }
         }
-        var11 = (MusicPatch) (this.patches.a(115, (long)this.programs[channel]));
+        var11 = (MusicPatch) (this.patches.get(115, (long)this.programs[channel]));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -1308,10 +1308,10 @@ final class MidiPcmStream extends PcmStream {
         int var3 = 0;
         MusicPatch var4 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        var4 = (MusicPatch) (this.patches.a(79));
+        var4 = (MusicPatch) (this.patches.first(79));
         while (var4 != null) {
           var4.clearSampleIds((byte) -36);
-          var4 = (MusicPatch) (this.patches.a(true));
+          var4 = (MusicPatch) (this.patches.next(true));
           if (var3 != 0) {
             return;
           }

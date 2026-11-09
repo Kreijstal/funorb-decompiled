@@ -13,10 +13,10 @@ final class IntroPreparation {
 
     final static void prepareIntro(PcmStreamMixer unusedMixer, byte guard, ResourceArchive archive, int durationMillis) {
         try {
-          LegacyOpenGlRidgedWaterEffect.field_i = vm.ticksPerSecond(-32) * durationMillis / 1000;
+          LegacyOpenGlRidgedWaterEffect.field_i = Base37NameAlphabet.ticksPerSecond(-32) * durationMillis / 1000;
           MenuScreen.initializeLogoAudio(archive, 100);
           IntroMeshResources.loadIntroMeshes(false, archive);
-          lq.loadIntroFinalFrame(archive, -84);
+          IntroFinalFrameResources.loadIntroFinalFrame(archive, -84);
           SelectionOverlay.initializeIntroLighting(true);
           ResourceRequest.a((byte) -90);
           if (guard < 125) {

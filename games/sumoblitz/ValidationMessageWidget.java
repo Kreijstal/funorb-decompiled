@@ -460,7 +460,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (ScoreMultiplierTable.multipliers.length <= var1) {
             var1 = ScoreMultiplierTable.multipliers.length - 1;
           }
-          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
+          FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
           return;
         }
         FontMetrics.field_b = FontMetrics.field_b + 1;
@@ -469,13 +469,13 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (ScoreMultiplierTable.multipliers.length <= var1) {
             var1 = ScoreMultiplierTable.multipliers.length - 1;
           }
-          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
+          FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
           return;
         }
         if (ScoreMultiplierTable.multipliers.length <= var1) {
           var1 = ScoreMultiplierTable.multipliers.length - 1;
         }
-        pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
+        FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
     }
 
     ValidationMessageWidget(InputValidator validation, String helpText, int x, int y, int width, int height) {

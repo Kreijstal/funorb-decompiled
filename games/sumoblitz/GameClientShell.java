@@ -60,7 +60,7 @@ abstract class GameClientShell extends GameApplet {
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (SecondaryNodeDequeIterator.field_b != null) {
           if (null == CompactMeshGeometry.field_o) {
-            var6 = km.gameContainer(false);
+            var6 = FourStatHiscoreRequest.gameContainer(false);
             var4 = var6.getSize();
             SecondaryNodeDequeIterator.field_b.setPreferredSize(var4.height, var4.width, (byte) -123);
           }
@@ -79,7 +79,7 @@ abstract class GameClientShell extends GameApplet {
           this.field_D = (String) null;
         }
         if (TimedSceneEffect.a((byte) 90)) {
-          var3 = 1200 * vm.ticksPerSecond(-79);
+          var3 = 1200 * Base37NameAlphabet.ticksPerSecond(-79);
           if (this.field_B ||
             !(var3 >= HiscorePlayerName.a((byte) 114)) &&
             !(GraphicsHeap.c(false) <= var3)) {
@@ -178,7 +178,7 @@ abstract class GameClientShell extends GameApplet {
           EmailCredentials.field_j = LegacyOpenGlPostProcessEffect.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
           LegacyOpenGlPostProcessManager.field_f = LegacyOpenGlPostProcessEffect.a(11880, true, AudioServiceThread.field_h, 1, false);
           AudioOutputBootstrap.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
-          pi.field_c = EmailCredentials.field_j;
+          ArenaDefinitionCodec.field_c = EmailCredentials.field_j;
           TextureCoordinateGeneration.field_a = 2;
           RotarySelectorWidget.field_J = LegacyOpenGlPostProcessManager.field_f;
         }
@@ -203,7 +203,7 @@ abstract class GameClientShell extends GameApplet {
           ReflectionCheck.commonUiResourcesReady(LegacyOpenGlPostProcessManager.field_f, (byte) 124, AudioOutputBootstrap.field_a, EmailCredentials.field_j) &&
           DroneWave.tryLoadArchive(AudioOutputBootstrap.field_a, 40)) {
           LruNodeCache.releaseValidationIcons((byte) -93);
-          UnderageAccountInfoPanel.e(true);
+          UnderageAccountInfoPanel.initializeFullscreenInstructions(true);
           HardwareTextureSprite.field_m = false;
           LegacyOpenGlVertexBuffer.field_k = ToolkitImageProducerBuffer.loadingText;
           AccountUiBootstrap.initializeAccountUi(AudioOutputBootstrap.field_a, NineSlicePanel.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, EmailCredentials.field_j);
@@ -240,7 +240,7 @@ abstract class GameClientShell extends GameApplet {
         if (TextureCoordinateGeneration.field_a == 11) {
           if (DisplayModeFailure.field_a != null && (!DisplayModeFailure.field_a.loadIndex((byte) 127) ||
             !DisplayModeFailure.field_a.tryLoadAllGroups(true))) {
-            NameSuggestionsPanel.a(20, 0.0f, lq.archiveLoadingMessage(117, AccountRequestState.field_c, LegacyOpenGlTexture3D.field_k, DisplayModeFailure.field_a));
+            NameSuggestionsPanel.setLoadingProgress(20, 0.0f, IntroFinalFrameResources.archiveLoadingMessage(117, AccountRequestState.field_c, LegacyOpenGlTexture3D.field_k, DisplayModeFailure.field_a));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -257,7 +257,7 @@ abstract class GameClientShell extends GameApplet {
           if (LoginDialogState.field_a != null) {
             stackIn_138_0 = (!LoginDialogState.field_a.pollReady(100)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            NameSuggestionsPanel.a(20, LoginDialogState.field_a.progress, LoginDialogState.field_a.progressText);
+            NameSuggestionsPanel.setLoadingProgress(20, LoginDialogState.field_a.progress, LoginDialogState.field_a.progressText);
           }
           if (var3Lifetime2 != 0) {
             TextureCoordinateGeneration.field_a = 20;
@@ -330,11 +330,11 @@ abstract class GameClientShell extends GameApplet {
           discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
         } else {
           if (TextureCoordinateGeneration.field_a >= 10) {
-            if (!lf.isIntroFinished(-251)) {
-              IntegerMath.a((byte) 126);
+            if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
+              IntegerMath.advanceIntroTick((byte) 126);
             } else {
               if (LoginDialogNavigation.field_a != 0) {
-                ModalDialog.a((byte) 55, OpenGlUnderwaterEffect.field_r);
+                ModalDialog.pollAccountDialogs((byte) 55, OpenGlUnderwaterEffect.field_r);
               } else {
                 discarded$34 = this.a(16981, false, false);
               }
@@ -392,17 +392,17 @@ abstract class GameClientShell extends GameApplet {
                               return;
                             }
                             stackIn_28_0 = (var2 == 12);
-                            var3 = r.readChatMessage(stackIn_28_0, (byte) -62);
+                            var3 = DualLinkedRenderResource.readChatMessage(stackIn_28_0, (byte) -62);
                             ByteArrayStorage.receiveChatMessage(var3, (byte) 60);
                           }
                         } else {
-                          SecondaryNodeQueue.readReflectionCheck((byte) 127, NativeLibraryExtractor.field_a, lt.field_m, HardwareBufferSet.field_d);
+                          SecondaryNodeQueue.readReflectionCheck((byte) 127, NativeLibraryExtractor.field_a, FourIntUpdateRequest.platformDispatcher, HardwareBufferSet.field_d);
                         }
                       } else {
                         this.o(-1);
                       }
                     } else {
-                      SlowBurstParticle.c((byte) -77);
+                      SlowBurstParticle.readFourStatHiscores((byte) -77);
                     }
                   } else {
                     HotspotTextWidget.readServerDataReply((byte) -93);
@@ -413,7 +413,7 @@ abstract class GameClientShell extends GameApplet {
               }
             }
           } else {
-            MusicVoice.c(false);
+            MusicVoice.readFourIntResponse(false);
           }
           return;
         }
@@ -441,7 +441,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != -1) {
           return;
         }
-        SingleChildWidget.setSessionCookie(61, var2, LegacyOpenGlUnlitEffect.c(2));
+        SingleChildWidget.setSessionCookie(61, var2, LegacyOpenGlUnlitEffect.activeApplet(2));
     }
 
     private final void l(int param0) {
@@ -460,7 +460,7 @@ abstract class GameClientShell extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (InteractiveWidget.field_z[1]) {
-            UiStyle.a((byte) 115, 2);
+            UiStyle.resendFourIntReadRequests((byte) 115, 2);
           }
           if (InteractiveWidget.field_z[2]) {
             SlowBurstParticle.a(3, (byte) -73);
@@ -475,7 +475,7 @@ abstract class GameClientShell extends GameApplet {
             TextureMetadata.resendServerDataRequests(false, 6);
           }
           if (InteractiveWidget.field_z[6]) {
-            HardwareQuadBatchBuffers.resendShortValueRequests(7, param0);
+            HardwareQuadBatchBuffers.resendFourStatHiscoreRequests(7, param0);
           }
           if (InteractiveWidget.field_z[8]) {
             LegacyOpenGlAssemblyProgram.a(-58);
@@ -493,7 +493,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 > -55) {
           this.field_w = -30;
         }
-        LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.c(2), var3 != 0, MusicVoice.a(0, var5));
+        LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.activeApplet(2), var3 != 0, MusicVoice.a(0, var5));
     }
 
     final void a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -613,7 +613,7 @@ abstract class GameClientShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Sumoblitz.field_L ? 1 : 0;
-          var4 = GameDefinitionLoader.a(param1, OpenGlUnderwaterEffect.field_r, EmailValidationError.field_c, (byte) 81);
+          var4 = GameDefinitionLoader.pollAccountDialogResult(param1, OpenGlUnderwaterEffect.field_r, EmailValidationError.field_c, (byte) 81);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -652,7 +652,7 @@ abstract class GameClientShell extends GameApplet {
               var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
-                  km.field_k = StringBuilderSupport.field_a;
+                  FourStatHiscoreRequest.field_k = StringBuilderSupport.field_a;
                   RasterBuffer.b(2);
                   LoginDialogNavigation.field_a = 10;
                   IntrusiveNode.field_a = false;
@@ -665,41 +665,41 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var4 == 4) {
             if (NineSlicePanel.field_a) {
-              MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.c(param0 ^ 16983));
+              MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.activeApplet(param0 ^ 16983));
             } else {
               IntrusiveNode.field_a = true;
               LoginDialogNavigation.field_a = 10;
             }
           }
           if (var4 == 5) {
-            HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.c(param0 - 16979), false);
+            HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.activeApplet(param0 - 16979), false);
           }
           if (var4 == 6 &&
             HardwareTextureSprite.field_m) {
             LoginDialogNavigation.field_a = 10;
           }
           if (var4 == 7) {
-            LegacyOpenGlInterleavedStream.openServerList(false, LegacyOpenGlUnlitEffect.c(2));
+            LegacyOpenGlInterleavedStream.openServerList(false, LegacyOpenGlUnlitEffect.activeApplet(2));
           }
           if (8 == var4) {
-            MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.c(param0 - 16979));
+            MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.activeApplet(param0 - 16979));
           }
           if (9 == var4) {
-            LegacyOpenGlTexture2D.openSupportPage(LegacyOpenGlUnlitEffect.c(2), (byte) -124);
+            LegacyOpenGlTexture2D.openSupportPage(LegacyOpenGlUnlitEffect.activeApplet(2), (byte) -124);
           }
           if (var4 == 10) {
             InwardSparkParticle.field_v.writeCipherByte(17, param0 ^ 16989);
           }
           if (var4 == 11) {
-            HiscoreRequest.reloadApplet(8192, LegacyOpenGlUnlitEffect.c(2));
+            HiscoreRequest.reloadApplet(8192, LegacyOpenGlUnlitEffect.activeApplet(2));
           }
           if (var4 == 12) {
-            SocialContact.openAppletPage(LegacyOpenGlSpriteTexture.e(false), LegacyOpenGlUnlitEffect.c(2), (byte) -103);
+            SocialContact.openAppletPage(LegacyOpenGlSpriteTexture.e(false), LegacyOpenGlUnlitEffect.activeApplet(2), (byte) -103);
           }
           if (var4 == 13) {
             try {
               if (null == IntrusiveNode.field_e) {
-                IntrusiveNode.field_e = new JaggrabDownloader(lt.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                IntrusiveNode.field_e = new JaggrabDownloader(FourIntUpdateRequest.platformDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (IntrusiveNode.field_e.a((byte) -110)) {
                 var12 = IntrusiveNode.field_e.completedDownload((byte) 126);
@@ -766,8 +766,8 @@ abstract class GameClientShell extends GameApplet {
         this.setBackground(java.awt.Color.black);
         EmailValidationError.field_c = this.field_v;
         LegacyVertexAttribute.setLoadingLanguage(EmailValidationError.field_c, 13586);
-        EmptyWidgetRenderer.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, EmailValidationError.field_c, this.field_y);
-        PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, EmailValidationError.field_c);
+        EmptyWidgetRenderer.a(param0, (byte) 84, FourIntUpdateRequest.platformDispatcher, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, EmailValidationError.field_c, this.field_y);
+        PacketBuffer.a(FourIntUpdateRequest.platformDispatcher, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, EmailValidationError.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);
         InwardSparkParticle.field_w = EmailValidationError.createMouseWheelInput((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);

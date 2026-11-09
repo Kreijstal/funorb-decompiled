@@ -48,11 +48,11 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_11_0;
           }
           if (this.containsEmailParts(-53, text)) {
-            stackIn_14_0 = pc.thisPasswordContainsYourText;
+            stackIn_14_0 = FriendListState.thisPasswordContainsYourText;
             return stackIn_14_0;
           }
           if (var3.length() <= 0) {
-            stackIn_28_0 = ka.passwordIsValidText;
+            stackIn_28_0 = RenderBufferSet.passwordIsValidText;
             return stackIn_28_0;
           }
           if (MessageDialog.a(var5, var3, 82)) {
@@ -175,12 +175,12 @@ final class PasswordValidator extends TextInputValidator {
         }
     }
 
-    final static void e(int param0) {
+    final static void resetAchievementProgress(int guard) {
         FontMetrics.field_b = 0;
         DisplayModeConfirmationDialog.droneTypeStreakMask = -1;
         ValidationMessageWidget.field_P = false;
         BigBurstaProgress.bigDefeatBalance = 0;
-        if (param0 >= 85) {
+        if (guard >= 85) {
           DroneChargeParticle.field_w = false;
           ArenaBackdropPalettes.uniqueDroneTypeStreak = 0;
           EmailSyntaxValidator.field_e = 0;

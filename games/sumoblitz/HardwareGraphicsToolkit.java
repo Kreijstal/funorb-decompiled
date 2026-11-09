@@ -260,17 +260,17 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_Pb;
     }
 
-    final static String a(String param0, String param1, String param2, boolean param3) {
+    final static String replaceText(String needle, String text, String replacement, boolean guard) {
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        if (!param3) {
+        if (!guard) {
           TEXTURE_PROJECTED = (TextureTransformMode) null;
         }
-        int var4 = param1.indexOf(param0);
+        int var4 = text.indexOf(needle);
         while (-1 != var4) {
-          param1 = param1.substring(0, var4) + param2 + param1.substring(param0.length() + var4);
-          var4 = param1.indexOf(param0, param2.length() + var4);
+          text = text.substring(0, var4) + replacement + text.substring(needle.length() + var4);
+          var4 = text.indexOf(needle, replacement.length() + var4);
         }
-        return param1;
+        return text;
     }
 
     final AffineTransform3D currentTextureTransform(int guard) {
@@ -662,7 +662,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         this.buildPerspectiveProjection(guard ^ -63);
-        if (pd.PERSPECTIVE == this.projectionMode) {
+        if (FourIntReadRequest.PERSPECTIVE == this.projectionMode) {
           this.projectionChanged(guard ^ 3);
         }
     }
@@ -811,9 +811,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final static void j(byte param0) {
         VertexLayout.field_b = -1;
-        qf.field_a = 0;
+        PerlinGradient.field_a = 0;
         GraphicsHeap.field_k = -1;
-        up.field_d = false;
+        IntroMeshProjection.field_d = false;
         LegacyOpenGlCubeTexture.field_l = null;
         int var1 = 47 / ((9 - param0) / 43);
     }
@@ -1164,7 +1164,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         try {
           if (param3 != 27541) {
             var5 = (String) null;
-            HardwareGraphicsToolkit.a((String) null, (String) null, (String) null, false);
+            HardwareGraphicsToolkit.replaceText((String) null, (String) null, (String) null, false);
           }
           stackIn_3_0 = new LegacyOpenGlGraphicsToolkit(param1, param0, param2);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
@@ -1945,13 +1945,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.modelViewValid = true;
         }
         if (param1 == 1) {
-          this.a((byte) -83, lf.REPLACE, lf.REPLACE);
+          this.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LegacyOpenGlRenderBufferSet.REPLACE);
         } else {
           if (0 == param1) {
             this.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           } else {
             if (param1 == 2) {
-              this.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+              this.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
             } else {
               if (param1 == 3) {
                 this.a((byte) -83, SlowBurstParticle.MODULATE, LoginForm.ADD);

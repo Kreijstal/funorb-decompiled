@@ -16,7 +16,7 @@ final class NativeGraphicsHeap extends GraphicsHeap implements NativeResource {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
+          NativeResourceReaper.deferDisposal((NativeResource) (this), (byte) -37);
         }
     }
 

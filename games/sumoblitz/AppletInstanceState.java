@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke {
-    static GameApplet field_a;
-    static SpriteData[] field_c;
-    static byte[][] field_b;
+final class AppletInstanceState {
+    static GameApplet activeApplet;
+    static SpriteData[] reticuleSpriteData;
+    static byte[][] largeBytePool;
     static int field_d;
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          field_a = (GameApplet) null;
-          field_c = null;
-          field_b = (byte[][]) null;
+          activeApplet = (GameApplet) null;
+          reticuleSpriteData = null;
+          largeBytePool = (byte[][]) null;
           return;
         }
-        field_c = null;
-        field_b = (byte[][]) null;
+        reticuleSpriteData = null;
+        largeBytePool = (byte[][]) null;
     }
 
     final static byte[] fetchGameDataFile(byte guard, String fileName) {
@@ -27,7 +27,7 @@ final class ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard < 87) {
-            field_a = (GameApplet) null;
+            activeApplet = (GameApplet) null;
           }
           stackIn_3_0 = Drone.field_J.fetchNamedFile(fileName, "", -1);
           return stackIn_3_0;
@@ -68,7 +68,7 @@ final class ke {
     }
 
     static {
-        field_a = null;
-        field_b = new byte[50][];
+        activeApplet = null;
+        largeBytePool = new byte[50][];
     }
 }

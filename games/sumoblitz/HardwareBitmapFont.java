@@ -274,9 +274,9 @@ final class HardwareBitmapFont extends ToolkitFont {
         this.field_f.a(this.field_e, 110);
         if (!this.field_c &&
           !param4) {
-          this.field_f.a((byte) -83, lf.REPLACE, lf.REPLACE);
+          this.field_f.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LegacyOpenGlRenderBufferSet.REPLACE);
         } else {
-          this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
+          this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
           this.field_f.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
           this.field_f.setTextureConstantColor(false, param3);
         }

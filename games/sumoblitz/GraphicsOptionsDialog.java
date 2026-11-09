@@ -85,7 +85,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_Z = DisplaySizeController.listFullscreenModes((byte) -110, lt.field_m);
+          this.field_Z = DisplaySizeController.listFullscreenModes((byte) -110, FourIntUpdateRequest.platformDispatcher);
           if (this.field_Z.length > 0) {
             for (var2_int = 0; this.field_Z.length > var2_int; var2_int++) {
               if (this.field_Z[var2_int] != null) {
@@ -207,7 +207,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 == 0) {
-              stackIn_74_0 = lw.moreMemoryIsRequiredText;
+              stackIn_74_0 = CanvasResizeState.moreMemoryIsRequiredText;
             } else {
               stackIn_74_0 = LegacyOpenGlClientVertexBuffer.largeScreenSizesAndText;
             }
@@ -307,16 +307,16 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
 
     final static void resendLoggingRequests(int guard, int opcode) {
         int var3 = 0;
-        lt var4 = null;
+        FourIntUpdateRequest var4 = null;
         QueuedIntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (lt) (HardwareCubeMapSource.field_d.first(-75));
+          var4 = (FourIntUpdateRequest) (HardwareCubeMapSource.field_d.first(-75));
           while (var4 != null) {
-            DroneChargeParticle.a((byte) -97, var4, opcode);
-            var4 = (lt) (HardwareCubeMapSource.field_d.next((byte) 18));
+            DroneChargeParticle.sendFourIntUpdate((byte) -97, var4, opcode);
+            var4 = (FourIntUpdateRequest) (HardwareCubeMapSource.field_d.next((byte) 18));
           }
           var5 = (QueuedIntArrayRequest) (MenuScreen.field_b.first(109));
           while (var5 != null) {

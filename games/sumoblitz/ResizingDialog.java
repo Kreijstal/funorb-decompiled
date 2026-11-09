@@ -232,7 +232,7 @@ abstract class ResizingDialog extends ModalDialog {
               return null;
             }
           }
-          var11 = param1.a(false, param2, param3, param5, param4);
+          var11 = param1.enterFullscreen(false, param2, param3, param5, param4);
           while (0 == var11.status) {
             TextureCombineOperation.sleepMillis(10L, (byte) 118);
           }
@@ -247,7 +247,7 @@ abstract class ResizingDialog extends ModalDialog {
           if (var11.status != 2) {
             return var7;
           }
-          OpenGlTransparentWaterEffect.a(var7, param1, false);
+          OpenGlTransparentWaterEffect.exitFullscreen(var7, param1, false);
           stackIn_41_0 = null;
           return (java.awt.Frame) (stackIn_41_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

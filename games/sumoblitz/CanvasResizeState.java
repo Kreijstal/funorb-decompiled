@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lw {
+final class CanvasResizeState {
     static ContentTransitionPhase RESIZING;
     static String moreMemoryIsRequiredText;
-    static int field_b;
+    static int minimumCanvasHeight;
     private static String field_z;
 
     public static void releaseStatics(int param0) {

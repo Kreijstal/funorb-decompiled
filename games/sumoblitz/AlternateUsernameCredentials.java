@@ -23,9 +23,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param0 <= IntroductionOverlaySupport.field_c.length)) {
               IntroductionOverlaySupport.field_c = new int[2 * param0];
             }
-            if (null == pd.field_q ||
-              !(param2 + param0 <= pd.field_q.length)) {
-              pd.field_q = new int[2 * (param0 + param2)];
+            if (null == FourIntReadRequest.field_q ||
+              !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+              FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
             }
             if (LegacyOpenGlTextureCache.field_b == null ||
               !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -45,9 +45,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param0 <= IntroductionOverlaySupport.field_c.length)) {
                 IntroductionOverlaySupport.field_c = new int[2 * param0];
               }
-              if (null == pd.field_q ||
-                !(param2 + param0 <= pd.field_q.length)) {
-                pd.field_q = new int[2 * (param0 + param2)];
+              if (null == FourIntReadRequest.field_q ||
+                !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
               }
               if (LegacyOpenGlTextureCache.field_b == null ||
                 !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -67,9 +67,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param0 <= IntroductionOverlaySupport.field_c.length)) {
                 IntroductionOverlaySupport.field_c = new int[2 * param0];
               }
-              if (null == pd.field_q ||
-                !(param2 + param0 <= pd.field_q.length)) {
-                pd.field_q = new int[2 * (param0 + param2)];
+              if (null == FourIntReadRequest.field_q ||
+                !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
               }
               if (LegacyOpenGlTextureCache.field_b == null ||
                 !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -94,9 +94,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
             }
             if (IntroductionOverlaySupport.field_c == null) {
               IntroductionOverlaySupport.field_c = new int[2 * param0];
-              if (null == pd.field_q ||
-                !(param2 + param0 <= pd.field_q.length)) {
-                pd.field_q = new int[2 * (param0 + param2)];
+              if (null == FourIntReadRequest.field_q ||
+                !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
               }
               if (LegacyOpenGlTextureCache.field_b == null ||
                 !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -104,9 +104,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               }
             } else {
               if (param0 <= IntroductionOverlaySupport.field_c.length) {
-                if (null == pd.field_q ||
-                  !(param2 + param0 <= pd.field_q.length)) {
-                  pd.field_q = new int[2 * (param0 + param2)];
+                if (null == FourIntReadRequest.field_q ||
+                  !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                  FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                 }
                 if (LegacyOpenGlTextureCache.field_b == null ||
                   !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -114,9 +114,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 }
               } else {
                 IntroductionOverlaySupport.field_c = new int[2 * param0];
-                if (null == pd.field_q ||
-                  !(param2 + param0 <= pd.field_q.length)) {
-                  pd.field_q = new int[2 * (param0 + param2)];
+                if (null == FourIntReadRequest.field_q ||
+                  !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                  FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                 }
                 if (LegacyOpenGlTextureCache.field_b == null ||
                   !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -137,9 +137,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               }
               if (IntroductionOverlaySupport.field_c == null) {
                 IntroductionOverlaySupport.field_c = new int[2 * param0];
-                if (null == pd.field_q ||
-                  !(param2 + param0 <= pd.field_q.length)) {
-                  pd.field_q = new int[2 * (param0 + param2)];
+                if (null == FourIntReadRequest.field_q ||
+                  !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                  FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                 }
                 if (LegacyOpenGlTextureCache.field_b == null ||
                   !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -147,9 +147,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 }
               } else {
                 if (param0 <= IntroductionOverlaySupport.field_c.length) {
-                  if (null == pd.field_q ||
-                    !(param2 + param0 <= pd.field_q.length)) {
-                    pd.field_q = new int[2 * (param0 + param2)];
+                  if (null == FourIntReadRequest.field_q ||
+                    !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                    FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                   }
                   if (LegacyOpenGlTextureCache.field_b == null ||
                     !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -157,9 +157,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   }
                 } else {
                   IntroductionOverlaySupport.field_c = new int[2 * param0];
-                  if (null == pd.field_q ||
-                    !(param2 + param0 <= pd.field_q.length)) {
-                    pd.field_q = new int[2 * (param0 + param2)];
+                  if (null == FourIntReadRequest.field_q ||
+                    !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                    FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                   }
                   if (LegacyOpenGlTextureCache.field_b == null ||
                     !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -175,9 +175,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 }
                 if (IntroductionOverlaySupport.field_c == null) {
                   IntroductionOverlaySupport.field_c = new int[2 * param0];
-                  if (null == pd.field_q ||
-                    !(param2 + param0 <= pd.field_q.length)) {
-                    pd.field_q = new int[2 * (param0 + param2)];
+                  if (null == FourIntReadRequest.field_q ||
+                    !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                    FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                   }
                   if (LegacyOpenGlTextureCache.field_b == null ||
                     !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -185,9 +185,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   }
                 } else {
                   if (param0 <= IntroductionOverlaySupport.field_c.length) {
-                    if (null == pd.field_q ||
-                      !(param2 + param0 <= pd.field_q.length)) {
-                      pd.field_q = new int[2 * (param0 + param2)];
+                    if (null == FourIntReadRequest.field_q ||
+                      !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                      FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                     }
                     if (LegacyOpenGlTextureCache.field_b == null ||
                       !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -195,9 +195,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     }
                   } else {
                     IntroductionOverlaySupport.field_c = new int[2 * param0];
-                    if (null == pd.field_q ||
-                      !(param2 + param0 <= pd.field_q.length)) {
-                      pd.field_q = new int[2 * (param0 + param2)];
+                    if (null == FourIntReadRequest.field_q ||
+                      !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                      FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                     }
                     if (LegacyOpenGlTextureCache.field_b == null ||
                       !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -213,9 +213,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 }
                 if (IntroductionOverlaySupport.field_c == null) {
                   IntroductionOverlaySupport.field_c = new int[2 * param0];
-                  if (null == pd.field_q ||
-                    !(param2 + param0 <= pd.field_q.length)) {
-                    pd.field_q = new int[2 * (param0 + param2)];
+                  if (null == FourIntReadRequest.field_q ||
+                    !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                    FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                   }
                   if (LegacyOpenGlTextureCache.field_b == null ||
                     !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -223,9 +223,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   }
                 } else {
                   if (param0 <= IntroductionOverlaySupport.field_c.length) {
-                    if (null == pd.field_q ||
-                      !(param2 + param0 <= pd.field_q.length)) {
-                      pd.field_q = new int[2 * (param0 + param2)];
+                    if (null == FourIntReadRequest.field_q ||
+                      !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                      FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                     }
                     if (LegacyOpenGlTextureCache.field_b == null ||
                       !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -233,9 +233,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     }
                   } else {
                     IntroductionOverlaySupport.field_c = new int[2 * param0];
-                    if (null == pd.field_q ||
-                      !(param2 + param0 <= pd.field_q.length)) {
-                      pd.field_q = new int[2 * (param0 + param2)];
+                    if (null == FourIntReadRequest.field_q ||
+                      !(param2 + param0 <= FourIntReadRequest.field_q.length)) {
+                      FourIntReadRequest.field_q = new int[2 * (param0 + param2)];
                     }
                     if (LegacyOpenGlTextureCache.field_b == null ||
                       !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
@@ -291,8 +291,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         }
     }
 
-    final static void b(byte param0) {
-        if (param0 >= -87) {
+    final static void initializeGraphicsOptionsLayer(byte guard) {
+        if (guard >= -87) {
           return;
         }
         HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);

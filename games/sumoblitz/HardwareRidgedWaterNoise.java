@@ -24,9 +24,9 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (drone.droneType != 0) {
-            var2_double = vp.field_d[drone.variant] * (double)LegacyOpenGlFloatPostProcessEffect.droneBaseScores[drone.droneType];
+            var2_double = DroneVariantScoring.scoreMultipliers[drone.variant] * (double)LegacyOpenGlFloatPostProcessEffect.droneBaseScores[drone.droneType];
             var2_double = var2_double + (double)(drone.field_G / 50);
-            var2_double = var2_double * (double)pd.scoreMultiplier;
+            var2_double = var2_double * (double)FourIntReadRequest.scoreMultiplier;
             IntrusiveDequeCursor.a((int)var2_double, -1372239541);
             if ((1 << drone.droneType & DisplayModeConfirmationDialog.droneTypeStreakMask) == 0) {
               DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
@@ -114,9 +114,9 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         TextureFormat.elapsedTicks = 0;
         MusicPatch.simulationPaused = false;
         if (initializeRound) {
-          ke.beginCurrentWave(false);
+          AppletInstanceState.beginCurrentWave(false);
           HardwareUnlitEffect.field_e = 1000;
-          TextLayout.a(0, 8);
+          TextLayout.playGameTrack(0, 8);
           return;
         }
     }

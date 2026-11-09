@@ -64,7 +64,7 @@ final class NativeLibraryExtractor {
         if (guard != 22075) {
           NativeLibraryExtractor.restoreMusicVolume(66);
         }
-        lf.setMusicVolume(0, 256);
+        LegacyOpenGlRenderBufferSet.setMusicVolume(0, 256);
     }
 
     final static int prepareNativeLibrary(String libraryName, boolean guard) {

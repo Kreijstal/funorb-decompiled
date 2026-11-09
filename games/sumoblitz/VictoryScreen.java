@@ -11,37 +11,37 @@ final class VictoryScreen extends MenuScreen {
         super.update(param0 + 0);
         LegacyOpenGlRenderbuffer.field_u.update(param0 ^ 18481);
         if (this.field_i % 50 == 0) {
-          up.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
+          IntroMeshProjection.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
         }
-        LegacyOpenGlRenderbuffer.field_u.steerTowardPoint(false, LoginForm.field_E, up.field_a);
+        LegacyOpenGlRenderbuffer.field_u.steerTowardPoint(false, LoginForm.field_E, IntroMeshProjection.field_a);
         if (param0 != -18556) {
           this.field_i = -126;
         }
         if (0 == this.field_i % 100) {
-          TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, im.field_b, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
+          TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, ParticleSpriteResources.victoryParticles, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
           ArchiveLoadRequirement.playSoundEffect(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
         } else {
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
-          im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1024 + LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1024 + (LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
+          ParticleSpriteResources.victoryParticles.addLast((IntrusiveNode) (new PowerupTrailParticle(50, LegacyOpenGlRenderbuffer.field_u.xQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, -1024 + LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
         }
-        TimedSceneEffect var2 = (TimedSceneEffect) (im.field_b.first(68));
+        TimedSceneEffect var2 = (TimedSceneEffect) (ParticleSpriteResources.victoryParticles.first(68));
         while (var2 != null) {
           if (var2.updateAndIsExpired(-2567)) {
             var2.unlink(false);
             if (var2 instanceof SlowBurstParticle &&
               ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96) == 1 &&
               !((SlowBurstParticle) (var2)).field_u) {
-              SpriteOptionRenderer.emitBurstParticles(VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, im.field_b, 20);
+              SpriteOptionRenderer.emitBurstParticles(VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, ParticleSpriteResources.victoryParticles, 20);
             }
           }
-          var2 = (TimedSceneEffect) (im.field_b.next((byte) 18));
+          var2 = (TimedSceneEffect) (ParticleSpriteResources.victoryParticles.next((byte) 18));
         }
         this.field_i = this.field_i + 1;
     }
@@ -83,7 +83,7 @@ final class VictoryScreen extends MenuScreen {
 
     public VictoryScreen() {
         super(12);
-        im.field_b = new IntrusiveDeque();
+        ParticleSpriteResources.victoryParticles = new IntrusiveDeque();
     }
 
     final void render(int opacity, GraphicsToolkit toolkit, int guard) {
@@ -97,10 +97,10 @@ final class VictoryScreen extends MenuScreen {
           DelegatingCanvas.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
           DelegatingCanvas.a(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.height() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.width() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.height() >> 1), 1, true);
           LegacyOpenGlSpriteMask.field_e.draw(-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320, 200 - (LegacyOpenGlSpriteMask.field_e.height() >> 1));
-          var7 = (TimedSceneEffect) (im.field_b.first(-102));
+          var7 = (TimedSceneEffect) (ParticleSpriteResources.victoryParticles.first(-102));
           while (var7 != null) {
             var7.render(toolkit, guard + 2230);
-            var7 = (TimedSceneEffect) (im.field_b.next((byte) 18));
+            var7 = (TimedSceneEffect) (ParticleSpriteResources.victoryParticles.next((byte) 18));
           }
           LegacyOpenGlRenderbuffer.field_u.render(toolkit, guard + 21754);
           super.render(opacity, toolkit, guard);

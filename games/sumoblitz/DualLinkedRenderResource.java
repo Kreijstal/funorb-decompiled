@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class r extends DualLinkNode {
+abstract class DualLinkedRenderResource extends DualLinkNode {
     static int[] field_r;
 
     final static ChatMessage readChatMessage(boolean quickChat, byte guard) {
@@ -54,14 +54,14 @@ abstract class r extends DualLinkNode {
           }
         }
         if (!quickChat) {
-          oi.field_c = UsernameCredentials.readHuffmanText(var8, 80, -14832);
+          HiscoreRequestQueue.decodedChatText = UsernameCredentials.readHuffmanText(var8, 80, -14832);
           EmptyWidgetRenderer.field_c = null;
           return new ChatMessage(quickChat);
         }
         var5 = var8.readUnsignedShort(255);
         try {
           var9 = LegacyOpenGlBuffer.field_c.getPhrase(var5, -32769);
-          oi.field_c = var9.previewText(1118);
+          HiscoreRequestQueue.decodedChatText = var9.previewText(1118);
           if (!MarkerTrackWidget.field_E.equals(QueuedIntArrayRequest.field_o)) {
             stackIn_24_0 = var9.responseIds;
           } else {
@@ -73,7 +73,7 @@ abstract class r extends DualLinkNode {
           var6 = (Exception) (Object) decompiledCaughtException;
           IntrusiveNode.reportClientError("CC1", (Throwable) ((Object) var6), 0);
           EmptyWidgetRenderer.field_c = null;
-          oi.field_c = null;
+          HiscoreRequestQueue.decodedChatText = null;
           return new ChatMessage(quickChat);
         }
         return new ChatMessage(quickChat);
@@ -84,7 +84,7 @@ abstract class r extends DualLinkNode {
         field_r = null;
     }
 
-    protected r() {
+    protected DualLinkedRenderResource() {
     }
 
     static {

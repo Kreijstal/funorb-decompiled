@@ -226,13 +226,13 @@ final class CachedTextLayout extends TextLayout {
           String var2 = (String) null;
           CachedTextLayout.a((LoginFieldValue) null, 38, (LoginFieldValue) null, -17, false, -119, (String) null);
         }
-        if (up.field_d) {
+        if (IntroMeshProjection.field_d) {
           return null;
         }
-        if (GameClientShell.field_s > qf.field_a) {
+        if (GameClientShell.field_s > PerlinGradient.field_a) {
           return null;
         }
-        if (!(qf.field_a >= GameClientShell.field_s + GameDefinitionLoader.field_c)) {
+        if (!(PerlinGradient.field_a >= GameClientShell.field_s + GameDefinitionLoader.field_c)) {
           return LegacyOpenGlCubeTexture.field_l;
         }
         return null;
@@ -360,7 +360,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 114, 18);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
               var10 = InwardSparkParticle.field_v.position;
-              var11_ref_String = DropDownLabelRenderer.readAppletSettings(-94, LegacyOpenGlUnlitEffect.c(2));
+              var11_ref_String = DropDownLabelRenderer.readAppletSettings(-94, LegacyOpenGlUnlitEffect.activeApplet(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -400,11 +400,11 @@ final class CachedTextLayout extends TextLayout {
             NativeLibraryExtractor.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              TextCaretLayout.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
+              TextCaretLayout.accountPhase = HiscoreRequestQueue.WAIT_NAME_SUGGESTIONS;
               ArchiveLoadingStage.nameSuggestions = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.c(2));
+                NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.activeApplet(2));
                 MouseWheelInput.field_c = DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText;
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -116);
                 LimitedRandomAccessFile.field_g = false;
@@ -422,7 +422,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (oi.WAIT_NAME_SUGGESTIONS == TextCaretLayout.accountPhase) {
+          if (HiscoreRequestQueue.WAIT_NAME_SUGGESTIONS == TextCaretLayout.accountPhase) {
             var9Lifetime2 = 2;
             if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
               var10Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedShort(255);
@@ -440,13 +440,13 @@ final class CachedTextLayout extends TextLayout {
             }
           }
           if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == TextCaretLayout.accountPhase &&
-            lt.a((byte) 119)) {
+            FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
             if (TextureFormat.field_a != 255) {
               MouseWheelInput.field_c = NativeLibraryExtractor.field_a.readCp1252String(-1);
             } else {
               var9_ref_String = NativeLibraryExtractor.field_a.readNullableString((byte) 80);
               if (var9_ref_String != null) {
-                UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
+                UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.activeApplet(2));
               }
             }
             LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
@@ -465,8 +465,8 @@ final class CachedTextLayout extends TextLayout {
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
-            var9Lifetime3 = vp.field_a;
-            vp.field_a = LoginCredentialType.field_b;
+            var9Lifetime3 = DroneVariantScoring.field_a;
+            DroneVariantScoring.field_a = LoginCredentialType.field_b;
             LimitedRandomAccessFile.field_g = true;
             LoginCredentialType.field_b = var9Lifetime3;
           }

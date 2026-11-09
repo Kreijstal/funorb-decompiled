@@ -115,7 +115,7 @@ final class BlendMode {
     }
 
     final static void printClientError(byte guard, String message) {
-        System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", message, "\n", true));
+        System.out.println("Error: " + HardwareGraphicsToolkit.replaceText("%0a", message, "\n", true));
         if (guard < 4) {
           BlendMode.releaseStatics(81);
         }

@@ -29,21 +29,21 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static ArenaPad a(int param0, int param1, int param2, int param3, byte param4) {
-        if (param4 != -113) {
+    final static ArenaPad createArenaPad(int orientation, int xPixels, int yPixels, int padType, byte guard) {
+        if (guard != -113) {
           return (ArenaPad) null;
         }
-        return new ArenaPad(param3, param1, param2, param0);
+        return new ArenaPad(padType, xPixels, yPixels, orientation);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(boolean param0, PlatformTaskDispatcher param1) {
+    final void exitFullscreen(boolean visibleBeforeDispose, PlatformTaskDispatcher dispatcher) {
         try {
-          OpenGlTransparentWaterEffect.a(this.field_b, param1, param0);
+          OpenGlTransparentWaterEffect.exitFullscreen(this.field_b, dispatcher, visibleBeforeDispose);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cq.C(" + visibleBeforeDispose + ',' + (dispatcher != null ? "{...}" : "null") + ')');
         }
     }
 

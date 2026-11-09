@@ -527,10 +527,10 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    final static void a(int param0, int param1) {
-        DualLinkNode.field_p = 1000000000L / (long)param0;
-        if (param1 != 26175) {
-          OpenGlTexture.a(92, -56);
+    final static void setTickRate(int ticksPerSecond, int guard) {
+        DualLinkNode.field_p = 1000000000L / (long)ticksPerSecond;
+        if (guard != 26175) {
+          OpenGlTexture.setTickRate(92, -56);
         }
     }
 

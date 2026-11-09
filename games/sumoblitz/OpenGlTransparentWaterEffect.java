@@ -29,16 +29,16 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_h = null;
         field_i = null;
-        if (param0 != 79) {
+        if (guard != 79) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          OpenGlTransparentWaterEffect.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, false);
+          OpenGlTransparentWaterEffect.exitFullscreen((java.awt.Frame) null, (PlatformTaskDispatcher) null, false);
         }
     }
 
-    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, boolean param2) {
+    final static void exitFullscreen(java.awt.Frame frame, PlatformTaskDispatcher dispatcher, boolean visibleBeforeDispose) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -51,7 +51,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           while (true) {
-            var3 = param1.a(param0, 19);
+            var3 = dispatcher.restoreDisplayMode(frame, 19);
             while (var3.status == 0) {
               TextureCombineOperation.sleepMillis(10L, (byte) 81);
             }
@@ -61,26 +61,26 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
             }
             break;
           }
-          param0.setVisible(param2);
-          param0.dispose();
+          frame.setVisible(visibleBeforeDispose);
+          frame.dispose();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("wj.N(");
-          if (param0 == null) {
+          if (frame == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (dispatcher == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(visibleBeforeDispose).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, LoginForm.ADD, lf.REPLACE);
+        this.toolkit.a((byte) -83, LoginForm.ADD, LegacyOpenGlRenderBufferSet.REPLACE);
         if (guard >= -71) {
           OpenGlTransparentWaterEffect.d(-46);
         }

@@ -23,7 +23,7 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.widgetTheme.pushClip(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
               HardwareTurbulentWaterNoise.widgetTheme.popRasterState((byte) -84);
               return;
@@ -35,7 +35,7 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.widgetTheme.pushClip(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
               HardwareTurbulentWaterNoise.widgetTheme.popRasterState((byte) -84);
               return;
@@ -49,7 +49,7 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.widgetTheme.pushClip(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
           HardwareTurbulentWaterNoise.widgetTheme.popRasterState((byte) -84);
           return;
@@ -63,7 +63,7 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.widgetTheme.pushClip(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
           HardwareTurbulentWaterNoise.widgetTheme.popRasterState((byte) -84);
           return;
@@ -74,7 +74,7 @@ final class ScrollViewport extends SingleChildWidget {
         if (this.height == 0) {
           return;
         }
-        HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+        HardwareTurbulentWaterNoise.widgetTheme.pushClip(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
         this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
         HardwareTurbulentWaterNoise.widgetTheme.popRasterState((byte) -84);
     }

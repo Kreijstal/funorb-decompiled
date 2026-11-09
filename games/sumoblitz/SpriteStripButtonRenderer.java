@@ -123,10 +123,10 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
           var2 = var28.readUnsignedByte(-31302);
           if (0 == var2) {
             var3 = var28.readUnsignedShort(255);
-            var4_ref_of = (HiscoreRequest) (oi.field_b.first(74));
+            var4_ref_of = (HiscoreRequest) (HiscoreRequestQueue.pending.first(74));
             while (var4_ref_of != null) {
               if (var3 != var4_ref_of.tableId) {
-                var4_ref_of = (HiscoreRequest) (oi.field_b.next((byte) 18));
+                var4_ref_of = (HiscoreRequest) (HiscoreRequestQueue.pending.next((byte) 18));
                 continue;
               }
               break;

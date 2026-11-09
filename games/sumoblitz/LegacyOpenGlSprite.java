@@ -214,10 +214,10 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
         this.toolkit.setActiveTextureUnit(1, 119);
         this.toolkit.bindTexture(24, (LegacyOpenGlTexture) null);
         this.toolkit.setTextureCombineOperations(primaryUnit ^ 20685, 8448, 8448);
-        this.toolkit.b(34168, 768, 1, -128);
-        this.toolkit.a(112, 0, 5890, 770);
+        this.toolkit.setTextureCombineSources(34168, 768, 1, -128);
+        this.toolkit.setTextureCombineOperands(112, 0, 5890, 770);
         this.toolkit.setActiveTextureUnit(primaryUnit, 112);
-        this.toolkit.b(34168, 768, 1, 92);
+        this.toolkit.setTextureCombineSources(34168, 768, 1, 92);
     }
 
     final void drawAffine(float x0, float y0, float x1, float y1, float x2, float y2, int colorMode, int color, int blendMode, int flags) {
@@ -298,50 +298,50 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         this.toolkit.setActiveTextureUnit(1, 115);
         this.toolkit.bindTexture(74, this.texture);
-        this.toolkit.setTextureCombineOperations(guard ^ 18437, 7681, this.toolkit.b(colorMode, (byte) -14));
-        this.toolkit.b(34167, 768, 1, -120);
-        this.toolkit.a(113, 0, 34168, 770);
+        this.toolkit.setTextureCombineOperations(guard ^ 18437, 7681, this.toolkit.glTextureCombineOperation(colorMode, (byte) -14));
+        this.toolkit.setTextureCombineSources(34167, 768, 1, -120);
+        this.toolkit.setTextureCombineOperands(113, 0, 34168, 770);
         this.toolkit.setActiveTextureUnit(0, 100);
         if (guard != 6344) {
           this.draw(114, -109, -63, -80, 49);
           this.toolkit.bindTexture(guard ^ 6275, this.auxiliaryTexture);
           this.toolkit.setTextureCombineOperations(20685, 7681, 34479);
-          this.toolkit.b(34166, 768, 1, guard - 6465);
+          this.toolkit.setTextureCombineSources(34166, 768, 1, guard - 6465);
           if (this.auxiliaryChannel == 0) {
-            this.toolkit.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
+            this.toolkit.setTextureConstantRgba(31322, 0.5f, 0.5f, 1.0f, 0.0f);
             return;
           }
           if (this.auxiliaryChannel == 1) {
-            this.toolkit.a(guard + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
+            this.toolkit.setTextureConstantRgba(guard + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
             return;
           }
           if (this.auxiliaryChannel == 2) {
-            this.toolkit.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
+            this.toolkit.setTextureConstantRgba(31322, 0.5f, 1.0f, 0.5f, 0.0f);
             return;
           }
           if (this.auxiliaryChannel == 3) {
-            this.toolkit.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
+            this.toolkit.setTextureConstantRgba(31322, 128.5f, 128.5f, 128.5f, 0.0f);
             return;
           }
           return;
         }
         this.toolkit.bindTexture(guard ^ 6275, this.auxiliaryTexture);
         this.toolkit.setTextureCombineOperations(20685, 7681, 34479);
-        this.toolkit.b(34166, 768, 1, guard - 6465);
+        this.toolkit.setTextureCombineSources(34166, 768, 1, guard - 6465);
         if (this.auxiliaryChannel == 0) {
-          this.toolkit.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
+          this.toolkit.setTextureConstantRgba(31322, 0.5f, 0.5f, 1.0f, 0.0f);
           return;
         }
         if (this.auxiliaryChannel == 1) {
-          this.toolkit.a(guard + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
+          this.toolkit.setTextureConstantRgba(guard + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
           return;
         }
         if (this.auxiliaryChannel == 2) {
-          this.toolkit.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
+          this.toolkit.setTextureConstantRgba(31322, 0.5f, 1.0f, 0.5f, 0.0f);
           return;
         }
         if (this.auxiliaryChannel == 3) {
-          this.toolkit.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
+          this.toolkit.setTextureConstantRgba(31322, 128.5f, 128.5f, 128.5f, 0.0f);
           return;
         }
     }

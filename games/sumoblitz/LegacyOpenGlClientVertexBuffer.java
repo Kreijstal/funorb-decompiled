@@ -40,7 +40,7 @@ final class LegacyOpenGlClientVertexBuffer extends LegacyOpenGlClientBuffer impl
             if (var2_int >= levelCount) {
               return true;
             }
-            if (up.field_g[var2_int]) {
+            if (IntroMeshProjection.threeLifeCompletions[var2_int]) {
               var2_int++;
               continue;
             }

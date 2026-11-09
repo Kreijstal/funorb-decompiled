@@ -10,7 +10,7 @@ final class TextureCoordinateGeneration {
           return;
         }
         PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[param0];
-        GpuDataType.a(125, var2);
+        GpuDataType.removeSoundStream(125, var2);
     }
 
     public static void releaseStatics(byte param0) {

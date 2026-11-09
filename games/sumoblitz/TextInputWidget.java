@@ -35,7 +35,7 @@ class TextInputWidget extends InteractiveWidget {
           if (!(this.renderer instanceof TextWidgetLayout)) {
             return false;
           }
-          var8_int = ((TextWidgetLayout) ((Object) this.renderer)).characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, pi.field_e, -4059, parentY);
+          var8_int = ((TextWidgetLayout) ((Object) this.renderer)).characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, ArenaDefinitionCodec.field_e, -4059, parentY);
           stackIn_7_1 = 124;
           if (-1 != var8_int) {
             stackIn_8_2 = var8_int;
@@ -499,7 +499,7 @@ class TextInputWidget extends InteractiveWidget {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof TextWidgetLayout) {
               var6 = (TextWidgetLayout) ((Object) this.renderer);
-              var7 = var6.characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, pi.field_e, -4059, parentY);
+              var7 = var6.characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, ArenaDefinitionCodec.field_e, -4059, parentY);
               if (var7 != -1) {
                 if (this.wordSelection &&
                   this.wordSelectionEnd > var7 &&

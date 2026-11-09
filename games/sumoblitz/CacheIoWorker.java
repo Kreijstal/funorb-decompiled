@@ -225,7 +225,7 @@ final class CacheIoWorker implements Runnable {
         this.stopping = false;
         this.queuedCount = 0;
         try {
-          var2 = taskDispatcher.a(true, (Runnable) (this), 5);
+          var2 = taskDispatcher.startThread(true, (Runnable) (this), 5);
           while (0 == var2.status) {
             TextureCombineOperation.sleepMillis(10L, (byte) 119);
           }

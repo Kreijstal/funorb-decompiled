@@ -101,7 +101,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
                 var1_int++;
               }
             } else {
-              Bzip2State.field_J = ((DroneWaveDefinition) (NoiseSliceGenerator.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).waves(-120);
+              Bzip2State.field_J = ((DroneWaveDefinition) (NoiseSliceGenerator.field_a.get(107, (long)OpenGlShaderProgram.levelIndex))).waves(-120);
             }
           }
           FadingWidget.score = 0;
@@ -112,9 +112,9 @@ final class ByteArrayCacheNode extends DualLinkNode {
           }
           TextureFormat.elapsedTicks = 0;
           MusicPatch.simulationPaused = false;
-          ke.beginCurrentWave(false);
+          AppletInstanceState.beginCurrentWave(false);
           HardwareUnlitEffect.field_e = 1000;
-          TextLayout.a(0, OpenGlShaderProgram.levelIndex % 5 + 1);
+          TextLayout.playGameTrack(0, OpenGlShaderProgram.levelIndex % 5 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -331,10 +331,10 @@ final class IsaacCipher {
           var8Lifetime1 = LegacyOpenGlInterleavedStream.sinQ16(var6Lifetime1, -431) >> 8;
           var9Lifetime1 = SocialContact.cosQ16(param0 - 256, var6Lifetime1) >> 8;
           if (PointLight.mouseX != -1 &&
-            pi.field_e != -1) {
+            ArenaDefinitionCodec.field_e != -1) {
             var9Lifetime1 = -128;
             var7Lifetime1 = PointLight.mouseX - 320;
-            var8Lifetime1 = -pi.field_e + 240;
+            var8Lifetime1 = -ArenaDefinitionCodec.field_e + 240;
           }
           var10 = (double)param0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1)));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
@@ -360,7 +360,7 @@ final class IsaacCipher {
             for (var18 = 0; 3 > var18; var18++) {
               IntroductionOverlaySupport.field_b[var18] = IntroductionOverlaySupport.field_b[var18] + LoginIdentifierSupport.introMeshCenters[var15][var18];
             }
-            up.a(OpenGlUnderwaterEffect.field_k, IntroductionOverlaySupport.field_b, false, false, var17, true, -1622738130);
+            IntroMeshProjection.projectIntroMesh(OpenGlUnderwaterEffect.field_k, IntroductionOverlaySupport.field_b, false, false, var17, true, -1622738130);
             GameplaySession.renderLitMeshFaces(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
           }
           return;

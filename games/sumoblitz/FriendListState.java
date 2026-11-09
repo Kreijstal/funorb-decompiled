@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc {
-    static SpriteData field_c;
+final class FriendListState {
+    static SpriteData ghostSpriteData;
     static String thisPasswordContainsYourText;
-    static IntrusiveDeque field_d;
-    static SpriteData[] field_b;
+    static IntrusiveDeque friends;
+    static SpriteData[] teleporterSpriteData;
 
     public static void releaseStatics(int param0) {
         thisPasswordContainsYourText = null;
         if (param0 > 1) {
-          field_b = null;
-          field_d = null;
-          field_c = null;
+          teleporterSpriteData = null;
+          friends = null;
+          ghostSpriteData = null;
           return;
         }
-        field_c = (SpriteData) null;
-        field_b = null;
-        field_d = null;
-        field_c = null;
+        ghostSpriteData = (SpriteData) null;
+        teleporterSpriteData = null;
+        friends = null;
+        ghostSpriteData = null;
     }
 
     final static int glFormatComponents(int format, byte guard) {

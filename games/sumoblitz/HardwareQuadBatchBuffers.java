@@ -17,7 +17,7 @@ final class HardwareQuadBatchBuffers {
     final static boolean hasActivePlayer(int guard) {
         boolean stackIn_7_0 = false;
         if (guard >= -19) {
-          HardwareQuadBatchBuffers.resendShortValueRequests(0, false);
+          HardwareQuadBatchBuffers.resendFourStatHiscoreRequests(0, false);
         }
         stackIn_7_0 = (25 > OpenGlShaderProgram.levelIndex) && (SpriteMask.drones[0] != null) && (SpriteMask.drones[0].isActive((byte) 115));
         return stackIn_7_0;
@@ -26,7 +26,7 @@ final class HardwareQuadBatchBuffers {
     final static void notifyBrowserResizing(int guard, int mode) {
         try {
           try {
-            BrowserScriptBridge.call(-126, LegacyOpenGlUnlitEffect.c(guard - 23), "resizing", new Object[]{new Integer(mode)});
+            BrowserScriptBridge.call(-126, LegacyOpenGlUnlitEffect.activeApplet(guard - 23), "resizing", new Object[]{new Integer(mode)});
           } catch (Throwable throwable) {
           }
           if (guard != 25) {
@@ -60,20 +60,20 @@ final class HardwareQuadBatchBuffers {
         return true;
     }
 
-    final static void resendShortValueRequests(int opcode, boolean guard) {
+    final static void resendFourStatHiscoreRequests(int opcode, boolean guard) {
         int var3 = 0;
-        km var4 = null;
+        FourStatHiscoreRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (km) (EmailValidationError.field_a.first(111));
+          var4 = (FourStatHiscoreRequest) (EmailValidationError.field_a.first(111));
           if (!guard) {
             field_a = (TickClock) null;
           }
           while (var4 != null) {
-            MarkerTrackRenderer.a(-1, var4, opcode);
-            var4 = (km) (EmailValidationError.field_a.next((byte) 18));
+            MarkerTrackRenderer.sendFourStatHiscoreRequest(-1, var4, opcode);
+            var4 = (FourStatHiscoreRequest) (EmailValidationError.field_a.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

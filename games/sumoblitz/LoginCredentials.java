@@ -38,7 +38,7 @@ abstract class LoginCredentials {
           if (guard != 19886) {
             field_d = -49;
           }
-          if (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
+          if (Base37NameAlphabet.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }

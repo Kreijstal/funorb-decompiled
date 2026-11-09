@@ -130,7 +130,7 @@ final class HardwareTextureCache {
           }
           var6 = stackIn_9_0;
           if (var12.field_s) {
-            if (this.toolkit.a()) {
+            if (this.toolkit.isFloatPostProcessingEnabled()) {
               var39 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -70);
               stackIn_13_0 = this.toolkit;
               stackIn_13_1 = var6;
@@ -235,7 +235,7 @@ final class HardwareTextureCache {
           this.textures.put((long)textureId, var4Lifetime1, (byte) 19);
           return var4Lifetime1;
         }
-        if (this.toolkit.a()) {
+        if (this.toolkit.isFloatPostProcessingEnabled()) {
           var40 = this.provider.a(var6Lifetime1, false, 0.699999988079071f, textureId, var6Lifetime1, -70);
           stackIn_52_0 = this.toolkit;
           stackIn_52_1 = var6Lifetime1;

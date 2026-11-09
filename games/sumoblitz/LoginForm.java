@@ -72,7 +72,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
                   if (this.allowGuestPlay) {
                     LoginCredentialType.showAccountSignupPrompt(true);
                   } else {
-                    pi.a((byte) -110);
+                    ArenaDefinitionCodec.requestLoginBack((byte) -110);
                   }
                 }
               }
@@ -197,7 +197,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.y = this.y + (var7.wrappedHeight(this.messageText, -40 + this.width, var7.ascent) + 5);
           }
           var8 = OpenGlEnvironmentWaterEffect.loginText;
-          var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.c(2), 1);
+          var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.activeApplet(2), 1);
           if (OpenGlTexture3D.field_m != var9) {
             if (LevelSelectScreen.field_j == var9) {
               var8 = LruNodeCache.usernameText;
@@ -209,7 +209,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, 80);
           this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
-          dupTemp$1 = new LabeledWidget(10, this.y, -20 + this.width, 25, this.passwordInput, false, 80, 3, var7, 16777215, pi.passwordText);
+          dupTemp$1 = new LabeledWidget(10, this.y, -20 + this.width, 25, this.passwordInput, false, 80, 3, var7, 16777215, ArenaDefinitionCodec.passwordText);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, 107);
           this.y = this.y + (((UiWidget) ((Object) var13)).height + 5);
@@ -332,7 +332,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
     }
 
     private final void submitLogin(byte guard) {
-        if (oi.isReconnecting((byte) -64) ||
+        if (HiscoreRequestQueue.isReconnecting((byte) -64) ||
           !(this.identifierInput.text.length() <= 0) &&
           !(this.passwordInput.text.length() <= 0)) {
           ProgressDialog.beginLogin(this.passwordInput.text, this.identifierInput.text, -1807);

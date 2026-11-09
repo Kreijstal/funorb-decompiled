@@ -83,7 +83,7 @@ final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
                 System.load(((File) (var4)).getPath());
-                ByteArrayPool.field_a.put(param2, hc.class);
+                ByteArrayPool.field_a.put(param2, AccountStatusDialogState.class);
                 return true;
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;

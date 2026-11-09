@@ -193,7 +193,7 @@ final class SoundCache {
           }
           var5_int = var5_int | groupId << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.pcmSamples.a(guard ^ 1026562803, var6));
+          var8 = (PcmSample) (this.pcmSamples.get(guard ^ 1026562803, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -248,7 +248,7 @@ final class SoundCache {
           var5_int = fileId ^ (groupId >>> 12 | (1342181375 & groupId) << 4);
           var5_int = var5_int | groupId << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) (this.pcmSamples.a(127, var6));
+          var8 = (PcmSample) (this.pcmSamples.get(127, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -258,7 +258,7 @@ final class SoundCache {
             stackIn_7_0 = null;
             return (PcmSample) (stackIn_7_0);
           }
-          var9 = (VorbisSample) (this.compressedSamples.a(118, var6));
+          var9 = (VorbisSample) (this.compressedSamples.get(118, var6));
           if (var9 == null) {
             var9 = VorbisSample.load(this.vorbisArchive, groupId, fileId);
             if (var9 == null) {

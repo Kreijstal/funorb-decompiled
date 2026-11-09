@@ -314,12 +314,12 @@ final class ResourceArchive {
         if (param0 != 6) {
           ResourceArchive.pollAccountCreationResult((byte) 84);
         }
-        if (null == km.field_o) {
-          km.field_o = Js5Client.requestServerData((byte) -82, 6);
+        if (null == FourStatHiscoreRequest.field_o) {
+          FourStatHiscoreRequest.field_o = Js5Client.requestServerData((byte) -82, 6);
         }
-        if (km.field_o.complete) {
-          Drone.field_g = km.field_o.payload;
-          km.field_o = null;
+        if (FourStatHiscoreRequest.field_o.complete) {
+          Drone.field_g = FourStatHiscoreRequest.field_o.payload;
+          FourStatHiscoreRequest.field_o = null;
           if (Drone.field_g == null) {
             return true;
           }

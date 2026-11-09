@@ -12,9 +12,9 @@ final class GameOverScreen extends MenuScreen {
 
     final void render(int opacity, GraphicsToolkit toolkit, int guard) {
         try {
-          DelegatingCanvas.a(up.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
           ForceFieldRingEffect.field_t.a(TextureGeneratorNode.defeatText, opacity << 24 | 5023231, -1, 105, 320, 0);
-          hc.field_e.a(TextureGeneratorNode.defeatText, -1, -1, 105, 320, 0);
+          AccountStatusDialogState.headingFont.a(TextureGeneratorNode.defeatText, -1, -1, 105, 320, 0);
           QueuedIntArrayRequest.field_k.a(100, 5023231 | opacity << 24, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 90, -1, 0, 0, -8787, AchievementThresholds.scoreText.toUpperCase() + " " + FadingWidget.score + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, -23620), (SpriteMask) null, 1, 1);
           GameTrackPlayback.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 90, -1, 0, 0, -8787, AchievementThresholds.scoreText.toUpperCase() + " " + FadingWidget.score + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, guard - 21265), (SpriteMask) null, 1, 1);
           super.render(opacity, toolkit, guard);
@@ -30,13 +30,13 @@ final class GameOverScreen extends MenuScreen {
             if (0 != CacheReferenceNode.field_u) {
               return;
             }
-            pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
+            FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
           CacheReferenceNode.field_u = CacheReferenceNode.field_u - 1;
           if (0 == CacheReferenceNode.field_u) {
-            pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
+            FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
@@ -47,14 +47,14 @@ final class GameOverScreen extends MenuScreen {
           if (0 != CacheReferenceNode.field_u) {
             return;
           }
-          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
+          FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
           ComboState.comboCount = 0;
           return;
         }
         if (0 != CacheReferenceNode.field_u) {
           return;
         }
-        pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
+        FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
         ComboState.comboCount = 0;
     }
 

@@ -136,7 +136,7 @@ final class LegacyOpenGlInterleavedStream {
                 continue;
               }
               var5++;
-              var8 = no.parseDecimal((byte) -127, (CharSequence) ((Object) var7_ref_String));
+              var8 = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + var6_int + arguments[var8].length());
               continue;
             }
@@ -169,7 +169,7 @@ final class LegacyOpenGlInterleavedStream {
               continue;
             }
             var5Lifetime1++;
-            var10 = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9));
+            var10 = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var9));
             discarded$1 = var6.append(template.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$2 = var6.append(arguments[var10]);

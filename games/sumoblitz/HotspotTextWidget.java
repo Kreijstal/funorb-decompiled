@@ -46,7 +46,7 @@ class HotspotTextWidget extends InteractiveWidget {
           this.hoveredHotspot = null;
           if (this.hovered) {
             var6 = -this.x + (-parentX + PointLight.mouseX);
-            var7 = -parentY + (pi.field_e - this.y);
+            var7 = -parentY + (ArenaDefinitionCodec.field_e - this.y);
             this.hoveredHotspot = this.hotspotAt(-40, var6, var7);
           }
           return;
@@ -85,7 +85,7 @@ class HotspotTextWidget extends InteractiveWidget {
           var2 = var11.readUnsignedByte(-31302);
           var3 = 99 / ((-33 - guard) / 36);
           if (var2 == 0) {
-            var10 = (ServerDataReadRequest) (no.field_d.first(-110));
+            var10 = (ServerDataReadRequest) (LoginFormState.pendingServerReads.first(-110));
             if (var10 == null) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -109);
               return;

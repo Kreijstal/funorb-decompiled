@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im {
-    static GraphicsToolkit field_c;
-    static ToolkitSprite field_a;
-    static IntrusiveDeque field_b;
+final class ParticleSpriteResources {
+    static GraphicsToolkit lastRasterToolkit;
+    static ToolkitSprite sparkSprite;
+    static IntrusiveDeque victoryParticles;
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
-        field_a = null;
-        field_b = null;
-        field_c = null;
+        sparkSprite = null;
+        victoryParticles = null;
+        lastRasterToolkit = null;
     }
 
     final static AccountServiceResult pollNameAvailability(byte guard, String name) {
@@ -26,20 +26,20 @@ final class im {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard > -23) {
-            field_c = (GraphicsToolkit) null;
+            lastRasterToolkit = (GraphicsToolkit) null;
           }
-          if (LegacyOpenGlGraphicsHeap.PENDING == vm.nameAvailabilityState) {
+          if (LegacyOpenGlGraphicsHeap.PENDING == Base37NameAlphabet.nameAvailabilityState) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
-          if (DropTargetWidget.COMPLETE == vm.nameAvailabilityState &&
+          if (DropTargetWidget.COMPLETE == Base37NameAlphabet.nameAvailabilityState &&
             name.equals(PowerupPickup.field_s)) {
-            vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+            Base37NameAlphabet.nameAvailabilityState = AccountRequestDefaults.IDLE;
             stackIn_8_0 = DraggableWidget.field_z;
             return stackIn_8_0;
           }
           DraggableWidget.field_z = null;
-          vm.nameAvailabilityState = LegacyOpenGlGraphicsHeap.PENDING;
+          Base37NameAlphabet.nameAvailabilityState = LegacyOpenGlGraphicsHeap.PENDING;
           PowerupPickup.field_s = name;
           stackIn_10_0 = null;
           return (AccountServiceResult) (stackIn_10_0);
@@ -58,6 +58,6 @@ final class im {
     }
 
     static {
-        field_c = null;
+        lastRasterToolkit = null;
     }
 }

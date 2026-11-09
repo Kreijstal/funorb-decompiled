@@ -79,7 +79,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         this.toolkit.setActiveTextureUnit(1, -119);
-        this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
         this.toolkit.setColorCombineSource((byte) 111, 0, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.c(0, guard ^ 20151);
@@ -104,7 +104,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         if (param0 != 1) {
           return;
         }
-        CompactMeshGeometry.field_o.a(false, lt.field_m);
+        CompactMeshGeometry.field_o.exitFullscreen(false, FourIntUpdateRequest.platformDispatcher);
         CompactMeshGeometry.field_o = null;
         if (SecondaryNodeDequeIterator.field_b == null) {
           NineSlicePanel.field_f.requestFocus();
@@ -147,11 +147,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean lighting, byte guard) {
         if (guard <= -71) {
-          this.toolkit.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
+          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
           return;
         }
         this.updateTextureUniforms((byte) 54);
-        this.toolkit.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
     }
 
     static {

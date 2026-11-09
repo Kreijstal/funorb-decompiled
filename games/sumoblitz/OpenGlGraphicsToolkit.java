@@ -671,7 +671,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final boolean a() {
+    final boolean isFloatPostProcessingEnabled() {
         return false;
     }
 
@@ -782,8 +782,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                 throw new RuntimeException("");
               }
               try {
-                var10_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9[0]));
-                var11_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9[1]));
+                var10_int = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var9[0]));
+                var11_int = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var9[1]));
                 this.field_Oc = var11_int + 10 * var10_int;
               } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -855,7 +855,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (ContentTransitionPhase.a(-13181, var32)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
-                            var11_int = no.parseDecimal((byte) -127, var33);
+                            var11_int = LoginFormState.parseDecimal((byte) -127, var33);
                             decompiledRegionSelector0 = 1;
                             decompiledFrameRemainder0 = false;
                           }
@@ -970,8 +970,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (mode != lf.DISABLED) {
-            var3_int = ka.glTexCoordGeneration(mode, -116);
+          if (mode != LegacyOpenGlRenderBufferSet.DISABLED) {
+            var3_int = RenderBufferSet.glTexCoordGeneration(mode, -116);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);

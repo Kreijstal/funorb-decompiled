@@ -14,9 +14,9 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         var2 = (PointLight.mouseX - 140) / 126;
         if (PointLight.mouseX < 140) {
           var2 = -1;
-          var3 = (-200 + pi.field_e) / 150;
-          if (!(200 <= pi.field_e) ||
-            !(pi.field_e <= 350)) {
+          var3 = (-200 + ArenaDefinitionCodec.field_e) / 150;
+          if (!(200 <= ArenaDefinitionCodec.field_e) ||
+            !(ArenaDefinitionCodec.field_e <= 350)) {
             var3 = -1;
           }
           this.field_i = var2 + var3 * 3;
@@ -105,8 +105,8 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         if (PointLight.mouseX > 520) {
           var2 = -1;
         }
-        var3Lifetime1 = (-200 + pi.field_e) / 150;
-        if (200 > pi.field_e) {
+        var3Lifetime1 = (-200 + ArenaDefinitionCodec.field_e) / 150;
+        if (200 > ArenaDefinitionCodec.field_e) {
           var3Lifetime1 = -1;
           this.field_i = var2 + var3Lifetime1 * 3;
           if ((PointLight.mouseX - 140) % 126 > 111) {
@@ -191,7 +191,7 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           }
           return;
         }
-        if (pi.field_e > 350) {
+        if (ArenaDefinitionCodec.field_e > 350) {
           var3Lifetime1 = -1;
         }
         this.field_i = var2 + var3Lifetime1 * 3;
@@ -308,9 +308,9 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          DelegatingCanvas.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
           ForceFieldRingEffect.field_t.a(LegacyOpenGlSprite.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
-          hc.field_e.a(LegacyOpenGlSprite.levelCompleteText, -1, -1, 55, 320, 0);
+          AccountStatusDialogState.headingFont.a(LegacyOpenGlSprite.levelCompleteText, -1, -1, 55, 320, 0);
           if (guard != -2355) {
             this.field_i = 108;
           }
@@ -377,14 +377,14 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           if (var1 == 0) {
             var1 = 32;
           }
-          lf.setSoundVolume(-var1 + RasterColorTables.soundVolume, (byte) -58);
+          LegacyOpenGlRenderBufferSet.setSoundVolume(-var1 + RasterColorTables.soundVolume, (byte) -58);
           if (param0 < 121) {
             LevelCompleteUpgradeScreen.b((byte) -57);
             return;
           }
           return;
         }
-        lf.setSoundVolume(0, (byte) -58);
+        LegacyOpenGlRenderBufferSet.setSoundVolume(0, (byte) -58);
         if (param0 < 121) {
           LevelCompleteUpgradeScreen.b((byte) -57);
           return;

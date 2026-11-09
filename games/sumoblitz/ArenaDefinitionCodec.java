@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi {
+final class ArenaDefinitionCodec {
     static LruNodeCache field_a;
     static ToolkitSprite field_d;
     static String passwordText;
@@ -20,13 +20,13 @@ final class pi {
           field_d = null;
           return;
         }
-        pi.releaseStatics(-26);
+        ArenaDefinitionCodec.releaseStatics(-26);
         field_d = null;
     }
 
-    final static void a(byte param0) {
+    final static void requestLoginBack(byte guard) {
         ReflectionCheck.setAccountDialogResult(4, -66);
-        if (param0 > -86) {
+        if (guard > -86) {
           field_e = -49;
         }
     }
@@ -62,7 +62,7 @@ final class pi {
           }
           var5 = new IntrusiveDeque();
           if (guard <= 50) {
-            pi.releaseStatics(116);
+            ArenaDefinitionCodec.releaseStatics(116);
           }
           var6 = packet.readUnsignedByte(-31302);
           var7 = 1;
@@ -76,7 +76,7 @@ final class pi {
             if (var3_int > 2) {
               var12 = packet.readInt(true);
             }
-            var13 = FullscreenCanvas.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
+            var13 = FullscreenCanvas.createArenaPad(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
             if (var9 == 2) {
               var13.field_s = var7;
               var7++;

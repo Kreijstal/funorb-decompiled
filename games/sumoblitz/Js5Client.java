@@ -223,13 +223,13 @@ abstract class Js5Client {
         ServerDataReadRequest var2Lifetime1;
         if (guard == -82) {
           var2 = new ServerDataReadRequest();
-          no.field_d.addLast((IntrusiveNode) (var2), (byte) 39);
+          LoginFormState.pendingServerReads.addLast((IntrusiveNode) (var2), (byte) 39);
           GzipDecompressor.sendServerDataRead(guard + 11126, opcode);
           return var2;
         }
         field_k = (long[]) null;
         var2Lifetime1 = new ServerDataReadRequest();
-        no.field_d.addLast((IntrusiveNode) (var2Lifetime1), (byte) 39);
+        LoginFormState.pendingServerReads.addLast((IntrusiveNode) (var2Lifetime1), (byte) 39);
         GzipDecompressor.sendServerDataRead(guard + 11126, opcode);
         return var2Lifetime1;
     }

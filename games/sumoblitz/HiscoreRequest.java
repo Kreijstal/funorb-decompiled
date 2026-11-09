@@ -15,24 +15,24 @@ final class HiscoreRequest extends IntrusiveNode {
 
     final static HiscoreRequest requestHiscores(int columnCount, int guard, int tableId, int opcode, int rowCount) {
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        HiscoreRequest var5 = (HiscoreRequest) (oi.field_b.first(guard - 107));
+        HiscoreRequest var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.first(guard - 107));
         while (var5 != null) {
           if (~tableId == ~var5.tableId) {
             return var5;
           }
-          var5 = (HiscoreRequest) (oi.field_b.next((byte) 18));
+          var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.next((byte) 18));
         }
         var5 = new HiscoreRequest();
         var5.columnCount = columnCount;
         var5.rowCount = rowCount;
         var5.tableId = tableId;
-        oi.field_b.addLast((IntrusiveNode) (var5), (byte) 39);
+        HiscoreRequestQueue.pending.addLast((IntrusiveNode) (var5), (byte) 39);
         if (guard == 1) {
-          pd.sendHiscoreRequest((byte) -65, opcode, var5);
+          FourIntReadRequest.sendHiscoreRequest((byte) -65, opcode, var5);
           return var5;
         }
         HiscoreRequest.loadNativeSoftwareLibraries((byte) 50);
-        pd.sendHiscoreRequest((byte) -65, opcode, var5);
+        FourIntReadRequest.sendHiscoreRequest((byte) -65, opcode, var5);
         return var5;
     }
 
@@ -134,7 +134,7 @@ final class HiscoreRequest extends IntrusiveNode {
         if (!AffineTransform3D.emailAvailabilityRequest.isComplete(true)) {
           return AffineTransform3D.emailAvailabilityRequest.email(32);
         }
-        if (LegacyOpenGlGraphicsHeap.PENDING == vm.nameAvailabilityState) {
+        if (LegacyOpenGlGraphicsHeap.PENDING == Base37NameAlphabet.nameAvailabilityState) {
           return AffineTransform3D.emailAvailabilityRequest.email(107);
         }
         return FocusProxyWidget.field_F;

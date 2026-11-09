@@ -93,7 +93,7 @@ final class ChatMessage {
         this.senderId = ReassignUpgradesScreen.field_j;
         this.messageIdHigh = MenuFadeState.chatMessageIdHigh;
         this.type = UsernameCredentials.field_h;
-        this.text = oi.field_c;
+        this.text = HiscoreRequestQueue.decodedChatText;
         this.senderName = MarkerTrackWidget.field_E;
         if (!includeQuickChatResponses) {
           this.quickChatResponses = null;

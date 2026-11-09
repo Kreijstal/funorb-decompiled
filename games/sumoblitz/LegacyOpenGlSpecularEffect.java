@@ -58,16 +58,16 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glMatrixMode(5888);
         if (!this.useTwoUnits) {
           this.toolkit.setTextureCombineOperations(20685, 8448, 7681);
-          this.toolkit.b(34168, 768, 0, 30);
+          this.toolkit.setTextureCombineSources(34168, 768, 0, 30);
           this.toolkit.setActiveTextureUnit(2, 123);
           this.toolkit.setTextureCombineOperations(20685, 7681, 260);
-          this.toolkit.b(34168, 768, 0, 4);
-          this.toolkit.b(34168, 770, 1, 20);
-          this.toolkit.a(125, 0, 34167, 770);
+          this.toolkit.setTextureCombineSources(34168, 768, 0, 4);
+          this.toolkit.setTextureCombineSources(34168, 770, 1, 20);
+          this.toolkit.setTextureCombineOperands(125, 0, 34167, 770);
         } else {
           this.toolkit.setTextureCombineOperations(20685, 7681, 260);
-          this.toolkit.b(5890, 770, 0, -20);
-          this.toolkit.a(117, 0, 34167, 770);
+          this.toolkit.setTextureCombineSources(5890, 770, 0, -20);
+          this.toolkit.setTextureCombineOperands(117, 0, 34167, 770);
         }
         this.toolkit.setActiveTextureUnit(0, 83);
         this.stateLists.endList(true);
@@ -84,16 +84,16 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glMatrixMode(5888);
         if (!this.useTwoUnits) {
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(5890, 768, 0, -120);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, -120);
           this.toolkit.setActiveTextureUnit(2, 111);
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(5890, 768, 0, 20);
-          this.toolkit.b(34168, 768, 1, -126);
-          this.toolkit.a(114, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, 20);
+          this.toolkit.setTextureCombineSources(34168, 768, 1, -126);
+          this.toolkit.setTextureCombineOperands(114, 0, 5890, 770);
         } else {
           this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
-          this.toolkit.b(5890, 768, 0, -118);
-          this.toolkit.a(122, 0, 5890, 770);
+          this.toolkit.setTextureCombineSources(5890, 768, 0, -118);
+          this.toolkit.setTextureCombineOperands(122, 0, 5890, 770);
         }
         this.toolkit.setActiveTextureUnit(0, 81);
         this.stateLists.endList(true);
@@ -221,7 +221,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.stateLists.callList((byte) 121, '\001');
           this.active = false;
         } else {
-          this.toolkit.a(118, 0, 5890, 770);
+          this.toolkit.setTextureCombineOperands(118, 0, 5890, 770);
         }
         this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
         if (guard > -125) {
@@ -243,13 +243,13 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.stateLists.callList((byte) 121, '\0');
           this.active = true;
         } else {
-          this.toolkit.a(124, 0, 34168, 770);
+          this.toolkit.setTextureCombineOperands(124, 0, 34168, 770);
         }
     }
 
-    final static void a(int param0, byte param1) {
-        AffineTransform3D.crossfadeMusicTrack(8, (byte) -55, TimedSceneEffect.field_m[param0], true);
-        if (param1 < 27) {
+    final static void playGameTrack(int trackIndex, byte guard) {
+        AffineTransform3D.crossfadeMusicTrack(8, (byte) -55, TimedSceneEffect.field_m[trackIndex], true);
+        if (guard < 27) {
           field_i = (ArchiveCatalog) null;
         }
     }

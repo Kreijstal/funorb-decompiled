@@ -35,7 +35,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
         if (guard > -71) {
           this.active = false;
         }
@@ -644,7 +644,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
           this.toolkit.a(var3, 91);
           this.toolkit.applyTexCoordGeneration(guard - 6432, LabeledWidget.REFLECTION_MAP);
           this.toolkit.setActiveTextureUnit(1, -114);
-          this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
           this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           var4 = this.toolkit.textureTransform(0);
@@ -674,7 +674,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         if (!guard) {
           if (this.active) {
             this.toolkit.setActiveTextureUnit(1, -111);
-            this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
+            this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
@@ -691,7 +691,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         this.active = false;
         if (this.active) {
           this.toolkit.setActiveTextureUnit(1, -111);
-          this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
+          this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);

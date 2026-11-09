@@ -51,7 +51,7 @@ final class LegacyOpenGlTransform3D extends Transform3D {
             !IntegerMath.isSingleBitOrZero(param1, -102)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pc.glFormatComponents(param6, (byte) -107);
+          var7_int = FriendListState.glFormatComponents(param6, (byte) -107);
           var8 = 0;
           if (param2 != 11) {
             field_f = 114;
@@ -206,26 +206,26 @@ final class LegacyOpenGlTransform3D extends Transform3D {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            vp.chatPriorityCounts[var2_int] = 0;
+            DroneVariantScoring.chatPriorityCounts[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; LegacyOpenGlBuffer.chatMessageCount > var2_intLifetime1; var2_intLifetime1++) {
             if (DroneDebris.chatHistory[var2_intLifetime1].type == message.type) {
               dupTemp$3 = DroneDebris.chatHistory[var2_intLifetime1].retentionPriority(-112);
-              vp.chatPriorityCounts[dupTemp$3] = vp.chatPriorityCounts[dupTemp$3] + 1;
+              DroneVariantScoring.chatPriorityCounts[dupTemp$3] = DroneVariantScoring.chatPriorityCounts[dupTemp$3] + 1;
             }
           }
           if (guard < 69) {
             field_h = (String[]) null;
           }
           dupTemp$0 = message.retentionPriority(-82);
-          vp.chatPriorityCounts[dupTemp$0] = vp.chatPriorityCounts[dupTemp$0] + 1;
+          DroneVariantScoring.chatPriorityCounts[dupTemp$0] = DroneVariantScoring.chatPriorityCounts[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; LegacyOpenGlBuffer.chatMessageCount > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (message.type == DroneDebris.chatHistory[var3].type) {
               var4 = DroneDebris.chatHistory[var3].retentionPriority(-120);
-              if (SecondaryNodeQueue.field_c < vp.chatPriorityCounts[var4]) {
-                vp.chatPriorityCounts[var4] = vp.chatPriorityCounts[var4] - 1;
+              if (SecondaryNodeQueue.field_c < DroneVariantScoring.chatPriorityCounts[var4]) {
+                DroneVariantScoring.chatPriorityCounts[var4] = DroneVariantScoring.chatPriorityCounts[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

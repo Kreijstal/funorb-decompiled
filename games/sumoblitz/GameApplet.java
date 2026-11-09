@@ -155,9 +155,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (lt.field_m != null) {
+          if (FourIntUpdateRequest.platformDispatcher != null) {
             try {
-              lt.field_m.a(false);
+              FourIntUpdateRequest.platformDispatcher.shutdown(false);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -214,7 +214,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (ke.field_a == this &&
+          if (AppletInstanceState.activeApplet == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             CubeMapSource.field_a = true;
             if (DroneWaveDefinition.field_l &&
@@ -224,7 +224,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (var2.width < AccountPacketReader.field_b) {
                   return;
                 }
-                if (var2.height < lw.field_b) {
+                if (var2.height < CanvasResizeState.minimumCanvasHeight) {
                   return;
                 }
               }
@@ -330,7 +330,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = Sumoblitz.field_L ? 1 : 0;
           try {
             try {
-              if (ke.field_a != null) {
+              if (AppletInstanceState.activeApplet != null) {
                 AchievementThresholds.field_a = AchievementThresholds.field_a + 1;
                 if (AchievementThresholds.field_a >= 3) {
                   this.a("alreadyloaded", 21253);
@@ -342,19 +342,19 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param2 != 44) {
                 return;
               }
-              ke.field_a = this;
+              AppletInstanceState.activeApplet = this;
               UnderageAccountInfoPanel.field_H = 0;
               SpriteState.field_s = param4;
               LegacyOpenGlRidgedWaterEffect.field_h = param3;
               AccountPacketReader.field_b = param3;
               DirectByteArrayStorage.field_c = 0;
               IntroMeshResources.canvasHeight = param1;
-              lw.field_b = param1;
-              HardwareRidgedWaterNoise.field_z = LegacyOpenGlUnlitEffect.c(2);
+              CanvasResizeState.minimumCanvasHeight = param1;
+              HardwareRidgedWaterNoise.field_z = LegacyOpenGlUnlitEffect.activeApplet(2);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
-              lt.field_m = dupTemp$0;
+              FourIntUpdateRequest.platformDispatcher = dupTemp$0;
               CompactMeshGeometry.field_O = dupTemp$0;
-              var8 = lt.field_m.a(true, (Runnable) (this), 1);
+              var8 = FourIntUpdateRequest.platformDispatcher.startThread(true, (Runnable) (this), 1);
               while (true) {
                 if (var8.status == 0) {
                   TextureCombineOperation.sleepMillis(10L, (byte) 73);
@@ -419,7 +419,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == ke.field_a &&
+          if (this == AppletInstanceState.activeApplet &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             NanoTickClock.field_k = 4000L + IntroMeshResources.monotonicTimeMillis(-46);
             return;
@@ -487,9 +487,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = IntroMeshResources.monotonicTimeMillis(-66);
-          var4 = AppletTickHistory.tickTimes[ka.tickHistoryIndex];
-          AppletTickHistory.tickTimes[ka.tickHistoryIndex] = var2_long;
-          ka.tickHistoryIndex = ka.tickHistoryIndex + 1 & 31;
+          var4 = AppletTickHistory.tickTimes[RenderBufferSet.tickHistoryIndex];
+          AppletTickHistory.tickTimes[RenderBufferSet.tickHistoryIndex] = var2_long;
+          RenderBufferSet.tickHistoryIndex = RenderBufferSet.tickHistoryIndex + 1 & 31;
           if (var4 != 0L &&
             var4 >= var2_long) {
           }
@@ -515,7 +515,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ke.field_a == this &&
+          if (AppletInstanceState.activeApplet == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             NanoTickClock.field_k = IntroMeshResources.monotonicTimeMillis(-125);
             TextureCombineOperation.sleepMillis(5000L, (byte) 119);
@@ -558,7 +558,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ke.field_a == this &&
+          if (AppletInstanceState.activeApplet == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             NanoTickClock.field_k = 0L;
             return;
@@ -588,12 +588,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (null != OpenGlShader.field_c) {
                 var2 = OpenGlShader.field_c;
                 if (var4 != 0) {
-                  var2 = ke.field_a;
+                  var2 = AppletInstanceState.activeApplet;
                   var2 = PrimitiveType.field_c;
                   var2 = HiscoreRequest.field_n;
                 }
               } else {
-                var2 = ke.field_a;
+                var2 = AppletInstanceState.activeApplet;
                 if (var4 != 0) {
                   var2 = PrimitiveType.field_c;
                   var2 = HiscoreRequest.field_n;
@@ -683,7 +683,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var1.writeByte((byte) 90, ToolkitRasterStateFrame.field_e);
           var1.writeByte((byte) 46, ResourceArchive.selectedSpeedLevel);
           var1.writeByte((byte) 39, LegacyOpenGlEffectManager.selectedTractionLevel);
-          var1.writeByte((byte) 52, hc.selectedBounceLevel);
+          var1.writeByte((byte) 52, AccountStatusDialogState.selectedBounceLevel);
           var2 = 0;
           while (36 > var2) {
             if (var2 < 25) {
@@ -693,7 +693,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (NineSlicePanel.field_d[var2]) {
                 var3 = var3 | 128;
               }
-              if (up.field_g[var2]) {
+              if (IntroMeshProjection.threeLifeCompletions[var2]) {
                 var3 = var3 | 64;
               }
               var1.writeByte((byte) 105, var3);
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.c(2), param1 ^ -21354, "loggedout");
+              BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.activeApplet(2), param1 ^ -21354, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -834,7 +834,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var4)) &&
-                        !(10 <= no.parseDecimal((byte) -128, (CharSequence) ((Object) var4)))) {
+                        !(10 <= LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var4)))) {
                         this.a("wrongjava", 21253);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -877,7 +877,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = ke.field_a;
+                var1 = AppletInstanceState.activeApplet;
                 if (OpenGlShader.field_c != null) {
                   var1 = OpenGlShader.field_c;
                 }
@@ -913,7 +913,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(BurstParticle.field_t > var3)) {
                       this.h(0);
-                      ReflectionCheck.postDummyEventAfterQueueWait(NineSlicePanel.field_f, lt.field_m, -11030);
+                      ReflectionCheck.postDummyEventAfterQueueWait(NineSlicePanel.field_f, FourIntUpdateRequest.platformDispatcher, -11030);
                       break;
                     }
                     this.a((byte) 101);
@@ -948,7 +948,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = -117 / ((param0 + 43) / 61);
-          stackIn_4_0 = (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING);
+          stackIn_4_0 = (Base37NameAlphabet.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

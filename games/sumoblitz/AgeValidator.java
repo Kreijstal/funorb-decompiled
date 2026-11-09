@@ -24,7 +24,7 @@ final class AgeValidator extends TextInputValidator {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) text);
-          var3_int = no.parseDecimal((byte) -128, var5);
+          var3_int = LoginFormState.parseDecimal((byte) -128, var5);
           if (guard != 26) {
             stackIn_5_0 = (ValidationStatus) null;
             return stackIn_5_0;

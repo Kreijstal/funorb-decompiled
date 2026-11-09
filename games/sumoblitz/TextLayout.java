@@ -125,19 +125,19 @@ abstract class TextLayout {
         if (param0 != 0) {
           field_c = (float[]) null;
         }
-        if (hc.field_c != null) {
-          hc.field_c.n(-7);
+        if (AccountStatusDialogState.activeDialog != null) {
+          AccountStatusDialogState.activeDialog.n(-7);
         }
         String var1 = LegacyOpenGlPbuffer.playerLabel((byte) -72);
-        no.field_a = new LoginForm(var1, (String) null, true, false, false);
+        LoginFormState.activeForm = new LoginForm(var1, (String) null, true, false, false);
         RenderPresentationException.field_a.pushDialog((byte) 114, SlowBurstParticle.field_y);
-        SlowBurstParticle.field_y.transitionToContent((byte) -118, no.field_a);
+        SlowBurstParticle.field_y.transitionToContent((byte) -118, LoginFormState.activeForm);
         SlowBurstParticle.field_y.finishResize((byte) -128);
     }
 
-    final static void a(int param0, int param1) {
-        LegacyOpenGlSpecularEffect.a(param1, (byte) 105);
-        if (param0 != 0) {
+    final static void playGameTrack(int guard, int trackIndex) {
+        LegacyOpenGlSpecularEffect.playGameTrack(trackIndex, (byte) 105);
+        if (guard != 0) {
           TextLayout.releaseStatics(-74);
         }
     }
@@ -165,13 +165,13 @@ abstract class TextLayout {
     final static void decreaseMusicVolume(int guard) {
         int var1 = 0;
         if (TextureGeneratorNode.musicVolume <= 32) {
-          lf.setMusicVolume(0, 0);
+          LegacyOpenGlRenderBufferSet.setMusicVolume(0, 0);
         } else {
           var1 = TextureGeneratorNode.musicVolume % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          lf.setMusicVolume(0, TextureGeneratorNode.musicVolume - var1);
+          LegacyOpenGlRenderBufferSet.setMusicVolume(0, TextureGeneratorNode.musicVolume - var1);
         }
         if (guard != 0) {
           field_b = -64;

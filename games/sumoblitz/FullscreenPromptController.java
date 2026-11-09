@@ -43,7 +43,7 @@ final class FullscreenPromptController {
         if (guard < 99) {
           return;
         }
-        AlternateUsernameCredentials.b((byte) -113);
+        AlternateUsernameCredentials.initializeGraphicsOptionsLayer((byte) -113);
     }
 
     final static int pollPromptInput(int guard) {
@@ -71,7 +71,7 @@ final class FullscreenPromptController {
             }
             var2 = 1;
           }
-          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, PointLight.mouseX));
+          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(ArenaDefinitionCodec.field_e, 1882601153, PointLight.mouseX));
           if (RendererPreference.field_a.isActivated(-31260)) {
             var1_int = 1;
           }

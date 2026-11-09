@@ -79,10 +79,10 @@ final class TextureMetadata {
             ArchiveLoadingStage.sendServerDataWrite(var5, -112, opcode);
             var5 = (ServerDataWriteRequest) (LoginMethodPreference.field_a.next((byte) 18));
           }
-          var2 = no.field_d.first(-87);
+          var2 = LoginFormState.pendingServerReads.first(-87);
           while (var2 != null) {
             GzipDecompressor.sendServerDataRead(11044, opcode);
-            var2 = no.field_d.next((byte) 18);
+            var2 = LoginFormState.pendingServerReads.next((byte) 18);
           }
           if (!guard) {
             return;

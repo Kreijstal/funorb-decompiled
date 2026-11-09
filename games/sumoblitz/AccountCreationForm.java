@@ -282,7 +282,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             fieldTemp$1 = SoftwareRenderTarget.field_h;
             SoftwareRenderTarget.field_h = SoftwareRenderTarget.field_h + 1;
             var6_ref.insertionOrder = fieldTemp$1;
-            pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
+            FriendListState.friends.addLast((IntrusiveNode) (var6_ref), (byte) 39);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -290,7 +290,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var6_ref.displayName = var4_ref_StringLifetime1;
           var6_ref.worldName = (String) (var3Lifetime1);
           var6_ref.unlink(false);
-          var7_ref = (SocialContact) (pc.field_d.first(-104));
+          var7_ref = (SocialContact) (FriendListState.friends.first(-104));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_52_0 = GameKeyHandler.contactSortsAfter(var6_ref, 0, var7_ref);
@@ -300,12 +300,12 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
                 break scanLoop1;
               }
               if (stackIn_53_0) {
-                var7_ref = (SocialContact) (pc.field_d.next((byte) 18));
+                var7_ref = (SocialContact) (FriendListState.friends.next((byte) 18));
                 continue;
               }
             }
             if (null == var7_ref) {
-              pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
+              FriendListState.friends.addLast((IntrusiveNode) (var6_ref), (byte) 39);
               if (var8 == 0) {
                 return;
               }
@@ -623,7 +623,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           this.createButton = new InteractiveWidget(TurbulenceNoise3D.createText, (WidgetListener) null);
           this.backButton = new InteractiveWidget(AgeValidator.goBackText, (WidgetListener) null);
           this.screenNameInput.tooltip = ShaderEffect.enterTheNameYouText;
-          this.emailInput.tooltip = pi.yourEmailAddressIsText;
+          this.emailInput.tooltip = ArenaDefinitionCodec.yourEmailAddressIsText;
           this.confirmEmailInput.tooltip = SoftwareTransform3D.typeYourEmailAddressText;
           this.passwordInput.tooltip = IsaacPacketBuffer.enterAPasswordForText;
           this.confirmPasswordInput.tooltip = InstrumentNoteMask.typeYourPasswordAgainText;
@@ -651,7 +651,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var3 = 20;
           var3 = var3 + this.addLabeledField(HardwareTurbulentWaterNoise.emailLoginText, 170, var3, 78, this.emailInput);
           var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, StripedProgressWidget.confirmEmailText));
-          var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
+          var3 = var3 + this.addLabeledField(ArenaDefinitionCodec.passwordText, 170, var3, 55, this.passwordInput);
           var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, DroneEscalationSupport.passwordsMustBeBetweenText, this.confirmPasswordInput));
           var3 = var3 + (this.addValidatedField(ScoreMultiplierTable.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);
           var3 = var3 + this.addFieldWithStatus(170, DropDownArrowRenderer.ageText, var3, this.ageInput, 64);

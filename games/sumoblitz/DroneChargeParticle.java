@@ -20,7 +20,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 != this.textureKind) {
-            im.field_a.draw(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
+            ParticleSpriteResources.sparkSprite.draw(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
           } else {
             IntroductionOverlaySupport.field_a.drawRotated((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
           }
@@ -57,7 +57,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
           return;
         }
         GameClientShell.field_u = new String[34];
-        GameClientShell.field_u[16] = vp.discardText;
+        GameClientShell.field_u[16] = DroneVariantScoring.discardText;
         GameClientShell.field_u[1] = WhirlpoolTables.resumeGameText;
         GameClientShell.field_u[5] = RenderPresentationException.menuText;
         GameClientShell.field_u[11] = RasterBuffer.quitText;
@@ -160,26 +160,26 @@ final class DroneChargeParticle extends TimedSceneEffect {
         }
     }
 
-    final static void a(byte param0, lt param1, int param2) {
+    final static void sendFourIntUpdate(byte guard, FourIntUpdateRequest request, int opcode) {
         IsaacPacketBuffer var5 = InwardSparkParticle.field_v;
-        var5.writeCipherByte(param2, param0 ^ -105);
+        var5.writeCipherByte(opcode, guard ^ -105);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte((byte) 84, 1);
-        var5.writeByte((byte) 103, param1.field_k);
-        if (param0 != -97) {
+        var5.writeByte((byte) 103, request.byteKey);
+        if (guard != -97) {
           return;
         }
         try {
-          var5.writeSignedSmart(param1.field_o, (byte) -17);
-          var5.writeInt(48, param1.field_n);
-          var5.writeInt(48, param1.field_p);
-          var5.writeInt(48, param1.field_q);
-          var5.writeInt(48, param1.field_l);
+          var5.writeSignedSmart(request.smartKey, (byte) -17);
+          var5.writeInt(48, request.firstValue);
+          var5.writeInt(48, request.secondValue);
+          var5.writeInt(48, request.thirdValue);
+          var5.writeInt(48, request.fourthValue);
           var5.appendCrc32(var4, false);
-          var5.patchByteLength(var5.position - var4, param0 - 13648);
+          var5.patchByteLength(var5.position - var4, guard - 13648);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.D(" + guard + ',' + (request != null ? "{...}" : "null") + ',' + opcode + ')');
         }
     }
 

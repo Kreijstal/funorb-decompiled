@@ -16,11 +16,11 @@ final class IntroMeshResources {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (toolkit == im.field_c) {
+          if (toolkit == ParticleSpriteResources.lastRasterToolkit) {
             stackIn_3_0 = GraphicsToolkit.field_c;
             return stackIn_3_0;
           }
-          var2 = (ToolkitRasterStateCacheEntry) (HotspotTextWidget.field_N.a(122, (long)toolkit.toolkitId));
+          var2 = (ToolkitRasterStateCacheEntry) (HotspotTextWidget.field_N.get(122, (long)toolkit.toolkitId));
           if (var2 != null &&
             toolkit == var2.toolkit) {
             var3 = var2.stateStack;
@@ -31,7 +31,7 @@ final class IntroMeshResources {
             var3 = new ToolkitRasterStateStack(toolkit);
             HotspotTextWidget.field_N.a(new ToolkitRasterStateCacheEntry(toolkit, var3), -1, (long)toolkit.toolkitId);
           }
-          im.field_c = toolkit;
+          ParticleSpriteResources.lastRasterToolkit = toolkit;
           GraphicsToolkit.field_c = var3;
           if (guard <= 8) {
             canvasHeight = 38;

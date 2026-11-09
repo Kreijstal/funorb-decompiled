@@ -6,14 +6,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static ToolkitSprite[] field_b;
     private java.awt.Component delegate;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         try {
           field_b = null;
-          if (param0 <= 89) {
+          if (guard <= 89) {
             field_b = (ToolkitSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wo.A(" + guard + ')');
         }
     }
 

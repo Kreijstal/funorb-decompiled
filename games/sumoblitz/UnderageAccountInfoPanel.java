@@ -30,7 +30,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
             return stackIn_10_0;
           }
           if (guard < 9) {
-            UnderageAccountInfoPanel.e(false);
+            UnderageAccountInfoPanel.initializeFullscreenInstructions(false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -253,14 +253,14 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final static void e(boolean param0) {
+    final static void initializeFullscreenInstructions(boolean guard) {
         try {
-          GraphicsToolkit.field_d = NanoTickClock.clickText + " <b>" + km.acceptText + "</b> " + ClientStackTraceFormatter.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
-          if (!param0) {
-            UnderageAccountInfoPanel.e(false);
+          GraphicsToolkit.field_d = NanoTickClock.clickText + " <b>" + FourStatHiscoreRequest.acceptText + "</b> " + ClientStackTraceFormatter.toKeepFullscreenOrText + " <b>" + IntroMeshProjection.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
+          if (!guard) {
+            UnderageAccountInfoPanel.initializeFullscreenInstructions(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.I(" + guard + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           if (guard == 710) {
             return;
           }
-          UnderageAccountInfoPanel.f(true);
+          UnderageAccountInfoPanel.releaseStatics(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,15 +310,15 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         }
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         try {
-          if (param0) {
+          if (guard) {
             UnderageAccountInfoPanel.b(82, -23, -57);
           }
           field_C = null;
           field_B = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.G(" + guard + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class OpenGlVertexLayout extends VertexLayout {
         if (param0 != 16440) {
           return;
         }
-        lf.setSoundVolume(param1, (byte) -58);
+        LegacyOpenGlRenderBufferSet.setSoundVolume(param1, (byte) -58);
     }
 
     OpenGlVertexLayout(VertexStreamLayout[] streamLayouts) {

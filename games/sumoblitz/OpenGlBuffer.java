@@ -102,8 +102,8 @@ abstract class OpenGlBuffer implements GpuBuffer {
     final static void a(int param0, Drone param1) {
         try {
           LegacyOpenGlRenderbuffer.field_u = param1;
-          im.field_b = new IntrusiveDeque();
-          up.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
+          ParticleSpriteResources.victoryParticles = new IntrusiveDeque();
+          IntroMeshProjection.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LimitedRandomAccessFile.d(22030);
           if (param0 != 35040) {

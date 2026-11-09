@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf {
+final class PerlinGradient {
     static int field_a;
     private static String field_z;
 

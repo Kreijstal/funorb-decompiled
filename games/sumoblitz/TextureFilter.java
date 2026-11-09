@@ -28,7 +28,7 @@ final class TextureFilter {
           }
           try {
             if (FullscreenDisplayMode.field_d == 0) {
-              BufferedSocket.field_p = CompactMeshGeometry.field_u.a((byte) 51, Js5Client.field_a, SingleChildWidget.field_x);
+              BufferedSocket.field_p = CompactMeshGeometry.field_u.openDirectSocket((byte) 51, Js5Client.field_a, SingleChildWidget.field_x);
               FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
             }
             if (!param0) {

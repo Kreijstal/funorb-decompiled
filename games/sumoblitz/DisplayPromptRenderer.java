@@ -53,13 +53,13 @@ final class DisplayPromptRenderer {
                 var5 = LoginCredentialFactory.field_a;
               }
             } else {
-              var5 = ke.field_d;
+              var5 = AppletInstanceState.field_d;
             }
             var6 = IntIndexHashTable.field_c[var3];
             if (2 == DroneChargeParticle.field_s &&
               1 == var2) {
-              if (no.field_b.length >= ResizingDialog.field_F.length) {
-                stackIn_20_0 = no.field_b.length;
+              if (LoginFormState.field_b.length >= ResizingDialog.field_F.length) {
+                stackIn_20_0 = LoginFormState.field_b.length;
               } else {
                 stackIn_20_0 = ResizingDialog.field_F.length;
               }
@@ -72,8 +72,8 @@ final class DisplayPromptRenderer {
               var8 = stackIn_23_0;
               if (6 <= var3 &&
                 var3 < 6 + var7) {
-                if (-var7 + (-6 + var3 + no.field_b.length) >= 0) {
-                  stackIn_29_0 = no.field_b[-var7 + no.field_b.length + (var3 - 6)];
+                if (-var7 + (-6 + var3 + LoginFormState.field_b.length) >= 0) {
+                  stackIn_29_0 = LoginFormState.field_b[-var7 + LoginFormState.field_b.length + (var3 - 6)];
                 } else {
                   stackIn_29_0 = "";
                 }
@@ -100,7 +100,7 @@ final class DisplayPromptRenderer {
             if (var4 >= 0) {
               var1_int = var1_int + DroneIntroductionOverlay.field_a;
               if (var4 != RendererPreference.field_a.selectedIndex) {
-                stackIn_48_0 = vp.field_e;
+                stackIn_48_0 = DroneVariantScoring.field_e;
               } else {
                 stackIn_48_0 = PacketBuffer.field_k;
               }

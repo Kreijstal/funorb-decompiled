@@ -61,16 +61,16 @@ final class SoftwareRenderContext {
     }
 
     SoftwareRenderContext(SoftwareGraphicsToolkit owner) {
-        af discarded$12 = null;
-        af discarded$13 = null;
-        af discarded$14 = null;
-        af discarded$15 = null;
-        af discarded$16 = null;
-        af discarded$17 = null;
-        af discarded$18 = null;
-        af discarded$19 = null;
-        af discarded$20 = null;
-        af discarded$21 = null;
+        SoftwareRenderBufferSet discarded$12 = null;
+        SoftwareRenderBufferSet discarded$13 = null;
+        SoftwareRenderBufferSet discarded$14 = null;
+        SoftwareRenderBufferSet discarded$15 = null;
+        SoftwareRenderBufferSet discarded$16 = null;
+        SoftwareRenderBufferSet discarded$17 = null;
+        SoftwareRenderBufferSet discarded$18 = null;
+        SoftwareRenderBufferSet discarded$19 = null;
+        SoftwareRenderBufferSet discarded$20 = null;
+        SoftwareRenderBufferSet discarded$21 = null;
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -81,18 +81,18 @@ final class SoftwareRenderContext {
         try {
           this.toolkit = owner;
           this.scanlineOffsets = new SoftwareScanlineOffsets(owner, this);
-          discarded$12 = new af(this.toolkit);
-          discarded$13 = new af(this.toolkit);
-          discarded$14 = new af(this.toolkit);
-          discarded$15 = new af(this.toolkit);
-          discarded$16 = new af(this.toolkit);
-          discarded$17 = new af(this.toolkit);
-          discarded$18 = new af(this.toolkit);
-          discarded$19 = new af(this.toolkit);
-          discarded$20 = new af(this.toolkit);
-          discarded$21 = new af(this.toolkit);
-          this.scratchIndices = new int[af.field_c];
-          for (var2_int = 0; af.field_c > var2_int; var2_int++) {
+          discarded$12 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$13 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$14 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$15 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$16 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$17 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$18 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$19 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$20 = new SoftwareRenderBufferSet(this.toolkit);
+          discarded$21 = new SoftwareRenderBufferSet(this.toolkit);
+          this.scratchIndices = new int[SoftwareRenderBufferSet.scratchIndexCapacity];
+          for (var2_int = 0; SoftwareRenderBufferSet.scratchIndexCapacity > var2_int; var2_int++) {
             this.scratchIndices[var2_int] = -1;
           }
           return;

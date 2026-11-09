@@ -11,7 +11,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
     static String noHighscoresText;
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
         if (guard > -71) {
           this.specularMaps = (CubeTexture[]) null;
         }
@@ -50,7 +50,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         } else {
           this.toolkit.setActiveTextureUnit(1, -109);
           this.toolkit.a((GpuTexture) null, 102);
-          this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
+          this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
           this.toolkit.resetTextureTransform(0);
           if (!this.useTwoUnits) {
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
@@ -259,16 +259,16 @@ final class HardwareSpecularEffect extends ShaderEffect {
             var6.setRotationX((byte) 79, 1024);
             this.toolkit.setTextureTransformMode(LegacyRidgedWaterNoise.TEXTURE_COUNT3, 28880);
             if (!this.useTwoUnits) {
-              this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
+              this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
               this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, guard ^ 20186);
               this.toolkit.setActiveTextureUnit(2, guard - 20295);
-              this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+              this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
               this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, 0);
               this.toolkit.setColorCombineSource((byte) 102, 1, true, false, FontMetrics.PREVIOUS);
               this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
               this.toolkit.a(this.toolkit.field_D, guard - 20079);
             } else {
-              this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+              this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
               this.toolkit.setColorCombineSource((byte) -66, 0, true, false, LegacyVertexAttribute.TEXTURE);
               this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
             }

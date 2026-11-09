@@ -427,7 +427,7 @@ final class GameplaySession {
           }
           if (stackIn_20_0 == 0) {
             GameInstructions.field_b = -1;
-            lf.b((byte) -128);
+            LegacyOpenGlRenderBufferSet.stopLoopingSamples((byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -522,7 +522,7 @@ final class GameplaySession {
           var8_array = new int[param1.field_c];
           var9_array = new int[param1.field_c];
           var10 = HiscoreRequest.field_t;
-          var11 = r.field_r;
+          var11 = DualLinkedRenderResource.field_r;
           var12 = AccountConnectionPhase.field_d;
           var13 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -563,7 +563,7 @@ final class GameplaySession {
             stackIn_31_0 = 0;
           }
           var13Lifetime1 = stackIn_31_0;
-          while (sv.field_b > var13Lifetime1) {
+          while (RsaEnvelopeScratch.field_b > var13Lifetime1) {
             var14Lifetime1 = Sumoblitz.field_G[var13Lifetime1];
             var15Lifetime1 = param1.field_A[var14Lifetime1];
             var16 = param1.field_b[var14Lifetime1];
@@ -884,7 +884,7 @@ final class GameplaySession {
           TextureFormat.elapsedTicks = 0;
           SoftwareTransform3D.field_b = 0;
           IntrusiveNodeHashTable.field_c = 0;
-          PasswordValidator.e(101);
+          PasswordValidator.resetAchievementProgress(101);
           HardwareRidgedWaterNoise.resetArcadeGameplay(true);
           MessageDialog.arcadeMode = true;
           MusicPatch.simulationPaused = false;
@@ -1254,7 +1254,7 @@ final class GameplaySession {
               DelayedInboundPacket.updatePlayerControls(20);
             }
             if (StatisticsSubmissionSupport.field_a) {
-              km.updateEnemySteering((byte) 32);
+              FourStatHiscoreRequest.updateEnemySteering((byte) 32);
             }
             boolean decompiledFrameRemainder0 = true;
             MenuSelectionController.updateDroneBoundaryAndDestruction((byte) 54);
@@ -1301,7 +1301,7 @@ final class GameplaySession {
                   }
                   AccountServiceResult.waveIndex = AccountServiceResult.waveIndex + 1;
                   ArchiveLoadRequirement.playSoundEffect(14, true);
-                  ke.beginCurrentWave(false);
+                  AppletInstanceState.beginCurrentWave(false);
                   break;
                 }
               }
@@ -1361,13 +1361,13 @@ final class GameplaySession {
                     if (LegacyOpenGlEffectManager.selectedTractionLevel == 10) {
                       UnderageAccountInfoPanel.b(24753, 254, 1);
                     }
-                    if (hc.selectedBounceLevel == 10) {
+                    if (AccountStatusDialogState.selectedBounceLevel == 10) {
                       UnderageAccountInfoPanel.b(24753, 253, 2);
                     }
                   }
                   OpenGlBuffer.a(35040, new PlayerDrone(81920, 61440));
                   StrongCacheReference.switchMenuScreen(-7753, true, 12);
-                  TextLayout.a(0, 6);
+                  TextLayout.playGameTrack(0, 6);
                   return;
                 }
               }
@@ -1714,11 +1714,11 @@ final class GameplaySession {
                   HudMessage.field_s[4].draw(567, 0);
                   QueuedIntArrayRequest.field_k.a(19, 85, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   GameTrackPlayback.field_a.a(19, 85, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  QueuedIntArrayRequest.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  QueuedIntArrayRequest.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + FourIntReadRequest.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              GameTrackPlayback.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              GameTrackPlayback.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + FourIntReadRequest.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1802,7 +1802,7 @@ final class GameplaySession {
             GameplaySession.renderLitMeshFaces(-125, (CompactMeshGeometry) null, -52, -77, 38, -62, (byte) 105, 54);
           }
           StatisticsSubmissionSupport.field_a = true;
-          ke.beginCurrentWave(false);
+          AppletInstanceState.beginCurrentWave(false);
           this.closePauseMenu((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1829,7 +1829,7 @@ final class GameplaySession {
           QuickChatCommand.field_a = 0;
           TextureFormat.elapsedTicks = 0;
           LoginPacketWriter.field_a = 0;
-          PasswordValidator.e(104);
+          PasswordValidator.resetAchievementProgress(104);
           if (OpenGlShaderProgram.levelIndex == 0 &&
             !TextureMetadata.field_f[0]) {
             NextLevelChoiceOverlay.field_d = true;

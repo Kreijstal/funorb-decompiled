@@ -71,7 +71,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
               }
             }
             if (result.errorCode == 3) {
-              var6.a(lq.toServerListText, 7, true);
+              var6.a(IntroFinalFrameResources.toServerListText, 7, true);
             } else {
               if (result.errorCode != 6) {
                 this.transitionToContent((byte) -123, var6);

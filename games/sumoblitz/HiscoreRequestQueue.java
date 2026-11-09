@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi {
+final class HiscoreRequestQueue {
     static AccountConnectionPhase WAIT_NAME_SUGGESTIONS;
-    static IntrusiveDeque field_b;
-    static String field_c;
+    static IntrusiveDeque pending;
+    static String decodedChatText;
     static SpriteData field_d;
 
     final static boolean isReconnecting(byte guard) {
@@ -16,15 +16,15 @@ final class oi {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          field_c = null;
-          field_b = null;
+          decodedChatText = null;
+          pending = null;
           WAIT_NAME_SUGGESTIONS = null;
           field_d = null;
           return;
         }
-        field_b = (IntrusiveDeque) null;
-        field_c = null;
-        field_b = null;
+        pending = (IntrusiveDeque) null;
+        decodedChatText = null;
+        pending = null;
         WAIT_NAME_SUGGESTIONS = null;
         field_d = null;
     }
@@ -62,6 +62,6 @@ final class oi {
 
     static {
         WAIT_NAME_SUGGESTIONS = new AccountConnectionPhase();
-        field_b = new IntrusiveDeque();
+        pending = new IntrusiveDeque();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ka {
+abstract class RenderBufferSet {
     static String passwordIsValidText;
     static int tickHistoryIndex;
 
@@ -48,7 +48,7 @@ abstract class ka {
         passwordIsValidText = null;
         if (param0 != -59) {
           TextureCoordinateGeneration var2 = (TextureCoordinateGeneration) null;
-          ka.glTexCoordGeneration((TextureCoordinateGeneration) null, 4);
+          RenderBufferSet.glTexCoordGeneration((TextureCoordinateGeneration) null, 4);
         }
     }
 

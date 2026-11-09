@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf extends ka {
+final class LegacyOpenGlRenderBufferSet extends RenderBufferSet {
     static TextureCombineOperation REPLACE;
     static TextureCoordinateGeneration DISABLED;
     static String[] monthNames;
@@ -49,7 +49,7 @@ final class lf extends ka {
         }
     }
 
-    final static void b(byte param0) {
+    final static void stopLoopingSamples(byte guard) {
         int var2 = 0;
         PcmSampleStream[] var1 = null;
         PcmSampleStream var3 = null;
@@ -63,42 +63,42 @@ final class lf extends ka {
           var1 = var5;
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            GpuDataType.a(109, var3);
+            GpuDataType.removeSoundStream(109, var3);
           }
-          if (param0 > -113) {
-            lf.setMusicVolume(-101, 66);
+          if (guard > -113) {
+            LegacyOpenGlRenderBufferSet.setMusicVolume(-101, 66);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "lf.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "lf.C(" + guard + ')');
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 1821625704) {
-          lf.isIntroFinished(-118);
+    public static void releaseStatics(int guard) {
+        if (guard != 1821625704) {
+          LegacyOpenGlRenderBufferSet.isIntroFinished(-118);
         }
         REPLACE = null;
         DISABLED = null;
         monthNames = null;
     }
 
-    lf(LegacyOpenGlGraphicsToolkit param0) {
+    LegacyOpenGlRenderBufferSet(LegacyOpenGlGraphicsToolkit toolkit) {
         LegacyVertexAttribute discarded$0 = null;
         LegacyVertexAttribute discarded$1 = null;
         LegacyVertexAttribute discarded$2 = null;
         LegacyVertexAttribute discarded$3 = null;
-        ke discarded$4 = null;
+        AppletInstanceState discarded$4 = null;
         try {
           discarded$0 = new LegacyVertexAttribute((LegacyVertexBuffer) null, 5126, 3, 0);
           discarded$1 = new LegacyVertexAttribute((LegacyVertexBuffer) null, 5126, 2, 0);
           discarded$2 = new LegacyVertexAttribute((LegacyVertexBuffer) null, 5126, 3, 0);
           discarded$3 = new LegacyVertexAttribute((LegacyVertexBuffer) null, 5121, 4, 0);
-          discarded$4 = new ke();
+          discarded$4 = new AppletInstanceState();
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lf.<init>(" + (toolkit != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class lf extends ka {
 
     final static boolean isIntroFinished(int guard) {
         if (guard != -251) {
-          lf.setSoundVolume(98, (byte) -77);
+          LegacyOpenGlRenderBufferSet.setSoundVolume(98, (byte) -77);
         }
         return MusicPatch.field_u > 250 ? true : false;
     }

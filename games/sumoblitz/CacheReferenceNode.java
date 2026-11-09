@@ -28,10 +28,10 @@ abstract class CacheReferenceNode extends DualLinkNode {
         int var1 = 0;
         int var1Lifetime1;
         if (TextureGeneratorNode.musicVolume >= 224) {
-          lf.setMusicVolume(0, 256);
+          LegacyOpenGlRenderBufferSet.setMusicVolume(0, 256);
         } else {
           var1 = TextureGeneratorNode.musicVolume % 32;
-          lf.setMusicVolume(0, TextureGeneratorNode.musicVolume + (32 - var1));
+          LegacyOpenGlRenderBufferSet.setMusicVolume(0, TextureGeneratorNode.musicVolume + (32 - var1));
         }
         var1Lifetime1 = -44 % ((param0 - 35) / 40);
     }

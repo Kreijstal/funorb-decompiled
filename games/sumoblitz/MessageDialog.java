@@ -166,7 +166,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             field_db = (ToolkitFont) null;
           }
           if (!this.field_eb) {
-            SocialContact.openAppletPage("tochangedisplayname.ws", LegacyOpenGlUnlitEffect.c(guard - 708), (byte) -103);
+            SocialContact.openAppletPage("tochangedisplayname.ws", LegacyOpenGlUnlitEffect.activeApplet(guard - 708), (byte) -103);
             return;
           }
           ReflectionCheck.setAccountDialogResult(3, -82);
@@ -261,7 +261,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           field_gb = (DraggableWidget) null;
         }
         MarkerTrackWidget.closeCacheResources(-1);
-        if (NameSuggestionsPanel.a((byte) -98)) {
+        if (NameSuggestionsPanel.hasLoginSessionSocket((byte) -98)) {
           InwardSparkParticle.field_v.writeCipherByte(1, 8);
           MessageDialog.a(0, 0);
         }
@@ -309,7 +309,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
           }
           if (param1 == 3) {
-            var6.a(lq.toServerListText, 7, true);
+            var6.a(IntroFinalFrameResources.toServerListText, 7, true);
           } else {
             if (param1 != 4) {
               if (param1 != 6) {

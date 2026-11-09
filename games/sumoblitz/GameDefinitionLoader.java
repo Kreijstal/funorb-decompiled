@@ -135,7 +135,7 @@ final class GameDefinitionLoader {
           for (var6 = 0; var24.length > var6; var6++) {
             var14 = new PacketBuffer(param1.fetchFile((byte) 98, var24[var6], var2_int));
             var14.position = var14.position + 1;
-            var5[var6] = pi.decodeArena(var14, true, 102);
+            var5[var6] = ArenaDefinitionCodec.decodeArena(var14, true, 102);
             if (25 > var5[var6].levelId) {
               EnemyDrone.field_S[var5[var6].levelId] = var5[var6];
             }
@@ -180,8 +180,8 @@ final class GameDefinitionLoader {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2, byte param3) {
-        if (param3 <= 46) {
+    final static int pollAccountDialogResult(boolean unusedFlag, int unusedFirst, int unusedSecond, byte guard) {
+        if (guard <= 46) {
           return 59;
         }
         return LoginCredentials.pollAccountDialogs(19886);

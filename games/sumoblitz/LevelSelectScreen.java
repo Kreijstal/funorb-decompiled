@@ -38,10 +38,10 @@ final class LevelSelectScreen extends MenuScreen {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4_int = opacity << 24;
-          DelegatingCanvas.a(up.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
           ForceFieldRingEffect.field_t.a(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
-          hc.field_e.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
-          DelegatingCanvas.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
+          AccountStatusDialogState.headingFont.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
+          DelegatingCanvas.a(IntroMeshProjection.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
           GameTrackPlayback.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
@@ -49,8 +49,8 @@ final class LevelSelectScreen extends MenuScreen {
           QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -101, -1);
           GameTrackPlayback.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.selectedBounceLevel), (byte) -15, -1);
-          GameTrackPlayback.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.selectedBounceLevel), (byte) -51, -1);
+          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -15, -1);
+          GameTrackPlayback.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -51, -1);
           var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
             stackIn_4_0 = var5 % 255;
@@ -67,7 +67,7 @@ final class LevelSelectScreen extends MenuScreen {
                 !MusicPatchEnvelope.a(8230, 25)) {
                 toolkit.fillRectangle(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
-              DelegatingCanvas.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
+              DelegatingCanvas.a(IntroMeshProjection.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
                 QueuedIntArrayRequest.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
@@ -88,7 +88,7 @@ final class LevelSelectScreen extends MenuScreen {
             var10_ref_ha = toolkit;
             var11 = -25 + var8Lifetime1;
             var12 = -21 + var9Lifetime1;
-            var13 = up.field_c;
+            var13 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (TextureMetadata.field_f[this.field_i]) {
               MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
@@ -96,13 +96,13 @@ final class LevelSelectScreen extends MenuScreen {
               MessageDialog.field_db.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
               LegacyOpenGlEffect.field_c.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
-              if (up.field_g[this.field_i]) {
+              if (IntroMeshProjection.threeLifeCompletions[this.field_i]) {
                 var10++;
               }
               if (NineSlicePanel.field_d[this.field_i]) {
                 var10++;
               }
-              if (up.field_g[this.field_i]) {
+              if (IntroMeshProjection.threeLifeCompletions[this.field_i]) {
                 stackIn_30_0 = BlendMode.field_b;
                 stackIn_30_1 = 90 / var10 * var10 - 45;
                 stackIn_30_2 = var8Lifetime1;
@@ -155,13 +155,13 @@ final class LevelSelectScreen extends MenuScreen {
         var6 = Sumoblitz.field_L ? 1 : 0;
         super.update(param0 + 0);
         var2 = (-44 + PointLight.mouseX) / 112;
-        var3 = (pi.field_e - 108) / 52;
+        var3 = (ArenaDefinitionCodec.field_e - 108) / 52;
         var4 = 5 * var3 + var2;
         if (param0 != -18556) {
           return;
         }
         if (!((-44 + PointLight.mouseX) % 112 <= 100) ||
-          !((pi.field_e - 108) % 52 <= 42)) {
+          !((ArenaDefinitionCodec.field_e - 108) % 52 <= 42)) {
           var4 = -1;
         }
         if (25 > var4 &&

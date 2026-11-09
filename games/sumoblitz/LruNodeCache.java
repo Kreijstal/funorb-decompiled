@@ -12,7 +12,7 @@ final class LruNodeCache {
     private IntrusiveNodeHashTable entries;
 
     final DualLinkNode get(byte guard, long key) {
-        DualLinkNode var4 = (DualLinkNode) (this.entries.a(guard ^ -60, key));
+        DualLinkNode var4 = (DualLinkNode) (this.entries.get(guard ^ -60, key));
         if (guard != -88) {
           this.get((byte) -122, 80L);
         }

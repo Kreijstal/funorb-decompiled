@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lt extends IntrusiveNode {
-    int field_n;
-    int field_k;
-    int field_o;
-    int field_q;
-    int field_l;
-    static PlatformTaskDispatcher field_m;
-    int field_p;
+final class FourIntUpdateRequest extends IntrusiveNode {
+    int firstValue;
+    int byteKey;
+    int smartKey;
+    int thirdValue;
+    int fourthValue;
+    static PlatformTaskDispatcher platformDispatcher;
+    int secondValue;
 
-    final static boolean a(byte param0) {
-        if (param0 != 119) {
-          lt.c((byte) -70);
+    final static boolean readAccountPacketBody(byte guard) {
+        if (guard != 119) {
+          FourIntUpdateRequest.muteSoundEffects((byte) -70);
           if (-1 == HardwareBufferSet.field_d) {
             if (!OpenGlIndexBuffer.b(-1, 1)) {
               return false;
@@ -46,21 +46,21 @@ final class lt extends IntrusiveNode {
         return OpenGlIndexBuffer.b(-1, HardwareBufferSet.field_d);
     }
 
-    final static void c(byte param0) {
-        lf.setSoundVolume(0, (byte) -58);
-        if (param0 != 53) {
-          field_m = (PlatformTaskDispatcher) null;
+    final static void muteSoundEffects(byte guard) {
+        LegacyOpenGlRenderBufferSet.setSoundVolume(0, (byte) -58);
+        if (guard != 53) {
+          platformDispatcher = (PlatformTaskDispatcher) null;
         }
     }
 
     public static void releaseStatics(int param0) {
-        field_m = null;
+        platformDispatcher = null;
         if (param0 != 1) {
-          field_m = (PlatformTaskDispatcher) null;
+          platformDispatcher = (PlatformTaskDispatcher) null;
         }
     }
 
-    private lt() throws Throwable {
+    private FourIntUpdateRequest() throws Throwable {
         throw new Error();
     }
 

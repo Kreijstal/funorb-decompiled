@@ -33,19 +33,19 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
             this.field_S.text = "" + var8;
           } else {
             HardwareAnimatedWaterEffect.d(1);
-            this.e(true);
+            this.closeDialog(true);
             this.dialogLayer.pushDialog((byte) 121, new DisplayModeErrorDialog(this.dialogLayer, FontMetrics.FULLSCREEN_CONFIRMATION_TIMEOUT));
           }
           if (this.open &&
             null == CompactMeshGeometry.field_o) {
-            this.e(true);
+            this.closeDialog(true);
             this.dialogLayer.pushDialog((byte) 97, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
           }
           if (null != CompactMeshGeometry.field_o) {
             if (!CompactMeshGeometry.field_o.field_a) {
               return;
             }
-            this.e(true);
+            this.closeDialog(true);
             this.dialogLayer.pushDialog((byte) 122, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
           }
           return;
@@ -119,8 +119,8 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           this.field_S.height = 80;
           this.field_S.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(LegacyOpenGlDisplayLists.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_S, 117);
-          this.field_P = this.a((WidgetListener) (this), 20556, km.acceptText);
-          this.field_Q = this.a((WidgetListener) (this), 20556, up.cancelText);
+          this.field_P = this.a((WidgetListener) (this), 20556, FourStatHiscoreRequest.acceptText);
+          this.field_Q = this.a((WidgetListener) (this), 20556, IntroMeshProjection.cancelText);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -172,8 +172,8 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         }
     }
 
-    private final void e(boolean param0) {
-        if (!param0) {
+    private final void closeDialog(boolean guard) {
+        if (!guard) {
           this.field_W = -123L;
           if (this.open) {
             this.open = false;
@@ -207,11 +207,11 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_P == source) {
-            this.e(true);
+            this.closeDialog(true);
           } else {
             if (source == this.field_Q) {
               HardwareAnimatedWaterEffect.d(guard ^ 711);
-              this.e(true);
+              this.closeDialog(true);
             }
           }
           if (guard == 710) {

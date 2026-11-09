@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc {
-    static MessageDialog field_c;
-    static ToolkitFont field_e;
+final class AccountStatusDialogState {
+    static MessageDialog activeDialog;
+    static ToolkitFont headingFont;
     static int selectedBounceLevel;
-    static SpriteData[] field_a;
-    static SpriteData field_b;
+    static SpriteData[] gravityWellSpriteData;
+    static SpriteData heartSpriteData;
     static String continueToNextLevelText;
 
-    private hc() throws Throwable {
+    private AccountStatusDialogState() throws Throwable {
         throw new Error();
     }
 
     public static void releaseStatics(byte param0) {
-        field_a = null;
-        field_b = null;
+        gravityWellSpriteData = null;
+        heartSpriteData = null;
         continueToNextLevelText = null;
-        field_e = null;
+        headingFont = null;
         int var1 = 80 / ((69 - param0) / 40);
-        field_c = null;
+        activeDialog = null;
     }
 
     final static LegacyOpenGlShaderProgram linkShaderProgram(int guard, LegacyOpenGlShader[] shaders, LegacyOpenGlGraphicsToolkit toolkit) {

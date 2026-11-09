@@ -328,7 +328,7 @@ final class GraphicsToolkitManager {
     }
 
     GraphicsToolkitManager(int nativeArchiveId, int shaderArchiveId, TextureProvider textureProvider) {
-        this(IntroLogoRenderer.textArchive((byte) -123, nativeArchiveId), ScrollControl.b(shaderArchiveId, -1), textureProvider, lt.field_m, IntrusiveNode.b(-16754));
+        this(IntroLogoRenderer.textArchive((byte) -123, nativeArchiveId), ScrollControl.b(shaderArchiveId, -1), textureProvider, FourIntUpdateRequest.platformDispatcher, IntrusiveNode.b(-16754));
     }
 
     private GraphicsToolkitManager(ResourceArchive nativeArchive, ResourceArchive shaderArchive, TextureProvider textureProvider, PlatformTaskDispatcher dispatcher, RendererPreference[] rendererPreferences) {

@@ -191,7 +191,7 @@ final class WaterTextureResources {
           if (!this.useVolumeTextures) {
             this.animatedSlices = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var17 = ByteStorageRanges.copyRange(pd.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
+              var17 = ByteStorageRanges.copyRange(FourIntReadRequest.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
               this.animatedSlices[var2_int] = this.toolkit.a(var17, 128, 128, AchievementThresholds.LUMINANCE_ALPHA, 0, true);
             }
             this.secondarySlices = new Texture2D[16];
@@ -201,7 +201,7 @@ final class WaterTextureResources {
             }
             return;
           }
-          var15 = NoiseSliceGenerator.extractByteArray(false, pd.hardwareRidgedWaterData, 0);
+          var15 = NoiseSliceGenerator.extractByteArray(false, FourIntReadRequest.hardwareRidgedWaterData, 0);
           this.animatedVolume = this.toolkit.a(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var15, 128);
           var16 = NoiseSliceGenerator.extractByteArray(false, LegacyOpenGlShader.hardwareTurbulentWaterData, 0);
           this.toolkit.a(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var16, 128);

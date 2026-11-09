@@ -159,8 +159,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         var4 = SocialContact.split(' ', var3.replace('.', ' '), -27224);
         if (param0 <= var4.length) {
           try {
-            var5_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var4[0]));
-            var6 = no.parseDecimal((byte) -127, (CharSequence) ((Object) var4[1]));
+            var5_int = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var4[0]));
+            var6 = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var4[1]));
             this.field_Yb = var5_int * 10 + var6;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -218,7 +218,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.t(1);
           this.d(3, false);
           this.b(-69, false);
-          this.a(65, false);
+          this.setDepthTest(65, false);
           this.a(false, (byte) -94);
           this.bindTexture(106, (LegacyOpenGlTexture) null);
           this.a((byte) 123, -2);
@@ -228,11 +228,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         int var2 = -67 % ((39 - param0) / 49);
     }
 
-    private final void b(byte param0) {
+    private final void applyProjectionMatrix(byte guard) {
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadMatrixf(this.field_eb, 0);
         jaggl.OpenGL.glMatrixMode(5888);
-        int var2 = -104 % ((14 - param0) / 61);
+        int var2 = -104 % ((14 - guard) / 61);
     }
 
     private final void c(byte param0) {
@@ -254,15 +254,15 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void a(float param0, float param1, float param2, int param3) {
+    private final void translateTextureMatrix(float y, float z, float x, int guard) {
         jaggl.OpenGL.glMatrixMode(5890);
         if (this.field_mb) {
           jaggl.OpenGL.glLoadIdentity();
         }
-        jaggl.OpenGL.glTranslatef(param2, param0, param1);
+        jaggl.OpenGL.glTranslatef(x, y, z);
         jaggl.OpenGL.glMatrixMode(5888);
         this.field_mb = true;
-        if (param3 != 32151) {
+        if (guard != 32151) {
           this.field_nb = 10;
         }
     }
@@ -290,11 +290,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         if (null == this.field_Fb) {
           this.field_Ec = this.field_I;
           this.field_Z = this.field_s;
-          this.h((byte) -55);
+          this.applyViewport((byte) -55);
         }
         this.g((byte) -81);
         if (param0) {
-          this.j(-1303);
+          this.resetViewportClip(-1303);
           return;
         }
     }
@@ -384,7 +384,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean a() {
+    final boolean isFloatPostProcessingEnabled() {
         return this.floatPostProcessEffect != null && this.floatPostProcessEffect.isEnabled(118);
     }
 
@@ -420,14 +420,14 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, float param1, float param2, float param3, float param4) {
-        LegacyOpenGlSpriteMask.field_g[2] = param2;
-        if (param0 != 31322) {
+    final void setTextureConstantRgba(int guard, float green, float blue, float red, float alpha) {
+        LegacyOpenGlSpriteMask.field_g[2] = blue;
+        if (guard != 31322) {
           this.field_Xb = 70;
         }
-        LegacyOpenGlSpriteMask.field_g[0] = param3;
-        LegacyOpenGlSpriteMask.field_g[1] = param1;
-        LegacyOpenGlSpriteMask.field_g[3] = param4;
+        LegacyOpenGlSpriteMask.field_g[0] = red;
+        LegacyOpenGlSpriteMask.field_g[1] = green;
+        LegacyOpenGlSpriteMask.field_g[3] = alpha;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, 0);
     }
 
@@ -477,24 +477,24 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int b(int param0, byte param1) {
-        if (param1 != -14) {
+    final int glTextureCombineOperation(int operation, byte guard) {
+        if (guard != -14) {
           LegacyOpenGlFramebufferTarget var4 = (LegacyOpenGlFramebufferTarget) null;
           this.popFramebuffer((byte) 16, (LegacyOpenGlFramebufferTarget) null);
         }
-        if (param0 == 1) {
+        if (operation == 1) {
           return 7681;
         }
-        if (param0 == 0) {
+        if (operation == 0) {
           return 8448;
         }
-        if (param0 == 2) {
+        if (operation == 2) {
           return 34165;
         }
-        if (param0 == 3) {
+        if (operation == 3) {
           return 260;
         }
-        if (param0 != 4) {
+        if (operation != 4) {
           throw new IllegalArgumentException();
         }
         return 34023;
@@ -509,7 +509,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.t(1);
           this.d(3, false);
           this.b(-74, false);
-          this.a(99, false);
+          this.setDepthTest(99, false);
           this.a(false, (byte) -89);
           this.a((byte) 119, -2);
           this.field_nb = 2;
@@ -520,9 +520,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void n(int param0) {
+    private final void applyDepthWrite(int guard) {
         boolean stackIn_6_0 = false;
-        if (param0 >= -105) {
+        if (guard >= -105) {
           this.supportsFragmentShaders = false;
         }
         stackIn_6_0 = (this.field_S) && (this.field_Zb);
@@ -679,7 +679,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (ContentTransitionPhase.a(-13181, var22)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
-                          var5_int = no.parseDecimal((byte) -128, var23);
+                          var5_int = LoginFormState.parseDecimal((byte) -128, var23);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -948,14 +948,14 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         return true;
     }
 
-    private final void c(boolean param0) {
+    private final void resetTextureMatrix(boolean guard) {
         if (this.field_mb) {
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glMatrixMode(5888);
           this.field_mb = false;
         }
-        if (param0) {
+        if (guard) {
           this.field_cc = (IntrusiveDeque) null;
         }
     }
@@ -971,7 +971,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.p(-15048);
         } else {
           if (this.field_Q == 2) {
-            this.b((byte) -108);
+            this.applyProjectionMatrix((byte) -108);
           }
         }
     }
@@ -1096,8 +1096,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             this.field_Ec = this.field_I;
             this.field_Z = this.field_s;
             this.g((byte) -81);
-            this.h((byte) -81);
-            this.j(-1303);
+            this.applyViewport((byte) -81);
+            this.resetViewportClip(-1303);
             return;
           }
           throw new RuntimeException();
@@ -1106,8 +1106,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_Ec = this.field_I;
         this.field_Z = this.field_s;
         this.g((byte) -81);
-        this.h((byte) -81);
-        this.j(-1303);
+        this.applyViewport((byte) -81);
+        this.resetViewportClip(-1303);
     }
 
     final void useHeap(GraphicsHeap heap) {
@@ -1278,14 +1278,14 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_q.addLast((IntrusiveNode) (var4), (byte) 39);
     }
 
-    private final void g(int param0) {
+    private final void applyFogEnabled(int guard) {
         if (this.field_r &&
           this.field_kc >= 0) {
           jaggl.OpenGL.glEnable(2912);
         } else {
           jaggl.OpenGL.glDisable(2912);
         }
-        if (param0 != 16) {
+        if (guard != 16) {
           this.k(-114);
         }
     }
@@ -1298,7 +1298,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.t(1);
           this.d(param0 + 25465, false);
           this.b(-55, false);
-          this.a(param0 ^ -25409, false);
+          this.setDepthTest(param0 ^ -25409, false);
           this.a(false, (byte) -101);
           this.a((byte) 110, -2);
           this.c(25189, 1);
@@ -1381,10 +1381,10 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.r(0);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        jaggl.OpenGL.glTexEnvi(8960, param2 + 34176, param0);
-        jaggl.OpenGL.glTexEnvi(8960, param2 + 34192, param1);
-        int var5 = 42 % ((param3 + 69) / 47);
+    final void setTextureCombineSources(int rgbSource, int alphaSource, int index, int guard) {
+        jaggl.OpenGL.glTexEnvi(8960, index + 34176, rgbSource);
+        jaggl.OpenGL.glTexEnvi(8960, index + 34192, alphaSource);
+        int var5 = 42 % ((guard + 69) / 47);
     }
 
     final synchronized void queueShaderObjectDeletion(long objectId, byte guard) {
@@ -1416,11 +1416,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void j(int param0) {
+    private final void resetViewportClip(int guard) {
         this.field_Wb = 0;
         this.field_yc = 0;
         this.field_Eb = this.field_Ec;
-        if (param0 == -1303) {
+        if (guard == -1303) {
           this.field_jb = this.field_Z;
           jaggl.OpenGL.glDisable(3089);
           this.m(-117);
@@ -1431,7 +1431,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private final void d(int param0, boolean param1) {
         if (this.field_r != param1) {
           this.field_r = param1 ? true : false;
-          this.g(16);
+          this.applyFogEnabled(16);
           this.field_nb = this.field_nb & -32;
         }
         if (param0 != 3) {
@@ -1477,8 +1477,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
         }
         this.setTextureCombineOperations(param0 + 20685, 8448, 8448);
-        this.b(34168, 770, 2, 10);
-        this.c(false);
+        this.setTextureCombineSources(34168, 770, 2, 10);
+        this.resetTextureMatrix(false);
         this.field_Ab = 1;
         jaggl.OpenGL.glEnable(3042);
         jaggl.OpenGL.glBlendFunc(770, 771);
@@ -1490,7 +1490,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_tb = true;
         this.d(param0 ^ 3, true);
         this.b(-44, true);
-        this.a(84, true);
+        this.setDepthTest(84, true);
         this.a(true, (byte) -76);
         this.g((byte) -81);
         this.field_y.setSwapInterval(0);
@@ -1517,7 +1517,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glFogi(2917, 9729);
         jaggl.OpenGL.glHint(3156, 4353);
         this.field_P = -1;
-        this.j(param0 - 1303);
+        this.resetViewportClip(param0 - 1303);
     }
 
     final void drawLine(int x0, int y0, int x1, int y1, int color, int blendMode) {
@@ -1558,7 +1558,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         if (param1 < -73) {
           if ((!param0 ? 1 : 0) == (this.field_S ? 1 : 0)) {
             this.field_S = param0 ? true : false;
-            this.n(-112);
+            this.applyDepthWrite(-112);
             this.field_nb = this.field_nb & -32;
           }
           return;
@@ -1569,11 +1569,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         return this.field_Cb;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, param2);
-        jaggl.OpenGL.glTexEnvi(8960, param1 + 34200, param3);
-        if (param0 < 108) {
-          this.h((byte) -89);
+    final void setTextureCombineOperands(int guard, int index, int rgbOperand, int alphaOperand) {
+        jaggl.OpenGL.glTexEnvi(8960, 34184 + index, rgbOperand);
+        jaggl.OpenGL.glTexEnvi(8960, index + 34200, alphaOperand);
+        if (guard < 108) {
+          this.applyViewport((byte) -89);
         }
     }
 
@@ -1722,7 +1722,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
         this.field_Pb.age(122);
-        if (100663296 < this.e((byte) 7) &&
+        if (100663296 < this.estimatedResourceBytes((byte) 7) &&
           IntroMeshResources.monotonicTimeMillis(-64) > this.field_vc + 60000L) {
           System.gc();
           this.field_vc = IntroMeshResources.monotonicTimeMillis(-78);
@@ -1763,12 +1763,12 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void e(int param0, int param1) {
-        LegacyOpenGlSpriteMask.field_g[0] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(param1, 16711680) / 16711680.0f;
-        LegacyOpenGlSpriteMask.field_g[2] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, param1) / 255.0f;
-        LegacyOpenGlSpriteMask.field_g[1] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(65280, param1) / 65280.0f;
-        LegacyOpenGlSpriteMask.field_g[3] = (float)(param1 >>> 24) / 255.0f;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, param0);
+    final void setTextureConstantArgb(int offset, int argb) {
+        LegacyOpenGlSpriteMask.field_g[0] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(argb, 16711680) / 16711680.0f;
+        LegacyOpenGlSpriteMask.field_g[2] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, argb) / 255.0f;
+        LegacyOpenGlSpriteMask.field_g[1] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(65280, argb) / 65280.0f;
+        LegacyOpenGlSpriteMask.field_g[3] = (float)(argb >>> 24) / 255.0f;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, offset);
     }
 
     final void pushFramebuffer(LegacyOpenGlFramebufferTarget framebuffer, int guard) {
@@ -1825,7 +1825,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             this.p(-15048);
           } else {
             if (this.field_Q == 2) {
-              this.b((byte) -110);
+              this.applyProjectionMatrix((byte) -110);
             }
           }
         }
@@ -1838,16 +1838,16 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_n = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
         LegacyOpenGlTexture2D discarded$0 = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
         LegacyOpenGlTexture2D discarded$1 = new LegacyOpenGlTexture2D(this, 3553, 6408, 1, 1);
-        lf discarded$2 = new lf(this);
-        lf discarded$3 = new lf(this);
-        lf discarded$4 = new lf(this);
-        lf discarded$5 = new lf(this);
-        lf discarded$6 = new lf(this);
-        lf discarded$7 = new lf(this);
-        lf discarded$8 = new lf(this);
-        lf discarded$9 = new lf(this);
-        lf discarded$10 = new lf(this);
-        lf discarded$13 = new lf(this);
+        LegacyOpenGlRenderBufferSet discarded$2 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$3 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$4 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$5 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$6 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$7 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$8 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$9 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$10 = new LegacyOpenGlRenderBufferSet(this);
+        LegacyOpenGlRenderBufferSet discarded$13 = new LegacyOpenGlRenderBufferSet(this);
         if (this.supportsFramebufferObjects) {
           this.scratchFramebuffer = new LegacyOpenGlFramebuffer(this);
           discarded$14 = new LegacyOpenGlFramebuffer(this);
@@ -2064,7 +2064,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             }
             this.pushFramebuffer(this.field_H, -125);
             if (withBuffer) {
-              var3 = (LegacyOpenGlRenderbuffer) (this.field_nc.a(127, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
+              var3 = (LegacyOpenGlRenderbuffer) (this.field_nc.get(127, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
               if (var3 == null) {
                 var9 = new LegacyOpenGlRenderbuffer(this, 6402, this.field_Tb.width(), this.field_Tb.height());
                 var3 = var9;
@@ -2091,7 +2091,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             if (!this.field_Gc) {
               throw new RuntimeException("");
             }
-            var3_ref = (LegacyOpenGlPbuffer) (this.field_nc.a(117, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
+            var3_ref = (LegacyOpenGlPbuffer) (this.field_nc.get(117, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
             if (var3_ref == null) {
               var7 = new LegacyOpenGlPbuffer(this, this.field_Tb.width(), this.field_Tb.height());
               var3_ref = var7;
@@ -2116,8 +2116,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.field_Z = sprite.width();
           this.field_Ec = sprite.height();
           this.g((byte) -81);
-          this.h((byte) -98);
-          this.j(-1303);
+          this.applyViewport((byte) -98);
+          this.resetViewportClip(-1303);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2164,15 +2164,15 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void h(byte param0) {
+    private final void applyViewport(byte guard) {
         jaggl.OpenGL.glViewport(this.field_pc, this.field_bb, this.field_Z, this.field_Ec);
-        if (param0 >= -16) {
+        if (guard >= -16) {
           this.field_qb = (IntrusiveDeque) null;
         }
     }
 
-    private final int e(byte param0) {
-        if (param0 != 7) {
+    private final int estimatedResourceBytes(byte guard) {
+        if (guard != 7) {
           this.field_vb = true;
         }
         return this.field_V + (this.textureBytes + this.field_Xb);
@@ -2315,13 +2315,13 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var2 = this.field_jb;
           var3 = this.field_Wb;
           var4 = this.field_Eb;
-          this.j(-1303);
+          this.resetViewportClip(-1303);
           jaggl.OpenGL.glReadBuffer(1028);
           jaggl.OpenGL.glDrawBuffer(1029);
           this.g((byte) -81);
           this.d(3, false);
           this.b(-119, false);
-          this.a(108, false);
+          this.setDepthTest(108, false);
           this.a(false, (byte) -115);
           this.bindTexture(83, (LegacyOpenGlTexture) null);
           this.a((byte) 124, -2);
@@ -2373,18 +2373,18 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           stackIn_8_0 = (!this.field_uc) ? 0 : 3;
           var9 = stackIn_8_0;
           if (param0 < 0) {
-            this.c(false);
+            this.resetTextureMatrix(false);
           } else {
             var5 = this.field_Pb.texture(0, param0);
             var10 = this.textureProvider.a(-29193, param0);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {
-              this.c(false);
+              this.resetTextureMatrix(false);
             } else {
               stackIn_15_0 = (var10.field_n) ? 64 : 128;
               var11 = stackIn_15_0;
               var12 = 50 * var11;
-              this.a((float)(var10.field_u * (this.animationTime % var12)) / (float)var12, 0.0f, (float)(var10.field_c * (this.animationTime % var12)) / (float)var12, 32151);
+              this.translateTextureMatrix((float)(var10.field_u * (this.animationTime % var12)) / (float)var12, 0.0f, (float)(var10.field_c * (this.animationTime % var12)) / (float)var12, 32151);
             }
             if (!this.field_uc) {
               var9 = var10.field_d;
@@ -2403,7 +2403,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_nb = this.field_nb & -8;
         if (param1 <= 109) {
-          this.b(-42, (byte) -3);
+          this.glTextureCombineOperation(-42, (byte) -3);
         }
     }
 
@@ -2447,18 +2447,18 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void a(int param0, boolean param1) {
-        if ((!param1 ? 1 : 0) == (!this.field_x ? 1 : 0)) {
+    private final void setDepthTest(int guard, boolean enabled) {
+        if ((!enabled ? 1 : 0) == (!this.field_x ? 1 : 0)) {
         } else {
-          if (param1) {
+          if (enabled) {
             jaggl.OpenGL.glEnable(2929);
           } else {
             jaggl.OpenGL.glDisable(2929);
           }
-          this.field_x = param1 ? true : false;
+          this.field_x = enabled ? true : false;
           this.field_nb = this.field_nb & -32;
         }
-        if (param0 <= 52) {
+        if (guard <= 52) {
           this.field_oc = (IntrusiveDeque) null;
         }
     }

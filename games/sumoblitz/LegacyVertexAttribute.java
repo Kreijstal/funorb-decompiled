@@ -9,13 +9,13 @@ final class LegacyVertexAttribute {
 
     final static void setLoadingLanguage(int language, int guard) {
         if (guard == 13586) {
-          pi.field_b = LegacyOpenGlPbuffer.field_w[language];
+          ArenaDefinitionCodec.field_b = LegacyOpenGlPbuffer.field_w[language];
           LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
           AccountRequestState.field_c = ReflectionReplySender.loadingTextTranslations[language];
           return;
         }
         TEXTURE = (TextureCombineSource) null;
-        pi.field_b = LegacyOpenGlPbuffer.field_w[language];
+        ArenaDefinitionCodec.field_b = LegacyOpenGlPbuffer.field_w[language];
         LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
         AccountRequestState.field_c = ReflectionReplySender.loadingTextTranslations[language];
     }
