@@ -130,7 +130,7 @@ final class km extends IntrusiveNode {
         if (PrimitiveType.field_c != null) {
           return (java.awt.Container) ((Object) PrimitiveType.field_c);
         }
-        return (java.awt.Container) ((Object) ra.c(2));
+        return (java.awt.Container) ((Object) LegacyOpenGlUnlitEffect.c(2));
     }
 
     private km() throws Throwable {

@@ -67,7 +67,7 @@ abstract class GameClientShell extends GameApplet {
           SecondaryNodeDequeIterator.field_b.d(2);
         }
         c.a((byte) 124);
-        au.d(123);
+        LegacyOpenGlReflectionEffect.d(123);
         if (!FadingWidget.g(-66) &&
           11 != jv.field_a) {
           LegacyRidgedWaterNoise.updateDisplayDialogs(1886067877);
@@ -92,29 +92,29 @@ abstract class GameClientShell extends GameApplet {
             sj.field_a = 15000L + wq.a(-96);
           }
         }
-        if (gr.field_l == -1 ||
-          gr.field_l == 0) {
-          stackIn_27_0 = (gr.field_l != -1) ? 0 : 1;
+        if (LegacyOpenGlShoreWaveWaterEffect.field_l == -1 ||
+          LegacyOpenGlShoreWaveWaterEffect.field_l == 0) {
+          stackIn_27_0 = (LegacyOpenGlShoreWaveWaterEffect.field_l != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_27_0;
-          gr.field_l = LegacyOpenGlFramebuffer.g(-5);
+          LegacyOpenGlShoreWaveWaterEffect.field_l = LegacyOpenGlFramebuffer.g(-5);
           if (var3Lifetime1 != 0 &&
-            gr.field_l == 0 &&
+            LegacyOpenGlShoreWaveWaterEffect.field_l == 0 &&
             11 == jv.field_a &&
             !FixedPointPerlinNoise3D.a(-23517)) {
             RasterBuffer.b(2);
           }
-          if (gr.field_l != -1 &&
-            0 != gr.field_l) {
+          if (LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
+            0 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
             sj.field_a = wq.a(-47) + 15000L;
           }
         }
-        if (gr.field_l != -1 &&
-          gr.field_l != 0) {
+        if (LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
+          LegacyOpenGlShoreWaveWaterEffect.field_l != 0) {
           if (TextureCoordinateGeneration.field_a < 10) {
-            if (3 != gr.field_l) {
-              if (gr.field_l != 4) {
-                if (gr.field_l != 2) {
-                  if (gr.field_l != 5) {
+            if (3 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
+              if (LegacyOpenGlShoreWaveWaterEffect.field_l != 4) {
+                if (LegacyOpenGlShoreWaveWaterEffect.field_l != 2) {
+                  if (LegacyOpenGlShoreWaveWaterEffect.field_l != 5) {
                     this.a("js5connect", 21253);
                   } else {
                     this.a("outofdate", 21253);
@@ -131,16 +131,16 @@ abstract class GameClientShell extends GameApplet {
           } else {
             if (10 <= jv.field_a) {
               ScrollViewport.a((byte) 70);
-              if (gr.field_l == 3) {
+              if (LegacyOpenGlShoreWaveWaterEffect.field_l == 3) {
                 ArchiveCatalog.a((byte) -97, 256, o.field_a);
               } else {
-                if (gr.field_l == 4) {
+                if (LegacyOpenGlShoreWaveWaterEffect.field_l == 4) {
                   ArchiveCatalog.a((byte) 61, 256, eg.field_n);
                 } else {
-                  if (gr.field_l == 2) {
+                  if (LegacyOpenGlShoreWaveWaterEffect.field_l == 2) {
                     ArchiveCatalog.a((byte) 90, 256, bn.dataServerFullOrText);
                   } else {
-                    if (gr.field_l == 5) {
+                    if (LegacyOpenGlShoreWaveWaterEffect.field_l == 5) {
                       ArchiveCatalog.a((byte) -113, 5, s.thisGameHasBeenText);
                     } else {
                       ArchiveCatalog.a((byte) -97, 256, ArrayWidgetContainer.unableToConnectToText);
@@ -152,18 +152,18 @@ abstract class GameClientShell extends GameApplet {
             }
           }
         }
-        if ((gr.field_l != -1 &&
-          gr.field_l != 0 ||
+        if ((LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
+          LegacyOpenGlShoreWaveWaterEffect.field_l != 0 ||
           FixedPointPerlinNoise3D.a(-23517)) &&
           wq.a(-87) >= sj.field_a) {
           ts.field_d = false;
-          if (-1 != gr.field_l &&
-            0 != gr.field_l) {
-            gr.field_l = -1;
+          if (-1 != LegacyOpenGlShoreWaveWaterEffect.field_l &&
+            0 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
+            LegacyOpenGlShoreWaveWaterEffect.field_l = -1;
             ic.a(4);
           }
         }
-        if (gr.field_l == 0 &&
+        if (LegacyOpenGlShoreWaveWaterEffect.field_l == 0 &&
           !FixedPointPerlinNoise3D.a(-23517)) {
           LegacyWaterTextureResources.field_h = false;
         }
@@ -175,12 +175,12 @@ abstract class GameClientShell extends GameApplet {
           if (dk.field_c != 0) {
             DropDownListWidget.field_H = wd.a(DisplayModeErrorDialog.field_P, (byte) 125);
           }
-          wd.field_j = ve.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
-          eb.field_f = ve.a(11880, true, AudioServiceThread.field_h, 1, false);
-          hw.field_a = ve.a(11880, true, ra.field_f, 1, false);
+          wd.field_j = LegacyOpenGlPostProcessEffect.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
+          LegacyOpenGlPostProcessManager.field_f = LegacyOpenGlPostProcessEffect.a(11880, true, AudioServiceThread.field_h, 1, false);
+          hw.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
           pi.field_c = wd.field_j;
           TextureCoordinateGeneration.field_a = 2;
-          vb.field_J = eb.field_f;
+          vb.field_J = LegacyOpenGlPostProcessManager.field_f;
         }
         if (TextureCoordinateGeneration.field_a == 2) {
           if (null != DropDownListWidget.field_H &&
@@ -189,7 +189,7 @@ abstract class GameClientShell extends GameApplet {
               DropDownListWidget.field_H = null;
             } else {
               if (DropDownListWidget.field_H.tryLoadNamedGroup("", 100)) {
-                ni.a(7, DropDownListWidget.field_H);
+                FallbackShaderEffect.a(7, DropDownListWidget.field_H);
                 DropDownListWidget.field_H = null;
                 VertexAttribute.b(0);
               }
@@ -200,13 +200,13 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (3 == TextureCoordinateGeneration.field_a &&
-          rd.a(eb.field_f, (byte) 124, hw.field_a, wd.field_j) &&
+          rd.a(LegacyOpenGlPostProcessManager.field_f, (byte) 124, hw.field_a, wd.field_j) &&
           wc.a(hw.field_a, 40)) {
           ph.a((byte) -93);
           th.e(true);
           pu.field_m = false;
           hn.field_k = ToolkitImageProducerBuffer.loadingText;
-          ea.a(hw.field_a, qn.field_a, (byte) 40, eb.field_f, wd.field_j);
+          ea.a(hw.field_a, qn.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, wd.field_j);
           if (hv.field_c ||
             DropTargetWidget.field_B != null) {
             stackIn_106_0 = 1;
@@ -224,7 +224,7 @@ abstract class GameClientShell extends GameApplet {
           }
           ss.a(hh.field_d, (byte) 127, hw.field_a, ContentTransitionDialog.field_O);
           hw.field_a = null;
-          eb.field_f = null;
+          LegacyOpenGlPostProcessManager.field_f = null;
           wd.field_j = null;
           DirectByteArrayStorage.a((java.applet.Applet) (this), (byte) -96);
           VertexAttribute.b(0);
@@ -285,7 +285,7 @@ abstract class GameClientShell extends GameApplet {
         if (ts.field_d) {
           return -1;
         }
-        var2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, ResourceRequest.c((byte) -97));
+        var2 = jb.a(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, ResourceRequest.c((byte) -97));
         if (-1 == var2) {
           return -1;
         }
@@ -304,7 +304,7 @@ abstract class GameClientShell extends GameApplet {
           return var2;
         }
         if (jv.field_a == 11 &&
-          gr.field_l == 0) {
+          LegacyOpenGlShoreWaveWaterEffect.field_l == 0) {
           RasterBuffer.b(2);
         }
         return var2;
@@ -441,7 +441,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != -1) {
           return;
         }
-        SingleChildWidget.setSessionCookie(61, var2, ra.c(2));
+        SingleChildWidget.setSessionCookie(61, var2, LegacyOpenGlUnlitEffect.c(2));
     }
 
     private final void l(int param0) {
@@ -493,7 +493,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 > -55) {
           this.field_w = -30;
         }
-        kj.a(-23166, ra.c(2), var3 != 0, MusicVoice.a(0, var5));
+        LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.c(2), var3 != 0, MusicVoice.a(0, var5));
     }
 
     final void a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -633,7 +633,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), Transform3D.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
+            var5_intLifetime1 = rs.a(oj.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
             if (var5_intLifetime1 != -1) {
               Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;
@@ -641,15 +641,15 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (gr.field_l != -1 &&
-              gr.field_l != 0) {
-              gr.field_l = -1;
+            if (LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
+              LegacyOpenGlShoreWaveWaterEffect.field_l != 0) {
+              LegacyOpenGlShoreWaveWaterEffect.field_l = -1;
               ic.a(4);
             }
             if (param2) {
               ts.field_d = false;
             } else {
-              var5_intLifetime2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
+              var5_intLifetime2 = jb.a(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
                   km.field_k = lb.field_a;
@@ -665,36 +665,36 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var4 == 4) {
             if (qn.field_a) {
-              MessageDialog.a(-1540, ra.c(param0 ^ 16983));
+              MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.c(param0 ^ 16983));
             } else {
               IntrusiveNode.field_a = true;
               jv.field_a = 10;
             }
           }
           if (var4 == 5) {
-            jl.a(ra.c(param0 - 16979), false);
+            jl.a(LegacyOpenGlUnlitEffect.c(param0 - 16979), false);
           }
           if (var4 == 6 &&
             pu.field_m) {
             jv.field_a = 10;
           }
           if (var4 == 7) {
-            ic.a(false, ra.c(2));
+            ic.a(false, LegacyOpenGlUnlitEffect.c(2));
           }
           if (8 == var4) {
-            MessageDialog.a(-1540, ra.c(param0 - 16979));
+            MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.c(param0 - 16979));
           }
           if (9 == var4) {
-            LegacyOpenGlTexture2D.openSupportPage(ra.c(2), (byte) -124);
+            LegacyOpenGlTexture2D.openSupportPage(LegacyOpenGlUnlitEffect.c(2), (byte) -124);
           }
           if (var4 == 10) {
             InwardSparkParticle.field_v.g(17, param0 ^ 16989);
           }
           if (var4 == 11) {
-            of.a(8192, ra.c(2));
+            of.a(8192, LegacyOpenGlUnlitEffect.c(2));
           }
           if (var4 == 12) {
-            cn.a(LegacyOpenGlSpriteTexture.e(false), ra.c(2), (byte) -103);
+            cn.a(LegacyOpenGlSpriteTexture.e(false), LegacyOpenGlUnlitEffect.c(2), (byte) -103);
           }
           if (var4 == 13) {
             try {
@@ -775,10 +775,10 @@ abstract class GameClientShell extends GameApplet {
         MenuScreen.field_f = param7;
         DisplayModeErrorDialog.field_P = param4;
         OpenGlUnderwaterEffect.field_i = param5;
-        ra.field_f = param3;
+        LegacyOpenGlUnlitEffect.field_f = param3;
         AudioServiceThread.field_h = param6;
         this.p(-1);
-        wt.c(8193);
+        LegacyOpenGlSpecularEffect.c(8193);
     }
 
     static {

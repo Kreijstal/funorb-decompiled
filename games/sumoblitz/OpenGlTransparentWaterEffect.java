@@ -10,22 +10,22 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     static boolean field_k;
     static SpriteData[] field_i;
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean lighting, int guard) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.programId);
         jaggl.OpenGL.glEnable(34336);
-        this.field_b.a(FontMetrics.PREVIOUS, 0, param1 - 20186);
-        if (param1 != 20186) {
+        this.toolkit.a(FontMetrics.PREVIOUS, 0, guard - 20186);
+        if (guard != 20186) {
           this.field_j = (OpenGlGraphicsToolkit) null;
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
-          if (param1 != 18834) {
+          if (guard != 18834) {
             OpenGlTransparentWaterEffect.d(-57);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wj.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,44 +84,44 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void c(boolean param0) {
-        this.field_b.a(jq.TEXTURE, 0, 0);
+    final void disable(boolean guard) {
+        this.toolkit.a(jq.TEXTURE, 0, 0);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);
-        if (param0) {
+        if (guard) {
           GpuTexture var3 = (GpuTexture) null;
-          this.a(11, -28, (GpuTexture) null);
+          this.bindTexture(11, -28, (GpuTexture) null);
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, LoginForm.ADD, lf.REPLACE);
-        if (param1 >= -71) {
+    final void refreshState(boolean lighting, byte guard) {
+        this.toolkit.a((byte) -83, LoginForm.ADD, lf.REPLACE);
+        if (guard >= -71) {
           OpenGlTransparentWaterEffect.d(-46);
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
         int var4 = 0;
         float var4_float = 0.0f;
-        if (param0 != 34023) {
+        if (guard != 34023) {
           field_e = 83;
         }
         if (this.field_f.useVolumeTextures) {
-          var4_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-          this.field_b.a(this.field_f.animatedVolume, 96);
+          var4_float = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
+          this.toolkit.a(this.field_f.animatedVolume, 96);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
-          var4 = 16 * (this.field_b.field_kc % 4000) / 4000;
-          this.field_b.a(this.field_f.animatedSlices[var4], 114);
+          var4 = 16 * (this.toolkit.field_kc % 4000) / 4000;
+          this.toolkit.a(this.field_f.animatedSlices[var4], 114);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -8) {
-          this.c(true);
+    final boolean isSupported(byte guard) {
+        if (guard > -8) {
+          this.disable(true);
         }
         return this.field_g != null ? true : false;
     }
@@ -324,7 +324,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           if (param1 != null &&
             this.field_f.hasAnimatedTextures(83) &&
             this.field_j.field_Ac) {
-            this.field_g = ve.compileAssemblyProgram((byte) 103, this.field_j, param1.fetchNamedFile("transparent_water", "gl", -1), 34336);
+            this.field_g = LegacyOpenGlPostProcessEffect.compileAssemblyProgram((byte) 103, this.field_j, param1.fetchNamedFile("transparent_water", "gl", -1), 34336);
             return;
           }
           this.field_g = null;

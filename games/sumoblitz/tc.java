@@ -177,12 +177,12 @@ final class tc extends na {
 
     final static void e(int param0) {
         FontMetrics.field_b = 0;
-        DisplayModeConfirmationDialog.field_T = -1;
+        DisplayModeConfirmationDialog.droneTypeStreakMask = -1;
         bn.field_P = false;
         ei.field_a = 0;
         if (param0 >= 85) {
           DroneChargeParticle.field_w = false;
-          bi.field_c = 0;
+          bi.uniqueDroneTypeStreak = 0;
           ew.field_e = 0;
           LegacyOpenGlNormalMapGenerator.field_c = false;
           SecondaryNodeDeque.field_e = false;

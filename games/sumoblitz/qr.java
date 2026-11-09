@@ -56,7 +56,7 @@ final class qr {
           for (var2_int = 0; var2_int < se.field_d; var2_int++) {
             pd.field_q[param1 + var2_int] = var2_int;
           }
-          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
+          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
           if (se.field_d > param1) {
             se.field_d = param1;
           }
@@ -73,7 +73,7 @@ final class qr {
         if (param0 != 17704) {
           return false;
         }
-        stackIn_8_0 = (jj.field_f == this) || (MusicVoice.field_l == this) || (this == ga.field_j);
+        stackIn_8_0 = (jj.field_f == this) || (MusicVoice.field_l == this) || (this == LegacyOpenGlUnderwaterEffect.field_j);
         return stackIn_8_0;
     }
 

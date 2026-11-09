@@ -137,15 +137,15 @@ class IntrusiveNode {
     }
 
     final static nj[] b(int param0) {
-        if (null == uo.field_e) {
-          uo.field_e = hg.a(110, new int[]{1, 0});
+        if (null == HardwareReflectionEffect.field_e) {
+          HardwareReflectionEffect.field_e = hg.a(110, new int[]{1, 0});
         }
         if (param0 == -16754) {
-          return uo.field_e;
+          return HardwareReflectionEffect.field_e;
         }
         Throwable var2 = (Throwable) null;
         IntrusiveNode.reportClientError((String) null, (Throwable) null, 74);
-        return uo.field_e;
+        return HardwareReflectionEffect.field_e;
     }
 
     static {

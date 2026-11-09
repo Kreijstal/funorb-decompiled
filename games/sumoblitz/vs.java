@@ -75,7 +75,7 @@ final class vs {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (kw.field_c != ga.field_j) {
+          if (kw.field_c != LegacyOpenGlUnderwaterEffect.field_j) {
             return false;
           }
           var4 = 96 / ((param1 + 72) / 53);
@@ -134,8 +134,8 @@ final class vs {
               return true;
             }
             var5 = jo.field_c;
-            if (0.0 != au.field_k) {
-              var5 = (int)((double)var5 + fd.field_d.nextGaussian() * au.field_k);
+            if (0.0 != LegacyOpenGlReflectionEffect.field_k) {
+              var5 = (int)((double)var5 + fd.field_d.nextGaussian() * LegacyOpenGlReflectionEffect.field_k);
               if (var5 < 0) {
                 var5 = 0;
               }

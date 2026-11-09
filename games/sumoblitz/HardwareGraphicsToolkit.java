@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
-    WaterTextureResources field_Mb;
+    WaterTextureResources waterTextures;
     private Hashtable field_Q;
     Object field_Ib;
     int field_Sb;
@@ -31,7 +31,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_Pb;
     int field_mc;
     int field_bc;
-    private int field_ac;
+    private int effectParameters1;
     int field_ub;
     private boolean field_O;
     private boolean field_bb;
@@ -40,13 +40,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_vb;
     AffineTransform3D[] field_V;
     int field_Kb;
-    boolean field_tb;
-    private ShaderEffect[] field_X;
+    boolean lightingSuppressed;
+    private ShaderEffect[] effects;
     float[] field_G;
     int field_F;
-    private int field_L;
+    private int activeEffect;
     private int field_Vb;
-    private int field_xb;
+    private int effectParameters0;
     int field_kc;
     private HardwareTextureCache field_lc;
     TextureCombineOperation[] field_K;
@@ -55,7 +55,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_mb;
     int field_Y;
     boolean field_Rb;
-    private ShaderEffect field_m;
+    private ShaderEffect activeShaderEffect;
     private jaclib.memory.Stream field_cb;
     private int field_Hb;
     TextureCombineOperation[] field_B;
@@ -336,8 +336,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_R = false;
         this.x(0);
-        if (null != this.field_m) {
-          this.field_m.c((byte) 37);
+        if (null != this.activeShaderEffect) {
+          this.activeShaderEffect.updateViewUniforms((byte) 37);
         }
     }
 
@@ -440,7 +440,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 for (var8 = 0; var8 < data.field_h; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = ic.a(data.field_a[var5] << 24, data.field_g[eb.bitwiseAnd(255, (int) data.field_e[var5])]);
+                  var4[incrementValue$2] = ic.a(data.field_a[var5] << 24, data.field_g[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) data.field_e[var5])]);
                   var5++;
                 }
               }
@@ -627,27 +627,27 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_yb = new jl(this);
         this.field_M = this.createIndexBuffer(3, true);
         this.P(-55);
-        this.field_Mb = new WaterTextureResources(this);
-        this.field_X[1] = this.createShaderEffect(0, 1);
-        this.field_X[2] = this.createShaderEffect(0, 2);
-        this.field_X[4] = this.createShaderEffect(0, 4);
-        this.field_X[5] = this.createShaderEffect(0, 5);
-        this.field_X[6] = this.createShaderEffect(0, 6);
-        this.field_X[7] = this.createShaderEffect(0, 7);
-        this.field_X[3] = this.createShaderEffect(0, 3);
-        this.field_X[8] = this.createShaderEffect(0, 8);
-        this.field_X[9] = this.createShaderEffect(0, 9);
-        if (!this.field_X[2].b((byte) -82)) {
-          this.field_X[2] = this.createShaderEffect(0, 0);
+        this.waterTextures = new WaterTextureResources(this);
+        this.effects[1] = this.createShaderEffect(0, 1);
+        this.effects[2] = this.createShaderEffect(0, 2);
+        this.effects[4] = this.createShaderEffect(0, 4);
+        this.effects[5] = this.createShaderEffect(0, 5);
+        this.effects[6] = this.createShaderEffect(0, 6);
+        this.effects[7] = this.createShaderEffect(0, 7);
+        this.effects[3] = this.createShaderEffect(0, 3);
+        this.effects[8] = this.createShaderEffect(0, 8);
+        this.effects[9] = this.createShaderEffect(0, 9);
+        if (!this.effects[2].isSupported((byte) -82)) {
+          this.effects[2] = this.createShaderEffect(0, 0);
         }
-        if (!this.field_X[4].b((byte) -67)) {
-          this.field_X[4] = this.field_X[2];
+        if (!this.effects[4].isSupported((byte) -67)) {
+          this.effects[4] = this.effects[2];
         }
-        if (!this.field_X[8].b((byte) -42)) {
-          this.field_X[8] = this.field_X[4];
+        if (!this.effects[8].isSupported((byte) -42)) {
+          this.effects[8] = this.effects[4];
         }
-        if (!this.field_X[9].b((byte) -43)) {
-          this.field_X[9] = this.field_X[8];
+        if (!this.effects[9].isSupported((byte) -43)) {
+          this.effects[9] = this.effects[8];
         }
         this.D(1);
         this.m(-16088);
@@ -723,8 +723,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 16) {
           this.field_Kb = 40;
         }
-        if (this.field_m != null) {
-          this.field_m.b(param0 ^ -90);
+        if (this.activeShaderEffect != null) {
+          this.activeShaderEffect.updateTransformUniforms(param0 ^ -90);
         }
         this.N(-26911);
     }
@@ -1190,11 +1190,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void g(int param0) {
         this.applyProjectionMatrix(-2);
-        if (null != this.field_m) {
-          this.field_m.b(false);
+        if (null != this.activeShaderEffect) {
+          this.activeShaderEffect.updateProjectionUniforms(false);
         }
         if (param0 != 1) {
-          this.field_ac = 74;
+          this.effectParameters1 = 74;
         }
     }
 
@@ -1488,11 +1488,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_sb = new AffineTransform3D();
         this.field_vc = new AffineTransform3D();
         this.field_mc = 0;
-        this.field_ac = 0;
+        this.effectParameters1 = 0;
         this.field_O = false;
-        this.field_tb = false;
+        this.lightingSuppressed = false;
         this.field_qb = 1.0f;
-        this.field_L = 0;
+        this.activeEffect = 0;
         this.field_G = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
         this.field_oc = 50;
         this.field_mb = 0;
@@ -1505,7 +1505,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Yb = 3584;
         this.field_Ob = -1;
         this.field_jb = 1.0f;
-        this.field_xb = 0;
+        this.effectParameters0 = 0;
         this.field_C = -1;
         this.field_F = 0;
         this.field_yc = 0;
@@ -1521,7 +1521,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Kb = -1;
         this.field_N = 1;
         this.field_u = true;
-        this.field_X = new ShaderEffect[10];
+        this.effects = new ShaderEffect[10];
         this.field_p = false;
         this.field_tc = 128;
         this.field_i = false;
@@ -1609,12 +1609,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
-        if ((!this.field_tb ? 1 : 0) == (param0 ? 1 : 0)) {
-          this.field_tb = param0 ? true : false;
-          this.applyLighting(!param1 ? true : false);
+    final void setLightingSuppressed(boolean suppressed, boolean guard) {
+        if ((!this.lightingSuppressed ? 1 : 0) == (suppressed ? 1 : 0)) {
+          this.lightingSuppressed = suppressed ? true : false;
+          this.applyLighting(!guard ? true : false);
         }
-        if (!param1) {
+        if (!guard) {
           this.field_kc = -110;
         }
     }
@@ -1663,8 +1663,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_vb = -58;
         }
         this.applyTextureMatrix(26803);
-        if (this.field_m != null) {
-          this.field_m.a((byte) -92);
+        if (this.activeShaderEffect != null) {
+          this.activeShaderEffect.updateTextureUniforms((byte) -92);
         }
     }
 
@@ -1680,8 +1680,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void n(byte param0) {
-        if (this.field_m != null) {
-          this.field_m.a(260);
+        if (this.activeShaderEffect != null) {
+          this.activeShaderEffect.updateFogUniforms(260);
         }
         if (param0 > -25) {
           return;
@@ -1854,7 +1854,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 24) {
           this.applyActiveTexture(83);
         }
-        return this.field_X[3].b((byte) -59);
+        return this.effects[3].isSupported((byte) -59);
     }
 
     abstract void applyDepthTest(int guard);
@@ -1866,7 +1866,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var8;
         var8 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != 2147483647) {
-          this.field_m = (ShaderEffect) null;
+          this.activeShaderEffect = (ShaderEffect) null;
         }
         param3 = param3 & this.o((byte) 24);
         if (!param3 && (param5 == 4 ||
@@ -1885,31 +1885,31 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           param1) {
           param5 = param5 | -2147483648;
         }
-        if (param5 == this.field_L) {
-          if (this.field_L != 0) {
-            this.field_X[this.field_L & 2147483647].a(param1, (byte) -127);
-            if (param4 != this.field_xb ||
-              this.field_ac != param2) {
-              this.field_X[2147483647 & this.field_L].a(34023, param2, param4);
-              this.field_xb = param4;
-              this.field_ac = param2;
+        if (param5 == this.activeEffect) {
+          if (this.activeEffect != 0) {
+            this.effects[this.activeEffect & 2147483647].refreshState(param1, (byte) -127);
+            if (param4 != this.effectParameters0 ||
+              this.effectParameters1 != param2) {
+              this.effects[2147483647 & this.activeEffect].setParameters(34023, param2, param4);
+              this.effectParameters0 = param4;
+              this.effectParameters1 = param2;
             }
           }
         } else {
-          if (this.field_L != 0) {
-            this.field_X[this.field_L & 2147483647].c(false);
+          if (this.activeEffect != 0) {
+            this.effects[this.activeEffect & 2147483647].disable(false);
           }
           if (param5 != 0) {
-            this.field_m = this.field_X[2147483647 & param5];
-            this.field_m.a(param1, 20186);
-            this.field_m.a(param1, (byte) -79);
-            this.field_m.a(param0 ^ 2147449624, param2, param4);
+            this.activeShaderEffect = this.effects[2147483647 & param5];
+            this.activeShaderEffect.enable(param1, 20186);
+            this.activeShaderEffect.refreshState(param1, (byte) -79);
+            this.activeShaderEffect.setParameters(param0 ^ 2147449624, param2, param4);
           } else {
-            this.field_m = null;
+            this.activeShaderEffect = null;
           }
-          this.field_L = param5;
-          this.field_ac = param2;
-          this.field_xb = param4;
+          this.activeEffect = param5;
+          this.effectParameters1 = param2;
+          this.effectParameters0 = param4;
         }
     }
 
@@ -2030,11 +2030,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             }
           }
           this.a(2147483647, param1, var8, param3, var7, var9);
-          if (null == this.field_m) {
+          if (null == this.activeShaderEffect) {
             this.a((GpuTexture) (var5), 117);
             this.h(45, var6);
           } else {
-            this.field_m.a(var6, 18834, (GpuTexture) (var5));
+            this.activeShaderEffect.bindTexture(var6, 18834, (GpuTexture) (var5));
           }
           this.field_bb = this.field_fb;
           this.field_Vb = param0;
@@ -2205,18 +2205,18 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         var3 = effectId;
         if (var3 == 6) {
-          return (ShaderEffect) ((Object) new oc(this));
+          return (ShaderEffect) ((Object) new HardwareUnlitEffect(this));
         }
         if (var3 == 1) {
-          return (ShaderEffect) ((Object) new ng(this));
+          return (ShaderEffect) ((Object) new HardwareSpecularEffect(this));
         }
         if (2 == var3) {
-          return (ShaderEffect) ((Object) new ib(this, this.field_Mb));
+          return (ShaderEffect) ((Object) new HardwareAnimatedWaterEffect(this, this.waterTextures));
         }
         if (7 != var3) {
-          return (ShaderEffect) ((Object) new ni(this));
+          return (ShaderEffect) ((Object) new FallbackShaderEffect(this));
         }
-        return (ShaderEffect) ((Object) new uo(this));
+        return (ShaderEffect) ((Object) new HardwareReflectionEffect(this));
     }
 
     abstract void applyActiveTexture(int guard);

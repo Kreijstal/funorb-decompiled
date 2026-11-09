@@ -18,14 +18,14 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         this.field_f.bindTexture(68, this.field_c);
         if (!this.field_d &&
           !param4) {
-          this.field_f.a(20685, 7681, 7681);
+          this.field_f.setTextureCombineOperations(20685, 7681, 7681);
         } else {
-          this.field_f.a(20685, 8448, 7681);
+          this.field_f.setTextureCombineOperations(20685, 8448, 7681);
           this.field_f.b(34168, 768, 0, -120);
         }
-        this.field_f.g(1, 86);
+        this.field_f.setActiveTextureUnit(1, 86);
         this.field_f.bindTexture(122, var10);
-        this.field_f.a(20685, 8448, 7681);
+        this.field_f.setTextureCombineOperations(20685, 8448, 7681);
         this.field_f.b(34168, 768, 0, -116);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
@@ -42,9 +42,9 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
         this.field_f.b(5890, 768, 0, -116);
-        this.field_f.a(20685, 8448, 8448);
+        this.field_f.setTextureCombineOperations(20685, 8448, 8448);
         this.field_f.bindTexture(103, (LegacyOpenGlTexture) null);
-        this.field_f.g(0, 115);
+        this.field_f.setActiveTextureUnit(0, 115);
         if (this.field_d ||
           param4) {
           this.field_f.b(5890, 768, 0, -124);
@@ -251,9 +251,9 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         this.field_f.bindTexture(45, this.field_c);
         if (!this.field_d &&
           !param4) {
-          this.field_f.a(20685, 7681, 7681);
+          this.field_f.setTextureCombineOperations(20685, 7681, 7681);
         } else {
-          this.field_f.a(20685, 8448, 7681);
+          this.field_f.setTextureCombineOperations(20685, 8448, 7681);
           this.field_f.b(34168, 768, 0, -121);
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));

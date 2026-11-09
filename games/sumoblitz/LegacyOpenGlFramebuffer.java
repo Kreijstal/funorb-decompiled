@@ -12,7 +12,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
     private LegacyOpenGlFramebufferAttachment[] attachments;
 
     final static int g(int param0) {
-        wt.field_i.serviceProviders((byte) 66);
+        LegacyOpenGlSpecularEffect.field_i.serviceProviders((byte) 66);
         if (param0 != -5) {
           return 63;
         }

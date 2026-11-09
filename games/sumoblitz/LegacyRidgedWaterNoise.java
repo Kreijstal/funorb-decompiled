@@ -40,7 +40,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
           if (!oj.a(false)) {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
-              ib.d(1);
+              HardwareAnimatedWaterEffect.d(1);
               pu.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(pu.field_e, CachedArchiveProvider.field_e));
             }
             return;

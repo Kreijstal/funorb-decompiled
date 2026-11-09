@@ -134,7 +134,7 @@ final class qw {
               var3 = 5;
             }
             var6 = uj.createEnemyDrone(var3, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, param1.variant, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-            oc.a(var6, false);
+            HardwareUnlitEffect.a(var6, false);
             return;
           }
           var3Lifetime1 = param1.variant;
@@ -162,7 +162,7 @@ final class qw {
             var3Lifetime1 = 6;
           }
           var7 = uj.createEnemyDrone(param1.droneType, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-          oc.a(var7, false);
+          HardwareUnlitEffect.a(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

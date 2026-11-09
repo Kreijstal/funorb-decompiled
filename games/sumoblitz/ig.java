@@ -45,7 +45,7 @@ final class ig {
               var9 = var6.droneType;
               var10 = var6.variant;
               var3 = 1;
-              oc.a(uj.createEnemyDrone(var9, var7, var10, (byte) 84, var8), false);
+              HardwareUnlitEffect.a(uj.createEnemyDrone(var9, var7, var10, (byte) 84, var8), false);
             }
           }
           SocketConnector.field_c = SocketConnector.field_c + 1;

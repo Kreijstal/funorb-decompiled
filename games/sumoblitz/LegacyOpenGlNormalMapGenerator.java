@@ -33,7 +33,7 @@ final class LegacyOpenGlNormalMapGenerator {
           return;
         }
         if (null != CompactMeshGeometry.field_o) {
-          ib.d(1);
+          HardwareAnimatedWaterEffect.d(1);
         }
     }
 

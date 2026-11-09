@@ -360,7 +360,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 114, 18);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
               var10 = InwardSparkParticle.field_v.position;
-              var11_ref_String = dv.a(-94, ra.c(2));
+              var11_ref_String = dv.a(-94, LegacyOpenGlUnlitEffect.c(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -404,7 +404,7 @@ final class CachedTextLayout extends TextLayout {
               mn.field_g = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                bw.a(false, ra.c(2));
+                bw.a(false, LegacyOpenGlUnlitEffect.c(2));
                 MouseWheelInput.field_c = DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText;
                 kk.a((byte) -116);
                 LimitedRandomAccessFile.field_g = false;
@@ -446,7 +446,7 @@ final class CachedTextLayout extends TextLayout {
             } else {
               var9_ref_String = ig.field_a.readNullableString((byte) 80);
               if (var9_ref_String != null) {
-                jb.a((byte) 97, var9_ref_String, ra.c(2));
+                jb.a((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
               }
             }
             kk.a((byte) -127);

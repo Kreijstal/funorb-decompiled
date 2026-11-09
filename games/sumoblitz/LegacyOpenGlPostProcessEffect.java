@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ve extends IntrusiveNode {
-    private boolean field_n;
+abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
+    private boolean enabled;
     static String waitingForMusicText;
-    LegacyOpenGlGraphicsToolkit field_m;
+    LegacyOpenGlGraphicsToolkit toolkit;
     static SpriteData field_k;
 
-    final boolean a(int param0) {
-        if (param0 < 106) {
-          this.field_m = (LegacyOpenGlGraphicsToolkit) null;
-          return this.field_n;
+    final boolean isEnabled(int guard) {
+        if (guard < 106) {
+          this.toolkit = (LegacyOpenGlGraphicsToolkit) null;
+          return this.enabled;
         }
-        return this.field_n;
+        return this.enabled;
     }
 
     final static OpenGlAssemblyProgram compileAssemblyProgram(byte guard, OpenGlGraphicsToolkit toolkit, byte[] source, int target) {
@@ -72,21 +72,21 @@ abstract class ve extends IntrusiveNode {
         waitingForMusicText = null;
     }
 
-    abstract void c(int param0);
+    abstract void close(int guard);
 
     final static ResourceArchive a(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param0 == 11880) {
-          return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
+          return HardwareSpecularEffect.a(param3, param0 ^ -11778, param1, param2, param4, false);
         }
-        ve.a(87, true, -113, -52, false);
-        return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
+        LegacyOpenGlPostProcessEffect.a(87, true, -113, -52, false);
+        return HardwareSpecularEffect.a(param3, param0 ^ -11778, param1, param2, param4, false);
     }
 
-    ve(LegacyOpenGlGraphicsToolkit param0) {
+    LegacyOpenGlPostProcessEffect(LegacyOpenGlGraphicsToolkit owner) {
         try {
-          this.field_m = param0;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ve.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 

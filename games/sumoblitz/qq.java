@@ -99,11 +99,11 @@ final class qq extends TextInputWidget implements op {
           return null;
         }
         if (guard == -6696) {
-          gi.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
           return this.tooltip;
         }
         this.field_S = (v) null;
-        gi.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
         return this.tooltip;
     }
 

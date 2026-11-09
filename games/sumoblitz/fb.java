@@ -21,9 +21,9 @@ final class fb {
             fb.a(true, true, -109, -21, (se) null);
           }
           bk.field_e[1] = fd.field_d.nextInt();
-          bk.field_e[2] = (int)(oc.field_g >> 32);
+          bk.field_e[2] = (int)(HardwareUnlitEffect.field_g >> 32);
           SoftLruCache.field_e.position = 0;
-          bk.field_e[3] = (int)oc.field_g;
+          bk.field_e[3] = (int)HardwareUnlitEffect.field_g;
           SoftLruCache.field_e.writeInt(48, bk.field_e[0]);
           SoftLruCache.field_e.writeInt(48, bk.field_e[1]);
           SoftLruCache.field_e.writeInt(48, bk.field_e[2]);
@@ -55,7 +55,7 @@ final class fb {
             var6 = var6 | 16;
           }
           InwardSparkParticle.field_v.writeByte((byte) 108, var6);
-          var7 = dv.a(-22, ra.c(2));
+          var7 = dv.a(-22, LegacyOpenGlUnlitEffect.c(2));
           if (var7 == null) {
             var7 = "";
           }

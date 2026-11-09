@@ -249,7 +249,7 @@ final class tn extends jb {
         }
         GameApplet.field_l = param1;
         NoiseSliceGenerator.field_c = 2147483647;
-        oc.field_f = -2147483648;
+        HardwareUnlitEffect.field_f = -2147483648;
         GameplaySession.field_k = 2147483647;
         se.field_d = 0;
     }

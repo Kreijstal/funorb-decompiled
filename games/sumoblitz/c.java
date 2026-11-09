@@ -19,7 +19,7 @@ final class c extends nl {
           if (!guard) {
             field_s = -86;
           }
-          stackIn_3_0 = oc.a(widget.text.length(), '*', -1);
+          stackIn_3_0 = HardwareUnlitEffect.a(widget.text.length(), '*', -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,17 +71,17 @@ final class c extends nl {
               return;
             }
             bj.field_a = OpenGlBuffer.field_a;
-            kj.field_e = kj.field_e + 1;
-            if (0 > lv.field_i) {
+            LegacyOpenGlFlowingWaterEffect.field_e = LegacyOpenGlFlowingWaterEffect.field_e + 1;
+            if (0 > LegacyOpenGlEnvironmentWaterEffect.field_i) {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
                 hw.field_b[var5] = false;
                 var5++;
               }
-              lv.field_i = HardwareTurbulentWaterNoise.field_v;
+              LegacyOpenGlEnvironmentWaterEffect.field_i = HardwareTurbulentWaterNoise.field_v;
             } else {
-              while (HardwareTurbulentWaterNoise.field_v != lv.field_i) {
+              while (HardwareTurbulentWaterNoise.field_v != LegacyOpenGlEnvironmentWaterEffect.field_i) {
                 var2 = jf.field_d[HardwareTurbulentWaterNoise.field_v];
                 HardwareTurbulentWaterNoise.field_v = 127 & HardwareTurbulentWaterNoise.field_v + 1;
                 if (0 <= var2) {

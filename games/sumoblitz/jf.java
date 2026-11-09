@@ -24,7 +24,7 @@ final class jf {
           if (param0 != -13181) {
             jf.a(74, (byte) -66, -15);
           }
-          stackIn_3_0 = ra.a(10, param1, -46, true);
+          stackIn_3_0 = LegacyOpenGlUnlitEffect.a(10, param1, -46, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

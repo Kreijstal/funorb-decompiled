@@ -197,7 +197,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.y = this.y + (var7.a(this.field_K, -40 + this.width, var7.field_s) + 5);
           }
           var8 = OpenGlEnvironmentWaterEffect.loginText;
-          var9 = lv.a(ra.c(2), 1);
+          var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.c(2), 1);
           if (OpenGlTexture3D.field_m != var9) {
             if (LevelSelectScreen.field_j == var9) {
               var8 = ph.usernameText;

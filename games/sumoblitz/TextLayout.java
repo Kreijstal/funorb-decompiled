@@ -136,7 +136,7 @@ abstract class TextLayout {
     }
 
     final static void a(int param0, int param1) {
-        wt.a(param1, (byte) 105);
+        LegacyOpenGlSpecularEffect.a(param1, (byte) 105);
         if (param0 != 0) {
           TextLayout.releaseStatics(-74);
         }

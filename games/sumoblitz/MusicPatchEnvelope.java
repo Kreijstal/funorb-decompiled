@@ -70,7 +70,7 @@ final class MusicPatchEnvelope {
             var21 = var10.generate(16, (byte) -8, 128, 128);
             GameplaySession.legacyTurbulentWaterData = DroneDebris.storeByteArray((byte) -117, var21, false);
           }
-          var12 = toolkit.field_Sb;
+          var12 = toolkit.normalMapGenerator;
           if (var12.ensureProgram((byte) -101)) {
             if (null != PlayingSound.legacyHeightNoise) {
               return;

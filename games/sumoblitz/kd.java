@@ -21,7 +21,7 @@ final class kd {
           return LegacyOpenGlShaderProgram.field_d;
         }
         if (-1 != param1) {
-          return ng.a(1, -101, true, param1, false, true);
+          return HardwareSpecularEffect.a(1, -101, true, param1, false, true);
         }
         return LegacyOpenGlShaderProgram.field_d;
     }

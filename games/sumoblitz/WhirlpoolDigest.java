@@ -53,7 +53,7 @@ final class WhirlpoolDigest {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.buffer[this.bufferPosition] = (byte)ic.a((int) this.buffer[this.bufferPosition], 128 >>> eb.bitwiseAnd(7, this.bufferBits));
+          this.buffer[this.bufferPosition] = (byte)ic.a((int) this.buffer[this.bufferPosition], 128 >>> LegacyOpenGlPostProcessManager.bitwiseAnd(7, this.bufferBits));
           this.bufferPosition = this.bufferPosition + 1;
           if (this.bufferPosition > 32) {
             while (this.bufferPosition < 64) {
@@ -142,7 +142,7 @@ final class WhirlpoolDigest {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.scratch[var3Lifetime1] = bi.a(this.scratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][eb.bitwiseAnd(255, (int)(this.roundKey[eb.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.scratch[var3Lifetime1] = bi.a(this.scratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int)(this.roundKey[LegacyOpenGlPostProcessManager.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -157,7 +157,7 @@ final class WhirlpoolDigest {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.scratch[var3Lifetime1Lifetime2] = bi.a(this.scratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][eb.bitwiseAnd((int)(this.state[eb.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.scratch[var3Lifetime1Lifetime2] = bi.a(this.scratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LegacyOpenGlPostProcessManager.bitwiseAnd((int)(this.state[LegacyOpenGlPostProcessManager.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -223,7 +223,7 @@ final class WhirlpoolDigest {
                 this.bufferBits = 0;
                 this.bufferPosition = 0;
               }
-              this.buffer[this.bufferPosition] = (byte)eb.bitwiseAnd(var8 << -var7 + 8, 255);
+              this.buffer[this.bufferPosition] = (byte)LegacyOpenGlPostProcessManager.bitwiseAnd(var8 << -var7 + 8, 255);
               bitCount = bitCount - 8L;
               this.bufferBits = this.bufferBits + var7;
               var5_int++;
@@ -248,7 +248,7 @@ final class WhirlpoolDigest {
               this.bufferBits = 0;
               this.bufferPosition = 0;
             }
-            this.buffer[this.bufferPosition] = (byte)eb.bitwiseAnd(255, var8Lifetime1 << 8 - var7);
+            this.buffer[this.bufferPosition] = (byte)LegacyOpenGlPostProcessManager.bitwiseAnd(255, var8Lifetime1 << 8 - var7);
             this.bufferBits = this.bufferBits + (int)bitCount;
           }
           return;

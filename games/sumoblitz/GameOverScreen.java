@@ -30,13 +30,13 @@ final class GameOverScreen extends MenuScreen {
             if (0 != CacheReferenceNode.field_u) {
               return;
             }
-            pd.field_p = un.field_a[0];
+            pd.scoreMultiplier = un.field_a[0];
             nv.field_a = 0;
             return;
           }
           CacheReferenceNode.field_u = CacheReferenceNode.field_u - 1;
           if (0 == CacheReferenceNode.field_u) {
-            pd.field_p = un.field_a[0];
+            pd.scoreMultiplier = un.field_a[0];
             nv.field_a = 0;
             return;
           }
@@ -47,14 +47,14 @@ final class GameOverScreen extends MenuScreen {
           if (0 != CacheReferenceNode.field_u) {
             return;
           }
-          pd.field_p = un.field_a[0];
+          pd.scoreMultiplier = un.field_a[0];
           nv.field_a = 0;
           return;
         }
         if (0 != CacheReferenceNode.field_u) {
           return;
         }
-        pd.field_p = un.field_a[0];
+        pd.scoreMultiplier = un.field_a[0];
         nv.field_a = 0;
     }
 

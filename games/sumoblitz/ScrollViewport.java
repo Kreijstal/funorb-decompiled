@@ -144,7 +144,7 @@ final class ScrollViewport extends SingleChildWidget {
           LegacyWaterTextureResources.showConnectionLost(0);
           jv.field_a = 11;
         } else {
-          if (!au.c(1)) {
+          if (!LegacyOpenGlReflectionEffect.c(1)) {
             LegacyWaterTextureResources.showConnectionLost(0);
             jv.field_a = 11;
           }

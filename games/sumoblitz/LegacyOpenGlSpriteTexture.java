@@ -79,9 +79,9 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
     final static boolean d(byte param0) {
         if (param0 != 63) {
           LegacyOpenGlSpriteTexture.e(false);
-          return wt.field_i.loadMasterIndex((byte) 126);
+          return LegacyOpenGlSpecularEffect.field_i.loadMasterIndex((byte) 126);
         }
-        return wt.field_i.loadMasterIndex((byte) 126);
+        return LegacyOpenGlSpecularEffect.field_i.loadMasterIndex((byte) 126);
     }
 
     LegacyOpenGlSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {

@@ -28,7 +28,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
     private static int field_C;
 
     final int a(char param0) {
-        return this.field_L[uo.a(true, param0) & 255];
+        return this.field_L[HardwareReflectionEffect.a(true, param0) & 255];
     }
 
     private final void a(int param0, int param1) {
@@ -124,7 +124,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(uo.a(true, (char) var7) & 255);
+              var7 = (char)(HardwareReflectionEffect.a(true, (char) var7) & 255);
               var4 = var4 + this.field_L[var7];
               if (this.field_D != null &&
                 var3 != 0) {
@@ -432,7 +432,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(uo.a(true, (char) var8) & 255);
+              var8 = (char)(HardwareReflectionEffect.a(true, (char) var8) & 255);
               if (this.field_D != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_D[(var5 << 8) + var8];
@@ -792,7 +792,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_w.append((char) var14);
-                var14 = (char)(uo.a(true, (char) var14) & 255);
+                var14 = (char)(HardwareReflectionEffect.a(true, (char) var14) & 255);
                 var4 = var4 + this.field_L[var14];
                 if (this.field_D != null &&
                   var10 != 0) {

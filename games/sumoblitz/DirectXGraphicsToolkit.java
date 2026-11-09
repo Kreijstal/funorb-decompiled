@@ -567,7 +567,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         stackIn_5_0 = this.field_Cc;
         stackIn_5_1 = 137;
-        stackIn_6_2 = (this.field_I) && (!this.field_tb);
+        stackIn_6_2 = (this.field_I) && (!this.lightingSuppressed);
         ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
     }
 
@@ -752,10 +752,10 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           return (ShaderEffect) ((Object) new DirectXUnderwaterEffect(this, this.field_ab));
         }
         if (4 == var3) {
-          return (ShaderEffect) ((Object) new DirectXTransparentWaterEffect(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXTransparentWaterEffect(this, this.field_ab, this.waterTextures));
         }
         if (var3 == 8) {
-          return (ShaderEffect) ((Object) new DirectXEnvironmentWaterEffect(this, this.field_ab, this.field_Mb));
+          return (ShaderEffect) ((Object) new DirectXEnvironmentWaterEffect(this, this.field_ab, this.waterTextures));
         }
         return super.createShaderEffect(0, effectId);
     }

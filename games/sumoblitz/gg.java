@@ -113,7 +113,7 @@ final class gg extends DualLinkNode {
           TextureFormat.elapsedTicks = 0;
           MusicPatch.simulationPaused = false;
           ke.a(false);
-          oc.field_e = 1000;
+          HardwareUnlitEffect.field_e = 1000;
           TextLayout.a(0, OpenGlShaderProgram.levelIndex % 5 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

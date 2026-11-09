@@ -40,7 +40,7 @@ final class ExpandingRingEffect extends TimedSceneEffect {
           do {
             var4 = random.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = eb.a(bound, guard ^ -44, var4);
+          stackIn_12_0 = LegacyOpenGlPostProcessManager.a(bound, guard ^ -44, var4);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class pd extends IntrusiveNode {
     int field_o;
     int field_k;
     static int field_l;
-    static int field_p;
+    static int scoreMultiplier;
     static Object hardwareRidgedWaterData;
     static String nameText;
     static int[] field_q;

@@ -20,7 +20,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     static int field_i;
     static int[] field_p;
 
-    final void a(int param0) {
+    final void updateFogUniforms(int guard) {
         int var2 = 0;
         int var3 = 0;
         float var4 = 0.0f;
@@ -29,29 +29,29 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         int var3Lifetime1;
         float var4Lifetime1;
         float var5Lifetime1;
-        if (param0 == 260) {
+        if (guard == 260) {
           if (this.field_l) {
-            var2 = this.field_b.farPlane();
-            var3 = this.field_b.nearPlane();
+            var2 = this.toolkit.farPlane();
+            var3 = this.toolkit.nearPlane();
             var4 = (float)var2 - (float)(-var3 + var2) * 0.125f;
             var5 = -(0.25f * (float)(var2 - var3)) + (float)var2;
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.S(98), (float)this.field_b.e((byte) 99) / 255.0f);
-            this.field_b.g(1, -116);
-            this.field_b.a(false, this.field_b.v(15));
-            this.field_b.g(0, -117);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
+            this.toolkit.g(1, -116);
+            this.toolkit.a(false, this.toolkit.v(15));
+            this.toolkit.g(0, -117);
           }
           return;
         }
-        this.a(-12, 3, -112);
+        this.setParameters(-12, 3, -112);
         if (this.field_l) {
-          var2Lifetime1 = this.field_b.farPlane();
-          var3Lifetime1 = this.field_b.nearPlane();
+          var2Lifetime1 = this.toolkit.farPlane();
+          var3Lifetime1 = this.toolkit.nearPlane();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.125f;
           var5Lifetime1 = -(0.25f * (float)(var2Lifetime1 - var3Lifetime1)) + (float)var2Lifetime1;
-          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.field_b.S(98), (float)this.field_b.e((byte) 99) / 255.0f);
-          this.field_b.g(1, -116);
-          this.field_b.a(false, this.field_b.v(15));
-          this.field_b.g(0, -117);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
+          this.toolkit.g(1, -116);
+          this.toolkit.a(false, this.toolkit.v(15));
+          this.toolkit.g(0, -117);
         }
     }
 
@@ -72,8 +72,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     }
 
     private final void e(byte param0) {
-        int var2 = this.field_b.M(-125);
-        AffineTransform3D var3 = this.field_b.g((byte) -28);
+        int var2 = this.toolkit.M(-125);
+        AffineTransform3D var3 = this.toolkit.g((byte) -28);
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.programId : this.field_j.programId);
         } else {
@@ -83,11 +83,11 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.field_l = true;
         var3.transformPlane(0.0f, this.field_s, (byte) 71, 0.0f, -1.0f, (float)var2);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_s[0], this.field_s[1], this.field_s[2], this.field_s[3]);
-        this.a(param0 + 246);
+        this.updateFogUniforms(param0 + 246);
         if (param0 == 14) {
           return;
         }
-        this.a(true, 123);
+        this.enable(true, 123);
     }
 
     OpenGlUnderwaterEffect(OpenGlGraphicsToolkit param0, ResourceArchive param1) {
@@ -109,10 +109,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         try {
           if (param1 != null &&
             param0.field_Ac) {
-            this.field_m = ve.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_unlit", "gl", -1), 34336);
-            this.field_j = ve.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_lit", "gl", -1), 34336);
-            this.field_f = ve.compileAssemblyProgram((byte) 73, param0, param1.fetchNamedFile("uw_model_unlit", "gl", -1), 34336);
-            this.field_g = ve.compileAssemblyProgram((byte) -120, param0, param1.fetchNamedFile("uw_model_lit", "gl", -1), 34336);
+            this.field_m = LegacyOpenGlPostProcessEffect.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_unlit", "gl", -1), 34336);
+            this.field_j = LegacyOpenGlPostProcessEffect.compileAssemblyProgram((byte) 83, param0, param1.fetchNamedFile("uw_ground_lit", "gl", -1), 34336);
+            this.field_f = LegacyOpenGlPostProcessEffect.compileAssemblyProgram((byte) 73, param0, param1.fetchNamedFile("uw_model_unlit", "gl", -1), 34336);
+            this.field_g = LegacyOpenGlPostProcessEffect.compileAssemblyProgram((byte) -120, param0, param1.fetchNamedFile("uw_model_lit", "gl", -1), 34336);
             stackIn_7_0 = (this.field_f == null) ? 0 : 1;
             if (this.field_j == null) {
               stackIn_10_1 = 0;
@@ -134,7 +134,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
               this.field_u = false;
               return;
             }
-            this.field_o = this.field_b.a(new int[]{0, -1}, 1, false, -119, 2);
+            this.field_o = this.toolkit.a(new int[]{0, -1}, 1, false, -119, 2);
             this.field_o.setWrap(false, false, true);
             this.field_u = true;
             return;
@@ -161,23 +161,23 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        if (param1 >= -71) {
+    final void refreshState(boolean lighting, byte guard) {
+        if (guard >= -71) {
           OpenGlUnderwaterEffect.releaseStatics(26);
         }
     }
 
-    final void c(boolean param0) {
-        this.field_b.g(1, -119);
-        this.field_b.a((GpuTexture) null, 113);
-        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-        this.field_b.a(jq.TEXTURE, 0, 0);
-        this.field_b.a(mm.CONSTANT, 2, 0);
-        this.field_b.a(jq.TEXTURE, 0, true);
-        this.field_b.g(0, -108);
+    final void disable(boolean guard) {
+        this.toolkit.g(1, -119);
+        this.toolkit.a((GpuTexture) null, 113);
+        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(mm.CONSTANT, 2, 0);
+        this.toolkit.a(jq.TEXTURE, 0, true);
+        this.toolkit.g(0, -108);
         if (this.field_h) {
-          this.field_b.a(jq.TEXTURE, 0, 0);
-          this.field_b.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(jq.TEXTURE, 0, 0);
+          this.toolkit.a(jq.TEXTURE, 0, true);
           this.field_h = false;
         }
         if (this.field_l) {
@@ -186,14 +186,14 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           jaggl.OpenGL.glDisable(34336);
           this.field_l = false;
         }
-        if (!param0) {
+        if (!guard) {
           return;
         }
         this.field_h = false;
     }
 
-    final boolean b(byte param0) {
-        if (param0 >= -8) {
+    final boolean isSupported(byte guard) {
+        if (guard >= -8) {
           OpenGlUnderwaterEffect.releaseStatics(21);
           return this.field_u;
         }
@@ -210,41 +210,41 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         RuntimeException var4 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 18834) {
+          if (guard != 18834) {
             field_i = -7;
           }
-          if (param2 != null) {
+          if (texture != null) {
             if (this.field_h) {
-              this.field_b.a(jq.TEXTURE, 0, 0);
-              this.field_b.a(jq.TEXTURE, 0, true);
+              this.toolkit.a(jq.TEXTURE, 0, 0);
+              this.toolkit.a(jq.TEXTURE, 0, true);
               this.field_h = false;
             }
-            this.field_b.a(param2, 121);
-            this.field_b.h(37, param0);
+            this.toolkit.a(texture, 121);
+            this.toolkit.h(37, combineMode);
             return;
           }
           if (this.field_h) {
             return;
           }
-          this.field_b.a(this.field_b.field_D, 97);
-          this.field_b.h(113, 1);
-          this.field_b.a(FontMetrics.PREVIOUS, 0, 0);
-          this.field_b.a(FontMetrics.PREVIOUS, 0, true);
+          this.toolkit.a(this.toolkit.field_D, 97);
+          this.toolkit.h(113, 1);
+          this.toolkit.a(FontMetrics.PREVIOUS, 0, 0);
+          this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
           this.field_h = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("pn.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_12_1 = new StringBuilder().append("pn.E(").append(combineMode).append(',').append(guard).append(',');
+          if (texture == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -253,22 +253,22 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (param0 != 34023) {
-          this.a(-3, -116, 82);
+    final void setParameters(int guard, int parameters1, int parameters0) {
+        if (guard != 34023) {
+          this.setParameters(-3, -116, 82);
         }
     }
 
-    final void a(boolean param0, int param1) {
-        if (param1 == 20186) {
-          this.field_e = param0 ? true : false;
-          this.field_b.g(1, -112);
-          this.field_b.a(this.field_o, param1 - 20070);
-          this.field_b.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
-          this.field_b.a(mm.CONSTANT, 0, 0);
-          this.field_b.setColorCombineSource((byte) 85, 2, true, false, jq.TEXTURE);
-          this.field_b.a(FontMetrics.PREVIOUS, 0, true);
-          this.field_b.g(0, -108);
+    final void enable(boolean lighting, int guard) {
+        if (guard == 20186) {
+          this.field_e = lighting ? true : false;
+          this.toolkit.g(1, -112);
+          this.toolkit.a(this.field_o, guard - 20070);
+          this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.a(mm.CONSTANT, 0, 0);
+          this.toolkit.setColorCombineSource((byte) 85, 2, true, false, jq.TEXTURE);
+          this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
+          this.toolkit.g(0, -108);
           this.e((byte) 14);
           return;
         }

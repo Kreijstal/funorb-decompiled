@@ -46,7 +46,7 @@ final class TextureMetadata {
             var5 = var9;
             var6 = param1;
             var7 = param2;
-            var9[var6] = eb.bitwiseAnd(8355711, var9[var6] >> 1) + var7;
+            var9[var6] = LegacyOpenGlPostProcessManager.bitwiseAnd(8355711, var9[var6] >> 1) + var7;
             param1++;
             param3--;
           }

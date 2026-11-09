@@ -27,7 +27,7 @@ final class LegacyWaterTextureResources {
         if (guard != 0) {
           LegacyWaterTextureResources.showConnectionLost(20);
         }
-        oc.a(qe.connectionLostAttemptingToText, false, (byte) 49);
+        HardwareUnlitEffect.a(qe.connectionLostAttemptingToText, false, (byte) 49);
     }
 
     LegacyWaterTextureResources(LegacyOpenGlGraphicsToolkit toolkit) {
@@ -70,7 +70,7 @@ final class LegacyWaterTextureResources {
           this.ridgedVolume = new LegacyOpenGlTexture3D(toolkit, 6410, 128, 128, 16, var20, 6410);
           var21 = NoiseSliceGenerator.extractByteArray(false, GameplaySession.legacyTurbulentWaterData, 0);
           this.turbulenceVolume = new LegacyOpenGlTexture3D(toolkit, 6410, 128, 128, 16, var21, 6410);
-          var10 = toolkit.field_Sb;
+          var10 = toolkit.normalMapGenerator;
           if (var10.ensureProgram((byte) -101)) {
             var22 = NoiseSliceGenerator.extractByteArray(false, PlayingSound.legacyHeightNoise, 0);
             this.normalMap = new LegacyOpenGlTexture3D(toolkit, 6408, 128, 128, 16);

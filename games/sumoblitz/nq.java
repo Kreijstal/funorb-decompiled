@@ -112,7 +112,7 @@ final class nq extends na {
             if (var3 != null) {
               if (var3.c(param0 - 98) == qe.field_a &&
                 !param1.equals(this.field_e.text)) {
-                stackIn_8_0 = gq.thisEntryDoesnTText;
+                stackIn_8_0 = LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText;
                 return stackIn_8_0;
               }
               stackIn_10_0 = var3.a(param0 + 3690);
@@ -120,7 +120,7 @@ final class nq extends na {
             }
           }
           if (!param1.equals(this.field_e.text)) {
-            stackIn_13_0 = gq.thisEntryDoesnTText;
+            stackIn_13_0 = LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText;
             return stackIn_13_0;
           }
           if (param0 == 0) {

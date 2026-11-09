@@ -13,7 +13,7 @@ final class ss {
 
     final static void a(PcmStreamMixer param0, byte param1, ResourceArchive param2, int param3) {
         try {
-          gi.field_i = vm.a(-32) * param3 / 1000;
+          LegacyOpenGlRidgedWaterEffect.field_i = vm.a(-32) * param3 / 1000;
           MenuScreen.initializeLogoAudio(param2, 100);
           wq.a(false, param2);
           lq.a(param2, -84);
@@ -22,7 +22,7 @@ final class ss {
           if (param1 < 125) {
             restartLevelText = (String) null;
           }
-          MusicPatch.field_u = 0 - gi.field_i;
+          MusicPatch.field_u = 0 - LegacyOpenGlRidgedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

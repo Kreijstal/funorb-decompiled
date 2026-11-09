@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends LegacyOpenGlEffect {
+final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     static volatile int field_e;
-    private LegacyOpenGlDisplayLists field_f;
-    private LegacyWaterTextureResources field_g;
+    private LegacyOpenGlDisplayLists stateLists;
+    private LegacyWaterTextureResources waterTextures;
 
-    kj(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
-        super(param0);
+    LegacyOpenGlFlowingWaterEffect(LegacyOpenGlGraphicsToolkit owner, LegacyWaterTextureResources textures) {
+        super(owner);
         try {
-          this.field_g = param1;
-          this.field_f = new LegacyOpenGlDisplayLists(param0, 2);
-          this.field_f.beginList(0, 4864);
-          this.field_b.g(1, 98);
-          if (this.field_g.useVolumeTextures) {
+          this.waterTextures = textures;
+          this.stateLists = new LegacyOpenGlDisplayLists(owner, 2);
+          this.stateLists.beginList(0, 4864);
+          this.toolkit.setActiveTextureUnit(1, 98);
+          if (this.waterTextures.useVolumeTextures) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
           }
@@ -21,47 +21,47 @@ final class kj extends LegacyOpenGlEffect {
           jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
-          this.field_b.g(0, 106);
-          this.field_f.endList(true);
-          this.field_f.beginList(1, 4864);
-          this.field_b.g(1, 127);
-          if (this.field_g.useVolumeTextures) {
+          this.toolkit.setActiveTextureUnit(0, 106);
+          this.stateLists.endList(true);
+          this.stateLists.beginList(1, 4864);
+          this.toolkit.setActiveTextureUnit(1, 127);
+          if (this.waterTextures.useVolumeTextures) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
-          this.field_b.g(0, 80);
-          this.field_f.endList(true);
+          this.toolkit.setActiveTextureUnit(0, 80);
+          this.stateLists.endList(true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (owner != null ? "{...}" : "null") + ',' + (textures != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
-        if (param0 > -30) {
+    final void refreshState(int guard, boolean lighting) {
+        if (guard > -30) {
           field_e = 34;
         }
     }
 
-    final void b(int param0) {
-        this.field_f.callList((byte) 121, '\001');
-        if (param0 <= -125) {
-          this.field_b.g(1, 100);
-          this.field_b.bindTexture(88, (LegacyOpenGlTexture) null);
-          this.field_b.g(0, 110);
+    final void disable(int guard) {
+        this.stateLists.callList((byte) 121, '\001');
+        if (guard <= -125) {
+          this.toolkit.setActiveTextureUnit(1, 100);
+          this.toolkit.bindTexture(88, (LegacyOpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(0, 110);
           return;
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setParameters(byte guard, int parameters0, int parameters1) {
         int var8 = 0;
         int var9 = Sumoblitz.field_L ? 1 : 0;
-        float var4 = (float)(1 + (3 & param1)) * -0.0005000000237487257f;
-        float var5 = 0.0005000000237487257f * (float)(1 + ((26 & param1) >> 3));
-        float var6 = (64 & param1) == 0 ? 0.00048828125f : 0.0009765625f;
-        int var7 = (param1 & 128) != 0 ? 1 : 0;
+        float var4 = (float)(1 + (3 & parameters0)) * -0.0005000000237487257f;
+        float var5 = 0.0005000000237487257f * (float)(1 + ((26 & parameters0) >> 3));
+        float var6 = (64 & parameters0) == 0 ? 0.00048828125f : 0.0009765625f;
+        int var7 = (parameters0 & 128) != 0 ? 1 : 0;
         int var8Lifetime1;
-        this.field_b.g(1, 109);
+        this.toolkit.setActiveTextureUnit(1, 109);
         if (var7 != 0) {
           GameApplet.field_e[1] = 0.0f;
           GameApplet.field_e[0] = var6;
@@ -69,22 +69,22 @@ final class kj extends LegacyOpenGlEffect {
           GameApplet.field_e[3] = 0.0f;
           jaggl.OpenGL.glTexGenfv(8192, 9474, GameApplet.field_e, 0);
           GameApplet.field_e[2] = 0.0f;
-          GameApplet.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
+          GameApplet.field_e[3] = var4 * (float)this.toolkit.animationTime % 1.0f;
           GameApplet.field_e[1] = var6;
           GameApplet.field_e[0] = 0.0f;
           jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
-          if (this.field_g.useVolumeTextures) {
+          if (this.waterTextures.useVolumeTextures) {
             GameApplet.field_e[2] = 0.0f;
             GameApplet.field_e[0] = 0.0f;
             GameApplet.field_e[1] = 0.0f;
-            GameApplet.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
+            GameApplet.field_e[3] = (float)this.toolkit.animationTime * var5 % 1.0f;
             jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
           } else {
-            var8 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-            this.field_b.bindTexture(90, this.field_g.turbulenceSlices[var8 % 16]);
+            var8 = (int)(16.0f * ((float)this.toolkit.animationTime * var5));
+            this.toolkit.bindTexture(90, this.waterTextures.turbulenceSlices[var8 % 16]);
           }
-          this.field_b.g(0, 90);
-          if (param0 < 39) {
+          this.toolkit.setActiveTextureUnit(0, 90);
+          if (guard < 39) {
             field_e = 81;
             return;
           }
@@ -96,34 +96,34 @@ final class kj extends LegacyOpenGlEffect {
         GameApplet.field_e[2] = var6;
         jaggl.OpenGL.glTexGenfv(8192, 9474, GameApplet.field_e, 0);
         GameApplet.field_e[2] = 0.0f;
-        GameApplet.field_e[3] = var4 * (float)this.field_b.field_Ac % 1.0f;
+        GameApplet.field_e[3] = var4 * (float)this.toolkit.animationTime % 1.0f;
         GameApplet.field_e[1] = var6;
         GameApplet.field_e[0] = 0.0f;
         jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
-        if (this.field_g.useVolumeTextures) {
+        if (this.waterTextures.useVolumeTextures) {
           GameApplet.field_e[2] = 0.0f;
           GameApplet.field_e[0] = 0.0f;
           GameApplet.field_e[1] = 0.0f;
-          GameApplet.field_e[3] = (float)this.field_b.field_Ac * var5 % 1.0f;
+          GameApplet.field_e[3] = (float)this.toolkit.animationTime * var5 % 1.0f;
           jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
         } else {
-          var8Lifetime1 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-          this.field_b.bindTexture(90, this.field_g.turbulenceSlices[var8Lifetime1 % 16]);
+          var8Lifetime1 = (int)(16.0f * ((float)this.toolkit.animationTime * var5));
+          this.toolkit.bindTexture(90, this.waterTextures.turbulenceSlices[var8Lifetime1 % 16]);
         }
-        this.field_b.g(0, 90);
-        if (param0 < 39) {
+        this.toolkit.setActiveTextureUnit(0, 90);
+        if (guard < 39) {
           field_e = 81;
           return;
         }
     }
 
-    final void a(byte param0, boolean param1) {
-        if (param0 >= 33) {
-          this.field_f.callList((byte) 121, '\0');
-          if (this.field_g.useVolumeTextures) {
-            this.field_b.g(1, 120);
-            this.field_b.bindTexture(56, this.field_g.turbulenceVolume);
-            this.field_b.g(0, 110);
+    final void enable(byte guard, boolean lighting) {
+        if (guard >= 33) {
+          this.stateLists.callList((byte) 121, '\0');
+          if (this.waterTextures.useVolumeTextures) {
+            this.toolkit.setActiveTextureUnit(1, 120);
+            this.toolkit.bindTexture(56, this.waterTextures.turbulenceVolume);
+            this.toolkit.setActiveTextureUnit(0, 110);
           }
           return;
         }
@@ -156,7 +156,7 @@ final class kj extends LegacyOpenGlEffect {
               return;
             }
             var5 = (String) null;
-            kj.a(93, (java.applet.Applet) null, false, (String) null);
+            LegacyOpenGlFlowingWaterEffect.a(93, (java.applet.Applet) null, false, (String) null);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -183,23 +183,23 @@ final class kj extends LegacyOpenGlEffect {
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -64) {
-          this.field_f = (LegacyOpenGlDisplayLists) null;
+    final boolean isSupported(byte guard) {
+        if (guard > -64) {
+          this.stateLists = (LegacyOpenGlDisplayLists) null;
           return true;
         }
         return true;
     }
 
-    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
-        if (param0 != 35) {
+    final void bindTexture(byte guard, int combineMode, LegacyOpenGlTexture texture) {
+        if (guard != 35) {
           return;
         }
         try {
-          this.field_b.bindTexture(46, param2);
-          this.field_b.c(param1, true);
+          this.toolkit.bindTexture(46, texture);
+          this.toolkit.setTextureCombineMode(combineMode, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.A(" + guard + ',' + combineMode + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 

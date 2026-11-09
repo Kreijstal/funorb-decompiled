@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo extends ShaderEffect {
-    private boolean field_f;
+final class HardwareReflectionEffect extends ShaderEffect {
+    private boolean active;
     static nj[] field_e;
 
     final static String a(boolean param0, CharSequence[] param1) {
@@ -16,7 +16,7 @@ final class uo extends ShaderEffect {
         try {
           if (param0) {
             var3 = (CharSequence[]) null;
-            uo.a(false, (CharSequence[]) null);
+            HardwareReflectionEffect.a(false, (CharSequence[]) null);
           }
           stackIn_3_0 = se.a(param1, 0, param1.length, 14156);
           return stackIn_3_0;
@@ -34,15 +34,15 @@ final class uo extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
-        if (param1 > -71) {
-          this.field_f = false;
+    final void refreshState(boolean lighting, byte guard) {
+        this.toolkit.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
+        if (guard > -71) {
+          this.active = false;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (param0 != 34023) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
+        if (guard != 34023) {
           field_e = (nj[]) null;
         }
     }
@@ -176,7 +176,7 @@ final class uo extends ShaderEffect {
           }
           return (byte) var2;
         }
-        uo.releaseStatics((byte) 83);
+        HardwareReflectionEffect.releaseStatics((byte) 83);
         if (param1 <= 0) {
           if (param1 < 160) {
             if (8364 != param1) {
@@ -629,92 +629,92 @@ final class uo extends ShaderEffect {
         return (byte) var2Lifetime4;
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean lighting, int guard) {
         AffineTransform3D var4 = null;
-        CubeTexture var3 = this.field_b.d((byte) 122);
-        if (param1 != 20186) {
+        CubeTexture var3 = this.toolkit.d((byte) 122);
+        if (guard != 20186) {
           return;
         }
         if (var3 == null) {
-          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           return;
         }
-        if (param0) {
-          this.field_b.g(1, -122);
-          this.field_b.a(var3, 91);
-          this.field_b.applyTexCoordGeneration(param1 - 6432, LabeledWidget.REFLECTION_MAP);
-          this.field_b.g(1, -114);
-          this.field_b.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
-          this.field_b.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
-          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
-          var4 = this.field_b.B(0);
-          var4.copyLinearFrom(this.field_b.c(true), true);
-          this.field_b.a(LegacyRidgedWaterNoise.field_y, 28880);
-          this.field_b.g(0, -124);
-          this.field_f = true;
+        if (lighting) {
+          this.toolkit.g(1, -122);
+          this.toolkit.a(var3, 91);
+          this.toolkit.applyTexCoordGeneration(guard - 6432, LabeledWidget.REFLECTION_MAP);
+          this.toolkit.g(1, -114);
+          this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
+          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+          var4 = this.toolkit.B(0);
+          var4.copyLinearFrom(this.toolkit.c(true), true);
+          this.toolkit.a(LegacyRidgedWaterNoise.field_y, 28880);
+          this.toolkit.g(0, -124);
+          this.active = true;
           return;
         }
-        this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+        this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -8) {
+    final boolean isSupported(byte guard) {
+        if (guard > -8) {
           field_e = (nj[]) null;
           return true;
         }
         return true;
     }
 
-    uo(HardwareGraphicsToolkit param0) {
-        super(param0);
-        this.field_f = false;
+    HardwareReflectionEffect(HardwareGraphicsToolkit owner) {
+        super(owner);
+        this.active = false;
     }
 
-    final void c(boolean param0) {
-        if (!param0) {
-          if (this.field_f) {
-            this.field_b.g(1, -111);
-            this.field_b.applyTexCoordGeneration(13754, lf.DISABLED);
-            this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.field_b.a(mm.CONSTANT, 2, 0);
-            this.field_b.a(jq.TEXTURE, 0, true);
-            this.field_b.l(0);
-            this.field_b.a((GpuTexture) null, 98);
-            this.field_b.g(0, -120);
-            this.field_f = false;
+    final void disable(boolean guard) {
+        if (!guard) {
+          if (this.active) {
+            this.toolkit.g(1, -111);
+            this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
+            this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.toolkit.a(mm.CONSTANT, 2, 0);
+            this.toolkit.a(jq.TEXTURE, 0, true);
+            this.toolkit.l(0);
+            this.toolkit.a((GpuTexture) null, 98);
+            this.toolkit.g(0, -120);
+            this.active = false;
           } else {
-            this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
+            this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
           }
-          this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           return;
         }
-        this.field_f = false;
-        if (this.field_f) {
-          this.field_b.g(1, -111);
-          this.field_b.applyTexCoordGeneration(13754, lf.DISABLED);
-          this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-          this.field_b.a(mm.CONSTANT, 2, 0);
-          this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
-          this.field_b.l(0);
-          this.field_b.a((GpuTexture) null, 98);
-          this.field_b.g(0, -120);
-          this.field_f = false;
+        this.active = false;
+        if (this.active) {
+          this.toolkit.g(1, -111);
+          this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
+          this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.toolkit.a(mm.CONSTANT, 2, 0);
+          this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
+          this.toolkit.l(0);
+          this.toolkit.a((GpuTexture) null, 98);
+          this.toolkit.g(0, -120);
+          this.active = false;
         } else {
-          this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
+          this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
         }
-        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
-          this.field_b.a(param2, 113);
-          this.field_b.h(param1 ^ 18900, param0);
-          if (param1 != 18834) {
+          this.toolkit.a(texture, 113);
+          this.toolkit.h(guard ^ 18900, combineMode);
+          if (guard != 18834) {
             CharSequence[] var5 = (CharSequence[]) null;
-            uo.a(true, (CharSequence[]) null);
+            HardwareReflectionEffect.a(true, (CharSequence[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uo.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uo.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 

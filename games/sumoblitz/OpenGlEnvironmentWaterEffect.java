@@ -9,31 +9,31 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private OpenGlShaderProgram field_j;
     static ToolkitSprite field_i;
 
-    final boolean b(byte param0) {
-        if (param0 > -8) {
+    final boolean isSupported(byte guard) {
+        if (guard > -8) {
           return false;
         }
         return this.field_e;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
         int var4 = 0;
         float var5 = 0.0f;
         int var6 = 0;
         float var7 = 0.0f;
         long var8 = 0L;
         if (this.field_h) {
-          var4 = 1 << (3 & param2);
-          var5 = (float)(1 << ((61 & param2) >> 3)) / 32.0f;
-          var6 = param1 & 65535;
-          var7 = (float)((param1 & 213452) >> 16) / 8.0f;
+          var4 = 1 << (3 & parameters0);
+          var5 = (float)(1 << ((61 & parameters0) >> 3)) / 32.0f;
+          var6 = parameters1 & 65535;
+          var7 = (float)((parameters1 & 213452) >> 16) / 8.0f;
           var8 = this.field_j.programHandle;
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_b.field_kc % 40000) / 40000.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.toolkit.field_kc % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
         }
-        if (param0 != 34023) {
+        if (guard != 34023) {
           int[] var10 = (int[]) null;
           OpenGlEnvironmentWaterEffect.a(-97, -68, (byte[]) null, (byte[][]) null, (int[]) null, (byte) 113, (byte[][]) null, (int[]) null);
         }
@@ -103,13 +103,13 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        if (param1 > -71) {
-          this.a(false, 82);
+    final void refreshState(boolean lighting, byte guard) {
+        if (guard > -71) {
+          this.enable(false, 82);
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         String var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -118,10 +118,10 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         RuntimeException var4 = null;
         try {
           if (!this.field_h) {
-            this.field_b.a(param2, param1 ^ 18943);
-            this.field_b.h(122, param0);
+            this.toolkit.a(texture, guard ^ 18943);
+            this.toolkit.h(122, combineMode);
           }
-          if (param1 != 18834) {
+          if (guard != 18834) {
             var5 = (String) null;
             OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -103, (String) null, 108);
           }
@@ -130,8 +130,8 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("ej.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("ej.E(").append(combineMode).append(',').append(guard).append(',');
+          if (texture == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -140,39 +140,39 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean lighting, int guard) {
         long var4 = 0L;
-        CubeTexture var3 = this.field_b.d((byte) 122);
-        if (param1 != 20186) {
+        CubeTexture var3 = this.toolkit.d((byte) 122);
+        if (guard != 20186) {
           String var6 = (String) null;
           OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -110, (String) null, 111);
         }
         if (this.field_e &&
           var3 != null) {
-          this.field_b.g(1, param1 ^ -20137);
-          this.field_b.a(var3, 122);
-          this.field_b.g(0, -125);
-          this.field_b.a(this.field_f.normalMap, 127);
+          this.toolkit.g(1, guard ^ -20137);
+          this.toolkit.a(var3, 122);
+          this.toolkit.g(0, -125);
+          this.toolkit.a(this.field_f.normalMap, 127);
           var4 = this.field_j.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
-          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.field_b.field_G[0], -this.field_b.field_G[1], -this.field_b.field_G[2]);
-          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.field_b.field_J, this.field_b.field_jb, this.field_b.field_Xb, 1.0f);
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + Math.abs(this.field_b.field_G[1]) * 928.0f);
+          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.toolkit.field_G[0], -this.toolkit.field_G[1], -this.toolkit.field_G[2]);
+          jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.toolkit.field_J, this.toolkit.field_jb, this.toolkit.field_Xb, 1.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + Math.abs(this.toolkit.field_G[1]) * 928.0f);
           this.field_h = true;
         }
     }
 
-    final void c(boolean param0) {
-        if (param0) {
+    final void disable(boolean guard) {
+        if (guard) {
           this.field_j = (OpenGlShaderProgram) null;
         }
         if (this.field_h) {
-          this.field_b.g(1, -124);
-          this.field_b.a((GpuTexture) null, 106);
-          this.field_b.g(0, -109);
-          this.field_b.a((GpuTexture) null, 98);
+          this.toolkit.g(1, -124);
+          this.toolkit.a((GpuTexture) null, 106);
+          this.toolkit.g(0, -109);
+          this.toolkit.a((GpuTexture) null, 98);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }

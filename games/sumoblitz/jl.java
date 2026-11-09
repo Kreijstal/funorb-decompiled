@@ -26,7 +26,7 @@ final class jl {
     final static void a(int param0, int param1) {
         try {
           try {
-            tw.a(-126, ra.c(param0 - 23), "resizing", new Object[]{new Integer(param1)});
+            tw.a(-126, LegacyOpenGlUnlitEffect.c(param0 - 23), "resizing", new Object[]{new Integer(param1)});
           } catch (Throwable throwable) {
           }
           if (param0 != 25) {

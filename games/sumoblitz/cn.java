@@ -27,7 +27,7 @@ final class cn extends dq {
               }
               var3 = new java.net.URL(param1.getCodeBase(), param0);
               var3 = MusicPatch.a((byte) 125, param1, var3);
-              kj.a(param2 ^ 23067, param1, true, var3.toString());
+              LegacyOpenGlFlowingWaterEffect.a(param2 ^ 23067, param1, true, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;

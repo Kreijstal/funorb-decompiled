@@ -42,7 +42,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == wd.field_e) {
             return;
           }
-          kj.field_e = 0;
+          LegacyOpenGlFlowingWaterEffect.field_e = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
             var2_int < SoftwareTransform3D.field_c.length) {
@@ -53,12 +53,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             var2_int = -1;
           }
-          if (lv.field_i >= 0 &&
+          if (LegacyOpenGlEnvironmentWaterEffect.field_i >= 0 &&
             var2_int >= 0) {
-            jf.field_d[lv.field_i] = var2_int;
-            lv.field_i = lv.field_i + 1 & 127;
-            if (lv.field_i == HardwareTurbulentWaterNoise.field_v) {
-              lv.field_i = -1;
+            jf.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = var2_int;
+            LegacyOpenGlEnvironmentWaterEffect.field_i = LegacyOpenGlEnvironmentWaterEffect.field_i + 1 & 127;
+            if (LegacyOpenGlEnvironmentWaterEffect.field_i == HardwareTurbulentWaterNoise.field_v) {
+              LegacyOpenGlEnvironmentWaterEffect.field_i = -1;
             }
           }
           if (var2_int >= 0) {
@@ -132,7 +132,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != wd.field_e) {
-            kj.field_e = 0;
+            LegacyOpenGlFlowingWaterEffect.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < SoftwareTransform3D.field_c.length) {
@@ -140,12 +140,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (lv.field_i >= 0 &&
+            if (LegacyOpenGlEnvironmentWaterEffect.field_i >= 0 &&
               var2_int >= 0) {
-              jf.field_d[lv.field_i] = ~var2_int;
-              lv.field_i = lv.field_i + 1 & 127;
-              if (lv.field_i == HardwareTurbulentWaterNoise.field_v) {
-                lv.field_i = -1;
+              jf.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = ~var2_int;
+              LegacyOpenGlEnvironmentWaterEffect.field_i = LegacyOpenGlEnvironmentWaterEffect.field_i + 1 & 127;
+              if (LegacyOpenGlEnvironmentWaterEffect.field_i == HardwareTurbulentWaterNoise.field_v) {
+                LegacyOpenGlEnvironmentWaterEffect.field_i = -1;
               }
             }
           }
@@ -185,7 +185,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == wd.field_e) {
             return;
           }
-          lv.field_i = -1;
+          LegacyOpenGlEnvironmentWaterEffect.field_i = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

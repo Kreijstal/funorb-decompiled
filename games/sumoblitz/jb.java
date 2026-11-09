@@ -40,7 +40,7 @@ class jb extends se {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + ga.field_g.a(0, param0.position, var4, 116, var3_int, param0.payload);
+            param0.position = param0.position + LegacyOpenGlUnderwaterEffect.field_g.a(0, param0.position, var4, 116, var3_int, param0.payload);
             var5 = SoftLruCache.decodeCp1252(var4, 0, var3_int, 26564);
             if (param2 == -14832) {
               stackIn_7_0 = var5;
@@ -164,9 +164,9 @@ class jb extends se {
               InwardSparkParticle.field_v.writeByte((byte) 42, 14);
               InwardSparkParticle.field_v.writeByte((byte) 96, kb.field_d.a((byte) 126).field_c);
               MessageDialog.a(0, -1);
-              kw.field_c = gi.field_g;
+              kw.field_c = LegacyOpenGlRidgedWaterEffect.field_g;
             }
-            if (kw.field_c == gi.field_g &&
+            if (kw.field_c == LegacyOpenGlRidgedWaterEffect.field_g &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_int = ig.field_a.readUnsignedByte(-31302);
               if (var6_int != 0) {
@@ -180,7 +180,7 @@ class jb extends se {
             }
             if (kw.field_c == OpenGlVertexBuffer.field_q &&
               OpenGlIndexBuffer.b(-1, 8)) {
-              oc.field_g = ig.field_a.readLong((byte) 127);
+              HardwareUnlitEffect.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
               fb.a(param3, param1, -12793, param4, kb.field_d);
               kw.field_c = jj.field_f;
@@ -244,29 +244,29 @@ class jb extends se {
               var11 = (CharSequence) ((Object) qv.field_o);
               tc.field_f = uk.a(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
-              kw.field_c = ga.field_j;
+              kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
               if (kb.field_d.a((byte) 113) != pb.field_b) {
                 if (kb.field_d.a((byte) 89) == hh.field_c) {
-                  LevelSelectScreen.field_j.a(true, ra.c(2));
+                  LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
                 }
               } else {
-                OpenGlTexture3D.field_m.a(true, ra.c(2));
+                OpenGlTexture3D.field_m.a(true, LegacyOpenGlUnlitEffect.c(2));
               }
               LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
-                jb.a((byte) -118, var6, ra.c(2));
+                jb.a((byte) -118, var6, LegacyOpenGlUnlitEffect.c(2));
               }
               if (HardwareRidgedWaterNoise.field_x <= 0 &&
                 !wo.field_c) {
                 try {
-                  tw.a(ra.c(2), 93, "unzap");
+                  tw.a(LegacyOpenGlUnlitEffect.c(2), 93, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  tw.a(-111, ra.c(2), "zap", new Object[]{MusicPatch.a(-29275, lb.field_a)});
+                  tw.a(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, lb.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

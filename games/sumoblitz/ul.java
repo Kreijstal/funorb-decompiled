@@ -47,14 +47,14 @@ final class ul {
           }
           return;
         }
-        if (this.field_i <= gi.field_h) {
+        if (this.field_i <= LegacyOpenGlRidgedWaterEffect.field_h) {
           if (this.field_i > 0) {
             th.field_H = 0;
           }
         } else {
-          th.field_H = (-gi.field_h + this.field_i) / 2;
+          th.field_H = (-LegacyOpenGlRidgedWaterEffect.field_h + this.field_i) / 2;
         }
-        if (gi.field_h != this.field_e ||
+        if (LegacyOpenGlRidgedWaterEffect.field_h != this.field_e ||
           wq.field_b != this.field_n) {
           this.field_a.a(param0 ^ 8308, this.field_e, this.field_n);
         }
@@ -153,7 +153,7 @@ final class ul {
 
     final FullscreenCanvas g(int param0) {
         this.field_d = wq.field_b;
-        this.field_r = gi.field_h;
+        this.field_r = LegacyOpenGlRidgedWaterEffect.field_h;
         this.field_a.a(8310, this.field_s, this.field_c);
         int var2 = -25 % ((50 - param0) / 48);
         DroneDebris.field_A = false;
@@ -176,7 +176,7 @@ final class ul {
           ul.a(102);
         }
         SecondaryNodeQueue.field_d = param1;
-        ra.field_e = 1;
+        LegacyOpenGlUnlitEffect.field_e = 1;
         qw.field_b = param2;
     }
 
@@ -200,7 +200,7 @@ final class ul {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = LegacyOpenGlEffectManager.field_l[eb.bitwiseAnd(255, (int) var10[var6])];
+            var5[var6] = LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) var10[var6])];
           }
           var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], var11);
         }
@@ -266,7 +266,7 @@ final class ul {
               }
             }
           }
-          if (var2 != gi.field_h) {
+          if (var2 != LegacyOpenGlRidgedWaterEffect.field_h) {
             this.field_a.a(8310, var2, var3);
           } else {
             if (wq.field_b != var3) {
@@ -274,7 +274,7 @@ final class ul {
             }
           }
           if (this.field_i > 0) {
-            th.field_H = (-gi.field_h + this.field_i) / 2;
+            th.field_H = (-LegacyOpenGlRidgedWaterEffect.field_h + this.field_i) / 2;
           }
         }
     }

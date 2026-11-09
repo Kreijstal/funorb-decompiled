@@ -6,24 +6,24 @@ import java.util.*;
 final class LegacyOpenGlEffectManager {
     static MenuScreen[] field_g;
     static int field_i;
-    private int field_c;
-    private int field_k;
-    private LegacyOpenGlEffect[] field_d;
+    private int parameters1;
+    private int activeEffect;
+    private LegacyOpenGlEffect[] effects;
     static int[] field_l;
     static long field_f;
-    private int field_j;
+    private int parameters0;
     static Random field_b;
-    private LegacyWaterTextureResources field_e;
-    private LegacyOpenGlGraphicsToolkit field_h;
+    private LegacyWaterTextureResources waterTextures;
+    private LegacyOpenGlGraphicsToolkit toolkit;
     static AudioOutput field_a;
 
-    final static char a(int param0, char param1) {
+    final static char normalizeNameCharacter(int guard, char character) {
         int var2;
         int var3;
         int var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 == 241) {
-          var2 = param1;
+        if (guard == 241) {
+          var2 = character;
           if (var2 == 32) {
             return '_';
           }
@@ -37,7 +37,7 @@ final class LegacyOpenGlEffectManager {
             return '_';
           }
           if (91 == var2) {
-            return param1;
+            return character;
           }
           if (var2 != 93 &&
             var2 != 35) {
@@ -106,7 +106,7 @@ final class LegacyOpenGlEffectManager {
                             if (var2 == 223) {
                               return 'b';
                             }
-                            return Character.toLowerCase(param1);
+                            return Character.toLowerCase(character);
                           }
                           return 'y';
                         }
@@ -123,10 +123,10 @@ final class LegacyOpenGlEffectManager {
             }
             return 'a';
           }
-          return param1;
+          return character;
         }
         field_f = 31L;
-        var2Lifetime1 = param1;
+        var2Lifetime1 = character;
         if (var2Lifetime1 == 32) {
           return '_';
         }
@@ -227,7 +227,7 @@ final class LegacyOpenGlEffectManager {
                                   if (var2Lifetime1 == 223) {
                                     return 'b';
                                   }
-                                  return Character.toLowerCase(param1);
+                                  return Character.toLowerCase(character);
                                 }
                                 return 'y';
                               }
@@ -246,7 +246,7 @@ final class LegacyOpenGlEffectManager {
             }
             return 'a';
           }
-          return param1;
+          return character;
         }
         return '_';
     }
@@ -261,190 +261,190 @@ final class LegacyOpenGlEffectManager {
         field_l = null;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
-        param0 = param0 & this.field_h.s(123);
-        if (!param0) {
-          if (4 == param5) {
-            if (param5 == 4) {
-              param1 = param3;
+    final void selectEffect(boolean allowWaterEffects, int parameters1, int guard, int parameters0, boolean lighting, int effectId) {
+        allowWaterEffects = allowWaterEffects & this.toolkit.supportsUnderwaterEffect(123);
+        if (!allowWaterEffects) {
+          if (4 == effectId) {
+            if (effectId == 4) {
+              parameters1 = parameters0;
             }
-            param5 = 2;
-            if (param5 != 0 &&
-              param4) {
-              param5 = param5 | -2147483648;
+            effectId = 2;
+            if (effectId != 0 &&
+              lighting) {
+              effectId = effectId | -2147483648;
             }
-            if (this.field_k != param5) {
-              if (this.field_k != 0) {
-                this.field_d[this.field_k & 2147483647].b(-127);
+            if (this.activeEffect != effectId) {
+              if (this.activeEffect != 0) {
+                this.effects[this.activeEffect & 2147483647].disable(-127);
               }
-              if (param5 != 0) {
-                this.field_d[2147483647 & param5].a((byte) 88, param4);
-                this.field_d[param5 & 2147483647].a(-61, param4);
-                this.field_d[2147483647 & param5].a((byte) 68, param3, param1);
+              if (effectId != 0) {
+                this.effects[2147483647 & effectId].enable((byte) 88, lighting);
+                this.effects[effectId & 2147483647].refreshState(-61, lighting);
+                this.effects[2147483647 & effectId].setParameters((byte) 68, parameters0, parameters1);
               }
-              this.field_j = param3;
-              this.field_k = param5;
-              this.field_c = param1;
+              this.parameters0 = parameters0;
+              this.activeEffect = effectId;
+              this.parameters1 = parameters1;
             } else {
-              if (this.field_k == 0) {
-                if (param2 > 123) {
+              if (this.activeEffect == 0) {
+                if (guard > 123) {
                   return;
                 }
-                this.field_e = (LegacyWaterTextureResources) null;
+                this.waterTextures = (LegacyWaterTextureResources) null;
                 return;
               }
-              this.field_d[2147483647 & this.field_k].a(-65, param4);
-              if (param3 != this.field_j) {
-                this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                this.field_c = param1;
-                this.field_j = param3;
+              this.effects[2147483647 & this.activeEffect].refreshState(-65, lighting);
+              if (parameters0 != this.parameters0) {
+                this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                this.parameters1 = parameters1;
+                this.parameters0 = parameters0;
               } else {
-                if (this.field_c != param1) {
-                  this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                  this.field_c = param1;
-                  this.field_j = param3;
+                if (this.parameters1 != parameters1) {
+                  this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                  this.parameters1 = parameters1;
+                  this.parameters0 = parameters0;
                 }
               }
             }
-            if (param2 <= 123) {
-              this.field_e = (LegacyWaterTextureResources) null;
+            if (guard <= 123) {
+              this.waterTextures = (LegacyWaterTextureResources) null;
             }
             return;
           }
-          if (8 == param5) {
-            if (param5 == 4) {
-              param1 = param3;
+          if (8 == effectId) {
+            if (effectId == 4) {
+              parameters1 = parameters0;
             }
-            param5 = 2;
-            if (param5 != 0 &&
-              param4) {
-              param5 = param5 | -2147483648;
+            effectId = 2;
+            if (effectId != 0 &&
+              lighting) {
+              effectId = effectId | -2147483648;
             }
-            if (this.field_k != param5) {
-              if (this.field_k != 0) {
-                this.field_d[this.field_k & 2147483647].b(-127);
+            if (this.activeEffect != effectId) {
+              if (this.activeEffect != 0) {
+                this.effects[this.activeEffect & 2147483647].disable(-127);
               }
-              if (param5 != 0) {
-                this.field_d[2147483647 & param5].a((byte) 88, param4);
-                this.field_d[param5 & 2147483647].a(-61, param4);
-                this.field_d[2147483647 & param5].a((byte) 68, param3, param1);
+              if (effectId != 0) {
+                this.effects[2147483647 & effectId].enable((byte) 88, lighting);
+                this.effects[effectId & 2147483647].refreshState(-61, lighting);
+                this.effects[2147483647 & effectId].setParameters((byte) 68, parameters0, parameters1);
               }
-              this.field_j = param3;
-              this.field_k = param5;
-              this.field_c = param1;
+              this.parameters0 = parameters0;
+              this.activeEffect = effectId;
+              this.parameters1 = parameters1;
             } else {
-              if (this.field_k == 0) {
-                if (param2 > 123) {
+              if (this.activeEffect == 0) {
+                if (guard > 123) {
                   return;
                 }
-                this.field_e = (LegacyWaterTextureResources) null;
+                this.waterTextures = (LegacyWaterTextureResources) null;
                 return;
               }
-              this.field_d[2147483647 & this.field_k].a(-65, param4);
-              if (param3 != this.field_j) {
-                this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                this.field_c = param1;
-                this.field_j = param3;
+              this.effects[2147483647 & this.activeEffect].refreshState(-65, lighting);
+              if (parameters0 != this.parameters0) {
+                this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                this.parameters1 = parameters1;
+                this.parameters0 = parameters0;
               } else {
-                if (this.field_c != param1) {
-                  this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                  this.field_c = param1;
-                  this.field_j = param3;
+                if (this.parameters1 != parameters1) {
+                  this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                  this.parameters1 = parameters1;
+                  this.parameters0 = parameters0;
                 }
               }
             }
-            if (param2 <= 123) {
-              this.field_e = (LegacyWaterTextureResources) null;
+            if (guard <= 123) {
+              this.waterTextures = (LegacyWaterTextureResources) null;
             }
             return;
           }
-          if (9 != param5) {
-            if (param5 != 0 &&
-              param4) {
-              param5 = param5 | -2147483648;
+          if (9 != effectId) {
+            if (effectId != 0 &&
+              lighting) {
+              effectId = effectId | -2147483648;
             }
-            if (this.field_k == param5) {
-              if (this.field_k != 0) {
-                this.field_d[2147483647 & this.field_k].a(-65, param4);
-                if (param3 != this.field_j) {
-                  this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                  this.field_c = param1;
-                  this.field_j = param3;
+            if (this.activeEffect == effectId) {
+              if (this.activeEffect != 0) {
+                this.effects[2147483647 & this.activeEffect].refreshState(-65, lighting);
+                if (parameters0 != this.parameters0) {
+                  this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                  this.parameters1 = parameters1;
+                  this.parameters0 = parameters0;
                 } else {
-                  if (this.field_c != param1) {
-                    this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                    this.field_c = param1;
-                    this.field_j = param3;
-                    if (param2 <= 123) {
-                      this.field_e = (LegacyWaterTextureResources) null;
+                  if (this.parameters1 != parameters1) {
+                    this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                    this.parameters1 = parameters1;
+                    this.parameters0 = parameters0;
+                    if (guard <= 123) {
+                      this.waterTextures = (LegacyWaterTextureResources) null;
                     }
                     return;
                   }
                 }
               }
             } else {
-              if (this.field_k != 0) {
-                this.field_d[this.field_k & 2147483647].b(-127);
+              if (this.activeEffect != 0) {
+                this.effects[this.activeEffect & 2147483647].disable(-127);
               }
-              if (param5 != 0) {
-                this.field_d[2147483647 & param5].a((byte) 88, param4);
-                this.field_d[param5 & 2147483647].a(-61, param4);
-                this.field_d[2147483647 & param5].a((byte) 68, param3, param1);
+              if (effectId != 0) {
+                this.effects[2147483647 & effectId].enable((byte) 88, lighting);
+                this.effects[effectId & 2147483647].refreshState(-61, lighting);
+                this.effects[2147483647 & effectId].setParameters((byte) 68, parameters0, parameters1);
               }
-              this.field_j = param3;
-              this.field_k = param5;
-              this.field_c = param1;
+              this.parameters0 = parameters0;
+              this.activeEffect = effectId;
+              this.parameters1 = parameters1;
             }
-            if (param2 > 123) {
+            if (guard > 123) {
               return;
             }
-            this.field_e = (LegacyWaterTextureResources) null;
+            this.waterTextures = (LegacyWaterTextureResources) null;
             return;
           }
-          if (param5 == 4) {
-            param1 = param3;
+          if (effectId == 4) {
+            parameters1 = parameters0;
           }
-          param5 = 2;
+          effectId = 2;
         }
-        if (param5 != 0 &&
-          param4) {
-          param5 = param5 | -2147483648;
+        if (effectId != 0 &&
+          lighting) {
+          effectId = effectId | -2147483648;
         }
-        if (this.field_k != param5) {
-          if (this.field_k != 0) {
-            this.field_d[this.field_k & 2147483647].b(-127);
+        if (this.activeEffect != effectId) {
+          if (this.activeEffect != 0) {
+            this.effects[this.activeEffect & 2147483647].disable(-127);
           }
-          if (param5 != 0) {
-            this.field_d[2147483647 & param5].a((byte) 88, param4);
-            this.field_d[param5 & 2147483647].a(-61, param4);
-            this.field_d[2147483647 & param5].a((byte) 68, param3, param1);
+          if (effectId != 0) {
+            this.effects[2147483647 & effectId].enable((byte) 88, lighting);
+            this.effects[effectId & 2147483647].refreshState(-61, lighting);
+            this.effects[2147483647 & effectId].setParameters((byte) 68, parameters0, parameters1);
           }
-          this.field_j = param3;
-          this.field_k = param5;
-          this.field_c = param1;
+          this.parameters0 = parameters0;
+          this.activeEffect = effectId;
+          this.parameters1 = parameters1;
         } else {
-          if (this.field_k != 0) {
-            this.field_d[2147483647 & this.field_k].a(-65, param4);
-            if (param3 != this.field_j) {
-              this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-              this.field_c = param1;
-              this.field_j = param3;
+          if (this.activeEffect != 0) {
+            this.effects[2147483647 & this.activeEffect].refreshState(-65, lighting);
+            if (parameters0 != this.parameters0) {
+              this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+              this.parameters1 = parameters1;
+              this.parameters0 = parameters0;
             } else {
-              if (this.field_c != param1) {
-                this.field_d[2147483647 & this.field_k].a((byte) 87, param3, param1);
-                this.field_c = param1;
-                this.field_j = param3;
+              if (this.parameters1 != parameters1) {
+                this.effects[2147483647 & this.activeEffect].setParameters((byte) 87, parameters0, parameters1);
+                this.parameters1 = parameters1;
+                this.parameters0 = parameters0;
               }
             }
           }
         }
-        if (param2 > 123) {
+        if (guard > 123) {
           return;
         }
-        this.field_e = (LegacyWaterTextureResources) null;
+        this.waterTextures = (LegacyWaterTextureResources) null;
     }
 
-    final boolean a(int param0, byte param1, LegacyOpenGlTexture param2) {
+    final boolean bindTexture(int combineMode, byte guard, LegacyOpenGlTexture texture) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -452,18 +452,18 @@ final class LegacyOpenGlEffectManager {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k == 0) {
+          if (this.activeEffect == 0) {
             return false;
           }
-          this.field_d[2147483647 & this.field_k].a((byte) 35, param0, param2);
-          var4_int = -112 % ((-12 - param1) / 57);
+          this.effects[2147483647 & this.activeEffect].bindTexture((byte) 35, combineMode, texture);
+          var4_int = -112 % ((-12 - guard) / 57);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("iv.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("iv.A(").append(combineMode).append(',').append(guard).append(',');
+          if (texture == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -472,41 +472,41 @@ final class LegacyOpenGlEffectManager {
         }
     }
 
-    final boolean a(int param0, byte param1) {
-        if (param1 == 71) {
-          return this.field_d[param0].b((byte) -65);
+    final boolean isSupported(int effectId, byte guard) {
+        if (guard == 71) {
+          return this.effects[effectId].isSupported((byte) -65);
         }
-        this.field_c = -91;
-        return this.field_d[param0].b((byte) -65);
+        this.parameters1 = -91;
+        return this.effects[effectId].isSupported((byte) -65);
     }
 
-    LegacyOpenGlEffectManager(LegacyOpenGlGraphicsToolkit param0) {
+    LegacyOpenGlEffectManager(LegacyOpenGlGraphicsToolkit owner) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = 0;
-        this.field_k = 0;
-        this.field_j = 0;
+        this.parameters1 = 0;
+        this.activeEffect = 0;
+        this.parameters0 = 0;
         try {
-          this.field_h = param0;
-          this.field_e = new LegacyWaterTextureResources(param0);
-          this.field_d = new LegacyOpenGlEffect[10];
-          this.field_d[1] = (LegacyOpenGlEffect) ((Object) new wt(param0));
-          this.field_d[2] = (LegacyOpenGlEffect) ((Object) new es(param0, this.field_e));
-          this.field_d[4] = (LegacyOpenGlEffect) ((Object) new gi(param0, this.field_e));
-          this.field_d[5] = (LegacyOpenGlEffect) ((Object) new kj(param0, this.field_e));
-          this.field_d[6] = (LegacyOpenGlEffect) ((Object) new ra(param0));
-          this.field_d[7] = (LegacyOpenGlEffect) ((Object) new au(param0));
-          this.field_d[3] = (LegacyOpenGlEffect) ((Object) new ga(param0));
-          this.field_d[8] = (LegacyOpenGlEffect) ((Object) new lv(param0, this.field_e));
-          this.field_d[9] = (LegacyOpenGlEffect) ((Object) new gr(param0, this.field_e));
-          if (!this.field_d[8].b((byte) -126)) {
-            this.field_d[8] = this.field_d[4];
+          this.toolkit = owner;
+          this.waterTextures = new LegacyWaterTextureResources(owner);
+          this.effects = new LegacyOpenGlEffect[10];
+          this.effects[1] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlSpecularEffect(owner));
+          this.effects[2] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlTurbulentTextureEffect(owner, this.waterTextures));
+          this.effects[4] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlRidgedWaterEffect(owner, this.waterTextures));
+          this.effects[5] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlFlowingWaterEffect(owner, this.waterTextures));
+          this.effects[6] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlUnlitEffect(owner));
+          this.effects[7] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlReflectionEffect(owner));
+          this.effects[3] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlUnderwaterEffect(owner));
+          this.effects[8] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlEnvironmentWaterEffect(owner, this.waterTextures));
+          this.effects[9] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlShoreWaveWaterEffect(owner, this.waterTextures));
+          if (!this.effects[8].isSupported((byte) -126)) {
+            this.effects[8] = this.effects[4];
           }
-          if (!this.field_d[9].b((byte) -82)) {
-            this.field_d[9] = this.field_d[8];
+          if (!this.effects[9].isSupported((byte) -82)) {
+            this.effects[9] = this.effects[8];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -514,7 +514,7 @@ final class LegacyOpenGlEffectManager {
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
           stackIn_8_1 = new StringBuilder().append("iv.<init>(");
-          if (param0 == null) {
+          if (owner == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

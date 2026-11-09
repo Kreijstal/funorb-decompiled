@@ -205,7 +205,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         VertexStreamLayout.field_c = SocketConnector.field_a;
         OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
         qr.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
-        au.field_j = SpriteData.b(param3, "", "glowfontalpha");
+        LegacyOpenGlReflectionEffect.field_j = SpriteData.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
         DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
         ma.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
@@ -230,9 +230,9 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ok.field_d = SpriteData.b(param3, "", "button_off");
           hh.field_a = SpriteData.b(param3, "", "button_over");
           WaterTextureResources.field_c = SpriteData.b(param3, "", "button_on");
-          gq.field_o = SpriteData.b(param3, "", "chargebar_vertical");
+          LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.b(param3, "", "chargebar_vertical");
           IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
-          ve.field_k = SpriteData.a(param3, "", "mouse");
+          LegacyOpenGlPostProcessEffect.field_k = SpriteData.a(param3, "", "mouse");
           BufferedSocket.field_n = SpriteData.a(param3, "", "keyboard");
           rl.field_l = SpriteData.b(param3, "", "player");
           kk.field_e = SpriteData.b(param3, "", "mook");
@@ -268,7 +268,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
           SoftLruCache.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
           LegacyOpenGlCubeTexture.field_n = SpriteData.b(param3, "", "electricity");
-          ni.field_h = SpriteData.b(param3, "", "electricity_flip");
+          FallbackShaderEffect.field_h = SpriteData.b(param3, "", "electricity_flip");
           ArchiveCatalog.field_f = SpriteData.a(param3, "", "attract");
           MusicVoice.field_o = SpriteData.a(param3, "", "repulse");
           lr.field_c = SpriteData.a(param3, "", "icepatch");

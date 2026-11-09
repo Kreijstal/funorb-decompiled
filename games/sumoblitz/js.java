@@ -628,7 +628,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           this.field_N.tooltip = pl.enterAPasswordForText;
           this.field_L.tooltip = InstrumentNoteMask.typeYourPasswordAgainText;
           this.field_K.tooltip = ContentDialog.typeYourAgeInText;
-          this.field_H.tooltip = gr.updatesWillSentToText;
+          this.field_H.tooltip = LegacyOpenGlShoreWaveWaterEffect.updatesWillSentToText;
           this.field_A.a((byte) -54, new ou(this.field_A));
           this.field_I.a((byte) 118, new ew(this.field_I));
           this.field_E.a((byte) -127, new wk(this.field_E, this.field_I));
@@ -655,7 +655,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           var3 = var3 + (5 + this.a(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));
           var3 = var3 + (this.a(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.field_A) + 5);
           var3 = var3 + this.a(170, fm.ageText, var3, this.field_K, 64);
-          var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.field_H, true, -120 + this.width, 5, jm.field_a, 11579568, lv.pleaseSendMeNewsText);
+          var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.field_H, true, -120 + this.width, 5, jm.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
           this.addChild(var4, 100);
           var3 = var3 + var4.height;
           var5 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.field_s, -1, 2147483647, true);

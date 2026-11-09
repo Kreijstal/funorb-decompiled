@@ -86,11 +86,11 @@ final class ih {
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
-                var12Lifetime1 = gi.field_k[var9];
+                var12Lifetime1 = LegacyOpenGlRidgedWaterEffect.field_k[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = gi.field_k[var10];
+                  var13Lifetime1 = LegacyOpenGlRidgedWaterEffect.field_k[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = gi.field_k[var11];
+                    var14 = LegacyOpenGlRidgedWaterEffect.field_k[var11];
                     if (var14 != -2147483648) {
                       var15 = var12Lifetime1 + var13Lifetime1 - (-var14 + var6);
                       stackIn_32_0 = -1;
@@ -173,9 +173,9 @@ final class ih {
 
     final static void a(int param0) {
         try {
-          hc.field_f = wt.field_h[2];
-          LegacyOpenGlEffectManager.field_i = wt.field_h[1];
-          ResourceArchive.field_f = wt.field_h[0];
+          hc.field_f = LegacyOpenGlSpecularEffect.field_h[2];
+          LegacyOpenGlEffectManager.field_i = LegacyOpenGlSpecularEffect.field_h[1];
+          ResourceArchive.field_f = LegacyOpenGlSpecularEffect.field_h[0];
           int var1_int = -21 / ((param0 + 59) / 40);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');

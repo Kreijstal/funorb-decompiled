@@ -5,10 +5,10 @@ abstract class ShaderEffect {
     static String enterTheNameYouText;
     static boolean field_d;
     static SpriteData field_c;
-    HardwareGraphicsToolkit field_b;
+    HardwareGraphicsToolkit toolkit;
 
-    void b(int param0) {
-        int var2 = -35 / ((param0 - 41) / 46);
+    void updateTransformUniforms(int guard) {
+        int var2 = -35 / ((guard - 41) / 46);
     }
 
     final static void a(boolean param0) {
@@ -31,7 +31,7 @@ abstract class ShaderEffect {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void setParameters(int guard, int parameters1, int parameters0);
 
     public static void releaseStatics(int param0) {
         field_c = null;
@@ -41,35 +41,35 @@ abstract class ShaderEffect {
         }
     }
 
-    abstract void a(boolean param0, int param1);
+    abstract void enable(boolean lighting, int guard);
 
-    abstract void c(boolean param0);
+    abstract void disable(boolean guard);
 
-    void c(byte param0) {
-        if (param0 <= 0) {
-          this.a((byte) -128);
+    void updateViewUniforms(byte guard) {
+        if (guard <= 0) {
+          this.updateTextureUniforms((byte) -128);
         }
     }
 
-    void a(int param0) {
-        if (param0 != 260) {
-          this.c((byte) -26);
+    void updateFogUniforms(int guard) {
+        if (guard != 260) {
+          this.updateViewUniforms((byte) -26);
         }
     }
 
-    abstract void a(int param0, int param1, GpuTexture param2);
+    abstract void bindTexture(int combineMode, int guard, GpuTexture texture);
 
-    void a(byte param0) {
-        if (param0 >= -47) {
-          this.c((byte) 119);
+    void updateTextureUniforms(byte guard) {
+        if (guard >= -47) {
+          this.updateViewUniforms((byte) 119);
         }
     }
 
-    ShaderEffect(HardwareGraphicsToolkit param0) {
+    ShaderEffect(HardwareGraphicsToolkit owner) {
         try {
-          this.field_b = param0;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rq.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,15 +170,15 @@ abstract class ShaderEffect {
         }
     }
 
-    void b(boolean param0) {
-        if (param0) {
+    void updateProjectionUniforms(boolean guard) {
+        if (guard) {
           field_c = (SpriteData) null;
         }
     }
 
-    abstract boolean b(byte param0);
+    abstract boolean isSupported(byte guard);
 
-    abstract void a(boolean param0, byte param1);
+    abstract void refreshState(boolean lighting, byte guard);
 
     static {
         enterTheNameYouText = "Enter the name you'd prefer. This is the name displayed to other players.";

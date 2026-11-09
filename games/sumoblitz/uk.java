@@ -49,7 +49,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
                 this.field_pb = true;
               }
             } else {
-              var4 = au.field_e;
+              var4 = LegacyOpenGlReflectionEffect.field_e;
               if (null != this.field_mb) {
                 this.field_mb.a((byte) -119);
               }
@@ -103,7 +103,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
     }
 
     final void f(boolean param0) {
-        this.a(param0, (byte) 127, au.a(-91, rn.unfortunatelyYouAreNotText, 248));
+        this.a(param0, (byte) 127, LegacyOpenGlReflectionEffect.a(-91, rn.unfortunatelyYouAreNotText, 248));
     }
 
     public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
@@ -171,7 +171,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
             if (OpenGlRectangleTexture.a((byte) 61, (char) var7)) {
-              var8 = LegacyOpenGlEffectManager.a(241, (char) var7);
+              var8 = LegacyOpenGlEffectManager.normalizeNameCharacter(241, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

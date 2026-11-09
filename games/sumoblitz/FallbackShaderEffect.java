@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends ShaderEffect {
+final class FallbackShaderEffect extends ShaderEffect {
     static String field_g;
     static SpriteData[] field_h;
     static String field_f;
     static IntrusiveDeque sceneryParticles;
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
         try {
-          if (param0 != 34023) {
-            ni.a(-3, -84, 61, -17, 112);
+          if (guard != 34023) {
+            FallbackShaderEffect.a(-3, -84, 61, -17, 112);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.F(" + guard + ',' + parameters1 + ',' + parameters0 + ')');
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_b.a(param2, param1 - 18711);
-          if (param1 != 18834) {
-            ni.d(true);
+          this.toolkit.a(texture, guard - 18711);
+          if (guard != 18834) {
+            FallbackShaderEffect.d(true);
           }
-          this.field_b.h(74, param0);
+          this.toolkit.h(74, combineMode);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("ni.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("ni.E(").append(combineMode).append(',').append(guard).append(',');
+          if (texture == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -44,17 +44,17 @@ final class ni extends ShaderEffect {
         }
     }
 
-    ni(HardwareGraphicsToolkit param0) {
-        super(param0);
+    FallbackShaderEffect(HardwareGraphicsToolkit owner) {
+        super(owner);
     }
 
-    final void c(boolean param0) {
+    final void disable(boolean guard) {
         try {
-          if (param0) {
-            this.c(false);
+          if (guard) {
+            this.disable(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.D(" + guard + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("ticketing_gotowebsite", (byte) -23);
                 if (null != var2) {
-                  lv.visitTheAccountManagementText = MusicVoice.a(0, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("ticketing_waitingformessages", (byte) -23);
                 if (null != var2) {
@@ -1508,7 +1508,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_optin_news", (byte) -23);
                 if (null != var2) {
-                  lv.pleaseSendMeNewsText = MusicVoice.a(0, var2);
+                  LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_agreeterms", (byte) -23);
                 if (var2 != null) {
@@ -1600,7 +1600,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_optin_news_tooltip", (byte) -23);
                 if (var2 != null) {
-                  gr.updatesWillSentToText = MusicVoice.a(0, var2);
+                  LegacyOpenGlShoreWaveWaterEffect.updatesWillSentToText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_u13_email_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1628,7 +1628,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_username_unavailable", (byte) -23);
                 if (null != var2) {
-                  au.field_e = MusicVoice.a(param0 - 7, var2);
+                  LegacyOpenGlReflectionEffect.field_e = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_username_available", (byte) -23);
                 if (null != var2) {
@@ -1700,7 +1700,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_mismatch", (byte) -23);
                 if (var2 != null) {
-                  gq.thisEntryDoesnTText = MusicVoice.a(0, var2);
+                  LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_passwordvalid", (byte) -23);
                 if (var2 != null) {
@@ -1824,7 +1824,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_music", (byte) -23);
                 if (null != var2) {
-                  ve.waitingForMusicText = MusicVoice.a(0, var2);
+                  LegacyOpenGlPostProcessEffect.waitingForMusicText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_instruments", (byte) -23);
                 if (var2 != null) {
@@ -1852,7 +1852,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("loading_graphics", (byte) -23);
                 if (null != var2) {
-                  es.loadingGraphicsText = MusicVoice.a(0, var2);
+                  LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("loading_models", (byte) -23);
                 if (null != var2) {
@@ -2310,7 +2310,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("notyetachieved", (byte) -23);
                 if (var2 != null) {
-                  gi.notYetAchievedText = MusicVoice.a(0, var2);
+                  LegacyOpenGlRidgedWaterEffect.notYetAchievedText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("achieved", (byte) -23);
                 if (null != var2) {
@@ -2342,7 +2342,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("no_highscores", (byte) -23);
                 if (null != var2) {
-                  ng.noHighscoresText = MusicVoice.a(param0 ^ 7, var2);
+                  HardwareSpecularEffect.noHighscoresText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("hs_name", (byte) -23);
                 if (var2 != null) {
@@ -3105,23 +3105,23 @@ final class ni extends ShaderEffect {
         decompiledBody.run();
     }
 
-    final void a(boolean param0, byte param1) {
+    final void refreshState(boolean lighting, byte guard) {
         try {
-          if (param1 > -71) {
-            this.a(-51, -107, -8);
+          if (guard > -71) {
+            this.setParameters(-51, -107, -8);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.A(" + lighting + ',' + guard + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean lighting, int guard) {
         try {
-          if (param1 != 20186) {
-            this.a(false, (byte) 126);
+          if (guard != 20186) {
+            this.refreshState(false, (byte) 126);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.J(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.J(" + lighting + ',' + guard + ')');
         }
     }
 
@@ -3170,18 +3170,18 @@ final class ni extends ShaderEffect {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isSupported(byte guard) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -8) {
-            this.a(8, 82, (GpuTexture) null);
+          if (guard >= -8) {
+            this.bindTexture(8, 82, (GpuTexture) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "ni.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "ni.G(" + guard + ')');
         }
     }
 

@@ -44,10 +44,10 @@ final class fm implements WidgetRenderer {
             if (var9 >= SoftwareRasterizer.clipTop &&
               SoftwareRasterizer.clipBottom > var9) {
               if (SoftwareRasterizer.clipLeft < var7Lifetime1) {
-                SoftwareRasterizer.pixels[var9 * SoftwareRasterizer.width - (-var7Lifetime1 + 1)] = eb.bitwiseAnd(16711422, SoftwareRasterizer.pixels[var7Lifetime1 + (var9 * SoftwareRasterizer.width - 1)]) >> 1;
+                SoftwareRasterizer.pixels[var9 * SoftwareRasterizer.width - (-var7Lifetime1 + 1)] = LegacyOpenGlPostProcessManager.bitwiseAnd(16711422, SoftwareRasterizer.pixels[var7Lifetime1 + (var9 * SoftwareRasterizer.width - 1)]) >> 1;
               }
               if (var7Lifetime1 + var8Lifetime1 < SoftwareRasterizer.clipRight) {
-                SoftwareRasterizer.pixels[var8Lifetime1 + (var9 * SoftwareRasterizer.width + var7Lifetime1)] = eb.bitwiseAnd(8355711, SoftwareRasterizer.pixels[var9 * SoftwareRasterizer.width + var7Lifetime1 + var8Lifetime1] >> 1);
+                SoftwareRasterizer.pixels[var8Lifetime1 + (var9 * SoftwareRasterizer.width + var7Lifetime1)] = LegacyOpenGlPostProcessManager.bitwiseAnd(8355711, SoftwareRasterizer.pixels[var9 * SoftwareRasterizer.width + var7Lifetime1 + var8Lifetime1] >> 1);
               }
             }
             SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);

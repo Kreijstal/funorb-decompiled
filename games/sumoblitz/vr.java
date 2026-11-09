@@ -21,7 +21,7 @@ final class vr extends InteractiveWidget {
         try {
           param0.removeKeyListener(wd.field_e);
           param0.removeFocusListener(wd.field_e);
-          lv.field_i = param1;
+          LegacyOpenGlEnvironmentWaterEffect.field_i = param1;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

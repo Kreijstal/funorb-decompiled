@@ -177,7 +177,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         }
         if (GraphicsToolkit.field_g == null &&
           param0 != -1) {
-          stackIn_7_0 = ng.a(1, -117, true, param0, false, true);
+          stackIn_7_0 = HardwareSpecularEffect.a(1, -117, true, param0, false, true);
         } else {
           stackIn_7_0 = GraphicsToolkit.field_g;
         }

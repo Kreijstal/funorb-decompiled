@@ -118,7 +118,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
     void writeVoxel(int index, byte value, int bias) {
         int fieldTemp$0 = this.outputIndex;
         this.outputIndex = this.outputIndex + 1;
-        this.samples[fieldTemp$0] = (byte)(127 + eb.bitwiseAnd(bias, value >> 1));
+        this.samples[fieldTemp$0] = (byte)(127 + LegacyOpenGlPostProcessManager.bitwiseAnd(bias, value >> 1));
     }
 
     final void accumulateOctave(int octave, int guard, int valueQ12) {
@@ -167,35 +167,35 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
 
     final static void loadGameSoundEffects(byte guard, ResourceArchive archive) {
         try {
-          OpenGlCubeTexture.field_l[0] = eb.field_b.getSoundEffectByName(0, "fence_hum_bg_loop");
-          OpenGlCubeTexture.field_l[2] = eb.field_b.getSoundEffectByName(0, "landmine_red_flash");
-          OpenGlCubeTexture.field_l[3] = eb.field_b.getSoundEffectByName(0, "landmine_blow");
-          OpenGlCubeTexture.field_l[4] = eb.field_b.getSoundEffectByName(0, "spike_trap_hum_bg_loop");
-          OpenGlCubeTexture.field_l[5] = eb.field_b.getSoundEffectByName(0, "teleport_short");
-          OpenGlCubeTexture.field_l[6] = eb.field_b.getSoundEffectByName(0, "accelerator_pad_1");
-          OpenGlCubeTexture.field_l[7] = eb.field_b.getSoundEffectByName(0, "accelerator_pad_2");
-          OpenGlCubeTexture.field_l[8] = eb.field_b.getSoundEffectByName(0, "accelerator_pad_3");
-          OpenGlCubeTexture.field_l[9] = eb.field_b.getSoundEffectByName(0, "accelerator_pad_4");
-          OpenGlCubeTexture.field_l[11] = eb.field_b.getSoundEffectByName(0, "attractor_pulse_loop");
-          OpenGlCubeTexture.field_l[12] = eb.field_b.getSoundEffectByName(0, "repeller_pulse_loop");
+          OpenGlCubeTexture.field_l[0] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "fence_hum_bg_loop");
+          OpenGlCubeTexture.field_l[2] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "landmine_red_flash");
+          OpenGlCubeTexture.field_l[3] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "landmine_blow");
+          OpenGlCubeTexture.field_l[4] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "spike_trap_hum_bg_loop");
+          OpenGlCubeTexture.field_l[5] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "teleport_short");
+          OpenGlCubeTexture.field_l[6] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "accelerator_pad_1");
+          OpenGlCubeTexture.field_l[7] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "accelerator_pad_2");
+          OpenGlCubeTexture.field_l[8] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "accelerator_pad_3");
+          OpenGlCubeTexture.field_l[9] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "accelerator_pad_4");
+          OpenGlCubeTexture.field_l[11] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "attractor_pulse_loop");
+          OpenGlCubeTexture.field_l[12] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "repeller_pulse_loop");
           ImageProducerRasterBuffer.field_n[0] = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[4], 100, 96);
           ImageProducerRasterBuffer.field_n[1] = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[11], 100, 96);
           ImageProducerRasterBuffer.field_n[2] = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[12], 100, 96);
-          OpenGlCubeTexture.field_l[17] = eb.field_b.getSoundEffectByName(0, "menu_mouseover");
-          OpenGlCubeTexture.field_l[18] = eb.field_b.getSoundEffectByName(0, "multiplier_upgrade");
-          OpenGlCubeTexture.field_l[19] = eb.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode1");
-          OpenGlCubeTexture.field_l[20] = eb.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode2");
-          OpenGlCubeTexture.field_l[21] = eb.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode3");
-          OpenGlCubeTexture.field_l[27] = eb.field_b.getSoundEffectByName(0, "player_pick_up");
-          OpenGlCubeTexture.field_l[28] = eb.field_b.getSoundEffectByName(0, "player_release_super_charge_attack");
-          OpenGlCubeTexture.field_l[29] = eb.field_b.getSoundEffectByName(0, "player_super_charge_attack");
-          OpenGlCubeTexture.field_l[30] = eb.field_b.getSoundEffectByName(0, "player_death_pulse");
-          OpenGlCubeTexture.field_l[33] = eb.field_b.getSoundEffectByName(0, "player_super_charge_deny");
-          OpenGlCubeTexture.field_l[32] = eb.field_b.getSoundEffectByName(0, "big_targeting_laser");
-          OpenGlCubeTexture.field_l[34] = eb.field_b.getSoundEffectByName(0, "firework_particles1");
-          OpenGlCubeTexture.field_l[35] = eb.field_b.getSoundEffectByName(0, "firework_particles2");
-          OpenGlCubeTexture.field_l[36] = eb.field_b.getSoundEffectByName(0, "firework_particles3");
-          OpenGlCubeTexture.field_l[37] = eb.field_b.getSoundEffectByName(0, "firework_particles4");
+          OpenGlCubeTexture.field_l[17] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "menu_mouseover");
+          OpenGlCubeTexture.field_l[18] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "multiplier_upgrade");
+          OpenGlCubeTexture.field_l[19] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode1");
+          OpenGlCubeTexture.field_l[20] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode2");
+          OpenGlCubeTexture.field_l[21] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "npc_bomb_charge_and_explode3");
+          OpenGlCubeTexture.field_l[27] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "player_pick_up");
+          OpenGlCubeTexture.field_l[28] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "player_release_super_charge_attack");
+          OpenGlCubeTexture.field_l[29] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "player_super_charge_attack");
+          OpenGlCubeTexture.field_l[30] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "player_death_pulse");
+          OpenGlCubeTexture.field_l[33] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "player_super_charge_deny");
+          OpenGlCubeTexture.field_l[32] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "big_targeting_laser");
+          OpenGlCubeTexture.field_l[34] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "firework_particles1");
+          OpenGlCubeTexture.field_l[35] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "firework_particles2");
+          OpenGlCubeTexture.field_l[36] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "firework_particles3");
+          OpenGlCubeTexture.field_l[37] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "firework_particles4");
           if (guard > -42) {
             IntrusiveDeque var3 = (IntrusiveDeque) null;
             TurbulenceNoise3D.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);

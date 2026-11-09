@@ -131,7 +131,7 @@ class PacketBuffer extends IntrusiveNode {
           bt.field_d = param6;
           jk.field_b = (Js5Client) ((Object) new SocketJs5Client());
           FadingWidget.field_D = new CacheIoWorker(param0);
-          wt.field_i = new ArchiveCatalog(jk.field_b, FadingWidget.field_D);
+          LegacyOpenGlSpecularEffect.field_i = new ArchiveCatalog(jk.field_b, FadingWidget.field_D);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fs.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

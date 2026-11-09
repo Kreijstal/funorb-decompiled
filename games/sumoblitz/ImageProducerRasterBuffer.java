@@ -39,7 +39,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 > -83) {
           field_n = (PcmSampleStream[]) null;
         }
-        return lm.a(59, ra.c(2));
+        return lm.a(59, LegacyOpenGlUnlitEffect.c(2));
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {

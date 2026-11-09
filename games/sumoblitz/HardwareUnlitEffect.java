@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends ShaderEffect {
+final class HardwareUnlitEffect extends ShaderEffect {
     static int field_f;
     static int field_e;
     static long field_g;
 
-    final void a(boolean param0, int param1) {
-        if (param1 != 20186) {
+    final void enable(boolean lighting, int guard) {
+        if (guard != 20186) {
           return;
         }
-        this.field_b.a(true, true);
+        this.toolkit.setLightingSuppressed(true, true);
     }
 
-    oc(HardwareGraphicsToolkit param0) {
-        super(param0);
+    HardwareUnlitEffect(HardwareGraphicsToolkit owner) {
+        super(owner);
     }
 
     final static void a(Drone param0, boolean param1) {
@@ -173,14 +173,14 @@ final class oc extends ShaderEffect {
         }
     }
 
-    final void c(boolean param0) {
-        this.field_b.a(param0, true);
+    final void disable(boolean guard) {
+        this.toolkit.setLightingSuppressed(guard, true);
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -8) {
+    final boolean isSupported(byte guard) {
+        if (guard > -8) {
           Drone var3 = (Drone) null;
-          oc.a((Drone) null, false);
+          HardwareUnlitEffect.a((Drone) null, false);
         }
         return true;
     }
@@ -188,7 +188,7 @@ final class oc extends ShaderEffect {
     final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param1 != 122) {
-          oc.d(-55);
+          HardwareUnlitEffect.d(-55);
         }
         stackIn_8_0 = (param3 <= param2) && (param2 < param6 + param3) && (param5 >= param0) && (param4 + param0 > param5);
         return stackIn_8_0;
@@ -210,7 +210,7 @@ final class oc extends ShaderEffect {
         int var6 = param0 + param4 + param1;
         if (!param2) {
           String var8 = (String) null;
-          oc.a((String) null, false, (byte) 69);
+          HardwareUnlitEffect.a((String) null, false, (byte) 69);
         }
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
         uc.field_c[se.field_d] = var7;
@@ -232,33 +232,33 @@ final class oc extends ShaderEffect {
           var6[var4] = param1;
         }
         if (param2 != -1) {
-          oc.a(-114, (byte) 68, -4, 84, 1, -123, 101);
+          HardwareUnlitEffect.a(-114, (byte) 68, -4, 84, 1, -123, 101);
         }
         return new String(var3);
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
-          this.field_b.a(param2, 106);
-          if (param1 != 18834) {
+          this.toolkit.a(texture, 106);
+          if (guard != 18834) {
             field_f = -50;
           }
-          this.field_b.h(109, param0);
+          this.toolkit.h(109, combineMode);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        if (param1 > -71) {
+    final void refreshState(boolean lighting, byte guard) {
+        if (guard > -71) {
           field_g = 53L;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (param0 != 34023) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
+        if (guard != 34023) {
           String var5 = (String) null;
-          oc.a((String) null, false, (byte) -121);
+          HardwareUnlitEffect.a((String) null, false, (byte) -121);
         }
     }
 

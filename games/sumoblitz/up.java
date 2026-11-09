@@ -123,12 +123,12 @@ final class up {
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  gi.field_k[var23Lifetime2] = var29Lifetime1;
+                  LegacyOpenGlRidgedWaterEffect.field_k[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
                 } else {
-                  gi.field_k[var23Lifetime2] = -2147483648;
+                  LegacyOpenGlRidgedWaterEffect.field_k[var23Lifetime2] = -2147483648;
                 }
                 if (param3) {
                   PowerupTrailParticle.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
@@ -155,7 +155,7 @@ final class up {
                   var25Lifetime1Lifetime1 = param4.field_m[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
                   ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
-                  au.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
+                  LegacyOpenGlReflectionEffect.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
                   LegacyOpenGlEffect.field_d[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16);
                   var24Lifetime1Lifetime1 = param4.field_F[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_i[var23Lifetime2];

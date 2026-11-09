@@ -79,9 +79,9 @@ final class LegacyOpenGlDisplayLists {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oc.field_e <= FadingWidget.score) {
+          if (HardwareUnlitEffect.field_e <= FadingWidget.score) {
             GameKeyHandler.a(param1, -1);
-            oc.field_e = (int)((double)oc.field_e + 1.5 * (double)oc.field_e);
+            HardwareUnlitEffect.field_e = (int)((double)HardwareUnlitEffect.field_e + 1.5 * (double)HardwareUnlitEffect.field_e);
           }
           if (param0 == -106) {
             return;

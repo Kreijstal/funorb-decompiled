@@ -109,11 +109,11 @@ final class GameplaySession {
             } else {
               if (ul.field_f == 0) {
                 OpenGlEnvironmentWaterEffect.field_i.draw((int)this.backdropX, (int)this.backdropY, 0, 1140850688, 1);
-                if (null != ni.sceneryParticles) {
-                  var4 = (SceneryParticle) (ni.sceneryParticles.first(125));
+                if (null != FallbackShaderEffect.sceneryParticles) {
+                  var4 = (SceneryParticle) (FallbackShaderEffect.sceneryParticles.first(125));
                   while (var4 != null) {
                     var4.render(var2, -123);
-                    var4 = (SceneryParticle) (ni.sceneryParticles.next((byte) 18));
+                    var4 = (SceneryParticle) (FallbackShaderEffect.sceneryParticles.next((byte) 18));
                     if (var9 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -316,11 +316,11 @@ final class GameplaySession {
             }
             var4_intLifetime1 = stackIn_34_0;
             if (0 == ul.field_f) {
-              ng.field_f[1].drawRotated((float)(64 + (OpenGlBuffer.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)((OpenGlBuffer.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
-              ng.field_f[0].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
+              HardwareSpecularEffect.field_f[1].drawRotated((float)(64 + (OpenGlBuffer.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
+              HardwareSpecularEffect.field_f[1].drawRotated((float)((OpenGlBuffer.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
+              HardwareSpecularEffect.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
+              HardwareSpecularEffect.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
+              HardwareSpecularEffect.field_f[0].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
               if (var6 != 0) {
                 OpenGlUnderwaterEffect.field_t.draw((OpenGlBuffer.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
               }
@@ -589,12 +589,12 @@ final class GameplaySession {
               stackIn_48_0 = -1;
             }
             var20 = stackIn_48_0;
-            if (au.field_i != null &&
+            if (LegacyOpenGlReflectionEffect.field_i != null &&
               param1.field_K != null &&
               var14Lifetime1 < param1.field_K.length &&
               param1.field_K[var14Lifetime1] != -1 &&
-              au.field_i.length > param1.field_K[var14Lifetime1]) {
-              stackIn_64_0 = au.field_i[param1.field_K[var14Lifetime1]];
+              LegacyOpenGlReflectionEffect.field_i.length > param1.field_K[var14Lifetime1]) {
+              stackIn_64_0 = LegacyOpenGlReflectionEffect.field_i[param1.field_K[var14Lifetime1]];
             } else {
               stackIn_64_0 = null;
             }
@@ -671,7 +671,7 @@ final class GameplaySession {
         boolean stackOut_3_0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = (SceneryParticle) (ni.sceneryParticles.first(-68));
+          var2 = (SceneryParticle) (FallbackShaderEffect.sceneryParticles.first(-68));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
             stackOut_3_0 = var2.updateAndIsExpired(-2567);
@@ -681,7 +681,7 @@ final class GameplaySession {
               if (stackIn_4_0) {
                 var2.unlink(false);
               }
-              var2 = (SceneryParticle) (ni.sceneryParticles.next((byte) 18));
+              var2 = (SceneryParticle) (FallbackShaderEffect.sceneryParticles.next((byte) 18));
               continue;
             }
             break;
@@ -1047,7 +1047,7 @@ final class GameplaySession {
             this.backdropY = this.backdropY + this.backdropVelocityY;
             this.backdropX = this.backdropX + this.backdropVelocityX;
           }
-          if (null != ni.sceneryParticles &&
+          if (null != FallbackShaderEffect.sceneryParticles &&
             ul.field_f == 0) {
             this.updateSceneryParticles((byte) 55);
           }
@@ -1236,7 +1236,7 @@ final class GameplaySession {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                oc.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
+                HardwareUnlitEffect.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1262,7 +1262,7 @@ final class GameplaySession {
               (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(jc.b(true) >= (SpriteMask.drones.length - 1)))) {
               var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
-              oc.a(var4, false);
+              HardwareUnlitEffect.a(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1400,8 +1400,8 @@ final class GameplaySession {
                 sm.a(72);
               }
             }
-            DisplayModeConfirmationDialog.field_T = 0;
-            bi.field_c = 0;
+            DisplayModeConfirmationDialog.droneTypeStreakMask = 0;
+            bi.uniqueDroneTypeStreak = 0;
           }
           if (null != SpriteMask.drones[0]) {
             var4Lifetime1 = SpriteMask.drones[0];
@@ -1526,7 +1526,7 @@ final class GameplaySession {
             this.backdropVelocityX = (-this.backdropX + (double)var2_int) / 2500.0;
           }
           if (lg.field_c % 100 == 0 &&
-            ni.sceneryParticles != null) {
+            FallbackShaderEffect.sceneryParticles != null) {
             var2_intLifetime1 = 0;
             var3Lifetime1 = 0;
             if (0 == ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96)) {
@@ -1574,10 +1574,10 @@ final class GameplaySession {
               stackIn_29_7 = 0;
             }
             var9 = new SceneryParticle(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, (double)var4, var5, var7, var8);
-            ni.sceneryParticles.addLast((IntrusiveNode) (var9), (byte) 39);
+            FallbackShaderEffect.sceneryParticles.addLast((IntrusiveNode) (var9), (byte) 39);
           }
           if (lg.field_c % 200 == 0 &&
-            ni.sceneryParticles != null) {
+            FallbackShaderEffect.sceneryParticles != null) {
             var2_intLifetime2 = 0;
             var3Lifetime2 = 0;
             if (0 != ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96)) {
@@ -1625,7 +1625,7 @@ final class GameplaySession {
               stackIn_52_7 = 0;
             }
             var9Lifetime1 = new SceneryParticle(stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_51_5, stackIn_51_6, stackIn_52_7, (double)var4Lifetime1, var5Lifetime1, var7Lifetime1, var8Lifetime1);
-            ni.sceneryParticles.addLast((IntrusiveNode) (var9Lifetime1), (byte) 39);
+            FallbackShaderEffect.sceneryParticles.addLast((IntrusiveNode) (var9Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1714,11 +1714,11 @@ final class GameplaySession {
                   HudMessage.field_s[4].draw(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1852,7 +1852,7 @@ final class GameplaySession {
         LevelCompleteUpgradeScreen discarded$0 = null;
         GameOverScreen discarded$1 = null;
         try {
-          ni.sceneryParticles = new IntrusiveDeque();
+          FallbackShaderEffect.sceneryParticles = new IntrusiveDeque();
           OpenGlCubeTexture.sceneEffects = new IntrusiveDeque();
           this.resetSession(127);
           discarded$0 = new LevelCompleteUpgradeScreen();

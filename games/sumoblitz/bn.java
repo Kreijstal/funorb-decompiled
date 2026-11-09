@@ -460,7 +460,7 @@ final class bn extends ar {
           if (un.field_a.length <= var1) {
             var1 = un.field_a.length - 1;
           }
-          pd.field_p = un.field_a[var1];
+          pd.scoreMultiplier = un.field_a[var1];
           return;
         }
         FontMetrics.field_b = FontMetrics.field_b + 1;
@@ -469,13 +469,13 @@ final class bn extends ar {
           if (un.field_a.length <= var1) {
             var1 = un.field_a.length - 1;
           }
-          pd.field_p = un.field_a[var1];
+          pd.scoreMultiplier = un.field_a[var1];
           return;
         }
         if (un.field_a.length <= var1) {
           var1 = un.field_a.length - 1;
         }
-        pd.field_p = un.field_a[var1];
+        pd.scoreMultiplier = un.field_a[var1];
     }
 
     bn(v param0, String param1, int param2, int param3, int param4, int param5) {

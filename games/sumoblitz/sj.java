@@ -45,7 +45,7 @@ final class sj {
             }
           }
           for (var3 = 0; IntIndexHashTable.field_c.length > var3; var3++) {
-            var4 = eb.field_a[var3];
+            var4 = LegacyOpenGlPostProcessManager.field_a[var3];
             if (0 <= var4) {
               if (nj.field_a.field_g != var4) {
                 var5 = OpenGlCubeTexture.field_j;
@@ -106,7 +106,7 @@ final class sj {
               }
               var9 = stackIn_48_0;
               if (var9 != null) {
-                var9.a((dw.field_b << 1) + var7Lifetime1, -dw.field_b + var8Lifetime1, (TextLayout.field_b << 1) + ga.field_h, 101, var1_int);
+                var9.a((dw.field_b << 1) + var7Lifetime1, -dw.field_b + var8Lifetime1, (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h, 101, var1_int);
               }
               var1_int = var1_int + TextLayout.field_b;
             }
@@ -115,7 +115,7 @@ final class sj {
               var1_int = var1_int + GameClientShell.field_t;
             } else {
               MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + LegacyOpenGlTransform3D.field_f, var5, -1);
-              var1_int = var1_int + (qc.field_a + (TextLayout.field_b + ga.field_h));
+              var1_int = var1_int + (qc.field_a + (TextLayout.field_b + LegacyOpenGlUnderwaterEffect.field_h));
             }
           }
           return;

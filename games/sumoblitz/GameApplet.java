@@ -132,10 +132,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (gr.field_e) {
+            if (LegacyOpenGlShoreWaveWaterEffect.field_e) {
               return;
             }
-            gr.field_e = true;
+            LegacyOpenGlShoreWaveWaterEffect.field_e = true;
           }
           if (null != OpenGlShader.field_c) {
             OpenGlShader.field_c.destroy();
@@ -215,7 +215,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (ke.field_a == this &&
-            !gr.field_e) {
+            !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             pt.field_a = true;
             if (om.field_l &&
               -bt.field_f + wq.a(-97) > 1000L) {
@@ -345,12 +345,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ke.field_a = this;
               th.field_H = 0;
               SpriteState.field_s = param4;
-              gi.field_h = param3;
+              LegacyOpenGlRidgedWaterEffect.field_h = param3;
               vs.field_b = param3;
               DirectByteArrayStorage.field_c = 0;
               wq.field_b = param1;
               lw.field_b = param1;
-              HardwareRidgedWaterNoise.field_z = ra.c(2);
+              HardwareRidgedWaterNoise.field_z = LegacyOpenGlUnlitEffect.c(2);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
               lt.field_m = dupTemp$0;
               CompactMeshGeometry.field_O = dupTemp$0;
@@ -420,7 +420,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == ke.field_a &&
-            !gr.field_e) {
+            !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             fd.field_k = 4000L + wq.a(-46);
             return;
           }
@@ -455,7 +455,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ArchiveProvider.field_b = ArchiveProvider.field_b - 50;
             pt.field_a = true;
-            qn.field_f.setSize(gi.field_h, wq.field_b);
+            qn.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
             qn.field_f.setVisible(true);
             if (null != PrimitiveType.field_c &&
               null == of.field_n) {
@@ -516,7 +516,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (ke.field_a == this &&
-            !gr.field_e) {
+            !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             fd.field_k = wq.a(-125);
             TextureCombineOperation.a(5000L, (byte) 119);
             CompactMeshGeometry.field_O = null;
@@ -559,7 +559,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (ke.field_a == this &&
-            !gr.field_e) {
+            !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             fd.field_k = 0L;
             return;
           }
@@ -611,7 +611,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           qn.field_f = (java.awt.Canvas) ((Object) new wo((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) qn.field_f));
-          qn.field_f.setSize(gi.field_h, wq.field_b);
+          qn.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
           qn.field_f.setVisible(true);
           boolean decompiledSharedTail0 = (PrimitiveType.field_c == var2);
           if (!decompiledSharedTail0) {
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              tw.a(ra.c(2), param1 ^ -21354, "loggedout");
+              tw.a(LegacyOpenGlUnlitEffect.c(2), param1 ^ -21354, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -892,7 +892,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.b(true);
                 this.e(1000);
-                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
+                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
                 this.initializeGame(28196);
                 jl.field_a = bt.a(false);
                 do {

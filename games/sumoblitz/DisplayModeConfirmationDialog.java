@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DisplayModeConfirmationDialog extends ResizingDialog implements WidgetActionListener {
-    static int field_T;
+    static int droneTypeStreakMask;
     private InteractiveWidget field_P;
     private long field_W;
     private InteractiveWidget field_Q;
@@ -32,7 +32,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           if (var8 > 0) {
             this.field_S.text = "" + var8;
           } else {
-            ib.d(1);
+            HardwareAnimatedWaterEffect.d(1);
             this.e(true);
             this.dialogLayer.pushDialog((byte) 121, new DisplayModeErrorDialog(this.dialogLayer, FontMetrics.field_f));
           }
@@ -210,7 +210,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
             this.e(true);
           } else {
             if (source == this.field_Q) {
-              ib.d(guard ^ 711);
+              HardwareAnimatedWaterEffect.d(guard ^ 711);
               this.e(true);
             }
           }
@@ -234,7 +234,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
     }
 
     static {
-        field_T = 0;
+        droneTypeStreakMask = 0;
         unfortunatelyWeAreUnableText = "Unfortunately we are unable to create an account for you at this time.";
     }
 }

@@ -236,8 +236,8 @@ class MenuScreen {
           var8Lifetime2Lifetime2 = 390;
           var13Lifetime1Lifetime2 = 210;
           if (var18Lifetime1 == 0) {
-            MessageDialog.field_db.a(gi.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            LegacyOpenGlEffect.field_c.a(gi.notYetAchievedText, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.a(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            LegacyOpenGlEffect.field_c.a(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           if (var18Lifetime1 != 0 ||
             var21 != 0) {
@@ -461,7 +461,7 @@ class MenuScreen {
                   return;
                 }
               }
-              var23 = ni.field_g + BufferedSocket.field_i[ul.field_f];
+              var23 = FallbackShaderEffect.field_g + BufferedSocket.field_i[ul.field_f];
               var18_ref_StringLifetime2 = var23.toUpperCase();
               var14_ref.a(var18_ref_StringLifetime2, 5023231 | param4 << 24, -1, var6_int - (-var15_ref.field_i - var17) + var16, (var10 >> 1) + (var7 - 4), 0);
               var13_ref.a(var18_ref_StringLifetime2, var12, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + (var10 >> 1) + var7, 0);
@@ -1074,7 +1074,7 @@ class MenuScreen {
                       gn.a(0, true);
                     }
                     if (this.field_g.e(2542)) {
-                      ng.e(-124);
+                      HardwareSpecularEffect.e(-124);
                       gn.a(0, true);
                     }
                     if (this.field_g.g(116224)) {
@@ -1276,7 +1276,7 @@ class MenuScreen {
                     if (CompactMeshGeometry.field_o != null) {
                       LegacyOpenGlNormalMapGenerator.c((byte) 126);
                     }
-                    jl.a(ra.c(2), false);
+                    jl.a(LegacyOpenGlUnlitEffect.c(2), false);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1933,7 +1933,7 @@ class MenuScreen {
           regionExit2: {
             this.a(var5, param0, param1 + 29227);
             if (vs.b((byte) 9)) {
-              var6 = ng.noHighscoresText;
+              var6 = HardwareSpecularEffect.noHighscoresText;
               if (var19 == 0) {
                 break regionExit2;
               }
@@ -1949,7 +1949,7 @@ class MenuScreen {
                   break regionExit2;
                 }
               }
-              var6 = ng.noHighscoresText;
+              var6 = HardwareSpecularEffect.noHighscoresText;
               var8 = var7_ref_of.field_o[gu.field_j];
               var9 = var7_ref_of.field_m[gu.field_j];
               var10 = kp.a(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);

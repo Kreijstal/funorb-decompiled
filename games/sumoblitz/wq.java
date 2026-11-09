@@ -99,7 +99,7 @@ final class wq {
           var10 = var8;
           var3 = var10.readUnsignedByte(-31302);
           var10.i((byte) 54);
-          au.field_i = ok.a(-126, var10);
+          LegacyOpenGlReflectionEffect.field_i = ok.a(-126, var10);
           HardwareTextureCache.field_b = new CompactMeshGeometry[var3];
           kh.field_c = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {

@@ -11,10 +11,10 @@ final class wd extends se {
 
     final static ResourceArchive a(int param0, byte param1) {
         if (param1 == 125) {
-          return ng.a(1, -74, true, param0, false, false);
+          return HardwareSpecularEffect.a(1, -74, true, param0, false, false);
         }
         field_e = (GameKeyHandler) null;
-        return ng.a(1, -74, true, param0, false, false);
+        return HardwareSpecularEffect.a(1, -74, true, param0, false, false);
     }
 
     final void a(PacketBuffer param0, byte param1) {

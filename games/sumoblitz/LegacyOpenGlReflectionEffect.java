@@ -1,84 +1,84 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class au extends LegacyOpenGlEffect {
+final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
     static int[] field_h;
-    private LegacyOpenGlDisplayLists field_f;
+    private LegacyOpenGlDisplayLists stateLists;
     static SpriteData[] field_j;
     static double field_k;
-    private boolean field_g;
+    private boolean active;
     static l[] field_i;
     static String field_e;
 
-    final void b(int param0) {
-        if (!this.field_g) {
-          this.field_b.a(114, 0, 5890, 770);
-          this.field_b.a(20685, 8448, 8448);
-          this.field_g = false;
-          if (param0 >= -125) {
+    final void disable(int guard) {
+        if (!this.active) {
+          this.toolkit.a(114, 0, 5890, 770);
+          this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
+          this.active = false;
+          if (guard >= -125) {
             field_e = (String) null;
             return;
           }
           return;
         }
-        this.field_f.callList((byte) 121, '\001');
-        this.field_b.g(1, 113);
-        this.field_b.bindTexture(78, (LegacyOpenGlTexture) null);
-        this.field_b.g(0, 121);
-        this.field_b.a(20685, 8448, 8448);
-        this.field_g = false;
-        if (param0 >= -125) {
+        this.stateLists.callList((byte) 121, '\001');
+        this.toolkit.setActiveTextureUnit(1, 113);
+        this.toolkit.bindTexture(78, (LegacyOpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(0, 121);
+        this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
+        this.active = false;
+        if (guard >= -125) {
           field_e = (String) null;
           return;
         }
     }
 
-    au(LegacyOpenGlGraphicsToolkit param0) {
-        super(param0);
+    LegacyOpenGlReflectionEffect(LegacyOpenGlGraphicsToolkit owner) {
+        super(owner);
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_g = false;
+        this.active = false;
         try {
-          if (!param0.field_Ob) {
+          if (!owner.field_Ob) {
             return;
           }
-          this.field_f = new LegacyOpenGlDisplayLists(param0, 2);
-          this.field_f.beginList(0, 4864);
-          this.field_b.g(1, 116);
-          this.field_b.a(20685, 7681, 34165);
-          this.field_b.b(34168, 770, 2, 9);
-          this.field_b.a(109, 0, 34167, 770);
+          this.stateLists = new LegacyOpenGlDisplayLists(owner, 2);
+          this.stateLists.beginList(0, 4864);
+          this.toolkit.setActiveTextureUnit(1, 116);
+          this.toolkit.setTextureCombineOperations(20685, 7681, 34165);
+          this.toolkit.b(34168, 770, 2, 9);
+          this.toolkit.a(109, 0, 34167, 770);
           jaggl.OpenGL.glTexGeni(8192, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8193, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8194, 9472, 34066);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
           jaggl.OpenGL.glEnable(3170);
-          this.field_b.g(0, 115);
-          this.field_f.endList(true);
-          this.field_f.beginList(1, 4864);
-          this.field_b.g(1, 121);
-          this.field_b.a(20685, 8448, 8448);
-          this.field_b.b(34166, 770, 2, -123);
-          this.field_b.a(115, 0, 5890, 770);
+          this.toolkit.setActiveTextureUnit(0, 115);
+          this.stateLists.endList(true);
+          this.stateLists.beginList(1, 4864);
+          this.toolkit.setActiveTextureUnit(1, 121);
+          this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
+          this.toolkit.b(34166, 770, 2, -123);
+          this.toolkit.a(115, 0, 5890, 770);
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
           jaggl.OpenGL.glDisable(3170);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glMatrixMode(5888);
-          this.field_b.g(0, 121);
-          this.field_f.endList(true);
+          this.toolkit.setActiveTextureUnit(0, 121);
+          this.stateLists.endList(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("au.<init>(");
-          if (param0 == null) {
+          if (owner == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -87,32 +87,32 @@ final class au extends LegacyOpenGlEffect {
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 >= -64) {
+    final boolean isSupported(byte guard) {
+        if (guard >= -64) {
           field_j = (SpriteData[]) null;
           return true;
         }
         return true;
     }
 
-    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
+    final void bindTexture(byte guard, int combineMode, LegacyOpenGlTexture texture) {
         try {
-          if (param0 != 35) {
+          if (guard != 35) {
             LegacyOpenGlTexture var5 = (LegacyOpenGlTexture) null;
-            this.a((byte) 33, -117, (LegacyOpenGlTexture) null);
+            this.bindTexture((byte) 33, -117, (LegacyOpenGlTexture) null);
           }
-          this.field_b.bindTexture(41, param2);
-          this.field_b.c(param1, true);
+          this.toolkit.bindTexture(41, texture);
+          this.toolkit.setTextureCombineMode(combineMode, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.A(" + guard + ',' + combineMode + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_b.a(20685, 7681, 8448);
-        if (param0 > -30) {
+    final void refreshState(int guard, boolean lighting) {
+        this.toolkit.setTextureCombineOperations(20685, 7681, 8448);
+        if (guard > -30) {
           String var4 = (String) null;
-          au.a(-31, (String) null, -127);
+          LegacyOpenGlReflectionEffect.a(-31, (String) null, -127);
         }
     }
 
@@ -126,38 +126,38 @@ final class au extends LegacyOpenGlEffect {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void enable(byte guard, boolean lighting) {
         LegacyOpenGlCubeTexture var3;
-        var3 = this.field_b.j((byte) 62);
-        if (this.field_f == null) {
-          this.field_b.a(112, 0, 34168, 770);
+        var3 = this.toolkit.environmentCube((byte) 62);
+        if (this.stateLists == null) {
+          this.toolkit.a(112, 0, 34168, 770);
         } else {
           if (var3 == null) {
-            this.field_b.a(112, 0, 34168, 770);
+            this.toolkit.a(112, 0, 34168, 770);
           } else {
-            if (!param1) {
-              this.field_b.a(112, 0, 34168, 770);
+            if (!lighting) {
+              this.toolkit.a(112, 0, 34168, 770);
             } else {
-              this.field_f.callList((byte) 121, '\0');
-              this.field_b.g(1, 98);
-              this.field_b.bindTexture(119, var3);
+              this.stateLists.callList((byte) 121, '\0');
+              this.toolkit.setActiveTextureUnit(1, 98);
+              this.toolkit.bindTexture(119, var3);
               jaggl.OpenGL.glMatrixMode(5890);
-              jaggl.OpenGL.glLoadMatrixf(this.field_b.field_mc.a(5), 0);
+              jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_mc.a(5), 0);
               jaggl.OpenGL.glMatrixMode(5888);
-              this.field_b.g(0, 85);
-              this.field_g = true;
+              this.toolkit.setActiveTextureUnit(0, 85);
+              this.active = true;
             }
           }
         }
-        if (param0 > 33) {
+        if (guard > 33) {
           return;
         }
         field_h = (int[]) null;
     }
 
-    final void a(byte param0, int param1, int param2) {
-        if (param0 <= 39) {
-          this.field_g = true;
+    final void setParameters(byte guard, int parameters0, int parameters1) {
+        if (guard <= 39) {
+          this.active = true;
         }
     }
 
@@ -212,7 +212,7 @@ final class au extends LegacyOpenGlEffect {
 
     final static boolean c(int param0) {
         if (param0 != 1) {
-          au.releaseStatics((byte) 90);
+          LegacyOpenGlReflectionEffect.releaseStatics((byte) 90);
           return true;
         }
         return true;
@@ -232,7 +232,7 @@ final class au extends LegacyOpenGlEffect {
           hk.field_c = kb.field_i;
           nb.field_a = GzipDecompressor.field_d;
           if (param0 < 93) {
-            au.d(-50);
+            LegacyOpenGlReflectionEffect.d(-50);
           }
           jc.field_f = LegacyOpenGlTexture3D.field_l;
           kb.field_i = 0;

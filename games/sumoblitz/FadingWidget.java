@@ -20,7 +20,7 @@ final class FadingWidget extends SingleChildWidget {
           if (jk.field_c <= 0) {
             return false;
           }
-          if (!au.c(1)) {
+          if (!LegacyOpenGlReflectionEffect.c(1)) {
             return true;
           }
           return false;
@@ -34,7 +34,7 @@ final class FadingWidget extends SingleChildWidget {
         if (jk.field_c <= 0) {
           return false;
         }
-        if (!au.c(1)) {
+        if (!LegacyOpenGlReflectionEffect.c(1)) {
           return true;
         }
         return false;

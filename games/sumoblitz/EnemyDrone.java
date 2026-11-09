@@ -43,7 +43,7 @@ final class EnemyDrone extends Drone {
           EnemyDrone.releaseStatics(true);
           return;
         }
-        oc.a(uj.createEnemyDrone(this.spawnedDroneType, this.xQ8 - this.velocityXQ8, 0, (byte) 84, this.yQ8 - this.velocityYQ8), false);
+        HardwareUnlitEffect.a(uj.createEnemyDrone(this.spawnedDroneType, this.xQ8 - this.velocityXQ8, 0, (byte) 84, this.yQ8 - this.velocityYQ8), false);
         if (param0 < -55) {
           return;
         }

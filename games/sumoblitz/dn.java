@@ -27,16 +27,16 @@ final class dn {
           return ProgressDialog.waitingForGraphicsText;
         }
         if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
-          return es.loadingGraphicsText + " - " + wd.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
+          return LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText + " - " + wd.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (param0 <= 90) {
           dn.b(-125);
         }
-        if (!eb.field_f.loadIndex((byte) 127)) {
+        if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {
           return ToolkitRasterBuffer.waitingForFontsText;
         }
-        if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
-          return ow.loadingFontsText + " - " + eb.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
+        if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
+          return ow.loadingFontsText + " - " + LegacyOpenGlPostProcessManager.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (!hw.field_a.loadIndex((byte) 127)) {
           return fl.waitingForExtraDataText;

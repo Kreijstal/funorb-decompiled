@@ -69,7 +69,7 @@ final class mn {
             var13 = param5;
             var14 = param9;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = eb.bitwiseAnd(var12 >> 1, 16711680) + eb.bitwiseAnd(65280, var13 >> 9) - (-eb.bitwiseAnd(255, var14 >> 17) - var15);
+            var10[var11] = LegacyOpenGlPostProcessManager.bitwiseAnd(var12 >> 1, 16711680) + LegacyOpenGlPostProcessManager.bitwiseAnd(65280, var13 >> 9) - (-LegacyOpenGlPostProcessManager.bitwiseAnd(255, var14 >> 17) - var15);
             param9 = param9 + param4;
             param5 = param5 + param0;
             param7++;

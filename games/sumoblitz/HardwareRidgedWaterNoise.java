@@ -24,21 +24,21 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (drone.droneType != 0) {
-            var2_double = vp.field_d[drone.variant] * (double)gq.field_q[drone.droneType];
+            var2_double = vp.field_d[drone.variant] * (double)LegacyOpenGlFloatPostProcessEffect.droneBaseScores[drone.droneType];
             var2_double = var2_double + (double)(drone.field_G / 50);
-            var2_double = var2_double * (double)pd.field_p;
+            var2_double = var2_double * (double)pd.scoreMultiplier;
             IntrusiveDequeCursor.a((int)var2_double, -1372239541);
-            if ((1 << drone.droneType & DisplayModeConfirmationDialog.field_T) == 0) {
-              DisplayModeConfirmationDialog.field_T = DisplayModeConfirmationDialog.field_T | 1 << drone.droneType;
-              bi.field_c = bi.field_c + 1;
+            if ((1 << drone.droneType & DisplayModeConfirmationDialog.droneTypeStreakMask) == 0) {
+              DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
+              bi.uniqueDroneTypeStreak = bi.uniqueDroneTypeStreak + 1;
             } else {
-              DisplayModeConfirmationDialog.field_T = 0;
-              bi.field_c = 1;
-              DisplayModeConfirmationDialog.field_T = DisplayModeConfirmationDialog.field_T | 1 << drone.droneType;
+              DisplayModeConfirmationDialog.droneTypeStreakMask = 0;
+              bi.uniqueDroneTypeStreak = 1;
+              DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
             }
             rn.a(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
-            if (DisplayModeConfirmationDialog.field_T != 0 &&
-              ps.field_e[13] == bi.field_c) {
+            if (DisplayModeConfirmationDialog.droneTypeStreakMask != 0 &&
+              ps.field_e[13] == bi.uniqueDroneTypeStreak) {
               th.b(24753, 242, 13);
             }
             if (7 == OpenGlShaderProgram.levelIndex &&
@@ -115,7 +115,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         MusicPatch.simulationPaused = false;
         if (initializeRound) {
           ke.a(false);
-          oc.field_e = 1000;
+          HardwareUnlitEffect.field_e = 1000;
           TextLayout.a(0, 8);
           return;
         }

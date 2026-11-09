@@ -596,7 +596,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         int var2;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_O == this.field_X) {
-          ib.d(1);
+          HardwareAnimatedWaterEffect.d(1);
           IterableNodeHashTable.b(0);
         } else {
           if (this.field_Y != this.field_O) {
@@ -610,7 +610,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               this.dialogLayer.pushDialog((byte) 108, new DisplayModeConfirmationDialog(this.dialogLayer));
             }
           } else {
-            ib.d(1);
+            HardwareAnimatedWaterEffect.d(1);
             OpenGlBuffer.f(-5812);
           }
         }

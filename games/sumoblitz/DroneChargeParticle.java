@@ -76,7 +76,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[25] = ea.difficultyText;
         GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
         GameClientShell.field_u[10] = PlayingSound.scoreFilterLabels[2];
-        GameClientShell.field_u[27] = ni.field_g;
+        GameClientShell.field_u[27] = FallbackShaderEffect.field_g;
         GameClientShell.field_u[23] = pt.challengeText;
         GameClientShell.field_u[24] = nq.optionsText;
         GameClientShell.field_u[17] = FadingWidget.nextText;

@@ -273,7 +273,7 @@ final class MidiPcmStream extends PcmStream {
           var3++;
         } while (var4 == 0);
         while (var3 < 16) {
-          this.banks[var3] = eb.bitwiseAnd(this.initialPrograms[var3], -128);
+          this.banks[var3] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.initialPrograms[var3], -128);
           var3++;
           if (var4 == 0) {
             continue;
@@ -1007,55 +1007,55 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = (32654 & message) >> 8;
         var6Lifetime3 = (8345855 & message) >> 16;
         if (0 == var5Lifetime4) {
-          this.banks[var4Lifetime4] = (var6Lifetime3 << 14) + eb.bitwiseAnd(-2080769, this.banks[var4Lifetime4]);
+          this.banks[var4Lifetime4] = (var6Lifetime3 << 14) + LegacyOpenGlPostProcessManager.bitwiseAnd(-2080769, this.banks[var4Lifetime4]);
         }
         if (var5Lifetime4 == 32) {
-          this.banks[var4Lifetime4] = (var6Lifetime3 << 7) + eb.bitwiseAnd(this.banks[var4Lifetime4], -16257);
+          this.banks[var4Lifetime4] = (var6Lifetime3 << 7) + LegacyOpenGlPostProcessManager.bitwiseAnd(this.banks[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.modulation[var4Lifetime4] = (var6Lifetime3 << 7) + eb.bitwiseAnd(-16257, this.modulation[var4Lifetime4]);
+          this.modulation[var4Lifetime4] = (var6Lifetime3 << 7) + LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.modulation[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.modulation[var4Lifetime4] = eb.bitwiseAnd(-128, this.modulation[var4Lifetime4]) + var6Lifetime3;
+          this.modulation[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(-128, this.modulation[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.portamentoTime[var4Lifetime4] = (var6Lifetime3 << 7) + eb.bitwiseAnd(-16257, this.portamentoTime[var4Lifetime4]);
+          this.portamentoTime[var4Lifetime4] = (var6Lifetime3 << 7) + LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.portamentoTime[var4Lifetime4]);
         }
         if (37 == var5Lifetime4) {
-          this.portamentoTime[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(-128, this.portamentoTime[var4Lifetime4]);
+          this.portamentoTime[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(-128, this.portamentoTime[var4Lifetime4]);
         }
         if (var5Lifetime4 == 7) {
-          this.channelVolume[var4Lifetime4] = eb.bitwiseAnd(-16257, this.channelVolume[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelVolume[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.channelVolume[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (39 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(this.channelVolume[var4Lifetime4], -128);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelVolume[var4Lifetime4], -128);
         }
         if (10 == var5Lifetime4) {
-          this.channelPan[var4Lifetime4] = eb.bitwiseAnd(-16257, this.channelPan[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelPan[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.channelPan[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (42 == var5Lifetime4) {
-          this.channelPan[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(-128, this.channelPan[var4Lifetime4]);
+          this.channelPan[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(-128, this.channelPan[var4Lifetime4]);
         }
         if (var5Lifetime4 == 11) {
-          this.channelExpression[var4Lifetime4] = eb.bitwiseAnd(-16257, this.channelExpression[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelExpression[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.channelExpression[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.channelExpression[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(-128, this.channelExpression[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(-128, this.channelExpression[var4Lifetime4]);
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
             this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 1);
             if (var8 != 0) {
-              this.channelFlags[var4Lifetime4] = eb.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
+              this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
             }
           } else {
-            this.channelFlags[var4Lifetime4] = eb.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 < 64) {
             this.releasePortamentoVoices(var4Lifetime4, (byte) 122);
-            this.channelFlags[var4Lifetime4] = eb.bitwiseAnd(this.channelFlags[var4Lifetime4], -3);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -3);
             if (var8 != 0) {
               this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 2);
             }
@@ -1064,16 +1064,16 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (var5Lifetime4 == 99) {
-          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + eb.bitwiseAnd(127, this.parameterSelection[var4Lifetime4]);
+          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + LegacyOpenGlPostProcessManager.bitwiseAnd(127, this.parameterSelection[var4Lifetime4]);
         }
         if (var5Lifetime4 == 98) {
-          this.parameterSelection[var4Lifetime4] = eb.bitwiseAnd(16256, this.parameterSelection[var4Lifetime4]) + var6Lifetime3;
+          this.parameterSelection[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(16256, this.parameterSelection[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.parameterSelection[var4Lifetime4] = 16384 + (eb.bitwiseAnd(127, this.parameterSelection[var4Lifetime4]) + (var6Lifetime3 << 7));
+          this.parameterSelection[var4Lifetime4] = 16384 + (LegacyOpenGlPostProcessManager.bitwiseAnd(127, this.parameterSelection[var4Lifetime4]) + (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.parameterSelection[var4Lifetime4] = 16384 - (-eb.bitwiseAnd(this.parameterSelection[var4Lifetime4], 16256) - var6Lifetime3);
+          this.parameterSelection[var4Lifetime4] = 16384 - (-LegacyOpenGlPostProcessManager.bitwiseAnd(this.parameterSelection[var4Lifetime4], 16256) - var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.allSoundOff(-1, var4Lifetime4);
@@ -1087,25 +1087,25 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.parameterSelection[var4Lifetime4];
           if (16384 == var7) {
-            this.pitchBendSensitivity[var4Lifetime4] = eb.bitwiseAnd(-16257, this.pitchBendSensitivity[var4Lifetime4]) + (var6Lifetime3 << 7);
+            this.pitchBendSensitivity[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(-16257, this.pitchBendSensitivity[var4Lifetime4]) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.parameterSelection[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.pitchBendSensitivity[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(this.pitchBendSensitivity[var4Lifetime4], -128);
+            this.pitchBendSensitivity[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(this.pitchBendSensitivity[var4Lifetime4], -128);
           }
         }
         if (16 == var5Lifetime4) {
-          this.sampleOffsets[var4Lifetime4] = eb.bitwiseAnd(this.sampleOffsets[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.sampleOffsets[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.sampleOffsets[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.sampleOffsets[var4Lifetime4] = var6Lifetime3 + eb.bitwiseAnd(this.sampleOffsets[var4Lifetime4], -128);
+          this.sampleOffsets[var4Lifetime4] = var6Lifetime3 + LegacyOpenGlPostProcessManager.bitwiseAnd(this.sampleOffsets[var4Lifetime4], -128);
         }
         if (81 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.resetRetriggerPhases(var4Lifetime4, 32605);
-            this.channelFlags[var4Lifetime4] = eb.bitwiseAnd(this.channelFlags[var4Lifetime4], -5);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -5);
             if (var8 != 0) {
               this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 4);
             }
@@ -1154,7 +1154,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void initializeChannelProgram(int param0, int param1, int param2) {
         this.initialPrograms[param1] = param2;
-        this.banks[param1] = eb.bitwiseAnd(-128, param2);
+        this.banks[param1] = LegacyOpenGlPostProcessManager.bitwiseAnd(-128, param2);
         if (param0 != -1823) {
           return;
         }

@@ -55,11 +55,11 @@ final class jv {
             return;
           }
           if (100 > param0) {
-            DraggableWidget.field_z = au.a(48, param2, param0);
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.a(48, param2, param0);
             return;
           }
           if (param0 > 105) {
-            DraggableWidget.field_z = au.a(48, param2, param0);
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.a(48, param2, param0);
             return;
           }
           var7 = param1;

@@ -34,7 +34,7 @@ final class hh extends IOException {
             }
             if (param3) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, gi.field_h, wq.field_b);
+              var10.fillRect(0, 0, LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -57,11 +57,11 @@ final class hh extends IOException {
               }
               var11.setColor(java.awt.Color.white);
               var11.drawString(param4, (-(param4.length() * 6) + 304) / 2, 22);
-              var10.drawImage(gf.field_a, gi.field_h / 2 - 152, -18 + wq.field_b / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(gf.field_a, LegacyOpenGlRidgedWaterEffect.field_h / 2 - 152, -18 + wq.field_b / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + gi.field_h / 2;
+              var7 = -152 + LegacyOpenGlRidgedWaterEffect.field_h / 2;
               var8 = wq.field_b / 2 - 18;
               var10.setColor(param2);
               var10.drawRect(var7, var8, 303, 33);
@@ -78,7 +78,7 @@ final class hh extends IOException {
             }
             var10.setFont(LegacyOpenGlSpriteTexture.field_s);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(LegacyOpenGlAssemblyProgram.field_d, gi.field_h / 2 - LegacyOpenGlAssemblyProgram.field_d.length() * 6 / 2, wq.field_b / 2 - 26);
+            var10.drawString(LegacyOpenGlAssemblyProgram.field_d, LegacyOpenGlRidgedWaterEffect.field_h / 2 - LegacyOpenGlAssemblyProgram.field_d.length() * 6 / 2, wq.field_b / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

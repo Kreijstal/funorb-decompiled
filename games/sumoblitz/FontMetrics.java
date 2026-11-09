@@ -102,7 +102,7 @@ final class FontMetrics {
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var14))) {
-            var16 = uo.a(true, param0.charAt(var15)) & 255;
+            var16 = HardwareReflectionEffect.a(true, param0.charAt(var15)) & 255;
             var17 = 0;
             stackIn_164_0 = ~var16;
             stackIn_164_1 = -61;
@@ -425,7 +425,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (255 & this.field_g[uo.a(true, (char) var9) & 255]);
+                  var6 = var6 + (255 & this.field_g[HardwareReflectionEffect.a(true, (char) var9) & 255]);
                   if (null != this.field_j &&
                     var5 != -1) {
                     var6 = var6 + this.field_j[var5][var9];
@@ -599,7 +599,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (this.field_g[uo.a(true, (char) var11) & 255] & 255);
+                  var7 = var7 + (this.field_g[HardwareReflectionEffect.a(true, (char) var11) & 255] & 255);
                   if (null != this.field_j &&
                     var6 != -1) {
                     var7 = var7 + this.field_j[var6][var11];
@@ -652,7 +652,7 @@ final class FontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 87) {
-            stackIn_4_0 = ni.a(param3, 1, 0, param0, param2);
+            stackIn_4_0 = FallbackShaderEffect.a(param3, 1, 0, param0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;

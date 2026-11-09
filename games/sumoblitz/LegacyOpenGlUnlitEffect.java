@@ -1,66 +1,66 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends LegacyOpenGlEffect {
+final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
     static int field_f;
     static int field_e;
 
-    final void a(byte param0, int param1, int param2) {
-        if (param0 <= 39) {
+    final void setParameters(byte guard, int parameters0, int parameters1) {
+        if (guard <= 39) {
           field_e = -61;
         }
     }
 
-    ra(LegacyOpenGlGraphicsToolkit param0) {
-        super(param0);
+    LegacyOpenGlUnlitEffect(LegacyOpenGlGraphicsToolkit owner) {
+        super(owner);
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -64) {
+    final boolean isSupported(byte guard) {
+        if (guard > -64) {
           CharSequence var3 = (CharSequence) null;
-          ra.a(-87, (CharSequence) null, 43, true);
+          LegacyOpenGlUnlitEffect.a(-87, (CharSequence) null, 43, true);
           return true;
         }
         return true;
     }
 
-    final void a(byte param0, int param1, LegacyOpenGlTexture param2) {
+    final void bindTexture(byte guard, int combineMode, LegacyOpenGlTexture texture) {
         try {
-          this.field_b.bindTexture(param0 + 45, param2);
-          if (param0 != 35) {
-            this.a((byte) -49, true);
+          this.toolkit.bindTexture(guard + 45, texture);
+          if (guard != 35) {
+            this.enable((byte) -49, true);
           }
-          this.field_b.c(param1, true);
+          this.toolkit.setTextureCombineMode(combineMode, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ra.A(" + guard + ',' + combineMode + ',' + (texture != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
-        if (param0 > -30) {
-          this.b((byte) -11);
+    final void refreshState(int guard, boolean lighting) {
+        if (guard > -30) {
+          this.isSupported((byte) -11);
         }
     }
 
-    final void a(byte param0, boolean param1) {
-        this.field_b.b(true, (byte) -74);
-        if (param0 < 33) {
-          this.a((byte) 55, 7, -88);
+    final void enable(byte guard, boolean lighting) {
+        this.toolkit.setLightingSuppressed(true, (byte) -74);
+        if (guard < 33) {
+          this.setParameters((byte) 55, 7, -88);
         }
     }
 
-    final void b(int param0) {
-        if (param0 >= -125) {
+    final void disable(int guard) {
+        if (guard >= -125) {
           field_e = 78;
-          this.field_b.b(false, (byte) -81);
+          this.toolkit.setLightingSuppressed(false, (byte) -81);
           return;
         }
-        this.field_b.b(false, (byte) -81);
+        this.toolkit.setLightingSuppressed(false, (byte) -81);
     }
 
     final static java.applet.Applet c(int param0) {
         if (param0 != 2) {
-          ra.c(-55);
+          LegacyOpenGlUnlitEffect.c(-55);
           if (OpenGlShader.field_c != null) {
             return OpenGlShader.field_c;
           }
@@ -90,7 +90,7 @@ final class ra extends LegacyOpenGlEffect {
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 != -46) {
-            ra.c(-41);
+            LegacyOpenGlUnlitEffect.c(-41);
           }
           if (2 <= param0 &&
             param0 <= 36) {

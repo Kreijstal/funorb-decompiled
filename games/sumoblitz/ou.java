@@ -86,7 +86,7 @@ final class ou extends na {
           if (this.field_e) {
             return PrimitiveType.nameIsAvailableText;
           }
-          stackIn_16_0 = au.field_e;
+          stackIn_16_0 = LegacyOpenGlReflectionEffect.field_e;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class ou extends na {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!gr.a(var4, (byte) 53)) {
+          if (!LegacyOpenGlShoreWaveWaterEffect.a(var4, (byte) 53)) {
             stackIn_3_0 = qr.field_e;
             return stackIn_3_0;
           }
@@ -212,9 +212,9 @@ final class ou extends na {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             IntIndexHashTable.field_c = new String[var4];
-            eb.field_a = new int[var4];
+            LegacyOpenGlPostProcessManager.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              eb.field_a[var5] = -1;
+              LegacyOpenGlPostProcessManager.field_a[var5] = -1;
             }
             jo.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -222,18 +222,18 @@ final class ou extends na {
             }
             IntIndexHashTable.field_c[-3 + var4] = "";
             IntIndexHashTable.field_c[-2 + var4] = AudioServiceThread.membersText;
-            eb.field_a[-2 + var4] = 0;
+            LegacyOpenGlPostProcessManager.field_a[-2 + var4] = 0;
             jo.field_b[0] = 4;
             IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
-            eb.field_a[-1 + var4] = 1;
+            LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
-            eb.field_a = new int[var4];
+            LegacyOpenGlPostProcessManager.field_a = new int[var4];
             IntIndexHashTable.field_c = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              eb.field_a[var5] = -1;
+              LegacyOpenGlPostProcessManager.field_a[var5] = -1;
             }
             jo.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -241,20 +241,20 @@ final class ou extends na {
             }
             IntIndexHashTable.field_c[-2 + var4] = "";
             IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
-            eb.field_a[var4 - 1] = 0;
+            LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 0;
             jo.field_b[0] = 5;
           } else if (DroneChargeParticle.field_s != 2) {
             if (DroneChargeParticle.field_s == 3) {
               if (!lt.field_m.field_f) {
                 var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
               } else {
-                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ni.field_f);
+                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, FallbackShaderEffect.field_f);
               }
               var4 = var3_int + 2;
-              eb.field_a = new int[var4];
+              LegacyOpenGlPostProcessManager.field_a = new int[var4];
               IntIndexHashTable.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                eb.field_a[var5] = -1;
+                LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -262,15 +262,15 @@ final class ou extends na {
               }
               IntIndexHashTable.field_c[-2 + var4] = "";
               IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
-              eb.field_a[-1 + var4] = 0;
+              LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               IntIndexHashTable.field_c = new String[var4];
-              eb.field_a = new int[var4];
+              LegacyOpenGlPostProcessManager.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                eb.field_a[var5] = -1;
+                LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -278,7 +278,7 @@ final class ou extends na {
               }
               IntIndexHashTable.field_c[-2 + var4] = "";
               IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
-              eb.field_a[var4 - 1] = 0;
+              LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 0;
               jo.field_b[0] = 5;
             } else {
               if (DroneChargeParticle.field_s != 5) {
@@ -286,10 +286,10 @@ final class ou extends na {
               }
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
-              eb.field_a = new int[var4];
+              LegacyOpenGlPostProcessManager.field_a = new int[var4];
               IntIndexHashTable.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                eb.field_a[var5] = -1;
+                LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
               jo.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -297,10 +297,10 @@ final class ou extends na {
               }
               IntIndexHashTable.field_c[-3 + var4] = "";
               IntIndexHashTable.field_c[var4 - 2] = FullscreenMembershipDialog.tryAgainText;
-              eb.field_a[-2 + var4] = 0;
+              LegacyOpenGlPostProcessManager.field_a[-2 + var4] = 0;
               jo.field_b[0] = 3;
               IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
-              eb.field_a[var4 - 1] = 1;
+              LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 1;
               jo.field_b[1] = 5;
             }
           } else {
@@ -350,17 +350,17 @@ final class ou extends na {
             var6 = stackIn_34_0;
             var7 = var6 + 7 + var5;
             IntIndexHashTable.field_c = new String[var7];
-            eb.field_a = new int[var7];
+            LegacyOpenGlPostProcessManager.field_a = new int[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              eb.field_a[var8] = -1;
+              LegacyOpenGlPostProcessManager.field_a[var8] = -1;
             }
             jo.field_b = new int[2];
             IntIndexHashTable.field_c[0] = fd.clickText;
             IntIndexHashTable.field_c[1] = km.acceptText;
-            eb.field_a[1] = 0;
+            LegacyOpenGlPostProcessManager.field_a[1] = 0;
             jo.field_b[1] = 2;
             jo.field_b[0] = 5;
-            eb.field_a[3] = 1;
+            LegacyOpenGlPostProcessManager.field_a[3] = 1;
             IntIndexHashTable.field_c[5] = "";
             IntIndexHashTable.field_c[3] = up.cancelText;
             IntIndexHashTable.field_c[2] = ws.toKeepFullscreenOrText;
@@ -376,7 +376,7 @@ final class ou extends na {
               stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             }
             IntIndexHashTable.field_c[6 + var5] = null;
-            eb.field_a[var5 + 6] = -2;
+            LegacyOpenGlPostProcessManager.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = IntIndexHashTable.field_c;
               stackIn_46_1 = var5 + (7 + var8Lifetime3);
@@ -396,7 +396,7 @@ final class ou extends na {
           for (var4Lifetime1 = 0; var4Lifetime1 < IntIndexHashTable.field_c.length; var4Lifetime1++) {
             stackIn_90_0 = -27;
             stackIn_90_1 = IntIndexHashTable.field_c[var4Lifetime1];
-            stackIn_91_2 = !(eb.field_a[var4Lifetime1] < 0);
+            stackIn_91_2 = !(LegacyOpenGlPostProcessManager.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -426,8 +426,8 @@ final class ou extends na {
           RenderPresentationException.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {
             stackIn_116_0 = RenderPresentationException.field_d;
-            if (0 <= eb.field_a[var4Lifetime2]) {
-              stackIn_117_1 = ga.field_h;
+            if (0 <= LegacyOpenGlPostProcessManager.field_a[var4Lifetime2]) {
+              stackIn_117_1 = LegacyOpenGlUnderwaterEffect.field_h;
             } else {
               stackIn_117_1 = GameClientShell.field_t;
             }
@@ -435,23 +435,23 @@ final class ou extends na {
           }
           hh.field_f = -(RenderPresentationException.field_d >> 1) + nv.field_b;
           var4Lifetime3 = -96 % ((param2 - 48) / 57);
-          ib.field_g = new int[IntIndexHashTable.field_c.length][];
+          HardwareAnimatedWaterEffect.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = hh.field_f;
           while (IntIndexHashTable.field_c.length > var5Lifetime3) {
-            var7Lifetime2 = eb.field_a[var5Lifetime3];
+            var7Lifetime2 = LegacyOpenGlPostProcessManager.field_a[var5Lifetime3];
             if (var7Lifetime2 < 0) {
               var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
               var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, IntIndexHashTable.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
               var6Lifetime1 = var6Lifetime1 + qc.field_a;
-              ib.field_g[var5Lifetime3] = new int[4];
-              ib.field_g[var5Lifetime3][0] = var9 - dw.field_b;
-              ib.field_g[var5Lifetime3][1] = var6Lifetime1;
-              ib.field_g[var5Lifetime3][2] = (dw.field_b << 1) + var8Lifetime1;
-              var6Lifetime1 = var6Lifetime1 + (qc.field_a + (TextLayout.field_b << 1) + ga.field_h);
-              ib.field_g[var5Lifetime3][3] = (TextLayout.field_b << 1) + ga.field_h;
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3] = new int[4];
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][0] = var9 - dw.field_b;
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][1] = var6Lifetime1;
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][2] = (dw.field_b << 1) + var8Lifetime1;
+              var6Lifetime1 = var6Lifetime1 + (qc.field_a + (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h);
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][3] = (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h;
             }
             var5Lifetime3++;
           }

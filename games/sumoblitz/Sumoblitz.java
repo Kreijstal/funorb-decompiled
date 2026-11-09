@@ -30,12 +30,12 @@ public final class Sumoblitz extends GameClientShell {
               param2 <= 105) {
               eg.field_l = qr.a(args, 8192);
               if (var5 != 0) {
-                eg.field_l = au.a(40, param3, param2);
+                eg.field_l = LegacyOpenGlReflectionEffect.a(40, param3, param2);
                 stackIn_20_0 = !(13 <= lq.field_d);
                 eg.field_l = LegacyOpenGlEffect.a(stackIn_20_0, 8192);
               }
             } else {
-              eg.field_l = au.a(40, param3, param2);
+              eg.field_l = LegacyOpenGlReflectionEffect.a(40, param3, param2);
               if (var5 != 0) {
                 stackIn_20_0 = !(13 <= lq.field_d);
                 eg.field_l = LegacyOpenGlEffect.a(stackIn_20_0, 8192);
@@ -113,8 +113,8 @@ public final class Sumoblitz extends GameClientShell {
               pl.field_v.removeFirst(9);
             }
           }
-          if (0 != ra.field_e) {
-            if (ra.field_e == 1) {
+          if (0 != LegacyOpenGlUnlitEffect.field_e) {
+            if (LegacyOpenGlUnlitEffect.field_e == 1) {
               eh.field_a = eh.field_a + 1;
               if (eh.field_a != 30) {
                 return;
@@ -127,12 +127,12 @@ public final class Sumoblitz extends GameClientShell {
               } else {
                 wn.a(true);
               }
-              ra.field_e = 2;
+              LegacyOpenGlUnlitEffect.field_e = 2;
               if (var3 == 0) {
                 return;
               }
             }
-            if (2 == ra.field_e) {
+            if (2 == LegacyOpenGlUnlitEffect.field_e) {
               boolean decompiledSharedTail0 = !(vs.b((byte) 9));
               if (!decompiledSharedTail0) {
                 nj.field_b = qw.field_b;
@@ -149,7 +149,7 @@ public final class Sumoblitz extends GameClientShell {
                   vb.a((byte) 122, false);
                 }
               }
-              ra.field_e = 3;
+              LegacyOpenGlUnlitEffect.field_e = 3;
               OpenGlCubeTexture.field_k = nj.field_b;
               eh.field_a = 29;
               if (var3 == 0) {
@@ -160,7 +160,7 @@ public final class Sumoblitz extends GameClientShell {
             if (eh.field_a != 0) {
               return;
             }
-            ra.field_e = 0;
+            LegacyOpenGlUnlitEffect.field_e = 0;
             if (var3 == 0) {
               return;
             }
@@ -295,7 +295,7 @@ public final class Sumoblitz extends GameClientShell {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
               OpenGlUnderwaterEffect.d((byte) -7);
             }
-            if (param0 != ra.field_e) {
+            if (param0 != LegacyOpenGlUnlitEffect.field_e) {
               var4_intLifetime1 = 256 * eh.field_a / 30;
               if (var4_intLifetime1 > 0) {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var4_intLifetime1);
@@ -352,7 +352,7 @@ public final class Sumoblitz extends GameClientShell {
             }
             boolean decompiledFrameRemainder0 = true;
             if (oj.a(false)) {
-              var5_intLifetime1 = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+              var5_intLifetime1 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
               var6Lifetime1 = 0 * (wq.field_b - SoftwareRasterizer.height) / 2;
               cf.a(var5_intLifetime1, var6Lifetime1, 59);
               SoftwareTransform3D.a(false, (byte) -122);
@@ -364,7 +364,7 @@ public final class Sumoblitz extends GameClientShell {
                 if (!ws.b((byte) 52)) {
                   this.field_F = false;
                   if (var10 != 0) {
-                    var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + gi.field_h) / 2;
+                    var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                     var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                     VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                     SoftwareTransform3D.a(false, param0 ^ 121);
@@ -372,7 +372,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                 }
               } else {
-                var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + gi.field_h) / 2;
+                var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                 var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                 VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                 SoftwareTransform3D.a(false, param0 ^ 121);
@@ -386,7 +386,7 @@ public final class Sumoblitz extends GameClientShell {
                 var6Lifetime2 = this.field_K.field_u;
                 var5_intLifetime2 = this.field_K.field_x;
               }
-              var7Lifetime1 = (-var5_intLifetime2 + gi.field_h) / 2;
+              var7Lifetime1 = (-var5_intLifetime2 + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
               var8 = (wq.field_b - var6Lifetime2) / 2;
               if (oj.a(false) &&
                 this.field_K != null) {
@@ -395,7 +395,7 @@ public final class Sumoblitz extends GameClientShell {
               }
               var9 = wq.a(var3, (byte) 18);
               var9.a((byte) 111, var8, var8 + var6Lifetime2, var7Lifetime1, var7Lifetime1 + var5_intLifetime2);
-              var7Lifetime1Lifetime1 = (-SoftwareRasterizer.width + gi.field_h) / 2;
+              var7Lifetime1Lifetime1 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
               var8Lifetime1 = (wq.field_b - SoftwareRasterizer.height) / 2;
               var3.drawPixels(var7Lifetime1Lifetime1, var8Lifetime1, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
               var9.a(param0 + 29709);
@@ -521,7 +521,7 @@ public final class Sumoblitz extends GameClientShell {
             }
             if (decompiledFrameRemainder0) {
               if (so.a((byte) 107)) {
-                if (0 == ra.field_e) {
+                if (0 == LegacyOpenGlUnlitEffect.field_e) {
                   var2_int = kt.a(-38);
                   switch (var2_int) {
                     case 2:
@@ -561,7 +561,7 @@ public final class Sumoblitz extends GameClientShell {
                       LegacyOpenGlNormalMapGenerator.c((byte) 49);
                     }
                     if (2 == var2_int) {
-                      jl.a(ra.c(2), false);
+                      jl.a(LegacyOpenGlUnlitEffect.c(2), false);
                     }
                   }
                   decompiledSharedTail0 = (var4 != 0);
@@ -755,7 +755,7 @@ public final class Sumoblitz extends GameClientShell {
                                             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                                             OpenGlUnderwaterEffect.d((byte) -7);
                                           }
-                                          if (0 != ra.field_e) {
+                                          if (0 != LegacyOpenGlUnlitEffect.field_e) {
                                             var5_int = eh.field_a * 256 / 30;
                                             if (var5_int > 0) {
                                               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
@@ -816,7 +816,7 @@ public final class Sumoblitz extends GameClientShell {
                                           }
                                           boolean decompiledSharedTail8 = !(oj.a(false));
                                           if (!decompiledSharedTail8) {
-                                            var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+                                            var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                                             var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
                                             cf.a(var6_int, var7, 76);
                                             SoftwareTransform3D.a(false, (byte) -122);
@@ -825,7 +825,7 @@ public final class Sumoblitz extends GameClientShell {
                                           }
                                           if (decompiledSharedTail8) {
                                             if (sj.a(-126)) {
-                                              var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+                                              var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                                               var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                                               VertexAttribute.a(var6_int, -45, var7);
                                               SoftwareTransform3D.a(false, -66);
@@ -847,7 +847,7 @@ public final class Sumoblitz extends GameClientShell {
                                               var6_int = this.field_K.field_x;
                                               var7 = this.field_K.field_u;
                                             }
-                                            var8 = (-var6_int + gi.field_h) / 2;
+                                            var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                                             var9 = (-var7 + wq.field_b) / 2;
                                             if (oj.a(false) &&
                                               this.field_K != null) {
@@ -857,7 +857,7 @@ public final class Sumoblitz extends GameClientShell {
                                             var10 = wq.a(var4, (byte) 126);
                                             var10.a((byte) 91, var9, var7 + var9, var8, var6_int + var8);
                                             var9 = (-SoftwareRasterizer.height + wq.field_b) / 2;
-                                            var8 = (-SoftwareRasterizer.width + gi.field_h) / 2;
+                                            var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                                             var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
                                             var10.a(29709);
                                           }
@@ -875,7 +875,7 @@ public final class Sumoblitz extends GameClientShell {
                                   if (!param0) {
                                     return false;
                                   }
-                                  eb.field_b = new SoundCache(SecondaryNodeDeque.field_d, er.field_c);
+                                  LegacyOpenGlPostProcessManager.field_b = new SoundCache(SecondaryNodeDeque.field_d, er.field_c);
                                   TurbulenceNoise3D.loadGameSoundEffects((byte) -62, SecondaryNodeDeque.field_d);
                                   oq.a(-24233);
                                   SecondaryNodeDeque.field_d = null;
@@ -888,10 +888,10 @@ public final class Sumoblitz extends GameClientShell {
                               NameSuggestionsPanel.a(20, 55.0f, pt.a("", dq.field_Z, ToolkitRasterBuffer.waitingForFontsText, true, ow.loadingFontsText));
                               return false;
                             }
-                            NameSuggestionsPanel.a(20, 45.0f, pt.a("", LegacyOpenGlRenderbuffer.field_v, ProgressDialog.waitingForGraphicsText, true, es.loadingGraphicsText));
+                            NameSuggestionsPanel.a(20, 45.0f, pt.a("", LegacyOpenGlRenderbuffer.field_v, ProgressDialog.waitingForGraphicsText, true, LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText));
                             return false;
                           }
-                          NameSuggestionsPanel.a(20, 40.0f, pt.a("", ForceFieldRingEffect.field_s, ve.waitingForMusicText, true, MessageDialog.loadingMusicText));
+                          NameSuggestionsPanel.a(20, 40.0f, pt.a("", ForceFieldRingEffect.field_s, LegacyOpenGlPostProcessEffect.waitingForMusicText, true, MessageDialog.loadingMusicText));
                           return false;
                         }
                         NameSuggestionsPanel.a(20, 30.0f, ProxySocketConnector.a(jf.waitingForInstrumentsText, (byte) 85, 0, gg.field_r, ArchiveIndex.loadingInstrumentsText));
@@ -909,7 +909,7 @@ public final class Sumoblitz extends GameClientShell {
                 NameSuggestionsPanel.a(20, 5.0f, pt.a("arialbold14", vb.field_J, ToolkitRasterBuffer.waitingForFontsText, true, ow.loadingFontsText));
                 return false;
               }
-              NameSuggestionsPanel.a(20, 3.0f, pt.a("basic", pi.field_c, ProgressDialog.waitingForGraphicsText, true, es.loadingGraphicsText));
+              NameSuggestionsPanel.a(20, 3.0f, pt.a("basic", pi.field_c, ProgressDialog.waitingForGraphicsText, true, LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText));
               return false;
             }
             if (null != er.field_c) {
@@ -956,7 +956,7 @@ public final class Sumoblitz extends GameClientShell {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
-                    if (ra.field_e != 0) {
+                    if (LegacyOpenGlUnlitEffect.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
                       if (var5_int > 0) {
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
@@ -1014,7 +1014,7 @@ public final class Sumoblitz extends GameClientShell {
                     stackIn_276_0 = !param1;
                     boolean decompiledFrameRemainder4 = true;
                     if (oj.a(stackIn_276_0)) {
-                      var6_int = 0 * (-SoftwareRasterizer.width + gi.field_h) / 2;
+                      var6_int = 0 * (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var7 = 0 * (-SoftwareRasterizer.height + wq.field_b) / 2;
                       cf.a(var6_int, var7, 126);
                       SoftwareTransform3D.a(false, (byte) -122);
@@ -1026,7 +1026,7 @@ public final class Sumoblitz extends GameClientShell {
                         if (!ws.b((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
-                            var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+                            var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                             var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
                             VertexAttribute.a(var6_int, -66, var7);
                             SoftwareTransform3D.a(false, -124);
@@ -1034,7 +1034,7 @@ public final class Sumoblitz extends GameClientShell {
                           }
                         }
                       } else {
-                        var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+                        var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                         var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
                         VertexAttribute.a(var6_int, -66, var7);
                         SoftwareTransform3D.a(false, -124);
@@ -1048,7 +1048,7 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = this.field_K.field_x;
                         var7 = this.field_K.field_u;
                       }
-                      var8 = (-var6_int + gi.field_h) / 2;
+                      var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var9 = (-var7 + wq.field_b) / 2;
                       if (oj.a(false) &&
                         null != this.field_K) {
@@ -1058,7 +1058,7 @@ public final class Sumoblitz extends GameClientShell {
                       var10 = wq.a(var4, (byte) 70);
                       var10.a((byte) -88, var9, var7 + var9, var8, var6_int + var8);
                       var9 = (-SoftwareRasterizer.height + wq.field_b) / 2;
-                      var8 = (-SoftwareRasterizer.width + gi.field_h) / 2;
+                      var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
                       var10.a(29709);
                     }
@@ -1122,7 +1122,7 @@ public final class Sumoblitz extends GameClientShell {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
-                    if (ra.field_e != 0) {
+                    if (LegacyOpenGlUnlitEffect.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
                       if (0 < var5_int) {
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
@@ -1179,7 +1179,7 @@ public final class Sumoblitz extends GameClientShell {
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (oj.a(false)) {
-                      var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
+                      var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                       cf.a(var6_int, var7, 86);
                       SoftwareTransform3D.a(false, (byte) -122);
@@ -1191,7 +1191,7 @@ public final class Sumoblitz extends GameClientShell {
                         if (!ws.b((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
-                            var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
+                            var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                             var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                             VertexAttribute.a(var6_int, -82, var7);
                             SoftwareTransform3D.a(false, -100);
@@ -1199,7 +1199,7 @@ public final class Sumoblitz extends GameClientShell {
                           }
                         }
                       } else {
-                        var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
+                        var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                         var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                         VertexAttribute.a(var6_int, -82, var7);
                         SoftwareTransform3D.a(false, -100);
@@ -1213,7 +1213,7 @@ public final class Sumoblitz extends GameClientShell {
                         var6_int = this.field_K.field_x;
                         var7 = this.field_K.field_u;
                       }
-                      var8 = (gi.field_h - var6_int) / 2;
+                      var8 = (LegacyOpenGlRidgedWaterEffect.field_h - var6_int) / 2;
                       var9 = (-var7 + wq.field_b) / 2;
                       if (oj.a(false) &&
                         this.field_K != null) {
@@ -1223,7 +1223,7 @@ public final class Sumoblitz extends GameClientShell {
                       var10 = wq.a(var4, (byte) 28);
                       var10.a((byte) 127, var9, var7 + var9, var8, var8 + var6_int);
                       var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
-                      var8 = (-SoftwareRasterizer.width + gi.field_h) / 2;
+                      var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
                       var10.a(29709);
                     }
@@ -1237,7 +1237,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                 }
               }
-              au.a(-1509, ForceFieldRingEffect.field_s);
+              LegacyOpenGlReflectionEffect.a(-1509, ForceFieldRingEffect.field_s);
               ForceFieldRingEffect.field_s = null;
               VertexAttribute.b(0);
               return false;
@@ -1299,7 +1299,7 @@ public final class Sumoblitz extends GameClientShell {
                         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                         OpenGlUnderwaterEffect.d((byte) -7);
                       }
-                      if (ra.field_e != 0) {
+                      if (LegacyOpenGlUnlitEffect.field_e != 0) {
                         var5_int = 256 * eh.field_a / 30;
                         if (var5_int > 0) {
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
@@ -1360,7 +1360,7 @@ public final class Sumoblitz extends GameClientShell {
                       }
                       boolean decompiledSharedTail2 = !(oj.a(false));
                       if (!decompiledSharedTail2) {
-                        var6_int = (gi.field_h - SoftwareRasterizer.width) * 0 / 2;
+                        var6_int = (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) * 0 / 2;
                         var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
                         cf.a(var6_int, var7, -44);
                         SoftwareTransform3D.a(false, (byte) -122);
@@ -1369,7 +1369,7 @@ public final class Sumoblitz extends GameClientShell {
                       }
                       if (decompiledSharedTail2) {
                         if (sj.a(-61)) {
-                          var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
+                          var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                           var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                           VertexAttribute.a(var6_int, -95, var7);
                           SoftwareTransform3D.a(false, -109);
@@ -1391,7 +1391,7 @@ public final class Sumoblitz extends GameClientShell {
                           var7 = this.field_K.field_u;
                           var6_int = this.field_K.field_x;
                         }
-                        var8 = (-var6_int + gi.field_h) / 2;
+                        var8 = (-var6_int + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                         var9 = (-var7 + wq.field_b) / 2;
                         if (oj.a(false) &&
                           this.field_K != null) {
@@ -1401,7 +1401,7 @@ public final class Sumoblitz extends GameClientShell {
                         var10 = wq.a(var4, (byte) 83);
                         var10.a((byte) 71, var9, var9 + var7, var8, var8 + var6_int);
                         var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
-                        var8 = (gi.field_h - SoftwareRasterizer.width) / 2;
+                        var8 = (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                         var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
                         var10.a(29709);
                       }
@@ -1429,7 +1429,7 @@ public final class Sumoblitz extends GameClientShell {
                 var3_int = 0;
                 while (true) {
                   if (13 > var3_int) {
-                    LegacyOpenGlEffectManager.field_g[var3_int] = ga.createMenuScreen(var3_int, (byte) -100);
+                    LegacyOpenGlEffectManager.field_g[var3_int] = LegacyOpenGlUnderwaterEffect.createMenuScreen(var3_int, (byte) -100);
                     var3_int++;
                     if (var11 == 0) {
                       continue;
@@ -1498,7 +1498,7 @@ public final class Sumoblitz extends GameClientShell {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                     OpenGlUnderwaterEffect.d((byte) -7);
                   }
-                  if (ra.field_e != 0) {
+                  if (LegacyOpenGlUnlitEffect.field_e != 0) {
                     var5_int = eh.field_a * 256 / 30;
                     if (var5_int > 0) {
                       SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
@@ -1555,7 +1555,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                   boolean decompiledSharedTail0 = !(oj.a(false));
                   if (!decompiledSharedTail0) {
-                    var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
+                    var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                     var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
                     cf.a(var6_int, var7, -105);
                     SoftwareTransform3D.a(false, (byte) -122);
@@ -1564,7 +1564,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                   if (decompiledSharedTail0) {
                     if (sj.a(-67)) {
-                      var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
+                      var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
                       VertexAttribute.a(var6_int, -53, var7);
                       SoftwareTransform3D.a(false, -101);
@@ -1586,7 +1586,7 @@ public final class Sumoblitz extends GameClientShell {
                       var6_int = this.field_K.field_x;
                       var7 = this.field_K.field_u;
                     }
-                    var8 = (gi.field_h - var6_int) / 2;
+                    var8 = (LegacyOpenGlRidgedWaterEffect.field_h - var6_int) / 2;
                     var9 = (wq.field_b - var7) / 2;
                     if (oj.a(false) &&
                       null != this.field_K) {
@@ -1596,7 +1596,7 @@ public final class Sumoblitz extends GameClientShell {
                     var10 = wq.a(var4, (byte) 29);
                     var10.a((byte) 61, var9, var9 + var7, var8, var6_int + var8);
                     var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
-                    var8 = (-SoftwareRasterizer.width + gi.field_h) / 2;
+                    var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                     var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
                     var10.a(29709);
                   }
@@ -1839,8 +1839,8 @@ public final class Sumoblitz extends GameClientShell {
           LegacyOpenGlGraphicsToolkit.releaseStatics((byte) 66);
           kk.releaseStatics((byte) -24);
           LegacyOpenGlEffectManager.releaseStatics(255);
-          eb.releaseStatics((byte) 0);
-          gq.releaseStatics(false);
+          LegacyOpenGlPostProcessManager.releaseStatics((byte) 0);
+          LegacyOpenGlFloatPostProcessEffect.releaseStatics(false);
           ic.releaseStatics(106);
           LegacyOpenGlNormalMapGenerator.releaseStatics((byte) -69);
           cm.releaseStatics(0);
@@ -1892,7 +1892,7 @@ public final class Sumoblitz extends GameClientShell {
           r.releaseStatics(33);
           LegacyOpenGlShaderProgram.releaseStatics((byte) -62);
           LegacyOpenGlTexture3D.releaseStatics(-21551);
-          ve.releaseStatics((byte) -58);
+          LegacyOpenGlPostProcessEffect.releaseStatics((byte) -58);
           LegacyOpenGlEffect.releaseStatics((byte) -76);
           LegacyWaterTextureResources.releaseStatics((byte) 60);
           lf.a(1821625704);
@@ -1907,17 +1907,17 @@ public final class Sumoblitz extends GameClientShell {
           hn.releaseStatics(true);
           kb.releaseStatics(true);
           sl.releaseStatics(-124);
-          wt.releaseStatics((byte) -38);
-          es.releaseStatics(4);
+          LegacyOpenGlSpecularEffect.releaseStatics((byte) -38);
+          LegacyOpenGlTurbulentTextureEffect.releaseStatics(4);
           tt.releaseStatics(true);
           mo.releaseStatics(2);
           LegacyOpenGlAssemblyProgram.b(429166529);
-          gi.releaseStatics(8192);
+          LegacyOpenGlRidgedWaterEffect.releaseStatics(8192);
           LegacyOpenGlTexture1D.releaseStatics(7064);
-          au.releaseStatics((byte) -127);
-          ga.releaseStatics(true);
-          lv.releaseStatics(3);
-          gr.releaseStatics((byte) -19);
+          LegacyOpenGlReflectionEffect.releaseStatics((byte) -127);
+          LegacyOpenGlUnderwaterEffect.releaseStatics(true);
+          LegacyOpenGlEnvironmentWaterEffect.releaseStatics(3);
+          LegacyOpenGlShoreWaveWaterEffect.releaseStatics((byte) -19);
           LegacyOpenGlShader.releaseStatics(-25140);
           ei.releaseStatics(-124);
           TextureFilter.releaseStatics(0);
@@ -1925,10 +1925,10 @@ public final class Sumoblitz extends GameClientShell {
           jm.a(-23787);
           PerlinNoiseSliceGenerator.releaseStatics((byte) -69);
           pu.releaseStatics(1);
-          ng.releaseStatics(0);
-          ib.e(1);
-          uo.releaseStatics((byte) 79);
-          ni.d(false);
+          HardwareSpecularEffect.releaseStatics(0);
+          HardwareAnimatedWaterEffect.e(1);
+          HardwareReflectionEffect.releaseStatics((byte) 79);
+          FallbackShaderEffect.d(false);
           RidgedNoise3D.releaseStatics((byte) 30);
           FixedPointPerlinNoise3D.releaseStatics((byte) 101);
           TurbulenceNoise3D.releaseStatics(param0);

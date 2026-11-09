@@ -48,7 +48,7 @@ final class cm extends ToolkitSprite {
           return;
         }
         this.field_j.bindTexture(98, this.field_g);
-        this.field_j.c(colorMode, true);
+        this.field_j.setTextureCombineMode(colorMode, true);
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.maxV);
         jaggl.OpenGL.glVertex2i(x, y);
@@ -106,7 +106,7 @@ final class cm extends ToolkitSprite {
         if (!this.field_e) {
           if (this.field_d == null) {
             this.field_j.bindTexture(127, this.field_g);
-            this.field_j.c(colorMode, true);
+            this.field_j.setTextureCombineMode(colorMode, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.maxV);
             jaggl.OpenGL.glVertex2i(x, y);
@@ -146,7 +146,7 @@ final class cm extends ToolkitSprite {
         float var14 = (float)this.field_g.spriteHeight * var10 + var12;
         if (null == this.field_d) {
           this.field_j.bindTexture(39, this.field_g);
-          this.field_j.c(colorMode, true);
+          this.field_j.setTextureCombineMode(colorMode, true);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.maxV);
           jaggl.OpenGL.glVertex2f(var11, var12);
@@ -211,12 +211,12 @@ final class cm extends ToolkitSprite {
     }
 
     private final void a(int param0) {
-        this.field_j.g(1, 119);
+        this.field_j.setActiveTextureUnit(1, 119);
         this.field_j.bindTexture(24, (LegacyOpenGlTexture) null);
-        this.field_j.a(param0 ^ 20685, 8448, 8448);
+        this.field_j.setTextureCombineOperations(param0 ^ 20685, 8448, 8448);
         this.field_j.b(34168, 768, 1, -128);
         this.field_j.a(112, 0, 5890, 770);
-        this.field_j.g(param0, 112);
+        this.field_j.setActiveTextureUnit(param0, 112);
         this.field_j.b(34168, 768, 1, 92);
     }
 
@@ -265,7 +265,7 @@ final class cm extends ToolkitSprite {
         this.field_j.q(-70);
         this.field_j.bindTexture(110, this.field_g);
         this.field_j.c(25189, blendMode);
-        this.field_j.c(colorMode, true);
+        this.field_j.setTextureCombineMode(colorMode, true);
         jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.maxV);
@@ -296,16 +296,16 @@ final class cm extends ToolkitSprite {
 
     private final void b(int param0, int param1) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        this.field_j.g(1, 115);
+        this.field_j.setActiveTextureUnit(1, 115);
         this.field_j.bindTexture(74, this.field_g);
-        this.field_j.a(param0 ^ 18437, 7681, this.field_j.b(param1, (byte) -14));
+        this.field_j.setTextureCombineOperations(param0 ^ 18437, 7681, this.field_j.b(param1, (byte) -14));
         this.field_j.b(34167, 768, 1, -120);
         this.field_j.a(113, 0, 34168, 770);
-        this.field_j.g(0, 100);
+        this.field_j.setActiveTextureUnit(0, 100);
         if (param0 != 6344) {
           this.draw(114, -109, -63, -80, 49);
           this.field_j.bindTexture(param0 ^ 6275, this.field_d);
-          this.field_j.a(20685, 7681, 34479);
+          this.field_j.setTextureCombineOperations(20685, 7681, 34479);
           this.field_j.b(34166, 768, 1, param0 - 6465);
           if (this.field_c == 0) {
             this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
@@ -326,7 +326,7 @@ final class cm extends ToolkitSprite {
           return;
         }
         this.field_j.bindTexture(param0 ^ 6275, this.field_d);
-        this.field_j.a(20685, 7681, 34479);
+        this.field_j.setTextureCombineOperations(20685, 7681, 34479);
         this.field_j.b(34166, 768, 1, param0 - 6465);
         if (this.field_c == 0) {
           this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);

@@ -61,7 +61,7 @@ abstract class RasterBuffer {
           } else {
             SocketJs5Client.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }
-          SocketJs5Client.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
+          SocketJs5Client.field_s = HardwareReflectionEffect.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
         }
         hc.field_c.n(param0 ^ -5);
         SoftwareRenderBuffer.a(5178);

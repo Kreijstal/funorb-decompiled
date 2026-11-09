@@ -7,32 +7,32 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     private WaterTextureResources field_h;
     private DirectXGraphicsToolkit field_f;
 
-    final void c(boolean param0) {
+    final void disable(boolean guard) {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
-        this.field_b.a(jq.TEXTURE, 0, 0);
-        if (!param0) {
-          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
-          this.field_b.a(mm.CONSTANT, 2, 0);
-          this.field_b.b(0, true);
+        this.toolkit.a(jq.TEXTURE, 0, 0);
+        if (!guard) {
+          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
+          this.toolkit.a(mm.CONSTANT, 2, 0);
+          this.toolkit.b(0, true);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
         jagdx.IDirect3DDevice var7 = null;
         float var5_float = 0.0f;
         int var5 = 0;
         float var5_floatLifetime1;
         int var5Lifetime1;
-        if (param0 == 34023) {
+        if (guard == 34023) {
           var7 = this.field_f.field_Cc;
           if (this.field_h.useVolumeTextures) {
-            var5_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-            this.field_b.a(this.field_h.animatedVolume, 114);
+            var5_float = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
+            this.toolkit.a(this.field_h.animatedVolume, 114);
             var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
-            var5 = 16 * (this.field_b.field_kc % 4000) / 4000;
-            this.field_b.a(this.field_h.animatedSlices[var5], param0 ^ 33939);
+            var5 = 16 * (this.toolkit.field_kc % 4000) / 4000;
+            this.toolkit.a(this.field_h.animatedSlices[var5], guard ^ 33939);
             var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
@@ -40,32 +40,32 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.field_f = (DirectXGraphicsToolkit) null;
         jagdx.IDirect3DDevice var6 = this.field_f.field_Cc;
         if (this.field_h.useVolumeTextures) {
-          var5_floatLifetime1 = (float)(this.field_b.field_kc % 4000) / 4000.0f;
-          this.field_b.a(this.field_h.animatedVolume, 114);
+          var5_floatLifetime1 = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
+          this.toolkit.a(this.field_h.animatedVolume, 114);
           var6.b(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
-          var5Lifetime1 = 16 * (this.field_b.field_kc % 4000) / 4000;
-          this.field_b.a(this.field_h.animatedSlices[var5Lifetime1], param0 ^ 33939);
+          var5Lifetime1 = 16 * (this.toolkit.field_kc % 4000) / 4000;
+          this.toolkit.a(this.field_h.animatedSlices[var5Lifetime1], guard ^ 33939);
           var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 <= -8) {
+    final boolean isSupported(byte guard) {
+        if (guard <= -8) {
           return null != this.field_e ? true : false;
         }
-        this.c(false);
+        this.disable(false);
         return null != this.field_e ? true : false;
     }
 
-    final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, LoginForm.ADD, OpenGlBuffer.INTERPOLATE);
-        if (param1 >= -71) {
+    final void refreshState(boolean lighting, byte guard) {
+        this.toolkit.a((byte) -83, LoginForm.ADD, OpenGlBuffer.INTERPOLATE);
+        if (guard >= -71) {
           field_g = (float[]) null;
         }
     }
 
-    final void c(byte param0) {
+    final void updateViewUniforms(byte guard) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (this.field_e != null) {
@@ -73,21 +73,21 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           var3 = this.field_f.k((byte) 126);
           var2.a(0, var3.writeRowMajor4x4(0, field_g));
         }
-        if (param0 > 0) {
+        if (guard > 0) {
           return;
         }
-        this.a((byte) 126);
+        this.updateTextureUniforms((byte) 126);
     }
 
-    final void a(byte param0) {
+    final void updateTextureUniforms(byte guard) {
         jagdx.IDirect3DDevice var7 = null;
         AffineTransform3D var6 = null;
         jagdx.IDirect3DDevice var5 = null;
         AffineTransform3D var4 = null;
-        if (param0 < -47) {
+        if (guard < -47) {
           if (this.field_e != null) {
             var7 = this.field_f.field_Cc;
-            var6 = this.field_b.H(26453);
+            var6 = this.toolkit.H(26453);
             var6.writeFirstTwoRows(field_g, (byte) -37);
             field_g[2] = field_g[2] * 0.25f;
             field_g[3] = field_g[3] * 0.25f;
@@ -101,10 +101,10 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.c(false);
+        this.disable(false);
         if (this.field_e != null) {
           var5 = this.field_f.field_Cc;
-          var4 = this.field_b.H(26453);
+          var4 = this.toolkit.H(26453);
           var4.writeFirstTwoRows(field_g, (byte) -37);
           field_g[2] = field_g[2] * 0.25f;
           field_g[3] = field_g[3] * 0.25f;
@@ -118,8 +118,8 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
-        if (param1 != 18834) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
+        if (guard != 18834) {
           this.field_f = (DirectXGraphicsToolkit) null;
         }
     }
@@ -137,19 +137,19 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void b(boolean param0) {
+    final void updateProjectionUniforms(boolean guard) {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_e != null) {
           var2 = this.field_f.field_Cc;
-          var2.a(4, this.field_b.a(-105, field_g));
+          var2.a(4, this.toolkit.a(-105, field_g));
         }
-        if (!param0) {
+        if (!guard) {
           return;
         }
-        this.b((byte) -103);
+        this.isSupported((byte) -103);
     }
 
-    final void b(int param0) {
+    final void updateTransformUniforms(int guard) {
         jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         AffineTransform3D var3 = null;
         if (this.field_e != null) {
@@ -157,51 +157,51 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           var3 = this.field_f.k((byte) 69);
           var2_ref_jagdx_IDirect3DDevice.a(0, var3.writeRowMajor4x4(0, field_g));
         }
-        int var2 = 67 % ((41 - param0) / 46);
+        int var2 = 67 % ((41 - guard) / 46);
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_b.a(jq.TEXTURE, 0, 0);
-        this.field_b.a(mm.CONSTANT, 1, 0);
-        this.field_b.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
-        this.field_b.b(0, false);
-        if (param1 == 20186) {
+    final void enable(boolean lighting, int guard) {
+        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(mm.CONSTANT, 1, 0);
+        this.toolkit.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
+        this.toolkit.b(0, false);
+        if (guard == 20186) {
           this.field_f.a(-51, this.field_e);
-          this.c((byte) 40);
-          this.a((byte) -83);
-          this.b(false);
-          this.a(260);
+          this.updateViewUniforms((byte) 40);
+          this.updateTextureUniforms((byte) -83);
+          this.updateProjectionUniforms(false);
+          this.updateFogUniforms(260);
           return;
         }
         this.field_f = (DirectXGraphicsToolkit) null;
         this.field_f.a(-51, this.field_e);
-        this.c((byte) 40);
-        this.a((byte) -83);
-        this.b(false);
-        this.a(260);
+        this.updateViewUniforms((byte) 40);
+        this.updateTextureUniforms((byte) -83);
+        this.updateProjectionUniforms(false);
+        this.updateFogUniforms(260);
     }
 
-    final void a(int param0) {
+    final void updateFogUniforms(int guard) {
         jagdx.IDirect3DDevice var2 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
         float var3 = 0.0f;
         if (null != this.field_e) {
           var2 = this.field_f.field_Cc;
-          if (this.field_b.field_Kb > 0) {
-            var3 = this.field_b.field_Tb;
-            var4 = this.field_b.field_E;
+          if (this.toolkit.field_Kb > 0) {
+            var3 = this.toolkit.field_Tb;
+            var4 = this.toolkit.field_E;
             var5 = -512.0f + var4;
             var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
           } else {
             var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
           }
-          this.field_b.a(false, this.field_b.field_C);
+          this.toolkit.a(false, this.toolkit.field_C);
         }
-        if (param0 == 260) {
+        if (guard == 260) {
           return;
         }
-        this.b(36);
+        this.updateTransformUniforms(36);
     }
 
     static {

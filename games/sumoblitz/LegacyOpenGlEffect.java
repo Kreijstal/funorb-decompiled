@@ -5,7 +5,7 @@ abstract class LegacyOpenGlEffect {
     static String[] monthShortNames;
     static int[] field_d;
     static ToolkitFont field_c;
-    LegacyOpenGlGraphicsToolkit field_b;
+    LegacyOpenGlGraphicsToolkit toolkit;
 
     final static an a(boolean param0, int param1) {
         an var2 = new an(true);
@@ -28,13 +28,13 @@ abstract class LegacyOpenGlEffect {
         ig.field_a.readUnsignedByte(param0 ^ -23110);
     }
 
-    abstract void b(int param0);
+    abstract void disable(int guard);
 
-    abstract void a(byte param0, int param1, LegacyOpenGlTexture param2);
+    abstract void bindTexture(byte guard, int combineMode, LegacyOpenGlTexture texture);
 
-    abstract void a(int param0, boolean param1);
+    abstract void refreshState(int guard, boolean lighting);
 
-    abstract void a(byte param0, boolean param1);
+    abstract void enable(byte guard, boolean lighting);
 
     public static void releaseStatics(byte param0) {
         field_c = null;
@@ -45,17 +45,17 @@ abstract class LegacyOpenGlEffect {
         }
     }
 
-    abstract boolean b(byte param0);
+    abstract boolean isSupported(byte guard);
 
-    LegacyOpenGlEffect(LegacyOpenGlGraphicsToolkit param0) {
+    LegacyOpenGlEffect(LegacyOpenGlGraphicsToolkit owner) {
         try {
-          this.field_b = param0;
+          this.toolkit = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bq.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void a(byte param0, int param1, int param2);
+    abstract void setParameters(byte guard, int parameters0, int parameters1);
 
     static {
         field_d = new int[8192];

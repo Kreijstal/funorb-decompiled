@@ -166,7 +166,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             field_db = (ToolkitFont) null;
           }
           if (!this.field_eb) {
-            cn.a("tochangedisplayname.ws", ra.c(guard - 708), (byte) -103);
+            cn.a("tochangedisplayname.ws", LegacyOpenGlUnlitEffect.c(guard - 708), (byte) -103);
             return;
           }
           rd.a(3, -82);
@@ -224,7 +224,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (DisplayModeConfirmationDialog.field_O != null && (0 > param1 ||
-            ga.field_j == kw.field_c)) {
+            LegacyOpenGlUnderwaterEffect.field_j == kw.field_c)) {
             if (InwardSparkParticle.field_v.position == 0 &&
               (ArchiveCatalog.field_a + 10000L) < wq.a(param0 - 14)) {
               InwardSparkParticle.field_v.g(param1, 8);
@@ -251,7 +251,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
     }
 
     final static void m(int param0) {
-        ib.d(1);
+        HardwareAnimatedWaterEffect.d(1);
         if (qn.field_f != null) {
           wr.a(true, qn.field_f);
         }

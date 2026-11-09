@@ -10,9 +10,9 @@ final class df {
     final static int a(byte param0) {
         if (param0 <= 97) {
           df.a((byte) 125);
-          return kj.field_e;
+          return LegacyOpenGlFlowingWaterEffect.field_e;
         }
-        return kj.field_e;
+        return LegacyOpenGlFlowingWaterEffect.field_e;
     }
 
     public static void releaseStatics(boolean param0) {

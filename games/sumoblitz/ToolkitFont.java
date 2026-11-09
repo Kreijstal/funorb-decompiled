@@ -355,7 +355,7 @@ abstract class ToolkitFont {
           }
           for (var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & uo.a(true, param6.charAt(var13)));
+            var14 = (char)(255 & HardwareReflectionEffect.a(true, param6.charAt(var13)));
             if (60 != var14) {
               if (62 == var14 &&
                 var10_int != -1) {

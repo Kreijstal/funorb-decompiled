@@ -10,7 +10,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_e;
     private jagdx.IDirect3DVertexShader field_g;
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int guard, int parameters1, int parameters0) {
         jagdx.IDirect3DDevice var4 = null;
         int var5 = 0;
         float var6 = 0.0f;
@@ -18,59 +18,59 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         float var8 = 0.0f;
         if (this.field_e) {
           var4 = this.field_h.field_Cc;
-          var5 = 1 << (3 & param2);
-          var6 = (float)(1 << ((param2 & 59) >> 3)) / 32.0f;
-          var7 = 65535 & param1;
-          var4.b(14, (float)(this.field_b.field_kc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
-          var8 = (float)((param1 & 199087) >> 16) / 8.0f;
+          var5 = 1 << (3 & parameters0);
+          var6 = (float)(1 << ((parameters0 & 59) >> 3)) / 32.0f;
+          var7 = 65535 & parameters1;
+          var4.b(14, (float)(this.toolkit.field_kc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
+          var8 = (float)((parameters1 & 199087) >> 16) / 8.0f;
           var4.b(15, var6, 0.0f, 0.0f, 0.0f);
           var4.a(4, (float)var7, 0.0f, 0.0f, 0.0f);
           var4.a(5, var8, 0.0f, 0.0f, 0.0f);
         }
-        if (param0 == 34023) {
+        if (guard == 34023) {
           return;
         }
         this.field_g = (jagdx.IDirect3DVertexShader) null;
     }
 
-    final void a(int param0) {
+    final void updateFogUniforms(int guard) {
         jagdx.IDirect3DDevice var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
         if (this.field_e) {
           var2 = this.field_h.field_Cc;
-          if (0 >= this.field_b.field_Kb) {
+          if (0 >= this.toolkit.field_Kb) {
             var2.b(16, 0.0f, 0.0f, 0.0f, 0.0f);
           } else {
-            var3 = this.field_b.field_Tb;
-            var4 = this.field_b.field_E;
+            var3 = this.toolkit.field_Tb;
+            var4 = this.toolkit.field_E;
             var2.b(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
           }
-          var2.a(0, (float)(255 & this.field_b.field_C >> 16) / 255.0f, (float)((65348 & this.field_b.field_C) >> 8) / 255.0f, (float)(255 & this.field_b.field_C) / 255.0f, 0.0f);
+          var2.a(0, (float)(255 & this.toolkit.field_C >> 16) / 255.0f, (float)((65348 & this.toolkit.field_C) >> 8) / 255.0f, (float)(255 & this.toolkit.field_C) / 255.0f, 0.0f);
         }
-        if (param0 == 260) {
+        if (guard == 260) {
           return;
         }
         this.field_g = (jagdx.IDirect3DVertexShader) null;
     }
 
-    final void b(boolean param0) {
+    final void updateProjectionUniforms(boolean guard) {
         jagdx.IDirect3DDevice var2 = null;
-        if (!param0) {
+        if (!guard) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
-            var2.a(8, this.field_b.a(-82, field_f));
+            var2.a(8, this.toolkit.a(-82, field_f));
           }
           return;
         }
     }
 
-    final void c(byte param0) {
+    final void updateViewUniforms(byte guard) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
         AffineTransform3D var3Lifetime1;
-        if (param0 >= 0) {
+        if (guard >= 0) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
             var3 = this.field_h.k((byte) 107);
@@ -78,7 +78,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.a(-80, 91, -81);
+        this.setParameters(-80, 91, -81);
         if (this.field_e) {
           var2Lifetime1 = this.field_h.field_Cc;
           var3Lifetime1 = this.field_h.k((byte) 107);
@@ -86,63 +86,63 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -8) {
+    final boolean isSupported(byte guard) {
+        if (guard > -8) {
           this.field_h = (DirectXGraphicsToolkit) null;
           return this.field_j;
         }
         return this.field_j;
     }
 
-    final void c(boolean param0) {
+    final void disable(boolean guard) {
         if (this.field_e) {
           this.field_h.a(-54, (jagdx.IDirect3DVertexShader) null);
           this.field_h.a((byte) 10, (jagdx.IDirect3DPixelShader) null);
-          this.field_b.g(1, -115);
-          this.field_b.a((GpuTexture) null, 97);
-          this.field_b.g(0, -119);
-          this.field_b.a((GpuTexture) null, 98);
+          this.toolkit.g(1, -115);
+          this.toolkit.a((GpuTexture) null, 97);
+          this.toolkit.g(0, -119);
+          this.toolkit.a((GpuTexture) null, 98);
           this.field_e = false;
         }
-        if (!param0) {
+        if (!guard) {
           return;
         }
         field_f = (float[]) null;
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean lighting, int guard) {
         jagdx.IDirect3DDevice var4 = null;
-        CubeTexture var3 = this.field_b.d((byte) 122);
-        if (param1 == 20186) {
+        CubeTexture var3 = this.toolkit.d((byte) 122);
+        if (guard == 20186) {
           if (this.field_j &&
             var3 != null) {
             var4 = this.field_h.field_Cc;
             this.field_h.a(-73, this.field_g);
             this.field_h.a((byte) -101, this.field_i);
-            this.field_b.g(1, param1 - 20310);
-            this.field_b.a(var3, 99);
-            this.field_b.g(0, -123);
-            this.field_b.a(this.field_k.normalMap, 108);
+            this.toolkit.g(1, guard - 20310);
+            this.toolkit.a(var3, 99);
+            this.toolkit.g(0, -123);
+            this.toolkit.a(this.field_k.normalMap, 108);
             this.field_e = true;
-            this.b(param1 ^ -20215);
-            this.a((byte) -65);
-            this.b(false);
-            this.a(260);
-            var4.a(1, -this.field_b.field_G[0], -this.field_b.field_G[1], -this.field_b.field_G[2], 0.0f);
-            var4.a(2, this.field_b.field_J, this.field_b.field_jb, this.field_b.field_Xb, 1.0f);
-            var4.a(3, Math.abs(this.field_b.field_G[1]) * 928.0f + 96.0f, 0.0f, 0.0f, 0.0f);
+            this.updateTransformUniforms(guard ^ -20215);
+            this.updateTextureUniforms((byte) -65);
+            this.updateProjectionUniforms(false);
+            this.updateFogUniforms(260);
+            var4.a(1, -this.toolkit.field_G[0], -this.toolkit.field_G[1], -this.toolkit.field_G[2], 0.0f);
+            var4.a(2, this.toolkit.field_J, this.toolkit.field_jb, this.toolkit.field_Xb, 1.0f);
+            var4.a(3, Math.abs(this.toolkit.field_G[1]) * 928.0f + 96.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, GpuTexture param2) {
-        if (param1 != 18834) {
+    final void bindTexture(int combineMode, int guard, GpuTexture texture) {
+        if (guard != 18834) {
           this.field_i = (jagdx.IDirect3DPixelShader) null;
         }
     }
 
-    final void b(int param0) {
+    final void updateTransformUniforms(int guard) {
         jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         AffineTransform3D var3 = null;
         AffineTransform3D var4 = null;
@@ -153,26 +153,26 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           var2_ref_jagdx_IDirect3DDevice.a(0, var4.writeRowMajor4x4(0, field_f));
           var2_ref_jagdx_IDirect3DDevice.a(4, var3.writeLinearRowMajor4x4(field_f, (byte) 86));
         }
-        int var2 = 49 / ((param0 - 41) / 46);
+        int var2 = 49 / ((guard - 41) / 46);
     }
 
-    final void a(byte param0) {
+    final void updateTextureUniforms(byte guard) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
-        if (param0 < -47) {
+        if (guard < -47) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
-            var3 = this.field_b.H(26453);
+            var3 = this.toolkit.H(26453);
             var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows(field_f, (byte) -37), 2);
           }
           return;
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        if (param1 >= -71) {
+    final void refreshState(boolean lighting, byte guard) {
+        if (guard >= -71) {
           GpuTexture var4 = (GpuTexture) null;
-          this.a(50, 2, (GpuTexture) null);
+          this.bindTexture(50, 2, (GpuTexture) null);
         }
     }
 
@@ -187,13 +187,13 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           this.field_j = false;
           return;
         }
-        if (!this.field_b.field_W) {
+        if (!this.toolkit.field_W) {
           this.field_g = null;
           this.field_i = null;
           this.field_j = false;
           return;
         }
-        if (!this.field_b.field_Eb) {
+        if (!this.toolkit.field_Eb) {
           this.field_g = null;
           this.field_i = null;
           this.field_j = false;

@@ -74,7 +74,7 @@ final class il {
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
             if (null != TimedSceneEffect.field_m[var2_int] &&
-              !qr.field_b.firstSynthesizer.loadTrackPatches(eb.field_b, TimedSceneEffect.field_m[var2_int], -1, param1, 176400)) {
+              !qr.field_b.firstSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var2_int], -1, param1, 176400)) {
               return false;
             }
           }
@@ -85,7 +85,7 @@ final class il {
           var2_intLifetime1 = var4;
           while (var4 < 9) {
             if (TimedSceneEffect.field_m[var4] != null &&
-              !qr.field_b.secondSynthesizer.loadTrackPatches(eb.field_b, TimedSceneEffect.field_m[var4], -1, param1, 176400)) {
+              !qr.field_b.secondSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var4], -1, param1, 176400)) {
               return false;
             }
             var4++;

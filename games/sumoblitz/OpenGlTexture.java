@@ -93,7 +93,7 @@ abstract class OpenGlTexture implements GpuTexture {
                 var21 = var21 + (var17 >> 24 & 255);
                 incrementValue$9 = var13;
                 var13++;
-                var11[incrementValue$9] = ic.a(eb.bitwiseAnd(1020, var20) >> 2, ic.a(eb.bitwiseAnd(1020, var19) << 6, ic.a(eb.bitwiseAnd(16711680, var18 << 14), eb.bitwiseAnd(var21, 1020) << 22)));
+                var11[incrementValue$9] = ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var20) >> 2, ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var19) << 6, ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var18 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 22)));
               }
               var22 = var22 + width;
               var23 = var23 + width;
@@ -135,10 +135,10 @@ abstract class OpenGlTexture implements GpuTexture {
           if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
             return 40;
           }
-          if (!eb.field_f.loadIndex((byte) 127)) {
+          if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {
             return 50;
           }
-          if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
+          if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 60;
           }
           if (!hw.field_a.loadIndex((byte) 127)) {
@@ -165,10 +165,10 @@ abstract class OpenGlTexture implements GpuTexture {
           if (!wd.field_j.tryLoadNamedGroup("commonui", param0 ^ 14268)) {
             return 57;
           }
-          if (!eb.field_f.loadIndex((byte) 127)) {
+          if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {
             return 71;
           }
-          if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
+          if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 80;
           }
           if (!hw.field_a.loadIndex((byte) 127)) {
