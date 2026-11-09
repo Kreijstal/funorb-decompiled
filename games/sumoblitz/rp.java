@@ -10,28 +10,28 @@ final class rp {
     bg field_c;
 
     final static void a(boolean param0) {
-        kn.field_c[93] = 43;
-        kn.field_c[44] = 71;
-        kn.field_c[45] = 26;
-        kn.field_c[92] = 74;
-        kn.field_c[59] = 57;
-        kn.field_c[47] = 73;
+        SoftwareTransform3D.field_c[93] = 43;
+        SoftwareTransform3D.field_c[44] = 71;
+        SoftwareTransform3D.field_c[45] = 26;
+        SoftwareTransform3D.field_c[92] = 74;
+        SoftwareTransform3D.field_c[59] = 57;
+        SoftwareTransform3D.field_c[47] = 73;
         if (!param0) {
-          kn.field_c[61] = 27;
-          kn.field_c[222] = 58;
-          kn.field_c[520] = 59;
-          kn.field_c[192] = 28;
-          kn.field_c[46] = 72;
-          kn.field_c[91] = 42;
+          SoftwareTransform3D.field_c[61] = 27;
+          SoftwareTransform3D.field_c[222] = 58;
+          SoftwareTransform3D.field_c[520] = 59;
+          SoftwareTransform3D.field_c[192] = 28;
+          SoftwareTransform3D.field_c[46] = 72;
+          SoftwareTransform3D.field_c[91] = 42;
           return;
         }
         rp.b(true);
-        kn.field_c[61] = 27;
-        kn.field_c[222] = 58;
-        kn.field_c[520] = 59;
-        kn.field_c[192] = 28;
-        kn.field_c[46] = 72;
-        kn.field_c[91] = 42;
+        SoftwareTransform3D.field_c[61] = 27;
+        SoftwareTransform3D.field_c[222] = 58;
+        SoftwareTransform3D.field_c[520] = 59;
+        SoftwareTransform3D.field_c[192] = 28;
+        SoftwareTransform3D.field_c[46] = 72;
+        SoftwareTransform3D.field_c[91] = 42;
     }
 
     public static void b(boolean param0) {
@@ -77,7 +77,7 @@ final class rp {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        kn discarded$11 = new kn();
+        SoftwareTransform3D discarded$11 = new SoftwareTransform3D();
         try {
           this.field_a = param0;
           this.field_c = new bg(param0, this);

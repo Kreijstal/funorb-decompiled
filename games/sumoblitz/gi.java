@@ -55,16 +55,16 @@ final class gi extends LegacyOpenGlEffect {
     }
 
     final static String c(byte param0) {
-        if (ProxySocketConnector.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
           return vr.field_G;
         }
-        if (vm.field_c == ad.field_p) {
+        if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
           return PowerupPickup.field_s;
         }
         if (param0 != -2) {
           return (String) null;
         }
-        if (!ut.field_o.a(true)) {
+        if (!AffineTransform3D.field_o.a(true)) {
           return PowerupPickup.field_s;
         }
         return FocusProxyWidget.field_F;

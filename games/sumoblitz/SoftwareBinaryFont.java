@@ -21,32 +21,32 @@ final class SoftwareBinaryFont extends ToolkitFont {
         param2 = param2 + this.field_g[param0];
         int var9 = this.field_h[param0];
         int var10 = this.field_c[param0];
-        int var11 = this.field_e.field_k;
+        int var11 = this.field_e.targetWidth;
         int var12 = param1 + param2 * var11;
         int var13 = var11 - var9;
         int var14 = 0;
         int var15 = 0;
-        if (param2 < this.field_e.field_H) {
-          var16 = this.field_e.field_H - param2;
+        if (param2 < this.field_e.clipTop) {
+          var16 = this.field_e.clipTop - param2;
           var10 = var10 - var16;
-          param2 = this.field_e.field_H;
+          param2 = this.field_e.clipTop;
           var15 = var15 + var16 * var9;
           var12 = var12 + var16 * var11;
         }
-        if (param2 + var10 > this.field_e.field_C) {
-          var10 = var10 - (param2 + var10 - this.field_e.field_C);
+        if (param2 + var10 > this.field_e.clipBottom) {
+          var10 = var10 - (param2 + var10 - this.field_e.clipBottom);
         }
-        if (param1 < this.field_e.field_v) {
-          var16Lifetime1 = this.field_e.field_v - param1;
+        if (param1 < this.field_e.clipLeft) {
+          var16Lifetime1 = this.field_e.clipLeft - param1;
           var9 = var9 - var16Lifetime1;
-          param1 = this.field_e.field_v;
+          param1 = this.field_e.clipLeft;
           var15 = var15 + var16Lifetime1;
           var12 = var12 + var16Lifetime1;
           var14 = var14 + var16Lifetime1;
           var13 = var13 + var16Lifetime1;
         }
-        if (param1 + var9 > this.field_e.field_D) {
-          var16Lifetime2 = param1 + var9 - this.field_e.field_D;
+        if (param1 + var9 > this.field_e.clipRight) {
+          var16Lifetime2 = param1 + var9 - this.field_e.clipRight;
           var9 = var9 - var16Lifetime2;
           var14 = var14 + var16Lifetime2;
           var13 = var13 + var16Lifetime2;
@@ -56,9 +56,9 @@ final class SoftwareBinaryFont extends ToolkitFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.a(this.field_d[param0], this.field_e.field_o, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
+          this.a(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
         } else {
-          this.b(this.field_d[param0], this.field_e.field_o, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
+          this.b(this.field_d[param0], this.field_e.pixels, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
         }
     }
 
@@ -97,32 +97,32 @@ final class SoftwareBinaryFont extends ToolkitFont {
         param2 = param2 + this.field_g[param0];
         int var6 = this.field_h[param0];
         int var7 = this.field_c[param0];
-        int var8 = this.field_e.field_k;
+        int var8 = this.field_e.targetWidth;
         int var9 = param1 + param2 * var8;
         int var10 = var8 - var6;
         int var11 = 0;
         int var12 = 0;
-        if (param2 < this.field_e.field_H) {
-          var13 = this.field_e.field_H - param2;
+        if (param2 < this.field_e.clipTop) {
+          var13 = this.field_e.clipTop - param2;
           var7 = var7 - var13;
-          param2 = this.field_e.field_H;
+          param2 = this.field_e.clipTop;
           var12 = var12 + var13 * var6;
           var9 = var9 + var13 * var8;
         }
-        if (param2 + var7 > this.field_e.field_C) {
-          var7 = var7 - (param2 + var7 - this.field_e.field_C);
+        if (param2 + var7 > this.field_e.clipBottom) {
+          var7 = var7 - (param2 + var7 - this.field_e.clipBottom);
         }
-        if (param1 < this.field_e.field_v) {
-          var13Lifetime1 = this.field_e.field_v - param1;
+        if (param1 < this.field_e.clipLeft) {
+          var13Lifetime1 = this.field_e.clipLeft - param1;
           var6 = var6 - var13Lifetime1;
-          param1 = this.field_e.field_v;
+          param1 = this.field_e.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + var6 > this.field_e.field_D) {
-          var13Lifetime2 = param1 + var6 - this.field_e.field_D;
+        if (param1 + var6 > this.field_e.clipRight) {
+          var13Lifetime2 = param1 + var6 - this.field_e.clipRight;
           var6 = var6 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -132,10 +132,10 @@ final class SoftwareBinaryFont extends ToolkitFont {
           return;
         }
         if ((param3 & -16777216) == -16777216) {
-          this.b(this.field_d[param0], this.field_e.field_o, param3, var12, var9, var6, var7, var10, var11);
+          this.b(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
         } else {
           if ((param3 & -16777216) != 0) {
-            this.a(this.field_d[param0], this.field_e.field_o, param3, var12, var9, var6, var7, var10, var11);
+            this.a(this.field_d[param0], this.field_e.pixels, param3, var12, var9, var6, var7, var10, var11);
           }
         }
     }
@@ -224,7 +224,7 @@ final class SoftwareBinaryFont extends ToolkitFont {
         var19 = param10;
         if (param14 > var19) {
           var19 = param14;
-          param4 = param4 + (param14 - param10) * this.field_e.field_k;
+          param4 = param4 + (param14 - param10) * this.field_e.targetWidth;
           param3 = param3 + (param14 - param10) * param11;
         }
         if (param14 + var28.length >= param10 + param6) {
@@ -310,11 +310,11 @@ final class SoftwareBinaryFont extends ToolkitFont {
         var32 = var33;
         var17 = var32;
         var18 = var16_ref.rowWidths;
-        var19 = param9 - this.field_e.field_v;
+        var19 = param9 - this.field_e.clipLeft;
         var20 = param10;
         if (param14 > var20) {
           var20 = param14;
-          param4 = param4 + (param14 - param10) * this.field_e.field_k;
+          param4 = param4 + (param14 - param10) * this.field_e.targetWidth;
           param3 = param3 + (param14 - param10) * param11;
         }
         if (param14 + var33.length >= param10 + param6) {

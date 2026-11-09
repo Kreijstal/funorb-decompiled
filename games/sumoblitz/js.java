@@ -261,7 +261,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           }
           if (null == wr.field_G) {
             wr.field_G = new ci(128);
-            hi.field_h = 0;
+            SoftwareRenderTarget.field_h = 0;
           }
           var3Lifetime1 = var1.readCp1252String(-1);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -279,8 +279,8 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           if (var6_ref == null) {
             var6_ref = new cn();
             wr.field_G.a((long)uk.a(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
-            fieldTemp$1 = hi.field_h;
-            hi.field_h = hi.field_h + 1;
+            fieldTemp$1 = SoftwareRenderTarget.field_h;
+            SoftwareRenderTarget.field_h = SoftwareRenderTarget.field_h + 1;
             var6_ref.field_kb = fieldTemp$1;
             pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
           }
@@ -313,7 +313,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
             stackIn_63_0 = -2;
             break;
           }
-          GraphicsToolkit.a(stackIn_63_0, var7_ref, var6_ref);
+          GraphicsToolkit.insertNodeBefore(stackIn_63_0, var7_ref, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -512,7 +512,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           if (param0 != 22955) {
             return true;
           }
-          if (ad.field_n == var4) {
+          if (LegacyOpenGlGraphicsHeap.field_n == var4) {
             return false;
           }
           return true;
@@ -624,7 +624,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           this.field_D = new InteractiveWidget(jc.goBackText, (WidgetListener) null);
           this.field_A.tooltip = ShaderEffect.enterTheNameYouText;
           this.field_I.tooltip = pi.yourEmailAddressIsText;
-          this.field_E.tooltip = kn.typeYourEmailAddressText;
+          this.field_E.tooltip = SoftwareTransform3D.typeYourEmailAddressText;
           this.field_N.tooltip = pl.enterAPasswordForText;
           this.field_L.tooltip = InstrumentNoteMask.typeYourPasswordAgainText;
           this.field_K.tooltip = ContentDialog.typeYourAgeInText;

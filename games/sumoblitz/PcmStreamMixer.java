@@ -23,7 +23,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDelay(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.listeners.sentinel) {
-            GraphicsToolkit.a(-2, param0, param1);
+            GraphicsToolkit.insertNodeBefore(-2, param0, param1);
             this.nextListenerDelay = ((PcmMixerListener) (this.listeners.sentinel.next)).delaySamples;
             return;
           }
@@ -33,7 +33,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        GraphicsToolkit.a(-2, param0, param1);
+        GraphicsToolkit.insertNodeBefore(-2, param0, param1);
         this.nextListenerDelay = ((PcmMixerListener) (this.listeners.sentinel.next)).delaySamples;
         return;
     }

@@ -128,14 +128,14 @@ final class of extends IntrusiveNode {
 
     final static String c(int param0) {
         int var1 = -4 / ((param0 - 48) / 36);
-        if (ProxySocketConnector.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
           return FadingWidget.field_C;
         }
-        if (!ut.field_o.a(true)) {
-          return ut.field_o.b(32);
+        if (!AffineTransform3D.field_o.a(true)) {
+          return AffineTransform3D.field_o.b(32);
         }
-        if (ad.field_p == vm.field_c) {
-          return ut.field_o.b(107);
+        if (LegacyOpenGlGraphicsHeap.field_p == vm.field_c) {
+          return AffineTransform3D.field_o.b(107);
         }
         return FocusProxyWidget.field_F;
     }

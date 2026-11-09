@@ -84,7 +84,7 @@ final class ni extends ShaderEffect {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                ce.field_q = param1;
+                ToolkitRasterBuffer.field_q = param1;
                 var2 = rc.a("loginm3", (byte) -23);
                 if (var2 != null) {
                   ar.connectionTimedOutPleaseText = MusicVoice.a(0, var2);
@@ -715,7 +715,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("loading", (byte) -23);
                 if (null != var2) {
-                  li.loadingText = MusicVoice.a(0, var2);
+                  ToolkitImageProducerBuffer.loadingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("offline", (byte) -23);
                 if (var2 != null) {
@@ -1281,7 +1281,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("checking", (byte) -23);
                 if (null != var2) {
-                  hi.checkingText = MusicVoice.a(0, var2);
+                  SoftwareRenderTarget.checkingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_namealreadytaken", (byte) -23);
                 if (var2 != null) {
@@ -1592,7 +1592,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_email_confirm_tooltip", (byte) -23);
                 if (var2 != null) {
-                  kn.typeYourEmailAddressText = MusicVoice.a(param0 - 7, var2);
+                  SoftwareTransform3D.typeYourEmailAddressText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_age_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1816,7 +1816,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("waitingfor_fonts", (byte) -23);
                 if (var2 != null) {
-                  ce.waitingForFontsText = MusicVoice.a(0, var2);
+                  ToolkitRasterBuffer.waitingForFontsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_soundeffects", (byte) -23);
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("unpacking_graphics", (byte) -23);
                 if (null != var2) {
-                  kn.unpackingGraphicsText = MusicVoice.a(0, var2);
+                  SoftwareTransform3D.unpackingGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_models", (byte) -23);
                 if (var2 != null) {
@@ -2018,7 +2018,7 @@ final class ni extends ShaderEffect {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  rf.menuText = MusicVoice.a(param0 ^ 7, var2);
+                  RenderPresentationException.menuText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("selectlevel", (byte) -23);
                 if (null != var2) {
@@ -2546,31 +2546,31 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("quickchat_shortcut_keys,0", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[0] = MusicVoice.a(0, var2);
+                  LegacyOpenGlTransform3D.field_h[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,1", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[1] = MusicVoice.a(param0 - 7, var2);
+                  LegacyOpenGlTransform3D.field_h[1] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,2", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[2] = MusicVoice.a(param0 - 7, var2);
+                  LegacyOpenGlTransform3D.field_h[2] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,3", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[3] = MusicVoice.a(0, var2);
+                  LegacyOpenGlTransform3D.field_h[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,4", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[4] = MusicVoice.a(0, var2);
+                  LegacyOpenGlTransform3D.field_h[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,5", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[5] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  LegacyOpenGlTransform3D.field_h[5] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("keychar_the_character_under_questionmark", (byte) -23);
                 if (var2 != null) {
-                  kn.a(var2[0], (byte) -51);
+                  SoftwareTransform3D.a(var2[0], (byte) -51);
                 }
                 var2 = rc.a("rating_noratings", (byte) -23);
                 if (null != var2) {
@@ -3070,7 +3070,7 @@ final class ni extends ShaderEffect {
                 if (var2 != null) {
                   MusicVoice.a(0, var2);
                 }
-                ce.field_q = null;
+                ToolkitRasterBuffer.field_q = null;
             }
             void run() {
                 var3 = Sumoblitz.field_L ? 1 : 0;

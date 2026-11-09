@@ -57,8 +57,8 @@ final class qc {
         int var8 = 0;
         wo.a(ResizingDialog.field_H, 160, 140, -16777216, 3, param0, 360, 170, 1, true);
         if (!(Sumoblitz.field_J.length <= this.field_d)) {
-          wo.a(up.field_c, Sumoblitz.field_J[this.field_d].a() + 6, 167, -16777216, 3, param0, Sumoblitz.field_J[this.field_d].c() + 6, 187, 1, true);
-          Sumoblitz.field_J[this.field_d].a(170, 190);
+          wo.a(up.field_c, Sumoblitz.field_J[this.field_d].height() + 6, 167, -16777216, 3, param0, Sumoblitz.field_J[this.field_d].width() + 6, 187, 1, true);
+          Sumoblitz.field_J[this.field_d].draw(170, 190);
         }
         int var3_int = Sumoblitz.field_J.length > this.field_d ? 380 : 320;
         int var4 = 200;
@@ -131,7 +131,7 @@ final class qc {
           return;
         }
         DropDownWidget.field_N.b((byte) -128);
-        ut.field_j = 0;
+        AffineTransform3D.field_j = 0;
     }
 
     public static void releaseStatics(byte param0) {
@@ -147,7 +147,7 @@ final class qc {
         this.field_f = false;
     }
 
-    final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, d param4) {
+    final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, TextureProvider param4) {
         RuntimeException var5 = null;
         NativeSoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

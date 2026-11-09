@@ -13,7 +13,7 @@ final class qn {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = -18 % ((-62 - param3) / 63);
-        kn.a(param1, this.field_c, (byte) -34, param4, param2, param0);
+        SoftwareTransform3D.a(param1, this.field_c, (byte) -34, param4, param2, param0);
     }
 
     private qn() throws Throwable {

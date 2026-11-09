@@ -33,7 +33,7 @@ final class dn {
           dn.b(-125);
         }
         if (!eb.field_f.loadIndex((byte) 127)) {
-          return ce.waitingForFontsText;
+          return ToolkitRasterBuffer.waitingForFontsText;
         }
         if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
           return ow.loadingFontsText + " - " + eb.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";

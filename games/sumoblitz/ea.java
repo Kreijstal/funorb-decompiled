@@ -52,10 +52,10 @@ final class ea {
           return;
         }
         try {
-          rf.field_a.closeAllDialogs((byte) -34);
+          RenderPresentationException.field_a.closeAllDialogs((byte) -34);
           no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, pg.field_a, param3, param1);
-          SlowBurstParticle.field_y = new ContentDialog(rf.field_a, no.field_a);
-          rf.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
+          SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, no.field_a);
+          RenderPresentationException.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -104,8 +104,8 @@ final class ea {
     }
 
     final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
-        ut.field_o = DroneDebris.a(false, "");
-        ut.field_o.a(113, false);
+        AffineTransform3D.field_o = DroneDebris.a(false, "");
+        AffineTransform3D.field_o.a(113, false);
         ToolkitFont.a(param4, param3, 17474, param0);
         if (param2 < 20) {
           return;

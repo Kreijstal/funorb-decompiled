@@ -56,7 +56,7 @@ final class ct extends ml {
           if (param0 != 6510) {
             ct.b(true);
           }
-          od.a(param1.variant, (byte) 73);
+          SoftwareRenderBuffer.a(param1.variant, (byte) 73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class ct extends ml {
         sm.a(72);
         bj.powerupPickups = new IntrusiveDeque();
         is.arenaPads = new IntrusiveDeque();
-        he.field_o = new Random();
+        HardwareGraphicsHeap.field_o = new Random();
         db.droneSlotLimit = 1;
         FadingWidget.score = 0;
         GridWidgetContainer.livesRemaining = 1;

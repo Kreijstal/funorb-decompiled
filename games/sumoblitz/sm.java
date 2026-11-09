@@ -82,9 +82,9 @@ final class sm {
 
     final static void a(int param0) {
         SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-        SpriteMask.drones[0].speedLevel = !rf.a(false) ? 5 : 10;
-        SpriteMask.drones[0].tractionLevel = !rf.a(false) ? 5 : 10;
-        SpriteMask.drones[0].bounceLevel = rf.a(false) ? 10 : 5;
+        SpriteMask.drones[0].speedLevel = !RenderPresentationException.a(false) ? 5 : 10;
+        SpriteMask.drones[0].tractionLevel = !RenderPresentationException.a(false) ? 5 : 10;
+        SpriteMask.drones[0].bounceLevel = RenderPresentationException.a(false) ? 10 : 5;
         if (param0 <= 68) {
           sm.releaseStatics((byte) 108);
         }
@@ -228,7 +228,7 @@ final class sm {
         String var7 = null;
         int var8 = 0;
         try {
-          kn.a(param2 + param4.x, this.field_j, (byte) -34, param4.y + param0, param4.height, param4.width);
+          SoftwareTransform3D.a(param2 + param4.x, this.field_j, (byte) -34, param4.y + param0, param4.height, param4.width);
           var6_int = -128 % ((param3 + 9) / 35);
           if (this.field_i != null) {
             var7_int = this.field_d + (param2 + param4.x);

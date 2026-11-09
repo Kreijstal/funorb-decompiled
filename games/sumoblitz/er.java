@@ -14,15 +14,15 @@ final class er {
 
     final static void a(boolean param0) {
         GraphicsToolkit var2 = nq.field_h.a(-117);
-        LegacyOpenGlEffect.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
-        MessageDialog.field_db = var2.a(hu.field_c, mn.field_b, true);
-        uq.field_a = var2.a(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
-        qv.field_k = var2.a(sv.field_a, au.field_j, true);
-        hc.field_e = var2.a(ma.field_b, DropDownWidget.field_F, true);
-        ForceFieldRingEffect.field_t = var2.a(sq.field_b, ProxySocketConnector.field_f, true);
+        LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, ci.field_g, true);
+        MessageDialog.field_db = var2.createFont(hu.field_c, mn.field_b, true);
+        uq.field_a = var2.createFont(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
+        qv.field_k = var2.createFont(sv.field_a, au.field_j, true);
+        hc.field_e = var2.createFont(ma.field_b, DropDownWidget.field_F, true);
+        ForceFieldRingEffect.field_t = var2.createFont(sq.field_b, ProxySocketConnector.field_f, true);
         up.field_c = DroneDebris.createToolkitSprites(NameSuggestionsPanel.field_F, var2, 28513);
         ResizingDialog.field_H = DroneDebris.createToolkitSprites(MidiNoteMixer.field_q, var2, 28513);
-        qw.field_a = DroneDebris.createToolkitSprites(hi.field_b, var2, 28513);
+        qw.field_a = DroneDebris.createToolkitSprites(SoftwareRenderTarget.field_b, var2, 28513);
         pi.field_d = ResizingDialog.a(var2, CompactMeshGeometry.field_N, (byte) -11);
         uj.field_a = ResizingDialog.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = ResizingDialog.a(var2, IntrusiveNode.field_d, (byte) -11);
@@ -52,7 +52,7 @@ final class er {
           ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
           th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
-          DroneDebris.createToolkitSprites(eu.field_a, var2, 28513);
+          DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
           IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
           MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
           ResizingDialog.a(var2, df.field_d, (byte) -11);
@@ -69,7 +69,7 @@ final class er {
           hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
           OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
           an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
-          wm.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
+          TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
           kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
           ju.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
@@ -92,7 +92,7 @@ final class er {
           f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
           vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
           wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
-          tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, DirectByteArrayStorage.field_d};
+          tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
         }
@@ -101,7 +101,7 @@ final class er {
         ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
         th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
-        DroneDebris.createToolkitSprites(eu.field_a, var2, 28513);
+        DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
         IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
         MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
         ResizingDialog.a(var2, df.field_d, (byte) -11);
@@ -118,7 +118,7 @@ final class er {
         hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
         OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
         an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
-        wm.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
+        TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
         kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
         ju.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
@@ -141,7 +141,7 @@ final class er {
         f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
         vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
         wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
-        tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, DirectByteArrayStorage.field_d};
+        tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }
 

@@ -36,7 +36,7 @@ class UiWidget extends IntrusiveNode {
         }
         var5 = CachedTextLayout.e(102);
         if (var5 != null) {
-          ks.field_x.a(za.field_k, 13421772, hq.field_b, var5);
+          ks.field_x.a(GraphicsHeap.field_k, 13421772, hq.field_b, var5);
         }
         if (!guard) {
           return;

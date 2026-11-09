@@ -33,7 +33,7 @@ final class pq extends UiWidget {
         if (param0 != 880072001) {
           this.field_K = -125;
         }
-        this.field_G = this.field_M.a();
+        this.field_G = this.field_M.copyMirroredHorizontally();
         this.field_E = new Sprite(this.height >> 1, this.height);
     }
 

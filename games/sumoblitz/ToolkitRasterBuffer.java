@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ce extends IntrusiveNode {
-    int field_n;
+abstract class ToolkitRasterBuffer extends IntrusiveNode {
+    int width;
     static js field_o;
     static ResourceArchive field_q;
-    int[] field_m;
-    int field_k;
+    int[] pixels;
+    int height;
     static int[] field_p;
     static String waitingForFontsText;
     private static String field_z;
 
-    abstract void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7);
+    abstract void drawRegion(java.awt.Graphics graphics, int destinationY, int sourceY, int width, int sourceX, int height, int destinationX, byte guard);
 
-    abstract void a(java.awt.Canvas param0, int param1, int param2, int param3);
+    abstract void initialize(java.awt.Canvas canvas, int height, int width, int guard);
 
-    ce() {
+    ToolkitRasterBuffer() {
     }
 
     public static void releaseStatics(int param0) {

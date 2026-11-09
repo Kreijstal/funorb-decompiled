@@ -20,36 +20,36 @@ final class id extends IntrusiveNode {
         }
     }
 
-    final static ce a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static ToolkitRasterBuffer a(int param0, int param1, java.awt.Canvas param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          ce var5 = null;
-          li var5_ref = null;
-          ce stackIn_3_0 = null;
-          li stackIn_5_0 = null;
+          ToolkitRasterBuffer var5 = null;
+          ToolkitImageProducerBuffer var5_ref = null;
+          ToolkitRasterBuffer stackIn_3_0 = null;
+          ToolkitImageProducerBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("jw");
+              var4 = Class.forName("ToolkitBufferedImageBuffer");
               if (param3 > -83) {
                 returnToGameText = (String) null;
               }
-              var5 = (ce) (var4.newInstance());
-              var5.a(param2, param1, param0, 122);
+              var5 = (ToolkitRasterBuffer) (var4.newInstance());
+              var5.initialize(param2, param1, param0, 122);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new li();
-              ((ce) ((Object) var5_ref)).a(param2, param1, param0, -108);
+              var5_ref = new ToolkitImageProducerBuffer();
+              ((ToolkitRasterBuffer) ((Object) var5_ref)).initialize(param2, param1, param0, -108);
               stackIn_5_0 = var5_ref;
-              return (ce) ((Object) stackIn_5_0);
+              return (ToolkitRasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

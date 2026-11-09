@@ -219,13 +219,13 @@ final class wo extends java.awt.Canvas {
           if (0 < param6 &&
             0 < param1) {
             if (null != param0[3]) {
-              stackIn_14_0 = param0[3].b();
+              stackIn_14_0 = param0[3].paddedWidth();
             } else {
               stackIn_14_0 = 0;
             }
             var11 = stackIn_14_0;
             if (param0[5] != null) {
-              stackIn_18_0 = param0[5].b();
+              stackIn_18_0 = param0[5].paddedWidth();
             } else {
               stackIn_18_0 = 0;
             }
@@ -233,13 +233,13 @@ final class wo extends java.awt.Canvas {
             if (null == param0[1]) {
               stackIn_22_0 = 0;
             } else {
-              stackIn_22_0 = param0[1].d();
+              stackIn_22_0 = param0[1].paddedHeight();
             }
             var13 = stackIn_22_0;
             if (null == param0[7]) {
               stackIn_26_0 = 0;
             } else {
-              stackIn_26_0 = param0[7].d();
+              stackIn_26_0 = param0[7].paddedHeight();
             }
             var14 = stackIn_26_0;
             var15 = param6 + param2;
@@ -265,32 +265,32 @@ final class wo extends java.awt.Canvas {
             }
             if (null != param0[0]) {
               var10.a((byte) 81, param7, var23, param2, var21);
-              param0[0].a(param2, param7, param4, param3, param8);
+              param0[0].draw(param2, param7, param4, param3, param8);
               var10.a(29709);
             }
             if (param0[2] != null) {
               var10.a((byte) -98, param7, var23, var22, var15);
-              param0[2].a(var18, param7, param4, param3, param8);
+              param0[2].draw(var18, param7, param4, param3, param8);
               var10.a(29709);
             }
             if (null != param0[6]) {
               var10.a((byte) 43, var24, var16, param2, var21);
-              param0[6].a(param2, var20, param4, param3, param8);
+              param0[6].draw(param2, var20, param4, param3, param8);
               var10.a(29709);
             }
             if (param0[8] != null) {
               var10.a((byte) 37, var24, var16, var22, var15);
-              param0[8].a(var18, var20, param4, param3, param8);
+              param0[8].draw(var18, var20, param4, param3, param8);
               var10.a(29709);
             }
             boolean decompiledFrameCompleted3 = true;
             if (param0[1] != null &&
-              param0[1].b() != 0) {
+              param0[1].paddedWidth() != 0) {
               var10.a((byte) 51, param7, var23, var21, var22);
               var25 = var17;
               while (var25 < var18) {
-                param0[1].a(var25, param7, param4, param3, param8);
-                var25 = var25 + param0[1].b();
+                param0[1].draw(var25, param7, param4, param3, param8);
+                var25 = var25 + param0[1].paddedWidth();
                 if (var27 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -302,12 +302,12 @@ final class wo extends java.awt.Canvas {
             }
             boolean decompiledFrameCompleted2 = true;
             if (null != param0[7] &&
-              param0[7].b() != 0) {
+              param0[7].paddedWidth() != 0) {
               var10.a((byte) 109, var24, var16, var21, var22);
               var25Lifetime1 = var17;
               while (var18 > var25Lifetime1) {
-                param0[7].a(var25Lifetime1, var20, param4, param3, param8);
-                var25Lifetime1 = var25Lifetime1 + param0[7].b();
+                param0[7].draw(var25Lifetime1, var20, param4, param3, param8);
+                var25Lifetime1 = var25Lifetime1 + param0[7].paddedWidth();
                 if (var27 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -319,12 +319,12 @@ final class wo extends java.awt.Canvas {
             }
             boolean decompiledFrameCompleted1 = true;
             if (null != param0[3] &&
-              param0[3].d() != 0) {
+              param0[3].paddedHeight() != 0) {
               var10.a((byte) -93, var23, var24, param2, var21);
               var25Lifetime2 = var19;
               while (var20 > var25Lifetime2) {
-                param0[3].a(param2, var25Lifetime2, param4, param3, param8);
-                var25Lifetime2 = var25Lifetime2 + param0[3].d();
+                param0[3].draw(param2, var25Lifetime2, param4, param3, param8);
+                var25Lifetime2 = var25Lifetime2 + param0[3].paddedHeight();
                 if (var27 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -336,12 +336,12 @@ final class wo extends java.awt.Canvas {
             }
             boolean decompiledFrameCompleted0 = true;
             if (param0[5] != null &&
-              param0[5].d() != 0) {
+              param0[5].paddedHeight() != 0) {
               var10.a((byte) -128, var23, var24, var22, var15);
               var25Lifetime3 = var19;
               while (var25Lifetime3 < var20) {
-                param0[5].a(var18, var25Lifetime3, param4, param3, param8);
-                var25Lifetime3 = var25Lifetime3 + param0[5].d();
+                param0[5].draw(var18, var25Lifetime3, param4, param3, param8);
+                var25Lifetime3 = var25Lifetime3 + param0[5].paddedHeight();
                 if (var27 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -352,8 +352,8 @@ final class wo extends java.awt.Canvas {
               }
             }
             if (param0[4] != null &&
-              param0[4].b() != 0 &&
-              0 != param0[4].d()) {
+              param0[4].paddedWidth() != 0 &&
+              0 != param0[4].paddedHeight()) {
               var10.a((byte) 97, var23, var24, var21, var22);
               var25Lifetime4 = var19;
               while (var20 > var25Lifetime4) {
@@ -362,10 +362,10 @@ final class wo extends java.awt.Canvas {
                 }
                 var26 = var17;
                 while (var18 > var26) {
-                  param0[4].a(var26, var25Lifetime4, param4, param3, param8);
-                  var26 = var26 + param0[4].b();
+                  param0[4].draw(var26, var25Lifetime4, param4, param3, param8);
+                  var26 = var26 + param0[4].paddedWidth();
                 }
-                var25Lifetime4 = var25Lifetime4 + param0[4].d();
+                var25Lifetime4 = var25Lifetime4 + param0[4].paddedHeight();
               }
               var10.a(29709);
               return;

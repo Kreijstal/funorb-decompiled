@@ -78,7 +78,7 @@ final class eg extends IntrusiveNode {
           fl.field_o = new byte[rl.field_n][];
           var17.position = -(rl.field_n * 8) - 7 + param1.length;
           vf.field_d = var17.readUnsignedShort(param0);
-          li.field_u = var17.readUnsignedShort(255);
+          ToolkitImageProducerBuffer.field_u = var17.readUnsignedShort(255);
           var3 = 1 + (var17.readUnsignedByte(param0 - 31557) & 255);
           for (var4 = 0; var4 < rl.field_n; var4++) {
             er.field_h[var4] = var16.readUnsignedShort(255);

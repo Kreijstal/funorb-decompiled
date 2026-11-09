@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class he extends za {
-    jaclib.memory.heap.NativeHeap field_p;
+final class HardwareGraphicsHeap extends GraphicsHeap {
+    jaclib.memory.heap.NativeHeap heap;
     static tf field_m;
     static Random field_o;
     static ProgressDialog field_n;
@@ -14,17 +14,17 @@ final class he extends za {
         field_m = null;
         field_n = null;
         if (param0 <= 119) {
-          he.releaseStatics(23);
+          HardwareGraphicsHeap.releaseStatics(23);
         }
     }
 
-    he(int param0) {
-        this.field_p = new jaclib.memory.heap.NativeHeap(param0);
+    HardwareGraphicsHeap(int capacity) {
+        this.heap = new jaclib.memory.heap.NativeHeap(capacity);
     }
 
-    final void c(int param0) {
-        this.field_p.a();
-        if (param0 != -14365) {
+    final void close(int guard) {
+        this.heap.a();
+        if (guard != -14365) {
           field_m = (tf) null;
         }
     }

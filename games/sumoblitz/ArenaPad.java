@@ -240,7 +240,7 @@ final class ArenaPad extends IntrusiveNode {
             drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)drone.mass);
             drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)drone.mass);
             drone.steeringSuppressed = true;
-            tq.a(-111, ExpandingRingEffect.nextRandomInt(4, he.field_o, (byte) -96) + 6, false);
+            tq.a(-111, ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -269,7 +269,7 @@ final class ArenaPad extends IntrusiveNode {
                   if (stackIn_145_0 == stackIn_145_1 &&
                     0 >= this.teleportCooldownTicks &&
                     ~var8.field_s != ~this.field_s &&
-                    0 == ExpandingRingEffect.nextRandomInt(6, he.field_o, (byte) -96)) {
+                    0 == ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)) {
                     drone.xQ8 = var8.xQ8;
                     drone.yQ8 = var8.yQ8;
                     var8.teleportCooldownTicks = 60;
@@ -419,10 +419,10 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            o.field_b[0].a((this.xQ8 >> 8) - (o.field_b[0].c() >> 1), (this.yQ8 >> 8) - (o.field_b[0].a() >> 1));
+            o.field_b[0].draw((this.xQ8 >> 8) - (o.field_b[0].width() >> 1), (this.yQ8 >> 8) - (o.field_b[0].height() >> 1));
             decompiledFrameRemainder7 = !(this.triggerCooldownTicks > 5);
             if (decompiledFrameRemainder7) {
-              o.field_b[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
+              o.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
@@ -433,15 +433,15 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            go.field_p[0].a((this.xQ8 >> 8) - (go.field_p[0].c() >> 1), (this.yQ8 >> 8) - (go.field_p[0].a() >> 1));
+            go.field_p[0].draw((this.xQ8 >> 8) - (go.field_p[0].width() >> 1), (this.yQ8 >> 8) - (go.field_p[0].height() >> 1));
             if (this.triggerCooldownTicks <= 5 &&
               (this.ageTicks >> 5) % 2 == 1) {
-              go.field_p[1].a((this.xQ8 >> 8) - (go.field_p[1].c() >> 1), (this.yQ8 >> 8) - (go.field_p[1].a() >> 1), 1, 0, 2);
+              go.field_p[1].draw((this.xQ8 >> 8) - (go.field_p[1].width() >> 1), (this.yQ8 >> 8) - (go.field_p[1].height() >> 1), 1, 0, 2);
             }
             decompiledFrameRemainder7 = (this.exploding);
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder7 = (ul.field_f == 0))) {
-              kw.field_a.a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
+              kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
@@ -451,8 +451,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            ArchiveProvider.field_a[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation);
-            ArchiveProvider.field_a[(this.ageTicks >> 5) % ArchiveProvider.field_a.length].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation, 1, 0, 2);
+            ArchiveProvider.field_a[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation);
+            ArchiveProvider.field_a[(this.ageTicks >> 5) % ArchiveProvider.field_a.length].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -460,40 +460,40 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            uc.field_e[0].a((this.xQ8 >> 8) - (uc.field_e[0].c() >> 1), (this.yQ8 >> 8) - (uc.field_e[0].a() >> 1));
-            uc.field_e[1].a((this.xQ8 >> 8) - (uc.field_e[1].c() >> 1), (this.yQ8 >> 8) - (uc.field_e[1].a() >> 1), 1, 0, 2);
-            DirectByteArrayStorage.field_e.a((this.xQ8 >> 8) - (DirectByteArrayStorage.field_e.c() >> 1), (this.yQ8 >> 8) - (DirectByteArrayStorage.field_e.a() >> 1), 0, 16777215 + (this.highlightAlpha << 24), 1);
+            uc.field_e[0].draw((this.xQ8 >> 8) - (uc.field_e[0].width() >> 1), (this.yQ8 >> 8) - (uc.field_e[0].height() >> 1));
+            uc.field_e[1].draw((this.xQ8 >> 8) - (uc.field_e[1].width() >> 1), (this.yQ8 >> 8) - (uc.field_e[1].height() >> 1), 1, 0, 2);
+            DirectByteArrayStorage.field_e.draw((this.xQ8 >> 8) - (DirectByteArrayStorage.field_e.width() >> 1), (this.yQ8 >> 8) - (DirectByteArrayStorage.field_e.height() >> 1), 0, 16777215 + (this.highlightAlpha << 24), 1);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            uj.field_b[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, 0);
-            uj.field_b[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
+            uj.field_b[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, 0);
+            uj.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
-            kk.field_f.a((this.xQ8 >> 8) - (kk.field_f.c() >> 1), (this.yQ8 >> 8) - (kk.field_f.a() >> 1), 1, 0, 2);
+            kk.field_f.draw((this.xQ8 >> 8) - (kk.field_f.width() >> 1), (this.yQ8 >> 8) - (kk.field_f.height() >> 1), 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6)) {
-            f.field_r[0].a((this.xQ8 >> 8) - (f.field_r[0].c() >> 1), (this.yQ8 >> 8) - (f.field_r[0].a() >> 1));
-            f.field_r[1].a((this.xQ8 >> 8) - (f.field_r[1].c() >> 1), (this.yQ8 >> 8) - (f.field_r[1].a() >> 1), 0, -15687169, 1);
+            f.field_r[0].draw((this.xQ8 >> 8) - (f.field_r[0].width() >> 1), (this.yQ8 >> 8) - (f.field_r[0].height() >> 1));
+            f.field_r[1].draw((this.xQ8 >> 8) - (f.field_r[1].width() >> 1), (this.yQ8 >> 8) - (f.field_r[1].height() >> 1), 0, -15687169, 1);
             decompiledFrameRemainder7 = (ul.field_f == 1);
             if (decompiledFrameRemainder7) {
-              vl.field_c.a((this.xQ8 >> 8) - (vl.field_c.c() >> 1), (this.yQ8 >> 8) - (vl.field_c.a() >> 1), 0, -15687169, 1);
+              vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -15687169, 1);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder7) {
-            f.field_r[0].a((this.xQ8 >> 8) - (f.field_r[0].c() >> 1), (this.yQ8 >> 8) - (f.field_r[0].a() >> 1));
-            f.field_r[1].a((this.xQ8 >> 8) - (f.field_r[1].c() >> 1), (this.yQ8 >> 8) - (f.field_r[1].a() >> 1), 0, -31744, 1);
+            f.field_r[0].draw((this.xQ8 >> 8) - (f.field_r[0].width() >> 1), (this.yQ8 >> 8) - (f.field_r[0].height() >> 1));
+            f.field_r[1].draw((this.xQ8 >> 8) - (f.field_r[1].width() >> 1), (this.yQ8 >> 8) - (f.field_r[1].height() >> 1), 0, -31744, 1);
             if (1 == ul.field_f) {
-              vl.field_c.a((this.xQ8 >> 8) - (vl.field_c.c() >> 1), (this.yQ8 >> 8) - (vl.field_c.a() >> 1), 0, -31744, 1);
+              vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -31744, 1);
             }
           }
           if (guard != -15687169) {

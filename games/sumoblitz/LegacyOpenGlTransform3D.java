@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends eu {
+final class LegacyOpenGlTransform3D extends Transform3D {
     private float field_n;
     private float field_j;
     private float field_d;
@@ -171,7 +171,7 @@ final class dl extends eu {
     private final void c(int param0) {
         if (param0 != 3489) {
           float[] var3 = (float[]) null;
-          dl.a(-57, 41, (byte) -108, 122, 88, (float[]) null, -31);
+          LegacyOpenGlTransform3D.a(-57, 41, (byte) -108, 122, 88, (float[]) null, -31);
         }
         this.field_l = 0.0f;
         this.field_e = 1.0f;
@@ -272,7 +272,7 @@ final class dl extends eu {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          dl.releaseStatics(95);
+          LegacyOpenGlTransform3D.releaseStatics(95);
         }
         field_h = null;
     }
@@ -296,7 +296,7 @@ final class dl extends eu {
         return mo.field_n;
     }
 
-    dl() {
+    LegacyOpenGlTransform3D() {
         this.c(3489);
     }
 

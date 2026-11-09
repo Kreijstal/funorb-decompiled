@@ -248,7 +248,7 @@ final class wt extends LegacyOpenGlEffect {
     }
 
     final static void a(int param0, byte param1) {
-        ut.a(8, (byte) -55, TimedSceneEffect.field_m[param0], true);
+        AffineTransform3D.crossfadeMusicTrack(8, (byte) -55, TimedSceneEffect.field_m[param0], true);
         if (param1 < 27) {
           field_i = (ArchiveCatalog) null;
         }

@@ -82,7 +82,7 @@ abstract class GameClientShell extends GameApplet {
           var3 = 1200 * vm.a(-79);
           if (this.field_B ||
             !(var3 >= df.a((byte) 114)) &&
-            !(za.c(false) <= var3)) {
+            !(GraphicsHeap.c(false) <= var3)) {
             this.field_B = false;
             kk.a((byte) -112);
             ScrollViewport.a((byte) 16);
@@ -205,7 +205,7 @@ abstract class GameClientShell extends GameApplet {
           ph.a((byte) -93);
           th.e(true);
           pu.field_m = false;
-          hn.field_k = li.loadingText;
+          hn.field_k = ToolkitImageProducerBuffer.loadingText;
           ea.a(hw.field_a, qn.field_a, (byte) 40, eb.field_f, wd.field_j);
           if (hv.field_c ||
             DropTargetWidget.field_B != null) {
@@ -472,7 +472,7 @@ abstract class GameClientShell extends GameApplet {
             GraphicsOptionsDialog.a(28778, 5);
           }
           if (InteractiveWidget.field_z[5]) {
-            wm.a(false, 6);
+            TextureMetadata.a(false, 6);
           }
           if (InteractiveWidget.field_z[6]) {
             jl.a(7, param0);
@@ -627,13 +627,13 @@ abstract class GameClientShell extends GameApplet {
               MouseWheelInput.field_c = null;
               mn.field_g = null;
             }
-            var11 = li.c(82);
+            var11 = ToolkitImageProducerBuffer.c(82);
             if (var11 != null) {
               kd.a(var11.booleanValue(), -80);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), eu.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
+            var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), Transform3D.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
             if (var5_intLifetime1 != -1) {
               Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;

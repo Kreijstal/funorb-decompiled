@@ -8,12 +8,12 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     static int field_p;
     private static int field_C;
     static int field_v;
-    int field_q;
-    int field_t;
+    int height;
+    int insetLeft;
     static int field_c;
     private static int field_l;
     static int field_D;
-    int field_k;
+    int insetBottom;
     private static int field_x;
     static int field_n;
     private static int field_o;
@@ -21,11 +21,11 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     static int field_i;
     static int field_j;
     static int field_w;
-    int field_z;
+    int width;
     static int field_h;
-    int field_A;
-    int field_y;
-    SoftwareGraphicsToolkit field_B;
+    int insetTop;
+    int insetRight;
+    SoftwareGraphicsToolkit toolkit;
     static int field_r;
     static int field_b;
     static int field_e;
@@ -33,232 +33,232 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
     static int field_a;
     static int field_m;
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
+    abstract void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags);
 
-    final int c() {
-        return this.field_z;
+    final int width() {
+        return this.width;
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float x0, float y0, float x1, float y1, float x2, float y2, int colorMode, int color, int blendMode, int flags) {
         int var11;
         int var12;
-        if (this.field_B.f()) {
+        if (this.toolkit.isDisposed()) {
           throw new IllegalStateException();
         }
-        if (!this.a(param0, param1, param2, param3, param4, param5)) {
+        if (!this.prepareAffine(x0, y0, x1, y1, x2, y2)) {
           return;
         }
-        field_u = param7;
-        if (param6 == 1) {
-          if (param6 == 1) {
-            if (param8 == 0) {
-              this.b(1, 0);
+        field_u = color;
+        if (colorMode == 1) {
+          if (colorMode == 1) {
+            if (blendMode == 0) {
+              this.blitAffine(1, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(1, 1);
+            if (blendMode == 1) {
+              this.blitAffine(1, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(1, 2);
+            this.blitAffine(1, 2);
             return;
           }
-          if (param6 == 0) {
-            if (param8 == 0) {
-              this.b(0, 0);
+          if (colorMode == 0) {
+            if (blendMode == 0) {
+              this.blitAffine(0, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(0, 1);
+            if (blendMode == 1) {
+              this.blitAffine(0, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(0, 2);
+            this.blitAffine(0, 2);
             return;
           }
-          if (param6 == 3) {
-            if (param8 == 0) {
-              this.b(3, 0);
+          if (colorMode == 3) {
+            if (blendMode == 0) {
+              this.blitAffine(3, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(3, 1);
+            if (blendMode == 1) {
+              this.blitAffine(3, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(3, 2);
+            this.blitAffine(3, 2);
             return;
           }
-          if (param6 != 2) {
+          if (colorMode != 2) {
             return;
           }
-          if (param8 == 0) {
-            this.b(2, 0);
+          if (blendMode == 0) {
+            this.blitAffine(2, 0);
             return;
           }
-          if (param8 == 1) {
-            this.b(2, 1);
+          if (blendMode == 1) {
+            this.blitAffine(2, 1);
             return;
           }
-          if (param8 != 2) {
+          if (blendMode != 2) {
             return;
           }
-          this.b(2, 2);
+          this.blitAffine(2, 2);
           return;
         }
-        field_f = param7 >>> 24;
+        field_f = color >>> 24;
         field_c = 256 - field_f;
-        if (param6 == 0) {
-          field_j = (param7 & 16711680) >> 16;
-          field_v = (param7 & 65280) >> 8;
-          field_i = param7 & 255;
-          if (param6 == 1) {
-            if (param8 == 0) {
-              this.b(1, 0);
+        if (colorMode == 0) {
+          field_j = (color & 16711680) >> 16;
+          field_v = (color & 65280) >> 8;
+          field_i = color & 255;
+          if (colorMode == 1) {
+            if (blendMode == 0) {
+              this.blitAffine(1, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(1, 1);
+            if (blendMode == 1) {
+              this.blitAffine(1, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(1, 2);
+            this.blitAffine(1, 2);
             return;
           }
-          if (param6 == 0) {
-            if (param8 == 0) {
-              this.b(0, 0);
+          if (colorMode == 0) {
+            if (blendMode == 0) {
+              this.blitAffine(0, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(0, 1);
+            if (blendMode == 1) {
+              this.blitAffine(0, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(0, 2);
+            this.blitAffine(0, 2);
             return;
           }
-          if (param6 == 3) {
-            if (param8 == 0) {
-              this.b(3, 0);
+          if (colorMode == 3) {
+            if (blendMode == 0) {
+              this.blitAffine(3, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(3, 1);
+            if (blendMode == 1) {
+              this.blitAffine(3, 1);
               return;
             }
-            if (param8 != 2) {
+            if (blendMode != 2) {
               return;
             }
-            this.b(3, 2);
+            this.blitAffine(3, 2);
             return;
           }
-          if (param6 != 2) {
+          if (colorMode != 2) {
             return;
           }
-          if (param8 == 0) {
-            this.b(2, 0);
+          if (blendMode == 0) {
+            this.blitAffine(2, 0);
             return;
           }
-          if (param8 == 1) {
-            this.b(2, 1);
+          if (blendMode == 1) {
+            this.blitAffine(2, 1);
             return;
           }
-          if (param8 != 2) {
+          if (blendMode != 2) {
             return;
           }
-          this.b(2, 2);
+          this.blitAffine(2, 2);
           return;
         }
-        if (param6 == 2) {
-          field_o = param7 >>> 24;
+        if (colorMode == 2) {
+          field_o = color >>> 24;
           field_x = 256 - field_o;
-          var11 = (param7 & 16711935) * field_x & -16711936;
-          var12 = (param7 & 65280) * field_x & 16711680;
+          var11 = (color & 16711935) * field_x & -16711936;
+          var12 = (color & 65280) * field_x & 16711680;
           field_D = (var11 | var12) >>> 8;
         }
-        if (param6 == 1) {
-          if (param8 == 0) {
-            this.b(1, 0);
+        if (colorMode == 1) {
+          if (blendMode == 0) {
+            this.blitAffine(1, 0);
             return;
           }
-          if (param8 == 1) {
-            this.b(1, 1);
+          if (blendMode == 1) {
+            this.blitAffine(1, 1);
             return;
           }
-          if (param8 != 2) {
+          if (blendMode != 2) {
             return;
           }
-          this.b(1, 2);
+          this.blitAffine(1, 2);
           return;
         }
-        if (param6 != 0) {
-          if (param6 != 3) {
-            if (param6 == 2) {
-              if (param8 == 0) {
-                this.b(2, 0);
+        if (colorMode != 0) {
+          if (colorMode != 3) {
+            if (colorMode == 2) {
+              if (blendMode == 0) {
+                this.blitAffine(2, 0);
                 return;
               }
-              if (param8 == 1) {
-                this.b(2, 1);
+              if (blendMode == 1) {
+                this.blitAffine(2, 1);
                 return;
               }
-              if (param8 == 2) {
-                this.b(2, 2);
+              if (blendMode == 2) {
+                this.blitAffine(2, 2);
                 return;
               }
             }
           } else {
-            if (param8 == 0) {
-              this.b(3, 0);
+            if (blendMode == 0) {
+              this.blitAffine(3, 0);
               return;
             }
-            if (param8 == 1) {
-              this.b(3, 1);
+            if (blendMode == 1) {
+              this.blitAffine(3, 1);
               return;
             }
-            if (param8 == 2) {
-              this.b(3, 2);
+            if (blendMode == 2) {
+              this.blitAffine(3, 2);
               return;
             }
           }
         } else {
-          if (param8 == 0) {
-            this.b(0, 0);
+          if (blendMode == 0) {
+            this.blitAffine(0, 0);
             return;
           }
-          if (param8 == 1) {
-            this.b(0, 1);
+          if (blendMode == 1) {
+            this.blitAffine(0, 1);
             return;
           }
-          if (param8 == 2) {
-            this.b(0, 2);
+          if (blendMode == 2) {
+            this.blitAffine(0, 2);
             return;
           }
         }
     }
 
-    final int d() {
-        return this.field_A + this.field_q + this.field_k;
+    final int paddedHeight() {
+        return this.insetTop + this.height + this.insetBottom;
     }
 
-    final int b() {
-        return this.field_t + this.field_z + this.field_y;
+    final int paddedWidth() {
+        return this.insetLeft + this.width + this.insetRight;
     }
 
-    abstract void b(int param0, int param1);
+    abstract void blitAffine(int colorMode, int blendMode);
 
-    private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
+    private final boolean prepareAffine(float x0, float y0, float x1, float y1, float x2, float y2) {
         int var7;
         int var8;
         float var9;
@@ -281,100 +281,100 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         float var14Lifetime1;
         float var15Lifetime1;
         float var16Lifetime1;
-        var7 = this.field_t + this.field_z + this.field_y;
-        var8 = this.field_A + this.field_q + this.field_k;
-        if (var7 != this.field_z) {
-          var9 = (param2 - param0) / (float)var7;
-          var10 = (param3 - param1) / (float)var7;
-          var11 = (param4 - param0) / (float)var8;
-          var12 = (param5 - param1) / (float)var8;
-          var13 = var11 * (float)this.field_A;
-          var14 = var12 * (float)this.field_A;
-          var15 = var9 * (float)this.field_t;
-          var16 = var10 * (float)this.field_t;
-          var17 = -var9 * (float)this.field_y;
-          var18 = -var10 * (float)this.field_y;
-          var19 = -var11 * (float)this.field_k;
-          var20 = -var12 * (float)this.field_k;
-          param0 = param0 + (var15 + var13);
-          param1 = param1 + (var16 + var14);
-          param2 = param2 + (var17 + var13);
-          param3 = param3 + (var18 + var14);
-          param4 = param4 + (var15 + var19);
-          param5 = param5 + (var16 + var20);
+        var7 = this.insetLeft + this.width + this.insetRight;
+        var8 = this.insetTop + this.height + this.insetBottom;
+        if (var7 != this.width) {
+          var9 = (x1 - x0) / (float)var7;
+          var10 = (y1 - y0) / (float)var7;
+          var11 = (x2 - x0) / (float)var8;
+          var12 = (y2 - y0) / (float)var8;
+          var13 = var11 * (float)this.insetTop;
+          var14 = var12 * (float)this.insetTop;
+          var15 = var9 * (float)this.insetLeft;
+          var16 = var10 * (float)this.insetLeft;
+          var17 = -var9 * (float)this.insetRight;
+          var18 = -var10 * (float)this.insetRight;
+          var19 = -var11 * (float)this.insetBottom;
+          var20 = -var12 * (float)this.insetBottom;
+          x0 = x0 + (var15 + var13);
+          y0 = y0 + (var16 + var14);
+          x1 = x1 + (var17 + var13);
+          y1 = y1 + (var18 + var14);
+          x2 = x2 + (var15 + var19);
+          y2 = y2 + (var16 + var20);
         } else {
-          if (var8 != this.field_q) {
-            var9 = (param2 - param0) / (float)var7;
-            var10 = (param3 - param1) / (float)var7;
-            var11 = (param4 - param0) / (float)var8;
-            var12 = (param5 - param1) / (float)var8;
-            var13 = var11 * (float)this.field_A;
-            var14 = var12 * (float)this.field_A;
-            var15 = var9 * (float)this.field_t;
-            var16 = var10 * (float)this.field_t;
-            var17 = -var9 * (float)this.field_y;
-            var18 = -var10 * (float)this.field_y;
-            var19 = -var11 * (float)this.field_k;
-            var20 = -var12 * (float)this.field_k;
-            param0 = param0 + (var15 + var13);
-            param1 = param1 + (var16 + var14);
-            param2 = param2 + (var17 + var13);
-            param3 = param3 + (var18 + var14);
-            param4 = param4 + (var15 + var19);
-            param5 = param5 + (var16 + var20);
+          if (var8 != this.height) {
+            var9 = (x1 - x0) / (float)var7;
+            var10 = (y1 - y0) / (float)var7;
+            var11 = (x2 - x0) / (float)var8;
+            var12 = (y2 - y0) / (float)var8;
+            var13 = var11 * (float)this.insetTop;
+            var14 = var12 * (float)this.insetTop;
+            var15 = var9 * (float)this.insetLeft;
+            var16 = var10 * (float)this.insetLeft;
+            var17 = -var9 * (float)this.insetRight;
+            var18 = -var10 * (float)this.insetRight;
+            var19 = -var11 * (float)this.insetBottom;
+            var20 = -var12 * (float)this.insetBottom;
+            x0 = x0 + (var15 + var13);
+            y0 = y0 + (var16 + var14);
+            x1 = x1 + (var17 + var13);
+            y1 = y1 + (var18 + var14);
+            x2 = x2 + (var15 + var19);
+            y2 = y2 + (var16 + var20);
           }
         }
-        var9Lifetime1 = param4 + (param2 - param0);
-        var10Lifetime1 = param3 + (param5 - param1);
-        if (!(param0 < param2)) {
-          var11Lifetime1 = param2;
-          var12Lifetime1 = param0;
+        var9Lifetime1 = x2 + (x1 - x0);
+        var10Lifetime1 = y1 + (y2 - y0);
+        if (!(x0 < x1)) {
+          var11Lifetime1 = x1;
+          var12Lifetime1 = x0;
         } else {
-          var11Lifetime1 = param0;
-          var12Lifetime1 = param2;
+          var11Lifetime1 = x0;
+          var12Lifetime1 = x1;
         }
-        if (param4 < var11Lifetime1) {
-          var11Lifetime1 = param4;
+        if (x2 < var11Lifetime1) {
+          var11Lifetime1 = x2;
         }
         if (var9Lifetime1 < var11Lifetime1) {
           var11Lifetime1 = var9Lifetime1;
         }
-        if (param4 > var12Lifetime1) {
-          var12Lifetime1 = param4;
+        if (x2 > var12Lifetime1) {
+          var12Lifetime1 = x2;
         }
         if (var9Lifetime1 > var12Lifetime1) {
           var12Lifetime1 = var9Lifetime1;
         }
-        if (!(param1 < param3)) {
-          var13Lifetime1 = param3;
-          var14Lifetime1 = param1;
+        if (!(y0 < y1)) {
+          var13Lifetime1 = y1;
+          var14Lifetime1 = y0;
         } else {
-          var13Lifetime1 = param1;
-          var14Lifetime1 = param3;
+          var13Lifetime1 = y0;
+          var14Lifetime1 = y1;
         }
-        if (param5 < var13Lifetime1) {
-          var13Lifetime1 = param5;
+        if (y2 < var13Lifetime1) {
+          var13Lifetime1 = y2;
         }
         if (var10Lifetime1 < var13Lifetime1) {
           var13Lifetime1 = var10Lifetime1;
         }
-        if (param5 > var14Lifetime1) {
-          var14Lifetime1 = param5;
+        if (y2 > var14Lifetime1) {
+          var14Lifetime1 = y2;
         }
         if (var10Lifetime1 > var14Lifetime1) {
           var14Lifetime1 = var10Lifetime1;
         }
-        if (var11Lifetime1 < (float)this.field_B.field_v) {
-          var11Lifetime1 = (float)this.field_B.field_v;
+        if (var11Lifetime1 < (float)this.toolkit.clipLeft) {
+          var11Lifetime1 = (float)this.toolkit.clipLeft;
         }
-        if (var12Lifetime1 > (float)this.field_B.field_D) {
-          var12Lifetime1 = (float)this.field_B.field_D;
+        if (var12Lifetime1 > (float)this.toolkit.clipRight) {
+          var12Lifetime1 = (float)this.toolkit.clipRight;
         }
-        if (var13Lifetime1 < (float)this.field_B.field_H) {
-          var13Lifetime1 = (float)this.field_B.field_H;
+        if (var13Lifetime1 < (float)this.toolkit.clipTop) {
+          var13Lifetime1 = (float)this.toolkit.clipTop;
         }
-        if (var14Lifetime1 > (float)this.field_B.field_C) {
-          var14Lifetime1 = (float)this.field_B.field_C;
+        if (var14Lifetime1 > (float)this.toolkit.clipBottom) {
+          var14Lifetime1 = (float)this.toolkit.clipBottom;
         }
         var12Lifetime1 = var11Lifetime1 - var12Lifetime1;
         if (var12Lifetime1 >= 0.0f) {
@@ -384,18 +384,18 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         if (var14Lifetime1 >= 0.0f) {
           return false;
         }
-        field_r = this.field_B.field_k;
+        field_r = this.toolkit.targetWidth;
         field_e = (int)((float)((int)var13Lifetime1 * field_r) + var11Lifetime1);
-        var15Lifetime1 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
-        var16Lifetime1 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-        field_w = (int)((param5 - param1) * 4096.0f * (float)this.field_z / var15Lifetime1);
-        field_d = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16Lifetime1);
-        field_p = (int)((param4 - param0) * 4096.0f * (float)this.field_z / var16Lifetime1);
-        field_b = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15Lifetime1);
-        field_l = (int)(var11Lifetime1 * 16.0f + 8.0f - (param0 + param2 + param4 + var9Lifetime1) / 4.0f * 16.0f);
-        field_C = (int)(var13Lifetime1 * 16.0f + 8.0f - (param1 + param3 + param5 + var10Lifetime1) / 4.0f * 16.0f);
-        field_s = (this.field_z >> 1 << 12) + (field_C * field_p >> 4);
-        field_m = (this.field_q >> 1 << 12) + (field_C * field_b >> 4);
+        var15Lifetime1 = (x1 - x0) * (y2 - y0) - (y1 - y0) * (x2 - x0);
+        var16Lifetime1 = (x2 - x0) * (y1 - y0) - (y2 - y0) * (x1 - x0);
+        field_w = (int)((y2 - y0) * 4096.0f * (float)this.width / var15Lifetime1);
+        field_d = (int)((y1 - y0) * 4096.0f * (float)this.height / var16Lifetime1);
+        field_p = (int)((x2 - x0) * 4096.0f * (float)this.width / var16Lifetime1);
+        field_b = (int)((x1 - x0) * 4096.0f * (float)this.height / var15Lifetime1);
+        field_l = (int)(var11Lifetime1 * 16.0f + 8.0f - (x0 + x1 + x2 + var9Lifetime1) / 4.0f * 16.0f);
+        field_C = (int)(var13Lifetime1 * 16.0f + 8.0f - (y0 + y1 + y2 + var10Lifetime1) / 4.0f * 16.0f);
+        field_s = (this.width >> 1 << 12) + (field_C * field_p >> 4);
+        field_m = (this.height >> 1 << 12) + (field_C * field_b >> 4);
         field_g = field_l * field_w >> 4;
         field_a = field_l * field_d >> 4;
         field_h = (int)var12Lifetime1;
@@ -403,23 +403,23 @@ abstract class SoftwareToolkitSprite extends ToolkitSprite {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_t = param0;
-        this.field_A = param1;
-        this.field_y = param2;
-        this.field_k = param3;
+    final void setInsets(int left, int top, int right, int bottom) {
+        this.insetLeft = left;
+        this.insetTop = top;
+        this.insetRight = right;
+        this.insetBottom = bottom;
     }
 
-    SoftwareToolkitSprite(SoftwareGraphicsToolkit param0, int param1, int param2) {
-        this.field_B = param0;
-        this.field_z = param1;
-        this.field_q = param2;
+    SoftwareToolkitSprite(SoftwareGraphicsToolkit owner, int pixelWidth, int pixelHeight) {
+        this.toolkit = owner;
+        this.width = pixelWidth;
+        this.height = pixelHeight;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4);
+    abstract void draw(int x, int y, int colorMode, int color, int blendMode);
 
-    final int a() {
-        return this.field_q;
+    final int height() {
+        return this.height;
     }
 
     static {

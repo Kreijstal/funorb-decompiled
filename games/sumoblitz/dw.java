@@ -247,7 +247,7 @@ abstract class dw implements v {
 
     public final gf c(int param0) {
         if (this.b(-8003)) {
-          return ad.field_n;
+          return LegacyOpenGlGraphicsHeap.field_n;
         }
         if (wq.a(-89) >= this.field_a + 350L) {
           int var2 = -1 % ((param0 + 19) / 46);

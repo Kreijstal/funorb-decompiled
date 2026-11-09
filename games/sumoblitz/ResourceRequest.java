@@ -11,7 +11,7 @@ abstract class ResourceRequest extends DualLinkNode {
         if (param0 > -81) {
           return (String) null;
         }
-        if (ProxySocketConnector.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
           return bi.field_d;
         }
         return kh.field_d;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm {
+final class TextureMetadata {
     boolean field_s;
     boolean field_l;
     int field_p;
@@ -88,7 +88,7 @@ final class wm {
             return;
           }
           var4 = (int[]) null;
-          wm.a(-1, 109, 92, -119, (int[]) null);
+          TextureMetadata.a(-1, 109, 92, -119, (int[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class wm {
         field_f = (boolean[]) null;
     }
 
-    private wm() throws Throwable {
+    private TextureMetadata() throws Throwable {
         throw new Error();
     }
 

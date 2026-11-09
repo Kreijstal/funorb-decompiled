@@ -172,15 +172,15 @@ final class cn extends dq {
           theAccountNameYouText = (String) null;
           param1 = param1 & 8191;
           if (param1 >= 4096) {
-            return 6144 <= param1 ? ce.field_p[param1 - 6144] : -ce.field_p[-param1 + 6144];
+            return 6144 <= param1 ? ToolkitRasterBuffer.field_p[param1 - 6144] : -ToolkitRasterBuffer.field_p[-param1 + 6144];
           }
-          return 2048 > param1 ? ce.field_p[-param1 + 2048] : -ce.field_p[-2048 + param1];
+          return 2048 > param1 ? ToolkitRasterBuffer.field_p[-param1 + 2048] : -ToolkitRasterBuffer.field_p[-2048 + param1];
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
-          return 6144 <= param1 ? ce.field_p[param1 - 6144] : -ce.field_p[-param1 + 6144];
+          return 6144 <= param1 ? ToolkitRasterBuffer.field_p[param1 - 6144] : -ToolkitRasterBuffer.field_p[-param1 + 6144];
         }
-        return 2048 > param1 ? ce.field_p[-param1 + 2048] : -ce.field_p[-2048 + param1];
+        return 2048 > param1 ? ToolkitRasterBuffer.field_p[-param1 + 2048] : -ToolkitRasterBuffer.field_p[-2048 + param1];
     }
 
     static {

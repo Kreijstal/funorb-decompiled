@@ -62,7 +62,7 @@ final class dv implements WidgetRenderer {
         }
         ne[] var1 = new ne[rl.field_n];
         for (var2 = 0; var2 < rl.field_n; var2++) {
-          var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
+          var1[var2] = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -68);
         return var1;

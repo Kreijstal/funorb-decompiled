@@ -630,7 +630,7 @@ final class uo extends ShaderEffect {
     }
 
     final void a(boolean param0, int param1) {
-        ut var4 = null;
+        AffineTransform3D var4 = null;
         ef var3 = this.field_b.d((byte) 122);
         if (param1 != 20186) {
           return;
@@ -648,7 +648,7 @@ final class uo extends ShaderEffect {
           this.field_b.a((byte) 101, 2, true, false, FontMetrics.field_a);
           this.field_b.a(NetworkResourceRequest.field_y, 0, true);
           var4 = this.field_b.B(0);
-          var4.a(this.field_b.c(true), true);
+          var4.copyLinearFrom(this.field_b.c(true), true);
           this.field_b.a(ip.field_y, 28880);
           this.field_b.g(0, -124);
           this.field_f = true;

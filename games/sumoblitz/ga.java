@@ -177,7 +177,7 @@ final class ga extends LegacyOpenGlEffect {
     }
 
     private final void c(byte param0) {
-        dl var2 = this.field_b.field_M;
+        LegacyOpenGlTransform3D var2 = this.field_b.field_M;
         if (!this.field_p) {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_b.field_yb == 2147483647 ? this.field_o.field_a : this.field_m.field_a);
         } else {
@@ -203,8 +203,8 @@ final class ga extends LegacyOpenGlEffect {
         float var4 = 0.0f;
         float var5 = 0.0f;
         if (this.field_k) {
-          var2 = this.field_b.XA();
-          var3 = this.field_b.i();
+          var2 = this.field_b.farPlane();
+          var3 = this.field_b.nearPlane();
           var4 = -((float)(var2 - var3) * 0.125f) + (float)var2;
           var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.field_u, (float)this.field_b.field_Mb / 255.0f);

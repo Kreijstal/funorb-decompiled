@@ -91,7 +91,7 @@ final class rc extends bp implements ef {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -23) {
-            stackIn_4_0 = ce.field_q.fetchNamedFile(param0, "", -1);
+            stackIn_4_0 = ToolkitRasterBuffer.field_q.fetchNamedFile(param0, "", -1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

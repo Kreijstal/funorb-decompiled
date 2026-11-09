@@ -185,7 +185,7 @@ final class SecondaryNodeQueue {
 
     final static void b(int param0) {
         ks.field_x = fw.c(false);
-        rf.field_a = new DialogLayer();
+        RenderPresentationException.field_a = new DialogLayer();
         sm.a((byte) 127, true, true);
         if (param0 != 246) {
           SecondaryNodeQueue.a(22, 45, -112, 42, -110, true, -91, 8, 90);

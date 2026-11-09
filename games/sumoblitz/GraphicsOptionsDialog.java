@@ -165,7 +165,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           this.addChild(this.field_U, 93);
           this.field_X = this.a(sb.field_d, (WidgetListener) (this), kp.classicText, (byte) -105);
           if (var2_intLifetime1 != 0) {
-            this.field_Y = this.a(kn.field_f, (WidgetListener) (this), hq.resizableText, (byte) 122);
+            this.field_Y = this.a(SoftwareTransform3D.field_f, (WidgetListener) (this), hq.resizableText, (byte) 122);
           }
           this.field_T = this.a(sm.field_c, (WidgetListener) (this), PlayingSound.fullScreenText, (byte) 110);
           if (var2_intLifetime1 != 0) {

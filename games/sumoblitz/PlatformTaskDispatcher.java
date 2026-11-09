@@ -396,7 +396,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (hh) null;
-                      var8.result = rf.a((String) (var8.objectArgument), var8.intArgument, true).b((byte) 61);
+                      var8.result = RenderPresentationException.a((String) (var8.objectArgument), var8.intArgument, true).b((byte) 61);
                     } catch (hh decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (hh) (Object) decompiledCaughtException;

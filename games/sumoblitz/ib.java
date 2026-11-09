@@ -7,15 +7,15 @@ final class ib extends ShaderEffect {
     private sk field_f;
 
     final void a(byte param0) {
-        ut var2 = null;
-        ut var3 = null;
+        AffineTransform3D var2 = null;
+        AffineTransform3D var3 = null;
         if (this.field_b.t(-80) == 0) {
           var2 = this.field_b.H(26453);
           this.field_b.g(1, -128);
           var3 = this.field_b.B(0);
-          var3.a(0, var2);
-          var3.a(0.125f, 0.125f, -126, 1.0f);
-          var3.a((byte) 96, this.field_e, 0.0f, 0.0f);
+          var3.copyFrom(0, var2);
+          var3.scale(0.125f, 0.125f, -126, 1.0f);
+          var3.translate((byte) 96, this.field_e, 0.0f, 0.0f);
           this.field_b.a(ip.field_y, 28880);
           this.field_b.g(0, -122);
         }

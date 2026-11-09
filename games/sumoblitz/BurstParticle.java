@@ -110,10 +110,10 @@ final class BurstParticle extends TimedSceneEffect {
             this.updateAndIsExpired(84);
           }
           if (this.textureKind != 0) {
-            im.field_a.a(this.x >> 8, this.y >> 8, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
+            im.field_a.draw(this.x >> 8, this.y >> 8, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
             return;
           }
-          uc.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 3, 16777215 + (256 / this.initialLifetime * this.remainingTicks << 24), 1);
+          uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 3, 16777215 + (256 / this.initialLifetime * this.remainingTicks << 24), 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,10 +140,10 @@ final class BurstParticle extends TimedSceneEffect {
     final static void a(boolean param0, boolean param1) {
         if (!param1) {
           BurstParticle.a(false, false);
-          rf.field_a.render(0, 0, false);
+          RenderPresentationException.field_a.render(0, 0, false);
           return;
         }
-        rf.field_a.render(0, 0, false);
+        RenderPresentationException.field_a.render(0, 0, false);
     }
 
     static {

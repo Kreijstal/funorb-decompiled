@@ -132,7 +132,7 @@ final class up {
                 }
                 if (param3) {
                   PowerupTrailParticle.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
-                  ad.field_q[var23Lifetime2] = var28Lifetime1 >> IntrusiveDeque.field_b;
+                  LegacyOpenGlGraphicsHeap.field_q[var23Lifetime2] = var28Lifetime1 >> IntrusiveDeque.field_b;
                   field_f[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

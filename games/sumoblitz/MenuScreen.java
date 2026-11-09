@@ -178,7 +178,7 @@ class MenuScreen {
               if (decompiledFrameRemainder0) {
                 if (var20 != null) {
                   if (~var17 == ~var15) {
-                    ((ToolkitSprite) (var20)).a(var18Lifetime2, var19Lifetime2, 48, 48, 0, var5, 1);
+                    ((ToolkitSprite) (var20)).drawScaled(var18Lifetime2, var19Lifetime2, 48, 48, 0, var5, 1);
                   } else {
                     stackIn_57_0 = var20;
                     stackIn_57_1 = var18Lifetime2;
@@ -192,7 +192,7 @@ class MenuScreen {
                     } else {
                       stackIn_59_6 = var6;
                     }
-                    ((ToolkitSprite) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_59_6, 1);
+                    ((ToolkitSprite) stackIn_57_0).drawScaled(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_59_6, 1);
                   }
                 }
                 if (var12.length > var17 && (!var12[var17] ||
@@ -260,25 +260,25 @@ class MenuScreen {
           uq.field_a.a(ArchiveProvider.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           var20_int = 200;
           if (var18Lifetime1 != 0) {
-            qw.field_a[var15].a(160, -30 + var20_int, 0, var5, 1);
+            qw.field_a[var15].draw(160, -30 + var20_int, 0, var5, 1);
             if (var21 != 0) {
               if (!(ct.field_x <= 0) ||
                 !var10[var15]) {
-                pi.field_d.a(160, -30 + var20_int, 0, var5, 1);
-                uj.field_a.a(160, var20_int - 30, 0, var5, 1);
+                pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
+                uj.field_a.draw(160, var20_int - 30, 0, var5, 1);
               } else {
-                uj.field_a.a(160, var20_int - 30, 0, var5, 1);
+                uj.field_a.draw(160, var20_int - 30, 0, var5, 1);
               }
             }
           } else {
             if (!(ct.field_x <= 0) ||
               !var10[var15]) {
-              pi.field_d.a(160, -30 + var20_int, 0, var5, 1);
+              pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
               if (var21 != 0) {
-                uj.field_a.a(160, var20_int - 30, 0, var5, 1);
+                uj.field_a.draw(160, var20_int - 30, 0, var5, 1);
               }
             } else {
-              uj.field_a.a(160, var20_int - 30, 0, var5, 1);
+              uj.field_a.draw(160, var20_int - 30, 0, var5, 1);
             }
           }
           var20_int = var20_int + SocketConnector.field_a.field_i;
@@ -483,18 +483,18 @@ class MenuScreen {
           var14_ref.a(-1, -24 + (var10 >> 1) + var7, var9.toUpperCase(), var16 + (var17 + var15_ref.field_i + var6_int), param4 << 24 | 5023231, 115);
           var13_ref.a(-1, -24 + var7 + (var10 >> 1), var9.toUpperCase(), var6_int + var15_ref.field_i - (-var17 - var16), var12, 127);
           var19 = var19 + (16 + SocketJs5Client.field_q);
-          vm.field_a[1].a((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
-          vm.field_a[2].a((float)(vm.field_a[1].b() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
-          vm.field_a[2].a((float)(vm.field_a[1].b() * 2 - 2 - 2 + (var19 + 10)), (float)(-2 + (var6_int + 3 + 10)), 4096, 0, 1, 0, 2);
-          vm.field_a[2].a((float)(vm.field_a[1].b() * 3 - 2 + var19 - 2 + 10), (float)(10 + (3 + var6_int) - 2), 4096, 0, 1, 0, 2);
-          vm.field_a[3].a((float)(-2 + var19 - 2 + 10 + 4 * vm.field_a[1].b()), (float)(3 + var6_int + 8), 4096, 0, 1, 0, 2);
+          vm.field_a[1].drawRotated((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
+          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
+          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() * 2 - 2 - 2 + (var19 + 10)), (float)(-2 + (var6_int + 3 + 10)), 4096, 0, 1, 0, 2);
+          vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() * 3 - 2 + var19 - 2 + 10), (float)(10 + (3 + var6_int) - 2), 4096, 0, 1, 0, 2);
+          vm.field_a[3].drawRotated((float)(-2 + var19 - 2 + 10 + 4 * vm.field_a[1].paddedWidth()), (float)(3 + var6_int + 8), 4096, 0, 1, 0, 2);
           if (var8 != 12) {
             stackIn_44_0 = tt.field_l;
           } else {
             stackIn_44_0 = kr.field_c;
           }
           var20 = stackIn_44_0;
-          vm.field_a[0].a((float)(10 + (var19 + (var20 >> 1) - 2) - 2), (float)(10 + (var6_int + 1)), 4096, 0, 1, 0, 2);
+          vm.field_a[0].drawRotated((float)(10 + (var19 + (var20 >> 1) - 2) - 2), (float)(10 + (var6_int + 1)), 4096, 0, 1, 0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -708,22 +708,22 @@ class MenuScreen {
         qv.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
         uq.field_a.a(var5, var3, 16777215 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -8, 0);
         var5 += 30;
-        ContentDialog.field_ab[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        ContentDialog.field_ab[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        ContentDialog.field_ab[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        ContentDialog.field_ab[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[1], (byte) -120, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[1], (byte) -56, 0);
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         var5 += 70;
-        s.field_n[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        s.field_n[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        s.field_n[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        s.field_n[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -117, 0);
         MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         var5 += 70;
-        hv.field_d[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        hv.field_d[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        hv.field_d[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        hv.field_d[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         if (!param0) {
           this.resetSelection(-98, false);
         }
@@ -777,7 +777,7 @@ class MenuScreen {
               var9 == 0) {
               if (!(!this.field_g.d(-31260))) {
                 StrongCacheReference.switchMenuScreen(-7753, param0, 7);
-                ut.field_j = this.screenId;
+                AffineTransform3D.field_j = this.screenId;
               }
               break regionExit2;
             } else {
@@ -827,7 +827,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
-                    ut.field_j = this.screenId;
+                    AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -837,7 +837,7 @@ class MenuScreen {
                     }
                     ph.gameplaySession.startArcadeGame((byte) -120);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
-                    ut.field_j = this.screenId;
+                    AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -847,7 +847,7 @@ class MenuScreen {
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                     ph.gameplaySession.closePauseMenu((byte) 112);
-                    ut.field_j = 0;
+                    AffineTransform3D.field_j = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -870,7 +870,7 @@ class MenuScreen {
                     DropDownWidget.field_C = oh.levelIndex;
                     IntrusiveNodeHashTable.field_c = 0;
                     ph.gameplaySession.closePauseMenu((byte) 112);
-                    ut.field_j = 0;
+                    AffineTransform3D.field_j = 0;
                     UiWidget.d((byte) -60);
                     if (var9 == 0) {
                       break regionExit2;
@@ -904,7 +904,7 @@ class MenuScreen {
                         } else {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
                         }
-                        ut.field_j = 0;
+                        AffineTransform3D.field_j = 0;
                         if (var9 != 0) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
                         }
@@ -913,7 +913,7 @@ class MenuScreen {
                       }
                     }
                     TextLayout.a(0, 0);
-                    ut.field_j = 0;
+                    AffineTransform3D.field_j = 0;
                     UiWidget.d((byte) -107);
                     if (var9 == 0) {
                       break regionExit2;
@@ -956,9 +956,9 @@ class MenuScreen {
                           StrongCacheReference.switchMenuScreen(-7753, true, 0);
                         }
                       }
-                      ut.field_j = 0;
+                      AffineTransform3D.field_j = 0;
                     }
-                    ut.field_j = 0;
+                    AffineTransform3D.field_j = 0;
                     TextLayout.a(0, 0);
                     UiWidget.d((byte) -52);
                     ph.gameplaySession.resetSession(111);
@@ -982,7 +982,7 @@ class MenuScreen {
                     }
                     pu.a((byte) -33);
                     StrongCacheReference.switchMenuScreen(-7753, param0, 9);
-                    ut.field_j = 7;
+                    AffineTransform3D.field_j = 7;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -992,7 +992,7 @@ class MenuScreen {
                     }
                     UiWidget.d((byte) -32);
                     tt.a(30692);
-                    StrongCacheReference.switchMenuScreen(-7753, param0, ut.field_j);
+                    StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1026,7 +1026,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 4);
-                    ut.field_j = this.screenId;
+                    AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1036,7 +1036,7 @@ class MenuScreen {
                     }
                     fl.field_n = 0;
                     StrongCacheReference.switchMenuScreen(-7753, param0, 3);
-                    ut.field_j = this.screenId;
+                    AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1044,7 +1044,7 @@ class MenuScreen {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, ut.field_j);
+                    StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1316,15 +1316,15 @@ class MenuScreen {
         qv.field_k.a(var5, var3, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -21, 0);
         uq.field_a.a(var5, var3, param0 << 24 | 16777215, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -15, 0);
         var5 += 30;
-        field_a[0].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        field_a[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        field_a[0].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        field_a[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -76, 0);
         LegacyOpenGlEffect.field_c.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -28, 0);
         MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         var5 += 70;
-        mr.field_e[0].a((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        mr.field_e[1].a((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        mr.field_e[0].drawRotated((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        mr.field_e[1].drawRotated((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -117, 0);
         MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
@@ -1392,7 +1392,7 @@ class MenuScreen {
           if (0 == this.screenId ||
             1 == this.screenId ||
             this.screenId == 8) {
-            wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.c() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.c() + 40, -5, 1, true);
+            wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
             if (ul.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
@@ -1400,7 +1400,7 @@ class MenuScreen {
               stackIn_18_0 = 1;
             }
             var6 = stackIn_18_0;
-            MouseWheelInput.field_b.a(-(MouseWheelInput.field_b.c() / 2) + 320, 20, var6, opacity << 24, 1);
+            MouseWheelInput.field_b.draw(-(MouseWheelInput.field_b.width() / 2) + 320, 20, var6, opacity << 24, 1);
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.screenId != 2) {
@@ -1518,18 +1518,18 @@ class MenuScreen {
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
         var5 += 42;
-        MusicCrossfadeStream.field_q[0].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
+        MusicCrossfadeStream.field_q[0].drawRotated((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
         var5 += 35;
-        MusicCrossfadeStream.field_q[1].a((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
+        MusicCrossfadeStream.field_q[1].drawRotated((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
         if (param0 > -54) {
           this.screenId = 74;
         }
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
         var5 += 35;
-        MusicCrossfadeStream.field_q[2].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
+        MusicCrossfadeStream.field_q[2].drawRotated((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
         MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
         var5 += 40;
@@ -1704,9 +1704,9 @@ class MenuScreen {
             if (param0 == 5) {
               return 240;
             }
-            return 155 * (param0 % 3) + za.field_l[this.screenId];
+            return 155 * (param0 % 3) + GraphicsHeap.field_l[this.screenId];
           }
-          return 465 + za.field_l[this.screenId];
+          return 465 + GraphicsHeap.field_l[this.screenId];
         }
         var3 = 27 / ((-40 - param1) / 47);
         if (this.screenId == 3) {
@@ -1740,7 +1740,7 @@ class MenuScreen {
           if (this.screenId == 5) {
             return 120 + 200 * param0;
           }
-          return za.field_l[this.screenId];
+          return GraphicsHeap.field_l[this.screenId];
         }
         return 120 + param0 * 200;
     }
@@ -1796,7 +1796,7 @@ class MenuScreen {
             if (this.screenId == 1) {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
               ph.gameplaySession.closePauseMenu((byte) 112);
-              ut.field_j = 0;
+              AffineTransform3D.field_j = 0;
               gn.a(15, true);
               if (var3 == 0) {
                 continue;
@@ -1814,7 +1814,7 @@ class MenuScreen {
             if (this.screenId == 12) {
               continue;
             }
-            StrongCacheReference.switchMenuScreen(-7753, false, ut.field_j);
+            StrongCacheReference.switchMenuScreen(-7753, false, AffineTransform3D.field_j);
             gn.a(15, true);
             if (var3 == 0) {
               continue;
@@ -1988,7 +1988,7 @@ class MenuScreen {
                   var16 = var9[var4 * 2];
                   var17 = var8[var4];
                   if (var10 == var4) {
-                    var20.a((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
+                    var20.fillRectangle((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
                     var15Lifetime1 = -17409;
                   }
                   MessageDialog.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
@@ -2092,10 +2092,10 @@ class MenuScreen {
                 MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
                 LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
               } else {
-                bt.field_e.a(var3Lifetime1 + 16, 14 + var5);
+                bt.field_e.draw(var3Lifetime1 + 16, 14 + var5);
               }
             } else {
-              HudMessage.field_m.a(28 + var3Lifetime1, var5 + 20);
+              HudMessage.field_m.draw(28 + var3Lifetime1, var5 + 20);
             }
             if (var6 == 2) {
               var5 += 80;

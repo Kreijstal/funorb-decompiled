@@ -67,14 +67,14 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void c(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        ut var3 = null;
+        AffineTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
-        ut var3Lifetime1;
+        AffineTransform3D var3Lifetime1;
         if (param0 >= 0) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
             var3 = this.field_h.k((byte) 107);
-            var2.a(0, var3.a(0, field_f));
+            var2.a(0, var3.writeRowMajor4x4(0, field_f));
           }
           return;
         }
@@ -82,7 +82,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_e) {
           var2Lifetime1 = this.field_h.field_Cc;
           var3Lifetime1 = this.field_h.k((byte) 107);
-          var2Lifetime1.a(0, var3Lifetime1.a(0, field_f));
+          var2Lifetime1.a(0, var3Lifetime1.writeRowMajor4x4(0, field_f));
         }
     }
 
@@ -144,26 +144,26 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void b(int param0) {
         jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
-        ut var3 = null;
-        ut var4 = null;
+        AffineTransform3D var3 = null;
+        AffineTransform3D var4 = null;
         if (this.field_e) {
           var2_ref_jagdx_IDirect3DDevice = this.field_h.field_Cc;
           var3 = this.field_h.g((byte) -28);
           var4 = this.field_h.k((byte) 106);
-          var2_ref_jagdx_IDirect3DDevice.a(0, var4.a(0, field_f));
-          var2_ref_jagdx_IDirect3DDevice.a(4, var3.b(field_f, (byte) 86));
+          var2_ref_jagdx_IDirect3DDevice.a(0, var4.writeRowMajor4x4(0, field_f));
+          var2_ref_jagdx_IDirect3DDevice.a(4, var3.writeLinearRowMajor4x4(field_f, (byte) 86));
         }
         int var2 = 49 / ((param0 - 41) / 46);
     }
 
     final void a(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        ut var3 = null;
+        AffineTransform3D var3 = null;
         if (param0 < -47) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
             var3 = this.field_b.H(26453);
-            var2.SetVertexShaderConstantF(12, var3.a(field_f, (byte) -37), 2);
+            var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows(field_f, (byte) -37), 2);
           }
           return;
         }

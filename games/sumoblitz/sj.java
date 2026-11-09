@@ -114,7 +114,7 @@ final class sj {
               qq.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
               var1_int = var1_int + GameClientShell.field_t;
             } else {
-              MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
+              MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + LegacyOpenGlTransform3D.field_f, var5, -1);
               var1_int = var1_int + (qc.field_a + (TextLayout.field_b + ga.field_h));
             }
           }
@@ -153,7 +153,7 @@ final class sj {
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param0 == -1) {
           if (!SocketJs5Client.field_p[param2] &&
-            !wm.field_f[param2]) {
+            !TextureMetadata.field_f[param2]) {
             var3 = param2;
             if (0 == var3) {
               if (param1 == 0) {
@@ -262,7 +262,7 @@ final class sj {
         if (SocketJs5Client.field_p[param2]) {
           return;
         }
-        if (wm.field_f[param2]) {
+        if (TextureMetadata.field_f[param2]) {
           return;
         }
         var3Lifetime1 = param2;

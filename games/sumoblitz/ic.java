@@ -51,32 +51,32 @@ final class ic {
         if (param1 == -431) {
           if (param0 < 4096) {
             if (param0 >= 2048) {
-              stackIn_19_0 = ce.field_p[-param0 + 4096];
+              stackIn_19_0 = ToolkitRasterBuffer.field_p[-param0 + 4096];
             } else {
-              stackIn_19_0 = ce.field_p[param0];
+              stackIn_19_0 = ToolkitRasterBuffer.field_p[param0];
             }
             return stackIn_19_0;
           }
           if (param0 >= 6144) {
-            stackIn_15_0 = -ce.field_p[8192 - param0];
+            stackIn_15_0 = -ToolkitRasterBuffer.field_p[8192 - param0];
           } else {
-            stackIn_15_0 = -ce.field_p[-4096 + param0];
+            stackIn_15_0 = -ToolkitRasterBuffer.field_p[-4096 + param0];
           }
           return stackIn_15_0;
         }
         field_b = (Object) null;
         if (param0 < 4096) {
           if (param0 >= 2048) {
-            stackIn_9_0 = ce.field_p[-param0 + 4096];
+            stackIn_9_0 = ToolkitRasterBuffer.field_p[-param0 + 4096];
           } else {
-            stackIn_9_0 = ce.field_p[param0];
+            stackIn_9_0 = ToolkitRasterBuffer.field_p[param0];
           }
           return stackIn_9_0;
         }
         if (param0 >= 6144) {
-          stackIn_5_0 = -ce.field_p[8192 - param0];
+          stackIn_5_0 = -ToolkitRasterBuffer.field_p[8192 - param0];
         } else {
-          stackIn_5_0 = -ce.field_p[-4096 + param0];
+          stackIn_5_0 = -ToolkitRasterBuffer.field_p[-4096 + param0];
         }
         return stackIn_5_0;
     }

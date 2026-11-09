@@ -101,14 +101,14 @@ final class GameplaySession {
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var4_intLifetime1 < 480) {
-              var2.a(var3[var4_intLifetime1] - 16777216, param0 + 23, var4_intLifetime1, 640, 0);
+              var2.drawHorizontalLineAlpha(var3[var4_intLifetime1] - 16777216, param0 + 23, var4_intLifetime1, 640, 0);
               var4_intLifetime1++;
               if (var9 == 0) {
                 continue;
               }
             } else {
               if (ul.field_f == 0) {
-                OpenGlEnvironmentWaterEffect.field_i.a((int)this.backdropX, (int)this.backdropY, 0, 1140850688, 1);
+                OpenGlEnvironmentWaterEffect.field_i.draw((int)this.backdropX, (int)this.backdropY, 0, 1140850688, 1);
                 if (null != ni.sceneryParticles) {
                   var4 = (SceneryParticle) (ni.sceneryParticles.first(125));
                   while (var4 != null) {
@@ -159,25 +159,25 @@ final class GameplaySession {
         int stackIn_12_1Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ml.field_w[2].a(0, 0);
-          ml.field_w[3].a(608, 0);
-          ml.field_w[0].a(0, 448);
-          ml.field_w[1].a(608, 448);
+          ml.field_w[2].draw(0, 0);
+          ml.field_w[3].draw(608, 0);
+          ml.field_w[0].draw(0, 448);
+          ml.field_w[1].draw(608, 448);
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var5 < 608) {
-              ok.field_f[0].a(var5, 5, 1, var3_int << 24, 1);
+              ok.field_f[0].draw(var5, 5, 1, var3_int << 24, 1);
               var4++;
-              ok.field_f[0].a(var5, 440, 1, var3_int << 24, 1);
+              ok.field_f[0].draw(var5, 440, 1, var3_int << 24, 1);
               stackIn_12_0 = var4;
               stackIn_12_1 = ok.field_f.length;
               if (var6 != 0) {
                 if (stackIn_12_0 < stackIn_12_1) {
-                  ff.field_k[0].a(9, -16 + var5, 1, var3_int << 24, 1);
-                  ff.field_k[0].a(598, var5 - 16, 1, var3_int << 24, 1);
+                  ff.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
+                  ff.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                   var4++;
                   stackIn_23_0 = ~ok.field_f.length;
                   stackIn_23_1 = ~var4;
@@ -189,7 +189,7 @@ final class GameplaySession {
                 if (stackIn_12_0 == stackIn_12_1) {
                   var4 = 0;
                 }
-                var5 = var5 + ok.field_f[0].c();
+                var5 = var5 + ok.field_f[0].width();
                 continue;
               }
             }
@@ -201,8 +201,8 @@ final class GameplaySession {
                 if (stackIn_12_0Lifetime1 >= stackIn_12_1Lifetime1) {
                   break;
                 }
-                ff.field_k[0].a(9, -16 + var5, 1, var3_int << 24, 1);
-                ff.field_k[0].a(598, var5 - 16, 1, var3_int << 24, 1);
+                ff.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
+                ff.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                 var4++;
                 stackIn_23_0 = ~ok.field_f.length;
                 stackIn_23_1 = ~var4;
@@ -212,7 +212,7 @@ final class GameplaySession {
                 if (stackIn_23_0 == stackIn_23_1) {
                   var4 = 0;
                 }
-                var5 = var5 + ok.field_f[0].c();
+                var5 = var5 + ok.field_f[0].width();
               }
             }
             stackIn_23_0 = guard;
@@ -260,7 +260,7 @@ final class GameplaySession {
         try {
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted4 = true;
-          toolkit.GA(0);
+          toolkit.clear(0);
           this.renderArenaBackground(60);
           if (null != is.arenaPads) {
             var4 = (ArenaPad) (is.arenaPads.first(-81));
@@ -316,16 +316,16 @@ final class GameplaySession {
             }
             var4_intLifetime1 = stackIn_34_0;
             if (0 == ul.field_f) {
-              ng.field_f[1].a((float)(64 + (ua.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
-              ng.field_f[1].a((float)((ua.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
-              ng.field_f[1].a((float)(ua.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
-              ng.field_f[1].a((float)(ua.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
-              ng.field_f[0].a((float)(ua.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(64 + (ua.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)((ua.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
+              ng.field_f[0].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
               if (var6 != 0) {
-                OpenGlUnderwaterEffect.field_t.a((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.c() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.a() >> 1), 1, 0, 2);
+                OpenGlUnderwaterEffect.field_t.draw((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
               }
             } else {
-              OpenGlUnderwaterEffect.field_t.a((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.c() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.a() >> 1), 1, 0, 2);
+              OpenGlUnderwaterEffect.field_t.draw((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -509,7 +509,7 @@ final class GameplaySession {
           if (null != var8.field_a &&
             var8.field_E > 1) {
             var9 = var8.field_a;
-            za.a(var9, LoginForm.field_G, 0, 0, 0);
+            GraphicsHeap.a(var9, LoginForm.field_G, 0, 0, 0);
             if (var40 != 0) {
               vf.a(0);
             }
@@ -641,7 +641,7 @@ final class GameplaySession {
               var37 = var37 + 65793 * var31;
               var39 = (16711933 & var30 * var36) >>> 8 | (var35 * var30 & -16711934) >>> 8;
               var39 = var39 + var33 * 65793;
-              hi.a(var26, var39 >> 16, var27, (byte) 27, 255 & var37, var22, var38 >> 16, (var39 & 65340) >> 8, var25, var37 >> 16, (65513 & var38) >> 8, var39 & 255, var23, var38 & 255, (65436 & var37) >> 8, var24);
+              SoftwareRenderTarget.a(var26, var39 >> 16, var27, (byte) 27, 255 & var37, var22, var38 >> 16, (var39 & 65340) >> 8, var25, var37 >> 16, (65513 & var38) >> 8, var39 & 255, var23, var38 & 255, (65436 & var37) >> 8, var24);
             }
             var13Lifetime1++;
           }
@@ -882,7 +882,7 @@ final class GameplaySession {
           ts.field_a = 0;
           OpenGlTransparentWaterEffect.field_e = 0;
           iw.elapsedTicks = 0;
-          kn.field_b = 0;
+          SoftwareTransform3D.field_b = 0;
           IntrusiveNodeHashTable.field_c = 0;
           tc.e(101);
           ct.b(true);
@@ -916,18 +916,18 @@ final class GameplaySession {
         int var5Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          an.field_f.a(26.0f, 26.0f, 4915, 0);
-          ju.field_p[0].a(16.0f, 16.0f, 4096, -16384);
-          ju.field_p[1].a(16.0f, 16.0f, 4096, -16384);
-          an.field_f.a(616.0f, 26.0f, 4915, 0);
-          ju.field_p[0].a(624.0f, 16.0f, 4096, 32768);
-          ju.field_p[1].a(624.0f, 16.0f, 4096, 32768);
-          an.field_f.a(26.0f, 454.0f, 4915, 0);
-          ju.field_p[0].a(16.0f, 464.0f, 4096, 0);
-          ju.field_p[1].a(16.0f, 464.0f, 4096, 0);
-          an.field_f.a(614.0f, 454.0f, 4915, 0);
-          ju.field_p[0].a(624.0f, 464.0f, 4096, 16384);
-          ju.field_p[1].a(624.0f, 464.0f, 4096, 16384);
+          an.field_f.drawRotated(26.0f, 26.0f, 4915, 0);
+          ju.field_p[0].drawRotated(16.0f, 16.0f, 4096, -16384);
+          ju.field_p[1].drawRotated(16.0f, 16.0f, 4096, -16384);
+          an.field_f.drawRotated(616.0f, 26.0f, 4915, 0);
+          ju.field_p[0].drawRotated(624.0f, 16.0f, 4096, 32768);
+          ju.field_p[1].drawRotated(624.0f, 16.0f, 4096, 32768);
+          an.field_f.drawRotated(26.0f, 454.0f, 4915, 0);
+          ju.field_p[0].drawRotated(16.0f, 464.0f, 4096, 0);
+          ju.field_p[1].drawRotated(16.0f, 464.0f, 4096, 0);
+          an.field_f.drawRotated(614.0f, 454.0f, 4915, 0);
+          ju.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
+          ju.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
@@ -948,13 +948,13 @@ final class GameplaySession {
               if (var3_intLifetime1 < 20) {
                 var3_intLifetime1 = 20;
               }
-              ok.field_f[0].a((float)(var5 + 16), 25.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
+              ok.field_f[0].drawRotated((float)(var5 + 16), 25.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
               var4++;
-              ok.field_f[0].a((float)(var5 + 16), 454.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
+              ok.field_f[0].drawRotated((float)(var5 + 16), 454.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
               if (~ok.field_f.length == ~var4) {
                 var4 = 0;
               }
-              var5 = var5 + ok.field_f[0].c();
+              var5 = var5 + ok.field_f[0].width();
               continue;
             }
             break;
@@ -983,13 +983,13 @@ final class GameplaySession {
             if (var3_intLifetime2 < 20) {
               var3_intLifetime2 = 20;
             }
-            ok.field_f[0].a(25.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
+            ok.field_f[0].drawRotated(25.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
             var4++;
-            ok.field_f[0].a(614.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
+            ok.field_f[0].drawRotated(614.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
             if (ok.field_f.length == var4) {
               var4 = 0;
             }
-            var5Lifetime1 = var5Lifetime1 + ok.field_f[0].c();
+            var5Lifetime1 = var5Lifetime1 + ok.field_f[0].width();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1092,11 +1092,11 @@ final class GameplaySession {
             ts.field_a = ts.field_a + 8;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             fb.field_a = fb.field_a - 5;
-            kn.field_b = kn.field_b - 3;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 3;
             iw.elapsedTicks = iw.elapsedTicks + 1;
             if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
               if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
-                kn.field_b = kn.field_b + 1;
+                SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + 1;
                 decompiledFrameRemainder2 = (var6 != 0);
               }
               if (decompiledFrameRemainder2) {
@@ -1147,7 +1147,7 @@ final class GameplaySession {
             }
           }
           if (SpriteMask.drones[0] != null && (!(6 > oh.levelIndex) ||
-            wm.field_f[6] ||
+            TextureMetadata.field_f[6] ||
             MessageDialog.arcadeMode)) {
             boolean decompiledFrameRemainder1 = true;
             if (fa.field_b > 0 &&
@@ -1429,7 +1429,7 @@ final class GameplaySession {
             if (20 * iw.elapsedTicks / 1000 >= 60) {
               th.b(24753, 233, 22);
             }
-            if (rf.a(false)) {
+            if (RenderPresentationException.a(false)) {
               if (iw.elapsedTicks * 20 / 1000 >= 300) {
                 th.b(24753, 228, 27);
               }
@@ -1520,8 +1520,8 @@ final class GameplaySession {
           if (lg.field_c % param0 == 0 ||
             this.field_h == this.backdropX &&
             this.field_m == this.backdropY) {
-            var2_int = ExpandingRingEffect.nextRandomInt(640 + OpenGlEnvironmentWaterEffect.field_i.c(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.c();
-            var3 = ExpandingRingEffect.nextRandomInt(480 + OpenGlEnvironmentWaterEffect.field_i.a(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.a();
+            var2_int = ExpandingRingEffect.nextRandomInt(640 + OpenGlEnvironmentWaterEffect.field_i.width(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.width();
+            var3 = ExpandingRingEffect.nextRandomInt(480 + OpenGlEnvironmentWaterEffect.field_i.height(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.height();
             this.backdropVelocityY = (-this.backdropY + (double)var3) / 2500.0;
             this.backdropVelocityX = (-this.backdropX + (double)var2_int) / 2500.0;
           }
@@ -1646,11 +1646,11 @@ final class GameplaySession {
             !f.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
             }
             if (!vs.b((byte) 9)) {
               kp.a(3, GameKeyHandler.field_a, 79);
@@ -1699,19 +1699,19 @@ final class GameplaySession {
             var4 = (PlayerDrone) (SpriteMask.drones[0]);
             if (!MessageDialog.arcadeMode &&
               Bzip2State.field_J != null) {
-              HudMessage.field_s[0].a(55, 0);
-              HudMessage.field_s[1].a(HudMessage.field_s[0].c() + 55, 0);
-              var5 = 55 + HudMessage.field_s[1].c() * 2;
+              HudMessage.field_s[0].draw(55, 0);
+              HudMessage.field_s[1].draw(HudMessage.field_s[0].width() + 55, 0);
+              var5 = 55 + HudMessage.field_s[1].width() * 2;
               while (true) {
                 if (var5 < 530) {
-                  HudMessage.field_s[2].a(var5, 0);
-                  var5 = var5 + HudMessage.field_s[1].c();
+                  HudMessage.field_s[2].draw(var5, 0);
+                  var5 = var5 + HudMessage.field_s[1].width();
                   if (var7 == 0) {
                     continue;
                   }
                 } else {
-                  HudMessage.field_s[3].a(-HudMessage.field_s[4].c() + 567, 0);
-                  HudMessage.field_s[4].a(567, 0);
+                  HudMessage.field_s[3].draw(-HudMessage.field_s[4].width() + 567, 0);
+                  HudMessage.field_s[4].draw(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
                   qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
@@ -1720,19 +1720,19 @@ final class GameplaySession {
               }
               uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
-            SpriteState.field_B[0].a(139, 448);
-            SpriteState.field_B[1].a(-16 + HudMessage.field_s[0].c() + 155, 448);
-            var5Lifetime1 = 145 + 2 * HudMessage.field_s[1].c();
+            SpriteState.field_B[0].draw(139, 448);
+            SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
+            var5Lifetime1 = 145 + 2 * HudMessage.field_s[1].width();
             while (true) {
               if (var5Lifetime1 < 408) {
-                SpriteState.field_B[2].a(-6 + var5Lifetime1, 448);
-                var5Lifetime1 = var5Lifetime1 + HudMessage.field_s[1].c();
+                SpriteState.field_B[2].draw(-6 + var5Lifetime1, 448);
+                var5Lifetime1 = var5Lifetime1 + HudMessage.field_s[1].width();
                 if (var7 == 0) {
                   continue;
                 }
               } else {
-                SpriteState.field_B[3].a(-HudMessage.field_s[4].c() + 475 - 16, 448);
-                SpriteState.field_B[4].a(459, 448);
+                SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
+                SpriteState.field_B[4].draw(459, 448);
                 qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(iw.elapsedTicks, -23620) + "", (byte) -73, -1);
                 uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(iw.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
@@ -1740,9 +1740,9 @@ final class GameplaySession {
                 qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
                 uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
-              pr.field_k[0].a(3, 42);
-              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
-              pr.field_k[1].a(3, 42);
+              pr.field_k[0].draw(3, 42);
+              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + pr.field_k[0].height(), 0, 40);
+              pr.field_k[1].draw(3, 42);
               var3.a(29709);
               if (var4.isBlastReady(20)) {
                 var5Lifetime1 = lg.field_c << 2;
@@ -1752,7 +1752,7 @@ final class GameplaySession {
                   stackIn_40_0 = -(var5Lifetime1 % 255) + 510;
                 }
                 var6 = stackIn_40_0;
-                pr.field_k[2].a(3, 42, 0, 16777215 | var6 << 24, 1);
+                pr.field_k[2].draw(3, 42, 0, 16777215 | var6 << 24, 1);
               }
               if (MessageDialog.arcadeMode) {
                 break;
@@ -1760,13 +1760,13 @@ final class GameplaySession {
               if (var4 == null) {
                 break;
               }
-              MusicCrossfadeStream.field_q[0].a(190.0f, 468.0f, 1600, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[0].drawRotated(190.0f, 468.0f, 1600, 0, 1, 0, 2);
               qv.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
               uq.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
-              MusicCrossfadeStream.field_q[1].a(240.0f, 468.0f, 1600, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[1].drawRotated(240.0f, 468.0f, 1600, 0, 1, 0, 2);
               qv.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               uq.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
-              MusicCrossfadeStream.field_q[2].a(290.0f, 468.0f, 1600, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[2].drawRotated(290.0f, 468.0f, 1600, 0, 1, 0, 2);
               qv.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
               uq.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
               break;
@@ -1820,7 +1820,7 @@ final class GameplaySession {
           ig.hudMessages.clear(119);
           OpenGlTransparentWaterEffect.field_e = 0;
           FadingWidget.score = 0;
-          kn.field_b = 0;
+          SoftwareTransform3D.field_b = 0;
           DropDownWidget.field_C = levelIndex;
           f.field_w = false;
           IntrusiveNodeHashTable.field_c = 0;
@@ -1831,7 +1831,7 @@ final class GameplaySession {
           fb.field_a = 0;
           tc.e(104);
           if (oh.levelIndex == 0 &&
-            !wm.field_f[0]) {
+            !TextureMetadata.field_f[0]) {
             bw.field_d = true;
             this.showBlastHint = true;
           }

@@ -26,7 +26,7 @@ final class MusicPatchEnvelope {
             MusicPatchEnvelope.a((LegacyOpenGlGraphicsToolkit) null, (byte) 109);
           }
           for (var2_int = 0; param1 > var2_int; var2_int++) {
-            if (!wm.field_f[var2_int]) {
+            if (!TextureMetadata.field_f[var2_int]) {
               return false;
             }
           }

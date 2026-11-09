@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nu {
-    final static GraphicsToolkit a(int param0, ResourceArchive param1, d param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(int param0, ResourceArchive param1, TextureProvider param2, java.awt.Canvas param3, int param4) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;
@@ -23,7 +23,7 @@ final class nu {
               return stackIn_7_0;
             }
             var5 = Class.forName("DirectXGraphicsToolkit");
-            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
+            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("TextureProvider"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
             stackIn_9_0 = (GraphicsToolkit) (var6.invoke((Object) null, new Object[]{param3, param2, param1, new Integer(param4)}));
             return stackIn_9_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

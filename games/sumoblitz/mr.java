@@ -5,7 +5,7 @@ final class mr {
     static CompactMeshGeometry[] field_b;
     static ToolkitSprite[] field_e;
     static of field_f;
-    private d field_c;
+    private TextureProvider field_c;
     private sd field_d;
     private HardwareGraphicsToolkit field_a;
 
@@ -30,11 +30,11 @@ final class mr {
     final ru a(int param0, int param1) {
         Object var3;
         ru var4;
-        wm var5;
+        TextureMetadata var5;
         int var6;
         int[] var7;
         int var8;
-        wm var12;
+        TextureMetadata var12;
         float[] var39;
         int stackIn_9_0 = 0;
         HardwareGraphicsToolkit stackIn_13_0;
@@ -91,7 +91,7 @@ final class mr {
         ru var13;
         ru var18;
         ru var23;
-        wm var29;
+        TextureMetadata var29;
         ru var30;
         ru var31;
         ru var32;
@@ -346,7 +346,7 @@ final class mr {
         }
     }
 
-    mr(HardwareGraphicsToolkit param0, d param1) {
+    mr(HardwareGraphicsToolkit param0, TextureProvider param1) {
         this.field_d = new sd(256);
         try {
           this.field_a = param0;

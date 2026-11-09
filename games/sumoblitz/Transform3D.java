@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eu {
+abstract class Transform3D {
     static SpriteData[] field_a;
 
     final static int a(byte param0) {

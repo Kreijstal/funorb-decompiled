@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn extends eu {
+final class SoftwareTransform3D extends Transform3D {
     static int[] field_c;
     static String typeYourEmailAddressText;
     static String unpackingGraphicsText;
@@ -204,7 +204,7 @@ final class kn extends eu {
         unpackingGraphicsText = null;
     }
 
-    kn() {
+    SoftwareTransform3D() {
         this.a(56);
     }
 
@@ -215,7 +215,7 @@ final class kn extends eu {
 
     private final void a(int param0) {
         if (param0 != 56) {
-          kn.releaseStatics(-32);
+          SoftwareTransform3D.releaseStatics(-32);
         }
     }
 

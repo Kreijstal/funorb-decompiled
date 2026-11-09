@@ -20,10 +20,10 @@ abstract class se {
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          rf.field_a.dispatchPointerInput(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
-          rf.field_a.advanceDialogAnimations(-90);
+          RenderPresentationException.field_a.dispatchPointerInput(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
+          RenderPresentationException.field_a.advanceDialogAnimations(-90);
           while (wd.c(param0 ^ -19954)) {
-            rf.field_a.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
+            RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
           }
           if (iu.field_e != -1) {
             var1_int = iu.field_e;
@@ -38,15 +38,15 @@ abstract class se {
           if (param0 != 19886) {
             field_d = -49;
           }
-          if (vm.field_c == ad.field_p) {
+          if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!ut.field_o.a(true)) {
+          if (!AffineTransform3D.field_o.a(true)) {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (ProxySocketConnector.field_e != ad.field_p) {
+          if (ProxySocketConnector.field_e != LegacyOpenGlGraphicsHeap.field_p) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }

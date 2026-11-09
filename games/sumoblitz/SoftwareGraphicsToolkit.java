@@ -2,43 +2,43 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareGraphicsToolkit extends GraphicsToolkit {
-    private int field_s;
-    private ce field_n;
-    private java.awt.Canvas field_l;
-    private int field_z;
-    private IntrusiveNodeHashTable field_K;
+    private int canvasHeight;
+    private ToolkitRasterBuffer canvasBuffer;
+    private java.awt.Canvas canvas;
+    private int canvasWidth;
+    private IntrusiveNodeHashTable canvasBuffers;
     private boolean field_J;
-    private boolean field_p;
+    private boolean disposed;
     private int field_A;
-    private int field_q;
-    private int field_M;
-    int field_k;
-    private int field_y;
+    private int projectionCenterX;
+    private int nearPlane;
+    int targetWidth;
+    private int projectionScaleY;
     private int field_x;
-    int field_v;
-    int[] field_o;
-    private int field_G;
-    private int field_r;
-    int field_D;
+    int clipLeft;
+    int[] pixels;
+    private int projectionScaleX;
+    private int contextCount;
+    int clipRight;
     private sd field_u;
     private int field_m;
-    private int field_j;
-    private hi field_t;
-    int field_H;
+    private int projectionCenterY;
+    private SoftwareRenderTarget renderTarget;
+    int clipTop;
     private int field_w;
-    int field_C;
+    int clipBottom;
     private int field_F;
-    private int field_B;
-    private int field_L;
-    private rp[] field_i;
+    private int targetHeight;
+    private int farPlane;
+    private rp[] contexts;
     private sd field_E;
     private static String offText;
 
-    final void f(int param0) {
+    final void updateTime(int timeMillis) {
         le var4 = null;
         int var5 = 0;
-        wm var6 = null;
-        int var2 = param0 - this.field_A;
+        TextureMetadata var6 = null;
+        int var2 = timeMillis - this.field_A;
         Object var3 = this.field_u.b(0);
         while (var3 != null) {
           var4 = (le) (var3);
@@ -46,7 +46,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var4.field_m = var4.field_m + var2;
             var5 = var4.field_m / 20;
             if (var5 > 0) {
-              var6 = this.field_h.a(-29193, var4.field_o);
+              var6 = this.textureProvider.a(-29193, var4.field_o);
               var4.a(var6.field_c * var2 * 50 / 1000, var6.field_u * var2 * 50 / 1000);
               var4.field_m = var4.field_m - var5 * 20;
             }
@@ -54,44 +54,44 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           }
           var3 = this.field_u.a((byte) -92);
         }
-        this.field_A = param0;
+        this.field_A = timeMillis;
         this.field_E.a(5, 22663);
         this.field_u.a(5, 22663);
     }
 
-    final int XA() {
-        return this.field_L;
+    final int farPlane() {
+        return this.farPlane;
     }
 
-    final int i() {
-        return this.field_M;
+    final int nearPlane() {
+        return this.nearPlane;
     }
 
-    final void GA(int param0) {
-        this.aa(0, 0, this.field_k, this.field_B, param0, 0);
+    final void clear(int color) {
+        this.fillRectangle(0, 0, this.targetWidth, this.targetHeight, color, 0);
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
-        if (this.field_v < param0) {
-          this.field_v = param0;
+    final void intersectClip(int left, int top, int right, int bottom) {
+        if (this.clipLeft < left) {
+          this.clipLeft = left;
         }
-        if (this.field_H < param1) {
-          this.field_H = param1;
+        if (this.clipTop < top) {
+          this.clipTop = top;
         }
-        if (this.field_D > param2) {
-          this.field_D = param2;
+        if (this.clipRight > right) {
+          this.clipRight = right;
         }
-        if (this.field_C > param3) {
-          this.field_C = param3;
+        if (this.clipBottom > bottom) {
+          this.clipBottom = bottom;
         }
-        this.j();
+        this.updateClipRowOffsets();
     }
 
     final boolean a() {
         return false;
     }
 
-    final ToolkitSprite a(SpriteData param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData data, boolean preferIndexed) {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -116,14 +116,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         byte[] var21;
         int[] var22;
         int[] var23;
-        var20 = param0.field_g;
+        var20 = data.field_g;
         var16 = var20;
         var3 = var16;
-        var4 = param0.field_e;
-        var5 = param0.field_h;
-        var6 = param0.field_i;
-        if (param1 &&
-          param0.field_a == null) {
+        var4 = data.field_e;
+        var5 = data.field_h;
+        var6 = data.field_i;
+        if (preferIndexed &&
+          data.field_a == null) {
           var22 = new int[var20.length];
           var18 = var22;
           var8 = var18;
@@ -145,7 +145,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           var23 = new int[var5 * var6];
           var19 = var23;
           var15 = var19;
-          var9 = param0.field_a;
+          var9 = data.field_a;
           if (var9 != null) {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
@@ -172,41 +172,41 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var7 = new SoftwareRgbSprite(this, var23, var5, var6);
           }
         }
-        ((ToolkitSprite) (var7)).a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
+        ((ToolkitSprite) (var7)).setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
         return (ToolkitSprite) (var7);
     }
 
-    private SoftwareGraphicsToolkit(d param0) {
+    private SoftwareGraphicsToolkit(TextureProvider param0) {
         super(param0);
-        kn discarded$0 = null;
-        this.field_p = false;
+        SoftwareTransform3D discarded$0 = null;
+        this.disposed = false;
         this.field_J = false;
-        this.field_K = new IntrusiveNodeHashTable(4);
-        this.field_y = 512;
-        this.field_D = 0;
-        this.field_M = 50;
-        this.field_C = 0;
-        this.field_G = 512;
-        this.field_v = 0;
-        this.field_H = 0;
-        this.field_L = 3500;
+        this.canvasBuffers = new IntrusiveNodeHashTable(4);
+        this.projectionScaleY = 512;
+        this.clipRight = 0;
+        this.nearPlane = 50;
+        this.clipBottom = 0;
+        this.projectionScaleX = 512;
+        this.clipLeft = 0;
+        this.clipTop = 0;
+        this.farPlane = 3500;
         this.field_E = new sd(16);
         try {
           this.field_u = new sd(256);
-          discarded$0 = new kn();
-          this.g(1);
-          this.d(0);
+          discarded$0 = new SoftwareTransform3D();
+          this.createContexts(1);
+          this.bindContextToCurrentThread(0);
           kr.a(true, -52, true);
           this.field_J = true;
           this.field_A = (int)wq.a(-48);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
-          this.a((byte) -34);
+          this.close((byte) -34);
           throw new RuntimeException("");
         }
     }
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int centerX, int centerY, int radius, int color, int blendMode) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -433,793 +433,793 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var18Lifetime1Lifetime4Lifetime7;
         int var18Lifetime6Lifetime1Lifetime1;
         int var18Lifetime6Lifetime2Lifetime1;
-        if (param2 == 0) {
-          if (param0 >= this.field_v) {
-            if (param1 >= this.field_H &&
-              param0 < this.field_D &&
-              param1 < this.field_C) {
-              var6 = param3 >>> 24;
-              var7 = param0 + param1 * this.field_k;
-              if (param4 != 0 && (param4 != 1 ||
+        if (radius == 0) {
+          if (centerX >= this.clipLeft) {
+            if (centerY >= this.clipTop &&
+              centerX < this.clipRight &&
+              centerY < this.clipBottom) {
+              var6 = color >>> 24;
+              var7 = centerX + centerY * this.targetWidth;
+              if (blendMode != 0 && (blendMode != 1 ||
                 var6 != 255)) {
-                if (param4 == 1) {
+                if (blendMode == 1) {
                   var8 = var7;
-                  var9 = param3;
+                  var9 = color;
                   var10 = var6;
                   var9 = ((var9 & 16711935) * var10 >> 8 & 16711935) + ((var9 & 65280) * var10 >> 8 & 65280) + (var10 << 24);
                   var11 = 256 - var10;
-                  var12 = this.field_o[var8];
+                  var12 = this.pixels[var8];
                   var12 = ((var12 & 16711935) * var11 >> 8 & 16711935) + ((var12 & 65280) * var11 >> 8 & 65280);
-                  this.field_o[var8] = var9 + var12;
+                  this.pixels[var8] = var9 + var12;
                   return;
                 }
-                if (param4 != 2) {
+                if (blendMode != 2) {
                   return;
                 }
                 var8Lifetime2 = var7;
-                var9Lifetime2 = param3;
-                var10Lifetime2 = this.field_o[var8Lifetime2];
+                var9Lifetime2 = color;
+                var10Lifetime2 = this.pixels[var8Lifetime2];
                 var11Lifetime2 = var9Lifetime2 + var10Lifetime2;
                 var12Lifetime2 = (var9Lifetime2 & 16711935) + (var10Lifetime2 & 16711935);
                 var10Lifetime3 = (var12Lifetime2 & 16777472) + (var11Lifetime2 - var12Lifetime2 & 65536);
-                this.field_o[var8Lifetime2] = var11Lifetime2 - var10Lifetime3 | var10Lifetime3 - (var10Lifetime3 >>> 8);
+                this.pixels[var8Lifetime2] = var11Lifetime2 - var10Lifetime3 | var10Lifetime3 - (var10Lifetime3 >>> 8);
                 return;
               }
-              this.field_o[var7] = param3;
+              this.pixels[var7] = color;
               return;
             }
             return;
           }
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
-        if (this.field_D > this.field_v) {
-          if (this.field_C <= this.field_H) {
+        if (this.clipRight > this.clipLeft) {
+          if (this.clipBottom <= this.clipTop) {
             return;
           }
-          if (param0 + param2 >= this.field_v) {
-            if (param0 - param2 < this.field_D &&
-              param1 + param2 >= this.field_H &&
-              param1 - param2 < this.field_C) {
-              var6Lifetime1 = param0 + param1 * this.field_k;
+          if (centerX + radius >= this.clipLeft) {
+            if (centerX - radius < this.clipRight &&
+              centerY + radius >= this.clipTop &&
+              centerY - radius < this.clipBottom) {
+              var6Lifetime1 = centerX + centerY * this.targetWidth;
               var7Lifetime1 = var6Lifetime1;
-              var8Lifetime1 = var6Lifetime1 - param2 * this.field_k;
-              var9Lifetime1 = var6Lifetime1 + param2 * this.field_k;
-              var10Lifetime1 = param2;
+              var8Lifetime1 = var6Lifetime1 - radius * this.targetWidth;
+              var9Lifetime1 = var6Lifetime1 + radius * this.targetWidth;
+              var10Lifetime1 = radius;
               var11Lifetime1 = 0;
-              param2 = param2 * param2;
-              var12Lifetime1 = param2 - var10Lifetime1;
-              var13 = param3 >>> 24;
-              if (param4 != 0 && (param4 != 1 ||
+              radius = radius * radius;
+              var12Lifetime1 = radius - var10Lifetime1;
+              var13 = color >>> 24;
+              if (blendMode != 0 && (blendMode != 1 ||
                 var13 != 255)) {
-                if (param4 != 1) {
-                  if (param4 != 2) {
+                if (blendMode != 1) {
+                  if (blendMode != 2) {
                     return;
                   }
-                  if (param0 - var10Lifetime1 >= this.field_v &&
-                    param0 + var10Lifetime1 < this.field_D &&
-                    param1 - var10Lifetime1 >= this.field_H &&
-                    param1 + var10Lifetime1 < this.field_C) {
+                  if (centerX - var10Lifetime1 >= this.clipLeft &&
+                    centerX + var10Lifetime1 < this.clipRight &&
+                    centerY - var10Lifetime1 >= this.clipTop &&
+                    centerY + var10Lifetime1 < this.clipBottom) {
                     var14 = var6Lifetime1 - var10Lifetime1;
-                    var15 = param3;
-                    var16 = this.field_o[var14];
+                    var15 = color;
+                    var16 = this.pixels[var14];
                     var17 = var15 + var16;
                     var18 = (var15 & 16711935) + (var16 & 16711935);
                     var16Lifetime12 = (var18 & 16777472) + (var17 - var18 & 65536);
-                    this.field_o[var14] = var17 - var16Lifetime12 | var16Lifetime12 - (var16Lifetime12 >>> 8);
+                    this.pixels[var14] = var17 - var16Lifetime12 | var16Lifetime12 - (var16Lifetime12 >>> 8);
                     var14Lifetime12 = var6Lifetime1 + var10Lifetime1;
-                    var15Lifetime12 = param3;
-                    var16Lifetime13 = this.field_o[var14Lifetime12];
+                    var15Lifetime12 = color;
+                    var16Lifetime13 = this.pixels[var14Lifetime12];
                     var17Lifetime12 = var15Lifetime12 + var16Lifetime13;
                     var18Lifetime12 = (var15Lifetime12 & 16711935) + (var16Lifetime13 & 16711935);
                     var16Lifetime14 = (var18Lifetime12 & 16777472) + (var17Lifetime12 - var18Lifetime12 & 65536);
-                    this.field_o[var14Lifetime12] = var17Lifetime12 - var16Lifetime14 | var16Lifetime14 - (var16Lifetime14 >>> 8);
+                    this.pixels[var14Lifetime12] = var17Lifetime12 - var16Lifetime14 | var16Lifetime14 - (var16Lifetime14 >>> 8);
                     var14Lifetime13 = var8Lifetime1;
-                    var15Lifetime13 = param3;
-                    var16Lifetime15 = this.field_o[var14Lifetime13];
+                    var15Lifetime13 = color;
+                    var16Lifetime15 = this.pixels[var14Lifetime13];
                     var17Lifetime13 = var15Lifetime13 + var16Lifetime15;
                     var18Lifetime13 = (var15Lifetime13 & 16711935) + (var16Lifetime15 & 16711935);
                     var16Lifetime16 = (var18Lifetime13 & 16777472) + (var17Lifetime13 - var18Lifetime13 & 65536);
-                    this.field_o[var14Lifetime13] = var17Lifetime13 - var16Lifetime16 | var16Lifetime16 - (var16Lifetime16 >>> 8);
+                    this.pixels[var14Lifetime13] = var17Lifetime13 - var16Lifetime16 | var16Lifetime16 - (var16Lifetime16 >>> 8);
                     var14Lifetime14 = var9Lifetime1;
-                    var15Lifetime14 = param3;
-                    var16Lifetime17 = this.field_o[var14Lifetime14];
+                    var15Lifetime14 = color;
+                    var16Lifetime17 = this.pixels[var14Lifetime14];
                     var17Lifetime14 = var15Lifetime14 + var16Lifetime17;
                     var18Lifetime14 = (var15Lifetime14 & 16711935) + (var16Lifetime17 & 16711935);
                     var16Lifetime18 = (var18Lifetime14 & 16777472) + (var17Lifetime14 - var18Lifetime14 & 65536);
-                    this.field_o[var14Lifetime14] = var17Lifetime14 - var16Lifetime18 | var16Lifetime18 - (var16Lifetime18 >>> 8);
+                    this.pixels[var14Lifetime14] = var17Lifetime14 - var16Lifetime18 | var16Lifetime18 - (var16Lifetime18 >>> 8);
                     while (true) {
                       incrementValue$0 = var11Lifetime1;
                       var11Lifetime1++;
                       var12Lifetime1 = var12Lifetime1 + (incrementValue$0 + var11Lifetime1);
-                      var6Lifetime1 = var6Lifetime1 - this.field_k;
-                      var7Lifetime1 = var7Lifetime1 + this.field_k;
-                      if (var12Lifetime1 > param2) {
+                      var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                      var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                      if (var12Lifetime1 > radius) {
                         var10Lifetime1--;
                         var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                        var8Lifetime1 = var8Lifetime1 + this.field_k;
-                        var9Lifetime1 = var9Lifetime1 - this.field_k;
+                        var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                        var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                       }
                       if (var10Lifetime1 < var11Lifetime1) {
                         return;
                       }
                       var14Lifetime15 = var8Lifetime1 - var11Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var8Lifetime1 + var11Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var6Lifetime1 - var10Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var6Lifetime1 + var10Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var7Lifetime1 - var10Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var7Lifetime1 + var10Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var9Lifetime1 - var11Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                       var14Lifetime15 = var9Lifetime1 + var11Lifetime1;
-                      var15Lifetime15 = param3;
-                      var16Lifetime19 = this.field_o[var14Lifetime15];
+                      var15Lifetime15 = color;
+                      var16Lifetime19 = this.pixels[var14Lifetime15];
                       var17Lifetime15 = var15Lifetime15 + var16Lifetime19;
                       var18Lifetime15 = (var15Lifetime15 & 16711935) + (var16Lifetime19 & 16711935);
                       var16Lifetime19 = (var18Lifetime15 & 16777472) + (var17Lifetime15 - var18Lifetime15 & 65536);
-                      this.field_o[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
+                      this.pixels[var14Lifetime15] = var17Lifetime15 - var16Lifetime19 | var16Lifetime19 - (var16Lifetime19 >>> 8);
                     }
                   }
-                  if (param0 - var10Lifetime1 >= this.field_v &&
-                    param1 >= this.field_H &&
-                    param1 < this.field_C) {
+                  if (centerX - var10Lifetime1 >= this.clipLeft &&
+                    centerY >= this.clipTop &&
+                    centerY < this.clipBottom) {
                     var14Lifetime7 = var6Lifetime1 - var10Lifetime1;
-                    var15Lifetime7 = param3;
-                    var16Lifetime7 = this.field_o[var14Lifetime7];
+                    var15Lifetime7 = color;
+                    var16Lifetime7 = this.pixels[var14Lifetime7];
                     var17Lifetime7 = var15Lifetime7 + var16Lifetime7;
                     var18Lifetime7 = (var15Lifetime7 & 16711935) + (var16Lifetime7 & 16711935);
                     var16Lifetime7Lifetime1 = (var18Lifetime7 & 16777472) + (var17Lifetime7 - var18Lifetime7 & 65536);
-                    this.field_o[var14Lifetime7] = var17Lifetime7 - var16Lifetime7Lifetime1 | var16Lifetime7Lifetime1 - (var16Lifetime7Lifetime1 >>> 8);
+                    this.pixels[var14Lifetime7] = var17Lifetime7 - var16Lifetime7Lifetime1 | var16Lifetime7Lifetime1 - (var16Lifetime7Lifetime1 >>> 8);
                   }
-                  if (param0 + var10Lifetime1 < this.field_D &&
-                    param1 >= this.field_H &&
-                    param1 < this.field_C) {
+                  if (centerX + var10Lifetime1 < this.clipRight &&
+                    centerY >= this.clipTop &&
+                    centerY < this.clipBottom) {
                     var14Lifetime8 = var6Lifetime1 + var10Lifetime1;
-                    var15Lifetime8 = param3;
-                    var16Lifetime8 = this.field_o[var14Lifetime8];
+                    var15Lifetime8 = color;
+                    var16Lifetime8 = this.pixels[var14Lifetime8];
                     var17Lifetime8 = var15Lifetime8 + var16Lifetime8;
                     var18Lifetime8 = (var15Lifetime8 & 16711935) + (var16Lifetime8 & 16711935);
                     var16Lifetime8Lifetime1 = (var18Lifetime8 & 16777472) + (var17Lifetime8 - var18Lifetime8 & 65536);
-                    this.field_o[var14Lifetime8] = var17Lifetime8 - var16Lifetime8Lifetime1 | var16Lifetime8Lifetime1 - (var16Lifetime8Lifetime1 >>> 8);
+                    this.pixels[var14Lifetime8] = var17Lifetime8 - var16Lifetime8Lifetime1 | var16Lifetime8Lifetime1 - (var16Lifetime8Lifetime1 >>> 8);
                   }
-                  if (param1 - var10Lifetime1 >= this.field_H &&
-                    param0 >= this.field_v &&
-                    param0 < this.field_D) {
+                  if (centerY - var10Lifetime1 >= this.clipTop &&
+                    centerX >= this.clipLeft &&
+                    centerX < this.clipRight) {
                     var14Lifetime9 = var8Lifetime1;
-                    var15Lifetime9 = param3;
-                    var16Lifetime9 = this.field_o[var14Lifetime9];
+                    var15Lifetime9 = color;
+                    var16Lifetime9 = this.pixels[var14Lifetime9];
                     var17Lifetime9 = var15Lifetime9 + var16Lifetime9;
                     var18Lifetime9 = (var15Lifetime9 & 16711935) + (var16Lifetime9 & 16711935);
                     var16Lifetime9Lifetime1 = (var18Lifetime9 & 16777472) + (var17Lifetime9 - var18Lifetime9 & 65536);
-                    this.field_o[var14Lifetime9] = var17Lifetime9 - var16Lifetime9Lifetime1 | var16Lifetime9Lifetime1 - (var16Lifetime9Lifetime1 >>> 8);
+                    this.pixels[var14Lifetime9] = var17Lifetime9 - var16Lifetime9Lifetime1 | var16Lifetime9Lifetime1 - (var16Lifetime9Lifetime1 >>> 8);
                   }
-                  if (param1 + var10Lifetime1 < this.field_C &&
-                    param0 >= this.field_v &&
-                    param0 < this.field_D) {
+                  if (centerY + var10Lifetime1 < this.clipBottom &&
+                    centerX >= this.clipLeft &&
+                    centerX < this.clipRight) {
                     var14Lifetime10 = var9Lifetime1;
-                    var15Lifetime10 = param3;
-                    var16Lifetime10 = this.field_o[var14Lifetime10];
+                    var15Lifetime10 = color;
+                    var16Lifetime10 = this.pixels[var14Lifetime10];
                     var17Lifetime10 = var15Lifetime10 + var16Lifetime10;
                     var18Lifetime10 = (var15Lifetime10 & 16711935) + (var16Lifetime10 & 16711935);
                     var16Lifetime10Lifetime1 = (var18Lifetime10 & 16777472) + (var17Lifetime10 - var18Lifetime10 & 65536);
-                    this.field_o[var14Lifetime10] = var17Lifetime10 - var16Lifetime10Lifetime1 | var16Lifetime10Lifetime1 - (var16Lifetime10Lifetime1 >>> 8);
+                    this.pixels[var14Lifetime10] = var17Lifetime10 - var16Lifetime10Lifetime1 | var16Lifetime10Lifetime1 - (var16Lifetime10Lifetime1 >>> 8);
                   }
                   while (true) {
                     incrementValue$1 = var11Lifetime1;
                     var11Lifetime1++;
                     var12Lifetime1 = var12Lifetime1 + (incrementValue$1 + var11Lifetime1);
-                    var6Lifetime1 = var6Lifetime1 - this.field_k;
-                    var7Lifetime1 = var7Lifetime1 + this.field_k;
-                    if (var12Lifetime1 > param2) {
+                    var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                    var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                    if (var12Lifetime1 > radius) {
                       var10Lifetime1--;
                       var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                      var8Lifetime1 = var8Lifetime1 + this.field_k;
-                      var9Lifetime1 = var9Lifetime1 - this.field_k;
+                      var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                      var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                     }
                     if (var10Lifetime1 < var11Lifetime1) {
                       return;
                     }
-                    if (param1 - var10Lifetime1 >= this.field_H &&
-                      param1 - var10Lifetime1 < this.field_C) {
-                      if (param0 - var11Lifetime1 >= this.field_v &&
-                        param0 - var11Lifetime1 < this.field_D) {
+                    if (centerY - var10Lifetime1 >= this.clipTop &&
+                      centerY - var10Lifetime1 < this.clipBottom) {
+                      if (centerX - var11Lifetime1 >= this.clipLeft &&
+                        centerX - var11Lifetime1 < this.clipRight) {
                         var14Lifetime11 = var8Lifetime1 - var11Lifetime1;
-                        var15Lifetime11 = param3;
-                        var16Lifetime11 = this.field_o[var14Lifetime11];
+                        var15Lifetime11 = color;
+                        var16Lifetime11 = this.pixels[var14Lifetime11];
                         var17Lifetime11 = var15Lifetime11 + var16Lifetime11;
                         var18Lifetime11 = (var15Lifetime11 & 16711935) + (var16Lifetime11 & 16711935);
                         var16Lifetime11 = (var18Lifetime11 & 16777472) + (var17Lifetime11 - var18Lifetime11 & 65536);
-                        this.field_o[var14Lifetime11] = var17Lifetime11 - var16Lifetime11 | var16Lifetime11 - (var16Lifetime11 >>> 8);
+                        this.pixels[var14Lifetime11] = var17Lifetime11 - var16Lifetime11 | var16Lifetime11 - (var16Lifetime11 >>> 8);
                       }
-                      if (param0 + var11Lifetime1 >= this.field_v &&
-                        param0 + var11Lifetime1 < this.field_D) {
+                      if (centerX + var11Lifetime1 >= this.clipLeft &&
+                        centerX + var11Lifetime1 < this.clipRight) {
                         var14Lifetime11 = var8Lifetime1 + var11Lifetime1;
-                        var15Lifetime11 = param3;
-                        var16Lifetime11 = this.field_o[var14Lifetime11];
+                        var15Lifetime11 = color;
+                        var16Lifetime11 = this.pixels[var14Lifetime11];
                         var17Lifetime11 = var15Lifetime11 + var16Lifetime11;
                         var18Lifetime11 = (var15Lifetime11 & 16711935) + (var16Lifetime11 & 16711935);
                         var16Lifetime11 = (var18Lifetime11 & 16777472) + (var17Lifetime11 - var18Lifetime11 & 65536);
-                        this.field_o[var14Lifetime11] = var17Lifetime11 - var16Lifetime11 | var16Lifetime11 - (var16Lifetime11 >>> 8);
+                        this.pixels[var14Lifetime11] = var17Lifetime11 - var16Lifetime11 | var16Lifetime11 - (var16Lifetime11 >>> 8);
                       }
                     }
-                    if (param1 - var11Lifetime1 >= this.field_H &&
-                      param1 - var11Lifetime1 < this.field_C) {
-                      if (param0 - var10Lifetime1 >= this.field_v &&
-                        param0 - var10Lifetime1 < this.field_D) {
+                    if (centerY - var11Lifetime1 >= this.clipTop &&
+                      centerY - var11Lifetime1 < this.clipBottom) {
+                      if (centerX - var10Lifetime1 >= this.clipLeft &&
+                        centerX - var10Lifetime1 < this.clipRight) {
                         var14Lifetime11Lifetime1 = var6Lifetime1 - var10Lifetime1;
-                        var15Lifetime11Lifetime1 = param3;
-                        var16Lifetime11Lifetime1 = this.field_o[var14Lifetime11Lifetime1];
+                        var15Lifetime11Lifetime1 = color;
+                        var16Lifetime11Lifetime1 = this.pixels[var14Lifetime11Lifetime1];
                         var17Lifetime11Lifetime1 = var15Lifetime11Lifetime1 + var16Lifetime11Lifetime1;
                         var18Lifetime11Lifetime1 = (var15Lifetime11Lifetime1 & 16711935) + (var16Lifetime11Lifetime1 & 16711935);
                         var16Lifetime11Lifetime1 = (var18Lifetime11Lifetime1 & 16777472) + (var17Lifetime11Lifetime1 - var18Lifetime11Lifetime1 & 65536);
-                        this.field_o[var14Lifetime11Lifetime1] = var17Lifetime11Lifetime1 - var16Lifetime11Lifetime1 | var16Lifetime11Lifetime1 - (var16Lifetime11Lifetime1 >>> 8);
+                        this.pixels[var14Lifetime11Lifetime1] = var17Lifetime11Lifetime1 - var16Lifetime11Lifetime1 | var16Lifetime11Lifetime1 - (var16Lifetime11Lifetime1 >>> 8);
                       }
-                      if (param0 + var10Lifetime1 >= this.field_v &&
-                        param0 + var10Lifetime1 < this.field_D) {
+                      if (centerX + var10Lifetime1 >= this.clipLeft &&
+                        centerX + var10Lifetime1 < this.clipRight) {
                         var14Lifetime11Lifetime1 = var6Lifetime1 + var10Lifetime1;
-                        var15Lifetime11Lifetime1 = param3;
-                        var16Lifetime11Lifetime1 = this.field_o[var14Lifetime11Lifetime1];
+                        var15Lifetime11Lifetime1 = color;
+                        var16Lifetime11Lifetime1 = this.pixels[var14Lifetime11Lifetime1];
                         var17Lifetime11Lifetime1 = var15Lifetime11Lifetime1 + var16Lifetime11Lifetime1;
                         var18Lifetime11Lifetime1 = (var15Lifetime11Lifetime1 & 16711935) + (var16Lifetime11Lifetime1 & 16711935);
                         var16Lifetime11Lifetime1 = (var18Lifetime11Lifetime1 & 16777472) + (var17Lifetime11Lifetime1 - var18Lifetime11Lifetime1 & 65536);
-                        this.field_o[var14Lifetime11Lifetime1] = var17Lifetime11Lifetime1 - var16Lifetime11Lifetime1 | var16Lifetime11Lifetime1 - (var16Lifetime11Lifetime1 >>> 8);
+                        this.pixels[var14Lifetime11Lifetime1] = var17Lifetime11Lifetime1 - var16Lifetime11Lifetime1 | var16Lifetime11Lifetime1 - (var16Lifetime11Lifetime1 >>> 8);
                       }
                     }
-                    if (param1 + var11Lifetime1 >= this.field_H &&
-                      param1 + var11Lifetime1 < this.field_C) {
-                      if (param0 - var10Lifetime1 >= this.field_v &&
-                        param0 - var10Lifetime1 < this.field_D) {
+                    if (centerY + var11Lifetime1 >= this.clipTop &&
+                      centerY + var11Lifetime1 < this.clipBottom) {
+                      if (centerX - var10Lifetime1 >= this.clipLeft &&
+                        centerX - var10Lifetime1 < this.clipRight) {
                         var14Lifetime11Lifetime2 = var7Lifetime1 - var10Lifetime1;
-                        var15Lifetime11Lifetime2 = param3;
-                        var16Lifetime11Lifetime2 = this.field_o[var14Lifetime11Lifetime2];
+                        var15Lifetime11Lifetime2 = color;
+                        var16Lifetime11Lifetime2 = this.pixels[var14Lifetime11Lifetime2];
                         var17Lifetime11Lifetime2 = var15Lifetime11Lifetime2 + var16Lifetime11Lifetime2;
                         var18Lifetime11Lifetime2 = (var15Lifetime11Lifetime2 & 16711935) + (var16Lifetime11Lifetime2 & 16711935);
                         var16Lifetime11Lifetime2 = (var18Lifetime11Lifetime2 & 16777472) + (var17Lifetime11Lifetime2 - var18Lifetime11Lifetime2 & 65536);
-                        this.field_o[var14Lifetime11Lifetime2] = var17Lifetime11Lifetime2 - var16Lifetime11Lifetime2 | var16Lifetime11Lifetime2 - (var16Lifetime11Lifetime2 >>> 8);
+                        this.pixels[var14Lifetime11Lifetime2] = var17Lifetime11Lifetime2 - var16Lifetime11Lifetime2 | var16Lifetime11Lifetime2 - (var16Lifetime11Lifetime2 >>> 8);
                       }
-                      if (param0 + var10Lifetime1 >= this.field_v &&
-                        param0 + var10Lifetime1 < this.field_D) {
+                      if (centerX + var10Lifetime1 >= this.clipLeft &&
+                        centerX + var10Lifetime1 < this.clipRight) {
                         var14Lifetime11Lifetime2 = var7Lifetime1 + var10Lifetime1;
-                        var15Lifetime11Lifetime2 = param3;
-                        var16Lifetime11Lifetime2 = this.field_o[var14Lifetime11Lifetime2];
+                        var15Lifetime11Lifetime2 = color;
+                        var16Lifetime11Lifetime2 = this.pixels[var14Lifetime11Lifetime2];
                         var17Lifetime11Lifetime2 = var15Lifetime11Lifetime2 + var16Lifetime11Lifetime2;
                         var18Lifetime11Lifetime2 = (var15Lifetime11Lifetime2 & 16711935) + (var16Lifetime11Lifetime2 & 16711935);
                         var16Lifetime11Lifetime2 = (var18Lifetime11Lifetime2 & 16777472) + (var17Lifetime11Lifetime2 - var18Lifetime11Lifetime2 & 65536);
-                        this.field_o[var14Lifetime11Lifetime2] = var17Lifetime11Lifetime2 - var16Lifetime11Lifetime2 | var16Lifetime11Lifetime2 - (var16Lifetime11Lifetime2 >>> 8);
+                        this.pixels[var14Lifetime11Lifetime2] = var17Lifetime11Lifetime2 - var16Lifetime11Lifetime2 | var16Lifetime11Lifetime2 - (var16Lifetime11Lifetime2 >>> 8);
                       }
                     }
-                    if (param1 + var10Lifetime1 < this.field_H) {
+                    if (centerY + var10Lifetime1 < this.clipTop) {
                       continue;
                     }
-                    if (param1 + var10Lifetime1 >= this.field_C) {
+                    if (centerY + var10Lifetime1 >= this.clipBottom) {
                       continue;
                     }
-                    if (param0 - var11Lifetime1 >= this.field_v &&
-                      param0 - var11Lifetime1 < this.field_D) {
+                    if (centerX - var11Lifetime1 >= this.clipLeft &&
+                      centerX - var11Lifetime1 < this.clipRight) {
                       var14Lifetime11Lifetime3 = var9Lifetime1 - var11Lifetime1;
-                      var15Lifetime11Lifetime3 = param3;
-                      var16Lifetime11Lifetime3 = this.field_o[var14Lifetime11Lifetime3];
+                      var15Lifetime11Lifetime3 = color;
+                      var16Lifetime11Lifetime3 = this.pixels[var14Lifetime11Lifetime3];
                       var17Lifetime11Lifetime3 = var15Lifetime11Lifetime3 + var16Lifetime11Lifetime3;
                       var18Lifetime11Lifetime3 = (var15Lifetime11Lifetime3 & 16711935) + (var16Lifetime11Lifetime3 & 16711935);
                       var16Lifetime11Lifetime3 = (var18Lifetime11Lifetime3 & 16777472) + (var17Lifetime11Lifetime3 - var18Lifetime11Lifetime3 & 65536);
-                      this.field_o[var14Lifetime11Lifetime3] = var17Lifetime11Lifetime3 - var16Lifetime11Lifetime3 | var16Lifetime11Lifetime3 - (var16Lifetime11Lifetime3 >>> 8);
+                      this.pixels[var14Lifetime11Lifetime3] = var17Lifetime11Lifetime3 - var16Lifetime11Lifetime3 | var16Lifetime11Lifetime3 - (var16Lifetime11Lifetime3 >>> 8);
                     }
-                    if (param0 + var11Lifetime1 < this.field_v) {
+                    if (centerX + var11Lifetime1 < this.clipLeft) {
                       continue;
                     }
-                    if (param0 + var11Lifetime1 >= this.field_D) {
+                    if (centerX + var11Lifetime1 >= this.clipRight) {
                       continue;
                     }
                     var14Lifetime11Lifetime4 = var9Lifetime1 + var11Lifetime1;
-                    var15Lifetime11Lifetime4 = param3;
-                    var16Lifetime11Lifetime4 = this.field_o[var14Lifetime11Lifetime4];
+                    var15Lifetime11Lifetime4 = color;
+                    var16Lifetime11Lifetime4 = this.pixels[var14Lifetime11Lifetime4];
                     var17Lifetime11Lifetime4 = var15Lifetime11Lifetime4 + var16Lifetime11Lifetime4;
                     var18Lifetime11Lifetime4 = (var15Lifetime11Lifetime4 & 16711935) + (var16Lifetime11Lifetime4 & 16711935);
                     var16Lifetime11Lifetime5 = (var18Lifetime11Lifetime4 & 16777472) + (var17Lifetime11Lifetime4 - var18Lifetime11Lifetime4 & 65536);
-                    this.field_o[var14Lifetime11Lifetime4] = var17Lifetime11Lifetime4 - var16Lifetime11Lifetime5 | var16Lifetime11Lifetime5 - (var16Lifetime11Lifetime5 >>> 8);
+                    this.pixels[var14Lifetime11Lifetime4] = var17Lifetime11Lifetime4 - var16Lifetime11Lifetime5 | var16Lifetime11Lifetime5 - (var16Lifetime11Lifetime5 >>> 8);
                   }
                 }
-                if (param0 - var10Lifetime1 >= this.field_v &&
-                  param0 + var10Lifetime1 < this.field_D &&
-                  param1 - var10Lifetime1 >= this.field_H &&
-                  param1 + var10Lifetime1 < this.field_C) {
+                if (centerX - var10Lifetime1 >= this.clipLeft &&
+                  centerX + var10Lifetime1 < this.clipRight &&
+                  centerY - var10Lifetime1 >= this.clipTop &&
+                  centerY + var10Lifetime1 < this.clipBottom) {
                   var14Lifetime1 = var6Lifetime1 - var10Lifetime1;
-                  var15Lifetime1 = param3;
+                  var15Lifetime1 = color;
                   var16Lifetime1 = var13;
                   var15Lifetime1 = ((var15Lifetime1 & 16711935) * var16Lifetime1 >> 8 & 16711935) + ((var15Lifetime1 & 65280) * var16Lifetime1 >> 8 & 65280) + (var16Lifetime1 << 24);
                   var17Lifetime1 = 256 - var16Lifetime1;
-                  var18Lifetime1 = this.field_o[var14Lifetime1];
+                  var18Lifetime1 = this.pixels[var14Lifetime1];
                   var18Lifetime1 = ((var18Lifetime1 & 16711935) * var17Lifetime1 >> 8 & 16711935) + ((var18Lifetime1 & 65280) * var17Lifetime1 >> 8 & 65280);
-                  this.field_o[var14Lifetime1] = var15Lifetime1 + var18Lifetime1;
+                  this.pixels[var14Lifetime1] = var15Lifetime1 + var18Lifetime1;
                   var14Lifetime1Lifetime1 = var6Lifetime1 + var10Lifetime1;
-                  var15Lifetime1Lifetime1 = param3;
+                  var15Lifetime1Lifetime1 = color;
                   var16Lifetime1Lifetime1 = var13;
                   var15Lifetime1Lifetime1 = ((var15Lifetime1Lifetime1 & 16711935) * var16Lifetime1Lifetime1 >> 8 & 16711935) + ((var15Lifetime1Lifetime1 & 65280) * var16Lifetime1Lifetime1 >> 8 & 65280) + (var16Lifetime1Lifetime1 << 24);
                   var17Lifetime1Lifetime1 = 256 - var16Lifetime1Lifetime1;
-                  var18Lifetime1Lifetime1 = this.field_o[var14Lifetime1Lifetime1];
+                  var18Lifetime1Lifetime1 = this.pixels[var14Lifetime1Lifetime1];
                   var18Lifetime1Lifetime1 = ((var18Lifetime1Lifetime1 & 16711935) * var17Lifetime1Lifetime1 >> 8 & 16711935) + ((var18Lifetime1Lifetime1 & 65280) * var17Lifetime1Lifetime1 >> 8 & 65280);
-                  this.field_o[var14Lifetime1Lifetime1] = var15Lifetime1Lifetime1 + var18Lifetime1Lifetime1;
+                  this.pixels[var14Lifetime1Lifetime1] = var15Lifetime1Lifetime1 + var18Lifetime1Lifetime1;
                   var14Lifetime1Lifetime2 = var8Lifetime1;
-                  var15Lifetime1Lifetime2 = param3;
+                  var15Lifetime1Lifetime2 = color;
                   var16Lifetime1Lifetime2 = var13;
                   var15Lifetime1Lifetime2 = ((var15Lifetime1Lifetime2 & 16711935) * var16Lifetime1Lifetime2 >> 8 & 16711935) + ((var15Lifetime1Lifetime2 & 65280) * var16Lifetime1Lifetime2 >> 8 & 65280) + (var16Lifetime1Lifetime2 << 24);
                   var17Lifetime1Lifetime2 = 256 - var16Lifetime1Lifetime2;
-                  var18Lifetime1Lifetime2 = this.field_o[var14Lifetime1Lifetime2];
+                  var18Lifetime1Lifetime2 = this.pixels[var14Lifetime1Lifetime2];
                   var18Lifetime1Lifetime2 = ((var18Lifetime1Lifetime2 & 16711935) * var17Lifetime1Lifetime2 >> 8 & 16711935) + ((var18Lifetime1Lifetime2 & 65280) * var17Lifetime1Lifetime2 >> 8 & 65280);
-                  this.field_o[var14Lifetime1Lifetime2] = var15Lifetime1Lifetime2 + var18Lifetime1Lifetime2;
+                  this.pixels[var14Lifetime1Lifetime2] = var15Lifetime1Lifetime2 + var18Lifetime1Lifetime2;
                   var14Lifetime1Lifetime3 = var9Lifetime1;
-                  var15Lifetime1Lifetime3 = param3;
+                  var15Lifetime1Lifetime3 = color;
                   var16Lifetime1Lifetime3 = var13;
                   var15Lifetime1Lifetime3 = ((var15Lifetime1Lifetime3 & 16711935) * var16Lifetime1Lifetime3 >> 8 & 16711935) + ((var15Lifetime1Lifetime3 & 65280) * var16Lifetime1Lifetime3 >> 8 & 65280) + (var16Lifetime1Lifetime3 << 24);
                   var17Lifetime1Lifetime3 = 256 - var16Lifetime1Lifetime3;
-                  var18Lifetime1Lifetime3 = this.field_o[var14Lifetime1Lifetime3];
+                  var18Lifetime1Lifetime3 = this.pixels[var14Lifetime1Lifetime3];
                   var18Lifetime1Lifetime3 = ((var18Lifetime1Lifetime3 & 16711935) * var17Lifetime1Lifetime3 >> 8 & 16711935) + ((var18Lifetime1Lifetime3 & 65280) * var17Lifetime1Lifetime3 >> 8 & 65280);
-                  this.field_o[var14Lifetime1Lifetime3] = var15Lifetime1Lifetime3 + var18Lifetime1Lifetime3;
+                  this.pixels[var14Lifetime1Lifetime3] = var15Lifetime1Lifetime3 + var18Lifetime1Lifetime3;
                   while (true) {
                     incrementValue$2 = var11Lifetime1;
                     var11Lifetime1++;
                     var12Lifetime1 = var12Lifetime1 + (incrementValue$2 + var11Lifetime1);
-                    var6Lifetime1 = var6Lifetime1 - this.field_k;
-                    var7Lifetime1 = var7Lifetime1 + this.field_k;
-                    if (var12Lifetime1 > param2) {
+                    var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                    var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                    if (var12Lifetime1 > radius) {
                       var10Lifetime1--;
                       var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                      var8Lifetime1 = var8Lifetime1 + this.field_k;
-                      var9Lifetime1 = var9Lifetime1 - this.field_k;
+                      var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                      var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                     }
                     if (var10Lifetime1 < var11Lifetime1) {
                       return;
                     }
                     var14Lifetime1Lifetime4 = var8Lifetime1 - var11Lifetime1;
-                    var15Lifetime1Lifetime4 = param3;
+                    var15Lifetime1Lifetime4 = color;
                     var16Lifetime1Lifetime4 = var13;
                     var15Lifetime1Lifetime4 = ((var15Lifetime1Lifetime4 & 16711935) * var16Lifetime1Lifetime4 >> 8 & 16711935) + ((var15Lifetime1Lifetime4 & 65280) * var16Lifetime1Lifetime4 >> 8 & 65280) + (var16Lifetime1Lifetime4 << 24);
                     var17Lifetime1Lifetime4 = 256 - var16Lifetime1Lifetime4;
-                    var18Lifetime1Lifetime4 = this.field_o[var14Lifetime1Lifetime4];
+                    var18Lifetime1Lifetime4 = this.pixels[var14Lifetime1Lifetime4];
                     var18Lifetime1Lifetime4 = ((var18Lifetime1Lifetime4 & 16711935) * var17Lifetime1Lifetime4 >> 8 & 16711935) + ((var18Lifetime1Lifetime4 & 65280) * var17Lifetime1Lifetime4 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4] = var15Lifetime1Lifetime4 + var18Lifetime1Lifetime4;
+                    this.pixels[var14Lifetime1Lifetime4] = var15Lifetime1Lifetime4 + var18Lifetime1Lifetime4;
                     var14Lifetime1Lifetime4Lifetime1 = var8Lifetime1 + var11Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime1 = param3;
+                    var15Lifetime1Lifetime4Lifetime1 = color;
                     var16Lifetime1Lifetime4Lifetime1 = var13;
                     var15Lifetime1Lifetime4Lifetime1 = ((var15Lifetime1Lifetime4Lifetime1 & 16711935) * var16Lifetime1Lifetime4Lifetime1 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime1 & 65280) * var16Lifetime1Lifetime4Lifetime1 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime1 << 24);
                     var17Lifetime1Lifetime4Lifetime1 = 256 - var16Lifetime1Lifetime4Lifetime1;
-                    var18Lifetime1Lifetime4Lifetime1 = this.field_o[var14Lifetime1Lifetime4Lifetime1];
+                    var18Lifetime1Lifetime4Lifetime1 = this.pixels[var14Lifetime1Lifetime4Lifetime1];
                     var18Lifetime1Lifetime4Lifetime1 = ((var18Lifetime1Lifetime4Lifetime1 & 16711935) * var17Lifetime1Lifetime4Lifetime1 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime1 & 65280) * var17Lifetime1Lifetime4Lifetime1 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime1] = var15Lifetime1Lifetime4Lifetime1 + var18Lifetime1Lifetime4Lifetime1;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime1] = var15Lifetime1Lifetime4Lifetime1 + var18Lifetime1Lifetime4Lifetime1;
                     var14Lifetime1Lifetime4Lifetime2 = var6Lifetime1 - var10Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime2 = param3;
+                    var15Lifetime1Lifetime4Lifetime2 = color;
                     var16Lifetime1Lifetime4Lifetime2 = var13;
                     var15Lifetime1Lifetime4Lifetime2 = ((var15Lifetime1Lifetime4Lifetime2 & 16711935) * var16Lifetime1Lifetime4Lifetime2 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime2 & 65280) * var16Lifetime1Lifetime4Lifetime2 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime2 << 24);
                     var17Lifetime1Lifetime4Lifetime2 = 256 - var16Lifetime1Lifetime4Lifetime2;
-                    var18Lifetime1Lifetime4Lifetime2 = this.field_o[var14Lifetime1Lifetime4Lifetime2];
+                    var18Lifetime1Lifetime4Lifetime2 = this.pixels[var14Lifetime1Lifetime4Lifetime2];
                     var18Lifetime1Lifetime4Lifetime2 = ((var18Lifetime1Lifetime4Lifetime2 & 16711935) * var17Lifetime1Lifetime4Lifetime2 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime2 & 65280) * var17Lifetime1Lifetime4Lifetime2 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime2] = var15Lifetime1Lifetime4Lifetime2 + var18Lifetime1Lifetime4Lifetime2;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime2] = var15Lifetime1Lifetime4Lifetime2 + var18Lifetime1Lifetime4Lifetime2;
                     var14Lifetime1Lifetime4Lifetime3 = var6Lifetime1 + var10Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime3 = param3;
+                    var15Lifetime1Lifetime4Lifetime3 = color;
                     var16Lifetime1Lifetime4Lifetime3 = var13;
                     var15Lifetime1Lifetime4Lifetime3 = ((var15Lifetime1Lifetime4Lifetime3 & 16711935) * var16Lifetime1Lifetime4Lifetime3 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime3 & 65280) * var16Lifetime1Lifetime4Lifetime3 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime3 << 24);
                     var17Lifetime1Lifetime4Lifetime3 = 256 - var16Lifetime1Lifetime4Lifetime3;
-                    var18Lifetime1Lifetime4Lifetime3 = this.field_o[var14Lifetime1Lifetime4Lifetime3];
+                    var18Lifetime1Lifetime4Lifetime3 = this.pixels[var14Lifetime1Lifetime4Lifetime3];
                     var18Lifetime1Lifetime4Lifetime3 = ((var18Lifetime1Lifetime4Lifetime3 & 16711935) * var17Lifetime1Lifetime4Lifetime3 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime3 & 65280) * var17Lifetime1Lifetime4Lifetime3 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime3] = var15Lifetime1Lifetime4Lifetime3 + var18Lifetime1Lifetime4Lifetime3;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime3] = var15Lifetime1Lifetime4Lifetime3 + var18Lifetime1Lifetime4Lifetime3;
                     var14Lifetime1Lifetime4Lifetime4 = var7Lifetime1 - var10Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime4 = param3;
+                    var15Lifetime1Lifetime4Lifetime4 = color;
                     var16Lifetime1Lifetime4Lifetime4 = var13;
                     var15Lifetime1Lifetime4Lifetime4 = ((var15Lifetime1Lifetime4Lifetime4 & 16711935) * var16Lifetime1Lifetime4Lifetime4 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime4 & 65280) * var16Lifetime1Lifetime4Lifetime4 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime4 << 24);
                     var17Lifetime1Lifetime4Lifetime4 = 256 - var16Lifetime1Lifetime4Lifetime4;
-                    var18Lifetime1Lifetime4Lifetime4 = this.field_o[var14Lifetime1Lifetime4Lifetime4];
+                    var18Lifetime1Lifetime4Lifetime4 = this.pixels[var14Lifetime1Lifetime4Lifetime4];
                     var18Lifetime1Lifetime4Lifetime4 = ((var18Lifetime1Lifetime4Lifetime4 & 16711935) * var17Lifetime1Lifetime4Lifetime4 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime4 & 65280) * var17Lifetime1Lifetime4Lifetime4 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime4] = var15Lifetime1Lifetime4Lifetime4 + var18Lifetime1Lifetime4Lifetime4;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime4] = var15Lifetime1Lifetime4Lifetime4 + var18Lifetime1Lifetime4Lifetime4;
                     var14Lifetime1Lifetime4Lifetime5 = var7Lifetime1 + var10Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime5 = param3;
+                    var15Lifetime1Lifetime4Lifetime5 = color;
                     var16Lifetime1Lifetime4Lifetime5 = var13;
                     var15Lifetime1Lifetime4Lifetime5 = ((var15Lifetime1Lifetime4Lifetime5 & 16711935) * var16Lifetime1Lifetime4Lifetime5 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime5 & 65280) * var16Lifetime1Lifetime4Lifetime5 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime5 << 24);
                     var17Lifetime1Lifetime4Lifetime5 = 256 - var16Lifetime1Lifetime4Lifetime5;
-                    var18Lifetime1Lifetime4Lifetime5 = this.field_o[var14Lifetime1Lifetime4Lifetime5];
+                    var18Lifetime1Lifetime4Lifetime5 = this.pixels[var14Lifetime1Lifetime4Lifetime5];
                     var18Lifetime1Lifetime4Lifetime5 = ((var18Lifetime1Lifetime4Lifetime5 & 16711935) * var17Lifetime1Lifetime4Lifetime5 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime5 & 65280) * var17Lifetime1Lifetime4Lifetime5 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime5] = var15Lifetime1Lifetime4Lifetime5 + var18Lifetime1Lifetime4Lifetime5;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime5] = var15Lifetime1Lifetime4Lifetime5 + var18Lifetime1Lifetime4Lifetime5;
                     var14Lifetime1Lifetime4Lifetime6 = var9Lifetime1 - var11Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime6 = param3;
+                    var15Lifetime1Lifetime4Lifetime6 = color;
                     var16Lifetime1Lifetime4Lifetime6 = var13;
                     var15Lifetime1Lifetime4Lifetime6 = ((var15Lifetime1Lifetime4Lifetime6 & 16711935) * var16Lifetime1Lifetime4Lifetime6 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime6 & 65280) * var16Lifetime1Lifetime4Lifetime6 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime6 << 24);
                     var17Lifetime1Lifetime4Lifetime6 = 256 - var16Lifetime1Lifetime4Lifetime6;
-                    var18Lifetime1Lifetime4Lifetime6 = this.field_o[var14Lifetime1Lifetime4Lifetime6];
+                    var18Lifetime1Lifetime4Lifetime6 = this.pixels[var14Lifetime1Lifetime4Lifetime6];
                     var18Lifetime1Lifetime4Lifetime6 = ((var18Lifetime1Lifetime4Lifetime6 & 16711935) * var17Lifetime1Lifetime4Lifetime6 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime6 & 65280) * var17Lifetime1Lifetime4Lifetime6 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime6] = var15Lifetime1Lifetime4Lifetime6 + var18Lifetime1Lifetime4Lifetime6;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime6] = var15Lifetime1Lifetime4Lifetime6 + var18Lifetime1Lifetime4Lifetime6;
                     var14Lifetime1Lifetime4Lifetime7 = var9Lifetime1 + var11Lifetime1;
-                    var15Lifetime1Lifetime4Lifetime7 = param3;
+                    var15Lifetime1Lifetime4Lifetime7 = color;
                     var16Lifetime1Lifetime4Lifetime7 = var13;
                     var15Lifetime1Lifetime4Lifetime7 = ((var15Lifetime1Lifetime4Lifetime7 & 16711935) * var16Lifetime1Lifetime4Lifetime7 >> 8 & 16711935) + ((var15Lifetime1Lifetime4Lifetime7 & 65280) * var16Lifetime1Lifetime4Lifetime7 >> 8 & 65280) + (var16Lifetime1Lifetime4Lifetime7 << 24);
                     var17Lifetime1Lifetime4Lifetime7 = 256 - var16Lifetime1Lifetime4Lifetime7;
-                    var18Lifetime1Lifetime4Lifetime7 = this.field_o[var14Lifetime1Lifetime4Lifetime7];
+                    var18Lifetime1Lifetime4Lifetime7 = this.pixels[var14Lifetime1Lifetime4Lifetime7];
                     var18Lifetime1Lifetime4Lifetime7 = ((var18Lifetime1Lifetime4Lifetime7 & 16711935) * var17Lifetime1Lifetime4Lifetime7 >> 8 & 16711935) + ((var18Lifetime1Lifetime4Lifetime7 & 65280) * var17Lifetime1Lifetime4Lifetime7 >> 8 & 65280);
-                    this.field_o[var14Lifetime1Lifetime4Lifetime7] = var15Lifetime1Lifetime4Lifetime7 + var18Lifetime1Lifetime4Lifetime7;
+                    this.pixels[var14Lifetime1Lifetime4Lifetime7] = var15Lifetime1Lifetime4Lifetime7 + var18Lifetime1Lifetime4Lifetime7;
                   }
                 }
-                if (param0 - var10Lifetime1 >= this.field_v &&
-                  param1 >= this.field_H &&
-                  param1 < this.field_C) {
+                if (centerX - var10Lifetime1 >= this.clipLeft &&
+                  centerY >= this.clipTop &&
+                  centerY < this.clipBottom) {
                   var14Lifetime2 = var6Lifetime1 - var10Lifetime1;
-                  var15Lifetime2 = param3;
+                  var15Lifetime2 = color;
                   var16Lifetime2 = var13;
                   var15Lifetime2 = ((var15Lifetime2 & 16711935) * var16Lifetime2 >> 8 & 16711935) + ((var15Lifetime2 & 65280) * var16Lifetime2 >> 8 & 65280) + (var16Lifetime2 << 24);
                   var17Lifetime2 = 256 - var16Lifetime2;
-                  var18Lifetime2 = this.field_o[var14Lifetime2];
+                  var18Lifetime2 = this.pixels[var14Lifetime2];
                   var18Lifetime2 = ((var18Lifetime2 & 16711935) * var17Lifetime2 >> 8 & 16711935) + ((var18Lifetime2 & 65280) * var17Lifetime2 >> 8 & 65280);
-                  this.field_o[var14Lifetime2] = var15Lifetime2 + var18Lifetime2;
+                  this.pixels[var14Lifetime2] = var15Lifetime2 + var18Lifetime2;
                 }
-                if (param0 + var10Lifetime1 < this.field_D &&
-                  param1 >= this.field_H &&
-                  param1 < this.field_C) {
+                if (centerX + var10Lifetime1 < this.clipRight &&
+                  centerY >= this.clipTop &&
+                  centerY < this.clipBottom) {
                   var14Lifetime3 = var6Lifetime1 + var10Lifetime1;
-                  var15Lifetime3 = param3;
+                  var15Lifetime3 = color;
                   var16Lifetime3 = var13;
                   var15Lifetime3 = ((var15Lifetime3 & 16711935) * var16Lifetime3 >> 8 & 16711935) + ((var15Lifetime3 & 65280) * var16Lifetime3 >> 8 & 65280) + (var16Lifetime3 << 24);
                   var17Lifetime3 = 256 - var16Lifetime3;
-                  var18Lifetime3 = this.field_o[var14Lifetime3];
+                  var18Lifetime3 = this.pixels[var14Lifetime3];
                   var18Lifetime3 = ((var18Lifetime3 & 16711935) * var17Lifetime3 >> 8 & 16711935) + ((var18Lifetime3 & 65280) * var17Lifetime3 >> 8 & 65280);
-                  this.field_o[var14Lifetime3] = var15Lifetime3 + var18Lifetime3;
+                  this.pixels[var14Lifetime3] = var15Lifetime3 + var18Lifetime3;
                 }
-                if (param1 - var10Lifetime1 >= this.field_H &&
-                  param0 >= this.field_v &&
-                  param0 < this.field_D) {
+                if (centerY - var10Lifetime1 >= this.clipTop &&
+                  centerX >= this.clipLeft &&
+                  centerX < this.clipRight) {
                   var14Lifetime4 = var8Lifetime1;
-                  var15Lifetime4 = param3;
+                  var15Lifetime4 = color;
                   var16Lifetime4 = var13;
                   var15Lifetime4 = ((var15Lifetime4 & 16711935) * var16Lifetime4 >> 8 & 16711935) + ((var15Lifetime4 & 65280) * var16Lifetime4 >> 8 & 65280) + (var16Lifetime4 << 24);
                   var17Lifetime4 = 256 - var16Lifetime4;
-                  var18Lifetime4 = this.field_o[var14Lifetime4];
+                  var18Lifetime4 = this.pixels[var14Lifetime4];
                   var18Lifetime4 = ((var18Lifetime4 & 16711935) * var17Lifetime4 >> 8 & 16711935) + ((var18Lifetime4 & 65280) * var17Lifetime4 >> 8 & 65280);
-                  this.field_o[var14Lifetime4] = var15Lifetime4 + var18Lifetime4;
+                  this.pixels[var14Lifetime4] = var15Lifetime4 + var18Lifetime4;
                 }
-                if (param1 + var10Lifetime1 < this.field_C &&
-                  param0 >= this.field_v &&
-                  param0 < this.field_D) {
+                if (centerY + var10Lifetime1 < this.clipBottom &&
+                  centerX >= this.clipLeft &&
+                  centerX < this.clipRight) {
                   var14Lifetime5 = var9Lifetime1;
-                  var15Lifetime5 = param3;
+                  var15Lifetime5 = color;
                   var16Lifetime5 = var13;
                   var15Lifetime5 = ((var15Lifetime5 & 16711935) * var16Lifetime5 >> 8 & 16711935) + ((var15Lifetime5 & 65280) * var16Lifetime5 >> 8 & 65280) + (var16Lifetime5 << 24);
                   var17Lifetime5 = 256 - var16Lifetime5;
-                  var18Lifetime5 = this.field_o[var14Lifetime5];
+                  var18Lifetime5 = this.pixels[var14Lifetime5];
                   var18Lifetime5 = ((var18Lifetime5 & 16711935) * var17Lifetime5 >> 8 & 16711935) + ((var18Lifetime5 & 65280) * var17Lifetime5 >> 8 & 65280);
-                  this.field_o[var14Lifetime5] = var15Lifetime5 + var18Lifetime5;
+                  this.pixels[var14Lifetime5] = var15Lifetime5 + var18Lifetime5;
                 }
                 while (true) {
                   incrementValue$3 = var11Lifetime1;
                   var11Lifetime1++;
                   var12Lifetime1 = var12Lifetime1 + (incrementValue$3 + var11Lifetime1);
-                  var6Lifetime1 = var6Lifetime1 - this.field_k;
-                  var7Lifetime1 = var7Lifetime1 + this.field_k;
-                  if (var12Lifetime1 > param2) {
+                  var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                  var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                  if (var12Lifetime1 > radius) {
                     var10Lifetime1--;
                     var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                    var8Lifetime1 = var8Lifetime1 + this.field_k;
-                    var9Lifetime1 = var9Lifetime1 - this.field_k;
+                    var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                    var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                   }
                   if (var10Lifetime1 < var11Lifetime1) {
                     return;
                   }
-                  if (param1 - var10Lifetime1 >= this.field_H &&
-                    param1 - var10Lifetime1 < this.field_C) {
-                    if (param0 - var11Lifetime1 >= this.field_v &&
-                      param0 - var11Lifetime1 < this.field_D) {
+                  if (centerY - var10Lifetime1 >= this.clipTop &&
+                    centerY - var10Lifetime1 < this.clipBottom) {
+                    if (centerX - var11Lifetime1 >= this.clipLeft &&
+                      centerX - var11Lifetime1 < this.clipRight) {
                       var14Lifetime6 = var8Lifetime1 - var11Lifetime1;
-                      var15Lifetime6 = param3;
+                      var15Lifetime6 = color;
                       var16Lifetime6 = var13;
                       var15Lifetime6 = ((var15Lifetime6 & 16711935) * var16Lifetime6 >> 8 & 16711935) + ((var15Lifetime6 & 65280) * var16Lifetime6 >> 8 & 65280) + (var16Lifetime6 << 24);
                       var17Lifetime6 = 256 - var16Lifetime6;
-                      var18Lifetime6 = this.field_o[var14Lifetime6];
+                      var18Lifetime6 = this.pixels[var14Lifetime6];
                       var18Lifetime6 = ((var18Lifetime6 & 16711935) * var17Lifetime6 >> 8 & 16711935) + ((var18Lifetime6 & 65280) * var17Lifetime6 >> 8 & 65280);
-                      this.field_o[var14Lifetime6] = var15Lifetime6 + var18Lifetime6;
+                      this.pixels[var14Lifetime6] = var15Lifetime6 + var18Lifetime6;
                     }
-                    if (param0 + var11Lifetime1 >= this.field_v &&
-                      param0 + var11Lifetime1 < this.field_D) {
+                    if (centerX + var11Lifetime1 >= this.clipLeft &&
+                      centerX + var11Lifetime1 < this.clipRight) {
                       var14Lifetime6Lifetime5 = var8Lifetime1 + var11Lifetime1;
-                      var15Lifetime6Lifetime5 = param3;
+                      var15Lifetime6Lifetime5 = color;
                       var16Lifetime6Lifetime5 = var13;
                       var15Lifetime6Lifetime5 = ((var15Lifetime6Lifetime5 & 16711935) * var16Lifetime6Lifetime5 >> 8 & 16711935) + ((var15Lifetime6Lifetime5 & 65280) * var16Lifetime6Lifetime5 >> 8 & 65280) + (var16Lifetime6Lifetime5 << 24);
                       var17Lifetime6Lifetime5 = 256 - var16Lifetime6Lifetime5;
-                      var18Lifetime6Lifetime5 = this.field_o[var14Lifetime6Lifetime5];
+                      var18Lifetime6Lifetime5 = this.pixels[var14Lifetime6Lifetime5];
                       var18Lifetime6Lifetime5 = ((var18Lifetime6Lifetime5 & 16711935) * var17Lifetime6Lifetime5 >> 8 & 16711935) + ((var18Lifetime6Lifetime5 & 65280) * var17Lifetime6Lifetime5 >> 8 & 65280);
-                      this.field_o[var14Lifetime6Lifetime5] = var15Lifetime6Lifetime5 + var18Lifetime6Lifetime5;
+                      this.pixels[var14Lifetime6Lifetime5] = var15Lifetime6Lifetime5 + var18Lifetime6Lifetime5;
                     }
                   }
-                  if (param1 - var11Lifetime1 >= this.field_H &&
-                    param1 - var11Lifetime1 < this.field_C) {
-                    if (param0 - var10Lifetime1 >= this.field_v &&
-                      param0 - var10Lifetime1 < this.field_D) {
+                  if (centerY - var11Lifetime1 >= this.clipTop &&
+                    centerY - var11Lifetime1 < this.clipBottom) {
+                    if (centerX - var10Lifetime1 >= this.clipLeft &&
+                      centerX - var10Lifetime1 < this.clipRight) {
                       var14Lifetime6Lifetime1 = var6Lifetime1 - var10Lifetime1;
-                      var15Lifetime6Lifetime1 = param3;
+                      var15Lifetime6Lifetime1 = color;
                       var16Lifetime6Lifetime1 = var13;
                       var15Lifetime6Lifetime1 = ((var15Lifetime6Lifetime1 & 16711935) * var16Lifetime6Lifetime1 >> 8 & 16711935) + ((var15Lifetime6Lifetime1 & 65280) * var16Lifetime6Lifetime1 >> 8 & 65280) + (var16Lifetime6Lifetime1 << 24);
                       var17Lifetime6Lifetime1 = 256 - var16Lifetime6Lifetime1;
-                      var18Lifetime6Lifetime1 = this.field_o[var14Lifetime6Lifetime1];
+                      var18Lifetime6Lifetime1 = this.pixels[var14Lifetime6Lifetime1];
                       var18Lifetime6Lifetime1 = ((var18Lifetime6Lifetime1 & 16711935) * var17Lifetime6Lifetime1 >> 8 & 16711935) + ((var18Lifetime6Lifetime1 & 65280) * var17Lifetime6Lifetime1 >> 8 & 65280);
-                      this.field_o[var14Lifetime6Lifetime1] = var15Lifetime6Lifetime1 + var18Lifetime6Lifetime1;
+                      this.pixels[var14Lifetime6Lifetime1] = var15Lifetime6Lifetime1 + var18Lifetime6Lifetime1;
                     }
-                    if (param0 + var10Lifetime1 >= this.field_v &&
-                      param0 + var10Lifetime1 < this.field_D) {
+                    if (centerX + var10Lifetime1 >= this.clipLeft &&
+                      centerX + var10Lifetime1 < this.clipRight) {
                       var14Lifetime6Lifetime1Lifetime1 = var6Lifetime1 + var10Lifetime1;
-                      var15Lifetime6Lifetime1Lifetime1 = param3;
+                      var15Lifetime6Lifetime1Lifetime1 = color;
                       var16Lifetime6Lifetime1Lifetime1 = var13;
                       var15Lifetime6Lifetime1Lifetime1 = ((var15Lifetime6Lifetime1Lifetime1 & 16711935) * var16Lifetime6Lifetime1Lifetime1 >> 8 & 16711935) + ((var15Lifetime6Lifetime1Lifetime1 & 65280) * var16Lifetime6Lifetime1Lifetime1 >> 8 & 65280) + (var16Lifetime6Lifetime1Lifetime1 << 24);
                       var17Lifetime6Lifetime1Lifetime1 = 256 - var16Lifetime6Lifetime1Lifetime1;
-                      var18Lifetime6Lifetime1Lifetime1 = this.field_o[var14Lifetime6Lifetime1Lifetime1];
+                      var18Lifetime6Lifetime1Lifetime1 = this.pixels[var14Lifetime6Lifetime1Lifetime1];
                       var18Lifetime6Lifetime1Lifetime1 = ((var18Lifetime6Lifetime1Lifetime1 & 16711935) * var17Lifetime6Lifetime1Lifetime1 >> 8 & 16711935) + ((var18Lifetime6Lifetime1Lifetime1 & 65280) * var17Lifetime6Lifetime1Lifetime1 >> 8 & 65280);
-                      this.field_o[var14Lifetime6Lifetime1Lifetime1] = var15Lifetime6Lifetime1Lifetime1 + var18Lifetime6Lifetime1Lifetime1;
+                      this.pixels[var14Lifetime6Lifetime1Lifetime1] = var15Lifetime6Lifetime1Lifetime1 + var18Lifetime6Lifetime1Lifetime1;
                     }
                   }
-                  if (param1 + var11Lifetime1 >= this.field_H &&
-                    param1 + var11Lifetime1 < this.field_C) {
-                    if (param0 - var10Lifetime1 >= this.field_v &&
-                      param0 - var10Lifetime1 < this.field_D) {
+                  if (centerY + var11Lifetime1 >= this.clipTop &&
+                    centerY + var11Lifetime1 < this.clipBottom) {
+                    if (centerX - var10Lifetime1 >= this.clipLeft &&
+                      centerX - var10Lifetime1 < this.clipRight) {
                       var14Lifetime6Lifetime2 = var7Lifetime1 - var10Lifetime1;
-                      var15Lifetime6Lifetime2 = param3;
+                      var15Lifetime6Lifetime2 = color;
                       var16Lifetime6Lifetime2 = var13;
                       var15Lifetime6Lifetime2 = ((var15Lifetime6Lifetime2 & 16711935) * var16Lifetime6Lifetime2 >> 8 & 16711935) + ((var15Lifetime6Lifetime2 & 65280) * var16Lifetime6Lifetime2 >> 8 & 65280) + (var16Lifetime6Lifetime2 << 24);
                       var17Lifetime6Lifetime2 = 256 - var16Lifetime6Lifetime2;
-                      var18Lifetime6Lifetime2 = this.field_o[var14Lifetime6Lifetime2];
+                      var18Lifetime6Lifetime2 = this.pixels[var14Lifetime6Lifetime2];
                       var18Lifetime6Lifetime2 = ((var18Lifetime6Lifetime2 & 16711935) * var17Lifetime6Lifetime2 >> 8 & 16711935) + ((var18Lifetime6Lifetime2 & 65280) * var17Lifetime6Lifetime2 >> 8 & 65280);
-                      this.field_o[var14Lifetime6Lifetime2] = var15Lifetime6Lifetime2 + var18Lifetime6Lifetime2;
+                      this.pixels[var14Lifetime6Lifetime2] = var15Lifetime6Lifetime2 + var18Lifetime6Lifetime2;
                     }
-                    if (param0 + var10Lifetime1 >= this.field_v &&
-                      param0 + var10Lifetime1 < this.field_D) {
+                    if (centerX + var10Lifetime1 >= this.clipLeft &&
+                      centerX + var10Lifetime1 < this.clipRight) {
                       var14Lifetime6Lifetime2Lifetime1 = var7Lifetime1 + var10Lifetime1;
-                      var15Lifetime6Lifetime2Lifetime1 = param3;
+                      var15Lifetime6Lifetime2Lifetime1 = color;
                       var16Lifetime6Lifetime2Lifetime1 = var13;
                       var15Lifetime6Lifetime2Lifetime1 = ((var15Lifetime6Lifetime2Lifetime1 & 16711935) * var16Lifetime6Lifetime2Lifetime1 >> 8 & 16711935) + ((var15Lifetime6Lifetime2Lifetime1 & 65280) * var16Lifetime6Lifetime2Lifetime1 >> 8 & 65280) + (var16Lifetime6Lifetime2Lifetime1 << 24);
                       var17Lifetime6Lifetime2Lifetime1 = 256 - var16Lifetime6Lifetime2Lifetime1;
-                      var18Lifetime6Lifetime2Lifetime1 = this.field_o[var14Lifetime6Lifetime2Lifetime1];
+                      var18Lifetime6Lifetime2Lifetime1 = this.pixels[var14Lifetime6Lifetime2Lifetime1];
                       var18Lifetime6Lifetime2Lifetime1 = ((var18Lifetime6Lifetime2Lifetime1 & 16711935) * var17Lifetime6Lifetime2Lifetime1 >> 8 & 16711935) + ((var18Lifetime6Lifetime2Lifetime1 & 65280) * var17Lifetime6Lifetime2Lifetime1 >> 8 & 65280);
-                      this.field_o[var14Lifetime6Lifetime2Lifetime1] = var15Lifetime6Lifetime2Lifetime1 + var18Lifetime6Lifetime2Lifetime1;
+                      this.pixels[var14Lifetime6Lifetime2Lifetime1] = var15Lifetime6Lifetime2Lifetime1 + var18Lifetime6Lifetime2Lifetime1;
                     }
                   }
-                  if (param1 + var10Lifetime1 < this.field_H) {
+                  if (centerY + var10Lifetime1 < this.clipTop) {
                     continue;
                   }
-                  if (param1 + var10Lifetime1 >= this.field_C) {
+                  if (centerY + var10Lifetime1 >= this.clipBottom) {
                     continue;
                   }
-                  if (param0 - var11Lifetime1 >= this.field_v &&
-                    param0 - var11Lifetime1 < this.field_D) {
+                  if (centerX - var11Lifetime1 >= this.clipLeft &&
+                    centerX - var11Lifetime1 < this.clipRight) {
                     var14Lifetime6Lifetime3 = var9Lifetime1 - var11Lifetime1;
-                    var15Lifetime6Lifetime3 = param3;
+                    var15Lifetime6Lifetime3 = color;
                     var16Lifetime6Lifetime3 = var13;
                     var15Lifetime6Lifetime3 = ((var15Lifetime6Lifetime3 & 16711935) * var16Lifetime6Lifetime3 >> 8 & 16711935) + ((var15Lifetime6Lifetime3 & 65280) * var16Lifetime6Lifetime3 >> 8 & 65280) + (var16Lifetime6Lifetime3 << 24);
                     var17Lifetime6Lifetime3 = 256 - var16Lifetime6Lifetime3;
-                    var18Lifetime6Lifetime3 = this.field_o[var14Lifetime6Lifetime3];
+                    var18Lifetime6Lifetime3 = this.pixels[var14Lifetime6Lifetime3];
                     var18Lifetime6Lifetime3 = ((var18Lifetime6Lifetime3 & 16711935) * var17Lifetime6Lifetime3 >> 8 & 16711935) + ((var18Lifetime6Lifetime3 & 65280) * var17Lifetime6Lifetime3 >> 8 & 65280);
-                    this.field_o[var14Lifetime6Lifetime3] = var15Lifetime6Lifetime3 + var18Lifetime6Lifetime3;
+                    this.pixels[var14Lifetime6Lifetime3] = var15Lifetime6Lifetime3 + var18Lifetime6Lifetime3;
                   }
-                  if (param0 + var11Lifetime1 < this.field_v) {
+                  if (centerX + var11Lifetime1 < this.clipLeft) {
                     continue;
                   }
-                  if (param0 + var11Lifetime1 >= this.field_D) {
+                  if (centerX + var11Lifetime1 >= this.clipRight) {
                     continue;
                   }
                   var14Lifetime6Lifetime4 = var9Lifetime1 + var11Lifetime1;
-                  var15Lifetime6Lifetime4 = param3;
+                  var15Lifetime6Lifetime4 = color;
                   var16Lifetime6Lifetime4 = var13;
                   var15Lifetime6Lifetime4 = ((var15Lifetime6Lifetime4 & 16711935) * var16Lifetime6Lifetime4 >> 8 & 16711935) + ((var15Lifetime6Lifetime4 & 65280) * var16Lifetime6Lifetime4 >> 8 & 65280) + (var16Lifetime6Lifetime4 << 24);
                   var17Lifetime6Lifetime4 = 256 - var16Lifetime6Lifetime4;
-                  var18Lifetime6Lifetime4 = this.field_o[var14Lifetime6Lifetime4];
+                  var18Lifetime6Lifetime4 = this.pixels[var14Lifetime6Lifetime4];
                   var18Lifetime6Lifetime4 = ((var18Lifetime6Lifetime4 & 16711935) * var17Lifetime6Lifetime4 >> 8 & 16711935) + ((var18Lifetime6Lifetime4 & 65280) * var17Lifetime6Lifetime4 >> 8 & 65280);
-                  this.field_o[var14Lifetime6Lifetime4] = var15Lifetime6Lifetime4 + var18Lifetime6Lifetime4;
+                  this.pixels[var14Lifetime6Lifetime4] = var15Lifetime6Lifetime4 + var18Lifetime6Lifetime4;
                 }
               }
-              if (param0 - var10Lifetime1 >= this.field_v) {
-                if (param0 + var10Lifetime1 < this.field_D) {
-                  if (param1 - var10Lifetime1 >= this.field_H) {
-                    if (param1 + var10Lifetime1 < this.field_C) {
-                      this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
-                      this.field_o[var6Lifetime1 + var10Lifetime1] = param3;
-                      this.field_o[var8Lifetime1] = param3;
-                      this.field_o[var9Lifetime1] = param3;
+              if (centerX - var10Lifetime1 >= this.clipLeft) {
+                if (centerX + var10Lifetime1 < this.clipRight) {
+                  if (centerY - var10Lifetime1 >= this.clipTop) {
+                    if (centerY + var10Lifetime1 < this.clipBottom) {
+                      this.pixels[var6Lifetime1 - var10Lifetime1] = color;
+                      this.pixels[var6Lifetime1 + var10Lifetime1] = color;
+                      this.pixels[var8Lifetime1] = color;
+                      this.pixels[var9Lifetime1] = color;
                       while (true) {
                         incrementValue$4 = var11Lifetime1;
                         var11Lifetime1++;
                         var12Lifetime1 = var12Lifetime1 + (incrementValue$4 + var11Lifetime1);
-                        var6Lifetime1 = var6Lifetime1 - this.field_k;
-                        var7Lifetime1 = var7Lifetime1 + this.field_k;
-                        if (var12Lifetime1 > param2) {
+                        var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                        var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                        if (var12Lifetime1 > radius) {
                           var10Lifetime1--;
                           var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                          var8Lifetime1 = var8Lifetime1 + this.field_k;
-                          var9Lifetime1 = var9Lifetime1 - this.field_k;
+                          var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                          var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                         }
                         if (var10Lifetime1 < var11Lifetime1) {
                           return;
                         }
-                        this.field_o[var8Lifetime1 - var11Lifetime1] = param3;
-                        this.field_o[var8Lifetime1 + var11Lifetime1] = param3;
-                        this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
-                        this.field_o[var6Lifetime1 + var10Lifetime1] = param3;
-                        this.field_o[var7Lifetime1 - var10Lifetime1] = param3;
-                        this.field_o[var7Lifetime1 + var10Lifetime1] = param3;
-                        this.field_o[var9Lifetime1 - var11Lifetime1] = param3;
-                        this.field_o[var9Lifetime1 + var11Lifetime1] = param3;
+                        this.pixels[var8Lifetime1 - var11Lifetime1] = color;
+                        this.pixels[var8Lifetime1 + var11Lifetime1] = color;
+                        this.pixels[var6Lifetime1 - var10Lifetime1] = color;
+                        this.pixels[var6Lifetime1 + var10Lifetime1] = color;
+                        this.pixels[var7Lifetime1 - var10Lifetime1] = color;
+                        this.pixels[var7Lifetime1 + var10Lifetime1] = color;
+                        this.pixels[var9Lifetime1 - var11Lifetime1] = color;
+                        this.pixels[var9Lifetime1 + var11Lifetime1] = color;
                       }
                     }
-                    if (param0 - var10Lifetime1 >= this.field_v &&
-                      param1 >= this.field_H &&
-                      param1 < this.field_C) {
-                      this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
+                    if (centerX - var10Lifetime1 >= this.clipLeft &&
+                      centerY >= this.clipTop &&
+                      centerY < this.clipBottom) {
+                      this.pixels[var6Lifetime1 - var10Lifetime1] = color;
                     }
                   } else {
-                    if (param0 - var10Lifetime1 >= this.field_v &&
-                      param1 >= this.field_H &&
-                      param1 < this.field_C) {
-                      this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
+                    if (centerX - var10Lifetime1 >= this.clipLeft &&
+                      centerY >= this.clipTop &&
+                      centerY < this.clipBottom) {
+                      this.pixels[var6Lifetime1 - var10Lifetime1] = color;
                     }
                   }
                 } else {
-                  if (param0 - var10Lifetime1 >= this.field_v &&
-                    param1 >= this.field_H &&
-                    param1 < this.field_C) {
-                    this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
+                  if (centerX - var10Lifetime1 >= this.clipLeft &&
+                    centerY >= this.clipTop &&
+                    centerY < this.clipBottom) {
+                    this.pixels[var6Lifetime1 - var10Lifetime1] = color;
                   }
                 }
               } else {
-                if (param0 - var10Lifetime1 >= this.field_v &&
-                  param1 >= this.field_H &&
-                  param1 < this.field_C) {
-                  this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
+                if (centerX - var10Lifetime1 >= this.clipLeft &&
+                  centerY >= this.clipTop &&
+                  centerY < this.clipBottom) {
+                  this.pixels[var6Lifetime1 - var10Lifetime1] = color;
                 }
               }
-              if (param0 + var10Lifetime1 < this.field_D) {
-                if (param1 >= this.field_H) {
-                  if (param1 < this.field_C) {
-                    this.field_o[var6Lifetime1 + var10Lifetime1] = param3;
-                    if (param1 - var10Lifetime1 >= this.field_H &&
-                      param0 >= this.field_v &&
-                      param0 < this.field_D) {
-                      this.field_o[var8Lifetime1] = param3;
+              if (centerX + var10Lifetime1 < this.clipRight) {
+                if (centerY >= this.clipTop) {
+                  if (centerY < this.clipBottom) {
+                    this.pixels[var6Lifetime1 + var10Lifetime1] = color;
+                    if (centerY - var10Lifetime1 >= this.clipTop &&
+                      centerX >= this.clipLeft &&
+                      centerX < this.clipRight) {
+                      this.pixels[var8Lifetime1] = color;
                     }
                   } else {
-                    if (param1 - var10Lifetime1 >= this.field_H &&
-                      param0 >= this.field_v &&
-                      param0 < this.field_D) {
-                      this.field_o[var8Lifetime1] = param3;
+                    if (centerY - var10Lifetime1 >= this.clipTop &&
+                      centerX >= this.clipLeft &&
+                      centerX < this.clipRight) {
+                      this.pixels[var8Lifetime1] = color;
                     }
                   }
                 } else {
-                  if (param1 - var10Lifetime1 >= this.field_H &&
-                    param0 >= this.field_v &&
-                    param0 < this.field_D) {
-                    this.field_o[var8Lifetime1] = param3;
+                  if (centerY - var10Lifetime1 >= this.clipTop &&
+                    centerX >= this.clipLeft &&
+                    centerX < this.clipRight) {
+                    this.pixels[var8Lifetime1] = color;
                   }
                 }
               } else {
-                if (param1 - var10Lifetime1 >= this.field_H &&
-                  param0 >= this.field_v &&
-                  param0 < this.field_D) {
-                  this.field_o[var8Lifetime1] = param3;
+                if (centerY - var10Lifetime1 >= this.clipTop &&
+                  centerX >= this.clipLeft &&
+                  centerX < this.clipRight) {
+                  this.pixels[var8Lifetime1] = color;
                 }
               }
-              if (param1 + var10Lifetime1 < this.field_C &&
-                param0 >= this.field_v &&
-                param0 < this.field_D) {
-                this.field_o[var9Lifetime1] = param3;
+              if (centerY + var10Lifetime1 < this.clipBottom &&
+                centerX >= this.clipLeft &&
+                centerX < this.clipRight) {
+                this.pixels[var9Lifetime1] = color;
               }
               while (true) {
                 incrementValue$5 = var11Lifetime1;
                 var11Lifetime1++;
                 var12Lifetime1 = var12Lifetime1 + (incrementValue$5 + var11Lifetime1);
-                var6Lifetime1 = var6Lifetime1 - this.field_k;
-                var7Lifetime1 = var7Lifetime1 + this.field_k;
-                if (var12Lifetime1 > param2) {
+                var6Lifetime1 = var6Lifetime1 - this.targetWidth;
+                var7Lifetime1 = var7Lifetime1 + this.targetWidth;
+                if (var12Lifetime1 > radius) {
                   var10Lifetime1--;
                   var12Lifetime1 = var12Lifetime1 - (var10Lifetime1 + var10Lifetime1);
-                  var8Lifetime1 = var8Lifetime1 + this.field_k;
-                  var9Lifetime1 = var9Lifetime1 - this.field_k;
+                  var8Lifetime1 = var8Lifetime1 + this.targetWidth;
+                  var9Lifetime1 = var9Lifetime1 - this.targetWidth;
                 }
                 if (var10Lifetime1 < var11Lifetime1) {
                   return;
                 }
-                if (param1 - var10Lifetime1 >= this.field_H &&
-                  param1 - var10Lifetime1 < this.field_C) {
-                  if (param0 - var11Lifetime1 >= this.field_v) {
-                    if (param0 - var11Lifetime1 < this.field_D) {
-                      this.field_o[var8Lifetime1 - var11Lifetime1] = param3;
-                      if (param0 + var11Lifetime1 >= this.field_v &&
-                        param0 + var11Lifetime1 < this.field_D) {
-                        this.field_o[var8Lifetime1 + var11Lifetime1] = param3;
+                if (centerY - var10Lifetime1 >= this.clipTop &&
+                  centerY - var10Lifetime1 < this.clipBottom) {
+                  if (centerX - var11Lifetime1 >= this.clipLeft) {
+                    if (centerX - var11Lifetime1 < this.clipRight) {
+                      this.pixels[var8Lifetime1 - var11Lifetime1] = color;
+                      if (centerX + var11Lifetime1 >= this.clipLeft &&
+                        centerX + var11Lifetime1 < this.clipRight) {
+                        this.pixels[var8Lifetime1 + var11Lifetime1] = color;
                       }
                     } else {
-                      if (param0 + var11Lifetime1 >= this.field_v &&
-                        param0 + var11Lifetime1 < this.field_D) {
-                        this.field_o[var8Lifetime1 + var11Lifetime1] = param3;
+                      if (centerX + var11Lifetime1 >= this.clipLeft &&
+                        centerX + var11Lifetime1 < this.clipRight) {
+                        this.pixels[var8Lifetime1 + var11Lifetime1] = color;
                       }
                     }
                   } else {
-                    if (param0 + var11Lifetime1 >= this.field_v &&
-                      param0 + var11Lifetime1 < this.field_D) {
-                      this.field_o[var8Lifetime1 + var11Lifetime1] = param3;
+                    if (centerX + var11Lifetime1 >= this.clipLeft &&
+                      centerX + var11Lifetime1 < this.clipRight) {
+                      this.pixels[var8Lifetime1 + var11Lifetime1] = color;
                     }
                   }
                 }
-                if (param1 - var11Lifetime1 >= this.field_H &&
-                  param1 - var11Lifetime1 < this.field_C) {
-                  if (param0 - var10Lifetime1 >= this.field_v &&
-                    param0 - var10Lifetime1 < this.field_D) {
-                    this.field_o[var6Lifetime1 - var10Lifetime1] = param3;
+                if (centerY - var11Lifetime1 >= this.clipTop &&
+                  centerY - var11Lifetime1 < this.clipBottom) {
+                  if (centerX - var10Lifetime1 >= this.clipLeft &&
+                    centerX - var10Lifetime1 < this.clipRight) {
+                    this.pixels[var6Lifetime1 - var10Lifetime1] = color;
                   }
-                  if (param0 + var10Lifetime1 >= this.field_v &&
-                    param0 + var10Lifetime1 < this.field_D) {
-                    this.field_o[var6Lifetime1 + var10Lifetime1] = param3;
-                  }
-                }
-                if (param1 + var11Lifetime1 >= this.field_H &&
-                  param1 + var11Lifetime1 < this.field_C) {
-                  if (param0 - var10Lifetime1 >= this.field_v &&
-                    param0 - var10Lifetime1 < this.field_D) {
-                    this.field_o[var7Lifetime1 - var10Lifetime1] = param3;
-                  }
-                  if (param0 + var10Lifetime1 >= this.field_v &&
-                    param0 + var10Lifetime1 < this.field_D) {
-                    this.field_o[var7Lifetime1 + var10Lifetime1] = param3;
+                  if (centerX + var10Lifetime1 >= this.clipLeft &&
+                    centerX + var10Lifetime1 < this.clipRight) {
+                    this.pixels[var6Lifetime1 + var10Lifetime1] = color;
                   }
                 }
-                if (param1 + var10Lifetime1 < this.field_H) {
+                if (centerY + var11Lifetime1 >= this.clipTop &&
+                  centerY + var11Lifetime1 < this.clipBottom) {
+                  if (centerX - var10Lifetime1 >= this.clipLeft &&
+                    centerX - var10Lifetime1 < this.clipRight) {
+                    this.pixels[var7Lifetime1 - var10Lifetime1] = color;
+                  }
+                  if (centerX + var10Lifetime1 >= this.clipLeft &&
+                    centerX + var10Lifetime1 < this.clipRight) {
+                    this.pixels[var7Lifetime1 + var10Lifetime1] = color;
+                  }
+                }
+                if (centerY + var10Lifetime1 < this.clipTop) {
                   continue;
                 }
-                if (param1 + var10Lifetime1 >= this.field_C) {
+                if (centerY + var10Lifetime1 >= this.clipBottom) {
                   continue;
                 }
-                if (param0 - var11Lifetime1 >= this.field_v &&
-                  param0 - var11Lifetime1 < this.field_D) {
-                  this.field_o[var9Lifetime1 - var11Lifetime1] = param3;
+                if (centerX - var11Lifetime1 >= this.clipLeft &&
+                  centerX - var11Lifetime1 < this.clipRight) {
+                  this.pixels[var9Lifetime1 - var11Lifetime1] = color;
                 }
-                if (param0 + var11Lifetime1 < this.field_v) {
+                if (centerX + var11Lifetime1 < this.clipLeft) {
                   continue;
                 }
-                if (param0 + var11Lifetime1 >= this.field_D) {
+                if (centerX + var11Lifetime1 >= this.clipRight) {
                   continue;
                 }
-                this.field_o[var9Lifetime1 + var11Lifetime1] = param3;
+                this.pixels[var9Lifetime1 + var11Lifetime1] = color;
               }
             }
             return;
@@ -1227,36 +1227,36 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final rp a(Runnable param0) {
+    private final rp contextForThread(Runnable thread) {
         int var2 = 0;
-        for (var2 = 0; var2 < this.field_r; var2++) {
-          if (this.field_i[var2].field_e == param0) {
-            return this.field_i[var2];
+        for (var2 = 0; var2 < this.contextCount; var2++) {
+          if (this.contexts[var2].field_e == thread) {
+            return this.contexts[var2];
           }
         }
         return null;
     }
 
-    final void K(int[] param0) {
-        param0[0] = this.field_v;
-        param0[1] = this.field_H;
-        param0[2] = this.field_D;
-        param0[3] = this.field_C;
+    final void getClip(int[] bounds) {
+        bounds[0] = this.clipLeft;
+        bounds[1] = this.clipTop;
+        bounds[2] = this.clipRight;
+        bounds[3] = this.clipBottom;
     }
 
-    private final void j() {
+    private final void updateClipRowOffsets() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 0;
         int var1Lifetime1;
-        for (var1 = 0; var1 < this.field_r; var1++) {
+        for (var1 = 0; var1 < this.contextCount; var1++) {
         }
-        var1Lifetime1 = this.field_H * this.field_k + this.field_v;
-        for (var2 = this.field_H; var2 < this.field_C; var2++) {
-          for (var3 = 0; var3 < this.field_r; var3++) {
-            this.field_i[var3].field_c.field_a[var2 - this.field_H] = var1Lifetime1;
+        var1Lifetime1 = this.clipTop * this.targetWidth + this.clipLeft;
+        for (var2 = this.clipTop; var2 < this.clipBottom; var2++) {
+          for (var3 = 0; var3 < this.contextCount; var3++) {
+            this.contexts[var3].field_c.field_a[var2 - this.clipTop] = var1Lifetime1;
           }
-          var1Lifetime1 = var1Lifetime1 + this.field_k;
+          var1Lifetime1 = var1Lifetime1 + this.targetWidth;
         }
     }
 
@@ -1264,30 +1264,30 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return false;
     }
 
-    final void a(vc param0) {
-        hi var2 = (hi) (param0);
-        this.field_k = var2.field_d;
-        this.field_B = var2.field_a;
-        this.field_o = var2.field_c;
-        this.field_t = var2;
-        this.field_x = var2.field_d;
-        this.field_m = var2.field_a;
-        this.h();
+    final void bindRenderTarget(RenderTarget target) {
+        SoftwareRenderTarget var2 = (SoftwareRenderTarget) (target);
+        this.targetWidth = var2.width;
+        this.targetHeight = var2.height;
+        this.pixels = var2.pixels;
+        this.renderTarget = var2;
+        this.field_x = var2.width;
+        this.field_m = var2.height;
+        this.refreshContexts();
     }
 
-    private final void g() {
-        this.field_v = 0;
-        this.field_H = 0;
-        this.field_D = this.field_k;
-        this.field_C = this.field_B;
-        this.j();
+    private final void resetClip() {
+        this.clipLeft = 0;
+        this.clipTop = 0;
+        this.clipRight = this.targetWidth;
+        this.clipBottom = this.targetHeight;
+        this.updateClipRowOffsets();
     }
 
-    final za c(int param0) {
+    final GraphicsHeap createHeap(int capacity) {
         return null;
     }
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] pixels, int offset, int stride, int width, int height, boolean copyPixels) {
         int var10 = 0;
         int incrementValue$4 = 0;
         int var7;
@@ -1295,14 +1295,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var9;
         int var11;
         var7 = 0;
-        var8 = param1;
+        var8 = offset;
         var9 = 0;
         scanLoop1: while (true) {
-          if (var9 < param4) {
-            for (var10 = 0; var10 < param3; var10++) {
+          if (var9 < height) {
+            for (var10 = 0; var10 < width; var10++) {
               incrementValue$4 = var8;
               var8++;
-              var11 = param0[incrementValue$4] >>> 24;
+              var11 = pixels[incrementValue$4] >>> 24;
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
@@ -1315,66 +1315,66 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           break;
         }
         if (var7 == 0) {
-          return (ToolkitSprite) ((Object) new SoftwareRgbSprite(this, param0, param1, param2, param3, param4, param5));
+          return (ToolkitSprite) ((Object) new SoftwareRgbSprite(this, pixels, offset, stride, width, height, copyPixels));
         }
-        return (ToolkitSprite) ((Object) new SoftwareArgbSprite(this, param0, param1, param2, param3, param4, param5));
+        return (ToolkitSprite) ((Object) new SoftwareArgbSprite(this, pixels, offset, stride, width, height, copyPixels));
     }
 
-    private final void b(java.awt.Canvas param0, int param1, int param2) {
-        ce var4;
-        var4 = (ce) (this.field_K.a(106, (long)param0.hashCode()));
+    private final void registerCanvas(java.awt.Canvas canvas, int width, int height) {
+        ToolkitRasterBuffer var4;
+        var4 = (ToolkitRasterBuffer) (this.canvasBuffers.a(106, (long)canvas.hashCode()));
         if (var4 != null) {
-          if (var4.field_n == param1 &&
-            var4.field_k == param2) {
+          if (var4.width == width &&
+            var4.height == height) {
             return;
           }
-          this.a(param0, param1, param2);
+          this.resizeCanvas(canvas, width, height);
         } else {
-          var4 = id.a(param1, param2, param0, -101);
-          this.field_K.a(var4, -1, (long)param0.hashCode());
+          var4 = id.a(width, height, canvas, -101);
+          this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
         }
     }
 
-    private final void a(java.awt.Canvas param0) {
-        ce var2;
+    private final void selectCanvas(java.awt.Canvas canvas) {
+        ToolkitRasterBuffer var2;
         java.awt.Dimension var3;
-        if (param0 == null) {
-          this.field_l = null;
-          this.field_n = null;
-          if (this.field_t == null) {
-            this.field_o = null;
-            this.field_B = 1;
-            this.field_k = 1;
+        if (canvas == null) {
+          this.canvas = null;
+          this.canvasBuffer = null;
+          if (this.renderTarget == null) {
+            this.pixels = null;
+            this.targetHeight = 1;
+            this.targetWidth = 1;
             this.field_m = 1;
             this.field_x = 1;
-            this.h();
+            this.refreshContexts();
           }
         } else {
-          var2 = (ce) (this.field_K.a(127, (long)param0.hashCode()));
+          var2 = (ToolkitRasterBuffer) (this.canvasBuffers.a(127, (long)canvas.hashCode()));
           if (var2 != null) {
-            this.field_l = param0;
-            var3 = param0.getSize();
-            this.field_z = var3.width;
-            this.field_s = var3.height;
-            this.field_n = var2;
-            if (this.field_t == null) {
-              this.field_o = var2.field_m;
-              this.field_k = var2.field_n;
-              this.field_B = var2.field_k;
-              if (this.field_k != this.field_x ||
-                this.field_B != this.field_m) {
-                this.field_x = this.field_k;
-                this.field_F = this.field_k;
-                this.field_m = this.field_B;
-                this.field_w = this.field_B;
+            this.canvas = canvas;
+            var3 = canvas.getSize();
+            this.canvasWidth = var3.width;
+            this.canvasHeight = var3.height;
+            this.canvasBuffer = var2;
+            if (this.renderTarget == null) {
+              this.pixels = var2.pixels;
+              this.targetWidth = var2.width;
+              this.targetHeight = var2.height;
+              if (this.targetWidth != this.field_x ||
+                this.targetHeight != this.field_m) {
+                this.field_x = this.targetWidth;
+                this.field_F = this.targetWidth;
+                this.field_m = this.targetHeight;
+                this.field_w = this.targetHeight;
               }
-              this.h();
+              this.refreshContexts();
             }
           }
         }
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int x, int y, int width, int height, int color, int blendMode) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         int var7 = 0;
@@ -1386,96 +1386,96 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var13 = 0;
         int var14 = 0;
         int var13Lifetime1;
-        if (param0 < this.field_v) {
-          param2 = param2 - (this.field_v - param0);
-          param0 = this.field_v;
+        if (x < this.clipLeft) {
+          width = width - (this.clipLeft - x);
+          x = this.clipLeft;
         }
-        if (param1 < this.field_H) {
-          param3 = param3 - (this.field_H - param1);
-          param1 = this.field_H;
+        if (y < this.clipTop) {
+          height = height - (this.clipTop - y);
+          y = this.clipTop;
         }
-        if (param0 + param2 > this.field_D) {
-          param2 = this.field_D - param0;
+        if (x + width > this.clipRight) {
+          width = this.clipRight - x;
         }
-        if (param1 + param3 > this.field_C) {
-          param3 = this.field_C - param1;
+        if (y + height > this.clipBottom) {
+          height = this.clipBottom - y;
         }
-        if (param2 > 0) {
-          if (param3 > 0 &&
-            param0 <= this.field_D &&
-            param1 <= this.field_C) {
-            var7 = this.field_k - param2;
-            var8 = param0 + param1 * this.field_k;
-            var9 = param4 >>> 24;
-            if (param5 != 0 && (param5 != 1 ||
+        if (width > 0) {
+          if (height > 0 &&
+            x <= this.clipRight &&
+            y <= this.clipBottom) {
+            var7 = this.targetWidth - width;
+            var8 = x + y * this.targetWidth;
+            var9 = color >>> 24;
+            if (blendMode != 0 && (blendMode != 1 ||
               var9 != 255)) {
-              if (param5 == 1) {
-                param4 = ((param4 & 16711935) * var9 >> 8 & 16711935) + (((param4 & -16711936) >>> 8) * var9 & -16711936);
+              if (blendMode == 1) {
+                color = ((color & 16711935) * var9 >> 8 & 16711935) + (((color & -16711936) >>> 8) * var9 & -16711936);
                 var10 = 256 - var9;
-                for (var11 = 0; var11 < param3; var11++) {
-                  for (var12 = -param2; var12 < 0; var12++) {
-                    var13 = this.field_o[var8];
+                for (var11 = 0; var11 < height; var11++) {
+                  for (var12 = -width; var12 < 0; var12++) {
+                    var13 = this.pixels[var8];
                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
                     incrementValue$1 = var8;
                     var8++;
-                    this.field_o[incrementValue$1] = param4 + var13;
+                    this.pixels[incrementValue$1] = color + var13;
                   }
                   var8 = var8 + var7;
                 }
                 return;
               }
-              if (param5 != 2) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              for (var10 = 0; var10 < param3; var10++) {
-                for (var11 = -param2; var11 < 0; var11++) {
-                  var12 = this.field_o[var8];
-                  var13Lifetime1 = param4 + var12;
-                  var14 = (param4 & 16711935) + (var12 & 16711935);
+              for (var10 = 0; var10 < height; var10++) {
+                for (var11 = -width; var11 < 0; var11++) {
+                  var12 = this.pixels[var8];
+                  var13Lifetime1 = color + var12;
+                  var14 = (color & 16711935) + (var12 & 16711935);
                   var12 = (var14 & 16777472) + (var13Lifetime1 - var14 & 65536);
                   incrementValue$0 = var8;
                   var8++;
-                  this.field_o[incrementValue$0] = var13Lifetime1 - var12 | var12 - (var12 >>> 8);
+                  this.pixels[incrementValue$0] = var13Lifetime1 - var12 | var12 - (var12 >>> 8);
                 }
                 var8 = var8 + var7;
               }
               return;
             }
-            var10 = param2 >> 3;
-            var11 = param2 & 7;
-            param2 = var8 - 1;
-            for (var12 = -param3; var12 < 0; var12++) {
+            var10 = width >> 3;
+            var11 = width & 7;
+            width = var8 - 1;
+            for (var12 = -height; var12 < 0; var12++) {
               if (var10 > 0) {
-                param0 = var10;
+                x = var10;
                 do {
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param0--;
-                } while (param0 > 0);
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  width++;
+                  this.pixels[width] = color;
+                  x--;
+                } while (x > 0);
               }
               if (var11 > 0) {
-                param0 = var11;
+                x = var11;
                 do {
-                  param2++;
-                  this.field_o[param2] = param4;
-                  param0--;
-                } while (param0 > 0);
+                  width++;
+                  this.pixels[width] = color;
+                  x--;
+                } while (x > 0);
               }
-              param2 = param2 + var7;
+              width = width + var7;
             }
           } else {
             return;
@@ -1483,50 +1483,50 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean f() {
-        return this.field_p;
+    final boolean isDisposed() {
+        return this.disposed;
     }
 
-    private final void d(int param0) {
-        this.field_i[param0].a((Runnable) ((Object) Thread.currentThread()), true);
+    private final void bindContextToCurrentThread(int index) {
+        this.contexts[index].a((Runnable) ((Object) Thread.currentThread()), true);
     }
 
-    private final void h() {
+    private final void refreshContexts() {
         int var1 = 0;
-        for (var1 = 0; var1 < this.field_r; var1++) {
-          this.field_i[var1].a(126);
+        for (var1 = 0; var1 < this.contextCount; var1++) {
+          this.contexts[var1].a(126);
         }
-        this.g();
+        this.resetClip();
     }
 
-    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont createFont(FontMetrics metrics, SpriteData[] glyphs, boolean useMaskGlyphs) {
         int var7 = 0;
         int[] var4;
         int[] var5;
         int var6;
-        var4 = new int[param1.length];
-        var5 = new int[param1.length];
+        var4 = new int[glyphs.length];
+        var5 = new int[glyphs.length];
         var6 = 0;
-        for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_h;
-          var5[var7] = param1[var7].field_i;
-          if (param1[var7].field_a != null) {
+        for (var7 = 0; var7 < glyphs.length; var7++) {
+          var4[var7] = glyphs[var7].field_h;
+          var5[var7] = glyphs[var7].field_i;
+          if (glyphs[var7].field_a != null) {
             var6 = 1;
           }
         }
-        if (!param2) {
+        if (!useMaskGlyphs) {
           if (var6 == 0) {
-            return (ToolkitFont) ((Object) new SoftwarePaletteFont(this, param0, param1, var4, var5));
+            return (ToolkitFont) ((Object) new SoftwarePaletteFont(this, metrics, glyphs, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (ToolkitFont) ((Object) new SoftwareBinaryFont(this, param0, param1, var4, var5));
+          return (ToolkitFont) ((Object) new SoftwareBinaryFont(this, metrics, glyphs, var4, var5));
         }
-        return (ToolkitFont) ((Object) new SoftwareAlphaFont(this, param0, param1, var4, var5));
+        return (ToolkitFont) ((Object) new SoftwareAlphaFont(this, metrics, glyphs, var4, var5));
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int x0, int y0, int x1, int y1, int color, int blendMode) {
         int var7;
         int var8;
         int var9;
@@ -1548,174 +1548,174 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var12Lifetime2;
         int var9Lifetime4;
         int var11Lifetime2Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            this.U(param0 + param2, param1, -param2 + 1, param4, param5);
+        x1 = x1 - x0;
+        y1 = y1 - y0;
+        if (y1 == 0) {
+          if (x1 < 0) {
+            this.drawHorizontalLine(x0 + x1, y0, -x1 + 1, color, blendMode);
           } else {
-            this.U(param0, param1, param2 + 1, param4, param5);
+            this.drawHorizontalLine(x0, y0, x1 + 1, color, blendMode);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            this.b(param0, param1 + param3, -param3 + 1, param4, param5);
+        if (x1 == 0) {
+          if (y1 < 0) {
+            this.drawVerticalLine(x0, y0 + y1, -y1 + 1, color, blendMode);
           } else {
-            this.b(param0, param1, param3 + 1, param4, param5);
+            this.drawVerticalLine(x0, y0, y1 + 1, color, blendMode);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x1 + y1 < 0) {
+          x0 = x0 + x1;
+          x1 = -x1;
+          y0 = y0 + y1;
+          y1 = -y1;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var7 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < this.field_H) {
-            param0 = param0 + var7 * (this.field_H - param1);
-            param1 = this.field_H;
+        if (x1 <= y1) {
+          x0 = x0 << 16;
+          x0 = x0 + 32768;
+          x1 = x1 << 16;
+          var7 = (int)Math.floor((double)x1 / (double)y1 + 0.5);
+          y1 = y1 + y0;
+          if (y0 < this.clipTop) {
+            x0 = x0 + var7 * (this.clipTop - y0);
+            y0 = this.clipTop;
           }
-          if (param3 >= this.field_C) {
-            param3 = this.field_C - 1;
+          if (y1 >= this.clipBottom) {
+            y1 = this.clipBottom - 1;
           }
-          var8 = param4 >>> 24;
-          if (param5 != 0 && (param5 != 1 ||
+          var8 = color >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var8 != 255)) {
-            if (param5 == 1) {
-              param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
+            if (blendMode == 1) {
+              color = ((color & 16711935) * var8 >> 8 & 16711935) + ((color & 65280) * var8 >> 8 & 65280) + (var8 << 24);
               var9 = 256 - var8;
-              while (param1 <= param3) {
-                var10 = param0 >> 16;
-                if (var10 >= this.field_v &&
-                  var10 < this.field_D) {
-                  var11 = var10 + param1 * this.field_k;
-                  var12 = this.field_o[var11];
+              while (y0 <= y1) {
+                var10 = x0 >> 16;
+                if (var10 >= this.clipLeft &&
+                  var10 < this.clipRight) {
+                  var11 = var10 + y0 * this.targetWidth;
+                  var12 = this.pixels[var11];
                   var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                  this.field_o[var10 + param1 * this.field_k] = param4 + var12;
+                  this.pixels[var10 + y0 * this.targetWidth] = color + var12;
                 }
-                param0 = param0 + var7;
-                param1++;
+                x0 = x0 + var7;
+                y0++;
               }
             } else {
-              if (param5 != 2) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              while (param1 <= param3) {
-                var9Lifetime4 = param0 >> 16;
-                if (var9Lifetime4 >= this.field_v &&
-                  var9Lifetime4 < this.field_D) {
-                  var10Lifetime2 = var9Lifetime4 + param1 * this.field_k;
-                  var11Lifetime2 = this.field_o[var10Lifetime2];
-                  var12Lifetime2 = param4 + var11Lifetime2;
-                  var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
+              while (y0 <= y1) {
+                var9Lifetime4 = x0 >> 16;
+                if (var9Lifetime4 >= this.clipLeft &&
+                  var9Lifetime4 < this.clipRight) {
+                  var10Lifetime2 = var9Lifetime4 + y0 * this.targetWidth;
+                  var11Lifetime2 = this.pixels[var10Lifetime2];
+                  var12Lifetime2 = color + var11Lifetime2;
+                  var13 = (color & 16711935) + (var11Lifetime2 & 16711935);
                   var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
-                  this.field_o[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
+                  this.pixels[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
                 }
-                param0 = param0 + var7;
-                param1++;
+                x0 = x0 + var7;
+                y0++;
               }
             }
           } else {
-            while (param1 <= param3) {
-              var9Lifetime3 = param0 >> 16;
-              if (var9Lifetime3 >= this.field_v &&
-                var9Lifetime3 < this.field_D) {
-                this.field_o[var9Lifetime3 + param1 * this.field_k] = param4;
+            while (y0 <= y1) {
+              var9Lifetime3 = x0 >> 16;
+              if (var9Lifetime3 >= this.clipLeft &&
+                var9Lifetime3 < this.clipRight) {
+                this.pixels[var9Lifetime3 + y0 * this.targetWidth] = color;
               }
-              param0 = param0 + var7;
-              param1++;
+              x0 = x0 + var7;
+              y0++;
             }
           }
           decompiledFrameRemainder0 = false;
         }
         else {
-          param1 = param1 << 16;
-          param1 = param1 + 32768;
-          param3 = param3 << 16;
-          var7Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-          param2 = param2 + param0;
-          if (param0 < this.field_v) {
-            param1 = param1 + var7Lifetime1 * (this.field_v - param0);
-            param0 = this.field_v;
+          y0 = y0 << 16;
+          y0 = y0 + 32768;
+          y1 = y1 << 16;
+          var7Lifetime1 = (int)Math.floor((double)y1 / (double)x1 + 0.5);
+          x1 = x1 + x0;
+          if (x0 < this.clipLeft) {
+            y0 = y0 + var7Lifetime1 * (this.clipLeft - x0);
+            x0 = this.clipLeft;
           }
-          if (param2 >= this.field_D) {
-            param2 = this.field_D - 1;
+          if (x1 >= this.clipRight) {
+            x1 = this.clipRight - 1;
           }
-          var8Lifetime1 = param4 >>> 24;
-          if (param5 != 0 && (param5 != 1 ||
+          var8Lifetime1 = color >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var8Lifetime1 != 255)) {
-            if (param5 == 1) {
-              param4 = ((param4 & 16711935) * var8Lifetime1 >> 8 & 16711935) + ((param4 & 65280) * var8Lifetime1 >> 8 & 65280) + (var8Lifetime1 << 24);
+            if (blendMode == 1) {
+              color = ((color & 16711935) * var8Lifetime1 >> 8 & 16711935) + ((color & 65280) * var8Lifetime1 >> 8 & 65280) + (var8Lifetime1 << 24);
               var9Lifetime1 = 256 - var8Lifetime1;
-              while (param0 <= param2) {
-                var10Lifetime1 = param1 >> 16;
-                if (var10Lifetime1 >= this.field_H &&
-                  var10Lifetime1 < this.field_C) {
-                  var11Lifetime1 = param0 + var10Lifetime1 * this.field_k;
-                  var12Lifetime1 = this.field_o[var11Lifetime1];
+              while (x0 <= x1) {
+                var10Lifetime1 = y0 >> 16;
+                if (var10Lifetime1 >= this.clipTop &&
+                  var10Lifetime1 < this.clipBottom) {
+                  var11Lifetime1 = x0 + var10Lifetime1 * this.targetWidth;
+                  var12Lifetime1 = this.pixels[var11Lifetime1];
                   var12Lifetime1 = ((var12Lifetime1 & 16711935) * var9Lifetime1 >> 8 & 16711935) + ((var12Lifetime1 & 65280) * var9Lifetime1 >> 8 & 65280);
-                  this.field_o[var11Lifetime1] = param4 + var12Lifetime1;
+                  this.pixels[var11Lifetime1] = color + var12Lifetime1;
                 }
-                param1 = param1 + var7Lifetime1;
-                param0++;
+                y0 = y0 + var7Lifetime1;
+                x0++;
               }
             } else {
-              if (param5 != 2) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              while (param0 <= param2) {
-                var9Lifetime1 = param1 >> 16;
-                if (var9Lifetime1 >= this.field_H &&
-                  var9Lifetime1 < this.field_C) {
-                  var10Lifetime1 = param0 + var9Lifetime1 * this.field_k;
-                  var11Lifetime1 = this.field_o[var10Lifetime1];
-                  var12Lifetime1 = param4 + var11Lifetime1;
-                  var13Lifetime1 = (param4 & 16711935) + (var11Lifetime1 & 16711935);
+              while (x0 <= x1) {
+                var9Lifetime1 = y0 >> 16;
+                if (var9Lifetime1 >= this.clipTop &&
+                  var9Lifetime1 < this.clipBottom) {
+                  var10Lifetime1 = x0 + var9Lifetime1 * this.targetWidth;
+                  var11Lifetime1 = this.pixels[var10Lifetime1];
+                  var12Lifetime1 = color + var11Lifetime1;
+                  var13Lifetime1 = (color & 16711935) + (var11Lifetime1 & 16711935);
                   var11Lifetime1 = (var13Lifetime1 & 16777472) + (var12Lifetime1 - var13Lifetime1 & 65536);
-                  this.field_o[var10Lifetime1] = var12Lifetime1 - var11Lifetime1 | var11Lifetime1 - (var11Lifetime1 >>> 8);
+                  this.pixels[var10Lifetime1] = var12Lifetime1 - var11Lifetime1 | var11Lifetime1 - (var11Lifetime1 >>> 8);
                 }
-                param1 = param1 + var7Lifetime1;
-                param0++;
+                y0 = y0 + var7Lifetime1;
+                x0++;
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            while (param0 <= param2) {
-              var9Lifetime2 = param1 >> 16;
-              if (var9Lifetime2 >= this.field_H &&
-                var9Lifetime2 < this.field_C) {
-                this.field_o[param0 + var9Lifetime2 * this.field_k] = param4;
+            while (x0 <= x1) {
+              var9Lifetime2 = y0 >> 16;
+              if (var9Lifetime2 >= this.clipTop &&
+                var9Lifetime2 < this.clipBottom) {
+                this.pixels[x0 + var9Lifetime2 * this.targetWidth] = color;
               }
-              param1 = param1 + var7Lifetime1;
-              param0++;
+              y0 = y0 + var7Lifetime1;
+              x0++;
             }
           }
         }
 
     }
 
-    SoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    SoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         this(param1);
         try {
-          this.b(param0, param2, param3);
-          this.a(param0);
+          this.registerCanvas(param0, param2, param3);
+          this.selectCanvas(param0);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
-          this.a((byte) -21);
+          this.close((byte) -21);
           throw new RuntimeException("");
         }
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
+    final void drawHorizontalLine(int x, int y, int length, int color, int blendMode) {
         int var6;
         int var7;
         int var8;
@@ -1727,155 +1727,155 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var10Lifetime1;
         int var8Lifetime2;
         int var9Lifetime1Lifetime1;
-        if (param1 >= this.field_H) {
-          if (param1 >= this.field_C) {
+        if (y >= this.clipTop) {
+          if (y >= this.clipBottom) {
             return;
           }
-          if (param0 < this.field_v) {
-            param2 = param2 - (this.field_v - param0);
-            param0 = this.field_v;
+          if (x < this.clipLeft) {
+            length = length - (this.clipLeft - x);
+            x = this.clipLeft;
           }
-          if (param0 + param2 > this.field_D) {
-            param2 = this.field_D - param0;
+          if (x + length > this.clipRight) {
+            length = this.clipRight - x;
           }
-          var6 = param0 + param1 * this.field_k;
-          var7 = param3 >>> 24;
-          if (param4 != 0 && (param4 != 1 ||
+          var6 = x + y * this.targetWidth;
+          var7 = color >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var7 != 255)) {
-            if (param4 == 1) {
-              param3 = ((param3 & 16711935) * var7 >> 8 & 16711935) + ((param3 & 65280) * var7 >> 8 & 65280) + (var7 << 24);
+            if (blendMode == 1) {
+              color = ((color & 16711935) * var7 >> 8 & 16711935) + ((color & 65280) * var7 >> 8 & 65280) + (var7 << 24);
               var8 = 256 - var7;
-              for (var9 = 0; var9 < param2; var9++) {
-                var10 = this.field_o[var6 + var9];
+              for (var9 = 0; var9 < length; var9++) {
+                var10 = this.pixels[var6 + var9];
                 var10 = ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
-                this.field_o[var6 + var9] = param3 + var10;
+                this.pixels[var6 + var9] = color + var10;
               }
               return;
             }
-            if (param4 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            for (var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
-              var9Lifetime1 = this.field_o[var6 + var8Lifetime2];
-              var10Lifetime1 = param3 + var9Lifetime1;
-              var11 = (param3 & 16711935) + (var9Lifetime1 & 16711935);
+            for (var8Lifetime2 = 0; var8Lifetime2 < length; var8Lifetime2++) {
+              var9Lifetime1 = this.pixels[var6 + var8Lifetime2];
+              var10Lifetime1 = color + var9Lifetime1;
+              var11 = (color & 16711935) + (var9Lifetime1 & 16711935);
               var9Lifetime1Lifetime1 = (var11 & 16777472) + (var10Lifetime1 - var11 & 65536);
-              this.field_o[var6 + var8Lifetime2] = var10Lifetime1 - var9Lifetime1Lifetime1 | var9Lifetime1Lifetime1 - (var9Lifetime1Lifetime1 >>> 8);
+              this.pixels[var6 + var8Lifetime2] = var10Lifetime1 - var9Lifetime1Lifetime1 | var9Lifetime1Lifetime1 - (var9Lifetime1Lifetime1 >>> 8);
             }
             return;
           }
-          for (var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
-            this.field_o[var6 + var8Lifetime1] = param3;
+          for (var8Lifetime1 = 0; var8Lifetime1 < length; var8Lifetime1++) {
+            this.pixels[var6 + var8Lifetime1] = color;
           }
         }
     }
 
-    final void a(za param0) {
+    final void useHeap(GraphicsHeap heap) {
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        if (param2 > this.field_k) {
-          param2 = this.field_k;
+        if (right > this.targetWidth) {
+          right = this.targetWidth;
         }
-        if (param3 > this.field_B) {
-          param3 = this.field_B;
+        if (bottom > this.targetHeight) {
+          bottom = this.targetHeight;
         }
-        this.field_v = param0;
-        this.field_D = param2;
-        this.field_H = param1;
-        this.field_C = param3;
-        this.j();
+        this.clipLeft = left;
+        this.clipRight = right;
+        this.clipTop = top;
+        this.clipBottom = bottom;
+        this.updateClipRowOffsets();
     }
 
-    final void f(int param0, int param1) {
-        rp discarded$0 = this.a((Runnable) ((Object) Thread.currentThread()));
-        this.field_M = param0;
-        this.field_L = param1;
+    final void setDepthRange(int nearPlane, int farPlane) {
+        rp discarded$0 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
+        this.nearPlane = nearPlane;
+        this.farPlane = farPlane;
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
-        this.field_q = param0;
-        this.field_j = param1;
-        this.field_G = param2;
-        this.field_y = param3;
-        this.j();
+    final void setProjection(int centerX, int centerY, int scaleX, int scaleY) {
+        this.projectionCenterX = centerX;
+        this.projectionCenterY = centerY;
+        this.projectionScaleX = scaleX;
+        this.projectionScaleY = scaleY;
+        this.updateClipRowOffsets();
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
-        param6 = param6 - param2;
-        for (var8 = 0; var8 < param3; var8++) {
-          var9 = (param1 + var8) * this.field_k + param0;
-          for (var10 = 0; var10 < param2; var10++) {
-            incrementValue$0 = param5;
-            param5++;
-            this.field_o[var9 + var10] = param4[incrementValue$0];
+        stride = stride - width;
+        for (var8 = 0; var8 < height; var8++) {
+          var9 = (y + var8) * this.targetWidth + x;
+          for (var10 = 0; var10 < width; var10++) {
+            incrementValue$0 = offset;
+            offset++;
+            this.pixels[var9 + var10] = pixels[incrementValue$0];
           }
-          param5 = param5 + param6;
+          offset = offset + stride;
         }
     }
 
-    private final void g(int param0) {
+    private final void createContexts(int count) {
         int var2 = 0;
-        this.field_r = param0;
-        this.field_i = new rp[this.field_r];
-        for (var2 = 0; var2 < this.field_r; var2++) {
-          this.field_i[var2] = new rp(this);
+        this.contextCount = count;
+        this.contexts = new rp[this.contextCount];
+        for (var2 = 0; var2 < this.contextCount; var2++) {
+          this.contexts[var2] = new rp(this);
         }
     }
 
-    final void d() {
+    final void dispose() {
         if (this.field_J) {
           pt.a(true, false, -1);
           this.field_J = false;
         }
-        this.field_n = null;
-        this.field_l = null;
-        this.field_z = 0;
-        this.field_s = 0;
-        this.field_K = null;
-        this.field_p = true;
+        this.canvasBuffer = null;
+        this.canvas = null;
+        this.canvasWidth = 0;
+        this.canvasHeight = 0;
+        this.canvasBuffers = null;
+        this.disposed = true;
     }
 
-    private final void a(java.awt.Canvas param0, int param1, int param2) {
+    private final void resizeCanvas(java.awt.Canvas canvas, int width, int height) {
         java.awt.Dimension var5 = null;
-        ce var4 = (ce) (this.field_K.a(122, (long)param0.hashCode()));
+        ToolkitRasterBuffer var4 = (ToolkitRasterBuffer) (this.canvasBuffers.a(122, (long)canvas.hashCode()));
         if (var4 != null) {
           var4.unlink(false);
-          var4 = id.a(param1, param2, param0, -91);
-          this.field_K.a(var4, -1, (long)param0.hashCode());
-          if (this.field_l == param0 &&
-            this.field_t == null) {
-            var5 = param0.getSize();
-            this.field_z = var5.width;
-            this.field_s = var5.height;
-            this.field_n = var4;
-            this.field_o = var4.field_m;
-            this.field_k = var4.field_n;
-            this.field_B = var4.field_k;
-            if (this.field_k != this.field_x ||
-              this.field_B != this.field_m) {
-              this.field_x = this.field_k;
-              this.field_F = this.field_k;
-              this.field_m = this.field_B;
-              this.field_w = this.field_B;
+          var4 = id.a(width, height, canvas, -91);
+          this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
+          if (this.canvas == canvas &&
+            this.renderTarget == null) {
+            var5 = canvas.getSize();
+            this.canvasWidth = var5.width;
+            this.canvasHeight = var5.height;
+            this.canvasBuffer = var4;
+            this.pixels = var4.pixels;
+            this.targetWidth = var4.width;
+            this.targetHeight = var4.height;
+            if (this.targetWidth != this.field_x ||
+              this.targetHeight != this.field_m) {
+              this.field_x = this.targetWidth;
+              this.field_F = this.targetWidth;
+              this.field_m = this.targetHeight;
+              this.field_w = this.targetHeight;
             }
-            this.h();
+            this.refreshContexts();
           }
           return;
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawVerticalLine(int x, int y, int length, int color, int blendMode) {
         int var6;
         int var7;
         int var8;
@@ -1889,96 +1889,96 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var11Lifetime1;
         int var8Lifetime2;
         int var10Lifetime1Lifetime1;
-        if (param0 >= this.field_v) {
-          if (param0 >= this.field_D) {
+        if (x >= this.clipLeft) {
+          if (x >= this.clipRight) {
             return;
           }
-          if (param1 < this.field_H) {
-            param2 = param2 - (this.field_H - param1);
-            param1 = this.field_H;
+          if (y < this.clipTop) {
+            length = length - (this.clipTop - y);
+            y = this.clipTop;
           }
-          if (param1 + param2 > this.field_C) {
-            param2 = this.field_C - param1;
+          if (y + length > this.clipBottom) {
+            length = this.clipBottom - y;
           }
-          var6 = param0 + param1 * this.field_k;
-          var7 = param3 >>> 24;
-          if (param4 != 0 && (param4 != 1 ||
+          var6 = x + y * this.targetWidth;
+          var7 = color >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var7 != 255)) {
-            if (param4 == 1) {
-              param3 = ((param3 & 16711935) * var7 >> 8 & 16711935) + ((param3 & 65280) * var7 >> 8 & 65280) + (var7 << 24);
+            if (blendMode == 1) {
+              color = ((color & 16711935) * var7 >> 8 & 16711935) + ((color & 65280) * var7 >> 8 & 65280) + (var7 << 24);
               var8 = 256 - var7;
-              for (var9 = 0; var9 < param2; var9++) {
-                var10 = var6 + var9 * this.field_k;
-                var11 = this.field_o[var10];
+              for (var9 = 0; var9 < length; var9++) {
+                var10 = var6 + var9 * this.targetWidth;
+                var11 = this.pixels[var10];
                 var11 = ((var11 & 16711935) * var8 >> 8 & 16711935) + ((var11 & 65280) * var8 >> 8 & 65280);
-                this.field_o[var10] = param3 + var11;
+                this.pixels[var10] = color + var11;
               }
               return;
             }
-            if (param4 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            for (var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
-              var9Lifetime1 = var6 + var8Lifetime2 * this.field_k;
-              var10Lifetime1 = this.field_o[var9Lifetime1];
-              var11Lifetime1 = param3 + var10Lifetime1;
-              var12 = (param3 & 16711935) + (var10Lifetime1 & 16711935);
+            for (var8Lifetime2 = 0; var8Lifetime2 < length; var8Lifetime2++) {
+              var9Lifetime1 = var6 + var8Lifetime2 * this.targetWidth;
+              var10Lifetime1 = this.pixels[var9Lifetime1];
+              var11Lifetime1 = color + var10Lifetime1;
+              var12 = (color & 16711935) + (var10Lifetime1 & 16711935);
               var10Lifetime1Lifetime1 = (var12 & 16777472) + (var11Lifetime1 - var12 & 65536);
-              this.field_o[var9Lifetime1] = var11Lifetime1 - var10Lifetime1Lifetime1 | var10Lifetime1Lifetime1 - (var10Lifetime1Lifetime1 >>> 8);
+              this.pixels[var9Lifetime1] = var11Lifetime1 - var10Lifetime1Lifetime1 | var10Lifetime1Lifetime1 - (var10Lifetime1Lifetime1 >>> 8);
             }
             return;
           }
-          for (var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
-            this.field_o[var6 + var8Lifetime1 * this.field_k] = param3;
+          for (var8Lifetime1 = 0; var8Lifetime1 < length; var8Lifetime1++) {
+            this.pixels[var6 + var8Lifetime1 * this.targetWidth] = color;
           }
         }
     }
 
-    final void b(int param0, int param1) throws rf {
+    final void present(int sourceX, int sourceY) throws RenderPresentationException {
         java.awt.Graphics var3 = null;
-        if (this.field_l == null ||
-          this.field_n == null) {
+        if (this.canvas == null ||
+          this.canvasBuffer == null) {
           throw new IllegalStateException(offText);
         }
         try {
-          var3 = this.field_l.getGraphics();
-          this.field_n.a(var3, 0, param1, this.field_z, param0, this.field_s, 0, (byte) -106);
+          var3 = this.canvas.getGraphics();
+          this.canvasBuffer.drawRegion(var3, 0, sourceY, this.canvasWidth, sourceX, this.canvasHeight, 0, (byte) -106);
         } catch (Exception exception) {
-          this.field_l.repaint();
+          this.canvas.repaint();
         }
     }
 
-    final vc a(bu param0, nr param1) {
-        return (vc) ((Object) new hi(this, (ToolkitSprite) (param0), (od) (param1)));
+    final RenderTarget createRenderTarget(RenderSurface surface, RenderBuffer buffer) {
+        return (RenderTarget) ((Object) new SoftwareRenderTarget(this, (ToolkitSprite) (surface), (SoftwareRenderBuffer) (buffer)));
     }
 
-    final int[] Y() {
-        return new int[]{this.field_q, this.field_j, this.field_G, this.field_y};
+    final int[] projectionParameters() {
+        return new int[]{this.projectionCenterX, this.projectionCenterY, this.projectionScaleX, this.projectionScaleY};
     }
 
-    final nr a(int param0, int param1) {
-        return (nr) ((Object) new od(param0, param1));
+    final RenderBuffer createRenderBuffer(int width, int height) {
+        return (RenderBuffer) ((Object) new SoftwareRenderBuffer(width, height));
     }
 
-    final void b() {
-        if (this.field_l != null) {
-          this.field_o = this.field_n.field_m;
-          this.field_k = this.field_n.field_n;
-          this.field_B = this.field_n.field_k;
+    final void restoreCanvasTarget() {
+        if (this.canvas != null) {
+          this.pixels = this.canvasBuffer.pixels;
+          this.targetWidth = this.canvasBuffer.width;
+          this.targetHeight = this.canvasBuffer.height;
           this.field_x = this.field_F;
           this.field_m = this.field_w;
         } else {
-          this.field_k = 1;
-          this.field_B = 1;
-          this.field_o = null;
+          this.targetWidth = 1;
+          this.targetHeight = 1;
+          this.pixels = null;
           this.field_x = 1;
           this.field_m = 1;
         }
-        this.field_t = null;
-        this.h();
+        this.renderTarget = null;
+        this.refreshContexts();
     }
 
-    final void e() {
+    final void copyFrontToBack() {
     }
 
     static {

@@ -53,7 +53,7 @@ final class uv extends TextWidgetRenderer {
             return;
           }
           while (8 > var6_int) {
-            var7 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param5, he.field_o, (byte) -96) + 1))};
+            var7 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param5, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
             var13 = kt.a((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
             var12 = var13;
             var10 = var12;
@@ -63,7 +63,7 @@ final class uv extends TextWidgetRenderer {
             var6_int++;
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
-            var7Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param5, he.field_o, (byte) -96)))};
+            var7Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param5, HardwareGraphicsHeap.field_o, (byte) -96)))};
             dupTemp$2 = kt.a((byte) -92, var7Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_intLifetime1)));
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;

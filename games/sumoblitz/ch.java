@@ -23,7 +23,7 @@ final class ch {
         iu.a((byte) -128);
         pg.field_a = true;
         ScrollPane.field_E = true;
-        rf.field_a.closeAllDialogs((byte) -64);
+        RenderPresentationException.field_a.closeAllDialogs((byte) -64);
         if (param0 != 0) {
           ch.a(20);
         }

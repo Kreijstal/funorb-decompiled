@@ -269,7 +269,7 @@ final class HardwareBitmapFont extends ToolkitFont {
     }
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
-        ut var6;
+        AffineTransform3D var6;
         this.field_f.K(0);
         this.field_f.a(this.field_e, 110);
         if (!this.field_c &&
@@ -281,7 +281,7 @@ final class HardwareBitmapFont extends ToolkitFont {
           this.field_f.a(false, param3);
         }
         var6 = this.field_f.d(77);
-        var6.a(param1, 0, false, param2);
+        var6.setTranslation(param1, 0, false, param2);
         this.field_f.U(0);
         this.field_f.a(0, 71, this.field_d);
         this.field_f.a(126, this.field_f.field_jc);

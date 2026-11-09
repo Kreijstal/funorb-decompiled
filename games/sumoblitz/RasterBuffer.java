@@ -64,7 +64,7 @@ abstract class RasterBuffer {
           SocketJs5Client.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
         }
         hc.field_c.n(param0 ^ -5);
-        od.a(5178);
+        SoftwareRenderBuffer.a(5178);
         if (param0 == 2) {
           return;
         }
@@ -80,14 +80,14 @@ abstract class RasterBuffer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ut.field_o.a(true) &&
-            !param1.equals(ut.field_o.b(66))) {
-            ut.field_o = DroneDebris.a(false, param1);
+          if (AffineTransform3D.field_o.a(true) &&
+            !param1.equals(AffineTransform3D.field_o.b(66))) {
+            AffineTransform3D.field_o = DroneDebris.a(false, param1);
           }
           if (param0 != 1) {
             quitText = (String) null;
           }
-          stackIn_7_0 = ut.field_o;
+          stackIn_7_0 = AffineTransform3D.field_o;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

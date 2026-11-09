@@ -19,7 +19,7 @@ final class iq {
           }
           if (param0 instanceof byte[]) {
             var4 = (byte[]) (param0);
-            stackIn_6_0 = ad.a(var4, param2, param3, (byte) 53);
+            stackIn_6_0 = LegacyOpenGlGraphicsHeap.a(var4, param2, param3, (byte) 53);
             return stackIn_6_0;
           }
           if (param0 instanceof ByteArrayStorage) {

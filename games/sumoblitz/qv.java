@@ -14,7 +14,7 @@ final class qv extends IntrusiveNode {
           asYouAreUnderText = (String) null;
         }
         fb.field_a = fb.field_a - 9;
-        kn.field_b = kn.field_b - 4;
+        SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 4;
         GraphicsToolkit.field_f = GraphicsToolkit.field_f + 18;
     }
 

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi implements vc {
-    int field_a;
-    private od field_e;
+final class SoftwareRenderTarget implements RenderTarget {
+    int height;
+    private SoftwareRenderBuffer buffer;
     static IntrusiveDeque field_f;
-    int[] field_c;
-    int field_d;
+    int[] pixels;
+    int width;
     static int field_h;
     static SpriteData[] field_b;
     static String checkingText;
@@ -16,7 +16,7 @@ final class hi implements vc {
         field_b = null;
         field_f = null;
         if (param0 != 5423) {
-          hi.a(-118, -104, 102, (byte) -57, 11, -58, -86, -66, -88, -10, 127, 84, -31, 35, 34, 22);
+          SoftwareRenderTarget.a(-118, -104, 102, (byte) -57, 11, -58, -86, -66, -88, -10, 127, 84, -31, 35, 34, 22);
         }
     }
 
@@ -57,7 +57,7 @@ final class hi implements vc {
         var16Lifetime3 = 70 % ((68 - param3) / 35);
     }
 
-    hi(SoftwareGraphicsToolkit param0, ToolkitSprite param1, od param2) {
+    SoftwareRenderTarget(SoftwareGraphicsToolkit toolkit, ToolkitSprite sprite, SoftwareRenderBuffer renderBuffer) {
         RuntimeException var4 = null;
         SoftwareArgbSprite var5 = null;
         SoftwareRgbSprite var6 = null;
@@ -70,26 +70,26 @@ final class hi implements vc {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 instanceof SoftwareRgbSprite) {
-            var6 = (SoftwareRgbSprite) (param1);
-            this.field_d = var6.field_z;
-            this.field_a = var6.field_q;
-            this.field_c = var6.field_E;
+          if (sprite instanceof SoftwareRgbSprite) {
+            var6 = (SoftwareRgbSprite) (sprite);
+            this.width = var6.width;
+            this.height = var6.height;
+            this.pixels = var6.field_E;
           } else {
-            if (!(param1 instanceof SoftwareArgbSprite)) {
+            if (!(sprite instanceof SoftwareArgbSprite)) {
               throw new RuntimeException();
             }
-            var5 = (SoftwareArgbSprite) (param1);
-            this.field_d = var5.field_z;
-            this.field_c = var5.field_E;
-            this.field_a = var5.field_q;
+            var5 = (SoftwareArgbSprite) (sprite);
+            this.width = var5.width;
+            this.pixels = var5.field_E;
+            this.height = var5.height;
           }
-          if (param2 == null) {
+          if (renderBuffer == null) {
             return;
           }
-          this.field_e = param2;
-          if (this.field_d == this.field_e.field_b &&
-            this.field_a == this.field_e.field_a) {
+          this.buffer = renderBuffer;
+          if (this.width == this.buffer.width &&
+            this.height == this.buffer.height) {
             return;
           }
           throw new RuntimeException();
@@ -98,19 +98,19 @@ final class hi implements vc {
           var4 = decompiledCaughtException;
           stackIn_14_0 = var4;
           stackIn_14_1 = new StringBuilder().append("hi.<init>(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param1 == null) {
+          if (sprite == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param2 == null) {
+          if (renderBuffer == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

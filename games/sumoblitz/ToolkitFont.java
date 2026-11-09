@@ -389,16 +389,16 @@ abstract class ToolkitFont {
                                     if (param7 != null) {
                                       stackIn_25_0 = param7[var16_int];
                                     } else {
-                                      stackIn_25_0 = var17.d();
+                                      stackIn_25_0 = var17.paddedHeight();
                                     }
                                     var18 = stackIn_25_0;
                                     if ((-16777216 & mn.field_i) != -16777216) {
-                                      var17.a(param3, -var18 + this.field_b.field_d + param1, 0, mn.field_i & -16777216 | 16777215, 1);
+                                      var17.draw(param3, -var18 + this.field_b.field_d + param1, 0, mn.field_i & -16777216 | 16777215, 1);
                                     } else {
-                                      var17.a(param3, -var18 + (param1 + this.field_b.field_d), 1, 0, 1);
+                                      var17.draw(param3, -var18 + (param1 + this.field_b.field_d), 1, 0, 1);
                                     }
                                     var11 = -1;
-                                    param3 = param3 + param2[var16_int].b();
+                                    param3 = param3 + param2[var16_int].paddedWidth();
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
                                     var16 = (Exception) (Object) decompiledCaughtException;
@@ -447,10 +447,10 @@ abstract class ToolkitFont {
                 }
                 var15 = this.field_b.a(var14, (byte) -53);
                 if (-1 != ScrollControl.field_I) {
-                  this.field_a.a(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
+                  this.field_a.drawHorizontalLineAlpha(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
                 }
                 if (fl.field_p != -1) {
-                  this.field_a.a(fl.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
+                  this.field_a.drawHorizontalLineAlpha(fl.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
                 }
                 var11 = var14;
                 param3 = param3 + var15;
@@ -503,7 +503,7 @@ abstract class ToolkitFont {
         int var9 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
         int var8Lifetime1;
-        li.field_v = kb.a("frame_top", param0, true, "commonui");
+        ToolkitImageProducerBuffer.field_v = kb.a("frame_top", param0, true, "commonui");
         DropDownListWidget.field_O = kb.a("frame_bottom", param0, true, "commonui");
         ar.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
@@ -516,8 +516,8 @@ abstract class ToolkitFont {
         ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new ne[4];
         sm.field_c = new ne[4];
-        kn.field_f = new ne[4];
-        ne[][] var6 = new ne[][]{sb.field_d, kn.field_f, sm.field_c};
+        SoftwareTransform3D.field_f = new ne[4];
+        ne[][] var6 = new ne[][]{sb.field_d, SoftwareTransform3D.field_f, sm.field_c};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;

@@ -3,7 +3,7 @@
  */
 final class GraphicsToolkitManager {
     private nj[] field_a;
-    private d field_e;
+    private TextureProvider field_e;
     static ResourceArchive field_d;
     private boolean field_b;
     private bk field_c;
@@ -39,7 +39,7 @@ final class GraphicsToolkitManager {
 
     final boolean a(boolean param0) {
         if (param0) {
-          this.field_e = (d) null;
+          this.field_e = (TextureProvider) null;
         }
         return this.a(hk.b(-45), 89);
     }
@@ -69,7 +69,7 @@ final class GraphicsToolkitManager {
           }
           var4 = 113 / ((12 - param1) / 52);
           if (this.field_c != null) {
-            this.field_c.field_g.f((int)(wq.a(-116) - this.field_c.field_f));
+            this.field_c.field_g.updateTime((int)(wq.a(-116) - this.field_c.field_f));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != this.field_c && (var3 == null ||
@@ -261,7 +261,7 @@ final class GraphicsToolkitManager {
                   if (~this.field_c.field_d.field_c == ~var6.field_c &&
                     this.field_c.field_g != null) {
                     var3 = this.field_c.b(-43);
-                    this.field_c.field_g.a((byte) -94);
+                    this.field_c.field_g.close((byte) -94);
                     this.field_c = null;
                   }
                 }
@@ -278,10 +278,10 @@ final class GraphicsToolkitManager {
                           return;
                         }
                         var3 = this.field_c.b(79);
-                        this.field_c.field_g.a((byte) -109);
+                        this.field_c.field_g.close((byte) -109);
                       }
                       if (var8.field_g.c()) {
-                        var8.field_g.a(var8.field_g.c(100663296));
+                        var8.field_g.useHeap(var8.field_g.createHeap(100663296));
                       }
                       if (var3 == null) {
                         var8.field_f = wq.a(param0 + 59);
@@ -327,11 +327,11 @@ final class GraphicsToolkitManager {
         return this.field_c.field_g;
     }
 
-    GraphicsToolkitManager(int param0, int param1, d param2) {
+    GraphicsToolkitManager(int param0, int param1, TextureProvider param2) {
         this(kd.a((byte) -123, param0), ScrollControl.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
     }
 
-    private GraphicsToolkitManager(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
+    private GraphicsToolkitManager(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformTaskDispatcher param3, nj[] param4) {
         this.field_b = false;
         try {
           GraphicsToolkit.field_g = param1;

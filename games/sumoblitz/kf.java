@@ -104,7 +104,7 @@ final class kf extends DualLinkNode implements ft {
                 }
               }
               if (go.field_j[var3] != 0) {
-                wm.field_f[var3] = true;
+                TextureMetadata.field_f[var3] = true;
                 bl.field_e = var3;
               }
             }

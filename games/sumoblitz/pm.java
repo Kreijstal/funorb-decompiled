@@ -33,7 +33,7 @@ final class pm {
     private final void a(byte param0) {
         bl var2 = null;
         bl var2Lifetime1;
-        this.field_c.K(this.field_b);
+        this.field_c.getClip(this.field_b);
         if (param0 < -40) {
           if (this.field_a != null) {
             var2 = this.field_a;
@@ -64,12 +64,12 @@ final class pm {
         bl var3Lifetime2;
         bl var2Lifetime2;
         if (this.field_d != this.field_e.field_h) {
-          this.field_c.b();
+          this.field_c.restoreCanvasTarget();
           if (null != this.field_e.field_h) {
-            this.field_c.a(this.field_e.field_h, true);
+            this.field_c.bindSpriteTarget(this.field_e.field_h, true);
           } else {
             this.field_d = this.field_e.field_h;
-            this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
+            this.field_c.setClip(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
             var3 = this.field_e;
             var2 = var3;
             this.field_e = this.field_e.field_f;
@@ -87,7 +87,7 @@ final class pm {
             return;
           }
           this.field_d = this.field_e.field_h;
-          this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
+          this.field_c.setClip(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
           var3Lifetime2 = this.field_e;
           var2Lifetime2 = var3Lifetime2;
           this.field_e = this.field_e.field_f;
@@ -104,7 +104,7 @@ final class pm {
           var3Lifetime2.field_h = null;
           return;
         }
-        this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
+        this.field_c.setClip(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
         var3Lifetime1 = this.field_e;
         var2Lifetime1 = var3Lifetime1;
         this.field_e = this.field_e.field_f;
@@ -123,7 +123,7 @@ final class pm {
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         this.a((byte) -50);
-        this.field_c.T(param3, param1, param4, param2);
+        this.field_c.intersectClip(param3, param1, param4, param2);
         int var6 = -53 / ((param0 + 29) / 57);
     }
 

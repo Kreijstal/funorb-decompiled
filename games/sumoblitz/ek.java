@@ -88,7 +88,7 @@ final class ek extends ht {
                 }
               }
             }
-            za.field_k = ScanlineSpriteMask.field_e;
+            GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
             hq.field_b = tm.field_d;
             if (param0 != null) {
               up.field_d = false;
@@ -104,7 +104,7 @@ final class ek extends ht {
             qf.field_a < GameClientShell.field_s &&
             sl.field_d) {
             qf.field_a = 0;
-            za.field_k = ScanlineSpriteMask.field_e;
+            GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
             hq.field_b = tm.field_d;
           }
           if (up.field_d &&

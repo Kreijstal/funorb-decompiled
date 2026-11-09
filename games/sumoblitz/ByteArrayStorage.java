@@ -34,7 +34,7 @@ abstract class ByteArrayStorage {
           }
           if (null == param0.field_b) {
           }
-          dl.a(param0, (byte) 76);
+          LegacyOpenGlTransform3D.a(param0, (byte) 76);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -28,7 +28,7 @@ final class im {
           if (param0 > -23) {
             field_c = (GraphicsToolkit) null;
           }
-          if (ad.field_p == vm.field_c) {
+          if (LegacyOpenGlGraphicsHeap.field_p == vm.field_c) {
             stackIn_4_0 = null;
             return (an) (stackIn_4_0);
           }
@@ -39,7 +39,7 @@ final class im {
             return stackIn_8_0;
           }
           DraggableWidget.field_z = null;
-          vm.field_c = ad.field_p;
+          vm.field_c = LegacyOpenGlGraphicsHeap.field_p;
           PowerupPickup.field_s = param1;
           stackIn_10_0 = null;
           return (an) (stackIn_10_0);

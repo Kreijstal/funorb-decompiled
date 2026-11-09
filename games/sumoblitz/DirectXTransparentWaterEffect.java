@@ -67,11 +67,11 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void c(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        ut var3 = null;
+        AffineTransform3D var3 = null;
         if (this.field_e != null) {
           var2 = this.field_f.field_Cc;
           var3 = this.field_f.k((byte) 126);
-          var2.a(0, var3.a(0, field_g));
+          var2.a(0, var3.writeRowMajor4x4(0, field_g));
         }
         if (param0 > 0) {
           return;
@@ -81,14 +81,14 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void a(byte param0) {
         jagdx.IDirect3DDevice var7 = null;
-        ut var6 = null;
+        AffineTransform3D var6 = null;
         jagdx.IDirect3DDevice var5 = null;
-        ut var4 = null;
+        AffineTransform3D var4 = null;
         if (param0 < -47) {
           if (this.field_e != null) {
             var7 = this.field_f.field_Cc;
             var6 = this.field_b.H(26453);
-            var6.a(field_g, (byte) -37);
+            var6.writeFirstTwoRows(field_g, (byte) -37);
             field_g[2] = field_g[2] * 0.25f;
             field_g[3] = field_g[3] * 0.25f;
             field_g[5] = field_g[5] * 0.25f;
@@ -105,7 +105,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (this.field_e != null) {
           var5 = this.field_f.field_Cc;
           var4 = this.field_b.H(26453);
-          var4.a(field_g, (byte) -37);
+          var4.writeFirstTwoRows(field_g, (byte) -37);
           field_g[2] = field_g[2] * 0.25f;
           field_g[3] = field_g[3] * 0.25f;
           field_g[5] = field_g[5] * 0.25f;
@@ -151,11 +151,11 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void b(int param0) {
         jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
-        ut var3 = null;
+        AffineTransform3D var3 = null;
         if (this.field_e != null) {
           var2_ref_jagdx_IDirect3DDevice = this.field_f.field_Cc;
           var3 = this.field_f.k((byte) 69);
-          var2_ref_jagdx_IDirect3DDevice.a(0, var3.a(0, field_g));
+          var2_ref_jagdx_IDirect3DDevice.a(0, var3.writeRowMajor4x4(0, field_g));
         }
         int var2 = 67 % ((41 - param0) / 46);
     }

@@ -16,10 +16,10 @@ final class mn {
     static SpriteData[] field_b;
 
     final static void b(byte param0) {
-        if (null != rf.field_a) {
-          rf.field_a.finishDialogAnimations(false);
-          if (null != he.field_n) {
-            he.field_n.k(-43);
+        if (null != RenderPresentationException.field_a) {
+          RenderPresentationException.field_a.finishDialogAnimations(false);
+          if (null != HardwareGraphicsHeap.field_n) {
+            HardwareGraphicsHeap.field_n.k(-43);
           }
           HardwareGraphicsToolkit.j((byte) 89);
           if (param0 != -116) {
@@ -28,8 +28,8 @@ final class mn {
           }
           return;
         }
-        if (null != he.field_n) {
-          he.field_n.k(-43);
+        if (null != HardwareGraphicsHeap.field_n) {
+          HardwareGraphicsHeap.field_n.k(-43);
         }
         HardwareGraphicsToolkit.j((byte) 89);
         if (param0 != -116) {

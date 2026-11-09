@@ -88,7 +88,7 @@ final class gg extends DualLinkNode {
           if (oh.levelIndex != -1) {
             is.arenaPads = EnemyDrone.field_S[oh.levelIndex].field_d;
           }
-          he.field_o = new Random();
+          HardwareGraphicsHeap.field_o = new Random();
           db.droneSlotLimit = 1;
           GridWidgetContainer.livesRemaining = 3;
           an.waveIndex = 0;

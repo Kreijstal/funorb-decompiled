@@ -31,7 +31,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.c() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.c() + 100, -5, 1, true);
+          wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
           ForceFieldRingEffect.field_t.a(bw.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
           hc.field_e.a(bw.reassignPowerupsText, -1, -1, 60, 320, 0);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
@@ -59,9 +59,9 @@ final class ReassignUpgradesScreen extends MenuScreen {
             qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
             uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
             if (var6 == 0) {
-              MusicCrossfadeStream.field_q[var5].a(55 + var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
-              MusicCrossfadeStream.field_q[15 + var5].a(55 + var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1), (MusicCrossfadeStream.field_q[var5].d() >> 1) + 200, 1, 0, 2);
+              MusicCrossfadeStream.field_q[15 + var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1) + 200, 1, 0, 2);
             }
             qv.field_k.a(Integer.toString(c.field_u[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(c.field_u[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);

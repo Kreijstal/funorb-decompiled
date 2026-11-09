@@ -103,8 +103,8 @@ abstract class ua implements ot {
         try {
           kf.field_u = param1;
           im.field_b = new IntrusiveDeque();
-          up.field_a = ExpandingRingEffect.nextRandomInt(640, he.field_o, (byte) -96) << 8;
-          LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, he.field_o, (byte) -96) << 8;
+          up.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
+          LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LimitedRandomAccessFile.d(22030);
           if (param0 != 35040) {
             ua.a(116, -119);

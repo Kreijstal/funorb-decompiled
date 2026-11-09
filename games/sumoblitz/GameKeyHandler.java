@@ -45,8 +45,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           kj.field_e = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
-            var2_int < kn.field_c.length) {
-            var2_int = kn.field_c[var2_int];
+            var2_int < SoftwareTransform3D.field_c.length) {
+            var2_int = SoftwareTransform3D.field_c[var2_int];
             if (0 != (128 & var2_int)) {
               var2_int = -1;
             }
@@ -116,7 +116,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             field_a = (id) null;
           }
           var6 = 1;
-          var7 = ExpandingRingEffect.nextRandomInt(5, he.field_o, (byte) -96);
+          var7 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
           bj.powerupPickups.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -135,8 +135,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             kj.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < kn.field_c.length) {
-              var2_int = -129 & kn.field_c[var2_int];
+              var2_int < SoftwareTransform3D.field_c.length) {
+              var2_int = -129 & SoftwareTransform3D.field_c[var2_int];
             } else {
               var2_int = -1;
             }

@@ -43,32 +43,32 @@ final class DroneDebris extends TimedSceneEffect {
             field_A = false;
           }
           if (this.droneType == 0) {
-            ht.field_e[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+            ht.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           } else {
             if (this.droneType == 1) {
-              ContentDialog.field_ab[this.fragmentIndex + 2].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
+              ContentDialog.field_ab[this.fragmentIndex + 2].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
             } else {
               if (this.droneType != 2) {
                 if (this.droneType != 3) {
                   if (this.droneType == 4) {
-                    MenuScreen.field_a[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
+                    MenuScreen.field_a[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
                   } else {
                     if (this.droneType == 5) {
-                      mr.field_e[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)(3072.0 * ((double)this.radiusPixels / 14.0)), (int)(this.rotation * 65535.0), 1, 0, 2);
+                      mr.field_e[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)(3072.0 * ((double)this.radiusPixels / 14.0)), (int)(this.rotation * 65535.0), 1, 0, 2);
                     }
                   }
                 } else {
-                  s.field_n[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+                  s.field_n[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
                 }
               } else {
-                hv.field_d[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+                hv.field_d[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
               }
             }
           }
           if (90 > this.remainingTicks) {
             return;
           }
-          th.field_B.a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+          th.field_B.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,7 +195,7 @@ final class DroneDebris extends TimedSceneEffect {
           var6 = new ToolkitSprite[sprites.length];
           var3 = var6;
           for (var4 = 0; sprites.length > var4; var4++) {
-            var6[var4] = toolkit.a(sprites[var4], false);
+            var6[var4] = toolkit.createSprite(sprites[var4], false);
           }
           if (guard != 28513) {
             field_B = 75;

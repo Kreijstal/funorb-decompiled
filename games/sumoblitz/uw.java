@@ -126,16 +126,16 @@ abstract class uw {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         nk.field_i > var17) {
-                        wm.a(-1, var17 + var16Lifetime2, param4, var18, param0);
+                        TextureMetadata.a(-1, var17 + var16Lifetime2, param4, var18, param0);
                       }
                     } else {
                       if (var18 + var17 >= nk.field_i) {
                         var18 = nk.field_i - var17 - 1;
                       }
                       if (0 > var17) {
-                        wm.a(-1, var16Lifetime2, param4, var18 + var17, param0);
+                        TextureMetadata.a(-1, var16Lifetime2, param4, var18 + var17, param0);
                       } else {
-                        wm.a(-1, var17 + var16Lifetime2, param4, var18, param0);
+                        TextureMetadata.a(-1, var17 + var16Lifetime2, param4, var18, param0);
                       }
                     }
                   }
@@ -179,14 +179,14 @@ abstract class uw {
                     var17Lifetime1 = -1 + (nk.field_i - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
-                    wm.a(param6 ^ -1955582417, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
+                    TextureMetadata.a(param6 ^ -1955582417, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
                   } else {
-                    wm.a(-1, var15Lifetime1, param4, var17Lifetime1 + var16Lifetime1, param0);
+                    TextureMetadata.a(-1, var15Lifetime1, param4, var17Lifetime1 + var16Lifetime1, param0);
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
                     nk.field_i > var16Lifetime1) {
-                    wm.a(-1, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
+                    TextureMetadata.a(-1, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
                   }
                 }
               }

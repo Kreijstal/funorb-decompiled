@@ -37,7 +37,7 @@ final class WhirlpoolTables {
           CacheIoRequest.field_A = new int[25];
           go.field_j = new int[25];
           bl.field_e = -1;
-          wm.field_f = new boolean[25];
+          TextureMetadata.field_f = new boolean[25];
           ResourceArchive.field_f = 1;
           up.field_g = new boolean[25];
           LegacyOpenGlEffectManager.field_i = 1;
@@ -51,7 +51,7 @@ final class WhirlpoolTables {
         CacheIoRequest.field_A = new int[25];
         go.field_j = new int[25];
         bl.field_e = -1;
-        wm.field_f = new boolean[25];
+        TextureMetadata.field_f = new boolean[25];
         ResourceArchive.field_f = 1;
         up.field_g = new boolean[25];
         LegacyOpenGlEffectManager.field_i = 1;

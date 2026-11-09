@@ -20,52 +20,52 @@ final class cm extends ToolkitSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int x, int y, int colorMode, int color, int blendMode) {
         this.field_g.a(false, 0);
         this.field_j.q(-97);
-        this.field_j.c(25189, param4);
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
-        param0 = param0 + this.field_i;
-        param1 = param1 + this.field_f;
+        this.field_j.c(25189, blendMode);
+        jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
+        x = x + this.field_i;
+        y = y + this.field_f;
         if (this.field_d != null) {
-          this.b(6344, param2);
+          this.b(6344, colorMode);
           this.field_d.a(false, 0);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 + this.field_g.field_p);
+          jaggl.OpenGL.glVertex2i(x, y + this.field_g.field_p);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, 0.0f);
           jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0 + this.field_g.field_u, this.field_g.field_p + param1);
+          jaggl.OpenGL.glVertex2i(x + this.field_g.field_u, this.field_g.field_p + y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, this.field_g.field_v);
           jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-          jaggl.OpenGL.glVertex2i(this.field_g.field_u + param0, param1);
+          jaggl.OpenGL.glVertex2i(this.field_g.field_u + x, y);
           jaggl.OpenGL.glEnd();
           this.a(0);
           return;
         }
         this.field_j.a(98, this.field_g);
-        this.field_j.c(param2, true);
+        this.field_j.c(colorMode, true);
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-        jaggl.OpenGL.glVertex2i(param0, param1);
+        jaggl.OpenGL.glVertex2i(x, y);
         jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-        jaggl.OpenGL.glVertex2i(param0, this.field_g.field_p + param1);
+        jaggl.OpenGL.glVertex2i(x, this.field_g.field_p + y);
         jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-        jaggl.OpenGL.glVertex2i(this.field_g.field_u + param0, param1 + this.field_g.field_p);
+        jaggl.OpenGL.glVertex2i(this.field_g.field_u + x, y + this.field_g.field_p);
         jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-        jaggl.OpenGL.glVertex2i(this.field_g.field_u + param0, param1);
+        jaggl.OpenGL.glVertex2i(this.field_g.field_u + x, y);
         jaggl.OpenGL.glEnd();
     }
 
-    final int b() {
+    final int paddedWidth() {
         return this.field_i + (this.field_g.field_u + this.field_a);
     }
 
-    final int d() {
+    final int paddedHeight() {
         return this.field_g.field_p - (-this.field_f - this.field_h);
     }
 
@@ -97,56 +97,56 @@ final class cm extends ToolkitSprite {
         this.b(3, -68, -66, -16, -63, 102, -72);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags) {
         int var15 = Sumoblitz.field_L ? 1 : 0;
-        this.field_g.a((param7 & 1) != 0 ? true : false, 0);
+        this.field_g.a((flags & 1) != 0 ? true : false, 0);
         this.field_j.q(-122);
-        this.field_j.c(25189, param6);
-        jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
+        this.field_j.c(25189, blendMode);
+        jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         if (!this.field_e) {
           if (this.field_d == null) {
             this.field_j.a(127, this.field_g);
-            this.field_j.c(param4, true);
+            this.field_j.c(colorMode, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(param0, param1);
+            jaggl.OpenGL.glVertex2i(x, y);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param3 + param1);
+            jaggl.OpenGL.glVertex2i(x, height + y);
             jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
+            jaggl.OpenGL.glVertex2i(x + width, height + y);
             jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1);
+            jaggl.OpenGL.glVertex2i(width + x, y);
             jaggl.OpenGL.glEnd();
             return;
           }
-          this.b(6344, param4);
+          this.b(6344, colorMode);
           this.field_d.a(true, 0);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param3 + param1);
+          jaggl.OpenGL.glVertex2i(x, height + y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, 0.0f);
           jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-          jaggl.OpenGL.glVertex2i(param2 + param0, param1 + param3);
+          jaggl.OpenGL.glVertex2i(width + x, y + height);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, this.field_g.field_v);
           jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-          jaggl.OpenGL.glVertex2i(param0 + param2, param1);
+          jaggl.OpenGL.glVertex2i(x + width, y);
           jaggl.OpenGL.glEnd();
           this.a(0);
           return;
         }
-        float var9 = (float)param2 / (float)this.b();
-        float var10 = (float)param3 / (float)this.d();
-        float var11 = (float)param0 + var9 * (float)this.field_i;
-        float var12 = (float)param1 + var10 * (float)this.field_f;
+        float var9 = (float)width / (float)this.paddedWidth();
+        float var10 = (float)height / (float)this.paddedHeight();
+        float var11 = (float)x + var9 * (float)this.field_i;
+        float var12 = (float)y + var10 * (float)this.field_f;
         float var13 = var11 + (float)this.field_g.field_u * var9;
         float var14 = (float)this.field_g.field_p * var10 + var12;
         if (null == this.field_d) {
           this.field_j.a(39, this.field_g);
-          this.field_j.c(param4, true);
+          this.field_j.c(colorMode, true);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
           jaggl.OpenGL.glVertex2f(var11, var12);
@@ -159,7 +159,7 @@ final class cm extends ToolkitSprite {
           jaggl.OpenGL.glEnd();
           return;
         }
-        this.b(6344, param4);
+        this.b(6344, colorMode);
         this.field_d.a(true, 0);
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
@@ -178,19 +178,19 @@ final class cm extends ToolkitSprite {
         this.a(0);
     }
 
-    final int c() {
+    final int width() {
         return this.field_g.field_u;
     }
 
-    final int a() {
+    final int height() {
         return this.field_g.field_p;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_h = param3;
-        this.field_i = param0;
-        this.field_f = param1;
-        this.field_a = param2;
+    final void setInsets(int left, int top, int right, int bottom) {
+        this.field_h = bottom;
+        this.field_i = left;
+        this.field_f = top;
+        this.field_a = right;
         if (this.field_i != 0) {
           this.field_e = true;
         } else {
@@ -220,7 +220,7 @@ final class cm extends ToolkitSprite {
         this.field_j.b(34168, 768, 1, 92);
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
+    final void drawAffine(float x0, float y0, float x1, float y1, float x2, float y2, int colorMode, int color, int blendMode, int flags) {
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -238,12 +238,12 @@ final class cm extends ToolkitSprite {
         float var11Lifetime1;
         float var12Lifetime1;
         if (this.field_e) {
-          var11 = (float)this.b();
-          var12 = (float)this.d();
-          var13 = (param2 - param0) / var11;
-          var14 = (param3 - param1) / var11;
-          var15 = (param4 - param0) / var12;
-          var16 = (param5 - param1) / var12;
+          var11 = (float)this.paddedWidth();
+          var12 = (float)this.paddedHeight();
+          var13 = (x1 - x0) / var11;
+          var14 = (y1 - y0) / var11;
+          var15 = (x2 - x0) / var12;
+          var16 = (y2 - y0) / var12;
           var17 = var15 * (float)this.field_f;
           var18 = (float)this.field_f * var16;
           var19 = var13 * (float)this.field_i;
@@ -252,30 +252,30 @@ final class cm extends ToolkitSprite {
           var22 = (float)this.field_a * -var14;
           var23 = -var15 * (float)this.field_h;
           var24 = -var16 * (float)this.field_h;
-          param1 = var18 + (param1 + var20);
-          param0 = param0 + var19 + var17;
-          param4 = param4 + var19 + var23;
-          param3 = param3 + var22 + var18;
-          param2 = var17 + (param2 + var21);
-          param5 = var24 + (param5 + var20);
+          y0 = var18 + (y0 + var20);
+          x0 = x0 + var19 + var17;
+          x2 = x2 + var19 + var23;
+          y1 = y1 + var22 + var18;
+          x1 = var17 + (x1 + var21);
+          y2 = var24 + (y2 + var20);
         }
-        var11Lifetime1 = param4 + (param2 - param0);
-        var12Lifetime1 = param3 + (-param1 + param5);
-        this.field_g.a((param9 & 1) != 0 ? true : false, 0);
+        var11Lifetime1 = x2 + (x1 - x0);
+        var12Lifetime1 = y1 + (-y0 + y2);
+        this.field_g.a((flags & 1) != 0 ? true : false, 0);
         this.field_j.q(-70);
         this.field_j.a(110, this.field_g);
-        this.field_j.c(25189, param8);
-        this.field_j.c(param6, true);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
+        this.field_j.c(25189, blendMode);
+        this.field_j.c(colorMode, true);
+        jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-        jaggl.OpenGL.glVertex2f(param0, param1);
+        jaggl.OpenGL.glVertex2f(x0, y0);
         jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-        jaggl.OpenGL.glVertex2f(param4, param5);
+        jaggl.OpenGL.glVertex2f(x2, y2);
         jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
         jaggl.OpenGL.glVertex2f(var11Lifetime1, var12Lifetime1);
         jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-        jaggl.OpenGL.glVertex2f(param2, param3);
+        jaggl.OpenGL.glVertex2f(x1, y1);
         jaggl.OpenGL.glEnd();
     }
 
@@ -303,7 +303,7 @@ final class cm extends ToolkitSprite {
         this.field_j.a(113, 0, 34168, 770);
         this.field_j.g(0, 100);
         if (param0 != 6344) {
-          this.a(114, -109, -63, -80, 49);
+          this.draw(114, -109, -63, -80, 49);
           this.field_j.a(param0 ^ 6275, this.field_d);
           this.field_j.a(20685, 7681, 34479);
           this.field_j.b(34166, 768, 1, param0 - 6465);

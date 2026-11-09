@@ -31,29 +31,29 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     jagdx.D3DCAPS field_Kc;
     private boolean[] field_Bc;
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         int var11 = 0;
         jagdx.IDirect3DSurface var9;
         int var10;
         jagdx.IDirect3DSurface var12;
         var12 = this.field_Cc.c(0);
-        var9 = this.field_Cc.a(param2, param3, 21, 0, 0, true);
-        if (jagdx.gv.b(var9.LockRect(0, 0, param2, param3, 0, this.field_Jc), -74)) {
-          if (0 == param6) {
-            param6 = param2;
+        var9 = this.field_Cc.a(width, height, 21, 0, 0, true);
+        if (jagdx.gv.b(var9.LockRect(0, 0, width, height, 0, this.field_Jc), -74)) {
+          if (0 == stride) {
+            stride = width;
           }
           var10 = this.field_Jc.getRowPitch();
-          if (param6 == param2 &&
-            var10 == 4 * param2) {
-            this.field_Jc.a(param4, param5, 0, param2 * param3);
+          if (stride == width &&
+            var10 == 4 * width) {
+            this.field_Jc.a(pixels, offset, 0, width * height);
           } else {
-            for (var11 = 0; var11 < param3; var11++) {
-              this.field_Jc.a(param4, param5 + var11 * param6, var10 * var11, param2);
+            for (var11 = 0; var11 < height; var11++) {
+              this.field_Jc.a(pixels, offset + var11 * stride, var10 * var11, width);
             }
           }
           var9.UnlockRect();
         }
-        this.field_Cc.StretchRect(var9, 0, 0, param2, param3, var12, param0, param1, param2, param3, 0);
+        this.field_Cc.StretchRect(var9, 0, 0, width, height, var12, x, y, width, height, 0);
         var9.a(-22671);
         var12.a(-22671);
     }
@@ -189,7 +189,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(vc param0) {
+    final void bindRenderTarget(RenderTarget target) {
     }
 
     final void V(int param0) {
@@ -200,9 +200,9 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (this.field_Vc == null &&
           ar.field_L != this.field_wb[this.field_mc]) {
           if (this.field_wb[this.field_mc] != rs.field_c) {
-            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].b(-68, field_Mc));
+            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeColumnMajor4x4(-68, field_Mc));
           } else {
-            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].a(field_Mc, 111));
+            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeTextureMatrix4x4(field_Mc, 111));
           }
           var2 = DirectXGraphicsToolkit.b(this.field_wb[this.field_mc], param0 - 23700);
           if (var2 != this.field_Gc[this.field_mc]) {
@@ -221,7 +221,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final vc a(bu param0, nr param1) {
+    final RenderTarget createRenderTarget(RenderSurface surface, RenderBuffer buffer) {
         return null;
     }
 
@@ -242,7 +242,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     private final static int b(tf param0, int param1) {
         ji var3;
-        if (param0 == he.field_m) {
+        if (param0 == HardwareGraphicsHeap.field_m) {
           return 1;
         }
         if (rs.field_c == param0) {
@@ -314,9 +314,9 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void updateTime(int timeMillis) {
         this.field_Wc.b(12575);
-        super.f(param0);
+        super.updateTime(timeMillis);
     }
 
     final void a(fj param0, int param1) {
@@ -379,8 +379,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void GA(int param0) {
-        this.field_Cc.Clear(1, param0, 0.0f, 0);
+    final void clear(int color) {
+        this.field_Cc.Clear(1, color, 0.0f, 0);
     }
 
     private final boolean h(boolean param0) {
@@ -553,7 +553,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           field_Mc[6] = 0.0f;
           field_Mc[5] = 1.0f;
         } else {
-          this.field_Gb.b(-110, field_Mc);
+          this.field_Gb.writeColumnMajor4x4(-110, field_Mc);
         }
         this.field_Cc.SetTransform(2, field_Mc);
     }
@@ -675,7 +675,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void x(int param0) {
         if (!this.field_Db) {
-          this.field_Lb.b(param0 - 79, field_Mc);
+          this.field_Lb.writeColumnMajor4x4(param0 - 79, field_Mc);
         } else {
           field_Mc[3] = 0.0f;
           field_Mc[10] = 1.0f;
@@ -745,7 +745,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     final ShaderEffect d(int param0, int param1) {
         int var3;
         if (param0 != 0) {
-          this.f(-24);
+          this.updateTime(-24);
         }
         var3 = param1;
         if (3 == var3) {
@@ -760,7 +760,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         return super.d(0, param1);
     }
 
-    final nr a(int param0, int param1) {
+    final RenderBuffer createRenderBuffer(int width, int height) {
         return null;
     }
 
@@ -881,7 +881,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.a(27, this.field_ob);
     }
 
-    final void e() {
+    final void copyFrontToBack() {
     }
 
     final void a(byte param0, int param1, boolean param2, boolean param3, mi param4) {
@@ -914,7 +914,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     final void a(int param0, int param1, int param2, ck param3) {
         if (param1 != 0) {
           Integer var6 = (Integer) null;
-          DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (d) null, (ResourceArchive) null, (Integer) null);
+          DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (TextureProvider) null, (ResourceArchive) null, (Integer) null);
         }
         this.field_Cc.DrawPrimitive(DirectXGraphicsToolkit.a(param3, (byte) -121), param0, param2);
     }
@@ -924,7 +924,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.a(174, this.field_wc);
     }
 
-    final void a(ToolkitSprite param0, boolean param1) {
+    final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
     }
 
     final void o(int param0) {
@@ -934,12 +934,12 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void d() {
+    final void dispose() {
         this.field_Wc.a(-25924);
-        super.d();
+        super.dispose();
     }
 
-    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ResourceArchive param10, int param11) {
+    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -999,7 +999,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           decompiledCaughtException = decompiledCaughtParameter0;
           var13 = decompiledCaughtException;
           var13.printStackTrace();
-          this.a((byte) -13);
+          this.close((byte) -13);
           throw new RuntimeException("");
         }
     }
@@ -1011,7 +1011,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         return (pv) ((Object) new ap(this, param1));
     }
 
-    final void b() {
+    final void restoreCanvasTarget() {
     }
 
     final void db(int param0) {
@@ -1042,7 +1042,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.SetTextureStageState(this.field_mc, 11, this.field_mc | var3);
     }
 
-    final void b(int param0, int param1) throws rf {
+    final void present(int sourceX, int sourceY) throws RenderPresentationException {
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
         boolean discarded$3 = false;
@@ -1051,7 +1051,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           fieldTemp$1 = this.field_Lc + 1;
           this.field_Lc = this.field_Lc + 1;
           if (fieldTemp$1 > 50) {
-            throw new rf();
+            throw new RenderPresentationException();
           }
           discarded$2 = this.h(true);
         } else {
@@ -1063,7 +1063,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.BeginScene();
     }
 
-    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, ResourceArchive param2, Integer param3) {
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, TextureProvider param1, ResourceArchive param2, Integer param3) {
         DirectXGraphicsToolkit stackIn_42_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -1153,7 +1153,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
-            ((DirectXGraphicsToolkit) (var4)).d();
+            ((DirectXGraphicsToolkit) (var4)).dispose();
           }
           throw var5;
         }

@@ -118,7 +118,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           if (BufferedCacheFile.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
           } else {
-            kn.field_b = kn.field_b - IntrusiveNodeHashTable.field_c;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - IntrusiveNodeHashTable.field_c;
           }
           NodeHashTableIterator.a(param2, (byte) -82);
           if (param0 != 24753) {
@@ -126,7 +126,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           }
           boolean decompiledFrameRemainder1 = true;
           if (3 == param2) {
-            kn.field_b = kn.field_b - DropDownWidget.field_C;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
             ts.field_a = ts.field_a - nq.field_i;
           } else {
@@ -150,7 +150,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             }
           }
           if (!f.field_w) {
-            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {
@@ -173,7 +173,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               ts.field_a = ts.field_a - nq.field_i;
             }
           } else {
-            kn.field_b = kn.field_b + DropDownWidget.field_C;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
             ts.field_a = ts.field_a + nq.field_i;
           }
@@ -183,7 +183,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             fb.field_a = fb.field_a - iw.elapsedTicks;
           }
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-            kn.field_b = kn.field_b + IntrusiveNodeHashTable.field_c;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + IntrusiveNodeHashTable.field_c;
             return;
           }
           ts.field_a = ts.field_a + IntrusiveNodeHashTable.field_c;

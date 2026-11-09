@@ -5,8 +5,8 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private IntrusiveDeque field_o;
     long field_nativeid;
     private boolean field_m;
-    private ya field_i;
-    private eu field_p;
+    private NativeGraphicsHeap field_i;
+    private Transform3D field_p;
     private IntrusiveNodeHashTable field_q;
     private int field_n;
     private p field_r;
@@ -15,30 +15,30 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private NativeRenderContext[] field_s;
     private boolean field_k;
 
-    final native void K(int[] param0);
+    final native void getClip(int[] bounds);
 
     public final native void disposeNativeResource(boolean param0);
 
-    final nr a(int param0, int param1) {
-        return (nr) ((Object) new xa(param0, param1));
+    final RenderBuffer createRenderBuffer(int width, int height) {
+        return (RenderBuffer) ((Object) new NativeRenderBuffer(width, height));
     }
 
     private final native void AA(short param0, short param1, int param2, byte param3, byte param4, int param5, boolean param6, byte param7, byte param8, byte param9, byte param10, boolean param11, boolean param12, boolean param13, boolean param14, boolean param15, byte param16, boolean param17, boolean param18, int param19);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.wa(param0, param1, param2, param3, param4, param5);
+    final void drawLine(int x0, int y0, int x1, int y1, int color, int blendMode) {
+        this.wa(x0, y0, x1, y1, color, blendMode);
     }
 
     protected final synchronized void finalize() {
-        this.a((byte) -22);
+        this.close((byte) -22);
         if (this.field_nativeid != 0L) {
           NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 
-    final void a(vc param0) {
-        wa var2 = (wa) (param0);
-        this.n(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
+    final void bindRenderTarget(RenderTarget target) {
+        NativeRenderTarget var2 = (NativeRenderTarget) (target);
+        this.n(var2.sprite.field_nativeid, var2.buffer.field_nativeid);
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
@@ -68,7 +68,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         }
     }
 
-    private final native void va(za param0);
+    private final native void va(GraphicsHeap param0);
 
     private final void a(java.awt.Canvas param0) {
         p var2 = null;
@@ -84,39 +84,39 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
 
     private final native void FA();
 
-    final native void U(int param0, int param1, int param2, int param3, int param4);
+    final native void drawHorizontalLine(int x, int y, int length, int color, int blendMode);
 
-    final native int XA();
+    final native int farPlane();
 
-    final za c(int param0) {
-        ya var2 = new ya(this, param0);
+    final GraphicsHeap createHeap(int capacity) {
+        NativeGraphicsHeap var2 = new NativeGraphicsHeap(this, capacity);
         this.field_o.addLast((IntrusiveNode) (var2), (byte) 39);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
-    private final void a(eu param0) {
+    private final void a(Transform3D param0) {
         this.field_p = param0;
-        this.ma(((ja) (param0)).field_nativeid);
+        this.ma(((NativeTransform3D) (param0)).field_nativeid);
     }
 
-    final native void KA(int param0, int param1, int param2, int param3);
+    final native void setClip(int left, int top, int right, int bottom);
 
-    final void e() {
+    final void copyFrontToBack() {
     }
 
-    final ToolkitSprite a(SpriteData param0, boolean param1) {
-        j var3 = new j(this, param0.field_g, param0.field_e, param0.field_a, 0, param0.field_h, param0.field_h, param0.field_i);
-        ((ToolkitSprite) ((Object) var3)).a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
+    final ToolkitSprite createSprite(SpriteData data, boolean preferIndexed) {
+        NativeToolkitSprite var3 = new NativeToolkitSprite(this, data.field_g, data.field_e, data.field_a, 0, data.field_h, data.field_h, data.field_i);
+        ((ToolkitSprite) ((Object) var3)).setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
         return (ToolkitSprite) ((Object) var3);
     }
 
-    final vc a(bu param0, nr param1) {
-        return (vc) ((Object) new wa(this, (j) (param0), (xa) (param1)));
+    final RenderTarget createRenderTarget(RenderSurface surface, RenderBuffer buffer) {
+        return (RenderTarget) ((Object) new NativeRenderTarget(this, (NativeToolkitSprite) (surface), (NativeRenderBuffer) (buffer)));
     }
 
-    final native void s(int param0, int param1, int param2, int param3, int param4);
+    final native void drawCircle(int centerX, int centerY, int radius, int color, int blendMode);
 
-    final native void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    final native void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride);
 
     private final native void wa(int param0, int param1, int param2, int param3, int param4, int param5);
 
@@ -131,9 +131,9 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         }
     }
 
-    public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         super(param1);
-        ja discarded$1 = null;
+        NativeTransform3D discarded$1 = null;
         Throwable decompiledCaughtException = null;
         Throwable var5 = null;
         this.field_m = false;
@@ -148,11 +148,11 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
             throw new RuntimeException("");
           }
           NativeResourceReaper.b((byte) -119);
-          this.MA(this.field_h, 0, 0);
+          this.MA(this.textureProvider, 0, 0);
           kr.a(true, -21, false);
           this.field_k = true;
-          discarded$1 = new ja();
-          this.a(new ja());
+          discarded$1 = new NativeTransform3D();
+          this.a(new NativeTransform3D());
           this.h(1);
           this.g(0);
           if (param0 != null) {
@@ -163,7 +163,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          this.a((byte) -121);
+          this.close((byte) -121);
           throw new RuntimeException();
         }
     }
@@ -171,12 +171,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private final boolean c(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        wm var3 = null;
+        TextureMetadata var3 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         var2_ref = this;
         synchronized (var2_ref) {
-          var3 = this.field_h.a(-29193, (int) param0);
+          var3 = this.textureProvider.a(-29193, (int) param0);
           if (var3 == null) {
             return false;
           }
@@ -191,7 +191,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         NativeResourceReaper.a(-121);
     }
 
-    final void d() {
+    final void dispose() {
         if (this.field_m) {
           return;
         }
@@ -199,10 +199,10 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_r = null;
         this.field_i = null;
         this.field_q.c(6407);
-        ya var1 = (ya) (this.field_o.first(99));
+        NativeGraphicsHeap var1 = (NativeGraphicsHeap) (this.field_o.first(99));
         while (var1 != null) {
           var1.ga();
-          var1 = (ya) (this.field_o.next((byte) 18));
+          var1 = (NativeGraphicsHeap) (this.field_o.next((byte) 18));
         }
         this.field_o.clear(125);
         this.FA();
@@ -215,55 +215,55 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_m = true;
     }
 
-    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont createFont(FontMetrics metrics, SpriteData[] glyphs, boolean useMaskGlyphs) {
         int var7 = 0;
         int[] var4;
         int[] var5;
         int var6;
-        var4 = new int[param1.length];
-        var5 = new int[param1.length];
+        var4 = new int[glyphs.length];
+        var5 = new int[glyphs.length];
         var6 = 0;
-        for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_h;
-          var5[var7] = param1[var7].field_i;
-          if (param1[var7].field_a != null) {
+        for (var7 = 0; var7 < glyphs.length; var7++) {
+          var4[var7] = glyphs[var7].field_h;
+          var5[var7] = glyphs[var7].field_i;
+          if (glyphs[var7].field_a != null) {
             var6 = 1;
           }
         }
-        if (!param2) {
+        if (!useMaskGlyphs) {
           if (var6 == 0) {
-            return (ToolkitFont) ((Object) new NativePaletteFont(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
+            return (ToolkitFont) ((Object) new NativePaletteFont(this, this.field_i, metrics, glyphs, (ToolkitSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (var6 == 0) {
-          return (ToolkitFont) ((Object) new NativeMonochromeFont(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
+          return (ToolkitFont) ((Object) new NativeMonochromeFont(this, this.field_i, metrics, glyphs, (ToolkitSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }
 
-    final native int i();
+    final native int nearPlane();
 
     private final boolean WA(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        wm var3 = null;
+        TextureMetadata var3 = null;
         int[] var4 = null;
         Throwable var5 = null;
         Throwable decompiledCaughtException = null;
-        var2_ref = this.field_h;
+        var2_ref = this.textureProvider;
         synchronized (var2_ref) {
-          if (!this.field_h.b(-29912, (int) param0)) {
+          if (!this.textureProvider.b(-29912, (int) param0)) {
             return false;
           }
-          var3 = this.field_h.a(-29193, (int) param0);
+          var3 = this.textureProvider.a(-29193, (int) param0);
           if (var3 == null) {
             return false;
           }
           if (var3.field_p == 2) {
-            var4 = this.field_h.a(-25069, 128, 128, true, 0.699999988079071f, (int) param0);
+            var4 = this.textureProvider.a(-25069, 128, 128, true, 0.699999988079071f, (int) param0);
           } else {
-            var4 = this.field_h.a(true, 128, (byte) -81, 128, 0.699999988079071f, (int) param0);
+            var4 = this.textureProvider.a(true, 128, (byte) -81, 128, 0.699999988079071f, (int) param0);
           }
           this.CA(param0, var4, var3.field_e, var3.field_p, var3.field_d, var3.field_j, var3.field_h, var3.field_n, var3.field_t, var3.field_g, var3.field_c, var3.field_u, var3.field_r, var3.field_m, var3.field_b, var3.field_l, var3.field_i, var3.field_k, var3.field_s, var3.field_o, var3.field_q);
         }
@@ -274,33 +274,33 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         return true;
     }
 
-    final native void aa(int param0, int param1, int param2, int param3, int param4, int param5);
+    final native void fillRectangle(int x, int y, int width, int height, int color, int blendMode);
 
-    final void b(int param0, int param1) throws rf {
+    final void present(int sourceX, int sourceY) throws RenderPresentationException {
         if (this.field_r == null) {
           throw new IllegalStateException("off");
         }
-        this.field_r.a(param0, param1);
+        this.field_r.a(sourceX, sourceY);
     }
 
-    final native void DA(int param0, int param1, int param2, int param3);
+    final native void setProjection(int centerX, int centerY, int scaleX, int scaleY);
 
-    final void b() {
+    final void restoreCanvasTarget() {
         this.a(this.field_r.field_o);
     }
 
-    final native int[] Y();
+    final native int[] projectionParameters();
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (ToolkitSprite) ((Object) new j(this, param0, param1, param2, param3, param4, false));
+    final ToolkitSprite createSprite(int[] pixels, int offset, int stride, int width, int height, boolean copyPixels) {
+        return (ToolkitSprite) ((Object) new NativeToolkitSprite(this, pixels, offset, stride, width, height, false));
     }
 
-    final void a(za param0) {
-        this.field_i = (ya) (param0);
-        this.va(param0);
+    final void useHeap(GraphicsHeap heap) {
+        this.field_i = (NativeGraphicsHeap) (heap);
+        this.va(heap);
     }
 
-    final native void f(int param0, int param1);
+    final native void setDepthRange(int nearPlane, int farPlane);
 
     final boolean a() {
         return false;
@@ -312,27 +312,27 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
 
     private final native void ma(long param0);
 
-    private final native void MA(d param0, int param1, int param2);
+    private final native void MA(TextureProvider param0, int param1, int param2);
 
     private final native void d(int param0);
 
-    final native void T(int param0, int param1, int param2, int param3);
+    final native void intersectClip(int left, int top, int right, int bottom);
 
-    final void f(int param0) {
+    final void updateTime(int timeMillis) {
         NativeResourceReaper.a(-127);
-        this.d(param0);
-        ya var2 = (ya) (this.field_o.first(-61));
+        this.d(timeMillis);
+        NativeGraphicsHeap var2 = (NativeGraphicsHeap) (this.field_o.first(-61));
         while (var2 != null) {
           var2.r();
-          var2 = (ya) (this.field_o.next((byte) 18));
+          var2 = (NativeGraphicsHeap) (this.field_o.next((byte) 18));
         }
     }
 
-    final void a(ToolkitSprite param0, boolean param1) {
-        this.n(((j) (param0)).field_nativeid, 0L);
+    final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
+        this.n(((NativeToolkitSprite) (sprite)).field_nativeid, 0L);
     }
 
-    final native void GA(int param0);
+    final native void clear(int color);
 
     private final void g(int param0) {
         this.field_s[param0].a();

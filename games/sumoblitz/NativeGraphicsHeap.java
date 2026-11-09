@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ya extends za implements NativeResource {
+final class NativeGraphicsHeap extends GraphicsHeap implements NativeResource {
     long field_nativeid;
 
     final native void r();
 
     final native void ga();
 
-    ya(NativeSoftwareGraphicsToolkit param0, int param1) {
-        this.aa(param0, param1);
+    NativeGraphicsHeap(NativeSoftwareGraphicsToolkit toolkit, int capacity) {
+        this.allocate(toolkit, capacity);
     }
 
     public final native void disposeNativeResource(boolean param0);
@@ -20,5 +20,5 @@ final class ya extends za implements NativeResource {
         }
     }
 
-    private final native void aa(NativeSoftwareGraphicsToolkit param0, int param1);
+    private final native void allocate(NativeSoftwareGraphicsToolkit toolkit, int capacity);
 }

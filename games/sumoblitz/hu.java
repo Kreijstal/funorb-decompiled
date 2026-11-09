@@ -14,11 +14,11 @@ final class hu {
           if (param3 < 75) {
             field_c = (FontMetrics) null;
           }
-          if (null == he.field_n) {
-            he.field_n = new ProgressDialog(rf.field_a, SocketJs5Client.field_s);
-            rf.field_a.pushDialog((byte) 100, he.field_n);
+          if (null == HardwareGraphicsHeap.field_n) {
+            HardwareGraphicsHeap.field_n = new ProgressDialog(RenderPresentationException.field_a, SocketJs5Client.field_s);
+            RenderPresentationException.field_a.pushDialog((byte) 100, HardwareGraphicsHeap.field_n);
           }
-          he.field_n.a(false, param1, param0, param2);
+          HardwareGraphicsHeap.field_n.a(false, param1, param0, param2);
           SoftwareRasterizer.clear();
           BurstParticle.a(true, true);
         } catch (RuntimeException runtimeException) {

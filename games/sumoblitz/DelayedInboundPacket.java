@@ -43,7 +43,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
             stackIn_17_0 = -256;
           }
           if (!hw.field_b[97] &&
-            !hw.field_b[ad.field_o]) {
+            !hw.field_b[LegacyOpenGlGraphicsHeap.field_o]) {
             stackIn_22_1 = 0;
           } else {
             stackIn_22_1 = 256;

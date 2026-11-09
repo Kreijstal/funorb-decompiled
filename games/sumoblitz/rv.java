@@ -6,13 +6,13 @@ final class rv {
     static String warningIfYouQuitText;
 
     final static void a(byte param0) {
-        ce.field_o = new js();
+        ToolkitRasterBuffer.field_o = new js();
         if (param0 >= 35) {
-          SlowBurstParticle.field_y.transitionToContent((byte) -119, ce.field_o);
+          SlowBurstParticle.field_y.transitionToContent((byte) -119, ToolkitRasterBuffer.field_o);
           return;
         }
         warningIfYouQuitText = (String) null;
-        SlowBurstParticle.field_y.transitionToContent((byte) -119, ce.field_o);
+        SlowBurstParticle.field_y.transitionToContent((byte) -119, ToolkitRasterBuffer.field_o);
     }
 
     public static void releaseStatics(boolean param0) {

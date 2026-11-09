@@ -36,7 +36,7 @@ abstract class ResizingDialog extends ModalDialog {
             var4 = (PlatformTaskDispatcher) null;
             ResizingDialog.a(false, (PlatformTaskDispatcher) null, -97, 35, 94, -35);
           }
-          stackIn_3_0 = param0.a(param1, false);
+          stackIn_3_0 = param0.createSprite(param1, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,7 +165,7 @@ abstract class ResizingDialog extends ModalDialog {
           var8Lifetime1++;
         }
         ar.field_E.draw(originX + (this.width - 90), 10 + originY);
-        MusicCrossfadeStream.drawHorizontalSpriteStrip(35 + originY, this.width - 10, 2, originX + 5, li.field_v);
+        MusicCrossfadeStream.drawHorizontalSpriteStrip(35 + originY, this.width - 10, 2, originX + 5, ToolkitImageProducerBuffer.field_v);
         MusicCrossfadeStream.drawHorizontalSpriteStrip(-22 + this.height + originY, this.width, 2, originX, DropDownListWidget.field_O);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

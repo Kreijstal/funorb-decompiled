@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends za {
+final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     static int field_o;
-    jaclib.memory.heap.NativeHeap field_m;
+    jaclib.memory.heap.NativeHeap heap;
     static gf field_n;
     static int[] field_q;
     static mm field_p;
@@ -58,7 +58,7 @@ final class ad extends za {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          ut.field_j = param0;
+          AffineTransform3D.field_j = param0;
           return;
         }
         if (uc.a((byte) -29, lt.field_m)) {
@@ -74,7 +74,7 @@ final class ad extends za {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          ut.field_j = param0;
+          AffineTransform3D.field_j = param0;
           return;
         }
         if (!(2 > Bzip2State.field_j)) {
@@ -85,7 +85,7 @@ final class ad extends za {
           DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
-        ut.field_j = param0;
+        AffineTransform3D.field_j = param0;
     }
 
     final static byte[] a(byte[] param0, int param1, int param2, byte param3) {
@@ -136,7 +136,7 @@ final class ad extends za {
     final static ne e(int param0) {
         ne var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
@@ -171,7 +171,7 @@ final class ad extends za {
             return;
           }
           if (0 != jv.field_a) {
-            od.a(-97, param1);
+            SoftwareRenderBuffer.a(-97, param1);
             return;
           }
           jv.a(false, (byte) -71, param2);
@@ -191,15 +191,15 @@ final class ad extends za {
         }
     }
 
-    ad(int param0) {
-        this.field_m = new jaclib.memory.heap.NativeHeap(param0);
+    LegacyOpenGlGraphicsHeap(int capacity) {
+        this.heap = new jaclib.memory.heap.NativeHeap(capacity);
     }
 
     final void a(int param0) {
         if (param0 != -4009) {
           return;
         }
-        this.field_m.a();
+        this.heap.a();
     }
 
     static {

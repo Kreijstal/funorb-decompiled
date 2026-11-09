@@ -14,11 +14,11 @@ final class so {
           if (BufferedCacheFile.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - param0;
           } else {
-            kn.field_b = kn.field_b - param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - param0;
           }
         } else {
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-            kn.field_b = kn.field_b + param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + param0;
           } else {
             ts.field_a = ts.field_a + param0;
           }

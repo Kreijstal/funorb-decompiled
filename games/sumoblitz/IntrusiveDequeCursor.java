@@ -353,7 +353,7 @@ final class IntrusiveDequeCursor {
         FadingWidget.score = FadingWidget.score + param0;
         if (BufferedCacheFile.a((byte) -84, 10) < 5) {
           if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
-            kn.field_b = kn.field_b + param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + param0;
             if (var2 >= 50000) {
               return;
             }

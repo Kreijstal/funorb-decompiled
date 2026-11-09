@@ -3,7 +3,7 @@
  */
 final class kk {
     static SpriteData[] field_e;
-    private d field_c;
+    private TextureProvider field_c;
     static ToolkitSprite field_f;
     private LegacyOpenGlGraphicsToolkit field_a;
     static boolean[] field_b;
@@ -77,7 +77,7 @@ final class kk {
 
     final us a(int param0, int param1) {
         Object var3;
-        wm var5;
+        TextureMetadata var5;
         int var6;
         int[] var7;
         int var8;
@@ -300,7 +300,7 @@ final class kk {
         return var22;
     }
 
-    kk(LegacyOpenGlGraphicsToolkit param0, d param1) {
+    kk(LegacyOpenGlGraphicsToolkit param0, TextureProvider param1) {
         this.field_d = new sd(256);
         try {
           this.field_c = param1;

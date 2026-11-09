@@ -17,13 +17,13 @@ final class pu extends ToolkitSprite {
     private int field_c;
     static String blastReadyText;
 
-    final int d() {
+    final int paddedHeight() {
         return this.field_b + this.field_l + this.field_f;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ut var10;
-        ut var11;
+    final void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags) {
+        AffineTransform3D var10;
+        AffineTransform3D var11;
         ru stackIn_4_0 = null;
         var11 = this.field_d.d(84);
         var10 = this.field_d.B(0);
@@ -34,7 +34,7 @@ final class pu extends ToolkitSprite {
           if (this.field_g) {
             ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
           } else {
-            if ((param7 & 1) == 0) {
+            if ((flags & 1) == 0) {
               ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
             } else {
               ((ru) (Object) stackIn_4_0).a(ArrayWidgetContainer.field_y, 15149);
@@ -43,20 +43,20 @@ final class pu extends ToolkitSprite {
         }
         this.field_d.w(10);
         this.field_d.a(this.field_j, 95);
-        this.field_d.e(param6, 13);
-        this.field_d.h(59, param4);
+        this.field_d.e(blendMode, 13);
+        this.field_d.h(59, colorMode);
         this.field_d.a(mm.field_h, 1, 0);
         this.field_d.a(mm.field_h, 1, true);
-        this.field_d.a(false, param5);
-        var10.b(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -74), 0, 1.0f);
+        this.field_d.a(false, color);
+        var10.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -74), 0, 1.0f);
         if (this.field_k) {
-          param2 = this.field_n * param2 / this.b();
-          param3 = this.field_l * param3 / this.d();
-          param1 = param1 + this.field_f * param3 / this.field_l;
-          param0 = param0 + this.field_i * param2 / this.field_n;
+          width = this.field_n * width / this.paddedWidth();
+          height = this.field_l * height / this.paddedHeight();
+          y = y + this.field_f * height / this.field_l;
+          x = x + this.field_i * width / this.field_n;
         }
-        var11.b((float)param3, (float)param2, 0, 0.0f);
-        var11.a(param1, param0, (byte) 103, 0);
+        var11.setScale((float)height, (float)width, 0, 0.0f);
+        var11.translate(y, x, (byte) 103, 0);
         this.field_d.a(rs.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
@@ -65,12 +65,12 @@ final class pu extends ToolkitSprite {
         this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
-    final int c() {
+    final int width() {
         return this.field_n;
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        ut var12;
+    final void drawAffine(float x0, float y0, float x1, float y1, float x2, float y2, int colorMode, int color, int blendMode, int flags) {
+        AffineTransform3D var12;
         float var13;
         float var14;
         float var15;
@@ -85,7 +85,7 @@ final class pu extends ToolkitSprite {
         float var24;
         float var25;
         float var26;
-        ut var27;
+        AffineTransform3D var27;
         ru stackIn_4_0 = null;
         ji stackIn_5_1 = null;
         var27 = this.field_d.d(82);
@@ -93,7 +93,7 @@ final class pu extends ToolkitSprite {
         stackIn_4_0 = this.field_j;
         if (!this.field_h &&
           !this.field_g &&
-          (1 & param9) != 0) {
+          (1 & flags) != 0) {
           stackIn_5_1 = ArrayWidgetContainer.field_y;
         } else {
           stackIn_5_1 = lh.field_l;
@@ -101,18 +101,18 @@ final class pu extends ToolkitSprite {
         ((ru) (Object) stackIn_4_0).a(stackIn_5_1, 15149);
         this.field_d.w(10);
         this.field_d.a(this.field_j, 109);
-        this.field_d.e(param8, 13);
-        this.field_d.h(104, param6);
+        this.field_d.e(blendMode, 13);
+        this.field_d.h(104, colorMode);
         this.field_d.a(mm.field_h, 1, 0);
         this.field_d.a(mm.field_h, 1, true);
-        this.field_d.a(false, param7);
+        this.field_d.a(false, color);
         if (this.field_k) {
-          var13 = (float)this.b();
-          var14 = (float)this.d();
-          var15 = (-param0 + param2) / var13;
-          var16 = (param3 - param1) / var13;
-          var17 = (param4 - param0) / var14;
-          var18 = (param5 - param1) / var14;
+          var13 = (float)this.paddedWidth();
+          var14 = (float)this.paddedHeight();
+          var15 = (-x0 + x1) / var13;
+          var16 = (y1 - y0) / var13;
+          var17 = (x2 - x0) / var14;
+          var18 = (y2 - y0) / var14;
           var19 = var17 * (float)this.field_f;
           var20 = (float)this.field_f * var18;
           var21 = var15 * (float)this.field_i;
@@ -120,17 +120,17 @@ final class pu extends ToolkitSprite {
           var23 = (float)this.field_c * -var15;
           var24 = (float)this.field_c * -var16;
           var25 = -var17 * (float)this.field_b;
-          param4 = var25 + (var21 + param4);
-          param1 = var20 + (var22 + param1);
-          param3 = param3 + var24 + var20;
-          param2 = var19 + (param2 + var23);
-          param0 = var19 + (param0 + var21);
+          x2 = var25 + (var21 + x2);
+          y0 = var20 + (var22 + y0);
+          y1 = y1 + var24 + var20;
+          x1 = var19 + (x1 + var23);
+          x0 = var19 + (x0 + var21);
           var26 = -var18 * (float)this.field_b;
-          param5 = param5 + var22 + var26;
+          y2 = y2 + var22 + var26;
         }
-        var27.a(param4 - param0, -param1 + param5, -param1 + param3, -param0 + param2, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 18356);
-        var27.a((byte) 96, 0.0f, param1, param0);
-        var12.b(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -65), 0, 1.0f);
+        var27.setLinear(x2 - x0, -y0 + y2, -y0 + y1, -x0 + x1, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 18356);
+        var27.translate((byte) 96, 0.0f, y0, x0);
+        var12.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -65), 0, 1.0f);
         this.field_d.a(rs.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
@@ -139,11 +139,11 @@ final class pu extends ToolkitSprite {
         this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_f = param1;
-        this.field_c = param2;
-        this.field_b = param3;
-        this.field_i = param0;
+    final void setInsets(int left, int top, int right, int bottom) {
+        this.field_f = top;
+        this.field_c = right;
+        this.field_b = bottom;
+        this.field_i = left;
         if (this.field_i != 0) {
           this.field_k = true;
         } else {
@@ -186,7 +186,7 @@ final class pu extends ToolkitSprite {
         }
     }
 
-    final int a() {
+    final int height() {
         return this.field_l;
     }
 
@@ -243,22 +243,22 @@ final class pu extends ToolkitSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        ut var8 = this.field_d.d(73);
-        ut var7 = this.field_d.B(0);
-        param0 = param0 + this.field_i;
-        param1 = param1 + this.field_f;
+    final void draw(int x, int y, int colorMode, int color, int blendMode) {
+        AffineTransform3D var8 = this.field_d.d(73);
+        AffineTransform3D var7 = this.field_d.B(0);
+        x = x + this.field_i;
+        y = y + this.field_f;
         this.field_j.a(lh.field_l, 15149);
         this.field_d.w(10);
         this.field_d.a(this.field_j, 93);
-        this.field_d.e(param4, 13);
-        this.field_d.h(92, param2);
+        this.field_d.e(blendMode, 13);
+        this.field_d.h(92, colorMode);
         this.field_d.a(mm.field_h, 1, 0);
         this.field_d.a(mm.field_h, 1, true);
-        this.field_d.a(false, param3);
-        var8.b((float)this.field_l, (float)this.field_n, 0, 0.0f);
-        var8.a(param1, param0, (byte) 120, 0);
-        var7.b(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -79), 0, 1.0f);
+        this.field_d.a(false, color);
+        var8.setScale((float)this.field_l, (float)this.field_n, 0, 0.0f);
+        var8.translate(y, x, (byte) 120, 0);
+        var7.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -79), 0, 1.0f);
         this.field_d.a(rs.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
@@ -267,7 +267,7 @@ final class pu extends ToolkitSprite {
         this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
-    final int b() {
+    final int paddedWidth() {
         return this.field_i + (this.field_n + this.field_c);
     }
 

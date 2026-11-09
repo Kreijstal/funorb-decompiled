@@ -245,7 +245,7 @@ final class ng extends ShaderEffect {
     final void a(boolean param0, int param1) {
         int var4;
         ed var5;
-        ut var6;
+        AffineTransform3D var6;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_i == null) {
           this.field_b.a(NetworkResourceRequest.field_y, 0, true);
@@ -256,7 +256,7 @@ final class ng extends ShaderEffect {
             this.field_b.g(1, -118);
             this.field_b.a(param1 ^ 31584, nl.field_n);
             var6 = this.field_b.B(0);
-            var6.a((byte) 79, 1024);
+            var6.setRotationX((byte) 79, 1024);
             this.field_b.a(ip.field_y, 28880);
             if (!this.field_g) {
               this.field_b.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);

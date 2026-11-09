@@ -27,7 +27,7 @@ class TimedSceneEffect extends IntrusiveNode {
           return;
         }
         try {
-          ua.field_g[0].a((float)this.x, (float)this.y, 1848 - (int)((double)this.remainingTicks / 30.0 * 2048.0), 0, 1, 0, 2);
+          ua.field_g[0].drawRotated((float)this.x, (float)this.y, 1848 - (int)((double)this.remainingTicks / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }

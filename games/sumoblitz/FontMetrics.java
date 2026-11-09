@@ -162,7 +162,7 @@ final class FontMetrics {
                                         }
                                         try {
                                           var20_int = no.a((byte) -128, (CharSequence) ((Object) var19.substring(4)));
-                                          var17 = var17 + param4[var20_int].b();
+                                          var17 = var17 + param4[var20_int].paddedWidth();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -403,7 +403,7 @@ final class FontMetrics {
                                   try {
                                     var11_int = no.a((byte) -127, (CharSequence) ((Object) var10.substring(4)));
                                     var5 = -1;
-                                    var6 = var6 + param1[var11_int].b();
+                                    var6 = var6 + param1[var11_int].paddedWidth();
                                     decompiledRegionSelector0 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -562,7 +562,7 @@ final class FontMetrics {
                                   try {
                                     var13_int = no.a((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
                                     var6 = -1;
-                                    var7 = var7 + param2[var13_int].b();
+                                    var7 = var7 + param2[var13_int].paddedWidth();
                                     if (var7 > param0) {
                                       stackIn_54_0 = var9 + "...";
                                       return stackIn_54_0;

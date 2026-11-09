@@ -31,8 +31,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         float var5Lifetime1;
         if (param0 == 260) {
           if (this.field_l) {
-            var2 = this.field_b.XA();
-            var3 = this.field_b.i();
+            var2 = this.field_b.farPlane();
+            var3 = this.field_b.nearPlane();
             var4 = (float)var2 - (float)(-var3 + var2) * 0.125f;
             var5 = -(0.25f * (float)(var2 - var3)) + (float)var2;
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.S(98), (float)this.field_b.e((byte) 99) / 255.0f);
@@ -44,8 +44,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         this.a(-12, 3, -112);
         if (this.field_l) {
-          var2Lifetime1 = this.field_b.XA();
-          var3Lifetime1 = this.field_b.i();
+          var2Lifetime1 = this.field_b.farPlane();
+          var3Lifetime1 = this.field_b.nearPlane();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.125f;
           var5Lifetime1 = -(0.25f * (float)(var2Lifetime1 - var3Lifetime1)) + (float)var2Lifetime1;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.field_b.S(98), (float)this.field_b.e((byte) 99) / 255.0f);
@@ -73,7 +73,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     private final void e(byte param0) {
         int var2 = this.field_b.M(-125);
-        ut var3 = this.field_b.g((byte) -28);
+        AffineTransform3D var3 = this.field_b.g((byte) -28);
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.field_b : this.field_j.field_b);
         } else {
@@ -81,7 +81,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         jaggl.OpenGL.glEnable(34336);
         this.field_l = true;
-        var3.a(0.0f, this.field_s, (byte) 71, 0.0f, -1.0f, (float)var2);
+        var3.transformPlane(0.0f, this.field_s, (byte) 71, 0.0f, -1.0f, (float)var2);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_s[0], this.field_s[1], this.field_s[2], this.field_s[3]);
         this.a(param0 + 246);
         if (param0 == 14) {

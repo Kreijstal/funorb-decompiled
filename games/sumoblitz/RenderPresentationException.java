@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf extends Exception {
+final class RenderPresentationException extends Exception {
     static ts field_e;
     static String[] field_b;
     static String menuText;
     static DialogLayer field_a;
     static int field_d;
 
-    public rf() {
+    public RenderPresentationException() {
     }
 
     final static boolean a(boolean param0) {

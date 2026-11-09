@@ -20,7 +20,7 @@ final class wq {
             stackIn_3_0 = GraphicsToolkit.field_c;
             return stackIn_3_0;
           }
-          var2 = (fw) (ar.field_N.a(122, (long)param0.field_a));
+          var2 = (fw) (ar.field_N.a(122, (long)param0.toolkitId));
           if (var2 != null &&
             param0 == var2.field_k) {
             var3 = var2.field_l;
@@ -29,7 +29,7 @@ final class wq {
               var2.unlink(false);
             }
             var3 = new pm(param0);
-            ar.field_N.a(new fw(param0, var3), -1, (long)param0.field_a);
+            ar.field_N.a(new fw(param0, var3), -1, (long)param0.toolkitId);
           }
           im.field_c = param0;
           GraphicsToolkit.field_c = var3;

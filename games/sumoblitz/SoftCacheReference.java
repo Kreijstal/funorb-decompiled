@@ -10,7 +10,7 @@ final class SoftCacheReference extends CacheReferenceNode {
         return this.reference.get();
     }
 
-    final static GraphicsToolkit createSoftwareToolkit(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
+    final static GraphicsToolkit createSoftwareToolkit(int param0, java.awt.Canvas param1, TextureProvider param2, int param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
         SoftwareGraphicsToolkit stackIn_4_0 = null;

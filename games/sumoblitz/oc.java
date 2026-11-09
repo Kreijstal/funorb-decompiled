@@ -148,7 +148,7 @@ final class oc extends ShaderEffect {
             field_f = -57;
           }
           for (var2 = 0; var2 < 25; var2++) {
-            if (wm.field_f[var2]) {
+            if (TextureMetadata.field_f[var2]) {
               var1_int++;
             }
           }
@@ -166,8 +166,8 @@ final class oc extends ShaderEffect {
           StatusMessagePanel.field_A = true;
           int var3_int = -70 % ((param2 + 39) / 44);
           ih.field_c = param1 ? true : false;
-          hc.field_c = new MessageDialog(rf.field_a, tq.field_a, param0, pg.field_a, ih.field_c);
-          rf.field_a.pushDialog((byte) 108, hc.field_c);
+          hc.field_c = new MessageDialog(RenderPresentationException.field_a, tq.field_a, param0, pg.field_a, ih.field_c);
+          RenderPresentationException.field_a.pushDialog((byte) 108, hc.field_c);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -5,7 +5,7 @@ final class uq {
     static ToolkitFont field_a;
 
     final static void a(int param0, int param1) {
-        ut.a(param1, (byte) -55, TimedSceneEffect.field_m[param0], true);
+        AffineTransform3D.crossfadeMusicTrack(param1, (byte) -55, TimedSceneEffect.field_m[param0], true);
     }
 
     public static void releaseStatics(byte param0) {

@@ -423,17 +423,17 @@ final class ou extends na {
           }
           hu.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
           PlayingSound.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
-          rf.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
+          RenderPresentationException.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {
-            stackIn_116_0 = rf.field_d;
+            stackIn_116_0 = RenderPresentationException.field_d;
             if (0 <= eb.field_a[var4Lifetime2]) {
               stackIn_117_1 = ga.field_h;
             } else {
               stackIn_117_1 = GameClientShell.field_t;
             }
-            rf.field_d = stackIn_116_0 + stackIn_117_1;
+            RenderPresentationException.field_d = stackIn_116_0 + stackIn_117_1;
           }
-          hh.field_f = -(rf.field_d >> 1) + nv.field_b;
+          hh.field_f = -(RenderPresentationException.field_d >> 1) + nv.field_b;
           var4Lifetime3 = -96 % ((param2 - 48) / 57);
           ib.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;

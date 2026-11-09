@@ -6,9 +6,9 @@ final class o {
     static String field_a;
 
     final static void a(int param0) {
-        wm.field_f[oh.levelIndex] = true;
+        TextureMetadata.field_f[oh.levelIndex] = true;
         jk.field_a = iw.elapsedTicks;
-        if (rf.a(false)) {
+        if (RenderPresentationException.a(false)) {
           qn.field_d[oh.levelIndex] = true;
         }
         if (GridWidgetContainer.livesRemaining == 3) {

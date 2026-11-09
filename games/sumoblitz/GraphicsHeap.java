@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class za extends IntrusiveNode {
+abstract class GraphicsHeap extends IntrusiveNode {
     static int field_k;
     static int[] field_l;
 
@@ -82,7 +82,7 @@ abstract class za extends IntrusiveNode {
         return ht.field_h;
     }
 
-    protected za() {
+    protected GraphicsHeap() {
     }
 
     static {

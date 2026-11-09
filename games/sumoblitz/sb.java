@@ -8,7 +8,7 @@ final class sb {
     static GzipDecompressor gzipDecompressor;
     static ne[] field_d;
 
-    final static GraphicsToolkit a(ResourceArchive param0, int param1, d param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(ResourceArchive param0, int param1, TextureProvider param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         OpenGlGraphicsToolkit var8 = null;
@@ -73,7 +73,7 @@ final class sb {
           param4.writeShort(-42, 17);
           if (param1 <= 77) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
-            sb.a((ResourceArchive) null, -117, (d) null, (java.awt.Canvas) null, 97);
+            sb.a((ResourceArchive) null, -117, (TextureProvider) null, (java.awt.Canvas) null, 97);
           }
           param4.writeShort(117, param3);
           param4.writeShort(117, param2);

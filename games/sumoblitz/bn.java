@@ -143,7 +143,7 @@ final class bn extends ar {
               var5 = this.field_U;
             }
           } else {
-            var5 = hi.checkingText;
+            var5 = SoftwareRenderTarget.checkingText;
           }
           if (!var5.equals(this.text)) {
             this.text = var5;
@@ -196,7 +196,7 @@ final class bn extends ar {
         this.renderLayer(-71, -15, (byte) -42, -1);
         var6Lifetime1 = this.field_Q.c(-126);
         if (var6Lifetime1 == GameInstructions.field_f) {
-          var21 = hi.checkingText;
+          var21 = SoftwareRenderTarget.checkingText;
           if (!var21.equals(this.text)) {
             this.text = var21;
             this.a(9);
@@ -246,7 +246,7 @@ final class bn extends ar {
           return;
         }
         if (var6Lifetime1 == kt.field_a) {
-          var26 = hi.checkingText;
+          var26 = SoftwareRenderTarget.checkingText;
           if (!var26.equals(this.text)) {
             this.text = var26;
             this.a(9);

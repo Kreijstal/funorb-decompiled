@@ -308,7 +308,7 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.c() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.c(), -5, 1, true);
+          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
           ForceFieldRingEffect.field_t.a(cm.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
           hc.field_e.a(cm.levelCompleteText, -1, -1, 55, 320, 0);
           if (guard != -2355) {
@@ -341,9 +341,9 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, -4 + (var4_int + 55), guard + 2355);
             uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), guard ^ -2355);
             if (var6 != 0) {
-              MusicCrossfadeStream.field_q[15 + var5].a(55 + (var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1)), 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[15 + var5].draw(55 + (var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1)), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
-              MusicCrossfadeStream.field_q[var5].a(-(MusicCrossfadeStream.field_q[var5].b() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[var5].draw(-(MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             }
             qv.field_k.a(Integer.toString(wt.field_h[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(wt.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);

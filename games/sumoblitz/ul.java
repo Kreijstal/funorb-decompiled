@@ -202,7 +202,7 @@ final class ul {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var10[var6])];
           }
-          var1[var2] = new Sprite(vf.field_d, li.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], var11);
+          var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], var11);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -79);
         return var1;

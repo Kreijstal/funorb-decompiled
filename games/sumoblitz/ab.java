@@ -45,7 +45,7 @@ abstract class ab {
           while (true) {
             stackIn_8_0 = (var7_int == 0) ? 30 : 15;
             if (stackIn_8_0 > var8) {
-              var9 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96) + 1))};
+              var9 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
               var15 = kt.a((byte) -33, var9, (float)((double)(2048.0f / (float)var8) * 0.017453292519943295 + 0.0));
               var14 = var15;
               var12 = var14;
@@ -66,7 +66,7 @@ abstract class ab {
             if (stackIn_16_0 <= var8Lifetime1) {
               return;
             }
-            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96)))};
+            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96)))};
             dupTemp$0 = kt.a((byte) -52, var9Lifetime1, (float)(0.0 + (double)(2048.0f / (float)var8Lifetime1) * 0.017453292519943295));
             var13 = dupTemp$0;
             var9Lifetime1Lifetime1 = dupTemp$0;

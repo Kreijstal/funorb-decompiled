@@ -14,9 +14,9 @@ final class NativePaletteFont extends ToolkitFont implements NativeResource {
 
     public final native void disposeNativeResource(boolean param0);
 
-    private final native void S(NativeSoftwareGraphicsToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
+    private final native void S(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
 
-    NativePaletteFont(NativeSoftwareGraphicsToolkit param0, ya param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    NativePaletteFont(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

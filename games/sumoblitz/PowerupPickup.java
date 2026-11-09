@@ -34,41 +34,41 @@ final class PowerupPickup extends IntrusiveNode {
             !this.isMoving(0)) {
             if (0 == this.kind) {
               if (2 == this.effectIndex) {
-                MusicCrossfadeStream.field_q[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
               } else if (this.effectIndex == 1) {
-                MusicCrossfadeStream.field_q[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
               } else if (this.effectIndex == 0) {
-                MusicCrossfadeStream.field_q[2].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[2].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
               }
             } else if (this.effectIndex == 2) {
-              MusicCrossfadeStream.field_q[7].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[7].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             } else if (this.effectIndex == 1) {
-              MusicCrossfadeStream.field_q[6].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[6].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             } else if (this.effectIndex == 0) {
-              MusicCrossfadeStream.field_q[5].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[5].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             } else if (this.effectIndex == 3) {
-              MusicCrossfadeStream.field_q[8].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[8].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             } else if (this.effectIndex == 4) {
-              MusicCrossfadeStream.field_q[9].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[9].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             }
           } else {
             if (2 == this.effectIndex) {
-              MusicCrossfadeStream.field_q[12].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[12].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
             } else {
               if (this.effectIndex != 1) {
                 if (0 == this.effectIndex) {
-                  MusicCrossfadeStream.field_q[10].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                  MusicCrossfadeStream.field_q[10].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
                 } else {
                   if (3 != this.effectIndex) {
                     if (this.effectIndex == 4) {
-                      MusicCrossfadeStream.field_q[14].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                      MusicCrossfadeStream.field_q[14].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
                     }
                   } else {
-                    MusicCrossfadeStream.field_q[13].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                    MusicCrossfadeStream.field_q[13].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
                   }
                 }
               } else {
-                MusicCrossfadeStream.field_q[11].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[11].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, 0, 1, 0, 2);
               }
             }
           }
@@ -195,9 +195,9 @@ final class PowerupPickup extends IntrusiveNode {
         if (1 == this.kind && (this.velocityXQ8 != 0 ||
           this.velocityYQ8 != 0)) {
           if (0 == this.ageTicks % 2) {
-            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96)) >> 8, this.powerupTint((byte) 105), 1 + this.effectIndex, true)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, this.powerupTint((byte) 105), 1 + this.effectIndex, true)), (byte) 39);
           } else {
-            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96)) >> 8, this.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96) + 1024) >> 8, this.powerupTint((byte) 65), 1 + this.effectIndex, false)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, this.yQ8 - (-ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) + 1024) >> 8, this.powerupTint((byte) 65), 1 + this.effectIndex, false)), (byte) 39);
           }
         }
         if (param0 != -31255) {

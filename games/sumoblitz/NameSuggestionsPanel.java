@@ -213,7 +213,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         sq.field_b = ma.field_b;
         field_F = SpriteData.b(param3, "", "menu_frame");
         MidiNoteMixer.field_q = SpriteData.b(param3, "", "tooltip_kit");
-        hi.field_b = SpriteData.b(param3, "", "achievements");
+        SoftwareRenderTarget.field_b = SpriteData.b(param3, "", "achievements");
         CompactMeshGeometry.field_N = SpriteData.a(param0, "basic", "unachieved");
         MusicCrossfadeStream.field_p = SpriteData.a(param0, "basic", "locked");
         IntrusiveNode.field_d = SpriteData.a(param3, "", "titleimage");
@@ -245,7 +245,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           bk.field_b = SpriteData.b(param3, "", "mod_bomb");
           cd.field_c = SpriteData.b(param3, "", "mod_spikes");
           lh.field_k = SpriteData.a(param3, "", "zap");
-          eu.field_a = SpriteData.b(param3, "", "chargebar");
+          Transform3D.field_a = SpriteData.b(param3, "", "chargebar");
           bl.field_a = SpriteData.a(param3, "", "bounceup");
           uj.field_c = SpriteData.b(param3, "", "powerups");
           df.field_d = SpriteData.a(param3, "", "particle");

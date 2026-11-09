@@ -379,9 +379,9 @@ class Drone {
             this.clearTemporaryPowerup(677397768);
           }
           if (this.ageTicks % 2 != 0) {
-            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, this.xQ8 + (ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96)) >> 8, this.powerupTint(0), this.temporaryPowerup + 1, true)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, this.xQ8 + (ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, this.powerupTint(0), this.temporaryPowerup + 1, true)), (byte) 39);
           } else {
-            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, he.field_o, (byte) -96)) >> 8, this.powerupTint(0), 1 + this.temporaryPowerup, false)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + this.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) >> 8, -1024 + (this.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, this.powerupTint(0), 1 + this.temporaryPowerup, false)), (byte) 39);
           }
         }
         var4 = (TimedSceneEffect) (this.effects.first(118));
@@ -501,7 +501,7 @@ class Drone {
         this.effects = new IntrusiveDeque();
         ts.a(this.xQ8, this.effects, -16240, 40, lr.field_a[this.droneType], this.yQ8);
         int var2 = 111 % ((param0 - 57) / 38);
-        gn.a(19 + ExpandingRingEffect.nextRandomInt(3, he.field_o, (byte) -96), true);
+        gn.a(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
     }
 
     private final void initializeDroneStats(int param0) {
@@ -601,7 +601,7 @@ class Drone {
             }
           }
         }
-        if (rf.a(false) &&
+        if (RenderPresentationException.a(false) &&
           this.droneType != 0) {
           this.bounceScale = this.bounceScale * 2.0;
           this.targetSpeedQ8 = this.targetSpeedQ8 << 1;
@@ -817,7 +817,7 @@ class Drone {
             var7 = (TimedSceneEffect) (this.effects.next((byte) 18));
           }
           if (0 > this.spawnAgeTicks) {
-            ts.field_e[this.droneType].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)(this.radiusQ8 >> 8) / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+            ts.field_e[this.droneType].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)(this.radiusQ8 >> 8) / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
           }
           if (this.destructionTicks == 0) {
             if (this.droneType != 0) {
@@ -830,7 +830,7 @@ class Drone {
                 } else {
                   stackIn_54_3 = 20;
                 }
-                ((ToolkitSprite) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_53_2, (int)((double)stackIn_54_3 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_53_0).drawRotated(stackIn_53_1, stackIn_53_2, (int)((double)stackIn_54_3 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
               } else {
                 if (this.droneType == 2) {
                   stackIn_49_0 = hv.field_d[0];
@@ -841,7 +841,7 @@ class Drone {
                   } else {
                     stackIn_50_3 = 20;
                   }
-                  ((ToolkitSprite) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, (int)((double)stackIn_50_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                  ((ToolkitSprite) (Object) stackIn_49_0).drawRotated(stackIn_49_1, stackIn_49_2, (int)((double)stackIn_50_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                 } else {
                   if (this.droneType != 3) {
                     if (this.droneType != 4) {
@@ -856,7 +856,7 @@ class Drone {
                         } else {
                           stackIn_46_5 = 0;
                         }
-                        ((GraphicsToolkit) (Object) stackIn_45_0).s(stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5);
+                        ((GraphicsToolkit) (Object) stackIn_45_0).drawCircle(stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5);
                       } else {
                         stackIn_41_0 = mr.field_e[0];
                         stackIn_41_1 = (float)(this.xQ8 >> 8);
@@ -867,7 +867,7 @@ class Drone {
                         } else {
                           stackIn_42_4 = var5;
                         }
-                        ((ToolkitSprite) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, (int)(stackIn_41_3 * ((double)stackIn_42_4 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
+                        ((ToolkitSprite) (Object) stackIn_41_0).drawRotated(stackIn_41_1, stackIn_41_2, (int)(stackIn_41_3 * ((double)stackIn_42_4 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
                       }
                     } else {
                       stackIn_36_0 = MenuScreen.field_a[0];
@@ -878,7 +878,7 @@ class Drone {
                       } else {
                         stackIn_37_3 = 20;
                       }
-                      ((ToolkitSprite) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_36_2, (int)((double)stackIn_37_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                      ((ToolkitSprite) (Object) stackIn_36_0).drawRotated(stackIn_36_1, stackIn_36_2, (int)((double)stackIn_37_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                     }
                   } else {
                     stackIn_31_0 = s.field_n[0];
@@ -889,7 +889,7 @@ class Drone {
                     } else {
                       stackIn_32_3 = var5;
                     }
-                    ((ToolkitSprite) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, (int)((double)stackIn_32_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                    ((ToolkitSprite) (Object) stackIn_31_0).drawRotated(stackIn_31_1, stackIn_31_2, (int)((double)stackIn_32_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                   }
                 }
               }
@@ -897,7 +897,7 @@ class Drone {
               if (this.isBlastReady(20) &&
                 0 < this.blastButtonHeldTicks &&
                 ul.field_f == 0) {
-                ht.field_e[6 - this.blastButtonHeldTicks / 7 + 3].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
+                ht.field_e[6 - this.blastButtonHeldTicks / 7 + 3].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
               } else {
                 stackIn_23_0 = ht.field_e[0];
                 stackIn_23_1 = (float)(this.xQ8 >> 8);
@@ -907,12 +907,12 @@ class Drone {
                 } else {
                   stackIn_24_3 = 5120;
                 }
-                ((ToolkitSprite) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, (int)((double)stackIn_24_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_23_0).drawRotated(stackIn_23_1, stackIn_23_2, (int)((double)stackIn_24_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
               }
             }
             if (this.isBlastActive(guard - 19310) &&
               ul.field_f == 0) {
-              kw.field_a.a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 28.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+              kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 28.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
             }
           }
           var8 = this.velocityXQ8;
@@ -927,7 +927,7 @@ class Drone {
             if (var10 != 0) {
               var12 = var8 + this.xQ8 >> 8;
               var13 = this.yQ8 + var9 >> 8;
-              toolkit.a(-var10 + var12, var13, var12 + var10, var13, var6 + tt.a((byte) -128, this.droneType), 1);
+              toolkit.drawLine(-var10 + var12, var13, var12 + var10, var13, var6 + tt.a((byte) -128, this.droneType), 1);
             }
           } else {
             if (this.destructionTicks <= 0) {
@@ -941,7 +941,7 @@ class Drone {
                   } else {
                     stackIn_93_3 = var10;
                   }
-                  ((ToolkitSprite) (Object) stackIn_92_0).a(stackIn_92_1, stackIn_92_2, (int)((double)stackIn_93_3 / 14.0 * 4096.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                  ((ToolkitSprite) (Object) stackIn_92_0).drawRotated(stackIn_92_1, stackIn_92_2, (int)((double)stackIn_93_3 / 14.0 * 4096.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                 } else {
                   if (2 == this.droneType) {
                     stackIn_88_0 = hv.field_d[1];
@@ -953,13 +953,13 @@ class Drone {
                     } else {
                       stackIn_89_4 = var10;
                     }
-                    ((ToolkitSprite) (Object) stackIn_88_0).a(stackIn_88_1, stackIn_88_2, (int)(stackIn_88_3 * ((double)stackIn_89_4 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
+                    ((ToolkitSprite) (Object) stackIn_88_0).drawRotated(stackIn_88_1, stackIn_88_2, (int)(stackIn_88_3 * ((double)stackIn_89_4 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
                   } else {
                     if (this.droneType != 3) {
                       if (this.droneType != 4) {
                         if (this.droneType != 5) {
-                          toolkit.s(this.xQ8 + var8 >> 8, this.yQ8 + var9 >> 8, var10, var6 + tt.a((byte) -128, this.droneType), 1);
-                          toolkit.s(var8 + this.xQ8 >> 8, var9 + this.yQ8 >> 8, var10 >> 2, 2236962 + var6, 1);
+                          toolkit.drawCircle(this.xQ8 + var8 >> 8, this.yQ8 + var9 >> 8, var10, var6 + tt.a((byte) -128, this.droneType), 1);
+                          toolkit.drawCircle(var8 + this.xQ8 >> 8, var9 + this.yQ8 >> 8, var10 >> 2, 2236962 + var6, 1);
                         } else {
                           stackIn_83_0 = mr.field_e[1];
                           stackIn_83_1 = (float)(this.xQ8 + var8 >> 8);
@@ -970,7 +970,7 @@ class Drone {
                           } else {
                             stackIn_84_4 = var10;
                           }
-                          ((ToolkitSprite) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, (int)(stackIn_83_3 * ((double)stackIn_84_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                          ((ToolkitSprite) (Object) stackIn_83_0).drawRotated(stackIn_83_1, stackIn_83_2, (int)(stackIn_83_3 * ((double)stackIn_84_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                         }
                       } else {
                         stackIn_78_0 = MenuScreen.field_a[1];
@@ -982,7 +982,7 @@ class Drone {
                         } else {
                           stackIn_79_4 = 10;
                         }
-                        ((ToolkitSprite) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2, (int)(stackIn_78_3 * ((double)stackIn_79_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                        ((ToolkitSprite) (Object) stackIn_78_0).drawRotated(stackIn_78_1, stackIn_78_2, (int)(stackIn_78_3 * ((double)stackIn_79_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                       }
                     } else {
                       stackIn_73_0 = s.field_n[1];
@@ -994,7 +994,7 @@ class Drone {
                       } else {
                         stackIn_74_4 = 10;
                       }
-                      ((ToolkitSprite) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_73_2, (int)(stackIn_73_3 * ((double)stackIn_74_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                      ((ToolkitSprite) (Object) stackIn_73_0).drawRotated(stackIn_73_1, stackIn_73_2, (int)(stackIn_73_3 * ((double)stackIn_74_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                     }
                   }
                 }
@@ -1008,7 +1008,7 @@ class Drone {
                 } else {
                   stackIn_67_4 = var10;
                 }
-                ((ToolkitSprite) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, (int)(stackIn_66_3 * ((double)stackIn_67_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_66_0).drawRotated(stackIn_66_1, stackIn_66_2, (int)(stackIn_66_3 * ((double)stackIn_67_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
               }
             }
           }
@@ -1016,27 +1016,27 @@ class Drone {
             this.destructionTicks == 0) {
             if (this.variantCooldownTicks == 0 &&
               this.armourHitsRemaining > 0) {
-              hh.field_e[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)((3.141592653589793 + this.facingRadians) * 32768.0 / 3.141592653589793));
+              hh.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)((3.141592653589793 + this.facingRadians) * 32768.0 / 3.141592653589793));
             } else {
-              hh.field_e[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793));
+              hh.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793));
             }
             if (this.droneType == 0) {
-              hh.field_e[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793) + 32768);
+              hh.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793) + 32768);
             }
           } else if (this.variant == 2 &&
             0 == this.destructionTicks) {
             if (0 == this.variantCooldownTicks) {
-              up.field_e[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
+              up.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
             } else {
-              up.field_e[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
+              up.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793));
             }
           } else {
             if (this.variant == 3 &&
               0 == this.destructionTicks) {
               if (this.variantCooldownTicks != 0) {
-                ct.field_A[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793));
+                ct.field_A[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793));
               } else {
-                ct.field_A[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793));
+                ct.field_A[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793));
               }
             }
           }
@@ -1052,7 +1052,7 @@ class Drone {
             } else {
               stackIn_123_4 = var10;
             }
-            ((ToolkitSprite) (Object) stackIn_122_0).a(stackIn_122_1, stackIn_122_2, (int)(stackIn_122_3 * ((double)stackIn_123_4 / 7.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+            ((ToolkitSprite) (Object) stackIn_122_0).drawRotated(stackIn_122_1, stackIn_122_2, (int)(stackIn_122_3 * ((double)stackIn_123_4 / 7.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

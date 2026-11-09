@@ -22,7 +22,7 @@ final class iw {
           if (param3 != -21834) {
             elapsedTicks = -84;
           }
-          stackIn_6_0 = ad.e(param3 + 34602);
+          stackIn_6_0 = LegacyOpenGlGraphicsHeap.e(param3 + 34602);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

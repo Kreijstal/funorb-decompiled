@@ -790,7 +790,7 @@ class Sprite extends SpriteState {
         this.field_z = var3Lifetime3;
     }
 
-    final Sprite a() {
+    final Sprite copyMirroredHorizontally() {
         int var2 = 0;
         int var3 = 0;
         Sprite var1 = new Sprite(this.field_x, this.field_u);
@@ -856,23 +856,23 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] destination, int[] source, int sourceOffset, int destinationOffset, int width, int height, int destinationSkip, int sourceSkip) {
         int var8 = 0;
         int var9 = 0;
-        for (var8 = -param5; var8 < 0; var8++) {
-          var9 = param3 + param4 - 3;
-          while (param3 < var9) {
-            param0[param3++] = param1[param2++];
-            param0[param3++] = param1[param2++];
-            param0[param3++] = param1[param2++];
-            param0[param3++] = param1[param2++];
+        for (var8 = -height; var8 < 0; var8++) {
+          var9 = destinationOffset + width - 3;
+          while (destinationOffset < var9) {
+            destination[destinationOffset++] = source[sourceOffset++];
+            destination[destinationOffset++] = source[sourceOffset++];
+            destination[destinationOffset++] = source[sourceOffset++];
+            destination[destinationOffset++] = source[sourceOffset++];
           }
           var9 += 3;
-          while (param3 < var9) {
-            param0[param3++] = param1[param2++];
+          while (destinationOffset < var9) {
+            destination[destinationOffset++] = source[sourceOffset++];
           }
-          param3 = param3 + param6;
-          param2 = param2 + param7;
+          destinationOffset = destinationOffset + destinationSkip;
+          sourceOffset = sourceOffset + sourceSkip;
         }
     }
 
@@ -1270,7 +1270,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
+          Sprite.blitUnmasked(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

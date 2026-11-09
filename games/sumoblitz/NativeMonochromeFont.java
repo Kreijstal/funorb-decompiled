@@ -20,7 +20,7 @@ final class NativeMonochromeFont extends ToolkitFont implements NativeResource {
         this.NA(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    NativeMonochromeFont(NativeSoftwareGraphicsToolkit param0, ya param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    NativeMonochromeFont(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
@@ -38,5 +38,5 @@ final class NativeMonochromeFont extends ToolkitFont implements NativeResource {
         this.JA(param0, param1, var6, var7, var8, var9, var10);
     }
 
-    private final native void JA(NativeSoftwareGraphicsToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void JA(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 }

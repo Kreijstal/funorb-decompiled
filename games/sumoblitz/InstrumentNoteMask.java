@@ -28,12 +28,12 @@ final class InstrumentNoteMask extends IntrusiveNode {
           var3[var4_int] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8) {
-          var4 = new Sprite(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], var3);
+          var4 = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], var3);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
           return var4;
         }
         InstrumentNoteMask.c((byte) -8);
-        var4Lifetime1 = new Sprite(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], var3);
+        var4Lifetime1 = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], var3);
         PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
         return var4Lifetime1;
     }

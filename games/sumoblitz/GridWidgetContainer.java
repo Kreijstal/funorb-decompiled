@@ -231,7 +231,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
               var5.position = 0;
-              li.field_r = param1 ? -2 : -1;
+              ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
               vb.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;

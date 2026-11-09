@@ -52,7 +52,7 @@ final class ts {
           while (true) {
             stackIn_10_0 = (var6_int == 0) ? 20 : 10;
             if (stackIn_10_0 > var7) {
-              var8 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96) + 1))};
+              var8 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
               var13 = kt.a((byte) -124, var8, (float)((double)(2048.0f / (float)var7) * 0.017453292519943295 + 0.0));
               var12 = var13;
               var10 = var12;
@@ -74,7 +74,7 @@ final class ts {
             if (stackIn_17_0 <= ~stackIn_18_1) {
               return;
             }
-            var8Lifetime1 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96) + 1))};
+            var8Lifetime1 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
             dupTemp$0 = kt.a((byte) -10, var8Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1)));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;

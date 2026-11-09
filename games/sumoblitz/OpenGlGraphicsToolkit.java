@@ -176,7 +176,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         IntrusiveNode var4 = new IntrusiveNode();
         if (param0 != 33984) {
           int[] var5 = (int[]) null;
-          this.SA(-105, -54, 124, -38, (int[]) null, -85, -29);
+          this.drawPixels(-105, -54, 124, -38, (int[]) null, -85, -29);
         }
         var4.key = param1;
         this.field_Fc.addLast(var4, (byte) 39);
@@ -195,7 +195,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void updateTime(int timeMillis) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$1 = 0;
@@ -213,7 +213,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         IntrusiveNode var11;
         ge var12;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        param0 = param0 & 2147483647;
+        timeMillis = timeMillis & 2147483647;
         var2 = 0;
         while (!this.field_Gc.isEmpty((byte) -100)) {
           var5 = (ge) (this.field_Gc.removeFirst(9));
@@ -346,7 +346,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             this.field_Cc = wq.a(-39);
           }
         }
-        super.f(param0);
+        super.updateTime(timeMillis);
     }
 
     final ru a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, iw param7) {
@@ -415,8 +415,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFogfv(2918, NetworkResourceRequest.field_v, 0);
     }
 
-    final void GA(int param0) {
-        jaggl.OpenGL.glClearColor((float)(16711680 & param0) / 16711680.0f, (float)(param0 & 65280) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> 24) / 255.0f);
+    final void clear(int color) {
+        jaggl.OpenGL.glClearColor((float)(16711680 & color) / 16711680.0f, (float)(color & 65280) / 65280.0f, (float)(color & 255) / 255.0f, (float)(color >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
     }
 
@@ -652,22 +652,22 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.a(-9267, this.field_K[this.field_mc]));
     }
 
-    final void b() {
+    final void restoreCanvasTarget() {
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         try {
           this.L(-25);
           this.a((ed) null, 126);
           this.e(0, 13);
           this.k(1);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
-          jaggl.OpenGL.glRasterPos2i(param0, param1);
-          jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_Ec, param4, param5);
+          jaggl.OpenGL.glRasterPos2i(x, y);
+          jaggl.OpenGL.glDrawPixelsi(width, height, 32993, this.field_Ec, pixels, offset);
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.SA(" + x + ',' + y + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
         }
     }
 
@@ -681,14 +681,14 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Zc = (IntrusiveDeque) null;
         }
         if (ar.field_L != this.field_wb[this.field_mc]) {
-          jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].b(-107, pq.field_y), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].writeColumnMajor4x4(-107, pq.field_y), 0);
         } else {
           jaggl.OpenGL.glLoadIdentity();
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final void a(vc param0) {
+    final void bindRenderTarget(RenderTarget target) {
     }
 
     final ef a(int param0, byte param1, int[][] param2, boolean param3) {
@@ -717,7 +717,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    OpenGlGraphicsToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
+    OpenGlGraphicsToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, TextureProvider param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -907,7 +907,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             decompiledCaughtException = decompiledCaughtParameter3;
             var8 = decompiledCaughtException;
             var8.printStackTrace();
-            this.a((byte) -98);
+            this.close((byte) -98);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
@@ -953,7 +953,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(ToolkitSprite param0, boolean param1) {
+    final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
     }
 
     final void J(int param0) {
@@ -1006,7 +1006,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         var4.key = (long)param2;
         this.field_Gc.addLast((IntrusiveNode) (var4), (byte) 39);
         if (param0 != -99) {
-          this.GA(-33);
+          this.clear(-33);
         }
     }
 
@@ -1018,7 +1018,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glLightModelfv(2899, NetworkResourceRequest.field_v, 0);
         if (param0 != 7) {
           int[] var3 = (int[]) null;
-          this.SA(-42, 12, 8, 123, (int[]) null, 81, 90);
+          this.drawPixels(-42, 12, 8, 123, (int[]) null, 81, 90);
         }
     }
 
@@ -1035,7 +1035,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -99) {
-            this.b();
+            this.restoreCanvasTarget();
           }
           if (!this.field_Ic && (!rm.a(param3, -124) ||
             !rm.a(param2, -128))) {
@@ -1302,7 +1302,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final nr a(int param0, int param1) {
+    final RenderBuffer createRenderBuffer(int width, int height) {
         return null;
     }
 
@@ -1560,21 +1560,21 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (!this.field_s.a(-20011)) {
           if (!this.field_Db) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Lb.b(-110, pq.field_y), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Lb.writeColumnMajor4x4(-110, pq.field_y), 0);
           } else {
             jaggl.OpenGL.glLoadIdentity();
           }
           this.field_Dc = false;
         } else {
           if (!this.field_Uc) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Gb.b(-63, pq.field_y), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Gb.writeColumnMajor4x4(-63, pq.field_y), 0);
             this.field_Uc = true;
             this.E(-114);
             this.Y(param0 ^ -25);
           }
           if (!this.field_Db) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_Lb.b(-79, pq.field_y), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_Lb.writeColumnMajor4x4(-79, pq.field_y), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;
@@ -1582,8 +1582,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void d() {
-        super.d();
+    final void dispose() {
+        super.dispose();
         if (this.field_Yc != null) {
           this.field_Yc.a();
           this.field_Yc.release();
@@ -1591,11 +1591,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void b(int param0, int param1) throws rf {
+    final void present(int sourceX, int sourceY) throws RenderPresentationException {
         this.field_Yc.swapBuffers();
     }
 
-    final vc a(bu param0, nr param1) {
+    final RenderTarget createRenderTarget(RenderSurface surface, RenderBuffer buffer) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1606,19 +1606,19 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = null;
-          return (vc) (stackIn_1_0);
+          return (RenderTarget) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_4_0 = var3;
           stackIn_4_1 = new StringBuilder().append("on.OF(");
-          if (param0 == null) {
+          if (surface == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (buffer == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -1662,7 +1662,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void e() {
+    final void copyFrontToBack() {
         if (this.field_rb <= 0 &&
           !(this.field_Sb > 0)) {
           return;
@@ -1693,7 +1693,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFlush();
         jaggl.OpenGL.glReadBuffer(1029);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.KA(var1, var3, var2, var4);
+        this.setClip(var1, var3, var2, var4);
     }
 
     static {

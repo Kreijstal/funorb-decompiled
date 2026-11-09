@@ -17,14 +17,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     long field_peer;
     private jaclib.memory.heap.NativeHeap field_gb;
     int field_pc;
-    ut field_Lb;
+    AffineTransform3D field_Lb;
     boolean field_Db;
     static Boolean field_j;
     int field_Cb;
     int field_o;
-    ut field_Gb;
-    private ut field_sb;
-    private ut field_vc;
+    AffineTransform3D field_Gb;
+    private AffineTransform3D field_sb;
+    private AffineTransform3D field_vc;
     private boolean field_fb;
     boolean field_Z;
     private float field_qb;
@@ -38,7 +38,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     float field_E;
     int field_oc;
     int field_vb;
-    ut[] field_V;
+    AffineTransform3D[] field_V;
     int field_Kb;
     boolean field_tb;
     private ShaderEffect[] field_X;
@@ -230,9 +230,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final ut c(boolean param0) {
+    final AffineTransform3D c(boolean param0) {
         if (!param0) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_sb;
     }
@@ -244,7 +244,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void k(int param0) {
-        this.field_Lb.a(param0);
+        this.field_Lb.setIdentity(param0);
         this.field_Db = true;
         this.z(-29654);
     }
@@ -273,9 +273,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return param1;
     }
 
-    final ut H(int param0) {
+    final AffineTransform3D H(int param0) {
         if (param0 != 26453) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_V[this.field_mc];
     }
@@ -329,7 +329,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         float var2 = 0.0f;
         if (vu.field_h == this.field_s) {
           var2 = this.b((byte) 127);
-          this.field_Lb.a((byte) 96, 0.0f, var2, var2);
+          this.field_Lb.translate((byte) 96, 0.0f, var2, var2);
         }
         if (param0 != -29654) {
           this.field_Y = -4;
@@ -359,22 +359,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void l(byte param0);
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int left, int top, int right, int bottom) {
         int var5 = 0;
-        if (param0 > this.field_v) {
+        if (left > this.field_v) {
           var5 = 1;
-          this.field_v = param0;
+          this.field_v = left;
         }
-        if (param2 < this.field_F) {
+        if (right < this.field_F) {
           var5 = 1;
-          this.field_F = param2;
+          this.field_F = right;
         }
-        if (this.field_vb < param1) {
-          this.field_vb = param1;
+        if (this.field_vb < top) {
+          this.field_vb = top;
           var5 = 1;
         }
-        if (param3 < this.field_yc) {
-          this.field_yc = param3;
+        if (bottom < this.field_yc) {
+          this.field_yc = bottom;
           var5 = 1;
         }
         if (var5 != 0) {
@@ -403,7 +403,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void ab(int param0);
 
-    final ToolkitSprite a(SpriteData param0, boolean param1) {
+    final ToolkitSprite createSprite(SpriteData data, boolean preferIndexed) {
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -428,28 +428,28 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int[] var12 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (0 != param0.field_h &&
-            0 != param0.field_i) {
-            var12 = new int[param0.field_h * param0.field_i];
+          if (0 != data.field_h &&
+            0 != data.field_i) {
+            var12 = new int[data.field_h * data.field_i];
             var11 = var12;
             var4 = var11;
             var5 = 0;
             var6 = 0;
-            if (null != param0.field_a) {
-              for (var7 = 0; var7 < param0.field_i; var7++) {
-                for (var8 = 0; var8 < param0.field_h; var8++) {
+            if (null != data.field_a) {
+              for (var7 = 0; var7 < data.field_i; var7++) {
+                for (var8 = 0; var8 < data.field_h; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = ic.a(param0.field_a[var5] << 24, param0.field_g[eb.a(255, (int) param0.field_e[var5])]);
+                  var4[incrementValue$2] = ic.a(data.field_a[var5] << 24, data.field_g[eb.a(255, (int) data.field_e[var5])]);
                   var5++;
                 }
               }
             } else {
-              for (var7 = 0; var7 < param0.field_i; var7++) {
-                for (var8 = 0; param0.field_h > var8; var8++) {
+              for (var7 = 0; var7 < data.field_i; var7++) {
+                for (var8 = 0; data.field_h > var8; var8++) {
                   incrementValue$0 = var5;
                   var5++;
-                  var9 = param0.field_g[param0.field_e[incrementValue$0] & 255];
+                  var9 = data.field_g[data.field_e[incrementValue$0] & 255];
                   incrementValue$1 = var6;
                   var6++;
                   stackIn_18_0 = var4;
@@ -463,11 +463,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 }
               }
             }
-            var3 = this.a(0, -2, param0.field_i, param0.field_h, param0.field_h, var12);
+            var3 = this.createSpriteCopy(0, -2, data.field_i, data.field_h, data.field_h, var12);
           } else {
-            var3 = this.a(0, -2, 1, 1, 1, new int[]{0});
+            var3 = this.createSpriteCopy(0, -2, 1, 1, 1, new int[]{0});
           }
-          var3.a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
+          var3.setInsets(data.field_c, data.field_d, data.field_b, data.field_f);
           stackIn_23_0 = var3;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -475,12 +475,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var3_ref = decompiledCaughtException;
           stackIn_26_0 = var3_ref;
           stackIn_26_1 = new StringBuilder().append("aw.RA(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(preferIndexed).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void e(boolean param0) {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        this.field_V = new ut[this.field_cc];
+        this.field_V = new AffineTransform3D[this.field_cc];
         this.field_Zb = new ed[this.field_cc];
         this.field_wb = new tf[this.field_cc];
         this.field_K = new tg[this.field_cc];
@@ -605,11 +605,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_B[var2] = SlowBurstParticle.field_v;
           this.field_K[var2] = SlowBurstParticle.field_v;
           this.field_wb[var2] = ar.field_L;
-          this.field_V[var2] = new ut();
+          this.field_V[var2] = new AffineTransform3D();
         }
         this.field_pb = new ko[-2 + this.field_bc];
         this.field_D = (ed) ((Object) this.a(io.field_g, nl.field_p, 1, 1, (byte) -110));
-        this.a(new he(262144));
+        this.useHeap(new HardwareGraphicsHeap(262144));
         this.field_jc = this.a(new hu[]{new hu(new ls[]{ls.field_b, ls.field_e})}, (byte) 78);
         this.a(new hu[]{new hu(new ls[]{ls.field_b, ls.field_g})}, (byte) 70);
         this.a(new hu[]{new hu(ls.field_b), new hu(ls.field_g), new hu(ls.field_e), new hu(ls.field_c)}, (byte) 14);
@@ -651,7 +651,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.D(1);
         this.m(-16088);
-        this.e();
+        this.copyFrontToBack();
     }
 
     abstract void a(java.awt.Canvas param0, Object param1, int param2);
@@ -677,9 +677,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final ut B(int param0) {
+    final AffineTransform3D B(int param0) {
         if (param0 != 0) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_V[this.field_mc];
     }
@@ -745,16 +745,16 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract boolean a(io param0, iw param1, int param2);
 
-    final void a(za param0) {
+    final void useHeap(GraphicsHeap heap) {
         try {
-          this.field_gb = ((he) (param0)).field_p;
+          this.field_gb = ((HardwareGraphicsHeap) (heap)).heap;
           this.field_z = this.field_gb.a(32768, false);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.OB(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.OB(" + (heap != null ? "{...}" : "null") + ')');
         }
     }
 
-    void d() {
+    void dispose() {
         IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
@@ -762,7 +762,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (!this.field_H) {
           var1 = this.field_lb.first(-66);
           while (var1 != null) {
-            ((he) (var1)).c(-14365);
+            ((HardwareGraphicsHeap) (var1)).close(-14365);
             var1 = this.field_lb.next((byte) 18);
           }
           var1_ref = this.field_Q.keys();
@@ -778,27 +778,27 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void i(int param0);
 
-    final void K(int[] param0) {
+    final void getClip(int[] bounds) {
         try {
-          param0[0] = this.field_v;
-          param0[3] = this.field_yc;
-          param0[2] = this.field_F;
-          param0[1] = this.field_vb;
+          bounds[0] = this.field_v;
+          bounds[3] = this.field_yc;
+          bounds[2] = this.field_F;
+          bounds[1] = this.field_vb;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.K(" + (bounds != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract void a(int param0, int param1, int param2, ck param3);
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int centerX, int centerY, int radius, int color, int blendMode) {
         this.f((byte) 117);
-        this.a(false, param3);
+        this.a(false, color);
         this.a(mm.field_h, 0, 0);
         this.a(mm.field_h, 0, true);
-        this.e(param4, 13);
-        this.field_Lb.b((float)param2, (float)param2, 0, 1.0f);
-        this.field_Lb.a(param1, param0, (byte) 103, 0);
+        this.e(blendMode, 13);
+        this.field_Lb.setScale((float)radius, (float)radius, 0, 1.0f);
+        this.field_Lb.translate(centerY, centerX, (byte) 103, 0);
         this.U(0);
         this.a(1, false);
         this.a(0, 121, this.field_Qb);
@@ -812,13 +812,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final static void j(byte param0) {
         hq.field_b = -1;
         qf.field_a = 0;
-        za.field_k = -1;
+        GraphicsHeap.field_k = -1;
         up.field_d = false;
         hp.field_l = null;
         int var1 = 47 / ((9 - param0) / 43);
     }
 
-    final int[] Y() {
+    final int[] projectionParameters() {
         return new int[]{this.field_P, this.field_Hb, this.field_sc, this.field_rc};
     }
 
@@ -826,10 +826,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void J(int param0);
 
-    final za c(int param0) {
-        he var2 = new he(param0);
+    final GraphicsHeap createHeap(int capacity) {
+        HardwareGraphicsHeap var2 = new HardwareGraphicsHeap(capacity);
         this.field_lb.addLast((IntrusiveNode) (var2), (byte) 39);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
     final float[] a(int param0, float[] param1) {
@@ -907,11 +907,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void I(int param0);
 
-    final void f(int param0, int param1) {
-        if (param0 != this.field_oc ||
-          param1 != this.field_Yb) {
-          this.field_Yb = param1;
-          this.field_oc = param0;
+    final void setDepthRange(int nearPlane, int farPlane) {
+        if (nearPlane != this.field_oc ||
+          farPlane != this.field_Yb) {
+          this.field_Yb = farPlane;
+          this.field_oc = nearPlane;
           this.u(2);
           this.Q(13);
           this.n((byte) -78);
@@ -930,12 +930,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int x0, int y0, int x1, int y1, int color, int blendMode) {
         float var7;
         float var8;
         float var9;
-        var7 = (float)(-param0) + (float)param2;
-        var8 = (float)param3 - (float)param1;
+        var7 = (float)(-x0) + (float)x1;
+        var8 = (float)y1 - (float)y0;
         if (0.0f == var7 &&
           var8 == 0.0f) {
           var7 = 1.0f;
@@ -944,14 +944,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var7 = var7 * var9;
           var8 = var8 * var9;
         }
-        if (!this.a(0.0f, (float)param3 + var8, true, (float)param2 + var7, (float)param0, (float)param1, 0.0f)) {
+        if (!this.a(0.0f, (float)y1 + var8, true, (float)x1 + var7, (float)x0, (float)y0, 0.0f)) {
           return;
         }
         this.f((byte) -57);
-        this.a(false, param4);
+        this.a(false, color);
         this.a(mm.field_h, 0, 0);
         this.a(mm.field_h, 0, true);
-        this.e(param5, 13);
+        this.e(blendMode, 13);
         this.k(1);
         this.a(1, false);
         this.g(false);
@@ -1151,7 +1151,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final static GraphicsToolkit a(d param0, java.awt.Canvas param1, int param2, int param3) {
+    final static GraphicsToolkit a(TextureProvider param0, java.awt.Canvas param1, int param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
         LegacyOpenGlGraphicsToolkit stackIn_3_0 = null;
@@ -1281,14 +1281,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_Wb.a(22957);
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int x, int y, int width, int height, int color, int blendMode) {
         this.f((byte) -104);
-        this.a(false, param4);
+        this.a(false, color);
         this.a(mm.field_h, 0, 0);
         this.a(mm.field_h, 0, true);
-        this.e(param5, 13);
-        this.field_Lb.b((float)param3, (float)param2, 0, 1.0f);
-        this.field_Lb.a(param1, param0, (byte) 107, 0);
+        this.e(blendMode, 13);
+        this.field_Lb.setScale((float)height, (float)width, 0, 1.0f);
+        this.field_Lb.translate(y, x, (byte) 107, 0);
         this.U(0);
         this.a(1, false);
         this.n(2);
@@ -1308,15 +1308,15 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
-        this.a(param0, param1, param2 + param0, param1, param3, param4);
+    final void drawHorizontalLine(int x, int y, int length, int color, int blendMode) {
+        this.drawLine(x, y, length + x, y, color, blendMode);
     }
 
-    final int i() {
+    final int nearPlane() {
         return this.field_oc;
     }
 
-    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont createFont(FontMetrics metrics, SpriteData[] glyphs, boolean useMaskGlyphs) {
         RuntimeException var4 = null;
         HardwareBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1326,38 +1326,38 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new HardwareBitmapFont(this, param0, param1, param2);
+          stackIn_1_0 = new HardwareBitmapFont(this, metrics, glyphs, useMaskGlyphs);
           return (ToolkitFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
           stackIn_4_1 = new StringBuilder().append("aw.DF(");
-          if (param0 == null) {
+          if (metrics == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (glyphs == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(useMaskGlyphs).append(')').toString());
         }
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 <= 0 && this.field_rb - 1 <= param2 && param1 <= 0 &&
-          this.field_Sb - 1 <= param3) {
+    final void setClip(int left, int top, int right, int bottom) {
+        if (left <= 0 && this.field_rb - 1 <= right && top <= 0 &&
+          this.field_Sb - 1 <= bottom) {
           this.m(-16088);
           return;
         }
-        this.field_vb = 0 > param1 ? 0 : param1;
-        this.field_yc = this.field_rb < param3 ? 0 : param3;
-        this.field_F = this.field_rb >= param2 ? param2 : 0;
-        this.field_v = param0 >= 0 ? param0 : 0;
+        this.field_vb = 0 > top ? 0 : top;
+        this.field_yc = this.field_rb < bottom ? 0 : bottom;
+        this.field_F = this.field_rb >= right ? right : 0;
+        this.field_v = left >= 0 ? left : 0;
         if (!this.field_wc) {
           this.field_wc = true;
           this.A(-87);
@@ -1397,7 +1397,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.bb(param0 - 19518);
         this.s(-92);
         if (param0 != -1) {
-          this.field_Lb = (ut) null;
+          this.field_Lb = (AffineTransform3D) null;
         }
         for (var2 = this.field_cc - 1; var2 >= 0; var2--) {
           this.g(var2, -114);
@@ -1462,10 +1462,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void X(int param0);
 
-    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
+    HardwareGraphicsToolkit(java.awt.Canvas param0, Object param1, TextureProvider param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
-        wm var9 = null;
+        TextureMetadata var9 = null;
         java.awt.Dimension var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1481,12 +1481,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException var7_ref = null;
         this.field_lb = new IntrusiveDeque();
         this.field_Db = true;
-        this.field_Lb = new ut();
-        ut discarded$3 = new ut();
-        ut discarded$4 = new ut();
-        this.field_Gb = new ut();
-        this.field_sb = new ut();
-        this.field_vc = new ut();
+        this.field_Lb = new AffineTransform3D();
+        AffineTransform3D discarded$3 = new AffineTransform3D();
+        AffineTransform3D discarded$4 = new AffineTransform3D();
+        this.field_Gb = new AffineTransform3D();
+        this.field_sb = new AffineTransform3D();
+        this.field_vc = new AffineTransform3D();
         this.field_mc = 0;
         this.field_ac = 0;
         this.field_O = false;
@@ -1545,7 +1545,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Nb = 0;
         this.field_J = 1.0f;
         this.field_cb = new jaclib.memory.Stream();
-        ut discarded$5 = new ut();
+        AffineTransform3D discarded$5 = new AffineTransform3D();
         try {
           try {
             this.field_Ib = param1;
@@ -1556,11 +1556,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_Sb = var11.height;
             this.field_rb = var11.width;
             kr.a(true, -107, false);
-            if (null != this.field_h) {
-              this.field_lc = new mr(this, this.field_h);
-              this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.field_h.a(32075), this.field_dc);
-              for (var8 = 0; var8 < this.field_h.a(32075); var8++) {
-                var9 = this.field_h.a(-29193, var8);
+            if (null != this.textureProvider) {
+              this.field_lc = new mr(this, this.textureProvider);
+              this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.textureProvider.a(32075), this.field_dc);
+              for (var8 = 0; var8 < this.textureProvider.a(32075); var8++) {
+                var9 = this.textureProvider.a(-29193, var8);
                 if (var9 != null) {
                   this.field_nc.initTextureMetrics(var8, var9.field_t, var9.field_g);
                 }
@@ -1574,7 +1574,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7 = decompiledCaughtException;
             var7.printStackTrace();
-            this.a((byte) -60);
+            this.close((byte) -60);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1621,7 +1621,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void A(int param0);
 
-    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] pixels, int offset, int stride, int width, int height, boolean copyPixels) {
         RuntimeException var7 = null;
         pu stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1629,19 +1629,19 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new pu(this, param3, param4, param0, param1, param2);
+          stackIn_1_0 = new pu(this, width, height, pixels, offset, stride);
           return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_4_0 = var7;
           stackIn_4_1 = new StringBuilder().append("aw.TB(");
-          if (param0 == null) {
+          if (pixels == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(offset).append(',').append(stride).append(',').append(width).append(',').append(height).append(',').append(copyPixels).append(')').toString());
         }
     }
 
@@ -1668,11 +1668,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
-        this.field_P = param0;
-        this.field_Hb = param1;
-        this.field_sc = param2;
-        this.field_rc = param3;
+    final void setProjection(int centerX, int centerY, int scaleX, int scaleY) {
+        this.field_P = centerX;
+        this.field_Hb = centerY;
+        this.field_sc = scaleX;
+        this.field_rc = scaleY;
         this.Q(13);
         this.u(2);
         this.d(false);
@@ -1704,13 +1704,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_gb.a(param2, param1);
     }
 
-    final ut k(byte param0) {
+    final AffineTransform3D k(byte param0) {
         if (!this.field_R) {
-          this.field_vc.a(this.field_Gb, (byte) 77, this.field_Lb);
+          this.field_vc.setProduct(this.field_Gb, (byte) 77, this.field_Lb);
           this.field_R = true;
         }
         if (param0 < 58) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_vc;
     }
@@ -1734,21 +1734,21 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int XA() {
+    final int farPlane() {
         return this.field_Yb;
     }
 
-    void f(int param0) {
+    void updateTime(int timeMillis) {
         if (this.field_lc != null) {
           this.field_lc.a(125);
         }
-        this.field_kc = 2147483647 & param0;
+        this.field_kc = 2147483647 & timeMillis;
     }
 
     final void L(int param0) {
         hv var2 = null;
         if (param0 != -25) {
-          this.c(-125);
+          this.createHeap(-125);
         }
         if (this.field_s != vu.field_h) {
           var2 = this.field_s;
@@ -1763,9 +1763,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final ut d(int param0) {
+    final AffineTransform3D d(int param0) {
         if (param0 <= 57) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_Lb;
     }
@@ -1776,7 +1776,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         if (ar.field_L != this.field_wb[this.field_mc]) {
           this.field_wb[this.field_mc] = ar.field_L;
-          this.field_V[this.field_mc].a(1);
+          this.field_V[this.field_mc].setIdentity(1);
           this.j(128);
         }
     }
@@ -1980,10 +1980,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var7;
         int var8;
         int var9;
-        wm var10;
+        TextureMetadata var10;
         int var11;
         int var12;
-        ut var13;
+        AffineTransform3D var13;
         int var14;
         var14 = Sumoblitz.field_L ? 1 : 0;
         if (param2 != 50) {
@@ -2010,7 +2010,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.l(0);
           } else {
             var5 = this.field_lc.a(param2 + 37, param0);
-            var10 = this.field_h.a(-29193, param0);
+            var10 = this.textureProvider.a(-29193, param0);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {
               this.l(0);
@@ -2019,7 +2019,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               var11 = stackIn_21_0;
               var12 = var11 * 50;
               var13 = this.B(0);
-              var13.a((float)(this.field_kc % var12 * var10.field_u) / (float)var12, 0.0f, (float)(var10.field_c * (this.field_kc % var12)) / (float)var12, param2 - 50);
+              var13.setTranslation((float)(this.field_kc % var12 * var10.field_u) / (float)var12, 0.0f, (float)(var10.field_c * (this.field_kc % var12)) / (float)var12, param2 - 50);
               this.a(rs.field_c, param2 + 28830);
             }
             var6 = var10.field_q;
@@ -2044,9 +2044,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void b(boolean param0);
 
-    final ut g(byte param0) {
+    final AffineTransform3D g(byte param0) {
         if (param0 != -28) {
-          return (ut) null;
+          return (AffineTransform3D) null;
         }
         return this.field_Gb;
     }
@@ -2176,7 +2176,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_O = true;
         }
         if (param0 != 0) {
-          this.i();
+          this.nearPlane();
         }
     }
 

@@ -57,7 +57,7 @@ final class ks extends ff {
         return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
     }
 
-    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, d param2, boolean param3, int param4, ResourceArchive param5) {
+    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, TextureProvider param2, boolean param3, int param4, ResourceArchive param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -82,7 +82,7 @@ final class ks extends ff {
           if (!param3) {
             field_x = (cp) null;
           }
-          stackIn_5_0 = GraphicsToolkit.a(param0, param1, -1, param4, param2, var7, var6_int, param5);
+          stackIn_5_0 = GraphicsToolkit.createToolkit(param0, param1, -1, param4, param2, var7, var6_int, param5);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

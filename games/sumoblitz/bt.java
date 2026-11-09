@@ -23,7 +23,7 @@ abstract class bt extends pt {
         if (param0 <= 64) {
           return false;
         }
-        return !ut.field_o.a(true) ? true : false;
+        return !AffineTransform3D.field_o.a(true) ? true : false;
     }
 
     final static uw a(boolean param0) {

@@ -750,7 +750,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime49 = ke.a((byte) 88, "keycode_right");
           if (null != var2Lifetime49) {
-            ad.field_o = 255 & var2Lifetime49[0];
+            LegacyOpenGlGraphicsHeap.field_o = 255 & var2Lifetime49[0];
           }
           var2Lifetime50 = ke.a((byte) 88, "keycode_up");
           if (var2Lifetime50 != null) {

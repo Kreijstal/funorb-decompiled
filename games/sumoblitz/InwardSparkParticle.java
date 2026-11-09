@@ -50,9 +50,9 @@ final class InwardSparkParticle extends TimedSceneEffect {
             this.updateAndIsExpired(-59);
           }
           if (0 != this.textureKind) {
-            im.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
+            im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           } else {
-            uc.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
+            uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,8 +84,8 @@ final class InwardSparkParticle extends TimedSceneEffect {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ce.field_o != null) {
-            ce.field_o.field_B.a(param1, false);
+          if (ToolkitRasterBuffer.field_o != null) {
+            ToolkitRasterBuffer.field_o.field_B.a(param1, false);
           }
           if (SecondaryNodeQueue.field_a != null) {
             SecondaryNodeQueue.field_a.field_E.a(param1, false);

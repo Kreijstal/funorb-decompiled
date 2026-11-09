@@ -191,10 +191,10 @@ final class kd {
     final static void a(boolean param0, int param1) {
         if (param1 >= -78) {
           kd.a(-106, 83, -73);
-          ut.field_o.a(120, param0);
+          AffineTransform3D.field_o.a(120, param0);
           return;
         }
-        ut.field_o.a(120, param0);
+        AffineTransform3D.field_o.a(120, param0);
     }
 
     static {

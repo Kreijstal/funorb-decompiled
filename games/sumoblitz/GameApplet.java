@@ -948,7 +948,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = -117 / ((param0 + 43) / 61);
-          stackIn_4_0 = (vm.field_c == ad.field_p);
+          stackIn_4_0 = (vm.field_c == LegacyOpenGlGraphicsHeap.field_p);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

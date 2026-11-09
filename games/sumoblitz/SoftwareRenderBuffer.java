@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class od implements nr {
-    int field_b;
-    int field_a;
+final class SoftwareRenderBuffer implements RenderBuffer {
+    int width;
+    int height;
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
@@ -28,88 +28,88 @@ final class od implements nr {
         if (param1 > 8) {
           var3 = param0;
           if (var3 == 1) {
-            var2 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+            var2 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2]);
             return;
           }
           if (var3 == 2) {
-            var2Lifetime8 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+            var2Lifetime8 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime8]);
             return;
           }
           if (var3 == 3) {
-            var2Lifetime9 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+            var2Lifetime9 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime9]);
             return;
           }
           if (var3 == 0) {
-            var2Lifetime10 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+            var2Lifetime10 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime10]);
             return;
           }
           if (4 == var3) {
-            var2Lifetime11 = ExpandingRingEffect.nextRandomInt(5, he.field_o, (byte) -96);
+            var2Lifetime11 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(80, TimedSceneEffect.field_n[2][var2Lifetime11]);
             return;
           }
           if (var3 != 6) {
             if (var3 == 5) {
-              var2Lifetime12 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+              var2Lifetime12 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
               PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime12]);
               return;
             }
             return;
           }
-          var2Lifetime13 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+          var2Lifetime13 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime13]);
           return;
         }
-        od.a(71);
+        SoftwareRenderBuffer.a(71);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 1) {
-          var2Lifetime1 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+          var2Lifetime1 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime1]);
           return;
         }
         if (var3Lifetime1 == 2) {
-          var2Lifetime2 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+          var2Lifetime2 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime2]);
           return;
         }
         if (var3Lifetime1 == 3) {
-          var2Lifetime3 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+          var2Lifetime3 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime3]);
           return;
         }
         if (var3Lifetime1 == 0) {
-          var2Lifetime4 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+          var2Lifetime4 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime4]);
           return;
         }
         if (4 == var3Lifetime1) {
-          var2Lifetime5 = ExpandingRingEffect.nextRandomInt(5, he.field_o, (byte) -96);
+          var2Lifetime5 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(80, TimedSceneEffect.field_n[2][var2Lifetime5]);
           return;
         }
         if (var3Lifetime1 != 6) {
           if (var3Lifetime1 == 5) {
-            var2Lifetime6 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+            var2Lifetime6 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime6]);
             return;
           }
           return;
         }
-        var2Lifetime7 = ExpandingRingEffect.nextRandomInt(8, he.field_o, (byte) -96);
+        var2Lifetime7 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
         PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime7]);
     }
 
     final static void a(int param0) {
-        rf.field_a.closeAllDialogs((byte) 117);
+        RenderPresentationException.field_a.closeAllDialogs((byte) 117);
         if (param0 == 5178) {
-          if (he.field_n == null) {
-            he.field_n = new ProgressDialog(rf.field_a, SocketJs5Client.field_s);
+          if (HardwareGraphicsHeap.field_n == null) {
+            HardwareGraphicsHeap.field_n = new ProgressDialog(RenderPresentationException.field_a, SocketJs5Client.field_s);
           }
-          rf.field_a.pushDialog((byte) 115, he.field_n);
+          RenderPresentationException.field_a.pushDialog((byte) 115, HardwareGraphicsHeap.field_n);
           return;
         }
     }
@@ -129,9 +129,9 @@ final class od implements nr {
         }
     }
 
-    od(int param0, int param1) {
-        this.field_b = param0;
-        this.field_a = param1;
+    SoftwareRenderBuffer(int width, int height) {
+        this.width = width;
+        this.height = height;
     }
 
     static {

@@ -12,7 +12,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
     private int textureKind;
 
     final static void e(int param0) {
-        od.a(5178);
+        SoftwareRenderBuffer.a(5178);
         rd.a(param0, param0 - 31);
     }
 
@@ -84,9 +84,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
         RuntimeException var3 = null;
         try {
           if (this.textureKind == 0) {
-            uc.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
+            uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
           } else {
-            im.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
+            im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
           }
           if (guard > -121) {
             field_v = (tg) null;
@@ -159,9 +159,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
           var4 = var15.readUnsignedByte(-31302);
           if (var4 != 0) {
             var5 = var3.field_l;
-            rf.field_b[0] = qv.field_o;
+            RenderPresentationException.field_b[0] = qv.field_o;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              rf.field_b[var6_int] = var13.readCp1252String(-1);
+              RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
             }
             tn.b(var4, -2147483648, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -180,12 +180,12 @@ final class SlowBurstParticle extends TimedSceneEffect {
             var10 = 0;
             while (var9 < var8) {
               var11 = pd.field_q[var9];
-              var6[0][var10] = rf.field_b[var11];
+              var6[0][var10] = RenderPresentationException.field_b[var11];
               var19[0][var10 * 4] = lj.field_a[var11];
               var19[0][var10 * 4 + 1] = jf.field_f[var11];
               var19[0][2 + 4 * var10] = ic.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
-              if (ea.a(rf.field_b[var11], (byte) -25) &&
+              if (ea.a(RenderPresentationException.field_b[var11], (byte) -25) &&
                 field_z[var11] + jf.field_f[var11] + ic.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -198,12 +198,12 @@ final class SlowBurstParticle extends TimedSceneEffect {
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = pd.field_q[var9Lifetime1 + var5];
-              var6[1][var14] = rf.field_b[var11Lifetime1];
+              var6[1][var14] = RenderPresentationException.field_b[var11Lifetime1];
               var19[1][4 * var14] = lj.field_a[var11Lifetime1];
               var19[1][1 + 4 * var14] = jf.field_f[var11Lifetime1];
               var19[1][2 + 4 * var14] = ic.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];
-              if (ea.a(rf.field_b[var11Lifetime1], (byte) -25) &&
+              if (ea.a(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
                 jf.field_f[var11Lifetime1] - (-ic.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;

@@ -46,9 +46,9 @@ final class fd extends uw {
           if (hm.field_a != ProxySocketConnector.field_e) {
             return false;
           }
-          var8 = new uk(rf.field_a, param0);
+          var8 = new uk(RenderPresentationException.field_a, param0);
           var7 = var8;
-          rf.field_a.pushDialog((byte) 111, var8);
+          RenderPresentationException.field_a.pushDialog((byte) 111, var8);
           if (ImageProducerRasterBuffer.c(param6 ^ -123)) {
             var8.f(true);
             return true;
@@ -57,7 +57,7 @@ final class fd extends uw {
           vr.field_G = param1;
           FadingWidget.field_C = param3;
           eg.field_l = null;
-          ProxySocketConnector.field_e = ad.field_p;
+          ProxySocketConnector.field_e = LegacyOpenGlGraphicsHeap.field_p;
           bi.field_d = param4;
           lq.field_d = param5;
           return true;

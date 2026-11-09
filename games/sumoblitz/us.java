@@ -178,7 +178,7 @@ class us extends ht {
             decompiledSharedTail0 = (Sumoblitz.field_L);
           }
           if (decompiledSharedTail0) {
-            dl.a(param3, param4, (byte) 11, param1, param2, param6, param7);
+            LegacyOpenGlTransform3D.a(param3, param4, (byte) 11, param1, param2, param6, param7);
             this.a(true, true);
           }
           this.a(true, 0);
@@ -433,7 +433,7 @@ class us extends ht {
             param5 &&
             param7 == 0 &&
             param8 == 0) {
-            eu.a(-122, this.field_o, this.field_l, this.field_c, param6, this.field_a, this.field_d.field_L, 32993);
+            Transform3D.a(-122, this.field_o, this.field_l, this.field_c, param6, this.field_a, this.field_d.field_L, 32993);
             this.a(true, true);
           }
           if (stackIn_13_0 == 34037 ||

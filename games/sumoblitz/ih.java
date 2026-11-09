@@ -63,7 +63,7 @@ final class ih {
           HardwareGraphicsToolkit.C(-114);
           if (0 < param1.field_E &&
             null != param1.field_a) {
-            ad.c((byte) 71);
+            LegacyOpenGlGraphicsHeap.c((byte) 71);
           }
           sv.field_b = 0;
           var8 = 0;

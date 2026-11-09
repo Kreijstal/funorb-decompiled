@@ -20,7 +20,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         } else {
           this.field_E = new int[param4 * param5];
         }
-        param3 = param3 - this.field_z;
+        param3 = param3 - this.width;
         var8 = 0;
         for (var9 = 0; var9 < param5; var9++) {
           for (var10 = 0; var10 < param4; var10++) {
@@ -46,7 +46,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags) {
         int incrementValue$13 = 0;
         int incrementValue$12 = 0;
         int incrementValue$11 = 0;
@@ -212,69 +212,69 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         int var26Lifetime1Lifetime2Lifetime1;
         int var26Lifetime1Lifetime2Lifetime2;
         int var28Lifetime1Lifetime1Lifetime1;
-        if (this.field_B.f()) {
+        if (this.toolkit.isDisposed()) {
           throw new IllegalStateException();
         }
         boolean decompiledFrameRemainder1 = true;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (width > 0) {
+          if (height <= 0) {
             return;
           }
           var9 = 0;
           var10 = 0;
-          var11 = this.field_B.field_k;
-          var12 = this.field_t + this.field_z + this.field_y;
-          var13 = this.field_A + this.field_q + this.field_k;
-          var14 = (var12 << 16) / param2;
-          var15 = (var13 << 16) / param3;
-          if (this.field_t > 0) {
-            var16 = ((this.field_t << 16) + var14 - 1) / var14;
-            param0 = param0 + var16;
-            var9 = var9 + (var16 * var14 - (this.field_t << 16));
+          var11 = this.toolkit.targetWidth;
+          var12 = this.insetLeft + this.width + this.insetRight;
+          var13 = this.insetTop + this.height + this.insetBottom;
+          var14 = (var12 << 16) / width;
+          var15 = (var13 << 16) / height;
+          if (this.insetLeft > 0) {
+            var16 = ((this.insetLeft << 16) + var14 - 1) / var14;
+            x = x + var16;
+            var9 = var9 + (var16 * var14 - (this.insetLeft << 16));
           }
-          if (this.field_A > 0) {
-            var16Lifetime1 = ((this.field_A << 16) + var15 - 1) / var15;
-            param1 = param1 + var16Lifetime1;
-            var10 = var10 + (var16Lifetime1 * var15 - (this.field_A << 16));
+          if (this.insetTop > 0) {
+            var16Lifetime1 = ((this.insetTop << 16) + var15 - 1) / var15;
+            y = y + var16Lifetime1;
+            var10 = var10 + (var16Lifetime1 * var15 - (this.insetTop << 16));
           }
-          if (this.field_z < var12) {
-            param2 = ((this.field_z << 16) - var9 + var14 - 1) / var14;
+          if (this.width < var12) {
+            width = ((this.width << 16) - var9 + var14 - 1) / var14;
           }
-          if (this.field_q < var13) {
-            param3 = ((this.field_q << 16) - var10 + var15 - 1) / var15;
+          if (this.height < var13) {
+            height = ((this.height << 16) - var10 + var15 - 1) / var15;
           }
-          var16Lifetime2 = param0 + param1 * var11;
-          var17 = var11 - param2;
-          if (param1 + param3 > this.field_B.field_C) {
-            param3 = param3 - (param1 + param3 - this.field_B.field_C);
+          var16Lifetime2 = x + y * var11;
+          var17 = var11 - width;
+          if (y + height > this.toolkit.clipBottom) {
+            height = height - (y + height - this.toolkit.clipBottom);
           }
-          if (param1 < this.field_B.field_H) {
-            var18_int = this.field_B.field_H - param1;
-            param3 = param3 - var18_int;
+          if (y < this.toolkit.clipTop) {
+            var18_int = this.toolkit.clipTop - y;
+            height = height - var18_int;
             var16Lifetime2 = var16Lifetime2 + var18_int * var11;
             var10 = var10 + var15 * var18_int;
           }
-          if (param0 + param2 > this.field_B.field_D) {
-            var18_intLifetime1 = param0 + param2 - this.field_B.field_D;
-            param2 = param2 - var18_intLifetime1;
+          if (x + width > this.toolkit.clipRight) {
+            var18_intLifetime1 = x + width - this.toolkit.clipRight;
+            width = width - var18_intLifetime1;
             var17 = var17 + var18_intLifetime1;
           }
-          if (param0 < this.field_B.field_v) {
-            var18_intLifetime2 = this.field_B.field_v - param0;
-            param2 = param2 - var18_intLifetime2;
+          if (x < this.toolkit.clipLeft) {
+            var18_intLifetime2 = this.toolkit.clipLeft - x;
+            width = width - var18_intLifetime2;
             var16Lifetime2 = var16Lifetime2 + var18_intLifetime2;
             var9 = var9 + var14 * var18_intLifetime2;
             var17 = var17 + var18_intLifetime2;
           }
-          var34 = this.field_B.field_o;
+          var34 = this.toolkit.pixels;
           var33 = var34;
           var18 = var33;
-          if (param6 == 0) {
-            if (param4 == 1) {
+          if (blendMode == 0) {
+            if (colorMode == 1) {
               var19 = var9;
-              for (var20 = -param3; var20 < 0; var20++) {
-                var21 = (var10 >> 16) * this.field_z;
-                for (var22 = -param2; var22 < 0; var22++) {
+              for (var20 = -height; var20 < 0; var20++) {
+                var21 = (var10 >> 16) * this.width;
+                for (var22 = -width; var22 < 0; var22++) {
                   incrementValue$13 = var16Lifetime2;
                   var16Lifetime2++;
                   var18[incrementValue$13] = this.field_E[(var9 >> 16) + var21];
@@ -287,14 +287,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               decompiledFrameRemainder1 = false;
             }
             else {
-              if (param4 == 0) {
-                var19Lifetime5 = (param5 & 16711680) >> 16;
-                var20Lifetime6 = (param5 & 65280) >> 8;
-                var21Lifetime6 = param5 & 255;
+              if (colorMode == 0) {
+                var19Lifetime5 = (color & 16711680) >> 16;
+                var20Lifetime6 = (color & 65280) >> 8;
+                var21Lifetime6 = color & 255;
                 var22Lifetime6 = var9;
-                for (var23 = -param3; var23 < 0; var23++) {
-                  var24 = (var10 >> 16) * this.field_z;
-                  for (var25 = -param2; var25 < 0; var25++) {
+                for (var23 = -height; var23 < 0; var23++) {
+                  var24 = (var10 >> 16) * this.width;
+                  for (var25 = -width; var25 < 0; var25++) {
                     var26 = this.field_E[(var9 >> 16) + var24];
                     var27 = (var26 & 16711680) * var19Lifetime5 & -16777216;
                     var28 = (var26 & 65280) * var20Lifetime6 & 16711680;
@@ -310,14 +310,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 == 3) {
+              if (colorMode == 3) {
                 var19Lifetime6 = var9;
-                for (var20Lifetime7 = -param3; var20Lifetime7 < 0; var20Lifetime7++) {
-                  var21Lifetime7 = (var10 >> 16) * this.field_z;
-                  for (var22Lifetime7 = -param2; var22Lifetime7 < 0; var22Lifetime7++) {
+                for (var20Lifetime7 = -height; var20Lifetime7 < 0; var20Lifetime7++) {
+                  var21Lifetime7 = (var10 >> 16) * this.width;
+                  for (var22Lifetime7 = -width; var22Lifetime7 < 0; var22Lifetime7++) {
                     var23Lifetime6 = this.field_E[(var9 >> 16) + var21Lifetime7];
-                    var24Lifetime5 = var23Lifetime6 + param5;
-                    var25Lifetime5 = (var23Lifetime6 & 16711935) + (param5 & 16711935);
+                    var24Lifetime5 = var23Lifetime6 + color;
+                    var25Lifetime5 = (var23Lifetime6 & 16711935) + (color & 16711935);
                     var26Lifetime5 = (var25Lifetime5 & 16777472) + (var24Lifetime5 - var25Lifetime5 & 65536);
                     incrementValue$11 = var16Lifetime2;
                     var16Lifetime2++;
@@ -330,24 +330,24 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 != 2) {
+              if (colorMode != 2) {
                 throw new IllegalArgumentException();
               }
-              var19Lifetime7 = param5 >>> 24;
+              var19Lifetime7 = color >>> 24;
               var20Lifetime8 = 256 - var19Lifetime7;
-              var21Lifetime8 = (param5 & 16711935) * var20Lifetime8 & -16711936;
-              var22Lifetime8 = (param5 & 65280) * var20Lifetime8 & 16711680;
-              param5 = (var21Lifetime8 | var22Lifetime8) >>> 8;
+              var21Lifetime8 = (color & 16711935) * var20Lifetime8 & -16711936;
+              var22Lifetime8 = (color & 65280) * var20Lifetime8 & 16711680;
+              color = (var21Lifetime8 | var22Lifetime8) >>> 8;
               var23Lifetime7 = var9;
-              for (var24Lifetime6 = -param3; var24Lifetime6 < 0; var24Lifetime6++) {
-                var25Lifetime6 = (var10 >> 16) * this.field_z;
-                for (var26Lifetime6 = -param2; var26Lifetime6 < 0; var26Lifetime6++) {
+              for (var24Lifetime6 = -height; var24Lifetime6 < 0; var24Lifetime6++) {
+                var25Lifetime6 = (var10 >> 16) * this.width;
+                for (var26Lifetime6 = -width; var26Lifetime6 < 0; var26Lifetime6++) {
                   var27Lifetime4 = this.field_E[(var9 >> 16) + var25Lifetime6];
                   var21Lifetime9 = (var27Lifetime4 & 16711935) * var19Lifetime7 & -16711936;
                   var22Lifetime9 = (var27Lifetime4 & 65280) * var19Lifetime7 & 16711680;
                   incrementValue$10 = var16Lifetime2;
                   var16Lifetime2++;
-                  var18[incrementValue$10] = ((var21Lifetime9 | var22Lifetime9) >>> 8) + param5;
+                  var18[incrementValue$10] = ((var21Lifetime9 | var22Lifetime9) >>> 8) + color;
                   var9 = var9 + var14;
                 }
                 var10 = var10 + var15;
@@ -358,15 +358,15 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             }
           }
           if (decompiledFrameRemainder1) {
-            if (param6 != 1) {
-              if (param6 != 2) {
+            if (blendMode != 1) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              if (param4 == 1) {
+              if (colorMode == 1) {
                 var19Lifetime1 = var9;
-                for (var20Lifetime1 = -param3; var20Lifetime1 < 0; var20Lifetime1++) {
-                  var21Lifetime1 = (var10 >> 16) * this.field_z;
-                  for (var22Lifetime1 = -param2; var22Lifetime1 < 0; var22Lifetime1++) {
+                for (var20Lifetime1 = -height; var20Lifetime1 < 0; var20Lifetime1++) {
+                  var21Lifetime1 = (var10 >> 16) * this.width;
+                  for (var22Lifetime1 = -width; var22Lifetime1 < 0; var22Lifetime1++) {
                     var23Lifetime1 = this.field_E[(var9 >> 16) + var21Lifetime1];
                     if (var23Lifetime1 == 0) {
                       var16Lifetime2++;
@@ -387,14 +387,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 == 0) {
+              if (colorMode == 0) {
                 var19Lifetime1Lifetime1 = var9;
-                var20Lifetime1Lifetime1 = (param5 & 16711680) >> 16;
-                var21Lifetime1Lifetime1 = (param5 & 65280) >> 8;
-                var22Lifetime1Lifetime1 = param5 & 255;
-                for (var23Lifetime1Lifetime1 = -param3; var23Lifetime1Lifetime1 < 0; var23Lifetime1Lifetime1++) {
-                  var24Lifetime1Lifetime1 = (var10 >> 16) * this.field_z;
-                  for (var25Lifetime1Lifetime1 = -param2; var25Lifetime1Lifetime1 < 0; var25Lifetime1Lifetime1++) {
+                var20Lifetime1Lifetime1 = (color & 16711680) >> 16;
+                var21Lifetime1Lifetime1 = (color & 65280) >> 8;
+                var22Lifetime1Lifetime1 = color & 255;
+                for (var23Lifetime1Lifetime1 = -height; var23Lifetime1Lifetime1 < 0; var23Lifetime1Lifetime1++) {
+                  var24Lifetime1Lifetime1 = (var10 >> 16) * this.width;
+                  for (var25Lifetime1Lifetime1 = -width; var25Lifetime1Lifetime1 < 0; var25Lifetime1Lifetime1++) {
                     var26Lifetime1Lifetime1 = this.field_E[(var9 >> 16) + var24Lifetime1Lifetime1];
                     if (var26Lifetime1Lifetime1 == 0) {
                       var16Lifetime2++;
@@ -419,14 +419,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 == 3) {
+              if (colorMode == 3) {
                 var19Lifetime1Lifetime2 = var9;
-                for (var20Lifetime1Lifetime2 = -param3; var20Lifetime1Lifetime2 < 0; var20Lifetime1Lifetime2++) {
-                  var21Lifetime1Lifetime2 = (var10 >> 16) * this.field_z;
-                  for (var22Lifetime1Lifetime2 = -param2; var22Lifetime1Lifetime2 < 0; var22Lifetime1Lifetime2++) {
+                for (var20Lifetime1Lifetime2 = -height; var20Lifetime1Lifetime2 < 0; var20Lifetime1Lifetime2++) {
+                  var21Lifetime1Lifetime2 = (var10 >> 16) * this.width;
+                  for (var22Lifetime1Lifetime2 = -width; var22Lifetime1Lifetime2 < 0; var22Lifetime1Lifetime2++) {
                     var23Lifetime1Lifetime2 = this.field_E[(var9 >> 16) + var21Lifetime1Lifetime2];
-                    var24Lifetime1Lifetime2 = var23Lifetime1Lifetime2 + param5;
-                    var25Lifetime1Lifetime2 = (var23Lifetime1Lifetime2 & 16711935) + (param5 & 16711935);
+                    var24Lifetime1Lifetime2 = var23Lifetime1Lifetime2 + color;
+                    var25Lifetime1Lifetime2 = (var23Lifetime1Lifetime2 & 16711935) + (color & 16711935);
                     var26Lifetime1Lifetime2 = (var25Lifetime1Lifetime2 & 16777472) + (var24Lifetime1Lifetime2 - var25Lifetime1Lifetime2 & 65536);
                     var23Lifetime1Lifetime2Lifetime1 = var24Lifetime1Lifetime2 - var26Lifetime1Lifetime2 | var26Lifetime1Lifetime2 - (var26Lifetime1Lifetime2 >>> 8);
                     var26Lifetime1Lifetime2Lifetime1 = var34[var16Lifetime2];
@@ -444,25 +444,25 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 != 2) {
+              if (colorMode != 2) {
                 throw new IllegalArgumentException();
               }
-              var19Lifetime1Lifetime3 = param5 >>> 24;
+              var19Lifetime1Lifetime3 = color >>> 24;
               var20Lifetime1Lifetime3 = 256 - var19Lifetime1Lifetime3;
-              var21Lifetime1Lifetime3 = (param5 & 16711935) * var20Lifetime1Lifetime3 & -16711936;
-              var22Lifetime1Lifetime3 = (param5 & 65280) * var20Lifetime1Lifetime3 & 16711680;
-              param5 = (var21Lifetime1Lifetime3 | var22Lifetime1Lifetime3) >>> 8;
+              var21Lifetime1Lifetime3 = (color & 16711935) * var20Lifetime1Lifetime3 & -16711936;
+              var22Lifetime1Lifetime3 = (color & 65280) * var20Lifetime1Lifetime3 & 16711680;
+              color = (var21Lifetime1Lifetime3 | var22Lifetime1Lifetime3) >>> 8;
               var23Lifetime1Lifetime3 = var9;
-              for (var24Lifetime1Lifetime3 = -param3; var24Lifetime1Lifetime3 < 0; var24Lifetime1Lifetime3++) {
-                var25Lifetime1Lifetime3 = (var10 >> 16) * this.field_z;
-                for (var26Lifetime1Lifetime3 = -param2; var26Lifetime1Lifetime3 < 0; var26Lifetime1Lifetime3++) {
+              for (var24Lifetime1Lifetime3 = -height; var24Lifetime1Lifetime3 < 0; var24Lifetime1Lifetime3++) {
+                var25Lifetime1Lifetime3 = (var10 >> 16) * this.width;
+                for (var26Lifetime1Lifetime3 = -width; var26Lifetime1Lifetime3 < 0; var26Lifetime1Lifetime3++) {
                   var27Lifetime1Lifetime1 = this.field_E[(var9 >> 16) + var25Lifetime1Lifetime3];
                   if (var27Lifetime1Lifetime1 == 0) {
                     var16Lifetime2++;
                   } else {
                     var21Lifetime1Lifetime4 = (var27Lifetime1Lifetime1 & 16711935) * var19Lifetime1Lifetime3 & -16711936;
                     var22Lifetime1Lifetime4 = (var27Lifetime1Lifetime1 & 65280) * var19Lifetime1Lifetime3 & 16711680;
-                    var27Lifetime1Lifetime1 = ((var21Lifetime1Lifetime4 | var22Lifetime1Lifetime4) >>> 8) + param5;
+                    var27Lifetime1Lifetime1 = ((var21Lifetime1Lifetime4 | var22Lifetime1Lifetime4) >>> 8) + color;
                     var28Lifetime1Lifetime1 = var34[var16Lifetime2];
                     var29Lifetime1Lifetime1 = var27Lifetime1Lifetime1 + var28Lifetime1Lifetime1;
                     var30Lifetime2 = (var27Lifetime1Lifetime1 & 16711935) + (var28Lifetime1Lifetime1 & 16711935);
@@ -479,11 +479,11 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param4 == 1) {
+            if (colorMode == 1) {
               var19Lifetime2 = var9;
-              for (var20Lifetime2 = -param3; var20Lifetime2 < 0; var20Lifetime2++) {
-                var21Lifetime2 = (var10 >> 16) * this.field_z;
-                for (var22Lifetime2 = -param2; var22Lifetime2 < 0; var22Lifetime2++) {
+              for (var20Lifetime2 = -height; var20Lifetime2 < 0; var20Lifetime2++) {
+                var21Lifetime2 = (var10 >> 16) * this.width;
+                for (var22Lifetime2 = -width; var22Lifetime2 < 0; var22Lifetime2++) {
                   var23Lifetime2 = this.field_E[(var9 >> 16) + var21Lifetime2];
                   if (var23Lifetime2 == 0) {
                     var16Lifetime2++;
@@ -498,17 +498,17 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param4 != 0) {
-              if (param4 == 3) {
+            if (colorMode != 0) {
+              if (colorMode == 3) {
                 var19Lifetime3 = var9;
-                var20Lifetime3 = param5 >>> 24;
+                var20Lifetime3 = color >>> 24;
                 var21Lifetime3 = 256 - var20Lifetime3;
-                for (var22Lifetime3 = -param3; var22Lifetime3 < 0; var22Lifetime3++) {
-                  var23Lifetime3 = (var10 >> 16) * this.field_z;
-                  for (var24Lifetime2 = -param2; var24Lifetime2 < 0; var24Lifetime2++) {
+                for (var22Lifetime3 = -height; var22Lifetime3 < 0; var22Lifetime3++) {
+                  var23Lifetime3 = (var10 >> 16) * this.width;
+                  for (var24Lifetime2 = -width; var24Lifetime2 < 0; var24Lifetime2++) {
                     var25Lifetime2 = this.field_E[(var9 >> 16) + var23Lifetime3];
-                    var26Lifetime2 = var25Lifetime2 + param5;
-                    var27Lifetime2 = (var25Lifetime2 & 16711935) + (param5 & 16711935);
+                    var26Lifetime2 = var25Lifetime2 + color;
+                    var27Lifetime2 = (var25Lifetime2 & 16711935) + (color & 16711935);
                     var28Lifetime2 = (var27Lifetime2 & 16777472) + (var26Lifetime2 - var27Lifetime2 & 65536);
                     var28Lifetime2 = var26Lifetime2 - var28Lifetime2 | var28Lifetime2 - (var28Lifetime2 >>> 8);
                     if (var25Lifetime2 == 0 &&
@@ -526,18 +526,18 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 }
                 return;
               }
-              if (param4 != 2) {
+              if (colorMode != 2) {
                 throw new IllegalArgumentException();
               }
-              var19Lifetime3Lifetime1 = param5 >>> 24;
+              var19Lifetime3Lifetime1 = color >>> 24;
               var20Lifetime3Lifetime1 = 256 - var19Lifetime3Lifetime1;
-              var21Lifetime3Lifetime1 = (param5 & 16711935) * var20Lifetime3Lifetime1 & -16711936;
-              var22Lifetime3Lifetime1 = (param5 & 65280) * var20Lifetime3Lifetime1 & 16711680;
-              param5 = (var21Lifetime3Lifetime1 | var22Lifetime3Lifetime1) >>> 8;
+              var21Lifetime3Lifetime1 = (color & 16711935) * var20Lifetime3Lifetime1 & -16711936;
+              var22Lifetime3Lifetime1 = (color & 65280) * var20Lifetime3Lifetime1 & 16711680;
+              color = (var21Lifetime3Lifetime1 | var22Lifetime3Lifetime1) >>> 8;
               var23Lifetime3Lifetime1 = var9;
-              for (var24Lifetime2Lifetime1 = -param3; var24Lifetime2Lifetime1 < 0; var24Lifetime2Lifetime1++) {
-                var25Lifetime2Lifetime1 = (var10 >> 16) * this.field_z;
-                for (var26Lifetime2Lifetime1 = -param2; var26Lifetime2Lifetime1 < 0; var26Lifetime2Lifetime1++) {
+              for (var24Lifetime2Lifetime1 = -height; var24Lifetime2Lifetime1 < 0; var24Lifetime2Lifetime1++) {
+                var25Lifetime2Lifetime1 = (var10 >> 16) * this.width;
+                for (var26Lifetime2Lifetime1 = -width; var26Lifetime2Lifetime1 < 0; var26Lifetime2Lifetime1++) {
                   var27Lifetime2Lifetime1 = this.field_E[(var9 >> 16) + var25Lifetime2Lifetime1];
                   if (var27Lifetime2Lifetime1 == 0) {
                     var16Lifetime2++;
@@ -546,7 +546,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                     var22Lifetime3Lifetime2 = (var27Lifetime2Lifetime1 & 65280) * var19Lifetime3Lifetime1 & 16711680;
                     incrementValue$4 = var16Lifetime2;
                     var16Lifetime2++;
-                    var18[incrementValue$4] = ((var21Lifetime3Lifetime2 | var22Lifetime3Lifetime2) >>> 8) + param5;
+                    var18[incrementValue$4] = ((var21Lifetime3Lifetime2 | var22Lifetime3Lifetime2) >>> 8) + color;
                   }
                   var9 = var9 + var14;
                 }
@@ -557,12 +557,12 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               return;
             }
             var19Lifetime4 = var9;
-            if ((param5 & 16777215) == 16777215) {
-              var20Lifetime4 = param5 >>> 24;
+            if ((color & 16777215) == 16777215) {
+              var20Lifetime4 = color >>> 24;
               var21Lifetime4 = 256 - var20Lifetime4;
-              for (var22Lifetime4 = -param3; var22Lifetime4 < 0; var22Lifetime4++) {
-                var23Lifetime4 = (var10 >> 16) * this.field_z;
-                for (var24Lifetime3 = -param2; var24Lifetime3 < 0; var24Lifetime3++) {
+              for (var22Lifetime4 = -height; var22Lifetime4 < 0; var22Lifetime4++) {
+                var23Lifetime4 = (var10 >> 16) * this.width;
+                for (var24Lifetime3 = -width; var24Lifetime3 < 0; var24Lifetime3++) {
                   var25Lifetime3 = this.field_E[(var9 >> 16) + var23Lifetime4];
                   if (var25Lifetime3 == 0) {
                     var16Lifetime2++;
@@ -580,14 +580,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            var20Lifetime5 = (param5 & 16711680) >> 16;
-            var21Lifetime5 = (param5 & 65280) >> 8;
-            var22Lifetime5 = param5 & 255;
-            var23Lifetime5 = param5 >>> 24;
+            var20Lifetime5 = (color & 16711680) >> 16;
+            var21Lifetime5 = (color & 65280) >> 8;
+            var22Lifetime5 = color & 255;
+            var23Lifetime5 = color >>> 24;
             var24Lifetime4 = 256 - var23Lifetime5;
-            for (var25Lifetime4 = -param3; var25Lifetime4 < 0; var25Lifetime4++) {
-              var26Lifetime4 = (var10 >> 16) * this.field_z;
-              for (var27Lifetime3 = -param2; var27Lifetime3 < 0; var27Lifetime3++) {
+            for (var25Lifetime4 = -height; var25Lifetime4 < 0; var25Lifetime4++) {
+              var26Lifetime4 = (var10 >> 16) * this.width;
+              for (var27Lifetime3 = -width; var27Lifetime3 < 0; var27Lifetime3++) {
                 boolean decompiledFrameRemainder0 = true;
                 var28Lifetime3 = this.field_E[(var9 >> 16) + var26Lifetime4];
                 if (var28Lifetime3 == 0) {
@@ -628,7 +628,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
 
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int x, int y, int colorMode, int color, int blendMode) {
         int incrementValue$35 = 0;
         int incrementValue$36 = 0;
         int incrementValue$37 = 0;
@@ -791,39 +791,39 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         int var19Lifetime1Lifetime2Lifetime1;
         int var19Lifetime1Lifetime2Lifetime2;
         int var21Lifetime1Lifetime1Lifetime1;
-        if (this.field_B.f()) {
+        if (this.toolkit.isDisposed()) {
           throw new IllegalStateException();
         }
-        var6 = this.field_B.field_k;
-        param0 = param0 + this.field_t;
-        param1 = param1 + this.field_A;
-        var7 = param1 * var6 + param0;
+        var6 = this.toolkit.targetWidth;
+        x = x + this.insetLeft;
+        y = y + this.insetTop;
+        var7 = y * var6 + x;
         var8 = 0;
-        var9 = this.field_q;
-        var10 = this.field_z;
+        var9 = this.height;
+        var10 = this.width;
         var11 = var6 - var10;
         var12 = 0;
-        if (param1 < this.field_B.field_H) {
-          var13_int = this.field_B.field_H - param1;
+        if (y < this.toolkit.clipTop) {
+          var13_int = this.toolkit.clipTop - y;
           var9 = var9 - var13_int;
-          param1 = this.field_B.field_H;
+          y = this.toolkit.clipTop;
           var8 = var8 + var13_int * var10;
           var7 = var7 + var13_int * var6;
         }
-        if (param1 + var9 > this.field_B.field_C) {
-          var9 = var9 - (param1 + var9 - this.field_B.field_C);
+        if (y + var9 > this.toolkit.clipBottom) {
+          var9 = var9 - (y + var9 - this.toolkit.clipBottom);
         }
-        if (param0 < this.field_B.field_v) {
-          var13_intLifetime1 = this.field_B.field_v - param0;
+        if (x < this.toolkit.clipLeft) {
+          var13_intLifetime1 = this.toolkit.clipLeft - x;
           var10 = var10 - var13_intLifetime1;
-          param0 = this.field_B.field_v;
+          x = this.toolkit.clipLeft;
           var8 = var8 + var13_intLifetime1;
           var7 = var7 + var13_intLifetime1;
           var12 = var12 + var13_intLifetime1;
           var11 = var11 + var13_intLifetime1;
         }
-        if (param0 + var10 > this.field_B.field_D) {
-          var13_intLifetime2 = param0 + var10 - this.field_B.field_D;
+        if (x + var10 > this.toolkit.clipRight) {
+          var13_intLifetime2 = x + var10 - this.toolkit.clipRight;
           var10 = var10 - var13_intLifetime2;
           var12 = var12 + var13_intLifetime2;
           var11 = var11 + var13_intLifetime2;
@@ -832,11 +832,11 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
           if (var9 <= 0) {
             return;
           }
-          var27 = this.field_B.field_o;
+          var27 = this.toolkit.pixels;
           var26 = var27;
           var13 = var26;
-          if (param4 == 0) {
-            if (param2 == 1) {
+          if (blendMode == 0) {
+            if (colorMode == 1) {
               for (var14 = -var9; var14 < 0; var14++) {
                 var15 = var7 + var10 - 3;
                 while (var7 < var15) {
@@ -874,10 +874,10 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 == 0) {
-              var14Lifetime6 = (param3 & 16711680) >> 16;
-              var15Lifetime6 = (param3 & 65280) >> 8;
-              var16 = param3 & 255;
+            if (colorMode == 0) {
+              var14Lifetime6 = (color & 16711680) >> 16;
+              var15Lifetime6 = (color & 65280) >> 8;
+              var16 = color & 255;
               for (var17 = -var9; var17 < 0; var17++) {
                 for (var18 = -var10; var18 < 0; var18++) {
                   incrementValue$31 = var8;
@@ -895,14 +895,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 == 3) {
+            if (colorMode == 3) {
               for (var14Lifetime7 = -var9; var14Lifetime7 < 0; var14Lifetime7++) {
                 for (var15Lifetime7 = -var10; var15Lifetime7 < 0; var15Lifetime7++) {
                   incrementValue$29 = var8;
                   var8++;
                   var16Lifetime6 = this.field_E[incrementValue$29];
-                  var17Lifetime5 = var16Lifetime6 + param3;
-                  var18Lifetime5 = (var16Lifetime6 & 16711935) + (param3 & 16711935);
+                  var17Lifetime5 = var16Lifetime6 + color;
+                  var18Lifetime5 = (var16Lifetime6 & 16711935) + (color & 16711935);
                   var19Lifetime5 = (var18Lifetime5 & 16777472) + (var17Lifetime5 - var18Lifetime5 & 65536);
                   incrementValue$30 = var7;
                   var7++;
@@ -913,14 +913,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 != 2) {
+            if (colorMode != 2) {
               throw new IllegalArgumentException();
             }
-            var14Lifetime8 = param3 >>> 24;
+            var14Lifetime8 = color >>> 24;
             var15Lifetime8 = 256 - var14Lifetime8;
-            var16Lifetime7 = (param3 & 16711935) * var15Lifetime8 & -16711936;
-            var17Lifetime6 = (param3 & 65280) * var15Lifetime8 & 16711680;
-            param3 = (var16Lifetime7 | var17Lifetime6) >>> 8;
+            var16Lifetime7 = (color & 16711935) * var15Lifetime8 & -16711936;
+            var17Lifetime6 = (color & 65280) * var15Lifetime8 & 16711680;
+            color = (var16Lifetime7 | var17Lifetime6) >>> 8;
             for (var18Lifetime6 = -var9; var18Lifetime6 < 0; var18Lifetime6++) {
               for (var19Lifetime6 = -var10; var19Lifetime6 < 0; var19Lifetime6++) {
                 incrementValue$27 = var8;
@@ -930,18 +930,18 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var17Lifetime7 = (var20Lifetime4 & 65280) * var14Lifetime8 & 16711680;
                 incrementValue$28 = var7;
                 var7++;
-                var13[incrementValue$28] = ((var16Lifetime8 | var17Lifetime7) >>> 8) + param3;
+                var13[incrementValue$28] = ((var16Lifetime8 | var17Lifetime7) >>> 8) + color;
               }
               var7 = var7 + var11;
               var8 = var8 + var12;
             }
             return;
           }
-          if (param4 != 1) {
-            if (param4 != 2) {
+          if (blendMode != 1) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            if (param2 == 1) {
+            if (colorMode == 1) {
               for (var14Lifetime1 = -var9; var14Lifetime1 < 0; var14Lifetime1++) {
                 for (var15Lifetime1 = -var10; var15Lifetime1 < 0; var15Lifetime1++) {
                   incrementValue$6 = var8;
@@ -964,10 +964,10 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 == 0) {
-              var14Lifetime1Lifetime1 = (param3 & 16711680) >> 16;
-              var15Lifetime1Lifetime1 = (param3 & 65280) >> 8;
-              var16Lifetime1Lifetime1 = param3 & 255;
+            if (colorMode == 0) {
+              var14Lifetime1Lifetime1 = (color & 16711680) >> 16;
+              var15Lifetime1Lifetime1 = (color & 65280) >> 8;
+              var16Lifetime1Lifetime1 = color & 255;
               for (var17Lifetime1Lifetime1 = -var9; var17Lifetime1Lifetime1 < 0; var17Lifetime1Lifetime1++) {
                 for (var18Lifetime1Lifetime1 = -var10; var18Lifetime1Lifetime1 < 0; var18Lifetime1Lifetime1++) {
                   incrementValue$4 = var8;
@@ -994,14 +994,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 == 3) {
+            if (colorMode == 3) {
               for (var14Lifetime1Lifetime2 = -var9; var14Lifetime1Lifetime2 < 0; var14Lifetime1Lifetime2++) {
                 for (var15Lifetime1Lifetime2 = -var10; var15Lifetime1Lifetime2 < 0; var15Lifetime1Lifetime2++) {
                   incrementValue$2 = var8;
                   var8++;
                   var16Lifetime1Lifetime2 = this.field_E[incrementValue$2];
-                  var17Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + param3;
-                  var18Lifetime1Lifetime2 = (var16Lifetime1Lifetime2 & 16711935) + (param3 & 16711935);
+                  var17Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + color;
+                  var18Lifetime1Lifetime2 = (var16Lifetime1Lifetime2 & 16711935) + (color & 16711935);
                   var19Lifetime1Lifetime2 = (var18Lifetime1Lifetime2 & 16777472) + (var17Lifetime1Lifetime2 - var18Lifetime1Lifetime2 & 65536);
                   var16Lifetime1Lifetime2Lifetime1 = var17Lifetime1Lifetime2 - var19Lifetime1Lifetime2 | var19Lifetime1Lifetime2 - (var19Lifetime1Lifetime2 >>> 8);
                   var19Lifetime1Lifetime2Lifetime1 = var27[var7];
@@ -1017,14 +1017,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 != 2) {
+            if (colorMode != 2) {
               throw new IllegalArgumentException();
             }
-            var14Lifetime1Lifetime3 = param3 >>> 24;
+            var14Lifetime1Lifetime3 = color >>> 24;
             var15Lifetime1Lifetime3 = 256 - var14Lifetime1Lifetime3;
-            var16Lifetime1Lifetime3 = (param3 & 16711935) * var15Lifetime1Lifetime3 & -16711936;
-            var17Lifetime1Lifetime3 = (param3 & 65280) * var15Lifetime1Lifetime3 & 16711680;
-            param3 = (var16Lifetime1Lifetime3 | var17Lifetime1Lifetime3) >>> 8;
+            var16Lifetime1Lifetime3 = (color & 16711935) * var15Lifetime1Lifetime3 & -16711936;
+            var17Lifetime1Lifetime3 = (color & 65280) * var15Lifetime1Lifetime3 & 16711680;
+            color = (var16Lifetime1Lifetime3 | var17Lifetime1Lifetime3) >>> 8;
             for (var18Lifetime1Lifetime3 = -var9; var18Lifetime1Lifetime3 < 0; var18Lifetime1Lifetime3++) {
               for (var19Lifetime1Lifetime3 = -var10; var19Lifetime1Lifetime3 < 0; var19Lifetime1Lifetime3++) {
                 incrementValue$0 = var8;
@@ -1035,7 +1035,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 } else {
                   var16Lifetime1Lifetime4 = (var20Lifetime1Lifetime1 & 16711935) * var14Lifetime1Lifetime3 & -16711936;
                   var17Lifetime1Lifetime4 = (var20Lifetime1Lifetime1 & 65280) * var14Lifetime1Lifetime3 & 16711680;
-                  var20Lifetime1Lifetime1 = ((var16Lifetime1Lifetime4 | var17Lifetime1Lifetime4) >>> 8) + param3;
+                  var20Lifetime1Lifetime1 = ((var16Lifetime1Lifetime4 | var17Lifetime1Lifetime4) >>> 8) + color;
                   var21Lifetime1Lifetime1 = var27[var7];
                   var22Lifetime1Lifetime1 = var20Lifetime1Lifetime1 + var21Lifetime1Lifetime1;
                   var23Lifetime2 = (var20Lifetime1Lifetime1 & 16711935) + (var21Lifetime1Lifetime1 & 16711935);
@@ -1050,7 +1050,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             }
             return;
           }
-          if (param2 == 1) {
+          if (colorMode == 1) {
             var14Lifetime2 = -var9;
             scanLoop1: while (true) {
               if (var14Lifetime2 >= 0) {
@@ -1112,17 +1112,17 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
             }
           }
-          if (param2 != 0) {
-            if (param2 == 3) {
-              var14Lifetime3 = param3 >>> 24;
+          if (colorMode != 0) {
+            if (colorMode == 3) {
+              var14Lifetime3 = color >>> 24;
               var15Lifetime3 = 256 - var14Lifetime3;
               for (var16Lifetime3 = -var9; var16Lifetime3 < 0; var16Lifetime3++) {
                 for (var17Lifetime2 = -var10; var17Lifetime2 < 0; var17Lifetime2++) {
                   incrementValue$10 = var8;
                   var8++;
                   var18Lifetime2 = this.field_E[incrementValue$10];
-                  var19Lifetime2 = var18Lifetime2 + param3;
-                  var20Lifetime2 = (var18Lifetime2 & 16711935) + (param3 & 16711935);
+                  var19Lifetime2 = var18Lifetime2 + color;
+                  var20Lifetime2 = (var18Lifetime2 & 16711935) + (color & 16711935);
                   var21Lifetime2 = (var20Lifetime2 & 16777472) + (var19Lifetime2 - var20Lifetime2 & 65536);
                   var21Lifetime2 = var19Lifetime2 - var21Lifetime2 | var21Lifetime2 - (var21Lifetime2 >>> 8);
                   if (var18Lifetime2 == 0 &&
@@ -1138,14 +1138,14 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               }
               return;
             }
-            if (param2 != 2) {
+            if (colorMode != 2) {
               throw new IllegalArgumentException();
             }
-            var14Lifetime3Lifetime1 = param3 >>> 24;
+            var14Lifetime3Lifetime1 = color >>> 24;
             var15Lifetime3Lifetime1 = 256 - var14Lifetime3Lifetime1;
-            var16Lifetime3Lifetime1 = (param3 & 16711935) * var15Lifetime3Lifetime1 & -16711936;
-            var17Lifetime2Lifetime1 = (param3 & 65280) * var15Lifetime3Lifetime1 & 16711680;
-            param3 = (var16Lifetime3Lifetime1 | var17Lifetime2Lifetime1) >>> 8;
+            var16Lifetime3Lifetime1 = (color & 16711935) * var15Lifetime3Lifetime1 & -16711936;
+            var17Lifetime2Lifetime1 = (color & 65280) * var15Lifetime3Lifetime1 & 16711680;
+            color = (var16Lifetime3Lifetime1 | var17Lifetime2Lifetime1) >>> 8;
             for (var18Lifetime2Lifetime1 = -var9; var18Lifetime2Lifetime1 < 0; var18Lifetime2Lifetime1++) {
               for (var19Lifetime2Lifetime1 = -var10; var19Lifetime2Lifetime1 < 0; var19Lifetime2Lifetime1++) {
                 incrementValue$8 = var8;
@@ -1158,7 +1158,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                   var17Lifetime2Lifetime2 = (var20Lifetime2Lifetime1 & 65280) * var14Lifetime3Lifetime1 & 16711680;
                   incrementValue$9 = var7;
                   var7++;
-                  var13[incrementValue$9] = ((var16Lifetime3Lifetime2 | var17Lifetime2Lifetime2) >>> 8) + param3;
+                  var13[incrementValue$9] = ((var16Lifetime3Lifetime2 | var17Lifetime2Lifetime2) >>> 8) + color;
                 }
               }
               var7 = var7 + var11;
@@ -1166,8 +1166,8 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             }
             return;
           }
-          if ((param3 & 16777215) == 16777215) {
-            var14Lifetime4 = param3 >>> 24;
+          if ((color & 16777215) == 16777215) {
+            var14Lifetime4 = color >>> 24;
             var15Lifetime4 = 256 - var14Lifetime4;
             for (var16Lifetime4 = -var9; var16Lifetime4 < 0; var16Lifetime4++) {
               for (var17Lifetime3 = -var10; var17Lifetime3 < 0; var17Lifetime3++) {
@@ -1188,10 +1188,10 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             }
             return;
           }
-          var14Lifetime5 = (param3 & 16711680) >> 16;
-          var15Lifetime5 = (param3 & 65280) >> 8;
-          var16Lifetime5 = param3 & 255;
-          var17Lifetime4 = param3 >>> 24;
+          var14Lifetime5 = (color & 16711680) >> 16;
+          var15Lifetime5 = (color & 65280) >> 8;
+          var16Lifetime5 = color & 255;
+          var17Lifetime4 = color >>> 24;
           var18Lifetime4 = 256 - var17Lifetime4;
           for (var19Lifetime4 = -var9; var19Lifetime4 < 0; var19Lifetime4++) {
             for (var20Lifetime3 = -var10; var20Lifetime3 < 0; var20Lifetime3++) {
@@ -1233,7 +1233,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         this.field_E = param1;
     }
 
-    final void b(int param0, int param1) {
+    final void blitAffine(int colorMode, int blendMode) {
         int incrementValue$32 = 0;
         int incrementValue$33 = 0;
         int incrementValue$34 = 0;
@@ -1307,7 +1307,7 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
         int[] var37;
         int[] var38;
         int[] var39;
-        var3 = this.field_B.field_o;
+        var3 = this.toolkit.pixels;
         if (field_w == 0) {
           if (field_d == 0) {
             var5 = field_n;
@@ -1318,18 +1318,18 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var9 = field_h;
               if (var7 >= 0 &&
                 var8 >= 0 &&
-                var7 - (this.field_z << 12) < 0 &&
-                var8 - (this.field_q << 12) < 0) {
+                var7 - (this.width << 12) < 0 &&
+                var8 - (this.height << 12) < 0) {
                 while (var9 < 0) {
-                  var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                  var10 = (var8 >> 12) * this.width + (var7 >> 12);
                   incrementValue$32 = var6;
                   var6++;
                   var11 = incrementValue$32;
                   var31 = var3;
                   var22 = var31;
                   var12 = var22;
-                  var13 = param0;
-                  var14 = param1;
+                  var13 = colorMode;
+                  var14 = blendMode;
                   if (var14 != 0) {
                     if (var14 != 1) {
                       if (var14 != 2) {
@@ -1500,27 +1500,27 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var8 = field_m + field_a;
               var9 = field_h;
               if (var7 >= 0 &&
-                var7 - (this.field_z << 12) < 0) {
+                var7 - (this.width << 12) < 0) {
                 if (var8 < 0) {
                   var4 = (field_d - 1 - var8) / field_d;
                   var9 = var9 + var4;
                   var8 = var8 + field_d * var4;
                   var6 = var6 + var4;
                 }
-                var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
-                if ((1 + var8 - (this.field_q << 12) - field_d) / field_d > var9) {
+                var4 = (1 + var8 - (this.height << 12) - field_d) / field_d;
+                if ((1 + var8 - (this.height << 12) - field_d) / field_d > var9) {
                   var9 = var4;
                 }
                 while (var9 < 0) {
-                  var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                  var10 = (var8 >> 12) * this.width + (var7 >> 12);
                   incrementValue$24 = var6;
                   var6++;
                   var11 = incrementValue$24;
                   var33 = var3;
                   var24 = var33;
                   var12 = var24;
-                  var13 = param0;
-                  var14 = param1;
+                  var13 = colorMode;
+                  var14 = blendMode;
                   if (var14 != 0) {
                     if (var14 != 1) {
                       if (var14 != 2) {
@@ -1691,9 +1691,9 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var8 = field_m + field_a;
               var9 = field_h;
               if (var7 >= 0 &&
-                var7 - (this.field_z << 12) < 0) {
-                var4 = var8 - (this.field_q << 12);
-                if (var8 - (this.field_q << 12) >= 0) {
+                var7 - (this.width << 12) < 0) {
+                var4 = var8 - (this.height << 12);
+                if (var8 - (this.height << 12) >= 0) {
                   var4 = (field_d - var4) / field_d;
                   var9 = var9 + var4;
                   var8 = var8 + field_d * var4;
@@ -1704,15 +1704,15 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                   var9 = var4;
                 }
                 while (var9 < 0) {
-                  var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                  var10 = (var8 >> 12) * this.width + (var7 >> 12);
                   incrementValue$28 = var6;
                   var6++;
                   var11 = incrementValue$28;
                   var32 = var3;
                   var23 = var32;
                   var12 = var23;
-                  var13 = param0;
-                  var14 = param1;
+                  var13 = colorMode;
+                  var14 = blendMode;
                   if (var14 != 0) {
                     if (var14 != 1) {
                       if (var14 != 2) {
@@ -1885,27 +1885,27 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var8 = field_m;
               var9 = field_h;
               if (var8 >= 0 &&
-                var8 - (this.field_q << 12) < 0) {
+                var8 - (this.height << 12) < 0) {
                 if (var7 < 0) {
                   var4 = (field_w - 1 - var7) / field_w;
                   var9 = var9 + var4;
                   var7 = var7 + field_w * var4;
                   var6 = var6 + var4;
                 }
-                var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
-                if ((1 + var7 - (this.field_z << 12) - field_w) / field_w > var9) {
+                var4 = (1 + var7 - (this.width << 12) - field_w) / field_w;
+                if ((1 + var7 - (this.width << 12) - field_w) / field_w > var9) {
                   var9 = var4;
                 }
                 while (var9 < 0) {
-                  var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                  var10 = (var8 >> 12) * this.width + (var7 >> 12);
                   incrementValue$8 = var6;
                   var6++;
                   var11 = incrementValue$8;
                   var37 = var3;
                   var28 = var37;
                   var12 = var28;
-                  var13 = param0;
-                  var14 = param1;
+                  var13 = colorMode;
+                  var14 = blendMode;
                   if (var14 != 0) {
                     if (var14 != 1) {
                       if (var14 != 2) {
@@ -2082,8 +2082,8 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var8 = var8 + field_d * var4;
                 var6 = var6 + var4;
               }
-              var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
-              if ((1 + var7 - (this.field_z << 12) - field_w) / field_w > var9) {
+              var4 = (1 + var7 - (this.width << 12) - field_w) / field_w;
+              if ((1 + var7 - (this.width << 12) - field_w) / field_w > var9) {
                 var9 = var4;
               }
               if (var8 < 0) {
@@ -2093,20 +2093,20 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var8 = var8 + field_d * var4;
                 var6 = var6 + var4;
               }
-              var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
-              if ((1 + var8 - (this.field_q << 12) - field_d) / field_d > var9) {
+              var4 = (1 + var8 - (this.height << 12) - field_d) / field_d;
+              if ((1 + var8 - (this.height << 12) - field_d) / field_d > var9) {
                 var9 = var4;
               }
               while (var9 < 0) {
-                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                var10 = (var8 >> 12) * this.width + (var7 >> 12);
                 incrementValue$0 = var6;
                 var6++;
                 var11 = incrementValue$0;
                 var39 = var3;
                 var30 = var39;
                 var12 = var30;
-                var13 = param0;
-                var14 = param1;
+                var13 = colorMode;
+                var14 = blendMode;
                 if (var14 != 0) {
                   if (var14 != 1) {
                     if (var14 != 2) {
@@ -2282,12 +2282,12 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var8 = var8 + field_d * var4;
                 var6 = var6 + var4;
               }
-              var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
-              if ((1 + var7 - (this.field_z << 12) - field_w) / field_w > var9) {
+              var4 = (1 + var7 - (this.width << 12) - field_w) / field_w;
+              if ((1 + var7 - (this.width << 12) - field_w) / field_w > var9) {
                 var9 = var4;
               }
-              var4 = var8 - (this.field_q << 12);
-              if (var8 - (this.field_q << 12) >= 0) {
+              var4 = var8 - (this.height << 12);
+              if (var8 - (this.height << 12) >= 0) {
                 var4 = (field_d - var4) / field_d;
                 var9 = var9 + var4;
                 var7 = var7 + field_w * var4;
@@ -2299,15 +2299,15 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var9 = var4;
               }
               while (var9 < 0) {
-                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                var10 = (var8 >> 12) * this.width + (var7 >> 12);
                 incrementValue$4 = var6;
                 var6++;
                 var11 = incrementValue$4;
                 var38 = var3;
                 var29 = var38;
                 var12 = var29;
-                var13 = param0;
-                var14 = param1;
+                var13 = colorMode;
+                var14 = blendMode;
                 if (var14 != 0) {
                   if (var14 != 1) {
                     if (var14 != 2) {
@@ -2479,9 +2479,9 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             var8 = field_m;
             var9 = field_h;
             if (var8 >= 0 &&
-              var8 - (this.field_q << 12) < 0) {
-              var4 = var7 - (this.field_z << 12);
-              if (var7 - (this.field_z << 12) >= 0) {
+              var8 - (this.height << 12) < 0) {
+              var4 = var7 - (this.width << 12);
+              if (var7 - (this.width << 12) >= 0) {
                 var4 = (field_w - var4) / field_w;
                 var9 = var9 + var4;
                 var7 = var7 + field_w * var4;
@@ -2492,15 +2492,15 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
                 var9 = var4;
               }
               while (var9 < 0) {
-                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                var10 = (var8 >> 12) * this.width + (var7 >> 12);
                 incrementValue$20 = var6;
                 var6++;
                 var11 = incrementValue$20;
                 var34 = var3;
                 var25 = var34;
                 var12 = var25;
-                var13 = param0;
-                var14 = param1;
+                var13 = colorMode;
+                var14 = blendMode;
                 if (var14 != 0) {
                   if (var14 != 1) {
                     if (var14 != 2) {
@@ -2670,8 +2670,8 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             var7 = field_s + field_g;
             var8 = field_m + field_a;
             var9 = field_h;
-            var4 = var7 - (this.field_z << 12);
-            if (var7 - (this.field_z << 12) >= 0) {
+            var4 = var7 - (this.width << 12);
+            if (var7 - (this.width << 12) >= 0) {
               var4 = (field_w - var4) / field_w;
               var9 = var9 + var4;
               var7 = var7 + field_w * var4;
@@ -2689,20 +2689,20 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var8 = var8 + field_d * var4;
               var6 = var6 + var4;
             }
-            var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
-            if ((1 + var8 - (this.field_q << 12) - field_d) / field_d > var9) {
+            var4 = (1 + var8 - (this.height << 12) - field_d) / field_d;
+            if ((1 + var8 - (this.height << 12) - field_d) / field_d > var9) {
               var9 = var4;
             }
             while (var9 < 0) {
-              var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+              var10 = (var8 >> 12) * this.width + (var7 >> 12);
               incrementValue$12 = var6;
               var6++;
               var11 = incrementValue$12;
               var36 = var3;
               var27 = var36;
               var12 = var27;
-              var13 = param0;
-              var14 = param1;
+              var13 = colorMode;
+              var14 = blendMode;
               if (var14 != 0) {
                 if (var14 != 1) {
                   if (var14 != 2) {
@@ -2873,8 +2873,8 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             var7 = field_s + field_g;
             var8 = field_m + field_a;
             var9 = field_h;
-            var4 = var7 - (this.field_z << 12);
-            if (var7 - (this.field_z << 12) >= 0) {
+            var4 = var7 - (this.width << 12);
+            if (var7 - (this.width << 12) >= 0) {
               var4 = (field_w - var4) / field_w;
               var9 = var9 + var4;
               var7 = var7 + field_w * var4;
@@ -2885,8 +2885,8 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
             if ((var7 - field_w) / field_w > var9) {
               var9 = var4;
             }
-            var4 = var8 - (this.field_q << 12);
-            if (var8 - (this.field_q << 12) >= 0) {
+            var4 = var8 - (this.height << 12);
+            if (var8 - (this.height << 12) >= 0) {
               var4 = (field_d - var4) / field_d;
               var9 = var9 + var4;
               var7 = var7 + field_w * var4;
@@ -2898,15 +2898,15 @@ final class SoftwareRgbSprite extends SoftwareToolkitSprite {
               var9 = var4;
             }
             while (var9 < 0) {
-              var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+              var10 = (var8 >> 12) * this.width + (var7 >> 12);
               incrementValue$16 = var6;
               var6++;
               var11 = incrementValue$16;
               var35 = var3;
               var26 = var35;
               var12 = var26;
-              var13 = param0;
-              var14 = param1;
+              var13 = colorMode;
+              var14 = blendMode;
               if (var14 != 0) {
                 if (var14 != 1) {
                   if (var14 != 2) {

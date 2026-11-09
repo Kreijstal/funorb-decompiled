@@ -20,9 +20,9 @@ final class DroneChargeParticle extends TimedSceneEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 != this.textureKind) {
-            im.field_a.a(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
+            im.field_a.draw(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
           } else {
-            uc.field_a.a((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
+            uc.field_a.drawRotated((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
           }
           if (guard <= -121) {
             return;
@@ -59,10 +59,10 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u = new String[34];
         GameClientShell.field_u[16] = vp.discardText;
         GameClientShell.field_u[1] = WhirlpoolTables.resumeGameText;
-        GameClientShell.field_u[5] = rf.menuText;
+        GameClientShell.field_u[5] = RenderPresentationException.menuText;
         GameClientShell.field_u[11] = RasterBuffer.quitText;
         GameClientShell.field_u[14] = kf.achievementsText;
-        GameClientShell.field_u[6] = rf.menuText;
+        GameClientShell.field_u[6] = RenderPresentationException.menuText;
         GameClientShell.field_u[12] = ff.soundText;
         GameClientShell.field_u[7] = nj.endGameText;
         GameClientShell.field_u[0] = k.startGameText;

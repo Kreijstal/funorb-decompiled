@@ -127,7 +127,7 @@ final class qw {
           if (jc.b(true) > 20) {
             return;
           }
-          var2_int = ExpandingRingEffect.nextRandomInt(2, he.field_o, (byte) -96);
+          var2_int = ExpandingRingEffect.nextRandomInt(2, HardwareGraphicsHeap.field_o, (byte) -96);
           if (1 == var2_int) {
             var3 = param1.droneType + 1;
             if (6 <= var3) {

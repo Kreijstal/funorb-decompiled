@@ -205,7 +205,7 @@ final class b {
               kk.a((byte) -120);
             }
           } else {
-            var12 = (hg) (hi.field_f.first(param0 + 29968));
+            var12 = (hg) (SoftwareRenderTarget.field_f.first(param0 + 29968));
             if (var12 == null) {
               kk.a((byte) -113);
               return;
