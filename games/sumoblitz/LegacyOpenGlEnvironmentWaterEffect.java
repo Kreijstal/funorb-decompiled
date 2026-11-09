@@ -99,7 +99,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
             stackIn_7_0 = (LoginMethodPreference) null;
             return stackIn_7_0;
           }
-          var3 = SingleChildWidget.a(32);
+          var3 = SingleChildWidget.loginMethodPreferences(32);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matches(var2, param1 - 2184)) {

@@ -63,7 +63,7 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void updateIntroRotation(byte guard, int direction) {
         int var2;
         int var3;
         int var4;
@@ -71,37 +71,37 @@ final class IntrusiveDequeCursor {
         int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
         var2 = 0;
-        var3 = MusicPatch.field_u;
+        var3 = MusicPatch.introFrame;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
-          if (param0 != 79) {
+          if (guard != 79) {
             return;
           }
           var4 = 1;
           var5 = 0;
-          if (param1 == 3) {
+          if (direction == 3) {
             var4 = -1;
           }
-          if (param1 == 1) {
+          if (direction == 1) {
             var5 = 1;
           }
-          if (param1 == 4) {
+          if (direction == 4) {
             var5 = 1;
             var4 = 1;
           }
-          if (5 == param1) {
+          if (5 == direction) {
             var4 = -1;
             var5 = 1;
           }
-          if (param1 == 6) {
+          if (direction == 6) {
             var4 = 1;
             var5 = -1;
           }
-          if (param1 == 7) {
+          if (direction == 7) {
             var5 = -1;
             var4 = -1;
           } else {
-            if (8 == param1) {
+            if (8 == direction) {
               var5 = -1;
               var4 = -1;
             }
@@ -113,109 +113,109 @@ final class IntrusiveDequeCursor {
             if (var3 < 120) {
               var3 = -var3 + 120;
               var2 = -(var3 * var3 * 8192 / 3300) + 8192;
-              if (param0 != 79) {
+              if (guard != 79) {
                 return;
               }
               var4 = 1;
               var5 = 0;
-              if (param1 == 3) {
+              if (direction == 3) {
                 var4 = -1;
               }
-              if (param1 == 1) {
+              if (direction == 1) {
                 var5 = 1;
               }
-              if (param1 == 4) {
-                var5 = 1;
-                var4 = 1;
-              }
-              if (5 == param1) {
-                var4 = -1;
-                var5 = 1;
-              }
-              if (param1 == 6) {
-                var4 = 1;
-                var5 = -1;
-              }
-              if (param1 == 7 ||
-                8 == param1) {
-                var5 = -1;
-                var4 = -1;
-              }
-              if (param1 == 11) {
-                var4 = -1;
-              }
-              if (param1 == 12) {
-                var4 = -1;
-                var5 = -1;
-              }
-              if (param1 == 13) {
-                var4 = 1;
-                var5 = -1;
-              }
-              if (param1 == 14) {
-                var5 = 1;
-                var4 = -1;
-              }
-              if (param1 == 15) {
+              if (direction == 4) {
                 var5 = 1;
                 var4 = 1;
               }
-              IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
+              if (5 == direction) {
+                var4 = -1;
+                var5 = 1;
+              }
+              if (direction == 6) {
+                var4 = 1;
+                var5 = -1;
+              }
+              if (direction == 7 ||
+                8 == direction) {
+                var5 = -1;
+                var4 = -1;
+              }
+              if (direction == 11) {
+                var4 = -1;
+              }
+              if (direction == 12) {
+                var4 = -1;
+                var5 = -1;
+              }
+              if (direction == 13) {
+                var4 = 1;
+                var5 = -1;
+              }
+              if (direction == 14) {
+                var5 = 1;
+                var4 = -1;
+              }
+              if (direction == 15) {
+                var5 = 1;
+                var4 = 1;
+              }
+              IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.createIntroRotationMatrix(83, var2 * var5, var4 * var2);
               return;
             }
           }
-          if (param0 != 79) {
+          if (guard != 79) {
             return;
           }
           var4 = 1;
           var5 = 0;
-          if (param1 == 3) {
+          if (direction == 3) {
             var4 = -1;
           }
-          if (param1 == 1) {
+          if (direction == 1) {
             var5 = 1;
           }
-          if (param1 == 4) {
+          if (direction == 4) {
             var5 = 1;
             var4 = 1;
           }
-          if (5 == param1) {
+          if (5 == direction) {
             var4 = -1;
             var5 = 1;
           }
-          if (param1 == 6) {
+          if (direction == 6) {
             var4 = 1;
             var5 = -1;
           }
-          if (param1 == 7 ||
-            8 == param1) {
+          if (direction == 7 ||
+            8 == direction) {
             var5 = -1;
             var4 = -1;
           }
         }
-        if (param1 == 11) {
+        if (direction == 11) {
           var4 = -1;
         }
-        if (param1 == 12) {
+        if (direction == 12) {
           var4 = -1;
           var5 = -1;
         }
-        if (param1 == 13) {
+        if (direction == 13) {
           var4 = 1;
           var5 = -1;
         }
-        if (param1 == 14) {
+        if (direction == 14) {
           var5 = 1;
           var4 = -1;
         }
-        if (param1 == 15) {
+        if (direction == 15) {
           var5 = 1;
           var4 = 1;
         }
-        IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
+        IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.createIntroRotationMatrix(83, var2 * var5, var4 * var2);
     }
 
-    final static void a(FullscreenDisplayMode[] param0, boolean param1) {
+    final static void sortDisplayModes(FullscreenDisplayMode[] modes, boolean guard) {
         int var3 = 0;
         int var2_int = 0;
         FullscreenDisplayMode var4 = null;
@@ -229,21 +229,21 @@ final class IntrusiveDequeCursor {
         RuntimeException var2 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length;
-          if (!param1) {
+          var2_int = modes.length;
+          if (!guard) {
             var7 = (FullscreenDisplayMode[]) null;
-            IntrusiveDequeCursor.a((FullscreenDisplayMode[]) null, true);
+            IntrusiveDequeCursor.sortDisplayModes((FullscreenDisplayMode[]) null, true);
           }
           for (var3 = 1; var2_int > var3; var3++) {
-            var4 = param0[var3];
+            var4 = modes[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (ToolkitFont.displayModeSortsAfter(param0[var5], -114, var4)) {
-                param0[var5 + 1] = param0[var5];
+              if (ToolkitFont.displayModeSortsAfter(modes[var5], -114, var4)) {
+                modes[var5 + 1] = modes[var5];
                 continue;
               }
               break;
             }
-            param0[1 + var5] = var4;
+            modes[1 + var5] = var4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -251,12 +251,12 @@ final class IntrusiveDequeCursor {
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("cb.A(");
-          if (param0 == null) {
+          if (modes == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -341,19 +341,19 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void addScore(int points, int guard) {
         int var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
         var2 = FadingWidget.score;
-        IntrusiveNodeHashTable.field_c = IntrusiveNodeHashTable.field_c + param0;
-        if (param1 != -1372239541) {
+        IntrusiveNodeHashTable.field_c = IntrusiveNodeHashTable.field_c + points;
+        if (guard != -1372239541) {
           return;
         }
-        FadingWidget.score = FadingWidget.score + param0;
+        FadingWidget.score = FadingWidget.score + points;
         if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) < 5) {
           if (5 <= BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
-            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + points;
             if (var2 >= 50000) {
               return;
             }
@@ -365,12 +365,12 @@ final class IntrusiveDequeCursor {
             }
             return;
           }
-          QuickChatCommand.field_a = QuickChatCommand.field_a + param0;
+          QuickChatCommand.field_a = QuickChatCommand.field_a + points;
         } else {
           if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - points;
           } else {
-            LoginPacketWriter.field_a = LoginPacketWriter.field_a - param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - points;
           }
         }
         if (var2 >= 50000) {
@@ -385,56 +385,56 @@ final class IntrusiveDequeCursor {
         UnderageAccountInfoPanel.b(24753, 241, 14);
     }
 
-    final static int b(int param0, int param1) {
-        if (param0 != -22415) {
-          IntrusiveDequeCursor.a((byte) 82, -115);
+    final static int approximateIntegerSqrt(int guard, int value) {
+        if (guard != -22415) {
+          IntrusiveDequeCursor.updateIntroRotation((byte) 82, -115);
         }
-        if (65536L > (long)param1) {
-          if ((long)param1 < 256L) {
-            if (0 <= param1) {
-              return VertexStreamLayout.field_f[param1] >> 12;
+        if (65536L > (long)value) {
+          if ((long)value < 256L) {
+            if (0 <= value) {
+              return VertexStreamLayout.sqrtQ12[value] >> 12;
             }
             return -1;
           }
-          if ((long)param1 >= 4096L) {
-            if ((long)param1 >= 16384L) {
-              return VertexStreamLayout.field_f[param1 >> 8] >> 8;
+          if ((long)value >= 4096L) {
+            if ((long)value >= 16384L) {
+              return VertexStreamLayout.sqrtQ12[value >> 8] >> 8;
             }
-            return VertexStreamLayout.field_f[param1 >> 6] >> 9;
+            return VertexStreamLayout.sqrtQ12[value >> 6] >> 9;
           }
-          if ((long)param1 >= 1024L) {
-            return VertexStreamLayout.field_f[param1 >> 4] >> 10;
+          if ((long)value >= 1024L) {
+            return VertexStreamLayout.sqrtQ12[value >> 4] >> 10;
           }
-          return VertexStreamLayout.field_f[param1 >> 2] >> 11;
+          return VertexStreamLayout.sqrtQ12[value >> 2] >> 11;
         }
-        if (16777216L > (long)param1) {
-          if ((long)param1 >= 1048576L) {
-            if ((long)param1 < 4194304L) {
-              return VertexStreamLayout.field_f[param1 >> 14] >> 5;
+        if (16777216L > (long)value) {
+          if ((long)value >= 1048576L) {
+            if ((long)value < 4194304L) {
+              return VertexStreamLayout.sqrtQ12[value >> 14] >> 5;
             }
-            return VertexStreamLayout.field_f[param1 >> 16] >> 4;
+            return VertexStreamLayout.sqrtQ12[value >> 16] >> 4;
           }
-          if (262144L > (long)param1) {
-            return VertexStreamLayout.field_f[param1 >> 10] >> 7;
+          if (262144L > (long)value) {
+            return VertexStreamLayout.sqrtQ12[value >> 10] >> 7;
           }
-          return VertexStreamLayout.field_f[param1 >> 12] >> 6;
+          return VertexStreamLayout.sqrtQ12[value >> 12] >> 6;
         }
-        if ((long)param1 >= 268435456L) {
-          if (1073741824L > (long)param1) {
-            return VertexStreamLayout.field_f[param1 >> 22] >> 1;
+        if ((long)value >= 268435456L) {
+          if (1073741824L > (long)value) {
+            return VertexStreamLayout.sqrtQ12[value >> 22] >> 1;
           }
-          return VertexStreamLayout.field_f[param1 >> 24];
+          return VertexStreamLayout.sqrtQ12[value >> 24];
         }
-        if ((long)param1 < 67108864L) {
-          return VertexStreamLayout.field_f[param1 >> 18] >> 3;
+        if ((long)value < 67108864L) {
+          return VertexStreamLayout.sqrtQ12[value >> 18] >> 3;
         }
-        return VertexStreamLayout.field_f[param1 >> 20] >> 2;
+        return VertexStreamLayout.sqrtQ12[value >> 20] >> 2;
     }
 
     public static void releaseStatics(int guard) {
         field_e = null;
         if (guard != -1384583532) {
-          IntrusiveDequeCursor.b(67, -59);
+          IntrusiveDequeCursor.approximateIntegerSqrt(67, -59);
           field_a = null;
           return;
         }

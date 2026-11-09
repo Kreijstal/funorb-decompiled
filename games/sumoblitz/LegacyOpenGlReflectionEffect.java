@@ -191,22 +191,22 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        TimedSceneEffect.field_m[0] = MusicTrack.load(param1, "titlescreen_track");
-        TimedSceneEffect.field_m[1] = MusicTrack.load(param1, "track2");
-        TimedSceneEffect.field_m[2] = MusicTrack.load(param1, "track3");
-        if (param0 != -1509) {
+    final static void loadMusicTracks(int guard, ResourceArchive archive) {
+        TimedSceneEffect.field_m[0] = MusicTrack.load(archive, "titlescreen_track");
+        TimedSceneEffect.field_m[1] = MusicTrack.load(archive, "track2");
+        TimedSceneEffect.field_m[2] = MusicTrack.load(archive, "track3");
+        if (guard != -1509) {
           return;
         }
         try {
-          TimedSceneEffect.field_m[3] = MusicTrack.load(param1, "track5");
-          TimedSceneEffect.field_m[4] = MusicTrack.load(param1, "track6");
-          TimedSceneEffect.field_m[5] = MusicTrack.load(param1, "track7");
-          TimedSceneEffect.field_m[6] = MusicTrack.load(param1, "win_track");
-          TimedSceneEffect.field_m[7] = MusicTrack.load(param1, "defeat_track");
-          TimedSceneEffect.field_m[8] = MusicTrack.load(param1, "challenge_mode_track");
+          TimedSceneEffect.field_m[3] = MusicTrack.load(archive, "track5");
+          TimedSceneEffect.field_m[4] = MusicTrack.load(archive, "track6");
+          TimedSceneEffect.field_m[5] = MusicTrack.load(archive, "track7");
+          TimedSceneEffect.field_m[6] = MusicTrack.load(archive, "win_track");
+          TimedSceneEffect.field_m[7] = MusicTrack.load(archive, "defeat_track");
+          TimedSceneEffect.field_m[8] = MusicTrack.load(archive, "challenge_mode_track");
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.C(" + guard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         return true;
     }
 
-    final static void d(int param0) {
+    final static void snapshotMouseInput(int guard) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = ConfirmedEmailValidator.field_h;
@@ -231,8 +231,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           ResourceArchive.field_i = false;
           ActiveCanvasProvider.field_c = LegacyOpenGlBuffer.field_i;
           LoginCredentialType.field_a = GzipDecompressor.field_d;
-          if (param0 < 93) {
-            LegacyOpenGlReflectionEffect.d(-50);
+          if (guard < 93) {
+            LegacyOpenGlReflectionEffect.snapshotMouseInput(-50);
           }
           AgeValidator.field_f = LegacyOpenGlTexture3D.field_l;
           LegacyOpenGlBuffer.field_i = 0;

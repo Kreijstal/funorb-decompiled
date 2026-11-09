@@ -234,8 +234,8 @@ abstract class LegacyOpenGlTexture implements LegacyOpenGlFramebufferAttachment 
         }
     }
 
-    final static LoginFieldValue c(boolean param0) {
-        if (!param0) {
+    final static LoginFieldValue accountServiceIdentifierValue(boolean guard) {
+        if (!guard) {
           return (LoginFieldValue) null;
         }
         return new LoginFieldValue(HiscoreRequest.accountServiceIdentifier(100), LegacyCubeMapSource.isEmailAvailabilityPending(77));

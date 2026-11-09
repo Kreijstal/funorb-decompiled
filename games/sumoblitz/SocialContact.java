@@ -26,7 +26,7 @@ final class SocialContact extends UiStyle {
                 return;
               }
               var3 = new java.net.URL(applet.getCodeBase(), path);
-              var3 = MusicPatch.a((byte) 125, applet, var3);
+              var3 = MusicPatch.updateAppletStateUrl((byte) 125, applet, var3);
               LegacyOpenGlFlowingWaterEffect.a(guard ^ 23067, applet, true, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

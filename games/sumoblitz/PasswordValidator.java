@@ -7,7 +7,7 @@ final class PasswordValidator extends TextInputValidator {
     static SpriteData field_i;
     static PrimitiveType LINES;
     private TextInputWidget screenNameInput;
-    static String field_f;
+    static String normalizedAccountDisplayName;
 
     final String messageForText(int guard, String text) {
         String var3 = null;
@@ -199,7 +199,7 @@ final class PasswordValidator extends TextInputValidator {
           return;
         }
         LINES = null;
-        field_f = null;
+        normalizedAccountDisplayName = null;
     }
 
     PasswordValidator(TextInputWidget field, TextInputWidget nameField, TextInputWidget mailField) {

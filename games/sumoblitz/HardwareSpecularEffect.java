@@ -36,7 +36,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         if (param0 > -9) {
           return;
         }
-        LevelCompleteUpgradeScreen.b((byte) 126);
+        LevelCompleteUpgradeScreen.decreaseSoundVolume((byte) 126);
     }
 
     final void disable(boolean guard) {
@@ -83,7 +83,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive openResourceArchive(int retentionPolicy, int guard, boolean discardGroups, int archiveId, boolean prefetch, boolean discardCompleted) {
         try {
           int var6_int = 0;
           IOException var6 = null;
@@ -93,7 +93,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           ResourceArchive stackIn_11_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            var6_int = 100 % ((param1 + 29) / 42);
+            var6_int = 100 % ((guard + 29) / 42);
             var7 = null;
             if (CompactMeshGeometry.field_u.field_l != null) {
               DiskCacheDataFile.dataFile = new BufferedCacheFile(CompactMeshGeometry.field_u.field_l, 5200, 0);
@@ -105,17 +105,17 @@ final class HardwareSpecularEffect extends ShaderEffect {
               if (null == ProgressDialog.field_O) {
                 ProgressDialog.field_O = new BufferedCacheFile[CompactMeshGeometry.field_u.field_i.length];
               }
-              if (ProgressDialog.field_O[param3] == null) {
-                ProgressDialog.field_O[param3] = new BufferedCacheFile(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
-                CompactMeshGeometry.field_u.field_i[param3] = null;
+              if (ProgressDialog.field_O[archiveId] == null) {
+                ProgressDialog.field_O[archiveId] = new BufferedCacheFile(CompactMeshGeometry.field_u.field_i[archiveId], 12000, 0);
+                CompactMeshGeometry.field_u.field_i[archiveId] = null;
               }
-              var8 = new SectorCacheStore(param3, DiskCacheDataFile.dataFile, ProgressDialog.field_O[param3], 2097152);
+              var8 = new SectorCacheStore(archiveId, DiskCacheDataFile.dataFile, ProgressDialog.field_O[archiveId], 2097152);
             }
-            var9 = LegacyOpenGlSpecularEffect.field_i.archiveProvider(false, param3, (SectorCacheStore) (var7), param5, (SectorCacheStore) (var8));
-            if (param4) {
+            var9 = LegacyOpenGlSpecularEffect.field_i.archiveProvider(false, archiveId, (SectorCacheStore) (var7), discardCompleted, (SectorCacheStore) (var8));
+            if (prefetch) {
               var9.enablePrefetch((byte) -81);
             }
-            stackIn_11_0 = new ResourceArchive(var9, param2, param0);
+            stackIn_11_0 = new ResourceArchive(var9, discardGroups, retentionPolicy);
             return stackIn_11_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -22,8 +22,8 @@ abstract class LoginCredentials {
         try {
           RenderPresentationException.field_a.dispatchPointerInput(CheckboxWidget.field_F, GraphicsToolkit.field_b, true, guard - 19887);
           RenderPresentationException.field_a.advanceDialogAnimations(-90);
-          while (EmailCredentials.c(guard ^ -19954)) {
-            RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
+          while (EmailCredentials.pollKeyEvent(guard ^ -19954)) {
+            RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.keyCharacter, TextureCombineOperation.keyCode, true);
           }
           if (MarkerTrackRenderer.field_e != -1) {
             var1_int = MarkerTrackRenderer.field_e;

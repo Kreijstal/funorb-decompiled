@@ -29,7 +29,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
         this.optionList.setBounds(114, 0, 0, var2, this.width);
         this.listScrollPane = new ScrollPane(0, 0, 0, 0, new EmptyWidgetRenderer(), this.optionList, (WidgetRenderer) null);
         if (var4 != 0) {
-          this.listScrollPane.setVerticalScrollControl(1332, true, GameKeyHandler.a((byte) 35));
+          this.listScrollPane.setVerticalScrollControl(1332, true, GameKeyHandler.createVerticalScrollControl((byte) 35));
         }
         this.listScrollPane.setBounds(-126, 0, this.buttonHeight, this.height - this.buttonHeight, this.width);
         this.listOpen = true;
@@ -224,15 +224,15 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void requestLoginWithDisplayName(String displayName, byte guard) {
         try {
-          ArchiveCatalog.a((byte) -94, param0);
-          if (param1 != -47) {
+          ArchiveCatalog.setRequestedDisplayName((byte) -94, displayName);
+          if (guard != -47) {
             field_C = 74;
           }
           HardwareUnlitEffect.showAccountProgressDialog(LegacyOpenGlTexture2D.loggingInText, false, (byte) -89);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ld.JA(" + (displayName != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -460,7 +460,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
           this.optionList.selectionIndex = var3_int;
           if (guard) {
             String var4 = (String) null;
-            DropDownWidget.a((String) null, (byte) -13);
+            DropDownWidget.requestLoginWithDisplayName((String) null, (byte) -13);
           }
           this.ensureSelectionVisible(-1);
           this.searchPrefix = prefix;

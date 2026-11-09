@@ -43,12 +43,12 @@ abstract class SelectionOverlay {
         if (param0 != 21) {
           return (LoginFieldValue) null;
         }
-        String var1 = LegacyOpenGlRidgedWaterEffect.c((byte) -2);
+        String var1 = LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.c((byte) -2), GameApplet.isNameAvailabilityPending(param0 - 3));
+        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), GameApplet.isNameAvailabilityPending(param0 - 3));
     }
 
     final void hide(byte guard) {

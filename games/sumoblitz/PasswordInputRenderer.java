@@ -70,7 +70,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
             if (guard < 108) {
               return;
             }
-            EmailAvailabilityRequest.field_a = OpenGlBuffer.field_a;
+            EmailAvailabilityRequest.keyEventReadIndex = OpenGlBuffer.keyEventLimit;
             LegacyOpenGlFlowingWaterEffect.field_e = LegacyOpenGlFlowingWaterEffect.field_e + 1;
             if (0 > LegacyOpenGlEnvironmentWaterEffect.field_i) {
               var5 = 0;
@@ -91,7 +91,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
                 AudioOutputBootstrap.field_b[~var2] = false;
               }
             }
-            OpenGlBuffer.field_a = CacheReferenceNode.field_s;
+            OpenGlBuffer.keyEventLimit = CacheReferenceNode.field_s;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

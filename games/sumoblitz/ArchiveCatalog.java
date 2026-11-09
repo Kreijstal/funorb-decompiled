@@ -13,7 +13,7 @@ final class ArchiveCatalog {
     private java.math.BigInteger rsaModulus;
     static int field_c;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void applyRequestedDisplayMode(boolean param0, boolean param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -72,24 +72,24 @@ final class ArchiveCatalog {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void setRequestedDisplayName(byte guard, String displayName) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 != -94) {
-            ArchiveCatalog.a((byte) 97, (String) null);
+          if (guard != -94) {
+            ArchiveCatalog.setRequestedDisplayName((byte) 97, (String) null);
           }
-          SoftwareRenderContext.field_b = param1;
+          SoftwareRenderContext.requestedDisplayName = displayName;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("rj.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("rj.C(").append(guard).append(',');
+          if (displayName == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -126,7 +126,7 @@ final class ArchiveCatalog {
             }
             this.masterIndex.position = 72 * archiveId + 6;
             if (guard) {
-              ArchiveCatalog.a((ResourceArchive) null, 4);
+              ArchiveCatalog.loadGameText((ResourceArchive) null, 4);
             }
             var6_int = this.masterIndex.readInt(true);
             stackIn_19_0 = this.masterIndex;
@@ -287,14 +287,14 @@ final class ArchiveCatalog {
         try {
           field_f = null;
           if (guard != 2) {
-            ArchiveCatalog.a(true, true);
+            ArchiveCatalog.applyRequestedDisplayMode(true, true);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rj.H(" + guard + ')');
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadGameText(ResourceArchive archive, int guard) {
         RuntimeException stackIn_870_0 = null;
         StringBuilder stackIn_870_1 = null;
         String stackIn_871_2 = null;
@@ -551,198 +551,198 @@ final class ArchiveCatalog {
         byte[] var2Lifetime247;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          Drone.field_J = param0;
+          Drone.field_J = archive;
           var2 = AppletInstanceState.fetchGameDataFile((byte) 98, "gamename");
           if (var2 != null) {
-            MusicVoice.a(param1 ^ -5, var2);
+            MusicVoice.decodeCp1252(guard ^ -5, var2);
           }
           var2Lifetime1 = AppletInstanceState.fetchGameDataFile((byte) 99, "youwon");
           if (var2Lifetime1 != null) {
-            MusicVoice.a(0, var2Lifetime1);
+            MusicVoice.decodeCp1252(0, var2Lifetime1);
           }
           var2Lifetime2 = AppletInstanceState.fetchGameDataFile((byte) 112, "institle");
           if (null != var2Lifetime2) {
-            ChatMessage.instructionsText = MusicVoice.a(param1 ^ -5, var2Lifetime2);
+            ChatMessage.instructionsText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime2);
           }
           var2Lifetime3 = AppletInstanceState.fetchGameDataFile((byte) 113, "scoretitle");
           if (var2Lifetime3 != null) {
-            LoginCredentials.scoreText = MusicVoice.a(param1 ^ -5, var2Lifetime3);
+            LoginCredentials.scoreText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime3);
           }
           var2Lifetime4 = AppletInstanceState.fetchGameDataFile((byte) 88, "nametitle");
           if (var2Lifetime4 != null) {
-            FourIntReadRequest.nameText = MusicVoice.a(param1 ^ -5, var2Lifetime4);
+            FourIntReadRequest.nameText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime4);
           }
           var2Lifetime5 = AppletInstanceState.fetchGameDataFile((byte) 121, "bsths");
           if (var2Lifetime5 != null) {
-            MouseInputShutdown.bestHiscoresText = MusicVoice.a(param1 ^ -5, var2Lifetime5);
+            MouseInputShutdown.bestHiscoresText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime5);
           }
           var2Lifetime6 = AppletInstanceState.fetchGameDataFile((byte) 112, "myhs");
           if (var2Lifetime6 != null) {
-            SpriteState.myHiscoresText = MusicVoice.a(param1 ^ -5, var2Lifetime6);
+            SpriteState.myHiscoresText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime6);
           }
           var2Lifetime7 = AppletInstanceState.fetchGameDataFile((byte) 122, "allhs");
           if (null != var2Lifetime7) {
-            IntroMeshResources.allHiscoresText = MusicVoice.a(param1 + 5, var2Lifetime7);
+            IntroMeshResources.allHiscoresText = MusicVoice.decodeCp1252(guard + 5, var2Lifetime7);
           }
           var2Lifetime8 = AppletInstanceState.fetchGameDataFile((byte) 106, "thisishidden");
           if (null != var2Lifetime8) {
-            ContentTransitionPhase.thisIsAHiddenText = MusicVoice.a(0, var2Lifetime8);
+            ContentTransitionPhase.thisIsAHiddenText = MusicVoice.decodeCp1252(0, var2Lifetime8);
           }
           var2Lifetime9 = AppletInstanceState.fetchGameDataFile((byte) 99, "orbcoin");
           if (null != var2Lifetime9) {
-            MusicVoice.a(0, var2Lifetime9);
+            MusicVoice.decodeCp1252(0, var2Lifetime9);
           }
           var2Lifetime10 = AppletInstanceState.fetchGameDataFile((byte) 127, "unknownstuff");
           if (var2Lifetime10 != null) {
-            MusicVoice.field_s = MusicVoice.a(param1 + 5, var2Lifetime10);
+            MusicVoice.field_s = MusicVoice.decodeCp1252(guard + 5, var2Lifetime10);
           }
           var2Lifetime11 = AppletInstanceState.fetchGameDataFile((byte) 120, "orbpoints");
           if (var2Lifetime11 != null) {
-            NameSuggestionsPanel.orbPointsText = MusicVoice.a(0, var2Lifetime11);
+            NameSuggestionsPanel.orbPointsText = MusicVoice.decodeCp1252(0, var2Lifetime11);
           }
           var2Lifetime12 = AppletInstanceState.fetchGameDataFile((byte) 102, "achievethisgame");
           if (null != var2Lifetime12) {
-            SoftLruCache.achievementsThisGameText = MusicVoice.a(param1 + 5, var2Lifetime12);
+            SoftLruCache.achievementsThisGameText = MusicVoice.decodeCp1252(guard + 5, var2Lifetime12);
           }
           var2Lifetime13 = AppletInstanceState.fetchGameDataFile((byte) 107, "achieve");
           if (var2Lifetime13 != null) {
-            Js5Client.achievementsText = MusicVoice.a(0, var2Lifetime13);
+            Js5Client.achievementsText = MusicVoice.decodeCp1252(0, var2Lifetime13);
           }
           var2Lifetime14 = AppletInstanceState.fetchGameDataFile((byte) 112, "thousandseperator");
           if (var2Lifetime14 != null) {
-            PrimitiveType.field_a = MusicVoice.a(0, var2Lifetime14);
+            PrimitiveType.field_a = MusicVoice.decodeCp1252(0, var2Lifetime14);
           }
           var2Lifetime15 = AppletInstanceState.fetchGameDataFile((byte) 100, "multiplier");
           if (var2Lifetime15 != null) {
-            MusicVoice.a(param1 + 5, var2Lifetime15);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime15);
           }
           var2Lifetime16 = AppletInstanceState.fetchGameDataFile((byte) 92, "startgame");
           if (null != var2Lifetime16) {
-            SpriteSheetSupport.startGameText = MusicVoice.a(0, var2Lifetime16);
+            SpriteSheetSupport.startGameText = MusicVoice.decodeCp1252(0, var2Lifetime16);
           }
           var2Lifetime17 = AppletInstanceState.fetchGameDataFile((byte) 114, "startarcadegame");
           if (null != var2Lifetime17) {
-            LoadingStatusText.arcadeGameText = MusicVoice.a(0, var2Lifetime17);
+            LoadingStatusText.arcadeGameText = MusicVoice.decodeCp1252(0, var2Lifetime17);
           }
           var2Lifetime18 = AppletInstanceState.fetchGameDataFile((byte) 103, "arcadescores");
           if (var2Lifetime18 != null) {
-            TimedSceneEffect.challengeText = MusicVoice.a(0, var2Lifetime18);
+            TimedSceneEffect.challengeText = MusicVoice.decodeCp1252(0, var2Lifetime18);
           }
           var2Lifetime19 = AppletInstanceState.fetchGameDataFile((byte) 123, "regularscores");
           if (null != var2Lifetime19) {
-            DropDownListWidget.regularText = MusicVoice.a(param1 + 5, var2Lifetime19);
+            DropDownListWidget.regularText = MusicVoice.decodeCp1252(guard + 5, var2Lifetime19);
           }
           var2Lifetime20 = AppletInstanceState.fetchGameDataFile((byte) 119, "editorTx");
           if (null != var2Lifetime20) {
-            MusicPatch.editorText = MusicVoice.a(0, var2Lifetime20);
+            MusicPatch.editorText = MusicVoice.decodeCp1252(0, var2Lifetime20);
           }
           var2Lifetime21 = AppletInstanceState.fetchGameDataFile((byte) 119, "challengeModeTx");
           if (null != var2Lifetime21) {
-            CubeMapSource.challengeText = MusicVoice.a(0, var2Lifetime21);
+            CubeMapSource.challengeText = MusicVoice.decodeCp1252(0, var2Lifetime21);
           }
           var2Lifetime22 = AppletInstanceState.fetchGameDataFile((byte) 117, "optionsTx");
           if (null != var2Lifetime22) {
-            MatchingTextValidator.optionsText = MusicVoice.a(0, var2Lifetime22);
+            MatchingTextValidator.optionsText = MusicVoice.decodeCp1252(0, var2Lifetime22);
           }
           var2Lifetime23 = AppletInstanceState.fetchGameDataFile((byte) 113, "difficultyTx");
           if (null != var2Lifetime23) {
-            AccountUiBootstrap.difficultyText = MusicVoice.a(param1 ^ -5, var2Lifetime23);
+            AccountUiBootstrap.difficultyText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime23);
           }
           var2Lifetime24 = AppletInstanceState.fetchGameDataFile((byte) 93, "difficultyLevelTx,0");
           if (var2Lifetime24 != null) {
-            IntNode.difficultyNames[0] = MusicVoice.a(0, var2Lifetime24);
+            IntNode.difficultyNames[0] = MusicVoice.decodeCp1252(0, var2Lifetime24);
           }
           var2Lifetime25 = AppletInstanceState.fetchGameDataFile((byte) 98, "difficultyLevelTx,1");
           if (null != var2Lifetime25) {
-            IntNode.difficultyNames[1] = MusicVoice.a(0, var2Lifetime25);
+            IntNode.difficultyNames[1] = MusicVoice.decodeCp1252(0, var2Lifetime25);
           }
           var2Lifetime26 = AppletInstanceState.fetchGameDataFile((byte) 103, "resetTx");
           if (var2Lifetime26 != null) {
-            ServerDataReadRequest.resetStatsText = MusicVoice.a(0, var2Lifetime26);
+            ServerDataReadRequest.resetStatsText = MusicVoice.decodeCp1252(0, var2Lifetime26);
           }
           var2Lifetime27 = AppletInstanceState.fetchGameDataFile((byte) 105, "dialogOptionsTx,0");
           if (var2Lifetime27 != null) {
-            StringBuilderSupport.yesNoLabels[0] = MusicVoice.a(0, var2Lifetime27);
+            StringBuilderSupport.yesNoLabels[0] = MusicVoice.decodeCp1252(0, var2Lifetime27);
           }
           var2Lifetime28 = AppletInstanceState.fetchGameDataFile((byte) 124, "dialogOptionsTx,1");
           if (null != var2Lifetime28) {
-            StringBuilderSupport.yesNoLabels[1] = MusicVoice.a(0, var2Lifetime28);
+            StringBuilderSupport.yesNoLabels[1] = MusicVoice.decodeCp1252(0, var2Lifetime28);
           }
           var2Lifetime29 = AppletInstanceState.fetchGameDataFile((byte) 105, "areYouSure");
           if (var2Lifetime29 != null) {
-            DisplayNameForm.areYouSureYouText = MusicVoice.a(param1 ^ -5, var2Lifetime29);
+            DisplayNameForm.areYouSureYouText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime29);
           }
           var2Lifetime30 = AppletInstanceState.fetchGameDataFile((byte) 102, "continueTx");
           if (null != var2Lifetime30) {
-            AccountStatusDialogState.continueToNextLevelText = MusicVoice.a(0, var2Lifetime30);
+            AccountStatusDialogState.continueToNextLevelText = MusicVoice.decodeCp1252(0, var2Lifetime30);
           }
           var2Lifetime31 = AppletInstanceState.fetchGameDataFile((byte) 93, "continueOptionsTx,0");
           if (var2Lifetime31 != null) {
-            NextLevelChoiceLabels.choices[0] = MusicVoice.a(0, var2Lifetime31);
+            NextLevelChoiceLabels.choices[0] = MusicVoice.decodeCp1252(0, var2Lifetime31);
           }
           var2Lifetime32 = AppletInstanceState.fetchGameDataFile((byte) 122, "continueOptionsTx,1");
           if (null != var2Lifetime32) {
-            NextLevelChoiceLabels.choices[1] = MusicVoice.a(0, var2Lifetime32);
+            NextLevelChoiceLabels.choices[1] = MusicVoice.decodeCp1252(0, var2Lifetime32);
           }
           var2Lifetime33 = AppletInstanceState.fetchGameDataFile((byte) 127, "continueOptTx");
           if (null != var2Lifetime33) {
-            VertexAttribute.continueText = MusicVoice.a(0, var2Lifetime33);
+            VertexAttribute.continueText = MusicVoice.decodeCp1252(0, var2Lifetime33);
           }
           var2Lifetime34 = AppletInstanceState.fetchGameDataFile((byte) 125, "restartLevel");
           if (var2Lifetime34 != null) {
-            IntroPreparation.restartLevelText = MusicVoice.a(param1 ^ -5, var2Lifetime34);
+            IntroPreparation.restartLevelText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime34);
           }
           var2Lifetime35 = AppletInstanceState.fetchGameDataFile((byte) 98, "returnToLevelSelect");
           if (null != var2Lifetime35) {
-            AccountRequestState.levelSelectText = MusicVoice.a(0, var2Lifetime35);
+            AccountRequestState.levelSelectText = MusicVoice.decodeCp1252(0, var2Lifetime35);
           }
           var2Lifetime36 = AppletInstanceState.fetchGameDataFile((byte) 92, "restartChallenge");
           if (var2Lifetime36 != null) {
-            MusicVoice.a(param1 + 5, var2Lifetime36);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime36);
           }
           var2Lifetime37 = AppletInstanceState.fetchGameDataFile((byte) 110, "returnToMainMenu");
           if (var2Lifetime37 != null) {
-            InteractiveWidget.returnToMainMenuText = MusicVoice.a(0, var2Lifetime37);
+            InteractiveWidget.returnToMainMenuText = MusicVoice.decodeCp1252(0, var2Lifetime37);
           }
           var2Lifetime38 = AppletInstanceState.fetchGameDataFile((byte) 114, "respecTx");
           if (var2Lifetime38 != null) {
-            ProjectionMode.reassignText = MusicVoice.a(0, var2Lifetime38);
+            ProjectionMode.reassignText = MusicVoice.decodeCp1252(0, var2Lifetime38);
           }
           var2Lifetime39 = AppletInstanceState.fetchGameDataFile((byte) 110, "respecTitle");
           if (var2Lifetime39 != null) {
-            NextLevelChoiceOverlay.reassignPowerupsText = MusicVoice.a(0, var2Lifetime39);
+            NextLevelChoiceOverlay.reassignPowerupsText = MusicVoice.decodeCp1252(0, var2Lifetime39);
           }
           var2Lifetime40 = AppletInstanceState.fetchGameDataFile((byte) 127, "respecInstructions");
           if (var2Lifetime40 != null) {
-            LegacyOpenGlPbuffer.clickToAssignPointsText = MusicVoice.a(0, var2Lifetime40);
+            LegacyOpenGlPbuffer.clickToAssignPointsText = MusicVoice.decodeCp1252(0, var2Lifetime40);
           }
           var2Lifetime41 = AppletInstanceState.fetchGameDataFile((byte) 110, "pointsRemaining");
           if (null != var2Lifetime41) {
-            HotspotTextWidget.pointsRemainingText = MusicVoice.a(0, var2Lifetime41);
+            HotspotTextWidget.pointsRemainingText = MusicVoice.decodeCp1252(0, var2Lifetime41);
           }
           var2Lifetime42 = AppletInstanceState.fetchGameDataFile((byte) 104, "cancelTx");
           if (var2Lifetime42 != null) {
-            MusicVoice.a(param1 ^ -5, var2Lifetime42);
+            MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime42);
           }
           var2Lifetime43 = AppletInstanceState.fetchGameDataFile((byte) 88, "saveTx");
           if (null != var2Lifetime43) {
-            ScreenNameValidator.field_g = MusicVoice.a(0, var2Lifetime43);
+            ScreenNameValidator.field_g = MusicVoice.decodeCp1252(0, var2Lifetime43);
           }
           var2Lifetime44 = AppletInstanceState.fetchGameDataFile((byte) 105, "congratulations");
           if (null != var2Lifetime44) {
-            MusicVoice.a(0, var2Lifetime44);
+            MusicVoice.decodeCp1252(0, var2Lifetime44);
           }
           var2Lifetime45 = AppletInstanceState.fetchGameDataFile((byte) 124, "hardModeNowAvailable");
           if (var2Lifetime45 != null) {
-            MusicVoice.a(0, var2Lifetime45);
+            MusicVoice.decodeCp1252(0, var2Lifetime45);
           }
           var2Lifetime46 = AppletInstanceState.fetchGameDataFile((byte) 101, "movementTip");
           if (null != var2Lifetime46) {
-            MusicVoice.a(param1 ^ -5, var2Lifetime46);
+            MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime46);
           }
           var2Lifetime47 = AppletInstanceState.fetchGameDataFile((byte) 113, "blastTip");
           if (null != var2Lifetime47) {
-            MusicVoice.a(param1 + 5, var2Lifetime47);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime47);
           }
           var2Lifetime48 = AppletInstanceState.fetchGameDataFile((byte) 116, "keycode_left");
           if (var2Lifetime48 != null) {
@@ -762,790 +762,790 @@ final class ArchiveCatalog {
           }
           var2Lifetime52 = AppletInstanceState.fetchGameDataFile((byte) 126, "achievement_names,0");
           if (var2Lifetime52 != null) {
-            ArchiveProvider.achievementNames[0] = MusicVoice.a(0, var2Lifetime52);
+            ArchiveProvider.achievementNames[0] = MusicVoice.decodeCp1252(0, var2Lifetime52);
           }
           var2Lifetime53 = AppletInstanceState.fetchGameDataFile((byte) 108, "achievement_names,1");
           if (null != var2Lifetime53) {
-            ArchiveProvider.achievementNames[1] = MusicVoice.a(0, var2Lifetime53);
+            ArchiveProvider.achievementNames[1] = MusicVoice.decodeCp1252(0, var2Lifetime53);
           }
           var2Lifetime54 = AppletInstanceState.fetchGameDataFile((byte) 112, "achievement_names,2");
           if (null != var2Lifetime54) {
-            ArchiveProvider.achievementNames[2] = MusicVoice.a(param1 + 5, var2Lifetime54);
+            ArchiveProvider.achievementNames[2] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime54);
           }
           var2Lifetime55 = AppletInstanceState.fetchGameDataFile((byte) 88, "achievement_names,3");
           if (null != var2Lifetime55) {
-            ArchiveProvider.achievementNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime55);
+            ArchiveProvider.achievementNames[3] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime55);
           }
           var2Lifetime56 = AppletInstanceState.fetchGameDataFile((byte) 103, "achievement_names,4");
           if (var2Lifetime56 != null) {
-            ArchiveProvider.achievementNames[4] = MusicVoice.a(0, var2Lifetime56);
+            ArchiveProvider.achievementNames[4] = MusicVoice.decodeCp1252(0, var2Lifetime56);
           }
           var2Lifetime57 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_names,5");
           if (null != var2Lifetime57) {
-            ArchiveProvider.achievementNames[5] = MusicVoice.a(0, var2Lifetime57);
+            ArchiveProvider.achievementNames[5] = MusicVoice.decodeCp1252(0, var2Lifetime57);
           }
           var2Lifetime58 = AppletInstanceState.fetchGameDataFile((byte) 99, "achievement_names,6");
           if (null != var2Lifetime58) {
-            ArchiveProvider.achievementNames[6] = MusicVoice.a(0, var2Lifetime58);
+            ArchiveProvider.achievementNames[6] = MusicVoice.decodeCp1252(0, var2Lifetime58);
           }
           var2Lifetime59 = AppletInstanceState.fetchGameDataFile((byte) 95, "achievement_names,7");
           if (null != var2Lifetime59) {
-            ArchiveProvider.achievementNames[7] = MusicVoice.a(param1 + 5, var2Lifetime59);
+            ArchiveProvider.achievementNames[7] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime59);
           }
           var2Lifetime60 = AppletInstanceState.fetchGameDataFile((byte) 113, "achievement_names,8");
           if (null != var2Lifetime60) {
-            ArchiveProvider.achievementNames[8] = MusicVoice.a(0, var2Lifetime60);
+            ArchiveProvider.achievementNames[8] = MusicVoice.decodeCp1252(0, var2Lifetime60);
           }
           var2Lifetime61 = AppletInstanceState.fetchGameDataFile((byte) 122, "achievement_names,9");
           if (var2Lifetime61 != null) {
-            ArchiveProvider.achievementNames[9] = MusicVoice.a(0, var2Lifetime61);
+            ArchiveProvider.achievementNames[9] = MusicVoice.decodeCp1252(0, var2Lifetime61);
           }
           var2Lifetime62 = AppletInstanceState.fetchGameDataFile((byte) 95, "achievement_names,10");
           if (null != var2Lifetime62) {
-            ArchiveProvider.achievementNames[10] = MusicVoice.a(0, var2Lifetime62);
+            ArchiveProvider.achievementNames[10] = MusicVoice.decodeCp1252(0, var2Lifetime62);
           }
           var2Lifetime63 = AppletInstanceState.fetchGameDataFile((byte) 93, "achievement_names,11");
           if (null != var2Lifetime63) {
-            ArchiveProvider.achievementNames[11] = MusicVoice.a(0, var2Lifetime63);
+            ArchiveProvider.achievementNames[11] = MusicVoice.decodeCp1252(0, var2Lifetime63);
           }
           var2Lifetime64 = AppletInstanceState.fetchGameDataFile((byte) 104, "achievement_names,12");
           if (var2Lifetime64 != null) {
-            ArchiveProvider.achievementNames[12] = MusicVoice.a(param1 + 5, var2Lifetime64);
+            ArchiveProvider.achievementNames[12] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime64);
           }
           var2Lifetime65 = AppletInstanceState.fetchGameDataFile((byte) 104, "achievement_names,13");
           if (var2Lifetime65 != null) {
-            ArchiveProvider.achievementNames[13] = MusicVoice.a(0, var2Lifetime65);
+            ArchiveProvider.achievementNames[13] = MusicVoice.decodeCp1252(0, var2Lifetime65);
           }
           var2Lifetime66 = AppletInstanceState.fetchGameDataFile((byte) 116, "achievement_names,14");
           if (var2Lifetime66 != null) {
-            ArchiveProvider.achievementNames[14] = MusicVoice.a(0, var2Lifetime66);
+            ArchiveProvider.achievementNames[14] = MusicVoice.decodeCp1252(0, var2Lifetime66);
           }
           var2Lifetime67 = AppletInstanceState.fetchGameDataFile((byte) 97, "achievement_names,15");
           if (null != var2Lifetime67) {
-            ArchiveProvider.achievementNames[15] = MusicVoice.a(0, var2Lifetime67);
+            ArchiveProvider.achievementNames[15] = MusicVoice.decodeCp1252(0, var2Lifetime67);
           }
           var2Lifetime68 = AppletInstanceState.fetchGameDataFile((byte) 125, "achievement_names,16");
           if (null != var2Lifetime68) {
-            ArchiveProvider.achievementNames[16] = MusicVoice.a(0, var2Lifetime68);
+            ArchiveProvider.achievementNames[16] = MusicVoice.decodeCp1252(0, var2Lifetime68);
           }
           var2Lifetime69 = AppletInstanceState.fetchGameDataFile((byte) 109, "achievement_names,17");
           if (null != var2Lifetime69) {
-            ArchiveProvider.achievementNames[17] = MusicVoice.a(0, var2Lifetime69);
+            ArchiveProvider.achievementNames[17] = MusicVoice.decodeCp1252(0, var2Lifetime69);
           }
           var2Lifetime70 = AppletInstanceState.fetchGameDataFile((byte) 124, "achievement_names,18");
           if (null != var2Lifetime70) {
-            ArchiveProvider.achievementNames[18] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime70);
+            ArchiveProvider.achievementNames[18] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime70);
           }
           var2Lifetime71 = AppletInstanceState.fetchGameDataFile((byte) 104, "achievement_names,19");
           if (var2Lifetime71 != null) {
-            ArchiveProvider.achievementNames[19] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime71);
+            ArchiveProvider.achievementNames[19] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime71);
           }
           var2Lifetime72 = AppletInstanceState.fetchGameDataFile((byte) 114, "achievement_names,20");
           if (null != var2Lifetime72) {
-            ArchiveProvider.achievementNames[20] = MusicVoice.a(0, var2Lifetime72);
+            ArchiveProvider.achievementNames[20] = MusicVoice.decodeCp1252(0, var2Lifetime72);
           }
           var2Lifetime73 = AppletInstanceState.fetchGameDataFile((byte) 110, "achievement_names,21");
           if (var2Lifetime73 != null) {
-            ArchiveProvider.achievementNames[21] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime73);
+            ArchiveProvider.achievementNames[21] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime73);
           }
           var2Lifetime74 = AppletInstanceState.fetchGameDataFile((byte) 127, "achievement_names,22");
           if (var2Lifetime74 != null) {
-            ArchiveProvider.achievementNames[22] = MusicVoice.a(0, var2Lifetime74);
+            ArchiveProvider.achievementNames[22] = MusicVoice.decodeCp1252(0, var2Lifetime74);
           }
           var2Lifetime75 = AppletInstanceState.fetchGameDataFile((byte) 122, "achievement_names,23");
           if (null != var2Lifetime75) {
-            ArchiveProvider.achievementNames[23] = MusicVoice.a(0, var2Lifetime75);
+            ArchiveProvider.achievementNames[23] = MusicVoice.decodeCp1252(0, var2Lifetime75);
           }
           var2Lifetime76 = AppletInstanceState.fetchGameDataFile((byte) 98, "achievement_names,24");
           if (var2Lifetime76 != null) {
-            ArchiveProvider.achievementNames[24] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime76);
+            ArchiveProvider.achievementNames[24] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime76);
           }
           var2Lifetime77 = AppletInstanceState.fetchGameDataFile((byte) 95, "achievement_names,25");
           if (null != var2Lifetime77) {
-            ArchiveProvider.achievementNames[25] = MusicVoice.a(0, var2Lifetime77);
+            ArchiveProvider.achievementNames[25] = MusicVoice.decodeCp1252(0, var2Lifetime77);
           }
           var2Lifetime78 = AppletInstanceState.fetchGameDataFile((byte) 102, "achievement_names,26");
           if (var2Lifetime78 != null) {
-            ArchiveProvider.achievementNames[26] = MusicVoice.a(0, var2Lifetime78);
+            ArchiveProvider.achievementNames[26] = MusicVoice.decodeCp1252(0, var2Lifetime78);
           }
           var2Lifetime79 = AppletInstanceState.fetchGameDataFile((byte) 122, "achievement_names,27");
           if (var2Lifetime79 != null) {
-            ArchiveProvider.achievementNames[27] = MusicVoice.a(0, var2Lifetime79);
+            ArchiveProvider.achievementNames[27] = MusicVoice.decodeCp1252(0, var2Lifetime79);
           }
           var2Lifetime80 = AppletInstanceState.fetchGameDataFile((byte) 110, "achievement_criteria,0");
           if (var2Lifetime80 != null) {
-            DraggableWidget.achievementDescriptions[0] = MusicVoice.a(0, var2Lifetime80);
+            DraggableWidget.achievementDescriptions[0] = MusicVoice.decodeCp1252(0, var2Lifetime80);
           }
           var2Lifetime81 = AppletInstanceState.fetchGameDataFile((byte) 120, "achievement_criteria,1");
           if (var2Lifetime81 != null) {
-            DraggableWidget.achievementDescriptions[1] = MusicVoice.a(0, var2Lifetime81);
+            DraggableWidget.achievementDescriptions[1] = MusicVoice.decodeCp1252(0, var2Lifetime81);
           }
           var2Lifetime82 = AppletInstanceState.fetchGameDataFile((byte) 88, "achievement_criteria,2");
           if (null != var2Lifetime82) {
-            DraggableWidget.achievementDescriptions[2] = MusicVoice.a(0, var2Lifetime82);
+            DraggableWidget.achievementDescriptions[2] = MusicVoice.decodeCp1252(0, var2Lifetime82);
           }
           var2Lifetime83 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,3");
           if (null != var2Lifetime83) {
-            DraggableWidget.achievementDescriptions[3] = MusicVoice.a(param1 + 5, var2Lifetime83);
+            DraggableWidget.achievementDescriptions[3] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime83);
           }
           var2Lifetime84 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,4");
           if (null != var2Lifetime84) {
-            DraggableWidget.achievementDescriptions[4] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime84);
+            DraggableWidget.achievementDescriptions[4] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime84);
           }
           var2Lifetime85 = AppletInstanceState.fetchGameDataFile((byte) 99, "achievement_criteria,5");
           if (var2Lifetime85 != null) {
-            DraggableWidget.achievementDescriptions[5] = MusicVoice.a(0, var2Lifetime85);
+            DraggableWidget.achievementDescriptions[5] = MusicVoice.decodeCp1252(0, var2Lifetime85);
           }
           var2Lifetime86 = AppletInstanceState.fetchGameDataFile((byte) 120, "achievement_criteria,6");
           if (var2Lifetime86 != null) {
-            DraggableWidget.achievementDescriptions[6] = MusicVoice.a(0, var2Lifetime86);
+            DraggableWidget.achievementDescriptions[6] = MusicVoice.decodeCp1252(0, var2Lifetime86);
           }
           var2Lifetime87 = AppletInstanceState.fetchGameDataFile((byte) 109, "achievement_criteria,7");
           if (null != var2Lifetime87) {
-            DraggableWidget.achievementDescriptions[7] = MusicVoice.a(0, var2Lifetime87);
+            DraggableWidget.achievementDescriptions[7] = MusicVoice.decodeCp1252(0, var2Lifetime87);
           }
           var2Lifetime88 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,8");
           if (var2Lifetime88 != null) {
-            DraggableWidget.achievementDescriptions[8] = MusicVoice.a(0, var2Lifetime88);
+            DraggableWidget.achievementDescriptions[8] = MusicVoice.decodeCp1252(0, var2Lifetime88);
           }
           var2Lifetime89 = AppletInstanceState.fetchGameDataFile((byte) 113, "achievement_criteria,9");
           if (null != var2Lifetime89) {
-            DraggableWidget.achievementDescriptions[9] = MusicVoice.a(0, var2Lifetime89);
+            DraggableWidget.achievementDescriptions[9] = MusicVoice.decodeCp1252(0, var2Lifetime89);
           }
           var2Lifetime90 = AppletInstanceState.fetchGameDataFile((byte) 90, "achievement_criteria,10");
           if (null != var2Lifetime90) {
-            DraggableWidget.achievementDescriptions[10] = MusicVoice.a(0, var2Lifetime90);
+            DraggableWidget.achievementDescriptions[10] = MusicVoice.decodeCp1252(0, var2Lifetime90);
           }
           var2Lifetime91 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,11");
           if (var2Lifetime91 != null) {
-            DraggableWidget.achievementDescriptions[11] = MusicVoice.a(0, var2Lifetime91);
+            DraggableWidget.achievementDescriptions[11] = MusicVoice.decodeCp1252(0, var2Lifetime91);
           }
           var2Lifetime92 = AppletInstanceState.fetchGameDataFile((byte) 99, "achievement_criteria,12");
           if (var2Lifetime92 != null) {
-            DraggableWidget.achievementDescriptions[12] = MusicVoice.a(0, var2Lifetime92);
+            DraggableWidget.achievementDescriptions[12] = MusicVoice.decodeCp1252(0, var2Lifetime92);
           }
           var2Lifetime93 = AppletInstanceState.fetchGameDataFile((byte) 88, "achievement_criteria,13");
           if (null != var2Lifetime93) {
-            DraggableWidget.achievementDescriptions[13] = MusicVoice.a(0, var2Lifetime93);
+            DraggableWidget.achievementDescriptions[13] = MusicVoice.decodeCp1252(0, var2Lifetime93);
           }
           var2Lifetime94 = AppletInstanceState.fetchGameDataFile((byte) 101, "achievement_criteria,14");
           if (null != var2Lifetime94) {
-            DraggableWidget.achievementDescriptions[14] = MusicVoice.a(param1 + 5, var2Lifetime94);
+            DraggableWidget.achievementDescriptions[14] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime94);
           }
-          if (param1 != -5) {
-            ArchiveCatalog.a((byte) 119, (String) null);
+          if (guard != -5) {
+            ArchiveCatalog.setRequestedDisplayName((byte) 119, (String) null);
           }
           var2Lifetime95 = AppletInstanceState.fetchGameDataFile((byte) 113, "achievement_criteria,15");
           if (null != var2Lifetime95) {
-            DraggableWidget.achievementDescriptions[15] = MusicVoice.a(0, var2Lifetime95);
+            DraggableWidget.achievementDescriptions[15] = MusicVoice.decodeCp1252(0, var2Lifetime95);
           }
           var2Lifetime96 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,16");
           if (null != var2Lifetime96) {
-            DraggableWidget.achievementDescriptions[16] = MusicVoice.a(0, var2Lifetime96);
+            DraggableWidget.achievementDescriptions[16] = MusicVoice.decodeCp1252(0, var2Lifetime96);
           }
           var2Lifetime97 = AppletInstanceState.fetchGameDataFile((byte) 94, "achievement_criteria,17");
           if (null != var2Lifetime97) {
-            DraggableWidget.achievementDescriptions[17] = MusicVoice.a(0, var2Lifetime97);
+            DraggableWidget.achievementDescriptions[17] = MusicVoice.decodeCp1252(0, var2Lifetime97);
           }
           var2Lifetime98 = AppletInstanceState.fetchGameDataFile((byte) 119, "achievement_criteria,18");
           if (null != var2Lifetime98) {
-            DraggableWidget.achievementDescriptions[18] = MusicVoice.a(0, var2Lifetime98);
+            DraggableWidget.achievementDescriptions[18] = MusicVoice.decodeCp1252(0, var2Lifetime98);
           }
           var2Lifetime99 = AppletInstanceState.fetchGameDataFile((byte) 100, "achievement_criteria,19");
           if (null != var2Lifetime99) {
-            DraggableWidget.achievementDescriptions[19] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime99);
+            DraggableWidget.achievementDescriptions[19] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime99);
           }
           var2Lifetime100 = AppletInstanceState.fetchGameDataFile((byte) 101, "achievement_criteria,20");
           if (null != var2Lifetime100) {
-            DraggableWidget.achievementDescriptions[20] = MusicVoice.a(0, var2Lifetime100);
+            DraggableWidget.achievementDescriptions[20] = MusicVoice.decodeCp1252(0, var2Lifetime100);
           }
           var2Lifetime101 = AppletInstanceState.fetchGameDataFile((byte) 114, "achievement_criteria,21");
           if (var2Lifetime101 != null) {
-            DraggableWidget.achievementDescriptions[21] = MusicVoice.a(param1 + 5, var2Lifetime101);
+            DraggableWidget.achievementDescriptions[21] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime101);
           }
           var2Lifetime102 = AppletInstanceState.fetchGameDataFile((byte) 105, "achievement_criteria,22");
           if (null != var2Lifetime102) {
-            DraggableWidget.achievementDescriptions[22] = MusicVoice.a(0, var2Lifetime102);
+            DraggableWidget.achievementDescriptions[22] = MusicVoice.decodeCp1252(0, var2Lifetime102);
           }
           var2Lifetime103 = AppletInstanceState.fetchGameDataFile((byte) 94, "achievement_criteria,23");
           if (null != var2Lifetime103) {
-            DraggableWidget.achievementDescriptions[23] = MusicVoice.a(0, var2Lifetime103);
+            DraggableWidget.achievementDescriptions[23] = MusicVoice.decodeCp1252(0, var2Lifetime103);
           }
           var2Lifetime104 = AppletInstanceState.fetchGameDataFile((byte) 93, "achievement_criteria,24");
           if (var2Lifetime104 != null) {
-            DraggableWidget.achievementDescriptions[24] = MusicVoice.a(0, var2Lifetime104);
+            DraggableWidget.achievementDescriptions[24] = MusicVoice.decodeCp1252(0, var2Lifetime104);
           }
           var2Lifetime105 = AppletInstanceState.fetchGameDataFile((byte) 105, "achievement_criteria,25");
           if (null != var2Lifetime105) {
-            DraggableWidget.achievementDescriptions[25] = MusicVoice.a(0, var2Lifetime105);
+            DraggableWidget.achievementDescriptions[25] = MusicVoice.decodeCp1252(0, var2Lifetime105);
           }
           var2Lifetime106 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,26");
           if (null != var2Lifetime106) {
-            DraggableWidget.achievementDescriptions[26] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime106);
+            DraggableWidget.achievementDescriptions[26] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime106);
           }
           var2Lifetime107 = AppletInstanceState.fetchGameDataFile((byte) 92, "achievement_criteria,27");
           if (null != var2Lifetime107) {
-            DraggableWidget.achievementDescriptions[27] = MusicVoice.a(0, var2Lifetime107);
+            DraggableWidget.achievementDescriptions[27] = MusicVoice.decodeCp1252(0, var2Lifetime107);
           }
           var2Lifetime108 = AppletInstanceState.fetchGameDataFile((byte) 121, "score_colon_space");
           if (var2Lifetime108 != null) {
-            MusicVoice.a(param1 + 5, var2Lifetime108);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime108);
           }
           var2Lifetime109 = AppletInstanceState.fetchGameDataFile((byte) 109, "instructionsPageObjective,0");
           if (null != var2Lifetime109) {
-            GameInstructions.objectiveHelpLines[0] = MusicVoice.a(0, var2Lifetime109);
+            GameInstructions.objectiveHelpLines[0] = MusicVoice.decodeCp1252(0, var2Lifetime109);
           }
           var2Lifetime110 = AppletInstanceState.fetchGameDataFile((byte) 117, "instructionsPageObjective,1");
           if (null != var2Lifetime110) {
-            GameInstructions.objectiveHelpLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime110);
+            GameInstructions.objectiveHelpLines[1] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime110);
           }
           var2Lifetime111 = AppletInstanceState.fetchGameDataFile((byte) 101, "instructionsPageObjective,2");
           if (null != var2Lifetime111) {
-            GameInstructions.objectiveHelpLines[2] = MusicVoice.a(0, var2Lifetime111);
+            GameInstructions.objectiveHelpLines[2] = MusicVoice.decodeCp1252(0, var2Lifetime111);
           }
           var2Lifetime112 = AppletInstanceState.fetchGameDataFile((byte) 109, "instructionsPageControls,0");
           if (var2Lifetime112 != null) {
-            GameInstructions.controlsHelpLines[0] = MusicVoice.a(0, var2Lifetime112);
+            GameInstructions.controlsHelpLines[0] = MusicVoice.decodeCp1252(0, var2Lifetime112);
           }
           var2Lifetime113 = AppletInstanceState.fetchGameDataFile((byte) 108, "instructionsPageControls,1");
           if (var2Lifetime113 != null) {
-            GameInstructions.controlsHelpLines[1] = MusicVoice.a(0, var2Lifetime113);
+            GameInstructions.controlsHelpLines[1] = MusicVoice.decodeCp1252(0, var2Lifetime113);
           }
           var2Lifetime114 = AppletInstanceState.fetchGameDataFile((byte) 102, "instructionsPageControls,2");
           if (null != var2Lifetime114) {
-            GameInstructions.controlsHelpLines[2] = MusicVoice.a(0, var2Lifetime114);
+            GameInstructions.controlsHelpLines[2] = MusicVoice.decodeCp1252(0, var2Lifetime114);
           }
           var2Lifetime115 = AppletInstanceState.fetchGameDataFile((byte) 123, "instructionsPageControls,3");
           if (null != var2Lifetime115) {
-            GameInstructions.controlsHelpLines[3] = MusicVoice.a(0, var2Lifetime115);
+            GameInstructions.controlsHelpLines[3] = MusicVoice.decodeCp1252(0, var2Lifetime115);
           }
           var2Lifetime116 = AppletInstanceState.fetchGameDataFile((byte) 115, "instructionsPageControls,4");
           if (var2Lifetime116 != null) {
-            GameInstructions.controlsHelpLines[4] = MusicVoice.a(0, var2Lifetime116);
+            GameInstructions.controlsHelpLines[4] = MusicVoice.decodeCp1252(0, var2Lifetime116);
           }
           var2Lifetime117 = AppletInstanceState.fetchGameDataFile((byte) 111, "instructionsPageControls,5");
           if (var2Lifetime117 != null) {
-            GameInstructions.controlsHelpLines[5] = MusicVoice.a(0, var2Lifetime117);
+            GameInstructions.controlsHelpLines[5] = MusicVoice.decodeCp1252(0, var2Lifetime117);
           }
           var2Lifetime118 = AppletInstanceState.fetchGameDataFile((byte) 109, "instructionsPageControls,6");
           if (null != var2Lifetime118) {
-            GameInstructions.controlsHelpLines[6] = MusicVoice.a(param1 + 5, var2Lifetime118);
+            GameInstructions.controlsHelpLines[6] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime118);
           }
           var2Lifetime119 = AppletInstanceState.fetchGameDataFile((byte) 117, "instructionsPageEnemies,0");
           if (null != var2Lifetime119) {
-            GameInstructions.dronesHelpLines[0] = MusicVoice.a(0, var2Lifetime119);
+            GameInstructions.dronesHelpLines[0] = MusicVoice.decodeCp1252(0, var2Lifetime119);
           }
           var2Lifetime120 = AppletInstanceState.fetchGameDataFile((byte) 98, "instructionsPageEnemies,1");
           if (var2Lifetime120 != null) {
-            GameInstructions.dronesHelpLines[1] = MusicVoice.a(0, var2Lifetime120);
+            GameInstructions.dronesHelpLines[1] = MusicVoice.decodeCp1252(0, var2Lifetime120);
           }
           var2Lifetime121 = AppletInstanceState.fetchGameDataFile((byte) 102, "instructionsPageEnemies,2");
           if (null != var2Lifetime121) {
-            GameInstructions.dronesHelpLines[2] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime121);
+            GameInstructions.dronesHelpLines[2] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime121);
           }
           var2Lifetime122 = AppletInstanceState.fetchGameDataFile((byte) 120, "instructionsPageEnemies,3");
           if (var2Lifetime122 != null) {
-            GameInstructions.dronesHelpLines[3] = MusicVoice.a(0, var2Lifetime122);
+            GameInstructions.dronesHelpLines[3] = MusicVoice.decodeCp1252(0, var2Lifetime122);
           }
           var2Lifetime123 = AppletInstanceState.fetchGameDataFile((byte) 124, "instructionsPageEnemies,4");
           if (null != var2Lifetime123) {
-            GameInstructions.dronesHelpLines[4] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime123);
+            GameInstructions.dronesHelpLines[4] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime123);
           }
           var2Lifetime124 = AppletInstanceState.fetchGameDataFile((byte) 110, "instructionsPageEnemies,5");
           if (null != var2Lifetime124) {
-            GameInstructions.dronesHelpLines[5] = MusicVoice.a(0, var2Lifetime124);
+            GameInstructions.dronesHelpLines[5] = MusicVoice.decodeCp1252(0, var2Lifetime124);
           }
           var2Lifetime125 = AppletInstanceState.fetchGameDataFile((byte) 119, "instructionsPageEnemies,6");
           if (var2Lifetime125 != null) {
-            GameInstructions.dronesHelpLines[6] = MusicVoice.a(0, var2Lifetime125);
+            GameInstructions.dronesHelpLines[6] = MusicVoice.decodeCp1252(0, var2Lifetime125);
           }
           var2Lifetime126 = AppletInstanceState.fetchGameDataFile((byte) 105, "instructionsPageEnemies2,0");
           if (null != var2Lifetime126) {
-            GameInstructions.dronesHelpLinesPartTwo[0] = MusicVoice.a(0, var2Lifetime126);
+            GameInstructions.dronesHelpLinesPartTwo[0] = MusicVoice.decodeCp1252(0, var2Lifetime126);
           }
           var2Lifetime127 = AppletInstanceState.fetchGameDataFile((byte) 108, "instructionsPageEnemies2,1");
           if (null != var2Lifetime127) {
-            GameInstructions.dronesHelpLinesPartTwo[1] = MusicVoice.a(0, var2Lifetime127);
+            GameInstructions.dronesHelpLinesPartTwo[1] = MusicVoice.decodeCp1252(0, var2Lifetime127);
           }
           var2Lifetime128 = AppletInstanceState.fetchGameDataFile((byte) 124, "instructionsPageEnemies2,2");
           if (null != var2Lifetime128) {
-            GameInstructions.dronesHelpLinesPartTwo[2] = MusicVoice.a(0, var2Lifetime128);
+            GameInstructions.dronesHelpLinesPartTwo[2] = MusicVoice.decodeCp1252(0, var2Lifetime128);
           }
           var2Lifetime129 = AppletInstanceState.fetchGameDataFile((byte) 116, "instructionsPageEnemies2,3");
           if (null != var2Lifetime129) {
-            GameInstructions.dronesHelpLinesPartTwo[3] = MusicVoice.a(0, var2Lifetime129);
+            GameInstructions.dronesHelpLinesPartTwo[3] = MusicVoice.decodeCp1252(0, var2Lifetime129);
           }
           var2Lifetime130 = AppletInstanceState.fetchGameDataFile((byte) 123, "instructionsPageEnemies2,4");
           if (null != var2Lifetime130) {
-            GameInstructions.dronesHelpLinesPartTwo[4] = MusicVoice.a(0, var2Lifetime130);
+            GameInstructions.dronesHelpLinesPartTwo[4] = MusicVoice.decodeCp1252(0, var2Lifetime130);
           }
           var2Lifetime131 = AppletInstanceState.fetchGameDataFile((byte) 113, "instructionsPagePowerups,0");
           if (var2Lifetime131 != null) {
-            GameInstructions.upgradesHelpLines[0] = MusicVoice.a(0, var2Lifetime131);
+            GameInstructions.upgradesHelpLines[0] = MusicVoice.decodeCp1252(0, var2Lifetime131);
           }
           var2Lifetime132 = AppletInstanceState.fetchGameDataFile((byte) 90, "instructionsPagePowerups,1");
           if (null != var2Lifetime132) {
-            GameInstructions.upgradesHelpLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime132);
+            GameInstructions.upgradesHelpLines[1] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime132);
           }
           var2Lifetime133 = AppletInstanceState.fetchGameDataFile((byte) 99, "instructionsPagePowerups,2");
           if (var2Lifetime133 != null) {
-            GameInstructions.upgradesHelpLines[2] = MusicVoice.a(0, var2Lifetime133);
+            GameInstructions.upgradesHelpLines[2] = MusicVoice.decodeCp1252(0, var2Lifetime133);
           }
           var2Lifetime134 = AppletInstanceState.fetchGameDataFile((byte) 105, "instructionsPagePowerups,3");
           if (var2Lifetime134 != null) {
-            GameInstructions.upgradesHelpLines[3] = MusicVoice.a(0, var2Lifetime134);
+            GameInstructions.upgradesHelpLines[3] = MusicVoice.decodeCp1252(0, var2Lifetime134);
           }
           var2Lifetime135 = AppletInstanceState.fetchGameDataFile((byte) 100, "instructionsPagePowerups,4");
           if (var2Lifetime135 != null) {
-            GameInstructions.upgradesHelpLines[4] = MusicVoice.a(0, var2Lifetime135);
+            GameInstructions.upgradesHelpLines[4] = MusicVoice.decodeCp1252(0, var2Lifetime135);
           }
           var2Lifetime136 = AppletInstanceState.fetchGameDataFile((byte) 127, "instructionsPagePowerups,5");
           if (null != var2Lifetime136) {
-            GameInstructions.upgradesHelpLines[5] = MusicVoice.a(0, var2Lifetime136);
+            GameInstructions.upgradesHelpLines[5] = MusicVoice.decodeCp1252(0, var2Lifetime136);
           }
           var2Lifetime137 = AppletInstanceState.fetchGameDataFile((byte) 119, "tutorialon");
           if (var2Lifetime137 != null) {
-            MusicVoice.a(0, var2Lifetime137);
+            MusicVoice.decodeCp1252(0, var2Lifetime137);
           }
           var2Lifetime138 = AppletInstanceState.fetchGameDataFile((byte) 110, "tutorialoff");
           if (var2Lifetime138 != null) {
-            MusicVoice.a(0, var2Lifetime138);
+            MusicVoice.decodeCp1252(0, var2Lifetime138);
           }
           var2Lifetime139 = AppletInstanceState.fetchGameDataFile((byte) 119, "benefits,0");
           if (null != var2Lifetime139) {
-            ResizingDialog.membershipPromoLines[0] = MusicVoice.a(0, var2Lifetime139);
+            ResizingDialog.membershipPromoLines[0] = MusicVoice.decodeCp1252(0, var2Lifetime139);
           }
           var2Lifetime140 = AppletInstanceState.fetchGameDataFile((byte) 117, "benefits,1");
           if (null != var2Lifetime140) {
-            ResizingDialog.membershipPromoLines[1] = MusicVoice.a(0, var2Lifetime140);
+            ResizingDialog.membershipPromoLines[1] = MusicVoice.decodeCp1252(0, var2Lifetime140);
           }
           var2Lifetime141 = AppletInstanceState.fetchGameDataFile((byte) 117, "benefits,2");
           if (null != var2Lifetime141) {
-            ResizingDialog.membershipPromoLines[2] = MusicVoice.a(param1 + 5, var2Lifetime141);
+            ResizingDialog.membershipPromoLines[2] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime141);
           }
           var2Lifetime142 = AppletInstanceState.fetchGameDataFile((byte) 122, "arcadeunlocked");
           if (var2Lifetime142 != null) {
-            SpriteMask.arcadeModeUnlockedText = MusicVoice.a(0, var2Lifetime142);
+            SpriteMask.arcadeModeUnlockedText = MusicVoice.decodeCp1252(0, var2Lifetime142);
           }
           var2Lifetime143 = AppletInstanceState.fetchGameDataFile((byte) 93, "levelSelect");
           if (var2Lifetime143 != null) {
-            AccountRequestState.field_g = MusicVoice.a(0, var2Lifetime143);
+            AccountRequestState.field_g = MusicVoice.decodeCp1252(0, var2Lifetime143);
           }
           var2Lifetime144 = AppletInstanceState.fetchGameDataFile((byte) 116, "deathMessages,0");
           if (null != var2Lifetime144) {
-            IntrusiveNode.exclamationPhrases[0] = MusicVoice.a(param1 + 5, var2Lifetime144);
+            IntrusiveNode.exclamationPhrases[0] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime144);
           }
           var2Lifetime145 = AppletInstanceState.fetchGameDataFile((byte) 89, "deathMessages,1");
           if (var2Lifetime145 != null) {
-            IntrusiveNode.exclamationPhrases[1] = MusicVoice.a(param1 + 5, var2Lifetime145);
+            IntrusiveNode.exclamationPhrases[1] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime145);
           }
           var2Lifetime146 = AppletInstanceState.fetchGameDataFile((byte) 121, "deathMessages,2");
           if (null != var2Lifetime146) {
-            IntrusiveNode.exclamationPhrases[2] = MusicVoice.a(param1 + 5, var2Lifetime146);
+            IntrusiveNode.exclamationPhrases[2] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime146);
           }
           var2Lifetime147 = AppletInstanceState.fetchGameDataFile((byte) 101, "deathMessages,3");
           if (null != var2Lifetime147) {
-            IntrusiveNode.exclamationPhrases[3] = MusicVoice.a(0, var2Lifetime147);
+            IntrusiveNode.exclamationPhrases[3] = MusicVoice.decodeCp1252(0, var2Lifetime147);
           }
           var2Lifetime148 = AppletInstanceState.fetchGameDataFile((byte) 106, "deathMessages,4");
           if (null != var2Lifetime148) {
-            IntrusiveNode.exclamationPhrases[4] = MusicVoice.a(0, var2Lifetime148);
+            IntrusiveNode.exclamationPhrases[4] = MusicVoice.decodeCp1252(0, var2Lifetime148);
           }
           var2Lifetime149 = AppletInstanceState.fetchGameDataFile((byte) 90, "deathMessages,5");
           if (null != var2Lifetime149) {
-            IntrusiveNode.exclamationPhrases[5] = MusicVoice.a(0, var2Lifetime149);
+            IntrusiveNode.exclamationPhrases[5] = MusicVoice.decodeCp1252(0, var2Lifetime149);
           }
           var2Lifetime150 = AppletInstanceState.fetchGameDataFile((byte) 109, "warningWave");
           if (null != var2Lifetime150) {
-            TurbulenceNoise3D.warningText = MusicVoice.a(param1 ^ -5, var2Lifetime150);
+            TurbulenceNoise3D.warningText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime150);
           }
           var2Lifetime151 = AppletInstanceState.fetchGameDataFile((byte) 106, "powerupRunningOut");
           if (var2Lifetime151 != null) {
-            MusicVoice.a(param1 ^ -5, var2Lifetime151);
+            MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime151);
           }
           var2Lifetime152 = AppletInstanceState.fetchGameDataFile((byte) 91, "powerupNearlyReady");
           if (null != var2Lifetime152) {
-            HardwareTextureSprite.blastReadyText = MusicVoice.a(0, var2Lifetime152);
+            HardwareTextureSprite.blastReadyText = MusicVoice.decodeCp1252(0, var2Lifetime152);
           }
           var2Lifetime153 = AppletInstanceState.fetchGameDataFile((byte) 104, "spaceToDetonate");
           if (null != var2Lifetime153) {
-            MusicVoice.a(0, var2Lifetime153);
+            MusicVoice.decodeCp1252(0, var2Lifetime153);
           }
           var2Lifetime154 = AppletInstanceState.fetchGameDataFile((byte) 101, "gameOver");
           if (null != var2Lifetime154) {
-            TextureGeneratorNode.defeatText = MusicVoice.a(param1 + 5, var2Lifetime154);
+            TextureGeneratorNode.defeatText = MusicVoice.decodeCp1252(guard + 5, var2Lifetime154);
           }
           var2Lifetime155 = AppletInstanceState.fetchGameDataFile((byte) 118, "gameWon");
           if (null != var2Lifetime155) {
-            LegacyOpenGlSprite.levelCompleteText = MusicVoice.a(0, var2Lifetime155);
+            LegacyOpenGlSprite.levelCompleteText = MusicVoice.decodeCp1252(0, var2Lifetime155);
           }
           var2Lifetime156 = AppletInstanceState.fetchGameDataFile((byte) 118, "enemyTypes,0");
           if (null != var2Lifetime156) {
-            DroneWaveDefinition.droneNames[0] = MusicVoice.a(param1 + 5, var2Lifetime156);
+            DroneWaveDefinition.droneNames[0] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime156);
           }
           var2Lifetime157 = AppletInstanceState.fetchGameDataFile((byte) 109, "enemyTypes,1");
           if (null != var2Lifetime157) {
-            DroneWaveDefinition.droneNames[1] = MusicVoice.a(0, var2Lifetime157);
+            DroneWaveDefinition.droneNames[1] = MusicVoice.decodeCp1252(0, var2Lifetime157);
           }
           var2Lifetime158 = AppletInstanceState.fetchGameDataFile((byte) 89, "enemyTypes,2");
           if (null != var2Lifetime158) {
-            DroneWaveDefinition.droneNames[2] = MusicVoice.a(0, var2Lifetime158);
+            DroneWaveDefinition.droneNames[2] = MusicVoice.decodeCp1252(0, var2Lifetime158);
           }
           var2Lifetime159 = AppletInstanceState.fetchGameDataFile((byte) 100, "enemyTypes,3");
           if (null != var2Lifetime159) {
-            DroneWaveDefinition.droneNames[3] = MusicVoice.a(0, var2Lifetime159);
+            DroneWaveDefinition.droneNames[3] = MusicVoice.decodeCp1252(0, var2Lifetime159);
           }
           var2Lifetime160 = AppletInstanceState.fetchGameDataFile((byte) 122, "enemyTypes,4");
           if (null != var2Lifetime160) {
-            DroneWaveDefinition.droneNames[4] = MusicVoice.a(0, var2Lifetime160);
+            DroneWaveDefinition.droneNames[4] = MusicVoice.decodeCp1252(0, var2Lifetime160);
           }
           var2Lifetime161 = AppletInstanceState.fetchGameDataFile((byte) 103, "enemyTypes,5");
           if (var2Lifetime161 != null) {
-            DroneWaveDefinition.droneNames[5] = MusicVoice.a(0, var2Lifetime161);
+            DroneWaveDefinition.droneNames[5] = MusicVoice.decodeCp1252(0, var2Lifetime161);
           }
           var2Lifetime162 = AppletInstanceState.fetchGameDataFile((byte) 100, "enemyModifiers,0");
           if (var2Lifetime162 != null) {
-            IntroMeshMaterial.enemyVariantNames[0] = MusicVoice.a(0, var2Lifetime162);
+            IntroMeshMaterial.enemyVariantNames[0] = MusicVoice.decodeCp1252(0, var2Lifetime162);
           }
           var2Lifetime163 = AppletInstanceState.fetchGameDataFile((byte) 122, "enemyModifiers,1");
           if (null != var2Lifetime163) {
-            IntroMeshMaterial.enemyVariantNames[1] = MusicVoice.a(0, var2Lifetime163);
+            IntroMeshMaterial.enemyVariantNames[1] = MusicVoice.decodeCp1252(0, var2Lifetime163);
           }
           var2Lifetime164 = AppletInstanceState.fetchGameDataFile((byte) 126, "enemyModifiers,2");
           if (var2Lifetime164 != null) {
-            IntroMeshMaterial.enemyVariantNames[2] = MusicVoice.a(0, var2Lifetime164);
+            IntroMeshMaterial.enemyVariantNames[2] = MusicVoice.decodeCp1252(0, var2Lifetime164);
           }
           var2Lifetime165 = AppletInstanceState.fetchGameDataFile((byte) 92, "enemyModifiers,3");
           if (null != var2Lifetime165) {
-            IntroMeshMaterial.enemyVariantNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime165);
+            IntroMeshMaterial.enemyVariantNames[3] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime165);
           }
           var2Lifetime166 = AppletInstanceState.fetchGameDataFile((byte) 106, "enemyModifiers,4");
           if (null != var2Lifetime166) {
-            IntroMeshMaterial.enemyVariantNames[4] = MusicVoice.a(0, var2Lifetime166);
+            IntroMeshMaterial.enemyVariantNames[4] = MusicVoice.decodeCp1252(0, var2Lifetime166);
           }
           var2Lifetime167 = AppletInstanceState.fetchGameDataFile((byte) 101, "enemyModifiers,5");
           if (var2Lifetime167 != null) {
-            IntroMeshMaterial.enemyVariantNames[5] = MusicVoice.a(0, var2Lifetime167);
+            IntroMeshMaterial.enemyVariantNames[5] = MusicVoice.decodeCp1252(0, var2Lifetime167);
           }
           var2Lifetime168 = AppletInstanceState.fetchGameDataFile((byte) 103, "enemyModifiers,6");
           if (var2Lifetime168 != null) {
-            IntroMeshMaterial.enemyVariantNames[6] = MusicVoice.a(0, var2Lifetime168);
+            IntroMeshMaterial.enemyVariantNames[6] = MusicVoice.decodeCp1252(0, var2Lifetime168);
           }
           var2Lifetime169 = AppletInstanceState.fetchGameDataFile((byte) 120, "powerupNames,0");
           if (null != var2Lifetime169) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[0] = MusicVoice.a(0, var2Lifetime169);
+            PerlinNoiseSliceGenerator.powerupEffectNames[0] = MusicVoice.decodeCp1252(0, var2Lifetime169);
           }
           var2Lifetime170 = AppletInstanceState.fetchGameDataFile((byte) 127, "powerupNames,1");
           if (var2Lifetime170 != null) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[1] = MusicVoice.a(0, var2Lifetime170);
+            PerlinNoiseSliceGenerator.powerupEffectNames[1] = MusicVoice.decodeCp1252(0, var2Lifetime170);
           }
           var2Lifetime171 = AppletInstanceState.fetchGameDataFile((byte) 97, "powerupNames,2");
           if (null != var2Lifetime171) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[2] = MusicVoice.a(0, var2Lifetime171);
+            PerlinNoiseSliceGenerator.powerupEffectNames[2] = MusicVoice.decodeCp1252(0, var2Lifetime171);
           }
           var2Lifetime172 = AppletInstanceState.fetchGameDataFile((byte) 122, "powerupNames,3");
           if (null != var2Lifetime172) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime172);
+            PerlinNoiseSliceGenerator.powerupEffectNames[3] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime172);
           }
           var2Lifetime173 = AppletInstanceState.fetchGameDataFile((byte) 96, "powerupNames,4");
           if (null != var2Lifetime173) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[4] = MusicVoice.a(0, var2Lifetime173);
+            PerlinNoiseSliceGenerator.powerupEffectNames[4] = MusicVoice.decodeCp1252(0, var2Lifetime173);
           }
           var2Lifetime174 = AppletInstanceState.fetchGameDataFile((byte) 107, "powerupNames,5");
           if (var2Lifetime174 != null) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[5] = MusicVoice.a(0, var2Lifetime174);
+            PerlinNoiseSliceGenerator.powerupEffectNames[5] = MusicVoice.decodeCp1252(0, var2Lifetime174);
           }
           var2Lifetime175 = AppletInstanceState.fetchGameDataFile((byte) 88, "powerupNames,6");
           if (null != var2Lifetime175) {
-            PerlinNoiseSliceGenerator.powerupEffectNames[6] = MusicVoice.a(param1 + 5, var2Lifetime175);
+            PerlinNoiseSliceGenerator.powerupEffectNames[6] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime175);
           }
           var2Lifetime176 = AppletInstanceState.fetchGameDataFile((byte) 105, "powerupShortNames,0");
           if (null != var2Lifetime176) {
-            UpgradeStatNames.names[0] = MusicVoice.a(0, var2Lifetime176);
+            UpgradeStatNames.names[0] = MusicVoice.decodeCp1252(0, var2Lifetime176);
           }
           var2Lifetime177 = AppletInstanceState.fetchGameDataFile((byte) 101, "powerupShortNames,1");
           if (null != var2Lifetime177) {
-            UpgradeStatNames.names[1] = MusicVoice.a(0, var2Lifetime177);
+            UpgradeStatNames.names[1] = MusicVoice.decodeCp1252(0, var2Lifetime177);
           }
           var2Lifetime178 = AppletInstanceState.fetchGameDataFile((byte) 105, "powerupShortNames,2");
           if (null != var2Lifetime178) {
-            UpgradeStatNames.names[2] = MusicVoice.a(0, var2Lifetime178);
+            UpgradeStatNames.names[2] = MusicVoice.decodeCp1252(0, var2Lifetime178);
           }
           var2Lifetime179 = AppletInstanceState.fetchGameDataFile((byte) 122, "powerupShortNames,3");
           if (var2Lifetime179 != null) {
-            UpgradeStatNames.names[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime179);
+            UpgradeStatNames.names[3] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime179);
           }
           var2Lifetime180 = AppletInstanceState.fetchGameDataFile((byte) 93, "powerupShortNames,4");
           if (var2Lifetime180 != null) {
-            UpgradeStatNames.names[4] = MusicVoice.a(0, var2Lifetime180);
+            UpgradeStatNames.names[4] = MusicVoice.decodeCp1252(0, var2Lifetime180);
           }
           var2Lifetime181 = AppletInstanceState.fetchGameDataFile((byte) 90, "chooseYourPowerup");
           if (null != var2Lifetime181) {
-            MusicVoice.a(0, var2Lifetime181);
+            MusicVoice.decodeCp1252(0, var2Lifetime181);
           }
           var2Lifetime182 = AppletInstanceState.fetchGameDataFile((byte) 111, "powerupMaxed");
           if (var2Lifetime182 != null) {
-            MusicVoice.a(0, var2Lifetime182);
+            MusicVoice.decodeCp1252(0, var2Lifetime182);
           }
           var2Lifetime183 = AppletInstanceState.fetchGameDataFile((byte) 98, "terrainNames,0");
           if (null != var2Lifetime183) {
-            AudioServiceThread.padTypeNames[0] = MusicVoice.a(0, var2Lifetime183);
+            AudioServiceThread.padTypeNames[0] = MusicVoice.decodeCp1252(0, var2Lifetime183);
           }
           var2Lifetime184 = AppletInstanceState.fetchGameDataFile((byte) 120, "terrainNames,1");
           if (var2Lifetime184 != null) {
-            AudioServiceThread.padTypeNames[1] = MusicVoice.a(param1 + 5, var2Lifetime184);
+            AudioServiceThread.padTypeNames[1] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime184);
           }
           var2Lifetime185 = AppletInstanceState.fetchGameDataFile((byte) 118, "terrainNames,2");
           if (var2Lifetime185 != null) {
-            AudioServiceThread.padTypeNames[2] = MusicVoice.a(0, var2Lifetime185);
+            AudioServiceThread.padTypeNames[2] = MusicVoice.decodeCp1252(0, var2Lifetime185);
           }
           var2Lifetime186 = AppletInstanceState.fetchGameDataFile((byte) 112, "terrainNames,3");
           if (null != var2Lifetime186) {
-            AudioServiceThread.padTypeNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime186);
+            AudioServiceThread.padTypeNames[3] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime186);
           }
           var2Lifetime187 = AppletInstanceState.fetchGameDataFile((byte) 127, "terrainNames,4");
           if (var2Lifetime187 != null) {
-            AudioServiceThread.padTypeNames[4] = MusicVoice.a(0, var2Lifetime187);
+            AudioServiceThread.padTypeNames[4] = MusicVoice.decodeCp1252(0, var2Lifetime187);
           }
           var2Lifetime188 = AppletInstanceState.fetchGameDataFile((byte) 97, "terrainNames,5");
           if (var2Lifetime188 != null) {
-            AudioServiceThread.padTypeNames[5] = MusicVoice.a(0, var2Lifetime188);
+            AudioServiceThread.padTypeNames[5] = MusicVoice.decodeCp1252(0, var2Lifetime188);
           }
           var2Lifetime189 = AppletInstanceState.fetchGameDataFile((byte) 104, "terrainNames,6");
           if (null != var2Lifetime189) {
-            AudioServiceThread.padTypeNames[6] = MusicVoice.a(0, var2Lifetime189);
+            AudioServiceThread.padTypeNames[6] = MusicVoice.decodeCp1252(0, var2Lifetime189);
           }
           var2Lifetime190 = AppletInstanceState.fetchGameDataFile((byte) 121, "terrainNames,7");
           if (null != var2Lifetime190) {
-            AudioServiceThread.padTypeNames[7] = MusicVoice.a(0, var2Lifetime190);
+            AudioServiceThread.padTypeNames[7] = MusicVoice.decodeCp1252(0, var2Lifetime190);
           }
           var2Lifetime191 = AppletInstanceState.fetchGameDataFile((byte) 96, "enemyTypeColon");
           if (var2Lifetime191 != null) {
-            MusicVoice.a(param1 + 5, var2Lifetime191);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime191);
           }
           var2Lifetime192 = AppletInstanceState.fetchGameDataFile((byte) 109, "enemyModiferColon");
           if (var2Lifetime192 != null) {
-            MusicVoice.a(0, var2Lifetime192);
+            MusicVoice.decodeCp1252(0, var2Lifetime192);
           }
           var2Lifetime193 = AppletInstanceState.fetchGameDataFile((byte) 99, "enemyPowerupColon");
           if (null != var2Lifetime193) {
-            MusicVoice.a(0, var2Lifetime193);
+            MusicVoice.decodeCp1252(0, var2Lifetime193);
           }
           var2Lifetime194 = AppletInstanceState.fetchGameDataFile((byte) 93, "terrainTypeColon");
           if (null != var2Lifetime194) {
-            MusicVoice.a(param1 + 5, var2Lifetime194);
+            MusicVoice.decodeCp1252(guard + 5, var2Lifetime194);
           }
           var2Lifetime195 = AppletInstanceState.fetchGameDataFile((byte) 110, "bossLevelColon");
           if (null != var2Lifetime195) {
-            MusicVoice.a(0, var2Lifetime195);
+            MusicVoice.decodeCp1252(0, var2Lifetime195);
           }
           var2Lifetime196 = AppletInstanceState.fetchGameDataFile((byte) 106, "enemyOrderColon");
           if (var2Lifetime196 != null) {
-            MusicVoice.a(0, var2Lifetime196);
+            MusicVoice.decodeCp1252(0, var2Lifetime196);
           }
           var2Lifetime197 = AppletInstanceState.fetchGameDataFile((byte) 94, "orderColon");
           if (null != var2Lifetime197) {
-            MusicVoice.a(0, var2Lifetime197);
+            MusicVoice.decodeCp1252(0, var2Lifetime197);
           }
           var2Lifetime198 = AppletInstanceState.fetchGameDataFile((byte) 90, "placingEnemies");
           if (var2Lifetime198 != null) {
-            MusicVoice.a(0, var2Lifetime198);
+            MusicVoice.decodeCp1252(0, var2Lifetime198);
           }
           var2Lifetime199 = AppletInstanceState.fetchGameDataFile((byte) 102, "placingTerrain");
           if (null != var2Lifetime199) {
-            MusicVoice.a(0, var2Lifetime199);
+            MusicVoice.decodeCp1252(0, var2Lifetime199);
           }
           var2Lifetime200 = AppletInstanceState.fetchGameDataFile((byte) 122, "editModes,0");
           if (var2Lifetime200 != null) {
-            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[0] = MusicVoice.a(param1 + 5, var2Lifetime200);
+            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[0] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime200);
           }
           var2Lifetime201 = AppletInstanceState.fetchGameDataFile((byte) 95, "editModes,1");
           if (null != var2Lifetime201) {
-            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[1] = MusicVoice.a(0, var2Lifetime201);
+            LegacyOpenGlAssemblyProgram.levelLoadStepLabels[1] = MusicVoice.decodeCp1252(0, var2Lifetime201);
           }
           var2Lifetime202 = AppletInstanceState.fetchGameDataFile((byte) 101, "hudScore");
           if (var2Lifetime202 != null) {
-            AchievementThresholds.scoreText = MusicVoice.a(0, var2Lifetime202);
+            AchievementThresholds.scoreText = MusicVoice.decodeCp1252(0, var2Lifetime202);
           }
           var2Lifetime203 = AppletInstanceState.fetchGameDataFile((byte) 118, "hudTime");
           if (var2Lifetime203 != null) {
-            InstrumentNoteMask.timeText = MusicVoice.a(param1 ^ -5, var2Lifetime203);
+            InstrumentNoteMask.timeText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime203);
           }
           var2Lifetime204 = AppletInstanceState.fetchGameDataFile((byte) 105, "hudLives");
           if (var2Lifetime204 != null) {
-            InwardSparkParticle.livesText = MusicVoice.a(param1 ^ -5, var2Lifetime204);
+            InwardSparkParticle.livesText = MusicVoice.decodeCp1252(guard ^ -5, var2Lifetime204);
           }
           var2Lifetime205 = AppletInstanceState.fetchGameDataFile((byte) 99, "hudMultiplier");
           if (var2Lifetime205 != null) {
-            OpenGlVertexLayout.multiplierText = MusicVoice.a(0, var2Lifetime205);
+            OpenGlVertexLayout.multiplierText = MusicVoice.decodeCp1252(0, var2Lifetime205);
           }
           var2Lifetime206 = AppletInstanceState.fetchGameDataFile((byte) 126, "hudLevel");
           if (var2Lifetime206 != null) {
-            IsaacPacketBuffer.levelText = MusicVoice.a(0, var2Lifetime206);
+            IsaacPacketBuffer.levelText = MusicVoice.decodeCp1252(0, var2Lifetime206);
           }
           var2Lifetime207 = AppletInstanceState.fetchGameDataFile((byte) 123, "hudCharge");
           if (null != var2Lifetime207) {
-            MusicVoice.a(0, var2Lifetime207);
+            MusicVoice.decodeCp1252(0, var2Lifetime207);
           }
           var2Lifetime208 = AppletInstanceState.fetchGameDataFile((byte) 102, "notCompleted");
           if (null != var2Lifetime208) {
-            ArenaBackdropPalettes.notCompletedText = MusicVoice.a(0, var2Lifetime208);
+            ArenaBackdropPalettes.notCompletedText = MusicVoice.decodeCp1252(0, var2Lifetime208);
           }
           var2Lifetime209 = AppletInstanceState.fetchGameDataFile((byte) 122, "clickToContinue");
           if (null != var2Lifetime209) {
-            IntNode.clickToContinueText = MusicVoice.a(0, var2Lifetime209);
+            IntNode.clickToContinueText = MusicVoice.decodeCp1252(0, var2Lifetime209);
           }
           var2Lifetime210 = AppletInstanceState.fetchGameDataFile((byte) 110, "tutorialSteps,0");
           if (null != var2Lifetime210) {
-            LimitedRandomAccessFile.droneDescriptions[0] = MusicVoice.a(0, var2Lifetime210);
+            LimitedRandomAccessFile.droneDescriptions[0] = MusicVoice.decodeCp1252(0, var2Lifetime210);
           }
           var2Lifetime211 = AppletInstanceState.fetchGameDataFile((byte) 117, "tutorialSteps,1");
           if (null != var2Lifetime211) {
-            LimitedRandomAccessFile.droneDescriptions[1] = MusicVoice.a(0, var2Lifetime211);
+            LimitedRandomAccessFile.droneDescriptions[1] = MusicVoice.decodeCp1252(0, var2Lifetime211);
           }
           var2Lifetime212 = AppletInstanceState.fetchGameDataFile((byte) 95, "tutorialSteps,2");
           if (var2Lifetime212 != null) {
-            LimitedRandomAccessFile.droneDescriptions[2] = MusicVoice.a(0, var2Lifetime212);
+            LimitedRandomAccessFile.droneDescriptions[2] = MusicVoice.decodeCp1252(0, var2Lifetime212);
           }
           var2Lifetime213 = AppletInstanceState.fetchGameDataFile((byte) 109, "tutorialSteps,3");
           if (var2Lifetime213 != null) {
-            LimitedRandomAccessFile.droneDescriptions[3] = MusicVoice.a(0, var2Lifetime213);
+            LimitedRandomAccessFile.droneDescriptions[3] = MusicVoice.decodeCp1252(0, var2Lifetime213);
           }
           var2Lifetime214 = AppletInstanceState.fetchGameDataFile((byte) 98, "tutorialSteps,4");
           if (var2Lifetime214 != null) {
-            LimitedRandomAccessFile.droneDescriptions[4] = MusicVoice.a(0, var2Lifetime214);
+            LimitedRandomAccessFile.droneDescriptions[4] = MusicVoice.decodeCp1252(0, var2Lifetime214);
           }
           var2Lifetime215 = AppletInstanceState.fetchGameDataFile((byte) 89, "tutorialSteps,5");
           if (null != var2Lifetime215) {
-            LimitedRandomAccessFile.droneDescriptions[5] = MusicVoice.a(0, var2Lifetime215);
+            LimitedRandomAccessFile.droneDescriptions[5] = MusicVoice.decodeCp1252(0, var2Lifetime215);
           }
           var2Lifetime216 = AppletInstanceState.fetchGameDataFile((byte) 119, "tutorialSteps,6");
           if (null != var2Lifetime216) {
-            LimitedRandomAccessFile.droneDescriptions[6] = MusicVoice.a(0, var2Lifetime216);
+            LimitedRandomAccessFile.droneDescriptions[6] = MusicVoice.decodeCp1252(0, var2Lifetime216);
           }
           var2Lifetime217 = AppletInstanceState.fetchGameDataFile((byte) 125, "tutorialSteps,7");
           if (null != var2Lifetime217) {
-            LimitedRandomAccessFile.droneDescriptions[7] = MusicVoice.a(0, var2Lifetime217);
+            LimitedRandomAccessFile.droneDescriptions[7] = MusicVoice.decodeCp1252(0, var2Lifetime217);
           }
           var2Lifetime218 = AppletInstanceState.fetchGameDataFile((byte) 93, "tutorialSteps,8");
           if (null != var2Lifetime218) {
-            LimitedRandomAccessFile.droneDescriptions[8] = MusicVoice.a(0, var2Lifetime218);
+            LimitedRandomAccessFile.droneDescriptions[8] = MusicVoice.decodeCp1252(0, var2Lifetime218);
           }
           var2Lifetime219 = AppletInstanceState.fetchGameDataFile((byte) 91, "tutorialSteps,9");
           if (null != var2Lifetime219) {
-            LimitedRandomAccessFile.droneDescriptions[9] = MusicVoice.a(0, var2Lifetime219);
+            LimitedRandomAccessFile.droneDescriptions[9] = MusicVoice.decodeCp1252(0, var2Lifetime219);
           }
           var2Lifetime220 = AppletInstanceState.fetchGameDataFile((byte) 114, "tutorialSteps,10");
           if (null != var2Lifetime220) {
-            LimitedRandomAccessFile.droneDescriptions[10] = MusicVoice.a(0, var2Lifetime220);
+            LimitedRandomAccessFile.droneDescriptions[10] = MusicVoice.decodeCp1252(0, var2Lifetime220);
           }
           var2Lifetime221 = AppletInstanceState.fetchGameDataFile((byte) 104, "tutorialSteps,11");
           if (var2Lifetime221 != null) {
-            LimitedRandomAccessFile.droneDescriptions[11] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime221);
+            LimitedRandomAccessFile.droneDescriptions[11] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime221);
           }
           var2Lifetime222 = AppletInstanceState.fetchGameDataFile((byte) 112, "tutorialSteps,12");
           if (var2Lifetime222 != null) {
-            LimitedRandomAccessFile.droneDescriptions[12] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime222);
+            LimitedRandomAccessFile.droneDescriptions[12] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime222);
           }
           var2Lifetime223 = AppletInstanceState.fetchGameDataFile((byte) 112, "tutorialSteps,13");
           if (null != var2Lifetime223) {
-            LimitedRandomAccessFile.droneDescriptions[13] = MusicVoice.a(0, var2Lifetime223);
+            LimitedRandomAccessFile.droneDescriptions[13] = MusicVoice.decodeCp1252(0, var2Lifetime223);
           }
           var2Lifetime224 = AppletInstanceState.fetchGameDataFile((byte) 93, "tutorialSteps,14");
           if (var2Lifetime224 != null) {
-            LimitedRandomAccessFile.droneDescriptions[14] = MusicVoice.a(0, var2Lifetime224);
+            LimitedRandomAccessFile.droneDescriptions[14] = MusicVoice.decodeCp1252(0, var2Lifetime224);
           }
           var2Lifetime225 = AppletInstanceState.fetchGameDataFile((byte) 114, "tutorialSteps,15");
           if (var2Lifetime225 != null) {
-            LimitedRandomAccessFile.droneDescriptions[15] = MusicVoice.a(param1 + 5, var2Lifetime225);
+            LimitedRandomAccessFile.droneDescriptions[15] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime225);
           }
           var2Lifetime226 = AppletInstanceState.fetchGameDataFile((byte) 104, "tutorialSteps,16");
           if (var2Lifetime226 != null) {
-            LimitedRandomAccessFile.droneDescriptions[16] = MusicVoice.a(param1 + 5, var2Lifetime226);
+            LimitedRandomAccessFile.droneDescriptions[16] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime226);
           }
           var2Lifetime227 = AppletInstanceState.fetchGameDataFile((byte) 105, "tutorialSteps,17");
           if (var2Lifetime227 != null) {
-            LimitedRandomAccessFile.droneDescriptions[17] = MusicVoice.a(0, var2Lifetime227);
+            LimitedRandomAccessFile.droneDescriptions[17] = MusicVoice.decodeCp1252(0, var2Lifetime227);
           }
           var2Lifetime228 = AppletInstanceState.fetchGameDataFile((byte) 115, "tutorialSteps,18");
           if (null != var2Lifetime228) {
-            LimitedRandomAccessFile.droneDescriptions[18] = MusicVoice.a(0, var2Lifetime228);
+            LimitedRandomAccessFile.droneDescriptions[18] = MusicVoice.decodeCp1252(0, var2Lifetime228);
           }
           var2Lifetime229 = AppletInstanceState.fetchGameDataFile((byte) 108, "tutorialSteps,19");
           if (var2Lifetime229 != null) {
-            LimitedRandomAccessFile.droneDescriptions[19] = MusicVoice.a(0, var2Lifetime229);
+            LimitedRandomAccessFile.droneDescriptions[19] = MusicVoice.decodeCp1252(0, var2Lifetime229);
           }
           var2Lifetime230 = AppletInstanceState.fetchGameDataFile((byte) 94, "tutorialSteps,20");
           if (null != var2Lifetime230) {
-            LimitedRandomAccessFile.droneDescriptions[20] = MusicVoice.a(0, var2Lifetime230);
+            LimitedRandomAccessFile.droneDescriptions[20] = MusicVoice.decodeCp1252(0, var2Lifetime230);
           }
           var2Lifetime231 = AppletInstanceState.fetchGameDataFile((byte) 109, "tutorialSteps,21");
           if (var2Lifetime231 != null) {
-            LimitedRandomAccessFile.droneDescriptions[21] = MusicVoice.a(param1 + 5, var2Lifetime231);
+            LimitedRandomAccessFile.droneDescriptions[21] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime231);
           }
           var2Lifetime232 = AppletInstanceState.fetchGameDataFile((byte) 101, "tutorialSteps,22");
           if (null != var2Lifetime232) {
-            LimitedRandomAccessFile.droneDescriptions[22] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime232);
+            LimitedRandomAccessFile.droneDescriptions[22] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime232);
           }
           var2Lifetime233 = AppletInstanceState.fetchGameDataFile((byte) 113, "tutorialSteps,23");
           if (var2Lifetime233 != null) {
-            LimitedRandomAccessFile.droneDescriptions[23] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime233);
+            LimitedRandomAccessFile.droneDescriptions[23] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime233);
           }
           var2Lifetime234 = AppletInstanceState.fetchGameDataFile((byte) 102, "tutorialSteps,24");
           if (var2Lifetime234 != null) {
-            LimitedRandomAccessFile.droneDescriptions[24] = MusicVoice.a(0, var2Lifetime234);
+            LimitedRandomAccessFile.droneDescriptions[24] = MusicVoice.decodeCp1252(0, var2Lifetime234);
           }
           var2Lifetime235 = AppletInstanceState.fetchGameDataFile((byte) 96, "tutorialSteps,25");
           if (null != var2Lifetime235) {
-            LimitedRandomAccessFile.droneDescriptions[25] = MusicVoice.a(0, var2Lifetime235);
+            LimitedRandomAccessFile.droneDescriptions[25] = MusicVoice.decodeCp1252(0, var2Lifetime235);
           }
           var2Lifetime236 = AppletInstanceState.fetchGameDataFile((byte) 97, "tutorialSteps,26");
           if (var2Lifetime236 != null) {
-            LimitedRandomAccessFile.droneDescriptions[26] = MusicVoice.a(0, var2Lifetime236);
+            LimitedRandomAccessFile.droneDescriptions[26] = MusicVoice.decodeCp1252(0, var2Lifetime236);
           }
           var2Lifetime237 = AppletInstanceState.fetchGameDataFile((byte) 120, "tutorialSteps,27");
           if (var2Lifetime237 != null) {
-            LimitedRandomAccessFile.droneDescriptions[27] = MusicVoice.a(0, var2Lifetime237);
+            LimitedRandomAccessFile.droneDescriptions[27] = MusicVoice.decodeCp1252(0, var2Lifetime237);
           }
           var2Lifetime238 = AppletInstanceState.fetchGameDataFile((byte) 89, "tutorialSteps,28");
           if (var2Lifetime238 != null) {
-            LimitedRandomAccessFile.droneDescriptions[28] = MusicVoice.a(0, var2Lifetime238);
+            LimitedRandomAccessFile.droneDescriptions[28] = MusicVoice.decodeCp1252(0, var2Lifetime238);
           }
           var2Lifetime239 = AppletInstanceState.fetchGameDataFile((byte) 106, "tutorialSteps,29");
           if (var2Lifetime239 != null) {
-            LimitedRandomAccessFile.droneDescriptions[29] = MusicVoice.a(0, var2Lifetime239);
+            LimitedRandomAccessFile.droneDescriptions[29] = MusicVoice.decodeCp1252(0, var2Lifetime239);
           }
           var2Lifetime240 = AppletInstanceState.fetchGameDataFile((byte) 126, "tutorialSteps,30");
           if (var2Lifetime240 != null) {
-            LimitedRandomAccessFile.droneDescriptions[30] = MusicVoice.a(0, var2Lifetime240);
+            LimitedRandomAccessFile.droneDescriptions[30] = MusicVoice.decodeCp1252(0, var2Lifetime240);
           }
           var2Lifetime241 = AppletInstanceState.fetchGameDataFile((byte) 103, "tutorialSteps,31");
           if (var2Lifetime241 != null) {
-            LimitedRandomAccessFile.droneDescriptions[31] = MusicVoice.a(0, var2Lifetime241);
+            LimitedRandomAccessFile.droneDescriptions[31] = MusicVoice.decodeCp1252(0, var2Lifetime241);
           }
           var2Lifetime242 = AppletInstanceState.fetchGameDataFile((byte) 112, "tutorialSteps,32");
           if (null != var2Lifetime242) {
-            LimitedRandomAccessFile.droneDescriptions[32] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime242);
+            LimitedRandomAccessFile.droneDescriptions[32] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime242);
           }
           var2Lifetime243 = AppletInstanceState.fetchGameDataFile((byte) 89, "tutorialSteps,33");
           if (var2Lifetime243 != null) {
-            LimitedRandomAccessFile.droneDescriptions[33] = MusicVoice.a(0, var2Lifetime243);
+            LimitedRandomAccessFile.droneDescriptions[33] = MusicVoice.decodeCp1252(0, var2Lifetime243);
           }
           var2Lifetime244 = AppletInstanceState.fetchGameDataFile((byte) 99, "tutorialSteps,34");
           if (var2Lifetime244 != null) {
-            LimitedRandomAccessFile.droneDescriptions[34] = MusicVoice.a(0, var2Lifetime244);
+            LimitedRandomAccessFile.droneDescriptions[34] = MusicVoice.decodeCp1252(0, var2Lifetime244);
           }
           var2Lifetime245 = AppletInstanceState.fetchGameDataFile((byte) 99, "tutorialSteps,35");
           if (var2Lifetime245 != null) {
-            LimitedRandomAccessFile.droneDescriptions[35] = MusicVoice.a(param1 + 5, var2Lifetime245);
+            LimitedRandomAccessFile.droneDescriptions[35] = MusicVoice.decodeCp1252(guard + 5, var2Lifetime245);
           }
           var2Lifetime246 = AppletInstanceState.fetchGameDataFile((byte) 112, "tutorialSteps,36");
           if (var2Lifetime246 != null) {
-            LimitedRandomAccessFile.droneDescriptions[36] = MusicVoice.a(0, var2Lifetime246);
+            LimitedRandomAccessFile.droneDescriptions[36] = MusicVoice.decodeCp1252(0, var2Lifetime246);
           }
           var2Lifetime247 = AppletInstanceState.fetchGameDataFile((byte) 120, "tutorialSteps,37");
           if (var2Lifetime247 != null) {
-            LimitedRandomAccessFile.droneDescriptions[37] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime247);
+            LimitedRandomAccessFile.droneDescriptions[37] = MusicVoice.decodeCp1252(GzipDecompressor.bitwiseXor(guard, -5), var2Lifetime247);
           }
           Drone.field_J = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1553,19 +1553,19 @@ final class ArchiveCatalog {
           var2_ref = decompiledCaughtException;
           stackIn_870_0 = var2_ref;
           stackIn_870_1 = new StringBuilder().append("rj.D(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_871_2 = "null";
           } else {
             stackIn_871_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_870_0), ((StringBuilder) (Object) stackIn_870_1).append(stackIn_871_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_870_0), ((StringBuilder) (Object) stackIn_870_1).append(stackIn_871_2).append(',').append(guard).append(')').toString());
         }
         if (GameApplet.field_o) {
           Sumoblitz.field_L = (var3 == 0);
         }
     }
 
-    final static void a(byte param0, int param1, String param2) {
+    final static void showAccountFailure(byte guard, int replyCode, String message) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -1574,39 +1574,39 @@ final class ArchiveCatalog {
         RuntimeException var3 = null;
         int var4 = 0;
         try {
-          var3_int = 59 / ((param0 + 40) / 55);
+          var3_int = 59 / ((guard + 40) / 55);
           StatusMessagePanel.field_A = false;
           ScrollPane.field_E = false;
           if (null != AccountStatusDialogState.activeDialog &&
             AccountStatusDialogState.activeDialog.open) {
-            if (8 == param1) {
-              param1 = 2;
+            if (8 == replyCode) {
+              replyCode = 2;
               if (!ReconnectState.reconnecting) {
-                param2 = LoginDialogState.field_b;
+                message = LoginDialogState.field_b;
                 if (Sumoblitz.field_L) {
-                  param2 = RasterBuffer.invalidPasswordText;
+                  message = RasterBuffer.invalidPasswordText;
                 }
               } else {
-                param2 = RasterBuffer.invalidPasswordText;
+                message = RasterBuffer.invalidPasswordText;
               }
-              LoginFormState.activeForm.a(-3499, FocusProxyWidget.field_F);
+              LoginFormState.activeForm.a(-3499, FocusProxyWidget.loginIdentifier);
             }
             var4 = 1;
-            if (param1 == 10) {
+            if (replyCode == 10) {
               var4 = 0;
               DisplayModeFailure.showDisplayNameForm((byte) -49);
             }
             if (var4 != 0) {
               if (ScrollPane.field_E) {
-                param2 = LegacyOpenGlInterleavedStream.formatIndexedTokens(ProxyAuthenticationRequiredException.connectionLostText, new String[]{param2}, (byte) -128);
+                message = LegacyOpenGlInterleavedStream.formatIndexedTokens(ProxyAuthenticationRequiredException.connectionLostText, new String[]{message}, (byte) -128);
               }
               if (LoginDialogState.field_c) {
-                param2 = LoginCredentials.pleaseTryAgainInText;
+                message = LoginCredentials.pleaseTryAgainInText;
               }
-              AccountStatusDialogState.activeDialog.showFailure(param2, param1, 21089);
+              AccountStatusDialogState.activeDialog.showFailure(message, replyCode, 21089);
             }
-            if (param1 != 256 &&
-              param1 != 10 &&
+            if (replyCode != 256 &&
+              replyCode != 10 &&
               !ReconnectState.reconnecting) {
               LoginFormState.activeForm.clearCredentials(-79);
             }
@@ -1616,8 +1616,8 @@ final class ArchiveCatalog {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_40_0 = var3;
-          stackIn_40_1 = new StringBuilder().append("rj.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_40_1 = new StringBuilder().append("rj.E(").append(guard).append(',').append(replyCode).append(',');
+          if (message == null) {
             stackIn_41_2 = "null";
           } else {
             stackIn_41_2 = "{...}";

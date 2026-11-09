@@ -29,7 +29,7 @@ final class IntroMeshResources {
               var2.unlink(false);
             }
             var3 = new ToolkitRasterStateStack(toolkit);
-            HotspotTextWidget.field_N.a(new ToolkitRasterStateCacheEntry(toolkit, var3), -1, (long)toolkit.toolkitId);
+            HotspotTextWidget.field_N.put(new ToolkitRasterStateCacheEntry(toolkit, var3), -1, (long)toolkit.toolkitId);
           }
           ParticleSpriteResources.lastRasterToolkit = toolkit;
           GraphicsToolkit.field_c = var3;
@@ -103,7 +103,7 @@ final class IntroMeshResources {
           HardwareTextureCache.introMeshes = new CompactMeshGeometry[var3];
           LoginIdentifierSupport.introMeshCenters = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            HardwareTextureCache.introMeshes[var4] = ImageProducerRasterBuffer.a(var8, -16736);
+            HardwareTextureCache.introMeshes[var4] = ImageProducerRasterBuffer.decodeCompactMesh(var8, -16736);
           }
           if (guard) {
             IntroMeshResources.monotonicTimeMillis(-93);

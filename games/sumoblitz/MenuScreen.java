@@ -377,7 +377,7 @@ class MenuScreen {
           var6_int = this.optionTop(optionIndex, 108);
           var7 = this.optionLeft(optionIndex, 50);
           discarded$0 = this.optionRight(-116, optionIndex);
-          var8 = IntroLogoRenderer.field_a[this.screenId][optionIndex];
+          var8 = IntroLogoRenderer.menuActions[this.screenId][optionIndex];
           var9 = GameClientShell.menuActionLabels[var8].toUpperCase();
           if (var9 == null) {
             var9 = "ERROR: missing text";
@@ -514,13 +514,13 @@ class MenuScreen {
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
           if (optionIndex >= 5) {
-            return -6 + (DualLinkNode.field_k[this.screenId] + MidiNoteMixer.field_s[this.screenId]);
+            return -6 + (DualLinkNode.menuTop[this.screenId] + MidiNoteMixer.menuRowSpacing[this.screenId]);
           }
-          return -6 + DualLinkNode.field_k[this.screenId];
+          return -6 + DualLinkNode.menuTop[this.screenId];
         }
         if (this.screenId == 2 &&
           AccountPacketReader.isGuestSession((byte) 9)) {
-          return DualLinkNode.field_k[this.screenId] - (-(optionIndex * MidiNoteMixer.field_s[this.screenId]) + 6);
+          return DualLinkNode.menuTop[this.screenId] - (-(optionIndex * MidiNoteMixer.menuRowSpacing[this.screenId]) + 6);
         }
         if (this.screenId != 3 &&
           this.screenId != 4 &&
@@ -530,35 +530,35 @@ class MenuScreen {
             this.screenId != 10 &&
             this.screenId != 11) {
             if (5 == this.screenId) {
-              if (IntroLogoRenderer.field_a[this.screenId].length > 1) {
+              if (IntroLogoRenderer.menuActions[this.screenId].length > 1) {
                 return 382;
               }
-              return 430 + optionIndex * MidiNoteMixer.field_s[this.screenId] - 4;
+              return 430 + optionIndex * MidiNoteMixer.menuRowSpacing[this.screenId] - 4;
             }
             if (this.screenId != 0) {
               if (guard <= 79) {
                 this.screenId = 83;
               }
-              return MidiNoteMixer.field_s[this.screenId] * optionIndex + DualLinkNode.field_k[this.screenId];
+              return MidiNoteMixer.menuRowSpacing[this.screenId] * optionIndex + DualLinkNode.menuTop[this.screenId];
             }
             if (optionIndex < 2) {
-              return optionIndex * (int)((double)MidiNoteMixer.field_s[this.screenId] * 2.0) + DualLinkNode.field_k[this.screenId] + 28;
+              return optionIndex * (int)((double)MidiNoteMixer.menuRowSpacing[this.screenId] * 2.0) + DualLinkNode.menuTop[this.screenId] + 28;
             }
             if (optionIndex > 1 &&
               optionIndex < 4) {
-              return MidiNoteMixer.field_s[this.screenId] * 2 + DualLinkNode.field_k[this.screenId] + 100;
+              return MidiNoteMixer.menuRowSpacing[this.screenId] * 2 + DualLinkNode.menuTop[this.screenId] + 100;
             }
             if (optionIndex == 6) {
-              return (-1 + optionIndex) * MidiNoteMixer.field_s[this.screenId] + DualLinkNode.field_k[this.screenId] + 100;
+              return (-1 + optionIndex) * MidiNoteMixer.menuRowSpacing[this.screenId] + DualLinkNode.menuTop[this.screenId] + 100;
             }
             if (4 <= optionIndex) {
-              return DualLinkNode.field_k[this.screenId] + 100 + MidiNoteMixer.field_s[this.screenId] * (-1 + optionIndex);
+              return DualLinkNode.menuTop[this.screenId] + 100 + MidiNoteMixer.menuRowSpacing[this.screenId] * (-1 + optionIndex);
             }
-            return MidiNoteMixer.field_s[this.screenId] * optionIndex + DualLinkNode.field_k[this.screenId] + 128;
+            return MidiNoteMixer.menuRowSpacing[this.screenId] * optionIndex + DualLinkNode.menuTop[this.screenId] + 128;
           }
-          return DualLinkNode.field_k[this.screenId];
+          return DualLinkNode.menuTop[this.screenId];
         }
-        return DualLinkNode.field_k[this.screenId] - 32;
+        return DualLinkNode.menuTop[this.screenId] - 32;
     }
 
     private final void handleKeyboardNavigation(byte guard) {
@@ -569,7 +569,7 @@ class MenuScreen {
         }
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
-          if (TextureCombineOperation.field_a == 96) {
+          if (TextureCombineOperation.keyCode == 96) {
             if (0 < this.selection.selectedIndex) {
               if (3 != this.selection.selectedIndex) {
                 this.selection.setKeyboardSelection(-31865, this.selection.selectedIndex - 1);
@@ -581,7 +581,7 @@ class MenuScreen {
               this.selection.setKeyboardSelection(-31865, 2);
             }
           }
-          if (TextureCombineOperation.field_a == 97) {
+          if (TextureCombineOperation.keyCode == 97) {
             if (this.selection.selectedIndex >= 2) {
               if (this.selection.selectedIndex == 2) {
                 this.selection.setKeyboardSelection(-31865, 0);
@@ -593,7 +593,7 @@ class MenuScreen {
               this.selection.setKeyboardSelection(-31865, 1 + this.selection.selectedIndex);
             }
           }
-          if (TextureCombineOperation.field_a == 99) {
+          if (TextureCombineOperation.keyCode == 99) {
             if (!(this.selection.selectedIndex >= 0) ||
               !(this.selection.selectedIndex <= 2)) {
               this.selection.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
@@ -604,7 +604,7 @@ class MenuScreen {
               this.selection.setKeyboardSelection(-31865, 3);
             }
           }
-          if (TextureCombineOperation.field_a == 98) {
+          if (TextureCombineOperation.keyCode == 98) {
             if (this.selection.selectedIndex == 3) {
               this.selection.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
               if (var3 != 0) {
@@ -619,8 +619,8 @@ class MenuScreen {
         }
         if (this.screenId == 3) {
           this.selection.handleHorizontalNavigation(-20);
-          if (TextureCombineOperation.field_a != 96 &&
-            97 != TextureCombineOperation.field_a) {
+          if (TextureCombineOperation.keyCode != 96 &&
+            97 != TextureCombineOperation.keyCode) {
             return;
           }
           while (!this.isOptionEnabled(this.selection.selectedIndex, 7746)) {
@@ -633,8 +633,8 @@ class MenuScreen {
           return;
         }
         this.selection.handleVerticalNavigation((byte) 95);
-        if (TextureCombineOperation.field_a == 98 ||
-          TextureCombineOperation.field_a == 99) {
+        if (TextureCombineOperation.keyCode == 98 ||
+          TextureCombineOperation.keyCode == 99) {
           while (!this.isOptionEnabled(this.selection.selectedIndex, 7746)) {
             this.selection.handleVerticalNavigation((byte) 38);
             if (var3 != 0) {
@@ -656,7 +656,7 @@ class MenuScreen {
           this.resetSelection(-8, true);
         }
         var4 = 0;
-        while (IntroLogoRenderer.field_a[this.screenId].length > var4) {
+        while (IntroLogoRenderer.menuActions[this.screenId].length > var4) {
           var5 = this.optionTop(var4, 111);
           var6 = this.optionHeight(8, var4);
           stackIn_19_0 = 0;
@@ -743,14 +743,14 @@ class MenuScreen {
         int var8;
         int var9;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var4 = IntroLogoRenderer.field_a[this.screenId][optionIndex];
+        var4 = IntroLogoRenderer.menuActions[this.screenId][optionIndex];
         if (this.selection.isActivated(-31260)) {
           if (var4 != 5) {
             ArchiveLoadRequirement.playSoundEffect(16, true);
             if (var9 != 0) {
               ArchiveLoadRequirement.playSoundEffect(15, true);
               if (var4 != this.lastHoveredAction &&
-                IntroLogoRenderer.field_a[this.screenId].length != 1) {
+                IntroLogoRenderer.menuActions[this.screenId].length != 1) {
                 this.lastHoveredAction = var4;
                 ArchiveLoadRequirement.playSoundEffect(17, true);
               }
@@ -758,14 +758,14 @@ class MenuScreen {
           } else {
             ArchiveLoadRequirement.playSoundEffect(15, true);
             if ((var9 != 0) && (var4 != this.lastHoveredAction &&
-              IntroLogoRenderer.field_a[this.screenId].length != 1)) {
+              IntroLogoRenderer.menuActions[this.screenId].length != 1)) {
               this.lastHoveredAction = var4;
               ArchiveLoadRequirement.playSoundEffect(17, true);
             }
           }
         } else {
           if (var4 != this.lastHoveredAction &&
-            IntroLogoRenderer.field_a[this.screenId].length != 1) {
+            IntroLogoRenderer.menuActions[this.screenId].length != 1) {
             this.lastHoveredAction = var4;
             ArchiveLoadRequirement.playSoundEffect(17, true);
           }
@@ -871,7 +871,7 @@ class MenuScreen {
                     IntrusiveNodeHashTable.field_c = 0;
                     LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
                     AffineTransform3D.field_j = 0;
-                    UiWidget.d((byte) -60);
+                    UiWidget.saveProgressToServer((byte) -60);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -884,7 +884,7 @@ class MenuScreen {
                     LegacyTurbulentWaterNoise.advanceToNextLevel(10);
                     ByteArrayCacheNode.initializeGameplaySession((byte) 104);
                     LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
-                    UiWidget.d((byte) -117);
+                    UiWidget.saveProgressToServer((byte) -117);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -914,7 +914,7 @@ class MenuScreen {
                     }
                     TextLayout.playGameTrack(0, 0);
                     AffineTransform3D.field_j = 0;
-                    UiWidget.d((byte) -107);
+                    UiWidget.saveProgressToServer((byte) -107);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -960,7 +960,7 @@ class MenuScreen {
                     }
                     AffineTransform3D.field_j = 0;
                     TextLayout.playGameTrack(0, 0);
-                    UiWidget.d((byte) -52);
+                    UiWidget.saveProgressToServer((byte) -52);
                     LruNodeCache.gameplaySession.resetSession(111);
                     if (var9 == 0) {
                       break regionExit2;
@@ -990,7 +990,7 @@ class MenuScreen {
                     if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    UiWidget.d((byte) -32);
+                    UiWidget.saveProgressToServer((byte) -32);
                     TextureGeneratorNode.restoreUpgradeAllocation(30692);
                     StrongCacheReference.switchMenuScreen(-7753, animateTransition, AffineTransform3D.field_j);
                     if (var9 == 0) {
@@ -1078,7 +1078,7 @@ class MenuScreen {
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.selection.isRightPressed(116224)) {
-                      AccountCreationForm.h(0);
+                      AccountCreationForm.increaseSoundVolume(0);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (!this.selection.isPointerHeld((byte) 52)) {
@@ -1421,7 +1421,7 @@ class MenuScreen {
                 if ((decompiledFrameRemainder0) &&
                   (this.screenId == 6)) {
                   DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
-                  DualLinkNode.field_k[this.screenId] = 200;
+                  DualLinkNode.menuTop[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
                   QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
@@ -1704,9 +1704,9 @@ class MenuScreen {
             if (optionIndex == 5) {
               return 240;
             }
-            return 155 * (optionIndex % 3) + GraphicsHeap.field_l[this.screenId];
+            return 155 * (optionIndex % 3) + GraphicsHeap.menuLeft[this.screenId];
           }
-          return 465 + GraphicsHeap.field_l[this.screenId];
+          return 465 + GraphicsHeap.menuLeft[this.screenId];
         }
         var3 = 27 / ((-40 - guard) / 47);
         if (this.screenId == 3) {
@@ -1740,7 +1740,7 @@ class MenuScreen {
           if (this.screenId == 5) {
             return 120 + 200 * optionIndex;
           }
-          return GraphicsHeap.field_l[this.screenId];
+          return GraphicsHeap.menuLeft[this.screenId];
         }
         return 120 + optionIndex * 200;
     }
@@ -1791,8 +1791,8 @@ class MenuScreen {
           this.field_e = this.field_e - 1;
         }
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!EmailCredentials.c(-102)))) {
-          if (TextureCombineOperation.field_a == 13) {
+        while (!(decompiledNaturalLoopExit0 = (!EmailCredentials.pollKeyEvent(-102)))) {
+          if (TextureCombineOperation.keyCode == 13) {
             if (this.screenId == 1) {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
               LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
@@ -1883,7 +1883,7 @@ class MenuScreen {
             optionIndex < 4) {
             return 179 + this.optionLeft(optionIndex, 77);
           }
-          return RendererPreference.field_d[this.screenId];
+          return RendererPreference.menuRight[this.screenId];
         }
         return 200 + this.optionLeft(optionIndex, -108);
     }
@@ -2051,7 +2051,7 @@ class MenuScreen {
     MenuScreen(int param0) {
         this.selectedAchievement = -1;
         this.screenId = param0;
-        this.selection = new MenuSelectionController(IntroLogoRenderer.field_a[param0].length);
+        this.selection = new MenuSelectionController(IntroLogoRenderer.menuActions[param0].length);
     }
 
     private final void drawControlsHelp(int opacity, int guard) {

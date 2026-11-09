@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ByteArrayPool {
     static int[] field_b;
-    static Hashtable field_a;
+    static Hashtable loadedNativeLibraryOwners;
     static int field_c;
 
     final static int highestOneBit(int value, boolean guard) {
@@ -75,13 +75,13 @@ final class ByteArrayPool {
     }
 
     public static void releaseStatics(byte param0) {
-        field_a = null;
+        loadedNativeLibraryOwners = null;
         int var1 = -11 % ((-56 - param0) / 45);
         field_b = null;
     }
 
     static {
-        field_a = new Hashtable();
+        loadedNativeLibraryOwners = new Hashtable();
         field_c = 0;
     }
 }

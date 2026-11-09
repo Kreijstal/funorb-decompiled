@@ -51,10 +51,10 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
         if (param0 != 1) {
           return (String) null;
         }
-        if (null == QueuedIntArrayRequest.field_o) {
+        if (null == QueuedIntArrayRequest.accountDisplayName) {
           return "";
         }
-        return QueuedIntArrayRequest.field_o;
+        return QueuedIntArrayRequest.accountDisplayName;
     }
 
     final static void a(byte param0) {
@@ -158,7 +158,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
             var3 = (CharSequence) null;
             LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) null, (byte) -40);
           }
-          var2 = MusicPatch.a(-29275, ScrollControl.encodeBase37Name(name, 7441));
+          var2 = MusicPatch.decodeBase37DisplayName(-29275, ScrollControl.encodeBase37Name(name, 7441));
           if (var2 == null) {
             var2 = "";
           }

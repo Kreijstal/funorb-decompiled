@@ -288,7 +288,7 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
         this.insetLeft = 0;
         try {
           this.toolkit = renderer;
-          this.texture = AccountCreationForm.a(height, offset, stride, false, renderer, (byte) -119, width, pixels);
+          this.texture = AccountCreationForm.createLegacySpriteTexture(height, offset, stride, false, renderer, (byte) -119, width, pixels);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (renderer != null ? "{...}" : "null") + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
         }

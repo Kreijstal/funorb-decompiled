@@ -2,36 +2,36 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DisplayPromptState {
-    final static void a(int param0, byte param1) {
+    final static void scrambleScoreCounters(int amount, byte guard) {
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (5 <= BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
           if (5 > BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10)) {
-            LoginPacketWriter.field_a = LoginPacketWriter.field_a - param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - amount;
           } else {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - amount;
           }
           if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) < 5) {
-            QuickChatCommand.field_a = QuickChatCommand.field_a - param0;
+            QuickChatCommand.field_a = QuickChatCommand.field_a - amount;
           } else {
-            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - amount;
           }
         } else {
           if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
-            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + param0;
+            SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + amount;
           } else {
-            QuickChatCommand.field_a = QuickChatCommand.field_a + param0;
+            QuickChatCommand.field_a = QuickChatCommand.field_a + amount;
           }
           if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + param0;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + amount;
           } else {
-            LoginPacketWriter.field_a = LoginPacketWriter.field_a + param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a + amount;
           }
         }
-        if (param1 < -92) {
+        if (guard < -92) {
           return;
         }
-        DisplayPromptState.a(-126, (byte) 36);
+        DisplayPromptState.scrambleScoreCounters(-126, (byte) 36);
     }
 
     final static boolean isDisplayPromptOpen(byte guard) {

@@ -42,7 +42,7 @@ final class LruNodeCache {
               var5.unlinkSecondary(-5106);
             }
           }
-          this.entries.a(node, -1, key);
+          this.entries.put(node, -1, key);
           if (guard >= -114) {
             this.accessOrder = (SecondaryNodeQueue) null;
           }

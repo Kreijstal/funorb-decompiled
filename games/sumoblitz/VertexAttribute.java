@@ -16,7 +16,7 @@ final class VertexAttribute {
     static int BITS_PER_ATTRIBUTE;
     static String continueText;
 
-    final static void b(int param0) {
+    final static void resetAppletTiming(int startIndex) {
         int var1_int = 0;
         int var2 = Sumoblitz.field_L ? 1 : 0;
         int var1_intLifetime1;
@@ -25,28 +25,28 @@ final class VertexAttribute {
           for (var1_int = 0; var1_int < 32; var1_int++) {
             Js5Client.field_k[var1_int] = 0L;
           }
-          for (var1_intLifetime1 = param0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+          for (var1_intLifetime1 = startIndex; var1_intLifetime1 < 32; var1_intLifetime1++) {
             AppletTickHistory.tickTimes[var1_intLifetime1] = 0L;
           }
           BurstParticle.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ls.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ls.A(" + startIndex + ')');
         }
     }
 
-    final static String a(byte param0) {
-        if (param0 != -62) {
+    final static String readAccountString(byte guard) {
+        if (guard != -62) {
           return (String) null;
         }
         return NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
     }
 
-    final static void a(int param0, int param1, int param2) {
-        CheckboxWidget.field_F = param2;
-        if (param1 > -42) {
+    final static void setDialogPointer(int x, int guard, int y) {
+        CheckboxWidget.field_F = y;
+        if (guard > -42) {
           return;
         }
-        GraphicsToolkit.field_b = param0;
+        GraphicsToolkit.field_b = x;
     }
 
     public final String toString() {
@@ -82,7 +82,7 @@ final class VertexAttribute {
         if (guard <= -77) {
           return null;
         }
-        VertexAttribute.a(88, 28, 105);
+        VertexAttribute.setDialogPointer(88, 28, 105);
         return null;
     }
 

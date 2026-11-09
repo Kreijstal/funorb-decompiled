@@ -72,7 +72,7 @@ final class RotarySelectorRenderer implements WidgetRenderer {
                 RotarySelectorRenderer.updateAppletNavigationLinks(true, (java.applet.Applet) null);
               }
               var5 = applet.getCodeBase();
-              var3 = MusicPatch.a((byte) 121, applet, var5).getFile();
+              var3 = MusicPatch.updateAppletStateUrl((byte) 121, applet, var5).getFile();
               BrowserScriptBridge.call(-105, applet, "updatelinks", new Object[]{"home", var3 + "home.ws"});
               BrowserScriptBridge.call(-115, applet, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
               BrowserScriptBridge.call(-111, applet, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});

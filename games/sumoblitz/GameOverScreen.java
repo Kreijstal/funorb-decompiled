@@ -26,32 +26,32 @@ final class GameOverScreen extends MenuScreen {
     final static void a(boolean param0) {
         if (!param0) {
           GameOverScreen.a(true);
-          if (CacheReferenceNode.field_u <= 0) {
-            if (0 != CacheReferenceNode.field_u) {
+          if (CacheReferenceNode.comboTimeout <= 0) {
+            if (0 != CacheReferenceNode.comboTimeout) {
               return;
             }
             FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
-          CacheReferenceNode.field_u = CacheReferenceNode.field_u - 1;
-          if (0 == CacheReferenceNode.field_u) {
+          CacheReferenceNode.comboTimeout = CacheReferenceNode.comboTimeout - 1;
+          if (0 == CacheReferenceNode.comboTimeout) {
             FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
           return;
         }
-        if (CacheReferenceNode.field_u > 0) {
-          CacheReferenceNode.field_u = CacheReferenceNode.field_u - 1;
-          if (0 != CacheReferenceNode.field_u) {
+        if (CacheReferenceNode.comboTimeout > 0) {
+          CacheReferenceNode.comboTimeout = CacheReferenceNode.comboTimeout - 1;
+          if (0 != CacheReferenceNode.comboTimeout) {
             return;
           }
           FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
           ComboState.comboCount = 0;
           return;
         }
-        if (0 != CacheReferenceNode.field_u) {
+        if (0 != CacheReferenceNode.comboTimeout) {
           return;
         }
         FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];

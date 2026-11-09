@@ -127,7 +127,7 @@ final class ToolkitRasterStateStack {
         int var6 = -53 / ((guard + 29) / 57);
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createIntroRotationMatrix(int guard, int angleY, int angleX) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -136,11 +136,11 @@ final class ToolkitRasterStateStack {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        if (param0 >= 45) {
-          var3 = LegacyOpenGlInterleavedStream.sinQ16(param2, -431);
-          var4 = SocialContact.cosQ16(0, param2);
-          var5 = LegacyOpenGlInterleavedStream.sinQ16(param1, -431);
-          var6 = SocialContact.cosQ16(0, param1);
+        if (guard >= 45) {
+          var3 = LegacyOpenGlInterleavedStream.sinQ16(angleX, -431);
+          var4 = SocialContact.cosQ16(0, angleX);
+          var5 = LegacyOpenGlInterleavedStream.sinQ16(angleY, -431);
+          var6 = SocialContact.cosQ16(0, angleY);
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var6 * (long)var3 >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -149,10 +149,10 @@ final class ToolkitRasterStateStack {
         }
         GameProgressUpdate var11 = (GameProgressUpdate) null;
         ToolkitRasterStateStack.sendProgressUpdate(-57, 125, (GameProgressUpdate) null);
-        var3 = LegacyOpenGlInterleavedStream.sinQ16(param2, -431);
-        var4 = SocialContact.cosQ16(0, param2);
-        var5 = LegacyOpenGlInterleavedStream.sinQ16(param1, -431);
-        var6 = SocialContact.cosQ16(0, param1);
+        var3 = LegacyOpenGlInterleavedStream.sinQ16(angleX, -431);
+        var4 = SocialContact.cosQ16(0, angleX);
+        var5 = LegacyOpenGlInterleavedStream.sinQ16(angleY, -431);
+        var6 = SocialContact.cosQ16(0, angleY);
         var7 = (int)((long)var5 * (long)var3 >> 16);
         var8 = (int)((long)var6 * (long)var3 >> 16);
         var9 = (int)((long)var5 * (long)var4 >> 16);

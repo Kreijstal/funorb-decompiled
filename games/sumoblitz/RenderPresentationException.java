@@ -34,7 +34,7 @@ final class RenderPresentationException extends Exception {
         field_b = null;
     }
 
-    final static SocketConnector a(String param0, int param1, boolean param2) {
+    final static SocketConnector createSocketConnector(String host, int port, boolean guard) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;
@@ -44,11 +44,11 @@ final class RenderPresentationException extends Exception {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new ProxySocketConnector();
-          if (!param2) {
+          if (!guard) {
             field_b = (String[]) null;
           }
-          ((SocketConnector) ((Object) var3)).host = param0;
-          ((SocketConnector) ((Object) var3)).port = param1;
+          ((SocketConnector) ((Object) var3)).host = host;
+          ((SocketConnector) ((Object) var3)).port = port;
           stackIn_3_0 = var3;
           return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,12 +56,12 @@ final class RenderPresentationException extends Exception {
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
           stackIn_6_1 = new StringBuilder().append("rf.C(");
-          if (param0 == null) {
+          if (host == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(port).append(',').append(guard).append(')').toString());
         }
     }
 

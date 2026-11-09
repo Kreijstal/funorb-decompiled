@@ -36,7 +36,7 @@ final class EnemyDroneFactory {
         RuntimeException var4_ref2 = null;
         try {
           if (AccountConnectionPhase.field_b != null) {
-            DisplayModeErrorDialog.a(track, volume, (byte) -87, 1048576, loop);
+            DisplayModeErrorDialog.crossfadeMusic(track, volume, (byte) -87, 1048576, loop);
           }
           if (null != DroneIntroductionOverlay.field_e) {
             var4_ref = EmailCredentials.field_f;

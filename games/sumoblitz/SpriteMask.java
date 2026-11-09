@@ -3,7 +3,7 @@
  */
 abstract class SpriteMask {
     static String arcadeModeUnlockedText;
-    static char[] field_c;
+    static char[] queuedKeyCharacters;
     static Drone[] drones;
     static int[] field_d;
 
@@ -14,7 +14,7 @@ abstract class SpriteMask {
     public static void releaseStatics(boolean param0) {
         arcadeModeUnlockedText = null;
         drones = null;
-        field_c = null;
+        queuedKeyCharacters = null;
         field_d = null;
         if (param0) {
           SpriteMask.releaseStatics(true);
@@ -34,7 +34,7 @@ abstract class SpriteMask {
 
     static {
         arcadeModeUnlockedText = "Arcade Mode unlocked!";
-        field_c = new char[128];
+        queuedKeyCharacters = new char[128];
         field_d = new int[8192];
         MenuSelectionController discarded$0 = new MenuSelectionController(1);
     }

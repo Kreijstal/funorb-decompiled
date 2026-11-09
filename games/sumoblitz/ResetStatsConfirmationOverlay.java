@@ -90,7 +90,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
                 } else {
                   if (0 == this.hoveredOption) {
                     WhirlpoolTables.c(89);
-                    UiWidget.d((byte) -83);
+                    UiWidget.saveProgressToServer((byte) -83);
                     this.hide((byte) -127);
                   } else {
                     this.hide((byte) -128);
@@ -107,7 +107,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             }
             if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
-              UiWidget.d((byte) -83);
+              UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
             }
@@ -122,7 +122,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             if (this.hoveredOption != -1) {
               if (0 == this.hoveredOption) {
                 WhirlpoolTables.c(89);
-                UiWidget.d((byte) -83);
+                UiWidget.saveProgressToServer((byte) -83);
                 this.hide((byte) -127);
                 return;
               }
@@ -138,7 +138,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             }
             if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
-              UiWidget.d((byte) -83);
+              UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
             }
@@ -159,7 +159,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
               }
               if (0 == this.hoveredOption) {
                 WhirlpoolTables.c(89);
-                UiWidget.d((byte) -83);
+                UiWidget.saveProgressToServer((byte) -83);
                 this.hide((byte) -127);
                 return;
               }
@@ -174,7 +174,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             }
             if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
-              UiWidget.d((byte) -83);
+              UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
             }
@@ -191,7 +191,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             }
             if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
-              UiWidget.d((byte) -83);
+              UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
             }
@@ -206,7 +206,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
           }
           if (0 == this.hoveredOption) {
             WhirlpoolTables.c(89);
-            UiWidget.d((byte) -83);
+            UiWidget.saveProgressToServer((byte) -83);
             this.hide((byte) -127);
             return;
           }

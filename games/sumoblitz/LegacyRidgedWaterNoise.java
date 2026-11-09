@@ -40,7 +40,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
           if (!BeveledCheckboxRenderer.hasOpenDialogs(false)) {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
-              HardwareAnimatedWaterEffect.d(1);
+              HardwareAnimatedWaterEffect.exitFullscreen(1);
               HardwareTextureSprite.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(HardwareTextureSprite.field_e, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
             }
             return;
@@ -50,8 +50,8 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }
           HardwareTextureSprite.field_e.advanceDialogAnimations(-104);
-          while (EmailCredentials.c(-81)) {
-            HardwareTextureSprite.field_e.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
+          while (EmailCredentials.pollKeyEvent(-81)) {
+            HardwareTextureSprite.field_e.dispatchKey(WhirlpoolDigest.keyCharacter, TextureCombineOperation.keyCode, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

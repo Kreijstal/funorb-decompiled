@@ -113,7 +113,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           TextureFormat.elapsedTicks = 0;
           MusicPatch.simulationPaused = false;
           AppletInstanceState.beginCurrentWave(false);
-          HardwareUnlitEffect.field_e = 1000;
+          HardwareUnlitEffect.powerupScoreThreshold = 1000;
           TextLayout.playGameTrack(0, OpenGlShaderProgram.levelIndex % 5 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,7 +5,7 @@ final class EmailAvailabilityRequest {
     private String email;
     static TextureCombineOperation SUBTRACT;
     static IntrusiveDeque powerupPickups;
-    static int field_a;
+    static int keyEventReadIndex;
     private boolean available;
     static SpriteData field_g;
     private boolean complete;
@@ -80,7 +80,7 @@ final class EmailAvailabilityRequest {
     }
 
     static {
-        field_a = 0;
+        keyEventReadIndex = 0;
         SUBTRACT = new TextureCombineOperation();
     }
 }

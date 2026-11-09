@@ -767,7 +767,7 @@ final class GameplaySession {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (TextureCombineOperation.field_a == 13) {
+          if (TextureCombineOperation.keyCode == 13) {
             PauseMenuState.pauseMenuOpen = true;
             StrongCacheReference.switchMenuScreen(-7753, false, 1);
           }
@@ -784,7 +784,7 @@ final class GameplaySession {
               regionExit3: {
                 regionExit4: {
                   boolean decompiledFrameRemainder0 = true;
-                  var2_int = TextureCombineOperation.field_a;
+                  var2_int = TextureCombineOperation.keyCode;
                   if (var2_int != 13 && (var2_int != 35 ||
                     var3 != 0)) {
                     if (var2_int == 34) {
@@ -1032,7 +1032,7 @@ final class GameplaySession {
         try {
           boolean decompiledFrameCompleted3 = true;
           if (processInput) {
-            while (EmailCredentials.c(-112)) {
+            while (EmailCredentials.pollKeyEvent(-112)) {
               this.handleGameKey((byte) -122);
               if (var6 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -1121,7 +1121,7 @@ final class GameplaySession {
               }
             }
           }
-          MusicPatch.c((byte) 77);
+          MusicPatch.updateDrones((byte) 77);
           if (TextureFormat.elapsedTicks != IntroductionOverlaySupport.field_f &&
             (TextureFormat.elapsedTicks - IntroductionOverlaySupport.field_f) % 50 == 0 &&
             !DroneDebris.field_C) {
@@ -1160,7 +1160,7 @@ final class GameplaySession {
               if (AppletTickHistory.field_b <= 0 &&
                 !var3_ref.isBlastActive(126)) {
                 if (DroneProximitySupport.isWithinRadius(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
-                  SecondaryNodeQueue.a(var3_ref, (byte) 113);
+                  SecondaryNodeQueue.defeatDrone(var3_ref, (byte) 113);
                   if (DisplaySizeController.field_f == 0) {
                     OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
                   }
@@ -1365,7 +1365,7 @@ final class GameplaySession {
                       UnderageAccountInfoPanel.b(24753, 253, 2);
                     }
                   }
-                  OpenGlBuffer.a(35040, new PlayerDrone(81920, 61440));
+                  OpenGlBuffer.initializeVictoryScene(35040, new PlayerDrone(81920, 61440));
                   StrongCacheReference.switchMenuScreen(-7753, true, 12);
                   TextLayout.playGameTrack(0, 6);
                   return;
@@ -1410,7 +1410,7 @@ final class GameplaySession {
             }
             if (var4Lifetime1.isBlastWarningTick((byte) -59) &&
               this.showBlastHint) {
-              EmailCredentials.a((byte) 99, 17);
+              EmailCredentials.showDroneIntroduction((byte) 99, 17);
               this.showBlastHint = false;
             }
           }

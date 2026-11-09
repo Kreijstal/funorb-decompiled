@@ -98,10 +98,10 @@ final class NodeHashTableIterator implements Iterator {
         int var2 = AchievementThresholds.targets[param0];
         if (param1 != -82) {
           suggestedNamesText = (String) null;
-          DisplayPromptState.a(var2, (byte) -127);
+          DisplayPromptState.scrambleScoreCounters(var2, (byte) -127);
           return;
         }
-        DisplayPromptState.a(var2, (byte) -127);
+        DisplayPromptState.scrambleScoreCounters(var2, (byte) -127);
     }
 
     static {

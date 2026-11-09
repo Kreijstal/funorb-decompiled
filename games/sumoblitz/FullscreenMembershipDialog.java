@@ -58,9 +58,9 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           var2.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(MouseInputShutdown.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, 60);
           if (AccountPacketReader.isGuestSession((byte) 9)) {
-            this.field_U = this.a(25566, (WidgetListener) (this), AudioServiceThread.membersText);
+            this.field_U = this.appendButton(25566, (WidgetListener) (this), AudioServiceThread.membersText);
           }
-          this.field_P = this.a(25566, (WidgetListener) (this), DraggableWidget.closeText);
+          this.field_P = this.appendButton(25566, (WidgetListener) (this), DraggableWidget.closeText);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -76,12 +76,12 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           return;
         }
         File var2 = (File) null;
-        FullscreenMembershipDialog.a(85, (File) null, (byte) 19);
+        FullscreenMembershipDialog.readFileBytes(85, (File) null, (byte) 19);
         field_T = null;
         youHave1UnreadText = null;
     }
 
-    final static byte[] a(int param0, File param1, byte param2) {
+    final static byte[] readFileBytes(int length, File file, byte guard) {
         try {
           byte[] var3 = null;
           IOException var3_ref = null;
@@ -95,10 +95,10 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = new byte[param0];
+              var4 = new byte[length];
               var3 = var4;
-              TimedSceneEffect.readFileFully(var4, 7039, param1, param0);
-              if (param2 <= 41) {
+              TimedSceneEffect.readFileFully(var4, 7039, file, length);
+              if (guard <= 41) {
                 tryAgainText = (String) null;
               }
               stackIn_3_0 = var4;
@@ -113,13 +113,13 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             decompiledCaughtException = decompiledCaughtParameter1;
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var3_ref2;
-            stackIn_8_1 = new StringBuilder().append("kq.V(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_8_1 = new StringBuilder().append("kq.V(").append(length).append(',');
+            if (file == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -135,7 +135,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         this.open = keepOpen ? true : false;
     }
 
-    private final InteractiveWidget a(int param0, WidgetListener param1, String param2) {
+    private final InteractiveWidget appendButton(int guard, WidgetListener listener, String text) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -148,15 +148,15 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param2, param1);
-          if (param0 != 25566) {
+          var4 = new InteractiveWidget(text, listener);
+          if (guard != 25566) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = -6 + this.height;
           this.height = this.height + 38;
-          var4.setBounds(param0 - 25442, 15, var5, 30, -14 + (this.width - 16));
+          var4.setBounds(guard - 25442, 15, var5, 30, -14 + (this.width - 16));
           this.addChild(var4, 90);
           this.refreshLayout(false);
           stackIn_4_0 = var4;
@@ -165,14 +165,14 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_7_0 = var4_ref;
-          stackIn_7_1 = new StringBuilder().append("kq.W(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("kq.W(").append(guard).append(',');
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

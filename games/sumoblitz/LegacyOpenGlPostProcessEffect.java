@@ -74,12 +74,12 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
 
     abstract void close(int guard);
 
-    final static ResourceArchive a(int param0, boolean param1, int param2, int param3, boolean param4) {
-        if (param0 == 11880) {
-          return HardwareSpecularEffect.a(param3, param0 ^ -11778, param1, param2, param4, false);
+    final static ResourceArchive openResourceArchive(int guard, boolean discardGroups, int archiveId, int retentionPolicy, boolean prefetch) {
+        if (guard == 11880) {
+          return HardwareSpecularEffect.openResourceArchive(retentionPolicy, guard ^ -11778, discardGroups, archiveId, prefetch, false);
         }
-        LegacyOpenGlPostProcessEffect.a(87, true, -113, -52, false);
-        return HardwareSpecularEffect.a(param3, param0 ^ -11778, param1, param2, param4, false);
+        LegacyOpenGlPostProcessEffect.openResourceArchive(87, true, -113, -52, false);
+        return HardwareSpecularEffect.openResourceArchive(retentionPolicy, guard ^ -11778, discardGroups, archiveId, prefetch, false);
     }
 
     LegacyOpenGlPostProcessEffect(LegacyOpenGlGraphicsToolkit owner) {

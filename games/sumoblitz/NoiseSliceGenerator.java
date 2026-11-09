@@ -12,7 +12,7 @@ abstract class NoiseSliceGenerator {
 
     abstract void generateSlice(float stepX, int outputOffset, float stepY, float stepZ, int slice, int depth, int latticeStep, float[] output, int width, float amplitude, int height);
 
-    final static void a(int param0, IntrusiveDeque param1, Drone param2, int param3, int param4, int param5, byte param6) {
+    final static void spawnDroneChargeParticles(int color, IntrusiveDeque effects, Drone drone, int radius, int unusedYQ8, int unusedXQ8, byte guard) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -45,18 +45,18 @@ abstract class NoiseSliceGenerator {
           while (true) {
             stackIn_8_0 = (var7_int == 0) ? 30 : 15;
             if (stackIn_8_0 > var8) {
-              var9 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
+              var9 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(radius, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
               var15 = FullscreenPromptController.rotateVector((byte) -33, var9, (float)((double)(2048.0f / (float)var8) * 0.017453292519943295 + 0.0));
               var14 = var15;
               var12 = var14;
               var9Lifetime2 = var12;
-              param1.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var15[0] << 11, (int)var15[1] << 11, param0, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, param2)), (byte) 39);
+              effects.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var15[0] << 11, (int)var15[1] << 11, color, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, drone)), (byte) 39);
               var8++;
               continue;
             }
             break;
           }
-          if (param6 <= 92) {
+          if (guard <= 92) {
             var11 = (Object) null;
             NoiseSliceGenerator.extractByteArray(false, (Object) null, -86);
           }
@@ -66,30 +66,30 @@ abstract class NoiseSliceGenerator {
             if (stackIn_16_0 <= var8Lifetime1) {
               return;
             }
-            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param3, HardwareGraphicsHeap.field_o, (byte) -96)))};
+            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(radius, HardwareGraphicsHeap.field_o, (byte) -96)))};
             dupTemp$0 = FullscreenPromptController.rotateVector((byte) -52, var9Lifetime1, (float)(0.0 + (double)(2048.0f / (float)var8Lifetime1) * 0.017453292519943295));
             var13 = dupTemp$0;
             var9Lifetime1Lifetime1 = dupTemp$0;
-            param1.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var13[0] << 11, (int)var13[1] << 11, param0, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, param2)), (byte) 39);
+            effects.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var13[0] << 11, (int)var13[1] << 11, color, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, drone)), (byte) 39);
             var8Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_21_0 = var7;
-          stackIn_21_1 = new StringBuilder().append("ab.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("ab.C(").append(color).append(',');
+          if (effects == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param2 == null) {
+          if (drone == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(radius).append(',').append(unusedYQ8).append(',').append(unusedXQ8).append(',').append(guard).append(')').toString());
         }
     }
 

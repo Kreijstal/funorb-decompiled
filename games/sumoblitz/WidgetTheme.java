@@ -15,7 +15,7 @@ final class WidgetTheme {
     WidgetRenderer field_j;
     int field_g;
     LegacyBitmapFont font;
-    static int[] field_c;
+    static int[] queuedKeyCodes;
     WidgetRenderer labelRenderer;
     int field_a;
     WidgetRenderer field_p;
@@ -377,7 +377,7 @@ final class WidgetTheme {
         if (param0 <= 111) {
           return;
         }
-        field_c = null;
+        queuedKeyCodes = null;
         instructionsText = null;
     }
 
@@ -402,7 +402,7 @@ final class WidgetTheme {
     }
 
     static {
-        field_c = new int[128];
+        queuedKeyCodes = new int[128];
         instructionsText = "Instructions";
     }
 }

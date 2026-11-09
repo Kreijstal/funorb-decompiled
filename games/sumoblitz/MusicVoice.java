@@ -27,7 +27,7 @@ final class MusicVoice extends IntrusiveNode {
     int note;
     int releaseEnvelopeIndex;
 
-    final static String a(int param0, byte[] param1) {
+    final static String decodeCp1252(int guard, byte[] bytes) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -35,17 +35,17 @@ final class MusicVoice extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (guard != 0) {
             MusicVoice.releaseStatics((byte) -101);
           }
-          stackIn_3_0 = SoftLruCache.decodeCp1252(param1, 0, param1.length, 26564);
+          stackIn_3_0 = SoftLruCache.decodeCp1252(bytes, 0, bytes.length, 26564);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("uu.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("uu.C(").append(guard).append(',');
+          if (bytes == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

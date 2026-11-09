@@ -217,7 +217,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               var4 = this.networkClient.requestGroup(this.archiveId, true, groupId, (byte) -87, (byte) 2);
             }
           }
-          this.groupRequests.a((IntrusiveNode) (var4), guard ^ -30562, (long)groupId);
+          this.groupRequests.put((IntrusiveNode) (var4), guard ^ -30562, (long)groupId);
         }
         if (((ResourceRequest) (var4)).pending) {
           return null;
@@ -277,7 +277,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 return null;
               }
               var4 = this.networkClient.requestGroup(this.archiveId, true, groupId, (byte) 78, (byte) 2);
-              this.groupRequests.a((IntrusiveNode) (var4), -1, (long)groupId);
+              this.groupRequests.put((IntrusiveNode) (var4), -1, (long)groupId);
             }
             return null;
           }
@@ -314,7 +314,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (((ResourceRequest) (var4)).urgent &&
             !this.networkClient.urgentQueueFull(guard - 30435)) {
             var4 = this.networkClient.requestGroup(this.archiveId, true, groupId, (byte) -69, (byte) 2);
-            this.groupRequests.a((IntrusiveNode) (var4), -1, (long)groupId);
+            this.groupRequests.put((IntrusiveNode) (var4), -1, (long)groupId);
           }
           return null;
         }

@@ -11,10 +11,10 @@ final class FadingWidget extends SingleChildWidget {
     final static boolean g(int param0) {
         if (param0 > -26) {
           nextText = (String) null;
-          if (TextureCoordinateGeneration.field_a < 20) {
+          if (TextureCoordinateGeneration.clientPreparationPhase < 20) {
             return true;
           }
-          if (!ScrollViewport.g(-1)) {
+          if (!ScrollViewport.canRenderClientUi(-1)) {
             return true;
           }
           if (Js5ClientState.field_c <= 0) {
@@ -25,10 +25,10 @@ final class FadingWidget extends SingleChildWidget {
           }
           return false;
         }
-        if (TextureCoordinateGeneration.field_a < 20) {
+        if (TextureCoordinateGeneration.clientPreparationPhase < 20) {
           return true;
         }
-        if (!ScrollViewport.g(-1)) {
+        if (!ScrollViewport.canRenderClientUi(-1)) {
           return true;
         }
         if (Js5ClientState.field_c <= 0) {

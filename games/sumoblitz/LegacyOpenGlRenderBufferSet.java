@@ -119,7 +119,7 @@ final class LegacyOpenGlRenderBufferSet extends RenderBufferSet {
         if (guard != -251) {
           LegacyOpenGlRenderBufferSet.setSoundVolume(98, (byte) -77);
         }
-        return MusicPatch.field_u > 250 ? true : false;
+        return MusicPatch.introFrame > 250 ? true : false;
     }
 
     static {

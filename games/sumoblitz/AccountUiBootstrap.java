@@ -53,7 +53,7 @@ final class AccountUiBootstrap {
         }
         try {
           RenderPresentationException.field_a.closeAllDialogs((byte) -34);
-          LoginFormState.activeForm = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, allowSignup, allowGuestPlay);
+          LoginFormState.activeForm = new LoginForm(FocusProxyWidget.loginIdentifier, (String) null, ReconnectState.reconnecting, allowSignup, allowGuestPlay);
           SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, LoginFormState.activeForm);
           RenderPresentationException.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
@@ -87,7 +87,7 @@ final class AccountUiBootstrap {
             difficultyText = (String) null;
           }
           var3 = (CharSequence) ((Object) name);
-          stackIn_3_0 = PasswordValidator.field_f.equals(AccountCreationProgressDialog.normalizeAccountName(guard ^ 24, var3));
+          stackIn_3_0 = PasswordValidator.normalizedAccountDisplayName.equals(AccountCreationProgressDialog.normalizeAccountName(guard ^ 24, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

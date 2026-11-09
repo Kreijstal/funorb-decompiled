@@ -15,7 +15,7 @@ final class DirectXToolkitFactory {
             if (!HiscoreRequest.loadNativeSoftwareLibraries((byte) 124)) {
               throw new RuntimeException("");
             }
-            if (!ScrollPane.b((byte) 125, "jagdx")) {
+            if (!ScrollPane.loadNativeLibrary((byte) 125, "jagdx")) {
               throw new RuntimeException("");
             }
             if (guard != 7023) {

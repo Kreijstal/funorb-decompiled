@@ -14,19 +14,19 @@ final class LoginDialogNavigation {
           SoftwareRasterizer.clear();
           if (guard != -71) {
             defaultShadowColor = 40;
-            BurstParticle.a(dimBackground, true);
+            BurstParticle.renderDialogLayer(dimBackground, true);
             return;
           }
-          BurstParticle.a(dimBackground, true);
+          BurstParticle.renderDialogLayer(dimBackground, true);
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         if (guard != -71) {
           defaultShadowColor = 40;
-          BurstParticle.a(dimBackground, true);
+          BurstParticle.renderDialogLayer(dimBackground, true);
           return;
         }
-        BurstParticle.a(dimBackground, true);
+        BurstParticle.renderDialogLayer(dimBackground, true);
     }
 
     final static void completeNameAvailability(int response, String[] suggestions, String message, boolean guard) {

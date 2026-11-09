@@ -7,7 +7,7 @@ final class SoftwareRenderBuffer implements RenderBuffer {
     int width;
     int height;
 
-    final static void a(int param0, byte param1) {
+    final static void playDroneVariantSound(int variant, byte guard) {
         int var3 = 0;
         int var4 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 0;
@@ -25,8 +25,8 @@ final class SoftwareRenderBuffer implements RenderBuffer {
         int var2Lifetime11;
         int var2Lifetime12;
         int var2Lifetime13;
-        if (param1 > 8) {
-          var3 = param0;
+        if (guard > 8) {
+          var3 = variant;
           if (var3 == 1) {
             var2 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
             PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2]);
@@ -64,8 +64,8 @@ final class SoftwareRenderBuffer implements RenderBuffer {
           PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime13]);
           return;
         }
-        SoftwareRenderBuffer.a(71);
-        var3Lifetime1 = param0;
+        SoftwareRenderBuffer.showProgressDialog(71);
+        var3Lifetime1 = variant;
         if (var3Lifetime1 == 1) {
           var2Lifetime1 = ExpandingRingEffect.nextRandomInt(8, HardwareGraphicsHeap.field_o, (byte) -96);
           PlayerDrone.playSample(91, TimedSceneEffect.field_n[1][var2Lifetime1]);
@@ -103,9 +103,9 @@ final class SoftwareRenderBuffer implements RenderBuffer {
         PlayerDrone.playSample(78, TimedSceneEffect.field_n[0][var2Lifetime7]);
     }
 
-    final static void a(int param0) {
+    final static void showProgressDialog(int guard) {
         RenderPresentationException.field_a.closeAllDialogs((byte) 117);
-        if (param0 == 5178) {
+        if (guard == 5178) {
           if (HardwareGraphicsHeap.field_n == null) {
             HardwareGraphicsHeap.field_n = new ProgressDialog(RenderPresentationException.field_a, SocketJs5Client.field_s);
           }
@@ -114,8 +114,8 @@ final class SoftwareRenderBuffer implements RenderBuffer {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
-        if (param0 >= -50) {
+    final static void presentAccountDialogs(int guard, java.awt.Canvas canvas) {
+        if (guard >= -50) {
           return;
         }
         try {
@@ -123,9 +123,9 @@ final class SoftwareRenderBuffer implements RenderBuffer {
             CanvasPresentationHook.beforeCanvasPresent((byte) -126);
           }
           VertexStreamLayout.a(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
-          IterableNodeHashTable.a(0, 0, param1, (byte) 124);
+          IterableNodeHashTable.a(0, 0, canvas, (byte) 124);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "od.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "od.C(" + guard + ',' + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 

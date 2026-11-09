@@ -115,7 +115,7 @@ final class AccountPacketReader {
           while (true) {
             if (stackIn_17_0 < 0) {
               NativeLibraryExtractor.incomingPacket.position = 0;
-              if (!OpenGlIndexBuffer.b(-1, 1)) {
+              if (!OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
                 return false;
               }
               IntroFinalFrameResources.pendingAccountOpcode = NativeLibraryExtractor.incomingPacket.readCipherByte(255);

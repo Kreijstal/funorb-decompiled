@@ -622,10 +622,10 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         try {
           this.field_Bc = param2;
           this.canvas = param0;
-          if (!ScrollPane.b((byte) -107, "jaclib")) {
+          if (!ScrollPane.loadNativeLibrary((byte) -107, "jaclib")) {
             throw new RuntimeException("");
           }
-          if (!ScrollPane.b((byte) 97, "jaggl")) {
+          if (!ScrollPane.loadNativeLibrary((byte) 97, "jaggl")) {
             throw new RuntimeException("");
           }
           try {
@@ -663,7 +663,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                     if (var13.charAt(0) == 120 &&
                       3 <= var13.length()) {
                       var21 = (CharSequence) ((Object) var13.substring(1, 3));
-                      if (ContentTransitionPhase.a(-13181, var21)) {
+                      if (ContentTransitionPhase.isDecimalInteger(-13181, var21)) {
                         var7 = 1;
                         var10 = var13.substring(1);
                       }
@@ -677,7 +677,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                       }
                       if (4 <= var10.length()) {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
-                        if (ContentTransitionPhase.a(-13181, var22)) {
+                        if (ContentTransitionPhase.isDecimalInteger(-13181, var22)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = LoginFormState.parseDecimal((byte) -128, var23);
                           decompiledRegionSelector0 = 1;
@@ -2081,7 +2081,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_nc.a(var9, -1, (long)(this.field_Tb.width() << 16 | this.field_Tb.height()));
+                this.field_nc.put(var9, -1, (long)(this.field_Tb.width() << 16 | this.field_Tb.height()));
               }
               this.field_Db.addFirst(var3, -4);
               this.field_H.attachRenderbuffer(var3, 8, -14269);
@@ -2108,7 +2108,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_nc.a(var7, -1, (long)(this.field_Tb.width() << 16 | this.field_Tb.height()));
+              this.field_nc.put(var7, -1, (long)(this.field_Tb.width() << 16 | this.field_Tb.height()));
             }
             this.field_Db.addFirst(var3_ref, -4);
             this.context.setPbuffer(var3_ref.handle(-106));

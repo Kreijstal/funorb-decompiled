@@ -34,8 +34,8 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    final static LoginMethodPreference[] a(int param0) {
-        if (param0 == 32) {
+    final static LoginMethodPreference[] loginMethodPreferences(int guard) {
+        if (guard == 32) {
           return new LoginMethodPreference[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
         }
         java.applet.Applet var2 = (java.applet.Applet) null;

@@ -169,7 +169,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         }
     }
 
-    final static void f(byte param0) {
+    final static void readSocialUpdate(byte guard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_11_0 = 0;
@@ -247,7 +247,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             if (var2 != 4) {
               IntrusiveNode.reportClientError("F1: " + VictoryScreen.b((byte) 104), (Throwable) null, 0);
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -112);
-              if (param0 <= 71) {
+              if (guard <= 71) {
                 field_G = (QuickChatCommand) null;
               }
               return;
@@ -318,7 +318,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "js.CA(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "js.CA(" + guard + ')');
         }
     }
 
@@ -383,14 +383,14 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         }
     }
 
-    final static void h(int param0) {
+    final static void increaseSoundVolume(int guard) {
         try {
-          ContentDialog.raiseSoundVolume(param0 ^ 224);
-          if (param0 != 0) {
-            AccountCreationForm.f((byte) -20);
+          ContentDialog.raiseSoundVolume(guard ^ 224);
+          if (guard != 0) {
+            AccountCreationForm.readSocialUpdate((byte) -20);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.E(" + guard + ')');
         }
     }
 
@@ -727,7 +727,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         }
     }
 
-    final static LegacyOpenGlSpriteTexture a(int param0, int param1, int param2, boolean param3, LegacyOpenGlGraphicsToolkit param4, byte param5, int param6, int[] param7) {
+    final static LegacyOpenGlSpriteTexture createLegacySpriteTexture(int height, int rowLength, int offset, boolean mipmapped, LegacyOpenGlGraphicsToolkit toolkit, byte guard, int width, int[] pixels) {
         RuntimeException var8 = null;
         LegacyOpenGlSpriteTexture stackIn_2_0 = null;
         LegacyOpenGlSpriteTexture stackIn_11_0 = null;
@@ -740,33 +740,33 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param5 >= -6) {
+          if (guard >= -6) {
             stackIn_2_0 = (LegacyOpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
-          if (!param4.field_Cc && (!IntegerMath.isSingleBitOrZero(param6, -116) ||
-            !IntegerMath.isSingleBitOrZero(param0, -126))) {
-            if (param4.field_C) {
-              stackIn_16_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param6, param0, param3, param7, param2, param1);
+          if (!toolkit.field_Cc && (!IntegerMath.isSingleBitOrZero(width, -116) ||
+            !IntegerMath.isSingleBitOrZero(height, -126))) {
+            if (toolkit.field_C) {
+              stackIn_16_0 = new LegacyOpenGlSpriteTexture(toolkit, 34037, width, height, mipmapped, pixels, offset, rowLength);
               return stackIn_16_0;
             }
-            stackIn_14_0 = new LegacyOpenGlSpriteTexture(param4, param6, param0, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param6), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param0), param7);
+            stackIn_14_0 = new LegacyOpenGlSpriteTexture(toolkit, width, height, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, width), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, height), pixels);
             return stackIn_14_0;
           }
-          stackIn_11_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param6, param0, param3, param7, param2, param1);
+          stackIn_11_0 = new LegacyOpenGlSpriteTexture(toolkit, 3553, width, height, mipmapped, pixels, offset, rowLength);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_20_0 = var8;
-          stackIn_20_1 = new StringBuilder().append("js.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_20_1 = new StringBuilder().append("js.M(").append(height).append(',').append(rowLength).append(',').append(offset).append(',').append(mipmapped).append(',');
+          if (toolkit == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(',').append(width).append(',');
+          if (pixels == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";

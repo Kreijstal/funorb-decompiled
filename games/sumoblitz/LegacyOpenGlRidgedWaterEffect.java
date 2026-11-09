@@ -54,20 +54,20 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         notYetAchievedText = null;
     }
 
-    final static String c(byte param0) {
+    final static String accountFormIdentifier(byte guard) {
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return ValidationStatusWidget.field_G;
         }
         if (Base37NameAlphabet.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
           return PowerupPickup.field_s;
         }
-        if (param0 != -2) {
+        if (guard != -2) {
           return (String) null;
         }
         if (!AffineTransform3D.emailAvailabilityRequest.isComplete(true)) {
           return PowerupPickup.field_s;
         }
-        return FocusProxyWidget.field_F;
+        return FocusProxyWidget.loginIdentifier;
     }
 
     final void refreshState(int guard, boolean lighting) {

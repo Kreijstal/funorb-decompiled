@@ -167,7 +167,7 @@ class UsernameCredentials extends LoginCredentials {
               TextCaretLayout.accountPhase = LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY;
             }
             if (TextCaretLayout.accountPhase == LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY &&
-              OpenGlIndexBuffer.b(-1, 1)) {
+              OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
               var6_int = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               if (var6_int != 0) {
                 TextureFormat.receivedAccountOpcode = var6_int;
@@ -179,7 +179,7 @@ class UsernameCredentials extends LoginCredentials {
               NativeLibraryExtractor.incomingPacket.position = 0;
             }
             if (TextCaretLayout.accountPhase == OpenGlVertexBuffer.WAIT_SERVER_SEED &&
-              OpenGlIndexBuffer.b(-1, 8)) {
+              OpenGlIndexBuffer.readAccountBytes(-1, 8)) {
               HardwareUnlitEffect.field_g = NativeLibraryExtractor.incomingPacket.readLong((byte) 127);
               NativeLibraryExtractor.incomingPacket.position = 0;
               LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
@@ -187,11 +187,11 @@ class UsernameCredentials extends LoginCredentials {
             }
             boolean decompiledFrameRemainder0 = true;
             if (TextCaretLayout.accountPhase == LoginMethodPreference.WAIT_LOGIN_REPLY &&
-              OpenGlIndexBuffer.b(-1, 1)) {
+              OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
               var6_intLifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               TextureFormat.receivedAccountOpcode = var6_intLifetime1;
               NativeLibraryExtractor.incomingPacket.position = 0;
-              SoftwareRenderContext.field_b = null;
+              SoftwareRenderContext.requestedDisplayName = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -240,9 +240,9 @@ class UsernameCredentials extends LoginCredentials {
                   WidgetStateStyle.field_b[var8] = NativeLibraryExtractor.incomingPacket.readByte(true);
                 }
               }
-              QueuedIntArrayRequest.field_o = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
-              var11 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
-              PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
+              QueuedIntArrayRequest.accountDisplayName = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
+              var11 = (CharSequence) ((Object) QueuedIntArrayRequest.accountDisplayName);
+              PasswordValidator.normalizedAccountDisplayName = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               Js5ClientState.field_c = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               TextCaretLayout.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
@@ -266,7 +266,7 @@ class UsernameCredentials extends LoginCredentials {
                 }
               } else {
                 try {
-                  BrowserScriptBridge.call(-111, LegacyOpenGlUnlitEffect.activeApplet(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
+                  BrowserScriptBridge.call(-111, LegacyOpenGlUnlitEffect.activeApplet(2), "zap", new Object[]{MusicPatch.decodeBase37DisplayName(-29275, StringBuilderSupport.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

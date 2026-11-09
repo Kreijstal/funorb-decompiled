@@ -355,7 +355,7 @@ class Drone {
           if (!DroneProximitySupport.isWithinRadius(this.targetYQ8, 2048, -128, this.xQ8, this.targetXQ8, this.yQ8)) {
             if ((!(!this.isBlastChargeParticleTick(-2))) &&
               ((0 == this.droneType))) {
-              NoiseSliceGenerator.a(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+              NoiseSliceGenerator.spawnDroneChargeParticles(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -371,7 +371,7 @@ class Drone {
         }
         if ((decompiledFrameRemainder0) && (this.isBlastChargeParticleTick(-2) &&
           0 == this.droneType)) {
-          NoiseSliceGenerator.a(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+          NoiseSliceGenerator.spawnDroneChargeParticles(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
         }
         if (this.temporaryPowerup != -1) {
           this.temporaryPowerupTicks = this.temporaryPowerupTicks - 1;

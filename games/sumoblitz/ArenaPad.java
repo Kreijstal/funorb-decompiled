@@ -192,7 +192,7 @@ final class ArenaPad extends IntrusiveNode {
                 var13 = Math.asin((double)var9Lifetime1 / var11);
                 var15 = var13 + 3.141592653589793;
                 if (!(Math.abs(-drone.facingRadians + var15) < 1.5707963267948966)) {
-                  SecondaryNodeQueue.a(drone, (byte) 113);
+                  SecondaryNodeQueue.defeatDrone(drone, (byte) 113);
                   this.triggerCooldownTicks = 200;
                   if (12 == OpenGlShaderProgram.levelIndex) {
                     ValidationMessageWidget.field_P = true;
@@ -219,7 +219,7 @@ final class ArenaPad extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder7) {
-                SecondaryNodeQueue.a(drone, (byte) 113);
+                SecondaryNodeQueue.defeatDrone(drone, (byte) 113);
                 if (OpenGlShaderProgram.levelIndex == 12) {
                   ValidationMessageWidget.field_P = true;
                 }

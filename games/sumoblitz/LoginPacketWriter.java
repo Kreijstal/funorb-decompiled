@@ -28,7 +28,7 @@ final class LoginPacketWriter {
           SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[1]);
           SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[2]);
           SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[3]);
-          StrongCacheReference.a(SoftLruCache.field_e, true);
+          StrongCacheReference.writeRandomSeed(SoftLruCache.field_e, true);
           SoftLruCache.field_e.writeShort(guard + 12917, affiliateId);
           credentials.writeCredentials(SoftLruCache.field_e, (byte) -113);
           InwardSparkParticle.outgoingPacket.position = 0;
@@ -51,7 +51,7 @@ final class LoginPacketWriter {
           if (jagexHosted) {
             var6 = var6 | 8;
           }
-          if (SoftwareRenderContext.field_b != null) {
+          if (SoftwareRenderContext.requestedDisplayName != null) {
             var6 = var6 | 16;
           }
           InwardSparkParticle.outgoingPacket.writeByte((byte) 108, var6);
@@ -60,10 +60,10 @@ final class LoginPacketWriter {
             var7 = "";
           }
           InwardSparkParticle.outgoingPacket.writeCp1252String(var7, (byte) -106);
-          if (SoftwareRenderContext.field_b != null) {
-            InwardSparkParticle.outgoingPacket.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
+          if (SoftwareRenderContext.requestedDisplayName != null) {
+            InwardSparkParticle.outgoingPacket.writeCircumfixedString(SoftwareRenderContext.requestedDisplayName, (byte) 19);
           }
-          HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+          HardwareTurbulentWaterNoise.writeRsaXteaEnvelope(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
           InwardSparkParticle.outgoingPacket.patchShortLength(guard + 12793, InwardSparkParticle.outgoingPacket.position - var5_int);
           MessageDialog.flushAccountWrites(guard + 12793, -1);
           return;

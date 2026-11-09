@@ -839,7 +839,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                       if (120 == var21.charAt(0) &&
                         3 <= var21.length()) {
                         var31 = (CharSequence) ((Object) var21.substring(1, 3));
-                        if (ContentTransitionPhase.a(-13181, var31)) {
+                        if (ContentTransitionPhase.isDecimalInteger(-13181, var31)) {
                           var16 = var21.substring(1);
                           var13 = 1;
                         }
@@ -853,7 +853,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                         }
                         if (var16.length() >= 4) {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
-                          if (ContentTransitionPhase.a(-13181, var32)) {
+                          if (ContentTransitionPhase.isDecimalInteger(-13181, var32)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = LoginFormState.parseDecimal((byte) -127, var33);
                             decompiledRegionSelector0 = 1;

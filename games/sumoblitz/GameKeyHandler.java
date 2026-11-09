@@ -16,9 +16,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int != 65535 &&
               ScrollControl.isCp1252Character(-125, (char) var2_int)) {
               var3 = CacheReferenceNode.field_s + 1 & 127;
-              if (var3 != EmailAvailabilityRequest.field_a) {
-                WidgetTheme.field_c[CacheReferenceNode.field_s] = -1;
-                SpriteMask.field_c[CacheReferenceNode.field_s] = (char)var2_int;
+              if (var3 != EmailAvailabilityRequest.keyEventReadIndex) {
+                WidgetTheme.queuedKeyCodes[CacheReferenceNode.field_s] = -1;
+                SpriteMask.queuedKeyCharacters[CacheReferenceNode.field_s] = (char)var2_int;
                 CacheReferenceNode.field_s = var3;
               }
             }
@@ -63,9 +63,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var2_int >= 0) {
             var3 = 1 + CacheReferenceNode.field_s & 127;
-            if (var3 != EmailAvailabilityRequest.field_a) {
-              WidgetTheme.field_c[CacheReferenceNode.field_s] = var2_int;
-              SpriteMask.field_c[CacheReferenceNode.field_s] = (char)0;
+            if (var3 != EmailAvailabilityRequest.keyEventReadIndex) {
+              WidgetTheme.queuedKeyCodes[CacheReferenceNode.field_s] = var2_int;
+              SpriteMask.queuedKeyCharacters[CacheReferenceNode.field_s] = (char)0;
               CacheReferenceNode.field_s = var3;
             }
           }
@@ -97,7 +97,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(Drone param0, int param1) {
+    final static void spawnPowerupFromDrone(Drone drone, int guard) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -108,18 +108,18 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           return;
         }
         try {
-          var2_int = param0.xQ8;
-          var3 = param0.yQ8;
-          var4 = -param0.velocityXQ8;
-          var5 = param0.velocityYQ8;
-          if (param1 != -1) {
+          var2_int = drone.xQ8;
+          var3 = drone.yQ8;
+          var4 = -drone.velocityXQ8;
+          var5 = drone.velocityYQ8;
+          if (guard != -1) {
             field_a = (SessionStatisticsSubmission) null;
           }
           var6 = 1;
           var7 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
           EmailAvailabilityRequest.powerupPickups.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (drone != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -201,8 +201,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static ScrollControl a(byte param0) {
-        int var1 = -91 % ((79 - param0) / 41);
+    final static ScrollControl createVerticalScrollControl(byte guard) {
+        int var1 = -91 % ((79 - guard) / 41);
         return new ScrollControl(0, 0, HardwareTurbulentWaterNoise.widgetTheme.field_g, 0, (WidgetRenderer) null, HardwareTurbulentWaterNoise.widgetTheme.field_f, HardwareTurbulentWaterNoise.widgetTheme.field_p, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_a, HardwareTurbulentWaterNoise.widgetTheme.field_b, false, true, 32768, 0);
     }
 

@@ -3,7 +3,7 @@
  */
 final class TextureCoordinateGeneration {
     static int[] field_b;
-    static int field_a;
+    static int clientPreparationPhase;
 
     final static void a(int param0, int param1) {
         if (param1 <= 114) {
@@ -16,7 +16,7 @@ final class TextureCoordinateGeneration {
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 >= -37) {
-          field_a = 52;
+          clientPreparationPhase = 52;
         }
     }
 

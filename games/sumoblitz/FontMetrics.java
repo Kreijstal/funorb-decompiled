@@ -832,7 +832,7 @@ final class FontMetrics {
                     stackIn_50_1 = 32;
                     if (stackIn_50_0 != stackIn_50_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.kerningTable[var9Lifetime2][var10Lifetime2] = (byte)OpenGlEnvironmentWaterEffect.a(var9Lifetime2, var10Lifetime2, this.advances, var7, var6, (byte) -75, var8, var5);
+                      this.kerningTable[var9Lifetime2][var10Lifetime2] = (byte)OpenGlEnvironmentWaterEffect.computeGlyphKerning(var9Lifetime2, var10Lifetime2, this.advances, var7, var6, (byte) -75, var8, var5);
                     }
                     var10Lifetime2++;
                   }

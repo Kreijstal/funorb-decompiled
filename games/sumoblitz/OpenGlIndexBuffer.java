@@ -37,25 +37,25 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
         LegacyOpenGlSpecularEffect.pendingUpgradeLevels[2] = AccountStatusDialogState.selectedBounceLevel;
         IsaacPacketBuffer.allocatedUpgradePoints = LegacyOpenGlSpecularEffect.pendingUpgradeLevels[1] + LegacyOpenGlSpecularEffect.pendingUpgradeLevels[0] - 2 + (LegacyOpenGlSpecularEffect.pendingUpgradeLevels[2] - 1);
         if (guard < 100) {
-          OpenGlIndexBuffer.b(46, -94);
+          OpenGlIndexBuffer.readAccountBytes(46, -94);
         }
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean readAccountBytes(int guard, int length) {
         try {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (NativeLibraryExtractor.incomingPacket.position >= param1) {
+          if (NativeLibraryExtractor.incomingPacket.position >= length) {
             return true;
           }
           if (null == DisplayModeConfirmationDialog.accountSocket) {
             return false;
           }
           try {
-            var2_int = DisplayModeConfirmationDialog.accountSocket.available(param0 ^ 36);
+            var2_int = DisplayModeConfirmationDialog.accountSocket.available(guard ^ 36);
             if (0 >= var2_int) {
-              if (~var2_int > param0) {
+              if (~var2_int > guard) {
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
                 return false;
               }
@@ -65,13 +65,13 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
               return false;
             }
-            if (-NativeLibraryExtractor.incomingPacket.position + param1 < var2_int) {
-              var2_int = -NativeLibraryExtractor.incomingPacket.position + param1;
+            if (-NativeLibraryExtractor.incomingPacket.position + length < var2_int) {
+              var2_int = -NativeLibraryExtractor.incomingPacket.position + length;
             }
-            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, NativeLibraryExtractor.incomingPacket.position, var2_int, NativeLibraryExtractor.incomingPacket.payload);
+            DisplayModeConfirmationDialog.accountSocket.readFully(guard ^ 99, NativeLibraryExtractor.incomingPacket.position, var2_int, NativeLibraryExtractor.incomingPacket.payload);
             CacheReferenceNode.lastServerReadMillis = IntroMeshResources.monotonicTimeMillis(-47);
             NativeLibraryExtractor.incomingPacket.position = NativeLibraryExtractor.incomingPacket.position + var2_int;
-            if (NativeLibraryExtractor.incomingPacket.position < param1) {
+            if (NativeLibraryExtractor.incomingPacket.position < length) {
               return false;
             }
             NativeLibraryExtractor.incomingPacket.position = 0;

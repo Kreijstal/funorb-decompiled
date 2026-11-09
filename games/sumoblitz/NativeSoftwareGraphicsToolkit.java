@@ -54,7 +54,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
             } catch (Exception exception) {
             }
             var4 = new NativeCanvasSurface(this, canvas, width, height);
-            this.canvasSurfaces.a(var4, -1, (long)canvas.hashCode());
+            this.canvasSurfaces.put(var4, -1, (long)canvas.hashCode());
           } else {
             if (var4.width != width ||
               var4.height != height) {
@@ -144,7 +144,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.canvasSurfaces = new IntrusiveNodeHashTable(4);
         this.colorTablesRetained = false;
         try {
-          if (!ScrollPane.b((byte) -124, "sw3d")) {
+          if (!ScrollPane.loadNativeLibrary((byte) -124, "sw3d")) {
             throw new RuntimeException("");
           }
           NativeResourceReaper.retainOwner((byte) -119);
@@ -198,7 +198,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.renderContexts = null;
         this.currentSurface = null;
         this.currentHeap = null;
-        this.canvasSurfaces.c(6407);
+        this.canvasSurfaces.clear(6407);
         NativeGraphicsHeap var1 = (NativeGraphicsHeap) (this.heaps.first(99));
         while (var1 != null) {
           var1.ga();

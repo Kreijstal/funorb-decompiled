@@ -20,7 +20,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isNormalizableNameCharacter(byte guard, char character) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -33,27 +33,27 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         int var4Lifetime1;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (Character.isISOControl(param1)) {
+          if (Character.isISOControl(character)) {
             return false;
           }
-          if (DroneEscalationSupport.isAsciiAlphanumeric(57, param1)) {
+          if (DroneEscalationSupport.isAsciiAlphanumeric(57, character)) {
             return true;
           }
           var6 = MidiPcmStream.field_o;
           var2 = var6;
-          if (param0 != 61) {
+          if (guard != 61) {
             maximumPasswordLength = -127;
           }
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
-            if (~var4 == ~param1) {
+            if (~var4 == ~character) {
               return true;
             }
           }
           var2Lifetime1 = PacketBuffer.field_m;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
-            if (param1 == var4Lifetime1) {
+            if (character == var4Lifetime1) {
               return true;
             }
           }
@@ -61,7 +61,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "or.S(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "or.S(" + guard + ',' + character + ')');
         }
     }
 

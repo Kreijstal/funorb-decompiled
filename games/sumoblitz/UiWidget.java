@@ -99,7 +99,7 @@ class UiWidget extends IntrusiveNode {
             return stackIn_24_0;
           }
           if (guard != -24) {
-            UiWidget.d((byte) -20);
+            UiWidget.saveProgressToServer((byte) -20);
           }
           if (!descriptorOrClassName.equals("C")) {
             return Class.forName(descriptorOrClassName);
@@ -255,10 +255,10 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void d(byte param0) {
+    final static void saveProgressToServer(byte guard) {
         if (AccountPacketReader.isGuestSession((byte) 9)) {
-          if (param0 >= -15) {
-            UiWidget.d((byte) -33);
+          if (guard >= -15) {
+            UiWidget.saveProgressToServer((byte) -33);
             return;
           }
           return;
@@ -266,16 +266,16 @@ class UiWidget extends IntrusiveNode {
         Drone.field_g = GameApplet.encodeSavedProgress(-5204);
         if (null != Drone.field_g) {
           FourIntReadRequest.writeServerData(Drone.field_g, 6, 5412);
-          if (param0 >= -15) {
-            UiWidget.d((byte) -33);
+          if (guard >= -15) {
+            UiWidget.saveProgressToServer((byte) -33);
             return;
           }
           return;
         }
-        if (param0 < -15) {
+        if (guard < -15) {
           return;
         }
-        UiWidget.d((byte) -33);
+        UiWidget.saveProgressToServer((byte) -33);
     }
 
     final boolean dispatchPointerInput(int parentY, int parentX, boolean inputAvailable, int guard) {

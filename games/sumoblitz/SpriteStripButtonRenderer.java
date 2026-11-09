@@ -140,7 +140,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
               var6_int = var4_ref_of.rowCount;
               var7 = var4_ref_of.columnCount;
               DraggableWidget.field_B[0].secondaryName = null;
-              DraggableWidget.field_B[0].primaryName = QueuedIntArrayRequest.field_o;
+              DraggableWidget.field_B[0].primaryName = QueuedIntArrayRequest.accountDisplayName;
               DraggableWidget.field_B[0].included = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 DraggableWidget.field_B[var8_int].primaryName = var28.readCp1252String(-1);
@@ -187,7 +187,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
                   }
                   if (var21 != null &&
                     AccountUiBootstrap.isCurrentUserName(var21, (byte) -25)) {
-                    var8[1][var13] = QueuedIntArrayRequest.field_o;
+                    var8[1][var13] = QueuedIntArrayRequest.accountDisplayName;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;

@@ -3,7 +3,7 @@
  */
 abstract class GraphicsHeap extends IntrusiveNode {
     static int tooltipY;
-    static int[] field_l;
+    static int[] menuLeft;
 
     final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
         int incrementValue$0 = 0;
@@ -67,16 +67,16 @@ abstract class GraphicsHeap extends IntrusiveNode {
 
     public static void releaseStatics(byte param0) {
         if (param0 > -93) {
-          field_l = (int[]) null;
-          field_l = null;
+          menuLeft = (int[]) null;
+          menuLeft = null;
           return;
         }
-        field_l = null;
+        menuLeft = null;
     }
 
     final static int c(boolean param0) {
         if (param0) {
-          field_l = (int[]) null;
+          menuLeft = (int[]) null;
           return LegacyOpenGlTexture.field_h;
         }
         return LegacyOpenGlTexture.field_h;
@@ -87,6 +87,6 @@ abstract class GraphicsHeap extends IntrusiveNode {
 
     static {
         tooltipY = -1;
-        field_l = new int[13];
+        menuLeft = new int[13];
     }
 }

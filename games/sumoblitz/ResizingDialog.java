@@ -21,7 +21,7 @@ abstract class ResizingDialog extends ModalDialog {
         return super.finishAnimation(0);
     }
 
-    final static ToolkitSprite a(GraphicsToolkit param0, SpriteData param1, byte param2) {
+    final static ToolkitSprite createSprite(GraphicsToolkit toolkit, SpriteData data, byte guard) {
         RuntimeException var3 = null;
         PlatformTaskDispatcher var4 = null;
         ToolkitSprite stackIn_3_0 = null;
@@ -32,29 +32,29 @@ abstract class ResizingDialog extends ModalDialog {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -11) {
+          if (guard != -11) {
             var4 = (PlatformTaskDispatcher) null;
             ResizingDialog.a(false, (PlatformTaskDispatcher) null, -97, 35, 94, -35);
           }
-          stackIn_3_0 = param0.createSprite(param1, false);
+          stackIn_3_0 = toolkit.createSprite(data, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("hf.FA(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (data == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 

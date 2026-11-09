@@ -61,12 +61,12 @@ final class FullscreenPromptController {
         try {
           var1_int = 0;
           var2 = 0;
-          while (EmailCredentials.c(-105)) {
+          while (EmailCredentials.pollKeyEvent(-105)) {
             RendererPreference.field_a.handleVerticalNavigation((byte) 63);
             if (RendererPreference.field_a.isActivated(-31260)) {
               var1_int = 1;
             }
-            if (TextureCombineOperation.field_a != 13) {
+            if (TextureCombineOperation.keyCode != 13) {
               continue;
             }
             var2 = 1;
@@ -81,14 +81,14 @@ final class FullscreenPromptController {
             RendererPreference.field_a.selectedIndex >= 0) {
             var3 = ByteArrayPool.field_b[RendererPreference.field_a.selectedIndex];
             if (var3 == 2) {
-              GraphicsToolkit.b(23639);
+              GraphicsToolkit.resetDisplayPrompt(23639);
             } else if (var3 == 5) {
-              GraphicsToolkit.b(23639);
+              GraphicsToolkit.resetDisplayPrompt(23639);
             }
           } else {
             if (var2 != 0 &&
               DroneChargeParticle.field_s != 2) {
-              GraphicsToolkit.b(23639);
+              GraphicsToolkit.resetDisplayPrompt(23639);
             }
           }
           if (var3 == 0 &&

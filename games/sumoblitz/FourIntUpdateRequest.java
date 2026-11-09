@@ -14,36 +14,36 @@ final class FourIntUpdateRequest extends IntrusiveNode {
         if (guard != 119) {
           FourIntUpdateRequest.muteSoundEffects((byte) -70);
           if (-1 == HardwareBufferSet.accountPacketLength) {
-            if (!OpenGlIndexBuffer.b(-1, 1)) {
+            if (!OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
               return false;
             }
             HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
             NativeLibraryExtractor.incomingPacket.position = 0;
           }
           if (HardwareBufferSet.accountPacketLength == -2) {
-            if (!OpenGlIndexBuffer.b(-1, 2)) {
+            if (!OpenGlIndexBuffer.readAccountBytes(-1, 2)) {
               return false;
             }
             HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
             NativeLibraryExtractor.incomingPacket.position = 0;
           }
-          return OpenGlIndexBuffer.b(-1, HardwareBufferSet.accountPacketLength);
+          return OpenGlIndexBuffer.readAccountBytes(-1, HardwareBufferSet.accountPacketLength);
         }
         if (-1 == HardwareBufferSet.accountPacketLength) {
-          if (!OpenGlIndexBuffer.b(-1, 1)) {
+          if (!OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
             return false;
           }
           HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
           NativeLibraryExtractor.incomingPacket.position = 0;
         }
         if (HardwareBufferSet.accountPacketLength == -2) {
-          if (!OpenGlIndexBuffer.b(-1, 2)) {
+          if (!OpenGlIndexBuffer.readAccountBytes(-1, 2)) {
             return false;
           }
           HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
           NativeLibraryExtractor.incomingPacket.position = 0;
         }
-        return OpenGlIndexBuffer.b(-1, HardwareBufferSet.accountPacketLength);
+        return OpenGlIndexBuffer.readAccountBytes(-1, HardwareBufferSet.accountPacketLength);
     }
 
     final static void muteSoundEffects(byte guard) {

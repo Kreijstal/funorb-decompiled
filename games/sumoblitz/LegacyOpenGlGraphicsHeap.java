@@ -45,44 +45,44 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     }
 
     final static void initializeDefaultMenus(int backScreenId) {
-        IntroLogoRenderer.field_a[4] = new int[]{5};
+        IntroLogoRenderer.menuActions[4] = new int[]{5};
         LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
-        DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
+        DirectByteArrayStorage.defineMenuScreen(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
         LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
         if (0 >= HardwareRidgedWaterNoise.field_x) {
           if (!(2 > Bzip2State.field_j)) {
-            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           if (MusicPatchEnvelope.a(8230, 25)) {
-            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           AffineTransform3D.field_j = backScreenId;
           return;
         }
         if (IntroductionOverlaySupport.supportsFullscreen((byte) -29, FourIntUpdateRequest.platformDispatcher)) {
-          DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
+          DirectByteArrayStorage.defineMenuScreen(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
           LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
-          DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
+          DirectByteArrayStorage.defineMenuScreen(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
           LegacyOpenGlEffectManager.field_g[8] = new MenuScreen(8);
           if (!(2 > Bzip2State.field_j)) {
-            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           if (MusicPatchEnvelope.a(8230, 25)) {
-            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           AffineTransform3D.field_j = backScreenId;
           return;
         }
         if (!(2 > Bzip2State.field_j)) {
-          DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+          DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
         if (MusicPatchEnvelope.a(8230, 25)) {
-          DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+          DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
         AffineTransform3D.field_j = backScreenId;
@@ -155,7 +155,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 55 / ((25 - guard) / 42);
-          if (TextureCoordinateGeneration.field_a < 10) {
+          if (TextureCoordinateGeneration.clientPreparationPhase < 10) {
             var4 = 0;
             if (CubeMapSource.field_a) {
               CubeMapSource.field_a = false;
@@ -171,7 +171,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             return;
           }
           if (0 != LoginDialogNavigation.field_a) {
-            SoftwareRenderBuffer.a(-97, canvas);
+            SoftwareRenderBuffer.presentAccountDialogs(-97, canvas);
             return;
           }
           LoginDialogNavigation.drawAccountDialogs(false, (byte) -71, unused);

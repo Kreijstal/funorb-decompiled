@@ -43,9 +43,9 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         return this.waterTextures.hasAnimatedTextures(51);
     }
 
-    public static void e(int param0) {
-        if (param0 != 1) {
-          HardwareAnimatedWaterEffect.d(48);
+    public static void releaseWaterNoiseSlices(int guard) {
+        if (guard != 1) {
+          HardwareAnimatedWaterEffect.exitFullscreen(48);
           field_g = (int[][]) null;
           return;
         }
@@ -96,12 +96,12 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.updateTextureUniforms((byte) -107);
     }
 
-    final static void d(int param0) {
+    final static void exitFullscreen(int guard) {
         if (CompactMeshGeometry.field_o == null) {
           return;
         }
         CheckboxWidget.a(true, CompactMeshGeometry.field_o);
-        if (param0 != 1) {
+        if (guard != 1) {
           return;
         }
         CompactMeshGeometry.field_o.exitFullscreen(false, FourIntUpdateRequest.platformDispatcher);

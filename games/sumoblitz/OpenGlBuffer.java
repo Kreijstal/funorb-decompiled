@@ -15,7 +15,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
     private int target;
     static int[] field_h;
     static String fullscreenModeWasCancelledText;
-    static int field_a;
+    static int keyEventLimit;
     static ToolkitSprite[] field_g;
     static int targetMarkerXQ8;
 
@@ -99,18 +99,18 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    final static void a(int param0, Drone param1) {
+    final static void initializeVictoryScene(int guard, Drone drone) {
         try {
-          LegacyOpenGlRenderbuffer.field_u = param1;
+          LegacyOpenGlRenderbuffer.field_u = drone;
           ParticleSpriteResources.victoryParticles = new IntrusiveDeque();
           IntroMeshProjection.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LimitedRandomAccessFile.d(22030);
-          if (param0 != 35040) {
+          if (guard != 35040) {
             OpenGlBuffer.createSolidPanelSlices(116, -119);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ua.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ua.M(" + guard + ',' + (drone != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,7 +158,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         HardwareQuadBatchBuffers.notifyBrowserResizing(guard + 5837, 1);
     }
 
-    final static String a(byte param0, String param1) {
+    final static String nativeLibraryFileName(byte guard, String libraryName) {
         RuntimeException var2 = null;
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;
@@ -168,28 +168,28 @@ abstract class OpenGlBuffer implements GpuBuffer {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 5) {
+          if (guard < 5) {
             OpenGlBuffer.enableAutomaticCanvasResizing(77);
           }
           if (FixedPointPerlinNoise3D.field_h.startsWith("win")) {
-            stackIn_11_0 = param1 + ".dll";
+            stackIn_11_0 = libraryName + ".dll";
             return stackIn_11_0;
           }
           if (FixedPointPerlinNoise3D.field_h.startsWith("linux")) {
-            stackIn_5_0 = "lib" + param1 + ".so";
+            stackIn_5_0 = "lib" + libraryName + ".so";
             return stackIn_5_0;
           }
           if (!FixedPointPerlinNoise3D.field_h.startsWith("mac")) {
             return null;
           }
-          stackIn_9_0 = "lib" + param1 + ".dylib";
+          stackIn_9_0 = "lib" + libraryName + ".dylib";
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("ua.N(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ua.N(").append(guard).append(',');
+          if (libraryName == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -356,6 +356,6 @@ abstract class OpenGlBuffer implements GpuBuffer {
         INTERPOLATE = new TextureCombineOperation();
         field_h = new int[8192];
         fullscreenModeWasCancelledText = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_a = 0;
+        keyEventLimit = 0;
     }
 }

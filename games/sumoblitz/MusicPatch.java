@@ -11,7 +11,7 @@ final class MusicPatch extends IntrusiveNode {
     MusicPatchEnvelope[] envelopes;
     private int[] sampleIds;
     static boolean simulationPaused;
-    static int field_u;
+    static int introFrame;
     byte[] exclusiveGroups;
     short[] tunings;
     int volume;
@@ -96,11 +96,11 @@ final class MusicPatch extends IntrusiveNode {
     public static void releaseStatics(byte param0) {
         editorText = null;
         if (param0 <= 62) {
-          MusicPatch.a(86, -115L);
+          MusicPatch.decodeBase37DisplayName(86, -115L);
         }
     }
 
-    final static java.net.URL a(byte param0, java.applet.Applet param1, java.net.URL param2) {
+    final static java.net.URL updateAppletStateUrl(byte guard, java.applet.Applet applet, java.net.URL url) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_10_0 = null;
@@ -115,17 +115,17 @@ final class MusicPatch extends IntrusiveNode {
           var3 = null;
           var4 = null;
           if (IntIndexHashTable.field_d != null &&
-            !IntIndexHashTable.field_d.equals(param1.getParameter("settings"))) {
+            !IntIndexHashTable.field_d.equals(applet.getParameter("settings"))) {
             var3 = IntIndexHashTable.field_d;
             var4 = var3;
             var4 = var3;
           }
           if (AccountCreationForm.field_J != null &&
-            !AccountCreationForm.field_J.equals(param1.getParameter("session"))) {
+            !AccountCreationForm.field_J.equals(applet.getParameter("session"))) {
             var4 = AccountCreationForm.field_J;
           }
-          if (param0 >= 120) {
-            stackIn_12_0 = OpenGlEnvironmentWaterEffect.a(param2, (String) (var4), -1, (String) (var3), -1);
+          if (guard >= 120) {
+            stackIn_12_0 = OpenGlEnvironmentWaterEffect.rewriteAppletStateUrl(url, (String) (var4), -1, (String) (var3), -1);
             return stackIn_12_0;
           }
           stackIn_10_0 = (java.net.URL) null;
@@ -134,14 +134,14 @@ final class MusicPatch extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("td.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("td.G(").append(guard).append(',');
+          if (applet == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param2 == null) {
+          if (url == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -155,7 +155,7 @@ final class MusicPatch extends IntrusiveNode {
         int var2 = -58 % ((param0 - 73) / 51);
     }
 
-    final static byte[] a(int param0, int param1) {
+    final static byte[] noisePermutation(int seed, int guard) {
         ByteArrayCacheNode var2;
         byte[] var3_ref_byte__;
         int var3;
@@ -169,12 +169,12 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11;
         int var5Lifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (ByteArrayCacheNode) (ArenaDefinitionCodec.field_a.get((byte) -88, (long)param0));
+        var2 = (ByteArrayCacheNode) (ArenaDefinitionCodec.field_a.get((byte) -88, (long)seed));
         if (var2 == null) {
           var11 = new byte[512];
           var10 = var11;
           var3_ref_byte__ = var10;
-          var4 = new Random((long)param0);
+          var4 = new Random((long)seed);
           for (var5 = 0; var5 < 255; var5++) {
             var3_ref_byte__[var5] = (byte)var5;
           }
@@ -187,41 +187,41 @@ final class MusicPatch extends IntrusiveNode {
             var3_ref_byte__[var6] = (byte) var8;
           }
           var2 = new ByteArrayCacheNode(var11);
-          ArenaDefinitionCodec.field_a.put((long)param0, var2, -128);
+          ArenaDefinitionCodec.field_a.put((long)seed, var2, -128);
         }
-        var3 = -104 / ((60 - param1) / 58);
+        var3 = -104 / ((60 - guard) / 58);
         return var2.bytes;
     }
 
-    final static String a(int param0, long param1) {
+    final static String decodeBase37DisplayName(int guard, long encoded) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
         int var11 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 <= 0L) {
+        if (encoded <= 0L) {
           return null;
         }
-        if (6582952005840035281L <= param1) {
+        if (6582952005840035281L <= encoded) {
           return null;
         }
-        if (param1 % 37L == 0L) {
+        if (encoded % 37L == 0L) {
           return null;
         }
-        if (param0 != -29275) {
-          field_u = 98;
+        if (guard != -29275) {
+          introFrame = 98;
         }
         int var3 = 0;
-        long var4 = param1;
+        long var4 = encoded;
         while (var4 != 0L) {
           var3++;
           var4 = var4 / 37L;
         }
         StringBuilder var6 = new StringBuilder(var3);
-        while (param1 != 0L) {
-          var7 = param1;
-          param1 = param1 / 37L;
-          var9 = Base37NameAlphabet.alphabet[(int)(-(37L * param1) + var7)];
+        while (encoded != 0L) {
+          var7 = encoded;
+          encoded = encoded / 37L;
+          var9 = Base37NameAlphabet.alphabet[(int)(-(37L * encoded) + var7)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;
@@ -234,13 +234,13 @@ final class MusicPatch extends IntrusiveNode {
         return var6.toString();
     }
 
-    final static void c(byte param0) {
+    final static void updateDrones(byte guard) {
         int var1_int = 0;
         Drone var2 = null;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != 77) {
-            field_u = -102;
+          if (guard != 77) {
+            introFrame = -102;
           }
           if (SpriteMask.drones != null) {
             for (var1_int = 0; var1_int < ServerDataWriteRequest.droneSlotLimit; var1_int++) {
@@ -251,7 +251,7 @@ final class MusicPatch extends IntrusiveNode {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "td.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "td.B(" + guard + ')');
         }
     }
 

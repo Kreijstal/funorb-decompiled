@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class TextureCombineSource {
-    static Hashtable field_b;
+    static Hashtable extractedNativeLibraryFiles;
     static int field_a;
 
     final static int a(byte param0, int param1, int param2) {
@@ -38,14 +38,14 @@ final class TextureCombineSource {
     }
 
     public static void releaseStatics(boolean param0) {
-        field_b = null;
+        extractedNativeLibraryFiles = null;
         if (param0) {
           TextureCombineSource.a((byte) 75, 50, 40);
         }
     }
 
     static {
-        field_b = new Hashtable();
+        extractedNativeLibraryFiles = new Hashtable();
         field_a = 0;
     }
 }

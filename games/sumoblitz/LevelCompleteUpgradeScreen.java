@@ -370,7 +370,7 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         super(10);
     }
 
-    final static void b(byte param0) {
+    final static void decreaseSoundVolume(byte guard) {
         int var1 = 0;
         if (32 < RasterColorTables.soundVolume) {
           var1 = RasterColorTables.soundVolume % 32;
@@ -378,15 +378,15 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
             var1 = 32;
           }
           LegacyOpenGlRenderBufferSet.setSoundVolume(-var1 + RasterColorTables.soundVolume, (byte) -58);
-          if (param0 < 121) {
-            LevelCompleteUpgradeScreen.b((byte) -57);
+          if (guard < 121) {
+            LevelCompleteUpgradeScreen.decreaseSoundVolume((byte) -57);
             return;
           }
           return;
         }
         LegacyOpenGlRenderBufferSet.setSoundVolume(0, (byte) -58);
-        if (param0 < 121) {
-          LevelCompleteUpgradeScreen.b((byte) -57);
+        if (guard < 121) {
+          LevelCompleteUpgradeScreen.decreaseSoundVolume((byte) -57);
           return;
         }
     }

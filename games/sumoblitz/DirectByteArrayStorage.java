@@ -9,78 +9,78 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
     static ToolkitSprite field_e;
     static ToolkitSprite field_d;
 
-    final static int c(int param0, int param1) {
+    final static int indexBitCount(int value, int guard) {
         int var2;
         File var3;
         int var2Lifetime1;
-        if (param0 == 0) {
+        if (value == 0) {
           return 0;
         }
-        if (param0 > 0) {
+        if (value > 0) {
           var2 = 1;
-          if (65535 < param0) {
+          if (65535 < value) {
             var2 += 16;
-            param0 = param0 >> 16;
+            value = value >> 16;
           }
-          if (param0 > 255) {
+          if (value > 255) {
             var2 += 8;
-            param0 = param0 >> 8;
+            value = value >> 8;
           }
-          if (param0 > 15) {
+          if (value > 15) {
             var2 += 4;
-            param0 = param0 >> 4;
+            value = value >> 4;
           }
-          if (param0 > 3) {
+          if (value > 3) {
             var2 += 2;
-            param0 = param0 >> 2;
+            value = value >> 2;
           }
-          if (param0 > 1) {
+          if (value > 1) {
             var2++;
-            param0 = param0 >> 1;
+            value = value >> 1;
           }
           return var2;
         }
         var2Lifetime1 = 2;
-        if (param0 < -65536) {
-          param0 = param0 >> 16;
+        if (value < -65536) {
+          value = value >> 16;
           var2Lifetime1 += 16;
         }
-        if (param1 == 1) {
-          if (param0 < -256) {
-            param0 = param0 >> 8;
+        if (guard == 1) {
+          if (value < -256) {
+            value = value >> 8;
             var2Lifetime1 += 8;
           }
-          if (-16 > param0) {
-            param0 = param0 >> 4;
+          if (-16 > value) {
+            value = value >> 4;
             var2Lifetime1 += 4;
           }
-          if (-4 > param0) {
-            param0 = param0 >> 2;
+          if (-4 > value) {
+            value = value >> 2;
             var2Lifetime1 += 2;
           }
-          if (param0 < -2) {
+          if (value < -2) {
             var2Lifetime1++;
-            param0 = param0 >> 1;
+            value = value >> 1;
           }
           return var2Lifetime1;
         }
         var3 = (File) null;
         DirectByteArrayStorage.readEntireFile((File) null, (byte) 38);
-        if (param0 < -256) {
-          param0 = param0 >> 8;
+        if (value < -256) {
+          value = value >> 8;
           var2Lifetime1 += 8;
         }
-        if (-16 > param0) {
-          param0 = param0 >> 4;
+        if (-16 > value) {
+          value = value >> 4;
           var2Lifetime1 += 4;
         }
-        if (-4 > param0) {
-          param0 = param0 >> 2;
+        if (-4 > value) {
+          value = value >> 2;
           var2Lifetime1 += 2;
         }
-        if (param0 < -2) {
+        if (value < -2) {
           var2Lifetime1++;
-          param0 = param0 >> 1;
+          value = value >> 1;
         }
         return var2Lifetime1;
     }
@@ -106,7 +106,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -1 % ((39 - param1) / 49);
-          stackIn_1_0 = FullscreenMembershipDialog.a((int)param0.length(), param0, (byte) 103);
+          stackIn_1_0 = FullscreenMembershipDialog.readFileBytes((int)param0.length(), param0, (byte) 103);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
           return var6;
         }
         java.applet.Applet var5 = (java.applet.Applet) null;
-        DirectByteArrayStorage.a((java.applet.Applet) null, (byte) 104);
+        DirectByteArrayStorage.checkAppletUsername((java.applet.Applet) null, (byte) 104);
         var6Lifetime1 = new byte[length];
         var4Lifetime1 = var6Lifetime1;
         this.buffer.position(offset);
@@ -152,22 +152,22 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        IntroLogoRenderer.field_a[param5] = param4;
-        if (param3 != 2) {
+    final static void defineMenuScreen(int top, int rowSpacing, int left, int guard, int[] actions, int screenId, int right) {
+        IntroLogoRenderer.menuActions[screenId] = actions;
+        if (guard != 2) {
           return;
         }
         try {
-          GraphicsHeap.field_l[param5] = param2;
-          RendererPreference.field_d[param5] = param6;
-          DualLinkNode.field_k[param5] = param0;
-          MidiNoteMixer.field_s[param5] = param1;
+          GraphicsHeap.menuLeft[screenId] = left;
+          RendererPreference.menuRight[screenId] = right;
+          DualLinkNode.menuTop[screenId] = top;
+          MidiNoteMixer.menuRowSpacing[screenId] = rowSpacing;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "si.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "si.K(" + top + ',' + rowSpacing + ',' + left + ',' + guard + ',' + (actions != null ? "{...}" : "null") + ',' + screenId + ',' + right + ')');
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void checkAppletUsername(java.applet.Applet applet, byte guard) {
         RuntimeException runtimeException = null;
         String var2 = null;
         CharSequence var3 = null;
@@ -176,11 +176,11 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = param0.getParameter("username");
+          var2 = applet.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
             if (ScrollControl.encodeBase37Name(var3, 7441) != 0L) {
-              if (param1 > -42) {
+              if (guard > -42) {
                 field_c = -99;
               }
               return;
@@ -192,12 +192,12 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
           runtimeException = decompiledCaughtException;
           stackIn_9_0 = runtimeException;
           stackIn_9_1 = new StringBuilder().append("si.M(");
-          if (param0 == null) {
+          if (applet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 

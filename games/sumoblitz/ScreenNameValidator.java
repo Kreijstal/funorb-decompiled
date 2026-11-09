@@ -18,8 +18,8 @@ final class ScreenNameValidator extends TextInputValidator {
         }
     }
 
-    final static void d(byte param0) {
-        if (param0 != -112) {
+    final static void pollAccountProgress(byte guard) {
+        if (guard != -112) {
           field_g = (String) null;
         }
         if (!AccountPacketReader.isGuestSession((byte) 9) &&
@@ -35,7 +35,7 @@ final class ScreenNameValidator extends TextInputValidator {
           }
         }
         if (null == Drone.field_g) {
-          ResourceArchive.b(6);
+          ResourceArchive.pollSavedProgress(6);
         }
     }
 
@@ -63,7 +63,7 @@ final class ScreenNameValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) text);
-          var3 = CacheIoWorker.a(false, var5);
+          var3 = CacheIoWorker.validateDisplayName(false, var5);
           if (guard != 0) {
             ScreenNameValidator.releaseStatics((byte) 14);
           }
@@ -115,7 +115,7 @@ final class ScreenNameValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) text);
-          if (!LegacyOpenGlShoreWaveWaterEffect.a(var4, (byte) 53)) {
+          if (!LegacyOpenGlShoreWaveWaterEffect.isValidAccountName(var4, (byte) 53)) {
             stackIn_3_0 = AccountConnectionPhase.INVALID;
             return stackIn_3_0;
           }

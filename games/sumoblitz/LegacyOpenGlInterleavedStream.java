@@ -126,7 +126,7 @@ final class LegacyOpenGlInterleavedStream {
                 break;
               }
               var7_ref_String = template.substring(var6_int + 2, var5);
-              if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ContentTransitionPhase.isDecimalInteger(-13181, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -159,7 +159,7 @@ final class LegacyOpenGlInterleavedStream {
               break;
             }
             var9 = template.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var9))) {
+            if (!ContentTransitionPhase.isDecimalInteger(-13181, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -210,7 +210,7 @@ final class LegacyOpenGlInterleavedStream {
           try {
             try {
               var2 = new java.net.URL(applet.getCodeBase(), "toserverlist.ws");
-              applet.getAppletContext().showDocument(MusicPatch.a((byte) 126, applet, var2), "_top");
+              applet.getAppletContext().showDocument(MusicPatch.updateAppletStateUrl((byte) 126, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

@@ -33,7 +33,7 @@ final class LegacyOpenGlNormalMapGenerator {
           return;
         }
         if (null != CompactMeshGeometry.field_o) {
-          HardwareAnimatedWaterEffect.d(1);
+          HardwareAnimatedWaterEffect.exitFullscreen(1);
         }
     }
 
@@ -167,7 +167,7 @@ final class LegacyOpenGlNormalMapGenerator {
           var13 = NativeLibraryExtractor.incomingPacket;
           var2 = var13.readUnsignedByte(-31302);
           if (var2 == 0) {
-            var11 = VertexBufferReference.a(-14808);
+            var11 = VertexBufferReference.createServerIntValues(-14808);
             var17 = var11;
             var15 = var17;
             var3 = var15;
@@ -196,7 +196,7 @@ final class LegacyOpenGlNormalMapGenerator {
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -122);
                 return;
               }
-              var14.values = VertexBufferReference.a(-14808);
+              var14.values = VertexBufferReference.createServerIntValues(-14808);
               var14.complete = true;
               var14.firstValue = var14.values[0];
               var14.unlink(false);

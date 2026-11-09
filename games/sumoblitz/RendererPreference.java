@@ -5,7 +5,7 @@ final class RendererPreference {
     static MenuSelectionController field_a;
     boolean enabled;
     int backend;
-    static int[] field_d;
+    static int[] menuRight;
     static String endGameText;
     int options;
     static int field_b;
@@ -14,7 +14,7 @@ final class RendererPreference {
         int var1 = 5 / ((13 - param0) / 51);
         field_a = null;
         endGameText = null;
-        field_d = null;
+        menuRight = null;
     }
 
     final boolean acceptsSession(RendererSession session, byte guard) {
@@ -81,6 +81,6 @@ final class RendererPreference {
     static {
         field_a = new MenuSelectionController(1);
         endGameText = "End Game";
-        field_d = new int[13];
+        menuRight = new int[13];
     }
 }

@@ -79,7 +79,7 @@ final class CacheIoWorker implements Runnable {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String validateDisplayName(boolean guard, CharSequence text) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -87,17 +87,17 @@ final class CacheIoWorker implements Runnable {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (guard) {
             CacheIoWorker.releaseStatics(27);
           }
-          stackIn_3_0 = DroneIntroductionOverlay.validateDisplayName(param1, 38, false);
+          stackIn_3_0 = DroneIntroductionOverlay.validateDisplayName(text, 38, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ti.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ti.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

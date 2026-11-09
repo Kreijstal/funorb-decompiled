@@ -235,7 +235,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               TextCaretLayout.accountPhase = ByteArrayCacheNode.READY_TO_CONNECT;
-              GameDefinitionLoader.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.outgoingPacket);
+              GameDefinitionLoader.writeServicePreamble(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.outgoingPacket);
               MessageDialog.flushAccountWrites(0, -1);
             } catch (IOException iOException) {
               TextCaretLayout.accountPhase = VertexBufferReference.field_b;

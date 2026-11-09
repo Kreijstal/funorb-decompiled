@@ -106,11 +106,11 @@ final class NativeLibraryExtractor {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (TextureCombineSource.field_b.containsKey(libraryName)) {
+          if (TextureCombineSource.extractedNativeLibraryFiles.containsKey(libraryName)) {
             stackIn_10_0 = 100;
             return stackIn_10_0;
           }
-          var10 = OpenGlBuffer.a((byte) 53, libraryName);
+          var10 = OpenGlBuffer.nativeLibraryFileName((byte) 53, libraryName);
           if (var10 == null) {
             stackIn_14_0 = -1;
             return stackIn_14_0;
@@ -161,7 +161,7 @@ final class NativeLibraryExtractor {
             }
             try {
               if (var6 == 0) {
-                NineSlicePanel.field_e.a(var15, -31357, var11);
+                NineSlicePanel.field_e.writeFileBytes(var15, -31357, var11);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

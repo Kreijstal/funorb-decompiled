@@ -32,7 +32,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           if (var8 > 0) {
             this.field_S.text = "" + var8;
           } else {
-            HardwareAnimatedWaterEffect.d(1);
+            HardwareAnimatedWaterEffect.exitFullscreen(1);
             this.closeDialog(true);
             this.dialogLayer.pushDialog((byte) 121, new DisplayModeErrorDialog(this.dialogLayer, FontMetrics.FULLSCREEN_CONFIRMATION_TIMEOUT));
           }
@@ -210,7 +210,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
             this.closeDialog(true);
           } else {
             if (source == this.field_Q) {
-              HardwareAnimatedWaterEffect.d(guard ^ 711);
+              HardwareAnimatedWaterEffect.exitFullscreen(guard ^ 711);
               this.closeDialog(true);
             }
           }

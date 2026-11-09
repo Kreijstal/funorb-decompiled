@@ -18,7 +18,7 @@ final class ProgressDialog extends ResizingDialog {
           return;
         }
         try {
-          VertexBufferReference.a(false, password, (byte) 127, identifier);
+          VertexBufferReference.prepareLoginCredentials(false, password, (byte) 127, identifier);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.C(" + (password != null ? "{...}" : "null") + ',' + (identifier != null ? "{...}" : "null") + ',' + guard + ')');
         }

@@ -22,7 +22,7 @@ final class IntroPreparation {
           if (guard < 125) {
             restartLevelText = (String) null;
           }
-          MusicPatch.field_u = 0 - LegacyOpenGlRidgedWaterEffect.field_i;
+          MusicPatch.introFrame = 0 - LegacyOpenGlRidgedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ss.C(" + (unusedMixer != null ? "{...}" : "null") + ',' + guard + ',' + (archive != null ? "{...}" : "null") + ',' + durationMillis + ')');
         }

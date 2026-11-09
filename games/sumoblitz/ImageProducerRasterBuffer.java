@@ -66,13 +66,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return param0 == this.field_l;
     }
 
-    private final synchronized void b(byte param0) {
+    private final synchronized void publishPixels(byte guard) {
         if (this.field_l == null) {
           return;
         }
         this.field_l.setPixels(0, 0, this.width, this.height, this.field_m, this.pixels, 0, this.width);
         this.field_l.imageComplete(2);
-        if (param0 < 31) {
+        if (guard < 31) {
           java.awt.image.ImageConsumer var3 = (java.awt.image.ImageConsumer) null;
           this.requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
         }
@@ -139,7 +139,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static CompactMeshGeometry a(IsaacPacketBuffer param0, int param1) {
+    final static CompactMeshGeometry decodeCompactMesh(IsaacPacketBuffer packet, int guard) {
         int var7 = 0;
         CompactMeshGeometry stackIn_3_0 = null;
         CompactMeshGeometry stackIn_25_0 = null;
@@ -156,47 +156,47 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.readBits(8, (byte) -92);
-          if (param1 != -16736) {
+          var2_int = packet.readBits(8, (byte) -92);
+          if (guard != -16736) {
             stackIn_3_0 = (CompactMeshGeometry) null;
             return stackIn_3_0;
           }
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = LoginIdentifierSupport.readBitFlag(param0, false) ? 1 : 0;
-          var4 = LoginIdentifierSupport.readBitFlag(param0, false) ? 1 : 0;
+          var3 = LoginIdentifierSupport.readBitFlag(packet, false) ? 1 : 0;
+          var4 = LoginIdentifierSupport.readBitFlag(packet, false) ? 1 : 0;
           var5 = new CompactMeshGeometry();
-          var5.field_D = (short)param0.readBits(16, (byte) -119);
-          var5.field_Q = WidgetStateStyle.decodePackedShortArray(var5.field_Q, param0, -119, 16);
-          var5.field_B = WidgetStateStyle.decodePackedShortArray(var5.field_B, param0, -120, 16);
-          var5.field_r = WidgetStateStyle.decodePackedShortArray(var5.field_r, param0, -127, 16);
-          var5.field_n = (short)param0.readBits(16, (byte) -117);
-          var5.field_A = WidgetStateStyle.decodePackedShortArray(var5.field_A, param0, -128, 16);
-          var5.field_b = WidgetStateStyle.decodePackedShortArray(var5.field_b, param0, -116, 16);
-          var5.field_l = WidgetStateStyle.decodePackedShortArray(var5.field_l, param0, -126, 16);
+          var5.field_D = (short)packet.readBits(16, (byte) -119);
+          var5.field_Q = WidgetStateStyle.decodePackedShortArray(var5.field_Q, packet, -119, 16);
+          var5.field_B = WidgetStateStyle.decodePackedShortArray(var5.field_B, packet, -120, 16);
+          var5.field_r = WidgetStateStyle.decodePackedShortArray(var5.field_r, packet, -127, 16);
+          var5.field_n = (short)packet.readBits(16, (byte) -117);
+          var5.field_A = WidgetStateStyle.decodePackedShortArray(var5.field_A, packet, -128, 16);
+          var5.field_b = WidgetStateStyle.decodePackedShortArray(var5.field_b, packet, -116, 16);
+          var5.field_l = WidgetStateStyle.decodePackedShortArray(var5.field_l, packet, -126, 16);
           if (var3 != 0) {
-            var5.field_c = (short)param0.readBits(16, (byte) -94);
-            var5.field_x = WidgetStateStyle.decodePackedShortArray(var5.field_x, param0, param1 + 16608, 16);
-            var5.field_g = WidgetStateStyle.decodePackedShortArray(var5.field_g, param0, -124, 16);
-            var5.field_L = WidgetStateStyle.decodePackedShortArray(var5.field_L, param0, -113, 16);
-            var5.field_e = WidgetStateStyle.decodePackedShortArray(var5.field_e, param0, -127, 16);
-            var5.field_k = WidgetStateStyle.decodePackedShortArray(var5.field_k, param0, -118, 16);
-            var5.field_h = WidgetStateStyle.decodePackedShortArray(var5.field_h, param0, param1 + 16615, 16);
+            var5.field_c = (short)packet.readBits(16, (byte) -94);
+            var5.field_x = WidgetStateStyle.decodePackedShortArray(var5.field_x, packet, guard + 16608, 16);
+            var5.field_g = WidgetStateStyle.decodePackedShortArray(var5.field_g, packet, -124, 16);
+            var5.field_L = WidgetStateStyle.decodePackedShortArray(var5.field_L, packet, -113, 16);
+            var5.field_e = WidgetStateStyle.decodePackedShortArray(var5.field_e, packet, -127, 16);
+            var5.field_k = WidgetStateStyle.decodePackedShortArray(var5.field_k, packet, -118, 16);
+            var5.field_h = WidgetStateStyle.decodePackedShortArray(var5.field_h, packet, guard + 16615, 16);
           }
           if (var4 != 0) {
-            param0.readBits(16, (byte) -127);
-            var5.field_z = WidgetStateStyle.decodePackedShortArray(var5.field_z, param0, -121, 16);
-            var5.field_C = WidgetStateStyle.decodePackedShortArray(var5.field_C, param0, param1 + 16619, 16);
-            var5.field_G = WidgetStateStyle.decodePackedShortArray(var5.field_G, param0, -114, 16);
-            var5.field_y = WidgetStateStyle.decodePackedShortArray(var5.field_y, param0, param1 + 16619, 16);
-            var5.field_R = WidgetStateStyle.decodePackedShortArray(var5.field_R, param0, param1 + 16623, 16);
+            packet.readBits(16, (byte) -127);
+            var5.field_z = WidgetStateStyle.decodePackedShortArray(var5.field_z, packet, -121, 16);
+            var5.field_C = WidgetStateStyle.decodePackedShortArray(var5.field_C, packet, guard + 16619, 16);
+            var5.field_G = WidgetStateStyle.decodePackedShortArray(var5.field_G, packet, -114, 16);
+            var5.field_y = WidgetStateStyle.decodePackedShortArray(var5.field_y, packet, guard + 16619, 16);
+            var5.field_R = WidgetStateStyle.decodePackedShortArray(var5.field_R, packet, guard + 16623, 16);
           }
-          if (LoginIdentifierSupport.readBitFlag(param0, false)) {
-            var5.field_K = WidgetStateStyle.decodePackedShortArray(var5.field_K, param0, -112, 16);
+          if (LoginIdentifierSupport.readBitFlag(packet, false)) {
+            var5.field_K = WidgetStateStyle.decodePackedShortArray(var5.field_K, packet, -112, 16);
           }
-          if (LoginIdentifierSupport.readBitFlag(param0, false)) {
-            var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, param0);
+          if (LoginIdentifierSupport.readBitFlag(packet, false)) {
+            var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, packet);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_a.length; var7++) {
               if (var6 < (255 & var5.field_a[var7])) {
@@ -216,12 +216,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var2 = decompiledCaughtException;
           stackIn_28_0 = var2;
           stackIn_28_1 = new StringBuilder().append("fh.G(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return;
         }
         try {
-          this.b((byte) 55);
+          this.publishPixels((byte) 55);
           graphics.drawImage(this.image, x, y, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.B(" + guard + ',' + x + ',' + (graphics != null ? "{...}" : "null") + ',' + y + ')');
@@ -269,11 +269,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.image = component.createImage((java.awt.image.ImageProducer) (this));
-          this.b((byte) 117);
+          this.publishPixels((byte) 117);
           component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
-          this.b((byte) 75);
+          this.publishPixels((byte) 75);
           component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
-          this.b((byte) 45);
+          this.publishPixels((byte) 45);
           component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
           this.bindRaster(-1);
         } catch (RuntimeException runtimeException) {

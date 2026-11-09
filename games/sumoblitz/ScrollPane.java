@@ -167,7 +167,7 @@ final class ScrollPane extends ArrayWidgetContainer {
         }
     }
 
-    final static boolean b(byte param0, String param1) {
+    final static boolean loadNativeLibrary(byte guard, String libraryName) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -176,15 +176,15 @@ final class ScrollPane extends ArrayWidgetContainer {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = -93 % ((30 - param0) / 59);
-          stackIn_1_0 = ToolkitRasterStateCacheEntry.a((byte) 126, AccountStatusDialogState.class, param1);
+          var2_int = -93 % ((30 - guard) / 59);
+          stackIn_1_0 = ToolkitRasterStateCacheEntry.loadNativeLibraryForClass((byte) 126, AccountStatusDialogState.class, libraryName);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("mc.PA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("mc.PA(").append(guard).append(',');
+          if (libraryName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";

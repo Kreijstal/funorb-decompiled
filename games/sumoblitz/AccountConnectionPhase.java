@@ -20,7 +20,7 @@ final class AccountConnectionPhase {
           var2 = new AccountServiceResult(false);
           var2.nameSuggestions = suggestions;
           if (guard != 8192) {
-            AccountConnectionPhase.a(1, -118);
+            AccountConnectionPhase.rankHiscoreRows(1, -118);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -42,29 +42,29 @@ final class AccountConnectionPhase {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1) {
+    final static void rankHiscoreRows(int guard, int limit) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          LegacyOpenGlAssemblyProgram.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, LoginCredentials.field_d, param1, 0, true);
-          if (param0 != 13136) {
+          LegacyOpenGlAssemblyProgram.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, LoginCredentials.field_d, limit, 0, true);
+          if (guard != 13136) {
             field_d = (int[]) null;
           }
           for (var2_int = 0; var2_int < LoginCredentials.field_d; var2_int++) {
-            FourIntReadRequest.field_q[param1 + var2_int] = var2_int;
+            FourIntReadRequest.field_q[limit + var2_int] = var2_int;
           }
-          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, param1 + LoginCredentials.field_d, param1 + param1, param1, false);
-          if (LoginCredentials.field_d > param1) {
-            LoginCredentials.field_d = param1;
+          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, limit + LoginCredentials.field_d, limit + limit, limit, false);
+          if (LoginCredentials.field_d > limit) {
+            LoginCredentials.field_d = limit;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qr.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "qr.C(" + guard + ',' + limit + ')');
         }
     }
 

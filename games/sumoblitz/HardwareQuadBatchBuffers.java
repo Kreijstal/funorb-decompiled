@@ -98,7 +98,7 @@ final class HardwareQuadBatchBuffers {
               if (guard) {
                 return;
               }
-              applet.getAppletContext().showDocument(MusicPatch.a((byte) 125, applet, var2), "_top");
+              applet.getAppletContext().showDocument(MusicPatch.updateAppletStateUrl((byte) 125, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

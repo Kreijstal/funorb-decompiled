@@ -234,7 +234,7 @@ final class IsaacCipher {
           }
           while (var3 > var5) {
             if (!LoginIdentifierSupport.readBitFlag(packet, false)) {
-              var6 = packet.readBits(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
+              var6 = packet.readBits(DirectByteArrayStorage.indexBitCount(-1 + var5, 1), (byte) -123);
               var4[var5] = var4[var6];
             } else {
               var6_ref_l = new IntroMeshMaterial();
@@ -311,7 +311,7 @@ final class IsaacCipher {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_gk = HardwareTextureCache.introMeshes[var3];
             var4_ref_gk.computeBounds(false);
-            IntrusiveDequeCursor.a((byte) 79, var3);
+            IntrusiveDequeCursor.updateIntroRotation((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
             var6 = var4_ref_gk.field_j + var4_ref_gk.field_f >> 1;
             var7 = var4_ref_gk.field_P + var4_ref_gk.field_S >> 1;
@@ -326,7 +326,7 @@ final class IsaacCipher {
           var3Lifetime1 = OpenGlUnderwaterEffect.field_k[9] >> 8;
           var4 = OpenGlUnderwaterEffect.field_k[10] >> 8;
           var5Lifetime1 = OpenGlUnderwaterEffect.field_k[11] >> 8;
-          var6Lifetime1 = MusicPatch.field_u << 4;
+          var6Lifetime1 = MusicPatch.introFrame << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = LegacyOpenGlInterleavedStream.sinQ16(var6Lifetime1, -431) >> 8;
           var9Lifetime1 = SocialContact.cosQ16(param0 - 256, var6Lifetime1) >> 8;
@@ -356,7 +356,7 @@ final class IsaacCipher {
             }
             var21[var16] = -2147483648;
             var17 = HardwareTextureCache.introMeshes[var16];
-            IntrusiveDequeCursor.a((byte) 79, var16);
+            IntrusiveDequeCursor.updateIntroRotation((byte) 79, var16);
             for (var18 = 0; 3 > var18; var18++) {
               IntroductionOverlaySupport.field_b[var18] = IntroductionOverlaySupport.field_b[var18] + LoginIdentifierSupport.introMeshCenters[var15][var18];
             }

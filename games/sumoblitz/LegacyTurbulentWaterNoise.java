@@ -38,7 +38,7 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
         ComboState.comboCount = 0;
         FourIntReadRequest.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
         FadingWidget.score = 0;
-        CacheReferenceNode.field_u = 0;
+        CacheReferenceNode.comboTimeout = 0;
         ArchiveLoadRequirement.playSoundEffect(guard, true);
         TextLayout.playGameTrack(0, 1 + OpenGlShaderProgram.levelIndex % 5);
     }

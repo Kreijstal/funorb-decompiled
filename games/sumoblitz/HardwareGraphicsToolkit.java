@@ -19,7 +19,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_pc;
     AffineTransform3D modelTransform;
     boolean modelIdentity;
-    static Boolean field_j;
+    static Boolean emailAvailabilityResult;
     int field_Cb;
     int field_o;
     AffineTransform3D viewTransform;
@@ -394,7 +394,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 8) {
           TEXTURE_PROJECTED = (TextureTransformMode) null;
         }
-        field_j = null;
+        emailAvailabilityResult = null;
     }
 
     abstract void setColorCombineSource(byte guard, int argument, boolean useAlpha, boolean invert, TextureCombineSource source);

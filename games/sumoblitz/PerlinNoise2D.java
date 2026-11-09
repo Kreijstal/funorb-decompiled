@@ -176,7 +176,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
     }
 
     final static void playGameMusic(int guard, int trackId) {
-        VertexBufferReference.a(TimedSceneEffect.field_m[trackId], (byte) 56);
+        VertexBufferReference.playLoopedMusic(TimedSceneEffect.field_m[trackId], (byte) 56);
         int var2 = 29 % ((guard + 73) / 48);
     }
 
@@ -186,7 +186,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
         int var4;
         int[] var5;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        this.permutation = MusicPatch.a(this.seed, -50);
+        this.permutation = MusicPatch.noisePermutation(this.seed, -50);
         this.buildOctaves(guard + 126);
         for (var2 = this.octaveCount - 1; var2 >= 1; var2--) {
           var3 = this.amplitudesQ12[var2];

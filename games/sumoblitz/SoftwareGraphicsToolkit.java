@@ -1331,7 +1331,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.resizeCanvas(canvas, width, height);
         } else {
           var4 = SessionStatisticsSubmission.createToolkitRasterBuffer(width, height, canvas, -101);
-          this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
+          this.canvasBuffers.put(var4, -1, (long)canvas.hashCode());
         }
     }
 
@@ -1852,7 +1852,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (var4 != null) {
           var4.unlink(false);
           var4 = SessionStatisticsSubmission.createToolkitRasterBuffer(width, height, canvas, -91);
-          this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
+          this.canvasBuffers.put(var4, -1, (long)canvas.hashCode());
           if (this.canvas == canvas &&
             this.renderTarget == null) {
             var5 = canvas.getSize();

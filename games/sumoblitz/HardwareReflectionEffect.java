@@ -5,7 +5,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
     private boolean active;
     static RendererPreference[] field_e;
 
-    final static String a(boolean param0, CharSequence[] param1) {
+    final static String joinCharSequences(boolean guard, CharSequence[] values) {
         RuntimeException var2 = null;
         CharSequence[] var3 = null;
         String stackIn_3_0 = null;
@@ -14,18 +14,18 @@ final class HardwareReflectionEffect extends ShaderEffect {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (guard) {
             var3 = (CharSequence[]) null;
-            HardwareReflectionEffect.a(false, (CharSequence[]) null);
+            HardwareReflectionEffect.joinCharSequences(false, (CharSequence[]) null);
           }
-          stackIn_3_0 = LoginCredentials.joinCharSequences(param1, 0, param1.length, 14156);
+          stackIn_3_0 = LoginCredentials.joinCharSequences(values, 0, values.length, 14156);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("uo.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("uo.H(").append(guard).append(',');
+          if (values == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -711,7 +711,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
           this.toolkit.setTextureCombineMode(guard ^ 18900, combineMode);
           if (guard != 18834) {
             CharSequence[] var5 = (CharSequence[]) null;
-            HardwareReflectionEffect.a(true, (CharSequence[]) null);
+            HardwareReflectionEffect.joinCharSequences(true, (CharSequence[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uo.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');

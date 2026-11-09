@@ -93,7 +93,7 @@ final class MusicTrack extends IntrusiveNode {
                 var14 = (InstrumentNoteMask) (this.instrumentUsage.get(125, (long)var13));
                 if (var14 == null) {
                   var14 = new InstrumentNoteMask(new byte[128]);
-                  this.instrumentUsage.a(var14, -1, (long)var13);
+                  this.instrumentUsage.put(var14, -1, (long)var13);
                 }
                 var14.notes[var11Lifetime2] = (byte) 1;
               }

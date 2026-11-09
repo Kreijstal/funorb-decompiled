@@ -251,7 +251,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
     }
 
     final static void shutdownClientSession(int guard) {
-        HardwareAnimatedWaterEffect.d(1);
+        HardwareAnimatedWaterEffect.exitFullscreen(1);
         if (NineSlicePanel.field_f != null) {
           CheckboxWidget.a(true, NineSlicePanel.field_f);
         }

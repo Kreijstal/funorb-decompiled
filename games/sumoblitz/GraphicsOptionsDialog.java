@@ -2,32 +2,32 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GraphicsOptionsDialog extends ResizingDialog implements WidgetActionListener {
-    private FullscreenDisplayMode[] field_Z;
+    private FullscreenDisplayMode[] fullscreenModes;
     private boolean field_S;
-    private InteractiveWidget field_O;
-    private InteractiveWidget field_Y;
-    private InteractiveWidget field_Q;
-    private DropDownWidget field_ab;
+    private InteractiveWidget selectedOption;
+    private InteractiveWidget resizableOption;
+    private InteractiveWidget applyButton;
+    private DropDownWidget resolutionDropdown;
     private boolean field_R;
     private InteractiveWidget[] field_V;
-    private InteractiveWidget field_X;
-    private InteractiveWidget field_T;
+    private InteractiveWidget classicOption;
+    private InteractiveWidget fullscreenOption;
     private boolean field_W;
     private GridWidgetContainer field_U;
     private InteractiveWidget field_P;
 
     private final InteractiveWidget currentDisplayOption(byte guard) {
         if (null != CompactMeshGeometry.field_o) {
-          return this.field_T;
+          return this.fullscreenOption;
         }
         if (SecondaryNodeDequeIterator.field_b != null && SecondaryNodeDequeIterator.field_b.automatic &&
-          null != this.field_Y) {
-          return this.field_Y;
+          null != this.resizableOption) {
+          return this.resizableOption;
         }
         if (guard != -2) {
           return (InteractiveWidget) null;
         }
-        return this.field_X;
+        return this.classicOption;
     }
 
     private final void closeOptions(int guard) {
@@ -85,43 +85,43 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_Z = DisplaySizeController.listFullscreenModes((byte) -110, FourIntUpdateRequest.platformDispatcher);
-          if (this.field_Z.length > 0) {
-            for (var2_int = 0; this.field_Z.length > var2_int; var2_int++) {
-              if (this.field_Z[var2_int] != null) {
-                for (var3 = var2_int + 1; this.field_Z.length > var3; var3++) {
-                  if (this.field_Z[var3] != null &&
-                    this.field_Z[var2_int].width == this.field_Z[var3].width &&
-                    this.field_Z[var2_int].height == this.field_Z[var3].height) {
-                    this.field_Z[var3] = null;
+          this.fullscreenModes = DisplaySizeController.listFullscreenModes((byte) -110, FourIntUpdateRequest.platformDispatcher);
+          if (this.fullscreenModes.length > 0) {
+            for (var2_int = 0; this.fullscreenModes.length > var2_int; var2_int++) {
+              if (this.fullscreenModes[var2_int] != null) {
+                for (var3 = var2_int + 1; this.fullscreenModes.length > var3; var3++) {
+                  if (this.fullscreenModes[var3] != null &&
+                    this.fullscreenModes[var2_int].width == this.fullscreenModes[var3].width &&
+                    this.fullscreenModes[var2_int].height == this.fullscreenModes[var3].height) {
+                    this.fullscreenModes[var3] = null;
                   }
                 }
                 if (null != SecondaryNodeDequeIterator.field_b &&
-                  this.field_Z[var2_int] != null &&
-                  !SecondaryNodeDequeIterator.field_b.acceptsSize(this.field_Z[var2_int].height, (byte) -54, this.field_Z[var2_int].width)) {
-                  this.field_Z[var2_int] = null;
+                  this.fullscreenModes[var2_int] != null &&
+                  !SecondaryNodeDequeIterator.field_b.acceptsSize(this.fullscreenModes[var2_int].height, (byte) -54, this.fullscreenModes[var2_int].width)) {
+                  this.fullscreenModes[var2_int] = null;
                 }
               }
             }
             var2_int = 0;
-            for (var3Lifetime2 = 0; var3Lifetime2 < this.field_Z.length; var3Lifetime2++) {
-              if (null != this.field_Z[var3Lifetime2]) {
+            for (var3Lifetime2 = 0; var3Lifetime2 < this.fullscreenModes.length; var3Lifetime2++) {
+              if (null != this.fullscreenModes[var3Lifetime2]) {
                 var2_int++;
               }
             }
-            var3_ref_cd__ = this.field_Z;
-            this.field_Z = new FullscreenDisplayMode[var2_int];
+            var3_ref_cd__ = this.fullscreenModes;
+            this.fullscreenModes = new FullscreenDisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_cd__.length; var5++) {
               if (null != var3_ref_cd__[var5]) {
                 incrementValue$0 = var4;
                 var4++;
-                this.field_Z[incrementValue$0] = var3_ref_cd__[var5];
+                this.fullscreenModes[incrementValue$0] = var3_ref_cd__[var5];
               }
             }
-            IntrusiveDequeCursor.a(this.field_Z, true);
+            IntrusiveDequeCursor.sortDisplayModes(this.fullscreenModes, true);
           }
-          stackIn_31_1 = !(this.field_Z.length <= 0);
+          stackIn_31_1 = !(this.fullscreenModes.length <= 0);
           this.field_R = stackIn_31_1;
           stackIn_34_0 = (!CacheReferenceNode.canAutoResizeCanvas((byte) -90)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
@@ -163,28 +163,28 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           this.field_U.field_K = 83;
           this.field_U.setCellPadding(-1, 5, 5);
           this.addChild(this.field_U, 93);
-          this.field_X = this.createSpriteOption(GameDefinitionLoader.field_d, (WidgetListener) (this), StatisticsSubmissionSupport.classicText, (byte) -105);
+          this.classicOption = this.createSpriteOption(GameDefinitionLoader.field_d, (WidgetListener) (this), StatisticsSubmissionSupport.classicText, (byte) -105);
           if (var2_intLifetime1 != 0) {
-            this.field_Y = this.createSpriteOption(SoftwareTransform3D.field_f, (WidgetListener) (this), VertexLayout.resizableText, (byte) 122);
+            this.resizableOption = this.createSpriteOption(SoftwareTransform3D.field_f, (WidgetListener) (this), VertexLayout.resizableText, (byte) 122);
           }
-          this.field_T = this.createSpriteOption(WidgetStateStyle.field_c, (WidgetListener) (this), PlayingSound.fullScreenText, (byte) 110);
+          this.fullscreenOption = this.createSpriteOption(WidgetStateStyle.field_c, (WidgetListener) (this), PlayingSound.fullScreenText, (byte) 110);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
             stackIn_57_1 = 2;
           }
           this.field_V = new InteractiveWidget[stackIn_57_1];
-          this.field_V[0] = this.field_X;
+          this.field_V[0] = this.classicOption;
           if (var2_intLifetime1 != 0) {
-            this.field_V[2] = this.field_Y;
+            this.field_V[2] = this.resizableOption;
           }
-          this.field_V[1] = this.field_T;
+          this.field_V[1] = this.fullscreenOption;
           if (this.field_R &&
             var2_intLifetime1 != 0) {
-            var5_ref_String__ = new String[this.field_Z.length];
+            var5_ref_String__ = new String[this.fullscreenModes.length];
             var6_int = var5_ref_String__.length - 1;
-            for (var7_int = 0; var7_int < this.field_Z.length; var7_int++) {
-              var8 = this.field_Z[var7_int];
+            for (var7_int = 0; var7_int < this.fullscreenModes.length; var7_int++) {
+              var8 = this.fullscreenModes[var7_int];
               if (null != CompactMeshGeometry.field_o &&
                 var8.width == SecondaryNodeDequeIterator.field_b.fullscreenWidth &&
                 var8.height == SecondaryNodeDequeIterator.field_b.fullscreenHeight) {
@@ -192,18 +192,18 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               }
               var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
             }
-            this.field_ab = new DropDownWidget(var5_ref_String__, var6_int, 150);
-            this.field_ab.setBounds(-103, this.field_T.x + this.field_U.x, -19 + (this.field_T.height + this.field_U.y + this.field_T.y), 18, 126);
-            this.children.addFirst(this.field_ab, -10295);
+            this.resolutionDropdown = new DropDownWidget(var5_ref_String__, var6_int, 150);
+            this.resolutionDropdown.setBounds(-103, this.fullscreenOption.x + this.field_U.x, -19 + (this.fullscreenOption.height + this.field_U.y + this.fullscreenOption.y), 18, 126);
+            this.children.addFirst(this.resolutionDropdown, -10295);
           }
-          this.field_P = this.a(-73, (WidgetListener) (this), DraggableWidget.backText);
+          this.field_P = this.createBottomButton(-73, (WidgetListener) (this), DraggableWidget.backText);
           var5Lifetime1 = this.field_P.x + this.field_P.width / 2;
           this.field_P.width = 150;
           this.field_P.x = -20 + var5Lifetime1 - this.field_P.width;
-          this.field_Q = this.a(-128, (WidgetListener) (this), LoadingStatusText.applyText);
-          this.field_Q.enabled = false;
-          this.field_Q.width = this.field_P.width;
-          this.field_Q.x = var5Lifetime1 + 20;
+          this.applyButton = this.createBottomButton(-128, (WidgetListener) (this), LoadingStatusText.applyText);
+          this.applyButton.enabled = false;
+          this.applyButton.width = this.field_P.width;
+          this.applyButton.x = var5Lifetime1 + 20;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 == 0) {
@@ -256,27 +256,27 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             return;
           }
           if (source != this.field_P) {
-            if (this.field_Q != source) {
-              if (source == this.field_X) {
-                this.a(source, 0);
+            if (this.applyButton != source) {
+              if (source == this.classicOption) {
+                this.selectDisplayOption(source, 0);
               } else {
-                if (source == this.field_Y) {
-                  this.a(source, 0);
+                if (source == this.resizableOption) {
+                  this.selectDisplayOption(source, 0);
                 } else {
-                  if (this.field_ab != null) {
-                    stackIn_15_0 = (this.field_ab.hovered) ? 1 : 0;
+                  if (this.resolutionDropdown != null) {
+                    stackIn_15_0 = (this.resolutionDropdown.hovered) ? 1 : 0;
                   } else {
                     stackIn_15_0 = 0;
                   }
                   var6_int = stackIn_15_0;
                   if (var6_int == 0 &&
-                    source == this.field_T) {
+                    source == this.fullscreenOption) {
                     if (!this.field_R) {
                       this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, Bzip2State.FULLSCREEN_UNSUPPORTED));
                       return;
                     }
                     if (HardwareRidgedWaterNoise.field_x > 0) {
-                      this.a(source, guard - 710);
+                      this.selectDisplayOption(source, guard - 710);
                       return;
                     }
                     this.dialogLayer.pushDialog((byte) 115, new FullscreenMembershipDialog(this.dialogLayer));
@@ -285,7 +285,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                 }
               }
             } else {
-              this.h((byte) 103);
+              this.applyDisplayOption((byte) 103);
             }
           } else {
             this.closeOptions(124);
@@ -352,98 +352,98 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             var8 = (String) null;
             discarded$0 = this.createSpriteOption((RasterIndexedSprite[]) null, (WidgetListener) null, (String) null, (byte) 16);
           }
-          if (!this.field_X.hasFocus(-1)) {
-            if (null != this.field_Y &&
-              this.field_Y.hasFocus(-1)) {
-              var5 = this.field_Y;
+          if (!this.classicOption.hasFocus(-1)) {
+            if (null != this.resizableOption &&
+              this.resizableOption.hasFocus(-1)) {
+              var5 = this.resizableOption;
             } else {
-              if (!this.field_T.hasFocus(-1)) {
+              if (!this.fullscreenOption.hasFocus(-1)) {
                 if (this.field_P.hasFocus(-1)) {
                   var5 = this.field_P;
                 } else {
-                  if (!this.field_Q.hasFocus(-1)) {
-                    if (!this.field_X.selected) {
-                      if (null != this.field_Y &&
-                        this.field_Y.selected) {
-                        var5 = this.field_Y;
+                  if (!this.applyButton.hasFocus(-1)) {
+                    if (!this.classicOption.selected) {
+                      if (null != this.resizableOption &&
+                        this.resizableOption.selected) {
+                        var5 = this.resizableOption;
                       } else {
-                        if (this.field_T.selected) {
-                          var5 = this.field_T;
+                        if (this.fullscreenOption.selected) {
+                          var5 = this.fullscreenOption;
                         }
                       }
                     } else {
-                      var5 = this.field_X;
+                      var5 = this.classicOption;
                     }
                   } else {
-                    var5 = this.field_Q;
+                    var5 = this.applyButton;
                   }
                 }
               } else {
-                var5 = this.field_T;
+                var5 = this.fullscreenOption;
               }
             }
           } else {
-            var5 = this.field_X;
+            var5 = this.classicOption;
           }
           var6 = keyCode;
           switch (var6) {
             case 96:
-              if (this.field_T == var5) {
-                if (null == this.field_Y) {
-                  this.field_X.requestFocus((UiWidget) (this), (byte) 61);
+              if (this.fullscreenOption == var5) {
+                if (null == this.resizableOption) {
+                  this.classicOption.requestFocus((UiWidget) (this), (byte) 61);
                   return true;
                 }
-                this.field_Y.requestFocus((UiWidget) (this), (byte) 61);
+                this.resizableOption.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
-              if (var5 == this.field_Y) {
-                this.field_X.requestFocus((UiWidget) (this), (byte) 61);
+              if (var5 == this.resizableOption) {
+                this.classicOption.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
-              if (this.field_Q == var5) {
+              if (this.applyButton == var5) {
                 this.field_P.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
             case 97:
-              if (this.field_X == var5) {
-                if (this.field_Y != null) {
-                  this.field_Y.requestFocus((UiWidget) (this), (byte) 61);
+              if (this.classicOption == var5) {
+                if (this.resizableOption != null) {
+                  this.resizableOption.requestFocus((UiWidget) (this), (byte) 61);
                 } else {
-                  this.field_T.requestFocus((UiWidget) (this), (byte) 61);
+                  this.fullscreenOption.requestFocus((UiWidget) (this), (byte) 61);
                 }
                 return true;
               }
-              if (var5 == this.field_Y) {
-                this.field_T.requestFocus((UiWidget) (this), (byte) 61);
+              if (var5 == this.resizableOption) {
+                this.fullscreenOption.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
               if (var5 == this.field_P &&
-                this.field_Q.enabled) {
-                this.field_Q.requestFocus((UiWidget) (this), (byte) 61);
+                this.applyButton.enabled) {
+                this.applyButton.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
             case 98:
               if (var5 == this.field_P) {
-                this.field_X.requestFocus((UiWidget) (this), (byte) 61);
+                this.classicOption.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
-              if (this.field_Q == var5) {
-                this.field_T.requestFocus((UiWidget) (this), (byte) 61);
+              if (this.applyButton == var5) {
+                this.fullscreenOption.requestFocus((UiWidget) (this), (byte) 61);
                 return true;
               }
               break;
             case 99:
-              if (var5 != this.field_X &&
-                var5 != this.field_Y) {
-                if (var5 != this.field_T) {
+              if (var5 != this.classicOption &&
+                var5 != this.resizableOption) {
+                if (var5 != this.fullscreenOption) {
                   break;
                 }
-                if (!this.field_Q.enabled) {
+                if (!this.applyButton.enabled) {
                   this.field_P.requestFocus((UiWidget) (this), (byte) 61);
                 } else {
-                  this.field_Q.requestFocus((UiWidget) (this), (byte) 61);
+                  this.applyButton.requestFocus((UiWidget) (this), (byte) 61);
                 }
                 return true;
               }
@@ -527,14 +527,14 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         InteractiveWidget[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.selected = var4 == this.field_O ? true : false;
+          var4.selected = var4 == this.selectedOption ? true : false;
         }
         if (!guard) {
-          this.field_Y = (InteractiveWidget) null;
+          this.resizableOption = (InteractiveWidget) null;
         }
     }
 
-    private final void a(InteractiveWidget param0, int param1) {
+    private final void selectDisplayOption(InteractiveWidget option, int guard) {
         InteractiveWidget var3 = null;
         int var4 = 0;
         FullscreenDisplayMode var5 = null;
@@ -546,26 +546,26 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param1 != 0) {
-            this.h((byte) 113);
+          if (guard != 0) {
+            this.applyDisplayOption((byte) 113);
           }
-          this.field_O = param0;
-          param0.requestFocus((UiWidget) (this), (byte) 61);
+          this.selectedOption = option;
+          option.requestFocus((UiWidget) (this), (byte) 61);
           var3 = this.currentDisplayOption((byte) -2);
-          stackIn_4_0 = this.field_Q;
-          stackIn_5_1 = (param0 != var3);
+          stackIn_4_0 = this.applyButton;
+          stackIn_5_1 = (option != var3);
           stackIn_4_0.enabled = stackIn_5_1;
-          if (param0 == this.field_T) {
-            if (var3 == param0) {
-              if (null != this.field_ab) {
-                var4 = this.field_ab.selectedIndex(param1 - 126);
-                var5 = this.field_Z[var4];
+          if (option == this.fullscreenOption) {
+            if (var3 == option) {
+              if (null != this.resolutionDropdown) {
+                var4 = this.resolutionDropdown.selectedIndex(guard - 126);
+                var5 = this.fullscreenModes[var4];
                 if (var5.width == SecondaryNodeDequeIterator.field_b.fullscreenWidth &&
                   SecondaryNodeDequeIterator.field_b.fullscreenHeight == var5.height) {
                   this.updateSelectedOption(true);
                   return;
                 }
-                this.field_Q.enabled = true;
+                this.applyButton.enabled = true;
                 this.updateSelectedOption(true);
               } else {
                 this.updateSelectedOption(true);
@@ -582,45 +582,45 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var3_ref = decompiledCaughtException;
           stackIn_20_0 = var3_ref;
           stackIn_20_1 = new StringBuilder().append("dd.O(");
-          if (param0 == null) {
+          if (option == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void h(byte param0) {
+    private final void applyDisplayOption(byte guard) {
         int var3;
         int var2;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_O == this.field_X) {
-          HardwareAnimatedWaterEffect.d(1);
+        if (this.selectedOption == this.classicOption) {
+          HardwareAnimatedWaterEffect.exitFullscreen(1);
           IterableNodeHashTable.disableAutomaticCanvasResizing(0);
         } else {
-          if (this.field_Y != this.field_O) {
-            if (this.field_O == this.field_T &&
-              null != this.field_ab) {
-              var2 = this.field_ab.selectedIndex(96);
+          if (this.resizableOption != this.selectedOption) {
+            if (this.selectedOption == this.fullscreenOption &&
+              null != this.resolutionDropdown) {
+              var2 = this.resolutionDropdown.selectedIndex(96);
               if (0 <= var2) {
-                SecondaryNodeDequeIterator.field_b.setFullscreenSize(this.field_Z[var2].height, this.field_Z[var2].width, 67);
+                SecondaryNodeDequeIterator.field_b.setFullscreenSize(this.fullscreenModes[var2].height, this.fullscreenModes[var2].width, 67);
               }
-              ArchiveCatalog.a(true, false);
+              ArchiveCatalog.applyRequestedDisplayMode(true, false);
               this.dialogLayer.pushDialog((byte) 108, new DisplayModeConfirmationDialog(this.dialogLayer));
             }
           } else {
-            HardwareAnimatedWaterEffect.d(1);
+            HardwareAnimatedWaterEffect.exitFullscreen(1);
             OpenGlBuffer.enableAutomaticCanvasResizing(-5812);
           }
         }
-        if (param0 < 65) {
+        if (guard < 65) {
           return;
         }
-        this.field_Q.enabled = false;
+        this.applyButton.enabled = false;
     }
 
-    private final InteractiveWidget a(int param0, WidgetListener param1, String param2) {
+    private final InteractiveWidget createBottomButton(int guard, WidgetListener listener, String text) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -633,8 +633,8 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param2, param1);
-          if (param0 >= -10) {
+          var4 = new InteractiveWidget(text, listener);
+          if (guard >= -10) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
@@ -648,14 +648,14 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_7_0 = var4_ref;
-          stackIn_7_1 = new StringBuilder().append("dd.AA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("dd.AA(").append(guard).append(',');
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -696,10 +696,10 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             this.closeOptions(84);
             this.dialogLayer.pushDialog((byte) 124, new GraphicsOptionsDialog(this.dialogLayer));
           }
-          if (this.field_ab != null &&
-            this.field_ab.isListOpen(20) != this.field_S) {
-            this.a(this.field_T, 0);
-            this.field_S = this.field_ab.isListOpen(20);
+          if (this.resolutionDropdown != null &&
+            this.resolutionDropdown.isListOpen(20) != this.field_S) {
+            this.selectDisplayOption(this.fullscreenOption, 0);
+            this.field_S = this.resolutionDropdown.isListOpen(20);
             return;
           }
           return;

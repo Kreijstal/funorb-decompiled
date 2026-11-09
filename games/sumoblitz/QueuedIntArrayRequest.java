@@ -3,7 +3,7 @@
  */
 final class QueuedIntArrayRequest extends IntrusiveNode {
     static String asYouAreUnderText;
-    static String field_o;
+    static String accountDisplayName;
     int[] values;
     int arrayId;
     static ToolkitFont field_k;
@@ -112,7 +112,7 @@ final class QueuedIntArrayRequest extends IntrusiveNode {
         if (param0 != 18) {
           field_k = (ToolkitFont) null;
         }
-        field_o = null;
+        accountDisplayName = null;
     }
 
     private QueuedIntArrayRequest() throws Throwable {

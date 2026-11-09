@@ -12,7 +12,7 @@ final class AudioOutputBootstrap {
           if (guard != 23295) {
             field_b = (boolean[]) null;
           }
-          TextureCombineSource.field_b.put(libraryName, file);
+          TextureCombineSource.extractedNativeLibraryFiles.put(libraryName, file);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.B(" + (file != null ? "{...}" : "null") + ',' + (libraryName != null ? "{...}" : "null") + ',' + guard + ')');
         }

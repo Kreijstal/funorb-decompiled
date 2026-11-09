@@ -35,7 +35,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
         if (guard != 34023) {
           int[] var10 = (int[]) null;
-          OpenGlEnvironmentWaterEffect.a(-97, -68, (byte[]) null, (byte[][]) null, (int[]) null, (byte) 113, (byte[][]) null, (int[]) null);
+          OpenGlEnvironmentWaterEffect.computeGlyphKerning(-97, -68, (byte[]) null, (byte[][]) null, (int[]) null, (byte) 113, (byte[][]) null, (int[]) null);
         }
     }
 
@@ -123,7 +123,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           }
           if (guard != 18834) {
             var5 = (String) null;
-            OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -103, (String) null, 108);
+            OpenGlEnvironmentWaterEffect.rewriteAppletStateUrl((java.net.URL) null, (String) null, -103, (String) null, 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         CubeTexture var3 = this.toolkit.environmentCubeTexture((byte) 122);
         if (guard != 20186) {
           String var6 = (String) null;
-          OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -110, (String) null, 111);
+          OpenGlEnvironmentWaterEffect.rewriteAppletStateUrl((java.net.URL) null, (String) null, -110, (String) null, 111);
         }
         if (this.field_e &&
           var3 != null) {
@@ -178,7 +178,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final static java.net.URL a(java.net.URL param0, String param1, int param2, String param3, int param4) {
+    final static java.net.URL rewriteAppletStateUrl(java.net.URL url, String session, int language, String settings, int guard) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -208,14 +208,14 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           int var9 = 0;
           var9 = Sumoblitz.field_L ? 1 : 0;
           try {
-            var5 = param0.getFile();
+            var5 = url.getFile();
             var6 = 0;
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var5.regionMatches(var6, "/l=", 0, 3)) {
                 var7_int = var5.indexOf('/', var6 + 1);
                 if ((var7_int >= 0) &&
-                  (decompiledFrameRemainder0 = !(param2 < 0))) {
+                  (decompiledFrameRemainder0 = !(language < 0))) {
                   var5 = var5.substring(0, var6) + var5.substring(var7_int);
                   continue;
                 }
@@ -229,7 +229,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
                   if (var5.regionMatches(var6, "/p=", 0, 3)) {
                     var7_int = var5.indexOf('/', var6 + 1);
                     if (0 <= var7_int) {
-                      if (param3 != null) {
+                      if (settings != null) {
                         var5 = var5.substring(0, var6) + var5.substring(var7_int);
                         continue;
                       }
@@ -241,7 +241,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
                     var5.regionMatches(var6, "/c=", 0, 3)) {
                     var7_int = var5.indexOf('/', var6 + 1);
                     if ((var7_int >= 0) &&
-                      (decompiledFrameRemainder0 = (param1 != null))) {
+                      (decompiledFrameRemainder0 = (session != null))) {
                       var5 = var5.substring(0, var6) + var5.substring(var7_int);
                       continue;
                     }
@@ -249,19 +249,19 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
                   if (decompiledFrameRemainder0) {
                     var7 = new StringBuilder(var6);
                     discarded$0 = var7.append(var5.substring(0, var6));
-                    if (param4 > ~param2) {
+                    if (guard > ~language) {
                       discarded$1 = var7.append("/l=");
-                      discarded$2 = var7.append(Integer.toString(param2));
+                      discarded$2 = var7.append(Integer.toString(language));
                     }
-                    if (param3 != null &&
-                      param3.length() > 0) {
+                    if (settings != null &&
+                      settings.length() > 0) {
                       discarded$3 = var7.append("/p=");
-                      discarded$4 = var7.append(param3);
+                      discarded$4 = var7.append(settings);
                     }
-                    if (param1 != null &&
-                      param1.length() > 0) {
+                    if (session != null &&
+                      session.length() > 0) {
                       discarded$5 = var7.append("/s=");
-                      discarded$6 = var7.append(param1);
+                      discarded$6 = var7.append(session);
                     }
                     if (var5.length() > var6) {
                       discarded$7 = var7.append(var5.substring(var6, var5.length()));
@@ -269,13 +269,13 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
                       discarded$8 = var7.append('/');
                     }
                     try {
-                      stackIn_39_0 = new java.net.URL(param0, var7.toString());
+                      stackIn_39_0 = new java.net.URL(url, var7.toString());
                       return stackIn_39_0;
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var8 = (Exception) (Object) decompiledCaughtException;
                       var8.printStackTrace();
-                      stackIn_41_0 = (java.net.URL) (param0);
+                      stackIn_41_0 = (java.net.URL) (url);
                       return stackIn_41_0;
                     }
                   }
@@ -288,24 +288,24 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_44_0 = var5_ref;
             stackIn_44_1 = new StringBuilder().append("ej.N(");
-            if (param0 == null) {
+            if (url == null) {
               stackIn_45_2 = "null";
             } else {
               stackIn_45_2 = "{...}";
             }
             stackIn_47_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',');
-            if (param1 == null) {
+            if (session == null) {
               stackIn_48_2 = "null";
             } else {
               stackIn_48_2 = "{...}";
             }
-            stackIn_50_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(',');
-            if (param3 == null) {
+            stackIn_50_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(language).append(',');
+            if (settings == null) {
               stackIn_51_2 = "null";
             } else {
               stackIn_51_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param4).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -314,7 +314,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final static int a(int param0, int param1, byte[] param2, byte[][] param3, int[] param4, byte param5, byte[][] param6, int[] param7) {
+    final static int computeGlyphKerning(int leftGlyph, int rightGlyph, byte[] advances, byte[][] leftProfiles, int[] starts, byte guard, byte[][] rightProfiles, int[] lengths) {
         int var19 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -347,13 +347,13 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         int var21 = 0;
         var21 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8_int = param4[param0];
-          var9 = var8_int + param7[param0];
-          var10 = param4[param1];
-          if (param5 != -75) {
+          var8_int = starts[leftGlyph];
+          var9 = var8_int + lengths[leftGlyph];
+          var10 = starts[rightGlyph];
+          if (guard != -75) {
             OpenGlEnvironmentWaterEffect.releaseStatics(false);
           }
-          var11 = param7[param1] + var10;
+          var11 = lengths[rightGlyph] + var10;
           var12 = var8_int;
           if (var10 > var8_int) {
             var12 = var10;
@@ -362,12 +362,12 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           if (var9 > var11) {
             var13 = var11;
           }
-          var14 = 255 & param2[param0];
-          if ((param2[param1] & 255) < var14) {
-            var14 = param2[param1] & 255;
+          var14 = 255 & advances[leftGlyph];
+          if ((advances[rightGlyph] & 255) < var14) {
+            var14 = advances[rightGlyph] & 255;
           }
-          var15 = param6[param0];
-          var16 = param3[param1];
+          var15 = rightProfiles[leftGlyph];
+          var16 = leftProfiles[rightGlyph];
           var17 = -var8_int + var12;
           var18 = var12 - var10;
           for (var19 = var12; var19 < var13; var19++) {
@@ -386,32 +386,32 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_21_0 = var8;
-          stackIn_21_1 = new StringBuilder().append("ej.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_21_1 = new StringBuilder().append("ej.H(").append(leftGlyph).append(',').append(rightGlyph).append(',');
+          if (advances == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param3 == null) {
+          if (leftProfiles == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
           stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
-          if (param4 == null) {
+          if (starts == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(',');
+          if (rightProfiles == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param7 == null) {
+          if (lengths == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";

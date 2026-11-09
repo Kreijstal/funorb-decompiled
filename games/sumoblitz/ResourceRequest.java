@@ -7,14 +7,14 @@ abstract class ResourceRequest extends DualLinkNode {
     boolean urgent;
     static SpriteData[] field_r;
 
-    final static String c(byte param0) {
-        if (param0 > -81) {
+    final static String accountFormPassword(byte guard) {
+        if (guard > -81) {
           return (String) null;
         }
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return ArenaBackdropPalettes.field_d;
         }
-        return LoginIdentifierSupport.field_d;
+        return LoginIdentifierSupport.loginPassword;
     }
 
     ResourceRequest() {
@@ -45,7 +45,7 @@ abstract class ResourceRequest extends DualLinkNode {
             field_r = (SpriteData[]) null;
           }
           SoftwareRasterizer.clear();
-          MusicPatch.field_u = 0;
+          MusicPatch.introFrame = 0;
           IsaacCipher.b(256);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {

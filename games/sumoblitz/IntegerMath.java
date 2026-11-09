@@ -3,22 +3,22 @@
  */
 final class IntegerMath {
     final static void advanceIntroTick(byte guard) {
-        if (0 - LegacyOpenGlRidgedWaterEffect.field_i == MusicPatch.field_u) {
+        if (0 - LegacyOpenGlRidgedWaterEffect.field_i == MusicPatch.introFrame) {
           if (guard > 42) {
-            MusicPatch.field_u = MusicPatch.field_u + 1;
+            MusicPatch.introFrame = MusicPatch.introFrame + 1;
             return;
           }
           return;
         }
-        if (250 - LegacyOpenGlRidgedWaterEffect.field_i != MusicPatch.field_u) {
+        if (250 - LegacyOpenGlRidgedWaterEffect.field_i != MusicPatch.introFrame) {
           if (guard > 42) {
-            MusicPatch.field_u = MusicPatch.field_u + 1;
+            MusicPatch.introFrame = MusicPatch.introFrame + 1;
             return;
           }
           return;
         }
         if (guard > 42) {
-          MusicPatch.field_u = MusicPatch.field_u + 1;
+          MusicPatch.introFrame = MusicPatch.introFrame + 1;
           return;
         }
     }

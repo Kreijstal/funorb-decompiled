@@ -3,10 +3,10 @@
  */
 final class IntroLogoRenderer {
     static TextureFormat LUMINANCE;
-    static int[][] field_a;
+    static int[][] menuActions;
 
     public static void releaseStatics(byte param0) {
-        field_a = (int[][]) null;
+        menuActions = (int[][]) null;
         if (param0 != 95) {
           LUMINANCE = (TextureFormat) null;
           LUMINANCE = null;
@@ -21,7 +21,7 @@ final class IntroLogoRenderer {
           return LegacyOpenGlShaderProgram.field_d;
         }
         if (-1 != archiveId) {
-          return HardwareSpecularEffect.a(1, -101, true, archiveId, false, true);
+          return HardwareSpecularEffect.openResourceArchive(1, -101, true, archiveId, false, true);
         }
         return LegacyOpenGlShaderProgram.field_d;
     }
@@ -45,17 +45,17 @@ final class IntroLogoRenderer {
         int var7Lifetime10;
         int var7Lifetime11;
         int var7Lifetime3Lifetime1;
-        if (!(0 <= MusicPatch.field_u)) {
+        if (!(0 <= MusicPatch.introFrame)) {
           return;
         }
         int var3 = -135 + centerX;
         int var4 = -35 + centerY;
         int var5 = opacity;
-        if (!(75 <= MusicPatch.field_u)) {
-          var5 = (MusicPatch.field_u << 8) / 75;
+        if (!(75 <= MusicPatch.introFrame)) {
+          var5 = (MusicPatch.introFrame << 8) / 75;
         }
-        if (MusicPatch.field_u > 200) {
-          var5 = (250 - MusicPatch.field_u << 8) / 50;
+        if (MusicPatch.introFrame > 200) {
+          var5 = (250 - MusicPatch.introFrame << 8) / 50;
         }
         LegacyVertexAttribute.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
         SoftwareRasterViewport.syncClip();
@@ -65,11 +65,11 @@ final class IntroLogoRenderer {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
         ClientException.popRasterState((byte) -69);
-        if (MusicPatch.field_u >= 150) {
+        if (MusicPatch.introFrame >= 150) {
           LoginIdentifierSupport.field_a.drawAlpha(var3 + 15, 10 + var4, var5);
-          var6 = MusicPatch.field_u - 125;
+          var6 = MusicPatch.introFrame - 125;
           if (var6 <= 0) {
-            var6 = MusicPatch.field_u - 140;
+            var6 = MusicPatch.introFrame - 140;
             if (0 < var6) {
               var7 = 256;
               if (20 > var6) {
@@ -80,7 +80,7 @@ final class IntroLogoRenderer {
             return;
           }
           if (var6 >= 50) {
-            var6 = MusicPatch.field_u - 140;
+            var6 = MusicPatch.introFrame - 140;
             if (0 < var6) {
               var7Lifetime7 = 256;
               if (20 > var6) {
@@ -93,7 +93,7 @@ final class IntroLogoRenderer {
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
             MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime8);
-            var6 = MusicPatch.field_u - 140;
+            var6 = MusicPatch.introFrame - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
               if (20 > var6) {
@@ -105,7 +105,7 @@ final class IntroLogoRenderer {
           }
           if (var6 < 30) {
             MenuFadeState.introGlow.drawAdditive(var3, var4, 256);
-            var6 = MusicPatch.field_u - 140;
+            var6 = MusicPatch.introFrame - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
               if (20 > var6) {
@@ -117,7 +117,7 @@ final class IntroLogoRenderer {
           }
           var7Lifetime10 = (12800 - 256 * var6) / 20;
           MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime10);
-          var6Lifetime3 = MusicPatch.field_u - 140;
+          var6Lifetime3 = MusicPatch.introFrame - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
             if (20 > var6Lifetime3) {
@@ -128,9 +128,9 @@ final class IntroLogoRenderer {
           return;
         }
         LegacyOpenGlShaderProgram.field_a.drawHalfSize(var3, var4);
-        var6Lifetime1 = MusicPatch.field_u - 125;
+        var6Lifetime1 = MusicPatch.introFrame - 125;
         if (var6Lifetime1 <= 0) {
-          var6Lifetime1 = MusicPatch.field_u - 140;
+          var6Lifetime1 = MusicPatch.introFrame - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime1 = 256;
             if (20 > var6Lifetime1) {
@@ -141,7 +141,7 @@ final class IntroLogoRenderer {
           return;
         }
         if (var6Lifetime1 >= 50) {
-          var6Lifetime1 = MusicPatch.field_u - 140;
+          var6Lifetime1 = MusicPatch.introFrame - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime2 = 256;
             if (20 > var6Lifetime1) {
@@ -154,7 +154,7 @@ final class IntroLogoRenderer {
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
           MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime3);
-          var6Lifetime1 = MusicPatch.field_u - 140;
+          var6Lifetime1 = MusicPatch.introFrame - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
             if (20 > var6Lifetime1) {
@@ -166,7 +166,7 @@ final class IntroLogoRenderer {
         }
         if (var6Lifetime1 < 30) {
           MenuFadeState.introGlow.drawAdditive(var3, var4, 256);
-          var6Lifetime1 = MusicPatch.field_u - 140;
+          var6Lifetime1 = MusicPatch.introFrame - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime4 = 256;
             if (20 > var6Lifetime1) {
@@ -178,7 +178,7 @@ final class IntroLogoRenderer {
         }
         var7Lifetime5 = (12800 - 256 * var6Lifetime1) / 20;
         MenuFadeState.introGlow.drawAdditive(var3, var4, var7Lifetime5);
-        var6Lifetime2 = MusicPatch.field_u - 140;
+        var6Lifetime2 = MusicPatch.introFrame - 140;
         if (0 < var6Lifetime2) {
           var7Lifetime6 = 256;
           if (20 > var6Lifetime2) {
@@ -199,6 +199,6 @@ final class IntroLogoRenderer {
 
     static {
         LUMINANCE = new TextureFormat(1);
-        field_a = new int[13][];
+        menuActions = new int[13][];
     }
 }

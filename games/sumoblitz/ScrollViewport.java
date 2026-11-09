@@ -17,7 +17,7 @@ final class ScrollViewport extends SingleChildWidget {
 
     final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         if (guard >= -35) {
-          ScrollViewport.a((byte) -109);
+          ScrollViewport.handleAccountConnectionLoss((byte) -109);
           if (layer != 0) {
             if (this.width == 0) {
               return;
@@ -106,14 +106,14 @@ final class ScrollViewport extends SingleChildWidget {
         }
     }
 
-    final static boolean g(int param0) {
-        if (param0 != -1) {
+    final static boolean canRenderClientUi(int guard) {
+        if (guard != -1) {
           return false;
         }
         if (10 > LoginDialogNavigation.field_a) {
           return false;
         }
-        if (TextureCoordinateGeneration.field_a >= 13) {
+        if (TextureCoordinateGeneration.clientPreparationPhase >= 13) {
           return true;
         }
         return false;
@@ -132,14 +132,14 @@ final class ScrollViewport extends SingleChildWidget {
         this.child.refreshLayout(guard);
     }
 
-    final static void e(byte param0) {
-        QueuedIntArrayRequest.field_o = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
-        int var1 = 74 % ((60 - param0) / 52);
-        CharSequence var2 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
-        PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var2);
+    final static void readAccountDisplayName(byte guard) {
+        QueuedIntArrayRequest.accountDisplayName = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
+        int var1 = 74 % ((60 - guard) / 52);
+        CharSequence var2 = (CharSequence) ((Object) QueuedIntArrayRequest.accountDisplayName);
+        PasswordValidator.normalizedAccountDisplayName = AccountCreationProgressDialog.normalizeAccountName(-1, var2);
     }
 
-    final static void a(byte param0) {
+    final static void handleAccountConnectionLoss(byte guard) {
         if (LoginDialogNavigation.field_a == 10) {
           LegacyWaterTextureResources.showConnectionLost(0);
           LoginDialogNavigation.field_a = 11;
@@ -149,7 +149,7 @@ final class ScrollViewport extends SingleChildWidget {
             LoginDialogNavigation.field_a = 11;
           }
         }
-        if (param0 <= 10) {
+        if (guard <= 10) {
           return;
         }
         LegacyWaterTextureResources.field_h = true;

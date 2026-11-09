@@ -209,7 +209,7 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidAccountName(CharSequence text, byte guard) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -217,22 +217,22 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 53) {
+          if (guard != 53) {
             updatesWillSentToText = (String) null;
           }
-          stackIn_3_0 = DisplayPromptRenderer.isValidAccountName(false, 126, param0);
+          stackIn_3_0 = DisplayPromptRenderer.isValidAccountName(false, 126, text);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("gr.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 

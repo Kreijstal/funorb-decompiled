@@ -316,13 +316,13 @@ final class MidiPcmStream extends PcmStream {
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
-                  var10 = DisplayModeErrorDialog.a(param3, var9, 0);
+                  var10 = DisplayModeErrorDialog.loadMusicPatch(param3, var9, 0);
                   if (var10 == null) {
                     var6_int = 0;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.patches.a(var10, param2 ^ 0, (long)var9);
+                    this.patches.put(var10, param2 ^ 0, (long)var9);
                     decompiledFrameRemainder0 = !(var10.loadSamples(var8.notes, (int[]) (var7), param0, 1255750754));
                   }
                 } else {

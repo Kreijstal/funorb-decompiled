@@ -27,7 +27,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
             var2_double = DroneVariantScoring.scoreMultipliers[drone.variant] * (double)LegacyOpenGlFloatPostProcessEffect.droneBaseScores[drone.droneType];
             var2_double = var2_double + (double)(drone.field_G / 50);
             var2_double = var2_double * (double)FourIntReadRequest.scoreMultiplier;
-            IntrusiveDequeCursor.a((int)var2_double, -1372239541);
+            IntrusiveDequeCursor.addScore((int)var2_double, -1372239541);
             if ((1 << drone.droneType & DisplayModeConfirmationDialog.droneTypeStreakMask) == 0) {
               DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
               ArenaBackdropPalettes.uniqueDroneTypeStreak = ArenaBackdropPalettes.uniqueDroneTypeStreak + 1;
@@ -56,7 +56,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
           if (guard != 6510) {
             HardwareRidgedWaterNoise.resetArcadeGameplay(true);
           }
-          SoftwareRenderBuffer.a(drone.variant, (byte) 73);
+          SoftwareRenderBuffer.playDroneVariantSound(drone.variant, (byte) 73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         MusicPatch.simulationPaused = false;
         if (initializeRound) {
           AppletInstanceState.beginCurrentWave(false);
-          HardwareUnlitEffect.field_e = 1000;
+          HardwareUnlitEffect.powerupScoreThreshold = 1000;
           TextLayout.playGameTrack(0, 8);
           return;
         }

@@ -3,7 +3,7 @@
  */
 final class SoftwareRenderContext {
     private SoftwareGraphicsToolkit toolkit;
-    static String field_b;
+    static String requestedDisplayName;
     static int field_d;
     Runnable thread;
     private int[] scratchIndices;
@@ -35,7 +35,7 @@ final class SoftwareRenderContext {
     }
 
     public static void releaseStatics(boolean guard) {
-        field_b = null;
+        requestedDisplayName = null;
         if (!guard) {
           SoftwareRenderContext.initializePunctuationKeyMap(false);
         }

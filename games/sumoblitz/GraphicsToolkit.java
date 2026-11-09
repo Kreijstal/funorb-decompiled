@@ -42,7 +42,7 @@ abstract class GraphicsToolkit {
             return stackIn_9_0;
           }
           if (5 == backend) {
-            stackIn_12_0 = GameDefinitionLoader.a(resources, guard ^ 6707, textures, canvas, samples);
+            stackIn_12_0 = GameDefinitionLoader.createOpenGlToolkit(resources, guard ^ 6707, textures, canvas, samples);
             return stackIn_12_0;
           }
           if (backend != 3) {
@@ -78,8 +78,8 @@ abstract class GraphicsToolkit {
 
     abstract void setClip(int left, int top, int right, int bottom);
 
-    final static void a(int param0) {
-        int var1 = -102 % ((param0 - 39) / 38);
+    final static void onAccountDisconnected(int guard) {
+        int var1 = -102 % ((guard - 39) / 38);
     }
 
     final ToolkitSprite createSpriteCopy(int offset, int guard, int height, int stride, int width, int[] pixels) {
@@ -171,11 +171,11 @@ abstract class GraphicsToolkit {
 
     abstract RenderTarget createRenderTarget(RenderSurface surface, RenderBuffer buffer);
 
-    final static void b(int param0) {
+    final static void resetDisplayPrompt(int guard) {
         LimitedRandomAccessFile.field_d = false;
         TickClock.field_b = null;
         TickClock.field_c = null;
-        if (param0 != 23639) {
+        if (guard != 23639) {
           return;
         }
         ResizingDialog.field_F = null;
@@ -231,14 +231,14 @@ abstract class GraphicsToolkit {
 
     abstract void bindRenderTarget(RenderTarget target);
 
-    final static void a(byte param0, String param1) {
+    final static void onCountryListResponse(byte guard, String text) {
         try {
-          if (param0 < 106) {
+          if (guard < 106) {
             ResourceArchive var3 = (ResourceArchive) null;
             GraphicsToolkit.createToolkit(-117, (java.awt.Canvas) null, -59, 3, (TextureProvider) null, -128, -20, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ha.EG(" + guard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

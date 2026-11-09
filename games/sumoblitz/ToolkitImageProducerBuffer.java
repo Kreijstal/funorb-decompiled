@@ -13,19 +13,19 @@ final class ToolkitImageProducerBuffer extends ToolkitRasterBuffer implements ja
     static String loadingText;
     private java.awt.Canvas canvas;
 
-    final static Boolean c(int param0) {
-        Boolean var1 = HardwareGraphicsToolkit.field_j;
-        HardwareGraphicsToolkit.field_j = null;
-        int var2 = -13 % ((8 - param0) / 32);
+    final static Boolean consumeEmailAvailabilityResult(int guard) {
+        Boolean var1 = HardwareGraphicsToolkit.emailAvailabilityResult;
+        HardwareGraphicsToolkit.emailAvailabilityResult = null;
+        int var2 = -13 % ((8 - guard) / 32);
         return var1;
     }
 
-    private final synchronized void a(int param0, int param1, int param2, boolean param3, int param4) {
+    private final synchronized void publishPixels(int y, int x, int width, boolean guard, int height) {
         if (null == this.consumer) {
           return;
         }
-        this.consumer.setPixels(param1, param0, param2, param4, this.colorModel, this.pixels, this.width * param0 + param1, this.width);
-        if (param3) {
+        this.consumer.setPixels(x, y, width, height, this.colorModel, this.pixels, this.width * y + x, this.width);
+        if (guard) {
           this.consumer.imageComplete(2);
           return;
         }
@@ -33,11 +33,11 @@ final class ToolkitImageProducerBuffer extends ToolkitRasterBuffer implements ja
         this.consumer.imageComplete(2);
     }
 
-    private final synchronized void c(boolean param0) {
+    private final synchronized void publishPixels(boolean guard) {
         if (this.consumer == null) {
           return;
         }
-        if (param0) {
+        if (guard) {
           this.consumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
           this.consumer.imageComplete(2);
           return;
@@ -76,12 +76,12 @@ final class ToolkitImageProducerBuffer extends ToolkitRasterBuffer implements ja
           this.pixels = new int[this.width * this.height];
           this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.image = this.canvas.createImage((java.awt.image.ImageProducer) (this));
-          this.c(true);
+          this.publishPixels(true);
           this.canvas.prepareImage(this.image, (java.awt.image.ImageObserver) ((Object) this.canvas));
           int var5_int = 85 / ((-34 - guard) / 39);
-          this.c(true);
+          this.publishPixels(true);
           this.canvas.prepareImage(this.image, (java.awt.image.ImageObserver) ((Object) this.canvas));
-          this.c(true);
+          this.publishPixels(true);
           this.canvas.prepareImage(this.image, (java.awt.image.ImageObserver) ((Object) this.canvas));
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "li.A(" + (canvas != null ? "{...}" : "null") + ',' + height + ',' + width + ',' + guard + ')');
@@ -106,7 +106,7 @@ final class ToolkitImageProducerBuffer extends ToolkitRasterBuffer implements ja
     final void drawRegion(java.awt.Graphics graphics, int destinationY, int sourceY, int width, int sourceX, int height, int destinationX, byte guard) {
         java.awt.Shape var9 = null;
         try {
-          this.a(sourceY, sourceX, width, true, height);
+          this.publishPixels(sourceY, sourceX, width, true, height);
           if (guard >= -47) {
             java.awt.Canvas var10 = (java.awt.Canvas) null;
             this.initialize((java.awt.Canvas) null, -85, -107, 85);

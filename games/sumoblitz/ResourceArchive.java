@@ -72,7 +72,7 @@ final class ResourceArchive {
 
     final static AccountServiceResult pollAccountCreationResult(byte guard) {
         if (guard <= 80) {
-          ResourceArchive.b(62);
+          ResourceArchive.pollSavedProgress(62);
         }
         if (ProxySocketConnector.accountCreationState == AccountRequestDefaults.IDLE) {
           throw new IllegalStateException();
@@ -310,8 +310,8 @@ final class ResourceArchive {
         }
     }
 
-    final static boolean b(int param0) {
-        if (param0 != 6) {
+    final static boolean pollSavedProgress(int guard) {
+        if (guard != 6) {
           ResourceArchive.pollAccountCreationResult((byte) 84);
         }
         if (null == FourStatHiscoreRequest.field_o) {
@@ -898,7 +898,7 @@ final class ResourceArchive {
 
     public static void clearStaticState(byte guard) {
         if (guard != 35) {
-          ResourceArchive.b(91);
+          ResourceArchive.pollSavedProgress(91);
         }
         field_b = null;
         field_j = null;

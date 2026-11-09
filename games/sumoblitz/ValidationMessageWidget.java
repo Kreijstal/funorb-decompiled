@@ -452,10 +452,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         return;
     }
 
-    final static void f(int param0) {
+    final static void advanceCombo(int killsPerTier) {
         ComboState.comboCount = ComboState.comboCount + 1;
-        CacheReferenceNode.field_u = 150;
-        int var1 = ComboState.comboCount / param0;
+        CacheReferenceNode.comboTimeout = 150;
+        int var1 = ComboState.comboCount / killsPerTier;
         if (ScoreMultiplierTable.multipliers.length - 1 != var1) {
           if (ScoreMultiplierTable.multipliers.length <= var1) {
             var1 = ScoreMultiplierTable.multipliers.length - 1;
@@ -479,7 +479,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(InputValidator validation, String helpText, int x, int y, int width, int height) {
-        super(helpText, ToolkitRasterStateCacheEntry.a(0));
+        super(helpText, ToolkitRasterStateCacheEntry.sharedTextRenderer(0));
         try {
           this.field_U = helpText;
           this.validator = validation;

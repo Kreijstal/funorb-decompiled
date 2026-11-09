@@ -7,21 +7,21 @@ final class VertexBufferReference {
     private VertexBuffer buffer;
     static AccountConnectionPhase field_b;
 
-    final static int[] a(int param0) {
-        if (param0 != -14808) {
+    final static int[] createServerIntValues(int guard) {
+        if (guard != -14808) {
           return (int[]) null;
         }
         return new int[8];
     }
 
-    final static void a(boolean param0, String param1, byte param2, String param3) {
+    final static void prepareLoginCredentials(boolean returnToLogin, String password, byte guard, String identifier) {
         try {
-          int var4_int = -26 % ((76 - param2) / 42);
-          FocusProxyWidget.field_F = param3;
-          LoginIdentifierSupport.field_d = param1;
-          HardwareUnlitEffect.showAccountProgressDialog(LegacyOpenGlTexture2D.loggingInText, param0, (byte) -99);
+          int var4_int = -26 % ((76 - guard) / 42);
+          FocusProxyWidget.loginIdentifier = identifier;
+          LoginIdentifierSupport.loginPassword = password;
+          HardwareUnlitEffect.showAccountProgressDialog(LegacyOpenGlTexture2D.loggingInText, returnToLogin, (byte) -99);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.D(" + returnToLogin + ',' + (password != null ? "{...}" : "null") + ',' + guard + ',' + (identifier != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,14 +36,14 @@ final class VertexBufferReference {
         field_c = null;
     }
 
-    final static void a(MusicTrack param0, byte param1) {
+    final static void playLoopedMusic(MusicTrack track, byte guard) {
         try {
-          if (param1 < 15) {
-            VertexBufferReference.a(-61);
+          if (guard < 15) {
+            VertexBufferReference.createServerIntValues(-61);
           }
-          CachedTextLayout.playMusic(param0, (byte) 109, true);
+          CachedTextLayout.playMusic(track, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.E(" + (track != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class VertexBufferReference {
           return;
         }
         String var3 = (String) null;
-        VertexBufferReference.a(false, (String) null, (byte) -120, (String) null);
+        VertexBufferReference.prepareLoginCredentials(false, (String) null, (byte) -120, (String) null);
         if (this.buffer != null) {
           this.buffer.close(12001);
         }

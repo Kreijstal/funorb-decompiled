@@ -14,7 +14,7 @@ final class LoadingStatusText {
     }
 
     final static String preparationMessage(int guard) {
-        if (TextureCoordinateGeneration.field_a < 2) {
+        if (TextureCoordinateGeneration.clientPreparationPhase < 2) {
           return ArenaDefinitionCodec.field_b;
         }
         if (null != DropDownListWidget.field_H) {

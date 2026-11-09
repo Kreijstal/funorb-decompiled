@@ -170,14 +170,14 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         this.setHorizontalPosition(var3 > var2 ? (this.thumb.x - var2 << 16) / (var3 - var2) : 0, (byte) -6);
     }
 
-    final static ResourceArchive b(int param0, int param1) {
+    final static ResourceArchive resolveResourceArchive(int archiveId, int guard) {
         ResourceArchive stackIn_7_0 = null;
-        if (param1 != -1) {
+        if (guard != -1) {
           return (ResourceArchive) null;
         }
         if (GraphicsToolkit.field_g == null &&
-          param0 != -1) {
-          stackIn_7_0 = HardwareSpecularEffect.a(1, -117, true, param0, false, true);
+          archiveId != -1) {
+          stackIn_7_0 = HardwareSpecularEffect.openResourceArchive(1, -117, true, archiveId, false, true);
         } else {
           stackIn_7_0 = GraphicsToolkit.field_g;
         }

@@ -67,7 +67,7 @@ abstract class GameClientShell extends GameApplet {
           SecondaryNodeDequeIterator.field_b.update(2);
         }
         PasswordInputRenderer.pollKeyboardState((byte) 124);
-        LegacyOpenGlReflectionEffect.d(123);
+        LegacyOpenGlReflectionEffect.snapshotMouseInput(123);
         if (!FadingWidget.g(-66) &&
           11 != LoginDialogNavigation.field_a) {
           LegacyRidgedWaterNoise.updateDisplayDialogs(1886067877);
@@ -85,9 +85,9 @@ abstract class GameClientShell extends GameApplet {
             !(GraphicsHeap.c(false) <= var3)) {
             this.field_B = false;
             LegacyOpenGlTextureCache.closeAccountSocket((byte) -112);
-            ScrollViewport.a((byte) 16);
-            ArchiveCatalog.a((byte) 87, 2, NoiseSliceGenerator.weClosedTheConnectionText);
-            GraphicsToolkit.a(-36);
+            ScrollViewport.handleAccountConnectionLoss((byte) 16);
+            ArchiveCatalog.showAccountFailure((byte) 87, 2, NoiseSliceGenerator.weClosedTheConnectionText);
+            GraphicsToolkit.onAccountDisconnected(-36);
             QuickChatCommand.field_d = true;
             DisplayPromptRenderer.field_a = 15000L + IntroMeshResources.monotonicTimeMillis(-96);
           }
@@ -96,7 +96,7 @@ abstract class GameClientShell extends GameApplet {
           LegacyOpenGlShoreWaveWaterEffect.field_l == 0) {
           stackIn_27_0 = (LegacyOpenGlShoreWaveWaterEffect.field_l != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_27_0;
-          LegacyOpenGlShoreWaveWaterEffect.field_l = LegacyOpenGlFramebuffer.g(-5);
+          LegacyOpenGlShoreWaveWaterEffect.field_l = LegacyOpenGlFramebuffer.serviceJs5(-5);
           if (var3Lifetime1 != 0 &&
             LegacyOpenGlShoreWaveWaterEffect.field_l == 0 &&
             11 == LoginDialogNavigation.field_a &&
@@ -110,7 +110,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
           LegacyOpenGlShoreWaveWaterEffect.field_l != 0) {
-          if (TextureCoordinateGeneration.field_a < 10) {
+          if (TextureCoordinateGeneration.clientPreparationPhase < 10) {
             if (3 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
               if (LegacyOpenGlShoreWaveWaterEffect.field_l != 4) {
                 if (LegacyOpenGlShoreWaveWaterEffect.field_l != 2) {
@@ -130,20 +130,20 @@ abstract class GameClientShell extends GameApplet {
             }
           } else {
             if (10 <= LoginDialogNavigation.field_a) {
-              ScrollViewport.a((byte) 70);
+              ScrollViewport.handleAccountConnectionLoss((byte) 70);
               if (LegacyOpenGlShoreWaveWaterEffect.field_l == 3) {
-                ArchiveCatalog.a((byte) -97, 256, LevelCompletionSupport.field_a);
+                ArchiveCatalog.showAccountFailure((byte) -97, 256, LevelCompletionSupport.field_a);
               } else {
                 if (LegacyOpenGlShoreWaveWaterEffect.field_l == 4) {
-                  ArchiveCatalog.a((byte) 61, 256, ServerIntArrayRequest.field_n);
+                  ArchiveCatalog.showAccountFailure((byte) 61, 256, ServerIntArrayRequest.field_n);
                 } else {
                   if (LegacyOpenGlShoreWaveWaterEffect.field_l == 2) {
-                    ArchiveCatalog.a((byte) 90, 256, ValidationMessageWidget.dataServerFullOrText);
+                    ArchiveCatalog.showAccountFailure((byte) 90, 256, ValidationMessageWidget.dataServerFullOrText);
                   } else {
                     if (LegacyOpenGlShoreWaveWaterEffect.field_l == 5) {
-                      ArchiveCatalog.a((byte) -113, 5, TextHotspot.thisGameHasBeenText);
+                      ArchiveCatalog.showAccountFailure((byte) -113, 5, TextHotspot.thisGameHasBeenText);
                     } else {
-                      ArchiveCatalog.a((byte) -97, 256, ArrayWidgetContainer.unableToConnectToText);
+                      ArchiveCatalog.showAccountFailure((byte) -97, 256, ArrayWidgetContainer.unableToConnectToText);
                     }
                   }
                 }
@@ -167,22 +167,22 @@ abstract class GameClientShell extends GameApplet {
           !FixedPointPerlinNoise3D.a(-23517)) {
           LegacyWaterTextureResources.field_h = false;
         }
-        if (TextureCoordinateGeneration.field_a == 0 &&
+        if (TextureCoordinateGeneration.clientPreparationPhase == 0 &&
           LegacyOpenGlSpriteTexture.d((byte) 63)) {
-          TextureCoordinateGeneration.field_a = 1;
+          TextureCoordinateGeneration.clientPreparationPhase = 1;
         }
-        if (TextureCoordinateGeneration.field_a == 1) {
+        if (TextureCoordinateGeneration.clientPreparationPhase == 1) {
           if (EmailValidationError.field_c != 0) {
-            DropDownListWidget.field_H = EmailCredentials.a(DisplayModeErrorDialog.field_P, (byte) 125);
+            DropDownListWidget.field_H = EmailCredentials.openResourceArchive(DisplayModeErrorDialog.field_P, (byte) 125);
           }
-          EmailCredentials.field_j = LegacyOpenGlPostProcessEffect.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
-          LegacyOpenGlPostProcessManager.field_f = LegacyOpenGlPostProcessEffect.a(11880, true, AudioServiceThread.field_h, 1, false);
-          AudioOutputBootstrap.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
+          EmailCredentials.field_j = LegacyOpenGlPostProcessEffect.openResourceArchive(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
+          LegacyOpenGlPostProcessManager.field_f = LegacyOpenGlPostProcessEffect.openResourceArchive(11880, true, AudioServiceThread.field_h, 1, false);
+          AudioOutputBootstrap.field_a = LegacyOpenGlPostProcessEffect.openResourceArchive(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
           ArenaDefinitionCodec.field_c = EmailCredentials.field_j;
-          TextureCoordinateGeneration.field_a = 2;
+          TextureCoordinateGeneration.clientPreparationPhase = 2;
           RotarySelectorWidget.field_J = LegacyOpenGlPostProcessManager.field_f;
         }
-        if (TextureCoordinateGeneration.field_a == 2) {
+        if (TextureCoordinateGeneration.clientPreparationPhase == 2) {
           if (null != DropDownListWidget.field_H &&
             DropDownListWidget.field_H.loadIndex((byte) 127)) {
             if (!DropDownListWidget.field_H.hasGroupName((byte) -99, "")) {
@@ -191,15 +191,15 @@ abstract class GameClientShell extends GameApplet {
               if (DropDownListWidget.field_H.tryLoadNamedGroup("", 100)) {
                 FallbackShaderEffect.a(7, DropDownListWidget.field_H);
                 DropDownListWidget.field_H = null;
-                VertexAttribute.b(0);
+                VertexAttribute.resetAppletTiming(0);
               }
             }
           }
           if (DropDownListWidget.field_H == null) {
-            TextureCoordinateGeneration.field_a = 3;
+            TextureCoordinateGeneration.clientPreparationPhase = 3;
           }
         }
-        if (3 == TextureCoordinateGeneration.field_a &&
+        if (3 == TextureCoordinateGeneration.clientPreparationPhase &&
           ReflectionCheck.commonUiResourcesReady(LegacyOpenGlPostProcessManager.field_f, (byte) 124, AudioOutputBootstrap.field_a, EmailCredentials.field_j) &&
           DroneWave.tryLoadArchive(AudioOutputBootstrap.field_a, 40)) {
           LruNodeCache.releaseValidationIcons((byte) -93);
@@ -226,18 +226,18 @@ abstract class GameClientShell extends GameApplet {
           AudioOutputBootstrap.field_a = null;
           LegacyOpenGlPostProcessManager.field_f = null;
           EmailCredentials.field_j = null;
-          DirectByteArrayStorage.a((java.applet.Applet) (this), (byte) -96);
-          VertexAttribute.b(0);
-          TextureCoordinateGeneration.field_a = 10;
+          DirectByteArrayStorage.checkAppletUsername((java.applet.Applet) (this), (byte) -96);
+          VertexAttribute.resetAppletTiming(0);
+          TextureCoordinateGeneration.clientPreparationPhase = 10;
         }
-        if (TextureCoordinateGeneration.field_a == 10) {
+        if (TextureCoordinateGeneration.clientPreparationPhase == 10) {
           if (0 != EmailValidationError.field_c) {
-            DisplayModeFailure.field_a = EmailCredentials.a(MenuScreen.field_f, (byte) 125);
+            DisplayModeFailure.field_a = EmailCredentials.openResourceArchive(MenuScreen.field_f, (byte) 125);
           }
-          TextureCoordinateGeneration.field_a = 11;
+          TextureCoordinateGeneration.clientPreparationPhase = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (TextureCoordinateGeneration.field_a == 11) {
+        if (TextureCoordinateGeneration.clientPreparationPhase == 11) {
           if (DisplayModeFailure.field_a != null && (!DisplayModeFailure.field_a.loadIndex((byte) 127) ||
             !DisplayModeFailure.field_a.tryLoadAllGroups(true))) {
             NameSuggestionsPanel.setLoadingProgress(20, 0.0f, IntroFinalFrameResources.archiveLoadingMessage(117, AccountRequestState.field_c, LegacyOpenGlTexture3D.field_k, DisplayModeFailure.field_a));
@@ -245,14 +245,14 @@ abstract class GameClientShell extends GameApplet {
           }
           else {
             RidgedNoise3D.field_u = true;
-            TextureCoordinateGeneration.field_a = 12;
+            TextureCoordinateGeneration.clientPreparationPhase = 12;
           }
         }
-        if (TextureCoordinateGeneration.field_a == 12 &&
+        if (TextureCoordinateGeneration.clientPreparationPhase == 12 &&
           !RidgedNoise3D.field_u) {
-          TextureCoordinateGeneration.field_a = 13;
+          TextureCoordinateGeneration.clientPreparationPhase = 13;
         }
-        if (TextureCoordinateGeneration.field_a == 13) {
+        if (TextureCoordinateGeneration.clientPreparationPhase == 13) {
           var3Lifetime2 = 1;
           if (LoginDialogState.field_a != null) {
             stackIn_138_0 = (!LoginDialogState.field_a.pollReady(100)) ? 0 : 1;
@@ -260,7 +260,7 @@ abstract class GameClientShell extends GameApplet {
             NameSuggestionsPanel.setLoadingProgress(20, LoginDialogState.field_a.progress, LoginDialogState.field_a.progressText);
           }
           if (var3Lifetime2 != 0) {
-            TextureCoordinateGeneration.field_a = 20;
+            TextureCoordinateGeneration.clientPreparationPhase = 20;
           }
         }
         if (!deferCanvasReplacement &&
@@ -285,7 +285,7 @@ abstract class GameClientShell extends GameApplet {
         if (QuickChatCommand.field_d) {
           return -1;
         }
-        var2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.trustedJagexHost, (byte) 56, true, this.affiliateId, ResourceRequest.c((byte) -97));
+        var2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), this.trustedJagexHost, (byte) 56, true, this.affiliateId, ResourceRequest.accountFormPassword((byte) -97));
         if (-1 == var2) {
           return -1;
         }
@@ -297,8 +297,8 @@ abstract class GameClientShell extends GameApplet {
           if (!BeveledTextInputRenderer.field_o) {
             this.showFatalError("reconnect", 21253);
           }
-          ScrollViewport.a((byte) 63);
-          ArchiveCatalog.a((byte) 114, var2, MouseWheelInput.field_c);
+          ScrollViewport.handleAccountConnectionLoss((byte) 63);
+          ArchiveCatalog.showAccountFailure((byte) 114, var2, MouseWheelInput.field_c);
           QuickChatCommand.field_d = true;
           DisplayPromptRenderer.field_a = 15000L + IntroMeshResources.monotonicTimeMillis(-50);
           return var2;
@@ -324,12 +324,12 @@ abstract class GameClientShell extends GameApplet {
         if (guard <= 94) {
           waitingForSoundEffectsText = (String) null;
         }
-        if (ScrollViewport.g(-1)) {
+        if (ScrollViewport.canRenderClientUi(-1)) {
           stackIn_11_1 = 16981;
           stackIn_12_2 = (CompactMeshGeometry.field_o != null);
           discarded$33 = this.processAccountDialogActions(stackIn_11_1, stackIn_12_2, false);
         } else {
-          if (TextureCoordinateGeneration.field_a >= 10) {
+          if (TextureCoordinateGeneration.clientPreparationPhase >= 10) {
             if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
               IntegerMath.advanceIntroTick((byte) 126);
             } else {
@@ -371,12 +371,12 @@ abstract class GameClientShell extends GameApplet {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            ScrollViewport.e((byte) -93);
+                            ScrollViewport.readAccountDisplayName((byte) -93);
                           } else {
                             if (11 != var2 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                AccountCreationForm.f((byte) 117);
+                                AccountCreationForm.readSocialUpdate((byte) 117);
                                 return;
                               }
                               if (var2 == 17) {
@@ -437,7 +437,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void storeSessionCookie(int guard) {
-        String var2 = VertexAttribute.a((byte) -62);
+        String var2 = VertexAttribute.readAccountString((byte) -62);
         if (guard != -1) {
           return;
         }
@@ -463,7 +463,7 @@ abstract class GameClientShell extends GameApplet {
             UiStyle.resendFourIntReadRequests((byte) 115, 2);
           }
           if (InteractiveWidget.enabledAccountPackets[2]) {
-            SlowBurstParticle.a(3, (byte) -73);
+            SlowBurstParticle.resendStatisticsAndHiscores(3, (byte) -73);
           }
           if (InteractiveWidget.enabledAccountPackets[3]) {
             PointLight.resendProgressAndArrayRequests(0, 4);
@@ -493,7 +493,7 @@ abstract class GameClientShell extends GameApplet {
         if (guard > -55) {
           this.affiliateId = -30;
         }
-        LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.activeApplet(2), var3 != 0, MusicVoice.a(0, var5));
+        LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.activeApplet(2), var3 != 0, MusicVoice.decodeCp1252(0, var5));
     }
 
     final void configureAccountFeatures(boolean serverData, boolean fourIntReads, byte guard, boolean hiscores, boolean logging) {
@@ -621,19 +621,19 @@ abstract class GameClientShell extends GameApplet {
             this.affiliateId = 90;
           }
           if (var4 == 1) {
-            var5_int = AlternateUsernameCredentials.a(LegacyOpenGlTexture.c(true), 0, SelectionOverlay.a((byte) 21));
+            var5_int = AlternateUsernameCredentials.a(LegacyOpenGlTexture.accountServiceIdentifierValue(true), 0, SelectionOverlay.a((byte) 21));
             if (var5_int != -1) {
               LoginDialogNavigation.completeNameAvailability(var5_int, ArchiveLoadingStage.nameSuggestions, MouseWheelInput.field_c, true);
               MouseWheelInput.field_c = null;
               ArchiveLoadingStage.nameSuggestions = null;
             }
-            var11 = ToolkitImageProducerBuffer.c(82);
+            var11 = ToolkitImageProducerBuffer.consumeEmailAvailabilityResult(82);
             if (var11 != null) {
               IntroLogoRenderer.completeEmailAvailability(var11.booleanValue(), -80);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = IntList.a(BeveledCheckboxRenderer.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), HiscoreRequest.accountServiceIdentifier(-86), this.affiliateId, 119, ResourceRequest.c((byte) -109));
+            var5_intLifetime1 = IntList.a(BeveledCheckboxRenderer.b(-98), LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), Transform3D.a((byte) -97), HiscoreRequest.accountServiceIdentifier(-86), this.affiliateId, 119, ResourceRequest.accountFormPassword((byte) -109));
             if (var5_intLifetime1 != -1) {
               Sumoblitz.completeAccountCreation(ArchiveLoadingStage.nameSuggestions, guard ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;
@@ -649,7 +649,7 @@ abstract class GameClientShell extends GameApplet {
             if (param2) {
               QuickChatCommand.field_d = false;
             } else {
-              var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.trustedJagexHost, (byte) 21, false, this.affiliateId, ResourceRequest.c((byte) -124));
+              var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), this.trustedJagexHost, (byte) 21, false, this.affiliateId, ResourceRequest.accountFormPassword((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
                   FourStatHiscoreRequest.field_k = StringBuilderSupport.field_a;
@@ -657,7 +657,7 @@ abstract class GameClientShell extends GameApplet {
                   LoginDialogNavigation.field_a = 10;
                   IntrusiveNode.field_a = false;
                 } else {
-                  ArchiveCatalog.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
+                  ArchiveCatalog.showAccountFailure((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
                   MouseWheelInput.field_c = null;
                 }
               }
@@ -705,10 +705,10 @@ abstract class GameClientShell extends GameApplet {
                 var12 = IntrusiveNode.field_e.completedDownload((byte) 126);
                 if (var12 != null) {
                   var7 = SoftLruCache.decodeCp1252(var12.payload, 0, var12.position, 26564);
-                  GraphicsToolkit.a((byte) 115, var7);
+                  GraphicsToolkit.onCountryListResponse((byte) 115, var7);
                 } else {
                   var9 = (String) null;
-                  GraphicsToolkit.a((byte) 122, (String) null);
+                  GraphicsToolkit.onCountryListResponse((byte) 122, (String) null);
                 }
                 IntrusiveNode.field_e = null;
               }
@@ -717,7 +717,7 @@ abstract class GameClientShell extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               IntrusiveNode.reportClientError("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
-              GraphicsToolkit.a((byte) 111, (String) null);
+              GraphicsToolkit.onCountryListResponse((byte) 111, (String) null);
               IntrusiveNode.field_e = null;
             }
           }
@@ -767,7 +767,7 @@ abstract class GameClientShell extends GameApplet {
         EmailValidationError.field_c = this.language;
         LegacyVertexAttribute.setLoadingLanguage(EmailValidationError.field_c, 13586);
         EmptyWidgetRenderer.a(param0, (byte) 84, FourIntUpdateRequest.platformDispatcher, 5000, this.secondaryGamePort, param1, this.gameCrc, this.primaryGamePort, 5000, this.gameHost, this.members, this.serverNumber, EmailValidationError.field_c, this.instanceId);
-        PacketBuffer.a(FourIntUpdateRequest.platformDispatcher, this.primaryGamePort, this.secondaryGamePort, this.gameHost, (byte) -56, this.gameCrc, this.serverNumber, param1, EmailValidationError.field_c);
+        PacketBuffer.initializeNetworkServices(FourIntUpdateRequest.platformDispatcher, this.primaryGamePort, this.secondaryGamePort, this.gameHost, (byte) -56, this.gameCrc, this.serverNumber, param1, EmailValidationError.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);
         InwardSparkParticle.field_w = EmailValidationError.createMouseWheelInput((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);

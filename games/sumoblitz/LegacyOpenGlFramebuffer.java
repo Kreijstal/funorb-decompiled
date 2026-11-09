@@ -11,9 +11,9 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
     private LegacyOpenGlGraphicsToolkit toolkit;
     private LegacyOpenGlFramebufferAttachment[] attachments;
 
-    final static int g(int param0) {
+    final static int serviceJs5(int guard) {
         LegacyOpenGlSpecularEffect.field_i.serviceProviders((byte) 66);
-        if (param0 != -5) {
+        if (guard != -5) {
           return 63;
         }
         if (Js5ClientState.field_b.service((byte) 119)) {

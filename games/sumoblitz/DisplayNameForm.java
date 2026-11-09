@@ -58,7 +58,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         if (!guard) {
           return;
         }
-        DropDownWidget.a(this.nameInput.text, (byte) -47);
+        DropDownWidget.requestLoginWithDisplayName(this.nameInput.text, (byte) -47);
     }
 
     final static void uploadTextureMipmaps(int target, int guard, byte[] pixels, int width, int internalFormat, int height, int format) {

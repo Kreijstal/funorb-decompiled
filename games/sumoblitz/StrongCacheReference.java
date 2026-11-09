@@ -8,7 +8,7 @@ final class StrongCacheReference extends CacheReferenceNode {
     static BlendMode NO_BLEND;
     static int[] field_C;
 
-    final static void a(PacketBuffer param0, boolean param1) {
+    final static void writeRandomSeed(PacketBuffer packet, boolean guard) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -46,22 +46,22 @@ final class StrongCacheReference extends CacheReferenceNode {
                 }
               }
             }
-            if (!param1) {
+            if (!guard) {
               field_C = (int[]) null;
             }
-            param0.writeBytes(var2, (byte) -123, 24, 0);
+            packet.writeBytes(var2, (byte) -123, 24, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             runtimeException = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_20_0 = runtimeException;
             stackIn_20_1 = new StringBuilder().append("av.H(");
-            if (param0 == null) {
+            if (packet == null) {
               stackIn_21_2 = "null";
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -487,7 +487,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           try {
             try {
               var2 = new java.net.URL(applet.getCodeBase(), "tosupport.ws");
-              applet.getAppletContext().showDocument(MusicPatch.a((byte) 127, applet, var2), "_top");
+              applet.getAppletContext().showDocument(MusicPatch.updateAppletStateUrl((byte) 127, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

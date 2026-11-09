@@ -55,33 +55,33 @@ final class BurstParticle extends TimedSceneEffect {
         return super.updateAndIsExpired(-2567);
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int firstCollisionFraction(int constant, int guard, int linear, int twiceQuadratic, int fractionBits) {
         int var5;
         int var6;
         int var7;
         int var8;
         int var9;
-        var5 = -14 + IntegerMath.floorLog2(-117, param2 ^ param2 >> 31 | param3 ^ param3 >> 31 | param0 >> 31 ^ param0);
+        var5 = -14 + IntegerMath.floorLog2(-117, linear ^ linear >> 31 | twiceQuadratic ^ twiceQuadratic >> 31 | constant >> 31 ^ constant);
         if (var5 > 0) {
-          param3 = param3 >> var5;
-          param0 = param0 >> var5;
-          param2 = param2 >> var5;
+          twiceQuadratic = twiceQuadratic >> var5;
+          constant = constant >> var5;
+          linear = linear >> var5;
         }
-        if (0 >= param3) {
+        if (0 >= twiceQuadratic) {
           return -1;
         }
-        var6 = -(param0 * (2 * param3)) + param2 * param2;
-        if (param1 >= -100) {
+        var6 = -(constant * (2 * twiceQuadratic)) + linear * linear;
+        if (guard >= -100) {
           return 115;
         }
         if (var6 < 0) {
           return -1;
         }
-        var7 = IntrusiveDequeCursor.b(-22415, var6);
-        var8 = (var7 - param2 << param4) / param3;
-        var9 = (-var7 - param2 << param4) / param3;
+        var7 = IntrusiveDequeCursor.approximateIntegerSqrt(-22415, var6);
+        var8 = (var7 - linear << fractionBits) / twiceQuadratic;
+        var9 = (-var7 - linear << fractionBits) / twiceQuadratic;
         if (var8 >= 0 &&
-          var8 <= 1 << param4) {
+          var8 <= 1 << fractionBits) {
           if (0 > var9) {
             return var8;
           }
@@ -93,7 +93,7 @@ final class BurstParticle extends TimedSceneEffect {
         if (var9 < 0) {
           return -1;
         }
-        if (1 << param4 < var9) {
+        if (1 << fractionBits < var9) {
           return -1;
         }
         return var9;
@@ -137,9 +137,9 @@ final class BurstParticle extends TimedSceneEffect {
         this.velocityXQ8 = velocityXQ8;
     }
 
-    final static void a(boolean param0, boolean param1) {
-        if (!param1) {
-          BurstParticle.a(false, false);
+    final static void renderDialogLayer(boolean unused, boolean guard) {
+        if (!guard) {
+          BurstParticle.renderDialogLayer(false, false);
           RenderPresentationException.field_a.render(0, 0, false);
           return;
         }

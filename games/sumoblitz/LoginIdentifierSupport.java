@@ -6,7 +6,7 @@ final class LoginIdentifierSupport {
     static byte[][] field_f;
     static int[][] introMeshCenters;
     static Sprite field_a;
-    static String field_d;
+    static String loginPassword;
     static int[] field_b;
 
     final static boolean readBitFlag(IsaacPacketBuffer packet, boolean guard) {
@@ -95,7 +95,7 @@ final class LoginIdentifierSupport {
     }
 
     final static void retryAccountCreationLogin(boolean guard) {
-        VertexBufferReference.a(true, ArenaBackdropPalettes.field_d, (byte) 122, FadingWidget.field_C);
+        VertexBufferReference.prepareLoginCredentials(true, ArenaBackdropPalettes.field_d, (byte) 122, FadingWidget.field_C);
         if (guard) {
           introMeshCenters = (int[][]) null;
         }
@@ -111,7 +111,7 @@ final class LoginIdentifierSupport {
         introMeshCenters = (int[][]) null;
         field_a = null;
         field_f = (byte[][]) null;
-        field_d = null;
+        loginPassword = null;
     }
 
     static {

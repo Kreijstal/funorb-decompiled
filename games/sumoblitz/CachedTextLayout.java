@@ -340,7 +340,7 @@ final class CachedTextLayout extends TextLayout {
             return stackIn_8_0;
           }
           if (TextCaretLayout.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
-            HardwareGraphicsToolkit.field_j = null;
+            HardwareGraphicsToolkit.emailAvailabilityResult = null;
             InwardSparkParticle.outgoingPacket.position = 0;
             if (param6 != null) {
               var9 = 0;
@@ -365,7 +365,7 @@ final class CachedTextLayout extends TextLayout {
                 var11_ref_String = "";
               }
               InwardSparkParticle.outgoingPacket.writeCp1252String(var11_ref_String, (byte) -115);
-              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.writeRsaXteaEnvelope(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
               InwardSparkParticle.outgoingPacket.patchShortLength(0, InwardSparkParticle.outgoingPacket.position - var10);
             } else {
               SoftLruCache.field_e.position = 0;
@@ -388,14 +388,14 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.outgoingPacket.writeByte((byte) 108, 16);
               InwardSparkParticle.outgoingPacket.position = InwardSparkParticle.outgoingPacket.position + 1;
               var9 = InwardSparkParticle.outgoingPacket.position;
-              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.writeRsaXteaEnvelope(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
               InwardSparkParticle.outgoingPacket.patchByteLength(InwardSparkParticle.outgoingPacket.position - var9, -13745);
             }
             MessageDialog.flushAccountWrites(0, -1);
             TextCaretLayout.accountPhase = DisplayModeFailure.WAIT_ACCOUNT_RESPONSE;
           }
           if (TextCaretLayout.accountPhase == DisplayModeFailure.WAIT_ACCOUNT_RESPONSE &&
-            OpenGlIndexBuffer.b(-1, 1)) {
+            OpenGlIndexBuffer.readAccountBytes(-1, 1)) {
             var9Lifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
             NativeLibraryExtractor.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -416,18 +416,18 @@ final class CachedTextLayout extends TextLayout {
                 TextureFormat.receivedAccountOpcode = var9Lifetime1;
                 TextCaretLayout.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
-                OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
-                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.incomingPacket, 115));
+                OpenGlIndexBuffer.readAccountBytes(-1, ChatMessage.loginReplyHeaderLength(-105));
+                HardwareGraphicsToolkit.emailAvailabilityResult = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.incomingPacket, 115));
                 NativeLibraryExtractor.incomingPacket.position = 0;
               }
             }
           }
           if (HiscoreRequestQueue.WAIT_NAME_SUGGESTIONS == TextCaretLayout.accountPhase) {
             var9Lifetime2 = 2;
-            if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
+            if (OpenGlIndexBuffer.readAccountBytes(-1, var9Lifetime2)) {
               var10Lifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
               NativeLibraryExtractor.incomingPacket.position = 0;
-              if (OpenGlIndexBuffer.b(-1, var10Lifetime1)) {
+              if (OpenGlIndexBuffer.readAccountBytes(-1, var10Lifetime1)) {
                 var11 = ArchiveLoadingStage.nameSuggestions.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   ArchiveLoadingStage.nameSuggestions[var12] = NativeLibraryExtractor.incomingPacket.readCircumfixedString(-105);

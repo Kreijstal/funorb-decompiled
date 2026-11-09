@@ -28,7 +28,7 @@ final class LimitedRandomAccessFile {
           var5_int = this.file.read(destination, offset, length);
           if (guard != 2) {
             var6 = (PacketBuffer) null;
-            LimitedRandomAccessFile.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
+            LimitedRandomAccessFile.writeRsaXteaEnvelope((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
           }
           if (var5_int > 0) {
             this.position = this.position + (long)var5_int;
@@ -50,7 +50,7 @@ final class LimitedRandomAccessFile {
     }
 
     final static void d(int param0) {
-        DirectByteArrayStorage.a(115, 38, 148, param0 - 22028, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+        DirectByteArrayStorage.defineMenuScreen(115, 38, 148, param0 - 22028, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
         LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         if (param0 != 22030) {
           LimitedRandomAccessFile.d(35);
@@ -90,7 +90,7 @@ final class LimitedRandomAccessFile {
         int var4 = -27 / ((-13 - guard) / 49);
     }
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, java.math.BigInteger param3, byte param4, PacketBuffer param5, int param6) {
+    final static void writeRsaXteaEnvelope(java.math.BigInteger modulus, int length, byte[] bytes, java.math.BigInteger exponent, byte guard, PacketBuffer destination, int offset) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -112,7 +112,7 @@ final class LimitedRandomAccessFile {
         int var9Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var7_int = StripedProgressWidget.alignToEight(1, param1);
+          var7_int = StripedProgressWidget.alignToEight(1, length);
           if (ValidationStatus.field_b == null) {
             ValidationStatus.field_b = new java.security.SecureRandom();
           }
@@ -127,7 +127,7 @@ final class LimitedRandomAccessFile {
             DroneIntroductionOverlay.field_c = new PacketBuffer(var7_int);
           }
           DroneIntroductionOverlay.field_c.position = 0;
-          DroneIntroductionOverlay.field_c.writeBytes(param2, (byte) -123, param1, param6);
+          DroneIntroductionOverlay.field_c.writeBytes(bytes, (byte) -123, length, offset);
           DroneIntroductionOverlay.field_c.padTo((byte) -3, var7_int);
           DroneIntroductionOverlay.field_c.encryptXtea(var13, 104);
           if (RsaEnvelopeScratch.rsaBuffer == null ||
@@ -142,43 +142,43 @@ final class LimitedRandomAccessFile {
             RsaEnvelopeScratch.rsaBuffer.writeInt(48, var13[var11]);
             var11++;
           }
-          RsaEnvelopeScratch.rsaBuffer.writeShort(125, param1);
-          RsaEnvelopeScratch.rsaBuffer.encryptRsa((byte) 123, param0, param3);
-          param5.writeBytes(RsaEnvelopeScratch.rsaBuffer.payload, (byte) -123, RsaEnvelopeScratch.rsaBuffer.position, 0);
-          if (param4 > -6) {
+          RsaEnvelopeScratch.rsaBuffer.writeShort(125, length);
+          RsaEnvelopeScratch.rsaBuffer.encryptRsa((byte) 123, modulus, exponent);
+          destination.writeBytes(RsaEnvelopeScratch.rsaBuffer.payload, (byte) -123, RsaEnvelopeScratch.rsaBuffer.position, 0);
+          if (guard > -6) {
             return;
           }
-          param5.writeBytes(DroneIntroductionOverlay.field_c.payload, (byte) -123, DroneIntroductionOverlay.field_c.position, 0);
+          destination.writeBytes(DroneIntroductionOverlay.field_c.payload, (byte) -123, DroneIntroductionOverlay.field_c.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_24_0 = var7;
           stackIn_24_1 = new StringBuilder().append("sr.D(");
-          if (param0 == null) {
+          if (modulus == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(length).append(',');
+          if (bytes == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
           stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',');
-          if (param3 == null) {
+          if (exponent == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(guard).append(',');
+          if (destination == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -189,14 +189,14 @@ final class LimitedRandomAccessFile {
         }
         if (guard != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
-          LimitedRandomAccessFile.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
+          LimitedRandomAccessFile.writeRsaXteaEnvelope((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
         }
     }
 
     final long length(int guard) throws IOException {
         if (guard <= 34) {
           PacketBuffer var3 = (PacketBuffer) null;
-          LimitedRandomAccessFile.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
+          LimitedRandomAccessFile.writeRsaXteaEnvelope((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
         }
         return this.file.length();
     }

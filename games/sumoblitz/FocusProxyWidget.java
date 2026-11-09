@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class FocusProxyWidget extends InteractiveWidget {
-    static String field_F;
+    static String loginIdentifier;
     private UiWidget field_E;
 
     final boolean requestFocus(UiWidget root, byte guard) {
@@ -35,10 +35,10 @@ class FocusProxyWidget extends InteractiveWidget {
     public static void releaseStatics(boolean param0) {
         if (param0) {
           FocusProxyWidget.releaseStatics(true);
-          field_F = null;
+          loginIdentifier = null;
           return;
         }
-        field_F = null;
+        loginIdentifier = null;
     }
 
     FocusProxyWidget(UiWidget param0) {

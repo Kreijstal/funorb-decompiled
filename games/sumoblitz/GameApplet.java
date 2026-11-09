@@ -833,7 +833,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var4)) &&
+                      if (ContentTransitionPhase.isDecimalInteger(-13181, (CharSequence) ((Object) var4)) &&
                         !(10 <= LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var4)))) {
                         this.showFatalError("wrongjava", 21253);
                         decompiledFrameRemainder3 = (var5 != 0);

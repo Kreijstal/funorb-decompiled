@@ -184,7 +184,7 @@ final class SecondaryNodeQueue {
     }
 
     final static void initializeLoginLayer(int guard) {
-        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.sharedWidgetTheme(false);
         RenderPresentationException.field_a = new DialogLayer();
         WidgetStateStyle.showLoginDialog((byte) 127, true, true);
         if (guard != 246) {
@@ -253,7 +253,7 @@ final class SecondaryNodeQueue {
             }
             param6 = param6 - param2;
             param3 = param3 - param8;
-            return BurstParticle.a(-var9Lifetime1 + param2 * param2 + param8 * param8, -103, param2 * param6 + param8 * param3 << 1, param6 * param6 + param3 * param3 << 1, param1);
+            return BurstParticle.firstCollisionFraction(-var9Lifetime1 + param2 * param2 + param8 * param8, -103, param2 * param6 + param8 * param3 << 1, param6 * param6 + param3 * param3 << 1, param1);
           }
           return -1;
         }
@@ -319,25 +319,25 @@ final class SecondaryNodeQueue {
         return var2;
     }
 
-    final static void a(Drone param0, byte param1) {
+    final static void defeatDrone(Drone drone, byte guard) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0.isPlayerProtected(true)) {
+          if (drone.isPlayerProtected(true)) {
             return;
           }
-          param0.beginDestruction((byte) 0);
-          ValidationMessageWidget.f(param1 - 111);
-          if (param1 != 113) {
+          drone.beginDestruction((byte) 0);
+          ValidationMessageWidget.advanceCombo(guard - 111);
+          if (guard != 113) {
             field_d = 68;
           }
-          HardwareRidgedWaterNoise.awardDroneDefeatScore(6510, param0);
-          LegacyOpenGlDisplayLists.a((byte) -106, param0);
-          if (param0.field_P == 0 &&
-            param0.field_R) {
+          HardwareRidgedWaterNoise.awardDroneDefeatScore(6510, drone);
+          LegacyOpenGlDisplayLists.maybeSpawnScorePowerup((byte) -106, drone);
+          if (drone.field_P == 0 &&
+            drone.field_R) {
             EmailSyntaxValidator.field_e = EmailSyntaxValidator.field_e + 1;
             if (AchievementThresholds.targets[9] != EmailSyntaxValidator.field_e) {
               return;
@@ -350,12 +350,12 @@ final class SecondaryNodeQueue {
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("ro.J(");
-          if (param0 == null) {
+          if (drone == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 

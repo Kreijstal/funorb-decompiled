@@ -32,20 +32,20 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
-        HardwareTurbulentWaterNoise.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
+        HardwareTurbulentWaterNoise.writeRsaXteaEnvelope((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
         field_t = null;
         emailLoginText = null;
         widgetTheme = null;
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, PacketBuffer param3, PacketBuffer param4) {
-        if (param2) {
+    final static void writeRsaXteaEnvelope(java.math.BigInteger modulus, java.math.BigInteger exponent, boolean guard, PacketBuffer destination, PacketBuffer source) {
+        if (guard) {
           return;
         }
         try {
-          LimitedRandomAccessFile.a(param0, param4.position, param4.payload, param1, (byte) -29, param3, 0);
+          LimitedRandomAccessFile.writeRsaXteaEnvelope(modulus, source.position, source.payload, exponent, (byte) -29, destination, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ks.A(" + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ',' + guard + ',' + (destination != null ? "{...}" : "null") + ',' + (source != null ? "{...}" : "null") + ')');
         }
     }
 

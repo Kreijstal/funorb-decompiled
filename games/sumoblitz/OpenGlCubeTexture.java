@@ -81,7 +81,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] fetchNamedAsset(String name, byte guard) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -90,8 +90,8 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == -23) {
-            stackIn_4_0 = ToolkitRasterBuffer.field_q.fetchNamedFile(param0, "", -1);
+          if (guard == -23) {
+            stackIn_4_0 = ToolkitRasterBuffer.field_q.fetchNamedFile(name, "", -1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -101,12 +101,12 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("rc.M(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 

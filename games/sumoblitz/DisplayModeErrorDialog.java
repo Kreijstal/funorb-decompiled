@@ -41,7 +41,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(MouseInputShutdown.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, 96);
-          this.field_O = this.a((byte) -105, (WidgetListener) (this), DraggableWidget.closeText);
+          this.field_O = this.appendButton((byte) -105, (WidgetListener) (this), DraggableWidget.closeText);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         }
     }
 
-    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive archive, int fileId, int guard) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -74,10 +74,10 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 0) {
+          if (guard != 0) {
             field_P = 21;
           }
-          var4 = param0.fetchFlatFile(-14296, param1);
+          var4 = archive.fetchFlatFile(-14296, fileId);
           var3 = var4;
           if (var4 != null) {
             stackIn_6_0 = new MusicPatch(var4);
@@ -90,12 +90,12 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
           stackIn_9_1 = new StringBuilder().append("u.O(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(fileId).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         }
     }
 
-    private final InteractiveWidget a(byte param0, WidgetListener param1, String param2) {
+    private final InteractiveWidget appendButton(byte guard, WidgetListener listener, String text) {
         int var4_int = 0;
         RuntimeException var4 = null;
         InteractiveWidget var5 = null;
@@ -122,8 +122,8 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 112 % ((-21 - param0) / 53);
-          var5 = new InteractiveWidget(param2, param1);
+          var4_int = 112 % ((-21 - guard) / 53);
+          var5 = new InteractiveWidget(text, listener);
           var5.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var6 = this.height - 6;
           this.height = this.height + 38;
@@ -136,14 +136,14 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("u.P(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("u.P(").append(guard).append(',');
+          if (listener == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -181,7 +181,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         }
     }
 
-    final static void a(MusicTrack param0, int param1, byte param2, int param3, boolean param4) {
+    final static void crossfadeMusic(MusicTrack track, int volume, byte guard, int step, boolean loop) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         MusicCrossfadeStream stackIn_2_0;
@@ -195,28 +195,28 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_2_0 = AccountConnectionPhase.field_b;
-          stackIn_2_1 = param2 + 88;
+          stackIn_2_1 = guard + 88;
           stackIn_2_2 = 1000000;
-          stackIn_2_3 = (MusicTrack) (param0);
-          stackIn_3_4 = !(param4);
-          ((MusicCrossfadeStream) (Object) stackIn_2_0).transitionToTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param3, param1);
-          if (param2 == -87) {
+          stackIn_2_3 = (MusicTrack) (track);
+          stackIn_3_4 = !(loop);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).transitionToTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, step, volume);
+          if (guard == -87) {
             return;
           }
           var6 = (ResourceArchive) null;
-          DisplayModeErrorDialog.a((ResourceArchive) null, -117, -123);
+          DisplayModeErrorDialog.loadMusicPatch((ResourceArchive) null, -117, -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("u.E(");
-          if (param0 == null) {
+          if (track == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(volume).append(',').append(guard).append(',').append(step).append(',').append(loop).append(')').toString());
         }
     }
 

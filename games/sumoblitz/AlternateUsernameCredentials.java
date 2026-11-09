@@ -295,7 +295,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         if (guard >= -87) {
           return;
         }
-        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.sharedWidgetTheme(false);
         HardwareTextureSprite.field_e = new DialogLayer();
         QuickChatPhraseProvider.showGraphicsOptions(40);
     }

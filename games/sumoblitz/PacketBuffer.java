@@ -116,7 +116,7 @@ class PacketBuffer extends IntrusiveNode {
         return value * (value * value) * (value * (-15.0f + 6.0f * value) + 10.0f);
     }
 
-    final static void a(PlatformTaskDispatcher param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static void initializeNetworkServices(PlatformTaskDispatcher param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7, int param8) {
         RasterStateFrame.field_q = param2;
         if (param4 != -56) {
           return;
@@ -338,7 +338,7 @@ class PacketBuffer extends IntrusiveNode {
         int var2 = ReflectionCheck.crc32(this.payload, 0, this.position, guard + 1010);
         if (guard != -9) {
           String var4 = (String) null;
-          PacketBuffer.a((PlatformTaskDispatcher) null, -93, 108, (String) null, (byte) 18, 23, 21, 60, 76);
+          PacketBuffer.initializeNetworkServices((PlatformTaskDispatcher) null, -93, 108, (String) null, (byte) 18, 23, 21, 60, 76);
         }
         int var3 = this.readInt(true);
         if (var2 == var3) {

@@ -3,7 +3,7 @@
  */
 final class HardwareUnlitEffect extends ShaderEffect {
     static int field_f;
-    static int field_e;
+    static int powerupScoreThreshold;
     static long field_g;
 
     final void enable(boolean lighting, int guard) {
@@ -263,6 +263,6 @@ final class HardwareUnlitEffect extends ShaderEffect {
     }
 
     static {
-        field_e = 1000;
+        powerupScoreThreshold = 1000;
     }
 }

@@ -122,7 +122,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     final static int g(int param0) {
-        if (2 > TextureCoordinateGeneration.field_a) {
+        if (2 > TextureCoordinateGeneration.clientPreparationPhase) {
           return 0;
         }
         if (param0 != 14296) {

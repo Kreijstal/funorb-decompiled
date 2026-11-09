@@ -12,7 +12,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
     private int textureKind;
 
     final static void e(int param0) {
-        SoftwareRenderBuffer.a(5178);
+        SoftwareRenderBuffer.showProgressDialog(5178);
         ReflectionCheck.setAccountDialogResult(param0, param0 - 31);
     }
 
@@ -41,23 +41,23 @@ final class SlowBurstParticle extends TimedSceneEffect {
         return super.updateAndIsExpired(-2567);
     }
 
-    final static boolean f(int param0) {
-        if (null != IntroLogoRenderer.field_a[0]) {
+    final static boolean initializeMenus(int guard) {
+        if (null != IntroLogoRenderer.menuActions[0]) {
           return false;
         }
-        DirectByteArrayStorage.a(135, 38, 148, 2, new int[]{0, 23, 24, 3, 2, 14, 11}, 0, 492);
-        DirectByteArrayStorage.a(150, 38, 170, param0 - 3, new int[]{1, 28, 12, 13, 3, 7}, 1, 470);
-        DirectByteArrayStorage.a(150, 38, 170, param0 - 3, new int[]{12, 13, 27, 4, param0}, 8, 470);
-        DirectByteArrayStorage.a(400, 38, 150, 2, new int[]{15, 5}, 2, 490);
-        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{18, 6, 17}, 3, 470);
-        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{15, 5}, 4, 470);
-        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{2, 5}, 5, 470);
-        DirectByteArrayStorage.a(200, 96, 170, param0 - 3, new int[]{15, 16}, 6, 470);
-        DirectByteArrayStorage.a(390, 38, 170, 2, new int[]{29, 5}, 7, 468);
-        DirectByteArrayStorage.a(400, 38, 200, 2, new int[]{30, 6}, 9, 440);
-        DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
-        DirectByteArrayStorage.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
-        DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{33}, 12, 440);
+        DirectByteArrayStorage.defineMenuScreen(135, 38, 148, 2, new int[]{0, 23, 24, 3, 2, 14, 11}, 0, 492);
+        DirectByteArrayStorage.defineMenuScreen(150, 38, 170, guard - 3, new int[]{1, 28, 12, 13, 3, 7}, 1, 470);
+        DirectByteArrayStorage.defineMenuScreen(150, 38, 170, guard - 3, new int[]{12, 13, 27, 4, guard}, 8, 470);
+        DirectByteArrayStorage.defineMenuScreen(400, 38, 150, 2, new int[]{15, 5}, 2, 490);
+        DirectByteArrayStorage.defineMenuScreen(430, 38, 170, 2, new int[]{18, 6, 17}, 3, 470);
+        DirectByteArrayStorage.defineMenuScreen(430, 38, 170, 2, new int[]{15, 5}, 4, 470);
+        DirectByteArrayStorage.defineMenuScreen(430, 38, 170, 2, new int[]{2, 5}, 5, 470);
+        DirectByteArrayStorage.defineMenuScreen(200, 96, 170, guard - 3, new int[]{15, 16}, 6, 470);
+        DirectByteArrayStorage.defineMenuScreen(390, 38, 170, 2, new int[]{29, 5}, 7, 468);
+        DirectByteArrayStorage.defineMenuScreen(400, 38, 200, 2, new int[]{30, 6}, 9, 440);
+        DirectByteArrayStorage.defineMenuScreen(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
+        DirectByteArrayStorage.defineMenuScreen(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
+        DirectByteArrayStorage.defineMenuScreen(370, 38, 200, 2, new int[]{33}, 12, 440);
         SocketJs5Client.field_q = (int)((double)LoginTextResources.field_b.stringWidth(GameClientShell.menuActionLabels[12], 0) * 1.5);
         int var1 = (int)((double)LoginTextResources.field_b.stringWidth(GameClientShell.menuActionLabels[13], 0) * 1.5);
         if (SocketJs5Client.field_q < var1) {
@@ -159,7 +159,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           var4 = var15.readUnsignedByte(-31302);
           if (var4 != 0) {
             var5 = var3.rowLimit;
-            RenderPresentationException.field_b[0] = QueuedIntArrayRequest.field_o;
+            RenderPresentationException.field_b[0] = QueuedIntArrayRequest.accountDisplayName;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
             }
@@ -172,7 +172,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
                 HardwareUnlitEffect.appendHiscoreRow(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, LegacyWaterTextureResources.field_d);
               }
             }
-            AccountConnectionPhase.a(13136, var5);
+            AccountConnectionPhase.rankHiscoreRows(13136, var5);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
             var8 = LoginCredentials.field_d;
@@ -223,7 +223,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendStatisticsAndHiscores(int opcode, byte guard) {
         int var3 = 0;
         SessionStatisticsSubmission var4 = null;
         HiscoreRequest var5 = null;
@@ -233,22 +233,22 @@ final class SlowBurstParticle extends TimedSceneEffect {
         try {
           var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.first(85));
           while (var4 != null) {
-            FourStatHiscoreRequest.sendSessionStatistics((byte) -120, param0, var4);
+            FourStatHiscoreRequest.sendSessionStatistics((byte) -120, opcode, var4);
             var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.next((byte) 18));
           }
           var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.first(109));
           while (var5 != null) {
-            FourIntReadRequest.sendHiscoreRequest((byte) -65, param0, var5);
+            FourIntReadRequest.sendHiscoreRequest((byte) -65, opcode, var5);
             var5 = (HiscoreRequest) (HiscoreRequestQueue.pending.next((byte) 18));
           }
-          if (param1 > -63) {
+          if (guard > -63) {
             field_z = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "vi.D(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "vi.D(" + opcode + ',' + guard + ')');
         }
     }
 

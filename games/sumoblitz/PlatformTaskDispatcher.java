@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     LimitedRandomAccessFile field_d;
     private MicrosoftCursorCallback field_b;
 
-    private final static LimitedRandomAccessFile a(String param0, boolean param1, String param2, int param3) {
+    private final static LimitedRandomAccessFile openPreferencesFile(String gameName, boolean guard, String suffix, int buildVariant) {
         try {
           int var6 = 0;
           LimitedRandomAccessFile stackIn_15_0 = null;
@@ -40,18 +40,18 @@ final class PlatformTaskDispatcher implements Runnable {
           LimitedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
-          if (!param1) {
+          if (!guard) {
             var9 = (String) null;
-            PlatformTaskDispatcher.a((String) null, true, (String) null, 127);
+            PlatformTaskDispatcher.openPreferencesFile((String) null, true, (String) null, 127);
           }
-          if (param3 != 33) {
-            if (34 == param3) {
-              var4 = "jagex_" + param0 + "_preferences" + param2 + "_wip.dat";
+          if (buildVariant != 33) {
+            if (34 == buildVariant) {
+              var4 = "jagex_" + gameName + "_preferences" + suffix + "_wip.dat";
             } else {
-              var4 = "jagex_" + param0 + "_preferences" + param2 + ".dat";
+              var4 = "jagex_" + gameName + "_preferences" + suffix + ".dat";
             }
           } else {
-            var4 = "jagex_" + param0 + "_preferences" + param2 + "_rc.dat";
+            var4 = "jagex_" + gameName + "_preferences" + suffix + "_rc.dat";
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_s, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           for (var6 = 0; var6 < var5.length; var6++) {
@@ -269,7 +269,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a("", true, (String) (var8.objectArgument), field_j);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile("", true, (String) (var8.objectArgument), field_j);
                         var8.result = var3_ref;
                         break;
                       case 16:
@@ -331,7 +331,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a(field_p, true, (String) (var8.objectArgument), field_j);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(field_p, true, (String) (var8.objectArgument), field_j);
                         var8.result = var3_ref;
                         break;
                       case 7:
@@ -396,7 +396,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = RenderPresentationException.a((String) (var8.objectArgument), var8.intArgument, true).connect((byte) 61);
+                      var8.result = RenderPresentationException.createSocketConnector((String) (var8.objectArgument), var8.intArgument, true).connect((byte) 61);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -449,7 +449,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask startThread(boolean guard, Runnable runnable, int priority) {
         if (!guard) {
           File var5 = (File) null;
-          this.a((byte[]) null, -30, (File) null);
+          this.writeFileBytes((byte[]) null, -30, (File) null);
         }
         return this.enqueueTask(runnable, 0, priority, !guard ? true : false, 2);
     }
@@ -461,18 +461,18 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.openSocket(port, host, true, false);
     }
 
-    final boolean a(byte[] param0, int param1, File param2) {
+    final boolean writeFileBytes(byte[] bytes, int guard, File file) {
         FileOutputStream var4 = null;
         IOException var4_ref = null;
         Class[] var5 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var4 = new FileOutputStream(param2);
-          if (param1 != -31357) {
+          var4 = new FileOutputStream(file);
+          if (guard != -31357) {
             var5 = (Class[]) null;
             this.findDeclaredMethod(-111, (Class) null, (String) null, (Class[]) null);
           }
-          var4.write(param0, 0, param0.length);
+          var4.write(bytes, 0, bytes.length);
           var4.close();
           return true;
         } catch (java.io.IOException decompiledCaughtParameter0) {

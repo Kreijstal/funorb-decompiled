@@ -19,7 +19,7 @@ final class AgeValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) text);
-          if (!ContentTransitionPhase.a(guard ^ -13159, var4)) {
+          if (!ContentTransitionPhase.isDecimalInteger(guard ^ -13159, var4)) {
             stackIn_2_0 = AccountConnectionPhase.INVALID;
             return stackIn_2_0;
           }

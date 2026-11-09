@@ -5,7 +5,7 @@ class DualLinkNode extends IntrusiveNode {
     static QuickChatCommand field_n;
     DualLinkNode secondaryNext;
     DualLinkNode secondaryPrevious;
-    static int[] field_k;
+    static int[] menuTop;
     static int[] field_q;
     static long field_p;
     long secondaryKey;
@@ -30,7 +30,7 @@ class DualLinkNode extends IntrusiveNode {
 
     public static void releaseStatics(int param0) {
         field_n = null;
-        field_k = null;
+        menuTop = null;
         if (param0 <= 27) {
           return;
         }
@@ -43,7 +43,7 @@ class DualLinkNode extends IntrusiveNode {
     static {
         field_q = new int[1];
         field_p = 20000000L;
-        field_k = new int[13];
+        menuTop = new int[13];
         field_n = new QuickChatCommand(9, 0, 4, 1);
     }
 }

@@ -60,7 +60,7 @@ final class HiscoreRequest extends IntrusiveNode {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(applet.getCodeBase(), var4);
-              applet.getAppletContext().showDocument(MusicPatch.a((byte) 122, applet, var5), "_self");
+              applet.getAppletContext().showDocument(MusicPatch.updateAppletStateUrl((byte) 122, applet, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,15 +137,15 @@ final class HiscoreRequest extends IntrusiveNode {
         if (LegacyOpenGlGraphicsHeap.PENDING == Base37NameAlphabet.nameAvailabilityState) {
           return AffineTransform3D.emailAvailabilityRequest.email(107);
         }
-        return FocusProxyWidget.field_F;
+        return FocusProxyWidget.loginIdentifier;
     }
 
     final static boolean loadNativeSoftwareLibraries(byte guard) {
         int var1 = -123 % ((67 - guard) / 50);
-        if (!ScrollPane.b((byte) -89, "jaclib")) {
+        if (!ScrollPane.loadNativeLibrary((byte) -89, "jaclib")) {
           return false;
         }
-        return ScrollPane.b((byte) 93, "hw3d");
+        return ScrollPane.loadNativeLibrary((byte) 93, "hw3d");
     }
 
     public static void releaseStatics(int guard) {

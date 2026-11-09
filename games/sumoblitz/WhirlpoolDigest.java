@@ -12,7 +12,7 @@ final class WhirlpoolDigest {
     static PrimitiveType TRIANGLES;
     private long[] block;
     private byte[] bitLength;
-    static char field_c;
+    static char keyCharacter;
 
     final void reset(int guard) {
         int var2 = 0;
@@ -35,7 +35,7 @@ final class WhirlpoolDigest {
     public static void releaseStatics(byte param0) {
         TRIANGLES = null;
         if (param0 != -58) {
-          field_c = '￲';
+          keyCharacter = '￲';
         }
     }
 
@@ -176,7 +176,7 @@ final class WhirlpoolDigest {
 
     final static boolean a(int param0) {
         if (param0 != 7) {
-          field_c = 'ￃ';
+          keyCharacter = 'ￃ';
         }
         return null == CompactMeshGeometry.field_o ? AppletFocusState.focused : true;
     }

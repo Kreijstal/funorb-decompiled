@@ -105,11 +105,11 @@ final class CheckboxWidget extends InteractiveWidget {
           Math.asin((double)var11 / var13);
           if (!drone.isPlayerProtected(true)) {
             if (var7 == 0) {
-              SecondaryNodeQueue.a(drone, (byte) 113);
+              SecondaryNodeQueue.defeatDrone(drone, (byte) 113);
               return;
             }
             if (drone.armourHitsRemaining == 0) {
-              SecondaryNodeQueue.a(drone, (byte) 113);
+              SecondaryNodeQueue.defeatDrone(drone, (byte) 113);
               return;
             }
           }

@@ -61,10 +61,10 @@ abstract class RasterBuffer {
           } else {
             SocketJs5Client.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }
-          SocketJs5Client.field_s = HardwareReflectionEffect.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
+          SocketJs5Client.field_s = HardwareReflectionEffect.joinCharSequences(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
         }
         AccountStatusDialogState.activeDialog.closeDialog(param0 ^ -5);
-        SoftwareRenderBuffer.a(5178);
+        SoftwareRenderBuffer.showProgressDialog(5178);
         if (param0 == 2) {
           return;
         }

@@ -5,7 +5,7 @@ final class MidiNoteMixer extends PcmStream {
     static int field_p;
     static SpriteData[] field_q;
     IntrusiveDeque voices;
-    static int[] field_s;
+    static int[] menuRowSpacing;
     static boolean[] field_r;
     private MidiPcmStream synthesizer;
     PcmStreamMixer fadingStreams;
@@ -197,13 +197,13 @@ final class MidiNoteMixer extends PcmStream {
 
     public static void releaseStatics(byte param0) {
         if (param0 > 47) {
-          field_s = null;
+          menuRowSpacing = null;
           field_q = null;
           field_r = null;
           return;
         }
         MidiNoteMixer.releaseStatics((byte) 45);
-        field_s = null;
+        menuRowSpacing = null;
         field_q = null;
         field_r = null;
     }
@@ -292,6 +292,6 @@ final class MidiNoteMixer extends PcmStream {
 
     static {
         field_r = new boolean[]{true, false, false, false, true, false, true, false, true, false, false, false, true, false, false, false, true, false, true, false, true, false, false, false, true};
-        field_s = new int[13];
+        menuRowSpacing = new int[13];
     }
 }
