@@ -11,7 +11,7 @@ final class FadingWidget extends SingleChildWidget {
     final static boolean g(int param0) {
         if (param0 > -26) {
           nextText = (String) null;
-          if (mp.field_a < 20) {
+          if (TextureCoordinateGeneration.field_a < 20) {
             return true;
           }
           if (!ScrollViewport.g(-1)) {
@@ -25,7 +25,7 @@ final class FadingWidget extends SingleChildWidget {
           }
           return false;
         }
-        if (mp.field_a < 20) {
+        if (TextureCoordinateGeneration.field_a < 20) {
           return true;
         }
         if (!ScrollViewport.g(-1)) {

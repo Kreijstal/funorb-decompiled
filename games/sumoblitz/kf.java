@@ -87,7 +87,7 @@ final class kf extends DualLinkNode implements ft {
           }
           for (var3 = 0; 36 > var3; var3++) {
             if (25 > var3) {
-              go.field_j[var3] = var6.readUnsignedMedium((byte) 122);
+              OpenGlTexture3D.field_j[var3] = var6.readUnsignedMedium((byte) 122);
               CacheIoRequest.field_z[var3] = var6.readUnsignedShort(255);
               if (var2 >= 2) {
                 var4 = var6.readUnsignedByte(-31302);
@@ -103,7 +103,7 @@ final class kf extends DualLinkNode implements ft {
                   stackIn_19_0[stackIn_19_1] = stackIn_20_2;
                 }
               }
-              if (go.field_j[var3] != 0) {
+              if (OpenGlTexture3D.field_j[var3] != 0) {
                 TextureMetadata.field_f[var3] = true;
                 bl.field_e = var3;
               }

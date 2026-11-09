@@ -14,36 +14,36 @@ final class lt extends IntrusiveNode {
         if (param0 != 119) {
           lt.c((byte) -70);
           if (-1 == gu.field_d) {
-            if (!ju.b(-1, 1)) {
+            if (!OpenGlIndexBuffer.b(-1, 1)) {
               return false;
             }
             gu.field_d = ig.field_a.readUnsignedByte(-31302);
             ig.field_a.position = 0;
           }
           if (gu.field_d == -2) {
-            if (!ju.b(-1, 2)) {
+            if (!OpenGlIndexBuffer.b(-1, 2)) {
               return false;
             }
             gu.field_d = ig.field_a.readUnsignedShort(255);
             ig.field_a.position = 0;
           }
-          return ju.b(-1, gu.field_d);
+          return OpenGlIndexBuffer.b(-1, gu.field_d);
         }
         if (-1 == gu.field_d) {
-          if (!ju.b(-1, 1)) {
+          if (!OpenGlIndexBuffer.b(-1, 1)) {
             return false;
           }
           gu.field_d = ig.field_a.readUnsignedByte(-31302);
           ig.field_a.position = 0;
         }
         if (gu.field_d == -2) {
-          if (!ju.b(-1, 2)) {
+          if (!OpenGlIndexBuffer.b(-1, 2)) {
             return false;
           }
           gu.field_d = ig.field_a.readUnsignedShort(255);
           ig.field_a.position = 0;
         }
-        return ju.b(-1, gu.field_d);
+        return OpenGlIndexBuffer.b(-1, gu.field_d);
     }
 
     final static void c(byte param0) {

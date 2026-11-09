@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jq {
-    static mi field_a;
+    static TextureCombineSource TEXTURE;
 
     jq(fk param0, int param1, int param2, int param3) {
     }
@@ -14,7 +14,7 @@ final class jq {
           mm.field_c = qi.loadingTextTranslations[param0];
           return;
         }
-        field_a = (mi) null;
+        TEXTURE = (TextureCombineSource) null;
         pi.field_b = wh.field_w[param0];
         ek.field_k = ArenaPad.waitingForTextTranslations[param0];
         mm.field_c = qi.loadingTextTranslations[param0];
@@ -36,13 +36,13 @@ final class jq {
         if (param0 < 99) {
           Sprite var2 = (Sprite) null;
           jq.a(87, (Sprite) null);
-          field_a = null;
+          TEXTURE = null;
           return;
         }
-        field_a = null;
+        TEXTURE = null;
     }
 
     static {
-        field_a = new mi();
+        TEXTURE = new TextureCombineSource();
     }
 }

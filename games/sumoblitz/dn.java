@@ -14,7 +14,7 @@ final class dn {
     }
 
     final static String b(int param0) {
-        if (mp.field_a < 2) {
+        if (TextureCoordinateGeneration.field_a < 2) {
           return pi.field_b;
         }
         if (null != DropDownListWidget.field_H) {

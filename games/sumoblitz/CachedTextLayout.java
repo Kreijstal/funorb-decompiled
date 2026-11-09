@@ -187,7 +187,7 @@ final class CachedTextLayout extends TextLayout {
         RuntimeException var3_ref = null;
         try {
           param2 = gf.a('_', param2, false, "");
-          var3 = ji.a(param0, (byte) 117);
+          var3 = TextureFilter.a(param0, (byte) 117);
           if (param1 <= 29) {
             CachedTextLayout.e(58);
           }
@@ -395,7 +395,7 @@ final class CachedTextLayout extends TextLayout {
             kw.field_c = vf.field_c;
           }
           if (kw.field_c == vf.field_c &&
-            ju.b(-1, 1)) {
+            OpenGlIndexBuffer.b(-1, 1)) {
             var9Lifetime1 = ig.field_a.readUnsignedByte(-31302);
             ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -413,10 +413,10 @@ final class CachedTextLayout extends TextLayout {
               }
               if (var9Lifetime1 != 99) {
                 gu.field_d = -1;
-                iw.field_a = var9Lifetime1;
+                TextureFormat.field_a = var9Lifetime1;
                 kw.field_c = fm.field_b;
               } else {
-                ju.b(-1, br.b(-105));
+                OpenGlIndexBuffer.b(-1, br.b(-105));
                 HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
                 ig.field_a.position = 0;
               }
@@ -424,10 +424,10 @@ final class CachedTextLayout extends TextLayout {
           }
           if (oi.field_a == kw.field_c) {
             var9Lifetime2 = 2;
-            if (ju.b(-1, var9Lifetime2)) {
+            if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
               var10Lifetime1 = ig.field_a.readUnsignedShort(255);
               ig.field_a.position = 0;
-              if (ju.b(-1, var10Lifetime1)) {
+              if (OpenGlIndexBuffer.b(-1, var10Lifetime1)) {
                 var11 = mn.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   mn.field_g[var12] = ig.field_a.readCircumfixedString(-105);
@@ -441,7 +441,7 @@ final class CachedTextLayout extends TextLayout {
           }
           if (fm.field_b == kw.field_c &&
             lt.a((byte) 119)) {
-            if (iw.field_a != 255) {
+            if (TextureFormat.field_a != 255) {
               MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);
             } else {
               var9_ref_String = ig.field_a.readNullableString((byte) 80);
@@ -451,7 +451,7 @@ final class CachedTextLayout extends TextLayout {
             }
             kk.a((byte) -127);
             LimitedRandomAccessFile.field_g = false;
-            stackIn_57_0 = iw.field_a;
+            stackIn_57_0 = TextureFormat.field_a;
             return stackIn_57_0;
           }
           if (DisplayModeConfirmationDialog.field_O == null) {

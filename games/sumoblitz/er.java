@@ -15,7 +15,7 @@ final class er {
     final static void a(boolean param0) {
         GraphicsToolkit var2 = nq.field_h.a(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, ci.field_g, true);
-        MessageDialog.field_db = var2.createFont(hu.field_c, mn.field_b, true);
+        MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
         uq.field_a = var2.createFont(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
         qv.field_k = var2.createFont(sv.field_a, au.field_j, true);
         hc.field_e = var2.createFont(ma.field_b, DropDownWidget.field_F, true);
@@ -26,7 +26,7 @@ final class er {
         pi.field_d = ResizingDialog.a(var2, CompactMeshGeometry.field_N, (byte) -11);
         uj.field_a = ResizingDialog.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = ResizingDialog.a(var2, IntrusiveNode.field_d, (byte) -11);
-        CacheReferenceNode.field_y = ResizingDialog.a(var2, rc.field_i, (byte) -11);
+        CacheReferenceNode.field_y = ResizingDialog.a(var2, OpenGlCubeTexture.field_i, (byte) -11);
         il.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
         CacheIoWorker.field_b = ResizingDialog.a(var2, oi.field_d, (byte) -11);
         vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
@@ -59,7 +59,7 @@ final class er {
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
           uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
           CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
-          ua.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
+          OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
           ResizingDialog.a(var2, bj.field_g, (byte) -11);
           ResizingDialog.a(var2, ks.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
@@ -72,7 +72,7 @@ final class er {
           TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
           kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
-          ju.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
+          OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
           ml.field_w = DroneDebris.createToolkitSprites(sd.field_a, var2, 28513);
           ok.field_f = DroneDebris.createToolkitSprites(hp.field_n, var2, 28513);
           ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
@@ -81,7 +81,7 @@ final class er {
           DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
           DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
           kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
-          go.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
+          OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
           DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
           ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
           uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
@@ -108,7 +108,7 @@ final class er {
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
         uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
         CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
-        ua.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
+        OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
         ResizingDialog.a(var2, bj.field_g, (byte) -11);
         ResizingDialog.a(var2, ks.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
@@ -121,7 +121,7 @@ final class er {
         TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
         kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
-        ju.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
+        OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
         ml.field_w = DroneDebris.createToolkitSprites(sd.field_a, var2, 28513);
         ok.field_f = DroneDebris.createToolkitSprites(hp.field_n, var2, 28513);
         ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
@@ -130,7 +130,7 @@ final class er {
         DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
         DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
         kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
-        go.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
+        OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
         DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
         ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
         uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
@@ -297,7 +297,7 @@ final class er {
         }
         this.field_a = 0;
         if (this.field_d == 0 &&
-          tg.field_a == 98) {
+          TextureCombineOperation.field_a == 98) {
           if (this.field_g <= 0) {
             this.field_g = this.field_e;
           }
@@ -305,12 +305,12 @@ final class er {
           this.field_f = false;
         }
         if (0 == this.field_d) {
-          this.field_b = tg.field_a;
+          this.field_b = TextureCombineOperation.field_a;
         }
         if (this.field_d != 0) {
           return;
         }
-        if (99 != tg.field_a) {
+        if (99 != TextureCombineOperation.field_a) {
           return;
         }
         this.field_g = this.field_g + 1;
@@ -324,13 +324,13 @@ final class er {
         this.field_a = 0;
         this.field_b = 0;
         if (this.field_d == 0) {
-          this.field_b = tg.field_a;
+          this.field_b = TextureCombineOperation.field_a;
         }
         if (param0 > -18) {
           this.a(-114, -72);
         }
         if (this.field_d == 0 &&
-          tg.field_a == 96) {
+          TextureCombineOperation.field_a == 96) {
           if (this.field_g <= 0) {
             this.field_g = this.field_e;
           }
@@ -340,7 +340,7 @@ final class er {
         if (0 != this.field_d) {
           return;
         }
-        if (tg.field_a != 97) {
+        if (TextureCombineOperation.field_a != 97) {
           return;
         }
         this.field_g = this.field_g + 1;
@@ -375,7 +375,7 @@ final class er {
           return;
         }
         if (0 == this.field_d) {
-          this.field_b = tg.field_a;
+          this.field_b = TextureCombineOperation.field_a;
         }
     }
 

@@ -53,7 +53,7 @@ final class wv {
             var4 = (String) null;
             wv.a(true, (String) null, (String) null);
           }
-          var3 = ji.a(param2, (byte) 81);
+          var3 = TextureFilter.a(param2, (byte) 81);
           stackIn_7_0 = (-1 != param1.indexOf(param2)) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

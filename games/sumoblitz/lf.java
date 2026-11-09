@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lf extends ka {
-    static tg field_e;
-    static mp field_c;
+    static TextureCombineOperation REPLACE;
+    static TextureCoordinateGeneration DISABLED;
     static String[] monthNames;
 
     final static void a(int param0, byte param1) {
@@ -63,7 +63,7 @@ final class lf extends ka {
           var1 = var5;
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            io.a(109, var3);
+            GpuDataType.a(109, var3);
           }
           if (param0 > -113) {
             lf.a(-101, 66);
@@ -80,8 +80,8 @@ final class lf extends ka {
         if (param0 != 1821625704) {
           lf.b(-118);
         }
-        field_e = null;
-        field_c = null;
+        REPLACE = null;
+        DISABLED = null;
         monthNames = null;
     }
 
@@ -123,8 +123,8 @@ final class lf extends ka {
     }
 
     static {
-        field_e = new tg();
+        REPLACE = new TextureCombineOperation();
         monthNames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        field_c = new mp();
+        DISABLED = new TextureCoordinateGeneration();
     }
 }

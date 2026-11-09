@@ -12,7 +12,7 @@ final class hw {
           if (param2 != 23295) {
             field_b = (boolean[]) null;
           }
-          mi.field_b.put(param1, param0);
+          TextureCombineSource.field_b.put(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

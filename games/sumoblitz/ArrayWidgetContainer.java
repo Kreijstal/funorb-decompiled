@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetMarker {
     UiWidget[] children;
-    static ji field_y;
+    static TextureFilter LINEAR;
     static String unableToConnectToText;
 
     boolean requestFocus(UiWidget root, byte guard) {
@@ -490,7 +490,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
         try {
           if (param0 != null &&
             param0.length() >= bn.field_T) {
-            if (param0.length() > or.field_k) {
+            if (param0.length() > OpenGlRectangleTexture.field_k) {
               return true;
             }
             if (param1 == 30996) {
@@ -633,7 +633,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
 
     public static void releaseStatics(int param0) {
         unableToConnectToText = null;
-        field_y = null;
+        LINEAR = null;
         if (param0 != 0) {
           String var2 = (String) null;
           ArrayWidgetContainer.a((String) null, -34);
@@ -659,7 +659,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           var12 = this.children;
           var8 = var12;
           if (guard > -42) {
-            field_y = (ji) null;
+            LINEAR = (TextureFilter) null;
           }
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
@@ -708,7 +708,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
     }
 
     static {
-        field_y = new ji();
+        LINEAR = new TextureFilter();
         unableToConnectToText = "Unable to connect to the data server. Please check any firewall you are using.";
     }
 }

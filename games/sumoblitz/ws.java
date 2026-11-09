@@ -7,7 +7,7 @@ final class ws {
     static int field_b;
     static String toKeepFullscreenOrText;
 
-    final static int a(io param0, byte param1) {
+    final static int glDataType(GpuDataType type, byte guard) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -22,38 +22,38 @@ final class ws {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 <= 116) {
+          if (guard <= 116) {
             field_b = -70;
           }
-          if (param0 == io.field_i) {
+          if (type == GpuDataType.BYTE) {
             stackIn_25_0 = 5120;
             return stackIn_25_0;
           }
-          if (param0 == io.field_f) {
+          if (type == GpuDataType.SHORT) {
             stackIn_5_0 = 5122;
             return stackIn_5_0;
           }
-          if (io.field_c == param0) {
+          if (GpuDataType.INT == type) {
             stackIn_8_0 = 5124;
             return stackIn_8_0;
           }
-          if (param0 == io.field_g) {
+          if (type == GpuDataType.UNSIGNED_BYTE) {
             stackIn_11_0 = 5121;
             return stackIn_11_0;
           }
-          if (param0 == io.field_k) {
+          if (type == GpuDataType.UNSIGNED_SHORT) {
             stackIn_23_0 = 5123;
             return stackIn_23_0;
           }
-          if (param0 == io.field_h) {
+          if (type == GpuDataType.UNSIGNED_INT) {
             stackIn_15_0 = 5125;
             return stackIn_15_0;
           }
-          if (param0 == io.field_e) {
+          if (type == GpuDataType.HALF_FLOAT) {
             stackIn_21_0 = 5131;
             return stackIn_21_0;
           }
-          if (param0 != io.field_d) {
+          if (type != GpuDataType.FLOAT) {
             throw new IllegalArgumentException("");
           }
           stackIn_19_0 = 5126;
@@ -63,12 +63,12 @@ final class ws {
           var2 = decompiledCaughtException;
           stackIn_29_0 = var2;
           stackIn_29_1 = new StringBuilder().append("ws.B(");
-          if (param0 == null) {
+          if (type == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(guard).append(')').toString());
         }
     }
 

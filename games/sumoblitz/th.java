@@ -111,9 +111,9 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-            fb.field_a = fb.field_a + iw.elapsedTicks;
+            fb.field_a = fb.field_a + TextureFormat.elapsedTicks;
           } else {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }
           if (BufferedCacheFile.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
@@ -178,9 +178,9 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             ts.field_a = ts.field_a + nq.field_i;
           }
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - iw.elapsedTicks;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - TextureFormat.elapsedTicks;
           } else {
-            fb.field_a = fb.field_a - iw.elapsedTicks;
+            fb.field_a = fb.field_a - TextureFormat.elapsedTicks;
           }
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + IntrusiveNodeHashTable.field_c;

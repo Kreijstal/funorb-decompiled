@@ -150,7 +150,7 @@ public final class Sumoblitz extends GameClientShell {
                 }
               }
               ra.field_e = 3;
-              rc.field_k = nj.field_b;
+              OpenGlCubeTexture.field_k = nj.field_b;
               eh.field_a = 29;
               if (var3 == 0) {
                 return;
@@ -168,7 +168,7 @@ public final class Sumoblitz extends GameClientShell {
           stackIn_58_0 = ph.gameplaySession;
           stackIn_59_1 = (-1 == nj.field_b);
           ((GameplaySession) (Object) stackIn_58_0).update(stackIn_59_1, (byte) -88);
-          if (~rc.field_k != ~nj.field_b) {
+          if (~OpenGlCubeTexture.field_k != ~nj.field_b) {
             eh.field_a = eh.field_a + 1;
             if (eh.field_a != 30) {
               return;
@@ -177,7 +177,7 @@ public final class Sumoblitz extends GameClientShell {
               mr.field_f = null;
             }
             eh.field_a = 0;
-            nj.field_b = rc.field_k;
+            nj.field_b = OpenGlCubeTexture.field_k;
             if (var3 == 0) {
               return;
             }
@@ -253,7 +253,7 @@ public final class Sumoblitz extends GameClientShell {
               LegacyOpenGlGraphicsHeap.a((byte) 122, var2, WhirlpoolDigest.a(param0 ^ 7));
               return;
             }
-            if (!sa.field_j) {
+            if (!OpenGlTexture2D.field_j) {
               SoftwareRenderBuffer.a(-62, var2);
               return;
             }
@@ -269,7 +269,7 @@ public final class Sumoblitz extends GameClientShell {
             var3 = nq.field_h.a(-115);
             var3.clear(0);
             ph.gameplaySession.render(param0 ^ 120, var3, false);
-            if (rc.field_k == nj.field_b) {
+            if (OpenGlCubeTexture.field_k == nj.field_b) {
               if (-1 != nj.field_b) {
                 LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var3, -2355);
                 if (var10 != 0) {
@@ -277,8 +277,8 @@ public final class Sumoblitz extends GameClientShell {
                   if (-1 != nj.field_b) {
                     LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var4_int + 255, var3, -2355);
                   }
-                  if (-1 != rc.field_k) {
-                    LegacyOpenGlEffectManager.field_g[rc.field_k].render(var4_int, var3, -2355);
+                  if (-1 != OpenGlCubeTexture.field_k) {
+                    LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var4_int, var3, -2355);
                   }
                 }
               }
@@ -287,8 +287,8 @@ public final class Sumoblitz extends GameClientShell {
               if (-1 != nj.field_b) {
                 LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var4_int + 255, var3, -2355);
               }
-              if (-1 != rc.field_k) {
-                LegacyOpenGlEffectManager.field_g[rc.field_k].render(var4_int, var3, -2355);
+              if (-1 != OpenGlCubeTexture.field_k) {
+                LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var4_int, var3, -2355);
               }
             }
             if (so.a((byte) 103)) {
@@ -366,7 +366,7 @@ public final class Sumoblitz extends GameClientShell {
                   if (var10 != 0) {
                     var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + gi.field_h) / 2;
                     var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                    ls.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
+                    VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                     SoftwareTransform3D.a(false, param0 ^ 121);
                     this.field_F = true;
                   }
@@ -374,7 +374,7 @@ public final class Sumoblitz extends GameClientShell {
               } else {
                 var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.width + gi.field_h) / 2;
                 var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                ls.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
+                VertexAttribute.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                 SoftwareTransform3D.a(false, param0 ^ 121);
                 this.field_F = true;
               }
@@ -427,7 +427,7 @@ public final class Sumoblitz extends GameClientShell {
           if (null != vf.field_a) {
             ArchiveCatalog.a(vf.field_a, -5);
             vf.field_a = null;
-            ls.b(param0 - 21961);
+            VertexAttribute.b(param0 - 21961);
           }
           if (param0 != 21961) {
             this.advanceScreenTransition((byte) -69);
@@ -499,7 +499,7 @@ public final class Sumoblitz extends GameClientShell {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          boolean decompiledSharedTail0 = !(sa.field_j);
+          boolean decompiledSharedTail0 = !(OpenGlTexture2D.field_j);
           if (!decompiledSharedTail0) {
             if (!ClientException.a(0)) {
               ou.d((byte) -112);
@@ -573,7 +573,7 @@ public final class Sumoblitz extends GameClientShell {
             (decompiledSharedTail0)) {
             ModalDialog.a((byte) 55, OpenGlUnderwaterEffect.field_r);
             if (this.a(true, true)) {
-              sa.field_j = true;
+              OpenGlTexture2D.field_j = true;
             }
           }
           var2_int = 35 % ((37 - param0) / 61);
@@ -711,7 +711,7 @@ public final class Sumoblitz extends GameClientShell {
                                     decompiledFrameRemainder6 = (var11 != 0);
                                   }
                                   if (decompiledFrameRemainder6) {
-                                    if (!sa.field_j) {
+                                    if (!OpenGlTexture2D.field_j) {
                                       SoftwareRenderBuffer.a(-117, var3);
                                       decompiledFrameRemainder6 = (var11 != 0);
                                     }
@@ -729,7 +729,7 @@ public final class Sumoblitz extends GameClientShell {
                                           var4 = nq.field_h.a(-97);
                                           var4.clear(0);
                                           ph.gameplaySession.render(124, var4, false);
-                                          if (~rc.field_k == ~nj.field_b) {
+                                          if (~OpenGlCubeTexture.field_k == ~nj.field_b) {
                                             if (-1 != nj.field_b) {
                                               LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
                                               if (var11 != 0) {
@@ -737,8 +737,8 @@ public final class Sumoblitz extends GameClientShell {
                                                 if (-1 != nj.field_b) {
                                                   LegacyOpenGlEffectManager.field_g[nj.field_b].render(255 - var5_int, var4, -2355);
                                                 }
-                                                if (rc.field_k != -1) {
-                                                  LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                                                if (OpenGlCubeTexture.field_k != -1) {
+                                                  LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                                                 }
                                               }
                                             }
@@ -747,8 +747,8 @@ public final class Sumoblitz extends GameClientShell {
                                             if (-1 != nj.field_b) {
                                               LegacyOpenGlEffectManager.field_g[nj.field_b].render(255 - var5_int, var4, -2355);
                                             }
-                                            if (rc.field_k != -1) {
-                                              LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                                            if (OpenGlCubeTexture.field_k != -1) {
+                                              LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                                             }
                                           }
                                           if (so.a((byte) 124)) {
@@ -827,7 +827,7 @@ public final class Sumoblitz extends GameClientShell {
                                             if (sj.a(-126)) {
                                               var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
                                               var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                                              ls.a(var6_int, -45, var7);
+                                              VertexAttribute.a(var6_int, -45, var7);
                                               SoftwareTransform3D.a(false, -66);
                                               this.field_F = true;
                                               if (var11 != 0 &&
@@ -879,7 +879,7 @@ public final class Sumoblitz extends GameClientShell {
                                   ff.a((byte) -62, SecondaryNodeDeque.field_d);
                                   oq.a(-24233);
                                   SecondaryNodeDeque.field_d = null;
-                                  ls.b(0);
+                                  VertexAttribute.b(0);
                                   return false;
                                 }
                                 NameSuggestionsPanel.a(20, 60.0f, ProxySocketConnector.a(ArenaPad.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, b.loadingLevelsText));
@@ -897,10 +897,10 @@ public final class Sumoblitz extends GameClientShell {
                         NameSuggestionsPanel.a(20, 30.0f, ProxySocketConnector.a(jf.waitingForInstrumentsText, (byte) 85, 0, gg.field_r, ArchiveIndex.loadingInstrumentsText));
                         return false;
                       }
-                      NameSuggestionsPanel.a(20, 20.0f, pt.a("", er.field_c, GameClientShell.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
+                      NameSuggestionsPanel.a(20, 20.0f, pt.a("", er.field_c, GameClientShell.waitingForSoundEffectsText, true, VertexLayout.loadingSoundEffectsText));
                       return false;
                     }
-                    NameSuggestionsPanel.a(20, 10.0f, pt.a("", SecondaryNodeDeque.field_d, GameClientShell.waitingForSoundEffectsText, true, hq.loadingSoundEffectsText));
+                    NameSuggestionsPanel.a(20, 10.0f, pt.a("", SecondaryNodeDeque.field_d, GameClientShell.waitingForSoundEffectsText, true, VertexLayout.loadingSoundEffectsText));
                     return false;
                   }
                   NameSuggestionsPanel.a(20, 5.0f, pt.a("arial13", vb.field_J, ToolkitRasterBuffer.waitingForFontsText, true, ow.loadingFontsText));
@@ -922,7 +922,7 @@ public final class Sumoblitz extends GameClientShell {
                 decompiledFrameRemainder5 = (var11 != 0);
               }
               if (decompiledFrameRemainder5) {
-                if (!sa.field_j) {
+                if (!OpenGlTexture2D.field_j) {
                   SoftwareRenderBuffer.a(-121, var3);
                   decompiledFrameRemainder5 = (var11 != 0);
                 }
@@ -937,14 +937,14 @@ public final class Sumoblitz extends GameClientShell {
                     var4 = nq.field_h.a(-121);
                     var4.clear(0);
                     ph.gameplaySession.render(123, var4, false);
-                    boolean decompiledSharedTail7 = (~rc.field_k == ~nj.field_b);
+                    boolean decompiledSharedTail7 = (~OpenGlCubeTexture.field_k == ~nj.field_b);
                     if (!decompiledSharedTail7) {
                       var5_int = eh.field_a * 255 / 30;
                       if (nj.field_b != -1) {
                         LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
                       }
-                      if (rc.field_k != -1) {
-                        LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                      if (OpenGlCubeTexture.field_k != -1) {
+                        LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                       }
                       decompiledSharedTail7 = (var11 != 0);
                     }
@@ -1028,7 +1028,7 @@ public final class Sumoblitz extends GameClientShell {
                           if (var11 != 0) {
                             var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
                             var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
-                            ls.a(var6_int, -66, var7);
+                            VertexAttribute.a(var6_int, -66, var7);
                             SoftwareTransform3D.a(false, -124);
                             this.field_F = true;
                           }
@@ -1036,7 +1036,7 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
                         var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
-                        ls.a(var6_int, -66, var7);
+                        VertexAttribute.a(var6_int, -66, var7);
                         SoftwareTransform3D.a(false, -124);
                         this.field_F = true;
                       }
@@ -1074,7 +1074,7 @@ public final class Sumoblitz extends GameClientShell {
               }
               dw.a(er.field_c, 105);
               er.field_c = null;
-              ls.b(0);
+              VertexAttribute.b(0);
               return false;
             }
             if (null != ForceFieldRingEffect.field_s) {
@@ -1087,7 +1087,7 @@ public final class Sumoblitz extends GameClientShell {
                 decompiledFrameRemainder3 = (var11 != 0);
               }
               if (decompiledFrameRemainder3) {
-                if (!sa.field_j) {
+                if (!OpenGlTexture2D.field_j) {
                   SoftwareRenderBuffer.a(-73, var3);
                   decompiledFrameRemainder3 = (var11 != 0);
                 }
@@ -1103,14 +1103,14 @@ public final class Sumoblitz extends GameClientShell {
                     var4 = nq.field_h.a(-128);
                     var4.clear(0);
                     ph.gameplaySession.render(124, var4, false);
-                    boolean decompiledSharedTail6 = (~nj.field_b == ~rc.field_k);
+                    boolean decompiledSharedTail6 = (~nj.field_b == ~OpenGlCubeTexture.field_k);
                     if (!decompiledSharedTail6) {
                       var5_int = 255 * eh.field_a / 30;
                       if (nj.field_b != -1) {
                         LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
                       }
-                      if (rc.field_k != -1) {
-                        LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                      if (OpenGlCubeTexture.field_k != -1) {
+                        LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                       }
                       decompiledSharedTail6 = (var11 != 0);
                     }
@@ -1193,7 +1193,7 @@ public final class Sumoblitz extends GameClientShell {
                           if (var11 != 0) {
                             var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
                             var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                            ls.a(var6_int, -82, var7);
+                            VertexAttribute.a(var6_int, -82, var7);
                             SoftwareTransform3D.a(false, -100);
                             this.field_F = true;
                           }
@@ -1201,7 +1201,7 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
                         var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                        ls.a(var6_int, -82, var7);
+                        VertexAttribute.a(var6_int, -82, var7);
                         SoftwareTransform3D.a(false, -100);
                         this.field_F = true;
                       }
@@ -1239,16 +1239,16 @@ public final class Sumoblitz extends GameClientShell {
               }
               au.a(-1509, ForceFieldRingEffect.field_s);
               ForceFieldRingEffect.field_s = null;
-              ls.b(0);
+              VertexAttribute.b(0);
               return false;
             }
             if (gg.field_r != null) {
               if (!il.a(false, gg.field_r)) {
-                ls.b(0);
+                VertexAttribute.b(0);
                 return false;
               }
               gg.field_r = null;
-              ls.b(0);
+              VertexAttribute.b(0);
               return false;
             }
             if (GraphicsToolkitManager.field_d != null) {
@@ -1261,7 +1261,7 @@ public final class Sumoblitz extends GameClientShell {
                 decompiledFrameRemainder1 = (var11 != 0);
               }
               if (decompiledFrameRemainder1) {
-                if (!sa.field_j) {
+                if (!OpenGlTexture2D.field_j) {
                   SoftwareRenderBuffer.a(-67, var3);
                   decompiledFrameRemainder1 = (var11 != 0);
                 }
@@ -1280,14 +1280,14 @@ public final class Sumoblitz extends GameClientShell {
                       var4 = nq.field_h.a(-120);
                       var4.clear(0);
                       ph.gameplaySession.render(122, var4, false);
-                      boolean decompiledSharedTail4 = (~nj.field_b == ~rc.field_k);
+                      boolean decompiledSharedTail4 = (~nj.field_b == ~OpenGlCubeTexture.field_k);
                       if (!decompiledSharedTail4) {
                         var5_int = eh.field_a * 255 / 30;
                         if (-1 != nj.field_b) {
                           LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
                         }
-                        if (rc.field_k != -1) {
-                          LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                        if (OpenGlCubeTexture.field_k != -1) {
+                          LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                         }
                         decompiledSharedTail4 = (var11 != 0);
                       }
@@ -1371,7 +1371,7 @@ public final class Sumoblitz extends GameClientShell {
                         if (sj.a(-61)) {
                           var6_int = (-SoftwareRasterizer.width + gi.field_h) * 0 / 2;
                           var7 = (wq.field_b - SoftwareRasterizer.height) * 0 / 2;
-                          ls.a(var6_int, -95, var7);
+                          VertexAttribute.a(var6_int, -95, var7);
                           SoftwareTransform3D.a(false, -109);
                           this.field_F = true;
                           if (var11 != 0 &&
@@ -1418,7 +1418,7 @@ public final class Sumoblitz extends GameClientShell {
               }
               sb.a(-9937, GraphicsToolkitManager.field_d);
               GraphicsToolkitManager.field_d = null;
-              ls.b(0);
+              VertexAttribute.b(0);
               return false;
             }
             if (null == pi.field_c) {
@@ -1436,7 +1436,7 @@ public final class Sumoblitz extends GameClientShell {
                     }
                   } else {
                     nj.field_b = 0;
-                    bp.a(50, 26175);
+                    OpenGlTexture.a(50, 26175);
                     ByteArrayStorage.compatibilityNoOp(50, -106);
                     mo.a(86, 0);
                     ek.b(true, 0);
@@ -1463,7 +1463,7 @@ public final class Sumoblitz extends GameClientShell {
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (!sa.field_j) {
+              if (!OpenGlTexture2D.field_j) {
                 SoftwareRenderBuffer.a(-62, var3);
                 decompiledFrameRemainder0 = (var11 != 0);
               }
@@ -1479,14 +1479,14 @@ public final class Sumoblitz extends GameClientShell {
                   var4 = nq.field_h.a(-125);
                   var4.clear(0);
                   ph.gameplaySession.render(119, var4, false);
-                  boolean decompiledSharedTail1 = (~rc.field_k == ~nj.field_b);
+                  boolean decompiledSharedTail1 = (~OpenGlCubeTexture.field_k == ~nj.field_b);
                   if (!decompiledSharedTail1) {
                     var5_int = eh.field_a * 255 / 30;
                     if (nj.field_b != -1) {
                       LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
                     }
-                    if (-1 != rc.field_k) {
-                      LegacyOpenGlEffectManager.field_g[rc.field_k].render(var5_int, var4, -2355);
+                    if (-1 != OpenGlCubeTexture.field_k) {
+                      LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                     }
                     decompiledSharedTail1 = (var11 != 0);
                   }
@@ -1566,7 +1566,7 @@ public final class Sumoblitz extends GameClientShell {
                     if (sj.a(-67)) {
                       var6_int = 0 * (gi.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (-SoftwareRasterizer.height + wq.field_b) * 0 / 2;
-                      ls.a(var6_int, -53, var7);
+                      VertexAttribute.a(var6_int, -53, var7);
                       SoftwareTransform3D.a(false, -101);
                       this.field_F = true;
                       if (var11 != 0 &&
@@ -1615,7 +1615,7 @@ public final class Sumoblitz extends GameClientShell {
             pi.field_c = null;
             kf.field_v = null;
             dq.field_Z = null;
-            ls.b(0);
+            VertexAttribute.b(0);
             return false;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -1850,8 +1850,8 @@ public final class Sumoblitz extends GameClientShell {
           bt.releaseStatics((byte) -21);
           hp.releaseStatics(1);
           HardwareGraphicsToolkit.releaseStatics(8);
-          ls.releaseStatics(2);
-          io.releaseStatics(0);
+          VertexAttribute.releaseStatics(2);
+          GpuDataType.releaseStatics(0);
           sk.releaseStatics(128);
           AffineTransform3D.releaseStatics((byte) 49);
           hv.releaseStatics(-7520);
@@ -1862,13 +1862,13 @@ public final class Sumoblitz extends GameClientShell {
           em.releaseStatics(true);
           il.releaseStatics(26238);
           jl.releaseStatics(786336);
-          hq.releaseStatics((byte) 101);
+          VertexLayout.releaseStatics((byte) 101);
           gu.releaseStatics(true);
-          mi.releaseStatics(false);
-          mp.releaseStatics((byte) -100);
-          hu.releaseStatics(61303);
-          ck.releaseStatics(-99);
-          sc.releaseStatics(false);
+          TextureCombineSource.releaseStatics(false);
+          TextureCoordinateGeneration.releaseStatics((byte) -100);
+          VertexStreamLayout.releaseStatics(61303);
+          PrimitiveType.releaseStatics(-99);
+          OpenGlVertexBuffer.releaseStatics(false);
           rs.releaseStatics(-26791);
           CachedTextLayout.d(0);
           DraggableWidget.releaseStatics(-1);
@@ -1920,7 +1920,7 @@ public final class Sumoblitz extends GameClientShell {
           gr.releaseStatics((byte) -19);
           mk.releaseStatics(-25140);
           ei.releaseStatics(-124);
-          ji.releaseStatics(0);
+          TextureFilter.releaseStatics(0);
           HardwareGraphicsHeap.releaseStatics(124);
           jm.a(-23787);
           vu.releaseStatics((byte) -69);
@@ -1934,15 +1934,15 @@ public final class Sumoblitz extends GameClientShell {
           ff.releaseStatics(param0);
           ab.releaseStatics(64);
           sq.releaseStatics(-127);
-          rc.releaseStatics(124);
-          go.releaseStatics((byte) -17);
+          OpenGlCubeTexture.releaseStatics(124);
+          OpenGlTexture3D.releaseStatics((byte) -17);
           OpenGlUnderwaterEffect.releaseStatics(12);
           OpenGlTransparentWaterEffect.d((byte) 79);
           OpenGlEnvironmentWaterEffect.releaseStatics(!param0);
           oh.releaseStatics((byte) -60);
-          ua.releaseStatics((byte) 13);
-          ju.releaseStatics(param0);
-          fq.releaseStatics(123);
+          OpenGlBuffer.releaseStatics((byte) 13);
+          OpenGlIndexBuffer.releaseStatics(param0);
+          OpenGlVertexLayout.releaseStatics(123);
           NodeHashTableIterator.releaseStatics(1);
           SecondaryNodeDequeIterator.releaseStatics(-95);
           LegacyOpenGlSpriteMask.releaseStatics(!param0);
@@ -2056,7 +2056,7 @@ public final class Sumoblitz extends GameClientShell {
               var4 = param1;
               if (var4 == 1) {
                 var3_int = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
-                PlayerDrone.playSample(-113, rc.field_l[22 + var3_int]);
+                PlayerDrone.playSample(-113, OpenGlCubeTexture.field_l[22 + var3_int]);
                 if (var5 == 0) {
                   return;
                 }

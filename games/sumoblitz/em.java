@@ -4,7 +4,7 @@
 abstract class em extends pt {
     static IntrusiveDeque field_d;
 
-    abstract ef b(int param0);
+    abstract CubeTexture b(int param0);
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {

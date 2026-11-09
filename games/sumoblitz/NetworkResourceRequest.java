@@ -3,13 +3,13 @@
  */
 final class NetworkResourceRequest extends ResourceRequest {
     static float[] field_v;
-    static mi field_y;
+    static TextureCombineSource PRIMARY_COLOR;
     int blockPosition;
     PacketBuffer response;
     byte paddingBytes;
 
     public static void clearStaticState(byte guard) {
-        field_y = null;
+        PRIMARY_COLOR = null;
         field_v = null;
         if (guard != 62) {
           ResourceArchive var2 = (ResourceArchive) null;
@@ -103,7 +103,7 @@ final class NetworkResourceRequest extends ResourceRequest {
 
     static {
         field_v = new float[4];
-        field_y = new mi();
+        PRIMARY_COLOR = new TextureCombineSource();
         ByteArrayStorage.compatibilityNoOp(50, -120);
     }
 }

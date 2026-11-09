@@ -16,7 +16,7 @@ final class gn {
           byte[] var3 = (byte[]) null;
           gn.whirlpoolDigest((byte[]) null, (byte) -29, -53, 2);
         }
-        PlayerDrone.playSample(-125, rc.field_l[param0]);
+        PlayerDrone.playSample(-125, OpenGlCubeTexture.field_l[param0]);
     }
 
     final static byte[] whirlpoolDigest(byte[] bytes, byte guard, int offset, int length) {

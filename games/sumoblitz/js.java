@@ -198,8 +198,8 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           var1 = ig.field_a;
           var2 = var1.readUnsignedByte(-31302);
           if (var2 == 0) {
-            if (io.field_b == null) {
-              io.field_b = new ci(128);
+            if (GpuDataType.field_b == null) {
+              GpuDataType.field_b = new ci(128);
               jb.field_e = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(-31302) != 1) ? 0 : 1;
@@ -217,12 +217,12 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
             if (null == var5) {
               var5 = is.a((byte) 122, var6);
               if (var5 != null) {
-                io.field_b.a((long)var7.hashCode(), -8156, var5);
+                GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
               }
             }
             if (null == var5) {
               var5 = new cn();
-              io.field_b.a((long)var7.hashCode(), -8156, var5);
+              GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
               fieldTemp$0 = jb.field_e;
               jb.field_e = jb.field_e + 1;
               var5.field_kb = fieldTemp$0;
@@ -269,9 +269,9 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           }
           var4_ref_StringLifetime1 = var1.readCp1252String(-1);
           var5_ref = var1.readCp1252String(-1);
-          var6_ref = hu.a(var4_ref_StringLifetime1, (byte) 15);
+          var6_ref = VertexStreamLayout.a(var4_ref_StringLifetime1, (byte) 15);
           if (null == var6_ref) {
-            var6_ref = hu.a(var5_ref, (byte) 71);
+            var6_ref = VertexStreamLayout.a(var5_ref, (byte) 71);
             if (var6_ref != null) {
               wr.field_G.a((long)uk.a(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
             }

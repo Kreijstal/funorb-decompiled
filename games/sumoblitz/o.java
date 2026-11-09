@@ -7,7 +7,7 @@ final class o {
 
     final static void a(int param0) {
         TextureMetadata.field_f[oh.levelIndex] = true;
-        jk.field_a = iw.elapsedTicks;
+        jk.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
           qn.field_d[oh.levelIndex] = true;
         }
@@ -15,19 +15,19 @@ final class o {
           up.field_g[oh.levelIndex] = true;
         }
         of.a((byte) -104);
-        ju.g(123);
+        OpenGlIndexBuffer.g(123);
         if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }
         if (!(oh.levelIndex <= bl.field_e)) {
           bl.field_e = oh.levelIndex;
         }
-        int var1 = iw.elapsedTicks;
+        int var1 = TextureFormat.elapsedTicks;
         if (!(var1 >= CacheIoRequest.field_z[oh.levelIndex])) {
           CacheIoRequest.field_z[oh.levelIndex] = var1;
         }
-        if (go.field_j[oh.levelIndex] < FadingWidget.score) {
-          go.field_j[oh.levelIndex] = FadingWidget.score;
+        if (OpenGlTexture3D.field_j[oh.levelIndex] < FadingWidget.score) {
+          OpenGlTexture3D.field_j[oh.levelIndex] = FadingWidget.score;
         }
         if (param0 != 0) {
           field_a = (String) null;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sk {
-    nh field_e;
-    nh field_f;
+    Texture3D field_e;
+    Texture3D field_f;
     static SpriteData[] field_c;
     boolean field_g;
     private HardwareGraphicsToolkit field_a;
-    ru[] field_d;
-    private ru[] field_b;
+    Texture2D[] field_d;
+    private Texture2D[] field_b;
 
     final boolean a(int param0) {
         byte[] var22 = null;
@@ -78,7 +78,7 @@ final class sk {
               }
             }
           }
-          this.field_e = this.field_a.a(true, nl.field_p, 16, 128, var24, 128);
+          this.field_e = this.field_a.a(true, nl.RGBA, 16, 128, var24, 128);
         }
         if (param0 > -120) {
           this.field_g = true;
@@ -180,31 +180,31 @@ final class sk {
           this.field_a = param0;
           this.field_g = this.field_a.field_Eb;
           if (this.field_g &&
-            !this.field_a.a((byte) -42, io.field_g, ps.field_c)) {
+            !this.field_a.a((byte) -42, GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA)) {
             this.field_g = false;
           }
           if (!this.field_g &&
-            !this.field_a.a(io.field_g, ps.field_c, 6)) {
+            !this.field_a.a(GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA, 6)) {
             return;
           }
           InwardSparkParticle.f(23369);
           if (!this.field_g) {
-            this.field_d = new ru[16];
+            this.field_d = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var17 = iq.a(pd.field_n, 14381, 32768, var2_int * 32768);
-              this.field_d[var2_int] = this.field_a.a(var17, 128, 128, ps.field_c, 0, true);
+              this.field_d[var2_int] = this.field_a.a(var17, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
-            this.field_b = new ru[16];
+            this.field_b = new Texture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var18 = iq.a(mk.field_d, 14381, 32768, 32768 * var2_intLifetime1);
-              this.field_b[var2_intLifetime1] = this.field_a.a(var18, 128, 128, ps.field_c, 0, true);
+              this.field_b[var2_intLifetime1] = this.field_a.a(var18, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             return;
           }
           var15 = ab.extractByteArray(false, pd.field_n, 0);
-          this.field_f = this.field_a.a(true, ps.field_c, 16, 128, var15, 128);
+          this.field_f = this.field_a.a(true, ps.LUMINANCE_ALPHA, 16, 128, var15, 128);
           var16 = ab.extractByteArray(false, mk.field_d, 0);
-          this.field_a.a(true, ps.field_c, 16, 128, var16, 128);
+          this.field_a.a(true, ps.LUMINANCE_ALPHA, 16, 128, var16, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

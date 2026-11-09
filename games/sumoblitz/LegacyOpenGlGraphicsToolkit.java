@@ -250,7 +250,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           if (incrementValue$1 > 5) {
             throw new RuntimeException("");
           }
-          tg.a(1000L, (byte) 87);
+          TextureCombineOperation.a(1000L, (byte) 87);
         }
     }
 

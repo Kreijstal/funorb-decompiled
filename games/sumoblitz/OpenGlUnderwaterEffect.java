@@ -15,7 +15,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     private wg field_m;
     private boolean field_h;
     private wg field_j;
-    private ru field_o;
+    private Texture2D field_o;
     private boolean field_l;
     static int field_i;
     static int[] field_p;
@@ -135,7 +135,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
               return;
             }
             this.field_o = this.field_b.a(new int[]{0, -1}, 1, false, -119, 2);
-            this.field_o.a(false, false, true);
+            this.field_o.setWrap(false, false, true);
             this.field_u = true;
             return;
           }
@@ -169,15 +169,15 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     final void c(boolean param0) {
         this.field_b.g(1, -119);
-        this.field_b.a((ed) null, 113);
-        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-        this.field_b.a(jq.field_a, 0, 0);
-        this.field_b.a(mm.field_h, 2, 0);
-        this.field_b.a(jq.field_a, 0, true);
+        this.field_b.a((GpuTexture) null, 113);
+        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.field_b.a(jq.TEXTURE, 0, 0);
+        this.field_b.a(mm.CONSTANT, 2, 0);
+        this.field_b.a(jq.TEXTURE, 0, true);
         this.field_b.g(0, -108);
         if (this.field_h) {
-          this.field_b.a(jq.field_a, 0, 0);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(jq.TEXTURE, 0, 0);
+          this.field_b.a(jq.TEXTURE, 0, true);
           this.field_h = false;
         }
         if (this.field_l) {
@@ -203,14 +203,14 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     final static void d(byte param0) {
         int var1 = uv.b(-25843);
         int var2 = fu.e((byte) 78);
-        CompactMeshGeometry.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + hu.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
+        CompactMeshGeometry.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
         if (param0 == -7) {
           sj.a((byte) 124);
           return;
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -222,8 +222,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           if (param2 != null) {
             if (this.field_h) {
-              this.field_b.a(jq.field_a, 0, 0);
-              this.field_b.a(jq.field_a, 0, true);
+              this.field_b.a(jq.TEXTURE, 0, 0);
+              this.field_b.a(jq.TEXTURE, 0, true);
               this.field_h = false;
             }
             this.field_b.a(param2, 121);
@@ -235,8 +235,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           this.field_b.a(this.field_b.field_D, 97);
           this.field_b.h(113, 1);
-          this.field_b.a(FontMetrics.field_a, 0, 0);
-          this.field_b.a(FontMetrics.field_a, 0, true);
+          this.field_b.a(FontMetrics.PREVIOUS, 0, 0);
+          this.field_b.a(FontMetrics.PREVIOUS, 0, true);
           this.field_h = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,10 +264,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.field_e = param0 ? true : false;
           this.field_b.g(1, -112);
           this.field_b.a(this.field_o, param1 - 20070);
-          this.field_b.a((byte) -83, lf.field_e, ua.field_n);
-          this.field_b.a(mm.field_h, 0, 0);
-          this.field_b.a((byte) 85, 2, true, false, jq.field_a);
-          this.field_b.a(FontMetrics.field_a, 0, true);
+          this.field_b.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.field_b.a(mm.CONSTANT, 0, 0);
+          this.field_b.setColorCombineSource((byte) 85, 2, true, false, jq.TEXTURE);
+          this.field_b.a(FontMetrics.PREVIOUS, 0, true);
           this.field_b.g(0, -108);
           this.e((byte) 14);
           return;

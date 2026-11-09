@@ -12,7 +12,7 @@ abstract class uw {
         }
         long var4 = this.a((byte) -52);
         if (var4 > 0L) {
-          tg.a(var4, (byte) 110);
+          TextureCombineOperation.a(var4, (byte) 110);
         }
         return this.a(0, param1);
     }

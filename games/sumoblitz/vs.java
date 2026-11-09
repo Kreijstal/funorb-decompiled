@@ -93,8 +93,8 @@ final class vs {
               }
               ToolkitImageProducerBuffer.field_r = vb.field_I;
               vb.field_I = ContentTransitionDialog.field_Q;
-              ContentTransitionDialog.field_Q = iw.field_a;
-              iw.field_a = var5_ref_ub.opcode;
+              ContentTransitionDialog.field_Q = TextureFormat.field_a;
+              TextureFormat.field_a = var5_ref_ub.opcode;
               return true;
             }
           }
@@ -115,7 +115,7 @@ final class vs {
           while (true) {
             if (stackIn_17_0 < 0) {
               ig.field_a.position = 0;
-              if (!ju.b(-1, 1)) {
+              if (!OpenGlIndexBuffer.b(-1, 1)) {
                 return false;
               }
               lq.field_b = ig.field_a.i(255);
@@ -128,8 +128,8 @@ final class vs {
             if (jo.field_c == 0) {
               ToolkitImageProducerBuffer.field_r = vb.field_I;
               vb.field_I = ContentTransitionDialog.field_Q;
-              ContentTransitionDialog.field_Q = iw.field_a;
-              iw.field_a = lq.field_b;
+              ContentTransitionDialog.field_Q = TextureFormat.field_a;
+              TextureFormat.field_a = lq.field_b;
               lq.field_b = -1;
               return true;
             }

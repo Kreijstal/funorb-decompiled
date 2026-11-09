@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rv {
-    static ck field_b;
+    static PrimitiveType LINE_STRIP;
     static String warningIfYouQuitText;
 
     final static void a(byte param0) {
@@ -20,11 +20,11 @@ final class rv {
         if (!param0) {
           return;
         }
-        field_b = null;
+        LINE_STRIP = null;
     }
 
     static {
-        field_b = new ck();
+        LINE_STRIP = new PrimitiveType();
         warningIfYouQuitText = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

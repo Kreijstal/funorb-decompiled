@@ -211,7 +211,7 @@ final class ScrollPane extends ArrayWidgetContainer {
           var4_int = param1.groupId(0, param3);
           var5 = -112 / ((param0 + 84) / 40);
           var6 = param1.fileId(var4_int, param2, (byte) 127);
-          stackIn_1_0 = iw.a(var6, var4_int, param1, -21834);
+          stackIn_1_0 = TextureFormat.a(var6, var4_int, param1, -21834);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

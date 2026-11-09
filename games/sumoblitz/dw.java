@@ -225,21 +225,21 @@ abstract class dw implements v {
           var2Lifetime17[3] = eb.field_b.getVorbisByName(103, "small explosion4");
           var2Lifetime17[4] = eb.field_b.getVorbisByName(-96, "small explosion 5");
           TimedSceneEffect.field_n[2] = var20;
-          rc.field_l[31] = eb.field_b.getVorbisByName(53, "sleepy open1");
-          rc.field_l[13] = eb.field_b.getVorbisByName(106, "pinball bumper v4");
-          rc.field_l[1] = eb.field_b.getVorbisByName(89, "ice slide fin2");
-          rc.field_l[10] = eb.field_b.getVorbisByName(-116, "level complete1");
-          rc.field_l[14] = eb.field_b.getVorbisByName(-123, "wave start1");
-          rc.field_l[16] = eb.field_b.getVorbisByName(-113, "menu select1");
-          rc.field_l[15] = eb.field_b.getVorbisByName(75, "menu back1");
-          rc.field_l[22] = eb.field_b.getVorbisByName(34, "ball armoured hit 1");
-          rc.field_l[23] = eb.field_b.getVorbisByName(67, "ball armoured hit 2");
-          rc.field_l[24] = eb.field_b.getVorbisByName(112, "ball armoured hit 3");
+          OpenGlCubeTexture.field_l[31] = eb.field_b.getVorbisByName(53, "sleepy open1");
+          OpenGlCubeTexture.field_l[13] = eb.field_b.getVorbisByName(106, "pinball bumper v4");
+          OpenGlCubeTexture.field_l[1] = eb.field_b.getVorbisByName(89, "ice slide fin2");
+          OpenGlCubeTexture.field_l[10] = eb.field_b.getVorbisByName(-116, "level complete1");
+          OpenGlCubeTexture.field_l[14] = eb.field_b.getVorbisByName(-123, "wave start1");
+          OpenGlCubeTexture.field_l[16] = eb.field_b.getVorbisByName(-113, "menu select1");
+          OpenGlCubeTexture.field_l[15] = eb.field_b.getVorbisByName(75, "menu back1");
+          OpenGlCubeTexture.field_l[22] = eb.field_b.getVorbisByName(34, "ball armoured hit 1");
+          OpenGlCubeTexture.field_l[23] = eb.field_b.getVorbisByName(67, "ball armoured hit 2");
+          OpenGlCubeTexture.field_l[24] = eb.field_b.getVorbisByName(112, "ball armoured hit 3");
           if (param1 <= 4) {
             field_b = -118;
           }
-          rc.field_l[25] = eb.field_b.getVorbisByName(63, "ball armoured hit 4");
-          rc.field_l[26] = eb.field_b.getVorbisByName(-120, "ball armoured hit5");
+          OpenGlCubeTexture.field_l[25] = eb.field_b.getVorbisByName(63, "ball armoured hit 4");
+          OpenGlCubeTexture.field_l[26] = eb.field_b.getVorbisByName(-120, "ball armoured hit5");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dw.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

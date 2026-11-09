@@ -11,7 +11,7 @@ public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface a(int param0, int param1) {
         jagdx.IDirect3DSurface var3 = new jagdx.IDirect3DSurface(this.a);
         int var4 = this._GetBackBuffer(param0, param1, var3);
-        if (!jagdx.gv.a(var4, -1)) {
+        if (!jagdx.HResult.failed(var4, -1)) {
           return var3;
         }
         throw new jagdx.fg(String.valueOf(var4));

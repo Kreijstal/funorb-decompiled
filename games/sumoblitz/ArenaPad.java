@@ -433,10 +433,10 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            go.field_p[0].draw((this.xQ8 >> 8) - (go.field_p[0].width() >> 1), (this.yQ8 >> 8) - (go.field_p[0].height() >> 1));
+            OpenGlTexture3D.field_p[0].draw((this.xQ8 >> 8) - (OpenGlTexture3D.field_p[0].width() >> 1), (this.yQ8 >> 8) - (OpenGlTexture3D.field_p[0].height() >> 1));
             if (this.triggerCooldownTicks <= 5 &&
               (this.ageTicks >> 5) % 2 == 1) {
-              go.field_p[1].draw((this.xQ8 >> 8) - (go.field_p[1].width() >> 1), (this.yQ8 >> 8) - (go.field_p[1].height() >> 1), 1, 0, 2);
+              OpenGlTexture3D.field_p[1].draw((this.xQ8 >> 8) - (OpenGlTexture3D.field_p[1].width() >> 1), (this.yQ8 >> 8) - (OpenGlTexture3D.field_p[1].height() >> 1), 1, 0, 2);
             }
             decompiledFrameRemainder7 = (this.exploding);
             if ((decompiledFrameRemainder7) &&

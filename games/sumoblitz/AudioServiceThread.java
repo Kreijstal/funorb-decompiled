@@ -156,7 +156,7 @@ final class AudioServiceThread implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              tg.a(10L, (byte) 107);
+              TextureCombineOperation.a(10L, (byte) 107);
               rd.a((Object) null, this.taskDispatcher, -11030);
             }
             decompiledRegionSelector0 = 0;

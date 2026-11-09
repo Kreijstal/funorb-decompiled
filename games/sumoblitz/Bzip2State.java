@@ -60,7 +60,7 @@ final class Bzip2State {
             field_J = (wc[]) null;
           }
           for (var2 = 0; var2 < 25; var2++) {
-            var1_int = var1_int + go.field_j[var2];
+            var1_int = var1_int + OpenGlTexture3D.field_j[var2];
           }
           stackIn_7_0 = var1_int;
           return stackIn_7_0;

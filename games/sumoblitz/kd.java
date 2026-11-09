@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kd {
-    static iw field_b;
+    static TextureFormat LUMINANCE;
     static int[][] field_a;
 
     public static void releaseStatics(byte param0) {
         field_a = (int[][]) null;
         if (param0 != 95) {
-          field_b = (iw) null;
-          field_b = null;
+          LUMINANCE = (TextureFormat) null;
+          LUMINANCE = null;
           return;
         }
-        field_b = null;
+        LUMINANCE = null;
     }
 
     final static ResourceArchive a(byte param0, int param1) {
@@ -198,7 +198,7 @@ final class kd {
     }
 
     static {
-        field_b = new iw(1);
+        LUMINANCE = new TextureFormat(1);
         field_a = new int[13][];
     }
 }

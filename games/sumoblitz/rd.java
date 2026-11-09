@@ -73,7 +73,7 @@ final class rd extends IntrusiveNode {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_g.peekEvent()) {
-              tg.a(1L, (byte) 99);
+              TextureCombineOperation.a(1L, (byte) 99);
               continue;
             }
             break;

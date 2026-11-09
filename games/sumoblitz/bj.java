@@ -3,7 +3,7 @@
  */
 final class bj {
     private String field_f;
-    static tg field_c;
+    static TextureCombineOperation SUBTRACT;
     static IntrusiveDeque powerupPickups;
     static int field_a;
     private boolean field_e;
@@ -19,7 +19,7 @@ final class bj {
     }
 
     public static void releaseStatics(int param0) {
-        field_c = null;
+        SUBTRACT = null;
         if (param0 > -69) {
           return;
         }
@@ -81,6 +81,6 @@ final class bj {
 
     static {
         field_a = 0;
-        field_c = new tg();
+        SUBTRACT = new TextureCombineOperation();
     }
 }

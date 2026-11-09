@@ -84,7 +84,7 @@ final class ou extends na {
             this.field_f = param1;
           }
           if (this.field_e) {
-            return ck.nameIsAvailableText;
+            return PrimitiveType.nameIsAvailableText;
           }
           stackIn_16_0 = au.field_e;
           return stackIn_16_0;
@@ -284,7 +284,7 @@ final class ou extends na {
               if (DroneChargeParticle.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
+              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               eb.field_a = new int[var4];
               IntIndexHashTable.field_c = new String[var4];
@@ -421,7 +421,7 @@ final class ou extends na {
               }
             }
           }
-          hu.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
+          VertexStreamLayout.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
           PlayingSound.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
           RenderPresentationException.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {

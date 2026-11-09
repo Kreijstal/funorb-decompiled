@@ -155,13 +155,13 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 55 / ((25 - param0) / 42);
-          if (mp.field_a < 10) {
+          if (TextureCoordinateGeneration.field_a < 10) {
             var4 = 0;
             if (pt.field_a) {
               pt.field_a = false;
               var4 = 1;
             }
-            hh.a(true, bp.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
+            hh.a(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
             return;
           }
           if (!lf.b(-251)) {

@@ -6,7 +6,7 @@ final class EnemyDrone extends Drone {
     static vl[] field_S;
 
     final static void o(int param0) {
-        fq.field_f.a(-115);
+        OpenGlVertexLayout.field_f.a(-115);
         if (param0 != 250) {
           EnemyDrone.o(-9);
         }

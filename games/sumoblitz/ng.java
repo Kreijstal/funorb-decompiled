@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class ng extends ShaderEffect {
-    private ef[] field_i;
+    private CubeTexture[] field_i;
     static ToolkitSprite[] field_f;
     private boolean field_h;
     private boolean field_g;
     static String noHighscoresText;
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
+        this.field_b.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
         if (param1 > -71) {
-          this.field_i = (ef[]) null;
+          this.field_i = (CubeTexture[]) null;
         }
     }
 
@@ -46,30 +46,30 @@ final class ng extends ShaderEffect {
           this.a(114, 98, -46);
         }
         if (!this.field_h) {
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(jq.TEXTURE, 0, true);
         } else {
           this.field_b.g(1, -109);
-          this.field_b.a((ed) null, 102);
-          this.field_b.a(13754, lf.field_c);
+          this.field_b.a((GpuTexture) null, 102);
+          this.field_b.applyTexCoordGeneration(13754, lf.DISABLED);
           this.field_b.l(0);
           if (!this.field_g) {
-            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-            this.field_b.a(jq.field_a, 0, 0);
+            this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.field_b.a(jq.TEXTURE, 0, 0);
             this.field_b.g(2, -117);
-            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-            this.field_b.a(jq.field_a, 0, 0);
-            this.field_b.a(FontMetrics.field_a, 1, 0);
-            this.field_b.a(jq.field_a, 0, true);
-            this.field_b.a((ed) null, 110);
+            this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.field_b.a(jq.TEXTURE, 0, 0);
+            this.field_b.a(FontMetrics.PREVIOUS, 1, 0);
+            this.field_b.a(jq.TEXTURE, 0, true);
+            this.field_b.a((GpuTexture) null, 110);
           } else {
-            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-            this.field_b.a(jq.field_a, 0, 0);
-            this.field_b.a(jq.field_a, 0, true);
+            this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.field_b.a(jq.TEXTURE, 0, 0);
+            this.field_b.a(jq.TEXTURE, 0, true);
           }
           this.field_b.g(0, -126);
           this.field_h = false;
         }
-        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -129,7 +129,7 @@ final class ng extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         if (param1 != 18834) {
           return;
         }
@@ -221,7 +221,7 @@ final class ng extends ShaderEffect {
                 var9++;
               }
             }
-            this.field_i = new ef[3];
+            this.field_i = new CubeTexture[3];
             this.field_i[0] = this.field_b.a(64, (byte) -105, var27, false);
             this.field_i[1] = this.field_b.a(64, (byte) -84, var28, false);
             this.field_i[2] = this.field_b.a(64, (byte) 122, var29, false);
@@ -244,41 +244,41 @@ final class ng extends ShaderEffect {
 
     final void a(boolean param0, int param1) {
         int var4;
-        ed var5;
+        GpuTexture var5;
         AffineTransform3D var6;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_i == null) {
-          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
         } else {
           if (!param0) {
-            this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+            this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           } else {
             this.field_b.g(1, -118);
-            this.field_b.a(param1 ^ 31584, nl.field_n);
+            this.field_b.applyTexCoordGeneration(param1 ^ 31584, nl.NORMAL_MAP);
             var6 = this.field_b.B(0);
             var6.setRotationX((byte) 79, 1024);
             this.field_b.a(ip.field_y, 28880);
             if (!this.field_g) {
-              this.field_b.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
-              this.field_b.a(FontMetrics.field_a, 0, param1 ^ 20186);
+              this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
+              this.field_b.a(FontMetrics.PREVIOUS, 0, param1 ^ 20186);
               this.field_b.g(2, param1 - 20295);
-              this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
-              this.field_b.a(FontMetrics.field_a, 0, 0);
-              this.field_b.a((byte) 102, 1, true, false, FontMetrics.field_a);
-              this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+              this.field_b.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+              this.field_b.a(FontMetrics.PREVIOUS, 0, 0);
+              this.field_b.setColorCombineSource((byte) 102, 1, true, false, FontMetrics.PREVIOUS);
+              this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
               this.field_b.a(this.field_b.field_D, param1 - 20079);
             } else {
-              this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
-              this.field_b.a((byte) -66, 0, true, false, jq.field_a);
-              this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+              this.field_b.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+              this.field_b.setColorCombineSource((byte) -66, 0, true, false, jq.TEXTURE);
+              this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
             }
             this.field_b.g(0, -113);
             this.field_h = true;
           }
         }
         if (param1 != 20186) {
-          var5 = (ed) null;
-          this.a(105, 46, (ed) null);
+          var5 = (GpuTexture) null;
+          this.a(105, 46, (GpuTexture) null);
         }
     }
 

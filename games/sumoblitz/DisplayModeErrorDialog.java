@@ -28,7 +28,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
             } else {
               if (param1 == FontMetrics.field_f) {
                 this.height = this.height + 30;
-                var3 = ua.fullscreenModeWasCancelledText;
+                var3 = OpenGlBuffer.fullscreenModeWasCancelledText;
               }
             }
           } else {

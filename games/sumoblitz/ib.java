@@ -55,18 +55,18 @@ final class ib extends ShaderEffect {
     final void c(boolean param0) {
         this.field_b.g(1, -115);
         if (!param0) {
-          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-          this.field_b.a(jq.field_a, 0, 0);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.field_b.a(jq.TEXTURE, 0, 0);
+          this.field_b.a(jq.TEXTURE, 0, true);
           this.field_b.c(1, 110);
-          this.field_b.a((ed) null, 95);
+          this.field_b.a((GpuTexture) null, 95);
           this.field_b.g(0, -111);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(jq.TEXTURE, 0, true);
           return;
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         try {
           if (param1 != 18834) {
             this.field_f = (sk) null;
@@ -79,20 +79,20 @@ final class ib extends ShaderEffect {
 
     final void a(boolean param0, int param1) {
         this.field_b.g(1, -119);
-        this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
-        this.field_b.a((byte) 111, 0, true, false, jq.field_a);
-        this.field_b.a(FontMetrics.field_a, 0, true);
+        this.field_b.a((byte) -83, lf.REPLACE, LoginForm.ADD);
+        this.field_b.setColorCombineSource((byte) 111, 0, true, false, jq.TEXTURE);
+        this.field_b.a(FontMetrics.PREVIOUS, 0, true);
         this.field_b.c(0, param1 ^ 20151);
         this.field_b.g(0, -124);
         if (param1 == 20186) {
           this.field_b.a(false, -16777216);
-          this.field_b.a(mm.field_h, 0, true);
+          this.field_b.a(mm.CONSTANT, 0, true);
           this.a((byte) -107);
           return;
         }
         this.field_f = (sk) null;
         this.field_b.a(false, -16777216);
-        this.field_b.a(mm.field_h, 0, true);
+        this.field_b.a(mm.CONSTANT, 0, true);
         this.a((byte) -107);
     }
 
@@ -123,7 +123,7 @@ final class ib extends ShaderEffect {
           this.a(43, 107, 112);
         }
         if ((128 & param2) != 0) {
-          this.field_b.a((ed) null, 97);
+          this.field_b.a((GpuTexture) null, 97);
         } else {
           if ((1 & param1) != 1) {
             if (!this.field_f.field_g) {
@@ -147,11 +147,11 @@ final class ib extends ShaderEffect {
 
     final void a(boolean param0, byte param1) {
         if (param1 <= -71) {
-          this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
+          this.field_b.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
           return;
         }
         this.a((byte) 54);
-        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
+        this.field_b.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
     }
 
     static {

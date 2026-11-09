@@ -64,18 +64,18 @@ final class hc {
             stackIn_14_0 = (sn) null;
             return stackIn_14_0;
           }
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, sc.field_o, 0);
-          if (0 == sc.field_o[0]) {
-            if (sc.field_o[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, OpenGlVertexBuffer.field_o, 0);
+          if (0 == OpenGlVertexBuffer.field_o[0]) {
+            if (OpenGlVertexBuffer.field_o[0] == 0) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, sc.field_o, 1);
-            if (sc.field_o[1] > 1) {
-              var11 = new byte[sc.field_o[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, sc.field_o[1], sc.field_o, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, OpenGlVertexBuffer.field_o, 1);
+            if (OpenGlVertexBuffer.field_o[1] > 1) {
+              var11 = new byte[OpenGlVertexBuffer.field_o[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, OpenGlVertexBuffer.field_o[1], OpenGlVertexBuffer.field_o, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (sc.field_o[0] == 0) {
+            if (OpenGlVertexBuffer.field_o[0] == 0) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (param1.length > var7) {

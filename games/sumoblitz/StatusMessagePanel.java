@@ -73,7 +73,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_6_0 = (null != hu.a(param1, (byte) 109));
+            stackIn_6_0 = (null != VertexStreamLayout.a(param1, (byte) 109));
             return stackIn_6_0;
           }
           return false;

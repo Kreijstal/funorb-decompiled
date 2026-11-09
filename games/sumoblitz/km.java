@@ -127,8 +127,8 @@ final class km extends IntrusiveNode {
         if (param0) {
           field_o = (lh) null;
         }
-        if (ck.field_c != null) {
-          return (java.awt.Container) ((Object) ck.field_c);
+        if (PrimitiveType.field_c != null) {
+          return (java.awt.Container) ((Object) PrimitiveType.field_c);
         }
         return (java.awt.Container) ((Object) ra.c(2));
     }

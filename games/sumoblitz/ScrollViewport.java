@@ -113,7 +113,7 @@ final class ScrollViewport extends SingleChildWidget {
         if (10 > jv.field_a) {
           return false;
         }
-        if (mp.field_a >= 13) {
+        if (TextureCoordinateGeneration.field_a >= 13) {
           return true;
         }
         return false;

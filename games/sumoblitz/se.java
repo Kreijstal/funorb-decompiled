@@ -23,7 +23,7 @@ abstract class se {
           RenderPresentationException.field_a.dispatchPointerInput(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
           RenderPresentationException.field_a.advanceDialogAnimations(-90);
           while (wd.c(param0 ^ -19954)) {
-            RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
+            RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
           if (iu.field_e != -1) {
             var1_int = iu.field_e;

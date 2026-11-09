@@ -93,8 +93,8 @@ final class LevelSelectScreen extends MenuScreen {
             if (TextureMetadata.field_f[this.field_i]) {
               MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
               LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
-              MessageDialog.field_db.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
+              MessageDialog.field_db.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
+              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
               if (up.field_g[this.field_i]) {
                 var10++;

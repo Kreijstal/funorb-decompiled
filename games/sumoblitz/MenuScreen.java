@@ -469,7 +469,7 @@ class MenuScreen {
                 return;
               }
             }
-            var24 = ea.difficultyText + ge.difficultyNames[mi.field_a];
+            var24 = ea.difficultyText + ge.difficultyNames[TextureCombineSource.field_a];
             var18_ref_StringLifetime1 = var24.toUpperCase();
             var14_ref.a(var18_ref_StringLifetime1, param4 << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
             var13_ref.a(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
@@ -569,7 +569,7 @@ class MenuScreen {
         }
         if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
-          if (tg.field_a == 96) {
+          if (TextureCombineOperation.field_a == 96) {
             if (0 < this.field_g.field_g) {
               if (3 != this.field_g.field_g) {
                 this.field_g.a(-31865, this.field_g.field_g - 1);
@@ -581,7 +581,7 @@ class MenuScreen {
               this.field_g.a(-31865, 2);
             }
           }
-          if (tg.field_a == 97) {
+          if (TextureCombineOperation.field_a == 97) {
             if (this.field_g.field_g >= 2) {
               if (this.field_g.field_g == 2) {
                 this.field_g.a(-31865, 0);
@@ -593,7 +593,7 @@ class MenuScreen {
               this.field_g.a(-31865, 1 + this.field_g.field_g);
             }
           }
-          if (tg.field_a == 99) {
+          if (TextureCombineOperation.field_a == 99) {
             if (!(this.field_g.field_g >= 0) ||
               !(this.field_g.field_g <= 2)) {
               this.field_g.a(-31865, gu.field_j);
@@ -604,7 +604,7 @@ class MenuScreen {
               this.field_g.a(-31865, 3);
             }
           }
-          if (tg.field_a == 98) {
+          if (TextureCombineOperation.field_a == 98) {
             if (this.field_g.field_g == 3) {
               this.field_g.a(-31865, gu.field_j);
               if (var3 != 0) {
@@ -619,8 +619,8 @@ class MenuScreen {
         }
         if (this.screenId == 3) {
           this.field_g.a(-20);
-          if (tg.field_a != 96 &&
-            97 != tg.field_a) {
+          if (TextureCombineOperation.field_a != 96 &&
+            97 != TextureCombineOperation.field_a) {
             return;
           }
           while (!this.e(this.field_g.field_g, 7746)) {
@@ -633,8 +633,8 @@ class MenuScreen {
           return;
         }
         this.field_g.a((byte) 95);
-        if (tg.field_a == 98 ||
-          tg.field_a == 99) {
+        if (TextureCombineOperation.field_a == 98 ||
+          TextureCombineOperation.field_a == 99) {
           while (!this.e(this.field_g.field_g, 7746)) {
             this.field_g.a((byte) 38);
             if (var3 != 0) {
@@ -802,11 +802,11 @@ class MenuScreen {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    mi.field_a = mi.field_a + 1;
-                    if (mi.field_a <= 1) {
+                    TextureCombineSource.field_a = TextureCombineSource.field_a + 1;
+                    if (TextureCombineSource.field_a <= 1) {
                       break regionExit2;
                     }
-                    mi.field_a = 0;
+                    TextureCombineSource.field_a = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1090,7 +1090,7 @@ class MenuScreen {
                       var8 = -var7 + ko.field_p << 1;
                       if (0 < var8) {
                         if (var8 < 256) {
-                          fq.a(16440, var8);
+                          OpenGlVertexLayout.a(16440, var8);
                           if (var9 != 0) {
                             is.b(100);
                             lt.c((byte) 53);
@@ -1650,12 +1650,12 @@ class MenuScreen {
           var3 = var6;
           if (var4 >= 10) {
             if (100 > var4) {
-              var3 = ck.field_a + "0" + var6;
+              var3 = PrimitiveType.field_a + "0" + var6;
             } else {
-              var3 = ck.field_a + var3;
+              var3 = PrimitiveType.field_a + var3;
             }
           } else {
-            var3 = ck.field_a + "00" + var3;
+            var3 = PrimitiveType.field_a + "00" + var3;
           }
           param0 = param0 / 1000;
         }
@@ -1792,7 +1792,7 @@ class MenuScreen {
         }
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!wd.c(-102)))) {
-          if (tg.field_a == 13) {
+          if (TextureCombineOperation.field_a == 13) {
             if (this.screenId == 1) {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
               ph.gameplaySession.closePauseMenu((byte) 112);

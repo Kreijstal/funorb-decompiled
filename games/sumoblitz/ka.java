@@ -5,7 +5,7 @@ abstract class ka {
     static String passwordIsValidText;
     static int field_b;
 
-    final static int a(mp param0, int param1) {
+    final static int glTexCoordGeneration(TextureCoordinateGeneration mode, int guard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -16,16 +16,16 @@ abstract class ka {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 8 % ((param1 + 40) / 46);
-          if (wn.field_b == param0) {
+          var2_int = 8 % ((guard + 40) / 46);
+          if (wn.EYE_LINEAR == mode) {
             stackIn_2_0 = 9216;
             return stackIn_2_0;
           }
-          if (nl.field_n == param0) {
+          if (nl.NORMAL_MAP == mode) {
             stackIn_9_0 = 34065;
             return stackIn_9_0;
           }
-          if (param0 != LabeledWidget.field_C) {
+          if (mode != LabeledWidget.REFLECTION_MAP) {
             throw new IllegalArgumentException();
           }
           stackIn_7_0 = 34066;
@@ -35,20 +35,20 @@ abstract class ka {
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("ka.F(");
-          if (param0 == null) {
+          if (mode == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
     public static void releaseStatics(byte param0) {
         passwordIsValidText = null;
         if (param0 != -59) {
-          mp var2 = (mp) null;
-          ka.a((mp) null, 4);
+          TextureCoordinateGeneration var2 = (TextureCoordinateGeneration) null;
+          ka.glTexCoordGeneration((TextureCoordinateGeneration) null, 4);
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pu extends ToolkitSprite {
-    private ru field_j;
+    private Texture2D field_j;
     private int field_l;
     private int field_f;
     private boolean field_g;
@@ -24,20 +24,20 @@ final class pu extends ToolkitSprite {
     final void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags) {
         AffineTransform3D var10;
         AffineTransform3D var11;
-        ru stackIn_4_0 = null;
+        Texture2D stackIn_4_0 = null;
         var11 = this.field_d.d(84);
         var10 = this.field_d.B(0);
         stackIn_4_0 = this.field_j;
         if (this.field_h) {
-          ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
+          ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
         } else {
           if (this.field_g) {
-            ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
+            ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
           } else {
             if ((flags & 1) == 0) {
-              ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
+              ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
             } else {
-              ((ru) (Object) stackIn_4_0).a(ArrayWidgetContainer.field_y, 15149);
+              ((Texture2D) (Object) stackIn_4_0).setFilter(ArrayWidgetContainer.LINEAR, 15149);
             }
           }
         }
@@ -45,10 +45,10 @@ final class pu extends ToolkitSprite {
         this.field_d.a(this.field_j, 95);
         this.field_d.e(blendMode, 13);
         this.field_d.h(59, colorMode);
-        this.field_d.a(mm.field_h, 1, 0);
-        this.field_d.a(mm.field_h, 1, true);
+        this.field_d.a(mm.CONSTANT, 1, 0);
+        this.field_d.a(mm.CONSTANT, 1, true);
         this.field_d.a(false, color);
-        var10.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -74), 0, 1.0f);
+        var10.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -74), 0, 1.0f);
         if (this.field_k) {
           width = this.field_n * width / this.paddedWidth();
           height = this.field_l * height / this.paddedHeight();
@@ -61,8 +61,8 @@ final class pu extends ToolkitSprite {
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(FontMetrics.field_a, 1, 0);
-        this.field_d.a(FontMetrics.field_a, 1, true);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, 0);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, true);
     }
 
     final int width() {
@@ -86,25 +86,25 @@ final class pu extends ToolkitSprite {
         float var25;
         float var26;
         AffineTransform3D var27;
-        ru stackIn_4_0 = null;
-        ji stackIn_5_1 = null;
+        Texture2D stackIn_4_0 = null;
+        TextureFilter stackIn_5_1 = null;
         var27 = this.field_d.d(82);
         var12 = this.field_d.B(0);
         stackIn_4_0 = this.field_j;
         if (!this.field_h &&
           !this.field_g &&
           (1 & flags) != 0) {
-          stackIn_5_1 = ArrayWidgetContainer.field_y;
+          stackIn_5_1 = ArrayWidgetContainer.LINEAR;
         } else {
-          stackIn_5_1 = lh.field_l;
+          stackIn_5_1 = lh.NEAREST;
         }
-        ((ru) (Object) stackIn_4_0).a(stackIn_5_1, 15149);
+        ((Texture2D) (Object) stackIn_4_0).setFilter(stackIn_5_1, 15149);
         this.field_d.w(10);
         this.field_d.a(this.field_j, 109);
         this.field_d.e(blendMode, 13);
         this.field_d.h(104, colorMode);
-        this.field_d.a(mm.field_h, 1, 0);
-        this.field_d.a(mm.field_h, 1, true);
+        this.field_d.a(mm.CONSTANT, 1, 0);
+        this.field_d.a(mm.CONSTANT, 1, true);
         this.field_d.a(false, color);
         if (this.field_k) {
           var13 = (float)this.paddedWidth();
@@ -130,13 +130,13 @@ final class pu extends ToolkitSprite {
         }
         var27.setLinear(x2 - x0, -y0 + y2, -y0 + y1, -x0 + x1, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 18356);
         var27.translate((byte) 96, 0.0f, y0, x0);
-        var12.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -65), 0, 1.0f);
+        var12.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -65), 0, 1.0f);
         this.field_d.a(rs.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(FontMetrics.field_a, 1, 0);
-        this.field_d.a(FontMetrics.field_a, 1, true);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, 0);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, true);
     }
 
     final void setInsets(int left, int top, int right, int bottom) {
@@ -210,18 +210,18 @@ final class pu extends ToolkitSprite {
           this.field_n = param1;
           this.field_l = param2;
           this.field_j = param0.a(false, param5, param3, param1, -45, param4, param2);
-          this.field_j.a(true, true, true);
-          stackIn_4_1 = (param1 != this.field_j.b(-16625));
+          this.field_j.setWrap(true, true, true);
+          stackIn_4_1 = (param1 != this.field_j.width(-16625));
           this.field_h = stackIn_4_1;
-          stackIn_7_1 = (param2 != this.field_j.a((byte) -97));
+          stackIn_7_1 = (param2 != this.field_j.height((byte) -97));
           this.field_g = stackIn_7_1;
           if (!this.field_h) {
-            this.field_j.c(-24722);
+            this.field_j.usesNormalizedCoordinates(-24722);
           }
           if (this.field_g) {
             return;
           }
-          this.field_j.c(-24722);
+          this.field_j.usesNormalizedCoordinates(-24722);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -248,23 +248,23 @@ final class pu extends ToolkitSprite {
         AffineTransform3D var7 = this.field_d.B(0);
         x = x + this.field_i;
         y = y + this.field_f;
-        this.field_j.a(lh.field_l, 15149);
+        this.field_j.setFilter(lh.NEAREST, 15149);
         this.field_d.w(10);
         this.field_d.a(this.field_j, 93);
         this.field_d.e(blendMode, 13);
         this.field_d.h(92, colorMode);
-        this.field_d.a(mm.field_h, 1, 0);
-        this.field_d.a(mm.field_h, 1, true);
+        this.field_d.a(mm.CONSTANT, 1, 0);
+        this.field_d.a(mm.CONSTANT, 1, true);
         this.field_d.a(false, color);
         var8.setScale((float)this.field_l, (float)this.field_n, 0, 0.0f);
         var8.translate(y, x, (byte) 120, 0);
-        var7.setScale(this.field_j.b((float)this.field_l, -19230), this.field_j.a((float)this.field_n, -79), 0, 1.0f);
+        var7.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -79), 0, 1.0f);
         this.field_d.a(rs.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(FontMetrics.field_a, 1, 0);
-        this.field_d.a(FontMetrics.field_a, 1, true);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, 0);
+        this.field_d.a(FontMetrics.PREVIOUS, 1, true);
     }
 
     final int paddedWidth() {

@@ -110,7 +110,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (gr.field_l != -1 &&
           gr.field_l != 0) {
-          if (mp.field_a < 10) {
+          if (TextureCoordinateGeneration.field_a < 10) {
             if (3 != gr.field_l) {
               if (gr.field_l != 4) {
                 if (gr.field_l != 2) {
@@ -167,11 +167,11 @@ abstract class GameClientShell extends GameApplet {
           !en.a(-23517)) {
           ch.field_h = false;
         }
-        if (mp.field_a == 0 &&
+        if (TextureCoordinateGeneration.field_a == 0 &&
           f.d((byte) 63)) {
-          mp.field_a = 1;
+          TextureCoordinateGeneration.field_a = 1;
         }
-        if (mp.field_a == 1) {
+        if (TextureCoordinateGeneration.field_a == 1) {
           if (dk.field_c != 0) {
             DropDownListWidget.field_H = wd.a(DisplayModeErrorDialog.field_P, (byte) 125);
           }
@@ -179,10 +179,10 @@ abstract class GameClientShell extends GameApplet {
           eb.field_f = ve.a(11880, true, AudioServiceThread.field_h, 1, false);
           hw.field_a = ve.a(11880, true, ra.field_f, 1, false);
           pi.field_c = wd.field_j;
-          mp.field_a = 2;
+          TextureCoordinateGeneration.field_a = 2;
           vb.field_J = eb.field_f;
         }
-        if (mp.field_a == 2) {
+        if (TextureCoordinateGeneration.field_a == 2) {
           if (null != DropDownListWidget.field_H &&
             DropDownListWidget.field_H.loadIndex((byte) 127)) {
             if (!DropDownListWidget.field_H.hasGroupName((byte) -99, "")) {
@@ -191,15 +191,15 @@ abstract class GameClientShell extends GameApplet {
               if (DropDownListWidget.field_H.tryLoadNamedGroup("", 100)) {
                 ni.a(7, DropDownListWidget.field_H);
                 DropDownListWidget.field_H = null;
-                ls.b(0);
+                VertexAttribute.b(0);
               }
             }
           }
           if (DropDownListWidget.field_H == null) {
-            mp.field_a = 3;
+            TextureCoordinateGeneration.field_a = 3;
           }
         }
-        if (3 == mp.field_a &&
+        if (3 == TextureCoordinateGeneration.field_a &&
           rd.a(eb.field_f, (byte) 124, hw.field_a, wd.field_j) &&
           wc.a(hw.field_a, 40)) {
           ph.a((byte) -93);
@@ -227,17 +227,17 @@ abstract class GameClientShell extends GameApplet {
           eb.field_f = null;
           wd.field_j = null;
           DirectByteArrayStorage.a((java.applet.Applet) (this), (byte) -96);
-          ls.b(0);
-          mp.field_a = 10;
+          VertexAttribute.b(0);
+          TextureCoordinateGeneration.field_a = 10;
         }
-        if (mp.field_a == 10) {
+        if (TextureCoordinateGeneration.field_a == 10) {
           if (0 != dk.field_c) {
             vf.field_a = wd.a(MenuScreen.field_f, (byte) 125);
           }
-          mp.field_a = 11;
+          TextureCoordinateGeneration.field_a = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (mp.field_a == 11) {
+        if (TextureCoordinateGeneration.field_a == 11) {
           if (vf.field_a != null && (!vf.field_a.loadIndex((byte) 127) ||
             !vf.field_a.tryLoadAllGroups(true))) {
             NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, ek.field_k, vf.field_a));
@@ -245,14 +245,14 @@ abstract class GameClientShell extends GameApplet {
           }
           else {
             ml.field_u = true;
-            mp.field_a = 12;
+            TextureCoordinateGeneration.field_a = 12;
           }
         }
-        if (mp.field_a == 12 &&
+        if (TextureCoordinateGeneration.field_a == 12 &&
           !ml.field_u) {
-          mp.field_a = 13;
+          TextureCoordinateGeneration.field_a = 13;
         }
-        if (mp.field_a == 13) {
+        if (TextureCoordinateGeneration.field_a == 13) {
           var3Lifetime2 = 1;
           if (ih.field_a != null) {
             stackIn_138_0 = (!ih.field_a.a(100)) ? 0 : 1;
@@ -260,7 +260,7 @@ abstract class GameClientShell extends GameApplet {
             NameSuggestionsPanel.a(20, ih.field_a.field_d, ih.field_a.field_f);
           }
           if (var3Lifetime2 != 0) {
-            mp.field_a = 20;
+            TextureCoordinateGeneration.field_a = 20;
           }
         }
         if (!param0 &&
@@ -329,7 +329,7 @@ abstract class GameClientShell extends GameApplet {
           stackIn_12_2 = (CompactMeshGeometry.field_o != null);
           discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
         } else {
-          if (mp.field_a >= 10) {
+          if (TextureCoordinateGeneration.field_a >= 10) {
             if (!lf.b(-251)) {
               rm.a((byte) 126);
             } else {
@@ -352,7 +352,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != 9289) {
           return;
         }
-        var2 = iw.field_a;
+        var2 = TextureFormat.field_a;
         if (var2 < 64 &&
           InteractiveWidget.field_z[var2]) {
           if (0 == var2) {
@@ -437,7 +437,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void o(int param0) {
-        String var2 = ls.a((byte) -62);
+        String var2 = VertexAttribute.a((byte) -62);
         if (param0 != -1) {
           return;
         }

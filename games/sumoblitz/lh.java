@@ -6,12 +6,12 @@ final class lh extends IntrusiveNode {
     byte[] field_m;
     static SpriteData field_k;
     boolean field_o;
-    static ji field_l;
+    static TextureFilter NEAREST;
     static String resetStatsText;
 
     public static void releaseStatics(int param0) {
         field_k = null;
-        field_l = null;
+        NEAREST = null;
         field_n = null;
         resetStatsText = null;
         int var1 = -90 / ((param0 - 71) / 51);
@@ -81,7 +81,7 @@ final class lh extends IntrusiveNode {
 
     static {
         field_n = new il();
-        field_l = new ji();
+        NEAREST = new TextureFilter();
         resetStatsText = "reset stats";
     }
 }

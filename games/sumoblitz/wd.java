@@ -32,7 +32,7 @@ final class wd extends se {
 
     final static void a(byte param0, int param1) {
         int var2 = -16 / ((18 - param0) / 60);
-        fq.field_f.a(-3388, param1);
+        OpenGlVertexLayout.field_f.a(-3388, param1);
     }
 
     final nb a(byte param0) {
@@ -69,10 +69,10 @@ final class wd extends se {
           if (param0 > -20) {
             continueText = (String) null;
           }
-          if (ua.field_a == bj.field_a) {
+          if (OpenGlBuffer.field_a == bj.field_a) {
             return false;
           }
-          tg.field_a = cp.field_c[bj.field_a];
+          TextureCombineOperation.field_a = cp.field_c[bj.field_a];
           WhirlpoolDigest.field_c = SpriteMask.field_c[bj.field_a];
           bj.field_a = bj.field_a + 1 & 127;
           stackIn_7_0 = true;

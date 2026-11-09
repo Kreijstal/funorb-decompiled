@@ -66,7 +66,7 @@ final class kt {
             if (nj.field_a.d(-31260)) {
               var1_int = 1;
             }
-            if (tg.field_a != 13) {
+            if (TextureCombineOperation.field_a != 13) {
               continue;
             }
             var2 = 1;

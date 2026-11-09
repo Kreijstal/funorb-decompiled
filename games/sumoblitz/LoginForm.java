@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginForm extends WidgetContainer implements TextInputListener, WidgetActionListener {
-    static tg field_F;
+    static TextureCombineOperation ADD;
     private InteractiveWidget field_A;
     static int[] field_G;
     private TextInputWidget field_H;
@@ -198,7 +198,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
           }
           var8 = OpenGlEnvironmentWaterEffect.loginText;
           var9 = lv.a(ra.c(2), 1);
-          if (go.field_m != var9) {
+          if (OpenGlTexture3D.field_m != var9) {
             if (LevelSelectScreen.field_j == var9) {
               var8 = ph.usernameText;
             }
@@ -275,7 +275,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
         if (param0 >= -116) {
           return;
         }
-        field_F = null;
+        ADD = null;
     }
 
     final static int e(boolean param0) {
@@ -379,7 +379,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
 
     static {
         field_G = new int[128];
-        field_F = new tg();
+        ADD = new TextureCombineOperation();
         field_O = 480;
     }
 }

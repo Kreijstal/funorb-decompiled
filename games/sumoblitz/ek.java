@@ -89,7 +89,7 @@ final class ek extends ht {
               }
             }
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            hq.field_b = tm.field_d;
+            VertexLayout.field_b = tm.field_d;
             if (param0 != null) {
               up.field_d = false;
             } else {
@@ -105,7 +105,7 @@ final class ek extends ht {
             sl.field_d) {
             qf.field_a = 0;
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            hq.field_b = tm.field_d;
+            VertexLayout.field_b = tm.field_d;
           }
           if (up.field_d &&
             qf.field_a == PlayerDrone.field_T) {
@@ -157,7 +157,7 @@ final class ek extends ht {
     }
 
     final static void b(boolean param0, int param1) {
-        PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(rc.field_l[param1], 100, 96);
+        PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[param1], 100, 96);
         if (param0) {
           var2.setLoopCount(-1);
           qq.addPlayingSound(18416, var2);

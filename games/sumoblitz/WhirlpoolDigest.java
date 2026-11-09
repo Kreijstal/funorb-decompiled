@@ -9,7 +9,7 @@ final class WhirlpoolDigest {
     private long[] hash;
     private byte[] buffer;
     private int bufferPosition;
-    static ck field_h;
+    static PrimitiveType TRIANGLES;
     private long[] block;
     private byte[] bitLength;
     static char field_c;
@@ -33,7 +33,7 @@ final class WhirlpoolDigest {
     }
 
     public static void releaseStatics(byte param0) {
-        field_h = null;
+        TRIANGLES = null;
         if (param0 != -58) {
           field_c = '￲';
         }
@@ -279,6 +279,6 @@ final class WhirlpoolDigest {
     }
 
     static {
-        field_h = new ck();
+        TRIANGLES = new PrimitiveType();
     }
 }

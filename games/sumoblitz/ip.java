@@ -51,7 +51,7 @@ final class ip extends ml {
           }
           pu.field_e.advanceDialogAnimations(-104);
           while (wd.c(-81)) {
-            pu.field_e.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
+            pu.field_e.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

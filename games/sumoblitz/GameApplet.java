@@ -40,7 +40,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ck.field_c != null) {
+          if (PrimitiveType.field_c != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -98,7 +98,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ck.field_c != null) {
+          if (PrimitiveType.field_c != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -164,7 +164,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.releaseAllStatics(true);
-          if (ck.field_c != null) {
+          if (PrimitiveType.field_c != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -277,7 +277,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (ck.field_c != null) {
+        if (PrimitiveType.field_c != null) {
           return null;
         }
         if (null != qj.field_c &&
@@ -357,7 +357,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = lt.field_m.a(true, (Runnable) (this), 1);
               while (true) {
                 if (var8.status == 0) {
-                  tg.a(10L, (byte) 73);
+                  TextureCombineOperation.a(10L, (byte) 73);
                   if (var9 == 0) {
                     continue;
                   }
@@ -397,7 +397,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ck.field_c) {
+          if (null != PrimitiveType.field_c) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -457,9 +457,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             pt.field_a = true;
             qn.field_f.setSize(gi.field_h, wq.field_b);
             qn.field_f.setVisible(true);
-            if (null != ck.field_c &&
+            if (null != PrimitiveType.field_c &&
               null == of.field_n) {
-              var6 = ck.field_c.getInsets();
+              var6 = PrimitiveType.field_c.getInsets();
               qn.field_f.setLocation(var6.left + th.field_H, var6.top + DirectByteArrayStorage.field_c);
               if (Sumoblitz.field_L) {
                 qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
@@ -518,7 +518,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ke.field_a == this &&
             !gr.field_e) {
             fd.field_k = wq.a(-125);
-            tg.a(5000L, (byte) 119);
+            TextureCombineOperation.a(5000L, (byte) 119);
             CompactMeshGeometry.field_O = null;
             this.a(false, -32);
             return;
@@ -584,23 +584,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             qn.field_f.getParent().remove((java.awt.Component) ((Object) qn.field_f));
           }
           if (null == of.field_n) {
-            if (ck.field_c == null) {
+            if (PrimitiveType.field_c == null) {
               if (null != qj.field_c) {
                 var2 = qj.field_c;
                 if (var4 != 0) {
                   var2 = ke.field_a;
-                  var2 = ck.field_c;
+                  var2 = PrimitiveType.field_c;
                   var2 = of.field_n;
                 }
               } else {
                 var2 = ke.field_a;
                 if (var4 != 0) {
-                  var2 = ck.field_c;
+                  var2 = PrimitiveType.field_c;
                   var2 = of.field_n;
                 }
               }
             } else {
-              var2 = ck.field_c;
+              var2 = PrimitiveType.field_c;
               if (var4 != 0) {
                 var2 = of.field_n;
               }
@@ -613,13 +613,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) qn.field_f));
           qn.field_f.setSize(gi.field_h, wq.field_b);
           qn.field_f.setVisible(true);
-          boolean decompiledSharedTail0 = (ck.field_c == var2);
+          boolean decompiledSharedTail0 = (PrimitiveType.field_c == var2);
           if (!decompiledSharedTail0) {
             qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = ck.field_c.getInsets();
+            var3 = PrimitiveType.field_c.getInsets();
             qn.field_f.setLocation(var3.left + th.field_H, var3.top + DirectByteArrayStorage.field_c);
           }
           qn.field_f.addFocusListener((java.awt.event.FocusListener) (this));
@@ -687,7 +687,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var2 = 0;
           while (36 > var2) {
             if (var2 < 25) {
-              var1.writeMedium(go.field_j[var2], 112);
+              var1.writeMedium(OpenGlTexture3D.field_j[var2], 112);
               var1.writeShort(-58, CacheIoRequest.field_z[var2]);
               var3 = CacheIoRequest.field_A[var2] + 1;
               if (qn.field_d[var2]) {

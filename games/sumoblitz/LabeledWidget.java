@@ -7,7 +7,7 @@ final class LabeledWidget extends SingleChildWidget {
     private int field_z;
     private int field_F;
     private boolean field_H;
-    static mp field_C;
+    static TextureCoordinateGeneration REFLECTION_MAP;
     static String[] field_G;
     private String field_B;
     static SpriteData field_E;
@@ -115,12 +115,12 @@ final class LabeledWidget extends SingleChildWidget {
     public static void releaseStatics(int param0) {
         field_G = null;
         field_E = null;
-        field_C = null;
+        REFLECTION_MAP = null;
         int var1 = 48 % ((-8 - param0) / 55);
     }
 
     static {
         field_G = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
-        field_C = new mp();
+        REFLECTION_MAP = new TextureCoordinateGeneration();
     }
 }

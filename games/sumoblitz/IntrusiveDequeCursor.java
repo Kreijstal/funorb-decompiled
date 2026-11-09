@@ -392,43 +392,43 @@ final class IntrusiveDequeCursor {
         if (65536L > (long)param1) {
           if ((long)param1 < 256L) {
             if (0 <= param1) {
-              return hu.field_f[param1] >> 12;
+              return VertexStreamLayout.field_f[param1] >> 12;
             }
             return -1;
           }
           if ((long)param1 >= 4096L) {
             if ((long)param1 >= 16384L) {
-              return hu.field_f[param1 >> 8] >> 8;
+              return VertexStreamLayout.field_f[param1 >> 8] >> 8;
             }
-            return hu.field_f[param1 >> 6] >> 9;
+            return VertexStreamLayout.field_f[param1 >> 6] >> 9;
           }
           if ((long)param1 >= 1024L) {
-            return hu.field_f[param1 >> 4] >> 10;
+            return VertexStreamLayout.field_f[param1 >> 4] >> 10;
           }
-          return hu.field_f[param1 >> 2] >> 11;
+          return VertexStreamLayout.field_f[param1 >> 2] >> 11;
         }
         if (16777216L > (long)param1) {
           if ((long)param1 >= 1048576L) {
             if ((long)param1 < 4194304L) {
-              return hu.field_f[param1 >> 14] >> 5;
+              return VertexStreamLayout.field_f[param1 >> 14] >> 5;
             }
-            return hu.field_f[param1 >> 16] >> 4;
+            return VertexStreamLayout.field_f[param1 >> 16] >> 4;
           }
           if (262144L > (long)param1) {
-            return hu.field_f[param1 >> 10] >> 7;
+            return VertexStreamLayout.field_f[param1 >> 10] >> 7;
           }
-          return hu.field_f[param1 >> 12] >> 6;
+          return VertexStreamLayout.field_f[param1 >> 12] >> 6;
         }
         if ((long)param1 >= 268435456L) {
           if (1073741824L > (long)param1) {
-            return hu.field_f[param1 >> 22] >> 1;
+            return VertexStreamLayout.field_f[param1 >> 22] >> 1;
           }
-          return hu.field_f[param1 >> 24];
+          return VertexStreamLayout.field_f[param1 >> 24];
         }
         if ((long)param1 < 67108864L) {
-          return hu.field_f[param1 >> 18] >> 3;
+          return VertexStreamLayout.field_f[param1 >> 18] >> 3;
         }
-        return hu.field_f[param1 >> 20] >> 2;
+        return VertexStreamLayout.field_f[param1 >> 20] >> 2;
     }
 
     public static void a(int param0) {

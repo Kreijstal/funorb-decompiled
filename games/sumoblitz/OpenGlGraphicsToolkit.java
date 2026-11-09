@@ -12,7 +12,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     private IntrusiveDeque field_Fc;
     private boolean field_Dc;
     private boolean field_Lc;
-    private sc[] field_zc;
+    private OpenGlVertexBuffer[] field_zc;
     jaggl.MapBuffer field_Qc;
     private int field_ad;
     private long field_Cc;
@@ -71,7 +71,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final Object a(java.awt.Canvas param0, int param1) {
         long var3_long = 0L;
         RuntimeException var3 = null;
-        iw var5 = null;
+        TextureFormat var5 = null;
         Long stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -80,8 +80,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         try {
           var3_long = this.field_Yc.prepareSurface(param0);
           if (param1 != 3) {
-            var5 = (iw) null;
-            this.a((io) null, (iw) null, -119, -113, (byte) -97);
+            var5 = (TextureFormat) null;
+            this.a((GpuDataType) null, (TextureFormat) null, -119, -113, (byte) -97);
           }
           if (var3_long == -1L) {
             throw new RuntimeException();
@@ -102,7 +102,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(byte param0, int param1, boolean param2, boolean param3, mi param4) {
+    final void setColorCombineSource(byte guard, int argument, boolean useAlpha, boolean invert, TextureCombineSource source) {
         int var6_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
@@ -116,12 +116,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, FullscreenMembershipDialog.a(81, param4));
-          var6_int = 45 / ((16 - param0) / 56);
-          if (!param2) {
+          jaggl.OpenGL.glTexEnvi(8960, 34176 + argument, FullscreenMembershipDialog.glTextureCombineSource(81, source));
+          var6_int = 45 / ((16 - guard) / 56);
+          if (!useAlpha) {
             stackIn_7_0 = 8960;
-            stackIn_7_1 = param1 + 34192;
-            if (param3) {
+            stackIn_7_1 = argument + 34192;
+            if (invert) {
               stackIn_8_2 = 769;
             } else {
               stackIn_8_2 = 768;
@@ -129,8 +129,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glTexEnvi(stackIn_7_0, stackIn_7_1, stackIn_8_2);
           } else {
             stackIn_3_0 = 8960;
-            stackIn_3_1 = param1 + 34192;
-            if (!param3) {
+            stackIn_3_1 = argument + 34192;
+            if (!invert) {
               stackIn_4_2 = 770;
             } else {
               stackIn_4_2 = 771;
@@ -142,8 +142,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_12_0 = var6;
-          stackIn_12_1 = new StringBuilder().append("on.ED(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_12_1 = new StringBuilder().append("on.ED(").append(guard).append(',').append(argument).append(',').append(useAlpha).append(',').append(invert).append(',');
+          if (source == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -152,7 +152,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void db(int param0) {
+    final void applyDirectionalLightColors(int arrayOffset) {
         NetworkResourceRequest.field_v[3] = 1.0f;
         NetworkResourceRequest.field_v[1] = this.field_jb * this.field_S;
         NetworkResourceRequest.field_v[0] = this.field_S * this.field_J;
@@ -162,12 +162,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         NetworkResourceRequest.field_v[1] = -this.field_hb * this.field_jb;
         NetworkResourceRequest.field_v[0] = this.field_J * -this.field_hb;
         NetworkResourceRequest.field_v[2] = this.field_Xb * -this.field_hb;
-        jaggl.OpenGL.glLightfv(16385, 4609, NetworkResourceRequest.field_v, param0);
+        jaggl.OpenGL.glLightfv(16385, 4609, NetworkResourceRequest.field_v, arrayOffset);
     }
 
-    final void X(int param0) {
-        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.a(-9267, this.field_B[this.field_mc]));
-        if (param0 >= -80) {
+    final void applyAlphaCombineOperation(int guard) {
+        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.glTextureCombineOperation(-9267, this.field_B[this.field_mc]));
+        if (guard >= -80) {
           this.b(true);
         }
     }
@@ -182,7 +182,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Fc.addLast(var4, (byte) 39);
     }
 
-    final void i(byte param0) {
+    final void applyFogEnabled(byte guard) {
         if (this.field_Rb &&
           this.field_Bb &&
           this.field_Kb >= 0) {
@@ -190,7 +190,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         } else {
           jaggl.OpenGL.glDisable(2912);
         }
-        if (param0 != -119) {
+        if (guard != -119) {
           this.field_Uc = true;
         }
     }
@@ -349,12 +349,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         super.updateTime(timeMillis);
     }
 
-    final ru a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, iw param7) {
+    final Texture2D a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, TextureFormat param7) {
         RuntimeException var9 = null;
-        sa var10 = null;
-        sa stackIn_7_0 = null;
-        or stackIn_10_0 = null;
-        sa stackIn_12_0 = null;
+        OpenGlTexture2D var10 = null;
+        OpenGlTexture2D stackIn_7_0 = null;
+        OpenGlRectangleTexture stackIn_10_0 = null;
+        OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -363,21 +363,21 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 > -61) {
-            this.a(66, false);
+            this.setMultisampling(66, false);
           }
           if (!this.field_Ic && (!rm.a(param1, -116) ||
             !rm.a(param5, -122))) {
             if (this.field_bd) {
-              stackIn_10_0 = new or(this, param7, param1, param5, param4, param0, param3);
-              return (ru) ((Object) stackIn_10_0);
+              stackIn_10_0 = new OpenGlRectangleTexture(this, param7, param1, param5, param4, param0, param3);
+              return (Texture2D) ((Object) stackIn_10_0);
             }
-            var10 = new sa(this, param7, io.field_d, hn.a(false, param1), hn.a(false, param5));
-            var10.a(0, param7, param5, 0, 14137, param0, param1, param4, param3);
+            var10 = new OpenGlTexture2D(this, param7, GpuDataType.FLOAT, hn.a(false, param1), hn.a(false, param5));
+            var10.uploadFloats(0, param7, param5, 0, 14137, param0, param1, param4, param3);
             stackIn_12_0 = var10;
-            return (ru) ((Object) stackIn_12_0);
+            return (Texture2D) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new sa(this, param7, param1, param5, param2, param4, param0, param3);
-          return (ru) ((Object) stackIn_7_0);
+          stackIn_7_0 = new OpenGlTexture2D(this, param7, param1, param5, param2, param4, param0, param3);
+          return (Texture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -420,15 +420,15 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glClear(16384);
     }
 
-    final void i(int param0) {
-        if (param0 != 0) {
-          ck var3 = (ck) null;
-          this.a(-111, -93, -40, (ck) null);
+    final void applyViewport(int guard) {
+        if (guard != 0) {
+          PrimitiveType var3 = (PrimitiveType) null;
+          this.drawPrimitives(-111, -93, -40, (PrimitiveType) null);
         }
         jaggl.OpenGL.glViewport(this.field_r, this.field_y, this.field_rb, this.field_Sb);
     }
 
-    final boolean a(byte param0, io param1, iw param2) {
+    final boolean a(byte param0, GpuDataType param1, TextureFormat param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -460,20 +460,20 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        if (!param1) {
+    final void setMultisampling(int guard, boolean enabled) {
+        if (!enabled) {
           jaggl.OpenGL.glDisable(32925);
         } else {
           jaggl.OpenGL.glEnable(32925);
         }
-        if (param0 != 1) {
+        if (guard != 1) {
           byte[] var4 = (byte[]) null;
-          this.a((iw) null, -18, -125, 65, (byte[]) null, (byte) -115, -5, true);
+          this.a((TextureFormat) null, -18, -125, 65, (byte[]) null, (byte) -115, -5, true);
         }
     }
 
-    final void I(int param0) {
-        if (param0 != 0) {
+    final void applyDirectionalLightsEnabled(int guard) {
+        if (guard != 0) {
           this.field_Ic = false;
         }
         if (!this.field_Z) {
@@ -485,7 +485,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(int param0, hq param1) {
+    final void bindVertexLayout(int guard, VertexLayout layout) {
         int var16 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -508,21 +508,21 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hu var10 = null;
-        sc var11 = null;
+        VertexStreamLayout var10 = null;
+        OpenGlVertexBuffer var11 = null;
         int var12 = 0;
         int var13 = 0;
         long var14 = 0L;
-        ls var17 = null;
+        VertexAttribute var17 = null;
         int var18 = 0;
-        hu[] var19 = null;
+        VertexStreamLayout[] var19 = null;
         int var9Lifetime1;
         int var9Lifetime2;
         var18 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var19 = ((fq) (param1)).field_g;
+          var19 = ((OpenGlVertexLayout) (layout)).streams;
           var4 = 0;
-          var6 = 82 / ((param0 - 71) / 45);
+          var6 = 82 / ((guard - 71) / 45);
           var5 = 0;
           var7 = 0;
           var8 = 0;
@@ -530,34 +530,34 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var10 = var19[var9];
             var11 = this.field_zc[var9];
             var12 = 0;
-            var13 = var11.g(34962);
-            var14 = var11.c(-24168);
-            var11.e(1175993800);
-            for (var16 = 0; var10.a(44115) > var16; var16++) {
-              var17 = var10.a(-80, var16);
-              if (var17 == ls.field_b) {
+            var13 = var11.stride(34962);
+            var14 = var11.clientAddress(-24168);
+            var11.bind(1175993800);
+            for (var16 = 0; var10.attributeCount(44115) > var16; var16++) {
+              var17 = var10.attribute(-80, var16);
+              if (var17 == VertexAttribute.POSITION) {
                 jaggl.OpenGL.glVertexPointer(3, 5126, var13, var14 + (long)var12);
                 var8 = 1;
               } else {
-                if (ls.field_c == var17) {
+                if (VertexAttribute.NORMAL == var17) {
                   var7 = 1;
                   jaggl.OpenGL.glNormalPointer(5126, var13, (long)var12 + var14);
                 } else {
-                  if (var17 != ls.field_g) {
-                    if (ls.field_j == var17) {
+                  if (var17 != VertexAttribute.COLOR) {
+                    if (VertexAttribute.TEXCOORD1 == var17) {
                       incrementValue$0 = var4;
                       var4++;
                       jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$0);
                       jaggl.OpenGL.glTexCoordPointer(1, 5126, var13, var14 + (long)var12);
                     } else {
-                      if (var17 == ls.field_e) {
+                      if (var17 == VertexAttribute.TEXCOORD2) {
                         incrementValue$1 = var4;
                         var4++;
                         jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$1);
                         jaggl.OpenGL.glTexCoordPointer(2, 5126, var13, var14 + (long)var12);
                       } else {
-                        if (ls.field_d != var17) {
-                          if (var17 == ls.field_a) {
+                        if (VertexAttribute.TEXCOORD3 != var17) {
+                          if (var17 == VertexAttribute.TEXCOORD4) {
                             incrementValue$2 = var4;
                             var4++;
                             jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$2);
@@ -577,7 +577,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                   }
                 }
               }
-              var12 = var12 + var17.field_k;
+              var12 = var12 + var17.sizeBytes;
             }
           }
           stackIn_24_0 = (this.field_Lc) ? 0 : 1;
@@ -635,8 +635,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_68_0 = var3;
-          stackIn_68_1 = new StringBuilder().append("on.AE(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_68_1 = new StringBuilder().append("on.AE(").append(guard).append(',');
+          if (layout == null) {
             stackIn_69_2 = "null";
           } else {
             stackIn_69_2 = "{...}";
@@ -645,11 +645,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void q(byte param0) {
-        if (param0 >= -74) {
+    final void applyColorCombineOperation(byte guard) {
+        if (guard >= -74) {
           this.field_ad = 99;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.a(-9267, this.field_K[this.field_mc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.glTextureCombineOperation(-9267, this.field_K[this.field_mc]));
     }
 
     final void restoreCanvasTarget() {
@@ -658,7 +658,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         try {
           this.L(-25);
-          this.a((ed) null, 126);
+          this.a((GpuTexture) null, 126);
           this.e(0, 13);
           this.k(1);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
@@ -675,9 +675,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final void V(int param0) {
+    final void applyTextureMatrix(int guard) {
         jaggl.OpenGL.glMatrixMode(5890);
-        if (param0 != 26803) {
+        if (guard != 26803) {
           this.field_Zc = (IntrusiveDeque) null;
         }
         if (ar.field_L != this.field_wb[this.field_mc]) {
@@ -691,18 +691,18 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final void bindRenderTarget(RenderTarget target) {
     }
 
-    final ef a(int param0, byte param1, int[][] param2, boolean param3) {
+    final CubeTexture a(int param0, byte param1, int[][] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        rc stackIn_1_0 = null;
+        OpenGlCubeTexture stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 57 % ((-23 - param1) / 48);
-          stackIn_1_0 = new rc(this, param0, param3, param2);
-          return (ef) ((Object) stackIn_1_0);
+          stackIn_1_0 = new OpenGlCubeTexture(this, param0, param3, param2);
+          return (CubeTexture) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -764,7 +764,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Vc = new IntrusiveDeque();
         this.field_Pc = new IntrusiveDeque();
         this.field_Fc = new IntrusiveDeque();
-        this.field_zc = new sc[16];
+        this.field_zc = new OpenGlVertexBuffer[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Bc = new jaggl.MapBuffer();
         try {
@@ -942,13 +942,13 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void q(int param0) {
+    final void applyDepthTest(int guard) {
         if (this.field_p) {
           jaggl.OpenGL.glEnable(2929);
         } else {
           jaggl.OpenGL.glDisable(2929);
         }
-        if (param0 <= 19) {
+        if (guard <= 19) {
           this.field_Fc = (IntrusiveDeque) null;
         }
     }
@@ -962,7 +962,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(int param0, mp param1) {
+    final void applyTexCoordGeneration(int guard, TextureCoordinateGeneration mode) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -970,8 +970,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 != lf.field_c) {
-            var3_int = ka.a(param1, -116);
+          if (mode != lf.DISABLED) {
+            var3_int = ka.glTexCoordGeneration(mode, -116);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -983,16 +983,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDisable(3169);
             jaggl.OpenGL.glDisable(3170);
           }
-          if (param0 != 13754) {
-            this.eb(122);
+          if (guard != 13754) {
+            this.applyDepthWrite(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("on.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("on.B(").append(guard).append(',');
+          if (mode == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -1010,23 +1010,23 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void ab(int param0) {
+    final void applyAmbientLightColor(int guard) {
         NetworkResourceRequest.field_v[3] = 1.0f;
         NetworkResourceRequest.field_v[2] = this.field_T * this.field_Xb;
         NetworkResourceRequest.field_v[1] = this.field_T * this.field_jb;
         NetworkResourceRequest.field_v[0] = this.field_J * this.field_T;
         jaggl.OpenGL.glLightModelfv(2899, NetworkResourceRequest.field_v, 0);
-        if (param0 != 7) {
+        if (guard != 7) {
           int[] var3 = (int[]) null;
           this.drawPixels(-42, 12, 8, 123, (int[]) null, 81, 90);
         }
     }
 
-    final ru a(io param0, iw param1, int param2, int param3, byte param4) {
+    final Texture2D a(GpuDataType param0, TextureFormat param1, int param2, int param3, byte param4) {
         RuntimeException var6 = null;
-        or stackIn_8_0 = null;
-        sa stackIn_10_0 = null;
-        sa stackIn_12_0 = null;
+        OpenGlRectangleTexture stackIn_8_0 = null;
+        OpenGlTexture2D stackIn_10_0 = null;
+        OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -1040,14 +1040,14 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Ic && (!rm.a(param3, -124) ||
             !rm.a(param2, -128))) {
             if (!this.field_bd) {
-              stackIn_10_0 = new sa(this, param1, param0, hn.a(false, param3), hn.a(false, param2));
-              return (ru) ((Object) stackIn_10_0);
+              stackIn_10_0 = new OpenGlTexture2D(this, param1, param0, hn.a(false, param3), hn.a(false, param2));
+              return (Texture2D) ((Object) stackIn_10_0);
             }
-            stackIn_8_0 = new or(this, param1, param0, param3, param2);
-            return (ru) ((Object) stackIn_8_0);
+            stackIn_8_0 = new OpenGlRectangleTexture(this, param1, param0, param3, param2);
+            return (Texture2D) ((Object) stackIn_8_0);
           }
-          stackIn_12_0 = new sa(this, param1, param0, param3, param2);
-          return (ru) ((Object) stackIn_12_0);
+          stackIn_12_0 = new OpenGlTexture2D(this, param1, param0, param3, param2);
+          return (Texture2D) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -1068,17 +1068,17 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void A(int param0) {
+    final void applyScissorEnabled(int guard) {
         if (this.field_wc) {
           jaggl.OpenGL.glEnable(3089);
         } else {
           jaggl.OpenGL.glDisable(3089);
         }
-        int var2 = 104 / ((0 - param0) / 55);
+        int var2 = 104 / ((0 - guard) / 55);
     }
 
-    final void f(boolean param0) {
-        if (param0) {
+    final void applyLighting(boolean guard) {
+        if (guard) {
           return;
         }
         if (this.field_I &&
@@ -1089,16 +1089,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final pv a(byte param0, boolean param1) {
-        if (param0 != 51) {
-          this.d(83, -4);
+    final VertexBuffer createVertexBuffer(byte guard, boolean dynamic) {
+        if (guard != 51) {
+          this.createShaderEffect(83, -4);
         }
-        return (pv) ((Object) new sc(this, param1));
+        return (VertexBuffer) ((Object) new OpenGlVertexBuffer(this, dynamic));
     }
 
-    final void F(int param0) {
+    final void applyScissor(int guard) {
         jaggl.OpenGL.glScissor(this.field_v + this.field_r, -this.field_yc + (this.field_y + this.field_Sb), this.field_F - this.field_v, this.field_yc - this.field_vb);
-        if (param0 != 4) {
+        if (guard != 4) {
           this.field_Oc = -14;
         }
     }
@@ -1157,7 +1157,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, ck param3) {
+    final void drawPrimitives(int startVertex, int guard, int primitiveCount, PrimitiveType type) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1168,44 +1168,44 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException var5 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1 != 0) {
+          if (guard != 0) {
             this.field_Pc = (IntrusiveDeque) null;
           }
-          if (param3 == tc.field_g) {
-            var6 = 2 * param2;
+          if (type == tc.LINES) {
+            var6 = 2 * primitiveCount;
             var5_int = 1;
           } else {
-            if (rv.field_b != param3) {
-              if (WhirlpoolDigest.field_h == param3) {
-                var6 = 3 * param2;
+            if (rv.LINE_STRIP != type) {
+              if (WhirlpoolDigest.TRIANGLES == type) {
+                var6 = 3 * primitiveCount;
                 var5_int = 4;
               } else {
-                if (an.field_d == param3) {
+                if (an.TRIANGLE_FAN == type) {
                   var5_int = 6;
-                  var6 = param2 + 2;
+                  var6 = primitiveCount + 2;
                 } else {
-                  if (fq.field_d != param3) {
-                    var6 = param2;
+                  if (OpenGlVertexLayout.TRIANGLE_STRIP != type) {
+                    var6 = primitiveCount;
                     var5_int = 0;
                   } else {
                     var5_int = 5;
-                    var6 = param2 + 2;
+                    var6 = primitiveCount + 2;
                   }
                 }
               }
             } else {
               var5_int = 3;
-              var6 = param2 + 1;
+              var6 = primitiveCount + 1;
             }
           }
-          jaggl.OpenGL.glDrawArrays(var5_int, param0, var6);
+          jaggl.OpenGL.glDrawArrays(var5_int, startVertex, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_18_0 = var5;
-          stackIn_18_1 = new StringBuilder().append("on.UC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_18_1 = new StringBuilder().append("on.UC(").append(startVertex).append(',').append(guard).append(',').append(primitiveCount).append(',');
+          if (type == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -1214,7 +1214,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final boolean a(io param0, iw param1, int param2) {
+    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1264,41 +1264,41 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final cr e(int param0, boolean param1) {
-        if (param0 != 3) {
+    final IndexBuffer createIndexBuffer(int guard, boolean dynamic) {
+        if (guard != 3) {
           this.a(-106, (byte) -119, (int[][]) null, false);
         }
-        return (cr) ((Object) new ju(this, io.field_k, param1));
+        return (IndexBuffer) ((Object) new OpenGlIndexBuffer(this, GpuDataType.UNSIGNED_SHORT, dynamic));
     }
 
-    final void r(int param0) {
+    final void applyTextureConstantColor(int greenIndex) {
         NetworkResourceRequest.field_v[3] = (float)(this.field_Ub >>> 24) / 255.0f;
         NetworkResourceRequest.field_v[2] = (float)eb.a(255, this.field_Ub) / 255.0f;
         NetworkResourceRequest.field_v[0] = (float)eb.a(16711680, this.field_Ub) / 16711680.0f;
-        NetworkResourceRequest.field_v[param0] = (float)eb.a(this.field_Ub, 65280) / 65280.0f;
+        NetworkResourceRequest.field_v[greenIndex] = (float)eb.a(this.field_Ub, 65280) / 65280.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, NetworkResourceRequest.field_v, 0);
     }
 
-    final void a(int param0, boolean param1, byte param2, mi param3) {
+    final void setAlphaCombineSource(int argument, boolean invert, byte guard, TextureCombineSource source) {
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34184 + param0, FullscreenMembershipDialog.a(127, param3));
-          jaggl.OpenGL.glTexEnvi(8960, param0 + 34200, !param1 ? 770 : 771);
-          int var5_int = -37 % ((param2 - 1) / 45);
+          jaggl.OpenGL.glTexEnvi(8960, 34184 + argument, FullscreenMembershipDialog.glTextureCombineSource(127, source));
+          jaggl.OpenGL.glTexEnvi(8960, argument + 34200, !invert ? 770 : 771);
+          int var5_int = -37 % ((guard - 1) / 45);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BF(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BF(" + argument + ',' + invert + ',' + guard + ',' + (source != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(java.awt.Canvas param0, Object param1, int param2) {
+    final void releaseSurface(java.awt.Canvas canvas, Object surface, int guard) {
         Long var4 = null;
         try {
-          if (param2 != 0) {
-            this.s(30);
+          if (guard != 0) {
+            this.applyAlphaTest(30);
           }
-          var4 = (Long) (param1);
-          this.field_Yc.releaseSurface(param0, var4.longValue());
+          var4 = (Long) (surface);
+          this.field_Yc.releaseSurface(canvas, var4.longValue());
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.JE(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.JE(" + (canvas != null ? "{...}" : "null") + ',' + (surface != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -1313,21 +1313,21 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         return 0.0f;
     }
 
-    final void l(byte param0) {
+    final void unbindTexture(byte guard) {
         int var2 = this.field_Hc[this.field_mc];
         if (0 != var2) {
           this.field_Hc[this.field_mc] = 0;
           jaggl.OpenGL.glBindTexture(var2, 0);
           jaggl.OpenGL.glDisable(var2);
         }
-        if (param0 != 9) {
+        if (guard != 9) {
           this.field_bd = false;
         }
     }
 
-    final hq a(hu[] param0, byte param1) {
+    final VertexLayout a(VertexStreamLayout[] param0, byte param1) {
         RuntimeException var3 = null;
-        fq stackIn_3_0 = null;
+        OpenGlVertexLayout stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1336,8 +1336,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param1 < 6) {
             this.field_Kc = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = new fq(param0);
-          return (hq) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlVertexLayout(param0);
+          return (VertexLayout) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1352,33 +1352,33 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final ru a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
+    final Texture2D a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        sa var9 = null;
-        sa stackIn_7_0 = null;
-        or stackIn_10_0 = null;
-        sa stackIn_12_0 = null;
+        OpenGlTexture2D var9 = null;
+        OpenGlTexture2D stackIn_7_0 = null;
+        OpenGlRectangleTexture stackIn_10_0 = null;
+        OpenGlTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -41) {
-            this.l((byte) 14);
+            this.unbindTexture((byte) 14);
           }
           if (!this.field_Ic && (!rm.a(param3, -118) ||
             !rm.a(param6, -113))) {
             if (this.field_bd) {
-              stackIn_10_0 = new or(this, param3, param6, param2, param5, param1);
-              return (ru) ((Object) stackIn_10_0);
+              stackIn_10_0 = new OpenGlRectangleTexture(this, param3, param6, param2, param5, param1);
+              return (Texture2D) ((Object) stackIn_10_0);
             }
-            var9 = new sa(this, nl.field_p, io.field_g, hn.a(false, param3), hn.a(false, param6));
-            var9.a(param6, false, param5, param3, param1, param2, 0, 0);
+            var9 = new OpenGlTexture2D(this, nl.RGBA, GpuDataType.UNSIGNED_BYTE, hn.a(false, param3), hn.a(false, param6));
+            var9.uploadInts(param6, false, param5, param3, param1, param2, 0, 0);
             stackIn_12_0 = var9;
-            return (ru) ((Object) stackIn_12_0);
+            return (Texture2D) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new sa(this, param3, param6, param0, param2, param5, param1);
-          return (ru) ((Object) stackIn_7_0);
+          stackIn_7_0 = new OpenGlTexture2D(this, param3, param6, param0, param2, param5, param1);
+          return (Texture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -1393,8 +1393,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void p(byte param0) {
-        if (param0 != -4) {
+    final void applyBlendEnabled(byte guard) {
+        if (guard != -4) {
           return;
         }
         if (this.field_ob) {
@@ -1404,13 +1404,13 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final ru a(iw param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7) {
+    final Texture2D a(TextureFormat param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7) {
         int var9_int = 0;
         RuntimeException var9 = null;
-        sa var10 = null;
-        sa stackIn_5_0 = null;
-        or stackIn_8_0 = null;
-        sa stackIn_10_0 = null;
+        OpenGlTexture2D var10 = null;
+        OpenGlTexture2D stackIn_5_0 = null;
+        OpenGlRectangleTexture stackIn_8_0 = null;
+        OpenGlTexture2D stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1422,16 +1422,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Ic && (!rm.a(param1, -107) ||
             !rm.a(param2, -111))) {
             if (this.field_bd) {
-              stackIn_8_0 = new or(this, param0, param1, param2, param4, param6, param3);
-              return (ru) ((Object) stackIn_8_0);
+              stackIn_8_0 = new OpenGlRectangleTexture(this, param0, param1, param2, param4, param6, param3);
+              return (Texture2D) ((Object) stackIn_8_0);
             }
-            var10 = new sa(this, param0, io.field_g, hn.a(false, param1), hn.a(false, param2));
-            var10.a(param0, 0, (byte) 77, param6, param4, param2, param1, 0, param3);
+            var10 = new OpenGlTexture2D(this, param0, GpuDataType.UNSIGNED_BYTE, hn.a(false, param1), hn.a(false, param2));
+            var10.uploadBytes(param0, 0, (byte) 77, param6, param4, param2, param1, 0, param3);
             stackIn_10_0 = var10;
-            return (ru) ((Object) stackIn_10_0);
+            return (Texture2D) ((Object) stackIn_10_0);
           }
-          stackIn_5_0 = new sa(this, param0, param1, param2, param7, param4, param6, param3);
-          return (ru) ((Object) stackIn_5_0);
+          stackIn_5_0 = new OpenGlTexture2D(this, param0, param1, param2, param7, param4, param6, param3);
+          return (Texture2D) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -1452,47 +1452,47 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void cb(int param0) {
-        if (param0 > -7) {
-          this.field_zc = (sc[]) null;
+    final void applyActiveTexture(int guard) {
+        if (guard > -7) {
+          this.field_zc = (OpenGlVertexBuffer[]) null;
         }
         jaggl.OpenGL.glActiveTexture(this.field_mc + 33984);
     }
 
-    final void E(int param0) {
-        if (param0 >= -47) {
-          this.I(-20);
+    final void applyLightPositions(int guard) {
+        if (guard >= -47) {
+          this.applyDirectionalLightsEnabled(-20);
         }
         jaggl.OpenGL.glLightfv(16384, 4611, this.field_G, 0);
         jaggl.OpenGL.glLightfv(16385, 4611, this.field_U, 0);
     }
 
-    final void a(int param0, int param1, pv param2) {
+    final void bindVertexBuffer(int stream, int guard, VertexBuffer buffer) {
         try {
-          this.field_zc[param0] = (sc) (param2);
-          if (param1 < 62) {
-            this.A(-86);
+          this.field_zc[stream] = (OpenGlVertexBuffer) (buffer);
+          if (guard < 62) {
+            this.applyScissorEnabled(-86);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "on.BE(" + stream + ',' + guard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void s(int param0) {
+    final void applyAlphaTest(int guard) {
         if (!this.field_u) {
           jaggl.OpenGL.glDisable(3008);
         } else {
           jaggl.OpenGL.glEnable(3008);
         }
-        int var2 = -24 / ((-6 - param0) / 54);
+        int var2 = -24 / ((-6 - guard) / 54);
     }
 
-    final ShaderEffect d(int param0, int param1) {
+    final ShaderEffect createShaderEffect(int guard, int effectId) {
         int var3;
-        if (param0 != 0) {
+        if (guard != 0) {
           this.field_Pc = (IntrusiveDeque) null;
         }
-        var3 = param1;
+        var3 = effectId;
         if (var3 == 3) {
           return (ShaderEffect) ((Object) new OpenGlUnderwaterEffect(this, this.field_ab));
         }
@@ -1502,7 +1502,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (var3 == 8) {
           return (ShaderEffect) ((Object) new OpenGlEnvironmentWaterEffect(this, this.field_ab, this.field_Mb));
         }
-        return super.d(0, param1);
+        return super.createShaderEffect(0, effectId);
     }
 
     final void N(int param0) {
@@ -1513,16 +1513,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.t((byte) 68);
     }
 
-    final void o(int param0) {
+    final void applyProjectionMatrix(int guard) {
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadMatrixf(this.field_A, 0);
-        if (param0 != -2) {
+        if (guard != -2) {
           this.field_Wc = (String) null;
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final void bb(int param0) {
+    final void applyBlendFactors(int guard) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_l == LimitedRandomAccessFile.field_a) {
           jaggl.OpenGL.glBlendFunc(770, 771);
@@ -1535,14 +1535,14 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             }
           }
         }
-        if (param0 != -19519) {
+        if (guard != -19519) {
           this.field_ad = -66;
         }
     }
 
-    final void eb(int param0) {
+    final void applyDepthWrite(int guard) {
         boolean stackIn_6_0 = false;
-        if (param0 < 113) {
+        if (guard < 113) {
           this.field_Tc = true;
         }
         stackIn_6_0 = (this.field_db) && (this.field_i);
@@ -1569,7 +1569,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Uc) {
             jaggl.OpenGL.glLoadMatrixf(this.field_Gb.writeColumnMajor4x4(-63, pq.field_y), 0);
             this.field_Uc = true;
-            this.E(-114);
+            this.applyLightPositions(-114);
             this.Y(param0 ^ -25);
           }
           if (!this.field_Db) {
@@ -1627,9 +1627,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final nh a(boolean param0, iw param1, int param2, int param3, byte[] param4, int param5) {
+    final Texture3D a(boolean param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5) {
         RuntimeException var7 = null;
-        go stackIn_3_0 = null;
+        OpenGlTexture3D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1640,8 +1640,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (!param0) {
             this.field_Wc = (String) null;
           }
-          stackIn_3_0 = new go(this, param1, param5, param3, param2, param4);
-          return (nh) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlTexture3D(this, param1, param5, param3, param2, param4);
+          return (Texture3D) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1679,7 +1679,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.d(101, false);
         this.c(47, false);
         this.b(false, 4);
-        this.a((ed) null, 120);
+        this.a((GpuTexture) null, 120);
         this.a(-2, false, 50, false);
         this.h(40, 1);
         this.e(0, 13);

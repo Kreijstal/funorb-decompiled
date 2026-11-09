@@ -48,7 +48,7 @@ final class sj {
             var4 = eb.field_a[var3];
             if (0 <= var4) {
               if (nj.field_a.field_g != var4) {
-                var5 = rc.field_j;
+                var5 = OpenGlCubeTexture.field_j;
               } else {
                 var5 = ds.field_a;
               }
@@ -157,20 +157,20 @@ final class sj {
             var3 = param2;
             if (0 == var3) {
               if (param1 == 0) {
-                fq.field_f.a(param0 ^ 3387, 16);
+                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 16);
               }
               if (param1 == 1) {
-                fq.field_f.a(-3388, 0);
+                OpenGlVertexLayout.field_f.a(-3388, 0);
               }
               if (2 == param1) {
-                fq.field_f.a(-3388, 1);
+                OpenGlVertexLayout.field_f.a(-3388, 1);
                 SocketJs5Client.field_p[param2] = true;
               }
               return;
             }
             if (1 == var3) {
               if (0 == param1) {
-                fq.field_f.a(param0 ^ 3387, 2);
+                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 2);
                 SocketJs5Client.field_p[param2] = true;
               }
               return;
@@ -180,22 +180,22 @@ final class sj {
                 if (param1 != 0) {
                   return;
                 }
-                fq.field_f.a(-3388, 6);
+                OpenGlVertexLayout.field_f.a(-3388, 6);
               } else {
                 if (4 == var3) {
                   if (0 == param1) {
-                    fq.field_f.a(-3388, 7);
+                    OpenGlVertexLayout.field_f.a(-3388, 7);
                   }
                   if (param1 == 1) {
-                    fq.field_f.a(param0 ^ 3387, 4);
+                    OpenGlVertexLayout.field_f.a(param0 ^ 3387, 4);
                   }
                   if (param1 == 2) {
-                    fq.field_f.a(-3388, 8);
+                    OpenGlVertexLayout.field_f.a(-3388, 8);
                   }
                   if (param1 != 3) {
                     return;
                   }
-                  fq.field_f.a(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.a(param0 ^ 3387, 9);
                 } else {
                   if (var3 != 5) {
                     if (6 != var3) {
@@ -203,19 +203,19 @@ final class sj {
                         if (param1 != 1) {
                           return;
                         }
-                        fq.field_f.a(-3388, 11);
+                        OpenGlVertexLayout.field_f.a(-3388, 11);
                       } else {
                         if (var3 == 9) {
                           if (0 != param1) {
                             return;
                           }
-                          fq.field_f.a(-3388, 12);
+                          OpenGlVertexLayout.field_f.a(-3388, 12);
                         } else {
                           if (var3 == 10) {
                             if (0 != param1) {
                               return;
                             }
-                            fq.field_f.a(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 13);
                           } else {
                             if (11 != var3) {
                               return;
@@ -223,35 +223,35 @@ final class sj {
                             if (param1 != 0) {
                               return;
                             }
-                            fq.field_f.a(-3388, 14);
+                            OpenGlVertexLayout.field_f.a(-3388, 14);
                           }
                         }
                       }
                     } else {
                       if (0 == param1) {
-                        fq.field_f.a(-3388, 18);
+                        OpenGlVertexLayout.field_f.a(-3388, 18);
                       }
                       if (param1 != 4) {
                         return;
                       }
-                      fq.field_f.a(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.a(param0 - 3387, 15);
                     }
                   } else {
                     if (param1 != 0) {
                       return;
                     }
-                    fq.field_f.a(-3388, 10);
+                    OpenGlVertexLayout.field_f.a(-3388, 10);
                   }
                 }
               }
             } else {
               if (param1 == 0) {
-                fq.field_f.a(param0 ^ 3387, 5);
+                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 5);
               }
               if (param1 != 5) {
                 return;
               }
-              fq.field_f.a(-3388, 3);
+              OpenGlVertexLayout.field_f.a(-3388, 3);
             }
             SocketJs5Client.field_p[param2] = true;
             return;
@@ -268,43 +268,43 @@ final class sj {
         var3Lifetime1 = param2;
         if (0 == var3Lifetime1) {
           if (param1 == 0) {
-            fq.field_f.a(param0 ^ 3387, 16);
+            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 16);
           }
           if (param1 == 1) {
-            fq.field_f.a(-3388, 0);
+            OpenGlVertexLayout.field_f.a(-3388, 0);
           }
           if (2 != param1) {
             return;
           }
-          fq.field_f.a(-3388, 1);
+          OpenGlVertexLayout.field_f.a(-3388, 1);
         } else {
           if (1 == var3Lifetime1) {
             if (0 != param1) {
               return;
             }
-            fq.field_f.a(param0 ^ 3387, 2);
+            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 2);
           } else {
             if (var3Lifetime1 != 2) {
               if (var3Lifetime1 == 3) {
                 if (param1 != 0) {
                   return;
                 }
-                fq.field_f.a(-3388, 6);
+                OpenGlVertexLayout.field_f.a(-3388, 6);
               } else {
                 if (4 == var3Lifetime1) {
                   if (0 == param1) {
-                    fq.field_f.a(-3388, 7);
+                    OpenGlVertexLayout.field_f.a(-3388, 7);
                   }
                   if (param1 == 1) {
-                    fq.field_f.a(param0 ^ 3387, 4);
+                    OpenGlVertexLayout.field_f.a(param0 ^ 3387, 4);
                   }
                   if (param1 == 2) {
-                    fq.field_f.a(-3388, 8);
+                    OpenGlVertexLayout.field_f.a(-3388, 8);
                   }
                   if (param1 != 3) {
                     return;
                   }
-                  fq.field_f.a(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.a(param0 ^ 3387, 9);
                 } else {
                   if (var3Lifetime1 != 5) {
                     if (6 != var3Lifetime1) {
@@ -313,13 +313,13 @@ final class sj {
                           if (0 != param1) {
                             return;
                           }
-                          fq.field_f.a(-3388, 12);
+                          OpenGlVertexLayout.field_f.a(-3388, 12);
                         } else {
                           if (var3Lifetime1 == 10) {
                             if (0 != param1) {
                               return;
                             }
-                            fq.field_f.a(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 13);
                           } else {
                             if (11 != var3Lifetime1) {
                               return;
@@ -327,40 +327,40 @@ final class sj {
                             if (param1 != 0) {
                               return;
                             }
-                            fq.field_f.a(-3388, 14);
+                            OpenGlVertexLayout.field_f.a(-3388, 14);
                           }
                         }
                       } else {
                         if (param1 != 1) {
                           return;
                         }
-                        fq.field_f.a(-3388, 11);
+                        OpenGlVertexLayout.field_f.a(-3388, 11);
                       }
                     } else {
                       if (0 == param1) {
-                        fq.field_f.a(-3388, 18);
+                        OpenGlVertexLayout.field_f.a(-3388, 18);
                       }
                       if (param1 != 4) {
                         return;
                       }
-                      fq.field_f.a(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.a(param0 - 3387, 15);
                     }
                   } else {
                     if (param1 != 0) {
                       return;
                     }
-                    fq.field_f.a(-3388, 10);
+                    OpenGlVertexLayout.field_f.a(-3388, 10);
                   }
                 }
               }
             } else {
               if (param1 == 0) {
-                fq.field_f.a(param0 ^ 3387, 5);
+                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 5);
               }
               if (param1 != 5) {
                 return;
               }
-              fq.field_f.a(-3388, 3);
+              OpenGlVertexLayout.field_f.a(-3388, 3);
             }
           }
         }

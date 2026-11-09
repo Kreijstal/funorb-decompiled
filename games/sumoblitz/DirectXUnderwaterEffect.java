@@ -11,7 +11,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     private static float[] field_k;
     private boolean field_o;
     private boolean field_e;
-    private ru field_i;
+    private Texture2D field_i;
     private jagdx.IDirect3DVertexShader field_p;
     private DirectXGraphicsToolkit field_l;
 
@@ -36,23 +36,23 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_o = param0 ? true : false;
         this.field_b.g(1, param1 - 20312);
         this.field_b.a(this.field_i, param1 - 20076);
-        this.field_b.a((byte) -83, lf.field_e, ua.field_n);
-        this.field_b.a(mm.field_h, 0, param1 ^ param1);
-        this.field_b.a((byte) 89, 2, true, false, jq.field_a);
-        this.field_b.a(FontMetrics.field_a, 0, true);
+        this.field_b.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+        this.field_b.a(mm.CONSTANT, 0, param1 ^ param1);
+        this.field_b.setColorCombineSource((byte) 89, 2, true, false, jq.TEXTURE);
+        this.field_b.a(FontMetrics.PREVIOUS, 0, true);
         this.field_b.g(0, param1 - 20311);
         this.d(-86);
     }
 
     final void c(boolean param0) {
         this.field_b.g(1, -121);
-        this.field_b.a((ed) null, 100);
-        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-        this.field_b.a(jq.field_a, 0, 0);
+        this.field_b.a((GpuTexture) null, 100);
+        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.field_b.a(jq.TEXTURE, 0, 0);
         if (param0) {
           this.a(-69, 14, -105);
-          this.field_b.a(mm.field_h, 2, 0);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(mm.CONSTANT, 2, 0);
+          this.field_b.a(jq.TEXTURE, 0, true);
           this.field_b.g(0, -109);
           if (!this.field_e) {
             if (null == this.field_j) {
@@ -62,8 +62,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             this.field_j = null;
             return;
           }
-          this.field_b.a(jq.field_a, 0, 0);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(jq.TEXTURE, 0, 0);
+          this.field_b.a(jq.TEXTURE, 0, true);
           this.field_e = false;
           if (null != this.field_j) {
             this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
@@ -72,12 +72,12 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.field_b.a(mm.field_h, 2, 0);
-        this.field_b.a(jq.field_a, 0, true);
+        this.field_b.a(mm.CONSTANT, 2, 0);
+        this.field_b.a(jq.TEXTURE, 0, true);
         this.field_b.g(0, -109);
         if (this.field_e) {
-          this.field_b.a(jq.field_a, 0, 0);
-          this.field_b.a(jq.field_a, 0, true);
+          this.field_b.a(jq.TEXTURE, 0, 0);
+          this.field_b.a(jq.TEXTURE, 0, true);
           this.field_e = false;
           if (null == this.field_j) {
             return;
@@ -130,7 +130,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.field_i = (ru) null;
+        this.field_i = (Texture2D) null;
         if (this.field_j != null) {
           var2Lifetime1 = this.field_l.field_Cc;
           var3Lifetime1 = this.field_l.k((byte) 122);
@@ -166,14 +166,14 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         var3.a(12, field_k);
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         if (param1 != 18834) {
           return;
         }
         if (param2 != null) {
           if (this.field_e) {
-            this.field_b.a(jq.field_a, 0, 0);
-            this.field_b.a(jq.field_a, 0, true);
+            this.field_b.a(jq.TEXTURE, 0, 0);
+            this.field_b.a(jq.TEXTURE, 0, true);
             this.field_e = false;
           }
           this.field_b.a(param2, param1 ^ 18892);
@@ -183,8 +183,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (!this.field_e) {
           this.field_b.a(this.field_b.field_D, param1 ^ 18939);
           this.field_b.h(param1 - 18771, 1);
-          this.field_b.a(FontMetrics.field_a, 0, param1 ^ 18834);
-          this.field_b.a(FontMetrics.field_a, 0, true);
+          this.field_b.a(FontMetrics.PREVIOUS, 0, param1 ^ 18834);
+          this.field_b.a(FontMetrics.PREVIOUS, 0, true);
           this.field_e = true;
           return;
         }
@@ -281,7 +281,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             this.field_g = false;
           } else {
             this.field_i = this.field_b.a(new int[]{0, -1}, 1, false, -110, 2);
-            this.field_i.a(false, false, true);
+            this.field_i.setWrap(false, false, true);
             this.field_g = true;
           }
           return;

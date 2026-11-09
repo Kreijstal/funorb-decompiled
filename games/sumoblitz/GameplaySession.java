@@ -316,16 +316,16 @@ final class GameplaySession {
             }
             var4_intLifetime1 = stackIn_34_0;
             if (0 == ul.field_f) {
-              ng.field_f[1].drawRotated((float)(64 + (ua.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)((ua.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
-              ng.field_f[1].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
-              ng.field_f[0].drawRotated((float)(ua.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(64 + (OpenGlBuffer.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)((OpenGlBuffer.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
+              ng.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(-64 + (targetMarkerYQ8 >> 8)), 4096, 16384, 1, 0, 2);
+              ng.field_f[0].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)(targetMarkerYQ8 >> 8), (int)((double)var4_intLifetime1 * 97.52380952380952), 0, 1, 0, 2);
               if (var6 != 0) {
-                OpenGlUnderwaterEffect.field_t.draw((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
+                OpenGlUnderwaterEffect.field_t.draw((OpenGlBuffer.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
               }
             } else {
-              OpenGlUnderwaterEffect.field_t.draw((ua.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
+              OpenGlUnderwaterEffect.field_t.draw((OpenGlBuffer.targetMarkerXQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.width() >> 1), (targetMarkerYQ8 >> 8) - (OpenGlUnderwaterEffect.field_t.height() >> 1), 1, 0, 2);
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -348,14 +348,14 @@ final class GameplaySession {
             }
           }
           if ((decompiledFrameCompleted1) &&
-            (decompiledFrameRemainder0 = (rc.sceneEffects != null))) {
-            stackIn_54_0 = rc.sceneEffects.first(-84);
+            (decompiledFrameRemainder0 = (OpenGlCubeTexture.sceneEffects != null))) {
+            stackIn_54_0 = OpenGlCubeTexture.sceneEffects.first(-84);
           }
           if (decompiledFrameRemainder0) {
             var4_ref3 = (TimedSceneEffect) (stackIn_54_0);
             while (null != var4_ref3) {
               var4_ref3.render(toolkit, -127);
-              var4_ref3 = (TimedSceneEffect) (rc.sceneEffects.next((byte) 18));
+              var4_ref3 = (TimedSceneEffect) (OpenGlCubeTexture.sceneEffects.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -767,7 +767,7 @@ final class GameplaySession {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (tg.field_a == 13) {
+          if (TextureCombineOperation.field_a == 13) {
             po.pauseMenuOpen = true;
             StrongCacheReference.switchMenuScreen(-7753, false, 1);
           }
@@ -784,7 +784,7 @@ final class GameplaySession {
               regionExit3: {
                 regionExit4: {
                   boolean decompiledFrameRemainder0 = true;
-                  var2_int = tg.field_a;
+                  var2_int = TextureCombineOperation.field_a;
                   if (var2_int != 13 && (var2_int != 35 ||
                     var3 != 0)) {
                     if (var2_int == 34) {
@@ -881,7 +881,7 @@ final class GameplaySession {
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           OpenGlTransparentWaterEffect.field_e = 0;
-          iw.elapsedTicks = 0;
+          TextureFormat.elapsedTicks = 0;
           SoftwareTransform3D.field_b = 0;
           IntrusiveNodeHashTable.field_c = 0;
           tc.e(101);
@@ -917,17 +917,17 @@ final class GameplaySession {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           an.field_f.drawRotated(26.0f, 26.0f, 4915, 0);
-          ju.field_p[0].drawRotated(16.0f, 16.0f, 4096, -16384);
-          ju.field_p[1].drawRotated(16.0f, 16.0f, 4096, -16384);
+          OpenGlIndexBuffer.field_p[0].drawRotated(16.0f, 16.0f, 4096, -16384);
+          OpenGlIndexBuffer.field_p[1].drawRotated(16.0f, 16.0f, 4096, -16384);
           an.field_f.drawRotated(616.0f, 26.0f, 4915, 0);
-          ju.field_p[0].drawRotated(624.0f, 16.0f, 4096, 32768);
-          ju.field_p[1].drawRotated(624.0f, 16.0f, 4096, 32768);
+          OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 16.0f, 4096, 32768);
+          OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 16.0f, 4096, 32768);
           an.field_f.drawRotated(26.0f, 454.0f, 4915, 0);
-          ju.field_p[0].drawRotated(16.0f, 464.0f, 4096, 0);
-          ju.field_p[1].drawRotated(16.0f, 464.0f, 4096, 0);
+          OpenGlIndexBuffer.field_p[0].drawRotated(16.0f, 464.0f, 4096, 0);
+          OpenGlIndexBuffer.field_p[1].drawRotated(16.0f, 464.0f, 4096, 0);
           an.field_f.drawRotated(614.0f, 454.0f, 4915, 0);
-          ju.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
-          ju.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
+          OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
+          OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
@@ -1052,8 +1052,8 @@ final class GameplaySession {
             this.updateSceneryParticles((byte) 55);
           }
           boolean decompiledFrameCompleted2 = true;
-          if (null != rc.sceneEffects) {
-            var3 = (TimedSceneEffect) (rc.sceneEffects.first(95));
+          if (null != OpenGlCubeTexture.sceneEffects) {
+            var3 = (TimedSceneEffect) (OpenGlCubeTexture.sceneEffects.first(95));
             while (null != var3) {
               stackIn_31_0 = var3.updateAndIsExpired(-2567);
               if (var6 != 0) {
@@ -1063,7 +1063,7 @@ final class GameplaySession {
               if (stackIn_31_0) {
                 var3.unlink(false);
               }
-              var3 = (TimedSceneEffect) (rc.sceneEffects.next((byte) 18));
+              var3 = (TimedSceneEffect) (OpenGlCubeTexture.sceneEffects.next((byte) 18));
             }
           }
           if (decompiledFrameCompleted2) {
@@ -1082,7 +1082,7 @@ final class GameplaySession {
           if (guard >= -65) {
             this.renderSimpleArenaBorder(-55, (GraphicsToolkit) null);
           }
-          if (iw.elapsedTicks - uc.field_f == 100 &&
+          if (TextureFormat.elapsedTicks - uc.field_f == 100 &&
             !MusicPatch.simulationPaused &&
             !MessageDialog.arcadeMode) {
             sj.a(-1, an.waveIndex, oh.levelIndex);
@@ -1093,7 +1093,7 @@ final class GameplaySession {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             fb.field_a = fb.field_a - 5;
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 3;
-            iw.elapsedTicks = iw.elapsedTicks + 1;
+            TextureFormat.elapsedTicks = TextureFormat.elapsedTicks + 1;
             if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
               if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
                 SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + 1;
@@ -1122,8 +1122,8 @@ final class GameplaySession {
             }
           }
           MusicPatch.c((byte) 77);
-          if (iw.elapsedTicks != uc.field_f &&
-            (iw.elapsedTicks - uc.field_f) % 50 == 0 &&
+          if (TextureFormat.elapsedTicks != uc.field_f &&
+            (TextureFormat.elapsedTicks - uc.field_f) % 50 == 0 &&
             !DroneDebris.field_C) {
             DroneDebris.field_C = ig.b(114);
           }
@@ -1159,28 +1159,28 @@ final class GameplaySession {
               var3_ref = SpriteMask.drones[0];
               if (fa.field_b <= 0 &&
                 !var3_ref.isBlastActive(126)) {
-                if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, ua.targetMarkerXQ8, var3_ref.yQ8)) {
+                if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
                   SecondaryNodeQueue.a(var3_ref, (byte) 113);
                   if (ul.field_f == 0) {
-                    rc.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(ua.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
+                    OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
                   }
                   gn.a(30, true);
                 }
                 fa.field_b = 250;
               }
               targetMarkerYQ8 = var3_ref.yQ8;
-              ua.targetMarkerXQ8 = var3_ref.xQ8;
+              OpenGlBuffer.targetMarkerXQ8 = var3_ref.xQ8;
               fa.field_b = fa.field_b - 1;
             }
             if (fa.field_b == 30 &&
               0 == ul.field_f) {
-              rc.sceneEffects.addLast((IntrusiveNode) (new ShrinkingRingEffect(ua.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
+              OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ShrinkingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
             }
             if (30 == fa.field_b) {
               gn.a(32, true);
             }
             if (fa.field_b == 30) {
-              Js5Client.a(10, targetMarkerYQ8, rc.sceneEffects, 61, ua.targetMarkerXQ8, 16711680);
+              Js5Client.a(10, targetMarkerYQ8, OpenGlCubeTexture.sceneEffects, 61, OpenGlBuffer.targetMarkerXQ8, 16711680);
             }
           }
           var3_ref2 = (HudMessage) (ig.hudMessages.first(111));
@@ -1202,13 +1202,13 @@ final class GameplaySession {
             stackIn_158_0 = ~an.waveIndex;
           }
           if (stackIn_158_0 != -1) {
-            boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + iw.elapsedTicks != 5);
+            boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks != 5);
             if (!decompiledSharedTail0) {
               rn.a(ff.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
-              (10 == -LimitedRandomAccessFile.field_b + iw.elapsedTicks)) {
+              (10 == -LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks)) {
               rn.a(ff.warningText, 320, 255, 16776960, 28807);
             }
           }
@@ -1259,7 +1259,7 @@ final class GameplaySession {
             boolean decompiledFrameRemainder0 = true;
             er.c((byte) 54);
             if ((MessageDialog.arcadeMode) &&
-              (decompiledFrameRemainder0 = (0 == iw.elapsedTicks % 250)) &&
+              (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(jc.b(true) >= (SpriteMask.drones.length - 1)))) {
               var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
               oc.a(var4, false);
@@ -1296,7 +1296,7 @@ final class GameplaySession {
                     break;
                   }
                   if (~an.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
-                    LimitedRandomAccessFile.field_b = iw.elapsedTicks;
+                    LimitedRandomAccessFile.field_b = TextureFormat.elapsedTicks;
                     rn.a(ff.warningText, 320, 225, 16711680, 28807);
                   }
                   an.waveIndex = an.waveIndex + 1;
@@ -1365,7 +1365,7 @@ final class GameplaySession {
                       th.b(24753, 253, 2);
                     }
                   }
-                  ua.a(35040, new PlayerDrone(81920, 61440));
+                  OpenGlBuffer.a(35040, new PlayerDrone(81920, 61440));
                   StrongCacheReference.switchMenuScreen(-7753, true, 12);
                   TextLayout.a(0, 6);
                   return;
@@ -1379,7 +1379,7 @@ final class GameplaySession {
             GridWidgetContainer.livesRemaining > 0) {
             GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining - 1;
             if (GridWidgetContainer.livesRemaining <= 0) {
-              jk.field_a = iw.elapsedTicks;
+              jk.field_a = TextureFormat.elapsedTicks;
               uq.a(7, 8);
               StrongCacheReference.switchMenuScreen(-7753, true, 11);
               if (var6 != 0) {
@@ -1420,23 +1420,23 @@ final class GameplaySession {
           GameOverScreen.a(true);
           if (MessageDialog.arcadeMode &&
             SpriteMask.drones[0] != null) {
-            if (300 <= iw.elapsedTicks * 20 / 1000) {
+            if (300 <= TextureFormat.elapsedTicks * 20 / 1000) {
               th.b(24753, 231, 24);
             }
-            if (180 <= 20 * iw.elapsedTicks / 1000) {
+            if (180 <= 20 * TextureFormat.elapsedTicks / 1000) {
               th.b(24753, 232, 23);
             }
-            if (20 * iw.elapsedTicks / 1000 >= 60) {
+            if (20 * TextureFormat.elapsedTicks / 1000 >= 60) {
               th.b(24753, 233, 22);
             }
             if (RenderPresentationException.a(false)) {
-              if (iw.elapsedTicks * 20 / 1000 >= 300) {
+              if (TextureFormat.elapsedTicks * 20 / 1000 >= 300) {
                 th.b(24753, 228, 27);
               }
-              if (iw.elapsedTicks * 20 / 1000 >= 180) {
+              if (TextureFormat.elapsedTicks * 20 / 1000 >= 180) {
                 th.b(24753, 229, 26);
               }
-              if (60 <= iw.elapsedTicks * 20 / 1000) {
+              if (60 <= TextureFormat.elapsedTicks * 20 / 1000) {
                 th.b(24753, 230, 25);
               }
             }
@@ -1646,11 +1646,11 @@ final class GameplaySession {
             !f.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
             }
             if (!vs.b((byte) 9)) {
               kp.a(3, GameKeyHandler.field_a, 79);
@@ -1714,11 +1714,11 @@ final class GameplaySession {
                   HudMessage.field_s[4].draw(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1733,8 +1733,8 @@ final class GameplaySession {
               } else {
                 SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
                 SpriteState.field_B[4].draw(459, 448);
-                qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(iw.elapsedTicks, -23620) + "", (byte) -73, -1);
-                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(iw.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
+                qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
+                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
               if (MessageDialog.arcadeMode) {
                 qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
@@ -1827,7 +1827,7 @@ final class GameplaySession {
           oh.levelIndex = levelIndex;
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
-          iw.elapsedTicks = 0;
+          TextureFormat.elapsedTicks = 0;
           fb.field_a = 0;
           tc.e(104);
           if (oh.levelIndex == 0 &&
@@ -1853,7 +1853,7 @@ final class GameplaySession {
         GameOverScreen discarded$1 = null;
         try {
           ni.sceneryParticles = new IntrusiveDeque();
-          rc.sceneEffects = new IntrusiveDeque();
+          OpenGlCubeTexture.sceneEffects = new IntrusiveDeque();
           this.resetSession(127);
           discarded$0 = new LevelCompleteUpgradeScreen();
           DropDownWidget.field_N = new bw();

@@ -5,7 +5,7 @@ final class tc extends na {
     private TextInputWidget field_e;
     static ToolkitSprite[] field_j;
     static SpriteData field_i;
-    static ck field_g;
+    static PrimitiveType LINES;
     private TextInputWidget field_h;
     static String field_f;
 
@@ -198,7 +198,7 @@ final class tc extends na {
         if (param0 != -1) {
           return;
         }
-        field_g = null;
+        LINES = null;
         field_f = null;
     }
 
@@ -213,6 +213,6 @@ final class tc extends na {
     }
 
     static {
-        field_g = new ck();
+        LINES = new PrimitiveType();
     }
 }

@@ -3,10 +3,10 @@
  */
 final class wn {
     static int field_a;
-    static mp field_b;
+    static TextureCoordinateGeneration EYE_LINEAR;
 
     public static void releaseStatics(int param0) {
-        field_b = null;
+        EYE_LINEAR = null;
         if (param0 != 0) {
           wn.a(71, -52, 50);
         }
@@ -60,6 +60,6 @@ final class wn {
     }
 
     static {
-        field_b = new mp();
+        EYE_LINEAR = new TextureCoordinateGeneration();
     }
 }

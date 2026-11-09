@@ -10,7 +10,7 @@ final class FontMetrics {
     int field_i;
     static vf field_f;
     static int[] field_e;
-    static mi field_a;
+    static TextureCombineSource PREVIOUS;
     static int field_b;
 
     final int a(String param0, int param1) {
@@ -690,7 +690,7 @@ final class FontMetrics {
         try {
           field_f = null;
           field_e = null;
-          field_a = null;
+          PREVIOUS = null;
           if (param0) {
             field_b = -45;
           }
@@ -870,6 +870,6 @@ final class FontMetrics {
     static {
         field_f = new vf();
         field_e = new int[8192];
-        field_a = new mi();
+        PREVIOUS = new TextureCombineSource();
     }
 }

@@ -57,7 +57,7 @@ abstract class ShaderEffect {
         }
     }
 
-    abstract void a(int param0, int param1, ed param2);
+    abstract void a(int param0, int param1, GpuTexture param2);
 
     void a(byte param0) {
         if (param0 >= -47) {
@@ -73,7 +73,7 @@ abstract class ShaderEffect {
         }
     }
 
-    final static int a(int param0, tg param1) {
+    final static int glTextureCombineOperation(int guard, TextureCombineOperation operation) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -85,26 +85,26 @@ abstract class ShaderEffect {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -9267) {
+          if (guard != -9267) {
             ShaderEffect.releaseStatics(38);
           }
-          if (param1 == lf.field_e) {
+          if (operation == lf.REPLACE) {
             stackIn_4_0 = 7681;
             return stackIn_4_0;
           }
-          if (param1 == SlowBurstParticle.field_v) {
+          if (operation == SlowBurstParticle.MODULATE) {
             stackIn_16_0 = 8448;
             return stackIn_16_0;
           }
-          if (param1 == ua.field_n) {
+          if (operation == OpenGlBuffer.INTERPOLATE) {
             stackIn_8_0 = 34165;
             return stackIn_8_0;
           }
-          if (LoginForm.field_F == param1) {
+          if (LoginForm.ADD == operation) {
             stackIn_14_0 = 260;
             return stackIn_14_0;
           }
-          if (bj.field_c != param1) {
+          if (bj.SUBTRACT != operation) {
             throw new IllegalArgumentException();
           }
           stackIn_12_0 = 34023;
@@ -113,8 +113,8 @@ abstract class ShaderEffect {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_20_0 = var2;
-          stackIn_20_1 = new StringBuilder().append("rq.T(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("rq.T(").append(guard).append(',');
+          if (operation == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

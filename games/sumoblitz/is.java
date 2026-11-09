@@ -75,7 +75,7 @@ final class is {
         RuntimeException var2_ref = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (io.field_b == null) {
+          if (GpuDataType.field_b == null) {
             stackIn_3_0 = null;
             return (cn) (stackIn_3_0);
           }
@@ -88,7 +88,7 @@ final class is {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (cn) (io.field_b.a((long)var2.hashCode(), -45));
+          var3 = (cn) (GpuDataType.field_b.a((long)var2.hashCode(), -45));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_jb);
             var4 = uk.a(-1, var7);
@@ -99,7 +99,7 @@ final class is {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (cn) (io.field_b.a(-109));
+            var3 = (cn) (GpuDataType.field_b.a(-109));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

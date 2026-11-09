@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    private cr field_b;
-    private pv field_d;
+    private IndexBuffer field_b;
+    private VertexBuffer field_d;
     static uw field_a;
-    private pv field_c;
+    private VertexBuffer field_c;
 
     public static void releaseStatics(int param0) {
         if (param0 != 786336) {
@@ -169,7 +169,7 @@ final class jl {
     }
 
     final void b(int param0) {
-        this.field_c.b(12001);
+        this.field_c.close(12001);
         if (param0 != -19073) {
           jl.a(121, -85, true, (byte) 9);
         }
@@ -189,13 +189,13 @@ final class jl {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          param0.a(new hu[]{new hu(new ls[]{ls.field_b, ls.field_g, ls.field_e}), new hu(ls.field_c)}, (byte) 53);
-          this.field_c = param0.a((byte) 51, true);
-          this.field_d = param0.a((byte) 51, false);
-          this.field_d.a(12, (byte) -35, 393168);
-          this.field_b = param0.e(3, false);
-          this.field_b.a((byte) -116, 49146);
-          var7 = this.field_b.a(true, 10081);
+          param0.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR, VertexAttribute.TEXCOORD2}), new VertexStreamLayout(VertexAttribute.NORMAL)}, (byte) 53);
+          this.field_c = param0.createVertexBuffer((byte) 51, true);
+          this.field_d = param0.createVertexBuffer((byte) 51, false);
+          this.field_d.allocate(12, (byte) -35, 393168);
+          this.field_b = param0.createIndexBuffer(3, false);
+          this.field_b.allocate((byte) -116, 49146);
+          var7 = this.field_b.map(true, 10081);
           if (var7 != null) {
             var8 = param0.a(true, var7);
             if (!jaclib.memory.Stream.b()) {
@@ -220,9 +220,9 @@ final class jl {
               }
             }
             var8.a();
-            this.field_b.a(-28833);
+            this.field_b.unmap(-28833);
           }
-          var9 = this.field_d.a(7454, true);
+          var9 = this.field_d.map(7454, true);
           if (var9 != null) {
             var4 = param0.a(true, var9);
             if (!jaclib.memory.Stream.b()) {
@@ -257,7 +257,7 @@ final class jl {
               }
             }
             var4.a();
-            this.field_d.a(22957);
+            this.field_d.unmap(22957);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +277,7 @@ final class jl {
     final void a(int param0, HardwareGraphicsToolkit param1) {
         try {
           int var3_int = -4 % ((param0 - 65) / 32);
-          this.field_c.a(24, (byte) -35, 786336);
+          this.field_c.allocate(24, (byte) -35, 786336);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -5,7 +5,7 @@ abstract class ModalDialog extends WidgetContainer {
     boolean open;
     DialogLayer dialogLayer;
     private int opacity;
-    static iw field_A;
+    static TextureFormat DEPTH_COMPONENT;
     static int[] field_C;
 
     ModalDialog(DialogLayer layer, int initialWidth, int initialHeight) {
@@ -20,7 +20,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     public static void releaseStatics(byte param0) {
-        field_A = null;
+        DEPTH_COMPONENT = null;
         int var1 = 68 / ((1 - param0) / 63);
         field_C = null;
     }
@@ -207,7 +207,7 @@ abstract class ModalDialog extends WidgetContainer {
           this.setBounds(106, lj.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
           return;
         }
-        field_A = (iw) null;
+        DEPTH_COMPONENT = (TextureFormat) null;
         this.setBounds(106, lj.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
     }
 
@@ -237,7 +237,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     static {
-        field_A = new iw(1);
+        DEPTH_COMPONENT = new TextureFormat(1);
         field_C = new int[1024];
     }
 }

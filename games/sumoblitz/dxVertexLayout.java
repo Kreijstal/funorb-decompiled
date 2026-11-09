@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public class dxVertexLayout extends hq {
+public class dxVertexLayout extends VertexLayout {
     jagdx.IDirect3DVertexDeclaration field_d;
 
-    dxVertexLayout(DirectXGraphicsToolkit param0, hu[] param1) {
+    dxVertexLayout(DirectXGraphicsToolkit param0, VertexStreamLayout[] param1) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -13,33 +13,33 @@ public class dxVertexLayout extends hq {
         int incrementValue$3 = 0;
         int var4;
         int var6;
-        hu var7;
-        ls var9;
+        VertexStreamLayout var7;
+        VertexAttribute var9;
         jagdx.VertexElementCollection var10;
         var10 = new jagdx.VertexElementCollection(param0.field_Wc);
         var4 = 0;
         for (var5 = 0; var5 < param1.length; var5++) {
           var6 = 0;
           var7 = param1[var5];
-          for (var8 = 0; var8 < var7.a(44115); var8++) {
-            var9 = var7.a(-101, var8);
-            if (ls.field_b != var9) {
-              if (var9 == ls.field_c) {
+          for (var8 = 0; var8 < var7.attributeCount(44115); var8++) {
+            var9 = var7.attribute(-101, var8);
+            if (VertexAttribute.POSITION != var9) {
+              if (var9 == VertexAttribute.NORMAL) {
                 var10.addElement(var5, 2, 0, 3, 0, var6);
               } else {
-                if (var9 != ls.field_g) {
-                  if (var9 != ls.field_j) {
-                    if (ls.field_e == var9) {
+                if (var9 != VertexAttribute.COLOR) {
+                  if (var9 != VertexAttribute.TEXCOORD1) {
+                    if (VertexAttribute.TEXCOORD2 == var9) {
                       incrementValue$0 = var4;
                       var4++;
                       var10.addElement(var5, 1, 0, 5, incrementValue$0, var6);
                     } else {
-                      if (var9 == ls.field_d) {
+                      if (var9 == VertexAttribute.TEXCOORD3) {
                         incrementValue$1 = var4;
                         var4++;
                         var10.addElement(var5, 2, 0, 5, incrementValue$1, var6);
                       } else {
-                        if (ls.field_a == var9) {
+                        if (VertexAttribute.TEXCOORD4 == var9) {
                           incrementValue$2 = var4;
                           var4++;
                           var10.addElement(var5, 3, 0, 5, incrementValue$2, var6);
@@ -58,7 +58,7 @@ public class dxVertexLayout extends hq {
             } else {
               var10.addElement(var5, 2, 0, 0, 0, var6);
             }
-            var6 = var6 + var9.field_k;
+            var6 = var6 + var9.sizeBytes;
           }
         }
         var10.finish();

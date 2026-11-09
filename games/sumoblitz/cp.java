@@ -331,8 +331,8 @@ final class cp {
           var6.horizontalAlignment = 0;
           var7 = new fl(var4, true);
           var7.horizontalAlignment = 0;
-          var7.a(ua.a(8947848, -115), 28715);
-          var7.a(false, 1).a(ua.a(11184810, -125), 2147483647).c(2236962, 17818);
+          var7.a(OpenGlBuffer.a(8947848, -115), 28715);
+          var7.a(false, 1).a(OpenGlBuffer.a(11184810, -125), 2147483647).c(2236962, 17818);
           this.field_i = (WidgetRenderer) ((Object) new vg(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new va(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new iu(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

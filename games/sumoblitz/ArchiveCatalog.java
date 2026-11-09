@@ -610,7 +610,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime14 = ke.a((byte) 112, "thousandseperator");
           if (var2Lifetime14 != null) {
-            ck.field_a = MusicVoice.a(0, var2Lifetime14);
+            PrimitiveType.field_a = MusicVoice.a(0, var2Lifetime14);
           }
           var2Lifetime15 = ke.a((byte) 100, "multiplier");
           if (var2Lifetime15 != null) {
@@ -686,7 +686,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime33 = ke.a((byte) 127, "continueOptTx");
           if (null != var2Lifetime33) {
-            ls.continueText = MusicVoice.a(0, var2Lifetime33);
+            VertexAttribute.continueText = MusicVoice.a(0, var2Lifetime33);
           }
           var2Lifetime34 = ke.a((byte) 125, "restartLevel");
           if (var2Lifetime34 != null) {
@@ -1377,7 +1377,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime205 = ke.a((byte) 99, "hudMultiplier");
           if (var2Lifetime205 != null) {
-            fq.multiplierText = MusicVoice.a(0, var2Lifetime205);
+            OpenGlVertexLayout.multiplierText = MusicVoice.a(0, var2Lifetime205);
           }
           var2Lifetime206 = ke.a((byte) 126, "hudLevel");
           if (var2Lifetime206 != null) {

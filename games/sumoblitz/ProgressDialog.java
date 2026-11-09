@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ProgressDialog extends ResizingDialog {
-    static iw field_X;
+    static TextureFormat RGB;
     private String field_W;
     private String field_U;
     private boolean field_P;
@@ -49,13 +49,13 @@ final class ProgressDialog extends ResizingDialog {
         if (param0) {
           waitingForGraphicsText = null;
           field_R = null;
-          field_X = null;
+          RGB = null;
           return;
         }
         namesCannotStartOrText = (String) null;
         waitingForGraphicsText = null;
         field_R = null;
-        field_X = null;
+        RGB = null;
     }
 
     final void k(int param0) {
@@ -136,7 +136,7 @@ final class ProgressDialog extends ResizingDialog {
     }
 
     static {
-        field_X = new iw(3);
+        RGB = new TextureFormat(3);
         namesCannotStartOrText = "Names cannot start or end with space or underscore";
         waitingForGraphicsText = "Waiting for graphics";
     }

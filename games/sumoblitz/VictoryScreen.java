@@ -54,7 +54,7 @@ final class VictoryScreen extends MenuScreen {
         String var9 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 42 / ((param0 + 75) / 49);
-        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + vb.field_I + " " + ContentTransitionDialog.field_Q + ") " + iw.field_a;
+        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + vb.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.field_a;
         String var1 = var7;
         if (0 >= gu.field_d) {
         } else {

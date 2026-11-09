@@ -113,7 +113,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 return stackIn_18_0;
               }
             } else {
-              if (ji.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var4) == -1) {
+              if (TextureFilter.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var4) == -1) {
                 stackIn_22_0 = gs.field_a;
                 return stackIn_22_0;
               }
@@ -196,7 +196,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var5.field_K = sm.a(var5.field_K, param0, -112, 16);
           }
           if (kh.a(param0, false)) {
-            var5.field_a = ua.a(16, 0, var5.field_a, param0);
+            var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, param0);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_a.length; var7++) {
               if (var6 < (255 & var5.field_a[var7])) {

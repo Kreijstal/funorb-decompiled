@@ -61,7 +61,7 @@ final class ke {
         if (an.waveIndex < Bzip2State.field_J.length) {
           SocketConnector.field_c = 0;
           ig.b(120);
-          uc.field_f = iw.elapsedTicks;
+          uc.field_f = TextureFormat.elapsedTicks;
           kp.field_a = false;
           DroneDebris.field_C = false;
         }

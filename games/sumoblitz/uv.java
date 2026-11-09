@@ -12,9 +12,9 @@ final class uv extends TextWidgetRenderer {
         if (param0 != -25843) {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
           uv.a(-92, -128, -112, -123, (IntrusiveDeque) null, -24);
-          return -hu.field_b + PlayingSound.field_n;
+          return -VertexStreamLayout.field_b + PlayingSound.field_n;
         }
-        return -hu.field_b + PlayingSound.field_n;
+        return -VertexStreamLayout.field_b + PlayingSound.field_n;
     }
 
     uv(ne[] param0) {

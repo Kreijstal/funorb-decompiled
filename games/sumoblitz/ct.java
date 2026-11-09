@@ -111,7 +111,7 @@ final class ct extends ml {
         db.droneSlotLimit = 1;
         FadingWidget.score = 0;
         GridWidgetContainer.livesRemaining = 1;
-        iw.elapsedTicks = 0;
+        TextureFormat.elapsedTicks = 0;
         MusicPatch.simulationPaused = false;
         if (param0) {
           ke.a(false);

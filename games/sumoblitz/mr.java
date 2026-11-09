@@ -27,9 +27,9 @@ final class mr {
         this.field_d.a(5, 22663);
     }
 
-    final ru a(int param0, int param1) {
+    final Texture2D a(int param0, int param1) {
         Object var3;
-        ru var4;
+        Texture2D var4;
         TextureMetadata var5;
         int var6;
         int[] var7;
@@ -39,7 +39,7 @@ final class mr {
         int stackIn_9_0 = 0;
         HardwareGraphicsToolkit stackIn_13_0;
         int stackIn_13_1;
-        iw stackIn_13_2;
+        TextureFormat stackIn_13_2;
         int stackIn_13_3;
         boolean stackIn_14_4 = false;
         HardwareGraphicsToolkit stackIn_23_0 = null;
@@ -61,7 +61,7 @@ final class mr {
         int stackIn_48_0 = 0;
         HardwareGraphicsToolkit stackIn_52_0;
         int stackIn_52_1;
-        iw stackIn_52_2;
+        TextureFormat stackIn_52_2;
         int stackIn_52_3;
         boolean stackIn_53_4 = false;
         HardwareGraphicsToolkit stackIn_57_0 = null;
@@ -88,24 +88,24 @@ final class mr {
         int[] stackIn_83_1 = null;
         int stackIn_83_2 = 0;
         boolean stackIn_84_3 = false;
-        ru var13;
-        ru var18;
-        ru var23;
+        Texture2D var13;
+        Texture2D var18;
+        Texture2D var23;
         TextureMetadata var29;
-        ru var30;
-        ru var31;
-        ru var32;
-        ru var33;
-        ru var34;
+        Texture2D var30;
+        Texture2D var31;
+        Texture2D var32;
+        Texture2D var33;
+        Texture2D var34;
         float[] var40;
         int var6Lifetime1;
-        ru var4Lifetime1;
-        ru var4Lifetime2;
+        Texture2D var4Lifetime1;
+        Texture2D var4Lifetime2;
         int[] var7Lifetime1;
         int[] var7Lifetime2;
         int[] var7Lifetime3;
         int[] var7Lifetime4;
-        ru var4Lifetime3;
+        Texture2D var4Lifetime3;
         int[] var7Lifetime5;
         int[] var7Lifetime6;
         int[] var7Lifetime7;
@@ -114,7 +114,7 @@ final class mr {
         var8 = Sumoblitz.field_L ? 1 : 0;
         var3 = this.field_d.a((long)param1, 112);
         if (var3 != null) {
-          return (ru) (var3);
+          return (Texture2D) (var3);
         }
         if (param0 <= 81) {
           mr.releaseStatics((byte) -13);
@@ -134,11 +134,11 @@ final class mr {
               var39 = this.field_c.a(var6, false, 0.699999988079071f, param1, var6, -70);
               stackIn_13_0 = this.field_a;
               stackIn_13_1 = var6;
-              stackIn_13_2 = nl.field_p;
+              stackIn_13_2 = nl.RGBA;
               stackIn_13_3 = 110;
               stackIn_14_4 = (var12.field_k == 0) ? false : true;
               var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
-              var4.a(var12.field_i, var12.field_l, true);
+              var4.setWrap(var12.field_i, var12.field_l, true);
               this.field_d.a((long)param1, var4, (byte) 19);
               return var4;
             }
@@ -156,7 +156,7 @@ final class mr {
             stackIn_23_2 = var6;
             stackIn_24_3 = (var12.field_k == 0) ? false : true;
             var13 = ((HardwareGraphicsToolkit) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
-            var13.a(var12.field_i, var12.field_l, true);
+            var13.setWrap(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var13, (byte) 19);
             return var13;
           }
@@ -167,7 +167,7 @@ final class mr {
             stackIn_29_2 = var6;
             stackIn_30_3 = (var12.field_k == 0) ? false : true;
             var18 = ((HardwareGraphicsToolkit) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
-            var18.a(var12.field_i, var12.field_l, true);
+            var18.setWrap(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var18, (byte) 19);
             return var18;
           }
@@ -178,7 +178,7 @@ final class mr {
             stackIn_40_2 = var6;
             stackIn_41_3 = (var12.field_k == 0) ? false : true;
             var23 = ((HardwareGraphicsToolkit) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
-            var23.a(var12.field_i, var12.field_l, true);
+            var23.setWrap(var12.field_i, var12.field_l, true);
             this.field_d.a((long)param1, var23, (byte) 19);
             return var23;
           }
@@ -188,7 +188,7 @@ final class mr {
           stackIn_34_2 = var6;
           stackIn_35_3 = (var12.field_k == 0) ? false : true;
           var4Lifetime3 = ((HardwareGraphicsToolkit) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
-          var4Lifetime3.a(var12.field_i, var12.field_l, true);
+          var4Lifetime3.setWrap(var12.field_i, var12.field_l, true);
           this.field_d.a((long)param1, var4Lifetime3, (byte) 19);
           return var4Lifetime3;
         }
@@ -210,7 +210,7 @@ final class mr {
             stackIn_72_2 = var6Lifetime1;
             stackIn_73_3 = (var29.field_k == 0) ? false : true;
             var33 = ((HardwareGraphicsToolkit) (Object) stackIn_72_0).a(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
-            var33.a(var29.field_i, var29.field_l, true);
+            var33.setWrap(var29.field_i, var29.field_l, true);
             this.field_d.a((long)param1, var33, (byte) 19);
             return var33;
           }
@@ -221,7 +221,7 @@ final class mr {
             stackIn_83_2 = var6Lifetime1;
             stackIn_84_3 = (var29.field_k == 0) ? false : true;
             var34 = ((HardwareGraphicsToolkit) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
-            var34.a(var29.field_i, var29.field_l, true);
+            var34.setWrap(var29.field_i, var29.field_l, true);
             this.field_d.a((long)param1, var34, (byte) 19);
             return var34;
           }
@@ -231,7 +231,7 @@ final class mr {
           stackIn_77_2 = var6Lifetime1;
           stackIn_78_3 = (var29.field_k == 0) ? false : true;
           var4Lifetime1 = ((HardwareGraphicsToolkit) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
-          var4Lifetime1.a(var29.field_i, var29.field_l, true);
+          var4Lifetime1.setWrap(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var4Lifetime1, (byte) 19);
           return var4Lifetime1;
         }
@@ -239,11 +239,11 @@ final class mr {
           var40 = this.field_c.a(var6Lifetime1, false, 0.699999988079071f, param1, var6Lifetime1, -70);
           stackIn_52_0 = this.field_a;
           stackIn_52_1 = var6Lifetime1;
-          stackIn_52_2 = nl.field_p;
+          stackIn_52_2 = nl.RGBA;
           stackIn_52_3 = 110;
           stackIn_53_4 = (var29.field_k == 0) ? false : true;
           var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
-          var4Lifetime2.a(var29.field_i, var29.field_l, true);
+          var4Lifetime2.setWrap(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var4Lifetime2, (byte) 19);
           return var4Lifetime2;
         }
@@ -254,7 +254,7 @@ final class mr {
           stackIn_57_2 = var6Lifetime1;
           stackIn_58_3 = (var29.field_k == 0) ? false : true;
           var30 = ((HardwareGraphicsToolkit) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
-          var30.a(var29.field_i, var29.field_l, true);
+          var30.setWrap(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var30, (byte) 19);
           return var30;
         }
@@ -265,7 +265,7 @@ final class mr {
           stackIn_66_2 = var6Lifetime1;
           stackIn_67_3 = (var29.field_k == 0) ? false : true;
           var31 = ((HardwareGraphicsToolkit) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
-          var31.a(var29.field_i, var29.field_l, true);
+          var31.setWrap(var29.field_i, var29.field_l, true);
           this.field_d.a((long)param1, var31, (byte) 19);
           return var31;
         }
@@ -275,7 +275,7 @@ final class mr {
         stackIn_62_2 = var6Lifetime1;
         stackIn_63_3 = (var29.field_k == 0) ? false : true;
         var32 = ((HardwareGraphicsToolkit) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
-        var32.a(var29.field_i, var29.field_l, true);
+        var32.setWrap(var29.field_i, var29.field_l, true);
         this.field_d.a((long)param1, var32, (byte) 19);
         return var32;
     }

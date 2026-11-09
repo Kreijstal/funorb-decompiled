@@ -68,7 +68,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[0] = k.startGameText;
         GameClientShell.field_u[3] = cp.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
-        GameClientShell.field_u[15] = go.logInCreateAccountText;
+        GameClientShell.field_u[15] = OpenGlTexture3D.logInCreateAccountText;
         GameClientShell.field_u[4] = ResourceArchive.field_j;
         GameClientShell.field_u[2] = MouseInputHandler.field_a;
         GameClientShell.field_u[13] = gu.musicText;
@@ -92,7 +92,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[8] = PlayingSound.scoreFilterLabels[0];
         GameClientShell.field_u[29] = hv.reassignText;
         GameClientShell.field_u[30] = ou.field_g;
-        GameClientShell.field_u[31] = ls.continueText;
+        GameClientShell.field_u[31] = VertexAttribute.continueText;
     }
 
     final boolean updateAndIsExpired(int param0) {

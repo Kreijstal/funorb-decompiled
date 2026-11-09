@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lm {
-    private cr field_b;
+    private IndexBuffer field_b;
     static ts field_a;
 
     final void a(int param0) {
         if (null != this.field_b) {
-          this.field_b.b(param0 + 12002);
+          this.field_b.close(param0 + 12002);
           if (param0 != -1) {
             field_a = (ts) null;
             return;

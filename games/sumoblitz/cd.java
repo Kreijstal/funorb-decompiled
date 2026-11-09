@@ -11,8 +11,8 @@ final class cd {
     int field_g;
 
     final static boolean a(boolean param0) {
-        if (fq.field_f.a((byte) 91)) {
-          fq.field_f.b(0);
+        if (OpenGlVertexLayout.field_f.a((byte) 91)) {
+          OpenGlVertexLayout.field_f.b(0);
           return true;
         }
         if (param0) {

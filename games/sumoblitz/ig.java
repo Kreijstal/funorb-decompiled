@@ -106,11 +106,11 @@ final class ig {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (mi.field_b.containsKey(param0)) {
+          if (TextureCombineSource.field_b.containsKey(param0)) {
             stackIn_10_0 = 100;
             return stackIn_10_0;
           }
-          var10 = ua.a((byte) 53, param0);
+          var10 = OpenGlBuffer.a((byte) 53, param0);
           if (var10 == null) {
             stackIn_14_0 = -1;
             return stackIn_14_0;

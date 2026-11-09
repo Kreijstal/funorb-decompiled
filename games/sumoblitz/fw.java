@@ -64,7 +64,7 @@ final class fw extends IntrusiveNode {
             }
             var4 = null;
             if (var4 == null) {
-              var4 = (File) (mi.field_b.get(param2));
+              var4 = (File) (TextureCombineSource.field_b.get(param2));
             }
             if (var4 != null) {
               try {

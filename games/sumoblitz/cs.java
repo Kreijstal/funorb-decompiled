@@ -19,7 +19,7 @@ final class cs implements mw {
         if (jk.field_b.service((byte) 119)) {
           return 0;
         }
-        return ji.a(true);
+        return TextureFilter.a(true);
     }
 
     final void a(int param0, int param1) {

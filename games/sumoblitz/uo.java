@@ -35,7 +35,7 @@ final class uo extends ShaderEffect {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
+        this.field_b.a((byte) -83, lf.REPLACE, SlowBurstParticle.MODULATE);
         if (param1 > -71) {
           this.field_f = false;
         }
@@ -631,22 +631,22 @@ final class uo extends ShaderEffect {
 
     final void a(boolean param0, int param1) {
         AffineTransform3D var4 = null;
-        ef var3 = this.field_b.d((byte) 122);
+        CubeTexture var3 = this.field_b.d((byte) 122);
         if (param1 != 20186) {
           return;
         }
         if (var3 == null) {
-          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           return;
         }
         if (param0) {
           this.field_b.g(1, -122);
           this.field_b.a(var3, 91);
-          this.field_b.a(param1 - 6432, LabeledWidget.field_C);
+          this.field_b.applyTexCoordGeneration(param1 - 6432, LabeledWidget.REFLECTION_MAP);
           this.field_b.g(1, -114);
-          this.field_b.a((byte) -83, lf.field_e, ua.field_n);
-          this.field_b.a((byte) 101, 2, true, false, FontMetrics.field_a);
-          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+          this.field_b.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.field_b.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
+          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           var4 = this.field_b.B(0);
           var4.copyLinearFrom(this.field_b.c(true), true);
           this.field_b.a(ip.field_y, 28880);
@@ -654,7 +654,7 @@ final class uo extends ShaderEffect {
           this.field_f = true;
           return;
         }
-        this.field_b.a(NetworkResourceRequest.field_y, 0, true);
+        this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
     }
 
     final boolean b(byte param0) {
@@ -674,38 +674,38 @@ final class uo extends ShaderEffect {
         if (!param0) {
           if (this.field_f) {
             this.field_b.g(1, -111);
-            this.field_b.a(13754, lf.field_c);
-            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-            this.field_b.a(mm.field_h, 2, 0);
-            this.field_b.a(jq.field_a, 0, true);
+            this.field_b.applyTexCoordGeneration(13754, lf.DISABLED);
+            this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.field_b.a(mm.CONSTANT, 2, 0);
+            this.field_b.a(jq.TEXTURE, 0, true);
             this.field_b.l(0);
-            this.field_b.a((ed) null, 98);
+            this.field_b.a((GpuTexture) null, 98);
             this.field_b.g(0, -120);
             this.field_f = false;
           } else {
-            this.field_b.a(jq.field_a, 0, !param0 ? true : false);
+            this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
           }
-          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
+          this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           return;
         }
         this.field_f = false;
         if (this.field_f) {
           this.field_b.g(1, -111);
-          this.field_b.a(13754, lf.field_c);
-          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
-          this.field_b.a(mm.field_h, 2, 0);
-          this.field_b.a(jq.field_a, 0, !param0 ? true : false);
+          this.field_b.applyTexCoordGeneration(13754, lf.DISABLED);
+          this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.field_b.a(mm.CONSTANT, 2, 0);
+          this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
           this.field_b.l(0);
-          this.field_b.a((ed) null, 98);
+          this.field_b.a((GpuTexture) null, 98);
           this.field_b.g(0, -120);
           this.field_f = false;
         } else {
-          this.field_b.a(jq.field_a, 0, !param0 ? true : false);
+          this.field_b.a(jq.TEXTURE, 0, !param0 ? true : false);
         }
-        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         try {
           this.field_b.a(param2, 113);
           this.field_b.h(param1 ^ 18900, param0);

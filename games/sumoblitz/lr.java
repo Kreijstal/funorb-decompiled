@@ -4,7 +4,7 @@
 final class lr {
     static SpriteData field_c;
     static int[] field_a;
-    private pv field_d;
+    private VertexBuffer field_d;
     static qr field_b;
 
     final static int[] a(int param0) {
@@ -53,14 +53,14 @@ final class lr {
     final void b(int param0) {
         if (param0 == 16711680) {
           if (this.field_d != null) {
-            this.field_d.b(12001);
+            this.field_d.close(12001);
           }
           return;
         }
         String var3 = (String) null;
         lr.a(false, (String) null, (byte) -120, (String) null);
         if (this.field_d != null) {
-          this.field_d.b(12001);
+          this.field_d.close(12001);
         }
     }
 

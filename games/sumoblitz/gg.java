@@ -106,11 +106,11 @@ final class gg extends DualLinkNode {
           }
           FadingWidget.score = 0;
           if (5 >= BufferedCacheFile.a((byte) -84, 10)) {
-            fb.field_a = fb.field_a + iw.elapsedTicks;
+            fb.field_a = fb.field_a + TextureFormat.elapsedTicks;
           } else {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }
-          iw.elapsedTicks = 0;
+          TextureFormat.elapsedTicks = 0;
           MusicPatch.simulationPaused = false;
           ke.a(false);
           oc.field_e = 1000;

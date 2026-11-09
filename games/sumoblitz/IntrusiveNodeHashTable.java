@@ -6,7 +6,7 @@ final class IntrusiveNodeHashTable {
     static int field_c;
     private int field_b;
     private int field_a;
-    static iw field_f;
+    static TextureFormat ALPHA;
     private IntrusiveNode field_e;
     private IntrusiveNode field_d;
     static IntrusiveDeque field_g;
@@ -85,7 +85,7 @@ final class IntrusiveNodeHashTable {
           IntrusiveNodeHashTable.releaseStatics(41);
         }
         field_h = null;
-        field_f = null;
+        ALPHA = null;
         field_g = null;
     }
 
@@ -121,7 +121,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static int a(int param0, iw param1) {
+    final static int glTextureFormat(int guard, TextureFormat format) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -135,31 +135,31 @@ final class IntrusiveNodeHashTable {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -21339) {
+          if (guard != -21339) {
             stackIn_2_0 = 57;
             return stackIn_2_0;
           }
-          if (ProgressDialog.field_X == param1) {
+          if (ProgressDialog.RGB == format) {
             stackIn_5_0 = 6407;
             return stackIn_5_0;
           }
-          if (nl.field_p == param1) {
+          if (nl.RGBA == format) {
             stackIn_8_0 = 6408;
             return stackIn_8_0;
           }
-          if (field_f == param1) {
+          if (ALPHA == format) {
             stackIn_11_0 = 6406;
             return stackIn_11_0;
           }
-          if (kd.field_b == param1) {
+          if (kd.LUMINANCE == format) {
             stackIn_14_0 = 6409;
             return stackIn_14_0;
           }
-          if (param1 == ps.field_c) {
+          if (format == ps.LUMINANCE_ALPHA) {
             stackIn_21_0 = 6410;
             return stackIn_21_0;
           }
-          if (ModalDialog.field_A != param1) {
+          if (ModalDialog.DEPTH_COMPONENT != format) {
             throw new IllegalStateException();
           }
           stackIn_19_0 = 6145;
@@ -168,8 +168,8 @@ final class IntrusiveNodeHashTable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("te.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_25_1 = new StringBuilder().append("te.E(").append(guard).append(',');
+          if (format == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -196,7 +196,7 @@ final class IntrusiveNodeHashTable {
 
     static {
         field_c = 0;
-        field_f = new iw(1);
+        ALPHA = new TextureFormat(1);
         field_g = new IntrusiveDeque();
         field_h = "Cancel";
     }

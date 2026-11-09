@@ -13,7 +13,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTask field_e;
     static int field_j;
     private PlatformTaskDispatcher field_b;
-    static ck field_i;
+    static PrimitiveType POINTS;
 
     protected final void finalize() {
         if (this.field_e != null) {
@@ -208,14 +208,14 @@ final class JaggrabDownloader implements Runnable {
     public static void releaseStatics(int param0) {
         if (param0 < 121) {
           JaggrabDownloader.releaseStatics(82);
-          field_i = null;
+          POINTS = null;
           return;
         }
-        field_i = null;
+        POINTS = null;
     }
 
     static {
-        field_i = new ck();
+        POINTS = new PrimitiveType();
     }
 
     @SuppressWarnings("unchecked")

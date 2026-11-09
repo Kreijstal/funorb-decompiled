@@ -1,0 +1,26 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PrimitiveType {
+    static java.awt.Frame field_c;
+    static String field_a;
+    static String nameIsAvailableText;
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void releaseStatics(int param0) {
+        nameIsAvailableText = null;
+        field_c = null;
+        field_a = null;
+        if (param0 > -28) {
+          PrimitiveType.releaseStatics(99);
+        }
+    }
+
+    static {
+        field_a = ",";
+        nameIsAvailableText = "Name is available";
+    }
+}

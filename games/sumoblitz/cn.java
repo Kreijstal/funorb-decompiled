@@ -88,7 +88,7 @@ final class cn extends dq {
             return;
           }
           for (var13_int = 0; var13_int < param11; var13_int++) {
-            ls.a(param0, param6, param2, param10, param3, var13_int, param7, param11, -95, param12, param4, param9, param1, param5);
+            VertexAttribute.a(param0, param6, param2, param10, param3, var13_int, param7, param11, -95, param12, param4, param9, param1, param5);
             param2 = param2 + param10 * param12;
           }
           return;

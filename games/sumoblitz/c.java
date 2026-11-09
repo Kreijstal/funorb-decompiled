@@ -70,7 +70,7 @@ final class c extends nl {
             if (param0 < 108) {
               return;
             }
-            bj.field_a = ua.field_a;
+            bj.field_a = OpenGlBuffer.field_a;
             kj.field_e = kj.field_e + 1;
             if (0 > lv.field_i) {
               var5 = 0;
@@ -91,7 +91,7 @@ final class c extends nl {
                 hw.field_b[~var2] = false;
               }
             }
-            ua.field_a = CacheReferenceNode.field_s;
+            OpenGlBuffer.field_a = CacheReferenceNode.field_s;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

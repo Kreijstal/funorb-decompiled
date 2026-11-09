@@ -228,11 +228,11 @@ abstract class ToolkitFont {
               param8 = 1;
             }
           }
-          var19 = this.field_b.a(param4, false, hu.field_a, (int[]) (var18), param1);
+          var19 = this.field_b.a(param4, false, VertexStreamLayout.field_a, (int[]) (var18), param1);
           if (param8 > 0 &&
             var19 >= param8) {
             var19 = param8;
-            hu.field_a[-1 + param8] = this.field_b.a(param11, hu.field_a[param8 - 1], param1, -63);
+            VertexStreamLayout.field_a[-1 + param8] = this.field_b.a(param11, VertexStreamLayout.field_a[param8 - 1], param1, -63);
           }
           if (param15 == 3 &&
             var19 == 1) {
@@ -263,22 +263,22 @@ abstract class ToolkitFont {
           for (var21Lifetime1 = 0; var21Lifetime1 < var19; var21Lifetime1++) {
             if (param12 != 0) {
               if (param12 == 1) {
-                this.a(-274, var20, param1, param10 + (-this.field_b.a(hu.field_a[var21Lifetime1], 0) + param11) / 2, param2, param13, hu.field_a[var21Lifetime1], param3, param0);
+                this.a(-274, var20, param1, param10 + (-this.field_b.a(VertexStreamLayout.field_a[var21Lifetime1], 0) + param11) / 2, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
               } else {
                 if (param12 != 2) {
                   if (var19 - 1 == var21Lifetime1) {
-                    this.a(-274, var20, param1, param10, param2, param13, hu.field_a[var21Lifetime1], param3, param0);
+                    this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
                   } else {
-                    this.a(hu.field_a[var21Lifetime1], param11, (byte) 5);
-                    this.a(-274, var20, param1, param10, param2, param13, hu.field_a[var21Lifetime1], param3, param0);
+                    this.a(VertexStreamLayout.field_a[var21Lifetime1], param11, (byte) 5);
+                    this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
                     lb.field_b = 0;
                   }
                 } else {
-                  this.a(-274, var20, param1, param11 + (param10 - this.field_b.a(hu.field_a[var21Lifetime1], 0)), param2, param13, hu.field_a[var21Lifetime1], param3, param0);
+                  this.a(-274, var20, param1, param11 + (param10 - this.field_b.a(VertexStreamLayout.field_a[var21Lifetime1], 0)), param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
                 }
               }
             } else {
-              this.a(-274, var20, param1, param10, param2, param13, hu.field_a[var21Lifetime1], param3, param0);
+              this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
             }
             var20 = var20 + param7;
           }

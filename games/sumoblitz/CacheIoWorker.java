@@ -227,7 +227,7 @@ final class CacheIoWorker implements Runnable {
         try {
           var2 = taskDispatcher.a(true, (Runnable) (this), 5);
           while (0 == var2.status) {
-            tg.a(10L, (byte) 119);
+            TextureCombineOperation.a(10L, (byte) 119);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

@@ -13,13 +13,13 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void a(boolean param0, int param1) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_b);
         jaggl.OpenGL.glEnable(34336);
-        this.field_b.a(FontMetrics.field_a, 0, param1 - 20186);
+        this.field_b.a(FontMetrics.PREVIOUS, 0, param1 - 20186);
         if (param1 != 20186) {
           this.field_j = (OpenGlGraphicsToolkit) null;
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         try {
           if (param1 != 18834) {
             OpenGlTransparentWaterEffect.d(-57);
@@ -53,10 +53,10 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           while (true) {
             var3 = param1.a(param0, 19);
             while (var3.status == 0) {
-              tg.a(10L, (byte) 81);
+              TextureCombineOperation.a(10L, (byte) 81);
             }
             if (var3.status != 1) {
-              tg.a(100L, (byte) 127);
+              TextureCombineOperation.a(100L, (byte) 127);
               continue;
             }
             break;
@@ -85,18 +85,18 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void c(boolean param0) {
-        this.field_b.a(jq.field_a, 0, 0);
+        this.field_b.a(jq.TEXTURE, 0, 0);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);
         if (param0) {
-          ed var3 = (ed) null;
-          this.a(11, -28, (ed) null);
+          GpuTexture var3 = (GpuTexture) null;
+          this.a(11, -28, (GpuTexture) null);
         }
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, LoginForm.field_F, lf.field_e);
+        this.field_b.a((byte) -83, LoginForm.ADD, lf.REPLACE);
         if (param1 >= -71) {
           OpenGlTransparentWaterEffect.d(-46);
         }

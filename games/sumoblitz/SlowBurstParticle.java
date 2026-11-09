@@ -3,7 +3,7 @@
  */
 final class SlowBurstParticle extends TimedSceneEffect {
     private int velocityXQ8;
-    static tg field_v;
+    static TextureCombineOperation MODULATE;
     private int initialLifetime;
     private int velocityYQ8;
     static int[] field_z;
@@ -70,7 +70,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
     public static void releaseStatics(boolean param0) {
         field_y = null;
         field_z = null;
-        field_v = null;
+        MODULATE = null;
         if (!param0) {
           SlowBurstParticle.c((byte) 28);
         }
@@ -89,7 +89,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
           }
           if (guard > -121) {
-            field_v = (tg) null;
+            MODULATE = (TextureCombineOperation) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -267,6 +267,6 @@ final class SlowBurstParticle extends TimedSceneEffect {
     }
 
     static {
-        field_v = new tg();
+        MODULATE = new TextureCombineOperation();
     }
 }

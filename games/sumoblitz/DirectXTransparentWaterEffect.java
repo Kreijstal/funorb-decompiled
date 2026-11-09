@@ -9,10 +9,10 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void c(boolean param0) {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
-        this.field_b.a(jq.field_a, 0, 0);
+        this.field_b.a(jq.TEXTURE, 0, 0);
         if (!param0) {
-          this.field_b.a(NetworkResourceRequest.field_y, 1, 0);
-          this.field_b.a(mm.field_h, 2, 0);
+          this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
+          this.field_b.a(mm.CONSTANT, 2, 0);
           this.field_b.b(0, true);
           return;
         }
@@ -59,7 +59,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, LoginForm.field_F, ua.field_n);
+        this.field_b.a((byte) -83, LoginForm.ADD, OpenGlBuffer.INTERPOLATE);
         if (param1 >= -71) {
           field_g = (float[]) null;
         }
@@ -118,7 +118,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         if (param1 != 18834) {
           this.field_f = (DirectXGraphicsToolkit) null;
         }
@@ -161,9 +161,9 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void a(boolean param0, int param1) {
-        this.field_b.a(jq.field_a, 0, 0);
-        this.field_b.a(mm.field_h, 1, 0);
-        this.field_b.a((byte) -125, 2, false, true, NetworkResourceRequest.field_y);
+        this.field_b.a(jq.TEXTURE, 0, 0);
+        this.field_b.a(mm.CONSTANT, 1, 0);
+        this.field_b.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
         this.field_b.b(0, false);
         if (param1 == 20186) {
           this.field_f.a(-51, this.field_e);

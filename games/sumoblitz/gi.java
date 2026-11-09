@@ -90,11 +90,11 @@ final class gi extends LegacyOpenGlEffect {
             return;
           }
           this.field_b.a(82, this.field_e.field_b);
-          io.field_a[1] = 0.0f;
-          io.field_a[2] = 0.0f;
-          io.field_a[3] = 0.0f;
-          io.field_a[0] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, io.field_a, 0);
+          GpuDataType.field_a[1] = 0.0f;
+          GpuDataType.field_a[2] = 0.0f;
+          GpuDataType.field_a[3] = 0.0f;
+          GpuDataType.field_a[0] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, GpuDataType.field_a, 0);
           if (param0 <= 39) {
             this.d(2);
             return;
@@ -111,11 +111,11 @@ final class gi extends LegacyOpenGlEffect {
           return;
         }
         this.field_b.a(80, this.field_e.field_b);
-        io.field_a[3] = (float)(this.field_b.field_Ac % 4000) / 4000.0f;
-        io.field_a[2] = 0.0f;
-        io.field_a[0] = 0.0f;
-        io.field_a[1] = 0.0f;
-        jaggl.OpenGL.glTexGenfv(8194, 9473, io.field_a, 0);
+        GpuDataType.field_a[3] = (float)(this.field_b.field_Ac % 4000) / 4000.0f;
+        GpuDataType.field_a[2] = 0.0f;
+        GpuDataType.field_a[0] = 0.0f;
+        GpuDataType.field_a[1] = 0.0f;
+        jaggl.OpenGL.glTexGenfv(8194, 9473, GpuDataType.field_a, 0);
         if (param0 > 39) {
           return;
         }
@@ -127,13 +127,13 @@ final class gi extends LegacyOpenGlEffect {
         if (this.field_b.field_kc > 0) {
           var3 = -0.5f / (float)this.field_b.field_kc;
           this.field_b.g(1, 92);
-          io.field_a[1] = 0.0f;
-          io.field_a[3] = 0.25f + var3 * this.field_b.field_bc;
-          io.field_a[2] = var3;
-          io.field_a[0] = 0.0f;
+          GpuDataType.field_a[1] = 0.0f;
+          GpuDataType.field_a[3] = 0.25f + var3 * this.field_b.field_bc;
+          GpuDataType.field_a[2] = var3;
+          GpuDataType.field_a[0] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
-          jaggl.OpenGL.glTexGenfv(8192, 9474, io.field_a, 0);
+          jaggl.OpenGL.glTexGenfv(8192, 9474, GpuDataType.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
           this.field_b.a(0.5f, 15, (float)this.field_b.field_kc);
           this.field_b.a(11, this.field_l);

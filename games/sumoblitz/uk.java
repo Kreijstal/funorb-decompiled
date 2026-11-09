@@ -170,7 +170,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (or.a((byte) 61, (char) var7)) {
+            if (OpenGlRectangleTexture.a((byte) 61, (char) var7)) {
               var8 = LegacyOpenGlEffectManager.a(241, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

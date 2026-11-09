@@ -109,7 +109,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         String var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -142,7 +142,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     final void a(boolean param0, int param1) {
         long var4 = 0L;
-        ef var3 = this.field_b.d((byte) 122);
+        CubeTexture var3 = this.field_b.d((byte) 122);
         if (param1 != 20186) {
           String var6 = (String) null;
           OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -110, (String) null, 111);
@@ -170,9 +170,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
         if (this.field_h) {
           this.field_b.g(1, -124);
-          this.field_b.a((ed) null, 106);
+          this.field_b.a((GpuTexture) null, 106);
           this.field_b.g(0, -109);
-          this.field_b.a((ed) null, 98);
+          this.field_b.a((GpuTexture) null, 98);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }

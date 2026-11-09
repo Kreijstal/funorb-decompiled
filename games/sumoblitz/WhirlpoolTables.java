@@ -35,7 +35,7 @@ final class WhirlpoolTables {
         if (param0 == 17534) {
           hc.field_f = 1;
           CacheIoRequest.field_A = new int[25];
-          go.field_j = new int[25];
+          OpenGlTexture3D.field_j = new int[25];
           bl.field_e = -1;
           TextureMetadata.field_f = new boolean[25];
           ResourceArchive.field_f = 1;
@@ -49,7 +49,7 @@ final class WhirlpoolTables {
         roundTables = (long[][]) null;
         hc.field_f = 1;
         CacheIoRequest.field_A = new int[25];
-        go.field_j = new int[25];
+        OpenGlTexture3D.field_j = new int[25];
         bl.field_e = -1;
         TextureMetadata.field_f = new boolean[25];
         ResourceArchive.field_f = 1;

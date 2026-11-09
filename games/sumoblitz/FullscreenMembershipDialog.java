@@ -185,7 +185,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         TextLayout.b(param0 ^ param0);
     }
 
-    final static int a(int param0, mi param1) {
+    final static int glTextureCombineSource(int guard, TextureCombineSource source) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -196,23 +196,23 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == jq.field_a) {
+          if (source == jq.TEXTURE) {
             stackIn_12_0 = 5890;
             return stackIn_12_0;
           }
-          if (NetworkResourceRequest.field_y == param1) {
+          if (NetworkResourceRequest.PRIMARY_COLOR == source) {
             stackIn_10_0 = 34167;
             return stackIn_10_0;
           }
-          if (FontMetrics.field_a == param1) {
+          if (FontMetrics.PREVIOUS == source) {
             stackIn_4_0 = 34168;
             return stackIn_4_0;
           }
-          if (mm.field_h == param1) {
+          if (mm.CONSTANT == source) {
             stackIn_8_0 = 34166;
             return stackIn_8_0;
           }
-          if (param0 <= 59) {
+          if (guard <= 59) {
             field_S = (SpriteData[]) null;
           }
           throw new IllegalArgumentException();
@@ -220,8 +220,8 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_18_0 = var2;
-          stackIn_18_1 = new StringBuilder().append("kq.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("kq.O(").append(guard).append(',');
+          if (source == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";

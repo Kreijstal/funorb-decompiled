@@ -52,10 +52,10 @@ final class oc extends ShaderEffect {
                 var5 = -var11.xQ8 + param0.xQ8;
                 var6 = param0.yQ8 - var11.yQ8;
                 if (var5 == 0) {
-                  var5 = -1 + (2 & iw.elapsedTicks << 1);
+                  var5 = -1 + (2 & TextureFormat.elapsedTicks << 1);
                 }
                 if (var6 == 0) {
-                  var6 = ((1 & iw.elapsedTicks) << 1) - 1;
+                  var6 = ((1 & TextureFormat.elapsedTicks) << 1) - 1;
                 }
                 var7 = (int)Math.round(Math.sqrt((double)((float)var5 * (float)var5 + (float)var6 * (float)var6)));
                 if (var4 > var7) {
@@ -79,11 +79,11 @@ final class oc extends ShaderEffect {
             if (wn.a(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
               var5Lifetime1 = -var3.xQ8 + param0.xQ8;
               if (var5Lifetime1 == 0) {
-                var5Lifetime1 = -1 + (2 & iw.elapsedTicks << 1);
+                var5Lifetime1 = -1 + (2 & TextureFormat.elapsedTicks << 1);
               }
               var6Lifetime1 = -var3.yQ8 + param0.yQ8;
               if (var6Lifetime1 == 0) {
-                var6Lifetime1 = -1 + ((iw.elapsedTicks & 1) << 1);
+                var6Lifetime1 = -1 + ((TextureFormat.elapsedTicks & 1) << 1);
               }
               var7Lifetime1 = (int)Math.round(Math.sqrt((double)((float)var6Lifetime1 * (float)var6Lifetime1 + (float)var5Lifetime1 * (float)var5Lifetime1)));
               if (var4Lifetime1 > var7Lifetime1) {
@@ -237,7 +237,7 @@ final class oc extends ShaderEffect {
         return new String(var3);
     }
 
-    final void a(int param0, int param1, ed param2) {
+    final void a(int param0, int param1, GpuTexture param2) {
         try {
           this.field_b.a(param2, 106);
           if (param1 != 18834) {

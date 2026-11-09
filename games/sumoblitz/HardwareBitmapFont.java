@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HardwareBitmapFont extends ToolkitFont {
-    private pv field_d;
-    private ru field_e;
+    private VertexBuffer field_d;
+    private Texture2D field_e;
     private boolean field_c;
     private HardwareGraphicsToolkit field_f;
 
@@ -176,7 +176,7 @@ final class HardwareBitmapFont extends ToolkitFont {
               }
             }
           }
-          if (!param0.a(io.field_g, IntrusiveNodeHashTable.field_f, 6)) {
+          if (!param0.a(GpuDataType.UNSIGNED_BYTE, IntrusiveNodeHashTable.ALPHA, 6)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
@@ -185,20 +185,20 @@ final class HardwareBitmapFont extends ToolkitFont {
             }
             this.field_e = param0.a(var36, var6Lifetime1, false, -127, var6Lifetime1);
           } else {
-            this.field_e = param0.a(var35, var6Lifetime1, var6Lifetime1, IntrusiveNodeHashTable.field_f, 0, false);
+            this.field_e = param0.a(var35, var6Lifetime1, var6Lifetime1, IntrusiveNodeHashTable.ALPHA, 0, false);
           }
           this.field_c = true;
         }
-        this.field_e.a(lh.field_l, 15149);
-        this.field_d = param0.a((byte) 51, false);
-        this.field_d.a(20, (byte) -35, 20480);
+        this.field_e.setFilter(lh.NEAREST, 15149);
+        this.field_d = param0.createVertexBuffer((byte) 51, false);
+        this.field_d.allocate(20, (byte) -35, 20480);
         var7 = 0;
         while (var7 < 4) {
-          var33 = this.field_d.a(7454, true);
+          var33 = this.field_d.map(7454, true);
           if (var33 != null) {
             var34 = this.field_f.a(true, var33);
-            var10 = this.field_e.a((float)var6Lifetime1, -38) / (float)var6Lifetime1;
-            var11 = this.field_e.b((float)var6Lifetime1, -19230) / (float)var6Lifetime1;
+            var10 = this.field_e.textureU((float)var6Lifetime1, -38) / (float)var6Lifetime1;
+            var11 = this.field_e.textureV((float)var6Lifetime1, -19230) / (float)var6Lifetime1;
             var24 = 0;
             var12Lifetime1 = var24;
             while (var24 < 256) {
@@ -259,7 +259,7 @@ final class HardwareBitmapFont extends ToolkitFont {
               var24++;
             }
             var34.a();
-            if (this.field_d.a(22957)) {
+            if (this.field_d.unmap(22957)) {
               return;
             }
           }
@@ -274,21 +274,21 @@ final class HardwareBitmapFont extends ToolkitFont {
         this.field_f.a(this.field_e, 110);
         if (!this.field_c &&
           !param4) {
-          this.field_f.a((byte) -83, lf.field_e, lf.field_e);
+          this.field_f.a((byte) -83, lf.REPLACE, lf.REPLACE);
         } else {
-          this.field_f.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
-          this.field_f.a(mm.field_h, 0, 0);
+          this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
+          this.field_f.a(mm.CONSTANT, 0, 0);
           this.field_f.a(false, param3);
         }
         var6 = this.field_f.d(77);
         var6.setTranslation(param1, 0, false, param2);
         this.field_f.U(0);
-        this.field_f.a(0, 71, this.field_d);
-        this.field_f.a(126, this.field_f.field_jc);
-        this.field_f.a(param0 * 4, 0, 2, an.field_d);
+        this.field_f.bindVertexBuffer(0, 71, this.field_d);
+        this.field_f.bindVertexLayout(126, this.field_f.field_jc);
+        this.field_f.drawPrimitives(param0 * 4, 0, 2, an.TRIANGLE_FAN);
         if (this.field_c ||
           param4) {
-          this.field_f.a(jq.field_a, 0, 0);
+          this.field_f.a(jq.TEXTURE, 0, 0);
         }
     }
 

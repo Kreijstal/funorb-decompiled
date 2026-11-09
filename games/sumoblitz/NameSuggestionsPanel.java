@@ -61,7 +61,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new InteractiveWidget(this.field_B[var5], (WidgetListener) (this));
               this.field_C[var5].renderer = (WidgetRenderer) ((Object) var4);
-              this.field_C[var5].tooltip = ji.useThisAlternativeAsText;
+              this.field_C[var5].tooltip = TextureFilter.useThisAlternativeAsText;
               this.field_C[var5].setBounds(103, 0, 16 * var5 + 20, 15, 80);
               this.addChild(this.field_C[var5], 64);
             }
@@ -202,7 +202,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         ci.field_g = SpriteData.b(param3, "", "fontalpha");
         SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
         mn.field_b = SpriteData.b(param3, "", "fontglow");
-        hu.field_c = SocketConnector.field_a;
+        VertexStreamLayout.field_c = SocketConnector.field_a;
         OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
         qr.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
         au.field_j = SpriteData.b(param3, "", "glowfontalpha");
@@ -217,7 +217,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         CompactMeshGeometry.field_N = SpriteData.a(param0, "basic", "unachieved");
         MusicCrossfadeStream.field_p = SpriteData.a(param0, "basic", "locked");
         IntrusiveNode.field_d = SpriteData.a(param3, "", "titleimage");
-        rc.field_i = SpriteData.a(param3, "", "lock");
+        OpenGlCubeTexture.field_i = SpriteData.a(param3, "", "lock");
         hc.field_b = SpriteData.a(param3, "", "heart");
         oi.field_d = SpriteData.a(param3, "", "skull");
         TextLayoutLine.field_c = SpriteData.b(param3, "", "slider");

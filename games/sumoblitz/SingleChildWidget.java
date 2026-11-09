@@ -36,11 +36,11 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
 
     final static jj[] a(int param0) {
         if (param0 == 32) {
-          return new jj[]{go.field_m, LevelSelectScreen.field_j, na.field_c};
+          return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, na.field_c};
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         SingleChildWidget.setSessionCookie(-3, (String) null, (java.applet.Applet) null);
-        return new jj[]{go.field_m, LevelSelectScreen.field_j, na.field_c};
+        return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, na.field_c};
     }
 
     final void appendChildDebugTree(int indent, StringBuilder output, Hashtable visited, byte guard) {

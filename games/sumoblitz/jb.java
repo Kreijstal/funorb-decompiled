@@ -167,19 +167,19 @@ class jb extends se {
               kw.field_c = gi.field_g;
             }
             if (kw.field_c == gi.field_g &&
-              ju.b(-1, 1)) {
+              OpenGlIndexBuffer.b(-1, 1)) {
               var6_int = ig.field_a.readUnsignedByte(-31302);
               if (var6_int != 0) {
-                iw.field_a = var6_int;
+                TextureFormat.field_a = var6_int;
                 gu.field_d = -1;
                 kw.field_c = WidgetContainer.field_z;
               } else {
-                kw.field_c = sc.field_q;
+                kw.field_c = OpenGlVertexBuffer.field_q;
               }
               ig.field_a.position = 0;
             }
-            if (kw.field_c == sc.field_q &&
-              ju.b(-1, 8)) {
+            if (kw.field_c == OpenGlVertexBuffer.field_q &&
+              OpenGlIndexBuffer.b(-1, 8)) {
               oc.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
               fb.a(param3, param1, -12793, param4, kb.field_d);
@@ -187,9 +187,9 @@ class jb extends se {
             }
             boolean decompiledFrameRemainder0 = true;
             if (kw.field_c == jj.field_f &&
-              ju.b(-1, 1)) {
+              OpenGlIndexBuffer.b(-1, 1)) {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(-31302);
-              iw.field_a = var6_intLifetime1;
+              TextureFormat.field_a = var6_intLifetime1;
               ig.field_a.position = 0;
               rp.field_b = null;
               if (var6_intLifetime1 != 0 &&
@@ -250,7 +250,7 @@ class jb extends se {
                   LevelSelectScreen.field_j.a(true, ra.c(2));
                 }
               } else {
-                go.field_m.a(true, ra.c(2));
+                OpenGlTexture3D.field_m.a(true, ra.c(2));
               }
               LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
@@ -280,24 +280,24 @@ class jb extends se {
                 bk.field_e[var8Lifetime1] = bk.field_e[var8Lifetime1] + 50;
               }
               ig.field_a.a((byte) 123, bk.field_e);
-              stackIn_73_0 = iw.field_a;
+              stackIn_73_0 = TextureFormat.field_a;
               return stackIn_73_0;
             }
             if (kw.field_c == WidgetContainer.field_z &&
               lt.a((byte) 119)) {
               kk.a((byte) -115);
-              if (iw.field_a == 7 &&
+              if (TextureFormat.field_a == 7 &&
                 !LimitedRandomAccessFile.field_g) {
                 LimitedRandomAccessFile.field_g = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
-              if (7 == iw.field_a) {
-                iw.field_a = 3;
+              if (7 == TextureFormat.field_a) {
+                TextureFormat.field_a = 3;
               }
               MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);
               LimitedRandomAccessFile.field_g = false;
-              stackIn_83_0 = iw.field_a;
+              stackIn_83_0 = TextureFormat.field_a;
               return stackIn_83_0;
             }
             if (DisplayModeConfirmationDialog.field_O == null) {

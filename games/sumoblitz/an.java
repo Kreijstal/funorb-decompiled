@@ -9,7 +9,7 @@ final class an {
     String[] field_h;
     String field_g;
     static int waveIndex;
-    static ck field_d;
+    static PrimitiveType TRIANGLE_FAN;
 
     final static float a(float param0, float param1, int param2, float param3, int param4) {
         float[] var6 = null;
@@ -25,10 +25,10 @@ final class an {
         field_f = null;
         if (param0 < 4) {
           waveIndex = 11;
-          field_d = null;
+          TRIANGLE_FAN = null;
           return;
         }
-        field_d = null;
+        TRIANGLE_FAN = null;
     }
 
     final static void a(int param0, byte param1, hg param2) {
@@ -48,6 +48,6 @@ final class an {
     }
 
     static {
-        field_d = new ck();
+        TRIANGLE_FAN = new PrimitiveType();
     }
 }

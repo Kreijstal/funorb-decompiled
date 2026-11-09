@@ -6,7 +6,7 @@ final class mm {
     static String thisPasswordIsPartText;
     static jf field_a;
     static String levelSelectText;
-    static mi field_h;
+    static TextureCombineSource CONSTANT;
     static String field_g;
     static int field_f;
     static String pleaseWaitText;
@@ -18,13 +18,13 @@ final class mm {
     public static void releaseStatics(int param0) {
         field_a = null;
         field_g = null;
-        field_h = null;
+        CONSTANT = null;
         field_c = null;
         levelSelectText = null;
         pleaseWaitText = null;
         thisPasswordIsPartText = null;
         if (param0 <= 62) {
-          field_h = (mi) null;
+          CONSTANT = (TextureCombineSource) null;
         }
     }
 
@@ -32,7 +32,7 @@ final class mm {
         thisPasswordIsPartText = "This password is part of your Player Name, and would be easy to guess";
         levelSelectText = "Level select";
         field_a = new jf();
-        field_h = new mi();
+        CONSTANT = new TextureCombineSource();
         field_g = "Level Select";
         field_f = 20;
         pleaseWaitText = "Please wait...";

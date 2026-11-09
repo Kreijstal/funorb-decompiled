@@ -13,10 +13,10 @@ final class RenderPresentationException extends Exception {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return mi.field_a == 1 ? true : false;
+          return TextureCombineSource.field_a == 1 ? true : false;
         }
         field_b = (String[]) null;
-        return mi.field_a == 1 ? true : false;
+        return TextureCombineSource.field_a == 1 ? true : false;
     }
 
     public static void releaseStatics(int param0) {

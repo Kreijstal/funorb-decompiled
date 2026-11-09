@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class nl extends TextWidgetRenderer {
-    static iw field_p;
-    static mp field_n;
+    static TextureFormat RGBA;
+    static TextureCoordinateGeneration NORMAL_MAP;
     static boolean field_o;
 
     public static void releaseStatics(int param0) {
-        field_n = null;
+        NORMAL_MAP = null;
         if (param0 != 2147483647) {
-          field_n = (mp) null;
-          field_p = null;
+          NORMAL_MAP = (TextureCoordinateGeneration) null;
+          RGBA = null;
           return;
         }
-        field_p = null;
+        RGBA = null;
     }
 
     nl(LegacyBitmapFont param0, int param1) {
@@ -36,7 +36,7 @@ class nl extends TextWidgetRenderer {
     }
 
     static {
-        field_p = new iw(4);
-        field_n = new mp();
+        RGBA = new TextureFormat(4);
+        NORMAL_MAP = new TextureCoordinateGeneration();
     }
 }

@@ -11,7 +11,7 @@ final class tq {
         }
         GameInstructions.field_b = param1;
         if (param2) {
-          mp.a(GameInstructions.field_b, 124);
+          TextureCoordinateGeneration.a(GameInstructions.field_b, 124);
           qv.a(GameInstructions.field_b, 4);
           if (param0 > -87) {
             field_a = (LegacyBitmapFont) null;

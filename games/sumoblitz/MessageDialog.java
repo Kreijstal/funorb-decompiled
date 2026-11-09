@@ -112,7 +112,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = ji.a(param1, (byte) 66);
+          var3 = TextureFilter.a(param1, (byte) 66);
           if (param2 < 46) {
             loadingMusicText = (String) null;
           }

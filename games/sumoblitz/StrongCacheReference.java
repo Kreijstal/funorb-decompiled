@@ -77,14 +77,14 @@ final class StrongCacheReference extends CacheReferenceNode {
 
     final static void switchMenuScreen(int param0, boolean param1, int param2) {
         eh.field_a = 0;
-        rc.field_k = param2;
+        OpenGlCubeTexture.field_k = param2;
         if (param0 != -7753) {
           field_C = (int[]) null;
         }
-        if (!(0 > rc.field_k)) {
-          LegacyOpenGlEffectManager.field_g[rc.field_k].resetSelection(param0 - 875, param1);
+        if (!(0 > OpenGlCubeTexture.field_k)) {
+          LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].resetSelection(param0 - 875, param1);
         }
-        if (0 == rc.field_k &&
+        if (0 == OpenGlCubeTexture.field_k &&
           7 != nj.field_b) {
           TextLayout.a(0, 0);
         }
