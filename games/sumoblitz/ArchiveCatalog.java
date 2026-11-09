@@ -5,7 +5,7 @@ final class ArchiveCatalog {
     private PacketBuffer masterIndex;
     static SpriteData field_f;
     private CachedArchiveProvider[] providers;
-    static long field_a;
+    static long lastAccountWriteMillis;
     private NetworkResourceRequest masterRequest;
     private Js5Client networkClient;
     private CacheIoWorker cacheWorker;
@@ -62,7 +62,7 @@ final class ArchiveCatalog {
             ScreenNameValidator.a(param0, var2_int, (byte) -28);
           }
           if (param1) {
-            field_a = -94L;
+            lastAccountWriteMillis = -94L;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1603,7 +1603,7 @@ final class ArchiveCatalog {
               if (LoginDialogState.field_c) {
                 param2 = LoginCredentials.pleaseTryAgainInText;
               }
-              AccountStatusDialogState.activeDialog.a(param2, param1, 21089);
+              AccountStatusDialogState.activeDialog.showFailure(param2, param1, 21089);
             }
             if (param1 != 256 &&
               param1 != 10 &&

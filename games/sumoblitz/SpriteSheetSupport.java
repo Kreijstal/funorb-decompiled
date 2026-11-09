@@ -43,7 +43,7 @@ final class SpriteSheetSupport {
           if (guard < 93) {
             startGameText = (String) null;
           }
-          var3 = InwardSparkParticle.field_v;
+          var3 = InwardSparkParticle.outgoingPacket;
           var3.writeCipherByte(opcode, 8);
           var3.writeByte((byte) 111, request.field_k);
           var3.writeShort(-10, request.field_o);

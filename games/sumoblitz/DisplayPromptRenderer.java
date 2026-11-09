@@ -95,7 +95,7 @@ final class DisplayPromptRenderer {
             stackIn_42_0 = -9;
             stackIn_42_1 = var6;
             stackIn_43_2 = !(0 > var4);
-            var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_42_0, stackIn_42_1, stackIn_43_2);
+            var7Lifetime1 = MessageDialog.displayPromptTextWidthIntGuard(stackIn_42_0, stackIn_42_1, stackIn_43_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + DroneIntroductionOverlay.field_a;

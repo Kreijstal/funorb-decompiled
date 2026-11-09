@@ -21,14 +21,14 @@ abstract class SpriteMask {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, boolean param1, MusicCrossfadeStream param2, byte param3, int param4, java.awt.Component param5) {
-        if (param3 > -104) {
+    final static void initializeAudioOutputs(PlatformTaskDispatcher dispatcher, boolean stereo, MusicCrossfadeStream music, byte guard, int sampleRate, java.awt.Component component) {
+        if (guard > -104) {
           return;
         }
         try {
-          AudioOutputBootstrap.initializeAudioOutputs(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+          AudioOutputBootstrap.initializeAudioOutputs(component, sampleRate, sampleRate, (byte) 123, stereo, music, dispatcher, 1024);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aa.B(" + (dispatcher != null ? "{...}" : "null") + ',' + stereo + ',' + (music != null ? "{...}" : "null") + ',' + guard + ',' + sampleRate + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

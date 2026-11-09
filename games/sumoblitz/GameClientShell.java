@@ -2,49 +2,49 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GameClientShell extends GameApplet {
-    private int field_r;
-    private int field_w;
-    private int field_E;
+    private int primaryGamePort;
+    private int affiliateId;
+    private int secondaryGamePort;
     static int field_t;
-    private int field_v;
+    private int language;
     static int field_s;
-    private boolean field_q;
-    private boolean field_z;
+    private boolean members;
+    private boolean trustedJagexHost;
     static String waitingForSoundEffectsText;
-    private long field_y;
-    private int field_C;
-    private int field_x;
-    static String[] field_u;
-    String field_D;
+    private long instanceId;
+    private int gameCrc;
+    private int serverNumber;
+    static String[] menuActionLabels;
+    String gameHost;
     private boolean field_B;
 
-    private final void p(int param0) {
-        RasterBuffer.field_e[1] = 16;
-        RasterBuffer.field_e[13] = -1;
-        RasterBuffer.field_e[16] = -1;
-        RasterBuffer.field_e[4] = -1;
-        RasterBuffer.field_e[9] = param0;
-        RasterBuffer.field_e[6] = -2;
-        RasterBuffer.field_e[12] = -1;
-        RasterBuffer.field_e[10] = -1;
-        RasterBuffer.field_e[11] = -1;
-        RasterBuffer.field_e[5] = -1;
-        RasterBuffer.field_e[17] = -1;
-        RasterBuffer.field_e[18] = 1;
-        RasterBuffer.field_e[3] = -1;
-        RasterBuffer.field_e[7] = -1;
-        RasterBuffer.field_e[2] = -2;
-        RasterBuffer.field_e[8] = -2;
+    private final void initializeAccountPacketLengths(int variableLength) {
+        RasterBuffer.accountPacketLengths[1] = 16;
+        RasterBuffer.accountPacketLengths[13] = -1;
+        RasterBuffer.accountPacketLengths[16] = -1;
+        RasterBuffer.accountPacketLengths[4] = -1;
+        RasterBuffer.accountPacketLengths[9] = variableLength;
+        RasterBuffer.accountPacketLengths[6] = -2;
+        RasterBuffer.accountPacketLengths[12] = -1;
+        RasterBuffer.accountPacketLengths[10] = -1;
+        RasterBuffer.accountPacketLengths[11] = -1;
+        RasterBuffer.accountPacketLengths[5] = -1;
+        RasterBuffer.accountPacketLengths[17] = -1;
+        RasterBuffer.accountPacketLengths[18] = 1;
+        RasterBuffer.accountPacketLengths[3] = -1;
+        RasterBuffer.accountPacketLengths[7] = -1;
+        RasterBuffer.accountPacketLengths[2] = -2;
+        RasterBuffer.accountPacketLengths[8] = -2;
     }
 
-    private final void d(byte param0) {
-        if (param0 != 68) {
+    private final void enableServerDataReplies(byte guard) {
+        if (guard != 68) {
           return;
         }
-        InteractiveWidget.field_z[5] = true;
+        InteractiveWidget.enabledAccountPackets[5] = true;
     }
 
-    final void b(boolean param0, int param1) {
+    final void updateClientServices(boolean deferCanvasReplacement, int guard) {
         int stackIn_27_0 = 0;
         int stackIn_106_0 = 0;
         boolean stackIn_107_1 = false;
@@ -75,8 +75,8 @@ abstract class GameClientShell extends GameApplet {
         if (null != InwardSparkParticle.field_w) {
           OpenGlUnderwaterEffect.field_r = InwardSparkParticle.field_w.pollDelta(-88);
         }
-        if (param1 >= -97) {
-          this.field_D = (String) null;
+        if (guard >= -97) {
+          this.gameHost = (String) null;
         }
         if (TimedSceneEffect.a((byte) 90)) {
           var3 = 1200 * Base37NameAlphabet.ticksPerSecond(-79);
@@ -115,18 +115,18 @@ abstract class GameClientShell extends GameApplet {
               if (LegacyOpenGlShoreWaveWaterEffect.field_l != 4) {
                 if (LegacyOpenGlShoreWaveWaterEffect.field_l != 2) {
                   if (LegacyOpenGlShoreWaveWaterEffect.field_l != 5) {
-                    this.a("js5connect", 21253);
+                    this.showFatalError("js5connect", 21253);
                   } else {
-                    this.a("outofdate", 21253);
+                    this.showFatalError("outofdate", 21253);
                   }
                 } else {
-                  this.a("js5connect_full", 21253);
+                  this.showFatalError("js5connect_full", 21253);
                 }
               } else {
-                this.a("js5io", 21253);
+                this.showFatalError("js5io", 21253);
               }
             } else {
-              this.a("js5crc", 21253);
+              this.showFatalError("js5crc", 21253);
             }
           } else {
             if (10 <= LoginDialogNavigation.field_a) {
@@ -263,20 +263,20 @@ abstract class GameClientShell extends GameApplet {
             TextureCoordinateGeneration.field_a = 20;
           }
         }
-        if (!param0 &&
+        if (!deferCanvasReplacement &&
           DroneDebris.field_A) {
           CheckboxWidget.a(true, NineSlicePanel.field_f);
-          this.e(1000);
+          this.replaceCanvas(1000);
           ServerDataWriteRequest.attachInputHandlers(false, NineSlicePanel.field_f);
         }
-        if (InteractiveWidget.field_z[8]) {
+        if (InteractiveWidget.enabledAccountPackets[8]) {
           ReflectionReplySender.sendReflectionReplies(8);
         }
     }
 
-    private final int c(byte param0) {
+    private final int pollReconnect(byte guard) {
         int var2;
-        if (this.field_d) {
+        if (this.fatalErrorReported) {
           return -1;
         }
         if (!FixedPointPerlinNoise3D.a(-23517)) {
@@ -285,17 +285,17 @@ abstract class GameClientShell extends GameApplet {
         if (QuickChatCommand.field_d) {
           return -1;
         }
-        var2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, ResourceRequest.c((byte) -97));
+        var2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.trustedJagexHost, (byte) 56, true, this.affiliateId, ResourceRequest.c((byte) -97));
         if (-1 == var2) {
           return -1;
         }
-        if (param0 >= -38) {
+        if (guard >= -38) {
           return 99;
         }
         if (0 != var2 &&
           var2 != 1) {
           if (!BeveledTextInputRenderer.field_o) {
-            this.a("reconnect", 21253);
+            this.showFatalError("reconnect", 21253);
           }
           ScrollViewport.a((byte) 63);
           ArchiveCatalog.a((byte) 114, var2, MouseWheelInput.field_c);
@@ -310,24 +310,24 @@ abstract class GameClientShell extends GameApplet {
         return var2;
     }
 
-    private final void n(int param0) {
-        InteractiveWidget.field_z[param0] = true;
+    private final void enableAccountPacket(int opcode) {
+        InteractiveWidget.enabledAccountPackets[opcode] = true;
     }
 
-    final void m(int param0) {
+    final void updateIntroAndLogin(int guard) {
         int discarded$33 = 0;
         int discarded$34 = 0;
         int var3;
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 <= 94) {
+        if (guard <= 94) {
           waitingForSoundEffectsText = (String) null;
         }
         if (ScrollViewport.g(-1)) {
           stackIn_11_1 = 16981;
           stackIn_12_2 = (CompactMeshGeometry.field_o != null);
-          discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
+          discarded$33 = this.processAccountDialogActions(stackIn_11_1, stackIn_12_2, false);
         } else {
           if (TextureCoordinateGeneration.field_a >= 10) {
             if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
@@ -336,25 +336,25 @@ abstract class GameClientShell extends GameApplet {
               if (LoginDialogNavigation.field_a != 0) {
                 ModalDialog.pollAccountDialogs((byte) 55, OpenGlUnderwaterEffect.field_r);
               } else {
-                discarded$34 = this.a(16981, false, false);
+                discarded$34 = this.processAccountDialogActions(16981, false, false);
               }
             }
           }
         }
     }
 
-    final void q(int param0) {
+    final void dispatchAccountPacket(int guard) {
         boolean stackIn_28_0 = false;
         int var2;
         ChatMessage var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != 9289) {
+        if (guard != 9289) {
           return;
         }
-        var2 = TextureFormat.field_a;
+        var2 = TextureFormat.receivedAccountOpcode;
         if (var2 < 64 &&
-          InteractiveWidget.field_z[var2]) {
+          InteractiveWidget.enabledAccountPackets[var2]) {
           if (0 == var2) {
             return;
           }
@@ -380,7 +380,7 @@ abstract class GameClientShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.f((byte) -76);
+                                this.readBrowserNavigation((byte) -76);
                                 return;
                               }
                               if (var2 == 18) {
@@ -396,10 +396,10 @@ abstract class GameClientShell extends GameApplet {
                             ByteArrayStorage.receiveChatMessage(var3, (byte) 60);
                           }
                         } else {
-                          SecondaryNodeQueue.readReflectionCheck((byte) 127, NativeLibraryExtractor.field_a, FourIntUpdateRequest.platformDispatcher, HardwareBufferSet.field_d);
+                          SecondaryNodeQueue.readReflectionCheck((byte) 127, NativeLibraryExtractor.incomingPacket, FourIntUpdateRequest.platformDispatcher, HardwareBufferSet.accountPacketLength);
                         }
                       } else {
-                        this.o(-1);
+                        this.storeSessionCookie(-1);
                       }
                     } else {
                       SlowBurstParticle.readFourStatHiscores((byte) -77);
@@ -422,94 +422,94 @@ abstract class GameClientShell extends GameApplet {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        this.a(false, param0, (byte) 111, param3, param5, param2, param4, param1);
+    final void initializeDefaultClientServices(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+        this.initializeClientServices(false, param0, (byte) 111, param3, param5, param2, param4, param1);
         if (!param6) {
-          this.m(-95);
+          this.updateIntroAndLogin(-95);
         }
     }
 
-    final int a(int param0, boolean param1) {
-        if (param0 != -1) {
+    final int processAccountDialogs(int guard, boolean param1) {
+        if (guard != -1) {
           return 50;
         }
-        return this.a(16981, param1, true);
+        return this.processAccountDialogActions(16981, param1, true);
     }
 
-    private final void o(int param0) {
+    private final void storeSessionCookie(int guard) {
         String var2 = VertexAttribute.a((byte) -62);
-        if (param0 != -1) {
+        if (guard != -1) {
           return;
         }
         SingleChildWidget.setSessionCookie(61, var2, LegacyOpenGlUnlitEffect.activeApplet(2));
     }
 
-    private final void l(int param0) {
-        InteractiveWidget.field_z[2] = true;
-        if (param0 != 8) {
-          this.field_E = 114;
+    private final void enableHiscoreReplies(int guard) {
+        InteractiveWidget.enabledAccountPackets[2] = true;
+        if (guard != 8) {
+          this.secondaryGamePort = 114;
         }
     }
 
-    final int b(boolean param0) {
+    final int pollReconnectAndResend(boolean guard) {
         int var2;
-        var2 = this.c((byte) -99);
-        if (!param0) {
+        var2 = this.pollReconnect((byte) -99);
+        if (!guard) {
           return -127;
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (InteractiveWidget.field_z[1]) {
+          if (InteractiveWidget.enabledAccountPackets[1]) {
             UiStyle.resendFourIntReadRequests((byte) 115, 2);
           }
-          if (InteractiveWidget.field_z[2]) {
+          if (InteractiveWidget.enabledAccountPackets[2]) {
             SlowBurstParticle.a(3, (byte) -73);
           }
-          if (InteractiveWidget.field_z[3]) {
+          if (InteractiveWidget.enabledAccountPackets[3]) {
             PointLight.resendProgressAndArrayRequests(0, 4);
           }
-          if (InteractiveWidget.field_z[4]) {
+          if (InteractiveWidget.enabledAccountPackets[4]) {
             GraphicsOptionsDialog.resendLoggingRequests(28778, 5);
           }
-          if (InteractiveWidget.field_z[5]) {
+          if (InteractiveWidget.enabledAccountPackets[5]) {
             TextureMetadata.resendServerDataRequests(false, 6);
           }
-          if (InteractiveWidget.field_z[6]) {
-            HardwareQuadBatchBuffers.resendFourStatHiscoreRequests(7, param0);
+          if (InteractiveWidget.enabledAccountPackets[6]) {
+            HardwareQuadBatchBuffers.resendFourStatHiscoreRequests(7, guard);
           }
-          if (InteractiveWidget.field_z[8]) {
+          if (InteractiveWidget.enabledAccountPackets[8]) {
             LegacyOpenGlAssemblyProgram.a(-58);
           }
         }
         return var2;
     }
 
-    private final void f(byte param0) {
-        int var2 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+    private final void readBrowserNavigation(byte guard) {
+        int var2 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = -1 + HardwareBufferSet.field_d;
+        int var4 = -1 + HardwareBufferSet.accountPacketLength;
         byte[] var5 = new byte[var4];
-        NativeLibraryExtractor.field_a.readCipherBytes(var5, 0, 0, var4);
-        if (param0 > -55) {
-          this.field_w = -30;
+        NativeLibraryExtractor.incomingPacket.readCipherBytes(var5, 0, 0, var4);
+        if (guard > -55) {
+          this.affiliateId = -30;
         }
         LegacyOpenGlFlowingWaterEffect.a(-23166, LegacyOpenGlUnlitEffect.activeApplet(2), var3 != 0, MusicVoice.a(0, var5));
     }
 
-    final void a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
-        if (param2 == 60) {
-          this.c(false, -12605);
-          if (param1) {
-            this.n(1);
+    final void configureAccountFeatures(boolean serverData, boolean fourIntReads, byte guard, boolean hiscores, boolean logging) {
+        if (guard == 60) {
+          this.enableDefaultAccountPackets(false, -12605);
+          if (fourIntReads) {
+            this.enableAccountPacket(1);
           }
-          if (param3) {
-            this.l(8);
+          if (hiscores) {
+            this.enableHiscoreReplies(8);
           }
-          if (param4) {
-            this.e((byte) 30);
+          if (logging) {
+            this.enableLoggingReplies((byte) 30);
           }
-          if (param0) {
-            this.d((byte) 68);
+          if (serverData) {
+            this.enableServerDataReplies((byte) 68);
           }
           return;
         }
@@ -519,19 +519,19 @@ abstract class GameClientShell extends GameApplet {
         if (param0 < 79) {
           field_t = -119;
         }
-        field_u = null;
+        menuActionLabels = null;
         waitingForSoundEffectsText = null;
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void startAppletWithDefaultWidth(int cacheIndexCount, String cacheName, int height) {
         try {
-          this.a(param0, param2 ^ 480, 640, param1, param2);
+          this.startFromAppletParameters(cacheIndexCount, height ^ 480, 640, cacheName, height);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fn.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fn.CA(" + cacheIndexCount + ',' + (cacheName != null ? "{...}" : "null") + ',' + height + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4) {
+    private final void startFromAppletParameters(int cacheIndexCount, int guard, int width, String cacheName, int height) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -545,60 +545,60 @@ abstract class GameClientShell extends GameApplet {
         String var9 = null;
         try {
           try {
-            if (!this.i(-1)) {
+            if (!this.allowStartup(-1)) {
               return;
             }
-            this.field_D = this.getCodeBase().getHost();
-            var6 = this.field_D.toLowerCase();
+            this.gameHost = this.getCodeBase().getHost();
+            var6 = this.gameHost.toLowerCase();
             stackIn_8_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            this.field_z = stackIn_8_1;
-            if (param1 != 0) {
-              this.o(-5);
+            this.trustedJagexHost = stackIn_8_1;
+            if (guard != 0) {
+              this.storeSessionCookie(-5);
             }
-            this.field_r = Integer.parseInt(this.getParameter("gameport1"));
-            this.field_E = Integer.parseInt(this.getParameter("gameport2"));
+            this.primaryGamePort = Integer.parseInt(this.getParameter("gameport1"));
+            this.secondaryGamePort = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");
             if (var7 != null) {
-              this.field_x = Integer.parseInt(var7);
+              this.serverNumber = Integer.parseInt(var7);
             }
-            this.field_C = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_y = Long.parseLong(this.getParameter("instanceid"));
-            this.field_q = this.getParameter("member").equals("yes");
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
+            this.members = this.getParameter("member").equals("yes");
             var8 = this.getParameter("lang");
             if (var8 != null) {
-              this.field_v = Integer.parseInt(var8);
+              this.language = Integer.parseInt(var8);
             }
-            if (this.field_v >= 5) {
-              this.field_v = 0;
+            if (this.language >= 5) {
+              this.language = 0;
             }
             var9 = this.getParameter("affid");
             if (var9 != null) {
-              this.field_w = Integer.parseInt(var9);
+              this.affiliateId = Integer.parseInt(var9);
             }
             ArchiveLoadRequirement.simpleMode = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(32, param4, (byte) 44, param2, this.field_C, param3, param0);
+            this.startApplet(32, height, (byte) 44, width, this.gameCrc, cacheName, cacheIndexCount);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var6_ref), param1 ^ 0);
-            this.a("crash", 21253);
+            IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var6_ref), guard ^ 0);
+            this.showFatalError("crash", 21253);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_25_0 = var6_ref2;
-          stackIn_25_1 = new StringBuilder().append("fn.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_25_1 = new StringBuilder().append("fn.S(").append(cacheIndexCount).append(',').append(guard).append(',').append(width).append(',');
+          if (cacheName == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(height).append(')').toString());
         }
     }
 
-    private final int a(int param0, boolean param1, boolean param2) {
+    private final int processAccountDialogActions(int guard, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -617,8 +617,8 @@ abstract class GameClientShell extends GameApplet {
           if (var4 == 0) {
             throw new IllegalStateException();
           }
-          if (param0 != 16981) {
-            this.field_w = 90;
+          if (guard != 16981) {
+            this.affiliateId = 90;
           }
           if (var4 == 1) {
             var5_int = AlternateUsernameCredentials.a(LegacyOpenGlTexture.c(true), 0, SelectionOverlay.a((byte) 21));
@@ -633,9 +633,9 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = IntList.a(BeveledCheckboxRenderer.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), HiscoreRequest.accountServiceIdentifier(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
+            var5_intLifetime1 = IntList.a(BeveledCheckboxRenderer.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), HiscoreRequest.accountServiceIdentifier(-86), this.affiliateId, 119, ResourceRequest.c((byte) -109));
             if (var5_intLifetime1 != -1) {
-              Sumoblitz.completeAccountCreation(ArchiveLoadingStage.nameSuggestions, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
+              Sumoblitz.completeAccountCreation(ArchiveLoadingStage.nameSuggestions, guard ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;
               ArchiveLoadingStage.nameSuggestions = null;
             }
@@ -649,7 +649,7 @@ abstract class GameClientShell extends GameApplet {
             if (param2) {
               QuickChatCommand.field_d = false;
             } else {
-              var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
+              var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.trustedJagexHost, (byte) 21, false, this.affiliateId, ResourceRequest.c((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
                   FourStatHiscoreRequest.field_k = StringBuilderSupport.field_a;
@@ -665,14 +665,14 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var4 == 4) {
             if (NineSlicePanel.field_a) {
-              MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.activeApplet(param0 ^ 16983));
+              MessageDialog.clearCookieAndReload(-1540, LegacyOpenGlUnlitEffect.activeApplet(guard ^ 16983));
             } else {
               IntrusiveNode.field_a = true;
               LoginDialogNavigation.field_a = 10;
             }
           }
           if (var4 == 5) {
-            HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.activeApplet(param0 - 16979), false);
+            HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.activeApplet(guard - 16979), false);
           }
           if (var4 == 6 &&
             HardwareTextureSprite.field_m) {
@@ -682,13 +682,13 @@ abstract class GameClientShell extends GameApplet {
             LegacyOpenGlInterleavedStream.openServerList(false, LegacyOpenGlUnlitEffect.activeApplet(2));
           }
           if (8 == var4) {
-            MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.activeApplet(param0 - 16979));
+            MessageDialog.clearCookieAndReload(-1540, LegacyOpenGlUnlitEffect.activeApplet(guard - 16979));
           }
           if (9 == var4) {
             LegacyOpenGlTexture2D.openSupportPage(LegacyOpenGlUnlitEffect.activeApplet(2), (byte) -124);
           }
           if (var4 == 10) {
-            InwardSparkParticle.field_v.writeCipherByte(17, param0 ^ 16989);
+            InwardSparkParticle.outgoingPacket.writeCipherByte(17, guard ^ 16989);
           }
           if (var4 == 11) {
             HiscoreRequest.reloadApplet(8192, LegacyOpenGlUnlitEffect.activeApplet(2));
@@ -738,36 +738,36 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    private final void e(byte param0) {
-        int var2 = 76 / ((param0 + 76) / 48);
-        InteractiveWidget.field_z[4] = true;
+    private final void enableLoggingReplies(byte guard) {
+        int var2 = 76 / ((guard + 76) / 48);
+        InteractiveWidget.enabledAccountPackets[4] = true;
     }
 
-    private final void c(boolean param0, int param1) {
-        InteractiveWidget.field_z[0] = true;
-        InteractiveWidget.field_z[7] = true;
-        InteractiveWidget.field_z[18] = true;
-        if (param1 != -12605) {
-          this.q(112);
+    private final void enableDefaultAccountPackets(boolean reflectionChecks, int guard) {
+        InteractiveWidget.enabledAccountPackets[0] = true;
+        InteractiveWidget.enabledAccountPackets[7] = true;
+        InteractiveWidget.enabledAccountPackets[18] = true;
+        if (guard != -12605) {
+          this.dispatchAccountPacket(112);
         }
-        InteractiveWidget.field_z[3] = true;
-        InteractiveWidget.field_z[8] = param0;
-        InteractiveWidget.field_z[17] = true;
-        InteractiveWidget.field_z[16] = true;
+        InteractiveWidget.enabledAccountPackets[3] = true;
+        InteractiveWidget.enabledAccountPackets[8] = reflectionChecks;
+        InteractiveWidget.enabledAccountPackets[17] = true;
+        InteractiveWidget.enabledAccountPackets[16] = true;
     }
 
     protected GameClientShell() {
     }
 
-    private final void a(boolean param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void initializeClientServices(boolean param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var11 = new java.awt.Frame("Jagex");
         var11.pack();
         var11.dispose();
         this.setBackground(java.awt.Color.black);
-        EmailValidationError.field_c = this.field_v;
+        EmailValidationError.field_c = this.language;
         LegacyVertexAttribute.setLoadingLanguage(EmailValidationError.field_c, 13586);
-        EmptyWidgetRenderer.a(param0, (byte) 84, FourIntUpdateRequest.platformDispatcher, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, EmailValidationError.field_c, this.field_y);
-        PacketBuffer.a(FourIntUpdateRequest.platformDispatcher, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, EmailValidationError.field_c);
+        EmptyWidgetRenderer.a(param0, (byte) 84, FourIntUpdateRequest.platformDispatcher, 5000, this.secondaryGamePort, param1, this.gameCrc, this.primaryGamePort, 5000, this.gameHost, this.members, this.serverNumber, EmailValidationError.field_c, this.instanceId);
+        PacketBuffer.a(FourIntUpdateRequest.platformDispatcher, this.primaryGamePort, this.secondaryGamePort, this.gameHost, (byte) -56, this.gameCrc, this.serverNumber, param1, EmailValidationError.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);
         InwardSparkParticle.field_w = EmailValidationError.createMouseWheelInput((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);
@@ -777,7 +777,7 @@ abstract class GameClientShell extends GameApplet {
         OpenGlUnderwaterEffect.field_i = param5;
         LegacyOpenGlUnlitEffect.field_f = param3;
         AudioServiceThread.field_h = param6;
-        this.p(-1);
+        this.initializeAccountPacketLengths(-1);
         LegacyOpenGlSpecularEffect.c(8193);
     }
 

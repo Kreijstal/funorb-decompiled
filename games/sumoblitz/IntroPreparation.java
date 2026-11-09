@@ -31,7 +31,7 @@ final class IntroPreparation {
     final static void sendQueuedIntArrayRequest(int opcode, int guard, QueuedIntArrayRequest request) {
         IsaacPacketBuffer var3 = null;
         try {
-          var3 = InwardSparkParticle.field_v;
+          var3 = InwardSparkParticle.outgoingPacket;
           if (guard != 1000) {
             restartLevelText = (String) null;
           }

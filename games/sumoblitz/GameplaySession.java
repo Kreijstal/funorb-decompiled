@@ -1712,13 +1712,13 @@ final class GameplaySession {
                 } else {
                   HudMessage.field_s[3].draw(-HudMessage.field_s[4].width() + 567, 0);
                   HudMessage.field_s[4].draw(567, 0);
-                  QueuedIntArrayRequest.field_k.a(19, 85, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -21, -1);
-                  GameTrackPlayback.field_a.a(19, 85, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  QueuedIntArrayRequest.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + FourIntReadRequest.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  QueuedIntArrayRequest.field_k.drawText(19, 85, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -21, -1);
+                  GameTrackPlayback.field_a.drawText(19, 85, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
+                  QueuedIntArrayRequest.field_k.drawRightAlignedText(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + FourIntReadRequest.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              GameTrackPlayback.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + FourIntReadRequest.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              GameTrackPlayback.field_a.drawRightAlignedText(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + FourIntReadRequest.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1733,12 +1733,12 @@ final class GameplaySession {
               } else {
                 SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
                 SpriteState.field_B[4].draw(459, 448);
-                QueuedIntArrayRequest.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
-                GameTrackPlayback.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
+                QueuedIntArrayRequest.field_k.drawText(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
+                GameTrackPlayback.field_a.drawText(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
               if (MessageDialog.arcadeMode) {
-                QueuedIntArrayRequest.field_k.a(473, 175, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -125, -1);
-                GameTrackPlayback.field_a.a(473, 175, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
+                QueuedIntArrayRequest.field_k.drawText(473, 175, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -125, -1);
+                GameTrackPlayback.field_a.drawText(473, 175, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
               LegacyOpenGlTexture1D.field_k[0].draw(3, 42);
               var3.pushClip((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + LegacyOpenGlTexture1D.field_k[0].height(), 0, 40);
@@ -1761,14 +1761,14 @@ final class GameplaySession {
                 break;
               }
               MusicCrossfadeStream.field_q[0].drawRotated(190.0f, 468.0f, 1600, 0, 1, 0, 2);
-              QueuedIntArrayRequest.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
-              GameTrackPlayback.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
+              QueuedIntArrayRequest.field_k.drawText(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
+              GameTrackPlayback.field_a.drawText(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[1].drawRotated(240.0f, 468.0f, 1600, 0, 1, 0, 2);
-              QueuedIntArrayRequest.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
-              GameTrackPlayback.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
+              QueuedIntArrayRequest.field_k.drawText(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
+              GameTrackPlayback.field_a.drawText(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[2].drawRotated(290.0f, 468.0f, 1600, 0, 1, 0, 2);
-              QueuedIntArrayRequest.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
-              GameTrackPlayback.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
+              QueuedIntArrayRequest.field_k.drawText(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
+              GameTrackPlayback.field_a.drawText(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
               break;
             }
           }

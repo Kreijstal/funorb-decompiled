@@ -3,7 +3,7 @@
  */
 final class GameDefinitionLoader {
     static int field_c;
-    static int field_a;
+    static int justificationRemainderQ8;
     static String openInPopupWindowText;
     static GzipDecompressor gzipDecompressor;
     static RasterIndexedSprite[] field_d;
@@ -188,7 +188,7 @@ final class GameDefinitionLoader {
     }
 
     static {
-        field_a = 0;
+        justificationRemainderQ8 = 0;
         openInPopupWindowText = "Open in popup window";
         field_c = 250;
         gzipDecompressor = new GzipDecompressor();

@@ -3,17 +3,17 @@
  */
 final class FontMetrics {
     int field_d;
-    private byte[] field_g;
+    private byte[] advances;
     int field_h;
     int field_c;
-    private byte[][] field_j;
+    private byte[][] kerningTable;
     int field_i;
     static DisplayModeFailure FULLSCREEN_CONFIRMATION_TIMEOUT;
     static int[] field_e;
     static TextureCombineSource PREVIOUS;
     static int field_b;
 
-    final int a(String param0, int param1) {
+    final int stringWidth(String text, int guard) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -21,26 +21,26 @@ final class FontMetrics {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 0) {
+          if (guard != 0) {
             FULLSCREEN_CONFIRMATION_TIMEOUT = (DisplayModeFailure) null;
           }
-          stackIn_4_0 = this.a(0, (ToolkitSprite[]) null, param0);
+          stackIn_4_0 = this.stringWidth(0, (ToolkitSprite[]) null, text);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("ta.F(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final int a(String param0, boolean param1, String[] param2, int[] param3, ToolkitSprite[] param4) {
+    final int wrapLines(String text, boolean guard, String[] lines, int[] lineWidths, ToolkitSprite[] inlineSprites) {
         int discarded$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_26_0 = 0;
@@ -83,7 +83,7 @@ final class FontMetrics {
         int var21 = 0;
         var21 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null == param0) {
+          if (null == text) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
@@ -93,16 +93,16 @@ final class FontMetrics {
           var9 = 0;
           var10 = 0;
           var11 = -1;
-          if (param1) {
-            discarded$0 = this.a(-94, (ToolkitSprite[]) null, (String) null);
+          if (guard) {
+            discarded$0 = this.stringWidth(-94, (ToolkitSprite[]) null, (String) null);
           }
           var12 = -1;
           var13 = 0;
-          var14 = param0.length();
+          var14 = text.length();
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var14))) {
-            var16 = HardwareReflectionEffect.a(true, param0.charAt(var15)) & 255;
+            var16 = HardwareReflectionEffect.a(true, text.charAt(var15)) & 255;
             var17 = 0;
             stackIn_164_0 = ~var16;
             stackIn_164_1 = -61;
@@ -115,12 +115,12 @@ final class FontMetrics {
                   decompiledFrameRemainder0 = (var16 == 62);
                   if (decompiledFrameRemainder0) {
                     var18 = var11;
-                    var19 = param0.substring(1 + var11, var15);
+                    var19 = text.substring(1 + var11, var15);
                     var11 = -1;
                     if (var19.equals("br")) {
-                      param2[var13] = param0.substring(var7, var15 + 1);
+                      lines[var13] = text.substring(var7, var15 + 1);
                       var13++;
-                      if (param2.length <= var13) {
+                      if (lines.length <= var13) {
                         stackIn_26_0 = 0;
                         return stackIn_26_0;
                       }
@@ -135,18 +135,18 @@ final class FontMetrics {
                         if (!var19.equals("lt")) {
                           if (var19.equals("gt")) {
                             var17 = var17 + this.characterWidth(62, (byte) -53);
-                            if (null != this.field_j &&
+                            if (null != this.kerningTable &&
                               -1 != var12) {
-                              var17 = var17 + this.field_j[var12][62];
+                              var17 = var17 + this.kerningTable[var12][62];
                             }
                             var12 = 62;
                           } else {
                             if (!var19.equals("nbsp")) {
                               if (var19.equals("shy")) {
                                 var17 = var17 + this.characterWidth(173, (byte) -53);
-                                if (this.field_j != null &&
+                                if (this.kerningTable != null &&
                                   var12 != -1) {
-                                  var17 = var17 + this.field_j[var12][173];
+                                  var17 = var17 + this.kerningTable[var12][173];
                                 }
                                 var12 = 173;
                               } else {
@@ -157,12 +157,12 @@ final class FontMetrics {
                                         if (!var19.startsWith("img=")) {
                                           break regionExit1;
                                         }
-                                        if (param4 == null) {
+                                        if (inlineSprites == null) {
                                           break regionExit1;
                                         }
                                         try {
                                           var20_int = LoginFormState.parseDecimal((byte) -128, (CharSequence) ((Object) var19.substring(4)));
-                                          var17 = var17 + param4[var20_int].paddedWidth();
+                                          var17 = var17 + inlineSprites[var20_int].paddedWidth();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -175,41 +175,41 @@ final class FontMetrics {
                                         }
                                       }
                                       var17 = var17 + this.characterWidth(174, (byte) -53);
-                                      if (this.field_j != null &&
+                                      if (this.kerningTable != null &&
                                         var12 != -1) {
-                                        var17 = var17 + this.field_j[var12][174];
+                                        var17 = var17 + this.kerningTable[var12][174];
                                       }
                                       var12 = 174;
                                     } else {
                                       var17 = var17 + this.characterWidth(169, (byte) -53);
-                                      if (null != this.field_j &&
+                                      if (null != this.kerningTable &&
                                         -1 != var12) {
-                                        var17 = var17 + this.field_j[var12][169];
+                                        var17 = var17 + this.kerningTable[var12][169];
                                       }
                                       var12 = 169;
                                     }
                                   } else {
                                     var17 = var17 + this.characterWidth(8364, (byte) -53);
-                                    if (null != this.field_j &&
+                                    if (null != this.kerningTable &&
                                       var12 != -1) {
-                                      var17 = var17 + this.field_j[var12][8364];
+                                      var17 = var17 + this.kerningTable[var12][8364];
                                     }
                                     var12 = 8364;
                                   }
                                 } else {
                                   var17 = var17 + this.characterWidth(215, (byte) -53);
-                                  if (this.field_j != null &&
+                                  if (this.kerningTable != null &&
                                     var12 != -1) {
-                                    var17 = var17 + this.field_j[var12][215];
+                                    var17 = var17 + this.kerningTable[var12][215];
                                   }
                                   var12 = 215;
                                 }
                               }
                             } else {
                               var17 = var17 + this.characterWidth(160, (byte) -53);
-                              if (null != this.field_j &&
+                              if (null != this.kerningTable &&
                                 var12 != -1) {
-                                var17 = var17 + this.field_j[var12][160];
+                                var17 = var17 + this.kerningTable[var12][160];
                               }
                               var12 = 160;
                             }
@@ -217,9 +217,9 @@ final class FontMetrics {
                           break regionExit1;
                         }
                         var17 = var17 + this.characterWidth(60, (byte) -53);
-                        if (this.field_j != null &&
+                        if (this.kerningTable != null &&
                           var12 != -1) {
-                          var17 = var17 + this.field_j[var12][60];
+                          var17 = var17 + this.kerningTable[var12][60];
                         }
                         var12 = 60;
                       }
@@ -229,33 +229,33 @@ final class FontMetrics {
                 } else {
                   var18 = var15;
                   var17 = var17 + this.characterWidth(var16, (byte) -53);
-                  if (null != this.field_j &&
+                  if (null != this.kerningTable &&
                     var12 != -1) {
-                    var17 = var17 + this.field_j[var12][var16];
+                    var17 = var17 + this.kerningTable[var12][var16];
                   }
                   var12 = var16;
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var17 > 0)) {
                   var6_int = var6_int + var17;
-                  if (param3 != null) {
+                  if (lineWidths != null) {
                     if (var16 == 32) {
                       var8 = var15;
                       var10 = 1;
                       var9 = var6_int;
                     }
                     stackIn_139_0 = var6_int;
-                    stackIn_139_1 = (int[]) (param3);
-                    if (var13 >= param3.length) {
-                      stackIn_140_2 = -1 + param3.length;
+                    stackIn_139_1 = (int[]) (lineWidths);
+                    if (var13 >= lineWidths.length) {
+                      stackIn_140_2 = -1 + lineWidths.length;
                     } else {
                       stackIn_140_2 = var13;
                     }
                     if (stackIn_139_0 > stackIn_139_1[stackIn_140_2]) {
                       if (0 <= var8) {
-                        param2[var13] = param0.substring(var7, 1 + var8 - var10);
+                        lines[var13] = text.substring(var7, 1 + var8 - var10);
                         var13++;
-                        if (param2.length <= var13) {
+                        if (lines.length <= var13) {
                           stackIn_150_0 = 0;
                           return stackIn_150_0;
                         }
@@ -264,9 +264,9 @@ final class FontMetrics {
                         var8 = -1;
                         var12 = -1;
                       } else {
-                        param2[var13] = param0.substring(var7, var18);
+                        lines[var13] = text.substring(var7, var18);
                         var13++;
-                        if (param2.length <= var13) {
+                        if (lines.length <= var13) {
                           stackIn_156_0 = 0;
                           return stackIn_156_0;
                         }
@@ -291,10 +291,10 @@ final class FontMetrics {
           }
           if (decompiledNaturalLoopExit0) {
             stackIn_164_0 = var7;
-            stackIn_164_1 = param0.length();
+            stackIn_164_1 = text.length();
           }
           if (stackIn_164_0 < stackIn_164_1) {
-            param2[var13] = param0.substring(var7, param0.length());
+            lines[var13] = text.substring(var7, text.length());
             var13++;
           }
           stackIn_168_0 = var13;
@@ -304,25 +304,25 @@ final class FontMetrics {
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_172_0 = var6;
           stackIn_172_1 = new StringBuilder().append("ta.G(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_173_2 = "null";
           } else {
             stackIn_173_2 = "{...}";
           }
-          stackIn_176_1 = ((StringBuilder) (Object) stackIn_172_1).append(stackIn_173_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_176_1 = ((StringBuilder) (Object) stackIn_172_1).append(stackIn_173_2).append(',').append(guard).append(',');
+          if (lines == null) {
             stackIn_177_2 = "null";
           } else {
             stackIn_177_2 = "{...}";
           }
           stackIn_180_1 = ((StringBuilder) (Object) stackIn_176_1).append(stackIn_177_2).append(',');
-          if (param3 == null) {
+          if (lineWidths == null) {
             stackIn_181_2 = "null";
           } else {
             stackIn_181_2 = "{...}";
           }
           stackIn_184_1 = ((StringBuilder) (Object) stackIn_180_1).append(stackIn_181_2).append(',');
-          if (param4 == null) {
+          if (inlineSprites == null) {
             stackIn_185_2 = "null";
           } else {
             stackIn_185_2 = "{...}";
@@ -331,7 +331,7 @@ final class FontMetrics {
         }
     }
 
-    private final int a(int param0, ToolkitSprite[] param1, String param2) {
+    private final int stringWidth(int guard, ToolkitSprite[] inlineSprites, String text) {
         int stackIn_3_0 = 0;
         int stackIn_65_0 = 0;
         RuntimeException stackIn_69_0 = null;
@@ -354,18 +354,18 @@ final class FontMetrics {
         int var12 = 0;
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null == param2) {
+          if (null == text) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           var4_int = -1;
           var5 = -1;
           var6 = 0;
-          var7 = param2.length();
-          var8 = param0;
+          var7 = text.length();
+          var8 = guard;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 <= var8))) {
-            var9 = param2.charAt(var8);
+            var9 = text.charAt(var8);
             stackIn_65_0 = -61;
             if (var12 == 0) {
               boolean decompiledFrameRemainder0 = true;
@@ -374,7 +374,7 @@ final class FontMetrics {
               } else {
                 if (var9 == 62 &&
                   var4_int != -1) {
-                  var10 = param2.substring(1 + var4_int, var8);
+                  var10 = text.substring(1 + var4_int, var8);
                   var4_int = -1;
                   if (var10.equals("lt")) {
                     var9 = 60;
@@ -399,11 +399,11 @@ final class FontMetrics {
                               } else {
                                 if ((!var10.equals("reg")) &&
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
-                                  (decompiledFrameRemainder0 = (param1 != null))) {
+                                  (decompiledFrameRemainder0 = (inlineSprites != null))) {
                                   try {
                                     var11_int = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var10.substring(4)));
                                     var5 = -1;
-                                    var6 = var6 + param1[var11_int].paddedWidth();
+                                    var6 = var6 + inlineSprites[var11_int].paddedWidth();
                                     decompiledRegionSelector0 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -425,10 +425,10 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (255 & this.field_g[HardwareReflectionEffect.a(true, (char) var9) & 255]);
-                  if (null != this.field_j &&
+                  var6 = var6 + (255 & this.advances[HardwareReflectionEffect.a(true, (char) var9) & 255]);
+                  if (null != this.kerningTable &&
                     var5 != -1) {
-                    var6 = var6 + this.field_j[var5][var9];
+                    var6 = var6 + this.kerningTable[var5][var9];
                   }
                   var5 = var9;
                 }
@@ -446,14 +446,14 @@ final class FontMetrics {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_69_0 = var4;
-          stackIn_69_1 = new StringBuilder().append("ta.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_69_1 = new StringBuilder().append("ta.H(").append(guard).append(',');
+          if (inlineSprites == null) {
             stackIn_70_2 = "null";
           } else {
             stackIn_70_2 = "{...}";
           }
           stackIn_73_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
@@ -470,7 +470,7 @@ final class FontMetrics {
           if (guard != -53) {
             this.field_h = -30;
           }
-          stackIn_4_0 = this.field_g[character] & 255;
+          stackIn_4_0 = this.advances[character] & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -479,7 +479,7 @@ final class FontMetrics {
         }
     }
 
-    final String a(int param0, String param1, ToolkitSprite[] param2, int param3) {
+    final String ellipsize(int maxWidth, String text, ToolkitSprite[] inlineSprites, int guard) {
         String stackIn_5_0 = null;
         String stackIn_54_0 = null;
         String stackIn_73_0 = null;
@@ -506,20 +506,20 @@ final class FontMetrics {
         int var14 = 0;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.a(param3 ^ -63, param2, param1) <= param0) {
-            stackIn_5_0 = (String) (param1);
+          if (this.stringWidth(guard ^ -63, inlineSprites, text) <= maxWidth) {
+            stackIn_5_0 = (String) (text);
             return stackIn_5_0;
           }
-          param0 = param0 - this.a(param3 ^ param3, (ToolkitSprite[]) null, "...");
+          maxWidth = maxWidth - this.stringWidth(guard ^ guard, (ToolkitSprite[]) null, "...");
           var5_int = -1;
           var6 = -1;
           var7 = 0;
-          var8 = param1.length();
+          var8 = text.length();
           var9 = "";
           var10 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 <= var10))) {
-            stackIn_77_0 = (String) (param1);
+            stackIn_77_0 = (String) (text);
             if (var14 == 0) {
               boolean decompiledFrameRemainder0 = true;
               var11 = ((String) (Object) stackIn_77_0).charAt(var10);
@@ -529,7 +529,7 @@ final class FontMetrics {
                 boolean decompiledFrameRemainder1 = true;
                 if (var11 == 62 &&
                   var5_int != -1) {
-                  var12_ref_String = param1.substring(var5_int + 1, var10);
+                  var12_ref_String = text.substring(var5_int + 1, var10);
                   var5_int = -1;
                   if (var12_ref_String.equals("lt")) {
                     var11 = 60;
@@ -558,16 +558,16 @@ final class FontMetrics {
                               else {
                                 if ((!var12_ref_String.equals("reg")) &&
                                   (decompiledFrameRemainder0 = !(!var12_ref_String.startsWith("img="))) &&
-                                  (decompiledFrameRemainder0 = (null != param2))) {
+                                  (decompiledFrameRemainder0 = (null != inlineSprites))) {
                                   try {
                                     var13_int = LoginFormState.parseDecimal((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
                                     var6 = -1;
-                                    var7 = var7 + param2[var13_int].paddedWidth();
-                                    if (var7 > param0) {
+                                    var7 = var7 + inlineSprites[var13_int].paddedWidth();
+                                    if (var7 > maxWidth) {
                                       stackIn_54_0 = var9 + "...";
                                       return stackIn_54_0;
                                     }
-                                    var9 = param1.substring(0, 1 + var10);
+                                    var9 = text.substring(0, 1 + var10);
                                     decompiledRegionSelector0 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -599,21 +599,21 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (this.field_g[HardwareReflectionEffect.a(true, (char) var11) & 255] & 255);
-                  if (null != this.field_j &&
+                  var7 = var7 + (this.advances[HardwareReflectionEffect.a(true, (char) var11) & 255] & 255);
+                  if (null != this.kerningTable &&
                     var6 != -1) {
-                    var7 = var7 + this.field_j[var6][var11];
+                    var7 = var7 + this.kerningTable[var6][var11];
                   }
                   var6 = var11;
                   var12 = var7;
-                  if (this.field_j != null) {
-                    var12 = var12 + this.field_j[var11][46];
+                  if (this.kerningTable != null) {
+                    var12 = var12 + this.kerningTable[var11][46];
                   }
-                  if (var12 > param0) {
+                  if (var12 > maxWidth) {
                     stackIn_73_0 = var9 + "...";
                     return stackIn_73_0;
                   }
-                  var9 = param1.substring(0, var10 + 1);
+                  var9 = text.substring(0, var10 + 1);
                 }
               }
               var10++;
@@ -622,37 +622,37 @@ final class FontMetrics {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_77_0 = (String) (param1);
+            stackIn_77_0 = (String) (text);
           }
           return stackIn_77_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_81_0 = var5;
-          stackIn_81_1 = new StringBuilder().append("ta.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_81_1 = new StringBuilder().append("ta.C(").append(maxWidth).append(',');
+          if (text == null) {
             stackIn_82_2 = "null";
           } else {
             stackIn_82_2 = "{...}";
           }
           stackIn_85_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',');
-          if (param2 == null) {
+          if (inlineSprites == null) {
             stackIn_86_2 = "null";
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createBeveledPanelSprites(int backgroundColor, int guard, int lightColor, int darkColor) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         Sprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 > 87) {
-            stackIn_4_0 = FallbackShaderEffect.a(param3, 1, 0, param0, param2);
+          if (guard > 87) {
+            stackIn_4_0 = FallbackShaderEffect.createBeveledPanelSprites(darkColor, 1, 0, backgroundColor, lightColor);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;
@@ -660,21 +660,21 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.D(" + backgroundColor + ',' + guard + ',' + lightColor + ',' + darkColor + ')');
         }
     }
 
-    final int a(int param0, char param1, int param2) {
+    final int kerning(int guard, char nextCharacter, int previousCharacter) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
         byte stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -49) {
+          if (guard >= -49) {
             this.characterWidth(-23, (byte) 121);
           }
-          if (null != this.field_j) {
-            stackIn_7_0 = this.field_j[param2][param1];
+          if (null != this.kerningTable) {
+            stackIn_7_0 = this.kerningTable[previousCharacter][nextCharacter];
             return stackIn_7_0;
           }
           stackIn_5_0 = 0;
@@ -682,7 +682,7 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var4), "ta.A(" + guard + ',' + nextCharacter + ',' + previousCharacter + ')');
         }
     }
 
@@ -742,8 +742,8 @@ final class FontMetrics {
           stackIn_8_0 = (1 != var2.readUnsignedByte(-31302)) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
-          this.field_g = new byte[256];
-          var2.readBytes(this.field_g, 256, 0, (byte) -101);
+          this.advances = new byte[256];
+          var2.readBytes(this.advances, 256, 0, (byte) -101);
           if (var4 == 0) {
             this.field_d = var2.readUnsignedByte(-31302);
           }
@@ -810,7 +810,7 @@ final class FontMetrics {
                 var9Lifetime1++;
                 continue;
               }
-              this.field_j = new byte[256][256];
+              this.kerningTable = new byte[256][256];
               stackIn_48_0 = 0;
               break;
             }
@@ -832,7 +832,7 @@ final class FontMetrics {
                     stackIn_50_1 = 32;
                     if (stackIn_50_0 != stackIn_50_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.field_j[var9Lifetime2][var10Lifetime2] = (byte)OpenGlEnvironmentWaterEffect.a(var9Lifetime2, var10Lifetime2, this.field_g, var7, var6, (byte) -75, var8, var5);
+                      this.kerningTable[var9Lifetime2][var10Lifetime2] = (byte)OpenGlEnvironmentWaterEffect.a(var9Lifetime2, var10Lifetime2, this.advances, var7, var6, (byte) -75, var8, var5);
                     }
                     var10Lifetime2++;
                   }

@@ -80,7 +80,7 @@ public final class Sumoblitz extends GameClientShell {
           if (CompactMeshGeometry.field_o != null) {
             LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) 81);
           }
-          MessageDialog.m(0);
+          MessageDialog.shutdownClientSession(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,14 +202,14 @@ public final class Sumoblitz extends GameClientShell {
           if (param0 != 28196) {
             Sumoblitz.playEntityCollisionSound(59, -122, (byte) 42);
           }
-          this.a(100, 3, 1, 10, 2, 0, true);
+          this.initializeDefaultClientServices(100, 3, 1, 10, 2, 0, true);
           var2 = new MidiPcmStream();
           var2.setInitialProgram(177, 128, 9);
           var3 = new MusicCrossfadeStream(var2, new MidiPcmStream());
-          SpriteMask.a(FourIntUpdateRequest.platformDispatcher, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) NineSlicePanel.field_f));
+          SpriteMask.initializeAudioOutputs(FourIntUpdateRequest.platformDispatcher, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) NineSlicePanel.field_f));
           BufferedSocket.field_f = false;
           DroneIntroductionOverlay.field_e = var2;
-          this.a(true, true, (byte) 60, true, false);
+          this.configureAccountFeatures(true, true, (byte) 60, true, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ public final class Sumoblitz extends GameClientShell {
             var2 = ActiveCanvasProvider.currentCanvas(-97);
             SoftwareRasterizer.clear();
             if (FadingWidget.g(param0 ^ -99)) {
-              LegacyOpenGlGraphicsHeap.a((byte) 122, var2, WhirlpoolDigest.a(param0 ^ 7));
+              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 122, var2, WhirlpoolDigest.a(param0 ^ 7));
               return;
             }
             if (!OpenGlTexture2D.field_j) {
@@ -312,7 +312,7 @@ public final class Sumoblitz extends GameClientShell {
             }
             if (Bzip2State.field_j >= 2 &&
               SceneryParticle.field_v) {
-              LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -81, 1);
+              LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -81, 1);
             }
             var4 = (IntNode) (IsaacPacketBuffer.field_v.first(param0 - 121));
             if (null != var4) {
@@ -346,9 +346,9 @@ public final class Sumoblitz extends GameClientShell {
                   DroneEscalationSupport.field_a[var4.value].drawScaled(-32 + ArchiveCatalog.field_c - 180 + 85, 45, 64, 64, 0, 16777215 | var5_int << 24, 1);
                 }
               }
-              LegacyOpenGlEffect.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
-              LegacyOpenGlEffect.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
-              LegacyOpenGlEffect.field_c.a(150, var5_int << 24 | 16777215, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
+              LegacyOpenGlEffect.field_c.drawWrappedText(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
+              LegacyOpenGlEffect.field_c.drawWrappedText(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
+              LegacyOpenGlEffect.field_c.drawWrappedText(150, var5_int << 24 | 16777215, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (SpriteMask) null, 1, 0);
             }
             boolean decompiledFrameRemainder0 = true;
             if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
@@ -484,13 +484,13 @@ public final class Sumoblitz extends GameClientShell {
             DroneEscalationSupport.refreshDisplayPrompt((byte) 35);
           }
           stackIn_11_1 = (null != CompactMeshGeometry.field_o);
-          this.b(stackIn_11_1, -103);
+          this.updateClientServices(stackIn_11_1, -103);
           if (RidgedNoise3D.field_u) {
             this.initializeGameArchives(21961);
             RidgedNoise3D.field_u = false;
           }
           if (FadingWidget.g(-42)) {
-            this.m(106);
+            this.updateIntroAndLogin(106);
             if (FadingWidget.g(-33)) {
               if (ScrollViewport.g(-1)) {
                 discarded$0 = this.advanceGameLoading(false, true);
@@ -506,7 +506,7 @@ public final class Sumoblitz extends GameClientShell {
               decompiledFrameRemainder0 = !(!ClientException.a(0));
               if (decompiledFrameRemainder0) {
                 QuickChatPhrase.a(-24233);
-                LegacyOpenGlGraphicsHeap.c(0);
+                LegacyOpenGlGraphicsHeap.initializeDefaultMenus(0);
                 if (5 == RendererPreference.field_b &&
                   0 == OpenGlTransparentWaterEffect.field_e) {
                   RendererPreference.field_b = 2;
@@ -554,7 +554,7 @@ public final class Sumoblitz extends GameClientShell {
                 if (decompiledFrameRemainder0) {
                   stackIn_85_1 = -1;
                   stackIn_86_2 = (CompactMeshGeometry.field_o != null);
-                  var2_int = this.a(stackIn_85_1, stackIn_86_2);
+                  var2_int = this.processAccountDialogs(stackIn_85_1, stackIn_86_2);
                   if (1 == var2_int ||
                     var2_int == 2) {
                     if (null != CompactMeshGeometry.field_o) {
@@ -590,14 +590,14 @@ public final class Sumoblitz extends GameClientShell {
             } while (var4 == 0);
           }
           do {
-            if (!AccountPacketReader.readAccountPacket(RasterBuffer.field_e, -126)) {
-              MessageDialog.a(0, 0);
+            if (!AccountPacketReader.readAccountPacket(RasterBuffer.accountPacketLengths, -126)) {
+              MessageDialog.flushAccountWrites(0, 0);
               break;
             }
-            this.q(9289);
+            this.dispatchAccountPacket(9289);
           } while (var4 == 0);
           if (FixedPointPerlinNoise3D.a(-23517)) {
-            var3 = this.b(true);
+            var3 = this.pollReconnectAndResend(true);
             if (var3 == 2) {
               ScrollViewport.a((byte) 70);
             }
@@ -707,7 +707,7 @@ public final class Sumoblitz extends GameClientShell {
                                   var3 = ActiveCanvasProvider.currentCanvas(-22);
                                   SoftwareRasterizer.clear();
                                   if (FadingWidget.g(-61)) {
-                                    LegacyOpenGlGraphicsHeap.a((byte) 85, var3, WhirlpoolDigest.a(7));
+                                    LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 85, var3, WhirlpoolDigest.a(7));
                                     decompiledFrameRemainder6 = (var11 != 0);
                                   }
                                   if (decompiledFrameRemainder6) {
@@ -772,7 +772,7 @@ public final class Sumoblitz extends GameClientShell {
                                           }
                                           if (Bzip2State.field_j >= 2 &&
                                             SceneryParticle.field_v) {
-                                            LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -103, 1);
+                                            LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -103, 1);
                                           }
                                           var5 = (IntNode) (IsaacPacketBuffer.field_v.first(82));
                                           if (null != var5) {
@@ -810,9 +810,9 @@ public final class Sumoblitz extends GameClientShell {
                                             } else {
                                               var9_ref_String = SpriteMask.arcadeModeUnlockedText;
                                             }
-                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
                                           }
                                           boolean decompiledSharedTail8 = !(BeveledCheckboxRenderer.hasOpenDialogs(false));
                                           if (!decompiledSharedTail8) {
@@ -918,7 +918,7 @@ public final class Sumoblitz extends GameClientShell {
               var3 = ActiveCanvasProvider.currentCanvas(-103);
               SoftwareRasterizer.clear();
               if (FadingWidget.g(-96)) {
-                LegacyOpenGlGraphicsHeap.a((byte) -45, var3, WhirlpoolDigest.a(7));
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -45, var3, WhirlpoolDigest.a(7));
                 decompiledFrameRemainder5 = (var11 != 0);
               }
               if (decompiledFrameRemainder5) {
@@ -973,7 +973,7 @@ public final class Sumoblitz extends GameClientShell {
                     }
                     if (2 <= Bzip2State.field_j &&
                       SceneryParticle.field_v) {
-                      LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -98, 1);
+                      LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -98, 1);
                     }
                     var5 = (IntNode) (IsaacPacketBuffer.field_v.first(-100));
                     if (var5 != null) {
@@ -1007,9 +1007,9 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         var9_ref_String = SpriteMask.arcadeModeUnlockedText;
                       }
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
                     }
                     stackIn_276_0 = !guard;
                     boolean decompiledFrameRemainder4 = true;
@@ -1083,7 +1083,7 @@ public final class Sumoblitz extends GameClientShell {
               var3 = ActiveCanvasProvider.currentCanvas(-103);
               SoftwareRasterizer.clear();
               if (FadingWidget.g(-98)) {
-                LegacyOpenGlGraphicsHeap.a((byte) 95, var3, WhirlpoolDigest.a(7));
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 95, var3, WhirlpoolDigest.a(7));
                 decompiledFrameRemainder3 = (var11 != 0);
               }
               if (decompiledFrameRemainder3) {
@@ -1139,7 +1139,7 @@ public final class Sumoblitz extends GameClientShell {
                     }
                     if (Bzip2State.field_j >= 2 &&
                       SceneryParticle.field_v) {
-                      LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -122, 1);
+                      LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -122, 1);
                     }
                     var5 = (IntNode) (IsaacPacketBuffer.field_v.first(-85));
                     if (null != var5) {
@@ -1173,9 +1173,9 @@ public final class Sumoblitz extends GameClientShell {
                           DroneEscalationSupport.field_a[var5.value].drawScaled(ArchiveCatalog.field_c - 180 + 53, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                         }
                       }
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
@@ -1257,7 +1257,7 @@ public final class Sumoblitz extends GameClientShell {
               var3 = ActiveCanvasProvider.currentCanvas(125);
               SoftwareRasterizer.clear();
               if (FadingWidget.g(-128)) {
-                LegacyOpenGlGraphicsHeap.a((byte) -75, var3, WhirlpoolDigest.a(7));
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -75, var3, WhirlpoolDigest.a(7));
                 decompiledFrameRemainder1 = (var11 != 0);
               }
               if (decompiledFrameRemainder1) {
@@ -1316,7 +1316,7 @@ public final class Sumoblitz extends GameClientShell {
                       }
                       if (Bzip2State.field_j >= 2 &&
                         SceneryParticle.field_v) {
-                        LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -61, 1);
+                        LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -61, 1);
                       }
                       var5 = (IntNode) (IsaacPacketBuffer.field_v.first(110));
                       if (null != var5) {
@@ -1354,9 +1354,9 @@ public final class Sumoblitz extends GameClientShell {
                             DroneEscalationSupport.field_a[var5.value].drawScaled(-127 + ArchiveCatalog.field_c, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                           }
                         }
-                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
                       }
                       boolean decompiledSharedTail2 = !(BeveledCheckboxRenderer.hasOpenDialogs(false));
                       if (!decompiledSharedTail2) {
@@ -1459,7 +1459,7 @@ public final class Sumoblitz extends GameClientShell {
             var3 = ActiveCanvasProvider.currentCanvas(78);
             SoftwareRasterizer.clear();
             if (FadingWidget.g(-70)) {
-              LegacyOpenGlGraphicsHeap.a((byte) -86, var3, WhirlpoolDigest.a(7));
+              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -86, var3, WhirlpoolDigest.a(7));
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1515,7 +1515,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                   if (Bzip2State.field_j >= 2 &&
                     SceneryParticle.field_v) {
-                    LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -93, 1);
+                    LegacyOpenGlEffect.field_c.drawText(20, 20, 16777215, Integer.toString(DroneDebris.field_B), (byte) -93, 1);
                   }
                   var5 = (IntNode) (IsaacPacketBuffer.field_v.first(66));
                   if (null != var5) {
@@ -1549,9 +1549,9 @@ public final class Sumoblitz extends GameClientShell {
                     } else {
                       var9_ref_String = SpriteMask.arcadeModeUnlockedText;
                     }
-                    LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                    LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
-                    LegacyOpenGlEffect.field_c.a(150, 16777215 | var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.drawWrappedText(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.drawWrappedText(150, 16777215 | var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (SpriteMask) null, 1, 0);
                   }
                   boolean decompiledSharedTail0 = !(BeveledCheckboxRenderer.hasOpenDialogs(false));
                   if (!decompiledSharedTail0) {
@@ -1634,7 +1634,7 @@ public final class Sumoblitz extends GameClientShell {
         RuntimeException var2 = null;
         try {
           Sumoblitz.releaseStatics(0);
-          GameApplet.b((byte) -19);
+          GameApplet.releaseStatics((byte) -19);
           IntNode.releaseStatics(6334);
           IntrusiveDeque.releaseStatics((byte) 117);
           GraphicsToolkit.releaseStatics(0);
@@ -2013,7 +2013,7 @@ public final class Sumoblitz extends GameClientShell {
           LegacyRidgedWaterNoise.releaseStatics((byte) 110);
           AppletInstanceState.releaseStatics(true);
           ByteArrayCacheNode.releaseStatics(0);
-          this.field_D = null;
+          this.gameHost = null;
           this.field_K = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2030,7 +2030,7 @@ public final class Sumoblitz extends GameClientShell {
 
     public final void init() {
         try {
-          this.a(13, "sumoblitz", 480);
+          this.startAppletWithDefaultWidth(13, "sumoblitz", 480);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "Sumoblitz.init()");
         }

@@ -31,16 +31,16 @@ final class LoginPacketWriter {
           StrongCacheReference.a(SoftLruCache.field_e, true);
           SoftLruCache.field_e.writeShort(guard + 12917, affiliateId);
           credentials.writeCredentials(SoftLruCache.field_e, (byte) -113);
-          InwardSparkParticle.field_v.position = 0;
+          InwardSparkParticle.outgoingPacket.position = 0;
           if (reconnect) {
-            InwardSparkParticle.field_v.writeByte((byte) 89, 18);
+            InwardSparkParticle.outgoingPacket.writeByte((byte) 89, 18);
           } else {
-            InwardSparkParticle.field_v.writeByte((byte) 96, 16);
+            InwardSparkParticle.outgoingPacket.writeByte((byte) 96, 16);
           }
-          InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
-          var5_int = InwardSparkParticle.field_v.position;
-          InwardSparkParticle.field_v.writeInt(48, MidiNoteMixer.field_p);
-          InwardSparkParticle.field_v.writeLong(false, MouseInputShutdown.field_b);
+          InwardSparkParticle.outgoingPacket.position = InwardSparkParticle.outgoingPacket.position + 2;
+          var5_int = InwardSparkParticle.outgoingPacket.position;
+          InwardSparkParticle.outgoingPacket.writeInt(48, MidiNoteMixer.field_p);
+          InwardSparkParticle.outgoingPacket.writeLong(false, MouseInputShutdown.field_b);
           var6 = 0;
           if (NineSlicePanel.field_a) {
             var6 = var6 | 1;
@@ -54,18 +54,18 @@ final class LoginPacketWriter {
           if (SoftwareRenderContext.field_b != null) {
             var6 = var6 | 16;
           }
-          InwardSparkParticle.field_v.writeByte((byte) 108, var6);
+          InwardSparkParticle.outgoingPacket.writeByte((byte) 108, var6);
           var7 = DropDownLabelRenderer.readAppletSettings(-22, LegacyOpenGlUnlitEffect.activeApplet(2));
           if (var7 == null) {
             var7 = "";
           }
-          InwardSparkParticle.field_v.writeCp1252String(var7, (byte) -106);
+          InwardSparkParticle.outgoingPacket.writeCp1252String(var7, (byte) -106);
           if (SoftwareRenderContext.field_b != null) {
-            InwardSparkParticle.field_v.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
+            InwardSparkParticle.outgoingPacket.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
           }
-          HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
-          InwardSparkParticle.field_v.patchShortLength(guard + 12793, InwardSparkParticle.field_v.position - var5_int);
-          MessageDialog.a(guard + 12793, -1);
+          HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+          InwardSparkParticle.outgoingPacket.patchShortLength(guard + 12793, InwardSparkParticle.outgoingPacket.position - var5_int);
+          MessageDialog.flushAccountWrites(guard + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

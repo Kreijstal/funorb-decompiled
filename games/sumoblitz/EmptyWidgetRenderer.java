@@ -30,8 +30,8 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            NativeLibraryExtractor.field_a = new IsaacPacketBuffer(param3);
-            InwardSparkParticle.field_v = new IsaacPacketBuffer(param8);
+            NativeLibraryExtractor.incomingPacket = new IsaacPacketBuffer(param3);
+            InwardSparkParticle.outgoingPacket = new IsaacPacketBuffer(param8);
             CacheIoRequest.field_v = param5;
             DroneVariantScoring.field_a = param7;
             MouseInputShutdown.field_b = param13;

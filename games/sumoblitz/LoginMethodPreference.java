@@ -5,7 +5,7 @@ final class LoginMethodPreference {
     static IntrusiveDeque field_a;
     private String cookieValue;
     static SpriteData[] field_c;
-    static int field_b;
+    static int textShadowColor;
     static int hslTableUsers;
     static AccountConnectionPhase WAIT_LOGIN_REPLY;
 
@@ -69,7 +69,7 @@ final class LoginMethodPreference {
 
     static {
         field_a = new IntrusiveDeque();
-        field_b = 0;
+        textShadowColor = 0;
         hslTableUsers = 0;
         WAIT_LOGIN_REPLY = new AccountConnectionPhase();
     }

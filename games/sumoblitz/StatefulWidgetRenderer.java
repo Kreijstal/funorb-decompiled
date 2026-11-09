@@ -4,7 +4,7 @@
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
     private WidgetStateStyle compositeStyle;
     static String waitingForExtraDataText;
-    static int field_p;
+    static int underlineColor;
     static int field_n;
     static byte[][] field_o;
     private WidgetStateStyle[] stateStyles;
@@ -144,7 +144,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         try {
           super.copyStyleTo(destination, -123);
           if (guard != -26407) {
-            field_p = -38;
+            underlineColor = -38;
           }
           if (deepCopy) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
@@ -296,6 +296,6 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     static {
         waitingForExtraDataText = "Waiting for extra data";
         field_n = 0;
-        field_p = -1;
+        underlineColor = -1;
     }
 }

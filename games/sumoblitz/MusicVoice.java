@@ -80,7 +80,7 @@ final class MusicVoice extends IntrusiveNode {
         }
         FourIntReadRequest var1 = (FourIntReadRequest) (PerlinNoiseSliceGenerator.field_g.first(103));
         if (var1 != null) {
-          var2 = NativeLibraryExtractor.field_a;
+          var2 = NativeLibraryExtractor.incomingPacket;
           var2.readInt(true);
           var2.readInt(true);
           var2.readInt(true);

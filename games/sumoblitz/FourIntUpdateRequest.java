@@ -13,37 +13,37 @@ final class FourIntUpdateRequest extends IntrusiveNode {
     final static boolean readAccountPacketBody(byte guard) {
         if (guard != 119) {
           FourIntUpdateRequest.muteSoundEffects((byte) -70);
-          if (-1 == HardwareBufferSet.field_d) {
+          if (-1 == HardwareBufferSet.accountPacketLength) {
             if (!OpenGlIndexBuffer.b(-1, 1)) {
               return false;
             }
-            HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-            NativeLibraryExtractor.field_a.position = 0;
+            HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+            NativeLibraryExtractor.incomingPacket.position = 0;
           }
-          if (HardwareBufferSet.field_d == -2) {
+          if (HardwareBufferSet.accountPacketLength == -2) {
             if (!OpenGlIndexBuffer.b(-1, 2)) {
               return false;
             }
-            HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedShort(255);
-            NativeLibraryExtractor.field_a.position = 0;
+            HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
+            NativeLibraryExtractor.incomingPacket.position = 0;
           }
-          return OpenGlIndexBuffer.b(-1, HardwareBufferSet.field_d);
+          return OpenGlIndexBuffer.b(-1, HardwareBufferSet.accountPacketLength);
         }
-        if (-1 == HardwareBufferSet.field_d) {
+        if (-1 == HardwareBufferSet.accountPacketLength) {
           if (!OpenGlIndexBuffer.b(-1, 1)) {
             return false;
           }
-          HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-          NativeLibraryExtractor.field_a.position = 0;
+          HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+          NativeLibraryExtractor.incomingPacket.position = 0;
         }
-        if (HardwareBufferSet.field_d == -2) {
+        if (HardwareBufferSet.accountPacketLength == -2) {
           if (!OpenGlIndexBuffer.b(-1, 2)) {
             return false;
           }
-          HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedShort(255);
-          NativeLibraryExtractor.field_a.position = 0;
+          HardwareBufferSet.accountPacketLength = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
+          NativeLibraryExtractor.incomingPacket.position = 0;
         }
-        return OpenGlIndexBuffer.b(-1, HardwareBufferSet.field_d);
+        return OpenGlIndexBuffer.b(-1, HardwareBufferSet.accountPacketLength);
     }
 
     final static void muteSoundEffects(byte guard) {

@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class MenuScreen {
-    private MenuSelectionController field_g;
-    private int field_c;
+    private MenuSelectionController selection;
+    private int selectedAchievement;
     static int field_f;
     private int screenId;
-    private int field_d;
+    private int lastHoveredAction;
     private int field_e;
     static IntrusiveDeque field_b;
     static ToolkitSprite[] field_a;
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void drawAchievements(boolean thisGameOnly, int guard, int opacity) {
         int stackIn_7_0 = 0;
         Object stackIn_57_0;
         int stackIn_57_1;
@@ -68,25 +68,25 @@ class MenuScreen {
         int var13Lifetime1Lifetime3;
         var21 = Sumoblitz.field_L ? 1 : 0;
         var22 = MatchingTextValidator.field_h.getToolkit(-106);
-        var5 = 16777215 | param2 << 24;
-        var6 = 16777215 | param2 << 23;
-        var7 = param2 << 24;
+        var5 = 16777215 | opacity << 24;
+        var6 = 16777215 | opacity << 23;
+        var7 = opacity << 24;
         var8 = 53;
         var9 = Js5Client.achievementsText;
-        if (param0) {
+        if (thisGameOnly) {
           var9 = SoftLruCache.achievementsThisGameText;
         }
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
         var12 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, true, false, false, true};
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, param2 << 24, 3, var22, 650, 55, 1, true);
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var22, 650, 55, 1, true);
         var8Lifetime1 = 35;
-        if (param1 >= -56) {
+        if (guard >= -56) {
           return;
         }
-        this.a(var9, param2, 29228);
+        this.drawHeading(var9, opacity, 29228);
         var13 = 117;
-        if (!param0) {
+        if (!thisGameOnly) {
           stackIn_7_0 = LoginIdentifierSupport.field_e;
         } else {
           stackIn_7_0 = OpenGlTransparentWaterEffect.field_e;
@@ -115,7 +115,7 @@ class MenuScreen {
                 var8Lifetime1 = 35;
               }
               if ((var14 & 1 << var17) != 0 ||
-                !param0 ||
+                !thisGameOnly ||
                 var21 != 0) {
                 var18 = var8Lifetime1;
                 var19 = var13;
@@ -126,7 +126,7 @@ class MenuScreen {
                   (var14 & 1 << var17) != 0)) {
                   var15 = var17;
                 }
-                if (~var17 != ~this.field_c) {
+                if (~var17 != ~this.selectedAchievement) {
                 }
                 if (!var12[var17] ||
                   0 != (1 << var17 & var14)) {
@@ -159,7 +159,7 @@ class MenuScreen {
               var19Lifetime2 = var13;
               var20 = null;
               if ((var14 & 1 << var17) == 0) {
-                decompiledFrameRemainder0 = (!(param0) ||
+                decompiledFrameRemainder0 = (!(thisGameOnly) ||
                   var21 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(var12[var17]))) {
@@ -187,7 +187,7 @@ class MenuScreen {
                     stackIn_57_4 = 48;
                     stackIn_57_5 = 0;
                     if (var15 == -1 &&
-                      this.field_c == -1) {
+                      this.selectedAchievement == -1) {
                       stackIn_59_6 = var5;
                     } else {
                       stackIn_59_6 = var6;
@@ -204,22 +204,22 @@ class MenuScreen {
               var17++;
             }
           }
-          stackIn_67_0 = ~this.field_c;
+          stackIn_67_0 = ~this.selectedAchievement;
           stackIn_67_1 = -1;
           break;
         }
         if (stackIn_67_0 <= stackIn_67_1) {
-          var15 = this.field_c;
+          var15 = this.selectedAchievement;
         }
         if (var15 == -1) {
-          MessageDialog.field_db.a(ActiveCanvasProvider.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
-          LegacyOpenGlEffect.field_c.a(ActiveCanvasProvider.mouseOverAnIconText, var5, -1, 348, 320, 0);
+          MessageDialog.field_db.drawCenteredText(ActiveCanvasProvider.mouseOverAnIconText, opacity << 24 | 5023231, -1, 348, 320, 0);
+          LegacyOpenGlEffect.field_c.drawCenteredText(ActiveCanvasProvider.mouseOverAnIconText, var5, -1, 348, 320, 0);
           if (AccountPacketReader.isGuestSession((byte) 9)) {
-            MessageDialog.field_db.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
-            LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
+            MessageDialog.field_db.drawCenteredText(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
+            LegacyOpenGlEffect.field_c.drawCenteredText(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
         } else {
-          DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
+          DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, opacity << 24, 3, var22, 360, 160, 1, true);
           var8Lifetime2 = 390;
           var13Lifetime1 = 310;
           var17_ref_String = Integer.toString(LegacyOpenGlClientVertexBuffer.field_c[var15] * 100);
@@ -227,8 +227,8 @@ class MenuScreen {
             (1 << var15 & var14) == 0) {
             var17_ref_String = MusicVoice.field_s;
           }
-          MessageDialog.field_db.a(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, param2 << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
-          LegacyOpenGlEffect.field_c.a(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
+          MessageDialog.field_db.drawCenteredText(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, opacity << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
+          LegacyOpenGlEffect.field_c.drawCenteredText(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
           var13Lifetime1Lifetime1 = 280;
           var8Lifetime2Lifetime1 = 490;
           stackIn_77_0 = ((1 << var15 & var14) == 0) ? 0 : 1;
@@ -236,13 +236,13 @@ class MenuScreen {
           var8Lifetime2Lifetime2 = 390;
           var13Lifetime1Lifetime2 = 210;
           if (var18Lifetime1 == 0) {
-            MessageDialog.field_db.a(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            LegacyOpenGlEffect.field_c.a(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.drawCenteredText(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, opacity << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            LegacyOpenGlEffect.field_c.drawCenteredText(LegacyOpenGlRidgedWaterEffect.notYetAchievedText, 16720452 | opacity << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           if (var18Lifetime1 != 0 ||
             var21 != 0) {
-            MessageDialog.field_db.a(NoiseSliceGenerator.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            LegacyOpenGlEffect.field_c.a(NoiseSliceGenerator.achievedText, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.drawCenteredText(NoiseSliceGenerator.achievedText, 5023231 | opacity << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            LegacyOpenGlEffect.field_c.drawCenteredText(NoiseSliceGenerator.achievedText, opacity << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           var13Lifetime1Lifetime2 += 10;
           var8Lifetime2Lifetime2 -= 10;
@@ -252,12 +252,12 @@ class MenuScreen {
             (var14 & 1 << var15) == 0) {
             var17_ref_StringLifetime1 = ContentTransitionPhase.thisIsAHiddenText;
           }
-          MessageDialog.field_db.a(480, 5023231 | param2 << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.drawWrappedText(480, 5023231 | opacity << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.drawWrappedText(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           var8Lifetime2Lifetime3 = 390;
           var13Lifetime1Lifetime3 = 190;
-          QueuedIntArrayRequest.field_k.a(ArchiveProvider.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
-          GameTrackPlayback.field_a.a(ArchiveProvider.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          QueuedIntArrayRequest.field_k.drawCenteredText(ArchiveProvider.achievementNames[var15], opacity << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          GameTrackPlayback.field_a.drawCenteredText(ArchiveProvider.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           var20_int = 200;
           if (var18Lifetime1 != 0) {
             DroneEscalationSupport.field_a[var15].draw(160, -30 + var20_int, 0, var5, 1);
@@ -286,7 +286,7 @@ class MenuScreen {
         return;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void drawObjectiveHelp(int opacity, boolean guard) {
         boolean stackIn_12_0 = false;
         int var3;
         int var4;
@@ -299,17 +299,17 @@ class MenuScreen {
         while (true) {
           if (!(var5 < GameInstructions.objectiveHelpLines.length)) {
             var5 = 5;
-            stackIn_12_0 = param1;
+            stackIn_12_0 = guard;
             break;
           }
           stackIn_12_0 = GameInstructions.objectiveHelpLines[var5].startsWith("<b>");
           if (var6 == 0) {
             if (stackIn_12_0) {
-              QueuedIntArrayRequest.field_k.a(var4, var3, 5023231 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -11, 0);
-              GameTrackPlayback.field_a.a(var4, var3, 16777215 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -37, 0);
+              QueuedIntArrayRequest.field_k.drawText(var4, var3, 5023231 | opacity << 24, GameInstructions.objectiveHelpLines[var5], (byte) -11, 0);
+              GameTrackPlayback.field_a.drawText(var4, var3, 16777215 | opacity << 24, GameInstructions.objectiveHelpLines[var5], (byte) -37, 0);
             } else {
-              MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
-              LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
+              MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
+              LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
             }
             if (var5 >= 1) {
               var4 += 50;
@@ -320,11 +320,11 @@ class MenuScreen {
           break;
         }
         if (!stackIn_12_0) {
-          this.a(28, false);
+          this.drawObjectiveHelp(28, false);
         }
         while (GameInstructions.controlsHelpLines.length > var5) {
-          MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
-          LegacyOpenGlEffect.field_c.a(100, param0 << 24 | 16777215, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
+          MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
+          LegacyOpenGlEffect.field_c.drawWrappedText(100, opacity << 24 | 16777215, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
           if (var6 == 0) {
             if (var5 >= 1) {
               var4 += 50;
@@ -337,7 +337,7 @@ class MenuScreen {
         return;
     }
 
-    private final void a(boolean param0, int param1, int param2, GraphicsToolkit param3, int param4) {
+    private final void drawOption(boolean highlighted, int optionIndex, int guard, GraphicsToolkit toolkit, int opacity) {
         int discarded$0 = 0;
         boolean discarded$1 = false;
         String stackIn_30_0 = null;
@@ -374,44 +374,44 @@ class MenuScreen {
         String var18_ref_StringLifetime2;
         var21 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6_int = this.g(param1, 108);
-          var7 = this.b(param1, 50);
-          discarded$0 = this.f(-116, param1);
-          var8 = IntroLogoRenderer.field_a[this.screenId][param1];
-          var9 = GameClientShell.field_u[var8].toUpperCase();
+          var6_int = this.optionTop(optionIndex, 108);
+          var7 = this.optionLeft(optionIndex, 50);
+          discarded$0 = this.optionRight(-116, optionIndex);
+          var8 = IntroLogoRenderer.field_a[this.screenId][optionIndex];
+          var9 = GameClientShell.menuActionLabels[var8].toUpperCase();
           if (var9 == null) {
             var9 = "ERROR: missing text";
           }
           if (29 == var8 &&
             ToolkitRasterStateFrame.field_e == -1) {
-            param0 = false;
+            highlighted = false;
           }
-          var10 = this.f(101, param1) - var7;
-          var11 = this.c(8, param1);
-          if (param0) {
+          var10 = this.optionRight(101, optionIndex) - var7;
+          var11 = this.optionHeight(8, optionIndex);
+          if (highlighted) {
             if (ActiveCanvasProvider.field_c != 1 &&
               !AudioOutputBootstrap.field_b[84]) {
-              DelegatingCanvas.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
+              DelegatingCanvas.a(IntrusiveDeque.field_c, var11 << 1, var7, opacity << 24, 1, toolkit, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
-                DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
-                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
+                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
               }
             } else {
-              DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
+              DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
               if (var21 != 0) {
-                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
               }
             }
           } else {
-            DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+            DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
           }
-          var12 = 16777215 | param4 << 24;
+          var12 = 16777215 | opacity << 24;
           var13 = null;
           var14 = null;
           var15 = null;
           var16 = 0;
           if (this.screenId == 0 &&
-            param1 < 2) {
+            optionIndex < 2) {
             var14_ref = ForceFieldRingEffect.field_t;
             var15_ref = LoginTextResources.field_b;
             var13_ref = AccountStatusDialogState.headingFont;
@@ -421,8 +421,8 @@ class MenuScreen {
             var15_ref = AccountConnectionPhase.field_a;
             var16 = 11;
           }
-          if (param2 >= -85) {
-            discarded$1 = this.e(-39, -98);
+          if (guard >= -85) {
+            discarded$1 = this.isOptionEnabled(-39, -98);
           }
           var17 = -16;
           if (var8 != 12 &&
@@ -438,8 +438,8 @@ class MenuScreen {
                   var22 = stackIn_30_0;
                   var18_ref_String = var22;
                   var18_ref_String = var22.toUpperCase();
-                  var14_ref.a(var18_ref_String, 5023231 | param4 << 24, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + ((var10 >> 1) + var7), 0);
-                  var13_ref.a(var18_ref_String, var12, -1, var16 + var17 + (var6_int + var15_ref.field_i), (var10 >> 1) + var7 - 4, 0);
+                  var14_ref.drawCenteredText(var18_ref_String, 5023231 | opacity << 24, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + ((var10 >> 1) + var7), 0);
+                  var13_ref.drawCenteredText(var18_ref_String, var12, -1, var16 + var17 + (var6_int + var15_ref.field_i), (var10 >> 1) + var7 - 4, 0);
                   if (var21 == 0) {
                     return;
                   }
@@ -448,31 +448,31 @@ class MenuScreen {
                   18 == var8) {
                   var9 = var9.toLowerCase();
                 }
-                var14_ref.a(var9, param4 << 24 | 5023231, -1, var15_ref.field_i + var6_int + (var17 + var16), -4 + (var7 + (var10 >> 1)), 0);
-                var13_ref.a(var9, var12, -1, var16 + var6_int - (-var15_ref.field_i - var17), (var10 >> 1) + (var7 - 4), 0);
+                var14_ref.drawCenteredText(var9, opacity << 24 | 5023231, -1, var15_ref.field_i + var6_int + (var17 + var16), -4 + (var7 + (var10 >> 1)), 0);
+                var13_ref.drawCenteredText(var9, var12, -1, var16 + var6_int - (-var15_ref.field_i - var17), (var10 >> 1) + (var7 - 4), 0);
                 if (29 != var8) {
                   return;
                 }
                 if (ToolkitRasterStateFrame.field_e != -1) {
                   return;
                 }
-                DelegatingCanvas.a(ResizingDialog.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
+                DelegatingCanvas.a(ResizingDialog.field_H, var11 + 8, 9 + var7, opacity, 1, toolkit, var10 - 18, 22 + var6_int - var11, 1, true);
                 if (var21 == 0) {
                   return;
                 }
               }
               var23 = FallbackShaderEffect.field_g + BufferedSocket.field_i[DisplaySizeController.field_f];
               var18_ref_StringLifetime2 = var23.toUpperCase();
-              var14_ref.a(var18_ref_StringLifetime2, 5023231 | param4 << 24, -1, var6_int - (-var15_ref.field_i - var17) + var16, (var10 >> 1) + (var7 - 4), 0);
-              var13_ref.a(var18_ref_StringLifetime2, var12, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + (var10 >> 1) + var7, 0);
+              var14_ref.drawCenteredText(var18_ref_StringLifetime2, 5023231 | opacity << 24, -1, var6_int - (-var15_ref.field_i - var17) + var16, (var10 >> 1) + (var7 - 4), 0);
+              var13_ref.drawCenteredText(var18_ref_StringLifetime2, var12, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + (var10 >> 1) + var7, 0);
               if (var21 == 0) {
                 return;
               }
             }
             var24 = AccountUiBootstrap.difficultyText + IntNode.difficultyNames[TextureCombineSource.field_a];
             var18_ref_StringLifetime1 = var24.toUpperCase();
-            var14_ref.a(var18_ref_StringLifetime1, param4 << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
-            var13_ref.a(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
+            var14_ref.drawCenteredText(var18_ref_StringLifetime1, opacity << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
+            var13_ref.drawCenteredText(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
             if (var21 == 0) {
               return;
             }
@@ -480,8 +480,8 @@ class MenuScreen {
           var7 -= 8;
           var18 = 9 + SocketJs5Client.field_q + 128;
           var19 = -(SocketJs5Client.field_q >> 2) + ((var10 - var18 >> 1) + var7);
-          var14_ref.a(-1, -24 + (var10 >> 1) + var7, var9.toUpperCase(), var16 + (var17 + var15_ref.field_i + var6_int), param4 << 24 | 5023231, 115);
-          var13_ref.a(-1, -24 + var7 + (var10 >> 1), var9.toUpperCase(), var6_int + var15_ref.field_i - (-var17 - var16), var12, 127);
+          var14_ref.drawRightAlignedText(-1, -24 + (var10 >> 1) + var7, var9.toUpperCase(), var16 + (var17 + var15_ref.field_i + var6_int), opacity << 24 | 5023231, 115);
+          var13_ref.drawRightAlignedText(-1, -24 + var7 + (var10 >> 1), var9.toUpperCase(), var6_int + var15_ref.field_i - (-var17 - var16), var12, 127);
           var19 = var19 + (16 + SocketJs5Client.field_q);
           Base37NameAlphabet.field_a[1].drawRotated((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
           Base37NameAlphabet.field_a[2].drawRotated((float)(Base37NameAlphabet.field_a[1].paddedWidth() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
@@ -500,27 +500,27 @@ class MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_48_0 = var6;
-          stackIn_48_1 = new StringBuilder().append("ak.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_48_1 = new StringBuilder().append("ak.F(").append(highlighted).append(',').append(optionIndex).append(',').append(guard).append(',');
+          if (toolkit == null) {
             stackIn_49_2 = "null";
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(opacity).append(')').toString());
         }
     }
 
-    private final int g(int param0, int param1) {
+    private final int optionTop(int optionIndex, int guard) {
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
-          if (param0 >= 5) {
+          if (optionIndex >= 5) {
             return -6 + (DualLinkNode.field_k[this.screenId] + MidiNoteMixer.field_s[this.screenId]);
           }
           return -6 + DualLinkNode.field_k[this.screenId];
         }
         if (this.screenId == 2 &&
           AccountPacketReader.isGuestSession((byte) 9)) {
-          return DualLinkNode.field_k[this.screenId] - (-(param0 * MidiNoteMixer.field_s[this.screenId]) + 6);
+          return DualLinkNode.field_k[this.screenId] - (-(optionIndex * MidiNoteMixer.field_s[this.screenId]) + 6);
         }
         if (this.screenId != 3 &&
           this.screenId != 4 &&
@@ -533,98 +533,98 @@ class MenuScreen {
               if (IntroLogoRenderer.field_a[this.screenId].length > 1) {
                 return 382;
               }
-              return 430 + param0 * MidiNoteMixer.field_s[this.screenId] - 4;
+              return 430 + optionIndex * MidiNoteMixer.field_s[this.screenId] - 4;
             }
             if (this.screenId != 0) {
-              if (param1 <= 79) {
+              if (guard <= 79) {
                 this.screenId = 83;
               }
-              return MidiNoteMixer.field_s[this.screenId] * param0 + DualLinkNode.field_k[this.screenId];
+              return MidiNoteMixer.field_s[this.screenId] * optionIndex + DualLinkNode.field_k[this.screenId];
             }
-            if (param0 < 2) {
-              return param0 * (int)((double)MidiNoteMixer.field_s[this.screenId] * 2.0) + DualLinkNode.field_k[this.screenId] + 28;
+            if (optionIndex < 2) {
+              return optionIndex * (int)((double)MidiNoteMixer.field_s[this.screenId] * 2.0) + DualLinkNode.field_k[this.screenId] + 28;
             }
-            if (param0 > 1 &&
-              param0 < 4) {
+            if (optionIndex > 1 &&
+              optionIndex < 4) {
               return MidiNoteMixer.field_s[this.screenId] * 2 + DualLinkNode.field_k[this.screenId] + 100;
             }
-            if (param0 == 6) {
-              return (-1 + param0) * MidiNoteMixer.field_s[this.screenId] + DualLinkNode.field_k[this.screenId] + 100;
+            if (optionIndex == 6) {
+              return (-1 + optionIndex) * MidiNoteMixer.field_s[this.screenId] + DualLinkNode.field_k[this.screenId] + 100;
             }
-            if (4 <= param0) {
-              return DualLinkNode.field_k[this.screenId] + 100 + MidiNoteMixer.field_s[this.screenId] * (-1 + param0);
+            if (4 <= optionIndex) {
+              return DualLinkNode.field_k[this.screenId] + 100 + MidiNoteMixer.field_s[this.screenId] * (-1 + optionIndex);
             }
-            return MidiNoteMixer.field_s[this.screenId] * param0 + DualLinkNode.field_k[this.screenId] + 128;
+            return MidiNoteMixer.field_s[this.screenId] * optionIndex + DualLinkNode.field_k[this.screenId] + 128;
           }
           return DualLinkNode.field_k[this.screenId];
         }
         return DualLinkNode.field_k[this.screenId] - 32;
     }
 
-    private final void a(byte param0) {
+    private final void handleKeyboardNavigation(byte guard) {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 < 122) {
+        if (guard < 122) {
           return;
         }
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
           if (TextureCombineOperation.field_a == 96) {
-            if (0 < this.field_g.selectedIndex) {
-              if (3 != this.field_g.selectedIndex) {
-                this.field_g.setKeyboardSelection(-31865, this.field_g.selectedIndex - 1);
+            if (0 < this.selection.selectedIndex) {
+              if (3 != this.selection.selectedIndex) {
+                this.selection.setKeyboardSelection(-31865, this.selection.selectedIndex - 1);
                 if (var3 != 0) {
-                  this.field_g.setKeyboardSelection(-31865, 2);
+                  this.selection.setKeyboardSelection(-31865, 2);
                 }
               }
             } else {
-              this.field_g.setKeyboardSelection(-31865, 2);
+              this.selection.setKeyboardSelection(-31865, 2);
             }
           }
           if (TextureCombineOperation.field_a == 97) {
-            if (this.field_g.selectedIndex >= 2) {
-              if (this.field_g.selectedIndex == 2) {
-                this.field_g.setKeyboardSelection(-31865, 0);
+            if (this.selection.selectedIndex >= 2) {
+              if (this.selection.selectedIndex == 2) {
+                this.selection.setKeyboardSelection(-31865, 0);
                 if (var3 != 0) {
-                  this.field_g.setKeyboardSelection(-31865, 1 + this.field_g.selectedIndex);
+                  this.selection.setKeyboardSelection(-31865, 1 + this.selection.selectedIndex);
                 }
               }
             } else {
-              this.field_g.setKeyboardSelection(-31865, 1 + this.field_g.selectedIndex);
+              this.selection.setKeyboardSelection(-31865, 1 + this.selection.selectedIndex);
             }
           }
           if (TextureCombineOperation.field_a == 99) {
-            if (!(this.field_g.selectedIndex >= 0) ||
-              !(this.field_g.selectedIndex <= 2)) {
-              this.field_g.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
+            if (!(this.selection.selectedIndex >= 0) ||
+              !(this.selection.selectedIndex <= 2)) {
+              this.selection.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
               if (var3 != 0) {
-                this.field_g.setKeyboardSelection(-31865, 3);
+                this.selection.setKeyboardSelection(-31865, 3);
               }
             } else {
-              this.field_g.setKeyboardSelection(-31865, 3);
+              this.selection.setKeyboardSelection(-31865, 3);
             }
           }
           if (TextureCombineOperation.field_a == 98) {
-            if (this.field_g.selectedIndex == 3) {
-              this.field_g.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
+            if (this.selection.selectedIndex == 3) {
+              this.selection.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
               if (var3 != 0) {
-                this.field_g.setKeyboardSelection(-31865, 3);
+                this.selection.setKeyboardSelection(-31865, 3);
               }
             } else {
-              this.field_g.setKeyboardSelection(-31865, 3);
+              this.selection.setKeyboardSelection(-31865, 3);
             }
           }
-          this.field_g.captureKey(-22);
+          this.selection.captureKey(-22);
           return;
         }
         if (this.screenId == 3) {
-          this.field_g.handleHorizontalNavigation(-20);
+          this.selection.handleHorizontalNavigation(-20);
           if (TextureCombineOperation.field_a != 96 &&
             97 != TextureCombineOperation.field_a) {
             return;
           }
-          while (!this.e(this.field_g.selectedIndex, 7746)) {
-            this.field_g.handleHorizontalNavigation(-125);
+          while (!this.isOptionEnabled(this.selection.selectedIndex, 7746)) {
+            this.selection.handleHorizontalNavigation(-125);
             if (var3 == 0) {
               continue;
             }
@@ -632,11 +632,11 @@ class MenuScreen {
           }
           return;
         }
-        this.field_g.handleVerticalNavigation((byte) 95);
+        this.selection.handleVerticalNavigation((byte) 95);
         if (TextureCombineOperation.field_a == 98 ||
           TextureCombineOperation.field_a == 99) {
-          while (!this.e(this.field_g.selectedIndex, 7746)) {
-            this.field_g.handleVerticalNavigation((byte) 38);
+          while (!this.isOptionEnabled(this.selection.selectedIndex, 7746)) {
+            this.selection.handleVerticalNavigation((byte) 38);
             if (var3 != 0) {
               break;
             }
@@ -645,20 +645,20 @@ class MenuScreen {
 
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int hitTestOption(int pointerX, byte guard, int pointerY) {
         int var4;
         int var5;
         int var6;
         int var7;
         int stackIn_19_0 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 <= 28) {
+        if (guard <= 28) {
           this.resetSelection(-8, true);
         }
         var4 = 0;
         while (IntroLogoRenderer.field_a[this.screenId].length > var4) {
-          var5 = this.g(var4, 111);
-          var6 = this.c(8, var4);
+          var5 = this.optionTop(var4, 111);
+          var6 = this.optionHeight(8, var4);
           stackIn_19_0 = 0;
           if (var7 != 0) {
             return stackIn_19_0;
@@ -669,11 +669,11 @@ class MenuScreen {
             var5 -= 28;
             var6 += 28;
           }
-          if (this.e(var4, 7746) &&
-            param0 >= this.b(var4, 65) &&
-            this.f(-115, var4) > param0 &&
-            var5 <= param2 &&
-            (var5 + var6) > param2) {
+          if (this.isOptionEnabled(var4, 7746) &&
+            pointerX >= this.optionLeft(var4, 65) &&
+            this.optionRight(-115, var4) > pointerX &&
+            var5 <= pointerY &&
+            (var5 + var6) > pointerY) {
             return var4;
           }
           var4++;
@@ -687,53 +687,53 @@ class MenuScreen {
         }
         int var3 = 0;
         if (this.screenId == 0 &&
-          this.field_g.selectedIndex != -1) {
-          var3 = this.field_g.selectedIndex;
+          this.selection.selectedIndex != -1) {
+          var3 = this.selection.selectedIndex;
         }
-        if (this.screenId == 1 && this.field_g.selectedIndex != -1 &&
+        if (this.screenId == 1 && this.selection.selectedIndex != -1 &&
           RendererPreference.field_b != -1) {
-          var3 = this.field_g.selectedIndex;
+          var3 = this.selection.selectedIndex;
         }
         if (this.screenId == 3) {
           var3 = 2;
         }
-        this.field_g.resetSelection(param1, -123, this.a(PointLight.mouseX, (byte) 41, ArenaDefinitionCodec.field_e), var3);
-        this.field_c = -1;
+        this.selection.resetSelection(param1, -123, this.hitTestOption(PointLight.mouseX, (byte) 41, ArenaDefinitionCodec.field_e), var3);
+        this.selectedAchievement = -1;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void drawDronesHelpPartOne(boolean guard, int opacity) {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
-        GameTrackPlayback.field_a.a(var5, var3, 16777215 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -8, 0);
+        QueuedIntArrayRequest.field_k.drawText(var5, var3, 5023231 | opacity << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
+        GameTrackPlayback.field_a.drawText(var5, var3, 16777215 | opacity << 24, GameInstructions.dronesHelpLines[0], (byte) -8, 0);
         var5 += 30;
         ContentDialog.field_ab[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         ContentDialog.field_ab[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        MessageDialog.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[1], (byte) -120, 0);
-        LegacyOpenGlEffect.field_c.a(var5, 60 + var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[1], (byte) -56, 0);
-        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.drawText(var5, 60 + var3, opacity << 24 | 5023231, GameInstructions.dronesHelpLines[1], (byte) -120, 0);
+        LegacyOpenGlEffect.field_c.drawText(var5, 60 + var3, 5023231 | opacity << 24, GameInstructions.dronesHelpLines[1], (byte) -56, 0);
+        MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         var5 += 70;
         TextHotspot.field_n[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         TextHotspot.field_n[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        MessageDialog.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
-        LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -117, 0);
-        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
-        LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.drawText(var5, var3 + 60, opacity << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
+        LegacyOpenGlEffect.field_c.drawText(var5, 60 + var3, opacity << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -117, 0);
+        MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, opacity << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         var5 += 70;
         ProjectionMode.field_d[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         ProjectionMode.field_d[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        if (!param0) {
+        if (!guard) {
           this.resetSelection(-98, false);
         }
-        MessageDialog.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[5], (byte) -92, 0);
-        LegacyOpenGlEffect.field_c.a(var5, var3 + 60, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[5], (byte) -59, 0);
-        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.drawText(var5, 60 + var3, opacity << 24 | 5023231, GameInstructions.dronesHelpLines[5], (byte) -92, 0);
+        LegacyOpenGlEffect.field_c.drawText(var5, var3 + 60, 5023231 | opacity << 24, GameInstructions.dronesHelpLines[5], (byte) -59, 0);
+        MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
     }
 
-    private final void a(boolean param0, byte param1, int param2) {
+    private final void handleOptionAction(boolean animateTransition, byte guard, int optionIndex) {
         int stackIn_247_0 = 0;
         int stackIn_248_1 = 0;
         int var4;
@@ -743,30 +743,30 @@ class MenuScreen {
         int var8;
         int var9;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var4 = IntroLogoRenderer.field_a[this.screenId][param2];
-        if (this.field_g.isActivated(-31260)) {
+        var4 = IntroLogoRenderer.field_a[this.screenId][optionIndex];
+        if (this.selection.isActivated(-31260)) {
           if (var4 != 5) {
             ArchiveLoadRequirement.playSoundEffect(16, true);
             if (var9 != 0) {
               ArchiveLoadRequirement.playSoundEffect(15, true);
-              if (var4 != this.field_d &&
+              if (var4 != this.lastHoveredAction &&
                 IntroLogoRenderer.field_a[this.screenId].length != 1) {
-                this.field_d = var4;
+                this.lastHoveredAction = var4;
                 ArchiveLoadRequirement.playSoundEffect(17, true);
               }
             }
           } else {
             ArchiveLoadRequirement.playSoundEffect(15, true);
-            if ((var9 != 0) && (var4 != this.field_d &&
+            if ((var9 != 0) && (var4 != this.lastHoveredAction &&
               IntroLogoRenderer.field_a[this.screenId].length != 1)) {
-              this.field_d = var4;
+              this.lastHoveredAction = var4;
               ArchiveLoadRequirement.playSoundEffect(17, true);
             }
           }
         } else {
-          if (var4 != this.field_d &&
+          if (var4 != this.lastHoveredAction &&
             IntroLogoRenderer.field_a[this.screenId].length != 1) {
-            this.field_d = var4;
+            this.lastHoveredAction = var4;
             ArchiveLoadRequirement.playSoundEffect(17, true);
           }
         }
@@ -775,8 +775,8 @@ class MenuScreen {
             var6 = var4;
             if (0 == var6 &&
               var9 == 0) {
-              if (!(!this.field_g.isActivated(-31260))) {
-                StrongCacheReference.switchMenuScreen(-7753, param0, 7);
+              if (!(!this.selection.isActivated(-31260))) {
+                StrongCacheReference.switchMenuScreen(-7753, animateTransition, 7);
                 AffineTransform3D.field_j = this.screenId;
               }
               break regionExit2;
@@ -799,7 +799,7 @@ class MenuScreen {
                   || var6 == 29
                   ) ? var6 : -1) {
                   case 25:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     TextureCombineSource.field_a = TextureCombineSource.field_a + 1;
@@ -811,7 +811,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 27:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     DisplaySizeController.field_f = DisplaySizeController.field_f + 1;
@@ -823,41 +823,41 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 19:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, -1);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 23:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     LruNodeCache.gameplaySession.startArcadeGame((byte) -120);
-                    StrongCacheReference.switchMenuScreen(-7753, param0, -1);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 1:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, -1);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                     LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
                     AffineTransform3D.field_j = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 28:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     {
-                      DroneIntroductionOverlay.a(param0, true, false);
-                      StrongCacheReference.switchMenuScreen(-7753, param0, -1);
+                      DroneIntroductionOverlay.a(animateTransition, true, false);
+                      StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                       if (MessageDialog.arcadeMode) {
                         LruNodeCache.gameplaySession.startArcadeGame((byte) -120);
                         if (var9 != 0) {
@@ -876,11 +876,11 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 31:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     LoginDialogState.restoreBaselineUpgrades(-125);
-                    StrongCacheReference.switchMenuScreen(-7753, param0, -1);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                     LegacyTurbulentWaterNoise.advanceToNextLevel(10);
                     ByteArrayCacheNode.initializeGameplaySession((byte) 104);
                     LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
@@ -889,15 +889,15 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 32:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     {
                       LruNodeCache.gameplaySession.resetSession(70);
-                      DroneIntroductionOverlay.a(param0, true, false);
+                      DroneIntroductionOverlay.a(animateTransition, true, false);
                       if (AccountPacketReader.isGuestSession((byte) 9)) {
                         if (0 < IntrusiveNodeHashTable.field_c) {
-                          StrongCacheReference.switchMenuScreen(-7753, param0, 6);
+                          StrongCacheReference.switchMenuScreen(-7753, animateTransition, 6);
                           if (var9 != 0) {
                             StrongCacheReference.switchMenuScreen(-7753, true, 7);
                           }
@@ -919,11 +919,11 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 33:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     regionExit3: {
-                      DroneIntroductionOverlay.a(param0, true, false);
+                      DroneIntroductionOverlay.a(animateTransition, true, false);
                       if (!AccountPacketReader.isGuestSession((byte) 9)) {
                         if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
@@ -937,7 +937,7 @@ class MenuScreen {
                         }
                       }
                       if (IntrusiveNodeHashTable.field_c > 0) {
-                        StrongCacheReference.switchMenuScreen(-7753, param0, 6);
+                        StrongCacheReference.switchMenuScreen(-7753, animateTransition, 6);
                         if (var9 != 0) {
                           if (!MessageDialog.arcadeMode) {
                             StrongCacheReference.switchMenuScreen(-7753, true, 7);
@@ -966,7 +966,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 26:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     GameProgressUpdate.field_o.show(5295);
@@ -974,46 +974,46 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 29:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (ToolkitRasterStateFrame.field_e <= -1) {
                       break regionExit2;
                     }
                     HardwareTextureSprite.snapshotUpgradeAllocation((byte) -33);
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 9);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 9);
                     AffineTransform3D.field_j = 7;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 30:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     UiWidget.d((byte) -32);
                     TextureGeneratorNode.restoreUpgradeAllocation(30692);
-                    StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, AffineTransform3D.field_j);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 5:
                     var5 = 0;
                     if (~ArenaDefinition.field_a != ~var5) {
-                      StatusMessagePanel.a((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
+                      StatusMessagePanel.queueGameMusicTrack((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
                     }
                     ArenaDefinition.field_a = var5;
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 0);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 0);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 16:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 0);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 0);
                     WhirlpoolTables.a(17534);
                     OpenGlTransparentWaterEffect.field_e = 0;
                     LoginIdentifierSupport.field_e = 0;
@@ -1022,75 +1022,75 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 14:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 4);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 4);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 3:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StatefulWidgetRenderer.field_n = 0;
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 3);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 3);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 6:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, AffineTransform3D.field_j);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 24:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 8);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 8);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 2:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 2);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 2);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 12:
-                    if (this.field_g.isHomePressed(-103)) {
+                    if (this.selection.isHomePressed(-103)) {
                       FourIntUpdateRequest.muteSoundEffects((byte) 53);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
-                    if (this.field_g.isEndPressed(103)) {
+                    if (this.selection.isEndPressed(103)) {
                       QuickChatPhraseProvider.b(80);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
-                    if (this.field_g.isLeftPressed(2542)) {
+                    if (this.selection.isLeftPressed(2542)) {
                       HardwareSpecularEffect.e(-124);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
-                    if (this.field_g.isRightPressed(116224)) {
+                    if (this.selection.isRightPressed(116224)) {
                       AccountCreationForm.h(0);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
-                    if (!this.field_g.isPointerHeld((byte) 52)) {
+                    if (!this.selection.isPointerHeld((byte) 52)) {
                       break regionExit2;
                     }
                     {
                       var6 = 9 + (SocketJs5Client.field_q + 128);
-                      var7 = (this.b(param2, 49) + (this.f(-113, param2) - var6) >> 1) + (SocketJs5Client.field_q + 8 - (SocketJs5Client.field_q >> 2));
+                      var7 = (this.optionLeft(optionIndex, 49) + (this.optionRight(-113, optionIndex) - var6) >> 1) + (SocketJs5Client.field_q + 8 - (SocketJs5Client.field_q >> 2));
                       var8 = -var7 + PointLight.mouseX << 1;
                       if (0 < var8) {
                         if (var8 < 256) {
-                          OpenGlVertexLayout.a(16440, var8);
+                          OpenGlVertexLayout.setSoundVolume(16440, var8);
                           if (var9 != 0) {
                             QuickChatPhraseProvider.b(100);
                             FourIntUpdateRequest.muteSoundEffects((byte) 53);
@@ -1109,24 +1109,24 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 13:
-                    if (this.field_g.isHomePressed(-103)) {
+                    if (this.selection.isHomePressed(-103)) {
                       AccountNameSupport.muteMusic(24238);
                     }
-                    if (this.field_g.isEndPressed(103)) {
+                    if (this.selection.isEndPressed(103)) {
                       NativeLibraryExtractor.restoreMusicVolume(22075);
                     }
-                    if (this.field_g.isLeftPressed(2542)) {
+                    if (this.selection.isLeftPressed(2542)) {
                       FullscreenMembershipDialog.l(34168);
                     }
-                    if (this.field_g.isRightPressed(116224)) {
+                    if (this.selection.isRightPressed(116224)) {
                       ArchiveCatalog.a((byte) -6);
                     }
-                    if (!this.field_g.isPointerHeld((byte) 52)) {
+                    if (!this.selection.isPointerHeld((byte) 52)) {
                       break regionExit2;
                     }
                     {
                       var6 = 9 + (SocketJs5Client.field_q + 128);
-                      var7 = 8 + ((-var6 + (this.b(param2, 35) + this.f(90, param2)) >> 1) + (SocketJs5Client.field_q - (SocketJs5Client.field_q >> 2)));
+                      var7 = 8 + ((-var6 + (this.optionLeft(optionIndex, 35) + this.optionRight(90, optionIndex)) >> 1) + (SocketJs5Client.field_q - (SocketJs5Client.field_q >> 2)));
                       var8 = -var7 + PointLight.mouseX << 1;
                       if (var8 <= 0) {
                         LegacyOpenGlRenderBufferSet.setMusicVolume(0, 0);
@@ -1153,7 +1153,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 4:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (null != CompactMeshGeometry.field_o) {
@@ -1162,27 +1162,27 @@ class MenuScreen {
                         break regionExit2;
                       }
                     }
-                    RotarySelectorWidget.a((byte) 126, param0);
+                    RotarySelectorWidget.a((byte) 126, animateTransition);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 7:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    DroneIntroductionOverlay.a(param0, true, false);
+                    DroneIntroductionOverlay.a(animateTransition, true, false);
                     if (OpenGlTransparentWaterEffect.field_e == 0) {
-                      StrongCacheReference.switchMenuScreen(-7753, param0, 2);
+                      StrongCacheReference.switchMenuScreen(-7753, animateTransition, 2);
                       if (var9 == 0) {
                         break regionExit2;
                       }
                     }
-                    StrongCacheReference.switchMenuScreen(-7753, param0, 5);
+                    StrongCacheReference.switchMenuScreen(-7753, animateTransition, 5);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 8:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     HardwareBufferSet.field_j = 0;
@@ -1190,7 +1190,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 9:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     HardwareBufferSet.field_j = 1;
@@ -1198,7 +1198,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 10:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     HardwareBufferSet.field_j = 2;
@@ -1206,7 +1206,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 15:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (this.screenId != 4 &&
@@ -1230,10 +1230,10 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 18:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    if (!this.e(param2, 7746)) {
+                    if (!this.isOptionEnabled(optionIndex, 7746)) {
                       break regionExit2;
                     }
                     if (this.screenId == 3) {
@@ -1242,18 +1242,18 @@ class MenuScreen {
                     if (4 != this.screenId &&
                       this.screenId != 5) {
                     }
-                    if (this.e(param2, 7746)) {
+                    if (this.isOptionEnabled(optionIndex, 7746)) {
                       break regionExit2;
                     }
-                    this.field_g.selectedIndex = 2;
+                    this.selection.selectedIndex = 2;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 17:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    if (!this.e(param2, 7746)) {
+                    if (!this.isOptionEnabled(optionIndex, 7746)) {
                       break regionExit2;
                     }
                     if (this.screenId == 3) {
@@ -1262,15 +1262,15 @@ class MenuScreen {
                     if (this.screenId != 4 &&
                       this.screenId != 5) {
                     }
-                    if (this.e(param2, 7746)) {
+                    if (this.isOptionEnabled(optionIndex, 7746)) {
                       break regionExit2;
                     }
-                    this.field_g.selectedIndex = 0;
+                    this.selection.selectedIndex = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 11:
-                    if (!this.field_g.isActivated(-31260)) {
+                    if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (CompactMeshGeometry.field_o != null) {
@@ -1281,8 +1281,8 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 20:
-                    if (!this.field_g.isActivated(-31260)) {
-                      var5 = 24 / ((-15 - param1) / 43);
+                    if (!this.selection.isActivated(-31260)) {
+                      var5 = 24 / ((-15 - guard) / 43);
                       break regionExit1;
                     }
                     LegacyOpenGlShader.field_a = 1;
@@ -1295,41 +1295,41 @@ class MenuScreen {
                   default:
                     break regionExit2;
                 }
-                if (!(!this.field_g.isActivated(-31260))) {
+                if (!(!this.selection.isActivated(-31260))) {
                   HardwareTextureCache.field_f = null;
                   LegacyOpenGlShader.field_a = 0;
                 }
                 break regionExit2;
               }
             }
-            if (!this.field_g.isActivated(-31260)) {
+            if (!this.selection.isActivated(-31260)) {
             }
           }
-          var5 = 24 / ((-15 - param1) / 43);
+          var5 = 24 / ((-15 - guard) / 43);
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void drawDronesHelpPartTwo(int opacity, int guard) {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -21, 0);
-        GameTrackPlayback.field_a.a(var5, var3, param0 << 24 | 16777215, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -15, 0);
+        QueuedIntArrayRequest.field_k.drawText(var5, var3, 5023231 | opacity << 24, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -21, 0);
+        GameTrackPlayback.field_a.drawText(var5, var3, opacity << 24 | 16777215, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -15, 0);
         var5 += 30;
         field_a[0].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         field_a[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        MessageDialog.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -76, 0);
-        LegacyOpenGlEffect.field_c.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -28, 0);
-        MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.drawText(var5, var3 + 60, 5023231 | opacity << 24, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -76, 0);
+        LegacyOpenGlEffect.field_c.drawText(var5, var3 + 60, opacity << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -28, 0);
+        MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         var5 += 70;
         HardwareTextureCache.field_e[0].drawRotated((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         HardwareTextureCache.field_e[1].drawRotated((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        MessageDialog.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
-        LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -117, 0);
-        MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
-        if (param1 >= -25) {
+        MessageDialog.field_db.drawText(var5, var3 + 60, opacity << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
+        LegacyOpenGlEffect.field_c.drawText(var5, 60 + var3, opacity << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -117, 0);
+        MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
+        if (guard >= -25) {
           this.update(-117);
         }
     }
@@ -1383,7 +1383,7 @@ class MenuScreen {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (guard != -2355) {
-            this.a((byte) 91);
+            this.handleKeyboardNavigation((byte) 91);
           }
           stackIn_6_0 = (DisplaySizeController.field_f == 0) ? 3 : 1;
           var4_int = stackIn_6_0;
@@ -1405,17 +1405,17 @@ class MenuScreen {
           boolean decompiledFrameRemainder0 = true;
           if (this.screenId != 2) {
             if (3 == this.screenId) {
-              this.b((byte) 120, opacity);
+              this.drawInstructionPage((byte) 120, opacity);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (this.screenId == 4) {
-                this.a(false, guard ^ 2407, opacity);
+                this.drawAchievements(false, guard ^ 2407, opacity);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.screenId == 5) {
-                  this.a(true, -70, opacity);
+                  this.drawAchievements(true, -70, opacity);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
@@ -1424,65 +1424,65 @@ class MenuScreen {
                   DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
-                  QueuedIntArrayRequest.field_k.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
+                  QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
                   stackIn_32_0 = QueuedIntArrayRequest.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != IntrusiveNodeHashTable.field_c);
                   stackIn_36_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_32_0).a(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_32_0).drawCenteredText(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
                   stackIn_38_0 = QueuedIntArrayRequest.field_k;
                   stackIn_38_1 = 26;
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_38_0).a(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
+                  ((ToolkitFont) (Object) stackIn_38_0).drawCenteredText(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
                   stackIn_44_0 = QueuedIntArrayRequest.field_k;
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_47_3 = false;
                   stackIn_48_4 = (0 != OpenGlTransparentWaterEffect.field_e);
-                  ((ToolkitFont) (Object) stackIn_44_0).a(SlowBurstParticle.discardContinuationText(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
-                  GameTrackPlayback.field_a.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_44_0).drawCenteredText(SlowBurstParticle.discardContinuationText(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  GameTrackPlayback.field_a.drawCenteredText(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = GameTrackPlayback.field_a;
                   stackIn_50_1 = false;
                   stackIn_51_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_54_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_50_0).a(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), opacity << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_50_0).drawCenteredText(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), opacity << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
                   stackIn_56_0 = GameTrackPlayback.field_a;
                   stackIn_56_1 = 26;
                   stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_59_3 = false;
                   stackIn_60_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_56_0).a(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_56_0).drawCenteredText(NameSuggestionsPanel.discardLinkPrefixIntGuard(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
                   stackIn_62_0 = GameTrackPlayback.field_a;
                   stackIn_62_1 = 0;
                   stackIn_63_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_65_3 = false;
                   stackIn_66_4 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_62_0).a(SlowBurstParticle.discardContinuationText(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | opacity << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_62_0).drawCenteredText(SlowBurstParticle.discardContinuationText(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | opacity << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   if (var8 != 0) {
-                    this.h(opacity, 1);
+                    this.drawHiscores(opacity, 1);
                   }
                 }
               }
             }
           } else {
-            this.h(opacity, 1);
+            this.drawHiscores(opacity, 1);
           }
           boolean decompiledFrameCompleted0 = true;
           if (var5 == 0 ||
             !AudioOutputBootstrap.field_b[70] &&
             !AudioOutputBootstrap.field_b[69]) {
             var6Lifetime2 = 0;
-            while (!(var6Lifetime2 >= this.field_g.itemCount)) {
-              stackIn_83_0 = this.e(var6Lifetime2, 7746);
+            while (!(var6Lifetime2 >= this.selection.itemCount)) {
+              stackIn_83_0 = this.isOptionEnabled(var6Lifetime2, 7746);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_83_0) {
-                stackIn_80_1 = (var6Lifetime2 == this.field_g.selectedIndex);
-                this.a(stackIn_80_1, var6Lifetime2, -112, toolkit, opacity);
+                stackIn_80_1 = (var6Lifetime2 == this.selection.selectedIndex);
+                this.drawOption(stackIn_80_1, var6Lifetime2, -112, toolkit, opacity);
               }
               var6Lifetime2++;
             }
@@ -1508,36 +1508,36 @@ class MenuScreen {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void drawUpgradesHelp(byte guard, int opacity) {
         int var3 = 53;
         int var4 = 520;
         int var5 = 130;
-        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.upgradesHelpLines[0], (byte) -34, 0);
-        GameTrackPlayback.field_a.a(var5, var3, param1 << 24 | 16777215, GameInstructions.upgradesHelpLines[0], (byte) -40, 0);
+        QueuedIntArrayRequest.field_k.drawText(var5, var3, 5023231 | opacity << 24, GameInstructions.upgradesHelpLines[0], (byte) -34, 0);
+        GameTrackPlayback.field_a.drawText(var5, var3, opacity << 24 | 16777215, GameInstructions.upgradesHelpLines[0], (byte) -40, 0);
         var5 += 30;
-        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
-        LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, opacity << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
         var5 += 42;
         MusicCrossfadeStream.field_q[0].drawRotated((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
         var5 += 35;
         MusicCrossfadeStream.field_q[1].drawRotated((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
-        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
-        if (param0 > -54) {
+        MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
+        if (guard > -54) {
           this.screenId = 74;
         }
-        LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, opacity << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
         var5 += 35;
         MusicCrossfadeStream.field_q[2].drawRotated((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
-        LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
         var5 += 40;
-        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
-        LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.drawWrappedText(100, opacity << 24 | 5023231, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
+        LegacyOpenGlEffect.field_c.drawWrappedText(100, opacity << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
     }
 
-    private final void b(byte param0, int param1) {
+    private final void drawInstructionPage(byte guard, int opacity) {
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
         int var4;
@@ -1548,13 +1548,13 @@ class MenuScreen {
         GraphicsToolkit var9;
         var8 = Sumoblitz.field_L ? 1 : 0;
         var9 = MatchingTextValidator.field_h.getToolkit(-125);
-        var4 = param1 << 24 | 16777215;
+        var4 = opacity << 24 | 16777215;
         var5 = 664;
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
-        if (param0 < 114) {
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var9, 650, 55, 1, true);
+        if (guard < 114) {
           return;
         }
-        this.a(ChatMessage.instructionsText, param1, 29228);
+        this.drawHeading(ChatMessage.instructionsText, opacity, 29228);
         var6 = new int[50];
         var7 = 0;
         scanLoop1: while (true) {
@@ -1600,35 +1600,35 @@ class MenuScreen {
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  this.a(param1, true);
+                  this.drawObjectiveHelp(opacity, true);
                   if (var8 == 0) {
                     break scanLoop1;
                   }
                 }
-                this.d(param1, 8);
+                this.drawControlsHelp(opacity, 8);
                 if (var8 == 0) {
                   break scanLoop1;
                 }
               }
-              this.a(true, param1);
+              this.drawDronesHelpPartOne(true, opacity);
               if (var8 == 0) {
                 break scanLoop1;
               }
             }
-            this.a(param1, -119);
+            this.drawDronesHelpPartTwo(opacity, -119);
             if (var8 == 0) {
               break scanLoop1;
             }
           }
-          this.a((byte) -123, param1);
+          this.drawUpgradesHelp((byte) -123, opacity);
           break;
         }
-        MessageDialog.field_db.a(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
-        LegacyOpenGlEffect.field_c.a(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
+        MessageDialog.field_db.drawCenteredText(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), 5023231 | opacity << 24, -1, 380, 555, 0);
+        LegacyOpenGlEffect.field_c.drawCenteredText(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
         return;
     }
 
-    private final String a(int param0, byte param1) {
+    private final String formatGroupedNumber(int value, byte guard) {
         int discarded$1 = 0;
         String var3 = null;
         int var4 = 0;
@@ -1637,11 +1637,11 @@ class MenuScreen {
         String stackIn_11_0 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         var3 = "";
-        if (param1 >= -28) {
-          discarded$1 = this.b(110, 125);
+        if (guard >= -28) {
+          discarded$1 = this.optionLeft(110, 125);
         }
-        while (param0 >= 1000) {
-          var4 = param0 % 1000;
+        while (value >= 1000) {
+          var4 = value % 1000;
           stackIn_11_0 = var4 + var3;
           if (var5 != 0) {
             return stackIn_11_0;
@@ -1657,18 +1657,18 @@ class MenuScreen {
           } else {
             var3 = PrimitiveType.field_a + "00" + var3;
           }
-          param0 = param0 / 1000;
+          value = value / 1000;
         }
-        return param0 + var3;
+        return value + var3;
     }
 
-    private final boolean e(int param0, int param1) {
+    private final boolean isOptionEnabled(int optionIndex, int guard) {
         if (this.screenId == 3) {
-          if (0 == param0 &&
+          if (0 == optionIndex &&
             StatefulWidgetRenderer.field_n == 0) {
             return false;
           }
-          if (param0 == 2 &&
+          if (optionIndex == 2 &&
             ~StatefulWidgetRenderer.field_n == ~(-1 + GameInstructions.field_e.length)) {
             return false;
           }
@@ -1676,17 +1676,17 @@ class MenuScreen {
         if (this.screenId != 4 &&
           this.screenId == 5) {
         }
-        if (param1 != 7746) {
+        if (guard != 7746) {
           return false;
         }
         if (this.screenId != 2) {
           return true;
         }
-        if (param0 == 3 &&
+        if (optionIndex == 3 &&
           0 == LegacyOpenGlShader.field_a) {
           return false;
         }
-        if (param0 == 4 &&
+        if (optionIndex == 4 &&
           LegacyOpenGlShader.field_a == 1) {
           return false;
         }
@@ -1695,30 +1695,30 @@ class MenuScreen {
         return true;
     }
 
-    private final int b(int param0, int param1) {
+    private final int optionLeft(int optionIndex, int guard) {
         int var3;
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
-          if (3 != param0 &&
-            4 != param0) {
-            if (param0 == 5) {
+          if (3 != optionIndex &&
+            4 != optionIndex) {
+            if (optionIndex == 5) {
               return 240;
             }
-            return 155 * (param0 % 3) + GraphicsHeap.field_l[this.screenId];
+            return 155 * (optionIndex % 3) + GraphicsHeap.field_l[this.screenId];
           }
           return 465 + GraphicsHeap.field_l[this.screenId];
         }
-        var3 = 27 / ((-40 - param1) / 47);
+        var3 = 27 / ((-40 - guard) / 47);
         if (this.screenId == 3) {
-          return 20 + param0 * 200;
+          return 20 + optionIndex * 200;
         }
         if (this.screenId != 9 &&
           10 != this.screenId) {
           if (this.screenId == 7) {
-            return 200 * param0 + 205;
+            return 200 * optionIndex + 205;
           }
           if (this.screenId == 11) {
-            return 40 + 280 * param0;
+            return 40 + 280 * optionIndex;
           }
           if (this.screenId == 4 &&
             !AccountPacketReader.isGuestSession((byte) 9)) {
@@ -1726,33 +1726,33 @@ class MenuScreen {
           }
           if (4 == this.screenId &&
             AccountPacketReader.isGuestSession((byte) 9)) {
-            return 20 + 300 * param0;
+            return 20 + 300 * optionIndex;
           }
           if (this.screenId == 0 &&
-            1 < param0 &&
-            4 > param0) {
-            return -14 + (-163 + 163 * param0);
+            1 < optionIndex &&
+            4 > optionIndex) {
+            return -14 + (-163 + 163 * optionIndex);
           }
           if (this.screenId == 5 &&
             AccountPacketReader.isGuestSession((byte) 9)) {
-            return 300 * param0 + 20;
+            return 300 * optionIndex + 20;
           }
           if (this.screenId == 5) {
-            return 120 + 200 * param0;
+            return 120 + 200 * optionIndex;
           }
           return GraphicsHeap.field_l[this.screenId];
         }
-        return 120 + param0 * 200;
+        return 120 + optionIndex * 200;
     }
 
-    private final int c(int param0, int param1) {
+    private final int optionHeight(int guard, int optionIndex) {
         if (this.screenId != 11 &&
           12 != this.screenId) {
           if (0 == this.screenId &&
-            param1 < 2) {
+            optionIndex < 2) {
             return 48;
           }
-          if (param0 != 8) {
+          if (guard != 8) {
             field_f = -98;
           }
           return 32;
@@ -1820,21 +1820,21 @@ class MenuScreen {
               continue;
             }
           }
-          this.a((byte) 126);
-          if (this.field_g.selectedIndex == -1) {
+          this.handleKeyboardNavigation((byte) 126);
+          if (this.selection.selectedIndex == -1) {
             continue;
           }
-          this.a(false, (byte) -75, this.field_g.selectedIndex);
+          this.handleOptionAction(false, (byte) -75, this.selection.selectedIndex);
           if (var3 == 0) {
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_g.updatePointerSelection(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(PointLight.mouseX, (byte) 49, ArenaDefinitionCodec.field_e));
+          this.selection.updatePointerSelection(true, this.hitTestOption(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.hitTestOption(PointLight.mouseX, (byte) 49, ArenaDefinitionCodec.field_e));
         }
-        if (-1 != this.field_g.selectedIndex) {
-          this.a(true, (byte) 105, this.field_g.selectedIndex);
+        if (-1 != this.selection.selectedIndex) {
+          this.handleOptionAction(true, (byte) 105, this.selection.selectedIndex);
         }
         if (ActiveCanvasProvider.field_c == 0) {
         }
@@ -1852,43 +1852,43 @@ class MenuScreen {
         field_a = null;
     }
 
-    private final int f(int param0, int param1) {
+    private final int optionRight(int guard, int optionIndex) {
         int var3;
-        var3 = 121 % ((-59 - param0) / 50);
+        var3 = 121 % ((-59 - guard) / 50);
         if (this.screenId == 2 &&
           !AccountPacketReader.isGuestSession((byte) 9)) {
-          return 170 + this.b(param1, -92);
+          return 170 + this.optionLeft(optionIndex, -92);
         }
         if (3 == this.screenId) {
-          return 200 + this.b(param1, -106);
+          return 200 + this.optionLeft(optionIndex, -106);
         }
         if (!AccountPacketReader.isGuestSession((byte) 9) && (this.screenId == 4 ||
           this.screenId == 5)) {
-          return 200 + this.b(param1, -88);
+          return 200 + this.optionLeft(optionIndex, -88);
         }
         if (AccountPacketReader.isGuestSession((byte) 9) && (this.screenId == 4 ||
           5 == this.screenId)) {
-          return this.b(param1, 41) + 300;
+          return this.optionLeft(optionIndex, 41) + 300;
         }
         if (this.screenId != 9 &&
           this.screenId != 10) {
           if (this.screenId == 7) {
-            return this.b(param1, -121) + 165;
+            return this.optionLeft(optionIndex, -121) + 165;
           }
           if (this.screenId == 11) {
-            return 280 + this.b(param1, -121);
+            return 280 + this.optionLeft(optionIndex, -121);
           }
           if (0 == this.screenId &&
-            param1 > 1 &&
-            param1 < 4) {
-            return 179 + this.b(param1, 77);
+            optionIndex > 1 &&
+            optionIndex < 4) {
+            return 179 + this.optionLeft(optionIndex, 77);
           }
           return RendererPreference.field_d[this.screenId];
         }
-        return 200 + this.b(param1, -108);
+        return 200 + this.optionLeft(optionIndex, -108);
     }
 
-    private final void h(int param0, int param1) {
+    private final void drawHiscores(int opacity, int guard) {
         int var4;
         String var5;
         String var6;
@@ -1916,7 +1916,7 @@ class MenuScreen {
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         var20 = MatchingTextValidator.field_h.getToolkit(-124);
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
+        DelegatingCanvas.a(IntroMeshProjection.field_c, 424, -5, opacity << 24, 3, var20, 650, 45, guard, true);
         var4 = 0;
         if (EmailValidationError.field_c == 2) {
         }
@@ -1931,7 +1931,7 @@ class MenuScreen {
         }
         regionExit1: {
           regionExit2: {
-            this.a(var5, param0, param1 + 29227);
+            this.drawHeading(var5, opacity, guard + 29227);
             if (AccountPacketReader.isGuestSession((byte) 9)) {
               var6 = HardwareSpecularEffect.noHighscoresText;
               if (var19 == 0) {
@@ -1952,8 +1952,8 @@ class MenuScreen {
               var6 = HardwareSpecularEffect.noHighscoresText;
               var8 = var7_ref_of.names[HardwareBufferSet.field_j];
               var9 = var7_ref_of.values[HardwareBufferSet.field_j];
-              var10 = StatisticsSubmissionSupport.findSubmittedHiscore(var7_ref_of, param1 - 2, GameKeyHandler.field_a, HardwareBufferSet.field_j);
-              SocketConnector.field_a.a("10. ", param1 - 1);
+              var10 = StatisticsSubmissionSupport.findSubmittedHiscore(var7_ref_of, guard - 2, GameKeyHandler.field_a, HardwareBufferSet.field_j);
+              SocketConnector.field_a.stringWidth("10. ", guard - 1);
               var11 = AccountConnectionPhase.field_a.field_i + 140;
               var11 -= 20;
               var12 = 128;
@@ -1962,14 +1962,14 @@ class MenuScreen {
               if (var14 > 0) {
                 Math.sqrt((double)var14);
               }
-              var15 = param0 << 24 | 16777215;
-              QueuedIntArrayRequest.field_k.a(var11, var12, 5023231 | param0 << 24, FourIntReadRequest.nameText, (byte) -30, -1);
+              var15 = opacity << 24 | 16777215;
+              QueuedIntArrayRequest.field_k.drawText(var11, var12, 5023231 | opacity << 24, FourIntReadRequest.nameText, (byte) -30, -1);
               if (~var10 == ~var4) {
                 var15 = -17409;
               }
-              GameTrackPlayback.field_a.a(var11, var12, var15, FourIntReadRequest.nameText, (byte) -71, -1);
-              QueuedIntArrayRequest.field_k.a(-1, var13, LoginCredentials.scoreText, var11, 5023231 | param0 << 24, 72);
-              GameTrackPlayback.field_a.a(-1, var13, LoginCredentials.scoreText, var11, var15, 59);
+              GameTrackPlayback.field_a.drawText(var11, var12, var15, FourIntReadRequest.nameText, (byte) -71, -1);
+              QueuedIntArrayRequest.field_k.drawRightAlignedText(-1, var13, LoginCredentials.scoreText, var11, 5023231 | opacity << 24, 72);
+              GameTrackPlayback.field_a.drawRightAlignedText(-1, var13, LoginCredentials.scoreText, var11, var15, 59);
               var11 += 20;
               var4 = 0;
               while (10 > var4) {
@@ -1988,26 +1988,26 @@ class MenuScreen {
                   var16 = var9[var4 * 2];
                   var17 = var8[var4];
                   if (var10 == var4) {
-                    var20.fillRectangle((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
+                    var20.fillRectangle((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (opacity & 772132860) << 22, var12Lifetime1 - 30, 16);
                     var15Lifetime1 = -17409;
                   }
-                  MessageDialog.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
-                  MessageDialog.field_db.a(var11, var12Lifetime1 - 1, 5023231 | param0 << 24, var17, (byte) -54, 0);
-                  MessageDialog.field_db.a(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, param0 << 24 | 5023231, 96);
-                  MessageDialog.field_db.a(var11 - 1, var12Lifetime1, 5023231 | param0 << 24, var17, (byte) -41, 0);
-                  MessageDialog.field_db.a(-1, var12Lifetime1, var4 + 1 + ". ", var11, param0 << 24 | 5023231, param1 ^ 80);
-                  MessageDialog.field_db.a(var11, var12Lifetime1, param0 << 24 | 5023231, var17, (byte) -119, -1);
-                  LegacyOpenGlEffect.field_c.a(0, -1 + var12Lifetime1, 1 + var4 + ". ", var11, 0, 80);
-                  LegacyOpenGlEffect.field_c.a(var11, var12Lifetime1 - 1, 0, var17, (byte) -110, 0);
-                  LegacyOpenGlEffect.field_c.a(0, var12Lifetime1, var4 + 1 + ". ", var11 - 1, 0, 82);
-                  LegacyOpenGlEffect.field_c.a(-1 + var11, var12Lifetime1, 0, var17, (byte) -92, 0);
-                  LegacyOpenGlEffect.field_c.a(-1, var12Lifetime1, 1 + var4 + ". ", var11, var15Lifetime1, 84);
-                  LegacyOpenGlEffect.field_c.a(var11, var12Lifetime1, var15Lifetime1, var17, (byte) -116, -1);
-                  var18 = this.a(var16, (byte) -81);
-                  MessageDialog.field_db.a(-1, -1 + var13Lifetime1, var18, var11, 5023231 | param0 << 24, 124);
-                  MessageDialog.field_db.a(-1, var13Lifetime1, var18, var11 - 1, param0 << 24 | 5023231, 124);
-                  MessageDialog.field_db.a(-1, var13Lifetime1, var18, var11, 5023231 | param0 << 24, 43);
-                  LegacyOpenGlEffect.field_c.a(-1, var13Lifetime1, var18, var11, param0 << 24 | var15Lifetime1, 116);
+                  MessageDialog.field_db.drawRightAlignedText(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, opacity << 24 | 5023231, guard ^ 64);
+                  MessageDialog.field_db.drawText(var11, var12Lifetime1 - 1, 5023231 | opacity << 24, var17, (byte) -54, 0);
+                  MessageDialog.field_db.drawRightAlignedText(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, opacity << 24 | 5023231, 96);
+                  MessageDialog.field_db.drawText(var11 - 1, var12Lifetime1, 5023231 | opacity << 24, var17, (byte) -41, 0);
+                  MessageDialog.field_db.drawRightAlignedText(-1, var12Lifetime1, var4 + 1 + ". ", var11, opacity << 24 | 5023231, guard ^ 80);
+                  MessageDialog.field_db.drawText(var11, var12Lifetime1, opacity << 24 | 5023231, var17, (byte) -119, -1);
+                  LegacyOpenGlEffect.field_c.drawRightAlignedText(0, -1 + var12Lifetime1, 1 + var4 + ". ", var11, 0, 80);
+                  LegacyOpenGlEffect.field_c.drawText(var11, var12Lifetime1 - 1, 0, var17, (byte) -110, 0);
+                  LegacyOpenGlEffect.field_c.drawRightAlignedText(0, var12Lifetime1, var4 + 1 + ". ", var11 - 1, 0, 82);
+                  LegacyOpenGlEffect.field_c.drawText(-1 + var11, var12Lifetime1, 0, var17, (byte) -92, 0);
+                  LegacyOpenGlEffect.field_c.drawRightAlignedText(-1, var12Lifetime1, 1 + var4 + ". ", var11, var15Lifetime1, 84);
+                  LegacyOpenGlEffect.field_c.drawText(var11, var12Lifetime1, var15Lifetime1, var17, (byte) -116, -1);
+                  var18 = this.formatGroupedNumber(var16, (byte) -81);
+                  MessageDialog.field_db.drawRightAlignedText(-1, -1 + var13Lifetime1, var18, var11, 5023231 | opacity << 24, 124);
+                  MessageDialog.field_db.drawRightAlignedText(-1, var13Lifetime1, var18, var11 - 1, opacity << 24 | 5023231, 124);
+                  MessageDialog.field_db.drawRightAlignedText(-1, var13Lifetime1, var18, var11, 5023231 | opacity << 24, 43);
+                  LegacyOpenGlEffect.field_c.drawRightAlignedText(-1, var13Lifetime1, var18, var11, opacity << 24 | var15Lifetime1, 116);
                   var6 = "";
                 }
                 var11 += 20;
@@ -2023,38 +2023,38 @@ class MenuScreen {
           stackIn_34_0 = 100 + (140 + SocketConnector.field_a.field_i);
         }
         var7 = stackIn_34_0;
-        MessageDialog.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
-        LegacyOpenGlEffect.field_c.a(var6, param0 << 24 | 16777215, -1, var7, 320, param1 - 1);
+        MessageDialog.field_db.drawCenteredText(var6, 5023231 | opacity << 24, -1, var7, 320, 0);
+        LegacyOpenGlEffect.field_c.drawCenteredText(var6, opacity << 24 | 16777215, -1, var7, 320, guard - 1);
         if (!AccountPacketReader.isGuestSession((byte) 9)) {
           stackIn_37_0 = LinkWidgetRenderer.friendsCanBeAddedText;
         } else {
           stackIn_37_0 = InstrumentNoteMask.createAFreeAccountText;
         }
         var6Lifetime1 = stackIn_37_0;
-        MessageDialog.field_db.a(var6Lifetime1, param0 << 24 | 5023231, -1, SocketConnector.field_a.field_i + 140 + 220, 320, 0);
-        LegacyOpenGlEffect.field_c.a(var6Lifetime1, 16777215 | param0 << 24, -1, 140 + SocketConnector.field_a.field_i + 220, 320, 0);
+        MessageDialog.field_db.drawCenteredText(var6Lifetime1, opacity << 24 | 5023231, -1, SocketConnector.field_a.field_i + 140 + 220, 320, 0);
+        LegacyOpenGlEffect.field_c.drawCenteredText(var6Lifetime1, 16777215 | opacity << 24, -1, 140 + SocketConnector.field_a.field_i + 220, 320, 0);
     }
 
-    private final void a(String param0, int param1, int param2) {
+    private final void drawHeading(String text, int opacity, int guard) {
         try {
-          LoginTextResources.field_b.a(param0, 0);
-          if (param2 != 29228) {
+          LoginTextResources.field_b.stringWidth(text, 0);
+          if (guard != 29228) {
             this.resetSelection(-7, true);
           }
-          ForceFieldRingEffect.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
-          AccountStatusDialogState.headingFont.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
+          ForceFieldRingEffect.field_t.drawCenteredText(text, 5023231 | opacity << 24, -1, 96, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(text, 16777215 | opacity << 24, -1, 96, 320, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.M(" + (text != null ? "{...}" : "null") + ',' + opacity + ',' + guard + ')');
         }
     }
 
     MenuScreen(int param0) {
-        this.field_c = -1;
+        this.selectedAchievement = -1;
         this.screenId = param0;
-        this.field_g = new MenuSelectionController(IntroLogoRenderer.field_a[param0].length);
+        this.selection = new MenuSelectionController(IntroLogoRenderer.field_a[param0].length);
     }
 
-    private final void d(int param0, int param1) {
+    private final void drawControlsHelp(int opacity, int guard) {
         int var3;
         int var4;
         int var5;
@@ -2067,8 +2067,8 @@ class MenuScreen {
         var4 = 520;
         var5 = 140;
         var6 = 0;
-        if (param1 != 8) {
-          this.b((byte) -41, 2);
+        if (guard != 8) {
+          this.drawInstructionPage((byte) -41, 2);
         }
         while (var6 < 5) {
           if (var7 == 0) {
@@ -2085,12 +2085,12 @@ class MenuScreen {
               var4Lifetime1 = 370;
             }
             if (GameInstructions.controlsHelpLines[var6].startsWith("<b>")) {
-              QueuedIntArrayRequest.field_k.a(var5, var3Lifetime1, param0 << 24 | 5023231, GameInstructions.controlsHelpLines[var6], (byte) -98, 0);
-              GameTrackPlayback.field_a.a(var5, var3Lifetime1, param0 << 24 | 16777215, GameInstructions.controlsHelpLines[var6], (byte) -32, 0);
+              QueuedIntArrayRequest.field_k.drawText(var5, var3Lifetime1, opacity << 24 | 5023231, GameInstructions.controlsHelpLines[var6], (byte) -98, 0);
+              GameTrackPlayback.field_a.drawText(var5, var3Lifetime1, opacity << 24 | 16777215, GameInstructions.controlsHelpLines[var6], (byte) -32, 0);
             } else if (var6 != 1) {
               if (3 != var6) {
-                MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
-                LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
+                MessageDialog.field_db.drawWrappedText(100, 5023231 | opacity << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
+                LegacyOpenGlEffect.field_c.drawWrappedText(100, 16777215 | opacity << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
               } else {
                 LegacyCubeMapSource.field_e.draw(var3Lifetime1 + 16, 14 + var5);
               }

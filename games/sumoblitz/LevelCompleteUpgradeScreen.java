@@ -309,17 +309,17 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           DelegatingCanvas.a(IntroMeshProjection.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
-          ForceFieldRingEffect.field_t.a(LegacyOpenGlSprite.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
-          AccountStatusDialogState.headingFont.a(LegacyOpenGlSprite.levelCompleteText, -1, -1, 55, 320, 0);
+          ForceFieldRingEffect.field_t.drawCenteredText(LegacyOpenGlSprite.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(LegacyOpenGlSprite.levelCompleteText, -1, -1, 55, 320, 0);
           if (guard != -2355) {
             this.field_i = 108;
           }
-          QueuedIntArrayRequest.field_k.a(100, opacity << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, guard - 6432, AchievementThresholds.scoreText.toUpperCase() + " " + BlendMode.lastLevelScore + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, guard - 21265), (SpriteMask) null, 1, 1);
-          GameTrackPlayback.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, AchievementThresholds.scoreText.toUpperCase() + " " + BlendMode.lastLevelScore + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, -23620), (SpriteMask) null, 1, 1);
-          MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          QueuedIntArrayRequest.field_k.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
-          GameTrackPlayback.field_a.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          QueuedIntArrayRequest.field_k.drawWrappedText(100, opacity << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, guard - 6432, AchievementThresholds.scoreText.toUpperCase() + " " + BlendMode.lastLevelScore + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, guard - 21265), (SpriteMask) null, 1, 1);
+          GameTrackPlayback.field_a.drawWrappedText(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, AchievementThresholds.scoreText.toUpperCase() + " " + BlendMode.lastLevelScore + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, -23620), (SpriteMask) null, 1, 1);
+          MessageDialog.field_db.drawWrappedText(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.drawWrappedText(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
+          GameTrackPlayback.field_a.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {
@@ -338,15 +338,15 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
               stackIn_14_0 = 0;
             }
             var6 = stackIn_14_0;
-            QueuedIntArrayRequest.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, -4 + (var4_int + 55), guard + 2355);
-            GameTrackPlayback.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), guard ^ -2355);
+            QueuedIntArrayRequest.field_k.drawCenteredText(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, -4 + (var4_int + 55), guard + 2355);
+            GameTrackPlayback.field_a.drawCenteredText(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), guard ^ -2355);
             if (var6 != 0) {
               MusicCrossfadeStream.field_q[15 + var5].draw(55 + (var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1)), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
               MusicCrossfadeStream.field_q[var5].draw(-(MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             }
-            QueuedIntArrayRequest.field_k.a(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
-            GameTrackPlayback.field_a.a(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);
+            QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
+            GameTrackPlayback.field_a.drawCenteredText(Integer.toString(LegacyOpenGlSpecularEffect.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);
             var5++;
             var4_int += 126;
           }

@@ -118,15 +118,15 @@ abstract class TextLayout {
         return -1;
     }
 
-    final static void a(int param0) {
+    final static void showReconnectForm(int guard) {
         if (!ReconnectState.reconnecting) {
           throw new IllegalStateException();
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           field_c = (float[]) null;
         }
         if (AccountStatusDialogState.activeDialog != null) {
-          AccountStatusDialogState.activeDialog.n(-7);
+          AccountStatusDialogState.activeDialog.closeDialog(-7);
         }
         String var1 = LegacyOpenGlPbuffer.playerLabel((byte) -72);
         LoginFormState.activeForm = new LoginForm(var1, (String) null, true, false, false);

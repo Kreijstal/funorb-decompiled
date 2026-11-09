@@ -61,30 +61,30 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           var6 = new StatusMessagePanel((MessageDialog) (this), LegacyOpenGlDisplayLists.field_a, var4);
           if (!result.success) {
             if (this.ineligible) {
-              var6.a(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
+              var6.appendButton(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
             } else {
               if (result.errorCode != 5) {
-                var6.a(FullscreenCanvas.backText, -1, true);
+                var6.addResultButton(FullscreenCanvas.backText, -1, true);
               } else {
-                var6.a(DisplayModeFailure.reloadGameText, 11, true);
-                var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
+                var6.addResultButton(DisplayModeFailure.reloadGameText, 11, true);
+                var6.addResultButton(HiscoreRequest.quitToWebsiteText, 17, true);
               }
             }
             if (result.errorCode == 3) {
-              var6.a(IntroFinalFrameResources.toServerListText, 7, true);
+              var6.addResultButton(IntroFinalFrameResources.toServerListText, 7, true);
             } else {
               if (result.errorCode != 6) {
                 this.transitionToContent((byte) -123, var6);
                 return;
               }
-              var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
+              var6.addResultButton(PowerupTrailParticle.toCustomerSupportText, 9, true);
             }
           } else {
             if (result.showUnderageInfo) {
               this.transitionToContent((byte) -95, new UnderageAccountInfoPanel(this));
               return;
             }
-            var6.a(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
+            var6.appendButton(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
           }
           this.transitionToContent((byte) -123, var6);
           return;
@@ -116,7 +116,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
         }
         try {
           LoginIdentifierSupport.retryAccountCreationLogin(false);
-          this.n(-7);
+          this.closeDialog(-7);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + action + ',' + guard + ',' + (source != null ? "{...}" : "null") + ',' + pointerX + ',' + pointerY + ')');
         }

@@ -5,7 +5,7 @@ final class HardwareBufferSet extends RenderBufferSet {
     private IndexBufferReference field_g;
     private int field_e;
     static String musicText;
-    static int field_d;
+    static int accountPacketLength;
     private int field_c;
     static int field_j;
     private VertexBufferReference field_i;

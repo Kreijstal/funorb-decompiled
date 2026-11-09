@@ -311,9 +311,9 @@ final class WidgetTheme {
           this.tooltipTextColor = 15658734;
           this.tooltipLineHeight = -1;
           var4.selectionColor = 11711154;
-          var4.createStateStyle(false, 0).withTextColor(15658734, 17818).withBackgroundSlices(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
-          var4.createStateStyle(false, 1).withBackgroundSlices(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
-          var4.createStateStyle(false, 3).withBackgroundSlices(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).withOffsetX(1, -1).withOffsetY(1, 1);
+          var4.createStateStyle(false, 0).withTextColor(15658734, 17818).withBackgroundSlices(FontMetrics.createBeveledPanelSprites(8947848, 92, 10066329, 7829367), 2147483647);
+          var4.createStateStyle(false, 1).withBackgroundSlices(FontMetrics.createBeveledPanelSprites(11184810, 126, 10066329, 13421772), 2147483647);
+          var4.createStateStyle(false, 3).withBackgroundSlices(FontMetrics.createBeveledPanelSprites(8947848, 97, 7829367, 10066329), 2147483647).withOffsetX(1, -1).withOffsetY(1, 1);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -338,7 +338,7 @@ final class WidgetTheme {
           discarded$1 = new MarkerTrackRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetRenderer();
           var17.copyStyleTo(var8, 107);
-          var8.createStateStyle(false, 0).withBackgroundSlices(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).withTextColor(1118481, 17818).withTextShadow(-1, 30149);
+          var8.createStateStyle(false, 0).withBackgroundSlices(FontMetrics.createBeveledPanelSprites(15658734, 102, 7829367, 10066329), 2147483647).withTextColor(1118481, 17818).withTextShadow(-1, 30149);
           var8.createStateStyle(false, 4).withFlushBeforeApply(true, true).withBackgroundSlices(var5, 2147483647);
           this.field_j = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];

@@ -53,46 +53,46 @@ final class DroneChargeParticle extends TimedSceneEffect {
     }
 
     final static void initializeMenuLabels(int param0) {
-        if (null != GameClientShell.field_u) {
+        if (null != GameClientShell.menuActionLabels) {
           return;
         }
-        GameClientShell.field_u = new String[34];
-        GameClientShell.field_u[16] = DroneVariantScoring.discardText;
-        GameClientShell.field_u[1] = WhirlpoolTables.resumeGameText;
-        GameClientShell.field_u[5] = RenderPresentationException.menuText;
-        GameClientShell.field_u[11] = RasterBuffer.quitText;
-        GameClientShell.field_u[14] = LegacyOpenGlRenderbuffer.achievementsText;
-        GameClientShell.field_u[6] = RenderPresentationException.menuText;
-        GameClientShell.field_u[12] = TurbulenceNoise3D.soundText;
-        GameClientShell.field_u[7] = RendererPreference.endGameText;
-        GameClientShell.field_u[0] = SpriteSheetSupport.startGameText;
-        GameClientShell.field_u[3] = WidgetTheme.instructionsText;
+        GameClientShell.menuActionLabels = new String[34];
+        GameClientShell.menuActionLabels[16] = DroneVariantScoring.discardText;
+        GameClientShell.menuActionLabels[1] = WhirlpoolTables.resumeGameText;
+        GameClientShell.menuActionLabels[5] = RenderPresentationException.menuText;
+        GameClientShell.menuActionLabels[11] = RasterBuffer.quitText;
+        GameClientShell.menuActionLabels[14] = LegacyOpenGlRenderbuffer.achievementsText;
+        GameClientShell.menuActionLabels[6] = RenderPresentationException.menuText;
+        GameClientShell.menuActionLabels[12] = TurbulenceNoise3D.soundText;
+        GameClientShell.menuActionLabels[7] = RendererPreference.endGameText;
+        GameClientShell.menuActionLabels[0] = SpriteSheetSupport.startGameText;
+        GameClientShell.menuActionLabels[3] = WidgetTheme.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
-        GameClientShell.field_u[15] = OpenGlTexture3D.logInCreateAccountText;
-        GameClientShell.field_u[4] = ResourceArchive.field_j;
-        GameClientShell.field_u[2] = MouseInputHandler.field_a;
-        GameClientShell.field_u[13] = HardwareBufferSet.musicText;
-        GameClientShell.field_u[21] = DropDownListWidget.regularText;
-        GameClientShell.field_u[25] = AccountUiBootstrap.difficultyText;
-        GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
-        GameClientShell.field_u[10] = PlayingSound.scoreFilterLabels[2];
-        GameClientShell.field_u[27] = FallbackShaderEffect.field_g;
-        GameClientShell.field_u[23] = CubeMapSource.challengeText;
-        GameClientShell.field_u[24] = MatchingTextValidator.optionsText;
-        GameClientShell.field_u[17] = FadingWidget.nextText;
-        GameClientShell.field_u[28] = IntroPreparation.restartLevelText;
-        GameClientShell.field_u[19] = LoadingStatusText.arcadeGameText;
-        GameClientShell.field_u[22] = MusicPatch.editorText;
+        GameClientShell.menuActionLabels[15] = OpenGlTexture3D.logInCreateAccountText;
+        GameClientShell.menuActionLabels[4] = ResourceArchive.field_j;
+        GameClientShell.menuActionLabels[2] = MouseInputHandler.field_a;
+        GameClientShell.menuActionLabels[13] = HardwareBufferSet.musicText;
+        GameClientShell.menuActionLabels[21] = DropDownListWidget.regularText;
+        GameClientShell.menuActionLabels[25] = AccountUiBootstrap.difficultyText;
+        GameClientShell.menuActionLabels[18] = CompactMeshGeometry.previousText;
+        GameClientShell.menuActionLabels[10] = PlayingSound.scoreFilterLabels[2];
+        GameClientShell.menuActionLabels[27] = FallbackShaderEffect.field_g;
+        GameClientShell.menuActionLabels[23] = CubeMapSource.challengeText;
+        GameClientShell.menuActionLabels[24] = MatchingTextValidator.optionsText;
+        GameClientShell.menuActionLabels[17] = FadingWidget.nextText;
+        GameClientShell.menuActionLabels[28] = IntroPreparation.restartLevelText;
+        GameClientShell.menuActionLabels[19] = LoadingStatusText.arcadeGameText;
+        GameClientShell.menuActionLabels[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{ArchiveLoadingStage.highText, DiskCacheDataFile.lowText};
-        GameClientShell.field_u[33] = AccountRequestState.levelSelectText;
-        GameClientShell.field_u[26] = ServerDataReadRequest.resetStatsText;
-        GameClientShell.field_u[9] = PlayingSound.scoreFilterLabels[1];
-        GameClientShell.field_u[20] = TimedSceneEffect.challengeText;
-        GameClientShell.field_u[32] = AccountRequestState.levelSelectText;
-        GameClientShell.field_u[8] = PlayingSound.scoreFilterLabels[0];
-        GameClientShell.field_u[29] = ProjectionMode.reassignText;
-        GameClientShell.field_u[30] = ScreenNameValidator.field_g;
-        GameClientShell.field_u[31] = VertexAttribute.continueText;
+        GameClientShell.menuActionLabels[33] = AccountRequestState.levelSelectText;
+        GameClientShell.menuActionLabels[26] = ServerDataReadRequest.resetStatsText;
+        GameClientShell.menuActionLabels[9] = PlayingSound.scoreFilterLabels[1];
+        GameClientShell.menuActionLabels[20] = TimedSceneEffect.challengeText;
+        GameClientShell.menuActionLabels[32] = AccountRequestState.levelSelectText;
+        GameClientShell.menuActionLabels[8] = PlayingSound.scoreFilterLabels[0];
+        GameClientShell.menuActionLabels[29] = ProjectionMode.reassignText;
+        GameClientShell.menuActionLabels[30] = ScreenNameValidator.field_g;
+        GameClientShell.menuActionLabels[31] = VertexAttribute.continueText;
     }
 
     final boolean updateAndIsExpired(int param0) {
@@ -161,7 +161,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
     }
 
     final static void sendFourIntUpdate(byte guard, FourIntUpdateRequest request, int opcode) {
-        IsaacPacketBuffer var5 = InwardSparkParticle.field_v;
+        IsaacPacketBuffer var5 = InwardSparkParticle.outgoingPacket;
         var5.writeCipherByte(opcode, guard ^ -105);
         var5.position = var5.position + 1;
         int var4 = var5.position;

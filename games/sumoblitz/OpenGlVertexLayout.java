@@ -7,11 +7,11 @@ final class OpenGlVertexLayout extends VertexLayout {
     static DroneIntroductionOverlay field_f;
     static String multiplierText;
 
-    final static void a(int param0, int param1) {
-        if (param0 != 16440) {
+    final static void setSoundVolume(int guard, int volume) {
+        if (guard != 16440) {
           return;
         }
-        LegacyOpenGlRenderBufferSet.setSoundVolume(param1, (byte) -58);
+        LegacyOpenGlRenderBufferSet.setSoundVolume(volume, (byte) -58);
     }
 
     OpenGlVertexLayout(VertexStreamLayout[] streamLayouts) {

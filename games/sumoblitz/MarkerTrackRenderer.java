@@ -89,7 +89,7 @@ final class MarkerTrackRenderer implements WidgetRenderer {
           if (guard != -1) {
             field_e = 23;
           }
-          var3 = InwardSparkParticle.field_v;
+          var3 = InwardSparkParticle.outgoingPacket;
           var3.writeCipherByte(opcode, guard ^ -9);
           var3.writeByte((byte) 85, request.requestId);
           var3.writeByte((byte) 23, request.rowLimit);

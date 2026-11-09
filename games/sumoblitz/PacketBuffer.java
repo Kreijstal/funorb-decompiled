@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     static char[] field_m;
-    static int field_l;
+    static int defaultTextColor;
     static boolean[] field_o;
     byte[] payload;
     int position;
@@ -111,7 +111,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final static float quinticSmoothStep(byte guard, float value) {
         if (guard != 124) {
-          field_l = 20;
+          defaultTextColor = 20;
         }
         return value * (value * value) * (value * (-15.0f + 6.0f * value) + 10.0f);
     }
@@ -316,7 +316,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         this.writeByte((byte) 17, 127 & value);
         if (guard >= -4) {
-          field_l = -52;
+          defaultTextColor = -52;
         }
     }
 
@@ -373,7 +373,7 @@ class PacketBuffer extends IntrusiveNode {
           var5 = new byte[var4_int];
           this.readBytes(var5, var4_int, 0, (byte) -59);
           if (guard <= 115) {
-            field_l = 79;
+            defaultTextColor = 79;
           }
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(exponent, modulus);
@@ -516,7 +516,7 @@ class PacketBuffer extends IntrusiveNode {
         field_o = null;
         field_m = null;
         if (param0 > -10) {
-          field_l = 23;
+          defaultTextColor = 23;
         }
         field_k = null;
     }
@@ -788,6 +788,6 @@ class PacketBuffer extends IntrusiveNode {
     static {
         field_o = new boolean[8];
         field_m = new char[]{(char)91, (char)93, (char)35};
-        field_l = 0;
+        defaultTextColor = 0;
     }
 }

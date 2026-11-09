@@ -833,7 +833,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         IntrusiveNode var1 = this.field_oc.first(79);
         while (var1 != null) {
-          ((LegacyOpenGlGraphicsHeap) (var1)).a(-4009);
+          ((LegacyOpenGlGraphicsHeap) (var1)).close(-4009);
           var1 = this.field_oc.next((byte) 18);
         }
         if (this.postProcessManager != null) {

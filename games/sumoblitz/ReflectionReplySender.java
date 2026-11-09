@@ -13,14 +13,14 @@ final class ReflectionReplySender {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1 = InwardSparkParticle.field_v;
+          var1 = InwardSparkParticle.outgoingPacket;
           while (Js5Client.nextReflectionCheckReady((byte) 125)) {
             var1.writeCipherByte(8, opcode ^ 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             SoftLruCache.writeReflectionReply(var1, opcode + 119);
-            InwardSparkParticle.field_v.patchByteLength(var1.position - var2, -13745);
+            InwardSparkParticle.outgoingPacket.patchByteLength(var1.position - var2, -13745);
           }
           if (opcode == 8) {
             return;

@@ -341,7 +341,7 @@ final class CachedTextLayout extends TextLayout {
           }
           if (TextCaretLayout.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
             HardwareGraphicsToolkit.field_j = null;
-            InwardSparkParticle.field_v.position = 0;
+            InwardSparkParticle.outgoingPacket.position = 0;
             if (param6 != null) {
               var9 = 0;
               if (param4) {
@@ -357,16 +357,16 @@ final class CachedTextLayout extends TextLayout {
               SoftLruCache.field_e.writeShort(-69, param3);
               SoftLruCache.field_e.writeByte((byte) 50, param1);
               SoftLruCache.field_e.writeByte((byte) 50, var9);
-              InwardSparkParticle.field_v.writeByte((byte) 114, 18);
-              InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
-              var10 = InwardSparkParticle.field_v.position;
+              InwardSparkParticle.outgoingPacket.writeByte((byte) 114, 18);
+              InwardSparkParticle.outgoingPacket.position = InwardSparkParticle.outgoingPacket.position + 2;
+              var10 = InwardSparkParticle.outgoingPacket.position;
               var11_ref_String = DropDownLabelRenderer.readAppletSettings(-94, LegacyOpenGlUnlitEffect.activeApplet(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              InwardSparkParticle.field_v.writeCp1252String(var11_ref_String, (byte) -115);
-              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
-              InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
+              InwardSparkParticle.outgoingPacket.writeCp1252String(var11_ref_String, (byte) -115);
+              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+              InwardSparkParticle.outgoingPacket.patchShortLength(0, InwardSparkParticle.outgoingPacket.position - var10);
             } else {
               SoftLruCache.field_e.position = 0;
               SoftLruCache.field_e.writeInt(48, NanoTickClock.field_d.nextInt());
@@ -385,19 +385,19 @@ final class CachedTextLayout extends TextLayout {
                 stackIn_17_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_16_0).writeCircumfixedString(stackIn_17_1, (byte) 101);
-              InwardSparkParticle.field_v.writeByte((byte) 108, 16);
-              InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
-              var9 = InwardSparkParticle.field_v.position;
-              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
-              InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
+              InwardSparkParticle.outgoingPacket.writeByte((byte) 108, 16);
+              InwardSparkParticle.outgoingPacket.position = InwardSparkParticle.outgoingPacket.position + 1;
+              var9 = InwardSparkParticle.outgoingPacket.position;
+              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.outgoingPacket, SoftLruCache.field_e);
+              InwardSparkParticle.outgoingPacket.patchByteLength(InwardSparkParticle.outgoingPacket.position - var9, -13745);
             }
-            MessageDialog.a(0, -1);
+            MessageDialog.flushAccountWrites(0, -1);
             TextCaretLayout.accountPhase = DisplayModeFailure.WAIT_ACCOUNT_RESPONSE;
           }
           if (TextCaretLayout.accountPhase == DisplayModeFailure.WAIT_ACCOUNT_RESPONSE &&
             OpenGlIndexBuffer.b(-1, 1)) {
-            var9Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-            NativeLibraryExtractor.field_a.position = 0;
+            var9Lifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+            NativeLibraryExtractor.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               TextCaretLayout.accountPhase = HiscoreRequestQueue.WAIT_NAME_SUGGESTIONS;
@@ -412,25 +412,25 @@ final class CachedTextLayout extends TextLayout {
                 return stackIn_37_0;
               }
               if (var9Lifetime1 != 99) {
-                HardwareBufferSet.field_d = -1;
-                TextureFormat.field_a = var9Lifetime1;
+                HardwareBufferSet.accountPacketLength = -1;
+                TextureFormat.receivedAccountOpcode = var9Lifetime1;
                 TextCaretLayout.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
                 OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
-                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.field_a, 115));
-                NativeLibraryExtractor.field_a.position = 0;
+                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.incomingPacket, 115));
+                NativeLibraryExtractor.incomingPacket.position = 0;
               }
             }
           }
           if (HiscoreRequestQueue.WAIT_NAME_SUGGESTIONS == TextCaretLayout.accountPhase) {
             var9Lifetime2 = 2;
             if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
-              var10Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedShort(255);
-              NativeLibraryExtractor.field_a.position = 0;
+              var10Lifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
+              NativeLibraryExtractor.incomingPacket.position = 0;
               if (OpenGlIndexBuffer.b(-1, var10Lifetime1)) {
                 var11 = ArchiveLoadingStage.nameSuggestions.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ArchiveLoadingStage.nameSuggestions[var12] = NativeLibraryExtractor.field_a.readCircumfixedString(-105);
+                  ArchiveLoadingStage.nameSuggestions[var12] = NativeLibraryExtractor.incomingPacket.readCircumfixedString(-105);
                 }
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);
                 LimitedRandomAccessFile.field_g = false;
@@ -441,17 +441,17 @@ final class CachedTextLayout extends TextLayout {
           }
           if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == TextCaretLayout.accountPhase &&
             FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
-            if (TextureFormat.field_a != 255) {
-              MouseWheelInput.field_c = NativeLibraryExtractor.field_a.readCp1252String(-1);
+            if (TextureFormat.receivedAccountOpcode != 255) {
+              MouseWheelInput.field_c = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
             } else {
-              var9_ref_String = NativeLibraryExtractor.field_a.readNullableString((byte) 80);
+              var9_ref_String = NativeLibraryExtractor.incomingPacket.readNullableString((byte) 80);
               if (var9_ref_String != null) {
                 UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.activeApplet(2));
               }
             }
             LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
             LimitedRandomAccessFile.field_g = false;
-            stackIn_57_0 = TextureFormat.field_a;
+            stackIn_57_0 = TextureFormat.receivedAccountOpcode;
             return stackIn_57_0;
           }
           if (DisplayModeConfirmationDialog.accountSocket == null) {

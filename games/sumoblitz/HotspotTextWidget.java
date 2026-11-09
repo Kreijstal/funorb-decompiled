@@ -81,7 +81,7 @@ class HotspotTextWidget extends InteractiveWidget {
         byte[] var13 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var11 = NativeLibraryExtractor.field_a;
+          var11 = NativeLibraryExtractor.incomingPacket;
           var2 = var11.readUnsignedByte(-31302);
           var3 = 99 / ((-33 - guard) / 36);
           if (var2 == 0) {

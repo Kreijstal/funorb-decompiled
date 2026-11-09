@@ -176,11 +176,11 @@ final class MarkerTrackWidget extends InteractiveWidget {
           if (NameSuggestionsPanel.field_E != null) {
             try {
               NameSuggestionsPanel.field_E.seek(-7564, 0L);
-              NameSuggestionsPanel.field_E.write(NativeLibraryExtractor.field_a.payload, 24, (byte) -41, NativeLibraryExtractor.field_a.position);
+              NameSuggestionsPanel.field_E.write(NativeLibraryExtractor.incomingPacket.payload, 24, (byte) -41, NativeLibraryExtractor.incomingPacket.position);
             } catch (Exception exception) {
             }
           }
-          NativeLibraryExtractor.field_a.position = NativeLibraryExtractor.field_a.position + skipBytes;
+          NativeLibraryExtractor.incomingPacket.position = NativeLibraryExtractor.incomingPacket.position + skipBytes;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

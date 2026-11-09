@@ -54,14 +54,14 @@ final class VictoryScreen extends MenuScreen {
         String var9 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 42 / ((param0 + 75) / 49);
-        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + RotarySelectorWidget.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.field_a;
+        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + RotarySelectorWidget.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.receivedAccountOpcode;
         String var1 = var7;
-        if (0 >= HardwareBufferSet.field_d) {
+        if (0 >= HardwareBufferSet.accountPacketLength) {
         } else {
           var1 = var7 + ":";
-          for (var3 = 0; var3 < HardwareBufferSet.field_d; var3++) {
+          for (var3 = 0; var3 < HardwareBufferSet.accountPacketLength; var3++) {
             var8 = var1 + ' ';
-            var4 = NativeLibraryExtractor.field_a.payload[var3] & 255;
+            var4 = NativeLibraryExtractor.incomingPacket.payload[var3] & 255;
             var5 = var4 >> 4;
             var4 = var4 & 15;
             if (10 <= var5) {

@@ -11,7 +11,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
     private InteractiveWidget leftButton;
     private int minThumbHeight;
     private DraggableWidget thumb;
-    static int field_I;
+    static int strikethroughColor;
     private InteractiveWidget rightButton;
     int horizontalPositionQ16;
     private int field_O;
@@ -91,7 +91,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
             break;
           }
           if (guard != 7441) {
-            field_I = -23;
+            strikethroughColor = -23;
           }
           stackIn_23_0 = var2_long;
           return stackIn_23_0;
@@ -109,7 +109,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         }
     }
 
-    final static LegacyAlphaFont a(boolean param0, byte[] param1) {
+    final static LegacyAlphaFont createAlphaFontFromDecodedSprites(boolean guard, byte[] fontBytes) {
         LegacyAlphaFont var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -120,15 +120,15 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (fontBytes == null) {
             stackIn_2_0 = null;
             return (LegacyAlphaFont) (stackIn_2_0);
           }
-          if (param0) {
+          if (guard) {
             var3 = (CharSequence) null;
             ScrollControl.encodeBase37Name((CharSequence) null, 104);
           }
-          var2 = new LegacyAlphaFont(param1, MenuSelectionController.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
+          var2 = new LegacyAlphaFont(fontBytes, MenuSelectionController.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -60);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -136,8 +136,8 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_9_0 = var2_ref;
-          stackIn_9_1 = new StringBuilder().append("vo.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("vo.CA(").append(guard).append(',');
+          if (fontBytes == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -277,7 +277,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         try {
           if (guard != 710) {
             var8 = (byte[]) null;
-            ScrollControl.a(true, (byte[]) null);
+            ScrollControl.createAlphaFontFromDecodedSprites(true, (byte[]) null);
           }
           if (action == 1) {
             if (!this.field_B) {
@@ -732,6 +732,6 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
     }
 
     static {
-        field_I = -1;
+        strikethroughColor = -1;
     }
 }

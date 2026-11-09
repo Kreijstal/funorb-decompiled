@@ -55,7 +55,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_28_0 = RenderBufferSet.passwordIsValidText;
             return stackIn_28_0;
           }
-          if (MessageDialog.a(var5, var3, 82)) {
+          if (MessageDialog.containsForwardOrReverse(var5, var3, 82)) {
             stackIn_19_0 = ValidationStatusWidget.thisPasswordContainsYourText;
             return stackIn_19_0;
           }

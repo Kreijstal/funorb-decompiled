@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextureFormat {
-    static int field_a;
+    static int receivedAccountOpcode;
     static int elapsedTicks;
     int componentCount;
 
-    final static RasterIndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static RasterIndexedSprite loadIndexedSprite(int fileId, int groupId, ResourceArchive archive, int guard) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RasterIndexedSprite stackIn_6_0 = null;
@@ -15,26 +15,26 @@ final class TextureFormat {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!SpriteSheetSupport.decodeSpriteSheet(param2, param0, param1, param3 ^ 3916)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(archive, fileId, groupId, guard ^ 3916)) {
             stackIn_2_0 = null;
             return (RasterIndexedSprite) (stackIn_2_0);
           }
-          if (param3 != -21834) {
+          if (guard != -21834) {
             elapsedTicks = -84;
           }
-          stackIn_6_0 = LegacyOpenGlGraphicsHeap.e(param3 + 34602);
+          stackIn_6_0 = LegacyOpenGlGraphicsHeap.takeDecodedIndexedSprite(guard + 34602);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("iw.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("iw.A(").append(fileId).append(',').append(groupId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -48,6 +48,6 @@ final class TextureFormat {
 
     static {
         elapsedTicks = 0;
-        field_a = -1;
+        receivedAccountOpcode = -1;
     }
 }

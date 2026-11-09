@@ -106,7 +106,7 @@ final class AccountUiBootstrap {
     final static void initializeAccountUi(ResourceArchive extraArchive, boolean unused, byte guard, ResourceArchive fontArchive, ResourceArchive graphicsArchive) {
         AffineTransform3D.emailAvailabilityRequest = DroneDebris.createEmailAvailabilityRequest(false, "");
         AffineTransform3D.emailAvailabilityRequest.complete(113, false);
-        ToolkitFont.a(graphicsArchive, fontArchive, 17474, extraArchive);
+        ToolkitFont.loadCommonUiAssets(graphicsArchive, fontArchive, 17474, extraArchive);
         if (guard < 20) {
           return;
         }

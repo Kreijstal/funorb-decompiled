@@ -289,7 +289,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         try {
           if (source == this.continueButton) {
             LoginIdentifierSupport.retryAccountCreationLogin(false);
-            this.dialog.n(-7);
+            this.dialog.closeDialog(-7);
           }
           if (guard == 710) {
             return;

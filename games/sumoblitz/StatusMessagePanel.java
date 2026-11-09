@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StatusMessagePanel extends WidgetContainer implements WidgetActionListener {
-    private InteractiveWidget[] field_H;
-    private int field_F;
+    private InteractiveWidget[] buttons;
+    private int buttonCount;
     private LegacyBitmapFont field_C;
-    private int[] field_D;
+    private int[] buttonResults;
     private String field_B;
     static boolean field_A;
     private MessageDialog field_G;
 
-    final static void a(byte param0, boolean param1, boolean param2, int param3, int param4, MusicTrack param5) {
+    final static void queueGameMusicTrack(byte guard, boolean param1, boolean param2, int param3, int param4, MusicTrack param5) {
         Object var6 = null;
         RuntimeException var6_ref = null;
         Throwable var7 = null;
@@ -29,9 +29,9 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
             if (GridWidgetContainer.field_B != null) {
               DroneIntroductionOverlay.field_e.queueTrackAtGrid(param2, param3, 7094, param4, GridWidgetContainer.field_B, param1);
             }
-            if (param0 < 98) {
+            if (guard < 98) {
               var8 = (MusicTrack) null;
-              StatusMessagePanel.a((byte) -110, true, true, 90, -86, (MusicTrack) null);
+              StatusMessagePanel.queueGameMusicTrack((byte) -110, true, true, 90, -86, (MusicTrack) null);
             }
           }
           return;
@@ -39,7 +39,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_17_0 = var6_ref;
-          stackIn_17_1 = new StringBuilder().append("lc.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          stackIn_17_1 = new StringBuilder().append("lc.F(").append(guard).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -52,7 +52,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
     StatusMessagePanel(MessageDialog param0, LegacyBitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
-        this.field_F = 0;
+        this.buttonCount = 0;
         try {
           this.field_B = param2;
           this.field_G = param0;
@@ -102,7 +102,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         this.field_C.drawParagraph(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.ascent);
     }
 
-    private final void a(byte param0, int param1) {
+    private final void ensureButtonSlots(byte guard, int slots) {
         InteractiveWidget[] var3;
         int[] var4;
         int var5;
@@ -112,51 +112,51 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         int var5Lifetime1;
         int[] var4Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 <= this.field_F) {
+        if (slots <= this.buttonCount) {
           return;
         }
-        var8 = new InteractiveWidget[param1];
+        var8 = new InteractiveWidget[slots];
         var3 = var8;
-        if (param0 == -124) {
-          var4 = new int[param1];
-          for (var5 = 0; this.field_F > var5; var5++) {
-            var8[var5] = this.field_H[var5];
-            var4[var5] = this.field_D[var5];
+        if (guard == -124) {
+          var4 = new int[slots];
+          for (var5 = 0; this.buttonCount > var5; var5++) {
+            var8[var5] = this.buttons[var5];
+            var4[var5] = this.buttonResults[var5];
           }
-          this.field_H = var3;
-          this.field_F = param1;
-          this.field_D = var4;
+          this.buttons = var3;
+          this.buttonCount = slots;
+          this.buttonResults = var4;
           return;
         }
         var7 = (InteractiveWidget) null;
         this.onAction(-17, -108, (InteractiveWidget) null, 120, -53);
-        var4Lifetime1 = new int[param1];
-        for (var5Lifetime1 = 0; this.field_F > var5Lifetime1; var5Lifetime1++) {
-          var8[var5Lifetime1] = this.field_H[var5Lifetime1];
-          var4Lifetime1[var5Lifetime1] = this.field_D[var5Lifetime1];
+        var4Lifetime1 = new int[slots];
+        for (var5Lifetime1 = 0; this.buttonCount > var5Lifetime1; var5Lifetime1++) {
+          var8[var5Lifetime1] = this.buttons[var5Lifetime1];
+          var4Lifetime1[var5Lifetime1] = this.buttonResults[var5Lifetime1];
         }
-        this.field_H = var3;
-        this.field_F = param1;
-        this.field_D = var4Lifetime1;
+        this.buttons = var3;
+        this.buttonCount = slots;
+        this.buttonResults = var4Lifetime1;
         return;
     }
 
-    final void a(String param0, int param1, boolean param2) {
+    final void addResultButton(String text, int resultCode, boolean guard) {
         int var4_int = 0;
         try {
-          if (!param2) {
+          if (!guard) {
             this.field_B = (String) null;
           }
-          var4_int = this.field_F;
-          this.a((byte) -124, var4_int + 1);
-          this.field_H[var4_int] = this.a(param0, (byte) -123, (WidgetListener) (this));
-          this.field_D[var4_int] = param1;
+          var4_int = this.buttonCount;
+          this.ensureButtonSlots((byte) -124, var4_int + 1);
+          this.buttons[var4_int] = this.appendButton(text, (byte) -123, (WidgetListener) (this));
+          this.buttonResults[var4_int] = resultCode;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lc.G(" + (text != null ? "{...}" : "null") + ',' + resultCode + ',' + guard + ')');
         }
     }
 
-    final InteractiveWidget a(String param0, byte param1, WidgetListener param2) {
+    final InteractiveWidget appendButton(String text, byte guard, WidgetListener listener) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -168,15 +168,15 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -123) {
-            this.a((byte) 29, -68);
+          if (guard != -123) {
+            this.ensureButtonSlots((byte) 29, -68);
           }
-          var4 = new InteractiveWidget(param0, param2);
+          var4 = new InteractiveWidget(text, listener);
           var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = -2 + this.height;
-          this.setBounds(param1 ^ 62, 0, 0, 34 + this.height, this.width);
+          this.setBounds(guard ^ 62, 0, 0, 34 + this.height, this.width);
           var4.setBounds(-57, 7, var5, 30, this.width - 14);
-          this.addChild(var4, param1 + 241);
+          this.addChild(var4, guard + 241);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,13 +184,13 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("lc.H(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(',');
+          if (listener == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -213,25 +213,25 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         try {
           if (guard != 710) {
             var9 = (String) null;
-            this.a((String) null, -37, false);
+            this.addResultButton((String) null, -37, false);
           }
           var6_int = 0;
           while (true) {
-            if (this.field_F <= var6_int) {
+            if (this.buttonCount <= var6_int) {
               return;
             }
-            if (this.field_H[var6_int] != source) {
+            if (this.buttons[var6_int] != source) {
               var6_int++;
               continue;
             }
             break;
           }
-          var7 = this.field_D[var6_int];
+          var7 = this.buttonResults[var6_int];
           if (-1 == var7) {
-            this.field_G.n(-7);
+            this.field_G.closeDialog(-7);
             return;
           }
-          ReflectionCheck.setAccountDialogResult(this.field_D[var6_int], -59);
+          ReflectionCheck.setAccountDialogResult(this.buttonResults[var6_int], -59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

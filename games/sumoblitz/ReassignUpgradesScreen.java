@@ -32,12 +32,12 @@ final class ReassignUpgradesScreen extends MenuScreen {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           DelegatingCanvas.a(IntroMeshProjection.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
-          ForceFieldRingEffect.field_t.a(NextLevelChoiceOverlay.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
-          AccountStatusDialogState.headingFont.a(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
-          MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          QueuedIntArrayRequest.field_k.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
-          GameTrackPlayback.field_a.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          ForceFieldRingEffect.field_t.drawCenteredText(NextLevelChoiceOverlay.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
+          MessageDialog.field_db.drawWrappedText(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.drawWrappedText(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          QueuedIntArrayRequest.field_k.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
+          GameTrackPlayback.field_a.drawCenteredText(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (392 >= var4_int) {
@@ -56,15 +56,15 @@ final class ReassignUpgradesScreen extends MenuScreen {
               stackIn_12_0 = 0;
             }
             var6 = stackIn_12_0;
-            QueuedIntArrayRequest.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
-            GameTrackPlayback.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
+            QueuedIntArrayRequest.field_k.drawCenteredText(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
+            GameTrackPlayback.field_a.drawCenteredText(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
             if (var6 == 0) {
               MusicCrossfadeStream.field_q[var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
               MusicCrossfadeStream.field_q[15 + var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1) + 200, 1, 0, 2);
             }
-            QueuedIntArrayRequest.field_k.a(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
-            GameTrackPlayback.field_a.a(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);
+            QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
+            GameTrackPlayback.field_a.drawCenteredText(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);
             var5++;
             var4_int += 126;
           }

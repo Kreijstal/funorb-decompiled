@@ -43,7 +43,7 @@ final class ScreenNameValidator extends TextInputValidator {
         if (guard < 107) {
           ScreenNameValidator.sendServerIntArrayRead(-41, -16);
         }
-        IsaacPacketBuffer var2 = InwardSparkParticle.field_v;
+        IsaacPacketBuffer var2 = InwardSparkParticle.outgoingPacket;
         var2.writeCipherByte(opcode, 8);
         var2.writeByte((byte) 116, 1);
         var2.writeByte((byte) 107, 2);
@@ -397,7 +397,7 @@ final class ScreenNameValidator extends TextInputValidator {
             stackIn_90_0 = -27;
             stackIn_90_1 = IntIndexHashTable.field_c[var4Lifetime1];
             stackIn_91_2 = !(LegacyOpenGlPostProcessManager.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_90_0, stackIn_90_1, stackIn_91_2);
+            var5Lifetime1 = MessageDialog.displayPromptTextWidthIntGuard(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -407,7 +407,7 @@ final class ScreenNameValidator extends TextInputValidator {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-42, var12, false);
+              var7Lifetime1 = MessageDialog.displayPromptTextWidthIntGuard(-42, var12, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -415,7 +415,7 @@ final class ScreenNameValidator extends TextInputValidator {
             var4_ref_String__Lifetime1 = TickClock.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-120, var13, false);
+              var7Lifetime1Lifetime1 = MessageDialog.displayPromptTextWidthIntGuard(-120, var13, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -443,7 +443,7 @@ final class ScreenNameValidator extends TextInputValidator {
             if (var7Lifetime2 < 0) {
               var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
-              var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, IntIndexHashTable.field_c[var5Lifetime3], true);
+              var8Lifetime1 = MessageDialog.displayPromptTextWidthIntGuard(-116, IntIndexHashTable.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
               var6Lifetime1 = var6Lifetime1 + DroneIntroductionOverlay.field_a;
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3] = new int[4];

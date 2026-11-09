@@ -23,7 +23,7 @@ final class FourStatHiscoreRequest extends IntrusiveNode {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = InwardSparkParticle.field_v;
+          var8 = InwardSparkParticle.outgoingPacket;
           var9 = var8;
           var9.writeCipherByte(opcode, 8);
           var9.position = var9.position + 1;

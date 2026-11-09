@@ -95,7 +95,7 @@ final class AccountNameSupport {
     final static void showLoginForm(byte guard, String identifier, String message) {
         try {
           if (AccountStatusDialogState.activeDialog != null) {
-            AccountStatusDialogState.activeDialog.n(-7);
+            AccountStatusDialogState.activeDialog.closeDialog(-7);
           }
           LoginFormState.activeForm = new LoginForm(identifier, message, false, true, true);
           if (guard < 73) {

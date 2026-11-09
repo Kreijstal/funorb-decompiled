@@ -15,7 +15,7 @@ final class GzipDecompressor {
     }
 
     final static void sendServerDataRead(int guard, int opcode) {
-        IsaacPacketBuffer var2 = InwardSparkParticle.field_v;
+        IsaacPacketBuffer var2 = InwardSparkParticle.outgoingPacket;
         var2.writeCipherByte(opcode, 8);
         var2.writeByte((byte) 106, 1);
         if (guard == 11044) {

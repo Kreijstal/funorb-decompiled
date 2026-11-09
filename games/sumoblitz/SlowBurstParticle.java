@@ -58,8 +58,8 @@ final class SlowBurstParticle extends TimedSceneEffect {
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
         DirectByteArrayStorage.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{33}, 12, 440);
-        SocketJs5Client.field_q = (int)((double)LoginTextResources.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
-        int var1 = (int)((double)LoginTextResources.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
+        SocketJs5Client.field_q = (int)((double)LoginTextResources.field_b.stringWidth(GameClientShell.menuActionLabels[12], 0) * 1.5);
+        int var1 = (int)((double)LoginTextResources.field_b.stringWidth(GameClientShell.menuActionLabels[13], 0) * 1.5);
         if (SocketJs5Client.field_q < var1) {
           SocketJs5Client.field_q = var1;
         }
@@ -141,7 +141,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           if (guard != -77) {
             return;
           }
-          var13 = NativeLibraryExtractor.field_a;
+          var13 = NativeLibraryExtractor.incomingPacket;
           var15 = var13;
           var2 = var15.readUnsignedByte(-31302);
           var3 = (FourStatHiscoreRequest) (EmailValidationError.field_a.first(122));

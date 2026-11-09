@@ -5,7 +5,7 @@ import java.io.*;
 
 final class NativeLibraryExtractor {
     static IntrusiveDeque hudMessages;
-    static IsaacPacketBuffer field_a;
+    static IsaacPacketBuffer incomingPacket;
 
     final static boolean spawnNextWaveGroup(int guard) {
         int var5 = 0;
@@ -191,10 +191,10 @@ final class NativeLibraryExtractor {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          field_a = (IsaacPacketBuffer) null;
+          incomingPacket = (IsaacPacketBuffer) null;
         }
         hudMessages = null;
-        field_a = null;
+        incomingPacket = null;
     }
 
     static {

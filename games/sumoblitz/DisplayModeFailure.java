@@ -10,7 +10,7 @@ final class DisplayModeFailure {
 
     final static void showDisplayNameForm(byte guard) {
         if (null != AccountStatusDialogState.activeDialog) {
-          AccountStatusDialogState.activeDialog.n(-7);
+          AccountStatusDialogState.activeDialog.closeDialog(-7);
           if (guard == -49) {
             SecondaryNodeQueue.field_a = new DisplayNameForm();
             SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);

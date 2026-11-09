@@ -46,7 +46,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (NativeLibraryExtractor.field_a.position >= param1) {
+          if (NativeLibraryExtractor.incomingPacket.position >= param1) {
             return true;
           }
           if (null == DisplayModeConfirmationDialog.accountSocket) {
@@ -65,16 +65,16 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
               return false;
             }
-            if (-NativeLibraryExtractor.field_a.position + param1 < var2_int) {
-              var2_int = -NativeLibraryExtractor.field_a.position + param1;
+            if (-NativeLibraryExtractor.incomingPacket.position + param1 < var2_int) {
+              var2_int = -NativeLibraryExtractor.incomingPacket.position + param1;
             }
-            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, NativeLibraryExtractor.field_a.position, var2_int, NativeLibraryExtractor.field_a.payload);
+            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, NativeLibraryExtractor.incomingPacket.position, var2_int, NativeLibraryExtractor.incomingPacket.payload);
             CacheReferenceNode.lastServerReadMillis = IntroMeshResources.monotonicTimeMillis(-47);
-            NativeLibraryExtractor.field_a.position = NativeLibraryExtractor.field_a.position + var2_int;
-            if (NativeLibraryExtractor.field_a.position < param1) {
+            NativeLibraryExtractor.incomingPacket.position = NativeLibraryExtractor.incomingPacket.position + var2_int;
+            if (NativeLibraryExtractor.incomingPacket.position < param1) {
               return false;
             }
-            NativeLibraryExtractor.field_a.position = 0;
+            NativeLibraryExtractor.incomingPacket.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

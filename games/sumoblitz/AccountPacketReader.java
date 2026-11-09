@@ -81,20 +81,20 @@ final class AccountPacketReader {
           var4 = 96 / ((guard + 72) / 53);
           var2_long = IntroMeshResources.monotonicTimeMillis(-45);
           if (0 != ByteArrayPool.field_c &&
-            IntroFinalFrameResources.field_b < 0) {
+            IntroFinalFrameResources.pendingAccountOpcode < 0) {
             var5_ref_ub = (DelayedInboundPacket) (ScoreMultiplierTable.field_b.first(-99));
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.deliveryTimeMillis) {
               var5_ref_ub.unlink(false);
-              HardwareBufferSet.field_d = var5_ref_ub.payload.length;
-              NativeLibraryExtractor.field_a.position = 0;
-              for (var6_int = 0; var6_int < HardwareBufferSet.field_d; var6_int++) {
-                NativeLibraryExtractor.field_a.payload[var6_int] = var5_ref_ub.payload[var6_int];
+              HardwareBufferSet.accountPacketLength = var5_ref_ub.payload.length;
+              NativeLibraryExtractor.incomingPacket.position = 0;
+              for (var6_int = 0; var6_int < HardwareBufferSet.accountPacketLength; var6_int++) {
+                NativeLibraryExtractor.incomingPacket.payload[var6_int] = var5_ref_ub.payload[var6_int];
               }
               ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
               RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
-              ContentTransitionDialog.field_Q = TextureFormat.field_a;
-              TextureFormat.field_a = var5_ref_ub.opcode;
+              ContentTransitionDialog.field_Q = TextureFormat.receivedAccountOpcode;
+              TextureFormat.receivedAccountOpcode = var5_ref_ub.opcode;
               return true;
             }
           }
@@ -110,17 +110,17 @@ final class AccountPacketReader {
           }
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(guard).append(')').toString());
         }
-        stackIn_17_0 = IntroFinalFrameResources.field_b;
+        stackIn_17_0 = IntroFinalFrameResources.pendingAccountOpcode;
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
-              NativeLibraryExtractor.field_a.position = 0;
+              NativeLibraryExtractor.incomingPacket.position = 0;
               if (!OpenGlIndexBuffer.b(-1, 1)) {
                 return false;
               }
-              IntroFinalFrameResources.field_b = NativeLibraryExtractor.field_a.readCipherByte(255);
-              NativeLibraryExtractor.field_a.position = 0;
-              HardwareBufferSet.field_d = packetLengths[IntroFinalFrameResources.field_b];
+              IntroFinalFrameResources.pendingAccountOpcode = NativeLibraryExtractor.incomingPacket.readCipherByte(255);
+              NativeLibraryExtractor.incomingPacket.position = 0;
+              HardwareBufferSet.accountPacketLength = packetLengths[IntroFinalFrameResources.pendingAccountOpcode];
             }
             if (!FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
               return false;
@@ -128,9 +128,9 @@ final class AccountPacketReader {
             if (ByteArrayPool.field_c == 0) {
               ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
               RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
-              ContentTransitionDialog.field_Q = TextureFormat.field_a;
-              TextureFormat.field_a = IntroFinalFrameResources.field_b;
-              IntroFinalFrameResources.field_b = -1;
+              ContentTransitionDialog.field_Q = TextureFormat.receivedAccountOpcode;
+              TextureFormat.receivedAccountOpcode = IntroFinalFrameResources.pendingAccountOpcode;
+              IntroFinalFrameResources.pendingAccountOpcode = -1;
               return true;
             }
             var5 = ByteArrayPool.field_c;
@@ -140,13 +140,13 @@ final class AccountPacketReader {
                 var5 = 0;
               }
             }
-            var6 = new DelayedInboundPacket((long)var5 + var2_long, IntroFinalFrameResources.field_b, new byte[HardwareBufferSet.field_d]);
-            for (var7 = 0; HardwareBufferSet.field_d > var7; var7++) {
-              var6.payload[var7] = NativeLibraryExtractor.field_a.payload[var7];
+            var6 = new DelayedInboundPacket((long)var5 + var2_long, IntroFinalFrameResources.pendingAccountOpcode, new byte[HardwareBufferSet.accountPacketLength]);
+            for (var7 = 0; HardwareBufferSet.accountPacketLength > var7; var7++) {
+              var6.payload[var7] = NativeLibraryExtractor.incomingPacket.payload[var7];
             }
             ScoreMultiplierTable.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
-            IntroFinalFrameResources.field_b = -1;
-            stackIn_17_0 = IntroFinalFrameResources.field_b;
+            IntroFinalFrameResources.pendingAccountOpcode = -1;
+            stackIn_17_0 = IntroFinalFrameResources.pendingAccountOpcode;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

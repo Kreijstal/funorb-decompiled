@@ -30,7 +30,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             return;
           }
           DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, guard);
-          AccountStatusDialogState.headingFont.a(AccountStatusDialogState.continueToNextLevelText, -1, -16777216, 150, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(AccountStatusDialogState.continueToNextLevelText, -1, -16777216, 150, 320, 0);
           var3_int = 45;
           var4 = 0;
           while (var3_int < 600) {
@@ -39,9 +39,9 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             var7 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 250, 200, 1, true);
             if (this.hoveredOption == var4) {
-              ForceFieldRingEffect.field_t.a(NextLevelChoiceLabels.choices[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
+              ForceFieldRingEffect.field_t.drawCenteredText(NextLevelChoiceLabels.choices[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
             } else {
-              AccountStatusDialogState.headingFont.a(NextLevelChoiceLabels.choices[var4], -1, -16777216, 260, 125 + var3_int, 0);
+              AccountStatusDialogState.headingFont.drawCenteredText(NextLevelChoiceLabels.choices[var4], -1, -16777216, 260, 125 + var3_int, 0);
             }
             var4++;
             var3_int += 300;

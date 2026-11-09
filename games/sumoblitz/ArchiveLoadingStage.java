@@ -12,7 +12,7 @@ final class ArchiveLoadingStage {
     private int requirementCount;
     private ArchiveLoadRequirement[] requirements;
     static String highText;
-    static int field_i;
+    static int textColor;
     static SpriteData[] field_b;
 
     final static void b(byte param0) {
@@ -90,7 +90,7 @@ final class ArchiveLoadingStage {
     }
 
     final static void sendServerDataWrite(ServerDataWriteRequest request, int guard, int opcode) {
-        IsaacPacketBuffer var5 = InwardSparkParticle.field_v;
+        IsaacPacketBuffer var5 = InwardSparkParticle.outgoingPacket;
         IsaacPacketBuffer var3 = var5;
         var5.writeCipherByte(opcode, 8);
         var5.position = var5.position + 1;
@@ -202,6 +202,6 @@ final class ArchiveLoadingStage {
 
     static {
         highText = "High";
-        field_i = 0;
+        textColor = 0;
     }
 }

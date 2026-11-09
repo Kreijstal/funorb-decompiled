@@ -9,7 +9,7 @@ class InteractiveWidget extends UiWidget {
     private boolean focusable;
     private boolean focused;
     boolean selected;
-    static boolean[] field_z;
+    static boolean[] enabledAccountPackets;
     boolean enabled;
 
     boolean requestFocus(UiWidget root, byte guard) {
@@ -276,7 +276,7 @@ class InteractiveWidget extends UiWidget {
     }
 
     public static void releaseStatics(byte param0) {
-        field_z = null;
+        enabledAccountPackets = null;
         returnToMainMenuText = null;
         int var1 = 124 % ((param0 + 16) / 53);
     }
@@ -325,6 +325,6 @@ class InteractiveWidget extends UiWidget {
 
     static {
         returnToMainMenuText = "Return to main menu";
-        field_z = new boolean[64];
+        enabledAccountPackets = new boolean[64];
     }
 }

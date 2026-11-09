@@ -11,12 +11,12 @@ abstract class ShaderEffect {
         int var2 = -35 / ((guard - 41) / 46);
     }
 
-    final static void a(boolean param0) {
+    final static void releaseKeyboardState(boolean guard) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == EmailCredentials.field_e) {
-          if (!param0) {
+          if (!guard) {
             return;
           }
           ShaderEffect.releaseStatics(106);
@@ -26,7 +26,7 @@ abstract class ShaderEffect {
         synchronized (var1) {
           EmailCredentials.field_e = null;
         }
-        if (param0) {
+        if (guard) {
           ShaderEffect.releaseStatics(106);
         }
     }
@@ -123,7 +123,7 @@ abstract class ShaderEffect {
         }
     }
 
-    final static RasterIndexedSprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
+    final static RasterIndexedSprite[] loadNamedIndexedSprites(String fileName, ResourceArchive archive, int guard, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -137,31 +137,31 @@ abstract class ShaderEffect {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 < 28) {
+          if (guard < 28) {
             enterTheNameYouText = (String) null;
           }
-          var4_int = param1.groupId(0, param3);
-          var5 = param1.fileId(var4_int, param0, (byte) 127);
-          stackIn_3_0 = LegacyOpenGlTextureCache.loadIndexedSprites(var4_int, -1, var5, param1);
+          var4_int = archive.groupId(0, groupName);
+          var5 = archive.fileId(var4_int, fileName, (byte) 127);
+          stackIn_3_0 = LegacyOpenGlTextureCache.loadIndexedSprites(var4_int, -1, var5, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("rq.S(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',');
+          if (groupName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

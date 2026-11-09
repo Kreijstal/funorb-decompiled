@@ -8,13 +8,13 @@ abstract class RasterBuffer {
     java.awt.Image image;
     static QuickChatCommand field_i;
     static int[] field_a;
-    static int[] field_e;
+    static int[] accountPacketLengths;
     static String quitText;
     int height;
 
     public static void releaseStatics(byte param0) {
         field_a = null;
-        field_e = null;
+        accountPacketLengths = null;
         quitText = null;
         invalidPasswordText = null;
         field_i = null;
@@ -47,7 +47,7 @@ abstract class RasterBuffer {
         StatusMessagePanel.field_A = false;
         SocketJs5Client.field_s = null;
         if (ReconnectState.reconnecting) {
-          AccountStatusDialogState.activeDialog.e(false);
+          AccountStatusDialogState.activeDialog.showConnectionRestored(false);
           if (param0 == 2) {
             return;
           }
@@ -63,7 +63,7 @@ abstract class RasterBuffer {
           }
           SocketJs5Client.field_s = HardwareReflectionEffect.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
         }
-        AccountStatusDialogState.activeDialog.n(param0 ^ -5);
+        AccountStatusDialogState.activeDialog.closeDialog(param0 ^ -5);
         SoftwareRenderBuffer.a(5178);
         if (param0 == 2) {
           return;
@@ -114,7 +114,7 @@ abstract class RasterBuffer {
     static {
         invalidPasswordText = "Invalid password.";
         quitText = "Quit";
-        field_e = new int[256];
+        accountPacketLengths = new int[256];
         field_i = new QuickChatCommand(1, 2, 2, 0);
     }
 }

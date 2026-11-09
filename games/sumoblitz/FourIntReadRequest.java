@@ -32,7 +32,7 @@ final class FourIntReadRequest extends IntrusiveNode {
           if (guard != -65) {
             PERSPECTIVE = (ProjectionMode) null;
           }
-          var3 = InwardSparkParticle.field_v;
+          var3 = InwardSparkParticle.outgoingPacket;
           var3.writeCipherByte(opcode, 8);
           var3.writeByte((byte) 103, 5);
           var3.writeByte((byte) 46, 0);

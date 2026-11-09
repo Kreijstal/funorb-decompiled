@@ -10,7 +10,7 @@ final class FallbackShaderEffect extends ShaderEffect {
     final void setParameters(int guard, int parameters1, int parameters0) {
         try {
           if (guard != 34023) {
-            FallbackShaderEffect.a(-3, -84, 61, -17, 112);
+            FallbackShaderEffect.createBeveledPanelSprites(-3, -84, 61, -17, 112);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.F(" + guard + ',' + parameters1 + ',' + parameters0 + ')');
@@ -3139,7 +3139,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createBeveledPanelSprites(int darkColor, int borderSize, int guard, int backgroundColor, int lightColor) {
         Sprite dupTemp$2 = null;
         Sprite dupTemp$3 = null;
         Sprite[] var5 = null;
@@ -3148,25 +3148,25 @@ final class FallbackShaderEffect extends ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new Sprite[9];
-          dupTemp$2 = OpenGlAssemblyProgram.createSolidSprite(param1, param4, GzipDecompressor.bitwiseXor(param2, 3));
+          dupTemp$2 = OpenGlAssemblyProgram.createSolidSprite(borderSize, lightColor, GzipDecompressor.bitwiseXor(guard, 3));
           var5[6] = dupTemp$2;
           var5[3] = dupTemp$2;
           var5[2] = dupTemp$2;
           var5[1] = dupTemp$2;
-          var5[param2] = dupTemp$2;
-          dupTemp$3 = OpenGlAssemblyProgram.createSolidSprite(param1, param0, 3);
+          var5[guard] = dupTemp$2;
+          dupTemp$3 = OpenGlAssemblyProgram.createSolidSprite(borderSize, darkColor, 3);
           var5[8] = dupTemp$3;
           var5[7] = dupTemp$3;
           var5[5] = dupTemp$3;
-          if (0 != param3) {
-            var5[4] = OpenGlAssemblyProgram.createSolidSprite(64, param3, param2 + 3);
+          if (0 != backgroundColor) {
+            var5[4] = OpenGlAssemblyProgram.createSolidSprite(64, backgroundColor, guard + 3);
           }
           stackIn_5_0 = var5;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5_ref), "ni.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var5_ref), "ni.H(" + darkColor + ',' + borderSize + ',' + guard + ',' + backgroundColor + ',' + lightColor + ')');
         }
     }
 

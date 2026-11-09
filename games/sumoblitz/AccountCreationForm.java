@@ -195,7 +195,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String var4_ref_StringLifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1 = NativeLibraryExtractor.field_a;
+          var1 = NativeLibraryExtractor.incomingPacket;
           var2 = var1.readUnsignedByte(-31302);
           if (var2 == 0) {
             if (GpuDataType.field_b == null) {

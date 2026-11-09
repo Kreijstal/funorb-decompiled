@@ -48,7 +48,7 @@ abstract class SelectionOverlay {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.c((byte) -2), GameApplet.a(param0 - 3));
+        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.c((byte) -2), GameApplet.isNameAvailabilityPending(param0 - 3));
     }
 
     final void hide(byte guard) {

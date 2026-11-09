@@ -8,7 +8,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     static int[] field_q;
     static AccountRequestState PENDING;
 
-    final static void c(byte param0) {
+    final static void clearIntroFaceGroups(byte guard) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -32,7 +32,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             var5[var2++] = 0;
             var5[var2++] = 0;
           }
-          if (param0 == 71) {
+          if (guard == 71) {
             return;
           }
           field_q = (int[]) null;
@@ -40,11 +40,11 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "ad.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "ad.B(" + guard + ')');
         }
     }
 
-    final static void c(int param0) {
+    final static void initializeDefaultMenus(int backScreenId) {
         IntroLogoRenderer.field_a[4] = new int[]{5};
         LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
         DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
@@ -58,7 +58,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          AffineTransform3D.field_j = param0;
+          AffineTransform3D.field_j = backScreenId;
           return;
         }
         if (IntroductionOverlaySupport.supportsFullscreen((byte) -29, FourIntUpdateRequest.platformDispatcher)) {
@@ -74,7 +74,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          AffineTransform3D.field_j = param0;
+          AffineTransform3D.field_j = backScreenId;
           return;
         }
         if (!(2 > Bzip2State.field_j)) {
@@ -85,7 +85,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
-        AffineTransform3D.field_j = param0;
+        AffineTransform3D.field_j = backScreenId;
     }
 
     final static byte[] copyByteRange(byte[] bytes, int length, int offset, byte guard) {
@@ -133,9 +133,9 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         EMPTY = null;
     }
 
-    final static RasterIndexedSprite e(int param0) {
+    final static RasterIndexedSprite takeDecodedIndexedSprite(int guard) {
         RasterIndexedSprite var1 = null;
-        if (param0 == 12768) {
+        if (guard == 12768) {
           var1 = new RasterIndexedSprite(DisplayModeFailure.spriteSheetWidth, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
@@ -143,7 +143,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         return (RasterIndexedSprite) null;
     }
 
-    final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
+    final static void renderStartupCanvas(byte guard, java.awt.Canvas canvas, boolean unused) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -154,7 +154,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3_int = 55 / ((25 - param0) / 42);
+          var3_int = 55 / ((25 - guard) / 42);
           if (TextureCoordinateGeneration.field_a < 10) {
             var4 = 0;
             if (CubeMapSource.field_a) {
@@ -167,27 +167,27 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
             SoftwareRasterizer.clear();
             IntroLogoRenderer.drawIntroLogo(240, 320, 256);
-            IterableNodeHashTable.a(0, 0, param1, (byte) 125);
+            IterableNodeHashTable.a(0, 0, canvas, (byte) 125);
             return;
           }
           if (0 != LoginDialogNavigation.field_a) {
-            SoftwareRenderBuffer.a(-97, param1);
+            SoftwareRenderBuffer.a(-97, canvas);
             return;
           }
-          LoginDialogNavigation.drawAccountDialogs(false, (byte) -71, param2);
-          IterableNodeHashTable.a(0, 0, param1, (byte) 125);
+          LoginDialogNavigation.drawAccountDialogs(false, (byte) -71, unused);
+          IterableNodeHashTable.a(0, 0, canvas, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("ad.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("ad.C(").append(guard).append(',');
+          if (canvas == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(unused).append(')').toString());
         }
     }
 
@@ -195,8 +195,8 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         this.heap = new jaclib.memory.heap.NativeHeap(capacity);
     }
 
-    final void a(int param0) {
-        if (param0 != -4009) {
+    final void close(int guard) {
+        if (guard != -4009) {
           return;
         }
         this.heap.a();

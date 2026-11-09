@@ -31,7 +31,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
-          AccountStatusDialogState.headingFont.a(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
           if (guard != 22707) {
             ResetStatsConfirmationOverlay.a(73, 17, -78);
           }
@@ -43,9 +43,9 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             var7 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
             if (var4 != this.hoveredOption) {
-              AccountStatusDialogState.headingFont.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
+              AccountStatusDialogState.headingFont.drawCenteredText(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
-              ForceFieldRingEffect.field_t.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), guard ^ 22707);
+              ForceFieldRingEffect.field_t.drawCenteredText(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), guard ^ 22707);
             }
             var3_int += 300;
             var4++;

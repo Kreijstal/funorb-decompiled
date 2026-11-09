@@ -160,43 +160,43 @@ class UsernameCredentials extends LoginCredentials {
               } else {
                 LegacyOpenGlBuffer.field_d = MouseInputHandler.credentialsForLogin(false, username, password, (byte) -94);
               }
-              InwardSparkParticle.field_v.position = 0;
-              InwardSparkParticle.field_v.writeByte((byte) 42, 14);
-              InwardSparkParticle.field_v.writeByte((byte) 96, LegacyOpenGlBuffer.field_d.credentialType((byte) 126).wireId);
-              MessageDialog.a(0, -1);
+              InwardSparkParticle.outgoingPacket.position = 0;
+              InwardSparkParticle.outgoingPacket.writeByte((byte) 42, 14);
+              InwardSparkParticle.outgoingPacket.writeByte((byte) 96, LegacyOpenGlBuffer.field_d.credentialType((byte) 126).wireId);
+              MessageDialog.flushAccountWrites(0, -1);
               TextCaretLayout.accountPhase = LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY;
             }
             if (TextCaretLayout.accountPhase == LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
-              var6_int = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+              var6_int = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               if (var6_int != 0) {
-                TextureFormat.field_a = var6_int;
-                HardwareBufferSet.field_d = -1;
+                TextureFormat.receivedAccountOpcode = var6_int;
+                HardwareBufferSet.accountPacketLength = -1;
                 TextCaretLayout.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
               } else {
                 TextCaretLayout.accountPhase = OpenGlVertexBuffer.WAIT_SERVER_SEED;
               }
-              NativeLibraryExtractor.field_a.position = 0;
+              NativeLibraryExtractor.incomingPacket.position = 0;
             }
             if (TextCaretLayout.accountPhase == OpenGlVertexBuffer.WAIT_SERVER_SEED &&
               OpenGlIndexBuffer.b(-1, 8)) {
-              HardwareUnlitEffect.field_g = NativeLibraryExtractor.field_a.readLong((byte) 127);
-              NativeLibraryExtractor.field_a.position = 0;
+              HardwareUnlitEffect.field_g = NativeLibraryExtractor.incomingPacket.readLong((byte) 127);
+              NativeLibraryExtractor.incomingPacket.position = 0;
               LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
               TextCaretLayout.accountPhase = LoginMethodPreference.WAIT_LOGIN_REPLY;
             }
             boolean decompiledFrameRemainder0 = true;
             if (TextCaretLayout.accountPhase == LoginMethodPreference.WAIT_LOGIN_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
-              var6_intLifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-              TextureFormat.field_a = var6_intLifetime1;
-              NativeLibraryExtractor.field_a.position = 0;
+              var6_intLifetime1 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+              TextureFormat.receivedAccountOpcode = var6_intLifetime1;
+              NativeLibraryExtractor.incomingPacket.position = 0;
               SoftwareRenderContext.field_b = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   TextCaretLayout.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
-                  HardwareBufferSet.field_d = -1;
+                  HardwareBufferSet.accountPacketLength = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -208,17 +208,17 @@ class UsernameCredentials extends LoginCredentials {
               }
               if (decompiledFrameRemainder0) {
                 TextCaretLayout.accountPhase = MusicVoice.WAIT_LOGIN_DETAILS;
-                HardwareBufferSet.field_d = -1;
+                HardwareBufferSet.accountPacketLength = -1;
               }
             }
             if (TextCaretLayout.accountPhase == MusicVoice.WAIT_LOGIN_DETAILS &&
               FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
-              StringBuilderSupport.field_a = NativeLibraryExtractor.field_a.readLong((byte) 114);
-              Bzip2State.field_j = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-              NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-              HardwareRidgedWaterNoise.field_x = NativeLibraryExtractor.field_a.readUnsignedShort(255);
-              var6 = NativeLibraryExtractor.field_a.readNullableString((byte) 92);
-              var7 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+              StringBuilderSupport.field_a = NativeLibraryExtractor.incomingPacket.readLong((byte) 114);
+              Bzip2State.field_j = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+              NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+              HardwareRidgedWaterNoise.field_x = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
+              var6 = NativeLibraryExtractor.incomingPacket.readNullableString((byte) 92);
+              var7 = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               if ((var7 & 1) != 0) {
                 MarkerTrackWidget.persistRandomDataAndAdvance(24);
               }
@@ -231,19 +231,19 @@ class UsernameCredentials extends LoginCredentials {
                 }
               }
               if (ArchiveLoadRequirement.field_d) {
-                NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-                NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-                NativeLibraryExtractor.field_a.readInt(true);
-                IsaacPacketBuffer.field_y = NativeLibraryExtractor.field_a.readUnsignedShort(255);
+                NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+                NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
+                NativeLibraryExtractor.incomingPacket.readInt(true);
+                IsaacPacketBuffer.field_y = NativeLibraryExtractor.incomingPacket.readUnsignedShort(255);
                 WidgetStateStyle.field_b = new byte[IsaacPacketBuffer.field_y];
                 for (var8 = 0; var8 < IsaacPacketBuffer.field_y; var8++) {
-                  WidgetStateStyle.field_b[var8] = NativeLibraryExtractor.field_a.readByte(true);
+                  WidgetStateStyle.field_b[var8] = NativeLibraryExtractor.incomingPacket.readByte(true);
                 }
               }
-              QueuedIntArrayRequest.field_o = NativeLibraryExtractor.field_a.readCp1252String(-1);
+              QueuedIntArrayRequest.field_o = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
               var11 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
-              Js5ClientState.field_c = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+              Js5ClientState.field_c = NativeLibraryExtractor.incomingPacket.readUnsignedByte(-31302);
               TextCaretLayout.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
                 if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
@@ -275,29 +275,29 @@ class UsernameCredentials extends LoginCredentials {
               if (HardwareRidgedWaterNoise.field_x > 0) {
                 NineSlicePanel.field_a = true;
               }
-              InwardSparkParticle.field_v.initializeCipher((byte) 64, RendererSession.isaacSeed);
+              InwardSparkParticle.outgoingPacket.initializeCipher((byte) 64, RendererSession.isaacSeed);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 RendererSession.isaacSeed[var8Lifetime1] = RendererSession.isaacSeed[var8Lifetime1] + 50;
               }
-              NativeLibraryExtractor.field_a.initializeCipher((byte) 123, RendererSession.isaacSeed);
-              stackIn_73_0 = TextureFormat.field_a;
+              NativeLibraryExtractor.incomingPacket.initializeCipher((byte) 123, RendererSession.isaacSeed);
+              stackIn_73_0 = TextureFormat.receivedAccountOpcode;
               return stackIn_73_0;
             }
             if (TextCaretLayout.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
               FourIntUpdateRequest.readAccountPacketBody((byte) 119)) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
-              if (TextureFormat.field_a == 7 &&
+              if (TextureFormat.receivedAccountOpcode == 7 &&
                 !LimitedRandomAccessFile.field_g) {
                 LimitedRandomAccessFile.field_g = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
-              if (7 == TextureFormat.field_a) {
-                TextureFormat.field_a = 3;
+              if (7 == TextureFormat.receivedAccountOpcode) {
+                TextureFormat.receivedAccountOpcode = 3;
               }
-              MouseWheelInput.field_c = NativeLibraryExtractor.field_a.readCp1252String(-1);
+              MouseWheelInput.field_c = NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
               LimitedRandomAccessFile.field_g = false;
-              stackIn_83_0 = TextureFormat.field_a;
+              stackIn_83_0 = TextureFormat.receivedAccountOpcode;
               return stackIn_83_0;
             }
             if (DisplayModeConfirmationDialog.accountSocket == null) {

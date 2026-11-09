@@ -64,24 +64,24 @@ final class DroneIntroductionOverlay {
         int var4 = 200;
         int var5 = 160;
         String var9 = LimitedRandomAccessFile.droneDescriptions[this.droneType * 2];
-        QueuedIntArrayRequest.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
-        GameTrackPlayback.field_a.a(var9, -1, -1, var4, var3_int, 0);
+        QueuedIntArrayRequest.field_k.drawCenteredText(var9, -11753985, -1, var4, var3_int, 0);
+        GameTrackPlayback.field_a.drawCenteredText(var9, -1, -1, var4, var3_int, 0);
         if (guard != -4475) {
           return;
         }
         try {
           var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.droneType + 1];
           var3_int -= 10;
-          MessageDialog.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, guard - 4312, var10, (SpriteMask) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.drawWrappedText(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, guard - 4312, var10, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.drawWrappedText(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (SpriteMask) null, 1, 0);
           if (this.dismissalDelay <= 0) {
             var4 += 115;
             var3_int -= 50;
             var11 = IntNode.clickToContinueText;
             var7 = -this.dismissalDelay << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
-            QueuedIntArrayRequest.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
-            GameTrackPlayback.field_a.a(var11, -1, -1, var4, var3_int, 0);
+            QueuedIntArrayRequest.field_k.drawCenteredText(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
+            GameTrackPlayback.field_a.drawCenteredText(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');

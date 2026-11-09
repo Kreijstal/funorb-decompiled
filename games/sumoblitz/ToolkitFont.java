@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ToolkitFont {
-    private FontMetrics field_b;
-    private GraphicsToolkit field_a;
+    private FontMetrics metrics;
+    private GraphicsToolkit toolkit;
 
-    final void a(int param0, int param1, int param2, String param3, byte param4, int param5) {
-        if (param4 > -7) {
+    final void drawText(int baselineY, int x, int color, String text, byte guard, int shadowColor) {
+        if (guard > -7) {
           return;
         }
-        if (param3 == null) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param2, param5, 60);
-          this.a(-274, param0, (ToolkitSprite[]) null, param1, 0, 0, param3, (int[]) null, (SpriteMask) null);
+          this.resetTextStyle(color, shadowColor, 60);
+          this.drawTextRun(-274, baselineY, (ToolkitSprite[]) null, x, 0, 0, text, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + baselineY + ',' + x + ',' + color + ',' + (text != null ? "{...}" : "null") + ',' + guard + ',' + shadowColor + ')');
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, int[] param5, ToolkitSprite[] param6, int param7, int param8, int param9, int param10, int param11, String param12, SpriteMask param13, int param14, int param15) {
+    final int drawWrappedText(int height, int color, int maskX, int width, int x, int[] spriteBaselineOffsets, ToolkitSprite[] inlineSprites, int y, int shadowColor, int maskY, int lineHeight, int guard, String text, SpriteMask mask, int horizontalAlignment, int verticalAlignment) {
         RuntimeException var17 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -34,59 +34,59 @@ abstract class ToolkitFont {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param11 != -8787) {
-            this.field_a = (GraphicsToolkit) null;
+          if (guard != -8787) {
+            this.toolkit = (GraphicsToolkit) null;
           }
-          stackIn_3_0 = this.a(param13, param6, param2, param5, param12, param0, param1, param10, 0, param8, param4, param3, param14, param9, 92, param15, param7);
+          stackIn_3_0 = this.drawParagraph(mask, inlineSprites, maskX, spriteBaselineOffsets, text, height, color, lineHeight, 0, shadowColor, x, width, horizontalAlignment, maskY, 92, verticalAlignment, y);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var17 = decompiledCaughtException;
           stackIn_6_0 = var17;
-          stackIn_6_1 = new StringBuilder().append("da.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_6_1 = new StringBuilder().append("da.P(").append(height).append(',').append(color).append(',').append(maskX).append(',').append(width).append(',').append(x).append(',');
+          if (spriteBaselineOffsets == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param6 == null) {
+          if (inlineSprites == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
-          if (param12 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(y).append(',').append(shadowColor).append(',').append(maskY).append(',').append(lineHeight).append(',').append(guard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param13 == null) {
+          if (mask == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(horizontalAlignment).append(',').append(verticalAlignment).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, int param4, int param5) {
-        if (param2 == null) {
+    final void drawRightAlignedText(int shadowColor, int rightX, String text, int baselineY, int color, int guard) {
+        if (text == null) {
           return;
         }
         try {
-          if (param5 < 40) {
-            this.field_a = (GraphicsToolkit) null;
+          if (guard < 40) {
+            this.toolkit = (GraphicsToolkit) null;
           }
-          this.a(param4, param0, 60);
-          this.a(-274, param3, (ToolkitSprite[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (SpriteMask) null);
+          this.resetTextStyle(color, shadowColor, 60);
+          this.drawTextRun(-274, baselineY, (ToolkitSprite[]) null, -this.metrics.stringWidth(text, 0) + rightX, 0, 0, text, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + shadowColor + ',' + rightX + ',' + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + color + ',' + guard + ')');
         }
     }
 
-    private final void a(String param0, int param1) {
+    private final void applyStyleTag(String tag, int guard) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -102,70 +102,70 @@ abstract class ToolkitFont {
         CharSequence var10 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3_int = -2 / ((param1 - 31) / 40);
+          var3_int = -2 / ((guard - 31) / 40);
           try {
-            if (param0.startsWith("col=")) {
-              var6 = (CharSequence) ((Object) param0.substring(4));
-              ArchiveLoadingStage.field_i = ArchiveLoadingStage.field_i & -16777216 | 16777215 & AccountUiBootstrap.parseInt((byte) -73, var6, 16);
+            if (tag.startsWith("col=")) {
+              var6 = (CharSequence) ((Object) tag.substring(4));
+              ArchiveLoadingStage.textColor = ArchiveLoadingStage.textColor & -16777216 | 16777215 & AccountUiBootstrap.parseInt((byte) -73, var6, 16);
             } else {
-              if (param0.equals("/col")) {
-                ArchiveLoadingStage.field_i = 16777215 & PacketBuffer.field_l | -16777216 & ArchiveLoadingStage.field_i;
+              if (tag.equals("/col")) {
+                ArchiveLoadingStage.textColor = 16777215 & PacketBuffer.defaultTextColor | -16777216 & ArchiveLoadingStage.textColor;
               }
             }
-            if (!param0.startsWith("argb=")) {
-              if (!param0.equals("/argb")) {
-                if (!param0.startsWith("str=")) {
-                  if (!param0.equals("str")) {
-                    if (!param0.equals("/str")) {
-                      if (!param0.startsWith("u=")) {
-                        if (!param0.equals("u")) {
-                          if (!param0.equals("/u")) {
-                            if (param0.equalsIgnoreCase("shad=-1")) {
-                              LoginMethodPreference.field_b = 0;
+            if (!tag.startsWith("argb=")) {
+              if (!tag.equals("/argb")) {
+                if (!tag.startsWith("str=")) {
+                  if (!tag.equals("str")) {
+                    if (!tag.equals("/str")) {
+                      if (!tag.startsWith("u=")) {
+                        if (!tag.equals("u")) {
+                          if (!tag.equals("/u")) {
+                            if (tag.equalsIgnoreCase("shad=-1")) {
+                              LoginMethodPreference.textShadowColor = 0;
                             } else {
-                              if (param0.startsWith("shad=")) {
-                                var10 = (CharSequence) ((Object) param0.substring(5));
-                                LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216 | AccountUiBootstrap.parseInt((byte) -73, var10, 16);
+                              if (tag.startsWith("shad=")) {
+                                var10 = (CharSequence) ((Object) tag.substring(5));
+                                LoginMethodPreference.textShadowColor = ArchiveLoadingStage.textColor & -16777216 | AccountUiBootstrap.parseInt((byte) -73, var10, 16);
                               } else {
-                                if (!param0.equals("shad")) {
-                                  if (!param0.equals("/shad")) {
-                                    if (param0.equals("br")) {
-                                      this.a(PacketBuffer.field_l, LoginDialogNavigation.field_b, 60);
+                                if (!tag.equals("shad")) {
+                                  if (!tag.equals("/shad")) {
+                                    if (tag.equals("br")) {
+                                      this.resetTextStyle(PacketBuffer.defaultTextColor, LoginDialogNavigation.defaultShadowColor, 60);
                                     }
                                   } else {
-                                    LoginMethodPreference.field_b = LoginDialogNavigation.field_b;
+                                    LoginMethodPreference.textShadowColor = LoginDialogNavigation.defaultShadowColor;
                                   }
                                 } else {
-                                  LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216;
+                                  LoginMethodPreference.textShadowColor = ArchiveLoadingStage.textColor & -16777216;
                                 }
                               }
                             }
                           } else {
-                            StatefulWidgetRenderer.field_p = -1;
+                            StatefulWidgetRenderer.underlineColor = -1;
                           }
                         } else {
-                          StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i;
+                          StatefulWidgetRenderer.underlineColor = -16777216 & ArchiveLoadingStage.textColor;
                         }
                       } else {
-                        var9 = (CharSequence) ((Object) param0.substring(2));
-                        StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i | AccountUiBootstrap.parseInt((byte) -73, var9, 16);
+                        var9 = (CharSequence) ((Object) tag.substring(2));
+                        StatefulWidgetRenderer.underlineColor = -16777216 & ArchiveLoadingStage.textColor | AccountUiBootstrap.parseInt((byte) -73, var9, 16);
                       }
                     } else {
-                      ScrollControl.field_I = -1;
+                      ScrollControl.strikethroughColor = -1;
                     }
                   } else {
-                    ScrollControl.field_I = 8388608 | -16777216 & ArchiveLoadingStage.field_i;
+                    ScrollControl.strikethroughColor = 8388608 | -16777216 & ArchiveLoadingStage.textColor;
                   }
                 } else {
-                  var8 = (CharSequence) ((Object) param0.substring(4));
-                  ScrollControl.field_I = -16777216 & ArchiveLoadingStage.field_i | AccountUiBootstrap.parseInt((byte) -73, var8, 16);
+                  var8 = (CharSequence) ((Object) tag.substring(4));
+                  ScrollControl.strikethroughColor = -16777216 & ArchiveLoadingStage.textColor | AccountUiBootstrap.parseInt((byte) -73, var8, 16);
                 }
               } else {
-                ArchiveLoadingStage.field_i = PacketBuffer.field_l;
+                ArchiveLoadingStage.textColor = PacketBuffer.defaultTextColor;
               }
             } else {
-              var7 = (CharSequence) ((Object) param0.substring(5));
-              ArchiveLoadingStage.field_i = AccountUiBootstrap.parseInt((byte) -73, var7, 16);
+              var7 = (CharSequence) ((Object) tag.substring(5));
+              ArchiveLoadingStage.textColor = AccountUiBootstrap.parseInt((byte) -73, var7, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,16 +177,16 @@ abstract class ToolkitFont {
           var3 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_37_0 = var3;
           stackIn_37_1 = new StringBuilder().append("da.L(");
-          if (param0 == null) {
+          if (tag == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final int a(SpriteMask param0, ToolkitSprite[] param1, int param2, int[] param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int drawParagraph(SpriteMask mask, ToolkitSprite[] inlineSprites, int maskX, int[] spriteBaselineOffsets, String text, int height, int color, int lineHeight, int maxLines, int shadowColor, int x, int width, int horizontalAlignment, int maskY, int guard, int verticalAlignment, int y) {
         int stackIn_4_0 = 0;
         int stackIn_47_0 = 0;
         Object stackIn_50_0 = null;
@@ -208,79 +208,79 @@ abstract class ToolkitFont {
         int var21Lifetime1;
         var22 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param4 == null) {
+          if (text == null) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          this.a(param6, param9, 60);
-          if (param7 == 0) {
-            param7 = this.field_b.field_d;
+          this.resetTextStyle(color, shadowColor, 60);
+          if (lineHeight == 0) {
+            lineHeight = this.metrics.field_d;
           }
-          if (param7 + this.field_b.field_c + this.field_b.field_i > param5 &&
-            param5 < param7 + param7) {
+          if (lineHeight + this.metrics.field_c + this.metrics.field_i > height &&
+            height < lineHeight + lineHeight) {
             var18 = null;
           } else {
-            var18 = new int[]{param11};
+            var18 = new int[]{width};
           }
-          if (param8 == -1) {
-            param8 = param5 / param7;
-            if (param8 <= 0) {
-              param8 = 1;
+          if (maxLines == -1) {
+            maxLines = height / lineHeight;
+            if (maxLines <= 0) {
+              maxLines = 1;
             }
           }
-          var19 = this.field_b.a(param4, false, VertexStreamLayout.field_a, (int[]) (var18), param1);
-          if (param8 > 0 &&
-            var19 >= param8) {
-            var19 = param8;
-            VertexStreamLayout.field_a[-1 + param8] = this.field_b.a(param11, VertexStreamLayout.field_a[param8 - 1], param1, -63);
+          var19 = this.metrics.wrapLines(text, false, VertexStreamLayout.field_a, (int[]) (var18), inlineSprites);
+          if (maxLines > 0 &&
+            var19 >= maxLines) {
+            var19 = maxLines;
+            VertexStreamLayout.field_a[-1 + maxLines] = this.metrics.ellipsize(width, VertexStreamLayout.field_a[maxLines - 1], inlineSprites, -63);
           }
-          if (param15 == 3 &&
+          if (verticalAlignment == 3 &&
             var19 == 1) {
-            param15 = 1;
+            verticalAlignment = 1;
           }
-          if (param14 < 38) {
+          if (guard < 38) {
             var23 = (SpriteMask) null;
-            this.a(98, 62, (ToolkitSprite[]) null, 36, 116, -67, (String) null, (int[]) null, (SpriteMask) null);
+            this.drawTextRun(98, 62, (ToolkitSprite[]) null, 36, 116, -67, (String) null, (int[]) null, (SpriteMask) null);
           }
-          if (0 == param15) {
-            var20 = param16 + this.field_b.field_i;
+          if (0 == verticalAlignment) {
+            var20 = y + this.metrics.field_i;
           } else {
-            if (1 == param15) {
-              var20 = this.field_b.field_i + (param16 + (-((var19 - 1) * param7) - this.field_b.field_c + param5 - this.field_b.field_i) / 2);
+            if (1 == verticalAlignment) {
+              var20 = this.metrics.field_i + (y + (-((var19 - 1) * lineHeight) - this.metrics.field_c + height - this.metrics.field_i) / 2);
             } else {
-              if (param15 != 2) {
-                var21 = (-this.field_b.field_c + (param5 - (this.field_b.field_i + param7 * (-1 + var19)))) / (1 + var19);
+              if (verticalAlignment != 2) {
+                var21 = (-this.metrics.field_c + (height - (this.metrics.field_i + lineHeight * (-1 + var19)))) / (1 + var19);
                 if (var21 < 0) {
                   var21 = 0;
                 }
-                param7 = param7 + var21;
-                var20 = param16 + (this.field_b.field_i + var21);
+                lineHeight = lineHeight + var21;
+                var20 = y + (this.metrics.field_i + var21);
               } else {
-                var20 = -((var19 - 1) * param7) - this.field_b.field_c + param5 + param16;
+                var20 = -((var19 - 1) * lineHeight) - this.metrics.field_c + height + y;
               }
             }
           }
           for (var21Lifetime1 = 0; var21Lifetime1 < var19; var21Lifetime1++) {
-            if (param12 != 0) {
-              if (param12 == 1) {
-                this.a(-274, var20, param1, param10 + (-this.field_b.a(VertexStreamLayout.field_a[var21Lifetime1], 0) + param11) / 2, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
+            if (horizontalAlignment != 0) {
+              if (horizontalAlignment == 1) {
+                this.drawTextRun(-274, var20, inlineSprites, x + (-this.metrics.stringWidth(VertexStreamLayout.field_a[var21Lifetime1], 0) + width) / 2, maskX, maskY, VertexStreamLayout.field_a[var21Lifetime1], spriteBaselineOffsets, mask);
               } else {
-                if (param12 != 2) {
+                if (horizontalAlignment != 2) {
                   if (var19 - 1 == var21Lifetime1) {
-                    this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
+                    this.drawTextRun(-274, var20, inlineSprites, x, maskX, maskY, VertexStreamLayout.field_a[var21Lifetime1], spriteBaselineOffsets, mask);
                   } else {
-                    this.a(VertexStreamLayout.field_a[var21Lifetime1], param11, (byte) 5);
-                    this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
-                    StringBuilderSupport.field_b = 0;
+                    this.setJustification(VertexStreamLayout.field_a[var21Lifetime1], width, (byte) 5);
+                    this.drawTextRun(-274, var20, inlineSprites, x, maskX, maskY, VertexStreamLayout.field_a[var21Lifetime1], spriteBaselineOffsets, mask);
+                    StringBuilderSupport.spaceJustificationQ8 = 0;
                   }
                 } else {
-                  this.a(-274, var20, param1, param11 + (param10 - this.field_b.a(VertexStreamLayout.field_a[var21Lifetime1], 0)), param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
+                  this.drawTextRun(-274, var20, inlineSprites, width + (x - this.metrics.stringWidth(VertexStreamLayout.field_a[var21Lifetime1], 0)), maskX, maskY, VertexStreamLayout.field_a[var21Lifetime1], spriteBaselineOffsets, mask);
                 }
               }
             } else {
-              this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
+              this.drawTextRun(-274, var20, inlineSprites, x, maskX, maskY, VertexStreamLayout.field_a[var21Lifetime1], spriteBaselineOffsets, mask);
             }
-            var20 = var20 + param7;
+            var20 = var20 + lineHeight;
           }
           stackIn_47_0 = var19;
           return stackIn_47_0;
@@ -289,34 +289,34 @@ abstract class ToolkitFont {
           var18 = decompiledCaughtException;
           stackIn_50_0 = var18;
           stackIn_50_1 = new StringBuilder().append("da.H(");
-          if (param0 == null) {
+          if (mask == null) {
             stackIn_51_2 = "null";
           } else {
             stackIn_51_2 = "{...}";
           }
           stackIn_53_1 = ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',');
-          if (param1 == null) {
+          if (inlineSprites == null) {
             stackIn_54_2 = "null";
           } else {
             stackIn_54_2 = "{...}";
           }
-          stackIn_56_1 = ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_56_1 = ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(maskX).append(',');
+          if (spriteBaselineOffsets == null) {
             stackIn_57_2 = "null";
           } else {
             stackIn_57_2 = "{...}";
           }
           stackIn_59_1 = ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',');
-          if (param4 == null) {
+          if (text == null) {
             stackIn_60_2 = "null";
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) (stackIn_50_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(height).append(',').append(color).append(',').append(lineHeight).append(',').append(maxLines).append(',').append(shadowColor).append(',').append(x).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(maskY).append(',').append(guard).append(',').append(verticalAlignment).append(',').append(y).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, ToolkitSprite[] param2, int param3, int param4, int param5, String param6, int[] param7, SpriteMask param8) {
+    private final void drawTextRun(int guard, int baselineY, ToolkitSprite[] inlineSprites, int x, int maskX, int maskY, String text, int[] spriteBaselineOffsets, SpriteMask mask) {
         int var13 = 0;
         int stackIn_25_0 = 0;
         RuntimeException stackIn_62_0 = null;
@@ -346,20 +346,20 @@ abstract class ToolkitFont {
         var20 = null;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          param1 = param1 - this.field_b.field_d;
+          baselineY = baselineY - this.metrics.field_d;
           var10_int = -1;
           var11 = -1;
-          var12 = param6.length();
-          if (param0 != -274) {
+          var12 = text.length();
+          if (guard != -274) {
             return;
           }
           for (var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & HardwareReflectionEffect.a(true, param6.charAt(var13)));
+            var14 = (char)(255 & HardwareReflectionEffect.a(true, text.charAt(var13)));
             if (60 != var14) {
               if (62 == var14 &&
                 var10_int != -1) {
-                var15_ref_String = param6.substring(var10_int + 1, var13);
+                var15_ref_String = text.substring(var10_int + 1, var13);
                 var10_int = -1;
                 if (var15_ref_String.equals("lt")) {
                   var14 = 60;
@@ -380,25 +380,25 @@ abstract class ToolkitFont {
                             } else {
                               if (!var15_ref_String.equals("reg")) {
                                 if (!var15_ref_String.startsWith("img=")) {
-                                  this.a(var15_ref_String, 120);
+                                  this.applyStyleTag(var15_ref_String, 120);
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
                                     var16_int = LoginFormState.parseDecimal((byte) -127, var21);
-                                    var17 = param2[var16_int];
-                                    if (param7 != null) {
-                                      stackIn_25_0 = param7[var16_int];
+                                    var17 = inlineSprites[var16_int];
+                                    if (spriteBaselineOffsets != null) {
+                                      stackIn_25_0 = spriteBaselineOffsets[var16_int];
                                     } else {
                                       stackIn_25_0 = var17.paddedHeight();
                                     }
                                     var18 = stackIn_25_0;
-                                    if ((-16777216 & ArchiveLoadingStage.field_i) != -16777216) {
-                                      var17.draw(param3, -var18 + this.field_b.field_d + param1, 0, ArchiveLoadingStage.field_i & -16777216 | 16777215, 1);
+                                    if ((-16777216 & ArchiveLoadingStage.textColor) != -16777216) {
+                                      var17.draw(x, -var18 + this.metrics.field_d + baselineY, 0, ArchiveLoadingStage.textColor & -16777216 | 16777215, 1);
                                     } else {
-                                      var17.draw(param3, -var18 + (param1 + this.field_b.field_d), 1, 0, 1);
+                                      var17.draw(x, -var18 + (baselineY + this.metrics.field_d), 1, 0, 1);
                                     }
                                     var11 = -1;
-                                    param3 = param3 + param2[var16_int].paddedWidth();
+                                    x = x + inlineSprites[var16_int].paddedWidth();
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
                                     var16 = (Exception) (Object) decompiledCaughtException;
@@ -424,36 +424,36 @@ abstract class ToolkitFont {
               if ((decompiledFrameRemainder0) &&
                 (var10_int == -1)) {
                 if (var11 != -1) {
-                  param3 = param3 + this.field_b.a(-63, (char) var14, var11);
+                  x = x + this.metrics.kerning(-63, (char) var14, var11);
                 }
                 if (var14 != 32) {
-                  if (param8 == null) {
-                    if ((-16777216 & LoginMethodPreference.field_b) != 0) {
-                      this.drawGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true);
+                  if (mask == null) {
+                    if ((-16777216 & LoginMethodPreference.textShadowColor) != 0) {
+                      this.drawGlyph((char) var14, x + 1, baselineY + 1, LoginMethodPreference.textShadowColor, true);
                     }
-                    this.drawGlyph((char) var14, param3, param1, ArchiveLoadingStage.field_i, false);
+                    this.drawGlyph((char) var14, x, baselineY, ArchiveLoadingStage.textColor, false);
                   } else {
-                    if ((-16777216 & LoginMethodPreference.field_b) != 0) {
-                      this.drawMaskedGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true, param8, param4, param5);
+                    if ((-16777216 & LoginMethodPreference.textShadowColor) != 0) {
+                      this.drawMaskedGlyph((char) var14, x + 1, baselineY + 1, LoginMethodPreference.textShadowColor, true, mask, maskX, maskY);
                     }
-                    this.drawMaskedGlyph((char) var14, param3, param1, ArchiveLoadingStage.field_i, false, param8, param4, param5);
+                    this.drawMaskedGlyph((char) var14, x, baselineY, ArchiveLoadingStage.textColor, false, mask, maskX, maskY);
                   }
                 } else {
-                  if (StringBuilderSupport.field_b > 0) {
-                    GameDefinitionLoader.field_a = GameDefinitionLoader.field_a + StringBuilderSupport.field_b;
-                    param3 = param3 + (GameDefinitionLoader.field_a >> 8);
-                    GameDefinitionLoader.field_a = GameDefinitionLoader.field_a & 255;
+                  if (StringBuilderSupport.spaceJustificationQ8 > 0) {
+                    GameDefinitionLoader.justificationRemainderQ8 = GameDefinitionLoader.justificationRemainderQ8 + StringBuilderSupport.spaceJustificationQ8;
+                    x = x + (GameDefinitionLoader.justificationRemainderQ8 >> 8);
+                    GameDefinitionLoader.justificationRemainderQ8 = GameDefinitionLoader.justificationRemainderQ8 & 255;
                   }
                 }
-                var15 = this.field_b.characterWidth(var14, (byte) -53);
-                if (-1 != ScrollControl.field_I) {
-                  this.field_a.drawHorizontalLineAlpha(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
+                var15 = this.metrics.characterWidth(var14, (byte) -53);
+                if (-1 != ScrollControl.strikethroughColor) {
+                  this.toolkit.drawHorizontalLineAlpha(ScrollControl.strikethroughColor, 103, baselineY + (int)(0.7 * (double)this.metrics.field_d), var15, x);
                 }
-                if (StatefulWidgetRenderer.field_p != -1) {
-                  this.field_a.drawHorizontalLineAlpha(StatefulWidgetRenderer.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
+                if (StatefulWidgetRenderer.underlineColor != -1) {
+                  this.toolkit.drawHorizontalLineAlpha(StatefulWidgetRenderer.underlineColor, 122, this.metrics.field_d + baselineY + 1, var15, x);
                 }
                 var11 = var14;
-                param3 = param3 + var15;
+                x = x + var15;
               }
             } else {
               var10_int = var13;
@@ -464,26 +464,26 @@ abstract class ToolkitFont {
           decompiledCaughtException = decompiledCaughtParameter1;
           var10 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_62_0 = var10;
-          stackIn_62_1 = new StringBuilder().append("da.M(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_62_1 = new StringBuilder().append("da.M(").append(guard).append(',').append(baselineY).append(',');
+          if (inlineSprites == null) {
             stackIn_63_2 = "null";
           } else {
             stackIn_63_2 = "{...}";
           }
-          stackIn_65_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_65_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(x).append(',').append(maskX).append(',').append(maskY).append(',');
+          if (text == null) {
             stackIn_66_2 = "null";
           } else {
             stackIn_66_2 = "{...}";
           }
           stackIn_68_1 = ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',');
-          if (param7 == null) {
+          if (spriteBaselineOffsets == null) {
             stackIn_69_2 = "null";
           } else {
             stackIn_69_2 = "{...}";
           }
           stackIn_71_1 = ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',');
-          if (param8 == null) {
+          if (mask == null) {
             stackIn_72_2 = "null";
           } else {
             stackIn_72_2 = "{...}";
@@ -492,7 +492,7 @@ abstract class ToolkitFont {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+    final static void loadCommonUiAssets(ResourceArchive graphicsArchive, ResourceArchive fontArchive, int guard, ResourceArchive extraArchive) {
         RasterIndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
@@ -503,17 +503,17 @@ abstract class ToolkitFont {
         int var9 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
         int var8Lifetime1;
-        ToolkitImageProducerBuffer.field_v = LegacyOpenGlBuffer.a("frame_top", param0, true, "commonui");
-        DropDownListWidget.field_O = LegacyOpenGlBuffer.a("frame_bottom", param0, true, "commonui");
-        HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, param0);
-        LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", param0, true, "commonui");
-        ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.loadNamedSprites(param0, "commonui", (byte) -56, "validation");
-        MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo12", param0));
-        TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo14", param0));
-        LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo14bold", param0));
-        Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
-        ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
-        RasterIndexedSprite[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
+        ToolkitImageProducerBuffer.field_v = LegacyOpenGlBuffer.a("frame_top", graphicsArchive, true, "commonui");
+        DropDownListWidget.field_O = LegacyOpenGlBuffer.a("frame_bottom", graphicsArchive, true, "commonui");
+        HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, graphicsArchive);
+        LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", graphicsArchive, true, "commonui");
+        ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.loadNamedSprites(graphicsArchive, "commonui", (byte) -56, "validation");
+        MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo12", graphicsArchive));
+        TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo14", graphicsArchive));
+        LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo14bold", graphicsArchive));
+        Sprite var17 = new Sprite(extraArchive.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
+        ScrollPane.a((byte) 83, graphicsArchive, "dropdown", "commonui");
+        RasterIndexedSprite[] var5 = ShaderEffect.loadNamedIndexedSprites("screen_options", graphicsArchive, 73, "commonui");
         GameDefinitionLoader.field_d = new RasterIndexedSprite[4];
         WidgetStateStyle.field_c = new RasterIndexedSprite[4];
         SoftwareTransform3D.field_f = new RasterIndexedSprite[4];
@@ -537,7 +537,7 @@ abstract class ToolkitFont {
           }
         }
         var9 = var17.field_u;
-        if (param2 != 17474) {
+        if (guard != 17474) {
           return;
         }
         try {
@@ -557,51 +557,51 @@ abstract class ToolkitFont {
           ClientException.popRasterState((byte) -73);
           LevelCompleteUpgradeScreen.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (graphicsArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ',' + guard + ',' + (extraArchive != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param0 == null) {
+    final void drawCenteredText(String text, int color, int shadowColor, int baselineY, int centerX, int guard) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param1, param2, 60);
-          this.a(-274, param3, (ToolkitSprite[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (SpriteMask) null);
+          this.resetTextStyle(color, shadowColor, 60);
+          this.drawTextRun(-274, baselineY, (ToolkitSprite[]) null, -(this.metrics.stringWidth(text, guard) / 2) + centerX, 0, 0, text, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (text != null ? "{...}" : "null") + ',' + color + ',' + shadowColor + ',' + baselineY + ',' + centerX + ',' + guard + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
-        StringBuilderSupport.field_b = 0;
-        PacketBuffer.field_l = param0;
-        ArchiveLoadingStage.field_i = param0;
-        if (param1 == -1) {
-          param1 = 0;
+    private final void resetTextStyle(int color, int shadowColor, int guard) {
+        StringBuilderSupport.spaceJustificationQ8 = 0;
+        PacketBuffer.defaultTextColor = color;
+        ArchiveLoadingStage.textColor = color;
+        if (shadowColor == -1) {
+          shadowColor = 0;
         }
-        ScrollControl.field_I = -1;
-        GameDefinitionLoader.field_a = 0;
-        if (param2 != 60) {
-          this.field_b = (FontMetrics) null;
+        ScrollControl.strikethroughColor = -1;
+        GameDefinitionLoader.justificationRemainderQ8 = 0;
+        if (guard != 60) {
+          this.metrics = (FontMetrics) null;
         }
-        StatefulWidgetRenderer.field_p = -1;
-        LoginDialogNavigation.field_b = param1;
-        LoginMethodPreference.field_b = param1;
+        StatefulWidgetRenderer.underlineColor = -1;
+        LoginDialogNavigation.defaultShadowColor = shadowColor;
+        LoginMethodPreference.textShadowColor = shadowColor;
     }
 
     ToolkitFont(GraphicsToolkit param0, FontMetrics param1) {
         try {
-          this.field_b = param1;
-          this.field_a = param0;
+          this.metrics = param1;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(FullscreenDisplayMode param0, int param1, FullscreenDisplayMode param2) {
+    final static boolean displayModeSortsAfter(FullscreenDisplayMode left, int guard, FullscreenDisplayMode right) {
         RuntimeException var3 = null;
         ResourceArchive var4 = null;
         RuntimeException stackIn_15_0 = null;
@@ -611,17 +611,17 @@ abstract class ToolkitFont {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.width > param2.width) {
+          if (left.width > right.width) {
             return true;
           }
-          if (param1 > -11) {
+          if (guard > -11) {
             var4 = (ResourceArchive) null;
-            ToolkitFont.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
+            ToolkitFont.loadCommonUiAssets((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
           }
-          if (param0.width != param2.width) {
+          if (left.width != right.width) {
             return false;
           }
-          if (param2.height >= param0.height) {
+          if (right.height >= left.height) {
             return false;
           }
           return true;
@@ -630,13 +630,13 @@ abstract class ToolkitFont {
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("da.J(");
-          if (param0 == null) {
+          if (left == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',');
+          if (right == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -647,7 +647,7 @@ abstract class ToolkitFont {
 
     abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
 
-    private final void a(String param0, int param1, byte param2) {
+    private final void setJustification(String text, int targetWidth, byte guard) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -663,8 +663,8 @@ abstract class ToolkitFont {
         try {
           var4_int = 0;
           var5 = 0;
-          for (var6 = 0; param0.length() > var6; var6++) {
-            var7 = param0.charAt(var6);
+          for (var6 = 0; text.length() > var6; var6++) {
+            var7 = text.charAt(var6);
             if (60 == var7) {
               var5 = 1;
             } else {
@@ -679,11 +679,11 @@ abstract class ToolkitFont {
             }
           }
           if (var4_int > 0) {
-            StringBuilderSupport.field_b = (param1 - this.field_b.a(param0, 0) << 8) / var4_int;
+            StringBuilderSupport.spaceJustificationQ8 = (targetWidth - this.metrics.stringWidth(text, 0) << 8) / var4_int;
           }
-          if (param2 != 5) {
+          if (guard != 5) {
             var9 = (String) null;
-            this.a(-80, -66, 46, (String) null, (byte) 127, -75);
+            this.drawText(-80, -66, 46, (String) null, (byte) 127, -75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -691,12 +691,12 @@ abstract class ToolkitFont {
           var4 = decompiledCaughtException;
           stackIn_21_0 = var4;
           stackIn_21_1 = new StringBuilder().append("da.F(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(targetWidth).append(',').append(guard).append(')').toString());
         }
     }
 

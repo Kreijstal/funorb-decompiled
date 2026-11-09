@@ -220,23 +220,23 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
             return false;
           }
           long dupTemp$0 = IntroMeshResources.monotonicTimeMillis(-38);
-          ArchiveCatalog.field_a = dupTemp$0;
+          ArchiveCatalog.lastAccountWriteMillis = dupTemp$0;
           CacheReferenceNode.lastServerReadMillis = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {
             TextCaretLayout.accountPhase = VertexBufferReference.field_b;
           } else {
             try {
               DisplayModeConfirmationDialog.accountSocket = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
-              var4 = NativeLibraryExtractor.field_a;
+              var4 = NativeLibraryExtractor.incomingPacket;
               var5 = var4;
-              InwardSparkParticle.field_v.position = 0;
+              InwardSparkParticle.outgoingPacket.position = 0;
               var5.position = 0;
               ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
               RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               TextCaretLayout.accountPhase = ByteArrayCacheNode.READY_TO_CONNECT;
-              GameDefinitionLoader.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
-              MessageDialog.a(0, -1);
+              GameDefinitionLoader.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.outgoingPacket);
+              MessageDialog.flushAccountWrites(0, -1);
             } catch (IOException iOException) {
               TextCaretLayout.accountPhase = VertexBufferReference.field_b;
             }

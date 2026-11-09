@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginDialogNavigation {
-    static int field_b;
+    static int defaultShadowColor;
     static int field_a;
 
     final static void showLoginDialog(boolean allowSignup, boolean allowGuestPlay) {
@@ -13,7 +13,7 @@ final class LoginDialogNavigation {
         if (!dimBackground) {
           SoftwareRasterizer.clear();
           if (guard != -71) {
-            field_b = 40;
+            defaultShadowColor = 40;
             BurstParticle.a(dimBackground, true);
             return;
           }
@@ -22,7 +22,7 @@ final class LoginDialogNavigation {
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         if (guard != -71) {
-          field_b = 40;
+          defaultShadowColor = 40;
           BurstParticle.a(dimBackground, true);
           return;
         }
@@ -87,6 +87,6 @@ final class LoginDialogNavigation {
     }
 
     static {
-        field_b = 0;
+        defaultShadowColor = 0;
     }
 }

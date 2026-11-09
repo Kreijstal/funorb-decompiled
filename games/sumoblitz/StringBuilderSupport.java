@@ -3,7 +3,7 @@
  */
 final class StringBuilderSupport {
     static String[] yesNoLabels;
-    static int field_b;
+    static int spaceJustificationQ8;
     static long field_a;
 
     public static void releaseStatics(int param0) {
@@ -31,7 +31,7 @@ final class StringBuilderSupport {
             builder.setCharAt(var5, fill);
           }
           if (guard != 60) {
-            field_b = 53;
+            spaceJustificationQ8 = 53;
           }
           stackIn_7_0 = (StringBuilder) (builder);
           return stackIn_7_0;
@@ -50,7 +50,7 @@ final class StringBuilderSupport {
     }
 
     static {
-        field_b = 0;
+        spaceJustificationQ8 = 0;
         yesNoLabels = new String[]{"Yes", "No"};
     }
 }

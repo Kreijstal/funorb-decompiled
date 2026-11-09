@@ -31,7 +31,7 @@ final class TextureTransformMode {
             return null;
           }
           if (guard < -11) {
-            stackIn_7_0 = ScrollControl.a(false, fontArchive.fetchFile((byte) 94, fileId, groupId));
+            stackIn_7_0 = ScrollControl.createAlphaFontFromDecodedSprites(false, fontArchive.fetchFile((byte) 94, fileId, groupId));
             return stackIn_7_0;
           }
           stackIn_5_0 = (LegacyAlphaFont) null;

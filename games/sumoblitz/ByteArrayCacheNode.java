@@ -31,7 +31,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           if (param1.length() == 0) {
             return true;
           }
-          if (MessageDialog.a(param0, param1, 106)) {
+          if (MessageDialog.containsForwardOrReverse(param0, param1, 106)) {
             return false;
           }
           if (CachedTextLayout.a(param0, (byte) 111, param1)) {

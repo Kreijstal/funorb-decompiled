@@ -38,7 +38,7 @@ final class VertexAttribute {
         if (param0 != -62) {
           return (String) null;
         }
-        return NativeLibraryExtractor.field_a.readCp1252String(-1);
+        return NativeLibraryExtractor.incomingPacket.readCp1252String(-1);
     }
 
     final static void a(int param0, int param1, int param2) {

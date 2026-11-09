@@ -18,7 +18,7 @@ abstract class DualLinkedRenderResource extends DualLinkNode {
         IsaacPacketBuffer var8 = null;
         QuickChatPhrase var9 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        var8 = NativeLibraryExtractor.field_a;
+        var8 = NativeLibraryExtractor.incomingPacket;
         var2 = var8;
         var3 = var8.readUnsignedByte(-31302);
         UsernameCredentials.field_h = 127 & var3;

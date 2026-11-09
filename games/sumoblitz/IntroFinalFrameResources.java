@@ -4,7 +4,7 @@
 final class IntroFinalFrameResources {
     static String field_a;
     static int field_d;
-    static int field_b;
+    static int pendingAccountOpcode;
     static String toServerListText;
 
     public static void releaseStatics(boolean param0) {
@@ -106,7 +106,7 @@ final class IntroFinalFrameResources {
     }
 
     static {
-        field_b = -1;
+        pendingAccountOpcode = -1;
         field_a = "If you do nothing the game will revert to normal view in <%0> seconds.";
         toServerListText = "To server list";
     }

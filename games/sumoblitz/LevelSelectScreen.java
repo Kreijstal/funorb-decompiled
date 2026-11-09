@@ -39,18 +39,18 @@ final class LevelSelectScreen extends MenuScreen {
         try {
           var4_int = opacity << 24;
           DelegatingCanvas.a(IntroMeshProjection.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
-          ForceFieldRingEffect.field_t.a(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
-          AccountStatusDialogState.headingFont.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
+          ForceFieldRingEffect.field_t.drawCenteredText(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
+          AccountStatusDialogState.headingFont.drawCenteredText(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           DelegatingCanvas.a(IntroMeshProjection.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
-          GameTrackPlayback.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
+          QueuedIntArrayRequest.field_k.drawText(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
+          GameTrackPlayback.field_a.drawText(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
           MusicCrossfadeStream.field_q[1].drawRotated(130.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -101, -1);
-          GameTrackPlayback.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
+          QueuedIntArrayRequest.field_k.drawText(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -101, -1);
+          GameTrackPlayback.field_a.drawText(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -15, -1);
-          GameTrackPlayback.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -51, -1);
+          QueuedIntArrayRequest.field_k.drawText(407, 192, var4_int | 5023231, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -15, -1);
+          GameTrackPlayback.field_a.drawText(407, 192, 16777215 + var4_int, Integer.toString(AccountStatusDialogState.selectedBounceLevel), (byte) -51, -1);
           var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
             stackIn_4_0 = var5 % 255;
@@ -70,8 +70,8 @@ final class LevelSelectScreen extends MenuScreen {
               DelegatingCanvas.a(IntroMeshProjection.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
-                QueuedIntArrayRequest.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
-                GameTrackPlayback.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
+                QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
+                GameTrackPlayback.field_a.drawCenteredText(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
               } else {
                 CacheReferenceNode.field_y.drawRotated((float)(var9 + 50), (float)(var8 + 22), 4096, 0, 3, var4_int, 1);
               }
@@ -91,10 +91,10 @@ final class LevelSelectScreen extends MenuScreen {
             var13 = IntroMeshProjection.field_c;
             DelegatingCanvas.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (TextureMetadata.field_f[this.field_i]) {
-              MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
-              MessageDialog.field_db.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              LegacyOpenGlEffect.field_c.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
+              MessageDialog.field_db.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
+              LegacyOpenGlEffect.field_c.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
+              MessageDialog.field_db.drawCenteredText(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
+              LegacyOpenGlEffect.field_c.drawCenteredText(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
               if (IntroMeshProjection.threeLifeCompletions[this.field_i]) {
                 var10++;
@@ -128,8 +128,8 @@ final class LevelSelectScreen extends MenuScreen {
               ((ToolkitSprite) (Object) stackIn_36_0).drawRotated((float)(stackIn_36_1 + (stackIn_36_2 - (stackIn_36_3 - stackIn_37_4))), (float)(var9Lifetime1 + 40), 4096, 0, 3, -1, 1);
               return;
             }
-            MessageDialog.field_db.a(ArenaBackdropPalettes.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
-            LegacyOpenGlEffect.field_c.a(ArenaBackdropPalettes.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard ^ -2355);
+            MessageDialog.field_db.drawCenteredText(ArenaBackdropPalettes.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
+            LegacyOpenGlEffect.field_c.drawCenteredText(ArenaBackdropPalettes.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard ^ -2355);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
