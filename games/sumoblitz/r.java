@@ -62,7 +62,7 @@ abstract class r extends DualLinkNode {
         try {
           var9 = LegacyOpenGlBuffer.field_c.getPhrase(var5, -32769);
           oi.field_c = var9.previewText(1118);
-          if (!MarkerTrackWidget.field_E.equals(qv.field_o)) {
+          if (!MarkerTrackWidget.field_E.equals(QueuedIntArrayRequest.field_o)) {
             stackIn_24_0 = var9.responseIds;
           } else {
             stackIn_24_0 = null;

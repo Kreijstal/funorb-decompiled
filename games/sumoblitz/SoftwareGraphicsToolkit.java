@@ -35,22 +35,22 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private static String offText;
 
     final void updateTime(int timeMillis) {
-        le var4 = null;
+        ScrollingTexturePixels var4 = null;
         int var5 = 0;
         TextureMetadata var6 = null;
         int var2 = timeMillis - this.field_A;
         Object var3 = this.field_u.firstValue(0);
         while (var3 != null) {
-          var4 = (le) (var3);
-          if (var4.field_p) {
-            var4.field_m = var4.field_m + var2;
-            var5 = var4.field_m / 20;
+          var4 = (ScrollingTexturePixels) (var3);
+          if (var4.used) {
+            var4.elapsedMillis = var4.elapsedMillis + var2;
+            var5 = var4.elapsedMillis / 20;
             if (var5 > 0) {
-              var6 = this.textureProvider.a(-29193, var4.field_o);
-              var4.a(var6.field_c * var2 * 50 / 1000, var6.field_u * var2 * 50 / 1000);
-              var4.field_m = var4.field_m - var5 * 20;
+              var6 = this.textureProvider.a(-29193, var4.textureId);
+              var4.scroll(var6.field_c * var2 * 50 / 1000, var6.field_u * var2 * 50 / 1000);
+              var4.elapsedMillis = var4.elapsedMillis - var5 * 20;
             }
-            var4.field_p = false;
+            var4.used = false;
           }
           var3 = this.field_u.nextValue((byte) -92);
         }
@@ -1330,7 +1330,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           }
           this.resizeCanvas(canvas, width, height);
         } else {
-          var4 = id.a(width, height, canvas, -101);
+          var4 = SessionStatisticsSubmission.createToolkitRasterBuffer(width, height, canvas, -101);
           this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
         }
     }
@@ -1835,7 +1835,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void dispose() {
         if (this.field_J) {
-          pt.a(true, false, -1);
+          CubeMapSource.a(true, false, -1);
           this.field_J = false;
         }
         this.canvasBuffer = null;
@@ -1851,7 +1851,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         ToolkitRasterBuffer var4 = (ToolkitRasterBuffer) (this.canvasBuffers.a(122, (long)canvas.hashCode()));
         if (var4 != null) {
           var4.unlink(false);
-          var4 = id.a(width, height, canvas, -91);
+          var4 = SessionStatisticsSubmission.createToolkitRasterBuffer(width, height, canvas, -91);
           this.canvasBuffers.a(var4, -1, (long)canvas.hashCode());
           if (this.canvas == canvas &&
             this.renderTarget == null) {

@@ -76,7 +76,7 @@ final class TextureMetadata {
         try {
           var5 = (ServerDataWriteRequest) (LoginMethodPreference.field_a.first(72));
           while (var5 != null) {
-            mn.sendServerDataWrite(var5, -112, opcode);
+            ArchiveLoadingStage.sendServerDataWrite(var5, -112, opcode);
             var5 = (ServerDataWriteRequest) (LoginMethodPreference.field_a.next((byte) 18));
           }
           var2 = no.field_d.first(-87);

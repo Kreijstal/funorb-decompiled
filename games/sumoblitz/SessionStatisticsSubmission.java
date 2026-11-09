@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends IntrusiveNode {
+final class SessionStatisticsSubmission extends IntrusiveNode {
     int field_k;
-    int[] field_q;
+    int[] values;
     int field_n;
-    long field_s;
+    long entryId;
     int field_p;
     int field_o;
-    int field_l;
+    int tableId;
     static String returnToGameText;
-    int field_t;
-    int field_r;
+    int variantId;
+    int requestId;
 
     public static void releaseStatics(boolean param0) {
         returnToGameText = null;
@@ -20,7 +20,7 @@ final class id extends IntrusiveNode {
         }
     }
 
-    final static ToolkitRasterBuffer a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static ToolkitRasterBuffer createToolkitRasterBuffer(int width, int height, java.awt.Canvas canvas, int guard) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -36,18 +36,18 @@ final class id extends IntrusiveNode {
           try {
             try {
               var4 = Class.forName("ToolkitBufferedImageBuffer");
-              if (param3 > -83) {
+              if (guard > -83) {
                 returnToGameText = (String) null;
               }
               var5 = (ToolkitRasterBuffer) (var4.newInstance());
-              var5.initialize(param2, param1, param0, 122);
+              var5.initialize(canvas, height, width, 122);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ToolkitImageProducerBuffer();
-              ((ToolkitRasterBuffer) ((Object) var5_ref)).initialize(param2, param1, param0, -108);
+              ((ToolkitRasterBuffer) ((Object) var5_ref)).initialize(canvas, height, width, -108);
               stackIn_5_0 = var5_ref;
               return (ToolkitRasterBuffer) ((Object) stackIn_5_0);
             }
@@ -55,13 +55,13 @@ final class id extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var4_ref2;
-            stackIn_8_1 = new StringBuilder().append("id.A(").append(param0).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_8_1 = new StringBuilder().append("id.A(").append(width).append(',').append(height).append(',');
+            if (canvas == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,21 +70,21 @@ final class id extends IntrusiveNode {
         }
     }
 
-    id(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    SessionStatisticsSubmission(int tableId, int variantId, int firstCounter, int secondCounter, int thirdCounter, int fourthCounter, int[] values) {
         int fieldTemp$0 = 0;
         try {
-          this.field_n = param2;
-          this.field_q = param6;
+          this.field_n = firstCounter;
+          this.values = values;
           fieldTemp$0 = DropDownWidget.field_D;
           DropDownWidget.field_D = DropDownWidget.field_D + 1;
-          this.field_r = 65535 & fieldTemp$0;
-          this.field_t = param1;
-          this.field_p = param4;
-          this.field_o = param3;
-          this.field_k = param5;
-          this.field_l = param0;
+          this.requestId = 65535 & fieldTemp$0;
+          this.variantId = variantId;
+          this.field_p = thirdCounter;
+          this.field_o = secondCounter;
+          this.field_k = fourthCounter;
+          this.tableId = tableId;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "id.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "id.<init>(" + tableId + ',' + variantId + ',' + firstCounter + ',' + secondCounter + ',' + thirdCounter + ',' + fourthCounter + ',' + (values != null ? "{...}" : "null") + ')');
         }
     }
 

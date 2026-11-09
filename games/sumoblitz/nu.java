@@ -12,7 +12,7 @@ final class nu {
           GraphicsToolkit stackIn_9_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (!of.c((byte) 124)) {
+            if (!HiscoreRequest.loadNativeSoftwareLibraries((byte) 124)) {
               throw new RuntimeException("");
             }
             if (!ScrollPane.b((byte) 125, "jagdx")) {

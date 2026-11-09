@@ -23,7 +23,7 @@ final class sb {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!of.c((byte) 119)) {
+          if (!HiscoreRequest.loadNativeSoftwareLibraries((byte) 119)) {
             throw new RuntimeException("");
           }
           if (param1 != -6708) {
@@ -103,7 +103,7 @@ final class sb {
         int var2_int = 0;
         RuntimeException var2 = null;
         DroneWave[] var4 = null;
-        vl[] var5 = null;
+        ArenaDefinition[] var5 = null;
         int var6 = 0;
         PacketBuffer var6_ref_fs = null;
         Exception var7 = null;
@@ -130,14 +130,14 @@ final class sb {
           }
           var2_int = param1.groupId(param0 ^ param0, "levels/");
           var24 = param1.fileIds(var2_int, -25915);
-          var5 = new vl[var24.length];
-          EnemyDrone.field_S = new vl[25];
+          var5 = new ArenaDefinition[var24.length];
+          EnemyDrone.field_S = new ArenaDefinition[25];
           for (var6 = 0; var24.length > var6; var6++) {
             var14 = new PacketBuffer(param1.fetchFile((byte) 98, var24[var6], var2_int));
             var14.position = var14.position + 1;
-            var5[var6] = pi.a(var14, true, 102);
-            if (25 > var5[var6].field_e) {
-              EnemyDrone.field_S[var5[var6].field_e] = var5[var6];
+            var5[var6] = pi.decodeArena(var14, true, 102);
+            if (25 > var5[var6].levelId) {
+              EnemyDrone.field_S[var5[var6].levelId] = var5[var6];
             }
           }
           NoiseSliceGenerator.field_a = new IntrusiveNodeHashTable(16);

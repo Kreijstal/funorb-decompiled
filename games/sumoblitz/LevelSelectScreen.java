@@ -43,13 +43,13 @@ final class LevelSelectScreen extends MenuScreen {
           hc.field_e.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           DelegatingCanvas.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
-          qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
+          QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
           uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
           MusicCrossfadeStream.field_q[1].drawRotated(130.0f, 402.0f, 1600, 0, 1, 0, 2);
-          qv.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -101, -1);
+          QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -101, -1);
           uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -36, -1);
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
-          qv.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.field_f), (byte) -15, -1);
+          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.field_f), (byte) -15, -1);
           uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.field_f), (byte) -51, -1);
           var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
@@ -70,7 +70,7 @@ final class LevelSelectScreen extends MenuScreen {
               DelegatingCanvas.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
-                qv.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
+                QueuedIntArrayRequest.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
                 uq.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
               } else {
                 CacheReferenceNode.field_y.drawRotated((float)(var9 + 50), (float)(var8 + 22), 4096, 0, 3, var4_int, 1);
@@ -128,8 +128,8 @@ final class LevelSelectScreen extends MenuScreen {
               ((ToolkitSprite) (Object) stackIn_36_0).drawRotated((float)(stackIn_36_1 + (stackIn_36_2 - (stackIn_36_3 - stackIn_37_4))), (float)(var9Lifetime1 + 40), 4096, 0, 3, -1, 1);
               return;
             }
-            MessageDialog.field_db.a(bi.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
-            LegacyOpenGlEffect.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard ^ -2355);
+            MessageDialog.field_db.a(ArenaBackdropPalettes.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
+            LegacyOpenGlEffect.field_c.a(ArenaBackdropPalettes.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard ^ -2355);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,20 +168,20 @@ final class LevelSelectScreen extends MenuScreen {
           var4 >= -1) {
           if (var4 != this.field_i &&
             var4 != -1) {
-            gn.a(17, true);
+            ArchiveLoadRequirement.playSoundEffect(17, true);
           }
         } else {
           var4 = -1;
           if (var4 != this.field_i &&
             var4 != -1) {
-            gn.a(17, true);
+            ArchiveLoadRequirement.playSoundEffect(17, true);
           }
         }
         this.field_i = var4;
         if (ActiveCanvasProvider.field_c == 1 &&
           this.field_i != -1 &&
           this.field_i <= ToolkitRasterStateFrame.field_e + 1) {
-          gn.a(16, true);
+          ArchiveLoadRequirement.playSoundEffect(16, true);
           LruNodeCache.gameplaySession.startLevel(this.field_i, false, false);
           StrongCacheReference.switchMenuScreen(-7753, true, -1);
         }

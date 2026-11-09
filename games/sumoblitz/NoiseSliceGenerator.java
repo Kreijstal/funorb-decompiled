@@ -39,7 +39,7 @@ abstract class NoiseSliceGenerator {
         int var8Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          stackIn_4_0 = (ul.field_f != 1) ? 0 : 1;
+          stackIn_4_0 = (DisplaySizeController.field_f != 1) ? 0 : 1;
           var7_int = stackIn_4_0;
           var8 = 0;
           while (true) {

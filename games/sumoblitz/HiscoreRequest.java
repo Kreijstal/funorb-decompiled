@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends IntrusiveNode {
+final class HiscoreRequest extends IntrusiveNode {
     static java.awt.Frame field_n;
-    int field_p;
+    int tableId;
     static int[] field_t;
-    String[][] field_o;
-    long[][] field_r;
-    int[][] field_m;
+    String[][] names;
+    long[][] entryIds;
+    int[][] values;
     static String quitToWebsiteText;
-    boolean field_q;
-    int field_l;
-    int field_s;
+    boolean complete;
+    int rowCount;
+    int columnCount;
 
-    final static of a(int param0, int param1, int param2, int param3, int param4) {
+    final static HiscoreRequest requestHiscores(int columnCount, int guard, int tableId, int opcode, int rowCount) {
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        of var5 = (of) (oi.field_b.first(param1 - 107));
+        HiscoreRequest var5 = (HiscoreRequest) (oi.field_b.first(guard - 107));
         while (var5 != null) {
-          if (~param2 == ~var5.field_p) {
+          if (~tableId == ~var5.tableId) {
             return var5;
           }
-          var5 = (of) (oi.field_b.next((byte) 18));
+          var5 = (HiscoreRequest) (oi.field_b.next((byte) 18));
         }
-        var5 = new of();
-        var5.field_s = param0;
-        var5.field_l = param4;
-        var5.field_p = param2;
+        var5 = new HiscoreRequest();
+        var5.columnCount = columnCount;
+        var5.rowCount = rowCount;
+        var5.tableId = tableId;
         oi.field_b.addLast((IntrusiveNode) (var5), (byte) 39);
-        if (param1 == 1) {
-          pd.a((byte) -65, param3, var5);
+        if (guard == 1) {
+          pd.sendHiscoreRequest((byte) -65, opcode, var5);
           return var5;
         }
-        of.c((byte) 50);
-        pd.a((byte) -65, param3, var5);
+        HiscoreRequest.loadNativeSoftwareLibraries((byte) 50);
+        pd.sendHiscoreRequest((byte) -65, opcode, var5);
         return var5;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void reloadApplet(int guard, java.applet.Applet applet) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -50,17 +50,17 @@ final class of extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var2 = param1.getDocumentBase().getFile();
+              var2 = applet.getDocumentBase().getFile();
               var3 = var2.indexOf('?');
               var4 = "reload.ws";
-              if (param0 != 8192) {
+              if (guard != 8192) {
                 return;
               }
               if (var3 >= 0) {
                 var4 = var4 + var2.substring(var3);
               }
-              var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(MusicPatch.a((byte) 122, param1, var5), "_self");
+              var5 = new java.net.URL(applet.getCodeBase(), var4);
+              applet.getAppletContext().showDocument(MusicPatch.a((byte) 122, applet, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,8 +72,8 @@ final class of extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_11_0 = var2_ref2;
-            stackIn_11_1 = new StringBuilder().append("of.F(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_11_1 = new StringBuilder().append("of.F(").append(guard).append(',');
+            if (applet == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
@@ -87,14 +87,14 @@ final class of extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void openPauseMenu(byte guard) {
         po.pauseMenuOpen = true;
-        if (param0 > -102) {
+        if (guard > -102) {
           field_t = (int[]) null;
         }
     }
 
-    final static boolean a(PacketBuffer param0, int param1) {
+    final static boolean readBooleanFlag(PacketBuffer packet, int guard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -106,10 +106,10 @@ final class of extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.readUnsignedByte(-31302);
+          var2_int = packet.readUnsignedByte(-31302);
           stackIn_3_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_3_0;
-          var4 = 88 / ((70 - param1) / 33);
+          var4 = 88 / ((70 - guard) / 33);
           stackIn_4_0 = var3;
           return stackIn_4_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,17 +117,17 @@ final class of extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("of.E(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static String c(int param0) {
-        int var1 = -4 / ((param0 - 48) / 36);
+    final static String accountServiceIdentifier(int guard) {
+        int var1 = -4 / ((guard - 48) / 36);
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return FadingWidget.field_C;
         }
@@ -140,28 +140,28 @@ final class of extends IntrusiveNode {
         return FocusProxyWidget.field_F;
     }
 
-    final static boolean c(byte param0) {
-        int var1 = -123 % ((67 - param0) / 50);
+    final static boolean loadNativeSoftwareLibraries(byte guard) {
+        int var1 = -123 % ((67 - guard) / 50);
         if (!ScrollPane.b((byte) -89, "jaclib")) {
           return false;
         }
         return ScrollPane.b((byte) 93, "hw3d");
     }
 
-    public static void a(int param0) {
-        if (param0 == -26437) {
+    public static void releaseStatics(int guard) {
+        if (guard == -26437) {
           field_n = null;
           quitToWebsiteText = null;
           field_t = null;
           return;
         }
-        of.c(-86);
+        HiscoreRequest.accountServiceIdentifier(-86);
         field_n = null;
         quitToWebsiteText = null;
         field_t = null;
     }
 
-    of() {
+    HiscoreRequest() {
     }
 
     static {

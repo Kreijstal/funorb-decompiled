@@ -24,7 +24,7 @@ final class DroneIntroductionOverlay {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4 = -114 % ((-29 - guard) / 39);
-          var3 = qv.a(allowRepeatedSeparators, 97, text);
+          var3 = QueuedIntArrayRequest.validateNameSeparators(allowRepeatedSeparators, 97, text);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -64,7 +64,7 @@ final class DroneIntroductionOverlay {
         int var4 = 200;
         int var5 = 160;
         String var9 = LimitedRandomAccessFile.droneDescriptions[this.droneType * 2];
-        qv.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
+        QueuedIntArrayRequest.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
         uq.field_a.a(var9, -1, -1, var4, var3_int, 0);
         if (guard != -4475) {
           return;
@@ -80,7 +80,7 @@ final class DroneIntroductionOverlay {
             var11 = IntNode.clickToContinueText;
             var7 = -this.dismissalDelay << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
-            qv.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
+            QueuedIntArrayRequest.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
             uq.field_a.a(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
@@ -115,7 +115,7 @@ final class DroneIntroductionOverlay {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (!vs.b((byte) 9)) {
+        if (!vs.isGuestSession((byte) 9)) {
           LruNodeCache.gameplaySession.submitSessionStatistics(-113);
           HardwareTextureCache.field_f = null;
         } else {

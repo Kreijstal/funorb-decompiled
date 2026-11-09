@@ -169,7 +169,7 @@ final class ig {
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
-            hw.a(var11, param0, 23295);
+            hw.registerNativeLibraryFile(var11, param0, 23295);
             stackIn_44_0 = 100;
             return stackIn_44_0;
           }

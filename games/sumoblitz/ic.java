@@ -120,7 +120,7 @@ final class ic {
             var6_int = param0.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (ea.a((byte) -54, param0.charAt(var5))) {
+                if (ea.isAsciiDigit((byte) -54, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -136,7 +136,7 @@ final class ic {
                 continue;
               }
               var5++;
-              var8 = no.a((byte) -127, (CharSequence) ((Object) var7_ref_String));
+              var8 = no.parseDecimal((byte) -127, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + var6_int + param1[var8].length());
               continue;
             }
@@ -153,7 +153,7 @@ final class ic {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (ea.a((byte) -54, param0.charAt(var5Lifetime1))) {
+              if (ea.isAsciiDigit((byte) -54, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -169,7 +169,7 @@ final class ic {
               continue;
             }
             var5Lifetime1++;
-            var10 = no.a((byte) -128, (CharSequence) ((Object) var9));
+            var10 = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9));
             discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$2 = var6.append(param1[var10]);

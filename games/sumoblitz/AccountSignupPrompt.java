@@ -42,7 +42,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
                 SlowBurstParticle.e(4);
               }
             } else {
-              rv.a((byte) 114);
+              rv.showAccountCreation((byte) 114);
             }
           }
           if (guard == 710) {

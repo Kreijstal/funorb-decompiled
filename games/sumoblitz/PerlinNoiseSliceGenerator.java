@@ -6,7 +6,7 @@ import java.util.*;
 final class PerlinNoiseSliceGenerator extends NoiseSliceGenerator {
     private int[] permutation;
     static IntrusiveDeque field_g;
-    static hv field_h;
+    static ProjectionMode field_h;
     static String[] powerupEffectNames;
 
     PerlinNoiseSliceGenerator(int seed) {
@@ -147,7 +147,7 @@ final class PerlinNoiseSliceGenerator extends NoiseSliceGenerator {
 
     static {
         field_g = new IntrusiveDeque();
-        field_h = new hv();
+        field_h = new ProjectionMode();
         powerupEffectNames = new String[]{"None", "Permanent speed up", "Permanent bounce up", "Permanent traction up", "Temporary speed up", "Temporary bounce up", "Temporary traction up"};
     }
 }

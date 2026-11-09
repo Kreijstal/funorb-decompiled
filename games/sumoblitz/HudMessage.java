@@ -47,10 +47,10 @@ final class HudMessage extends IntrusiveNode {
           }
           var3 = 80 * (this.fadeInTicks - this.ageTicks) / this.fadeInTicks;
           if (this.multiline) {
-            qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y + var3, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
+            QueuedIntArrayRequest.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y + var3, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
             uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y + var3, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
           } else {
-            qv.field_k.a(this.text, var2 << 24 | 5023231, -1, this.y + var3, this.x, 0);
+            QueuedIntArrayRequest.field_k.a(this.text, var2 << 24 | 5023231, -1, this.y + var3, this.x, 0);
             uq.field_a.a(this.text, var2 << 24 | this.color, -1, var3 + this.y, this.x, 0);
           }
           return;
@@ -61,10 +61,10 @@ final class HudMessage extends IntrusiveNode {
             var2Lifetime1 = 255;
           }
           if (!this.multiline) {
-            qv.field_k.a(this.text, 5023231 | var2Lifetime1 << 24, -1, this.y, this.x, param0 + 70);
+            QueuedIntArrayRequest.field_k.a(this.text, 5023231 | var2Lifetime1 << 24, -1, this.y, this.x, param0 + 70);
             uq.field_a.a(this.text, this.color | var2Lifetime1 << 24, -1, this.y, this.x, 0);
           } else {
-            qv.field_k.a(100, var2Lifetime1 << 24 | 5023231, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
+            QueuedIntArrayRequest.field_k.a(100, var2Lifetime1 << 24 | 5023231, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
             uq.field_a.a(100, 16777215 | var2Lifetime1 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.y, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
           }
           return;
@@ -79,10 +79,10 @@ final class HudMessage extends IntrusiveNode {
         }
         var4 = 80 * var2Lifetime2 / this.fadeOutTicks;
         if (!this.multiline) {
-          qv.field_k.a(this.text, 5023231 | var3Lifetime1 << 24, -1, -var4 + this.y, this.x, 0);
+          QueuedIntArrayRequest.field_k.a(this.text, 5023231 | var3Lifetime1 << 24, -1, -var4 + this.y, this.x, 0);
           uq.field_a.a(this.text, var3Lifetime1 << 24 | this.color, -1, this.y - var4, this.x, param0 ^ -70);
         } else {
-          qv.field_k.a(100, 5023231 | var3Lifetime1 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, -var4 + this.y, -1, 0, 0, param0 - 8717, this.text, (SpriteMask) null, 1, 1);
+          QueuedIntArrayRequest.field_k.a(100, 5023231 | var3Lifetime1 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, -var4 + this.y, -1, 0, 0, param0 - 8717, this.text, (SpriteMask) null, 1, 1);
           uq.field_a.a(100, var3Lifetime1 << 24 | 16777215, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, -var4 + this.y, -1, 0, 0, -8787, this.text, (SpriteMask) null, 1, 1);
         }
     }

@@ -15,9 +15,9 @@ final class MenuSelectionController {
     final static void createRendererAssets(boolean guard) {
         GraphicsToolkit var2 = MatchingTextValidator.field_h.getToolkit(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, SecondaryNodeHashTable.field_g, true);
-        MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
+        MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, ArchiveLoadingStage.field_b, true);
         uq.field_a = var2.createFont(AccountConnectionPhase.field_a, OpenGlTransparentWaterEffect.field_i, true);
-        qv.field_k = var2.createFont(sv.field_a, LegacyOpenGlReflectionEffect.field_j, true);
+        QueuedIntArrayRequest.field_k = var2.createFont(sv.field_a, LegacyOpenGlReflectionEffect.field_j, true);
         hc.field_e = var2.createFont(ma.field_b, DropDownWidget.field_F, true);
         ForceFieldRingEffect.field_t = var2.createFont(sq.field_b, ProxySocketConnector.field_f, true);
         up.field_c = DroneDebris.createToolkitSprites(NameSuggestionsPanel.field_F, var2, 28513);
@@ -38,10 +38,10 @@ final class MenuSelectionController {
         LegacyOpenGlTexture1D.field_k = DroneDebris.createToolkitSprites(LegacyOpenGlFloatPostProcessEffect.field_o, var2, 28513);
         LegacyOpenGlSpriteMask.field_e = ResizingDialog.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
         HudMessage.field_m = ResizingDialog.a(var2, LegacyOpenGlPostProcessEffect.field_k, (byte) -11);
-        bt.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
+        LegacyCubeMapSource.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
         LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(RasterStateFrame.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(LegacyOpenGlTextureCache.field_e, var2, 28513);
-        hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
+        ProjectionMode.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
         TextHotspot.field_n = DroneDebris.createToolkitSprites(StatefulWidgetRenderer.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
@@ -64,10 +64,10 @@ final class MenuSelectionController {
           ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
           im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
-          mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
+          ArchiveLoadingStage.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
           PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
-          hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
-          OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
+          ProjectionMode.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
+          OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, ArchiveLoadingStage.field_c, (byte) -11);
           AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
           TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
@@ -90,8 +90,8 @@ final class MenuSelectionController {
           HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
           OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
           LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
-          vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
-          DelegatingCanvas.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
+          ArenaDefinition.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
+          DelegatingCanvas.field_b = new ToolkitSprite[]{ArchiveLoadingStage.field_j, PlayingSound.field_l, ProjectionMode.field_b};
           PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
@@ -113,10 +113,10 @@ final class MenuSelectionController {
         ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
         im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
-        mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
+        ArchiveLoadingStage.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
         PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
-        hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
-        OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
+        ProjectionMode.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
+        OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, ArchiveLoadingStage.field_c, (byte) -11);
         AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
         TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
@@ -139,8 +139,8 @@ final class MenuSelectionController {
         HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
         OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
         LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
-        vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
-        DelegatingCanvas.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
+        ArenaDefinition.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
+        DelegatingCanvas.field_b = new ToolkitSprite[]{ArchiveLoadingStage.field_j, PlayingSound.field_l, ProjectionMode.field_b};
         PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }

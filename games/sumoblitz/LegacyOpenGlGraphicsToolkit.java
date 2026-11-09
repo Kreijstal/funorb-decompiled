@@ -66,7 +66,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private String field_E;
     private int field_t;
     private LegacyVertexBuffer field_Rb;
-    private bt field_Y;
+    private LegacyCubeMapSource field_Y;
     private int field_gc;
     LegacyOpenGlFramebuffer scratchFramebuffer;
     boolean field_vb;
@@ -159,8 +159,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         var4 = SocialContact.split(' ', var3.replace('.', ' '), -27224);
         if (param0 <= var4.length) {
           try {
-            var5_int = no.a((byte) -128, (CharSequence) ((Object) var4[0]));
-            var6 = no.a((byte) -127, (CharSequence) ((Object) var4[1]));
+            var5_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var4[0]));
+            var6 = no.parseDecimal((byte) -127, (CharSequence) ((Object) var4[1]));
             this.field_Yb = var5_int * 10 + var6;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -679,7 +679,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (ContentTransitionPhase.a(-13181, var22)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
-                          var5_int = no.a((byte) -128, var23);
+                          var5_int = no.parseDecimal((byte) -128, var23);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -851,7 +851,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.field_y = null;
         }
         if (this.field_jc) {
-          pt.a(false, true, -1);
+          CubeMapSource.a(false, true, -1);
           this.field_jc = false;
         }
     }
@@ -1593,7 +1593,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         if (guard != 62) {
           this.field_r = false;
         }
-        return null == this.field_Y ? null : this.field_Y.b((byte) 113);
+        return null == this.field_Y ? null : this.field_Y.cubeTexture((byte) 113);
     }
 
     final synchronized void updateTime(int timeMillis) {
@@ -1965,7 +1965,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               var8 = 512;
             }
           }
-          var8 = jo.a(var8, false);
+          var8 = jo.highestOneBit(var8, false);
           jaggl.OpenGL.glVertex2f(var6 + (float)radius, var7);
           for (var9 = 16384 - var8; var9 > 0; var9 = var9 - var8) {
             jaggl.OpenGL.glVertex2f((float)radius * TextInputWidget.field_M[var9] + var6, TextInputWidget.field_N[var9] * (float)radius + var7);

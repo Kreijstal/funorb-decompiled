@@ -41,12 +41,12 @@ abstract class SocketConnector {
           var4 = AccountCreationProgressDialog.normalizeAccountName(-1, param2);
           if (var4 != null &&
             1 <= var4.length()) {
-            if (!wv.a((byte) -124, var4.charAt(0)) &&
-              !wv.a((byte) -84, var4.charAt(var4.length() - 1))) {
+            if (!AccountNameSupport.isNameSeparator((byte) -124, var4.charAt(0)) &&
+              !AccountNameSupport.isNameSeparator((byte) -84, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               for (var6 = param1; param2.length() > var6; var6++) {
                 var7 = param2.charAt(var6);
-                if (wv.a((byte) -85, (char) var7)) {
+                if (AccountNameSupport.isNameSeparator((byte) -85, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;

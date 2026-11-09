@@ -196,13 +196,13 @@ final class up {
                   if (var30 != 0) {
                     break scanLoop1;
                   }
-                  if (stackIn_71_0 >= of.field_t.length) {
+                  if (stackIn_71_0 >= HiscoreRequest.field_t.length) {
                     break;
                   }
                   var19 = param4.field_x[var18];
                   var20 = param4.field_g[var18];
                   var21Lifetime2 = param4.field_L[var18];
-                  of.field_t[var18] = var19 * var9 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
+                  HiscoreRequest.field_t[var18] = var19 * var9 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
                   r.field_r[var18] = var20 * var13 + var19 * var10 + var21Lifetime2 * var16 >> 16;
                   AccountConnectionPhase.field_d[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
                   var18++;

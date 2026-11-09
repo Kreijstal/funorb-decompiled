@@ -1185,7 +1185,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("quittowebsite", (byte) -23);
                 if (null != var2) {
-                  of.quitToWebsiteText = MusicVoice.a(0, var2);
+                  HiscoreRequest.quitToWebsiteText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("connectionrestored", (byte) -23);
                 if (var2 != null) {
@@ -1516,7 +1516,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_u13terms", (byte) -23);
                 if (null != var2) {
-                  qv.asYouAreUnderText = MusicVoice.a(param0 - 7, var2);
+                  QueuedIntArrayRequest.asYouAreUnderText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("login_username_email", (byte) -23);
                 if (null != var2) {
@@ -1692,7 +1692,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_invalidage", (byte) -23);
                 if (null != var2) {
-                  gn.pleaseEnterYourAgeText = MusicVoice.a(0, var2);
+                  ArchiveLoadRequirement.pleaseEnterYourAgeText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_yearrange", (byte) -23);
                 if (null != var2) {
@@ -1712,7 +1712,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_account_success", (byte) -23);
                 if (null != var2) {
-                  vl.accountCreatedSuccessfullyText = MusicVoice.a(0, var2);
+                  ArenaDefinition.accountCreatedSuccessfullyText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("invalid_name", (byte) -23);
                 if (var2 != null) {
@@ -1904,7 +1904,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("unpacking_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  hv.unpackingSoundEffectsText = MusicVoice.a(0, var2);
+                  ProjectionMode.unpackingSoundEffectsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("unpacking_music", (byte) -23);
                 if (null != var2) {
@@ -2114,7 +2114,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("returntogame", (byte) -23);
                 if (var2 != null) {
-                  id.returnToGameText = MusicVoice.a(0, var2);
+                  SessionStatisticsSubmission.returnToGameText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("endgameresign", (byte) -23);
                 if (null != var2) {
@@ -2178,7 +2178,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_quality_high", (byte) -23);
                 if (null != var2) {
-                  mn.highText = MusicVoice.a(0, var2);
+                  ArchiveLoadingStage.highText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("graphics_quality_low", (byte) -23);
                 if (null != var2) {

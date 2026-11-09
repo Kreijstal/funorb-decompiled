@@ -22,7 +22,7 @@ final class ScreenNameValidator extends TextInputValidator {
         if (param0 != -112) {
           field_g = (String) null;
         }
-        if (!vs.b((byte) 9) &&
+        if (!vs.isGuestSession((byte) 9) &&
           !TimedSceneEffect.field_r) {
           if (MatchingTextValidator.field_g == null) {
             MatchingTextValidator.field_g = EmailSyntaxValidator.requestServerIntArray((byte) -92, 4);

@@ -267,7 +267,7 @@ final class ArchiveIndex {
             if (64 != expectedDigest.length) {
               throw new RuntimeException();
             }
-            this.digest = gn.whirlpoolDigest(containerBytes, (byte) -110, 0, containerBytes.length);
+            this.digest = ArchiveLoadRequirement.whirlpoolDigest(containerBytes, (byte) -110, 0, containerBytes.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (expectedDigest[var4_int] != this.digest[var4_int]) {
                 throw new RuntimeException();

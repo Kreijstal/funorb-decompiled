@@ -87,7 +87,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = no.a((byte) -128, var10);
+                                  var9_int = no.parseDecimal((byte) -128, var10);
                                   var4 = var4 + this.inlineSprites[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -383,7 +383,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = no.a((byte) -128, var13);
+                                  var10 = no.parseDecimal((byte) -128, var13);
                                   var11_ref_pb = this.inlineSprites[var10];
                                   if (this.inlineSpriteHeights == null) {
                                     stackIn_27_0 = var11_ref_pb.fullHeight;
@@ -604,7 +604,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) tag.substring(5));
-                                shadowColor = ea.a((byte) -73, var7, 16);
+                                shadowColor = ea.parseInt((byte) -73, var7, 16);
                               }
                             } else {
                               underlineColor = -1;
@@ -614,7 +614,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = ea.a((byte) -73, var6, 16);
+                          underlineColor = ea.parseInt((byte) -73, var6, 16);
                         }
                       } else {
                         strikethroughColor = -1;
@@ -624,21 +624,21 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) tag.substring(4));
-                    strikethroughColor = ea.a((byte) -73, var5, 16);
+                    strikethroughColor = ea.parseInt((byte) -73, var5, 16);
                   }
                 } else {
                   alpha = defaultAlpha;
                 }
               } else {
                 var4 = (CharSequence) ((Object) tag.substring(6));
-                alpha = no.a((byte) -128, var4);
+                alpha = no.parseDecimal((byte) -128, var4);
               }
             } else {
               textColor = defaultTextColor;
             }
           } else {
             var3 = (CharSequence) ((Object) tag.substring(4));
-            textColor = ea.a((byte) -73, var3, 16);
+            textColor = ea.parseInt((byte) -73, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -707,7 +707,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = no.a((byte) -127, var18);
+                                    var16_int = no.parseDecimal((byte) -127, var18);
                                     var4 = var4 + this.inlineSprites[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

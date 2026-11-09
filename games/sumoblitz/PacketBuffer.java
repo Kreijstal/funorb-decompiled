@@ -128,7 +128,7 @@ class PacketBuffer extends IntrusiveNode {
           CompactMeshGeometry.field_u = param0;
           ValidatedTextInputWidget.field_P = param5;
           HuffmanDecoder.field_e = param8;
-          bt.field_d = param6;
+          LegacyCubeMapSource.field_d = param6;
           jk.field_b = (Js5Client) ((Object) new SocketJs5Client());
           FadingWidget.field_D = new CacheIoWorker(param0);
           LegacyOpenGlSpecularEffect.field_i = new ArchiveCatalog(jk.field_b, FadingWidget.field_D);

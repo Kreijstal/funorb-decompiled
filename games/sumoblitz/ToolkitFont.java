@@ -106,10 +106,10 @@ abstract class ToolkitFont {
           try {
             if (param0.startsWith("col=")) {
               var6 = (CharSequence) ((Object) param0.substring(4));
-              mn.field_i = mn.field_i & -16777216 | 16777215 & ea.a((byte) -73, var6, 16);
+              ArchiveLoadingStage.field_i = ArchiveLoadingStage.field_i & -16777216 | 16777215 & ea.parseInt((byte) -73, var6, 16);
             } else {
               if (param0.equals("/col")) {
-                mn.field_i = 16777215 & PacketBuffer.field_l | -16777216 & mn.field_i;
+                ArchiveLoadingStage.field_i = 16777215 & PacketBuffer.field_l | -16777216 & ArchiveLoadingStage.field_i;
               }
             }
             if (!param0.startsWith("argb=")) {
@@ -125,7 +125,7 @@ abstract class ToolkitFont {
                             } else {
                               if (param0.startsWith("shad=")) {
                                 var10 = (CharSequence) ((Object) param0.substring(5));
-                                LoginMethodPreference.field_b = mn.field_i & -16777216 | ea.a((byte) -73, var10, 16);
+                                LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216 | ea.parseInt((byte) -73, var10, 16);
                               } else {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
@@ -136,7 +136,7 @@ abstract class ToolkitFont {
                                     LoginMethodPreference.field_b = jv.field_b;
                                   }
                                 } else {
-                                  LoginMethodPreference.field_b = mn.field_i & -16777216;
+                                  LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216;
                                 }
                               }
                             }
@@ -144,28 +144,28 @@ abstract class ToolkitFont {
                             StatefulWidgetRenderer.field_p = -1;
                           }
                         } else {
-                          StatefulWidgetRenderer.field_p = -16777216 & mn.field_i;
+                          StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i;
                         }
                       } else {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        StatefulWidgetRenderer.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9, 16);
+                        StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i | ea.parseInt((byte) -73, var9, 16);
                       }
                     } else {
                       ScrollControl.field_I = -1;
                     }
                   } else {
-                    ScrollControl.field_I = 8388608 | -16777216 & mn.field_i;
+                    ScrollControl.field_I = 8388608 | -16777216 & ArchiveLoadingStage.field_i;
                   }
                 } else {
                   var8 = (CharSequence) ((Object) param0.substring(4));
-                  ScrollControl.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
+                  ScrollControl.field_I = -16777216 & ArchiveLoadingStage.field_i | ea.parseInt((byte) -73, var8, 16);
                 }
               } else {
-                mn.field_i = PacketBuffer.field_l;
+                ArchiveLoadingStage.field_i = PacketBuffer.field_l;
               }
             } else {
               var7 = (CharSequence) ((Object) param0.substring(5));
-              mn.field_i = ea.a((byte) -73, var7, 16);
+              ArchiveLoadingStage.field_i = ea.parseInt((byte) -73, var7, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -384,7 +384,7 @@ abstract class ToolkitFont {
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = no.a((byte) -127, var21);
+                                    var16_int = no.parseDecimal((byte) -127, var21);
                                     var17 = param2[var16_int];
                                     if (param7 != null) {
                                       stackIn_25_0 = param7[var16_int];
@@ -392,8 +392,8 @@ abstract class ToolkitFont {
                                       stackIn_25_0 = var17.paddedHeight();
                                     }
                                     var18 = stackIn_25_0;
-                                    if ((-16777216 & mn.field_i) != -16777216) {
-                                      var17.draw(param3, -var18 + this.field_b.field_d + param1, 0, mn.field_i & -16777216 | 16777215, 1);
+                                    if ((-16777216 & ArchiveLoadingStage.field_i) != -16777216) {
+                                      var17.draw(param3, -var18 + this.field_b.field_d + param1, 0, ArchiveLoadingStage.field_i & -16777216 | 16777215, 1);
                                     } else {
                                       var17.draw(param3, -var18 + (param1 + this.field_b.field_d), 1, 0, 1);
                                     }
@@ -431,12 +431,12 @@ abstract class ToolkitFont {
                     if ((-16777216 & LoginMethodPreference.field_b) != 0) {
                       this.drawGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true);
                     }
-                    this.drawGlyph((char) var14, param3, param1, mn.field_i, false);
+                    this.drawGlyph((char) var14, param3, param1, ArchiveLoadingStage.field_i, false);
                   } else {
                     if ((-16777216 & LoginMethodPreference.field_b) != 0) {
                       this.drawMaskedGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true, param8, param4, param5);
                     }
-                    this.drawMaskedGlyph((char) var14, param3, param1, mn.field_i, false, param8, param4, param5);
+                    this.drawMaskedGlyph((char) var14, param3, param1, ArchiveLoadingStage.field_i, false, param8, param4, param5);
                   }
                 } else {
                   if (StringBuilderSupport.field_b > 0) {
@@ -578,7 +578,7 @@ abstract class ToolkitFont {
     private final void a(int param0, int param1, int param2) {
         StringBuilderSupport.field_b = 0;
         PacketBuffer.field_l = param0;
-        mn.field_i = param0;
+        ArchiveLoadingStage.field_i = param0;
         if (param1 == -1) {
           param1 = 0;
         }

@@ -256,14 +256,14 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void d(byte param0) {
-        if (vs.b((byte) 9)) {
+        if (vs.isGuestSession((byte) 9)) {
           if (param0 >= -15) {
             UiWidget.d((byte) -33);
             return;
           }
           return;
         }
-        Drone.field_g = GameApplet.c(-5204);
+        Drone.field_g = GameApplet.encodeSavedProgress(-5204);
         if (null != Drone.field_g) {
           pd.writeServerData(Drone.field_g, 6, 5412);
           if (param0 >= -15) {

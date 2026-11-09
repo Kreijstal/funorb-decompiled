@@ -55,7 +55,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
               }
             }
           } else {
-            var4 = vl.accountCreatedSuccessfullyText;
+            var4 = ArenaDefinition.accountCreatedSuccessfullyText;
           }
           var5 = -1 / ((-1 - guard) / 45);
           var6 = new StatusMessagePanel((MessageDialog) (this), LegacyOpenGlDisplayLists.field_a, var4);
@@ -67,7 +67,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
                 var6.a(FullscreenCanvas.backText, -1, true);
               } else {
                 var6.a(vf.reloadGameText, 11, true);
-                var6.a(of.quitToWebsiteText, 17, true);
+                var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
               }
             }
             if (result.errorCode == 3) {
@@ -147,14 +147,14 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           var2_int = 0;
           var3 = name.length();
           while (var3 > var2_int) {
-            if (wv.a((byte) -98, name.charAt(var2_int))) {
+            if (AccountNameSupport.isNameSeparator((byte) -98, name.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (wv.a((byte) -95, name.charAt(var3 - 1))) {
+            if (AccountNameSupport.isNameSeparator((byte) -95, name.charAt(var3 - 1))) {
               var3--;
               continue;
             }

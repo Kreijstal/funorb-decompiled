@@ -23,7 +23,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             MessageDialog.a(-115, (java.applet.Applet) null);
           }
           SingleChildWidget.setSessionCookie(-118, "", param1);
-          of.a(param0 + 9732, param1);
+          HiscoreRequest.reloadApplet(param0 + 9732, param1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gt.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -149,7 +149,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         this.field_ib.b(2121792, 4210752, 55);
         if (!param0) {
           var2 = new StatusMessagePanel(this, this.field_jb, ImageProducerRasterBuffer.connectionRestoredText);
-          var2.a(id.returnToGameText, 15, true);
+          var2.a(SessionStatisticsSubmission.returnToGameText, 15, true);
           this.transitionToContent((byte) -121, var2);
           return;
         }
@@ -306,7 +306,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             }
           } else {
             var6.a(vf.reloadGameText, 11, true);
-            var6.a(of.quitToWebsiteText, 17, true);
+            var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
           }
           if (param1 == 3) {
             var6.a(lq.toServerListText, 7, true);

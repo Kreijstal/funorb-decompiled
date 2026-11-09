@@ -5,7 +5,7 @@ abstract class tt extends IntrusiveNode {
     static String defeatText;
     static int field_l;
 
-    final static Sprite[] a(byte param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadOpaqueSprites(byte guard, int groupId, ResourceArchive archive, int fileId) {
         RuntimeException var4 = null;
         Sprite[] stackIn_5_0 = null;
         Sprite[] stackIn_7_0 = null;
@@ -14,11 +14,11 @@ abstract class tt extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.decodeSpriteSheet(param2, param1, param3, -23046)) {
+          if (!k.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
             return null;
           }
-          if (param0 <= -79) {
-            stackIn_7_0 = ul.a(255);
+          if (guard <= -79) {
+            stackIn_7_0 = DisplaySizeController.takeDecodedOpaqueSprites(255);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;
@@ -27,13 +27,13 @@ abstract class tt extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("tt.J(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("tt.J(").append(guard).append(',').append(groupId).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(fileId).append(')').toString());
         }
     }
 

@@ -5,9 +5,9 @@ final class rv {
     static PrimitiveType LINE_STRIP;
     static String warningIfYouQuitText;
 
-    final static void a(byte param0) {
+    final static void showAccountCreation(byte guard) {
         ToolkitRasterBuffer.field_o = new AccountCreationForm();
-        if (param0 >= 35) {
+        if (guard >= 35) {
           SlowBurstParticle.field_y.transitionToContent((byte) -119, ToolkitRasterBuffer.field_o);
           return;
         }

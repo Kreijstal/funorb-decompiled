@@ -32,7 +32,7 @@ final class ExpandingRingEffect extends TimedSceneEffect {
           if (bound <= 0) {
             throw new IllegalArgumentException();
           }
-          if (rm.a(bound, guard ^ 55)) {
+          if (IntegerMath.isSingleBitOrZero(bound, guard ^ 55)) {
             stackIn_8_0 = (int)(((long)random.nextInt() & 4294967295L) * (long)bound >> 32);
             return stackIn_8_0;
           }

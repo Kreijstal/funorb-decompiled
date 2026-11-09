@@ -211,7 +211,7 @@ abstract class ResizingDialog extends ModalDialog {
             return null;
           }
           if (param3 == 0) {
-            var10 = ul.a((byte) -73, param1);
+            var10 = DisplaySizeController.listFullscreenModes((byte) -73, param1);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

@@ -31,7 +31,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           }
           boolean decompiledFrameCompleted0 = true;
           if (flipY) {
-            var11_int = pc.a(sourceFormat, (byte) -37);
+            var11_int = pc.glFormatComponents(sourceFormat, (byte) -37);
             var12 = var11_int * width;
             var13 = var11_int * sourceRowLength;
             var14 = new byte[height * var12];

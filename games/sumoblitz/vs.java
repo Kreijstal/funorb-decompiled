@@ -51,8 +51,8 @@ final class vs {
         ALTERNATE_USERNAME_CREDENTIALS = null;
     }
 
-    final static boolean b(byte param0) {
-        if (param0 != 9) {
+    final static boolean isGuestSession(byte guard) {
+        if (guard != 9) {
           vs.releaseStatics((byte) 108);
         }
         return IntrusiveNode.field_a;

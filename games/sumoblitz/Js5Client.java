@@ -124,7 +124,7 @@ abstract class Js5Client {
           if (param3 < 59) {
             return;
           }
-          stackIn_6_0 = (ul.field_f != 1) ? 0 : 1;
+          stackIn_6_0 = (DisplaySizeController.field_f != 1) ? 0 : 1;
           var6_int = stackIn_6_0;
           var7 = 0;
           while (true) {

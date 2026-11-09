@@ -57,7 +57,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
           var2.width = this.width;
           var2.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, 60);
-          if (vs.b((byte) 9)) {
+          if (vs.isGuestSession((byte) 9)) {
             this.field_U = this.a(25566, (WidgetListener) (this), AudioServiceThread.membersText);
           }
           this.field_P = this.a(25566, (WidgetListener) (this), DraggableWidget.closeText);

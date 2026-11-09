@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn {
-    int field_e;
+final class ArchiveLoadRequirement {
+    int groupId;
     static String pleaseEnterYourAgeText;
-    static boolean field_b;
-    String field_f;
-    ResourceArchive field_a;
+    static boolean simpleMode;
+    String waitingText;
+    ResourceArchive archive;
     static boolean field_d;
-    String field_h;
-    String field_c;
+    String groupName;
+    String loadingText;
 
-    final static void a(int param0, boolean param1) {
-        if (!param1) {
+    final static void playSoundEffect(int sampleId, boolean guard) {
+        if (!guard) {
           byte[] var3 = (byte[]) null;
-          gn.whirlpoolDigest((byte[]) null, (byte) -29, -53, 2);
+          ArchiveLoadRequirement.whirlpoolDigest((byte[]) null, (byte) -29, -53, 2);
         }
-        PlayerDrone.playSample(-125, OpenGlCubeTexture.field_l[param0]);
+        PlayerDrone.playSample(-125, OpenGlCubeTexture.field_l[sampleId]);
     }
 
     final static byte[] whirlpoolDigest(byte[] bytes, byte guard, int offset, int length) {
@@ -35,7 +35,7 @@ final class gn {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (guard >= -98) {
-            gn.a(-28, false);
+            ArchiveLoadRequirement.playSoundEffect(-28, false);
           }
           if (offset > 0) {
             var8 = new byte[length];
@@ -71,11 +71,11 @@ final class gn {
         pleaseEnterYourAgeText = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;
-          gn.whirlpoolDigest((byte[]) null, (byte) -96, -56, 90);
+          ArchiveLoadRequirement.whirlpoolDigest((byte[]) null, (byte) -96, -56, 90);
         }
     }
 
-    private gn() throws Throwable {
+    private ArchiveLoadRequirement() throws Throwable {
         throw new Error();
     }
 

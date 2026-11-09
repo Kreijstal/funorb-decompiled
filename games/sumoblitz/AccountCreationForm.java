@@ -744,8 +744,8 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             stackIn_2_0 = (LegacyOpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
-          if (!param4.field_Cc && (!rm.a(param6, -116) ||
-            !rm.a(param0, -126))) {
+          if (!param4.field_Cc && (!IntegerMath.isSingleBitOrZero(param6, -116) ||
+            !IntegerMath.isSingleBitOrZero(param0, -126))) {
             if (param4.field_C) {
               stackIn_16_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param6, param0, param3, param7, param2, param1);
               return stackIn_16_0;

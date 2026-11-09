@@ -61,7 +61,7 @@ final class BurstParticle extends TimedSceneEffect {
         int var7;
         int var8;
         int var9;
-        var5 = -14 + rm.b(-117, param2 ^ param2 >> 31 | param3 ^ param3 >> 31 | param0 >> 31 ^ param0);
+        var5 = -14 + IntegerMath.floorLog2(-117, param2 ^ param2 >> 31 | param3 ^ param3 >> 31 | param0 >> 31 ^ param0);
         if (var5 > 0) {
           param3 = param3 >> var5;
           param0 = param0 >> var5;

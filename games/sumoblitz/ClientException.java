@@ -76,14 +76,14 @@ final class ClientException extends RuntimeException {
           byte[] var2 = (byte[]) null;
           ClientException.compileShader(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
           if (!TimedSceneEffect.field_r) {
-            return vs.b((byte) 9) ? true : false;
+            return vs.isGuestSession((byte) 9) ? true : false;
           }
           return true;
         }
         if (TimedSceneEffect.field_r) {
           return true;
         }
-        if (!vs.b((byte) 9)) {
+        if (!vs.isGuestSession((byte) 9)) {
           return false;
         }
         return true;

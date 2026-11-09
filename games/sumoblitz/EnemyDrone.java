@@ -3,7 +3,7 @@
  */
 final class EnemyDrone extends Drone {
     private int spawnedDroneType;
-    static vl[] field_S;
+    static ArenaDefinition[] field_S;
 
     final static void o(int param0) {
         OpenGlVertexLayout.field_f.hide(-115);

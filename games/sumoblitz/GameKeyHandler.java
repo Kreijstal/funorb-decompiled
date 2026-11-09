@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static id field_a;
+    static SessionStatisticsSubmission field_a;
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
@@ -113,7 +113,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var4 = -param0.velocityXQ8;
           var5 = param0.velocityYQ8;
           if (param1 != -1) {
-            field_a = (id) null;
+            field_a = (SessionStatisticsSubmission) null;
           }
           var6 = 1;
           var7 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);

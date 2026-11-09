@@ -63,7 +63,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_22_0 = AccountRequestState.thisPasswordIsPartText;
             return stackIn_22_0;
           }
-          if (!wv.a(false, var5, var3)) {
+          if (!AccountNameSupport.containsNameIgnoringUnderscores(false, var5, var3)) {
             return ArchiveIndex.passwordsMustBeBetweenText;
           }
           stackIn_26_0 = ValidationStatusWidget.thisPasswordContainsYourText;
@@ -182,7 +182,7 @@ final class PasswordValidator extends TextInputValidator {
         ei.field_a = 0;
         if (param0 >= 85) {
           DroneChargeParticle.field_w = false;
-          bi.uniqueDroneTypeStreak = 0;
+          ArenaBackdropPalettes.uniqueDroneTypeStreak = 0;
           EmailSyntaxValidator.field_e = 0;
           LegacyOpenGlNormalMapGenerator.field_c = false;
           SecondaryNodeDeque.field_e = false;

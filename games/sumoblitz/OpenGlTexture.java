@@ -43,11 +43,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (~width < guard &&
-            !rm.a(width, -108)) {
+            !IntegerMath.isSingleBitOrZero(width, -108)) {
             throw new IllegalArgumentException("");
           }
           if (height > 0 &&
-            !rm.a(height, -127)) {
+            !IntegerMath.isSingleBitOrZero(height, -127)) {
             throw new IllegalArgumentException("");
           }
           if (this.format != BeveledTextInputRenderer.RGBA) {
@@ -208,11 +208,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (width > 0 &&
-            !rm.a(width, -102)) {
+            !IntegerMath.isSingleBitOrZero(width, -102)) {
             throw new IllegalArgumentException("");
           }
           if (height > 0 &&
-            !rm.a(height, -102)) {
+            !IntegerMath.isSingleBitOrZero(height, -102)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.format.componentCount;
@@ -305,11 +305,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (width > 0 &&
-            !rm.a(width, -102)) {
+            !IntegerMath.isSingleBitOrZero(width, -102)) {
             throw new IllegalArgumentException("");
           }
           if (height > 0 &&
-            !rm.a(height, -116)) {
+            !IntegerMath.isSingleBitOrZero(height, -116)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.format.componentCount;

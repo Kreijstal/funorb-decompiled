@@ -16,7 +16,7 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void e(int param0) {
         String var2 = (String) null;
-        wv.a((byte) 77, "", (String) null);
+        AccountNameSupport.showLoginForm((byte) 77, "", (String) null);
         if (param0 != 0) {
           myHiscoresText = (String) null;
         }

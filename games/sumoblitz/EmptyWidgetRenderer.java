@@ -43,7 +43,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             }
             TextHotspot.field_o = param12;
             MidiNoteMixer.field_p = param6;
-            gn.field_d = param0;
+            ArchiveLoadRequirement.field_d = param0;
             LoginCredentialType.field_b = param4;
             CacheReferenceNode.field_r = param11;
             if (null == CacheReferenceNode.field_t.field_n) {

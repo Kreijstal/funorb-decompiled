@@ -7,14 +7,14 @@ final class hw {
     static boolean[] field_b;
     static ResourceArchive field_a;
 
-    final static void a(File param0, String param1, int param2) {
+    final static void registerNativeLibraryFile(File file, String libraryName, int guard) {
         try {
-          if (param2 != 23295) {
+          if (guard != 23295) {
             field_b = (boolean[]) null;
           }
-          TextureCombineSource.field_b.put(param1, param0);
+          TextureCombineSource.field_b.put(libraryName, file);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.B(" + (file != null ? "{...}" : "null") + ',' + (libraryName != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

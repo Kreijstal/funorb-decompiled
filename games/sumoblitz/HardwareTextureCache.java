@@ -4,7 +4,7 @@
 final class HardwareTextureCache {
     static CompactMeshGeometry[] field_b;
     static ToolkitSprite[] field_e;
-    static of field_f;
+    static HiscoreRequest field_f;
     private TextureProvider provider;
     private SoftLruCache textures;
     private HardwareGraphicsToolkit toolkit;
@@ -14,7 +14,7 @@ final class HardwareTextureCache {
         field_f = null;
         field_e = null;
         if (param0 >= -101) {
-          field_f = (of) null;
+          field_f = (HiscoreRequest) null;
         }
     }
 

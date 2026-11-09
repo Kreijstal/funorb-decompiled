@@ -6,9 +6,9 @@ final class vm {
     static AccountRequestState nameAvailabilityState;
     static ToolkitSprite[] field_a;
 
-    final static int a(int param0) {
-        if (param0 > -30) {
-          vm.a(-16);
+    final static int ticksPerSecond(int guard) {
+        if (guard > -30) {
+          vm.ticksPerSecond(-16);
           return (int)(1000000000L / DualLinkNode.field_p);
         }
         return (int)(1000000000L / DualLinkNode.field_p);

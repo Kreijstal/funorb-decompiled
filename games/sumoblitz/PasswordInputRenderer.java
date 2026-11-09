@@ -4,7 +4,7 @@
 final class PasswordInputRenderer extends BeveledTextInputRenderer {
     static int field_s;
     static String ifYouDoNothingText;
-    static int field_r;
+    static int displayDialogX;
     static String unfortunatelyThereWasAText;
     static int[] field_u;
 

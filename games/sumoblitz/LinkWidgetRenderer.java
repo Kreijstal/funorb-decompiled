@@ -97,7 +97,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        wv.a((byte) 99, FadingWidget.field_C, (String) null);
+        AccountNameSupport.showLoginForm((byte) 99, FadingWidget.field_C, (String) null);
         if (param0 != -363927231) {
           LinkWidgetRenderer.a(-108);
         }

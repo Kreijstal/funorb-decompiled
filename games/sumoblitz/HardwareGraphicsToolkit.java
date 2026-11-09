@@ -94,7 +94,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     float field_J;
     int field_tc;
     private jl field_yb;
-    private em field_uc;
+    private HardwareCubeMapSource field_uc;
     private int field_N;
     private int field_dc;
     float[] field_A;
@@ -102,7 +102,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_Nb;
     private boolean field_Jb;
     float field_hb;
-    hv field_s;
+    ProjectionMode field_s;
     private int field_rc;
     int field_v;
     private int field_ic;
@@ -281,14 +281,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void d(boolean param0) {
-        hv var2 = null;
+        ProjectionMode var2 = null;
         if (param0) {
           this.n((byte) 96);
         }
         if (GameInstructions.field_k != this.field_s) {
           var2 = this.field_s;
           this.field_s = GameInstructions.field_k;
-          if (var2.a(-20011)) {
+          if (var2.usesViewTransform(-20011)) {
             this.W(16);
           }
           this.field_ic = this.field_ic & -32;
@@ -770,7 +770,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.releaseSurface(var2, this.field_Q.get(var2), 0);
           }
-          pt.a(false, true, -1);
+          CubeMapSource.a(false, true, -1);
           this.field_nc.release();
           this.field_H = true;
         }
@@ -1746,14 +1746,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void L(int param0) {
-        hv var2 = null;
+        ProjectionMode var2 = null;
         if (param0 != -25) {
           this.createHeap(-125);
         }
         if (this.field_s != PerlinNoiseSliceGenerator.field_h) {
           var2 = this.field_s;
           this.field_s = PerlinNoiseSliceGenerator.field_h;
-          if (var2.a(-20011)) {
+          if (var2.usesViewTransform(-20011)) {
             this.W(16);
           }
           this.c((byte) -88);
@@ -2187,7 +2187,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_uc == null) {
           return null;
         }
-        return this.field_uc.b(param0 ^ 37);
+        return this.field_uc.cubeTexture(param0 ^ 37);
     }
 
     abstract Texture2D a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, TextureFormat param7);

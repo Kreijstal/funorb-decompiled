@@ -7,11 +7,11 @@ final class oi {
     static String field_c;
     static SpriteData field_d;
 
-    final static boolean a(byte param0) {
-        if (param0 != -64) {
+    final static boolean isReconnecting(byte guard) {
+        if (guard != -64) {
           return false;
         }
-        return pg.field_a;
+        return ReconnectState.reconnecting;
     }
 
     public static void releaseStatics(boolean param0) {

@@ -50,11 +50,11 @@ abstract class Transform3D {
         var28 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 > 0 &&
-            !rm.a(param2, -113)) {
+            !IntegerMath.isSingleBitOrZero(param2, -113)) {
             throw new IllegalArgumentException("");
           }
           if (param1 > 0 &&
-            !rm.a(param1, -108)) {
+            !IntegerMath.isSingleBitOrZero(param1, -108)) {
             throw new IllegalArgumentException("");
           }
           if (32993 != param7) {

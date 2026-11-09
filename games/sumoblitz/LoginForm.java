@@ -63,7 +63,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.e((byte) -23);
           } else {
             if (this.field_D == source) {
-              rv.a((byte) 58);
+              rv.showAccountCreation((byte) 58);
             } else {
               if (this.field_N == source) {
                 if (this.field_B) {
@@ -164,7 +164,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             }
           } else {
             this.field_A = new InteractiveWidget(ii.retryText, (WidgetListener) null);
-            this.field_N = new InteractiveWidget(of.quitToWebsiteText, (WidgetListener) null);
+            this.field_N = new InteractiveWidget(HiscoreRequest.quitToWebsiteText, (WidgetListener) null);
             this.field_H.enabled = false;
           }
           this.field_H.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
@@ -332,7 +332,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
     }
 
     private final void e(byte param0) {
-        if (oi.a((byte) -64) ||
+        if (oi.isReconnecting((byte) -64) ||
           !(this.field_H.text.length() <= 0) &&
           !(this.field_I.text.length() <= 0)) {
           ProgressDialog.a(this.field_I.text, this.field_H.text, -1807);

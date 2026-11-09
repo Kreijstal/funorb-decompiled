@@ -31,9 +31,9 @@ final class pi {
         }
     }
 
-    final static vl a(PacketBuffer param0, boolean param1, int param2) {
+    final static ArenaDefinition decodeArena(PacketBuffer packet, boolean keepPosition, int guard) {
         int var8 = 0;
-        vl stackIn_17_0 = null;
+        ArenaDefinition stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -52,29 +52,29 @@ final class pi {
         int var14 = 0;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param1) {
-            param0.position = 0;
+          if (!keepPosition) {
+            packet.position = 0;
           }
-          var3_int = param0.readUnsignedByte(-31302);
+          var3_int = packet.readUnsignedByte(-31302);
           var4 = 0;
           if (1 < var3_int) {
-            var4 = param0.readUnsignedByte(-31302);
+            var4 = packet.readUnsignedByte(-31302);
           }
           var5 = new IntrusiveDeque();
-          if (param2 <= 50) {
+          if (guard <= 50) {
             pi.releaseStatics(116);
           }
-          var6 = param0.readUnsignedByte(-31302);
+          var6 = packet.readUnsignedByte(-31302);
           var7 = 1;
           for (var8 = 0; var6 > var8; var8++) {
-            var9 = param0.readUnsignedByte(-31302);
-            var10 = param0.readInt(true);
-            var11 = param0.readInt(true);
-            param0.readInt(true);
-            param0.readInt(true);
+            var9 = packet.readUnsignedByte(-31302);
+            var10 = packet.readInt(true);
+            var11 = packet.readInt(true);
+            packet.readInt(true);
+            packet.readInt(true);
             var12 = 0;
             if (var3_int > 2) {
-              var12 = param0.readInt(true);
+              var12 = packet.readInt(true);
             }
             var13 = FullscreenCanvas.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
             if (var9 == 2) {
@@ -83,19 +83,19 @@ final class pi {
             }
             var5.addLast((IntrusiveNode) (var13), (byte) 39);
           }
-          stackIn_17_0 = new vl(var5, var4);
+          stackIn_17_0 = new ArenaDefinition(var5, var4);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_20_0 = var3;
           stackIn_20_1 = new StringBuilder().append("pi.B(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(keepPosition).append(',').append(guard).append(')').toString());
         }
     }
 

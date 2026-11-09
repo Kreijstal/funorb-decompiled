@@ -4,14 +4,14 @@
 final class rn {
     static String unfortunatelyYouAreNotText;
 
-    final static void a(String param0, int param1, int param2, int param3, int param4) {
+    final static void postHudMessage(String text, int x, int y, int color, int guard) {
         try {
-          ig.hudMessages.addLast((IntrusiveNode) (new HudMessage(param0, param3, param1, param2)), (byte) 39);
-          if (param4 != 28807) {
+          ig.hudMessages.addLast((IntrusiveNode) (new HudMessage(text, color, x, y)), (byte) 39);
+          if (guard != 28807) {
             rn.releaseStatics(16);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rn.B(" + (text != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + color + ',' + guard + ')');
         }
     }
 
@@ -19,7 +19,7 @@ final class rn {
         unfortunatelyYouAreNotText = null;
         if (param0 != 13921) {
           String var2 = (String) null;
-          rn.a((String) null, 84, 7, -70, 53);
+          rn.postHudMessage((String) null, 84, 7, -70, 53);
         }
     }
 

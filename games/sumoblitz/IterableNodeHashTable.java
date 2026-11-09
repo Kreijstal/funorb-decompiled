@@ -12,7 +12,7 @@ final class IterableNodeHashTable implements Iterable {
 
     final static void b(int param0) {
         if (null != SecondaryNodeDequeIterator.field_b) {
-          SecondaryNodeDequeIterator.field_b.field_g = false;
+          SecondaryNodeDequeIterator.field_b.automatic = false;
         }
         jl.a(25, param0);
     }

@@ -133,9 +133,9 @@ final class ScrollViewport extends SingleChildWidget {
     }
 
     final static void e(byte param0) {
-        qv.field_o = ig.field_a.readCp1252String(-1);
+        QueuedIntArrayRequest.field_o = ig.field_a.readCp1252String(-1);
         int var1 = 74 % ((60 - param0) / 52);
-        CharSequence var2 = (CharSequence) ((Object) qv.field_o);
+        CharSequence var2 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
         PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var2);
     }
 

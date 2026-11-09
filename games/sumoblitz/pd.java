@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends IntrusiveNode {
-    static hv field_m;
+    static ProjectionMode field_m;
     int field_o;
     int field_k;
     static int field_l;
@@ -26,21 +26,21 @@ final class pd extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(byte param0, int param1, of param2) {
+    final static void sendHiscoreRequest(byte guard, int opcode, HiscoreRequest request) {
         IsaacPacketBuffer var3 = null;
         try {
-          if (param0 != -65) {
-            field_m = (hv) null;
+          if (guard != -65) {
+            field_m = (ProjectionMode) null;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.writeCipherByte(param1, 8);
+          var3.writeCipherByte(opcode, 8);
           var3.writeByte((byte) 103, 5);
           var3.writeByte((byte) 46, 0);
-          var3.writeShort(117, param2.field_p);
-          var3.writeByte((byte) 86, param2.field_l);
-          var3.writeByte((byte) 121, param2.field_s);
+          var3.writeShort(117, request.tableId);
+          var3.writeByte((byte) 86, request.rowCount);
+          var3.writeByte((byte) 121, request.columnCount);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pd.A(" + guard + ',' + opcode + ',' + (request != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class pd extends IntrusiveNode {
           }
           var3 = new ServerDataWriteRequest(payload);
           LoginMethodPreference.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
-          mn.sendServerDataWrite(var3, guard - 5530, opcode);
+          ArchiveLoadingStage.sendServerDataWrite(var3, guard - 5530, opcode);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class pd extends IntrusiveNode {
     }
 
     static {
-        field_m = new hv();
+        field_m = new ProjectionMode();
         nameText = "Name";
     }
 }

@@ -161,7 +161,7 @@ final class ArenaPad extends IntrusiveNode {
               this.explosionTicksRemaining = 12;
               this.triggerCooldownTicks = 200;
               this.exploding = true;
-              gn.a(3, true);
+              ArchiveLoadRequirement.playSoundEffect(3, true);
               QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
             }
             decompiledFrameRemainder7 = !(this.explosionTicksRemaining <= 0);
@@ -289,7 +289,7 @@ final class ArenaPad extends IntrusiveNode {
               break;
             }
             if (decompiledFrameCompleted0) {
-              gn.a(stackIn_145_0, stackIn_145_1 != 0);
+              ArchiveLoadRequirement.playSoundEffect(stackIn_145_0, stackIn_145_1 != 0);
               QuickChatCommand.a(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
               decompiledFrameRemainder7 = (var17 != 0);
             }
@@ -299,7 +299,7 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder5) &&
             (decompiledFrameCompleted0)) {
             this.bounceDrone(drone, -68);
-            gn.a(13, true);
+            ArchiveLoadRequirement.playSoundEffect(13, true);
             decompiledFrameRemainder7 = (drone.droneType == 0);
             if (decompiledFrameRemainder7) {
               PowerupPickup.field_v = PowerupPickup.field_v + 1;
@@ -440,7 +440,7 @@ final class ArenaPad extends IntrusiveNode {
             }
             decompiledFrameRemainder7 = (this.exploding);
             if ((decompiledFrameRemainder7) &&
-              (decompiledFrameRemainder7 = (ul.field_f == 0))) {
+              (decompiledFrameRemainder7 = (DisplaySizeController.field_f == 0))) {
               kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
@@ -483,17 +483,17 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder6)) {
             LegacyOpenGlSpriteTexture.field_r[0].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].height() >> 1));
             LegacyOpenGlSpriteTexture.field_r[1].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].height() >> 1), 0, -15687169, 1);
-            decompiledFrameRemainder7 = (ul.field_f == 1);
+            decompiledFrameRemainder7 = (DisplaySizeController.field_f == 1);
             if (decompiledFrameRemainder7) {
-              vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -15687169, 1);
+              ArenaDefinition.field_c.draw((this.xQ8 >> 8) - (ArenaDefinition.field_c.width() >> 1), (this.yQ8 >> 8) - (ArenaDefinition.field_c.height() >> 1), 0, -15687169, 1);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder7) {
             LegacyOpenGlSpriteTexture.field_r[0].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[0].height() >> 1));
             LegacyOpenGlSpriteTexture.field_r[1].draw((this.xQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlSpriteTexture.field_r[1].height() >> 1), 0, -31744, 1);
-            if (1 == ul.field_f) {
-              vl.field_c.draw((this.xQ8 >> 8) - (vl.field_c.width() >> 1), (this.yQ8 >> 8) - (vl.field_c.height() >> 1), 0, -31744, 1);
+            if (1 == DisplaySizeController.field_f) {
+              ArenaDefinition.field_c.draw((this.xQ8 >> 8) - (ArenaDefinition.field_c.width() >> 1), (this.yQ8 >> 8) - (ArenaDefinition.field_c.height() >> 1), 0, -31744, 1);
             }
           }
           if (guard != -15687169) {
@@ -584,12 +584,12 @@ final class ArenaPad extends IntrusiveNode {
           }
           if (stackIn_40_0 == -6 &&
             this.ageTicks % 50 == 0 &&
-            ul.field_f == 0) {
+            DisplaySizeController.field_f == 0) {
             this.effects.addLast((IntrusiveNode) (new ForceFieldRingEffect(this.xQ8 >> 8, this.yQ8 >> 8, 16745472, true)), (byte) 39);
           }
           if (this.padType == 4 &&
             0 == this.ageTicks % 50 &&
-            ul.field_f == 0) {
+            DisplaySizeController.field_f == 0) {
             this.effects.addLast((IntrusiveNode) (new ForceFieldRingEffect(this.xQ8 >> 8, this.yQ8 >> 8, 1090047, false)), (byte) 39);
           }
           return;

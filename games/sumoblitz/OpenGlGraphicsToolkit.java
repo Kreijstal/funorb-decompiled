@@ -365,8 +365,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param6 > -61) {
             this.setMultisampling(66, false);
           }
-          if (!this.field_Ic && (!rm.a(param1, -116) ||
-            !rm.a(param5, -122))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param1, -116) ||
+            !IntegerMath.isSingleBitOrZero(param5, -122))) {
             if (this.field_bd) {
               stackIn_10_0 = new OpenGlRectangleTexture(this, param7, param1, param5, param4, param0, param3);
               return (Texture2D) ((Object) stackIn_10_0);
@@ -782,8 +782,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                 throw new RuntimeException("");
               }
               try {
-                var10_int = no.a((byte) -128, (CharSequence) ((Object) var9[0]));
-                var11_int = no.a((byte) -128, (CharSequence) ((Object) var9[1]));
+                var10_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9[0]));
+                var11_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9[1]));
                 this.field_Oc = var11_int + 10 * var10_int;
               } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -855,7 +855,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (ContentTransitionPhase.a(-13181, var32)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
-                            var11_int = no.a((byte) -127, var33);
+                            var11_int = no.parseDecimal((byte) -127, var33);
                             decompiledRegionSelector0 = 1;
                             decompiledFrameRemainder0 = false;
                           }
@@ -1037,8 +1037,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param4 > -99) {
             this.restoreCanvasTarget();
           }
-          if (!this.field_Ic && (!rm.a(param3, -124) ||
-            !rm.a(param2, -128))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param3, -124) ||
+            !IntegerMath.isSingleBitOrZero(param2, -128))) {
             if (!this.field_bd) {
               stackIn_10_0 = new OpenGlTexture2D(this, param1, param0, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2));
               return (Texture2D) ((Object) stackIn_10_0);
@@ -1366,8 +1366,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param4 > -41) {
             this.unbindTexture((byte) 14);
           }
-          if (!this.field_Ic && (!rm.a(param3, -118) ||
-            !rm.a(param6, -113))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param3, -118) ||
+            !IntegerMath.isSingleBitOrZero(param6, -113))) {
             if (this.field_bd) {
               stackIn_10_0 = new OpenGlRectangleTexture(this, param3, param6, param2, param5, param1);
               return (Texture2D) ((Object) stackIn_10_0);
@@ -1419,8 +1419,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           var9_int = 108 % ((50 - param5) / 44);
-          if (!this.field_Ic && (!rm.a(param1, -107) ||
-            !rm.a(param2, -111))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param1, -107) ||
+            !IntegerMath.isSingleBitOrZero(param2, -111))) {
             if (this.field_bd) {
               stackIn_8_0 = new OpenGlRectangleTexture(this, param0, param1, param2, param4, param6, param3);
               return (Texture2D) ((Object) stackIn_8_0);
@@ -1558,7 +1558,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 != 68) {
           return;
         }
-        if (!this.field_s.a(-20011)) {
+        if (!this.field_s.usesViewTransform(-20011)) {
           if (!this.field_Db) {
             jaggl.OpenGL.glLoadMatrixf(this.field_Lb.writeColumnMajor4x4(-110, pq.field_y), 0);
           } else {

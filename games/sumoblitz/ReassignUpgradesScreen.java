@@ -36,7 +36,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
           hc.field_e.a(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          qv.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
+          QueuedIntArrayRequest.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
           uq.field_a.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
@@ -56,14 +56,14 @@ final class ReassignUpgradesScreen extends MenuScreen {
               stackIn_12_0 = 0;
             }
             var6 = stackIn_12_0;
-            qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
+            QueuedIntArrayRequest.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
             uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
             if (var6 == 0) {
               MusicCrossfadeStream.field_q[var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
               MusicCrossfadeStream.field_q[15 + var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1) + 200, 1, 0, 2);
             }
-            qv.field_k.a(Integer.toString(PasswordInputRenderer.field_u[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
+            QueuedIntArrayRequest.field_k.a(Integer.toString(PasswordInputRenderer.field_u[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(PasswordInputRenderer.field_u[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);
             var5++;
             var4_int += 126;

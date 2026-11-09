@@ -119,7 +119,7 @@ abstract class TextLayout {
     }
 
     final static void a(int param0) {
-        if (!pg.field_a) {
+        if (!ReconnectState.reconnecting) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {

@@ -157,8 +157,8 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           var3_int = 55 / ((25 - param0) / 42);
           if (TextureCoordinateGeneration.field_a < 10) {
             var4 = 0;
-            if (pt.field_a) {
-              pt.field_a = false;
+            if (CubeMapSource.field_a) {
+              CubeMapSource.field_a = false;
               var4 = 1;
             }
             ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));

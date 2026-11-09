@@ -230,7 +230,7 @@ class UsernameCredentials extends LoginCredentials {
                 if (IntrusiveDequeCursor.field_b) {
                 }
               }
-              if (gn.field_d) {
+              if (ArchiveLoadRequirement.field_d) {
                 ig.field_a.readUnsignedByte(-31302);
                 ig.field_a.readUnsignedByte(-31302);
                 ig.field_a.readInt(true);
@@ -240,8 +240,8 @@ class UsernameCredentials extends LoginCredentials {
                   WidgetStateStyle.field_b[var8] = ig.field_a.readByte(true);
                 }
               }
-              qv.field_o = ig.field_a.readCp1252String(-1);
-              var11 = (CharSequence) ((Object) qv.field_o);
+              QueuedIntArrayRequest.field_o = ig.field_a.readCp1252String(-1);
+              var11 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
@@ -302,7 +302,7 @@ class UsernameCredentials extends LoginCredentials {
             }
             if (DisplayModeConfirmationDialog.accountSocket == null) {
               if (LimitedRandomAccessFile.field_g) {
-                if (uc.b(26560) <= 30000L) {
+                if (uc.millisSinceServerRead(26560) <= 30000L) {
                   MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
                 } else {
                   MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;

@@ -5,7 +5,7 @@ final class mo extends tt {
     boolean field_m;
     int field_r;
     private short[] field_u;
-    static hv field_w;
+    static ProjectionMode field_w;
     private byte[] field_x;
     private int field_v;
     int field_s;
@@ -364,7 +364,7 @@ final class mo extends tt {
 
     static {
         membershipBenefitLines = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
-        field_w = new hv();
+        field_w = new ProjectionMode();
         field_t = new int[4];
         field_n = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
     }

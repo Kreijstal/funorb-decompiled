@@ -154,7 +154,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         if (param0 != -5812) {
           INTERPOLATE = (TextureCombineOperation) null;
         }
-        SecondaryNodeDequeIterator.field_b.field_g = true;
+        SecondaryNodeDequeIterator.field_b.automatic = true;
         jl.a(param0 + 5837, 1);
     }
 

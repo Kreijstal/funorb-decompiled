@@ -21,26 +21,26 @@ final class pc {
         field_c = null;
     }
 
-    final static int a(int param0, byte param1) {
-        if (param1 >= -22) {
+    final static int glFormatComponents(int format, byte guard) {
+        if (guard >= -22) {
           return -76;
         }
-        if (param0 == 6406) {
+        if (format == 6406) {
           return 1;
         }
-        if (6409 == param0) {
+        if (6409 == format) {
           return 1;
         }
-        if (param0 == 32841) {
+        if (format == 32841) {
           return 1;
         }
-        if (6410 == param0) {
+        if (6410 == format) {
           return 2;
         }
-        if (6407 == param0) {
+        if (6407 == format) {
           return 3;
         }
-        if (param0 != 6408) {
+        if (format != 6408) {
           throw new IllegalArgumentException("");
         }
         return 4;

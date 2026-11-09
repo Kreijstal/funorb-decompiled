@@ -14,7 +14,7 @@ final class o {
         if (GridWidgetContainer.livesRemaining == 3) {
           up.field_g[OpenGlShaderProgram.levelIndex] = true;
         }
-        of.a((byte) -104);
+        HiscoreRequest.openPauseMenu((byte) -104);
         OpenGlIndexBuffer.g(123);
         if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);

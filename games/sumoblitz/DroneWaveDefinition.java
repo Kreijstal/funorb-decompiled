@@ -30,7 +30,7 @@ final class DroneWaveDefinition extends IntrusiveNode {
 
     final static boolean a(int param0, int param1, byte param2) {
         int var3 = -118 / ((param2 - 64) / 51);
-        return em.a(false, param0, param1) & ArchiveIndex.a(param0, param1, 65);
+        return HardwareCubeMapSource.a(false, param0, param1) & ArchiveIndex.a(param0, param1, 65);
     }
 
     static {

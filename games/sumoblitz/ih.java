@@ -3,7 +3,7 @@
  */
 final class ih {
     static boolean field_c;
-    static mn field_a;
+    static ArchiveLoadingStage field_a;
     static String field_b;
 
     public static void a(byte param0) {
@@ -140,7 +140,7 @@ final class ih {
             stackIn_52_0 = param2;
           }
           if (stackIn_52_0 != -1) {
-            field_a = (mn) null;
+            field_a = (ArchiveLoadingStage) null;
           }
           if (0 < param1.field_E &&
             param1.field_a != null) {

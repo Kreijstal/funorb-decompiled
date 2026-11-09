@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn {
-    String field_f;
-    float field_d;
-    static String[] field_g;
-    private int field_a;
+final class ArchiveLoadingStage {
+    String progressText;
+    float progress;
+    static String[] nameSuggestions;
+    private int weight;
     static ToolkitSprite field_j;
-    private int field_e;
+    private int currentRequirement;
     static SpriteData field_c;
-    private int field_h;
-    private gn[] field_l;
+    private int requirementCount;
+    private ArchiveLoadRequirement[] requirements;
     static String highText;
     static int field_i;
     static SpriteData[] field_b;
@@ -23,7 +23,7 @@ final class mn {
           }
           HardwareGraphicsToolkit.j((byte) 89);
           if (param0 != -116) {
-            field_g = (String[]) null;
+            nameSuggestions = (String[]) null;
             return;
           }
           return;
@@ -33,12 +33,12 @@ final class mn {
         }
         HardwareGraphicsToolkit.j((byte) 89);
         if (param0 != -116) {
-          field_g = (String[]) null;
+          nameSuggestions = (String[]) null;
           return;
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9) {
+    final static void blendGouraudSpan(int greenStep, int redStep, int[] pixels, int count, int blueStep, int green, int red, int offset, boolean guard, int blue) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -54,38 +54,38 @@ final class mn {
         RuntimeException var10_ref = null;
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param8) {
-            mn.releaseStatics((byte) 51);
+          if (!guard) {
+            ArchiveLoadingStage.releaseStatics((byte) 51);
           }
           while (true) {
-            param3--;
-            if (param3 < 0) {
+            count--;
+            if (count < 0) {
               return;
             }
-            var17 = param2;
+            var17 = pixels;
             var10 = var17;
-            var11 = param7;
-            var12 = param6;
-            var13 = param5;
-            var14 = param9;
+            var11 = offset;
+            var12 = red;
+            var13 = green;
+            var14 = blue;
             var15 = (var17[var11] & 16711422) >> 1;
             var10[var11] = LegacyOpenGlPostProcessManager.bitwiseAnd(var12 >> 1, 16711680) + LegacyOpenGlPostProcessManager.bitwiseAnd(65280, var13 >> 9) - (-LegacyOpenGlPostProcessManager.bitwiseAnd(255, var14 >> 17) - var15);
-            param9 = param9 + param4;
-            param5 = param5 + param0;
-            param7++;
-            param6 = param6 + param1;
+            blue = blue + blueStep;
+            green = green + greenStep;
+            offset++;
+            red = red + redStep;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10_ref = decompiledCaughtException;
           stackIn_8_0 = var10_ref;
-          stackIn_8_1 = new StringBuilder().append("mn.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("mn.E(").append(greenStep).append(',').append(redStep).append(',');
+          if (pixels == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(count).append(',').append(blueStep).append(',').append(green).append(',').append(red).append(',').append(offset).append(',').append(guard).append(',').append(blue).append(')').toString());
         }
     }
 
@@ -115,43 +115,43 @@ final class mn {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean pollReady(int guard) {
         int var3;
-        gn var4;
+        ArchiveLoadRequirement var4;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        while (this.field_e < this.field_h) {
-          var4 = this.field_l[this.field_e];
-          if (!var4.field_a.loadIndex((byte) 127)) {
-            this.a(0, -111, var4);
+        while (this.currentRequirement < this.requirementCount) {
+          var4 = this.requirements[this.currentRequirement];
+          if (!var4.archive.loadIndex((byte) 127)) {
+            this.updateProgress(0, -111, var4);
             return false;
           }
-          if (var4.field_e >= 0 &&
-            !var4.field_a.tryLoadGroup((byte) -110, var4.field_e)) {
-            this.a(var4.field_a.groupLoadPercent(var4.field_e, (byte) 67), -75, var4);
+          if (var4.groupId >= 0 &&
+            !var4.archive.tryLoadGroup((byte) -110, var4.groupId)) {
+            this.updateProgress(var4.archive.groupLoadPercent(var4.groupId, (byte) 67), -75, var4);
             return false;
           }
-          if (null != var4.field_h &&
-            !var4.field_a.tryLoadNamedGroup(var4.field_h, 100)) {
-            this.a(var4.field_a.namedGroupLoadPercent(var4.field_h, (byte) 33), -18, var4);
+          if (null != var4.groupName &&
+            !var4.archive.tryLoadNamedGroup(var4.groupName, 100)) {
+            this.updateProgress(var4.archive.namedGroupLoadPercent(var4.groupName, (byte) 33), -18, var4);
             return false;
           }
-          if (0 > var4.field_e &&
-            var4.field_h == null &&
-            null != var4.field_c &&
-            !var4.field_a.tryLoadAllGroups(true)) {
-            this.a(var4.field_a.loadPercent(0), -113, var4);
+          if (0 > var4.groupId &&
+            var4.groupName == null &&
+            null != var4.loadingText &&
+            !var4.archive.tryLoadAllGroups(true)) {
+            this.updateProgress(var4.archive.loadPercent(0), -113, var4);
             return false;
           }
-          this.field_e = this.field_e + 1;
+          this.currentRequirement = this.currentRequirement + 1;
         }
-        if (param0 == 100) {
+        if (guard == 100) {
           return true;
         }
-        this.field_a = 103;
+        this.weight = 103;
         return true;
     }
 
-    private final void a(int param0, int param1, gn param2) {
+    private final void updateProgress(int percent, int guard, ArchiveLoadRequirement requirement) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -159,23 +159,23 @@ final class mn {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -10) {
-            mn.b((byte) -42);
+          if (guard >= -10) {
+            ArchiveLoadingStage.b((byte) -42);
           }
-          var4_float = (float)(1 + this.field_e) + (float)param0 / 100.0f;
-          this.field_d = var4_float * (float)this.field_a / (float)(1 + this.field_h);
-          if (0 != param0) {
-            this.field_f = param2.field_c + " - " + param0 + "%";
+          var4_float = (float)(1 + this.currentRequirement) + (float)percent / 100.0f;
+          this.progress = var4_float * (float)this.weight / (float)(1 + this.requirementCount);
+          if (0 != percent) {
+            this.progressText = requirement.loadingText + " - " + percent + "%";
             return;
           }
-          this.field_f = param2.field_f;
+          this.progressText = requirement.waitingText;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("mn.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("mn.F(").append(percent).append(',').append(guard).append(',');
+          if (requirement == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -185,7 +185,7 @@ final class mn {
     }
 
     public static void releaseStatics(byte param0) {
-        field_g = null;
+        nameSuggestions = null;
         field_b = null;
         field_j = null;
         field_c = null;
@@ -196,7 +196,7 @@ final class mn {
         field_b = (SpriteData[]) null;
     }
 
-    private mn() throws Throwable {
+    private ArchiveLoadingStage() throws Throwable {
         throw new Error();
     }
 

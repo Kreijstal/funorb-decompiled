@@ -110,7 +110,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
           NineSlicePanel.field_f.requestFocus();
           return;
         }
-        SecondaryNodeDequeIterator.field_b.e(2);
+        SecondaryNodeDequeIterator.field_b.restoreWindowedSize(2);
         NineSlicePanel.field_f.requestFocus();
     }
 

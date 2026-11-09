@@ -8,7 +8,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode field_c;
     static ToolkitSprite[] field_a;
     private SecondaryNodeDeque field_d;
-    static ul field_b;
+    static DisplaySizeController field_b;
 
     public final Object next() {
         Object var1 = this.field_c;

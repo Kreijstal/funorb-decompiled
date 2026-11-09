@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wv {
+final class AccountNameSupport {
     static int[] field_a;
 
-    final static boolean a(byte param0, char param1) {
-        if (param0 > -71) {
-          wv.releaseStatics(false);
-          if (param1 == 160) {
+    final static boolean isNameSeparator(byte guard, char character) {
+        if (guard > -71) {
+          AccountNameSupport.releaseStatics(false);
+          if (character == 160) {
             return true;
           }
-          if (param1 == 32) {
+          if (character == 32) {
             return true;
           }
-          if (95 == param1) {
+          if (95 == character) {
             return true;
           }
-          if (45 != param1) {
+          if (45 != character) {
             return false;
           }
           return true;
         }
-        if (param1 == 160) {
+        if (character == 160) {
           return true;
         }
-        if (param1 == 32) {
+        if (character == 32) {
           return true;
         }
-        if (95 == param1) {
+        if (95 == character) {
           return true;
         }
-        if (45 != param1) {
+        if (45 != character) {
           return false;
         }
         return true;
     }
 
-    final static boolean a(boolean param0, String param1, String param2) {
+    final static boolean containsNameIgnoringUnderscores(boolean guard, String text, String name) {
         String var3 = null;
         String var4 = null;
         boolean stackIn_7_0 = false;
@@ -48,26 +48,26 @@ final class wv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ValidationStatus.a('_', param2, param0, "");
-          if (param0) {
+          name = ValidationStatus.a('_', name, guard, "");
+          if (guard) {
             var4 = (String) null;
-            wv.a(true, (String) null, (String) null);
+            AccountNameSupport.containsNameIgnoringUnderscores(true, (String) null, (String) null);
           }
-          var3 = TextureFilter.a(param2, (byte) 81);
-          stackIn_7_0 = (-1 != param1.indexOf(param2)) || (param1.indexOf(var3) != -1);
+          var3 = TextureFilter.a(name, (byte) 81);
+          stackIn_7_0 = (-1 != text.indexOf(name)) || (text.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("wv.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("wv.A(").append(guard).append(',');
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (name == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -76,8 +76,8 @@ final class wv {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != 24238) {
+    final static void muteMusic(int guard) {
+        if (guard != 24238) {
           field_a = (int[]) null;
           lf.a(0, 0);
           return;
@@ -88,23 +88,23 @@ final class wv {
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
-          wv.a((byte) 57, 'U');
+          AccountNameSupport.isNameSeparator((byte) 57, 'U');
         }
     }
 
-    final static void a(byte param0, String param1, String param2) {
+    final static void showLoginForm(byte guard, String identifier, String message) {
         try {
           if (hc.field_c != null) {
             hc.field_c.n(-7);
           }
-          no.field_a = new LoginForm(param1, param2, false, true, true);
-          if (param0 < 73) {
+          no.field_a = new LoginForm(identifier, message, false, true, true);
+          if (guard < 73) {
             String var4 = (String) null;
-            wv.a(false, (String) null, (String) null);
+            AccountNameSupport.containsNameIgnoringUnderscores(false, (String) null, (String) null);
           }
           SlowBurstParticle.field_y.transitionToContent((byte) -119, no.field_a);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wv.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wv.E(" + guard + ',' + (identifier != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 

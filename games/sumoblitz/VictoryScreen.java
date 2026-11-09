@@ -20,7 +20,7 @@ final class VictoryScreen extends MenuScreen {
         }
         if (0 == this.field_i % 100) {
           TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, im.field_b, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
-          gn.a(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
+          ArchiveLoadRequirement.playSoundEffect(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
           im.field_b.addLast((IntrusiveNode) (new PowerupTrailParticle(50, -1024 + (LegacyOpenGlRenderbuffer.field_u.xQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96)) >> 8, LegacyOpenGlRenderbuffer.field_u.yQ8 + ExpandingRingEffect.nextRandomInt(2048, HardwareGraphicsHeap.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);

@@ -17,7 +17,7 @@ final class no {
         field_c = null;
     }
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int parseDecimal(byte guard, CharSequence text) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -25,17 +25,17 @@ final class no {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > -126) {
+          if (guard > -126) {
             no.releaseStatics(-92);
           }
-          stackIn_3_0 = SpriteOptionRenderer.parseInt(10, param1, true, (byte) -84);
+          stackIn_3_0 = SpriteOptionRenderer.parseInt(10, text, true, (byte) -84);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("no.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("no.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

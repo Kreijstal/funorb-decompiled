@@ -16,7 +16,7 @@ final class km extends IntrusiveNode {
         acceptText = null;
     }
 
-    final static void a(byte param0, int param1, id param2) {
+    final static void sendSessionStatistics(byte guard, int opcode, SessionStatisticsSubmission submission) {
         IsaacPacketBuffer var8 = null;
         IsaacPacketBuffer var9 = null;
         int var4 = 0;
@@ -25,26 +25,26 @@ final class km extends IntrusiveNode {
         try {
           var8 = InwardSparkParticle.field_v;
           var9 = var8;
-          var9.writeCipherByte(param1, 8);
+          var9.writeCipherByte(opcode, 8);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte((byte) 55, 1);
-          int var5 = 104 / ((30 - param0) / 34);
-          var9.writeShort(-77, param2.field_r);
-          var9.writeShort(-92, param2.field_l);
-          var9.writeShort(123, param2.field_t);
-          var9.writeInt(48, param2.field_n);
-          var9.writeInt(48, param2.field_o);
-          var9.writeInt(48, param2.field_p);
-          var9.writeInt(48, param2.field_k);
-          var9.writeByte((byte) 119, param2.field_q.length);
-          for (var6 = 0; param2.field_q.length > var6; var6++) {
-            var8.writeInt(48, param2.field_q[var6]);
+          int var5 = 104 / ((30 - guard) / 34);
+          var9.writeShort(-77, submission.requestId);
+          var9.writeShort(-92, submission.tableId);
+          var9.writeShort(123, submission.variantId);
+          var9.writeInt(48, submission.field_n);
+          var9.writeInt(48, submission.field_o);
+          var9.writeInt(48, submission.field_p);
+          var9.writeInt(48, submission.field_k);
+          var9.writeByte((byte) 119, submission.values.length);
+          for (var6 = 0; submission.values.length > var6; var6++) {
+            var8.writeInt(48, submission.values[var6]);
           }
           var9.appendCrc32(var4, false);
           var9.patchByteLength(var9.position - var4, -13745);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "km.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "km.C(" + guard + ',' + opcode + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 

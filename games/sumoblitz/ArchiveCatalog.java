@@ -23,7 +23,7 @@ final class ArchiveCatalog {
           boolean decompiledFrameRemainder0 = true;
           if (HardwareRidgedWaterNoise.field_x > 0) {
             if (SecondaryNodeDequeIterator.field_b != null) {
-              CompactMeshGeometry.field_o = SecondaryNodeDequeIterator.field_b.g(109);
+              CompactMeshGeometry.field_o = SecondaryNodeDequeIterator.field_b.enterFullscreen(109);
               jl.a(25, 2);
               if (var3 != 0) {
                 CompactMeshGeometry.field_o = IndexedSprite.a(640, 8089, 0, 480, lt.field_m, 0);
@@ -39,7 +39,7 @@ final class ArchiveCatalog {
               var2_int = 2;
               ServerDataWriteRequest.attachInputHandlers(false, CompactMeshGeometry.field_o);
               if (var3 != 0) {
-                if (!vs.b((byte) 9)) {
+                if (!vs.isGuestSession((byte) 9)) {
                   var2_int = 1;
                   var2_int = 0;
                 } else {
@@ -48,7 +48,7 @@ final class ArchiveCatalog {
               }
             }
           } else {
-            if (!vs.b((byte) 9)) {
+            if (!vs.isGuestSession((byte) 9)) {
               var2_int = 1;
               if (var3 != 0) {
                 var2_int = 0;
@@ -209,7 +209,7 @@ final class ArchiveCatalog {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var6_array = gn.whirlpoolDigest(var2.payload, (byte) -120, 5, -5 + (var2.position - var4.length));
+          var6_array = ArchiveLoadRequirement.whirlpoolDigest(var2.payload, (byte) -120, 5, -5 + (var2.position - var4.length));
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 >= 64))) {
@@ -638,7 +638,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime21 = ke.a((byte) 119, "challengeModeTx");
           if (null != var2Lifetime21) {
-            pt.challengeText = MusicVoice.a(0, var2Lifetime21);
+            CubeMapSource.challengeText = MusicVoice.a(0, var2Lifetime21);
           }
           var2Lifetime22 = ke.a((byte) 117, "optionsTx");
           if (null != var2Lifetime22) {
@@ -706,7 +706,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime38 = ke.a((byte) 114, "respecTx");
           if (var2Lifetime38 != null) {
-            hv.reassignText = MusicVoice.a(0, var2Lifetime38);
+            ProjectionMode.reassignText = MusicVoice.a(0, var2Lifetime38);
           }
           var2Lifetime39 = ke.a((byte) 110, "respecTitle");
           if (var2Lifetime39 != null) {
@@ -1389,7 +1389,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime208 = ke.a((byte) 102, "notCompleted");
           if (null != var2Lifetime208) {
-            bi.notCompletedText = MusicVoice.a(0, var2Lifetime208);
+            ArenaBackdropPalettes.notCompletedText = MusicVoice.a(0, var2Lifetime208);
           }
           var2Lifetime209 = ke.a((byte) 122, "clickToContinue");
           if (null != var2Lifetime209) {
@@ -1581,7 +1581,7 @@ final class ArchiveCatalog {
             hc.field_c.open) {
             if (8 == param1) {
               param1 = 2;
-              if (!pg.field_a) {
+              if (!ReconnectState.reconnecting) {
                 param2 = ih.field_b;
                 if (Sumoblitz.field_L) {
                   param2 = RasterBuffer.invalidPasswordText;
@@ -1607,7 +1607,7 @@ final class ArchiveCatalog {
             }
             if (param1 != 256 &&
               param1 != 10 &&
-              !pg.field_a) {
+              !ReconnectState.reconnecting) {
               no.field_a.h(-79);
             }
           }

@@ -24,7 +24,7 @@ final class ForceFieldRingEffect extends TimedSceneEffect {
           } else {
             var4Lifetime1 = (int)(4096.0 * ((double)this.remainingTicks / 100.0));
           }
-          vl.field_c.drawRotated((float)this.x, (float)this.y, var4Lifetime1, 0, 0, (var3_int << 24) + this.color, 1);
+          ArenaDefinition.field_c.drawRotated((float)this.x, (float)this.y, var4Lifetime1, 0, 0, (var3_int << 24) + this.color, 1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "be.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }

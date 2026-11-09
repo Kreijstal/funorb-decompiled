@@ -501,7 +501,7 @@ class Drone {
         this.effects = new IntrusiveDeque();
         QuickChatCommand.a(this.xQ8, this.effects, -16240, 40, VertexBufferReference.field_a[this.droneType], this.yQ8);
         int var2 = 111 % ((param0 - 57) / 38);
-        gn.a(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
+        ArchiveLoadRequirement.playSoundEffect(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
     }
 
     private final void initializeDroneStats(int param0) {
@@ -833,7 +833,7 @@ class Drone {
                 ((ToolkitSprite) (Object) stackIn_53_0).drawRotated(stackIn_53_1, stackIn_53_2, (int)((double)stackIn_54_3 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
               } else {
                 if (this.droneType == 2) {
-                  stackIn_49_0 = hv.field_d[0];
+                  stackIn_49_0 = ProjectionMode.field_d[0];
                   stackIn_49_1 = (float)(this.xQ8 >> 8);
                   stackIn_49_2 = (float)(this.yQ8 >> 8);
                   if (!this.isBlastActive(37)) {
@@ -896,7 +896,7 @@ class Drone {
             } else {
               if (this.isBlastReady(20) &&
                 0 < this.blastButtonHeldTicks &&
-                ul.field_f == 0) {
+                DisplaySizeController.field_f == 0) {
                 LegacyOpenGlTexture.field_e[6 - this.blastButtonHeldTicks / 7 + 3].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793), 1, 0, 2);
               } else {
                 stackIn_23_0 = LegacyOpenGlTexture.field_e[0];
@@ -911,7 +911,7 @@ class Drone {
               }
             }
             if (this.isBlastActive(guard - 19310) &&
-              ul.field_f == 0) {
+              DisplaySizeController.field_f == 0) {
               kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 28.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
             }
           }
@@ -944,7 +944,7 @@ class Drone {
                   ((ToolkitSprite) (Object) stackIn_92_0).drawRotated(stackIn_92_1, stackIn_92_2, (int)((double)stackIn_93_3 / 14.0 * 4096.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                 } else {
                   if (2 == this.droneType) {
-                    stackIn_88_0 = hv.field_d[1];
+                    stackIn_88_0 = ProjectionMode.field_d[1];
                     stackIn_88_1 = (float)(var8 + this.xQ8 >> 8);
                     stackIn_88_2 = (float)(this.yQ8 + var9 >> 8);
                     stackIn_88_3 = 4096.0;
@@ -1074,7 +1074,7 @@ class Drone {
           return;
         }
         if (this.isBlastReady(20)) {
-          gn.a(28, true);
+          ArchiveLoadRequirement.playSoundEffect(28, true);
           this.blastActive = true;
           this.lastBlastTick = this.ageTicks;
           if (param0 >= -5) {

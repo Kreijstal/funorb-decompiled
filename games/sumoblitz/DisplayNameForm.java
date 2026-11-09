@@ -88,14 +88,14 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         var23 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (width > 0 &&
-            !rm.a(width, -111)) {
+            !IntegerMath.isSingleBitOrZero(width, -111)) {
             throw new IllegalArgumentException("");
           }
           if (height > 0 &&
-            !rm.a(height, guard - 23259)) {
+            !IntegerMath.isSingleBitOrZero(height, guard - 23259)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pc.a(format, (byte) -83);
+          var7_int = pc.glFormatComponents(format, (byte) -83);
           var8 = 0;
           stackIn_11_0 = (width >= height) ? height : width;
           var9 = stackIn_11_0;

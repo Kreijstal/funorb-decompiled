@@ -44,14 +44,14 @@ final class LegacyOpenGlTransform3D extends Transform3D {
         var23 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 > 0 &&
-            !rm.a(param0, -112)) {
+            !IntegerMath.isSingleBitOrZero(param0, -112)) {
             throw new IllegalArgumentException("");
           }
           if (param1 > 0 &&
-            !rm.a(param1, -102)) {
+            !IntegerMath.isSingleBitOrZero(param1, -102)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pc.a(param6, (byte) -107);
+          var7_int = pc.glFormatComponents(param6, (byte) -107);
           var8 = 0;
           if (param2 != 11) {
             field_f = 114;

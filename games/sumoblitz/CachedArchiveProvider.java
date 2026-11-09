@@ -232,16 +232,16 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              pt.field_c.reset();
-              pt.field_c.update(var5, 0, -2 + var18.length);
-              var6_int = (int)pt.field_c.getValue();
+              CubeMapSource.field_c.reset();
+              CubeMapSource.field_c.update(var5, 0, -2 + var18.length);
+              var6_int = (int)CubeMapSource.field_c.getValue();
               if (this.index.groupCrcs[groupId] != var6_int) {
                 throw new RuntimeException();
               }
               if (this.index.groupDigests != null &&
                 this.index.groupDigests[groupId] != null) {
                 var29 = this.index.groupDigests[groupId];
-                var30 = gn.whirlpoolDigest(var5, (byte) -109, 0, var18.length - 2);
+                var30 = ArchiveLoadRequirement.whirlpoolDigest(var5, (byte) -109, 0, var18.length - 2);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -285,16 +285,16 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            pt.field_c.reset();
-            pt.field_c.update(var5, 0, var18.length - 2);
-            var6_int = (int)pt.field_c.getValue();
+            CubeMapSource.field_c.reset();
+            CubeMapSource.field_c.update(var5, 0, var18.length - 2);
+            var6_int = (int)CubeMapSource.field_c.getValue();
             if (this.index.groupCrcs[groupId] != var6_int) {
               throw new RuntimeException();
             }
             if (null != this.index.groupDigests &&
               this.index.groupDigests[groupId] != null) {
               var28 = this.index.groupDigests[groupId];
-              var27 = gn.whirlpoolDigest(var5, (byte) -110, 0, -2 + var18.length);
+              var27 = ArchiveLoadRequirement.whirlpoolDigest(var5, (byte) -110, 0, -2 + var18.length);
               for (var9 = 0; 64 > var9; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();

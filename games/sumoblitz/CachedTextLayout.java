@@ -401,7 +401,7 @@ final class CachedTextLayout extends TextLayout {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               kw.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
-              mn.field_g = new String[-100 + var9Lifetime1];
+              ArchiveLoadingStage.nameSuggestions = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.c(2));
@@ -417,7 +417,7 @@ final class CachedTextLayout extends TextLayout {
                 kw.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
                 OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
-                HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
+                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(ig.field_a, 115));
                 ig.field_a.position = 0;
               }
             }
@@ -428,9 +428,9 @@ final class CachedTextLayout extends TextLayout {
               var10Lifetime1 = ig.field_a.readUnsignedShort(255);
               ig.field_a.position = 0;
               if (OpenGlIndexBuffer.b(-1, var10Lifetime1)) {
-                var11 = mn.field_g.length;
+                var11 = ArchiveLoadingStage.nameSuggestions.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  mn.field_g[var12] = ig.field_a.readCircumfixedString(-105);
+                  ArchiveLoadingStage.nameSuggestions[var12] = ig.field_a.readCircumfixedString(-105);
                 }
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);
                 LimitedRandomAccessFile.field_g = false;
@@ -456,7 +456,7 @@ final class CachedTextLayout extends TextLayout {
           }
           if (DisplayModeConfirmationDialog.accountSocket == null) {
             if (LimitedRandomAccessFile.field_g) {
-              if (30000L < uc.b(26560)) {
+              if (30000L < uc.millisSinceServerRead(26560)) {
                 MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;
               } else {
                 MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;

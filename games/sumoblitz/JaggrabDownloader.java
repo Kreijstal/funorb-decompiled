@@ -11,7 +11,7 @@ final class JaggrabDownloader implements Runnable {
     private int field_g;
     private PlatformTask field_f;
     private PlatformTask field_e;
-    static int field_j;
+    static int displayDialogY;
     private PlatformTaskDispatcher field_b;
     static PrimitiveType POINTS;
 

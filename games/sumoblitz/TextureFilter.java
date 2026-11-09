@@ -46,7 +46,7 @@ final class TextureFilter {
             if (FullscreenDisplayMode.field_d == 2) {
               InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.result), CompactMeshGeometry.field_u);
               var2 = new PacketBuffer(13);
-              sb.a(HuffmanDecoder.field_e, 127, bt.field_d, ReflectionCheck.field_l, var2);
+              sb.a(HuffmanDecoder.field_e, 127, LegacyCubeMapSource.field_d, ReflectionCheck.field_l, var2);
               var2.writeByte((byte) 127, 15);
               var2.writeInt(48, ValidatedTextInputWidget.field_P);
               InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);

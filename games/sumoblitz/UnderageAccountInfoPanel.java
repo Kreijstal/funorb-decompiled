@@ -63,7 +63,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           this.dialog = owner;
           this.continueButton = new InteractiveWidget(EmailCredentials.continueText, (WidgetListener) null);
           this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
-          var7 = ic.a(qv.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
+          var7 = ic.a(QueuedIntArrayRequest.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
           var3 = 20;
           var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var7, var4);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm {
+final class IntegerMath {
     final static void a(byte param0) {
         if (0 - LegacyOpenGlRidgedWaterEffect.field_i == MusicPatch.field_u) {
           if (param0 > 42) {
@@ -23,35 +23,35 @@ final class rm {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int floorLog2(int guard, int value) {
         int var2 = 0;
-        if (param1 > 65535) {
+        if (value > 65535) {
           var2 = var2 | 16;
-          param1 = param1 >>> 16;
+          value = value >>> 16;
         }
-        if (param1 > 255) {
-          param1 = param1 >>> 8;
+        if (value > 255) {
+          value = value >>> 8;
           var2 = var2 | 8;
         }
-        if (15 < param1) {
+        if (15 < value) {
           var2 = var2 | 4;
-          param1 = param1 >>> 4;
+          value = value >>> 4;
         }
-        int var3 = -66 / ((-59 - param0) / 55);
-        if (param1 > 3) {
+        int var3 = -66 / ((-59 - guard) / 55);
+        if (value > 3) {
           var2 = var2 | 2;
-          param1 = param1 >>> 2;
+          value = value >>> 2;
         }
-        if (param1 > 1) {
-          param1 = param1 >>> 1;
+        if (value > 1) {
+          value = value >>> 1;
           var2 = var2 | 1;
         }
         return var2;
     }
 
-    final static boolean a(int param0, int param1) {
-        if (param1 <= -100) {
-          return param0 == (param0 & -param0) ? true : false;
+    final static boolean isSingleBitOrZero(int value, int guard) {
+        if (guard <= -100) {
+          return value == (value & -value) ? true : false;
         }
         return false;
     }

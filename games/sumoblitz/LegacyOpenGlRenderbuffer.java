@@ -51,10 +51,10 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
         if (param0 != 1) {
           return (String) null;
         }
-        if (null == qv.field_o) {
+        if (null == QueuedIntArrayRequest.field_o) {
           return "";
         }
-        return qv.field_o;
+        return QueuedIntArrayRequest.field_o;
     }
 
     final static void a(byte param0) {

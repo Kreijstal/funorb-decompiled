@@ -148,7 +148,7 @@ final class SoftLruCache {
             }
             var4 = new SoftCacheReference(var3.getValue((byte) -102), var3.weight);
             this.entries.put(guard ^ -2104, var4, var3.key);
-            pt.a(var3, 2066481250, var4);
+            CubeMapSource.insertSecondaryAfter(var3, 2066481250, var4);
             var3.unlink(false);
             var3.unlinkSecondary(-5106);
           }

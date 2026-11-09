@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bt extends pt {
+abstract class LegacyCubeMapSource extends CubeMapSource {
     static int field_d;
     static ToolkitSprite field_e;
     static volatile long field_f;
@@ -15,7 +15,7 @@ abstract class bt extends pt {
         field_e = null;
     }
 
-    private bt() throws Throwable {
+    private LegacyCubeMapSource() throws Throwable {
         throw new Error();
     }
 
@@ -34,7 +34,7 @@ abstract class bt extends pt {
         return (TickClock) ((Object) new NanoTickClock());
     }
 
-    abstract LegacyOpenGlCubeTexture b(byte param0);
+    abstract LegacyOpenGlCubeTexture cubeTexture(byte guard);
 
     static {
         field_f = 0L;

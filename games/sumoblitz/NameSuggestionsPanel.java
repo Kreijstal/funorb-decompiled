@@ -201,7 +201,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         SecondaryNodeHashTable.field_g = SpriteData.b(param3, "", "fontalpha");
         SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
-        mn.field_b = SpriteData.b(param3, "", "fontglow");
+        ArchiveLoadingStage.field_b = SpriteData.b(param3, "", "fontglow");
         VertexStreamLayout.field_c = SocketConnector.field_a;
         OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
         AccountConnectionPhase.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
@@ -260,7 +260,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           pc.field_c = SpriteData.a(param3, "", "ghost");
           no.field_c = SpriteData.a(param3, "", "ghost_cloud");
           LabeledWidget.field_E = SpriteData.a(param3, "", "ghost_splatter");
-          mn.field_c = SpriteData.a(param3, "", "shadow");
+          ArchiveLoadingStage.field_c = SpriteData.a(param3, "", "shadow");
           SceneryParticle.field_C = SpriteData.a(param3, "", "driftinglight");
           wf.field_a = SpriteData.a(param3, "", "driftinglight_snow");
           RidgedNoise3D.field_p = SpriteData.a(param3, "", "driftinglight_rough");

@@ -12,7 +12,7 @@ abstract class ResourceRequest extends DualLinkNode {
           return (String) null;
         }
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
-          return bi.field_d;
+          return ArenaBackdropPalettes.field_d;
         }
         return kh.field_d;
     }

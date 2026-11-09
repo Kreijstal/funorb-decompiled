@@ -120,8 +120,8 @@ class InteractiveWidget extends UiWidget {
           if (param6 <= 105) {
             InteractiveWidget.releaseStatics((byte) 46);
           }
-          if (!param0.field_Cc && (!rm.a(param2, -105) ||
-            !rm.a(param1, -103))) {
+          if (!param0.field_Cc && (!IntegerMath.isSingleBitOrZero(param2, -105) ||
+            !IntegerMath.isSingleBitOrZero(param1, -103))) {
             if (param0.field_C) {
               stackIn_12_0 = new LegacyOpenGlSpriteTexture(param0, 34037, param5, param2, param1, param4, param3, param7);
               return stackIn_12_0;

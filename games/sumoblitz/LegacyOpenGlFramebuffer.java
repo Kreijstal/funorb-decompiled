@@ -71,7 +71,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
             this.width = renderbuffer.width;
             this.height = renderbuffer.height;
           }
-          renderbuffer.attachFramebuffer(false, wv.field_a[index], this.activeTarget);
+          renderbuffer.attachFramebuffer(false, AccountNameSupport.field_a[index], this.activeTarget);
           this.attachments[index] = (LegacyOpenGlFramebufferAttachment) ((Object) renderbuffer);
           this.attachmentMask = this.attachmentMask | var4_int;
           return;
@@ -168,7 +168,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
             this.width = texture.width;
             this.height = texture.height;
           }
-          texture.attachFramebuffer(-90, wv.field_a[index], level, this.activeTarget);
+          texture.attachFramebuffer(-90, AccountNameSupport.field_a[index], level, this.activeTarget);
           this.attachments[index] = (LegacyOpenGlFramebufferAttachment) ((Object) texture);
           this.attachmentMask = this.attachmentMask | var5_int;
           return;

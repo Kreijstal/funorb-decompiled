@@ -46,7 +46,7 @@ abstract class RasterBuffer {
         var2 = Sumoblitz.field_L ? 1 : 0;
         StatusMessagePanel.field_A = false;
         SocketJs5Client.field_s = null;
-        if (pg.field_a) {
+        if (ReconnectState.reconnecting) {
           hc.field_c.e(false);
           if (param0 == 2) {
             return;

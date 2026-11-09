@@ -74,7 +74,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
         }
     }
 
-    final static void a(byte param0) {
+    final static void decodeHiscoreResponse(byte guard) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -88,9 +88,9 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
-        of var4_ref_of = null;
+        HiscoreRequest var4_ref_of = null;
         int var5 = 0;
-        id var6 = null;
+        SessionStatisticsSubmission var6 = null;
         int var6_int = 0;
         int var7 = 0;
         String[][] var8 = null;
@@ -116,17 +116,17 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
         int var25Lifetime2;
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != -70) {
+          if (guard != -70) {
             SpriteStripButtonRenderer.releaseStatics(-111);
           }
           var28 = ig.field_a;
           var2 = var28.readUnsignedByte(-31302);
           if (0 == var2) {
             var3 = var28.readUnsignedShort(255);
-            var4_ref_of = (of) (oi.field_b.first(74));
+            var4_ref_of = (HiscoreRequest) (oi.field_b.first(74));
             while (var4_ref_of != null) {
-              if (var3 != var4_ref_of.field_p) {
-                var4_ref_of = (of) (oi.field_b.next((byte) 18));
+              if (var3 != var4_ref_of.tableId) {
+                var4_ref_of = (HiscoreRequest) (oi.field_b.next((byte) 18));
                 continue;
               }
               break;
@@ -137,29 +137,29 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
             }
             var5 = var28.readUnsignedByte(-31302);
             if (0 != var5) {
-              var6_int = var4_ref_of.field_l;
-              var7 = var4_ref_of.field_s;
+              var6_int = var4_ref_of.rowCount;
+              var7 = var4_ref_of.columnCount;
               DraggableWidget.field_B[0].secondaryName = null;
-              DraggableWidget.field_B[0].primaryName = qv.field_o;
+              DraggableWidget.field_B[0].primaryName = QueuedIntArrayRequest.field_o;
               DraggableWidget.field_B[0].included = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 DraggableWidget.field_B[var8_int].primaryName = var28.readCp1252String(-1);
                 DraggableWidget.field_B[var8_int].included = false;
                 if (var28.readUnsignedByte(-31302) == 1) {
-                  DraggableWidget.field_B[var8_int].secondaryName = var28.readCp1252String(param0 + 69);
+                  DraggableWidget.field_B[var8_int].secondaryName = var28.readCp1252String(guard + 69);
                 } else {
                   DraggableWidget.field_B[var8_int].secondaryName = null;
                 }
               }
               dupTemp$0 = new String[3][var6_int];
-              var4_ref_of.field_o = dupTemp$0;
+              var4_ref_of.names = dupTemp$0;
               var8 = dupTemp$0;
               var9 = new String[3][var6_int];
               dupTemp$1 = new long[3][var6_int];
-              var4_ref_of.field_r = dupTemp$1;
+              var4_ref_of.entryIds = dupTemp$1;
               var10 = dupTemp$1;
               dupTemp$2 = new int[3][var6_int * var7];
-              var4_ref_of.field_m = dupTemp$2;
+              var4_ref_of.values = dupTemp$2;
               var11 = dupTemp$2;
               var12 = 0;
               var13 = 0;
@@ -186,8 +186,8 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
                     var12++;
                   }
                   if (var21 != null &&
-                    ea.a(var21, (byte) -25)) {
-                    var8[1][var13] = qv.field_o;
+                    ea.isCurrentUserName(var21, (byte) -25)) {
+                    var8[1][var13] = QueuedIntArrayRequest.field_o;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;
@@ -215,17 +215,17 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
                 }
               }
             }
-            var4_ref_of.field_q = true;
+            var4_ref_of.complete = true;
             var4_ref_of.unlink(false);
             return;
           }
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(255);
             var4 = var28.readLong((byte) 111);
-            var6 = (id) (HuffmanDecoder.field_f.first(127));
+            var6 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.first(127));
             while (var6 != null) {
-              if (var6.field_r != var3Lifetime1) {
-                var6 = (id) (HuffmanDecoder.field_f.next((byte) 18));
+              if (var6.requestId != var3Lifetime1) {
+                var6 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.next((byte) 18));
                 continue;
               }
               break;
@@ -234,7 +234,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -121);
               return;
             }
-            var6.field_s = var4;
+            var6.entryId = var4;
             var6.unlink(false);
             return;
           }
@@ -244,7 +244,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ue.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ue.C(" + guard + ')');
         }
     }
 

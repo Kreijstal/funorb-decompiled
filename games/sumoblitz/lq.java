@@ -40,7 +40,7 @@ final class lq {
           GameApplet.pushRasterState(103);
           if (param1 >= -62) {
             ResourceArchive var5 = (ResourceArchive) null;
-            lq.a(-58, (String) null, (String) null, (ResourceArchive) null);
+            lq.archiveLoadingMessage(-58, (String) null, (String) null, (ResourceArchive) null);
           }
           kh.field_a = new Sprite(var3, var4 * 3 / 4);
           kh.field_a.bindRaster();
@@ -55,7 +55,7 @@ final class lq {
         }
     }
 
-    final static String a(int param0, String param1, String param2, ResourceArchive param3) {
+    final static String archiveLoadingMessage(int guard, String loadingText, String waitingText, ResourceArchive archive) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -69,34 +69,34 @@ final class lq {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 100) {
+          if (guard < 100) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param3.loadIndex((byte) 127)) {
-            stackIn_6_0 = (String) (param2);
+          if (!archive.loadIndex((byte) 127)) {
+            stackIn_6_0 = (String) (waitingText);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param1 + " - " + param3.loadPercent(0) + "%";
+          stackIn_8_0 = loadingText + " - " + archive.loadPercent(0) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("lq.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("lq.D(").append(guard).append(',');
+          if (loadingText == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
+          if (waitingText == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param3 == null) {
+          if (archive == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";

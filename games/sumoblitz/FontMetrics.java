@@ -161,7 +161,7 @@ final class FontMetrics {
                                           break regionExit1;
                                         }
                                         try {
-                                          var20_int = no.a((byte) -128, (CharSequence) ((Object) var19.substring(4)));
+                                          var20_int = no.parseDecimal((byte) -128, (CharSequence) ((Object) var19.substring(4)));
                                           var17 = var17 + param4[var20_int].paddedWidth();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
@@ -401,7 +401,7 @@ final class FontMetrics {
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (param1 != null))) {
                                   try {
-                                    var11_int = no.a((byte) -127, (CharSequence) ((Object) var10.substring(4)));
+                                    var11_int = no.parseDecimal((byte) -127, (CharSequence) ((Object) var10.substring(4)));
                                     var5 = -1;
                                     var6 = var6 + param1[var11_int].paddedWidth();
                                     decompiledRegionSelector0 = 0;
@@ -560,7 +560,7 @@ final class FontMetrics {
                                   (decompiledFrameRemainder0 = !(!var12_ref_String.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (null != param2))) {
                                   try {
-                                    var13_int = no.a((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
+                                    var13_int = no.parseDecimal((byte) -127, (CharSequence) ((Object) var12_ref_String.substring(4)));
                                     var6 = -1;
                                     var7 = var7 + param2[var13_int].paddedWidth();
                                     if (var7 > param0) {

@@ -535,7 +535,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 != -26911) {
           this.field_Hc = (DirectXSwapChainSurface) null;
         }
-        if (!this.field_s.a(param0 ^ 10036)) {
+        if (!this.field_s.usesViewTransform(param0 ^ 10036)) {
           field_Mc[10] = 1.0f;
           field_Mc[8] = 0.0f;
           field_Mc[1] = 0.0f;

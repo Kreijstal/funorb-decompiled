@@ -43,7 +43,7 @@ final class QuickChatCommand {
         int var7Lifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          stackIn_4_0 = (ul.field_f != 1) ? 0 : 1;
+          stackIn_4_0 = (DisplaySizeController.field_f != 1) ? 0 : 1;
           var6_int = stackIn_4_0;
           if (param2 != -16240) {
             return;

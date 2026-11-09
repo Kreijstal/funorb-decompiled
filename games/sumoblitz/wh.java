@@ -5,7 +5,7 @@ final class wh extends DualLinkNode {
     int field_v;
     private LegacyOpenGlGraphicsToolkit field_u;
     private long field_t;
-    static int field_x;
+    static int maxHeapMiB;
     static String clickToAssignPointsText;
     static int field_s;
     static String[] field_w;
@@ -77,7 +77,7 @@ final class wh extends DualLinkNode {
 
     static {
         clickToAssignPointsText = "click to assign points <br> right-click to remove points";
-        field_x = 64;
+        maxHeapMiB = 64;
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

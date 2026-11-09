@@ -20,7 +20,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         if (null != CompactMeshGeometry.field_o) {
           return this.field_T;
         }
-        if (SecondaryNodeDequeIterator.field_b != null && SecondaryNodeDequeIterator.field_b.field_g &&
+        if (SecondaryNodeDequeIterator.field_b != null && SecondaryNodeDequeIterator.field_b.automatic &&
           null != this.field_Y) {
           return this.field_Y;
         }
@@ -85,7 +85,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_Z = ul.a((byte) -110, lt.field_m);
+          this.field_Z = DisplaySizeController.listFullscreenModes((byte) -110, lt.field_m);
           if (this.field_Z.length > 0) {
             for (var2_int = 0; this.field_Z.length > var2_int; var2_int++) {
               if (this.field_Z[var2_int] != null) {
@@ -98,7 +98,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                 }
                 if (null != SecondaryNodeDequeIterator.field_b &&
                   this.field_Z[var2_int] != null &&
-                  !SecondaryNodeDequeIterator.field_b.a(this.field_Z[var2_int].height, (byte) -54, this.field_Z[var2_int].width)) {
+                  !SecondaryNodeDequeIterator.field_b.acceptsSize(this.field_Z[var2_int].height, (byte) -54, this.field_Z[var2_int].width)) {
                   this.field_Z[var2_int] = null;
                 }
               }
@@ -127,11 +127,11 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
-          stackIn_40_1 = !(vs.b((byte) 9));
+          stackIn_40_1 = !(vs.isGuestSession((byte) 9));
           this.field_W = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (SecondaryNodeDequeIterator.field_b != null) {
-              stackIn_48_0 = (SecondaryNodeDequeIterator.field_b.f(-1)) ? 1 : 0;
+              stackIn_48_0 = (SecondaryNodeDequeIterator.field_b.isAutoResizeMemoryLimited(-1)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -186,8 +186,8 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             for (var7_int = 0; var7_int < this.field_Z.length; var7_int++) {
               var8 = this.field_Z[var7_int];
               if (null != CompactMeshGeometry.field_o &&
-                var8.width == SecondaryNodeDequeIterator.field_b.field_s &&
-                var8.height == SecondaryNodeDequeIterator.field_b.field_c) {
+                var8.width == SecondaryNodeDequeIterator.field_b.fullscreenWidth &&
+                var8.height == SecondaryNodeDequeIterator.field_b.fullscreenHeight) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
@@ -305,32 +305,32 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendLoggingRequests(int guard, int opcode) {
         int var3 = 0;
         lt var4 = null;
-        qv var5 = null;
+        QueuedIntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (lt) (em.field_d.first(-75));
+          var4 = (lt) (HardwareCubeMapSource.field_d.first(-75));
           while (var4 != null) {
-            DroneChargeParticle.a((byte) -97, var4, param1);
-            var4 = (lt) (em.field_d.next((byte) 18));
+            DroneChargeParticle.a((byte) -97, var4, opcode);
+            var4 = (lt) (HardwareCubeMapSource.field_d.next((byte) 18));
           }
-          var5 = (qv) (MenuScreen.field_b.first(109));
+          var5 = (QueuedIntArrayRequest) (MenuScreen.field_b.first(109));
           while (var5 != null) {
-            ss.a(param1, 1000, var5);
-            var5 = (qv) (MenuScreen.field_b.next((byte) 18));
+            ss.sendQueuedIntArrayRequest(opcode, 1000, var5);
+            var5 = (QueuedIntArrayRequest) (MenuScreen.field_b.next((byte) 18));
           }
-          if (param0 != 28778) {
-            GraphicsOptionsDialog.a(-77, -57);
+          if (guard != 28778) {
+            GraphicsOptionsDialog.resendLoggingRequests(-77, -57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dd.W(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "dd.W(" + guard + ',' + opcode + ')');
         }
     }
 
@@ -560,8 +560,8 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               if (null != this.field_ab) {
                 var4 = this.field_ab.selectedIndex(param1 - 126);
                 var5 = this.field_Z[var4];
-                if (var5.width == SecondaryNodeDequeIterator.field_b.field_s &&
-                  SecondaryNodeDequeIterator.field_b.field_c == var5.height) {
+                if (var5.width == SecondaryNodeDequeIterator.field_b.fullscreenWidth &&
+                  SecondaryNodeDequeIterator.field_b.fullscreenHeight == var5.height) {
                   this.e(true);
                   return;
                 }
@@ -604,7 +604,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               null != this.field_ab) {
               var2 = this.field_ab.selectedIndex(96);
               if (0 <= var2) {
-                SecondaryNodeDequeIterator.field_b.b(this.field_Z[var2].height, this.field_Z[var2].width, 67);
+                SecondaryNodeDequeIterator.field_b.setFullscreenSize(this.field_Z[var2].height, this.field_Z[var2].width, 67);
               }
               ArchiveCatalog.a(true, false);
               this.dialogLayer.pushDialog((byte) 108, new DisplayModeConfirmationDialog(this.dialogLayer));
@@ -692,7 +692,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           }
           var5_int = 69 % ((-25 - guard) / 45);
           if (!this.field_W &&
-            !vs.b((byte) 9)) {
+            !vs.isGuestSession((byte) 9)) {
             this.k(84);
             this.dialogLayer.pushDialog((byte) 124, new GraphicsOptionsDialog(this.dialogLayer));
           }

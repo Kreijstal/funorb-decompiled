@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class em extends pt {
+abstract class HardwareCubeMapSource extends CubeMapSource {
     static IntrusiveDeque field_d;
 
-    abstract CubeTexture b(int param0);
+    abstract CubeTexture cubeTexture(int guard);
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
@@ -14,7 +14,7 @@ abstract class em extends pt {
         return false;
     }
 
-    private em() throws Throwable {
+    private HardwareCubeMapSource() throws Throwable {
         throw new Error();
     }
 

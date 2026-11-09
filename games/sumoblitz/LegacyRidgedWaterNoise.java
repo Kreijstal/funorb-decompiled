@@ -45,7 +45,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             }
             return;
           }
-          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, PasswordInputRenderer.field_r, true, guard - 1886067878);
+          pu.field_e.dispatchPointerInput(JaggrabDownloader.displayDialogY, PasswordInputRenderer.displayDialogX, true, guard - 1886067878);
           if (guard != 1886067877) {
             LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }

@@ -232,7 +232,7 @@ final class SecondaryNodeQueue {
             }
           }
           if (decompiledFrameRemainder0) {
-            var9 = -12 + rm.b(42, param7 >> 31 ^ param7 | (param6 >> 31 ^ param6 | (param2 ^ param2 >> 31 | param8 >> 31 ^ param8 | param3 ^ param3 >> 31)));
+            var9 = -12 + IntegerMath.floorLog2(42, param7 >> 31 ^ param7 | (param6 >> 31 ^ param6 | (param2 ^ param2 >> 31 | param8 >> 31 ^ param8 | param3 ^ param3 >> 31)));
             if (var9 > 0) {
               param3 = param3 >> var9;
               param2 = param2 >> var9;

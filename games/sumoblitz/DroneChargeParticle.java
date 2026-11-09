@@ -77,20 +77,20 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
         GameClientShell.field_u[10] = PlayingSound.scoreFilterLabels[2];
         GameClientShell.field_u[27] = FallbackShaderEffect.field_g;
-        GameClientShell.field_u[23] = pt.challengeText;
+        GameClientShell.field_u[23] = CubeMapSource.challengeText;
         GameClientShell.field_u[24] = MatchingTextValidator.optionsText;
         GameClientShell.field_u[17] = FadingWidget.nextText;
         GameClientShell.field_u[28] = ss.restartLevelText;
         GameClientShell.field_u[19] = dn.arcadeGameText;
         GameClientShell.field_u[22] = MusicPatch.editorText;
-        BufferedSocket.field_i = new String[]{mn.highText, DiskCacheDataFile.lowText};
+        BufferedSocket.field_i = new String[]{ArchiveLoadingStage.highText, DiskCacheDataFile.lowText};
         GameClientShell.field_u[33] = AccountRequestState.levelSelectText;
         GameClientShell.field_u[26] = ServerDataReadRequest.resetStatsText;
         GameClientShell.field_u[9] = PlayingSound.scoreFilterLabels[1];
         GameClientShell.field_u[20] = TimedSceneEffect.challengeText;
         GameClientShell.field_u[32] = AccountRequestState.levelSelectText;
         GameClientShell.field_u[8] = PlayingSound.scoreFilterLabels[0];
-        GameClientShell.field_u[29] = hv.reassignText;
+        GameClientShell.field_u[29] = ProjectionMode.reassignText;
         GameClientShell.field_u[30] = ScreenNameValidator.field_g;
         GameClientShell.field_u[31] = VertexAttribute.continueText;
     }

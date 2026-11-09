@@ -280,7 +280,7 @@ final class LruNodeCache {
                     if (var38 == 0) {
                       if (0 <= var37 &&
                         SoftwareRasterViewport.width > var37) {
-                        mn.a(0, 0, param4, var38, 0, var25, var21, var37 + var36Lifetime2, true, var29);
+                        ArchiveLoadingStage.blendGouraudSpan(0, 0, param4, var38, 0, var25, var21, var37 + var36Lifetime2, true, var29);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -290,9 +290,9 @@ final class LruNodeCache {
                         var38 = -var37 + (SoftwareRasterViewport.width - 1);
                       }
                       if (0 > var37) {
-                        mn.a(var40, var39, param4, var37 + var38, var41, var25 - var37 * var40, var21 - var39 * var37, var36Lifetime2, true, -(var37 * var41) + var29);
+                        ArchiveLoadingStage.blendGouraudSpan(var40, var39, param4, var37 + var38, var41, var25 - var37 * var40, var21 - var39 * var37, var36Lifetime2, true, -(var37 * var41) + var29);
                       } else {
-                        mn.a(var40, var39, param4, var38, var41, var25, var21, var37 + var36Lifetime2, true, var29);
+                        ArchiveLoadingStage.blendGouraudSpan(var40, var39, param4, var38, var41, var25, var21, var37 + var36Lifetime2, true, var29);
                       }
                     }
                   }
@@ -367,7 +367,7 @@ final class LruNodeCache {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     SoftwareRasterViewport.width > var36Lifetime1) {
-                    mn.a(0, 0, param4, var37Lifetime1, 0, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
+                    ArchiveLoadingStage.blendGouraudSpan(0, 0, param4, var37Lifetime1, 0, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -377,9 +377,9 @@ final class LruNodeCache {
                     var37Lifetime1 = -1 + (SoftwareRasterViewport.width - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    mn.a(var39Lifetime1, var38Lifetime1, param4, var37Lifetime1, var40Lifetime1, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
+                    ArchiveLoadingStage.blendGouraudSpan(var39Lifetime1, var38Lifetime1, param4, var37Lifetime1, var40Lifetime1, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
                   } else {
-                    mn.a(var39Lifetime1, var38Lifetime1, param4, var36Lifetime1 + var37Lifetime1, var40Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var35Lifetime1, true, var29 - var40Lifetime1 * var36Lifetime1);
+                    ArchiveLoadingStage.blendGouraudSpan(var39Lifetime1, var38Lifetime1, param4, var36Lifetime1 + var37Lifetime1, var40Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var35Lifetime1, true, var29 - var40Lifetime1 * var36Lifetime1);
                   }
                 }
               }

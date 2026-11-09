@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class pt {
+abstract class CubeMapSource {
     static java.util.zip.CRC32 field_c;
     static volatile boolean field_a;
     static String challengeText;
@@ -34,31 +34,31 @@ abstract class pt {
         field_c = null;
     }
 
-    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
-        if (null != param2.secondaryPrevious) {
-          param2.unlinkSecondary(-5106);
+    final static void insertSecondaryAfter(DualLinkNode previous, int guard, DualLinkNode node) {
+        if (null != node.secondaryPrevious) {
+          node.unlinkSecondary(-5106);
         }
-        if (param1 != 2066481250) {
+        if (guard != 2066481250) {
           return;
         }
         try {
-          param2.secondaryPrevious = param0;
-          param2.secondaryNext = param0.secondaryNext;
-          param2.secondaryPrevious.secondaryNext = param2;
-          param2.secondaryNext.secondaryPrevious = param2;
+          node.secondaryPrevious = previous;
+          node.secondaryNext = previous.secondaryNext;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pt.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pt.F(" + (previous != null ? "{...}" : "null") + ',' + guard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void decodeLoggingResponse(int guard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        qv var4_ref_qv = null;
+        QueuedIntArrayRequest var4_ref_qv = null;
         lt var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -69,19 +69,19 @@ abstract class pt {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var10 = ig.field_a;
-          if (param0 != -22683) {
+          if (guard != -22683) {
             return;
           }
-          var2 = var10.readUnsignedByte(param0 - 8619);
+          var2 = var10.readUnsignedByte(guard - 8619);
           var3 = var10.readUnsignedByte(-31302);
           if (var2 == 0) {
-            var4_ref_qv = (qv) (MenuScreen.field_b.first(-95));
+            var4_ref_qv = (QueuedIntArrayRequest) (MenuScreen.field_b.first(-95));
             if (var4_ref_qv == null) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
               return;
             }
             var5_int = gu.field_d - var10.position;
-            var12 = var4_ref_qv.field_m;
+            var12 = var4_ref_qv.values;
             var11 = var12;
             var6 = var11;
             if (var5_int > var12.length << 2) {
@@ -95,11 +95,11 @@ abstract class pt {
           }
           if (1 == var2) {
             var4 = var10.readSignedSmart(-2858);
-            var5 = (lt) (em.field_d.first(-73));
+            var5 = (lt) (HardwareCubeMapSource.field_d.first(-73));
             while (var5 != null) {
               if (var3 != var5.field_k ||
                 var4 != var5.field_o) {
-                var5 = (lt) (em.field_d.next((byte) 18));
+                var5 = (lt) (HardwareCubeMapSource.field_d.next((byte) 18));
                 continue;
               }
               break;
@@ -117,15 +117,15 @@ abstract class pt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "pt.I(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "pt.I(" + guard + ')');
         }
     }
 
-    protected pt() throws Throwable {
+    protected CubeMapSource() throws Throwable {
         throw new Error();
     }
 
-    final static String a(String param0, ResourceArchive param1, String param2, boolean param3, String param4) {
+    final static String groupLoadingMessage(String groupName, ResourceArchive archive, String waitingText, boolean guard, String loadingText) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -140,39 +140,39 @@ abstract class pt {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3) {
+          if (!guard) {
             field_c = (java.util.zip.CRC32) null;
           }
-          if (!param1.loadIndex((byte) 127)) {
-            stackIn_5_0 = (String) (param2);
+          if (!archive.loadIndex((byte) 127)) {
+            stackIn_5_0 = (String) (waitingText);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param1.namedGroupLoadPercent(param0, (byte) 33) + "%";
+          stackIn_7_0 = loadingText + " - " + archive.namedGroupLoadPercent(groupName, (byte) 33) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("pt.E(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (waitingText == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',');
+          if (loadingText == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";

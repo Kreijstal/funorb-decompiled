@@ -37,7 +37,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           if (CachedTextLayout.a(param0, (byte) 111, param1)) {
             return false;
           }
-          if (!wv.a(false, param0, param1)) {
+          if (!AccountNameSupport.containsNameIgnoringUnderscores(false, param0, param1)) {
             return true;
           }
           return false;
@@ -86,7 +86,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           EmailAvailabilityRequest.powerupPickups = new IntrusiveDeque();
           QuickChatPhraseProvider.arenaPads = new IntrusiveDeque();
           if (OpenGlShaderProgram.levelIndex != -1) {
-            QuickChatPhraseProvider.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
+            QuickChatPhraseProvider.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].pads;
           }
           HardwareGraphicsHeap.field_o = new Random();
           ServerDataWriteRequest.droneSlotLimit = 1;

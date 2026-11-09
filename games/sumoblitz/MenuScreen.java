@@ -214,7 +214,7 @@ class MenuScreen {
         if (var15 == -1) {
           MessageDialog.field_db.a(ActiveCanvasProvider.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
           LegacyOpenGlEffect.field_c.a(ActiveCanvasProvider.mouseOverAnIconText, var5, -1, 348, 320, 0);
-          if (vs.b((byte) 9)) {
+          if (vs.isGuestSession((byte) 9)) {
             MessageDialog.field_db.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
             LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
@@ -256,7 +256,7 @@ class MenuScreen {
           LegacyOpenGlEffect.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           var8Lifetime2Lifetime3 = 390;
           var13Lifetime1Lifetime3 = 190;
-          qv.field_k.a(ArchiveProvider.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          QueuedIntArrayRequest.field_k.a(ArchiveProvider.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           uq.field_a.a(ArchiveProvider.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           var20_int = 200;
           if (var18Lifetime1 != 0) {
@@ -305,7 +305,7 @@ class MenuScreen {
           stackIn_12_0 = GameInstructions.objectiveHelpLines[var5].startsWith("<b>");
           if (var6 == 0) {
             if (stackIn_12_0) {
-              qv.field_k.a(var4, var3, 5023231 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -11, 0);
+              QueuedIntArrayRequest.field_k.a(var4, var3, 5023231 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -11, 0);
               uq.field_a.a(var4, var3, 16777215 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -37, 0);
             } else {
               MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
@@ -417,7 +417,7 @@ class MenuScreen {
             var13_ref = hc.field_e;
           } else {
             var13_ref = uq.field_a;
-            var14_ref = qv.field_k;
+            var14_ref = QueuedIntArrayRequest.field_k;
             var15_ref = AccountConnectionPhase.field_a;
             var16 = 11;
           }
@@ -461,7 +461,7 @@ class MenuScreen {
                   return;
                 }
               }
-              var23 = FallbackShaderEffect.field_g + BufferedSocket.field_i[ul.field_f];
+              var23 = FallbackShaderEffect.field_g + BufferedSocket.field_i[DisplaySizeController.field_f];
               var18_ref_StringLifetime2 = var23.toUpperCase();
               var14_ref.a(var18_ref_StringLifetime2, 5023231 | param4 << 24, -1, var6_int - (-var15_ref.field_i - var17) + var16, (var10 >> 1) + (var7 - 4), 0);
               var13_ref.a(var18_ref_StringLifetime2, var12, -1, var16 + (var6_int + var15_ref.field_i) + var17, -4 + (var10 >> 1) + var7, 0);
@@ -512,14 +512,14 @@ class MenuScreen {
 
     private final int g(int param0, int param1) {
         if (this.screenId == 2 &&
-          !vs.b((byte) 9)) {
+          !vs.isGuestSession((byte) 9)) {
           if (param0 >= 5) {
             return -6 + (DualLinkNode.field_k[this.screenId] + MidiNoteMixer.field_s[this.screenId]);
           }
           return -6 + DualLinkNode.field_k[this.screenId];
         }
         if (this.screenId == 2 &&
-          vs.b((byte) 9)) {
+          vs.isGuestSession((byte) 9)) {
           return DualLinkNode.field_k[this.screenId] - (-(param0 * MidiNoteMixer.field_s[this.screenId]) + 6);
         }
         if (this.screenId != 3 &&
@@ -568,7 +568,7 @@ class MenuScreen {
           return;
         }
         if (this.screenId == 2 &&
-          !vs.b((byte) 9)) {
+          !vs.isGuestSession((byte) 9)) {
           if (TextureCombineOperation.field_a == 96) {
             if (0 < this.field_g.selectedIndex) {
               if (3 != this.field_g.selectedIndex) {
@@ -705,7 +705,7 @@ class MenuScreen {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
+        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
         uq.field_a.a(var5, var3, 16777215 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -8, 0);
         var5 += 30;
         ContentDialog.field_ab[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
@@ -722,8 +722,8 @@ class MenuScreen {
         MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         var5 += 70;
-        hv.field_d[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        hv.field_d[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
+        ProjectionMode.field_d[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        ProjectionMode.field_d[1].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         if (!param0) {
           this.resetSelection(-98, false);
         }
@@ -746,28 +746,28 @@ class MenuScreen {
         var4 = kd.field_a[this.screenId][param2];
         if (this.field_g.isActivated(-31260)) {
           if (var4 != 5) {
-            gn.a(16, true);
+            ArchiveLoadRequirement.playSoundEffect(16, true);
             if (var9 != 0) {
-              gn.a(15, true);
+              ArchiveLoadRequirement.playSoundEffect(15, true);
               if (var4 != this.field_d &&
                 kd.field_a[this.screenId].length != 1) {
                 this.field_d = var4;
-                gn.a(17, true);
+                ArchiveLoadRequirement.playSoundEffect(17, true);
               }
             }
           } else {
-            gn.a(15, true);
+            ArchiveLoadRequirement.playSoundEffect(15, true);
             if ((var9 != 0) && (var4 != this.field_d &&
               kd.field_a[this.screenId].length != 1)) {
               this.field_d = var4;
-              gn.a(17, true);
+              ArchiveLoadRequirement.playSoundEffect(17, true);
             }
           }
         } else {
           if (var4 != this.field_d &&
             kd.field_a[this.screenId].length != 1) {
             this.field_d = var4;
-            gn.a(17, true);
+            ArchiveLoadRequirement.playSoundEffect(17, true);
           }
         }
         regionExit1: {
@@ -814,11 +814,11 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    ul.field_f = ul.field_f + 1;
-                    if (1 >= ul.field_f) {
+                    DisplaySizeController.field_f = DisplaySizeController.field_f + 1;
+                    if (1 >= DisplaySizeController.field_f) {
                       break regionExit2;
                     }
-                    ul.field_f = 0;
+                    DisplaySizeController.field_f = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -895,7 +895,7 @@ class MenuScreen {
                     {
                       LruNodeCache.gameplaySession.resetSession(70);
                       DroneIntroductionOverlay.a(param0, true, false);
-                      if (vs.b((byte) 9)) {
+                      if (vs.isGuestSession((byte) 9)) {
                         if (0 < IntrusiveNodeHashTable.field_c) {
                           StrongCacheReference.switchMenuScreen(-7753, param0, 6);
                           if (var9 != 0) {
@@ -924,7 +924,7 @@ class MenuScreen {
                     }
                     regionExit3: {
                       DroneIntroductionOverlay.a(param0, true, false);
-                      if (!vs.b((byte) 9)) {
+                      if (!vs.isGuestSession((byte) 9)) {
                         if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
                           if (var9 == 0) {
@@ -998,10 +998,10 @@ class MenuScreen {
                     }
                   case 5:
                     var5 = 0;
-                    if (~vl.field_a != ~var5) {
+                    if (~ArenaDefinition.field_a != ~var5) {
                       StatusMessagePanel.a((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
                     }
-                    vl.field_a = var5;
+                    ArenaDefinition.field_a = var5;
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
@@ -1067,19 +1067,19 @@ class MenuScreen {
                   case 12:
                     if (this.field_g.isHomePressed(-103)) {
                       lt.c((byte) 53);
-                      gn.a(0, true);
+                      ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.field_g.isEndPressed(103)) {
                       QuickChatPhraseProvider.b(80);
-                      gn.a(0, true);
+                      ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.field_g.isLeftPressed(2542)) {
                       HardwareSpecularEffect.e(-124);
-                      gn.a(0, true);
+                      ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.field_g.isRightPressed(116224)) {
                       AccountCreationForm.h(0);
-                      gn.a(0, true);
+                      ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (!this.field_g.isPointerHeld((byte) 52)) {
                       break regionExit2;
@@ -1110,7 +1110,7 @@ class MenuScreen {
                     }
                   case 13:
                     if (this.field_g.isHomePressed(-103)) {
-                      wv.a(24238);
+                      AccountNameSupport.muteMusic(24238);
                     }
                     if (this.field_g.isEndPressed(103)) {
                       ig.a(22075);
@@ -1220,12 +1220,12 @@ class MenuScreen {
                       } else {
                         stackIn_248_1 = 2;
                       }
-                      ul.a(stackIn_247_0, stackIn_248_1, 6);
+                      DisplaySizeController.beginScreenTransition(stackIn_247_0, stackIn_248_1, 6);
                       if (var9 == 0) {
                         break regionExit2;
                       }
                     }
-                    ul.a(4025, this.screenId, this.screenId);
+                    DisplaySizeController.beginScreenTransition(4025, this.screenId, this.screenId);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1313,7 +1313,7 @@ class MenuScreen {
         int var3 = 53;
         int var4 = 480;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -21, 0);
+        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -21, 0);
         uq.field_a.a(var5, var3, param0 << 24 | 16777215, GameInstructions.dronesHelpLinesPartTwo[0], (byte) -15, 0);
         var5 += 30;
         field_a[0].drawRotated((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
@@ -1385,7 +1385,7 @@ class MenuScreen {
           if (guard != -2355) {
             this.a((byte) 91);
           }
-          stackIn_6_0 = (ul.field_f == 0) ? 3 : 1;
+          stackIn_6_0 = (DisplaySizeController.field_f == 0) ? 3 : 1;
           var4_int = stackIn_6_0;
           stackIn_9_0 = (Bzip2State.field_j < 2) ? 0 : 1;
           var5 = stackIn_9_0;
@@ -1393,7 +1393,7 @@ class MenuScreen {
             1 == this.screenId ||
             this.screenId == 8) {
             DelegatingCanvas.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
-            if (ul.field_f == 0 &&
+            if (DisplaySizeController.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
             } else {
@@ -1424,19 +1424,19 @@ class MenuScreen {
                   DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
-                  qv.field_k.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
-                  stackIn_32_0 = qv.field_k;
+                  QueuedIntArrayRequest.field_k.a(LegacyOpenGlNormalMapGenerator.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
+                  stackIn_32_0 = QueuedIntArrayRequest.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != IntrusiveNodeHashTable.field_c);
                   stackIn_36_3 = (OpenGlTransparentWaterEffect.field_e != 0);
                   ((ToolkitFont) (Object) stackIn_32_0).a(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
-                  stackIn_38_0 = qv.field_k;
+                  stackIn_38_0 = QueuedIntArrayRequest.field_k;
                   stackIn_38_1 = 26;
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != IntrusiveNodeHashTable.field_c);
                   ((ToolkitFont) (Object) stackIn_38_0).a(NameSuggestionsPanel.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
-                  stackIn_44_0 = qv.field_k;
+                  stackIn_44_0 = QueuedIntArrayRequest.field_k;
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_47_3 = false;
@@ -1512,7 +1512,7 @@ class MenuScreen {
         int var3 = 53;
         int var4 = 520;
         int var5 = 130;
-        qv.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.upgradesHelpLines[0], (byte) -34, 0);
+        QueuedIntArrayRequest.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.upgradesHelpLines[0], (byte) -34, 0);
         uq.field_a.a(var5, var3, param1 << 24 | 16777215, GameInstructions.upgradesHelpLines[0], (byte) -40, 0);
         var5 += 30;
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
@@ -1623,8 +1623,8 @@ class MenuScreen {
           this.a((byte) -123, param1);
           break;
         }
-        MessageDialog.field_db.a(vl.a(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
-        LegacyOpenGlEffect.field_c.a(vl.a(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
+        MessageDialog.field_db.a(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
+        LegacyOpenGlEffect.field_c.a(ArenaDefinition.formatFraction(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
         return;
     }
 
@@ -1698,7 +1698,7 @@ class MenuScreen {
     private final int b(int param0, int param1) {
         int var3;
         if (this.screenId == 2 &&
-          !vs.b((byte) 9)) {
+          !vs.isGuestSession((byte) 9)) {
           if (3 != param0 &&
             4 != param0) {
             if (param0 == 5) {
@@ -1721,11 +1721,11 @@ class MenuScreen {
             return 40 + 280 * param0;
           }
           if (this.screenId == 4 &&
-            !vs.b((byte) 9)) {
+            !vs.isGuestSession((byte) 9)) {
             return 220;
           }
           if (4 == this.screenId &&
-            vs.b((byte) 9)) {
+            vs.isGuestSession((byte) 9)) {
             return 20 + 300 * param0;
           }
           if (this.screenId == 0 &&
@@ -1734,7 +1734,7 @@ class MenuScreen {
             return -14 + (-163 + 163 * param0);
           }
           if (this.screenId == 5 &&
-            vs.b((byte) 9)) {
+            vs.isGuestSession((byte) 9)) {
             return 300 * param0 + 20;
           }
           if (this.screenId == 5) {
@@ -1797,7 +1797,7 @@ class MenuScreen {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
               LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
               AffineTransform3D.field_j = 0;
-              gn.a(15, true);
+              ArchiveLoadRequirement.playSoundEffect(15, true);
               if (var3 == 0) {
                 continue;
               }
@@ -1815,7 +1815,7 @@ class MenuScreen {
               continue;
             }
             StrongCacheReference.switchMenuScreen(-7753, false, AffineTransform3D.field_j);
-            gn.a(15, true);
+            ArchiveLoadRequirement.playSoundEffect(15, true);
             if (var3 == 0) {
               continue;
             }
@@ -1856,17 +1856,17 @@ class MenuScreen {
         int var3;
         var3 = 121 % ((-59 - param0) / 50);
         if (this.screenId == 2 &&
-          !vs.b((byte) 9)) {
+          !vs.isGuestSession((byte) 9)) {
           return 170 + this.b(param1, -92);
         }
         if (3 == this.screenId) {
           return 200 + this.b(param1, -106);
         }
-        if (!vs.b((byte) 9) && (this.screenId == 4 ||
+        if (!vs.isGuestSession((byte) 9) && (this.screenId == 4 ||
           this.screenId == 5)) {
           return 200 + this.b(param1, -88);
         }
-        if (vs.b((byte) 9) && (this.screenId == 4 ||
+        if (vs.isGuestSession((byte) 9) && (this.screenId == 4 ||
           5 == this.screenId)) {
           return this.b(param1, 41) + 300;
         }
@@ -1892,7 +1892,7 @@ class MenuScreen {
         int var4;
         String var5;
         String var6;
-        of var7_ref_of;
+        HiscoreRequest var7_ref_of;
         int var7;
         String[] var8;
         int[] var9;
@@ -1932,27 +1932,27 @@ class MenuScreen {
         regionExit1: {
           regionExit2: {
             this.a(var5, param0, param1 + 29227);
-            if (vs.b((byte) 9)) {
+            if (vs.isGuestSession((byte) 9)) {
               var6 = HardwareSpecularEffect.noHighscoresText;
               if (var19 == 0) {
                 break regionExit2;
               }
             }
             if (HardwareTextureCache.field_f == null) {
-              HardwareTextureCache.field_f = of.a(2, 1, LegacyOpenGlShader.field_a, 3, 10);
+              HardwareTextureCache.field_f = HiscoreRequest.requestHiscores(2, 1, LegacyOpenGlShader.field_a, 3, 10);
             }
             var7_ref_of = HardwareTextureCache.field_f;
-            if (var7_ref_of.field_q) {
-              if (var7_ref_of.field_o == null) {
+            if (var7_ref_of.complete) {
+              if (var7_ref_of.names == null) {
                 var6 = SectorCacheStore.serviceUnavailableText;
                 if (var19 == 0) {
                   break regionExit2;
                 }
               }
               var6 = HardwareSpecularEffect.noHighscoresText;
-              var8 = var7_ref_of.field_o[gu.field_j];
-              var9 = var7_ref_of.field_m[gu.field_j];
-              var10 = kp.a(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);
+              var8 = var7_ref_of.names[gu.field_j];
+              var9 = var7_ref_of.values[gu.field_j];
+              var10 = kp.findSubmittedHiscore(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);
               SocketConnector.field_a.a("10. ", param1 - 1);
               var11 = AccountConnectionPhase.field_a.field_i + 140;
               var11 -= 20;
@@ -1963,12 +1963,12 @@ class MenuScreen {
                 Math.sqrt((double)var14);
               }
               var15 = param0 << 24 | 16777215;
-              qv.field_k.a(var11, var12, 5023231 | param0 << 24, pd.nameText, (byte) -30, -1);
+              QueuedIntArrayRequest.field_k.a(var11, var12, 5023231 | param0 << 24, pd.nameText, (byte) -30, -1);
               if (~var10 == ~var4) {
                 var15 = -17409;
               }
               uq.field_a.a(var11, var12, var15, pd.nameText, (byte) -71, -1);
-              qv.field_k.a(-1, var13, LoginCredentials.scoreText, var11, 5023231 | param0 << 24, 72);
+              QueuedIntArrayRequest.field_k.a(-1, var13, LoginCredentials.scoreText, var11, 5023231 | param0 << 24, 72);
               uq.field_a.a(-1, var13, LoginCredentials.scoreText, var11, var15, 59);
               var11 += 20;
               var4 = 0;
@@ -2025,7 +2025,7 @@ class MenuScreen {
         var7 = stackIn_34_0;
         MessageDialog.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
         LegacyOpenGlEffect.field_c.a(var6, param0 << 24 | 16777215, -1, var7, 320, param1 - 1);
-        if (!vs.b((byte) 9)) {
+        if (!vs.isGuestSession((byte) 9)) {
           stackIn_37_0 = LinkWidgetRenderer.friendsCanBeAddedText;
         } else {
           stackIn_37_0 = InstrumentNoteMask.createAFreeAccountText;
@@ -2085,14 +2085,14 @@ class MenuScreen {
               var4Lifetime1 = 370;
             }
             if (GameInstructions.controlsHelpLines[var6].startsWith("<b>")) {
-              qv.field_k.a(var5, var3Lifetime1, param0 << 24 | 5023231, GameInstructions.controlsHelpLines[var6], (byte) -98, 0);
+              QueuedIntArrayRequest.field_k.a(var5, var3Lifetime1, param0 << 24 | 5023231, GameInstructions.controlsHelpLines[var6], (byte) -98, 0);
               uq.field_a.a(var5, var3Lifetime1, param0 << 24 | 16777215, GameInstructions.controlsHelpLines[var6], (byte) -32, 0);
             } else if (var6 != 1) {
               if (3 != var6) {
                 MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
                 LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
               } else {
-                bt.field_e.draw(var3Lifetime1 + 16, 14 + var5);
+                LegacyCubeMapSource.field_e.draw(var3Lifetime1 + 16, 14 + var5);
               }
             } else {
               HudMessage.field_m.draw(28 + var3Lifetime1, var5 + 20);

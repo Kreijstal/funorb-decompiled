@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hv {
+final class ProjectionMode {
     static String reassignText;
     static ToolkitSprite field_b;
     static String unpackingSoundEffectsText;
@@ -12,8 +12,8 @@ final class hv {
         throw new IllegalStateException();
     }
 
-    final boolean a(int param0) {
-        if (param0 == -20011) {
+    final boolean usesViewTransform(int guard) {
+        if (guard == -20011) {
           return ((pd.field_m == this ? 1 : 0) | (mo.field_w == this ? 1 : 0)) != 0;
         }
         return false;
@@ -25,7 +25,7 @@ final class hv {
         field_b = null;
         unpackingSoundEffectsText = null;
         if (param0 != -7520) {
-          hv.releaseStatics(-61);
+          ProjectionMode.releaseStatics(-61);
         }
     }
 

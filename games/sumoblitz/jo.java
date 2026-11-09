@@ -8,17 +8,17 @@ final class jo {
     static Hashtable field_a;
     static int field_c;
 
-    final static int a(int param0, boolean param1) {
-        int var2 = param0 >>> 1;
+    final static int highestOneBit(int value, boolean guard) {
+        int var2 = value >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
         var2 = var2 | var2 >>> 4;
         var2 = var2 | var2 >>> 8;
-        if (param1) {
+        if (guard) {
           field_c = -100;
         }
         var2 = var2 | var2 >>> 16;
-        return param0 & ~var2;
+        return value & ~var2;
     }
 
     final synchronized static byte[] a(int param0, int param1) {

@@ -45,7 +45,7 @@ final class LoginPacketWriter {
           if (NineSlicePanel.field_a) {
             var6 = var6 | 1;
           }
-          if (gn.field_d) {
+          if (ArchiveLoadRequirement.field_d) {
             var6 = var6 | 4;
           }
           if (jagexHosted) {

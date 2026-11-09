@@ -30,15 +30,15 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
             IntrusiveDequeCursor.a((int)var2_double, -1372239541);
             if ((1 << drone.droneType & DisplayModeConfirmationDialog.droneTypeStreakMask) == 0) {
               DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
-              bi.uniqueDroneTypeStreak = bi.uniqueDroneTypeStreak + 1;
+              ArenaBackdropPalettes.uniqueDroneTypeStreak = ArenaBackdropPalettes.uniqueDroneTypeStreak + 1;
             } else {
               DisplayModeConfirmationDialog.droneTypeStreakMask = 0;
-              bi.uniqueDroneTypeStreak = 1;
+              ArenaBackdropPalettes.uniqueDroneTypeStreak = 1;
               DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
             }
-            rn.a(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
+            rn.postHudMessage(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
             if (DisplayModeConfirmationDialog.droneTypeStreakMask != 0 &&
-              ps.field_e[13] == bi.uniqueDroneTypeStreak) {
+              ps.field_e[13] == ArenaBackdropPalettes.uniqueDroneTypeStreak) {
               UnderageAccountInfoPanel.b(24753, 242, 13);
             }
             if (7 == OpenGlShaderProgram.levelIndex &&

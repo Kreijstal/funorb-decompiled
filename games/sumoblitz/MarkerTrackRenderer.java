@@ -66,17 +66,17 @@ final class MarkerTrackRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 <= -117) {
-          pg.field_a = false;
+    final static void resetAccountRequests(byte guard) {
+        if (guard <= -117) {
+          ReconnectState.reconnecting = false;
           StatusMessagePanel.field_A = false;
           ReflectionCheck.setAccountDialogResult(-1, -69);
           vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
           ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
           return;
         }
-        MarkerTrackRenderer.a((byte) -85);
-        pg.field_a = false;
+        MarkerTrackRenderer.resetAccountRequests((byte) -85);
+        ReconnectState.reconnecting = false;
         StatusMessagePanel.field_A = false;
         ReflectionCheck.setAccountDialogResult(-1, -69);
         vm.nameAvailabilityState = AccountRequestDefaults.IDLE;

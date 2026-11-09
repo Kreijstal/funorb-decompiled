@@ -66,9 +66,9 @@ final class DelayedInboundPacket extends IntrusiveNode {
               return;
             }
             if (!var5.isBlastReady(20)) {
-              gn.a(33, true);
+              ArchiveLoadRequirement.playSoundEffect(33, true);
             } else {
-              gn.a(29, true);
+              ArchiveLoadRequirement.playSoundEffect(29, true);
             }
             return;
           }
@@ -92,9 +92,9 @@ final class DelayedInboundPacket extends IntrusiveNode {
                 return;
               }
               if (!var5.isBlastReady(20)) {
-                gn.a(33, true);
+                ArchiveLoadRequirement.playSoundEffect(33, true);
               } else {
-                gn.a(29, true);
+                ArchiveLoadRequirement.playSoundEffect(29, true);
               }
               return;
             }
@@ -116,9 +116,9 @@ final class DelayedInboundPacket extends IntrusiveNode {
           return;
         }
         if (!var5.isBlastReady(20)) {
-          gn.a(33, true);
+          ArchiveLoadRequirement.playSoundEffect(33, true);
         } else {
-          gn.a(29, true);
+          ArchiveLoadRequirement.playSoundEffect(29, true);
         }
     }
 

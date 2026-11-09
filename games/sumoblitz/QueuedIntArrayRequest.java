@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qv extends IntrusiveNode {
+final class QueuedIntArrayRequest extends IntrusiveNode {
     static String asYouAreUnderText;
     static String field_o;
-    int[] field_m;
-    int field_n;
+    int[] values;
+    int arrayId;
     static ToolkitFont field_k;
 
-    final static void a(int param0) {
+    final static void perturbSessionStatistics(int guard) {
         QuickChatCommand.field_a = QuickChatCommand.field_a + 13;
-        if (param0 != 2) {
+        if (guard != 2) {
           asYouAreUnderText = (String) null;
         }
         LoginPacketWriter.field_a = LoginPacketWriter.field_a - 9;
@@ -18,17 +18,17 @@ final class qv extends IntrusiveNode {
         GraphicsToolkit.field_f = GraphicsToolkit.field_f + 18;
     }
 
-    final static void a(int param0, int param1) {
-        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[param0];
-        if (param1 != 4) {
+    final static void playLoopingSample(int sampleId, int guard) {
+        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[sampleId];
+        if (guard != 4) {
           CharSequence var3 = (CharSequence) null;
-          qv.a(false, -82, (CharSequence) null);
+          QueuedIntArrayRequest.validateNameSeparators(false, -82, (CharSequence) null);
         }
         var2.setLoopCount(-1);
         ValidatedTextInputWidget.addPlayingSound(18416, var2);
     }
 
-    final static String a(boolean param0, int param1, CharSequence param2) {
+    final static String validateNameSeparators(boolean allowRepeatedSeparators, int guard, CharSequence text) {
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
         String stackIn_14_0 = null;
@@ -50,28 +50,28 @@ final class qv extends IntrusiveNode {
         int var6Lifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 == null) {
+          if (text == null) {
             stackIn_4_0 = ValidatedTextInputWidget.namesShouldContainAText;
             return stackIn_4_0;
           }
-          var3_int = param2.length();
+          var3_int = text.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = AccountCreationProgressDialog.normalizeAccountName(-1, param2);
+            var4 = AccountCreationProgressDialog.normalizeAccountName(-1, text);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!wv.a((byte) -88, var4.charAt(0)) &&
-                !wv.a((byte) -86, var4.charAt(-1 + var4.length()))) {
+              if (!AccountNameSupport.isNameSeparator((byte) -88, var4.charAt(0)) &&
+                !AccountNameSupport.isNameSeparator((byte) -86, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
-                for (var6 = 0; var6 < param2.length(); var6++) {
-                  var7 = param2.charAt(var6);
-                  if (!wv.a((byte) -99, (char) var7)) {
+                for (var6 = 0; var6 < text.length(); var6++) {
+                  var7 = text.charAt(var6);
+                  if (!AccountNameSupport.isNameSeparator((byte) -99, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;
                   }
                   if (var5 >= 2 &&
-                    !param0) {
+                    !allowRepeatedSeparators) {
                     stackIn_28_0 = ma.namesCannotContainConsecutiveText;
                     return stackIn_28_0;
                   }
@@ -80,7 +80,7 @@ final class qv extends IntrusiveNode {
                   stackIn_33_0 = ProgressDialog.namesCannotStartOrText;
                   return stackIn_33_0;
                 }
-                var6Lifetime1 = -54 / ((48 - param1) / 41);
+                var6Lifetime1 = -54 / ((48 - guard) / 41);
                 stackIn_35_0 = null;
                 return (String) (stackIn_35_0);
               }
@@ -96,8 +96,8 @@ final class qv extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_38_0 = var3;
-          stackIn_38_1 = new StringBuilder().append("qv.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_38_1 = new StringBuilder().append("qv.A(").append(allowRepeatedSeparators).append(',').append(guard).append(',');
+          if (text == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
@@ -115,7 +115,7 @@ final class qv extends IntrusiveNode {
         field_o = null;
     }
 
-    private qv() throws Throwable {
+    private QueuedIntArrayRequest() throws Throwable {
         throw new Error();
     }
 

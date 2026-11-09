@@ -29,7 +29,7 @@ final class jv {
         BurstParticle.a(param0, true);
     }
 
-    final static void a(int param0, String[] param1, String param2, boolean param3) {
+    final static void completeNameAvailability(int response, String[] suggestions, String message, boolean guard) {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
@@ -43,46 +43,46 @@ final class jv {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param3) {
+          if (!guard) {
             field_a = -32;
           }
           vm.nameAvailabilityState = DropTargetWidget.COMPLETE;
-          if (255 == param0) {
+          if (255 == response) {
             stackIn_7_0 = !(lq.field_d >= 13);
             DraggableWidget.field_z = LegacyOpenGlEffect.accountSuccess(stackIn_7_0, 8192);
             var6 = (String[]) null;
             InwardSparkParticle.a(256, (String[]) null);
             return;
           }
-          if (100 > param0) {
-            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, param2, param0);
+          if (100 > response) {
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, message, response);
             return;
           }
-          if (param0 > 105) {
-            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, param2, param0);
+          if (response > 105) {
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, message, response);
             return;
           }
-          var7 = param1;
+          var7 = suggestions;
           InwardSparkParticle.a(256, var7);
-          DraggableWidget.field_z = AccountConnectionPhase.accountNameSuggestions(param1, 8192);
+          DraggableWidget.field_z = AccountConnectionPhase.accountNameSuggestions(suggestions, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_16_0 = var4;
-          stackIn_16_1 = new StringBuilder().append("jv.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("jv.A(").append(response).append(',');
+          if (suggestions == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param2 == null) {
+          if (message == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -9,11 +9,11 @@ final class uc {
     static ToolkitSprite field_a;
     static int[] field_c;
 
-    final static long b(int param0) {
-        if (param0 != 26560) {
+    final static long millisSinceServerRead(int guard) {
+        if (guard != 26560) {
           return -46L;
         }
-        return -CacheReferenceNode.field_x + wq.monotonicTimeMillis(param0 - 26634);
+        return -CacheReferenceNode.lastServerReadMillis + wq.monotonicTimeMillis(guard - 26634);
     }
 
     final static boolean a(byte param0, PlatformTaskDispatcher param1) {
@@ -25,7 +25,7 @@ final class uc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -29) {
-            uc.b(118);
+            uc.millisSinceServerRead(118);
           }
           stackIn_3_0 = param1.a((byte) -101);
           return stackIn_3_0;

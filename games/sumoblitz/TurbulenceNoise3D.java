@@ -67,7 +67,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
         int var7Lifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          stackIn_4_0 = (1 != ul.field_f) ? 0 : 1;
+          stackIn_4_0 = (1 != DisplaySizeController.field_f) ? 0 : 1;
           var6_int = stackIn_4_0;
           var7 = 0;
           if (param5 != 94) {

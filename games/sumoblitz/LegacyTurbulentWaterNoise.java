@@ -39,7 +39,7 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
         pd.scoreMultiplier = un.field_a[0];
         FadingWidget.score = 0;
         CacheReferenceNode.field_u = 0;
-        gn.a(guard, true);
+        ArchiveLoadRequirement.playSoundEffect(guard, true);
         TextLayout.a(0, 1 + OpenGlShaderProgram.levelIndex % 5);
     }
 

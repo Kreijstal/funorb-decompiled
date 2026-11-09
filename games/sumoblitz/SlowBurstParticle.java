@@ -159,7 +159,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           var4 = var15.readUnsignedByte(-31302);
           if (var4 != 0) {
             var5 = var3.field_l;
-            RenderPresentationException.field_b[0] = qv.field_o;
+            RenderPresentationException.field_b[0] = QueuedIntArrayRequest.field_o;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
             }
@@ -185,7 +185,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var19[0][var10 * 4 + 1] = ContentTransitionPhase.field_f[var11];
               var19[0][2 + 4 * var10] = ic.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
-              if (ea.a(RenderPresentationException.field_b[var11], (byte) -25) &&
+              if (ea.isCurrentUserName(RenderPresentationException.field_b[var11], (byte) -25) &&
                 field_z[var11] + ContentTransitionPhase.field_f[var11] + ic.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -203,7 +203,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var19[1][1 + 4 * var14] = ContentTransitionPhase.field_f[var11Lifetime1];
               var19[1][2 + 4 * var14] = ic.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];
-              if (ea.a(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
+              if (ea.isCurrentUserName(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
                 ContentTransitionPhase.field_f[var11Lifetime1] - (-ic.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -225,21 +225,21 @@ final class SlowBurstParticle extends TimedSceneEffect {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        id var4 = null;
-        of var5 = null;
+        SessionStatisticsSubmission var4 = null;
+        HiscoreRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (id) (HuffmanDecoder.field_f.first(85));
+          var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.first(85));
           while (var4 != null) {
-            km.a((byte) -120, param0, var4);
-            var4 = (id) (HuffmanDecoder.field_f.next((byte) 18));
+            km.sendSessionStatistics((byte) -120, param0, var4);
+            var4 = (SessionStatisticsSubmission) (HuffmanDecoder.field_f.next((byte) 18));
           }
-          var5 = (of) (oi.field_b.first(109));
+          var5 = (HiscoreRequest) (oi.field_b.first(109));
           while (var5 != null) {
-            pd.a((byte) -65, param0, var5);
-            var5 = (of) (oi.field_b.next((byte) 18));
+            pd.sendHiscoreRequest((byte) -65, param0, var5);
+            var5 = (HiscoreRequest) (oi.field_b.next((byte) 18));
           }
           if (param1 > -63) {
             field_z = (int[]) null;

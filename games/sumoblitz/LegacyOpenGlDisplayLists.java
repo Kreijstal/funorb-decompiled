@@ -12,14 +12,14 @@ final class LegacyOpenGlDisplayLists {
         GameInstructions.field_b = param1;
         if (param2) {
           TextureCoordinateGeneration.a(GameInstructions.field_b, 124);
-          qv.a(GameInstructions.field_b, 4);
+          QueuedIntArrayRequest.playLoopingSample(GameInstructions.field_b, 4);
           if (param0 > -87) {
             field_a = (LegacyBitmapFont) null;
             return;
           }
           return;
         }
-        gn.a(GameInstructions.field_b, true);
+        ArchiveLoadRequirement.playSoundEffect(GameInstructions.field_b, true);
         if (param0 > -87) {
           field_a = (LegacyBitmapFont) null;
           return;

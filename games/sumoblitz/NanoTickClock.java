@@ -58,7 +58,7 @@ final class NanoTickClock extends TickClock {
           FadingWidget.field_C = email;
           ServerIntArrayRequest.field_l = null;
           ProxySocketConnector.accountCreationState = LegacyOpenGlGraphicsHeap.PENDING;
-          bi.field_d = password;
+          ArenaBackdropPalettes.field_d = password;
           lq.field_d = age;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

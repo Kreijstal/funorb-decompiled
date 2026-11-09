@@ -9,7 +9,7 @@ abstract class CacheReferenceNode extends DualLinkNode {
     static int field_u;
     static WidgetTheme field_v;
     static PlatformTaskDispatcher field_t;
-    static long field_x;
+    static long lastServerReadMillis;
     int weight;
 
     public static void releaseStatics(byte param0) {
@@ -45,7 +45,7 @@ abstract class CacheReferenceNode extends DualLinkNode {
         if (SecondaryNodeDequeIterator.field_b == null) {
           return false;
         }
-        if (SecondaryNodeDequeIterator.field_b.c(-1)) {
+        if (SecondaryNodeDequeIterator.field_b.canAutoResize(-1)) {
           return true;
         }
         return false;

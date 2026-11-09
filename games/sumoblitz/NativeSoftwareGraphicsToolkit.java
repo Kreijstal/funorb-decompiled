@@ -207,7 +207,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_o.clear(125);
         this.FA();
         if (this.field_k) {
-          pt.a(false, true, -1);
+          CubeMapSource.a(false, true, -1);
           this.field_k = false;
         }
         this.g();

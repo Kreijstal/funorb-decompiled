@@ -221,7 +221,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           }
           long dupTemp$0 = wq.monotonicTimeMillis(-38);
           ArchiveCatalog.field_a = dupTemp$0;
-          CacheReferenceNode.field_x = dupTemp$0;
+          CacheReferenceNode.lastServerReadMillis = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {
             kw.accountPhase = VertexBufferReference.field_b;
           } else {

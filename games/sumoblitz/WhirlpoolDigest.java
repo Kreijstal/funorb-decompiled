@@ -126,7 +126,7 @@ final class WhirlpoolDigest {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.block[var2] = bi.a(bi.a(SoftLruCache.bitwiseAnd(65280L, (long)this.buffer[6 + var3] << 8), bi.a(bi.a(bi.a(bi.a(bi.a((long)this.buffer[var3] << 56, SoftLruCache.bitwiseAnd((long)this.buffer[var3 + 1], 255L) << 48), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[2 + var3]) << 40), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[var3 + 3]) << 32), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[4 + var3]) << 24), SoftLruCache.bitwiseAnd(16711680L, (long)this.buffer[5 + var3] << 16))), SoftLruCache.bitwiseAnd((long)this.buffer[7 + var3], 255L));
+          this.block[var2] = ArenaBackdropPalettes.xor(ArenaBackdropPalettes.xor(SoftLruCache.bitwiseAnd(65280L, (long)this.buffer[6 + var3] << 8), ArenaBackdropPalettes.xor(ArenaBackdropPalettes.xor(ArenaBackdropPalettes.xor(ArenaBackdropPalettes.xor(ArenaBackdropPalettes.xor((long)this.buffer[var3] << 56, SoftLruCache.bitwiseAnd((long)this.buffer[var3 + 1], 255L) << 48), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[2 + var3]) << 40), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[var3 + 3]) << 32), SoftLruCache.bitwiseAnd(255L, (long)this.buffer[4 + var3]) << 24), SoftLruCache.bitwiseAnd(16711680L, (long)this.buffer[5 + var3] << 16))), SoftLruCache.bitwiseAnd((long)this.buffer[7 + var3], 255L));
           var3 += 8;
           var2++;
         }
@@ -134,7 +134,7 @@ final class WhirlpoolDigest {
           dupTemp$0 = this.hash[var2Lifetime1];
           arrayValue$1 = this.block[var2Lifetime1];
           this.roundKey[var2Lifetime1] = dupTemp$0;
-          this.state[var2Lifetime1] = bi.a(arrayValue$1, dupTemp$0);
+          this.state[var2Lifetime1] = ArenaBackdropPalettes.xor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -142,7 +142,7 @@ final class WhirlpoolDigest {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.scratch[var3Lifetime1] = bi.a(this.scratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int)(this.roundKey[LegacyOpenGlPostProcessManager.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.scratch[var3Lifetime1] = ArenaBackdropPalettes.xor(this.scratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int)(this.roundKey[LegacyOpenGlPostProcessManager.bitwiseAnd(var3Lifetime1 - var4, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -150,14 +150,14 @@ final class WhirlpoolDigest {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.roundKey[var3Lifetime1Lifetime1] = this.scratch[var3Lifetime1Lifetime1];
           }
-          this.roundKey[0] = bi.a(this.roundKey[0], WhirlpoolTables.roundConstants[var2Lifetime2]);
+          this.roundKey[0] = ArenaBackdropPalettes.xor(this.roundKey[0], WhirlpoolTables.roundConstants[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.scratch[var3Lifetime1Lifetime2] = this.roundKey[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.scratch[var3Lifetime1Lifetime2] = bi.a(this.scratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LegacyOpenGlPostProcessManager.bitwiseAnd((int)(this.state[LegacyOpenGlPostProcessManager.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.scratch[var3Lifetime1Lifetime2] = ArenaBackdropPalettes.xor(this.scratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LegacyOpenGlPostProcessManager.bitwiseAnd((int)(this.state[LegacyOpenGlPostProcessManager.bitwiseAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -170,7 +170,7 @@ final class WhirlpoolDigest {
           WhirlpoolDigest.a(-88);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.hash[var2Lifetime3] = bi.a(this.hash[var2Lifetime3], bi.a(this.block[var2Lifetime3], this.state[var2Lifetime3]));
+          this.hash[var2Lifetime3] = ArenaBackdropPalettes.xor(this.hash[var2Lifetime3], ArenaBackdropPalettes.xor(this.block[var2Lifetime3], this.state[var2Lifetime3]));
         }
     }
 

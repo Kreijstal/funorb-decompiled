@@ -51,14 +51,14 @@ final class GameplaySession {
             if (var3_int == -1) {
               var3_int = 0;
             }
-            var4_int = (PowerupPickup.field_t + 1) % bi.field_a[var3_int].length;
-            var5 = (2 + PowerupPickup.field_t) % bi.field_a[var3_int].length;
-            var6 = bi.field_a[var3_int][PowerupPickup.field_t];
-            var7 = bi.field_a[var3_int][var4_int];
-            var8 = bi.field_a[var3_int][var5];
+            var4_int = (PowerupPickup.field_t + 1) % ArenaBackdropPalettes.palettes[var3_int].length;
+            var5 = (2 + PowerupPickup.field_t) % ArenaBackdropPalettes.palettes[var3_int].length;
+            var6 = ArenaBackdropPalettes.palettes[var3_int][PowerupPickup.field_t];
+            var7 = ArenaBackdropPalettes.palettes[var3_int][var4_int];
+            var8 = ArenaBackdropPalettes.palettes[var3_int][var5];
             if (AccountCreationProgressDialog.field_ob) {
               if (2 <= kr.field_e) {
-                stackIn_25_0 = bi.field_a;
+                stackIn_25_0 = ArenaBackdropPalettes.palettes;
                 if ((var3_int - 1) % 6 < 0) {
                   stackIn_26_1 = 5;
                 } else {
@@ -67,7 +67,7 @@ final class GameplaySession {
                 var7 = stackIn_25_0[stackIn_26_1][var4_int];
               }
               if (kr.field_e >= 1) {
-                stackIn_33_0 = bi.field_a;
+                stackIn_33_0 = ArenaBackdropPalettes.palettes;
                 if (0 > (var3_int - 1) % 6) {
                   stackIn_34_1 = 5;
                 } else {
@@ -76,7 +76,7 @@ final class GameplaySession {
                 var6 = stackIn_33_0[stackIn_34_1][PowerupPickup.field_t];
               }
               if (kr.field_e == 3) {
-                stackIn_41_0 = bi.field_a;
+                stackIn_41_0 = ArenaBackdropPalettes.palettes;
                 if (0 > (-1 + var3_int) % 6) {
                   stackIn_42_1 = 5;
                 } else {
@@ -89,14 +89,14 @@ final class GameplaySession {
                 AccountCreationProgressDialog.field_ob = false;
               }
             }
-            this.firstGradientColors = nf.a(var6, (byte) -117, 501, var7);
-            this.secondGradientColors = nf.a(var7, (byte) -87, 501, var8);
+            this.firstGradientColors = ColorGradients.rgbGradient(var6, (byte) -117, 501, var7);
+            this.secondGradientColors = ColorGradients.rgbGradient(var7, (byte) -87, 501, var8);
             PowerupPickup.field_t = PowerupPickup.field_t + 1;
-            if (bi.field_a[var3_int].length <= PowerupPickup.field_t) {
+            if (ArenaBackdropPalettes.palettes[var3_int].length <= PowerupPickup.field_t) {
               PowerupPickup.field_t = 0;
             }
           }
-          var3 = nf.a(this.firstGradientColors[ResetStatsConfirmationOverlay.field_c % 500], (byte) -118, 480, this.secondGradientColors[ResetStatsConfirmationOverlay.field_c % 500]);
+          var3 = ColorGradients.rgbGradient(this.firstGradientColors[ResetStatsConfirmationOverlay.field_c % 500], (byte) -118, 480, this.secondGradientColors[ResetStatsConfirmationOverlay.field_c % 500]);
           var4_intLifetime1 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
@@ -107,7 +107,7 @@ final class GameplaySession {
                 continue;
               }
             } else {
-              if (ul.field_f == 0) {
+              if (DisplaySizeController.field_f == 0) {
                 OpenGlEnvironmentWaterEffect.field_i.draw((int)this.backdropX, (int)this.backdropY, 0, 1140850688, 1);
                 if (null != FallbackShaderEffect.sceneryParticles) {
                   var4 = (SceneryParticle) (FallbackShaderEffect.sceneryParticles.first(125));
@@ -123,7 +123,7 @@ final class GameplaySession {
               }
             }
             if ((decompiledFrameCompleted0) &&
-              (ul.field_f == 1)) {
+              (DisplaySizeController.field_f == 1)) {
               this.renderSimpleArenaBorder(24, var2);
               if (var9 == 0) {
                 break scanLoop1;
@@ -315,7 +315,7 @@ final class GameplaySession {
               stackIn_34_0 = 30;
             }
             var4_intLifetime1 = stackIn_34_0;
-            if (0 == ul.field_f) {
+            if (0 == DisplaySizeController.field_f) {
               HardwareSpecularEffect.field_f[1].drawRotated((float)(64 + (OpenGlBuffer.targetMarkerXQ8 >> 8)), (float)(targetMarkerYQ8 >> 8), 4096, 0, 1, 0, 2);
               HardwareSpecularEffect.field_f[1].drawRotated((float)((OpenGlBuffer.targetMarkerXQ8 >> 8) - 64), (float)(targetMarkerYQ8 >> 8), 4096, 32768, 1, 0, 2);
               HardwareSpecularEffect.field_f[1].drawRotated((float)(OpenGlBuffer.targetMarkerXQ8 >> 8), (float)((targetMarkerYQ8 >> 8) + 64), 4096, 49152, 1, 0, 2);
@@ -521,7 +521,7 @@ final class GameplaySession {
           }
           var8_array = new int[param1.field_c];
           var9_array = new int[param1.field_c];
-          var10 = of.field_t;
+          var10 = HiscoreRequest.field_t;
           var11 = r.field_r;
           var12 = AccountConnectionPhase.field_d;
           var13 = 0;
@@ -571,19 +571,19 @@ final class GameplaySession {
             if (var40 != 0) {
               return;
             }
-            if (param1.field_e[var14Lifetime1] < of.field_t.length) {
+            if (param1.field_e[var14Lifetime1] < HiscoreRequest.field_t.length) {
               stackIn_40_0 = param1.field_e[var14Lifetime1];
             } else {
               stackIn_40_0 = -1;
             }
             var18 = stackIn_40_0;
-            if (param1.field_k[var14Lifetime1] < of.field_t.length) {
+            if (param1.field_k[var14Lifetime1] < HiscoreRequest.field_t.length) {
               stackIn_44_0 = param1.field_k[var14Lifetime1];
             } else {
               stackIn_44_0 = -1;
             }
             var19 = stackIn_44_0;
-            if (param1.field_h[var14Lifetime1] < of.field_t.length) {
+            if (param1.field_h[var14Lifetime1] < HiscoreRequest.field_t.length) {
               stackIn_48_0 = param1.field_h[var14Lifetime1];
             } else {
               stackIn_48_0 = -1;
@@ -719,26 +719,26 @@ final class GameplaySession {
               if (wn.a(var2.yQ8, var4, -127, var3.xQ8((byte) 70), var2.xQ8, var3.yQ8(param0 ^ 14936)) &&
                 !var3.isMoving(0)) {
                 var2.applyPowerup((byte) 88, var3);
-                gn.a(27, true);
+                ArchiveLoadRequirement.playSoundEffect(27, true);
                 if (2 == var3.effectIndex) {
                   LegacyOpenGlNormalMapGenerator.field_c = true;
-                  rn.a(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
+                  rn.postHudMessage(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
                 } else if (var3.effectIndex != 0) {
                   if (var3.effectIndex == 1) {
                     DroneChargeParticle.field_w = true;
-                    rn.a(UpgradeStatNames.names[1] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 12714108, param0 + 43661);
+                    rn.postHudMessage(UpgradeStatNames.names[1] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 12714108, param0 + 43661);
                   } else if (3 != var3.effectIndex) {
                     if (4 == var3.effectIndex) {
                       DroneChargeParticle.field_w = true;
-                      rn.a(UpgradeStatNames.names[4], var2.xQ8 >> 8, var2.yQ8 >> 8, 44031, param0 + 43661);
+                      rn.postHudMessage(UpgradeStatNames.names[4], var2.xQ8 >> 8, var2.yQ8 >> 8, 44031, param0 + 43661);
                     }
                   } else {
                     DroneChargeParticle.field_w = true;
-                    rn.a(UpgradeStatNames.names[3], var2.xQ8 >> 8, var2.yQ8 >> 8, 16711680, 28807);
+                    rn.postHudMessage(UpgradeStatNames.names[3], var2.xQ8 >> 8, var2.yQ8 >> 8, 16711680, 28807);
                   }
                 } else {
                   SecondaryNodeDeque.field_e = true;
-                  rn.a(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
+                  rn.postHudMessage(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
                 }
                 RotarySelectorWidget.field_E = true;
                 var3.unlink(false);
@@ -1041,14 +1041,14 @@ final class GameplaySession {
             }
           }
           if (decompiledFrameCompleted3) {
-            if (ul.field_f == 0) {
+            if (DisplaySizeController.field_f == 0) {
               this.spawnSceneryAndChooseDrift(2500);
             }
             this.backdropY = this.backdropY + this.backdropVelocityY;
             this.backdropX = this.backdropX + this.backdropVelocityX;
           }
           if (null != FallbackShaderEffect.sceneryParticles &&
-            ul.field_f == 0) {
+            DisplaySizeController.field_f == 0) {
             this.updateSceneryParticles((byte) 55);
           }
           boolean decompiledFrameCompleted2 = true;
@@ -1130,7 +1130,7 @@ final class GameplaySession {
           if (MusicPatch.simulationPaused) {
             return;
           }
-          qv.a(2);
+          QueuedIntArrayRequest.perturbSessionStatistics(2);
           if (QuickChatPhraseProvider.arenaPads != null) {
             this.updateArenaPads((byte) 111);
           }
@@ -1161,10 +1161,10 @@ final class GameplaySession {
                 !var3_ref.isBlastActive(126)) {
                 if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
                   SecondaryNodeQueue.a(var3_ref, (byte) 113);
-                  if (ul.field_f == 0) {
+                  if (DisplaySizeController.field_f == 0) {
                     OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
                   }
-                  gn.a(30, true);
+                  ArchiveLoadRequirement.playSoundEffect(30, true);
                 }
                 fa.field_b = 250;
               }
@@ -1173,11 +1173,11 @@ final class GameplaySession {
               fa.field_b = fa.field_b - 1;
             }
             if (fa.field_b == 30 &&
-              0 == ul.field_f) {
+              0 == DisplaySizeController.field_f) {
               OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ShrinkingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
             }
             if (30 == fa.field_b) {
-              gn.a(32, true);
+              ArchiveLoadRequirement.playSoundEffect(32, true);
             }
             if (fa.field_b == 30) {
               Js5Client.a(10, targetMarkerYQ8, OpenGlCubeTexture.sceneEffects, 61, OpenGlBuffer.targetMarkerXQ8, 16711680);
@@ -1204,12 +1204,12 @@ final class GameplaySession {
           if (stackIn_158_0 != -1) {
             boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks != 5);
             if (!decompiledSharedTail0) {
-              rn.a(TurbulenceNoise3D.warningText, 320, 240, 16755456, 28807);
+              rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
               (10 == -LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks)) {
-              rn.a(TurbulenceNoise3D.warningText, 320, 255, 16776960, 28807);
+              rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 255, 16776960, 28807);
             }
           }
           boolean decompiledFrameCompleted1 = true;
@@ -1297,10 +1297,10 @@ final class GameplaySession {
                   }
                   if (~AccountServiceResult.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
                     LimitedRandomAccessFile.field_b = TextureFormat.elapsedTicks;
-                    rn.a(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
+                    rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
                   }
                   AccountServiceResult.waveIndex = AccountServiceResult.waveIndex + 1;
-                  gn.a(14, true);
+                  ArchiveLoadRequirement.playSoundEffect(14, true);
                   ke.a(false);
                   break;
                 }
@@ -1401,7 +1401,7 @@ final class GameplaySession {
               }
             }
             DisplayModeConfirmationDialog.droneTypeStreakMask = 0;
-            bi.uniqueDroneTypeStreak = 0;
+            ArenaBackdropPalettes.uniqueDroneTypeStreak = 0;
           }
           if (null != SpriteMask.drones[0]) {
             var4Lifetime1 = SpriteMask.drones[0];
@@ -1646,14 +1646,14 @@ final class GameplaySession {
             !LegacyOpenGlSpriteTexture.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new SessionStatisticsSubmission(0, 65535, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new SessionStatisticsSubmission(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
             }
-            if (!vs.b((byte) 9)) {
-              kp.a(3, GameKeyHandler.field_a, 79);
+            if (!vs.isGuestSession((byte) 9)) {
+              kp.submitStatistics(3, GameKeyHandler.field_a, 79);
             }
             GameKeyHandler.field_a = null;
           }
@@ -1712,9 +1712,9 @@ final class GameplaySession {
                 } else {
                   HudMessage.field_s[3].draw(-HudMessage.field_s[4].width() + 567, 0);
                   HudMessage.field_s[4].draw(567, 0);
-                  qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
+                  QueuedIntArrayRequest.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  QueuedIntArrayRequest.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
@@ -1733,11 +1733,11 @@ final class GameplaySession {
               } else {
                 SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
                 SpriteState.field_B[4].draw(459, 448);
-                qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
+                QueuedIntArrayRequest.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
                 uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
               if (MessageDialog.arcadeMode) {
-                qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
+                QueuedIntArrayRequest.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
                 uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
               LegacyOpenGlTexture1D.field_k[0].draw(3, 42);
@@ -1761,13 +1761,13 @@ final class GameplaySession {
                 break;
               }
               MusicCrossfadeStream.field_q[0].drawRotated(190.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
+              QueuedIntArrayRequest.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
               uq.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[1].drawRotated(240.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
+              QueuedIntArrayRequest.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               uq.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[2].drawRotated(290.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
+              QueuedIntArrayRequest.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
               uq.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
               break;
             }

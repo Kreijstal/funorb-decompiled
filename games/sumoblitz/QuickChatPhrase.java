@@ -341,7 +341,7 @@ final class QuickChatPhrase extends DualLinkNode {
     }
 
     final static void a(int param0) {
-        mn.b((byte) -116);
+        ArchiveLoadingStage.b((byte) -116);
         if (param0 != -24233) {
           QuickChatPhrase.a(99, -71, 95, 31, -80, 103, (byte) 57, 84, 30);
         }

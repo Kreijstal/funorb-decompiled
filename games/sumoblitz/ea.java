@@ -11,15 +11,15 @@ final class ea {
         difficultyText = null;
     }
 
-    final static PcmStreamMixer a(int param0) {
-        if (param0 != 14263) {
+    final static PcmStreamMixer gameSoundMixer(int guard) {
+        if (guard != 14263) {
           difficultyText = (String) null;
           return sj.field_c;
         }
         return sj.field_c;
     }
 
-    final static int a(byte param0, CharSequence param1, int param2) {
+    final static int parseInt(byte guard, CharSequence text, int radix) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -27,33 +27,33 @@ final class ea {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -73) {
+          if (guard != -73) {
             difficultyText = (String) null;
           }
-          stackIn_3_0 = SpriteOptionRenderer.parseInt(param2, param1, true, (byte) -86);
+          stackIn_3_0 = SpriteOptionRenderer.parseInt(radix, text, true, (byte) -86);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ea.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ea.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(radix).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, String param2, boolean param3) {
-        MarkerTrackRenderer.a((byte) -124);
+        MarkerTrackRenderer.resetAccountRequests((byte) -124);
         if (param0 != 1) {
           return;
         }
         try {
           RenderPresentationException.field_a.closeAllDialogs((byte) -34);
-          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, pg.field_a, param3, param1);
+          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, param3, param1);
           SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, no.field_a);
           RenderPresentationException.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
@@ -61,20 +61,20 @@ final class ea {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
-        if (param0 != -54) {
+    final static boolean isAsciiDigit(byte guard, char character) {
+        if (guard != -54) {
           return false;
         }
-        if (param1 < 48) {
+        if (character < 48) {
           return false;
         }
-        if (57 < param1) {
+        if (57 < character) {
           return false;
         }
         return true;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isCurrentUserName(String name, byte guard) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -83,23 +83,23 @@ final class ea {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -25) {
+          if (guard != -25) {
             difficultyText = (String) null;
           }
-          var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = PasswordValidator.field_f.equals(AccountCreationProgressDialog.normalizeAccountName(param1 ^ 24, var3));
+          var3 = (CharSequence) ((Object) name);
+          stackIn_3_0 = PasswordValidator.field_f.equals(AccountCreationProgressDialog.normalizeAccountName(guard ^ 24, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ea.G(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
