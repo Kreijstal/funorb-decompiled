@@ -164,8 +164,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = kh.readBitFlag(param0, false) ? 1 : 0;
-          var4 = kh.readBitFlag(param0, false) ? 1 : 0;
+          var3 = LoginIdentifierSupport.readBitFlag(param0, false) ? 1 : 0;
+          var4 = LoginIdentifierSupport.readBitFlag(param0, false) ? 1 : 0;
           var5 = new CompactMeshGeometry();
           var5.field_D = (short)param0.readBits(16, (byte) -119);
           var5.field_Q = WidgetStateStyle.decodePackedShortArray(var5.field_Q, param0, -119, 16);
@@ -192,10 +192,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var5.field_y = WidgetStateStyle.decodePackedShortArray(var5.field_y, param0, param1 + 16619, 16);
             var5.field_R = WidgetStateStyle.decodePackedShortArray(var5.field_R, param0, param1 + 16623, 16);
           }
-          if (kh.readBitFlag(param0, false)) {
+          if (LoginIdentifierSupport.readBitFlag(param0, false)) {
             var5.field_K = WidgetStateStyle.decodePackedShortArray(var5.field_K, param0, -112, 16);
           }
-          if (kh.readBitFlag(param0, false)) {
+          if (LoginIdentifierSupport.readBitFlag(param0, false)) {
             var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, param0);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_a.length; var7++) {

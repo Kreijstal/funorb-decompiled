@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb {
+final class GameDefinitionLoader {
     static int field_c;
     static int field_a;
     static String openInPopupWindowText;
@@ -27,7 +27,7 @@ final class sb {
             throw new RuntimeException("");
           }
           if (param1 != -6708) {
-            sb.releaseStatics(false);
+            GameDefinitionLoader.releaseStatics(false);
           }
           if (!ScrollPane.b((byte) 120, "jaggl")) {
             throw new RuntimeException("");
@@ -73,7 +73,7 @@ final class sb {
           param4.writeShort(-42, 17);
           if (param1 <= 77) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
-            sb.a((ResourceArchive) null, -117, (TextureProvider) null, (java.awt.Canvas) null, 97);
+            GameDefinitionLoader.a((ResourceArchive) null, -117, (TextureProvider) null, (java.awt.Canvas) null, 97);
           }
           param4.writeShort(117, param3);
           param4.writeShort(117, param2);

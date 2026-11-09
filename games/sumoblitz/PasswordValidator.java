@@ -179,7 +179,7 @@ final class PasswordValidator extends TextInputValidator {
         FontMetrics.field_b = 0;
         DisplayModeConfirmationDialog.droneTypeStreakMask = -1;
         ValidationMessageWidget.field_P = false;
-        ei.field_a = 0;
+        BigBurstaProgress.bigDefeatBalance = 0;
         if (param0 >= 85) {
           DroneChargeParticle.field_w = false;
           ArenaBackdropPalettes.uniqueDroneTypeStreak = 0;

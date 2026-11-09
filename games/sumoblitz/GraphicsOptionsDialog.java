@@ -127,7 +127,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
-          stackIn_40_1 = !(vs.isGuestSession((byte) 9));
+          stackIn_40_1 = !(AccountPacketReader.isGuestSession((byte) 9));
           this.field_W = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (SecondaryNodeDequeIterator.field_b != null) {
@@ -163,7 +163,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           this.field_U.field_K = 83;
           this.field_U.setCellPadding(-1, 5, 5);
           this.addChild(this.field_U, 93);
-          this.field_X = this.createSpriteOption(sb.field_d, (WidgetListener) (this), kp.classicText, (byte) -105);
+          this.field_X = this.createSpriteOption(GameDefinitionLoader.field_d, (WidgetListener) (this), StatisticsSubmissionSupport.classicText, (byte) -105);
           if (var2_intLifetime1 != 0) {
             this.field_Y = this.createSpriteOption(SoftwareTransform3D.field_f, (WidgetListener) (this), VertexLayout.resizableText, (byte) 122);
           }
@@ -272,7 +272,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                   if (var6_int == 0 &&
                     source == this.field_T) {
                     if (!this.field_R) {
-                      this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, Bzip2State.field_I));
+                      this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, Bzip2State.FULLSCREEN_UNSUPPORTED));
                       return;
                     }
                     if (HardwareRidgedWaterNoise.field_x > 0) {
@@ -692,7 +692,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           }
           var5_int = 69 % ((-25 - guard) / 45);
           if (!this.field_W &&
-            !vs.isGuestSession((byte) 9)) {
+            !AccountPacketReader.isGuestSession((byte) 9)) {
             this.closeOptions(84);
             this.dialogLayer.pushDialog((byte) 124, new GraphicsOptionsDialog(this.dialogLayer));
           }

@@ -41,7 +41,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
               HardwareAnimatedWaterEffect.d(1);
-              HardwareTextureSprite.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(HardwareTextureSprite.field_e, CachedArchiveProvider.field_e));
+              HardwareTextureSprite.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(HardwareTextureSprite.field_e, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
             }
             return;
           }

@@ -50,9 +50,9 @@ final class NetworkResourceRequest extends ResourceRequest {
           EmailCredentials.field_f.serviceOutput();
           var1_int = -111 % ((param0 + 34) / 35);
           LegacyOpenGlEffectManager.field_a.serviceOutput();
-          vf.field_b = vf.field_b - 1;
-          if (vf.field_b == 0) {
-            vf.field_b = 200;
+          DisplayModeFailure.soundCleanupCountdown = DisplayModeFailure.soundCleanupCountdown - 1;
+          if (DisplayModeFailure.soundCleanupCountdown == 0) {
+            DisplayModeFailure.soundCleanupCountdown = 200;
             var2 = (PlayingSound) (ContentTransitionPhase.field_c.first(107));
             while (var2 != null) {
               if (!var2.lifetimeNode.isLinked(false)) {

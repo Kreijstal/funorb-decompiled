@@ -9,7 +9,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private Transform3D field_p;
     private IntrusiveNodeHashTable field_q;
     private int field_n;
-    private p field_r;
+    private NativeCanvasSurface field_r;
     private int field_j;
     private int field_l;
     private NativeRenderContext[] field_s;
@@ -45,7 +45,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          p var4 = (p) (this.field_q.a(106, (long)param0.hashCode()));
+          NativeCanvasSurface var4 = (NativeCanvasSurface) (this.field_q.a(106, (long)param0.hashCode()));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -53,12 +53,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
               var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
             } catch (Exception exception) {
             }
-            var4 = new p(this, param0, param1, param2);
+            var4 = new NativeCanvasSurface(this, param0, param1, param2);
             this.field_q.a(var4, -1, (long)param0.hashCode());
           } else {
-            if (var4.field_m != param1 ||
-              var4.field_l != param2) {
-              var4.a(param0, param1, param2);
+            if (var4.width != param1 ||
+              var4.height != param2) {
+              var4.resize(param0, param1, param2);
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -71,14 +71,14 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
     private final native void va(GraphicsHeap param0);
 
     private final void a(java.awt.Canvas param0) {
-        p var2 = null;
+        NativeCanvasSurface var2 = null;
         if (param0 != null) {
-          var2 = (p) (this.field_q.a(127, (long)param0.hashCode()));
+          var2 = (NativeCanvasSurface) (this.field_q.a(127, (long)param0.hashCode()));
           this.field_r = var2;
           this.t(var2);
         } else {
           this.field_r = null;
-          this.t((p) null);
+          this.t((NativeCanvasSurface) null);
         }
     }
 
@@ -149,7 +149,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
           }
           NativeResourceReaper.b((byte) -119);
           this.MA(this.textureProvider, 0, 0);
-          kr.a(true, -21, false);
+          RasterColorTables.retainColorTables(true, -21, false);
           this.field_k = true;
           discarded$1 = new NativeTransform3D();
           this.a(new NativeTransform3D());
@@ -207,7 +207,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_o.clear(125);
         this.FA();
         if (this.field_k) {
-          CubeMapSource.a(false, true, -1);
+          CubeMapSource.releaseColorTables(false, true, -1);
           this.field_k = false;
         }
         this.g();
@@ -280,13 +280,13 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         if (this.field_r == null) {
           throw new IllegalStateException("off");
         }
-        this.field_r.a(sourceX, sourceY);
+        this.field_r.present(sourceX, sourceY);
     }
 
     final native void setProjection(int centerX, int centerY, int scaleX, int scaleY);
 
     final void restoreCanvasTarget() {
-        this.a(this.field_r.field_o);
+        this.a(this.field_r.canvas);
     }
 
     final native int[] projectionParameters();
@@ -306,7 +306,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         return false;
     }
 
-    private final native void t(p param0);
+    private final native void t(NativeCanvasSurface param0);
 
     private final native void CA(short param0, int[] param1, short param2, int param3, byte param4, byte param5, int param6, boolean param7, byte param8, byte param9, byte param10, byte param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, byte param17, boolean param18, boolean param19, int param20);
 

@@ -32,7 +32,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int activeTextureUnit;
     int field_bc;
     private int effectParameters1;
-    int field_ub;
+    int pendingPointLightCount;
     private boolean orthographicValid;
     private boolean field_bb;
     float field_E;
@@ -89,7 +89,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     boolean field_u;
     private float[] perspectiveMatrix;
     float[] field_U;
-    ko[] field_pb;
+    PointLight[] pointLights;
     private float field_q;
     float field_J;
     int field_tc;
@@ -106,7 +106,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_rc;
     int clipTop;
     private int field_ic;
-    int field_Ab;
+    int previousPointLightCount;
     boolean field_W;
     private float field_kb;
     private boolean field_H;
@@ -607,7 +607,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.textureTransformModes[var2] = HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED;
           this.textureTransforms[var2] = new AffineTransform3D();
         }
-        this.field_pb = new ko[-2 + this.field_bc];
+        this.pointLights = new PointLight[-2 + this.field_bc];
         this.field_D = (GpuTexture) ((Object) this.a(GpuDataType.UNSIGNED_BYTE, BeveledTextInputRenderer.RGBA, 1, 1, (byte) -110));
         this.useHeap(new HardwareGraphicsHeap(262144));
         this.field_jc = this.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.TEXCOORD2})}, (byte) 78);
@@ -734,7 +734,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract boolean a(byte param0, GpuDataType param1, TextureFormat param2);
 
     void resetDriverState(int guard) {
-        this.T(-1);
+        this.applyAllRenderState(-1);
         if (guard != 1) {
           byte[] var3 = (byte[]) null;
           this.a(true, (TextureFormat) null, -62, 114, (byte[]) null, 71);
@@ -770,7 +770,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.releaseSurface(var2, this.field_Q.get(var2), 0);
           }
-          CubeMapSource.a(false, true, -1);
+          CubeMapSource.releaseColorTables(false, true, -1);
           this.field_nc.release();
           this.field_H = true;
         }
@@ -1379,24 +1379,24 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void T(int param0) {
+    private final void applyAllRenderState(int guard) {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         this.applyAmbientLightColor(7);
         this.applyDirectionalLightColors(0);
         this.applyLighting(false);
-        this.Y(-95);
-        this.applyLightPositions(param0 - 75);
+        this.applyPointLights(-95);
+        this.applyLightPositions(guard - 75);
         this.J(0);
         this.applyDirectionalLightsEnabled(0);
-        this.applyDepthTest(param0 + 59);
-        this.applyDepthWrite(param0 + 120);
+        this.applyDepthTest(guard + 59);
+        this.applyDepthWrite(guard + 120);
         this.applyFogEnabled((byte) -119);
         this.b(true);
         this.applyBlendEnabled((byte) -4);
-        this.applyBlendFactors(param0 - 19518);
+        this.applyBlendFactors(guard - 19518);
         this.applyAlphaTest(-92);
-        if (param0 != -1) {
+        if (guard != -1) {
           this.modelTransform = (AffineTransform3D) null;
         }
         for (var2 = this.textureUnitCount - 1; var2 >= 0; var2--) {
@@ -1406,9 +1406,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.resetTextureTransform(0);
         }
         this.applyTextureConstantColor(1);
-        this.applyViewport(param0 + 1);
+        this.applyViewport(guard + 1);
         this.applyProjectionMatrix(-2);
-        this.applyModelMatrix(param0 + 1);
+        this.applyModelMatrix(guard + 1);
         this.applyViewMatrix(-26911);
     }
 
@@ -1555,7 +1555,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_dc = param5;
             this.field_Sb = var11.height;
             this.field_rb = var11.width;
-            kr.a(true, -107, false);
+            RasterColorTables.retainColorTables(true, -107, false);
             if (null != this.textureProvider) {
               this.field_lc = new HardwareTextureCache(this, this.textureProvider);
               this.field_nc = new jagex3.graphics2.hw.NativeInterface(this.textureProvider.a(32075), this.field_dc);
@@ -1689,12 +1689,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.b(true);
     }
 
-    void Y(int param0) {
-        this.field_Ab = this.field_ub;
-        if (param0 >= -83) {
+    void applyPointLights(int guard) {
+        this.previousPointLightCount = this.pendingPointLightCount;
+        if (guard >= -83) {
           this.clipLeft = -113;
         }
-        this.field_ub = 0;
+        this.pendingPointLightCount = 0;
     }
 
     final jaclib.memory.heap.NativeHeapBuffer allocateNativeBuffer(boolean guard, boolean allocationOption, int size) {

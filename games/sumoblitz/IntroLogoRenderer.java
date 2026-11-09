@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd {
+final class IntroLogoRenderer {
     static TextureFormat LUMINANCE;
     static int[][] field_a;
 
@@ -15,18 +15,18 @@ final class kd {
         LUMINANCE = null;
     }
 
-    final static ResourceArchive a(byte param0, int param1) {
-        int var2 = 39 % ((param0 + 45) / 59);
+    final static ResourceArchive textArchive(byte guard, int archiveId) {
+        int var2 = 39 % ((guard + 45) / 59);
         if (LegacyOpenGlShaderProgram.field_d != null) {
           return LegacyOpenGlShaderProgram.field_d;
         }
-        if (-1 != param1) {
-          return HardwareSpecularEffect.a(1, -101, true, param1, false, true);
+        if (-1 != archiveId) {
+          return HardwareSpecularEffect.a(1, -101, true, archiveId, false, true);
         }
         return LegacyOpenGlShaderProgram.field_d;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawIntroLogo(int centerY, int centerX, int opacity) {
         int var6 = 0;
         int var7 = 0;
         int var8 = Sumoblitz.field_L ? 1 : 0;
@@ -48,9 +48,9 @@ final class kd {
         if (!(0 <= MusicPatch.field_u)) {
           return;
         }
-        int var3 = -135 + param1;
-        int var4 = -35 + param0;
-        int var5 = param2;
+        int var3 = -135 + centerX;
+        int var4 = -35 + centerY;
+        int var5 = opacity;
         if (!(75 <= MusicPatch.field_u)) {
           var5 = (MusicPatch.field_u << 8) / 75;
         }
@@ -60,13 +60,13 @@ final class kd {
         LegacyVertexAttribute.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
         SoftwareRasterViewport.syncClip();
         SoftwareRasterizer.clear();
-        IsaacCipher.b(param2 + 0);
+        IsaacCipher.b(opacity + 0);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
         ClientException.popRasterState((byte) -69);
         if (MusicPatch.field_u >= 150) {
-          kh.field_a.a(var3 + 15, 10 + var4, var5);
+          LoginIdentifierSupport.field_a.a(var3 + 15, 10 + var4, var5);
           var6 = MusicPatch.field_u - 125;
           if (var6 <= 0) {
             var6 = MusicPatch.field_u - 140;
@@ -92,7 +92,7 @@ final class kd {
           }
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
-            eh.field_b.d(var3, var4, var7Lifetime8);
+            MenuFadeState.introGlow.d(var3, var4, var7Lifetime8);
             var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
@@ -104,7 +104,7 @@ final class kd {
             return;
           }
           if (var6 < 30) {
-            eh.field_b.d(var3, var4, 256);
+            MenuFadeState.introGlow.d(var3, var4, 256);
             var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
@@ -116,7 +116,7 @@ final class kd {
             return;
           }
           var7Lifetime10 = (12800 - 256 * var6) / 20;
-          eh.field_b.d(var3, var4, var7Lifetime10);
+          MenuFadeState.introGlow.d(var3, var4, var7Lifetime10);
           var6Lifetime3 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
@@ -153,7 +153,7 @@ final class kd {
         }
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
-          eh.field_b.d(var3, var4, var7Lifetime3);
+          MenuFadeState.introGlow.d(var3, var4, var7Lifetime3);
           var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
@@ -165,7 +165,7 @@ final class kd {
           return;
         }
         if (var6Lifetime1 < 30) {
-          eh.field_b.d(var3, var4, 256);
+          MenuFadeState.introGlow.d(var3, var4, 256);
           var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime4 = 256;
@@ -177,7 +177,7 @@ final class kd {
           return;
         }
         var7Lifetime5 = (12800 - 256 * var6Lifetime1) / 20;
-        eh.field_b.d(var3, var4, var7Lifetime5);
+        MenuFadeState.introGlow.d(var3, var4, var7Lifetime5);
         var6Lifetime2 = MusicPatch.field_u - 140;
         if (0 < var6Lifetime2) {
           var7Lifetime6 = 256;
@@ -190,7 +190,7 @@ final class kd {
 
     final static void completeEmailAvailability(boolean available, int guard) {
         if (guard >= -78) {
-          kd.a(-106, 83, -73);
+          IntroLogoRenderer.drawIntroLogo(-106, 83, -73);
           AffineTransform3D.emailAvailabilityRequest.complete(120, available);
           return;
         }

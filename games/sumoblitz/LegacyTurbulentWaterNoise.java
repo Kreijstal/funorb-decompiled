@@ -29,7 +29,7 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
     final static void advanceToNextLevel(int guard) {
         BlendMode.lastLevelScore = FadingWidget.score;
         OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
-        kr.field_e = 3;
+        RasterColorTables.field_e = 3;
         AccountCreationProgressDialog.field_ob = true;
         if (!HardwareQuadBatchBuffers.hasActivePlayer(-89)) {
           return;

@@ -186,7 +186,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException var5 = null;
         try {
           var5_int = 66 % ((-25 - guard) / 45);
-          var6 = this.containsPoint(ko.field_p, -1, parentX, pi.field_e, parentY) ? 1 : 0;
+          var6 = this.containsPoint(PointLight.mouseX, -1, parentX, pi.field_e, parentY) ? 1 : 0;
           stackIn_3_0 = (this.hovered) ? 0 : 1;
           if (var6 != 0) {
             stackIn_6_1 = 0;
@@ -256,7 +256,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void d(byte param0) {
-        if (vs.isGuestSession((byte) 9)) {
+        if (AccountPacketReader.isGuestSession((byte) 9)) {
           if (param0 >= -15) {
             UiWidget.d((byte) -33);
             return;
@@ -314,7 +314,7 @@ class UiWidget extends IntrusiveNode {
               }
               if (HotspotTextWidget.activePointerButton == 0 &&
                 RidgedNoise3D.field_l != 0) {
-                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                 var8 = MessageDialog.field_gb;
                 if (var8 != null) {
                   if (var8.listener instanceof WidgetDropListener) {
@@ -336,7 +336,7 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (HotspotTextWidget.activePointerButton == 0 &&
                   RidgedNoise3D.field_l != 0) {
-                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                   var9 = MessageDialog.field_gb;
                   if (var9 != null) {
                     if (var9.listener instanceof WidgetDropListener) {
@@ -351,7 +351,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
               } else {
-                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
+                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, PointLight.mouseX);
                 if (ActiveCanvasProvider.field_c != 0) {
                   if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
@@ -364,7 +364,7 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (HotspotTextWidget.activePointerButton == 0 &&
                   RidgedNoise3D.field_l != 0) {
-                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                   var10 = MessageDialog.field_gb;
                   if (var10 != null) {
                     if (var10.listener instanceof WidgetDropListener) {
@@ -385,7 +385,7 @@ class UiWidget extends IntrusiveNode {
             if (inputAvailable) {
               if (0 != OpenGlUnderwaterEffect.field_r &&
                 var5 != 0) {
-                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
+                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, PointLight.mouseX);
                 if (ActiveCanvasProvider.field_c != 0) {
                   if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
@@ -406,7 +406,7 @@ class UiWidget extends IntrusiveNode {
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                 var11 = MessageDialog.field_gb;
                 if (var11 != null) {
                   if (!(var11.listener instanceof WidgetDropListener)) {
@@ -442,7 +442,7 @@ class UiWidget extends IntrusiveNode {
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                 var12 = MessageDialog.field_gb;
                 if (var12 == null) {
                   if (var7 == 0) {
@@ -521,7 +521,7 @@ class UiWidget extends IntrusiveNode {
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
-                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
                   var13 = MessageDialog.field_gb;
                   if (var13 == null) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
@@ -558,7 +558,7 @@ class UiWidget extends IntrusiveNode {
               if (RidgedNoise3D.field_l == 0) {
                 break regionExit1;
               }
-              this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+              this.onPointerReleased(this, false, parentX, pi.field_e, PointLight.mouseX, parentY);
               var14 = MessageDialog.field_gb;
               if (var14 != null) {
                 if (!(var14.listener instanceof WidgetDropListener)) {

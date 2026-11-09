@@ -209,7 +209,7 @@ final class SoftwareTransform3D extends Transform3D {
     }
 
     final static void a(boolean param0, int param1) {
-        jv.a(true, (byte) -71, param0);
+        LoginDialogNavigation.drawAccountDialogs(true, (byte) -71, param0);
         int var2 = 48 % ((-25 - param1) / 41);
     }
 

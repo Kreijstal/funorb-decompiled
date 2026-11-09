@@ -7,7 +7,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
     static SpriteData[] field_j;
     static double field_k;
     private boolean active;
-    static l[] field_i;
+    static IntroMeshMaterial[] introMaterials;
     static String field_e;
 
     final void disable(int guard) {
@@ -117,7 +117,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
     }
 
     public static void releaseStatics(byte param0) {
-        field_i = null;
+        introMaterials = null;
         field_h = null;
         field_j = null;
         field_e = null;
@@ -225,7 +225,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         synchronized (var1) {
           LegacyOpenGlTexture.field_h = LegacyOpenGlTexture.field_h + 1;
           HotspotTextWidget.activePointerButton = LegacyOpenGlNormalMapGenerator.field_a;
-          ko.field_p = SoftCacheReference.field_C;
+          PointLight.mouseX = SoftCacheReference.field_C;
           pi.field_e = SecondaryNodeDeque.field_b;
           LegacyOpenGlClientVertexBuffer.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;

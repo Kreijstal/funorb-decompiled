@@ -5,13 +5,13 @@ final class ReassignUpgradesScreen extends MenuScreen {
     static int field_l;
     static long field_j;
     private int field_k;
-    static int[] field_i;
+    static int[] hslToRgb;
 
     public static void releaseStatics(byte param0) {
         if (param0 < 31) {
           return;
         }
-        field_i = null;
+        hslToRgb = null;
     }
 
     final void render(int opacity, GraphicsToolkit toolkit, int guard) {
@@ -37,7 +37,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           QueuedIntArrayRequest.field_k.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
-          uq.field_a.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          GameTrackPlayback.field_a.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (392 >= var4_int) {
@@ -57,14 +57,14 @@ final class ReassignUpgradesScreen extends MenuScreen {
             }
             var6 = stackIn_12_0;
             QueuedIntArrayRequest.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, var4_int + 51, 0);
-            uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
+            GameTrackPlayback.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), guard ^ -2355);
             if (var6 == 0) {
               MusicCrossfadeStream.field_q[var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1), 1, 0, 2);
             } else {
               MusicCrossfadeStream.field_q[15 + var5].draw(55 + var4_int - (MusicCrossfadeStream.field_q[var5].paddedWidth() >> 1), (MusicCrossfadeStream.field_q[var5].paddedHeight() >> 1) + 200, 1, 0, 2);
             }
             QueuedIntArrayRequest.field_k.a(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
-            uq.field_a.a(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);
+            GameTrackPlayback.field_a.a(Integer.toString(PasswordInputRenderer.upgradeAllocation[var5]), -1, -16777216, 320, 55 + var4_int, guard ^ -2355);
             var5++;
             var4_int += 126;
           }
@@ -93,8 +93,8 @@ final class ReassignUpgradesScreen extends MenuScreen {
         int var3;
         int var3Lifetime1;
         super.update(param0);
-        var2 = (ko.field_p - 140) / 126;
-        if (ko.field_p < 140) {
+        var2 = (PointLight.mouseX - 140) / 126;
+        if (PointLight.mouseX < 140) {
           var2 = -1;
           var3 = (-200 + pi.field_e) / 150;
           if (!(pi.field_e >= 200) ||
@@ -102,7 +102,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
             var3 = -1;
           }
           this.field_k = var3 * 3 + var2;
-          if ((-140 + ko.field_p) % 126 > 111) {
+          if ((-140 + PointLight.mouseX) % 126 > 111) {
             this.field_k = -1;
           }
           if (this.field_k >= 3) {
@@ -172,14 +172,14 @@ final class ReassignUpgradesScreen extends MenuScreen {
           }
           return;
         }
-        if (520 < ko.field_p) {
+        if (520 < PointLight.mouseX) {
           var2 = -1;
         }
         var3Lifetime1 = (-200 + pi.field_e) / 150;
         if (pi.field_e < 200) {
           var3Lifetime1 = -1;
           this.field_k = var3Lifetime1 * 3 + var2;
-          if ((-140 + ko.field_p) % 126 > 111) {
+          if ((-140 + PointLight.mouseX) % 126 > 111) {
             this.field_k = -1;
           }
           if (this.field_k >= 3) {
@@ -253,7 +253,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
           var3Lifetime1 = -1;
         }
         this.field_k = var3Lifetime1 * 3 + var2;
-        if ((-140 + ko.field_p) % 126 > 111) {
+        if ((-140 + PointLight.mouseX) % 126 > 111) {
           this.field_k = -1;
         }
         if (this.field_k < 3) {

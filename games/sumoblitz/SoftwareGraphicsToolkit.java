@@ -196,9 +196,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           discarded$0 = new SoftwareTransform3D();
           this.createContexts(1);
           this.bindContextToCurrentThread(0);
-          kr.a(true, -52, true);
+          RasterColorTables.retainColorTables(true, -52, true);
           this.field_J = true;
-          this.field_A = (int)wq.monotonicTimeMillis(-48);
+          this.field_A = (int)IntroMeshResources.monotonicTimeMillis(-48);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.close((byte) -34);
@@ -1835,7 +1835,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void dispose() {
         if (this.field_J) {
-          CubeMapSource.a(true, false, -1);
+          CubeMapSource.releaseColorTables(true, false, -1);
           this.field_J = false;
         }
         this.canvasBuffer = null;

@@ -48,7 +48,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
             var11 = SpriteMask.drones[var2_int];
             if (var11 != null) {
               var4 = var11.radiusQ8 + param0.radiusQ8;
-              if (wn.a(var11.yQ8, var4, -104, param0.xQ8, var11.xQ8, param0.yQ8)) {
+              if (DroneProximitySupport.isWithinRadius(var11.yQ8, var4, -104, param0.xQ8, var11.xQ8, param0.yQ8)) {
                 var5 = -var11.xQ8 + param0.xQ8;
                 var6 = param0.yQ8 - var11.yQ8;
                 if (var5 == 0) {
@@ -76,7 +76,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           }
           while (var3 != null) {
             var4Lifetime1 = (var3.radiusPixels << 8) + param0.radiusQ8;
-            if (wn.a(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
+            if (DroneProximitySupport.isWithinRadius(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
               var5Lifetime1 = -var3.xQ8 + param0.xQ8;
               if (var5Lifetime1 == 0) {
                 var5Lifetime1 = -1 + (2 & TextureFormat.elapsedTicks << 1);
@@ -213,7 +213,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           HardwareUnlitEffect.a((String) null, false, (byte) 69);
         }
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
-        uc.field_c[LoginCredentials.field_d] = var7;
+        IntroductionOverlaySupport.field_c[LoginCredentials.field_d] = var7;
         LoginCredentials.field_d = LoginCredentials.field_d + 1;
         if (NoiseSliceGenerator.field_c > var7) {
           NoiseSliceGenerator.field_c = var7;

@@ -96,7 +96,7 @@ class UsernameCredentials extends LoginCredentials {
               if (settings.length() == 0) {
                 var6Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + wq.monotonicTimeMillis(-6), true) + "; Max-Age=" + 94608000L;
+                var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + IntroMeshResources.monotonicTimeMillis(-6), true) + "; Max-Age=" + 94608000L;
               }
               BrowserScriptBridge.evaluateScript("document.cookie=\"" + var6Lifetime6 + "\"", -15428, applet);
             } catch (Throwable throwable) {
@@ -302,7 +302,7 @@ class UsernameCredentials extends LoginCredentials {
             }
             if (DisplayModeConfirmationDialog.accountSocket == null) {
               if (LimitedRandomAccessFile.field_g) {
-                if (uc.millisSinceServerRead(26560) <= 30000L) {
+                if (IntroductionOverlaySupport.millisSinceServerRead(26560) <= 30000L) {
                   MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
                 } else {
                   MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;

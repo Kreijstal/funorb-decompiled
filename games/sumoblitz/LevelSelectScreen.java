@@ -44,13 +44,13 @@ final class LevelSelectScreen extends MenuScreen {
           DelegatingCanvas.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
-          uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
+          GameTrackPlayback.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
           MusicCrossfadeStream.field_q[1].drawRotated(130.0f, 402.0f, 1600, 0, 1, 0, 2);
           QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -101, -1);
-          uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
+          GameTrackPlayback.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
           QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.selectedBounceLevel), (byte) -15, -1);
-          uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.selectedBounceLevel), (byte) -51, -1);
+          GameTrackPlayback.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.selectedBounceLevel), (byte) -51, -1);
           var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
             stackIn_4_0 = var5 % 255;
@@ -71,7 +71,7 @@ final class LevelSelectScreen extends MenuScreen {
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
                 QueuedIntArrayRequest.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
-                uq.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
+                GameTrackPlayback.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
               } else {
                 CacheReferenceNode.field_y.drawRotated((float)(var9 + 50), (float)(var8 + 22), 4096, 0, 3, var4_int, 1);
               }
@@ -93,8 +93,8 @@ final class LevelSelectScreen extends MenuScreen {
             if (TextureMetadata.field_f[this.field_i]) {
               MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
               LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
-              MessageDialog.field_db.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
+              MessageDialog.field_db.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
+              LegacyOpenGlEffect.field_c.a(AchievementThresholds.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
               if (up.field_g[this.field_i]) {
                 var10++;
@@ -154,13 +154,13 @@ final class LevelSelectScreen extends MenuScreen {
         int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
         super.update(param0 + 0);
-        var2 = (-44 + ko.field_p) / 112;
+        var2 = (-44 + PointLight.mouseX) / 112;
         var3 = (pi.field_e - 108) / 52;
         var4 = 5 * var3 + var2;
         if (param0 != -18556) {
           return;
         }
-        if (!((-44 + ko.field_p) % 112 <= 100) ||
+        if (!((-44 + PointLight.mouseX) % 112 <= 100) ||
           !((pi.field_e - 108) % 52 <= 42)) {
           var4 = -1;
         }

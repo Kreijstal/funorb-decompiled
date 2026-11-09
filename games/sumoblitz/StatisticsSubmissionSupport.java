@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp {
+final class StatisticsSubmissionSupport {
     static String classicText;
     static boolean field_a;
 
@@ -79,7 +79,7 @@ final class kp {
           return;
         }
         SessionStatisticsSubmission var2 = (SessionStatisticsSubmission) null;
-        kp.findSubmittedHiscore((HiscoreRequest) null, -64, (SessionStatisticsSubmission) null, -29);
+        StatisticsSubmissionSupport.findSubmittedHiscore((HiscoreRequest) null, -64, (SessionStatisticsSubmission) null, -29);
         classicText = null;
     }
 
@@ -87,7 +87,7 @@ final class kp {
         try {
           if (guard <= 60) {
             SessionStatisticsSubmission var4 = (SessionStatisticsSubmission) null;
-            kp.findSubmittedHiscore((HiscoreRequest) null, 14, (SessionStatisticsSubmission) null, -12);
+            StatisticsSubmissionSupport.findSubmittedHiscore((HiscoreRequest) null, 14, (SessionStatisticsSubmission) null, -12);
           }
           HuffmanDecoder.field_f.addLast((IntrusiveNode) (submission), (byte) 39);
           km.sendSessionStatistics((byte) 69, opcode, submission);

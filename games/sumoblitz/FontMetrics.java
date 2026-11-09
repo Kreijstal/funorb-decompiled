@@ -8,7 +8,7 @@ final class FontMetrics {
     int field_c;
     private byte[][] field_j;
     int field_i;
-    static vf field_f;
+    static DisplayModeFailure FULLSCREEN_CONFIRMATION_TIMEOUT;
     static int[] field_e;
     static TextureCombineSource PREVIOUS;
     static int field_b;
@@ -22,7 +22,7 @@ final class FontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_f = (vf) null;
+            FULLSCREEN_CONFIRMATION_TIMEOUT = (DisplayModeFailure) null;
           }
           stackIn_4_0 = this.a(0, (ToolkitSprite[]) null, param0);
           return stackIn_4_0;
@@ -688,7 +688,7 @@ final class FontMetrics {
 
     public static void a(boolean param0) {
         try {
-          field_f = null;
+          FULLSCREEN_CONFIRMATION_TIMEOUT = null;
           field_e = null;
           PREVIOUS = null;
           if (param0) {
@@ -868,7 +868,7 @@ final class FontMetrics {
     }
 
     static {
-        field_f = new vf();
+        FULLSCREEN_CONFIRMATION_TIMEOUT = new DisplayModeFailure();
         field_e = new int[8192];
         PREVIOUS = new TextureCombineSource();
     }

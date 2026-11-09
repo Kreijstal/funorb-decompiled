@@ -76,13 +76,13 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
 
     final void update(int guard) {
         int var3 = 0;
-        int var2 = (-70 + ko.field_p) / 300;
+        int var2 = (-70 + PointLight.mouseX) / 300;
         int var3Lifetime1;
         if (guard <= 0) {
           field_d = (PcmSample[][][]) null;
           var3 = (pi.field_e - 200) / 100;
           this.hoveredOption = var2 + var3 * 2;
-          if ((-70 + ko.field_p) % 300 <= 200) {
+          if ((-70 + PointLight.mouseX) % 300 <= 200) {
             if (2 <= this.hoveredOption) {
               this.hoveredOption = -1;
               if (ActiveCanvasProvider.field_c == 1) {
@@ -149,7 +149,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
         }
         var3Lifetime1 = (pi.field_e - 200) / 100;
         this.hoveredOption = var2 + var3Lifetime1 * 2;
-        if ((-70 + ko.field_p) % 300 > 200) {
+        if ((-70 + PointLight.mouseX) % 300 > 200) {
           this.hoveredOption = -1;
           if (2 <= this.hoveredOption) {
             this.hoveredOption = -1;

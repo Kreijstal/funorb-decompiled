@@ -212,7 +212,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var25Lifetime4;
         var27 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var10 = wq.rasterStateForToolkit(param5, (byte) 15);
+          var10 = IntroMeshResources.rasterStateForToolkit(param5, (byte) 15);
           if (param0 == null) {
             return;
           }

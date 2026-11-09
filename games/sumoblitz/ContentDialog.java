@@ -32,12 +32,12 @@ final class ContentDialog extends ContentTransitionDialog {
     }
 
     final static void raiseSoundVolume(int threshold) {
-        if (threshold <= kr.field_c) {
+        if (threshold <= RasterColorTables.soundVolume) {
           lf.setSoundVolume(256, (byte) -58);
           return;
         }
-        int var1 = kr.field_c % 32;
-        lf.setSoundVolume(32 + (kr.field_c - var1), (byte) -58);
+        int var1 = RasterColorTables.soundVolume % 32;
+        lf.setSoundVolume(32 + (RasterColorTables.soundVolume - var1), (byte) -58);
     }
 
     static {

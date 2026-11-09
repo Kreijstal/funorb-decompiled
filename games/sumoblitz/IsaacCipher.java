@@ -204,47 +204,47 @@ final class IsaacCipher {
         }
     }
 
-    final static l[] a(int param0, IsaacPacketBuffer param1) {
+    final static IntroMeshMaterial[] decodeIntroMaterials(int guard, IsaacPacketBuffer packet) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        l[] var4 = null;
+        IntroMeshMaterial[] var4 = null;
         int var5 = 0;
-        l var6_ref_l = null;
+        IntroMeshMaterial var6_ref_l = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        l[] stackIn_12_0 = null;
+        IntroMeshMaterial[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param1.readBits(8, (byte) -97);
+          var2_int = packet.readBits(8, (byte) -97);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (l[]) (stackIn_3_0);
+            return (IntroMeshMaterial[]) (stackIn_3_0);
           }
-          var3 = param1.readBits(12, (byte) -115);
-          var4 = new l[var3];
+          var3 = packet.readBits(12, (byte) -115);
+          var4 = new IntroMeshMaterial[var3];
           var5 = 0;
-          if (param0 > -74) {
+          if (guard > -74) {
             field_k = 85;
           }
           while (var3 > var5) {
-            if (!kh.readBitFlag(param1, false)) {
-              var6 = param1.readBits(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
+            if (!LoginIdentifierSupport.readBitFlag(packet, false)) {
+              var6 = packet.readBits(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
               var4[var5] = var4[var6];
             } else {
-              var6_ref_l = new l();
-              param1.readBits(24, (byte) -89);
-              param1.readBits(24, (byte) -117);
-              var6_ref_l.field_b = param1.readBits(24, (byte) -119);
-              param1.readBits(9, (byte) -119);
-              param1.readBits(12, (byte) -101);
-              param1.readBits(12, (byte) -125);
-              param1.readBits(12, (byte) -93);
+              var6_ref_l = new IntroMeshMaterial();
+              packet.readBits(24, (byte) -89);
+              packet.readBits(24, (byte) -117);
+              var6_ref_l.baseColor = packet.readBits(24, (byte) -119);
+              packet.readBits(9, (byte) -119);
+              packet.readBits(12, (byte) -101);
+              packet.readBits(12, (byte) -125);
+              packet.readBits(12, (byte) -93);
               var4[var5] = var6_ref_l;
             }
             var5++;
@@ -255,8 +255,8 @@ final class IsaacCipher {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("ok.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ok.A(").append(guard).append(',');
+          if (packet == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -304,12 +304,12 @@ final class IsaacCipher {
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
           OpenGlUnderwaterEffect.field_k = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = HardwareTextureCache.field_b.length;
+          var1_int = HardwareTextureCache.introMeshes.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_gk = HardwareTextureCache.field_b[var3];
+            var4_ref_gk = HardwareTextureCache.introMeshes[var3];
             var4_ref_gk.a(false);
             IntrusiveDequeCursor.a((byte) 79, var3);
             var5 = var4_ref_gk.field_T + var4_ref_gk.field_t >> 1;
@@ -318,9 +318,9 @@ final class IsaacCipher {
             var8 = OpenGlUnderwaterEffect.field_k[9] >> 2;
             var9 = OpenGlUnderwaterEffect.field_k[10] >> 2;
             var10_int = OpenGlUnderwaterEffect.field_k[11] >> 2;
-            var11 = var9 * uc.field_b[4] + uc.field_b[3] * var8 + uc.field_b[5] * var10_int >> 14;
-            var12 = var10_int * uc.field_b[8] + uc.field_b[7] * var9 + var8 * uc.field_b[6] >> 14;
-            var13 = uc.field_b[11] * var10_int + (uc.field_b[9] * var8 + uc.field_b[10] * var9) >> 14;
+            var11 = var9 * IntroductionOverlaySupport.field_b[4] + IntroductionOverlaySupport.field_b[3] * var8 + IntroductionOverlaySupport.field_b[5] * var10_int >> 14;
+            var12 = var10_int * IntroductionOverlaySupport.field_b[8] + IntroductionOverlaySupport.field_b[7] * var9 + var8 * IntroductionOverlaySupport.field_b[6] >> 14;
+            var13 = IntroductionOverlaySupport.field_b[11] * var10_int + (IntroductionOverlaySupport.field_b[9] * var8 + IntroductionOverlaySupport.field_b[10] * var9) >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> 16;
           }
           var3Lifetime1 = OpenGlUnderwaterEffect.field_k[9] >> 8;
@@ -330,10 +330,10 @@ final class IsaacCipher {
           var7Lifetime1 = 0;
           var8Lifetime1 = LegacyOpenGlInterleavedStream.sinQ16(var6Lifetime1, -431) >> 8;
           var9Lifetime1 = SocialContact.cosQ16(param0 - 256, var6Lifetime1) >> 8;
-          if (ko.field_p != -1 &&
+          if (PointLight.mouseX != -1 &&
             pi.field_e != -1) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = ko.field_p - 320;
+            var7Lifetime1 = PointLight.mouseX - 320;
             var8Lifetime1 = -pi.field_e + 240;
           }
           var10 = (double)param0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1)));
@@ -347,20 +347,20 @@ final class IsaacCipher {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; var15 < HardwareTextureCache.field_b.length; var15++) {
+          for (var15 = 0; var15 < HardwareTextureCache.introMeshes.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; HardwareTextureCache.field_b.length > var17_int; var17_int++) {
+            for (var17_int = 1; HardwareTextureCache.introMeshes.length > var17_int; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = HardwareTextureCache.field_b[var16];
+            var17 = HardwareTextureCache.introMeshes[var16];
             IntrusiveDequeCursor.a((byte) 79, var16);
             for (var18 = 0; 3 > var18; var18++) {
-              uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];
+              IntroductionOverlaySupport.field_b[var18] = IntroductionOverlaySupport.field_b[var18] + LoginIdentifierSupport.introMeshCenters[var15][var18];
             }
-            up.a(OpenGlUnderwaterEffect.field_k, uc.field_b, false, false, var17, true, -1622738130);
+            up.a(OpenGlUnderwaterEffect.field_k, IntroductionOverlaySupport.field_b, false, false, var17, true, -1622738130);
             GameplaySession.renderLitMeshFaces(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
           }
           return;

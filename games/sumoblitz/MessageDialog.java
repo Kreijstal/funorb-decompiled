@@ -226,13 +226,13 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           if (DisplayModeConfirmationDialog.accountSocket != null && (0 > param1 ||
             LegacyOpenGlUnderwaterEffect.CONNECTED == TextCaretLayout.accountPhase)) {
             if (InwardSparkParticle.field_v.position == 0 &&
-              (ArchiveCatalog.field_a + 10000L) < wq.monotonicTimeMillis(param0 - 14)) {
+              (ArchiveCatalog.field_a + 10000L) < IntroMeshResources.monotonicTimeMillis(param0 - 14)) {
               InwardSparkParticle.field_v.writeCipherByte(param1, 8);
             }
             if (InwardSparkParticle.field_v.position > param0) {
               try {
                 DisplayModeConfirmationDialog.accountSocket.write(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
-                ArchiveCatalog.field_a = wq.monotonicTimeMillis(-21);
+                ArchiveCatalog.field_a = IntroMeshResources.monotonicTimeMillis(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -305,7 +305,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
               var6.a(AppletFocusState.retryText, (byte) -123, (WidgetListener) (this));
             }
           } else {
-            var6.a(vf.reloadGameText, 11, true);
+            var6.a(DisplayModeFailure.reloadGameText, 11, true);
             var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
           }
           if (param1 == 3) {

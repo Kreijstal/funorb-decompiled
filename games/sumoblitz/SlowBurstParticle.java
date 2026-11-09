@@ -42,7 +42,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
     }
 
     final static boolean f(int param0) {
-        if (null != kd.field_a[0]) {
+        if (null != IntroLogoRenderer.field_a[0]) {
           return false;
         }
         DirectByteArrayStorage.a(135, 38, 148, 2, new int[]{0, 23, 24, 3, 2, 14, 11}, 0, 492);
@@ -84,7 +84,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         RuntimeException var3 = null;
         try {
           if (this.textureKind == 0) {
-            uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
+            IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
           } else {
             im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
           }
@@ -263,7 +263,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         if (param2) {
           var4++;
         }
-        return kr.field_f[var4];
+        return RasterColorTables.field_f[var4];
     }
 
     static {

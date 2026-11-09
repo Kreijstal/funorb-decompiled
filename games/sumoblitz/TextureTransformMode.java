@@ -16,7 +16,7 @@ final class TextureTransformMode {
         throw new IllegalStateException();
     }
 
-    final static LegacyAlphaFont loadAlphaFont(ResourceArchive fontArchive, byte guard, int fileId, int groupId, ResourceArchive spriteArchive) {
+    final static LegacyAlphaFont loadAlphaFont(ResourceArchive fontArchive, byte guard, int groupId, int fileId, ResourceArchive spriteArchive) {
         RuntimeException var5 = null;
         LegacyAlphaFont stackIn_5_0 = null;
         LegacyAlphaFont stackIn_7_0 = null;
@@ -27,11 +27,11 @@ final class TextureTransformMode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!SpriteSheetSupport.decodeSpriteSheet(spriteArchive, groupId, fileId, -23046)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(spriteArchive, fileId, groupId, -23046)) {
             return null;
           }
           if (guard < -11) {
-            stackIn_7_0 = ScrollControl.a(false, fontArchive.fetchFile((byte) 94, groupId, fileId));
+            stackIn_7_0 = ScrollControl.a(false, fontArchive.fetchFile((byte) 94, fileId, groupId));
             return stackIn_7_0;
           }
           stackIn_5_0 = (LegacyAlphaFont) null;
@@ -46,7 +46,7 @@ final class TextureTransformMode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(fileId).append(',').append(groupId).append(',');
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(groupId).append(',').append(fileId).append(',');
           if (spriteArchive == null) {
             stackIn_14_2 = "null";
           } else {

@@ -236,13 +236,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.operation;
                 switch (var2_int) {
                   case 1:
-                    if (wq.monotonicTimeMillis(-24) < field_c) {
+                    if (IntroMeshResources.monotonicTimeMillis(-24) < field_c) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 4:
-                    if (field_c > wq.monotonicTimeMillis(-94)) {
+                    if (field_c > IntroMeshResources.monotonicTimeMillis(-94)) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -349,13 +349,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (wq.monotonicTimeMillis(-18) < field_c) {
+                        if (IntroMeshResources.monotonicTimeMillis(-18) < field_c) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
                         break;
                       case 3:
-                        if (field_c > wq.monotonicTimeMillis(-106)) {
+                        if (field_c > IntroMeshResources.monotonicTimeMillis(-106)) {
                           throw new IOException();
                         }
                         var13 = (var8.intArgument >> 24 & 255) + "." + (var8.intArgument >> 16 & 255) + "." + ((var8.intArgument & 65425) >> 8) + "." + (var8.intArgument & 255);
@@ -391,7 +391,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (field_c > wq.monotonicTimeMillis(-96)) {
+                    if (field_c > IntroMeshResources.monotonicTimeMillis(-96)) {
                       throw new IOException();
                     }
                     try {
@@ -428,11 +428,11 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean supportsFullscreen(byte guard) {
         if (!this.field_f) {
           return false;
         }
-        int var2 = -31 % ((param0 - 16) / 51);
+        int var2 = -31 % ((guard - 16) / 51);
         if (!this.field_t) {
           return this.field_r != null ? true : false;
         }
@@ -491,7 +491,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final PlatformTask a(java.awt.Frame param0, int param1) {
         if (param1 != 19) {
-          this.a((byte) -116);
+          this.supportsFullscreen((byte) -116);
         }
         return this.a(param0, 0, 0, false, 7);
     }

@@ -15,9 +15,9 @@ final class IntroPreparation {
         try {
           LegacyOpenGlRidgedWaterEffect.field_i = vm.ticksPerSecond(-32) * durationMillis / 1000;
           MenuScreen.initializeLogoAudio(archive, 100);
-          wq.a(false, archive);
+          IntroMeshResources.loadIntroMeshes(false, archive);
           lq.loadIntroFinalFrame(archive, -84);
-          SelectionOverlay.b(true);
+          SelectionOverlay.initializeIntroLighting(true);
           ResourceRequest.a((byte) -90);
           if (guard < 125) {
             restartLevelText = (String) null;

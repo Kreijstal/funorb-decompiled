@@ -732,7 +732,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                 throw new RuntimeException("");
               }
             }
-            kr.a(true, -107, false);
+            RasterColorTables.retainColorTables(true, -107, false);
             this.field_jc = true;
             this.field_Pb = new LegacyOpenGlTextureCache(this, this.textureProvider);
             this.i((byte) -93);
@@ -851,7 +851,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           this.field_y = null;
         }
         if (this.field_jc) {
-          CubeMapSource.a(false, true, -1);
+          CubeMapSource.releaseColorTables(false, true, -1);
           this.field_jc = false;
         }
     }
@@ -1723,9 +1723,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_Pb.age(122);
         if (100663296 < this.e((byte) 7) &&
-          wq.monotonicTimeMillis(-64) > this.field_vc + 60000L) {
+          IntroMeshResources.monotonicTimeMillis(-64) > this.field_vc + 60000L) {
           System.gc();
-          this.field_vc = wq.monotonicTimeMillis(-78);
+          this.field_vc = IntroMeshResources.monotonicTimeMillis(-78);
         }
         this.animationTime = timeMillis;
     }

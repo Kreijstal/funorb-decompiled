@@ -46,12 +46,12 @@ final class TextureFilter {
             if (FullscreenDisplayMode.field_d == 2) {
               InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.result), CompactMeshGeometry.field_u);
               var2 = new PacketBuffer(13);
-              sb.a(HuffmanDecoder.field_e, 127, LegacyCubeMapSource.field_d, ReflectionCheck.field_l, var2);
+              GameDefinitionLoader.a(HuffmanDecoder.field_e, 127, LegacyCubeMapSource.field_d, ReflectionCheck.field_l, var2);
               var2.writeByte((byte) 127, 15);
               var2.writeInt(48, ValidatedTextInputWidget.field_P);
               InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);
               FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
-              ShrinkingRingEffect.field_s = wq.monotonicTimeMillis(-109) + 30000L;
+              ShrinkingRingEffect.field_s = IntroMeshResources.monotonicTimeMillis(-109) + 30000L;
             }
             if (FullscreenDisplayMode.field_d == 3) {
               if (InstrumentNoteMask.field_n.available(-91) > 0) {
@@ -62,7 +62,7 @@ final class TextureFilter {
                 }
                 FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
               } else {
-                if (wq.monotonicTimeMillis(-52) > ShrinkingRingEffect.field_s) {
+                if (IntroMeshResources.monotonicTimeMillis(-52) > ShrinkingRingEffect.field_s) {
                   stackIn_27_0 = EmptyWidgetRenderer.a(-2, -89);
                   return stackIn_27_0;
                 }

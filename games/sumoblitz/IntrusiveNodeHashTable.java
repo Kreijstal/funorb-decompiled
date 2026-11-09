@@ -151,11 +151,11 @@ final class IntrusiveNodeHashTable {
             stackIn_11_0 = 6406;
             return stackIn_11_0;
           }
-          if (kd.LUMINANCE == format) {
+          if (IntroLogoRenderer.LUMINANCE == format) {
             stackIn_14_0 = 6409;
             return stackIn_14_0;
           }
-          if (format == ps.LUMINANCE_ALPHA) {
+          if (format == AchievementThresholds.LUMINANCE_ALPHA) {
             stackIn_21_0 = 6410;
             return stackIn_21_0;
           }

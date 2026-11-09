@@ -232,7 +232,7 @@ final class CachedTextLayout extends TextLayout {
         if (GameClientShell.field_s > qf.field_a) {
           return null;
         }
-        if (!(qf.field_a >= GameClientShell.field_s + sb.field_c)) {
+        if (!(qf.field_a >= GameClientShell.field_s + GameDefinitionLoader.field_c)) {
           return LegacyOpenGlCubeTexture.field_l;
         }
         return null;
@@ -243,7 +243,7 @@ final class CachedTextLayout extends TextLayout {
           if (param1 < 54) {
             field_h = (SpriteData[]) null;
           }
-          uj.a((byte) -124, 256, param2, param0);
+          EnemyDroneFactory.setMusicTrack((byte) -124, 256, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -353,7 +353,7 @@ final class CachedTextLayout extends TextLayout {
               SoftLruCache.field_e.writeCircumfixedString(var15, (byte) -108);
               SoftLruCache.field_e.writeCircumfixedString(var8, (byte) -121);
               var17 = (CharSequence) ((Object) param6);
-              SoftLruCache.field_e.writeCircumfixedString(kh.normalizeLoginIdentifier(var17, 1457), (byte) -107);
+              SoftLruCache.field_e.writeCircumfixedString(LoginIdentifierSupport.normalizeLoginIdentifier(var17, 1457), (byte) -107);
               SoftLruCache.field_e.writeShort(-69, param3);
               SoftLruCache.field_e.writeByte((byte) 50, param1);
               SoftLruCache.field_e.writeByte((byte) 50, var9);
@@ -392,9 +392,9 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);
-            TextCaretLayout.accountPhase = vf.WAIT_ACCOUNT_RESPONSE;
+            TextCaretLayout.accountPhase = DisplayModeFailure.WAIT_ACCOUNT_RESPONSE;
           }
-          if (TextCaretLayout.accountPhase == vf.WAIT_ACCOUNT_RESPONSE &&
+          if (TextCaretLayout.accountPhase == DisplayModeFailure.WAIT_ACCOUNT_RESPONSE &&
             OpenGlIndexBuffer.b(-1, 1)) {
             var9Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
             NativeLibraryExtractor.field_a.position = 0;
@@ -456,7 +456,7 @@ final class CachedTextLayout extends TextLayout {
           }
           if (DisplayModeConfirmationDialog.accountSocket == null) {
             if (LimitedRandomAccessFile.field_g) {
-              if (30000L < uc.millisSinceServerRead(26560)) {
+              if (30000L < IntroductionOverlaySupport.millisSinceServerRead(26560)) {
                 MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;
               } else {
                 MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;

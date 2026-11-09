@@ -162,9 +162,9 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               if (var3 == 1) {
                 Bzip2Decompressor.decompress(var13, var5, containerBytes, var4, 9);
               } else {
-                var7 = sb.gzipDecompressor;
+                var7 = GameDefinitionLoader.gzipDecompressor;
                 synchronized (var7) {
-                  sb.gzipDecompressor.decompress(var13, (byte) -104, var9);
+                  GameDefinitionLoader.gzipDecompressor.decompress(var13, (byte) -104, var9);
                 }
               }
               stackIn_21_0 = var6;
@@ -219,7 +219,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           if (EmptyWidgetRenderer.field_a.status == 0) {
             return false;
           }
-          long dupTemp$0 = wq.monotonicTimeMillis(-38);
+          long dupTemp$0 = IntroMeshResources.monotonicTimeMillis(-38);
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.lastServerReadMillis = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {
@@ -235,7 +235,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               TextCaretLayout.accountPhase = ByteArrayCacheNode.READY_TO_CONNECT;
-              sb.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
+              GameDefinitionLoader.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
               MessageDialog.a(0, -1);
             } catch (IOException iOException) {
               TextCaretLayout.accountPhase = VertexBufferReference.field_b;

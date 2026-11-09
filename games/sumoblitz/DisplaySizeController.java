@@ -55,7 +55,7 @@ final class DisplaySizeController {
           UnderageAccountInfoPanel.field_H = (-LegacyOpenGlRidgedWaterEffect.field_h + this.preferredWidth) / 2;
         }
         if (LegacyOpenGlRidgedWaterEffect.field_h != this.defaultWidth ||
-          wq.field_b != this.defaultHeight) {
+          IntroMeshResources.canvasHeight != this.defaultHeight) {
           this.resizeListener.resizeCanvas(guard ^ 8308, this.defaultWidth, this.defaultHeight);
         }
     }
@@ -82,7 +82,7 @@ final class DisplaySizeController {
           if (guard >= -44) {
             DisplaySizeController.beginScreenTransition(42, -110, 34);
           }
-          if (!dispatcher.a((byte) 112)) {
+          if (!dispatcher.supportsFullscreen((byte) 112)) {
             stackIn_5_0 = new FullscreenDisplayMode[]{};
             return stackIn_5_0;
           }
@@ -152,7 +152,7 @@ final class DisplaySizeController {
     }
 
     final FullscreenCanvas enterFullscreen(int guard) {
-        this.previousHeight = wq.field_b;
+        this.previousHeight = IntroMeshResources.canvasHeight;
         this.previousWidth = LegacyOpenGlRidgedWaterEffect.field_h;
         this.resizeListener.resizeCanvas(8310, this.fullscreenWidth, this.fullscreenHeight);
         int var2 = -25 % ((50 - guard) / 48);
@@ -177,7 +177,7 @@ final class DisplaySizeController {
         }
         SecondaryNodeQueue.field_d = fromScreen;
         LegacyOpenGlUnlitEffect.field_e = 1;
-        qw.field_b = toScreen;
+        DroneEscalationSupport.field_b = toScreen;
     }
 
     final static Sprite[] takeDecodedOpaqueSprites(int guard) {
@@ -202,7 +202,7 @@ final class DisplaySizeController {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) var10[var6])];
           }
-          var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var11);
+          var1[var2] = new Sprite(DisplayModeFailure.spriteSheetWidth, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var11);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -79);
         return var1;
@@ -269,7 +269,7 @@ final class DisplaySizeController {
           if (var2 != LegacyOpenGlRidgedWaterEffect.field_h) {
             this.resizeListener.resizeCanvas(8310, var2, var3);
           } else {
-            if (wq.field_b != var3) {
+            if (IntroMeshResources.canvasHeight != var3) {
               this.resizeListener.resizeCanvas(8310, var2, var3);
             }
           }

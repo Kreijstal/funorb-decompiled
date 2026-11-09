@@ -14,7 +14,7 @@ abstract class ResourceRequest extends DualLinkNode {
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return ArenaBackdropPalettes.field_d;
         }
-        return kh.field_d;
+        return LoginIdentifierSupport.field_d;
     }
 
     ResourceRequest() {
@@ -52,7 +52,7 @@ abstract class ResourceRequest extends DualLinkNode {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          eh.field_b.bindRaster();
+          MenuFadeState.introGlow.bindRaster();
           var1.drawHalfSize(0, 0);
           ClientException.popRasterState((byte) 76);
         } catch (RuntimeException runtimeException) {

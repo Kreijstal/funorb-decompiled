@@ -83,7 +83,7 @@ final class km extends IntrusiveNode {
                 if (var3Lifetime2 != null) {
                   var4 = var2.field_a;
                   if (MessageDialog.arcadeMode) {
-                    if (wn.a(var3Lifetime2.yQ8, var4, -114, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
+                    if (DroneProximitySupport.isWithinRadius(var3Lifetime2.yQ8, var4, -114, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
                       var3Lifetime2.isAliveAndSpawned((byte) -63) &&
                       var3Lifetime2.hasVelocityOnBothAxes((byte) 125)) {
                       var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);
@@ -95,7 +95,7 @@ final class km extends IntrusiveNode {
                         if (~var5 != ~var1_int &&
                           var6Lifetime1Lifetime2 != null &&
                           var6Lifetime1Lifetime2.hasVelocityOnBothAxes((byte) 125) &&
-                          wn.a(var6Lifetime1Lifetime2.yQ8, var4, -114, var2.xQ8, var6Lifetime1Lifetime2.xQ8, var2.yQ8) &&
+                          DroneProximitySupport.isWithinRadius(var6Lifetime1Lifetime2.yQ8, var4, -114, var2.xQ8, var6Lifetime1Lifetime2.xQ8, var2.yQ8) &&
                           var6Lifetime1Lifetime2.isAliveAndSpawned((byte) -63)) {
                           var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);
                           decompiledFrameCompleted0 = false;
@@ -105,7 +105,7 @@ final class km extends IntrusiveNode {
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                   }
-                  if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (wn.a(var3Lifetime2.yQ8, var4, -115, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
+                  if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (DroneProximitySupport.isWithinRadius(var3Lifetime2.yQ8, var4, -115, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
                     var3Lifetime2.isAliveAndSpawned((byte) -63) &&
                     var3Lifetime2.hasVelocityOnBothAxes((byte) 125))) {
                     var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);

@@ -5,10 +5,10 @@ final class EnemyDrone extends Drone {
     private int spawnedDroneType;
     static ArenaDefinition[] field_S;
 
-    final static void o(int param0) {
+    final static void hideDroneIntroduction(int guard) {
         OpenGlVertexLayout.field_f.hide(-115);
-        if (param0 != 250) {
-          EnemyDrone.o(-9);
+        if (guard != 250) {
+          EnemyDrone.hideDroneIntroduction(-9);
         }
     }
 
@@ -43,7 +43,7 @@ final class EnemyDrone extends Drone {
           EnemyDrone.releaseStatics(true);
           return;
         }
-        HardwareUnlitEffect.a(uj.createEnemyDrone(this.spawnedDroneType, this.xQ8 - this.velocityXQ8, 0, (byte) 84, this.yQ8 - this.velocityYQ8), false);
+        HardwareUnlitEffect.a(EnemyDroneFactory.createEnemyDrone(this.spawnedDroneType, this.xQ8 - this.velocityXQ8, 0, (byte) 84, this.yQ8 - this.velocityYQ8), false);
         if (param0 < -55) {
           return;
         }

@@ -389,9 +389,9 @@ final class WidgetTheme {
         }
     }
 
-    final void b(byte param0) {
+    final void popRasterState(byte guard) {
         ClientException.popRasterState((byte) -59);
-        if (param0 >= -63) {
+        if (guard >= -63) {
           byte[] var3 = (byte[]) null;
           WidgetTheme.copyBytes((byte[]) null, 126);
         }

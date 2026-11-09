@@ -52,7 +52,7 @@ final class InwardSparkParticle extends TimedSceneEffect {
           if (0 != this.textureKind) {
             im.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           } else {
-            uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
+            IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

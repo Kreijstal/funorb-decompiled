@@ -23,8 +23,8 @@ final class IntIndexHashTable {
           throw new IllegalStateException();
         }
         HardwareTextureSprite.field_m = true;
-        jv.showLoginDialog(true, false);
-        jv.field_a = param0;
+        LoginDialogNavigation.showLoginDialog(true, false);
+        LoginDialogNavigation.field_a = param0;
     }
 
     IntIndexHashTable(int[] keys) {

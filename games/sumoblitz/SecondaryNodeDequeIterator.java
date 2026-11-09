@@ -43,18 +43,18 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var3_intLifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (ws.field_b != param1) {
+          if (ClientStackTraceFormatter.field_b != param1) {
             MouseInputRegistration.field_b = new int[param1];
             for (var3_int = 0; var3_int < param1; var3_int++) {
               MouseInputRegistration.field_b[var3_int] = (var3_int << 12) / param1;
             }
-            ws.field_b = param1;
+            ClientStackTraceFormatter.field_b = param1;
           }
           if (param0 != -1203350004) {
             SecondaryNodeDequeIterator.releaseStatics(86);
           }
           if (QuickChatCommand.field_c != param2) {
-            if (ws.field_b != param2) {
+            if (ClientStackTraceFormatter.field_b != param2) {
               SpriteOptionRenderer.field_o = new int[param2];
               var5 = 0;
               var3_intLifetime1 = var5;

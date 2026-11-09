@@ -66,7 +66,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
               if (result.errorCode != 5) {
                 var6.a(FullscreenCanvas.backText, -1, true);
               } else {
-                var6.a(vf.reloadGameText, 11, true);
+                var6.a(DisplayModeFailure.reloadGameText, 11, true);
                 var6.a(HiscoreRequest.quitToWebsiteText, 17, true);
               }
             }
@@ -115,7 +115,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           return;
         }
         try {
-          kh.retryAccountCreationLogin(false);
+          LoginIdentifierSupport.retryAccountCreationLogin(false);
           this.n(-7);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + action + ',' + guard + ',' + (source != null ? "{...}" : "null") + ',' + pointerX + ',' + pointerY + ')');

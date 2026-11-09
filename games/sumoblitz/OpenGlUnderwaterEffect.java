@@ -205,7 +205,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         int var2 = MarkerTrackWidget.fullscreenDialogHeight((byte) 78);
         CompactMeshGeometry.field_v.draw(var1 + (LegacyOpenGlRenderbuffer.field_B << 1), -LegacyOpenGlRenderbuffer.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, ProxyAuthenticationRequiredException.field_f - pd.field_l);
         if (param0 == -7) {
-          sj.a((byte) 124);
+          DisplayPromptRenderer.drawDisplayPrompt((byte) 124);
           return;
         }
     }

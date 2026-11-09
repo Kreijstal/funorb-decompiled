@@ -117,18 +117,18 @@ abstract class LegacyOpenGlTexture implements LegacyOpenGlFramebufferAttachment 
             jaggl.OpenGL.glAttachObjectARB(var3_long, shaders[var5].shaderHandle);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, kh.field_b, 0);
-          if (kh.field_b[0] == 0) {
-            if (kh.field_b[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, LoginIdentifierSupport.field_b, 0);
+          if (LoginIdentifierSupport.field_b[0] == 0) {
+            if (LoginIdentifierSupport.field_b[0] == 0) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, kh.field_b, 1);
-            if (kh.field_b[1] > 1) {
-              var11 = new byte[kh.field_b[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, kh.field_b[1], kh.field_b, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, LoginIdentifierSupport.field_b, 1);
+            if (LoginIdentifierSupport.field_b[1] > 1) {
+              var11 = new byte[LoginIdentifierSupport.field_b[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, LoginIdentifierSupport.field_b[1], LoginIdentifierSupport.field_b, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (kh.field_b[0] == 0) {
+            if (LoginIdentifierSupport.field_b[0] == 0) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (shaders.length > var7) {

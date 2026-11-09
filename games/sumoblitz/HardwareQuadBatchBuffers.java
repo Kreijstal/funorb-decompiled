@@ -43,7 +43,7 @@ final class HardwareQuadBatchBuffers {
         if (Character.isISOControl(character)) {
           return false;
         }
-        if (qw.isAsciiAlphanumeric(57, character)) {
+        if (DroneEscalationSupport.isAsciiAlphanumeric(57, character)) {
           return true;
         }
         if (character != 45 &&
@@ -128,10 +128,10 @@ final class HardwareQuadBatchBuffers {
         int var4;
         int var5;
         if (!param2) {
-          if (uc.field_c[param0] > uc.field_c[param1]) {
+          if (IntroductionOverlaySupport.field_c[param0] > IntroductionOverlaySupport.field_c[param1]) {
             return true;
           }
-          if (uc.field_c[param0] < uc.field_c[param1]) {
+          if (IntroductionOverlaySupport.field_c[param0] < IntroductionOverlaySupport.field_c[param1]) {
             return false;
           }
           if (LoginFieldValue.field_a[param1] < LoginFieldValue.field_a[param0]) {
@@ -147,10 +147,10 @@ final class HardwareQuadBatchBuffers {
           if (LoginFieldValue.field_a[param1] > LoginFieldValue.field_a[param0]) {
             return false;
           }
-          if (uc.field_c[param1] < uc.field_c[param0]) {
+          if (IntroductionOverlaySupport.field_c[param1] < IntroductionOverlaySupport.field_c[param0]) {
             return true;
           }
-          if (uc.field_c[param0] < uc.field_c[param1]) {
+          if (IntroductionOverlaySupport.field_c[param0] < IntroductionOverlaySupport.field_c[param1]) {
             return false;
           }
         }

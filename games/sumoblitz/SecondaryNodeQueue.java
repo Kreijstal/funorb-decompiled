@@ -339,7 +339,7 @@ final class SecondaryNodeQueue {
           if (param0.field_P == 0 &&
             param0.field_R) {
             EmailSyntaxValidator.field_e = EmailSyntaxValidator.field_e + 1;
-            if (ps.field_e[9] != EmailSyntaxValidator.field_e) {
+            if (AchievementThresholds.targets[9] != EmailSyntaxValidator.field_e) {
               return;
             }
             UnderageAccountInfoPanel.b(24753, 246, 9);

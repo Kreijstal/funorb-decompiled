@@ -77,7 +77,7 @@ final class ServerIntArrayRequest extends IntrusiveNode {
           MenuSelectionController.field_h = new int[RasterStateFrame.field_n];
           StatefulWidgetRenderer.field_o = new byte[RasterStateFrame.field_n][];
           var17.position = -(RasterStateFrame.field_n * 8) - 7 + data.length;
-          vf.field_d = var17.readUnsignedShort(guard);
+          DisplayModeFailure.spriteSheetWidth = var17.readUnsignedShort(guard);
           ToolkitImageProducerBuffer.field_u = var17.readUnsignedShort(255);
           var3 = 1 + (var17.readUnsignedByte(guard - 31557) & 255);
           for (var4 = 0; var4 < RasterStateFrame.field_n; var4++) {

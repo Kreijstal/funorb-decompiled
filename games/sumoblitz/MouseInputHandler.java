@@ -17,7 +17,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             LegacyOpenGlTexture.field_h = 0;
             GzipDecompressor.field_d = param0.getX();
             LegacyOpenGlTexture3D.field_l = param0.getY();
-            wq.monotonicTimeMillis(-33);
+            IntroMeshResources.monotonicTimeMillis(-33);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               LegacyOpenGlBuffer.field_i = 2;
               LegacyOpenGlNormalMapGenerator.field_a = 2;

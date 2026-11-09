@@ -40,7 +40,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
           this.width = param3;
           this.height = param4;
           this.toolkit.a((GpuTexture) (this), 108);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-67), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ws.glDataType(this.dataType, (byte) 117), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-67), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ClientStackTraceFormatter.glDataType(this.dataType, (byte) 117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

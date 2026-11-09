@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jv {
+final class LoginDialogNavigation {
     static int field_b;
     static int field_a;
 
@@ -9,24 +9,24 @@ final class jv {
         WidgetStateStyle.showLoginDialog((byte) 127, allowSignup, allowGuestPlay);
     }
 
-    final static void a(boolean param0, byte param1, boolean param2) {
-        if (!param0) {
+    final static void drawAccountDialogs(boolean dimBackground, byte guard, boolean unused) {
+        if (!dimBackground) {
           SoftwareRasterizer.clear();
-          if (param1 != -71) {
+          if (guard != -71) {
             field_b = 40;
-            BurstParticle.a(param0, true);
+            BurstParticle.a(dimBackground, true);
             return;
           }
-          BurstParticle.a(param0, true);
+          BurstParticle.a(dimBackground, true);
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
-        if (param1 != -71) {
+        if (guard != -71) {
           field_b = 40;
-          BurstParticle.a(param0, true);
+          BurstParticle.a(dimBackground, true);
           return;
         }
-        BurstParticle.a(param0, true);
+        BurstParticle.a(dimBackground, true);
     }
 
     final static void completeNameAvailability(int response, String[] suggestions, String message, boolean guard) {

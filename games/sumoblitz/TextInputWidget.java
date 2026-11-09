@@ -35,7 +35,7 @@ class TextInputWidget extends InteractiveWidget {
           if (!(this.renderer instanceof TextWidgetLayout)) {
             return false;
           }
-          var8_int = ((TextWidgetLayout) ((Object) this.renderer)).characterAtPoint(parentX, (UiWidget) (this), ko.field_p, pi.field_e, -4059, parentY);
+          var8_int = ((TextWidgetLayout) ((Object) this.renderer)).characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, pi.field_e, -4059, parentY);
           stackIn_7_1 = 124;
           if (-1 != var8_int) {
             stackIn_8_2 = var8_int;
@@ -43,7 +43,7 @@ class TextInputWidget extends InteractiveWidget {
             stackIn_8_2 = 0;
           }
           this.moveCaret(stackIn_7_1, stackIn_8_2);
-          var8_long = wq.monotonicTimeMillis(-17);
+          var8_long = IntroMeshResources.monotonicTimeMillis(-17);
           stackIn_11_1 = !(250L <= var8_long - this.lastClickMillis);
           this.wordSelection = stackIn_11_1;
           if (this.wordSelection) {
@@ -196,7 +196,7 @@ class TextInputWidget extends InteractiveWidget {
           this.renderer = HardwareTurbulentWaterNoise.widgetTheme.field_j;
           this.setText(true, param0, (byte) 118);
           this.scrollToCaretEnabled = true;
-          this.caretBlinkStartMillis = wq.monotonicTimeMillis(-9);
+          this.caretBlinkStartMillis = IntroMeshResources.monotonicTimeMillis(-9);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -256,7 +256,7 @@ class TextInputWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.caretBlinkStartMillis = wq.monotonicTimeMillis(-6);
+          this.caretBlinkStartMillis = IntroMeshResources.monotonicTimeMillis(-6);
           if (character == 60) {
             return false;
           }
@@ -499,7 +499,7 @@ class TextInputWidget extends InteractiveWidget {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof TextWidgetLayout) {
               var6 = (TextWidgetLayout) ((Object) this.renderer);
-              var7 = var6.characterAtPoint(parentX, (UiWidget) (this), ko.field_p, pi.field_e, -4059, parentY);
+              var7 = var6.characterAtPoint(parentX, (UiWidget) (this), PointLight.mouseX, pi.field_e, -4059, parentY);
               if (var7 != -1) {
                 if (this.wordSelection &&
                   this.wordSelectionEnd > var7 &&
@@ -509,7 +509,7 @@ class TextInputWidget extends InteractiveWidget {
                 this.caret = var7;
               }
             }
-            this.caretBlinkStartMillis = wq.monotonicTimeMillis(-93);
+            this.caretBlinkStartMillis = IntroMeshResources.monotonicTimeMillis(-93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -538,7 +538,7 @@ class TextInputWidget extends InteractiveWidget {
             if (this.caret != this.selectionAnchor) {
               var8.drawSelection(parentX, this.selectionAnchor, 0, this.caret, (UiWidget) (this), parentY);
             }
-            var6 = wq.monotonicTimeMillis(-6);
+            var6 = IntroMeshResources.monotonicTimeMillis(-6);
             if (500L > (-this.caretBlinkStartMillis + var6) % 1000L) {
               var8.drawCaret(1, parentX, parentY, this.caret, (UiWidget) (this));
             }

@@ -15,7 +15,7 @@ final class lf extends ka {
         PlayingSound var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          kr.field_c = volume;
+          RasterColorTables.soundVolume = volume;
           if (guard != -58) {
             return;
           }
@@ -24,7 +24,7 @@ final class lf extends ka {
             if (!var2.lifetimeNode.isLinked(false)) {
               var2.unlink(false);
             } else {
-              var2.stream.setVolume(128 + var2.originalVolume * kr.field_c >> 8);
+              var2.stream.setVolume(128 + var2.originalVolume * RasterColorTables.soundVolume >> 8);
             }
             var2 = (PlayingSound) (ContentTransitionPhase.field_c.next((byte) 18));
           }
@@ -33,7 +33,7 @@ final class lf extends ka {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.lifetimeNode.isLinked(false);
               if (stackIn_14_0) {
-                var2Lifetime1.stream.setVolume(128 + kr.field_c * var2Lifetime1.originalVolume >> 8);
+                var2Lifetime1.stream.setVolume(128 + RasterColorTables.soundVolume * var2Lifetime1.originalVolume >> 8);
               } else {
                 var2Lifetime1.unlink(false);
               }

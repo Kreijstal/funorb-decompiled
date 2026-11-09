@@ -17,7 +17,7 @@ abstract class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 8 % ((guard + 40) / 46);
-          if (wn.EYE_LINEAR == mode) {
+          if (DroneProximitySupport.EYE_LINEAR == mode) {
             stackIn_2_0 = 9216;
             return stackIn_2_0;
           }

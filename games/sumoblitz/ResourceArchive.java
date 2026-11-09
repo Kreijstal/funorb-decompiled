@@ -38,7 +38,7 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(l.a(var6, guard - 44), (byte) -113);
+          var4_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var6, guard - 44), (byte) -113);
           if (!this.isValidGroup(var4_int, true)) {
             return null;
           }
@@ -47,7 +47,7 @@ final class ResourceArchive {
             return stackIn_8_0;
           }
           var7 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameIndices[var4_int].findIndex(l.a(var7, -84), (byte) 90);
+          var5 = this.index.fileNameIndices[var4_int].findIndex(IntroMeshMaterial.hashCp1252(var7, -84), (byte) 90);
           stackIn_10_0 = this.fetchFile((byte) 118, var5, var4_int);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(l.a(var4, guard ^ -66), (byte) 109);
+          var3_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var4, guard ^ -66), (byte) 109);
           if (this.isValidGroup(var3_int, true)) {
             stackIn_9_0 = var3_int;
             return stackIn_9_0;
@@ -171,7 +171,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) fileName);
-          var4_int = this.index.fileNameIndices[groupId].findIndex(l.a(var6, -115), (byte) 105);
+          var4_int = this.index.fileNameIndices[groupId].findIndex(IntroMeshMaterial.hashCp1252(var6, -115), (byte) 105);
           if (this.isValidFileSlot(groupId, var4_int, (byte) -79)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
@@ -208,7 +208,7 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           var3_int = -43 / ((-28 - guard) / 53);
           var5 = (CharSequence) ((Object) groupName);
-          var4 = this.index.groupNameIndex.findIndex(l.a(var5, -108), (byte) -72);
+          var4 = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var5, -108), (byte) -72);
           if (var4 >= 0) {
             return true;
           }
@@ -347,7 +347,7 @@ final class ResourceArchive {
             return true;
           }
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(l.a(var4, -116), (byte) 124);
+          var3_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var4, -116), (byte) 124);
           stackIn_7_0 = this.tryLoadGroup((byte) -110, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -699,7 +699,7 @@ final class ResourceArchive {
             return stackIn_5_0;
           }
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(l.a(var4, guard ^ -101), (byte) 103);
+          var3_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var4, guard ^ -101), (byte) 103);
           stackIn_7_0 = this.groupLoadPercent(var3_int, (byte) 79);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -866,12 +866,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(l.a(var6, -124), (byte) 100);
+          var4_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var6, -124), (byte) 100);
           if (var4_int < 0) {
             return false;
           }
           var7 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameIndices[var4_int].findIndex(l.a(var7, -115), (byte) -83);
+          var5 = this.index.fileNameIndices[var4_int].findIndex(IntroMeshMaterial.hashCp1252(var7, -115), (byte) -83);
           if (guard >= ~var5) {
             return true;
           }
@@ -957,7 +957,7 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(l.a(var6, -103), (byte) -78);
+          var4_int = this.index.groupNameIndex.findIndex(IntroMeshMaterial.hashCp1252(var6, -103), (byte) -78);
           if (!this.isValidGroup(var4_int, true)) {
             return false;
           }
@@ -965,7 +965,7 @@ final class ResourceArchive {
             return false;
           }
           var7 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameIndices[var4_int].findIndex(l.a(var7, -41), (byte) -25);
+          var5 = this.index.fileNameIndices[var4_int].findIndex(IntroMeshMaterial.hashCp1252(var7, -41), (byte) -25);
           stackIn_11_0 = this.tryLoadFile(var4_int, false, var5);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

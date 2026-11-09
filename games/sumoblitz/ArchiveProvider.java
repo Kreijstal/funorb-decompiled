@@ -7,7 +7,7 @@ abstract class ArchiveProvider {
     static int field_b;
     static ToolkitSprite[] field_a;
 
-    final static void a(int param0) {
+    final static void initializeHsvColorTable(int guard) {
         int var4 = 0;
         int var7 = 0;
         int incrementValue$0 = 0;
@@ -41,7 +41,7 @@ abstract class ArchiveProvider {
           GzipDecompressor.field_b = new int[65536];
           var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
           var3 = 0;
-          if (param0 != -129) {
+          if (guard != -129) {
             field_c = (String) null;
           }
           for (var4 = 0; var4 < 512; var4++) {
@@ -110,7 +110,7 @@ abstract class ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "rb.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "rb.K(" + guard + ')');
         }
     }
 

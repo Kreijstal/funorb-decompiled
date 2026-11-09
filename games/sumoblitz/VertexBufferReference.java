@@ -18,7 +18,7 @@ final class VertexBufferReference {
         try {
           int var4_int = -26 % ((76 - param2) / 42);
           FocusProxyWidget.field_F = param3;
-          kh.field_d = param1;
+          LoginIdentifierSupport.field_d = param1;
           HardwareUnlitEffect.a(LegacyOpenGlTexture2D.loggingInText, param0, (byte) -99);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

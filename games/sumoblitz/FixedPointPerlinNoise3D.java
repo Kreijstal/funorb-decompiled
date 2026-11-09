@@ -211,7 +211,7 @@ abstract class FixedPointPerlinNoise3D {
         if (param0 != -23517) {
           field_h = (String) null;
         }
-        stackIn_7_0 = (10 <= jv.field_a) && (!IntrusiveNode.field_a) && (!TimedSceneEffect.a((byte) 116));
+        stackIn_7_0 = (10 <= LoginDialogNavigation.field_a) && (!IntrusiveNode.field_a) && (!TimedSceneEffect.a((byte) 116));
         return stackIn_7_0;
     }
 

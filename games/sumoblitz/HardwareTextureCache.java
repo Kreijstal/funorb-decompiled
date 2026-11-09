@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HardwareTextureCache {
-    static CompactMeshGeometry[] field_b;
+    static CompactMeshGeometry[] introMeshes;
     static ToolkitSprite[] field_e;
     static HiscoreRequest field_f;
     private TextureProvider provider;
@@ -10,7 +10,7 @@ final class HardwareTextureCache {
     private HardwareGraphicsToolkit toolkit;
 
     public static void releaseStatics(byte param0) {
-        field_b = null;
+        introMeshes = null;
         field_f = null;
         field_e = null;
         if (param0 >= -101) {
@@ -325,7 +325,7 @@ final class HardwareTextureCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != -30865) {
-            field_b = (CompactMeshGeometry[]) null;
+            introMeshes = (CompactMeshGeometry[]) null;
           }
           var12 = new byte[height * (width * depth)];
           var11 = var12;

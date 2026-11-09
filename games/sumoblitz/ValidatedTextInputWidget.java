@@ -32,7 +32,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         if (param2 >= -6) {
           return true;
         }
-        return wn.a(param0, param1, -107) & TextureTransformMode.a(param1, -2626, param0);
+        return DroneProximitySupport.hasMaskBit16(param0, param1, -107) & TextureTransformMode.a(param1, -2626, param0);
     }
 
     public final InputValidator getValidator(int guard) {
@@ -70,7 +70,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           }
           var2 = new PlayingSound(param1, param1);
           ContentTransitionPhase.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
-          sj.field_c.addSubstream(param1);
+          DisplayPromptRenderer.field_c.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,11 +99,11 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           return null;
         }
         if (guard == -6696) {
-          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - ko.field_p), -95);
+          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
           return this.tooltip;
         }
         this.validator = (InputValidator) null;
-        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - ko.field_p), -95);
+        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - PointLight.mouseX), -95);
         return this.tooltip;
     }
 
@@ -111,7 +111,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         try {
           super.update(parentX, -86, root, parentY);
           int var5_int = 126 % ((guard + 25) / 45);
-          this.pointerOffsetX = ko.field_p - (this.x + parentX);
+          this.pointerOffsetX = PointLight.mouseX - (this.x + parentX);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }

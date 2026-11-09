@@ -251,7 +251,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (mode == LegacyRidgedWaterNoise.TEXTURE_COUNT3) {
           return 3;
         }
-        if (mode == kr.TEXTURE_COUNT4) {
+        if (mode == RasterColorTables.TEXTURE_COUNT4) {
           return 4;
         }
         if (HardwareGraphicsToolkit.TEXTURE_PROJECTED == mode) {
@@ -265,32 +265,32 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         return 0;
     }
 
-    final void Y(int param0) {
-        ko var3 = null;
+    final void applyPointLights(int guard) {
+        PointLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
         int var2 = 0;
-        for (var2 = 0; this.field_ub > var2; var2++) {
-          var3 = this.field_pb[var2];
+        for (var2 = 0; this.pendingPointLightCount > var2; var2++) {
+          var3 = this.pointLights[var2];
           var4 = var2 + 2;
-          var5 = var3.c((byte) 50);
-          var6 = var3.a(0) / 255.0f;
-          this.field_Ac.SetPosition((float)var3.a((byte) 117), (float)var3.d((byte) 109), (float)var3.c(true));
+          var5 = var3.color((byte) 50);
+          var6 = var3.intensity(0) / 255.0f;
+          this.field_Ac.SetPosition((float)var3.getX((byte) 117), (float)var3.getY((byte) 109), (float)var3.getZ(true));
           this.field_Ac.SetDiffuse((float)((var5 & 16740345) >> 16) * var6, (float)((var5 & 65514) >> 8) * var6, var6 * (float)(var5 & 255), 0.0f);
-          this.field_Ac.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.c(0) * var3.c(0)));
-          this.field_Ac.SetRange((float)var3.c(0));
+          this.field_Ac.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.radius(0) * var3.radius(0)));
+          this.field_Ac.SetRange((float)var3.radius(0));
           this.field_Cc.SetLight(var4, this.field_Ac);
           this.field_Cc.LightEnable(var4, true);
         }
-        while (this.field_Ab > var2) {
+        while (this.previousPointLightCount > var2) {
           this.field_Cc.LightEnable(2 + var2, false);
           var2++;
         }
-        if (param0 > -83) {
+        if (guard > -83) {
           this.field_zc = -101;
         }
-        super.Y(-100);
+        super.applyPointLights(-100);
     }
 
     final void applyDepthTest(int guard) {
@@ -860,10 +860,10 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param0 == IntrusiveNodeHashTable.ALPHA) {
             return 28;
           }
-          if (param0 == kd.LUMINANCE) {
+          if (param0 == IntroLogoRenderer.LUMINANCE) {
             return 50;
           }
-          if (param0 == ps.LUMINANCE_ALPHA) {
+          if (param0 == AchievementThresholds.LUMINANCE_ALPHA) {
             return 51;
           }
           if (ModalDialog.DEPTH_COMPONENT == param0) {
@@ -1031,7 +1031,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (BeveledTextInputRenderer.NORMAL_MAP == mode) {
           var3 = 65536;
         } else {
-          if (mode != wn.EYE_LINEAR) {
+          if (mode != DroneProximitySupport.EYE_LINEAR) {
             if (LabeledWidget.REFLECTION_MAP == mode) {
               var3 = 196608;
             }

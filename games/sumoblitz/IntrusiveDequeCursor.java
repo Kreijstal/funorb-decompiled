@@ -160,7 +160,7 @@ final class IntrusiveDequeCursor {
                 var5 = 1;
                 var4 = 1;
               }
-              uc.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
+              IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
               return;
             }
           }
@@ -212,7 +212,7 @@ final class IntrusiveDequeCursor {
           var5 = 1;
           var4 = 1;
         }
-        uc.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
+        IntroductionOverlaySupport.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
     }
 
     final static void a(FullscreenDisplayMode[] param0, boolean param1) {
@@ -431,9 +431,9 @@ final class IntrusiveDequeCursor {
         return VertexStreamLayout.field_f[param1 >> 20] >> 2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_e = null;
-        if (param0 != -1384583532) {
+        if (guard != -1384583532) {
           IntrusiveDequeCursor.b(67, -59);
           field_a = null;
           return;

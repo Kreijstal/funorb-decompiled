@@ -76,14 +76,14 @@ final class ClientException extends RuntimeException {
           byte[] var2 = (byte[]) null;
           ClientException.compileShader(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
           if (!TimedSceneEffect.field_r) {
-            return vs.isGuestSession((byte) 9) ? true : false;
+            return AccountPacketReader.isGuestSession((byte) 9) ? true : false;
           }
           return true;
         }
         if (TimedSceneEffect.field_r) {
           return true;
         }
-        if (!vs.isGuestSession((byte) 9)) {
+        if (!AccountPacketReader.isGuestSession((byte) 9)) {
           return false;
         }
         return true;
@@ -97,7 +97,7 @@ final class ClientException extends RuntimeException {
         SoftwareRasterizer.setRaster(var1.pixels, var1.width, var1.height);
         SoftwareRasterizer.setClip(var1.clipLeft, var1.clipTop, var1.clipRight, var1.clipBottom);
         var1.pixels = null;
-        ko.field_m.addLast((IntrusiveNode) (var1), (byte) 39);
+        PointLight.recycledRasterFrames.addLast((IntrusiveNode) (var1), (byte) 39);
         int var2 = -37 / ((guard - 1) / 38);
     }
 

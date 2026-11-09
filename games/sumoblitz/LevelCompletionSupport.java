@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o {
+final class LevelCompletionSupport {
     static ToolkitSprite[] field_b;
     static String field_a;
 
-    final static void a(int param0) {
+    final static void completeLevel(int guard) {
         TextureMetadata.field_f[OpenGlShaderProgram.levelIndex] = true;
         Js5ClientState.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
@@ -29,7 +29,7 @@ final class o {
         if (OpenGlTexture3D.field_j[OpenGlShaderProgram.levelIndex] < FadingWidget.score) {
           OpenGlTexture3D.field_j[OpenGlShaderProgram.levelIndex] = FadingWidget.score;
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           field_a = (String) null;
         }
         if (OpenGlShaderProgram.levelIndex == 12 &&
@@ -40,15 +40,15 @@ final class o {
         BlendMode.lastLevelScore = FadingWidget.score;
     }
 
-    public static void b(int param0) {
-        if (param0 != 6) {
-          o.a((byte) 64);
+    public static void releaseStatics(int guard) {
+        if (guard != 6) {
+          LevelCompletionSupport.initializeHslColorTable((byte) 64);
         }
         field_b = null;
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void initializeHslColorTable(byte guard) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
@@ -71,10 +71,10 @@ final class o {
         int var26 = 0;
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != ReassignUpgradesScreen.field_i) {
+          if (null != ReassignUpgradesScreen.hslToRgb) {
             return;
           }
-          ReassignUpgradesScreen.field_i = new int[65536];
+          ReassignUpgradesScreen.hslToRgb = new int[65536];
           var1_double = Math.random() * 0.03 - 0.015 + 0.7;
           for (var3 = 0; var3 < 65536; var3++) {
             var4 = (double)(var3 >> 10 & 63) / 64.0 + 0.0078125;
@@ -146,16 +146,16 @@ final class o {
             var17 = (int)(256.0 * var12);
             var18 = (int)(var14 * 256.0);
             var19 = (var16 << 16) - (-(var17 << 8) - var18);
-            ReassignUpgradesScreen.field_i[var3] = var19;
+            ReassignUpgradesScreen.hslToRgb[var3] = var19;
           }
-          if (param0 != -56) {
+          if (guard != -56) {
             field_b = (ToolkitSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "o.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "o.B(" + guard + ')');
         }
     }
 

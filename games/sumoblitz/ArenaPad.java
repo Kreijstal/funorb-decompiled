@@ -361,7 +361,7 @@ final class ArenaPad extends IntrusiveNode {
             this.bounceDrone((Drone) null, 12);
           }
           var3_int = drone.radiusQ8 + (this.radiusPixels << 8);
-          stackIn_4_0 = wn.a(drone.yQ8, var3_int, -114, this.xQ8, drone.xQ8, this.yQ8);
+          stackIn_4_0 = DroneProximitySupport.isWithinRadius(drone.yQ8, var3_int, -114, this.xQ8, drone.xQ8, this.yQ8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -419,10 +419,10 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            o.field_b[0].draw((this.xQ8 >> 8) - (o.field_b[0].width() >> 1), (this.yQ8 >> 8) - (o.field_b[0].height() >> 1));
+            LevelCompletionSupport.field_b[0].draw((this.xQ8 >> 8) - (LevelCompletionSupport.field_b[0].width() >> 1), (this.yQ8 >> 8) - (LevelCompletionSupport.field_b[0].height() >> 1));
             decompiledFrameRemainder7 = !(this.triggerCooldownTicks > 5);
             if (decompiledFrameRemainder7) {
-              o.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
+              LevelCompletionSupport.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
@@ -460,8 +460,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            uc.field_e[0].draw((this.xQ8 >> 8) - (uc.field_e[0].width() >> 1), (this.yQ8 >> 8) - (uc.field_e[0].height() >> 1));
-            uc.field_e[1].draw((this.xQ8 >> 8) - (uc.field_e[1].width() >> 1), (this.yQ8 >> 8) - (uc.field_e[1].height() >> 1), 1, 0, 2);
+            IntroductionOverlaySupport.field_e[0].draw((this.xQ8 >> 8) - (IntroductionOverlaySupport.field_e[0].width() >> 1), (this.yQ8 >> 8) - (IntroductionOverlaySupport.field_e[0].height() >> 1));
+            IntroductionOverlaySupport.field_e[1].draw((this.xQ8 >> 8) - (IntroductionOverlaySupport.field_e[1].width() >> 1), (this.yQ8 >> 8) - (IntroductionOverlaySupport.field_e[1].height() >> 1), 1, 0, 2);
             DirectByteArrayStorage.field_e.draw((this.xQ8 >> 8) - (DirectByteArrayStorage.field_e.width() >> 1), (this.yQ8 >> 8) - (DirectByteArrayStorage.field_e.height() >> 1), 0, 16777215 + (this.highlightAlpha << 24), 1);
             decompiledFrameRemainder7 = (var4 != 0);
           }
@@ -469,8 +469,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            uj.field_b[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, 0);
-            uj.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
+            EnemyDroneFactory.field_b[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, 0);
+            EnemyDroneFactory.field_b[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&

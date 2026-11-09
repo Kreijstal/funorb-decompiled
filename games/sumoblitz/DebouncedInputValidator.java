@@ -6,7 +6,7 @@ abstract class DebouncedInputValidator implements InputValidator {
     static int field_b;
 
     public final void markChanged(byte guard) {
-        this.lastChangedAt = wq.monotonicTimeMillis(-100);
+        this.lastChangedAt = IntroMeshResources.monotonicTimeMillis(-100);
         if (guard > -14) {
           this.getMessage(31);
         }
@@ -249,7 +249,7 @@ abstract class DebouncedInputValidator implements InputValidator {
         if (this.isEmpty(-8003)) {
           return LegacyOpenGlGraphicsHeap.EMPTY;
         }
-        if (wq.monotonicTimeMillis(-89) >= this.lastChangedAt + 350L) {
+        if (IntroMeshResources.monotonicTimeMillis(-89) >= this.lastChangedAt + 350L) {
           int var2 = -1 % ((guard + 19) / 46);
           return this.evaluateStatus((byte) 114);
         }
@@ -263,7 +263,7 @@ abstract class DebouncedInputValidator implements InputValidator {
         if (this.isEmpty(-8003)) {
           return null;
         }
-        if (wq.monotonicTimeMillis(guard - 3706) >= (350L + this.lastChangedAt)) {
+        if (IntroMeshResources.monotonicTimeMillis(guard - 3706) >= (350L + this.lastChangedAt)) {
           return this.evaluateMessage(-98);
         }
         return null;

@@ -16,15 +16,15 @@ final class MenuSelectionController {
         GraphicsToolkit var2 = MatchingTextValidator.field_h.getToolkit(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, SecondaryNodeHashTable.field_g, true);
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, ArchiveLoadingStage.field_b, true);
-        uq.field_a = var2.createFont(AccountConnectionPhase.field_a, OpenGlTransparentWaterEffect.field_i, true);
+        GameTrackPlayback.field_a = var2.createFont(AccountConnectionPhase.field_a, OpenGlTransparentWaterEffect.field_i, true);
         QueuedIntArrayRequest.field_k = var2.createFont(sv.field_a, LegacyOpenGlReflectionEffect.field_j, true);
         hc.field_e = var2.createFont(LoginTextResources.field_b, DropDownWidget.field_F, true);
-        ForceFieldRingEffect.field_t = var2.createFont(sq.field_b, ProxySocketConnector.field_f, true);
+        ForceFieldRingEffect.field_t = var2.createFont(IntroLightingLookup.field_b, ProxySocketConnector.field_f, true);
         up.field_c = DroneDebris.createToolkitSprites(NameSuggestionsPanel.field_F, var2, 28513);
         ResizingDialog.field_H = DroneDebris.createToolkitSprites(MidiNoteMixer.field_q, var2, 28513);
-        qw.field_a = DroneDebris.createToolkitSprites(SoftwareRenderTarget.field_b, var2, 28513);
+        DroneEscalationSupport.field_a = DroneDebris.createToolkitSprites(SoftwareRenderTarget.field_b, var2, 28513);
         pi.field_d = ResizingDialog.a(var2, CompactMeshGeometry.field_N, (byte) -11);
-        uj.field_a = ResizingDialog.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
+        EnemyDroneFactory.field_a = ResizingDialog.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = ResizingDialog.a(var2, IntrusiveNode.field_d, (byte) -11);
         CacheReferenceNode.field_y = ResizingDialog.a(var2, OpenGlCubeTexture.field_i, (byte) -11);
         BlendMode.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
@@ -43,7 +43,7 @@ final class MenuSelectionController {
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(LegacyOpenGlTextureCache.field_e, var2, 28513);
         ProjectionMode.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
         TextHotspot.field_n = DroneDebris.createToolkitSprites(StatefulWidgetRenderer.field_r, var2, 28513);
-        MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
+        MenuScreen.field_a = DroneDebris.createToolkitSprites(RasterColorTables.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
         if (guard) {
           field_c = (ResourceArchive) null;
@@ -54,10 +54,10 @@ final class MenuSelectionController {
           UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, ServerDataReadRequest.field_k, (byte) -11);
           DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
           IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
-          MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
+          MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(EnemyDroneFactory.field_c, var2, 28513);
           ResizingDialog.a(var2, HiscorePlayerName.field_d, (byte) -11);
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
-          uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
+          IntroductionOverlaySupport.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
           CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(UiStyle.field_v, var2, 28513);
           OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
           ResizingDialog.a(var2, EmailAvailabilityRequest.field_g, (byte) -11);
@@ -79,14 +79,14 @@ final class MenuSelectionController {
           ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
           DirectByteArrayStorage.field_e = ResizingDialog.a(var2, VertexBufferReference.field_c, (byte) -11);
-          DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
+          DroneDebris.createToolkitSprites(BigBurstaProgress.attractorSpriteData, var2, 28513);
           LegacyOpenGlTextureCache.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
           OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
           DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
           ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
-          uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
-          uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
-          o.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
+          EnemyDroneFactory.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
+          IntroductionOverlaySupport.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
+          LevelCompletionSupport.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
           HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
           OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
           LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
@@ -103,10 +103,10 @@ final class MenuSelectionController {
         UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, ServerDataReadRequest.field_k, (byte) -11);
         DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
         IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
-        MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
+        MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(EnemyDroneFactory.field_c, var2, 28513);
         ResizingDialog.a(var2, HiscorePlayerName.field_d, (byte) -11);
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
-        uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
+        IntroductionOverlaySupport.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
         CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(UiStyle.field_v, var2, 28513);
         OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
         ResizingDialog.a(var2, EmailAvailabilityRequest.field_g, (byte) -11);
@@ -128,14 +128,14 @@ final class MenuSelectionController {
         ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
         DirectByteArrayStorage.field_e = ResizingDialog.a(var2, VertexBufferReference.field_c, (byte) -11);
-        DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
+        DroneDebris.createToolkitSprites(BigBurstaProgress.attractorSpriteData, var2, 28513);
         LegacyOpenGlTextureCache.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
         OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
         DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
         ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
-        uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
-        uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
-        o.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
+        EnemyDroneFactory.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
+        IntroductionOverlaySupport.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
+        LevelCompletionSupport.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
         HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
         OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
         LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
@@ -209,14 +209,14 @@ final class MenuSelectionController {
                 }
                 if (var3.destructionTicks == 2 && (var3.droneType == 4 ||
                   var3.variant == 6)) {
-                  var4Lifetime2 = uj.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
-                  var5 = uj.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
+                  var4Lifetime2 = EnemyDroneFactory.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
+                  var5 = EnemyDroneFactory.createEnemyDrone(var3.field_u, var3.xQ8, var3.field_e, (byte) 84, var3.yQ8);
                   HardwareUnlitEffect.a(var4Lifetime2, false);
                   HardwareUnlitEffect.a(var5, false);
                 }
                 if (var3.destructionTicks > 100) {
                   if (MessageDialog.arcadeMode) {
-                    qw.a(94, var3);
+                    DroneEscalationSupport.spawnEscalatedEnemy(94, var3);
                   }
                   SpriteMask.drones[var2] = null;
                 }

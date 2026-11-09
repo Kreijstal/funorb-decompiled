@@ -36,7 +36,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (qw.isAsciiAlphanumeric(57, param1)) {
+          if (DroneEscalationSupport.isAsciiAlphanumeric(57, param1)) {
             return true;
           }
           var6 = MidiPcmStream.field_o;
@@ -94,7 +94,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
           this.width = param3;
           this.height = param4;
           this.toolkit.a((GpuTexture) (this), 92);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-27), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ws.glDataType(this.dataType, (byte) 119), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-27), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ClientStackTraceFormatter.glDataType(this.dataType, (byte) 119), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

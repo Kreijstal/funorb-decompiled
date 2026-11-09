@@ -135,7 +135,7 @@ final class SocialContact extends UiStyle {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) text);
-          var3_int = vs.a((byte) -117, var10, delimiter);
+          var3_int = AccountPacketReader.countCharacter((byte) -117, var10, delimiter);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ws {
+final class ClientStackTraceFormatter {
     static int field_b;
     static String toKeepFullscreenOrText;
 
@@ -72,8 +72,8 @@ final class ws {
         }
     }
 
-    final static boolean b(byte param0) {
-        if (param0 != 52) {
+    final static boolean retainDialogRaster(byte guard) {
+        if (guard != 52) {
           toKeepFullscreenOrText = (String) null;
           return QuickChatPhraseProvider.field_b;
         }
@@ -89,7 +89,7 @@ final class ws {
         toKeepFullscreenOrText = null;
     }
 
-    final static String a(byte param0, Throwable param1) throws IOException {
+    final static String formatThrowable(byte guard, Throwable failure) throws IOException {
         ClientException var14 = null;
         String var8 = null;
         int var9 = 0;
@@ -112,19 +112,19 @@ final class ws {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (!(param1 instanceof ClientException)) {
+        if (!(failure instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (ClientException) ((Object) param1);
+          var14 = (ClientException) ((Object) failure);
           var2 = var14.field_a + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
-          param1 = var14.field_b;
+          failure = var14.field_b;
         }
         StringWriter var15 = new StringWriter();
         PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
-        param1.printStackTrace(var4);
+        failure.printStackTrace(var4);
         var4.close();
         String var5 = var15.toString();
         var11Lifetime1 = var5;
@@ -175,7 +175,7 @@ final class ws {
           var2Lifetime2 = var2Lifetime2 + ' ';
         }
         var2Lifetime2 = var2Lifetime2 + "| " + var7;
-        if (param0 == 71) {
+        if (guard == 71) {
           return var2Lifetime2;
         }
         return (String) null;

@@ -32,22 +32,22 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     private String field_Wc;
     private int field_Oc;
 
-    final void Y(int param0) {
-        ko var3 = null;
+    final void applyPointLights(int guard) {
+        PointLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
         int var2 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         this.resetModelTransform(1);
-        for (var2 = 0; this.field_ub > var2; var2++) {
-          var3 = this.field_pb[var2];
-          var4 = var3.c((byte) 50);
+        for (var2 = 0; this.pendingPointLightCount > var2; var2++) {
+          var3 = this.pointLights[var2];
+          var4 = var3.color((byte) 50);
           var5 = 16386 + var2;
-          var6 = var3.a(0) / 255.0f;
-          NetworkResourceRequest.field_v[0] = (float)var3.a((byte) 97);
-          NetworkResourceRequest.field_v[1] = (float)var3.d((byte) 109);
-          NetworkResourceRequest.field_v[2] = (float)var3.c(true);
+          var6 = var3.intensity(0) / 255.0f;
+          NetworkResourceRequest.field_v[0] = (float)var3.getX((byte) 97);
+          NetworkResourceRequest.field_v[1] = (float)var3.getY((byte) 109);
+          NetworkResourceRequest.field_v[2] = (float)var3.getZ(true);
           NetworkResourceRequest.field_v[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, NetworkResourceRequest.field_v, 0);
           NetworkResourceRequest.field_v[0] = var6 * (float)LegacyOpenGlPostProcessManager.bitwiseAnd(var4 >> 16, 255);
@@ -55,17 +55,17 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           NetworkResourceRequest.field_v[1] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(var4 >> 8, 255) * var6;
           NetworkResourceRequest.field_v[2] = var6 * (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, var4);
           jaggl.OpenGL.glLightfv(var5, 4609, NetworkResourceRequest.field_v, 0);
-          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.c(0) * var3.c(0)));
+          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.radius(0) * var3.radius(0)));
           jaggl.OpenGL.glEnable(var5);
         }
-        while (var2 < this.field_Ab) {
+        while (var2 < this.previousPointLightCount) {
           jaggl.OpenGL.glDisable(16386 + var2);
           var2++;
         }
-        if (param0 >= -83) {
+        if (guard >= -83) {
           this.field_Ac = true;
         }
-        super.Y(-120);
+        super.applyPointLights(-120);
     }
 
     final Object a(java.awt.Canvas param0, int param1) {
@@ -317,9 +317,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
           if (!(this.estimatedResourceBytes(64) <= 100663296) &&
-            !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
+            !(IntroMeshResources.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
-            this.field_Cc = wq.monotonicTimeMillis(-39);
+            this.field_Cc = IntroMeshResources.monotonicTimeMillis(-39);
           }
         } else {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
@@ -341,9 +341,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
           if (!(this.estimatedResourceBytes(64) <= 100663296) &&
-            !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
+            !(IntroMeshResources.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
-            this.field_Cc = wq.monotonicTimeMillis(-39);
+            this.field_Cc = IntroMeshResources.monotonicTimeMillis(-39);
           }
         }
         super.updateTime(timeMillis);
@@ -1570,7 +1570,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glLoadMatrixf(this.viewTransform.writeColumnMajor4x4(-63, StripedProgressWidget.field_y), 0);
             this.field_Uc = true;
             this.applyLightPositions(-114);
-            this.Y(param0 ^ -25);
+            this.applyPointLights(param0 ^ -25);
           }
           if (!this.modelIdentity) {
             jaggl.OpenGL.glPushMatrix();

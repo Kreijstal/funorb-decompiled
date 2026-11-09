@@ -41,7 +41,7 @@ final class PlayingSound extends IntrusiveNode {
           this.stream = param0;
           this.originalVolume = param0.targetVolume();
           this.lifetimeNode = param1;
-          this.stream.setVolume(128 + this.originalVolume * kr.field_c >> 8);
+          this.stream.setVolume(128 + this.originalVolume * RasterColorTables.soundVolume >> 8);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -27,26 +27,26 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
             root.clearFocus((byte) 116);
           }
           var7 = -26 / ((guard + 25) / 45);
-          var5_long = -this.field_W + wq.monotonicTimeMillis(-118);
+          var5_long = -this.field_W + IntroMeshResources.monotonicTimeMillis(-118);
           var8 = (int)((10999L - var5_long) / 1000L);
           if (var8 > 0) {
             this.field_S.text = "" + var8;
           } else {
             HardwareAnimatedWaterEffect.d(1);
             this.e(true);
-            this.dialogLayer.pushDialog((byte) 121, new DisplayModeErrorDialog(this.dialogLayer, FontMetrics.field_f));
+            this.dialogLayer.pushDialog((byte) 121, new DisplayModeErrorDialog(this.dialogLayer, FontMetrics.FULLSCREEN_CONFIRMATION_TIMEOUT));
           }
           if (this.open &&
             null == CompactMeshGeometry.field_o) {
             this.e(true);
-            this.dialogLayer.pushDialog((byte) 97, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.field_e));
+            this.dialogLayer.pushDialog((byte) 97, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
           }
           if (null != CompactMeshGeometry.field_o) {
             if (!CompactMeshGeometry.field_o.field_a) {
               return;
             }
             this.e(true);
-            this.dialogLayer.pushDialog((byte) 122, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.field_e));
+            this.dialogLayer.pushDialog((byte) 122, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
-          this.field_W = wq.monotonicTimeMillis(-97);
+          this.field_W = IntroMeshResources.monotonicTimeMillis(-97);
           var3 = new UiWidget(GraphicsToolkit.field_d, (WidgetListener) null);
           var3.height = 100;
           var3.y = 50;

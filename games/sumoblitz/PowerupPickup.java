@@ -228,7 +228,7 @@ final class PowerupPickup extends IntrusiveNode {
         var3 = (ArenaPad) (var2.first((byte) -80));
         while (var3 != null) {
           var4 = (var3.radiusPixels << 8) + this.radiusQ8;
-          if (wn.a(this.yQ8, var4, -117, var3.xQ8, this.xQ8, var3.yQ8) && (3 == var3.padType ||
+          if (DroneProximitySupport.isWithinRadius(this.yQ8, var4, -117, var3.xQ8, this.xQ8, var3.yQ8) && (3 == var3.padType ||
             var3.padType == 6)) {
             return true;
           }

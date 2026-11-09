@@ -464,7 +464,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         FontMetrics.field_b = FontMetrics.field_b + 1;
-        if (ps.field_e[12] == FontMetrics.field_b) {
+        if (AchievementThresholds.targets[12] == FontMetrics.field_b) {
           UnderageAccountInfoPanel.b(24753, 243, 12);
           if (ScoreMultiplierTable.multipliers.length <= var1) {
             var1 = ScoreMultiplierTable.multipliers.length - 1;

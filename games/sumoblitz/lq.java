@@ -42,13 +42,13 @@ final class lq {
             ResourceArchive var5 = (ResourceArchive) null;
             lq.archiveLoadingMessage(-58, (String) null, (String) null, (ResourceArchive) null);
           }
-          kh.field_a = new Sprite(var3, var4 * 3 / 4);
-          kh.field_a.bindRaster();
+          LoginIdentifierSupport.field_a = new Sprite(var3, var4 * 3 / 4);
+          LoginIdentifierSupport.field_a.bindRaster();
           var6.c(0, 0);
-          MusicPatchEnvelope.field_a = new Sprite(var3, var4 - kh.field_a.field_u);
+          MusicPatchEnvelope.field_a = new Sprite(var3, var4 - LoginIdentifierSupport.field_a.field_u);
           MusicPatchEnvelope.field_a.bindRaster();
-          var6.c(0, -kh.field_a.field_u);
-          MusicPatchEnvelope.field_a.field_A = kh.field_a.field_u;
+          var6.c(0, -LoginIdentifierSupport.field_a.field_u);
+          MusicPatchEnvelope.field_a.field_A = LoginIdentifierSupport.field_a.field_u;
           ClientException.popRasterState((byte) 71);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (archive != null ? "{...}" : "null") + ',' + guard + ')');

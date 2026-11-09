@@ -76,7 +76,7 @@ final class StrongCacheReference extends CacheReferenceNode {
     }
 
     final static void switchMenuScreen(int param0, boolean param1, int param2) {
-        eh.field_a = 0;
+        MenuFadeState.transitionTicks = 0;
         OpenGlCubeTexture.field_k = param2;
         if (param0 != -7753) {
           field_C = (int[]) null;

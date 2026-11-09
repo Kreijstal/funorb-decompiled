@@ -89,7 +89,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             for (var7_int = 0; var7_int < var4; var7_int++) {
               var10[var7_int] = LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd((int) var21[var7_int], 255)];
             }
-            var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var22);
+            var1[var2] = new Sprite(DisplayModeFailure.spriteSheetWidth, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var22);
           } else {
             var23 = StatefulWidgetRenderer.field_o[var2];
             var17 = new int[var4];
@@ -98,7 +98,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             for (var8 = 0; var8 < var4; var8++) {
               var7[var8] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd((int) var21[var8], 255)], LegacyOpenGlPostProcessManager.bitwiseAnd((int) var23[var8], 255) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(DisplayModeFailure.spriteSheetWidth, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var17));
           }
           var2++;
         }
@@ -110,10 +110,10 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
         if (guard != 5008) {
           reassignPowerupsText = (String) null;
         }
-        int var2 = (ko.field_p - 45) / 300;
+        int var2 = (PointLight.mouseX - 45) / 300;
         int var3 = (pi.field_e - 200) / 100;
         this.hoveredOption = var2 + 2 * var3;
-        if ((ko.field_p - 45) % 300 > 250) {
+        if ((PointLight.mouseX - 45) % 300 > 250) {
           this.hoveredOption = -1;
         }
         if (!(this.hoveredOption < 2)) {

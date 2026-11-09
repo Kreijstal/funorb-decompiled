@@ -220,7 +220,7 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
           if (param1 != 53) {
             updatesWillSentToText = (String) null;
           }
-          stackIn_3_0 = sj.a(false, 126, param0);
+          stackIn_3_0 = DisplayPromptRenderer.isValidAccountName(false, 126, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

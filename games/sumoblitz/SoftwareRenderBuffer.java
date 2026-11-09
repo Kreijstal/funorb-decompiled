@@ -119,7 +119,7 @@ final class SoftwareRenderBuffer implements RenderBuffer {
           return;
         }
         try {
-          if (11 == jv.field_a) {
+          if (11 == LoginDialogNavigation.field_a) {
             tu.a((byte) -126);
           }
           VertexStreamLayout.a(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);

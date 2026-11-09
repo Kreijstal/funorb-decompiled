@@ -14,9 +14,9 @@ final class AccountUiBootstrap {
     final static PcmStreamMixer gameSoundMixer(int guard) {
         if (guard != 14263) {
           difficultyText = (String) null;
-          return sj.field_c;
+          return DisplayPromptRenderer.field_c;
         }
-        return sj.field_c;
+        return DisplayPromptRenderer.field_c;
     }
 
     final static int parseInt(byte guard, CharSequence text, int radix) {

@@ -61,8 +61,8 @@ final class ke {
         if (AccountServiceResult.waveIndex < Bzip2State.field_J.length) {
           SocketConnector.field_c = 0;
           NativeLibraryExtractor.spawnNextWaveGroup(120);
-          uc.field_f = TextureFormat.elapsedTicks;
-          kp.field_a = false;
+          IntroductionOverlaySupport.field_f = TextureFormat.elapsedTicks;
+          StatisticsSubmissionSupport.field_a = false;
           DroneDebris.field_C = false;
         }
     }

@@ -22,7 +22,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
           if (0 != this.textureKind) {
             im.field_a.draw(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
           } else {
-            uc.field_a.drawRotated((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
+            IntroductionOverlaySupport.field_a.drawRotated((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
           }
           if (guard <= -121) {
             return;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qw {
+final class DroneEscalationSupport {
     static int field_b;
     static String passwordsMustBeBetweenText;
     static ToolkitSprite[] field_a;
@@ -103,7 +103,7 @@ final class qw {
         ScreenNameValidator.a(false, 4, (byte) -24);
     }
 
-    final static void a(int param0, Drone param1) {
+    final static void spawnEscalatedEnemy(int guard, Drone source) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -118,10 +118,10 @@ final class qw {
         int var3Lifetime1;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 < 57) {
+          if (guard < 57) {
             return;
           }
-          if (param1.droneType == 0) {
+          if (source.droneType == 0) {
             return;
           }
           if (AgeValidator.countEnemyDrones(true) > 20) {
@@ -129,15 +129,15 @@ final class qw {
           }
           var2_int = ExpandingRingEffect.nextRandomInt(2, HardwareGraphicsHeap.field_o, (byte) -96);
           if (1 == var2_int) {
-            var3 = param1.droneType + 1;
+            var3 = source.droneType + 1;
             if (6 <= var3) {
               var3 = 5;
             }
-            var6 = uj.createEnemyDrone(var3, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, param1.variant, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
+            var6 = EnemyDroneFactory.createEnemyDrone(var3, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, source.variant, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
             HardwareUnlitEffect.a(var6, false);
             return;
           }
-          var3Lifetime1 = param1.variant;
+          var3Lifetime1 = source.variant;
           var4 = var3Lifetime1;
           if (var4 == 4) {
             var3Lifetime1 = 0;
@@ -161,15 +161,15 @@ final class qw {
           if (var3Lifetime1 >= 7) {
             var3Lifetime1 = 6;
           }
-          var7 = uj.createEnemyDrone(param1.droneType, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
+          var7 = EnemyDroneFactory.createEnemyDrone(source.droneType, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
           HardwareUnlitEffect.a(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_31_0 = var2;
-          stackIn_31_1 = new StringBuilder().append("qw.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_31_1 = new StringBuilder().append("qw.B(").append(guard).append(',');
+          if (source == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";

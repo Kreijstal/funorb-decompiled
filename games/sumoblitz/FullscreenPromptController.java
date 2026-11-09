@@ -71,7 +71,7 @@ final class FullscreenPromptController {
             }
             var2 = 1;
           }
-          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
+          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, PointLight.mouseX));
           if (RendererPreference.field_a.isActivated(-31260)) {
             var1_int = 1;
           }
@@ -93,7 +93,7 @@ final class FullscreenPromptController {
           }
           if (var3 == 0 &&
             2 == DroneChargeParticle.field_s) {
-            var5 = -LegacyOpenGlEffectManager.field_f + wq.monotonicTimeMillis(-84);
+            var5 = -LegacyOpenGlEffectManager.field_f + IntroMeshResources.monotonicTimeMillis(-84);
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {
               var3 = 2;

@@ -103,7 +103,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("error_js5crc", (byte) -23);
                 if (null != var2) {
-                  o.field_a = MusicVoice.a(param0 ^ 7, var2);
+                  LevelCompletionSupport.field_a = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("error_js5io", (byte) -23);
                 if (null != var2) {
@@ -1085,7 +1085,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("reloadgame", (byte) -23);
                 if (var2 != null) {
-                  vf.reloadGameText = MusicVoice.a(param0 - 7, var2);
+                  DisplayModeFailure.reloadGameText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("toserverlist", (byte) -23);
                 if (null != var2) {
@@ -1333,7 +1333,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("openinpopupwindow", (byte) -23);
                 if (var2 != null) {
-                  sb.openInPopupWindowText = MusicVoice.a(0, var2);
+                  GameDefinitionLoader.openInPopupWindowText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create", (byte) -23);
                 if (null != var2) {
@@ -1580,7 +1580,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_password_hint", (byte) -23);
                 if (null != var2) {
-                  qw.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
+                  DroneEscalationSupport.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_password_confirm_tooltip", (byte) -23);
                 if (null != var2) {
@@ -2702,7 +2702,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_afteraccept", (byte) -23);
                 if (null != var2) {
-                  ws.toKeepFullscreenOrText = MusicVoice.a(0, var2);
+                  ClientStackTraceFormatter.toKeepFullscreenOrText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_button_cancel", (byte) -23);
                 if (var2 != null) {
@@ -2834,7 +2834,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_fixed_size", (byte) -23);
                 if (var2 != null) {
-                  kp.classicText = MusicVoice.a(param0 - 7, var2);
+                  StatisticsSubmissionSupport.classicText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_resizable", (byte) -23);
                 if (var2 != null) {
@@ -2954,33 +2954,33 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,1", (byte) -23);
                 if (null != var2) {
-                  kr.field_f[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  RasterColorTables.field_f[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,2", (byte) -23);
                 if (null != var2) {
-                  kr.field_f[2] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[2] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,3", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[3] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[3] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,4", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[4] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[4] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,5", (byte) -23);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  kr.field_f[5] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[5] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,6", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[6] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[6] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin4,7", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[7] = MusicVoice.a(0, var2);
+                  RasterColorTables.field_f[7] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin_notloggedin", (byte) -23);
                 if (var2 != null) {

@@ -65,7 +65,7 @@ final class DroneIntroductionOverlay {
         int var5 = 160;
         String var9 = LimitedRandomAccessFile.droneDescriptions[this.droneType * 2];
         QueuedIntArrayRequest.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
-        uq.field_a.a(var9, -1, -1, var4, var3_int, 0);
+        GameTrackPlayback.field_a.a(var9, -1, -1, var4, var3_int, 0);
         if (guard != -4475) {
           return;
         }
@@ -81,7 +81,7 @@ final class DroneIntroductionOverlay {
             var7 = -this.dismissalDelay << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
             QueuedIntArrayRequest.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
-            uq.field_a.a(var11, -1, -1, var4, var3_int, 0);
+            GameTrackPlayback.field_a.a(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
@@ -115,7 +115,7 @@ final class DroneIntroductionOverlay {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (!vs.isGuestSession((byte) 9)) {
+        if (!AccountPacketReader.isGuestSession((byte) 9)) {
           LruNodeCache.gameplaySession.submitSessionStatistics(-113);
           HardwareTextureCache.field_f = null;
         } else {
@@ -125,7 +125,7 @@ final class DroneIntroductionOverlay {
             StrongCacheReference.switchMenuScreen(-7753, param0, 0);
           }
         }
-        EnemyDrone.o(250);
+        EnemyDrone.hideDroneIntroduction(250);
         LruNodeCache.gameplaySession.resetSession(66);
         if (!param1) {
           return;

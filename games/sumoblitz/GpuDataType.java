@@ -16,7 +16,7 @@ final class GpuDataType {
 
     final static void a(int param0, PcmSampleStream param1) {
         try {
-          sj.field_c.removeSubstream(param1);
+          DisplayPromptRenderer.field_c.removeSubstream(param1);
           if (param0 < 93) {
             GpuDataType.releaseStatics(-28);
           }

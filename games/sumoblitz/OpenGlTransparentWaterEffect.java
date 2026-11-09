@@ -171,7 +171,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                   if (var4 != null &&
                     var4.isActive((byte) 113)) {
                     var5 = var2.radiusQ8 + var4.radiusQ8;
-                    if (wn.a(var2.yQ8, var5, -119, var4.xQ8, var2.xQ8, var4.yQ8)) {
+                    if (DroneProximitySupport.isWithinRadius(var2.yQ8, var5, -119, var4.xQ8, var2.xQ8, var4.yQ8)) {
                       if (var2.awakeTicksRemaining >= 0) {
                         var2.awakeTicksRemaining = 150;
                       }

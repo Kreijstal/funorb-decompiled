@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh {
+final class LoginIdentifierSupport {
     static int field_e;
     static byte[][] field_f;
-    static int[][] field_c;
+    static int[][] introMeshCenters;
     static Sprite field_a;
     static String field_d;
     static int[] field_b;
@@ -97,7 +97,7 @@ final class kh {
     final static void retryAccountCreationLogin(boolean guard) {
         VertexBufferReference.a(true, ArenaBackdropPalettes.field_d, (byte) 122, FadingWidget.field_C);
         if (guard) {
-          field_c = (int[][]) null;
+          introMeshCenters = (int[][]) null;
         }
         LoginDialogState.field_c = true;
     }
@@ -106,9 +106,9 @@ final class kh {
         field_b = null;
         if (param0 != 2) {
           IsaacPacketBuffer var2 = (IsaacPacketBuffer) null;
-          kh.readBitFlag((IsaacPacketBuffer) null, true);
+          LoginIdentifierSupport.readBitFlag((IsaacPacketBuffer) null, true);
         }
-        field_c = (int[][]) null;
+        introMeshCenters = (int[][]) null;
         field_a = null;
         field_f = (byte[][]) null;
         field_d = null;

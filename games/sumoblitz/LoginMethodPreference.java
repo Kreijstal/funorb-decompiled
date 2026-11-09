@@ -6,7 +6,7 @@ final class LoginMethodPreference {
     private String cookieValue;
     static SpriteData[] field_c;
     static int field_b;
-    static int field_d;
+    static int hslTableUsers;
     static AccountConnectionPhase WAIT_LOGIN_REPLY;
 
     public static void releaseStatics(int param0) {
@@ -70,7 +70,7 @@ final class LoginMethodPreference {
     static {
         field_a = new IntrusiveDeque();
         field_b = 0;
-        field_d = 0;
+        hslTableUsers = 0;
         WAIT_LOGIN_REPLY = new AccountConnectionPhase();
     }
 }

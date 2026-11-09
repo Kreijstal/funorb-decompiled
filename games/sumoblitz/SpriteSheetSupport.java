@@ -4,7 +4,7 @@
 final class SpriteSheetSupport {
     static String startGameText;
 
-    final static boolean decodeSpriteSheet(ResourceArchive archive, int groupId, int fileId, int guard) {
+    final static boolean decodeSpriteSheet(ResourceArchive archive, int fileId, int groupId, int guard) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -13,7 +13,7 @@ final class SpriteSheetSupport {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = archive.fetchFile((byte) 126, groupId, fileId);
+          var5 = archive.fetchFile((byte) 126, fileId, groupId);
           var4 = var5;
           if (guard != -23046) {
             startGameText = (String) null;
@@ -33,7 +33,7 @@ final class SpriteSheetSupport {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(',').append(fileId).append(',').append(guard).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(fileId).append(',').append(groupId).append(',').append(guard).append(')').toString());
         }
     }
 

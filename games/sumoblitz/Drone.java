@@ -352,7 +352,7 @@ class Drone {
         }
         boolean decompiledFrameRemainder0 = true;
         if (2 == this.droneType) {
-          if (!wn.a(this.targetYQ8, 2048, -128, this.xQ8, this.targetXQ8, this.yQ8)) {
+          if (!DroneProximitySupport.isWithinRadius(this.targetYQ8, 2048, -128, this.xQ8, this.targetXQ8, this.yQ8)) {
             if ((!(!this.isBlastChargeParticleTick(-2))) &&
               ((0 == this.droneType))) {
               NoiseSliceGenerator.a(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
@@ -692,7 +692,7 @@ class Drone {
           return true;
         }
         int var3 = this.radiusQ8 + var7.radiusQ8;
-        if (wn.a(var7.yQ8, var3, -115, this.xQ8, var7.xQ8, this.yQ8)) {
+        if (DroneProximitySupport.isWithinRadius(var7.yQ8, var3, -115, this.xQ8, var7.xQ8, this.yQ8)) {
           var4 = -var7.xQ8 + this.xQ8;
           if (var4 == 0) {
             var4 = -1 + (2 & this.ageTicks << 1);

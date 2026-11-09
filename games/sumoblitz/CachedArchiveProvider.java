@@ -7,7 +7,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     static ToolkitSprite[] field_j;
     private CacheIoWorker cacheWorker;
     static int[] field_z;
-    static vf field_e;
+    static DisplayModeFailure FULLSCREEN_FOCUS_FAILURE;
     private int expectedIndexCrc;
     private int archiveId;
     private SectorCacheStore indexCache;
@@ -31,7 +31,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (param0 > -78) {
           field_z = (int[]) null;
         }
-        field_e = null;
+        FULLSCREEN_FOCUS_FAILURE = null;
     }
 
     final ArchiveIndex fetchIndex(byte guard) {
@@ -482,7 +482,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           this.groupLoadPercent(30, -8);
         }
         if (this.discardCompletedRequests &&
-          wq.monotonicTimeMillis(-91) >= this.nextCleanupMillis) {
+          IntroMeshResources.monotonicTimeMillis(-91) >= this.nextCleanupMillis) {
           var2 = (ResourceRequest) (this.groupRequests.a(84));
           while (var2 != null) {
             if (!var2.pending) {
@@ -497,7 +497,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             var2 = (ResourceRequest) (this.groupRequests.a(true));
           }
-          this.nextCleanupMillis = 1000L + wq.monotonicTimeMillis(-42);
+          this.nextCleanupMillis = 1000L + IntroMeshResources.monotonicTimeMillis(-42);
         }
     }
 
@@ -607,6 +607,6 @@ final class CachedArchiveProvider extends ArchiveProvider {
 
     static {
         field_z = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
-        field_e = new vf();
+        FULLSCREEN_FOCUS_FAILURE = new DisplayModeFailure();
     }
 }

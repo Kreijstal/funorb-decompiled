@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj {
+final class DisplayPromptRenderer {
     static PcmStreamMixer field_c;
     static long field_a;
     static QuickChatCommand field_b;
 
-    final static void a(byte param0) {
+    final static void drawDisplayPrompt(byte guard) {
         int var3 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
@@ -33,12 +33,12 @@ final class sj {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1_int = ProxyAuthenticationRequiredException.field_f;
-          if (param0 < 118) {
-            sj.releaseStatics(false);
+          if (guard < 118) {
+            DisplayPromptRenderer.releaseStatics(false);
           }
           var2 = 0;
           if (DroneChargeParticle.field_s == 2) {
-            var3_long = wq.monotonicTimeMillis(-124) - LegacyOpenGlEffectManager.field_f;
+            var3_long = IntroMeshResources.monotonicTimeMillis(-124) - LegacyOpenGlEffectManager.field_f;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -122,14 +122,14 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "sj.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "sj.C(" + guard + ')');
         }
     }
 
     public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
-          sj.a(-105, -2, -5);
+          DisplayPromptRenderer.showLevelIntroduction(-105, -2, -5);
           field_b = null;
           return;
         }
@@ -138,89 +138,89 @@ final class sj {
 
     final static boolean a(int param0) {
         BeveledTextInputRenderer.field_o = true;
-        field_a = 15000L + wq.monotonicTimeMillis(-13);
+        field_a = 15000L + IntroMeshResources.monotonicTimeMillis(-13);
         if (param0 < -26) {
-          return jv.field_a == 11 ? true : false;
+          return LoginDialogNavigation.field_a == 11 ? true : false;
         }
         field_b = (QuickChatCommand) null;
-        return jv.field_a == 11 ? true : false;
+        return LoginDialogNavigation.field_a == 11 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void showLevelIntroduction(int guard, int waveIndex, int levelIndex) {
         int var3;
         int var4;
         int var3Lifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 == -1) {
-          if (!SocketJs5Client.field_p[param2] &&
-            !TextureMetadata.field_f[param2]) {
-            var3 = param2;
+        if (guard == -1) {
+          if (!SocketJs5Client.field_p[levelIndex] &&
+            !TextureMetadata.field_f[levelIndex]) {
+            var3 = levelIndex;
             if (0 == var3) {
-              if (param1 == 0) {
-                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 16);
+              if (waveIndex == 0) {
+                OpenGlVertexLayout.field_f.show(guard ^ 3387, 16);
               }
-              if (param1 == 1) {
+              if (waveIndex == 1) {
                 OpenGlVertexLayout.field_f.show(-3388, 0);
               }
-              if (2 == param1) {
+              if (2 == waveIndex) {
                 OpenGlVertexLayout.field_f.show(-3388, 1);
-                SocketJs5Client.field_p[param2] = true;
+                SocketJs5Client.field_p[levelIndex] = true;
               }
               return;
             }
             if (1 == var3) {
-              if (0 == param1) {
-                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 2);
-                SocketJs5Client.field_p[param2] = true;
+              if (0 == waveIndex) {
+                OpenGlVertexLayout.field_f.show(guard ^ 3387, 2);
+                SocketJs5Client.field_p[levelIndex] = true;
               }
               return;
             }
             if (var3 != 2) {
               if (var3 == 3) {
-                if (param1 != 0) {
+                if (waveIndex != 0) {
                   return;
                 }
                 OpenGlVertexLayout.field_f.show(-3388, 6);
               } else {
                 if (4 == var3) {
-                  if (0 == param1) {
+                  if (0 == waveIndex) {
                     OpenGlVertexLayout.field_f.show(-3388, 7);
                   }
-                  if (param1 == 1) {
-                    OpenGlVertexLayout.field_f.show(param0 ^ 3387, 4);
+                  if (waveIndex == 1) {
+                    OpenGlVertexLayout.field_f.show(guard ^ 3387, 4);
                   }
-                  if (param1 == 2) {
+                  if (waveIndex == 2) {
                     OpenGlVertexLayout.field_f.show(-3388, 8);
                   }
-                  if (param1 != 3) {
+                  if (waveIndex != 3) {
                     return;
                   }
-                  OpenGlVertexLayout.field_f.show(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.show(guard ^ 3387, 9);
                 } else {
                   if (var3 != 5) {
                     if (6 != var3) {
                       if (var3 == 8) {
-                        if (param1 != 1) {
+                        if (waveIndex != 1) {
                           return;
                         }
                         OpenGlVertexLayout.field_f.show(-3388, 11);
                       } else {
                         if (var3 == 9) {
-                          if (0 != param1) {
+                          if (0 != waveIndex) {
                             return;
                           }
                           OpenGlVertexLayout.field_f.show(-3388, 12);
                         } else {
                           if (var3 == 10) {
-                            if (0 != param1) {
+                            if (0 != waveIndex) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.show(guard ^ 3387, 13);
                           } else {
                             if (11 != var3) {
                               return;
                             }
-                            if (param1 != 0) {
+                            if (waveIndex != 0) {
                               return;
                             }
                             OpenGlVertexLayout.field_f.show(-3388, 14);
@@ -228,16 +228,16 @@ final class sj {
                         }
                       }
                     } else {
-                      if (0 == param1) {
+                      if (0 == waveIndex) {
                         OpenGlVertexLayout.field_f.show(-3388, 18);
                       }
-                      if (param1 != 4) {
+                      if (waveIndex != 4) {
                         return;
                       }
-                      OpenGlVertexLayout.field_f.show(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.show(guard - 3387, 15);
                     }
                   } else {
-                    if (param1 != 0) {
+                    if (waveIndex != 0) {
                       return;
                     }
                     OpenGlVertexLayout.field_f.show(-3388, 10);
@@ -245,108 +245,108 @@ final class sj {
                 }
               }
             } else {
-              if (param1 == 0) {
-                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 5);
+              if (waveIndex == 0) {
+                OpenGlVertexLayout.field_f.show(guard ^ 3387, 5);
               }
-              if (param1 != 5) {
+              if (waveIndex != 5) {
                 return;
               }
               OpenGlVertexLayout.field_f.show(-3388, 3);
             }
-            SocketJs5Client.field_p[param2] = true;
+            SocketJs5Client.field_p[levelIndex] = true;
             return;
           }
           return;
         }
-        sj.a(-9);
-        if (SocketJs5Client.field_p[param2]) {
+        DisplayPromptRenderer.a(-9);
+        if (SocketJs5Client.field_p[levelIndex]) {
           return;
         }
-        if (TextureMetadata.field_f[param2]) {
+        if (TextureMetadata.field_f[levelIndex]) {
           return;
         }
-        var3Lifetime1 = param2;
+        var3Lifetime1 = levelIndex;
         if (0 == var3Lifetime1) {
-          if (param1 == 0) {
-            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 16);
+          if (waveIndex == 0) {
+            OpenGlVertexLayout.field_f.show(guard ^ 3387, 16);
           }
-          if (param1 == 1) {
+          if (waveIndex == 1) {
             OpenGlVertexLayout.field_f.show(-3388, 0);
           }
-          if (2 != param1) {
+          if (2 != waveIndex) {
             return;
           }
           OpenGlVertexLayout.field_f.show(-3388, 1);
         } else {
           if (1 == var3Lifetime1) {
-            if (0 != param1) {
+            if (0 != waveIndex) {
               return;
             }
-            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 2);
+            OpenGlVertexLayout.field_f.show(guard ^ 3387, 2);
           } else {
             if (var3Lifetime1 != 2) {
               if (var3Lifetime1 == 3) {
-                if (param1 != 0) {
+                if (waveIndex != 0) {
                   return;
                 }
                 OpenGlVertexLayout.field_f.show(-3388, 6);
               } else {
                 if (4 == var3Lifetime1) {
-                  if (0 == param1) {
+                  if (0 == waveIndex) {
                     OpenGlVertexLayout.field_f.show(-3388, 7);
                   }
-                  if (param1 == 1) {
-                    OpenGlVertexLayout.field_f.show(param0 ^ 3387, 4);
+                  if (waveIndex == 1) {
+                    OpenGlVertexLayout.field_f.show(guard ^ 3387, 4);
                   }
-                  if (param1 == 2) {
+                  if (waveIndex == 2) {
                     OpenGlVertexLayout.field_f.show(-3388, 8);
                   }
-                  if (param1 != 3) {
+                  if (waveIndex != 3) {
                     return;
                   }
-                  OpenGlVertexLayout.field_f.show(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.show(guard ^ 3387, 9);
                 } else {
                   if (var3Lifetime1 != 5) {
                     if (6 != var3Lifetime1) {
                       if (var3Lifetime1 != 8) {
                         if (var3Lifetime1 == 9) {
-                          if (0 != param1) {
+                          if (0 != waveIndex) {
                             return;
                           }
                           OpenGlVertexLayout.field_f.show(-3388, 12);
                         } else {
                           if (var3Lifetime1 == 10) {
-                            if (0 != param1) {
+                            if (0 != waveIndex) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.show(guard ^ 3387, 13);
                           } else {
                             if (11 != var3Lifetime1) {
                               return;
                             }
-                            if (param1 != 0) {
+                            if (waveIndex != 0) {
                               return;
                             }
                             OpenGlVertexLayout.field_f.show(-3388, 14);
                           }
                         }
                       } else {
-                        if (param1 != 1) {
+                        if (waveIndex != 1) {
                           return;
                         }
                         OpenGlVertexLayout.field_f.show(-3388, 11);
                       }
                     } else {
-                      if (0 == param1) {
+                      if (0 == waveIndex) {
                         OpenGlVertexLayout.field_f.show(-3388, 18);
                       }
-                      if (param1 != 4) {
+                      if (waveIndex != 4) {
                         return;
                       }
-                      OpenGlVertexLayout.field_f.show(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.show(guard - 3387, 15);
                     }
                   } else {
-                    if (param1 != 0) {
+                    if (waveIndex != 0) {
                       return;
                     }
                     OpenGlVertexLayout.field_f.show(-3388, 10);
@@ -354,21 +354,21 @@ final class sj {
                 }
               }
             } else {
-              if (param1 == 0) {
-                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 5);
+              if (waveIndex == 0) {
+                OpenGlVertexLayout.field_f.show(guard ^ 3387, 5);
               }
-              if (param1 != 5) {
+              if (waveIndex != 5) {
                 return;
               }
               OpenGlVertexLayout.field_f.show(-3388, 3);
             }
           }
         }
-        SocketJs5Client.field_p[param2] = true;
+        SocketJs5Client.field_p[levelIndex] = true;
         return;
     }
 
-    final static boolean a(boolean param0, int param1, CharSequence param2) {
+    final static boolean isValidAccountName(boolean allowConsecutiveSeparators, int guard, CharSequence text) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -378,19 +378,19 @@ final class sj {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!SocketConnector.a(param0, 0, param2)) {
+          if (!SocketConnector.a(allowConsecutiveSeparators, 0, text)) {
             return false;
           }
           var3_int = 0;
           while (true) {
-            if (param2.length() <= var3_int) {
-              if (param1 > 122) {
+            if (text.length() <= var3_int) {
+              if (guard > 122) {
                 return true;
               }
-              sj.a(-58);
+              DisplayPromptRenderer.a(-58);
               return true;
             }
-            if (HardwareQuadBatchBuffers.isAllowedNameCharacter((byte) 110, param2.charAt(var3_int))) {
+            if (HardwareQuadBatchBuffers.isAllowedNameCharacter((byte) 110, text.charAt(var3_int))) {
               var3_int++;
               continue;
             }
@@ -401,8 +401,8 @@ final class sj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_17_0 = var3;
-          stackIn_17_1 = new StringBuilder().append("sj.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_17_1 = new StringBuilder().append("sj.E(").append(allowConsecutiveSeparators).append(',').append(guard).append(',');
+          if (text == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";

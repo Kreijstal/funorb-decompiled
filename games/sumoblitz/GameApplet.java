@@ -192,7 +192,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (guard < 40) {
             GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
-          var1 = (RasterStateFrame) (ko.field_m.removeLast((byte) -127));
+          var1 = (RasterStateFrame) (PointLight.recycledRasterFrames.removeLast((byte) -127));
           if (var1 == null) {
             var1 = new RasterStateFrame();
           }
@@ -218,10 +218,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             CubeMapSource.field_a = true;
             if (DroneWaveDefinition.field_l &&
-              -LegacyCubeMapSource.field_f + wq.monotonicTimeMillis(-97) > 1000L) {
+              -LegacyCubeMapSource.field_f + IntroMeshResources.monotonicTimeMillis(-97) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < vs.field_b) {
+                if (var2.width < AccountPacketReader.field_b) {
                   return;
                 }
                 if (var2.height < lw.field_b) {
@@ -331,8 +331,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (ke.field_a != null) {
-                ps.field_a = ps.field_a + 1;
-                if (ps.field_a >= 3) {
+                AchievementThresholds.field_a = AchievementThresholds.field_a + 1;
+                if (AchievementThresholds.field_a >= 3) {
                   this.a("alreadyloaded", 21253);
                   return;
                 }
@@ -346,9 +346,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               UnderageAccountInfoPanel.field_H = 0;
               SpriteState.field_s = param4;
               LegacyOpenGlRidgedWaterEffect.field_h = param3;
-              vs.field_b = param3;
+              AccountPacketReader.field_b = param3;
               DirectByteArrayStorage.field_c = 0;
-              wq.field_b = param1;
+              IntroMeshResources.canvasHeight = param1;
               lw.field_b = param1;
               HardwareRidgedWaterNoise.field_z = LegacyOpenGlUnlitEffect.c(2);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
@@ -421,7 +421,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ke.field_a &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            NanoTickClock.field_k = 4000L + wq.monotonicTimeMillis(-46);
+            NanoTickClock.field_k = 4000L + IntroMeshResources.monotonicTimeMillis(-46);
             return;
           }
           return;
@@ -441,7 +441,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = wq.monotonicTimeMillis(-126);
+          var2_long = IntroMeshResources.monotonicTimeMillis(-126);
           var4 = Js5Client.field_k[CacheIoRequest.field_B];
           Js5Client.field_k[CacheIoRequest.field_B] = var2_long;
           if (var4 != (long)param0 &&
@@ -455,7 +455,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ArchiveProvider.field_b = ArchiveProvider.field_b - 50;
             CubeMapSource.field_a = true;
-            NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
+            NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, IntroMeshResources.canvasHeight);
             NineSlicePanel.field_f.setVisible(true);
             if (null != PrimitiveType.field_c &&
               null == HiscoreRequest.field_n) {
@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = wq.monotonicTimeMillis(-66);
+          var2_long = IntroMeshResources.monotonicTimeMillis(-66);
           var4 = AppletTickHistory.tickTimes[ka.tickHistoryIndex];
           AppletTickHistory.tickTimes[ka.tickHistoryIndex] = var2_long;
           ka.tickHistoryIndex = ka.tickHistoryIndex + 1 & 31;
@@ -517,7 +517,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ke.field_a == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            NanoTickClock.field_k = wq.monotonicTimeMillis(-125);
+            NanoTickClock.field_k = IntroMeshResources.monotonicTimeMillis(-125);
             TextureCombineOperation.sleepMillis(5000L, (byte) 119);
             CompactMeshGeometry.field_O = null;
             this.a(false, -32);
@@ -611,7 +611,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           NineSlicePanel.field_f = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NineSlicePanel.field_f));
-          NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
+          NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, IntroMeshResources.canvasHeight);
           NineSlicePanel.field_f.setVisible(true);
           boolean decompiledSharedTail0 = (PrimitiveType.field_c == var2);
           if (!decompiledSharedTail0) {
@@ -631,7 +631,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           DroneDebris.field_A = false;
-          LegacyCubeMapSource.field_f = wq.monotonicTimeMillis(param0 ^ -912);
+          LegacyCubeMapSource.field_f = IntroMeshResources.monotonicTimeMillis(param0 ^ -912);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -892,13 +892,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.b(true);
                 this.e(1000);
-                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
+                ProgressDialog.field_R = SoftLruCache.a(IntroMeshResources.canvasHeight, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
                 this.initializeGame(28196);
                 HardwareQuadBatchBuffers.field_a = LegacyCubeMapSource.createTickClock(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (NanoTickClock.field_k != 0L) {
-                    stackIn_105_0 = $cfr$lcmp(~wq.monotonicTimeMillis(-122), ~NanoTickClock.field_k);
+                    stackIn_105_0 = $cfr$lcmp(~IntroMeshResources.monotonicTimeMillis(-122), ~NanoTickClock.field_k);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_105_0 <= 0)) {

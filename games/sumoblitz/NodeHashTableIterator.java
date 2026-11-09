@@ -95,7 +95,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = ps.field_e[param0];
+        int var2 = AchievementThresholds.targets[param0];
         if (param1 != -82) {
           suggestedNamesText = (String) null;
           DisplayPromptState.a(var2, (byte) -127);

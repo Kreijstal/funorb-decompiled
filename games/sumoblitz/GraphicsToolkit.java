@@ -42,7 +42,7 @@ abstract class GraphicsToolkit {
             return stackIn_9_0;
           }
           if (5 == backend) {
-            stackIn_12_0 = sb.a(resources, guard ^ 6707, textures, canvas, samples);
+            stackIn_12_0 = GameDefinitionLoader.a(resources, guard ^ 6707, textures, canvas, samples);
             return stackIn_12_0;
           }
           if (backend != 3) {

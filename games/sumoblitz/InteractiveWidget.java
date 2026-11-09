@@ -264,11 +264,11 @@ class InteractiveWidget extends UiWidget {
             if (this.pressedButton == HotspotTextWidget.activePointerButton) {
               return;
             }
-            if (this.containsPoint(ko.field_p, -1, parentX, pi.field_e, parentY) &&
+            if (this.containsPoint(PointLight.mouseX, -1, parentX, pi.field_e, parentY) &&
               0 == HotspotTextWidget.activePointerButton) {
-              this.notifyAction(this.pressedButton, ko.field_p - parentX, true, pi.field_e - parentY);
+              this.notifyAction(this.pressedButton, PointLight.mouseX - parentX, true, pi.field_e - parentY);
             }
-            this.onPointerReleased(root, false, parentX, pi.field_e, ko.field_p, parentY);
+            this.onPointerReleased(root, false, parentX, pi.field_e, PointLight.mouseX, parentY);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wp.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');

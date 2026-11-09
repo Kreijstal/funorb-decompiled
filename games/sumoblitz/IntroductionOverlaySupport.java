@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc {
+final class IntroductionOverlaySupport {
     static QuickChatCommand field_d;
     static int field_f;
     static int[] field_b;
@@ -13,10 +13,10 @@ final class uc {
         if (guard != 26560) {
           return -46L;
         }
-        return -CacheReferenceNode.lastServerReadMillis + wq.monotonicTimeMillis(guard - 26634);
+        return -CacheReferenceNode.lastServerReadMillis + IntroMeshResources.monotonicTimeMillis(guard - 26634);
     }
 
-    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
+    final static boolean supportsFullscreen(byte guard, PlatformTaskDispatcher dispatcher) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -24,17 +24,17 @@ final class uc {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -29) {
-            uc.millisSinceServerRead(118);
+          if (guard != -29) {
+            IntroductionOverlaySupport.millisSinceServerRead(118);
           }
-          stackIn_3_0 = param1.a((byte) -101);
+          stackIn_3_0 = dispatcher.supportsFullscreen((byte) -101);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("uc.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("uc.A(").append(guard).append(',');
+          if (dispatcher == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -52,32 +52,32 @@ final class uc {
         field_b = null;
     }
 
-    final static void a(GraphicsToolkit param0, boolean param1) {
+    final static void renderDroneIntroduction(GraphicsToolkit toolkit, boolean guard) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1) {
+          if (guard) {
             field_d = (QuickChatCommand) null;
           }
           if (!OpenGlVertexLayout.field_f.isVisible((byte) 91)) {
             return;
           }
-          OpenGlVertexLayout.field_f.render(param0, -4475);
+          OpenGlVertexLayout.field_f.render(toolkit, -4475);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("uc.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 

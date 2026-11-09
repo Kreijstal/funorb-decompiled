@@ -5,7 +5,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
     private InteractiveWidget field_O;
     static int field_P;
 
-    DisplayModeErrorDialog(DialogLayer param0, vf param1) {
+    DisplayModeErrorDialog(DialogLayer param0, DisplayModeFailure param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -17,8 +17,8 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (Bzip2State.field_I != param1) {
-            if (CachedArchiveProvider.field_e == param1) {
+          if (Bzip2State.FULLSCREEN_UNSUPPORTED != param1) {
+            if (CachedArchiveProvider.FULLSCREEN_FOCUS_FAILURE == param1) {
               this.height = this.height + 10;
               var3 = LimitedRandomAccessFile.field_c;
               if (CacheReferenceNode.a((byte) -96)) {
@@ -26,7 +26,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
                 var3 = PasswordInputRenderer.unfortunatelyThereWasAText;
               }
             } else {
-              if (param1 == FontMetrics.field_f) {
+              if (param1 == FontMetrics.FULLSCREEN_CONFIRMATION_TIMEOUT) {
                 this.height = this.height + 30;
                 var3 = OpenGlBuffer.fullscreenModeWasCancelledText;
               }

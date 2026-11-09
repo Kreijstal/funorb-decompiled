@@ -59,7 +59,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
                 return false;
               }
-              if (uc.millisSinceServerRead(26560) <= 30000L) {
+              if (IntroductionOverlaySupport.millisSinceServerRead(26560) <= 30000L) {
                 return false;
               }
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
@@ -69,7 +69,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
               var2_int = -NativeLibraryExtractor.field_a.position + param1;
             }
             DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, NativeLibraryExtractor.field_a.position, var2_int, NativeLibraryExtractor.field_a.payload);
-            CacheReferenceNode.lastServerReadMillis = wq.monotonicTimeMillis(-47);
+            CacheReferenceNode.lastServerReadMillis = IntroMeshResources.monotonicTimeMillis(-47);
             NativeLibraryExtractor.field_a.position = NativeLibraryExtractor.field_a.position + var2_int;
             if (NativeLibraryExtractor.field_a.position < param1) {
               return false;

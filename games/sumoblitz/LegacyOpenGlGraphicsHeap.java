@@ -45,7 +45,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     }
 
     final static void c(int param0) {
-        kd.field_a[4] = new int[]{5};
+        IntroLogoRenderer.field_a[4] = new int[]{5};
         LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
         DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
         LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
@@ -61,7 +61,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           AffineTransform3D.field_j = param0;
           return;
         }
-        if (uc.a((byte) -29, lt.field_m)) {
+        if (IntroductionOverlaySupport.supportsFullscreen((byte) -29, lt.field_m)) {
           DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
           LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
           DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
@@ -136,7 +136,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     final static RasterIndexedSprite e(int param0) {
         RasterIndexedSprite var1 = null;
         if (param0 == 12768) {
-          var1 = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new RasterIndexedSprite(DisplayModeFailure.spriteSheetWidth, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
@@ -166,15 +166,15 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           }
           if (!lf.isIntroFinished(-251)) {
             SoftwareRasterizer.clear();
-            kd.a(240, 320, 256);
+            IntroLogoRenderer.drawIntroLogo(240, 320, 256);
             IterableNodeHashTable.a(0, 0, param1, (byte) 125);
             return;
           }
-          if (0 != jv.field_a) {
+          if (0 != LoginDialogNavigation.field_a) {
             SoftwareRenderBuffer.a(-97, param1);
             return;
           }
-          jv.a(false, (byte) -71, param2);
+          LoginDialogNavigation.drawAccountDialogs(false, (byte) -71, param2);
           IterableNodeHashTable.a(0, 0, param1, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

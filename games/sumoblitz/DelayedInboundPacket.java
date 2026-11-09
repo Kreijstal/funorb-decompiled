@@ -52,7 +52,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
           if (var2 != 0 &&
             var3 != 0) {
             var5.steerNormalized(-109, var3 / 22, var2 / 22);
-            kp.field_a = true;
+            StatisticsSubmissionSupport.field_a = true;
             if (!AudioOutputBootstrap.field_b[83]) {
               var5.resetBlastButtonHold(-95);
               return;
@@ -74,11 +74,11 @@ final class DelayedInboundPacket extends IntrusiveNode {
           }
           if (var2 != 0) {
             var5.steerNormalized(-119, var3, var2);
-            kp.field_a = true;
+            StatisticsSubmissionSupport.field_a = true;
           } else {
             if (var3 != 0) {
               var5.steerNormalized(-119, var3, var2);
-              kp.field_a = true;
+              StatisticsSubmissionSupport.field_a = true;
               if (!AudioOutputBootstrap.field_b[83]) {
                 var5.resetBlastButtonHold(-95);
                 return;
@@ -100,8 +100,8 @@ final class DelayedInboundPacket extends IntrusiveNode {
             }
           }
         } else {
-          var5.steerTowardPoint(false, pi.field_e << 8, ko.field_p << 8);
-          kp.field_a = true;
+          var5.steerTowardPoint(false, pi.field_e << 8, PointLight.mouseX << 8);
+          StatisticsSubmissionSupport.field_a = true;
         }
         if (!AudioOutputBootstrap.field_b[83]) {
           var5.resetBlastButtonHold(-95);
@@ -132,7 +132,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
         }
     }
 
-    final static Sprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
+    final static Sprite[] loadNamedSprites(ResourceArchive archive, String groupName, byte guard, String fileName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -147,32 +147,32 @@ final class DelayedInboundPacket extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.groupId(0, param1);
-          if (param2 != -56) {
+          var4_int = archive.groupId(0, groupName);
+          if (guard != -56) {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param0.fileId(var4_int, param3, (byte) 126);
-          stackIn_4_0 = kr.a(19889, param0, var5, var4_int);
+          var5 = archive.fileId(var4_int, fileName, (byte) 126);
+          stackIn_4_0 = RasterColorTables.loadSprites(19889, archive, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("ub.A(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',');
+          if (fileName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

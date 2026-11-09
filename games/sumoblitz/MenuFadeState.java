@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
-    static int field_c;
-    static Sprite field_b;
-    static int field_a;
+final class MenuFadeState {
+    static int chatMessageIdHigh;
+    static Sprite introGlow;
+    static int transitionTicks;
     private static String field_z;
 
     public static void releaseStatics(int param0) {
         int var1 = 101 / ((36 - param0) / 35);
-        field_b = null;
+        introGlow = null;
     }
 
     static {
         field_z = "eh.A(";
-        field_b = new Sprite(270, 70);
+        introGlow = new Sprite(270, 70);
     }
 }

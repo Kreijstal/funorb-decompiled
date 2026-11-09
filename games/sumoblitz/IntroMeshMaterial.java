@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l {
-    static int[] field_c;
-    int field_b;
+final class IntroMeshMaterial {
+    static int[] bytePoolCounts;
+    int baseColor;
     static String[] enemyVariantNames;
 
     public static void releaseStatics(int param0) {
         if (param0 >= -54) {
           enemyVariantNames = (String[]) null;
-          field_c = null;
+          bytePoolCounts = null;
           enemyVariantNames = null;
           return;
         }
-        field_c = null;
+        bytePoolCounts = null;
         enemyVariantNames = null;
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int hashCp1252(CharSequence text, int guard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -31,15 +31,15 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length();
+          var2_int = text.length();
           var3 = 0;
           var4 = 0;
-          if (param1 >= -18) {
+          if (guard >= -18) {
             stackIn_3_0 = -6;
             return stackIn_3_0;
           }
           while (var2_int > var4) {
-            var3 = -var3 + ((var3 << 5) + HardwareReflectionEffect.a(true, param0.charAt(var4)));
+            var3 = -var3 + ((var3 << 5) + HardwareReflectionEffect.a(true, text.charAt(var4)));
             var4++;
           }
           stackIn_7_0 = var3;
@@ -49,12 +49,12 @@ final class l {
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("l.A(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 

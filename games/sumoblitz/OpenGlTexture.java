@@ -444,10 +444,10 @@ abstract class OpenGlTexture implements GpuTexture {
           if (IntrusiveNodeHashTable.ALPHA == this.format) {
             return 6406;
           }
-          if (kd.LUMINANCE == this.format) {
+          if (IntroLogoRenderer.LUMINANCE == this.format) {
             return 6409;
           }
-          if (ps.LUMINANCE_ALPHA == this.format) {
+          if (AchievementThresholds.LUMINANCE_ALPHA == this.format) {
             return 6410;
           }
           if (ModalDialog.DEPTH_COMPONENT == this.format) {
@@ -464,10 +464,10 @@ abstract class OpenGlTexture implements GpuTexture {
             if (this.format == IntrusiveNodeHashTable.ALPHA) {
               return 34844;
             }
-            if (kd.LUMINANCE == this.format) {
+            if (IntroLogoRenderer.LUMINANCE == this.format) {
               return 34846;
             }
-            if (ps.LUMINANCE_ALPHA == this.format) {
+            if (AchievementThresholds.LUMINANCE_ALPHA == this.format) {
               return 34847;
             }
             if (this.format == ModalDialog.DEPTH_COMPONENT) {
@@ -484,10 +484,10 @@ abstract class OpenGlTexture implements GpuTexture {
               if (this.format == IntrusiveNodeHashTable.ALPHA) {
                 return 34838;
               }
-              if (kd.LUMINANCE == this.format) {
+              if (IntroLogoRenderer.LUMINANCE == this.format) {
                 return 34840;
               }
-              if (this.format == ps.LUMINANCE_ALPHA) {
+              if (this.format == AchievementThresholds.LUMINANCE_ALPHA) {
                 return 34841;
               }
               if (this.format == ModalDialog.DEPTH_COMPONENT) {

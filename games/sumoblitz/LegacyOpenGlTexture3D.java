@@ -56,7 +56,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           if (EmptyWidgetRenderer.field_d == -1 &&
             ScanlineSpriteMask.field_e == -1) {
             ScanlineSpriteMask.field_e = pi.field_e;
-            EmptyWidgetRenderer.field_d = ko.field_p;
+            EmptyWidgetRenderer.field_d = PointLight.mouseX;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
@@ -67,7 +67,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           if (decompiledFrameRemainder0) {
             if (!up.field_d) {
               if (qf.field_a >= GameClientShell.field_s) {
-                stackIn_17_0 = (GameClientShell.field_s + sb.field_c > qf.field_a) ? 1 : 0;
+                stackIn_17_0 = (GameClientShell.field_s + GameDefinitionLoader.field_c > qf.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }

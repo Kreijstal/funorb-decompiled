@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vs {
+final class AccountPacketReader {
     static LoginCredentialType ALTERNATE_USERNAME_CREDENTIALS;
     static int field_b;
 
-    final static int a(byte param0, CharSequence param1, char param2) {
+    final static int countCharacter(byte guard, CharSequence text, char character) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -19,12 +19,12 @@ final class vs {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 0;
-          if (param0 > -111) {
+          if (guard > -111) {
             field_b = 12;
           }
-          var4 = param1.length();
+          var4 = text.length();
           for (var5 = 0; var5 < var4; var5++) {
-            if (param2 == param1.charAt(var5)) {
+            if (character == text.charAt(var5)) {
               var3_int++;
             }
           }
@@ -34,13 +34,13 @@ final class vs {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("vs.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("vs.A(").append(guard).append(',');
+          if (text == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -53,12 +53,12 @@ final class vs {
 
     final static boolean isGuestSession(byte guard) {
         if (guard != 9) {
-          vs.releaseStatics((byte) 108);
+          AccountPacketReader.releaseStatics((byte) 108);
         }
         return IntrusiveNode.field_a;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean readAccountPacket(int[] packetLengths, int guard) {
         int var6_int = 0;
         int var7 = 0;
         int stackIn_17_0 = 0;
@@ -78,8 +78,8 @@ final class vs {
           if (TextCaretLayout.accountPhase != LegacyOpenGlUnderwaterEffect.CONNECTED) {
             return false;
           }
-          var4 = 96 / ((param1 + 72) / 53);
-          var2_long = wq.monotonicTimeMillis(-45);
+          var4 = 96 / ((guard + 72) / 53);
+          var2_long = IntroMeshResources.monotonicTimeMillis(-45);
           if (0 != ByteArrayPool.field_c &&
             lq.field_b < 0) {
             var5_ref_ub = (DelayedInboundPacket) (ScoreMultiplierTable.field_b.first(-99));
@@ -103,12 +103,12 @@ final class vs {
           var2 = decompiledCaughtException;
           stackIn_39_0 = var2;
           stackIn_39_1 = new StringBuilder().append("vs.D(");
-          if (param0 == null) {
+          if (packetLengths == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(guard).append(')').toString());
         }
         stackIn_17_0 = lq.field_b;
         try {
@@ -120,7 +120,7 @@ final class vs {
               }
               lq.field_b = NativeLibraryExtractor.field_a.readCipherByte(255);
               NativeLibraryExtractor.field_a.position = 0;
-              HardwareBufferSet.field_d = param0[lq.field_b];
+              HardwareBufferSet.field_d = packetLengths[lq.field_b];
             }
             if (!lt.a((byte) 119)) {
               return false;
@@ -153,12 +153,12 @@ final class vs {
           var2 = decompiledCaughtException;
           stackIn_39_0 = var2;
           stackIn_39_1 = new StringBuilder().append("vs.D(");
-          if (param0 == null) {
+          if (packetLengths == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -37,8 +37,8 @@ final class ByteArrayPool {
           0 < RotarySelectorRenderer.field_b) {
           fieldTemp$3 = RotarySelectorRenderer.field_b - 1;
           RotarySelectorRenderer.field_b = RotarySelectorRenderer.field_b - 1;
-          var2_ref_byte__ = kh.field_f[fieldTemp$3];
-          kh.field_f[RotarySelectorRenderer.field_b] = null;
+          var2_ref_byte__ = LoginIdentifierSupport.field_f[fieldTemp$3];
+          LoginIdentifierSupport.field_f[RotarySelectorRenderer.field_b] = null;
           return var2_ref_byte__;
         }
         if (5000 == length &&
@@ -58,14 +58,14 @@ final class ByteArrayPool {
           return var2_ref_byte__Lifetime2;
         }
         if (null != CompactMeshGeometry.field_w) {
-          for (var2 = 0; var2 < kr.field_d.length; var2++) {
-            if (length == kr.field_d[var2] &&
-              l.field_c[var2] > 0) {
-              dupTemp$6 = l.field_c[var2] - 1;
+          for (var2 = 0; var2 < RasterColorTables.bytePoolSizes.length; var2++) {
+            if (length == RasterColorTables.bytePoolSizes[var2] &&
+              IntroMeshMaterial.bytePoolCounts[var2] > 0) {
+              dupTemp$6 = IntroMeshMaterial.bytePoolCounts[var2] - 1;
               arrayValue$7 = CompactMeshGeometry.field_w[var2];
-              l.field_c[var2] = dupTemp$6;
+              IntroMeshMaterial.bytePoolCounts[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              CompactMeshGeometry.field_w[var2][l.field_c[var2]] = null;
+              CompactMeshGeometry.field_w[var2][IntroMeshMaterial.bytePoolCounts[var2]] = null;
               return var3;
             }
           }

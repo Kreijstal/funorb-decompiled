@@ -279,7 +279,7 @@ final class CheckboxWidget extends InteractiveWidget {
               var10 < 8 &&
               var11 >= 0 &&
               var11 < 7) {
-              var15 = uj.createEnemyDrone(var10, var12, var11, (byte) 84, var13);
+              var15 = EnemyDroneFactory.createEnemyDrone(var10, var12, var11, (byte) 84, var13);
               var15.field_F = var14;
               incrementValue$0 = var4;
               var4++;

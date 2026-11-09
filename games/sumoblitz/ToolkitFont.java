@@ -130,10 +130,10 @@ abstract class ToolkitFont {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(PacketBuffer.field_l, jv.field_b, 60);
+                                      this.a(PacketBuffer.field_l, LoginDialogNavigation.field_b, 60);
                                     }
                                   } else {
-                                    LoginMethodPreference.field_b = jv.field_b;
+                                    LoginMethodPreference.field_b = LoginDialogNavigation.field_b;
                                   }
                                 } else {
                                   LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216;
@@ -440,9 +440,9 @@ abstract class ToolkitFont {
                   }
                 } else {
                   if (StringBuilderSupport.field_b > 0) {
-                    sb.field_a = sb.field_a + StringBuilderSupport.field_b;
-                    param3 = param3 + (sb.field_a >> 8);
-                    sb.field_a = sb.field_a & 255;
+                    GameDefinitionLoader.field_a = GameDefinitionLoader.field_a + StringBuilderSupport.field_b;
+                    param3 = param3 + (GameDefinitionLoader.field_a >> 8);
+                    GameDefinitionLoader.field_a = GameDefinitionLoader.field_a & 255;
                   }
                 }
                 var15 = this.field_b.a(var14, (byte) -53);
@@ -507,17 +507,17 @@ abstract class ToolkitFont {
         DropDownListWidget.field_O = LegacyOpenGlBuffer.a("frame_bottom", param0, true, "commonui");
         HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", param0, true, "commonui");
-        ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
-        MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
-        TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
-        LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
+        ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.loadNamedSprites(param0, "commonui", (byte) -56, "validation");
+        MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo12", param0));
+        TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo14", param0));
+        LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
         RasterIndexedSprite[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
-        sb.field_d = new RasterIndexedSprite[4];
+        GameDefinitionLoader.field_d = new RasterIndexedSprite[4];
         WidgetStateStyle.field_c = new RasterIndexedSprite[4];
         SoftwareTransform3D.field_f = new RasterIndexedSprite[4];
-        RasterIndexedSprite[][] var6 = new RasterIndexedSprite[][]{sb.field_d, SoftwareTransform3D.field_f, WidgetStateStyle.field_c};
+        RasterIndexedSprite[][] var6 = new RasterIndexedSprite[][]{GameDefinitionLoader.field_d, SoftwareTransform3D.field_f, WidgetStateStyle.field_c};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
@@ -583,12 +583,12 @@ abstract class ToolkitFont {
           param1 = 0;
         }
         ScrollControl.field_I = -1;
-        sb.field_a = 0;
+        GameDefinitionLoader.field_a = 0;
         if (param2 != 60) {
           this.field_b = (FontMetrics) null;
         }
         StatefulWidgetRenderer.field_p = -1;
-        jv.field_b = param1;
+        LoginDialogNavigation.field_b = param1;
         LoginMethodPreference.field_b = param1;
     }
 

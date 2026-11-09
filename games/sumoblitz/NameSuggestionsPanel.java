@@ -210,7 +210,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
         LoginTextResources.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
         ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
-        sq.field_b = LoginTextResources.field_b;
+        IntroLightingLookup.field_b = LoginTextResources.field_b;
         field_F = SpriteData.b(param3, "", "menu_frame");
         MidiNoteMixer.field_q = SpriteData.b(param3, "", "tooltip_kit");
         SoftwareRenderTarget.field_b = SpriteData.b(param3, "", "achievements");
@@ -238,7 +238,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           LegacyOpenGlTextureCache.field_e = SpriteData.b(param3, "", "mook");
           HardwareTurbulentWaterNoise.field_w = SpriteData.b(param3, "", "fast");
           StatefulWidgetRenderer.field_r = SpriteData.b(param3, "", "sleeper");
-          kr.field_b = SpriteData.b(param3, "", "splitter");
+          RasterColorTables.field_b = SpriteData.b(param3, "", "splitter");
           DisplayModeConfirmationDialog.field_V = SpriteData.b(param3, "", "seeker");
           LruNodeCache.field_a = SpriteData.b(param3, "", "shadowdudes");
           CachedTextLayout.field_h = SpriteData.b(param3, "", "mod_armour");
@@ -247,7 +247,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ServerDataReadRequest.field_k = SpriteData.a(param3, "", "zap");
           Transform3D.field_a = SpriteData.b(param3, "", "chargebar");
           ToolkitRasterStateFrame.field_a = SpriteData.a(param3, "", "bounceup");
-          uj.field_c = SpriteData.b(param3, "", "powerups");
+          EnemyDroneFactory.field_c = SpriteData.b(param3, "", "powerups");
           HiscorePlayerName.field_d = SpriteData.a(param3, "", "particle");
           DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
           FullscreenMembershipDialog.field_T = SpriteData.a(param3, "", "particle_alpha");
@@ -272,7 +272,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ArchiveCatalog.field_f = SpriteData.a(param3, "", "attract");
           MusicVoice.field_o = SpriteData.a(param3, "", "repulse");
           VertexBufferReference.field_c = SpriteData.a(param3, "", "icepatch");
-          ei.field_b = SpriteData.b(param3, "", "attractor");
+          BigBurstaProgress.attractorSpriteData = SpriteData.b(param3, "", "attractor");
           IntList.field_e = SpriteData.a(param3, "", "bouncer");
           FullscreenMembershipDialog.field_S = SpriteData.b(param3, "", "landmine");
           ByteArrayStorage.field_a = SpriteData.b(param3, "", "repeller");

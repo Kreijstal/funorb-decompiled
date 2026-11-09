@@ -22,13 +22,13 @@ final class ScreenNameValidator extends TextInputValidator {
         if (param0 != -112) {
           field_g = (String) null;
         }
-        if (!vs.isGuestSession((byte) 9) &&
+        if (!AccountPacketReader.isGuestSession((byte) 9) &&
           !TimedSceneEffect.field_r) {
           if (MatchingTextValidator.field_g == null) {
             MatchingTextValidator.field_g = EmailSyntaxValidator.requestServerIntArray((byte) -92, 4);
           }
           if (MatchingTextValidator.field_g.complete) {
-            kh.field_e = kh.field_e | MatchingTextValidator.field_g.firstValue;
+            LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e | MatchingTextValidator.field_g.firstValue;
             OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~MatchingTextValidator.field_g.firstValue;
             TimedSceneEffect.field_r = true;
             MatchingTextValidator.field_g = null;
@@ -363,7 +363,7 @@ final class ScreenNameValidator extends TextInputValidator {
             LegacyOpenGlPostProcessManager.field_a[3] = 1;
             IntIndexHashTable.field_c[5] = "";
             IntIndexHashTable.field_c[3] = up.cancelText;
-            IntIndexHashTable.field_c[2] = ws.toKeepFullscreenOrText;
+            IntIndexHashTable.field_c[2] = ClientStackTraceFormatter.toKeepFullscreenOrText;
             IntIndexHashTable.field_c[4] = OpenGlShaderProgram.toReturnToTheText;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_41_0 = IntIndexHashTable.field_c;
@@ -389,7 +389,7 @@ final class ScreenNameValidator extends TextInputValidator {
               }
               stackIn_46_0[stackIn_46_1] = stackIn_49_2;
             }
-            LegacyOpenGlEffectManager.field_f = wq.monotonicTimeMillis(-17);
+            LegacyOpenGlEffectManager.field_f = IntroMeshResources.monotonicTimeMillis(-17);
           }
           RendererPreference.field_a.itemCount = ByteArrayPool.field_b.length;
           var3_intLifetime1 = 0;
@@ -458,7 +458,7 @@ final class ScreenNameValidator extends TextInputValidator {
           if (DroneChargeParticle.field_s == 2) {
             RendererPreference.field_a.resetSelection(param0, 84, -1, -1);
           } else {
-            RendererPreference.field_a.resetSelection(param0, -27, OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p), 0);
+            RendererPreference.field_a.resetSelection(param0, -27, OpenGlAssemblyProgram.b(pi.field_e, 1882601153, PointLight.mouseX), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

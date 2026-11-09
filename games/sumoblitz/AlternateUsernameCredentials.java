@@ -19,9 +19,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param0 <= SlowBurstParticle.field_z.length)) {
               SlowBurstParticle.field_z = new int[param0 * 2];
             }
-            if (uc.field_c == null ||
-              !(param0 <= uc.field_c.length)) {
-              uc.field_c = new int[2 * param0];
+            if (IntroductionOverlaySupport.field_c == null ||
+              !(param0 <= IntroductionOverlaySupport.field_c.length)) {
+              IntroductionOverlaySupport.field_c = new int[2 * param0];
             }
             if (null == pd.field_q ||
               !(param2 + param0 <= pd.field_q.length)) {
@@ -41,9 +41,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param0 <= SlowBurstParticle.field_z.length)) {
                 SlowBurstParticle.field_z = new int[param0 * 2];
               }
-              if (uc.field_c == null ||
-                !(param0 <= uc.field_c.length)) {
-                uc.field_c = new int[2 * param0];
+              if (IntroductionOverlaySupport.field_c == null ||
+                !(param0 <= IntroductionOverlaySupport.field_c.length)) {
+                IntroductionOverlaySupport.field_c = new int[2 * param0];
               }
               if (null == pd.field_q ||
                 !(param2 + param0 <= pd.field_q.length)) {
@@ -63,9 +63,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param0 <= SlowBurstParticle.field_z.length)) {
                 SlowBurstParticle.field_z = new int[param0 * 2];
               }
-              if (uc.field_c == null ||
-                !(param0 <= uc.field_c.length)) {
-                uc.field_c = new int[2 * param0];
+              if (IntroductionOverlaySupport.field_c == null ||
+                !(param0 <= IntroductionOverlaySupport.field_c.length)) {
+                IntroductionOverlaySupport.field_c = new int[2 * param0];
               }
               if (null == pd.field_q ||
                 !(param2 + param0 <= pd.field_q.length)) {
@@ -92,8 +92,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param0 <= SlowBurstParticle.field_z.length)) {
               SlowBurstParticle.field_z = new int[param0 * 2];
             }
-            if (uc.field_c == null) {
-              uc.field_c = new int[2 * param0];
+            if (IntroductionOverlaySupport.field_c == null) {
+              IntroductionOverlaySupport.field_c = new int[2 * param0];
               if (null == pd.field_q ||
                 !(param2 + param0 <= pd.field_q.length)) {
                 pd.field_q = new int[2 * (param0 + param2)];
@@ -103,7 +103,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
               }
             } else {
-              if (param0 <= uc.field_c.length) {
+              if (param0 <= IntroductionOverlaySupport.field_c.length) {
                 if (null == pd.field_q ||
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
@@ -113,7 +113,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                 }
               } else {
-                uc.field_c = new int[2 * param0];
+                IntroductionOverlaySupport.field_c = new int[2 * param0];
                 if (null == pd.field_q ||
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
@@ -135,8 +135,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param0 <= SlowBurstParticle.field_z.length)) {
                 SlowBurstParticle.field_z = new int[param0 * 2];
               }
-              if (uc.field_c == null) {
-                uc.field_c = new int[2 * param0];
+              if (IntroductionOverlaySupport.field_c == null) {
+                IntroductionOverlaySupport.field_c = new int[2 * param0];
                 if (null == pd.field_q ||
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
@@ -146,7 +146,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                 }
               } else {
-                if (param0 <= uc.field_c.length) {
+                if (param0 <= IntroductionOverlaySupport.field_c.length) {
                   if (null == pd.field_q ||
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
@@ -156,7 +156,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
-                  uc.field_c = new int[2 * param0];
+                  IntroductionOverlaySupport.field_c = new int[2 * param0];
                   if (null == pd.field_q ||
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
@@ -173,8 +173,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   !(param0 <= SlowBurstParticle.field_z.length)) {
                   SlowBurstParticle.field_z = new int[param0 * 2];
                 }
-                if (uc.field_c == null) {
-                  uc.field_c = new int[2 * param0];
+                if (IntroductionOverlaySupport.field_c == null) {
+                  IntroductionOverlaySupport.field_c = new int[2 * param0];
                   if (null == pd.field_q ||
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
@@ -184,7 +184,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
-                  if (param0 <= uc.field_c.length) {
+                  if (param0 <= IntroductionOverlaySupport.field_c.length) {
                     if (null == pd.field_q ||
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
@@ -194,7 +194,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   } else {
-                    uc.field_c = new int[2 * param0];
+                    IntroductionOverlaySupport.field_c = new int[2 * param0];
                     if (null == pd.field_q ||
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
@@ -211,8 +211,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   !(param0 <= SlowBurstParticle.field_z.length)) {
                   SlowBurstParticle.field_z = new int[param0 * 2];
                 }
-                if (uc.field_c == null) {
-                  uc.field_c = new int[2 * param0];
+                if (IntroductionOverlaySupport.field_c == null) {
+                  IntroductionOverlaySupport.field_c = new int[2 * param0];
                   if (null == pd.field_q ||
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
@@ -222,7 +222,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
-                  if (param0 <= uc.field_c.length) {
+                  if (param0 <= IntroductionOverlaySupport.field_c.length) {
                     if (null == pd.field_q ||
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
@@ -232,7 +232,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   } else {
-                    uc.field_c = new int[2 * param0];
+                    IntroductionOverlaySupport.field_c = new int[2 * param0];
                     if (null == pd.field_q ||
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
@@ -304,7 +304,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         if (guard < 80) {
           return (LoginCredentialType) null;
         }
-        return vs.ALTERNATE_USERNAME_CREDENTIALS;
+        return AccountPacketReader.ALTERNATE_USERNAME_CREDENTIALS;
     }
 
     AlternateUsernameCredentials(long nameKey, String secret) {

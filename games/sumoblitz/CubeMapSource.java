@@ -8,20 +8,20 @@ abstract class CubeMapSource {
     static volatile boolean field_a;
     static String challengeText;
 
-    final static void a(boolean param0, boolean param1, int param2) {
-        if (param0) {
-          Sumoblitz.field_H = Sumoblitz.field_H - 1;
-          if (0 == Sumoblitz.field_H) {
+    final static void releaseColorTables(boolean releaseHsv, boolean releaseHsl, int guard) {
+        if (releaseHsv) {
+          Sumoblitz.hsvTableUsers = Sumoblitz.hsvTableUsers - 1;
+          if (0 == Sumoblitz.hsvTableUsers) {
             GzipDecompressor.field_b = null;
           }
         }
-        if (param2 != -1) {
+        if (guard != -1) {
           return;
         }
-        if (param1) {
-          LoginMethodPreference.field_d = LoginMethodPreference.field_d - 1;
-          if (LoginMethodPreference.field_d == 0) {
-            ReassignUpgradesScreen.field_i = null;
+        if (releaseHsl) {
+          LoginMethodPreference.hslTableUsers = LoginMethodPreference.hslTableUsers - 1;
+          if (LoginMethodPreference.hslTableUsers == 0) {
+            ReassignUpgradesScreen.hslToRgb = null;
           }
         }
     }

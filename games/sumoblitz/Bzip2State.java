@@ -11,7 +11,7 @@ final class Bzip2State {
     byte field_d;
     byte[] output;
     int totalInput;
-    static vf field_I;
+    static DisplayModeFailure FULLSCREEN_UNSUPPORTED;
     byte[] field_b;
     int[] field_t;
     int field_e;
@@ -39,7 +39,7 @@ final class Bzip2State {
     int field_c;
 
     public static void releaseStatics(boolean param0) {
-        field_I = null;
+        FULLSCREEN_UNSUPPORTED = null;
         if (!param0) {
           field_j = 2;
         }
@@ -91,6 +91,6 @@ final class Bzip2State {
     }
 
     static {
-        field_I = new vf();
+        FULLSCREEN_UNSUPPORTED = new DisplayModeFailure();
     }
 }

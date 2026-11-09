@@ -38,17 +38,17 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
             }
             HudMessageSupport.postHudMessage(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
             if (DisplayModeConfirmationDialog.droneTypeStreakMask != 0 &&
-              ps.field_e[13] == ArenaBackdropPalettes.uniqueDroneTypeStreak) {
+              AchievementThresholds.targets[13] == ArenaBackdropPalettes.uniqueDroneTypeStreak) {
               UnderageAccountInfoPanel.b(24753, 242, 13);
             }
             if (7 == OpenGlShaderProgram.levelIndex &&
               0 == AccountServiceResult.waveIndex) {
               if (drone.variant == 5) {
-                ei.field_a = ei.field_a + 1;
+                BigBurstaProgress.bigDefeatBalance = BigBurstaProgress.bigDefeatBalance + 1;
               } else {
-                ei.field_a = ei.field_a - 1;
+                BigBurstaProgress.bigDefeatBalance = BigBurstaProgress.bigDefeatBalance - 1;
               }
-              if (ei.field_a == 4) {
+              if (BigBurstaProgress.bigDefeatBalance == 4) {
                 UnderageAccountInfoPanel.b(24753, 240, 15);
               }
             }

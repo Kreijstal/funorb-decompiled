@@ -89,9 +89,9 @@ final class ChatMessage {
     ChatMessage(boolean includeQuickChatResponses) {
         this.messageIdLow = CacheReferenceNode.field_w;
         this.highPriority = QuickChatPhraseProvider.field_a;
-        this.senderRank = wn.field_a;
+        this.senderRank = DroneProximitySupport.field_a;
         this.senderId = ReassignUpgradesScreen.field_j;
-        this.messageIdHigh = eh.field_c;
+        this.messageIdHigh = MenuFadeState.chatMessageIdHigh;
         this.type = UsernameCredentials.field_h;
         this.text = oi.field_c;
         this.senderName = MarkerTrackWidget.field_E;

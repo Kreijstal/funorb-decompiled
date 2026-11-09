@@ -68,7 +68,7 @@ class IntrusiveNode {
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = ws.a((byte) 71, param1);
+              var3 = ClientStackTraceFormatter.formatThrowable((byte) 71, param1);
             }
             if (param0 != null) {
               if (param1 != null) {

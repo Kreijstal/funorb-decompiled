@@ -23,9 +23,9 @@ final class AudioOutputBootstrap {
           AudioOutput.configure(sampleRate, stereo, 10);
           EmailCredentials.field_f = AudioOutput.create(dispatcher, component, 0, musicBufferSize);
           LegacyOpenGlEffectManager.field_a = AudioOutput.create(dispatcher, component, 1, effectsBufferSize);
-          sj.field_c = new PcmStreamMixer();
+          DisplayPromptRenderer.field_c = new PcmStreamMixer();
           IntrusiveDequeCursor.field_c = effectsBufferSize;
-          LegacyOpenGlEffectManager.field_a.setStream(sj.field_c);
+          LegacyOpenGlEffectManager.field_a.setStream(DisplayPromptRenderer.field_c);
           AccountConnectionPhase.field_b = music;
           if (guard <= 103) {
             PlatformTaskDispatcher var9 = (PlatformTaskDispatcher) null;

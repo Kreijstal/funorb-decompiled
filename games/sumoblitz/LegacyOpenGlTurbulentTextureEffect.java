@@ -55,10 +55,10 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             }
             return;
           }
-          ps.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
-          ps.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
-          ps.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
-          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, ps.field_d, 0);
+          AchievementThresholds.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
+          AchievementThresholds.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
+          AchievementThresholds.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
+          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, AchievementThresholds.field_d, 0);
           var4Lifetime2 = parameters0 & 3;
           if (var4Lifetime2 == 2) {
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
@@ -82,10 +82,10 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
           if ((parameters0 & 64) != 0) {
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
           } else {
-            ps.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
-            ps.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
-            ps.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
-            jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, ps.field_d, 0);
+            AchievementThresholds.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
+            AchievementThresholds.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
+            AchievementThresholds.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
+            jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, AchievementThresholds.field_d, 0);
           }
           var4Lifetime1 = parameters0 & 3;
           if (var4Lifetime1 == 2) {
@@ -115,10 +115,10 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
                 }
               }
             } else {
-              ps.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
-              ps.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
-              ps.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
-              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, ps.field_d, 0);
+              AchievementThresholds.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
+              AchievementThresholds.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
+              AchievementThresholds.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
+              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, AchievementThresholds.field_d, 0);
               var4Lifetime1 = parameters0 & 3;
               if (var4Lifetime1 == 2) {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
@@ -138,10 +138,10 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             if ((parameters0 & 64) != 0) {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
             } else {
-              ps.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
-              ps.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
-              ps.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
-              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, ps.field_d, 0);
+              AchievementThresholds.field_d[1] = this.toolkit.field_cb * this.toolkit.field_z;
+              AchievementThresholds.field_d[2] = this.toolkit.field_cb * this.toolkit.field_ac;
+              AchievementThresholds.field_d[0] = this.toolkit.field_Fc * this.toolkit.field_cb;
+              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, AchievementThresholds.field_d, 0);
             }
             var4Lifetime1 = parameters0 & 3;
             if (var4Lifetime1 == 2) {

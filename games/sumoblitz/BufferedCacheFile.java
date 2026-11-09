@@ -58,7 +58,7 @@ final class BufferedCacheFile {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(param0 * 1000L + wq.monotonicTimeMillis(-123), true) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(param0 * 1000L + IntroMeshResources.monotonicTimeMillis(-123), true) + "; Max-Age=" + param0;
               }
               BrowserScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", -15428, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

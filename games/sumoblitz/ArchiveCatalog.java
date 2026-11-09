@@ -39,7 +39,7 @@ final class ArchiveCatalog {
               var2_int = 2;
               ServerDataWriteRequest.attachInputHandlers(false, CompactMeshGeometry.field_o);
               if (var3 != 0) {
-                if (!vs.isGuestSession((byte) 9)) {
+                if (!AccountPacketReader.isGuestSession((byte) 9)) {
                   var2_int = 1;
                   var2_int = 0;
                 } else {
@@ -48,7 +48,7 @@ final class ArchiveCatalog {
               }
             }
           } else {
-            if (!vs.isGuestSession((byte) 9)) {
+            if (!AccountPacketReader.isGuestSession((byte) 9)) {
               var2_int = 1;
               if (var3 != 0) {
                 var2_int = 0;
@@ -582,7 +582,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime7 = ke.fetchGameDataFile((byte) 122, "allhs");
           if (null != var2Lifetime7) {
-            wq.allHiscoresText = MusicVoice.a(param1 + 5, var2Lifetime7);
+            IntroMeshResources.allHiscoresText = MusicVoice.a(param1 + 5, var2Lifetime7);
           }
           var2Lifetime8 = ke.fetchGameDataFile((byte) 106, "thisishidden");
           if (null != var2Lifetime8) {
@@ -1205,31 +1205,31 @@ final class ArchiveCatalog {
           }
           var2Lifetime162 = ke.fetchGameDataFile((byte) 100, "enemyModifiers,0");
           if (var2Lifetime162 != null) {
-            l.enemyVariantNames[0] = MusicVoice.a(0, var2Lifetime162);
+            IntroMeshMaterial.enemyVariantNames[0] = MusicVoice.a(0, var2Lifetime162);
           }
           var2Lifetime163 = ke.fetchGameDataFile((byte) 122, "enemyModifiers,1");
           if (null != var2Lifetime163) {
-            l.enemyVariantNames[1] = MusicVoice.a(0, var2Lifetime163);
+            IntroMeshMaterial.enemyVariantNames[1] = MusicVoice.a(0, var2Lifetime163);
           }
           var2Lifetime164 = ke.fetchGameDataFile((byte) 126, "enemyModifiers,2");
           if (var2Lifetime164 != null) {
-            l.enemyVariantNames[2] = MusicVoice.a(0, var2Lifetime164);
+            IntroMeshMaterial.enemyVariantNames[2] = MusicVoice.a(0, var2Lifetime164);
           }
           var2Lifetime165 = ke.fetchGameDataFile((byte) 92, "enemyModifiers,3");
           if (null != var2Lifetime165) {
-            l.enemyVariantNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime165);
+            IntroMeshMaterial.enemyVariantNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime165);
           }
           var2Lifetime166 = ke.fetchGameDataFile((byte) 106, "enemyModifiers,4");
           if (null != var2Lifetime166) {
-            l.enemyVariantNames[4] = MusicVoice.a(0, var2Lifetime166);
+            IntroMeshMaterial.enemyVariantNames[4] = MusicVoice.a(0, var2Lifetime166);
           }
           var2Lifetime167 = ke.fetchGameDataFile((byte) 101, "enemyModifiers,5");
           if (var2Lifetime167 != null) {
-            l.enemyVariantNames[5] = MusicVoice.a(0, var2Lifetime167);
+            IntroMeshMaterial.enemyVariantNames[5] = MusicVoice.a(0, var2Lifetime167);
           }
           var2Lifetime168 = ke.fetchGameDataFile((byte) 103, "enemyModifiers,6");
           if (var2Lifetime168 != null) {
-            l.enemyVariantNames[6] = MusicVoice.a(0, var2Lifetime168);
+            IntroMeshMaterial.enemyVariantNames[6] = MusicVoice.a(0, var2Lifetime168);
           }
           var2Lifetime169 = ke.fetchGameDataFile((byte) 120, "powerupNames,0");
           if (null != var2Lifetime169) {
@@ -1365,7 +1365,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime202 = ke.fetchGameDataFile((byte) 101, "hudScore");
           if (var2Lifetime202 != null) {
-            ps.scoreText = MusicVoice.a(0, var2Lifetime202);
+            AchievementThresholds.scoreText = MusicVoice.a(0, var2Lifetime202);
           }
           var2Lifetime203 = ke.fetchGameDataFile((byte) 118, "hudTime");
           if (var2Lifetime203 != null) {
@@ -1594,7 +1594,7 @@ final class ArchiveCatalog {
             var4 = 1;
             if (param1 == 10) {
               var4 = 0;
-              vf.a((byte) -49);
+              DisplayModeFailure.showDisplayNameForm((byte) -49);
             }
             if (var4 != 0) {
               if (ScrollPane.field_E) {

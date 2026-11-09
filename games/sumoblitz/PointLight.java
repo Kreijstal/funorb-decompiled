@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ko extends IntrusiveNode {
-    private int field_k;
-    private int field_o;
-    private float field_l;
-    private int field_n;
-    private int field_r;
-    static IntrusiveDeque field_m;
-    private int field_q;
-    static int field_p;
+abstract class PointLight extends IntrusiveNode {
+    private int x;
+    private int y;
+    private float intensity;
+    private int z;
+    private int color;
+    static IntrusiveDeque recycledRasterFrames;
+    private int radius;
+    static int mouseX;
 
     final static void resendProgressAndArrayRequests(int guard, int opcode) {
         IntrusiveNode var2 = null;
@@ -25,7 +25,7 @@ abstract class ko extends IntrusiveNode {
             var4 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.next((byte) 18));
           }
           if (guard != 0) {
-            field_m = (IntrusiveDeque) null;
+            recycledRasterFrames = (IntrusiveDeque) null;
           }
           var2 = CheckboxWidget.field_E.first(-105);
           while (var2 != null) {
@@ -40,67 +40,67 @@ abstract class ko extends IntrusiveNode {
         }
     }
 
-    final int c(byte param0) {
-        if (param0 != 50) {
-          this.field_l = -3.14526629447937f;
-          return this.field_r;
+    final int color(byte guard) {
+        if (guard != 50) {
+          this.intensity = -3.14526629447937f;
+          return this.color;
         }
-        return this.field_r;
+        return this.color;
     }
 
-    final int d(byte param0) {
-        if (param0 != 109) {
-          ko.resendProgressAndArrayRequests(39, 19);
-          return this.field_o;
+    final int getY(byte guard) {
+        if (guard != 109) {
+          PointLight.resendProgressAndArrayRequests(39, 19);
+          return this.y;
         }
-        return this.field_o;
+        return this.y;
     }
 
-    final int a(byte param0) {
-        if (param0 < 71) {
+    final int getX(byte guard) {
+        if (guard < 71) {
           return -46;
         }
-        return this.field_k;
+        return this.x;
     }
 
-    final int c(int param0) {
-        if (param0 != 0) {
-          this.c(false);
-          return this.field_q;
+    final int radius(int guard) {
+        if (guard != 0) {
+          this.getZ(false);
+          return this.radius;
         }
-        return this.field_q;
+        return this.radius;
     }
 
-    public static void d(int param0) {
-        if (param0 != 0) {
-          ko.resendProgressAndArrayRequests(-33, -26);
-          field_m = null;
+    public static void releaseStatics(int guard) {
+        if (guard != 0) {
+          PointLight.resendProgressAndArrayRequests(-33, -26);
+          recycledRasterFrames = null;
           return;
         }
-        field_m = null;
+        recycledRasterFrames = null;
     }
 
-    private ko() throws Throwable {
+    private PointLight() throws Throwable {
         throw new Error();
     }
 
-    final int c(boolean param0) {
-        if (!param0) {
+    final int getZ(boolean guard) {
+        if (!guard) {
           return -61;
         }
-        return this.field_n;
+        return this.z;
     }
 
-    final float a(int param0) {
-        if (param0 != 0) {
-          this.field_l = 0.354354590177536f;
-          return this.field_l;
+    final float intensity(int guard) {
+        if (guard != 0) {
+          this.intensity = 0.354354590177536f;
+          return this.intensity;
         }
-        return this.field_l;
+        return this.intensity;
     }
 
     static {
-        field_m = new IntrusiveDeque();
-        field_p = 0;
+        recycledRasterFrames = new IntrusiveDeque();
+        mouseX = 0;
     }
 }

@@ -24,14 +24,14 @@ abstract class r extends DualLinkNode {
         UsernameCredentials.field_h = 127 & var3;
         stackIn_3_0 = (0 != (var3 & 128));
         QuickChatPhraseProvider.field_a = stackIn_3_0;
-        wn.field_a = var8.readUnsignedByte(-31302);
+        DroneProximitySupport.field_a = var8.readUnsignedByte(-31302);
         ReassignUpgradesScreen.field_j = var8.readLong((byte) 113);
         if (2 == UsernameCredentials.field_h) {
-          eh.field_c = var8.readUnsignedShort(255);
+          MenuFadeState.chatMessageIdHigh = var8.readUnsignedShort(255);
           CacheReferenceNode.field_w = var8.readUnsignedMedium((byte) 126);
         } else {
           CacheReferenceNode.field_w = 0;
-          eh.field_c = 0;
+          MenuFadeState.chatMessageIdHigh = 0;
         }
         if (guard >= -51) {
           field_r = (int[]) null;

@@ -68,8 +68,8 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           var4 = new TextWidgetRenderer(TextCaretLayout.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, TextCaretLayout.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var7, var4);
           this.policyLinks.tooltip = "";
-          this.policyLinks.setHotspotTooltip(-57, sb.openInPopupWindowText, 0);
-          this.policyLinks.setHotspotTooltip(-66, sb.openInPopupWindowText, 1);
+          this.policyLinks.setHotspotTooltip(-57, GameDefinitionLoader.openInPopupWindowText, 0);
+          this.policyLinks.setHotspotTooltip(-66, GameDefinitionLoader.openInPopupWindowText, 1);
           this.policyLinks.listener = (WidgetListener) (this);
           this.policyLinks.width = -40 + this.width;
           this.policyLinks.setBoundsToTextHeight(var3, false, 26, -40 + this.width);
@@ -104,10 +104,10 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 1 << param2;
-          if ((var3_int & kh.field_e) != 0) {
+          if ((var3_int & LoginIdentifierSupport.field_e) != 0) {
             return;
           }
-          kh.field_e = kh.field_e | var3_int;
+          LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           IsaacPacketBuffer.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
@@ -255,7 +255,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
 
     final static void e(boolean param0) {
         try {
-          GraphicsToolkit.field_d = NanoTickClock.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
+          GraphicsToolkit.field_d = NanoTickClock.clickText + " <b>" + km.acceptText + "</b> " + ClientStackTraceFormatter.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
           if (!param0) {
             UnderageAccountInfoPanel.e(false);
           }
@@ -288,7 +288,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           if (source == this.continueButton) {
-            kh.retryAccountCreationLogin(false);
+            LoginIdentifierSupport.retryAccountCreationLogin(false);
             this.dialog.n(-7);
           }
           if (guard == 710) {

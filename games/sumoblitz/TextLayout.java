@@ -42,7 +42,7 @@ abstract class TextLayout {
         try {
           var5_int = 0;
           if (param0 != -292767736) {
-            TextLayout.b(3);
+            TextLayout.decreaseMusicVolume(3);
           }
           var6 = 0;
           var7 = param2.length();
@@ -162,7 +162,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final static void b(int param0) {
+    final static void decreaseMusicVolume(int guard) {
         int var1 = 0;
         if (TextureGeneratorNode.musicVolume <= 32) {
           lf.setMusicVolume(0, 0);
@@ -173,7 +173,7 @@ abstract class TextLayout {
           }
           lf.setMusicVolume(0, TextureGeneratorNode.musicVolume - var1);
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           field_b = -64;
         }
     }

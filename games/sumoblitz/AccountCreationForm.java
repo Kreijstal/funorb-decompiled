@@ -652,7 +652,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var3 = var3 + this.addLabeledField(HardwareTurbulentWaterNoise.emailLoginText, 170, var3, 78, this.emailInput);
           var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, StripedProgressWidget.confirmEmailText));
           var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
-          var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.confirmPasswordInput));
+          var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, DroneEscalationSupport.passwordsMustBeBetweenText, this.confirmPasswordInput));
           var3 = var3 + (this.addValidatedField(ScoreMultiplierTable.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);
           var3 = var3 + this.addFieldWithStatus(170, DropDownArrowRenderer.ageText, var3, this.ageInput, 64);
           var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.emailNewsCheckbox, true, -120 + this.width, 5, MouseInputShutdown.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
@@ -661,8 +661,8 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var5 = new TextWidgetRenderer(TextCaretLayout.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, TextCaretLayout.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var2, var5);
           this.policyLinks.tooltip = "";
-          this.policyLinks.setHotspotTooltip(-90, sb.openInPopupWindowText, 0);
-          this.policyLinks.setHotspotTooltip(-61, sb.openInPopupWindowText, 1);
+          this.policyLinks.setHotspotTooltip(-90, GameDefinitionLoader.openInPopupWindowText, 0);
+          this.policyLinks.setHotspotTooltip(-61, GameDefinitionLoader.openInPopupWindowText, 1);
           this.policyLinks.listener = (WidgetListener) (this);
           this.policyLinks.setBoundsToTextHeight(var3, false, 46, this.width - 90);
           var3 = var3 + (15 + this.policyLinks.height);

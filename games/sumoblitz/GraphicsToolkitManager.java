@@ -69,7 +69,7 @@ final class GraphicsToolkitManager {
           }
           var4 = 113 / ((12 - guard) / 52);
           if (this.session != null) {
-            this.session.toolkit.updateTime((int)(wq.monotonicTimeMillis(-116) - this.session.startTimeMillis));
+            this.session.toolkit.updateTime((int)(IntroMeshResources.monotonicTimeMillis(-116) - this.session.startTimeMillis));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != this.session && (var3 == null ||
@@ -284,7 +284,7 @@ final class GraphicsToolkitManager {
                         var8.toolkit.useHeap(var8.toolkit.createHeap(100663296));
                       }
                       if (var3 == null) {
-                        var8.startTimeMillis = wq.monotonicTimeMillis(guard + 59);
+                        var8.startTimeMillis = IntroMeshResources.monotonicTimeMillis(guard + 59);
                       } else {
                         ((RendererStateSnapshot) (var3)).restore(var8, 3);
                       }
@@ -328,7 +328,7 @@ final class GraphicsToolkitManager {
     }
 
     GraphicsToolkitManager(int nativeArchiveId, int shaderArchiveId, TextureProvider textureProvider) {
-        this(kd.a((byte) -123, nativeArchiveId), ScrollControl.b(shaderArchiveId, -1), textureProvider, lt.field_m, IntrusiveNode.b(-16754));
+        this(IntroLogoRenderer.textArchive((byte) -123, nativeArchiveId), ScrollControl.b(shaderArchiveId, -1), textureProvider, lt.field_m, IntrusiveNode.b(-16754));
     }
 
     private GraphicsToolkitManager(ResourceArchive nativeArchive, ResourceArchive shaderArchive, TextureProvider textureProvider, PlatformTaskDispatcher dispatcher, RendererPreference[] rendererPreferences) {

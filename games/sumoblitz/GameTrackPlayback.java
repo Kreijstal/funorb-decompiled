@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uq {
+final class GameTrackPlayback {
     static ToolkitFont field_a;
 
-    final static void a(int param0, int param1) {
-        AffineTransform3D.crossfadeMusicTrack(param1, (byte) -55, TimedSceneEffect.field_m[param0], true);
+    final static void playGameTrack(int trackIndex, int fadeStep) {
+        AffineTransform3D.crossfadeMusicTrack(fadeStep, (byte) -55, TimedSceneEffect.field_m[trackIndex], true);
     }
 
     public static void releaseStatics(byte param0) {

@@ -47,7 +47,7 @@ final class LegacyOpenGlAssemblyProgram {
             for (var11 = param5; param3 > var11; var11++) {
               var12 = pd.field_q[var11];
               if (!param6) {
-                stackIn_23_0 = uc.field_c[var12];
+                stackIn_23_0 = IntroductionOverlaySupport.field_c[var12];
               } else {
                 stackIn_23_0 = LoginFieldValue.field_a[var12];
               }

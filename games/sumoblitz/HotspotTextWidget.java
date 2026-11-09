@@ -45,7 +45,7 @@ class HotspotTextWidget extends InteractiveWidget {
           var5_int = 65 % ((guard + 25) / 45);
           this.hoveredHotspot = null;
           if (this.hovered) {
-            var6 = -this.x + (-parentX + ko.field_p);
+            var6 = -this.x + (-parentX + PointLight.mouseX);
             var7 = -parentY + (pi.field_e - this.y);
             this.hoveredHotspot = this.hotspotAt(-40, var6, var7);
           }

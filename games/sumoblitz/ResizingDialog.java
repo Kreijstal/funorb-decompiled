@@ -207,7 +207,7 @@ abstract class ResizingDialog extends ModalDialog {
         PlatformTask var11 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param1.a((byte) 125)) {
+          if (!param1.supportsFullscreen((byte) 125)) {
             return null;
           }
           if (param3 == 0) {

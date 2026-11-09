@@ -153,7 +153,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        kd.field_a[param5] = param4;
+        IntroLogoRenderer.field_a[param5] = param4;
         if (param3 != 2) {
           return;
         }

@@ -89,14 +89,14 @@ final class PerlinNoise2D extends TextureGeneratorNode {
             var18 = this.permutation[var16 & 255] & 255;
             var14 = SpriteState.noiseFadeQ12[var11];
             if (!this.normalizeOutput) {
-              for (var10 = 0; ws.field_b > var10; var10++) {
+              for (var10 = 0; ClientStackTraceFormatter.field_b > var10; var10++) {
                 var4_int = MouseInputRegistration.field_b[var10] * this.repeatX;
                 var6 = this.interpolateCell(var18, var14, 3, var12, var11, var4_int * var8 >> 12, var17);
                 output[var10] = var6 * var9 >> 12;
               }
               return;
             }
-            for (var10Lifetime3 = 0; var10Lifetime3 < ws.field_b; var10Lifetime3++) {
+            for (var10Lifetime3 = 0; var10Lifetime3 < ClientStackTraceFormatter.field_b; var10Lifetime3++) {
               var4_intLifetime3 = this.repeatX * MouseInputRegistration.field_b[var10Lifetime3];
               var6Lifetime3 = this.interpolateCell(var18, var14, 3, var12, var11, var8 * var4_intLifetime3 >> 12, var17);
               var6Lifetime3 = var6Lifetime3 * var9 >> 12;
@@ -120,7 +120,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
             var18Lifetime1 = 255 & this.permutation[255 & var16Lifetime1];
             var17Lifetime1 = 255 & this.permutation[255 & var15Lifetime1];
             var14Lifetime1 = SpriteState.noiseFadeQ12[var11Lifetime1];
-            for (var10Lifetime1 = 0; ws.field_b > var10Lifetime1; var10Lifetime1++) {
+            for (var10Lifetime1 = 0; ClientStackTraceFormatter.field_b > var10Lifetime1; var10Lifetime1++) {
               var4_intLifetime1 = MouseInputRegistration.field_b[var10Lifetime1] * this.repeatX;
               var6Lifetime1 = this.interpolateCell(var18Lifetime1, var14Lifetime1, guard + 28699, var12Lifetime1, var11Lifetime1, var8Lifetime1 * var4_intLifetime1 >> 12, var17Lifetime1);
               output[var10Lifetime1] = var9Lifetime1 * var6Lifetime1 >> 12;
@@ -145,14 +145,14 @@ final class PerlinNoise2D extends TextureGeneratorNode {
               var18Lifetime2 = 255 & this.permutation[255 & var16Lifetime2];
               if (this.normalizeOutput &&
                 this.octaveCount - 1 == var7) {
-                for (var10Lifetime2 = 0; ws.field_b > var10Lifetime2; var10Lifetime2++) {
+                for (var10Lifetime2 = 0; ClientStackTraceFormatter.field_b > var10Lifetime2; var10Lifetime2++) {
                   var4_intLifetime2 = MouseInputRegistration.field_b[var10Lifetime2] * this.repeatX;
                   var6Lifetime2 = this.interpolateCell(var18Lifetime2, var14Lifetime2, 3, var12Lifetime2, var11Lifetime2, var4_intLifetime2 * var8Lifetime2 >> 12, var17Lifetime2);
                   var6Lifetime2 = output[var10Lifetime2] + (var9Lifetime2 * var6Lifetime2 >> 12);
                   output[var10Lifetime2] = 2048 + (var6Lifetime2 >> 1);
                 }
               } else {
-                for (var10Lifetime2 = 0; var10Lifetime2 < ws.field_b; var10Lifetime2++) {
+                for (var10Lifetime2 = 0; var10Lifetime2 < ClientStackTraceFormatter.field_b; var10Lifetime2++) {
                   var4_intLifetime2 = this.repeatX * MouseInputRegistration.field_b[var10Lifetime2];
                   var6Lifetime2 = this.interpolateCell(var18Lifetime2, var14Lifetime2, 3, var12Lifetime2, var11Lifetime2, var8Lifetime2 * var4_intLifetime2 >> 12, var17Lifetime2);
                   output[var10Lifetime2] = output[var10Lifetime2] + (var9Lifetime2 * var6Lifetime2 >> 12);

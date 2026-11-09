@@ -184,11 +184,11 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    final PacketBuffer b(byte param0) {
+    final PacketBuffer completedDownload(byte guard) {
         if (3 == this.field_g) {
           return this.field_d;
         }
-        if (param0 != 126) {
+        if (guard != 126) {
           this.field_a = (java.net.URL) null;
           return null;
         }

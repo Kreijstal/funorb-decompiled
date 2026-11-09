@@ -57,7 +57,7 @@ final class GameplaySession {
             var7 = ArenaBackdropPalettes.palettes[var3_int][var4_int];
             var8 = ArenaBackdropPalettes.palettes[var3_int][var5];
             if (AccountCreationProgressDialog.field_ob) {
-              if (2 <= kr.field_e) {
+              if (2 <= RasterColorTables.field_e) {
                 stackIn_25_0 = ArenaBackdropPalettes.palettes;
                 if ((var3_int - 1) % 6 < 0) {
                   stackIn_26_1 = 5;
@@ -66,7 +66,7 @@ final class GameplaySession {
                 }
                 var7 = stackIn_25_0[stackIn_26_1][var4_int];
               }
-              if (kr.field_e >= 1) {
+              if (RasterColorTables.field_e >= 1) {
                 stackIn_33_0 = ArenaBackdropPalettes.palettes;
                 if (0 > (var3_int - 1) % 6) {
                   stackIn_34_1 = 5;
@@ -75,7 +75,7 @@ final class GameplaySession {
                 }
                 var6 = stackIn_33_0[stackIn_34_1][PowerupPickup.field_t];
               }
-              if (kr.field_e == 3) {
+              if (RasterColorTables.field_e == 3) {
                 stackIn_41_0 = ArenaBackdropPalettes.palettes;
                 if (0 > (-1 + var3_int) % 6) {
                   stackIn_42_1 = 5;
@@ -84,8 +84,8 @@ final class GameplaySession {
                 }
                 var8 = stackIn_41_0[stackIn_42_1][var5];
               }
-              kr.field_e = kr.field_e - 1;
-              if (kr.field_e <= 0) {
+              RasterColorTables.field_e = RasterColorTables.field_e - 1;
+              if (RasterColorTables.field_e <= 0) {
                 AccountCreationProgressDialog.field_ob = false;
               }
             }
@@ -364,7 +364,7 @@ final class GameplaySession {
           }
           if (decompiledFrameCompleted0) {
             this.renderHud((byte) -106, toolkit);
-            uc.a(toolkit, false);
+            IntroductionOverlaySupport.renderDroneIntroduction(toolkit, false);
           }
           if (guard < 117) {
             this.showHudMessage(6, 60, (String) null);
@@ -456,7 +456,7 @@ final class GameplaySession {
         int stackIn_40_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_48_0 = 0;
-        l stackIn_64_0 = null;
+        IntroMeshMaterial stackIn_64_0 = null;
         int stackIn_72_0 = 0;
         int stackIn_77_0 = 0;
         RuntimeException stackIn_83_0 = null;
@@ -479,7 +479,7 @@ final class GameplaySession {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        l var21 = null;
+        IntroMeshMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -511,10 +511,10 @@ final class GameplaySession {
             var9 = var8.field_a;
             GraphicsHeap.a(var9, LoginForm.field_G, 0, 0, 0);
             if (var40 != 0) {
-              vf.a(0);
+              DisplayModeFailure.flattenFaceBuckets(0);
             }
           } else {
-            vf.a(0);
+            DisplayModeFailure.flattenFaceBuckets(0);
           }
           if (param6 >= -1) {
             return;
@@ -544,7 +544,7 @@ final class GameplaySession {
               }
               var14 = stackIn_25_0;
               var15 = param3 * var10[var13] + (var11[var13] * param5 + var12[var13] * param2) >> 8;
-              stackIn_28_0 = sq.field_a;
+              stackIn_28_0 = IntroLightingLookup.highlightIntensity;
               if (var15 < 0) {
                 stackIn_29_1 = -var15;
               } else {
@@ -589,12 +589,12 @@ final class GameplaySession {
               stackIn_48_0 = -1;
             }
             var20 = stackIn_48_0;
-            if (LegacyOpenGlReflectionEffect.field_i != null &&
+            if (LegacyOpenGlReflectionEffect.introMaterials != null &&
               param1.field_K != null &&
               var14Lifetime1 < param1.field_K.length &&
               param1.field_K[var14Lifetime1] != -1 &&
-              LegacyOpenGlReflectionEffect.field_i.length > param1.field_K[var14Lifetime1]) {
-              stackIn_64_0 = LegacyOpenGlReflectionEffect.field_i[param1.field_K[var14Lifetime1]];
+              LegacyOpenGlReflectionEffect.introMaterials.length > param1.field_K[var14Lifetime1]) {
+              stackIn_64_0 = LegacyOpenGlReflectionEffect.introMaterials[param1.field_K[var14Lifetime1]];
             } else {
               stackIn_64_0 = null;
             }
@@ -612,7 +612,7 @@ final class GameplaySession {
               if (null == var21) {
                 stackIn_72_0 = 8355711;
               } else {
-                stackIn_72_0 = var21.field_b;
+                stackIn_72_0 = var21.baseColor;
               }
               var30 = stackIn_72_0;
               var31 = 16711935 & var30;
@@ -628,7 +628,7 @@ final class GameplaySession {
               var32 = var9_array[var19];
               var33 = var9_array[var20];
               if (null != var21) {
-                stackIn_77_0 = var21.field_b;
+                stackIn_77_0 = var21.baseColor;
               } else {
                 stackIn_77_0 = 8355711;
               }
@@ -716,7 +716,7 @@ final class GameplaySession {
             }
             if (null != var2) {
               var4 = var2.radiusQ8 + var3.radiusQ8(-127);
-              if (wn.a(var2.yQ8, var4, -127, var3.xQ8((byte) 70), var2.xQ8, var3.yQ8(param0 ^ 14936)) &&
+              if (DroneProximitySupport.isWithinRadius(var2.yQ8, var4, -127, var3.xQ8((byte) 70), var2.xQ8, var3.yQ8(param0 ^ 14936)) &&
                 !var3.isMoving(0)) {
                 var2.applyPowerup((byte) 88, var3);
                 ArchiveLoadRequirement.playSoundEffect(27, true);
@@ -843,7 +843,7 @@ final class GameplaySession {
               return;
             }
           }
-          o.a(0);
+          LevelCompletionSupport.completeLevel(0);
           ByteArrayCacheNode.initializeGameplaySession((byte) 87);
           LegacyOpenGlSpriteTexture.field_w = true;
           return;
@@ -1082,10 +1082,10 @@ final class GameplaySession {
           if (guard >= -65) {
             this.renderSimpleArenaBorder(-55, (GraphicsToolkit) null);
           }
-          if (TextureFormat.elapsedTicks - uc.field_f == 100 &&
+          if (TextureFormat.elapsedTicks - IntroductionOverlaySupport.field_f == 100 &&
             !MusicPatch.simulationPaused &&
             !MessageDialog.arcadeMode) {
-            sj.a(-1, AccountServiceResult.waveIndex, OpenGlShaderProgram.levelIndex);
+            DisplayPromptRenderer.showLevelIntroduction(-1, AccountServiceResult.waveIndex, OpenGlShaderProgram.levelIndex);
           }
           boolean decompiledFrameRemainder2 = true;
           if (GridWidgetContainer.livesRemaining > 0) {
@@ -1122,8 +1122,8 @@ final class GameplaySession {
             }
           }
           MusicPatch.c((byte) 77);
-          if (TextureFormat.elapsedTicks != uc.field_f &&
-            (TextureFormat.elapsedTicks - uc.field_f) % 50 == 0 &&
+          if (TextureFormat.elapsedTicks != IntroductionOverlaySupport.field_f &&
+            (TextureFormat.elapsedTicks - IntroductionOverlaySupport.field_f) % 50 == 0 &&
             !DroneDebris.field_C) {
             DroneDebris.field_C = NativeLibraryExtractor.spawnNextWaveGroup(114);
           }
@@ -1142,7 +1142,7 @@ final class GameplaySession {
           }
           if (decompiledSharedTail1) {
             MessageDialog.field_ab = MessageDialog.field_ab - 1;
-            if (PowerupPickup.field_v >= ps.field_e[11]) {
+            if (PowerupPickup.field_v >= AchievementThresholds.targets[11]) {
               UnderageAccountInfoPanel.b(24753, 244, 11);
             }
           }
@@ -1159,7 +1159,7 @@ final class GameplaySession {
               var3_ref = SpriteMask.drones[0];
               if (AppletTickHistory.field_b <= 0 &&
                 !var3_ref.isBlastActive(126)) {
-                if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
+                if (DroneProximitySupport.isWithinRadius(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
                   SecondaryNodeQueue.a(var3_ref, (byte) 113);
                   if (DisplaySizeController.field_f == 0) {
                     OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
@@ -1236,7 +1236,7 @@ final class GameplaySession {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                HardwareUnlitEffect.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
+                HardwareUnlitEffect.a(EnemyDroneFactory.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1253,7 +1253,7 @@ final class GameplaySession {
               null != SpriteMask.drones[0]) {
               DelayedInboundPacket.updatePlayerControls(20);
             }
-            if (kp.field_a) {
+            if (StatisticsSubmissionSupport.field_a) {
               km.updateEnemySteering((byte) 32);
             }
             boolean decompiledFrameRemainder0 = true;
@@ -1261,7 +1261,7 @@ final class GameplaySession {
             if ((MessageDialog.arcadeMode) &&
               (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(AgeValidator.countEnemyDrones(true) >= (SpriteMask.drones.length - 1)))) {
-              var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
+              var4 = EnemyDroneFactory.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
               HardwareUnlitEffect.a(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
@@ -1309,7 +1309,7 @@ final class GameplaySession {
                 Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
                 HardwareQuadBatchBuffers.hasActivePlayer(-62) &&
                 AgeValidator.countEnemyDrones(true) == 0) {
-                o.a(0);
+                LevelCompletionSupport.completeLevel(0);
                 if (MusicPatchEnvelope.a(8230, 10)) {
                   UnderageAccountInfoPanel.b(24753, 239, 16);
                   if (LegacyOpenGlClientVertexBuffer.areEarlierLevelsComplete((byte) 90, 10)) {
@@ -1348,7 +1348,7 @@ final class GameplaySession {
                   Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
                   !HardwareQuadBatchBuffers.hasActivePlayer(-36) &&
                   AgeValidator.countEnemyDrones(true) == 0) {
-                  if (Bzip2State.a((byte) -94) > ps.field_e[20]) {
+                  if (Bzip2State.a((byte) -94) > AchievementThresholds.targets[20]) {
                     UnderageAccountInfoPanel.b(24753, 235, 20);
                   }
                   if (DropDownWidget.field_C == 0) {
@@ -1380,7 +1380,7 @@ final class GameplaySession {
             GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining - 1;
             if (GridWidgetContainer.livesRemaining <= 0) {
               Js5ClientState.field_a = TextureFormat.elapsedTicks;
-              uq.a(7, 8);
+              GameTrackPlayback.playGameTrack(7, 8);
               StrongCacheReference.switchMenuScreen(-7753, true, 11);
               if (var6 != 0) {
                 if (!MessageDialog.arcadeMode) {
@@ -1652,8 +1652,8 @@ final class GameplaySession {
             if (decompiledSharedTail0) {
               GameKeyHandler.field_a = new SessionStatisticsSubmission(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
             }
-            if (!vs.isGuestSession((byte) 9)) {
-              kp.submitStatistics(3, GameKeyHandler.field_a, 79);
+            if (!AccountPacketReader.isGuestSession((byte) 9)) {
+              StatisticsSubmissionSupport.submitStatistics(3, GameKeyHandler.field_a, 79);
             }
             GameKeyHandler.field_a = null;
           }
@@ -1693,7 +1693,7 @@ final class GameplaySession {
           if (guard > -75) {
             return;
           }
-          var3 = wq.rasterStateForToolkit(toolkit, (byte) 36);
+          var3 = IntroMeshResources.rasterStateForToolkit(toolkit, (byte) 36);
           if ((0 != GridWidgetContainer.livesRemaining ||
             MusicPatch.simulationPaused) && !MusicPatch.simulationPaused) {
             var4 = (PlayerDrone) (SpriteMask.drones[0]);
@@ -1712,13 +1712,13 @@ final class GameplaySession {
                 } else {
                   HudMessage.field_s[3].draw(-HudMessage.field_s[4].width() + 567, 0);
                   HudMessage.field_s[4].draw(567, 0);
-                  QueuedIntArrayRequest.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
-                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
+                  QueuedIntArrayRequest.field_k.a(19, 85, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -21, -1);
+                  GameTrackPlayback.field_a.a(19, 85, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
                   QueuedIntArrayRequest.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              GameTrackPlayback.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1734,11 +1734,11 @@ final class GameplaySession {
                 SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
                 SpriteState.field_B[4].draw(459, 448);
                 QueuedIntArrayRequest.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
-                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
+                GameTrackPlayback.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
               if (MessageDialog.arcadeMode) {
-                QueuedIntArrayRequest.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
-                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
+                QueuedIntArrayRequest.field_k.a(473, 175, -11753985, AchievementThresholds.scoreText + "" + FadingWidget.score, (byte) -125, -1);
+                GameTrackPlayback.field_a.a(473, 175, -4720129, "<col=ffffff>" + AchievementThresholds.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
               LegacyOpenGlTexture1D.field_k[0].draw(3, 42);
               var3.pushClip((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + LegacyOpenGlTexture1D.field_k[0].height(), 0, 40);
@@ -1762,13 +1762,13 @@ final class GameplaySession {
               }
               MusicCrossfadeStream.field_q[0].drawRotated(190.0f, 468.0f, 1600, 0, 1, 0, 2);
               QueuedIntArrayRequest.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
-              uq.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
+              GameTrackPlayback.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[1].drawRotated(240.0f, 468.0f, 1600, 0, 1, 0, 2);
               QueuedIntArrayRequest.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
-              uq.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
+              GameTrackPlayback.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[2].drawRotated(290.0f, 468.0f, 1600, 0, 1, 0, 2);
               QueuedIntArrayRequest.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
-              uq.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
+              GameTrackPlayback.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
               break;
             }
           }
@@ -1801,7 +1801,7 @@ final class GameplaySession {
           if (param0 < 53) {
             GameplaySession.renderLitMeshFaces(-125, (CompactMeshGeometry) null, -52, -77, 38, -62, (byte) 105, 54);
           }
-          kp.field_a = true;
+          StatisticsSubmissionSupport.field_a = true;
           ke.beginCurrentWave(false);
           this.closePauseMenu((byte) 112);
           return;

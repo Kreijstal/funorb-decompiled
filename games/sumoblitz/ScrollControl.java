@@ -409,7 +409,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
                   this.setVerticalPositionAndNotify(this.verticalPositionQ16 - this.field_O, (byte) -125);
                 }
               } else {
-                var6Lifetime1 = -(this.thumb.width >> 1) + (-this.thumb.x - this.x - parentX + ko.field_p);
+                var6Lifetime1 = -(this.thumb.width >> 1) + (-this.thumb.x - this.x - parentX + PointLight.mouseX);
                 var7 = -parentY + (pi.field_e - this.y) - (this.thumb.y + (this.thumb.height >> 1));
                 if (Math.abs(var7) > Math.abs(var6Lifetime1)) {
                   if (var7 > 0) {
@@ -427,7 +427,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
               }
             } else {
               if (this.horizontalEnabled) {
-                if (ko.field_p <= this.thumb.x + parentX + (this.thumb.width >> 1)) {
+                if (PointLight.mouseX <= this.thumb.x + parentX + (this.thumb.width >> 1)) {
                   this.setHorizontalPositionAndNotify((byte) 116, this.horizontalPositionQ16 - this.field_C);
                 } else {
                   this.setHorizontalPositionAndNotify((byte) -79, this.horizontalPositionQ16 + this.field_C);

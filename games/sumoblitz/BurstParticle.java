@@ -113,7 +113,7 @@ final class BurstParticle extends TimedSceneEffect {
             im.field_a.draw(this.x >> 8, this.y >> 8, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
             return;
           }
-          uc.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 3, 16777215 + (256 / this.initialLifetime * this.remainingTicks << 24), 1);
+          IntroductionOverlaySupport.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 3, 16777215 + (256 / this.initialLifetime * this.remainingTicks << 24), 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
