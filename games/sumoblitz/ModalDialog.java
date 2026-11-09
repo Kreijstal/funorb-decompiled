@@ -44,13 +44,13 @@ abstract class ModalDialog extends WidgetContainer {
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-            ClientException.a((byte) 114);
+            ClientException.popRasterState((byte) 114);
             uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-          ClientException.a((byte) 114);
+          ClientException.popRasterState((byte) 114);
           uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
@@ -61,13 +61,13 @@ abstract class ModalDialog extends WidgetContainer {
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-            ClientException.a((byte) 114);
+            ClientException.popRasterState((byte) 114);
             uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-          ClientException.a((byte) 114);
+          ClientException.popRasterState((byte) 114);
           uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
@@ -78,13 +78,13 @@ abstract class ModalDialog extends WidgetContainer {
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-            ClientException.a((byte) 114);
+            ClientException.popRasterState((byte) 114);
             uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-          ClientException.a((byte) 114);
+          ClientException.popRasterState((byte) 114);
           uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
@@ -93,13 +93,13 @@ abstract class ModalDialog extends WidgetContainer {
         this.drawBackdrop(113, 0, 0);
         if (guard < -35) {
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-          ClientException.a((byte) 114);
+          ClientException.popRasterState((byte) 114);
           uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
         this.focusedChild(-77);
         super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
-        ClientException.a((byte) 114);
+        ClientException.popRasterState((byte) 114);
         uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
     }
 

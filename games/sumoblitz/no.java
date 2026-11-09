@@ -28,7 +28,7 @@ final class no {
           if (param0 > -126) {
             no.releaseStatics(-92);
           }
-          stackIn_3_0 = uv.a(10, param1, true, (byte) -84);
+          stackIn_3_0 = SpriteOptionRenderer.parseInt(10, param1, true, (byte) -84);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

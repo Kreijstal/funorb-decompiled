@@ -134,7 +134,7 @@ final class HardwareTextureCache {
               var39 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -70);
               stackIn_13_0 = this.toolkit;
               stackIn_13_1 = var6;
-              stackIn_13_2 = nl.RGBA;
+              stackIn_13_2 = BeveledTextInputRenderer.RGBA;
               stackIn_13_3 = 110;
               stackIn_14_4 = (var12.field_k == 0) ? false : true;
               var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
@@ -239,7 +239,7 @@ final class HardwareTextureCache {
           var40 = this.provider.a(var6Lifetime1, false, 0.699999988079071f, textureId, var6Lifetime1, -70);
           stackIn_52_0 = this.toolkit;
           stackIn_52_1 = var6Lifetime1;
-          stackIn_52_2 = nl.RGBA;
+          stackIn_52_2 = BeveledTextInputRenderer.RGBA;
           stackIn_52_3 = 110;
           stackIn_53_4 = (var29.field_k == 0) ? false : true;
           var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);

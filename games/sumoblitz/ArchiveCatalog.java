@@ -26,10 +26,10 @@ final class ArchiveCatalog {
               CompactMeshGeometry.field_o = SecondaryNodeDequeIterator.field_b.g(109);
               jl.a(25, 2);
               if (var3 != 0) {
-                CompactMeshGeometry.field_o = pb.a(640, 8089, 0, 480, lt.field_m, 0);
+                CompactMeshGeometry.field_o = IndexedSprite.a(640, 8089, 0, 480, lt.field_m, 0);
               }
             } else {
-              CompactMeshGeometry.field_o = pb.a(640, 8089, 0, 480, lt.field_m, 0);
+              CompactMeshGeometry.field_o = IndexedSprite.a(640, 8089, 0, 480, lt.field_m, 0);
             }
             if (null == CompactMeshGeometry.field_o) {
               var2_int = 3;

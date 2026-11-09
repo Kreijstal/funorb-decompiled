@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm implements WidgetRenderer {
+final class DropDownArrowRenderer implements WidgetRenderer {
     static String ageText;
     static qr field_b;
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -100) {
-          fm.releaseStatics((byte) -19);
+          DropDownArrowRenderer.releaseStatics((byte) -19);
         }
         ageText = null;
         field_b = null;
@@ -30,7 +30,7 @@ final class fm implements WidgetRenderer {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (guard != 5592405) {
-            fm.releaseStatics((byte) 119);
+            DropDownArrowRenderer.releaseStatics((byte) 119);
           }
           for (var6_int = 0; widget.height >= var6_int; var6_int++) {
             var7 = 152 + 48 * var6_int / widget.height;

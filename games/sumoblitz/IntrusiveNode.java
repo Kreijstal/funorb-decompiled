@@ -93,10 +93,10 @@ class IntrusiveNode {
             stackIn_14_3 = null;
             stackIn_14_4 = HardwareRidgedWaterNoise.field_z.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(SpriteState.field_s).append("&u=");
-            if (dv.field_c != null) {
+            if (DropDownLabelRenderer.field_c != null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = dv.field_c;
+              stackIn_15_6 = DropDownLabelRenderer.field_c;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;

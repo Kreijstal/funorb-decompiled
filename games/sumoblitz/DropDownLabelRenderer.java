@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dv implements WidgetRenderer {
-    private DropDownWidget field_a;
+final class DropDownLabelRenderer implements WidgetRenderer {
+    private DropDownWidget dropdown;
     static boolean field_b;
     static String field_c;
 
@@ -28,13 +28,13 @@ final class dv implements WidgetRenderer {
             AudioServiceThread.drawDottedRectangle(var7 + 2, widget.width - 4, -13181, var6_int + 2, -4 + widget.height);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + widget.width + var6_int, widget.height + var7);
-          var8 = this.field_a.optionList.selectedOption(-72);
+          var8 = this.dropdown.optionList.selectedOption(-72);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_a.font.b(var9, var6_int + 2, (this.field_a.font.field_s + widget.height >> 1) + (var7 - 1), 10000536, -1);
-            if (this.field_a.hasFocus(-1) &&
-              var9.startsWith(this.field_a.searchPrefix)) {
-              var10 = this.field_a.font.a(this.field_a.searchPrefix);
+            this.dropdown.font.b(var9, var6_int + 2, (this.dropdown.font.field_s + widget.height >> 1) + (var7 - 1), 10000536, -1);
+            if (this.dropdown.hasFocus(-1) &&
+              var9.startsWith(this.dropdown.searchPrefix)) {
+              var10 = this.dropdown.font.a(this.dropdown.searchPrefix);
               SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, var7 + 2, var10, widget.height - 4, 2188450, 100);
             }
           }
@@ -54,25 +54,25 @@ final class dv implements WidgetRenderer {
         }
     }
 
-    final static ne[] a(boolean param0) {
+    final static RasterIndexedSprite[] takeDecodedIndexedSprites(boolean guard) {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (!param0) {
+        if (!guard) {
           field_b = false;
         }
-        ne[] var1 = new ne[rl.field_n];
+        RasterIndexedSprite[] var1 = new RasterIndexedSprite[rl.field_n];
         for (var2 = 0; var2 < rl.field_n; var2++) {
-          var1[var2] = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
+          var1[var2] = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -68);
         return var1;
     }
 
-    dv(DropDownWidget param0) {
+    DropDownLabelRenderer(DropDownWidget owner) {
         try {
-          this.field_a = param0;
+          this.dropdown = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dv.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,11 +80,11 @@ final class dv implements WidgetRenderer {
         field_c = null;
         if (param0 != 59) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          dv.a(-92, (java.applet.Applet) null);
+          DropDownLabelRenderer.readAppletSettings(-92, (java.applet.Applet) null);
         }
     }
 
-    final static String a(int param0, java.applet.Applet param1) {
+    final static String readAppletSettings(int guard, java.applet.Applet applet) {
         try {
           int var6 = 0;
           String var3 = null;
@@ -105,9 +105,9 @@ final class dv implements WidgetRenderer {
           var8 = Sumoblitz.field_L ? 1 : 0;
           try {
             try {
-              var9 = param1.getParameter("cookieprefix");
+              var9 = applet.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (tw.a(param1, 109, "getcookies"));
+              var4 = (String) (tw.a(applet, 109, "getcookies"));
               var5 = cn.a(';', var4, -27224);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -121,12 +121,12 @@ final class dv implements WidgetRenderer {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (param0 > -2) {
+            if (guard > -2) {
               stackIn_13_0 = (String) null;
               return stackIn_13_0;
             }
             if (IntIndexHashTable.field_d == null) {
-              return param1.getParameter("settings");
+              return applet.getParameter("settings");
             }
             stackIn_17_0 = IntIndexHashTable.field_d;
             return stackIn_17_0;
@@ -134,8 +134,8 @@ final class dv implements WidgetRenderer {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_20_0 = var2_ref;
-            stackIn_20_1 = new StringBuilder().append("dv.C(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_20_1 = new StringBuilder().append("dv.C(").append(guard).append(',');
+            if (applet == null) {
               stackIn_21_2 = "null";
             } else {
               stackIn_21_2 = "{...}";

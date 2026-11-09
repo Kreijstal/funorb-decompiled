@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tm implements WidgetRenderer {
+final class EmptyWidgetRenderer implements WidgetRenderer {
     static String field_b;
     static int field_d;
     static PlatformTask field_a;

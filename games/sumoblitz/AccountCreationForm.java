@@ -603,8 +603,8 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
     public AccountCreationForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         int var1_int = 0;
-        nl dupTemp$0 = null;
-        c dupTemp$1 = null;
+        BeveledTextInputRenderer dupTemp$0 = null;
+        PasswordInputRenderer dupTemp$1 = null;
         String var2 = null;
         int var3 = 0;
         LabeledWidget var4 = null;
@@ -636,15 +636,15 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           this.confirmPasswordInput.setValidator((byte) -17, new MatchingTextValidator(this.confirmPasswordInput, this.passwordInput));
           this.ageInput.setValidator((byte) 122, new AgeValidator(this.ageInput));
           this.createButton.enabled = false;
-          this.createButton.renderer = (WidgetRenderer) ((Object) new ue());
-          this.backButton.renderer = (WidgetRenderer) ((Object) new bv());
-          this.screenNameInput.renderer = (WidgetRenderer) ((Object) new nl(10000536));
-          dupTemp$0 = new nl(10000536);
+          this.createButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
+          this.backButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+          this.screenNameInput.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
+          dupTemp$0 = new BeveledTextInputRenderer(10000536);
           this.confirmEmailInput.renderer = (WidgetRenderer) ((Object) dupTemp$0);
           this.emailInput.renderer = (WidgetRenderer) ((Object) dupTemp$0);
-          this.ageInput.renderer = (WidgetRenderer) ((Object) new nl(10000536));
-          this.emailNewsCheckbox.renderer = (WidgetRenderer) ((Object) new oj());
-          dupTemp$1 = new c(10000536);
+          this.ageInput.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
+          this.emailNewsCheckbox.renderer = (WidgetRenderer) ((Object) new BeveledCheckboxRenderer());
+          dupTemp$1 = new PasswordInputRenderer(10000536);
           this.confirmPasswordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           this.passwordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           var2 = ic.a(cn.byClickingCreateYouText, new String[]{this.linkStyleStart((byte) 66), this.linkStyleEnd(128)}, (byte) -128);
@@ -654,7 +654,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
           var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.confirmPasswordInput));
           var3 = var3 + (this.addValidatedField(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.screenNameInput) + 5);
-          var3 = var3 + this.addFieldWithStatus(170, fm.ageText, var3, this.ageInput, 64);
+          var3 = var3 + this.addFieldWithStatus(170, DropDownArrowRenderer.ageText, var3, this.ageInput, 64);
           var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.emailNewsCheckbox, true, -120 + this.width, 5, jm.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
           this.addChild(var4, 100);
           var3 = var3 + var4.height;

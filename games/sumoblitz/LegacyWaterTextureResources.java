@@ -20,7 +20,7 @@ final class LegacyWaterTextureResources {
     }
 
     final static void showConnectionLost(int guard) {
-        iu.a((byte) -128);
+        MarkerTrackRenderer.a((byte) -128);
         pg.field_a = true;
         ScrollPane.field_E = true;
         RenderPresentationException.field_a.closeAllDialogs((byte) -64);

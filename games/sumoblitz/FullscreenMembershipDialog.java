@@ -153,7 +153,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
-          var4.renderer = (WidgetRenderer) ((Object) new ue());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = -6 + this.height;
           this.height = this.height + 38;
           var4.setBounds(param0 - 25442, 15, var5, 30, -14 + (this.width - 16));

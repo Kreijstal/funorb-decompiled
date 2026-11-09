@@ -199,7 +199,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (this.field_Vc == null &&
           HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
-          if (this.field_wb[this.field_mc] != rs.field_c) {
+          if (this.field_wb[this.field_mc] != IntList.field_c) {
             this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeColumnMajor4x4(-68, field_Mc));
           } else {
             this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeTextureMatrix4x4(field_Mc, 111));
@@ -245,7 +245,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == HardwareGraphicsHeap.field_m) {
           return 1;
         }
-        if (rs.field_c == param0) {
+        if (IntList.field_c == param0) {
           return 2;
         }
         if (param0 == LegacyRidgedWaterNoise.field_y) {
@@ -854,7 +854,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (ProgressDialog.RGB == param0) {
             return 22;
           }
-          if (param0 == nl.RGBA) {
+          if (param0 == BeveledTextInputRenderer.RGBA) {
             return 21;
           }
           if (param0 == IntrusiveNodeHashTable.ALPHA) {
@@ -1028,7 +1028,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 13754) {
           this.applyTextureConstantColor(-14);
         }
-        if (nl.NORMAL_MAP == mode) {
+        if (BeveledTextInputRenderer.NORMAL_MAP == mode) {
           var3 = 65536;
         } else {
           if (mode != wn.EYE_LINEAR) {

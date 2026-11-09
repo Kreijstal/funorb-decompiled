@@ -608,7 +608,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_V[var2] = new AffineTransform3D();
         }
         this.field_pb = new ko[-2 + this.field_bc];
-        this.field_D = (GpuTexture) ((Object) this.a(GpuDataType.UNSIGNED_BYTE, nl.RGBA, 1, 1, (byte) -110));
+        this.field_D = (GpuTexture) ((Object) this.a(GpuDataType.UNSIGNED_BYTE, BeveledTextInputRenderer.RGBA, 1, 1, (byte) -110));
         this.useHeap(new HardwareGraphicsHeap(262144));
         this.field_jc = this.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.TEXCOORD2})}, (byte) 78);
         this.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR})}, (byte) 70);
@@ -877,7 +877,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyColorCombineOperation(byte guard);
 
-    final boolean c() {
+    final boolean usesNativeRendering() {
         return true;
     }
 
@@ -1437,7 +1437,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_ic = this.field_ic & -30;
           }
           if (param0 != -83) {
-            this.c();
+            this.usesNativeRendering();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2020,7 +2020,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               var12 = var11 * 50;
               var13 = this.B(0);
               var13.setTranslation((float)(this.field_kc % var12 * var10.field_u) / (float)var12, 0.0f, (float)(var10.field_c * (this.field_kc % var12)) / (float)var12, param2 - 50);
-              this.a(rs.field_c, param2 + 28830);
+              this.a(IntList.field_c, param2 + 28830);
             }
             var6 = var10.field_q;
             if (!this.field_fb) {

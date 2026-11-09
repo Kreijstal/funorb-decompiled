@@ -37,7 +37,7 @@ final class lq {
           var6 = new Sprite(param0.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
-          GameApplet.j(103);
+          GameApplet.pushRasterState(103);
           if (param1 >= -62) {
             ResourceArchive var5 = (ResourceArchive) null;
             lq.a(-58, (String) null, (String) null, (ResourceArchive) null);
@@ -49,7 +49,7 @@ final class lq {
           MusicPatchEnvelope.field_a.d();
           var6.c(0, -kh.field_a.field_u);
           MusicPatchEnvelope.field_a.field_A = kh.field_a.field_u;
-          ClientException.a((byte) 71);
+          ClientException.popRasterState((byte) 71);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

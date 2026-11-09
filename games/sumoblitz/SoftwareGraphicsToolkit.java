@@ -1260,7 +1260,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean c() {
+    final boolean usesNativeRendering() {
         return false;
     }
 

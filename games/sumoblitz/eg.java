@@ -75,7 +75,7 @@ final class eg extends IntrusiveNode {
           TextLayout.field_d = new byte[rl.field_n][];
           StrongCacheReference.field_C = new int[rl.field_n];
           er.field_h = new int[rl.field_n];
-          fl.field_o = new byte[rl.field_n][];
+          StatefulWidgetRenderer.field_o = new byte[rl.field_n][];
           var17.position = -(rl.field_n * 8) - 7 + param1.length;
           vf.field_d = var17.readUnsignedShort(param0);
           ToolkitImageProducerBuffer.field_u = var17.readUnsignedShort(255);
@@ -113,7 +113,7 @@ final class eg extends IntrusiveNode {
               var21 = new byte[var7];
               var19 = var21;
               var9 = var19;
-              fl.field_o[var4Lifetime5] = var21;
+              StatefulWidgetRenderer.field_o[var4Lifetime5] = var21;
               var10 = 0;
               var11 = var17.readUnsignedByte(param0 - 31557);
               if ((var11 & 1) == 0) {

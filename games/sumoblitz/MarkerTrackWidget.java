@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class fu extends InteractiveWidget {
-    int field_J;
-    private rs field_H;
+final class MarkerTrackWidget extends InteractiveWidget {
+    int trackY;
+    private IntList markers;
     static String namesCanOnlyContainText;
     static String field_E;
-    int field_I;
-    private int field_G;
+    int paddingX;
+    private int valueRange;
 
-    final static void a(int param0) {
+    final static void closeCacheResources(int guard) {
         try {
           int var1_int = 0;
           IOException iOException = null;
@@ -35,7 +35,7 @@ final class fu extends InteractiveWidget {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (param0 != -1) {
+            if (guard != -1) {
               namesCanOnlyContainText = (String) null;
             }
             if (ProgressDialog.field_O != null) {
@@ -55,7 +55,7 @@ final class fu extends InteractiveWidget {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fu.I(" + param0 + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fu.I(" + guard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -64,37 +64,37 @@ final class fu extends InteractiveWidget {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_E = null;
-        if (param0) {
-          fu.a(78);
+        if (guard) {
+          MarkerTrackWidget.closeCacheResources(78);
         }
         namesCanOnlyContainText = null;
     }
 
-    final int a(int param0, int param1) {
-        if (param0 < 0 ||
-          param0 >= this.field_H.a((byte) 51)) {
+    final int markerPosition(int index, int guard) {
+        if (index < 0 ||
+          index >= this.markers.size((byte) 51)) {
           return -1;
         }
-        if (param1 != -24194) {
-          this.g(-5);
+        if (guard != -24194) {
+          this.markerCount(-5);
         }
-        return this.field_H.d(param0, -29816);
+        return this.markers.get(index, -29816);
     }
 
-    final int h(int param0) {
-        if (param0 != -1) {
-          this.field_I = 54;
+    final int range(int guard) {
+        if (guard != -1) {
+          this.paddingX = 54;
         }
-        return this.field_G;
+        return this.valueRange;
     }
 
-    final int g(int param0) {
-        if (param0 != 0) {
-          this.field_I = 112;
+    final int markerCount(int guard) {
+        if (guard != 0) {
+          this.paddingX = 112;
         }
-        return this.field_H.a((byte) 70);
+        return this.markers.size((byte) 70);
     }
 
     final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
@@ -113,28 +113,28 @@ final class fu extends InteractiveWidget {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (guard > -42) {
-            fu.f(-122);
+            MarkerTrackWidget.persistRandomDataAndAdvance(-122);
           }
           if (!super.onPointerPressed(root, -105, pointerY, button, parentX, pointerX, parentY)) {
             return false;
           }
-          var8_int = pointerX - (parentX + this.field_I);
-          var9 = -(this.field_I * 2) + this.width;
+          var8_int = pointerX - (parentX + this.paddingX);
+          var9 = -(this.paddingX * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
           if (var8_int < 0) {
             var8_int = 0;
           }
-          var8_int = var8_int * this.field_G / var9;
+          var8_int = var8_int * this.valueRange / var9;
           if (button != 1) {
             if (button != 2) {
               return true;
             }
             var10 = 2147483647;
             var11 = -1;
-            for (var12 = 0; var12 < this.field_H.a((byte) 29); var12++) {
-              var13 = this.field_H.d(var12, -29816) - var8_int;
+            for (var12 = 0; var12 < this.markers.size((byte) 29); var12++) {
+              var13 = this.markers.get(var12, -29816) - var8_int;
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -142,10 +142,10 @@ final class fu extends InteractiveWidget {
               }
             }
             if (var11 >= 0) {
-              this.field_H.a((byte) 61, var11);
+              this.markers.removeAt((byte) 61, var11);
             }
           } else {
-            this.field_H.c(-18, var8_int);
+            this.markers.add(-18, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,16 +162,16 @@ final class fu extends InteractiveWidget {
         }
     }
 
-    final static int e(byte param0) {
-        int var1 = 126 % ((param0 + 26) / 38);
+    final static int fullscreenDialogHeight(byte guard) {
+        int var1 = 126 % ((guard + 26) / 38);
         return RenderPresentationException.field_d;
     }
 
-    private fu() throws Throwable {
+    private MarkerTrackWidget() throws Throwable {
         throw new Error();
     }
 
-    final static void f(int param0) {
+    final static void persistRandomDataAndAdvance(int skipBytes) {
         try {
           if (NameSuggestionsPanel.field_E != null) {
             try {
@@ -180,7 +180,7 @@ final class fu extends InteractiveWidget {
             } catch (Exception exception) {
             }
           }
-          ig.field_a.position = ig.field_a.position + param0;
+          ig.field_a.position = ig.field_a.position + skipBytes;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

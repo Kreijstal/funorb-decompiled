@@ -1034,7 +1034,7 @@ class MenuScreen {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    fl.field_n = 0;
+                    StatefulWidgetRenderer.field_n = 0;
                     StrongCacheReference.switchMenuScreen(-7753, param0, 3);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
@@ -1162,7 +1162,7 @@ class MenuScreen {
                         break regionExit2;
                       }
                     }
-                    vb.a((byte) 126, param0);
+                    RotarySelectorWidget.a((byte) 126, param0);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1237,7 +1237,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (this.screenId == 3) {
-                      fl.field_n = fl.field_n - 1;
+                      StatefulWidgetRenderer.field_n = StatefulWidgetRenderer.field_n - 1;
                     }
                     if (4 != this.screenId &&
                       this.screenId != 5) {
@@ -1257,7 +1257,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     if (this.screenId == 3) {
-                      fl.field_n = fl.field_n + 1;
+                      StatefulWidgetRenderer.field_n = StatefulWidgetRenderer.field_n + 1;
                     }
                     if (this.screenId != 4 &&
                       this.screenId != 5) {
@@ -1429,7 +1429,7 @@ class MenuScreen {
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != IntrusiveNodeHashTable.field_c);
                   stackIn_36_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_32_0).a(fl.a(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_32_0).a(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
                   stackIn_38_0 = qv.field_k;
                   stackIn_38_1 = 26;
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
@@ -1447,7 +1447,7 @@ class MenuScreen {
                   stackIn_50_1 = false;
                   stackIn_51_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_54_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((ToolkitFont) (Object) stackIn_50_0).a(fl.a(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), opacity << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_50_0).a(StatefulWidgetRenderer.storageRequirementPrompt(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), opacity << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
                   stackIn_56_0 = uq.field_a;
                   stackIn_56_1 = 26;
                   stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
@@ -1566,7 +1566,7 @@ class MenuScreen {
                 if (var7 < 50) {
                   var6[var7] = -24 + var5;
                   stackIn_11_0 = 5;
-                  stackIn_11_1 = fl.field_n;
+                  stackIn_11_1 = StatefulWidgetRenderer.field_n;
                   if (var8 == 0) {
                     if (stackIn_11_0 == stackIn_11_1) {
                       var6[var7] = var6[var7] - 64;
@@ -1575,7 +1575,7 @@ class MenuScreen {
                     continue;
                   }
                 } else {
-                  var7 = fl.field_n;
+                  var7 = StatefulWidgetRenderer.field_n;
                   decompiledFrameRemainder0 = (var7 != 0);
                   if (decompiledFrameRemainder0) {
                     stackIn_11_0 = ~var7;
@@ -1623,8 +1623,8 @@ class MenuScreen {
           this.a((byte) -123, param1);
           break;
         }
-        MessageDialog.field_db.a(vl.a(1 + fl.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
-        LegacyOpenGlEffect.field_c.a(vl.a(1 + fl.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
+        MessageDialog.field_db.a(vl.a(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
+        LegacyOpenGlEffect.field_c.a(vl.a(1 + StatefulWidgetRenderer.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
         return;
     }
 
@@ -1665,11 +1665,11 @@ class MenuScreen {
     private final boolean e(int param0, int param1) {
         if (this.screenId == 3) {
           if (0 == param0 &&
-            fl.field_n == 0) {
+            StatefulWidgetRenderer.field_n == 0) {
             return false;
           }
           if (param0 == 2 &&
-            ~fl.field_n == ~(-1 + GameInstructions.field_e.length)) {
+            ~StatefulWidgetRenderer.field_n == ~(-1 + GameInstructions.field_e.length)) {
             return false;
           }
         }
@@ -1777,7 +1777,7 @@ class MenuScreen {
     void update(int param0) {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (oj.a(false)) {
+        if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
           return;
         }
         if (hg.field_o.a(false)) {
@@ -2026,7 +2026,7 @@ class MenuScreen {
         MessageDialog.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
         LegacyOpenGlEffect.field_c.a(var6, param0 << 24 | 16777215, -1, var7, 320, param1 - 1);
         if (!vs.b((byte) 9)) {
-          stackIn_37_0 = bv.friendsCanBeAddedText;
+          stackIn_37_0 = LinkWidgetRenderer.friendsCanBeAddedText;
         } else {
           stackIn_37_0 = InstrumentNoteMask.createAFreeAccountText;
         }

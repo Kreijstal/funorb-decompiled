@@ -89,7 +89,7 @@ final class ClientException extends RuntimeException {
         return true;
     }
 
-    final static void a(byte param0) {
+    final static void popRasterState(byte guard) {
         rl var1 = (rl) (IntrusiveNodeHashTable.field_g.removeLast((byte) -124));
         if (var1 == null) {
           throw new IllegalStateException();
@@ -98,7 +98,7 @@ final class ClientException extends RuntimeException {
         SoftwareRasterizer.setClip(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
         var1.field_v = null;
         ko.field_m.addLast((IntrusiveNode) (var1), (byte) 39);
-        int var2 = -37 / ((param0 - 1) / 38);
+        int var2 = -37 / ((guard - 1) / 38);
     }
 
     public static void releaseStatics(byte param0) {

@@ -142,7 +142,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           java.net.MalformedURLException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_o.startsWith("win") &&
-              rs.a(param3, -2528)) {
+              IntList.openWindowsBrowser(param3, -2528)) {
               return;
             }
             try {

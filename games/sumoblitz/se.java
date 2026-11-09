@@ -25,8 +25,8 @@ abstract class se {
           while (wd.c(param0 ^ -19954)) {
             RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
-          if (iu.field_e != -1) {
-            var1_int = iu.field_e;
+          if (MarkerTrackRenderer.field_e != -1) {
+            var1_int = MarkerTrackRenderer.field_e;
             rd.a(-1, param0 ^ -19873);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
@@ -141,7 +141,7 @@ abstract class se {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = -24 % ((-63 - param0) / 40);
-        if (!oj.a(param1, 13836, param2)) {
+        if (!BeveledCheckboxRenderer.a(param1, 13836, param2)) {
           return false;
         }
         if (((param1 & 36864) != 0 ? true : false) | dk.a(param1, (byte) -107, param2) | LegacyOpenGlDisplayLists.a(param2, true, param1)) {

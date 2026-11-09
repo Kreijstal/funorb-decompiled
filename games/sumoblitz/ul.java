@@ -157,7 +157,7 @@ final class ul {
         this.field_a.a(8310, this.field_s, this.field_c);
         int var2 = -25 % ((50 - param0) / 48);
         DroneDebris.field_A = false;
-        FullscreenCanvas var3 = pb.a(this.field_s, 8089, 0, this.field_c, lt.field_m, 0);
+        FullscreenCanvas var3 = IndexedSprite.a(this.field_s, 8089, 0, this.field_c, lt.field_m, 0);
         if (var3 == null) {
           this.e(2);
         }

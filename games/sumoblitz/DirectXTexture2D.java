@@ -98,7 +98,7 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (DirectXGraphicsToolkit) (param0);
-        stackIn_3_2 = nl.RGBA;
+        stackIn_3_2 = BeveledTextInputRenderer.RGBA;
         stackIn_3_3 = GpuDataType.UNSIGNED_BYTE;
         if (param3) {
           stackIn_3_0Lifetime1 = this;

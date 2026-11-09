@@ -31,7 +31,7 @@ final class qc {
           }
           for (var5 = 0; var5 < param0.length(); var5++) {
             if (!jl.a((byte) 110, param0.charAt(var5))) {
-              stackIn_11_0 = fu.namesCanOnlyContainText;
+              stackIn_11_0 = MarkerTrackWidget.namesCanOnlyContainText;
               return stackIn_11_0;
             }
           }

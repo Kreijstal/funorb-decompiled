@@ -53,10 +53,10 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           qf.field_a = qf.field_a + 1;
-          if (tm.field_d == -1 &&
+          if (EmptyWidgetRenderer.field_d == -1 &&
             ScanlineSpriteMask.field_e == -1) {
             ScanlineSpriteMask.field_e = pi.field_e;
-            tm.field_d = ko.field_p;
+            EmptyWidgetRenderer.field_d = ko.field_p;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
@@ -89,7 +89,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
               }
             }
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            VertexLayout.field_b = tm.field_d;
+            VertexLayout.field_b = EmptyWidgetRenderer.field_d;
             if (param0 != null) {
               up.field_d = false;
             } else {
@@ -105,7 +105,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
             sl.field_d) {
             qf.field_a = 0;
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            VertexLayout.field_b = tm.field_d;
+            VertexLayout.field_b = EmptyWidgetRenderer.field_d;
           }
           if (up.field_d &&
             qf.field_a == PlayerDrone.field_T) {
@@ -113,7 +113,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
             up.field_d = false;
           }
           ScanlineSpriteMask.field_e = -1;
-          tm.field_d = -1;
+          EmptyWidgetRenderer.field_d = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -186,7 +186,7 @@ final class PasswordValidator extends TextInputValidator {
           EmailSyntaxValidator.field_e = 0;
           LegacyOpenGlNormalMapGenerator.field_c = false;
           SecondaryNodeDeque.field_e = false;
-          vb.field_E = false;
+          RotarySelectorWidget.field_E = false;
           MatchingTextValidator.field_i = 0;
           return;
         }

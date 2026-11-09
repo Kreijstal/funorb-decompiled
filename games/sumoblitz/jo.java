@@ -34,11 +34,11 @@ final class jo {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param1 == 100 &&
-          0 < va.field_b) {
-          fieldTemp$3 = va.field_b - 1;
-          va.field_b = va.field_b - 1;
+          0 < RotarySelectorRenderer.field_b) {
+          fieldTemp$3 = RotarySelectorRenderer.field_b - 1;
+          RotarySelectorRenderer.field_b = RotarySelectorRenderer.field_b - 1;
           var2_ref_byte__ = kh.field_f[fieldTemp$3];
-          kh.field_f[va.field_b] = null;
+          kh.field_f[RotarySelectorRenderer.field_b] = null;
           return var2_ref_byte__;
         }
         if (5000 == param1 &&

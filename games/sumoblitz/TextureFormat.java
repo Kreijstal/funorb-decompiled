@@ -6,10 +6,10 @@ final class TextureFormat {
     static int elapsedTicks;
     int componentCount;
 
-    final static ne a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static RasterIndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ne stackIn_6_0 = null;
+        RasterIndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -17,7 +17,7 @@ final class TextureFormat {
         try {
           if (!k.a(param2, param0, param1, param3 ^ 3916)) {
             stackIn_2_0 = null;
-            return (ne) (stackIn_2_0);
+            return (RasterIndexedSprite) (stackIn_2_0);
           }
           if (param3 != -21834) {
             elapsedTicks = -84;

@@ -360,7 +360,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 114, 18);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
               var10 = InwardSparkParticle.field_v.position;
-              var11_ref_String = dv.a(-94, LegacyOpenGlUnlitEffect.c(2));
+              var11_ref_String = DropDownLabelRenderer.readAppletSettings(-94, LegacyOpenGlUnlitEffect.c(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -414,7 +414,7 @@ final class CachedTextLayout extends TextLayout {
               if (var9Lifetime1 != 99) {
                 gu.field_d = -1;
                 TextureFormat.field_a = var9Lifetime1;
-                kw.field_c = fm.field_b;
+                kw.field_c = DropDownArrowRenderer.field_b;
               } else {
                 OpenGlIndexBuffer.b(-1, br.b(-105));
                 HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
@@ -439,7 +439,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (fm.field_b == kw.field_c &&
+          if (DropDownArrowRenderer.field_b == kw.field_c &&
             lt.a((byte) 119)) {
             if (TextureFormat.field_a != 255) {
               MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);

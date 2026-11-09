@@ -388,9 +388,9 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               stackIn_5_3 = var14.lines[1 + var7].top;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            kw.a(widget.height + (widget.y + parentY), parentY + widget.y, 1, widget.x + parentX, widget.x + parentX + widget.width);
+            kw.pushClip(widget.height + (widget.y + parentY), parentY + widget.y, 1, widget.x + parentX, widget.x + parentX + widget.width);
             HardwareTurbulentWaterNoise.widgetTheme.a(this.caretColor, var10, false, var10, var12, var11);
-            ClientException.a((byte) 116);
+            ClientException.popRasterState((byte) 116);
           }
           if (guard != 1) {
             var13 = (UiWidget) null;
@@ -504,7 +504,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             }
             var10 = var18.lineForCharacter(var8, guard ^ -17500);
             var11 = var18.lineForCharacter(var9, -17500);
-            kw.a(widget.height + (widget.y + parentY), widget.y + parentY, 1, widget.x + parentX, widget.width + (parentX + widget.x));
+            kw.pushClip(widget.height + (widget.y + parentY), widget.y + parentY, 1, widget.x + parentX, widget.width + (parentX + widget.x));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.lines[var12];
               if (var10 != var12) {
@@ -525,7 +525,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               var15 = stackIn_19_0;
               HardwareTurbulentWaterNoise.widgetTheme.a(this.selectionColor >>> 24, guard + 3, var13.bottom, this.selectionColor, this.textXForOffset(-3, widget, var14, parentX), var15 - var14, widget.textOffsetY + (this.paddingTop + widget.y + parentY) + var13.top);
             }
-            ClientException.a((byte) 86);
+            ClientException.popRasterState((byte) 86);
             return;
           }
           return;
@@ -603,7 +603,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          kw.a(widget.height + (parentY + widget.y), widget.y + parentY, 1, widget.x + parentX, widget.width + widget.x + parentX);
+          kw.pushClip(widget.height + (parentY + widget.y), widget.y + parentY, 1, widget.x + parentX, widget.width + widget.x + parentX);
           var9_int = this.contentWidth(95, widget);
           var10 = this.contentHeight(widget, true);
           if (!this.wrapText) {
@@ -638,7 +638,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           } else {
             this.font.a(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX), this.textYForOffset(parentY, (byte) -122, widget, layoutY), var9_int, var10, foreground, shadow, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
-          ClientException.a((byte) 63);
+          ClientException.popRasterState((byte) 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

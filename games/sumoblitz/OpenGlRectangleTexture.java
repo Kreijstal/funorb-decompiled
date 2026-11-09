@@ -145,7 +145,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
     }
 
     OpenGlRectangleTexture(OpenGlGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, nl.RGBA, GpuDataType.UNSIGNED_BYTE, param2 * param1, false);
+        super(param0, 34037, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, param2 * param1, false);
         try {
           this.height = param2;
           this.width = param1;

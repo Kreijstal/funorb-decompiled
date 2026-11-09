@@ -944,7 +944,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_y.a();
     }
 
-    final boolean c() {
+    final boolean usesNativeRendering() {
         return true;
     }
 

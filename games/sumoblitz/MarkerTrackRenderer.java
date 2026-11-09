@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iu implements WidgetRenderer {
-    private int field_d;
-    private LegacyBitmapFont field_c;
+final class MarkerTrackRenderer implements WidgetRenderer {
+    private int markerRadius;
+    private LegacyBitmapFont font;
     static int field_e;
-    private int field_h;
-    private int field_b;
-    private int field_g;
-    private int field_f;
-    private int field_a;
+    private int backgroundColor;
+    private int textColor;
+    private int trackColor;
+    private int textShadow;
+    private int markerColor;
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         int var10 = 0;
@@ -24,33 +24,33 @@ final class iu implements WidgetRenderer {
         int var9 = 0;
         int var11 = 0;
         UiWidget var12 = null;
-        fu var13 = null;
+        MarkerTrackWidget var13 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (widget instanceof fu) {
+          if (widget instanceof MarkerTrackWidget) {
             stackIn_4_0 = (UiWidget) (widget);
           } else {
             stackIn_4_0 = null;
           }
-          var13 = (fu) (stackIn_4_0);
-          SoftwareRasterizer.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_h);
+          var13 = (MarkerTrackWidget) (stackIn_4_0);
+          SoftwareRasterizer.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.backgroundColor);
           if (var13 != null) {
           }
           if (guard != 5592405) {
             var12 = (UiWidget) null;
             this.renderWidget((UiWidget) null, -54, -79, true, -72);
           }
-          var7 = widget.width - var13.field_I * 2;
-          var8 = parentX - (-widget.x - var13.field_I);
-          var9 = parentY + widget.y + var13.field_J;
-          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_g);
-          for (var10 = -1 + var13.g(0); var10 >= 0; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var13.a(var10, guard - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
+          var7 = widget.width - var13.paddingX * 2;
+          var8 = parentX - (-widget.x - var13.paddingX);
+          var9 = parentY + widget.y + var13.trackY;
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.trackColor);
+          for (var10 = -1 + var13.markerCount(0); var10 >= 0; var10--) {
+            SoftwareRasterizer.fillCircle(var8 + var13.markerPosition(var10, guard - 5616599) * var7 / var13.range(-1), var9, this.markerRadius, this.markerColor);
           }
-          if (this.field_c == null) {
+          if (this.font == null) {
             return;
           }
-          this.field_c.a(var13.text, var8 + var7 / 2, var13.field_J + (this.field_c.field_F + var9), this.field_b, this.field_f);
+          this.font.a(var13.text, var8 + var7 / 2, var13.trackY + (this.font.field_F + var9), this.textColor, this.textShadow);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class iu implements WidgetRenderer {
           ProxySocketConnector.field_e = hm.field_a;
           return;
         }
-        iu.a((byte) -85);
+        MarkerTrackRenderer.a((byte) -85);
         pg.field_a = false;
         StatusMessagePanel.field_A = false;
         rd.a(-1, -69);
@@ -98,17 +98,17 @@ final class iu implements WidgetRenderer {
         }
     }
 
-    iu(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    MarkerTrackRenderer(LegacyBitmapFont textFont, int labelColor, int shadow, int lineColor, int background, int radius, int markerFill) {
         try {
-          this.field_g = param3;
-          this.field_b = param1;
-          this.field_a = param6;
-          this.field_h = param4;
-          this.field_d = param5;
-          this.field_f = param2;
-          this.field_c = param0;
+          this.trackColor = lineColor;
+          this.textColor = labelColor;
+          this.markerColor = markerFill;
+          this.backgroundColor = background;
+          this.markerRadius = radius;
+          this.textShadow = shadow;
+          this.font = textFont;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (textFont != null ? "{...}" : "null") + ',' + labelColor + ',' + shadow + ',' + lineColor + ',' + background + ',' + radius + ',' + markerFill + ')');
         }
     }
 

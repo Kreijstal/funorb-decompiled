@@ -187,9 +187,9 @@ abstract class FixedPointPerlinNoise3D {
     }
 
     final static void a(byte param0, int param1) {
-        c.field_s = 3 & param1 >> 4;
-        if (!(c.field_s <= 2)) {
-          c.field_s = 2;
+        PasswordInputRenderer.field_s = 3 & param1 >> 4;
+        if (!(PasswordInputRenderer.field_s <= 2)) {
+          PasswordInputRenderer.field_s = 2;
         }
         if (param0 < 24) {
           FixedPointPerlinNoise3D.releaseStatics((byte) 45);
@@ -198,9 +198,9 @@ abstract class FixedPointPerlinNoise3D {
         if (!(EmailSyntaxValidator.field_f <= 2)) {
           EmailSyntaxValidator.field_f = 2;
         }
-        rs.field_g = param1 & 3;
-        if (rs.field_g > 2) {
-          rs.field_g = 2;
+        IntList.field_g = param1 & 3;
+        if (IntList.field_g > 2) {
+          IntList.field_g = 2;
         }
     }
 

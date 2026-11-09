@@ -53,7 +53,7 @@ final class fd extends uw {
             var8.showIneligibleResult(true);
             return true;
           }
-          dv.field_b = param2;
+          DropDownLabelRenderer.field_b = param2;
           ValidationStatusWidget.field_G = param1;
           FadingWidget.field_C = param3;
           eg.field_l = null;
@@ -127,7 +127,7 @@ final class fd extends uw {
         if (param0 != 3878) {
           return 25;
         }
-        if (!oj.a(false) ||
+        if (!BeveledCheckboxRenderer.hasOpenDialogs(false) ||
           null == pu.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }

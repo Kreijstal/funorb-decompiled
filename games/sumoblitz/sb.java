@@ -6,7 +6,7 @@ final class sb {
     static int field_a;
     static String openInPopupWindowText;
     static GzipDecompressor gzipDecompressor;
-    static ne[] field_d;
+    static RasterIndexedSprite[] field_d;
 
     final static GraphicsToolkit a(ResourceArchive param0, int param1, TextureProvider param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;

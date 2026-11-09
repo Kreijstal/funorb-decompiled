@@ -111,7 +111,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           field_ob = true;
         }
         if (this.ineligible) {
-          sm.a((byte) -40, false, true);
+          WidgetStateStyle.a((byte) -40, false, true);
           return;
         }
         try {

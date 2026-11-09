@@ -167,9 +167,9 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         this.field_B.tooltip = ShaderEffect.enterTheNameYouText;
         this.field_B.setValidator((byte) 127, new ScreenNameValidator(this.field_B));
         this.field_C.enabled = false;
-        this.field_C.renderer = (WidgetRenderer) ((Object) new ue());
-        this.field_A.renderer = (WidgetRenderer) ((Object) new bv());
-        this.field_B.renderer = (WidgetRenderer) ((Object) new nl(10000536));
+        this.field_C.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
+        this.field_A.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+        this.field_B.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.setBounds(92, 20, var3, 50, 270);

@@ -254,7 +254,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
             this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           } else {
             this.toolkit.g(1, -118);
-            this.toolkit.applyTexCoordGeneration(guard ^ 31584, nl.NORMAL_MAP);
+            this.toolkit.applyTexCoordGeneration(guard ^ 31584, BeveledTextInputRenderer.NORMAL_MAP);
             var6 = this.toolkit.B(0);
             var6.setRotationX((byte) 79, 1024);
             this.toolkit.a(LegacyRidgedWaterNoise.field_y, 28880);

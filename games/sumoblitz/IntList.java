@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs {
-    private boolean field_b;
-    private int[] field_a;
-    private int field_f;
-    private int field_d;
+final class IntList {
+    private boolean multiplicativeGrowth;
+    private int[] values;
+    private int lastIndex;
+    private int growth;
     static tf field_c;
     static int field_g;
     static int field_h;
@@ -60,26 +60,26 @@ final class rs {
         }
     }
 
-    final int d(int param0, int param1) {
-        if (param0 > this.field_f) {
-          throw new ArrayIndexOutOfBoundsException(param0);
+    final int get(int index, int guard) {
+        if (index > this.lastIndex) {
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (param1 == -29816) {
-          return this.field_a[param0];
+        if (guard == -29816) {
+          return this.values[index];
         }
         field_e = (SpriteData) null;
-        return this.field_a[param0];
+        return this.values[index];
     }
 
-    private final void a(int param0, int param1) {
-        int var4 = -38 % ((-60 - param0) / 46);
-        int[] var5 = new int[this.b(1, param1)];
+    private final void ensureCapacity(int guard, int index) {
+        int var4 = -38 % ((-60 - guard) / 46);
+        int[] var5 = new int[this.capacityFor(1, index)];
         int[] var3 = var5;
-        la.a(this.field_a, 0, var5, 0, this.field_a.length);
-        this.field_a = var5;
+        la.a(this.values, 0, var5, 0, this.values.length);
+        this.values = var5;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean openWindowsBrowser(String url, int guard) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
@@ -95,20 +95,20 @@ final class rs {
             if (!PlatformTaskDispatcher.field_o.startsWith("win")) {
               return false;
             }
-            if (!param0.startsWith("http://") &&
-              !param0.startsWith("https://")) {
+            if (!url.startsWith("http://") &&
+              !url.startsWith("https://")) {
               return false;
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-            if (param1 != -2528) {
+            if (guard != -2528) {
               return false;
             }
-            for (var3 = 0; param0.length() > var3; var3++) {
-              if (-1 == var2.indexOf((int) param0.charAt(var3))) {
+            for (var3 = 0; url.length() > var3; var3++) {
+              if (-1 == var2.indexOf((int) url.charAt(var3))) {
                 return false;
               }
             }
-            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
             return true;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,12 +120,12 @@ final class rs {
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_25_0 = var2_ref2;
           stackIn_25_1 = new StringBuilder().append("rs.G(");
-          if (param0 == null) {
+          if (url == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -137,99 +137,99 @@ final class rs {
         field_c = null;
     }
 
-    final void a(byte param0, int param1) {
-        if (param0 != 61) {
+    final void removeAt(byte guard, int index) {
+        if (guard != 61) {
           field_g = 27;
-          if (param1 < 0) {
-            throw new ArrayIndexOutOfBoundsException(param1);
+          if (index < 0) {
+            throw new ArrayIndexOutOfBoundsException(index);
           }
-          if (this.field_f >= param1) {
-            if (param1 != this.field_f) {
-              la.a(this.field_a, 1 + param1, this.field_a, param1, this.field_f - param1);
+          if (this.lastIndex >= index) {
+            if (index != this.lastIndex) {
+              la.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
             }
-            this.field_f = this.field_f - 1;
+            this.lastIndex = this.lastIndex - 1;
             return;
           }
-          throw new ArrayIndexOutOfBoundsException(param1);
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (param1 < 0) {
-          throw new ArrayIndexOutOfBoundsException(param1);
+        if (index < 0) {
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (this.field_f >= param1) {
-          if (param1 != this.field_f) {
-            la.a(this.field_a, 1 + param1, this.field_a, param1, this.field_f - param1);
+        if (this.lastIndex >= index) {
+          if (index != this.lastIndex) {
+            la.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
           }
-          this.field_f = this.field_f - 1;
+          this.lastIndex = this.lastIndex - 1;
           return;
         }
-        throw new ArrayIndexOutOfBoundsException(param1);
+        throw new ArrayIndexOutOfBoundsException(index);
     }
 
-    private rs() throws Throwable {
+    private IntList() throws Throwable {
         throw new Error();
     }
 
-    private final int b(int param0, int param1) {
+    private final int capacityFor(int guard, int index) {
         int var3;
         int var4;
         String var5;
         int var3Lifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 == 1) {
-          var3 = this.field_a.length;
-          while (var3 <= param1) {
-            if (!this.field_b) {
-              var3 = var3 + this.field_d;
+        if (guard == 1) {
+          var3 = this.values.length;
+          while (var3 <= index) {
+            if (!this.multiplicativeGrowth) {
+              var3 = var3 + this.growth;
               continue;
             }
             if (0 == var3) {
               var3 = 1;
               continue;
             }
-            var3 = var3 * this.field_d;
+            var3 = var3 * this.growth;
           }
           return var3;
         }
         var5 = (String) null;
-        rs.a(false, (String) null, 93, (String) null, -122, -38, (String) null);
-        var3Lifetime1 = this.field_a.length;
-        while (var3Lifetime1 <= param1) {
-          if (!this.field_b) {
-            var3Lifetime1 = var3Lifetime1 + this.field_d;
+        IntList.a(false, (String) null, 93, (String) null, -122, -38, (String) null);
+        var3Lifetime1 = this.values.length;
+        while (var3Lifetime1 <= index) {
+          if (!this.multiplicativeGrowth) {
+            var3Lifetime1 = var3Lifetime1 + this.growth;
             continue;
           }
           if (0 == var3Lifetime1) {
             var3Lifetime1 = 1;
             continue;
           }
-          var3Lifetime1 = var3Lifetime1 * this.field_d;
+          var3Lifetime1 = var3Lifetime1 * this.growth;
         }
         return var3Lifetime1;
     }
 
-    final void c(int param0, int param1) {
-        this.a(param1, 1 + this.field_f, false);
-        int var3 = 29 % ((-83 - param0) / 33);
+    final void add(int guard, int value) {
+        this.set(value, 1 + this.lastIndex, false);
+        int var3 = 29 % ((-83 - guard) / 33);
     }
 
-    private final void a(int param0, int param1, boolean param2) {
-        if (param2) {
+    private final void set(int value, int index, boolean guard) {
+        if (guard) {
           field_e = (SpriteData) null;
         }
-        if (param1 > this.field_f) {
-          this.field_f = param1;
+        if (index > this.lastIndex) {
+          this.lastIndex = index;
         }
-        if (param1 >= this.field_a.length) {
-          this.a(99, param1);
+        if (index >= this.values.length) {
+          this.ensureCapacity(99, index);
         }
-        this.field_a[param1] = param0;
+        this.values[index] = value;
     }
 
-    final int a(byte param0) {
-        if (param0 <= 28) {
+    final int size(byte guard) {
+        if (guard <= 28) {
           return 121;
         }
-        return 1 + this.field_f;
+        return 1 + this.lastIndex;
     }
 
     static {

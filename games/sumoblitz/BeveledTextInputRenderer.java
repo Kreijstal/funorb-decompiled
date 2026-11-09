@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nl extends TextWidgetRenderer {
+class BeveledTextInputRenderer extends TextWidgetRenderer {
     static TextureFormat RGBA;
     static TextureCoordinateGeneration NORMAL_MAP;
     static boolean field_o;
@@ -16,8 +16,8 @@ class nl extends TextWidgetRenderer {
         RGBA = null;
     }
 
-    nl(LegacyBitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
+    BeveledTextInputRenderer(LegacyBitmapFont textFont, int textColor) {
+        super(textFont, 4, 2, 2, 2, textColor, -1, 0, 1, textFont.field_s, -1, 2147483647, false);
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
@@ -31,8 +31,8 @@ class nl extends TextWidgetRenderer {
         }
     }
 
-    nl(int param0) {
-        this(kw.field_b, param0);
+    BeveledTextInputRenderer(int textColor) {
+        this(kw.field_b, textColor);
     }
 
     static {

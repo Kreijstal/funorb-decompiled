@@ -59,11 +59,11 @@ final class wq {
         long var1 = System.currentTimeMillis();
         if (var1 >= ArchiveIndex.field_j) {
           ArchiveIndex.field_j = var1;
-          return var1 + uv.field_n;
+          return var1 + SpriteOptionRenderer.field_n;
         }
-        uv.field_n = uv.field_n + (-var1 + ArchiveIndex.field_j);
+        SpriteOptionRenderer.field_n = SpriteOptionRenderer.field_n + (-var1 + ArchiveIndex.field_j);
         ArchiveIndex.field_j = var1;
-        return var1 + uv.field_n;
+        return var1 + SpriteOptionRenderer.field_n;
     }
 
     public static void releaseStatics(boolean param0) {

@@ -201,8 +201,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     }
 
     final static void d(byte param0) {
-        int var1 = uv.b(-25843);
-        int var2 = fu.e((byte) 78);
+        int var1 = SpriteOptionRenderer.fullscreenDialogWidth(-25843);
+        int var2 = MarkerTrackWidget.fullscreenDialogHeight((byte) 78);
         CompactMeshGeometry.field_v.a(var1 + (LegacyOpenGlRenderbuffer.field_B << 1), -LegacyOpenGlRenderbuffer.field_B + VertexStreamLayout.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
         if (param0 == -7) {
           sj.a((byte) 124);

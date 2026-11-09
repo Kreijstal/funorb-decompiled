@@ -64,7 +64,7 @@ final class kd {
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
-        ClientException.a((byte) -69);
+        ClientException.popRasterState((byte) -69);
         if (MusicPatch.field_u >= 150) {
           kh.field_a.a(var3 + 15, 10 + var4, var5);
           var6 = MusicPatch.field_u - 125;

@@ -12,7 +12,7 @@ final class er {
     private int field_b;
     int field_g;
 
-    final static void a(boolean param0) {
+    final static void createRendererAssets(boolean guard) {
         GraphicsToolkit var2 = MatchingTextValidator.field_h.a(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, ci.field_g, true);
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
@@ -42,10 +42,10 @@ final class er {
         LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
         hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
-        TextHotspot.field_n = DroneDebris.createToolkitSprites(fl.field_r, var2, 28513);
+        TextHotspot.field_n = DroneDebris.createToolkitSprites(StatefulWidgetRenderer.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
-        if (param0) {
+        if (guard) {
           field_c = (ResourceArchive) null;
           ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
           hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
@@ -63,7 +63,7 @@ final class er {
           ResizingDialog.a(var2, bj.field_g, (byte) -11);
           ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
-          im.field_a = ResizingDialog.a(var2, ue.field_p, (byte) -11);
+          im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
           mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
           PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
           hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
@@ -80,7 +80,7 @@ final class er {
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
           DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
           DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
-          kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
+          kk.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
           OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
           DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
           ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
@@ -112,7 +112,7 @@ final class er {
         ResizingDialog.a(var2, bj.field_g, (byte) -11);
         ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
-        im.field_a = ResizingDialog.a(var2, ue.field_p, (byte) -11);
+        im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
         mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
         PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
         hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
@@ -129,7 +129,7 @@ final class er {
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
         DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
         DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
-        kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
+        kk.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
         OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
         DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
         ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
@@ -481,7 +481,7 @@ final class er {
         }
         if (HotspotTextWidget.activePointerButton != 0) {
           if (this.field_i <= 0) {
-            this.field_i = rs.field_h;
+            this.field_i = IntList.field_h;
           }
           this.field_i = this.field_i - 1;
         }

@@ -1105,7 +1105,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("justplay", (byte) -23);
                 if (null != var2) {
-                  tm.field_b = MusicVoice.a(0, var2);
+                  EmptyWidgetRenderer.field_b = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("justplay_excl", (byte) -23);
                 if (null != var2) {
@@ -1468,7 +1468,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_age", (byte) -23);
                 if (var2 != null) {
-                  fm.ageText = MusicVoice.a(0, var2);
+                  DropDownArrowRenderer.ageText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_u13_email", (byte) -23);
                 if (null != var2) {
@@ -1640,7 +1640,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_namechars", (byte) -23);
                 if (null != var2) {
-                  fu.namesCanOnlyContainText = MusicVoice.a(param0 - 7, var2);
+                  MarkerTrackWidget.namesCanOnlyContainText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_nameleadingspace", (byte) -23);
                 if (null != var2) {
@@ -1684,7 +1684,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_email_unavailable", (byte) -23);
                 if (var2 != null) {
-                  oj.emailAddressIsUnavailableText = MusicVoice.a(param0 ^ 7, var2);
+                  BeveledCheckboxRenderer.emailAddressIsUnavailableText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_invaliddate", (byte) -23);
                 if (var2 != null) {
@@ -1836,7 +1836,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_extradata", (byte) -23);
                 if (var2 != null) {
-                  fl.waitingForExtraDataText = MusicVoice.a(param0 - 7, var2);
+                  StatefulWidgetRenderer.waitingForExtraDataText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_languages", (byte) -23);
                 if (var2 != null) {
@@ -2746,7 +2746,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_focus_or_resolution", (byte) -23);
                 if (null != var2) {
-                  c.unfortunatelyThereWasAText = MusicVoice.a(0, var2);
+                  PasswordInputRenderer.unfortunatelyThereWasAText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_timeout", (byte) -23);
                 if (null != var2) {
@@ -2758,7 +2758,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_ui_fs_countdown", (byte) -23);
                 if (var2 != null) {
-                  c.ifYouDoNothingText = MusicVoice.a(0, var2);
+                  PasswordInputRenderer.ifYouDoNothingText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mb_caption_title", (byte) -23);
                 if (var2 != null) {
@@ -2798,7 +2798,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("hs_friend_tip", (byte) -23);
                 if (null != var2) {
-                  bv.friendsCanBeAddedText = MusicVoice.a(param0 - 7, var2);
+                  LinkWidgetRenderer.friendsCanBeAddedText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("hs_friend_tip_multi", (byte) -23);
                 if (null != var2) {

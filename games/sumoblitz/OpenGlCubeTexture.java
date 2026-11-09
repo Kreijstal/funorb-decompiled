@@ -35,7 +35,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
     }
 
     OpenGlCubeTexture(OpenGlGraphicsToolkit param0, int param1, boolean param2, int[][] param3) {
-        super(param0, 34067, nl.RGBA, GpuDataType.UNSIGNED_BYTE, param1 * (param1 * 6), param2);
+        super(param0, 34067, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, param1 * (param1 * 6), param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

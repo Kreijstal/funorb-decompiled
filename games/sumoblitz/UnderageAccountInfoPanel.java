@@ -62,7 +62,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         try {
           this.dialog = owner;
           this.continueButton = new InteractiveWidget(wd.continueText, (WidgetListener) null);
-          this.continueButton.renderer = (WidgetRenderer) ((Object) new ue());
+          this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var7 = ic.a(qv.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
           var3 = 20;
           var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
@@ -255,7 +255,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
 
     final static void e(boolean param0) {
         try {
-          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + c.ifYouDoNothingText;
+          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
           if (!param0) {
             UnderageAccountInfoPanel.e(false);
           }

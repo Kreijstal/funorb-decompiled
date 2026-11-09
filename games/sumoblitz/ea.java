@@ -30,7 +30,7 @@ final class ea {
           if (param0 != -73) {
             difficultyText = (String) null;
           }
-          stackIn_3_0 = uv.a(param2, param1, true, (byte) -86);
+          stackIn_3_0 = SpriteOptionRenderer.parseInt(param2, param1, true, (byte) -86);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class ea {
     }
 
     final static void a(int param0, boolean param1, String param2, boolean param3) {
-        iu.a((byte) -124);
+        MarkerTrackRenderer.a((byte) -124);
         if (param0 != 1) {
           return;
         }

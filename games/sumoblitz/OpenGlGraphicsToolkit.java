@@ -1372,7 +1372,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_10_0 = new OpenGlRectangleTexture(this, param3, param6, param2, param5, param1);
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            var9 = new OpenGlTexture2D(this, nl.RGBA, GpuDataType.UNSIGNED_BYTE, hn.a(false, param3), hn.a(false, param6));
+            var9 = new OpenGlTexture2D(this, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, hn.a(false, param3), hn.a(false, param6));
             var9.uploadInts(param6, false, param5, param3, param1, param2, 0, 0);
             stackIn_12_0 = var9;
             return (Texture2D) ((Object) stackIn_12_0);

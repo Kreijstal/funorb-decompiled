@@ -38,9 +38,9 @@ final class wd extends se {
     final nb a(byte param0) {
         if (param0 < 80) {
           this.a((byte) -128);
-          return pb.field_b;
+          return IndexedSprite.field_b;
         }
-        return pb.field_b;
+        return IndexedSprite.field_b;
     }
 
     public static void releaseStatics(byte param0) {

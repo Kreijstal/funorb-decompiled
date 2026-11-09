@@ -55,7 +55,7 @@ final class fb {
             var6 = var6 | 16;
           }
           InwardSparkParticle.field_v.writeByte((byte) 108, var6);
-          var7 = dv.a(-22, LegacyOpenGlUnlitEffect.c(2));
+          var7 = DropDownLabelRenderer.readAppletSettings(-22, LegacyOpenGlUnlitEffect.c(2));
           if (var7 == null) {
             var7 = "";
           }

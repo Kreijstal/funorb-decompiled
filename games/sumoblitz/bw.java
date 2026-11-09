@@ -91,7 +91,7 @@ final class bw extends qt {
             }
             var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var22);
           } else {
-            var23 = fl.field_o[var2];
+            var23 = StatefulWidgetRenderer.field_o[var2];
             var17 = new int[var4];
             var14 = var17;
             var7 = var14;

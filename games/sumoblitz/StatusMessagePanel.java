@@ -172,7 +172,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
             this.a((byte) 29, -68);
           }
           var4 = new InteractiveWidget(param0, param2);
-          var4.renderer = (WidgetRenderer) ((Object) new ue());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = -2 + this.height;
           this.setBounds(param1 ^ 62, 0, 0, 34 + this.height, this.width);
           var4.setBounds(-57, 7, var5, 30, this.width - 14);

@@ -66,7 +66,7 @@ final class gu extends ka {
             this.field_k = new lr(om.a(this.field_c, this.field_e, (byte) -50));
           }
           if (param3 ||
-            oj.a(this.field_e, 13836, this.field_c)) {
+            BeveledCheckboxRenderer.a(this.field_e, 13836, this.field_c)) {
             this.field_l = new lr(se.a(31, this.field_e, this.field_c));
           }
           if (param3 ||

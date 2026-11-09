@@ -54,7 +54,7 @@ abstract class ResourceRequest extends DualLinkNode {
           }
           eh.field_b.d();
           var1.drawHalfSize(0, 0);
-          ClientException.a((byte) 76);
+          ClientException.popRasterState((byte) 76);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');
         }

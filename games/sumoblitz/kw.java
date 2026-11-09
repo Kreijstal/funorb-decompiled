@@ -6,10 +6,10 @@ final class kw {
     static qr field_c;
     static ToolkitSprite field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        GameApplet.j(125);
-        SoftwareRasterizer.intersectClip(param3, param1, param4, param0);
-        if (param2 != 1) {
+    final static void pushClip(int bottom, int top, int guard, int left, int right) {
+        GameApplet.pushRasterState(125);
+        SoftwareRasterizer.intersectClip(left, top, right, bottom);
+        if (guard != 1) {
           field_b = (LegacyBitmapFont) null;
         }
     }

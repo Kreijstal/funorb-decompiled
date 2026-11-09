@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pb {
-    int field_c;
-    int field_a;
-    int field_d;
+abstract class IndexedSprite {
+    int offsetX;
+    int height;
+    int fullHeight;
     static nb field_b;
-    int field_f;
-    int field_g;
-    int field_e;
+    int fullWidth;
+    int offsetY;
+    int width;
 
     final static FullscreenCanvas a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
@@ -70,9 +70,9 @@ abstract class pb {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int x, int y, int alpha);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int x, int y);
 
     static {
         field_b = new nb(3);

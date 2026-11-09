@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bv implements WidgetRenderer {
+final class LinkWidgetRenderer implements WidgetRenderer {
     static String friendsCanBeAddedText;
-    private int field_a;
-    private int field_d;
-    private LegacyBitmapFont field_c;
+    private int verticalAlignment;
+    private int horizontalAlignment;
+    private LegacyBitmapFont font;
 
-    public static void b(int param0) {
-        if (param0 < 38) {
-          bv.a(31);
+    public static void releaseStatics(int guard) {
+        if (guard < 38) {
+          LinkWidgetRenderer.a(31);
           friendsCanBeAddedText = null;
           return;
         }
         friendsCanBeAddedText = null;
     }
 
-    public bv() {
-        this.field_a = 1;
-        this.field_d = 1;
-        this.field_c = kw.field_b;
+    public LinkWidgetRenderer() {
+        this.verticalAlignment = 1;
+        this.horizontalAlignment = 1;
+        this.font = kw.field_b;
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
@@ -44,23 +44,23 @@ final class bv implements WidgetRenderer {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", parentX + widget.x, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.field_d, this.field_a, this.field_c.field_s + this.field_c.field_I);
+          this.font.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", parentX + widget.x, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.field_s + this.font.field_I);
           if (widget.hasFocus(-1)) {
-            var7 = this.field_c.a(widget.text);
-            var8 = this.field_c.field_s + this.field_c.field_I;
+            var7 = this.font.a(widget.text);
+            var8 = this.font.field_s + this.font.field_I;
             var9 = parentX + widget.x;
-            if (2 == this.field_d) {
+            if (2 == this.horizontalAlignment) {
               var9 = var9 + (-var7 + widget.width);
             } else {
-              if (1 == this.field_d) {
+              if (1 == this.horizontalAlignment) {
                 var9 = var9 + (widget.width - var7 >> 1);
               }
             }
             var10 = widget.y + parentY;
-            if (this.field_a == 2) {
+            if (this.verticalAlignment == 2) {
               var10 = var10 + (widget.height - var8);
             } else {
-              if (this.field_a == 1) {
+              if (this.verticalAlignment == 1) {
                 var10 = var10 + (widget.height - var8 >> 1);
               }
             }
@@ -69,7 +69,7 @@ final class bv implements WidgetRenderer {
           if (guard == 5592405) {
             return;
           }
-          this.field_a = 59;
+          this.verticalAlignment = 59;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,13 +85,13 @@ final class bv implements WidgetRenderer {
         }
     }
 
-    bv(LegacyBitmapFont param0, int param1, int param2) {
+    LinkWidgetRenderer(LegacyBitmapFont textFont, int alignX, int alignY) {
         try {
-          this.field_a = param2;
-          this.field_c = param0;
-          this.field_d = param1;
+          this.verticalAlignment = alignY;
+          this.font = textFont;
+          this.horizontalAlignment = alignX;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bv.<init>(" + (textFont != null ? "{...}" : "null") + ',' + alignX + ',' + alignY + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class bv implements WidgetRenderer {
         String var2 = (String) null;
         wv.a((byte) 99, FadingWidget.field_C, (String) null);
         if (param0 != -363927231) {
-          bv.a(-108);
+          LinkWidgetRenderer.a(-108);
         }
     }
 

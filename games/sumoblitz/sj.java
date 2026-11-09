@@ -96,7 +96,7 @@ final class sj {
             stackIn_42_1 = var6;
             stackIn_43_2 = !(0 > var4);
             var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_42_0, stackIn_42_1, stackIn_43_2);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + oj.field_a;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + qc.field_a;
               if (var4 != nj.field_a.field_g) {
@@ -137,7 +137,7 @@ final class sj {
     }
 
     final static boolean a(int param0) {
-        nl.field_o = true;
+        BeveledTextInputRenderer.field_o = true;
         field_a = 15000L + wq.a(-13);
         if (param0 < -26) {
           return jv.field_a == 11 ? true : false;

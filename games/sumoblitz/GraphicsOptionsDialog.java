@@ -163,11 +163,11 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           this.field_U.field_K = 83;
           this.field_U.setCellPadding(-1, 5, 5);
           this.addChild(this.field_U, 93);
-          this.field_X = this.a(sb.field_d, (WidgetListener) (this), kp.classicText, (byte) -105);
+          this.field_X = this.createSpriteOption(sb.field_d, (WidgetListener) (this), kp.classicText, (byte) -105);
           if (var2_intLifetime1 != 0) {
-            this.field_Y = this.a(SoftwareTransform3D.field_f, (WidgetListener) (this), VertexLayout.resizableText, (byte) 122);
+            this.field_Y = this.createSpriteOption(SoftwareTransform3D.field_f, (WidgetListener) (this), VertexLayout.resizableText, (byte) 122);
           }
-          this.field_T = this.a(sm.field_c, (WidgetListener) (this), PlayingSound.fullScreenText, (byte) 110);
+          this.field_T = this.createSpriteOption(WidgetStateStyle.field_c, (WidgetListener) (this), PlayingSound.fullScreenText, (byte) 110);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -350,7 +350,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var5 = null;
           if (guard < 9) {
             var8 = (String) null;
-            discarded$0 = this.a((ne[]) null, (WidgetListener) null, (String) null, (byte) 16);
+            discarded$0 = this.createSpriteOption((RasterIndexedSprite[]) null, (WidgetListener) null, (String) null, (byte) 16);
           }
           if (!this.field_X.hasFocus(-1)) {
             if (null != this.field_Y &&
@@ -468,7 +468,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         }
     }
 
-    private final InteractiveWidget a(ne[] param0, WidgetListener param1, String param2, byte param3) {
+    private final InteractiveWidget createSpriteOption(RasterIndexedSprite[] stateSprites, WidgetListener listener, String text, byte guard) {
         InteractiveWidget var5 = null;
         RuntimeException var5_ref = null;
         GridWidgetContainer var6 = null;
@@ -484,11 +484,11 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new InteractiveWidget(param2, param1);
-          var5.renderer = (WidgetRenderer) ((Object) new uv(param0));
+          var5 = new InteractiveWidget(text, listener);
+          var5.renderer = (WidgetRenderer) ((Object) new SpriteOptionRenderer(stateSprites));
           var6 = this.field_U;
           var7 = var5;
-          var8 = -20 % ((56 - param3) / 42);
+          var8 = -20 % ((56 - guard) / 42);
           var6.appendCell(var6.field_K, 0, var7);
           this.field_U.refreshLayout(false);
           stackIn_1_0 = var5;
@@ -498,24 +498,24 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var5_ref = decompiledCaughtException;
           stackIn_4_0 = var5_ref;
           stackIn_4_1 = new StringBuilder().append("dd.D(");
-          if (param0 == null) {
+          if (stateSprites == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
-          var4.renderer = (WidgetRenderer) ((Object) new ue());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = -46 + this.height;
           var4.setBounds(127, 15, var5, 30, this.width - 30);
           this.addChild((UiWidget) (var4), 80);

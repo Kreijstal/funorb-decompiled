@@ -230,7 +230,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
 
     final static void a(int param0, int param1, int param2) {
         ScanlineSpriteMask.field_e = param0;
-        tm.field_d = param1;
+        EmptyWidgetRenderer.field_d = param1;
         if (param2 > -75) {
           LegacyOpenGlRidgedWaterEffect.releaseStatics(48);
         }

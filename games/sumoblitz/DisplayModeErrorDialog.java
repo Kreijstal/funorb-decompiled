@@ -23,7 +23,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
               var3 = LimitedRandomAccessFile.field_c;
               if (CacheReferenceNode.a((byte) -96)) {
                 this.height = this.height + 20;
-                var3 = c.unfortunatelyThereWasAText;
+                var3 = PasswordInputRenderer.unfortunatelyThereWasAText;
               }
             } else {
               if (param1 == FontMetrics.field_f) {
@@ -124,7 +124,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         try {
           var4_int = 112 % ((-21 - param0) / 53);
           var5 = new InteractiveWidget(param2, param1);
-          var5.renderer = (WidgetRenderer) ((Object) new ue());
+          var5.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var6 = this.height - 6;
           this.height = this.height + 38;
           var5.setBounds(104, 15, var6, 30, -30 + this.width);

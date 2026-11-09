@@ -62,7 +62,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
               var12 = (UiWidget) null;
@@ -74,7 +74,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
               var12Lifetime4 = (UiWidget) null;
@@ -86,7 +86,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             jq.a(7161, kv.field_a);
             SoftwareRasterizer.clear();
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
               var12Lifetime5 = (UiWidget) null;
@@ -97,7 +97,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           kv.field_a = new Sprite(var9, var10);
           jq.a(7161, kv.field_a);
           var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
-          ClientException.a((byte) 126);
+          ClientException.popRasterState((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
           if (guard >= -35) {
             var12Lifetime6 = (UiWidget) null;
@@ -113,7 +113,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
               var12Lifetime1 = (UiWidget) null;
@@ -125,7 +125,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
               var12Lifetime1Lifetime1 = (UiWidget) null;
@@ -137,7 +137,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
-            ClientException.a((byte) 126);
+            ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard < -35) {
               return;
@@ -149,7 +149,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           jq.a(7161, kv.field_a);
           SoftwareRasterizer.clear();
           var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
-          ClientException.a((byte) 126);
+          ClientException.popRasterState((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
           if (guard < -35) {
             return;

@@ -141,14 +141,14 @@ abstract class ToolkitFont {
                               }
                             }
                           } else {
-                            fl.field_p = -1;
+                            StatefulWidgetRenderer.field_p = -1;
                           }
                         } else {
-                          fl.field_p = -16777216 & mn.field_i;
+                          StatefulWidgetRenderer.field_p = -16777216 & mn.field_i;
                         }
                       } else {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        fl.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9, 16);
+                        StatefulWidgetRenderer.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9, 16);
                       }
                     } else {
                       ScrollControl.field_I = -1;
@@ -449,8 +449,8 @@ abstract class ToolkitFont {
                 if (-1 != ScrollControl.field_I) {
                   this.field_a.drawHorizontalLineAlpha(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
                 }
-                if (fl.field_p != -1) {
-                  this.field_a.drawHorizontalLineAlpha(fl.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
+                if (StatefulWidgetRenderer.field_p != -1) {
+                  this.field_a.drawHorizontalLineAlpha(StatefulWidgetRenderer.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
                 }
                 var11 = var14;
                 param3 = param3 + var15;
@@ -493,7 +493,7 @@ abstract class ToolkitFont {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        ne[] var14 = null;
+        RasterIndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -513,25 +513,25 @@ abstract class ToolkitFont {
         LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
-        ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
-        sb.field_d = new ne[4];
-        sm.field_c = new ne[4];
-        SoftwareTransform3D.field_f = new ne[4];
-        ne[][] var6 = new ne[][]{sb.field_d, SoftwareTransform3D.field_f, sm.field_c};
+        RasterIndexedSprite[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
+        sb.field_d = new RasterIndexedSprite[4];
+        WidgetStateStyle.field_c = new RasterIndexedSprite[4];
+        SoftwareTransform3D.field_f = new RasterIndexedSprite[4];
+        RasterIndexedSprite[][] var6 = new RasterIndexedSprite[][]{sb.field_d, SoftwareTransform3D.field_f, WidgetStateStyle.field_c};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
-        var7[0] = var5[0].field_i;
+        var7[0] = var5[0].palette;
         for (var8 = 1; var8 < var19.length; var8++) {
           var7[var8] = (int[]) ((Object) var19[0].clone());
         }
-        var8Lifetime1 = var5[0].field_h[0];
+        var8Lifetime1 = var5[0].indices[0];
         var19[2][var8Lifetime1] = 16777215;
         var19[1][var8Lifetime1] = 2394342;
         var19[3][var8Lifetime1] = 4767999;
         for (var9 = 0; 3 > var9; var9++) {
           var14 = var6[var9];
-          ne[] var10 = var14;
+          RasterIndexedSprite[] var10 = var14;
           for (var11_int = 0; var11_int < var14.length; var11_int++) {
             var14[var11_int] = jk.a(var19[var11_int], var5[var9], -105);
           }
@@ -541,7 +541,7 @@ abstract class ToolkitFont {
           return;
         }
         try {
-          GameApplet.j(70);
+          GameApplet.pushRasterState(70);
           var17.d();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9, var9);
@@ -554,7 +554,7 @@ abstract class ToolkitFont {
           var12 = new Sprite(-(2 * var9) + var17.field_x, var9);
           var12.d();
           var17.c(-var9, 0);
-          ClientException.a((byte) -73);
+          ClientException.popRasterState((byte) -73);
           LevelCompleteUpgradeScreen.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -587,7 +587,7 @@ abstract class ToolkitFont {
         if (param2 != 60) {
           this.field_b = (FontMetrics) null;
         }
-        fl.field_p = -1;
+        StatefulWidgetRenderer.field_p = -1;
         jv.field_b = param1;
         jj.field_b = param1;
     }

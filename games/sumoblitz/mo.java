@@ -69,7 +69,7 @@ final class mo extends tt {
         int var10Lifetime3;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = this.field_q * uv.field_o[param1];
+          var5 = this.field_q * SpriteOptionRenderer.field_o[param1];
           if (param0 != -28696) {
             return;
           }

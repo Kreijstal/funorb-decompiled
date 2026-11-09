@@ -6,10 +6,10 @@ final class jk {
     static int field_c;
     static Js5Client field_b;
 
-    final static ne a(int[] param0, ne param1, int param2) {
-        ne var3 = null;
+    final static RasterIndexedSprite a(int[] param0, RasterIndexedSprite param1, int param2) {
+        RasterIndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ne stackIn_3_0 = null;
+        RasterIndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -20,15 +20,15 @@ final class jk {
           if (param2 >= -53) {
             jk.releaseStatics((byte) 43);
           }
-          var3 = new ne(0, 0, 0);
-          var3.field_g = param1.field_g;
-          var3.field_d = param1.field_d;
-          var3.field_a = param1.field_a;
-          var3.field_c = param1.field_c;
-          var3.field_i = param0;
-          var3.field_h = param1.field_h;
-          var3.field_e = param1.field_e;
-          var3.field_f = param1.field_f;
+          var3 = new RasterIndexedSprite(0, 0, 0);
+          var3.offsetY = param1.offsetY;
+          var3.fullHeight = param1.fullHeight;
+          var3.height = param1.height;
+          var3.offsetX = param1.offsetX;
+          var3.palette = param0;
+          var3.indices = param1.indices;
+          var3.width = param1.width;
+          var3.fullWidth = param1.fullWidth;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,8 +53,8 @@ final class jk {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -104) {
-          ne var2 = (ne) null;
-          jk.a((int[]) null, (ne) null, -102);
+          RasterIndexedSprite var2 = (RasterIndexedSprite) null;
+          jk.a((int[]) null, (RasterIndexedSprite) null, -102);
           field_b = null;
           return;
         }

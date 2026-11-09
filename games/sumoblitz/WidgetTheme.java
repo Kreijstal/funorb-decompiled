@@ -105,7 +105,7 @@ final class WidgetTheme {
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        kw.a(param0, param2, 1, param1, param4);
+        kw.pushClip(param0, param2, 1, param1, param4);
         if (param3 > -57) {
           String var7 = (String) null;
           this.drawTooltip(-116, 1, -84, (String) null);
@@ -273,32 +273,32 @@ final class WidgetTheme {
 
     final void initializeDefaultStyles(LegacyBitmapFont font, byte guard) {
         TextWidgetRenderer var17 = null;
-        fl var4 = null;
+        StatefulWidgetRenderer var4 = null;
         Sprite[] var5 = null;
         mg var16 = null;
         mg var18 = null;
         int var7_int = 0;
-        fl var6 = null;
-        fl var7 = null;
-        va discarded$0 = null;
-        iu discarded$1 = null;
-        fl var8 = null;
+        StatefulWidgetRenderer var6 = null;
+        StatefulWidgetRenderer var7 = null;
+        RotarySelectorRenderer discarded$0 = null;
+        MarkerTrackRenderer discarded$1 = null;
+        StatefulWidgetRenderer var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
         Sprite dupTemp$2 = null;
-        fl var11 = null;
-        fl var12 = null;
+        StatefulWidgetRenderer var11 = null;
+        StatefulWidgetRenderer var12 = null;
         Sprite var13 = null;
-        fl var14 = null;
-        fl var19 = null;
+        StatefulWidgetRenderer var14 = null;
+        StatefulWidgetRenderer var19 = null;
         int var15 = Sumoblitz.field_L ? 1 : 0;
-        fl var14Lifetime1;
-        fl var14Lifetime2;
+        StatefulWidgetRenderer var14Lifetime1;
+        StatefulWidgetRenderer var14Lifetime2;
         try {
           var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, font.field_I + (font.field_s + 2));
           this.labelRenderer = (WidgetRenderer) ((Object) var17);
           var17.textColor = 16777215;
-          var4 = new fl();
+          var4 = new StatefulWidgetRenderer();
           var17.copyStyleTo(var4, -102);
           this.tooltipPaddingTop = 3;
           this.tooltipPaddingBottom = 3;
@@ -311,9 +311,9 @@ final class WidgetTheme {
           this.tooltipTextColor = 15658734;
           this.tooltipLineHeight = -1;
           var4.selectionColor = 11711154;
-          var4.a(false, 0).c(15658734, 17818).a(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
-          var4.a(false, 1).a(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
-          var4.a(false, 3).a(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).a(1, -1).b(1, 1);
+          var4.createStateStyle(false, 0).withTextColor(15658734, 17818).withBackgroundSlices(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
+          var4.createStateStyle(false, 1).withBackgroundSlices(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
+          var4.createStateStyle(false, 3).withBackgroundSlices(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).withOffsetX(1, -1).withOffsetY(1, 1);
           var5 = new Sprite[9];
           var16 = new mg(32, 32);
           var18 = var16;
@@ -324,22 +324,22 @@ final class WidgetTheme {
             this.checkboxRenderer = (WidgetRenderer) null;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(false, 4).a(true, true).a(var5, 2147483647);
-          var4.a(false, 5).a(HardwareTurbulentWaterNoise.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
+          var4.createStateStyle(false, 4).withFlushBeforeApply(true, true).withBackgroundSlices(var5, 2147483647);
+          var4.createStateStyle(false, 5).withBackgroundSlices(HardwareTurbulentWaterNoise.a((byte) -71, 0, 65793, 0, 0), 2147483647).withFlushBeforeApply(true, true).withTextColor(-1, 17818);
           this.textInputRenderer = (WidgetRenderer) ((Object) var4);
-          var6 = new fl(var4, true);
+          var6 = new StatefulWidgetRenderer(var4, true);
           var6.horizontalAlignment = 0;
-          var7 = new fl(var4, true);
+          var7 = new StatefulWidgetRenderer(var4, true);
           var7.horizontalAlignment = 0;
-          var7.a(OpenGlBuffer.a(8947848, -115), 28715);
-          var7.a(false, 1).a(OpenGlBuffer.a(11184810, -125), 2147483647).c(2236962, 17818);
+          var7.setBackgroundSlicesForAllStates(OpenGlBuffer.a(8947848, -115), 28715);
+          var7.createStateStyle(false, 1).withBackgroundSlices(OpenGlBuffer.a(11184810, -125), 2147483647).withTextColor(2236962, 17818);
           this.checkboxRenderer = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new va(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new iu(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
-          var8 = new fl();
+          discarded$0 = new RotarySelectorRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new MarkerTrackRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var8 = new StatefulWidgetRenderer();
           var17.copyStyleTo(var8, 107);
-          var8.a(false, 0).a(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
-          var8.a(false, 4).a(true, true).a(var5, 2147483647);
+          var8.createStateStyle(false, 0).withBackgroundSlices(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).withTextColor(1118481, 17818).withTextShadow(-1, 30149);
+          var8.createStateStyle(false, 4).withFlushBeforeApply(true, true).withBackgroundSlices(var5, 2147483647);
           this.field_j = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -348,26 +348,26 @@ final class WidgetTheme {
           dupTemp$2 = var9[4];
           dupTemp$2.pixels = new int[]{6710886, 7829367};
           var10[4].pixels = new int[]{6710886, 7829367};
-          var11 = new fl();
-          var12 = new fl();
-          var11.a((byte) 116, var9, 0);
-          var12.a((byte) 115, var10, 0);
+          var11 = new StatefulWidgetRenderer();
+          var12 = new StatefulWidgetRenderer();
+          var11.setStateBackgroundSlices((byte) 116, var9, 0);
+          var12.setStateBackgroundSlices((byte) 115, var10, 0);
           this.field_f = (WidgetRenderer) ((Object) var12);
           this.field_p = (WidgetRenderer) ((Object) var4);
           var13 = new Sprite(7, 4);
           this.field_g = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-          var14 = new fl(var4, true);
-          var14.a(-84, var13.copy());
+          var14 = new StatefulWidgetRenderer(var4, true);
+          var14.setIconForAllStates(-84, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime1 = new fl(var4, true);
-          var14Lifetime1.a(30, var13.copy());
+          var14Lifetime1 = new StatefulWidgetRenderer(var4, true);
+          var14Lifetime1.setIconForAllStates(30, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime2 = new fl(var4, true);
-          var14Lifetime2.a(111, var13.copy());
+          var14Lifetime2 = new StatefulWidgetRenderer(var4, true);
+          var14Lifetime2.setIconForAllStates(111, var13.copy());
           var13.rotateClockwise();
-          var19 = new fl(var4, true);
-          var19.a(-29, var13);
+          var19 = new StatefulWidgetRenderer(var4, true);
+          var19.setIconForAllStates(-29, var13);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cp.I(" + (font != null ? "{...}" : "null") + ',' + guard + ')');
         }
@@ -390,7 +390,7 @@ final class WidgetTheme {
     }
 
     final void b(byte param0) {
-        ClientException.a((byte) -59);
+        ClientException.popRasterState((byte) -59);
         if (param0 >= -63) {
           byte[] var3 = (byte[]) null;
           WidgetTheme.copyBytes((byte[]) null, 126);

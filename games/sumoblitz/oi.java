@@ -29,10 +29,10 @@ final class oi {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void shutdownAudioOutputs(int guard) {
         if (wd.field_f != null) {
           wd.field_f.shutdown();
-          if (param0 == -27864) {
+          if (guard == -27864) {
             if (null == LegacyOpenGlEffectManager.field_a) {
               return;
             }
@@ -46,7 +46,7 @@ final class oi {
           }
           return;
         }
-        if (param0 != -27864) {
+        if (guard != -27864) {
           field_d = (SpriteData) null;
           if (null == LegacyOpenGlEffectManager.field_a) {
             return;

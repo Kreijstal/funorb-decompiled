@@ -141,7 +141,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             OpenGlShader.field_c.destroy();
           }
           try {
-            this.g(-15254);
+            this.shutdownGameResources(-15254);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -184,12 +184,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void initializeGame(int param0);
 
-    final static void j(int param0) {
+    final static void pushRasterState(int guard) {
         rl var1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
-          if (param0 < 40) {
+          if (guard < 40) {
             GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
           var1 = (rl) (ko.field_m.removeLast((byte) -127));
@@ -202,7 +202,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "kc.M(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "kc.M(" + guard + ')');
         }
     }
 
@@ -254,7 +254,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ue.field_o = true;
+          SpriteStripButtonRenderer.field_o = true;
           pt.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,7 +294,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ue.field_o = false;
+          SpriteStripButtonRenderer.field_o = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -498,7 +498,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (param0 < 95) {
               field_e = (float[]) null;
             }
-            ii.field_a = ue.field_o;
+            ii.field_a = SpriteStripButtonRenderer.field_o;
           }
           this.updateGame(-64);
           return;
@@ -509,7 +509,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void g(int param0);
+    abstract void shutdownGameResources(int guard);
 
     public final void destroy() {
         RuntimeException runtimeException = null;
@@ -625,7 +625,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qn.field_f.addFocusListener((java.awt.event.FocusListener) (this));
           qn.field_f.requestFocus();
           ii.field_a = true;
-          ue.field_o = true;
+          SpriteStripButtonRenderer.field_o = true;
           pt.field_a = true;
           if (param0 != 1000) {
             return;

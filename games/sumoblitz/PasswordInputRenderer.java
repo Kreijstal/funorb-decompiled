@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends nl {
+final class PasswordInputRenderer extends BeveledTextInputRenderer {
     static int field_s;
     static String ifYouDoNothingText;
     static int field_r;
@@ -48,15 +48,15 @@ final class c extends nl {
         field_u = null;
     }
 
-    private c(LegacyBitmapFont param0, int param1) {
-        super(param0, param1);
+    private PasswordInputRenderer(LegacyBitmapFont textFont, int textColor) {
+        super(textFont, textColor);
     }
 
-    c(int param0) {
-        this(kw.field_b, param0);
+    PasswordInputRenderer(int textColor) {
+        this(kw.field_b, textColor);
     }
 
-    final static void a(byte param0) {
+    final static void pollKeyboardState(byte guard) {
         int var2 = 0;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
@@ -67,7 +67,7 @@ final class c extends nl {
         try {
           var1 = wd.field_e;
           synchronized (var1) {
-            if (param0 < 108) {
+            if (guard < 108) {
               return;
             }
             bj.field_a = OpenGlBuffer.field_a;
@@ -97,7 +97,7 @@ final class c extends nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "c.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "c.K(" + guard + ')');
         }
     }
 

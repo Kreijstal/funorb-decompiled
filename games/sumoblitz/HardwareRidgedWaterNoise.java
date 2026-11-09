@@ -104,7 +104,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
 
     final static void resetArcadeGameplay(boolean initializeRound) {
         SpriteMask.drones = new Drone[100];
-        sm.a(72);
+        WidgetStateStyle.initializePlayerDrone(72);
         bj.powerupPickups = new IntrusiveDeque();
         is.arenaPads = new IntrusiveDeque();
         HardwareGraphicsHeap.field_o = new Random();

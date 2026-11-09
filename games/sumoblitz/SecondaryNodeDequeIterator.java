@@ -55,15 +55,15 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           if (ts.field_c != param2) {
             if (ws.field_b != param2) {
-              uv.field_o = new int[param2];
+              SpriteOptionRenderer.field_o = new int[param2];
               var5 = 0;
               var3_intLifetime1 = var5;
               while (param2 > var5) {
-                uv.field_o[var5] = (var5 << 12) / param2;
+                SpriteOptionRenderer.field_o[var5] = (var5 << 12) / param2;
                 var5++;
               }
             } else {
-              uv.field_o = gs.field_b;
+              SpriteOptionRenderer.field_o = gs.field_b;
             }
             ts.field_c = param2;
           }

@@ -138,7 +138,7 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract boolean c();
+    abstract boolean usesNativeRendering();
 
     final void present(boolean guard) throws RenderPresentationException {
         if (!guard) {

@@ -40,9 +40,9 @@ abstract class r extends DualLinkNode {
         var4 = stackIn_11_0;
         ConfirmedEmailValidator.field_f = var8.readCp1252String(-1);
         if (var4 == 0) {
-          fu.field_E = ConfirmedEmailValidator.field_f;
+          MarkerTrackWidget.field_E = ConfirmedEmailValidator.field_f;
         } else {
-          fu.field_E = var8.readCp1252String(-1);
+          MarkerTrackWidget.field_E = var8.readCp1252String(-1);
         }
         if (jb.field_h == 1) {
           var8.readUnsignedShort(255);
@@ -55,24 +55,24 @@ abstract class r extends DualLinkNode {
         }
         if (!param0) {
           oi.field_c = jb.a(var8, 80, -14832);
-          tm.field_c = null;
+          EmptyWidgetRenderer.field_c = null;
           return new br(param0);
         }
         var5 = var8.readUnsignedShort(255);
         try {
           var9 = kb.field_c.a(var5, -32769);
           oi.field_c = var9.f(1118);
-          if (!fu.field_E.equals(qv.field_o)) {
+          if (!MarkerTrackWidget.field_E.equals(qv.field_o)) {
             stackIn_24_0 = var9.field_u;
           } else {
             stackIn_24_0 = null;
           }
-          tm.field_c = stackIn_24_0;
+          EmptyWidgetRenderer.field_c = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           IntrusiveNode.reportClientError("CC1", (Throwable) ((Object) var6), 0);
-          tm.field_c = null;
+          EmptyWidgetRenderer.field_c = null;
           oi.field_c = null;
           return new br(param0);
         }

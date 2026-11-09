@@ -124,7 +124,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ue var6 = null;
+        SpriteStripButtonRenderer var6 = null;
         RuntimeException var6_ref = null;
         LegacyBitmapFont var7 = null;
         String var8 = null;
@@ -152,7 +152,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             if (this.field_J) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = tm.field_b;
+              stackIn_19_3 = EmptyWidgetRenderer.field_b;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -167,9 +167,9 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.field_N = new InteractiveWidget(of.quitToWebsiteText, (WidgetListener) null);
             this.field_H.enabled = false;
           }
-          this.field_H.renderer = (WidgetRenderer) ((Object) new nl(10000536));
-          this.field_I.renderer = (WidgetRenderer) ((Object) new c(10000536));
-          var6 = new ue();
+          this.field_H.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
+          this.field_I.renderer = (WidgetRenderer) ((Object) new PasswordInputRenderer(10000536));
+          var6 = new SpriteStripButtonRenderer();
           this.field_A.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_N != null) {
             this.field_N.renderer = (WidgetRenderer) ((Object) var6);
@@ -185,10 +185,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.field_N.tooltip = rv.warningIfYouQuitText;
           } else {
             if (!this.field_J) {
-              this.field_N.renderer = (WidgetRenderer) ((Object) new bv());
+              this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             } else {
               this.field_N.tooltip = hg.playTheGameWithoutText;
-              this.field_N.renderer = (WidgetRenderer) ((Object) new bv());
+              this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             }
           }
           this.y = 15;

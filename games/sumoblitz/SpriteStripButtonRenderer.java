@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends TextWidgetRenderer {
-    private int field_n;
-    private int field_s;
-    private int field_q;
+final class SpriteStripButtonRenderer extends TextWidgetRenderer {
+    private int normalColor;
+    private int highlightColor;
+    private int disabledColor;
     static SpriteData field_p;
     static volatile boolean field_o;
-    private Sprite[] field_r;
+    private Sprite[] backgroundStrip;
 
-    public ue() {
+    public SpriteStripButtonRenderer() {
         this(2188450, 2591221, 9543);
     }
 
@@ -40,24 +40,24 @@ final class ue extends TextWidgetRenderer {
           }
           var6_int = stackIn_6_0;
           if (guard != 5592405) {
-            this.field_s = 88;
+            this.highlightColor = 88;
           }
           if (widget instanceof InteractiveWidget) {
             isEnabled = isEnabled & ((InteractiveWidget) (widget)).enabled;
           }
           if (!isEnabled) {
-            stackIn_16_0 = this.field_q;
+            stackIn_16_0 = this.disabledColor;
           } else {
             if (var6_int != 0) {
-              stackIn_16_0 = this.field_s;
+              stackIn_16_0 = this.highlightColor;
             } else {
-              stackIn_16_0 = this.field_n;
+              stackIn_16_0 = this.normalColor;
             }
           }
           var7 = stackIn_16_0;
           stackIn_19_0 = (!isEnabled) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          ByteArrayStorage.drawHorizontalSpriteStrip(var7, widget.width, widget.y + (parentY + (-this.field_r[0].field_w + widget.height >> 1)), 67, this.field_r, widget.x + parentX);
+          ByteArrayStorage.drawHorizontalSpriteStrip(var7, widget.width, widget.y + (parentY + (-this.backgroundStrip[0].field_w + widget.height >> 1)), 67, this.backgroundStrip, widget.x + parentX);
           this.font.a(widget.text, parentX + widget.x, widget.y + (parentY - 2), widget.width, widget.height, var8, -1, 1, 1, this.font.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class ue extends TextWidgetRenderer {
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != -70) {
-            ue.releaseStatics(-111);
+            SpriteStripButtonRenderer.releaseStatics(-111);
           }
           var28 = ig.field_a;
           var2 = var28.readUnsignedByte(-31302);
@@ -248,12 +248,12 @@ final class ue extends TextWidgetRenderer {
         }
     }
 
-    private ue(int param0, int param1, int param2) {
-        this.field_q = param2;
-        this.field_r = LevelCompleteUpgradeScreen.field_j;
+    private SpriteStripButtonRenderer(int normalTint, int highlightTint, int disabledTint) {
+        this.disabledColor = disabledTint;
+        this.backgroundStrip = LevelCompleteUpgradeScreen.field_j;
         this.font = LegacyOpenGlDisplayLists.field_a;
-        this.field_s = param1;
-        this.field_n = param0;
+        this.highlightColor = highlightTint;
+        this.normalColor = normalTint;
     }
 
     static {

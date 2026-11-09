@@ -6,7 +6,7 @@ final class jv {
     static int field_a;
 
     final static void a(boolean param0, boolean param1) {
-        sm.a((byte) 127, param0, param1);
+        WidgetStateStyle.a((byte) 127, param0, param1);
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj implements WidgetRenderer {
+final class BeveledCheckboxRenderer implements WidgetRenderer {
     static int field_a;
     static String emailAddressIsUnavailableText;
 
@@ -18,7 +18,7 @@ final class oj implements WidgetRenderer {
         if (param2 <= -116) {
           return (34 & param0) != 0 ? true : false;
         }
-        oj.a(true);
+        BeveledCheckboxRenderer.hasOpenDialogs(true);
         return (34 & param0) != 0 ? true : false;
     }
 
@@ -66,17 +66,17 @@ final class oj implements WidgetRenderer {
         if (param1 == 13836) {
           return 0 != (2048 & param0) ? true : false;
         }
-        oj.releaseStatics(-32);
+        BeveledCheckboxRenderer.releaseStatics(-32);
         return 0 != (2048 & param0) ? true : false;
     }
 
     final static boolean b(int param0) {
         int var1 = -55 / ((-62 - param0) / 36);
-        return dv.field_b;
+        return DropDownLabelRenderer.field_b;
     }
 
-    final static boolean a(boolean param0) {
-        if (param0) {
+    final static boolean hasOpenDialogs(boolean guard) {
+        if (guard) {
           emailAddressIsUnavailableText = (String) null;
           if (pu.field_e == null) {
             return false;

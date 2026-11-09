@@ -66,7 +66,7 @@ abstract class GameClientShell extends GameApplet {
           }
           SecondaryNodeDequeIterator.field_b.d(2);
         }
-        c.a((byte) 124);
+        PasswordInputRenderer.pollKeyboardState((byte) 124);
         LegacyOpenGlReflectionEffect.d(123);
         if (!FadingWidget.g(-66) &&
           11 != jv.field_a) {
@@ -180,7 +180,7 @@ abstract class GameClientShell extends GameApplet {
           hw.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
           pi.field_c = wd.field_j;
           TextureCoordinateGeneration.field_a = 2;
-          vb.field_J = LegacyOpenGlPostProcessManager.field_f;
+          RotarySelectorWidget.field_J = LegacyOpenGlPostProcessManager.field_f;
         }
         if (TextureCoordinateGeneration.field_a == 2) {
           if (null != DropDownListWidget.field_H &&
@@ -294,7 +294,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (0 != var2 &&
           var2 != 1) {
-          if (!nl.field_o) {
+          if (!BeveledTextInputRenderer.field_o) {
             this.a("reconnect", 21253);
           }
           ScrollViewport.a((byte) 63);
@@ -360,7 +360,7 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              ue.a((byte) -70);
+              SpriteStripButtonRenderer.a((byte) -70);
             } else {
               if (var2 == 3) {
                 LegacyOpenGlNormalMapGenerator.a(-30084);
@@ -633,9 +633,9 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = rs.a(oj.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
+            var5_intLifetime1 = IntList.a(BeveledCheckboxRenderer.b(-98), LegacyOpenGlRidgedWaterEffect.c((byte) -2), Transform3D.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
             if (var5_intLifetime1 != -1) {
-              Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
+              Sumoblitz.completeAccountCreation(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;
               mn.field_g = null;
             }
@@ -766,7 +766,7 @@ abstract class GameClientShell extends GameApplet {
         this.setBackground(java.awt.Color.black);
         dk.field_c = this.field_v;
         jq.a(dk.field_c, 13586);
-        tm.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
+        EmptyWidgetRenderer.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
         PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);
         InwardSparkParticle.field_w = dk.a((byte) -126);

@@ -41,7 +41,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return;
           }
           if (this.field_fb) {
-            bv.a(-363927231);
+            LinkWidgetRenderer.a(-363927231);
             return;
           }
           return;
@@ -55,7 +55,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           return;
         }
         if (this.field_fb) {
-          bv.a(-363927231);
+          LinkWidgetRenderer.a(-363927231);
           return;
         }
     }
@@ -260,7 +260,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         if (param0 != 0) {
           field_gb = (DraggableWidget) null;
         }
-        fu.a(-1);
+        MarkerTrackWidget.closeCacheResources(-1);
         if (NameSuggestionsPanel.a((byte) -98)) {
           InwardSparkParticle.field_v.g(1, 8);
           MessageDialog.a(0, 0);

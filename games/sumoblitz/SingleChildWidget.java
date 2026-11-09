@@ -302,7 +302,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
               tw.a("document.cookie=\"" + var6 + "\"", -15428, applet);
             } catch (Throwable throwable) {
             }
-            va.a(false, applet);
+            RotarySelectorRenderer.updateAppletNavigationLinks(false, applet);
           } catch (RuntimeException runtimeException) {
             throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ie.M(" + guard + ',' + (sessionValue != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ')');
           }

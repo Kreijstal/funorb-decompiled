@@ -39,15 +39,15 @@ abstract class tt extends IntrusiveNode {
 
     final static void a(int param0) {
         if (param0 == 30692) {
-          ResourceArchive.field_f = c.field_u[0];
-          LegacyOpenGlEffectManager.field_i = c.field_u[1];
-          hc.field_f = c.field_u[2];
+          ResourceArchive.field_f = PasswordInputRenderer.field_u[0];
+          LegacyOpenGlEffectManager.field_i = PasswordInputRenderer.field_u[1];
+          hc.field_f = PasswordInputRenderer.field_u[2];
           return;
         }
         defeatText = (String) null;
-        ResourceArchive.field_f = c.field_u[0];
-        LegacyOpenGlEffectManager.field_i = c.field_u[1];
-        hc.field_f = c.field_u[2];
+        ResourceArchive.field_f = PasswordInputRenderer.field_u[0];
+        LegacyOpenGlEffectManager.field_i = PasswordInputRenderer.field_u[1];
+        hc.field_f = PasswordInputRenderer.field_u[2];
     }
 
     public static void releaseStatics(boolean param0) {

@@ -140,7 +140,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param2, param0);
-          var4.renderer = (WidgetRenderer) ((Object) new ue());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(114, 15, var5, 30, -16 + this.width - 14);

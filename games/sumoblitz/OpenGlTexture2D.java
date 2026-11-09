@@ -143,7 +143,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
     }
 
     OpenGlTexture2D(OpenGlGraphicsToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, nl.RGBA, GpuDataType.UNSIGNED_BYTE, param1 * param2, param3);
+        super(param0, 3553, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, param1 * param2, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

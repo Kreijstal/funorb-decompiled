@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends TextWidgetRenderer {
-    private sm field_t;
+final class StatefulWidgetRenderer extends TextWidgetRenderer {
+    private WidgetStateStyle compositeStyle;
     static String waitingForExtraDataText;
     static int field_p;
     static int field_n;
     static byte[][] field_o;
-    private sm[] field_q;
+    private WidgetStateStyle[] stateStyles;
     static SpriteData[] field_r;
 
     public static void releaseStatics(int param0) {
@@ -19,29 +19,29 @@ final class fl extends TextWidgetRenderer {
         waitingForExtraDataText = null;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
+    final static String storageRequirementPrompt(boolean progress, boolean score, boolean achievements, byte guard) {
         int var4 = 0;
-        if (param2) {
+        if (achievements) {
           var4 += 4;
         }
-        if (param1) {
+        if (score) {
           var4 += 2;
         }
-        if (param3 != 63) {
+        if (guard != 63) {
           field_n = 124;
         }
-        if (param0) {
+        if (progress) {
           var4++;
         }
         return pl.field_r[var4];
     }
 
-    fl(fl param0, boolean param1) {
+    StatefulWidgetRenderer(StatefulWidgetRenderer source, boolean deepCopy) {
         this();
         try {
-          param0.a(this, param1, -26407);
+          source.copyLayeredStyleTo(this, deepCopy, -26407);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (source != null ? "{...}" : "null") + ',' + deepCopy + ')');
         }
     }
 
@@ -52,14 +52,14 @@ final class fl extends TextWidgetRenderer {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        sm var7 = null;
-        sm var9 = null;
+        WidgetStateStyle var7 = null;
+        WidgetStateStyle var9 = null;
         Sprite[] var10 = null;
         InteractiveWidget var11 = null;
-        sm var12 = null;
-        sm var13 = null;
-        sm var14 = null;
-        sm var15 = null;
+        WidgetStateStyle var12 = null;
+        WidgetStateStyle var13 = null;
+        WidgetStateStyle var14 = null;
+        WidgetStateStyle var15 = null;
         try {
           if (!(widget instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
@@ -67,51 +67,51 @@ final class fl extends TextWidgetRenderer {
             stackIn_3_0 = (UiWidget) (widget);
           }
           var11 = (InteractiveWidget) (stackIn_3_0);
-          kw.a(parentY + widget.y + widget.height, parentY + widget.y, 1, parentX + widget.x, widget.x + (parentX + widget.width));
+          kw.pushClip(parentY + widget.y + widget.height, parentY + widget.y, 1, parentX + widget.x, widget.x + (parentX + widget.width));
           if (var11 != null) {
             isEnabled = isEnabled & var11.enabled;
           }
-          var7 = this.field_q[0];
-          this.field_t.a(true);
-          var7.a(parentX, widget, -28, this, parentY, this.field_t);
+          var7 = this.stateStyles[0];
+          this.compositeStyle.reset(true);
+          var7.applyTo(parentX, widget, -28, this, parentY, this.compositeStyle);
           if (var11 != null) {
             if (var11.selected) {
-              var12 = this.field_q[1];
+              var12 = this.stateStyles[1];
               if (var12 != null) {
-                var12.a(parentX, widget, -75, this, parentY, this.field_t);
+                var12.applyTo(parentX, widget, -75, this, parentY, this.compositeStyle);
               }
             }
             if (var11.hovered) {
-              var13 = this.field_q[3];
+              var13 = this.stateStyles[3];
               if (var11.pressedButton != 0 &&
                 var13 != null) {
-                var13.a(parentX, widget, guard ^ -5592346, this, parentY, this.field_t);
+                var13.applyTo(parentX, widget, guard ^ -5592346, this, parentY, this.compositeStyle);
               } else {
-                var9 = this.field_q[2];
+                var9 = this.stateStyles[2];
                 if (var9 != null) {
-                  var9.a(parentX, widget, -97, this, parentY, this.field_t);
+                  var9.applyTo(parentX, widget, -97, this, parentY, this.compositeStyle);
                 }
               }
             }
           }
           if (guard != 5592405) {
             var10 = (Sprite[]) null;
-            this.a((Sprite[]) null, -110);
+            this.setBackgroundSlicesForAllStates((Sprite[]) null, -110);
           }
           if (widget.hasFocus(-1)) {
-            var14 = this.field_q[5];
+            var14 = this.stateStyles[5];
             if (var14 != null) {
-              var14.a(parentX, widget, guard ^ -5592417, this, parentY, this.field_t);
+              var14.applyTo(parentX, widget, guard ^ -5592417, this, parentY, this.compositeStyle);
             }
           }
           if (!isEnabled) {
-            var15 = this.field_q[4];
+            var15 = this.stateStyles[4];
             if (var15 != null) {
-              var15.a(parentX, widget, -66, this, parentY, this.field_t);
+              var15.applyTo(parentX, widget, -66, this, parentY, this.compositeStyle);
             }
           }
-          this.field_t.a(parentY, this, parentX, -66, widget);
-          ClientException.a((byte) -70);
+          this.compositeStyle.draw(parentY, this, parentX, -66, widget);
+          ClientException.popRasterState((byte) -70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,76 +127,76 @@ final class fl extends TextWidgetRenderer {
         }
     }
 
-    private final void a(fl param0, boolean param1, int param2) {
+    private final void copyLayeredStyleTo(StatefulWidgetRenderer destination, boolean deepCopy, int guard) {
         int var4_int = 0;
-        sm dupTemp$0 = null;
-        sm stackIn_10_0 = null;
-        sm stackIn_11_1 = null;
+        WidgetStateStyle dupTemp$0 = null;
+        WidgetStateStyle stackIn_10_0 = null;
+        WidgetStateStyle stackIn_11_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        sm var5 = null;
-        sm var6 = null;
+        WidgetStateStyle var5 = null;
+        WidgetStateStyle var6 = null;
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          super.copyStyleTo(param0, -123);
-          if (param2 != -26407) {
+          super.copyStyleTo(destination, -123);
+          if (guard != -26407) {
             field_p = -38;
           }
-          if (param1) {
+          if (deepCopy) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
-              var5 = this.field_q[var4_int];
+              var5 = this.stateStyles[var4_int];
               if (var5 == null) {
-                param0.field_q[var4_int] = null;
+                destination.stateStyles[var4_int] = null;
               } else {
-                var6 = param0.field_q[var4_int];
+                var6 = destination.stateStyles[var4_int];
                 stackIn_10_0 = var5;
                 if (var6 == null) {
-                  dupTemp$0 = new sm();
-                  param0.field_q[var4_int] = dupTemp$0;
+                  dupTemp$0 = new WidgetStateStyle();
+                  destination.stateStyles[var4_int] = dupTemp$0;
                   stackIn_11_1 = dupTemp$0;
                 } else {
                   stackIn_11_1 = var6;
                 }
-                ((sm) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 94);
+                ((WidgetStateStyle) (Object) stackIn_10_0).copyTo(stackIn_11_1, (byte) 94);
               }
             }
             return;
           }
-          la.a(this.field_q, 0, param0.field_q, 0, 6);
+          la.a(this.stateStyles, 0, destination.stateStyles, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_17_0 = var4;
           stackIn_17_1 = new StringBuilder().append("fl.C(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(deepCopy).append(',').append(guard).append(')').toString());
         }
     }
 
-    public fl() {
-        this.field_q = new sm[6];
-        this.field_t = new sm();
-        sm dupTemp$0 = new sm();
-        this.field_q[0] = dupTemp$0;
-        sm var1 = dupTemp$0;
-        var1.a(true);
+    public StatefulWidgetRenderer() {
+        this.stateStyles = new WidgetStateStyle[6];
+        this.compositeStyle = new WidgetStateStyle();
+        WidgetStateStyle dupTemp$0 = new WidgetStateStyle();
+        this.stateStyles[0] = dupTemp$0;
+        WidgetStateStyle var1 = dupTemp$0;
+        var1.reset(true);
     }
 
-    final void a(Sprite[] param0, int param1) {
+    final void setBackgroundSlicesForAllStates(Sprite[] sprites, int guard) {
         int var4 = 0;
-        sm[] var3 = null;
-        sm var5 = null;
+        WidgetStateStyle[] var3 = null;
+        WidgetStateStyle var5 = null;
         int var6 = 0;
-        sm[] var7 = null;
+        WidgetStateStyle[] var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -204,15 +204,15 @@ final class fl extends TextWidgetRenderer {
         RuntimeException var3_ref = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var7 = this.field_q;
+          var7 = this.stateStyles;
           var3 = var7;
-          if (param1 != 28715) {
-            this.a(false, 37);
+          if (guard != 28715) {
+            this.createStateStyle(false, 37);
           }
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.field_j = param0;
+              var5.backgroundSlices = sprites;
             }
           }
           return;
@@ -221,22 +221,22 @@ final class fl extends TextWidgetRenderer {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("fl.F(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(int param0, Sprite param1) {
+    final void setIconForAllStates(int guard, Sprite icon) {
         int var5 = 0;
-        sm[] var3 = null;
+        WidgetStateStyle[] var3 = null;
         int var4 = 0;
-        sm var6 = null;
+        WidgetStateStyle var6 = null;
         int var7 = 0;
-        sm[] var8 = null;
+        WidgetStateStyle[] var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -244,13 +244,13 @@ final class fl extends TextWidgetRenderer {
         RuntimeException var3_ref = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = this.field_q;
+          var8 = this.stateStyles;
           var3 = var8;
-          var4 = -50 % ((param0 - 68) / 36);
+          var4 = -50 % ((guard - 68) / 36);
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
             if (var6 != null) {
-              var6.field_i = param1;
+              var6.icon = icon;
             }
           }
           return;
@@ -258,8 +258,8 @@ final class fl extends TextWidgetRenderer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
-          stackIn_9_1 = new StringBuilder().append("fl.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("fl.D(").append(guard).append(',');
+          if (icon == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -268,28 +268,28 @@ final class fl extends TextWidgetRenderer {
         }
     }
 
-    final sm a(boolean param0, int param1) {
-        if (param0) {
+    final WidgetStateStyle createStateStyle(boolean guard, int stateIndex) {
+        if (guard) {
           Sprite[] var4 = (Sprite[]) null;
-          this.a((byte) -126, (Sprite[]) null, -97);
+          this.setStateBackgroundSlices((byte) -126, (Sprite[]) null, -97);
         }
-        sm dupTemp$0 = new sm();
-        this.field_q[param1] = dupTemp$0;
+        WidgetStateStyle dupTemp$0 = new WidgetStateStyle();
+        this.stateStyles[stateIndex] = dupTemp$0;
         return dupTemp$0;
     }
 
-    final void a(byte param0, Sprite[] param1, int param2) {
+    final void setStateBackgroundSlices(byte guard, Sprite[] sprites, int stateIndex) {
         int var4_int = 0;
         int var4_intLifetime1;
         try {
-          var4_int = param2;
-          if (null == this.field_q[var4_int]) {
-            this.field_q[var4_int] = new sm();
+          var4_int = stateIndex;
+          if (null == this.stateStyles[var4_int]) {
+            this.stateStyles[var4_int] = new WidgetStateStyle();
           }
-          this.field_q[param2].field_j = param1;
-          var4_intLifetime1 = -9 % ((param0 - 57) / 52);
+          this.stateStyles[stateIndex].backgroundSlices = sprites;
+          var4_intLifetime1 = -9 % ((guard - 57) / 52);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fl.G(" + guard + ',' + (sprites != null ? "{...}" : "null") + ',' + stateIndex + ')');
         }
     }
 

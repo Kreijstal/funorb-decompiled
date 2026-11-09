@@ -50,7 +50,7 @@ abstract class OpenGlTexture implements GpuTexture {
             !rm.a(height, -127)) {
             throw new IllegalArgumentException("");
           }
-          if (this.format != nl.RGBA) {
+          if (this.format != BeveledTextInputRenderer.RGBA) {
             throw new IllegalArgumentException("");
           }
           var6_int = 0;
@@ -438,7 +438,7 @@ abstract class OpenGlTexture implements GpuTexture {
           if (this.format == ProgressDialog.RGB) {
             return 6407;
           }
-          if (this.format == nl.RGBA) {
+          if (this.format == BeveledTextInputRenderer.RGBA) {
             return 6408;
           }
           if (IntrusiveNodeHashTable.ALPHA == this.format) {
@@ -458,7 +458,7 @@ abstract class OpenGlTexture implements GpuTexture {
             if (ProgressDialog.RGB == this.format) {
               return 34843;
             }
-            if (nl.RGBA == this.format) {
+            if (BeveledTextInputRenderer.RGBA == this.format) {
               return 34842;
             }
             if (this.format == IntrusiveNodeHashTable.ALPHA) {
@@ -478,7 +478,7 @@ abstract class OpenGlTexture implements GpuTexture {
               if (this.format == ProgressDialog.RGB) {
                 return 34837;
               }
-              if (nl.RGBA == this.format) {
+              if (BeveledTextInputRenderer.RGBA == this.format) {
                 return 34836;
               }
               if (this.format == IntrusiveNodeHashTable.ALPHA) {

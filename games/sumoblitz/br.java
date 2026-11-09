@@ -94,11 +94,11 @@ final class br {
         this.field_h = eh.field_c;
         this.field_g = jb.field_h;
         this.field_e = oi.field_c;
-        this.field_d = fu.field_E;
+        this.field_d = MarkerTrackWidget.field_E;
         if (!param0) {
           this.field_b = null;
         } else {
-          this.field_b = tm.field_c;
+          this.field_b = EmptyWidgetRenderer.field_c;
         }
     }
 

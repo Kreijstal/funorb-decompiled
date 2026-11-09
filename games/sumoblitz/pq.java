@@ -102,7 +102,7 @@ final class pq extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
-        ClientException.a((byte) -94);
+        ClientException.popRasterState((byte) -94);
         return var3;
     }
 
@@ -138,7 +138,7 @@ final class pq extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         var6Lifetime1 = 21 % ((param1 + 50) / 32);
-        ClientException.a((byte) 44);
+        ClientException.popRasterState((byte) 44);
         return var14;
     }
 
@@ -155,20 +155,20 @@ final class pq extends UiWidget {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var5_int = param3 + this.width;
-          kw.a(this.height + param1, param1, 1, param3 + this.field_M.field_x, -this.field_M.field_x + var5_int);
+          kw.pushClip(this.height + param1, param1, 1, param3 + this.field_M.field_x, -this.field_M.field_x + var5_int);
           for (var6 = param3 - this.field_A; var6 < var5_int; var6 = var6 + param0.field_x) {
             param0.draw(var6, param1);
           }
           if (param2 != 256) {
             this.field_J = true;
           }
-          ClientException.a((byte) -51);
+          ClientException.popRasterState((byte) -51);
           if (param3 + this.field_M.field_x >= SoftwareRasterizer.clipLeft) {
             jq.a(param2 + 6905, this.field_E);
             param0.draw(-this.field_A, 0);
             param0.draw(this.field_H * 2 - this.field_A, 0);
             this.field_G.drawMultiply(0, 0);
-            ClientException.a((byte) -105);
+            ClientException.popRasterState((byte) -105);
             this.field_E.draw(param3, param1);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_M.field_x + var5_int) {
@@ -178,7 +178,7 @@ final class pq extends UiWidget {
             param0.draw(-var7, 0);
             param0.draw(2 * this.field_H - var7, 0);
             this.field_M.drawMultiply(0, 0);
-            ClientException.a((byte) 106);
+            ClientException.popRasterState((byte) 106);
             this.field_E.draw(var5_int - this.field_M.field_x, param1);
             return;
           }
@@ -239,9 +239,9 @@ final class pq extends UiWidget {
         int var6 = this.y + parentY;
         this.a(this.field_z[0], var6, 256, var5);
         if (this.field_I < 65536) {
-          kw.a(var6 + this.height, var6, 1, var5 + (this.field_I * this.width >> 16), this.width + var5);
+          kw.pushClip(var6 + this.height, var6, 1, var5 + (this.field_I * this.width >> 16), this.width + var5);
           this.a(this.field_z[1], var6, 256, var5);
-          ClientException.a((byte) -110);
+          ClientException.popRasterState((byte) -110);
         }
     }
 

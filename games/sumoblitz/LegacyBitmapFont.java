@@ -9,7 +9,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
     private int[] field_K;
     private byte[] field_D;
     int field_s;
-    private pb[] field_P;
+    private IndexedSprite[] field_P;
     int field_F;
     int field_y;
     private static StringBuilder field_w;
@@ -88,7 +88,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = no.a((byte) -128, var10);
-                                  var4 = var4 + this.field_P[var9_int].field_f;
+                                  var4 = var4 + this.field_P[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -354,7 +354,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        pb var11_ref_pb = null;
+        IndexedSprite var11_ref_pb = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -386,17 +386,17 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                   var10 = no.a((byte) -128, var13);
                                   var11_ref_pb = this.field_P[var10];
                                   if (this.field_u == null) {
-                                    stackIn_27_0 = var11_ref_pb.field_d;
+                                    stackIn_27_0 = var11_ref_pb.fullHeight;
                                   } else {
                                     stackIn_27_0 = this.field_u[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_C != 256) {
-                                    var11_ref_pb.a(param1, param2 + this.field_F - var12, field_C);
+                                    var11_ref_pb.drawAlpha(param1, param2 + this.field_F - var12, field_C);
                                   } else {
-                                    var11_ref_pb.a(param1, param2 + this.field_F - var12);
+                                    var11_ref_pb.draw(param1, param2 + this.field_F - var12);
                                   }
-                                  param1 = param1 + var11_ref_pb.field_f;
+                                  param1 = param1 + var11_ref_pb.fullWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -708,7 +708,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = no.a((byte) -127, var18);
-                                    var4 = var4 + this.field_P[var16_int].field_f;
+                                    var4 = var4 + this.field_P[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;

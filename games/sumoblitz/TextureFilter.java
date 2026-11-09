@@ -36,7 +36,7 @@ final class TextureFilter {
             }
             if (cd.field_d == 1) {
               if (BufferedSocket.field_p.status == 2) {
-                stackIn_16_0 = tm.a(-1, -84);
+                stackIn_16_0 = EmptyWidgetRenderer.a(-1, -84);
                 return stackIn_16_0;
               }
               if (BufferedSocket.field_p.status == 1) {
@@ -57,13 +57,13 @@ final class TextureFilter {
               if (InstrumentNoteMask.field_n.available(-91) > 0) {
                 var1_int = InstrumentNoteMask.field_n.readByte(-106);
                 if (var1_int != 0) {
-                  stackIn_30_0 = tm.a(var1_int, -93);
+                  stackIn_30_0 = EmptyWidgetRenderer.a(var1_int, -93);
                   return stackIn_30_0;
                 }
                 cd.field_d = cd.field_d + 1;
               } else {
                 if (wq.a(-52) > ShrinkingRingEffect.field_s) {
-                  stackIn_27_0 = tm.a(-2, -89);
+                  stackIn_27_0 = EmptyWidgetRenderer.a(-2, -89);
                   return stackIn_27_0;
                 }
               }
@@ -80,7 +80,7 @@ final class TextureFilter {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return tm.a(-3, -94);
+            return EmptyWidgetRenderer.a(-3, -94);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

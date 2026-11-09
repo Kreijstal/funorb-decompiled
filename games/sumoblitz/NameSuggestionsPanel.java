@@ -39,7 +39,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bv var4 = null;
+        LinkWidgetRenderer var4 = null;
         int var6 = 0;
         String[] var7 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
@@ -56,7 +56,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_B[var4_int] = LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) ((Object) param0[var4_int]), (byte) 38).replace(' ', ' ');
             }
-            var4 = new bv(kw.field_b, 0, 1);
+            var4 = new LinkWidgetRenderer(kw.field_b, 0, 1);
             this.field_C = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new InteractiveWidget(this.field_B[var5], (WidgetListener) (this));
@@ -237,7 +237,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           rl.field_l = SpriteData.b(param3, "", "player");
           kk.field_e = SpriteData.b(param3, "", "mook");
           HardwareTurbulentWaterNoise.field_w = SpriteData.b(param3, "", "fast");
-          fl.field_r = SpriteData.b(param3, "", "sleeper");
+          StatefulWidgetRenderer.field_r = SpriteData.b(param3, "", "sleeper");
           kr.field_b = SpriteData.b(param3, "", "splitter");
           DisplayModeConfirmationDialog.field_V = SpriteData.b(param3, "", "seeker");
           ph.field_a = SpriteData.b(param3, "", "shadowdudes");
@@ -256,7 +256,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           bj.field_g = SpriteData.a(param3, "", "particle_sprinkle");
           HardwareTurbulentWaterNoise.field_t = SpriteData.a(param3, "", "particle_star");
           ShaderEffect.field_c = SpriteData.a(param3, "", "particle_pixel");
-          ue.field_p = SpriteData.a(param3, "", "particle_pixel_alpha");
+          SpriteStripButtonRenderer.field_p = SpriteData.a(param3, "", "particle_pixel_alpha");
           pc.field_c = SpriteData.a(param3, "", "ghost");
           no.field_c = SpriteData.a(param3, "", "ghost_cloud");
           LabeledWidget.field_E = SpriteData.a(param3, "", "ghost_splatter");
@@ -273,7 +273,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           MusicVoice.field_o = SpriteData.a(param3, "", "repulse");
           lr.field_c = SpriteData.a(param3, "", "icepatch");
           ei.field_b = SpriteData.b(param3, "", "attractor");
-          rs.field_e = SpriteData.a(param3, "", "bouncer");
+          IntList.field_e = SpriteData.a(param3, "", "bouncer");
           FullscreenMembershipDialog.field_S = SpriteData.b(param3, "", "landmine");
           ByteArrayStorage.field_a = SpriteData.b(param3, "", "repeller");
           ScrollViewport.field_C = SpriteData.b(param3, "", "accelerator");

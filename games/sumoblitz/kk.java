@@ -23,10 +23,10 @@ final class kk {
         field_b = null;
     }
 
-    final static ne[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RasterIndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ne[] stackIn_6_0 = null;
+        RasterIndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -34,12 +34,12 @@ final class kk {
         try {
           if (!k.a(param3, param2, param0, -23046)) {
             stackIn_2_0 = null;
-            return (ne[]) (stackIn_2_0);
+            return (RasterIndexedSprite[]) (stackIn_2_0);
           }
           if (param1 != -1) {
             kk.a((byte) 98);
           }
-          stackIn_6_0 = dv.a(true);
+          stackIn_6_0 = DropDownLabelRenderer.takeDecodedIndexedSprites(true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

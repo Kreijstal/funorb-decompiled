@@ -133,14 +133,14 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         EMPTY = null;
     }
 
-    final static ne e(int param0) {
-        ne var1 = null;
+    final static RasterIndexedSprite e(int param0) {
+        RasterIndexedSprite var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
-        return (ne) null;
+        return (RasterIndexedSprite) null;
     }
 
     final static void a(byte param0, java.awt.Canvas param1, boolean param2) {

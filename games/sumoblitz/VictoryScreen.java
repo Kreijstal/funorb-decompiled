@@ -38,7 +38,7 @@ final class VictoryScreen extends MenuScreen {
             if (var2 instanceof SlowBurstParticle &&
               ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96) == 1 &&
               !((SlowBurstParticle) (var2)).field_u) {
-              uv.a(lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, im.field_b, 20);
+              SpriteOptionRenderer.emitBurstParticles(lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, im.field_b, 20);
             }
           }
           var2 = (TimedSceneEffect) (im.field_b.next((byte) 18));
@@ -54,7 +54,7 @@ final class VictoryScreen extends MenuScreen {
         String var9 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 42 / ((param0 + 75) / 49);
-        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + vb.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.field_a;
+        String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + RotarySelectorWidget.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.field_a;
         String var1 = var7;
         if (0 >= gu.field_d) {
         } else {

@@ -72,7 +72,7 @@ final class jl {
             field_a = (uw) null;
           }
           while (var4 != null) {
-            iu.a(-1, var4, param0);
+            MarkerTrackRenderer.a(-1, var4, param0);
             var4 = (km) (dk.field_a.next((byte) 18));
           }
           return;

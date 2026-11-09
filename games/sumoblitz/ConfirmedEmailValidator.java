@@ -42,7 +42,7 @@ final class ConfirmedEmailValidator extends TextInputValidator {
             stackIn_9_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_9_0;
           }
-          stackIn_7_0 = oj.emailAddressIsUnavailableText;
+          stackIn_7_0 = BeveledCheckboxRenderer.emailAddressIsUnavailableText;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

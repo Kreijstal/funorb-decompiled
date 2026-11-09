@@ -10,7 +10,7 @@ final class ij {
         int var4;
         ts[] var5;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var5 = pb.a(96);
+        var5 = IndexedSprite.a(96);
         var2 = var5;
         if (param0 != 10341) {
           return (ts) null;

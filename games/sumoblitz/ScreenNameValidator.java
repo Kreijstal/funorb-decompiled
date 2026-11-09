@@ -421,8 +421,8 @@ final class ScreenNameValidator extends TextInputValidator {
               }
             }
           }
-          VertexStreamLayout.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
-          PlayingSound.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
+          VertexStreamLayout.field_b = -(var3_intLifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
+          PlayingSound.field_n = var3_intLifetime1 + BeveledCheckboxRenderer.field_a - (var3_intLifetime1 >> 1);
           RenderPresentationException.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {
             stackIn_116_0 = RenderPresentationException.field_d;
@@ -444,7 +444,7 @@ final class ScreenNameValidator extends TextInputValidator {
               var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
               var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, IntIndexHashTable.field_c[var5Lifetime3], true);
-              var9 = -(var8Lifetime1 >> 1) + oj.field_a;
+              var9 = -(var8Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
               var6Lifetime1 = var6Lifetime1 + qc.field_a;
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3] = new int[4];
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3][0] = var9 - DebouncedInputValidator.field_b;

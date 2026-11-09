@@ -78,7 +78,7 @@ final class WaterTextureResources {
               }
             }
           }
-          this.normalMap = this.toolkit.a(true, nl.RGBA, 16, 128, var24, 128);
+          this.normalMap = this.toolkit.a(true, BeveledTextInputRenderer.RGBA, 16, 128, var24, 128);
         }
         if (guard > -120) {
           this.useVolumeTextures = true;

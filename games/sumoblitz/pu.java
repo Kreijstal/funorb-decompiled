@@ -57,7 +57,7 @@ final class pu extends ToolkitSprite {
         }
         var11.setScale((float)height, (float)width, 0, 0.0f);
         var11.translate(y, x, (byte) 103, 0);
-        this.field_d.a(rs.field_c, 28880);
+        this.field_d.a(IntList.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
@@ -131,7 +131,7 @@ final class pu extends ToolkitSprite {
         var27.setLinear(x2 - x0, -y0 + y2, -y0 + y1, -x0 + x1, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 18356);
         var27.translate((byte) 96, 0.0f, y0, x0);
         var12.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -65), 0, 1.0f);
-        this.field_d.a(rs.field_c, 28880);
+        this.field_d.a(IntList.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
@@ -165,17 +165,17 @@ final class pu extends ToolkitSprite {
 
     final static void a(byte param0) {
         if (param0 <= -25) {
-          c.field_u[1] = LegacyOpenGlEffectManager.field_i;
-          c.field_u[0] = ResourceArchive.field_f;
-          c.field_u[2] = hc.field_f;
-          ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
+          PasswordInputRenderer.field_u[1] = LegacyOpenGlEffectManager.field_i;
+          PasswordInputRenderer.field_u[0] = ResourceArchive.field_f;
+          PasswordInputRenderer.field_u[2] = hc.field_f;
+          ok.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
           return;
         }
         blastReadyText = (String) null;
-        c.field_u[1] = LegacyOpenGlEffectManager.field_i;
-        c.field_u[0] = ResourceArchive.field_f;
-        c.field_u[2] = hc.field_f;
-        ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
+        PasswordInputRenderer.field_u[1] = LegacyOpenGlEffectManager.field_i;
+        PasswordInputRenderer.field_u[0] = ResourceArchive.field_f;
+        PasswordInputRenderer.field_u[2] = hc.field_f;
+        ok.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
     }
 
     public static void releaseStatics(int param0) {
@@ -259,7 +259,7 @@ final class pu extends ToolkitSprite {
         var8.setScale((float)this.field_l, (float)this.field_n, 0, 0.0f);
         var8.translate(y, x, (byte) 120, 0);
         var7.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -79), 0, 1.0f);
-        this.field_d.a(rs.field_c, 28880);
+        this.field_d.a(IntList.field_c, 28880);
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);

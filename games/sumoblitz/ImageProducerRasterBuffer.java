@@ -168,32 +168,32 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var4 = kh.a(param0, false) ? 1 : 0;
           var5 = new CompactMeshGeometry();
           var5.field_D = (short)param0.b(16, (byte) -119);
-          var5.field_Q = sm.a(var5.field_Q, param0, -119, 16);
-          var5.field_B = sm.a(var5.field_B, param0, -120, 16);
-          var5.field_r = sm.a(var5.field_r, param0, -127, 16);
+          var5.field_Q = WidgetStateStyle.decodePackedShortArray(var5.field_Q, param0, -119, 16);
+          var5.field_B = WidgetStateStyle.decodePackedShortArray(var5.field_B, param0, -120, 16);
+          var5.field_r = WidgetStateStyle.decodePackedShortArray(var5.field_r, param0, -127, 16);
           var5.field_n = (short)param0.b(16, (byte) -117);
-          var5.field_A = sm.a(var5.field_A, param0, -128, 16);
-          var5.field_b = sm.a(var5.field_b, param0, -116, 16);
-          var5.field_l = sm.a(var5.field_l, param0, -126, 16);
+          var5.field_A = WidgetStateStyle.decodePackedShortArray(var5.field_A, param0, -128, 16);
+          var5.field_b = WidgetStateStyle.decodePackedShortArray(var5.field_b, param0, -116, 16);
+          var5.field_l = WidgetStateStyle.decodePackedShortArray(var5.field_l, param0, -126, 16);
           if (var3 != 0) {
             var5.field_c = (short)param0.b(16, (byte) -94);
-            var5.field_x = sm.a(var5.field_x, param0, param1 + 16608, 16);
-            var5.field_g = sm.a(var5.field_g, param0, -124, 16);
-            var5.field_L = sm.a(var5.field_L, param0, -113, 16);
-            var5.field_e = sm.a(var5.field_e, param0, -127, 16);
-            var5.field_k = sm.a(var5.field_k, param0, -118, 16);
-            var5.field_h = sm.a(var5.field_h, param0, param1 + 16615, 16);
+            var5.field_x = WidgetStateStyle.decodePackedShortArray(var5.field_x, param0, param1 + 16608, 16);
+            var5.field_g = WidgetStateStyle.decodePackedShortArray(var5.field_g, param0, -124, 16);
+            var5.field_L = WidgetStateStyle.decodePackedShortArray(var5.field_L, param0, -113, 16);
+            var5.field_e = WidgetStateStyle.decodePackedShortArray(var5.field_e, param0, -127, 16);
+            var5.field_k = WidgetStateStyle.decodePackedShortArray(var5.field_k, param0, -118, 16);
+            var5.field_h = WidgetStateStyle.decodePackedShortArray(var5.field_h, param0, param1 + 16615, 16);
           }
           if (var4 != 0) {
             param0.b(16, (byte) -127);
-            var5.field_z = sm.a(var5.field_z, param0, -121, 16);
-            var5.field_C = sm.a(var5.field_C, param0, param1 + 16619, 16);
-            var5.field_G = sm.a(var5.field_G, param0, -114, 16);
-            var5.field_y = sm.a(var5.field_y, param0, param1 + 16619, 16);
-            var5.field_R = sm.a(var5.field_R, param0, param1 + 16623, 16);
+            var5.field_z = WidgetStateStyle.decodePackedShortArray(var5.field_z, param0, -121, 16);
+            var5.field_C = WidgetStateStyle.decodePackedShortArray(var5.field_C, param0, param1 + 16619, 16);
+            var5.field_G = WidgetStateStyle.decodePackedShortArray(var5.field_G, param0, -114, 16);
+            var5.field_y = WidgetStateStyle.decodePackedShortArray(var5.field_y, param0, param1 + 16619, 16);
+            var5.field_R = WidgetStateStyle.decodePackedShortArray(var5.field_R, param0, param1 + 16623, 16);
           }
           if (kh.a(param0, false)) {
-            var5.field_K = sm.a(var5.field_K, param0, -112, 16);
+            var5.field_K = WidgetStateStyle.decodePackedShortArray(var5.field_K, param0, -112, 16);
           }
           if (kh.a(param0, false)) {
             var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, param0);

@@ -101,7 +101,7 @@ final class IntrusiveNodeHashTable {
         if (param0) {
           field_h = (String) null;
         }
-        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
+        return (is.a(!param0 ? true : false, param1, param2) | BeveledCheckboxRenderer.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
     }
 
     final void a(IntrusiveNode param0, int param1, long param2) {
@@ -143,7 +143,7 @@ final class IntrusiveNodeHashTable {
             stackIn_5_0 = 6407;
             return stackIn_5_0;
           }
-          if (nl.RGBA == format) {
+          if (BeveledTextInputRenderer.RGBA == format) {
             stackIn_8_0 = 6408;
             return stackIn_8_0;
           }

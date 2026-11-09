@@ -27,7 +27,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
         }
         this.layoutDropDown(this.x, this.width, 8725, this.y, var3 + this.buttonHeight);
         this.optionList.setBounds(114, 0, 0, var2, this.width);
-        this.listScrollPane = new ScrollPane(0, 0, 0, 0, new tm(), this.optionList, (WidgetRenderer) null);
+        this.listScrollPane = new ScrollPane(0, 0, 0, 0, new EmptyWidgetRenderer(), this.optionList, (WidgetRenderer) null);
         if (var4 != 0) {
           this.listScrollPane.setVerticalScrollControl(1332, true, GameKeyHandler.a((byte) 35));
         }
@@ -392,9 +392,9 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
           this.maxListHeight = param2;
           this.listOpen = false;
           this.optionList.listener = (WidgetListener) (this);
-          this.labelButton = new InteractiveWidget("", new dv(this), (WidgetListener) (this));
+          this.labelButton = new InteractiveWidget("", new DropDownLabelRenderer(this), (WidgetListener) (this));
           this.toggleButton = new InteractiveWidget();
-          this.toggleButton.renderer = (WidgetRenderer) ((Object) new fm());
+          this.toggleButton.renderer = (WidgetRenderer) ((Object) new DropDownArrowRenderer());
           this.toggleButton.listener = (WidgetListener) (this);
           this.addChild(this.labelButton, 125);
           this.addChild(this.toggleButton, 74);

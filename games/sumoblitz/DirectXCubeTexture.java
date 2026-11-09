@@ -37,7 +37,7 @@ final class DirectXCubeTexture extends DirectXTexture implements CubeTexture {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (DirectXGraphicsToolkit) (param0);
-        stackIn_3_2 = nl.RGBA;
+        stackIn_3_2 = BeveledTextInputRenderer.RGBA;
         stackIn_3_3 = GpuDataType.UNSIGNED_BYTE;
         if (param2) {
           stackIn_3_0Lifetime1 = this;

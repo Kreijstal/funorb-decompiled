@@ -30,7 +30,7 @@ final class GraphicsToolkitManager {
         if (param0 != -10517) {
           GraphicsToolkitManager.c(113);
         }
-        if (!oj.a(false) ||
+        if (!BeveledCheckboxRenderer.hasOpenDialogs(false) ||
           null == pu.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }
@@ -280,7 +280,7 @@ final class GraphicsToolkitManager {
                         var3 = this.field_c.b(79);
                         this.field_c.field_g.close((byte) -109);
                       }
-                      if (var8.field_g.c()) {
+                      if (var8.field_g.usesNativeRendering()) {
                         var8.field_g.useHeap(var8.field_g.createHeap(100663296));
                       }
                       if (var3 == null) {

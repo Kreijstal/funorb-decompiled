@@ -101,7 +101,7 @@ class jb extends se {
               tw.a("document.cookie=\"" + var6Lifetime6 + "\"", -15428, param2);
             } catch (Throwable throwable) {
             }
-            va.a(false, param2);
+            RotarySelectorRenderer.updateAppletNavigationLinks(false, param2);
           } catch (RuntimeException runtimeException) {
             throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -220,7 +220,7 @@ class jb extends se {
               var6 = ig.field_a.readNullableString((byte) 92);
               var7 = ig.field_a.readUnsignedByte(-31302);
               if ((var7 & 1) != 0) {
-                fu.f(24);
+                MarkerTrackWidget.persistRandomDataAndAdvance(24);
               }
               if (!param3) {
                 stackIn_43_0 = ((4 & var7) != 0);
@@ -235,9 +235,9 @@ class jb extends se {
                 ig.field_a.readUnsignedByte(-31302);
                 ig.field_a.readInt(true);
                 pl.field_y = ig.field_a.readUnsignedShort(255);
-                sm.field_b = new byte[pl.field_y];
+                WidgetStateStyle.field_b = new byte[pl.field_y];
                 for (var8 = 0; var8 < pl.field_y; var8++) {
-                  sm.field_b[var8] = ig.field_a.readByte(true);
+                  WidgetStateStyle.field_b[var8] = ig.field_a.readByte(true);
                 }
               }
               qv.field_o = ig.field_a.readCp1252String(-1);
@@ -245,7 +245,7 @@ class jb extends se {
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
-              if (kb.field_d.a((byte) 113) != pb.field_b) {
+              if (kb.field_d.a((byte) 113) != IndexedSprite.field_b) {
                 if (kb.field_d.a((byte) 89) == hh.field_c) {
                   LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
                 }

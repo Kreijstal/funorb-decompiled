@@ -111,7 +111,7 @@ final class rd extends IntrusiveNode {
         if (param1 > -10) {
           rd.releaseStatics(true);
         }
-        iu.field_e = param0;
+        MarkerTrackRenderer.field_e = param0;
     }
 
     final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {

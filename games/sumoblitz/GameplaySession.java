@@ -740,7 +740,7 @@ final class GameplaySession {
                   SecondaryNodeDeque.field_e = true;
                   rn.a(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
                 }
-                vb.field_E = true;
+                RotarySelectorWidget.field_E = true;
                 var3.unlink(false);
               }
             }
@@ -1326,7 +1326,7 @@ final class GameplaySession {
                   }
                 }
                 if (MatchingTextValidator.field_i == 10 &&
-                  !vb.field_E) {
+                  !RotarySelectorWidget.field_E) {
                   UnderageAccountInfoPanel.b(24753, 251, 4);
                 }
                 if (MatchingTextValidator.field_i == 5 &&
@@ -1385,19 +1385,19 @@ final class GameplaySession {
               if (var6 != 0) {
                 if (!MessageDialog.arcadeMode) {
                   ds.a(107);
-                  sm.a(72);
+                  WidgetStateStyle.initializePlayerDrone(72);
                 } else {
-                  sm.a(72);
+                  WidgetStateStyle.initializePlayerDrone(72);
                 }
               }
             } else {
               if (!MessageDialog.arcadeMode) {
                 ds.a(107);
                 if (var6 != 0) {
-                  sm.a(72);
+                  WidgetStateStyle.initializePlayerDrone(72);
                 }
               } else {
-                sm.a(72);
+                WidgetStateStyle.initializePlayerDrone(72);
               }
             }
             DisplayModeConfirmationDialog.droneTypeStreakMask = 0;

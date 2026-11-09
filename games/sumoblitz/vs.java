@@ -91,8 +91,8 @@ final class vs {
               for (var6_int = 0; var6_int < gu.field_d; var6_int++) {
                 ig.field_a.payload[var6_int] = var5_ref_ub.payload[var6_int];
               }
-              ToolkitImageProducerBuffer.field_r = vb.field_I;
-              vb.field_I = ContentTransitionDialog.field_Q;
+              ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
+              RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
               ContentTransitionDialog.field_Q = TextureFormat.field_a;
               TextureFormat.field_a = var5_ref_ub.opcode;
               return true;
@@ -126,8 +126,8 @@ final class vs {
               return false;
             }
             if (jo.field_c == 0) {
-              ToolkitImageProducerBuffer.field_r = vb.field_I;
-              vb.field_I = ContentTransitionDialog.field_Q;
+              ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
+              RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
               ContentTransitionDialog.field_Q = TextureFormat.field_a;
               TextureFormat.field_a = lq.field_b;
               lq.field_b = -1;

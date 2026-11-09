@@ -270,7 +270,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         return true;
     }
 
-    final boolean c() {
+    final boolean usesNativeRendering() {
         return true;
     }
 

@@ -21,7 +21,7 @@ abstract class ka {
             stackIn_2_0 = 9216;
             return stackIn_2_0;
           }
-          if (nl.NORMAL_MAP == mode) {
+          if (BeveledTextInputRenderer.NORMAL_MAP == mode) {
             stackIn_9_0 = 34065;
             return stackIn_9_0;
           }

@@ -210,29 +210,29 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         try {
           pl var4 = null;
           pl var5 = null;
-          if (tm.field_a == null) {
-            tm.field_a = CacheReferenceNode.field_t.a((byte) 71, ScrollPane.field_C, vp.field_a);
+          if (EmptyWidgetRenderer.field_a == null) {
+            EmptyWidgetRenderer.field_a = CacheReferenceNode.field_t.a((byte) 71, ScrollPane.field_C, vp.field_a);
           }
           if (param0 > -33) {
             GridWidgetContainer.a((byte) 116, false);
           }
-          if (tm.field_a.status == 0) {
+          if (EmptyWidgetRenderer.field_a.status == 0) {
             return false;
           }
           long dupTemp$0 = wq.a(-38);
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.field_x = dupTemp$0;
-          if (tm.field_a.status != 1) {
+          if (EmptyWidgetRenderer.field_a.status != 1) {
             kw.field_c = lr.field_b;
           } else {
             try {
-              DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.result), CacheReferenceNode.field_t);
+              DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
               var4 = ig.field_a;
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
               var5.position = 0;
               ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
-              vb.field_I = param1 ? -2 : -1;
+              RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;
               sb.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
@@ -241,7 +241,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               kw.field_c = lr.field_b;
             }
           }
-          tm.field_a = null;
+          EmptyWidgetRenderer.field_a = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

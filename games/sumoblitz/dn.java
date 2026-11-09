@@ -39,7 +39,7 @@ final class dn {
           return ow.loadingFontsText + " - " + LegacyOpenGlPostProcessManager.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (!hw.field_a.loadIndex((byte) 127)) {
-          return fl.waitingForExtraDataText;
+          return StatefulWidgetRenderer.waitingForExtraDataText;
         }
         if (!hw.field_a.tryLoadAllGroups(true)) {
           return rd.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";

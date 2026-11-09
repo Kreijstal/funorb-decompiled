@@ -37,7 +37,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
         RuntimeException var1 = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!oj.a(false)) {
+          if (!BeveledCheckboxRenderer.hasOpenDialogs(false)) {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
               HardwareAnimatedWaterEffect.d(1);
@@ -45,7 +45,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             }
             return;
           }
-          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, c.field_r, true, guard - 1886067878);
+          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, PasswordInputRenderer.field_r, true, guard - 1886067878);
           if (guard != 1886067877) {
             LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }
