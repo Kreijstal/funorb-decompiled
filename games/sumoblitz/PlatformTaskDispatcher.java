@@ -10,7 +10,7 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_o;
     LimitedRandomAccessFile field_l;
     static String field_u;
-    private ep field_w;
+    private DirectDrawFullscreenController field_w;
     private static String field_s;
     private static String field_p;
     static String field_q;
@@ -27,7 +27,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private Thread field_a;
     private Object field_v;
     LimitedRandomAccessFile field_d;
-    private bm field_b;
+    private MicrosoftCursorCallback field_b;
 
     private final static LimitedRandomAccessFile a(String param0, boolean param1, String param2, int param3) {
         try {
@@ -104,7 +104,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     private final PlatformTask a(int param0, String param1, boolean param2, boolean param3) {
         if (!param2) {
-          this.field_b = (bm) null;
+          this.field_b = (MicrosoftCursorCallback) null;
         }
         return this.a(param1, 0, param0, false, param3 ? 22 : 1);
     }
@@ -189,7 +189,7 @@ final class PlatformTaskDispatcher implements Runnable {
           LimitedRandomAccessFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          hh var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -263,7 +263,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.result = var17;
                         var17.setResizable(false);
                         if (this.field_t) {
-                          this.field_w.a(var8.intArgument & 65535, (byte) -123, var8.intArgument >>> 16, var8.secondIntArgument & 65535, var8.secondIntArgument >> 16, var17);
+                          this.field_w.enterFullscreen(var8.intArgument & 65535, (byte) -123, var8.intArgument >>> 16, var8.secondIntArgument & 65535, var8.secondIntArgument >> 16, var17);
                         } else {
                           Class.forName("cu").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_r, new Object[]{var17, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondIntArgument >> 16), new Integer(65535 & var8.secondIntArgument)});
                         }
@@ -281,7 +281,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_t) {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_v, new Object[]{new Integer(var3_int), new Integer(var4)});
                           } else {
-                            this.field_b.a(var4, var3_int, (byte) 84);
+                            this.field_b.movePointer(var4, var3_int, (byte) 84);
                           }
                           break;
                         }
@@ -291,7 +291,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_74_0;
                           var14 = (java.awt.Component) (var8.objectArgument);
                           if (this.field_t) {
-                            this.field_b.a(false, var3_int != 0, var14);
+                            this.field_b.setCursorVisible(false, var3_int != 0, var14);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_v, new Object[]{var14, new Boolean(var3_int != 0)});
                           }
@@ -338,12 +338,12 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_t) {
                           Class.forName("cu").getMethod("exit", new Class[]{}).invoke(this.field_r, new Object[]{});
                         } else {
-                          this.field_w.a((java.awt.Frame) (var8.objectArgument), 8);
+                          this.field_w.restoreDisplayMode((java.awt.Frame) (var8.objectArgument), 8);
                         }
                         break;
                       case 5:
                         if (this.field_t) {
-                          var8.result = this.field_w.a((byte) -128);
+                          var8.result = this.field_w.displayModes((byte) -128);
                         } else {
                           var8.result = Class.forName("cu").getMethod("listmodes", new Class[]{}).invoke(this.field_r, new Object[]{});
                         }
@@ -395,11 +395,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (hh) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = RenderPresentationException.a((String) (var8.objectArgument), var8.intArgument, true).b((byte) 61);
-                    } catch (hh decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (hh) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
@@ -526,7 +526,7 @@ final class PlatformTaskDispatcher implements Runnable {
         ThreadGroup var5 = null;
         ThreadGroup var6 = null;
         Thread[] var7 = null;
-        ep var9 = null;
+        DirectDrawFullscreenController var9 = null;
         ThreadGroup var10 = null;
         ThreadGroup var11 = null;
         this.field_l = null;
@@ -605,14 +605,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        el.a(0, field_j, field_p);
+        CacheFileLocator.initialize(0, field_j, field_p);
         if (this.field_f) {
-          this.field_n = new LimitedRandomAccessFile(el.a((String) null, field_j, 95, "random.dat"), "rw", 25L);
-          this.field_l = new LimitedRandomAccessFile(el.a("main_file_cache.dat2", (byte) -8), "rw", 314572800L);
-          this.field_d = new LimitedRandomAccessFile(el.a("main_file_cache.idx255", (byte) -8), "rw", 1048576L);
+          this.field_n = new LimitedRandomAccessFile(CacheFileLocator.resolveCacheFile((String) null, field_j, 95, "random.dat"), "rw", 25L);
+          this.field_l = new LimitedRandomAccessFile(CacheFileLocator.getCacheFile("main_file_cache.dat2", (byte) -8), "rw", 314572800L);
+          this.field_d = new LimitedRandomAccessFile(CacheFileLocator.getCacheFile("main_file_cache.idx255", (byte) -8), "rw", 1048576L);
           this.field_i = new LimitedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_i[var5_int] = new LimitedRandomAccessFile(el.a("main_file_cache.idx" + var5_int, (byte) -8), "rw", 1048576L);
+            this.field_i[var5_int] = new LimitedRandomAccessFile(CacheFileLocator.getCacheFile("main_file_cache.idx" + var5_int, (byte) -8), "rw", 1048576L);
           }
           if (this.field_t) {
             try {
@@ -626,7 +626,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.field_t) {
               this.field_r = Class.forName("cu").newInstance();
             } else {
-              var9 = new ep();
+              var9 = new DirectDrawFullscreenController();
               this.field_w = var9;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
@@ -635,7 +635,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.field_t) {
-              this.field_b = new bm();
+              this.field_b = new MicrosoftCursorCallback();
             } else {
               this.field_v = Class.forName("CursorController").newInstance();
             }

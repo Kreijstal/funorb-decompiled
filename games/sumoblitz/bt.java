@@ -26,12 +26,12 @@ abstract class bt extends pt {
         return !AffineTransform3D.field_o.a(true) ? true : false;
     }
 
-    final static uw a(boolean param0) {
-        if (param0) {
+    final static TickClock createTickClock(boolean guard) {
+        if (guard) {
           field_e = (ToolkitSprite) null;
-          return (uw) ((Object) new fd());
+          return (TickClock) ((Object) new NanoTickClock());
         }
-        return (uw) ((Object) new fd());
+        return (TickClock) ((Object) new NanoTickClock());
     }
 
     abstract LegacyOpenGlCubeTexture b(byte param0);

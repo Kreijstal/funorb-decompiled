@@ -184,12 +184,12 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         Object var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
-        cn var5 = null;
+        SocialContact var5 = null;
         String var5_ref = null;
         String var6 = null;
-        cn var6_ref = null;
+        SocialContact var6_ref = null;
         String var7 = null;
-        cn var7_ref = null;
+        SocialContact var7_ref = null;
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
@@ -199,7 +199,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var2 = var1.readUnsignedByte(-31302);
           if (var2 == 0) {
             if (GpuDataType.field_b == null) {
-              GpuDataType.field_b = new ci(128);
+              GpuDataType.field_b = new SecondaryNodeHashTable(128);
               UsernameCredentials.field_e = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(-31302) != 1) ? 0 : 1;
@@ -208,27 +208,27 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             if (var3_int != 0) {
               var1.readCp1252String(-1);
             }
-            var5 = QuickChatPhraseProvider.a((byte) 123, var4_ref_String);
+            var5 = QuickChatPhraseProvider.findIgnoredContact((byte) 123, var4_ref_String);
             var6 = var1.readCp1252String(-1);
             var7 = AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
             if (null == var5) {
-              var5 = QuickChatPhraseProvider.a((byte) 122, var6);
+              var5 = QuickChatPhraseProvider.findIgnoredContact((byte) 122, var6);
               if (var5 != null) {
-                GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
+                GpuDataType.field_b.put((long)var7.hashCode(), -8156, var5);
               }
             }
             if (null == var5) {
-              var5 = new cn();
-              GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
+              var5 = new SocialContact();
+              GpuDataType.field_b.put((long)var7.hashCode(), -8156, var5);
               fieldTemp$0 = UsernameCredentials.field_e;
               UsernameCredentials.field_e = UsernameCredentials.field_e + 1;
-              var5.field_kb = fieldTemp$0;
+              var5.insertionOrder = fieldTemp$0;
               SpriteState.field_t.addLast((IntrusiveNode) (var5), (byte) 39);
             }
-            var5.field_jb = var4_ref_String;
+            var5.displayName = var4_ref_String;
             return;
           }
           if (var2 != 1) {
@@ -260,7 +260,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             return;
           }
           if (null == CheckboxWidget.field_G) {
-            CheckboxWidget.field_G = new ci(128);
+            CheckboxWidget.field_G = new SecondaryNodeHashTable(128);
             SoftwareRenderTarget.field_h = 0;
           }
           var3Lifetime1 = var1.readCp1252String(-1);
@@ -269,38 +269,38 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           }
           var4_ref_StringLifetime1 = var1.readCp1252String(-1);
           var5_ref = var1.readCp1252String(-1);
-          var6_ref = VertexStreamLayout.a(var4_ref_StringLifetime1, (byte) 15);
+          var6_ref = VertexStreamLayout.findFriend(var4_ref_StringLifetime1, (byte) 15);
           if (null == var6_ref) {
-            var6_ref = VertexStreamLayout.a(var5_ref, (byte) 71);
+            var6_ref = VertexStreamLayout.findFriend(var5_ref, (byte) 71);
             if (var6_ref != null) {
-              CheckboxWidget.field_G.a((long)AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
+              CheckboxWidget.field_G.put((long)AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
             }
           }
           if (var6_ref == null) {
-            var6_ref = new cn();
-            CheckboxWidget.field_G.a((long)AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
+            var6_ref = new SocialContact();
+            CheckboxWidget.field_G.put((long)AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), -8156, var6_ref);
             fieldTemp$1 = SoftwareRenderTarget.field_h;
             SoftwareRenderTarget.field_h = SoftwareRenderTarget.field_h + 1;
-            var6_ref.field_kb = fieldTemp$1;
+            var6_ref.insertionOrder = fieldTemp$1;
             pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
-          var6_ref.field_jb = var4_ref_StringLifetime1;
-          var6_ref.field_gb = (String) (var3Lifetime1);
+          var6_ref.displayName = var4_ref_StringLifetime1;
+          var6_ref.worldName = (String) (var3Lifetime1);
           var6_ref.unlink(false);
-          var7_ref = (cn) (pc.field_d.first(-104));
+          var7_ref = (SocialContact) (pc.field_d.first(-104));
           scanLoop1: while (true) {
             if (null != var7_ref) {
-              stackOut_52_0 = GameKeyHandler.a(var6_ref, 0, var7_ref);
+              stackOut_52_0 = GameKeyHandler.contactSortsAfter(var6_ref, 0, var7_ref);
               stackIn_63_0 = stackOut_52_0 ? 1 : 0;
               stackIn_53_0 = stackOut_52_0;
               if (var8 != 0) {
                 break scanLoop1;
               }
               if (stackIn_53_0) {
-                var7_ref = (cn) (pc.field_d.next((byte) 18));
+                var7_ref = (SocialContact) (pc.field_d.next((byte) 18));
                 continue;
               }
             }
@@ -355,7 +355,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             decompiledCaughtException = decompiledCaughtParameter0;
             numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
           }
-          stackIn_12_0 = fd.a(this, this.screenNameInput.text, this.emailNewsCheckbox.selected, this.emailInput.text, this.passwordInput.text, var2_int, 0);
+          stackIn_12_0 = NanoTickClock.startAccountCreation(this, this.screenNameInput.text, this.emailNewsCheckbox.selected, this.emailInput.text, this.passwordInput.text, var2_int, 0);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -647,7 +647,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           dupTemp$1 = new PasswordInputRenderer(10000536);
           this.confirmPasswordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           this.passwordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-          var2 = ic.a(cn.byClickingCreateYouText, new String[]{this.linkStyleStart((byte) 66), this.linkStyleEnd(128)}, (byte) -128);
+          var2 = ic.a(SocialContact.byClickingCreateYouText, new String[]{this.linkStyleStart((byte) 66), this.linkStyleEnd(128)}, (byte) -128);
           var3 = 20;
           var3 = var3 + this.addLabeledField(HardwareTurbulentWaterNoise.emailLoginText, 170, var3, 78, this.emailInput);
           var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, pq.confirmEmailText));

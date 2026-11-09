@@ -9,54 +9,54 @@ final class il {
         throw new IllegalStateException();
     }
 
-    final static dk a(String param0, byte param1) {
+    final static EmailValidationError validateEmailAddress(String address, byte guard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        dk var5 = null;
-        dk stackIn_4_0 = null;
-        dk stackIn_7_0 = null;
-        dk stackIn_12_0 = null;
-        dk stackIn_14_0 = null;
+        EmailValidationError var5 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_12_0 = null;
+        EmailValidationError stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != null &&
-            param0.length() != 0) {
-            var2_int = param0.indexOf('@');
+          if (address != null &&
+            address.length() != 0) {
+            var2_int = address.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = ClientExceptionSupport.field_a;
+              stackIn_7_0 = ClientExceptionSupport.MISSING_EMAIL_COMPONENT;
               return stackIn_7_0;
             }
-            var3 = param0.substring(0, var2_int);
-            var4 = param0.substring(1 + var2_int);
-            if (param1 < 0) {
+            var3 = address.substring(0, var2_int);
+            var4 = address.substring(1 + var2_int);
+            if (guard < 0) {
               field_b = (ToolkitSprite) null;
             }
-            var5 = SocketConnector.a((byte) -126, var3);
+            var5 = SocketConnector.validateEmailLocalPart((byte) -126, var3);
             if (var5 == null) {
-              stackIn_14_0 = lh.a(var4, -1);
+              stackIn_14_0 = ServerDataReadRequest.validateEmailDomain(var4, -1);
               return stackIn_14_0;
             }
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = FixedPointPerlinNoise3D.field_j;
+          stackIn_4_0 = FixedPointPerlinNoise3D.EMPTY_EMAIL;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_17_0 = var2;
           stackIn_17_1 = new StringBuilder().append("il.A(");
-          if (param0 == null) {
+          if (address == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -114,9 +114,9 @@ final class il {
         }
     }
 
-    final static void a(byte param0, String param1) {
-        System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", param1, "\n", true));
-        if (param0 < 4) {
+    final static void printClientError(byte guard, String message) {
+        System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", message, "\n", true));
+        if (guard < 4) {
           il.releaseStatics(81);
         }
     }

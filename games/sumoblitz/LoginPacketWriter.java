@@ -15,12 +15,12 @@ final class LoginPacketWriter {
         String var7 = null;
         LoginCredentials var8 = null;
         try {
-          RendererSession.isaacSeed[0] = fd.field_d.nextInt();
+          RendererSession.isaacSeed[0] = NanoTickClock.field_d.nextInt();
           if (guard != -12793) {
             var8 = (LoginCredentials) null;
             LoginPacketWriter.sendLoginPacket(true, true, -109, -21, (LoginCredentials) null);
           }
-          RendererSession.isaacSeed[1] = fd.field_d.nextInt();
+          RendererSession.isaacSeed[1] = NanoTickClock.field_d.nextInt();
           RendererSession.isaacSeed[2] = (int)(HardwareUnlitEffect.field_g >> 32);
           SoftLruCache.field_e.position = 0;
           RendererSession.isaacSeed[3] = (int)HardwareUnlitEffect.field_g;

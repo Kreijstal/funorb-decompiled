@@ -850,7 +850,7 @@ class Drone {
                         stackIn_45_1 = this.xQ8 >> 8;
                         stackIn_45_2 = this.yQ8 >> 8;
                         stackIn_45_3 = var5;
-                        stackIn_45_4 = var6 + dp.a(-26346, this.droneType);
+                        stackIn_45_4 = var6 + UiStyleNode.droneTypeColor(-26346, this.droneType);
                         if (var6 != 255) {
                           stackIn_46_5 = 1;
                         } else {
@@ -1016,12 +1016,12 @@ class Drone {
             this.destructionTicks == 0) {
             if (this.variantCooldownTicks == 0 &&
               this.armourHitsRemaining > 0) {
-              hh.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)((3.141592653589793 + this.facingRadians) * 32768.0 / 3.141592653589793));
+              ProxyAuthenticationRequiredException.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)((3.141592653589793 + this.facingRadians) * 32768.0 / 3.141592653589793));
             } else {
-              hh.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793));
+              ProxyAuthenticationRequiredException.field_e[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793));
             }
             if (this.droneType == 0) {
-              hh.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793) + 32768);
+              ProxyAuthenticationRequiredException.field_e[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * (3.141592653589793 + this.facingRadians) / 3.141592653589793) + 32768);
             }
           } else if (this.variant == 2 &&
             0 == this.destructionTicks) {

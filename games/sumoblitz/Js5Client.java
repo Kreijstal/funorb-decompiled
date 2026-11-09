@@ -175,30 +175,30 @@ abstract class Js5Client {
 
     abstract void attachConnection(boolean loggedIn, byte guard, Object connection);
 
-    final static boolean b(byte param0) {
+    final static boolean nextReflectionCheckReady(byte guard) {
         int var2 = 0;
-        rd var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        rd var4 = null;
+        ReflectionCheck var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 <= 118) {
+          if (guard <= 118) {
             field_k = (long[]) null;
           }
-          var4 = (rd) (qr.field_c.first(100));
+          var4 = (ReflectionCheck) (qr.reflectionChecks.first(100));
           var1 = var4;
           if (var1 == null) {
             return false;
           }
-          for (var2 = 0; var1.field_p > var2; var2++) {
-            if (null != var4.field_o[var2] &&
-              var4.field_o[var2].status == 0) {
+          for (var2 = 0; var1.size > var2; var2++) {
+            if (null != var4.fieldTasks[var2] &&
+              var4.fieldTasks[var2].status == 0) {
               return false;
             }
-            if (var4.field_s[var2] != null &&
-              var4.field_s[var2].status == 0) {
+            if (var4.methodTasks[var2] != null &&
+              var4.methodTasks[var2].status == 0) {
               return false;
             }
           }
@@ -206,7 +206,7 @@ abstract class Js5Client {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "gd.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "gd.K(" + guard + ')');
         }
     }
 
@@ -218,19 +218,19 @@ abstract class Js5Client {
         return this.urgentQueued.size((byte) 2) + this.urgentInFlight.size((byte) 2);
     }
 
-    final static lh a(byte param0, int param1) {
-        lh var2 = null;
-        lh var2Lifetime1;
-        if (param0 == -82) {
-          var2 = new lh();
+    final static ServerDataReadRequest requestServerData(byte guard, int opcode) {
+        ServerDataReadRequest var2 = null;
+        ServerDataReadRequest var2Lifetime1;
+        if (guard == -82) {
+          var2 = new ServerDataReadRequest();
           no.field_d.addLast((IntrusiveNode) (var2), (byte) 39);
-          GzipDecompressor.b(param0 + 11126, param1);
+          GzipDecompressor.sendServerDataRead(guard + 11126, opcode);
           return var2;
         }
         field_k = (long[]) null;
-        var2Lifetime1 = new lh();
+        var2Lifetime1 = new ServerDataReadRequest();
         no.field_d.addLast((IntrusiveNode) (var2Lifetime1), (byte) 39);
-        GzipDecompressor.b(param0 + 11126, param1);
+        GzipDecompressor.sendServerDataRead(guard + 11126, opcode);
         return var2Lifetime1;
     }
 
@@ -254,7 +254,7 @@ abstract class Js5Client {
     public static void releaseStatics(boolean param0) {
         achievementsText = null;
         if (param0) {
-          Js5Client.a((byte) -88, 27);
+          Js5Client.requestServerData((byte) -88, 27);
           field_a = null;
           field_k = null;
           return;

@@ -61,7 +61,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (kv.field_a == null) {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -73,7 +73,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (var9 > kv.field_a.field_x) {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -85,7 +85,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (var10 <= kv.field_a.field_u) {
             jq.a(7161, kv.field_a);
             SoftwareRasterizer.clear();
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
+            var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -96,7 +96,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           kv.field_a = new Sprite(var9, var10);
           jq.a(7161, kv.field_a);
-          var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
+          var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
           if (guard >= -35) {
@@ -112,7 +112,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (kv.field_a == null) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
+            var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
@@ -124,7 +124,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (var9Lifetime1 > kv.field_a.field_x) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
+            var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
@@ -136,7 +136,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           if (var10Lifetime1 > kv.field_a.field_u) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
+            var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard < -35) {
@@ -148,7 +148,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           jq.a(7161, kv.field_a);
           SoftwareRasterizer.clear();
-          var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
+          var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
           if (guard < -35) {

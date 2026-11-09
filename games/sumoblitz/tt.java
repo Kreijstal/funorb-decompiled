@@ -73,25 +73,25 @@ abstract class tt extends IntrusiveNode {
           var3 = param1;
           if (var3 != 6) {
             if (var3 == 7) {
-              var2 = dp.a(-26346, 0);
+              var2 = UiStyleNode.droneTypeColor(-26346, 0);
             } else {
-              var2 = dp.a(-26346, param1);
+              var2 = UiStyleNode.droneTypeColor(-26346, param1);
             }
             return ((8388607 ^ var2 >> 1) & 8355711) + var2;
           }
-          var2Lifetime4 = dp.a(-26346, 0);
+          var2Lifetime4 = UiStyleNode.droneTypeColor(-26346, 0);
           return ((8388607 ^ var2Lifetime4 >> 1) & 8355711) + var2Lifetime4;
         }
         var3Lifetime1 = param1;
         if (var3Lifetime1 == 6) {
-          var2Lifetime1 = dp.a(-26346, 0);
+          var2Lifetime1 = UiStyleNode.droneTypeColor(-26346, 0);
           return ((8388607 ^ var2Lifetime1 >> 1) & 8355711) + var2Lifetime1;
         }
         if (var3Lifetime1 != 7) {
-          var2Lifetime2 = dp.a(-26346, param1);
+          var2Lifetime2 = UiStyleNode.droneTypeColor(-26346, param1);
           return ((8388607 ^ var2Lifetime2 >> 1) & 8355711) + var2Lifetime2;
         }
-        var2Lifetime3 = dp.a(-26346, 0);
+        var2Lifetime3 = UiStyleNode.droneTypeColor(-26346, 0);
         return ((8388607 ^ var2Lifetime3 >> 1) & 8355711) + var2Lifetime3;
     }
 

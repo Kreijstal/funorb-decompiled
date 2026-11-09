@@ -212,8 +212,8 @@ class MenuScreen {
           var15 = this.field_c;
         }
         if (var15 == -1) {
-          MessageDialog.field_db.a(hk.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
-          LegacyOpenGlEffect.field_c.a(hk.mouseOverAnIconText, var5, -1, 348, 320, 0);
+          MessageDialog.field_db.a(ActiveCanvasProvider.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
+          LegacyOpenGlEffect.field_c.a(ActiveCanvasProvider.mouseOverAnIconText, var5, -1, 348, 320, 0);
           if (vs.b((byte) 9)) {
             MessageDialog.field_db.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
             LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
@@ -389,7 +389,7 @@ class MenuScreen {
           var10 = this.f(101, param1) - var7;
           var11 = this.c(8, param1);
           if (param0) {
-            if (hk.field_c != 1 &&
+            if (ActiveCanvasProvider.field_c != 1 &&
               !hw.field_b[84]) {
               wo.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
@@ -469,7 +469,7 @@ class MenuScreen {
                 return;
               }
             }
-            var24 = ea.difficultyText + ge.difficultyNames[TextureCombineSource.field_a];
+            var24 = ea.difficultyText + IntNode.difficultyNames[TextureCombineSource.field_a];
             var18_ref_StringLifetime1 = var24.toUpperCase();
             var14_ref.a(var18_ref_StringLifetime1, param4 << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
             var13_ref.a(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
@@ -1784,8 +1784,8 @@ class MenuScreen {
           hg.field_o.c(15);
           return;
         }
-        if (100 > rd.field_q) {
-          rd.field_q = rd.field_q + 1;
+        if (100 > ReflectionCheck.field_q) {
+          ReflectionCheck.field_q = ReflectionCheck.field_q + 1;
         }
         if (this.field_e > 0) {
           this.field_e = this.field_e - 1;
@@ -1836,7 +1836,7 @@ class MenuScreen {
         if (-1 != this.field_g.field_g) {
           this.a(true, (byte) 105, this.field_g.field_g);
         }
-        if (hk.field_c == 0) {
+        if (ActiveCanvasProvider.field_c == 0) {
         }
         if (param0 != -18556) {
           this.field_e = -17;
@@ -1918,9 +1918,9 @@ class MenuScreen {
         var20 = MatchingTextValidator.field_h.getToolkit(-124);
         wo.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
         var4 = 0;
-        if (dk.field_c == 2) {
+        if (EmailValidationError.field_c == 2) {
         }
-        if (3 == dk.field_c) {
+        if (3 == EmailValidationError.field_c) {
         }
         var5 = wq.allHiscoresText;
         if (1 == gu.field_j) {

@@ -27,7 +27,7 @@ abstract class LoginCredentials {
           }
           if (MarkerTrackRenderer.field_e != -1) {
             var1_int = MarkerTrackRenderer.field_e;
-            rd.a(-1, guard ^ -19873);
+            ReflectionCheck.setAccountDialogResult(-1, guard ^ -19873);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
@@ -144,7 +144,7 @@ abstract class LoginCredentials {
         if (!BeveledCheckboxRenderer.a(param1, 13836, param2)) {
           return false;
         }
-        if (((param1 & 36864) != 0 ? true : false) | dk.a(param1, (byte) -107, param2) | LegacyOpenGlDisplayLists.a(param2, true, param1)) {
+        if (((param1 & 36864) != 0 ? true : false) | EmailValidationError.a(param1, (byte) -107, param2) | LegacyOpenGlDisplayLists.a(param2, true, param1)) {
           return true;
         }
         return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | GameInstructions.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);

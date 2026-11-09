@@ -34,7 +34,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private LegacyOpenGlFramebufferTarget[] field_Hc;
     private int field_w;
     private SecondaryNodeQueue field_Db;
-    private cm field_Tb;
+    private LegacyOpenGlSprite field_Tb;
     private LegacyOpenGlFramebufferTarget field_hc;
     private LegacyOpenGlFramebufferTarget[] field_dc;
     private IntrusiveNodeHashTable field_nc;
@@ -156,7 +156,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var2 = var2 | 1;
         }
         var3 = jaggl.OpenGL.glGetString(7938);
-        var4 = cn.a(' ', var3.replace('.', ' '), -27224);
+        var4 = SocialContact.split(' ', var3.replace('.', ' '), -27224);
         if (param0 <= var4.length) {
           try {
             var5_int = no.a((byte) -128, (CharSequence) ((Object) var4[0]));
@@ -250,7 +250,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           if (incrementValue$1 > 5) {
             throw new RuntimeException("");
           }
-          TextureCombineOperation.a(1000L, (byte) 87);
+          TextureCombineOperation.sleepMillis(1000L, (byte) 87);
         }
     }
 
@@ -323,7 +323,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final synchronized void queueRenderbufferDeletion(int renderbufferId, int guard, int bytes) {
-        ge var4 = new ge(bytes);
+        IntNode var4 = new IntNode(bytes);
         var4.key = (long)renderbufferId;
         this.field_fc.addLast((IntrusiveNode) (var4), (byte) 39);
         int var5 = 33 % ((guard - 32) / 38);
@@ -618,7 +618,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_kb = 1.0f;
         this.field_bb = 0;
         this.field_Fc = 1.0f;
-        cw discarded$3 = new cw(8192);
+        FloatPacketBuffer discarded$3 = new FloatPacketBuffer(8192);
         try {
           this.field_Bc = param2;
           this.field_ab = param0;
@@ -651,7 +651,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               var5_int = 0;
               var6 = 0;
               var7 = 0;
-              var8 = cn.a(' ', this.field_Dc.replace('/', ' '), -27224);
+              var8 = SocialContact.split(' ', this.field_Dc.replace('/', ' '), -27224);
               for (var9 = 0; var8.length > var9; var9++) {
                 var13 = var8[var9];
                 var10 = var13;
@@ -821,7 +821,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         if (!param1) {
           this.field_Ub = 26;
         }
-        ge var4 = new ge(param2);
+        IntNode var4 = new IntNode(param2);
         var4.key = (long)param0;
         this.field_j.addLast((IntrusiveNode) (var4), (byte) 39);
     }
@@ -1073,7 +1073,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final synchronized void b(byte param0, int param1) {
-        ge var3 = new ge(param1);
+        IntNode var3 = new IntNode(param1);
         if (param0 > -1) {
           this.field_bb = -108;
         }
@@ -1085,7 +1085,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           if (!this.field_Gc) {
             throw new RuntimeException("");
           }
-          this.field_Tb.b(0, this.field_Ec, 0, 0, 0, this.field_Z, -3773);
+          this.field_Tb.copyFromFramebuffer(0, this.field_Ec, 0, 0, 0, this.field_Z, -3773);
           this.field_y.setSurface(this.field_rb);
         } else {
           if (this.field_Fb == this.field_H) {
@@ -1113,7 +1113,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     final void useHeap(GraphicsHeap heap) {
         jq discarded$2 = null;
         jq discarded$3 = null;
-        cw var3 = null;
+        FloatPacketBuffer var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1122,49 +1122,49 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         try {
           this.field_pb = ((LegacyOpenGlGraphicsHeap) (heap)).heap;
           if (null == this.field_Rb) {
-            var3 = new cw(80);
+            var3 = new FloatPacketBuffer(80);
             if (this.field_R) {
-              var3.b((byte) 87, -1.0f);
-              var3.b((byte) -69, -1.0f);
-              var3.b((byte) -120, 0.0f);
-              var3.b((byte) 87, 0.0f);
-              var3.b((byte) -108, 1.0f);
-              var3.b((byte) 108, 1.0f);
-              var3.b((byte) 93, -1.0f);
-              var3.b((byte) 125, 0.0f);
-              var3.b((byte) 76, 1.0f);
-              var3.b((byte) 72, 1.0f);
-              var3.b((byte) 74, 1.0f);
-              var3.b((byte) 109, 1.0f);
-              var3.b((byte) 123, 0.0f);
-              var3.b((byte) -77, 1.0f);
-              var3.b((byte) 121, 0.0f);
-              var3.b((byte) 90, -1.0f);
-              var3.b((byte) 121, 1.0f);
-              var3.b((byte) 86, 0.0f);
-              var3.b((byte) -66, 0.0f);
-              var3.b((byte) 95, 0.0f);
+              var3.writeFloat((byte) 87, -1.0f);
+              var3.writeFloat((byte) -69, -1.0f);
+              var3.writeFloat((byte) -120, 0.0f);
+              var3.writeFloat((byte) 87, 0.0f);
+              var3.writeFloat((byte) -108, 1.0f);
+              var3.writeFloat((byte) 108, 1.0f);
+              var3.writeFloat((byte) 93, -1.0f);
+              var3.writeFloat((byte) 125, 0.0f);
+              var3.writeFloat((byte) 76, 1.0f);
+              var3.writeFloat((byte) 72, 1.0f);
+              var3.writeFloat((byte) 74, 1.0f);
+              var3.writeFloat((byte) 109, 1.0f);
+              var3.writeFloat((byte) 123, 0.0f);
+              var3.writeFloat((byte) -77, 1.0f);
+              var3.writeFloat((byte) 121, 0.0f);
+              var3.writeFloat((byte) 90, -1.0f);
+              var3.writeFloat((byte) 121, 1.0f);
+              var3.writeFloat((byte) 86, 0.0f);
+              var3.writeFloat((byte) -66, 0.0f);
+              var3.writeFloat((byte) 95, 0.0f);
             } else {
-              var3.c((byte) -36, -1.0f);
-              var3.c((byte) -36, -1.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, -1.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, -1.0f);
-              var3.c((byte) -36, 1.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 0.0f);
-              var3.c((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, -1.0f);
+              var3.writeFloatLE((byte) -36, -1.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, -1.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, -1.0f);
+              var3.writeFloatLE((byte) -36, 1.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
+              var3.writeFloatLE((byte) -36, 0.0f);
             }
             this.field_Rb = this.a(20, false, (byte) -23, var3.position, var3.payload);
             discarded$2 = new jq(this.field_Rb, 5126, 3, 0);
@@ -1273,7 +1273,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
 
     final synchronized void queueTextureDeletion(int textureId, int bytes, byte guard) {
         int var5 = -72 % ((53 - guard) / 38);
-        ge var4 = new ge(bytes);
+        IntNode var4 = new IntNode(bytes);
         var4.key = (long)textureId;
         this.field_q.addLast((IntrusiveNode) (var4), (byte) 39);
     }
@@ -1605,23 +1605,23 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         int incrementValue$2 = 0;
         int var2;
         int var4;
-        ge var5;
-        ge var6;
-        ge var7;
-        ge var8;
-        ge var9;
+        IntNode var5;
+        IntNode var6;
+        IntNode var7;
+        IntNode var8;
+        IntNode var9;
         IntrusiveNode var10;
         IntrusiveNode var11;
-        ge var12;
+        IntNode var12;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = 0;
         timeMillis = timeMillis & 2147483647;
         while (!this.field_j.isEmpty((byte) -119)) {
-          var5 = (ge) (this.field_j.removeFirst(9));
+          var5 = (IntNode) (this.field_j.removeFirst(9));
           incrementValue$5 = var2;
           var2++;
           LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$5] = (int)var5.key;
-          this.field_Xb = this.field_Xb - var5.field_m;
+          this.field_Xb = this.field_Xb - var5.value;
           if (var2 != 1000) {
             continue;
           }
@@ -1630,11 +1630,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_q.isEmpty((byte) -101)) {
-            var6 = (ge) (this.field_q.removeFirst(9));
+            var6 = (IntNode) (this.field_q.removeFirst(9));
             incrementValue$1 = var2;
             var2++;
             LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$1] = (int)var6.key;
-            this.textureBytes = this.textureBytes - var6.field_m;
+            this.textureBytes = this.textureBytes - var6.value;
             if (var2 != 1000) {
               continue;
             }
@@ -1645,11 +1645,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteBuffersARB(var2, LegacyOpenGlShoreWaveWaterEffect.field_h, 0);
           var2 = 0;
           while (!this.field_q.isEmpty((byte) -101)) {
-            var6 = (ge) (this.field_q.removeFirst(9));
+            var6 = (IntNode) (this.field_q.removeFirst(9));
             incrementValue$0 = var2;
             var2++;
             LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$0] = (int)var6.key;
-            this.textureBytes = this.textureBytes - var6.field_m;
+            this.textureBytes = this.textureBytes - var6.value;
             if (var2 != 1000) {
               continue;
             }
@@ -1662,10 +1662,10 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var2 = 0;
         }
         while (!this.field_tc.isEmpty((byte) -93)) {
-          var7 = (ge) (this.field_tc.removeFirst(9));
+          var7 = (IntNode) (this.field_tc.removeFirst(9));
           incrementValue$4 = var2;
           var2++;
-          LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$4] = var7.field_m;
+          LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$4] = var7.value;
           if (1000 != var2) {
             continue;
           }
@@ -1674,11 +1674,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_fc.isEmpty((byte) -78)) {
-            var8 = (ge) (this.field_fc.removeFirst(9));
+            var8 = (IntNode) (this.field_fc.removeFirst(9));
             incrementValue$3 = var2;
             var2++;
             LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$3] = (int)var8.key;
-            this.field_V = this.field_V - var8.field_m;
+            this.field_V = this.field_V - var8.value;
             if (1000 != var2) {
               continue;
             }
@@ -1689,11 +1689,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, LegacyOpenGlShoreWaveWaterEffect.field_h, 0);
           var2 = 0;
           while (!this.field_fc.isEmpty((byte) -78)) {
-            var8 = (ge) (this.field_fc.removeFirst(9));
+            var8 = (IntNode) (this.field_fc.removeFirst(9));
             incrementValue$2 = var2;
             var2++;
             LegacyOpenGlShoreWaveWaterEffect.field_h[incrementValue$2] = (int)var8.key;
-            this.field_V = this.field_V - var8.field_m;
+            this.field_V = this.field_V - var8.value;
             if (1000 != var2) {
               continue;
             }
@@ -1706,8 +1706,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var2 = 0;
         }
         while (!this.field_fb.isEmpty((byte) -119)) {
-          var9 = (ge) (this.field_fb.removeFirst(9));
-          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
+          var9 = (IntNode) (this.field_fb.removeFirst(9));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
         }
         while (!this.field_qb.isEmpty((byte) -124)) {
           var10 = this.field_qb.removeFirst(9);
@@ -1718,8 +1718,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
         while (!this.field_fb.isEmpty((byte) -96)) {
-          var12 = (ge) (this.field_fb.removeFirst(9));
-          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
+          var12 = (IntNode) (this.field_fb.removeFirst(9));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
         this.field_Pb.a(122);
         if (100663296 < this.e((byte) 7) &&
@@ -2016,13 +2016,13 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
 
     final ToolkitSprite createSprite(int[] pixels, int offset, int stride, int width, int height, boolean copyPixels) {
         RuntimeException var7 = null;
-        cm stackIn_1_0 = null;
+        LegacyOpenGlSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new cm(this, width, height, pixels, offset, stride);
+          stackIn_1_0 = new LegacyOpenGlSprite(this, width, height, pixels, offset, stride);
           return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2054,7 +2054,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         LegacyOpenGlRenderbuffer var10 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.field_Tb = (cm) (sprite);
+          this.field_Tb = (LegacyOpenGlSprite) (sprite);
           if (this.supportsFramebufferObjects) {
             if (null == this.field_H) {
               this.field_H = new LegacyOpenGlFramebuffer(this);
@@ -2086,7 +2086,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               this.field_Db.addFirst(var3, -4);
               this.field_H.attachRenderbuffer(var3, 8, -14269);
             }
-            this.field_H.attachTexture(this.field_Tb.field_g, -4610, 0);
+            this.field_H.attachTexture(this.field_Tb.texture, -4610, 0);
           } else {
             if (!this.field_Gc) {
               throw new RuntimeException("");
@@ -2147,7 +2147,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             this.field_zc = buffer;
           }
           if (guard > -110) {
-            this.field_Tb = (cm) null;
+            this.field_Tb = (LegacyOpenGlSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -91,7 +91,7 @@ final class ExpandingRingEffect extends TimedSceneEffect {
           var7 = DroneDebris.field_y.get(11);
           var8 = DroneDebris.field_y.get(12);
           var9 = DroneDebris.field_y.get(13);
-          return dk.weekdayShortNames[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + LegacyOpenGlEffect.monthShortNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return EmailValidationError.weekdayShortNames[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + LegacyOpenGlEffect.monthShortNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }

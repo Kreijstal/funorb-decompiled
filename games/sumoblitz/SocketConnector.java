@@ -78,14 +78,14 @@ abstract class SocketConnector {
         }
     }
 
-    final static dk a(byte param0, String param1) {
-        dk stackIn_3_0 = null;
-        dk stackIn_7_0 = null;
-        dk stackIn_11_0 = null;
+    final static EmailValidationError validateEmailLocalPart(byte guard, String localPart) {
+        EmailValidationError stackIn_3_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_11_0 = null;
         int stackIn_20_0 = 0;
-        dk stackIn_24_0 = null;
-        dk stackIn_38_0 = null;
-        dk stackIn_43_0 = null;
+        EmailValidationError stackIn_24_0 = null;
+        EmailValidationError stackIn_38_0 = null;
+        EmailValidationError stackIn_43_0 = null;
         Object stackIn_49_0 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
@@ -102,30 +102,30 @@ abstract class SocketConnector {
         int var5Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param1.length();
+          var2_int = localPart.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ClientExceptionSupport.field_a;
+            stackIn_3_0 = ClientExceptionSupport.MISSING_EMAIL_COMPONENT;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = cn.field_ib;
+            stackIn_7_0 = SocialContact.EMAIL_COMPONENT_TOO_LONG;
             return stackIn_7_0;
           }
-          if (34 == param1.charAt(0)) {
-            if (34 != param1.charAt(-1 + var2_int)) {
-              stackIn_11_0 = gs.field_a;
+          if (34 == localPart.charAt(0)) {
+            if (34 != localPart.charAt(-1 + var2_int)) {
+              stackIn_11_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
               return stackIn_11_0;
             }
             var3 = 0;
             for (var4 = 1; var4 < -1 + var2_int; var4++) {
-              var5 = param1.charAt(var4);
+              var5 = localPart.charAt(var4);
               if (var5 == 92) {
                 stackIn_20_0 = (var3 != 0) ? 0 : 1;
                 var3 = stackIn_20_0;
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = gs.field_a;
+                  stackIn_24_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -136,7 +136,7 @@ abstract class SocketConnector {
           var3Lifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
             boolean decompiledFrameRemainder0 = true;
-            var5Lifetime1 = param1.charAt(var4Lifetime1);
+            var5Lifetime1 = localPart.charAt(var4Lifetime1);
             if (var5Lifetime1 == 46) {
               if (var4Lifetime1 != 0 &&
                 var4Lifetime1 != var2_int - 1 &&
@@ -145,30 +145,30 @@ abstract class SocketConnector {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = gs.field_a;
+                stackIn_38_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (LoginCredentials.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var5Lifetime1) == -1) {
-                stackIn_43_0 = gs.field_a;
+                stackIn_43_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
                 return stackIn_43_0;
               }
               var3Lifetime1 = 0;
             }
           }
-          if (param0 <= -118) {
+          if (guard <= -118) {
             return null;
           }
           field_c = -60;
           stackIn_49_0 = null;
-          return (dk) (stackIn_49_0);
+          return (EmailValidationError) (stackIn_49_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_52_0 = var2;
-          stackIn_52_1 = new StringBuilder().append("g.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_52_1 = new StringBuilder().append("g.I(").append(guard).append(',');
+          if (localPart == null) {
             stackIn_53_2 = "null";
           } else {
             stackIn_53_2 = "{...}";

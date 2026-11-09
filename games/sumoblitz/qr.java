@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qr {
-    static IntrusiveDeque field_c;
+    static IntrusiveDeque reflectionChecks;
     static FontMetrics field_a;
     static ValidationStatus INVALID;
     static int[] field_d;
@@ -79,7 +79,7 @@ final class qr {
 
     public static void releaseStatics(byte param0) {
         INVALID = null;
-        field_c = null;
+        reflectionChecks = null;
         field_a = null;
         field_b = null;
         if (param0 != 119) {
@@ -89,7 +89,7 @@ final class qr {
     }
 
     static {
-        field_c = new IntrusiveDeque();
+        reflectionChecks = new IntrusiveDeque();
         INVALID = new ValidationStatus();
         field_d = new int[8192];
     }

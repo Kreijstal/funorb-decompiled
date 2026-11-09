@@ -21,7 +21,7 @@ final class VertexAttribute {
         int var2 = Sumoblitz.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          jl.field_a.b((byte) 105);
+          jl.field_a.reset((byte) 105);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             Js5Client.field_k[var1_int] = 0L;
           }

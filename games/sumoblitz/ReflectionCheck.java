@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends IntrusiveNode {
+final class ReflectionCheck extends IntrusiveNode {
     static String loadingExtraDataText;
-    int[] field_k;
+    int[] errors;
     static int field_q;
-    byte[][][] field_u;
-    PlatformTask[] field_o;
-    int[] field_n;
-    int field_p;
-    int field_t;
-    PlatformTask[] field_s;
+    byte[][][] arguments;
+    PlatformTask[] fieldTasks;
+    int[] fieldValues;
+    int size;
+    int id;
+    PlatformTask[] methodTasks;
     static int field_l;
-    int[] field_r;
+    int[] operations;
 
     final static int crc32(byte[] bytes, int offset, int end, int guard) {
         int var5 = 0;
@@ -52,7 +52,7 @@ final class rd extends IntrusiveNode {
         }
     }
 
-    final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
+    final static void postDummyEventAfterQueueWait(Object source, PlatformTaskDispatcher dispatcher, int guard) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -65,22 +65,22 @@ final class rd extends IntrusiveNode {
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null == param1.field_g) {
+          if (null == dispatcher.field_g) {
             return;
           }
-          if (param2 != -11030) {
+          if (guard != -11030) {
             field_l = 34;
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
-            if (null != param1.field_g.peekEvent()) {
-              TextureCombineOperation.a(1L, (byte) 99);
+            if (null != dispatcher.field_g.peekEvent()) {
+              TextureCombineOperation.sleepMillis(1L, (byte) 99);
               continue;
             }
             break;
           }
           try {
-            if (param0 != null) {
-              param1.field_g.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param0, 1001, "dummy")));
+            if (source != null) {
+              dispatcher.field_g.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(source, 1001, "dummy")));
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,29 +92,29 @@ final class rd extends IntrusiveNode {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_17_0 = var3_ref;
           stackIn_17_1 = new StringBuilder().append("rd.D(");
-          if (param0 == null) {
+          if (source == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param1 == null) {
+          if (dispatcher == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1) {
-        if (param1 > -10) {
-          rd.releaseStatics(true);
+    final static void setAccountDialogResult(int result, int guard) {
+        if (guard > -10) {
+          ReflectionCheck.releaseStatics(true);
         }
-        MarkerTrackRenderer.field_e = param0;
+        MarkerTrackRenderer.field_e = result;
     }
 
-    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean commonUiResourcesReady(ResourceArchive commonArchive, byte guard, ResourceArchive buttonArchive, ResourceArchive additionalCommonArchive) {
         RuntimeException var4 = null;
         PlatformTaskDispatcher var5 = null;
         RuntimeException stackIn_19_0 = null;
@@ -126,20 +126,20 @@ final class rd extends IntrusiveNode {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.loadIndex((byte) 127) &&
-            param3.tryLoadNamedGroup("commonui", 100)) {
-            if (param1 < 120) {
+          if (additionalCommonArchive.loadIndex((byte) 127) &&
+            additionalCommonArchive.tryLoadNamedGroup("commonui", 100)) {
+            if (guard < 120) {
               var5 = (PlatformTaskDispatcher) null;
-              rd.a((Object) null, (PlatformTaskDispatcher) null, 63);
+              ReflectionCheck.postDummyEventAfterQueueWait((Object) null, (PlatformTaskDispatcher) null, 63);
             }
-            if (!param0.loadIndex((byte) 127)) {
+            if (!commonArchive.loadIndex((byte) 127)) {
               return false;
             }
-            if (!param0.tryLoadNamedGroup("commonui", 100)) {
+            if (!commonArchive.tryLoadNamedGroup("commonui", 100)) {
               return false;
             }
-            if (param2.loadIndex((byte) 127) &&
-              param2.tryLoadNamedGroup("button.gif", 100)) {
+            if (buttonArchive.loadIndex((byte) 127) &&
+              buttonArchive.tryLoadNamedGroup("button.gif", 100)) {
               return true;
             }
             return false;
@@ -150,19 +150,19 @@ final class rd extends IntrusiveNode {
           var4 = decompiledCaughtException;
           stackIn_19_0 = var4;
           stackIn_19_1 = new StringBuilder().append("rd.A(");
-          if (param0 == null) {
+          if (commonArchive == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',');
+          if (buttonArchive == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param3 == null) {
+          if (additionalCommonArchive == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -171,7 +171,7 @@ final class rd extends IntrusiveNode {
         }
     }
 
-    rd() {
+    ReflectionCheck() {
     }
 
     public static void releaseStatics(boolean param0) {

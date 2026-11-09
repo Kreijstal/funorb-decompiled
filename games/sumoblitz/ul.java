@@ -88,7 +88,7 @@ final class ul {
           }
           var8 = param1.b((byte) 21);
           while (var8.status == 0) {
-            TextureCombineOperation.a(10L, (byte) 80);
+            TextureCombineOperation.sleepMillis(10L, (byte) 80);
           }
           if (var8.status == 2) {
             stackIn_12_0 = new cd[]{};

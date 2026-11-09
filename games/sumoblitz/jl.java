@@ -4,12 +4,12 @@
 final class jl {
     private IndexBuffer field_b;
     private VertexBuffer field_d;
-    static uw field_a;
+    static TickClock field_a;
     private VertexBuffer field_c;
 
     public static void releaseStatics(int param0) {
         if (param0 != 786336) {
-          field_a = (uw) null;
+          field_a = (TickClock) null;
         }
         field_a = null;
     }
@@ -30,7 +30,7 @@ final class jl {
           } catch (Throwable throwable) {
           }
           if (param0 != 25) {
-            field_a = (uw) null;
+            field_a = (TickClock) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -53,7 +53,7 @@ final class jl {
             return true;
           }
           if (param0 != 110) {
-            field_a = (uw) null;
+            field_a = (TickClock) null;
           }
           return false;
         }
@@ -67,13 +67,13 @@ final class jl {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (km) (dk.field_a.first(111));
+          var4 = (km) (EmailValidationError.field_a.first(111));
           if (!param1) {
-            field_a = (uw) null;
+            field_a = (TickClock) null;
           }
           while (var4 != null) {
             MarkerTrackRenderer.a(-1, var4, param0);
-            var4 = (km) (dk.field_a.next((byte) 18));
+            var4 = (km) (EmailValidationError.field_a.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

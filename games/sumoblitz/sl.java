@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends ln implements LegacyVertexBuffer {
+final class sl extends LegacyOpenGlClientBuffer implements LegacyVertexBuffer {
     static boolean field_d;
     static int[] field_c;
     static String largeScreenSizesAndText;

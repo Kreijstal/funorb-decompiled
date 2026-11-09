@@ -44,7 +44,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         int var9Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          for (var2_int = 0; db.droneSlotLimit > var2_int; var2_int++) {
+          for (var2_int = 0; ServerDataWriteRequest.droneSlotLimit > var2_int; var2_int++) {
             var11 = SpriteMask.drones[var2_int];
             if (var11 != null) {
               var4 = var11.radiusQ8 + param0.radiusQ8;
@@ -107,16 +107,16 @@ final class HardwareUnlitEffect extends ShaderEffect {
           if (rl.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
             param0.yQ8 = param0.yQ8 - (26 << 9 + param0.radiusQ8);
           }
-          for (var4Lifetime2 = 0; var4Lifetime2 < db.droneSlotLimit; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < ServerDataWriteRequest.droneSlotLimit; var4Lifetime2++) {
             if (SpriteMask.drones[var4Lifetime2] == null &&
               var4Lifetime2 != 0) {
               SpriteMask.drones[var4Lifetime2] = param0;
               return;
             }
           }
-          if (SpriteMask.drones.length > db.droneSlotLimit) {
-            fieldTemp$0 = db.droneSlotLimit;
-            db.droneSlotLimit = db.droneSlotLimit + 1;
+          if (SpriteMask.drones.length > ServerDataWriteRequest.droneSlotLimit) {
+            fieldTemp$0 = ServerDataWriteRequest.droneSlotLimit;
+            ServerDataWriteRequest.droneSlotLimit = ServerDataWriteRequest.droneSlotLimit + 1;
             SpriteMask.drones[fieldTemp$0] = param0;
           }
           return;

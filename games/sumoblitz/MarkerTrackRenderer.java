@@ -70,7 +70,7 @@ final class MarkerTrackRenderer implements WidgetRenderer {
         if (param0 <= -117) {
           pg.field_a = false;
           StatusMessagePanel.field_A = false;
-          rd.a(-1, -69);
+          ReflectionCheck.setAccountDialogResult(-1, -69);
           vm.field_c = hm.field_a;
           ProxySocketConnector.field_e = hm.field_a;
           return;
@@ -78,7 +78,7 @@ final class MarkerTrackRenderer implements WidgetRenderer {
         MarkerTrackRenderer.a((byte) -85);
         pg.field_a = false;
         StatusMessagePanel.field_A = false;
-        rd.a(-1, -69);
+        ReflectionCheck.setAccountDialogResult(-1, -69);
         vm.field_c = hm.field_a;
         ProxySocketConnector.field_e = hm.field_a;
     }

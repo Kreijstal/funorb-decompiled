@@ -1217,7 +1217,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             if (param0 == 2) {
               var5 = 0;
               var4 = 1;
-              var3 = lh.field_n;
+              var3 = ServerDataReadRequest.field_n;
             } else {
               if (param0 == 128) {
                 var3 = ShrinkingRingEffect.field_t;

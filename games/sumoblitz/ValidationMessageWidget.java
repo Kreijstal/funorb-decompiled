@@ -188,7 +188,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var20.a(112, 144, var20.field_z << 4, var20.field_w << 4, -this.animationTicks << 10, 4096);
+          var20.drawRotatedScaled(112, 144, var20.field_z << 4, var20.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var20.field_z >> 1) + var9, -var20.field_w + var10, 256);
           return;
@@ -240,7 +240,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var25.a(112, 144, var25.field_z << 4, var25.field_w << 4, -this.animationTicks << 10, 4096);
+          var25.drawRotatedScaled(112, 144, var25.field_z << 4, var25.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var25.field_z >> 1) + var9Lifetime1, -var25.field_w + var10Lifetime1, 256);
           return;
@@ -290,7 +290,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var30.a(112, 144, var30.field_z << 4, var30.field_w << 4, -this.animationTicks << 10, 4096);
+          var30.drawRotatedScaled(112, 144, var30.field_z << 4, var30.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var30.field_z >> 1) + var9Lifetime2, -var30.field_w + var10Lifetime2, 256);
           return;
@@ -340,7 +340,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var35.a(112, 144, var35.field_z << 4, var35.field_w << 4, -this.animationTicks << 10, 4096);
+          var35.drawRotatedScaled(112, 144, var35.field_z << 4, var35.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var35.field_z >> 1) + var9Lifetime3, -var35.field_w + var10Lifetime3, 256);
           return;
@@ -382,7 +382,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
             jq.a(7161, this.field_K);
           }
-          var49.a(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
+          var49.drawRotatedScaled(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var49.field_z >> 1) + var9Lifetime4, -var49.field_w + var10Lifetime4, 256);
           return;
@@ -411,7 +411,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
             jq.a(7161, this.field_K);
           }
-          var38.a(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
+          var38.drawRotatedScaled(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
           this.field_K.d(-(var38.field_z >> 1) + var9Lifetime5, -var38.field_w + var10Lifetime5, 256);
           return;
@@ -446,7 +446,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
           jq.a(7161, this.field_K);
         }
-        var39.a(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
+        var39.drawRotatedScaled(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
         ClientException.popRasterState((byte) -50);
         this.field_K.d(-(var39.field_z >> 1) + var9Lifetime5, -var39.field_w + var10Lifetime5, 256);
         return;

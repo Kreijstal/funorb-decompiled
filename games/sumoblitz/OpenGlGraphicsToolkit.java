@@ -204,23 +204,23 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         int incrementValue$2 = 0;
         int var2;
         int var4;
-        ge var5;
-        ge var6;
-        ge var7;
-        ge var8;
-        ge var9;
+        IntNode var5;
+        IntNode var6;
+        IntNode var7;
+        IntNode var8;
+        IntNode var9;
         IntrusiveNode var10;
         IntrusiveNode var11;
-        ge var12;
+        IntNode var12;
         var4 = Sumoblitz.field_L ? 1 : 0;
         timeMillis = timeMillis & 2147483647;
         var2 = 0;
         while (!this.field_Gc.isEmpty((byte) -100)) {
-          var5 = (ge) (this.field_Gc.removeFirst(9));
+          var5 = (IntNode) (this.field_Gc.removeFirst(9));
           incrementValue$5 = var2;
           var2++;
           SceneryParticle.field_A[incrementValue$5] = (int)var5.key;
-          this.field_o = this.field_o - var5.field_m;
+          this.field_o = this.field_o - var5.value;
           if (var2 != 1000) {
             continue;
           }
@@ -232,11 +232,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           var2 = 0;
         }
         while (!this.field_Zc.isEmpty((byte) -105)) {
-          var6 = (ge) (this.field_Zc.removeFirst(9));
+          var6 = (IntNode) (this.field_Zc.removeFirst(9));
           incrementValue$4 = var2;
           var2++;
           SceneryParticle.field_A[incrementValue$4] = (int)var6.key;
-          this.field_Cb = this.field_Cb - var6.field_m;
+          this.field_Cb = this.field_Cb - var6.value;
           if (var2 != 1000) {
             continue;
           }
@@ -245,10 +245,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_Xc.isEmpty((byte) -73)) {
-            var7 = (ge) (this.field_Xc.removeFirst(9));
+            var7 = (IntNode) (this.field_Xc.removeFirst(9));
             incrementValue$1 = var2;
             var2++;
-            SceneryParticle.field_A[incrementValue$1] = var7.field_m;
+            SceneryParticle.field_A[incrementValue$1] = var7.value;
             if (1000 != var2) {
               continue;
             }
@@ -259,10 +259,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteTextures(var2, SceneryParticle.field_A, 0);
           var2 = 0;
           while (!this.field_Xc.isEmpty((byte) -73)) {
-            var7 = (ge) (this.field_Xc.removeFirst(9));
+            var7 = (IntNode) (this.field_Xc.removeFirst(9));
             incrementValue$0 = var2;
             var2++;
-            SceneryParticle.field_A[incrementValue$0] = var7.field_m;
+            SceneryParticle.field_A[incrementValue$0] = var7.value;
             if (1000 != var2) {
               continue;
             }
@@ -272,11 +272,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_Vc.isEmpty((byte) -123)) {
-            var8 = (ge) (this.field_Vc.removeFirst(9));
+            var8 = (IntNode) (this.field_Vc.removeFirst(9));
             incrementValue$3 = var2;
             var2++;
             SceneryParticle.field_A[incrementValue$3] = (int)var8.key;
-            this.field_pc = this.field_pc - var8.field_m;
+            this.field_pc = this.field_pc - var8.value;
             if (var2 != 1000) {
               continue;
             }
@@ -287,11 +287,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SceneryParticle.field_A, 0);
           var2 = 0;
           while (!this.field_Vc.isEmpty((byte) -123)) {
-            var8 = (ge) (this.field_Vc.removeFirst(9));
+            var8 = (IntNode) (this.field_Vc.removeFirst(9));
             incrementValue$2 = var2;
             var2++;
             SceneryParticle.field_A[incrementValue$2] = (int)var8.key;
-            this.field_pc = this.field_pc - var8.field_m;
+            this.field_pc = this.field_pc - var8.value;
             if (var2 != 1000) {
               continue;
             }
@@ -301,8 +301,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_Kc.isEmpty((byte) -88)) {
-            var9 = (ge) (this.field_Kc.removeFirst(9));
-            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
+            var9 = (IntNode) (this.field_Kc.removeFirst(9));
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
           }
           while (!this.field_Pc.isEmpty((byte) -68)) {
             var10 = this.field_Pc.removeFirst(9);
@@ -313,8 +313,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.isEmpty((byte) -68)) {
-            var12 = (ge) (this.field_Kc.removeFirst(9));
-            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
+            var12 = (IntNode) (this.field_Kc.removeFirst(9));
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
           if (!(this.h(64) <= 100663296) &&
             !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
@@ -325,8 +325,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
           var2 = 0;
           while (!this.field_Kc.isEmpty((byte) -88)) {
-            var9 = (ge) (this.field_Kc.removeFirst(9));
-            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
+            var9 = (IntNode) (this.field_Kc.removeFirst(9));
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
           }
           while (!this.field_Pc.isEmpty((byte) -68)) {
             var10 = this.field_Pc.removeFirst(9);
@@ -337,8 +337,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.isEmpty((byte) -68)) {
-            var12 = (ge) (this.field_Kc.removeFirst(9));
-            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
+            var12 = (IntNode) (this.field_Kc.removeFirst(9));
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
           if (!(this.h(64) <= 100663296) &&
             !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
@@ -777,7 +777,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               -1 == this.field_Wc.indexOf("brian paul") &&
               -1 == this.field_Wc.indexOf("mesa")) {
               var20 = jaggl.OpenGL.glGetString(7938);
-              var9 = cn.a(' ', var20.replace('.', ' '), -27224);
+              var9 = SocialContact.split(' ', var20.replace('.', ' '), -27224);
               if (var9.length < 2) {
                 throw new RuntimeException("");
               }
@@ -827,7 +827,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                 var11_int = 0;
                 var12 = 0;
                 var13 = 0;
-                var14 = cn.a(' ', this.field_Rc.replace('/', ' '), -27224);
+                var14 = SocialContact.split(' ', this.field_Rc.replace('/', ' '), -27224);
                 for (var15 = 0; var14.length > var15; var15++) {
                   var21 = var14[var15];
                   var16 = var21;
@@ -1002,7 +1002,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final synchronized void a(byte param0, int param1, int param2) {
-        ge var4 = new ge(param1);
+        IntNode var4 = new IntNode(param1);
         var4.key = (long)param2;
         this.field_Gc.addLast((IntrusiveNode) (var4), (byte) 39);
         if (param0 != -99) {
@@ -1252,7 +1252,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param2 != 23) {
           return;
         }
-        ge var4 = new ge(param0);
+        IntNode var4 = new IntNode(param0);
         var4.key = (long)param1;
         this.field_Zc.addLast((IntrusiveNode) (var4), (byte) 39);
     }
@@ -1527,7 +1527,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (this.field_l == LimitedRandomAccessFile.field_a) {
           jaggl.OpenGL.glBlendFunc(770, 771);
         } else {
-          if (this.field_l == lh.field_n) {
+          if (this.field_l == ServerDataReadRequest.field_n) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
             if (ShrinkingRingEffect.field_t == this.field_l) {

@@ -123,7 +123,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         try {
           Js5Client.field_a = param3;
-          rd.field_l = param7;
+          ReflectionCheck.field_l = param7;
           SingleChildWidget.field_x = param1;
           CompactMeshGeometry.field_u = param0;
           ValidatedTextInputWidget.field_P = param5;
@@ -203,7 +203,7 @@ class PacketBuffer extends IntrusiveNode {
         if (guard) {
           this.payload = (byte[]) null;
         }
-        int var3 = rd.crc32(this.payload, start, this.position, 1001);
+        int var3 = ReflectionCheck.crc32(this.payload, start, this.position, 1001);
         this.writeInt(48, var3);
         return var3;
     }
@@ -335,7 +335,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyTrailingCrc32(byte guard) {
         this.position = this.position - 4;
-        int var2 = rd.crc32(this.payload, 0, this.position, guard + 1010);
+        int var2 = ReflectionCheck.crc32(this.payload, 0, this.position, guard + 1010);
         if (guard != -9) {
           String var4 = (String) null;
           PacketBuffer.a((PlatformTaskDispatcher) null, -93, 108, (String) null, (byte) 18, 23, 21, 60, 76);

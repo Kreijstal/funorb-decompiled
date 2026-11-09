@@ -135,7 +135,7 @@ final class vs {
             }
             var5 = jo.field_c;
             if (0.0 != LegacyOpenGlReflectionEffect.field_k) {
-              var5 = (int)((double)var5 + fd.field_d.nextGaussian() * LegacyOpenGlReflectionEffect.field_k);
+              var5 = (int)((double)var5 + NanoTickClock.field_d.nextGaussian() * LegacyOpenGlReflectionEffect.field_k);
               if (var5 < 0) {
                 var5 = 0;
               }

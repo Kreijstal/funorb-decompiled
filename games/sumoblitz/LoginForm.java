@@ -174,7 +174,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
           if (this.field_N != null) {
             this.field_N.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_H.tooltip = cn.theAccountNameYouText;
+          this.field_H.tooltip = SocialContact.theAccountNameYouText;
           if (null != this.field_D) {
             this.field_D.renderer = (WidgetRenderer) ((Object) var6);
           }

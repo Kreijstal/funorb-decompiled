@@ -37,70 +37,70 @@ abstract class ModalDialog extends WidgetContainer {
           }
           return;
         }
-        if (null == uw.field_a) {
-          uw.field_a = new Sprite(this.width, this.height);
-          jq.a(7161, uw.field_a);
+        if (null == TickClock.field_a) {
+          TickClock.field_a = new Sprite(this.width, this.height);
+          jq.a(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        if (uw.field_a.field_x < this.width) {
-          uw.field_a = new Sprite(this.width, this.height);
-          jq.a(7161, uw.field_a);
+        if (TickClock.field_a.field_x < this.width) {
+          TickClock.field_a = new Sprite(this.width, this.height);
+          jq.a(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        if (this.height > uw.field_a.field_u) {
-          uw.field_a = new Sprite(this.width, this.height);
-          jq.a(7161, uw.field_a);
+        if (this.height > TickClock.field_a.field_u) {
+          TickClock.field_a = new Sprite(this.width, this.height);
+          jq.a(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
             super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
             ClientException.popRasterState((byte) 114);
-            uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+            TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
             return;
           }
           this.focusedChild(-77);
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        jq.a(7161, uw.field_a);
+        jq.a(7161, TickClock.field_a);
         SoftwareRasterizer.clear();
         this.drawBackdrop(113, 0, 0);
         if (guard < -35) {
           super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
           ClientException.popRasterState((byte) 114);
-          uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+          TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
         this.focusedChild(-77);
         super.renderLayer(-parentX - this.x, -parentY - this.y, (byte) -114, layer);
         ClientException.popRasterState((byte) 114);
-        uw.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
+        TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
     }
 
     boolean advanceAnimation(int guard) {

@@ -166,10 +166,10 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             field_db = (ToolkitFont) null;
           }
           if (!this.field_eb) {
-            cn.a("tochangedisplayname.ws", LegacyOpenGlUnlitEffect.c(guard - 708), (byte) -103);
+            SocialContact.openAppletPage("tochangedisplayname.ws", LegacyOpenGlUnlitEffect.c(guard - 708), (byte) -103);
             return;
           }
-          rd.a(3, -82);
+          ReflectionCheck.setAccountDialogResult(3, -82);
           this.n(-7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

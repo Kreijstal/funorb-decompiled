@@ -29,13 +29,13 @@ final class pu extends ToolkitSprite {
         var10 = this.field_d.B(0);
         stackIn_4_0 = this.field_j;
         if (this.field_h) {
-          ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
+          ((Texture2D) (Object) stackIn_4_0).setFilter(ServerDataReadRequest.NEAREST, 15149);
         } else {
           if (this.field_g) {
-            ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
+            ((Texture2D) (Object) stackIn_4_0).setFilter(ServerDataReadRequest.NEAREST, 15149);
           } else {
             if ((flags & 1) == 0) {
-              ((Texture2D) (Object) stackIn_4_0).setFilter(lh.NEAREST, 15149);
+              ((Texture2D) (Object) stackIn_4_0).setFilter(ServerDataReadRequest.NEAREST, 15149);
             } else {
               ((Texture2D) (Object) stackIn_4_0).setFilter(ArrayWidgetContainer.LINEAR, 15149);
             }
@@ -96,7 +96,7 @@ final class pu extends ToolkitSprite {
           (1 & flags) != 0) {
           stackIn_5_1 = ArrayWidgetContainer.LINEAR;
         } else {
-          stackIn_5_1 = lh.NEAREST;
+          stackIn_5_1 = ServerDataReadRequest.NEAREST;
         }
         ((Texture2D) (Object) stackIn_4_0).setFilter(stackIn_5_1, 15149);
         this.field_d.w(10);
@@ -248,7 +248,7 @@ final class pu extends ToolkitSprite {
         AffineTransform3D var7 = this.field_d.B(0);
         x = x + this.field_i;
         y = y + this.field_f;
-        this.field_j.setFilter(lh.NEAREST, 15149);
+        this.field_j.setFilter(ServerDataReadRequest.NEAREST, 15149);
         this.field_d.w(10);
         this.field_d.a(this.field_j, 93);
         this.field_d.e(blendMode, 13);

@@ -64,7 +64,7 @@ final class EmailSyntaxValidator extends TextInputValidator {
           if (guard != 26) {
             field_e = 68;
           }
-          stackIn_5_0 = (il.a(text, (byte) 38) != null) ? 0 : 1;
+          stackIn_5_0 = (il.validateEmailAddress(text, (byte) 38) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return qe.VALID;

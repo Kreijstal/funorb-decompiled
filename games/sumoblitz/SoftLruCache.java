@@ -161,7 +161,7 @@ final class SoftLruCache {
         return left & right;
     }
 
-    final static void a(pl param0, int param1) {
+    final static void writeReflectionReply(pl packet, int guard) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -190,11 +190,11 @@ final class SoftLruCache {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          rd var13 = null;
+          ReflectionCheck var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          rd var17 = null;
+          ReflectionCheck var17 = null;
           Object var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var20 = null;
@@ -210,29 +210,29 @@ final class SoftLruCache {
           var22 = null;
           var12 = Sumoblitz.field_L ? 1 : 0;
           try {
-            if (param1 <= 126) {
+            if (guard <= 126) {
               return;
             }
-            var13 = (rd) (qr.field_c.first(-77));
+            var13 = (ReflectionCheck) (qr.reflectionChecks.first(-77));
             var17 = var13;
             if (var17 == null) {
               return;
             }
             var3 = 0;
-            for (var4 = 0; var17.field_p > var4; var4++) {
-              if (var13.field_o[var4] != null) {
-                if (2 == var13.field_o[var4].status) {
-                  var13.field_k[var4] = -5;
+            for (var4 = 0; var17.size > var4; var4++) {
+              if (var13.fieldTasks[var4] != null) {
+                if (2 == var13.fieldTasks[var4].status) {
+                  var13.errors[var4] = -5;
                 }
-                if (0 == var13.field_o[var4].status) {
+                if (0 == var13.fieldTasks[var4].status) {
                   var3 = 1;
                 }
               }
-              if (null != var13.field_s[var4]) {
-                if (2 == var13.field_s[var4].status) {
-                  var13.field_k[var4] = -6;
+              if (null != var13.methodTasks[var4]) {
+                if (2 == var13.methodTasks[var4].status) {
+                  var13.errors[var4] = -6;
                 }
-                if (var13.field_s[var4].status == 0) {
+                if (var13.methodTasks[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -240,35 +240,35 @@ final class SoftLruCache {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.position;
-            param0.writeInt(48, var17.field_t);
-            for (var5 = 0; var17.field_p > var5; var5++) {
-              if (var17.field_k[var5] == 0) {
+            var4 = packet.position;
+            packet.writeInt(48, var17.id);
+            for (var5 = 0; var17.size > var5; var5++) {
+              if (var17.errors[var5] == 0) {
                 try {
-                  var6_int = var17.field_r[var5];
+                  var6_int = var17.operations[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_o[var5].result);
+                    var15 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                     var8 = var15.getInt((Object) null);
-                    param0.writeByte((byte) 106, 0);
-                    param0.writeInt(48, var8);
+                    packet.writeByte((byte) 106, 0);
+                    packet.writeInt(48, var8);
                   } else {
                     if (1 == var6_int) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_o[var5].result);
+                      var16_ref = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                       var19 = var16_ref;
-                      var19.setInt((Object) null, var17.field_n[var5]);
-                      param0.writeByte((byte) 92, 0);
+                      var19.setInt((Object) null, var17.fieldValues[var5]);
+                      packet.writeByte((byte) 92, 0);
                     } else {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_o[var5].result);
+                        var26 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                         var8 = var26.getModifiers();
-                        param0.writeByte((byte) 88, 0);
-                        param0.writeInt(48, var8);
+                        packet.writeByte((byte) 88, 0);
+                        packet.writeInt(48, var8);
                       }
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_s[var5].result);
-                    var25 = var17.field_u[var5];
+                    var28 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
+                    var25 = var17.arguments[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
                       var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
@@ -276,78 +276,78 @@ final class SoftLruCache {
                     }
                     var10 = var28.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.writeByte((byte) 39, 0);
+                      packet.writeByte((byte) 39, 0);
                     } else if (var10 instanceof Number) {
-                      param0.writeByte((byte) 56, 1);
-                      param0.writeLong(false, ((Number) (var10)).longValue());
+                      packet.writeByte((byte) 56, 1);
+                      packet.writeLong(false, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
-                      param0.writeByte((byte) 49, 4);
+                      packet.writeByte((byte) 49, 4);
                     } else {
-                      param0.writeByte((byte) 34, 2);
-                      param0.writeCp1252String((String) (var10), (byte) -104);
+                      packet.writeByte((byte) 34, 2);
+                      packet.writeCp1252String((String) (var10), (byte) -104);
                     }
                   } else {
                     if (4 == var6_int) {
-                      var27 = (java.lang.reflect.Method) (var17.field_s[var5].result);
+                      var27 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
                       var8Lifetime1 = var27.getModifiers();
-                      param0.writeByte((byte) 93, 0);
-                      param0.writeInt(48, var8Lifetime1);
+                      packet.writeByte((byte) 93, 0);
+                      packet.writeInt(48, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 93, -10);
+                  packet.writeByte((byte) 93, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 41, -11);
+                  packet.writeByte((byte) 41, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 108, -12);
+                  packet.writeByte((byte) 108, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 42, -13);
+                  packet.writeByte((byte) 42, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 53, -14);
+                  packet.writeByte((byte) 53, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 86, -15);
+                  packet.writeByte((byte) 86, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 106, -16);
+                  packet.writeByte((byte) 106, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 33, -17);
+                  packet.writeByte((byte) 33, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 18, -18);
+                  packet.writeByte((byte) 18, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 48, -19);
+                  packet.writeByte((byte) 48, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.writeByte((byte) 125, -20);
+                  packet.writeByte((byte) 125, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.writeByte((byte) 86, -21);
+                  packet.writeByte((byte) 86, -21);
                 }
               } else {
-                param0.writeByte((byte) 118, var17.field_k[var5]);
+                packet.writeByte((byte) 118, var17.errors[var5]);
               }
             }
-            param0.appendCrc32(var4, false);
+            packet.appendCrc32(var4, false);
             var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -355,12 +355,12 @@ final class SoftLruCache {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_66_0 = var2;
             stackIn_66_1 = new StringBuilder().append("sd.G(");
-            if (param0 == null) {
+            if (packet == null) {
               stackIn_67_2 = "null";
             } else {
               stackIn_67_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -381,23 +381,23 @@ final class SoftLruCache {
         }
         if (param4 > param5) {
           if (param4 < param2) {
-            uw.a(SoftwareRasterizer.pixels, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
+            TickClock.a(SoftwareRasterizer.pixels, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
           } else {
             if (param2 <= param5) {
-              uw.a(SoftwareRasterizer.pixels, param0, param2, param4, param1, param7, 1955582416, param6, param5);
+              TickClock.a(SoftwareRasterizer.pixels, param0, param2, param4, param1, param7, 1955582416, param6, param5);
             } else {
-              uw.a(SoftwareRasterizer.pixels, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
+              TickClock.a(SoftwareRasterizer.pixels, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
             }
           }
         } else {
           if (param2 <= param5) {
             if (param2 > param4) {
-              uw.a(SoftwareRasterizer.pixels, param7, param4, param5, param1, param6, 1955582416, param0, param2);
+              TickClock.a(SoftwareRasterizer.pixels, param7, param4, param5, param1, param6, 1955582416, param0, param2);
             } else {
-              uw.a(SoftwareRasterizer.pixels, param7, param2, param5, param1, param0, 1955582416, param6, param4);
+              TickClock.a(SoftwareRasterizer.pixels, param7, param2, param5, param1, param0, 1955582416, param6, param4);
             }
           } else {
-            uw.a(SoftwareRasterizer.pixels, param6, param4, param2, param1, param7, 1955582416, param0, param5);
+            TickClock.a(SoftwareRasterizer.pixels, param6, param4, param2, param1, param7, 1955582416, param0, param5);
           }
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk {
+final class EmailValidationError {
     static IntrusiveDeque field_a;
     static String[] weekdayShortNames;
     static int field_c;
@@ -17,13 +17,13 @@ final class dk {
         return (540800 & param0) != 0 ? true : false;
     }
 
-    final static MouseWheelInput a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte guard) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param0 > -125) {
+            if (guard > -125) {
               field_c = -74;
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
@@ -44,7 +44,7 @@ final class dk {
         weekdayShortNames = null;
         field_a = null;
         if (param0 > -31) {
-          dk.releaseStatics(-122);
+          EmailValidationError.releaseStatics(-122);
         }
     }
 

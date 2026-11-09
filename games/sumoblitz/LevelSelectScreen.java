@@ -91,8 +91,8 @@ final class LevelSelectScreen extends MenuScreen {
             var13 = up.field_c;
             wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (TextureMetadata.field_f[this.field_i]) {
-              MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
+              MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
+              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
               MessageDialog.field_db.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
               LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + OpenGlTexture3D.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
@@ -178,7 +178,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
         }
         this.field_i = var4;
-        if (hk.field_c == 1 &&
+        if (ActiveCanvasProvider.field_c == 1 &&
           this.field_i != -1 &&
           this.field_i <= ToolkitRasterStateFrame.field_e + 1) {
           gn.a(16, true);

@@ -129,7 +129,7 @@ final class ig {
           var4 = var13;
           var5 = null;
           try {
-            var11 = el.a(var10, (byte) -8);
+            var11 = CacheFileLocator.getCacheFile(var10, (byte) -8);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref_RuntimeException = (RuntimeException) (Object) decompiledCaughtException;

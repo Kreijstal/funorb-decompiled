@@ -35,7 +35,7 @@ final class SecondaryNodeQueue {
         return var2;
     }
 
-    final static void a(byte param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
+    final static void readReflectionCheck(byte guard, PacketBuffer packet, PlatformTaskDispatcher dispatcher, int packetLength) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -49,7 +49,7 @@ final class SecondaryNodeQueue {
           Throwable decompiledCaughtException = null;
           int var4_int = 0;
           RuntimeException var4 = null;
-          rd var5 = null;
+          ReflectionCheck var5 = null;
           int var7_int = 0;
           ClassNotFoundException var7 = null;
           SecurityException var7_ref = null;
@@ -74,43 +74,43 @@ final class SecondaryNodeQueue {
           int var14Lifetime1;
           var15 = Sumoblitz.field_L ? 1 : 0;
           try {
-            var4_int = 65 / ((9 - param0) / 55);
-            var5 = new rd();
-            var5.field_p = param1.readUnsignedByte(-31302);
-            var5.field_t = param1.readInt(true);
-            var5.field_o = new PlatformTask[var5.field_p];
-            var5.field_k = new int[var5.field_p];
-            var5.field_u = new byte[var5.field_p][][];
-            var5.field_s = new PlatformTask[var5.field_p];
-            var5.field_n = new int[var5.field_p];
-            var5.field_r = new int[var5.field_p];
-            for (var6 = 0; var6 < var5.field_p; var6++) {
+            var4_int = 65 / ((9 - guard) / 55);
+            var5 = new ReflectionCheck();
+            var5.size = packet.readUnsignedByte(-31302);
+            var5.id = packet.readInt(true);
+            var5.fieldTasks = new PlatformTask[var5.size];
+            var5.errors = new int[var5.size];
+            var5.arguments = new byte[var5.size][][];
+            var5.methodTasks = new PlatformTask[var5.size];
+            var5.fieldValues = new int[var5.size];
+            var5.operations = new int[var5.size];
+            for (var6 = 0; var6 < var5.size; var6++) {
               try {
-                var7_int = param1.readUnsignedByte(-31302);
+                var7_int = packet.readUnsignedByte(-31302);
                 if (var7_int != 0 &&
                   1 != var7_int &&
                   var7_int != 2) {
                   if (3 == var7_int ||
                     var7_int == 4) {
-                    var20 = param1.readCp1252String(-1);
-                    var21 = param1.readCp1252String(-1);
-                    var10 = param1.readUnsignedByte(-31302);
+                    var20 = packet.readCp1252String(-1);
+                    var21 = packet.readCp1252String(-1);
+                    var10 = packet.readUnsignedByte(-31302);
                     var11 = new String[var10];
                     for (var12_int = 0; var10 > var12_int; var12_int++) {
-                      var11[var12_int] = param1.readCp1252String(-1);
+                      var11[var12_int] = packet.readCp1252String(-1);
                     }
                     var22 = new byte[var10][];
                     var19 = var22;
                     var12 = var19;
                     if (var7_int == 3) {
                       for (var13_int = 0; var13_int < var10; var13_int++) {
-                        var14 = param1.readInt(true);
+                        var14 = packet.readInt(true);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param1.readBytes(var22[var13_int], var14, 0, (byte) -33);
+                        packet.readBytes(var22[var13_int], var14, 0, (byte) -33);
                       }
                     }
-                    var5.field_r[var6] = var7_int;
+                    var5.operations[var6] = var7_int;
                     var13 = new Class[var10];
                     var18 = 0;
                     var14Lifetime1 = var18;
@@ -118,63 +118,63 @@ final class SecondaryNodeQueue {
                       var13[var18] = UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var11[var18]);
                       var18++;
                     }
-                    var5.field_s[var6] = param2.a(0, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var20), var21, var13);
-                    var5.field_u[var6] = var22;
+                    var5.methodTasks[var6] = dispatcher.a(0, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var20), var21, var13);
+                    var5.arguments[var6] = var22;
                   }
                 } else {
-                  var17 = param1.readCp1252String(-1);
+                  var17 = packet.readCp1252String(-1);
                   var8 = var17;
-                  var16 = param1.readCp1252String(-1);
+                  var16 = packet.readCp1252String(-1);
                   var9 = var16;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param1.readInt(true);
+                    var10 = packet.readInt(true);
                   }
-                  var5.field_r[var6] = var7_int;
-                  var5.field_n[var6] = var10;
-                  var5.field_o[var6] = param2.a(0, var16, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var17));
+                  var5.operations[var6] = var7_int;
+                  var5.fieldValues[var6] = var10;
+                  var5.fieldTasks[var6] = dispatcher.a(0, var16, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var5.field_k[var6] = -1;
+                var5.errors[var6] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var7_ref = (SecurityException) (Object) decompiledCaughtException;
-                var5.field_k[var6] = -2;
+                var5.errors[var6] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var7_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var5.field_k[var6] = -3;
+                var5.errors[var6] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var7_ref3 = (Exception) (Object) decompiledCaughtException;
-                var5.field_k[var6] = -4;
+                var5.errors[var6] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var7_ref4 = decompiledCaughtException;
-                var5.field_k[var6] = -5;
+                var5.errors[var6] = -5;
               }
             }
-            qr.field_c.addLast((IntrusiveNode) (var5), (byte) 39);
+            qr.reflectionChecks.addLast((IntrusiveNode) (var5), (byte) 39);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_36_0 = var4;
-            stackIn_36_1 = new StringBuilder().append("ro.K(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_36_1 = new StringBuilder().append("ro.K(").append(guard).append(',');
+            if (packet == null) {
               stackIn_37_2 = "null";
             } else {
               stackIn_37_2 = "{...}";
             }
             stackIn_39_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',');
-            if (param2 == null) {
+            if (dispatcher == null) {
               stackIn_40_2 = "null";
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(packetLength).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

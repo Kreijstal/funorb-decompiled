@@ -161,7 +161,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
               pt.field_a = false;
               var4 = 1;
             }
-            hh.a(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
+            ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
             return;
           }
           if (!lf.b(-251)) {

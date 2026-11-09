@@ -224,8 +224,8 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
             throw new IllegalStateException("");
           }
           this.toolkit = owner;
-          jaggl.OpenGL.glGenFramebuffersEXT(1, ci.field_e, 0);
-          this.framebufferId = ci.field_e[0];
+          jaggl.OpenGL.glGenFramebuffersEXT(1, SecondaryNodeHashTable.field_e, 0);
+          this.framebufferId = SecondaryNodeHashTable.field_e[0];
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cs.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }

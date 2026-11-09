@@ -1161,7 +1161,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("connectionlost_withreason", (byte) -23);
                 if (null != var2) {
-                  hh.connectionLostText = MusicVoice.a(0, var2);
+                  ProxyAuthenticationRequiredException.connectionLostText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("passwordverificationrequired", (byte) -23);
                 if (var2 != null) {
@@ -1512,7 +1512,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_agreeterms", (byte) -23);
                 if (var2 != null) {
-                  cn.byClickingCreateYouText = MusicVoice.a(0, var2);
+                  SocialContact.byClickingCreateYouText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_u13terms", (byte) -23);
                 if (null != var2) {
@@ -1532,7 +1532,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_username_tooltip", (byte) -23);
                 if (var2 != null) {
-                  cn.theAccountNameYouText = MusicVoice.a(0, var2);
+                  SocialContact.theAccountNameYouText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("login_password_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1556,7 +1556,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_no_displayname", (byte) -23);
                 if (null != var2) {
-                  gs.youNeedToChooseText = MusicVoice.a(0, var2);
+                  MouseInputRegistration.youNeedToChooseText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_username_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1880,7 +1880,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("loading_extradata", (byte) -23);
                 if (null != var2) {
-                  rd.loadingExtraDataText = MusicVoice.a(param0 - 7, var2);
+                  ReflectionCheck.loadingExtraDataText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("loading_languages", (byte) -23);
                 if (var2 != null) {
@@ -2306,7 +2306,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("mouseoveranicon", (byte) -23);
                 if (null != var2) {
-                  hk.mouseOverAnIconText = MusicVoice.a(param0 - 7, var2);
+                  ActiveCanvasProvider.mouseOverAnIconText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("notyetachieved", (byte) -23);
                 if (var2 != null) {
@@ -2694,7 +2694,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("fs_accept_beforeaccept", (byte) -23);
                 if (var2 != null) {
-                  fd.clickText = MusicVoice.a(param0 ^ 7, var2);
+                  NanoTickClock.clickText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fs_button_accept", (byte) -23);
                 if (var2 != null) {

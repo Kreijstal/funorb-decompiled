@@ -357,7 +357,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = lt.field_m.a(true, (Runnable) (this), 1);
               while (true) {
                 if (var8.status == 0) {
-                  TextureCombineOperation.a(10L, (byte) 73);
+                  TextureCombineOperation.sleepMillis(10L, (byte) 73);
                   if (var9 == 0) {
                     continue;
                   }
@@ -421,7 +421,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ke.field_a &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            fd.field_k = 4000L + wq.monotonicTimeMillis(-46);
+            NanoTickClock.field_k = 4000L + wq.monotonicTimeMillis(-46);
             return;
           }
           return;
@@ -517,8 +517,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ke.field_a == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            fd.field_k = wq.monotonicTimeMillis(-125);
-            TextureCombineOperation.a(5000L, (byte) 119);
+            NanoTickClock.field_k = wq.monotonicTimeMillis(-125);
+            TextureCombineOperation.sleepMillis(5000L, (byte) 119);
             CompactMeshGeometry.field_O = null;
             this.a(false, -32);
             return;
@@ -560,7 +560,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ke.field_a == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            fd.field_k = 0L;
+            NanoTickClock.field_k = 0L;
             return;
           }
           return;
@@ -894,11 +894,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.e(1000);
                 ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
                 this.initializeGame(28196);
-                jl.field_a = bt.a(false);
+                jl.field_a = bt.createTickClock(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (fd.field_k != 0L) {
-                    stackIn_105_0 = $cfr$lcmp(~wq.monotonicTimeMillis(-122), ~fd.field_k);
+                  if (NanoTickClock.field_k != 0L) {
+                    stackIn_105_0 = $cfr$lcmp(~wq.monotonicTimeMillis(-122), ~NanoTickClock.field_k);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_105_0 <= 0)) {
@@ -906,14 +906,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    BurstParticle.field_t = jl.field_a.b(4007, DualLinkNode.field_p);
+                    BurstParticle.field_t = jl.field_a.waitAndAdvance(4007, DualLinkNode.field_p);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;
                   do {
                     if (!(BurstParticle.field_t > var3)) {
                       this.h(0);
-                      rd.a(qn.field_f, lt.field_m, -11030);
+                      ReflectionCheck.postDummyEventAfterQueueWait(qn.field_f, lt.field_m, -11030);
                       break;
                     }
                     this.a((byte) 101);

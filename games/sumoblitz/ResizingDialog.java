@@ -234,7 +234,7 @@ abstract class ResizingDialog extends ModalDialog {
           }
           var11 = param1.a(false, param2, param3, param5, param4);
           while (0 == var11.status) {
-            TextureCombineOperation.a(10L, (byte) 118);
+            TextureCombineOperation.sleepMillis(10L, (byte) 118);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

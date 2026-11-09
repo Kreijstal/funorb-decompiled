@@ -199,7 +199,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        ci.field_g = SpriteData.b(param3, "", "fontalpha");
+        SecondaryNodeHashTable.field_g = SpriteData.b(param3, "", "fontalpha");
         SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
         mn.field_b = SpriteData.b(param3, "", "fontglow");
         VertexStreamLayout.field_c = SocketConnector.field_a;
@@ -228,7 +228,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           jj.field_c = SpriteData.b(param3, "", "statline_tab");
           ResourceRequest.field_r = SpriteData.b(param3, "", "statline_tab_flip");
           ok.field_d = SpriteData.b(param3, "", "button_off");
-          hh.field_a = SpriteData.b(param3, "", "button_over");
+          ProxyAuthenticationRequiredException.field_a = SpriteData.b(param3, "", "button_over");
           WaterTextureResources.field_c = SpriteData.b(param3, "", "button_on");
           LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.b(param3, "", "chargebar_vertical");
           IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
@@ -244,14 +244,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           CachedTextLayout.field_h = SpriteData.b(param3, "", "mod_armour");
           RendererSession.field_b = SpriteData.b(param3, "", "mod_bomb");
           cd.field_c = SpriteData.b(param3, "", "mod_spikes");
-          lh.field_k = SpriteData.a(param3, "", "zap");
+          ServerDataReadRequest.field_k = SpriteData.a(param3, "", "zap");
           Transform3D.field_a = SpriteData.b(param3, "", "chargebar");
           ToolkitRasterStateFrame.field_a = SpriteData.a(param3, "", "bounceup");
           uj.field_c = SpriteData.b(param3, "", "powerups");
           df.field_d = SpriteData.a(param3, "", "particle");
           DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
           FullscreenMembershipDialog.field_T = SpriteData.a(param3, "", "particle_alpha");
-          dq.field_v = SpriteData.b(param3, "", "particles_alpha");
+          UiStyle.field_v = SpriteData.b(param3, "", "particles_alpha");
           LegacyOpenGlRenderbuffer.field_w = SpriteData.b(param3, "", "particle_ring");
           bj.field_g = SpriteData.a(param3, "", "particle_sprinkle");
           HardwareTurbulentWaterNoise.field_t = SpriteData.a(param3, "", "particle_star");

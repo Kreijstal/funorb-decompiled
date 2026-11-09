@@ -348,8 +348,8 @@ final class CachedTextLayout extends TextLayout {
                 var9 = var9 | 1;
               }
               SoftLruCache.field_e.position = 0;
-              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
-              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, NanoTickClock.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, NanoTickClock.field_d.nextInt());
               SoftLruCache.field_e.writeCircumfixedString(var15, (byte) -108);
               SoftLruCache.field_e.writeCircumfixedString(var8, (byte) -121);
               var17 = (CharSequence) ((Object) param6);
@@ -369,8 +369,8 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
             } else {
               SoftLruCache.field_e.position = 0;
-              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
-              SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, NanoTickClock.field_d.nextInt());
+              SoftLruCache.field_e.writeInt(48, NanoTickClock.field_d.nextInt());
               stackIn_13_0 = SoftLruCache.field_e;
               if (!param0.includeInRsaBlock(110)) {
                 stackIn_14_1 = "";

@@ -50,7 +50,7 @@ final class lm {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (tw.a(param1, 116, "getcookies"));
-              var4 = cn.a((char)param0, var3, -27224);
+              var4 = SocialContact.split((char)param0, var3, -27224);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

@@ -315,10 +315,10 @@ final class ResourceArchive {
           ResourceArchive.pollAccountCreationResult((byte) 84);
         }
         if (null == km.field_o) {
-          km.field_o = Js5Client.a((byte) -82, 6);
+          km.field_o = Js5Client.requestServerData((byte) -82, 6);
         }
-        if (km.field_o.field_o) {
-          Drone.field_g = km.field_o.field_m;
+        if (km.field_o.complete) {
+          Drone.field_g = km.field_o.payload;
           km.field_o = null;
           if (Drone.field_g == null) {
             return true;

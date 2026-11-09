@@ -4,7 +4,7 @@
 final class ClientExceptionSupport {
     static ts field_b;
     static String ifYouDoNothingText;
-    static dk field_a;
+    static EmailValidationError MISSING_EMAIL_COMPONENT;
     private static String field_z;
 
     final static ClientException wrapWithContext(Throwable param0, String param1) {
@@ -20,14 +20,14 @@ final class ClientExceptionSupport {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_a = null;
+          MISSING_EMAIL_COMPONENT = null;
           field_b = null;
           ifYouDoNothingText = null;
           return;
         }
         String var2 = (String) null;
         ClientExceptionSupport.wrapWithContext((Throwable) null, (String) null);
-        field_a = null;
+        MISSING_EMAIL_COMPONENT = null;
         field_b = null;
         ifYouDoNothingText = null;
     }
@@ -36,6 +36,6 @@ final class ClientExceptionSupport {
         field_z = "qo.B(";
         field_b = new ts(11, 0, 1, 2);
         ifYouDoNothingText = "If you do nothing the game will revert to normal view in <%0> second.";
-        field_a = new dk();
+        MISSING_EMAIL_COMPONENT = new EmailValidationError();
     }
 }

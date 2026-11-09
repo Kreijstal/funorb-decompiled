@@ -243,7 +243,7 @@ final class MusicPatch extends IntrusiveNode {
             field_u = -102;
           }
           if (SpriteMask.drones != null) {
-            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
+            for (var1_int = 0; var1_int < ServerDataWriteRequest.droneSlotLimit; var1_int++) {
               var2 = SpriteMask.drones[var1_int];
               if (var2 != null) {
                 var2.update(-76);

@@ -173,8 +173,8 @@ abstract class GraphicsToolkit {
 
     final static void b(int param0) {
         LimitedRandomAccessFile.field_d = false;
-        uw.field_b = null;
-        uw.field_c = null;
+        TickClock.field_b = null;
+        TickClock.field_c = null;
         if (param0 != 23639) {
           return;
         }

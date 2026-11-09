@@ -109,7 +109,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           }
           kh.field_e = kh.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
-          pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
+          pl.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
@@ -255,7 +255,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
 
     final static void e(boolean param0) {
         try {
-          GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
+          GraphicsToolkit.field_d = NanoTickClock.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + PasswordInputRenderer.ifYouDoNothingText;
           if (!param0) {
             UnderageAccountInfoPanel.e(false);
           }

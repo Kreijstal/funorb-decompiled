@@ -89,7 +89,7 @@ final class gg extends DualLinkNode {
             QuickChatPhraseProvider.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
           }
           HardwareGraphicsHeap.field_o = new Random();
-          db.droneSlotLimit = 1;
+          ServerDataWriteRequest.droneSlotLimit = 1;
           GridWidgetContainer.livesRemaining = 3;
           AccountServiceResult.waveIndex = 0;
           Bzip2State.field_J = new DroneWave[6];

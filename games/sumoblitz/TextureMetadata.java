@@ -65,26 +65,26 @@ final class TextureMetadata {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void resendServerDataRequests(boolean guard, int opcode) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int[] var4 = null;
-        db var5 = null;
+        ServerDataWriteRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = (db) (jj.field_a.first(72));
+          var5 = (ServerDataWriteRequest) (jj.field_a.first(72));
           while (var5 != null) {
-            mn.a(var5, -112, param1);
-            var5 = (db) (jj.field_a.next((byte) 18));
+            mn.sendServerDataWrite(var5, -112, opcode);
+            var5 = (ServerDataWriteRequest) (jj.field_a.next((byte) 18));
           }
           var2 = no.field_d.first(-87);
           while (var2 != null) {
-            GzipDecompressor.b(11044, param1);
+            GzipDecompressor.sendServerDataRead(11044, opcode);
             var2 = no.field_d.next((byte) 18);
           }
-          if (!param0) {
+          if (!guard) {
             return;
           }
           var4 = (int[]) null;
@@ -93,7 +93,7 @@ final class TextureMetadata {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "wm.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "wm.A(" + guard + ',' + opcode + ')');
         }
     }
 

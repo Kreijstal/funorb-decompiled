@@ -119,7 +119,7 @@ final class bw extends qt {
         if (!(this.field_a < 2)) {
           this.field_a = -1;
         }
-        if (hk.field_c == 1) {
+        if (ActiveCanvasProvider.field_c == 1) {
           if (this.field_a != 0) {
             StrongCacheReference.switchMenuScreen(-7753, true, 7);
             AffineTransform3D.field_j = 0;

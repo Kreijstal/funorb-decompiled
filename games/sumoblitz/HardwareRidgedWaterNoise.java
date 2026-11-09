@@ -108,7 +108,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         bj.powerupPickups = new IntrusiveDeque();
         QuickChatPhraseProvider.arenaPads = new IntrusiveDeque();
         HardwareGraphicsHeap.field_o = new Random();
-        db.droneSlotLimit = 1;
+        ServerDataWriteRequest.droneSlotLimit = 1;
         FadingWidget.score = 0;
         GridWidgetContainer.livesRemaining = 1;
         TextureFormat.elapsedTicks = 0;

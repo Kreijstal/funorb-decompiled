@@ -143,7 +143,7 @@ class AudioOutput {
           if (var1 != 0) {
             serviceThread.stopRequested = true;
             while (serviceThread.running) {
-              TextureCombineOperation.a(50L, (byte) 112);
+              TextureCombineOperation.sleepMillis(50L, (byte) 112);
             }
             serviceThread = null;
           }

@@ -329,7 +329,7 @@ final class HardwareTextureCache {
           }
           var12 = new byte[height * (width * depth)];
           var11 = var12;
-          cn.fillNoiseVolume(frequencyZ, generator, 0, var12, octaves, amplitude, frequencyY, persistence, 24046, frequencyX, height, depth, width);
+          SocialContact.fillNoiseVolume(frequencyZ, generator, 0, var12, octaves, amplitude, frequencyY, persistence, 24046, frequencyX, height, depth, width);
           stackIn_3_0 = var12;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

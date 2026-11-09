@@ -2,35 +2,35 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
-    private int field_d;
+    private int rotationDelta;
 
-    final synchronized int a(int param0) {
-        int var2 = this.field_d;
-        int var3 = 6 % ((param0 - 68) / 32);
-        this.field_d = 0;
+    final synchronized int pollDelta(int guard) {
+        int var2 = this.rotationDelta;
+        int var3 = 6 % ((guard - 68) / 32);
+        this.rotationDelta = 0;
         return var2;
     }
 
-    final void a(boolean param0, java.awt.Component param1) {
-        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-        if (!param0) {
-          this.field_d = -70;
+    final void attach(boolean guard, java.awt.Component component) {
+        component.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+        if (!guard) {
+          this.rotationDelta = -70;
         }
     }
 
     MouseWheelHandler() {
-        this.field_d = 0;
+        this.rotationDelta = 0;
     }
 
-    final void a(java.awt.Component param0, byte param1) {
-        if (param1 != 76) {
+    final void detach(java.awt.Component component, byte guard) {
+        if (guard != 76) {
           return;
         }
-        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+        component.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        this.field_d = this.field_d + param0.getWheelRotation();
+        this.rotationDelta = this.rotationDelta + param0.getWheelRotation();
         param0.consume();
     }
 }

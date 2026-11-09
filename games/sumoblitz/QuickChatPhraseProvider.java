@@ -53,21 +53,21 @@ final class QuickChatPhraseProvider {
           return;
         }
         String var2 = (String) null;
-        QuickChatPhraseProvider.a((byte) 10, (String) null);
+        QuickChatPhraseProvider.findIgnoredContact((byte) 10, (String) null);
         pu.field_e.closeAllDialogs((byte) 123);
         pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
     }
 
-    final static cn a(byte param0, String param1) {
+    final static SocialContact findIgnoredContact(byte guard, String name) {
         String var2 = null;
-        cn var3 = null;
+        SocialContact var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
-        cn stackIn_6_0 = null;
-        cn stackIn_18_0 = null;
+        SocialContact stackIn_6_0 = null;
+        SocialContact stackIn_18_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -77,37 +77,37 @@ final class QuickChatPhraseProvider {
         try {
           if (GpuDataType.field_b == null) {
             stackIn_3_0 = null;
-            return (cn) (stackIn_3_0);
+            return (SocialContact) (stackIn_3_0);
           }
-          var6 = (CharSequence) ((Object) param1);
+          var6 = (CharSequence) ((Object) name);
           var2 = AccountCreationProgressDialog.normalizeAccountName(-1, var6);
-          if (param0 < 89) {
-            stackIn_6_0 = (cn) null;
+          if (guard < 89) {
+            stackIn_6_0 = (SocialContact) null;
             return stackIn_6_0;
           }
           if (var2 == null) {
-            var2 = param1;
+            var2 = name;
           }
-          var3 = (cn) (GpuDataType.field_b.a((long)var2.hashCode(), -45));
+          var3 = (SocialContact) (GpuDataType.field_b.get((long)var2.hashCode(), -45));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_jb);
+            var7 = (CharSequence) ((Object) var3.displayName);
             var4 = AccountCreationProgressDialog.normalizeAccountName(-1, var7);
             if (var4 == null) {
-              var4 = var3.field_jb;
+              var4 = var3.displayName;
             }
             if (var4.equals(var2)) {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (cn) (GpuDataType.field_b.a(-109));
+            var3 = (SocialContact) (GpuDataType.field_b.nextMatch(-109));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_23_0 = var2_ref;
-          stackIn_23_1 = new StringBuilder().append("is.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("is.A(").append(guard).append(',');
+          if (name == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -124,7 +124,7 @@ final class QuickChatPhraseProvider {
         arenaPads = null;
         if (param0) {
           String var2 = (String) null;
-          QuickChatPhraseProvider.a((byte) 3, (String) null);
+          QuickChatPhraseProvider.findIgnoredContact((byte) 3, (String) null);
         }
     }
 

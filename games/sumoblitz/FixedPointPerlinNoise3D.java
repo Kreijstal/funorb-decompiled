@@ -13,7 +13,7 @@ abstract class FixedPointPerlinNoise3D {
     private int periodZ;
     private short[] permutation;
     static String field_d;
-    static dk field_j;
+    static EmailValidationError EMPTY_EMAIL;
     private int periodX;
 
     abstract void finishVoxel(boolean guard);
@@ -217,7 +217,7 @@ abstract class FixedPointPerlinNoise3D {
 
     public static void releaseStatics(byte param0) {
         field_d = null;
-        field_j = null;
+        EMPTY_EMAIL = null;
         if (param0 < 30) {
           return;
         }
@@ -291,6 +291,6 @@ abstract class FixedPointPerlinNoise3D {
         } catch (Exception exception) {
         }
         File discarded$0 = new File(var0);
-        field_j = new dk();
+        EMPTY_EMAIL = new EmailValidationError();
     }
 }

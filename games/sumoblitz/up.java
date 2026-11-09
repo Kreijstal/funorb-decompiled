@@ -154,7 +154,7 @@ final class up {
                   var24Lifetime1Lifetime1 = param4.field_I[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_m[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
-                  ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
+                  SecondaryNodeHashTable.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
                   LegacyOpenGlReflectionEffect.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
                   LegacyOpenGlEffect.field_d[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16);
                   var24Lifetime1Lifetime1 = param4.field_F[var23Lifetime2];

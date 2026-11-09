@@ -14,11 +14,11 @@ final class GzipDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendServerDataRead(int guard, int opcode) {
         pl var2 = InwardSparkParticle.field_v;
-        var2.g(param1, 8);
+        var2.g(opcode, 8);
         var2.writeByte((byte) 106, 1);
-        if (param0 == 11044) {
+        if (guard == 11044) {
           var2.writeByte((byte) 79, 0);
           return;
         }

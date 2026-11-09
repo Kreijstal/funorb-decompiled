@@ -53,10 +53,10 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           while (true) {
             var3 = param1.a(param0, 19);
             while (var3.status == 0) {
-              TextureCombineOperation.a(10L, (byte) 81);
+              TextureCombineOperation.sleepMillis(10L, (byte) 81);
             }
             if (var3.status != 1) {
-              TextureCombineOperation.a(100L, (byte) 127);
+              TextureCombineOperation.sleepMillis(100L, (byte) 127);
               continue;
             }
             break;
@@ -162,11 +162,11 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         var29 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (null != SpriteMask.drones) {
-            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
+            for (var1_int = 0; var1_int < ServerDataWriteRequest.droneSlotLimit; var1_int++) {
               var2 = SpriteMask.drones[var1_int];
               if (var2 != null &&
                 var2.isActive((byte) 113)) {
-                for (var3 = 1 + var1_int; db.droneSlotLimit > var3; var3++) {
+                for (var3 = 1 + var1_int; ServerDataWriteRequest.droneSlotLimit > var3; var3++) {
                   var4 = SpriteMask.drones[var3];
                   if (var4 != null &&
                     var4.isActive((byte) 113)) {

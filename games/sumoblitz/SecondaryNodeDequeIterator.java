@@ -44,9 +44,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (ws.field_b != param1) {
-            gs.field_b = new int[param1];
+            MouseInputRegistration.field_b = new int[param1];
             for (var3_int = 0; var3_int < param1; var3_int++) {
-              gs.field_b[var3_int] = (var3_int << 12) / param1;
+              MouseInputRegistration.field_b[var3_int] = (var3_int << 12) / param1;
             }
             ws.field_b = param1;
           }
@@ -63,7 +63,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
                 var5++;
               }
             } else {
-              SpriteOptionRenderer.field_o = gs.field_b;
+              SpriteOptionRenderer.field_o = MouseInputRegistration.field_b;
             }
             ts.field_c = param2;
           }

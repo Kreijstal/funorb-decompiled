@@ -89,29 +89,29 @@ final class mn {
         }
     }
 
-    final static void a(db param0, int param1, int param2) {
+    final static void sendServerDataWrite(ServerDataWriteRequest request, int guard, int opcode) {
         pl var5 = InwardSparkParticle.field_v;
         pl var3 = var5;
-        var5.g(param2, 8);
+        var5.g(opcode, 8);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        if (param1 > -5) {
+        if (guard > -5) {
           return;
         }
         try {
           var5.writeByte((byte) 53, 1);
-          if (null != param0.field_k) {
-            var5.writeByte((byte) 72, param0.field_k.length);
-            var5.writeBytes(param0.field_k, (byte) -123, param0.field_k.length, 0);
+          if (null != request.payload) {
+            var5.writeByte((byte) 72, request.payload.length);
+            var5.writeBytes(request.payload, (byte) -123, request.payload.length, 0);
           } else {
             var5.writeByte((byte) 52, 0);
           }
           var5.appendCrc32(var4, false);
           var5.position = var5.position - 4;
-          param0.field_m = var5.readInt(true);
+          request.requestCrc = var5.readInt(true);
           var5.patchByteLength(-var4 + var5.position, -13745);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mn.D(" + (request != null ? "{...}" : "null") + ',' + guard + ',' + opcode + ')');
         }
     }
 

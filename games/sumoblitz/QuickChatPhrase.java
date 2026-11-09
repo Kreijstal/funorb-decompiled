@@ -252,7 +252,7 @@ final class QuickChatPhrase extends DualLinkNode {
             this.textSegments = (String[]) null;
           }
           if (1 == opcode) {
-            this.textSegments = cn.a('<', packet.readCp1252String(-1), -27224);
+            this.textSegments = SocialContact.split('<', packet.readCp1252String(-1), -27224);
             if (var9 == 0) {
               return;
             }

@@ -19,7 +19,7 @@ final class OpenGlAssemblyProgram {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = hh.field_f;
+          var4 = ProxyAuthenticationRequiredException.field_f;
           if (param1 != 1882601153) {
             OpenGlAssemblyProgram.createSolidSprite(78, -126, 77);
           }

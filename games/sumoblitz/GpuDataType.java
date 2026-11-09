@@ -11,7 +11,7 @@ final class GpuDataType {
     static GpuDataType UNSIGNED_INT;
     static GpuDataType HALF_FLOAT;
     static GpuDataType FLOAT;
-    static ci field_b;
+    static SecondaryNodeHashTable field_b;
     static float[] field_a;
 
     final static void a(int param0, PcmSampleStream param1) {

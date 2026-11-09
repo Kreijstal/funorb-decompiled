@@ -246,7 +246,7 @@ class UsernameCredentials extends LoginCredentials {
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
-                if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == hh.USERNAME_CREDENTIALS) {
+                if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
                   LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
                 }
               } else {
@@ -348,7 +348,7 @@ class UsernameCredentials extends LoginCredentials {
           java.applet.Applet var3 = (java.applet.Applet) null;
           UsernameCredentials.writeAppletSettings((byte) -100, (String) null, (java.applet.Applet) null);
         }
-        return hh.USERNAME_CREDENTIALS;
+        return ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS;
     }
 
     final static Sprite loadNamedSprite(String groupName, String fileName, int guard, ResourceArchive archive) {

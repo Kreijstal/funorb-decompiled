@@ -265,7 +265,7 @@ class UiWidget extends IntrusiveNode {
         }
         Drone.field_g = GameApplet.c(-5204);
         if (null != Drone.field_g) {
-          pd.a(Drone.field_g, 6, 5412);
+          pd.writeServerData(Drone.field_g, 6, 5412);
           if (param0 >= -15) {
             UiWidget.d((byte) -33);
             return;
@@ -295,13 +295,13 @@ class UiWidget extends IntrusiveNode {
           this.textOffsetY = 102;
           if (!inputAvailable) {
             if (var5 != 0 &&
-              0 != hk.field_c) {
+              0 != ActiveCanvasProvider.field_c) {
               this.clearFocus((byte) 115);
             }
           } else {
             if (0 == OpenGlUnderwaterEffect.field_r) {
-              if (hk.field_c != 0) {
-                if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
+              if (ActiveCanvasProvider.field_c != 0) {
+                if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                   if (var5 != 0) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
@@ -324,14 +324,14 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  0 != hk.field_c) {
+                  0 != ActiveCanvasProvider.field_c) {
                   this.clearFocus((byte) 115);
                 }
               }
             } else {
               if (var5 == 0) {
-                if (hk.field_c != 0 &&
-                  this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
+                if (ActiveCanvasProvider.field_c != 0 &&
+                  this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                   inputAvailable = false;
                 }
                 if (HotspotTextWidget.activePointerButton == 0 &&
@@ -346,14 +346,14 @@ class UiWidget extends IntrusiveNode {
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != hk.field_c) {
+                    0 != ActiveCanvasProvider.field_c) {
                     this.clearFocus((byte) 115);
                   }
                 }
               } else {
                 this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
-                if (hk.field_c != 0) {
-                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
+                if (ActiveCanvasProvider.field_c != 0) {
+                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
                       inputAvailable = false;
@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
                     MessageDialog.field_gb = null;
                   }
                   if (var7 != 0 &&
-                    0 != hk.field_c) {
+                    0 != ActiveCanvasProvider.field_c) {
                     this.clearFocus((byte) 115);
                   }
                 }
@@ -386,8 +386,8 @@ class UiWidget extends IntrusiveNode {
               if (0 != OpenGlUnderwaterEffect.field_r &&
                 var5 != 0) {
                 this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
-                if (hk.field_c != 0) {
-                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
+                if (ActiveCanvasProvider.field_c != 0) {
+                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
                       inputAvailable = false;
@@ -421,7 +421,7 @@ class UiWidget extends IntrusiveNode {
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                if (0 == hk.field_c) {
+                if (0 == ActiveCanvasProvider.field_c) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
@@ -431,7 +431,7 @@ class UiWidget extends IntrusiveNode {
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
-              if (hk.field_c == 0) {
+              if (ActiveCanvasProvider.field_c == 0) {
                 if (HotspotTextWidget.activePointerButton != 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
@@ -455,7 +455,7 @@ class UiWidget extends IntrusiveNode {
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
-                  if (0 == hk.field_c) {
+                  if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
@@ -477,7 +477,7 @@ class UiWidget extends IntrusiveNode {
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
-                  if (0 == hk.field_c) {
+                  if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
@@ -499,7 +499,7 @@ class UiWidget extends IntrusiveNode {
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                if (0 == hk.field_c) {
+                if (0 == ActiveCanvasProvider.field_c) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
@@ -509,7 +509,7 @@ class UiWidget extends IntrusiveNode {
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
-              if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
+              if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                 if (var5 == 0) {
                   if (HotspotTextWidget.activePointerButton != 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
@@ -532,7 +532,7 @@ class UiWidget extends IntrusiveNode {
                     MessageDialog.field_gb = null;
                     if (var7 != 0 &&
                       var5 != 0 &&
-                      0 != hk.field_c) {
+                      0 != ActiveCanvasProvider.field_c) {
                       this.clearFocus((byte) 115);
                     }
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
@@ -565,7 +565,7 @@ class UiWidget extends IntrusiveNode {
                   MessageDialog.field_gb = null;
                   if (var7 != 0 &&
                     var5 != 0) {
-                    if (0 == hk.field_c) {
+                    if (0 == ActiveCanvasProvider.field_c) {
                       RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                       LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                       return inputAvailable;
@@ -580,7 +580,7 @@ class UiWidget extends IntrusiveNode {
                 MessageDialog.field_gb = null;
                 if (var7 != 0 &&
                   var5 != 0) {
-                  if (0 == hk.field_c) {
+                  if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
@@ -596,7 +596,7 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (var5 != 0) {
-              if (0 == hk.field_c) {
+              if (0 == ActiveCanvasProvider.field_c) {
                 RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;

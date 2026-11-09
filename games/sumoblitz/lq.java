@@ -15,17 +15,17 @@ final class lq {
         field_a = null;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardInput(int guard, java.awt.Component component) {
         try {
-          param1.setFocusTraversalKeysEnabled(false);
-          if (param0 != 0) {
+          component.setFocusTraversalKeysEnabled(false);
+          if (guard != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
-            lq.a(-23, (java.awt.Component) null);
+            lq.attachKeyboardInput(-23, (java.awt.Component) null);
           }
-          param1.addKeyListener(EmailCredentials.field_e);
-          param1.addFocusListener(EmailCredentials.field_e);
+          component.addKeyListener(EmailCredentials.field_e);
+          component.addFocusListener(EmailCredentials.field_e);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.C(" + guard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

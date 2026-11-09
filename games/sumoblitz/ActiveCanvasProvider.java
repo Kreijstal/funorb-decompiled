@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk {
+final class ActiveCanvasProvider {
     static String mouseOverAnIconText;
     static int field_c;
     static int field_a;
@@ -13,8 +13,8 @@ final class hk {
         }
     }
 
-    final static java.awt.Canvas b(int param0) {
-        int var1 = 30 / ((param0 - 33) / 43);
+    final static java.awt.Canvas currentCanvas(int guard) {
+        int var1 = 30 / ((guard - 33) / 43);
         return null == CompactMeshGeometry.field_o ? qn.field_f : (java.awt.Canvas) ((Object) CompactMeshGeometry.field_o);
     }
 

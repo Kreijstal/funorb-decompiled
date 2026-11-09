@@ -229,7 +229,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;
-          hk.field_c = LegacyOpenGlBuffer.field_i;
+          ActiveCanvasProvider.field_c = LegacyOpenGlBuffer.field_i;
           LoginCredentialType.field_a = GzipDecompressor.field_d;
           if (param0 < 93) {
             LegacyOpenGlReflectionEffect.d(-50);

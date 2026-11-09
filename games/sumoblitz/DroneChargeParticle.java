@@ -85,7 +85,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
         GameClientShell.field_u[33] = mm.levelSelectText;
-        GameClientShell.field_u[26] = lh.resetStatsText;
+        GameClientShell.field_u[26] = ServerDataReadRequest.resetStatsText;
         GameClientShell.field_u[9] = PlayingSound.scoreFilterLabels[1];
         GameClientShell.field_u[20] = TimedSceneEffect.challengeText;
         GameClientShell.field_u[32] = mm.levelSelectText;

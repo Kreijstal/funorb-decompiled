@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends IntrusiveNode {
-    byte[] field_k;
+final class ServerDataWriteRequest extends IntrusiveNode {
+    byte[] payload;
     static int droneSlotLimit;
-    int field_m;
+    int requestCrc;
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void attachInputHandlers(boolean guard, java.awt.Canvas canvas) {
         RuntimeException var2 = null;
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -14,23 +14,23 @@ final class db extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (guard) {
             var3 = (java.awt.Canvas) null;
-            db.a(true, (java.awt.Canvas) null);
+            ServerDataWriteRequest.attachInputHandlers(true, (java.awt.Canvas) null);
           }
-          lq.a(0, (java.awt.Component) ((Object) param1));
-          gs.a((java.awt.Component) ((Object) param1), true);
+          lq.attachKeyboardInput(0, (java.awt.Component) ((Object) canvas));
+          MouseInputRegistration.attachMouseInput((java.awt.Component) ((Object) canvas), true);
           if (null == InwardSparkParticle.field_w) {
             return;
           }
-          InwardSparkParticle.field_w.a(true, (java.awt.Component) ((Object) param1));
+          InwardSparkParticle.field_w.attach(true, (java.awt.Component) ((Object) canvas));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("db.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("db.A(").append(guard).append(',');
+          if (canvas == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -39,11 +39,11 @@ final class db extends IntrusiveNode {
         }
     }
 
-    db(byte[] param0) {
+    ServerDataWriteRequest(byte[] bytes) {
         try {
-          this.field_k = param0;
+          this.payload = bytes;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "db.<init>(" + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -41,7 +41,7 @@ final class GraphicsToolkitManager {
         if (guard) {
           this.textures = (TextureProvider) null;
         }
-        return this.updateToolkitForCanvas(hk.b(-45), 89);
+        return this.updateToolkitForCanvas(ActiveCanvasProvider.currentCanvas(-45), 89);
     }
 
     public static void releaseStatics(int param0) {

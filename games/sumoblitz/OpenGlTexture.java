@@ -128,7 +128,7 @@ abstract class OpenGlTexture implements GpuTexture {
         if (param0 != 14296) {
           return -117;
         }
-        if (dk.field_c == 0) {
+        if (EmailValidationError.field_c == 0) {
           if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
             return 20;
           }
@@ -543,8 +543,8 @@ abstract class OpenGlTexture implements GpuTexture {
           this.toolkit = owner;
           this.format = channelFormat;
           this.texelCount = pixels;
-          jaggl.OpenGL.glGenTextures(1, dq.field_s, 0);
-          this.textureId = dq.field_s[0];
+          jaggl.OpenGL.glGenTextures(1, UiStyle.field_s, 0);
+          this.textureId = UiStyle.field_s[0];
           this.applyFilter((byte) 78);
           this.updateMemoryAccounting(0, 25109);
         } catch (RuntimeException runtimeException) {

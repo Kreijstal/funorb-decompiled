@@ -25,7 +25,7 @@ final class pi {
     }
 
     final static void a(byte param0) {
-        rd.a(4, -66);
+        ReflectionCheck.setAccountDialogResult(4, -66);
         if (param0 > -86) {
           field_e = -49;
         }

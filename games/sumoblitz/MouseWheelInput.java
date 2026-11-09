@@ -7,7 +7,7 @@ abstract class MouseWheelInput {
     static ToolkitSprite field_b;
     private static String field_z;
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void detach(java.awt.Component component, byte guard);
 
     public static void releaseStatics(byte param0) {
         field_a = null;
@@ -16,9 +16,9 @@ abstract class MouseWheelInput {
         int var1 = -53 / ((14 - param0) / 51);
     }
 
-    abstract int a(int param0);
+    abstract int pollDelta(int guard);
 
-    abstract void a(boolean param0, java.awt.Component param1);
+    abstract void attach(boolean guard, java.awt.Component component);
 
     static {
         field_z = "ns.C(";

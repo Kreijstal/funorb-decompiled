@@ -32,7 +32,7 @@ final class sj {
         int var8Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1_int = hh.field_f;
+          var1_int = ProxyAuthenticationRequiredException.field_f;
           if (param0 < 118) {
             sj.releaseStatics(false);
           }
@@ -64,10 +64,10 @@ final class sj {
                 stackIn_20_0 = ResizingDialog.field_F.length;
               }
               var7 = stackIn_20_0;
-              if (uw.field_c.length >= uw.field_b.length) {
-                stackIn_23_0 = uw.field_c.length;
+              if (TickClock.field_c.length >= TickClock.field_b.length) {
+                stackIn_23_0 = TickClock.field_c.length;
               } else {
-                stackIn_23_0 = uw.field_b.length;
+                stackIn_23_0 = TickClock.field_b.length;
               }
               var8 = stackIn_23_0;
               if (6 <= var3 &&
@@ -81,10 +81,10 @@ final class sj {
               }
               if (var7 + 7 <= var3 &&
                 var8 + var7 + 7 > var3) {
-                if (-var7 + (var3 - 7) >= uw.field_c.length) {
+                if (-var7 + (var3 - 7) >= TickClock.field_c.length) {
                   stackIn_36_0 = "";
                 } else {
-                  stackIn_36_0 = uw.field_c[-var7 + var3 - 7];
+                  stackIn_36_0 = TickClock.field_c[-var7 + var3 - 7];
                 }
                 var6 = stackIn_36_0;
               }

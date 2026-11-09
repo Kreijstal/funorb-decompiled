@@ -59,7 +59,7 @@ final class ChatMessage {
           if (wh.field_s != 2) {
             return 0;
           }
-          if (StatusMessagePanel.a(false, this.senderName)) {
+          if (StatusMessagePanel.isFriend(false, this.senderName)) {
             return 1;
           }
           return 0;
@@ -73,7 +73,7 @@ final class ChatMessage {
         if (wh.field_s != 2) {
           return 0;
         }
-        if (StatusMessagePanel.a(false, this.senderName)) {
+        if (StatusMessagePanel.isFriend(false, this.senderName)) {
           return 1;
         }
         return 0;

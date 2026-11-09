@@ -318,8 +318,8 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             no.field_b = new String[var4];
             la.a(GameInstructions.field_c, 0, no.field_b, 0, var4);
-            uw.field_c = new String[-1 - var4 + var3_int];
-            la.a(GameInstructions.field_c, var4 + 1, uw.field_c, 0, -var4 + (var3_int - 1));
+            TickClock.field_c = new String[-1 - var4 + var3_int];
+            la.a(GameInstructions.field_c, var4 + 1, TickClock.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -334,18 +334,18 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             ResizingDialog.field_F = new String[var4];
             la.a(GameInstructions.field_c, 0, ResizingDialog.field_F, 0, var4);
-            uw.field_b = new String[-1 + (-var4 + var3_int)];
-            la.a(GameInstructions.field_c, var4 + 1, uw.field_b, 0, -1 - var4 + var3_int);
+            TickClock.field_b = new String[-1 + (-var4 + var3_int)];
+            la.a(GameInstructions.field_c, var4 + 1, TickClock.field_b, 0, -1 - var4 + var3_int);
             if (no.field_b.length >= ResizingDialog.field_F.length) {
               stackIn_31_0 = no.field_b.length;
             } else {
               stackIn_31_0 = ResizingDialog.field_F.length;
             }
             var5 = stackIn_31_0;
-            if (uw.field_b.length <= uw.field_c.length) {
-              stackIn_34_0 = uw.field_c.length;
+            if (TickClock.field_b.length <= TickClock.field_c.length) {
+              stackIn_34_0 = TickClock.field_c.length;
             } else {
-              stackIn_34_0 = uw.field_b.length;
+              stackIn_34_0 = TickClock.field_b.length;
             }
             var6 = stackIn_34_0;
             var7 = var6 + 7 + var5;
@@ -355,7 +355,7 @@ final class ScreenNameValidator extends TextInputValidator {
               LegacyOpenGlPostProcessManager.field_a[var8] = -1;
             }
             jo.field_b = new int[2];
-            IntIndexHashTable.field_c[0] = fd.clickText;
+            IntIndexHashTable.field_c[0] = NanoTickClock.clickText;
             IntIndexHashTable.field_c[1] = km.acceptText;
             LegacyOpenGlPostProcessManager.field_a[1] = 0;
             jo.field_b[1] = 2;
@@ -380,12 +380,12 @@ final class ScreenNameValidator extends TextInputValidator {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = IntIndexHashTable.field_c;
               stackIn_46_1 = var5 + (7 + var8Lifetime3);
-              stackIn_46_2 = ~uw.field_b.length;
+              stackIn_46_2 = ~TickClock.field_b.length;
               stackIn_46_3 = ~var8Lifetime3;
               if (stackIn_46_2 >= stackIn_46_3) {
                 stackIn_49_2 = "";
               } else {
-                stackIn_49_2 = uw.field_b[var8Lifetime3];
+                stackIn_49_2 = TickClock.field_b[var8Lifetime3];
               }
               stackIn_46_0[stackIn_46_1] = stackIn_49_2;
             }
@@ -412,7 +412,7 @@ final class ScreenNameValidator extends TextInputValidator {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = uw.field_c;
+            var4_ref_String__Lifetime1 = TickClock.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-120, var13, false);
@@ -433,11 +433,11 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             RenderPresentationException.field_d = stackIn_116_0 + stackIn_117_1;
           }
-          hh.field_f = -(RenderPresentationException.field_d >> 1) + nv.field_b;
+          ProxyAuthenticationRequiredException.field_f = -(RenderPresentationException.field_d >> 1) + nv.field_b;
           var4Lifetime3 = -96 % ((param2 - 48) / 57);
           HardwareAnimatedWaterEffect.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;
-          var6Lifetime1 = hh.field_f;
+          var6Lifetime1 = ProxyAuthenticationRequiredException.field_f;
           while (IntIndexHashTable.field_c.length > var5Lifetime3) {
             var7Lifetime2 = LegacyOpenGlPostProcessManager.field_a[var5Lifetime3];
             if (var7Lifetime2 < 0) {

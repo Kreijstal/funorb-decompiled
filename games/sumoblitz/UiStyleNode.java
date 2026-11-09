@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dp extends DualLinkNode {
-    dp() {
+class UiStyleNode extends DualLinkNode {
+    UiStyleNode() {
     }
 
-    final static String b(int param0, int param1) {
+    final static String formatGameTime(int ticks, int guard) {
         String var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        int var2 = param0 * 20;
+        int var2 = ticks * 20;
         int var3 = var2 / 1000;
         int var4 = var3 / 60;
         String var5Lifetime1;
@@ -24,21 +24,21 @@ class dp extends DualLinkNode {
         } else {
           var5Lifetime1 = var7 + var3;
         }
-        if (param1 == -23620) {
+        if (guard == -23620) {
           return var5Lifetime1;
         }
-        dp.a(-100, 64);
+        UiStyleNode.droneTypeColor(-100, 64);
         return var5Lifetime1;
     }
 
-    final static int a(int param0, int param1) {
+    final static int droneTypeColor(int guard, int droneType) {
         int var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != -26346) {
-          dp.a(47, 26);
+        if (guard != -26346) {
+          UiStyleNode.droneTypeColor(47, 26);
         }
-        var2 = param1;
+        var2 = droneType;
         if (0 == var2) {
           return 3394611;
         }

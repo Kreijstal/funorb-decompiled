@@ -78,16 +78,16 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static dk a(String param0, int param1) {
+    final static EmailValidationError validateDomainLabel(String label, int guard) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        dk stackIn_4_0 = null;
-        dk stackIn_8_0 = null;
-        dk stackIn_18_0 = null;
-        dk stackIn_22_0 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_8_0 = null;
+        EmailValidationError stackIn_18_0 = null;
+        EmailValidationError stackIn_22_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -95,47 +95,47 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length();
+          var2_int = label.length();
           if (var2_int == 0) {
-            stackIn_4_0 = ClientExceptionSupport.field_a;
+            stackIn_4_0 = ClientExceptionSupport.MISSING_EMAIL_COMPONENT;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            stackIn_8_0 = cn.field_ib;
+            stackIn_8_0 = SocialContact.EMAIL_COMPONENT_TOO_LONG;
             return stackIn_8_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {
-            var4 = param0.charAt(var3);
+            var4 = label.charAt(var3);
             if (var4 == 45) {
               if (var3 == 0 ||
                 var2_int - 1 == var3) {
-                stackIn_18_0 = gs.field_a;
+                stackIn_18_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
                 return stackIn_18_0;
               }
             } else {
               if (TextureFilter.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var4) == -1) {
-                stackIn_22_0 = gs.field_a;
+                stackIn_22_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
                 return stackIn_22_0;
               }
             }
           }
-          if (param1 == -1) {
+          if (guard == -1) {
             return null;
           }
           ImageProducerRasterBuffer.c(40);
           stackIn_27_0 = null;
-          return (dk) (stackIn_27_0);
+          return (EmailValidationError) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_30_0 = var2;
           stackIn_30_1 = new StringBuilder().append("fh.C(");
-          if (param0 == null) {
+          if (label == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(guard).append(')').toString());
         }
     }
 

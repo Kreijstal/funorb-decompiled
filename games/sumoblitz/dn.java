@@ -42,7 +42,7 @@ final class dn {
           return StatefulWidgetRenderer.waitingForExtraDataText;
         }
         if (!hw.field_a.tryLoadAllGroups(true)) {
-          return rd.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";
+          return ReflectionCheck.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";
         }
         return mm.pleaseWaitText;
     }

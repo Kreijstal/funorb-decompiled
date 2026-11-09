@@ -206,7 +206,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         return new ScrollControl(0, 0, HardwareTurbulentWaterNoise.widgetTheme.field_g, 0, (WidgetRenderer) null, HardwareTurbulentWaterNoise.widgetTheme.field_f, HardwareTurbulentWaterNoise.widgetTheme.field_p, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_a, HardwareTurbulentWaterNoise.widgetTheme.field_b, false, true, 32768, 0);
     }
 
-    final static boolean a(cn param0, int param1, cn param2) {
+    final static boolean contactSortsAfter(SocialContact contact, int guard, SocialContact other) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -218,22 +218,22 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var3 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3_int = -param2.field_kb + param0.field_kb;
-          if (jm.field_d != param0.field_gb) {
-            if (null == param0.field_gb) {
+          var3_int = -other.insertionOrder + contact.insertionOrder;
+          if (jm.field_d != contact.worldName) {
+            if (null == contact.worldName) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (jm.field_d == param2.field_gb) {
+          if (jm.field_d == other.worldName) {
             var3_int += 200;
           } else {
-            if (null == param2.field_gb) {
+            if (null == other.worldName) {
               var3_int -= 200;
             }
           }
-          if (param1 == 0) {
+          if (guard == 0) {
             return !(var3_int <= 0);
           }
           return true;
@@ -242,13 +242,13 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
           stackIn_19_1 = new StringBuilder().append("hb.C(");
-          if (param0 == null) {
+          if (contact == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',');
+          if (other == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";

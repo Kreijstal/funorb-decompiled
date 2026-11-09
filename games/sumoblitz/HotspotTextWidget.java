@@ -64,18 +64,18 @@ class HotspotTextWidget extends InteractiveWidget {
         }
     }
 
-    final static void e(byte param0) {
+    final static void readServerDataReply(byte guard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        db var5_ref_db = null;
+        ServerDataWriteRequest var5_ref_db = null;
         Object var6 = null;
         int var7 = 0;
         byte[] var9 = null;
-        lh var10 = null;
+        ServerDataReadRequest var10 = null;
         pl var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
@@ -83,9 +83,9 @@ class HotspotTextWidget extends InteractiveWidget {
         try {
           var11 = ig.field_a;
           var2 = var11.readUnsignedByte(-31302);
-          var3 = 99 / ((-33 - param0) / 36);
+          var3 = 99 / ((-33 - guard) / 36);
           if (var2 == 0) {
-            var10 = (lh) (no.field_d.first(-110));
+            var10 = (ServerDataReadRequest) (no.field_d.first(-110));
             if (var10 == null) {
               kk.a((byte) -109);
               return;
@@ -105,16 +105,16 @@ class HotspotTextWidget extends InteractiveWidget {
               kk.a((byte) -127);
               return;
             }
-            var10.field_o = true;
-            var10.field_m = (byte[]) (var6);
+            var10.complete = true;
+            var10.payload = (byte[]) (var6);
             var10.unlink(false);
           } else {
             if (var2 == 1) {
               var4 = var11.readInt(true);
-              var5_ref_db = (db) (jj.field_a.first(83));
+              var5_ref_db = (ServerDataWriteRequest) (jj.field_a.first(83));
               while (var5_ref_db != null) {
-                if (var4 != var5_ref_db.field_m) {
-                  var5_ref_db = (db) (jj.field_a.next((byte) 18));
+                if (var4 != var5_ref_db.requestCrc) {
+                  var5_ref_db = (ServerDataWriteRequest) (jj.field_a.next((byte) 18));
                   continue;
                 }
                 break;
@@ -133,7 +133,7 @@ class HotspotTextWidget extends InteractiveWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ar.E(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ar.E(" + guard + ')');
         }
     }
 

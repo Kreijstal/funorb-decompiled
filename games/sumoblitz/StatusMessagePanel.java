@@ -64,7 +64,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         }
     }
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean isFriend(boolean guard, String name) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -72,8 +72,8 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
-            stackIn_6_0 = (null != VertexStreamLayout.a(param1, (byte) 109));
+          if (!guard) {
+            stackIn_6_0 = (null != VertexStreamLayout.findFriend(name, (byte) 109));
             return stackIn_6_0;
           }
           return false;
@@ -81,8 +81,8 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("lc.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("lc.D(").append(guard).append(',');
+          if (name == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -98,7 +98,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
           return;
         }
         String var6 = (String) null;
-        StatusMessagePanel.a(false, (String) null);
+        StatusMessagePanel.isFriend(false, (String) null);
         this.field_C.drawParagraph(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.ascent);
     }
 
@@ -231,7 +231,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
             this.field_G.n(-7);
             return;
           }
-          rd.a(this.field_D[var6_int], -59);
+          ReflectionCheck.setAccountDialogResult(this.field_D[var6_int], -59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -77,7 +77,7 @@ final class qc {
           if (this.field_b <= 0) {
             var4 += 115;
             var3_int -= 50;
-            var11 = ge.clickToContinueText;
+            var11 = IntNode.clickToContinueText;
             var7 = -this.field_b << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
             qv.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
@@ -89,7 +89,7 @@ final class qc {
     }
 
     final void b(int param0) {
-        if ((hk.field_c == 1 || hw.field_b[83]) &&
+        if ((ActiveCanvasProvider.field_c == 1 || hw.field_b[83]) &&
           this.field_b <= 0) {
           this.a(-127);
         }

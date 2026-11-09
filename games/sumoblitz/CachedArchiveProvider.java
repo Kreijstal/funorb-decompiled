@@ -511,7 +511,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -87 % ((-27 - guard) / 41);
-          stackIn_1_0 = rd.crc32(bytes, 0, length, 1001);
+          stackIn_1_0 = ReflectionCheck.crc32(bytes, 0, length, 1001);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

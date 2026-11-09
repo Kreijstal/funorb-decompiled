@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cw extends PacketBuffer {
-    final void b(byte param0, float param1) {
-        int var3 = -104 / ((-3 - param0) / 59);
-        int var4 = jaclib.memory.Stream.floatToRawIntBits(param1);
+final class FloatPacketBuffer extends PacketBuffer {
+    final void writeFloat(byte guard, float value) {
+        int var3 = -104 / ((-3 - guard) / 59);
+        int var4 = jaclib.memory.Stream.floatToRawIntBits(value);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(var4 >> 24);
@@ -19,17 +19,17 @@ final class cw extends PacketBuffer {
         this.payload[fieldTemp$3] = (byte)var4;
     }
 
-    cw(int param0) {
-        super(param0);
+    FloatPacketBuffer(int capacity) {
+        super(capacity);
     }
 
-    final void c(byte param0, float param1) {
+    final void writeFloatLE(byte guard, float value) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        if (param0 == -36) {
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(value);
+        if (guard == -36) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)var3;

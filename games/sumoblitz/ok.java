@@ -329,7 +329,7 @@ final class ok {
           var6Lifetime1 = MusicPatch.field_u << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ic.b(var6Lifetime1, -431) >> 8;
-          var9Lifetime1 = cn.c(param0 - 256, var6Lifetime1) >> 8;
+          var9Lifetime1 = SocialContact.cosQ16(param0 - 256, var6Lifetime1) >> 8;
           if (ko.field_p != -1 &&
             pi.field_e != -1) {
             var9Lifetime1 = -128;

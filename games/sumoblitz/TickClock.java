@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uw {
+abstract class TickClock {
     static String[] field_b;
     static Sprite field_a;
     static String[] field_c;
 
-    final int b(int param0, long param1) {
-        if (param0 != 4007) {
+    final int waitAndAdvance(int guard, long tickNanos) {
+        if (guard != 4007) {
           field_c = (String[]) null;
         }
-        long var4 = this.a((byte) -52);
+        long var4 = this.sleepMillis((byte) -52);
         if (var4 > 0L) {
-          TextureCombineOperation.a(var4, (byte) 110);
+          TextureCombineOperation.sleepMillis(var4, (byte) 110);
         }
-        return this.a(0, param1);
+        return this.advanceTicks(0, tickNanos);
     }
 
-    abstract void b(byte param0);
+    abstract void reset(byte guard);
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_77_0 = null;
@@ -215,7 +215,7 @@ abstract class uw {
         }
     }
 
-    abstract int a(int param0, long param1);
+    abstract int advanceTicks(int guard, long tickNanos);
 
     public static void releaseStatics(byte param0) {
         if (param0 != 96) {
@@ -226,7 +226,7 @@ abstract class uw {
         field_b = null;
     }
 
-    abstract long a(byte param0);
+    abstract long sleepMillis(byte guard);
 
     static {
     }

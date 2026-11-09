@@ -85,7 +85,7 @@ final class lg extends qt {
           if ((-70 + ko.field_p) % 300 <= 200) {
             if (2 <= this.field_a) {
               this.field_a = -1;
-              if (hk.field_c == 1) {
+              if (ActiveCanvasProvider.field_c == 1) {
                 if (this.field_a == -1) {
                 } else {
                   if (0 == this.field_a) {
@@ -99,7 +99,7 @@ final class lg extends qt {
               }
               return;
             }
-            if (hk.field_c != 1) {
+            if (ActiveCanvasProvider.field_c != 1) {
               return;
             }
             if (this.field_a == -1) {
@@ -116,7 +116,7 @@ final class lg extends qt {
           }
           this.field_a = -1;
           if (2 > this.field_a) {
-            if (hk.field_c != 1) {
+            if (ActiveCanvasProvider.field_c != 1) {
               return;
             }
             if (this.field_a != -1) {
@@ -132,7 +132,7 @@ final class lg extends qt {
             return;
           }
           this.field_a = -1;
-          if (hk.field_c == 1) {
+          if (ActiveCanvasProvider.field_c == 1) {
             if (this.field_a == -1) {
               return;
             }
@@ -153,7 +153,7 @@ final class lg extends qt {
           this.field_a = -1;
           if (2 <= this.field_a) {
             this.field_a = -1;
-            if (hk.field_c == 1) {
+            if (ActiveCanvasProvider.field_c == 1) {
               if (this.field_a == -1) {
                 return;
               }
@@ -168,7 +168,7 @@ final class lg extends qt {
             }
             return;
           }
-          if (hk.field_c == 1) {
+          if (ActiveCanvasProvider.field_c == 1) {
             if (this.field_a == -1) {
               return;
             }
@@ -185,7 +185,7 @@ final class lg extends qt {
         }
         if (2 <= this.field_a) {
           this.field_a = -1;
-          if (hk.field_c == 1) {
+          if (ActiveCanvasProvider.field_c == 1) {
             if (this.field_a == -1) {
               return;
             }
@@ -200,7 +200,7 @@ final class lg extends qt {
           }
           return;
         }
-        if (hk.field_c == 1) {
+        if (ActiveCanvasProvider.field_c == 1) {
           if (this.field_a == -1) {
             return;
           }

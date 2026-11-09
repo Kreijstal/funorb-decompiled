@@ -157,7 +157,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.writerTask != null) {
             while (this.writerTask.status == 0) {
-              TextureCombineOperation.a(1L, (byte) 113);
+              TextureCombineOperation.sleepMillis(1L, (byte) 113);
             }
             if (this.writerTask.status == 1) {
               try {

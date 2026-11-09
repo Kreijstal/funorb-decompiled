@@ -92,7 +92,7 @@ final class LegacyOpenGlAssemblyProgram {
         if (param0 > -31) {
           LegacyOpenGlAssemblyProgram.a(-31);
         }
-        qr.field_c = new IntrusiveDeque();
+        qr.reflectionChecks = new IntrusiveDeque();
     }
 
     public static void b(int param0) {

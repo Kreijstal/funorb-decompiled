@@ -76,7 +76,7 @@ class IntrusiveNode {
               }
               var3 = var3 + param0;
             }
-            il.a((byte) 96, var3);
+            il.printClientError((byte) 96, var3);
             var7 = HardwareGraphicsToolkit.a(":", var3, "%3a", true);
             var8 = HardwareGraphicsToolkit.a("@", var7, "%40", true);
             var9 = HardwareGraphicsToolkit.a("&", var8, "%26", true);
@@ -104,7 +104,7 @@ class IntrusiveNode {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              TextureCombineOperation.a(1L, (byte) 73);
+              TextureCombineOperation.sleepMillis(1L, (byte) 73);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);

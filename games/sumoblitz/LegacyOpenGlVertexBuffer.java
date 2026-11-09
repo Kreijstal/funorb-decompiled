@@ -22,7 +22,7 @@ final class LegacyOpenGlVertexBuffer extends LegacyOpenGlBuffer implements Legac
     final static void requestPolicyPage(byte guard, String path) {
         try {
           ArchiveProvider.field_c = path;
-          rd.a(12, -78);
+          ReflectionCheck.setAccountDialogResult(12, -78);
           if (guard < 62) {
             field_k = (String) null;
           }

@@ -3,7 +3,7 @@
  */
 final class CheckboxWidget extends InteractiveWidget {
     static IntrusiveDeque field_E;
-    static ci field_G;
+    static SecondaryNodeHashTable field_G;
     static int field_F;
 
     CheckboxWidget(String text, WidgetListener listener, boolean checked) {
@@ -192,7 +192,7 @@ final class CheckboxWidget extends InteractiveWidget {
             field_F = -67;
           }
           if (InwardSparkParticle.field_w != null) {
-            InwardSparkParticle.field_w.a((java.awt.Component) ((Object) param1), (byte) 76);
+            InwardSparkParticle.field_w.detach((java.awt.Component) ((Object) param1), (byte) 76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

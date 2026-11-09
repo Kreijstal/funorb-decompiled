@@ -3,7 +3,7 @@
  */
 final class km extends IntrusiveNode {
     int field_l;
-    static lh field_o;
+    static ServerDataReadRequest field_o;
     int field_n;
     static long field_k;
     static String acceptText;
@@ -67,7 +67,7 @@ final class km extends IntrusiveNode {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (null != SpriteMask.drones) {
-            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
+            for (var1_int = 0; var1_int < ServerDataWriteRequest.droneSlotLimit; var1_int++) {
               boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted0 = true;
               var2 = SpriteMask.drones[var1_int];
@@ -90,7 +90,7 @@ final class km extends IntrusiveNode {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      for (var5 = 0; db.droneSlotLimit > var5; var5++) {
+                      for (var5 = 0; ServerDataWriteRequest.droneSlotLimit > var5; var5++) {
                         var6Lifetime1Lifetime2 = SpriteMask.drones[var5];
                         if (~var5 != ~var1_int &&
                           var6Lifetime1Lifetime2 != null &&
@@ -125,7 +125,7 @@ final class km extends IntrusiveNode {
 
     final static java.awt.Container gameContainer(boolean param0) {
         if (param0) {
-          field_o = (lh) null;
+          field_o = (ServerDataReadRequest) null;
         }
         if (PrimitiveType.field_c != null) {
           return (java.awt.Container) ((Object) PrimitiveType.field_c);

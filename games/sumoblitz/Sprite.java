@@ -333,7 +333,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedScaled(int pivotXQ4, int pivotYQ4, int destinationXQ4, int destinationYQ4, int angle, int scaleQ12) {
         double var7;
         int var9;
         int var10;
@@ -394,22 +394,22 @@ class Sprite extends SpriteState {
         int var35Lifetime2Lifetime1;
         int var35Lifetime4;
         int var35Lifetime3Lifetime1;
-        if (param5 == 0) {
+        if (scaleQ12 == 0) {
           return;
         }
-        param0 = param0 - (this.field_v << 4);
-        param1 = param1 - (this.field_A << 4);
-        var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-        var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-        var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-        var11 = -param0 * var10 + -param1 * var9;
-        var12 = -(-param0) * var9 + -param1 * var10;
-        var13 = ((this.field_x << 4) - param0) * var10 + -param1 * var9;
-        var14 = -((this.field_x << 4) - param0) * var9 + -param1 * var10;
-        var15 = -param0 * var10 + ((this.field_u << 4) - param1) * var9;
-        var16 = -(-param0) * var9 + ((this.field_u << 4) - param1) * var10;
-        var17 = ((this.field_x << 4) - param0) * var10 + ((this.field_u << 4) - param1) * var9;
-        var18 = -((this.field_x << 4) - param0) * var9 + ((this.field_u << 4) - param1) * var10;
+        pivotXQ4 = pivotXQ4 - (this.field_v << 4);
+        pivotYQ4 = pivotYQ4 - (this.field_A << 4);
+        var7 = (double)(angle & 65535) * 0.00009587379924285257;
+        var9 = (int)Math.floor(Math.sin(var7) * (double)scaleQ12 + 0.5);
+        var10 = (int)Math.floor(Math.cos(var7) * (double)scaleQ12 + 0.5);
+        var11 = -pivotXQ4 * var10 + -pivotYQ4 * var9;
+        var12 = -(-pivotXQ4) * var9 + -pivotYQ4 * var10;
+        var13 = ((this.field_x << 4) - pivotXQ4) * var10 + -pivotYQ4 * var9;
+        var14 = -((this.field_x << 4) - pivotXQ4) * var9 + -pivotYQ4 * var10;
+        var15 = -pivotXQ4 * var10 + ((this.field_u << 4) - pivotYQ4) * var9;
+        var16 = -(-pivotXQ4) * var9 + ((this.field_u << 4) - pivotYQ4) * var10;
+        var17 = ((this.field_x << 4) - pivotXQ4) * var10 + ((this.field_u << 4) - pivotYQ4) * var9;
+        var18 = -((this.field_x << 4) - pivotXQ4) * var9 + ((this.field_u << 4) - pivotYQ4) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -452,10 +452,10 @@ class Sprite extends SpriteState {
         var20 = var20 + 4095 >> 12;
         var21 = var21 >> 12;
         var22 = var22 + 4095 >> 12;
-        var19 = var19 + param2;
-        var20 = var20 + param2;
-        var21 = var21 + param3;
-        var22 = var22 + param3;
+        var19 = var19 + destinationXQ4;
+        var20 = var20 + destinationXQ4;
+        var21 = var21 + destinationYQ4;
+        var22 = var22 + destinationYQ4;
         var19 = var19 >> 4;
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
@@ -482,13 +482,13 @@ class Sprite extends SpriteState {
         }
         var23 = var21 * SoftwareRasterizer.width + var19;
         var24 = SoftwareRasterizer.width + var20;
-        var25 = 16777216.0 / (double)param5;
+        var25 = 16777216.0 / (double)scaleQ12;
         var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
         var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
-        var29 = (var19 << 4) + 8 - param2;
-        var30 = (var21 << 4) + 8 - param3;
-        var31 = (param0 << 8) - 2048 - (var30 * var27 >> 4);
-        var32 = (param1 << 8) - 2048 + (var30 * var28 >> 4);
+        var29 = (var19 << 4) + 8 - destinationXQ4;
+        var30 = (var21 << 4) + 8 - destinationYQ4;
+        var31 = (pivotXQ4 << 8) - 2048 - (var30 * var27 >> 4);
+        var32 = (pivotYQ4 << 8) - 2048 + (var30 * var28 >> 4);
         if (var28 >= 0) {
           if (var27 >= 0) {
             var36 = var22;
@@ -998,7 +998,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] source, int sourceOffset, int destinationOffset, int sourceStride, int destinationStride, int sourceWidth, int width, int height) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -1015,14 +1015,14 @@ class Sprite extends SpriteState {
         int var10Lifetime2;
         int var10Lifetime3;
         var8 = 0;
-        while (var8 < param7) {
+        while (var8 < height) {
           var9 = 0;
-          while (var9 < param6) {
-            var11 = SoftwareRasterizer.pixels[param2] & 16711935;
-            var12 = SoftwareRasterizer.pixels[param2] & 65280;
+          while (var9 < width) {
+            var11 = SoftwareRasterizer.pixels[destinationOffset] & 16711935;
+            var12 = SoftwareRasterizer.pixels[destinationOffset] & 65280;
             var13 = 0;
             var14 = 0;
-            dupTemp$0 = param0[param1];
+            dupTemp$0 = source[sourceOffset];
             var10 = dupTemp$0;
             if (dupTemp$0 != 0) {
               var13 = var13 + (var10 & 16711935);
@@ -1031,7 +1031,7 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$1 = param0[param1 + 1];
+            dupTemp$1 = source[sourceOffset + 1];
             var10Lifetime1 = dupTemp$1;
             if (dupTemp$1 != 0) {
               var13 = var13 + (var10Lifetime1 & 16711935);
@@ -1040,7 +1040,7 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$2 = param0[param1 + param5];
+            dupTemp$2 = source[sourceOffset + sourceWidth];
             var10Lifetime2 = dupTemp$2;
             if (dupTemp$2 != 0) {
               var13 = var13 + (var10Lifetime2 & 16711935);
@@ -1049,7 +1049,7 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$3 = param0[param1 + param5 + 1];
+            dupTemp$3 = source[sourceOffset + sourceWidth + 1];
             var10Lifetime3 = dupTemp$3;
             if (dupTemp$3 != 0) {
               var13 = var13 + (var10Lifetime3 & 16711935);
@@ -1058,15 +1058,15 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            incrementValue$4 = param2;
-            param2++;
+            incrementValue$4 = destinationOffset;
+            destinationOffset++;
             SoftwareRasterizer.pixels[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
             var9++;
-            param1 += 2;
+            sourceOffset += 2;
           }
           var8++;
-          param1 = param1 + param3;
-          param2 = param2 + param4;
+          sourceOffset = sourceOffset + sourceStride;
+          destinationOffset = destinationOffset + destinationStride;
         }
     }
 
@@ -1077,7 +1077,7 @@ class Sprite extends SpriteState {
         int var4 = param0 + (this.field_x >> 1) > SoftwareRasterizer.clipRight ? SoftwareRasterizer.clipRight - param0 << 1 : this.field_x;
         int var5 = param1 < SoftwareRasterizer.clipTop ? SoftwareRasterizer.clipTop - param1 << 1 : 0;
         int var6 = param1 + (this.field_u >> 1) > SoftwareRasterizer.clipBottom ? SoftwareRasterizer.clipBottom - param1 << 1 : this.field_u;
-        Sprite.a(this.pixels, var5 * this.field_x + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.width + (param0 + (var3 >> 1)), (this.field_x << 1) - (var4 - var3) + (this.field_x & 1), SoftwareRasterizer.width - (var4 - var3 >> 1), this.field_x, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.blitHalfSize(this.pixels, var5 * this.field_x + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.width + (param0 + (var3 >> 1)), (this.field_x << 1) - (var4 - var3) + (this.field_x & 1), SoftwareRasterizer.width - (var4 - var3 >> 1), this.field_x, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void drawSilhouette(int param0, int param1, int param2) {

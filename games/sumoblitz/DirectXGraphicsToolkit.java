@@ -634,7 +634,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Cc.SetRenderState(19, 5);
           this.field_Cc.SetRenderState(20, 6);
         } else {
-          if (lh.field_n != this.field_l) {
+          if (ServerDataReadRequest.field_n != this.field_l) {
             if (this.field_l == ShrinkingRingEffect.field_t) {
               this.field_Cc.SetRenderState(19, 9);
               this.field_Cc.SetRenderState(20, 2);
@@ -667,7 +667,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == ArrayWidgetContainer.LINEAR) {
           return 2;
         }
-        if (lh.NEAREST == param0) {
+        if (ServerDataReadRequest.NEAREST == param0) {
           return 1;
         }
         throw new IllegalArgumentException();

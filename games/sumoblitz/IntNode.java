@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends IntrusiveNode {
+final class IntNode extends IntrusiveNode {
     static String[] difficultyNames;
-    int field_m;
+    int value;
     static String clickToContinueText;
 
     public static void releaseStatics(int param0) {
@@ -14,8 +14,8 @@ final class ge extends IntrusiveNode {
         }
     }
 
-    ge(int param0) {
-        this.field_m = param0;
+    IntNode(int number) {
+        this.value = number;
     }
 
     static {

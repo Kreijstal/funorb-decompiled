@@ -44,23 +44,23 @@ final class pd extends IntrusiveNode {
         }
     }
 
-    final static db a(byte[] param0, int param1, int param2) {
-        db var3 = null;
+    final static ServerDataWriteRequest writeServerData(byte[] payload, int opcode, int guard) {
+        ServerDataWriteRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        db stackIn_3_0 = null;
+        ServerDataWriteRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 5412) {
+          if (guard != 5412) {
             var4 = (byte[]) null;
-            pd.a((byte[]) null, 48, 96);
+            pd.writeServerData((byte[]) null, 48, 96);
           }
-          var3 = new db(param0);
+          var3 = new ServerDataWriteRequest(payload);
           jj.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
-          mn.a(var3, param2 - 5530, param1);
+          mn.sendServerDataWrite(var3, guard - 5530, opcode);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,12 +68,12 @@ final class pd extends IntrusiveNode {
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
           stackIn_6_1 = new StringBuilder().append("pd.B(");
-          if (param0 == null) {
+          if (payload == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(opcode).append(',').append(guard).append(')').toString());
         }
     }
 

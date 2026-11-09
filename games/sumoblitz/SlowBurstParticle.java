@@ -13,7 +13,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
 
     final static void e(int param0) {
         SoftwareRenderBuffer.a(5178);
-        rd.a(param0, param0 - 31);
+        ReflectionCheck.setAccountDialogResult(param0, param0 - 31);
     }
 
     final boolean updateAndIsExpired(int param0) {
@@ -144,10 +144,10 @@ final class SlowBurstParticle extends TimedSceneEffect {
           var13 = ig.field_a;
           var15 = var13;
           var2 = var15.readUnsignedByte(-31302);
-          var3 = (km) (dk.field_a.first(122));
+          var3 = (km) (EmailValidationError.field_a.first(122));
           while (var3 != null) {
             if (var2 != var3.field_n) {
-              var3 = (km) (dk.field_a.next((byte) 18));
+              var3 = (km) (EmailValidationError.field_a.next((byte) 18));
               continue;
             }
             break;

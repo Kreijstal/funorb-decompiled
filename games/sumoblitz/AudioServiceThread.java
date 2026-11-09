@@ -156,8 +156,8 @@ final class AudioServiceThread implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              TextureCombineOperation.a(10L, (byte) 107);
-              rd.a((Object) null, this.taskDispatcher, -11030);
+              TextureCombineOperation.sleepMillis(10L, (byte) 107);
+              ReflectionCheck.postDummyEventAfterQueueWait((Object) null, this.taskDispatcher, -11030);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

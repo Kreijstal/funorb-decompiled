@@ -26,15 +26,15 @@ final class VertexStreamLayout {
         }
     }
 
-    final static cn a(String param0, byte param1) {
+    final static SocialContact findFriend(String name, byte guard) {
         String var2 = null;
-        cn var3 = null;
+        SocialContact var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_7_0 = null;
-        cn stackIn_19_0 = null;
+        SocialContact stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -45,30 +45,30 @@ final class VertexStreamLayout {
           if (null == CheckboxWidget.field_G) {
             return null;
           }
-          if (param0 == null) {
+          if (name == null) {
             return null;
           }
-          if (param0.length() == 0) {
+          if (name.length() == 0) {
             stackIn_7_0 = null;
-            return (cn) (stackIn_7_0);
+            return (SocialContact) (stackIn_7_0);
           }
-          var6 = (CharSequence) ((Object) param0);
+          var6 = (CharSequence) ((Object) name);
           var2 = AccountCreationProgressDialog.normalizeAccountName(-1, var6);
-          if (param1 <= 8) {
+          if (guard <= 8) {
             field_c = (FontMetrics) null;
           }
           if (var2 == null) {
             return null;
           }
-          var3 = (cn) (CheckboxWidget.field_G.a((long)var2.hashCode(), 121));
+          var3 = (SocialContact) (CheckboxWidget.field_G.get((long)var2.hashCode(), 121));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_jb);
+            var7 = (CharSequence) ((Object) var3.displayName);
             var4 = AccountCreationProgressDialog.normalizeAccountName(-1, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (cn) (CheckboxWidget.field_G.a(-126));
+            var3 = (SocialContact) (CheckboxWidget.field_G.nextMatch(-126));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,12 +76,12 @@ final class VertexStreamLayout {
           var2_ref = decompiledCaughtException;
           stackIn_24_0 = var2_ref;
           stackIn_24_1 = new StringBuilder().append("hu.A(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -57,7 +57,7 @@ class TimedSceneEffect extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        rd.a(17, -103);
+        ReflectionCheck.setAccountDialogResult(17, -103);
     }
 
     final static void readFileFully(byte[] param0, int param1, File param2, int param3) throws IOException {

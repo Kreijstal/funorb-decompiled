@@ -73,7 +73,7 @@ abstract class GameClientShell extends GameApplet {
           LegacyRidgedWaterNoise.updateDisplayDialogs(1886067877);
         }
         if (null != InwardSparkParticle.field_w) {
-          OpenGlUnderwaterEffect.field_r = InwardSparkParticle.field_w.a(-88);
+          OpenGlUnderwaterEffect.field_r = InwardSparkParticle.field_w.pollDelta(-88);
         }
         if (param1 >= -97) {
           this.field_D = (String) null;
@@ -172,7 +172,7 @@ abstract class GameClientShell extends GameApplet {
           TextureCoordinateGeneration.field_a = 1;
         }
         if (TextureCoordinateGeneration.field_a == 1) {
-          if (dk.field_c != 0) {
+          if (EmailValidationError.field_c != 0) {
             DropDownListWidget.field_H = EmailCredentials.a(DisplayModeErrorDialog.field_P, (byte) 125);
           }
           EmailCredentials.field_j = LegacyOpenGlPostProcessEffect.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
@@ -200,7 +200,7 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (3 == TextureCoordinateGeneration.field_a &&
-          rd.a(LegacyOpenGlPostProcessManager.field_f, (byte) 124, hw.field_a, EmailCredentials.field_j) &&
+          ReflectionCheck.commonUiResourcesReady(LegacyOpenGlPostProcessManager.field_f, (byte) 124, hw.field_a, EmailCredentials.field_j) &&
           DroneWave.tryLoadArchive(hw.field_a, 40)) {
           ph.a((byte) -93);
           UnderageAccountInfoPanel.e(true);
@@ -218,11 +218,11 @@ abstract class GameClientShell extends GameApplet {
           if (gn.field_b) {
             SlowBurstParticle.e(4);
           }
-          if (hh.field_d == null) {
-            hh.field_d = ea.a(14263);
+          if (ProxyAuthenticationRequiredException.field_d == null) {
+            ProxyAuthenticationRequiredException.field_d = ea.a(14263);
             ContentTransitionDialog.field_O = LoginForm.e(false);
           }
-          ss.a(hh.field_d, (byte) 127, hw.field_a, ContentTransitionDialog.field_O);
+          ss.a(ProxyAuthenticationRequiredException.field_d, (byte) 127, hw.field_a, ContentTransitionDialog.field_O);
           hw.field_a = null;
           LegacyOpenGlPostProcessManager.field_f = null;
           EmailCredentials.field_j = null;
@@ -231,7 +231,7 @@ abstract class GameClientShell extends GameApplet {
           TextureCoordinateGeneration.field_a = 10;
         }
         if (TextureCoordinateGeneration.field_a == 10) {
-          if (0 != dk.field_c) {
+          if (0 != EmailValidationError.field_c) {
             vf.field_a = EmailCredentials.a(MenuScreen.field_f, (byte) 125);
           }
           TextureCoordinateGeneration.field_a = 11;
@@ -267,7 +267,7 @@ abstract class GameClientShell extends GameApplet {
           DroneDebris.field_A) {
           CheckboxWidget.a(true, qn.field_f);
           this.e(1000);
-          db.a(false, qn.field_f);
+          ServerDataWriteRequest.attachInputHandlers(false, qn.field_f);
         }
         if (InteractiveWidget.field_z[8]) {
           qi.a(8);
@@ -396,7 +396,7 @@ abstract class GameClientShell extends GameApplet {
                             ByteArrayStorage.receiveChatMessage(var3, (byte) 60);
                           }
                         } else {
-                          SecondaryNodeQueue.a((byte) 127, ig.field_a, lt.field_m, gu.field_d);
+                          SecondaryNodeQueue.readReflectionCheck((byte) 127, ig.field_a, lt.field_m, gu.field_d);
                         }
                       } else {
                         this.o(-1);
@@ -405,7 +405,7 @@ abstract class GameClientShell extends GameApplet {
                       SlowBurstParticle.c((byte) -77);
                     }
                   } else {
-                    HotspotTextWidget.e((byte) -93);
+                    HotspotTextWidget.readServerDataReply((byte) -93);
                   }
                 } else {
                   pt.a(-22683);
@@ -460,7 +460,7 @@ abstract class GameClientShell extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (InteractiveWidget.field_z[1]) {
-            dq.a((byte) 115, 2);
+            UiStyle.a((byte) 115, 2);
           }
           if (InteractiveWidget.field_z[2]) {
             SlowBurstParticle.a(3, (byte) -73);
@@ -472,7 +472,7 @@ abstract class GameClientShell extends GameApplet {
             GraphicsOptionsDialog.a(28778, 5);
           }
           if (InteractiveWidget.field_z[5]) {
-            TextureMetadata.a(false, 6);
+            TextureMetadata.resendServerDataRequests(false, 6);
           }
           if (InteractiveWidget.field_z[6]) {
             jl.a(7, param0);
@@ -613,7 +613,7 @@ abstract class GameClientShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Sumoblitz.field_L ? 1 : 0;
-          var4 = sb.a(param1, OpenGlUnderwaterEffect.field_r, dk.field_c, (byte) 81);
+          var4 = sb.a(param1, OpenGlUnderwaterEffect.field_r, EmailValidationError.field_c, (byte) 81);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -694,7 +694,7 @@ abstract class GameClientShell extends GameApplet {
             of.a(8192, LegacyOpenGlUnlitEffect.c(2));
           }
           if (var4 == 12) {
-            cn.a(LegacyOpenGlSpriteTexture.e(false), LegacyOpenGlUnlitEffect.c(2), (byte) -103);
+            SocialContact.openAppletPage(LegacyOpenGlSpriteTexture.e(false), LegacyOpenGlUnlitEffect.c(2), (byte) -103);
           }
           if (var4 == 13) {
             try {
@@ -764,14 +764,14 @@ abstract class GameClientShell extends GameApplet {
         var11.pack();
         var11.dispose();
         this.setBackground(java.awt.Color.black);
-        dk.field_c = this.field_v;
-        jq.a(dk.field_c, 13586);
-        EmptyWidgetRenderer.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
-        PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
+        EmailValidationError.field_c = this.field_v;
+        jq.a(EmailValidationError.field_c, 13586);
+        EmptyWidgetRenderer.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, EmailValidationError.field_c, this.field_y);
+        PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, EmailValidationError.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);
-        InwardSparkParticle.field_w = dk.a((byte) -126);
+        InwardSparkParticle.field_w = EmailValidationError.createMouseWheelInput((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);
-        db.a(false, qn.field_f);
+        ServerDataWriteRequest.attachInputHandlers(false, qn.field_f);
         MenuScreen.field_f = param7;
         DisplayModeErrorDialog.field_P = param4;
         OpenGlUnderwaterEffect.field_i = param5;

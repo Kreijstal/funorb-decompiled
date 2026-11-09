@@ -37,7 +37,7 @@ final class ArchiveCatalog {
             }
             if (decompiledFrameRemainder0) {
               var2_int = 2;
-              db.a(false, CompactMeshGeometry.field_o);
+              ServerDataWriteRequest.attachInputHandlers(false, CompactMeshGeometry.field_o);
               if (var3 != 0) {
                 if (!vs.b((byte) 9)) {
                   var2_int = 1;
@@ -650,15 +650,15 @@ final class ArchiveCatalog {
           }
           var2Lifetime24 = ke.a((byte) 93, "difficultyLevelTx,0");
           if (var2Lifetime24 != null) {
-            ge.difficultyNames[0] = MusicVoice.a(0, var2Lifetime24);
+            IntNode.difficultyNames[0] = MusicVoice.a(0, var2Lifetime24);
           }
           var2Lifetime25 = ke.a((byte) 98, "difficultyLevelTx,1");
           if (null != var2Lifetime25) {
-            ge.difficultyNames[1] = MusicVoice.a(0, var2Lifetime25);
+            IntNode.difficultyNames[1] = MusicVoice.a(0, var2Lifetime25);
           }
           var2Lifetime26 = ke.a((byte) 103, "resetTx");
           if (var2Lifetime26 != null) {
-            lh.resetStatsText = MusicVoice.a(0, var2Lifetime26);
+            ServerDataReadRequest.resetStatsText = MusicVoice.a(0, var2Lifetime26);
           }
           var2Lifetime27 = ke.a((byte) 105, "dialogOptionsTx,0");
           if (var2Lifetime27 != null) {
@@ -1177,7 +1177,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime155 = ke.a((byte) 118, "gameWon");
           if (null != var2Lifetime155) {
-            cm.levelCompleteText = MusicVoice.a(0, var2Lifetime155);
+            LegacyOpenGlSprite.levelCompleteText = MusicVoice.a(0, var2Lifetime155);
           }
           var2Lifetime156 = ke.a((byte) 118, "enemyTypes,0");
           if (null != var2Lifetime156) {
@@ -1393,7 +1393,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime209 = ke.a((byte) 122, "clickToContinue");
           if (null != var2Lifetime209) {
-            ge.clickToContinueText = MusicVoice.a(0, var2Lifetime209);
+            IntNode.clickToContinueText = MusicVoice.a(0, var2Lifetime209);
           }
           var2Lifetime210 = ke.a((byte) 110, "tutorialSteps,0");
           if (null != var2Lifetime210) {
@@ -1598,7 +1598,7 @@ final class ArchiveCatalog {
             }
             if (var4 != 0) {
               if (ScrollPane.field_E) {
-                param2 = ic.a(hh.connectionLostText, new String[]{param2}, (byte) -128);
+                param2 = ic.a(ProxyAuthenticationRequiredException.connectionLostText, new String[]{param2}, (byte) -128);
               }
               if (ih.field_c) {
                 param2 = LoginCredentials.pleaseTryAgainInText;

@@ -1217,7 +1217,7 @@ final class GameplaySession {
           if (ok.field_b) {
             var4_int = 4;
             var5 = 0;
-            while (var5 < db.droneSlotLimit) {
+            while (var5 < ServerDataWriteRequest.droneSlotLimit) {
               stackIn_336_0 = null;
               stackIn_336_1 = SpriteMask.drones[var5];
               if (var6 != 0) {
@@ -1272,7 +1272,7 @@ final class GameplaySession {
                 var4_intLifetime1 = Bzip2State.field_J[AccountServiceResult.waveIndex].countDrones(0) + 3 >> 2;
                 var5Lifetime1 = 0;
                 while (true) {
-                  if (db.droneSlotLimit > var5Lifetime1) {
+                  if (ServerDataWriteRequest.droneSlotLimit > var5Lifetime1) {
                     stackIn_233_0 = var5Lifetime1;
                     if (var6 == 0) {
                       if (stackIn_233_0 != 0 &&
@@ -1733,8 +1733,8 @@ final class GameplaySession {
               } else {
                 SpriteState.field_B[3].draw(-HudMessage.field_s[4].width() + 475 - 16, 448);
                 SpriteState.field_B[4].draw(459, 448);
-                qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
-                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
+                qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "", (byte) -73, -1);
+                uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + UiStyleNode.formatGameTime(TextureFormat.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
               if (MessageDialog.arcadeMode) {
                 qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);

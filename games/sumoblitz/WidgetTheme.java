@@ -25,7 +25,7 @@ final class WidgetTheme {
     int tooltipBorderColor;
     int tooltipPaddingRight;
 
-    final static dk a(int param0, String param1) {
+    final static EmailValidationError validateTopLevelDomain(int guard, String label) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -33,22 +33,22 @@ final class WidgetTheme {
         int var5 = 0;
         int var6 = 0;
         Object stackIn_7_0 = null;
-        dk stackIn_10_0 = null;
+        EmailValidationError stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param1.length();
-          var3 = -62 / ((-57 - param0) / 48);
+          var2_int = label.length();
+          var3 = -62 / ((-57 - guard) / 48);
           var4 = 0;
           while (true) {
             if (var4 >= var2_int) {
-              stackIn_10_0 = gs.field_a;
+              stackIn_10_0 = MouseInputRegistration.INVALID_EMAIL_SYNTAX;
               return stackIn_10_0;
             }
-            var5 = param1.charAt(var4);
+            var5 = label.charAt(var4);
             if (var5 < 48) {
               return null;
             }
@@ -59,13 +59,13 @@ final class WidgetTheme {
             break;
           }
           stackIn_7_0 = null;
-          return (dk) (stackIn_7_0);
+          return (EmailValidationError) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("cp.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("cp.G(").append(guard).append(',');
+          if (label == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

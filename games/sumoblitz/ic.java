@@ -241,7 +241,7 @@ final class ic {
     }
 
     ic() {
-        cw discarded$0 = new cw(786336);
+        FloatPacketBuffer discarded$0 = new FloatPacketBuffer(786336);
         HardwareTextureCache.bitLength(1600, (byte) -115);
     }
 

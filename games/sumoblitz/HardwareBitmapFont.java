@@ -189,7 +189,7 @@ final class HardwareBitmapFont extends ToolkitFont {
           }
           this.field_c = true;
         }
-        this.field_e.setFilter(lh.NEAREST, 15149);
+        this.field_e.setFilter(ServerDataReadRequest.NEAREST, 15149);
         this.field_d = param0.createVertexBuffer((byte) 51, false);
         this.field_d.allocate(20, (byte) -35, 20480);
         var7 = 0;

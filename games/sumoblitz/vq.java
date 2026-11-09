@@ -161,7 +161,7 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_B = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(gs.youNeedToChooseText, var1, (WidgetListener) null);
+        UiWidget var2 = new UiWidget(MouseInputRegistration.youNeedToChooseText, var1, (WidgetListener) null);
         this.field_C = new InteractiveWidget(tf.field_a, (WidgetListener) null);
         this.field_A = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
         this.field_B.tooltip = ShaderEffect.enterTheNameYouText;
